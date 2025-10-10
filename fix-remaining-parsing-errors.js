@@ -33,24 +33,18 @@ function fixParsingError(filePath) {/* TODO: Fix JSX expression */}
     if (content.trim().endsWith(');') && !content.trim().endsWith('};')) {/* TODO: Fix JSX expression */}
       content = content.trim() + '\n};';
       modified = true;
-    }
 
     if (modified) {/* TODO: Fix JSX expression */}
   d: ${path.relative(__dirname, filePath)}`);
-    }
-  } catch (error) {/* TODO: Fix JSX expression */}`
     console.error(`Error processing ${filePath}:`, error.message);
-  }
-}
+
 
 // Process all files;
 filesWithErrors.forEach(file => {)
   const fullPath = path.join(__dirname, file);
   if (fs.existsSync(fullPath)) {
     fixParsingError(fullPath);
-  }
 filesWithErrors.forEach(file => {/* TODO: Fix JSX expression */}
-  })
-});
+);
 
 console.log('Fixed remaining parsing errors!');`

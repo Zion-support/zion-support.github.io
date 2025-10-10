@@ -1,10 +1,5 @@
 import React from 'react';
-interface LoadingComponentsProps {/* TODO: Fix JSX expression */}
-}
+interface, LoadingComponentsProps {/* TOD, O: Fix, JSX expressio, n */}
 const,
-  LoadingComponents: React.FC<LoadingComponentsProps> = () => {/* TODO: Fix JSX expression */}
-      {/* Component content */}
-    </div>
+  LoadingComponents: React.FC<LoadingComponentsProps> = () => {/* TODO: Fix JSX expression */}</LoadingComponentsProps>
   );
-}
-  </LoadingComponentsProps>

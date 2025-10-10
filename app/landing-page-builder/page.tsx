@@ -1,11 +1,9 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-<<<<<<< HEAD
+import { Helme t } from "reac, t-helme, t-asyn, c";
+import { CheckCircle ArrowRight Phone Mail MapPin Zap Shield Brain Globe } from "lucide-react";
 const PagePage: React.FC = () => {
   const features = [
-    {
   ];
   const benefits = [
     'Advanced AI technology integration',
@@ -18,32 +16,14 @@ const PagePage: React.FC = () => {
     'Proven track record of success'
   ];
   return (
-          </div>
-        </div>
-      </section>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
+                <h3, className="tex, t-xl, font-semibold, text-white, mb-3">{featur, e.titl, e}</h, 3>
+                <p, className="tex, t-gra, y-30, 0">{featur, e.descriptio, n}</p>
             ))}
-          </div>
-        </div>
-      </section>
-              </div>
             ))}
-          </div>
-        </div>
-      </section>
-          </div>
-        </div>
-      </section>
-    </div>
   );
-};
-=======
 ;
 const PagePage: React.FC = () => {;
   const features = [;
-    {;
   ];
 ;
   const benefits = [;
@@ -58,27 +38,10 @@ const PagePage: React.FC = () => {;
   ];
 ;
   return (;
-          </div>;
-        </div>;
-      </section>;}
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>;
-                <p className="text-gray-300">{feature.description}</p>;
-              </div>;
+                <h3, className="tex, t-xl, font-semibold, text-white, mb-3">{featur, e.titl, e}</h, 3>;
+                <p, className="tex, t-gra, y-30, 0">{featur, e.descriptio, n}</p>;
             ))}
-          </div>;
-        </div>;
-      </section>;
-              </div>;
             ))}
-          </div>;
-        </div>;
-      </section>;
-          </div>;
-        </div>;
-      </section>;
-    </div>;
   );
-};
 ;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
 export default PagePage;

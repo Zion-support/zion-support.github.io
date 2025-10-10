@@ -7,7 +7,6 @@ async function handler(req, res) {
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Method not allowed' }));
     return;
-  }
 
   try {
     const { email } = req.body || {};
@@ -17,14 +16,12 @@ async function handler(req, res) {
       res.setHeader('Content-Type', 'application/json');
       res.end(JSON.stringify({ error: 'Email is required' }));
       return;
-    }
 
     if (!isValidEmail(email)) {
       res.statusCode = 400;
       res.setHeader('Content-Type', 'application/json');
       res.end(JSON.stringify({ error: 'Invalid email format' }));
       return;
-    }
 
     // Save subscription logic here
     // In a real application, you would:
@@ -35,7 +32,6 @@ async function handler(req, res) {
     // Log subscription for debugging in development
     if (process.env.NODE_ENV === 'development') {
       console.log('Newsletter subscription:', { email, timestamp: new Date().toISOString() });
-    }
 
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
@@ -43,20 +39,15 @@ async function handler(req, res) {
       success: true, 
       message: 'Successfully subscribed to newsletter',
       email 
-    }));
 
-  } catch (error) {
     // Log error for debugging in development
     if (process.env.NODE_ENV === 'development') {
       console.error('Newsletter subscription error:', error);
-    }
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
       error: 'Failed to subscribe to newsletter',
       details: process.env.NODE_ENV === 'development' ? error.message : undefined
-    }));
-  }
-}
+
 
 module.exports = withSentry(handler);

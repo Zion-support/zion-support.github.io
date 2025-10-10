@@ -7,6 +7,4 @@ exports.handler = async (event, context) => {
       uptime: process.uptime(),
       version: process.version;
 exports.handler = async (event, context) => {/* TODO: Fix JSX expression */}
-    })
-  };
-};
+;

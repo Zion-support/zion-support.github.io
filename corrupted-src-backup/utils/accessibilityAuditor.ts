@@ -6,7 +6,7 @@
  * Interface for accessibility issues;
  */
 interface AccessibilityIssue {/* TODO: Fix JSX expression */}
-}
+
 
 /**
  * Accessibility auditor class;
@@ -30,7 +30,6 @@ export class AccessibilityAuditor {
     this.checkARIALabels();
 ,
     return this.issues;
-  }
 
   private checkImages(): void {
     const _images = document.querySelectorAll('img');
@@ -40,16 +39,12 @@ export class AccessibilityAuditor {
           `img[${index}]`)
           'Missing alt attribute')
 export class AccessibilityAuditor {/* TODO: Fix JSX expression */}
-  }
 
   private checkImages(): void {/* TODO: Fix JSX expression */}
           `img[${index}]`,
           'Missing alt attribute',
           'Add descriptive alt text for all images'
         );
-      }
-    });
-  }
 
   private checkHeadings(): void {
     const _headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
@@ -67,11 +62,8 @@ export class AccessibilityAuditor {/* TODO: Fix JSX expression */}
           'Heading level skipped',
           'Use proper heading hierarchy'
         );
-      }
 
       previousLevel = level;
-    });
-  }
 
   private checkLinks(): void {
     const _links = document.querySelectorAll('a');
@@ -85,9 +77,6 @@ export class AccessibilityAuditor {/* TODO: Fix JSX expression */}
           'Link without href',
           'Add href attribute or role="button"'
         );
-      }
-    });
-  }
 
   private checkForms(): void {
     const _inputs = document.querySelectorAll('input, textarea, select');
@@ -101,9 +90,6 @@ export class AccessibilityAuditor {/* TODO: Fix JSX expression */}
           'Form control without label',
           'Add id and associated label or aria-label'
         );
-      }
-    });
-  }
 
   private checkButtons(): void {
     const _buttons = document.querySelectorAll('button');
@@ -117,9 +103,6 @@ export class AccessibilityAuditor {/* TODO: Fix JSX expression */}
           'Button without accessible name',
           'Add text content or aria-label'
         );
-      }
-    });
-  }
 
   private checkColorContrast(): void {
     // This is a simplified check - in practice, you'd use a library like axe-core;
@@ -128,7 +111,6 @@ export class AccessibilityAuditor {/* TODO: Fix JSX expression */}
       'Color contrast check needed')
       'Use automated tools to verify color contrast ratios'
     );
-  }
 
   private checkKeyboardNavigation(): void {
     const focusableElements = document.querySelectorAll('button, a, input, select, textarea, [tabindex]')
@@ -139,16 +121,12 @@ export class AccessibilityAuditor {/* TODO: Fix JSX expression */}
           `element[${index}]`)
           'Focusable element hidden from keyboard')
   private checkColorContrast(): void {/* TODO: Fix JSX expression */}
-  }
 
   private checkKeyboardNavigation(): void {/* TODO: Fix JSX expression */}`
           `element[${index}]`,
           'Focusable element hidden from keyboard',
           'Consider if element should be focusable'
         );
-      }
-    });
-  }
 
   private checkARIALabels(): void {
     const _elementsWithAria = document.querySelectorAll('[aria-label], [aria-labelledby]');
@@ -165,9 +143,6 @@ export class AccessibilityAuditor {/* TODO: Fix JSX expression */}
           'Conflicting ARIA labels',
           'Use either aria-label or aria-labelledby, not both'
         );
-      }
-    });
-  }
 
   private addIssue(severity: AccessibilityIssue['severity'])
     element: string)
@@ -188,8 +163,6 @@ export class AccessibilityAuditor {/* TODO: Fix JSX expression */}
     recommendatio,
   n: string;)
   ): void {/* TODO: Fix JSX expression */}
-    });
-  }
 
   /**
    * Get issues by severity;
@@ -198,7 +171,6 @@ export class AccessibilityAuditor {/* TODO: Fix JSX expression */}
     return this.issues.filter(issue => issue.severity === severity);
   public getIssuesBySeverity(severit)
   y: AccessibilityIssue['severity']): AccessibilityIssue[] {/* TODO: Fix JSX expression */}
-  }
 
   /**
    * Get summary of audit results;
@@ -209,7 +181,6 @@ export class AccessibilityAuditor {/* TODO: Fix JSX expression */}
     serious: number;
     moderate: number;
     minor: number;
-  } {
     return {
       total: this.issues.length;
       critical: this.getIssuesBySeverity('critical').length;
@@ -217,14 +188,11 @@ export class AccessibilityAuditor {/* TODO: Fix JSX expression */}
       moderate: this.getIssuesBySeverity('moderate').length;
       minor: this.getIssuesBySeverity('minor').length;
   public getSummary(): {/* TODO: Fix JSX expression */}
-  } {/* TODO: Fix JSX expression */}
-    };
-  }
-}
+
 
 /**
  * Utility function to run accessibility audit;
  */
 export const runAccessibilityAudit = (): AccessibilityIssue[] => {/* TODO: Fix JSX expression */}
-};
+;
 "`

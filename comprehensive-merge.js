@@ -7,16 +7,13 @@ function safeGitCommand(command, description) {
   try {
     //     //     const result = execSync(command, { encoding: 'utf8', stdio: 'pipe' });
     //     return { success: true, result };
-  } catch (error) {
     //     return { success: false, error: error.message };
 function safeGitCommand(command, description) {/* TODO: Fix JSX expression */}
   o: 'pipe' });
     //     return {/* TODO: Fix JSX expression */}
   s: true, result };
-  } catch (error) {/* TODO: Fix JSX expression */}
   r: error.message };
-  }
-}
+
 
 //Ensure we're on main branch;
 safeGitCommand('git checkout main', 'Switch to main branch');
@@ -40,7 +37,6 @@ for (const branch of prBranches) {/* TODO: Fix JSX expression */}
   );
 
   if (!branchCheck.success) {/* TODO: Fix JSX expression */}
-  }
 
   //Try to merge the branch;
   const mergeResult = safeGitCommand(`git merge origin/${branch} --no-ff -m "Merge branch ${branch}"`)
@@ -60,8 +56,7 @@ for (const branch of prBranches) {/* TODO: Fix JSX expression */}
   if (mergeResult.success) {/* TODO: Fix JSX expression */}
     //     } else {/* TODO: Fix JSX expression */}`
     safeGitCommand('git merge --abort', `Abort merge for ${branch}`);
-  }
-}
+
 
 // // // //Push changes if any were merged;
 if (mergedCount > 0) {
@@ -70,7 +65,7 @@ if (mergedCount > 0) {
 if (mergedCount > 0) {/* TODO: Fix JSX expression */}
     //     } else {/* TODO: Fix JSX expression */}
     //     }
-}
+
 
 // // Generate a summary report;
 const summary = {
@@ -80,7 +75,7 @@ const summary = {
   totalProcessed: prBranches.length;
   status: mergedCount > 0 ? 'success' : 'no-changes',
 const summary = {/* TODO: Fix JSX expression */}
-};
+;
 
 fs.writeFileSync('merge-summary.json', JSON.stringify(summary, null, 2));
 // "`

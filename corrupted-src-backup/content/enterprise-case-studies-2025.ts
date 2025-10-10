@@ -14,17 +14,15 @@ export interface EnterpriseCaseStudy {
     roi: string;
     timeline: string;
 export interface EnterpriseCaseStudy {/* TODO: Fix JSX expression */}
-  };
   feature,
   d: boolean;
   publishedA,
   t: string;
   tag,
   s: string[];
-}
+
 
 export const enterpriseCaseStudies2025: EnterpriseCaseStudy[] = [
-  {
     id: 'fortune-500-ai-automation'
     slug: 'fortune-500-ai-automation-case-study'
     title: 'Fortune 500 AI Automation: 85% Cost Reduction'
@@ -41,7 +39,6 @@ export const enterpriseCaseStudies2025: EnterpriseCaseStudy[] = [
     featured: true;
     publishedAt: '2025-10-01',
     tags: ['AI Automation', 'Manufacturing', 'Cost Reduction', 'ROI']},
-  {
     id: 'financial-services-ai-analytics'
     slug: 'financial-services-ai-analytics-case-study'
     title: 'Financial Services AI Analytics: 99.9% Accuracy'
@@ -60,16 +57,12 @@ export const enterpriseCaseStudies2025: EnterpriseCaseStudy[] = [
     tags: ['AI Analytics', 'Financial Services', 'Fraud Detection', 'Accuracy'],
 export const,
   enterpriseCaseStudies2025: EnterpriseCaseStudy[] = [
-  {/* TODO: Fix JSX expression */}
-    },
     feature,
   d: true,
     publishedA,
   t: '2025-10-01',
     tag,
   s: ['AI Automation', 'Manufacturing', 'Cost Reduction', 'ROI']},
-  {/* TODO: Fix JSX expression */}
-    },
     feature,
   d: true,
     publishedA,

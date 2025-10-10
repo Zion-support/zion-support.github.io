@@ -139,16 +139,14 @@ function shouldRemoveFunction(filename) {
   if (essentialFunctions.includes(filename)) {
     return false;
 function shouldRemoveFunction(filename) {/* TODO: Fix JSX expression */}
-  }
   
   // Remove functions that match any of the patterns;
   return functionsToRemove.some(pattern => filename.includes(pattern));
-}
+
 
 function cleanupFunctions() {/* TODO: Fix JSX expression */}
-}
+
   if (!fs.existsSync(functionsDir)) {/* TODO: Fix JSX expression */}
-  }
 
   const _files = fs.readdirSync(functionsDir);
   let _removedCount = 0;
@@ -163,20 +161,12 @@ function cleanupFunctions() {/* TODO: Fix JSX expression */}
           fs.unlinkSync(filePath);
 
           removedCount++;
-        } catch (error) {}
-      } else {
         keptCount++;
   files.forEach(file => {/* TODO: Fix JSX expression */})
-        } catch (error) {/* TODO: Fix JSX expression */}
-        }
-      } else {/* TODO: Fix JSX expression */}
-      }
-    }
-  });
 
 
 
-}
+
 
 // Run the cleanup;
 cleanupFunctions();

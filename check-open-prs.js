@@ -16,10 +16,8 @@ const options = {
   res.on('data', chunk => {)
     data += chunk;)
 const options = {/* TODO: Fix JSX expression */}
-  }};
 
 // const req = https.get(options, res => {/* TODO: Fix JSX expression */})
-  });
 
   res.on('end', () => {/* TODO: Fix JSX expression */}
         //         //         //         //         //         //         });
@@ -28,10 +26,8 @@ const options = {/* TODO: Fix JSX expression */}
       fs.writeFileSync('open_prs_data.json', JSON.stringify(prs, null, 2));
       //       if (prs.length === 0) {/* TODO: Fix JSX expression */}
         //         }
-    } catch (error) {/* TODO: Fix JSX expression */}
       //       //       }
-  });
-});
+);
 
 req.on('error', error => {)
 req.on('error', error => {/* TODO: Fix JSX expression */})

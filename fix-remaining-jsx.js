@@ -19,11 +19,8 @@ function fixRemainingJsx() {
         // If next line starts with whitespace and has content, fix the div
         if (nextLine.trim() && (nextLine.includes('<') || nextLine.includes('{') || nextLine.includes('}'))) {
           line = line.replace('/>', '>');
-        }
-      }
       
       fixedLines.push(line);
-    }
     
     content = fixedLines.join('\n');
     
@@ -35,11 +32,9 @@ function fixRemainingJsx() {
     fs.writeFileSync('/workspace/app/page.tsx', content);
     console.log('✅ Fixed remaining JSX issues in main page');
     return true;
-  } catch (error) {
     console.error('Error fixing remaining JSX:', error.message);
     return false;
-  }
-}
+
 
 console.log('🔧 Fixing remaining JSX issues...');
 fixRemainingJsx();

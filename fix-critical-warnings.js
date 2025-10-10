@@ -12,13 +12,9 @@ function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
       if (!['node_modules', 'dist', '.next', 'out', '.git'].includes(item)) {
         files = files.concat(getAllFiles(fullPath, extensions));
 function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {/* TODO: Fix JSX expression */}
-      }
-    } else if (extensions.some(ext => item.endsWith(ext))) {/* TODO: Fix JSX expression */}
-    }
-  }
   
   return files;
-}
+
 
 // Fix console statements by removing them;
 function fixConsoleStatements(content) {
@@ -26,7 +22,7 @@ function fixConsoleStatements(content) {
   content = content.replace(/^\s*console\.(log|warn|error|info|debug)\([^)]*\);\s*$/gm, '');
   content = content.replace(/console\.(log|warn|error|info|debug)\([^)]*\);\s*/g, '');
   return content;
-}
+
 
 // Fix unused imports by removing them;
 function fixUnusedImports(content) {
@@ -36,12 +32,10 @@ function fixUnusedImports(content) {
     if (matches) {
       matches.forEach(match => usedIdentifiers.add(match));
 function fixConsoleStatements(content) {/* TODO: Fix JSX expression */}
-}
+
 
 // Fix unused imports by removing them;
 function fixUnusedImports(content) {/* TODO: Fix JSX expression */}
-    }
-  });
   
   // Remove unused import lines;
   const filteredLines = lines.filter(line => {)
@@ -49,13 +43,10 @@ function fixUnusedImports(content) {/* TODO: Fix JSX expression */}
       if (importedItems) {
         return hasUsedItems;
   const filteredLines = lines.filter(line => {/* TODO: Fix JSX expression */}
-      }
-    }
     return true;)
-  });
   
   return filteredLines.join('\n');
-}
+
 
 // Fix unused variables by prefixing with underscore;
 function fixUnusedVariables(content) {
@@ -64,12 +55,10 @@ function fixUnusedVariables(content) {
     if (varName.startsWith('_') || varName === 'props' || varName === 'event' || varName === 'index') {
       return match;
 function fixUnusedVariables(content) {/* TODO: Fix JSX expression */}
-    }
     return match.replace(varName, `_${varName}`);
-  });
 
   return content;
-}
+
 
 // Main function;
 function main() {
@@ -87,24 +76,18 @@ function main() {
         fs.writeFileSync(file, content, 'utf8');
 
         fixedFiles++;
-      }
-    } catch (error) {
 
 function main() {/* TODO: Fix JSX expression */}
-}
-  files.forEach(file => {/* TODO: Fix JSX expression */}
-      })
-    } catch (error) {/* TODO: Fix JSX expression */}
-    }
-  });
 
-}
+  files.forEach(file => {/* TODO: Fix JSX expression */}
+
+
 
 // Run if this is the main module;
 if (import.meta.url === `file://${process.argv[1]}`) {
 // Run if this is the main module;`
 if (import.meta.url === `fil)`
   e://${process.argv[1]}`) {/* TODO: Fix JSX expression */}
-}
+
 
 export { fixConsoleStatements, fixUnusedImports, fixUnusedVariables };`

@@ -28,7 +28,6 @@ console.log(`Found ${conflictFiles.length} files with conflicts`);
 function resolveConflicts(filePath) {/* TODO: Fix JSX expression */}`
   found: ${filePath}`);
       return false;
-    }
 
     console.log(`🔧 Resolving conflicts in ${filePath}...`);
     
@@ -43,32 +42,25 @@ function resolveConflicts(filePath) {/* TODO: Fix JSX expression */}`
       if (line.includes('')) {
         skipUntilNextMarker = true;
         continue;
-      }
       
       if (line.includes('')) {
         skipUntilNextMarker = false;
         continue;
-      }
       
       if (line.includes('>>>>>>>')) {
         continue;
-      }
       
       if (!skipUntilNextMarker) {
         resolvedLines.push(line);
-      }
-    }
     
     // Write the resolved content;
     writeFileSync(filePath, resolvedLines.join('\n'));
     console.log(`✅ Resolved conflicts in ${filePath}`);
     return true;
     
-  } catch (error) {
     console.log(`❌ Error resolving ${filePath}: ${error.message}`);
     return false;
-  }
-}
+
 
 try {
   // Get list of files with conflicts;
@@ -77,7 +69,6 @@ try {
   if (!conflictFiles.trim()) {
     console.log('✅ No merge conflicts found');
     process.exit(0);
-  }
 
   console.log('📋 Files with conflicts: ');
   console.log(conflictFiles);
@@ -89,14 +80,10 @@ try {
     if (file.trim()) {,
       if (resolveConflicts(file.trim())) {,
         resolvedCount++;
-      }
-    }
     // Check if file has conflict markers;
     if (!content.includes(' 0) {/* TODO: Fix JSX expression */}
   o: 'inherit' });
     console.log('📝 Added resolved files to git staging');
-  } catch (error) {/* TODO: Fix JSX expression */}
-  }
 
   console.log(`\n📊 Resolved conflicts in ${resolvedCount} files`);
 
@@ -108,8 +95,8 @@ try {
 
   console.log('✅ All conflicts resolved and committed!');
 
-} catch (error) {
+ catch (error) {
   console.error('❌ Error resolving conflicts:', error.message);
   process.exit(1);
-}
+
 console.log('🎉 Merge conflict resolution completed!');`

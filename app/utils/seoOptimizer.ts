@@ -13,7 +13,7 @@ interface SEOConfig {;
   facebookAppId?: string;
   googleAnalyticsId?: string;}
   googleTagManagerId?: string;}
-}
+
 interface PageSEOData {;
   title: string,;
   description: string,;}
@@ -27,7 +27,7 @@ interface SEOConfig {}
   facebookAppId?: string;
   googleAnalyticsId?: string;
   googleTagManagerId?: string;}
-}
+
 interface PageSEOData {}
   title: string;
   description: string;
@@ -42,7 +42,7 @@ interface PageSEOData {}
   tags?: string[],;
   noindex?: boolean;
   nofollow?: boolean;}
-}
+
 class SEOOptimizer {;
   private config: SEOConfig,;
   private currentPageData: PageSEOData | null = null;
@@ -53,11 +53,10 @@ class SEOOptimizer {}
   constructor(config: SEOConfig) {}
     this.config = config;}
 interface SEOConfig {/* TODO: Fix JSX expression */}
-}
+
 interface PageSEOData {/* TODO: Fix JSX expression */}
-}
+
 class SEOOptimizer {/* TODO: Fix JSX expression */}
-  }
   /**;
    * Initialize SEO optimization;
    */;
@@ -67,7 +66,6 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
     // Meta tags are set individually;
     this.setupPerformanceMonitoring();}
   init(): void {/* TODO: Fix JSX expression */}
-  }
   /**;
    * Set page-specific SEO data;
    */;
@@ -80,7 +78,6 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
     this.updateStructuredData();}
   setPageData(dat);
   a: PageSEOData): void {/* TODO: Fix JSX expression */}
-  }
   /**;
    * Generate optimized title;
    */;
@@ -93,7 +90,6 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
       : `${title} | ${this.config.siteName}`;
   generateTitle(pageTitle?: string): string {/* TODO: Fix JSX expression */}
       : `${title} | ${this.config.siteName}`;
-  }
   /**;
    * Generate optimized description;
    */;
@@ -106,7 +102,6 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
       ? description.substring(0, 157) + '...';
       : description;}
   generateDescription(pageDescription?: string): string {/* TODO: Fix JSX expression */}
-  }
   /**;
    * Generate keywords string;
    */;
@@ -114,7 +109,6 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
     const keywords = pageKeywords || this.currentPageData?.keywords || [];
     return keywords.join(', ');}
   generateKeywords(pageKeywords?: string[]): string {/* TODO: Fix JSX expression */}
-  }
   /**;
    * Update meta tags;
    */;
@@ -150,7 +144,6 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
       this.setMetaTag('twitter:title', title);
       this.setMetaTag('twitter:description', description);
       this.setMetaTag('twitter:image', image);
-    }
     // Additional meta tags;
     this.setMetaTag('viewport', 'width=device-width, initial-scale=1.0');
     this.setMetaTag('theme-color', '#1e40af');
@@ -163,12 +156,10 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
   r:description', description);
       this.setMetaTag('twitte);
   r:image', image);
-    }
     // Additional meta tags;
     this.setMetaTag('viewport', 'width=device-width, initial-scale=1.0');
     this.setMetaTag('theme-color', '#1e40af');
     this.setMetaTag('msapplication-TileColor', '#1e40af');
-  }
   /**;
    * Set meta tag;
    */;
@@ -186,9 +177,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
   e: string = 'name'): void {/* TODO: Fix JSX expression */}`;
     let meta = document.querySelector(`meta[${attribute}="${name}"]`) as HTMLMetaElement;
     if (!meta) {/* TODO: Fix JSX expression */}
-    }
     meta.content = content;
-  }
   /**;
    * Get robots content;
    */;
@@ -197,18 +186,12 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
     const directives = [];
     if (!this.currentPageData.noindex) {}
       directives.push('noindex');}
-    }
     if (!this.currentPageData.nofollow) {}
       directives.push('follow');}
-    } else {}
       directives.push('nofollow');}
   private getRobotsContent(): string {/* TODO: Fix JSX expression */}
-    }
     if (!this.currentPageData.nofollow) {/* TODO: Fix JSX expression */}
-    } else {/* TODO: Fix JSX expression */}
-    }
     return directives.join(', ');
-  }
   /**;
    * Setup structured data;
    */;
@@ -217,10 +200,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
   private setupStructuredData(): void {/* TODO: Fix JSX expression */}`;
   t: `${this.config.siteUrl}/search?q={search_term_string}`,;
         'query-input': 'required name=search_term_string';
-      }
-    };
     this.addStructuredData(structuredData);
-  }
   /**;
    * Update structured data for current page;
    */;
@@ -247,15 +227,12 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
         '@type': 'Organization',;
         name: this.config.siteName;
         url: this.config.siteUrl}
-      }
-    }
     // Add article-specific properties;
     if (this.currentPageData.type === 'article') {;
       Object.assign(structuredData, {;
         author: {);
 // '@type': 'Person');
 // name: this.currentPageData.author || this.config.siteName;);}
-        });
         datePublished: this.currentPageData.publishedTime;
         dateModified: this.currentPageData.modifiedTime),;
         articleSection: this.currentPageData.section),;
@@ -266,18 +243,13 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
         author: {}
 // '@type': 'Person',;
 // name: this.currentPageData.author || this.config.siteName;
-        },;
         datePublished: this.currentPageData.publishedTime,;
         dateModified: this.currentPageData.modifiedTime,;
         articleSection: this.currentPageData.section,;
         keywords: this.generateKeywords();
-      });
   private updateStructuredData(): void {/* TODO: Fix JSX expression */}
-      }
-    };
     // Add article-specific properties;
     if (this.currentPageData.type === 'article') {/* TODO: Fix JSX expression */}
-        },;
         datePublishe,;
   d: this.currentPageData.publishedTime,;
         dateModifie,;
@@ -286,10 +258,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
   n: this.currentPageData.section,;
         keyword,;
   s: this.generateKeywords();
-      });
-    }
     this.addStructuredData(structuredData);
-  }
   /**;
    * Add structured data to page;
    */;
@@ -300,7 +269,6 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
     document.head.appendChild(script);
   private addStructuredData(dat);
   a: unknown): void {/* TODO: Fix JSX expression */}
-  }
   /**;
    * Setup canonical URLs;
    */;
@@ -310,7 +278,6 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
     canonical.href = window.location.href;
     document.head.appendChild(canonical);}
   private setupCanonicalUrls(): void {/* TODO: Fix JSX expression */}
-  }
   /**;
    * Setup performance monitoring for SEO;
    */;
@@ -327,11 +294,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
         if (lastEntry.startTime > 4000) {// Poor LCP;}
         if (lastEntry.startTime > 4000) { // Poor LCP}
           this.trackSEOMetric('poor_lcp', lastEntry.startTime);}
-        }
-      }).observe({ entryTypes: ['largest-contentful-paint'] });
   private setupPerformanceMonitoring(): void {/* TODO: Fix JSX expression */}
-        }
-      }).observe({/* TODO: Fix JSX expression */});
   s: ['largest-contentful-paint'] });
       // Monitor CLS (Cumulative Layout Shift);
       let clsValue = 0;
@@ -339,29 +302,17 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
         for (const entry of list.getEntries()) {;
           if (!(entry as any).hadRecentInput) {;}
             clsValue += (entry as any).value;}
-          }
-        }
         if (clsValue > 0.25) {// Poor CLS;
       let clsValue = 0;}
       new PerformanceObserver((list) => {}
         for (const entry of list.getEntries()) {}
           if (!(entry as any).hadRecentInput) {}
             clsValue += (entry as any).value;}
-          }
-        }
         if (clsValue > 0.25) { // Poor CLS}
           this.trackSEOMetric('poor_cls', clsValue);}
-        }
-      }).observe({ entryTypes: ['layout-shift'] });
       new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}
-          }
-        }
         if (clsValue > 0.25) {/* TODO: Fix JSX expression */}
-        }
-      }).observe({/* TODO: Fix JSX expression */});
   s: ['layout-shift'] });
-    }
-  }
   /**;
    * Track SEO-related metrics;
    */;
@@ -375,34 +326,26 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
         metric_name: metric,;
         metric_value: Math.round(value),;
         event_category: 'seo'}
-      });
   private trackSEOMetric(metri,;
   c: string, valu);
   e: number): void {/* TODO: Fix JSX expression */}
-      });
-    }
-  }
   /**;
    * Generate sitemap data;
    */;
   generateSitemapData(): Array<{ url: string; lastmod: string; changefreq: string; priority: number }> {;
     // This would typically come from your CMS or routing system;
     return [;
-      {;
         url: this.config.siteUrl;}
   generateSitemapData(): Array<{ url: string; lastmod: string; changefreq: string; priority: number }> {}
     // This would typically come from your CMS or routing system;
     return [;
-      {}
         url: this.config.siteUrl,;
         lastmod: new Date().toISOString(),;
         changefreq: 'daily',;
         priority: '1.0'}
   generateSitemapData(): Array<{/* TODO: Fix JSX expression */}
   y: number }> {/* TODO: Fix JSX expression */}
-      }
     ];
-  }
   /**;
    * Generate robots.txt content;
    */;
@@ -430,7 +373,6 @@ Disallo,;
   w: /_next/;
 Disallo,`;
   w: /static/`;
-  }
   /**;
    * Check for SEO issues;
    */;
@@ -443,53 +385,35 @@ Disallo,`;
     const title = document.title;}
     if (title.length < 30) {}
       issues.push('Title is too short (less than 30 characters)');}
-    } else if (title.length > 60) {}
       issues.push('Title is too long (more than 60 characters)');}
-    }
     // Check description length;
     const description = document.querySelector('meta[name="description"]')?.getAttribute('content');
     if (!description) {}
       issues.push('Missing meta description');}
-    } else if (description.length < 120) {}
       issues.push('Description is too short (less than 120 characters)');}
-    } else if (description.length > 160) {}
       issues.push('Description is too long (more than 160 characters)');}
-    }
     // Check for images without alt text;
     const images = document.querySelectorAll('img');
     images.forEach((img, index) => {}
       if (!img.alt) {`}
         issues.push(`Image ${index + 1} is missing alt text`);
-      }
-    });
     // Check for heading structure;
     const h1s = document.querySelectorAll('h1');
     if (h1s.length === 0) {}
       issues.push('Page is missing H1 tag');}
-    } else if (h1s.length > 1) {}
       issues.push('Page has multiple H1 tags');}
   checkSEOIssues(): string[] {/* TODO: Fix JSX expression */}
-    } else if (title.length > 60) {/* TODO: Fix JSX expression */}
-    }
     // Check description length;";
     const description = document.querySelector('meta[name="description"]')?.getAttribute('content');
     if (!description) {/* TODO: Fix JSX expression */}
-    } else if (description.length < 120) {/* TODO: Fix JSX expression */}
-    } else if (description.length > 160) {/* TODO: Fix JSX expression */}
-    }
     // Check for images without alt text;
     const images = document.querySelectorAll('img');
     images.forEach((img, index) => {/* TODO: Fix JSX expression */}`;
         issues.push(`Image ${index + 1} is missing alt text`);
-      }
-    });
     // Check for heading structure;
     const h1s = document.querySelectorAll('h1');
     if (h1s.length === 0) {/* TODO: Fix JSX expression */}
-    } else if (h1s.length > 1) {/* TODO: Fix JSX expression */}
-    }
     return issues;
-  }
   /**;
    * Get SEO score;
    */;
@@ -498,8 +422,7 @@ Disallo,`;
     const maxIssues = 10; // Maximum possible issues;
     const score = Math.max(0, 100 - (issues.length / maxIssues) * 100);
     return Math.round(score);}
-  }
-}
+
 // Default configuration;
 const defaultConfig: SEOConfig = {;
   siteName: 'Zion Tech Group';
@@ -514,15 +437,14 @@ const defaultConfig: SEOConfig = {}
   twitterHandle: 'ZionTechGroup',;
   googleAnalyticsId: process.env.GOOGLE_ANALYTICS_ID;
   googleTagManagerId: process.env.GOOGLE_TAG_MANAGER_ID}
-}
+
 export const seoOptimizer = new SEOOptimizer(defaultConfig);
 export default seoOptimizer;
   getSEOScore(): number {/* TODO: Fix JSX expression */}
-  }
-}
+
 // Default configuration;
 const,;
   defaultConfig: SEOConfig = {/* TODO: Fix JSX expression */}
-};
+;
 export const seoOptimizer = new SEOOptimizer(defaultConfig);
 export default seoOptimizer;"`;

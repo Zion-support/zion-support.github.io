@@ -11,10 +11,9 @@ export interface AIBreakthroughContent {
   readTime: string;
   image?: string;,
   valueProposition: string;
-}
+
 
 export const new2026AIBreakthroughContent: AIBreakthroughContent[] = [,
-  {,
     id: 'ai-2026-hyperconscious-computing-revolution',
     title: 'AI 2026 Hyperconscious Computing Revolution: Beyond Artificial Intelligence',
     description:,
@@ -37,7 +36,6 @@ The next evolution of AI is here - systems that not only think but feel, create,
     readTime: '25 min read',
     image: '/images/ai-2026-hyperconscious-computing.jpg',
     valueProposition: '$1.2 T enterprise value creation'},
-  {
     id: 'quantum-ai-synthesis-2026'
     title: 'Quantum AI Synthesis 2026: The Convergence of Quantum and Artificial Intelligence'
     description: 'Groundbreaking fusion of quantum computing and AI creating unprecedented computational capabilities and problem-solving abilities.'
@@ -60,11 +58,7 @@ The convergence of quantum computing and artificial intelligence opens new front
     image: '/images/quantum-ai-synthesis-2026.jpg',
     valueProposition: 'Exponential computational capabilities',
 export interface AIBreakthroughContent {/* TODO: Fix JSX expression */}
-}
+
 
 export const,
   new2026AIBreakthroughContent: AIBreakthroughContent[] = [
-  {/* TODO: Fix JSX expression */}
-  },
-  {/* TODO: Fix JSX expression */}
-  }];

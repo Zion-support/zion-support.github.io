@@ -1,4 +1,4 @@
-} ; app.command('/zion', async ({command) ack} respond }) => {; await ack();' const text = (command.text || '').trim();' const [sub, ...rest] = text.split(' '); const userId = command.user_id; try {;' if (!sub || sub.toLowerCase() === 'help') {}' await respond({/* TODO: Fix JSX expression */}
+ ; app.command('/zion', async ({command) ack} respond }) => {; await ack();' const text = (command.text || '').trim();' const [sub, ...rest] = text.split(' '); const userId = command.user_id; try {;' if (!sub || sub.toLowerCase() === 'help') {}' await respond({/* TODO: Fix JSX expression */}
   e: 'ephemeral'} tex)
   t: helpText() }); return; }' if (sub === 'post-job') {;' const role = rest.join(' ') || 'Cloud Engineer'}; const res = await fetch(`${apiBase}/jobs/generate`, {/* TODO: Fix JSX expression */})
   d: 'POST'})' header,

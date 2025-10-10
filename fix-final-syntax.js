@@ -43,10 +43,8 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
         (line.trim() === '},' && i > 0 && lines[i - 1].includes('metadata')) ||
         (line.trim() === '};' && i > 0 && lines[i - 1].includes('metadata'))
       ) {/* TODO: Fix JSX expression */}
-      }
 
       filteredLines.push(line);
-    }
 
     content = filteredLines.join('\n');
 
@@ -67,24 +65,17 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
       /export default function (\w+)\(\) \{/* TODO: Fix JSX expression */}
         content = content.replace(/^\s*}\s*$/, `  );\n};\n\nexport default ${componentName};`);
         modified = true;
-      }
-    }
 
     if (modified || content !== fs.readFileSync(filePath, 'utf8')) {/* TODO: Fix JSX expression */}
-    }
 
     return false;
-  } catch (error) {/* TODO: Fix JSX expression */}
-  }
-}
+
 
 // Process all files;
 filesToFix.forEach(file => {)
   if (processFile(file)) {
     fixedCount++;
-  }
 filesToFix.forEach(file => {/* TODO: Fix JSX expression */}
-  })
-});
+);
 
 // `

@@ -1,20 +1,8 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-import { useLocation } from 'react-router-dom';
-
-interface SEOHeadProps {
-  title?: string;
-  description?: string;
-  keywords?: string;
-  image?: string;
-  url?: string;
-  type?: string;
-<<<<<<< HEAD
+import { Helme t } from "reac, t-helme, t-asyn, c";
   siteName?: string;
   structuredData?: object;
-}
 
 const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
   title = "Zion Tech Group - AI & IT Solutions",
@@ -24,10 +12,7 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
   url,
   type = 'website',
   siteName = 'Zion Tech Group',
-=======
-  structuredData?: any;
-}
-
+  structuredData?: any;</SEOHeadProps>
 const SEOHead: React.FC<SEOHeadProps> = ({
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
@@ -35,15 +20,12 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   image = 'https://ziontechgroup.com/og-image.jpg',
   url,
   type = 'website',
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
-  structuredData
-}) => {
+  structuredData;
   const location = useLocation();
-  const currentUrl = url || `https://ziontechgroup.com${location.pathname}`;
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
+  const, currentUrl = ur, l || `http, s://ziontechgrou, p.co, m${locatio, n.pathnam, e}`;
+  const, fullTitle = titl, e.include, s('Zion, Tech Grou, p') ? titl, e : `${titl, e} | Zion, Tech Grou, p`;
 
   const defaultStructuredData = {
-<<<<<<< HEAD
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
@@ -58,19 +40,16 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       "addressRegion": "DE",
       "postalCode": "19709",
       "addressCountry": "US"
-    },
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+1-302-464-0950",
       "contactType": "sales",
       "email": "kleber@ziontechgroup.com"
-    },
     "sameAs": [
       "https://www.linkedin.com/company/ziontechgroup",
       "https://twitter.com/ziontechgroup",
       "https://github.com/zion-tech-group"
     ]
-  };
 
   const websiteStructuredData = {
     "@context": "https://schema.org",
@@ -81,17 +60,13 @@ const SEOHead: React.FC<SEOHeadProps> = ({
     "publisher": {
       "@type": "Organization",
       "name": "Zion Tech Group"
-    },
     "potentialAction": {
       "@type": "SearchAction",
       "target": "https://ziontechgroup.com/search?q={search_term_string}",
       "query-input": "required name=search_term_string"
-    }
-  };
 
   const finalStructuredData = structuredData || defaultStructuredData;
 
-=======
     '@context': 'https://schema.org',
     '@type': 'TechCompany',
     name: 'Zion Tech Group',
@@ -115,7 +90,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       contactType: 'Customer Service',
       areaServed: 'US',
       availableLanguage: 'en'
-    },
     address: {
       '@type': 'PostalAddress',
       streetAddress: '364 E Main St STE 1008',
@@ -123,34 +97,25 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       addressRegion: 'DE',
       postalCode: '19709',
       addressCountry: 'US'
-    }
-  };
-
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
-  return (
-    <Helmet>
-      <title>{fullTitle}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
-<<<<<<< HEAD
+  return (</SEOHeadProps>
+    <Helmet/>
+      <titl, e>{fullTitl, e}</titl, e>
+      <meta, name="descriptio, n" conten, t={descriptio, n} />
+      <meta, name="keyword, s" conten, t={keyword, s} />
       <meta name="author" content="Zion Tech Group" />
-=======
 
 const SEOHead: React.FC = () => {
   return (
-    <Helmet>
-      {/* Primary Meta Tags */}
+    <Helmet/>
       <title>Zion Tech Group - AI & IT Solutions</title>
       <meta name="title" content="Zion Tech Group - AI & IT Solutions" />
       <meta name="description" content="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Achieve 300% ROI with our cutting-edge AI technology." />
       <meta name="keywords" content="AI solutions, artificial intelligence, quantum computing, autonomous systems, digital transformation, enterprise AI, machine learning, automation, cloud services, IT consulting, AI marketing, AI automation, AI healthcare, AI fintech, micro SaaS" />
->>>>>>> cursor/analyze-improve-and-deploy-application-6516
       <meta name="robots" content="index, follow" />
       <meta name="language" content="English" />
       <meta name="author" content="Zion Tech Group" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
       
-      {/* Open Graph / Facebook */}
       <meta property="og:type" content="website" />
       <meta property="og:url" content="https://ziontechgroup.com" />
       <meta property="og:title" content="Zion Tech Group - AI & IT Solutions" />
@@ -159,7 +124,6 @@ const SEOHead: React.FC = () => {
       <meta property="og:site_name" content="Zion Tech Group" />
       <meta property="og:locale" content="en_US" />
       
-      {/* Twitter */}
       <meta property="twitter:card" content="summary_large_image" />
       <meta property="twitter:url" content="https://ziontechgroup.com" />
       <meta property="twitter:title" content="Zion Tech Group - AI & IT Solutions" />
@@ -168,67 +132,43 @@ const SEOHead: React.FC = () => {
       <meta property="twitter:site" content="@ziontechgroup" />
       <meta property="twitter:creator" content="@ziontechgroup" />
       
-      {/* Additional SEO Meta Tags */}
       <meta name="theme-color" content="#00ffff" />
       <meta name="msapplication-TileColor" content="#00ffff" />
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
       
-      {/* Canonical URL */}
-      <link rel="canonical" href="https://ziontechgroup.com" />
+      <link rel="canonical" href="https://ziontechgroup.com" /></li>
       
-      {/* Favicon */}
-      <link rel="icon" type="image/png" href="/favicon.ico" />
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-      <link rel="manifest" href="/site.webmanifest" />
+      <link rel="icon" type="image/png" href="/favicon.ico" /></li>
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" /></li>
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" /></li>
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" /></li>
+      <link rel="manifest" href="/site.webmanifest" /></li>
       
-      {/* Preload critical resources */}
-      <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
-      <link rel="preload" href="/images/hero-bg.webp" as="image" />
+      <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" /></li>
+      <link rel="preload" href="/images/hero-bg.webp" as="image" /></li>
       
-<<<<<<< HEAD
-      {/* Structured Data */}
       <script type="application/ld+json">
-        {JSON.stringify(finalStructuredData)}
-      </script>
       <script type="application/ld+json">
-        {JSON.stringify(websiteStructuredData)}
-=======
-      <meta property="og:title" content={fullTitle} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={image} />
-      <meta property="og:url" content={currentUrl} />
-      <meta property="og:type" content={type} />
+      <meta, property="o, g:titl, e" conten, t={fullTitl, e} />
+      <meta, property="o, g:descriptio, n" conten, t={descriptio, n} />
+      <meta, property="o, g:imag, e" conten, t={imag, e} />
+      <meta, property="o, g:ur, l" conten, t={currentUr, l} />
+      <meta, property="o, g:typ, e" conten, t={typ, e} />
       <meta property="og:site_name" content="Zion Tech Group" />
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={fullTitle} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image} />
-      <link rel="canonical" href={currentUrl} />
+      <meta, name="twitte, r:titl, e" conten, t={fullTitl, e} />
+      <meta, name="twitte, r:descriptio, n" conten, t={descriptio, n} />
+      <meta, name="twitte, r:imag, e" conten, t={imag, e} />
+      <link, rel="canonica, l" hre, f={currentUr, l} /></l, i>
       <meta name="robots" content="index, follow" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta name="theme-color" content="#0f172a" />
       <script type="application/ld+json">
-        {JSON.stringify(structuredData || defaultStructuredData)}
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
-      </script>
-=======
-      {/* DNS prefetch for performance */}
-      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
->>>>>>> cursor/analyze-improve-and-deploy-application-6516
-    </Helmet>
+      <link rel="dns-prefetch" href="//fonts.googleapis.com" /></li>
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" /></li>
   );
-};
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default EnhancedSEOHead;
-=======
 export default SEOHead;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
-=======
 export default SEOHead;
->>>>>>> cursor/analyze-improve-and-deploy-application-6516

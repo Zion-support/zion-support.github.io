@@ -4,14 +4,11 @@ import fs from 'fs';
 import path from 'path';
 
 class ImageOptimizer {/* TODO: Fix JSX expression */}
-  }
 
   async optimizeImages() {/* TODO: Fix JSX expression */}
-    }
 
     if (!fs.existsSync(this.outputDir)) {/* TODO: Fix JSX expression */}
   e: true });
-    }
 
     const _files = fs.readdirSync(this.inputDir);
     const imageFiles = files.filter(file => )
@@ -19,7 +16,6 @@ class ImageOptimizer {/* TODO: Fix JSX expression */}
     );
 
     for (const file of imageFiles) {/* TODO: Fix JSX expression */}
-    }
 
 //     }
 
@@ -34,9 +30,7 @@ class ImageOptimizer {/* TODO: Fix JSX expression */}
         
 //         } catch (error) {/* TODO: Fix JSX expression */}
 //         }
-    }
-  }
-}
+
 
 const _optimizer = new ImageOptimizer();
 optimizer.optimizeImages();

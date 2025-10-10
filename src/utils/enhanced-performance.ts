@@ -14,8 +14,6 @@ export class PerformanceMonitor {
   constructor() {
     if (typeof window !== 'undefined' && 'PerformanceObserver' in window) {
       this.initializeObservers();
-    }
-  }
   
   /**
    * Initialize performance observers
@@ -26,33 +24,24 @@ export class PerformanceMonitor {
       const navObserver = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           this.recordMetric('navigation', entry.duration);
-        }
-      });
       navObserver.observe({ entryTypes: ['navigation'] });
       this.observers.push(navObserver);
-    }
     
     // Monitor resource timing
     if (PerformanceObserver.supportedEntryTypes.includes('resource')) {
       const resourceObserver = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           this.recordMetric('resource', entry.duration);
-        }
-      });
       resourceObserver.observe({ entryTypes: ['resource'] });
       this.observers.push(resourceObserver);
-    }
     
     // Monitor paint timing
     if (PerformanceObserver.supportedEntryTypes.includes('paint')) {
       const paintObserver = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           this.recordMetric(entry.name, entry.startTime);
-        }
-      });
       paintObserver.observe({ entryTypes: ['paint'] });
       this.observers.push(paintObserver);
-    }
     
     // Monitor largest contentful paint
     if (PerformanceObserver.supportedEntryTypes.includes('largest-contentful-paint')) {
@@ -61,11 +50,8 @@ export class PerformanceMonitor {
         const lastEntry = entries[entries.length - 1];
         if (lastEntry) {
           this.recordMetric('lcp', lastEntry.startTime);
-        }
-      });
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
       this.observers.push(lcpObserver);
-    }
     
     // Monitor first input delay
     if (PerformanceObserver.supportedEntryTypes.includes('first-input')) {
@@ -74,11 +60,8 @@ export class PerformanceMonitor {
           const fidEntry = entry as PerformanceEventTiming;
           const fid = fidEntry.processingStart - fidEntry.startTime;
           this.recordMetric('fid', fid);
-        }
-      });
       fidObserver.observe({ entryTypes: ['first-input'] });
       this.observers.push(fidObserver);
-    }
     
     // Monitor layout shift
     if (PerformanceObserver.supportedEntryTypes.includes('layout-shift')) {
@@ -89,13 +72,8 @@ export class PerformanceMonitor {
           if (!layoutShiftEntry.hadRecentInput) {
             clsValue += layoutShiftEntry.value;
             this.recordMetric('cls', clsValue);
-          }
-        }
-      });
       clsObserver.observe({ entryTypes: ['layout-shift'] });
       this.observers.push(clsObserver);
-    }
-  }
   
   /**
    * Record a metric
@@ -104,7 +82,6 @@ export class PerformanceMonitor {
     const values = this.metrics.get(name) || [];
     values.push(value);
     this.metrics.set(name, values);
-  }
   
   /**
    * Get Web Vitals metrics
@@ -116,7 +93,6 @@ export class PerformanceMonitor {
       fid: this.getMetric('fid'),
       cls: this.getMetric('cls'),
       ttfb: this.getTTFB()};
-  }
   
   /**
    * Get a specific metric
@@ -127,7 +103,6 @@ export class PerformanceMonitor {
     
     // Return the most recent value
     return values[values.length - 1];
-  }
   
   /**
    * Get average of a metric
@@ -138,7 +113,6 @@ export class PerformanceMonitor {
     
     const sum = values.reduce((acc, val) => acc + val, 0);
     return sum / values.length;
-  }
   
   /**
    * Get Time to First Byte
@@ -150,7 +124,6 @@ export class PerformanceMonitor {
     if (!navigation) return 0;
     
     return navigation.responseStart - navigation.requestStart;
-  }
   
   /**
    * Mark a custom timing
@@ -158,8 +131,6 @@ export class PerformanceMonitor {
   mark(name: string): void {
     if (typeof performance !== 'undefined' && performance.mark) {
       performance.mark(name);
-    }
-  }
   
   /**
    * Measure between two marks
@@ -171,11 +142,8 @@ export class PerformanceMonitor {
       performance.measure(name, startMark, endMark);
       const measures = performance.getEntriesByName(name, 'measure');
       return measures[measures.length - 1]?.duration || 0;
-    } catch (error) {
 //       // console.error('Performance measurement failed:', error);
       return 0;
-    }
-  }
   
   /**
    * Clear all metrics
@@ -185,8 +153,6 @@ export class PerformanceMonitor {
     if (typeof performance !== 'undefined' && performance.clearMarks) {
       performance.clearMarks();
       performance.clearMeasures();
-    }
-  }
   
   /**
    * Get performance report
@@ -199,7 +165,6 @@ export class PerformanceMonitor {
       resources: this.getResourceStats(),
       memory: this.getMemoryStats(),
       timestamp: Date.now()};
-  }
   
   /**
    * Get resource loading statistics
@@ -207,7 +172,6 @@ export class PerformanceMonitor {
   private getResourceStats(): ResourceStats {
     if (typeof performance === 'undefined') {
       return { total: 0, scripts: 0, styles: 0, images: 0, fonts: 0 };
-    }
     
     const resources = performance.getEntriesByType('resource') as PerformanceResourceTiming[];
     
@@ -217,7 +181,6 @@ export class PerformanceMonitor {
       styles: resources.filter(r => r.initiatorType === 'css' || r.initiatorType === 'link').length,
       images: resources.filter(r => r.initiatorType === 'img').length,
       fonts: resources.filter(r => r.initiatorType === 'font').length};
-  }
   
   /**
    * Get memory statistics
@@ -225,7 +188,6 @@ export class PerformanceMonitor {
   private getMemoryStats(): MemoryStats | null {
     if (typeof performance === 'undefined' || !('memory' in performance)) {
       return null;
-    }
     
     const memory = (performance as PerformanceWithMemory).memory;
     
@@ -233,7 +195,6 @@ export class PerformanceMonitor {
       usedJSHeapSize: memory.usedJSHeapSize,
       totalJSHeapSize: memory.totalJSHeapSize,
       jsHeapSizeLimit: memory.jsHeapSizeLimit};
-  }
   
   /**
    * Disconnect all observers
@@ -241,8 +202,7 @@ export class PerformanceMonitor {
   disconnect(): void {
     this.observers.forEach(observer => observer.disconnect());
     this.observers = [];
-  }
-}
+
 
 // Types
 
@@ -252,7 +212,7 @@ import type {
   MemoryStats, 
   PerformanceWithMemory, 
   LayoutShift 
-} from '../types/app.types';
+ from '../types/app.types';
 
 // Utility Functions
 
@@ -271,8 +231,7 @@ export function measureExecutionTime<T extends (...args: unknown[]) => any>(
     // console.log(`Function ${fn.name} took ${(end - start).toFixed(2)}ms`);
     
     return result;
-  }) as T;
-}
+
 
 /**
  * Debounce function
@@ -286,13 +245,10 @@ export function debounce<T extends (...args: unknown[]) => any>(
   return (...args: Parameters<T>) => {
     if (timeoutId) {
       clearTimeout(timeoutId);
-    }
     
     timeoutId = setTimeout(() => {
       fn(...args);
-    }, delay);
-  };
-}
+
 
 /**
  * Throttle function
@@ -309,9 +265,7 @@ export function throttle<T extends (...args: unknown[]) => any>(
     if (now - lastCall >= delay) {
       lastCall = now;
       fn(...args);
-    }
-  };
-}
+
 
 /**
  * Request idle callback wrapper
@@ -320,14 +274,11 @@ export function runWhenIdle(callback: () => void, timeout = 1000): void {
   if (typeof window === 'undefined') {
     callback();
     return;
-  }
   
   if ('requestIdleCallback' in window) {
     window.requestIdleCallback(callback, { timeout });
-  } else {
     setTimeout(callback, 0);
-  }
-}
+
 
 /**
  * Default performance monitor instance
@@ -340,7 +291,7 @@ export default PerformanceMonitor;
 import type { PerformanceMetrics } from '../../app/utils/performanceOptimizer';
 import type {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
+
 /**
  * Enhanced Performance Monitoring;
  * Comprehensive performance tracking and optimization utilities;
@@ -348,7 +299,7 @@ import type {/* TODO: Fix JSX expression */}
  * Performance Observer Wrapper;
 export class PerformanceMonitor {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
+
   private,
   metrics: Map;
           <string, number[]> = new Map();
@@ -356,23 +307,21 @@ export class PerformanceMonitor {/* TODO: Fix JSX expression */}
   observers: PerformanceObserver[] = [];
   constructor() {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
+
     if (typeof window !== 'undefined' && 'PerformanceObserver' in window) {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
+
       this.initializeObservers();
-    }
    * Initialize performance observers;
   private initializeObservers(): void {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
+
     // Monitor navigation timing;
     if (PerformanceObserver.supportedEntryTypes.includes('navigation')) {for (const entry of list.getEntries()) {}
   // TOD,
   O: Add content;
-}
+
           this.recordMetric('navigation', entry.duration);
-      });
       navObserver.observe({/* TODO: Fix JSX expression */})
   s: ['navigation'] });
       this.observers.push(navObserver);
@@ -396,7 +345,7 @@ export class PerformanceMonitor {/* TODO: Fix JSX expression */}
 //   MemoryStats,
 //   PerformanceWithMemory,
 //   LayoutShift;
-} from '../types/app.types';
+ from '../types/app.types';
 // Utility Functions;
  * Throttle function;
 export function throttle;
@@ -405,15 +354,14 @@ export function throttle;
 export function runWhenIdle(callbac)
   k: () => void, timeout = 1000): void {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
+
   if (typeof window === 'undefined') {return;}
   if ('requestIdleCallback' in window) {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
+
     window.requestIdleCallback(callback, { timeout });
-  } else {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
+
     setTimeout(callback, 0);
 * Default performance monitor instance;
 export const performanceMonitor = new PerformanceMonitor();

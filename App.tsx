@@ -1,12 +1,12 @@
 'use client';
 import React, { Suspense } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
 import './app/styles/futuristic.css';
 import Navigation from './app/components/Navigation';
 import Footer from './app/components/Footer';
 import HomePage from './app/page';
-import { PageLoader } from './app/components/LoadingStates';
+import { PageLoader } from "./app/components/LoadingStates";
 import ErrorBoundary from './app/components/ErrorBoundary';
 import SEOHead from './app/components/EnhancedSEOHead';
 import SkipLink from './app/components/EnhancedSkipLink';
@@ -14,13 +14,13 @@ import Breadcrumb from './app/components/Breadcrumb';
 import PerformanceOptimizer from './app/components/EnhancedPerformanceOptimizer';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 import EnhancedAccessibility from './app/components/EnhancedAccessibility';
-import { usePerformanceMonitor } from './app/hooks/usePerformanceMonitor';
-import { AnalyticsProvider } from './app/components/EnhancedAnalytics';
+import { usePerformanceMonitor } from "./app/hooks/usePerformanceMonitor";
+import { AnalyticsProvider } from "./app/components/EnhancedAnalytics";
 import PerformanceMonitor from './app/components/PerformanceMonitor';
 import ServiceWorker from './app/components/ServiceWorker';
 import EnhancedErrorBoundary from './app/components/EnhancedErrorBoundary';
-// Structured data for SEO - moved to SEOHead component
-// Lazy load pages for better performance
+// Structured data for SEO - moved to SEOHead component;
+// Lazy load pages for better performance;
 const AboutPage = React.lazy(() => import('./app/about/page'));
 const ContactPage = React.lazy(() => import('./app/contact/page'));
 const ServicesPage = React.lazy(() => import('./app/services/page'));
@@ -36,7 +36,7 @@ const ConsultationPage = React.lazy(() => import('./app/consultation/page'));
 const MicroSaasPage = React.lazy(() => import('./app/micro-saas/page'));
 const AiServicesPage = React.lazy(() => import('./app/ai-services/page'));
 const ItServicesPage = React.lazy(() => import('./app/it-services/page'));
-// New AI Services
+// New AI Services;
 const AIProjectManagerPage = React.lazy(() => import('./app/ai-project-manager/page'));
 const AISocialMediaManagerPage = React.lazy(() => import('./app/ai-social-media-manager/page'));
 const AIEmailMarketingAutomationPage = React.lazy(() => import('./app/ai-email-marketing-automation/page'));
@@ -48,7 +48,7 @@ const AICloudInfrastructurePage = React.lazy(() => import('./app/ai-cloud-infras
 const AppWithPerformanceMonitoring: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   usePerformanceMonitor();
   return <React.Fragment>{children}</React.Fragment>;
-};
+;
 
 // Main App Component
 const App: React.FC = () => {
@@ -87,7 +87,6 @@ const App: React.FC = () => {
                             <Route path="/micro-saas" element={<MicroSaasPage />} />
                             <Route path="/ai-services" element={<AiServicesPage />} />
                             <Route path="/it-services" element={<ItServicesPage />} />
-                            {/* New AI Services Routes */}
                             <Route path="/ai-project-manager" element={<AIProjectManagerPage />} />
                             <Route path="/ai-social-media-manager" element={<AISocialMediaManagerPage />} />
                             <Route path="/ai-email-marketing-automation" element={<AIEmailMarketingAutomationPage />} />
@@ -98,7 +97,6 @@ const App: React.FC = () => {
                           </Routes>
                         </Suspense>
                       </main>
-                      <Footer />
                     </div>
                   </AccessibilityEnhancer>
                 </EnhancedAccessibility>
@@ -106,6 +104,7 @@ const App: React.FC = () => {
             </AnalyticsProvider>
           </AppWithPerformanceMonitoring>
         </Router>
+        <Footer />
       </HelmetProvider>
     </EnhancedErrorBoundary>
   );

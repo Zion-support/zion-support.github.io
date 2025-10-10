@@ -12,7 +12,6 @@ function fixConsoleStatements(content) {/* TODO: Fix JSX expression */}
     /if \(process\.env\.NODE_ENV === 'development'\) console\.(log|error|warn|info)\([^)]*\); \}/g,
     match => {/* TODO: Fix JSX expression */}
       return match.replace(/; \}$/, '; }');
-    }
   );
 
   // Fix console statements that are missing closing brace;
@@ -21,7 +20,6 @@ function fixConsoleStatements(content) {/* TODO: Fix JSX expression */}
     /if \(process\.env\.NODE_ENV === 'development'\) console\.(log|error|warn|info)\([^)]*\);$/gm,
     match => {/* TODO: Fix JSX expression */}
       return match + ' }';
-    }
   );
 
   // Fix console statements that have extra closing brace;
@@ -30,11 +28,10 @@ function fixConsoleStatements(content) {/* TODO: Fix JSX expression */}
     /if \(process\.env\.NODE_ENV === 'development'\) console\.(log|error|warn|info)\([^)]*\); \}\s*$/gm,
     match => {/* TODO: Fix JSX expression */}
       return match.replace(/; \}\s*$/, '; }');
-    }
   );
 
   return content;
-}
+
 
 // Files that need console statement fixes;
 const filesToFix = [
@@ -52,7 +49,6 @@ const filesToFix = [
   'app/utils/analyticsTracker.ts'];
 
 function fixFile(filePath) {/* TODO: Fix JSX expression */}
-    }
 
 
     // Apply fixes;
@@ -60,9 +56,7 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
 
     fs.writeFileSync(fullPath, content);
 
-  } catch (error) {/* TODO: Fix JSX expression */}
-  }
-}
+
 
 // Fix all files;
 filesToFix.forEach(fixFile);

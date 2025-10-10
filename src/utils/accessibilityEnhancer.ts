@@ -7,7 +7,7 @@ interface AccessibilityConfig {enableKeyboardNavigation: boolean;}
   enableHighContrast: boolean;
   enableFocusIndicators: boolean;
   enableAriaLabels: boolean;
-}
+
 
 class AccessibilityEnhancer {private config: AccessibilityConfig;}
   constructor(config?: AccessibilityConfig) {this.config = config || {}
@@ -23,18 +23,13 @@ class AccessibilityEnhancer {private config: AccessibilityConfig;}
   private init(): void {// Initialize accessibility enhancements;}
     this.setupKeyboardNavigation();
     this.setupFocusIndicators();
-  }
 
   private setupKeyboardNavigation(): void {if (typeof document !== 'undefined' {}
       // Add keyboard navigation support;)
       document.addEventListener('keydown', (event) => {if (event.key === 'Tab') {}
           // Handle tab navigation;
           console.log('Tab navigation detected');
-        }
-      }
   )
-    }
-  }
 
   private setupFocusIndicators(): void {if (typeof document !== 'undefined') {}
       // Add focus indicators;
@@ -43,16 +38,12 @@ class AccessibilityEnhancer {private config: AccessibilityConfig;}
 
         *:focus {outline: 2px solid #0066cc;}
           outline-offset: 2px;
-        }
 
       `
       document.head.appendChild(style)
-    }
-  }
 
   public cleanup(): void {// Cleanup accessibility enhancements;}
-  }
-}
+
 
 export default AccessibilityEnhancer;`
 

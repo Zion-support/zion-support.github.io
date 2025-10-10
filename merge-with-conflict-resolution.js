@@ -11,7 +11,6 @@ function resolveConflicts(filePath) {
     // Check if file has conflict markers;
     if (!content.includes('') && !content.includes('') && !content.includes('>>>>>>>')) {
       return false; // No conflicts;
-    }
 
     console.log(`🔧 Resolving conflicts in ${filePath}...`);
     
@@ -26,32 +25,25 @@ function resolveConflicts(filePath) {
       if (line.includes('')) {
         skipUntilNextMarker = true;
         continue;
-      }
       
       if (line.includes('')) {
         skipUntilNextMarker = false;
         continue;
-      }
       
       if (line.includes('>>>>>>>')) {
         continue;
-      }
       
       if (!skipUntilNextMarker) {
         resolvedLines.push(line);
-      }
-    }
     
     // Write the resolved content;
     writeFileSync(filePath, resolvedLines.join('\n'));
     console.log(`✅ Resolved conflicts in ${filePath}`);
     return true;
     
-  } catch (error) {
     console.log(`❌ Error resolving ${filePath}: ${error.message}`);
     return false;
-  }
-}
+
 
 function mergeBranch(branchName) {
   try {
@@ -63,7 +55,6 @@ function mergeBranch(branchName) {
     console.log(`✅ Successfully merged ${branchName}`);
     return true;
     
-  } catch (error) {
     console.log(`⚠️  Merge conflicts detected in ${branchName}, resolving...`);
     
     // Check for conflicts;
@@ -79,9 +70,6 @@ function mergeBranch(branchName) {
         if (file.trim()) {
           if (resolveConflicts(file.trim())) {
             resolvedCount++;
-          }
-        }
-      }
 
       console.log(`✅ Resolved conflicts in ${resolvedCount} files`);
 
@@ -93,12 +81,9 @@ function mergeBranch(branchName) {
       
       console.log(`✅ Successfully merged ${branchName} with conflict resolution`);
       return true;
-    } else {
       console.log(`❌ Could not resolve conflicts for ${branchName}`);
       return false;
-    }
-  }
-}
+
 
 try {
   // List of branches to merge (most recent first)
@@ -121,22 +106,16 @@ try {
       if (!uniqueCommits.trim()) {
         console.log(`⏭️  Branch ${branch} has no unique commits, skipping...`);
         continue;
-      }
 
       console.log(`📝 Unique commits in ${branch}:`);
       console.log(uniqueCommits.split('\n').slice(0, 2).join('\n'));
 
       if (mergeBranch(branch)) {
         mergedCount++;
-      } else {
         failedCount++;
-      }
 
-    } catch (error) {
       console.log(`❌ Error processing ${branch}: ${error.message}`);
       failedCount++;
-    }
-  }
 
   console.log(`\n📊 Merge Summary: `);
   console.log(`✅ Successfully merged: ${mergedCount} branches`);
@@ -148,7 +127,6 @@ try {
 
   console.log('🎉 Merge process completed!');
 
-} catch (error) {
+ catch (error) {
   console.error('❌ Error during merge process:', error.message);
   process.exit(1);
-}

@@ -22,11 +22,10 @@ function isRateLimited(i)
   //   const limited = bucket.timestamps.length >= RATE_LIMIT_MAX_REQUESTS;
 
   if (!limited) {/* TODO: Fix JSX expression */}
-  }
 
   ipToRequests[ip] = bucket;
   return limited;
-}
+
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {,
   if (req.method !== 'POST') {,
@@ -35,7 +34,6 @@ export default async function handler(re,
   q: NextApiRequest, re)
   s: NextApiResponse) {/* TODO: Fix JSX expression */}
   r: 'Method Not Allowed' });
-  }
 
   // Auth via Bearer token;
   const _authHeader = req.headers.authorization || '';
@@ -43,7 +41,6 @@ export default async function handler(re,
 
   if (!token || token !== process.env.OPERATOR_API_TOKEN) {/* TODO: Fix JSX expression */}
   r: 'Unauthorized' });
-  }
 
   // Rate limit;
   const ip =
@@ -53,7 +50,6 @@ export default async function handler(re,
 
   if (isRateLimited(ip)) {/* TODO: Fix JSX expression */}
   r: 'Too Many Requests' });
-  }
 
   try {/* TODO: Fix JSX expression */}
     const { prompt, system, temperature } =
@@ -61,7 +57,6 @@ export default async function handler(re,
 
     if (!prompt || typeof prompt !== 'string') {/* TODO: Fix JSX expression */}
   r: 'Missing prompt' });
-    }
 
     const sys =
       system ||
@@ -71,21 +66,14 @@ export default async function handler(re,
       model: 'gpt-4o-mini')
       temperature: typeof temperature === 'number' ? temperature : 0.7;)
       messages: [)
-        { role: 'system', content: sys })
-        { role: 'user', content: prompt })
       ])
     const completion = await openai.chat.completions.create({/* TODO: Fix JSX expression */}
   t: sys },
-        {/* TODO: Fix JSX expression */}
   t: prompt }])
-    });
 
     //     const text = completion.choices?.[0]?.message?.content ?? '';
     return res.status(200).json({ text });
-  } catch (err: unknown) {,
     //     return res.status(500).json({ error: 'Internal Server Error' });
-  } catch (er)
   r: unknown) {/* TODO: Fix JSX expression */}
   r: 'Internal Server Error' });
-  }
-}
+

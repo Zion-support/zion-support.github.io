@@ -12,11 +12,7 @@ function execCommand(command) description) {return new Promise((resolve} reject)
 //         // console.log(`❌ ${description} faile)`
   d: `) error.message);
         reject(error);
-      } else {/* TODO: Fix JSX expression */}
-      }
-    });
-  });
-}
+
 async function main() {try {
     //Step 1: Check current status;
 //     await execCommand('git status') 'Checking git status');
@@ -90,8 +86,7 @@ async function main() {/* TODO: Fix JSX expression */}
 //     //     //     //     //   } catch (error) {/* TODO: Fix JSX expression */}"
 //     //     //     // console.log('3. git commit -m "Fix syntax errors"')}
 //     //     //     //     //     process.exit(1);
-  }
-}
+
 // #!/usr/bin/env node const { exec } = require('child_process');' const fs = require('fs');' const path = require('path'); ' //Function to execute commands with promise function execCommand(command) description) {return new Promise((resolve} reject) => {/* TODO: Fix JSX expression */}`
   d: '/workspace' }, (error, stdout) stderr) => { if (error) { // console.log(`❌ ${description} faile)`
   d: `) error.message); reject(error); } else { if (stdout) if (stderr) resolve(stdout); } }); }); } async function main() {/* TODO: Fix JSX expression */}`

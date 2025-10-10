@@ -53,7 +53,6 @@ export function middleware(request: NextRequest) {
   // Apply all security headers;
   Object.entries(securityHeaders).forEach(([key, value]) => {
     response.headers.set(key, value);
-  });
 
   // CORS headers for API routes;
   if (request.nextUrl.pathname.startsWith('/api/')) {
@@ -61,30 +60,25 @@ export function middleware(request: NextRequest) {
     response.headers.set('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
     response.headers.set('Access-Control-Allow-Headers', 'Content-Type, Authorization');
     response.headers.set('Access-Control-Max-Age', '86400');
-  }
 
   // Handle preflight requests;
   if (request.method === 'OPTIONS') {
     return new NextResponse(null, { status: 204, headers: response.headers });
 export function middleware(reques)
   t: NextRequest) {/* TODO: Fix JSX expression */}
-  };
 
   // Apply all security headers;
   Object.entries(securityHeaders).forEach(([key, value]) => {/* TODO: Fix JSX expression */}
-  });
 
   // CORS headers for API routes;
   if (request.nextUrl.pathname.startsWith('/api/')) {/* TODO: Fix JSX expression */}
-  }
 
   // Handle preflight requests;
   if (request.method === 'OPTIONS') {/* TODO: Fix JSX expression */}
   s: response.headers });
-  }
 
   return response;
-}
+
 
 export const config = {
   matcher: [
@@ -97,4 +91,4 @@ export const config = {
      */,
     '/((?!_next/static|_next/image|favicon.ico|public/).*)'],
 export const config = {/* TODO: Fix JSX expression */}
-};
+;

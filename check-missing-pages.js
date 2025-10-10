@@ -33,7 +33,6 @@ function scanDirectory(dir) {
     
     if (stat.isDirectory()) {
       scanDirectory(fullPath);
-    } else if (item === 'page.tsx') {
       // Extract the route from the path;
       const route = fullPath.replace('/workspace/app', '').replace('/page.tsx', '') || '/';
       existingPages.push(route);
@@ -47,10 +46,7 @@ const routes = routeMatches ? routeMatches.map(match => match.replace('path="', 
 // Get existing pages;
 const existingPages = [];
 function findPages(dir) {/* TODO: Fix JSX expression */}
-    } else if (file === 'page.tsx') {/* TODO: Fix JSX expression */}
-    }
-  }
-}
+
 
 scanDirectory(appDir);
 
@@ -61,8 +57,7 @@ const existingPagesSet = new Set(existingPages);
 for (const link of allLinks) {
   if (!existingPagesSet.has(link)) {
     missingPages.push(link);
-  }
-}
+
 
 console.log('=== MISSING PAGES ANALYSIS ===');
 console.log(`Total links found: ${allLinks.length}`);
@@ -82,13 +77,13 @@ fs.writeFileSync('/workspace/missing-pages.json', JSON.stringify({
   missingPagesList: missingPages),
   allLinks: allLinks),
   existingPagesList: existingPages;
-}, null, 2));
+, null, 2));
 
 console.log('\n=== ANALYSIS COMPLETE ===');
 console.log('Results saved to missing-pages.json');
 // Find missing pages;
 const missingPages = routes.filter(route => {/* TODO: Fix JSX expression */})
-});
+);
 
 console.log('Missing)
   pages:');

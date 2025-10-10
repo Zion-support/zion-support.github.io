@@ -10,7 +10,6 @@ export default function handler(req, res) {
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Method not allowed' }));
     return;
-  }
 
   const { address, type, name, userId } = req.body || {};
 
@@ -19,11 +18,9 @@ export default function handler(req, res) {
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Address and type are required' }));
     return;
-  }
 
   if (!fs.existsSync(dir)) {
     fs.mkdirSync(dir, { recursive: true });
-  }
 
   let existing = [];
   try {
@@ -31,14 +28,10 @@ export default function handler(req, res) {
       const data = fs.readFileSync(file, 'utf8');
       existing = JSON.parse(data);
       if (!Array.isArray(existing)) existing = [];
-    }
-  } catch (error) {
     // Log error for debugging in development
     if (process.env.NODE_ENV === 'development') {
       console.error('Error reading existing wallets:', error);
-    }
     existing = [];
-  }
 
   // Check if wallet address already exists
   const existingWallet = existing.find(wallet => wallet.address === address);
@@ -47,7 +40,6 @@ export default function handler(req, res) {
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Wallet address already exists' }));
     return;
-  }
 
   const newWallet = {
     id: Date.now().toString(),
@@ -57,7 +49,6 @@ export default function handler(req, res) {
     userId: userId || '',
     timestamp: new Date().toISOString(),
     status: 'active'
-  };
 
   existing.push(newWallet);
 
@@ -69,14 +60,9 @@ export default function handler(req, res) {
       success: true, 
       message: 'Wallet added successfully',
       id: newWallet.id
-    }));
-  } catch (error) {
     // Log error for debugging in development
     if (process.env.NODE_ENV === 'development') {
       console.error('Error saving wallet:', error);
-    }
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Failed to save wallet' }));
-  }
-}

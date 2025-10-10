@@ -15,8 +15,7 @@ export const debounce = <T extends (...args: any[]) => any>(;
   return (...args: Parameters<T>) => {}
     clearTimeout(timeout);
     timeout = setTimeout(() => func(...args), wait);}
-  }
-}
+
 // Throttle utility for performance;
 export const throttle = <T extends (...args: any[]) => any>(;
   func: T,;
@@ -36,9 +35,7 @@ export const throttle = <T extends (...args: any[]) => any>(;
       func(...args);
       inThrottle = true;
       setTimeout(() => (inThrottle = false), limit);}
-    }
-  }
-}
+
 // Intersection Observer hook for lazy loading;
 export const useIntersectionObserver = (;
   callback: (entries: IntersectionObserverEntry[]) => void;
@@ -54,7 +51,6 @@ export const useIntersectionObserver = (;
             threshold: 0.1,;
             rootMargin: '50px',;
             ...options}
-          });
         : null,;
     [callback, options];
   );
@@ -77,8 +73,7 @@ export const debounce = <T extends (...arg);
   t: number;);
 ): ((...arg);
   s: Parameters<T>) => void) => {/* TODO: Fix JSX expression */}
-  };
-};
+;
 // Throttle utility for performance;
 export const throttle = <T extends (...arg);
   s: any[]) => any>(fun,;
@@ -87,9 +82,7 @@ export const throttle = <T extends (...arg);
   t: number;);
 ): ((...arg);
   s: Parameters<T>) => void) => {/* TODO: Fix JSX expression */}
-    }
-  };
-};
+;
 // Intersection Observer hook for lazy loading;
 export const useIntersectionObserver = (callbac,;
   k: (entrie);
@@ -97,27 +90,21 @@ export const useIntersectionObserver = (callbac,;
   option,;
   s: IntersectionObserverInit = {}
 ) => {/* TODO: Fix JSX expression */}
-          });
         : null,;
     [callback, options];
   );
   const observe = useCallback((elemen);
   t: Element | null) => {/* TODO: Fix JSX expression */}
-      }
-      return () => {}
-    },;
+      return () => },;
     [observer];
   );
   const disconnect = useCallback(() => {}
     if (observer) {}
       observer.disconnect();}
-    }
-  }, [observer]);
   useEffect(() => {}
     return () => disconnect();}
-  }, [disconnect]);
   return { observe, disconnect }
-}
+
 // Image lazy loading hook;
 export const useLazyImage = useCallback((...args) => {;
   const [imageSrc, setImageSrc] = useState(placeholder || '');
@@ -141,35 +128,25 @@ export const useLazyImage = useCallback((...args) => {}
             img.onload = () => {}
               setImageSrc(src);
               setIsLoaded(true);}
-            }
             img.onerror = () => {}
               setIsError(true);}
-            }
   );
   const disconnect = useCallback(() => {/* TODO: Fix JSX expression */}
-    }
-  }, [observer]);
   useEffect(() => {/* TODO: Fix JSX expression */}
-  }, [disconnect]);
   return { observe, disconnect };
-};
+;
 // Image lazy loading hook;
 export const useLazyImage = (sr);
   c: string, placeholder?: string) => {/* TODO: Fix JSX expression */}
   const { observe } = useIntersectionObserver(useCallback();
       (entries) => {/* TODO: Fix JSX expression */}
-            };
             img.onerror = () => {/* TODO: Fix JSX expression */}
-            };
             img.src = src;
-          }
-        });
-      },;
       [src, isLoaded, isError];
     );
   );
   return { imageSrc, isLoaded, isError, observe }
-}
+
 // Performance monitoring hook;
 export const usePerformanceMonitoring = useCallback((...args) => {;
   const [metrics, setMetrics] = useState<{;
@@ -178,7 +155,6 @@ export const usePerformanceMonitoring = useCallback((...args) => {;
     fid?: number;
     cls?: number;}
     ttfb?: number;}
-  }>({});
   useEffect(() => {;
     if (typeof window === 'undefined') return;
     const updateMetrics = useCallback((...args) => {;
@@ -190,8 +166,6 @@ export const usePerformanceMonitoring = useCallback((...args) => {;
         fcp);
         lcp);}
         ttfb: navigation?.responseStart - navigation?.requestStart}
-      });
-    }
     // Monitor performance after page load;
     if (document.readyState === 'complete') {;
 // Performance monitoring hook;}
@@ -202,7 +176,6 @@ export const usePerformanceMonitoring = useCallback((...args) => {}
     fid?: number;
     cls?: number;
     ttfb?: number;}
-  }>({});
   useEffect(() => {}
     if (typeof window === 'undefined') return;
     const updateMetrics = useCallback((...args) => {}
@@ -214,14 +187,10 @@ export const usePerformanceMonitoring = useCallback((...args) => {}
         fcp,;
         lcp,;
         ttfb: navigation?.responseStart - navigation?.requestStart}
-      });
-    }
     // Monitor performance after page load;
     if (document.readyState === 'complete') {}
       updateMetrics();}
-    } else {}
       window.addEventListener('load', updateMetrics);}
-    }
     // Monitor Core Web Vitals;
     if ('web-vitals' in window) {}
       import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {}
@@ -230,21 +199,16 @@ export const usePerformanceMonitoring = useCallback((...args) => {}
         getFCP((metric) => setMetrics(prev => ({ ...prev, fcp: metric.value })));
         getLCP((metric) => setMetrics(prev => ({ ...prev, lcp: metric.value })));
         getTTFB((metric) => setMetrics(prev => ({ ...prev, ttfb: metric.value })));
-      });
-    }
     return () => {}
       window.removeEventListener('load', updateMetrics);}
-    }
-  }, []);
   return metrics;
-}
+
 // Memory usage monitoring;
 export const useMemoryMonitoring = useCallback((...args) => {;
   const [memoryInfo, setMemoryInfo] = useState<{;
     usedJSHeapSize?: number;
     totalJSHeapSize?: number;}
     jsHeapSizeLimit?: number;}
-  }>({});
   useEffect(() => {;
     if (typeof window === 'undefined' || !('memory' in performance)) return;
     const updateMemoryInfo = useCallback((...args) => {;
@@ -259,7 +223,6 @@ export const useMemoryMonitoring = useCallback((...args) => {}
     usedJSHeapSize?: number;
     totalJSHeapSize?: number;
     jsHeapSizeLimit?: number;}
-  }>({});
   useEffect(() => {}
     if (typeof window === 'undefined' || !('memory' in performance)) return;
     const updateMemoryInfo = useCallback((...args) => {}
@@ -269,20 +232,14 @@ export const useMemoryMonitoring = useCallback((...args) => {}
           usedJSHeapSize: memory.usedJSHeapSize,;
           totalJSHeapSize: memory.totalJSHeapSize,;
           jsHeapSizeLimit: memory.jsHeapSizeLimit}
-        });
   );
   return { imageSrc, isLoaded, isError, observe };
-};
+;
 // Performance monitoring hook;
 export const usePerformanceMonitoring = () => {/* TODO: Fix JSX expression */}
-  }>({});
   useEffect(() => {/* TODO: Fix JSX expression */}
-      });
-    };
     // Monitor performance after page load;
     if (document.readyState === 'complete') {/* TODO: Fix JSX expression */}
-    } else {/* TODO: Fix JSX expression */}
-    }
     // Monitor Core Web Vitals;
     if ('web-vitals' in window) {/* TODO: Fix JSX expression */}
       import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {/* TODO: Fix JSX expression */}
@@ -295,26 +252,17 @@ export const usePerformanceMonitoring = () => {/* TODO: Fix JSX expression */}
   p: metric.value })));
         getTTFB((metric) => setMetrics(prev => ({/* TODO: Fix JSX expression */});
   b: metric.value })));
-      });
-    }
     return () => {/* TODO: Fix JSX expression */}
-    };
-  }, []);
   return metrics;
-};
+;
 // Memory usage monitoring;
 export const useMemoryMonitoring = () => {/* TODO: Fix JSX expression */}
-  }>({});
   useEffect(() => {/* TODO: Fix JSX expression */}
-        });
-      }
-    }
     updateMemoryInfo();
     const interval = setInterval(updateMemoryInfo, 5000);
     return () => clearInterval(interval);
-  }, []);
   return memoryInfo;
-}
+
 // Resource preloading utility;
 export const preloadResource = useCallback((...args) => {;
   if (typeof window === 'undefined') return;
@@ -326,7 +274,7 @@ export const preloadResource = useCallback((...args) => {}
   link.href = href;
   link.as = as;
   document.head.appendChild(link);}
-}
+
 // Critical resource preloading;
 export const preloadCriticalResources = useCallback((...args) => {;
   if (typeof window === 'undefined') return;
@@ -342,7 +290,7 @@ export const preloadCriticalResources = useCallback((...args) => {}
   preloadResource('/images/logo.svg', 'image');
   // Preload critical CSS;
   preloadResource('/styles/critical.css', 'style');}
-}
+
 // Bundle size monitoring;
 export const useBundleSizeMonitoring = useCallback((...args) => {;
   const [bundleSize, setBundleSize] = useState<{;
@@ -350,7 +298,6 @@ export const useBundleSizeMonitoring = useCallback((...args) => {;
     jsSize?: number;
     cssSize?: number;}
     imageSize?: number;}
-  }>({});
   useEffect(() => {;
     if (typeof window === 'undefined') return;
     const calculateBundleSize = useCallback((...args) => {;
@@ -370,7 +317,6 @@ export const useBundleSizeMonitoring = useCallback((...args) => {}
     jsSize?: number;
     cssSize?: number;
     imageSize?: number;}
-  }>({});
   useEffect(() => {}
     if (typeof window === 'undefined') return;
     const calculateBundleSize = useCallback((...args) => {}
@@ -384,19 +330,13 @@ export const useBundleSizeMonitoring = useCallback((...args) => {}
         totalSize += size;
         if (resource.name.includes('.js')) {}
           jsSize += size;}
-        } else if (resource.name.includes('.css')) {}
           cssSize += size;}
-        } else if (resource.name.match(/\.(jpg|jpeg|png|gif|webp|svg)$/)) {}
           imageSize += size;}
-        }
-      });
       setBundleSize({);
         totalSize);
         jsSize);
         cssSize);}
         imageSize}
-      });
-    }
     // Calculate after page load;
     if (document.readyState === 'complete') {;}
       setBundleSize({)}
@@ -404,20 +344,14 @@ export const useBundleSizeMonitoring = useCallback((...args) => {}
         jsSize,;
         cssSize,;
         imageSize}
-      });
-    }
     // Calculate after page load;
     if (document.readyState === 'complete') {}
       calculateBundleSize();}
-    } else {}
       window.addEventListener('load', calculateBundleSize);}
-    }
     return () => {}
       window.removeEventListener('load', calculateBundleSize);}
-    }
-  }, []);
   return bundleSize;
-}
+
 export default {}
   debounce,;
   throttle,;
@@ -428,36 +362,25 @@ export default {}
   preloadResource,;
   preloadCriticalResources,;
   useBundleSizeMonitoring}
-}
-};
+
+;
 // Resource preloading utility;
 export const preloadResource = (hre,;
   f: string, a);
   s: string) => {/* TODO: Fix JSX expression */}
-};
+;
 // Critical resource preloading;
 export const preloadCriticalResources = () => {/* TODO: Fix JSX expression */}
-};
+;
 // Bundle size monitoring;
 export const useBundleSizeMonitoring = () => {/* TODO: Fix JSX expression */}
-  }>({});
   useEffect(() => {/* TODO: Fix JSX expression */}
-        } else if (resource.name.includes('.css')) {/* TODO: Fix JSX expression */}
-        } else if (resource.name.match(/\.(jpg|jpeg|png|gif|webp|svg)$/)) {/* TODO: Fix JSX expression */}
-        }
-      });
       setBundleSize({/* TODO: Fix JSX expression */});
-      });
-    };
     // Calculate after page load;
     if (document.readyState === 'complete') {/* TODO: Fix JSX expression */}
-    } else {/* TODO: Fix JSX expression */}
-    }
     return () => {/* TODO: Fix JSX expression */}
-    };
-  }, []);
   return bundleSize;
-};
+;
 export default {/* TODO: Fix JSX expression */}
-};
+;
 ;

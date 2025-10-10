@@ -1,11 +1,6 @@
 import React from 'react';
-interface UnifiedContentPromotionProps {/* TODO: Fix JSX expression */}
-}
+interface, UnifiedContentPromotionProps {/* TOD, O: Fix, JSX expressio, n */}
 const,
-  UnifiedContentPromotion: React.FC<UnifiedContentPromotionProps> = () => {/* TODO: Fix JSX expression */}
-      {/* Component content */}
-    </div>
+  UnifiedContentPromotion: React.FC<UnifiedContentPromotionProps> = () => {/* TODO: Fix JSX expression */}</UnifiedContentPromotionProps>
   );
-};
 export default UnifiedContentPromotion;
-  </UnifiedContentPromotionProps>

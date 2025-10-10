@@ -22,10 +22,7 @@ import { fileURLToPath } from 'url';
     !hasDoubleClosing;)
   ) {
     //     process.exit(0);
-  } else {
     //     process.exit(1);
 // try {/* TODO: Fix JSX expression */}
-  } else {/* TODO: Fix JSX expression */}
-  }
-} catch (error) {/* TODO: Fix JSX expression */}
-}
+ catch (error) {/* TODO: Fix JSX expression */}
+

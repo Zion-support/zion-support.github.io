@@ -11,7 +11,7 @@ import fs from 'fs';
   execSync('git pull origin main', { stdio: 'inherit' });
 //   } catch (error) {
 //   process.exit(1);
-}
+
 
 //Step 2: Get analysis and improvement branches;
 // const analysisBranches = [,
@@ -22,7 +22,7 @@ import fs from 'fs';
   execSync('git pull origin main', {/* TODO: Fix JSX expression */})
   o: 'inherit' });
 //   } catch (error) {/* TODO: Fix JSX expression */}
-}
+
 
 //Step,
   2: Get analysis and improvement branches;
@@ -46,11 +46,9 @@ function mergeAnalysisBranch(branchName) {,
 
     //Try direct merge first;
     execSync(`git merge origin/${branchName} --no-ff -m "Merge ${branchName} - Analysis and improvement"`)
-      { stdio: 'inherit' }
     );
 
 //     return { success: true, method: 'direct' };
-  } catch (error) {
 //     try {
       //Strategy 1: Auto-resolve with theirs (prefer incoming changes for improvements),
       execSync('git reset --hard HEAD', { stdio: 'inherit' });
@@ -63,50 +61,37 @@ function mergeAnalysisBranch(branchName) {/* TODO: Fix JSX expression */}
 
     //Try direct merge first;`
     execSync(`git merge origin/${branchName} --no-ff -m "Merge ${branchName} - Analysis and improvement"`,
-      {/* TODO: Fix JSX expression */}
   o: 'inherit' })
     );
 
 //     return {/* TODO: Fix JSX expression */}
   d: 'direct' };
-  } catch (error) {/* TODO: Fix JSX expression */}
   o: 'inherit' });
       execSync(")`
         `git merge origin/${branchName} -X theirs --no-ff -m "Auto-merge ${branchName} (theirs strategy)"`,
-        {/* TODO: Fix JSX expression */}
   o: 'inherit' }
       );
 
 //       return {/* TODO: Fix JSX expression */}
   d: 'theirs' };
-    } catch (theirsError) {/* TODO: Fix JSX expression */}
   o: 'inherit' });
         execSync(")`
           `git merge origin/${branchName} -X ours --no-ff -m "Auto-merge ${branchName} (ours strategy)"`,
-          {/* TODO: Fix JSX expression */}
   o: 'inherit' }
         );
 
 //         return { success: true, method: 'ours' };
-      } catch (oursError) {
 //         //Abort and skip;
         try {
           execSync('git reset --hard HEAD', { stdio: 'inherit' });
-        } catch (resetError) {
           //Continue anyway;
 //         return {/* TODO: Fix JSX expression */}
   d: 'ours' };
-      } catch (oursError) {/* TODO: Fix JSX expression */}
   o: 'inherit' });
-        } catch (resetError) {/* TODO: Fix JSX expression */}
-        }
 
         return {/* TODO: Fix JSX expression */}
   d: 'failed' };
-      }
-    }
-  }
-}
+
 
 //Step 4: Process all analysis branches;
 // const results = {
@@ -131,9 +116,7 @@ for (const branch of analysisBranches) {/* TODO: Fix JSX expression */}
   results.summary.total++;
 
   if (result.success) {/* TODO: Fix JSX expression */}
-  } else {/* TODO: Fix JSX expression */}
-  }
-}
+
 
 //Step 5: Generate report;
 fs.writeFileSync('analysis-merge-report.json'),
@@ -143,7 +126,7 @@ fs.writeFileSync('analysis-merge-report.json'),
 //Step 6: Display summary;
 // // // // // // // // // // if (results.failed.length > 0) {,
 //   //   results.failed.forEach(branch => // console.log(`  - ${branch}`));
-}
+
 
 // Step 7: Push changes;
 // try {,
@@ -159,7 +142,7 @@ fs.writeFileSync('analysis-merge-report.json')
   6: Display summary;
 // // // // // // // // // // if (results.failed.length > 0) {/* TODO: Fix JSX expression */}`
 //   //   results.failed.forEach(branch => // console.log(`  - ${branch}`));
-}
+
 
 // Step,
   7: Push changes;

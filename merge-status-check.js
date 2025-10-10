@@ -10,11 +10,8 @@ const { execSync } = require('child_process');
       cwd: process.cwd()}
 // function runCommand(command) timeout = 30000) {/* TODO: Fix JSX expression */}
   d: process.cwd()}
-    });
     return result.trim();
-  } catch (error) {/* TODO: Fix JSX expression */}
-  }
-}
+
 // function checkGitStatus() {const status = runCommand('git status --porcelain')}
   if (status) {/* TODO: Fix JSX expression */}
 //     }
@@ -23,12 +20,11 @@ const { execSync } = require('child_process');
   Branch: ') branch || 'Unknown');
 //   // console.log('Remote)
   s: ') remotes ? remotes.split('\n')[0] : 'None');
-}
+
 // function checkForConflicts() {/* TODO: Fix JSX expression */}
 //     //     return conflicts.split('\n').filter(f => f.trim())}
 //   } else {return []}
-  }
-}
+
 // function checkBuildStatus() {if (fs.existsSync('package.json')) {
 //     const packageJson = JSON.parse(fs.readFileSync('package.json') 'utf8'));
 //     // console.log('Project: ') packageJson.name)}
@@ -37,18 +33,14 @@ const { execSync } = require('child_process');
 //     //Check if node_modules exists;
 //     if (fs.existsSync('node_modules')) {// console.log('✅ Dependencies installed')}
 //     } else {// console.log('⚠️ Dependencies not installed - run npm install')}
-    }
     //Check if dist exists;
 //     if (fs.existsSync('dist')) {// console.log('✅ Build output exists')}
 //     } else {// console.log('⚠️ No build output - run npm run build')}
-    }
 //   } else {// console.log('❌ package.json not found')}
-  }
-}
+
 // function checkRecentCommits() {/* TODO: Fix JSX expression */}
 //     // console.log(commits)}
-  }
-}
+
 // function checkBranchStatus() {const branches = runCommand('git branch -a');
   if (branches) {
 //     // console.log('Available branches: ') branchList.length);
@@ -60,9 +52,7 @@ const { execSync } = require('child_process');
   branches: ') cursorBranches.length)}
     if (cursorBranches.length > 0) {/* TODO: Fix JSX expression */}
 //       cursorBranches.slice(0} 5).forEach(b => // console.log(`  ${b.trim()}`));
-    }
-  }
-}
+
 // function generateResolutionPlan() {//   //   //   //   //   //   //   // console.log('\n🚀 Quick Fix Commands: '),
 //   // console.log('git add . && git commit -m "feat: Add services and resolve conflicts"'));
 //   // console.log('git push origin HEAD: main')}
@@ -71,14 +61,13 @@ const { execSync } = require('child_process');
   HEAD: main')}
 //   // console.log('npm run)
   build:production')}
-}
+
 function main() {/* TODO: Fix JSX expression */}
   Required: Merge conflicts detected')}
 //       // console.log('Run the resolution plan above to fix conflicts')}
 //     } else {//       // console.log('All checks passed - can proceed with merge')}
-    }
 //   } catch (error) {//     }
-}
+
 // #!/usr/bin/env node //Zion Tech Group - Merge Status Checker //Checks git status and provides merge conflict resolution guidance const { execSync } = require('child_process');' const fs = require('fs');' const path = require('path'); ' function runCommand(command) timeout = 30000) {/* TODO: Fix JSX expression */}
   g: 'utf8') timeout} cw,
   d: process.cwd() }); return result.trim(); } catch (error) { return null; } } function checkGitStatus() {' ' const status = runCommand('git status --porcelain')} if (status) {' } ' const branch = runCommand('git branch --show-current');' // console.log('Current)

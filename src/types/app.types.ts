@@ -15,14 +15,14 @@ export interface PerformanceMetrics {fcp?: number; // First Contentful Paint;}
   fmp?: number; // First Meaningful Paint;
   customMetrics?: Record;
           <string, number>;
-}
+
 /**
  * Performance Report Interface;
  * Complete performance report structure;
  */
 
 export interface PerformanceReport {// TODO: Add content;}
-};
+;
   webVitals: Partial;
 
           <PerformanceMetrics>;,
@@ -32,40 +32,40 @@ export interface PerformanceReport {// TODO: Add content;}
   y: MemoryStats | null;,
     timestam,
   p: number;
-}
+
 /**
  * Resource Statistics Interface;
  * Tracks resource loading statistics;
  */
 
 export interface ResourceStats {// TODO: Add content;}
-};
+;
   total: number;,
     scripts: number;,
     styles: number;,
     images: number;,
     fonts: number
 
-}
+
 /**
  * Memory Statistics Interface;
  * Browser memory usage statistics;
  */
 
 export interface MemoryStats {// TODO: Add content;}
-};
+;
   usedJSHeapSize: number;,
     totalJSHeapSize: number;,
     jsHeapSizeLimit: number
 
-}
+
 /**
  * Performance Alert Interface;
  * Structure for performance alerts and warnings;
  */
 
 export interface PerformanceAlert {// TODO: Add content;}
-};
+;
   type: 'warning' | 'error' | 'info';,
     message: string;,
     metric: keyof PerformanceMetrics;,
@@ -73,18 +73,18 @@ export interface PerformanceAlert {// TODO: Add content;}
     threshold: number;,
     timestamp: number
 
-}
+
 /**
  * Layout Shift Interface;
  * Extends PerformanceEntry for layout shift tracking;
  */
 
 export interface LayoutShift extends PerformanceEntry {// TODO: Add content;}
-};
+;
   value: number;,
     hadRecentInput: boolean
 
-}
+
 /**
  * Performance with Memory Interface;
  * Extends Performance API with memory information;
@@ -92,18 +92,17 @@ export interface LayoutShift extends PerformanceEntry {// TODO: Add content;}
 
 export interface PerformanceWithMemory extends Performance {// TODO: Add content;}
 
-}
+
   memor,
   y: {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
+;
 
   usedJSHeapSize: number;,
     totalJSHeapSize: number;,
     jsHeapSizeLimit: number
 
-  }
-}
+
 
 
 

@@ -25,19 +25,18 @@ if (fs.existsSync(staticDir)) {
     const filePath = path.join(staticDir, file);
     const stats = fs.statSync(filePath);
     performanceReport.buildSize += stats.size;
-  });
   
   performanceReport.buildSize = Math.round(performanceReport.buildSize / 1024); // Convert to KB;
-}
+
 
 // Performance recommendations;
 if (performanceReport.buildSize > 500) {
   performanceReport.recommendations.push('Consider code splitting to reduce bundle size');
-}
+
 
 if (performanceReport.buildSize > 1000) {
   performanceReport.recommendations.push('Bundle size is large - consider lazy loading components');
-}
+
 
 performanceReport.recommendations.push('Enable gzip compression on server');
 performanceReport.recommendations.push('Consider using a CDN for static assets');

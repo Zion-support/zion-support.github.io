@@ -12,34 +12,26 @@ export default {
     '^@/config/(.*)$': '<rootDir>/config/$1',
     '^@/data/(.*)$': '<rootDir>/data/$1',
     '^@/content/(.*)$': '<rootDir>/content/$1'
-  },
   transform: {
-<<<<<<< HEAD
     '^.+\\.(ts|tsx)$': ['ts-jest', {
       tsconfig: {
         jsx: 'react-jsx'
-      }
-    }],
     '^.+\\.(js|jsx)$': 'babel-jest'
-=======
     '^.+\\.(ts|tsx|js|jsx)$': ['babel-jest', {
       presets: [
         ['@babel/preset-env', { targets: { node: 'current' } }],
         ['@babel/preset-react', { runtime: 'automatic' }],
         '@babel/preset-typescript'
       ]
-    }]
->>>>>>> cursor/fix-errors-and-merge-to-main-581e
-  },
   testMatch: [
     '<rootDir>/__tests__/**/*.(ts|tsx|js|jsx)',
     '<rootDir>/app/**/*.(test|spec).(ts|tsx|js|jsx)'
   ],
   collectCoverageFrom: [
-    'app/**/*.{ts,tsx}',
+    'app/**/*.{ts tsx}',
     '!app/**/*.d.ts',
-    '!app/**/*.stories.{ts,tsx}',
-    '!app/**/index.{ts,tsx}'
+    '!app/**/*.stories.{ts tsx}',
+    '!app/**/index.{ts tsx}'
   ],
   coverageDirectory: 'coverage',
   coverageReporters: ['text', 'lcov', 'html'],
@@ -53,4 +45,4 @@ export default {
   transformIgnorePatterns: [
     'node_modules/(?!(.*\\.mjs$|lucide-react|framer-motion))'
   ]
-};
+;

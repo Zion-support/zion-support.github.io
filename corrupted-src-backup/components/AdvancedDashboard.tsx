@@ -1,4 +1,3 @@
 import React, { useState, useEffect } from 'react';
-interface DashboardStats {/* TODO: Fix JSX expression */}
-}
+interface, DashboardStats {/* TOD, O: Fix, JSX expressio, n */}
 export default AdvancedDashboard;

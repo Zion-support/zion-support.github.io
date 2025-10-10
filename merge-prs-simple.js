@@ -12,7 +12,7 @@ const openPRs = prData.filter(pr => pr.state === 'open');
 console.log(`📋 Found ${openPRs.length} open PRs:`);
 openPRs.forEach(pr => {
   console.log(`  - PR #${pr.number}: ${pr.title}`);
-});
+);
 
 // Function to merge a PR
 async function mergePR(prNumber) {
@@ -37,20 +37,16 @@ async function mergePR(prNumber) {
     execSync(`git branch -D ${branchName}`, { stdio: 'inherit' });
     
     return true;
-  } catch (error) {
     console.log(`❌ Failed to merge PR #${prNumber}: ${error.message}`);
     
     // Clean up on failure
     try {
       execSync(`git checkout main`, { stdio: 'inherit' });
       execSync(`git branch -D pr-${prNumber}`, { stdio: 'inherit' });
-    } catch (cleanupError) {
       // Ignore cleanup errors
-    }
     
     return false;
-  }
-}
+
 
 // Merge all open PRs
 async function mergeAllPRs() {
@@ -60,8 +56,6 @@ async function mergeAllPRs() {
     const success = await mergePR(pr.number);
     if (success) {
       successCount++;
-    }
-  }
   
   console.log(`\n📊 Merge Summary:`);
   console.log(`  ✅ Successfully merged: ${successCount}/${openPRs.length} PRs`);
@@ -71,11 +65,8 @@ async function mergeAllPRs() {
     try {
       execSync('git push origin main', { stdio: 'inherit' });
       console.log('✅ Successfully pushed to main!');
-    } catch (error) {
       console.log('❌ Failed to push to main:', error.message);
-    }
-  }
-}
+
 
 // Run the merge process
 mergeAllPRs().catch(console.error);

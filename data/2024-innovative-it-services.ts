@@ -31,12 +31,12 @@ export interface InnovativeITService2024 {id: string;
     email: string;
     address: string}
     website: string}
-};
+;
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   reviews: number;
-}
+
 export const innovativeITServices2024: InnovativeITService2024[] = [
     id: "autonomous-devops-platform",
     name: "Autonomous DevOps Platform",
@@ -90,7 +90,7 @@ export interface InnovativeITService2024 {/* TODO: Fix JSX expression */}
   s: string}
     websit,
   e: string}
-};
+;
   realImplementatio,
   n: boolean;
   implementationDetail,
@@ -177,7 +177,6 @@ export const,
       websit,"
   e: "http,"
   s://ziontechgroup.com"
-    },
     realImplementatio,
   n: true,
     implementationDetail,"

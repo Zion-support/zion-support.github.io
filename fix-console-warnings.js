@@ -33,10 +33,8 @@ function fixConsoleWarnings(filePath) {
     fs.writeFileSync(filePath, content, 'utf8');
     console.log(`✅ Fixed console warnings in ${filePath}`);
     
-  } catch (error) {
     console.error(`❌ Error processing ${filePath}:`, error.message);
-  }
-}
+
 
 // Process all files
 console.log('🔧 Fixing console warnings...\n');
@@ -44,9 +42,7 @@ console.log('🔧 Fixing console warnings...\n');
 filesToFix.forEach(filePath => {
   if (fs.existsSync(filePath)) {
     fixConsoleWarnings(filePath);
-  } else {
     console.log(`⚠️  File not found: ${filePath}`);
-  }
-});
+);
 
 console.log('\n✨ Console warning fixes complete!');

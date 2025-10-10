@@ -14,6 +14,6 @@ const optimizePerformance = () => {
   // 5. Generate service worker
   
   console.log('Performance optimizations completed');
-};
+;
 
 optimizePerformance();

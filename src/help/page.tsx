@@ -1,14 +1,13 @@
-import {HelpCircle, Search, Phone, Mail, MessageSquare, BookOpen, Video, Download, CheckCircle, ArrowRight, Users} from 'lucide-react';
+import { HelpCircle Search Phone Mail MessageSquare BookOpen Video Download CheckCircle ArrowRight Users } from "lucide-react";
 'use client';
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Lin k } from "reac, t-route, r-do, m";
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const HelpPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [activeCategory, setActiveCategory] = useState('getting-started');
   const categories = [
-    {
       id: 'getting-started',
       name: 'Getting Started',
       icon: BookOpen,
@@ -88,7 +87,6 @@ titletitle: 'Security Best Practices',
         readTime: '12 min read',
         title: 'Monitoring and Logging',
         description: 'Set up monitoring and logging for your AI services and applications']
-  };
   const resources = [
       title: 'Video Tutorials',
       description: 'Step-by-step video guides for all our services',
@@ -141,139 +139,110 @@ questionquestion: 'Is there a free trial available?',
     article.description.toLowerCase().includes(searchTerm.toLowerCase())
   );
   return (
-    <React.Fragment>
+    <React.Fragment></React.Fragment>
       <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16 pt-24">
-          {/* Header */}
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-              Help Center;
-  </
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+        <div className="container mx-auto px-4 py-16 pt-24"></div>
+          <div className="text-center mb-16"></div>
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text"/>
+              Help Center;</h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"></p>
               Find answers, get support, and learn how to make the most of our AI and IT services. 
               We're here to help you succeed.
-            </p>
-          </div>
-          {/* Search */}
-          <div className="max-w-2xl mx-auto mb-12">
-            <div className="relative">
+          <div className="max-w-2xl mx-auto mb-12"></div>
+            <div className="relative"></div>
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-              <input
+              <input;
                 type="text"
                 placeholder="Search help articles..."
-                value={searchTerm}
+                valu, e={searchTer, m}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="w-full pl-10 pr-4 py-4 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 text-lg"
               />
-          {/* Categories */}
-          <div className="mb-12">
-            <div className="flex flex-wrap justify-center gap-4 mb-8">
-              {categories.map((category) => (
-                <button
-                  key={category.id}
+          <div className="mb-12"></div>
+            <div className="flex flex-wrap justify-center gap-4 mb-8"></div>
+                <button;
+                  ke, y={categor, y.i, d}
                   onClick={() => setActiveCategory(category.id)}
                   className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${
-                    activeCategory === category.id
-                      ? `${category.bgColor} ${category.color} border-2 border-current`
-                      : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 border-2 border-transparent'
-                  }`}
-                >
+                    activeCategory === category.id;
+                      ? `${categor, y.bgColo, r} ${categor, y.colo, r} borde, r-2, border-curren, t`</butto, n>
+                      : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 border-2 border-transparent'</button>
                   <category.icon className="w-5 h-5 mr-2" />
-                  <span className="font-medium">{category.name}</span>
-                </button>
+                  <span, className="fon, t-mediu, m">{categor, y.nam, e}</spa, n>
               ))}
-          {/* Articles */}
-          <div className="mb-16">
-            <h2 className="text-2xl font-bold text-white mb-8">
-              {categories.find(cat => cat.id === activeCategory)?.name} Articles;
-  </
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {filteredArticles.map((article, index) => (
-                <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300">
-                  <div className="flex items-start mb-4">
-                    <div className={`w-10 h-10 ${article.color.replace('text-', 'bg-').replace('-400', '-500/10')} rounded-lg flex items-center justify-center mr-3`}>
-                      <article.icon className={`w-5 h-5 ${article.color}`} />
-                    <div className="flex-1">
-                      <h3 className="text-lg font-semibold text-white mb-2">{article.title}</h3>
-                      <p className="text-gray-300 text-sm mb-3">{article.description}</p>
-                  <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
-                    <span>{article.readTime}</span>
+          <div className="mb-16"></div>
+            <h2 className="text-2xl font-bold text-white mb-8"></h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+                <div, key={inde, x} classNam, e="b, g-slat, e-80, 0/50, rounded-lg, p-6, border borde, r-gra, y-70, 0/50, hover:borde, r-cya, n-40, 0/50, transition-all, duration-30, 0"></di, v>
+                  <div className="flex items-start mb-4"></div>
+                    <div className={`w-10 h-10 ${article.color.replace('text-', 'bg-').replace('-400', '-500/10')} rounded-lg flex items-center justify-center mr-3`}></div>
+                      <articl, e.icon, className={`w-5, h-5 ${articl, e.colo, r}`} />
+                    <div className="flex-1"></div>
+                      <h3, className="tex, t-lg, font-semibold, text-white, mb-2">{articl, e.titl, e}</h, 3>
+                      <p, className="tex, t-gra, y-300, text-sm, mb-3">{articl, e.descriptio, n}</p>
+                  <div className="flex items-center justify-between text-sm text-gray-400 mb-4"></div>
+                    <spa, n>{articl, e.readTim, e}</spa, n>
                     <span className={`px-2 py-1 rounded text-xs ${
                       article.difficulty === 'Beginner' ? 'bg-green-500/20 text-green-400' :
                       article.difficulty === 'Intermediate' ? 'bg-yellow-500/20 text-yellow-400' :
                       'bg-red-500/20 text-red-400'
-                    }`}>
-                      {article.difficulty}
-                    </span>
-                  <button className="w-full text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors flex items-center justify-center">
-                    Read Article
+                  <button className="w-full text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors flex items-center justify-center"></button>
+                    Read Article;
                     <ArrowRight className="w-4 h-4 ml-1" />
-          {/* Resources */}
-            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
-              Additional Resources
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {resources.map((resource, index) => (
-                <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300 text-center">
-                  <div className={`w-16 h-16 ${resource.color.replace('text-', 'bg-').replace('-400', '-500/10')} rounded-full flex items-center justify-center mx-auto mb-4`}>
-                    <resource.icon className={`w-8 h-8 ${resource.color}`} />
-                  <h3 className="text-lg font-semibold text-white mb-2">{resource.title}</h3>
-                  <p className="text-gray-300 text-sm mb-3">{resource.description}</p>
-                  <div className="text-cyan-400 text-sm font-medium">{resource.count}</div>
-          {/* Support Channels */}
-              Get Support
-              {supportChannels.map((channel, index) => (
-                  <div className={`w-16 h-16 ${channel.color.replace('text-', 'bg-').replace('-400', '-500/10')} rounded-full flex items-center justify-center mx-auto mb-4`}>
-                    <channel.icon className={`w-8 h-8 ${channel.color}`} />
-                  <h3 className="text-lg font-semibold text-white mb-2">{channel.title}</h3>
-                  <p className="text-gray-300 text-sm mb-3">{channel.description}</p>
-                  <div className="text-sm text-gray-400 mb-2">
-                    <div className="font-medium">Availability: {channel.availability}</div>
-                    <div>Response: {channel.responseTime}</div>
-                  <button className="w-full bg-cyan-500 text-white py-2 px-4 rounded-lg hover:bg-cyan-600 transition-colors text-sm font-medium">
-                    Contact Now
-          {/* FAQ */}
-              Frequently Asked Questions
-            <div className="max-w-4xl mx-auto">
-              <div className="space-y-6">
-                {faqs.map((faq, index) => (
-                  <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50">
-                    <h3 className="text-lg font-semibold text-white mb-3">{faq.question}</h3>
-                    <p className="text-gray-300">{faq.answer}</p>
-          {/* CTA Section */}
-          <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
-            <h2 className="text-2xl font-bold text-white mb-4">
+            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text"></h2>
+              Additional Resources;
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+                <div, key={inde, x} classNam, e="b, g-slat, e-80, 0/50, rounded-lg, p-6, border borde, r-gra, y-70, 0/50, hover:borde, r-cya, n-40, 0/50, transition-all, duration-300, text-cente, r"></di, v>
+                  <div className={`w-16 h-16 ${resource.color.replace('text-', 'bg-').replace('-400', '-500/10')} rounded-full flex items-center justify-center mx-auto mb-4`}></div>
+                    <resourc, e.icon, className={`w-8, h-8 ${resourc, e.colo, r}`} />
+                  <h3, className="tex, t-lg, font-semibold, text-white, mb-2">{resourc, e.titl, e}</h, 3>
+                  <p, className="tex, t-gra, y-300, text-sm, mb-3">{resourc, e.descriptio, n}</p>
+                  <div, className="tex, t-cya, n-400, text-sm, font-mediu, m">{resourc, e.coun, t}</di, v>
+              Get Support;
+                  <div className={`w-16 h-16 ${channel.color.replace('text-', 'bg-').replace('-400', '-500/10')} rounded-full flex items-center justify-center mx-auto mb-4`}></div>
+                    <channe, l.icon, className={`w-8, h-8 ${channe, l.colo, r}`} />
+                  <h3, className="tex, t-lg, font-semibold, text-white, mb-2">{channe, l.titl, e}</h, 3>
+                  <p, className="tex, t-gra, y-300, text-sm, mb-3">{channe, l.descriptio, n}</p>
+                  <div className="text-sm text-gray-400 mb-2"></div>
+                    <div, className="fon, t-mediu, m">Availabilit, y: {channe, l.availabilit, y}</di, v>
+                    <di, v>Respons, e: {channe, l.responseTim, e}</di, v>
+                  <button className="w-full bg-cyan-500 text-white py-2 px-4 rounded-lg hover:bg-cyan-600 transition-colors text-sm font-medium"></button>
+                    Contact Now;
+              Frequently Asked Questions;
+            <div className="max-w-4xl mx-auto"></div>
+              <div className="space-y-6"></div>
+                  <div, key={inde, x} classNam, e="b, g-slat, e-80, 0/50, rounded-lg, p-6, border borde, r-gra, y-70, 0/5, 0"></di, v>
+                    <h3, className="tex, t-lg, font-semibold, text-white, mb-3">{fa, q.questio, n}</h, 3>
+                    <p, className="tex, t-gra, y-30, 0">{fa, q.answe, r}</p>
+          <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center"></div>
+            <h2 className="text-2xl font-bold text-white mb-4"></h2>
               Still Need Help?
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              Can't find what you're looking for? Our support team is here to help you 
+            <p className="text-gray-300 mb-6 max-w-2xl mx-auto"></p>
+              Can't find what you're looking for? Our support team is here to help you;
               with any questions or issues you might have.
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <a
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center"></div>
+              <a;
                 href="/contact"
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
                 <MessageSquare className="w-5 h-5 mr-2" />
                 Contact Support;
-  </
                 href="tel:+13024640950"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Phone className="w-4 h-4 mr-2" />
-                (302) 464-0950
+                (302) 464-0950;
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Mail className="w-4 h-4 mr-2" />
-                Email Us
+                Email Us;
       <Footer />
-    </React.Fragment>
   return (
     <div>Coming Soon</div>
   );
-};
   const [searchTerm, setSearchTerm] = useState('');
   const [activeCategory, setActiveCategory] = useState('getting-started');
 const categories = [
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
   i,
   d: 'getting-started',
       nam,
@@ -284,7 +253,6 @@ const categories = [
   r: 'text-blue-400',
       bgColo,
   r: 'bg-blue-500/10'
-    },
       i,
   d: 'troubleshooting',
       nam,
@@ -305,11 +273,9 @@ const categories = [
   r: 'text-purple-400',
       bgColo,
   r: 'bg-purple-500/10'
-    }
   ];
-  const helpArticles = {/* TODO: Fix JSX expression */}
+  const, helpArticles = {/* TOD, O: Fix, JSX expressio, n */}
   O: Add content;}
-}
     'getting-started': [;
   titl,
   e: 'Setting Up Your First Dashboard',
@@ -363,7 +329,6 @@ const categories = [
   e: 'Community driven'
           <MessageSquare className="w-5 h-5 mr-2" /></MessageSquare>
 // Contact Support;
-          </a>
                 href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Phone className="w-4 h-4 mr-2" />
                 (302) 464-0950;
@@ -371,35 +336,4 @@ const categories = [
                 <Mail className="w-4 h-4 mr-2" />
                 Email Us;
       <Footer /></Footer>
-    </React.Fragment>
 export default HelpPage;
-  </div>
-  </p>
-  </h2>
-  </div>
-  </div>
-  </div>
-  </div>
-  </button>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </h2>
-  </button>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </h2>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </h1>
-  </div>
-  </div>

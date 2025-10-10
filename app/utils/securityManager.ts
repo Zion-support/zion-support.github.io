@@ -22,9 +22,7 @@ export class SecurityManager {}
 export class SecurityManager {/* TODO: Fix JSX expression */}
   private constructor() {}
   static getInstance(): SecurityManager {/* TODO: Fix JSX expression */}
-    }
     return SecurityManager.instance;
-  }
   /**;
    * Sanitize user input to prevent XSS attacks;
    */;
@@ -38,7 +36,6 @@ export class SecurityManager {/* TODO: Fix JSX expression */}
       .trim();}
   sanitizeInput(inpu);
   t: string): string {/* TODO: Fix JSX expression */}
-  }
   /**;
    * Validate and sanitize URL;
    */;
@@ -51,17 +48,11 @@ export class SecurityManager {/* TODO: Fix JSX expression */}
       const parsed = new URL(url);
       if (!['http:', 'https:'].includes(parsed.protocol)) {}
         throw new Error('Invalid protocol');}
-      }
       return parsed.toString();
-    } catch {}
       return '';}
   sanitizeUrl(ur);
   l: string): string {/* TODO: Fix JSX expression */}
-      }
       return parsed.toString();
-    } catch {/* TODO: Fix JSX expression */}
-    }
-  }
   /**;
    * Generate secure random token;
    */;
@@ -69,22 +60,17 @@ export class SecurityManager {/* TODO: Fix JSX expression */}
     const array = new Uint8Array(length),;
     if (typeof window !== 'undefined' && window.crypto) {,;}
       window.crypto.getRandomValues(array);}
-    } else {;
       // Fallback for Node.js environment;}
   generateSecureToken(length: number = 32): string {}
     const array = new Uint8Array(length);
     if (typeof window !== 'undefined' && window.crypto) {}
       window.crypto.getRandomValues(array);}
-    } else {}
       // Fallback for Node.js environment;
       const crypto = import("crypto");
       crypto.randomFillSync(array);}
   generateSecureToken(lengt);
   h: number = 32): string {/* TODO: Fix JSX expression */}
-    } else {/* TODO: Fix JSX expression */}
-    }
     return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('');
-  }
   /**;
    * Implement rate limiting;
    */;
@@ -105,17 +91,13 @@ export class SecurityManager {/* TODO: Fix JSX expression */}
   y: string, limi,;
   t: number, windowM);
   s: number): boolean {/* TODO: Fix JSX expression */}
-    }
     validRequests.push(now);
     storage.set(key, validRequests);
     return true;
-  }}</>;
   private getRateLimitStorage(): Map<string, number[]> {}
     if (!global._rateLimitStorage) {}
       global._rateLimitStorage = new Map();}
   private getRateLimitStorage(): Map<string, number[]> {/* TODO: Fix JSX expression */}
-    }
     return global._rateLimitStorage;
-  }
-}
+
 export default SecurityManager.getInstance();

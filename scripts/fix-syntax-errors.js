@@ -4,9 +4,9 @@ import { glob } from 'glob';
 
 // Files to process;
 const filePatterns = [
-  'app/**/*.{ts,tsx}',
-  'src/**/*.{ts,tsx}',
-  'components/**/*.{ts,tsx}'
+  'app/**/*.{ts tsx}',
+  'src/**/*.{ts tsx}',
+  'components/**/*.{ts tsx}'
 ];
 
 // Files to exclude;
@@ -16,8 +16,8 @@ const excludePatterns = [
   '**/.next/**',
   '**/build/**',
   '**/coverage/**',
-  '**/*.test.{ts,tsx}',
-  '**/*.spec.{ts,tsx}',
+  '**/*.test.{ts tsx}',
+  '**/*.spec.{ts tsx}',
   '**/scripts/**',
   '**/automation/**',
   '**/backup*/**',
@@ -41,11 +41,8 @@ function fixSyntaxErrors(content) {
     newContent = newContent.replace(setStatePattern, (match) => {
       if (!match.includes('});')) {
         return match + '\n    });';
-      }
       return match;
-    });
     fixed = true;
-  }
 
   // Fix missing closing braces for function calls;
   const functionCallPattern = /(\w+\(\s*\{[^}]*\s*)\s*$/gm;
@@ -53,11 +50,8 @@ function fixSyntaxErrors(content) {
     newContent = newContent.replace(functionCallPattern, (match) => {
       if (!match.includes('});') && !match.includes('});')) {
         return match + '\n      });';
-      }
       return match;
-    });
     fixed = true;
-  }
 
   // Fix missing closing braces for if statements;
   const ifStatementPattern = /if\s*\([^)]*\)\s*\{[^}]*\s*$/gm;
@@ -65,11 +59,8 @@ function fixSyntaxErrors(content) {
     newContent = newContent.replace(ifStatementPattern, (match) => {
       if (!match.includes('}')) {
         return match + '\n    }';
-      }
       return match;
-    });
     fixed = true;
-  }
 
   // Fix missing closing braces for forEach;
   const forEachPattern = /\.forEach\([^)]*\)\s*\{[^}]*\s*$/gm;
@@ -77,11 +68,8 @@ function fixSyntaxErrors(content) {
     newContent = newContent.replace(forEachPattern, (match) => {
       if (!match.includes('});')) {
         return match + '\n    });';
-      }
       return match;
-    });
     fixed = true;
-  }
 
   // Fix missing closing braces for object methods;
   const objectMethodPattern = /(\w+:\s*\([^)]*\)\s*=>\s*\{[^}]*)\s*$/gm;
@@ -89,17 +77,14 @@ function fixSyntaxErrors(content) {
     newContent = newContent.replace(objectMethodPattern, (match) => {
       if (!match.includes('}')) {
         return match + '\n  }';
-      }
       return match;
-    });
     fixed = true;
-  }
 
   // Clean up multiple empty lines;
   newContent = newContent.replace(/\n\s*\n\s*\n/g, '\n\n');
   
   return { content: newContent, fixed };
-}
+
 
 function processFile(filePath) {
   try {
@@ -110,13 +95,10 @@ function processFile(filePath) {
       fs.writeFileSync(filePath, result.content, 'utf8');
       console.log(`✅ ${filePath}: Fixed syntax errors`);
       fixedFiles++;
-    }
 
     processedFiles++;
-  } catch (error) {
     console.error(`❌ Error processing ${filePath}:`, error.message);
-  }
-}
+
 
 async function main() {
   console.log('🚀 Starting syntax error fixes...\n');
@@ -128,7 +110,6 @@ async function main() {
       ignore: excludePatterns),
       cwd: process.cwd()});
     allFiles.push(...files);
-  }
 
   // Remove duplicates;
   const uniqueFiles = [...new Set(allFiles)];
@@ -143,12 +124,12 @@ async function main() {
   console.log(`📊 Statistics: `);
   console.log(`   - Files processed: ${processedFiles}/${totalFiles}`);
   console.log(`   - Files fixed: ${fixedFiles}`);
-}
+
 
 if (import.meta.url === `file://${process.argv[1]}`) {
   main();
-}
+
 
 export { processFile, fixSyntaxErrors };
-// #!/usr/bin/env node import fs from 'fs'' import path from 'path'' import { glob } from 'glob' ' // Find all TypeScript/JavaScript files' const files = await glob('src/**/*.{ts,tsx,js}jsx}') {/* TODO: Fix JSX expression */}
+// #!/usr/bin/env node import fs from 'fs'' import path from 'path'' import { glob } from 'glob' ' // Find all TypeScript/JavaScript files' const files = await glob('src/**/*.{ts tsx js}jsx}') {/* TODO: Fix JSX expression */}
   d: '/workspace' }); let totalFixed = 0; let totalErrors = 0; for (const file of files) {/* TODO: Fix JSX expression */}

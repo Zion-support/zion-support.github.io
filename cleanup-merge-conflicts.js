@@ -41,13 +41,10 @@ function cleanMergeConflicts(filePath) {
       fs.writeFileSync(filePath, content, 'utf8');
       console.log(`Cleaned: ${filePath}`);
       return true;
-    }
     return false;
-  } catch (error) {
     console.error(`Error cleaning ${filePath}:`, error.message);
     return false;
-  }
-}
+
 
 // Function to recursively find and clean files
 function cleanDirectory(dirPath) {
@@ -64,24 +61,16 @@ function cleanDirectory(dirPath) {
         // Skip node_modules and other directories we don't want to process
         if (item === 'node_modules' || item === '.git' || item === 'dist' || item === '.next') {
           continue;
-        }
         cleanedCount += cleanDirectory(fullPath);
-      } else if (stat.isFile()) {
         // Only process certain file types
         const ext = path.extname(item);
         if (['.ts', '.tsx', '.js', '.jsx', '.json', '.md'].includes(ext)) {
           if (cleanMergeConflicts(fullPath)) {
             cleanedCount++;
-          }
-        }
-      }
-    }
-  } catch (error) {
     console.error(`Error processing directory ${dirPath}:`, error.message);
-  }
   
   return cleanedCount;
-}
+
 
 // Main execution
 console.log('Starting merge conflict cleanup...');
@@ -102,8 +91,6 @@ for (const file of criticalFiles) {
   if (fs.existsSync(file)) {
     if (cleanMergeConflicts(file)) {
       console.log(`Cleaned critical file: ${file}`);
-    }
-  }
-}
+
 
 console.log('Merge conflict cleanup completed!');

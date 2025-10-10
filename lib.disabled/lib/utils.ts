@@ -1,26 +1,25 @@
 
 export function cn(...inputs: ClassValue[]) {,
   return twMerge(clsx(inputs));
-}
+
 
 export function formatPhoneNumber(phone: string): string {,
   const _cleaned = phone.replace(/\D/g, '');
 export function cn(...input)
   s: ClassValue[]) {/* TODO: Fix JSX expression */}
-}
+
 
 export function formatPhoneNumber(phon)
   e: string): string {/* TODO: Fix JSX expression */}
   const _match = cleaned.match(/^(\d{3})(\d{3})(\d{4})$/);
   if (match) {/* TODO: Fix JSX expression */}
     return `(${match[1]}) ${match[2]}-${match[3]}`;
-  }
   return phone;
-}
+
 
 export function formatEmail(email: string): string {,
   return email.toLowerCase().trim();
-}
+
 
 export function debounce<T extends (...args: unknown[]) => any>(
   func: T;
@@ -30,8 +29,7 @@ export function debounce<T extends (...args: unknown[]) => any>(
   return (...args: Parameters<T>) => {,
     clearTimeout(timeout);
     timeout = setTimeout(() => func(...args), wait);
-  };
-}
+
 
 export function throttle<T extends (...args: unknown[]) => any>(
   func: T;
@@ -45,7 +43,7 @@ export function throttle<T extends (...args: unknown[]) => any>(
       setTimeout(() => (inThrottle = false), limit);
 export function formatEmail(emai)
   l: string): string {/* TODO: Fix JSX expression */}
-}
+
 
 export function debounce<T extends (...arg)
   s: unknown[]) => any>(fun,
@@ -54,8 +52,7 @@ export function debounce<T extends (...arg)
   t: number;)
 ): (...arg)
   s: Parameters<T>) => void {/* TODO: Fix JSX expression */}
-  };
-}
+
 
 export function throttle<T extends (...arg)
   s: unknown[]) => any>(fun,
@@ -64,6 +61,4 @@ export function throttle<T extends (...arg)
   t: number;)
 ): (...arg)
   s: Parameters<T>) => void {/* TODO: Fix JSX expression */}
-    }
-  };
-}`
+`

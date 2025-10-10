@@ -29,7 +29,7 @@ export interface IntegrationProviderMeta {
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
 ,
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
-}
+
 
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
 
@@ -37,7 +37,7 @@ export type SyncStatus = 'connected' | 'warning' | 'disconnected';
 
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
 
-}
+
 
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
 
@@ -46,8 +46,8 @@ export interface IntegrationProviderMeta {
   name: string;
   category: 'crm' | 'ats' | 'hr';
   description: string;
-}
-}
+
+
 
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
 
@@ -58,13 +58,13 @@ export interface ProviderConnection {
   refreshToken?: string;
   expiresAt?: number;
   config?: Record<string, any>;</string>
-}
+
   category: 'crm' | 'ats' | 'hr';
   description: string;
   logoUrl?: string;
   websiteUrl?: string;
   apiDocsUrl?: string;
-}
+
 
 export interface ProviderConnection {
   id: string;
@@ -87,7 +87,7 @@ export interface ProviderConnection {
   status: SyncStatus;
   lastSync?: number;
   config?: Record<string, any>;</string>
-}
+
 
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
 
@@ -95,66 +95,66 @@ export type SyncStatus = 'connected' | 'warning' | 'disconnected';
   lastSync?: number;
   createdAt: number;
   expiresAt?: number;
-}
+
 
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
 
-}
+
 
   status: SyncStatus;
   lastSync?: number;
   createdAt: number;
-}
 
-}
+
+
 
   lastSync?: Date;
   config: Record<string, unknown>;</string>createdAt</string>: Date;
   updatedAt: Date;
-}
+
 
 export interface SyncLogEntry {
   id: string;
   connectionId: string;
   action: string;
   details?: Record<string, any>;
-}
+
 
   details?: Record<string, any>;</string>
-}
+
 
   details?: Record<string, any>;</string>
-}
+
 
   details?: Record<string, any>;</string>
-}
+
 
   details?: Record<string, any>;</string>
-}
+
 
   details?: Record<string, any>;</string>
-}
+
 
   details?: Record<string, any>;</string>
-}
+
 
   details?: Record<string, any>;</string>
-}
+
 
   details?: Record<string, any>;</string>
-}
+
 
   details?: Record<string, any>;</string>
-}
+
 
   details?: Record<string, any>;</string>
-}
+
 
 export interface ManualOverride {
   jobId: string;
   disableCrmSync?: boolean;
   disableAtsSync?: boolean;
-}
+
 
 export interface ZapierEvent {
   id: string;
@@ -165,10 +165,10 @@ export interface IntegrationProviderMeta {,
   status: 'success' | 'error' | 'warning';
   message: string;
 
-}
+
 
 export interface ManualOverride {/* TODO: Fix JSX expression */}
-}
+
 
 
 export interface IntegrationOverride {
@@ -180,10 +180,10 @@ export interface IntegrationOverride {
   createdAt: Date;
   updatedAt: Date;
 
-}
+
 
 export interface IntegrationEvent {/* TODO: Fix JSX expression */}
-}
+
 
 
 export interface ZapierEvent {
@@ -191,7 +191,7 @@ export interface ZapierEvent {
   type: 'zion.job.posted' | 'zion.talent.matched';
   timestamp: number;
   payload: Record<string, any>;
-}
+
 
 export interface IntegrationsState {
   connections: ProviderConnection[];
@@ -206,9 +206,9 @@ export interface IntegrationsState {
   logs: SyncLogEntry[];
   overrides: ManualOverride[];
   events: ZapierEvent[];
-}
+
   payload: Record<string, any>;</string>
-}
+
 
 export interface ProviderConnection {
   id: string;
@@ -219,21 +219,21 @@ export interface ProviderConnection {
   status: SyncStatus;
   lastSync?: number;
   createdAt: number;
-}
+
 
 export interface IntegrationProviderMeta {
   id: IntegrationProviderId;
   name: string;
   category: 'crm' | 'ats' | 'hr';
   description: string;
-}
+
   logoUrl?: string;
   websiteUrl?: string;
   apiDocsUrl?: string;
-}
+
   payload: Record<string, any>;</string>
-}
-}
+
+
 
 export interface IntegrationsState {
   connections: ProviderConnection[];
@@ -241,8 +241,8 @@ export interface IntegrationsState {
   overrides: ManualOverride[];
   events: ZapierEvent[];
   lastError?: string | null;}
-}
-}
+
+
   overrides: IntegrationOverride[];
   events: IntegrationEvent[];
-}
+

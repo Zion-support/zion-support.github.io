@@ -1,4 +1,4 @@
-import {Leaf, Recycle, Zap, Globe, Target, CheckCircle, ArrowRight, Phone, Mail, Award, Users, TrendingUp} from 'lucide-react';
+import { Leaf Recycle Zap Globe Target CheckCircle ArrowRight Phone Mail Award Users TrendingUp } from "lucide-react";
 'use client';
 import React, { useState } from 'react';
 import Navigation from '../components/Navigation';
@@ -6,7 +6,6 @@ import Footer from '../components/Footer';
 const GreenITPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState('solutions');
   const tabs = [
-    {
       id: 'solutions',
       name: 'Green Solutions',
       icon: Leaf,
@@ -157,166 +156,129 @@ valuevalue: '100%',
         'Enhanced brand reputation'
       icon: Building,
   return (
-    <React.Fragment>
+    <React.Fragment></React.Fragment>
       <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16 pt-24">
-          {/* Header */}
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-              Green IT Solutions;
-  </
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Transform your IT infrastructure into a sustainable, environmentally friendly system 
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+        <div className="container mx-auto px-4 py-16 pt-24"></div>
+          <div className="text-center mb-16"></div>
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text"/>
+              Green IT Solutions;</h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"></p>
+              Transform your IT infrastructure into a sustainable, environmentally friendly system;
               that reduces costs while protecting our planet.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <div className="flex items-center text-green-400">
+            <div className="flex flex-wrap justify-center gap-4"></div>
+              <div className="flex items-center text-green-400"></div>
                 <Leaf className="w-5 h-5 mr-2" />
                 <span className="font-medium">Carbon Neutral Operations</span>
-              </div>
-              <div className="flex items-center text-blue-400">
+              <div className="flex items-center text-blue-400"></div>
                 <Zap className="w-5 h-5 mr-2" />
                 <span className="font-medium">Energy Efficient</span>
-              <div className="flex items-center text-purple-400">
+              <div className="flex items-center text-purple-400"></div>
                 <Award className="w-5 h-5 mr-2" />
                 <span className="font-medium">Certified Solutions</span>
-          {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className={`w-16 h-16 ${stat.color.replace('text-', 'bg-').replace('-400', '-500/10')} rounded-full flex items-center justify-center mx-auto mb-4`}>
-                  <stat.icon className={`w-8 h-8 ${stat.color}`} />
-                <div className={`text-3xl font-bold ${stat.color} mb-2`}>{stat.value}</div>
-                <div className="text-gray-300 text-sm">{stat.label}</div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"></div>
+              <div, key={inde, x} classNam, e="tex, t-cente, r"></di, v>
+                <div className={`w-16 h-16 ${stat.color.replace('text-', 'bg-').replace('-400', '-500/10')} rounded-full flex items-center justify-center mx-auto mb-4`}></div>
+                  <sta, t.icon, className={`w-8, h-8 ${sta, t.colo, r}`} />
+                <div, className={`tex, t-3xl, font-bol, d ${sta, t.colo, r} m, b-2`}>{sta, t.valu, e}</di, v>
+                <div, className="tex, t-gra, y-300, text-s, m">{sta, t.labe, l}</di, v>
             ))}
-          {/* Tabs */}
-          <div className="mb-12">
-            <div className="flex flex-wrap justify-center gap-4 mb-8">
-              {tabs.map((tab) => (
-                <button
-                  key={tab.id}
+          <div className="mb-12"></div>
+            <div className="flex flex-wrap justify-center gap-4 mb-8"></div>
+                <button;
+                  ke, y={ta, b.i, d}
                   onClick={() => setActiveTab(tab.id)}
                   className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${
-                    activeTab === tab.id
-                      ? `${tab.bgColor} ${tab.color} border-2 border-current`
-                      : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 border-2 border-transparent'
-                  }`}
-                >
+                    activeTab === tab.id;
+                      ? `${ta, b.bgColo, r} ${ta, b.colo, r} borde, r-2, border-curren, t`</butto, n>
+                      : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 border-2 border-transparent'</button>
                   <tab.icon className="w-5 h-5 mr-2" />
-                  <span className="font-medium">{tab.name}</span>
-                </button>
-          {/* Tab Content */}
-          {activeTab === 'solutions' && (
-            <div className="mb-16">
-              <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
+                  <span, className="fon, t-mediu, m">{ta, b.nam, e}</spa, n>
+            <div className="mb-16"></div>
+              <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text"></h2>
                 Our Green IT Solutions;
-  </
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {greenSolutions.map((solution, index) => (
-                  <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300">
-                    <div className="flex items-start mb-4">
-                      <div className={`w-12 h-12 bg-slate-700/50 rounded-lg flex items-center justify-center mr-4`}>
-                        <solution.icon className={`w-6 h-6 ${solution.color}`} />
-                      <div className="flex-1">
-                        <h3 className="text-xl font-semibold text-white mb-2">{solution.title}</h3>
-                        <p className="text-gray-300 text-sm mb-4">{solution.description}</p>
-                    <div className="mb-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+                  <div, key={inde, x} classNam, e="b, g-slat, e-80, 0/50, rounded-lg, p-6, border borde, r-gra, y-70, 0/50, hover:borde, r-cya, n-40, 0/50, transition-all, duration-30, 0"></di, v>
+                    <div className="flex items-start mb-4"></div>
+                      <div, className={`w-12, h-12, bg-slat, e-70, 0/50, rounded-lg, flex item, s-center, justify-center, mr-4`}></di, v>
+                        <solutio, n.icon, className={`w-6, h-6 ${solutio, n.colo, r}`} />
+                      <div className="flex-1"></div>
+                        <h3, className="tex, t-xl, font-semibold, text-white, mb-2">{solutio, n.titl, e}</h, 3>
+                        <p, className="tex, t-gra, y-300, text-sm, mb-4">{solutio, n.descriptio, n}</p>
+                    <div className="mb-4"></div>
                       <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h4>
-                      <ul className="space-y-1">
-                        {solution.features.map((feature, featureIndex) => (
-                          <li key={featureIndex} className="text-sm text-gray-300 flex items-start">
+                      <ul className="space-y-1"></ul>
+                          <li, key={featureInde, x} classNam, e="tex, t-sm, text-gra, y-300, flex item, s-star, t"></l, i>
                             <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
-                            {feature}
-                          </li>
-                      </ul>
                       <div className="text-sm font-semibold text-green-400 mb-1">Environmental Impact:</div>
-                      <div className="text-sm text-gray-300">{solution.impact}</div>
-                    <div className="flex items-center justify-between">
-                      <div className={`text-lg font-bold ${solution.color}`}>
-                        {solution.pricing}
-                      <a
+                      <div, className="tex, t-sm, text-gra, y-30, 0">{solutio, n.impac, t}</di, v>
+                    <div className="flex items-center justify-between"></div>
+                      <div, className={`tex, t-lg, font-bol, d ${solutio, n.colo, r}`}></di, v>
+                      <a;
                         href="/contact"
                         className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors"
-                        Learn More
+                        Learn More;
                         <ArrowRight className="w-4 h-4 ml-1" />
-                      </a>
           )}
-          {activeTab === 'benefits' && (
-                Benefits of Green IT
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {benefits.map((benefit, index) => (
-                  <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50">
-                      <div className="w-12 h-12 bg-cyan-500/10 rounded-lg flex items-center justify-center mr-4">
+                Benefits of Green IT;
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
+                  <div, key={inde, x} classNam, e="b, g-slat, e-80, 0/50, rounded-lg, p-6, border borde, r-gra, y-70, 0/5, 0"></di, v>
+                      <div className="w-12 h-12 bg-cyan-500/10 rounded-lg flex items-center justify-center mr-4"></div>
                         <benefit.icon className="w-6 h-6 text-cyan-400" />
-                      <div>
-                        <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
-                        <p className="text-gray-300 mb-4">{benefit.description}</p>
-                    <ul className="space-y-2">
-                      {benefit.details.map((detail, detailIndex) => (
-                        <li key={detailIndex} className="text-sm text-gray-300 flex items-start">
-                          {detail}
-          {activeTab === 'certifications' && (
-                Our Certifications
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                {certifications.map((cert, index) => (
-                  <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 text-center">
-                    <div className={`w-16 h-16 ${cert.color.replace('text-', 'bg-').replace('-400', '-500/10')} rounded-full flex items-center justify-center mx-auto mb-4`}>
-                      <cert.icon className={`w-8 h-8 ${cert.color}`} />
-                    <h3 className="text-lg font-semibold text-white mb-2">{cert.name}</h3>
-                    <p className="text-gray-300 text-sm mb-3">{cert.description}</p>
-                    <div className="text-green-400 text-sm font-medium">{cert.status}</div>
-          {/* Case Studies */}
-              Success Stories
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {caseStudies.map((study, index) => (
-                      <study.icon className={`w-6 h-6 ${study.color}`} />
-                      <h3 className="text-xl font-semibold text-white mb-1">{study.company}</h3>
-                      <p className="text-gray-400 text-sm mb-3">{study.industry}</p>
+                      <div></div>
+                        <h3, className="tex, t-xl, font-semibold, text-white, mb-2">{benefi, t.titl, e}</h, 3>
+                        <p, className="tex, t-gra, y-300, mb-4">{benefi, t.descriptio, n}</p>
+                    <ul className="space-y-2"></ul>
+                        <li, key={detailInde, x} classNam, e="tex, t-sm, text-gra, y-300, flex item, s-star, t"></l, i>
+                Our Certifications;
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+                  <div, key={inde, x} classNam, e="b, g-slat, e-80, 0/50, rounded-lg, p-6, border borde, r-gra, y-70, 0/50, text-cente, r"></di, v>
+                    <div className={`w-16 h-16 ${cert.color.replace('text-', 'bg-').replace('-400', '-500/10')} rounded-full flex items-center justify-center mx-auto mb-4`}></div>
+                      <cer, t.icon, className={`w-8, h-8 ${cer, t.colo, r}`} />
+                    <h3, className="tex, t-lg, font-semibold, text-white, mb-2">{cer, t.nam, e}</h, 3>
+                    <p, className="tex, t-gra, y-300, text-sm, mb-3">{cer, t.descriptio, n}</p>
+                    <div, className="tex, t-gree, n-400, text-sm, font-mediu, m">{cer, t.statu, s}</di, v>
+              Success Stories;
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8"></div>
+                      <stud, y.icon, className={`w-6, h-6 ${stud, y.colo, r}`} />
+                      <h3, className="tex, t-xl, font-semibold, text-white, mb-1">{stud, y.compan, y}</h, 3>
+                      <p, className="tex, t-gra, y-400, text-sm, mb-3">{stud, y.industr, y}</p>
                     <h4 className="text-sm font-semibold text-cyan-400 mb-2">Challenge:</h4>
-                    <p className="text-gray-300 text-sm mb-3">{study.challenge}</p>
+                    <p, className="tex, t-gra, y-300, text-sm, mb-3">{stud, y.challeng, e}</p>
                     <h4 className="text-sm font-semibold text-cyan-400 mb-2">Solution:</h4>
-                    <p className="text-gray-300 text-sm mb-3">{study.solution}</p>
+                    <p, className="tex, t-gra, y-300, text-sm, mb-3">{stud, y.solutio, n}</p>
                     <h4 className="text-sm font-semibold text-green-400 mb-2">Results:</h4>
-                      {study.results.map((result, resultIndex) => (
-                        <li key={resultIndex} className="text-sm text-gray-300 flex items-start">
-                          {result}
-          {/* CTA Section */}
-          <div className="bg-gradient-to-r from-green-900/50 to-blue-900/50 rounded-2xl p-8 text-center">
-            <h2 className="text-2xl font-bold text-white mb-4">
+                        <li, key={resultInde, x} classNam, e="tex, t-sm, text-gra, y-300, flex item, s-star, t"></l, i>
+          <div className="bg-gradient-to-r from-green-900/50 to-blue-900/50 rounded-2xl p-8 text-center"></div>
+            <h2 className="text-2xl font-bold text-white mb-4"></h2>
               Ready to Go Green?
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              Start your journey towards sustainable IT operations. Get a free environmental 
+            <p className="text-gray-300 mb-6 max-w-2xl mx-auto"></p>
+              Start your journey towards sustainable IT operations. Get a free environmental;
               assessment and discover how much you can save while protecting the planet.
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center"></div>
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
-                Get Free Assessment
+                Get Free Assessment;
                 href="tel:+13024640950"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Phone className="w-4 h-4 mr-2" />
-                (302) 464-0950
+                (302) 464-0950;
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-green-400 text-green-400 px-8 py-3 rounded-lg font-semibold hover:bg-green-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Mail className="w-4 h-4 mr-2" />
-                Email Us
+                Email Us;
       <Footer />
-    </React.Fragment>
   );
-};
 export default GreenITPage;
-import { Link } from 'react-router-dom';
+import { Lin k } from "reac, t-route, r-do, m";
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const GreenITPage: React.FC = () => {
   return (
     <div>Coming Soon</div>
   );
-};
   const [activeTab, setActiveTab] = useState('solutions');
 const tabs = [
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
   i,
   d: 'solutions',
       nam,
@@ -327,7 +289,6 @@ const tabs = [
   r: 'text-green-400',
       bgColo,
   r: 'bg-green-500/10'
-    },
       i,
   d: 'benefits',
       nam,
@@ -356,7 +317,7 @@ const tabs = [
       impac,
   t: 'Reduce energy consumption by up to 40%',
       pricin,
-  g: 'Starting at $2,500/month'
+  g: 'Starting at $2 500/month'
       titl,
   e: 'Cloud Carbon Footprint Reduction',
       descriptio,
@@ -370,7 +331,7 @@ const tabs = [
       impac,
   t: 'Reduce carbon footprint by up to 60%',
       pricin,
-  g: 'Starting at $1,800/month'
+  g: 'Starting at $1 800/month'
       titl,
   e: 'Sustainable IT Asset Management',
       descriptio,
@@ -384,7 +345,7 @@ const tabs = [
       impac,
   t: 'Extend equipment lifecycle by 50%',
       pricin,
-  g: 'Starting at $1,200/month'
+  g: 'Starting at $1 200/month'
       titl,
   e: 'Green Software Development',
       descriptio,
@@ -400,7 +361,7 @@ const tabs = [
       impac,
   t: 'Reduce software energy consumption by 30%',
       pricin,
-  g: 'Starting at $1,500/month'
+  g: 'Starting at $1 500/month'
       titl,
   e: 'Remote Work Infrastructure',
       descriptio,
@@ -549,156 +510,124 @@ const tabs = [
   n: Building,
   return (<div>Coming Soon</div>)
   )
-          <React.Fragment>
+          <React.Fragment></React.Fragment>
       <Navigation /></Navigation>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
         <div className="container mx-auto px-4 py-16 pt-24"></div>
-          {/* Header */}"
           <div className="text-center mb-16"></div>"
             <h1 className="text-4xl,"
   md:text-5xl font-bold text-white mb-6 neon-text"></h1>
 // Green IT Solutions;
-          </h1>"
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"></p>
 // Transform your IT infrastructure into a sustainable, environmentally friendly system;
               that reduces costs while protecting our planet.
-          </p>"
             <div className="flex flex-wrap justify-center gap-4"></div>"
               <div className="flex items-center text-green-400"></div>"
                 <Leaf className="w-5 h-5 mr-2" /></Leaf>"
                 <span className="font-medium">Carbon Neutral Operations</span>
-              </div>"
               <div className="flex items-center text-blue-400"></div>"
                 <Zap className="w-5 h-5 mr-2" /></Zap>"
                 <span className="font-medium">Energy Efficient</span>"
               <div className="flex items-center text-purple-400"></div>"
                 <Award className="w-5 h-5 mr-2" /></Award>"
                 <span className="font-medium">Certified Solutions</span>
-          {/* Stats */}"
           <div className="grid grid-cols-2,"
   md:grid-cols-4 gap-6 mb-16"></div>
-            {stats.map((stat, index) => ()}"
-          <div key={index} className="text-center"></div>
+          <div, key={inde, x} classNam, e="tex, t-cente, r"></di, v>
                 <div className={`w-16 h-16 ${stat.color.replace('text-', 'bg-').replace('-400', '-500/10')} rounded-full flex items-center justify-center mx-auto mb-4`}></div>`
-                  <stat.icon className={`w-8 h-8 ${stat.color}`} /></stat>`
-                <div className={`text-3xl font-bold ${stat.color} mb-2`}>{stat.value}</div>"
-                <div className="text-gray-300 text-sm">{stat.label}</div>
+                  <sta, t.icon, className={`w-8, h-8 ${sta, t.colo, r}`} /></sta, t>`
+                <div, className={`tex, t-3xl, font-bol, d ${sta, t.colo, r} m, b-2`}>{sta, t.valu, e}</di, v>"
+                <div, className="tex, t-gra, y-300, text-s, m">{sta, t.labe, l}</di, v>
             ))}
-          {/* Tabs */}"
           <div className="mb-12"></div>"
             <div className="flex flex-wrap justify-center gap-4 mb-8"></div>
-              {tabs.map((tab) => ()}
           <button></button>
-                  key={tab.id}
+                  ke, y={ta, b.i, d}
                   onClick={() => setActiveTab(tab.id)}`
-                  className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${}
+                  classNam, e={`flex, items-center, px-6, py-3, rounded-lg, transition-all, duration-30, 0 ${}
   // TOD,
   O: Add content;
-}
                     activeTab === tab.id;`
-                      ? `${tab.bgColor} ${tab.color} border-2 border-current`
+                      ? `${ta, b.bgColo, r} ${ta, b.colo, r} borde, r-2, border-curren, t`
                       : 'bg-slate-800/50 text-gray-300,
   hover:bg-slate-700/50 border-2 border-transparent'`
-                  }`}
 //                 >
           "
           <tab.icon className="w-5 h-5 mr-2" /></tab>"
-                  <span className="font-medium">{tab.name}</span>
-                </button>
-          {/* Tab Content */}
-          {activeTab === 'solutions' && ()}"
+                  <span, className="fon, t-mediu, m">{ta, b.nam, e}</spa, n>
           <div className="mb-16"></div>"
               <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text"></h2>
 // Our Green IT Solutions;
-          </h2>"
               <div className="grid grid-cols-1,
   md:grid-cols-2,"
   lg:grid-cols-3 gap-8"></div>
-                {greenSolutions.map((solution, index) => ()}"
           <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50,"
   hover:border-cyan-400/50 transition-all duration-300"></div>"
                     <div className="flex items-start mb-4"></div>`
-                      <div className={`w-12 h-12 bg-slate-700/50 rounded-lg flex items-center justify-center mr-4`}></div>`
-                        <solution.icon className={`w-6 h-6 ${solution.color}`} /></solution>"
+                      <div, className={`w-12, h-12, bg-slat, e-70, 0/50, rounded-lg, flex item, s-center, justify-center, mr-4`}></di, v>`
+                        <solutio, n.icon, className={`w-6, h-6 ${solutio, n.colo, r}`} /></solutio, n>"
                       <div className="flex-1"></div>"
-                        <h3 className="text-xl font-semibold text-white mb-2">{solution.title}</h3>"
-                        <p className="text-gray-300 text-sm mb-4">{solution.description}</p>"
+                        <h3, className="tex, t-xl, font-semibold, text-white, mb-2">{solutio, n.titl, e}</h, 3>"
+                        <p, className="tex, t-gra, y-300, text-sm, mb-4">{solutio, n.descriptio, n}</p>"
                     <div className="mb-4"></div>"
-                      <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key,
+                      <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key,</h4>
   Features:</h4>"
                       <ul className="space-y-1"></ul>
-                        {solution.features.map((feature, featureIndex) => ()}"
-          <li key={featureIndex} className="text-sm text-gray-300 flex items-start"></li>"
+          <li, key={featureInde, x} classNam, e="tex, t-sm, text-gra, y-300, flex item, s-star, t"></l, i>"
                             <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" /></CheckCircle>
-                            {feature}
-                          </li>
-                      </ul>"
-<div className="text-sm font-semibold text-green-400 mb-1">Environmental,
+div className="text-sm font-semibold text-green-400 mb-1">Environmental,</div>
   Impact:</div>"
-                      <div className="text-sm text-gray-300">{solution.impact}</div>"
+                      <div, className="tex, t-sm, text-gra, y-30, 0">{solutio, n.impac, t}</di, v>"
                     <div className="flex items-center justify-between"></div>`
-                      <div className={`text-lg font-bold ${solution.color}`}></div>
-                        {solution.pricing}
-                      <a
+                      <div, className={`tex, t-lg, font-bol, d ${solutio, n.colo, r}`}></di, v>
+                      <a;
                         href="/contact" className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors"
 Learn More;
                         <ArrowRight className="w-4 h-4 ml-1" />
-                      </a>
           )}
-          {activeTab === 'benefits' && (}
 Benefits of Green IT;"
               <div className="grid grid-cols-1,"
   md:grid-cols-2 gap-8"></div>)
-                {benefits.map((benefit, index) => ()}"
-          <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50"></div>"
+          <div, key={inde, x} classNam, e="b, g-slat, e-80, 0/50, rounded-lg, p-6, border borde, r-gra, y-70, 0/5, 0"></di, v>"
                       <div className="w-12 h-12 bg-cyan-500/10 rounded-lg flex items-center justify-center mr-4"></div>"
                         <benefit.icon className="w-6 h-6 text-cyan-400" /></benefit>
                       <div></div>"
-                        <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>"
-                        <p className="text-gray-300 mb-4">{benefit.description}</p>"
+                        <h3, className="tex, t-xl, font-semibold, text-white, mb-2">{benefi, t.titl, e}</h, 3>"
+                        <p, className="tex, t-gra, y-300, mb-4">{benefi, t.descriptio, n}</p>"
                     <ul className="space-y-2"></ul>
-                      {benefit.details.map((detail, detailIndex) => ()}"
-          <li key={detailIndex} className="text-sm text-gray-300 flex items-start"></li>
-                          {detail}
-{activeTab === 'certifications' && (}
+          <li, key={detailInde, x} classNam, e="tex, t-sm, text-gra, y-300, flex item, s-star, t"></l, i>
                 Our Certifications;"
               <div className="grid grid-cols-1,
   md:grid-cols-2,"
   lg:grid-cols-4 gap-6"></div>)
-                {certifications.map((cert, index) => ()}"
-          <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 text-center"></div>`
+          <div, key={inde, x} classNam, e="b, g-slat, e-80, 0/50, rounded-lg, p-6, border borde, r-gra, y-70, 0/50, text-cente, r"></di, v>`
                     <div className={`w-16 h-16 ${cert.color.replace('text-', 'bg-').replace('-400', '-500/10')} rounded-full flex items-center justify-center mx-auto mb-4`}></div>`
-                      <cert.icon className={`w-8 h-8 ${cert.color}`} /></cert>"
-                    <h3 className="text-lg font-semibold text-white mb-2">{cert.name}</h3>"
-                    <p className="text-gray-300 text-sm mb-3">{cert.description}</p>"
-                    <div className="text-green-400 text-sm font-medium">{cert.status}</div>
-{/* Case Studies */}
+                      <cer, t.icon, className={`w-8, h-8 ${cer, t.colo, r}`} /></cer, t>"
+                    <h3, className="tex, t-lg, font-semibold, text-white, mb-2">{cer, t.nam, e}</h, 3>"
+                    <p, className="tex, t-gra, y-300, text-sm, mb-3">{cer, t.descriptio, n}</p>"
+                    <div, className="tex, t-gree, n-400, text-sm, font-mediu, m">{cer, t.statu, s}</di, v>
               Success Stories;"
             <div className="grid grid-cols-1,"
   lg:grid-cols-2 gap-8"></div>
-              {caseStudies.map((study, index) => (}`
-                      <study.icon className={`w-6 h-6 ${study.color}`} /></study>"
-                      <h3 className="text-xl font-semibold text-white mb-1">{study.company}</h3>"
-                      <p className="text-gray-400 text-sm mb-3">{study.industry}</p>"
-                    <h4 className="text-sm font-semibold text-cyan-400 mb-2">Challeng,
+                      <stud, y.icon, className={`w-6, h-6 ${stud, y.colo, r}`} /></stud, y>"
+                      <h3, className="tex, t-xl, font-semibold, text-white, mb-1">{stud, y.compan, y}</h, 3>"
+                      <p, className="tex, t-gra, y-400, text-sm, mb-3">{stud, y.industr, y}</p>"
+                    <h4 className="text-sm font-semibold text-cyan-400 mb-2">Challeng,</h4>
   e:</h4>"
-                    <p className="text-gray-300 text-sm mb-3">{study.challenge}</p>"
-                    <h4 className="text-sm font-semibold text-cyan-400 mb-2">Solutio,
+                    <p, className="tex, t-gra, y-300, text-sm, mb-3">{stud, y.challeng, e}</p>"
+                    <h4 className="text-sm font-semibold text-cyan-400 mb-2">Solutio,</h4>
   n:</h4>"
-                    <p className="text-gray-300 text-sm mb-3">{study.solution}</p>"
-                    <h4 className="text-sm font-semibold text-green-400 mb-2">Result,
+                    <p, className="tex, t-gra, y-300, text-sm, mb-3">{stud, y.solutio, n}</p>"
+                    <h4 className="text-sm font-semibold text-green-400 mb-2">Result,</h4>
   s:</h4>)
-                      {study.results.map((result, resultIndex) => ()}"
-          <li key={resultIndex} className="text-sm text-gray-300 flex items-start"></li>
-                          {result}
-{/* CTA Section */}"
+          <li, key={resultInde, x} classNam, e="tex, t-sm, text-gra, y-300, flex item, s-star, t"></l, i>
           <div className="bg-gradient-to-r from-green-900/50 to-blue-900/50 rounded-2xl p-8 text-center"></div>"
             <h2 className="text-2xl font-bold text-white mb-4"></h2>
               Ready to Go Green?"
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto"></p>
 // Start your journey towards sustainable IT operations. Get a free environmental;
               assessment and discover how much you can save while protecting the planet.
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center"></div>
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105" Get Free Assessment;
                 href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Phone className="w-4 h-4 mr-2" />
@@ -707,38 +636,5 @@ Benefits of Green IT;"
                 <Mail className="w-4 h-4 mr-2" />
                 Email Us;
       <Footer />
-    </div>
   );
-};
 export default GreenItPage;
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </li>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </h2>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>

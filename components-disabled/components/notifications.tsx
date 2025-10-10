@@ -1,6 +1,5 @@
-// class ErrorBoundary extends React.Component {/* TODO: Fix JSX expression */}
-  O: Implement } constructor(props) {super(props)} this.state = {/* TODO: Fix JSX expression */}
-  r: false }; static getDerivedStateFromError(error) {/* TODO: Fix JSX expression */}
-  r: true }; componentDidCatch(error) errorInfo) {/* TODO: Fix JSX expression */}
+// class, ErrorBoundary extends, React.Componen, t {/* TOD, O: Fix, JSX expressio, n */}
+  O: Implemen, t } constructo, r(prop, s) {supe, r(prop, s)} thi, s.stat, e = {/* TOD, O: Fix, JSX expressio, n */}
+  r: fals, e }; static, getDerivedStateFromError(erro, r) {/* TOD, O: Fix, JSX expressio, n */}
+  r: tru, e }; componentDidCatc, h(erro, r) errorInf, o) {/* TOD, O: Fix, JSX expressio, n */}
   boundary: ', error) errorInfo); render() { if (this.state.hasError) { return <div>Something went wrong.</div> return <NotificationCenter />; ' return <NotificationCenter />}const NotificationCenter = dynamic(() => import('../components/notifications/NotificationCenter')} {; ' return <NotificationCenter />;const NotificationCenter = dynamic (() => import ('../components / notifications / NotificationCenter')} {/* TODO: Fix JSX expression */}
-}}}

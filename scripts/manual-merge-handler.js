@@ -14,11 +14,9 @@ function execGitCommand(command, description) {
       stdio: 'pipe'});
     console.log(`✅ ${description} completed`);
     return result;
-  } catch (error) {
     console.log(`❌ ${description} failed: ${error.message}`);
     return null;
-  }
-}
+
 
 // List of important branches to merge;
 const importantBranches = [
@@ -54,19 +52,12 @@ async function main() {
         
         if (mergeResult) {
           console.log(`✅ Successfully merged ${branch}`);
-        } else {
           console.log(`⚠️  ${branch} had conflicts or issues`);
-        }
-      } else {
         console.log(`⚠️  Branch ${branch} does not exist, skipping...`);
-      }
-    } catch (error) {
       console.log(`❌ Error with ${branch}: ${error.message}`);
-    }
     
     // Small delay between merges;
     await new Promise(resolve => setTimeout(resolve, 500));
-  }
   
   // Final status;
   console.log('\n📊 Final Status: ');
@@ -74,6 +65,6 @@ async function main() {
   execGitCommand('git log --oneline -5', 'Recent commits');
   
   console.log('\n🎉 Manual merge handling completed!');
-}
+
 
 main().catch(console.error);

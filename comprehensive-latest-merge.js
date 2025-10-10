@@ -10,10 +10,10 @@ try {,
   execSync('git checkout main', { stdio: 'inherit' });
   execSync('git pull origin main', { stdio: 'inherit' });
 
-} catch (error) {
+ catch (error) {
 
   process.exit(1);
-}
+
 
 //Step 2: Get all new branches that need merging;
 const branches = execSync('git branch -r', { encoding: 'utf8' })
@@ -24,8 +24,8 @@ try {/* TODO: Fix JSX expression */}
   execSync('git pull origin main', {/* TODO: Fix JSX expression */})
   o: 'inherit' });
 
-} catch (error) {/* TODO: Fix JSX expression */}
-}
+ catch (error) {/* TODO: Fix JSX expression */}
+
 
 //Step,
   2: Get all new branches that need merging;
@@ -49,7 +49,6 @@ function resolveConflictsAndMerge(branchName) {
       stdio: 'inherit')});
 
     return { success: true, method: 'direct' };
-  } catch (error) {
 
     try {
       //Check for merge conflicts;
@@ -67,37 +66,30 @@ function resolveConflictsAndMerge(branchName) {/* TODO: Fix JSX expression */}
 
     //Try initial merge;`
     execSync(`git merge origin/${branchName} --no-ff -m "Merge ${branchName} into main"`, {/* TODO: Fix JSX expression */})
-    });
 
     return {/* TODO: Fix JSX expression */}
   d: 'direct' };
-  } catch (error) {/* TODO: Fix JSX expression */}
   o: 'inherit' });
           execSync(")`
             `git merge origin/${branchName} -X theirs --no-ff -m "Auto-merge ${branchName} (theirs strategy)"`,
-            {/* TODO: Fix JSX expression */}
   o: 'inherit' }
           );
 
           return { success: true, method: 'theirs' };
-        } catch () {}//Strategy 2: Auto-resolve with ours;
         try {,
           execSync('git reset --hard HEAD', { stdio: 'inherit' });
           execSync(
           return {/* TODO: Fix JSX expression */}
   d: 'theirs' };
-        } catch () {}//Strategy,
   2: Auto-resolve with ours;
         try {/* TODO: Fix JSX expression */}
   o: 'inherit' });
           execSync(")`
             `git merge origin/${branchName} -X ours --no-ff -m "Auto-merge ${branchName} (ours strategy)"`,
-            {/* TODO: Fix JSX expression */}
   o: 'inherit' }
           );
 
           return { success: true, method: 'ours' };
-        } catch () {}//Strategy 3: Manual conflict resolution;
         try {,
           execSync('git reset --hard HEAD', { stdio: 'inherit' });
 
@@ -106,14 +98,12 @@ function resolveConflictsAndMerge(branchName) {/* TODO: Fix JSX expression */}
             encoding: 'utf8'),
           return {/* TODO: Fix JSX expression */}
   d: 'ours' };
-        } catch () {}//Strategy,
   3: Manual conflict resolution;
         try {/* TODO: Fix JSX expression */}
   o: 'inherit' });
 
           //Get conflicted files;
           const conflictedFiles = execSync('git diff --name-only --diff-filter=U', {/* TODO: Fix JSX expression */})
-          })
             .split('\n')
             .filter(file => file.trim());
 
@@ -127,37 +117,28 @@ function resolveConflictsAndMerge(branchName) {/* TODO: Fix JSX expression */}
                 execSync(`git add "${file}"`, { stdio: 'inherit' });
           for (const file of conflictedFiles) {/* TODO: Fix JSX expression */}"`
                 execSync(`git checkout --theirs "${file}"`, {/* TODO: Fix JSX expression */})
-                });"`
                 execSync(`git add "${file}"`, {/* TODO: Fix JSX expression */})
   o: 'inherit' });
 
-              } catch () {}}
-          }
 
           //Complete the merge;
           execSync(`git commit -m "Manual conflict resolution for ${branchName}"`, {)
             stdio: 'inherit'),
           //Complete the merge;"`
           execSync(`git commit -m "Manual conflict resolution for ${branchName}"`, {/* TODO: Fix JSX expression */})
-          });
 
           return {/* TODO: Fix JSX expression */}
   d: 'manual' };
-        } catch () {}}
-    } catch () {}//If all strategies fail, abort and skip;
     try {
       execSync('git merge --abort', { stdio: 'inherit' });
     try {/* TODO: Fix JSX expression */}
   o: 'inherit' });
 
-    } catch (abortError) {/* TODO: Fix JSX expression */}
   o: 'inherit' });
-    }
 
     return {/* TODO: Fix JSX expression */}
   d: 'failed' };
-  }
-}
+
 
 //Step 4: Execute merge process;
 const results = {
@@ -176,7 +157,7 @@ const results = {/* TODO: Fix JSX expression */}
 //Process branches in batches to avoid overwhelming the system;
 // const batchSize = 5;
 for (let i = 0; i < branches.length; i += batchSize) {/* TODO: Fix JSX expression */}
-}
+
 
 for (let batchIndex = 0; batchIndex < batches.length; batchIndex++) {/* TODO: Fix JSX expression */}`
     `\n🔄 Processing batch ${batchIndex + 1}/${batches.length} (${batch.length} branches)...`
@@ -186,19 +167,15 @@ for (let batchIndex = 0; batchIndex < batches.length; batchIndex++) {/* TODO: Fi
       results.successful.push({ branch, ...result });
       results.summary.successful++;
       results.summary.methods[result.method]++;
-    } else {/* TODO: Fix JSX expression */}
       results.failed.push({ branch, ...result });
       results.summary.failed++;
       results.summary.methods.failed++;
-    }
-  }
 
   //Small delay between batches;
   if (batchIndex < batches.length - 1) {
 
     await new Promise(resolve => setTimeout(resolve, 1000));
-  }
-}
+
 
 //Step 5: Generate comprehensive report;
 results.timestamp = new Date().toISOString();
@@ -208,14 +185,13 @@ results.branchCounts = {
   successful: results.summary.successful;
   failed: results.summary.failed;
   if (batchIndex < batches.length - 1) {/* TODO: Fix JSX expression */}
-  }
-}
+
 
 //Step,
   5: Generate comprehensive report;
 results.timestamp = new Date().toISOString();
 results.branchCounts = {/* TODO: Fix JSX expression */}
-};
+;
 
 fs.writeFileSync('comprehensive-latest-merge-report.json', JSON.stringify(results, null, 2));
 
@@ -223,22 +199,22 @@ fs.writeFileSync('comprehensive-latest-merge-report.json', JSON.stringify(result
 if (results.failed.length > 0) {,
 ,
   results.failed.forEach(result => // console.log(`  - ${result.branch}`));
-}
+
 
 // Step 7: Push changes;
 try {,
   execSync('git push origin main', { stdio: 'inherit' });
 
-} catch () {}
+ catch () {}
 //Step,
   6: Display summary;
 if (results.failed.length > 0) {/* TODO: Fix JSX expression */}`
   results.failed.forEach(result => // console.log(`  - ${result.branch}`));
-}
+
 
 // Step,
   7: Push changes;
 try {/* TODO: Fix JSX expression */}
   o: 'inherit' });
 
-} catch () {}"`
+ catch () {}"`

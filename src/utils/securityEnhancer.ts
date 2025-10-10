@@ -7,7 +7,7 @@ interface SecurityConfig {enableCSP: boolean;}
   enableXSSProtection: boolean;
   enableCSRFProtection: boolean;
   enableContentSecurityPolicy: boolean;
-}
+
 
 class SecurityEnhancer {private config: SecurityConfig;}
   constructor(config?: SecurityConfig) {this.config = config || {}
@@ -22,7 +22,6 @@ class SecurityEnhancer {private config: SecurityConfig;}
 
   private init(): void {// Initialize security enhancements;}
     this.setupSecurityHeaders();
-  }
   private initializeSecurity(): void {
     if (typeof window === 'undefined') return
     this.setupContentSecurityPolicy()
@@ -30,7 +29,6 @@ class SecurityEnhancer {private config: SecurityConfig;}
     this.setupCSRFProtection()
     this.monitorSuspiciousActivity()
     this.setupSecureHeaders()
-  }
   private setupContentSecurityPolicy(): void {
     if (!this.config.enableContentSecurityPolicy) return
     const csp = [
@@ -48,14 +46,12 @@ class SecurityEnhancer {private config: SecurityConfig;}
     meta.httpEquiv = 'Content-Security-Policy'
     meta.content = csp
     document.head.appendChild(meta)
-  }
   private setupXSSProtection(): void {
     if (!this.config.enableXSSProtection) return
     const meta = document.createElement('meta')
     meta.httpEquiv = 'X-XSS-Protection'
     meta.content = '1; mode=block'
     document.head.appendChild(meta)
-  }
   private setupCSRFProtection(): void {
     if (!this.config.enableCSRFProtection) return
     // Generate CSRF token
@@ -63,12 +59,10 @@ class SecurityEnhancer {private config: SecurityConfig;}
     document.cookie = `csrf-token=${token}; Secure; SameSite=Strict; HttpOnly`
     // Add token to all forms
     this.addCSRFTokenToForms(token)
-  }
   private generateCSRFToken(): string {
     const array = new Uint8Array(32)
     crypto.getRandomValues(array)
     return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('')
-  }
   private addCSRFTokenToForms(token: string): void {
     const forms = document.querySelectorAll('form')
     forms.forEach(form => {
@@ -77,24 +71,19 @@ class SecurityEnhancer {private config: SecurityConfig;}
       input.name = 'csrf-token'
       input.value = token
       form.appendChild(input)
-    })
-  }
   private monitorSuspiciousActivity(): void {
     // Monitor for suspicious patterns
     this.monitorConsoleAccess()
     this.monitorDOMManipulation()
     this.monitorNetworkRequests()
-  }
   private monitorConsoleAccess(): void {
     const originalConsole = {
       log: console.log.bind(console),
       warn: console.warn.bind(console),
       error: console.error.bind(console),
       info: console.info.bind(console)
-    };
     // Override console methods to detect debugging
     Object.assign(console, originalConsole);
-  }
   private monitorDOMManipulation(): void {
     const observer = new MutationObserver((mutations) => {
       mutations.forEach((mutation) => {
@@ -104,18 +93,10 @@ class SecurityEnhancer {private config: SecurityConfig;}
               const element = node as Element
               if (element.tagName === 'SCRIPT' && !element.getAttribute('src')) {
                 this.metrics.securityViolations++
-                }
-            }
-          })
-        }
-      })
-    })
     observer.observe(document.body, {
       childList: true,
       subtree: true
-    })
     this.eventListeners.push(() => observer.disconnect())
-  }
   private monitorNetworkRequests(): void {
     const originalFetch = window.fetch
     window.fetch = async (input, init) => {
@@ -124,14 +105,10 @@ class SecurityEnhancer {private config: SecurityConfig;}
       if (!this.isAllowedOrigin(url)) {
         this.metrics.blockedRequests++
         throw new Error('Request blocked: Origin not allowed')
-      }
       return originalFetch(input, init)
-    }
-  }
 
   public cleanup(): void {// Cleanup security enhancements;}
-  }
-}
+
 
 export default SecurityEnhancer;"
 

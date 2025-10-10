@@ -32,7 +32,6 @@ try {
         console.log(`⏭️  Branch ${branch} has no unique commits, skipping...`);
         skippedCount++;
         continue;
-      }
 
       console.log(`📝 Unique commits in ${branch}:`);
       console.log(uniqueCommits.split('\n').slice(0, 3).join('\n'));
@@ -44,17 +43,12 @@ try {
       console.log(`✅ Successfully merged ${branch}`);
       mergedCount++;
 
-    } catch (error) {
       console.log(`⚠️  Could not merge ${branch}: ${error.message}`);
       
       // Try to abort the merge if it failed;
       try {
         execSync('git merge --abort', { stdio: 'pipe' });
-      } catch (abortError) {
         // Ignore abort errors;
-      }
-    }
-  }
 
   console.log(`\n📊 Merge Summary: `);
   console.log(`✅ Successfully merged: ${mergedCount} branches`);
@@ -66,7 +60,6 @@ try {
 
   console.log('🎉 All merges completed successfully!');
 
-} catch (error) {
+ catch (error) {
   console.error('❌ Error during merge process:', error.message);
   process.exit(1);
-}

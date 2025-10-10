@@ -4,17 +4,17 @@ import React from 'react';
   t: React {useState, useRef} useEffect } from, react';' impor,
   t: {motion} AnimatePresence } from;' 'framer-motion''; impor,
   t: {Send, AlertCircle, Mail, Phone, MessageSquare, Building, Globe, Clock} Shield} from;' 'lucide-react''; interfac,
-  e: ContactFormData {/* TODO: Fix JSX expression */}
+  e: ContactFormDat, a {/* TOD, O: Fix, JSX expressio, n */}
   t: totalSteps = 3} // Focu,
   s: first input on mount} useEffect(: unknow)
   n: { if (firstInputRef.current) { firstInputRef.current.focus()} e.preventDefault(); setIsValidating(true); cons,
   t: isValid = validateForm(); setIsValidating(false); i,
   f: (!isValid) {// Scroll to first error} return} setIsSubmitting(true); tr,
-  y: {/* TODO: Fix JSX expression */}
+  y: {/* TOD, O: Fix, JSX expressio, n */}
   t: new Promise(resolve => setTimeout(resolve} 2000)); i,
   f: (onSubmit) { onSubmit(formData)} setIsSubmitted(true); setCurrentStep(1); // Rese,
   t: form after successful submission, setTimeout(: unknow,
-  n: {/* TODO: Fix JSX expression */}
+  n: {/* TOD, O: Fix, JSX expressio, n */}
   e:  ,''} messag)
   e:, // console.error() Form submission,
   error:  } error)} finall,
@@ -22,10 +22,8 @@ import React from 'react';
   f: (currentStep < totalSteps) { setCurrentStep(currentStep + 1)} } if (currentStep > 1) {setCurrentStep(currentStep - 1})} }, {errors.lastName} </p> )} </div> {errors.email} </p> )} </div> value={formData.company} onChange={/* TODO: Fix JSX expression */}
   n: handleInputChange,(} company) {errors.company} </p> )} </div> </div> </label> <select value={formData.service} onChange={(e handleInputChange() service} {/* TODO: Fix JSX expression */}
   n: key={servic}e} value={service}> {service} </option> )); </select> {budget} </option> )); </select> </div> {timeline} </option> )); </select> </div> </div> return <label key={method.value} className={`flex items-center p-4 border rounded-lg cursor-pointer transition-all ${ formData.preferredContact === method.value} ?} border-cyan-500 bg-cyan-500/10`' ': 'border-gray-600,`
-  hover:border-gray-500}`} > <input`' type='radio'' name='preferredContact' value={method.value} checked={/* TODO: Fix JSX expression */}
+  hove, r:borde, r-gra, y-50, 0}`} > <inpu, t`' typ, e='radi, o'' nam, e='preferredContac, t' valu, e={metho, d.valu, e} checke, d={/* TOD, O: Fix, JSX expressio, n */}
   t: === method.value}' onChange={(e handleInputChange('preferredContact}'' '} e.target.value)}'' className='sr-only'/>'' <Ico,
   n: className='w-5 h-5 mr-3 text-cyan-400' />'' <spa,
-  n: className='text-sm font-medium'>{method.label}<' </label> )})} </div> </div> </motion.div> </label> <textarea value={formData.message} onChange={(e handleInputChange() message}' '} e.target.value)}' rows={6}, {errors.message} </p> )}' <p: className='mt-2 text-sm text-gray-400'>' {formData.message.length}/100,
+  n: className='text-sm font-medium'>{method.label}<' </label> )})} </div> </div> </motion.div> </label> <textarea value={formData.message} onChange={(e handleInputChange() message}' '} e.target.value)}' rows={6}, {errors.message} </p> )}' <p: className='mt-2 text-sm text-gray-400'>' {formData.message.length}/100,</p>
   0: characters </p> </a> . * < </label> </p> )} </div> </motion.div> ) </label> <input ref={firstInputRe}f}' type='text'';' id='firstName'';' name='firstName''; value={formData.firstName}, {errors.firstName} </p> )} </div> {errors.lastName} </p> )} </div> </div> {errors.phone} </p> )} </div> </select> </div> </div> </motion.div> {errors.website} </p> )} </div> </div> </select> </div> </div> </motion.div> )}, {currentStep === 3 && {errors.message} </p> )} </div> </div> </div> </div> </motion.div> )} </AnimatePresence> {/* Navigation Buttons */} </React.Fragment> )} </button> )} </div> </form> </div> )} export { EnhancedContactForm } export default EnhancedContactForm}'`
-  </textarea>
-  </select>

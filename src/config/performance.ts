@@ -8,42 +8,31 @@ export const _performanceConfig = {
 // lcp: {
 // good: 2500,
 // needsImprovement: 4000
-    },
     fid: {
       good: 100,
       needsImprovement: 300
-    },
     cls: {
       good: 0.1,
       needsImprovement: 0.25
-    },
     fcp: {
       good: 1800,
       needsImprovement: 3000
-    },
     ttfb: {
       good: 800,
       needsImprovement: 1800
-    }
-  },
   // Cache strategies
   cache: {
 // static: {
 // maxAge: 31536000, // 1 year
 // staleWhileRevalidate: 86400, // 1 day
-    },
     dynamic: {
       maxAge: 3600, // 1 hour
       staleWhileRevalidate: 60, // 1 minute
-    },
     api: {
 // maxAge: 300, // 5 minutes
 // staleWhileRevalidate: 30, // 30 seconds
-    }
-  },
   // Resource hints
   preload: [
-    { href: '/fonts/inter-var.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' }],
   prefetch: [
     '/api/health',
     '/api/config'],
@@ -54,7 +43,6 @@ export const _performanceConfig = {
 // formats: ['image/avif', 'image/webp'],
 // minimumCacheTTL: 60,
 // dangerouslyAllowSVG: false
-  },
   // Bundle optimization
   bundle: {
 // minChunkSize: 20000,
@@ -65,15 +53,10 @@ export const _performanceConfig = {
 // test: /[\\/]node_modules[\\/]/,
 // priority: -10,
 // reuseExistingChunk: true
-        },
         default: {
           minChunks: 2,
           priority: -20,
           reuseExistingChunk: true
-        }
-      }
-    }
-  },
   // Performance monitoring
   monitoring: {
 // enabled: true,
@@ -82,7 +65,7 @@ export const _performanceConfig = {
 // sendToAnalytics: true,
 // logThreshold:   ,
 $4}
-};
+;
 export type PerformanceConfig = typeof performanceConfig;
 export default performanceConfig;
 
@@ -93,7 +76,7 @@ export default performanceConfig;
 
 export const _performanceConfig = {// TODO: Add content;}
 
-}
+
   // Core Web Vitals thresholds,
   metric,
   s: {/* TODO: Fix JSX expression */}
@@ -102,30 +85,24 @@ export const _performanceConfig = {// TODO: Add content;}
   d: 2500,
 // needsImprovemen,
   t: 4000;
-    },
 
     fid: {// TODO: Add content;}
-};
+;
   good: 100,
       needsImprovement: 300;
-    },
     cls: {// TODO: Add content;}
-};
+;
   good: 0.1,
       needsImprovement: 0.25;
-    },
     fcp: {// TODO: Add content;}
-};
+;
   good: 1800,
       needsImprovement: 3000;
-    },
     ttfb: {// TODO: Add content;}
-};
+;
   good: 800,
       needsImprovement: 1800;
 
-    }
-  },
   // Cache strategies,
   cach,
   e: {/* TODO: Fix JSX expression */}
@@ -134,27 +111,22 @@ export const _performanceConfig = {// TODO: Add content;}
   e: 31536000, // 1 year;
 // staleWhileRevalidat,
   e: 86400, // 1 day;
-    },
 
     dynamic: {// TODO: Add content;}
-};
+;
   maxAge: 3600, // 1 hour,
   staleWhileRevalidate: 60, // 1 minute;
 
-    },
     ap,
   i: {/* TODO: Fix JSX expression */}
   e: 300, // 5 minutes;}
 // staleWhileRevalidat,
   e: 30, // 30 seconds;
-    }
-  },
   // Resource hints,
   preloa,
   d: [
   // TOD,
   O: Add items]
-    {/* TODO: Fix JSX expression */}
   n: 'anonymous' },
 //   ],
   prefetc,
@@ -176,7 +148,6 @@ export const _performanceConfig = {// TODO: Add content;}
   L: 60,
 // dangerouslyAllowSV,
   G: false;
-  },
   // Bundle optimization,
   bundl,
   e: {/* TODO: Fix JSX expression */}
@@ -193,18 +164,13 @@ export const _performanceConfig = {// TODO: Add content;}
   y: -10,
 // reuseExistingChun,
   k: true;
-        },
 
         default: {// TODO: Add content;}
-};
+;
   minChunks: 2,
           priority: -20,
           reuseExistingChunk: true;
 
-        }
-      }
-    }
-  },
   // Performance monitoring,
   monitorin,
   g: {/* TODO: Fix JSX expression */}
@@ -217,8 +183,7 @@ export const _performanceConfig = {// TODO: Add content;}
   s: true,
 // logThreshol,
   d: 'needsImprovement'
-  }
-}
+
 export type PerformanceConfig = typeof performanceConfig;
 export default performanceConfig;
 

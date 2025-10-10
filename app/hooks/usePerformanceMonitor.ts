@@ -7,7 +7,7 @@ interface PerformanceMetrics {
   cls?: number;
   fcp?: number;
   ttfb?: number;
-}
+
 
 export const usePerformanceMonitor = () => {
   const reportMetric = useCallback((name: string, value: number) => {
@@ -17,14 +17,10 @@ export const usePerformanceMonitor = () => {
         metric_name: name,
         metric_value: value,
         event_category: 'Performance'
-      });
-    }
 
     // Log to console in development
     if (process.env.NODE_ENV === 'development') {
       console.log(`Performance Metric - ${name}: ${value}ms`);
-    }
-  }, []);
 
   useEffect(() => {
     // Monitor Core Web Vitals
@@ -35,18 +31,14 @@ export const usePerformanceMonitor = () => {
         getFCP((metric) => reportMetric('FCP', metric.value));
         getLCP((metric) => reportMetric('LCP', metric.value));
         getTTFB((metric) => reportMetric('TTFB', metric.value));
-      });
-    }
 
     // Monitor page load time
     const handleLoad = () => {
       const loadTime = performance.now();
       reportMetric('PageLoad', loadTime);
-    };
 
     window.addEventListener('load', handleLoad);
     return () => window.removeEventListener('load', handleLoad);
-  }, [reportMetric]);
 
   // Monitor resource loading performance
   useEffect(() => {
@@ -59,14 +51,9 @@ export const usePerformanceMonitor = () => {
           // Only report slow resources (>1s)
           if (loadTime > 1000) {
             reportMetric(`ResourceLoad_${resourceEntry.name.split('/').pop()}`, loadTime);
-          }
-        }
-      }
-    });
 
     observer.observe({ entryTypes: ['resource'] });
     return () => observer.disconnect();
-  }, [reportMetric]);
 
   // Monitor navigation timing
   useEffect(() => {
@@ -81,12 +68,7 @@ export const usePerformanceMonitor = () => {
           Response: navigation.responseEnd - navigation.responseStart,
           DOM: navigation.domContentLoadedEventEnd - navigation.responseEnd,
           Load: navigation.loadEventEnd - navigation.loadEventStart
-        };
 
         Object.entries(metrics).forEach(([key, value]) => {
           reportMetric(`Navigation_${key}`, value);
-        });
-      }
-    }
-  }, [reportMetric]);
-};
+;

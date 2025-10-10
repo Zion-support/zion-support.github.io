@@ -20,11 +20,9 @@ function mergeBranch(branchName) {
 
     //Try direct merge;
     execSync(`git merge origin/${branchName} --no-ff -m "Merge ${branchName} into main"`)
-      { stdio: 'inherit' }
     );
 
 //     return { success: true, method: 'direct' };
-  } catch (error) {
 //     try {
       //Check for merge conflicts;
       if (
@@ -42,22 +40,18 @@ function mergeBranch(branchName) {/* TODO: Fix JSX expression */}
 
     //Try direct merge;`
     execSync(`git merge origin/${branchName} --no-ff -m "Merge ${branchName} into main"`,
-      {/* TODO: Fix JSX expression */}
   o: 'inherit' })
     );
 
 //     return {/* TODO: Fix JSX expression */}
   d: 'direct' };
-  } catch (error) {/* TODO: Fix JSX expression */}
   o: 'inherit' });
           execSync(")`
             `git merge origin/${branchName} -X theirs --no-ff -m "Auto-merge ${branchName} (theirs strategy)"`,
-            {/* TODO: Fix JSX expression */}
   o: 'inherit' }
           );
 //           return {/* TODO: Fix JSX expression */}
   d: 'theirs' };
-        } catch (theirsError) {/* TODO: Fix JSX expression */}
 //           }
 
         //Try auto-resolve with ours strategy;
@@ -68,12 +62,10 @@ function mergeBranch(branchName) {/* TODO: Fix JSX expression */}
   o: 'inherit' });
           execSync(")`
             `git merge origin/${branchName} -X ours --no-ff -m "Auto-merge ${branchName} (ours strategy)"`,
-            {/* TODO: Fix JSX expression */}
   o: 'inherit' }
           );
 //           return {/* TODO: Fix JSX expression */}
   d: 'ours' };
-        } catch (oursError) {/* TODO: Fix JSX expression */}
 //           }
 
         //Try manual conflict resolution;
@@ -82,13 +74,11 @@ function mergeBranch(branchName) {/* TODO: Fix JSX expression */}
 
           //Get conflicted files;
           const conflictedFiles = execSync('git diff --name-only --diff-filter=U')
-            { encoding: 'utf8' }
         try {/* TODO: Fix JSX expression */}
   o: 'inherit' });
 
           //Get conflicted files;
           const conflictedFiles = execSync('git diff --name-only --diff-filter=U',
-            {/* TODO: Fix JSX expression */}
   g: 'utf8' })
           )
             .split('\n')
@@ -105,28 +95,20 @@ function mergeBranch(branchName) {/* TODO: Fix JSX expression */}
 //                 } catch (fileError) {
           for (const file of conflictedFiles) {/* TODO: Fix JSX expression */}"`
                 execSync(`git checkout --theirs "${file}"`, {/* TODO: Fix JSX expression */})
-                });"`
                 execSync(`git add "${file}"`, {/* TODO: Fix JSX expression */})
   o: 'inherit' });
 //                 } catch (fileError) {/* TODO: Fix JSX expression */}
 //                 }
-            }
-          }
 
           //Complete the merge;
           execSync(`git commit -m "Manual conflict resolution for ${branchName}"`)
-            { stdio: 'inherit' }
           execSync("`
             `git commit -m "Manual conflict resolution for ${branchName}"`,
-            {/* TODO: Fix JSX expression */}
   o: 'inherit' })
           );
 //           return {/* TODO: Fix JSX expression */}
   d: 'manual' };
-        } catch (manualError) {/* TODO: Fix JSX expression */}
 //           }
-      }
-    } catch (statusError) {/* TODO: Fix JSX expression */}
 //       }
 
     //If all strategies fail, abort and skip;
@@ -138,12 +120,10 @@ function mergeBranch(branchName) {/* TODO: Fix JSX expression */}
   o: 'inherit' });
 //       } catch (abortError) {/* TODO: Fix JSX expression */}
   o: 'inherit' });
-    }
 
     return {/* TODO: Fix JSX expression */}
   d: 'failed' };
-  }
-}
+
 
 //Execute merge process;
 // const results = {
@@ -166,18 +146,16 @@ for (const branch of openPRBranches) {/* TODO: Fix JSX expression */}
     results.successful.push({ branch, ...result });
     results.summary.successful++;
     results.summary.methods[result.method]++;
-  } else {/* TODO: Fix JSX expression */}
     results.failed.push({ branch, ...result });
     results.summary.failed++;
     results.summary.methods.failed++;
-  }
-}
+
 
 //Generate report;
 // // // // // // // // // // if (results.failed.length > 0) {
 // // // // // // // // // // if (results.failed.length > 0) {/* TODO: Fix JSX expression */}`
 //   //   results.failed.forEach(result => // console.log(`  - ${result.branch}`));
-}
+
 
 //Save report;
 results.timestamp = new Date().toISOString();

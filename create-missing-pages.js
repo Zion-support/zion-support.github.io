@@ -20,7 +20,7 @@ import PerformanceOptimizer from '../components/PerformanceOptimizer';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
 
 const ${title.replace(/[^a-zA-Z0-9]/g, '')}Page = () => {
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <SEOOptimizer;
         title="${title} - Zion Tech Group"
         description="${description}"
@@ -30,93 +30,63 @@ const ${title.replace(/[^a-zA-Z0-9]/g, '')}Page = () => {
       <PerformanceOptimizer /></PerformanceOptimizer>
       <AccessibilityEnhancer enableKeyboardNavigation enableScreenReaderSupport enableHighContrast enableFocusManagement enableSkipLinks></AccessibilityEnhancer>
         <div /></div>
-      </AccessibilityEnhancer>
       
       <Navigation />)
-      {/* Hero Section */})
-      <section className="relative py-20 overflow-hidden">)
+      <section className="relative py-20 overflow-hidden">)</section>
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http: //www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>,
         ,
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">,
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">,</div>
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">,
             ${title}
-          </h1>
-          <p className="text-xl md: text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">,
+          <p className="text-xl md: text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">,</p>
             ${description}
-          </p>
           
-          <div className="flex flex-col sm: flex-row gap-4 justify-center items-center mb-16">
-            <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center items-center mb-16"></div>
+            <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center"></button>
               Get Started Today;
               <ArrowRight className="w-5 h-5 ml-2" />
-            </button>
-            <button className="border-2 border-cyan-400 text-cyan-400 font-semibold py-4 px-8 rounded-xl hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
+            <button className="border-2 border-cyan-400 text-cyan-400 font-semibold py-4 px-8 rounded-xl hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"></button>
               Learn More;
-            </button>
-          </div>
-        </div>,
-      </section>,
 ,
-      {/* Features Section */}
-      <section className="py-20 px-4 sm: px-6 lg:px-8">,
-        <div className="max-w-7xl mx-auto">,
-          <div className="text-center mb-16">,
+      <section className="py-20 px-4 sm: px-6 lg:px-8">,</section>
+        <div className="max-w-7xl mx-auto">,</div>
+          <div className="text-center mb-16">,</div>
             <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>,
             <p className="text-xl text-gray-300">Comprehensive ${category.toLowerCase()} solutions for modern enterprises</p>
-          </div>
           
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-xl p-6 hover:border-cyan-400/40 hover:shadow-lg hover:shadow-cyan-400/10 transition-all duration-300">,
-              <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center mb-4">,
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"></div>
+            <div className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-xl p-6 hover:border-cyan-400/40 hover:shadow-lg hover:shadow-cyan-400/10 transition-all duration-300">,</div>
+              <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center mb-4">,</div>
                 <Zap className="w-6 h-6 text-white" />,
-              </div>,
               <h3 className="text-xl font-bold text-white mb-3">Advanced Technology</h3>,
               <p className="text-gray-300">Cutting-edge ${category.toLowerCase()} solutions powered by AI and machine learning.</p>
-            </div>
             
-            <div className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-xl p-6 hover: border-cyan-400/40 hover:shadow-lg hover:shadow-cyan-400/10 transition-all duration-300">,
-              <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center mb-4">,
+            <div className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-xl p-6 hover: border-cyan-400/40 hover:shadow-lg hover:shadow-cyan-400/10 transition-all duration-300">,</div>
+              <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center mb-4">,</div>
                 <Shield className="w-6 h-6 text-white" />,
-              </div>,
               <h3 className="text-xl font-bold text-white mb-3">Enterprise Security</h3>,
               <p className="text-gray-300">Bank-level security and compliance for all your ${category.toLowerCase()} needs.</p>
-            </div>
             
-            <div className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-xl p-6 hover: border-cyan-400/40 hover:shadow-lg hover:shadow-cyan-400/10 transition-all duration-300">,
-              <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center mb-4">,
+            <div className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-xl p-6 hover: border-cyan-400/40 hover:shadow-lg hover:shadow-cyan-400/10 transition-all duration-300">,</div>
+              <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center mb-4">,</div>
                 <BarChart className="w-6 h-6 text-white" />,
-              </div>,
               <h3 className="text-xl font-bold text-white mb-3">Real-time Analytics</h3>,
               <p className="text-gray-300">Comprehensive insights and analytics for your ${category.toLowerCase()} operations.</p>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-cyan-500/10 to-purple-500/10">
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">,
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">,
+      <section className="py-16 bg-gradient-to-r from-cyan-500/10 to-purple-500/10"></section>
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">,</div>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">,</h2>
             Ready to Get Started?,
-          </h2>,
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">,
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">,</p>
             Contact us today for a free consultation and discover how our ${category.toLowerCase()} solutions can transform your business.
-          </p>
           
-          <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
-            <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center items-center"></div>
+            <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"></button>
               Get Free Consultation;
-            </button>
-            <button className="border-2 border-cyan-400 text-cyan-400 font-semibold py-4 px-8 rounded-xl hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
+            <button className="border-2 border-cyan-400 text-cyan-400 font-semibold py-4 px-8 rounded-xl hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"></button>
               View Pricing;
-            </button>
-          </div>
-        </div>
-      </section>
 
       <Footer />,
-    </div>);
-};
 
 export default ${title.replace(/[^a-zA-Z0-9]/g, '')}Page;
 `;
@@ -130,12 +100,10 @@ const createPage = (route, title, description, category) => {
   const dir = path.dirname(pagePath);
   if (!fs.existsSync(dir)) {
     fs.mkdirSync(dir, { recursive: true });
-  }
   
   // Write the page file;
   fs.writeFileSync(pagePath, pageContent);
   console.log(`Created page: ${route}`);
-};
 
 // Page configurations;
 const pageConfigs = {
@@ -283,7 +251,6 @@ const pageConfigs = {
   '/space-technology': { title: 'Space Technology', description: 'Space technology solutions and satellite systems', category: 'Space' },
   '/climate-tech': { title: 'Climate Technology', description: 'Climate technology solutions and sustainability', category: 'Climate' },
   '/biotech-it': { title: 'Biotech IT', description: 'Biotechnology IT solutions and systems', category: 'Biotech' }
-};
 
 // Create pages in batches;
 let createdCount = 0;
@@ -299,8 +266,6 @@ for (const route of missingPages) {
     
     if (createdCount % batchSize === 0) {
       console.log(`Created ${createdCount} pages...`);
-    }
-  } else {
     // Create a generic page for routes without specific configs;
     const title = route.split('/').pop().replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
     const description = `Advanced ${title.toLowerCase()} solutions powered by AI and cutting-edge technology`;
@@ -308,8 +273,6 @@ for (const route of missingPages) {
     
     createPage(route, title, description, category);
     createdCount++;
-  }
-}
 
 console.log(`\n✅ Successfully created ${createdCount} missing pages!`);
 console.log('All navigation links should now work properly.');

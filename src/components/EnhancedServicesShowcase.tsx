@@ -1,19 +1,16 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import { Phone, Mail, ExternalLink, Star, CheckCircle, ArrowRight, Zap, Brain, Cloud, Rocket, TrendingUp, Users, Award, Shield, Clock, DollarSign, Target, BarChart, Sparkles } from 'lucide-react';
-import { services, serviceCategories, contactInfo } from '../data/services';
+import { Phone Mail ExternalLink Star CheckCircle ArrowRight Zap Brain Cloud Rocket TrendingUp Users Award Shield Clock DollarSign Target BarChart Sparkles } from "lucide-react";
+import { services serviceCategories contactInfo } from "../data/services";
 interface ServiceCardProps {
   service: typeof services[0];
   index: number;
-}
 const ServiceCard: React.FC<ServiceCardProps> = ({ service, index }) => {
   const [isHovered, setIsHovered] = useState(false);
   const formatPrice = (pricing: typeof service.pricing) => {
     if (pricing.custom) {
       return 'Custom Pricing';
-    }
-    return `$${pricing.starting.toLocaleString()}/${pricing.period === 'month' ? 'mo' : pricing.period === 'year' ? 'yr' : 'one-time'}`;
-  };
+    return `$${pricin, g.startin, g.toLocaleStrin, g()}/${pricin, g.perio, d === 'mont, h' ? 'm, o' : pricin, g.perio, d === 'yea, r' ? 'y, r' : 'on, e-tim, e'}`;
   const getCategoryIcon = (category: string) => {
     switch (category) {
       case 'ai': return Brain;
@@ -21,302 +18,177 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index }) => {
       case 'it': return Cloud;
       case 'emerging-tech': return Rocket;
       default: return Target;
-    }
-  };
-  const CategoryIcon = getCategoryIcon(service.category);
-  return (
-    <div
+  const CategoryIcon = getCategoryIcon(service.category);</ServiceCardProps>
+  return (</ServiceCardProps>
+    <div;
       className={`quantum-card p-6 energy-pulse hover:scale-105 transition-all duration-500 ${
         isHovered ? 'shadow-2xl' : 'shadow-lg'
-      }`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       style={{
         animationDelay: `${index * 100}ms`,
-        background: isHovered 
-          ? 'linear-gradient(135deg, rgba(0, 255, 255, 0.15), rgba(255, 0, 255, 0.15))'
-          : 'linear-gradient(135deg, rgba(0, 255, 255, 0.1), rgba(255, 0, 255, 0.1))'
-      }}
-    >
-      {/* Header */}
-      <div className="flex items-start justify-between mb-4">
-        <div className="flex items-center space-x-3">
-          <div className="text-4xl">{service.icon}</div>
-          <div>
-            <div className="flex items-center space-x-2">
+        background: isHovered;
+          ? 'linear-gradient(135deg, rgba(0, 255, 255, 0.15), rgba(255, 0, 255, 0.15))'</div>
+          : 'linear-gradient(135deg, rgba(0, 255, 255, 0.1), rgba(255, 0, 255, 0.1))'</div>
+      <div className="flex items-start justify-between mb-4"></div>
+        <div className="flex items-center space-x-3"></div>
+          <div, className="tex, t-4x, l">{servic, e.ico, n}</di, v>
+          <div></div>
+            <div className="flex items-center space-x-2"></div>
               <CategoryIcon className="w-5 h-5 text-cyan-400" />
-              <span className="text-xs text-cyan-400 font-medium uppercase tracking-wide">
-                {serviceCategories.find(cat => cat.id === service.category)?.name}
-              </span>
-            </div>
-            <h3 className="text-xl font-bold text-white mt-1 neon-text">
-              {service.name}
-            </h3>
-          </div>
-        </div>
-        <div className="flex space-x-2">
-          {service.popular && (
-            <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs px-2 py-1 rounded-full font-bold flex items-center">
+              <span className="text-xs text-cyan-400 font-medium uppercase tracking-wide"></span>
+            <h3 className="text-xl font-bold text-white mt-1 neon-text"></h3>
+        <div className="flex space-x-2"></div>
+            <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs px-2 py-1 rounded-full font-bold flex items-center"></span>
               <Star className="w-3 h-3 mr-1" />
               Popular;
-  </
           )}
-          {service.new && (
-            <span className="bg-gradient-to-r from-green-400 to-cyan-500 text-black text-xs px-2 py-1 rounded-full font-bold flex items-center">
+            <span className="bg-gradient-to-r from-green-400 to-cyan-500 text-black text-xs px-2 py-1 rounded-full font-bold flex items-center"></span>
               <Sparkles className="w-3 h-3 mr-1" />
               New;
-  </
           )}
-        </div>
-      </div>
-      {/* Description */}
-      <p className="text-gray-300 mb-4 leading-relaxed">
-        {service.description}
-      </p>
-      {/* Key Features */}
-      <div className="mb-4">
+      <p className="text-gray-300 mb-4 leading-relaxed"></p>
+      <div className="mb-4"></div>
         <h4 className="text-sm font-semibold text-cyan-400 mb-2 flex items-center">
           <CheckCircle className="w-4 h-4 mr-2" />
           Key Features;
-  </
-        <ul className="space-y-1">
-          {service.features.slice(0, 3).map((feature, idx) => (
-            <li key={idx} className="text-xs text-gray-300 flex items-center">
+        <ul className="space-y-1"></ul>
+            <li, key={id, x} classNam, e="tex, t-xs, text-gra, y-300, flex item, s-cente, r"></l, i>
               <div className="w-1 h-1 bg-cyan-400 rounded-full mr-2 flex-shrink-0" />
-              {feature}
-            </li>
           ))}
-          {service.features.length > 3 && (
-            <li className="text-xs text-cyan-400">
-              +{service.features.length - 3} more features;
-  </
+            <li className="text-xs text-cyan-400"></li>
+              +{servic, e.feature, s.lengt, h - 3} more, features;
           )}
-        </ul>
-      </div>
-      {/* Benefits */}
-      <div className="mb-4">
+      <div className="mb-4"></div>
         <h4 className="text-sm font-semibold text-green-400 mb-2 flex items-center">
           <TrendingUp className="w-4 h-4 mr-2" />
           Key Benefits;
-  </
-        <div className="grid grid-cols-2 gap-2">
-          {service.benefits.slice(0, 2).map((benefit, idx) => (
-            <div key={idx} className="text-xs text-gray-300 bg-slate-800/50 rounded px-2 py-1">
-              {benefit}
-            </div>
+        <div className="grid grid-cols-2 gap-2"></div>
+            <div, key={id, x} classNam, e="tex, t-xs, text-gra, y-300, bg-slat, e-80, 0/50, rounded p, x-2, py-1"></di, v>
           ))}
-        </div>
-      </div>
-      {/* Pricing */}
-      <div className="mb-4 p-3 bg-gradient-to-r from-slate-800/50 to-slate-700/50 rounded-lg">
-        <div className="flex items-center justify-between">
-          <div>
-            <div className="text-lg font-bold text-white">
-              {formatPrice(service.pricing)}
-            </div>
-            {service.marketPrice && (
-              <div className="text-xs text-gray-400">
-                Market: ${service.marketPrice.min}-${service.marketPrice.max}
-              </div>
+      <div className="mb-4 p-3 bg-gradient-to-r from-slate-800/50 to-slate-700/50 rounded-lg"></div>
+        <div className="flex items-center justify-between"></div>
+          <div></div>
+            <div className="text-lg font-bold text-white"></div>
+              <div className="text-xs text-gray-400"></div>
+                Marke, t: ${servic, e.marketPric, e.mi, n}-${servic, e.marketPric, e.ma, x}
             )}
-          </div>
-          <div className="text-right">
+          <div className="text-right"></div>
             <div className="text-xs text-cyan-400 font-medium">Starting Price</div>
-            <div className="text-xs text-gray-400">per {service.pricing.period}</div>
-          </div>
-        </div>
-      </div>
-      {/* Contact Actions */}
-      <div className="space-y-2">
-        <a
-          href={`tel:${contactInfo.phone}`}
+            <div, className="tex, t-xs, text-gra, y-40, 0">pe, r {servic, e.pricin, g.perio, d}</di, v>
+      <div className="space-y-2"></div>
+        <a;
+          hre, f={`te, l:${contactInf, o.phon, e}`}
           className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center group">
           <Phone className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform" />
           Call Now;
-  </
-        <div className="grid grid-cols-2 gap-2">
-          <a
-            href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`}
+        <div className="grid grid-cols-2 gap-2"></div>
+          <a;
+            hre, f={`mailt, o:${contactInf, o.emai, l}?subjec, t=Inquiry, about ${servic, e.nam, e}`}
             className="bg-slate-800 text-cyan-400 py-2 px-3 rounded-lg font-medium hover:bg-slate-700 transition-all duration-300 flex items-center justify-center text-sm group">
             <Mail className="w-4 h-4 mr-1 group-hover:scale-110 transition-transform" />
             Email;
-  </
-          <a
-            href={service.contact.demo}
+          <a;
+            hre, f={servic, e.contac, t.dem, o}
             target="_blank"
             rel="noopener noreferrer"
             className="bg-slate-800 text-purple-400 py-2 px-3 rounded-lg font-medium hover:bg-slate-700 transition-all duration-300 flex items-center justify-center text-sm group">
             <ExternalLink className="w-4 h-4 mr-1 group-hover:scale-110 transition-transform" />
             Demo;
-  </
-        </div>
-      </div>
-      {/* Use Cases */}
-      <div className="mt-4 pt-4 border-t border-slate-700">
+      <div className="mt-4 pt-4 border-t border-slate-700"></div>
         <h4 className="text-xs font-semibold text-gray-400 mb-2">Perfect For:</h4>
-        <div className="flex flex-wrap gap-1">
-          {service.useCases.slice(0, 2).map((useCase, idx) => (
-            <span key={idx} className="text-xs bg-slate-700/50 text-gray-300 px-2 py-1 rounded">
-              {useCase}
-            </span>
+        <div className="flex flex-wrap gap-1"></div>
+            <span, key={id, x} classNam, e="tex, t-xs, bg-slat, e-70, 0/50, text-gra, y-300, px-2, py-1, rounded"></spa, n>
           ))}
-        </div>
-      </div>
-    </div>
   );
-};
 const EnhancedServicesShowcase: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [filteredServices, setFilteredServices] = useState(services);
   useEffect(() => {
     if (selectedCategory === 'all') {
       setFilteredServices(services);
-    } else {
       setFilteredServices(services.filter(service => service.category === selectedCategory));
-    }
-  }, [selectedCategory]);
   const popularServices = services.filter(service => service.popular);
-  const newServices = services.filter(service => service.new);
-  return (
-    <section className="py-16 px-4">
-      <div className="container mx-auto">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 neon-text">
+  const newServices = services.filter(service => service.new);</string>
+  return (</string>
+    <section className="py-16 px-4"></section>
+      <div className="container mx-auto"></div>
+        <div className="text-center mb-12"></div>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 neon-text"></h2>
             Our Services;
-  </
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
             Comprehensive AI, IT, and Micro SAAS solutions designed to transform your business operations;
-  </
-          {/* Contact Info Banner */}
-          <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-lg p-6 mb-8 cyber-card">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
-              <div className="flex items-center justify-center space-x-2">
+          <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-lg p-6 mb-8 cyber-card"></div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center"></div>
+              <div className="flex items-center justify-center space-x-2"></div>
                 <Phone className="w-5 h-5 text-cyan-400" />
-                <div>
-                  <div className="text-white font-medium">{contactInfo.phone}</div>
+                <div></div>
+                  <div, className="tex, t-white, font-mediu, m">{contactInf, o.phon, e}</di, v>
                   <div className="text-gray-400 text-sm">Call us anytime</div>
-                </div>
-              </div>
-              <div className="flex items-center justify-center space-x-2">
+              <div className="flex items-center justify-center space-x-2"></div>
                 <Mail className="w-5 h-5 text-cyan-400" />
-                <div>
-                  <div className="text-white font-medium">{contactInfo.email}</div>
+                <div></div>
+                  <div, className="tex, t-white, font-mediu, m">{contactInf, o.emai, l}</di, v>
                   <div className="text-gray-400 text-sm">Email us</div>
-                </div>
-              </div>
-              <div className="flex items-center justify-center space-x-2">
+              <div className="flex items-center justify-center space-x-2"></div>
                 <ExternalLink className="w-5 h-5 text-cyan-400" />
-                <div>
-                  <div className="text-white font-medium">{contactInfo.website}</div>
+                <div></div>
+                  <div, className="tex, t-white, font-mediu, m">{contactInf, o.websit, e}</di, v>
                   <div className="text-gray-400 text-sm">Visit our site</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        {/* Category Filter */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
-          <button
+        <div className="flex flex-wrap justify-center gap-4 mb-12"></div>
+          <button;
             onClick={() => setSelectedCategory('all')}
             className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
               selectedCategory === 'all'
                 ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white'
-                : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
-            }`}
-          >
-            All Services;
-  </
-          {serviceCategories.map((category) => (
-            <button
-              key={category.id}
+                : 'bg-slate-800 text-gray-300 hover:bg-slate-700'</button>
+            All Services;</button>
+            <button;
+              ke, y={categor, y.i, d}
               onClick={() => setSelectedCategory(category.id)}
               className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 flex items-center space-x-2 ${
-                selectedCategory === category.id
-                  ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white'
-                  : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
-              }`}
-            >
-              <span className="text-lg">{category.icon}</span>
-              <span>{category.name}</span>
-            </button>
+                selectedCategory === category.id;
+                  ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white'</button>
+                  : 'bg-slate-800 text-gray-300 hover:bg-slate-700'</button>
+              <span, className="tex, t-l, g">{categor, y.ico, n}</spa, n>
+              <spa, n>{categor, y.nam, e}</spa, n>
           ))}
-        </div>
-        {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {filteredServices.map((service, index) => (
-            <ServiceCard key={service.id} service={service} index={index} />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12"></div>
+            <ServiceCard, key={servic, e.i, d} servic, e={servic, e} inde, x={inde, x} />
           ))}
-        </div>
-        {/* Popular Services Section */}
-        {selectedCategory === 'all' && (
-          <div className="mb-12">
-            <h3 className="text-2xl font-bold text-white mb-6 text-center neon-text">
+          <div className="mb-12"></div>
+            <h3 className="text-2xl font-bold text-white mb-6 text-center neon-text"></h3>
               Most Popular Services;
-  </
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {popularServices.map((service, index) => (
-                <div key={service.id} className="cyber-card p-4 hover:scale-105 transition-all duration-300">
-                  <div className="text-3xl mb-3 text-center">{service.icon}</div>
-                  <h4 className="text-lg font-semibold text-white mb-2 text-center">{service.name}</h4>
-                  <p className="text-sm text-gray-300 mb-3 text-center">{service.description}</p>
-                  <div className="text-center">
-                    <div className="text-lg font-bold text-cyan-400 mb-2">
-                      ${service.pricing.starting.toLocaleString()}/{service.pricing.period === 'month' ? 'mo' : 'yr'}
-                    </div>
-                    <a
-                      href={`tel:${contactInfo.phone}`}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+                <div, key={servic, e.i, d} classNam, e="cybe, r-card, p-4, hover:scal, e-105, transition-all, duration-30, 0"></di, v>
+                  <div, className="tex, t-3xl, mb-3, text-cente, r">{servic, e.ico, n}</di, v>
+                  <h4, className="tex, t-lg, font-semibold, text-white, mb-2, text-cente, r">{servic, e.nam, e}</h, 4>
+                  <p, className="tex, t-sm, text-gra, y-300, mb-3, text-cente, r">{servic, e.descriptio, n}</p>
+                  <div className="text-center"></div>
+                    <div className="text-lg font-bold text-cyan-400 mb-2"></div>
+                      ${servic, e.pricin, g.startin, g.toLocaleStrin, g()}/{servic, e.pricin, g.perio, d === 'mont, h' ? 'm, o' : 'y, r'}
+                    <a;
+                      hre, f={`te, l:${contactInf, o.phon, e}`}
                       className="text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors">
                       Call Now →
-                    </a>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
-        {/* CTA Section */}
-        <div className="text-center bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-lg p-8 cyber-card">
-          <h3 className="text-2xl font-bold text-white mb-4 neon-text">
+              ))}</a>
+        )}</a>
+        <div className="text-center bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-lg p-8 cyber-card"></div>
+          <h3 className="text-2xl font-bold text-white mb-4 neon-text"></h3>
             Ready to Transform Your Business?
-          </h3>
-          <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+          <p className="text-gray-300 mb-6 max-w-2xl mx-auto"></p>
             Get a free consultation and discover how our AI and IT solutions can drive your business forward.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href={`tel:${contactInfo.phone}`}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+            <a;
+              hre, f={`te, l:${contactInf, o.phon, e}`}
               className="cyber-button inline-flex items-center justify-center px-8 py-3">
               <Phone className="w-5 h-5 mr-2" />
-              Call {contactInfo.phone}
-            </a>
-            <a
-              href={`mailto:${contactInfo.email}?subject=Free Consultation Request`}
+              Cal, l {contactInf, o.phon, e}
+            <a;
+              hre, f={`mailt, o:${contactInf, o.emai, l}?subjec, t=Free, Consultation Reques, t`}
               className="cyber-button inline-flex items-center justify-center px-8 py-3"
               style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
-            >
               <Mail className="w-5 h-5 mr-2" />
               Get Free Consultation;
-  </
-          </div>
-        </div>
-      </div>
-    </section>
   );
-};
 export default EnhancedServicesShowcase;
-  </a>
-  </h3>
-  </button>
-  </p>
-  </h2>
-  </string>
-  </a>
-  </a>
-  </a>
-  </h4>
-  </li>
-  </h4>
-  </span>
-  </span>
-  </ServiceCardProps>

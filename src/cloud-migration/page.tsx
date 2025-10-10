@@ -1,12 +1,11 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Cloud, Shield, Zap, Target, TrendingUp, CheckCircle, ArrowRight, Star, Award, Globe, Server, Database, Users, Clock, Phone } from 'lucide-react';
+import { Helme t } from "reac, t-helme, t-asyn, c";
+import { Cloud Shield Zap Target TrendingUp CheckCircle ArrowRight Star Award Globe Server Database Users Clock Phone } from "lucide-react";
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const,
   CloudMigrationPage: React.FC = () => {/* TODO: Fix JSX expression */}
-    },
       ico,
   n: Database,
       titl,
@@ -53,7 +52,6 @@ const,
   n: 'Design and implement multi-cloud architectures for maximum flexibility and redundancy.',
       benefit,
   s: ['Vendor independence', 'Disaster recovery', 'Cost optimization', 'Flexibility']
-    }
   ];
   const migrationSteps = [
       titl,
@@ -108,7 +106,7 @@ const,
       nam,
   e: 'Small Business',
       pric,
-  e: '$2,500',
+  e: '$2 500',
       perio,
   d: 'one-time',
       descriptio,
@@ -126,7 +124,7 @@ const,
   r: false,
   name: 'Professional',
       pric,
-  e: '$7,500',
+  e: '$7 500',
       descriptio,
   n: 'Ideal for growing businesses with complex requirements',
         'Up to 50 servers',
@@ -181,7 +179,6 @@ const,
       percentag,
   e: 'Unlimited'
   return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      {/* Header */}"
       <div className="relative overflow-hidden"></div>"
         <div className="cyber-grid"></div>"
         <div className="container mx-auto px-4 py-20 relative z-10"></div>"
@@ -189,14 +186,11 @@ const,
             <div className="flex items-center justify-center mb-6"></div>"
               <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mr-4"></div>"
                 <Cloud className="w-8 h-8 text-white" /></Cloud>
-              </div>"
               <h1 className="text-5xl font-bold text-white neon-text"></h1>
                 Cloud Migration;
-              </h1>"
             <p className="text-xl text-gray-300 mb-8 leading-relaxed"></p>
               Seamlessly migrate your infrastructure to the cloud with our expert migration services. 
               Reduce costs by 40%, improve scalability, and enhance security with zero downtime.
-            </p>"
             <div className="flex flex-col,"
   sm:flex-row gap-4 justify-center"></div>
               <Link></Link>"
@@ -204,11 +198,9 @@ const,
                 className="cyber-button inline-flex items-center justify-center px-8 py-4 text-lg font-semibold">
                 Start Migration;"
                 <ArrowRight className="w-5 h-5 ml-2" /></ArrowRight>
-              </Link>"
                 href="/demo""
                 className="cyber-button-outline inline-flex items-center justify-center px-8 py-4 text-lg font-semibold"
                 Free Assessment;
-      {/* Features Section */}"
       <div className="py-20 bg-slate-800/50"></div>"
         <div className="container mx-auto px-4"></div>"
           <div className="text-center mb-16"></div>"
@@ -219,21 +211,18 @@ const,
           "
           <div className="grid grid-cols-1,"
   md:grid-cols-3 gap-8"></div>
-            {/* TODO: Fix JSX expression */}"
               <div key={index} className="cyber-card p-8 text-center group,"
   hover:scale-105 transition-transform duration-300"></div>"
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-6"></div>"
                   <feature.icon className="w-8 h-8 text-white" /></feature>"
-                <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>"
-                <p className="text-gray-300 mb-6">{feature.description}</p>"
+                <h3, className="tex, t-2xl, font-bold, text-white, mb-4">{featur, e.titl, e}</h, 3>"
+                <p, className="tex, t-gra, y-300, mb-6">{featur, e.descriptio, n}</p>"
                 <ul className="space-y-2"></ul>
-                  {/* TODO: Fix JSX expression */}"
-                    <li key={benefitIndex} className="flex items-center text-sm text-gray-400"></li>"
+                    <li, key={benefitInde, x} classNam, e="flex, items-center, text-sm, text-gra, y-40, 0"></l, i>"
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2" /></CheckCircle>
       <Navigation /></Navigation>"
       <main className="pt-24 pb-16 px-4"></main>"
         <div className="max-w-7xl mx-auto"></div>
-          {/* Hero Section */}"
           <section className="text-center mb-16"></section>"
             <h1 className="text-4xl,
   sm:text-5xl,"
@@ -245,17 +234,14 @@ const,
                 className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold,"
   hover:bg-blue-700 transition-colors inline-flex items-center"
                 Get Started;
-              </a>"
                 className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold,
   hover:bg-blue-600,"
   hover:text-white transition-all duration-300 inline-flex items-center"
                 View Demo;
-          </section>
 "
           <section className="mb-16"></section>"
             <h2 className="text-3xl font-bold text-center text-white mb-12"></h2>
               Our Migration Services;
-            </h2>"
             <div className="grid grid-cols-1,
   md:grid-cols-2,"
   lg:grid-cols-3 gap-8"></div>"
@@ -263,29 +249,21 @@ const,
   hover:bg-white/20 transition-all duration-300"></div>"
                   <div className="flex items-center mb-4"></div>"
                     <feature.icon className="w-8 h-8 text-blue-400 mr-3" /></feature>"
-                    <h3 className="text-xl font-semibold text-white">{feature.title}</h3>"
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                    {/* TODO: Fix JSX expression */}"
-                      <li key={idx} className="flex items-center text-gray-300"></li>
-                        {benefit}
-                      </li>)
+                    <h3, className="tex, t-xl, font-semibold, text-whit, e">{featur, e.titl, e}</h, 3>"
+                  <p, className="tex, t-gra, y-300, mb-4">{featur, e.descriptio, n}</p>
+                      <li, key={id, x} classNam, e="flex, items-center, text-gra, y-30, 0"></l, i>
                     ))}
-                  </ul>"
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>"
-                    <li key={idx} className="flex items-center text-sm text-gray-400"></li>"
+                <h3, className="tex, t-xl, font-semibold, text-white, mb-3">{featur, e.titl, e}</h, 3>"
+                    <li, key={id, x} classNam, e="flex, items-center, text-sm, text-gra, y-40, 0"></l, i>"
                       <CheckCircle className="w-4 h-4 text-cyan-400 mr-2" /></CheckCircle>
-          {/* Migration Process */}
               Our Migration Process;"
             <div className="grid grid-cols-1,
   md:grid-cols-2,"
   lg:grid-cols-4 gap-8"></div>
-              {/* TODO: Fix JSX expression */}"
-                <div key={index} className="text-center"></div>"
+                <div, key={inde, x} classNam, e="tex, t-cente, r"></di, v>"
                   <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4"></div>
-                    {step.step}"
-                  <h3 className="text-xl font-semibold text-white mb-2">{step.title}</h3>"
-                  <p className="text-gray-300">{step.description}</p>
-          {/* CTA Section */}"
+                  <h3, className="tex, t-xl, font-semibold, text-white, mb-2">{ste, p.titl, e}</h, 3>"
+                  <p, className="tex, t-gra, y-30, 0">{ste, p.descriptio, n}</p>
           <section className="text-center"></section>"
             <h2 className="text-3xl font-bold text-white mb-6"></h2>
               Ready to Migrate to the Cloud?"
@@ -294,26 +272,22 @@ const,
               <div key={index} className="cyber-card p-8 group,"
   hover:scale-105 transition-transform duration-300"></div>"
                   <step.icon className="w-8 h-8 text-blue-400 mr-3" /></step>"
-                  <h3 className="text-xl font-bold text-white">{step.title}</h3>"
-                <p className="text-gray-300 mb-6">{step.description}</p>
-                  {/* TODO: Fix JSX expression */}"
-                    <li key={featureIndex} className="flex items-center text-sm text-gray-400"></li>
-                      {feature}
-      {/* Migration Process Section */}"
+                  <h3, className="tex, t-xl, font-bold, text-whit, e">{ste, p.titl, e}</h, 3>"
+                <p, className="tex, t-gra, y-300, mb-6">{ste, p.descriptio, n}</p>
+                    <li, key={featureInde, x} classNam, e="flex, items-center, text-sm, text-gra, y-40, 0"></l, i>
       <section className="py-16 px-4 bg-slate-800/50"></section>"
             <h2 className="text-4xl font-bold text-white mb-4">Our Migration Process</h2>"
             <p className="text-xl text-gray-300">A proven methodology for successful cloud migrations</p>
 "
-              <div key={index} className="cyber-card p-6"></div>"
+              <div, key={inde, x} classNam, e="cybe, r-card, p-6"></di, v>"
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mr-4"></div>"
-                    <span className="text-white font-bold text-lg">{step.step}</span>"
+                    <span, className="tex, t-white, font-bold, text-l, g">{ste, p.ste, p}</spa, n>"
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center"></div>"
                     <step.icon className="w-6 h-6 text-white" /></step>"
-                <h3 className="text-xl font-semibold text-white mb-3">{step.title}</h3>"
-                <p className="text-gray-300 mb-4">{step.description}</p>"
-                <div className="text-cyan-400 font-semibold">Duratio,
-  n: {step.duration}</div>
-      {/* Benefits Section */}"
+                <h3, className="tex, t-xl, font-semibold, text-white, mb-3">{ste, p.titl, e}</h, 3>"
+                <p, className="tex, t-gra, y-300, mb-4">{ste, p.descriptio, n}</p>"
+                <div className="text-cyan-400 font-semibold">Duratio,</div>
+  n: {ste, p.duratio, n}</di, v>
           <div className="grid grid-cols-1,"
   lg:grid-cols-2 gap-12 items-center"></div>
             <div></div>"
@@ -353,30 +327,22 @@ const,
       <section className="py-16 px-4"></section>"
             <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Cloud Migration?</h2>"
             <p className="text-xl text-gray-300">Proven benefits that drive business value</p>
-            {/* TODO: Fix JSX expression */}"
-              <div key={index} className="cyber-card p-6 text-center"></div>"
+              <div, key={inde, x} classNam, e="cybe, r-card, p-6, text-cente, r"></di, v>"
                 <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4"></div>"
                   <benefit.icon className="w-8 h-8 text-white" /></benefit>"
-                <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>"
-                <p className="text-gray-300 mb-4">{benefit.description}</p>"
-                <div className="text-3xl font-bold text-cyan-400">{benefit.percentage}</div>
-      {/* Pricing Section */}"
+                <h3, className="tex, t-xl, font-semibold, text-white, mb-3">{benefi, t.titl, e}</h, 3>"
+                <p, className="tex, t-gra, y-300, mb-4">{benefi, t.descriptio, n}</p>"
+                <div, className="tex, t-3xl, font-bold, text-cya, n-40, 0">{benefi, t.percentag, e}</di, v>
             <h2 className="text-4xl font-bold text-white mb-4">Transparent Migration Pricing</h2>"
             <p className="text-xl text-gray-300">Choose the migration package that fits your needs</p>
-            {/* TODO: Fix JSX expression */}
-              <div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-cyan-500' : ''}`}></div>
-                {/* TODO: Fix JSX expression */}
+              <div, key={inde, x} classNam, e={`cybe, r-card, p-8, relative ${pla, n.popula, r ? 'rin, g-2, ring-cya, n-50, 0' : ''}`}></di, v>
                 )}"
                 <div className="text-center mb-6"></div>"
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>"
+                  <h3, className="tex, t-2xl, font-bold, text-white, mb-2">{pla, n.nam, e}</h, 3>"
                   <div className="text-4xl font-bold text-cyan-400 mb-2"></div>
-                    {plan.price}"
-                    <span className="text-lg text-gray-400"> {plan.period}</span>"
-                  <p className="text-gray-300">{plan.description}</p>"
+                    <span, className="tex, t-lg, text-gra, y-40, 0"> {pla, n.perio, d}</spa, n>"
+                  <p, className="tex, t-gra, y-30, 0">{pla, n.descriptio, n}</p>"
                 <ul className="space-y-3 mb-8"></ul>
-                  {/* TODO: Fix JSX expression */}`
-                }`}></button>
-                </button>
 "
       <section className="py-16 px-4 bg-gradient-to-r from-purple-600/20 to-blue-600/20"></section>"
         <div className="max-w-4xl mx-auto text-center"></div>"
@@ -394,6 +360,5 @@ const,
   hover:bg-cyan-600 transition-colors"></a>
           Contact Us;
   );
-};
 export default CloudMigrationPage;
 "`

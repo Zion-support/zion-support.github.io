@@ -8,7 +8,6 @@ export type Zion2026AIMarketplaceService =
     yearly: number;
     enterprise: number;
     currency: string;
-  };
   features: string[];
   benefits: string[];
   roi: string;
@@ -22,8 +21,7 @@ export type Zion2026AIMarketplaceService =
     email: string;
     website: string;
     address: string;
-  };
-}
+
 export const zion2026 AIMarketplaceServices: Zion2026 AIMarketplaceService[] = [,
     id: 'ai-marketplace-001',
     name: 'Zion AI Service Marketplace Platform',
@@ -78,7 +76,7 @@ export const zion2026 AIMarketplaceServices: Zion2026 AIMarketplaceService[] = [
   e: string;
     addres,
   s: string};
-}
+
 export const,
   zion2026AIMarketplaceServices: Zion2026AIMarketplaceService[] = [,
     i,
@@ -99,7 +97,6 @@ export const,
   e: 9999,
       currenc,
   y: 'USD'
-    },
     feature,
   s: [,
       'AI-powered service matching algorithm',
@@ -162,7 +159,6 @@ export const,
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'}
-  },
     id: 'ai-marketplace-002',
     name: 'AI Service Integration Hub',
     description: 'A centralized platform for integrating multiple AI services into existing business workflows, providing seamless connectivity and unified management.',
@@ -183,8 +179,6 @@ export const,
   s://ziontechgroup.com',
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  },
     i,
   d: 'ai-marketplace-002',
     nam,
@@ -203,7 +197,6 @@ export const,
   e: 7999,
       currenc,
   y: 'USD'
-    },
     feature,
   s: [,
       'Unified API gateway for all AI services',
@@ -266,7 +259,6 @@ export const,
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'}
-  },
     id: 'ai-marketplace-003',
     name: 'AI Service Quality Assurance Platform',
     description: 'An automated platform for testing, validating, and ensuring the quality of AI services through comprehensive testing frameworks and continuous monitoring.',
@@ -287,8 +279,6 @@ export const,
   s://ziontechgroup.com',
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  },
     i,
   d: 'ai-marketplace-003',
     nam,
@@ -307,7 +297,6 @@ export const,
   e: 5999,
       currenc,
   y: 'USD'
-    },
     feature,
   s: [,
       'Automated AI service testing',
@@ -370,7 +359,6 @@ export const,
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'}
-  },
     id: 'ai-marketplace-004',
     name: 'AI Service Analytics Dashboard',
     description: 'A comprehensive analytics platform that provides insights into AI service performance, usage patterns, and business impact across the organization.',
@@ -391,8 +379,6 @@ export const,
   s://ziontechgroup.com',
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  },
     i,
   d: 'ai-marketplace-004',
     nam,
@@ -411,7 +397,6 @@ export const,
   e: 3999,
       currenc,
   y: 'USD'
-    },
     feature,
   s: [,
       'Real-time performance monitoring',
@@ -474,7 +459,6 @@ export const,
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'}
-  },
     id: 'ai-marketplace-005',
     name: 'AI Service Development Studio',
     description: 'A comprehensive development environment for creating, testing, and deploying custom AI services with pre-built templates and automated deployment pipelines.',
@@ -495,8 +479,6 @@ export const,
   s://ziontechgroup.com',
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  },
     i,
   d: 'ai-marketplace-005',
     nam,
@@ -515,7 +497,6 @@ export const,
   e: 14999,
       currenc,
   y: 'USD'
-    },
     feature,
   s: [,
       'Visual AI service builder',
@@ -589,8 +570,6 @@ export const,
   s://ziontechgroup.com',
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  }
 ];
 export type Zion2026AIMarketplaceService = i,
   d: string; nam,

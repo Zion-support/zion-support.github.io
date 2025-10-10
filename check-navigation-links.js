@@ -34,13 +34,10 @@ function scanDirectory(dir) {
     
     if (stat.isDirectory()) {
       scanDirectory(fullPath);
-    } else if (item === 'page.tsx') {
       // Extract the route from the path;
       const route = fullPath.replace('/workspace/src', '').replace('/page.tsx', '') || '/';
       existingPages.push(route);
-    }
-  }
-}
+
 
 scanDirectory(srcDir);
 
@@ -51,8 +48,7 @@ const existingPagesSet = new Set(existingPages);
 for (const link of allLinks) {
   if (!existingPagesSet.has(link)) {
     missingPages.push(link);
-  }
-}
+
 
 console.log('=== NAVIGATION LINKS ANALYSIS ===');
 console.log(`Total navigation links found: ${allLinks.length}`);
@@ -62,9 +58,9 @@ console.log(`Missing pages: ${missingPages.length}`);
 if (missingPages.length > 0) {
   console.log('\n=== MISSING PAGES ===');
   missingPages.forEach(page => console.log(`- ${page}`));
-} else {
+ else {
   console.log('\n✅ All navigation links have corresponding pages!');
-}
+
 
 console.log('\n=== NAVIGATION LINKS ===');
 allLinks.forEach(link => console.log(`✓ ${link}`));
@@ -77,7 +73,7 @@ fs.writeFileSync('/workspace/navigation-analysis.json', JSON.stringify({
   missingPagesList: missingPages),
   allLinks: allLinks),
   existingPagesList: existingPages;
-}, null, 2));
+, null, 2));
 
 console.log('\n=== ANALYSIS COMPLETE ===');
 console.log('Results saved to navigation-analysis.json');

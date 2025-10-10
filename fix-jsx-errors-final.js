@@ -15,9 +15,7 @@ for (const filePath of files) {
       if (value.startsWith('/') && !value.endsWith('/')) {
 for (const filePath of files) {/* TODO: Fix JSX expression */}
         return `${prop}: '${value.substring(1)}'`;
-      }
       return match;
-    });
 
     //Fix malformed <br> tags;
     content = content.replace(/<br\s*>\s*<\/br>/g, '<br />');
@@ -32,9 +30,7 @@ for (const filePath of files) {/* TODO: Fix JSX expression */}
     content = content.replace(/\s*\/>\s*<\/(\w+)>/g, '</$1>');
 
     if (content !== originalContent) {/* TODO: Fix JSX expression */}
-    }
-  } catch (error) {/* TODO: Fix JSX expression */}
 //     }
-}
+
 
 // `

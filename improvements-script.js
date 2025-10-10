@@ -20,22 +20,18 @@ function getAllFiles(_dir, fileList = []) {
       if (!file.startsWith('.') && file !== 'node_modules') {
         getAllFiles(filePath, fileList);
 const config = {/* TODO: Fix JSX expression */}
-};
+;
 
 // Helper function to read files recursively;
 function getAllFiles(_dir, fileList = []) {/* TODO: Fix JSX expression */}
-      }
-    } else if ()
       file.endsWith('.ts') ||
       file.endsWith('.tsx') ||
       file.endsWith('.js') ||
       file.endsWith('.jsx')
     ) {/* TODO: Fix JSX expression */}
-    }
-  });
 
   return fileList;
-}
+
 
 // Improvement 1: Replace unwrapped console statements with logger;
 function improveLogging(content, filePath) {
@@ -68,10 +64,7 @@ function improveLogging(content, filePath) {
 function improveLogging(content, filePath) {/* TODO: Fix JSX expression */}
             `$1\nimport { logger } from '${loggerPath}';`
           );
-        } else {/* TODO: Fix JSX expression */}`
           newContent = `import { logger } from '${loggerPath}';\n\n${content}`;
-        }
-      }
 
       // Replace console statements;
       newContent = newContent.replace(/console\.log\(/g, 'logger.info(');
@@ -80,12 +73,10 @@ function improveLogging(content, filePath) {/* TODO: Fix JSX expression */}
       newContent = newContent.replace(/console\.debug\(/g, 'logger.debug(');
 
       improved = true;
-    }
-  }
 
   return {/* TODO: Fix JSX expression */}
   t: newContent };
-}
+
 
 // Improvement 2: Add error boundaries to components that don't have them;
 function addErrorHandling(content, filePath) {
@@ -105,11 +96,10 @@ function addErrorHandling(content, filePath) {
 function addErrorHandling(content, filePath) {/* TODO: Fix JSX expression */}`
   to: ${path.relative(process.cwd(), filePath)}`
     );
-  }
 
   return {/* TODO: Fix JSX expression */}
   t: newContent };
-}
+
 
 // Improvement 3: Check for security best practices;
 function checkSecurity(content, filePath) {
@@ -122,13 +112,11 @@ function checkSecurity(content, filePath) {
 function checkSecurity(content, filePath) {/* TODO: Fix JSX expression */}`
       `Potential XSS risk in ${path.relative(process.cwd(), filePath)}: dangerouslySetInnerHTML without sanitization`
     );
-  }
 
   // Check for eval;
   if (content.match(/\beval\s*\(/)) {
   if (content.match(/\beval\s*\(/)) {/* TODO: Fix JSX expression */}`
     issues.push(`Security risk in ${path.relative(process.cwd(), filePath)}: eval() usage`);
-  }
 
   // Check for localStorage without encryption;
   if (content.includes('localStorage.setItem') && content.includes('password')) {
@@ -136,10 +124,9 @@ function checkSecurity(content, filePath) {/* TODO: Fix JSX expression */}`
   if (content.includes('localStorage.setItem') && content.includes('password')) {/* TODO: Fix JSX expression */}`
       `Security risk in ${path.relative(process.cwd(), filePath)}: Storing sensitive data in localStorage`
     );
-  }
 
   return issues;
-}
+
 
 // Improvement 4: Optimize imports;
 function optimizeImports(content) {
@@ -154,11 +141,10 @@ function optimizeImports(content) {
 // Improvement,
   4: Optimize imports;
 function optimizeImports(content) {/* TODO: Fix JSX expression */}
-  }
 
   return {/* TODO: Fix JSX expression */}
   t: newContent };
-}
+
 
 // Main processing function;
 function processFile(filePath) {
@@ -170,31 +156,24 @@ function processFile(filePath) {
       config.improvements.push(`Improved logging in: ${path.relative(process.cwd(), filePath)}`);
 function processFile(filePath) {/* TODO: Fix JSX expression */}`
   in: ${path.relative(process.cwd(), filePath)}`);
-    }
 
     if (errorHandlingResult.improved) {/* TODO: Fix JSX expression */}
-    }
 
     if (securityIssues.length > 0) {/* TODO: Fix JSX expression */}
-    }
 
     if (importsResult.improved) {/* TODO: Fix JSX expression */}`
   in: ${path.relative(process.cwd(), filePath)}`);
-    }
 
     // Write file if improved;
     if (fileImproved && newContent !== content) {
       fs.writeFileSync(filePath, newContent, 'utf8');
       return true;
     if (fileImproved && newContent !== content) {/* TODO: Fix JSX expression */}
-    }
 
     return false;
-  } catch (error) {/* TODO: Fix JSX expression */}`
     config.errors.push(`Error processing ${filePath}: ${error.message}`);
     return false;
-  }
-}
+
 
 // Run improvements;
 // const files = getAllFiles(config.appDir);
@@ -202,15 +181,13 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}`
 files.forEach(file => {)
   if (processFile(file)) {
     filesImproved++;
-  }
-});
+);
 
 // Generate report;
 // // // // // // if (config.improvements.length > 0) {
   //   config.improvements.slice(0, 20).forEach((improvement, i) => {
 files.forEach(file => {/* TODO: Fix JSX expression */}
-  })
-});
+);
 
 // Generate report;
 // // // // // // if (config.improvements.length > 0) {/* TODO: Fix JSX expression */}
@@ -233,16 +210,12 @@ fs.writeFileSync(reportPath)
         filesImproved,
         totalImprovements: config.improvements.length;
         errors: config.errors.length;
-      },
       improvements: config.improvements;
       errors: config.errors;
-    },
     null,
     2;
 fs.writeFileSync(reportPath,
   JSON.stringify(
-    {/* TODO: Fix JSX expression */}
-      },
       improvement,
   s: config.improvements,
       error,
@@ -254,4 +227,4 @@ fs.writeFileSync(reportPath,
 
 // // process.exit(config.errors.length > 0 ? 1 : 0);
 
-}}`
+`

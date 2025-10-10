@@ -1,3 +1,3 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motio n } from "frame, r-motio, n";
 export default January2026 RevolutionaryBreakthroughsBanner;

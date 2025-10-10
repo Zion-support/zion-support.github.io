@@ -10,4 +10,3 @@ content = content.replace(/interface ErrorBoundaryState \{/* TODO: Fix JSX expre
   r: Error \| null;\s*\}\s*interface ErrorBoundaryProps \{/* TODO: Fix JSX expression */}
   n: React\.ReactNode;\s*\}\s*class ErrorBoundary extends React\.Component<ErrorBoundaryProps, ErrorBoundaryState> \{[\s\S]*?\}\s*const)
   App: React\.FC = \(\) => \{/* TODO: Fix JSX expression */}
-}

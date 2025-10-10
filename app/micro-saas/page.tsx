@@ -1,9 +1,8 @@
 'use client';
 import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { CheckCircle, ArrowRight, Zap, Star, Users, TrendingUp, Shield, Cloud, BarChart3, MessageSquare } from 'lucide-react';
-
+import { Helme t } from "reac, t-helme, t-asyn, c";
+import { Lin k } from "reac, t-route, r-do, m";
+import { CheckCircle ArrowRight Zap Star Users TrendingUp Shield Cloud BarChart3 MessageSquare } from "lucide-react";
 interface MicroSaasProduct {
   id: string;
   icon: string;
@@ -14,13 +13,11 @@ interface MicroSaasProduct {
   users: string;
   popular: boolean;
   category: string;
-}
 
 const MicroSaasPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
 
   const products: MicroSaasProduct[] = [
-    {
       id: '1',
       icon: '📊',
       title: 'Zion Analytics Pro',
@@ -37,8 +34,6 @@ const MicroSaasPage: React.FC = () => {
       users: 'Up to 25 users',
       popular: true,
       category: 'Analytics'
-    },
-    {
       id: '2',
       icon: '💬',
       title: 'Zion Chat AI',
@@ -55,8 +50,6 @@ const MicroSaasPage: React.FC = () => {
       users: 'Up to 50 users',
       popular: true,
       category: 'Communication'
-    },
-    {
       id: '3',
       icon: '🔐',
       title: 'Zion Security Shield',
@@ -73,8 +66,6 @@ const MicroSaasPage: React.FC = () => {
       users: 'Up to 100 users',
       popular: false,
       category: 'Security'
-    },
-    {
       id: '4',
       icon: '☁️',
       title: 'Zion Cloud Vault',
@@ -91,8 +82,6 @@ const MicroSaasPage: React.FC = () => {
       users: 'Up to 30 users',
       popular: false,
       category: 'Storage'
-    },
-    {
       id: '5',
       icon: '📈',
       title: 'Zion Performance AI',
@@ -109,8 +98,6 @@ const MicroSaasPage: React.FC = () => {
       users: 'Up to 40 users',
       popular: false,
       category: 'Monitoring'
-    },
-    {
       id: '6',
       icon: '🤖',
       title: 'Zion AI Workflow',
@@ -127,8 +114,6 @@ const MicroSaasPage: React.FC = () => {
       users: 'Up to 75 users',
       popular: true,
       category: 'AI'
-    },
-    {
       id: '7',
       icon: '📧',
       title: 'Zion Email Marketing AI',
@@ -145,8 +130,6 @@ const MicroSaasPage: React.FC = () => {
       users: 'Up to 60 users',
       popular: false,
       category: 'Marketing'
-    },
-    {
       id: '8',
       icon: '💰',
       title: 'Zion Finance AI',
@@ -163,201 +146,129 @@ const MicroSaasPage: React.FC = () => {
       users: 'Up to 20 users',
       popular: false,
       category: 'Finance'
-    }
   ];
 
   const categories = ['All', 'Analytics', 'Communication', 'Security', 'Storage', 'Monitoring', 'AI', 'Marketing', 'Finance'];
 
   const filteredProducts = selectedCategory === 'All' 
-    ? products 
+    ? products;
     : products.filter(product => product.category === selectedCategory);
 
   const stats = [
-    { icon: <Users className="w-8 h-8 text-blue-500" />, value: '10K+', label: 'Active Users' },
-    { icon: <TrendingUp className="w-8 h-8 text-green-500" />, value: '99.9%', label: 'Uptime' },
-    { icon: <Shield className="w-8 h-8 text-purple-500" />, value: '100%', label: 'Secure' },
-    { icon: <Zap className="w-8 h-8 text-orange-500" />, value: '5min', label: 'Setup Time' }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+      <Helmet/>
         <title>Micro SaaS Solutions - Zion Tech Group | Ready-to-Use Business Tools</title>
         <meta name="description" content="Discover our collection of micro SaaS solutions designed to solve specific business problems. Quick setup, affordable pricing, powerful features." />
         <meta name="keywords" content="micro SaaS, business tools, analytics, customer chat, security, cloud backup, performance monitoring" />
-      </Helmet>
 
-      {/* Hero Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
-            Micro SaaS
-            <span className="block bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
-              Solutions
-            </span>
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+      <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-7xl mx-auto text-center"></div>
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6"/>
+            Micro SaaS</h1>
+            <span className="block bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent"></span>
+              Solutions;
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
             Ready-to-use business tools that solve specific problems. No complex setup, no long-term commitments - just powerful solutions that work.
-          </p>
           
-          {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="flex justify-center mb-4">
-                  {stat.icon}
-                </div>
-                <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
-                <div className="text-gray-300">{stat.label}</div>
-              </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto"></div>
+              <div, key={inde, x} classNam, e="tex, t-cente, r"></di, v>
+                <div className="flex justify-center mb-4"></div>
+                <div, className="tex, t-3xl, font-bold, text-white, mb-2">{sta, t.valu, e}</di, v>
+                <div, className="tex, t-gra, y-30, 0">{sta, t.labe, l}</di, v>
             ))}
-          </div>
-        </div>
-      </section>
 
-      {/* Category Filter */}
-      <section className="py-8 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex flex-wrap justify-center gap-4">
-            {categories.map((category) => (
-              <button
-                key={category}
+      <section className="py-8 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="flex flex-wrap justify-center gap-4"></div>
+              <button;
+                ke, y={categor, y}
                 onClick={() => setSelectedCategory(category)}
                 className={`px-6 py-3 rounded-full border transition-all duration-300 ${
-                  selectedCategory === category
+                  selectedCategory === category;
                     ? 'border-cyan-400 bg-cyan-400/10 text-cyan-400'
                     : 'border-cyan-400/30 text-cyan-400 hover:bg-cyan-400/10'
-                }`}
-              >
-                {category}
-              </button>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Products Grid */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredProducts.map((product) => (
-              <div key={product.id} className={`bg-slate-800/50 rounded-2xl p-8 border transition-all duration-300 ${
+            ))}</button>
+      <section className="py-16 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+              <div, key={produc, t.i, d} classNam, e={`b, g-slat, e-80, 0/50, rounded-2xl, p-8, border transitio, n-all, duration-30, 0 ${
                 product.popular ? 'border-cyan-500' : 'border-cyan-500/20 hover:border-cyan-500/40'
-              }`}>
-                {product.popular && (
-                  <div className="flex justify-center mb-4">
-                    <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center">
+                  <div className="flex justify-center mb-4"></div>
+                    <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center"></span>
                       <Star className="w-4 h-4 mr-1" />
-                      Most Popular
-                    </span>
-                  </div>
+                      Most Popular;
                 )}
                 
-                <div className="text-center mb-6">
-                  <div className="text-4xl mb-4">{product.icon}</div>
-                  <h3 className="text-2xl font-bold text-white mb-2">{product.title}</h3>
-                  <p className="text-gray-300 mb-4">{product.description}</p>
-                  <div className="flex items-center justify-center space-x-4 text-sm text-gray-400">
-                    <span>{product.users}</span>
-                  </div>
-                  <div className="text-3xl font-bold text-cyan-400 mt-4">{product.price}</div>
-                </div>
+                <div className="text-center mb-6"></div>
+                  <div, className="tex, t-4xl, mb-4">{produc, t.ico, n}</di, v>
+                  <h3, className="tex, t-2xl, font-bold, text-white, mb-2">{produc, t.titl, e}</h, 3>
+                  <p, className="tex, t-gra, y-300, mb-4">{produc, t.descriptio, n}</p>
+                  <div className="flex items-center justify-center space-x-4 text-sm text-gray-400"></div>
+                    <spa, n>{produc, t.user, s}</spa, n>
+                  <div, className="tex, t-3xl, font-bold, text-cya, n-400, mt-4">{produc, t.pric, e}</di, v>
                 
-                <ul className="space-y-3 mb-8">
-                  {product.features.map((feature, index) => (
-                    <li key={index} className="flex items-start">
+                <ul className="space-y-3 mb-8"></ul>
+                    <li, key={inde, x} classNam, e="flex, items-star, t"></l, i>
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" />
-                      <span className="text-gray-300">{feature}</span>
-                    </li>
+                      <span, className="tex, t-gra, y-30, 0">{featur, e}</spa, n>
                   ))}
-                </ul>
                 
-                <div className="flex space-x-3">
-                  <Link
+                <div className="flex space-x-3"></div>
+                  <Link;
                     to="/contact"
                     className="flex-1 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold py-3 px-6 rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 text-center"
-                  >
-                    Get Started
-                  </Link>
-                  <button className="flex-1 border border-cyan-500 text-cyan-400 font-semibold py-3 px-6 rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300">
-                    Learn More
-                  </button>
-                </div>
-              </div>
+                    Get Started;
+                  <button className="flex-1 border border-cyan-500 text-cyan-400 font-semibold py-3 px-6 rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300"></button>
+                    Learn More;
             ))}
-          </div>
-        </div>
-      </section>
 
-      {/* Benefits Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
             <h2 className="text-3xl font-bold text-white mb-6">Why Choose Our Micro SaaS Solutions?</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
               Our micro SaaS products are designed for quick deployment, easy integration, and immediate value.
-            </p>
-          </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
+            <div className="text-center"></div>
+              <div className="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-6"></div>
                 <Zap className="w-8 h-8 text-cyan-400" />
-              </div>
               <h3 className="text-xl font-semibold text-white mb-4">Quick Setup</h3>
               <p className="text-gray-300">Get up and running in minutes with our streamlined onboarding process.</p>
-            </div>
             
-            <div className="text-center">
-              <div className="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-6">
+            <div className="text-center"></div>
+              <div className="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-6"></div>
                 <Shield className="w-8 h-8 text-cyan-400" />
-              </div>
               <h3 className="text-xl font-semibold text-white mb-4">Secure & Reliable</h3>
               <p className="text-gray-300">Enterprise-grade security and 99.9% uptime guarantee for all our solutions.</p>
-            </div>
             
-            <div className="text-center">
-              <div className="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-6">
+            <div className="text-center"></div>
+              <div className="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-6"></div>
                 <Cloud className="w-8 h-8 text-cyan-400" />
-              </div>
               <h3 className="text-xl font-semibold text-white mb-4">Scalable</h3>
               <p className="text-gray-300">Grow with confidence - our solutions scale with your business needs.</p>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
-            <h2 className="text-3xl font-bold text-white mb-6">
+      <section className="py-16 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-4xl mx-auto text-center"></div>
+          <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12"></div>
+            <h2 className="text-3xl font-bold text-white mb-6"></h2>
               Ready to Get Started?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
+            <p className="text-xl text-gray-300 mb-8"></p>
               Choose from our collection of micro SaaS solutions or contact us for a custom solution tailored to your needs.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+              <Link;
                 to="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold py-3 px-8 rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center space-x-2"
-              >
                 <span>Contact Us</span>
                 <ArrowRight className="w-5 h-5" />
-              </Link>
-              <Link
+              <Link;
                 to="/pricing"
                 className="border border-cyan-500 text-cyan-400 font-semibold py-3 px-8 rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300 flex items-center justify-center space-x-2"
-              >
                 <span>View Pricing</span>
                 <ArrowRight className="w-5 h-5" />
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
   );
-};
 
 export default MicroSaasPage;

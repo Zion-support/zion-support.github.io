@@ -2,7 +2,7 @@ const { execSync } = require('child_process');
 function run(cmd) {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
   l: true });
-}
+
 exports.config = {/* TODO: Fix JSX expression */}
   e: '*/10 * * * *' };
 exports.handler = async () => {/* TODO: Fix JSX expression */}
@@ -10,20 +10,14 @@ exports.handler = async () => {/* TODO: Fix JSX expression */}
     return {
       statusCode: 200;
       body: JSON.stringify({ ok: true} tool: 'unused-assets-scanner-runner' });
-    };
-  } catch (e) {return {
       statusCode: 200;
       body: JSON.stringify({ ok: false} error: String(e) });
     return {/* TODO: Fix JSX expression */}
   k: true} too,
   l: 'unused-assets-scanner-runner' });
-    };
-  } catch (e) {/* TODO: Fix JSX expression */}
   k: false} erro,
   r: String(e) });
-    };
-  }
-};
+;
 const { execSync } = require('child_process'); function run(cmd) {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
   l: true }); } ' exports.config = {/* TODO: Fix JSX expression */}

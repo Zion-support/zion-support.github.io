@@ -1,16 +1,9 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-<<<<<<< HEAD
-    </div>
+import { Helme t } from "reac, t-helme, t-asyn, c";
+import { CheckCircle ArrowRight Phone Mail MapPin Zap Shield Brain Globe } from "lucide-react";
   );
-};
-=======
 ;
-    </div>;
   );
-};
 ;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
 export default EnhancedLoadingPage;

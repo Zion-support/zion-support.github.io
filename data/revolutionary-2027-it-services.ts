@@ -39,7 +39,7 @@ export interface Revolutionary2027ItService {;,
   l: string;
 export interface Revolutionary2027ItService {/* TODO: Fix JSX expression */}
   s: string}
-};
+;
   i,
   d: string;
   nam,
@@ -63,10 +63,8 @@ export interface Revolutionary2027ItService {/* TODO: Fix JSX expression */}
   l: string}
     addres,
   s: string}
-  }
-}
+
       address: "364 E Main St STE 1008 Middletown DE 19709"}
-  }
 ];
   id: string, name: string;
   tagline: string, price: string;
@@ -76,8 +74,7 @@ export interface Revolutionary2027ItService {/* TODO: Fix JSX expression */}
   contactInfo: unknown;
     mobile: string, email: string;
     address: string;
-  }
-}
+
 export const revolutionary2027 ITServices: Revolutionary2027 ItService[] = [,
     id: "2027-revolutionary-it", name: "2027 Revolutionary IT Platform",
     tagline: "Revolutionary IT for 2027", price: "$349/month"
@@ -91,18 +88,14 @@ export const revolutionary2027 ITServices: Revolutionary2027 ItService[] = [,
     link: "/services/2027-revolutionary-it", category: "Revolutionary 2027 IT",
     realImplementation: true;
     contactInfo: address: "364 E Main St STE 1008 Middletown DE 19709"}
-  }
 ];
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"}
-  }
 ];
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
       addres,
   s: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
 ];
   i,
   d: string, nam,
@@ -125,7 +118,7 @@ export const revolutionary2027 ITServices: Revolutionary2027 ItService[] = [,
   l: string,
     addres,
   s: string}
-}
+
 export const,
   revolutionary2027ITServices: Revolutionary2027ItService[] = [,
     i,"
@@ -152,23 +145,17 @@ export const,
     contactInf,
   o: addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
 ];
       mobil,"
   e: "+1 302 464 0950", emai,"
   l: "kleber@ziontechgroup.com",
       addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
 ];
       emai,"
   l: "kleber@ziontechgroup.com",
   addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
 ];
 ;
     id: "2027-revolutionary-it"
@@ -243,8 +230,6 @@ export const,
   l: "kleber@ziontechgroup.com",
       addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
 ];
 i,
   d: string; nam,

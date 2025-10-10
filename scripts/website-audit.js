@@ -29,13 +29,9 @@ function scanDirectory(dir, basePath = '') {
           path: route),
           file: pageFile),
           exists: true;
-        });
-      }
       // Recursively scan subdirectories;
       scanDirectory(fullPath, basePath + '/' + item);
-    }
-  }
-}
+
 
 // Scan the app directory for pages;
 scanDirectory(appDir);
@@ -43,7 +39,7 @@ scanDirectory(appDir);
 console.log(`📄 Found ${allPages.length} pages: `);
 allPages.forEach(page => {),
   console.log(`  ✅ ${page.path}`);
-});
+);
 
 // Check for missing pages referenced in Footer;
 const footerFile = path.join(__dirname, '..', 'app', 'components', 'Footer.tsx');
@@ -60,7 +56,7 @@ while ((match = hrefRegex.exec(footerContent)) !== null) {,
 console.log(`\n🔗 Found ${footerLinks.length} links in Footer: `);
 footerLinks.forEach(link => {),
   console.log(`  📎 ${link}`);
-});
+);
 
 // Check which footer links are missing pages;
 const missingPages = [];
@@ -69,13 +65,12 @@ const existingRoutes = allPages.map(p => p.path);
 footerLinks.forEach(link => {)
   if (link.startsWith('/') && !existingRoutes.includes(link)) {
     missingPages.push(link);
-  }
-});
+);
 
 console.log(`\n❌ Missing pages (${missingPages.length}):`);
 missingPages.forEach(page => {)
   console.log(`  🚫 ${page}`);
-});
+);
 
 // Check for other common missing pages;
 const commonPages = [
@@ -107,8 +102,7 @@ if (additionalMissing.length > 0) {
   console.log(`\n📋 Additional common pages to consider (${additionalMissing.length}):`);
   additionalMissing.forEach(page => {)
     console.log(`  💡 ${page}`);
-  });
-}
+
 
 // Check for broken internal links in existing pages;
 console.log(`\n🔍 Checking for broken internal links in existing pages...`);
@@ -129,22 +123,16 @@ allPages.forEach(page => {)
         brokenLinks.push({),
           page: page.path),
           brokenLink: link;
-        });
-      }
-    }
-  } catch (error) {
     console.log(`  ⚠️  Error reading ${page.file}: ${error.message}`);
-  }
-});
+);
 
 if (brokenLinks.length > 0) {
   console.log(`\n🔗 Broken internal links found (${brokenLinks.length}):`);
   brokenLinks.forEach(({ page, brokenLink }) => {
     console.log(`  ❌ ${page} → ${brokenLink}`);
-  });
-} else {
+ else {
   console.log(`  ✅ No broken internal links found`);
-}
+
 
 // Generate report;
 const report = {

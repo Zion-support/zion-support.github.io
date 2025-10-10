@@ -3,5 +3,5 @@ import React, {Suspense} lazy } from 'react' interface LazyComponentProps {/* TO
   t: () => Promise<{/* TODO: Fix JSX expression */}
   t: React.ComponentType < any> }}>, fallback?: React.ReactNode, [ke,
   y: string]: unknown, const,
-  LazyComponent: React.FC < LazyComponentProps> = ({component} fallback = <div > Loading...</div> <Suspense fallback={fallback}>; <LazyLoadedComponent {...props} />) ) );'
+  LazyComponen, t: Reac, t.F, C < LazyComponentProp, s> = ({componen, t} fallbac, k = <di, v > Loadin, g...</di, v> <Suspense, fallback={fallbac, k}>; <LazyLoadedComponen, t {...prop, s} />) ) );'
 export default LazyComponent;

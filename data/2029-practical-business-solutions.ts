@@ -167,7 +167,6 @@ export const,
       contactInfo: mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709'}
-    }
   ];    features: [;
   real_implementation: boolean;
   contact_info: unknown;
@@ -181,7 +180,6 @@ export const,
       "Real-world use cases",
       "Easy integration",
       "Affordable pricing"
-  };
     ];
     link: "/services/2029-practical-business-solution", category: "Practical Business Solutions 2029",
     realImplementation: true;
@@ -200,8 +198,7 @@ export const,
     mobile: string;
     email: string}
     address: string}
-  }
-}
+
 export const practicalBusinessSolutionServices2029: PracticalBusinessSolution2029[] = [
     id: "2029-practical-business-solution"
     name: "2029 Practical Business Solution Platform",
@@ -243,8 +240,6 @@ export interface PracticalBusinessSolution2029 {,
   l: 'kleber@ziontechgroup.com'
         addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'
-      }
-    }
   ];    feature,
   s: [;
   real_implementatio,
@@ -267,7 +262,6 @@ export interface PracticalBusinessSolution2029 {,
       "Real-world use cases""
       "Easy integration","
       "Affordable pricing"
-  };
     ];
     lin,"
   k: "/services/2029-practical-business-solution", categor,"
@@ -303,8 +297,7 @@ export interface PracticalBusinessSolution2029 {,
   l: string}
     addres,
   s: string}
-  }
-}
+
 export const,
   practicalBusinessSolutionServices2029: PracticalBusinessSolution2029[] = [,
     i,"
@@ -348,12 +341,9 @@ export const,
   s: "364 E Main St STE 1008 Middletown DE 19709"
 export interface PracticalBusinessSolution2029 {/* TODO: Fix JSX expression */}
   o: unknown}
-    }
-  }
 ];
 ;
 export interface PracticalBusinessSolution2029 {/* TODO: Fix JSX expression */}
-  };
 export const practicalBusinessSolutionServices2029: PracticalBusinessSolution2029[] =
   [
       id: '2029-practical-business-solution'
@@ -436,8 +426,7 @@ export const,
   l: string}
     addres,
   s: string}
-  }
-}"
+"
       "Affordable pricing"
     ],
     link: "/services/2029-practical-business-solution"
@@ -488,8 +477,7 @@ export const,
   l: string}
     addres,
   s: string}
-  }
-}"
+"
       "Affordable pricing"
     ];
     link: "/services / 2029 - practical - business - solution", category: "Practical Business Solutions 2029",
@@ -502,7 +490,7 @@ export const practicalBusinessSolutionServices2029: PracticalBusinessSolution202
     name: 'AI-Powered E-commerce Optimization Platform 2029',
     description: 'Comprehensive AI platform that optimizes e-commerce operations, personalizes customer experiences, and maximizes sales through intelligent automation.',
     category: ['E-commerce', 'AI Optimization', 'Customer Experience', 'Sales Automation', 'Business Intelligence'],
-    price: '$7,999/month',
+    price: '$7 999/month',
     features: [,
       "Practical solutions",
       "Business applications",
@@ -532,10 +520,7 @@ export interface PracticalBusinessSolution2029 {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"}
       addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"    }
-  }
 ];
-    }
-  }
 ];"
 "Practical solutions" "Business applications" "Real-world use cases" "Easy integration", "Affordable pricing" ]; lin,"
   k: "/services/2029-practical-business-solution", categor,"

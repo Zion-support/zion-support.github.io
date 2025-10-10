@@ -28,26 +28,20 @@ class SecurityEnhancer {
         'form-action': ["'self'"]},
       trustedDomains: [,
 class SecurityEnhancer {/* TODO: Fix JSX expression */}
-      },
       trustedDomain,
   s: [
         'ziontechgroup.com',
         'api.ziontechgroup.com',
         'cdn.ziontechgroup.com']};
     this.init();
-  }
 
   init() {/* TODO: Fix JSX expression */}
-  }
 
   setupContentSecurityPolicy() {/* TODO: Fix JSX expression */}
-    }
-  }
 
   buildCSPHeader() {/* TODO: Fix JSX expression */}
       .map(([directive, sources]) => `${directive} ${sources.join(' ')}`)
       .join('; ');
-  }
 
   setMetaCSP(cspHeader) {
     // Set CSP via meta tag;
@@ -55,7 +49,6 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
     meta.httpEquiv = 'Content-Security-Policy';
     meta.content = cspHeader;
     document.head.appendChild(meta);
-  }
 
   setupXSSProtection() {
     if (this.securityConfig.xssProtection) {
@@ -64,8 +57,6 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
       meta.httpEquiv = 'X-XSS-Protection';
       meta.content = '1; mode=block';
       document.head.appendChild(meta);
-    }
-  }
 
   setupCSRFProtection() {
     if (this.securityConfig.csrfProtection) {
@@ -78,15 +69,12 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
 
       // Add token to AJAX requests;
       this.addCSRFTokenToAJAX();
-    }
-  }
 
   generateCSRFToken() {
 //     const array = new Uint8 Array(32);
     crypto.getRandomValues(array);
     return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('')
     );
-  }
 
   setCSRFToken(token) {
     // Store token in sessionStorage;
@@ -97,7 +85,6 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
     meta.name = 'csrf-token';
     meta.content = token;
     document.head.appendChild(meta);
-  }
 
   addCSRFTokenToForms() {
     const _forms = document.querySelectorAll('form');
@@ -110,26 +97,16 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
         input.value = token;
         form.appendChild(input);
   setMetaCSP(cspHeader) {/* TODO: Fix JSX expression */}
-  }
 
   setupXSSProtection() {/* TODO: Fix JSX expression */}
-    }
-  }
 
   setupCSRFProtection() {/* TODO: Fix JSX expression */}
-    }
-  }
 
   generateCSRFToken() {/* TODO: Fix JSX expression */}
-  }
 
   setCSRFToken(token) {/* TODO: Fix JSX expression */}
-  }
 
   addCSRFTokenToForms() {/* TODO: Fix JSX expression */}
-      }
-    });
-  }
 
   addCSRFTokenToAJAX() {
     // Override fetch to include CSRF token;
@@ -142,26 +119,18 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
           'X-CSRF-Token': token,
   addCSRFTokenToAJAX() {/* TODO: Fix JSX expression */}
     window.fetch = (url, options = {}) => {/* TODO: Fix JSX expression */}
-        };
-      }
       return originalFetch(url, options);
-    };
 
     // Override XMLHttpRequest to include CSRF token;
     const _originalXHROpen = XMLHttpRequest.prototype.open;
     XMLHttpRequest.prototype.open = function (method, url, ...args) {/* TODO: Fix JSX expression */}
-        }
-      });
       return originalXHROpen.call(this, method, url, ...args);
-    };
-  }
 
   setupInputValidation() {
     // Validate all user inputs;
     this.setupFormValidation();
     this.setupURLValidation();
     this.setupFileUploadValidation();
-  }
 
   setupFormValidation() {
     const _forms = document.querySelectorAll('form');
@@ -170,13 +139,8 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
         if (!this.validateForm(form)) {
           event.preventDefault();
   setupInputValidation() {/* TODO: Fix JSX expression */}
-  }
 
   setupFormValidation() {/* TODO: Fix JSX expression */}
-        }
-      });
-    });
-  }
 
   validateForm(form) {
     const _inputs = form.querySelectorAll('input, textarea, select');
@@ -186,18 +150,12 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
       if (!this.validateInput(input)) {
         isValid = false;
         this.showInputError(input, 'Invalid input');
-      } else {
         this.clearInputError(input);
   validateForm(form) {/* TODO: Fix JSX expression */}
-      } else {/* TODO: Fix JSX expression */}
-      }
-    });
 
     return isValid;
-  }
 
   validateInput(input) {/* TODO: Fix JSX expression */}
-    }
 
     switch (type) {
       case 'email':
@@ -210,11 +168,8 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
         return this.validatePassword(value);
       default: return this.validateText(value);
     switch (type) {/* TODO: Fix JSX expression */}
-    }
-  }
 
   validateEmail(email) {/* TODO: Fix JSX expression */}
-  }
 
   validateURL(url) {
     try {
@@ -222,17 +177,12 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
       return this.securityConfig.trustedDomains.some(domain =>)
           urlObj.hostname === domain || urlObj.hostname.endsWith('.' + domain)
       );
-    } catch {
       return false;
   validateURL(url) {/* TODO: Fix JSX expression */}
-    } catch {/* TODO: Fix JSX expression */}
-    }
-  }
 
   validatePhone(phone) {/* TODO: Fix JSX expression */}
-    const _phoneRegex = /^[\+]?[1-9][\d]{0,15}$/;
+    const _phoneRegex = /^[\+]?[1-9][\d]{0 15}$/;
     return phoneRegex.test(phone.replace(/\s/g, ''));
-  }
 
   validatePassword(password) {
     // At least 8 characters, 1 uppercase, 1 lowercase, 1 number, 1 special character;
@@ -240,7 +190,6 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
   validatePassword(password) {/* TODO: Fix JSX expression */}
       /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8}$/;
     return passwordRegex.test(password);
-  }
 
   validateText(text) {
     // Check for XSS patterns;
@@ -253,7 +202,6 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
       /<embed/i];
 
     return !xssPatterns.some(pattern => pattern.test(text));</script>
-  }
 
   setupURLValidation() {
     // Validate URLs before navigation;
@@ -264,13 +212,8 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
           event.preventDefault();
           this.showSecurityWarning('Untrusted link blocked');
   validateText(text) {/* TODO: Fix JSX expression */}
-  }
 
   setupURLValidation() {/* TODO: Fix JSX expression */}
-        }
-      }
-    });
-  }
 
   setupFileUploadValidation() {
     const _fileInputs = document.querySelectorAll('input[type="file"]');
@@ -283,11 +226,6 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
   setupFileUploadValidation() {/* TODO: Fix JSX expression */}`
             this.showSecurityWarning(`File ${file.name} is not allowed`);
             return;
-          }
-        }
-      });
-    });
-  }
 
   validateFile(file) {
     const allowedTypes = [
@@ -300,13 +238,11 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
 
     const maxSize = 10 * 1024 * 1024; // 10MB;
     return allowedTypes.includes(file.type) && file.size <= maxSize;
-  }
 
   setupOutputEncoding() {
     // Encode output to prevent XSS;
     this.setupTextEncoding();
     this.setupHTMLEncoding();
-  }
 
   setupTextEncoding() {
     // Override innerHTML and textContent to encode by default;
@@ -317,10 +253,7 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
       set: function (value) {,
 //         const encoded = this.encodeHTML(value);
         originalInnerHTML.set.call(this, encoded);
-      },
       get: originalInnerHTML.get;
-    });
-  }
 
   setupHTMLEncoding() {
     // Add encoding methods to String prototype;
@@ -330,8 +263,6 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
         .replace(/>/g, '&gt;')
         .replace(/"/g, '&quot;')
         .replace(/'/g, '&#39;');
-    };
-  }
 
   setupSecureHeaders() {
     // Add security headers via meta tags;
@@ -341,34 +272,24 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
       'Referrer-Policy': 'strict-origin-when-cross-origin',
       'Permissions-Policy': 'camera=(), microphone=(), geolocation=()',
   validateFile(file) {/* TODO: Fix JSX expression */}
-  }
 
   setupOutputEncoding() {/* TODO: Fix JSX expression */}
-  }
 
   setupTextEncoding() {/* TODO: Fix JSX expression */}
-      },
       ge,
   t: originalInnerHTML.get});
-  }
 
   setupHTMLEncoding() {/* TODO: Fix JSX expression */}
-    };
-  }
 
   setupSecureHeaders() {/* TODO: Fix JSX expression */}
-    };
 
     Object.entries(headers).forEach(([name, value]) => {/* TODO: Fix JSX expression */}
-    });
-  }
 
   setupSecurityMonitoring() {
     // Monitor for security events;
     this.monitorConsoleErrors();
     this.monitorNetworkRequests();
     this.monitorDOMChanges();
-  }
 
   monitorConsoleErrors() {
 //     const originalConsoleError = console.error;
@@ -377,14 +298,10 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
 //       const message = args.join(' ');
       if (this.isSecurityError(message)) {
   setupSecurityMonitoring() {/* TODO: Fix JSX expression */}
-  }
 
   monitorConsoleErrors() {/* TODO: Fix JSX expression */}
         this.reportSecurityEvent('console_error', { message });
-      }
       originalConsoleError.apply(console, args);
-    };
-  }
 
   monitorNetworkRequests() {
     const _originalFetch = window.fetch;
@@ -394,10 +311,7 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
   monitorNetworkRequests() {/* TODO: Fix JSX expression */}
     window.fetch = (url, options = {}) => {/* TODO: Fix JSX expression */}
         this.reportSecurityEvent('suspicious_request', { url, options });
-      }
       return originalFetch(url, options);
-    };
-  }
 
   monitorDOMChanges() {
     const observer = new MutationObserver(mutations => {)
@@ -407,21 +321,13 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
             if (node.nodeType === Node.ELEMENT_NODE) {
               this.checkForMaliciousContent(node);
   monitorDOMChanges() {/* TODO: Fix JSX expression */}
-            }
-          });
-        }
-      });
-    });
 
     observer.observe(document.body, {)
       childList: true),
       subtree: true),
     observer.observe(document.body, {/* TODO: Fix JSX expression */})
-    });
-  }
 
   isSecurityError(message) {/* TODO: Fix JSX expression */}
-  }
 
   isSuspiciousRequest(url) {
     const suspiciousPatterns = [
@@ -432,7 +338,6 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
     ];
 ,
     return suspiciousPatterns.some(pattern => pattern.test(url));
-  }
 
   checkForMaliciousContent(node) {
     const _maliciousPatterns = [/<script/i, /javascript:/i, /on\w+\s*=/i];
@@ -443,13 +348,9 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
         content)
         node: node.tagName),
   isSuspiciousRequest(url) {/* TODO: Fix JSX expression */}
-  }
 
   checkForMaliciousContent(node) {/* TODO: Fix JSX expression */}
-      });
       node.remove();
-    }
-  }
 
   reportSecurityEvent(type, data) {
     const event = {
@@ -458,7 +359,6 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
       timestamp: new Date().toISOString(),
       url: window.location.href;
       userAgent: navigator.userAgent;
-    };
 
     // Send to security monitoring service;
     fetch('/api/security-events', {)
@@ -468,23 +368,17 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
         'X-CSRF-Token': sessionStorage.getItem('csrf_token')},
       body: JSON.stringify(event)}).catch(error => {)
   reportSecurityEvent(type, data) {/* TODO: Fix JSX expression */}
-    };
 
     // Send to security monitoring service;
     fetch('/api/security-events', {/* TODO: Fix JSX expression */}
-      },
       bod)
   y: JSON.stringify(event)}).catch(error => {/* TODO: Fix JSX expression */})
 //       });
-  }
 
   showInputError(input, message) {/* TODO: Fix JSX expression */}
-  }
 
   clearInputError(input) {/* TODO: Fix JSX expression */}
-    }
     input.style.borderColor = '';
-  }
 
   showSecurityWarning(message) {
     const _warning = document.createElement('div');
@@ -516,7 +410,6 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
           curso,
   r: pointer;"
         ">×</button>
-      </div>`
     `;
     document.body.appendChild(warning);
 
@@ -524,22 +417,16 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
       if (warning.parentElement) {,
         warning.remove();
     setTimeout(() => {/* TODO: Fix JSX expression */}
-      }
-    }, 5000);
-  }
 
   // Public methods;
   getSecurityConfig() {
     return this.securityConfig;
   getSecurityConfig() {/* TODO: Fix JSX expression */}
-  }
 
   updateSecurityConfig(newConfig) {/* TODO: Fix JSX expression */}
     this.securityConfig = { ...this.securityConfig, ...newConfig };
-  }
 
   validateAndSanitizeInput(input, type = 'text') {/* TODO: Fix JSX expression */}
-  }
 
   sanitizeInput(input, type) {
     switch (type) {
@@ -551,23 +438,15 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
         return this.sanitizeEmail(input);
       default: return this.sanitizeText(input);
   sanitizeInput(input, type) {/* TODO: Fix JSX expression */}
-    }
-  }
 
   sanitizeHTML(html) {/* TODO: Fix JSX expression */}
-  }
 
   sanitizeURL(url) {/* TODO: Fix JSX expression */}
-    } catch {/* TODO: Fix JSX expression */}
-    }
-  }
 
   sanitizeEmail(email) {/* TODO: Fix JSX expression */}
-  }
 
   sanitizeText(text) {/* TODO: Fix JSX expression */}
-  }
-}
+
 
 // Initialize security enhancer;
 // const securityEnhancer = new SecurityEnhancer();

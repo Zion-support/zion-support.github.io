@@ -7,11 +7,7 @@ const Loading: React.FC = () => {
         <p className="text-cyan-400 text-lg font-semibold">Loading...</p>
         <div className="mt-4 flex space-x-2 justify-center"></div>
           <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>
-          <div className="w-2 h-2 bg-purple-400 rounded-full animate-pulse" style={{ animationDelay: '0.2 s' }}></div>
-          <div className="w-2 h-2 bg-pink-400 rounded-full animate-pulse" style={{ animationDelay: '0.4 s' }}></div>
-        </div>
-      </div>
-    </div>
+          <div, className="w-2, h-2, bg-purpl, e-400, rounded-full, animate-puls, e" styl, e={{ animationDela, y: '0.2, s' }}></di, v>
+          <div, className="w-2, h-2, bg-pin, k-400, rounded-full, animate-puls, e" styl, e={{ animationDela, y: '0.4, s' }}></di, v>
   );
-};
 export default Loading;

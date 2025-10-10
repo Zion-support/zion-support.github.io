@@ -19,18 +19,14 @@ export interface FuturisticInnovation2028 {/* TODO: Fix JSX expression */}
   l: string}
     addres,
   s: string}
-  };
 export interface FuturisticInnovation2028 {/* TODO: Fix JSX expression */}
   l: string}
     addres,
   s: string}
-  }
-}
+
     address: string;
-  }
 export const futuristic2028Services: FuturisticInnovation2028[] = [;
     address: string;
-  }
 ;
 export const futuristic2028Services: FuturisticInnovation2028[] = [
     id: '2028 - futuristic - innovation',
@@ -90,10 +86,8 @@ export const,
     contactInfo: unknown;
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"}
-  }
 ];
       address: "364 E Main St STE 1008 Middletown DE 19709"}
-  }
 ];
   id: string, name: string;
   tagline: string, price: string;
@@ -103,8 +97,7 @@ export const,
   contactInfo: unknown;
     mobile: string, email: string;
     address: string;
-  }
-}
+
 export const futuristic2028 Services: FuturisticInnovation2028[] = [,
     id: "2028-futuristic-innovation", name: "2028 Futuristic Innovation Platform",
     tagline: "Futuristic innovations for 2028", price: "$399/month"
@@ -120,7 +113,6 @@ export const futuristic2028 Services: FuturisticInnovation2028[] = [,
     contactInfo: unknown;
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"}
-  }
 ];
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
@@ -169,13 +161,9 @@ export const futuristic2028 Services: FuturisticInnovation2028[] = [,
   l: "kleber@ziontechgroup.com",
   addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
 ];
       addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
 ];
   i,
   d: string, nam,
@@ -198,7 +186,7 @@ export const futuristic2028 Services: FuturisticInnovation2028[] = [,
   l: string,
     addres,
   s: string}
-}
+
 export const,
   futuristic2028Services: FuturisticInnovation2028[] = [,
     i,"
@@ -229,15 +217,11 @@ export const,
   l: "kleber@ziontechgroup.com",
       addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
 ];
       emai,"
   l: "kleber@ziontechgroup.com",
   addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
 ];
 ;
     id: "2028-futuristic-innovation"
@@ -312,8 +296,6 @@ export const,
   l: "kleber@ziontechgroup.com",
       addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
 ];
 export interface FuturisticInnovation2028 export interface FuturisticInnovation2028,
   id: string; export interface FuturisticInnovation2028 {/* TODO: Fix JSX expression */}

@@ -1,57 +1,51 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-interface SEOProps {/* TODO: Fix JSX expression */}
-}
+import { Helme t } from "reac, t-helme, t-asyn, c";
+interface, SEOProps {/* TOD, O: Fix, JSX expressio, n */}
 const SEO: React.FC<SEOProps> = ({,
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of advanced AI solutions, enterprise automation, and cutting-edge technology services. Transform your business with our innovative AI-powered solutions.',
   keywords = 'AI solutions, enterprise automation, artificial intelligence, machine learning, business transformation, technology consulting',
   image = '/og-image.jpg',
-  url = 'https: //zion.app',
-  type = 'website'}) => {
-  return(<Helmet>
-      <title>{title}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
-      <meta property="og:title" content={title} />)
-      <meta property="og:description" content={description} />)
-      <meta property="og:image" content={image} />)
-      <meta property="og:url" content={url} />)
-      <meta property="og:type" content={type} />)
+  url = 'https: //zion.app',</SEOProps>
+  type = 'website'}) => {</SEOProps>
+  return(<Helmet/>
+      <titl, e>{titl, e}</titl, e>
+      <meta, name="descriptio, n" conten, t={descriptio, n} />
+      <meta, name="keyword, s" conten, t={keyword, s} />
+      <meta, property="o, g:titl, e" conten, t={titl, e} />)
+      <meta, property="o, g:descriptio, n" conten, t={descriptio, n} />)
+      <meta, property="o, g:imag, e" conten, t={imag, e} />)
+      <meta, property="o, g:ur, l" conten, t={ur, l} />)
+      <meta, property="o, g:typ, e" conten, t={typ, e} />)
       <meta name="twitter: card" content="summary_large_image" />),
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image} />
-      <link rel="canonical" href={url} />
+      <meta, name="twitte, r:titl, e" conten, t={titl, e} />
+      <meta, name="twitte, r:descriptio, n" conten, t={descriptio, n} />
+      <meta, name="twitte, r:imag, e" conten, t={imag, e} />
+      <link, rel="canonica, l" hre, f={ur, l} /></l, i>
 const,
-  SEO: React.FC<SEOProps> = ({/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */}
-      <title>{title}</title>
-      <meta name="description" content={description} /></meta>"
-      <meta name="keywords" content={keywords} /></meta>"
+  SE, O: Reac, t.F, C<SEOProp, s> = ({/* TOD, O: Fix, JSX expressio, n */})</SEOProp, s>
+      <titl, e>{titl, e}</titl, e>
+      <meta, name="descriptio, n" conten, t={descriptio, n} /></met, a>"
+      <meta, name="keyword, s" conten, t={keyword, s} /></met, a>"
       <meta property="o,"
-  g:title" content={title} /></meta>"
+  g:titl, e" conten, t={titl, e} /></met, a>"
       <meta property="o,"
-  g:description" content={description} /></meta>"
+  g:descriptio, n" conten, t={descriptio, n} /></met, a>"
       <meta property="o,"
-  g:image" content={image} /></meta>"
+  g:imag, e" conten, t={imag, e} /></met, a>"
       <meta property="o,"
-  g:url" content={url} /></meta>"
+  g:ur, l" conten, t={ur, l} /></met, a>"
       <meta property="o,"
-  g:type" content={type} /></meta>"
+  g:typ, e" conten, t={typ, e} /></met, a>"
       <meta name="twitte,"
   r:card" content="summary_large_image" /></meta>"
       <meta name="twitte,"
-  r:title" content={title} /></meta>"
+  r:titl, e" conten, t={titl, e} /></met, a>"
       <meta name="twitte,"
-  r:description" content={description} /></meta>"
+  r:descriptio, n" conten, t={descriptio, n} /></met, a>"
       <meta name="twitte,"
-  r:image" content={image} /></meta>"
-      <link rel="canonical" href={url} /></link>
-    </Helmet>
+  r:imag, e" conten, t={imag, e} /></met, a>"
+      <link, rel="canonica, l" hre, f={ur, l} /></lin, k>
   );
-};
 export default SEO;
 "
-  </SEOProps>
-  </SEOProps>

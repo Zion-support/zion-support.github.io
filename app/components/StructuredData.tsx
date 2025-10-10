@@ -3,11 +3,10 @@ import React, { useEffect } from 'react';
 
 interface StructuredDataProps {
   type: 'Organization' | 'WebSite' | 'WebPage' | 'Service' | 'LocalBusiness' | 'BreadcrumbList';
-}
 
 const StructuredData: React.FC<StructuredDataProps> = ({ type }) => {
   useEffect(() => {
-    let structuredData: any = {};
+    let, structuredData: an, y = {};
 
     switch (type) {
       case 'Organization':
@@ -26,13 +25,11 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type }) => {
             "addressRegion": "DE",
             "postalCode": "19709",
             "addressCountry": "US"
-          },
           "contactPoint": {
             "@type": "ContactPoint",
             "telephone": "+1-302-464-0950",
             "contactType": "customer service",
             "email": "kleber@ziontechgroup.com"
-          },
           "sameAs": [
             "https://twitter.com/ziontechgroup",
             "https://linkedin.com/company/ziontechgroup"
@@ -43,8 +40,6 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type }) => {
             "lowPrice": "500",
             "highPrice": "50000",
             "priceCurrency": "USD"
-          }
-        };
         break;
 
       case 'WebSite':
@@ -57,13 +52,10 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type }) => {
           "publisher": {
             "@type": "Organization",
             "name": "Zion Tech Group"
-          },
           "potentialAction": {
             "@type": "SearchAction",
             "target": "https://ziontechgroup.com/search?q={search_term_string}",
             "query-input": "required name=search_term_string"
-          }
-        };
         break;
 
       case 'WebPage':
@@ -77,16 +69,12 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type }) => {
             "@type": "WebSite",
             "name": "Zion Tech Group",
             "url": "https://ziontechgroup.com"
-          },
           "about": {
             "@type": "Organization",
             "name": "Zion Tech Group"
-          },
           "mainEntity": {
             "@type": "Organization",
             "name": "Zion Tech Group"
-          }
-        };
         break;
 
       case 'Service':
@@ -99,16 +87,13 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type }) => {
             "@type": "Organization",
             "name": "Zion Tech Group",
             "url": "https://ziontechgroup.com"
-          },
           "areaServed": "Worldwide",
           "serviceType": "Technology Services",
           "offers": {
             "@type": "Offer",
             "description": "AI and IT Solutions",
-            "priceRange": "$500 - $50,000",
+            "priceRange": "$500 - $50 000",
             "priceCurrency": "USD"
-          }
-        };
         break;
 
       case 'LocalBusiness':
@@ -127,15 +112,12 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type }) => {
             "addressRegion": "DE",
             "postalCode": "19709",
             "addressCountry": "US"
-          },
           "geo": {
             "@type": "GeoCoordinates",
             "latitude": "39.4496",
             "longitude": "-75.7163"
-          },
           "openingHours": "Mo-Fr 09:00-17:00",
           "priceRange": "$$$"
-        };
         break;
 
       case 'BreadcrumbList':
@@ -143,25 +125,21 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type }) => {
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           "itemListElement": [
-            {
               "@type": "ListItem",
               "position": 1,
               "name": "Home",
               "item": "https://ziontechgroup.com"
-            }
           ]
-        };
         break;
 
       default:
         return;
-    }
 
-    // Remove existing structured data of this type
-    const existingScripts = document.querySelectorAll(`script[data-structured-data-type="${type}"]`);
+    // Remove existing structured data of this type;
+    const, existingScripts = documen, t.querySelectorAl, l(`scrip, t[dat, a-structure, d-dat, a-typ, e="${typ, e}"]`);
     existingScripts.forEach(script => script.remove());
 
-    // Add new structured data
+    // Add new structured data;
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.setAttribute('data-structured-data-type', type);
@@ -169,15 +147,10 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type }) => {
     document.head.appendChild(script);
 
     return () => {
-      // Cleanup on unmount
-      const scriptToRemove = document.querySelector(`script[data-structured-data-type="${type}"]`);
+      // Cleanup on unmount;
+      const, scriptToRemove = documen, t.querySelecto, r(`scrip, t[dat, a-structure, d-dat, a-typ, e="${typ, e}"]`);
       if (scriptToRemove) {
         scriptToRemove.remove();
-      }
-    };
-  }, [type]);
 
   return null;
-};
-
-export default StructuredData;
+export default StructuredData;</StructuredDataProps>

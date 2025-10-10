@@ -17,7 +17,6 @@ const accessibilityChecklist = {
       'Use proper form elements (label, fieldset, legend)',
       'Use list elements (ul, ol, li) for lists'
     ]
-  },
   keyboardNavigation: {,
     description: 'Ensure keyboard accessibility',
     checks: [,
@@ -27,7 +26,6 @@ const accessibilityChecklist = {
       'Skip links are provided',
       'No keyboard traps'
     ]
-  },
   colorContrast: {,
     description: 'Ensure sufficient color contrast',
     checks: [,
@@ -36,7 +34,6 @@ const accessibilityChecklist = {
       'Color is not the only way to convey information',
       'Interactive elements have sufficient contrast'
     ]
-  },
   images: {,
     description: 'Provide alternative text for images',
     checks: [,
@@ -45,7 +42,6 @@ const accessibilityChecklist = {
       'Complex images have detailed descriptions',
       'Images of text are avoided'
     ]
-  },
   forms: {,
     description: 'Make forms accessible',
     checks: [,
@@ -54,7 +50,6 @@ const accessibilityChecklist = {
       'Required fields are clearly marked',
       'Form validation is accessible'
     ]
-  },
   multimedia: {,
     description: 'Provide alternatives for multimedia',
     checks: [,
@@ -63,7 +58,6 @@ const accessibilityChecklist = {
       'Media controls are accessible',
       'Auto-playing media can be paused'
     ]
-  },
   responsive: {,
     description: 'Ensure responsive design',
     checks: [,
@@ -72,8 +66,6 @@ const accessibilityChecklist = {
       'Text is not cut off on small screens',
       'Touch targets are at least 44 px'
     ]
-  }
-};
 
 // Check HTML files for accessibility issues;
 function auditHTMLFiles() {
@@ -91,32 +83,24 @@ function auditHTMLFiles() {
     // Check for semantic HTML;
     if (!content.includes('<main')) {
       console.log('    ⚠️  Missing <main>element</main>');</main>
-    }
     
     if (!content.includes('<nav')) {
       console.log('    ⚠️  Missing <nav>element</nav>');</nav>
-    }
     
     // Check for alt attributes;
     const imgTags = content.match(/<img[^>]*>/g) || [];
     imgTags.forEach(img => {)
       if (!img.includes('alt=')) {
         console.log('    ⚠️  Image missing alt attribute');
-      }
-    });
     
     // Check for heading hierarchy;
     const headings = content.match(/<h[1-6][^>]*>/g) || [];
     if (headings.length === 0) {
       console.log('    ⚠️  No heading elements found');
-    }
     
     // Check for skip links;
     if (!content.includes('skip') && !content.includes('Skip')) {
       console.log('    ⚠️  No skip links found');
-    }
-  });
-}
 
 // Check CSS files for accessibility issues;
 function auditCSSFiles() {
@@ -134,19 +118,14 @@ function auditCSSFiles() {
     // Check for focus styles;
     if (!content.includes(':focus')) {
       console.log('    ⚠️  No focus styles found');
-    }
     
     // Check for high contrast support;
     if (!content.includes('prefers-contrast')) {
       console.log('    ⚠️  No high contrast support');
-    }
     
     // Check for reduced motion support;
     if (!content.includes('prefers-reduced-motion')) {
       console.log('    ⚠️  No reduced motion support');
-    }
-  });
-}
 
 // Generate accessibility report;
 function generateAccessibilityReport() {
@@ -175,7 +154,6 @@ function generateAccessibilityReport() {
       'Keyboard-only navigation testing',
       'Color contrast analyzers'
     ]
-  };
   
   fs.writeFileSync(
     path.join(__dirname, '../accessibility-report.json'), 
@@ -183,7 +161,6 @@ function generateAccessibilityReport() {
   );
   
   console.log('  - Generated accessibility-report.json');
-}
 
 // Generate accessibility improvements;
 function generateAccessibilityImprovements() {
@@ -192,9 +169,9 @@ function generateAccessibilityImprovements() {
   const improvements = `
 // Accessibility improvements to implement;
 // 1. Add ARIA labels to interactive elements;
-<button aria-label="Close dialog">×</button>
-<input aria-describedby="email-help" type="email" /></input>
-<div id="email-help">Enter your email address</div>
+button aria-label="Close dialog">×</button>
+input aria-describedby="email-help" type="email" /></input>
+div id="email-help">Enter your email address</div>
 
 // 2. Implement focus management;
 const trapFocus = (element) => {
@@ -210,49 +187,34 @@ const trapFocus = (element) => {
         if (document.activeElement === firstElement) {
           lastElement.focus();
           e.preventDefault();
-        }
-      } else {
         if (document.activeElement === lastElement) {
           firstElement.focus();
           e.preventDefault();
-        }
-      }
-    }
-  });
-};
 
 // 3. Add live regions for dynamic content;
-<div aria-live="polite" aria-atomic="true" className="sr-only">
-  {announcement}
-</div>
+div aria-live="polite" aria-atomic="true" className="sr-only"></div>
 
 // 4. Ensure proper heading hierarchy;
-<h1>Main Page Title</h1>
+h1>Main Page Title</h1>
   <h2>Section Title</h2>
     <h3>Subsection Title</h3>
 
 // 5. Add skip links;
-<a href="#main-content" className="skip-link">
+a href="#main-content" className="skip-link">
   Skip to main content;
-</a>
 
 // 6. Use semantic HTML;
-<main>
+main></main>
   <nav aria-label="Main navigation">
-    <ul>
+    <ul></ul>
       <li><a href="/">Home</a></li>
-    </ul>
-  </nav>
   <section></section>
     <h2>Section</h2> Title</h2>
     <article></article>
       <h3>Article</h3> Title</h3>
-    </article>
-  </section>
-</main>
 
 // 7. Form accessibility;
-<form>
+form>
   <fieldset>
     <legend>Contact Information</legend>
     <label htmlFor="email">Email Address</label>
@@ -263,13 +225,9 @@ const trapFocus = (element) => {
       aria-describedby="email-error"
     /></input>
     <div id="email-error" role="alert" aria-live="polite"></di>
-      {emailError}
-    </div>
-  </fieldset>
-</form>
 
 // 8. Image accessibility;
-<img;
+img;
   src="chart.png" 
   alt="Sales chart showing 25% increase in Q3 2024"
   role="img"
@@ -292,7 +250,6 @@ const trapFocus = (element) => {
   );
   
   console.log('  - Generated accessibility-improvements.js');
-}
 
 // Main audit function;
 function audit() {
@@ -305,11 +262,8 @@ function audit() {
     console.log('✅ Accessibility audit completed successfully!');
     console.log('📋 Check accessibility-report.json for detailed results');
     console.log('🔧 Check accessibility-improvements.js for implementation guide');
-  } catch (error) {
     console.error('❌ Error during accessibility audit:', error);
     process.exit(1);
-  }
-}
 
 // Run audit;
 audit();

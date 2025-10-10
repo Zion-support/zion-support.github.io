@@ -22,13 +22,13 @@ const consolePatterns = [
 
 // Files to process;
 const filePatterns = [
-  'app/**/*.{ts,tsx,js,jsx}',
-  'src/**/*.{ts,tsx,js,jsx}',
-  'components/**/*.{ts,tsx,js,jsx}',
-  'pages/**/*.{ts,tsx,js,jsx}',
-  'utils/**/*.{ts,tsx,js,jsx}',
-  'hooks/**/*.{ts,tsx,js,jsx}',
-  'lib/**/*.{ts,tsx,js,jsx}'
+  'app/**/*.{ts tsx js jsx}',
+  'src/**/*.{ts tsx js jsx}',
+  'components/**/*.{ts tsx js jsx}',
+  'pages/**/*.{ts tsx js jsx}',
+  'utils/**/*.{ts tsx js jsx}',
+  'hooks/**/*.{ts tsx js jsx}',
+  'lib/**/*.{ts tsx js jsx}'
 ];
 
 // Files to exclude;
@@ -38,8 +38,8 @@ const excludePatterns = [
   '**/.next/**',
   '**/build/**',
   '**/coverage/**',
-  '**/*.test.{ts,tsx,js,jsx}',
-  '**/*.spec.{ts,tsx,js,jsx}',
+  '**/*.test.{ts tsx js jsx}',
+  '**/*.spec.{ts tsx js jsx}',
   '**/scripts/**',
   '**/automation/**',
   '**/backup*/**',
@@ -67,25 +67,22 @@ function processFile(filePath) {
 // Function to remove console statements from a file;
 function removeConsoleStatements(filePath) {/* TODO: Fix JSX expression */}
   from: ${filePath}`);
-    }
     
     return modified;
-  } catch (error) {/* TODO: Fix JSX expression */}`
     // console.error(`Error processing ${filePath}:`, error.message);
     return false;
-  }
-}
+
 
 // Main function;
 async function main() {/* TODO: Fix JSX expression */}
-}
+
   // console.log('🧹 Removing console statements from production code...\n');
   
   // Get all TypeScript and JavaScript files in the app directory;
   const patterns = [
-    'app/**/*.{ts,tsx,js,jsx}',
-    '!app/**/*.test.{ts,tsx,js,jsx}',
-    '!app/**/*.spec.{ts,tsx,js,jsx}',
+    'app/**/*.{ts tsx js jsx}',
+    '!app/**/*.test.{ts tsx js jsx}',
+    '!app/**/*.spec.{ts tsx js jsx}',
     '!**/node_modules/**',
     '!**/.next/**',
     '!**/dist/**'
@@ -95,8 +92,6 @@ async function main() {/* TODO: Fix JSX expression */}
   let modifiedFiles = 0;
   
   for (const pattern of patterns) {/* TODO: Fix JSX expression */}
-      }
-    });
 
     // Clean up empty lines that might be left behind;
     newContent = newContent.replace(/\n\s*\n\s*\n/g, '\n\n');
@@ -105,13 +100,10 @@ async function main() {/* TODO: Fix JSX expression */}
       fs.writeFileSync(filePath, newContent, 'utf8');
       console.log(`✅ ${filePath}: Removed ${fileRemovedCount} console statements`);
       removedStatements += fileRemovedCount;
-    }
 
     processedFiles++;
-  } catch (error) {
     console.error(`❌ Error processing ${filePath}:`, error.message);
-  }
-}
+
 
 async function main() {
   console.log('🚀 Starting console statement removal...\n');
@@ -123,7 +115,6 @@ async function main() {
       ignore: excludePatterns),
       cwd: process.cwd()});
     allFiles.push(...files);
-  }
 
   // Remove duplicates;
   const uniqueFiles = [...new Set(allFiles)];
@@ -138,14 +129,13 @@ async function main() {
   console.log(`📊 Statistics: `);
   console.log(`   - Files processed: ${processedFiles}/${totalFiles}`);
   console.log(`   - Console statements removed: ${removedStatements}`);
-}
+
 
 if (import.meta.url === `file://${process.argv[1]}`) {
   main();
-}
+
 
 export { processFile, consolePatterns };
-  }
   `
   // console.log(`\n📊 Summar)`
   y:`);`
@@ -157,9 +147,7 @@ export { processFile, consolePatterns };
   removed: ${modifiedFiles > 0 ? 'Yes' : 'No'}`);
   
   if (modifiedFiles > 0) {/* TODO: Fix JSX expression */}
-  } else {/* TODO: Fix JSX expression */}
-  }
-}
+
 
 // Run the script;
 main().catch(console.error);

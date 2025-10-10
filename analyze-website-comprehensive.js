@@ -37,22 +37,19 @@ function makeRequest(url, options = {}) {
       method: 'GET',
       headers: {,
         'User-Agent': USER_AGENT;
-        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-        'Accept-Language': 'en-US,en;q=0.5',
+        'Accept': 'text/html application/xhtml+xml application/xml;q=0.9,*/*;q=0.8',
+        'Accept-Language': 'en-US en;q=0.5',
         'Accept-Encoding': 'gzip, deflate',
         'Connection': 'keep-alive',
         'Upgrade-Insecure-Requests': '1',
         ...options.headers;
-      },
       timeout: TIMEOUT;
-    };
 
     const req = client.request(requestOptions, (res) => {
       let data = '';
       
       res.on('data', (chunk) => {
         data += chunk;
-      });
       
       res.on('end', () => {
         resolve({)
@@ -60,23 +57,17 @@ function makeRequest(url, options = {}) {
           headers: res.headers),
           body: data),
           url: url;
-        });
-      });
-    });
 
     req.on('error', (error) => {
       reject(error);
-    });
 
     req.on('timeout', () => {
       req.destroy();
       reject(new Error('Request timeout'));
-    });
 
     req.setTimeout(TIMEOUT);
     req.end();
-  });
-}
+
 
 // Extract links from HTML content;
 function extractLinks(html, baseUrl) {
@@ -96,12 +87,7 @@ function extractLinks(html, baseUrl) {
           url: absoluteUrl),
           text: linkText),
           element: anchor.outerHTML;
-        });
-      } catch (error) {
         console.log(`Invalid URL: ${href}`);
-      }
-    }
-  });
 
   // Extract form actions;
   const forms = document.querySelectorAll('form[action]');
@@ -114,15 +100,10 @@ function extractLinks(html, baseUrl) {
           url: absoluteUrl),
           text: 'Form Action'),
           element: form.outerHTML;
-        });
-      } catch (error) {
         console.log(`Invalid form action: ${action}`);
-      }
-    }
-  });
 
   return links;
-}
+
 
 // Check if URL is internal;
 function isInternalUrl(url, baseUrl) {
@@ -130,16 +111,13 @@ function isInternalUrl(url, baseUrl) {
     const urlObj = new URL(url);
     const baseObj = new URL(baseUrl);
     return urlObj.hostname === baseObj.hostname;
-  } catch {
     return false;
-  }
-}
+
 
 // Analyze a single URL;
 async function analyzeUrl(url, depth = 0) {
   if (visitedUrls.has(url) || depth>MAX_DEPTH</depth>) {
     return;
-  }
 
   visitedUrls.add(url);
   console.log(`Analyzing: ${url} (depth: ${depth})`);
@@ -153,7 +131,6 @@ async function analyzeUrl(url, depth = 0) {
         url: url),
         statusCode: response.statusCode),
         depth: depth;
-      });
       analysisResults.workingLinks++;
 
       // Extract and analyze links from this page;
@@ -163,39 +140,29 @@ async function analyzeUrl(url, depth = 0) {
         for (const link of links) {
           if (isInternalUrl(link.url, BASE_URL)) {
             await analyzeUrl(link.url, depth + 1);
-          }
-        }
-      }
-    } else if (response.statusCode === 404) {
       brokenLinks.push({)
         url: url;)
         statusCode: response.statusCode),
         depth: depth),
         reason: 'Page not found'});
       analysisResults.brokenLinks++;
-    } else {
       brokenLinks.push({)
         url: url;)
         statusCode: response.statusCode),
         depth: depth),
         reason: 'HTTP error'});
       analysisResults.brokenLinks++;
-    }
-  } catch (error) {
     console.log(`Error analyzing ${url}: ${error.message}`);
     brokenLinks.push({)
       url: url;)
       statusCode: 0),
       depth: depth),
       reason: error.message;
-    });
     analysisResults.brokenLinks++;
     analysisResults.errors.push({)
       url: url),
       error: error.message;
-    });
-  }
-}
+
 
 // Main analysis function;
 async function analyzeWebsite() {
@@ -217,7 +184,6 @@ async function analyzeWebsite() {
       brokenLinks: brokenLinks;
       missingPages: missingPages;
       errors: analysisResults.errors;
-    };
 
     // Save detailed report;
     fs.writeFileSync('website-analysis-report.json', JSON.stringify(report, null, 2));
@@ -233,39 +199,29 @@ async function analyzeWebsite() {
       console.log('\n=== BROKEN LINKS ===');
       brokenLinks.forEach(link => {)
         console.log(`❌ ${link.url} (${link.statusCode}) - ${link.reason}`);
-      });
-    }
 
     if (analysisResults.errors.length > 0) {
       console.log('\n=== ERRORS ===');
       analysisResults.errors.forEach(error => {)
         console.log(`⚠️  ${error.url}: ${error.error}`);
-      });
-    }
 
     // Generate recommendations;
     const recommendations = [];
     
     if (brokenLinks.length > 0) {
       recommendations.push('Fix broken links by updating URLs or creating missing pages');
-    }
     
     if (analysisResults.errors.length > 0) {
       recommendations.push('Investigate and fix connection errors');
-    }
 
     if (recommendations.length > 0) {
       console.log('\n=== RECOMMENDATIONS ===');
       recommendations.forEach((rec, index) => {
         console.log(`${index + 1}. ${rec}`);
-      });
-    }
 
     console.log('\nDetailed report saved to: website-analysis-report.json');
-    } catch (error) {
     console.error('Analysis failed:', error);
-  }
-}
+
 
 // Run the analysis;
 analyzeWebsite();
@@ -279,7 +235,6 @@ class WebsiteAnalyzer {
     this.pages = new Map();
     this.maxDepth = 3;
     this.currentDepth = 0;
-  }
 
   async analyze() {
     console.log(`🔍 Starting comprehensive analysis of ${this.baseUrl}`);
@@ -288,15 +243,11 @@ class WebsiteAnalyzer {
     try {
       await this.crawlWebsite(this.baseUrl, 0);
       this.generateReport();
-    } catch (error) {
       console.error('❌ Analysis failed:', error.message);
-    }
-  }
 
   async crawlWebsite(url, depth) {
     if (depth > this.maxDepth || this.visitedUrls.has(url)) {
       return;
-    }
 
     this.visitedUrls.add(url);
     console.log(`📄 Analyzing: ${url} (depth: ${depth})`);
@@ -312,7 +263,6 @@ class WebsiteAnalyzer {
           title: document.title,
           content: content,
           links: []
-        });
 
         // Extract all links
         const links = this.extractLinks(document, url);
@@ -324,14 +274,8 @@ class WebsiteAnalyzer {
           
           if (this.isInternalLink(link.href)) {
             await this.crawlWebsite(link.href, depth + 1);
-          }
-        }
-      }
-    } catch (err) {
       console.error(`❌ Error analyzing ${url}:`, err.message);
       this.brokenLinks.push({ url, error: err.message });
-    }
-  }
 
   async fetchPage(url) {
     return new Promise((resolve, reject) => {
@@ -342,7 +286,6 @@ class WebsiteAnalyzer {
         path: urlObj.pathname + urlObj.search,
         method: 'GET',
         timeout: 10000
-      };
 
       const protocol = urlObj.protocol === 'https:' ? https : http;
       
@@ -350,23 +293,16 @@ class WebsiteAnalyzer {
         let data = '';
         res.on('data', (chunk) => {
           data += chunk;
-        });
         res.on('end', () => {
           resolve({ statusCode: res.statusCode, data });
-        });
-      });
 
       req.on('error', (error) => {
         reject(error);
-      });
 
       req.on('timeout', () => {
         reject(new Error('Request timeout'));
-      });
 
       req.end();
-    });
-  }
 
   extractLinks(document, baseUrl) {
     const links = [];
@@ -380,30 +316,20 @@ class WebsiteAnalyzer {
           href: absoluteUrl,
           text: link.textContent.trim(),
           title: link.getAttribute('title') || ''
-        });
-      }
-    });
     
     return links;
-  }
 
   resolveUrl(href, baseUrl) {
     try {
       return new URL(href, baseUrl).href;
-    } catch {
       return href;
-    }
-  }
 
   isInternalLink(url) {
     try {
       const urlObj = new URL(url);
       const baseUrlObj = new URL(this.baseUrl);
       return urlObj.hostname === baseUrlObj.hostname;
-    } catch {
       return false;
-    }
-  }
 
   generateReport() {
     console.log('\n📊 Analysis Report');
@@ -416,15 +342,12 @@ class WebsiteAnalyzer {
       console.log('\n❌ Broken Links:');
       this.brokenLinks.forEach(link => {
         console.log(`  - ${link.url}: ${link.error}`);
-      });
-    }
     
     console.log(`\n📄 PAGES FOUND:`);
     this.pages.forEach((page, url) => {
       console.log(`   • ${url}`);
       console.log(`     Title: ${page.title}`);
       console.log(`     Links: ${page.links.length}`);
-    });
     
     // Save detailed report
     // Save report to file
@@ -438,13 +361,10 @@ class WebsiteAnalyzer {
         url,
         title: data.title,
         linkCount: data.links.length
-      }))
-    };
     
     fs.writeFileSync('website-analysis-report.json', JSON.stringify(report, null, 2));
     console.log('\n💾 Report saved to website-analysis-report.json');
-  }
-}
+
 
 // Run the analysis
 const analyzer = new WebsiteAnalyzer('https://ziontechgroup.com');
@@ -454,6 +374,6 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   const baseUrl = process.argv[2] || 'https://ziontechgroup.com';
   const analyzer = new WebsiteAnalyzer(baseUrl);
   analyzer.analyze();
-}
+
 
 export default WebsiteAnalyzer;

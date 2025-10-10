@@ -5,10 +5,9 @@ export interface Insight {
   category: string;
   date: string; // ISO date string;
   readMinutes: number;
-}
+
 
 export const insights: Insight[] = [,
-  {,
     id: 'ai-cost-governance-framework',
     title: 'AI Cost Governance: FinOps Framework for ML Teams',
     summary:,
@@ -16,8 +15,6 @@ export const insights: Insight[] = [,
     category: 'AI Operations',
     date: '2025-10-01',
     readMinutes: 8;
-  },
-  {
     id: 'enterprise-ai-scorecards-2025',
     title: 'Enterprise AI Scorecards 2025: KPI-Linked SLIs and Canary Gates',
     summary:,
@@ -25,8 +22,6 @@ export const insights: Insight[] = [,
     category: 'AI Reliability',
     date: '2025-10-02',
     readMinutes: 12;
-  },
-  {
     id: 'rag-quality-budgets-production',
     title: 'RAG Quality Budgets in Production: Freshness Windows and Cache Tiers',
     summary:,
@@ -35,13 +30,7 @@ export const insights: Insight[] = [,
     date: '2025-10-03',
     readMinutes: 10;
 export interface Insight {/* TODO: Fix JSX expression */}
-}
+
 
 export const,
   insights: Insight[] = [
-  {/* TODO: Fix JSX expression */}
-  },
-  {/* TODO: Fix JSX expression */}
-  },
-  {/* TODO: Fix JSX expression */}
-  }];

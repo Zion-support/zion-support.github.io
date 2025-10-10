@@ -20,7 +20,6 @@ function fixImports(filePath) {/* TODO: Fix JSX expression */}
       /import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"]/g,
       (match, imports) => {/* TODO: Fix JSX expression */}
         return `import { ${uniqueImports.join(', ')} } from 'lucide-react'`;
-      }
     );
     
     // Fix any remaining syntax issues;
@@ -29,16 +28,14 @@ function fixImports(filePath) {/* TODO: Fix JSX expression */}
     content = content.replace(/{/* TODO: Fix JSX expression */})`
   in: ${filePath}`);
     return true;
-  } catch (error) {/* TODO: Fix JSX expression */}`
     console.error(`Error fixing ${filePath}:`, error.message);
     return false;
-  }
-}
+
 
 // Main function;
 function main() {
 function main() {/* TODO: Fix JSX expression */}
-}
+
   const files = [
     'src/blog/ai-2025-2026-mega-trends-breakthrough/page.tsx',
     'src/blog/ai-2025-sept-30-operational-trust-scorecards-v3/page.tsx',
@@ -60,11 +57,8 @@ function main() {/* TODO: Fix JSX expression */}
       if (fixImports(file)) {
         fixedCount++;
   files.forEach(file => {/* TODO: Fix JSX expression */}
-      }
-    })
-  });
   `
   console.log(`Fixed ${fixedCount} files`);
-}
+
 
 main();"`

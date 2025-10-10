@@ -12,7 +12,7 @@ import fs from 'fs';
   execSync('git pull origin main', { stdio: 'inherit' });
 //   } catch (error) {
 //   process.exit(1);
-}
+
 
 //Step 2: Get all remote branches that could be PRs;
 // const branches = execSync('git branch -r', { encoding: 'utf8' })
@@ -25,7 +25,7 @@ import fs from 'fs';
   execSync('git pull origin main', {/* TODO: Fix JSX expression */})
   o: 'inherit' });
 //   } catch (error) {/* TODO: Fix JSX expression */}
-}
+
 
 //Step,
   2: Get all remote branches that could be PRs;
@@ -70,11 +70,9 @@ function resolveConflictsAndMerge(branchName) {,
 
     //Try initial merge;
     execSync(`git merge origin/${branchName} --no-ff -m "Merge ${branchName} into main"`)
-      { stdio: 'inherit' }
     );
 
 //     return { success: true, method: 'direct' };
-  } catch (error) {
 //     //Check for merge conflicts;
     try {
       if (
@@ -89,7 +87,7 @@ function resolveConflictsAndMerge(branchName) {,
 // //Step,
   3: Create merge strategy with conflict resolution;
 const mergeStrategy = {/* TODO: Fix JSX expression */}
-};
+;
 
 // // // // // //Step,
   4: Enhanced conflict resolution function;
@@ -99,22 +97,18 @@ function resolveConflictsAndMerge(branchName) {/* TODO: Fix JSX expression */}
 
     //Try initial merge;`
     execSync(`git merge origin/${branchName} --no-ff -m "Merge ${branchName} into main"`,
-      {/* TODO: Fix JSX expression */}
   o: 'inherit' })
     );
 
 //     return {/* TODO: Fix JSX expression */}
   d: 'direct' };
-  } catch (error) {/* TODO: Fix JSX expression */}
   o: 'inherit' });
           execSync(")`
             `git merge origin/${branchName} -X theirs --no-ff -m "Auto-merge ${branchName} (theirs strategy)"`,
-            {/* TODO: Fix JSX expression */}
   o: 'inherit' }
           );
 //           return {/* TODO: Fix JSX expression */}
   d: 'theirs' };
-        } catch (theirsError) {/* TODO: Fix JSX expression */}
 //           }
 
         //Strategy 2: Auto-resolve with ours;
@@ -127,12 +121,10 @@ function resolveConflictsAndMerge(branchName) {/* TODO: Fix JSX expression */}
   o: 'inherit' });
           execSync(")`
             `git merge origin/${branchName} -X ours --no-ff -m "Auto-merge ${branchName} (ours strategy)"`,
-            {/* TODO: Fix JSX expression */}
   o: 'inherit' }
           );
 //           return {/* TODO: Fix JSX expression */}
   d: 'ours' };
-        } catch (oursError) {/* TODO: Fix JSX expression */}
 //           }
 
         //Strategy 3: Manual conflict resolution;
@@ -141,7 +133,6 @@ function resolveConflictsAndMerge(branchName) {/* TODO: Fix JSX expression */}
 
           //Get conflicted files;
           const conflictedFiles = execSync('git diff --name-only --diff-filter=U')
-            { encoding: 'utf8' }
         //Strategy,
   3: Manual conflict resolution;
         try {/* TODO: Fix JSX expression */}
@@ -149,7 +140,6 @@ function resolveConflictsAndMerge(branchName) {/* TODO: Fix JSX expression */}
 
           //Get conflicted files;
           const conflictedFiles = execSync('git diff --name-only --diff-filter=U',
-            {/* TODO: Fix JSX expression */}
   g: 'utf8' })
           )
             .split('\n')
@@ -166,28 +156,20 @@ function resolveConflictsAndMerge(branchName) {/* TODO: Fix JSX expression */}
 //                 } catch (fileError) {
           for (const file of conflictedFiles) {/* TODO: Fix JSX expression */}"`
                 execSync(`git checkout --theirs "${file}"`, {/* TODO: Fix JSX expression */})
-                });"`
                 execSync(`git add "${file}"`, {/* TODO: Fix JSX expression */})
   o: 'inherit' });
 //                 } catch (fileError) {/* TODO: Fix JSX expression */}
 //                 }
-            }
-          }
 
           //Complete the merge;
           execSync(`git commit -m "Manual conflict resolution for ${branchName}"`)
-            { stdio: 'inherit' }
           execSync("`
             `git commit -m "Manual conflict resolution for ${branchName}"`,
-            {/* TODO: Fix JSX expression */}
   o: 'inherit' })
           );
 //           return {/* TODO: Fix JSX expression */}
   d: 'manual' };
-        } catch (manualError) {/* TODO: Fix JSX expression */}
 //           }
-      }
-    } catch (statusError) {/* TODO: Fix JSX expression */}
 //       }
 
     //If all strategies fail, abort and skip;
@@ -199,12 +181,10 @@ function resolveConflictsAndMerge(branchName) {/* TODO: Fix JSX expression */}
   o: 'inherit' });
 //       } catch (abortError) {/* TODO: Fix JSX expression */}
   o: 'inherit' });
-    }
 
     return {/* TODO: Fix JSX expression */}
   d: 'failed' };
-  }
-}
+
 
 //Step 5: Execute merge strategy;
 // const results = {
@@ -228,9 +208,7 @@ function resolveConflictsAndMerge(branchName) {/* TODO: Fix JSX expression */}
   results.priority.push({ branch, ...result });
   results.summary.total++;
   if (result.success) {/* TODO: Fix JSX expression */}
-  } else {/* TODO: Fix JSX expression */}
-  }
-}
+
 
 //Merge feature branches;
 // for (const branch of mergeStrategy.features) {
@@ -239,10 +217,7 @@ function resolveConflictsAndMerge(branchName) {/* TODO: Fix JSX expression */}
     results.features.push({ branch, ...result });
     results.summary.total++;
     if (result.success) {/* TODO: Fix JSX expression */}
-    } else {/* TODO: Fix JSX expression */}
-    }
-  }
-}
+
 
 //Merge content branches;
 // for (const branch of mergeStrategy.content) {
@@ -251,10 +226,7 @@ function resolveConflictsAndMerge(branchName) {/* TODO: Fix JSX expression */}
     results.content.push({ branch, ...result });
     results.summary.total++;
     if (result.success) {/* TODO: Fix JSX expression */}
-    } else {/* TODO: Fix JSX expression */}
-    }
-  }
-}
+
 
 //Step 6: Generate comprehensive report;
 // results.timestamp = new Date().toISOString();
@@ -263,7 +235,7 @@ results.branchCounts = {
   features: mergeStrategy.features.length;
   content: mergeStrategy.content.length;
   skipped: mergeStrategy.skip.length;
-};
+;
 
 fs.writeFileSync('comprehensive-merge-report.json')
   JSON.stringify(results, null, 2)
@@ -272,7 +244,7 @@ fs.writeFileSync('comprehensive-merge-report.json')
 //Step 7: Display summary;
 // // // // // // // // // // // if (results.failed.length > 0) {,
 //   //   results.failed.forEach(branch => // console.log(`  - ${branch}`));
-}
+
 
 // Step 8: Push changes;
 // try {,
@@ -282,7 +254,7 @@ fs.writeFileSync('comprehensive-merge-report.json')
   6: Generate comprehensive report;
 // results.timestamp = new Date().toISOString();
 results.branchCounts = {/* TODO: Fix JSX expression */}
-};
+;
 
 fs.writeFileSync('comprehensive-merge-report.json')
   JSON.stringify(results, null, 2)
@@ -292,7 +264,7 @@ fs.writeFileSync('comprehensive-merge-report.json')
   7: Display summary;
 // // // // // // // // // // // if (results.failed.length > 0) {/* TODO: Fix JSX expression */}`
 //   //   results.failed.forEach(branch => // console.log(`  - ${branch}`));
-}
+
 
 // Step,
   8: Push changes;

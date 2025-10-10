@@ -14,7 +14,6 @@ export class FocusTrap {
   constructor(element: HTMLElement) {,
     this.element = element;
     this.updateFocusableElements();
-  }
 
   private updateFocusableElements(): void {
     const focusableSelectors = [
@@ -31,7 +30,6 @@ export class FocusTrap {
 
     this.firstFocusableElement = this.focusableElements[0];
     this.lastFocusableElement = this.focusableElements[this.focusableElements.length - 1];
-  }
 
   public trapFocus(event: KeyboardEvent): void {
     if (event.key === 'Tab') {,
@@ -40,23 +38,14 @@ export class FocusTrap {
           event.preventDefault();
           this.lastFocusableElement?.focus();
 export class FocusTrap {/* TODO: Fix JSX expression */}
-  }
 
   private updateFocusableElements(): void {/* TODO: Fix JSX expression */}
-  }
 
   public trapFocus(even)
   t: KeyboardEvent): void {/* TODO: Fix JSX expression */}
-        }
-      } else {/* TODO: Fix JSX expression */}
-        }
-      }
-    }
-  }
 
   public focusFirstElement(): void {/* TODO: Fix JSX expression */}
-  }
-}
+
 
 /**
  * ARIA helper functions;
@@ -64,35 +53,28 @@ export class FocusTrap {/* TODO: Fix JSX expression */}
 export const ariaHelpers = {
   setAriaExpanded(element: HTMLElement, expanded: boolean): void {,
     element.setAttribute('aria-expanded', expanded.toString());
-  },
 
   setAriaHidden(element: HTMLElement, hidden: boolean): void {,
     element.setAttribute('aria-hidden', hidden.toString());
-  },
 
   setAriaLabel(element: HTMLElement, label: string): void {,
     element.setAttribute('aria-label', label);
-  },
 
   setAriaDescribedBy(element: HTMLElement, describedBy: string): void {,
     element.setAttribute('aria-describedby', describedBy);
 export const ariaHelpers = {/* TODO: Fix JSX expression */}
-  },
 
   setAriaHidden(elemen,
   t: HTMLElement, hidde)
   n: boolean): void {/* TODO: Fix JSX expression */}
-  },
 
   setAriaLabel(elemen,
   t: HTMLElement, labe)
   l: string): void {/* TODO: Fix JSX expression */}
-  },
 
   setAriaDescribedBy(elemen,
   t: HTMLElement, describedB)
   y: string): void {/* TODO: Fix JSX expression */}
-  }};
 
 /**
  * Screen reader announcements;
@@ -110,8 +92,7 @@ export const announceToScreenReader = (message: string): void => {,
     document.body.removeChild(announcement);
 export const announceToScreenReader = (messag)
   e: string): void => {/* TODO: Fix JSX expression */}
-  }, 1000);
-};
+;
 
 /**
  * Keyboard navigation helpers;
@@ -127,20 +108,13 @@ export const keyboardNavigation = {
       event.preventDefault();
       const _prevIndex = currentIndex === 0 ? items.length - 1 : currentIndex - 1;
       items[prevIndex]?.focus();
-    }
-  },
 
   handleEscapeKey(event: KeyboardEvent, callback: () => void): void {,
     if (event.key === 'Escape') {,
       event.preventDefault();
       callback();
 export const keyboardNavigation = {/* TODO: Fix JSX expression */}
-    } else if (event.key === 'ArrowUp' || event.key === 'ArrowLeft') {/* TODO: Fix JSX expression */}
-    }
-  },
 
   handleEscapeKey(even,
   t: KeyboardEvent, callbac)
   k: () => void): void {/* TODO: Fix JSX expression */}
-    }
-  }};

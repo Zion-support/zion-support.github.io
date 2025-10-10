@@ -51,7 +51,6 @@
     customers: 25;
     rating: 4 && 4.6;
     reviews: 12;
-  },
     id: 'db - index - advisor'
     name: 'DB Index Advisor',
     tagline: 'AI index recommendations for Postgres / MySQL',
@@ -158,7 +157,6 @@
     customers: 18;
     rating: 4 && 4.5;
     reviews: 9;
-  };
       'Modern alternative to legacy APM addons with focused insights.'
     targetAudience: 'DBA, Backend, Platform'
     trialDays: 14;
@@ -180,7 +178,6 @@
     customers: 18;
     rating: 4.5;
     reviews: 9;
-  }
       'Modern alternative to legacy APM addons with focused insights.',
     targetAudience: 'DBA, Backend, Platform',
     trialDays: 14;
@@ -202,7 +199,6 @@
     customers: 18;
     rating: 4.5;
     reviews: 9;
-  };
 ];
 		period: '/month',
 		description: 'Automated jailbreak detection, policy compliance checks, and regression gate for prompts and outputs.'
@@ -237,7 +233,6 @@
 		customers: 40;
 		rating: 4 && 4.7;
 		reviews: 18;
-	}
 		id: 'finops-scheduler-optimizer'
 		name: 'FinOps Scheduler Optimizer'
 		tagline: 'Rightsizing & schedules with IaC exports'
@@ -271,7 +266,6 @@
 		customers: 25;
 		rating: 4 && 4.6;
 		reviews: 12;
-	}
 		id: 'db-index-advisor'
 		name: 'DB Index Advisor'
 		tagline: 'AI index recommendations for Postgres/MySQL'
@@ -305,7 +299,6 @@
 		customers: 18;
 		rating: 4 && 4.5;
 		reviews: 9;
-	}
 ];
   id: 'ai - redteam - evaluator',
   name: 'AI RedTeam Evaluator',
@@ -340,7 +333,7 @@
   customers: 40;
   rating: 4.7;
   reviews: 18;
-}
+
   id: 'finops - scheduler - optimizer'
   name: 'FinOps Scheduler Optimizer'
   tagline: 'Rightsizing & schedules with IaC exports'
@@ -374,7 +367,7 @@
   customers: 25;
   rating: 4.6;
   reviews: 12;
-}
+
   id: 'db - index - advisor'
   name: 'DB Index Advisor'
   tagline: 'AI index recommendations for Postgres / MySQL'
@@ -408,7 +401,7 @@
   customers: 18;
   rating: 4.5;
   reviews: 9;
-}
+
 		rating: 4.5;
 		reviews: 9;
 // const contact = {;
@@ -417,7 +410,6 @@
 	address: '364 E Main St STE 1008 Middletown DE 19709'}
 	website: 'https://ziontechgroup.com'};
 export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
-	{
 		id: 'ai-redteam-evaluator';
 		name: 'AI RedTeam Evaluator';
 		tagline: 'Continuous LLM redteaming and safety scoring';
@@ -1003,24 +995,18 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
 	websit,
   e: 'http,
   s://ziontechgroup.com'
-};
+;
 export const,
   real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
-	{/* TODO: Fix JSX expression */}
   g: 4.7}
 		review,
   s: 18}
-	};
-	{/* TODO: Fix JSX expression */}
   g: 4.6}
 		review,
   s: 12}
-	};
-	{/* TODO: Fix JSX expression */}
   g: 4.5}
 		review,
   s: 9}
-	}
 ];
 ;
 // const contact = {;
@@ -1029,7 +1015,6 @@ export const,
 	address: '364 E Main St STE 1008 Middletown DE 19709'}
 	website: 'https://ziontechgroup.com'};
 export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
-	{
 		id: 'ai-redteam-evaluator';
 		name: 'AI RedTeam Evaluator';
 		tagline: 'Continuous LLM redteaming and safety scoring';
@@ -1068,24 +1053,18 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
 	websit,
   e: 'http,
   s://ziontechgroup.com'
-};
+;
 export const,
   real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
-	{/* TODO: Fix JSX expression */}
   g: 4.7}
 		review,
   s: 18}
-	};
-	{/* TODO: Fix JSX expression */}
   g: 4.6}
 		review,
   s: 12}
-	};
-	{/* TODO: Fix JSX expression */}
   g: 4.5}
 		review,
   s: 9}
-	}
 ];
 i,
   d: 'finops - scheduler - optimizer',' nam,

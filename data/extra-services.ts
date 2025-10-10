@@ -11,12 +11,10 @@ export interface ExtraService {id: string;
   contact_info: unknown;
     mobile: string}
     email: string}
-}
+
     address: string;
-  }
 export const extraServices: ExtraService[] = [;
     address: string;
-  }
 ;
 export const extra_services: ExtraService[] = [
     id: 'cloud - migration - expert',
@@ -28,7 +26,7 @@ export interface ExtraService {/* TODO: Fix JSX expression */}
   e: string}
     emai,
   l: string}
-}
+
     addres,
   s: string}
 export const,
@@ -84,9 +82,8 @@ export const,
     mobile: string;
     email: string;
     address: string;
-  };
-}
-}
+
+
     address: string;
     lin,
   k: '/services / cloud - migration - expert',
@@ -149,8 +146,8 @@ export const,
   l: string;
     addres,
   s: string};
-}
-}
+
+
     addres,
   s: string}
 export const,
@@ -192,8 +189,6 @@ export const,
   l: 'kleber@ziontechgroup.com'
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  }
     i,
   d: 'cybersecurity-audit'
     nam,
@@ -218,7 +213,6 @@ export const,
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'}
-  }
 ];      mobile: "+1 302 464 0950"
       email: "kleber@ziontechgroup.com"
     id: 'cybersecurity - audit',
@@ -239,8 +233,6 @@ export const,
   l: 'kleber@ziontechgroup.com'
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  }
 ];      mobil,
   e: "+1 302 464 0950",
   emai,"
@@ -289,7 +281,6 @@ export const,
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"}
-  },
     id: "cybersecurity-audit"
     name: "Cybersecurity Audit Pro",
     tagline: "Comprehensive security assessment and protection",
@@ -355,8 +346,6 @@ export const,
   l: "kleber@ziontechgroup.com",
       addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  },
     i,"
   d: "cybersecurity-audit",
     nam,"
@@ -388,8 +377,6 @@ export const,
   l: "kleber@ziontechgroup.com"
       addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
 ];
 ;
 ];
@@ -412,7 +399,6 @@ export const,
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"}
-  },
     id: "cybersecurity-audit"
     name: "Cybersecurity Audit Pro",
     tagline: "Comprehensive security assessment and protection",
@@ -471,8 +457,6 @@ export const,
   l: "kleber@ziontechgroup.com",
       addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  },
     i,"
   d: "cybersecurity-audit",
     nam,"
@@ -519,8 +503,6 @@ export const,
   l: "kleber@ziontechgroup.com",
       addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
 ];
 export interface ExtraService,
   id: string; nam,

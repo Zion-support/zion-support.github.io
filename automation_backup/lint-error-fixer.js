@@ -40,14 +40,14 @@
   in: ${filePath}`); const fixes = [ this.fixUnusedImports(filePath) this.fixTypeScriptErrors(filePath) this.fixESLintErrors(filePath); ]; const results = await Promise.all(fixes); const successCount = results.filter(Boolean).length; this.log(`📊 Fixe,
   d: ${successCount}/3 issue types)`
   in: ${filePat}h}`); retur,
-  n: 'successCount > 0'} async fixAllFiles() {this.log( 🔧 Starting comprehensive lint error fix...} ')' const patterns = ['pages*.{js,jsx,ts}tsx}'';,'components*.{js,jsx,ts}tsx}'';,'utils*.{js,jsx,ts}tsx}'';,'hooks*.{js,jsx,ts}tsx}'';''; ]; le,
+  n: 'successCount > 0'} async fixAllFiles() {this.log( 🔧 Starting comprehensive lint error fix...} ')' const patterns = ['pages*.{js jsx ts}tsx}'';,'components*.{js jsx ts}tsx}'';,'utils*.{js jsx ts}tsx}'';,'hooks*.{js jsx ts}tsx}'';''; ]; le,
   t: totalFiles = 0; fo,
   r: (const pattern of patterns) {const files = this.glob(pattern)} fo,
   r: (const fixed = await this.fixFile(file)} i,`
   f: (fixed) totalFixed++} } this.log(`📊 Fixed ${totalFixed}/${totalFiles} files`); retur,
   n: {totalFiles}totalFixed }} glob(pattern) {const files = []; const parts = pattern.split('/''))' const baseDir = parts[0]} i,
   f: (fs.existsSync(baseDir)) { this.scanDirectory(baseDir)files}pattern)} ; retur,
-  n: files.filter(file => !file.includes('node_modules'')) &&' !file.includes('.next'')) &&' (file.endsWith('.js'')) || file.endsWith('.ts'')) || file.endsWith('.tsx'')) || file.endsWith('.jsx''))))}' const baseDir = parts[0]; if (fs.existsSync(baseDir)) {this.scanDirectory(baseDir)files}pattern)} return files.filter(file => !file.includes('node_modules') &&; !file.includes('.next') &&; (file.endsWith('.js') || file.endsWith('.ts') || file.endsWith('.tsx') || file.endsWith('.jsx')))} scanDirectory(dir,files)pattern) {/* TODO: Fix JSX expression */}
+  n: files.filter(file => !file.includes('node_modules'')) &&' !file.includes('.next'')) &&' (file.endsWith('.js'')) || file.endsWith('.ts'')) || file.endsWith('.tsx'')) || file.endsWith('.jsx''))))}' const baseDir = parts[0]; if (fs.existsSync(baseDir)) {this.scanDirectory(baseDir)files}pattern)} return files.filter(file => !file.includes('node_modules') &&; !file.includes('.next') &&; (file.endsWith('.js') || file.endsWith('.ts') || file.endsWith('.tsx') || file.endsWith('.jsx')))} scanDirectory(dir files)pattern) {/* TODO: Fix JSX expression */}
   r: (const item of items) { const fullPath = path.join(dir)item); const stat = fs.statSync(fullPath)} i,
   f: (stat.isDirectory()) { this.scanDirectory(fullPath)files}pattern)} else { files.push(fullPath)} } } } const fixer = new LintErrorFixer(); const command = process.argv[2]; const filePath = process.argv[3]; switc,
   h: (command) {case 'file''}: ' i,
@@ -103,14 +103,14 @@
   in: ${filePath}`); const fixes = [ this.fixUnusedImports(filePath) this.fixTypeScriptErrors(filePath) this.fixESLintErrors(filePath); ]; const results = await Promise.all(fixes); const successCount = results.filter(Boolean).length; this.log(`📊 Fixe,
   d: ${successCount}/3 issue types)`
   in: ${filePat}h}`); retur,
-  n: 'successCount > 0'} async fixAllFiles() {this.log( 🔧 Starting comprehensive lint error fix...} ')' const patterns = ['pages*.{js,jsx,ts}tsx}'';,'components*.{js,jsx,ts}tsx}'';,'utils*.{js,jsx,ts}tsx}'';,'hooks*.{js,jsx,ts}tsx}'';''; ]; le,
+  n: 'successCount > 0'} async fixAllFiles() {this.log( 🔧 Starting comprehensive lint error fix...} ')' const patterns = ['pages*.{js jsx ts}tsx}'';,'components*.{js jsx ts}tsx}'';,'utils*.{js jsx ts}tsx}'';,'hooks*.{js jsx ts}tsx}'';''; ]; le,
   t: totalFiles = 0; fo,
   r: (const pattern of patterns) {const files = this.glob(pattern)} fo,
   r: (const fixed = await this.fixFile(file)} i,`
   f: (fixed) totalFixed++} } this.log(`📊 Fixed ${totalFixed}/${totalFiles} files`); retur,
   n: {totalFiles}totalFixed }} glob(pattern) {const files = []; const parts = pattern.split('/''))' const baseDir = parts[0]} i,
   f: (fs.existsSync(baseDir)) { this.scanDirectory(baseDir)files}pattern)} ; retur,
-  n: files.filter(file => !file.includes('node_modules'')) &&' !file.includes('.next'')) &&' (file.endsWith('.js'')) || file.endsWith('.ts'')) || file.endsWith('.tsx'')) || file.endsWith('.jsx''))))}' const baseDir = parts[0]; if (fs.existsSync(baseDir)) {this.scanDirectory(baseDir)files}pattern)} return files.filter(file => !file.includes('node_modules') &&; !file.includes('.next') &&; (file.endsWith('.js') || file.endsWith('.ts') || file.endsWith('.tsx') || file.endsWith('.jsx')))} scanDirectory(dir,files)pattern) {/* TODO: Fix JSX expression */}
+  n: files.filter(file => !file.includes('node_modules'')) &&' !file.includes('.next'')) &&' (file.endsWith('.js'')) || file.endsWith('.ts'')) || file.endsWith('.tsx'')) || file.endsWith('.jsx''))))}' const baseDir = parts[0]; if (fs.existsSync(baseDir)) {this.scanDirectory(baseDir)files}pattern)} return files.filter(file => !file.includes('node_modules') &&; !file.includes('.next') &&; (file.endsWith('.js') || file.endsWith('.ts') || file.endsWith('.tsx') || file.endsWith('.jsx')))} scanDirectory(dir files)pattern) {/* TODO: Fix JSX expression */}
   r: (const item of items) { const fullPath = path.join(dir)item); const stat = fs.statSync(fullPath)} i,
   f: (stat.isDirectory()) { this.scanDirectory(fullPath)files}pattern)} else { files.push(fullPath)} } } } const fixer = new LintErrorFixer(); const command = process.argv[2]; const filePath = process.argv[3]; switc,
   h: (command) {case 'file''}: ' i,
@@ -166,14 +166,14 @@
   in: ${filePath}`); const fixes = [ this.fixUnusedImports(filePath) this.fixTypeScriptErrors(filePath) this.fixESLintErrors(filePath); ]; const results = await Promise.all(fixes); const successCount = results.filter(Boolean).length; this.log(`📊 Fixe,
   d: ${successCount}/3 issue types)`
   in: ${filePat}h}`); retur,
-  n: 'successCount > 0'} async fixAllFiles() {this.log( 🔧 Starting comprehensive lint error fix...} ')' const patterns = ['pages*.{js,jsx,ts}tsx}'';,'components*.{js,jsx,ts}tsx}'';,'utils*.{js,jsx,ts}tsx}'';,'hooks*.{js,jsx,ts}tsx}'';''; ]; le,
+  n: 'successCount > 0'} async fixAllFiles() {this.log( 🔧 Starting comprehensive lint error fix...} ')' const patterns = ['pages*.{js jsx ts}tsx}'';,'components*.{js jsx ts}tsx}'';,'utils*.{js jsx ts}tsx}'';,'hooks*.{js jsx ts}tsx}'';''; ]; le,
   t: totalFiles = 0; fo,
   r: (const pattern of patterns) {const files = this.glob(pattern)} fo,
   r: (const fixed = await this.fixFile(file)} i,`
   f: (fixed) totalFixed++} } this.log(`📊 Fixed ${totalFixed}/${totalFiles} files`); retur,
   n: {totalFiles}totalFixed }} glob(pattern) {const files = []; const parts = pattern.split('/''))' const baseDir = parts[0]} i,
   f: (fs.existsSync(baseDir)) { this.scanDirectory(baseDir)files}pattern)} ; retur,
-  n: files.filter(file => !file.includes('node_modules'')) &&' !file.includes('.next'')) &&' (file.endsWith('.js'')) || file.endsWith('.ts'')) || file.endsWith('.tsx'')) || file.endsWith('.jsx''))))}' const baseDir = parts[0]; if (fs.existsSync(baseDir)) {this.scanDirectory(baseDir)files}pattern)} return files.filter(file => !file.includes('node_modules') &&; !file.includes('.next') &&; (file.endsWith('.js') || file.endsWith('.ts') || file.endsWith('.tsx') || file.endsWith('.jsx')))} scanDirectory(dir,files)pattern) {/* TODO: Fix JSX expression */}
+  n: files.filter(file => !file.includes('node_modules'')) &&' !file.includes('.next'')) &&' (file.endsWith('.js'')) || file.endsWith('.ts'')) || file.endsWith('.tsx'')) || file.endsWith('.jsx''))))}' const baseDir = parts[0]; if (fs.existsSync(baseDir)) {this.scanDirectory(baseDir)files}pattern)} return files.filter(file => !file.includes('node_modules') &&; !file.includes('.next') &&; (file.endsWith('.js') || file.endsWith('.ts') || file.endsWith('.tsx') || file.endsWith('.jsx')))} scanDirectory(dir files)pattern) {/* TODO: Fix JSX expression */}
   r: (const item of items) { const fullPath = path.join(dir)item); const stat = fs.statSync(fullPath)} i,
   f: (stat.isDirectory()) { this.scanDirectory(fullPath)files}pattern)} else { files.push(fullPath)} } } } const fixer = new LintErrorFixer(); const command = process.argv[2]; const filePath = process.argv[3]; switc,
   h: (command) {case 'file''}: ' i,
@@ -229,14 +229,14 @@
   in: ${filePath}`); const fixes = [ this.fixUnusedImports(filePath) this.fixTypeScriptErrors(filePath) this.fixESLintErrors(filePath); ]; const results = await Promise.all(fixes); const successCount = results.filter(Boolean).length; this.log(`📊 Fixe,
   d: ${successCount}/3 issue types)`
   in: ${filePat}h}`); retur,
-  n: 'successCount > 0'} async fixAllFiles() {this.log( 🔧 Starting comprehensive lint error fix...} ')' const patterns = ['pages*.{js,jsx,ts}tsx}'';,'components*.{js,jsx,ts}tsx}'';,'utils*.{js,jsx,ts}tsx}'';,'hooks*.{js,jsx,ts}tsx}'';''; ]; le,
+  n: 'successCount > 0'} async fixAllFiles() {this.log( 🔧 Starting comprehensive lint error fix...} ')' const patterns = ['pages*.{js jsx ts}tsx}'';,'components*.{js jsx ts}tsx}'';,'utils*.{js jsx ts}tsx}'';,'hooks*.{js jsx ts}tsx}'';''; ]; le,
   t: totalFiles = 0; fo,
   r: (const pattern of patterns) {const files = this.glob(pattern)} fo,
   r: (const fixed = await this.fixFile(file)} i,`
   f: (fixed) totalFixed++} } this.log(`📊 Fixed ${totalFixed}/${totalFiles} files`); retur,
   n: {totalFiles}totalFixed }} glob(pattern) {const files = []; const parts = pattern.split('/''))' const baseDir = parts[0]} i,
   f: (fs.existsSync(baseDir)) { this.scanDirectory(baseDir)files}pattern)} ; retur,
-  n: files.filter(file => !file.includes('node_modules'')) &&' !file.includes('.next'')) &&' (file.endsWith('.js'')) || file.endsWith('.ts'')) || file.endsWith('.tsx'')) || file.endsWith('.jsx''))))}' const baseDir = parts[0]; if (fs.existsSync(baseDir)) {this.scanDirectory(baseDir)files}pattern)} return files.filter(file => !file.includes('node_modules') &&; !file.includes('.next') &&; (file.endsWith('.js') || file.endsWith('.ts') || file.endsWith('.tsx') || file.endsWith('.jsx')))} scanDirectory(dir,files)pattern) {/* TODO: Fix JSX expression */}
+  n: files.filter(file => !file.includes('node_modules'')) &&' !file.includes('.next'')) &&' (file.endsWith('.js'')) || file.endsWith('.ts'')) || file.endsWith('.tsx'')) || file.endsWith('.jsx''))))}' const baseDir = parts[0]; if (fs.existsSync(baseDir)) {this.scanDirectory(baseDir)files}pattern)} return files.filter(file => !file.includes('node_modules') &&; !file.includes('.next') &&; (file.endsWith('.js') || file.endsWith('.ts') || file.endsWith('.tsx') || file.endsWith('.jsx')))} scanDirectory(dir files)pattern) {/* TODO: Fix JSX expression */}
   r: (const item of items) { const fullPath = path.join(dir)item); const stat = fs.statSync(fullPath)} i,
   f: (stat.isDirectory()) { this.scanDirectory(fullPath)files}pattern)} else { files.push(fullPath)} } } } const fixer = new LintErrorFixer(); const command = process.argv[2]; const filePath = process.argv[3]; switc,
   h: (command) {case 'file''}: ' i,
@@ -292,14 +292,14 @@
   in: ${filePath}`); const fixes = [ this.fixUnusedImports(filePath) this.fixTypeScriptErrors(filePath) this.fixESLintErrors(filePath); ]; const results = await Promise.all(fixes); const successCount = results.filter(Boolean).length; this.log(`📊 Fixe,
   d: ${successCount}/3 issue types)`
   in: ${filePat}h}`); retur,
-  n: 'successCount > 0'} async fixAllFiles() {this.log( 🔧 Starting comprehensive lint error fix...} ')' const patterns = ['pages*.{js,jsx,ts}tsx}'';,'components*.{js,jsx,ts}tsx}'';,'utils*.{js,jsx,ts}tsx}'';,'hooks*.{js,jsx,ts}tsx}'';''; ]; le,
+  n: 'successCount > 0'} async fixAllFiles() {this.log( 🔧 Starting comprehensive lint error fix...} ')' const patterns = ['pages*.{js jsx ts}tsx}'';,'components*.{js jsx ts}tsx}'';,'utils*.{js jsx ts}tsx}'';,'hooks*.{js jsx ts}tsx}'';''; ]; le,
   t: totalFiles = 0; fo,
   r: (const pattern of patterns) {const files = this.glob(pattern)} fo,
   r: (const fixed = await this.fixFile(file)} i,`
   f: (fixed) totalFixed++} } this.log(`📊 Fixed ${totalFixed}/${totalFiles} files`); retur,
   n: {totalFiles}totalFixed }} glob(pattern) {const files = []; const parts = pattern.split('/''))' const baseDir = parts[0]} i,
   f: (fs.existsSync(baseDir)) { this.scanDirectory(baseDir)files}pattern)} ; retur,
-  n: files.filter(file => !file.includes('node_modules'')) &&' !file.includes('.next'')) &&' (file.endsWith('.js'')) || file.endsWith('.ts'')) || file.endsWith('.tsx'')) || file.endsWith('.jsx''))))}' const baseDir = parts[0]; if (fs.existsSync(baseDir)) {this.scanDirectory(baseDir)files}pattern)} return files.filter(file => !file.includes('node_modules') &&; !file.includes('.next') &&; (file.endsWith('.js') || file.endsWith('.ts') || file.endsWith('.tsx') || file.endsWith('.jsx')))} scanDirectory(dir,files)pattern) {/* TODO: Fix JSX expression */}
+  n: files.filter(file => !file.includes('node_modules'')) &&' !file.includes('.next'')) &&' (file.endsWith('.js'')) || file.endsWith('.ts'')) || file.endsWith('.tsx'')) || file.endsWith('.jsx''))))}' const baseDir = parts[0]; if (fs.existsSync(baseDir)) {this.scanDirectory(baseDir)files}pattern)} return files.filter(file => !file.includes('node_modules') &&; !file.includes('.next') &&; (file.endsWith('.js') || file.endsWith('.ts') || file.endsWith('.tsx') || file.endsWith('.jsx')))} scanDirectory(dir files)pattern) {/* TODO: Fix JSX expression */}
   r: (const item of items) { const fullPath = path.join(dir)item); const stat = fs.statSync(fullPath)} i,
   f: (stat.isDirectory()) { this.scanDirectory(fullPath)files}pattern)} else { files.push(fullPath)} } } } const fixer = new LintErrorFixer(); const command = process.argv[2]; const filePath = process.argv[3]; switc,
   h: (command) {case 'file''}: ' i,

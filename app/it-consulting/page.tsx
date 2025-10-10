@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Lin k } from "reac, t-route, r-do, m";
 import {;
   Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight,;
   Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock,;
@@ -73,20 +73,17 @@ import {;
   Tablet as TabletIcon, Headphones as HeadphonesIcon2,;
   Keyboard as KeyboardIcon, Mouse as MouseIcon,;
   Webcam as WebcamIcon, Speaker as SpeakerIcon;}
-} from 'lucide-react';
-<<<<<<< HEAD
 const ITConsultingPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const itServices = [
-    // IT Infrastructure Services
-    {
+    // IT Infrastructure Services;
       id: 'it-infrastructure-design',
       name: 'IT Infrastructure Design & Implementation',
       description: 'Complete IT infrastructure design, deployment, and optimization for modern businesses',
       category: 'infrastructure',
       icon: Server,
-      price: 'Starting at $5,000',
+      price: 'Starting at $5 000',
       features: [
         'Network architecture design',
         'Server deployment and configuration',
@@ -111,14 +108,12 @@ const ITConsultingPage: React.FC = () => {
       certifications: ['Cisco', 'Microsoft', 'VMware', 'AWS', 'Azure'],
       link: 'https://ziontechgroup.com/it-infrastructure-design',
       caseStudy: 'Manufacturing company reduced IT downtime by 95% with our infrastructure design'
-    },
-    {
       id: 'cloud-migration-services',
       name: 'Cloud Migration & Optimization',
       description: 'Seamless migration to cloud platforms with optimization for cost and performance',
       category: 'cloud',
       icon: Cloud,
-      price: 'Starting at $3,000',
+      price: 'Starting at $3 000',
       features: [
         'Cloud readiness assessment',
         'Migration strategy development',
@@ -143,14 +138,12 @@ const ITConsultingPage: React.FC = () => {
       certifications: ['AWS', 'Azure', 'Google Cloud', 'VMware'],
       link: 'https://ziontechgroup.com/cloud-migration-services',
       caseStudy: 'Retail chain saved $2M annually by migrating to cloud infrastructure'
-    },
-    {
       id: 'cybersecurity-services',
       name: 'Cybersecurity Solutions',
       description: 'Comprehensive security assessment, implementation, and ongoing protection',
       category: 'security',
       icon: Shield,
-      price: 'Starting at $2,500',
+      price: 'Starting at $2 500',
       features: [
         'Security risk assessment',
         'Penetration testing',
@@ -175,14 +168,12 @@ const ITConsultingPage: React.FC = () => {
       certifications: ['CISSP', 'CISM', 'CEH', 'CompTIA Security+'],
       link: 'https://ziontechgroup.com/cybersecurity-services',
       caseStudy: 'Healthcare provider achieved 100% compliance with HIPAA regulations'
-    },
-    {
       id: 'network-design-optimization',
       name: 'Network Design & Optimization',
       description: 'High-performance network infrastructure design and optimization for reliability',
       category: 'networking',
       icon: Network,
-      price: 'Starting at $2,000',
+      price: 'Starting at $2 000',
       features: [
         'Network architecture design',
         'Bandwidth optimization',
@@ -207,14 +198,12 @@ const ITConsultingPage: React.FC = () => {
       certifications: ['CCNA', 'CCNP', 'JNCIA', 'CompTIA Network+'],
       link: 'https://ziontechgroup.com/network-design-optimization',
       caseStudy: 'Law firm improved network speed by 300% and eliminated connectivity issues'
-    },
-    {
       id: 'database-management',
       name: 'Database Management & Optimization',
       description: 'Database design, implementation, optimization, and ongoing management',
       category: 'database',
       icon: Database,
-      price: 'Starting at $1,500',
+      price: 'Starting at $1 500',
       features: [
         'Database design and architecture',
         'Performance optimization',
@@ -239,8 +228,6 @@ const ITConsultingPage: React.FC = () => {
       certifications: ['Oracle', 'Microsoft SQL Server', 'MySQL', 'PostgreSQL'],
       link: 'https://ziontechgroup.com/database-management',
       caseStudy: 'E-commerce platform improved query performance by 400% and reduced costs by 60%'
-    },
-    {
       id: 'it-support-services',
       name: 'Managed IT Support Services',
       description: 'Comprehensive IT support and management for ongoing operations',
@@ -271,14 +258,12 @@ const ITConsultingPage: React.FC = () => {
       certifications: ['Microsoft', 'CompTIA', 'Cisco', 'VMware'],
       link: 'https://ziontechgroup.com/it-support-services',
       caseStudy: 'Marketing agency reduced IT issues by 90% and improved employee productivity'
-    },
-    {
       id: 'software-development',
       name: 'Custom Software Development',
       description: 'Tailored software solutions built to meet specific business requirements',
       category: 'development',
       icon: Code,
-      price: 'Starting at $5,000',
+      price: 'Starting at $5 000',
       features: [
         'Requirements analysis',
         'Custom application development',
@@ -303,8 +288,6 @@ const ITConsultingPage: React.FC = () => {
       technologies: ['React', 'Node.js', 'Python', 'Java', 'C#', 'PHP', 'Mobile'],
       link: 'https://ziontechgroup.com/software-development',
       caseStudy: 'Logistics company automated 80% of manual processes with custom software'
-    },
-    {
       id: 'it-consulting',
       name: 'Strategic IT Consulting',
       description: 'Technology strategy and roadmap development for digital transformation',
@@ -335,14 +318,12 @@ const ITConsultingPage: React.FC = () => {
       certifications: ['PMP', 'ITIL', 'COBIT', 'TOGAF'],
       link: 'https://ziontechgroup.com/it-consulting',
       caseStudy: 'Manufacturing company achieved 40% cost reduction through strategic IT planning'
-    },
-    {
       id: 'disaster-recovery',
       name: 'Disaster Recovery & Business Continuity',
       description: 'Comprehensive disaster recovery planning and implementation',
       category: 'recovery',
       icon: RefreshCw,
-      price: 'Starting at $3,500',
+      price: 'Starting at $3 500',
       features: [
         'Business impact analysis',
         'Recovery time objective planning',
@@ -367,14 +348,12 @@ const ITConsultingPage: React.FC = () => {
       certifications: ['CBCP', 'DRII', 'ITIL', 'ISO 22301'],
       link: 'https://ziontechgroup.com/disaster-recovery',
       caseStudy: 'Financial services firm achieved 99.9% uptime with our disaster recovery solution'
-    },
-    {
       id: 'compliance-auditing',
       name: 'IT Compliance & Auditing',
       description: 'Compliance assessment and implementation for various industry standards',
       category: 'compliance',
       icon: CheckSquare,
-      price: 'Starting at $2,000',
+      price: 'Starting at $2 000',
       features: [
         'Compliance gap analysis',
         'Policy and procedure development',
@@ -399,23 +378,10 @@ const ITConsultingPage: React.FC = () => {
       standards: ['HIPAA', 'SOX', 'PCI-DSS', 'GDPR', 'ISO 27001', 'NIST'],
       link: 'https://ziontechgroup.com/compliance-auditing',
       caseStudy: 'Healthcare provider achieved 100% HIPAA compliance and passed all audits'
-    }
   ];
   const categories = [
-    { id: 'all', name: 'All IT Services', icon: Grid3X3 },
-    { id: 'infrastructure', name: 'Infrastructure', icon: Server },
-    { id: 'cloud', name: 'Cloud Services', icon: Cloud },
-    { id: 'security', name: 'Cybersecurity', icon: Shield },
-    { id: 'networking', name: 'Networking', icon: Network },
-    { id: 'database', name: 'Database', icon: Database },
-    { id: 'support', name: 'IT Support', icon: Headphones },
-    { id: 'development', name: 'Development', icon: Code },
-    { id: 'consulting', name: 'Consulting', icon: Briefcase },
-    { id: 'recovery', name: 'Disaster Recovery', icon: RefreshCw },
-    { id: 'compliance', name: 'Compliance', icon: CheckSquare }
   ];
   const filteredServices = itServices.filter(service => {
-=======
 ;
 const ITConsultingPage: React.FC = () => {;
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -423,13 +389,12 @@ const ITConsultingPage: React.FC = () => {;
 ;
   const itServices = [;
     // IT Infrastructure Services;
-    {;
       id: 'it-infrastructure-design',;
       name: 'IT Infrastructure Design & Implementation',;
       description: 'Complete IT infrastructure design, deployment, and optimization for modern businesses',;
       category: 'infrastructure',;
       icon: Server,;
-      price: 'Starting at $5,000',;
+      price: 'Starting at $5 000',;
       features: [;
         'Network architecture design',;
         'Server deployment and configuration',;
@@ -454,14 +419,12 @@ const ITConsultingPage: React.FC = () => {;
       certifications: ['Cisco', 'Microsoft', 'VMware', 'AWS', 'Azure'],;
       link: 'https://ziontechgroup.com/it-infrastructure-design',;
       caseStudy: 'Manufacturing company reduced IT downtime by 95% with our infrastructure design';}
-    },;
-    {;
       id: 'cloud-migration-services',;
       name: 'Cloud Migration & Optimization',;
       description: 'Seamless migration to cloud platforms with optimization for cost and performance',;
       category: 'cloud',;
       icon: Cloud,;
-      price: 'Starting at $3,000',;
+      price: 'Starting at $3 000',;
       features: [;
         'Cloud readiness assessment',;
         'Migration strategy development',;
@@ -486,14 +449,12 @@ const ITConsultingPage: React.FC = () => {;
       certifications: ['AWS', 'Azure', 'Google Cloud', 'VMware'],;
       link: 'https://ziontechgroup.com/cloud-migration-services',;
       caseStudy: 'Retail chain saved $2M annually by migrating to cloud infrastructure';}
-    },;
-    {;
       id: 'cybersecurity-services',;
       name: 'Cybersecurity Solutions',;
       description: 'Comprehensive security assessment, implementation, and ongoing protection',;
       category: 'security',;
       icon: Shield,;
-      price: 'Starting at $2,500',;
+      price: 'Starting at $2 500',;
       features: [;
         'Security risk assessment',;
         'Penetration testing',;
@@ -518,14 +479,12 @@ const ITConsultingPage: React.FC = () => {;
       certifications: ['CISSP', 'CISM', 'CEH', 'CompTIA Security+'],;
       link: 'https://ziontechgroup.com/cybersecurity-services',;
       caseStudy: 'Healthcare provider achieved 100% compliance with HIPAA regulations';}
-    },;
-    {;
       id: 'network-design-optimization',;
       name: 'Network Design & Optimization',;
       description: 'High-performance network infrastructure design and optimization for reliability',;
       category: 'networking',;
       icon: Network,;
-      price: 'Starting at $2,000',;
+      price: 'Starting at $2 000',;
       features: [;
         'Network architecture design',;
         'Bandwidth optimization',;
@@ -550,14 +509,12 @@ const ITConsultingPage: React.FC = () => {;
       certifications: ['CCNA', 'CCNP', 'JNCIA', 'CompTIA Network+'],;
       link: 'https://ziontechgroup.com/network-design-optimization',;
       caseStudy: 'Law firm improved network speed by 300% and eliminated connectivity issues';}
-    },;
-    {;
       id: 'database-management',;
       name: 'Database Management & Optimization',;
       description: 'Database design, implementation, optimization, and ongoing management',;
       category: 'database',;
       icon: Database,;
-      price: 'Starting at $1,500',;
+      price: 'Starting at $1 500',;
       features: [;
         'Database design and architecture',;
         'Performance optimization',;
@@ -582,8 +539,6 @@ const ITConsultingPage: React.FC = () => {;
       certifications: ['Oracle', 'Microsoft SQL Server', 'MySQL', 'PostgreSQL'],;
       link: 'https://ziontechgroup.com/database-management',;
       caseStudy: 'E-commerce platform improved query performance by 400% and reduced costs by 60%';}
-    },;
-    {;
       id: 'it-support-services',;
       name: 'Managed IT Support Services',;
       description: 'Comprehensive IT support and management for ongoing operations',;
@@ -614,14 +569,12 @@ const ITConsultingPage: React.FC = () => {;
       certifications: ['Microsoft', 'CompTIA', 'Cisco', 'VMware'],;
       link: 'https://ziontechgroup.com/it-support-services',;
       caseStudy: 'Marketing agency reduced IT issues by 90% and improved employee productivity';}
-    },;
-    {;
       id: 'software-development',;
       name: 'Custom Software Development',;
       description: 'Tailored software solutions built to meet specific business requirements',;
       category: 'development',;
       icon: Code,;
-      price: 'Starting at $5,000',;
+      price: 'Starting at $5 000',;
       features: [;
         'Requirements analysis',;
         'Custom application development',;
@@ -646,8 +599,6 @@ const ITConsultingPage: React.FC = () => {;
       technologies: ['React', 'Node.js', 'Python', 'Java', 'C#', 'PHP', 'Mobile'],;
       link: 'https://ziontechgroup.com/software-development',;
       caseStudy: 'Logistics company automated 80% of manual processes with custom software';}
-    },;
-    {;
       id: 'it-consulting',;
       name: 'Strategic IT Consulting',;
       description: 'Technology strategy and roadmap development for digital transformation',;
@@ -678,14 +629,12 @@ const ITConsultingPage: React.FC = () => {;
       certifications: ['PMP', 'ITIL', 'COBIT', 'TOGAF'],;
       link: 'https://ziontechgroup.com/it-consulting',;
       caseStudy: 'Manufacturing company achieved 40% cost reduction through strategic IT planning';}
-    },;
-    {;
       id: 'disaster-recovery',;
       name: 'Disaster Recovery & Business Continuity',;
       description: 'Comprehensive disaster recovery planning and implementation',;
       category: 'recovery',;
       icon: RefreshCw,;
-      price: 'Starting at $3,500',;
+      price: 'Starting at $3 500',;
       features: [;
         'Business impact analysis',;
         'Recovery time objective planning',;
@@ -710,14 +659,12 @@ const ITConsultingPage: React.FC = () => {;
       certifications: ['CBCP', 'DRII', 'ITIL', 'ISO 22301'],;
       link: 'https://ziontechgroup.com/disaster-recovery',;
       caseStudy: 'Financial services firm achieved 99.9% uptime with our disaster recovery solution';}
-    },;
-    {;
       id: 'compliance-auditing',;
       name: 'IT Compliance & Auditing',;
       description: 'Compliance assessment and implementation for various industry standards',;
       category: 'compliance',;
       icon: CheckSquare,;
-      price: 'Starting at $2,000',;
+      price: 'Starting at $2 000',;
       features: [;
         'Compliance gap analysis',;
         'Policy and procedure development',;
@@ -742,398 +689,237 @@ const ITConsultingPage: React.FC = () => {;
       standards: ['HIPAA', 'SOX', 'PCI-DSS', 'GDPR', 'ISO 27001', 'NIST'],;
       link: 'https://ziontechgroup.com/compliance-auditing',;
       caseStudy: 'Healthcare provider achieved 100% HIPAA compliance and passed all audits';}
-    }
   ];
 ;
   const categories = [;
-    { id: 'all', name: 'All IT Services', icon: Grid3X3 },;
-    { id: 'infrastructure', name: 'Infrastructure', icon: Server },;
-    { id: 'cloud', name: 'Cloud Services', icon: Cloud },;
-    { id: 'security', name: 'Cybersecurity', icon: Shield },;
-    { id: 'networking', name: 'Networking', icon: Network },;
-    { id: 'database', name: 'Database', icon: Database },;
-    { id: 'support', name: 'IT Support', icon: Headphones },;
-    { id: 'development', name: 'Development', icon: Code },;
-    { id: 'consulting', name: 'Consulting', icon: Briefcase },;
-    { id: 'recovery', name: 'Disaster Recovery', icon: RefreshCw },;
-    { id: 'compliance', name: 'Compliance', icon: CheckSquare }
   ];
 ;
   const filteredServices = itServices.filter(service => {;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.description.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch;}
-  });
-<<<<<<< HEAD
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      {/* Hero Section */}</div>
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8 cyber-grid">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8 cyber-grid"></section>
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20" aria-hidden="true"></div>
         <div className="relative z-10 max-w-7xl mx-auto text-center"></div>
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight cyber-text neon-pulse"></h1>
             Professional <span className="holographic-text">IT Services</span>
-          </h1>
-          <p className="text-xl md:text-2xl text-cyan-400 mb-8 max-w-4xl mx-auto neon-glow">
+          <p className="text-xl md:text-2xl text-cyan-400 mb-8 max-w-4xl mx-auto neon-glow"></p>
             Comprehensive IT solutions designed to optimize your technology infrastructure, 
             enhance security, and drive business growth. Expert consulting and implementation.
-          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12"></div>
-            <a
+            <a;
               href="tel:+13024640950"
               className="cyber-button px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-cyan-400/50">
               <Phone className="w-5 h-5 inline mr-2" />
               Call (302) 464-0950;
-  </
-            <a
+            <a;
               href="mailto:kleber@ziontechgroup.com"
               className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 neon-glow focus:outline-none focus:ring-4 focus:ring-cyan-400/50">
               <Mail className="w-5 h-5 inline mr-2" />
               Get IT Consultation;
-  </
-          </div>
-        </div>
-      </section>
-=======
 ;
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>;
-      {/* Hero Section */}</div>;
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 cyber-grid"></section>;
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20" aria-hidden="true"></div>;
         <div className="relative z-10 max-w-7xl mx-auto text-center"></div>;
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight cyber-text neon-pulse"></h1>;
             Professional <span className="holographic-text">IT Services</span>;
-          </h1>;
-          <p className="text-xl md:text-2xl text-cyan-400 mb-8 max-w-4xl mx-auto neon-glow">;
+          <p className="text-xl md:text-2xl text-cyan-400 mb-8 max-w-4xl mx-auto neon-glow">;</p>
             Comprehensive IT solutions designed to optimize your technology infrastructure,;
             enhance security, and drive business growth. Expert consulting and implementation.;
-          </p>;
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12"></div>;
             <a;
               href="tel:+13024640950";
               className="cyber-button px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-cyan-400/50";
-            >;
               <Phone className="w-5 h-5 inline mr-2" />;
               Call (302) 464-0950;
-            </a>;
             <a;
               href="mailto:kleber@ziontechgroup.com";
               className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 neon-glow focus:outline-none focus:ring-4 focus:ring-cyan-400/50";
-            >;
               <Mail className="w-5 h-5 inline mr-2" />;
               Get IT Consultation;
-            </a>;
-          </div>;
-        </div>;
-      </section>;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-      {/* Search and Filter Section */}
       <section className="py-12 px-4 sm:px-6 lg:px-8"></section>;
         <div className="max-w-7xl mx-auto"></div>;
           <div className="flex flex-col lg:flex-row gap-6 mb-8"></div>;
-            {/* Search */}</div>;
             <div className="flex-1"></div>;
               <div className="relative"></div>;
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />;
                 <input;
                   type="text";
                   placeholder="Search IT services...";
-                  value={searchTerm}
+                  valu, e={searchTer, m}
                   onChange={(e) => setSearchTerm(e.target.value)}
-<<<<<<< HEAD
                   className="w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-cyan-400/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
                 />
-              </div>
-            </div>
-=======
                   className="w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-cyan-400/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20";
                 />;
-              </div>;
-            </div>;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-            {/* Category Filter */}
             <div className="lg:w-64"></div>;
               <select;
-                value={selectedCategory}
-                onChange={(e) => setSelectedCategory(e.target.value)}
-<<<<<<< HEAD
-                className="w-full px-4 py-3 bg-slate-800/50 border border-cyan-400/20 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20">
-                {categories.map((category) => (
-                  <option key={category.id} value={category.id}>
-=======
-                className="w-full px-4 py-3 bg-slate-800/50 border border-cyan-400/20 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20";
-              >;
-                {categories.map((category) => (;}
-                  <option key={category.id} value={category.id}>;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-                    {category.name}
-                  </option>;
-                ))}
-<<<<<<< HEAD
-              </select>
-            </div>
-          </div>
-=======
-              </select>;
-            </div>;
-          </div>;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-          {/* Category Pills */}
+                valu, e={selectedCategor, y}
+                onChange={(e) => setSelectedCategory(e.target.value)}</select>
+                className="w-full px-4 py-3 bg-slate-800/50 border border-cyan-400/20 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"></select>
+                  <option, key={categor, y.i, d} valu, e={categor, y.i, d}>
+                className="w-full px-4 py-3 bg-slate-800/50 border border-cyan-400/20 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20";</option>
+                  <option, key={categor, y.i, d} valu, e={categor, y.i, d}>;</optio, n>
+                ))}</option>
           <div className="flex flex-wrap gap-2 mb-8"></div>;
-            {categories.map((category) => (</div>;
               <button;}
-                key={category.id}
+                ke, y={categor, y.i, d}
                 onClick={() => setSelectedCategory(category.id)}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${;
                   selectedCategory === category.id;
                     ? 'bg-cyan-500 text-white';
-                    : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 hover:text-cyan-400';}
-                }`}
-              >;
-                {category.name}
-              </button>;
-            ))}
-<<<<<<< HEAD
-          </div>
-        </div>
-      </section>
-      {/* Services Grid */}
-      <section className="py-12 px-4 sm:px-6 lg:px-8">
+                    : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 hover:text-cyan-400';}</button>
+            ))}</button>
+      <section className="py-12 px-4 sm:px-6 lg:px-8"></section>
         <div className="max-w-7xl mx-auto"></div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredServices.map((service) => (</div>
-              <div key={service.id} className="quantum-card p-6 group hover:scale-105 transition-all duration-300 energy-pulse"></div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+              <div, key={servic, e.i, d} classNam, e="quantu, m-card, p-6, group hove, r:scal, e-105, transition-all, duration-300, energy-puls, e"></di, v>
                 <div className="flex items-start justify-between mb-4"></div>
                   <div className="text-cyan-400 group-hover:text-cyan-300 transition-colors"></div>
                     <service.icon className="w-12 h-12" />
-                  </div>
                   <div className="text-right"></div>
-                    <div className="text-2xl font-bold text-white">{service.price}</div>
+                    <div, className="tex, t-2xl, font-bold, text-whit, e">{servic, e.pric, e}</di, v>
                     <div className="text-sm text-gray-400">starting price</div>
-                  </div>
-                </div>
-                <h3 className="text-xl font-bold text-white mb-3 neon-glow">{service.name}</h3>
-                <p className="text-gray-300 mb-4 text-sm leading-relaxed">{service.description}</p>
+                <h3, className="tex, t-xl, font-bold, text-white, mb-3, neon-glo, w">{servic, e.nam, e}</h, 3>
+                <p, className="tex, t-gra, y-300, mb-4, text-sm, leading-relaxe, d">{servic, e.descriptio, n}</p>
                 <div className="space-y-3 mb-6"></div>
                   <div></div>
                     <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h4>
-                    <ul className="space-y-1">
-                      {service.features.slice(0, 4).map((feature, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-gray-300">
+                    <ul className="space-y-1"></ul>
+                        <li, key={id, x} classNam, e="flex, items-center, text-sm, text-gra, y-30, 0"></l, i>
                           <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
-                          <span>{feature}</span>
-                        </li>
+                          <spa, n>{featur, e}</spa, n>
                       ))}
-                    </ul>
-                  </div>
                   <div></div>
                     <h4 className="text-sm font-semibold text-cyan-400 mb-2">Benefits:</h4>
-                    <ul className="space-y-1">
-                      {service.benefits.slice(0, 2).map((benefit, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-gray-300">
+                    <ul className="space-y-1"></ul>
+                        <li, key={id, x} classNam, e="flex, items-center, text-sm, text-gra, y-30, 0"></l, i>
                           <TrendingUp className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                          <span>{benefit}</span>
-                        </li>
+                          <spa, n>{benefi, t}</spa, n>
                       ))}
-                    </ul>
-                  </div>
-                </div>
                 <div className="space-y-2 mb-6 text-sm"></div>
                   <div className="flex justify-between"></div>
                     <span className="text-gray-400">Setup Time:</span>
-                    <span className="text-white">{service.setupTime}</span>
-                  </div>
+                    <span, className="tex, t-whit, e">{servic, e.setupTim, e}</spa, n>
                   <div className="flex justify-between"></div>
                     <span className="text-gray-400">Free Consultation:</span>
-                    <span className="text-green-400">{service.freeConsultation}</span>
-                  </div>
+                    <span, className="tex, t-gree, n-40, 0">{servic, e.freeConsultatio, n}</spa, n>
                   <div className="flex justify-between"></div>
                     <span className="text-gray-400">Target:</span>
-                    <span className="text-white">{service.targetAudience}</span>
-                  </div>
-                </div>
-                {service.caseStudy && (
+                    <span, className="tex, t-whit, e">{servic, e.targetAudienc, e}</spa, n>
                   <div className="mb-4 p-3 bg-green-900/20 border border-green-400/20 rounded-lg"></div>
-                    <p className="text-sm text-green-300 italic">"{service.caseStudy}"</p>
-                  </div>
+                    <p, className="tex, t-sm, text-gree, n-300, italic">"{servic, e.caseStud, y}"</p>
                 )}
                 <div className="space-y-3"></div>
-                  <a
-                    href={service.link}
+                  <a;
+                    hre, f={servic, e.lin, k}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-3 px-4 rounded-lg font-semibold text-center hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
-                    Get Free Consultation;
-  </
-                  <a
+                    Get Free Consultation;</a>
+                  <a;
                     href="tel:+13024640950"
                     className="block w-full border border-cyan-400 text-cyan-400 py-3 px-4 rounded-lg font-semibold text-center hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
                     <Phone className="w-4 h-4 inline mr-2" />
                     Call for Quote;
-  </
-                </div>
-              </div>
             ))}
-          </div>
-        </div>
-      </section>
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 cyber-scan-effect">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 cyber-scan-effect"></section>
         <div className="max-w-4xl mx-auto text-center"></div>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 cyber-text neon-pulse">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 cyber-text neon-pulse"></h2>
             Ready to Optimize Your IT Infrastructure?
-          </h2>
-          <p className="text-xl text-cyan-400 mb-8 neon-glow">
+          <p className="text-xl text-cyan-400 mb-8 neon-glow"></p>
             Our certified IT professionals deliver reliable, secure, and scalable solutions. 
             All services include free consultations and ongoing support.
-          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-            <a
+            <a;
               href="tel:+13024640950"
               className="cyber-button px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2 focus:outline-none focus:ring-4 focus:ring-cyan-400/50">
               <Phone className="w-5 h-5" />
               Call (302) 464-0950;
-  </
-            <a
+            <a;
               href="mailto:kleber@ziontechgroup.com"
               className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center gap-2 neon-glow focus:outline-none focus:ring-4 focus:ring-cyan-400/50">
               <Mail className="w-5 h-5" />
               Get Custom IT Strategy;
-  </
-          </div>
-        </div>
-      </section>
-    </div>
   );
-};
 export default ITConsultingPage;
-  </a>
-  </a>
-  </a>
-  </a>
-  </a>
-  </a>
-=======
-          </div>;
-        </div>;
-      </section>;
-      {/* Services Grid */}
       <section className="py-12 px-4 sm:px-6 lg:px-8"></section>;
         <div className="max-w-7xl mx-auto"></div>;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>;
-            {filteredServices.map((service) => (</div>;}
-              <div key={service.id} className="quantum-card p-6 group hover:scale-105 transition-all duration-300 energy-pulse"></div>;
+              <div, key={servic, e.i, d} classNam, e="quantu, m-card, p-6, group hove, r:scal, e-105, transition-all, duration-300, energy-puls, e"></di, v>;
                 <div className="flex items-start justify-between mb-4"></div>;
                   <div className="text-cyan-400 group-hover:text-cyan-300 transition-colors"></div>;
                     <service.icon className="w-12 h-12" />;
-                  </div>;
                   <div className="text-right"></div>;
-                    <div className="text-2xl font-bold text-white">{service.price}</div>;
+                    <div, className="tex, t-2xl, font-bold, text-whit, e">{servic, e.pric, e}</di, v>;
                     <div className="text-sm text-gray-400">starting price</div>;
-                  </div>;
-                </div>;
-                <h3 className="text-xl font-bold text-white mb-3 neon-glow">{service.name}</h3>;
-                <p className="text-gray-300 mb-4 text-sm leading-relaxed">{service.description}</p>;
+                <h3, className="tex, t-xl, font-bold, text-white, mb-3, neon-glo, w">{servic, e.nam, e}</h, 3>;
+                <p, className="tex, t-gra, y-300, mb-4, text-sm, leading-relaxe, d">{servic, e.descriptio, n}</p>;
                 <div className="space-y-3 mb-6"></div>;
                   <div></div>;
                     <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h4>;
-                    <ul className="space-y-1">;
-                      {service.features.slice(0, 4).map((feature, idx) => (;}
-                        <li key={idx} className="flex items-center text-sm text-gray-300">;
+                    <ul className="space-y-1">;</ul>
+                        <li, key={id, x} classNam, e="flex, items-center, text-sm, text-gra, y-30, 0">;</l, i>
                           <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />;
-                          <span>{feature}</span>;
-                        </li>;
+                          <spa, n>{featur, e}</spa, n>;
                       ))}
-                    </ul>;
-                  </div>;
                   <div></div>;
                     <h4 className="text-sm font-semibold text-cyan-400 mb-2">Benefits:</h4>;
-                    <ul className="space-y-1">;
-                      {service.benefits.slice(0, 2).map((benefit, idx) => (;}
-                        <li key={idx} className="flex items-center text-sm text-gray-300">;
+                    <ul className="space-y-1">;</ul>
+                        <li, key={id, x} classNam, e="flex, items-center, text-sm, text-gra, y-30, 0">;</l, i>
                           <TrendingUp className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />;
-                          <span>{benefit}</span>;
-                        </li>;
+                          <spa, n>{benefi, t}</spa, n>;
                       ))}
-                    </ul>;
-                  </div>;
-                </div>;
                 <div className="space-y-2 mb-6 text-sm"></div>;
                   <div className="flex justify-between"></div>;
                     <span className="text-gray-400">Setup Time:</span>;
-                    <span className="text-white">{service.setupTime}</span>;
-                  </div>;
+                    <span, className="tex, t-whit, e">{servic, e.setupTim, e}</spa, n>;
                   <div className="flex justify-between"></div>;
                     <span className="text-gray-400">Free Consultation:</span>;
-                    <span className="text-green-400">{service.freeConsultation}</span>;
-                  </div>;
+                    <span, className="tex, t-gree, n-40, 0">{servic, e.freeConsultatio, n}</spa, n>;
                   <div className="flex justify-between"></div>;
                     <span className="text-gray-400">Target:</span>;
-                    <span className="text-white">{service.targetAudience}</span>;
-                  </div>;
-                </div>;
-                {service.caseStudy && (;
+                    <span, className="tex, t-whit, e">{servic, e.targetAudienc, e}</spa, n>;
                   <div className="mb-4 p-3 bg-green-900/20 border border-green-400/20 rounded-lg"></div>;}
-                    <p className="text-sm text-green-300 italic">"{service.caseStudy}"</p>;
-                  </div>;
+                    <p, className="tex, t-sm, text-gree, n-300, italic">"{servic, e.caseStud, y}"</p>;
                 )}
 ;
                 <div className="space-y-3"></div>;
                   <a;
-                    href={service.link}
+                    hre, f={servic, e.lin, k}
                     target="_blank";
                     rel="noopener noreferrer";
                     className="block w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-3 px-4 rounded-lg font-semibold text-center hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105";
-                  >;
                     Get Free Consultation;
-                  </a>;
                   <a;
                     href="tel:+13024640950";
                     className="block w-full border border-cyan-400 text-cyan-400 py-3 px-4 rounded-lg font-semibold text-center hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300";
-                  >;
                     <Phone className="w-4 h-4 inline mr-2" />;
                     Call for Quote;
-                  </a>;
-                </div>;
-              </div>;
             ))}
-          </div>;
-        </div>;
-      </section>;
-      {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 cyber-scan-effect"></section>;
         <div className="max-w-4xl mx-auto text-center"></div>;
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 cyber-text neon-pulse">;
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 cyber-text neon-pulse">;</h2>
             Ready to Optimize Your IT Infrastructure?;
-          </h2>;
-          <p className="text-xl text-cyan-400 mb-8 neon-glow">;
+          <p className="text-xl text-cyan-400 mb-8 neon-glow">;</p>
             Our certified IT professionals deliver reliable, secure, and scalable solutions.;
             All services include free consultations and ongoing support.;
-          </p>;
           <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>;
             <a;
               href="tel:+13024640950";
               className="cyber-button px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2 focus:outline-none focus:ring-4 focus:ring-cyan-400/50";
-            >;
               <Phone className="w-5 h-5" />;
               Call (302) 464-0950;
-            </a>;
             <a;
               href="mailto:kleber@ziontechgroup.com";
               className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center gap-2 neon-glow focus:outline-none focus:ring-4 focus:ring-cyan-400/50";
-            >;
               <Mail className="w-5 h-5" />;
               Get Custom IT Strategy;
-            </a>;
-          </div>;
-        </div>;
-      </section>;
-    </div>;
   );
-};
 ;
 export default ITConsultingPage;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

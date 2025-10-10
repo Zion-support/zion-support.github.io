@@ -32,7 +32,6 @@ function generateStructuredData() {
       "telephone": "+1-302-464-0950",
       "contactType": "customer service",
       "email": "kleber@ziontechgroup.com"
-    },
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "364 E Main St STE 1008",
@@ -40,7 +39,6 @@ function generateStructuredData() {
       "addressRegion": "DE",
       "postalCode": "19709",
       "addressCountry": "US"
-    },
     "sameAs": [
       "https: //www.linkedin.com/company/ziontechgroup",
       "https: //twitter.com/ziontechgroup"],
@@ -50,32 +48,24 @@ function generateStructuredData() {
       "lowPrice": "19",
       "highPrice": "5000",
       "priceCurrency": "USD"
-    },
     "services": [
-      {
         "@type": "Service",
         "name": "AI Solutions",
         "description": "Advanced artificial intelligence solutions for businesses"
-      },
-      {
         "@type": "Service",
         "name": "Cloud Services",
         "description": "Comprehensive cloud migration and management services"
-      },
-      {
         "@type": "Service",
         "name": "Cybersecurity",
         "description": "Advanced cybersecurity solutions and protection"
-      }
     ]
-  };
 
   fs.writeFileSync(
     path.join(__dirname, '../public/structured-data.json'), 
     JSON.stringify(structuredData, null, 2)
   );
   console.log('✅ Structured data generated');
-}
+
 
 // 2. Generate meta tags;
 function generateMetaTags() {
@@ -115,21 +105,20 @@ function generateMetaTags() {
       title: "Zion Tech Group - Advanced AI and IT Solutions",
       description: "Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.",
       image: "https://ziontechgroup.com/og-image.jpg"}
-  };
 
   fs.writeFileSync(
     path.join(__dirname, '../public/meta-tags.json'), 
     JSON.stringify(metaTags, null, 2)
   );
   console.log('✅ Meta tags generated');
-}
+
 
 // 3. Generate Open Graph images;
 function generateOpenGraphImages() {
   console.log('🖼️ Generating Open Graph images...');
   // This would typically use a library like canvas or sharp;
   console.log('✅ Open Graph images generated');
-}
+
 
 // 4. Generate FAQ schema;
 function generateFAQSchema() {
@@ -139,47 +128,34 @@ function generateFAQSchema() {
     "@context": "https: //schema.org",
     "@type": "FAQPage",
     "mainEntity": [
-      {
         "@type": "Question",
         "name": "What services does Zion Tech Group offer?",
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "Zion Tech Group offers comprehensive AI solutions, IT services, cloud migration, cybersecurity, quantum computing, autonomous systems, and digital transformation services."
-        }
-      },
-      {
         "@type": "Question",
         "name": "How can AI solutions benefit my business?",
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "AI solutions can automate processes, improve decision-making, enhance customer experience, increase efficiency, and provide valuable insights from data analysis."
-        }
-      },
-      {
         "@type": "Question",
         "name": "What is the pricing for your services?",
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "Our pricing varies based on the specific services and requirements. We offer flexible pricing models starting from $19/month for micro SAAS solutions to enterprise-level custom solutions."
-        }
-      },
-      {
         "@type": "Question",
         "name": "Do you offer free consultations?",
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "Yes, we offer free consultations to discuss your specific needs and provide recommendations for the best solutions for your business."
-        }
-      }
     ]
-  };
 
   fs.writeFileSync(
     path.join(__dirname, '../public/faq-schema.json'), 
     JSON.stringify(faqSchema, null, 2)
   );
   console.log('✅ FAQ schema generated');
-}
+
 
 // 5. Generate breadcrumb schema;
 function generateBreadcrumbSchema() {
@@ -189,30 +165,26 @@ function generateBreadcrumbSchema() {
     "@context": "https: //schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
-      {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
         "item": "https: //ziontechgroup.com"},
-      {
         "@type": "ListItem",
         "position": 2,
         "name": "Services",
         "item": "https: //ziontechgroup.com/services"},
-      {
         "@type": "ListItem",
         "position": 3,
         "name": "AI Solutions",
         "item": "https: //ziontechgroup.com/ai-services"}
     ]
-  };
 
   fs.writeFileSync(
     path.join(__dirname, '../public/breadcrumb-schema.json'), 
     JSON.stringify(breadcrumbSchema, null, 2)
   );
   console.log('✅ Breadcrumb schema generated');
-}
+
 
 // 6. Generate local business schema;
 function generateLocalBusinessSchema() {
@@ -233,26 +205,22 @@ function generateLocalBusinessSchema() {
       "addressRegion": "DE",
       "postalCode": "19709",
       "addressCountry": "US"
-    },
     "geo": {
       "@type": "GeoCoordinates",
       "latitude": "39.4496",
       "longitude": "-75.7163"
-    },
     "openingHours": "Mo-Fr 09: 00-17:00",
     "priceRange": "$$",
     "serviceArea": {
       "@type": "Country",
       "name": "United States"
-    }
-  };
 
   fs.writeFileSync(
     path.join(__dirname, '../public/local-business-schema.json'), 
     JSON.stringify(localBusinessSchema, null, 2)
   );
   console.log('✅ Local business schema generated');
-}
+
 
 // Run all SEO enhancements;
 async function runSEOEnhancements() {
@@ -265,11 +233,9 @@ async function runSEOEnhancements() {
     generateLocalBusinessSchema();
     
     console.log('🎉 SEO enhancement completed successfully!');
-  } catch (error) {
     console.error('❌ Error during SEO enhancement:', error);
     process.exit(1);
-  }
-}
+
 
 runSEOEnhancements();
 // #!/usr/bin/env node /** * SEO Enhancement Script for Zion Tech Group Website * * This script enhances SEO,

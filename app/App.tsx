@@ -1,13 +1,13 @@
 'use client';
 import React, { Suspense, lazy } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
+import { BrowserRouter Routes Route } from "react-router-dom";
+import { HelmetProvide r } from "reac, t-helme, t-asyn, c";
 import ErrorBoundary from './components/ErrorBoundary';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import LoadingSpinner from './components/LoadingSpinner';
 
-// Lazy load pages for better performance
+// Lazy load pages for better performance;
 const HomePage = lazy(() => import('./page'));
 const AboutPage = lazy(() => import('./about/page'));
 const ContactPage = lazy(() => import('./contact/page'));
@@ -21,7 +21,7 @@ const PrivacyPage = lazy(() => import('./privacy/page'));
 const TermsPage = lazy(() => import('./terms/page'));
 const CookiesPage = lazy(() => import('./cookies/page'));
 
-// AI Services
+// AI Services;
 const AiServicesPage = lazy(() => import('./ai-services/page'));
 const AiMarketingPage = lazy(() => import('./ai-marketing/page'));
 const AiAutomationPage = lazy(() => import('./ai-automation/page'));
@@ -35,7 +35,7 @@ const AiCustomerSupportPage = lazy(() => import('./ai-customer-support/page'));
 const AiSalesAutomationPage = lazy(() => import('./ai-sales-automation/page'));
 const AiDataVisualizationPage = lazy(() => import('./ai-data-visualization/page'));
 
-// IT Services
+// IT Services;
 const ItServicesPage = lazy(() => import('./it-services/page'));
 const CloudServicesPage = lazy(() => import('./cloud-services/page'));
 const CybersecurityServicesPage = lazy(() => import('./cybersecurity-services/page'));
@@ -48,7 +48,7 @@ const MicroSaasPage = lazy(() => import('./micro-saas/page'));
 const QuantumComputingPage = lazy(() => import('./quantum-computing/page'));
 const RoboticsAutomationPage = lazy(() => import('./robotics-automation/page'));
 
-// Additional Pages
+// Additional Pages;
 const DemoPage = lazy(() => import('./demo/page'));
 const ConsultationPage = lazy(() => import('./consultation/page'));
 const PartnersPage = lazy(() => import('./partners/page'));
@@ -58,67 +58,56 @@ const FAQPage = lazy(() => import('./faq/page'));
 const App: React.FC = () => {
   return (
     <ErrorBoundary>
-      <HelmetProvider>
+      <HelmetProvider/>
         <BrowserRouter>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
             <PerformanceMonitor />
-            <AccessibilityEnhancer>
-              <Suspense fallback={<LoadingSpinner />}>
-                <Routes>
-                  <Route path="/" element={<HomePage />} />
-                  <Route path="/about" element={<AboutPage />} />
-                  <Route path="/contact" element={<ContactPage />} />
-                  <Route path="/services" element={<ServicesPage />} />
-                  <Route path="/pricing" element={<PricingPage />} />
-                  <Route path="/case-studies" element={<CaseStudiesPage />} />
-                  <Route path="/blog" element={<BlogPage />} />
-                  <Route path="/team" element={<TeamPage />} />
-                  <Route path="/careers" element={<CareersPage />} />
-                  <Route path="/privacy" element={<PrivacyPage />} />
-                  <Route path="/terms" element={<TermsPage />} />
-                  <Route path="/cookies" element={<CookiesPage />} />
+            <AccessibilityEnhancer/>
+              <Suspense, fallback={<LoadingSpinne, r />}>
+                <Routes/>
+                  <Route, path="/" elemen, t={<HomePag, e />} />
+                  <Route, path="/abou, t" elemen, t={<AboutPag, e />} />
+                  <Route, path="/contac, t" elemen, t={<ContactPag, e />} />
+                  <Route, path="/service, s" elemen, t={<ServicesPag, e />} />
+                  <Route, path="/pricin, g" elemen, t={<PricingPag, e />} />
+                  <Route, path="/cas, e-studie, s" elemen, t={<CaseStudiesPag, e />} />
+                  <Route, path="/blo, g" elemen, t={<BlogPag, e />} />
+                  <Route, path="/tea, m" elemen, t={<TeamPag, e />} />
+                  <Route, path="/career, s" elemen, t={<CareersPag, e />} />
+                  <Route, path="/privac, y" elemen, t={<PrivacyPag, e />} />
+                  <Route, path="/term, s" elemen, t={<TermsPag, e />} />
+                  <Route, path="/cookie, s" elemen, t={<CookiesPag, e />} />
                   
-                  {/* AI Services Routes */}
-                  <Route path="/ai-services" element={<AiServicesPage />} />
-                  <Route path="/ai-marketing" element={<AiMarketingPage />} />
-                  <Route path="/ai-automation" element={<AiAutomationPage />} />
-                  <Route path="/ai-healthcare" element={<AiHealthcarePage />} />
-                  <Route path="/ai-fintech" element={<AiFintechPage />} />
-                  <Route path="/ai-content-generation" element={<AiContentGenerationPage />} />
-                  <Route path="/ai-data-analytics" element={<AiDataAnalyticsPage />} />
-                  <Route path="/ai-cybersecurity" element={<AiCybersecurityPage />} />
-                  <Route path="/ai-workflow-automation" element={<AiWorkflowAutomationPage />} />
-                  <Route path="/ai-customer-support" element={<AiCustomerSupportPage />} />
-                  <Route path="/ai-sales-automation" element={<AiSalesAutomationPage />} />
-                  <Route path="/ai-data-visualization" element={<AiDataVisualizationPage />} />
+                  <Route, path="/a, i-service, s" elemen, t={<AiServicesPag, e />} />
+                  <Route, path="/a, i-marketin, g" elemen, t={<AiMarketingPag, e />} />
+                  <Route, path="/a, i-automatio, n" elemen, t={<AiAutomationPag, e />} />
+                  <Route, path="/a, i-healthcar, e" elemen, t={<AiHealthcarePag, e />} />
+                  <Route, path="/a, i-fintec, h" elemen, t={<AiFintechPag, e />} />
+                  <Route, path="/a, i-conten, t-generatio, n" elemen, t={<AiContentGenerationPag, e />} />
+                  <Route, path="/a, i-dat, a-analytic, s" elemen, t={<AiDataAnalyticsPag, e />} />
+                  <Route, path="/a, i-cybersecurit, y" elemen, t={<AiCybersecurityPag, e />} />
+                  <Route, path="/a, i-workflo, w-automatio, n" elemen, t={<AiWorkflowAutomationPag, e />} />
+                  <Route, path="/a, i-custome, r-suppor, t" elemen, t={<AiCustomerSupportPag, e />} />
+                  <Route, path="/a, i-sale, s-automatio, n" elemen, t={<AiSalesAutomationPag, e />} />
+                  <Route, path="/a, i-dat, a-visualizatio, n" elemen, t={<AiDataVisualizationPag, e />} />
                   
-                  {/* IT Services Routes */}
-                  <Route path="/it-services" element={<ItServicesPage />} />
-                  <Route path="/cloud-services" element={<CloudServicesPage />} />
-                  <Route path="/cybersecurity-services" element={<CybersecurityServicesPage />} />
-                  <Route path="/data-analytics" element={<DataAnalyticsPage />} />
-                  <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
-                  <Route path="/enterprise-it" element={<EnterpriseItPage />} />
-                  <Route path="/it-consulting" element={<ItConsultingPage />} />
-                  <Route path="/machine-learning" element={<MachineLearningPage />} />
-                  <Route path="/micro-saas" element={<MicroSaasPage />} />
-                  <Route path="/quantum-computing" element={<QuantumComputingPage />} />
-                  <Route path="/robotics-automation" element={<RoboticsAutomationPage />} />
+                  <Route, path="/i, t-service, s" elemen, t={<ItServicesPag, e />} />
+                  <Route, path="/clou, d-service, s" elemen, t={<CloudServicesPag, e />} />
+                  <Route, path="/cybersecurit, y-service, s" elemen, t={<CybersecurityServicesPag, e />} />
+                  <Route, path="/dat, a-analytic, s" elemen, t={<DataAnalyticsPag, e />} />
+                  <Route, path="/digita, l-transformatio, n" elemen, t={<DigitalTransformationPag, e />} />
+                  <Route, path="/enterpris, e-i, t" elemen, t={<EnterpriseItPag, e />} />
+                  <Route, path="/i, t-consultin, g" elemen, t={<ItConsultingPag, e />} />
+                  <Route, path="/machin, e-learnin, g" elemen, t={<MachineLearningPag, e />} />
+                  <Route, path="/micr, o-saa, s" elemen, t={<MicroSaasPag, e />} />
+                  <Route, path="/quantu, m-computin, g" elemen, t={<QuantumComputingPag, e />} />
+                  <Route, path="/robotic, s-automatio, n" elemen, t={<RoboticsAutomationPag, e />} />
                   
-                  {/* Additional Routes */}
-                  <Route path="/demo" element={<DemoPage />} />
-                  <Route path="/consultation" element={<ConsultationPage />} />
-                  <Route path="/partners" element={<PartnersPage />} />
-                  <Route path="/support" element={<SupportPage />} />
-                  <Route path="/faq" element={<FAQPage />} />
-                </Routes>
-              </Suspense>
-            </AccessibilityEnhancer>
-          </div>
-        </BrowserRouter>
-      </HelmetProvider>
-    </ErrorBoundary>
+                  <Route, path="/dem, o" elemen, t={<DemoPag, e />} />
+                  <Route, path="/consultatio, n" elemen, t={<ConsultationPag, e />} />
+                  <Route, path="/partner, s" elemen, t={<PartnersPag, e />} />
+                  <Route, path="/suppor, t" elemen, t={<SupportPag, e />} />
+                  <Route, path="/fa, q" elemen, t={<FAQPag, e />} />
   );
-};
 
 export default App;

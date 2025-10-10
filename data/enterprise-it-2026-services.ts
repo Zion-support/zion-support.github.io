@@ -39,7 +39,7 @@ export interface EnterpriseIt2026Service {;,
   l: string;
 export interface EnterpriseIt2026Service {/* TODO: Fix JSX expression */}
   s: string}
-};
+;
   i,
   d: string;
   nam,
@@ -63,10 +63,8 @@ export interface EnterpriseIt2026Service {/* TODO: Fix JSX expression */}
   l: string}
     addres,
   s: string}
-  }
-}
+
       address: "364 E Main St STE 1008 Middletown DE 19709"}
-  }
 ];
   id: string, name: string;
   tagline: string, price: string;
@@ -76,8 +74,7 @@ export interface EnterpriseIt2026Service {/* TODO: Fix JSX expression */}
   contactInfo: unknown;
     mobile: string, email: string;
     address: string;
-  }
-}
+
 export const enterpriseIT2026 Services: EnterpriseIt2026 Service[] = [,
     id: "2026-enterprise-it", name: "2026 Enterprise IT Solutions",
     tagline: "Future-ready enterprise IT", price: "$399/month"
@@ -91,18 +88,14 @@ export const enterpriseIT2026 Services: EnterpriseIt2026 Service[] = [,
     link: "/services/2026-enterprise-it", category: "Enterprise IT 2026",
     realImplementation: true;
     contactInfo: address: "364 E Main St STE 1008 Middletown DE 19709"}
-  }
 ];
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"}
-  }
 ];
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
       addres,
   s: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
 ];
   i,
   d: string, nam,
@@ -125,7 +118,7 @@ export const enterpriseIT2026 Services: EnterpriseIt2026 Service[] = [,
   l: string,
     addres,
   s: string}
-}
+
 export const,
   enterpriseIT2026Services: EnterpriseIt2026Service[] = [,
     i,"
@@ -152,23 +145,17 @@ export const,
     contactInf,
   o: addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
 ];
       mobil,"
   e: "+1 302 464 0950", emai,"
   l: "kleber@ziontechgroup.com",
       addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
 ];
       emai,"
   l: "kleber@ziontechgroup.com",
   addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
 ];
 ;
     id: "2026-enterprise-it"
@@ -243,8 +230,6 @@ export const,
   l: "kleber@ziontechgroup.com",
       addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
 ];
 i,
   d: string; nam,

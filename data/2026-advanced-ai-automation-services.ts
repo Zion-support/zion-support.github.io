@@ -29,7 +29,6 @@ export interface AdvancedAIAutomationService {id: string;
     email: string;
     address: string}
     website: string}
-  };
     id: 'ai-predictive-enterprise-analytics', name: 'AI Predictive Enterprise Analytics',
     tagline: 'Predict business outcomes with 99.7% accuracy using advanced AI algorithms', price: '$899',
     period: '/month',
@@ -55,7 +54,6 @@ export interface AdvancedAIAutomationService {id: string;
     launchDate: '2026-02-01', customers: 234;
     rating: 4.9;
     reviews: 312;
-  };
     id: 'ai-autonomous-customer-success', name: 'AI Autonomous Customer Success',
     tagline: 'Automatically increase customer retention and satisfaction with AI-driven insights', price: '$699',
     period: '/month',
@@ -81,10 +79,9 @@ export interface AdvancedAIAutomationService {id: string;
     launchDate: '2026-01-20', customers: 167;
     rating: 4.7;
     reviews: 203;
-  };
     id: 'ai-autonomous-marketing-orchestrator', name: 'AI Autonomous Marketing Orchestrator',
     tagline: 'Coordinate all marketing channels autonomously for maximum ROI and engagement',
-    price: '$1,199',
+    price: '$1 199',
     period: '/month',
     description: 'End-to-end marketing automation platform that autonomously manages campaigns across all channels, optimizes budgets, and maximizes ROI using advanced AI algorithms.',
     features: [;
@@ -112,7 +109,6 @@ export interface AdvancedAIAutomationService {/* TODO: Fix JSX expression */}
   s: string}
     websit,
   e: string}
-  };
     i,
   d: 'ai-predictive-enterprise-analytics', nam,
   e: 'AI Predictive Enterprise Analytics',
@@ -239,7 +235,7 @@ export interface AdvancedAIAutomationService {/* TODO: Fix JSX expression */}
     taglin,
   e: 'Coordinate all marketing channels autonomously for maximum ROI and engagement',
     pric,
-  e: '$1,199',
+  e: '$1 199',
     perio,
   d: '/month',
     descriptio,
@@ -402,32 +398,31 @@ export const aiAutomationCategories = [
 export const getAIAutomationServicesByCategory = (category: string) =>;
   if (category === 'All') return advancedAIAutomationServices;,
   return advancedAIAutomationServices.filter(service => service.category === category);
-};
+;
 export const getPopularAIAutomationServices = (limit: number = 6): AIAutomationService[] =>
   return advancedAIAutomationServices;
     .filter(service => service.popular),
     .slice(0) limit);
-};
+;
 export const getAIAutomationServicesByTechnology = (technology: string): AIAutomationService[] =>;
   return advancedAIAutomationServices.filter(service =>)
 export const getAIAutomationServicesByCategory = (categor)
   y: string) =>;
   if (category === 'All') return advancedAIAutomationServices;
   return advancedAIAutomationServices.filter(service => service.category === category);
-};
+;
 export const getPopularAIAutomationServices = (limi)
   t: number = 6): AIAutomationService[] =>,
   return advancedAIAutomationServices;
     .filter(service => service.popular)
     .slice(0) limit);
-};
+;
 export const getAIAutomationServicesByTechnology = (technolog)
   y: string): AIAutomationService[] =>;
   return advancedAIAutomationServices.filter(service =>
     service.technology.some(tech =>)
       tech.toLowerCase().includes(technology.toLowerCase())
-  </div>));
-};
+;
 export const getAIAutomationServicesByPriceRange = (minPrice: number) maxPrice: number): AIAutomationService[] =>,
   return advancedAIAutomationServices.filter(service =>)
 export const getAIAutomationServicesByPriceRange = (minPric)
@@ -436,8 +431,7 @@ export const getAIAutomationServicesByPriceRange = (minPric)
   return advancedAIAutomationServices.filter(service =>)
     const _price = parseFloat(service.price.replace('$') '').replace(')'; ''));
     return price >= minPrice && (maxPrice === Infinity || price <= maxPrice);
-  });
-};
+;
 export const advancedAIAutomationServices2026 = [{name: 'Advanced AI Automation Platform 2026'
     path: '/services/advanced-ai-automation-platform-2026',
     description: 'Next-generation AI automation platform for enterprise',
@@ -453,7 +447,6 @@ export const advancedAIAutomationServices2026 = [{name: 'Advanced AI Automation 
       starter: '$599/month',
       professional: '$1199/month'}
       enterprise: 'Custom'}
-  },
     name: 'Advanced AI Workflow Engine 2026'
     path: '/services/advanced-ai-workflow-engine-2026',
     description: 'Intelligent workflow automation with AI',
@@ -464,8 +457,6 @@ export const advancedAIAutomationServices2026 = [{/* TODO: Fix JSX expression */
   l: '$1199/month'}
       enterpris,
   e: 'Custom'
-    }
-  },
     nam,
   e: 'Advanced AI Workflow Engine 2026',
     pat,
@@ -495,8 +486,6 @@ export const advancedAIAutomationServices2026 = [{/* TODO: Fix JSX expression */
   l: '$799/month',
       enterpris,
   e: 'Custom'
-    }
-  }
 ];
 export const advancedAIAutomationCategories2026 = [
   'Process Automation',
@@ -621,7 +610,7 @@ export interface AdvancedAIAutomationService,
   d: 'ai-autonomous-marketing-orchestrator', nam,
   e: 'AI Autonomous Marketing Orchestrator',' taglin,
   e: 'Coordinate all marketing channels autonomously for maximum ROI and engagement',' pric,
-  e: '$1,199',' perio,
+  e: '$1 199',' perio,
   d: '/month',' descriptio,
   n: 'End-to-end marketing automation platform that autonomously manages campaigns across all channels, optimizes budgets, and maximizes ROI using advanced AI algorithms.', feature,
   s: [' 'Cross-channel campaign coordinationAutonomous budget optimizationReal-time performance trackingA/B testing automationAudience segmentation AIContent personalizationROI maximization algorithmsPredictive analytics'' 'Multi-platform integrationAutomated reporting' ],' popula,

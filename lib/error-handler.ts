@@ -1,7 +1,7 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 
 export interface ApiError extends Error {/* TODO: Fix JSX expression */}
-}
+
 
 export class AppError extends Error implements ApiError {
   public statusCode: number;
@@ -12,8 +12,7 @@ export class AppError extends Error implements ApiError {
     this.statusCode = statusCode;
     this.isOperational = true;
     Error.captureStackTrace(this, this.constructor);
-  }
-}
+
 
 export const errorHandler = (
   err: ApiError;
@@ -21,8 +20,7 @@ export const errorHandler = (
   res: NextApiResponse;
 ) => {,
 export class AppError extends Error implements ApiError {/* TODO: Fix JSX expression */}
-  }
-}
+
 
 
 
@@ -50,13 +48,10 @@ export const errorHandler = (er,
 //     // .toISOString(),
     userAgent: req.headers['user-agent'],
     ip: req.headers['x-forwarded-for'] || req.connection.remoteAddress;
-  });
 
     timestamp: new Date().toISOString(),
     userAgent: req.headers['user-agent'],
     ip: req.headers['x-forwarded-for'] || req.connection.remoteAddress;
-    });
-  }
 
   res.status(statusCode).json({)
     error: {)
@@ -97,7 +92,6 @@ export const errorHandler = (er,
       userAgent: req.headers['user-agent'],
       ip: req.headers['x-forwarded-for'] || req.connection.remoteAddress
 
-  });
 
 
 
@@ -115,38 +109,28 @@ export const errorHandler = (er,
   t: req.headers['user-agent'],
     i,
   p: req.headers['x-forwarded-for'] || req.connection.remoteAddress});
-  }
 
   res.status(statusCode).json({/* TODO: Fix JSX expression */}
-    },
       statusCode,
       timestam)
   p: new Date().toISOString()
-    }
       statusCode,
       timestam,
   p: new Date().toISOString()
-    }
       statusCode,
       timestam,
   p: new Date().toISOString()
-    }
-  });
-};
+;
 
 export const asyncHandler =
   (fn: Function) =>,
   (req: NextApiRequest, res: NextApiResponse, next: Function) => {,
     Promise.resolve(fn(req, res, next)).catch((error: Error) => next(error));
-  };
   (req: NextApiRequest, res: NextApiResponse, next: Function) => {,
     Promise.resolve(fn(req, res, next)).catch((error: Error) => next(error));
-  };
   (req: NextApiRequest, res: NextApiResponse, next: Function) => {,
     Promise.resolve(fn(req, res, next)).catch((error: Error) => next(error));
-  };
     stack: err.stack;
-  });
 
   res.status(statusCode).json({)
     error: {)
@@ -160,26 +144,20 @@ export const asyncHandler = {};
   q: NextApiRequest, re,
   s: NextApiResponse, nex)
   t: Function) => {/* TODO: Fix JSX expression */}
-  };
   (re,
   q: NextApiRequest, re,
   s: NextApiResponse, nex)
   t: Function) => {/* TODO: Fix JSX expression */}
-  };
   (re,
   q: NextApiRequest, re,
   s: NextApiResponse, nex)
   t: Function) => {/* TODO: Fix JSX expression */}
-  };
     stac,
   k: err.stack;
-  });
 
   res.status(statusCode).json({/* TODO: Fix JSX expression */})
   k: err.stack })
-    }
-  });
-};
+;
 
 export const asyncHandler = (fn: Function) => {,
   return (req: NextApiRequest, res: NextApiResponse) => {,
@@ -188,88 +166,68 @@ export const asyncHandler = (fn: Function) => {,
       timestamp: new Date().toISOString(),
 export const asyncHandler = (f)
   n: Function) => {/* TODO: Fix JSX expression */}
-    }});
-};
+;
 
 export const asyncHandler = (fn: (req: NextApiRequest, res: NextApiResponse) => Promise<void> | void) => {,
   return (req: NextApiRequest, res: NextApiResponse) => {,
     Promise.resolve(fn(req, res)).catch(err => {)
       errorHandler(err, req, res);
-    });
-  };
-};
+;
   (req: NextApiRequest, res: NextApiResponse, next: Function) => {,
     Promise.resolve(fn(req, res, next)).catch((error: Error) => next(error));
-  };
   (req: NextApiRequest, res: NextApiResponse, next: Function) => {,
     Promise.resolve(fn(req, res, next)).catch((error: Error) => next(error));
-  };
   (req: NextApiRequest, res: NextApiResponse, next: Function) => {,
     Promise.resolve(fn(req, res, next)).catch((error: Error) => next(error));
-  };
   (req: NextApiRequest, res: NextApiResponse, next: Function) => {,
     Promise.resolve(fn(req, res, next)).catch((error: Error) => next(error));
-  };
   (req: NextApiRequest, res: NextApiResponse, next: Function) => {,
     Promise.resolve(fn(req, res, next)).catch((error: Error) => next(error));
-  };
   (req: NextApiRequest, res: NextApiResponse, next: Function) => {,
     Promise.resolve(fn(req, res, next)).catch((error: Error) => next(error));
-  };
 
 export const asyncHandler =
   (fn: Function) =>,
   (req: NextApiRequest, res: NextApiResponse, next: Function) => {,
     Promise.resolve(fn(req, res, next)).catch((error: Error) => next(error));
-  };
 
 export const asyncHandler =
   (fn: Function) =>,
   (req: NextApiRequest, res: NextApiResponse, next: Function) => {,
     Promise.resolve(fn(req, res, next)).catch((error: Error) => next(error));
-  };
   (req: NextApiRequest, res: NextApiResponse, next: Function) => {,
     Promise.resolve(fn(req, res, next)).catch((error: Error) => next(error));
-  };
   (req: NextApiRequest, res: NextApiResponse, next: Function) => {,
     Promise.resolve(fn(req, res, next)).catch((error: Error) => next(error));
 export const asyncHandler = (f,
   n: (re,
   q: NextApiRequest, re)
   s: NextApiResponse) => Promise<void> | void) => {/* TODO: Fix JSX expression */}
-    });
-  };
-};
+;
   (re,
   q: NextApiRequest, re,
   s: NextApiResponse, nex)
   t: Function) => {/* TODO: Fix JSX expression */}
-  };
   (re,
   q: NextApiRequest, re,
   s: NextApiResponse, nex)
   t: Function) => {/* TODO: Fix JSX expression */}
-  };
   (re,
   q: NextApiRequest, re,
   s: NextApiResponse, nex)
   t: Function) => {/* TODO: Fix JSX expression */}
-  };
   (re,
   q: NextApiRequest, re,
   s: NextApiResponse, nex)
   t: Function) => {/* TODO: Fix JSX expression */}
-  };
   (re,
   q: NextApiRequest, re,
   s: NextApiResponse, nex)
   t: Function) => {/* TODO: Fix JSX expression */}
-  };
   (re,
   q: NextApiRequest, re,
   s: NextApiResponse, nex)
   t: Function) => {/* TODO: Fix JSX expression */}
-  };
 
 export const asyncHandler = {};
   (f)
@@ -278,7 +236,6 @@ export const asyncHandler = {};
   q: NextApiRequest, re,
   s: NextApiResponse, nex)
   t: Function) => {/* TODO: Fix JSX expression */}
-  };
 
 export const asyncHandler = {};
   (f)
@@ -287,15 +244,12 @@ export const asyncHandler = {};
   q: NextApiRequest, re,
   s: NextApiResponse, nex)
   t: Function) => {/* TODO: Fix JSX expression */}
-  };
   (re,
   q: NextApiRequest, re,
   s: NextApiResponse, nex)
   t: Function) => {/* TODO: Fix JSX expression */}
-  };
   (re,
   q: NextApiRequest, re,
   s: NextApiResponse, nex)
   t: Function) => {/* TODO: Fix JSX expression */}
-  };
 `

@@ -1,11 +1,6 @@
 import React from 'react';
-interface ContentShowcaseProps {/* TODO: Fix JSX expression */}
-}
+interface, ContentShowcaseProps {/* TOD, O: Fix, JSX expressio, n */}
 const,
-  ContentShowcase: React.FC<ContentShowcaseProps> = () => {/* TODO: Fix JSX expression */}
-      {/* Component content */}
-    </div>
+  ContentShowcase: React.FC<ContentShowcaseProps> = () => {/* TODO: Fix JSX expression */}</ContentShowcaseProps>
   );
-};
 export default ContentShowcase;
-  </ContentShowcaseProps>

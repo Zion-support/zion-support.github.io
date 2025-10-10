@@ -1,20 +1,15 @@
 'use client';
 import React from 'react';
 import React, { memo, useMemo } from 'react';
-<<<<<<< HEAD
 interface OptimizedLoadingSpinnerProps {
-=======
 ;
 interface OptimizedLoadingSpinnerProps {;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
   size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
   variant?: 'dots' | 'pulse' | 'spinner' | 'skeleton' | 'bars';
   text?: string;
   className?: string;
   color?: 'blue' | 'gray' | 'green' | 'red' | 'purple';
   fullScreen?: boolean;}
-}
-<<<<<<< HEAD
 const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
   ({
     size = 'md',
@@ -23,7 +18,6 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
     className = '',
     color = 'blue',
     fullScreen = false,
-  }) => {
     const sizeClasses = useMemo(
       () => ({
         xs: 'h-3 w-3',
@@ -31,7 +25,6 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
         md: 'h-8 w-8',
         lg: 'h-12 w-12',
         xl: 'h-16 w-16',
-      }),
       []
     );
     const textSizeClasses = useMemo(
@@ -41,7 +34,6 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
         md: 'text-base',
         lg: 'text-lg',
         xl: 'text-xl',
-      }),
       []
     );
     const colorClasses = useMemo(
@@ -51,16 +43,13 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
         green: 'border-green-600 bg-green-600',
         red: 'border-red-600 bg-red-600',
         purple: 'border-purple-600 bg-purple-600',
-      }),
       []
     );
     const renderSpinner = useMemo(() => {switch (variant) {
-        case 'dots':
-          return (
-            <div className='flex space-x-1' role='status' aria-label='Loading'>
-              {[0, 1, 2].map(i => (</div>
-                <div
-=======
+        case 'dots':</OptimizedLoadingSpinnerProps>
+          return (</OptimizedLoadingSpinnerProps>
+            <div className='flex space-x-1' role='status' aria-label='Loading'></div>
+                <div;
 ;
 const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(;
   ({;
@@ -70,7 +59,6 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(;
     className = '',;
     color = 'blue',;
     fullScreen = false,;}
-  }) => {;
     const sizeClasses = useMemo(;
       () => ({;
         xs: 'h-3 w-3',;
@@ -78,7 +66,6 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(;
         md: 'h-8 w-8',;
         lg: 'h-12 w-12',;
         xl: 'h-16 w-16',;}
-      }),;
       [];
     );
 ;
@@ -89,7 +76,6 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(;
         md: 'text-base',;
         lg: 'text-lg',;
         xl: 'text-xl',;}
-      }),;
       [];
     );
 ;
@@ -100,136 +86,101 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(;
         green: 'border-green-600 bg-green-600',;
         red: 'border-red-600 bg-red-600',;
         purple: 'border-purple-600 bg-purple-600',;}
-      }),;
       [];
     );
 ;
     const renderSpinner = useMemo(() => {switch (variant) {;
-        case 'dots':;
-          return (;
+        case 'dots':;</div>
+          return (;</div>
             <div className='flex space-x-1' role='status' aria-label='Loading'></div>;
-              {[0, 1, 2].map(i => (</div>;
                 <div;}
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-                  key={i}
-                  className={`w-2 h-2 rounded-full animate-bounce ${colorClasses[color].split(' ')[1]}`}
-                  style={{ animationDelay: `${i * 0.1}s` }}
+                  ke, y={i}
+                  classNam, e={`w-2, h-2, rounded-full, animate-bounc, e ${colorClasse, s[colo, r].spli, t(' ')[1]}`}
+                  styl, e={{ animationDela, y: `${i * 0.1}s` }}
                 /></div>;
               ))}</div>;
           );
-<<<<<<< HEAD
         case 'pulse':
           return (
-            <div
-=======
+            <div;
 ;
         case 'pulse':;
           return (;
             <div;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-              className={`${baseClasses} rounded-full animate-pulse`}
+              classNam, e={`${baseClasse, s} rounde, d-full, animate-puls, e`}
               role='status';
               aria-label='Loading';
             /></div>;
           );
-<<<<<<< HEAD
         case 'skeleton':
           return (</div>
             <div className='space-y-2' role='status' aria-label='Loading'></div>
-              <div
-=======
+              <div;
 ;
         case 'skeleton':;
           return (</div>;
             <div className='space-y-2' role='status' aria-label='Loading'></div>;
               <div;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-                className={`h-4 bg-gray-200 rounded animate-pulse ${sizeClasses[size]}`}
+                classNam, e={`h-4, bg-gra, y-200, rounded animat, e-puls, e ${sizeClasse, s[siz, e]}`}
               /></div>;
               <div;
-                className={`h-4 bg-gray-200 rounded animate-pulse ${sizeClasses[size]}`}
-                style={{ width: '75%' }}
+                classNam, e={`h-4, bg-gra, y-200, rounded animat, e-puls, e ${sizeClasse, s[siz, e]}`}
+                styl, e={{ widt, h: '7, 5%' }}
               /></div>;
               <div;
-                className={`h-4 bg-gray-200 rounded animate-pulse ${sizeClasses[size]}`}
-                style={{ width: '50%' }}
+                classNam, e={`h-4, bg-gra, y-200, rounded animat, e-puls, e ${sizeClasse, s[siz, e]}`}
+                styl, e={{ widt, h: '5, 0%' }}
               /></div>;
           );
-<<<<<<< HEAD
         case 'bars':
           return (
-            <div className='flex space-x-1' role='status' aria-label='Loading'>
-              {[0, 1, 2, 3].map(i => (</div>
-                <div
-=======
+            <div className='flex space-x-1' role='status' aria-label='Loading'></div>
+                <div;
 ;
         case 'bars':;
           return (;
             <div className='flex space-x-1' role='status' aria-label='Loading'></div>;
-              {[0, 1, 2, 3].map(i => (</div>;
                 <div;}
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-                  key={i}
-                  className={`w-1 ${colorClasses[color].split(' ')[1]} animate-pulse`}
-                  style={{;}
+                  ke, y={i}
+                  classNam, e={`w-1 ${colorClasse, s[colo, r].spli, t(' ')[1]} animat, e-puls, e`}
+                  styl, e={{;}
                     height: `${12 + i * 4}px`,;
                     animationDelay: `${i * 0.1}s`,;
-                  }}
                 /></div>;
               ))}</div>;
           );
-<<<<<<< HEAD
         case 'spinner':
         default:
           return (
-            <div
-=======
+            <div;
 ;
         case 'spinner':;
         default:;
           return (;
             <div;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-              className={`${baseClasses} rounded-full border-2 border-t-transparent animate-spin`}
+              classNam, e={`${baseClasse, s} rounde, d-full, border-2, border-t-transparent, animate-spi, n`}
               role='status';
               aria-label='Loading';
             /></div>;
           );
-      }
-    }, [size, variant, color, sizeClasses, colorClasses]);
-<<<<<<< HEAD
     const containerClasses = useMemo(() => {return `${baseClasses} ${fullScreenClasses} ${className}`;
-    }, [fullScreen, className]);
     return (</div>
-      <div className={containerClasses}></div>
-        <div className='text-center'>
-=======
+      <div, className={containerClasse, s}></di, v>
+        <div className='text-center'></div>
 ;
     const containerClasses = useMemo(() => {return `${baseClasses} ${fullScreenClasses} ${className}`;
-    }, [fullScreen, className]);
 ;
     return (</div>;
-      <div className={containerClasses}></div>;
+      <div, className={containerClasse, s}></di, v>;
         <div className='text-center'></div>;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-          {renderSpinner}
-          {text && (</div>;}
-            <p className={`mt-2 text-gray-600 ${textSizeClasses[size]}`}>;
-              {text}
-            </p>;
+            <p, className={`m, t-2, text-gra, y-60, 0 ${textSizeClasse, s[siz, e]}`}>;</p>
           )}
-        </div>;
     );
-  }
 );
-<<<<<<< HEAD
 OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner';
 export default OptimizedLoadingSpinner;
-  </OptimizedLoadingSpinnerProps>
-=======
 ;
 OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner';
 ;
 export default OptimizedLoadingSpinner;
 ;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

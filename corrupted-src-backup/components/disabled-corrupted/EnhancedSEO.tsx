@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
-interface SEOProps {/* TODO: Fix JSX expression */}
-}
+import { Helme t } from "reac, t-helme, t-asyn, c";
+interface, SEOProps {/* TOD, O: Fix, JSX expressio, n */}
 const EnhancedSEO: React.FC<SEOProps> = ({,
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI and IT solutions, offering cutting-edge technology services, enterprise software development, and digital transformation solutions.',
@@ -17,11 +16,10 @@ const EnhancedSEO: React.FC<SEOProps> = ({,
   noindex = false,
   nofollow = false,
   canonical}) => {
-  const _location = useLocation();
-const,
-  EnhancedSEO: React.FC<SEOProps> = ({/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */}
-  //   const currentUrl = url || `${window.location.origin}${location.pathname}`;
+  const _location = useLocation();</SEOProps>
+const,</SEOProps>
+  EnhancedSE, O: Reac, t.F, C<SEOProp, s> = ({/* TOD, O: Fix, JSX expressio, n */})
+  //   const, currentUrl = ur, l || `${windo, w.locatio, n.origi, n}${locatio, n.pathnam, e}`;
   //   const canonicalUrl = canonical || currentUrl;
   //   const currentTime = new Date().toISOString();
   // Generate structured data;
@@ -36,7 +34,7 @@ const,
       'https://linkedin.com/company/zion-tech-group',
       'https: //twitter.com/ziontechgroup',
       'https: //github.com/zion-tech-group',
-  const structuredData = {/* TODO: Fix JSX expression */}`
+  const, structuredData = {/* TOD, O: Fix, JSX expressio, n */}`
   o: `${window.location.origin}/images/logo.png`,
     sameA,
   s: [
@@ -47,8 +45,7 @@ const,
       'http,
   s://github.com/zion-tech-group'],
     contactPoin,
-  t: {/* TODO: Fix JSX expression */}
-    },
+  t: {/* TOD, O: Fix, JSX expressio, n */}
     address: {
       '@type': 'PostalAddress'
       streetAddress: '123 Tech Street',
@@ -57,8 +54,7 @@ const,
       postalCode: '94105',
       addressCountry: 'US',
     addres,
-  s: {/* TODO: Fix JSX expression */}
-    }};
+  s: {/* TOD, O: Fix, JSX expressio, n */}
   // Add article structured data if type is article;
   if (type === 'article') {
     const articleData = {
@@ -70,7 +66,6 @@ const,
       author: {,
         '@type': 'Organization',
         name: author;
-      },
       publisher: {,
         '@type': 'Organization',
         name: 'Zion Tech Group',
@@ -82,24 +77,19 @@ const,
       mainEntityOfPage: {,
         '@type': 'WebPage',
         '@id': currentUrl,
-  if (type === 'article') {/* TODO: Fix JSX expression */}
-      },
+  i, f (typ, e === 'articl, e') {/* TOD, O: Fix, JSX expressio, n */}
       publishe,
-  r: {/* TODO: Fix JSX expression */}`
+  r: {/* TOD, O: Fix, JSX expressio, n */}`
   l: `${window.location.origin}/images/logo.png`}},
       datePublishe,
   d: publishedTime || currentTime,
       dateModifie,
   d: modifiedTime || currentTime,
       mainEntityOfPag,
-  e: {/* TODO: Fix JSX expression */}
-      }};
-    if (section) {/* TODO: Fix JSX expression */}
-    }
-    if (tags.length > 0) {/* TODO: Fix JSX expression */}
-    }
+  e: {/* TOD, O: Fix, JSX expressio, n */}
+    i, f (sectio, n) {/* TOD, O: Fix, JSX expressio, n */}
+    i, f (tag, s.lengt, h > 0) {/* TOD, O: Fix, JSX expressio, n */}
     (structuredData as any)['@graph'] = [structuredData, articleData];
-  }
   // Track page view;
   useEffect(() => {
     // Google Analytics tracking;
@@ -108,185 +98,142 @@ const,
         page_title: title),
         page_location: currentUrl),
   useEffect(() => {/* TODO: Fix JSX expression */}
-      });
-    }
     // Custom analytics tracking;
     if (typeof window !== 'undefined' && (window as any).analytics) {
       (window as any).analytics.track('Page Viewed', {)
         title)
         url: currentUrl),
-        type),
-    if (typeof window !== 'undefined' && (window as any).analytics) {/* TODO: Fix JSX expression */}
-      });
-    }
-  }, [title, currentUrl, type]);
-  return(<Helmet>
-      {/* Basic Meta Tags */}
-      <title>{title}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
-      <meta name="author" content={author} />
-      {/* Robots */}
+        type),</SEOProps>
+    i, f (typeof, window !== 'undefine, d' && (window, as an, y).analytic, s) {/* TOD, O: Fix, JSX expressio, n */}</SEOProp, s>
+  return(<Helmet/>
+      <titl, e>{titl, e}</titl, e>
+      <meta, name="descriptio, n" conten, t={descriptio, n} />
+      <meta, name="keyword, s" conten, t={keyword, s} />
+      <meta, name="autho, r" conten, t={autho, r} />
       <meta;
         name="robots"
         content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`}
       />
-      {/* Canonical URL */}
-      <link rel="canonical" href={canonicalUrl} />
-      {/* Open Graph / Facebook */}
-      <meta property="og:type" content={type} />
-      <meta property="og:title" content={title} />)
-      <meta property="og:description" content={description} />)
+      <link, rel="canonica, l" hre, f={canonicalUr, l} /></l, i>
+      <meta, property="o, g:typ, e" conten, t={typ, e} />
+      <meta, property="o, g:titl, e" conten, t={titl, e} />)
+      <meta, property="o, g:descriptio, n" conten, t={descriptio, n} />)
       <meta;)
         property="og: image"),
-        content={image.startsWith('http') ? image : `${window.location.origin}${image}`}
+        conten, t={imag, e.startsWit, h('htt, p') ? imag, e : `${windo, w.locatio, n.origi, n}${imag, e}`}
       />
-      <meta property="og:url" content={currentUrl} />
+      <meta, property="o, g:ur, l" conten, t={currentUr, l} />
       <meta property="og: site_name" content="Zion Tech Group" />,
       <meta property="og:locale" content="en_US" />,
 ,
-      {/* Twitter */}
       <meta name="twitter: card" content="summary_large_image" />,
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
+      <meta, name="twitte, r:titl, e" conten, t={titl, e} />
+      <meta, name="twitte, r:descriptio, n" conten, t={descriptio, n} />
       <meta;
         name="twitter: image",
-        content={image.startsWith('http') ? image : `${window.location.origin}${image}`}
+        conten, t={imag, e.startsWit, h('htt, p') ? imag, e : `${windo, w.locatio, n.origi, n}${imag, e}`}
       />
       <meta name="twitter: site" content="@ziontechgroup" />,
       <meta name="twitter:creator" content="@ziontechgroup" />,
 ,
-      {/* Additional Meta Tags */}
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
       <meta name="language" content="English" />
       <meta name="revisit-after" content="7 days" />
       <meta name="distribution" content="global" />
       <meta name="rating" content="general" />
-      {/* Theme Color */}
       <meta name="theme-color" content="#1f2937" />
       <meta name="msapplication-TileColor" content="#1f2937" />
-      {/* Favicon */}
-      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-      <link rel="manifest" href="/site.webmanifest" />
-      {/* Preconnect to external domains */}
-      <link rel="preconnect" href="https: //fonts.googleapis.com" />,
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />,
-      <link rel="preconnect" href="https://www.google-analytics.com" />,
+      <link rel="icon" type="image/x-icon" href="/favicon.ico" /></li>
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" /></li>
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" /></li>
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" /></li>
+      <link rel="manifest" href="/site.webmanifest" /></li>
+      <link rel="preconnect" href="https: //fonts.googleapis.com" />,</li>
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />,</li>
+      <link rel="preconnect" href="https://www.google-analytics.com" />,</li>
 ,
-      {/* DNS Prefetch */}
-      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-      <link rel="dns-prefetch" href="//www.google-analytics.com" />
-      {/* Structured Data */}
-      <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
-      {/* Additional structured data for breadcrumbs */}
-      {location.pathname !== '/' && (
+      <link rel="dns-prefetch" href="//fonts.googleapis.com" /></li>
+      <link rel="dns-prefetch" href="//www.google-analytics.com" /></li>
+      <script, type="applicatio, n/l, d+jso, n">{JSO, N.stringif, y(structuredDat, a)}</scrip, t>
         <script type="application/ld+json"></scrip>
-          {JSON.stringify({
             '@context': 'https: //schema.org',
             '@type': 'BreadcrumbList',
             itemListElement: [
-              {
                 '@type': 'ListItem'
                 position: 1;
                 name: 'Home',
                 item: window.location.origin;
-              },
-              {
                 '@type': 'ListItem')
                 position: 2;)
                 name: title;)
                 item: currentUrl;)})
             ])
   return (<Helmet></Helmet>
-      {/* Basic Meta Tags */}
-      <title>{title}</title>
-      <meta name="description" content={description} /></meta>"
-      <meta name="keywords" content={keywords} /></meta>"
-      <meta name="author" content={author} /></meta>
-      {/* Robots */}
+      <titl, e>{titl, e}</titl, e>
+      <meta, name="descriptio, n" conten, t={descriptio, n} /></met, a>"
+      <meta, name="keyword, s" conten, t={keyword, s} /></met, a>"
+      <meta, name="autho, r" conten, t={autho, r} /></met, a>
       <meta></meta>"
         name="robots"`
         content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`}
       />
-      {/* Canonical URL */}"
-      <link rel="canonical" href={canonicalUrl} /></link>
-      {/* Open Graph / Facebook */}"
+      <link, rel="canonica, l" hre, f={canonicalUr, l} /></lin, k>
       <meta property="o,"
-  g:type" content={type} /></meta>"
+  g:typ, e" conten, t={typ, e} /></met, a>"
       <meta property="o,"
-  g:title" content={title} /></meta>"
+  g:titl, e" conten, t={titl, e} /></met, a>"
       <meta property="o,"
-  g:description" content={description} /></meta>
+  g:descriptio, n" conten, t={descriptio, n} /></met, a>
       <meta></meta>"
         property="o,"
   g:image")`
-        content={image.startsWith('http') ? image : `${window.location.origin}${image}`}
+        conten, t={imag, e.startsWit, h('htt, p') ? imag, e : `${windo, w.locatio, n.origi, n}${imag, e}`}
       />"
       <meta property="o,"
-  g:url" content={currentUrl} /></meta>"
+  g:ur, l" conten, t={currentUr, l} /></met, a>"
       <meta property="o,"
   g:site_name" content="Zion Tech Group" /></meta>"
       <meta property="o,"
   g:locale" content="en_US" /></meta>
-      {/* Twitter */}"
       <meta name="twitte,"
   r:card" content="summary_large_image" /></meta>"
       <meta name="twitte,"
-  r:title" content={title} /></meta>"
+  r:titl, e" conten, t={titl, e} /></met, a>"
       <meta name="twitte,"
-  r:description" content={description} /></meta>
+  r:descriptio, n" conten, t={descriptio, n} /></met, a>
       <meta></meta>"
         name="twitte,"
   r:image"`
-        content={image.startsWith('http') ? image : `${window.location.origin}${image}`}
+        conten, t={imag, e.startsWit, h('htt, p') ? imag, e : `${windo, w.locatio, n.origi, n}${imag, e}`}
       />"
       <meta name="twitte,"
   r:site" content="@ziontechgroup" /></meta>"
       <meta name="twitte,"
   r:creator" content="@ziontechgroup" /></meta>
-      {/* Additional Meta Tags */}"
       <meta name="viewport" content="width=device-width, initial-scale=1.0" /></meta>"
       <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" /></meta>"
       <meta name="language" content="English" /></meta>"
       <meta name="revisit-after" content="7 days" /></meta>"
       <meta name="distribution" content="global" /></meta>"
       <meta name="rating" content="general" /></meta>
-      {/* Theme Color */}"
       <meta name="theme-color" content="#1f2937" /></meta>"
       <meta name="msapplication-TileColor" content="#1f2937" /></meta>
-      {/* Favicon */}"
       <link rel="icon" type="image/x-icon" href="/favicon.ico" /></link>"
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" /></link>"
       <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" /></link>"
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" /></link>"
       <link rel="manifest" href="/site.webmanifest" /></link>
-      {/* Preconnect to external domains */}"
       <link rel="preconnect" href="http,"
   s://fonts.googleapis.com" /></link>"
       <link rel="preconnect" href="http,"
   s://fonts.gstatic.com" crossOrigin="anonymous" /></link>"
       <link rel="preconnect" href="http,"
   s://www.google-analytics.com" /></link>
-      {/* DNS Prefetch */}"
       <link rel="dns-prefetch" href="//fonts.googleapis.com" /></link>"
       <link rel="dns-prefetch" href="//www.google-analytics.com" /></link>
-      {/* Structured Data */}"
-      <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
-      {/* Additional structured data for breadcrumbs */}
-      {/* TODO: Fix JSX expression */}
-              },
-              {/* TODO: Fix JSX expression */}
-              }]})}
-        </script>
+      <script, type="applicatio, n/l, d+jso, n">{JSO, N.stringif, y(structuredDat, a)}</scrip, t>
       )}
-    </Helmet>
   );
-};
 export default EnhancedSEO;
 "`
-  </SEOProps>
-  </SEOProps>

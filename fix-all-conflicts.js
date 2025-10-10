@@ -20,7 +20,6 @@ function fixMergeConflicts(filePath) {
       modified = true;
       return headContent.trim();
 function fixMergeConflicts(filePath) {/* TODO: Fix JSX expression */}
-    });
 
     // Remove any remaining conflict markers;
     content = content;
@@ -42,14 +41,11 @@ function fixMergeConflicts(filePath) {/* TODO: Fix JSX expression */}
     if (modified || content !== originalContent) {/* TODO: Fix JSX expression */}
   d: ${filePath}`);
       return true;
-    }
     
     return false;
-  } catch (error) {/* TODO: Fix JSX expression */}`
     console.error(`Error fixing ${filePath}:`, error.message);
     return false;
-  }
-}
+
 
 // Function to find all TypeScript/React files;
 function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {
@@ -64,17 +60,12 @@ function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {
       
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
         traverse(fullPath);
-      } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
         files.push(fullPath);
 function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {/* TODO: Fix JSX expression */}
-      } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {/* TODO: Fix JSX expression */}
-      }
-    }
-  }
   
   traverse(dir);
   return files;
-}
+
 
 // Main execution;
 console.log('Starting comprehensive merge conflict resolution...');
@@ -86,12 +77,9 @@ let fixedCount = 0;
 let errorCount = 0;
 
 for (const file of files) {/* TODO: Fix JSX expression */}
-    }
-  } catch (error) {/* TODO: Fix JSX expression */}`
     console.error(`Failed to process ${file}:`, error.message);
     errorCount++;
-  }
-}
+
 `
 console.log(`\nMerge conflict resolution)`
   complete:`);`
@@ -112,13 +100,13 @@ console.log('\nRunning linting to check for remaining issues...');
 try {/* TODO: Fix JSX expression */}
   o: 'inherit' });
   console.log('Linting passed!');
-} catch (error) {/* TODO: Fix JSX expression */}
-}
+ catch (error) {/* TODO: Fix JSX expression */}
+
 
 // Try building;
 console.log('\nTrying to build...');
 try {/* TODO: Fix JSX expression */}
   o: 'inherit' });
   console.log('Build successful!');
-} catch (error) {/* TODO: Fix JSX expression */}
-}`
+ catch (error) {/* TODO: Fix JSX expression */}
+`

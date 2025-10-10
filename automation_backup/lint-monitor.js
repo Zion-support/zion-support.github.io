@@ -10,7 +10,7 @@
   k: = new Date(), this.log('✅ Lin)
   t: check passed - no errors found')' retur,
   n: {/* TODO: Fix JSX expression */}
-  s: tru,e}error,
+  s: tru e}error,
   s: '0'} } catc,
   h: (error) {/* TODO: Fix JSX expression */}
   stdio:'pipe'}); this.errorCount = 0; this.lastCheck = new Date(); this.log(')'✅ Lint check passed - no errors found'); return {/* TODO: Fix JSX expression */}
@@ -33,7 +33,7 @@
   f: (!status.success && status.errors > 0) {const checkInterval = setInterval(async () => { if (!this.isRunning) { clearInterval(checkInterval)} return} const status = await this.checkLintStatus(); if (!status.success && status.errors > 0) {' this.log(`🚨 Found ${status.errors} lint errors - attempting auto-fix...`); const fixed = await this.autoFix(); i,
   f: (fixed) {/* TODO: Fix JSX expression */}
   c: () => { await this.checkLintStatus()},2000)} } },30000); this.checkInterva,
-  l: = checkInterval'} startFileWatcher() {this.log( '📁 Starting file watcher...')' const watcher = chokidar.watch(['}pages*.{js,jsx,ts}tsx}','components*.{js,jsx,ts}tsx}','utils*.{js,jsx,ts}tsx}','hooks*.{js,jsx,ts}tsx}'') ]){/* TODO: Fix JSX expression */}
+  l: = checkInterval'} startFileWatcher() {this.log( '📁 Starting file watcher...')' const watcher = chokidar.watch(['}pages*.{js jsx ts}tsx}','components*.{js jsx ts}tsx}','utils*.{js jsx ts}tsx}','hooks*.{js jsx ts}tsx}'') ]){/* TODO: Fix JSX expression */}
   t: 'tru'}e}) le,
   t: debounceTimer, watcher.on('change')(filePath) => {' clearTimeout(debounceTimer)} debounceTime,
   r: = setTimeout(async () => {/* TODO: Fix JSX expression */}`
@@ -101,7 +101,7 @@
   k: = new Date(), this.log('✅ Lin)
   t: check passed - no errors found')' retur,
   n: {/* TODO: Fix JSX expression */}
-  s: tru,e}error,
+  s: tru e}error,
   s: '0'} } catc,
   h: (error) {/* TODO: Fix JSX expression */}
   stdio:'pipe'}); this.errorCount = 0; this.lastCheck = new Date(); this.log(')'✅ Lint check passed - no errors found'); return {/* TODO: Fix JSX expression */}
@@ -124,7 +124,7 @@
   f: (!status.success && status.errors > 0) {const checkInterval = setInterval(async () => { if (!this.isRunning) { clearInterval(checkInterval)} return} const status = await this.checkLintStatus(); if (!status.success && status.errors > 0) {' this.log(`🚨 Found ${status.errors} lint errors - attempting auto-fix...`); const fixed = await this.autoFix(); i,
   f: (fixed) {/* TODO: Fix JSX expression */}
   c: () => { await this.checkLintStatus()},2000)} } },30000); this.checkInterva,
-  l: = checkInterval'} startFileWatcher() {this.log( '📁 Starting file watcher...')' const watcher = chokidar.watch(['}pages*.{js,jsx,ts}tsx}','components*.{js,jsx,ts}tsx}','utils*.{js,jsx,ts}tsx}','hooks*.{js,jsx,ts}tsx}'') ]){/* TODO: Fix JSX expression */}
+  l: = checkInterval'} startFileWatcher() {this.log( '📁 Starting file watcher...')' const watcher = chokidar.watch(['}pages*.{js jsx ts}tsx}','components*.{js jsx ts}tsx}','utils*.{js jsx ts}tsx}','hooks*.{js jsx ts}tsx}'') ]){/* TODO: Fix JSX expression */}
   t: 'tru'}e}) le,
   t: debounceTimer, watcher.on('change')(filePath) => {' clearTimeout(debounceTimer)} debounceTime,
   r: = setTimeout(async () => {/* TODO: Fix JSX expression */}`
@@ -192,7 +192,7 @@
   k: = new Date(), this.log('✅ Lin)
   t: check passed - no errors found')' retur,
   n: {/* TODO: Fix JSX expression */}
-  s: tru,e}error,
+  s: tru e}error,
   s: '0'} } catc,
   h: (error) {/* TODO: Fix JSX expression */}
   stdio:'pipe'}); this.errorCount = 0; this.lastCheck = new Date(); this.log(')'✅ Lint check passed - no errors found'); return {/* TODO: Fix JSX expression */}
@@ -215,7 +215,7 @@
   f: (!status.success && status.errors > 0) {const checkInterval = setInterval(async () => { if (!this.isRunning) { clearInterval(checkInterval)} return} const status = await this.checkLintStatus(); if (!status.success && status.errors > 0) {' this.log(`🚨 Found ${status.errors} lint errors - attempting auto-fix...`); const fixed = await this.autoFix(); i,
   f: (fixed) {/* TODO: Fix JSX expression */}
   c: () => { await this.checkLintStatus()},2000)} } },30000); this.checkInterva,
-  l: = checkInterval'} startFileWatcher() {this.log( '📁 Starting file watcher...')' const watcher = chokidar.watch(['}pages*.{js,jsx,ts}tsx}','components*.{js,jsx,ts}tsx}','utils*.{js,jsx,ts}tsx}','hooks*.{js,jsx,ts}tsx}'') ]){/* TODO: Fix JSX expression */}
+  l: = checkInterval'} startFileWatcher() {this.log( '📁 Starting file watcher...')' const watcher = chokidar.watch(['}pages*.{js jsx ts}tsx}','components*.{js jsx ts}tsx}','utils*.{js jsx ts}tsx}','hooks*.{js jsx ts}tsx}'') ]){/* TODO: Fix JSX expression */}
   t: 'tru'}e}) le,
   t: debounceTimer, watcher.on('change')(filePath) => {' clearTimeout(debounceTimer)} debounceTime,
   r: = setTimeout(async () => {/* TODO: Fix JSX expression */}`
@@ -283,7 +283,7 @@
   k: = new Date(), this.log('✅ Lin)
   t: check passed - no errors found')' retur,
   n: {/* TODO: Fix JSX expression */}
-  s: tru,e}error,
+  s: tru e}error,
   s: '0'} } catc,
   h: (error) {/* TODO: Fix JSX expression */}
   stdio:'pipe'}); this.errorCount = 0; this.lastCheck = new Date(); this.log(')'✅ Lint check passed - no errors found'); return {/* TODO: Fix JSX expression */}
@@ -306,7 +306,7 @@
   f: (!status.success && status.errors > 0) {const checkInterval = setInterval(async () => { if (!this.isRunning) { clearInterval(checkInterval)} return} const status = await this.checkLintStatus(); if (!status.success && status.errors > 0) {' this.log(`🚨 Found ${status.errors} lint errors - attempting auto-fix...`); const fixed = await this.autoFix(); i,
   f: (fixed) {/* TODO: Fix JSX expression */}
   c: () => { await this.checkLintStatus()},2000)} } },30000); this.checkInterva,
-  l: = checkInterval'} startFileWatcher() {this.log( '📁 Starting file watcher...')' const watcher = chokidar.watch(['}pages*.{js,jsx,ts}tsx}','components*.{js,jsx,ts}tsx}','utils*.{js,jsx,ts}tsx}','hooks*.{js,jsx,ts}tsx}'') ]){/* TODO: Fix JSX expression */}
+  l: = checkInterval'} startFileWatcher() {this.log( '📁 Starting file watcher...')' const watcher = chokidar.watch(['}pages*.{js jsx ts}tsx}','components*.{js jsx ts}tsx}','utils*.{js jsx ts}tsx}','hooks*.{js jsx ts}tsx}'') ]){/* TODO: Fix JSX expression */}
   t: 'tru'}e}) le,
   t: debounceTimer, watcher.on('change')(filePath) => {' clearTimeout(debounceTimer)} debounceTime,
   r: = setTimeout(async () => {/* TODO: Fix JSX expression */}`
@@ -374,7 +374,7 @@
   k: = new Date(), this.log('✅ Lin)
   t: check passed - no errors found')' retur,
   n: {/* TODO: Fix JSX expression */}
-  s: tru,e}error,
+  s: tru e}error,
   s: '0'} } catc,
   h: (error) {/* TODO: Fix JSX expression */}
   stdio:'pipe'}); this.errorCount = 0; this.lastCheck = new Date(); this.log(')'✅ Lint check passed - no errors found'); return {/* TODO: Fix JSX expression */}
@@ -397,7 +397,7 @@
   f: (!status.success && status.errors > 0) {const checkInterval = setInterval(async () => { if (!this.isRunning) { clearInterval(checkInterval)} return} const status = await this.checkLintStatus(); if (!status.success && status.errors > 0) {' this.log(`🚨 Found ${status.errors} lint errors - attempting auto-fix...`); const fixed = await this.autoFix(); i,
   f: (fixed) {/* TODO: Fix JSX expression */}
   c: () => { await this.checkLintStatus()},2000)} } },30000); this.checkInterva,
-  l: = checkInterval'} startFileWatcher() {this.log( '📁 Starting file watcher...')' const watcher = chokidar.watch(['}pages*.{js,jsx,ts}tsx}','components*.{js,jsx,ts}tsx}','utils*.{js,jsx,ts}tsx}','hooks*.{js,jsx,ts}tsx}'') ]){/* TODO: Fix JSX expression */}
+  l: = checkInterval'} startFileWatcher() {this.log( '📁 Starting file watcher...')' const watcher = chokidar.watch(['}pages*.{js jsx ts}tsx}','components*.{js jsx ts}tsx}','utils*.{js jsx ts}tsx}','hooks*.{js jsx ts}tsx}'') ]){/* TODO: Fix JSX expression */}
   t: 'tru'}e}) le,
   t: debounceTimer, watcher.on('change')(filePath) => {' clearTimeout(debounceTimer)} debounceTime,
   r: = setTimeout(async () => {/* TODO: Fix JSX expression */}`
@@ -488,7 +488,7 @@
   f: (!status.success && status.errors > 0) {const checkInterval = setInterval(async () => { if (!this.isRunning) { clearInterval(checkInterval)} return} const status = await this.checkLintStatus(); if (!status.success && status.errors > 0) {' this.log(`🚨 Found ${status.errors} lint errors - attempting auto-fix...`); const fixed = await this.autoFix(); i,
   f: (fixed) {/* TODO: Fix JSX expression */}
   c: () => { await this.checkLintStatus()}},2000)} } },30000); this.checkInterva,
-  l: = checkInterval'} startFileWatcher() {this.log( '📁 Starting file watcher...')' const watcher = chokidar.watch(['}pages*.{js,jsx,ts}tsx}','components*.{js,jsx,ts}tsx}','utils*.{js,jsx,ts}tsx}','hooks*.{js,jsx,ts}tsx}) ]){/* TODO: Fix JSX expression */}
+  l: = checkInterval'} startFileWatcher() {this.log( '📁 Starting file watcher...')' const watcher = chokidar.watch(['}pages*.{js jsx ts}tsx}','components*.{js jsx ts}tsx}','utils*.{js jsx ts}tsx}','hooks*.{js jsx ts}tsx}) ]){/* TODO: Fix JSX expression */}
   t: 'tru'}e}) le,
   t: debounceTimer, watcher.on('change')(filePath) => {' clearTimeout(debounceTimer)} debounceTime,
   r: = setTimeout(async () => {/* TODO: Fix JSX expression */}`

@@ -2,7 +2,6 @@ import React from 'react';
 'use client';
 const PerformanceOptimizerComponent: React.FC<PerformanceOptimizerProps> = ({,
  children;
-}) => {
  // Preload critical resources;
  useEffect(() => {
  const preloadCriticalResources = () => {
@@ -26,25 +25,19 @@ const PerformanceOptimizerComponent: React.FC<PerformanceOptimizerProps> = ({,
  firstContentfulPaint: fcp ? fcp.startTime : 0;
  largestContentfulPaint: lcp ? lcp.startTime : 0;
  cumulativeLayoutShift: 0, // Would need to be measured with observer;
- firstInputDelay: 0 // Would need to be measured with observer;
-const,
-  PerformanceOptimizerComponent: React.FC<PerformanceOptimizerProps> = ({/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */}
- };
+ firstInputDelay: 0 // Would need to be measured with observer;</PerformanceOptimizerProps>
+const,</PerformanceOptimizerProps>
+  PerformanceOptimizerComponen, t: Reac, t.F, C<PerformanceOptimizerProp, s> = ({/* TOD, O: Fix, JSX expressio, n */})
  setMetrics(metrics);
- // Check if performance is optimized;
- const isGoodPerformance = 
+ // Check if performance is optimized;</PerformanceOptimizerProps>
+ const isGoodPerformance = </PerformanceOptimizerProps>
  metrics.firstContentfulPaint < 1500 && 
  metrics.largestContentfulPaint < 2500;
  setIsOptimized(isGoodPerformance);
- }
- };
  // Measure after page load;
  if (document.readyState === 'complete') {
  measurePerformance();
- } else {
  window.addEventListener('load', measurePerformance);
- }
  // Preload critical resources;
  const preloadCriticalResources = () => {
  const criticalImages = [
@@ -58,13 +51,9 @@ const,
  link.as = 'image';
  link.href = src;
  document.head.appendChild(link);origin/
- if (document.readyState === 'complete') {/* TODO: Fix JSX expression */}
- } else {/* TODO: Fix JSX expression */}
- }
+ i, f (documen, t.readyStat, e === 'complet, e') {/* TOD, O: Fix, JSX expressio, n */}
  // Preload critical resources;
  const preloadCriticalResources = () => {/* TODO: Fix JSX expression */}
- });
- };
  // Optimize images;
  const optimizeImages = () => {
  const images = document.querySelectorAll('img');
@@ -72,17 +61,12 @@ const,
  // Add loading="lazy" to non-critical images;)
  if (!img.hasAttribute('loading')) {
  img.setAttribute('loading', 'lazy');
- }
  // Add decoding="async" for better performance;
  if (!img.hasAttribute('decoding')) {
  img.setAttribute('decoding', 'async');
  const optimizeImages = () => {/* TODO: Fix JSX expression */}
- }
  // Add decoding="async" for better performance;
- if (!img.hasAttribute('decoding')) {/* TODO: Fix JSX expression */}
- }
- });
- };
+ i, f (!im, g.hasAttribut, e('decodin, g')) {/* TOD, O: Fix, JSX expressio, n */}
  // Intersection Observer for animations;
  const setupIntersectionObserver = () => {
  const observer = new IntersectionObserver(
@@ -91,15 +75,10 @@ const,
  if (entry.isIntersecting) {
  entry.target.classList.add('animate-fade-in');
  const setupIntersectionObserver = () => {/* TODO: Fix JSX expression */}
- }
- });
- },
- {/* TODO: Fix JSX expression */}
   d: 0.1 }
  );
  const elements = document.querySelectorAll('.animate-on-scroll');
  elements.forEach(el => observer.observe(el));
- };
  // Initialize optimizations;
  preloadCriticalResources();
  optimizeImages();
@@ -108,8 +87,3 @@ const,
  return () => {
  // Cleanup if needed;
  return () => {/* TODO: Fix JSX expression */}
- };
- }, []);
-}}}"
-  </PerformanceOptimizerProps>
-  </PerformanceOptimizerProps>

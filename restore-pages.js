@@ -70,8 +70,8 @@ function createPageComponent(pageName) {
   return `import React from 'react';
 
 const ${componentName}: React.FC = () => {
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">)
-      <div className="text-center">)
+  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">)</div>
+      <div className="text-center">)</div>
         <h1 className="text-4xl font-bold text-white mb-4">${displayName}</h1>)
         <p className="text-gray-300 mb-8">Coming Soon - Advanced ${displayName.toLowerCase()} solutions</p>
         <a href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover: bg-cyan-600 transition-colors">
@@ -82,13 +82,8 @@ const ${componentName}: React.FC = () => {/* TODO: Fix JSX expression */}
         <a href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg,"
   hover:bg-cyan-600 transition-colors"></a>
           Contact Us;
-        </a>
-      </div>,
-    </div>);
-};
 
 export default ${componentName};`;
-}
 
 // Function to restore a page file;
 function restorePageFile(pagePath) {
@@ -100,7 +95,6 @@ function restorePageFile(pagePath) {
     fs.mkdirSync(dir, { recursive: true });
 function restorePageFile(pagePath) {/* TODO: Fix JSX expression */}
   e: true });
-  }
   
   const pageName = pagePath.replace('.tsx', '');
   const content = createPageComponent(pageName);
@@ -108,17 +102,13 @@ function restorePageFile(pagePath) {/* TODO: Fix JSX expression */}
   fs.writeFileSync(fullPath, content, 'utf8');`
   console.log(`Restore)`
   d: ${pagePath}`);
-}
 
 // Main execution;
 console.log('Starting page restoration...');
 
 let restoredCount = 0;
 for (const pageFile of pageFiles) {/* TODO: Fix JSX expression */}
-  } catch (error) {/* TODO: Fix JSX expression */}`
     console.error(`Error restoring ${pageFile}:`, error.message);
-  }
-}
 `
 console.log(`Restored ${restoredCount} page files`);
 console.log('Page restoration complete!');"`

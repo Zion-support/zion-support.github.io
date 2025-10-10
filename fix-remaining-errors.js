@@ -18,15 +18,11 @@ const getAllFilesWithErrors = () => {
       
       if (stat.isDirectory()) {
         scanDirectory(fullPath);
-      } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
         files.push(fullPath);
-      }
-    }
-  };
   
   scanDirectory(srcDir);
   return files;
-};
+;
 
 // Fix all remaining syntax errors;
 const fixRemainingErrors = () => {
@@ -51,8 +47,6 @@ const fixRemainingErrors = () => {
           content = content.replace(new RegExp(`const\\s+${oldName.replace(/[\s\-]/g, '\\s+')}Page:\\s*React\\.FC`, 'g'), `const ${newName}Page: React.FC`);
           content = content.replace(new RegExp(`export\\s+default\\s+${oldName.replace(/[\s\-]/g, '\\s+')}Page`, 'g'), `export default ${newName}Page`);
           modified = true;
-        }
-      }
       
       // Fix any remaining TODO comments that might cause issues;
       content = content.replace(/\/\/\s*TODO:.*$/gm, '');
@@ -73,13 +67,9 @@ const fixRemainingErrors = () => {
         fs.writeFileSync(filePath, content);
         console.log(`Fixed: ${path.relative(__dirname, filePath)}`);
         fixedCount++;
-      }
-    } catch (error) {
       console.error(`Error fixing ${filePath}:`, error.message);
-    }
-  }
   
   console.log(`Fixed ${fixedCount} files!`);
-};
+;
 
 fixRemainingErrors();

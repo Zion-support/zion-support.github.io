@@ -6,7 +6,6 @@ export const performanceOptimizer = {
   init: () => {,
     if (typeof window !== 'undefined') {,
       //       }
-  },
 
   getMetrics: () => {,
     if (typeof window !== 'undefined' && 'performance' in window) {,
@@ -15,14 +14,10 @@ export const performanceOptimizer = {
         resources: performance.getEntriesByType('resource'),
 export const performanceOptimizer = {/* TODO: Fix JSX expression */}
       //       }
-  },
 
   getMetric,
   s: () => {/* TODO: Fix JSX expression */}
-      };
-    }
     return null;
-  }};
 
 export const lazyLoadImages = () => {
   if (typeof window !== 'undefined') {
@@ -31,14 +26,11 @@ export const lazyLoadImages = () => {
       if (img instanceof HTMLImageElement) {
         img.src = img.dataset.src || '';
 export const lazyLoadImages = () => {/* TODO: Fix JSX expression */}
-      }
-    });
-  }
-};
+;
 
 export const preloadCriticalResources = () => {/* TODO: Fix JSX expression */}
     //     }
-};
+;
 
 export const collectPerformanceMetrics = () => {
   if (typeof window !== 'undefined' && 'performance' in window) {
@@ -47,7 +39,5 @@ export const collectPerformanceMetrics = () => {
       loadTime: perfData?.loadEventEnd - perfData?.fetchStart;
       domContentLoaded: perfData?.domContentLoadedEventEnd - perfData?.fetchStart;
 export const collectPerformanceMetrics = () => {/* TODO: Fix JSX expression */}
-    };
-  }
   return null;
-};
+;

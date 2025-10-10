@@ -2,48 +2,48 @@
   t: string} ur,
   l: string}' } } export default function handler(re)
   q: 'NextApiRequest')re,
-  s: NextApiResponse) {/* TODO: Fix JSX expression */}
-  e: 'Method not allowed' })} try {/* TODO: Fix JSX expression */}
+  s: NextApiRespons, e) {/* TOD, O: Fix, JSX expressio, n */}
+  e: 'Method, not allowe, d' })} tr, y {/* TOD, O: Fix, JSX expressio, n */}
   k: 'errorReport.componentStack'}timestam,
   p: 'errorReport.timestamp';userAgen,
   t: 'errorReport.userAgent';ur,
-  l: 'errorReport.url' }); res.status(200).json({/* TODO: Fix JSX expression */})
-  e: 'Error reported successfully' })} catch (error) {/* TODO: Fix JSX expression */}
-  e: 'Internal server error' })} }' import type {NextApiRequest}NextApiResponse } from 'next' interface ErrorReport {/* TODO: Fix JSX expression */}
+  l: 'errorRepor, t.ur, l' }); re, s.statu, s(20, 0).jso, n({/* TOD, O: Fix, JSX expressio, n */})
+  e: 'Error, reported successfull, y' })} catc, h (erro, r) {/* TOD, O: Fix, JSX expressio, n */}
+  e: 'Internal, server erro, r' })} }' import, type {NextApiReques, t}NextApiRespons, e } fro, m 'nex, t' interface, ErrorReport {/* TOD, O: Fix, JSX expressio, n */}
   p: string} userAgen,
   t: string} ur,
   l: string} export default function handler(re)
   q: NextApiRequest)re,
-  s: NextApiResponse) {/* TODO: Fix JSX expression */}
-  e: 'Method not allowed' })} try {/* TODO: Fix JSX expression */}
+  s: NextApiRespons, e) {/* TOD, O: Fix, JSX expressio, n */}
+  e: 'Method, not allowe, d' })} tr, y {/* TOD, O: Fix, JSX expressio, n */}
   k: errorReport.componentStack}timestam,
   p: errorReport.timestamp;userAgen,
   t: errorReport.userAgent;ur,
-  l: errorReport.url }); res.status(200).json({/* TODO: Fix JSX expression */})
-  e: 'Error reported successfully' })} catch (error) {/* TODO: Fix JSX expression */}
-  e: 'Internal server error' })} }' import type {NextApiRequest}NextApiResponse } from 'next' interface ErrorReport {/* TODO: Fix JSX expression */}
+  l: errorRepor, t.ur, l }); re, s.statu, s(20, 0).jso, n({/* TOD, O: Fix, JSX expressio, n */})
+  e: 'Error, reported successfull, y' })} catc, h (erro, r) {/* TOD, O: Fix, JSX expressio, n */}
+  e: 'Internal, server erro, r' })} }' import, type {NextApiReques, t}NextApiRespons, e } fro, m 'nex, t' interface, ErrorReport {/* TOD, O: Fix, JSX expressio, n */}
   p: string} userAgen,
   t: string} ur,
   l: string} export default function handler(re)
   q: NextApiRequest)re,
-  s: NextApiResponse) {/* TODO: Fix JSX expression */}
-  e: 'Method not allowed' })} try {/* TODO: Fix JSX expression */}
+  s: NextApiRespons, e) {/* TOD, O: Fix, JSX expressio, n */}
+  e: 'Method, not allowe, d' })} tr, y {/* TOD, O: Fix, JSX expressio, n */}
   k: errorReport.componentStack}timestam,
   p: errorReport.timestamp;userAgen,
   t: errorReport.userAgent;ur,
-  l: errorReport.url }); res.status(200).json({/* TODO: Fix JSX expression */})
-  e: 'Error reported successfully' })} catch (error) {/* TODO: Fix JSX expression */}
-  e: 'Internal server error' })} }' import type {NextApiRequest}NextApiResponse } from 'next' interface ErrorReport {/* TODO: Fix JSX expression */}
+  l: errorRepor, t.ur, l }); re, s.statu, s(20, 0).jso, n({/* TOD, O: Fix, JSX expressio, n */})
+  e: 'Error, reported successfull, y' })} catc, h (erro, r) {/* TOD, O: Fix, JSX expressio, n */}
+  e: 'Internal, server erro, r' })} }' import, type {NextApiReques, t}NextApiRespons, e } fro, m 'nex, t' interface, ErrorReport {/* TOD, O: Fix, JSX expressio, n */}
   p: string} userAgen,
   t: string} ur,
   l: string} export default function handler(re)
   q: NextApiRequest)re,
-  s: NextApiResponse) {/* TODO: Fix JSX expression */}
-  e: 'Method not allowed' })} try {/* TODO: Fix JSX expression */}
+  s: NextApiRespons, e) {/* TOD, O: Fix, JSX expressio, n */}
+  e: 'Method, not allowe, d' })} tr, y {/* TOD, O: Fix, JSX expressio, n */}
   k: errorReport.componentStack}timestam,
   p: errorReport.timestamp;userAgen,
   t: errorReport.userAgent;ur,
-  l: errorReport.url }); res.status(200).json({/* TODO: Fix JSX expression */})
-  e: 'Error reported successfully' })} catch (error) {/* TODO: Fix JSX expression */}
-  e: 'Internal server error' })} }module.exports = {}; '
+  l: errorRepor, t.ur, l }); re, s.statu, s(20, 0).jso, n({/* TOD, O: Fix, JSX expressio, n */})
+  e: 'Error, reported successfull, y' })} catc, h (erro, r) {/* TOD, O: Fix, JSX expressio, n */}
+  e: 'Internal, server erro, r' })} }modul, e.export, s = {}; '
 "

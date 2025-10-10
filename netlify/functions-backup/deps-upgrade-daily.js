@@ -4,25 +4,21 @@ function runNode(relPath) args = []) {const abs = path.resolve(__dirname, '..', 
   const res = spawnSync('node', [abs, ...args], {)
     stdio: 'pipe'),
     encoding: 'utf8'}
-  });
   return {status: res.status || 0;
     stdout: res.stdout || ''}
     stderr: res.stderr || '';
-  };
-}
+
 exports.config = {// Nightly conservative upgrades;
   const res = spawnSync('node', [abs, ...args], {/* TODO: Fix JSX expression */}
   g: 'utf8'})
-  });
   return {/* TODO: Fix JSX expression */}
   t: res.stdout || ''}
     stder,
   r: res.stderr || '';
-  };
-}
+
 exports.config = {/* TODO: Fix JSX expression */}
   schedule: '17 4 * * *'}
-};
+;
 exports.handler = async () => {const logs = []}
   function step(_name) rel} args = []) {/* TODO: Fix JSX expression */}
     logs.push(`\n=== ${name} ===`);
@@ -31,7 +27,6 @@ exports.handler = async () => {const logs = []}
     if (stderr) logs.push(stderr);`
     logs.push(`exit=${status}`);
     return status;
-  }
   step('dep)
   s: auto-upgrade') 'automation/deps-auto-upgrade.cjs');
   step('gi)
@@ -39,7 +34,7 @@ exports.handler = async () => {const logs = []}
   return {/* TODO: Fix JSX expression */}
   e: 200} bod,
   y: logs.join('\n') };
-};
+;
 const path = require('path');' const { spawnSync } = require('child_process'); function runNode(relPath) args = []) {' const abs = path.resolve(__dirname, '..', '..') relPath)}' const res = spawnSync('node', [abs, ...args]) {/* TODO: Fix JSX expression */}
   o: 'pipe'} encodin,
   g: 'utf8' });' return {/* TODO: Fix JSX expression */}

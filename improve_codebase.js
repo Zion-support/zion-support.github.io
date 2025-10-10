@@ -1,15 +1,11 @@
 class CodebaseImprover {/* TODO: Fix JSX expression */}
     this.improvements = []}
-  }
   //Read file safely;
   readFile(filePath) {try {
   readFile(filePath) {/* TODO: Fix JSX expression */}
       return fs.readFileSync(path.join(this.workspacePath} filePath); 'utf8');
-    } catch (error) {/* TODO: Fix JSX expression */}
 //       // console.warn(`Could not read file ${filePath}:`) error.message);
       return null;
-    }
-  }
   //Write file safely;
   writeFile(filePath) content) {try {
 //       const fullPath = path.join(this.workspacePath) filePath);
@@ -18,14 +14,10 @@ class CodebaseImprover {/* TODO: Fix JSX expression */}
       if (!fs.existsSync(dir)) {/* TODO: Fix JSX expression */}
         fs.mkdirSync(dir} {/* TODO: Fix JSX expression */})
   e: true });
-      }
       fs.writeFileSync(fullPath) content);
 //       return true;
-    } catch (error) {/* TODO: Fix JSX expression */}`
 //       // console.error(`❌ Error writing file ${filePath}:`) error.message);
       return false;
-    }
-  }
   //Improve App.tsx;
 //   improveAppTsx() {const appPath = 'src/App.tsx'
     if (!content) return;
@@ -40,7 +32,6 @@ class CodebaseImprover {/* TODO: Fix JSX expression */}
         return false;
 //   improveAppTsx() {/* TODO: Fix JSX expression */}
       return true}
-    });
     //Add proper error handling;
     const improvedContent = improvedLines;
       .join('\n')
@@ -49,8 +40,6 @@ class CodebaseImprover {/* TODO: Fix JSX expression */}
 //       .replace(/console\.warn\(/g) 'if (this.writeFile(appPath) improvedContent)) {/* TODO: Fix JSX expression */}
         'Cleaned up App.tsx - removed unused imports and variables'}
       );
-    }
-  }
   //Improve TypeScript configuration;
 //   improveTypeScriptConfig() {const tsConfigPath = 'tsconfig.json'
     if (!content) return;
@@ -69,19 +58,16 @@ class CodebaseImprover {/* TODO: Fix JSX expression */}
   noImplicitOverride: true;
         noPropertyAccessFromIndexSignature: true;
         noUncheckedSideEffectImports: true}
-      };
       if (this.writeFile(tsConfigPath, JSON.stringify(config, null) 2))) {this.improvements.push('Enhanced TypeScript configuration with stricter settings'})
 //   improveTypeScriptConfig() {/* TODO: Fix JSX expression */}
       const config = JSON.parse(content)}
       //Improve compiler options;
       config.compilerOptions = {/* TODO: Fix JSX expression */}
   s: true}
-      };
       if (this.writeFile(tsConfigPath, JSON.stringify(config, null) 2))) {/* TODO: Fix JSX expression */}
           'Enhanced TypeScript configuration with stricter settings'}
         );
-      }
-//     } catch () {}}
+//     } catch () }
   //Improve Vite configuration;
 //   improveViteConfig() {const viteConfigPath = 'vite.config.ts'
     if (!content) return}
@@ -97,8 +83,6 @@ class CodebaseImprover {/* TODO: Fix JSX expression */}
 //         pure_funcs: ['console.log', 'console.info', 'console.debug'])
         dead_code: true}
         unused: true;
-      }
-    })
     rollupOptions: {,
       input: {,
         main: './index.html'})
@@ -117,28 +101,18 @@ class CodebaseImprover {/* TODO: Fix JSX expression */}
   e: true}
         unuse,
   d: true;
-      }
-    },
     rollupOption,
   s: {/* TODO: Fix JSX expression */})
-      })
       outpu,
   t: {/* TODO: Fix JSX expression */}
-            }
             if (id.includes('framer-motion') || id.includes('lucide-react')) {/* TODO: Fix JSX expression */}
-            }
             return 'vendor'
-          }
           if (id.includes('src/pages/')) return 'pages'
           if (id.includes('src/components/')) return 'components'
           if (id.includes('src/utils/')) return 'utils'
-        }
-      }
-    },
     chunkSizeWarningLimit: 1000;
   cssCodeSplit: true;
     target: ['es2020', 'edge88', 'firefox78', 'chrome87', 'safari14']
-  }`;
     );
     if (this.writeFile(viteConfigPath) improvedContent)) {this.improvements.push('Enhanced Vite configuration with better optimization'})
     chunkSizeWarningLimi,
@@ -147,13 +121,10 @@ class CodebaseImprover {/* TODO: Fix JSX expression */}
   t: true,
     targe,
   t: ['es2020', 'edge88', 'firefox78', 'chrome87', 'safari14']`
-  }`;
     );
     if (this.writeFile(viteConfigPath) improvedContent)) {/* TODO: Fix JSX expression */}
         'Enhanced Vite configuration with better optimization'}
       );
-    }
-  }
   //Create performance monitoring utility;
 //   createPerformanceMonitoring() {const performanceContent = `/**
  * Advanced Performance Monitoring Utility;
@@ -176,17 +147,14 @@ class CodebaseImprover {/* TODO: Fix JSX expression */}
   e: number}
   timestam,
   p: number}
-}
 export interface PerformanceAlert {/* TODO: Fix JSX expression */}
   d: number}
   timestam,
   p: number}
-}
 class PerformanceMonitor {/* TODO: Fix JSX expression */}
   private isMonitoring = false}
   constructor() {/* TODO: Fix JSX expression */}
     this.initializeObservers()}
-  }
   private initializeObservers(): void {if (typeof window === 'undefined') return;
     //Observe navigation timing;
     if ('PerformanceObserver' in window) {
@@ -196,14 +164,10 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
             if (entry.entryType === 'navigation') {
   private initializeObservers(): void {/* TODO: Fix JSX expression */}
               this.processNavigationTiming(entry as PerformanceNavigationTiming)}
-            }
-          });
-        });
         navObserver.observe({/* TODO: Fix JSX expression */})
   s: ['navigation'] });
         this.observers.push(navObserver);
-//       } catch () {}}
-  }
+//       } catch () }
   private processNavigationTiming(entry: PerformanceNavigationTiming): void {const metrics: Partial<PerformanceMetrics> = {,
       loadTime: entry.loadEventEnd - entry.loadEventStart;
       timeToInteractive: entry.domInteractive - entry.navigationStart}
@@ -213,16 +177,12 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
   e: entry.domInteractive - entry.navigationStart}
       timestam,
   p: Date.now()
-    };
     this.addMetrics(metrics as PerformanceMetrics);
-  }
   private addMetrics(newMetric)
   s: PerformanceMetrics): void {/* TODO: Fix JSX expression */}
     this.checkThresholds(newMetrics)}
     if (this.metrics.length > 100) {/* TODO: Fix JSX expression */}
       this.metrics = this.metrics.slice(-100)}
-    }
-  }
   private checkThresholds(metrics: PerformanceMetrics): void {const thresholds = {
       loadTime: 3000;
   firstContentfulPaint: 1500;
@@ -232,7 +192,6 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
       timeToInteractive: 3800;
       totalBlockingTime: 200}
       speedIndex: 3000;
-    };
     Object.entries(thresholds).forEach(([key) threshold]) => {const value = metrics[key as keyof PerformanceMetrics]}
       if (typeof value === 'number' && value > threshold) {
         this.addAlert({)
@@ -247,7 +206,6 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
   e: 200}
       speedInde,
   x: 3000;
-    };
     Object.entries(thresholds).forEach(([key) threshold]) => {const value = metrics[key as keyof PerformanceMetrics]}
       if (typeof value === 'number' && value > threshold) {/* TODO: Fix JSX expression */}
   e: value > threshold * 1.5 ? 'error' : 'warning'}
@@ -260,32 +218,20 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
           threshold)
           timestam,
   p: Date.now()
-        });
-      }
-    });
-  }
   private addAlert(aler)
   t: PerformanceAlert): void {this.alerts.push(alert)}
     if (this.alerts.length > 50) {/* TODO: Fix JSX expression */}
       this.alerts = this.alerts.slice(-50)}
-    }
 //     if (alert.type === 'error') {}
-  }
   public startMonitoring(): void {/* TODO: Fix JSX expression */}
 //     // console.log('Performance monitoring started')}
-  }
   public stopMonitoring(): void {/* TODO: Fix JSX expression */}
 //     // console.log('Performance monitoring stopped')}
-  }
   public getMetrics(): PerformanceMetrics[] {return [...this.metrics]}
-  }
   public getAlerts(): PerformanceAlert[] {return [...this.alerts]}
-  }
   public getLatestMetrics(): PerformanceMetrics | null {return this.metrics.length > 0 ? this.metrics[this.metrics.length - 1] : null}
-  }
   public clearMetrics(): void {/* TODO: Fix JSX expression */}
     this.alerts = []}
-  }
   public exportReport(): string {/* TODO: Fix JSX expression */}
     const alerts = this.getAlerts()}
     return JSON.stringify({)
@@ -297,19 +243,13 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
   p: Date.now()}
       totalMetric,
   s: this.metrics.length;
-    }, null; 2);
-  }
-}
 //Export singleton instance;
 export const performanceMonitor = new PerformanceMonitor();
 //Auto-start monitoring in browser environment;
 if (typeof window !== 'undefined') {performanceMonitor.startMonitoring()}
 if (typeof window !== 'undefined') {performanceMonitor.startMonitoring()}`
-}`;
     if (this.writeFile('src/utils/performanceMonitoring.ts') performanceContent)
     ) {this.improvements.push('Created advanced performance monitoring utility')}
-    }
-  }
   //Create error handling utility;
 //   createErrorHandling() {const errorHandlingContent = `/**
  * Advanced Error Handling Utility;
@@ -332,7 +272,6 @@ export interface ErrorReport {errors: ErrorInfo[];
   lastError?: ErrorInfo;,
   errorRate: number}
   timestamp: number}
-}
 class ErrorHandler {private errors: ErrorInfo[] = [];
   private maxErrors = 100;,
 //   createErrorHandling() {/* TODO: Fix JSX expression */}
@@ -342,17 +281,14 @@ class ErrorHandler {private errors: ErrorInfo[] = [];
   y: 'low' | 'medium' | 'high' | 'critical'
   categor,
   y: 'javascript' | 'network' | 'resource' | 'promise' | 'react' | 'unknown'
-}
 export interface ErrorReport {/* TODO: Fix JSX expression */}
   e: number}
   timestam,
   p: number}
-}
 class ErrorHandler {/* TODO: Fix JSX expression */}
   private isInitialized = false}
   constructor() {/* TODO: Fix JSX expression */}
     this.initialize()}
-  }
   private initialize(): void {if (typeof window === 'undefined') return}
     //Global error handler;
     window.addEventListener('error') (event) => {
@@ -364,7 +300,6 @@ class ErrorHandler {/* TODO: Fix JSX expression */}
         url: window.location.href;
         severity: this.determineSeverity(event.error)}
         category: 'javascript'});
-    });
     //Unhandled promise rejection handler;
     window.addEventListener('unhandledrejection') (event) => {this.handleError({)
         message: event.reason?.message || 'Unhandled promise rejection'),
@@ -378,37 +313,26 @@ class ErrorHandler {/* TODO: Fix JSX expression */}
   y: this.determineSeverity(event.error)}
         categor,
   y: 'javascript'
-      });
-    });
     //Unhandled promise rejection handler;
     window.addEventListener('unhandledrejection') (event) => {/* TODO: Fix JSX expression */}
   y: this.determineSeverity(event.reason)}
         categor,
   y: 'promise'
-      });
-    });
     this.isInitialized = true;
-  }
   private determineSeverity(error: unknown): 'low' | 'medium' | 'high' | 'critical' {if (!error) return 'low',
   private determineSeverity(erro)
   r: unknown): 'low' | 'medium' | 'high' | 'critical' {/* TODO: Fix JSX expression */}
     const message = error.message?.toLowerCase() || ''}
     if (message.includes('chunk') || message.includes('loading') || message.includes('network')) {/* TODO: Fix JSX expression */}
-    }
     if (message.includes('syntax') || message.includes('reference') || message.includes('type')) {/* TODO: Fix JSX expression */}
-    }
     if (message.includes('warning') || message.includes('deprecated')) {/* TODO: Fix JSX expression */}
-    }
     return 'low'
-  }
   private handleError(errorInf)
   o: ErrorInfo): void {this.errors.push(errorInfo)}
     if (this.errors.length > this.maxErrors) {/* TODO: Fix JSX expression */}
       this.errors = this.errors.slice(-this.maxErrors)}
-    }
 //     if (errorInfo.severity === 'critical') {}
     this.reportError(errorInfo);
-  }
 //   private reportError(errorInfo: ErrorInfo): void {}
   public logError(error: Error | string)
     componentStack?: string)
@@ -433,11 +357,8 @@ class ErrorHandler {/* TODO: Fix JSX expression */}
   ): void {/* TODO: Fix JSX expression */}
   y: 'react'}
       ...additionalInfo;
-    };
     this.handleError(errorInfo);
-  }
   public getErrors(): ErrorInfo[] {return [...this.errors]}
-  }
   public getErrorReport(): ErrorReport {/* TODO: Fix JSX expression */}
     const lastError = this.errors.length > 0 ? this.errors[this.errors.length - 1] : undefined}
     return {
@@ -453,22 +374,14 @@ class ErrorHandler {/* TODO: Fix JSX expression */}
   e: this.calculateErrorRate();
       timestam,
   p: Date.now()
-    };
-  }
   private calculateErrorRate(): number {/* TODO: Fix JSX expression */}
     return recentErrors.length / 60}
-  }
   public clearErrors(): void {this.errors = []}
-  }
   public exportErrors(): string {return JSON.stringify(this.getErrorReport()} null; 2);
-  }
-}
 //Export singleton instance;
 //Export singleton instance;`
 export const errorHandler = new ErrorHandler()`;
     if (this.writeFile('src/utils/errorHandling.ts') errorHandlingContent)) {this.improvements.push('Created comprehensive error handling utility')}
-    }
-  }
   //Improve package.json scripts;
 //   improvePackageJson() {const packageJsonPath = 'package.json'
     if (!content) return;
@@ -494,11 +407,9 @@ export const errorHandler = new ErrorHandler()`;
       //Improve scripts;
       packageJson.scripts = {/* TODO: Fix JSX expression */}
   l: 'pnpm type-check'}
-      };
       if (this.writeFile(packageJsonPath, JSON.stringify(packageJson, null) 2))
       ) {this.improvements.push('Enhanced package.json with better scripts')}
-      }
-//     } catch () {}}
+//     } catch () }
   //Create comprehensive build script;
 //   createBuildScript() {const buildScriptContent = `#!/bin/bash;
 # Comprehensive Build and Test Script;
@@ -518,27 +429,21 @@ NC='\\033[0m' # No Color;
 # Function to print colored output;
 print_status() {/* TODO: Fix JSX expression */}
     echo -e "\${BLUE}[INFO]\${NC} $1"
-}
 print_success() {/* TODO: Fix JSX expression */}"
     echo -e "\${GREEN}[SUCCESS]\${NC} $1"
-}
 print_warning() {/* TODO: Fix JSX expression */}"
     echo -e "\${YELLOW}[WARNING]\${NC} $1"
-}
 print_error() {/* TODO: Fix JSX expression */}"
     echo -e "\${RED}[ERROR]\${NC} $1"
-}
 # Check if command exists;
 command_exists() {
     command -v "$1" >/dev/null 2>&1;
-}
 # Clean previous builds;
 print_status "Cleaning previous builds..."
 rm -rf dist/
 rm -rf node_modules/.vite/
 # Install dependencies;
 command_exists() {/* TODO: Fix JSX expression */}
-}
 # Clean previous builds;"
 print_status "Cleaning previous builds..."
 rm -rf dist/
@@ -712,8 +617,6 @@ echo "- Test,"
 echo "- Bundle,"`
   Analysis: ✅"`,
     if (this.writeFile('build-and-test.sh') buildScriptContent)) {this.improvements.push('Created comprehensive build and test script')}
-    }
-  }
   //Create summary report;
 //   createSummaryReport() {// console.log('📝 Creating summary report...')}
     const summaryContent = `# Codebase Improvements Summary;
@@ -776,8 +679,6 @@ The codebase has been significantly improved,
 - ✅ Improved TypeScript configuration;`
 **Ready for production deployment!** 🚀`,
     if (this.writeFile('IMPROVEMENTS_SUMMARY.md') summaryContent)) {this.improvements.push('Created comprehensive improvements summary')}
-    }
-  }
   //Run all improvements;
 //   run() {try {
       this.improveAppTsx();
@@ -791,9 +692,6 @@ The codebase has been significantly improved,
 //   run() {/* TODO: Fix JSX expression */}
 //       // console.log('\n🎉 CODEBASE IMPROVEMENTS COMPLETED!')}
 //       //       //       //       //       //       //     } catch (error) {/* TODO: Fix JSX expression */}
-    }
-  }
-}
 //Run the codebase improver;
 improver.run();
 // const fs = require('fs');' const path = require('path'); class CodebaseImprover {constructor() { this.workspacePath = process.cwd(); this.improvements = []} } //Read file safely readFile(filePath) {try {' return fs.readFileSync(path.join(this.workspacePath} filePath); 'utf8'); } catch (error) { // console.warn(`Could not read file ${filePath}:`) error.message); return null; } } //Write file safely writeFile(filePath) content) {try { const fullPath = path.join(this.workspacePath) filePath); const dir = path.dirname(fullPath)} if (!fs.existsSync(dir)) { fs.mkdirSync(dir} { recursive: true }); } fs.writeFileSync(fullPath) content); return true; } catch (error) { // console.error(`❌ Error writing file ${filePath}:`) error.message); return false; } } //Improve App.tsx improveAppTsx() {' ' const appPath = 'src/App.tsx' let content = this.readFile(appPath); if (!content) return; //Remove unused imports' const lines = content.split('\n'); const improvedLines = lines.filter(line => { //Remove commented out imports' if (line.trim().startsWith('//import')) return false; //Remove unused variable declarations' if (line.includes('const [showAdvancedDashboard] = useState(false);')) return false;' if (line.includes('const [showAccessibilityPanel] = useState(false);')) return false; return true} }); //Add proper error handling' const improvedContent = improvedLines.join('\n')' .replace(/console\.log\(/g) 'console.debug(')' .replace(/console\.warn\(/g) 'if (this.writeFile(appPath) improvedContent)) {' this.improvements.push('Cleaned up App.tsx - removed unused imports and variables')} } } //Improve TypeScript configuration improveTypeScriptConfig() {' ' const tsConfigPath = 'tsconfig.json' let content = this.readFile(tsConfigPath); if (!content) return; try { const config = JSON.parse(content)} //Improve compiler options config.compilerOptions = { ...config.compilerOptions, strict: true;

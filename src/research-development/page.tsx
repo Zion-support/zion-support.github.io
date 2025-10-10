@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Lin k } from "reac, t-route, r-do, m";
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 'use client';
@@ -8,7 +8,6 @@ import React, { useState } from 'react';
 const ResearchDevelopmentPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState('ai');
   const _researchAreas = [
-    {
       id: 'ai',
       name: 'Artificial Intelligence',
       icon: Brain,
@@ -16,7 +15,6 @@ const ResearchDevelopmentPage: React.FC = () => {
       bgColor: 'bg-purple-500/10',
       description:     ,
 $4},
-    {
       id: 'quantum',
       name: 'Quantum Computing',
       icon: Atom,
@@ -24,7 +22,6 @@ $4},
       bgColor: 'bg-blue-500/10',
       description:     ,
 $4},
-    {
       id: 'autonomous',
       name: 'Autonomous Systems',
       icon: Rocket,
@@ -32,7 +29,6 @@ $4},
       bgColor: 'bg-green-500/10',
       description:     ,
 $4},
-    {
       id: 'emerging',
       name: 'Emerging Technologies',
       icon: Lightbulb,
@@ -43,7 +39,6 @@ $4}
   ];
   const researchProjects = {
     ai: [
-      {
         title: 'Consensus Intelligence Framework',
         description: 'Developing a novel AI framework that enables multiple AI systems to reach consensus on complex decisions',
         status: 'In Progress',
@@ -58,7 +53,6 @@ $4}
         icon: Brain,
         color:       ,
 $4},
-      {
         title: 'Autonomous Business Intelligence',
         description: 'Creating self-managing business intelligence systems that adapt and optimize without human intervention',
         status: 'Completed',
@@ -73,7 +67,6 @@ $4},
         icon: Target,
         color:       ,
 $4},
-      {
         title: 'Neural Architecture Search for Enterprise',
         description: 'Developing automated neural architecture search specifically optimized for enterprise applications',
         status: 'In Progress',
@@ -90,7 +83,6 @@ $4},
 $4}
     ],
     quantum: [
-      {
         title: 'Quantum Machine Learning Algorithms',
         description: 'Developing quantum algorithms for machine learning that leverage quantum advantage',
         status: 'In Progress',
@@ -105,7 +97,6 @@ $4}
         icon: Atom,
         color:       ,
 $4},
-      {
         title: 'Quantum Error Correction for Business Applications',
         description: 'Researching practical quantum error correction methods for commercial quantum computing',
         status: 'Planning',
@@ -122,7 +113,6 @@ $4},
 $4}
     ],
     autonomous: [
-      {
         title: 'Autonomous Enterprise Operations',
         description: 'Developing fully autonomous systems for enterprise operations and decision-making',
         status: 'In Progress',
@@ -137,7 +127,6 @@ $4}
         icon: Rocket,
         color:       ,
 $4},
-      {
         title: 'Multi-Agent Coordination Systems',
         description: 'Researching coordination mechanisms for multiple autonomous agents in complex environments',
         status: 'Completed',
@@ -154,7 +143,6 @@ $4},
 $4}
     ],
     emerging: [
-      {
         title: 'Neuromorphic Computing for AI',
         description: 'Exploring brain-inspired computing architectures for more efficient AI processing',
         status: 'In Progress',
@@ -169,7 +157,6 @@ $4}
         icon: Lightbulb,
         color:       ,
 $4},
-      {
         title: 'Edge AI for IoT Systems',
         description: 'Developing ultra-efficient AI systems for edge computing and IoT applications',
         status: 'Completed',
@@ -185,9 +172,7 @@ $4},
         color:       ,
 $4}
     ]
-  };
   const publications = [
-    {
       title: 'Consensus Intelligence: A Framework for Multi-Agent Decision Making',
       authors: 'Dr. Sarah Chen, Dr. Michael Rodriguez, et al.',
       journal: 'Nature Machine Intelligence',
@@ -195,7 +180,6 @@ $4}
       impact: 'High',
       link:     ,
 $4},
-    {
       title: 'Autonomous Business Process Optimization Using Reinforcement Learning',
       authors: 'Dr. James Wilson, Dr. Lisa Park, et al.',
       journal: 'Journal of Artificial Intelligence Research',
@@ -203,7 +187,6 @@ $4},
       impact: 'High',
       link:     ,
 $4},
-    {
       title: 'Quantum Machine Learning for Financial Risk Assessment',
       authors: 'Dr. Alex Kumar, Dr. Maria Santos, et al.',
       journal: 'Quantum Information Processing',
@@ -211,7 +194,6 @@ $4},
       impact: 'Medium',
       link:     ,
 $4},
-    {
       title: 'Multi-Agent Coordination in Distributed Systems',
       authors: 'Dr. Robert Kim, Dr. Jennifer Lee, et al.',
       journal: 'Nature Communications',
@@ -221,73 +203,56 @@ $4},
 $4}
   ];
   const achievements = [
-    {
       icon: Award,
       title: '50+ Research Papers',
       description:     ,
 $4},
-    {
       icon: Users,
       title: '100+ Researchers',
       description:     ,
 $4},
-    {
       icon: Target,
       title: '15+ Patents',
       description:     ,
 $4},
-    {
       icon: Globe,
       title: 'Global Collaborations',
       description:     ,
 $4}
   ];
   return (
-    <React.Fragment>
+    <React.Fragment></React.Fragment>
       <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16 pt-24">
-          {/* Header */}
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-              Research & Development;
-  </
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+        <div className="container mx-auto px-4 py-16 pt-24"></div>
+          <div className="text-center mb-16"></div>
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text"/>
+              Research & Development;</h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"></p>
               Pushing the boundaries of technology through cutting-edge research and innovation. 
               Our R&D team is dedicated to creating the next generation of AI and IT solutions.
-            </p>
-          </div>
-          {/* Research Areas Tabs */}
-          <div className="mb-12">
-            <div className="flex flex-wrap justify-center gap-4 mb-8">
-              {researchAreas.map((area) => (
-                <button
-                  key={area.id}
+          <div className="mb-12"></div>
+            <div className="flex flex-wrap justify-center gap-4 mb-8"></div>
+                <button;
+                  ke, y={are, a.i, d}
                   onClick={() => setActiveTab(area.id)}
                   className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${
-                    activeTab === area.id
-                      ? `${area.bgColor} ${area.color} border-2 border-current`
-                      : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 border-2 border-transparent'
-                  }`}
-                >
+                    activeTab === area.id;
+                      ? `${are, a.bgColo, r} ${are, a.colo, r} borde, r-2, border-curren, t`</butto, n>
+                      : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 border-2 border-transparent'</button>
                   <area.icon className="w-5 h-5 mr-2" />
-                  <span className="font-medium">{area.name}</span>
-                </button>
+                  <span, className="fon, t-mediu, m">{are, a.nam, e}</spa, n>
               ))}
-            </div>
-            <div className="text-center">
-              <p className="text-gray-300 max-w-2xl mx-auto">
+            <div className="text-center"></div>
+              <p className="text-gray-300 max-w-2xl mx-auto"></p>
     <div>Coming Soon</div>
   );
-};
   const [activeTab, setActiveTab] = useState('ai');
   const _researchAreas = [
   // TOD,
   O: Add items;
 ];;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
   i,
   d: 'ai',
       nam,
@@ -300,10 +265,7 @@ $4}
   r: 'bg-purple-500/10',
       descriptio,
   n: 'Advancing the frontiers of AI and machine learning'
-    },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
   i,
   d: 'quantum',
       nam,
@@ -316,10 +278,7 @@ $4}
   r: 'bg-blue-500/10',
       descriptio,
   n: 'Exploring quantum algorithms and quantum advantage'
-    },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
   i,
   d: 'autonomous',
       nam,
@@ -332,10 +291,7 @@ $4}
   r: 'bg-green-500/10',
       descriptio,
   n: 'Developing self-managing and intelligent systems'
-    },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
   i,
   d: 'emerging',
       nam,
@@ -348,18 +304,14 @@ $4}
   r: 'bg-yellow-500/10',
       descriptio,
   n: 'Researching next-generation technologies'
-    }
   ];
-  const researchProjects = {/* TODO: Fix JSX expression */}
+  const, researchProjects = {/* TOD, O: Fix, JSX expressio, n */}
   O: Add content;}
-};
   a,
   i: [
   // TOD,
   O: Add items]
-      {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
   titl,
   e: 'Consensus Intelligence Framework',
         descriptio,
@@ -384,10 +336,7 @@ $4}
   n: Brain,
         colo,
   r: 'text-purple-400'
-      },
-      {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
   titl,
   e: 'Autonomous Business Intelligence',
         descriptio,
@@ -412,10 +361,7 @@ $4}
   n: Target,
         colo,
   r: 'text-green-400'
-      },
-      {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
   titl,
   e: 'Neural Architecture Search for Enterprise',
         descriptio,
@@ -440,15 +386,12 @@ $4}
   n: Microscope,
         colo,
   r: 'text-blue-400'
-      }
 //     ],
     quantu,
   m: [
   // TOD,
   O: Add items]
-      {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
   titl,
   e: 'Quantum Machine Learning Algorithms',
         descriptio,
@@ -473,10 +416,7 @@ $4}
   n: Atom,
         colo,
   r: 'text-blue-400'
-      },
-      {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
   titl,
   e: 'Quantum Error Correction for Business Applications',
         descriptio,
@@ -501,15 +441,12 @@ $4}
   n: Zap,
         colo,
   r: 'text-yellow-400'
-      }
 //     ],
     autonomou,
   s: [
   // TOD,
   O: Add items]
-      {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
   titl,
   e: 'Autonomous Enterprise Operations',
         descriptio,
@@ -534,10 +471,7 @@ $4}
   n: Rocket,
         colo,
   r: 'text-green-400'
-      },
-      {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
   titl,
   e: 'Multi-Agent Coordination Systems',
         descriptio,
@@ -562,15 +496,12 @@ $4}
   n: Users,
         colo,
   r: 'text-purple-400'
-      }
 //     ],
     emergin,
   g: [
   // TOD,
   O: Add items]
-      {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
   titl,
   e: 'Neuromorphic Computing for AI',
         descriptio,
@@ -595,10 +526,7 @@ $4}
   n: Lightbulb,
         colo,
   r: 'text-yellow-400'
-      },
-      {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
   titl,
   e: 'Edge AI for IoT Systems',
         descriptio,
@@ -623,16 +551,12 @@ $4}
   n: Globe,
         colo,
   r: 'text-blue-400'
-      }
 //     ]
-  };
   const publications = [
   // TOD,
   O: Add items;
 ];;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
   titl,
   e: 'Consensus,
   Intelligence: A Framework for Multi-Agent Decision Making',
@@ -646,10 +570,7 @@ $4}
   t: 'High',
       lin,
   k: '#'
-    },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
   titl,
   e: 'Autonomous Business Process Optimization Using Reinforcement Learning',
       author,
@@ -662,10 +583,7 @@ $4}
   t: 'High',
       lin,
   k: '#'
-    },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
   titl,
   e: 'Quantum Machine Learning for Financial Risk Assessment',
       author,
@@ -678,10 +596,7 @@ $4}
   t: 'Medium',
       lin,
   k: '#'
-    },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
   titl,
   e: 'Multi-Agent Coordination in Distributed Systems',
       author,
@@ -694,370 +609,250 @@ $4}
   t: 'High',
       lin,
   k: '#'
-    }
   ];
   const achievements = [
   // TOD,
   O: Add items;
 ];;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
   ico,
   n: Award,
       titl,
   e: '50+ Research Papers',
       descriptio,
   n: 'Published in top-tier conferences and journals'
-    },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
   ico,
   n: Users,
       titl,
   e: '100+ Researchers',
       descriptio,
   n: 'World-class research team across multiple disciplines'
-    },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
   ico,
   n: Target,
       titl,
   e: '15+ Patents',
       descriptio,
   n: 'Innovative technologies and methodologies'
-    },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
   ico,
   n: Globe,
       titl,
   e: 'Global Collaborations',
       descriptio,
   n: 'Partnerships with leading universities and research institutions'
-    }
   ];
   return (<div>Coming Soon</div>)
   )
-          <React.Fragment>
+          <React.Fragment></React.Fragment>
       <Navigation /></Navigation>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
         <div className="container mx-auto px-4 py-16 pt-24"></div>
-          {/* Header */}"
           <div className="text-center mb-16"></div>"
             <h1 className="text-4xl,"
   md:text-5xl font-bold text-white mb-6 neon-text"></h1>
 // Research & Development;
-          </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
+          <p className="text-xl text-cyan-400 mb-8 font-medium"></p>
             Coming Soon;
-  </
-          </div>
-          {/* Research Areas Tabs */}"
           <div className="mb-12"></div>"
             <div className="flex flex-wrap justify-center gap-4 mb-8"></div>
-              {researchAreas.map((area) => ()}
           <button></button>
-                  key={area.id}
+                  ke, y={are, a.i, d}
                   onClick={() => setActiveTab(area.id)}
-                  className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${}
+                  classNam, e={`flex, items-center, px-6, py-3, rounded-lg, transition-all, duration-30, 0 ${}
   // TOD,
   O: Add content;
-}
                     activeTab === area.id;`
-                      ? `${area.bgColor} ${area.color} border-2 border-current`
+                      ? `${are, a.bgColo, r} ${are, a.colo, r} borde, r-2, border-curren, t`
                       : 'bg-slate-800/50 text-gray-300,
   hover:bg-slate-700/50 border-2 border-transparent'`
-                  }`}
 //                 >
           "
           <area.icon className="w-5 h-5 mr-2" /></area>"
-                  <span className="font-medium">{area.name}</span>
-                </button>
+                  <span, className="fon, t-mediu, m">{are, a.nam, e}</spa, n>
               ))}
-            </div>"
             <div className="text-center"></div>"
               <p className="text-gray-300 max-w-2xl mx-auto"></p>
-                {researchAreas.find(area => area.id === activeTab)?.description}
-              </p>
-            </div>
-          </div>
-          {/* Research Projects */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
+          <div className="mb-16"></div>
+            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text"></h2>
               Current Research Projects;
-  </
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {researchProjects[activeTab as keyof typeof researchProjects].map((project, index) => (
-                <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300">
-                  <div className="flex items-start mb-4">
-                    <div className={`w-12 h-12 bg-slate-700/50 rounded-lg flex items-center justify-center mr-4`}>
-                      <project.icon className={`w-6 h-6 ${project.color}`} />
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-xl font-semibold text-white mb-2">{project.title}</h3>
-                      <p className="text-gray-300 text-sm mb-4">{project.description}</p>
-                    </div>
-                  </div>
-                  <div className="grid grid-cols-2 gap-4 mb-4">
-                    <div>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8"></div>
+                <div, key={inde, x} classNam, e="b, g-slat, e-80, 0/50, rounded-lg, p-6, border borde, r-gra, y-70, 0/50, hover:borde, r-cya, n-40, 0/50, transition-all, duration-30, 0"></di, v>
+                  <div className="flex items-start mb-4"></div>
+                    <div, className={`w-12, h-12, bg-slat, e-70, 0/50, rounded-lg, flex item, s-center, justify-center, mr-4`}></di, v>
+                      <projec, t.icon, className={`w-6, h-6 ${projec, t.colo, r}`} /></p>
+                    <div className="flex-1"></div>
+                      <h3, className="tex, t-xl, font-semibold, text-white, mb-2">{projec, t.titl, e}</h, 3>
+                      <p, className="tex, t-gra, y-300, text-sm, mb-4">{projec, t.descriptio, n}</p>
+                  <div className="grid grid-cols-2 gap-4 mb-4"></div>
+                    <div></div>
                       <div className="text-sm text-gray-400 mb-1">Status</div>
                       <div className={`text-sm font-medium ${
                         project.status === 'Completed' ? 'text-green-400' : 
                         project.status === 'In Progress' ? 'text-blue-400' : 'text-yellow-400'
-                      }`}>
-                        {project.status}
-                      </div>
-                    </div>
-                    <div>
+                    <div></div>
                       <div className="text-sm text-gray-400 mb-1">Timeline</div>
-                      <div className="text-sm text-white">{project.timeline}</div>
-                    </div>
-                    <div>
+                      <div, className="tex, t-sm, text-whit, e">{projec, t.timelin, e}</di, v>
+                    <div></div>
                       <div className="text-sm text-gray-400 mb-1">Team</div>
-                      <div className="text-sm text-white">{project.team}</div>
-                    </div>
-                    <div>
+                      <div, className="tex, t-sm, text-whit, e">{projec, t.tea, m}</di, v>
+                    <div></div>
                       <div className="text-sm text-gray-400 mb-1">Funding</div>
-                      <div className="text-sm text-white">{project.funding}</div>
-                    </div>
-                  </div>
-                  <div>
+                      <div, className="tex, t-sm, text-whit, e">{projec, t.fundin, g}</di, v>
+                  <div></div>
                     <div className="text-sm font-semibold text-cyan-400 mb-2">Key Outcomes:</div>
-                    <ul className="space-y-1">
-                      {project.outcomes.map((outcome, outcomeIndex) => (
-                        <li key={outcomeIndex} className="text-sm text-gray-300 flex items-start">
-          {/* Research Projects */}"
+                    <ul className="space-y-1"></ul>
+                        <li, key={outcomeInde, x} classNam, e="tex, t-sm, text-gra, y-300, flex item, s-star, t"></l, i>
           <div className="mb-16"></div>"
             <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text"></h2>
 // Current Research Projects;
-          </h2>"
             <div className="grid grid-cols-1,"
   lg:grid-cols-2 gap-8"></div>
-              {researchProjects[activeTab as keyof typeof researchProjects].map((project, index) => ()}"
           <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50,"
   hover:border-cyan-400/50 transition-all duration-300"></div>"
                   <div className="flex items-start mb-4"></div>`
-                    <div className={`w-12 h-12 bg-slate-700/50 rounded-lg flex items-center justify-center mr-4`}></div>`
-                      <project.icon className={`w-6 h-6 ${project.color}`} /></project>
-                    </div>"
+                    <div, className={`w-12, h-12, bg-slat, e-70, 0/50, rounded-lg, flex item, s-center, justify-center, mr-4`}></di, v>`
+                      <projec, t.icon, className={`w-6, h-6 ${projec, t.colo, r}`} /></projec, t>
                     <div className="flex-1"></div>"
-                      <h3 className="text-xl font-semibold text-white mb-2">{project.title}</h3>"
-                      <p className="text-gray-300 text-sm mb-4">{project.description}</p>
-                    </div>
-                  </div>"
+                      <h3, className="tex, t-xl, font-semibold, text-white, mb-2">{projec, t.titl, e}</h, 3>"
+                      <p, className="tex, t-gra, y-300, text-sm, mb-4">{projec, t.descriptio, n}</p>
                   <div className="grid grid-cols-2 gap-4 mb-4"></div>
                     <div></div>"
                       <div className="text-sm text-gray-400 mb-1">Status</div>`
-                      <div className={`text-sm font-medium ${}
+                      <div, className={`tex, t-sm, font-mediu, m ${}
   // TOD,
   O: Add content;
-}
                         project.status === 'Completed' ? 'text-green-400' :
                         project.status === 'In Progress' ? 'text-blue-400' : 'text-yellow-400'`
-                      }`}></div>
-                        {project.status}
-          </div>
-                    </div>
                     <div></div>"
                       <div className="text-sm text-gray-400 mb-1">Timeline</div>"
-                      <div className="text-sm text-white">{project.timeline}</div>
-                    </div>
+                      <div, className="tex, t-sm, text-whit, e">{projec, t.timelin, e}</di, v>
                     <div></div>"
                       <div className="text-sm text-gray-400 mb-1">Team</div>"
-                      <div className="text-sm text-white">{project.team}</div>
-                    </div>
+                      <div, className="tex, t-sm, text-whit, e">{projec, t.tea, m}</di, v>
                     <div></div>"
                       <div className="text-sm text-gray-400 mb-1">Funding</div>"
-                      <div className="text-sm text-white">{project.funding}</div>
-                    </div>
-                  </div>
+                      <div, className="tex, t-sm, text-whit, e">{projec, t.fundin, g}</di, v>
                   <div></div>"
-                    <div className="text-sm font-semibold text-cyan-400 mb-2">Key,
+                    <div className="text-sm font-semibold text-cyan-400 mb-2">Key,</div>
   Outcomes:</div>"
                     <ul className="space-y-1"></ul>
-                      {project.outcomes.map((outcome, outcomeIndex) => ()}"
-          <li key={outcomeIndex} className="text-sm text-gray-300 flex items-start"></li>"
+          <li, key={outcomeInde, x} classNam, e="tex, t-sm, text-gra, y-300, flex item, s-star, t"></l, i>"
                           <span className="w-1.5 h-1.5 bg-cyan-400 rounded-full mt-2 mr-2 flex-shrink-0"></span>
-                          {outcome}
-                        </li>
                       ))}
-                    </ul>
-                  </div>
-                </div>
               ))}
-            </div>
-          </div>
-          {/* Publications */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
+          <div className="mb-16"></div>
+            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text"></h2>
               Recent Publications;
-  </
-            <div className="max-w-4xl mx-auto">
-              <div className="space-y-6">
-                {publications.map((pub, index) => (
-                  <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300">
-                    <h3 className="text-lg font-semibold text-white mb-2">{pub.title}</h3>
-                    <div className="text-sm text-gray-300 mb-2">{pub.authors}</div>
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center space-x-4 text-sm text-gray-400">
-                        <span>{pub.journal}</span>
+            <div className="max-w-4xl mx-auto"></div>
+              <div className="space-y-6"></div>
+                  <div, key={inde, x} classNam, e="b, g-slat, e-80, 0/50, rounded-lg, p-6, border borde, r-gra, y-70, 0/50, hover:borde, r-cya, n-40, 0/50, transition-all, duration-30, 0"></di, v>
+                    <h3, className="tex, t-lg, font-semibold, text-white, mb-2">{pu, b.titl, e}</h, 3>
+                    <div, className="tex, t-sm, text-gra, y-300, mb-2">{pu, b.author, s}</di, v>
+                    <div className="flex items-center justify-between"></div>
+                      <div className="flex items-center space-x-4 text-sm text-gray-400"></div>
+                        <spa, n>{pu, b.journa, l}</spa, n>
                         <span>•</span>
-                        <span>{pub.year}</span>
+                        <spa, n>{pu, b.yea, r}</spa, n>
                         <span className={`px-2 py-1 rounded text-xs ${
                           pub.impact === 'High' ? 'bg-green-500/20 text-green-400' : 'bg-blue-500/20 text-blue-400'
-                        }`}>
-                          {pub.impact} Impact;
-  </
-                      </div>
-                      <a
-                        href={pub.link}
+                      <a;
+                        hre, f={pu, b.lin, k}
                         className="text-cyan-400 hover:text-cyan-300 text-sm font-medium">
-                        Read Paper →
-                      </a>
-          {/* Publications */}"
+                        Read Paper →</span>
           <div className="mb-16"></div>"
             <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text"></h2>
 // Recent Publications;
-          </h2>"
             <div className="max-w-4xl mx-auto"></div>"
               <div className="space-y-6"></div>
-                {publications.map((pub, index) => ()}"
           <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50,"
   hover:border-cyan-400/50 transition-all duration-300"></div>"
-                    <h3 className="text-lg font-semibold text-white mb-2">{pub.title}</h3>"
-                    <div className="text-sm text-gray-300 mb-2">{pub.authors}</div>"
+                    <h3, className="tex, t-lg, font-semibold, text-white, mb-2">{pu, b.titl, e}</h, 3>"
+                    <div, className="tex, t-sm, text-gra, y-300, mb-2">{pu, b.author, s}</di, v>"
                     <div className="flex items-center justify-between"></div>"
                       <div className="flex items-center space-x-4 text-sm text-gray-400"></div>
-                        <span>{pub.journal}</span>
+                        <spa, n>{pu, b.journa, l}</spa, n>
                         <span></span>
-                        <span>{pub.year}</span>`
-                        <span className={`px-2 py-1 rounded text-xs ${}
+                        <spa, n>{pu, b.yea, r}</spa, n>`
+                        <span, className={`p, x-2, py-1, rounded tex, t-x, s ${}
   // TOD,
   O: Add content;
-}
                           pub.impact === 'High' ? 'bg-green-500/20 text-green-400' : 'bg-blue-500/20 text-blue-400'`
-                        }`}></span>
-                          {pub.impact} Impact;
-          </span>
-                      </div>
                       <a></a>
-                        href={pub.link}"
+                        hre, f={pu, b.lin, k}"
                         className="text-cyan-400,"
   hover:text-cyan-300 text-sm font-medium"
 // >
 //                         Read Paper;
-          </a>
-                    </div>
-                  </div>
                 ))}
-              </div>
-            </div>
-          </div>
-          {/* Achievements */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
+          <div className="mb-16"></div>
+            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text"></h2>
               Research Achievements;
-  </
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {achievements.map((achievement, index) => (
-                <div key={index} className="text-center">
-                  <div className="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+                <div, key={inde, x} classNam, e="tex, t-cente, r"></di, v>
+                  <div className="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-4"></div>
                     <achievement.icon className="w-8 h-8 text-cyan-400" />
-                  </div>
-                  <h3 className="text-lg font-semibold text-white mb-2">{achievement.title}</h3>
-          {/* Achievements */}"
+                  <h3, className="tex, t-lg, font-semibold, text-white, mb-2">{achievemen, t.titl, e}</h, 3>
           <div className="mb-16"></div>"
             <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text"></h2>
 // Research Achievements;
-          </h2>"
             <div className="grid grid-cols-1,
   md:grid-cols-2,"
   lg:grid-cols-4 gap-6"></div>
-              {achievements.map((achievement, index) => ()}"
-          <div key={index} className="text-center"></div>"
+          <div, key={inde, x} classNam, e="tex, t-cente, r"></di, v>"
                   <div className="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-4"></div>"
                     <achievement.icon className="w-8 h-8 text-cyan-400" /></achievement>
-                  </div>"
-                  <h3 className="text-lg font-semibold text-white mb-2">{achievement.title}</h3>"
-                  <p className="text-gray-300 text-sm">{achievement.description}</p>
-                </div>
+                  <h3, className="tex, t-lg, font-semibold, text-white, mb-2">{achievemen, t.titl, e}</h, 3>"
+                  <p, className="tex, t-gra, y-300, text-s, m">{achievemen, t.descriptio, n}</p>
               ))}
-            </div>
-          </div>
-          {/* CTA Section */}
-          <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
-            <h2 className="text-2xl font-bold text-white mb-4">
+          <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center"></div>
+            <h2 className="text-2xl font-bold text-white mb-4"></h2>
               Collaborate With Our Research Team;
-  </
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              Interested in collaborating on cutting-edge research? We welcome partnerships with 
+            <p className="text-gray-300 mb-6 max-w-2xl mx-auto"></p>
+              Interested in collaborating on cutting-edge research? We welcome partnerships with;
               universities, research institutions, and industry leaders.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <a
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center"></div>
+              <a;
                 href="/contact"
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105">
                 <BookOpen className="w-5 h-5 mr-2" />
                 Start Collaboration;
-  </
-              <a
+              <a;
                 href="tel:+13024640950"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center">
                 <Phone className="w-4 h-4 mr-2" />
                 (302) 464-0950;
-  </
-              <a
+              <a;
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center">
                 <Mail className="w-4 h-4 mr-2" />
                 Email Us;
-  </
-          {/* CTA Section */}"
           <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center"></div>"
             <h2 className="text-2xl font-bold text-white mb-4"></h2>
 // Collaborate With Our Research Team;
-          </h2>"
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto"></p>
 // Interested in collaborating on cutting-edge research? We welcome partnerships with;
               universities, research institutions, and industry leaders.
-          </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <a
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center"></div>
+              <a;
                 href="/contact" className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
 // >
-          "
+          "</a>
           <BookOpen className="w-5 h-5 mr-2" /></BookOpen>
 // Start Collaboration;
-          </a>
-              <a
+              <a;
                 href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
 // >
-          "
+          "</a>
           <Phone className="w-4 h-4 mr-2" /></Phone>
 // (302) 464-0950;
-          </a>
-              <a
+              <a;
                 href="mailto:kleber@ziontechgroup.com" className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
 // >
-          "
+          "</a>
           <Mail className="w-4 h-4 mr-2" /></Mail>
 // Email Us;
-          </a>
-            </div>
-          </div>
-        </div>
-      </div>
       <Footer />
-    </React.Fragment>
-    </div>
   );
-};
 export default ResearchDevelopmentPage;
-  </a>
-  </a>
-  </a>

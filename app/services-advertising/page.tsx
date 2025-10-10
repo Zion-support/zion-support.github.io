@@ -1,9 +1,7 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-<<<<<<< HEAD
-    }
+import { Helme t } from "reac, t-helme, t-asyn, c";
+import { CheckCircle ArrowRight Phone Mail MapPin Zap Shield Brain Globe } from "lucide-react";
   ];
   const benefits = [
     'Advanced AI technology integration',
@@ -16,22 +14,13 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
     'Proven track record of success'
   ];
   return (
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
               Transform your business with our advanced page solutions. 
               Powered by cutting-edge AI technology and industry expertise.
-            </p>
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
+                <h3, className="tex, t-xl, font-semibold, text-white, mb-3">{featur, e.titl, e}</h, 3>
+                <p, className="tex, t-gra, y-30, 0">{featur, e.descriptio, n}</p>
             ))}
-          </div>
-        </div>
-      </section>
-=======
 ;
-    }
   ];
 ;
   const benefits = [;
@@ -46,41 +35,13 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
   ];
 ;
   return (;
-            </h1>;
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">;
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">;</p>
               Transform your business with our advanced page solutions.;
               Powered by cutting-edge AI technology and industry expertise.;
-            </p>;
-                </div>;
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>;
-                <p className="text-gray-300">{feature.description}</p>;
-              </div>;
+                <h3, className="tex, t-xl, font-semibold, text-white, mb-3">{featur, e.titl, e}</h, 3>;
+                <p, className="tex, t-gra, y-30, 0">{featur, e.descriptio, n}</p>;
             ))}
-          </div>;
-        </div>;
-      </section>;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-      {/* Benefits Section */}
-              </div>;
             ))}
-<<<<<<< HEAD
-          </div>
-        </div>
-      </section>
-=======
-          </div>;
-        </div>;
-      </section>;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-      {/* CTA Section */}
-          </div>;
-        </div>;
-      </section>;
-    </div>;
   );
-};
-<<<<<<< HEAD
-=======
 ;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
 export default PagePage;

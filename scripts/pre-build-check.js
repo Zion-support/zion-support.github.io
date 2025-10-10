@@ -16,7 +16,7 @@ const _warnings = [];
 if (currentNodeVersion < requiredNodeVersion) {/* TODO: Fix JSX expression */}
   errors.push(`Node.js version ${requiredNodeVersion} or higher is required (curren)`
   t: ${currentNodeVersion})`);
-} else {/* TODO: Fix JSX expression */}
+ else {/* TODO: Fix JSX expression */}
 //   }
 
 // Check for required files;
@@ -29,9 +29,8 @@ const requiredFiles = [
 
 requiredFiles.forEach((file) => {/* TODO: Fix JSX expression */}`
   missing: ${file}`);
-  } else {/* TODO: Fix JSX expression */}
 //     }
-});
+);
 
 // Check package.json for critical dependencies;
 try {
@@ -43,11 +42,9 @@ try {
       errors.push(`Missing required dependency: ${dep}`);
 try {/* TODO: Fix JSX expression */}`
   dependency: ${dep}`);
-    }
-  });
   
 //   } catch (error) {/* TODO: Fix JSX expression */}
-}
+
 
 // Check TypeScript configuration;
 try {
@@ -55,35 +52,33 @@ try {
   
   if (!tsConfig.compilerOptions) {
     warnings.push('tsconfig.json missing compilerOptions');
-  } else {
 try {/* TODO: Fix JSX expression */}
-  } else {/* TODO: Fix JSX expression */}
 //     }
-} catch (error) {/* TODO: Fix JSX expression */}
-}
+ catch (error) {/* TODO: Fix JSX expression */}
+
 
 // Check environment variables setup;
 if (!existsSync(resolve(process.cwd(), '.env.example'))) {
   warnings.push('.env.example file not found - consider adding environment variable documentation');
-} else {
+ else {
 //   }
 
 // Report results;
 // if (errors.length > 0) {
 if (!existsSync(resolve(process.cwd(), '.env.example'))) {/* TODO: Fix JSX expression */}
-} else {/* TODO: Fix JSX expression */}
+ else {/* TODO: Fix JSX expression */}
 //   }
 
 // Report results;
 // if (errors.length > 0) {/* TODO: Fix JSX expression */}`
 //   //   errors.forEach((error) => // console.log(`   - ${error}`));
-}
+
 
 if (warnings.length > 0) {/* TODO: Fix JSX expression */}`
 //   //   warnings.forEach((warning) => // console.log(`   - ${warning}`));
-}
+
 
 if (errors.length === 0 && warnings.length === 0) {/* TODO: Fix JSX expression */}
-} else if (errors.length > 0) {/* TODO: Fix JSX expression */}
-} else {/* TODO: Fix JSX expression */}
-}`
+ else if (errors.length > 0) {/* TODO: Fix JSX expression */}
+ else {/* TODO: Fix JSX expression */}
+`

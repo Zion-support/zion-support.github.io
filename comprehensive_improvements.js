@@ -12,7 +12,7 @@ packageJson.scripts = {
     'analyze: bundle': 'vite build --mode analyze && npx vite-bundle-analyzer dist/stats.html',
     'perf:audit': 'lighthouse http://localhost:4173 --output=html --output-path=./lighthouse-report.html',
 packageJson.scripts = {/* TODO: Fix JSX expression */}
-};
+;
 
 fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
 // // 2. Create performance optimization script;
@@ -83,24 +83,20 @@ fs.writeFileSync('/workspace/scripts/seo-improver.js', seoScript);
 // // const testSuite = `import { describe, it, expect } from '@jest/globals';
 
 describe('Comprehensive Test Suite', () => {/* TODO: Fix JSX expression */}
-    });
 
     it('should pass performance test', () => {
 //         const startTime = Date.now();
         // Simulate some work;
 //         const endTime = Date.now();
         expect(endTime - startTime).toBeLessThan(1000);
-    });
 
     it('should pass accessibility test', () => {
         // Basic accessibility check;
         expect(document).toBeDefined();
     it('should pass performance test', () => {/* TODO: Fix JSX expression */}
-    });
 
     it('should pass accessibility test', () => {/* TODO: Fix JSX expression */}
-    });
-});`
+);`
 `;
 
 fs.writeFileSync('/workspace/__tests__/comprehensive.test.js', testSuite);
@@ -118,7 +114,6 @@ fs.writeFileSync('/workspace/__tests__/comprehensive.test.js', testSuite);
 
 // // Monitor performance;
 // try {/* TODO: Fix JSX expression */}
-    });
 //     } catch (error) {/* TODO: Fix JSX expression */}
 //     }
 `
@@ -206,7 +201,7 @@ const improvementSummary = {
         'Monitor system performance'
     ]
 const improvementSummary = {/* TODO: Fix JSX expression */}
-};
+;
 
 fs.writeFileSync('/workspace/improvements-summary.json', JSON.stringify(improvementSummary, null, 2));
 // // // // // // // // // // // // // // `

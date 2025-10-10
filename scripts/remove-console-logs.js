@@ -17,13 +17,10 @@ const findFiles = (dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) => {
     
     if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
       files = files.concat(findFiles(fullPath, extensions));
-    } else if (extensions.some(ext => item.endsWith(ext))) {
       files.push(fullPath);
-    }
-  }
   
   return files;
-};
+;
 
 // Remove console.log statements;
 const removeConsoleLogs = (filePath) => {
@@ -65,8 +62,8 @@ const excludePatterns = [
 ];
 
 // Get all TypeScript and JavaScript files;
-const files = await glob('**/*.{ts,tsx,js,jsx}', {/* TODO: Fix JSX expression */})
-});
+const files = await glob('**/*.{ts tsx js jsx}', {/* TODO: Fix JSX expression */})
+);
 
 let totalRemoved = 0;
 let filesProcessed = 0;
@@ -88,7 +85,6 @@ for (const file of files) {/* TODO: Fix JSX expression */}
       console.log(`✅ ${file}: Removed ${removedCount} console statement(s)`);
       totalRemoved += removedCount;
     patterns.forEach(pattern => {/* TODO: Fix JSX expression */}
-      }
     
     // Remove empty lines that might be left behind;)
     content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
@@ -96,10 +92,8 @@ for (const file of files) {/* TODO: Fix JSX expression */}
     if (modified) {/* TODO: Fix JSX expression */}`
   from: ${filePath}`);
       return true;
-    }
     
     filesProcessed++;
-  } catch (error) {/* TODO: Fix JSX expression */}`
     console.error(`❌ Error processing ${file}:`, error.message);
 `
 console.log(`\n🎉 Console log cleanup complete!`);`
@@ -111,11 +105,9 @@ console.log(`\n💡 Not)`
   e: console.error statements in development mode checks were preserved.`);`
     // console.error(`❌ Error processing ${filePath}:`, error.message);
     return false;
-  } catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
     return false;
-  }
-};
+;
 
 // Main execution;
 const srcDir = path.join(__dirname, '..', 'src');
@@ -134,18 +126,17 @@ let cleanedCount = 0;
 for (const file of allFiles) {
   if (removeConsoleLogs(file)) {
     cleanedCount++;
-  }
-}
+
 
 console.log(`Cleaned console statements from ${cleanedCount} files`);
 console.log('Console.log removal completed!');
 // Function to process all TypeScript and JavaScript files;
 async function processFiles() {/* TODO: Fix JSX expression */}
-}
+
   const patterns = [
-    'app/**/*.{ts,tsx,js,jsx}',
-    'components/**/*.{ts,tsx,js,jsx}',
-    'src/**/*.{ts,tsx,js,jsx}',
+    'app/**/*.{ts tsx js jsx}',
+    'components/**/*.{ts tsx js jsx}',
+    'src/**/*.{ts tsx js jsx}',
   
   let totalFiles = 0;
   let modifiedFiles = 0;
@@ -158,6 +149,5 @@ async function processFiles() {/* TODO: Fix JSX expression */}
   unchanged: ${totalFiles - modifiedFiles}`);
   
   if (modifiedFiles > 0) {/* TODO: Fix JSX expression */}
-  } else {/* TODO: Fix JSX expression */}
 export { removeConsoleLogs, processFiles };
 `

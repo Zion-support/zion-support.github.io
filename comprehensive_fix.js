@@ -30,7 +30,7 @@ blogPages.forEach(pagePath => {)
     //         }
 blogPages.forEach(pagePath => {/* TODO: Fix JSX expression */}
     //         })
-});
+);
 
 // 3. Fix OpenGraph authors;
 // const openGraphPages = [
@@ -49,7 +49,7 @@ openGraphPages.forEach(pagePath => {/* TODO: Fix JSX expression */}
 
     fs.writeFileSync(pagePath, content);
     //         }
-});
+);
 
 // 4. Fix Calculator import;
 // // const calculatorPagePath = '/workspace/app/blog/ai-enterprise-transformation-ultimate-guide-2025/page.tsx';
@@ -80,7 +80,6 @@ if (fs.existsSync(seoOptimizerPath)) {
 if (fs.existsSync(seoOptimizerPath)) {/* TODO: Fix JSX expression */}
     /interface AdvancedSEOOptimizerProps \{[^}]*\}/,`
     `interface AdvancedSEOOptimizerProps {/* TODO: Fix JSX expression */}
-  };
   enableStructuredData?: boolean;
   enableAnalytics?: boolean;
   enablePerformanceTracking?: boolean;
@@ -88,7 +87,7 @@ if (fs.existsSync(seoOptimizerPath)) {/* TODO: Fix JSX expression */}
   enableOpenGraph?: boolean;
   enableTwitterCards?: boolean;
   enableSchemaMarkup?: boolean;`
-}`
+`
   );
 
   fs.writeFileSync(seoOptimizerPath, content);
@@ -108,8 +107,7 @@ if (fs.existsSync(analyticsTrackerPath)) {/* TODO: Fix JSX expression */}
   // Add proper imports and declarations at the top;`
   content = `
 declare global {/* TODO: Fix JSX expression */}
-  }
-}
+
 `
 ${content}`;
 
@@ -155,8 +153,7 @@ if (fs.existsSync(performancePath)) {/* TODO: Fix JSX expression */}
 
   // Add proper declaration at the top;`
   content = `declare global {/* TODO: Fix JSX expression */}
-  }
-}
+
 `
 ${content}`;
 

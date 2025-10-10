@@ -15,8 +15,7 @@ try {
 
     // Check for large files;
     const _largeFiles = execSync('find dist -type f -size +100k -exec ls -lh {} +', { encoding: 'utf8' });
-    if (largeFiles.trim()) {} else {}
-  } else {
+    if (largeFiles.trim()) {} else } else {
 try {/* TODO: Fix JSX expression */}
   g: 'utf8' });
 
@@ -29,12 +28,8 @@ try {/* TODO: Fix JSX expression */}
     const _largeFiles = execSync('find dist -type f -size +100k -exec ls -lh {} +', {/* TODO: Fix JSX expression */})
   g: 'utf8' });
     if (largeFiles.trim()) {/* TODO: Fix JSX expression */}
-    } else {/* TODO: Fix JSX expression */}
-    }
-  } else {/* TODO: Fix JSX expression */}
-  }
-} catch (error) {/* TODO: Fix JSX expression */}
-}
+ catch (error) {/* TODO: Fix JSX expression */}
+
 
 // 2. Functions count;
 try {
@@ -45,10 +40,8 @@ try {/* TODO: Fix JSX expression */}
   g: 'utf8' }).trim();
 
   if (parseInt(functionsCount) < 100) {/* TODO: Fix JSX expression */}
-  } else {/* TODO: Fix JSX expression */}
-  }
-} catch (error) {/* TODO: Fix JSX expression */}
-}
+ catch (error) {/* TODO: Fix JSX expression */}
+
 
 // 3. Check for performance issues;
 // Check for unused dependencies;
@@ -67,12 +60,9 @@ try {/* TODO: Fix JSX expression */}
   
   if (foundHeavyDeps.length > 0) {
     // console.log('⚠️  Heavy dependencies detected:', foundHeavyDeps.join(', '));
-  } else {
   if (foundHeavyDeps.length > 0) {/* TODO: Fix JSX expression */}
-  } else {/* TODO: Fix JSX expression */}
-  }
-} catch (error) {/* TODO: Fix JSX expression */}
-}
+ catch (error) {/* TODO: Fix JSX expression */}
+
 
 // 4. Check build configuration;
 try {
@@ -83,14 +73,10 @@ try {
   
   if (netlifyToml.includes('NODE_OPTIONS')) {} else {
 try {/* TODO: Fix JSX expression */}
-  } else {/* TODO: Fix JSX expression */}
-  }
   
   if (netlifyToml.includes('NODE_OPTIONS')) {/* TODO: Fix JSX expression */}
-  } else {/* TODO: Fix JSX expression */}
-  }
-} catch (error) {/* TODO: Fix JSX expression */}
-}
+ catch (error) {/* TODO: Fix JSX expression */}
+
 
 // 5. Generate performance report;
 const report = {
@@ -120,7 +106,7 @@ const report = {/* TODO: Fix JSX expression */}
     'Consider code splitting for large vendor bundle',
     'Monitor bundle size in future builds',
     'Regular cleanup of unused functions']
-};
+;
 
 fs.writeFileSync('performance-report.json', JSON.stringify(report, null, 2));
 

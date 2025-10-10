@@ -15,20 +15,15 @@ function fixBlogFile(filePath) {/* TODO: Fix JSX expression */}
     if (content.includes('};') && !content.includes('  );')) {/* TODO: Fix JSX expression */}
       content = content.replace(/};$/, '  );\n};');
       modified = true;
-    }
 
     // Fix merge conflict markers;
     if (content.includes('      console.log(`⚠ Found merge conflict markers in ${filePath}, skipping...`);
       return;
-    }
 
     if (modified) {/* TODO: Fix JSX expression */}`
       console.log(`✓ Fixed ${filePath}`);
-    }
-  } catch (error) {/* TODO: Fix JSX expression */}`
     console.log(`✗ Error processing ${filePath}: ${error.message}`);
-  }
-}
+
 
 // Main execution;
 console.log('🔧 Fixing blog files...\n');
@@ -55,7 +50,6 @@ const blogFiles = [
 ];
 
 for (const file of blogFiles) {/* TODO: Fix JSX expression */}
-  }
-}
+
 
 console.log('\n✅ Blog files fixed!');`

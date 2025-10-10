@@ -1,5 +1,4 @@
 declare module 'lucide-react' {/* TODO: Fix JSX expression */}
-  }
 
   export type LucideIcon = ComponentType<LucideProps>;
 
@@ -135,4 +134,4 @@ declare module 'lucide-react' {/* TODO: Fix JSX expression */}
   Cloud: LucideIcon;
 
   // Add more icons as needed;
-}
+

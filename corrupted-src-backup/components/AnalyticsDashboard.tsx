@@ -9,14 +9,10 @@ interface AnalyticsData {
   topPages: Array<{,
     path: string;
     views: number;
-  }>;
   trafficSources: Array<{,
     source: string;
     percentage: number;
-interface AnalyticsData {/* TODO: Fix JSX expression */}
-  }>;
+interface, AnalyticsData {/* TOD, O: Fix, JSX expressio, n */}
   trafficSource,
-  s: Array<{/* TODO: Fix JSX expression */}
-  }>;
-}
+  s: Arra, y<{/* TOD, O: Fix, JSX expressio, n */}
 export default AnalyticsDashboard;

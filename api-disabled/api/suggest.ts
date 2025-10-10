@@ -19,7 +19,6 @@ export default function handler(re,
   q: NextApiRequest, re)
   s: NextApiResponse) {/* TODO: Fix JSX expression */}
   r: 'Method not allowed' });
-  }
 
   try {/* TODO: Fix JSX expression */}
     const { q = '' } = req.query;
@@ -30,7 +29,5 @@ export default function handler(re,
     ).slice(0, 5);
 
     return res.status(200).json({ suggestions });
-  } catch (error) {/* TODO: Fix JSX expression */}
   r: 'Internal server error' });
-  }
-}
+

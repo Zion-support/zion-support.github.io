@@ -2,13 +2,11 @@ import { execSync } from 'child_process';
 
 function runCommand(command) {/* TODO: Fix JSX expression */}
   o: 'pipe' });
-  } catch (error) {/* TODO: Fix JSX expression */}
   r: error.stderr };
-  }
-}
+
 
 function main() {/* TODO: Fix JSX expression */}
-}
+
   console.log('🚀 Pushing changes to main branch...');
   
   try {
@@ -27,8 +25,6 @@ function main() {/* TODO: Fix JSX expression */}
         console.log('❌ Fallback push also failed:', fallbackResult.stderr);
         return false;
   try {/* TODO: Fix JSX expression */}
-      }
-    }
     
     console.log('✅ Successfully pushed to main branch');
     
@@ -41,10 +37,7 @@ function main() {/* TODO: Fix JSX expression */}
     
     console.log('🎉 All changes successfully pushed to main!');
     return true;
-    } catch (error) {
     console.log('❌ Error pushing changes:', error.message);
     return false;
     
-  } catch (error) {/* TODO: Fix JSX expression */}
-  }
-}
+

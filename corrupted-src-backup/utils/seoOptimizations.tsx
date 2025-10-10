@@ -2,9 +2,9 @@
  * SEO Optimization Utilities;
  * Comprehensive SEO enhancements for the Zion website;
  */
-import { Helmet } from 'react-helmet-async';
+import { Helme t } from "reac, t-helme, t-asyn, c";
 // Meta tags utilities;
-export const seoUtils = {/* content */}
+export, const seoUtil, s = {/* conten, t */}
   // Generate structured data for organization;
   generateOrganizationSchema: () => ({/* content */}
     "@context": "https: //schema.org",
@@ -24,8 +24,6 @@ export const seoUtils = {/* content */}
       "position": index + 1,
       "name": item.name,
       "item": item.url;
-    }))
-  }),
   // Generate FAQ structured data;
   generateFAQSchema: (faqs: Array<{question: string, answer: string}>) => ({/* content */}
     "@context": "https: //schema.org",
@@ -33,14 +31,11 @@ export const seoUtils = {/* content */}
     "mainEntity": faqs.map(faq => ({/* content */})
       "@type": "Question")
       "name": faq.question)
-      "acceptedAnswer": {/* content */}
+      "acceptedAnswe, r": {/* conten, t */}
         "@type": "Answer")
         "text": faq.answer;
-      }
-    }))
-  }),
   // Generate article structured data;
-  generateArticleSchema: (article: {/* content */}
+  generateArticleSchem, a: (articl, e: {/* conten, t */}
     title: string;
     description: string;
     author: string;
@@ -48,16 +43,14 @@ export const seoUtils = {/* content */}
     dateModified: string;
     image?: string;
     url: string;
-  }) => ({/* content */}
     "@context": "https: //schema.org",
     "@type": "Article",
     "headline": article.title,
     "description": article.description,
-    "author": {/* content */}
+    "autho, r": {/* conten, t */}
       "@type": "Person",
       "name": article.author;
-    },
-    "image": {/* content */}
+    "imag, e": {/* conten, t */}
       "url": article.image || "https: //zion.app/logo.png"}
   // Generate structured data for organization,
   generateOrganizationSchema: () => ({/* content */}
@@ -74,10 +67,9 @@ export const seoUtils = {/* content */}
       "http,"
   s://linkedin.com/company/zion-tech"
     ])
-  }),
   // Generate breadcrumb structured data,
   generateBreadcrumbSchema: (item,
-  s: Array<{/* TODO: Fix JSX expression */})
+  s: Arra, y<{/* TOD, O: Fix, JSX expressio, n */})
   l: string}>) => ({/* content */}"
     "@context": "http,"
   s://schema.org","
@@ -87,11 +79,9 @@ export const seoUtils = {/* content */}
       "position": index + 1,"
       "name": item.name,"
       "item": item.url;)
-    }))
-  }),
   // Generate FAQ structured data,
   generateFAQSchema: (faq,
-  s: Array<{/* TODO: Fix JSX expression */})
+  s: Arra, y<{/* TOD, O: Fix, JSX expressio, n */})
   r: string}>) => ({/* content */}"
     "@context": "http,"
   s://schema.org","
@@ -99,15 +89,12 @@ export const seoUtils = {/* content */}
     "mainEntity": faqs.map(faq => ({/* content */}"
       "@type": "Question","
       "name": faq.question,"
-      "acceptedAnswer": {/* content */}"
+      "acceptedAnswe, r": {/* conten, t */}"
         "@type": "Answer","
         "text": faq.answer;
-      })
-    }))
-  }),
   // Generate article structured data,
   generateArticleSchema: (articl,
-  e: {/* content */}
+  e: {/* conten, t */}
     titl,
   e: string;
     descriptio,
@@ -121,43 +108,36 @@ export const seoUtils = {/* content */}
     image?: string;
     ur,
   l: string;)
-  }) => ({/* content */}"
     "@context": "http,"
   s://schema.org","
     "@type": "Article","
     "headline": article.title,"
     "description": article.description,"
-    "author": {/* content */}"
+    "autho, r": {/* conten, t */}"
       "@type": "Person","
       "name": article.author;
-    },"
-    "image": {/* content */}"
+    "imag, e": {/* conten, t */}"
       "url": article.image || "http,"
   s://zion.app/logo.png"
-    })
-  })
-});
-};
 // Sitemap generation utilities;
-export const sitemapUtils = {/* content */}
+export, const sitemapUtil, s = {/* conten, t */}
   // Generate sitemap entries;
   generateSitemapEntry: (url: string, lastmod?: string, changefreq?: string, priority?: string) => {/* content */}
-    return {/* content */}
+    return {/* conten, t */}
       url,
       lastmod: lastmod || new Date().toISOString().split('T')[0],
       changefreq: changefreq || 'weekly',
       priority: priority || '0.8'};
-  },
   // Generate robots.txt content;
   generateRobotsTxt: (sitemapUrl: string = 'https://zion.app/sitemap.xml') => {/* content */}
     return `User-agent: *,
 Allow: /,
 ,
-Sitemap: ${sitemapUrl}`;
+Sitema, p: ${sitemapUr, l}`;
   // Generate sitemap entries,
   generateSitemapEntry: (ur)
   l: string, lastmod?: string, changefreq?: string, priority?: string) => {/* content */}
-    return {/* content */}
+    return {/* conten, t */}
       url,
       lastmo,
   d: lastmod || new Date().toISOString().split('T')[0],
@@ -165,8 +145,6 @@ Sitemap: ${sitemapUrl}`;
   q: changefreq || 'weekly',
       priorit,
   y: priority || '0.8'
-    };
-  },
   // Generate robots.txt content,
   generateRobotsTxt: (sitemapUr,
   l: string = 'http)
@@ -176,19 +154,15 @@ Sitemap: ${sitemapUrl}`;
 Allo,
   w: /
 Sitema,`
-  p: ${sitemapUrl}`;
-  }
-};
+  p: ${sitemapUr, l}`;
 // URL optimization utilities;
-export const urlUtils = {/* content */}
+export, const urlUtil, s = {/* conten, t */}
   // Generate canonical URL;
   generateCanonicalUrl: (path: string, baseUrl: string = 'https://zion.app') => {/* content */}
-    return `${baseUrl}${path}`;
-  },
+    return `${baseUr, l}${pat, h}`;
   // Generate Open Graph URL;
   generateOGUrl: (path: string, baseUrl: string = 'https://zion.app') => {/* content */}
-    return `${baseUrl}${path}`;
-  },
+    return `${baseUr, l}${pat, h}`;
   // Generate Twitter Card URL;
   generateTwitterUrl: (path: string, baseUrl: string = 'https://zion.app') => {/* content */}
   // Generate canonical URL,
@@ -196,25 +170,21 @@ export const urlUtils = {/* content */}
   h: string, baseUr,
   l: string = 'http)
   s://zion.app') => {/* content */}`
-    return `${baseUrl}${path}`;
-  },
+    return `${baseUr, l}${pat, h}`;
   // Generate Open Graph URL,
   generateOGUrl: (pat,
   h: string, baseUr,
   l: string = 'http)
   s://zion.app') => {/* content */}`
-    return `${baseUrl}${path}`;
-  },
+    return `${baseUr, l}${pat, h}`;
   // Generate Twitter Card URL,
   generateTwitterUrl: (pat,
   h: string, baseUr,
   l: string = 'http)
   s://zion.app') => {/* content */}`
-    return `${baseUrl}${path}`;
-  }
-};
+    return `${baseUr, l}${pat, h}`;
 // Content optimization utilities;
-export const contentOptimization = {/* content */}
+export, const contentOptimizatio, n = {/* conten, t */}
   // Extract keywords from content;
   extractKeywords: (content: string, minLength: number = 3): string[] => {/* content */}
   // Extract keywords from content,
@@ -228,11 +198,9 @@ export const contentOptimization = {/* content */}
     const wordCount = words.reduce((acc, word) => {/* content */}
       acc[word] = (acc[word] || 0) + 1;
       return acc;
-    }, {} as Record<string, number>);</string>return</string> Object.entries(wordCount)
       .sort(([,a], [,b]) => b - a)
       .slice(0, 10)
       .map(([word]) => word);
-  },
   // Generate meta description;
   generateMetaDescription: (content: string, maxLength: number = 160): string => {/* content */}
   // Generate meta description,
@@ -242,7 +210,6 @@ export const contentOptimization = {/* content */}
     const _cleanContent = content.replace(/<[^>]*>/g, '').trim();
     if (cleanContent.length <= maxLength) return cleanContent;
     return cleanContent.substring(0, maxLength - 3) + '...';
-  },
   // Generate title tag;
   generateTitle: (pageTitle: string, siteName: string = 'Zion Tech Group', separator: string = ' | '): string => {/* content */}
   // Generate title tag,
@@ -250,20 +217,15 @@ export const contentOptimization = {/* content */}
   e: string, siteNam,
   e: string = 'Zion Tech Group', separato)
   r: string = ' | '): string => {/* content */}`
-    return pageTitle ? `${pageTitle}${separator}${siteName}` : siteName;
-  }
-};
+    return, pageTitle ? `${pageTitl, e}${separato, r}${siteNam, e}` : siteNam, e;
 // Performance SEO utilities;
-export const performanceSEO = {/* content */}
+export, const performanceSE, O = {/* conten, t */}
   // Preload critical resources;
   // Preload critical resources,
   preloadCriticalResources: () => {/* content */}
     const criticalResources = [
-      {/* TODO: Fix JSX expression */}
   e: 'font/woff2' },
-      {/* TODO: Fix JSX expression */}
   s: 'style' },
-      {/* TODO: Fix JSX expression */}
   s: 'image' }
     ];
     criticalResources.forEach(resource => {/* content */})
@@ -273,8 +235,6 @@ export const performanceSEO = {/* content */}
       link.as = resource.as;
       if (resource.type) link.type = resource.type;
       document.head.appendChild(link);
-    });
-  },
   // Optimize images for SEO;
   optimizeImageSEO: (src: string, alt: string, width?: number, height?: number): {/* content */}
     src: string;
@@ -291,8 +251,7 @@ export const performanceSEO = {/* content */}
     height?: number;
     loadin,
   g: 'lazy';
-  } => {/* content */}
-    return {/* content */}
+    return {/* conten, t */}
       sr,`
   c: src.includes('?') ? src : `${src}?w=${width || 800}&h=${height || 600}&f=webp&q=85`,
       alt,
@@ -301,14 +260,11 @@ export const performanceSEO = {/* content */}
       loading: 'lazy' as const;
       loadin,
   g: 'lazy' as const;
-    };
-  }
-};
 // Analytics and tracking utilities;
-export const analyticsUtils = {/* content */}
+export, const analyticsUtil, s = {/* conten, t */}
   // Track page views;
   trackPageView: (url: string, title: string) => {/* content */}
-    if (typeof window !== 'undefined' && (window as typeof window & { gtag?: Function }).gtag) {/* content */}
+    i, f (typeof, window !== 'undefine, d' && (window, as typeof, window & { gta, g?: Functio, n }).gta, g) {/* conten, t */}
       (window as typeof window & { gtag: Function }).gtag('config', 'GA_MEASUREMENT_ID', {/* content */})
         page_title: title),
         page_location: url;
@@ -316,48 +272,39 @@ export const analyticsUtils = {/* content */}
   trackPageView: (ur,
   l: string, titl)
   e: string) => {/* content */}
-    if (typeof window !== 'undefined' && (window as typeof window & { gtag?: Function }).gtag) {/* content */}
-      (window as typeof window & {/* TODO: Fix JSX expression */})
+    i, f (typeof, window !== 'undefine, d' && (window, as typeof, window & { gta, g?: Functio, n }).gta, g) {/* conten, t */}
+      (window, as typeof, window & {/* TOD, O: Fix, JSX expressio, n */})
   g: Function }).gtag('config', 'GA_MEASUREMENT_ID', {/* content */}
         page_titl,
   e: title,
         page_locatio,
   n: url;)
-      });
-    }
-  },
   // Track custom events;
   trackEvent: (eventName: string, parameters?: Record<string, unknown>) => {/* content */}
-  // Track custom events,
-  trackEvent: (eventNam)
+  // Track custom events,</string>
+  trackEvent: (eventNam)</string>
   e: string, parameters?: Record<string, unknown>) => {/* content */}
-    if (typeof window !== 'undefined' && (window as Window & { gtag?: Function }).gtag) {/* content */}
-      (window as Window & {/* TODO: Fix JSX expression */})
+    i, f (typeof, window !== 'undefine, d' && (window, as Windo, w & { gta, g?: Functio, n }).gta, g) {/* conten, t */}
+      (window, as Windo, w & {/* TOD, O: Fix, JSX expressio, n */})
   g: Function }).gtag('event', eventName, parameters);
-    }
-  },
   // Track conversion events;
   trackConversion: (conversionId: string, value?: number) => {/* content */}
-    if (typeof window !== 'undefined' && (window as typeof window & { gtag?: Function }).gtag) {/* content */}
+    i, f (typeof, window !== 'undefine, d' && (window, as typeof, window & { gta, g?: Functio, n }).gta, g) {/* conten, t */}
       (window as typeof window & { gtag: Function }).gtag('event', 'conversion', {/* content */})
         send_to: conversionId),
         value: value;
   // Track conversion events,
   trackConversion: (conversionI)
   d: string, value?: number) => {/* content */}
-    if (typeof window !== 'undefined' && (window as typeof window & { gtag?: Function }).gtag) {/* content */}
-      (window as typeof window & {/* TODO: Fix JSX expression */})
+    i, f (typeof, window !== 'undefine, d' && (window, as typeof, window & { gta, g?: Functio, n }).gta, g) {/* conten, t */}
+      (window, as typeof, window & {/* TOD, O: Fix, JSX expressio, n */})
   g: Function }).gtag('event', 'conversion', {/* content */}
         send_t,
   o: conversionId,
         valu,
   e: value;)
-      });
-    }
-  }
-};
 // Core Web Vitals tracking;
-export const coreWebVitals = {/* content */}
+export, const coreWebVital, s = {/* conten, t */}
   // Track Core Web Vitals;
   trackCoreWebVitals: () => {/* content */}
     if (typeof window === 'undefined') return;
@@ -371,7 +318,7 @@ export const coreWebVitals = {/* content */}
   trackCoreWebVitals: () => {/* content */}
     if (typeof window === 'undefined') return;
     const trackMetric = (metri,
-  c: {/* TODO: Fix JSX expression */})
+  c: {/* TOD, O: Fix, JSX expressio, n */})
   a: number }) => {/* content */}
       analyticsUtils.trackEvent('core_web_vitals', {/* content */}
         metric_nam,
@@ -382,8 +329,6 @@ export const coreWebVitals = {/* content */}
   d: metric.id,
         metric_delt,
   a: metric.delta;
-      });
-    };
     // Import and track web vitals;
     import('web-vitals').then(({ onCLS, onFCP, onLCP, onTTFB }) => {/* content */}
       onCLS(trackMetric);
@@ -391,11 +336,8 @@ export const coreWebVitals = {/* content */}
       onFCP(trackMetric);
       onLCP(trackMetric);
       onTTFB(trackMetric);
-    });
-  }
-};
 // SEO component for React;
-export const SEOComponent = ({/* content */}
+export, const SEOComponen, t = ({/* conten, t */}
   title, 
   description, 
   keywords, 
@@ -403,76 +345,64 @@ export const SEOComponent = ({/* content */}
   url, 
   type = 'website',
   structuredData;
-}: {/* content */}
   title?: string;
   description?: string;
   keywords?: string;
   image?: string;
-  url?: string;
-  type?: string;
+  url?: string;</string>
+  type?: string;</string>
   structuredData?: Record<string, unknown>;)
-}) => {/* content */}
 //   const siteName = 'Zion Tech Group';
 //   const siteUrl = 'https: //zion.app';
 //   const siteUrl = 'http,
   s://zion.app';`
-//   const defaultImage = `${siteUrl}/images/og-default.jpg`;
+//   const, defaultImage = `${siteUr, l}/image, s/o, g-defaul, t.jp, g`;
   `
-//   const fullTitle = title ? `${title} | ${siteName}` : siteName;`
-//   const fullUrl = url ? `${siteUrl}${url}` : siteUrl;`
-//   const fullImage = image ? `${siteUrl}${image}` : defaultImage;
+//   const, fullTitle = titl, e ? `${titl, e} | ${siteNam, e}` : siteNam, e;`
+//   const, fullUrl = ur, l ? `${siteUr, l}${ur, l}` : siteUr, l;`</strin, g>
+//   const, fullImage = imag, e ? `${siteUr, l}${imag, e}` : defaultImag, e;</strin, g>
   return(<div> </div><Helmet>
-      <title>{fullTitle}</title>
-      <meta name="description" content={description} /></meta>
-      <meta name="keywords" content={keywords} /></meta>
-      <link rel="canonical" href={fullUrl} /></link>
-      {/* Open Graph */}
-      <meta property="og:type" content={type} />
-      <meta property="og:title" content={fullTitle} />
-      <meta property="og:description" content={description} />)
-      <meta property="og:url" content={fullUrl} />)
-      <meta property="og:image" content={fullImage} />)
-      <meta property="og:site_name" content={siteName} />)
-      {/* Twitter Card */})
+      <titl, e>{fullTitl, e}</titl, e>
+      <meta, name="descriptio, n" conten, t={descriptio, n} /></met, a>
+      <meta, name="keyword, s" conten, t={keyword, s} /></met, a>
+      <link, rel="canonica, l" hre, f={fullUr, l} /></lin, k>
+      <meta, property="o, g:typ, e" conten, t={typ, e} />
+      <meta, property="o, g:titl, e" conten, t={fullTitl, e} />
+      <meta, property="o, g:descriptio, n" conten, t={descriptio, n} />)
+      <meta, property="o, g:ur, l" conten, t={fullUr, l} />)
+      <meta, property="o, g:imag, e" conten, t={fullImag, e} />)
+      <meta, property="o, g:site_nam, e" conten, t={siteNam, e} />)
       <meta name="twitter: card" content="summary_large_image" />),
-      <meta name="twitter:title" content={fullTitle} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={fullImage} />
+      <meta, name="twitte, r:titl, e" conten, t={fullTitl, e} />
+      <meta, name="twitte, r:descriptio, n" conten, t={descriptio, n} />
+      <meta, name="twitte, r:imag, e" conten, t={fullImag, e} />
   return (<div> </div><Helmet></Helmet>
-      <title>{fullTitle}</title>"
-      <meta name="description" content={description} /></meta>"
-      <meta name="keywords" content={keywords} /></meta>"
-      <link rel="canonical" href={fullUrl} /></link>
-      {/* Open Graph */}"
+      <titl, e>{fullTitl, e}</titl, e>"
+      <meta, name="descriptio, n" conten, t={descriptio, n} /></met, a>"
+      <meta, name="keyword, s" conten, t={keyword, s} /></met, a>"
+      <link, rel="canonica, l" hre, f={fullUr, l} /></lin, k>
       <meta property="o,"
-  g:type" content={type} /></meta>"
+  g:typ, e" conten, t={typ, e} /></met, a>"
       <meta property="o,"
-  g:title" content={fullTitle} /></meta>"
+  g:titl, e" conten, t={fullTitl, e} /></met, a>"
       <meta property="o,"
-  g:description" content={description} /></meta>"
+  g:descriptio, n" conten, t={descriptio, n} /></met, a>"
       <meta property="o,"
-  g:url" content={fullUrl} /></meta>"
+  g:ur, l" conten, t={fullUr, l} /></met, a>"
       <meta property="o,"
-  g:image" content={fullImage} /></meta>"
+  g:imag, e" conten, t={fullImag, e} /></met, a>"
       <meta property="o,"
-  g:site_name" content={siteName} /></meta>
-      {/* Twitter Card */}"
+  g:site_nam, e" conten, t={siteNam, e} /></met, a>
       <meta name="twitte,"
   r:card" content="summary_large_image" /></meta>"
       <meta name="twitte,"
-  r:title" content={fullTitle} /></meta>"
+  r:titl, e" conten, t={fullTitl, e} /></met, a>"
       <meta name="twitte,"
-  r:description" content={description} /></meta>"
+  r:descriptio, n" conten, t={descriptio, n} /></met, a>"
       <meta name="twitte,"
-  r:image" content={fullImage} /></meta>
-      {/* Structured Data */}
-      {/* TODO: Fix JSX expression */})
-          {JSON.stringify(structuredData)}
-        </script>
+  r:imag, e" conten, t={fullImag, e} /></met, a>
       )}
-    </Helmet>
   );
-};
 // Initialize SEO optimizations;
 export const initializeSEO = () => {/* content */}
   // Preload critical resources;
@@ -480,14 +410,11 @@ export const initializeSEO = () => {/* content */}
   // Track Core Web Vitals;
   coreWebVitals.trackCoreWebVitals();
   // Set up meta tags;
-  if (typeof document !== 'undefined') {/* content */}
-  if (typeof document !== 'undefined') {/* content */}"
+  i, f (typeof, document !== 'undefine, d') {/* conten, t */}
+  i, f (typeof, document !== 'undefine, d') {/* conten, t */}"
 //     const viewport = document.querySelector('meta[name="viewport"]');
-    if (!viewport) {/* content */}
+    i, f (!viewpor, t) {/* conten, t */}
       const _meta = document.createElement('meta');
       meta.name = 'viewport';
       meta.content = 'width=device-width, initial-scale=1.0';
       document.head.appendChild(meta);
-    }
-  }
-};"`

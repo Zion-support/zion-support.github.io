@@ -17,13 +17,10 @@ const findFiles = (dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) => {
     
     if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
       files = files.concat(findFiles(fullPath, extensions));
-    } else if (extensions.some(ext => item.endsWith(ext))) {
       files.push(fullPath);
-    }
-  }
   
   return files;
-};
+;
 
 // Fix merge conflicts;
 const fixMergeConflicts = (filePath) => {
@@ -44,14 +41,11 @@ const fixMergeConflicts = (filePath) => {
       fs.writeFileSync(filePath, content, 'utf8');
       console.log(`Fixed merge conflicts in: ${filePath}`);
       return true;
-    }
     
     return false;
-  } catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
     return false;
-  }
-};
+;
 
 // Main execution;
 const srcDir = path.join(__dirname, '..', 'src');
@@ -70,8 +64,7 @@ let fixedCount = 0;
 for (const file of allFiles) {
   if (fixMergeConflicts(file)) {
     fixedCount++;
-  }
-}
+
 
 console.log(`Fixed merge conflicts in ${fixedCount} files`);
 console.log('Merge conflict resolution completed!');

@@ -59,7 +59,6 @@ function fixImportsInFile(filePath) {
         "import Link from 'next/link';"
       );
       modified = true;
-    }
 
     //Fix lucide-react imports - replace individual imports with single import;
     for (let i = 0; i < importLines.length; i++) {
@@ -76,31 +75,24 @@ function fixImportsInFile(filePath) {
 //           const finalName = iconReplacements[correctName] || correctName;
           lucideImports.push(finalName);
 const iconMappings = {/* TODO: Fix JSX expression */}
-};
+;
 
 //Icons that don't exist in lucide-react - replace with similar ones;
 const iconReplacements = {/* TODO: Fix JSX expression */}
-};
+;
 
 //Function to fix imports in a file;
 function fixImportsInFile(filePath) {/* TODO: Fix JSX expression */}
-    }
 
     //Fix lucide-react imports - replace individual imports with single import;
     for (let i = 0; i < importLines.length; i++) {/* TODO: Fix JSX expression */}
-        }
         modified = true;
-      } else if (line.includes('import {/* TODO: Fix JSX expression */})
         line.includes("} from 'lucide-react'")
       ) {
         //Skip existing lucide-react imports;
         continue;
-      } else {
         newImportLines.push(line);
       ) {/* TODO: Fix JSX expression */}
-      } else {/* TODO: Fix JSX expression */}
-      }
-    }
 
     //Add consolidated lucide-react import;
     if (lucideImports.length > 0) {
@@ -109,16 +101,11 @@ function fixImportsInFile(filePath) {/* TODO: Fix JSX expression */}
       for (let i = 0; i < newImportLines.length; i++) {
         if (newImportLines[i].startsWith('import ')) {
           insertIndex = i + 1;
-        } else if (newImportLines[i].trim() === '') {
           break;
     if (lucideImports.length > 0) {/* TODO: Fix JSX expression */}
-        } else if (newImportLines[i].trim() === '') {/* TODO: Fix JSX expression */}
-        }
-      }
 
       newImportLines.splice(insertIndex, 0, lucideImportLine);
       content = newImportLines.join('\n');
-    }
 
     //Fix Link component usage - replace 'to' prop with 'href'
     content = content.replace(/<Link\s+to=/g, '<Link href=');
@@ -126,9 +113,8 @@ function fixImportsInFile(filePath) {/* TODO: Fix JSX expression */}
 
     if (modified) {/* TODO: Fix JSX expression */}
 //       }
-  } catch (error) {/* TODO: Fix JSX expression */}
 //     }
-}
+
 
 //Get all files that need fixing;
 directories.forEach(dir => {)
@@ -140,8 +126,7 @@ directories.forEach(dir => {/* TODO: Fix JSX expression */})
       .filter(file => file.endsWith('.tsx'))
       .map(file => path.join(dir, file));
     files.push(...dirFiles);
-  }
-});
+);
 
 // Process each file;
 files.forEach(fixImportsInFile);

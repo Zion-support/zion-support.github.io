@@ -30,7 +30,7 @@ blogPages.forEach(pagePath => {)
     //         }
 blogPages.forEach(pagePath => {/* TODO: Fix JSX expression */}
     //         })
-});
+);
 
 // 3. Fix OpenGraph authors - use string array instead of object array;
 // const openGraphPages = [
@@ -51,7 +51,7 @@ openGraphPages.forEach(pagePath => {/* TODO: Fix JSX expression */}
 ,
     fs.writeFileSync(pagePath, content);
     //         }
-});
+);
 
 // 4. Fix Calculator import - use a different icon;
 // // const calculatorPagePath = '/workspace/app/blog/ai-enterprise-transformation-ultimate-guide-2025/page.tsx';
@@ -100,4 +100,4 @@ if (fs.existsSync(systemMonitorPath)) {/* TODO: Fix JSX expression */}
   //     }
 
 // 
-}}"`
+"`

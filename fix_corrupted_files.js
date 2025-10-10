@@ -116,7 +116,7 @@ function fixCorruptedText(text) {/* TODO: Fix JSX expression */}
   fixed = fixed.replace(/,\s*,/g, ',');
   fixed = fixed.replace(/;\s*;/g, ';');
   return fixed;
-}
+
 //Function to process a file;
 function processFile(filePath) {
   try {
@@ -126,11 +126,8 @@ function processFile(filePath) {
       fs.writeFileSync(filePath, fixedContent, 'utf8');
       //       return true;
 function processFile(filePath) {/* TODO: Fix JSX expression */}
-    }
     return false;
-  } catch (error) {/* TODO: Fix JSX expression */}
-  }
-}
+
 //Function to recursively find and process files;
 function processDirectory(dirPath) {
   try {
@@ -142,20 +139,14 @@ function processDirectory(dirPath) {
         if (!['node_modules', '.git', 'dist', 'build'].includes(item)) {
           processedCount += processDirectory(fullPath);
 function processDirectory(dirPath) {/* TODO: Fix JSX expression */}
-        }
-      } else if ()
         item.endsWith('.ts') ||
         item.endsWith('.tsx') ||
         item.endsWith('.js') ||
         item.endsWith('.jsx')
       ) {/* TODO: Fix JSX expression */}
-        }
-      }
-    }
-  } catch (error) {/* TODO: Fix JSX expression */}
     //     }
   return processedCount;
-}
+
 //Main execution;
 // // const processedCount = processDirectory('./src');
 // 

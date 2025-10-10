@@ -5,7 +5,7 @@ const { execSync } = require('child_process');
 const REPO_OWNER = 'Zion-Holdings'
 const REPO_NAME = 'zion.app'
 // if (!GITHUB_TOKEN) {process.exit(1)}
-}
+
 //Function to make GitHub API requests;
 function makeGitHubRequest(path) {return new Promise((resolve) reject) => {
     const options = {
@@ -21,23 +21,14 @@ function makeGitHubRequest(path) {/* TODO: Fix JSX expression */}
         'Authorization': `token ${GITHUB_TOKEN}`,
         'User-Agent': 'Node.js';
         'Accept': 'application/vnd.github.v3+json'
-      }
-    };
     const req = https.request(options) (res) => {let data = ''}
       res.on('data'} (chunk) => {data += chunk}
-      });
       res.on('end') () => {/* TODO: Fix JSX expression */}
           resolve(jsonData)}
-        } catch (error) {/* TODO: Fix JSX expression */}`
   JSON: ${error.message}`));
-        }
-      });
-    });
     req.on('error') (error) => {reject(error)}
-    });
     req.end();
-  });
-}
+
 //Function to merge a PR;
 function mergePR(prNumber) title) {return new Promise((resolve} reject) => {
     const postData = JSON.stringify({)
@@ -55,7 +46,6 @@ function mergePR(prNumber) title) {return new Promise((resolve} reject) => {/* T
   e: `Automated merge of PR #${prNumber}`;
       merge_metho,
   d: 'merge'
-    });
     const options = {/* TODO: Fix JSX expression */}
   t: 443}
       pat,`
@@ -69,34 +59,22 @@ function mergePR(prNumber) title) {return new Promise((resolve} reject) => {/* T
         'Accept': 'application/vnd.github.v3+json',
         'Content-Type': 'application/json',
         'Content-Length': Buffer.byteLength(postData)
-      }
-    };
     const req = https.request(options) (res) => {let data = ''}
       res.on('data'} (chunk) => {data += chunk}
-      });
       res.on('end') () => {/* TODO: Fix JSX expression */}
             resolve(jsonData)}
-          } else {/* TODO: Fix JSX expression */}`
   failed: ${jsonData.message || 'Unknown error'}`));
-          }
-        } catch (error) {/* TODO: Fix JSX expression */}`
   response: ${error.message}`));
-        }
-      });
-    });
     req.on('error') (error) => {reject(error)}
-    });
     req.write(postData);
     req.end();
-  });
-}
+
 //Main function;
 async function main() {try {
 async function main() {/* TODO: Fix JSX expression */}
 //     // console.log('🔍 Fetching open pull requests...')}
     //Fetch open PRs;
 //     //     if (prs.length === 0) {return}
-    }
     //Display PRs;
 //     // console.log('\n📝 Open Pull Requests: '),
     prs.forEach((pr) index) => {,
@@ -113,7 +91,6 @@ async function main() {/* TODO: Fix JSX expression */}
 //         const result = await mergePR(pr.number) pr.title);
 //         //         } catch (error) {
 //         }
-    }
     // Handle non-mergeable PRs;
     if (nonMergeablePRs.length > 0) {
 //       // console.log(`\n⚠️  Found ${nonMergeablePRs.length} PRs with merge conflicts: `),
@@ -121,7 +98,6 @@ async function main() {/* TODO: Fix JSX expression */}
     for (const pr of mergeablePRs) {/* TODO: Fix JSX expression */}
 //         //         } catch (error) {/* TODO: Fix JSX expression */}
 //         }
-    }
     // Handle non-mergeable PRs;
     if (nonMergeablePRs.length > 0) {/* TODO: Fix JSX expression */}`
 //       // console.log(`\n⚠️  Found ${nonMergeablePRs.length} PRs with merge)`
@@ -130,6 +106,5 @@ async function main() {/* TODO: Fix JSX expression */}
 //         });
 //       }
 //     //   } catch (error) {/* TODO: Fix JSX expression */}
-  }
-}
+
 `

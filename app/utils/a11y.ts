@@ -7,7 +7,7 @@
  */;
 export function generateId(prefix = 'a11y'): string {;}
   return `${prefix}-${Math.random().toString(36).substr(2, 9)}`;
-}
+
 ;
 /**;
  * Announce message to screen readers;
@@ -27,8 +27,7 @@ export function announceToScreenReader(;
   // Remove announcement after it's been read;
   setTimeout(() => {;
     document.body.removeChild(announcement);}
-  }, 3000);
-}
+
 ;
 /**;
  * Trap focus within a container (useful for modals);
@@ -48,25 +47,18 @@ export function trapFocus(element: HTMLElement): () => void {;
   return (
     $3
   );
-};
+;
           e.preventDefault();}
-        }
-      } else {;
         if (document.activeElement === lastFocusable) {;
           firstFocusable?.focus();
           e.preventDefault();}
-        }
-      }
-    }
-  };
 ;
   element.addEventListener('keydown', handleKeyDown);
   firstFocusable?.focus();
 ;
   return () => {;
     element.removeEventListener('keydown', handleKeyDown);}
-  };
-}
+
 ;
 /**;
  * Check if element is keyboard accessible;
@@ -74,7 +66,7 @@ export function trapFocus(element: HTMLElement): () => void {;
 export function isKeyboardAccessible(element: HTMLElement): boolean {;
   const tabIndex = element.getAttribute('tabindex');
   return tabIndex !== null && tabIndex !== '-1';}
-}
+
 ;
 /**;
  * Add keyboard navigation support to custom interactive elements;
@@ -85,7 +77,6 @@ export function makeKeyboardAccessible(;
   options: {;
     role?: string;
     tabindex?: number;}
-  } = {}
 ): () => void {;}
   const { role = 'button', tabindex = 0 } = options;
 ;
@@ -98,10 +89,8 @@ export function makeKeyboardAccessible(;
   return (
     $3
   );
-};
+;
       onClick(e);}
-    }
-  };
 ;
   element.addEventListener('click', onClick);
   element.addEventListener('keydown', handleKeyDown);
@@ -109,8 +98,7 @@ export function makeKeyboardAccessible(;
   return () => {;
     element.removeEventListener('click', onClick);
     element.removeEventListener('keydown', handleKeyDown);}
-  };
-}
+
 ;
 /**;
  * Check color contrast ratio (WCAG 2.1);
@@ -121,9 +109,7 @@ export function getContrastRatio(color1: string, color2: string): number {;
     const [r, g, b] = rgb.map(c => {;
       c = c / 255;
       return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4);}
-    });
     return 0.2126 * r + 0.7152 * g + 0.0722 * b;
-  };
 ;
   const lum1 = getLuminance(color1);
   const lum2 = getLuminance(color2);
@@ -131,7 +117,7 @@ export function getContrastRatio(color1: string, color2: string): number {;
   const darkest = Math.min(lum1, lum2);
 ;
   return (brightest + 0.05) / (darkest + 0.05);
-}
+
 ;
 /**;
  * Check if contrast ratio meets WCAG standards;
@@ -144,7 +130,7 @@ export function meetsContrastRequirements(;
 ): boolean {;
   const ratio = getContrastRatio(color1, color2);
   return fontSize === 'large' ? ratio >= 3 : ratio >= 4.5;}
-}
+
 ;
 /**;
  * Skip to content link helper;
@@ -165,28 +151,26 @@ export function createSkipLink(targetId: string, text = 'Skip to main content'):
 ;
   skipLink.addEventListener('focus', () => {;
     skipLink.style.top = '0';}
-  });
 ;
   skipLink.addEventListener('blur', () => {;
     skipLink.style.top = '-40px';}
-  });
 ;
   return skipLink;
-}
+
 ;
 /**;
  * Detect if user prefers reduced motion;
  */;
 export function prefersReducedMotion(): boolean {;
   return window.matchMedia('(prefers-reduced-motion: reduce)').matches;}
-}
+
 ;
 /**;
  * Detect if user prefers dark mode;
  */;
 export function prefersDarkMode(): boolean {;
   return window.matchMedia('(prefers-color-scheme: dark)').matches;}
-}
+
 ;
 /**;
  * Get ARIA label for form validation error;
@@ -194,8 +178,7 @@ export function prefersDarkMode(): boolean {;
 export function getAriaInvalid(hasError: boolean): Record<string, string> {;
   return {;}
     ...(hasError && { 'aria-describedby': generateId('error') });
-  };
-}
+
 ;
 /**;
  * Create accessible tooltip;
@@ -228,7 +211,7 @@ export function createAccessibleTooltip(;
   return (
     $3
   );
-};
+;
       case 'top':;}
         tooltip.style.left = `${triggerRect.left + triggerRect.width / 2 - tooltip.offsetWidth / 2}px`;
         tooltip.style.top = `${triggerRect.top - tooltip.offsetHeight - 5}px`;
@@ -245,16 +228,13 @@ export function createAccessibleTooltip(;
         tooltip.style.left = `${triggerRect.right + 5}px`;
         tooltip.style.top = `${triggerRect.top + triggerRect.height / 2 - tooltip.offsetHeight / 2}px`;
         break;
-    }
-  };
 ;
   const hideTooltip = (;) => {
   return (
     $3
   );
-};
+;
     tooltip.style.display = 'none';}
-  };
 ;
   trigger.addEventListener('mouseenter', showTooltip);
   trigger.addEventListener('mouseleave', hideTooltip);
@@ -267,8 +247,7 @@ export function createAccessibleTooltip(;
     trigger.removeEventListener('focus', showTooltip);
     trigger.removeEventListener('blur', hideTooltip);
     document.body.removeChild(tooltip);}
-  };
-}
+
 ;
 /**;
  * Manage focus restoration (useful for modals);
@@ -278,13 +257,10 @@ export class FocusManager {;
 ;
   saveFocus(): void {;
     this.previousActiveElement = document.activeElement as HTMLElement;}
-  }
 ;
   restoreFocus(): void {;
     if (this.previousActiveElement) {;
       this.previousActiveElement.focus();}
-    }
-  }
 ;
   moveFocusInside(container: HTMLElement): void {;
     const focusableElements = container.querySelectorAll(;
@@ -292,6 +268,5 @@ export class FocusManager {;
     );
     const firstFocusable = focusableElements[0] as HTMLElement;
     firstFocusable?.focus();}
-  }
-}
+
 ;

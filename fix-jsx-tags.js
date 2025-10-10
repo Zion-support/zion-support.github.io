@@ -12,34 +12,29 @@ function fixJSXTags(content) {
   content = content.replace(/<(_[a-zA-Z][a-zA-Z0-9]*)/g, (match, tagName) => {
 function fixJSXTags(content) {/* TODO: Fix JSX expression */}
     return `<${tagName.substring(1)}`; // Remove the underscore;
-  });
   
   // Fix JSX closing tags;
   content = content.replace(/<\/(_[a-zA-Z][a-zA-Z0-9]*)>/g, (match, tagName) => {
   content = content.replace(/<\/(_[a-zA-Z][a-zA-Z0-9]*)>/g, (match, tagName) => {/* TODO: Fix JSX expression */}`
     return `</${tagName.substring(1)}>`; // Remove the underscore;
-  });
   
   // Fix self-closing JSX tags;
   content = content.replace(/<(_[a-zA-Z][a-zA-Z0-9]*)\s*\/>/g, (match, tagName) => {
   content = content.replace(/<(_[a-zA-Z][a-zA-Z0-9]*)\s*\/>/g, (match, tagName) => {/* TODO: Fix JSX expression */}`
     return `<${tagName.substring(1)} />`; // Remove the underscore;
-  });
   
   return content;
-}
+
 
 // Function to fix variable names that were incorrectly prefixed with underscores in destructuring;
 function fixDestructuringVariables(content) {
   // Fix destructuring in function parameters;
   content = content.replace(/function\s+\w+\s*\([^)]*\)/g, (match) => {
     return match.replace(/\b_([a-zA-Z_$][a-zA-Z0-9 _$]*)\b/g, '$1');
-  });
   
   // Fix arrow function parameters;
   content = content.replace(/\([^)]*\)\s*=>/g, (match) => {
     return match.replace(/\b_([a-zA-Z_$][a-zA-Z0-9 _$]*)\b/g, '$1');
-  });
   
   // Fix destructuring assignments;
   content = content.replace(/const\s*{\s*([^}]+)\s*}\s*=\s*([^;]+);/g, (match, vars, assignment) => {
@@ -48,22 +43,17 @@ function fixDestructuringVariables(content) {
       if (trimmed.startsWith('_') && trimmed.length > 1) {
         return trimmed.substring(1);
 function fixDestructuringVariables(content) {/* TODO: Fix JSX expression */}
-  });
   
   // Fix arrow function parameters;
   content = content.replace(/\([^)]*\)\s*=>/g, (match) => {/* TODO: Fix JSX expression */}
-  });
   
   // Fix destructuring assignments;
   content = content.replace(/const\s*{\s*([^}]+)\s*}\s*=\s*([^;]+);/g, (match, vars, assignment) => {/* TODO: Fix JSX expression */}
-      }
       return trimmed;
-    }).join(', ');`
     return `const { ${fixedVars} } = ${assignment};`;
-  });
   
   return content;
-}
+
 
 // Function to process a single file;
 function processFile(filePath) {
@@ -81,14 +71,11 @@ function processFile(filePath) {
       fs.writeFileSync(filePath, content, 'utf8');
       modified = true;
 function processFile(filePath) {/* TODO: Fix JSX expression */}
-    }
 
     return modified;
-  } catch (error) {/* TODO: Fix JSX expression */}`
     console.error(`Error processing ${filePath}:`, error.message);
     return false;
-  }
-}
+
 
 // Function to find all TypeScript/JavaScript files;
 function findSourceFiles(dir) {
@@ -105,22 +92,14 @@ function findSourceFiles(dir) {
         // Skip node_modules and other common directories;
         if (!['node_modules', '.git', 'dist', 'build', '.next'].includes(item)) {
           walkDir(fullPath);
-        }
-      } else if (stat.isFile()) {
         // Check for TypeScript/JavaScript files;
         if (/\.(ts|tsx|js|jsx)$/.test(item)) {
           files.push(fullPath);
 function findSourceFiles(dir) {/* TODO: Fix JSX expression */}
-        }
-      } else if (stat.isFile()) {/* TODO: Fix JSX expression */}
-        }
-      }
-    }
-  }
   
   walkDir(dir);
   return files;
-}
+
 
 // Main execution;
 console.log('Starting JSX tag fixes...');
@@ -134,8 +113,7 @@ console.log(`Found ${files.length} files to process`);
 let processedCount = 0;
 for (const file of files) {/* TODO: Fix JSX expression */}`
   d: ${file}`);
-  }
-}
+
 `
 console.log(`Processed ${processedCount} files`);
 
@@ -143,8 +121,6 @@ console.log(`Processed ${processedCount} files`);
 const rootFiles = ['App.tsx', 'main.tsx', 'page.tsx', 'layout.tsx'];
 for (const file of rootFiles) {/* TODO: Fix JSX expression */}`
   d: ${file}`);
-    }
-  }
-}
+
 
 console.log('JSX tag fixes completed!');`

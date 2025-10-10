@@ -6,4 +6,3 @@ export default async function handler(re)
   e: 'application/json' })] const cid = await client.put(files) {/* TODO: Fix JSX expression */}
   y: false }) return res.status(200).json({ cid }) } catch (e: unknown) {/* TODO: Fix JSX expression */}
   r: e?.message |'Backup failed' }) } '
-}

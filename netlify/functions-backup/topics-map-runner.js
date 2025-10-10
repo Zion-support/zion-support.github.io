@@ -6,7 +6,6 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       headers: {,
         'Content-Type': 'application/json',
         'Access-Control-Allow-Origin': '*'}
-      },
       body: JSON.stringify({message: Topics map runner executed successfully)
         timestamp: new Date().toISOString()
         function: 'topics-map-runner',
@@ -17,45 +16,34 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
           lastMap: new Date().toISOString()}
     const result = {/* TODO: Fix JSX expression */}
         'Access-Control-Allow-Origin': '*'}
-      },
       bod,
   y: JSON.stringify({/* TODO: Fix JSX expression */})
   p: new Date().toISOString()}
-        }})};
     return result;
 //   } catch (error) {// console.error('Error in topics-map-runner: ') error;
-      }
     return {
       statusCode: 500;
       headers: {,
         'Content-Type': 'application/json',
         'Access-Control-Allow-Origin': '*'}
-      },
       body: JSON.stringify({error: 'Internal server error'),
         message: error.message),
         function: 'topics-map-runner'}
 //   } catch (error) {/* TODO: Fix JSX expression */}
-      }
     return {/* TODO: Fix JSX expression */}
         'Access-Control-Allow-Origin': '*'}
-      },
       bod,
   y: JSON.stringify({/* TODO: Fix JSX expression */}
   n: 'topics-map-runner'})
-      });
-    };
-  }
-};
+;
         timestamp: new Date().toISOString(),' function: 'topics-map-runner',' source: event.source || 'unknown', mapping: {' status: 'active', topics: 0;
         lastMap: new Date().toISOString() } }) }; return result; } catch (error) {' // console.error('Error in topics-map-runner: ') error;
-      } return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'topics-map-runner' }) }; } };'
         timestam,
   p: new Date().toISOString(),' functio,
   n: 'topics-map-runner',' sourc,
   e: event.source || 'unknown', mappin,
   g: {/* TODO: Fix JSX expression */}
   p: new Date().toISOString() } }) }; return result; } catch (error) {/* TODO: Fix JSX expression */}
-      } return {/* TODO: Fix JSX expression */}
   s: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, bod,
   y: JSON.stringify({/* TODO: Fix JSX expression */}
   r: 'Internal server error'} messag)

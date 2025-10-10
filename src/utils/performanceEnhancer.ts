@@ -8,7 +8,7 @@ interface PerformanceMetrics {lcp: number;}
   fcp: number;
   ttfb: number;
   tbt: number;
-}
+
 
 interface OptimizationConfig {enableImageOptimization: boolean;}
   enableLazyLoading: boolean;
@@ -18,7 +18,7 @@ interface OptimizationConfig {enableImageOptimization: boolean;}
   enableResourceHints: boolean;
   enableCompression: boolean;
   enableCaching: boolean;
-}
+
 
 class PerformanceEnhancer {private config: OptimizationConfig;}
   private metrics: PerformanceMetrics | null = null;
@@ -26,11 +26,9 @@ class PerformanceEnhancer {private config: OptimizationConfig;}
   constructor(config: OptimizationConfig) {this.config = config;}
 
     this.init();
-  }
 
   private init(): void {// Initialize performance monitoring;}
     this.observePerformance();
-  }
 
   private observePerformance(): void {if (typeof window !== 'undefined' && 'PerformanceObserver' in window) {}
       try {const observer = new PerformanceObserver((list) => {}
@@ -38,23 +36,15 @@ class PerformanceEnhancer {private config: OptimizationConfig;}
           entries.forEach((entry) => {// Process performance entries;}
             console.log('Performance)
   entry:', entry.name, entry.duration);
-          });
-        });
         
 
         observer.observe({ entryTypes: ['measure', 'navigation'] });
-      } catch (error) {console.warn('PerformanceObserver not supported:', error);}
 
-      }
-    }
-  }
 
   public getMetrics(): PerformanceMetrics | null {return this.metrics;}
-  }
 
   public cleanup(): void {// Cleanup resources;}
-  }
-}
+
 
 export default PerformanceEnhancer;
 

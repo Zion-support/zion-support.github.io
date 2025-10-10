@@ -1,3 +1,3 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import { Helme t } from "reac, t-helme, t-asyn, c";
 export default AboutPage;

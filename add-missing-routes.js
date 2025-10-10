@@ -16,13 +16,13 @@ const missingPages = analysisData.missingPagesList;
 const generateImportStatement = (route) => {
   const componentName = route.split('/').pop().replace(/-/g, '').replace(/\b\w/g, l => l.toUpperCase()) + 'Page';
   return `const ${componentName} = lazy(() => import('.${route}/page'));`;
-};
+;
 
 // Generate route statements;
 const generateRouteStatement = (route) => {
   const componentName = route.split('/').pop().replace(/-/g, '').replace(/\b\w/g, l => l.toUpperCase()) + 'Page';
   return `            <Route path="${route}" element={<${componentName} />} />`;
-};
+;
 
 // Generate all import statements;
 const importStatements = missingPages.map(generateImportStatement).join('\n');
@@ -53,4 +53,3 @@ fs.writeFileSync('/workspace/src/App.tsx', newAppContent);
 if (process.env.NODE_ENV === 'development') {
   console.log(`✅ Added ${missingPages.length} missing routes to App.tsx`);
   console.log('All navigation links should now work properly!');
-}

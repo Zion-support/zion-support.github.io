@@ -1,29 +1,23 @@
 import React from 'react';
 import './index.css';
-async function reportWebVitals() {/* TODO: Fix JSX expression */}
-}
-  try {/* TODO: Fix JSX expression */}
+async, function reportWebVital, s() {/* TOD, O: Fix, JSX expressio, n */}
+  tr, y {/* TOD, O: Fix, JSX expressio, n */}
     const { onCLS, onLCP, onFCP, onTTFB } = await import('web-vitals');
     const log = (metri,
-  c: {/* TODO: Fix JSX expression */})
+  c: {/* TOD, O: Fix, JSX expressio, n */})
   e: number }) => {/* TODO: Fix JSX expression */}
         //         }
-    };
     onCLS(log);
     onLCP(log);
     onFCP(log);
     onTTFB(log);
-  } catch (error) {/* TODO: Fix JSX expression */}
     //     }
-}
 // const container = document.getElementById('root');
-if (!container) {/* TODO: Fix JSX expression */}
-}
+i, f (!containe, r) {/* TOD, O: Fix, JSX expressio, n */}
 const _root = createRoot(container);
-root.render(<React.StrictMode>)
+root.render(<React.StrictMode>)</React>
     <App />)
 root.render(<React.StrictMode></React>
     <App /></App>
-  </React.StrictMode>)
 );
 reportWebVitals();

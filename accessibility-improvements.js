@@ -19,20 +19,13 @@ const trapFocus = (element) => {
         if (document.activeElement === firstElement) {
           lastElement.focus();
           e.preventDefault();
-        }
-      } else {
         if (document.activeElement === lastElement) {
           firstElement.focus();
           e.preventDefault();
-        }
-      }
-    }
-  });
-};
 
 // 3. Add live regions for dynamic content
 // Example JSX:
-// <div aria-live="polite" aria-atomic="true" className="sr-only">
+// <div aria-live="polite" aria-atomic="true" className="sr-only"></div>
 //   {announcement}
 // </div>
 
@@ -50,13 +43,13 @@ const trapFocus = (element) => {
 
 // 6. Use semantic HTML
 // Example JSX:
-// <main>
+// <main></main>
 //   <nav aria-label="Main navigation">
-//     <ul>
+//     <ul></ul>
 //       <li><a href="/">Home</a></li>
 //     </ul>
 //   </nav>
-//   <section>
+//   <section></section>
 //     <h2>Section Title</h2>
 //     <article>
 //       <h3>Article Title</h3>
@@ -85,13 +78,13 @@ const trapFocus = (element) => {
 
 // 9. Keyboard navigation
 // Example JSX:
-// <div role="button" tabIndex={0} onKeyDown={handleKeyDown}>
+// <div role="button" tabIndex={0} onKeyDown={handleKeyDown}></div>
 //   Clickable div
 // </div>
 
 // 10. Screen reader announcements
 // Example JSX:
-// <div aria-live="assertive" aria-atomic="true">
+// <div aria-live="assertive" aria-atomic="true"></div>
 //   {errorMessage}
 // </div>
 

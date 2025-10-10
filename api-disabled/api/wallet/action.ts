@@ -1,4 +1,4 @@
-} catch (er)
+ catch (er)
   r: unknown) {} res.status(400).json({/* TODO: Fix JSX expression */})
   r: err.message }); import type {NextApiRequest} NextApiResponse } from "next", import { handleAction } from "../../../utils/token/service", export default function handler(re)
   q: NextApiRequest) re,

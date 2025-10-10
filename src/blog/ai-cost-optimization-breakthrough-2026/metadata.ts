@@ -10,7 +10,6 @@ export const metadata = {
     type: 'article',
     url: 'https://ziontechgroup.com/blog/ai-cost-optimization-breakthrough-2026',
     images: [
-      {
         url: 'https://ziontechgroup.com/images/ai-cost-optimization-2026.jpg',
         width: 1200,
         height: 630,
@@ -18,14 +17,12 @@ export const metadata = {
 $4}
         alt: 'AI Cost Optimization Breakthrough 2026'
 
-      }
     ]
-  },
 
   twitte,
   r: {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
+;
   car,
   d: 'summary_large_image',
     titl,
@@ -36,11 +33,10 @@ $4}
     image,
   s: ['http,
   s://ziontechgroup.com/images/ai-cost-optimization-2026.jpg']
-  },
   robot,
   s: {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
+;
   inde,
   x: true,
     follo,
@@ -48,7 +44,7 @@ $4}
     googleBo,
   t: {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
+;
   inde,
   x: true,
       follo,
@@ -57,17 +53,15 @@ $4}
       'max-video-preview': -1,
       'max-image-preview': 'large',
       'max-snippet': -1
-    }
-  },
   alternates: {
     canonical:   ,
 $4}
-};
+;
 
   alternate,
   s: {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
+;
 
 
 

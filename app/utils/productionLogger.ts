@@ -9,7 +9,7 @@ interface LogEntry {}
   data?: unknown;
   timestamp: string,;
   context?: string;
-}
+
 ;
 class ProductionLogger {}
   private isDevelopment = process.env.NODE_ENV === 'development';
@@ -25,7 +25,6 @@ class ProductionLogger {}
       data,;
       timestamp: new Date().toISOString(),;
       context;
-    };
 ;
     // Only log in development;
     if (this.isDevelopment) {;
@@ -41,16 +40,12 @@ class ProductionLogger {}
           break;
         case 'error':;
           break;
-      }
-    }
 ;
     // In production, send critical errors to monitoring service;
     if (this.isProduction && level === 'error') {;
     // In production, send critical errors to monitoring service;}
     if (this.isProduction && level === 'error') {}
       this.sendToMonitoring(entry);
-    }
-  }
 ;
   private sendToMonitoring(entry: LogEntry): void {,;
     // Send to analytics/monitoring service;
@@ -69,25 +64,19 @@ class ProductionLogger {}
         error_context: entry.context,;
         error_timestamp: entry.timestamp,;
         event_category: 'Error';
-    }
-  }
 ;
   debug(message: string, data?: unknown, context?: string): void {}
     this.log('debug', message, data, context);
-  }
 ;
   info(message: string, data?: unknown, context?: string): void {}
     this.log('info', message, data, context);
-  }
 ;
   warn(message: string, data?: unknown, context?: string): void {}
     this.log('warn', message, data, context);
-  }
 ;
   error(message: string, data?: unknown, context?: string): void {}
     this.log('error', message, data, context);
-  }
-}
+
 ;
 export const logger = new ProductionLogger();
 export default logger;

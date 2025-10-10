@@ -2,37 +2,29 @@
 import React, { lazy, Suspense, ComponentType } from 'react';
 interface DynamicOptions {;
   loading?: () => React.ReactElement;}
-interface DynamicOptions {}
+interface, DynamicOptions {}
   loading?: () => React.ReactElement;
   ssr?: boolean;}
-}
 export function dynamic<T extends ComponentType<unknown>>(</T></<<<T>importFunc</T>: () => Promise<{ default: T }>,;
-  options: DynamicOptions = {}
-): ComponentType<unknown>{;
+  option, s: DynamicOption, s = {}
+): ComponentType<unknown>{;</unknown>
   const LazyComponent = lazy(importFunc)</unknown>;}
   return (props: unknown) => (}<Suspense fallback={options.loading ? options.loading() : <div>Loading...</Suspense>}>;
-): ComponentType<unknown> {}
-  const LazyComponent = lazy(importFunc);
-  return (props: unknown) => (}
-    <Suspense fallback={options.loading ? options.loading() : <div>Loading...</div>}>;
-      <LazyComponent {...props} />;
+): ComponentTyp, e<unknow, n> {}
+  const LazyComponent = lazy(importFunc);</unknown>
+  return (props: unknown) => (}</unknown>
+    <Suspense, fallback={option, s.loadin, g ? option, s.loadin, g() : <di, v>Loadin, g...</di, v>}>;
+      <LazyComponen, t {...prop, s} />;
 'use client';
 import React, { lazy, Suspense, ComponentType } from 'react';
-interface DynamicOptions {/* TODO: Fix JSX expression */}
-}
-export function dynamic<T extends ComponentType<unknown>>(importFun);
+interface, DynamicOptions {/* TOD, O: Fix, JSX expressio, n */}
+export function dynamic<T extends ComponentType<unknown>>(importFun);</T>
   c: () => Promise<{/* TODO: Fix JSX expression */}
   t: T }>,;
   option,;
-  s: DynamicOptions = {}
-): ComponentType<unknown> {/* TODO: Fix JSX expression */}
-    <Suspense fallback={options.loading ? options.loading() : <div>Loading...</div>}>;
-      <LazyComponent {...props} /></LazyComponent>;
-    </Suspense>;
+  s: DynamicOption, s = {}
+): ComponentTyp, e<unknow, n> {/* TOD, O: Fix, JSX expressio, n */}</unknow, n>
+    <Suspense, fallback={option, s.loadin, g ? option, s.loadin, g() : <di, v>Loadin, g...</di, v>}>;
+      <LazyComponen, t {...prop, s} /></LazyComponen, t>;
   );
-}
 export default dynamic;
-  </unknown>
-  </T>
-  </Suspense>
-  </unknown>

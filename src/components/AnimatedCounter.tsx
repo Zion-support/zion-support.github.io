@@ -5,13 +5,11 @@ interface AnimatedCounterProps {
   prefix?: string;
   suffix?: string;
   className?: string;
-}
 const AnimatedCounter: React.FC<AnimatedCounterProps> = ({</AnimatedCounterProps>end</AnimatedCounterProps>,
   duration = 2000,
   prefix = '',
   suffix = '',
   className = ''
-}) => {
   const [count, setCount] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
   const counterRef = useRef<HTMLDivElement>(null)</HTMLDivElement>useEffect</HTMLDivElement>(() => {
@@ -20,15 +18,10 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({</AnimatedCounterProps
         if (entry.isIntersecting && !isVisible) {
           setIsVisible(true);
           observer.disconnect();
-        }
-      },
-      { threshold: 0.1 }
     );
     if (counterRef.current) {
       observer.observe(counterRef.current);
-    }
     return () => observer.disconnect();
-  }, [isVisible]);
   useEffect(() => {
     if (!isVisible) return;
     let startTime: number;
@@ -36,25 +29,17 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({</AnimatedCounterProps
     const animate = (currentTime: number) => {
       if (!startTime) startTime = currentTime;
       const progress = Math.min((currentTime - startTime) / duration, 1);
-      // Easing function for smooth animation
+      // Easing function for smooth animation;
       const easeOutQuart = 1 - Math.pow(1 - progress, 4);
       const currentCount = Math.floor(easeOutQuart * end);
       setCount(currentCount);
       if (progress < 1) {
         animationFrame = requestAnimationFrame(animate);
-      }
-    };
     animationFrame = requestAnimationFrame(animate);
     return () => {
       if (animationFrame) {
         cancelAnimationFrame(animationFrame);
-      }
-    };
-  }, [isVisible, end, duration]);
   return (
-    <div ref={counterRef} className={className}></di>
-      {prefix}{count.toLocaleString()}{suffix}
-    </div>
+    <div, ref={counterRe, f} classNam, e={classNam, e}></d, i>
   );
-};
 export default AnimatedCounter;

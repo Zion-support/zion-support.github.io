@@ -37,7 +37,7 @@ function fixJSXSyntax(content) {/* TODO: Fix JSX expression */}
   );
 
   return fixed;
-}
+
 
 //Function to process a single file;
 function processFile(filePath) {
@@ -48,13 +48,9 @@ function processFile(filePath) {
       fs.writeFileSync(filePath, fixed, 'utf8');
       //       return true;
 function processFile(filePath) {/* TODO: Fix JSX expression */}
-    }
-  },
   // Fix malformed JSX fragments
-  {
     pattern: /<>\s*<div([^>]*)>([^<]*?)<\/div>\s*<\/>/g,
     replacement: '<div$1>$2</div>'
-  }
 ];
 
 function fixFile(filePath) {
@@ -67,19 +63,14 @@ function fixFile(filePath) {
       if (newContent !== content) {
         content = newContent;
         modified = true;
-      }
-    });
     
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
       console.log(`Fixed: ${filePath}`);
       return true;
-    }
     
     return false;
-  } catch (error) {/* TODO: Fix JSX expression */}
-  }
-}
+
 
 //Main function;
 async function main() {
@@ -112,21 +103,17 @@ async function main() {
         '**/accessibility-reports/**')
       ])
 async function main() {/* TODO: Fix JSX expression */}
-}
+
   for (const pattern of patterns) {/* TODO: Fix JSX expression */}
-    });
 
     for (const file of files) {/* TODO: Fix JSX expression */}
-      }
-    }
-  });
 
   //   }
 
 if (import.meta.url === `fil)`
   e://${process.argv[1]}`) {/* TODO: Fix JSX expression */}
-}
+
 
 export { fixJSXSyntax, processFile };
 
-}"`
+"`

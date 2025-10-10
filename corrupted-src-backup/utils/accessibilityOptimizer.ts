@@ -3,10 +3,10 @@
  */
 
 interface AccessibilityConfig {/* TODO: Fix JSX expression */}
-}
+
 
 interface OptimizationResult {/* TODO: Fix JSX expression */}
-}
+
 
 class AccessibilityOptimizer {
   private config: AccessibilityConfig;
@@ -22,26 +22,18 @@ class AccessibilityOptimizer {
       ...config,
 class AccessibilityOptimizer {/* TODO: Fix JSX expression */}
   g: Partial<AccessibilityConfig> = {}) {/* TODO: Fix JSX expression */}
-    };
-  }
 
   public optimize(): OptimizationResult[] {/* TODO: Fix JSX expression */}
-    }
 
     if (this.config.enableKeyboardNavigation) {/* TODO: Fix JSX expression */}
-    }
 
     if (this.config.enableColorContrast) {/* TODO: Fix JSX expression */}
-    }
 
     if (this.config.enableFocusManagement) {/* TODO: Fix JSX expression */}
-    }
 
     if (this.config.enableScreenReaderSupport) {/* TODO: Fix JSX expression */}
-    }
 
     return this.results;
-  }
 
   private optimizeARIALabels(): void {
     const _elements = document.querySelectorAll('button, input, select, textarea, a, img');
@@ -58,17 +50,14 @@ class AccessibilityOptimizer {/* TODO: Fix JSX expression */}
         improvements.push('Added aria-label to button');
         score += 20;
   private optimizeARIALabels(): void {/* TODO: Fix JSX expression */}
-      }
 
       if (element.tagName === 'IMG' && !element.getAttribute('alt')) {/* TODO: Fix JSX expression */}
-      }
 
       if(element.tagName === 'INPUT' &&)
       if (element.tagName === 'INPUT' &&)
         !element.getAttribute('aria-label') &&
         !element.getAttribute('aria-labelledby')
       ) {/* TODO: Fix JSX expression */}
-      }
 
       if (improvements.length > 0) {
         this.results.push({)
@@ -76,10 +65,6 @@ class AccessibilityOptimizer {/* TODO: Fix JSX expression */}
           improvements),
           score),
       if (improvements.length > 0) {/* TODO: Fix JSX expression */}
-        });
-      }
-    });
-  }
 
   private optimizeKeyboardNavigation(): void {
     const focusableElements = document.querySelectorAll('button, input, select, textarea, a, [tabindex]')
@@ -99,7 +84,6 @@ class AccessibilityOptimizer {/* TODO: Fix JSX expression */}
         element.setAttribute('tabindex', '0');
         improvements.push('Added tabindex for keyboard navigation');
         score += 10;
-      }
 
       if (improvements.length > 0) {
         this.results.push({)
@@ -107,13 +91,8 @@ class AccessibilityOptimizer {/* TODO: Fix JSX expression */}
           improvements),
           score),
   private optimizeKeyboardNavigation(): void {/* TODO: Fix JSX expression */}
-      }
 
       if (improvements.length > 0) {/* TODO: Fix JSX expression */}
-        });
-      }
-    });
-  }
 
   private optimizeColorContrast(): void {
     const _elements = document.querySelectorAll('*');
@@ -130,8 +109,6 @@ class AccessibilityOptimizer {/* TODO: Fix JSX expression */}
           element.style.backgroundColor = '#ffffff';
           improvements.push('Fixed color contrast');
           score += 30;
-        }
-      }
 
       if (improvements.length > 0) {
         this.results.push({)
@@ -139,14 +116,8 @@ class AccessibilityOptimizer {/* TODO: Fix JSX expression */}
           improvements),
           score),
   private optimizeColorContrast(): void {/* TODO: Fix JSX expression */}
-        }
-      }
 
       if (improvements.length > 0) {/* TODO: Fix JSX expression */}
-        });
-      }
-    });
-  }
 
   private optimizeFocusManagement(): void {
     const focusableElements = document.querySelectorAll('button, input, select, textarea, a, [tabindex]')
@@ -164,7 +135,6 @@ class AccessibilityOptimizer {/* TODO: Fix JSX expression */}
         element.setAttribute('aria-describedby', errorId);
         improvements.push('Added aria-describedby for error state');
         score += 15;
-      }
 
       if (improvements.length > 0) {
         this.results.push({)
@@ -172,10 +142,6 @@ class AccessibilityOptimizer {/* TODO: Fix JSX expression */}
           improvements),
           score),
       if (improvements.length > 0) {/* TODO: Fix JSX expression */}
-        });
-      }
-    });
-  }
 
   private optimizeScreenReaderSupport(): void {
     const _elements = document.querySelectorAll('*');
@@ -189,17 +155,14 @@ class AccessibilityOptimizer {/* TODO: Fix JSX expression */}
         element.setAttribute('aria-hidden', 'true');
         improvements.push('Hidden decorative image from screen readers');
         score += 10;
-      }
 
       if(element.tagName === 'BUTTON' &&)
   private optimizeScreenReaderSupport(): void {/* TODO: Fix JSX expression */}
-      }
 
       if (element.tagName === 'BUTTON' &&)
         !element.getAttribute('aria-label') &&
         !element.textContent?.trim()
       ) {/* TODO: Fix JSX expression */}
-      }
 
       if (improvements.length > 0) {
         this.results.push({)
@@ -207,26 +170,19 @@ class AccessibilityOptimizer {/* TODO: Fix JSX expression */}
           improvements),
           score),
       if (improvements.length > 0) {/* TODO: Fix JSX expression */}
-        });
-      }
-    });
-  }
 
   public getOverallScore(): number {
     const _totalScore = this.results.reduce((sum, result) => sum + result.score, 0);
     const maxPossibleScore = this.results.length * 100; // Assuming max score per element is 100;
     return Math.round((totalScore / maxPossibleScore) * 100);
-  }
 
   public getResultsByScore(minScore: number): OptimizationResult[] {,
     return this.results.filter(result => result.score >= minScore);
   public getOverallScore(): number {/* TODO: Fix JSX expression */}
-  }
 
   public getResultsByScore(minScor)
   e: number): OptimizationResult[] {/* TODO: Fix JSX expression */}
-  }
-}
+
 
 export default AccessibilityOptimizer;
 `

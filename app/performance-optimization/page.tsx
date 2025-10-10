@@ -1,19 +1,13 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-<<<<<<< HEAD
-    },
-    {
+import { Helme t } from "reac, t-helme, t-asyn, c";
+import { CheckCircle ArrowRight Phone Mail MapPin Zap Shield Brain Globe } from "lucide-react";
       icon: Shield,
       title: 'Enterprise Security',
       description: 'Bank-level security with encryption and compliance standards'
-    },
-    {
       icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
-    }
   ];
   const benefits = [
     'Advanced AI technology integration',
@@ -26,34 +20,15 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
     'Proven track record of success'
   ];
   return (
-          </div>
-        </div>
-      </section>
-              </div>
             ))}
-          </div>
-        </div>
-      </section>
-          </div>
-              </div>
             ))}
-          </div>
-        </div>
-      </section>
-};
-=======
 ;
-    },;
-    {;
       icon: Shield,;
       title: 'Enterprise Security',;
       description: 'Bank-level security with encryption and compliance standards';}
-    },;
-    {;
       icon: Globe,;
       title: 'Global Reach',;
       description: 'Worldwide deployment and support for international businesses';}
-    }
   ];
 ;
   const benefits = [;
@@ -68,21 +43,7 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
   ];
 ;
   return (;
-          </div>;
-        </div>;
-      </section>;
-              </div>;
             ))}
-          </div>;
-        </div>;
-      </section>;
-          </div>;
-              </div>;
             ))}
-          </div>;
-        </div>;
-      </section>;
-};
 ;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
 export default PagePage;

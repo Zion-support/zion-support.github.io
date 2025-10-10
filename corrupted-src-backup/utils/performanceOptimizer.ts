@@ -5,9 +5,7 @@ export class PerformanceOptimizer {
     if (!PerformanceOptimizer.instance) {
       PerformanceOptimizer.instance = new PerformanceOptimizer();
 export class PerformanceOptimizer {/* TODO: Fix JSX expression */}
-    }
     return PerformanceOptimizer.instance;
-  }
 
   // Lazy load images with intersection observer;
   lazyLoadImages(): void {
@@ -21,17 +19,10 @@ export class PerformanceOptimizer {/* TODO: Fix JSX expression */}
               img.classList.remove('lazy');
               imageObserver.unobserve(img);
   lazyLoadImages(): void {/* TODO: Fix JSX expression */}
-            }
-          }
-        });
-      });
 
       document.querySelectorAll('img[data-src]').forEach(img => {)
         imageObserver.observe(img);
       document.querySelectorAll('img[data-src]').forEach(img => {/* TODO: Fix JSX expression */})
-      });
-    }
-  }
 
   // Preload critical resources;
   preloadCriticalResources(): void {
@@ -45,10 +36,7 @@ export class PerformanceOptimizer {/* TODO: Fix JSX expression */}
       if (resource.endsWith('.woff2')) {
         link.crossOrigin = 'anonymous';
   preloadCriticalResources(): void {/* TODO: Fix JSX expression */}
-      }
       document.head.appendChild(link);
-    });
-  }
 
   // Optimize scroll performance;
   optimizeScroll(): void {
@@ -58,15 +46,11 @@ export class PerformanceOptimizer {/* TODO: Fix JSX expression */}
       // Throttled scroll handling;
       ticking = false;
   optimizeScroll(): void {/* TODO: Fix JSX expression */}
-    };
 
     const requestTick = () => {/* TODO: Fix JSX expression */}
-      }
-    };
 
     window.addEventListener('scroll', requestTick, {/* TODO: Fix JSX expression */})
   e: true });
-  }
 
   // Measure performance metrics;
   measurePerformance(name: string, fn: () => void): void {
@@ -83,23 +67,16 @@ export class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   e: string, f)
   n: () => void): void {/* TODO: Fix JSX expression */}
   e: ${name} took ${duration.toFixed(2)}ms`);
-    }
-  }
 
   // Get performance metrics;
   getMetrics(): Record<string, number> {
     return Object.fromEntries(this.metrics);
-  }
 
   // Add critical resource hints method;
   addCriticalResourceHints(): void {
     if (typeof document === 'undefined') return;
 
     const hints = [
-      { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
-      { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
-      { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-      {
         rel: 'preconnect',
         href: 'https://fonts.gstatic.com',
         crossOrigin: 'anonymous'}];
@@ -110,25 +87,16 @@ export class PerformanceOptimizer {/* TODO: Fix JSX expression */}
       link.href = hint.href;
       if (hint.crossOrigin) {
         link.crossOrigin = hint.crossOrigin;
-      }
   getMetrics(): Record<string, number> {/* TODO: Fix JSX expression */}
-  }
 
   // Add critical resource hints method;
   addCriticalResourceHints(): void {/* TODO: Fix JSX expression */}
   s://fonts.googleapis.com' },
-      {/* TODO: Fix JSX expression */}
   s://fonts.gstatic.com' },
-      {/* TODO: Fix JSX expression */}
   s://fonts.googleapis.com' },
-      {/* TODO: Fix JSX expression */}
-      }];
 
     hints.forEach(hint => {/* TODO: Fix JSX expression */}
-      })
       document.head.appendChild(link);
-    });
-  }
 
   // Add Web Vitals reporting method;
   reportWebVitals(metrics: unknown): void {,
@@ -136,25 +104,20 @@ export class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   reportWebVitals(metric)
   s: unknown): void {/* TODO: Fix JSX expression */}
       //       }
-  }
 
   // Add page load measurement method;
   measurePageLoad(): unknown {
     if (typeof window === 'undefined' || !window.performance) {
       return null;
-    }
 
     const _timing = window.performance.timing;
     return {
       loadTime: timing.loadEventEnd - timing.navigationStart;
       interactiveTime: timing.domInteractive - timing.navigationStart;
   measurePageLoad(): unknown {/* TODO: Fix JSX expression */}
-    }
 
     const _timing = window.performance.timing;
     return {/* TODO: Fix JSX expression */}
-    };
-  }
 
   // Initialize all optimizations;
   initialize(): void {
@@ -162,8 +125,7 @@ export class PerformanceOptimizer {/* TODO: Fix JSX expression */}
     this.measurePerformance('preloadCriticalResources', () => this.preloadCriticalResources());
     this.measurePerformance('optimizeScroll', () => this.optimizeScroll());
   initialize(): void {/* TODO: Fix JSX expression */}
-  }
-}
+
 
 // Export singleton instance;
 export const performanceOptimizer = PerformanceOptimizer.getInstance();

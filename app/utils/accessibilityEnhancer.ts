@@ -11,7 +11,6 @@ export class AccessibilityEnhancer {
 
   constructor() {
     this.init();
-  }
 
   /**
    * Initialize accessibility enhancements
@@ -28,7 +27,6 @@ export class AccessibilityEnhancer {
     this.setupScreenReaderSupport();
     
     this.isInitialized = true;
-  }
 
   /**
    * Setup focus management
@@ -42,7 +40,6 @@ export class AccessibilityEnhancer {
     
     // Handle focus trapping
     this.setupFocusTrapping();
-  }
 
   /**
    * Update list of focusable elements
@@ -61,7 +58,6 @@ export class AccessibilityEnhancer {
     this.focusableElements = Array.from(
       document.querySelectorAll(selectors.join(', '))
     ) as HTMLElement[];
-  }
 
   /**
    * Add focus indicators
@@ -72,19 +68,15 @@ export class AccessibilityEnhancer {
       *:focus {
         outline: 2px solid #3b82f6 !important;
         outline-offset: 2px !important;
-      }
       
       *:focus:not(:focus-visible) {
         outline: none !important;
-      }
       
       *:focus-visible {
         outline: 2px solid #3b82f6 !important;
         outline-offset: 2px !important;
-      }
     `;
     document.head.appendChild(style);
-  }
 
   /**
    * Setup focus trapping for modals
@@ -93,13 +85,8 @@ export class AccessibilityEnhancer {
     document.addEventListener('keydown', (event) => {
       if (event.key === 'Tab') {
         this.handleTabKey(event);
-      } else if (event.key === 'Escape') {
         this.handleEscapeKey(event);
-      } else if (['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes(event.key)) {
         this.handleArrowKeys(event);
-      }
-    });
-  }
 
   /**
    * Handle tab key navigation
@@ -114,25 +101,12 @@ export class AccessibilityEnhancer {
       // Shift + Tab (backward)
       const prevIndex = currentIndex > 0 ? currentIndex - 1 : this.focusableElements.length - 1;
       this.focusableElements[prevIndex]?.focus();
-    } else {
       // Tab (forward)
       const nextIndex = currentIndex < this.focusableElements.length - 1 ? currentIndex + 1 : 0;
       this.focusableElements[nextIndex]?.focus();
-    }
-<<<<<<< HEAD
-focusableElements[nextIndex]?.focus();
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
     focusableElements[nextIndex]?.focus();
-=======
     
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
     event.preventDefault();
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-581e
-  }
 
   /**
    * Handle escape key
@@ -143,15 +117,12 @@ focusableElements[nextIndex]?.focus();
     modals.forEach(modal => {
       const closeButton = modal.querySelector('[aria-label*="close"], [aria-label*="Close"]') as HTMLElement;
       closeButton?.click();
-    });
     
     // Close any open menus
     const menus = document.querySelectorAll('[role="menu"][aria-expanded="true"]');
     menus.forEach(menu => {
       const trigger = document.querySelector(`[aria-controls="${menu.id}"]`) as HTMLElement;
       trigger?.click();
-    });
-  }
 
   /**
    * Handle arrow key navigation
@@ -163,8 +134,6 @@ focusableElements[nextIndex]?.focus();
     if (activeElement.getAttribute('role') === 'menuitem' || 
         activeElement.getAttribute('type') === 'radio') {
       this.handleMenuNavigation(event);
-    }
-  }
 
   /**
    * Handle menu navigation with arrow keys
@@ -194,11 +163,9 @@ focusableElements[nextIndex]?.focus();
       case 'ArrowLeft':
         nextIndex = currentIndex > 0 ? currentIndex - 1 : menuItems.length - 1;
         break;
-    }
     
     menuItems[nextIndex]?.focus();
     event.preventDefault();
-  }
 
   /**
    * Setup skip links
@@ -212,7 +179,6 @@ focusableElements[nextIndex]?.focus();
     document.body.insertBefore(skipLink, document.body.firstChild);
     
     this.skipLinks.push(skipLink);
-  }
 
   /**
    * Setup landmarks
@@ -223,28 +189,22 @@ focusableElements[nextIndex]?.focus();
     if (mainContent) {
       mainContent.setAttribute('role', 'main');
       mainContent.id = 'main-content';
-    }
     
     // Setup navigation landmarks
     const navs = document.querySelectorAll('nav');
     navs.forEach((nav, index) => {
       if (!nav.getAttribute('aria-label') && !nav.getAttribute('aria-labelledby')) {
         nav.setAttribute('aria-label', `Navigation ${index + 1}`);
-      }
-    });
     
     // Setup banner landmark
     const header = document.querySelector('header');
     if (header) {
       header.setAttribute('role', 'banner');
-    }
     
     // Setup contentinfo landmark
     const footer = document.querySelector('footer');
     if (footer) {
       footer.setAttribute('role', 'contentinfo');
-    }
-  }
 
   /**
    * Setup ARIA labels
@@ -257,8 +217,6 @@ focusableElements[nextIndex]?.focus();
       if (icon) {
         const iconName = icon.getAttribute('data-icon') || 'button';
         button.setAttribute('aria-label', iconName);
-      }
-    });
     
     // Add ARIA labels to form inputs
     const inputs = document.querySelectorAll('input:not([aria-label]):not([aria-labelledby])');
@@ -268,10 +226,6 @@ focusableElements[nextIndex]?.focus();
         input.setAttribute('aria-labelledby', label.id || `label-${input.id}`);
         if (!label.id) {
           label.id = `label-${input.id}`;
-        }
-      }
-    });
-  }
 
   /**
    * Setup color contrast improvements
@@ -283,14 +237,10 @@ focusableElements[nextIndex]?.focus();
     const handleContrastChange = (e: MediaQueryListEvent) => {
       if (e.matches) {
         document.body.classList.add('high-contrast');
-      } else {
         document.body.classList.remove('high-contrast');
-      }
-    };
     
     mediaQuery.addEventListener('change', handleContrastChange);
     handleContrastChange(mediaQuery);
-  }
 
   /**
    * Setup screen reader support
@@ -306,7 +256,6 @@ focusableElements[nextIndex]?.focus();
     
     // Announce page changes
     this.announcePageChange();
-  }
 
   /**
    * Announce page changes to screen readers
@@ -316,8 +265,6 @@ focusableElements[nextIndex]?.focus();
     const liveRegion = document.getElementById('live-region');
     if (liveRegion) {
       liveRegion.textContent = `Page loaded: ${title}`;
-    }
-  }
 
   /**
    * Announce messages to screen readers
@@ -326,36 +273,30 @@ focusableElements[nextIndex]?.focus();
     const liveRegion = document.getElementById('live-region');
     if (liveRegion) {
       liveRegion.textContent = message;
-    }
-  }
 
   /**
    * Update focusable elements (call when DOM changes)
    */
   public updateFocusableElements(): void {
     this.updateFocusableElements();
-  }
 
   /**
    * Get current focusable elements
    */
   public getFocusableElements(): HTMLElement[] {
     return [...this.focusableElements];
-  }
 
   /**
    * Focus first focusable element
    */
   public focusFirst(): void {
     this.focusableElements[0]?.focus();
-  }
 
   /**
    * Focus last focusable element
    */
   public focusLast(): void {
     this.focusableElements[this.focusableElements.length - 1]?.focus();
-  }
 
   /**
    * Cleanup and destroy
@@ -365,8 +306,7 @@ focusableElements[nextIndex]?.focus();
     this.focusableElements = [];
     this.skipLinks = [];
     this.landmarks = [];
-  }
-}
+
 
 // Create global instance
 export const accessibilityEnhancer = new AccessibilityEnhancer();
@@ -374,16 +314,16 @@ export const accessibilityEnhancer = new AccessibilityEnhancer();
 // Export utility functions
 export const announceToScreenReader = (message: string) => {
   accessibilityEnhancer.announce(message);
-};
+;
 
 export const updateFocusableElements = () => {
   accessibilityEnhancer.updateFocusableElements();
-};
+;
 
 export const focusFirstElement = () => {
   accessibilityEnhancer.focusFirst();
-};
+;
 
 export const focusLastElement = () => {
   accessibilityEnhancer.focusLast();
-};
+;

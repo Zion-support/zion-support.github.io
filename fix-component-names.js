@@ -18,15 +18,11 @@ const getAllFilesWithErrors = () => {
       
       if (stat.isDirectory()) {
         scanDirectory(fullPath);
-      } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
         files.push(fullPath);
-      }
-    }
-  };
   
   scanDirectory(srcDir);
   return files;
-};
+;
 
 // Fix component names in files;
 const fixComponentNames = () => {
@@ -48,8 +44,6 @@ const fixComponentNames = () => {
           content = content.replace(new RegExp(`const\\s+${oldName.replace(/\s+/g, '\\s+')}Page:\\s*React\\.FC`, 'g'), `const ${newName}Page: React.FC`);
           content = content.replace(new RegExp(`export\\s+default\\s+${oldName.replace(/\s+/g, '\\s+')}Page`, 'g'), `export default ${newName}Page`);
           modified = true;
-        }
-      }
       
       // Fix title in JSX;
       const titleMatch = content.match(/<h1[^>]*>([^<]+)<\/h1>/);
@@ -60,20 +54,14 @@ const fixComponentNames = () => {
         if (oldTitle !== newTitle) {
           content = content.replace(oldTitle, newTitle);
           modified = true;
-        }
-      }
       
       if (modified) {
         fs.writeFileSync(filePath, content);
         console.log(`Fixed: ${path.relative(__dirname, filePath)}`);
         fixedCount++;
-      }
-    } catch (error) {
       console.error(`Error fixing ${filePath}:`, error.message);
-    }
-  }
   
   console.log(`Fixed ${fixedCount} files!`);
-};
+;
 
 fixComponentNames();

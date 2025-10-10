@@ -23,7 +23,6 @@ try {
   if (cursorBranches.length === 0) {
     console.log('✅ No additional cursor branches found to merge.');
     process.exit(0);
-  }
 
   // Try to merge each branch;
   for (const branch of cursorBranches.slice(0, 5)) { // Limit to first 5 to avoid too many operations;
@@ -35,23 +34,17 @@ try {
       if (!diff.trim()) {
         console.log(`⏭️  Branch ${branch} has no changes, skipping...`);
         continue;
-      }
 
       // Try to merge;
       execSync(`git merge origin/${branch} --no-ff -m "feat: Merge ${branch}"`, { stdio: 'inherit' });
       console.log(`✅ Successfully merged ${branch}`);
       
-    } catch (error) {
       console.log(`⚠️  Could not merge ${branch}: ${error.message}`);
       
       // Try to abort the merge if it failed;
       try {
         execSync('git merge --abort', { stdio: 'pipe' });
-      } catch (abortError) {
         // Ignore abort errors;
-      }
-    }
-  }
 
   // Push all changes;
   console.log('\n📤 Pushing all changes to main...');
@@ -59,6 +52,5 @@ try {
 
   console.log('🎉 All available PRs have been processed!');
 
-} catch (error) {
+ catch (error) {
   console.error('❌ Error processing PRs:', error.message);
-}

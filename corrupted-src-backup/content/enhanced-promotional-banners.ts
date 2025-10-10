@@ -1,8 +1,7 @@
 export interface EnhancedPromotionalBanner {/* TODO: Fix JSX expression */}
-}
+
 
 export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [,
-  {,
     id: 'oct-01-autonomous-business-ops-2025',
     title:,
       '🚀 JUST RELEASED: Autonomous Business Operations Platform — $650M Value Creation, 85% Cost Reduction in 90 Days!',
@@ -15,7 +14,6 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [,
     endDate: '2025-12-31',
     category: 'AI Platform',
     tags: ['AI', 'Automation', 'Business Operations', 'Cost Reduction']},
-  {
     id: 'oct-01-ai-governance-framework-2025',
     title: 'NEW: AI Governance Framework 2025 — Ship AI Safely with Zero Regret',
     description:,
@@ -30,7 +28,3 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [,
     tags: ['AI Governance', 'Enterprise', 'Safety', 'Compliance'],
 export const,
   enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
-  {/* TODO: Fix JSX expression */}
-  },
-  {/* TODO: Fix JSX expression */}
-  }];

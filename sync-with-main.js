@@ -9,7 +9,6 @@ try {
   if (status.trim()) {
     console.log('⚠️  Working directory not clean, stashing changes...');
     execSync('git stash', { stdio: 'inherit' });
-  }
 
   // Fetch latest changes;
   console.log('📥 Fetching latest changes...');
@@ -26,7 +25,6 @@ try {
   try {,
     execSync('git merge origin/main --no-ff -m "feat: Sync with latest main branch changes"', { stdio: 'inherit' });
     console.log('✅ Successfully merged with origin/main');
-  } catch (mergeError) {
     console.log('⚠️  Merge conflicts detected, resolving...');
     
     // Check for conflicts;
@@ -39,13 +37,9 @@ try {
         execSync('git add .', { stdio: 'inherit' });
         execSync('git commit -m "feat: Resolve merge conflicts with main branch"', { stdio: 'inherit' });
         console.log('✅ Conflicts resolved and committed');
-      } catch (resolveError) {
         console.log('❌ Could not automatically resolve conflicts');
         console.log('Manual intervention needed for:', conflictFiles);
         throw resolveError;
-      }
-    }
-  }
 
   // Push changes;
   console.log('📤 Pushing changes to origin/main...');
@@ -53,7 +47,6 @@ try {
 
   console.log('🎉 Successfully synced with main branch!');
 
-} catch (error) {
+ catch (error) {
   console.error('❌ Error syncing with main:', error.message);
   process.exit(1);
-}

@@ -237,7 +237,7 @@ const results = {
   broken: [],
   errors: [],
   total: 0;
-};
+;
 
 // Helper function to make HTTP requests;
 function makeRequest(url) {
@@ -253,21 +253,18 @@ function makeRequest(url) {
       method: 'GET',
       headers: {,
         'User-Agent': USER_AGENT;
-        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-        'Accept-Language': 'en-US,en;q=0.5',
+        'Accept': 'text/html application/xhtml+xml application/xml;q=0.9,*/*;q=0.8',
+        'Accept-Language': 'en-US en;q=0.5',
         'Accept-Encoding': 'gzip, deflate',
         'Connection': 'keep-alive',
         'Upgrade-Insecure-Requests': '1'
-      },
       timeout: TIMEOUT;
-    };
 
     const req = client.request(requestOptions, (res) => {
       let data = '';
       
       res.on('data', (chunk) => {
         data += chunk;
-      });
       
       res.on('end', () => {
         resolve({)
@@ -275,23 +272,17 @@ function makeRequest(url) {
           headers: res.headers),
           body: data),
           url: url;
-        });
-      });
-    });
 
     req.on('error', (error) => {
       reject(error);
-    });
 
     req.on('timeout', () => {
       req.destroy();
       reject(new Error('Request timeout'));
-    });
 
     req.setTimeout(TIMEOUT);
     req.end();
-  });
-}
+
 
 // Analyze a single route;
 async function analyzeRoute(route) {
@@ -307,26 +298,19 @@ async function analyzeRoute(route) {
         route: route),
         url: url),
         statusCode: response.statusCode;
-      });
       console.log(`✅ ${route} - ${response.statusCode}`);
-    } else {
       results.broken.push({)
         route: route;),
         url: url),
         statusCode: response.statusCode),
         reason: `HTTP ${response.statusCode}`
-      });
       console.log(`❌ ${route} - ${response.statusCode}`);
-    }
-  } catch (error) {
     results.errors.push({)
       route: route),
       url: url),
       error: error.message;
-    });
     console.log(`⚠️  ${route} - Error: ${error.message}`);
-  }
-}
+
 
 // Main analysis function;
 async function analyzeAllRoutes() {
@@ -343,15 +327,11 @@ async function analyzeAllRoutes() {
     
     try {
       await Promise.all(promises);
-    } catch (error) {
       console.log(`Batch error: ${error.message}`);
-    }
     
     // Small delay between batches;
     if (i + batchSize < definedRoutes.length) {
       await new Promise(resolve => setTimeout(resolve, 1000));
-    }
-  }
 
   // Generate report;
   const report = {
@@ -362,11 +342,9 @@ async function analyzeAllRoutes() {
       working: results.working.length;
       broken: results.broken.length;
       errors: results.errors.length;
-    },
     working: results.working;
     broken: results.broken;
     errors: results.errors;
-  };
 
   // Save detailed report;
   fs.writeFileSync('route-analysis-report.json', JSON.stringify(report, null, 2));
@@ -382,18 +360,14 @@ async function analyzeAllRoutes() {
     console.log('\n=== BROKEN ROUTES ===');
     results.broken.forEach(route => {)
       console.log(`❌ ${route.route} - ${route.reason}`);
-    });
-  }
 
   if (results.errors.length > 0) {
     console.log('\n=== ERROR ROUTES ===');
     results.errors.forEach(route => {)
       console.log(`⚠️  ${route.route} - ${route.error}`);
-    });
-  }
 
   console.log('\nDetailed report saved to: route-analysis-report.json');
-}
+
 
 // Run the analysis;
 analyzeAllRoutes();

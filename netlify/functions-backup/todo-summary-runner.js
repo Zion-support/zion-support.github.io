@@ -16,7 +16,6 @@ exports.handler = async function (event, context) {
           summaries: 0;
           lastSummary: new Date().toISOString()}})};
     return result;
-  } catch (error) {
     //     return {
       statusCode: 500;
       headers: {,
@@ -27,16 +26,9 @@ exports.handler = async function (event, context) {
         message: error.message),
         function: 'todo-summary-runner'),
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
-      },
       bod,
   y: JSON.stringify({/* TODO: Fix JSX expression */}
-        })
-      })};
     return result;
-  } catch (error) {/* TODO: Fix JSX expression */}
-      },
       bod,
   y: JSON.stringify({/* TODO: Fix JSX expression */})
-      })};
-  }
-};
+;

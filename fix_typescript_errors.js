@@ -5,11 +5,10 @@ import fs from 'fs';
 if (fs.existsSync(seoOptimizerPath)) {/* TODO: Fix JSX expression */}
     /interface AdvancedSEOOptimizerProps \{[^}]*\}/,
     `interface AdvancedSEOOptimizerProps {/* TODO: Fix JSX expression */}
-  };
   enableStructuredData?: boolean;
   enableAnalytics?: boolean;
   enablePerformanceTracking?: boolean;`
-}`
+`
   );
 
   fs.writeFileSync(seoOptimizerPath, content);
@@ -48,7 +47,7 @@ if (fs.existsSync(advancedComponentsTestPath)) {/* TODO: Fix JSX expression */}
 
 blogPages.forEach(pagePath => {/* TODO: Fix JSX expression */}
     //         })
-});
+);
 
 // 5. Fix OpenGraph authors issue;
 // const openGraphPages = [
@@ -63,7 +62,7 @@ openGraphPages.forEach(pagePath => {/* TODO: Fix JSX expression */}"
 
     fs.writeFileSync(pagePath, content);
     //         }
-});
+);
 
 // 6. Fix missing Calculator import;
 // // const calculatorPagePath = '/workspace/app/blog/ai-enterprise-transformation-ultimate-guide-2025/page.tsx';
@@ -77,7 +76,6 @@ if (fs.existsSync(calculatorPagePath)) {/* TODO: Fix JSX expression */}
 // 7. Fix dataLayer declaration conflicts;
 // // const analyticsTrackerPath = '/workspace/app/components/AnalyticsTracker.tsx';
 if (fs.existsSync(analyticsTrackerPath)) {/* TODO: Fix JSX expression */}`
-  }`
   );
 
   fs.writeFileSync(analyticsTrackerPath, content);
@@ -95,11 +93,10 @@ import { performanceEnhancer } from '../utils/performanceEnhancer';`
 // 9. Fix gtag declaration conflicts;
 // // const performancePath = '/workspace/lib/performance.ts';
 if (fs.existsSync(performancePath)) {/* TODO: Fix JSX expression */}`
-  }`
   );
 
   fs.writeFileSync(performancePath, content);
   //     }
 
 // 
-}}}}}"`
+"`
