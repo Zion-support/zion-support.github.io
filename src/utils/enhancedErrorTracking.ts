@@ -65,10 +65,11 @@ class EnhancedErrorTracker {
     }
     // Log to console in development
     if (process.env['NODE_ENV'] === 'development') {
-      // }
+      }
     // Send to analytics if available
     this.sendToAnalytics(trackedError);
   }
+  
   private sendToAnalytics(error: TrackedError): void {
     if (
       typeof window !== 'undefined' &&

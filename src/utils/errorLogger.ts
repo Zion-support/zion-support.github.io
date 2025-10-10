@@ -102,7 +102,7 @@ class ErrorLogger {
       });
     } catch (error) {
       // Silently fail to avoid infinite loop
-      // }
+      }
   }
   /**
    * Get recent logs

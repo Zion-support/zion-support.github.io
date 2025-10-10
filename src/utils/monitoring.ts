@@ -92,7 +92,7 @@ class MonitoringService {
         });
         fcpObserver.observe({ entryTypes: ['paint'] });
       } catch (error) {
-        // }
+        }
     }
   }
 
@@ -101,8 +101,8 @@ class MonitoringService {
       try {
         const longTaskObserver = new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
-            // }
-        })
+            }
+        });
         longTaskObserver.observe({ entryTypes: ['longtask'] })
       } catch (error) {
         // Long task API might not be available
@@ -118,12 +118,12 @@ class MonitoringService {
           entries.forEach((entry: PerformanceEntry) => {
             const resourceEntry = entry as PerformanceResourceTiming;
             if (resourceEntry.duration > 1000) {
-              // }
+              }
           });
         });
         resourceObserver.observe({ entryTypes: ['resource'] });
       } catch (_error) {
-        // }
+        }
     }
   }
 
