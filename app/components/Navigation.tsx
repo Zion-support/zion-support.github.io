@@ -16,7 +16,7 @@ const Navigation: React.FC = () => {
           </Link>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md: flex space-x-8">
             <Link to="/" className="text-white hover:text-cyan-400 transition-colors font-medium">
               Home
             </Link>
@@ -26,7 +26,7 @@ const Navigation: React.FC = () => {
             <div className="relative">
               <button
                 onClick={() => setServicesOpen(!servicesOpen)}
-                className="text-white hover:text-cyan-400 transition-colors flex items-center font-medium"
+                className="text-white hover: text-cyan-400 transition-colors flex items-center font-medium"
               >
                 Services
                 <ChevronDown className="w-4 h-4 ml-1" />
@@ -60,7 +60,7 @@ const Navigation: React.FC = () => {
                 </div>
               )}
             </div>
-            <Link to="/case-studies" className="text-white hover:text-cyan-400 transition-colors font-medium">
+            <Link to="/case-studies" className="text-white hover: text-cyan-400 transition-colors font-medium">
               Case Studies
             </Link>
             <Link to="/enterprise" className="text-white hover:text-cyan-400 transition-colors font-medium">
@@ -77,7 +77,7 @@ const Navigation: React.FC = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-white hover:text-cyan-400"
+            className="md: hidden text-white hover:text-cyan-400"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path
@@ -92,7 +92,7 @@ const Navigation: React.FC = () => {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="md:hidden py-4 border-t border-cyan-400/20">
+          <div className="md: hidden py-4 border-t border-cyan-400/20">
             <div className="flex flex-col space-y-4">
               <Link to="/" className="text-white hover:text-cyan-400 transition-colors font-medium">
                 Home

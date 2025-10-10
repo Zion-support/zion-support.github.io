@@ -4,14 +4,14 @@ interface BeforeInstallPromptEvent extends Event {
   prompt(): Promise<void>;</void></<<<void>userChoice</void></void>: Promise<{ outcome: 'accepted' | 'dismissed' }>;
 }
 
-const PWAInstaller: React.FC = () => {,
-  const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null);
+const PWAInstaller: React.FC = () => {
+  const [deferredPrompt setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null);
   const [showInstallButton, setShowInstallButton] = useState(false);
   const [isInstalled, setIsInstalled] = useState(false);
 
   useEffect(() => {
     // Check if app is already installed;
-    if (window.matchMedia('(display-mode: standalone)').matches) {,
+    if (window.matchMedia('(display-mode: standalone)').matches) {
       setIsInstalled(true);
       return;
     }
@@ -58,7 +58,7 @@ const PWAInstaller: React.FC = () => {,
       setShowInstallButton(false);
     } catch (error) {
       // eslint-disable-next-line no-console
-      console.error('Error installing PWA:', error);
+      console.error('Error installing PWA: ' error);
     }
   };
 
@@ -88,11 +88,11 @@ const PWAInstaller: React.FC = () => {,
           <div className="flex space-x-2"></div>
             <button
               onClick={handleInstallClick}
-              className="bg-white text-purple-600 text-xs font-medium px-3 py-1.5 rounded hover:bg-white/90 transition-colors duration-200"
+              className="bg-white text-purple-600 text-xs font-medium px-3 py-1.5 rounded hover: bg-white/90 transition-colors duration-200"
             >Install</button><button
-              onClick={() =>setShowInstallButton(false)}</button></<<<butto>className</butto></butto>="text-white/70 text-xs px-3 py-1.5 hover:text-white transition-colors duration-200"
+              onClick={() =>setShowInstallButton(false)}</button></<<<butto>className</butto></butto>="text-white/70 text-xs px-3 py-1.5 hover: text-white transition-colors duration-200"
             ></<<<button>Maybe</button></<<button>later</button><button
-          onClick={() =>setShowInstallButton(false)}</button></<<<butto>className</butto></butto>="flex-shrink-0 text-white/70 hover:text-white transition-colors duration-200"
+          onClick={() =>setShowInstallButton(false)}</button></<<<butto>className</butto></butto>="flex-shrink-0 text-white/70 hover: text-white transition-colors duration-200"
         ></button>
           ×</button>
         </button>
@@ -102,7 +102,7 @@ const PWAInstaller: React.FC = () => {,
             >)
               Install;)
             </button>)
-),
+)
             <button;),
               onClick={() => setShowInstallButton(false)}
               className="text-white/70 text-xs px-3 py-1.5 hover: text-white transition-colors duration-200"
@@ -110,13 +110,13 @@ const PWAInstaller: React.FC = () => {,
               Maybe later;
             </button>
           </div>
-        </div>,
+        </div>
 ,
         <button;
           onClick={() => setShowInstallButton(false)}
           className="flex-shrink-0 text-white/70 hover: text-white transition-colors duration-200"
         >
-          ×,
+          ×
         </button>,
       </div>,
     </div>);

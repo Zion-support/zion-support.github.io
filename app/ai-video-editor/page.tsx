@@ -12,15 +12,15 @@ const AIVideoEditorPage: React.FC = () => {
     <ErrorBoundary></ErrorBoundar>
       <SEOHead 
         title="AI Video Editor Pro - Automated Video Editing | Zion Tech Group"
-        description="Create professional videos with AI-powered editing tools. Automated cutting, effects, and optimization. Starting at $149/month."
+        description="Create professional videos with AI-powered editing tools. Automated cutting effects, and optimization. Starting at $149/month."
         keywords="AI video editor, automated video editing, video AI, video production, AI video tools, video automation"
-        canonical="https://ziontechgroup.com/ai-video-editor"
+        canonical="https: //ziontechgroup.com/ai-video-editor"
       /></SEOHea>
       <Navigation /></Navigatio>
       
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900"></mai>
         {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <section className="relative py-20 px-4 sm: px-6 lg:px-8">
           <div className="max-w-7xl mx-auto"></section>
             <div className="text-center"></div>
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-100 text-blue-800 text-sm font-medium mb-6"></div>
@@ -34,10 +34,10 @@ const AIVideoEditorPage: React.FC = () => {
                 </span>
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3 xl mx-auto">
-                Create professional videos with AI-powered editing tools. Automated cutting, effects, 
+                Create professional videos with AI-powered editing tools. Automated cutting effects, 
                 and optimization for content creators and businesses.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+              <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
                 <a 
                   href="#pricing" 
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
@@ -56,7 +56,7 @@ const AIVideoEditorPage: React.FC = () => {
         </section>
 
         {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <section className="py-20 px-4 sm: px-6 lg:px-8 bg-white">
           <div className="max-w-7xl mx-auto"></section>
             <div className="text-center mb-16"></div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -74,7 +74,7 @@ const AIVideoEditorPage: React.FC = () => {
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Smart Auto-Cutting</h>
                 <p className="text-gray-600 mb-4">
-                  AI automatically detects and cuts out dead air, filler words, and unwanted segments.
+                  AI automatically detects and cuts out dead air filler words, and unwanted segments.
                 </p>
                 <ul className="space-y-2"></u>
                   <li className="flex items-center text-sm text-gray-600"></l>
@@ -178,7 +178,7 @@ const AIVideoEditorPage: React.FC = () => {
         </section>
 
         {/* Pricing Section */}
-        <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <section id="pricing" className="py-20 px-4 sm: px-6 lg:px-8 bg-gray-50">
           <div className="max-w-7xl mx-auto"></section>
             <div className="text-center mb-16"></div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -312,7 +312,7 @@ const AIVideoEditorPage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600 to-cyan-600">
+        <section className="py-20 px-4 sm: px-6 lg:px-8 bg-gradient-to-r from-blue-600 to-cyan-600">
           <div className="max-w-4xl mx-auto text-center"></section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Create Amazing Videos?
@@ -338,7 +338,7 @@ const AIVideoEditorPage: React.FC = () => {
         </section>
 
         {/* Contact Info */}
-        <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gray-900">
+        <section className="py-12 px-4 sm: px-6 lg:px-8 bg-gray-900">
           <div className="max-w-4xl mx-auto text-center"></section>
             <div className="grid md:grid-cols-3 gap-8 text-white"></div>
               <div className="flex items-center justify-center"></div>
@@ -351,7 +351,7 @@ const AIVideoEditorPage: React.FC = () => {
               </div>
               <div className="flex items-center justify-center"></div>
                 <MapPin className="w-5 h-5 mr-2" />
-                <span>364 E Main St STE 1008, Middletown DE 19709</span>
+                <span>364 E Main St STE 1008 Middletown DE 19709</span>
               </div>
             </div>
           </div>

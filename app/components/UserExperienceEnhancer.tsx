@@ -5,8 +5,8 @@ interface UserExperienceEnhancerProps {
   children: React.ReactNode;
 }
 
-const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({ children }) => {
-  const [loadingStates, setLoadingStates] = useState<Record<string, boolean>>({});
+const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({ children } => {
+  const [loadingStates, setLoadingStates] = useState<Record<string, boolean>>({};
 
   useEffect(() => {
     // UX enhancement logic
@@ -18,9 +18,9 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({ childre
       const interactiveElements = document.querySelectorAll('button, a, input');
       interactiveElements.forEach((element, index) => {
         element.addEventListener('click', () => {
-          setLoadingStates(prev => ({ ...prev, [index]: true }));
+          setLoadingStates(prev => ({ ...prev, [index]: true };
           setTimeout(() => {
-            setLoadingStates(prev => ({ ...prev, [index]: false }));
+            setLoadingStates(prev => ({ ...prev, [index]: false };
           }, 1000);
         });
       });

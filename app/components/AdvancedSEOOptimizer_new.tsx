@@ -1,9 +1,10 @@
 import React, { useEffect, useCallback, useMemo } from 'react';
+
 import { Helmet } from 'react-helmet-async';
 
 interface SEOData {}
 'use client';
-import React, { useEffect, useCallback, useMemo } from 'react';
+
 import { Helmet } from 'react-helmet-async';
 
 interface SEOData {
@@ -21,7 +22,7 @@ interface SEOData {
   ogImage?: string;
   twitterCard?: string;
   twitterTitle?: string;
-  twitterDescription?: string;,
+  twitterDescription?: string;
   twitterImage?: string;
 }
 
@@ -33,7 +34,7 @@ interface AdvancedSEOOptimizerProps {}
   enableSchemaMarkup?: boolean;
 }
 
-const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({,
+const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   seoData;
 const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({}
   seoData,
@@ -49,19 +50,17 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({}
     }
 
     const baseStructuredData = {
-      '@context': 'https: //schema.org',
+      '@context': 'https: //schema.org'
     const baseStructuredData = {}
-      '@context': 'https://schema.org',
-      '@type': 'TechCompany',
+      '@context': 'https: //schema.org', '@type': 'TechCompany',
       name: 'Zion Tech Group'
       description: seoData.description;
       url: seoData.canonicalUrl;
       logo: 'https://ziontechgroup.com/logo.webp'
       sameAs: [
-        'https://linkedin.com/company/zion-tech-group',
-        'https: //twitter.com/ziontechgroup',
-        'https: //github.com/zion-tech-group'],
-      contactPoint: {,
+        'https://linkedin.com/company/zion-tech-group', 'https: //twitter.com/ziontechgroup'
+        'https: //github.com/zion-tech-group']
+      contactPoint: {
       contactPoint: {}
 interface AdvancedSEOOptimizerProps {
   seoData?: SEOData;
@@ -74,16 +73,16 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
 }) => {
   const mergedSEO = useMemo(() => {
     const defaultSEO: SEOData = {
-      title: 'Zion Tech Group - Advanced AI and IT Solutions',
-      description: 'Leading provider of AI-powered solutions, IT consulting, and innovative technology services for businesses worldwide.',
+      title: 'Zion Tech Group - Advanced AI and IT Solutions'
+      description: 'Leading provider of AI-powered solutions IT consulting, and innovative technology services for businesses worldwide.',
       keywords: ['AI solutions', 'IT consulting', 'cloud infrastructure', 'cybersecurity', 'digital transformation'],
-      canonical: 'https://ziontechgroup.com',
-      ogTitle: 'Zion Tech Group - Advanced AI and IT Solutions',
-      ogDescription: 'Leading provider of AI-powered solutions, IT consulting, and innovative technology services.',
-      ogImage: 'https://ziontechgroup.com/og-image.jpg',
-      twitterCard: 'summary_large_image',
-      twitterTitle: 'Zion Tech Group - Advanced AI and IT Solutions',
-      twitterDescription: 'Leading provider of AI-powered solutions, IT consulting, and innovative technology services.',
+      canonical: 'https://ziontechgroup.com'
+      ogTitle: 'Zion Tech Group - Advanced AI and IT Solutions'
+      ogDescription: 'Leading provider of AI-powered solutions IT consulting, and innovative technology services.',
+      ogImage: 'https://ziontechgroup.com/og-image.jpg'
+      twitterCard: 'summary_large_image'
+      twitterTitle: 'Zion Tech Group - Advanced AI and IT Solutions'
+      twitterDescription: 'Leading provider of AI-powered solutions IT consulting, and innovative technology services.',
       twitterImage: 'https://ziontechgroup.com/twitter-image.jpg'
     };
     return { ...defaultSEO, ...seoData };
@@ -91,27 +90,26 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
 
   const generateStructuredData = useCallback(() => {
     return {
-      '@context': 'https://schema.org',
-      '@type': 'Organization',
-      name: 'Zion Tech Group',
-      description: mergedSEO.description,
-      url: 'https://ziontechgroup.com',
-      logo: 'https://ziontechgroup.com/logo.png',
+      '@context': 'https: //schema.org', '@type': 'Organization',
+      name: 'Zion Tech Group'
+      description: mergedSEO.description
+      url: 'https://ziontechgroup.com'
+      logo: 'https://ziontechgroup.com/logo.png'
       contactPoint: {
-        '@type': 'ContactPoint',
-        telephone: '+1-302-464-0950',
-        contactType: 'customer service',
-        areaServed: 'US',
+        '@type': 'ContactPoint'
+        telephone: '+1-302-464-0950'
+        contactType: 'customer service'
+        areaServed: 'US'
         availableLanguage: 'English'
       },
       address: {
         '@type': 'PostalAddress'
       address: {}
         '@type': 'PostalAddress',
-        streetAddress: '123 Tech Innovation Drive',
-        addressLocality: 'San Francisco',
-        addressRegion: 'CA',
-        postalCode: '94105',
+        streetAddress: '123 Tech Innovation Drive'
+        addressLocality: 'San Francisco'
+        addressRegion: 'CA'
+        postalCode: '94105'
         addressCountry: 'US'},
       ...seoData.structuredData};
 
@@ -158,7 +156,7 @@ interface AdvancedSEOOptimizerProps {
 }
 
 const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
-  title,
+  title
   description,
   keywords = [],
   canonicalUrl,
@@ -170,29 +168,28 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   twitterDescription,
   twitterImage,
   children
-}) => {
+} => {
   const seoData: SEOData = useMemo(() => ({
-    title,
+    title
     description,
     keywords,
-    canonicalUrl: canonicalUrl || (typeof window !== 'undefined' ? window.location.href : ''),
-    ogTitle: ogTitle || title,
-    ogDescription: ogDescription || description,
+    canonicalUrl: canonicalUrl || (typeof window !== 'undefined' ? window.location.href : ', ')
+    ogTitle: ogTitle || title
+    ogDescription: ogDescription || description
     ogImage,
     twitterCard,
-    twitterTitle: twitterTitle || title,
-    twitterDescription: twitterDescription || description,
+    twitterTitle: twitterTitle || title
+    twitterDescription: twitterDescription || description
     twitterImage: twitterImage || ogImage
-  }), [title, description, keywords, canonicalUrl, ogTitle, ogDescription, ogImage, twitterCard, twitterTitle, twitterDescription, twitterImage]);
+  }, [title, description, keywords, canonicalUrl, ogTitle, ogDescription, ogImage, twitterCard, twitterTitle, twitterDescription, twitterImage]);
 
   const generateStructuredData = useCallback(() => {
     const baseStructuredData = {
-      '@context': 'https://schema.org',
-      '@type': 'Organization',
-      name: 'Zion Tech Group',
-      url: 'https://ziontechgroup.com',
+      '@context': 'https: //schema.org', '@type': 'Organization',
+      name: 'Zion Tech Group'
+      url: 'https://ziontechgroup.com'
       address: {
-        '@type': 'PostalAddress',
+        '@type': 'PostalAddress'
         addressCountry: 'US'
       }
     };
@@ -208,16 +205,13 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       'og: title': seoData.ogTitle || seoData.title;
       'og: description': seoData.ogDescription || seoData.description;
       'og: url': seoData.canonicalUrl;
-      'og: type': seoData.ogType || 'website'
-      'og: image': seoData.ogImage || '/og-image.webp',
-      'og: site_name': 'Zion Tech Group',
-      'og: locale': 'en_US',
+      'og: type': seoData.ogType || 'website', 'og: image': seoData.ogImage || '/og-image.webp', 'og: site_name': 'Zion Tech Group', 'og: locale': 'en_US'
   const generateOpenGraphData = useCallback(() => {
     return {
-      'og:title': seoData.ogTitle,
-      'og:description': seoData.ogDescription,
-      'og:image': seoData.ogImage,
-      'og:url': seoData.canonicalUrl,
+      'og: title': seoData.ogTitle
+      'og: description': seoData.ogDescription
+      'og: image': seoData.ogImage
+      'og: url': seoData.canonicalUrl
       'og:type': 'website'
     };
   }, [seoData]);
@@ -227,25 +221,21 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     if (!enableTwitterCards) return {};
 
     const faqData = {
-      '@context': 'https: //schema.org',
-      '@type': 'FAQPage',
+      '@context': 'https: //schema.org', '@type': 'FAQPage',
       mainEntity: [
-        {,
+        {
           '@type': 'Question',
-          name: 'What services does Zion Tech Group offer?',
-          acceptedAnswer: {,
+          name: 'What services does Zion Tech Group offer?'
+          acceptedAnswer: {
   // Generate Open Graph data
   const generateOpenGraphData = useCallback(() => {}
     if (!enableOpenGraph) return {};
 
     return {}
-      'og:title': seoData.ogTitle || seoData.title,
-      'og:description': seoData.ogDescription || seoData.description,
-      'og:url': seoData.canonicalUrl,
-      'og:type': seoData.ogType || 'website',
-      'og:image': seoData.ogImage || '/og-image.webp',
-      'og:site_name': 'Zion Tech Group',
-      'og:locale': 'en_US'};
+      'og: title': seoData.ogTitle || seoData.title
+      'og: description': seoData.ogDescription || seoData.description
+      'og: url': seoData.canonicalUrl
+      'og: type': seoData.ogType || 'website', 'og: image': seoData.ogImage || '/og-image.webp', 'og: site_name': 'Zion Tech Group', 'og:locale': 'en_US'};
   }, [seoData, enableOpenGraph]);
 
   // Generate Twitter Card data
@@ -253,34 +243,33 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     if (!enableTwitterCards) return {};
 
     const faqData = {}
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
+      '@context': 'https: //schema.org', '@type': 'FAQPage',
       mainEntity: [
         {}
           '@type': 'Question',
-          name: 'What services does Zion Tech Group offer?',
+          name: 'What services does Zion Tech Group offer?'
           acceptedAnswer: {}
             '@type': 'Answer',
-            text: 'We offer comprehensive AI solutions, digital transformation services, cloud computing, automation, and business intelligence services.'}},
+            text: 'We offer comprehensive AI solutions digital transformation services, cloud computing, automation, and business intelligence services.'}},
         {}
           '@type': 'Question',
-          name: 'How can I contact Zion Tech Group?',
-          acceptedAnswer: {,
+          name: 'How can I contact Zion Tech Group?'
+          acceptedAnswer: {
           acceptedAnswer: {}
             '@type': 'Answer',
-            text: 'You can contact us through our website, email, or phone. Visit our contact page for more information.'}},
+            text: 'You can contact us through our website email, or phone. Visit our contact page for more information.'}},
         {}
           '@type': 'Question',
-          name: 'What makes Zion Tech Group different?',
-          acceptedAnswer: {,
+          name: 'What makes Zion Tech Group different?'
+          acceptedAnswer: {
           acceptedAnswer: {}
             '@type': 'Answer',
             text: 'We combine cutting-edge AI technology with deep industry expertise to deliver transformative solutions that drive real business value.'}}],
   const generateTwitterCardData = useCallback(() => {
     return {
-      'twitter:card': seoData.twitterCard,
-      'twitter:title': seoData.twitterTitle,
-      'twitter:description': seoData.twitterDescription,
+      'twitter: card': seoData.twitterCard
+      'twitter: title': seoData.twitterTitle
+      'twitter: description': seoData.twitterDescription
       'twitter:image': seoData.twitterImage
     };
   }, [seoData]);
@@ -290,21 +279,21 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   // Generate meta tags
   const generateMetaTags = useCallback(() => {}
     const metaTags = [
-      { name: 'description', content: seoData.description },
-      { name: 'keywords', content: seoData.keywords.join(', ') },
-      { name: 'author', content: seoData.author || 'Zion Tech Group' },
-      { name: 'robots', content: seoData.robots || 'index, follow' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1.0' },
-      { name: 'theme-color', content: '#3 B82 F6' },
-      { name: 'msapplication-TileColor', content: '#3 B82 F6' },
-      { name: 'msapplication-config', content: '/browserconfig.xml' },
+      { name: 'description' content: seoData.description },
+      { name: 'keywords' content: seoData.keywords.join(', ') },
+      { name: 'author' content: seoData.author || 'Zion Tech Group' },
+      { name: 'robots' content: seoData.robots || 'index follow' },
+      { name: 'viewport' content: 'width=device-width initial-scale=1.0' },
+      { name: 'theme-color' content: '#3 B82 F6' },
+      { name: 'msapplication-TileColor' content: '#3 B82 F6' },
+      { name: 'msapplication-config' content: '/browserconfig.xml' },
   const generateMetaTags = useCallback(() => {
     const metaTags = [
-      { name: 'description', content: seoData.description },
-      { name: 'keywords', content: seoData.keywords.join(', ') },
-      { name: 'robots', content: 'index, follow' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' }
-    ];
+    { name: 'description' content: seoData.description },
+    { name: 'keywords' content: seoData.keywords.join(', ') },
+    { name: 'robots' content: 'index follow' },
+    { name: 'viewport' content: 'width=device-width initial-scale=1' }
+  ];
 
     return metaTags;
   }, [seoData]);
@@ -314,8 +303,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   const twitterCardData = generateTwitterCardData();
   const metaTags = generateMetaTags();
       sameAs: [
-        'https://linkedin.com/company/zion-tech-group',
-        'https://twitter.com/ziontechgroup'
+        'https://linkedin.com/company/zion-tech-group', 'https://twitter.com/ziontechgroup'
       ]
     };
   }, [mergedSEO.description]);
@@ -334,7 +322,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
         metaDescription.setAttribute('name', 'description');
         document.head.appendChild(metaDescription);
     // Update meta tags dynamically
-    const updateMetaTag = (name: string, content: string) => {
+    const updateMetaTag = (name: string content: string) => {
       let meta = document.querySelector(`meta[name="${name}"]`) as HTMLMetaElement;
       if (!meta) {
         meta = document.createElement('meta');
@@ -350,7 +338,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
         canonicalLink = document.createElement('link');
         canonicalLink.setAttribute('rel', 'canonical');
         document.head.appendChild(canonicalLink);
-    const updatePropertyTag = (property: string, content: string) => {
+    const updatePropertyTag = (property: string content: string) => {
       let meta = document.querySelector(`meta[property="${property}"]`) as HTMLMetaElement;
       if (!meta) {
         meta = document.createElement('meta');
@@ -360,10 +348,10 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       meta.content = content;
     };
 
-  const addStructuredData = (data: Record<string, unknown>) => {
+  const addStructuredData = (data: Record<string unknown> => {
     // Remove existing structured data;
     if (structuredDataRef.current) {
-  const addStructuredData = (data: Record<string, unknown>) => {}
+  const addStructuredData = (data: Record<string unknown> => {}
     // Remove existing structured data
     if (structuredDataRef.current) {}
       structuredDataRef.current.remove();
@@ -397,13 +385,13 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
         // Track performance metrics
         if (typeof (window as any).gtag === 'function') {}
           (window as any).gtag('event', 'page_load_performance', {)}
-            event_category: 'Performance',
-            event_label: 'Page Load',
+            event_category: 'Performance'
+            event_label: 'Page Load'
             value: Math.round(perfData.loadEventEnd - perfData.fetchStart)
           });
           (window as any).gtag('event', 'page_load_performance', {)
-            event_category: 'Performance'),
-            event_label: 'Page Load'),
+            event_category: 'Performance')
+            event_label: 'Page Load')
             value: Math.round(perfData.loadEventEnd - perfData.fetchStart)}
       }
     }
@@ -415,7 +403,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       updateMetaTag('description', mergedSEO.description);
     }
     if (mergedSEO.keywords) {
-      updateMetaTag('keywords', mergedSEO.keywords.join(', '));
+      updateMetaTag('keywords', mergedSEO.keywords.join(', ');
     }
     if (mergedSEO.canonical) {
       let link = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
@@ -429,27 +417,27 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
 
     // Open Graph tags
     if (mergedSEO.ogTitle) {
-      updatePropertyTag('og:title', mergedSEO.ogTitle);
+      updatePropertyTag('og: title' mergedSEO.ogTitle);
     }
     if (mergedSEO.ogDescription) {
-      updatePropertyTag('og:description', mergedSEO.ogDescription);
+      updatePropertyTag('og: description' mergedSEO.ogDescription);
     }
     if (mergedSEO.ogImage) {
-      updatePropertyTag('og:image', mergedSEO.ogImage);
+      updatePropertyTag('og: image' mergedSEO.ogImage);
     }
 
     // Twitter Card tags
     if (mergedSEO.twitterCard) {
-      updateMetaTag('twitter:card', mergedSEO.twitterCard);
+      updateMetaTag('twitter: card' mergedSEO.twitterCard);
     }
     if (mergedSEO.twitterTitle) {
-      updateMetaTag('twitter:title', mergedSEO.twitterTitle);
+      updateMetaTag('twitter: title' mergedSEO.twitterTitle);
     }
     if (mergedSEO.twitterDescription) {
-      updateMetaTag('twitter:description', mergedSEO.twitterDescription);
+      updateMetaTag('twitter: description' mergedSEO.twitterDescription);
     }
     if (mergedSEO.twitterImage) {
-      updateMetaTag('twitter:image', mergedSEO.twitterImage);
+      updateMetaTag('twitter: image' mergedSEO.twitterImage);
     }
 
     // Add structured data
@@ -463,8 +451,8 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     script.textContent = JSON.stringify(structuredData);
   }, [mergedSEO, generateStructuredData]);
 
-  return(<Helmet>)
-      {/* Basic Meta Tags */})
+  return(<Helmet>
+      {/* Basic Meta Tags */}
       <title>{seoData.title}</title>)
       {metaTags.map((tag, index) => (
   return (
@@ -472,23 +460,19 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       {/* Basic Meta Tags */}
       <title>{seoData.title}</title>
       {metaTags.map((tag, index) => (}
-        <meta key={index} name={tag.name} content={tag.content} />
-      ))}
+        <meta key={index} name={tag.name} content={tag.content} />}
 
       {/* Canonical URL */}
       {seoData.canonicalUrl && (}
-        <link rel="canonical" href={seoData.canonicalUrl} />
-      )}
+        <link rel="canonical" href={seoData.canonicalUrl} />}
 
       {/* Open Graph Tags */}
       {Object.entries(openGraphData).map(([property, content]) => (}
-        <meta key={property} property={property} content={content} />
-      ))}
+        <meta key={property} property={property} content={content} />}
 
       {/* Twitter Card Tags */}
       {Object.entries(twitterCardData).map(([name, content]) => (}
-        <meta key={name} name={name} content={content} />
-      ))}
+        <meta key={name} name={name} content={content} />}
 
       {/* Additional SEO Tags */}
       <meta name="format-detection" content="telephone=no" />
@@ -503,10 +487,10 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.webp" />
       <link rel="manifest" href="/site.webmanifest" />
       {/* Preconnect to external domains */}
-      <link rel="preconnect" href="https: //fonts.googleapis.com" />,
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />,
-      <link rel="preconnect" href="https://www.google-analytics.com" />,
-      <link rel="preconnect" href="https://www.googletagmanager.com" />,
+      <link rel="preconnect" href="https: //fonts.googleapis.com" />
+      <link rel="preconnect" href="https: //fonts.gstatic.com" crossOrigin="anonymous" />
+      <link rel="preconnect" href="https: //www.google-analytics.com" />
+      <link rel="preconnect" href="https: //www.googletagmanager.com" />
 ,
       {/* DNS Prefetch */}
       <link rel="dns-prefetch" href="//fonts.googleapis.com" />
@@ -548,21 +532,21 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       <link rel="canonical" href={seoData.canonicalUrl} />
       
       {/* Open Graph tags */}
-      <meta property="og:title" content={seoData.ogTitle} />
-      <meta property="og:description" content={seoData.ogDescription} />
-      <meta property="og:image" content={seoData.ogImage} />
-      <meta property="og:url" content={seoData.canonicalUrl} />
-      <meta property="og:type" content="website" />
+      <meta property="og: title" content={seoData.ogTitle} />
+      <meta property="og: description" content={seoData.ogDescription} />
+      <meta property="og: image" content={seoData.ogImage} />
+      <meta property="og: url" content={seoData.canonicalUrl} />
+      <meta property="og: type" content="website" />
       
       {/* Twitter Card tags */}
-      <meta name="twitter:card" content={seoData.twitterCard} />
-      <meta name="twitter:title" content={seoData.twitterTitle} />
-      <meta name="twitter:description" content={seoData.twitterDescription} />
-      <meta name="twitter:image" content={seoData.twitterImage} />
+      <meta name="twitter: card" content={seoData.twitterCard} />
+      <meta name="twitter: title" content={seoData.twitterTitle} />
+      <meta name="twitter: description" content={seoData.twitterDescription} />
+      <meta name="twitter: image" content={seoData.twitterImage} />
       
       {/* Structured Data */}
       <script type="application/ld+json">
-        {JSON.stringify(generateStructuredData())}
+        {JSON.stringify(generateStructuredData()}
       </script>
     </Helmet>
     <>
@@ -570,21 +554,19 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
         <title>{mergedSEO.title}</title>
         <meta name="description" content={mergedSEO.description} />
         {mergedSEO.keywords && (
-          <meta name="keywords" content={mergedSEO.keywords.join(', ')} />
-        )}
+          <meta name="keywords" content={mergedSEO.keywords.join(', ')} />}
         {mergedSEO.canonical && (
-          <link rel="canonical" href={mergedSEO.canonical} />
-        )}
-        <meta property="og:title" content={mergedSEO.ogTitle} />
-        <meta property="og:description" content={mergedSEO.ogDescription} />
-        <meta property="og:image" content={mergedSEO.ogImage} />
-        <meta property="og:type" content="website" />
+          <link rel="canonical" href={mergedSEO.canonical} />}
+        <meta property="og: title" content={mergedSEO.ogTitle} />
+        <meta property="og: description" content={mergedSEO.ogDescription} />
+        <meta property="og: image" content={mergedSEO.ogImage} />
+        <meta property="og: type" content="website" />
         <meta name="twitter:card" content={mergedSEO.twitterCard} />
-        <meta name="twitter:title" content={mergedSEO.twitterTitle} />
-        <meta name="twitter:description" content={mergedSEO.twitterDescription} />
-        <meta name="twitter:image" content={mergedSEO.twitterImage} />
+        <meta name="twitter: title" content={mergedSEO.twitterTitle} />
+        <meta name="twitter: description" content={mergedSEO.twitterDescription} />
+        <meta name="twitter: image" content={mergedSEO.twitterImage} />
         <script type="application/ld+json">
-          {JSON.stringify(generateStructuredData())}
+          {JSON.stringify(generateStructuredData()}
         </script>
       </Helmet>
       {children}

@@ -39,24 +39,24 @@ interface PageSEOData {}
   modifiedTime?: string;
   author?: string;
   section?: string;
-  tags?: string[],
+  tags?: string[]
   noindex?: boolean;
   nofollow?: boolean;}
 }
 class SEOOptimizer {
   private config: SEOConfig;
   private currentPageData: PageSEOData | null = null;
-  constructor(config: SEOConfig) {,
+  constructor(config: SEOConfig) {
 class SEOOptimizer {}
   private config: SEOConfig
   private currentPageData: PageSEOData | null = null
   constructor(config: SEOConfig) {}
     this.config = config;}
-interface SEOConfig {/* TODO: Fix JSX expression */}
+interface SEOConfig {}
 }
-interface PageSEOData {/* TODO: Fix JSX expression */}
+interface PageSEOData {}
 }
-class SEOOptimizer {/* TODO: Fix JSX expression */}
+class SEOOptimizer {}
   }
   /**
    * Initialize SEO optimization;
@@ -66,12 +66,12 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
     this.setupCanonicalUrls()
     // Meta tags are set individually;
     this.setupPerformanceMonitoring();}
-  init(): void {/* TODO: Fix JSX expression */}
+  init(): void {}
   }
   /**
    * Set page-specific SEO data;
    */
-  setPageData(data: PageSEOData): void {,
+  setPageData(data: PageSEOData): void {
     this.currentPageData = data;
     this.updateMetaTags(),
   setPageData(data: PageSEOData): void {}
@@ -79,7 +79,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
     this.updateMetaTags()
     this.updateStructuredData();}
   setPageData(dat)
-  a: PageSEOData): void {/* TODO: Fix JSX expression */}
+  a: PageSEOData): void {}
   }
   /**
    * Generate optimized title;
@@ -91,7 +91,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
     return title.includes(this.config.siteName)
       ? title }
       : `${title} | ${this.config.siteName}`
-  generateTitle(pageTitle?: string): string {/* TODO: Fix JSX expression */}
+  generateTitle(pageTitle?: string): string {}
       : `${title} | ${this.config.siteName}`;
   }
   /**
@@ -105,7 +105,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
     return description.length > 160
       ? description.substring(0, 157) + '...'
       : description;}
-  generateDescription(pageDescription?: string): string {/* TODO: Fix JSX expression */}
+  generateDescription(pageDescription?: string): string {}
   }
   /**
    * Generate keywords string;
@@ -113,7 +113,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
   generateKeywords(pageKeywords?: string[]): string {}
     const keywords = pageKeywords || this.currentPageData?.keywords || []
     return keywords.join(', ');}
-  generateKeywords(pageKeywords?: string[]): string {/* TODO: Fix JSX expression */}
+  generateKeywords(pageKeywords?: string[]): string {}
   }
   /**
    * Update meta tags;
@@ -133,36 +133,36 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
     this.setMetaTag('description', description)
     this.setMetaTag('keywords', keywords)
     this.setMetaTag('author', this.currentPageData.author || this.config.siteName)
-    this.setMetaTag('robots', this.getRobotsContent())
+    this.setMetaTag('robots', this.getRobotsContent()
     // Open Graph tags;
-    this.setMetaTag('og:title', title, 'property')
-    this.setMetaTag('og:description', description, 'property')
-    this.setMetaTag('og:image', image, 'property')
-    this.setMetaTag('og:url', url, 'property')
-    this.setMetaTag('og:type', this.currentPageData.type || 'website', 'property')
-    this.setMetaTag('og:site_name', this.config.siteName, 'property')
+    this.setMetaTag('og: title' title, 'property')
+    this.setMetaTag('og: description' description, 'property')
+    this.setMetaTag('og: image' image, 'property')
+    this.setMetaTag('og: url' url, 'property')
+    this.setMetaTag('og: type' this.currentPageData.type || 'website', 'property')
+    this.setMetaTag('og: site_name' this.config.siteName, 'property')
     // Twitter Card tags;
     if (this.config.twitterHandle) {
     // Twitter Card tags
     if (this.config.twitterHandle) {}
-      this.setMetaTag('twitter:card', 'summary_large_image');`}
-      this.setMetaTag('twitter:site', `@${this.config.twitterHandle}`)
-      this.setMetaTag('twitter:title', title)
-      this.setMetaTag('twitter:description', description)
-      this.setMetaTag('twitter:image', image)
+      this.setMetaTag('twitter: card', 'summary_large_image');`}
+      this.setMetaTag('twitter: site' `@${this.config.twitterHandle}`)
+      this.setMetaTag('twitter: title' title)
+      this.setMetaTag('twitter: description' description)
+      this.setMetaTag('twitter: image' image)
     }
     // Additional meta tags;
     this.setMetaTag('viewport', 'width=device-width, initial-scale=1.0')
     this.setMetaTag('theme-color', '#1e40af')
     this.setMetaTag('msapplication-TileColor', '#1e40af')
-  private updateMetaTags(): void {/* TODO: Fix JSX expression */}`
-  r:site', `@${this.config.twitterHandle}`);
+  private updateMetaTags(): void {}`
+  r: site' `@${this.config.twitterHandle}`);
       this.setMetaTag('twitte)
-  r:title', title);
+  r: title' title);
       this.setMetaTag('twitte)
-  r:description', description);
+  r: description' description);
       this.setMetaTag('twitte)
-  r:image', image);
+  r: image' image);
     }
     // Additional meta tags;
     this.setMetaTag('viewport', 'width=device-width, initial-scale=1.0');
@@ -172,7 +172,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
   /**
    * Set meta tag;
    */
-  private setMetaTag(name: string, content: string, attribute: string = 'name'): void {`}
+  private setMetaTag(name: string content: string attribute: string = 'name'): void {`}
     let meta = document.querySelector(`meta[${attribute}="${name}"]`) as HTMLMetaElement;
     if (!meta) {
     let meta = document.querySelector(`meta[${attribute}="${name}"]`) as HTMLMetaElement
@@ -181,11 +181,11 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
       meta.setAttribute(attribute, name)
       document.head.appendChild(meta);}
   private setMetaTag(nam,
-  e: string, conten,
-  t: string, attribut)
-  e: string = 'name'): void {/* TODO: Fix JSX expression */}`
+  e: string conten,
+  t: string attribut)
+  e: string = 'name'): void {}`
     let meta = document.querySelector(`meta[${attribute}="${name}"]`) as HTMLMetaElement;
-    if (!meta) {/* TODO: Fix JSX expression */}
+    if (!meta) {}
     }
     meta.content = content;
   }
@@ -202,10 +202,10 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
       directives.push('follow');}
     } else {}
       directives.push('nofollow');}
-  private getRobotsContent(): string {/* TODO: Fix JSX expression */}
+  private getRobotsContent(): string {}
     }
-    if (!this.currentPageData.nofollow) {/* TODO: Fix JSX expression */}
-    } else {/* TODO: Fix JSX expression */}
+    if (!this.currentPageData.nofollow) {}
+    } else {}
     }
     return directives.join(', ')
   }
@@ -214,7 +214,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
    */
   private setupStructuredData(): void {}
     this.addStructuredData(structuredData)
-  private setupStructuredData(): void {/* TODO: Fix JSX expression */}`
+  private setupStructuredData(): void {}`
   t: `${this.config.siteUrl}/search?q={search_term_string}`,
         'query-input': 'required name=search_term_string'
       }
@@ -227,22 +227,20 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
   private updateStructuredData(): void {
     if (!this.currentPageData) return;
     const structuredData = {
-      '@context': 'https: //schema.org',
-      '@type': this.currentPageData.type === 'article' ? 'Article' : 'WebPage',
+      '@context': 'https: //schema.org', '@type': this.currentPageData.type === 'article' ? 'Article' : 'WebPage',
       headline: this.generateTitle()
       description: this.generateDescription()
       url: this.currentPageData.url || window.location.href;
       image: this.currentPageData.image || this.config.defaultImage;
-      publisher: {,
+      publisher: {
   private updateStructuredData(): void {}
     if (!this.currentPageData) return
     const structuredData = {}
-      '@context': 'https://schema.org',
-      '@type': this.currentPageData.type === 'article' ? 'Article' : 'WebPage',
-      headline: this.generateTitle(),
-      description: this.generateDescription(),
-      url: this.currentPageData.url || window.location.href,
-      image: this.currentPageData.image || this.config.defaultImage,
+      '@context': 'https: //schema.org', '@type': this.currentPageData.type === 'article' ? 'Article' : 'WebPage',
+      headline: this.generateTitle()
+      description: this.generateDescription()
+      url: this.currentPageData.url || window.location.href
+      image: this.currentPageData.image || this.config.defaultImage
       publisher: {}
         '@type': 'Organization',
         name: this.config.siteName;
@@ -255,35 +253,35 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
         author: {)
 // '@type': 'Person')
 // name: this.currentPageData.author || this.config.siteName;)
-        })
+        }
         datePublished: this.currentPageData.publishedTime;
-        dateModified: this.currentPageData.modifiedTime),
-        articleSection: this.currentPageData.section),
-        keywords: this.generateKeywords(),
+        dateModified: this.currentPageData.modifiedTime)
+        articleSection: this.currentPageData.section)
+        keywords: this.generateKeywords()
     // Add article-specific properties
     if (this.currentPageData.type === 'article') {}
       Object.assign(structuredData, {)}
-        author: {}
+        author:  {}
 // '@type': 'Person',
 // name: this.currentPageData.author || this.config.siteName
         },
-        datePublished: this.currentPageData.publishedTime,
-        dateModified: this.currentPageData.modifiedTime,
-        articleSection: this.currentPageData.section,
+        datePublished: this.currentPageData.publishedTime
+        dateModified: this.currentPageData.modifiedTime
+        articleSection: this.currentPageData.section
         keywords: this.generateKeywords()
       })
-  private updateStructuredData(): void {/* TODO: Fix JSX expression */}
+  private updateStructuredData(): void {}
       }
     };
     // Add article-specific properties;
-    if (this.currentPageData.type === 'article') {/* TODO: Fix JSX expression */}
+    if (this.currentPageData.type === 'article') {}
         },
         datePublishe,
-  d: this.currentPageData.publishedTime,
+  d: this.currentPageData.publishedTime
         dateModifie,
-  d: this.currentPageData.modifiedTime,
+  d: this.currentPageData.modifiedTime
         articleSectio,
-  n: this.currentPageData.section,
+  n: this.currentPageData.section
         keyword,
   s: this.generateKeywords()
       });
@@ -299,7 +297,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
     script.textContent = JSON.stringify(data);
     document.head.appendChild(script);
   private addStructuredData(dat)
-  a: unknown): void {/* TODO: Fix JSX expression */}
+  a: unknown): void {}
   }
   /**
    * Setup canonical URLs;
@@ -309,7 +307,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
     canonical.rel = 'canonical'
     canonical.href = window.location.href;
     document.head.appendChild(canonical);}
-  private setupCanonicalUrls(): void {/* TODO: Fix JSX expression */}
+  private setupCanonicalUrls(): void {}
   }
   /**
    * Setup performance monitoring for SEO;
@@ -328,15 +326,15 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
         if (lastEntry.startTime > 4000) { // Poor LCP}
           this.trackSEOMetric('poor_lcp', lastEntry.startTime);}
         }
-      }).observe({ entryTypes: ['largest-contentful-paint'] })
-  private setupPerformanceMonitoring(): void {/* TODO: Fix JSX expression */}
+      }).observe({ entryTypes: ['largest-contentful-paint'] }
+  private setupPerformanceMonitoring(): void {}
         }
-      }).observe({/* TODO: Fix JSX expression */})
+      }).observe()
   s: ['largest-contentful-paint'] });
       // Monitor CLS (Cumulative Layout Shift)
       let clsValue = 0;
       new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
+        for(const entry of list.getEntries() {
           if (!(entry as any).hadRecentInput) {
             clsValue += (entry as any).value;}
           }
@@ -344,7 +342,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
         if (clsValue > 0.25) { // Poor CLS;
       let clsValue = 0
       new PerformanceObserver((list) => {}
-        for (const entry of list.getEntries()) {}
+        for(const entry of list.getEntries() {}
           if (!(entry as any).hadRecentInput) {}
             clsValue += (entry as any).value;}
           }
@@ -352,33 +350,33 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
         if (clsValue > 0.25) { // Poor CLS}
           this.trackSEOMetric('poor_cls', clsValue);}
         }
-      }).observe({ entryTypes: ['layout-shift'] })
-      new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}
+      }).observe({ entryTypes: ['layout-shift'] }
+      new PerformanceObserver((list) => {}
           }
         }
-        if (clsValue > 0.25) {/* TODO: Fix JSX expression */}
+        if (clsValue > 0.25) {}
         }
-      }).observe({/* TODO: Fix JSX expression */})
+      }).observe()
   s: ['layout-shift'] });
     }
   }
   /**
    * Track SEO-related metrics;
    */
-  private trackSEOMetric(metric: string, value: number): void {,
+  private trackSEOMetric(metric: string value: number): void {
     if (typeof window !== 'undefined' && (window as any).gtag) {,
       (window as any).gtag('event', 'seo_metric', {)
-        metric_name: metric),
-  private trackSEOMetric(metric: string, value: number): void {}
+        metric_name: metric)
+  private trackSEOMetric(metric: string value: number): void {}
     if (typeof window !== 'undefined' && (window as any).gtag) {}
       (window as any).gtag('event', 'seo_metric', {)}
-        metric_name: metric,
-        metric_value: Math.round(value),
+        metric_name: metric
+        metric_value: Math.round(value)
         event_category: 'seo'}
       })
   private trackSEOMetric(metri,
-  c: string, valu)
-  e: number): void {/* TODO: Fix JSX expression */}
+  c: string valu)
+  e: number): void {}
       });
     }
   }
@@ -394,12 +392,12 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
     // This would typically come from your CMS or routing system
     return [
       {}
-        url: this.config.siteUrl,
-        lastmod: new Date().toISOString(),
-        changefreq: 'daily',
+        url: this.config.siteUrl
+        lastmod: new Date().toISOString()
+        changefreq: 'daily'
         priority: '1.0'}
-  generateSitemapData(): Array<{/* TODO: Fix JSX expression */}
-  y: number }> {/* TODO: Fix JSX expression */}
+  generateSitemapData(): Array<{}
+  y: number }> {}
       }
     ]
   }
@@ -407,28 +405,28 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
    * Generate robots.txt content;
    */
   generateRobotsTxt(): string {
-    return `User-agent: *,
+    return `User-agent: *
   generateRobotsTxt(): string {}
     return `User-agent: *
 Allow: /}
 Sitemap: ${this.config.siteUrl}/sitemap.xml;
 # Disallow admin and private areas;
-Disallow: /admin/,
-Disallow: /private/,
-Disallow: /api/,
-Disallow: /_next/,
-Disallow: /static/`,
-  generateRobotsTxt(): string {/* TODO: Fix JSX expression */}
+Disallow: /admin/
+Disallow: /private/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /static/`
+  generateRobotsTxt(): string {}
   p: ${this.config.siteUrl}/sitemap.xml;
 # Disallow admin and private areas,
   Disallow: /admin/
-Disallo,
+Disallo
   w: /private/
-Disallo,
+Disallo
   w: /api/
-Disallo,
+Disallo
   w: /_next/
-Disallo,`
+Disallo`
   w: /static/`;
   }
   /**
@@ -437,7 +435,7 @@ Disallo,`
   checkSEOIssues(): string[] {}
     const issues: string[] = []
     // Check title length;
-    const title = document.title;,
+    const title = document.title;
     if (title.length < 30) {,
     // Check title length
     const title = document.title
@@ -468,25 +466,25 @@ Disallo,`
       issues.push('Page is missing H1 tag');}
     } else if (h1s.length > 1) {}
       issues.push('Page has multiple H1 tags');}
-  checkSEOIssues(): string[] {/* TODO: Fix JSX expression */}
-    } else if (title.length > 60) {/* TODO: Fix JSX expression */}
+  checkSEOIssues(): string[] {}
+    } else if (title.length > 60) {}
     }
     // Check description length;"
     const description = document.querySelector('meta[name="description"]')?.getAttribute('content');
-    if (!description) {/* TODO: Fix JSX expression */}
-    } else if (description.length < 120) {/* TODO: Fix JSX expression */}
-    } else if (description.length > 160) {/* TODO: Fix JSX expression */}
+    if (!description) {}
+    } else if (description.length < 120) {}
+    } else if (description.length > 160) {}
     }
     // Check for images without alt text;
     const images = document.querySelectorAll('img');
-    images.forEach((img, index) => {/* TODO: Fix JSX expression */}`
+    images.forEach((img, index) => {}`
         issues.push(`Image ${index + 1} is missing alt text`);
       }
     });
     // Check for heading structure;
     const h1s = document.querySelectorAll('h1');
-    if (h1s.length === 0) {/* TODO: Fix JSX expression */}
-    } else if (h1s.length > 1) {/* TODO: Fix JSX expression */}
+    if (h1s.length === 0) {}
+    } else if (h1s.length > 1) {}
     }
     return issues;
   }
@@ -506,23 +504,22 @@ const defaultConfig: SEOConfig = {
   siteUrl: 'https://zion.app'
 // Default configuration
 const defaultConfig: SEOConfig = {}
-  siteName: 'Zion Tech Group',
-  siteUrl: 'https://zion.app',
-  defaultTitle: 'Advanced AI and IT Solutions',
-  defaultDescription: 'Zion Tech Group provides cutting-edge AI and IT solutions for businesses. Transform your operations with our innovative technology and expert consulting services.',
-  defaultImage: 'https://zion.app/og-image.webp',
-  twitterHandle: 'ZionTechGroup',
+  siteName: 'Zion Tech Group'
+  siteUrl: 'https://zion.app'
+  defaultTitle: 'Advanced AI and IT Solutions'
+  defaultDescription: 'Zion Tech Group provides cutting-edge AI and IT solutions for businesses. Transform your operations with our innovative technology and expert consulting services.'
+  defaultImage: 'https://zion.app/og-image.webp'
+  twitterHandle: 'ZionTechGroup'
   googleAnalyticsId: process.env.GOOGLE_ANALYTICS_ID;
   googleTagManagerId: process.env.GOOGLE_TAG_MANAGER_ID}
 }
 export const seoOptimizer = new SEOOptimizer(defaultConfig)
 export default seoOptimizer;
-  getSEOScore(): number {/* TODO: Fix JSX expression */}
+  getSEOScore(): number {}
   }
 }
 // Default configuration;
-const,
-  defaultConfig: SEOConfig = {/* TODO: Fix JSX expression */}
+const defaultConfig: SEOConfig = {}
 };
 export const seoOptimizer = new SEOOptimizer(defaultConfig);
 export default seoOptimizer;"`

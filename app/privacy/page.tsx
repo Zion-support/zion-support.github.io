@@ -7,68 +7,68 @@ export default function PrivacyPage() {
   
   const dataTypes = [
     {
-      category: 'Personal Information',
-      icon: User,
-      description: 'Name, email address, phone number, company information',
+      category: 'Personal Information'
+      icon: User
+      description: 'Name email address, phone number, company information',
       examples: ['Contact forms', 'Newsletter signups', 'Account creation']
     },
     {
-      category: 'Usage Data',
-      icon: Database,
-      description: 'Information about how you use our website and services',
+      category: 'Usage Data'
+      icon: Database
+      description: 'Information about how you use our website and services'
       examples: ['Page views', 'Time spent', 'Features used', 'Device information']
     },
     {
-      category: 'Technical Data',
-      icon: Server,
-      description: 'IP address, browser type, operating system, cookies',
+      category: 'Technical Data'
+      icon: Server
+      description: 'IP address browser type, operating system, cookies',
       examples: ['IP addresses', 'Browser fingerprints', 'Device identifiers', 'Cookies and tracking pixels']
     }
   ];
 
   const purposes = [
     {
-      title: 'Service Provision',
-      icon: Globe,
-      description: 'To provide and maintain our services'
+    title: 'Service Provision',
+    icon: Globe,
+    description: 'To provide and maintain our services',
     },
     {
-      title: 'Communication',
-      icon: Mail,
-      description: 'To communicate with you about our services'
+    title: 'Communication',
+    icon: Mail,
+    description: 'To communicate with you about our services',
     },
     {
-      title: 'Improvement',
-      icon: ArrowRight,
-      description: 'To improve and develop new features'
+    title: 'Improvement',
+    icon: ArrowRight,
+    description: 'To improve and develop new features',
     },
     {
-      title: 'Security',
-      icon: Shield,
-      description: 'To protect against fraud and abuse'
+    title: 'Security',
+    icon: Shield,
+    description: 'To protect against fraud and abuse',
     }
   ];
 
   const rights = [
     {
-      title: 'Access',
-      description: 'Request access to your personal data',
-      icon: Eye
+    title: 'Access',
+    description: 'Request access to your personal data',
+    icon: Eye,
     },
     {
-      title: 'Rectification',
-      description: 'Correct inaccurate or incomplete data',
-      icon: CheckCircle
+    title: 'Rectification',
+    description: 'Correct inaccurate or incomplete data',
+    icon: CheckCircle,
     },
     {
-      title: 'Erasure',
-      description: 'Request deletion of your personal data',
-      icon: Lock
+    title: 'Erasure',
+    description: 'Request deletion of your personal data',
+    icon: Lock,
     },
     {
-      title: 'Portability',
-      description: 'Receive your data in a structured format',
-      icon: Database
+    title: 'Portability',
+    description: 'Receive your data in a structured format',
+    icon: Database,
     }
   ];
 
@@ -76,11 +76,11 @@ export default function PrivacyPage() {
     <div className="min-h-screen bg-white">
       <div className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+          <h1 className="text-5xl md: text-6xl font-bold mb-6">
             Privacy Policy
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-            Your privacy is important to us. Learn how we collect, use, and protect your information.
+            Your privacy is important to us. Learn how we collect use, and protect your information.
           </p>
           <div className="flex items-center justify-center text-sm text-blue-200">
             <Calendar className="h-4 w-4 mr-2" />
@@ -106,8 +106,8 @@ export default function PrivacyPage() {
             {/* Information We Collect */}
             <section>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Information We Collect</h2>
-              <div className="grid md:grid-cols-3 gap-6">
-                {dataTypes.map((type, index) => (
+              <div className="grid md: grid-cols-3 gap-6">
+                {dataTypes.map((type index) => (
                   <div key={index} className="bg-gray-50 rounded-lg p-6">
                     <div className="flex items-center mb-4">
                       <type.icon className="h-6 w-6 text-blue-600 mr-3" />
@@ -127,8 +127,8 @@ export default function PrivacyPage() {
             {/* How We Use Information */}
             <section>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">How We Use Your Information</h2>
-              <div className="grid md:grid-cols-2 gap-6">
-                {purposes.map((purpose, index) => (
+              <div className="grid md: grid-cols-2 gap-6">
+                {purposes.map((purpose index) => (
                   <div key={index} className="flex items-start">
                     <div className="flex-shrink-0 mr-4">
                       <purpose.icon className="h-6 w-6 text-blue-600" />
@@ -167,8 +167,8 @@ export default function PrivacyPage() {
             {/* Your Rights */}
             <section>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Your Rights</h2>
-              <div className="grid md:grid-cols-2 gap-6">
-                {rights.map((right, index) => (
+              <div className="grid md: grid-cols-2 gap-6">
+                {rights.map((right index) => (
                   <div key={index} className="bg-white border border-gray-200 rounded-lg p-6">
                     <div className="flex items-center mb-3">
                       <right.icon className="h-6 w-6 text-green-600 mr-3" />
@@ -184,8 +184,7 @@ export default function PrivacyPage() {
             <section className="bg-gray-50 rounded-lg p-8">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Contact Us</h2>
               <p className="text-gray-700 mb-6">
-                If you have any questions about this Privacy Policy or our data practices, please contact us:
-              </p>
+                If you have any questions about this Privacy Policy or our data practices, please contact us: </p>
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="flex items-center">
                   <Mail className="h-5 w-5 text-blue-600 mr-3" />

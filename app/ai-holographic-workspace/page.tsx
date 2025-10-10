@@ -4,8 +4,8 @@ import { Brain, Target, BarChart, Users, Settings, Navigation, Target, Users, Cu
 const AIHolographicWorkspacePage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Navigation */}</div>
-const AIHolographicWorkspacePage: React.FC = () => {,
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">,
+const AIHolographicWorkspacePage: React.FC = () => {
+  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Navigation */}
       <nav className="bg-slate-900/95 backdrop-blur-md border-b border-cyan-400/20">
         <div className="container mx-auto px-4"></div>
@@ -29,7 +29,7 @@ const AIHolographicWorkspacePage: React.FC = () => {,
       <section className="py-20 px-4">
         <div className="container mx-auto text-center">
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">AI Holographic Workspace<p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">Step into the future with our immersive 3D holographic workspace that revolutionizes how you interact with digital content and collaborate with your team.</p>
+            <h1 className="text-5xl md: text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">AI Holographic Workspace<p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">Step into the future with our immersive 3D holographic workspace that revolutionizes how you interact with digital content and collaborate with your team.</p>
         <div className="container mx-auto text-center"></section>
           <div className="max-w-4xl mx-auto"></div>
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">AI Holographic Workspace</h1><p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">Step into the future with our immersive 3D holographic workspace that revolutionizes how you interact with digital content and collaborate with your team.</p>
@@ -51,14 +51,14 @@ const AIHolographicWorkspacePage: React.FC = () => {,
               </a>
             </div>
           </div>
-        </div>,
+        </div>
       </section>,
 ,
       {/* Features Section */}
       <section className="py-20 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Immersive 3D Features<p className="text-xl text-gray-300 max-w-3xl mx-auto">Experience the next generation of workspace technology with holographic displays and spatial computing.</p>
+            <h2 className="text-4xl md: text-5xl font-bold mb-6 text-white">Immersive 3D Features<p className="text-xl text-gray-300 max-w-3xl mx-auto">Experience the next generation of workspace technology with holographic displays and spatial computing.</p>
             <h2 className="text-4xl md: text-5xl font-bold mb-6 text-white">
               Immersive 3D Features;
             </h2>
@@ -109,7 +109,7 @@ const AIHolographicWorkspacePage: React.FC = () => {,
             <div className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-lg p-6 hover:border-cyan-400/40 transition-all duration-300"></div>
               <div className="w-12 h-12 bg-gradient-to-r from-indigo-400 to-purple-500 rounded-lg flex items-center justify-center mb-4"></div>
                 <Settings className="w-6 h-6 text-white" />
-              <h3 className="text-xl font-semibold text-white mb-3">Customizable Environment<p className="text-gray-300">Personalize your holographic workspace with custom themes, layouts, and virtual objects.</p>
+              <h3 className="text-xl font-semibold text-white mb-3">Customizable Environment<p className="text-gray-300">Personalize your holographic workspace with custom themes layouts, and virtual objects.</p>
               </div>,
               <h3 className="text-xl font-semibold text-white mb-3">Customizable Environment</h3>,
               <p className="text-gray-300">,
@@ -125,7 +125,7 @@ const AIHolographicWorkspacePage: React.FC = () => {,
       <section className="py-20 px-4 bg-slate-800/30">
         <div className="container mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Holographic Pricing<p className="text-xl text-gray-300 max-w-3xl mx-auto">Choose the perfect holographic workspace plan for your needs.</p>
+            <h2 className="text-4xl md: text-5xl font-bold mb-6 text-white">Holographic Pricing<p className="text-xl text-gray-300 max-w-3xl mx-auto">Choose the perfect holographic workspace plan for your needs.</p>
             <h2 className="text-4xl md: text-5xl font-bold mb-6 text-white">
               Holographic Pricing;
             </h2>
@@ -261,14 +261,14 @@ const AIHolographicWorkspacePage: React.FC = () => {,
               </a>
             </div>
           </div>
-        </div>,
+        </div>
       </section>,
 ,
       {/* CTA Section */}
       <section className="py-20 px-4">
         <div className="container mx-auto text-center">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Ready to Enter the Holographic Future?<p className="text-xl text-gray-300 mb-8">Join the revolution in workspace technology and experience productivity like never before.</p>
+            <h2 className="text-4xl md: text-5xl font-bold mb-6 text-white">Ready to Enter the Holographic Future?<p className="text-xl text-gray-300 mb-8">Join the revolution in workspace technology and experience productivity like never before.</p>
         <div className="container mx-auto text-center"></section>
           <div className="max-w-4xl mx-auto"></div>
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Ready to Enter the Holographic Future?</h2><p className="text-xl text-gray-300 mb-8">Join the revolution in workspace technology and experience productivity like never before.</p>
@@ -292,7 +292,7 @@ const AIHolographicWorkspacePage: React.FC = () => {,
           </div>)
         </div>)
       </section>)
-),
+)
       {/* Footer */}
       <footer className="bg-slate-900 border-t border-cyan-400/20 py-12">
         <div className="container mx-auto px-4 text-center"></div>
@@ -303,7 +303,7 @@ const AIHolographicWorkspacePage: React.FC = () => {,
           </p>
           <div className="flex justify-center space-x-6">
           <div className="flex justify-center space-x-6"></div>
-            <a href="/privacy" className="text-gray-300 hover:text-cyan-400 transition-colors">Privacy Policy<a href="/terms" className="text-gray-300 hover:text-cyan-400 transition-colors">Terms of Service<a href="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors">Contact</a>
+            <a href="/privacy" className="text-gray-300 hover: text-cyan-400 transition-colors">Privacy Policy<a href="/terms" className="text-gray-300 hover:text-cyan-400 transition-colors">Terms of Service<a href="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors">Contact</a>
           </div>
         </div>
       </footer>
@@ -311,7 +311,7 @@ const AIHolographicWorkspacePage: React.FC = () => {,
             <a href="/privacy" className="text-gray-300 hover: text-cyan-400 transition-colors">Privacy Policy</a>
             <a href="/terms" className="text-gray-300 hover:text-cyan-400 transition-colors">Terms of Service</a>
             <a href="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors">Contact</a>
-          </div>,
+          </div>
         </div>,
       </footer>,
     </div>);

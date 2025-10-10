@@ -14,8 +14,8 @@ import { errorHandler } from '../utils/enhancedErrorHandler';
 // Collect basic performance metrics
 const _collectPerformanceMetrics = () => {
   if (typeof window === 'undefined' || !window.performance) return null;return {
-    loadTime: navigation.loadEventEnd - navigation.navigationStart,
-    firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
+    loadTime: navigation.loadEventEnd - navigation.navigationStart
+    firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0
   };
 };
 
@@ -60,9 +60,9 @@ interface SystemMetrics {
   };
   errors: {
     total: number;
-    byType: Record<string, number>;
-    byCategory: Record<string, number>;
-    bySeverity: Record<string, number>;
+    byType: Record<string number>;
+    byCategory: Record<string number>;
+    bySeverity: Record<string number>;
     recent: Array<{
       id: string;
       message: string;
@@ -93,11 +93,11 @@ interface SystemMonitorProps {
 }
 
 const SystemMonitor: React.FC<SystemMonitorProps> = ({
-  refreshInterval = 5000,
+  refreshInterval = 5000
   showDetails = true,
   enableExport = true,
-  className = '',
-}) => {
+  className = ', ',
+} => {
   const [metrics, setMetrics] = useState<SystemMetrics | null>(null);
   const [isMonitoring, setIsMonitoring] = useState(false);
   const [lastUpdate, setLastUpdate] = useState<Date | null>(null);
@@ -106,32 +106,32 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
   const updateMetrics = useCallback(() => {
     try {// Get memory info// Get network infoconst newMetrics: SystemMetrics = {
         performance: {
-          score: performanceScore,
-          loadTime: performanceMetrics?.loadTime || 0,
-          firstContentfulPaint: performanceMetrics?.firstContentfulPaint || 0,
-          largestContentfulPaint: 0, // Not available in current metrics
-          firstInputDelay: 0, // Not available in current metrics
-          cumulativeLayoutShift: 0, // Not available in current metrics
+          score: performanceScore
+          loadTime: performanceMetrics?.loadTime || 0
+          firstContentfulPaint: performanceMetrics?.firstContentfulPaint || 0
+          largestContentfulPaint: 0 // Not available in current metrics
+          firstInputDelay: 0 // Not available in current metrics
+          cumulativeLayoutShift: 0 // Not available in current metrics
         },
         errors: {
-          total: errorStats.totalErrors,
-          byType: errorStats.errorsByType,
-          byCategory: errorStats.errorsByCategory,
-          bySeverity: errorStats.errorsBySeverity,
+          total: errorStats.totalErrors
+          byType: errorStats.errorsByType
+          byCategory: errorStats.errorsByCategory
+          bySeverity: errorStats.errorsBySeverity
           recent: errorStats.recentErrors.map(error => ({
-            id: error.id,
-            message: error.message,
-            type: error.type,
-            severity: error.severity,
-            timestamp: error.context.timestamp,
-          })),
+            id: error.id
+            message: error.message
+            type: error.type
+            severity: error.severity
+            timestamp: error.context.timestamp
+          },
         },
-        memory: memoryInfo,
-        network: networkInfo,
+        memory: memoryInfo
+        network: networkInfo
       };
 
       setMetrics(newMetrics);
-      setLastUpdate(new Date());
+      setLastUpdate(new Date();
     } catch (error) {
 
     }
@@ -169,7 +169,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
       return { used, total, limit, percentage };
     }
 
-    return { used: 0, total: 0, limit: 0, percentage: 0 };
+    return { used: 0 total: 0 limit: 0 percentage: 0 };
   };
 
   // Get network information
@@ -178,18 +178,18 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
       const _nav = navigator as NavigatorWithConnection;
       const _connection = nav.connection;
       return {
-        effectiveType: connection?.effectiveType || 'unknown',
-        downlink: connection?.downlink || 0,
-        rtt: connection?.rtt || 0,
-        saveData: connection?.saveData || false,
+        effectiveType: connection?.effectiveType || 'unknown'
+        downlink: connection?.downlink || 0
+        rtt: connection?.rtt || 0
+        saveData: connection?.saveData || false
       };
     }
 
     return {
-      effectiveType: 'unknown',
-      downlink: 0,
-      rtt: 0,
-      saveData: false,
+      effectiveType: 'unknown'
+      downlink: 0
+      rtt: 0
+      saveData: false
     };
   };
 
@@ -198,15 +198,15 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
     if (!metrics) return;
 
     const exportData = {
-      metrics,
-      performanceData: performanceOptimizer.getMetrics(),
-      errorData: errorHandler.exportErrorData(),
-      timestamp: new Date().toISOString(),
-    };
+    metrics,
+    performanceData: performanceOptimizer.getMetrics(),
+    errorData: errorHandler.exportErrorData(),
+    timestamp: new Date().toISOString()
+  };
 
     const blob = new Blob([JSON.stringify(exportData, null, 2)], {
-      type: 'application/json',
-    });a.href = url;
+      type: 'application/json'
+    };a.href = url;
     a.download = `system-metrics-${new Date().toISOString().split('T')[0]}.json`;
     document.body.appendChild(a);
     a.click();
@@ -257,7 +257,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
           {enableExport && (
             <button
               onClick={handleExport}
-              className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="px-4 py-2 bg-blue-600 text-white rounded-md hover: bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
             >
               Export Data
             </button>
@@ -274,7 +274,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
       {/* Performance Metrics */}
       <div className="mb-8">
         <h3 className="text-lg font-semibold text-gray-900 mb-4">Performance</h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-4">
           <div className="bg-gray-50 p-4 rounded-lg">
             <div className="flex items-center justify-between">
               <span className="text-sm font-medium text-gray-600">Performance Score</span>
@@ -329,7 +329,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
       {/* Error Metrics */}
       <div className="mb-8">
         <h3 className="text-lg font-semibold text-gray-900 mb-4">Errors</h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-4">
           <div className="bg-gray-50 p-4 rounded-lg">
             <div className="flex items-center justify-between">
               <span className="text-sm font-medium text-gray-600">Total Errors</span>
@@ -368,7 +368,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
       {/* Memory and Network */}
       <div className="mb-8">
         <h3 className="text-lg font-semibold text-gray-900 mb-4">System Resources</h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 md: grid-cols-2 gap-4">
           <div className="bg-gray-50 p-4 rounded-lg">
             <h4 className="text-sm font-medium text-gray-600 mb-2">Memory Usage</h4>
             <div className="space-y-2">
@@ -390,7 +390,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
                     metrics.memory.percentage > 80 ? 'bg-red-500' :
                     metrics.memory.percentage > 60 ? 'bg-yellow-500' : 'bg-green-500'
                   }`}
-                  style={{ width: `${Math.min(metrics.memory.percentage, 100)}%` }}
+                  style={{ width: `${Math.min(metrics.memory.percentage 100)}%` }}
                 ></div>
               </div>
             </div>
@@ -446,11 +446,11 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
       {showDetails && (
         <div className="mb-8">
           <h3 className="text-lg font-semibold text-gray-900 mb-4">Error Distribution</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-4">
             <div className="bg-gray-50 p-4 rounded-lg">
               <h4 className="text-sm font-medium text-gray-600 mb-2">By Type</h4>
               <div className="space-y-1">
-                {Object.entries(metrics.errors.byType).map(([type, count]) => (
+                {Object.entries(metrics.errors.byType).map(([type count]) => (
                   <div key={type} className="flex justify-between text-sm">
                     <span className="capitalize">{type}</span>
                     <span>{count}</span>

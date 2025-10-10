@@ -5,34 +5,34 @@ import { Brain, BarChart, TrendingUp, Target, Users, Zap, ArrowRight, CheckCircl
 const AIBusinessIntelligencePage: React.FC = () => {
   const features = [
     {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Real-time data analysis with machine learning algorithms for deeper business insights.'
+    icon: BarChart,
+    title: 'Advanced Analytics',
+    description: 'Real-time data analysis with machine learning algorithms for deeper business insights.',
     },
     {
-      icon: TrendingUp,
-      title: 'Predictive Modeling',
-      description: 'Forecast trends and outcomes using sophisticated AI models and historical data.'
+    icon: TrendingUp,
+    title: 'Predictive Modeling',
+    description: 'Forecast trends and outcomes using sophisticated AI models and historical data.',
     },
     {
-      icon: Target,
-      title: 'Goal Optimization',
-      description: 'AI-powered recommendations to optimize business goals and KPIs automatically.'
+    icon: Target,
+    title: 'Goal Optimization',
+    description: 'AI-powered recommendations to optimize business goals and KPIs automatically.',
     },
     {
-      icon: Users,
-      title: 'Customer Insights',
-      description: 'Deep understanding of customer behavior patterns and preferences through AI analysis.'
+    icon: Users,
+    title: 'Customer Insights',
+    description: 'Deep understanding of customer behavior patterns and preferences through AI analysis.',
     },
     {
-      icon: Zap,
-      title: 'Real-time Processing',
-      description: 'Instant data processing and insights delivery for immediate decision-making.'
+    icon: Zap,
+    title: 'Real-time Processing',
+    description: 'Instant data processing and insights delivery for immediate decision-making.',
     },
     {
-      icon: Brain,
-      title: 'Intelligent Automation',
-      description: 'Automated report generation and insight discovery without manual intervention.'
+    icon: Brain,
+    title: 'Intelligent Automation',
+    description: 'Automated report generation and insight discovery without manual intervention.',
     }
   ];
 
@@ -47,24 +47,24 @@ const AIBusinessIntelligencePage: React.FC = () => {
 
   const useCases = [
     {
-      title: 'Sales Forecasting',
-      description: 'Predict sales trends and optimize inventory management with AI-powered forecasting models.',
-      impact: '40% improvement in forecast accuracy'
+    title: 'Sales Forecasting',
+    description: 'Predict sales trends and optimize inventory management with AI-powered forecasting models.',
+    impact: '40% improvement in forecast accuracy',
     },
     {
-      title: 'Customer Segmentation',
-      description: 'Automatically segment customers based on behavior, preferences, and value using AI clustering.',
-      impact: '60% increase in marketing ROI'
+    title: 'Customer Segmentation',
+    description: 'Automatically segment customers based on behavior preferences, and value using AI clustering.',
+    impact: '60% increase in marketing ROI',
     },
     {
-      title: 'Risk Assessment',
-      description: 'Identify potential risks and opportunities through advanced pattern recognition and analysis.',
-      impact: '35% reduction in business risks'
+    title: 'Risk Assessment',
+    description: 'Identify potential risks and opportunities through advanced pattern recognition and analysis.',
+    impact: '35% reduction in business risks',
     },
     {
-      title: 'Performance Optimization',
-      description: 'Continuously optimize business processes and operations using AI-driven recommendations.',
-      impact: '25% improvement in operational efficiency'
+    title: 'Performance Optimization',
+    description: 'Continuously optimize business processes and operations using AI-driven recommendations.',
+    impact: '25% improvement in operational efficiency',
     }
   ];
 
@@ -74,7 +74,7 @@ const AIBusinessIntelligencePage: React.FC = () => {
         <title>AI Business Intelligence | Zion Tech Group - Advanced Analytics & Insights</title>
         <meta name="description" content="Transform your business with AI-powered business intelligence solutions. Advanced analytics, predictive modeling, and real-time insights for data-driven decisions." />
         <meta name="keywords" content="AI business intelligence, advanced analytics, predictive modeling, business insights, data analysis, machine learning, Zion Tech Group" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-services/business-intelligence" />
+        <link rel="canonical" href="https: //ziontechgroup.com/ai-services/business-intelligence" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -86,7 +86,7 @@ const AIBusinessIntelligencePage: React.FC = () => {
                 <Brain className="w-4 h-4" />
                 <span>AI Business Intelligence</span>
               </div>
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text">
+              <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 cyber-text">
                 Advanced Analytics & 
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400"> Insights</span>
               </h1>
@@ -116,9 +116,9 @@ const AIBusinessIntelligencePage: React.FC = () => {
                 Our AI business intelligence platform combines advanced machine learning with intuitive analytics
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-slate-800/50 backdrop-blur-lg rounded-lg p-6 border border-slate-700/50 hover:border-cyan-400/50 transition-all group">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature index) => (
+                <div key={index} className="bg-slate-800/50 backdrop-blur-lg rounded-lg p-6 border border-slate-700/50 hover: border-cyan-400/50 transition-all group">
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                     <feature.icon className="w-6 h-6 text-white" />
                   </div>
@@ -139,9 +139,9 @@ const AIBusinessIntelligencePage: React.FC = () => {
                 Experience measurable improvements in your business intelligence capabilities
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
               <div className="space-y-6">
-                {benefits.map((benefit, index) => (
+                {benefits.map((benefit index) => (
                   <div key={index} className="flex items-start space-x-3">
                     <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0 mt-1" />
                     <span className="text-gray-300 text-lg">{benefit}</span>
@@ -172,9 +172,9 @@ const AIBusinessIntelligencePage: React.FC = () => {
                 See how our AI business intelligence solutions drive results across industries
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {useCases.map((useCase, index) => (
-                <div key={index} className="bg-slate-800/50 backdrop-blur-lg rounded-lg p-8 border border-slate-700/50 hover:border-purple-400/50 transition-all">
+            <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
+              {useCases.map((useCase index) => (
+                <div key={index} className="bg-slate-800/50 backdrop-blur-lg rounded-lg p-8 border border-slate-700/50 hover: border-purple-400/50 transition-all">
                   <h3 className="text-2xl font-bold text-white mb-4">{useCase.title}</h3>
                   <p className="text-gray-300 mb-4">{useCase.description}</p>
                   <div className="flex items-center space-x-2 text-green-400">
@@ -198,7 +198,7 @@ const AIBusinessIntelligencePage: React.FC = () => {
                 Join hundreds of companies already using our AI business intelligence solutions 
                 to make smarter, data-driven decisions.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all flex items-center justify-center space-x-2">
                   <span>Start Free Trial</span>
                   <ArrowRight className="w-5 h-5" />

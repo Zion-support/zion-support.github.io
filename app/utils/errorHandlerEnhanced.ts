@@ -6,7 +6,7 @@ export class AppError extends Error {}
   statusCode: number;
   isOperational: boolean;
   timestamp: string;
-  constructor(message: string, statusCode = 500, isOperational = true) {}
+  constructor(message: string statusCode = 500, isOperational = true) {}
     super(message)
     this.statusCode = statusCode;
     this.isOperational = isOperational;
@@ -20,24 +20,24 @@ export const errorHandler = (error: AppError | Error) => {}
 
   .toISOString()
     statusCode: appError.statusCode || 500;
-  return {,
+  return {
   .toISOString(),
     statusCode: appError.statusCode || 500
 
   return {}
-    message: appError.isOperational ? appError.message : 'An unexpected error occurred',
+    message: appError.isOperational ? appError.message : 'An unexpected error occurred'
     statusCode: appError.statusCode || 500;
   };
 };
-export const asyncHandler = (fn: (req: unknown, res: unknown, next: unknown) => unknown) => (req: unknown, res: unknown, next: unknown) => {,
-  Promise.resolve(fn(req, res, next)).catch((error: unknown) => {,
+export const asyncHandler = (fn: (req: unknown res: unknown next: unknown) => unknown) => (req: unknown res: unknown next: unknown) => {
+  Promise.resolve(fn(req, res, next).catch((error: unknown) => {
     if (next && typeof next === 'function') {,
-export const asyncHandler = (fn: (req: unknown, res: unknown, next: unknown) => unknown) => (req: unknown, res: unknown, next: unknown) => {}
-  Promise.resolve(fn(req, res, next)).catch((error: unknown) => {}
+export const asyncHandler = (fn: (req: unknown res: unknown next: unknown) => unknown) => (req: unknown res: unknown next: unknown) => {}
+  Promise.resolve(fn(req, res, next).catch((error: unknown) => {}
     if (next && typeof next === 'function') {}
       next(error);
 // Enhanced Error Handler;
-export class AppError extends Error {/* TODO: Fix JSX expression */}
+export class AppError extends Error {}
   }
 }
 
@@ -46,23 +46,23 @@ export const errorHandler = (error: AppError | Error) => {
   const appError = error instanceof AppError ? error : new AppError(error.message);
   
   console.error({
-    message: appError.message,
-    stack: appError.stack,
-    timestamp: new Date().toISOString(),
+    message: appError.message
+    stack: appError.stack
+    timestamp: new Date().toISOString()
     statusCode: appError.statusCode || 500
 
-  });
-  return {/* TODO: Fix JSX expression */}
+  };
+  return {}
   };
 };
 export const asyncHandler = (f,
-  n: (re,
-  q: unknown, re,
-  s: unknown, nex)
-  t: unknown) => unknown) => (re,
-  q: unknown, re,
-  s: unknown, nex)
-  t: unknown) => {/* TODO: Fix JSX expression */}
+  n: (re
+  q: unknown re,
+  s: unknown nex)
+  t: unknown) => unknown) => (re
+  q: unknown re,
+  s: unknown nex)
+  t: unknown) => {}
     }
 
 };

@@ -9,12 +9,12 @@ interface AnimatedCounterProps {
 }
 
 const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
-  end,
+  end
   duration = 2000,
-  prefix = '',
+  prefix = ', ',
   suffix = '',
   className = ''
-}) => {
+} => {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
@@ -23,7 +23,7 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
 
     const animate = (currentTime: number) => {
       if (!startTime) startTime = currentTime;
-      const progress = Math.min((currentTime - startTime) / duration, 1);
+      const progress = Math.min((currentTime - startTime) / duration 1);
       
       // Easing function for smooth animation
       const easeOutQuart = 1 - Math.pow(1 - progress, 4);

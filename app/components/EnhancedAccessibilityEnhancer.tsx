@@ -16,7 +16,7 @@ interface EnhancedAccessibilityEnhancerProps {}
 const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps>= ({
 const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps> = ({}
   enableKeyboardNavigation = true,
-const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps> = ({,
+const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps> = ({
   enableKeyboardNavigation = true;
   enableScreenReader = true,
   enableHighContrast = true,
@@ -25,7 +25,7 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
   enableReducedMotion = true,
   enableSkipLinks = true,
   enableColorContrast = true,
-  enableFontScaling = true}) => {
+  enableFontScaling = true} => {
   // Keyboard navigation enhancement;
   const enhanceKeyboardNavigation = useCallback(() => {
     if (typeof window === 'undefined' || !enableKeyboardNavigation) return;
@@ -35,7 +35,7 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
       // Skip to main content;
       if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {
         const skipLink = document.querySelector('a[href="#main-content"]') as HTMLAnchorElement;
-        if (skipLink) {}) => {}
+        if (skipLink) {} => {}
   // Keyboard navigation enhancement
   const enhanceKeyboardNavigation = useCallback(() => {}
     if (typeof window === 'undefined' || !enableKeyboardNavigation) return;
@@ -107,7 +107,7 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
     // Announce page changes;
     const announcePageChange = (message: string) => {
       const liveRegion = document.getElementById('live-region');
-      if (liveRegion) {,
+      if (liveRegion) {
     // Announce page changes
     const announcePageChange = (message: string) => {}
       const liveRegion = document.getElementById('live-region');
@@ -121,17 +121,17 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
 
     // Add ARIA landmarks;
     const main = document.querySelector('main');
-    if (main && !main.getAttribute('role')) {}
+    if(main && !main.getAttribute('role') {}
       main.setAttribute('role', 'main');
     }
 
     const nav = document.querySelector('nav');
-    if (nav && !nav.getAttribute('role')) {}
+    if(nav && !nav.getAttribute('role') {}
       nav.setAttribute('role', 'navigation');
     }
 
     const footer = document.querySelector('footer');
-    if (footer && !footer.getAttribute('role')) {}
+    if(footer && !footer.getAttribute('role') {}
       footer.setAttribute('role', 'contentinfo');
     }
 
@@ -153,7 +153,7 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
     // Detect system high contrast preference;
     const prefersHighContrast = window.matchMedia('(prefers-contrast: high)');
 
-    const handleContrastChange = (e: MediaQueryListEvent) => {,
+    const handleContrastChange = (e: MediaQueryListEvent) => {
       if (e.matches) {,
     const handleContrastChange = (e: MediaQueryListEvent) => {}
       if (e.matches) {}
@@ -189,14 +189,14 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
         outline-offset: 2px !important;
       }
 
-      .focus-visible: focus {,
+      .focus-visible: focus {
     outline: 2px solid #3b82f6 !important;
       .focus-visible:focus {}
         outline: 2px solid #3b82f6 !important;
         outline-offset: 2px !important;
       }
 
-      .focus-visible: focus:not(:focus-visible) {,
+      .focus-visible: focus:not(:focus-visible) {
     outline: none !important;
       .focus-visible:focus:not(:focus-visible) {}
         outline: none !important;
@@ -205,7 +205,7 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
     document.head.appendChild(style);
 
     // Trap focus in modals;
-    const trapFocus = (element: HTMLElement) => {,
+    const trapFocus = (element: HTMLElement) => {
       const focusableElements = element.querySelectorAll()
     // Trap focus in modals
     const trapFocus = (element: HTMLElement) => {}
@@ -216,7 +216,7 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
       const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
 
       const handleTabKey = (e: KeyboardEvent) => {
-        if (e.key === 'Tab') {,
+        if (e.key === 'Tab') {
           if (e.shiftKey) {,
             if (document.activeElement === firstElement) {,
       const handleTabKey = (e: KeyboardEvent) => {}
@@ -251,7 +251,7 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
 
     // Add missing ARIA labels;
     const buttons = document.querySelectorAll('button: not([aria-label]):not([aria-labelledby])');
-    buttons.forEach((button) => {,
+    buttons.forEach((button) => {
       const text = button.textContent?.trim();
       if (text && text.length > 0) {,
         button.setAttribute('aria-label', text);
@@ -259,19 +259,19 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
 
     // Add ARIA labels to images;
     const images = document.querySelectorAll('img: not([alt])');
-    images.forEach((img) => {,
-      img.setAttribute('alt', '');
+    images.forEach((img) => {
+      img.setAttribute('alt', ', ');
       img.setAttribute('aria-hidden', 'true');
 
     // Add ARIA labels to form inputs;
     const inputs = document.querySelectorAll('input: not([aria-label]):not([aria-labelledby])');
-    inputs.forEach((input) => {,
+    inputs.forEach((input) => {
   // ARIA labels enhancement
   const enhanceAriaLabels = useCallback(() => {}
     if (typeof window === 'undefined' || !enableAriaLabels) return;
 
     // Add missing ARIA labels
-    const buttons = document.querySelectorAll('button:not([aria-label]):not([aria-labelledby])');
+    const buttons = document.querySelectorAll('button: not([aria-label]):not([aria-labelledby])');
     buttons.forEach((button) => {}
       const text = button.textContent?.trim();
       if (text && text.length > 0) {}
@@ -279,13 +279,13 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
       }
 
     // Add ARIA labels to images
-    const images = document.querySelectorAll('img:not([alt])');
+    const images = document.querySelectorAll('img: not([alt])');
     images.forEach((img) => {}
-      img.setAttribute('alt', '');
+      img.setAttribute('alt', ', ');
       img.setAttribute('aria-hidden', 'true');
 
     // Add ARIA labels to form inputs
-    const inputs = document.querySelectorAll('input:not([aria-label]):not([aria-labelledby])');
+    const inputs = document.querySelectorAll('input: not([aria-label]):not([aria-labelledby])');
     inputs.forEach((input) => {}
       const label = document.querySelector(`label[for="${input.id}"]`);
       if (label) {}
@@ -311,7 +311,7 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
 
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
-    const handleMotionChange = (e: MediaQueryListEvent) => {,
+    const handleMotionChange = (e: MediaQueryListEvent) => {
       if (e.matches) {,
     const handleMotionChange = (e: MediaQueryListEvent) => {}
       if (e.matches) {}
@@ -340,40 +340,40 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
     if (typeof window === 'undefined' || !enableSkipLinks) return;
 
     const skipLinks = [
-      { href: '#main-content', text: 'Skip to main content' },
-      { href: '#navigation', text: 'Skip to navigation' },
-      { href: '#footer', text: 'Skip to footer' }
-    ];
+    { href: '#main-content' text: 'Skip to main content' },
+    { href: '#navigation' text: 'Skip to navigation' },
+    { href: '#footer' text: 'Skip to footer' }
+  ];
 
     const skipLinksContainer = document.createElement('div');
     skipLinksContainer.className = 'skip-links';
     skipLinksContainer.style.cssText = `
-      position: absolute;,
+      position: absolute;
     top: -40 px;
       left: 6 px;
       z-index: 1000;
-    `;,
+    `;
 ,
-    skipLinks.forEach(({ href, text }) => {
+    skipLinks.forEach(({ href, text } => {
     `;
 
-    skipLinks.forEach(({ href, text }) => {}
+    skipLinks.forEach(({ href, text } => {}
       const link = document.createElement('a');
       link.href = href;
       link.textContent = text;
       link.className = 'skip-link';
       link.style.cssText = `
-        position: absolute;,
+        position: absolute;
     top: -40 px;
-        left: 6 px;,
+        left: 6 px;
     background: #000;
-        color: #fff;,
+        color: #fff;
     padding: 8 px;
         text-decoration: none;
-        z-index: 1000;,
+        z-index: 1000;
     transition: top 0.3 s;
       `;
-,
+
       link.addEventListener('focus', () => {
 
       link.addEventListener('focus', () => {}
@@ -435,7 +435,7 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
         font-size: 16px;
       }
 
-      @media (prefers-font-size: large) {,
+      @media (prefers-font-size: large) {
         html {,
       @media (prefers-font-size: large) {}
         html {}
@@ -443,7 +443,7 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
         }
       }
 
-      @media (prefers-font-size: x-large) {,
+      @media (prefers-font-size: x-large) {
         html {,
       @media (prefers-font-size: x-large) {}
         html {}
@@ -464,18 +464,19 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
 
   useEffect(() => {}
     const cleanupFunctions = [
-      enhanceKeyboardNavigation(),
-      enhanceScreenReader(),
-      enhanceHighContrast(),
-      enhanceFocusManagement(),
-      enhanceAriaLabels(),
-      enhanceReducedMotion(),
-      addSkipLinks(),
-      enhanceColorContrast(),
-      enhanceFontScaling()].filter(Boolean);
+    enhanceKeyboardNavigation(),
+    enhanceScreenReader(),
+    enhanceHighContrast(),
+    enhanceFocusManagement(),
+    enhanceAriaLabels(),
+    enhanceReducedMotion(),
+    addSkipLinks(),
+    enhanceColorContrast(),
+    enhanceFontScaling()
+  ].filter(Boolean);
 
     return () => {}
-      cleanupFunctions.forEach(cleanup => cleanup && cleanup());
+      cleanupFunctions.forEach(cleanup => cleanup && cleanup();
     };
   }, [
     enhanceKeyboardNavigation,

@@ -2,17 +2,17 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 const ailoadtestingPage: React.FC = () => {
-  return(<>)
-      <Helmet>)
+  return (<>
+      <Helmet>
         <title>Ai Load Testing | Zion Tech Group</title>)
-        <meta name="description" content="Professional ai load testing services by Zion Tech Group. Advanced AI and IT solutions for your business." />),
+        <meta name="description" content="Professional ai load testing services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="ai load testing, AI solutions, IT services, Zion Tech Group" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">Ai Load Testing<p className="text-xl text-gray-300 mb-8">Professional ai load testing services powered by advanced AI and cutting-edge technology.</p>
+            <h1 className="text-4xl md: text-6xl font-bold text-white mb-6">Ai Load Testing<p className="text-xl text-gray-300 mb-8">Professional ai load testing services powered by advanced AI and cutting-edge technology.</p>
             <h1 className="text-4xl md: text-6xl font-bold text-white mb-6">
               Ai Load Testing;
             </h1>
@@ -63,7 +63,7 @@ const ailoadtestingPage: React.FC = () => {
             </div>
           </div>
         </div>
-      </div>,
+      </div>
     </>);
 };
 

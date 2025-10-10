@@ -4,8 +4,8 @@ import { Settings, Zap, Shield, CheckCircle, Star, Users, ArrowRight, Phone, Mai
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const AIPredictiveMaintenancePage: React.FC = () => {,
-  const features = [,
+const AIPredictiveMaintenancePage: React.FC = () => {
+  const features = [
     'Machine learning algorithms for failure prediction',
     'Real-time sensor data analysis',
     'Predictive maintenance scheduling',
@@ -31,81 +31,80 @@ const AIPredictiveMaintenancePage: React.FC = () => {,
 
   const industries = [
     {
-      name: 'Manufacturing',
-      description: 'Optimize production equipment maintenance',
-      savings: '40% cost reduction',
-      icon: Settings;
+    name: 'Manufacturing',
+    description: 'Optimize production equipment maintenance',
+    savings: '40% cost reduction',
+    icon: Settings;,
     },
     {
-      name: 'Energy & Utilities',
-      description: 'Predict power plant and grid failures',
-      savings: '35% cost reduction',
-      icon: Zap;
+    name: 'Energy & Utilities',
+    description: 'Predict power plant and grid failures',
+    savings: '35% cost reduction',
+    icon: Zap;,
     },
     {
-      name: 'Transportation',
-      description: 'Maintain fleet vehicles and infrastructure',
-      savings: '45% cost reduction',
-      icon: Globe;
+    name: 'Transportation',
+    description: 'Maintain fleet vehicles and infrastructure',
+    savings: '45% cost reduction',
+    icon: Globe;,
     },
     {
-      name: 'Healthcare',
-      description: 'Monitor medical equipment reliability',
-      savings: '30% cost reduction',
-      icon: Shield;
+    name: 'Healthcare',
+    description: 'Monitor medical equipment reliability',
+    savings: '30% cost reduction',
+    icon: Shield;,
     },
     {
-      name: 'Oil & Gas',
-      description: 'Predict equipment failures in harsh environments',
-      savings: '50% cost reduction',
-      icon: Database;
+    name: 'Oil & Gas',
+    description: 'Predict equipment failures in harsh environments',
+    savings: '50% cost reduction',
+    icon: Database;,
     },
     {
-      name: 'Aviation',
-      description: 'Aircraft maintenance optimization',
-      savings: '25% cost reduction',
-      icon: Target;
+    name: 'Aviation',
+    description: 'Aircraft maintenance optimization',
+    savings: '25% cost reduction',
+    icon: Target;,
     }
   ];
 
   const pricingPlans = [
     {
-      name: 'Starter',
-      price: '$2,500',
-      period: '/month',
-      originalPrice: '$3,500',
-      features: [,
+      name: 'Starter'
+      price: '$2500',
+      period: '/month'
+      originalPrice: '$3500',
+      features: [
         'Up to 50 assets',
         'Basic predictive models',
         'Email alerts',
         'Standard dashboard',
         'Email support',
-        'Data retention: 1 year'],
+        'Data retention: 1 year']
       popular: false;
     },
     {
-      name: 'Professional',
-      price: '$5,000',
-      period: '/month',
-      originalPrice: '$7,000',
-      features: [,
+      name: 'Professional'
+      price: '$5000',
+      period: '/month'
+      originalPrice: '$7000',
+      features: [
         'Up to 200 assets',
         'Advanced ML models',
         'Real-time alerts',
         'Custom dashboard',
         'Priority support',
-        'Data retention: 3 years',
-        'Mobile app access',
+        'Data retention: 3 years', 'Mobile app access',
         'API integration'
       ],
       popular: true;
     },
     {
-      name: 'Enterprise',
-      price: '$10,000',
-      period: '/month',
-      originalPrice: '$15,000',
-      features: [,
+      name: 'Enterprise'
+      price: '$10000',
+      period: '/month'
+      originalPrice: '$15000',
+      features: [
         'Unlimited assets',
         'Custom ML models',
         'Multi-site management',
@@ -121,22 +120,22 @@ const AIPredictiveMaintenancePage: React.FC = () => {,
 
   const testimonials = [
     {
-      name: 'John Mitchell',
-      role: 'Plant Manager, AutoCorp',
-      content: 'AI Predictive Maintenance has revolutionized our operations. We reduced unplanned downtime by 60% and saved over $2M in the first year.',
-      rating: 5;
+    name: 'John Mitchell',
+    role: 'Plant Manager AutoCorp',
+    content: 'AI Predictive Maintenance has revolutionized our operations. We reduced unplanned downtime by 60% and saved over $2M in the first year.',
+    rating: 5;,
     },
     {
-      name: 'Sarah Johnson',
-      role: 'Operations Director, PowerGrid',
-      content: 'The predictive accuracy is incredible. We can now schedule maintenance exactly when needed, not too early or too late.',
-      rating: 5;
+    name: 'Sarah Johnson',
+    role: 'Operations Director PowerGrid',
+    content: 'The predictive accuracy is incredible. We can now schedule maintenance exactly when needed not too early or too late.',
+    rating: 5;,
     },
     {
-      name: 'Michael Rodriguez',
-      role: 'Fleet Manager, TransLogistics',
-      content: 'Our maintenance costs dropped by 45% while improving vehicle reliability. The ROI was achieved in just 6 months.',
-      rating: 5;
+    name: 'Michael Rodriguez',
+    role: 'Fleet Manager TransLogistics',
+    content: 'Our maintenance costs dropped by 45% while improving vehicle reliability. The ROI was achieved in just 6 months.',
+    rating: 5;,
     }
   ];
 
@@ -152,11 +151,11 @@ const AIPredictiveMaintenancePage: React.FC = () => {,
           <div className="text-center mb-16">
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-green-600 to-blue-600 rounded-full mb-6">
               <Settings className="w-10 h-10 text-white" />
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">AI Predictive Maintenance<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Transform your maintenance operations with AI-powered predictive analytics. Reduce costs by 30-50%, prevent unexpected failures, and optimize equipment performance with machine learning algorithms.</p>
+            <h1 className="text-4xl md: text-6xl font-bold text-white mb-6">AI Predictive Maintenance<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Transform your maintenance operations with AI-powered predictive analytics. Reduce costs by 30-50% prevent unexpected failures, and optimize equipment performance with machine learning algorithms.</p>
             </div>
             <h1 className="text-4xl md: text-6xl font-bold text-white mb-6">
               AI Predictive Maintenance;
-            </h1>,
+            </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">,
               Transform your maintenance operations with AI-powered predictive analytics. Reduce costs by 30-50%, prevent unexpected failures, and optimize equipment performance with machine learning algorithms.
             </p>
@@ -166,9 +165,9 @@ const AIPredictiveMaintenancePage: React.FC = () => {,
           <div className="text-center mb-16"></div>
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-green-600 to-blue-600 rounded-full mb-6"></div>
               <Settings className="w-10 h-10 text-white" />
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">AI Predictive Maintenance</h1><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Transform your maintenance operations with AI-powered predictive analytics. Reduce costs by 30-50%, prevent unexpected failures, and optimize equipment performance with machine learning algorithms.</p>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">AI Predictive Maintenance</h1><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Transform your maintenance operations with AI-powered predictive analytics. Reduce costs by 30-50% prevent unexpected failures, and optimize equipment performance with machine learning algorithms.</p>
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8"></div>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center mb-8"></div>
               <div className="flex items-center space-x-2 text-green-400"></div>
                 <CheckCircle className="w-5 h-5" />
                 <span>30-50% cost reduction</span>
@@ -206,15 +205,15 @@ const AIPredictiveMaintenancePage: React.FC = () => {,
               </a>
             </div>
           </div>
-        </div>,
+        </div>
       </section>,
 ,
       {/* Features Section */}
       <section className="py-16 px-4 bg-slate-800/50">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Advanced Predictive Features<p className="text-xl text-gray-300 max-w-3xl mx-auto">Comprehensive AI-powered predictive maintenance solution with real-time monitoring and intelligent insights.<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature, index) => (</div>
-              <div key={index} className="bg-slate-800/80 backdrop-blur-sm border border-green-400/20 rounded-xl p-6 hover:border-green-400/40 transition-all duration-300">
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">Advanced Predictive Features<p className="text-xl text-gray-300 max-w-3xl mx-auto">Comprehensive AI-powered predictive maintenance solution with real-time monitoring and intelligent insights.<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature index) => (</div>
+              <div key={index} className="bg-slate-800/80 backdrop-blur-sm border border-green-400/20 rounded-xl p-6 hover: border-green-400/40 transition-all duration-300">
                 <div className="flex items-center space-x-3 mb-4">
                   <div className="w-10 h-10 bg-gradient-to-r from-green-600 to-blue-600 rounded-lg flex items-center justify-center">
                     <Brain className="w-5 h-5 text-white" />
@@ -227,9 +226,9 @@ const AIPredictiveMaintenancePage: React.FC = () => {,
             </p>)
           </div>)
 )
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">),
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-slate-800/80 backdrop-blur-sm border border-green-400/20 rounded-xl p-6 hover: border-green-400/40 transition-all duration-300">,
+              <div key={index} className="bg-slate-800/80 backdrop-blur-sm border border-green-400/20 rounded-xl p-6 hover: border-green-400/40 transition-all duration-300">
                 <div className="flex items-center space-x-3 mb-4">,
                   <div className="w-10 h-10 bg-gradient-to-r from-green-600 to-blue-600 rounded-lg flex items-center justify-center">,
                     <Brain className="w-5 h-5 text-white" />,
@@ -240,8 +239,8 @@ const AIPredictiveMaintenancePage: React.FC = () => {,
                   {feature === 'Machine learning algorithms for failure prediction' && 'Advanced ML models analyze historical data and sensor readings to predict equipment failures with 95%+ accuracy.'}
         <div className="container mx-auto max-w-6xl"></section>
           <div className="text-center mb-16"></div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Advanced Predictive Features</h2><p className="text-xl text-gray-300 max-w-3xl mx-auto">Comprehensive AI-powered predictive maintenance solution with real-time monitoring and intelligent insights.</p><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature, index) => (</div>
-              <div key={index} className="bg-slate-800/80 backdrop-blur-sm border border-green-400/20 rounded-xl p-6 hover:border-green-400/40 transition-all duration-300"></div>
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">Advanced Predictive Features</h2><p className="text-xl text-gray-300 max-w-3xl mx-auto">Comprehensive AI-powered predictive maintenance solution with real-time monitoring and intelligent insights.</p><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature index) => (</div>
+              <div key={index} className="bg-slate-800/80 backdrop-blur-sm border border-green-400/20 rounded-xl p-6 hover: border-green-400/40 transition-all duration-300"></div>
                 <div className="flex items-center space-x-3 mb-4"></div>
                   <div className="w-10 h-10 bg-gradient-to-r from-green-600 to-blue-600 rounded-lg flex items-center justify-center"></div>
                     <Brain className="w-5 h-5 text-white" />
@@ -268,8 +267,8 @@ const AIPredictiveMaintenancePage: React.FC = () => {,
       <section className="py-16 px-4">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Industry Applications<p className="text-xl text-gray-300 max-w-3xl mx-auto">Proven results across multiple industries with significant cost savings and improved reliability.<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{industries.map((industry, index) => (</div>
-              <div key={index} className="bg-slate-800/80 backdrop-blur-sm border border-green-400/20 rounded-xl p-6 hover:border-green-400/40 transition-all duration-300">
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">Industry Applications<p className="text-xl text-gray-300 max-w-3xl mx-auto">Proven results across multiple industries with significant cost savings and improved reliability.<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{industries.map((industry index) => (</div>
+              <div key={index} className="bg-slate-800/80 backdrop-blur-sm border border-green-400/20 rounded-xl p-6 hover: border-green-400/40 transition-all duration-300">
                 <div className="flex items-center space-x-3 mb-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-green-600 to-blue-600 rounded-lg flex items-center justify-center">
                     <industry.icon className="w-6 h-6 text-white" />
@@ -282,12 +281,12 @@ const AIPredictiveMaintenancePage: React.FC = () => {,
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Proven results across multiple industries with significant cost savings and improved reliability.
             </p>
-          </div>,
+          </div>
 ,
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">,
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             {industries.map((industry, index) => (
               <div key={index} className="bg-slate-800/80 backdrop-blur-sm border border-green-400/20 rounded-xl p-6 hover: border-green-400/40 transition-all duration-300">
-                <div className="flex items-center space-x-3 mb-4">,
+                <div className="flex items-center space-x-3 mb-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-green-600 to-blue-600 rounded-lg flex items-center justify-center">,
                     <industry.icon className="w-6 h-6 text-white" />,
                   </div>,
@@ -299,8 +298,8 @@ const AIPredictiveMaintenancePage: React.FC = () => {,
                 <p className="text-gray-300 text-sm">{industry.description}</p>
         <div className="container mx-auto max-w-6xl"></section>
           <div className="text-center mb-16"></div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Industry Applications</h2><p className="text-xl text-gray-300 max-w-3xl mx-auto">Proven results across multiple industries with significant cost savings and improved reliability.</p><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{industries.map((industry, index) => (</div>
-              <div key={index} className="bg-slate-800/80 backdrop-blur-sm border border-green-400/20 rounded-xl p-6 hover:border-green-400/40 transition-all duration-300"></div>
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">Industry Applications</h2><p className="text-xl text-gray-300 max-w-3xl mx-auto">Proven results across multiple industries with significant cost savings and improved reliability.</p><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{industries.map((industry index) => (</div>
+              <div key={index} className="bg-slate-800/80 backdrop-blur-sm border border-green-400/20 rounded-xl p-6 hover: border-green-400/40 transition-all duration-300"></div>
                 <div className="flex items-center space-x-3 mb-4"></div>
                   <div className="w-12 h-12 bg-gradient-to-r from-green-600 to-blue-600 rounded-lg flex items-center justify-center"></div>
                     <industry.icon className="w-6 h-6 text-white" />
@@ -317,22 +316,22 @@ const AIPredictiveMaintenancePage: React.FC = () => {,
       <section className="py-16 px-4 bg-slate-800/50">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Proven Business Benefits<p className="text-xl text-gray-300 max-w-3xl mx-auto">Transform your maintenance operations with measurable results and significant cost savings.<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{benefits.map((benefit, index) => (</div>
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">Proven Business Benefits<p className="text-xl text-gray-300 max-w-3xl mx-auto">Transform your maintenance operations with measurable results and significant cost savings.<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{benefits.map((benefit index) => (</div>
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
               Proven Business Benefits;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Transform your maintenance operations with measurable results and significant cost savings.
             </p>
-          </div>,
+          </div>
 ,
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">,
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
               <div key={index} className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
         <div className="container mx-auto max-w-6xl"></section>
           <div className="text-center mb-16"></div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Proven Business Benefits</h2><p className="text-xl text-gray-300 max-w-3xl mx-auto">Transform your maintenance operations with measurable results and significant cost savings.</p><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{benefits.map((benefit, index) => (</div>
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">Proven Business Benefits</h2><p className="text-xl text-gray-300 max-w-3xl mx-auto">Transform your maintenance operations with measurable results and significant cost savings.</p><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{benefits.map((benefit index) => (</div>
               <div key={index} className="text-center"></div>
                 <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4"></div>
                   <CheckCircle className="w-8 h-8 text-white" />
@@ -353,11 +352,11 @@ const AIPredictiveMaintenancePage: React.FC = () => {,
       <section id="pricing" className="py-16 px-4">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Choose Your Plan<p className="text-xl text-gray-300 max-w-3xl mx-auto">Flexible pricing plans designed to meet your predictive maintenance needs at any scale.<div className="grid grid-cols-1 md:grid-cols-3 gap-8">{pricingPlans.map((plan, index) => (<div key={index} className={`bg-slate-800/80 backdrop-blur-sm border rounded-xl p-8 relative ${plan.popular ? 'border-green-400/40 ring-2 ring-green-400/20' : 'border-gray-600/40'}`}>{plan.popular && (</div>
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">Choose Your Plan<p className="text-xl text-gray-300 max-w-3xl mx-auto">Flexible pricing plans designed to meet your predictive maintenance needs at any scale.<div className="grid grid-cols-1 md:grid-cols-3 gap-8">{pricingPlans.map((plan index) => (<div key={index} className={`bg-slate-800/80 backdrop-blur-sm border rounded-xl p-8 relative ${plan.popular ? 'border-green-400/40 ring-2 ring-green-400/20' : 'border-gray-600/40'}`}>{plan.popular && (</div>
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
         <div className="container mx-auto max-w-6xl"></section>
           <div className="text-center mb-16"></div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Choose Your Plan</h2><p className="text-xl text-gray-300 max-w-3xl mx-auto">Flexible pricing plans designed to meet your predictive maintenance needs at any scale.</p><div className="grid grid-cols-1 md:grid-cols-3 gap-8">{pricingPlans.map((plan, index) => (</div><div key={index} className={`bg-slate-800/80 backdrop-blur-sm border rounded-xl p-8 relative ${plan.popular ? 'border-green-400/40 ring-2 ring-green-400/20' : 'border-gray-600/40'}`}>{plan.popular && (</div>
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">Choose Your Plan</h2><p className="text-xl text-gray-300 max-w-3xl mx-auto">Flexible pricing plans designed to meet your predictive maintenance needs at any scale.</p><div className="grid grid-cols-1 md:grid-cols-3 gap-8">{pricingPlans.map((plan index) => (</div><div key={index} className={`bg-slate-800/80 backdrop-blur-sm border rounded-xl p-8 relative ${plan.popular ? 'border-green-400/40 ring-2 ring-green-400/20' : 'border-gray-600/40'}`}>{plan.popular && (</div>
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
                     <span className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">Most Popular</span>
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
@@ -366,9 +365,9 @@ const AIPredictiveMaintenancePage: React.FC = () => {,
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Flexible pricing plans designed to meet your predictive maintenance needs at any scale.
             </p>
-          </div>,
+          </div>
 ,
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">,
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`bg-slate-800/80 backdrop-blur-sm border rounded-xl p-8 relative ${plan.popular ? 'border-green-400/40 ring-2 ring-green-400/20' : 'border-gray-600/40'}`}>
                 {plan.popular && (
@@ -401,7 +400,7 @@ const AIPredictiveMaintenancePage: React.FC = () => {,
                   className={`block w-full text-center py-3 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular;
                       ? 'bg-gradient-to-r from-green-600 to-blue-600 text-white hover: from-green-700 hover:to-blue-700'}
-                      : 'border border-green-400 text-green-400 hover:bg-green-400 hover:text-white'}
+                      : 'border border-green-400 text-green-400 hover: bg-green-400 hover:text-white'}
                   }`}
                 >Get Started</a>
                 >
@@ -417,26 +416,26 @@ const AIPredictiveMaintenancePage: React.FC = () => {,
       <section className="py-16 px-4 bg-slate-800/50">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Client Success Stories<p className="text-xl text-gray-300 max-w-3xl mx-auto">See how AI Predictive Maintenance has transformed operations across various industries.<div className="grid grid-cols-1 md:grid-cols-3 gap-8">{testimonials.map((testimonial, index) => (</div>
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">Client Success Stories<p className="text-xl text-gray-300 max-w-3xl mx-auto">See how AI Predictive Maintenance has transformed operations across various industries.<div className="grid grid-cols-1 md:grid-cols-3 gap-8">{testimonials.map((testimonial index) => (</div>
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
               Client Success Stories;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               See how AI Predictive Maintenance has transformed operations across various industries.
             </p>
-          </div>,
+          </div>
 ,
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">,
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <div key={index} className="bg-slate-800/80 backdrop-blur-sm border border-green-400/20 rounded-xl p-6">
-                <div className="flex items-center space-x-1 mb-4">{[...Array(testimonial.rating)].map((_, i) => (<Star key={i} className="w-5 h-5 text-yellow-400 fill-current" >))}<p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
+                <div className="flex items-center space-x-1 mb-4">{[...Array(testimonial.rating)].map((_, i) => (<Star key={i} className="w-5 h-5 text-yellow-400 fill-current" >}<p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
                 <div>
                   <p className="font-semibold text-white">{testimonial.name}<p className="text-gray-400 text-sm">{testimonial.role}</p>
         <div className="container mx-auto max-w-6xl"></section>
           <div className="text-center mb-16"></div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Client Success Stories</h2><p className="text-xl text-gray-300 max-w-3xl mx-auto">See how AI Predictive Maintenance has transformed operations across various industries.</p><div className="grid grid-cols-1 md:grid-cols-3 gap-8">{testimonials.map((testimonial, index) => (</div>
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">Client Success Stories</h2><p className="text-xl text-gray-300 max-w-3xl mx-auto">See how AI Predictive Maintenance has transformed operations across various industries.</p><div className="grid grid-cols-1 md:grid-cols-3 gap-8">{testimonials.map((testimonial index) => (</div>
               <div key={index} className="bg-slate-800/80 backdrop-blur-sm border border-green-400/20 rounded-xl p-6"></div>
-                <div className="flex items-center space-x-1 mb-4">{[...Array(testimonial.rating)].map((_, i) => (</div><Star key={i} className="w-5 h-5 text-yellow-400 fill-current" >))}<p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
+                <div className="flex items-center space-x-1 mb-4">{[...Array(testimonial.rating)].map((_, i) => (</div><Star key={i} className="w-5 h-5 text-yellow-400 fill-current" >}<p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
                 <div></div>
                   <p className="font-semibold text-white">{testimonial.name}</p><p className="text-gray-400 text-sm">{testimonial.role}</p>
                 </div>
@@ -449,7 +448,7 @@ const AIPredictiveMaintenancePage: React.FC = () => {,
       {/* Contact Section */}
       <section id="contact" className="py-16 px-4 bg-gradient-to-r from-green-600 to-blue-600">
         <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Transform Your Maintenance?<p className="text-xl text-green-100 mb-8">Contact us today for a free predictive maintenance assessment and ROI analysis.</p>
+          <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">Ready to Transform Your Maintenance?<p className="text-xl text-green-100 mb-8">Contact us today for a free predictive maintenance assessment and ROI analysis.</p>
           <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
             Ready to Transform Your Maintenance?
           </h2>
@@ -477,7 +476,7 @@ const AIPredictiveMaintenancePage: React.FC = () => {,
               <<<<span>kleber</span></span>@ziontechgroup.com</span>
             </a>
           </div>
-          <div className="mt-8 text-green-100">,
+          <div className="mt-8 text-green-100">
             <p className="flex items-center justify-center space-x-2">,
               <MapPin className="w-4 h-4" />,
           <div className="mt-8 text-green-100"></div>

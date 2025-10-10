@@ -11,7 +11,7 @@ export const useIntersectionObserver = ({
   threshold = 0,
   root = null,
   rootMargin = '0%',
-  freezeOnceVisible = false}: UseIntersectionObserverProps = {}) => {
+  freezeOnceVisible = false}: UseIntersectionObserverProps = {} => {
   const [entry, setEntry] = useState<IntersectionObserverEntry>();</IntersectionObserverEntry></<<<IntersectionObserverEntry>const</IntersectionObserverEntry></IntersectionObserverEntry> [node, setNode] = useState<Element | null>(null);</Element></<<<Element>const</Element></<<Element>frozen</Element> = entry?.isIntersecting && freezeOnceVisible;
 
   const updateEntry = ([entry]: IntersectionObserverEntry[]): void => {
@@ -23,7 +23,9 @@ export const useIntersectionObserver = ({
 
     if (!hasIOSupport || frozen || !node) return;
 
-    const observerParams = { threshold, root, rootMargin };
+    const observerParams = {
+    threshold, root, rootMargin
+  };
     const observer = new IntersectionObserver(updateEntry, observerParams);
 
     observer.observe(node);

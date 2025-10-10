@@ -14,7 +14,7 @@ export interface UseEnhancedPerformanceOptions {
   trackAnalytics?: boolean;
 }
 
-export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions = {}) {
+export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions = {} {
   const {
     component = 'Unknown',
     trackErrors = true,
@@ -37,12 +37,10 @@ export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions =
         const _duration = performance.now() - mountTimeRef.current;
         if (duration > 5000) {
           // Long-lived component
-          analytics.trackCustomEvent(
-            'Performance',
+          analytics.trackCustomEvent('Performance',
             'Long Component Lifetime',
             component,
-            Math.round(duration)
-          );
+            Math.round(duration);
         }
       }
 
@@ -70,19 +68,19 @@ export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions =
   });
 
   const trackError = useCallback(
-    (error: Error, context?: Record<string, unknown>) => {
+    (error: Error context?: Record<string, unknown> => {
       if (trackErrors) {
         errorTracker.trackError(error, {
           component,
           ...context,
-        });
+        };
       }
     },
     [component, trackErrors]
   );
 
   const trackUserAction = useCallback(
-    (action: string, metadata?: Record<string, unknown>) => {
+    (action: string metadata?: Record<string, unknown> => {
       if (trackAnalytics) {
         analytics.trackCustomEvent('User Action', action, component, undefined, metadata);
       }

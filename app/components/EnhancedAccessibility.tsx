@@ -9,13 +9,13 @@ interface AccessibilitySettings {
 }
 
 const EnhancedAccessibility: React.FC = () => {
-  const [settings, setSettings] = useState<AccessibilitySettings>({
-    fontSize: 'medium',
-    highContrast: false,
-    reducedMotion: false,
-    screenReader: false,
+  const [settings setSettings] = useState<AccessibilitySettings>({
+    fontSize: 'medium'
+    highContrast: false
+    reducedMotion: false
+    screenReader: false
     keyboardNavigation: false
-  });
+  };
 
   const [isVisible, setIsVisible] = useState(false);
 
@@ -27,9 +27,9 @@ const EnhancedAccessibility: React.FC = () => {
     if (savedSettings) {
       try {
         const parsed = JSON.parse(savedSettings);
-        setSettings(prev => ({ ...prev, ...parsed }));
+        setSettings(prev => ({ ...prev, ...parsed };
       } catch (error) {
-        console.error('Error parsing accessibility settings:', error);
+        console.error('Error parsing accessibility settings: ' error);
       }
     }
 
@@ -41,7 +41,7 @@ const EnhancedAccessibility: React.FC = () => {
         window.navigator.userAgent.includes('JAWS') ||
         window.navigator.userAgent.includes('VoiceOver');
       
-      setSettings(prev => ({ ...prev, screenReader: !!hasScreenReader }));
+      setSettings(prev => ({ ...prev, screenReader: !!hasScreenReader };
     };
 
     detectScreenReader();
@@ -55,10 +55,10 @@ const EnhancedAccessibility: React.FC = () => {
     
     // Font size
     const fontSizeMap = {
-      small: '0.875rem',
-      medium: '1rem',
-      large: '1.125rem'
-    };
+    small: '0.875rem',
+    medium: '1rem',
+    large: '1.125rem'
+  };
     
     root.style.setProperty('--font-size', fontSizeMap[settings.fontSize]);
     
@@ -93,11 +93,11 @@ const EnhancedAccessibility: React.FC = () => {
 
   useEffect(() => {
     applySettings();
-    localStorage.setItem('accessibility-settings', JSON.stringify(settings));
+    localStorage.setItem('accessibility-settings', JSON.stringify(settings);
   }, [settings, applySettings]);
 
-  const updateSetting = (key: keyof AccessibilitySettings, value: boolean | string) => {
-    setSettings(prev => ({ ...prev, [key]: value }));
+  const updateSetting = (key: keyof AccessibilitySettings value: boolean | string) => {
+    setSettings(prev => ({ ...prev [key]: value };
   };
 
   const announceToScreenReader = (message: string) => {
@@ -128,7 +128,7 @@ const EnhancedAccessibility: React.FC = () => {
     <>
       <button
         onClick={() => setIsVisible(!isVisible)}
-        className="fixed bottom-4 left-4 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-colors z-50"
+        className="fixed bottom-4 left-4 bg-blue-600 text-white p-3 rounded-full shadow-lg hover: bg-blue-700 transition-colors z-50"
         aria-label="Accessibility Settings"
         title="Accessibility Settings"
       >
@@ -151,7 +151,7 @@ const EnhancedAccessibility: React.FC = () => {
               <h2 className="text-xl font-semibold">Accessibility Settings</h2>
               <button
                 onClick={() => setIsVisible(false)}
-                className="text-gray-500 hover:text-gray-700"
+                className="text-gray-500 hover: text-gray-700"
                 aria-label="Close accessibility settings"
               >
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -173,7 +173,7 @@ const EnhancedAccessibility: React.FC = () => {
                       className={`px-3 py-1 rounded text-sm ${
                         settings.fontSize === size
                           ? 'bg-blue-600 text-white'
-                          : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                          : 'bg-gray-200 text-gray-700 hover: bg-gray-300'
                       }`}
                     >
                       {size.charAt(0).toUpperCase() + size.slice(1)}

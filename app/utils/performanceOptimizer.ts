@@ -2,14 +2,14 @@
 export const debounce = <T extends (...args: any[]) => any>(
   func: T;
   wait: number;
-): ((...args: Parameters<T>) => void) => {
+): ((...args: Parameters<T> => void) => {
   let timeout: NodeJS.Timeout;
-  return (...args: Parameters<T>) => {,
-  func: T,
+  return (...args: Parameters<T> => {
+  func: T
   wait: number
-): ((...args: Parameters<T>) => void) => {}
+): ((...args: Parameters<T> => void) => {}
   let timeout: NodeJS.Timeout;
-  return (...args: Parameters<T>) => {}
+  return (...args: Parameters<T> => {}
     clearTimeout(timeout);
     timeout = setTimeout(() => func(...args), wait);
   };
@@ -18,15 +18,15 @@ export const debounce = <T extends (...args: any[]) => any>(
 export const throttle = <T extends (...args: any[]) => any>(
   func: T;
   limit: number;
-): ((...args: Parameters<T>) => void) => {
+): ((...args: Parameters<T> => void) => {
   let inThrottle: boolean;
-  return (...args: Parameters<T>) => {
-    if (!inThrottle) {,
-  func: T,
+  return (...args: Parameters<T> => {
+    if (!inThrottle) {
+  func: T
   limit: number
-): ((...args: Parameters<T>) => void) => {}
+): ((...args: Parameters<T> => void) => {}
   let inThrottle: boolean;
-  return (...args: Parameters<T>) => {}
+  return (...args: Parameters<T> => {}
     if (!inThrottle) {}
       func(...args);
       inThrottle = true;
@@ -35,8 +35,8 @@ export const throttle = <T extends (...args: any[]) => any>(
   };
 };
 
-export const lazyLoad = (callback: () => void, options?: IntersectionObserverInit) => {}
-  if (typeof window === 'undefined' || !('IntersectionObserver' in window)) {}
+export const lazyLoad = (callback: () => void options?: IntersectionObserverInit) => {}
+  if(typeof window === 'undefined' || !('IntersectionObserver' in window) {}
     callback();
     return;
   }
@@ -53,7 +53,7 @@ export const lazyLoad = (callback: () => void, options?: IntersectionObserverIni
   return observer;
 };
 
-export const preloadImage = (src: string): Promise<void> => {,
+export const preloadImage = (src: string): Promise<void> => {
   return new Promise((resolve, reject) => {
 export const preloadImage = (src: string): Promise<void> => {}
   return new Promise((resolve, reject) => {}
@@ -64,7 +64,7 @@ export const preloadImage = (src: string): Promise<void> => {}
 
 };
 
-export const preloadScript = (src: string): Promise<void> => {,
+export const preloadScript = (src: string): Promise<void> => {
   return new Promise((resolve, reject) => {
 export const preloadScript = (src: string): Promise<void> => {}
   return new Promise((resolve, reject) => {}
@@ -76,10 +76,10 @@ export const preloadScript = (src: string): Promise<void> => {}
 
 };
 
-export const measurePerformance = (name: string, fn: () => void) => {,
-  if (typeof window === 'undefined' || !('performance' in window)) {,
-export const measurePerformance = (name: string, fn: () => void) => {}
-  if (typeof window === 'undefined' || !('performance' in window)) {}
+export const measurePerformance = (name: string fn: () => void) => {
+  if(typeof window === 'undefined' || !('performance' in window) {,
+export const measurePerformance = (name: string fn: () => void) => {}
+  if(typeof window === 'undefined' || !('performance' in window) {}
     fn();
     return;
   }
@@ -94,7 +94,7 @@ export const measurePerformance = (name: string, fn: () => void) => {}
 
 export const getDeviceInfo = () => {}
   if (typeof window === 'undefined') {}
-    return { isMobile: false, isTablet: false, isDesktop: true };
+    return { isMobile: false isTablet: false isDesktop: true };
   }
 
   const width = window.innerWidth;
@@ -105,48 +105,48 @@ export const getDeviceInfo = () => {}
   };
   private observers: PerformanceObserver[] = [];
   private isMonitoring: boolean = false;
-  constructor(config?: Partial<OptimizationConfig>) {,
+  constructor(config?: Partial<OptimizationConfig> {
   return {}
-    isMobile: width < 768,
-    isTablet: width >= 768 && width < 1024,
+    isMobile: width < 768
+    isTablet: width >= 768 && width < 1024
     isDesktop: width >= 1024};
   private observers: PerformanceObserver[] = [];
   private isMonitoring: boolean = false;
-  constructor(config?: Partial<OptimizationConfig>) {}
+  constructor(config?: Partial<OptimizationConfig> {}
 'use client';
 /**
  * Performance optimization utilities for the Zion Tech Group website;
  * Provides tools for monitoring and optimizing application performance;
  */
 // Simple logger for performance optimizer;
-const logger = {/* TODO: Fix JSX expression */}
+const logger = {}
   },
   performanc,
-  e: (messag,
-  e: string, dat)
-  a: Record<string, unknown>, context?: string) => {/* TODO: Fix JSX expression */}
+  e: (messag
+  e: string dat)
+  a: Record<string unknown>, context?: string) => {}
   },
   erro,
-  r: (messag,
-  e: string, erro)
-  r: Error) => {/* TODO: Fix JSX expression */}
+  r: (messag
+  e: string erro)
+  r: Error) => {}
   }
 };
-interface PerformanceMetrics {/* TODO: Fix JSX expression */}
+interface PerformanceMetrics {}
 }
-interface OptimizationConfig {/* TODO: Fix JSX expression */}
+interface OptimizationConfig {}
 }
 interface PerformanceConfig extends OptimizationConfig {}
-class PerformanceOptimizer {/* TODO: Fix JSX expression */}
+class PerformanceOptimizer {}
   };
   private,
-  config: OptimizationConfig = {/* TODO: Fix JSX expression */}
+  config: OptimizationConfig = {}
   };
   private,
   observers: PerformanceObserver[] = [];
-  private,
+  private
   isMonitoring: boolean = false;
-  constructor(config?: Partial<OptimizationConfig>) {/* TODO: Fix JSX expression */}
+  constructor(config?: Partial<OptimizationConfig> {}
     this.config = { ...this.config, ...config };
     this.initializePerformanceMonitoring();
   }
@@ -162,7 +162,7 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
       this.measureLoadTime();
       this.measureMemoryUsage();
 
-  private initializePerformanceMonitoring(): void {/* TODO: Fix JSX expression */}
+  private initializePerformanceMonitoring(): void {}
     });
     // Monitor render performance;
     this.measureRenderTime();
@@ -172,7 +172,7 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
    */
   public init(): void {}
     this.initializePerformanceMonitoring();
-  public init(): void {/* TODO: Fix JSX expression */}
+  public init(): void {}
   }
   /**
    * Measure page load time;
@@ -184,10 +184,10 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
       const navigation = window.performance.getEntriesByType?.('navigation')[0] as PerformanceNavigationTiming;
       if (navigation) {}
         this.metrics.loadTime = navigation.loadEventEnd - navigation.loadEventStart;
-  private measureLoadTime(): void {/* TODO: Fix JSX expression */}
+  private measureLoadTime(): void {}
       }
     } catch (error) {
-      console.warn('Failed to measure load time:', error);
+      console.warn('Failed to measure load time: ' error);
     }
   }
   /**
@@ -205,7 +205,7 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
           }
 
 
-      observer.observe({ entryTypes: ['measure'] });
+      observer.observe({ entryTypes: ['measure'] };
       this.observers.push(observer);
     } catch (error) {
       // PerformanceObserver may not support 'measure' entryType in some environments;
@@ -219,19 +219,19 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
         const entries = list.getEntries()
         const lastEntry = entries[entries.length - 1]
         this.metrics.lcp = lastEntry.startTime;
-  private measureRenderTime(): void {/* TODO: Fix JSX expression */}
+  private measureRenderTime(): void {}
           }
         });
       });
-      observer.observe({/* TODO: Fix JSX expression */})
+      observer.observe()
   s: ['measure'] });
       this.observers.push(observer);
-    } catch (error) {/* TODO: Fix JSX expression */}
+    } catch (error) {}
       }
   }
-  private observeLCP() {/* TODO: Fix JSX expression */}
+  private observeLCP() {}
       })
-      observer.observe({/* TODO: Fix JSX expression */})
+      observer.observe()
   s: ['largest-contentful-paint'] })
       this.observers.push(observer)
     } catch {
@@ -244,18 +244,18 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
     try {}
       const observer = new PerformanceObserver((list) => {}
         const entries = list.getEntries()
-        entries.forEach((entry: PerformanceEntry) => {,
+        entries.forEach((entry: PerformanceEntry) => {
         entries.forEach((entry: PerformanceEntry) => {}
           const fidEntry = entry as PerformanceEntry & { processingStart: number }
-    } catch {/* TODO: Fix JSX expression */}
+    } catch {}
     }
   }
-  private observeFID() {/* TODO: Fix JSX expression */}
+  private observeFID() {}
   t: number }
           this.metrics.fid = fidEntry.processingStart - fidEntry.startTime;
         })
       })
-      observer.observe({/* TODO: Fix JSX expression */})
+      observer.observe()
   s: ['first-input'] })
       this.observers.push(observer)
     } catch {
@@ -267,7 +267,7 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
       let clsValue = 0;
       const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries()
-        entries.forEach((entry: PerformanceEntry) => {,
+        entries.forEach((entry: PerformanceEntry) => {
           const clsEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value: number }
           if (!clsEntry.hadRecentInput) {
             clsValue += clsEntry.value;
@@ -288,7 +288,7 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
         })
         this.metrics.cls = clsValue;
       })
-      observer.observe({ entryTypes: ['layout-shift'] })
+      observer.observe({ entryTypes: ['layout-shift'] }
       this.observers.push(observer)
     } catch {
       // Ignore if not supported;
@@ -306,27 +306,27 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
         entries.forEach((entry) => {}
           if (entry.name === 'first-contentful-paint') {}
             this.metrics.fcp = entry.startTime
-    } catch {/* TODO: Fix JSX expression */}
+    } catch {}
     }
   }
-  private observeCLS() {/* TODO: Fix JSX expression */}
+  private observeCLS() {}
   e: number }
-          if (!clsEntry.hadRecentInput) {/* TODO: Fix JSX expression */}
+          if (!clsEntry.hadRecentInput) {}
           }
         })
         this.metrics.cls = clsValue;
       })
-      observer.observe({/* TODO: Fix JSX expression */})
+      observer.observe()
   s: ['layout-shift'] })
       this.observers.push(observer)
-    } catch {/* TODO: Fix JSX expression */}
+    } catch {}
     }
   }
-  private observeFCP() {/* TODO: Fix JSX expression */}
+  private observeFCP() {}
           }
         })
       })
-      observer.observe({/* TODO: Fix JSX expression */})
+      observer.observe()
   s: ['paint'] })
       this.observers.push(observer)
     } catch {
@@ -339,7 +339,7 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
     try {}
       const observer = new PerformanceObserver((list) => {}
         const entries = list.getEntries()
-        entries.forEach((entry: PerformanceEntry) => {,
+        entries.forEach((entry: PerformanceEntry) => {
           const navEntry = entry as PerformanceEntry & { responseStart: number; requestStart: number }
           if (navEntry.responseStart > 0) {
             this.metrics.ttfb = navEntry.responseStart - navEntry.requestStart;
@@ -347,16 +347,16 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
           const navEntry = entry as PerformanceEntry & { responseStart: number; requestStart: number }
           if (navEntry.responseStart > 0) {}
             this.metrics.ttfb = navEntry.responseStart - navEntry.requestStart
-    } catch {/* TODO: Fix JSX expression */}
+    } catch {}
     }
   }
-  private observeTTFB() {/* TODO: Fix JSX expression */}
+  private observeTTFB() {}
   t: number }
-          if (navEntry.responseStart > 0) {/* TODO: Fix JSX expression */}
+          if (navEntry.responseStart > 0) {}
           }
         })
       })
-      observer.observe({/* TODO: Fix JSX expression */})
+      observer.observe()
   s: ['navigation'] })
       this.observers.push(observer)
     } catch {
@@ -377,12 +377,12 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
       const memory = (performance as Performance & { memory?: {// usedJSHeapSize: number; jsHeapSizeLimit: number} }).memory
       if (memory) {}
         this.metrics.memoryUsage = memory.usedJSHeapSize
-    } catch {/* TODO: Fix JSX expression */}
+    } catch {}
     }
   }
-  private observeMemory() {/* TODO: Fix JSX expression */}
+  private observeMemory() {}
   t: number} }).memory;
-      if (memory) {/* TODO: Fix JSX expression */}
+      if (memory) {}
       }
     }
   }
@@ -390,7 +390,7 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
    * Measure memory usage;
    */
   private measureMemoryUsage(): void {}
-    if (typeof window === 'undefined' || !('memory' in window.performance)) return;
+    if(typeof window === 'undefined' || !('memory' in window.performance) return;
     const memory = (window.performance as Performance & {}
       memory?: {}
         usedJSHeapSize: number;
@@ -400,10 +400,10 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
     }).memory;
     if (memory) {}
       this.metrics.memoryUsage = memory.usedJSHeapSize;
-  private measureMemoryUsage(): void {/* TODO: Fix JSX expression */}
+  private measureMemoryUsage(): void {}
       };
     }).memory;
-    if (memory) {/* TODO: Fix JSX expression */}
+    if (memory) {}
     }
   }
   /**
@@ -415,44 +415,44 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
     const images = document.querySelectorAll('img');
     images.forEach((img) => {
       // Add loading="lazy" for better performance;
-      if (!img.hasAttribute('loading')) {
+      if(!img.hasAttribute('loading') {
         img.setAttribute('loading', 'lazy');
       }
       // Add proper alt text if missing;
-      if (!img.hasAttribute('alt')) {
+      if(!img.hasAttribute('alt') {
         img.setAttribute('alt', 'Zion Tech Group content');
       }
       // Optimize image format;
-      if (img.src.includes('.webp') || img.src.includes('.webp')) {
+      if (img.src.includes('.webp') || img.src.includes('.webp') {
         // Convert to WebP if supported;
-        if (this.supportsWebP()) {
+        if(this.supportsWebP() {
     images.forEach((img) => {}
       // Add loading="lazy" for better performance
-      if (!img.hasAttribute('loading')) {}
+      if(!img.hasAttribute('loading') {}
         img.setAttribute('loading', 'lazy');
       }
       // Add proper alt text if missing
-      if (!img.hasAttribute('alt')) {}
+      if(!img.hasAttribute('alt') {}
         img.setAttribute('alt', 'Zion Tech Group content');
       }
       // Optimize image format
-      if (img.src.includes('.webp') || img.src.includes('.webp')) {}
+      if (img.src.includes('.webp') || img.src.includes('.webp') {}
         // Convert to WebP if supported
-        if (this.supportsWebP()) {}
+        if(this.supportsWebP() {}
           img.src = img.src.replace(/\.(jpg|jpeg)$/i, '.webp');
         }
       }
 
 
-  images.forEach((img) => imageObserver.observe(img));
+  images.forEach((img) => imageObserver.observe(img);
 };
-  public optimizeImages(): void {/* TODO: Fix JSX expression */}
+  public optimizeImages(): void {}
       }
       // Add proper alt text if missing;
-      if (!img.hasAttribute('alt')) {/* TODO: Fix JSX expression */}
+      if(!img.hasAttribute('alt') {}
       }
       // Optimize image format;
-      if (img.src.includes('.jpg') || img.src.includes('.jpeg')) {/* TODO: Fix JSX expression */}
+      if (img.src.includes('.jpg') || img.src.includes('.jpeg') {}
         }
       }
     });
@@ -460,14 +460,14 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   /**
    * Check if browser supports WebP;
    */
-  private supportsWebP(): boolean {/* TODO: Fix JSX expression */}
+  private supportsWebP(): boolean {}
   }
   /**
    * Setup lazy loading for better performance;
    */
-  public setupLazyLoading(): void {/* TODO: Fix JSX expression */}
-              } else {/* TODO: Fix JSX expression */}
-                element.style.backgroundImage = `url(${src})`;
+  public setupLazyLoading(): void {}
+              } else {}
+                element.style.backgroundImage = `url(${src}`;
               }
               element.removeAttribute('data-lazy');
               lazyObserver.unobserve(element);
@@ -475,7 +475,7 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
           }
         });
       });
-      lazyElements.forEach((element) => {/* TODO: Fix JSX expression */}
+      lazyElements.forEach((element) => {}
       });
     }
     this.metrics.lazyLoading = true;
@@ -483,70 +483,70 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   /**
    * Enable code splitting for better performance;
    */
-  enableCodeSplitting(): void {/* TODO: Fix JSX expression */}
+  enableCodeSplitting(): void {}
     if (process.env.NODE_ENV === 'development') {}
   }
   /**
    * Enable caching strategies;
    */
-  enableCaching(): void {/* TODO: Fix JSX expression */}
+  enableCaching(): void {}
         if (process.env.NODE_ENV === 'development') {}
       })
-      .catch((error) => {/* TODO: Fix JSX expression */}
+      .catch((error) => {}
         if (process.env.NODE_ENV === 'development') {}
       });
   }
   /**
    * Get current performance metrics;
    */
-  getMetrics(): PerformanceMetrics {/* TODO: Fix JSX expression */}
+  getMetrics(): PerformanceMetrics {}
     return { ...this.metrics };
   }
   /**
    * Get performance score (0-100)
    */
-  getPerformanceScore(): number {/* TODO: Fix JSX expression */}
+  getPerformanceScore(): number {}
   }
   /**
    * Generate performance report;
    */
-  generateReport(): string {/* TODO: Fix JSX expression */}`
+  generateReport(): string {}`
   Score: ${score}`;
   }
   /**
    * Lazy load images for better performance;
    */
-  lazyLoadImages(): void {/* TODO: Fix JSX expression */}
+  lazyLoadImages(): void {}
         }
       });
     });
-    images.forEach(img => imageObserver.observe(img));
+    images.forEach(img => imageObserver.observe(img);
     logger.info('Lazy loading initialized for images', 'PerformanceOptimizer');
   }
   /**
    * Add critical resource hints;
    */
-  addCriticalResourceHints(): void {/* TODO: Fix JSX expression */}
+  addCriticalResourceHints(): void {}
   n: 'anonymous' },
-      {/* TODO: Fix JSX expression */}
+      {}
   s: 'style' }];
-    criticalResources.forEach(resource => {/* TODO: Fix JSX expression */})
+    criticalResources.forEach(resource => {}
     });
     logger.info('Critical resource hints added', 'PerformanceOptimizer');
   }
   /**
    * Measure page load metrics;
    */
-  measurePageLoad(): PerformanceMetrics | null {/* TODO: Fix JSX expression */}
+  measurePageLoad(): PerformanceMetrics | null {}
     };
   }
   /**
    * Report web vitals;
    */
   reportWebVitals(metric)
-  s: PerformanceMetrics): void {/* TODO: Fix JSX expression */}
-    if (typeof window !== 'undefined' && (window as { gtag?: Function }).gtag) {/* TODO: Fix JSX expression */}
-  g: Function }).gtag('event', 'web_vitals', {/* TODO: Fix JSX expression */})
+  s: PerformanceMetrics): void {}
+    if (typeof window !== 'undefined' && (window as { gtag?: Function }.gtag) {}
+  g: Function }).gtag('event', 'web_vitals', {}
           });
         }
       });
@@ -555,12 +555,12 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   /**
    * Cleanup observers and resources;
    */
-  public cleanup(): void {/* TODO: Fix JSX expression */}
+  public cleanup(): void {}
   }
   /**
    * Generate comprehensive performance report;
    */
-  generateComprehensiveReport(): string {/* TODO: Fix JSX expression */}
+  generateComprehensiveReport(): string {}
   Score: ${score}/100;
 Load,
   Time: ${metrics.loadTime.toFixed(2)}ms;
@@ -573,16 +573,15 @@ Bundle,
 Cache Hit,
   Rate: ${metrics.cacheHitRate}%
 Recommendation,
-  s:
-${score < 80 ? '- Consider optimizing images and enabling compression' : ''}
-${metrics.loadTime > 2000 ? '- Implement lazy loading for better initial load time' : ''}
+  s: ${score < 80 ? '- Consider optimizing images and enabling compression' : ', '}
+${metrics.loadTime > 2000 ? '- Implement lazy loading for better initial load time' : ', '}
 ${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize components' : ''}`
     `.trim();
   }
   /**
    * Optimize the entire application;
    */
-  optimize(): void {/* TODO: Fix JSX expression */}
+  optimize(): void {}
     }
   }
 }

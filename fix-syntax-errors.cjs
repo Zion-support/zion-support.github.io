@@ -1,38 +1,78 @@
+#!/usr/bin/env node
+
 const fs = require('fs');
 const path = require('path');
-const glob = require('glob');
 
-// Common patterns to fix
+// Common syntax error patterns and their fixes
 const fixes = [
-  // Fix missing commas in object literals
+  // Fix extra commas in function declarations
   {
-    pattern: /(\s+)(name|role|image|bio|icon|title|description|number|label):\s*['"][^'"]*['"]\s*\n(\s+)(name|role|image|bio|icon|title|description|number|label):/g,
-    replacement: '$1$2: $3,\n$4$5:'
+    pattern: /const\s+(\w+):\s*React\.FC\s*=\s*\(\s*\)\s*=>\s*\{,/g,
+    replacement: 'const $1: React.FC = () => {'
   },
-  // Fix missing closing braces
+  // Fix extra commas in array declarations
   {
-    pattern: /(\s+)(\w+):\s*['"][^'"]*['"]\s*\n(\s+)\}/g,
-    replacement: '$1$2: $3,\n$4}'
+    pattern: /const\s+(\w+)\s*=\s*\[,/g,
+    replacement: 'const $1 = ['
   },
-  // Fix missing commas before closing braces in arrays
+  // Fix malformed JSX with extra parentheses
   {
-    pattern: /(\s+)(\w+):\s*['"][^'"]*['"]\s*\n(\s+)\]/g,
-    replacement: '$1$2: $3,\n$4]'
+    pattern: /return\s*\(\s*<>\s*\)/g,
+    replacement: 'return (<>'
   },
-  // Fix duplicate export statements
+  // Fix duplicate imports
   {
-    pattern: /export default \w+;\nexport default \w+;/g,
-    replacement: 'export default $1;'
+    pattern: /import\s+React[^;]+;\s*import\s+React[^;]+;/g,
+    replacement: (match) => {
+      const lines = match.split('\n');
+      const uniqueLines = [...new Set(lines)];
+      return uniqueLines.join('\n');
+    }
   },
-  // Fix missing closing braces in JSX
+  // Fix malformed JSX closing tags
   {
-    pattern: /(\s+)(\w+):\s*['"][^'"]*['"]\s*\n(\s+)\);/g,
-    replacement: '$1$2: $3,\n$4);'
+    pattern: /<(\w+)>\s*\)/g,
+    replacement: '<$1>'
   },
-  // Fix missing closing parentheses
+  // Fix extra commas in object properties
   {
-    pattern: /(\s+)(\w+):\s*['"][^'"]*['"]\s*\n(\s+)\};/g,
-    replacement: '$1$2: $3,\n$4};'
+    pattern: /(\w+):\s*([^,}]+),/g,
+    replacement: '$1: $2'
+  },
+  // Fix malformed function parameters
+  {
+    pattern: /\(\s*\{\s*\/\*[^*]+\*\/\s*\}\s*\)/g,
+    replacement: '()'
+  },
+  // Fix broken JSX expressions
+  {
+    pattern: /\/\*\s*TODO:\s*Fix\s+JSX\s+expression\s*\*\//g,
+    replacement: ''
+  },
+  // Fix malformed return statements
+  {
+    pattern: /return\s*\(\s*<div[^>]*>\s*<\/div>\s*`/g,
+    replacement: 'return (<div'
+  },
+  // Fix broken JSX fragments
+  {
+    pattern: /<>\s*\)/g,
+    replacement: '<>'
+  },
+  // Fix malformed component declarations
+  {
+    pattern: /const\s*,\s*(\w+):/g,
+    replacement: 'const $1:'
+  },
+  // Fix broken interface declarations
+  {
+    pattern: /interface\s+(\w+)\s*\{\s*\/\*[^*]+\*\/\s*\}/g,
+    replacement: 'interface $1 {}'
+  },
+  // Fix malformed JSX attributes
+  {
+    pattern: /className=\{[^}]+\}\s*>\s*<\/div>\s*`/g,
+    replacement: 'className={$1}>'
   }
 ];
 
@@ -43,30 +83,38 @@ function fixFile(filePath) {
     
     // Apply fixes
     fixes.forEach(fix => {
-      content = content.replace(fix.pattern, fix.replacement);
+      if (typeof fix.replacement === 'function') {
+        content = content.replace(fix.pattern, fix.replacement);
+      } else {
+        content = content.replace(fix.pattern, fix.replacement);
+      }
     });
     
     // Additional specific fixes
-    // Fix missing commas in object properties
-    content = content.replace(/(\s+)(\w+):\s*['"][^'"]*['"]\s*\n(\s+)(\w+):/g, '$1$2: $3,\n$4$4:');
+    // Remove duplicate React imports
+    const importLines = content.split('\n').filter(line => line.includes('import React'));
+    if (importLines.length > 1) {
+      const uniqueImports = [...new Set(importLines)];
+      content = content.replace(/import\s+React[^;]+;/g, '');
+      content = uniqueImports[0] + '\n' + content;
+    }
     
-    // Fix missing closing braces
-    content = content.replace(/(\s+)(\w+):\s*['"][^'"]*['"]\s*\n(\s+)\}/g, '$1$2: $3,\n$4}');
+    // Fix malformed function declarations
+    content = content.replace(/const\s*,\s*(\w+):\s*React\.FC/g, 'const $1: React.FC');
     
-    // Fix duplicate export statements
-    content = content.replace(/export default (\w+);\s*export default (\w+);/g, 'export default $1;');
+    // Fix broken JSX
+    content = content.replace(/return\s*\(\s*<div[^>]*>\s*<\/div>\s*`/g, 'return (<div');
     
-    // Fix missing closing braces in function returns
-    content = content.replace(/(\s+)(\w+):\s*['"][^'"]*['"]\s*\n(\s+)\);/g, '$1$2: $3,\n$4);');
+    // Fix malformed closing tags
+    content = content.replace(/<(\w+)>\s*\)/g, '<$1>');
     
-    // Fix missing closing parentheses in JSX
-    content = content.replace(/(\s+)(\w+):\s*['"][^'"]*['"]\s*\n(\s+)\};/g, '$1$2: $3,\n$4};');
-    
+    // Only write if content changed
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
       console.log(`Fixed: ${filePath}`);
       return true;
     }
+    
     return false;
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
@@ -74,16 +122,27 @@ function fixFile(filePath) {
   }
 }
 
-// Find all TypeScript/TSX files in src directory
-const files = glob.sync('src/**/*.{ts,tsx}', { cwd: __dirname });
+function walkDirectory(dir) {
+  const files = fs.readdirSync(dir);
+  let fixedCount = 0;
+  
+  files.forEach(file => {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
+    
+    if (stat.isDirectory()) {
+      fixedCount += walkDirectory(filePath);
+    } else if (file.endsWith('.tsx') || file.endsWith('.ts')) {
+      if (fixFile(filePath)) {
+        fixedCount++;
+      }
+    }
+  });
+  
+  return fixedCount;
+}
 
-console.log(`Found ${files.length} files to check...`);
-
-let fixedCount = 0;
-files.forEach(file => {
-  if (fixFile(file)) {
-    fixedCount++;
-  }
-});
-
+// Start fixing
+console.log('Starting syntax error fixes...');
+const fixedCount = walkDirectory('./app');
 console.log(`Fixed ${fixedCount} files`);

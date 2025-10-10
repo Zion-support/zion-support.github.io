@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 
-const ServiceWorkerRegistration: React.FC = () => {,
-  useEffect(() => {,
+const ServiceWorkerRegistration: React.FC = () => {
+  useEffect(() => {
     if ('serviceWorker' in navigator) {,
       window.addEventListener('load', () => {
         navigator.serviceWorker.register('/sw.js')
@@ -14,7 +14,7 @@ const ServiceWorkerRegistration: React.FC = () => {,
                 newWorker.addEventListener('statechange', () => {
                   if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
                     // New content is available, notify user;
-                    if (confirm('New content is available. Reload to update?')) {
+                    if(confirm('New content is available. Reload to update?') {
 const ServiceWorkerRegistration: React.FC = () => {}
   useEffect(() => {}
     if ('serviceWorker' in navigator) {}
@@ -28,7 +28,7 @@ const ServiceWorkerRegistration: React.FC = () => {}
                 newWorker.addEventListener('statechange', () => {}
                   if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {}
                     // New content is available, notify user
-                    if (confirm('New content is available. Reload to update?')) {}
+                    if(confirm('New content is available. Reload to update?') {}
                       window.location.reload();
                     }
                   }

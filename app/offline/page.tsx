@@ -23,7 +23,7 @@ const OfflinePage: React.FC = () => {
               viewBox='0 0 24 24'
             >
               <path;
-                strokeLinecap='round',
+                strokeLinecap='round'
                 strokeLinejoin='round',
                 strokeWidth={2}
                 d='M18.364 5.636a9 9 0 010 12.728m0 0l-2.829-2.829m2.829 2.829L21 21M15.536 8.464a5 5 0 010 7.072m0 0l-2.829-2.829m-4.243 2.829a4.978 4.978 0 01-1.414-2.83m-1.414 5.658a9 9 0 01-2.167-9.238m7.824 2.167a1 1 0 111.414 1.414m-1.414-1.414L3 3m8.293 8.293l1.414 1.414'
@@ -35,7 +35,7 @@ const OfflinePage: React.FC = () => {
           </p>
         </div>
         <div className='bg-white rounded-lg shadow-lg p-6 mb-6'></div>
-          <h2 className='text-lg font-semibold text-gray-900 mb-4'>What you can do:</h2>
+          <h2 className='text-lg font-semibold text-gray-900 mb-4'>What you can do: </h2>
           </h2>
             </svg>
           </div>
@@ -57,10 +57,10 @@ const OfflinePage: React.FC = () => {
                 fill='none'
                 stroke='currentColor'
                 viewBox='0 0 24 24'
-              >)
+              >
                 <path;)
                   strokeLinecap='round')
-                  strokeLinejoin='round'),
+                  strokeLinejoin='round')
                   strokeWidth={2}
                   d='M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z'
                 /></p>
@@ -101,7 +101,7 @@ const OfflinePage: React.FC = () => {
         <div className='space-y-3'>
         <div className='space-y-3'></div>
           <button
-            onClick={() =>window.location.reload()}</button></<<<butto>className</butto></butto>='w-full px-6 py-3 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2'
+            onClick={() =>window.location.reload()}</button></<<<butto>className</butto></butto>='w-full px-6 py-3 bg-indigo-600 text-white font-medium rounded-lg hover: bg-indigo-700 transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2'
           ></<<<button>Try</button></<<button>Again</button><Link
             href="/"
             className="block w-full px-6 py-3 bg-white text-indigo-600 font-medium rounded-lg border-2 border-indigo-600 hover:bg-indigo-50 transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
@@ -109,7 +109,7 @@ const OfflinePage: React.FC = () => {
           </Link>
         </div>
         <div className='mt-8 text-sm text-gray-500'></div>
-          <p>Need help?{' '}</p><a href='tel:+13024640950'
+          <p>Need help?{', '}</p><a href='tel: +13024640950'
               className='text-indigo-600 hover:text-indigo-700 font-medium'
             >Call +1 302 464 0950</a>
           <button;
@@ -124,10 +124,10 @@ const OfflinePage: React.FC = () => {
           >
             Go to Homepage;
           </Link>
-        </div>,
+        </div>
         <div className='mt-8 text-sm text-gray-500'>,
           <p>,
-            Need help?{' '}
+            Need help?{', '}
             <a href='tel: +13024640950'
               className='text-indigo-600 hover:text-indigo-700 font-medium'
             >
@@ -135,7 +135,7 @@ const OfflinePage: React.FC = () => {
             </a>
           </p>
         </div>
-      </div>,
+      </div>
     </div>);
 };
 export default OfflinePage;

@@ -2,17 +2,17 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 const aicrmassistantPage: React.FC = () => {
-  return(<>)
-      <Helmet>)
+  return (<>
+      <Helmet>
         <title>Ai Crm Assistant | Zion Tech Group</title>)
-        <meta name="description" content="Professional ai crm assistant services by Zion Tech Group. Advanced AI and IT solutions for your business." />),
+        <meta name="description" content="Professional ai crm assistant services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="ai crm assistant, AI solutions, IT services, Zion Tech Group" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">Ai Crm Assistant<p className="text-xl text-gray-300 mb-8">Professional ai crm assistant services powered by advanced AI and cutting-edge technology.</p>
+            <h1 className="text-4xl md: text-6xl font-bold text-white mb-6">Ai Crm Assistant<p className="text-xl text-gray-300 mb-8">Professional ai crm assistant services powered by advanced AI and cutting-edge technology.</p>
             <h1 className="text-4xl md: text-6xl font-bold text-white mb-6">
               Ai Crm Assistant;
             </h1>
@@ -63,7 +63,7 @@ const aicrmassistantPage: React.FC = () => {
             </div>
           </div>
         </div>
-      </div>,
+      </div>
     </>);
 };
 

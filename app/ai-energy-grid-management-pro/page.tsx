@@ -2,17 +2,17 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 const aienergygridmanagementproPage: React.FC = () => {
-  return(<>)
-      <Helmet>)
+  return (<>
+      <Helmet>
         <title>Ai Energy Grid Management Pro | Zion Tech Group</title>)
-        <meta name="description" content="Professional ai energy grid management pro services by Zion Tech Group. Advanced AI and IT solutions for your business." />),
+        <meta name="description" content="Professional ai energy grid management pro services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="ai energy grid management pro, AI solutions, IT services, Zion Tech Group" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">Ai Energy Grid Management Pro<p className="text-xl text-gray-300 mb-8">Professional ai energy grid management pro services powered by advanced AI and cutting-edge technology.</p>
+            <h1 className="text-4xl md: text-6xl font-bold text-white mb-6">Ai Energy Grid Management Pro<p className="text-xl text-gray-300 mb-8">Professional ai energy grid management pro services powered by advanced AI and cutting-edge technology.</p>
             <h1 className="text-4xl md: text-6xl font-bold text-white mb-6">
               Ai Energy Grid Management Pro;
             </h1>
@@ -63,7 +63,7 @@ const aienergygridmanagementproPage: React.FC = () => {
             </div>
           </div>
         </div>
-      </div>,
+      </div>
     </>);
 };
 

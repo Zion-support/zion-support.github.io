@@ -676,23 +676,23 @@ interface InvestmentOptimizerProps {}
   className?: string;
 }
 
-export default function InvestmentOptimizer({ className = '' }: InvestmentOptimizerProps) {
+export default function InvestmentOptimizer({ className = ', ' }: InvestmentOptimizerProps) {
   const [portfolio, setPortfolio] = useState([)
-    { symbol: 'AAPL', name: 'Apple Inc.', shares: 100, price: 175.43, value: 17543, allocation: 25.5, change: 2.34 })
-    { symbol: 'MSFT', name: 'Microsoft Corp.', shares: 50, price: 378.85, value: 18942.5, allocation: 27.6, change: -1.23 })
-    { symbol: 'GOOGL', name: 'Alphabet Inc.', shares: 30, price: 142.56, value: 4276.8, allocation: 6.2, change: 0.87 })
-    { symbol: 'AMZN', name: 'Amazon.com Inc.', shares: 25, price: 155.12, value: 3878, allocation: 5.6, change: -0.45 })
-    { symbol: 'TSLA', name: 'Tesla Inc.', shares: 20, price: 248.50, value: 4970, allocation: 7.2, change: 3.21 })
-    { symbol: 'NVDA', name: 'NVIDIA Corp.', shares: 15, price: 875.28, value: 13129.2, allocation: 19.1, change: 1.56 })
-export default function InvestmentOptimizer({ className = '' }: InvestmentOptimizerProps) {}
+    { symbol: 'AAPL' name: 'Apple Inc.' shares: 100 price: 175.43 value: 17543 allocation: 25.5 change: 2.34 }
+    { symbol: 'MSFT' name: 'Microsoft Corp.' shares: 50 price: 378.85 value: 18942.5 allocation: 27.6 change: -1.23 }
+    { symbol: 'GOOGL' name: 'Alphabet Inc.' shares: 30 price: 142.56 value: 4276.8 allocation: 6.2 change: 0.87 }
+    { symbol: 'AMZN' name: 'Amazon.com Inc.' shares: 25 price: 155.12 value: 3878 allocation: 5.6 change: -0.45 }
+    { symbol: 'TSLA' name: 'Tesla Inc.' shares: 20 price: 248.50 value: 4970 allocation: 7.2 change: 3.21 }
+    { symbol: 'NVDA' name: 'NVIDIA Corp.' shares: 15 price: 875.28 value: 13129.2 allocation: 19.1 change: 1.56 }
+export default function InvestmentOptimizer({ className = ', ' }: InvestmentOptimizerProps) {}
   const [portfolio, setPortfolio] = useState([)
-    { symbol: 'AAPL', name: 'Apple Inc.', shares: 100, price: 175.43, value: 17543, allocation: 25.5, change: 2.34 },
-    { symbol: 'MSFT', name: 'Microsoft Corp.', shares: 50, price: 378.85, value: 18942.5, allocation: 27.6, change: -1.23 },
-    { symbol: 'GOOGL', name: 'Alphabet Inc.', shares: 30, price: 142.56, value: 4276.8, allocation: 6.2, change: 0.87 },
-    { symbol: 'AMZN', name: 'Amazon.com Inc.', shares: 25, price: 155.12, value: 3878, allocation: 5.6, change: -0.45 },
-    { symbol: 'TSLA', name: 'Tesla Inc.', shares: 20, price: 248.50, value: 4970, allocation: 7.2, change: 3.21 },
-    { symbol: 'NVDA', name: 'NVIDIA Corp.', shares: 15, price: 875.28, value: 13129.2, allocation: 19.1, change: 1.56 },
-    { symbol: 'META', name: 'Meta Platforms Inc.', shares: 40, price: 485.20, value: 19408, allocation: 28.3, change: -2.15 }
+    { symbol: 'AAPL' name: 'Apple Inc.' shares: 100 price: 175.43 value: 17543 allocation: 25.5 change: 2.34 },
+    { symbol: 'MSFT' name: 'Microsoft Corp.' shares: 50 price: 378.85 value: 18942.5 allocation: 27.6 change: -1.23 },
+    { symbol: 'GOOGL' name: 'Alphabet Inc.' shares: 30 price: 142.56 value: 4276.8 allocation: 6.2 change: 0.87 },
+    { symbol: 'AMZN' name: 'Amazon.com Inc.' shares: 25 price: 155.12 value: 3878 allocation: 5.6 change: -0.45 },
+    { symbol: 'TSLA' name: 'Tesla Inc.' shares: 20 price: 248.50 value: 4970 allocation: 7.2 change: 3.21 },
+    { symbol: 'NVDA' name: 'NVIDIA Corp.' shares: 15 price: 875.28 value: 13129.2 allocation: 19.1 change: 1.56 },
+    { symbol: 'META' name: 'Meta Platforms Inc.' shares: 40 price: 485.20 value: 19408 allocation: 28.3 change: -2.15 }
   ]);
 
   const [riskProfile, setRiskProfile] = useState('moderate');
@@ -702,47 +702,47 @@ export default function InvestmentOptimizer({ className = '' }: InvestmentOptimi
   const [optimizationResults, setOptimizationResults] = useState<any>(null);</any></<<<any>const</any></<<any>totalValue</any> = portfolio.reduce((sum, stock) => sum + stock.value, 0);
 
   const features = [
-    {}
-      title: "AI Portfolio Analysis",
-      description: "Advanced AI analyzes your portfolio and suggests optimizations",
-      icon: Brain;
-      price: "Included"},
-    {}
-      title: "Risk Assessment",
-      description: "Comprehensive risk analysis and diversification recommendations",
-      icon: Shield;
-      price: "Included"},
-    {}
-      title: "Market Prediction",
-      description: "AI-powered market predictions and trend analysis",
-      icon: TrendingUp;
-      price: "Included"},
-    {}
-      title: "Auto Rebalancing",
-      description: "Automatically rebalance your portfolio based on market conditions",
-      icon: RefreshCw;
-      price: "Included"},
-    {}
-      title: "Tax Optimization",
-      description: "Minimize tax impact with smart tax-loss harvesting",
-      icon: DollarSign;
-      price: "Pro Feature"},
-    {}
-      title: "Professional Advisor",
-      description: "Access to certified financial advisors for complex strategies",
-      icon: Users;
-      price: "Enterprise"}
+    {},
+    title: "AI Portfolio Analysis",
+    description: "Advanced AI analyzes your portfolio and suggests optimizations",
+    icon: Brain;,
+    price: "Included"},
+    {},
+    title: "Risk Assessment",
+    description: "Comprehensive risk analysis and diversification recommendations",
+    icon: Shield;,
+    price: "Included"},
+    {},
+    title: "Market Prediction",
+    description: "AI-powered market predictions and trend analysis",
+    icon: TrendingUp;,
+    price: "Included"},
+    {},
+    title: "Auto Rebalancing",
+    description: "Automatically rebalance your portfolio based on market conditions",
+    icon: RefreshCw;,
+    price: "Included"},
+    {},
+    title: "Tax Optimization",
+    description: "Minimize tax impact with smart tax-loss harvesting",
+    icon: DollarSign;,
+    price: "Pro Feature"},
+    {},
+    title: "Professional Advisor",
+    description: "Access to certified financial advisors for complex strategies",
+    icon: Users;,
+    price: "Enterprise"}
   ];
 
   const pricingPlans = [
     {
       name: "Individual"
     {}
-      name: "Individual",
-      price: "$39",
-      period: "/month",
-      description: "Perfect for individual investors and small portfolios",
-      features: [,
+      name: "Individual"
+      price: "$39"
+      period: "/month"
+      description: "Perfect for individual investors and small portfolios"
+      features: [
         "Up to $100K portfolio",
         "Basic AI analysis",
         "Risk assessment",
@@ -754,11 +754,11 @@ export default function InvestmentOptimizer({ className = '' }: InvestmentOptimi
     {
       name: "Professional"
     {}
-      name: "Professional",
-      price: "$99",
-      period: "/month",
-      description: "Ideal for serious investors and larger portfolios",
-      features: [,
+      name: "Professional"
+      price: "$99"
+      period: "/month"
+      description: "Ideal for serious investors and larger portfolios"
+      features: [
         "Up to $1M portfolio",
         "Advanced AI analysis",
         "Auto rebalancing",
@@ -772,11 +772,11 @@ export default function InvestmentOptimizer({ className = '' }: InvestmentOptimi
     {
       name: "Enterprise"
     {}
-      name: "Enterprise",
-      price: "$299",
-      period: "/month",
-      description: "For institutional investors and wealth management firms",
-      features: [,
+      name: "Enterprise"
+      price: "$299"
+      period: "/month"
+      description: "For institutional investors and wealth management firms"
+      features: [
         "Unlimited portfolio size",
         "Full AI analysis suite",
         "Professional advisor access",
@@ -796,20 +796,20 @@ export default function InvestmentOptimizer({ className = '' }: InvestmentOptimi
       setOptimizationResults({)
         expectedReturn: 12.5;)
         riskLevel: 'Moderate')
-        sharpeRatio: 1.8;),
-        recommendations: [),
-          { action: 'Buy', symbol: 'AAPL', shares: 25, reason: 'Strong fundamentals and growth potential' })
-          { action: 'Sell', symbol: 'META', shares: 10, reason: 'High volatility and regulatory concerns' })
+        sharpeRatio: 1.8;)
+        recommendations: [)
+          { action: 'Buy' symbol: 'AAPL' shares: 25 reason: 'Strong fundamentals and growth potential' }
+          { action: 'Sell' symbol: 'META' shares: 10 reason: 'High volatility and regulatory concerns' }
     // Simulate optimization process
     setTimeout(() => {}
       setOptimizationResults({)}
-        expectedReturn: 12.5,
-        riskLevel: 'Moderate',
-        sharpeRatio: 1.8,
+        expectedReturn: 12.5
+        riskLevel: 'Moderate'
+        sharpeRatio: 1.8
         recommendations: [
-          { action: 'Buy', symbol: 'AAPL', shares: 25, reason: 'Strong fundamentals and growth potential' },
-          { action: 'Sell', symbol: 'META', shares: 10, reason: 'High volatility and regulatory concerns' },
-          { action: 'Hold', symbol: 'MSFT', shares: 50, reason: 'Stable performance and dividend yield' }
+          { action: 'Buy' symbol: 'AAPL' shares: 25 reason: 'Strong fundamentals and growth potential' },
+          { action: 'Sell' symbol: 'META' shares: 10 reason: 'High volatility and regulatory concerns' },
+          { action: 'Hold' symbol: 'MSFT' shares: 50 reason: 'Stable performance and dividend yield' }
         ];
         ]
       });
@@ -818,11 +818,11 @@ export default function InvestmentOptimizer({ className = '' }: InvestmentOptimi
     }, 3000);
   };
 
-  const getChangeColor = (change: number) => {,
+  const getChangeColor = (change: number) => {
     return change >= 0 ? 'text-green-400' : 'text-red-400';
   };
 
-  const getChangeIcon = (change: number) => {,
+  const getChangeIcon = (change: number) => {
   const getChangeColor = (change: number) => {}
     return change >= 0 ? 'text-green-400' : 'text-red-400';
   };
@@ -837,15 +837,14 @@ export default function InvestmentOptimizer({ className = '' }: InvestmentOptimi
       <Helmet>
         <title>AI Investment Portfolio Optimizer Pro - Advanced Portfolio Management | Zion Tech Group</title>
         <meta name="description" content="AI-powered investment portfolio optimization with advanced analytics, risk assessment, and auto-rebalancing. Maximize returns and minimize risk with our intelligent investment platform." />
-        <meta name="keywords" content="investment optimization, portfolio management, AI investing, risk assessment, auto rebalancing, financial planning, wealth management" />)
-        <link rel="canonical" href="https: //ziontechgroup.com/ai-investment-optimizer" />)
+        <meta name="keywords" content="investment optimization, portfolio management, AI investing, risk assessment, auto rebalancing, financial planning, wealth management" />
+        <link rel="canonical" href="https: //ziontechgroup.com/ai-investment-optimizer" />
       </Helmet>)
-),
       {/* Hero Section */}
       <div className="relative py-20 overflow-hidden">
       <div className="relative py-20 overflow-hidden"></div>
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http: //www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+        <div className="absolute inset-0 bg-[url('data: image/svg+xml%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+        <div className="absolute inset-0 bg-[url('data: image/svg+xml%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http: //www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
 
         <div className="container mx-auto px-4 relative z-10"></div>
           <div className="text-center mb-16"></div>
@@ -860,7 +859,7 @@ export default function InvestmentOptimizer({ className = '' }: InvestmentOptimi
 
             <p className="text-2xl md:text-3xl text-gray-300 mb-4 font-light">
               Maximize Returns with AI-Powered Investment Optimization;
-            </p>,
+            </p>
 ,
             <p className="text-lg text-gray-400 mb-8 max-w-4xl mx-auto leading-relaxed">,
               Optimize your investment portfolio with advanced AI analytics, risk assessment,
@@ -878,7 +877,7 @@ export default function InvestmentOptimizer({ className = '' }: InvestmentOptimi
               <button className="group inline-flex items-center px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-xl hover:bg-blue-400 hover:text-slate-900 transition-all duration-300 transform hover:scale-105">
                 <Play className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
                 Watch Demo;
-              </button>,
+              </button>
             </div>,
 ,
             {/* Stats */}
@@ -901,7 +900,7 @@ export default function InvestmentOptimizer({ className = '' }: InvestmentOptimi
                 <div className="text-3xl font-bold text-yellow-400 mb-2">98%</div>
                 <div className="text-gray-400">Accuracy Rate</div>
               </div>
-            </div>,
+            </div>
           </div>,
         </div>,
       </div>,
@@ -922,22 +921,22 @@ export default function InvestmentOptimizer({ className = '' }: InvestmentOptimi
               Monitor and optimize your investment portfolio with real-time analytics;
             </p>
           </div>
-,
+
           <div className="max-w-7xl mx-auto">,
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">,
+            <div className="grid grid-cols-1 lg: grid-cols-3 gap-8">
               {/* Portfolio Overview */}
               <div className="lg: col-span-2 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
                 <div className="flex items-center justify-between mb-6">
                   <h3 className="text-2xl font-bold text-white flex items-center">
                     <PieChart className="w-8 h-8 text-blue-400 mr-3" />
                     Portfolio Holdings;
-                  </h3>,
+                  </h3>
                   <div className="text-right">,
 
           <div className="max-w-7xl mx-auto"></div>
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 lg: grid-cols-3 gap-8">
               {/* Portfolio Overview */}</div>
-              <div className="lg:col-span-2 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8"></div>
+              <div className="lg: col-span-2 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8"></div>
                 <div className="flex items-center justify-between mb-6"></div>
                   <h3 className="text-2xl font-bold text-white flex items-center"></h3>
                     <PieChart className="w-8 h-8 text-blue-400 mr-3" />
@@ -952,10 +951,10 @@ export default function InvestmentOptimizer({ className = '' }: InvestmentOptimi
                 <div className="space-y-4">
                   {portfolio.map((stock) => {}
                     const ChangeIcon = getChangeIcon(stock.change);
-                    return(<div key={stock.symbol} className="bg-white/5 rounded-lg p-4 border border-white/10">)
-                        <div className="flex items-center justify-between mb-2">)
-                          <div className="flex items-center space-x-3">)
-                            <div className="w-10 h-10 bg-gradient-to-r from-blue-400 to-purple-600 rounded-lg flex items-center justify-center">)
+                    return (<div key={stock.symbol} className="bg-white/5 rounded-lg p-4 border border-white/10">
+                        <div className="flex items-center justify-between mb-2">
+                          <div className="flex items-center space-x-3">
+                            <div className="w-10 h-10 bg-gradient-to-r from-blue-400 to-purple-600 rounded-lg flex items-center justify-center">
                     return (</div>
                       <div key={stock.symbol} className="bg-white/5 rounded-lg p-4 border border-white/10"></div>
                         <div className="flex items-center justify-between mb-2"></div>
@@ -972,7 +971,7 @@ export default function InvestmentOptimizer({ className = '' }: InvestmentOptimi
                             <div className="text-white font-semibold">${stock.value.toLocaleString()}</div>
                             <div className={`flex items-center ${getChangeColor(stock.change)}`}></div>
                               <ChangeIcon className="w-4 h-4 mr-1" />
-                              <span className="text-sm">{stock.change > 0 ? '+' : ''}{stock.change}%</span>
+                              <span className="text-sm">{stock.change > 0 ? '+' : ', '}{stock.change}%</span>
                             </div>
                           </div>
                         </div>
@@ -1005,7 +1004,7 @@ export default function InvestmentOptimizer({ className = '' }: InvestmentOptimi
                         <option value="conservative" className="bg-slate-800">Conservative</option>
                         <option value="moderate" className="bg-slate-800">Moderate</option>
                         <option value="aggressive" className="bg-slate-800">Aggressive</option>
-                      </select>,
+                      </select>
                     </div>,
                     <div>,
                       <label className="block text-sm font-medium text-gray-300 mb-2">Investment Goal</label>,
@@ -1022,7 +1021,7 @@ export default function InvestmentOptimizer({ className = '' }: InvestmentOptimi
                         <option value="income" className="bg-slate-800">Income</option>
                         <option value="growth" className="bg-slate-800">Growth</option>
                         <option value="balanced" className="bg-slate-800">Balanced</option>
-                      </select>,
+                      </select>
                     </div>,
                     <div>,
                       <label className="block text-sm font-medium text-gray-300 mb-2">Time Horizon</label>,
@@ -1040,7 +1039,7 @@ export default function InvestmentOptimizer({ className = '' }: InvestmentOptimi
                         <option value="3-5 years" className="bg-slate-800">3-5 years</option>
                         <option value="5-10 years" className="bg-slate-800">5-10 years</option>
                         <option value="10+ years" className="bg-slate-800">10+ years</option>
-                      </select>,
+                      </select>
                     </div>,
                   </div>,
                 </div>,
@@ -1110,22 +1109,22 @@ export default function InvestmentOptimizer({ className = '' }: InvestmentOptimi
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Advanced AI-powered tools for intelligent portfolio management;
             </p>
-          </div>,
+          </div>
 ,
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">,
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {features.map((feature, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover: bg-white/10 hover:border-blue-400/50 transition-all duration-300 transform hover:scale-105">,
+              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover: bg-white/10 hover:border-blue-400/50 transition-all duration-300 transform hover:scale-105">
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-400 to-purple-600 rounded-lg flex items-center justify-center mb-4">,
                   <feature.icon className="w-6 h-6 text-white" />,
                 </div>,
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {features.map((feature, index) => (</div>
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-blue-400/50 transition-all duration-300 transform hover:scale-105"></div>
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {features.map((feature index) => (</div>
+              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover: bg-white/10 hover:border-blue-400/50 transition-all duration-300 transform hover:scale-105"></div>
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-400 to-purple-600 rounded-lg flex items-center justify-center mb-4"></div>
-            {features.map((feature, index) => (}
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-blue-400/50 transition-all duration-300 transform hover:scale-105">
+            {features.map((feature index) => (}
+              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover: bg-white/10 hover:border-blue-400/50 transition-all duration-300 transform hover:scale-105">
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-400 to-purple-600 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
@@ -1156,19 +1155,19 @@ export default function InvestmentOptimizer({ className = '' }: InvestmentOptimi
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Choose the investment optimization plan that fits your portfolio size;
             </p>
-          </div>,
+          </div>
 ,
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">,
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingPlans.map((plan, index) => (
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricingPlans.map((plan, index) => (</div>
-              <div key={index} className={`relative bg-white/5 backdrop-blur-sm border rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 transform hover:scale-105 ${plan.popular ? 'border-blue-400/50 ring-2 ring-blue-400/30' : 'border-white/10'}`}>
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {pricingPlans.map((plan index) => (</div>
+              <div key={index} className={`relative bg-white/5 backdrop-blur-sm border rounded-2xl p-8 hover: bg-white/10 transition-all duration-300 transform hover:scale-105 ${plan.popular ? 'border-blue-400/50 ring-2 ring-blue-400/30' : 'border-white/10'}`}>
                 {plan.popular && (</div>
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
             {pricingPlans.map((plan, index) => (}
-              <div key={index} className={`relative bg-white/5 backdrop-blur-sm border rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 transform hover:scale-105 ${plan.popular ? 'border-blue-400/50 ring-2 ring-blue-400/30' : 'border-white/10'}`}>
+              <div key={index} className={`relative bg-white/5 backdrop-blur-sm border rounded-2xl p-8 hover: bg-white/10 transition-all duration-300 transform hover:scale-105 ${plan.popular ? 'border-blue-400/50 ring-2 ring-blue-400/30' : 'border-white/10'}`}>
                 {plan.popular && (}
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-blue-400 to-purple-600 text-white text-sm font-bold px-4 py-2 rounded-full">
@@ -1198,10 +1197,10 @@ export default function InvestmentOptimizer({ className = '' }: InvestmentOptimi
                 <button className={`w-full py-4 px-6 rounded-lg font-semibold transition-all duration-300 ${
                   plan.popular;
                     ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white hover: from-blue-600 hover:to-purple-700 transform hover:scale-105'}
-                    : 'bg-white/10 text-white hover:bg-white/20'}
+                    : 'bg-white/10 text-white hover: bg-white/20'}
                 <button className={`w-full py-4 px-6 rounded-lg font-semibold transition-all duration-300 ${}
                   plan.popular
-                    ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:from-blue-600 hover:to-purple-700 transform hover:scale-105'
+                    ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white hover: from-blue-600 hover:to-purple-700 transform hover:scale-105'
                     : 'bg-white/10 text-white hover:bg-white/20'
                 }`}>
                   {plan.popular ? 'Get Started' : 'Choose Plan'}
@@ -1247,7 +1246,7 @@ export default function InvestmentOptimizer({ className = '' }: InvestmentOptimi
                     </a>
                   </div>
                   <div className="flex items-start">
-                    <MapPin className="w-5 h-5 text-blue-400 mr-3 mt-1" />,
+                    <MapPin className="w-5 h-5 text-blue-400 mr-3 mt-1" />
                     <div className="text-gray-300">,
                       <div>364 E Main St STE 1008</div>,
                   <div className="flex items-start"></div>
@@ -1287,7 +1286,7 @@ export default function InvestmentOptimizer({ className = '' }: InvestmentOptimi
             </div>
           </div>
         </div>
-      </div>,
+      </div>
     </div>);
 };
 

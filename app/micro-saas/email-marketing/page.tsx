@@ -7,8 +7,8 @@ const EmailMarketingSuitePage: React.FC = () => {
     <>
       <Helmet>
         <title>Email Marketing Suite | Zion Tech Group - AI Email Campaigns</title>
-        <meta name="description" content="AI-powered email marketing automation. Create, send, and optimize email campaigns with intelligent automation." />
-        <link rel="canonical" href="https://ziontechgroup.com/micro-saas/email-marketing" />
+        <meta name="description" content="AI-powered email marketing automation. Create send, and optimize email campaigns with intelligent automation." />
+        <link rel="canonical" href="https: //ziontechgroup.com/micro-saas/email-marketing" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -23,10 +23,10 @@ const EmailMarketingSuitePage: React.FC = () => {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-green-400"> Campaigns</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              AI-powered email marketing automation. Create, send, and optimize email campaigns 
+              AI-powered email marketing automation. Create send, and optimize email campaigns 
               with intelligent automation and personalization.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all flex items-center justify-center space-x-2">
                 <span>Get Started</span>
                 <ArrowRight className="w-5 h-5" />

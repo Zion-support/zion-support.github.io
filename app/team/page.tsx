@@ -9,7 +9,7 @@ const TeamPage: React.FC = () => {
     <>
       <Helmet>
         <title>Our Team - Zion Tech Group</title>
-        <meta name="description" content="Meet the talented team behind Zion Tech Group. Our experts in AI, technology, and business solutions." />
+        <meta name="description" content="Meet the talented team behind Zion Tech Group. Our experts in AI technology, and business solutions." />
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
@@ -18,7 +18,7 @@ const TeamPage: React.FC = () => {
         <main className="pt-20">
           <div className="container mx-auto px-4 py-16">
             <div className="max-w-4xl mx-auto">
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
+              <h1 className="text-4xl md: text-5xl font-bold text-gray-900 mb-8">
                 Our Team
               </h1>
               

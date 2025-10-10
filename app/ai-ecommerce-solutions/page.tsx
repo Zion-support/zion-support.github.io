@@ -6,13 +6,12 @@ import { Helmet } from 'react-helmet-async';
 const AIEcommerceSolutionsPage: React.FC = () => {
   const ecommerceServices = [
     {
-      title: 'AI-Powered E-commerce Platform',
-      description: 'Complete e-commerce solution with AI-driven personalization, inventory management, and automated customer service.',
-      icon: '🛒',
-      price: '$1,999/month',
+      title: 'AI-Powered E-commerce Platform'
+      description: 'Complete e-commerce solution with AI-driven personalization inventory management, and automated customer service.',
+      icon: '🛒'
+      price: '$1999/month',
       features: [
-        'AI product recommendations',
-        'Dynamic pricing optimization',
+        'AI product recommendations', 'Dynamic pricing optimization',
         'Inventory management',
         'Customer behavior analysis',
         'Automated customer service',
@@ -21,24 +20,22 @@ const AIEcommerceSolutionsPage: React.FC = () => {
         'Analytics dashboard'
       ],
       benefits: [
-        'Increase conversion by 45%',
-        'Reduce cart abandonment by 60%',
+        'Increase conversion by 45%', 'Reduce cart abandonment by 60%',
         'Boost average order value by 35%',
         'Save 30+ hours per week'
       ],
-      marketPrice: '$3,000-6,000/month',
-      category: 'E-commerce Platform',
+      marketPrice: '$3000-6,000/month',
+      category: 'E-commerce Platform'
       technologies: ['React', 'Node.js', 'MongoDB', 'Machine Learning', 'Stripe', 'Shopify API'],
       useCases: ['Online Retail', 'B2B Commerce', 'Marketplace', 'Subscription Business']
     },
     {
-      title: 'AI Inventory Management System',
-      description: 'Intelligent inventory management with demand forecasting, automated reordering, and waste reduction.',
-      icon: '📦',
-      price: '$899/month',
+      title: 'AI Inventory Management System'
+      description: 'Intelligent inventory management with demand forecasting automated reordering, and waste reduction.',
+      icon: '📦'
+      price: '$899/month'
       features: [
-        'Demand forecasting',
-        'Automated reordering',
+        'Demand forecasting', 'Automated reordering',
         'Stock optimization',
         'Supplier management',
         'Cost analysis',
@@ -47,24 +44,22 @@ const AIEcommerceSolutionsPage: React.FC = () => {
         'Real-time tracking'
       ],
       benefits: [
-        'Reduce stockouts by 70%',
-        'Lower inventory costs by 40%',
+        'Reduce stockouts by 70%', 'Lower inventory costs by 40%',
         'Eliminate waste by 50%',
         'Improve cash flow'
       ],
-      marketPrice: '$1,500-3,000/month',
-      category: 'Inventory Management',
+      marketPrice: '$1500-3,000/month',
+      category: 'Inventory Management'
       technologies: ['Python', 'TensorFlow', 'PostgreSQL', 'Redis', 'APIs', 'Machine Learning'],
       useCases: ['Retail', 'Manufacturing', 'Food & Beverage', 'Pharmaceuticals']
     },
     {
-      title: 'AI Customer Service Automation',
-      description: 'Advanced customer service automation with chatbots, ticket routing, and automated resolution workflows.',
-      icon: '💬',
-      price: '$599/month',
+      title: 'AI Customer Service Automation'
+      description: 'Advanced customer service automation with chatbots ticket routing, and automated resolution workflows.',
+      icon: '💬'
+      price: '$599/month'
       features: [
-        'Intelligent chatbots',
-        'Ticket classification',
+        'Intelligent chatbots', 'Ticket classification',
         'Automated responses',
         'Escalation management',
         'Multi-language support',
@@ -73,24 +68,22 @@ const AIEcommerceSolutionsPage: React.FC = () => {
         'Performance analytics'
       ],
       benefits: [
-        'Reduce support costs by 65%',
-        'Improve response time by 90%',
+        'Reduce support costs by 65%', 'Improve response time by 90%',
         'Increase customer satisfaction',
         'Provide 24/7 support'
       ],
-      marketPrice: '$1,000-2,000/month',
-      category: 'Customer Service',
+      marketPrice: '$1000-2,000/month',
+      category: 'Customer Service'
       technologies: ['NLP', 'Dialogflow', 'Rasa', 'Node.js', 'MongoDB', 'AI/ML'],
       useCases: ['E-commerce', 'SaaS', 'Retail', 'Service Business']
     },
     {
-      title: 'AI Marketing Automation Suite',
-      description: 'Comprehensive marketing automation with AI-powered campaigns, email marketing, and social media management.',
-      icon: '📈',
-      price: '$799/month',
+      title: 'AI Marketing Automation Suite'
+      description: 'Comprehensive marketing automation with AI-powered campaigns email marketing, and social media management.',
+      icon: '📈'
+      price: '$799/month'
       features: [
-        'Email marketing automation',
-        'Social media management',
+        'Email marketing automation', 'Social media management',
         'Ad campaign optimization',
         'Customer segmentation',
         'A/B testing automation',
@@ -99,24 +92,22 @@ const AIEcommerceSolutionsPage: React.FC = () => {
         'Cross-channel analytics'
       ],
       benefits: [
-        'Increase email open rates by 50%',
-        'Boost social engagement by 80%',
+        'Increase email open rates by 50%', 'Boost social engagement by 80%',
         'Improve ad performance by 60%',
         'Reduce marketing costs by 40%'
       ],
-      marketPrice: '$1,200-2,500/month',
-      category: 'Marketing Automation',
+      marketPrice: '$1200-2,500/month',
+      category: 'Marketing Automation'
       technologies: ['HubSpot', 'Mailchimp', 'Facebook API', 'Google Ads', 'Python', 'Machine Learning'],
       useCases: ['E-commerce', 'SaaS', 'Lead Generation', 'Customer Retention']
     },
     {
-      title: 'AI Payment & Fraud Detection',
-      description: 'Advanced payment processing with AI-powered fraud detection, risk assessment, and chargeback prevention.',
-      icon: '💳',
-      price: '$1,299/month',
+      title: 'AI Payment & Fraud Detection'
+      description: 'Advanced payment processing with AI-powered fraud detection risk assessment, and chargeback prevention.',
+      icon: '💳'
+      price: '$1299/month',
       features: [
-        'Real-time fraud detection',
-        'Risk scoring algorithms',
+        'Real-time fraud detection', 'Risk scoring algorithms',
         'Chargeback prevention',
         'Payment optimization',
         'Multi-currency support',
@@ -125,24 +116,22 @@ const AIEcommerceSolutionsPage: React.FC = () => {
         'API integration'
       ],
       benefits: [
-        'Reduce fraud by 95%',
-        'Lower chargeback rates by 80%',
+        'Reduce fraud by 95%', 'Lower chargeback rates by 80%',
         'Increase payment success rates',
         'Ensure compliance'
       ],
-      marketPrice: '$2,000-4,000/month',
-      category: 'Payment Processing',
+      marketPrice: '$2000-4,000/month',
+      category: 'Payment Processing'
       technologies: ['Stripe', 'PayPal', 'Machine Learning', 'Python', 'Redis', 'APIs'],
       useCases: ['E-commerce', 'Marketplace', 'Subscription', 'High-risk Business']
     },
     {
-      title: 'AI Analytics & Business Intelligence',
-      description: 'Comprehensive analytics platform with AI-powered insights, customer behavior analysis, and predictive modeling.',
-      icon: '📊',
-      price: '$1,499/month',
+      title: 'AI Analytics & Business Intelligence'
+      description: 'Comprehensive analytics platform with AI-powered insights customer behavior analysis, and predictive modeling.',
+      icon: '📊'
+      price: '$1499/month',
       features: [
-        'Customer behavior analysis',
-        'Sales forecasting',
+        'Customer behavior analysis', 'Sales forecasting',
         'Product performance tracking',
         'Market trend analysis',
         'Custom dashboards',
@@ -151,13 +140,12 @@ const AIEcommerceSolutionsPage: React.FC = () => {
         'ROI optimization'
       ],
       benefits: [
-        'Improve decision making',
-        'Increase sales by 30%',
+        'Improve decision making', 'Increase sales by 30%',
         'Optimize product mix',
         'Identify growth opportunities'
       ],
-      marketPrice: '$2,500-5,000/month',
-      category: 'Analytics',
+      marketPrice: '$2500-5,000/month',
+      category: 'Analytics'
       technologies: ['Python', 'TensorFlow', 'React', 'PostgreSQL', 'D3.js', 'Machine Learning'],
       useCases: ['E-commerce', 'Retail', 'Marketplace', 'Subscription Business']
     }
@@ -165,36 +153,36 @@ const AIEcommerceSolutionsPage: React.FC = () => {
 
   const ecommerceFeatures = [
     {
-      title: 'AI Personalization',
-      description: 'Deliver personalized experiences to every customer',
-      icon: <Users className="w-8 h-8 text-blue-600" />
+    title: 'AI Personalization',
+    description: 'Deliver personalized experiences to every customer',
+    icon: <Users className="w-8 h-8 text-blue-600" />,
     },
     {
-      title: 'Real-Time Analytics',
-      description: 'Make data-driven decisions with real-time insights',
-      icon: <BarChart3 className="w-8 h-8 text-green-600" />
+    title: 'Real-Time Analytics',
+    description: 'Make data-driven decisions with real-time insights',
+    icon: <BarChart3 className="w-8 h-8 text-green-600" />,
     },
     {
-      title: 'Automated Operations',
-      description: 'Streamline operations with intelligent automation',
-      icon: <Zap className="w-8 h-8 text-purple-600" />
+    title: 'Automated Operations',
+    description: 'Streamline operations with intelligent automation',
+    icon: <Zap className="w-8 h-8 text-purple-600" />,
     },
     {
-      title: 'Secure Payments',
-      description: 'Bank-level security for all transactions',
-      icon: <Shield className="w-8 h-8 text-red-600" />
+    title: 'Secure Payments',
+    description: 'Bank-level security for all transactions',
+    icon: <Shield className="w-8 h-8 text-red-600" />,
     }
   ];
 
   const industryStats = [
-    { metric: '45%', description: 'Average Conversion Increase' },
-    { metric: '60%', description: 'Cart Abandonment Reduction' },
-    { metric: '35%', description: 'Average Order Value Boost' },
-    { metric: '95%', description: 'Fraud Detection Accuracy' }
+    { metric: '45%' description: 'Average Conversion Increase' },
+    { metric: '60%' description: 'Cart Abandonment Reduction' },
+    { metric: '35%' description: 'Average Order Value Boost' },
+    { metric: '95%' description: 'Fraud Detection Accuracy' }
   ];
 
-const AiEcommerceSolutionsPage: React.FC = () => {,
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">,
+const AiEcommerceSolutionsPage: React.FC = () => {
+  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEOOptimizer;
         title="AI E-commerce Solutions - Zion Tech Group",
 const AiEcommerceSolutionsPage: React.FC = () => {
@@ -202,15 +190,15 @@ const AiEcommerceSolutionsPage: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <SEOOptimizer
         title="AI E-commerce Solutions - Zion Tech Group"
-        description="Intelligent e-commerce solutions with AI-powered recommendations, optimization, and analytics."
+        description="Intelligent e-commerce solutions with AI-powered recommendations optimization, and analytics."
         keywords={["e-commerce AI","product recommendations","online store optimization","shopping AI","e-commerce analytics"]}
-        canonicalUrl="https://ziontechgroup.com/ai-ecommerce-solutions"
+        canonicalUrl="https: //ziontechgroup.com/ai-ecommerce-solutions"
       /></SEOOptimize>
 
       <Navigation /></Navigatio>
 
       <main className="container mx-auto px-4 py-16 pt-24">{/* Hero Section */}</main>
-        canonicalUrl="https: //ziontechgroup.com/ai-ecommerce-solutions",
+        canonicalUrl="https: //ziontechgroup.com/ai-ecommerce-solutions"
       />,
       <Navigation />,
       <main className="container mx-auto px-4 py-16 pt-24">,
@@ -219,19 +207,19 @@ const AiEcommerceSolutionsPage: React.FC = () => {
           <div className="max-w-4xl mx-auto"></section>
             <div className="w-20 h-20 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6"></div>
               <ShoppingCart className="w-10 h-10 text-white" />
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">AI E-commerce Solutions<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Intelligent e-commerce solutions with AI-powered recommendations, optimization, and analytics.</p>
+            <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">AI E-commerce Solutions<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Intelligent e-commerce solutions with AI-powered recommendations optimization, and analytics.</p>
             </div>
             <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
               AI E-commerce Solutions;
-            </h1>,
+            </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">,
               Intelligent e-commerce solutions with AI-powered recommendations, optimization, and analytics.
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
               <a;
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">AI E-commerce Solutions</h1><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Intelligent e-commerce solutions with AI-powered recommendations, optimization, and analytics.</p>
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">AI E-commerce Solutions</h1><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Intelligent e-commerce solutions with AI-powered recommendations optimization, and analytics.</p>
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center"></div>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center"></div>
               <a
                 href="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300"
@@ -249,13 +237,13 @@ const AiEcommerceSolutionsPage: React.FC = () => {
                 +1 302 464 0950;
               </a>
             </div>
-          </div>,
+          </div>
         </section>,
 ,
         {/* Features Section */}
         <section className="mb-16">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Key Features<p className="text-lg text-gray-300 max-w-2xl mx-auto">Powerful capabilities designed to transform your business</p>
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">Key Features<p className="text-lg text-gray-300 max-w-2xl mx-auto">Powerful capabilities designed to transform your business</p>
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
               Key Features;
             </h2>
@@ -297,13 +285,13 @@ const AiEcommerceSolutionsPage: React.FC = () => {
               <CheckCircle className="w-8 h-8 text-green-400 mb-4" />
               <h3 className="text-xl font-semibold text-white mb-2">Analytics Dashboard</h3><p className="text-gray-300">Advanced analytics dashboard capabilities powered by AI</p>
             </div>
-          </div>,
+          </div>
         </section>,
 ,
         {/* Benefits Section */}
         <section className="mb-16">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Why Choose Our AI E-commerce Solutions?<p className="text-lg text-gray-300 max-w-2xl mx-auto">Proven results and measurable impact for your business</p>
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">Why Choose Our AI E-commerce Solutions?<p className="text-lg text-gray-300 max-w-2xl mx-auto">Proven results and measurable impact for your business</p>
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
               Why Choose Our AI E-commerce Solutions?
             </h2>
@@ -337,13 +325,13 @@ const AiEcommerceSolutionsPage: React.FC = () => {
               <TrendingUp className="w-8 h-8 text-purple-400 mb-4" />
               <h3 className="text-xl font-semibold text-white mb-2">Data-driven Decisions</h3><p className="text-gray-300">Measurable improvement in your business metrics</p>
             </div>
-          </div>,
+          </div>
         </section>,
 ,
         {/* Pricing Section */}
         <section className="mb-16">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Pricing<p className="text-lg text-gray-300 max-w-2xl mx-auto">Transparent pricing with no hidden fees</p>
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">Pricing<p className="text-lg text-gray-300 max-w-2xl mx-auto">Transparent pricing with no hidden fees</p>
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
               Pricing;
             </h2>
@@ -380,11 +368,11 @@ const AiEcommerceSolutionsPage: React.FC = () => {
             </div>)
           </div>)
         </section>)
-),
+)
         {/* Contact Section */}
         <section className="mb-16">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Get Started?<p className="text-lg text-gray-300 max-w-2xl mx-auto">Contact our experts to discuss your specific needs</p>
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">Ready to Get Started?<p className="text-lg text-gray-300 max-w-2xl mx-auto">Contact our experts to discuss your specific needs</p>
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
               Ready to Get Started?
             </h2>
@@ -433,7 +421,7 @@ const AiEcommerceSolutionsPage: React.FC = () => {
         </section>
       </main>
 
-      <Footer />,
+      <Footer />
     </div>);
 };
 

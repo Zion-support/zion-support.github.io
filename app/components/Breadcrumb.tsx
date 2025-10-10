@@ -24,14 +24,14 @@ const Breadcrumb: React.FC = () => {
               <ChevronRight className="w-4 h-4 text-gray-400 mx-2" />
               {isLast ? (
                 <span className="text-gray-900 font-medium capitalize">
-                  {name.replace(/-/g, ' ')}
+                  {name.replace(/-/g, ', ')}
                 </span>
               ) : (
                 <Link
                   to={routeTo}
-                  className="text-gray-500 hover:text-gray-700 capitalize"
+                  className="text-gray-500 hover: text-gray-700 capitalize"
                 >
-                  {name.replace(/-/g, ' ')}
+                    {name.replace(/-/g, ' ')}
                 </Link>
               )}
             </li>

@@ -4,14 +4,14 @@ import { Shield, CheckCircle, FileText, Award, Lock, Eye, Database, UserCheck } 
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const CompliancePage: React.FC = () => {,
-  const complianceFrameworks = [,
-    {,
-      name: 'SOC 2 Type II',
-      description: 'Audited controls for security, availability, processing integrity, confidentiality, and privacy',
+const CompliancePage: React.FC = () => {
+  const complianceFrameworks = [
+    {
+      name: 'SOC 2 Type II'
+      description: 'Audited controls for security availability, processing integrity, confidentiality, and privacy',
       status: 'Certified'
       icon: Award;
-      details: [,
+      details: [
         'Annual third-party audits by independent auditors',
         'Comprehensive control testing and validation',
         'Management attestation and reporting',
@@ -23,7 +23,7 @@ const CompliancePage: React.FC = () => {,
       description: 'International standard for information security management systems'
       status: 'Certified'
       icon: Shield;
-      details: [,
+      details: [
         'Information security management system (ISMS)',
         'Risk assessment and treatment procedures',
         'Security controls and implementation guidelines',
@@ -35,7 +35,7 @@ const CompliancePage: React.FC = () => {,
       description: 'General Data Protection Regulation compliance for EU data protection'
       status: 'Compliant'
       icon: Lock;
-      details: [,
+      details: [
         'Data protection by design and by default',
         'Privacy impact assessments (PIAs)',
         'Data subject rights management',
@@ -47,7 +47,7 @@ const CompliancePage: React.FC = () => {,
       description: 'California Consumer Privacy Act compliance for California residents'
       status: 'Compliant'
       icon: Eye;
-      details: [,
+      details: [
         'Consumer privacy rights management',
         'Data collection and processing transparency',
         'Opt-out mechanisms for data sales',
@@ -59,7 +59,7 @@ const CompliancePage: React.FC = () => {,
       description: 'Health Insurance Portability and Accountability Act for healthcare data'
       status: 'Compliant'
       icon: Database;
-      details: [,
+      details: [
         'Protected health information (PHI) safeguards',
         'Administrative, physical, and technical safeguards',
         'Business associate agreements (BAAs)',
@@ -71,7 +71,7 @@ const CompliancePage: React.FC = () => {,
       description: 'Payment Card Industry Data Security Standard for payment processing'
       status: 'Compliant'
       icon: UserCheck;
-      details: [,
+      details: [
         'Secure payment card data handling',
         'Network security and monitoring',
         'Regular security testing and vulnerability management',
@@ -84,8 +84,8 @@ const CompliancePage: React.FC = () => {,
     {
       title: 'Data Protection'
       icon: Shield;
-      description: 'Comprehensive data protection measures and privacy controls',
-      measures: [,
+      description: 'Comprehensive data protection measures and privacy controls'
+      measures: [
         'Data encryption at rest and in transit',
         'Data classification and handling procedures',
         'Privacy by design principles',
@@ -95,8 +95,8 @@ const CompliancePage: React.FC = () => {,
     {
       title: 'Access Controls'
       icon: Lock;
-      description: 'Robust access management and authentication systems',
-      measures: [,
+      description: 'Robust access management and authentication systems'
+      measures: [
         'Multi-factor authentication (MFA)',
         'Role-based access control (RBAC)',
         'Privileged access management (PAM)',
@@ -106,8 +106,8 @@ const CompliancePage: React.FC = () => {,
     {
       title: 'Security Monitoring'
       icon: Eye;
-      description: 'Continuous security monitoring and incident response',
-      measures: [,
+      description: 'Continuous security monitoring and incident response'
+      measures: [
         'Security information and event management (SIEM)',
         'Real-time threat detection and response',
         'Vulnerability scanning and management',
@@ -117,8 +117,8 @@ const CompliancePage: React.FC = () => {,
     {
       title: 'Audit & Reporting'
       icon: FileText;
-      description: 'Regular audits and compliance reporting',
-      measures: [,
+      description: 'Regular audits and compliance reporting'
+      measures: [
         'Internal and external security audits',
         'Compliance monitoring and reporting',
         'Risk assessments and management',
@@ -129,26 +129,26 @@ const CompliancePage: React.FC = () => {,
 
   const certifications = [
     {
-      name: 'SOC 2 Type II',
-      issuer: 'AICPA',
-      validUntil: '2025-12-31',
-      scope: 'Security, Availability, Confidentiality'
+    name: 'SOC 2 Type II',
+    issuer: 'AICPA',
+    validUntil: '2025-12-31',
+    scope: 'Security Availability, Confidentiality',
     },
     {
-      name: 'ISO 27001:2013',
-      issuer: 'ISO',
-      validUntil: '2025-06-30',
-      scope: 'Information Security Management'},
+    name: 'ISO 27001:2013',
+    issuer: 'ISO',
+    validUntil: '2025-06-30',
+    scope: 'Information Security Management'},
     {
-      name: 'GDPR Compliance',
-      issuer: 'Internal Assessment',
-      validUntil: 'Ongoing',
-      scope: 'Data Protection and Privacy'},
+    name: 'GDPR Compliance',
+    issuer: 'Internal Assessment',
+    validUntil: 'Ongoing',
+    scope: 'Data Protection and Privacy'},
     {
-      name: 'CCPA Compliance',
-      issuer: 'Internal Assessment',
-      validUntil: 'Ongoing',
-      scope: 'California Privacy Rights'}
+    name: 'CCPA Compliance',
+    issuer: 'Internal Assessment',
+    validUntil: 'Ongoing',
+    scope: 'California Privacy Rights'}
   ];
 
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -158,7 +158,7 @@ const CompliancePage: React.FC = () => {,
 
       <main className="container mx-auto px-4 py-16 pt-24">{/* Header */}</main>
         <section className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 neon-text">Compliance & Certifications<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">We maintain the highest standards of compliance and security to protect your data and ensure regulatory adherence across all industries.</p>
+          <h1 className="text-4xl md: text-5xl lg:text-6xl font-bold text-white mb-6 neon-text">Compliance & Certifications<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">We maintain the highest standards of compliance and security to protect your data and ensure regulatory adherence across all industries.</p>
       <main className="container mx-auto px-4 py-16 pt-24">
         {/* Header */}
         <section className="text-center mb-16">
@@ -187,18 +187,18 @@ const CompliancePage: React.FC = () => {,
 
         {/* Compliance Frameworks */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Compliance Frameworks<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{complianceFrameworks.map((framework, index) => (</div>
+          <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Compliance Frameworks<div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">{complianceFrameworks.map((framework index) => (</div>
           </div>,
         </section>,
 ,
-        {/* Compliance Frameworks */})
-        <section className="mb-16">)
+        {/* Compliance Frameworks */}
+        <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Compliance Frameworks</h2>)
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">),
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             {complianceFrameworks.map((framework, index) => (
               <div key={index} className="cyber-card p-6">
                 <div className="flex items-center justify-between mb-4">
-          <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Compliance Frameworks</h2><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{complianceFrameworks.map((framework, index) => (</section>
+          <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Compliance Frameworks</h2><div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">{complianceFrameworks.map((framework index) => (</section>
               <div key={index} className="cyber-card p-6"></div>
                 <div className="flex items-center justify-between mb-4"></div>
                   <framework.icon className="w-8 h-8 text-cyan-400" />
@@ -216,13 +216,13 @@ const CompliancePage: React.FC = () => {,
 
         {/* Compliance Areas */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Compliance Areas<div className="grid grid-cols-1 md:grid-cols-2 gap-8">{complianceAreas.map((area, index) => (</div>
+          <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Compliance Areas<div className="grid grid-cols-1 md: grid-cols-2 gap-8">{complianceAreas.map((area index) => (</div>
           <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Compliance Areas</h2>
-          <div className="grid grid-cols-1 md: grid-cols-2 gap-8">,
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
             {complianceAreas.map((area, index) => (
               <div key={index} className="cyber-card p-6">
                 <div className="flex items-center mb-4">
-          <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Compliance Areas</h2><div className="grid grid-cols-1 md:grid-cols-2 gap-8">{complianceAreas.map((area, index) => (</section>
+          <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Compliance Areas</h2><div className="grid grid-cols-1 md: grid-cols-2 gap-8">{complianceAreas.map((area index) => (</section>
               <div key={index} className="cyber-card p-6"></div>
                 <div className="flex items-center mb-4"></div>
                   <area.icon className="w-8 h-8 text-cyan-400 mr-3" />
@@ -315,7 +315,7 @@ const CompliancePage: React.FC = () => {,
                     <<<<span>Management</span></<<span>review</span> and attestation</span>
                   </li>
                 </ul>
-              </div>,
+              </div>
             </div>,
           </div>,
         </section>,
@@ -325,15 +325,15 @@ const CompliancePage: React.FC = () => {,
           <div className="cyber-card p-8"></section>
             <h2 className="text-2xl font-bold text-white mb-6 neon-text">Industry-Specific Compliance</h2><p className="text-gray-300 mb-8">We understand that different industries have unique compliance requirements. Our solutions are designed to meet the specific needs of various sectors.</p>
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
               <div className="bg-slate-800/50 rounded-lg p-6">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
               <div className="bg-slate-800/50 rounded-lg p-6"></div>
                 <h3 className="text-lg font-semibold text-cyan-400 mb-3">Healthcare (HIPAA)</h3>
                 <ul className="space-y-2 text-sm text-gray-300">
-                  <li>• Protected Health Information (PHI) safeguards<li>• Administrative, physical, and technical safeguards</li>
+                  <li>• Protected Health Information (PHI) safeguards<li>• Administrative physical, and technical safeguards</li>
                   <li>• Business Associate Agreements (BAAs)<li>• Workforce training and access controls</li>
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">,
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
               <div className="bg-slate-800/50 rounded-lg p-6">,
                 <h3 className="text-lg font-semibold text-cyan-400 mb-3">Healthcare (HIPAA)</h3>,
                 <ul className="space-y-2 text-sm text-gray-300">,
@@ -391,7 +391,7 @@ const CompliancePage: React.FC = () => {,
                 </ul>
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-cyan-400 mb-4">Request Documentation<p className="text-gray-300 mb-4">To request compliance documentation or schedule a compliance review, please contact our compliance team.</p>
+                <h3 className="text-lg font-semibold text-cyan-400 mb-4">Request Documentation<p className="text-gray-300 mb-4">To request compliance documentation or schedule a compliance review please contact our compliance team.</p>
                 </ul>,
               </div>,
               <div>,
@@ -412,28 +412,28 @@ const CompliancePage: React.FC = () => {,
                 </a>
               </div>
             </div>
-          </div>,
+          </div>
         </section>,
 ,
         {/* Contact Information */}
         <section className="mb-16">
           <div className="cyber-card p-8">
-            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Compliance Questions?<p className="text-gray-300 mb-6">If you have any questions about our compliance posture or need specific compliance documentation, please contact our compliance team:</p>
+            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Compliance Questions?<p className="text-gray-300 mb-6">If you have any questions about our compliance posture or need specific compliance documentation, please contact our compliance team: </p>
           <div className="cyber-card p-8"></section>
-            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Compliance Questions?</h2><p className="text-gray-300 mb-6">If you have any questions about our compliance posture or need specific compliance documentation, please contact our compliance team:</p>
+            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Compliance Questions?</h2><p className="text-gray-300 mb-6">If you have any questions about our compliance posture or need specific compliance documentation please contact our compliance team: </p>
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
               <div></div>
                 <h3 className="text-lg font-semibold text-cyan-400 mb-3">Compliance Team</h3>
                 <div className="space-y-2 text-gray-300">
                   <p>Chief Compliance Officer<p>Zion Tech Group</p>
-                  <p>364 E Main St STE 1008<p>Middletown, DE 19709</p>
+                  <p>364 E Main St STE 1008<p>Middletown DE 19709</p>
             <h2 className="text-2xl font-bold text-white mb-6 neon-text">Compliance Questions?</h2>
             <p className="text-gray-300 mb-6">
               If you have any questions about our compliance posture or need specific compliance documentation, please contact our compliance team: </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <h3 className="text-lg font-semibold text-cyan-400 mb-3">Compliance Team</h3>,
+                <h3 className="text-lg font-semibold text-cyan-400 mb-3">Compliance Team</h3>
                 <div className="space-y-2 text-gray-300">,
                   <p>Chief Compliance Officer</p>,
                   <p>Zion Tech Group</p>,
@@ -447,14 +447,14 @@ const CompliancePage: React.FC = () => {,
               <div></div>
                 <h3 className="text-lg font-semibold text-cyan-400 mb-3">Contact Information</h3>
                 <div className="space-y-2 text-gray-300"></div>
-                  <p>Email:</p> <a href="mailto:compliance@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">compliance@ziontechgroup.com</a>
+                  <p>Email: </p> <a href="mailto:compliance@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">compliance@ziontechgroup.com</a>
                   <p>Phone:</p> <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300">+1 302 464 0950<p>Response Time: Within 24 hours</p>
                 </div>
               </div>
             </div>
           </div>
         </section>
-      </main>,
+      </main>
 ,
       <Footer />,
     </div>);

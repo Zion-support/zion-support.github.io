@@ -3,7 +3,7 @@ import React, { useState, useCallback, memo } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Receipt, Target, Users, CheckCircle, Brain, BarChart } from 'lucide-react';
 
-const AIExpenseTracker: React.FC = memo(() => {,
+const AIExpenseTracker: React.FC = memo(() => {
 const AIExpenseTracker: React.FC = memo(() => {}
   const [isLoaded, setIsLoaded] = useState(false);
 
@@ -13,44 +13,44 @@ const AIExpenseTracker: React.FC = memo(() => {}
 
   const features = [
     {
-      icon: Receipt;
-    {}
-      icon: Receipt,
-      title: 'Smart Receipt Scanning',
-      description: 'Automatically extract data from receipts using AI-powered OCR technology with 99% accuracy',
-      color: 'text-purple-400'},
+    icon: Receipt;,
+    {},
+    icon: Receipt,
+    title: 'Smart Receipt Scanning',
+    description: 'Automatically extract data from receipts using AI-powered OCR technology with 99% accuracy',
+    color: 'text-purple-400'},
     {
-      icon: Brain;
-    {}
-      icon: Brain,
-      title: 'AI Categorization',
-      description: 'Intelligently categorize expenses and learn from your spending patterns over time',
-      color: 'text-blue-400'},
+    icon: Brain;,
+    {},
+    icon: Brain,
+    title: 'AI Categorization',
+    description: 'Intelligently categorize expenses and learn from your spending patterns over time',
+    color: 'text-blue-400'},
     {
-      icon: BarChart;
-    {}
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Get detailed insights into your spending habits with beautiful charts and reports',
-      color: 'text-green-400'},
+    icon: BarChart;,
+    {},
+    icon: BarChart,
+    title: 'Advanced Analytics',
+    description: 'Get detailed insights into your spending habits with beautiful charts and reports',
+    color: 'text-green-400'},
     {
-      icon: Target;
-    {}
-      icon: Target,
-      title: 'Budget Management',
-      description: 'Set budgets, track progress, and get alerts when approaching limits',
-      color: 'text-orange-400'}
+    icon: Target;,
+    {},
+    icon: Target,
+    title: 'Budget Management',
+    description: 'Set budgets track progress, and get alerts when approaching limits',
+    color: 'text-orange-400'}
   ];
 
   const pricingPlans = [
     {
       name: 'Personal'
     {}
-      name: 'Personal',
-      price: '$9',
-      period: '/month',
-      description: 'Perfect for individuals',
-      features: [,
+      name: 'Personal'
+      price: '$9'
+      period: '/month'
+      description: 'Perfect for individuals'
+      features: [
         'Unlimited receipts',
         'Basic categorization',
         'Monthly reports',
@@ -64,11 +64,11 @@ const AIExpenseTracker: React.FC = memo(() => {}
     {
       name: 'Business'
     {}
-      name: 'Business',
-      price: '$29',
-      period: '/month',
-      description: 'Ideal for small businesses',
-      features: [,
+      name: 'Business'
+      price: '$29'
+      period: '/month'
+      description: 'Ideal for small businesses'
+      features: [
         'Unlimited receipts',
         'AI categorization',
         'Advanced analytics',
@@ -83,11 +83,11 @@ const AIExpenseTracker: React.FC = memo(() => {}
     {
       name: 'Enterprise'
     {}
-      name: 'Enterprise',
-      price: '$99',
-      period: '/month',
-      description: 'For large organizations',
-      features: [,
+      name: 'Enterprise'
+      price: '$99'
+      period: '/month'
+      description: 'For large organizations'
+      features: [
         'Unlimited everything',
         'Advanced AI features',
         'Custom integrations',
@@ -102,33 +102,33 @@ const AIExpenseTracker: React.FC = memo(() => {}
   ];
 
   const useCases = [
-    {}
-      title: 'Personal Finance',
-      description: 'Track personal expenses and build better financial habits',
-      icon: Receipt;
-      result: '30% savings'},
-    {}
-      title: 'Business Expenses',
-      description: 'Manage business expenses and improve cash flow visibility',
-      icon: BarChart;
-      result: '50% faster'},
-    {}
-      title: 'Tax Preparation',
-      description: 'Organize receipts and expenses for easy tax filing',
-      icon: Target;
-      result: '90% easier'},
-    {}
-      title: 'Team Management',
-      description: 'Track team expenses and enforce spending policies',
-      icon: Users;
-      result: '100% control'}
+    {},
+    title: 'Personal Finance',
+    description: 'Track personal expenses and build better financial habits',
+    icon: Receipt;,
+    result: '30% savings'},
+    {},
+    title: 'Business Expenses',
+    description: 'Manage business expenses and improve cash flow visibility',
+    icon: BarChart;,
+    result: '50% faster'},
+    {},
+    title: 'Tax Preparation',
+    description: 'Organize receipts and expenses for easy tax filing',
+    icon: Target;,
+    result: '90% easier'},
+    {},
+    title: 'Team Management',
+    description: 'Track team expenses and enforce spending policies',
+    icon: Users;,
+    result: '100% control'}
   ];
 
   const benefits = [
-    { metric: '99%', label: 'OCR Accuracy', color: 'text-green-400' },
-    { metric: '5 min', label: 'Setup Time', color: 'text-blue-400' },
-    { metric: '30%', label: 'Time Saved', color: 'text-purple-400' },
-    { metric: '24/7', label: 'Available', color: 'text-orange-400' }
+    { metric: '99%' label: 'OCR Accuracy' color: 'text-green-400' },
+    { metric: '5 min' label: 'Setup Time' color: 'text-blue-400' },
+    { metric: '30%' label: 'Time Saved' color: 'text-purple-400' },
+    { metric: '24/7' label: 'Available' color: 'text-orange-400' }
   ];
 
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -146,10 +146,10 @@ const AIExpenseTracker: React.FC = memo(() => {}
         </div><section className="text-center mb-16">
           <div className="inline-flex items-center space-x-2 bg-purple-600/20 text-purple-400 px-4 py-2 rounded-full text-sm font-medium mb-6"></section>
             <Receipt className="w-4 h-4" />
-            <span>AI-Powered Finance</span><h1 className="text-4xl md:text-6xl font-bold text-white mb-6">AI Expense Tracker</h1><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Transform your expense management with AI-powered receipt scanning and intelligent categorization.</p>
-            Save time, reduce errors, and gain valuable insights into your spending habits.</p>
-        <meta property="og:type" content="website" />,
-        <meta property="og:url" content="https://ziontechgroup.com/ai-expense-tracker" />,
+            <span>AI-Powered Finance</span><h1 className="text-4xl md: text-6xl font-bold text-white mb-6">AI Expense Tracker</h1><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Transform your expense management with AI-powered receipt scanning and intelligent categorization.</p>
+            Save time reduce errors, and gain valuable insights into your spending habits.</p>
+        <meta property="og: type" content="website" />
+        <meta property="og: url" content="https://ziontechgroup.com/ai-expense-tracker" />
       </Helmet>,
 ,
       <div className="container mx-auto px-4 py-16">,
@@ -163,9 +163,8 @@ const AIExpenseTracker: React.FC = memo(() => {}
           <h1 className="text-4xl md: text-6xl font-bold text-white mb-6">
             AI Expense Tracker;
           </h1>)
-)
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">)
-            Transform your expense management with AI-powered receipt scanning and intelligent categorization.),
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Transform your expense management with AI-powered receipt scanning and intelligent categorization.)
             Save time, reduce errors, and gain valuable insights into your spending habits.
           </p>
 
@@ -189,23 +188,23 @@ const AIExpenseTracker: React.FC = memo(() => {}
             >
               Start Tracking;
             </a>
-          </div>,
+          </div>
         </section>,
 ,
         {/* Benefits */}
         <section className="mb-16">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{benefits.map((benefit, index) => (</div>
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">{benefits.map((benefit index) => (</div>
               </div><div key={index} className="bg-slate-800/50 p-6 rounded-lg border border-purple-500/20">
                 <div className={`text-3xl font-bold ${benefit.color} mb-2`}>{benefit.metric}<div className="text-white font-semibold mb-2">{benefit.label}<div className="text-gray-400 text-sm">Industry-leading performance</div>
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">,
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
             {benefits.map((benefit, index) => (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {benefits.map((benefit, index) => (}
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
+            {benefits.map((benefit index) => (}
               <div key={index} className="bg-slate-800/50 p-6 rounded-lg border border-purple-500/20">
                 <div className={`text-3xl font-bold ${benefit.color} mb-2`}>{benefit.metric}</div>
                 <div className="text-white font-semibold mb-2">{benefit.label}</div>
                 <div className="text-gray-400 text-sm">Industry-leading performance</div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{benefits.map((benefit, index) => (</section>
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">{benefits.map((benefit index) => (</section>
               </div><div key={index} className="bg-slate-800/50 p-6 rounded-lg border border-purple-500/20"></div>
                 <div className={`text-3xl font-bold ${benefit.color} mb-2`}>{benefit.metric}</div><div className="text-white font-semibold mb-2">{benefit.label}</div><div className="text-gray-400 text-sm">Industry-leading performance</div>
               </div>
@@ -215,21 +214,21 @@ const AIExpenseTracker: React.FC = memo(() => {}
 
         {/* Features */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Smart Features<div className="grid grid-cols-1 md:grid-cols-2 gap-8">{features.map((feature, index) => (</div>
-              </div><div key={index} className="bg-slate-800/30 p-6 rounded-lg border border-gray-700 hover:border-purple-500/50 transition-all duration-300">
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Smart Features<div className="grid grid-cols-1 md: grid-cols-2 gap-8">{features.map((feature index) => (</div>
+              </div><div key={index} className="bg-slate-800/30 p-6 rounded-lg border border-gray-700 hover: border-purple-500/50 transition-all duration-300">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Smart Features</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {features.map((feature, index) => (}
-              <div key={index} className="bg-slate-800/30 p-6 rounded-lg border border-gray-700 hover:border-purple-500/50 transition-all duration-300">
+            {features.map((feature index) => (}
+              <div key={index} className="bg-slate-800/30 p-6 rounded-lg border border-gray-700 hover: border-purple-500/50 transition-all duration-300">
                 <div className="flex items-start space-x-4">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Smart Features</h2>
-          <div className="grid grid-cols-1 md: grid-cols-2 gap-8">,
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-slate-800/30 p-6 rounded-lg border border-gray-700 hover: border-purple-500/50 transition-all duration-300">,
+              <div key={index} className="bg-slate-800/30 p-6 rounded-lg border border-gray-700 hover: border-purple-500/50 transition-all duration-300">
                 <div className="flex items-start space-x-4">,
                   <div className={`p-3 rounded-lg bg-slate-700 ${feature.color}`}>
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Smart Features</h2><div className="grid grid-cols-1 md:grid-cols-2 gap-8">{features.map((feature, index) => (</section>
-              </div><div key={index} className="bg-slate-800/30 p-6 rounded-lg border border-gray-700 hover:border-purple-500/50 transition-all duration-300"></div>
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Smart Features</h2><div className="grid grid-cols-1 md: grid-cols-2 gap-8">{features.map((feature index) => (</section>
+              </div><div key={index} className="bg-slate-800/30 p-6 rounded-lg border border-gray-700 hover: border-purple-500/50 transition-all duration-300"></div>
                 <div className="flex items-start space-x-4"></div>
                   <div className={`p-3 rounded-lg bg-slate-700 ${feature.color}`}></div>
                     <feature.icon className="w-6 h-6" />
@@ -245,27 +244,27 @@ const AIExpenseTracker: React.FC = memo(() => {}
 
         {/* Use Cases */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Perfect For<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{useCases.map((useCase, index) => (</div>
-              </div><div key={index} className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-lg border border-gray-700 hover:border-purple-500/50 transition-all duration-300">
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Perfect For<div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">{useCases.map((useCase index) => (</div>
+              </div><div key={index} className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-lg border border-gray-700 hover: border-purple-500/50 transition-all duration-300">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Perfect For</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {useCases.map((useCase, index) => (}
-              <div key={index} className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-lg border border-gray-700 hover:border-purple-500/50 transition-all duration-300">
+            {useCases.map((useCase index) => (}
+              <div key={index} className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-lg border border-gray-700 hover: border-purple-500/50 transition-all duration-300">
                 <div className="flex items-center justify-between mb-4">
                   <useCase.icon className="w-8 h-8 text-purple-400" />
                   <div className="text-sm font-semibold text-green-400">{useCase.result}<h3 className="text-lg font-semibold text-white mb-2">{useCase.title}<p className="text-gray-400 text-sm">{useCase.description}</p>
           <h2 className="text-3xl font-bold text-white text-center mb-12">Perfect For</h2>
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">,
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
             {useCases.map((useCase, index) => (
-              <div key={index} className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-lg border border-gray-700 hover: border-purple-500/50 transition-all duration-300">,
+              <div key={index} className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-lg border border-gray-700 hover: border-purple-500/50 transition-all duration-300">
                 <div className="flex items-center justify-between mb-4">,
                   <useCase.icon className="w-8 h-8 text-purple-400" />,
                   <div className="text-sm font-semibold text-green-400">{useCase.result}</div>
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">{useCase.title}</h3>
                 <p className="text-gray-400 text-sm">{useCase.description}</p>
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Perfect For</h2><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{useCases.map((useCase, index) => (</section>
-              </div><div key={index} className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-lg border border-gray-700 hover:border-purple-500/50 transition-all duration-300"></div>
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Perfect For</h2><div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">{useCases.map((useCase index) => (</section>
+              </div><div key={index} className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-lg border border-gray-700 hover: border-purple-500/50 transition-all duration-300"></div>
                 <div className="flex items-center justify-between mb-4"></div>
                   <useCase.icon className="w-8 h-8 text-purple-400" />
                   <div className="text-sm font-semibold text-green-400">{useCase.result}</div><h3 className="text-lg font-semibold text-white mb-2">{useCase.title}</h3><p className="text-gray-400 text-sm">{useCase.description}</p>
@@ -276,17 +275,17 @@ const AIExpenseTracker: React.FC = memo(() => {}
 
         {/* Pricing */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Simple Pricing<div className="grid grid-cols-1 md:grid-cols-3 gap-8">{pricingPlans.map((plan, index) => (<div key={index} className={`relative bg-slate-800/50 p-8 rounded-lg border ${plan.popular ? 'border-purple-500 ring-2 ring-purple-500/20' : 'border-gray-700'} hover:border-purple-500/50 transition-all duration-300`}>{plan.popular && (</div>
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Simple Pricing<div className="grid grid-cols-1 md: grid-cols-3 gap-8">{pricingPlans.map((plan index) => (<div key={index} className={`relative bg-slate-800/50 p-8 rounded-lg border ${plan.popular ? 'border-purple-500 ring-2 ring-purple-500/20' : 'border-gray-700'} hover: border-purple-500/50 transition-all duration-300`}>{plan.popular && (</div>
                   </div><div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Simple Pricing</h2><div className="grid grid-cols-1 md:grid-cols-3 gap-8">{pricingPlans.map((plan, index) => (</section><div key={index} className={`relative bg-slate-800/50 p-8 rounded-lg border ${plan.popular ? 'border-purple-500 ring-2 ring-purple-500/20' : 'border-gray-700'} hover:border-purple-500/50 transition-all duration-300`}>{plan.popular && (</div>
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Simple Pricing</h2><div className="grid grid-cols-1 md: grid-cols-3 gap-8">{pricingPlans.map((plan index) => (</section><div key={index} className={`relative bg-slate-800/50 p-8 rounded-lg border ${plan.popular ? 'border-purple-500 ring-2 ring-purple-500/20' : 'border-gray-700'} hover: border-purple-500/50 transition-all duration-300`}>{plan.popular && (</div>
                   </div><div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
                     <div className="bg-purple-600 text-white px-4 py-1 rounded-full text-sm font-semibold">Most Popular</div>
           <h2 className="text-3xl font-bold text-white text-center mb-12">Simple Pricing</h2>
-          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">,
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (}
-              <div key={index} className={`relative bg-slate-800/50 p-8 rounded-lg border ${plan.popular ? 'border-purple-500 ring-2 ring-purple-500/20' : 'border-gray-700'} hover:border-purple-500/50 transition-all duration-300`}>
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
+            {pricingPlans.map((plan index) => (}
+              <div key={index} className={`relative bg-slate-800/50 p-8 rounded-lg border ${plan.popular ? 'border-purple-500 ring-2 ring-purple-500/20' : 'border-gray-700'} hover: border-purple-500/50 transition-all duration-300`}>
                 {plan.popular && (}
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <div className="bg-purple-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
@@ -319,10 +318,10 @@ const AIExpenseTracker: React.FC = memo(() => {}
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular;
                       ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white hover: from-purple-700 hover:to-blue-700'}
-                      : 'border-2 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-slate-900'}
+                      : 'border-2 border-purple-400 text-purple-400 hover: bg-purple-400 hover:text-slate-900'}
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${}
                     plan.popular
-                      ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:from-purple-700 hover:to-blue-700'
+                      ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white hover: from-purple-700 hover:to-blue-700'
                       : 'border-2 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-slate-900'
                   }`}
                 >Get Started</a>

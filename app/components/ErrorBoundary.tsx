@@ -33,9 +33,9 @@ class ErrorBoundary extends Component<Props, State> {
     
     // Send to analytics
     if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as Window & { gtag?: (...args: unknown[]) => void }).gtag?.('event', 'exception', {
+      (window as any).gtag('event', 'exception', {
         description: error.message,
-        fatal: false,
+        fatal: false
       });
     }
   }
@@ -85,10 +85,10 @@ class ErrorBoundary extends Component<Props, State> {
               </details>
             )}
             
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm: flex-row gap-4">
               <button
                 onClick={this.handleRetry}
-                className="flex items-center justify-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+                className="flex items-center justify-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover: from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
               >
                 <RefreshCw className="w-4 h-4" />
                 Try Again
@@ -96,7 +96,7 @@ class ErrorBoundary extends Component<Props, State> {
               
               <button
                 onClick={this.handleGoHome}
-                className="flex items-center justify-center gap-2 border-2 border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+                className="flex items-center justify-center gap-2 border-2 border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold hover: bg-cyan-400 hover:text-slate-900 transition-all duration-300"
               >
                 <Home className="w-4 h-4" />
                 Go Home
@@ -104,7 +104,7 @@ class ErrorBoundary extends Component<Props, State> {
             </div>
             
             <div className="mt-6 text-sm text-gray-400">
-              <p>If this problem persists, please contact us:</p>
+              <p>If this problem persists please contact us:</p>
               <a 
                 href="tel:+13024640950" 
                 className="text-cyan-400 hover:text-cyan-300 transition-colors"

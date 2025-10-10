@@ -31,7 +31,7 @@ interface PerformanceEnhancerProps {}
 const PerformanceEnhancer: React.FC<PerformanceEnhancerProps>= ({
 const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({}
   enableWebVitals = true,
-const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({,
+const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
   enableWebVitals = true;
   enableResourceTiming = true,
   enableMemoryMonitoring = true,
@@ -62,26 +62,26 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({,
   // Performance metrics storage;
   const performanceMetrics = useMemo(() => ({
   performanceBudget = {}
-    lcp: 2500,
-    fid: 100,
-    cls: 0.1,
-    fcp: 1800,
+    lcp: 2500
+    fid: 100
+    cls: 0.1
+    fcp: 1800
     ttfb: 600
   }
 }) => {}
   // Performance metrics storage
   const performanceMetrics = useMemo(() => ({}
-    webVitals: {} as Record<string, any>,
-    resourceTiming: [] as PerformanceEntry[],
-    userTiming: [] as PerformanceEntry[],
+    webVitals:  {} as Record<string, any>,
+    resourceTiming: [] as PerformanceEntry[]
+    userTiming: [] as PerformanceEntry[]
     memoryUsage: {} as any,
-    networkInfo: {} as any,
-    longTasks: [] as PerformanceEntry[],
-    layoutShifts: [] as PerformanceEntry[],
+    networkInfo:  {} as any,
+    longTasks: [] as PerformanceEntry[]
+    layoutShifts: [] as PerformanceEntry[]
     errors: [] as any[]}), []);
 
   // Enhanced error reporting;
-  const reportError = useCallback((error: any, context?: string) => {
+  const reportError = useCallback((error: any context?: string) => {
     if (!enableErrorReporting) return;
 
     const errorData = {
@@ -93,16 +93,16 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({,
       userAgent: navigator.userAgent;
       performanceMetrics: performanceMetrics;
   // Enhanced error reporting
-  const reportError = useCallback((error: any, context?: string) => {}
+  const reportError = useCallback((error: any context?: string) => {}
     if (!enableErrorReporting) return;
 
     const errorData = {}
-      message: error.message || 'Unknown error',
-      stack: error.stack,
-      context: context || 'PerformanceEnhancer',
-      timestamp: Date.now(),
-      url: window.location.href,
-      userAgent: navigator.userAgent,
+      message: error.message || 'Unknown error'
+      stack: error.stack
+      context: context || 'PerformanceEnhancer'
+      timestamp: Date.now()
+      url: window.location.href
+      userAgent: navigator.userAgent
       performanceMetrics: performanceMetrics
     };
 
@@ -113,8 +113,8 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({,
       (window as any).gtag('event', 'performance_error', {)
         event_category: 'Performance')
         event_label: context || 'PerformanceEnhancer')
-        value: 1),
-        custom_parameter_1: error.message),
+        value: 1)
+        custom_parameter_1: error.message)
         custom_parameter_2: error.stack;
     }
 
@@ -124,17 +124,17 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({,
     // Send to analytics
     if (enableAnalytics && typeof window !== 'undefined' && 'gtag' in window) {}
       (window as any).gtag('event', 'performance_error', {)}
-        event_category: 'Performance',
-        event_label: context || 'PerformanceEnhancer',
-        value: 1,
-        custom_parameter_1: error.message,
+        event_category: 'Performance'
+        event_label: context || 'PerformanceEnhancer'
+        value: 1
+        custom_parameter_1: error.message
         custom_parameter_2: error.stack
 
     }
 
     // Send to custom endpoint
     if (typeof window !== 'undefined' && navigator.sendBeacon) {}
-      navigator.sendBeacon('/api/analytics/performance-errors', JSON.stringify(errorData));
+      navigator.sendBeacon('/api/analytics/performance-errors', JSON.stringify(errorData);
     }
   }, [enableErrorReporting, enableAnalytics, performanceMetrics]);
 
@@ -166,11 +166,11 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({,
         // Send to analytics
         if (enableAnalytics && typeof window !== 'undefined' && 'gtag' in window) {}
           (window as any).gtag('event', 'web_vitals', {)}
-            event_category: 'Performance',
+            event_category: 'Performance'
             event_label: metric.name)
-    value: Math.round(metric.value),
-            non_interaction: true,
-            custom_parameter_1: metric.delta,
+    value: Math.round(metric.value)
+            non_interaction: true
+            custom_parameter_1: metric.delta
             custom_parameter_2: metric.id
 
           (window as any).gtag('event', 'web_vitals', {)
@@ -188,14 +188,14 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({,
         // Send to custom endpoint
         if (typeof window !== 'undefined' && navigator.sendBeacon) {}
           const data = JSON.stringify({)}
-            name: metric.name,
-            value: metric.value,
-            delta: metric.delta,
-            id: metric.id,
+            name: metric.name
+            value: metric.value
+            delta: metric.delta
+            id: metric.id
             navigationType: metric.navigationType)
-    timestamp: Date.now(),
-            url: window.location.href,
-            userAgent: navigator.userAgent,
+    timestamp: Date.now()
+            url: window.location.href
+            userAgent: navigator.userAgent
             performanceMetrics: performanceMetrics
 
           const data = JSON.stringify({)
@@ -208,7 +208,7 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({,
             url: window.location.href;
             userAgent: navigator.userAgent;
             performanceMetrics: performanceMetrics;
-          navigator.sendBeacon('/api/analytics/performance', data);
+          navigator.sendBeacon('/api/analytics/performance' data);
         }
 
         if (enableConsoleLogging) {}
@@ -312,9 +312,9 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({,
           // Check for memory leaks;
           if (memory.usedJSHeapSize > memory.jsHeapSizeLimit * 0.8) {
           performanceMetrics.memoryUsage = {}
-            usedJSHeapSize: memory.usedJSHeapSize,
-            totalJSHeapSize: memory.totalJSHeapSize,
-            jsHeapSizeLimit: memory.jsHeapSizeLimit,
+            usedJSHeapSize: memory.usedJSHeapSize
+            totalJSHeapSize: memory.totalJSHeapSize
+            jsHeapSizeLimit: memory.jsHeapSizeLimit
             timestamp: Date.now()
           };
 
@@ -352,12 +352,12 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({,
             downlink: connection.downlink;
             rtt: connection.rtt;
             saveData: connection.saveData;
-            timestamp: Date.now(),
+            timestamp: Date.now()
           performanceMetrics.networkInfo = {}
-            effectiveType: connection.effectiveType,
-            downlink: connection.downlink,
-            rtt: connection.rtt,
-            saveData: connection.saveData,
+            effectiveType: connection.effectiveType
+            downlink: connection.downlink
+            rtt: connection.rtt
+            saveData: connection.saveData
             timestamp: Date.now()
           };
 
@@ -400,7 +400,7 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({,
         reportError(error, 'LongTaskMonitoring');
       }
 
-    observer.observe({ entryTypes: ['longtask'] });
+    observer.observe({ entryTypes: ['longtask'] };
 
     return () => observer.disconnect();
   }, [enableLongTaskMonitoring, enableConsoleLogging, performanceMetrics, reportError]);
@@ -433,7 +433,7 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({,
         reportError(error, 'LayoutShiftMonitoring');
       }
 
-    observer.observe({ entryTypes: ['layout-shift'] });
+    observer.observe({ entryTypes: ['layout-shift'] };
 
     return () => observer.disconnect();
   }, [enableLayoutShiftMonitoring, enableConsoleLogging, performanceMetrics, reportError]);
@@ -484,14 +484,14 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({,
     const reportPerformanceSummary = () => {}
       try {}
         const summary = {}
-          webVitals: performanceMetrics.webVitals,
-          resourceCount: performanceMetrics.resourceTiming.length,
-          longTaskCount: performanceMetrics.longTasks.length,
-          layoutShiftCount: performanceMetrics.layoutShifts.length,
-          memoryUsage: performanceMetrics.memoryUsage,
-          networkInfo: performanceMetrics.networkInfo,
-          errorCount: performanceMetrics.errors.length,
-          timestamp: Date.now(),
+          webVitals: performanceMetrics.webVitals
+          resourceCount: performanceMetrics.resourceTiming.length
+          longTaskCount: performanceMetrics.longTasks.length
+          layoutShiftCount: performanceMetrics.layoutShifts.length
+          memoryUsage: performanceMetrics.memoryUsage
+          networkInfo: performanceMetrics.networkInfo
+          errorCount: performanceMetrics.errors.length
+          timestamp: Date.now()
           url: window.location.href;
         };
 
@@ -499,16 +499,16 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({,
           (window as any).gtag('event', 'performance_summary', {
         if (enableAnalytics && typeof window !== 'undefined' && 'gtag' in window) {}
           (window as any).gtag('event', 'performance_summary', {)}
-            event_category: 'Performance',
-            event_label: 'Summary',
+            event_category: 'Performance'
+            event_label: 'Summary'
             value: 1)
     custom_parameter_1: JSON.stringify(summary)
 
           (window as any).gtag('event', 'performance_summary', {)
-            event_category: 'Performance'),
-            event_label: 'Summary'),
-            value: 1),
-            custom_parameter_1: JSON.stringify(summary),
+            event_category: 'Performance')
+            event_label: 'Summary')
+            value: 1)
+            custom_parameter_1: JSON.stringify(summary)
 }
 
         if (enableConsoleLogging) {}

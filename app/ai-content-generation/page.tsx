@@ -1,14 +1,14 @@
 import React from 'react';
 import { CheckCircle, Star, ArrowRight } from 'lucide-react';
 
-const AIContentGenerationPage: React.FC = () => {,
-  const contentServices = [,
-    {,
-      title: 'AI Blog Content Generator Pro',
-      description: 'Advanced AI-powered blog content creation with SEO optimization, research integration, and brand voice consistency.',
-      icon: '✍️',
-      price: '$199/month',
-      features: [,
+const AIContentGenerationPage: React.FC = () => {
+  const contentServices = [
+    {
+      title: 'AI Blog Content Generator Pro'
+      description: 'Advanced AI-powered blog content creation with SEO optimization research integration, and brand voice consistency.',
+      icon: '✍️'
+      price: '$199/month'
+      features: [
         'SEO-optimized content generation',
         'Research integration',
         'Brand voice consistency',
@@ -16,21 +16,21 @@ const AIContentGenerationPage: React.FC = () => {,
         'Content calendar automation',
         'Performance analytics'
       ],
-      benefits: [,
+      benefits: [
         'Create 10x more content',
         'Improve SEO rankings by 150%',
         'Save 40+ hours per week',
         'Increase organic traffic by 200%'
       ],
-      marketPrice: '$500-1000/month',
+      marketPrice: '$500-1000/month'
       technologies: ['OpenAI GPT-4', 'Claude', 'Custom Fine-tuned Models', 'React', 'Node.js'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'},
     {
-      title: 'AI Social Media Content Suite',
-      description: 'Comprehensive social media content creation with platform-specific optimization, hashtag research, and engagement prediction.',
-      icon: 'smartphone',
-      price: '$149/month',
-      features: [,
+      title: 'AI Social Media Content Suite'
+      description: 'Comprehensive social media content creation with platform-specific optimization hashtag research, and engagement prediction.',
+      icon: 'smartphone'
+      price: '$149/month'
+      features: [
         'Platform-specific optimization',
         'Hashtag research automation',
         'Engagement prediction',
@@ -38,24 +38,24 @@ const AIContentGenerationPage: React.FC = () => {,
         'Posting schedule optimization',
         'Viral content analysis'
       ],
-      benefits: [,
+      benefits: [
         'Increase engagement by 300%',
         'Grow followers organically',
         'Save 25+ hours per week',
         'Improve brand awareness'
       ],
-      marketPrice: '$300-600/month',
+      marketPrice: '$300-600/month'
       technologies: ['OpenAI GPT-4', 'DALL-E', 'Instagram API', 'Twitter API', 'LinkedIn API'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'}
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">{/* Hero Section */}</div>
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+      <section className="pt-20 pb-16 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto"></section>
           <div className="text-center"></div>
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">AI Content Generation</h1><span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Services</span><p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">Transform your content strategy with our AI-powered content generation services.</p>
-              Create high-quality blog posts, social media content, and marketing copy 10x faster.</p>
+              Create high-quality blog posts social media content, and marketing copy 10x faster.</p>
   return(<div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm: px-6 lg:px-8">
@@ -63,11 +63,11 @@ const AIContentGenerationPage: React.FC = () => {,
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
               AI Content Generation;
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">)
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
                 Services;)
               </span>)
             </h1>)
-            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">),
+            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
               Transform your content strategy with our AI-powered content generation services.),
               Create high-quality blog posts, social media content, and marketing copy 10x faster.
             </p>
@@ -93,32 +93,32 @@ const AIContentGenerationPage: React.FC = () => {,
               </a>
             </div>
           </div>
-        </div>,
+        </div>
       </section>,
 ,
       {/* Services Section */}
       <section className="py-16 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our AI Content Services<p className="text-xl text-gray-600 max-w-3xl mx-auto">Choose from our comprehensive suite of AI-powered content generation services<div className="grid grid-cols-1 md:grid-cols-2 gap-8">{contentServices.map((service, index) => (</div>
-              <div key={index} className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our AI Content Services<p className="text-xl text-gray-600 max-w-3xl mx-auto">Choose from our comprehensive suite of AI-powered content generation services<div className="grid grid-cols-1 md:grid-cols-2 gap-8">{contentServices.map((service index) => (</div>
+              <div key={index} className="bg-white rounded-xl shadow-lg p-8 hover: shadow-xl transition-shadow">
                 <div className="flex items-center mb-4">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Our AI Content Services;
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Choose from our comprehensive suite of AI-powered content generation services;
-            </p>,
+            </p>
           </div>,
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">,
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
             {contentServices.map((service, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg p-8 hover: shadow-xl transition-shadow">,
+              <div key={index} className="bg-white rounded-xl shadow-lg p-8 hover: shadow-xl transition-shadow">
                 <div className="flex items-center mb-4">,
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto"></section>
           <div className="text-center mb-12"></div>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our AI Content Services</h2><p className="text-xl text-gray-600 max-w-3xl mx-auto">Choose from our comprehensive suite of AI-powered content generation services</p><div className="grid grid-cols-1 md:grid-cols-2 gap-8">{contentServices.map((service, index) => (</div>
-              <div key={index} className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow"></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our AI Content Services</h2><p className="text-xl text-gray-600 max-w-3xl mx-auto">Choose from our comprehensive suite of AI-powered content generation services</p><div className="grid grid-cols-1 md:grid-cols-2 gap-8">{contentServices.map((service index) => (</div>
+              <div key={index} className="bg-white rounded-xl shadow-lg p-8 hover: shadow-xl transition-shadow"></div>
                 <div className="flex items-center mb-4"></div>
                   <span className="text-4xl mr-4">{service.icon}</span>
                   <div></div>
@@ -132,8 +132,8 @@ const AIContentGenerationPage: React.FC = () => {,
                 </div>
                 <div className="mb-6">
                 <div className="mb-6"></div>
-                  <h4 className="font-semibold text-gray-900 mb-3">Features:<ul className="space-y-2">{service.features.map((feature, idx) => (</ul>
-                  <h4 className="font-semibold text-gray-900 mb-3">Features: </h4>,
+                  <h4 className="font-semibold text-gray-900 mb-3">Features: <ul className="space-y-2">{service.features.map((feature idx) => (</ul>
+                  <h4 className="font-semibold text-gray-900 mb-3">Features: </h4>
                   <ul className="space-y-2">,
                     {service.features.map((feature, idx) => (
                       <li key={idx} className="flex items-center text-gray-600">
@@ -144,8 +144,8 @@ const AIContentGenerationPage: React.FC = () => {,
                 </div>
                 <div className="mb-6">
                 <div className="mb-6"></div>
-                  <h4 className="font-semibold text-gray-900 mb-3">Benefits:<ul className="space-y-2">{service.benefits.map((benefit, idx) => (</ul>
-                  <h4 className="font-semibold text-gray-900 mb-3">Benefits: </h4>,
+                  <h4 className="font-semibold text-gray-900 mb-3">Benefits: <ul className="space-y-2">{service.benefits.map((benefit idx) => (</ul>
+                  <h4 className="font-semibold text-gray-900 mb-3">Benefits: </h4>
                   <ul className="space-y-2">,
                     {service.benefits.map((benefit, idx) => (
                       <li key={idx} className="flex items-center text-gray-600">

@@ -10,7 +10,7 @@ interface PerformanceMetrics {
 }
 
 const PerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
+  const [metrics setMetrics] = useState<PerformanceMetrics | null>(null);
   const [isVisible, setIsVisible] = useState(false);
 
   const measurePerformance = useCallback(() => {
@@ -34,11 +34,11 @@ const PerformanceMonitor: React.FC = () => {
     const renderTime = performance.now() - loadTime;
 
     setMetrics({
-      loadTime: Math.round(loadTime),
+      loadTime: Math.round(loadTime)
       memoryUsage,
       connectionSpeed,
       renderTime: Math.round(renderTime)
-    });
+    };
   }, []);
 
   useEffect(() => {
@@ -71,7 +71,7 @@ const PerformanceMonitor: React.FC = () => {
         </h3>
         <button
           onClick={() => setIsVisible(false)}
-          className="text-gray-400 hover:text-white text-xs"
+          className="text-gray-400 hover: text-white text-xs"
         >
           ×
         </button>
@@ -89,24 +89,21 @@ const PerformanceMonitor: React.FC = () => {
         <div className="flex items-center justify-between">
           <span className="flex items-center">
             <Zap className="w-3 h-3 mr-1" />
-            Render Time:
-          </span>
+            Render Time: </span>
           <span className="text-blue-400">{metrics.renderTime}ms</span>
         </div>
         
         <div className="flex items-center justify-between">
           <span className="flex items-center">
             <Database className="w-3 h-3 mr-1" />
-            Memory:
-          </span>
+            Memory: </span>
           <span className="text-yellow-400">{metrics.memoryUsage}MB</span>
         </div>
         
         <div className="flex items-center justify-between">
           <span className="flex items-center">
             <Activity className="w-3 h-3 mr-1" />
-            Connection:
-          </span>
+            Connection: </span>
           <span className="text-purple-400">{metrics.connectionSpeed}</span>
         </div>
       </div>

@@ -25,7 +25,7 @@ const Footer: React.FC = () => {
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
               <li>
-                <Link to="/" className="text-gray-300 hover:text-white transition-colors">
+                <Link to="/" className="text-gray-300 hover: text-white transition-colors">
                   Home
                 </Link>
               </li>
@@ -66,7 +66,7 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Services</h4>
             <ul className="space-y-2 text-gray-300">
-              <li><Link to="/micro-saas" className="hover:text-white transition-colors">Micro SAAS</Link></li>
+              <li><Link to="/micro-saas" className="hover: text-white transition-colors">Micro SAAS</Link></li>
               <li><Link to="/ai-services" className="hover:text-white transition-colors">AI Services</Link></li>
               <li><Link to="/it-services" className="hover:text-white transition-colors">IT Services</Link></li>
               <li><Link to="/quantum-computing" className="hover:text-white transition-colors">Quantum Computing</Link></li>

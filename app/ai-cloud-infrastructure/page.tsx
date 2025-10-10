@@ -3,7 +3,7 @@ import React, { useState, useCallback, memo } from 'react';
 import { Helmet } from 'react-helmet-async';
 
 
-const AICloudInfrastructurePage: React.FC = memo(() => {,
+const AICloudInfrastructurePage: React.FC = memo(() => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   React.useEffect(() => {
@@ -12,34 +12,34 @@ const AICloudInfrastructurePage: React.FC = memo(() => {,
 
   const features = [
     {
-      icon: Cloud;
-      title: 'AI-Powered Cloud Management',
-      description: 'Intelligent cloud resource optimization and automated scaling based on demand patterns',
-      color: 'text-purple-400'},
+    icon: Cloud;,
+    title: 'AI-Powered Cloud Management',
+    description: 'Intelligent cloud resource optimization and automated scaling based on demand patterns',
+    color: 'text-purple-400'},
     {
-      icon: Server;
-      title: 'Hybrid Cloud Solutions',
-      description: 'Seamless integration between on-premises and cloud infrastructure with AI-driven optimization',
-      color: 'text-blue-400'},
+    icon: Server;,
+    title: 'Hybrid Cloud Solutions',
+    description: 'Seamless integration between on-premises and cloud infrastructure with AI-driven optimization',
+    color: 'text-blue-400'},
     {
-      icon: Database;
-      title: 'Smart Data Management',
-      description: 'AI-powered data storage, backup, and recovery solutions with predictive analytics',
-      color: 'text-green-400'},
+    icon: Database;,
+    title: 'Smart Data Management',
+    description: 'AI-powered data storage backup, and recovery solutions with predictive analytics',
+    color: 'text-green-400'},
     {
-      icon: Shield;
-      title: 'Enterprise Security',
-      description: 'Advanced security monitoring and compliance management for cloud infrastructure',
-      color: 'text-orange-400'}
+    icon: Shield;,
+    title: 'Enterprise Security',
+    description: 'Advanced security monitoring and compliance management for cloud infrastructure',
+    color: 'text-orange-400'}
   ];
 
   const pricingPlans = [
     {
       name: 'Starter'
-      price: '$999',
-      period: '/month',
-      description: 'Perfect for small businesses',
-      features: [,
+      price: '$999'
+      period: '/month'
+      description: 'Perfect for small businesses'
+      features: [
         'Up to 10 servers',
         'Basic cloud management',
         'Standard security',
@@ -51,11 +51,11 @@ const AICloudInfrastructurePage: React.FC = memo(() => {,
       popular: false;
     },
     {
-      name: 'Professional',
-      price: '$2,499',
-      period: '/month',
-      description: 'Ideal for growing companies',
-      features: [,
+      name: 'Professional'
+      price: '$2499',
+      period: '/month'
+      description: 'Ideal for growing companies'
+      features: [
         'Up to 50 servers',
         'Advanced AI optimization',
         'Enhanced security',
@@ -68,11 +68,11 @@ const AICloudInfrastructurePage: React.FC = memo(() => {,
       popular: true;
     },
     {
-      name: 'Enterprise',
-      price: '$4,999',
-      period: '/month',
-      description: 'For large organizations',
-      features: [,
+      name: 'Enterprise'
+      price: '$4999',
+      period: '/month'
+      description: 'For large organizations'
+      features: [
         'Unlimited servers',
         'Custom AI models',
         '24/7 monitoring',
@@ -88,32 +88,32 @@ const AICloudInfrastructurePage: React.FC = memo(() => {,
 
   const useCases = [
     {
-      title: 'Cloud Migration',
-      description: 'Seamless migration to cloud with AI-powered optimization and cost reduction',
-      icon: Cloud;
-      result: '50% cost savings'},
+    title: 'Cloud Migration',
+    description: 'Seamless migration to cloud with AI-powered optimization and cost reduction',
+    icon: Cloud;,
+    result: '50% cost savings'},
     {
-      title: 'Auto Scaling',
-      description: 'Intelligent scaling based on demand patterns and performance metrics',
-      icon: Server;
-      result: '99.9% uptime'},
+    title: 'Auto Scaling',
+    description: 'Intelligent scaling based on demand patterns and performance metrics',
+    icon: Server;,
+    result: '99.9% uptime'},
     {
-      title: 'Data Backup',
-      description: 'AI-powered backup and disaster recovery with predictive failure detection',
-      icon: Database;
-      result: 'Zero data loss'},
+    title: 'Data Backup',
+    description: 'AI-powered backup and disaster recovery with predictive failure detection',
+    icon: Database;,
+    result: 'Zero data loss'},
     {
-      title: 'Security Monitoring',
-      description: 'Continuous security monitoring and threat detection across cloud infrastructure',
-      icon: Shield;
-      result: '24/7 protection'}
+    title: 'Security Monitoring',
+    description: 'Continuous security monitoring and threat detection across cloud infrastructure',
+    icon: Shield;,
+    result: '24/7 protection'}
   ];
 
   const benefits = [
-    { metric: '99.9%', label: 'Uptime SLA', color: 'text-green-400' },
-    { metric: '50%', label: 'Cost Reduction', color: 'text-blue-400' },
-    { metric: '24/7', label: 'Monitoring', color: 'text-purple-400' },
-    { metric: 'Zero', label: 'Downtime', color: 'text-orange-400' }
+    { metric: '99.9%' label: 'Uptime SLA' color: 'text-green-400' },
+    { metric: '50%' label: 'Cost Reduction' color: 'text-blue-400' },
+    { metric: '24/7' label: 'Monitoring' color: 'text-purple-400' },
+    { metric: 'Zero' label: 'Downtime' color: 'text-orange-400' }
   ];
 
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -131,10 +131,10 @@ const AICloudInfrastructurePage: React.FC = memo(() => {,
         <section className="text-center mb-16">
           <div className="inline-flex items-center space-x-2 bg-blue-600/20 text-blue-400 px-4 py-2 rounded-full text-sm font-medium mb-6"></section>
             <Cloud className="w-4 h-4" />
-            <span>AI-Powered Cloud</span><h1 className="text-4xl md:text-6xl font-bold text-white mb-6">AI Cloud Infrastructure</h1><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Transform your cloud infrastructure with AI-powered management, optimization, and security.</p>
+            <span>AI-Powered Cloud</span><h1 className="text-4xl md: text-6xl font-bold text-white mb-6">AI Cloud Infrastructure</h1><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Transform your cloud infrastructure with AI-powered management optimization, and security.</p>
             Reduce costs by 50% and achieve 99.9% uptime with intelligent cloud solutions.</p>
-        <meta property="og:type" content="website" />,
-        <meta property="og:url" content="https://ziontechgroup.com/ai-cloud-infrastructure" />,
+        <meta property="og: type" content="website" />
+        <meta property="og: url" content="https://ziontechgroup.com/ai-cloud-infrastructure" />
       </Helmet>,
 ,
       <div className="container mx-auto px-4 py-16">,
@@ -149,7 +149,7 @@ const AICloudInfrastructurePage: React.FC = memo(() => {,
             AI Cloud Infrastructure;)
           </h1>)
 )
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">),
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your cloud infrastructure with AI-powered management, optimization, and security.
             Reduce costs by 50% and achieve 99.9% uptime with intelligent cloud solutions.
           </p>
@@ -174,21 +174,21 @@ const AICloudInfrastructurePage: React.FC = memo(() => {,
             >
               Get Cloud Assessment;
             </a>
-          </div>,
+          </div>
         </section>,
 ,
         {/* Benefits */}
         <section className="mb-16">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{benefits.map((benefit, index) => (</div>
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">{benefits.map((benefit index) => (</div>
               </div><div key={index} className="bg-slate-800/50 p-6 rounded-lg border border-blue-500/20">
                 <div className={`text-3xl font-bold ${benefit.color} mb-2`}>{benefit.metric}<div className="text-white font-semibold mb-2">{benefit.label}<div className="text-gray-400 text-sm">Industry-leading cloud performance</div>
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">,
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
             {benefits.map((benefit, index) => (
               <div key={index} className="bg-slate-800/50 p-6 rounded-lg border border-blue-500/20">
                 <div className={`text-3xl font-bold ${benefit.color} mb-2`}>{benefit.metric}</div>
                 <div className="text-white font-semibold mb-2">{benefit.label}</div>
                 <div className="text-gray-400 text-sm">Industry-leading cloud performance</div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{benefits.map((benefit, index) => (</section>
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">{benefits.map((benefit index) => (</section>
               </div><div key={index} className="bg-slate-800/50 p-6 rounded-lg border border-blue-500/20"></div>
                 <div className={`text-3xl font-bold ${benefit.color} mb-2`}>{benefit.metric}</div><div className="text-white font-semibold mb-2">{benefit.label}</div><div className="text-gray-400 text-sm">Industry-leading cloud performance</div>
               </div>
@@ -198,17 +198,17 @@ const AICloudInfrastructurePage: React.FC = memo(() => {,
 
         {/* Features */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Advanced Cloud Features<div className="grid grid-cols-1 md:grid-cols-2 gap-8">{features.map((feature, index) => (</div>
-              </div><div key={index} className="bg-slate-800/30 p-6 rounded-lg border border-gray-700 hover:border-blue-500/50 transition-all duration-300">
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Advanced Cloud Features<div className="grid grid-cols-1 md: grid-cols-2 gap-8">{features.map((feature index) => (</div>
+              </div><div key={index} className="bg-slate-800/30 p-6 rounded-lg border border-gray-700 hover: border-blue-500/50 transition-all duration-300">
                 <div className="flex items-start space-x-4">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Advanced Cloud Features</h2>
-          <div className="grid grid-cols-1 md: grid-cols-2 gap-8">,
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-slate-800/30 p-6 rounded-lg border border-gray-700 hover: border-blue-500/50 transition-all duration-300">,
+              <div key={index} className="bg-slate-800/30 p-6 rounded-lg border border-gray-700 hover: border-blue-500/50 transition-all duration-300">
                 <div className="flex items-start space-x-4">,
                   <div className={`p-3 rounded-lg bg-slate-700 ${feature.color}`}>
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Advanced Cloud Features</h2><div className="grid grid-cols-1 md:grid-cols-2 gap-8">{features.map((feature, index) => (</section>
-              </div><div key={index} className="bg-slate-800/30 p-6 rounded-lg border border-gray-700 hover:border-blue-500/50 transition-all duration-300"></div>
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Advanced Cloud Features</h2><div className="grid grid-cols-1 md: grid-cols-2 gap-8">{features.map((feature index) => (</section>
+              </div><div key={index} className="bg-slate-800/30 p-6 rounded-lg border border-gray-700 hover: border-blue-500/50 transition-all duration-300"></div>
                 <div className="flex items-start space-x-4"></div>
                   <div className={`p-3 rounded-lg bg-slate-700 ${feature.color}`}></div>
                     <feature.icon className="w-6 h-6" />
@@ -224,23 +224,23 @@ const AICloudInfrastructurePage: React.FC = memo(() => {,
 
         {/* Use Cases */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Cloud Solutions<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{useCases.map((useCase, index) => (</div>
-              </div><div key={index} className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-lg border border-gray-700 hover:border-blue-500/50 transition-all duration-300">
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Cloud Solutions<div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">{useCases.map((useCase index) => (</div>
+              </div><div key={index} className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-lg border border-gray-700 hover: border-blue-500/50 transition-all duration-300">
                 <div className="flex items-center justify-between mb-4">
                   <useCase.icon className="w-8 h-8 text-blue-400" />
                   <div className="text-sm font-semibold text-green-400">{useCase.result}<h3 className="text-lg font-semibold text-white mb-2">{useCase.title}<p className="text-gray-400 text-sm">{useCase.description}</p>
           <h2 className="text-3xl font-bold text-white text-center mb-12">Cloud Solutions</h2>
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">,
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
             {useCases.map((useCase, index) => (
-              <div key={index} className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-lg border border-gray-700 hover: border-blue-500/50 transition-all duration-300">,
+              <div key={index} className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-lg border border-gray-700 hover: border-blue-500/50 transition-all duration-300">
                 <div className="flex items-center justify-between mb-4">,
                   <useCase.icon className="w-8 h-8 text-blue-400" />,
                   <div className="text-sm font-semibold text-green-400">{useCase.result}</div>
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">{useCase.title}</h3>
                 <p className="text-gray-400 text-sm">{useCase.description}</p>
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Cloud Solutions</h2><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{useCases.map((useCase, index) => (</section>
-              </div><div key={index} className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-lg border border-gray-700 hover:border-blue-500/50 transition-all duration-300"></div>
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Cloud Solutions</h2><div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">{useCases.map((useCase index) => (</section>
+              </div><div key={index} className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-lg border border-gray-700 hover: border-blue-500/50 transition-all duration-300"></div>
                 <div className="flex items-center justify-between mb-4"></div>
                   <useCase.icon className="w-8 h-8 text-blue-400" />
                   <div className="text-sm font-semibold text-green-400">{useCase.result}</div><h3 className="text-lg font-semibold text-white mb-2">{useCase.title}</h3><p className="text-gray-400 text-sm">{useCase.description}</p>
@@ -251,15 +251,15 @@ const AICloudInfrastructurePage: React.FC = memo(() => {,
 
         {/* Pricing */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Cloud Infrastructure Plans<div className="grid grid-cols-1 md:grid-cols-3 gap-8">{pricingPlans.map((plan, index) => (<div key={index} className={`relative bg-slate-800/50 p-8 rounded-lg border ${plan.popular ? 'border-blue-500 ring-2 ring-blue-500/20' : 'border-gray-700'} hover:border-blue-500/50 transition-all duration-300`}>{plan.popular && (</div>
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Cloud Infrastructure Plans<div className="grid grid-cols-1 md: grid-cols-3 gap-8">{pricingPlans.map((plan index) => (<div key={index} className={`relative bg-slate-800/50 p-8 rounded-lg border ${plan.popular ? 'border-blue-500 ring-2 ring-blue-500/20' : 'border-gray-700'} hover: border-blue-500/50 transition-all duration-300`}>{plan.popular && (</div>
                   </div><div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Cloud Infrastructure Plans</h2><div className="grid grid-cols-1 md:grid-cols-3 gap-8">{pricingPlans.map((plan, index) => (</section><div key={index} className={`relative bg-slate-800/50 p-8 rounded-lg border ${plan.popular ? 'border-blue-500 ring-2 ring-blue-500/20' : 'border-gray-700'} hover:border-blue-500/50 transition-all duration-300`}>{plan.popular && (</div>
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Cloud Infrastructure Plans</h2><div className="grid grid-cols-1 md: grid-cols-3 gap-8">{pricingPlans.map((plan index) => (</section><div key={index} className={`relative bg-slate-800/50 p-8 rounded-lg border ${plan.popular ? 'border-blue-500 ring-2 ring-blue-500/20' : 'border-gray-700'} hover: border-blue-500/50 transition-all duration-300`}>{plan.popular && (</div>
                   </div><div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
                     <div className="bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-semibold">Most Popular</div>
           <h2 className="text-3xl font-bold text-white text-center mb-12">Cloud Infrastructure Plans</h2>
-          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">,
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
-              <div key={index} className={`relative bg-slate-800/50 p-8 rounded-lg border ${plan.popular ? 'border-blue-500 ring-2 ring-blue-500/20' : 'border-gray-700'} hover:border-blue-500/50 transition-all duration-300`}>
+              <div key={index} className={`relative bg-slate-800/50 p-8 rounded-lg border ${plan.popular ? 'border-blue-500 ring-2 ring-blue-500/20' : 'border-gray-700'} hover: border-blue-500/50 transition-all duration-300`}>
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <div className="bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
@@ -283,7 +283,7 @@ const AICloudInfrastructurePage: React.FC = memo(() => {,
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular;
                       ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover: from-blue-700 hover:to-purple-700'}
-                      : 'border-2 border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-slate-900'}
+                      : 'border-2 border-blue-400 text-blue-400 hover: bg-blue-400 hover:text-slate-900'}
                   }`}
                 >Get Started</a>
                 >

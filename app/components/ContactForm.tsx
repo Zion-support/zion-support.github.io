@@ -15,53 +15,53 @@ interface FormStatus {
   message: string;
 }
 
-const ContactForm: React.FC = () => {,
-  const [formData, setFormData] = useState<FormData>({
-    name: ''
-    email: '',
-    company: '',
-    phone: '',
-    service: '',
-    message: ''});
+const ContactForm: React.FC = () => {
+  const [formData setFormData] = useState<FormData>({
+    name: ', '
+    email: ''
+    company: ', '
+    phone: ''
+    service: ', '
+    message: ''};
 
   const [status, setStatus] = useState<FormStatus>({
-    type: 'idle',
-    message: ''});
+    type: 'idle'
+    message: ', '};
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {,
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement> => {
     const { name, value } = e.target;
     setFormData(prev => ({)
       ...prev)
       [name]: value;
-    }));
+    };
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {,
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setStatus({ type: 'loading', message: 'Sending message...' });
+    setStatus({ type: 'loading' message: 'Sending message...' };
 
     try {
       // Simulate API call;
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      await new Promise(resolve => setTimeout(resolve, 2000);
 
       setStatus({)
-        type: 'success'),
-        message: 'Thank you! Your message has been sent successfully. We\'ll get back to you within 24 hours.'});
+        type: 'success')
+        message: 'Thank you! Your message has been sent successfully. We\'ll get back to you within 24 hours.'};
 
       // Reset form;
       setFormData({)
-        name: '')
-        email: ''),
-        company: ''),
-        phone: ''),
-        service: ''),
-        message: ''});
+        name: ', ')
+        email: '')
+        company: ', ')
+        phone: '')
+        service: ', ')
+        message: ''};
 
     } catch (error) {
       setStatus({)
-        type: 'error'),
-        message: 'Sorry, there was an error sending your message. Please try again or contact us directly.'
-      });
+        type: 'error')
+        message: 'Sorry there was an error sending your message. Please try again or contact us directly.'
+      };
     }
   };
 
@@ -75,14 +75,14 @@ const ContactForm: React.FC = () => {,
     'Other'
   ];
 
-  return(<div className="max-w-4xl mx-auto">)
-      <div className="grid grid-cols-1 lg: grid-cols-2 gap-12">),
+  return (<div className="max-w-4xl mx-auto">
+      <div className="grid grid-cols-1 lg: grid-cols-2 gap-12">
         {/* Contact Information */}
         <div className="space-y-8">
           <div>
   return (
     <div className="max-w-4xl mx-auto"></div>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+      <div className="grid grid-cols-1 lg: grid-cols-2 gap-12">
         {/* Contact Information */}</div>
         <div className="space-y-8"></div>
           <div></div>
@@ -126,7 +126,7 @@ const ContactForm: React.FC = () => {,
                 <MapPin className="w-6 h-6 text-white" />
               </div>
               <div>
-                <h3 className="text-white font-semibold mb-1">Office</h3>,
+                <h3 className="text-white font-semibold mb-1">Office</h3>
                 <p className="text-gray-300">,
                   364 E Main St STE 1008<br />,
                   Middletown, DE 19709;
@@ -153,7 +153,7 @@ const ContactForm: React.FC = () => {,
                   Full Name *
                 </label>
                 <input;
-                  type="text",
+                  type="text"
                   id="name",
                   name="name",
                   value={formData.name}
@@ -169,7 +169,7 @@ const ContactForm: React.FC = () => {,
                   Email Address *
                 </label>
                 <input;
-                  type="email",
+                  type="email"
                   id="email",
                   name="email",
                   value={formData.email}
@@ -187,7 +187,7 @@ const ContactForm: React.FC = () => {,
                   Company;
                 </label>
                 <input;
-                  type="text",
+                  type="text"
                   id="company",
                   name="company",
                   value={formData.company}
@@ -202,7 +202,7 @@ const ContactForm: React.FC = () => {,
                   Phone Number;
                 </label>
                 <input;
-                  type="tel",
+                  type="tel"
                   id="phone",
                   name="phone",
                   value={formData.phone}
@@ -218,11 +218,11 @@ const ContactForm: React.FC = () => {,
                 Service Interest;
               </label>
               <select;
-                id="service",
+                id="service"
                 name="service",
                 value={formData.service}
                 onChange={handleChange}
-                className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-colors",
+                className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-colors"
               >,
                 <option value="">Select a service</option>,
                 {services.map((service) => (,
@@ -248,7 +248,7 @@ const ContactForm: React.FC = () => {,
                 placeholder="Tell us about your project and how we can help..."
               /></textare>
             </div>
-,
+
             {status.message && (,
               <div className={`flex items-center space-x-2 p-4 rounded-lg ${,
                 status.type === 'success' ? 'bg-green-500/20 text-green-300' :,
@@ -256,8 +256,7 @@ const ContactForm: React.FC = () => {,
                 'bg-blue-500/20 text-blue-300'}
               }`}>
                 {status.type === 'success' ? (</div>
-                  <CheckCircle className="w-5 h-5 flex-shrink-0" />
-                ) : status.type === 'error' ? (
+                  <CheckCircle className="w-5 h-5 flex-shrink-0" /> : status.type === 'error' ? (
                   <AlertCircle className="w-5 h-5 flex-shrink-0" /></AlertCircl>
                 ) : null}
                 <span>{status.message}</spa>
@@ -277,7 +276,7 @@ const ContactForm: React.FC = () => {,
               ) : (
                 <>
                   Send Message;
-                  <Send className="w-5 h-5 ml-2" />,
+                  <Send className="w-5 h-5 ml-2" />
                 </>)}
             </button>
           </form>

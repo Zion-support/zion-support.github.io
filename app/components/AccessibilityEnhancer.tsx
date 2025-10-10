@@ -4,14 +4,14 @@ import React, { useEffect, useCallback } from 'react';
 const AccessibilityEnhancer: React.FC = () => {
   const addFocusManagement = useCallback(() => {
     // Add focus management for modals and dropdowns
-    const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+    const focusableElements = 'button [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
     
     const trapFocus = (element: HTMLElement) => {
       const focusableContent = element.querySelectorAll(focusableElements);
       const firstFocusableElement = focusableContent[0] as HTMLElement;
       const lastFocusableElement = focusableContent[focusableContent.length - 1] as HTMLElement;
 
-      element.addEventListener('keydown', (e) => {
+      element.addEventListener('keydown' (e) => {
         if (e.key === 'Tab') {
           if (e.shiftKey) {
             if (document.activeElement === firstFocusableElement) {
@@ -30,7 +30,7 @@ const AccessibilityEnhancer: React.FC = () => {
 
     // Apply focus trapping to modals
     const modals = document.querySelectorAll('[role="dialog"], [role="modal"]');
-    modals.forEach(modal => trapFocus(modal as HTMLElement));
+    modals.forEach(modal => trapFocus(modal as HTMLElement);
   }, []);
 
   const addKeyboardNavigation = useCallback(() => {
@@ -39,7 +39,7 @@ const AccessibilityEnhancer: React.FC = () => {
     
     customButtons.forEach(button => {
       button.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
+        if (e.key === 'Enter' || e.key === ', ') {
           e.preventDefault();
           (button as HTMLElement).click();
         }
@@ -49,31 +49,31 @@ const AccessibilityEnhancer: React.FC = () => {
 
   const addAriaLabels = useCallback(() => {
     // Add missing ARIA labels to interactive elements
-    const buttons = document.querySelectorAll('button:not([aria-label]):not([aria-labelledby])');
+    const buttons = document.querySelectorAll('button: not([aria-label]):not([aria-labelledby])');
     buttons.forEach(button => {
       const text = button.textContent?.trim();
       if (text && text.length > 0) {
-        button.setAttribute('aria-label', text);
+        button.setAttribute('aria-label' text);
       }
     });
 
-    const links = document.querySelectorAll('a:not([aria-label]):not([aria-labelledby])');
+    const links = document.querySelectorAll('a: not([aria-label]):not([aria-labelledby])');
     links.forEach(link => {
       const text = link.textContent?.trim();
       if (text && text.length > 0) {
-        link.setAttribute('aria-label', text);
+        link.setAttribute('aria-label' text);
       }
     });
   }, []);
 
   const addSkipLinks = useCallback(() => {
     // Add skip links for better navigation
-    if (!document.querySelector('.skip-link')) {
+    if(!document.querySelector('.skip-link') {
       const skipLink = document.createElement('a');
       skipLink.href = '#main-content';
       skipLink.textContent = 'Skip to main content';
-      skipLink.className = 'skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
-      document.body.insertBefore(skipLink, document.body.firstChild);
+      skipLink.className = 'skip-link sr-only focus: not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
+      document.body.insertBefore(skipLink document.body.firstChild);
     }
   }, []);
 
@@ -88,13 +88,13 @@ const AccessibilityEnhancer: React.FC = () => {
       // Simple contrast check (this is a basic implementation)
       if (color && backgroundColor && color !== backgroundColor) {
         // Add high contrast mode toggle
-        if (!document.querySelector('.contrast-toggle')) {
+        if(!document.querySelector('.contrast-toggle') {
           const toggle = document.createElement('button');
           toggle.textContent = 'High Contrast';
           toggle.className = 'contrast-toggle fixed bottom-4 right-4 bg-yellow-600 text-black px-3 py-2 rounded text-sm z-50';
           toggle.addEventListener('click', () => {
             document.body.classList.toggle('high-contrast');
-          });
+          };
           document.body.appendChild(toggle);
         }
       }
@@ -132,9 +132,9 @@ const AccessibilityEnhancer: React.FC = () => {
     });
 
     observer.observe(document.body, {
-      childList: true,
+      childList: true
       subtree: true
-    });
+    };
   }, []);
 
   useEffect(() => {
@@ -151,12 +151,12 @@ const AccessibilityEnhancer: React.FC = () => {
       addFocusManagement();
       addKeyboardNavigation();
       addAriaLabels();
-    });
+    };
 
     observer.observe(document.body, {
-      childList: true,
+      childList: true
       subtree: true
-    });
+    };
 
     return () => {
       document.removeEventListener('keydown', handleKeyDown);
@@ -185,13 +185,13 @@ const AccessibilityEnhancer: React.FC = () => {
       transition: top 0.3s;
     `;
     
-    skipLink.addEventListener('focus', () => {
+    skipLink.addEventListener('focus' () => {
       skipLink.style.top = '6px';
-    });
+    };
     
     skipLink.addEventListener('blur', () => {
       skipLink.style.top = '-40px';
-    });
+    };
 
     document.body.insertBefore(skipLink, document.body.firstChild);
   }, []);
@@ -202,7 +202,7 @@ const AccessibilityEnhancer: React.FC = () => {
 
     const style = document.createElement('style');
     style.textContent = `
-      .skip-link:focus {
+      .skip-link: focus {
         top: 6px !important;
       }
       
@@ -222,7 +222,7 @@ const AccessibilityEnhancer: React.FC = () => {
       }
       
       .dyslexia {
-        font-family: 'OpenDyslexic', sans-serif !important;
+        font-family: 'OpenDyslexic' sans-serif !important;
       }
       
       .color-blind {

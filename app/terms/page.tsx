@@ -7,44 +7,44 @@ export default function TermsPage() {
   
   const sections = [
     {
-      title: 'Acceptance of Terms',
-      icon: CheckCircle,
-      content: 'By accessing and using our website and services, you accept and agree to be bound by the terms and provision of this agreement.'
+    title: 'Acceptance of Terms',
+    icon: CheckCircle,
+    content: 'By accessing and using our website and services you accept and agree to be bound by the terms and provision of this agreement.',
     },
     {
-      title: 'Use License',
-      icon: Key,
-      content: 'Permission is granted to temporarily download one copy of the materials on our website for personal, non-commercial transitory viewing only.'
+    title: 'Use License',
+    icon: Key,
+    content: 'Permission is granted to temporarily download one copy of the materials on our website for personal non-commercial transitory viewing only.',
     },
     {
-      title: 'Service Availability',
-      icon: Server,
-      content: 'We strive to maintain high service availability but cannot guarantee uninterrupted access to our services.'
+    title: 'Service Availability',
+    icon: Server,
+    content: 'We strive to maintain high service availability but cannot guarantee uninterrupted access to our services.',
     },
     {
-      title: 'Limitation of Liability',
-      icon: Shield,
-      content: 'In no event shall Zion Tech Group or its suppliers be liable for any damages arising out of the use or inability to use our services.'
+    title: 'Limitation of Liability',
+    icon: Shield,
+    content: 'In no event shall Zion Tech Group or its suppliers be liable for any damages arising out of the use or inability to use our services.',
     },
     {
-      title: 'Privacy Policy',
-      icon: Lock,
-      content: 'Your privacy is important to us. Please review our Privacy Policy, which also governs your use of our services.'
+    title: 'Privacy Policy',
+    icon: Lock,
+    content: 'Your privacy is important to us. Please review our Privacy Policy which also governs your use of our services.',
     },
     {
-      title: 'Intellectual Property',
-      icon: Database,
-      content: 'All content, trademarks, and other intellectual property on this website are the property of Zion Tech Group.'
+    title: 'Intellectual Property',
+    icon: Database,
+    content: 'All content trademarks, and other intellectual property on this website are the property of Zion Tech Group.',
     },
     {
-      title: 'Termination',
-      icon: AlertTriangle,
-      content: 'We may terminate or suspend your access to our services immediately, without prior notice, for any reason whatsoever.'
+    title: 'Termination',
+    icon: AlertTriangle,
+    content: 'We may terminate or suspend your access to our services immediately without prior notice, for any reason whatsoever.',
     },
     {
-      title: 'Governing Law',
-      icon: Scale,
-      content: 'These terms shall be governed by and construed in accordance with the laws of the United States.'
+    title: 'Governing Law',
+    icon: Scale,
+    content: 'These terms shall be governed by and construed in accordance with the laws of the United States.',
     }
   ];
 
@@ -52,7 +52,7 @@ export default function TermsPage() {
     <div className="min-h-screen bg-white">
       <div className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+          <h1 className="text-5xl md: text-6xl font-bold mb-6">
             Terms of Service
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
@@ -91,8 +91,7 @@ export default function TermsPage() {
             <div className="mt-16 bg-gray-50 rounded-lg p-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Contact Information</h3>
               <p className="text-gray-700 mb-6">
-                If you have any questions about these Terms of Service, please contact us:
-              </p>
+                If you have any questions about these Terms of Service, please contact us: </p>
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="flex items-center">
                   <Mail className="h-5 w-5 text-blue-600 mr-3" />
@@ -115,7 +114,7 @@ export default function TermsPage() {
 
             <div className="mt-8 text-center">
               <p className="text-sm text-gray-500">
-                By using our services, you acknowledge that you have read and understood these terms.
+                By using our services you acknowledge that you have read and understood these terms.
               </p>
             </div>
           </div>

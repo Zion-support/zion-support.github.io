@@ -5,68 +5,68 @@ import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const AIWebsiteBuilderPage: React.FC = () => {,
-  const features = [,
-    {,
+const AIWebsiteBuilderPage: React.FC = () => {
+  const features = [
+    {
       icon: Code;
-      title: 'AI Code Generation',
-      description: 'Generate clean, optimized code automatically from your descriptions',
+      title: 'AI Code Generation'
+      description: 'Generate clean optimized code automatically from your descriptions',
       benefits: ['Clean code', 'Best practices', 'Auto-optimization']
     },
     {
       icon: Palette;
-      title: 'Smart Design System',
-      description: 'AI-powered design suggestions that match your brand and industry',
+      title: 'Smart Design System'
+      description: 'AI-powered design suggestions that match your brand and industry'
       benefits: ['Brand consistency', 'Industry standards', 'Visual harmony']
     },
     {
       icon: Zap;
-      title: 'Instant Deployment',
-      description: 'Deploy your website in minutes with our automated hosting and CDN',
+      title: 'Instant Deployment'
+      description: 'Deploy your website in minutes with our automated hosting and CDN'
       benefits: ['Fast deployment', 'Global CDN', 'Auto-scaling']
     },
     {
       icon: Smartphone;
-      title: 'Mobile-First Design',
-      description: 'Every website is automatically optimized for all devices and screen sizes',
+      title: 'Mobile-First Design'
+      description: 'Every website is automatically optimized for all devices and screen sizes'
       benefits: ['Responsive design', 'Touch optimization', 'Performance']
     },
     {
       icon: Globe;
-      title: 'SEO Optimization',
-      description: 'Built-in SEO tools and optimization for better search engine rankings',
+      title: 'SEO Optimization'
+      description: 'Built-in SEO tools and optimization for better search engine rankings'
       benefits: ['Meta optimization', 'Schema markup', 'Performance scores']
     },
     {
       icon: Monitor;
-      title: 'Analytics Integration',
-      description: 'Comprehensive analytics and performance monitoring built-in',
+      title: 'Analytics Integration'
+      description: 'Comprehensive analytics and performance monitoring built-in'
       benefits: ['Real-time analytics', 'Performance tracking', 'User insights']
     }
   ];
 
   const benefits = [
     {
-      title: '90% Faster Development',
-      description: 'Build professional websites in hours instead of weeks',
-      percentage: '90%'},
+    title: '90% Faster Development',
+    description: 'Build professional websites in hours instead of weeks',
+    percentage: '90%'},
     {
-      title: 'Zero Coding Required',
-      description: 'Create complex websites using natural language descriptions',
-      percentage: '100%'},
+    title: 'Zero Coding Required',
+    description: 'Create complex websites using natural language descriptions',
+    percentage: '100%'},
     {
-      title: 'Professional Quality',
-      description: 'Enterprise-grade websites that rival custom development',
-      percentage: '99%'}
+    title: 'Professional Quality',
+    description: 'Enterprise-grade websites that rival custom development',
+    percentage: '99%'}
   ];
 
   const pricingPlans = [
     {
       name: 'Starter'
-      price: '$29',
-      period: '/month',
-      description: 'Perfect for small businesses and personal projects',
-      features: [,
+      price: '$29'
+      period: '/month'
+      description: 'Perfect for small businesses and personal projects'
+      features: [
         'Up to 5 websites',
         'Basic AI features',
         'Standard templates',
@@ -78,10 +78,10 @@ const AIWebsiteBuilderPage: React.FC = () => {,
     },
     {
       name: 'Professional'
-      price: '$79',
-      period: '/month',
-      description: 'Ideal for growing businesses and agencies',
-      features: [,
+      price: '$79'
+      period: '/month'
+      description: 'Ideal for growing businesses and agencies'
+      features: [
         'Up to 25 websites',
         'Advanced AI features',
         'Premium templates',
@@ -94,10 +94,10 @@ const AIWebsiteBuilderPage: React.FC = () => {,
     },
     {
       name: 'Enterprise'
-      price: '$199',
-      period: '/month',
-      description: 'For large organizations and white-label solutions',
-      features: [,
+      price: '$199'
+      period: '/month'
+      description: 'For large organizations and white-label solutions'
+      features: [
         'Unlimited websites',
         'Full AI capabilities',
         'Custom templates',
@@ -161,20 +161,20 @@ const AIWebsiteBuilderPage: React.FC = () => {,
               >
                 View Demo;
               </a>
-            </div>,
+            </div>
           </section>,
 ,
           {/* Features Section */}
           <section className="py-20 bg-slate-800/50">
             <div className="container mx-auto px-4">
               <div className="text-center mb-16">
-                <h2 className="text-4xl font-bold text-white mb-4">Powerful AI Features<p className="text-xl text-gray-300 max-w-3xl mx-auto">Our AI website builder combines cutting-edge technology with intuitive design to create professional websites effortlessly.<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature, index) => (</div>
-                  <div key={index} className="cyber-card p-8 text-center group hover:scale-105 transition-transform duration-300">
+                <h2 className="text-4xl font-bold text-white mb-4">Powerful AI Features<p className="text-xl text-gray-300 max-w-3xl mx-auto">Our AI website builder combines cutting-edge technology with intuitive design to create professional websites effortlessly.<div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature index) => (</div>
+                  <div key={index} className="cyber-card p-8 text-center group hover: scale-105 transition-transform duration-300">
                     <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
             <div className="container mx-auto px-4"></section>
               <div className="text-center mb-16"></div>
-                <h2 className="text-4xl font-bold text-white mb-4">Powerful AI Features</h2><p className="text-xl text-gray-300 max-w-3xl mx-auto">Our AI website builder combines cutting-edge technology with intuitive design to create professional websites effortlessly.</p><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature, index) => (</div>
-                  <div key={index} className="cyber-card p-8 text-center group hover:scale-105 transition-transform duration-300"></div>
+                <h2 className="text-4xl font-bold text-white mb-4">Powerful AI Features</h2><p className="text-xl text-gray-300 max-w-3xl mx-auto">Our AI website builder combines cutting-edge technology with intuitive design to create professional websites effortlessly.</p><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature index) => (</div>
+                  <div key={index} className="cyber-card p-8 text-center group hover: scale-105 transition-transform duration-300"></div>
                     <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-6"></div>
                       <feature.icon className="w-8 h-8 text-white" />
                 <h2 className="text-4xl font-bold text-white mb-4">Powerful AI Features</h2>
@@ -182,9 +182,9 @@ const AIWebsiteBuilderPage: React.FC = () => {,
                   Our AI website builder combines cutting-edge technology with intuitive design to create professional websites effortlessly.)
                 </p>)
               </div>)
-              <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">),
+              <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
                 {features.map((feature, index) => (
-                  <div key={index} className="cyber-card p-8 text-center group hover: scale-105 transition-transform duration-300">,
+                  <div key={index} className="cyber-card p-8 text-center group hover: scale-105 transition-transform duration-300">
                     <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-6">,
                       <feature.icon className="w-8 h-8 text-white" />,
                     </div>,
@@ -205,17 +205,17 @@ const AIWebsiteBuilderPage: React.FC = () => {,
           <section className="py-16 px-4">
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-12">
-                <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our AI Builder?<p className="text-xl text-gray-300">Revolutionary benefits that transform web development<div className="grid grid-cols-1 md:grid-cols-3 gap-8">{benefits.map((benefit, index) => (</div>
+                <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our AI Builder?<p className="text-xl text-gray-300">Revolutionary benefits that transform web development<div className="grid grid-cols-1 md: grid-cols-3 gap-8">{benefits.map((benefit index) => (</div>
                 <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our AI Builder?</h2>
                 <p className="text-xl text-gray-300">Revolutionary benefits that transform web development</p>
               </div>
-              <div className="grid grid-cols-1 md: grid-cols-3 gap-8">,
+              <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
                 {benefits.map((benefit, index) => (
                   <div key={index} className="cyber-card p-6 text-center">
                     <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
             <div className="max-w-6xl mx-auto"></section>
               <div className="text-center mb-12"></div>
-                <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our AI Builder?</h2><p className="text-xl text-gray-300">Revolutionary benefits that transform web development</p><div className="grid grid-cols-1 md:grid-cols-3 gap-8">{benefits.map((benefit, index) => (</div>
+                <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our AI Builder?</h2><p className="text-xl text-gray-300">Revolutionary benefits that transform web development</p><div className="grid grid-cols-1 md: grid-cols-3 gap-8">{benefits.map((benefit index) => (</div>
                   <div key={index} className="cyber-card p-6 text-center"></div>
                     <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4"></div>
                       <Zap className="w-8 h-8 text-white" />
@@ -231,19 +231,19 @@ const AIWebsiteBuilderPage: React.FC = () => {,
           <section className="py-16 px-4 bg-slate-800/50">
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-12">
-                <h2 className="text-4xl font-bold text-white mb-4">Simple, Affordable Pricing<p className="text-xl text-gray-300">Choose the plan that fits your website needs<div className="grid grid-cols-1 md:grid-cols-3 gap-8">{pricingPlans.map((plan, index) => (<div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-purple-500' : ''}`}>{plan.popular && (</div>
+                <h2 className="text-4xl font-bold text-white mb-4">Simple, Affordable Pricing<p className="text-xl text-gray-300">Choose the plan that fits your website needs<div className="grid grid-cols-1 md: grid-cols-3 gap-8">{pricingPlans.map((plan index) => (<div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-purple-500' : ', '}`}>{plan.popular && (</div>
                       <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
             <div className="max-w-6xl mx-auto"></section>
               <div className="text-center mb-12"></div>
-                <h2 className="text-4xl font-bold text-white mb-4">Simple, Affordable Pricing</h2><p className="text-xl text-gray-300">Choose the plan that fits your website needs</p><div className="grid grid-cols-1 md:grid-cols-3 gap-8">{pricingPlans.map((plan, index) => (</div><div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-purple-500' : ''}`}>{plan.popular && (</div>
+                <h2 className="text-4xl font-bold text-white mb-4">Simple, Affordable Pricing</h2><p className="text-xl text-gray-300">Choose the plan that fits your website needs</p><div className="grid grid-cols-1 md: grid-cols-3 gap-8">{pricingPlans.map((plan index) => (</div><div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-purple-500' : ', '}`}>{plan.popular && (</div>
                       <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
                         <span className="bg-gradient-to-r from-purple-500 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-semibold">Most Popular</span>
                 <h2 className="text-4xl font-bold text-white mb-4">Simple, Affordable Pricing</h2>
                 <p className="text-xl text-gray-300">Choose the plan that fits your website needs</p>
               </div>
-              <div className="grid grid-cols-1 md: grid-cols-3 gap-8">,
+              <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
                 {pricingPlans.map((plan, index) => (
-                  <div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-purple-500' : ''}`}>
+                  <div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-purple-500' : ', '}`}>
                     {plan.popular && (
                       <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                         <span className="bg-gradient-to-r from-purple-500 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
@@ -260,12 +260,12 @@ const AIWebsiteBuilderPage: React.FC = () => {,
                       ))}
                     <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all ${
                       plan.popular
-                        ? 'bg-gradient-to-r from-purple-500 to-pink-600 text-white hover:from-purple-600 hover:to-pink-700'
+                        ? 'bg-gradient-to-r from-purple-500 to-pink-600 text-white hover: from-purple-600 hover:to-pink-700'
                         : 'bg-slate-700 text-white hover:bg-slate-600'
                     }`}>Get Started</button>
                       plan.popular;
                         ? 'bg-gradient-to-r from-purple-500 to-pink-600 text-white hover: from-purple-600 hover:to-pink-700'}
-                        : 'bg-slate-700 text-white hover:bg-slate-600'}
+                        : 'bg-slate-700 text-white hover: bg-slate-600'}
                     }`}>
                       Get Started;
                     </button>
@@ -305,7 +305,7 @@ const AIWebsiteBuilderPage: React.FC = () => {,
         </div>
       </main>
 
-      <Footer />,
+      <Footer />
     </div>);
 };
 

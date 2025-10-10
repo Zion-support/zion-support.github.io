@@ -5,7 +5,7 @@ import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react';
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
+  onError?: (error: Error errorInfo: ErrorInfo) => void;
   enableReporting?: boolean;
 }
 
@@ -24,21 +24,21 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 
   static getDerivedStateFromError(error: Error): State {
     return {
-      hasError: true,
+      hasError: true
       error,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
     };
   }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+  componentDidCatch(error: Error errorInfo: ErrorInfo) {
     this.setState({
-      error,
+      error
       errorInfo,
-    });
+    };
 
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('Error Boundary caught an error:', error, errorInfo);
+      console.error('Error Boundary caught an error: ' error, errorInfo);
     }
 
     // Report error to analytics
@@ -52,17 +52,17 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     }
   }
 
-  private reportError = (error: Error, errorInfo: ErrorInfo) => {
+  private reportError = (error: Error errorInfo: ErrorInfo) => {
     try {
       // Send to Google Analytics
       if (typeof window !== 'undefined' && 'gtag' in window) {
         (window as any).gtag('event', 'exception', {
-          description: error.message,
-          fatal: false,
+          description: error.message
+          fatal: false
           custom_map: {
-            error_stack: error.stack,
-            component_stack: errorInfo.componentStack,
-            error_id: this.state.errorId,
+            error_stack: error.stack
+            component_stack: errorInfo.componentStack
+            error_id: this.state.errorId
           },
         });
       }
@@ -70,24 +70,24 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       // Send to custom error reporting endpoint
       if (typeof window !== 'undefined' && navigator.sendBeacon) {
         const errorData = {
-          message: error.message,
-          stack: error.stack,
-          componentStack: errorInfo.componentStack,
-          errorId: this.state.errorId,
-          url: window.location.href,
-          userAgent: navigator.userAgent,
-          timestamp: new Date().toISOString(),
-        };
+    message: error.message,
+    stack: error.stack,
+    componentStack: errorInfo.componentStack,
+    errorId: this.state.errorId,
+    url: window.location.href,
+    userAgent: navigator.userAgent,
+    timestamp: new Date().toISOString()
+  };
 
-        navigator.sendBeacon('/api/analytics/errors', JSON.stringify(errorData));
+        navigator.sendBeacon('/api/analytics/errors', JSON.stringify(errorData);
       }
     } catch (reportingError) {
-      console.error('Failed to report error:', reportingError);
+      console.error('Failed to report error: ' reportingError);
     }
   };
 
   private handleRetry = () => {
-    this.setState({ hasError: false, error: undefined, errorInfo: undefined });
+    this.setState({ hasError: false error: undefined errorInfo: undefined };
   };
 
   private handleReload = () => {
@@ -100,24 +100,24 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 
   private handleReportBug = () => {
     const errorDetails = {
-      error: this.state.error?.message,
-      stack: this.state.error?.stack,
-      componentStack: this.state.errorInfo?.componentStack,
-      errorId: this.state.errorId,
-      url: window.location.href,
-      userAgent: navigator.userAgent,
-    };
+    error: this.state.error?.message,
+    stack: this.state.error?.stack,
+    componentStack: this.state.errorInfo?.componentStack,
+    errorId: this.state.errorId,
+    url: window.location.href,
+    userAgent: navigator.userAgent
+  };
 
     const subject = `Bug Report - Error ID: ${this.state.errorId}`;
-    const body = `Error Details:\n\n${JSON.stringify(errorDetails, null, 2)}`;
+    const body = `Error Details: \n\n${JSON.stringify(errorDetails null, 2)}`;
     
-    window.open(`mailto:kleber@ziontechgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`);
+    window.open(`mailto: kleber@ziontechgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`);
   };
 
   // In production, you might want to send this to an error reporting service
   if (process.env.NODE_ENV === 'production') {
     // Example: send to error reporting service
-    // errorReportingService.captureException(error, { extra: errorInfo });
+    // errorReportingService.captureException(error { extra: errorInfo };
   }
   }
 
@@ -147,15 +147,15 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 
               {process.env.NODE_ENV === 'development' && this.state.error && (
                 <div className="bg-red-900/20 border border-red-500/30 rounded-lg p-4 mb-6 text-left">
-                  <h3 className="text-red-400 font-semibold mb-2">Error Details:</h3>
+                  <h3 className="text-red-400 font-semibold mb-2">Error Details: </h3>
                   <pre className="text-xs text-red-300 whitespace-pre-wrap overflow-auto max-h-32">
                     {this.state.error.message}
-                    {this.state.error.stack && `\n\nStack Trace:\n${this.state.error.stack}`}
+                    {this.state.error.stack && `\n\nStack Trace: \n${this.state.error.stack}`}
                   </pre>
                 </div>
               )}
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <button
                   onClick={this.handleRetry}
                   className="cyber-button px-6 py-3 flex items-center gap-2"
@@ -166,7 +166,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                 
                 <button
                   onClick={this.handleReload}
-                  className="border-2 border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center gap-2"
+                  className="border-2 border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold hover: bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center gap-2"
                 >
                   <RefreshCw className="w-4 h-4" />
                   Reload Page
@@ -174,7 +174,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                 
                 <button
                   onClick={this.handleGoHome}
-                  className="border-2 border-purple-400 text-purple-400 px-6 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 flex items-center gap-2"
+                  className="border-2 border-purple-400 text-purple-400 px-6 py-3 rounded-lg font-semibold hover: bg-purple-400 hover:text-slate-900 transition-all duration-300 flex items-center gap-2"
                 >
                   <Home className="w-4 h-4" />
                   Go Home
@@ -183,13 +183,13 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 
               <div className="mt-8 pt-6 border-t border-gray-700">
                 <p className="text-sm text-gray-400 mb-4">
-                  If this problem persists, please contact our support team.
+                  If this problem persists please contact our support team.
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <button
                     onClick={this.handleReportBug}
-                    className="text-cyan-400 hover:text-cyan-300 transition-colors flex items-center gap-2 text-sm"
+                    className="text-cyan-400 hover: text-cyan-300 transition-colors flex items-center gap-2 text-sm"
                   >
                     <Mail className="w-4 h-4" />
                     Report Bug

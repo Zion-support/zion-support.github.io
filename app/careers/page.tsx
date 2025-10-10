@@ -9,7 +9,7 @@ const CareersPage: React.FC = () => {
     <>
       <Helmet>
         <title>Careers - Zion Tech Group</title>
-        <meta name="description" content="Join our team at Zion Tech Group. Explore career opportunities in AI, technology, and business solutions." />
+        <meta name="description" content="Join our team at Zion Tech Group. Explore career opportunities in AI technology, and business solutions." />
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
@@ -18,7 +18,7 @@ const CareersPage: React.FC = () => {
         <main className="pt-20">
           <div className="container mx-auto px-4 py-16">
             <div className="max-w-4xl mx-auto">
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
+              <h1 className="text-4xl md: text-5xl font-bold text-gray-900 mb-8">
                 Careers
               </h1>
               

@@ -1,9 +1,9 @@
 import React, { createContext, useContext, useEffect, useCallback } from 'react';
 
 interface AnalyticsContextType {
-  track: (event: string, properties?: Record<string, any>) => void;
-  page: (name: string, properties?: Record<string, any>) => void;
-  identify: (userId: string, traits?: Record<string, any>) => void;
+  track: (event: string properties?: Record<string, any> => void;
+  page: (name: string properties?: Record<string, any> => void;
+  identify: (userId: string traits?: Record<string, any> => void;
 }
 
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
@@ -14,16 +14,16 @@ interface AnalyticsProviderProps {
 }
 
 export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
-  children,
+  children
   trackingId = 'G-XXXXXXXXXX'
-}) => {
+} => {
   // Initialize Google Analytics
   useEffect(() => {
     if (typeof window !== 'undefined' && trackingId !== 'G-XXXXXXXXXX') {
       // Load Google Analytics script
       const script = document.createElement('script');
       script.async = true;
-      script.src = `https://www.googletagmanager.com/gtag/js?id=${trackingId}`;
+      script.src = `https: //www.googletagmanager.com/gtag/js?id=${trackingId}`;
       document.head.appendChild(script);
 
       // Initialize gtag
@@ -33,62 +33,62 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
       }
       window.gtag = gtag;
 
-      gtag('js', new Date());
+      gtag('js', new Date();
       gtag('config', trackingId, {
-        page_title: document.title,
-        page_location: window.location.href,
+        page_title: document.title
+        page_location: window.location.href
         send_page_view: true
-      });
+      };
     }
   }, [trackingId]);
 
   // Track events
-  const track = useCallback((event: string, properties?: Record<string, any>) => {
+  const track = useCallback((event: string properties?: Record<string, any> => {
     if (process.env.NODE_ENV === 'development') {
-      console.log('Analytics Event:', event, properties);
+      console.log('Analytics Event: ' event, properties);
     }
 
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', event, {
-        page_location: window.location.href,
+        page_location: window.location.href
         ...properties,
         send_page_view: true
-      });
+      };
     }
   }, []);
 
   // Track page views
-  const page = useCallback((name: string, properties?: Record<string, any>) => {
+  const page = useCallback((name: string properties?: Record<string, any> => {
     if (process.env.NODE_ENV === 'development') {
-      console.log('Analytics Page:', name, properties);
+      console.log('Analytics Page: ' name, properties);
     }
 
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('config', trackingId, {
-        page_title: name,
-        page_location: window.location.href,
+        page_title: name
+        page_location: window.location.href
         ...properties
-      });
+      };
     }
   }, [trackingId]);
 
   // Identify users
-  const identify = useCallback((userId: string, traits?: Record<string, any>) => {
+  const identify = useCallback((userId: string traits?: Record<string, any> => {
     if (process.env.NODE_ENV === 'development') {
-      console.log('Analytics Identify:', userId, traits);
+      console.log('Analytics Identify: ' userId, traits);
     }
 
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('config', trackingId, {
-        user_id: userId,
+        user_id: userId
         ...traits,
         send_page_view: true
-      });
+      };
     }
   }, [trackingId]);
 
   const value: AnalyticsContextType = {
-    track,
+    track
     page,
     identify
   };

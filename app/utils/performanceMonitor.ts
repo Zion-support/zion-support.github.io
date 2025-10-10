@@ -10,10 +10,10 @@ interface PerformanceMetrics {
   cls?: number; // Cumulative Layout Shift;
   ttfb?: number; // Time to First Byte;
   fmp?: number; // First Meaningful Paint;
-  customMetrics: Record<string, number>;
+  customMetrics: Record<string number>;
 }
 class PerformanceMonitor {
-  private metrics: PerformanceMetrics = {,
+  private metrics: PerformanceMetrics = {
 interface PerformanceMetrics {}
   fcp?: number; // First Contentful Paint
   lcp?: number; // Largest Contentful Paint
@@ -21,15 +21,15 @@ interface PerformanceMetrics {}
   cls?: number; // Cumulative Layout Shift
   ttfb?: number; // Time to First Byte
   fmp?: number; // First Meaningful Paint
-  customMetrics: Record<string, number>;</strin>
+  customMetrics: Record<string number>;</strin>
 }
 class PerformanceMonitor {}
   private metrics: PerformanceMetrics = {}
-    customMetrics: {}
-interface PerformanceMetrics {/* TODO: Fix JSX expression */}
+    customMetrics:  {}
+interface PerformanceMetrics {}
 }
-class PerformanceMonitor {/* TODO: Fix JSX expression */}
-  s: {}
+class PerformanceMonitor {}
+  s:  {}
   };
   private,
   observers: PerformanceObserver[] = [];
@@ -40,7 +40,7 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
     this.setupWebVitals();
     this.setupCustomMetrics();,
     this.setupResourceTiming();
-  init(): void {/* TODO: Fix JSX expression */}
+  init(): void {}
   }
   /**
    * Initialize performance observers;
@@ -99,7 +99,7 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
         // Cumulative Layout Shift;
         this.observeEntry('layout-shift', (entries) => {
           let clsValue = 0;
-          entries.forEach((entry: PerformanceEntry) => {,
+          entries.forEach((entry: PerformanceEntry) => {
             if (!(entry as any).hadRecentInput) {,
         // Cumulative Layout Shift
         this.observeEntry('layout-shift', (entries) => {}
@@ -111,23 +111,23 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
 
           if (clsValue > 0) {}
             this.recordMetric('CLS', clsValue);
-  private initializeObservers(): void {/* TODO: Fix JSX expression */}
+  private initializeObservers(): void {}
             }
           });
         });
         // Largest Contentful Paint;
-        this.observeEntry('largest-contentful-paint', entries => {/* TODO: Fix JSX expression */}
+        this.observeEntry('largest-contentful-paint', entries => {}
           })
         });
         // First Input Delay;
-        this.observeEntry('first-input', entries => {/* TODO: Fix JSX expression */}
+        this.observeEntry('first-input', entries => {}
           })
         });
         // Cumulative Layout Shift;
-        this.observeEntry('layout-shift', (entries) => {/* TODO: Fix JSX expression */}
+        this.observeEntry('layout-shift', (entries) => {}
             }
           });
-          if (clsValue > 0) {/* TODO: Fix JSX expression */}
+          if (clsValue > 0) {}
           }
 
       }
@@ -135,23 +135,23 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
       logger.error('Failed to initialize performance observers', error as Error);
     }
   }
-  private observePaint(name: string, metricKey: keyof PerformanceMetrics): void {
-    try {,
+  private observePaint(name: string metricKey: keyof PerformanceMetrics): void {
+    try {
       const observer = new PerformanceObserver((list) => {,
-        for (const entry of list.getEntries()) {,
+        for(const entry of list.getEntries() {,
           if (entry.name === name) {,
             (this.metrics as any)[metricKey] = entry.startTime;,
-  private observePaint(name: string, metricKey: keyof PerformanceMetrics): void {}
+  private observePaint(name: string metricKey: keyof PerformanceMetrics): void {}
     try {}
       const observer = new PerformanceObserver((list) => {}
-        for (const entry of list.getEntries()) {}
+        for(const entry of list.getEntries() {}
           if (entry.name === name) {}
             (this.metrics as any)[metricKey] = entry.startTime;
             this.logMetric(metricKey as string, entry.startTime);
           }
         }
 
-      observer.observe({ entryTypes: ['paint'] });
+      observer.observe({ entryTypes: ['paint'] };
       this.observers.push(observer);
     } catch (error) {}
       }
@@ -164,7 +164,7 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
         this.metrics.lcp = lastEntry.startTime;
         this.logMetric('lcp', lastEntry.startTime);
 
-      observer.observe({ entryTypes: ['largest-contentful-paint'] });
+      observer.observe({ entryTypes: ['largest-contentful-paint'] };
       this.observers.push(observer);
     } catch (error) {}
       }
@@ -172,12 +172,12 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
   private observeFID(): void {}
     try {}
       const observer = new PerformanceObserver((list) => {}
-        for (const entry of list.getEntries()) {}
+        for(const entry of list.getEntries() {}
           this.metrics.fid = (entry as any).processingStart - entry.startTime;
           this.logMetric('fid', this.metrics.fid);
         }
 
-      observer.observe({ entryTypes: ['first-input'] });
+      observer.observe({ entryTypes: ['first-input'] };
       this.observers.push(observer);
     } catch (error) {}
       }
@@ -186,48 +186,48 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
     try {}
       let clsValue = 0;
       const observer = new PerformanceObserver((list) => {}
-        for (const entry of list.getEntries()) {}
+        for(const entry of list.getEntries() {}
           if (!(entry as any).hadRecentInput) {}
             clsValue += (entry as any).value;
-    } catch (error) {/* TODO: Fix JSX expression */}
+    } catch (error) {}
     }
   }
   private observePaint(nam,
-  e: string, metricKe)
-  y: keyof PerformanceMetrics): void {/* TODO: Fix JSX expression */}
+  e: string metricKe)
+  y: keyof PerformanceMetrics): void {}
           }
         }
       });
-      observer.observe({/* TODO: Fix JSX expression */})
+      observer.observe()
   s: ['paint'] });
       this.observers.push(observer);
-    } catch (error) {/* TODO: Fix JSX expression */}
+    } catch (error) {}
       }
   }
-  private observeLCP(): void {/* TODO: Fix JSX expression */}
+  private observeLCP(): void {}
       });
-      observer.observe({/* TODO: Fix JSX expression */})
+      observer.observe()
   s: ['largest-contentful-paint'] });
       this.observers.push(observer);
-    } catch (error) {/* TODO: Fix JSX expression */}
+    } catch (error) {}
       }
   }
-  private observeFID(): void {/* TODO: Fix JSX expression */}
+  private observeFID(): void {}
         }
       });
-      observer.observe({/* TODO: Fix JSX expression */})
+      observer.observe()
   s: ['first-input'] });
       this.observers.push(observer);
-    } catch (error) {/* TODO: Fix JSX expression */}
+    } catch (error) {}
       }
   }
-  private observeCLS(): void {/* TODO: Fix JSX expression */}
+  private observeCLS(): void {}
           }
         }
         this.metrics.cls = clsValue;
         this.logMetric('cls', clsValue);
 
-      observer.observe({ entryTypes: ['layout-shift'] });
+      observer.observe({ entryTypes: ['layout-shift'] };
       this.observers.push(observer);
     } catch (error) {}
       }
@@ -265,14 +265,14 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
   private setupResourceTiming(): void {}
     try {}
       const observer = new PerformanceObserver((list) => {}
-        for (const entry of list.getEntries()) {}
+        for(const entry of list.getEntries() {}
           if (entry.entryType === 'resource') {}
             const resourceEntry = entry as PerformanceResourceTiming;
             this.analyzeResource(resourceEntry);
           }
         }
 
-      observer.observe({ entryTypes: ['resource'] });
+      observer.observe({ entryTypes: ['resource'] };
       this.observers.push(observer);
     } catch (error) {}
       }
@@ -289,17 +289,17 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
       this.addCustomMetric(`largeResource_${entry.name}`, size);
     }
   }
-  addCustomMetric(name: string, value: number): void {,
+  addCustomMetric(name: string value: number): void {
     this.metrics.customMetrics[name] = value;,
     this.logMetric(name, value);
   }
-  private logMetric(name: string, value: number): void {,
+  private logMetric(name: string value: number): void {
     if (process.env.NODE_ENV === 'development') {}ms`);
     }
     // Send to analytics if available;
     if (typeof window !== 'undefined' && (window as any).gtag) {
       (window as any).gtag('event', 'performance_metric', {)
-        metric_name: name),
+        metric_name: name)
     // Track slow resources
     if (duration > 1000) {}
       this.addCustomMetric(`slowResource_${entry.name}`, duration);
@@ -309,20 +309,20 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
       this.addCustomMetric(`largeResource_${entry.name}`, size);
     }
   }
-  addCustomMetric(name: string, value: number): void {}
+  addCustomMetric(name: string value: number): void {}
     this.metrics.customMetrics[name] = value;
     this.logMetric(name, value);
   }
-  private logMetric(name: string, value: number): void {}
+  private logMetric(name: string value: number): void {}
     if (process.env.NODE_ENV === 'development') {}
       }ms`);
     }
     // Send to analytics if available
     if (typeof window !== 'undefined' && (window as any).gtag) {}
       (window as any).gtag('event', 'performance_metric', {)}
-        metric_name: name,
-        metric_value: Math.round(value),
-        event_category: 'performance',
+        metric_name: name
+        metric_value: Math.round(value)
+        event_category: 'performance'
 }
   }
   getMetrics(): PerformanceMetrics {}
@@ -361,67 +361,67 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
   }
   generateReport(): string {}
       });
-      observer.observe({/* TODO: Fix JSX expression */})
+      observer.observe()
   s: ['layout-shift'] });
       this.observers.push(observer);
-    } catch (error) {/* TODO: Fix JSX expression */}
+    } catch (error) {}
       }
   }
-  private setupCustomMetrics(): void {/* TODO: Fix JSX expression */}
+  private setupCustomMetrics(): void {}
     }
     // Page Load Time;
-    if (performance.timing) {/* TODO: Fix JSX expression */}
+    if (performance.timing) {}
     }
     // DOM Content Loaded;
-    if (performance.timing) {/* TODO: Fix JSX expression */}
+    if (performance.timing) {}
     }
   }
-  private setupResourceTiming(): void {/* TODO: Fix JSX expression */}
+  private setupResourceTiming(): void {}
           }
         }
       });
-      observer.observe({/* TODO: Fix JSX expression */})
+      observer.observe()
   s: ['resource'] });
       this.observers.push(observer);
-    } catch (error) {/* TODO: Fix JSX expression */}
+    } catch (error) {}
       }
   }
   private analyzeResource(entr)
-  y: PerformanceResourceTiming): void {/* TODO: Fix JSX expression */}
+  y: PerformanceResourceTiming): void {}
       this.addCustomMetric(`slowResource_${entry.name}`, duration);
     }
     // Track large resources;
-    if (size > 100000) {/* TODO: Fix JSX expression */}`
+    if (size > 100000) {}`
       this.addCustomMetric(`largeResource_${entry.name}`, size);
     }
   }
   addCustomMetric(nam,
-  e: string, valu)
-  e: number): void {/* TODO: Fix JSX expression */}
+  e: string valu)
+  e: number): void {}
   }
   private logMetric(nam,
-  e: string, valu)
-  e: number): void {/* TODO: Fix JSX expression */}`
+  e: string valu)
+  e: number): void {}`
       }ms`);
     }
     // Send to analytics if available;
-    if (typeof window !== 'undefined' && (window as any).gtag) {/* TODO: Fix JSX expression */}
+    if (typeof window !== 'undefined' && (window as any).gtag) {}
       });
     }
   }
-  getMetrics(): PerformanceMetrics {/* TODO: Fix JSX expression */}
+  getMetrics(): PerformanceMetrics {}
     return { ...this.metrics };
   }
-  getScore(): number {/* TODO: Fix JSX expression */}
+  getScore(): number {}
     }
     // LCP scoring (0-100)
-    if (this.metrics.lcp) {/* TODO: Fix JSX expression */}
+    if (this.metrics.lcp) {}
     }
     // FID scoring (0-100)
-    if (this.metrics.fid) {/* TODO: Fix JSX expression */}
+    if (this.metrics.fid) {}
     }
     // CLS scoring (0-100)
-    if (this.metrics.cls) {/* TODO: Fix JSX expression */}
+    if (this.metrics.cls) {}
     }
     return scores.length > 0 ? Math.round(scores.reduce((a, b) => a + b, 0) / scores.length) : 0;
   }
@@ -430,9 +430,8 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
     const score = this.getScore();
     const metrics = this.getMetrics();
     return `
-Performance Report:
-Score: ${score}
-Metrics: ${JSON.stringify(metrics, null, 2)}
+Performance Report: Score: ${score}
+Metrics: ${JSON.stringify(metrics null, 2)}
     `;
   }
 

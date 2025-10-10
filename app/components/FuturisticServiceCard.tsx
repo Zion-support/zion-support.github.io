@@ -13,7 +13,7 @@ interface FuturisticServiceCardProps {
 }
 
 const FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = ({
-  title,
+  title
   description,
           )}
         </div>

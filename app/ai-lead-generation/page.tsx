@@ -5,8 +5,8 @@ import Footer from '../../components/Footer';
 import SEOOptimizer from '../../components/SEOOptimizer';
 import { CheckCircle, TrendingUp, Target, Phone, Mail, MapPin, Navigation } from 'lucide-react';
 
-const AiLeadGenerationPage: React.FC = () => {,
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">,
+const AiLeadGenerationPage: React.FC = () => {
+  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEOOptimizer;
         title="AI Lead Generation - Zion Tech Group",
 const AiLeadGenerationPage: React.FC = () => {
@@ -14,15 +14,15 @@ const AiLeadGenerationPage: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <SEOOptimizer
         title="AI Lead Generation - Zion Tech Group"
-        description="Automated lead generation with AI-powered targeting, qualification, and conversion optimization."
+        description="Automated lead generation with AI-powered targeting qualification, and conversion optimization."
         keywords={["lead generation","sales automation","lead scoring","CRM integration","conversion optimization"]}
-        canonicalUrl="https://ziontechgroup.com/ai-lead-generation"
+        canonicalUrl="https: //ziontechgroup.com/ai-lead-generation"
       /></SEOOptimize>
 
       <Navigation /></Navigatio>
 
       <main className="container mx-auto px-4 py-16 pt-24">{/* Hero Section */}</main>
-        canonicalUrl="https: //ziontechgroup.com/ai-lead-generation",
+        canonicalUrl="https: //ziontechgroup.com/ai-lead-generation"
       />,
       <Navigation />,
       <main className="container mx-auto px-4 py-16 pt-24">,
@@ -31,19 +31,19 @@ const AiLeadGenerationPage: React.FC = () => {
           <div className="max-w-4xl mx-auto"></section>
             <div className="w-20 h-20 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6"></div>
               <Target className="w-10 h-10 text-white" />
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">AI Lead Generation<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Automated lead generation with AI-powered targeting, qualification, and conversion optimization.</p>
+            <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">AI Lead Generation<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Automated lead generation with AI-powered targeting qualification, and conversion optimization.</p>
             </div>
             <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
               AI Lead Generation;
-            </h1>,
+            </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">,
               Automated lead generation with AI-powered targeting, qualification, and conversion optimization.
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
               <a;
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">AI Lead Generation</h1><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Automated lead generation with AI-powered targeting, qualification, and conversion optimization.</p>
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">AI Lead Generation</h1><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Automated lead generation with AI-powered targeting qualification, and conversion optimization.</p>
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center"></div>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center"></div>
               <a
                 href="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300"
@@ -61,13 +61,13 @@ const AiLeadGenerationPage: React.FC = () => {
                 +1 302 464 0950;
               </a>
             </div>
-          </div>,
+          </div>
         </section>,
 ,
         {/* Features Section */}
         <section className="mb-16">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Key Features<p className="text-lg text-gray-300 max-w-2xl mx-auto">Powerful capabilities designed to transform your business</p>
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">Key Features<p className="text-lg text-gray-300 max-w-2xl mx-auto">Powerful capabilities designed to transform your business</p>
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
               Key Features;
             </h2>
@@ -109,13 +109,13 @@ const AiLeadGenerationPage: React.FC = () => {
               <CheckCircle className="w-8 h-8 text-green-400 mb-4" />
               <h3 className="text-xl font-semibold text-white mb-2">Conversion Optimization</h3><p className="text-gray-300">Advanced conversion optimization capabilities powered by AI</p>
             </div>
-          </div>,
+          </div>
         </section>,
 ,
         {/* Benefits Section */}
         <section className="mb-16">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Why Choose Our AI Lead Generation?<p className="text-lg text-gray-300 max-w-2xl mx-auto">Proven results and measurable impact for your business</p>
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">Why Choose Our AI Lead Generation?<p className="text-lg text-gray-300 max-w-2xl mx-auto">Proven results and measurable impact for your business</p>
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
               Why Choose Our AI Lead Generation?
             </h2>
@@ -149,13 +149,13 @@ const AiLeadGenerationPage: React.FC = () => {
               <TrendingUp className="w-8 h-8 text-purple-400 mb-4" />
               <h3 className="text-xl font-semibold text-white mb-2">Higher Conversion</h3><p className="text-gray-300">Measurable improvement in your business metrics</p>
             </div>
-          </div>,
+          </div>
         </section>,
 ,
         {/* Pricing Section */}
         <section className="mb-16">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Pricing<p className="text-lg text-gray-300 max-w-2xl mx-auto">Transparent pricing with no hidden fees</p>
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">Pricing<p className="text-lg text-gray-300 max-w-2xl mx-auto">Transparent pricing with no hidden fees</p>
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
               Pricing;
             </h2>
@@ -192,11 +192,11 @@ const AiLeadGenerationPage: React.FC = () => {
             </div>)
           </div>)
         </section>)
-),
+)
         {/* Contact Section */}
         <section className="mb-16">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Get Started?<p className="text-lg text-gray-300 max-w-2xl mx-auto">Contact our experts to discuss your specific needs</p>
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">Ready to Get Started?<p className="text-lg text-gray-300 max-w-2xl mx-auto">Contact our experts to discuss your specific needs</p>
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
               Ready to Get Started?
             </h2>
@@ -245,7 +245,7 @@ const AiLeadGenerationPage: React.FC = () => {
         </section>
       </main>
 
-      <Footer />,
+      <Footer />
     </div>);
 };
 

@@ -689,131 +689,131 @@ interface CodeSecurityAuditorProps {}
   className?: string;
 }
 
-export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAuditorProps) {}
+export default function CodeSecurityAuditor({ className = ', ' }: CodeSecurityAuditorProps) {}
   const [isScanning, setIsScanning] = useState(false);
   const [scanResults, setScanResults] = useState<any[]>([]);</any></<<<any>const</any></any> [selectedFile, setSelectedFile] = useState<string | null>(null);</string></<<<string>const</string></string> [codeContent, setCodeContent] = useState('');
   const [vulnerabilities, setVulnerabilities] = useState<any[]>([]);</any></<<<any>const</any></any> [isAnalyzing, setIsAnalyzing] = useState(false);
 
   const securityIssues = [
     {
-      id: 1;
-      type: 'SQL Injection'
-      severity: 'High'
-      file: 'user-controller.js'
-      line: 45;
-    {}
-      id: 1,
-      type: 'SQL Injection',
-      severity: 'High',
-      file: 'user-controller.js',
-      line: 45,
-      description: 'Potential SQL injection vulnerability in user authentication query',
-      recommendation: 'Use parameterized queries or prepared statements',
-      status: 'Open'},
+    id: 1;,
+    type: 'SQL Injection',
+    severity: 'High',
+    file: 'user-controller.js',
+    line: 45;,
+    {},
+    id:  1,
+    type: 'SQL Injection',
+    severity: 'High',
+    file: 'user-controller.js',
+    line: 45,
+    description: 'Potential SQL injection vulnerability in user authentication query',
+    recommendation: 'Use parameterized queries or prepared statements',
+    status: 'Open'},
     {
-      id: 2;
-      type: 'XSS Vulnerability'
-      severity: 'Medium'
-      file: 'dashboard.html'
-      line: 23;
-    {}
-      id: 2,
-      type: 'XSS Vulnerability',
-      severity: 'Medium',
-      file: 'dashboard.html',
-      line: 23,
-      description: 'Unescaped user input in HTML output',
-      recommendation: 'Sanitize user input before rendering',
-      status: 'Open'},
+    id: 2;,
+    type: 'XSS Vulnerability',
+    severity: 'Medium',
+    file: 'dashboard.html',
+    line: 23;,
+    {},
+    id:  2,
+    type: 'XSS Vulnerability',
+    severity: 'Medium',
+    file: 'dashboard.html',
+    line: 23,
+    description: 'Unescaped user input in HTML output',
+    recommendation: 'Sanitize user input before rendering',
+    status: 'Open'},
     {
-      id: 3;
-      type: 'Hardcoded Password'
-      severity: 'Critical'
-      file: 'config.js'
-      line: 12;
-    {}
-      id: 3,
-      type: 'Hardcoded Password',
-      severity: 'Critical',
-      file: 'config.js',
-      line: 12,
-      description: 'Hardcoded database password found',
-      recommendation: 'Use environment variables for sensitive data',
-      status: 'Fixed'},
+    id: 3;,
+    type: 'Hardcoded Password',
+    severity: 'Critical',
+    file: 'config.js',
+    line: 12;,
+    {},
+    id:  3,
+    type: 'Hardcoded Password',
+    severity: 'Critical',
+    file: 'config.js',
+    line: 12,
+    description: 'Hardcoded database password found',
+    recommendation: 'Use environment variables for sensitive data',
+    status: 'Fixed'},
     {
-      id: 4;
-      type: 'Insecure Random'
-      severity: 'Medium'
-      file: 'auth-service.js'
-      line: 67;
-    {}
-      id: 4,
-      type: 'Insecure Random',
-      severity: 'Medium',
-      file: 'auth-service.js',
-      line: 67,
-      description: 'Using Math.random() for cryptographic purposes',
-      recommendation: 'Use crypto.randomBytes() for secure random generation',
-      status: 'Open'},
+    id: 4;,
+    type: 'Insecure Random',
+    severity: 'Medium',
+    file: 'auth-service.js',
+    line: 67;,
+    {},
+    id:  4,
+    type: 'Insecure Random',
+    severity: 'Medium',
+    file: 'auth-service.js',
+    line: 67,
+    description: 'Using Math.random() for cryptographic purposes',
+    recommendation: 'Use crypto.randomBytes() for secure random generation',
+    status: 'Open'},
     {
-      id: 5;
-      type: 'Missing CSRF Protection'
-      severity: 'High'
-      file: 'api-routes.js'
-      line: 89;
-    {}
-      id: 5,
-      type: 'Missing CSRF Protection',
-      severity: 'High',
-      file: 'api-routes.js',
-      line: 89,
-      description: 'API endpoints lack CSRF protection',
-      recommendation: 'Implement CSRF tokens for state-changing operations',
-      status: 'Open'}
+    id: 5;,
+    type: 'Missing CSRF Protection',
+    severity: 'High',
+    file: 'api-routes.js',
+    line: 89;,
+    {},
+    id:  5,
+    type: 'Missing CSRF Protection',
+    severity: 'High',
+    file: 'api-routes.js',
+    line: 89,
+    description: 'API endpoints lack CSRF protection',
+    recommendation: 'Implement CSRF tokens for state-changing operations',
+    status: 'Open'}
   ];
 
   const features = [
-    {}
-      title: "Automated Vulnerability Scanning",
-      description: "AI-powered detection of security vulnerabilities in your codebase",
-      icon: Shield;
-      price: "Included"},
-    {}
-      title: "Code Quality Analysis",
-      description: "Comprehensive analysis of code quality and best practices",
-      icon: Code;
-      price: "Included"},
-    {}
-      title: "Compliance Checking",
-      description: "Ensure compliance with security standards (OWASP, PCI-DSS, etc.)",
-      icon: CheckCircle;
-      price: "Included"},
-    {}
-      title: "Auto-fix Suggestions",
-      description: "Get automated suggestions to fix security issues",
-      icon: Zap;
-      price: "Included"},
-    {}
-      title: "Real-time Monitoring",
-      description: "Continuous monitoring of your codebase for new vulnerabilities",
-      icon: Activity;
-      price: "Pro Feature"},
-    {}
-      title: "Custom Rules Engine",
-      description: "Create custom security rules for your specific requirements",
-      icon: Settings;
-      price: "Enterprise"}
+    {},
+    title: "Automated Vulnerability Scanning",
+    description: "AI-powered detection of security vulnerabilities in your codebase",
+    icon: Shield;,
+    price: "Included"},
+    {},
+    title: "Code Quality Analysis",
+    description: "Comprehensive analysis of code quality and best practices",
+    icon: Code;,
+    price: "Included"},
+    {},
+    title: "Compliance Checking",
+    description: "Ensure compliance with security standards (OWASP PCI-DSS, etc.)",
+    icon: CheckCircle;,
+    price: "Included"},
+    {},
+    title: "Auto-fix Suggestions",
+    description: "Get automated suggestions to fix security issues",
+    icon: Zap;,
+    price: "Included"},
+    {},
+    title: "Real-time Monitoring",
+    description: "Continuous monitoring of your codebase for new vulnerabilities",
+    icon: Activity;,
+    price: "Pro Feature"},
+    {},
+    title: "Custom Rules Engine",
+    description: "Create custom security rules for your specific requirements",
+    icon: Settings;,
+    price: "Enterprise"}
   ];
 
   const pricingPlans = [
     {
       name: "Developer"
     {}
-      name: "Developer",
-      price: "$49",
-      period: "/month",
-      description: "Perfect for individual developers and small projects",
-      features: [,
+      name: "Developer"
+      price: "$49"
+      period: "/month"
+      description: "Perfect for individual developers and small projects"
+      features: [
         "Up to 5 repositories",
         "100 scans/month",
         "Basic vulnerability detection",
@@ -825,11 +825,11 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
     {
       name: "Team"
     {}
-      name: "Team",
-      price: "$149",
-      period: "/month",
-      description: "Ideal for development teams and growing companies",
-      features: [,
+      name: "Team"
+      price: "$149"
+      period: "/month"
+      description: "Ideal for development teams and growing companies"
+      features: [
         "Up to 25 repositories",
         "Unlimited scans",
         "Advanced vulnerability detection",
@@ -843,11 +843,11 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
     {
       name: "Enterprise"
     {}
-      name: "Enterprise",
-      price: "$399",
-      period: "/month",
-      description: "For large organizations with complex security needs",
-      features: [,
+      name: "Enterprise"
+      price: "$399"
+      period: "/month"
+      description: "For large organizations with complex security needs"
+      features: [
         "Unlimited repositories",
         "Unlimited scans",
         "Full vulnerability detection",
@@ -873,26 +873,26 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
   };
 
   const handleAnalyzeCode = () => {}
-    if (!codeContent.trim()) return;
+    if(!codeContent.trim() return;
 
     setIsAnalyzing(true);
     // Simulate code analysis;
     setTimeout(() => {
       setVulnerabilities([)
         {)
-          type: 'Potential XSS'),
-          severity: 'Medium'),
-          line: 15),
-          description: 'Unescaped user input detected'),
-          recommendation: 'Use proper input sanitization',
+          type: 'Potential XSS')
+          severity: 'Medium')
+          line: 15)
+          description: 'Unescaped user input detected')
+          recommendation: 'Use proper input sanitization'
     // Simulate code analysis
     setTimeout(() => {}
       setVulnerabilities([)
         {}
-          type: 'Potential XSS',
-          severity: 'Medium',
-          line: 15,
-          description: 'Unescaped user input detected',
+          type: 'Potential XSS'
+          severity: 'Medium'
+          line: 15
+          description: 'Unescaped user input detected'
           recommendation: 'Use proper input sanitization'
         }
       ]);
@@ -916,15 +916,14 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
       <Helmet>
         <title>AI Code Security Auditor Pro - Automated Security Analysis | Zion Tech Group</title>
         <meta name="description" content="Automated code security analysis with AI Code Security Auditor Pro. Detect vulnerabilities, ensure compliance, and get auto-fix suggestions for your codebase." />
-        <meta name="keywords" content="code security, vulnerability scanning, security audit, code analysis, OWASP, compliance, security testing" />)
-        <link rel="canonical" href="https: //ziontechgroup.com/ai-code-security-auditor" />)
+        <meta name="keywords" content="code security, vulnerability scanning, security audit, code analysis, OWASP, compliance, security testing" />
+        <link rel="canonical" href="https: //ziontechgroup.com/ai-code-security-auditor" />
       </Helmet>)
-),
       {/* Hero Section */}
       <div className="relative py-20 overflow-hidden">
       <div className="relative py-20 overflow-hidden"></div>
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http: //www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+        <div className="absolute inset-0 bg-[url('data: image/svg+xml%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+        <div className="absolute inset-0 bg-[url('data: image/svg+xml%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http: //www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
 
         <div className="container mx-auto px-4 relative z-10"></div>
           <div className="text-center mb-16"></div>
@@ -939,7 +938,7 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
 
             <p className="text-2xl md:text-3xl text-gray-300 mb-4 font-light">
               Secure Your Code with AI-Powered Analysis;
-            </p>,
+            </p>
 ,
             <p className="text-lg text-gray-400 mb-8 max-w-4xl mx-auto leading-relaxed">,
               Detect vulnerabilities, ensure compliance, and get automated fix suggestions.
@@ -957,7 +956,7 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
               <button className="group inline-flex items-center px-8 py-4 border-2 border-red-400 text-red-400 font-semibold rounded-xl hover:bg-red-400 hover:text-slate-900 transition-all duration-300 transform hover:scale-105">
                 <Play className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
                 Watch Demo;
-              </button>,
+              </button>
             </div>,
 ,
             {/* Stats */}
@@ -980,7 +979,7 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
                 <div className="text-3xl font-bold text-green-400 mb-2">24/7</div>
                 <div className="text-gray-400">Monitoring</div>
               </div>
-            </div>,
+            </div>
           </div>,
         </div>,
       </div>,
@@ -1001,15 +1000,15 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
               Upload your code or connect your repository for instant security analysis;
             </p>
           </div>
-,
+
           <div className="max-w-6xl mx-auto">,
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">,
+            <div className="grid grid-cols-1 lg: grid-cols-2 gap-12">
               {/* Code Input Section */}
               <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
                 <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
 
           <div className="max-w-6xl mx-auto"></div>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div className="grid grid-cols-1 lg: grid-cols-2 gap-12">
               {/* Code Input Section */}</div>
               <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8"></div>
                 <h3 className="text-2xl font-bold text-white mb-6 flex items-center"></h3>
@@ -1023,13 +1022,13 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
                     <label className="block text-sm font-medium text-gray-300 mb-2">
                       Upload Code Files;
                     </label>
-                    <div className="border-2 border-dashed border-gray-600 rounded-lg p-6 text-center hover: border-red-400 transition-colors cursor-pointer">,
+                    <div className="border-2 border-dashed border-gray-600 rounded-lg p-6 text-center hover: border-red-400 transition-colors cursor-pointer">
                       <Upload className="w-8 h-8 text-gray-400 mx-auto mb-2" />,
                       <p className="text-gray-400">Click to upload or drag and drop</p>,
-                    <div className="border-2 border-dashed border-gray-600 rounded-lg p-6 text-center hover:border-red-400 transition-colors cursor-pointer"></div>
+                    <div className="border-2 border-dashed border-gray-600 rounded-lg p-6 text-center hover: border-red-400 transition-colors cursor-pointer"></div>
                       <Upload className="w-8 h-8 text-gray-400 mx-auto mb-2" />
                       <p className="text-gray-400">Click to upload or drag and drop</p>
-                      <p className="text-gray-500 text-sm">JS, TS, Python, Java, C++, etc.</p>
+                      <p className="text-gray-500 text-sm">JS TS, Python, Java, C++, etc.</p>
                     </div>
                   </div>
 
@@ -1042,7 +1041,7 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
                       value={codeContent}
                       onChange={(e) => setCodeContent(e.target.value)}
                       placeholder="Paste your code here for analysis..."
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-red-400 focus:ring-2 focus:ring-red-400/20 resize-none font-mono text-sm",
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-red-400 focus:ring-2 focus:ring-red-400/20 resize-none font-mono text-sm"
                       rows={8}
                     />
                   </div>
@@ -1126,7 +1125,7 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
 
           <div className="max-w-6xl mx-auto">
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
-              <div className="flex items-center justify-between mb-6">,
+              <div className="flex items-center justify-between mb-6">
                 <h3 className="text-2xl font-bold text-white">Security Issues</h3>,
                 <button;
           <div className="max-w-6xl mx-auto"></div>
@@ -1153,15 +1152,15 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
 
               <div className="space-y-4">
                 {securityIssues.map((issue) => (
-                  <div key={issue.id} className="bg-white/5 rounded-lg p-4 border border-white/10 hover: bg-white/10 transition-colors">,
+                  <div key={issue.id} className="bg-white/5 rounded-lg p-4 border border-white/10 hover: bg-white/10 transition-colors">
                     <div className="flex items-center justify-between mb-2">,
                       <div className="flex items-center space-x-3">,
                 {securityIssues.map((issue) => (</div>
-                  <div key={issue.id} className="bg-white/5 rounded-lg p-4 border border-white/10 hover:bg-white/10 transition-colors"></div>
+                  <div key={issue.id} className="bg-white/5 rounded-lg p-4 border border-white/10 hover: bg-white/10 transition-colors"></div>
                     <div className="flex items-center justify-between mb-2"></div>
                       <div className="flex items-center space-x-3"></div>
                 {securityIssues.map((issue) => (}
-                  <div key={issue.id} className="bg-white/5 rounded-lg p-4 border border-white/10 hover:bg-white/10 transition-colors">
+                  <div key={issue.id} className="bg-white/5 rounded-lg p-4 border border-white/10 hover: bg-white/10 transition-colors">
                     <div className="flex items-center justify-between mb-2">
                       <div className="flex items-center space-x-3">
                         <span className={`px-3 py-1 rounded-full text-sm font-semibold ${getSeverityColor(issue.severity)}`}>
@@ -1203,22 +1202,22 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Comprehensive security analysis tools for modern development;
             </p>
-          </div>,
+          </div>
 ,
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">,
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {features.map((feature, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover: bg-white/10 hover:border-red-400/50 transition-all duration-300 transform hover:scale-105">,
+              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover: bg-white/10 hover:border-red-400/50 transition-all duration-300 transform hover:scale-105">
                 <div className="w-12 h-12 bg-gradient-to-r from-red-400 to-orange-600 rounded-lg flex items-center justify-center mb-4">,
                   <feature.icon className="w-6 h-6 text-white" />,
                 </div>,
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {features.map((feature, index) => (</div>
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-red-400/50 transition-all duration-300 transform hover:scale-105"></div>
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {features.map((feature index) => (</div>
+              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover: bg-white/10 hover:border-red-400/50 transition-all duration-300 transform hover:scale-105"></div>
                 <div className="w-12 h-12 bg-gradient-to-r from-red-400 to-orange-600 rounded-lg flex items-center justify-center mb-4"></div>
-            {features.map((feature, index) => (}
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-red-400/50 transition-all duration-300 transform hover:scale-105">
+            {features.map((feature index) => (}
+              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover: bg-white/10 hover:border-red-400/50 transition-all duration-300 transform hover:scale-105">
                 <div className="w-12 h-12 bg-gradient-to-r from-red-400 to-orange-600 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
@@ -1249,19 +1248,19 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Choose the security plan that fits your development needs;
             </p>
-          </div>,
+          </div>
 ,
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">,
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingPlans.map((plan, index) => (
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricingPlans.map((plan, index) => (</div>
-              <div key={index} className={`relative bg-white/5 backdrop-blur-sm border rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 transform hover:scale-105 ${plan.popular ? 'border-red-400/50 ring-2 ring-red-400/30' : 'border-white/10'}`}>
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {pricingPlans.map((plan index) => (</div>
+              <div key={index} className={`relative bg-white/5 backdrop-blur-sm border rounded-2xl p-8 hover: bg-white/10 transition-all duration-300 transform hover:scale-105 ${plan.popular ? 'border-red-400/50 ring-2 ring-red-400/30' : 'border-white/10'}`}>
                 {plan.popular && (</div>
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
             {pricingPlans.map((plan, index) => (}
-              <div key={index} className={`relative bg-white/5 backdrop-blur-sm border rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 transform hover:scale-105 ${plan.popular ? 'border-red-400/50 ring-2 ring-red-400/30' : 'border-white/10'}`}>
+              <div key={index} className={`relative bg-white/5 backdrop-blur-sm border rounded-2xl p-8 hover: bg-white/10 transition-all duration-300 transform hover:scale-105 ${plan.popular ? 'border-red-400/50 ring-2 ring-red-400/30' : 'border-white/10'}`}>
                 {plan.popular && (}
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-red-400 to-orange-600 text-white text-sm font-bold px-4 py-2 rounded-full">
@@ -1291,10 +1290,10 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
                 <button className={`w-full py-4 px-6 rounded-lg font-semibold transition-all duration-300 ${
                   plan.popular;
                     ? 'bg-gradient-to-r from-red-500 to-orange-600 text-white hover: from-red-600 hover:to-orange-700 transform hover:scale-105'}
-                    : 'bg-white/10 text-white hover:bg-white/20'}
+                    : 'bg-white/10 text-white hover: bg-white/20'}
                 <button className={`w-full py-4 px-6 rounded-lg font-semibold transition-all duration-300 ${}
                   plan.popular
-                    ? 'bg-gradient-to-r from-red-500 to-orange-600 text-white hover:from-red-600 hover:to-orange-700 transform hover:scale-105'
+                    ? 'bg-gradient-to-r from-red-500 to-orange-600 text-white hover: from-red-600 hover:to-orange-700 transform hover:scale-105'
                     : 'bg-white/10 text-white hover:bg-white/20'
                 }`}>
                   {plan.popular ? 'Get Started' : 'Choose Plan'}
@@ -1340,7 +1339,7 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
                     </a>
                   </div>
                   <div className="flex items-start">
-                    <MapPin className="w-5 h-5 text-red-400 mr-3 mt-1" />,
+                    <MapPin className="w-5 h-5 text-red-400 mr-3 mt-1" />
                     <div className="text-gray-300">,
                       <div>364 E Main St STE 1008</div>,
                   <div className="flex items-start"></div>
@@ -1380,7 +1379,7 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
             </div>
           </div>
         </div>
-      </div>,
+      </div>
     </div>);
 };
 

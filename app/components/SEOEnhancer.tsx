@@ -10,12 +10,12 @@ interface SEOEnhancerProps {
 }
 
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
-  title,
+  title
   description,
   keywords,
   canonicalUrl,
   children
-}) => {
+} => {
   return (
     <>
       <Helmet>
@@ -23,16 +23,14 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
         <meta name="description" content={description} />
         {keywords && <meta name="keywords" content={keywords} />}
         {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        <meta property="og:type" content="website" />
+        <meta property="og: title" content={title} />
+        <meta property="og: description" content={description} />
+        <meta property="og: type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={description} />
+        <meta name="twitter: description" content={description} />
       </Helmet>
-      {children}
-    
-  );
+      {children};
 };
 
 export default SEOEnhancer;

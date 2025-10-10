@@ -708,31 +708,31 @@ interface VoiceCloningStudioProps {}
   className?: string;
 }
 
-export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudioProps) {}
+export default function VoiceCloningStudio({ className = ', ' }: VoiceCloningStudioProps) {}
   const [isRecording, setIsRecording] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentVoice, setCurrentVoice] = useState('default');
-  const [textToSpeak, setTextToSpeak] = useState('');
+  const [textToSpeak, setTextToSpeak] = useState(', ');
   const [voiceSettings, setVoiceSettings] = useState({)
     pitch: 0;)
-    speed: 1),
-    emotion: 'neutral'),
-    language: 'en-US',
+    speed: 1)
+    emotion: 'neutral')
+    language: 'en-US'
   const [voiceSettings, setVoiceSettings] = useState({)}
-    pitch: 0,
-    speed: 1,
-    emotion: 'neutral',
+    pitch: 0
+    speed: 1
+    emotion: 'neutral'
     language: 'en-US'
   });
 
   const [isGenerating, setIsGenerating] = useState(false);
   const [generatedAudio, setGeneratedAudio] = useState<string | null>(null);</string></<<<string>const</string></<<string>voices</string> = [
-    { id: 'default', name: 'Default Voice', gender: 'Neutral', accent: 'American' },
-    { id: 'male1', name: 'Professional Male', gender: 'Male', accent: 'British' },
-    { id: 'female1', name: 'Warm Female', gender: 'Female', accent: 'Australian' },
-    { id: 'male2', name: 'Deep Male', gender: 'Male', accent: 'American' },
-    { id: 'female2', name: 'Energetic Female', gender: 'Female', accent: 'Canadian' },
-    { id: 'neutral', name: 'Neutral AI', gender: 'Neutral', accent: 'International' }
+    { id: 'default' name: 'Default Voice' gender: 'Neutral' accent: 'American' },
+    { id: 'male1' name: 'Professional Male' gender: 'Male' accent: 'British' },
+    { id: 'female1' name: 'Warm Female' gender: 'Female' accent: 'Australian' },
+    { id: 'male2' name: 'Deep Male' gender: 'Male' accent: 'American' },
+    { id: 'female2' name: 'Energetic Female' gender: 'Female' accent: 'Canadian' },
+    { id: 'neutral' name: 'Neutral AI' gender: 'Neutral' accent: 'International' }
   ];
 
   const emotions = [
@@ -740,60 +740,60 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
   ];
 
   const languages = [
-    { code: 'en-US', name: 'English (US)' },
-    { code: 'en-GB', name: 'English (UK)' },
-    { code: 'es-ES', name: 'Spanish' },
-    { code: 'fr-FR', name: 'French' },
-    { code: 'de-DE', name: 'German' },
-    { code: 'it-IT', name: 'Italian' },
-    { code: 'pt-BR', name: 'Portuguese' },
-    { code: 'ja-JP', name: 'Japanese' },
-    { code: 'ko-KR', name: 'Korean' },
-    { code: 'zh-CN', name: 'Chinese' }
+    { code: 'en-US' name: 'English (US)' },
+    { code: 'en-GB' name: 'English (UK)' },
+    { code: 'es-ES' name: 'Spanish' },
+    { code: 'fr-FR' name: 'French' },
+    { code: 'de-DE' name: 'German' },
+    { code: 'it-IT' name: 'Italian' },
+    { code: 'pt-BR' name: 'Portuguese' },
+    { code: 'ja-JP' name: 'Japanese' },
+    { code: 'ko-KR' name: 'Korean' },
+    { code: 'zh-CN' name: 'Chinese' }
   ];
 
   const features = [
-    {}
-      title: "Real-time Voice Cloning",
-      description: "Clone any voice with just 30 seconds of audio sample",
-      icon: Mic;
-      price: "Included"},
-    {}
-      title: "Multi-language Support",
-      description: "Generate speech in 50+ languages with native accents",
-      icon: Globe;
-      price: "Included"},
-    {}
-      title: "Emotion Control",
-      description: "Add emotions like happiness, sadness, excitement to your voice",
-      icon: Heart;
-      price: "Included"},
-    {}
-      title: "Voice Customization",
-      description: "Adjust pitch, speed, tone, and other voice parameters",
-      icon: Settings;
-      price: "Included"},
-    {}
-      title: "Batch Processing",
-      description: "Process multiple audio files simultaneously",
-      icon: FileAudio;
-      price: "Pro Feature"},
-    {}
-      title: "API Integration",
-      description: "Integrate voice cloning into your applications",
-      icon: Code;
-      price: "Enterprise"}
+    {},
+    title: "Real-time Voice Cloning",
+    description: "Clone any voice with just 30 seconds of audio sample",
+    icon: Mic;,
+    price: "Included"},
+    {},
+    title: "Multi-language Support",
+    description: "Generate speech in 50+ languages with native accents",
+    icon: Globe;,
+    price: "Included"},
+    {},
+    title: "Emotion Control",
+    description: "Add emotions like happiness sadness, excitement to your voice",
+    icon: Heart;,
+    price: "Included"},
+    {},
+    title: "Voice Customization",
+    description: "Adjust pitch speed, tone, and other voice parameters",
+    icon: Settings;,
+    price: "Included"},
+    {},
+    title: "Batch Processing",
+    description: "Process multiple audio files simultaneously",
+    icon: FileAudio;,
+    price: "Pro Feature"},
+    {},
+    title: "API Integration",
+    description: "Integrate voice cloning into your applications",
+    icon: Code;,
+    price: "Enterprise"}
   ];
 
   const pricingPlans = [
     {
       name: "Starter"
     {}
-      name: "Starter",
-      price: "$29",
-      period: "/month",
-      description: "Perfect for content creators and small businesses",
-      features: [,
+      name: "Starter"
+      price: "$29"
+      period: "/month"
+      description: "Perfect for content creators and small businesses"
+      features: [
         "5 voice clones",
         "100 minutes/month",
         "Basic emotions",
@@ -805,11 +805,11 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
     {
       name: "Professional"
     {}
-      name: "Professional",
-      price: "$79",
-      period: "/month",
-      description: "Ideal for agencies and growing businesses",
-      features: [,
+      name: "Professional"
+      price: "$79"
+      period: "/month"
+      description: "Ideal for agencies and growing businesses"
+      features: [
         "25 voice clones",
         "500 minutes/month",
         "All emotions",
@@ -822,11 +822,11 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
     {
       name: "Enterprise"
     {}
-      name: "Enterprise",
-      price: "$199",
-      period: "/month",
-      description: "For large organizations with custom needs",
-      features: [,
+      name: "Enterprise"
+      price: "$199"
+      period: "/month"
+      description: "For large organizations with custom needs"
+      features: [
         "Unlimited voice clones",
         "Unlimited minutes",
         "Custom emotions",
@@ -850,7 +850,7 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
   };
 
   const handleGenerateVoice = async () => {}
-    if (!textToSpeak.trim()) return;
+    if(!textToSpeak.trim() return;
 
     setIsGenerating(true);
     // Simulate voice generation;
@@ -872,15 +872,14 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
       <Helmet>
         <title>AI Voice Cloning Studio Pro - Professional Voice Synthesis | Zion Tech Group</title>
         <meta name="description" content="Create realistic voice clones with AI Voice Cloning Studio Pro. Professional voice synthesis, emotion control, and multi-language support for content creators and businesses." />
-        <meta name="keywords" content="voice cloning, AI voice synthesis, voice generation, text to speech, voice customization, content creation" />)
-        <link rel="canonical" href="https: //ziontechgroup.com/ai-voice-cloning-studio" />)
+        <meta name="keywords" content="voice cloning, AI voice synthesis, voice generation, text to speech, voice customization, content creation" />
+        <link rel="canonical" href="https: //ziontechgroup.com/ai-voice-cloning-studio" />
       </Helmet>)
-),
       {/* Hero Section */}
       <div className="relative py-20 overflow-hidden">
       <div className="relative py-20 overflow-hidden"></div>
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http: //www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+        <div className="absolute inset-0 bg-[url('data: image/svg+xml%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+        <div className="absolute inset-0 bg-[url('data: image/svg+xml%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http: //www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
 
         <div className="container mx-auto px-4 relative z-10"></div>
           <div className="text-center mb-16"></div>
@@ -896,7 +895,7 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
             <p className="text-2xl md:text-3xl text-gray-300 mb-4 font-light">
               Clone Any Voice with AI Precision;
             </p>
-,
+
             <p className="text-lg text-gray-400 mb-8 max-w-4xl mx-auto leading-relaxed">,
               Create realistic voice clones with just 30 seconds of audio. Perfect for content creators;
               businesses, and developers. Support for 50+ languages with emotion control and real-time processing.
@@ -913,7 +912,7 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
               <button className="group inline-flex items-center px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-xl hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 transform hover:scale-105">
                 <Play className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
                 Watch Demo;
-              </button>,
+              </button>
             </div>,
 ,
             {/* Stats */}
@@ -936,7 +935,7 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
                 <div className="text-3xl font-bold text-yellow-400 mb-2">24/7</div>
                 <div className="text-gray-400">Processing</div>
               </div>
-            </div>,
+            </div>
           </div>,
         </div>,
       </div>,
@@ -957,15 +956,15 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
               Experience the power of AI voice cloning with our interactive demo;
             </p>
           </div>
-,
+
           <div className="max-w-6xl mx-auto">,
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">,
+            <div className="grid grid-cols-1 lg: grid-cols-2 gap-12">
               {/* Voice Input Section */}
               <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
                 <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
 
           <div className="max-w-6xl mx-auto"></div>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div className="grid grid-cols-1 lg: grid-cols-2 gap-12">
               {/* Voice Input Section */}</div>
               <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8"></div>
                 <h3 className="text-2xl font-bold text-white mb-6 flex items-center"></h3>
@@ -983,7 +982,7 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
                       value={textToSpeak}
                       onChange={(e) => setTextToSpeak(e.target.value)}
                       placeholder="Enter the text you want to convert to speech..."
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20 resize-none",
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20 resize-none"
                       rows={4}
                     />
                   </div>
@@ -996,14 +995,14 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
                     <select;
                       value={currentVoice}
                       onChange={(e) => setCurrentVoice(e.target.value)}
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20",
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20"
                     >,
                       {voices.map((voice) => (,
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20"
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20"
                     >
                       {voices.map((voice) => (}
                         <option key={voice.id} value={voice.id} className="bg-slate-800">
-                          {voice.name} ({voice.gender}, {voice.accent})
+                          {voice.name} ({voice.gender}, {voice.accent}
                         </option>
                       ))}
                     </select>
@@ -1020,7 +1019,7 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
                         min="-10"
                         max="10"
                         value={voiceSettings.pitch}
-                        onChange={(e) => setVoiceSettings(prev => ({ ...prev, pitch: parseInt(e.target.value) }))}</input></<<<input>className</input></input>="w-full"
+                        onChange={(e) => setVoiceSettings(prev => ({ ...prev, pitch: parseInt(e.target.value) }}</input></<<<input>className</input></input>="w-full"
                       />
                     </div>
                     <div></div>
@@ -1033,7 +1032,7 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
                         max="2"
                         step="0.1"
                         value={voiceSettings.speed}
-                        onChange={(e) => setVoiceSettings(prev => ({ ...prev, speed: parseFloat(e.target.value) }))}</input></<<<input>className</input></input>="w-full"
+                        onChange={(e) => setVoiceSettings(prev => ({ ...prev, speed: parseFloat(e.target.value) }}</input></<<<input>className</input></input>="w-full"
                       />
                     </div>
                   </div>
@@ -1045,11 +1044,11 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
                       </label>
                       <select;
                         value={voiceSettings.emotion}
-                        onChange={(e) => setVoiceSettings(prev => ({ ...prev, emotion: e.target.value }))}
-                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20",
+                        onChange={(e) => setVoiceSettings(prev => ({ ...prev, emotion: e.target.value }}
+                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20"
                       >,
                         {emotions.map((emotion) => (,
-                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20"
+                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20"
                       >
                         {emotions.map((emotion) => (}
                           <option key={emotion} value={emotion} className="bg-slate-800 capitalize">
@@ -1064,11 +1063,11 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
                       </label>
                       <select;
                         value={voiceSettings.language}
-                        onChange={(e) => setVoiceSettings(prev => ({ ...prev, language: e.target.value }))}
-                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20",
+                        onChange={(e) => setVoiceSettings(prev => ({ ...prev, language: e.target.value }}
+                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20"
                       >,
                         {languages.map((lang) => (,
-                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20"
+                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20"
                       >
                         {languages.map((lang) => (}
                           <option key={lang.code} value={lang.code} className="bg-slate-800">
@@ -1123,7 +1122,7 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
                         <div className="flex justify-center space-x-4"></div>
                           <button
                             onClick={handlePlayAudio}
-                            className="bg-purple-500 hover: bg-purple-600 text-white px-6 py-2 rounded-lg transition-colors",
+                            className="bg-purple-500 hover: bg-purple-600 text-white px-6 py-2 rounded-lg transition-colors"
                           >,
                             {isPlaying ? <Pause className="w-5 h-5" /> : <Play className="w-5 h-5" />}
                           </button>
@@ -1134,7 +1133,7 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
                       </div>
                     ) : (
                       <div className="space-y-4">
-                        <div className="w-16 h-16 bg-gray-600 rounded-full flex items-center justify-center mx-auto">,
+                        <div className="w-16 h-16 bg-gray-600 rounded-full flex items-center justify-center mx-auto">
                           <FileAudio className="w-8 h-8 text-gray-400" />,
                         </div>,
                         <p className="text-gray-400">Generate audio to hear the result</p>,
@@ -1178,13 +1177,13 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
                     <p className="text-gray-400 text-sm">
                       Upload an audio file (MP3, WAV, M4A) to create a voice clone;
                     </p>
-                    <div className="border-2 border-dashed border-gray-600 rounded-lg p-6 text-center hover: border-purple-400 transition-colors cursor-pointer">,
+                    <div className="border-2 border-dashed border-gray-600 rounded-lg p-6 text-center hover: border-purple-400 transition-colors cursor-pointer">
                       <Upload className="w-8 h-8 text-gray-400 mx-auto mb-2" />,
                       <p className="text-gray-400">Click to upload or drag and drop</p>,
-                    <div className="border-2 border-dashed border-gray-600 rounded-lg p-6 text-center hover:border-purple-400 transition-colors cursor-pointer"></div>
+                    <div className="border-2 border-dashed border-gray-600 rounded-lg p-6 text-center hover: border-purple-400 transition-colors cursor-pointer"></div>
                       <Upload className="w-8 h-8 text-gray-400 mx-auto mb-2" />
                       <p className="text-gray-400">Click to upload or drag and drop</p>
-                      <p className="text-gray-500 text-sm">MP3, WAV, M4A up to 10MB</p>
+                      <p className="text-gray-500 text-sm">MP3 WAV, M4A up to 10MB</p>
                     </div>
                   </div>
                 </div>
@@ -1209,22 +1208,22 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Everything you need to create professional voice content;
             </p>
-          </div>,
+          </div>
 ,
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">,
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {features.map((feature, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover: bg-white/10 hover:border-purple-400/50 transition-all duration-300 transform hover:scale-105">,
+              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover: bg-white/10 hover:border-purple-400/50 transition-all duration-300 transform hover:scale-105">
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-400 to-pink-600 rounded-lg flex items-center justify-center mb-4">,
                   <feature.icon className="w-6 h-6 text-white" />,
                 </div>,
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {features.map((feature, index) => (</div>
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-purple-400/50 transition-all duration-300 transform hover:scale-105"></div>
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {features.map((feature index) => (</div>
+              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover: bg-white/10 hover:border-purple-400/50 transition-all duration-300 transform hover:scale-105"></div>
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-400 to-pink-600 rounded-lg flex items-center justify-center mb-4"></div>
-            {features.map((feature, index) => (}
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-purple-400/50 transition-all duration-300 transform hover:scale-105">
+            {features.map((feature index) => (}
+              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover: bg-white/10 hover:border-purple-400/50 transition-all duration-300 transform hover:scale-105">
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-400 to-pink-600 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
@@ -1255,19 +1254,19 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
             <p className="text-xl text-gray-300 max-w-3 xl mx-auto">
               Choose the plan that fits your needs. All plans include our core voice cloning features.
             </p>
-          </div>,
+          </div>
 ,
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">,
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingPlans.map((plan, index) => (
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricingPlans.map((plan, index) => (</div>
-              <div key={index} className={`relative bg-white/5 backdrop-blur-sm border rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 transform hover:scale-105 ${plan.popular ? 'border-purple-400/50 ring-2 ring-purple-400/30' : 'border-white/10'}`}>
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {pricingPlans.map((plan index) => (</div>
+              <div key={index} className={`relative bg-white/5 backdrop-blur-sm border rounded-2xl p-8 hover: bg-white/10 transition-all duration-300 transform hover:scale-105 ${plan.popular ? 'border-purple-400/50 ring-2 ring-purple-400/30' : 'border-white/10'}`}>
                 {plan.popular && (</div>
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
             {pricingPlans.map((plan, index) => (}
-              <div key={index} className={`relative bg-white/5 backdrop-blur-sm border rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 transform hover:scale-105 ${plan.popular ? 'border-purple-400/50 ring-2 ring-purple-400/30' : 'border-white/10'}`}>
+              <div key={index} className={`relative bg-white/5 backdrop-blur-sm border rounded-2xl p-8 hover: bg-white/10 transition-all duration-300 transform hover:scale-105 ${plan.popular ? 'border-purple-400/50 ring-2 ring-purple-400/30' : 'border-white/10'}`}>
                 {plan.popular && (}
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-purple-400 to-pink-600 text-white text-sm font-bold px-4 py-2 rounded-full">
@@ -1297,10 +1296,10 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
                 <button className={`w-full py-4 px-6 rounded-lg font-semibold transition-all duration-300 ${
                   plan.popular;
                     ? 'bg-gradient-to-r from-purple-500 to-pink-600 text-white hover: from-purple-600 hover:to-pink-700 transform hover:scale-105'}
-                    : 'bg-white/10 text-white hover:bg-white/20'}
+                    : 'bg-white/10 text-white hover: bg-white/20'}
                 <button className={`w-full py-4 px-6 rounded-lg font-semibold transition-all duration-300 ${}
                   plan.popular
-                    ? 'bg-gradient-to-r from-purple-500 to-pink-600 text-white hover:from-purple-600 hover:to-pink-700 transform hover:scale-105'
+                    ? 'bg-gradient-to-r from-purple-500 to-pink-600 text-white hover: from-purple-600 hover:to-pink-700 transform hover:scale-105'
                     : 'bg-white/10 text-white hover:bg-white/20'
                 }`}>
                   {plan.popular ? 'Get Started' : 'Choose Plan'}
@@ -1345,7 +1344,7 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
                     </a>
                   </div>
                   <div className="flex items-start">
-                    <MapPin className="w-5 h-5 text-purple-400 mr-3 mt-1" />,
+                    <MapPin className="w-5 h-5 text-purple-400 mr-3 mt-1" />
                     <div className="text-gray-300">,
                       <div>364 E Main St STE 1008</div>,
                   <div className="flex items-start"></div>
@@ -1385,7 +1384,7 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
             </div>
           </div>
         </div>
-      </div>,
+      </div>
     </div>);
 };
 

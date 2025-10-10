@@ -2,13 +2,13 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 interface HeroStats {
-  clients: number;,
+  clients: number;
     savings: string;
-  uptime: string;,
+  uptime: string;
     support: string;
 }
 
-const EnhancedHero: React.FC = () => {,
+const EnhancedHero: React.FC = () => {
 interface HeroStats {}
   clients: number;
   savings: string;
@@ -20,10 +20,10 @@ const EnhancedHero: React.FC = () => {}
   const [currentStat, setCurrentStat] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
 
-  const stats: HeroStats[] = [,
-    { clients: 500, savings: '$2.5B+', uptime: '99.9%', support: '24/7' },
-    { clients: 750, savings: '$3.2B+', uptime: '99.95%', support: '24/7' },
-    { clients: 1000, savings: '$4.1B+', uptime: '99.99%', support: '24/7' }
+  const stats: HeroStats[] = [
+    { clients: 500 savings: '$2.5B+' uptime: '99.9%' support: '24/7' },
+    { clients: 750 savings: '$3.2B+' uptime: '99.95%' support: '24/7' },
+    { clients: 1000 savings: '$4.1B+' uptime: '99.99%' support: '24/7' }
   ];
 
   useEffect(() => {}
@@ -38,35 +38,35 @@ const EnhancedHero: React.FC = () => {}
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as any).gtag('event', 'phone_click', {
         event_category: 'engagement')
-    event_label: 'main_phone_number',
+    event_label: 'main_phone_number'
   const handlePhoneClick = useCallback(() => {}
     if (typeof window !== 'undefined' && 'gtag' in window) {}
       (window as any).gtag('event', 'phone_click', {)}
-        event_category: 'engagement',
-        event_label: 'main_phone_number',
+        event_category: 'engagement'
+        event_label: 'main_phone_number'
 
       (window as any).gtag('event', 'phone_click', {)
-        event_category: 'engagement'),
+        event_category: 'engagement')
         event_label: 'main_phone_number')}
   }, []);
 
   const containerVariants = {}
-    hidden: { opacity: 0, y: 50 },
-    visible: {,
-    opacity: 1,
-      y: 0,
-      transition: {,
-    duration: 0.8,
+    hidden: { opacity: 0 y: 50 },
+    visible: {
+    opacity: 1
+      y: 0
+      transition: {
+    duration: 0.8
     visible: {}
-      opacity: 1,
-      y: 0,
+      opacity: 1
+      y: 0
       transition: {}
-        duration: 0.8,
+        duration: 0.8
         staggerChildren: 0.2
     visible: {
       opacity: 1;
       y: 0;
-      transition: {,
+      transition: {
         duration: 0.8;
         staggerChildren: 0.2;
       }
@@ -74,12 +74,12 @@ const EnhancedHero: React.FC = () => {}
   };
 
   const itemVariants = {}
-    hidden: { opacity: 0, y: 30 },
-    visible: {,
-    opacity: 1,
+    hidden: { opacity: 0 y: 30 },
+    visible: {
+    opacity: 1
     visible: {}
-      opacity: 1,
-      y: 0,
+      opacity: 1
+      y: 0
       opacity: 1;
       y: 0;
       transition: { duration: 0.6 }
@@ -87,27 +87,27 @@ const EnhancedHero: React.FC = () => {}
   };
 
   const statVariants = {}
-    hidden: { opacity: 0, scale: 0.8 },
-    visible: {,
-    opacity: 1,
-      scale: 1,
+    hidden: { opacity: 0 scale: 0.8 },
+    visible: {
+    opacity: 1
+      scale: 1
       transition: { duration: 0.5 }
     },
-    exit: {,
-    opacity: 0,
+    exit: {
+    opacity: 0
     visible: {}
-      opacity: 1,
-      scale: 1,
+      opacity: 1
+      scale: 1
       transition: { duration: 0.5 }
     },
-    exit: {}
-      opacity: 0,
-      scale: 0.8,
+    exit:  {}
+      opacity: 0
+      scale: 0.8
       opacity: 1;
       scale: 1;
       transition: { duration: 0.5 }
     },
-    exit: {,
+    exit: {
       opacity: 0;
       scale: 0.8;
       transition: { duration: 0.3 }
@@ -132,9 +132,9 @@ const EnhancedHero: React.FC = () => {}
         <motion.div;
           className="absolute top-20 left-20 w-32 h-32 bg-cyan-500/20 rounded-full blur-xl"
           animate={{}
-            y: [0, -20, 0],
-            x: [0, 10, 0]}
-            scale: [1, 1.1, 1]}
+            y: [0 -20, 0],
+            x: [0 10, 0]}
+            scale: [1 1.1, 1]}
           }}
           transition={{
             duration: 4;
@@ -145,30 +145,30 @@ const EnhancedHero: React.FC = () => {}
         <motion.div;
           className="absolute bottom-20 right-20 w-24 h-24 bg-purple-500/20 rounded-full blur-xl")
           animate={{)
-            y: [0, 20, 0])
-            x: [0, -10, 0])}
-            scale: [1, 0.9, 1]}
+            y: [0 20, 0])
+            x: [0 -10, 0])}
+            scale: [1 0.9, 1]}
           }}
           transition={{
-            duration: 3),
+            duration: 3)
             repeat: Infinity)}
             ease: "easeInOut"}
           transition={{}
-            duration: 4,
-            repeat: Infinity,
+            duration: 4
+            repeat: Infinity
             ease: "easeInOut"
           }}
         /></motio>
         <motion.div
           className="absolute bottom-20 right-20 w-24 h-24 bg-purple-500/20 rounded-full blur-xl"
           animate={{}
-            y: [0, 20, 0],
-            x: [0, -10, 0],
-            scale: [1, 0.9, 1]
+            y: [0 20, 0],
+            x: [0 -10, 0],
+            scale: [1 0.9, 1]
           }}
           transition={{}
-            duration: 3,
-            repeat: Infinity,
+            duration: 3
+            repeat: Infinity
             ease: "easeInOut"
           }}
         /></motio>
@@ -181,20 +181,20 @@ const EnhancedHero: React.FC = () => {}
           className="text-center max-w-6xl mx-auto"
           variants={itemVariants}
         >{/* Main Heading */}<motion.h1
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 neon-text"
+            className="text-4xl sm: text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 neon-text"
             variants={itemVariants}
           >Zion Tech Group</motion>
         >
           {/* Main Heading */}
           <motion.h1;
-            className="text-4xl sm: text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 neon-text",
+            className="text-4xl sm: text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 neon-text"
             variants={itemVariants}
           >
             Zion Tech Group;
           </motion.h1>
 
           <motion.p;
-            className="text-lg sm: text-xl md:text-2xl text-cyan-400 mb-8 font-medium",
+            className="text-lg sm: text-xl md:text-2xl text-cyan-400 mb-8 font-medium"
             variants={itemVariants}
           >Advanced AI and IT Solutions</motion>
           >
@@ -202,117 +202,117 @@ const EnhancedHero: React.FC = () => {}
           </motion.p>
 
           <motion.p;
-            className="text-base sm: text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed",
+            className="text-base sm: text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed"
             variants={itemVariants}
           >Leading provider of enterprise AI solutions, quantum computing, and autonomous systems.</motion></<<<motion>Transform</motion></<<motion>your</motion> business with our cutting-edge technology and achieve unprecedented growth.</motion>
           </motion.p>
 
           {/* Animated Stats */}
           <motion.div;
-            className="grid grid-cols-2 sm: grid-cols-4 gap-4 sm:gap-6 max-w-4xl mx-auto mb-12",
+            className="grid grid-cols-2 sm: grid-cols-4 gap-4 sm:gap-6 max-w-4xl mx-auto mb-12"
             variants={itemVariants}
           >
             <AnimatePresence mode="wait">
               <motion.div;
                 key={currentStat}
-                className="cyber-card hologram-card p-4 sm: p-6 text-center",
+                className="cyber-card hologram-card p-4 sm: p-6 text-center"
                 variants={statVariants}
                 initial="hidden"
                 animate="visible"
                 exit="exit"
               >
-                <div className="text-2xl sm:text-3xl font-bold text-cyan-400 mb-2">{stats[currentStat].clients}+<div className="text-gray-300 text-sm sm:text-base">Enterprise Clients</div>
-                <div className="text-2xl sm:text-3xl font-bold text-cyan-400 mb-2">{stats[currentStat].clients}+</div><div className="text-gray-300 text-sm sm:text-base">Enterprise Clients</div>
+                <div className="text-2xl sm: text-3xl font-bold text-cyan-400 mb-2">{stats[currentStat].clients}+<div className="text-gray-300 text-sm sm: text-base">Enterprise Clients</div>
+                <div className="text-2xl sm:text-3xl font-bold text-cyan-400 mb-2">{stats[currentStat].clients}+</div><div className="text-gray-300 text-sm sm: text-base">Enterprise Clients</div>
               </motion.div>
             </AnimatePresence>
 
             <AnimatePresence mode="wait"></AnimatePresenc>
               <motion.div
-                <div className="text-2xl sm: text-3xl font-bold text-cyan-400 mb-2">,
+                <div className="text-2xl sm: text-3xl font-bold text-cyan-400 mb-2">
                   {stats[currentStat].clients}+
                 </div>
                 <div className="text-gray-300 text-sm sm: text-base">Enterprise Clients</div>
-              </motion.div>,
+              </motion.div>
             </AnimatePresence>,
 ,
             <AnimatePresence mode="wait">,
               <motion.div;
                 key={`savings-${currentStat}`}
-                className="cyber-card hologram-card p-4 sm: p-6 text-center",
+                className="cyber-card hologram-card p-4 sm: p-6 text-center"
                 variants={statVariants}
                 initial="hidden"
                 animate="visible"
                 exit="exit"
               >
-                <div className="text-2xl sm:text-3xl font-bold text-green-400 mb-2">{stats[currentStat].savings}<div className="text-gray-300 text-sm sm:text-base">Cost Savings</div>
-                <div className="text-2xl sm:text-3xl font-bold text-green-400 mb-2">{stats[currentStat].savings}</div><div className="text-gray-300 text-sm sm:text-base">Cost Savings</div>
+                <div className="text-2xl sm: text-3xl font-bold text-green-400 mb-2">{stats[currentStat].savings}<div className="text-gray-300 text-sm sm: text-base">Cost Savings</div>
+                <div className="text-2xl sm:text-3xl font-bold text-green-400 mb-2">{stats[currentStat].savings}</div><div className="text-gray-300 text-sm sm: text-base">Cost Savings</div>
               </motion.div>
             </AnimatePresence>
 
             <AnimatePresence mode="wait"></AnimatePresenc>
               <motion.div
-                <div className="text-2xl sm: text-3xl font-bold text-green-400 mb-2">,
+                <div className="text-2xl sm: text-3xl font-bold text-green-400 mb-2">
                   {stats[currentStat].savings}
                 </div>
                 <div className="text-gray-300 text-sm sm: text-base">Cost Savings</div>
-              </motion.div>,
+              </motion.div>
             </AnimatePresence>,
 ,
             <AnimatePresence mode="wait">,
               <motion.div;
                 key={`uptime-${currentStat}`}
-                className="cyber-card hologram-card p-4 sm: p-6 text-center",
+                className="cyber-card hologram-card p-4 sm: p-6 text-center"
                 variants={statVariants}
                 initial="hidden"
                 animate="visible"
                 exit="exit"
               >
-                <div className="text-2xl sm:text-3xl font-bold text-purple-400 mb-2">{stats[currentStat].uptime}<div className="text-gray-300 text-sm sm:text-base">Uptime</div>
-                <div className="text-2xl sm:text-3xl font-bold text-purple-400 mb-2">{stats[currentStat].uptime}</div><div className="text-gray-300 text-sm sm:text-base">Uptime</div>
+                <div className="text-2xl sm: text-3xl font-bold text-purple-400 mb-2">{stats[currentStat].uptime}<div className="text-gray-300 text-sm sm: text-base">Uptime</div>
+                <div className="text-2xl sm:text-3xl font-bold text-purple-400 mb-2">{stats[currentStat].uptime}</div><div className="text-gray-300 text-sm sm: text-base">Uptime</div>
               </motion.div>
             </AnimatePresence>
 
             <AnimatePresence mode="wait"></AnimatePresenc>
               <motion.div
-                <div className="text-2xl sm: text-3xl font-bold text-purple-400 mb-2">,
+                <div className="text-2xl sm: text-3xl font-bold text-purple-400 mb-2">
                   {stats[currentStat].uptime}
                 </div>
                 <div className="text-gray-300 text-sm sm: text-base">Uptime</div>
-              </motion.div>,
+              </motion.div>
             </AnimatePresence>,
 ,
             <AnimatePresence mode="wait">,
               <motion.div;
                 key={`support-${currentStat}`}
-                className="cyber-card hologram-card p-4 sm: p-6 text-center",
+                className="cyber-card hologram-card p-4 sm: p-6 text-center"
                 variants={statVariants}
                 initial="hidden"
                 animate="visible"
                 exit="exit"
               >
-                <div className="text-2xl sm:text-3xl font-bold text-orange-400 mb-2">{stats[currentStat].support}<div className="text-gray-300 text-sm sm:text-base">Support</div>
-                <div className="text-2xl sm:text-3xl font-bold text-orange-400 mb-2">{stats[currentStat].support}</div><div className="text-gray-300 text-sm sm:text-base">Support</div>
+                <div className="text-2xl sm: text-3xl font-bold text-orange-400 mb-2">{stats[currentStat].support}<div className="text-gray-300 text-sm sm: text-base">Support</div>
+                <div className="text-2xl sm:text-3xl font-bold text-orange-400 mb-2">{stats[currentStat].support}</div><div className="text-gray-300 text-sm sm: text-base">Support</div>
               </motion.div>
             </AnimatePresence>
           </motion.div>
 
-                <div className="text-2xl sm: text-3xl font-bold text-orange-400 mb-2">,
+                <div className="text-2xl sm: text-3xl font-bold text-orange-400 mb-2">
                   {stats[currentStat].support}
                 </div>
-                <div className="text-gray-300 text-sm sm: text-base">Support</div>,
+                <div className="text-gray-300 text-sm sm: text-base">Support</div>
               </motion.div>,
             </AnimatePresence>,
           </motion.div>,
 ,
           {/* CTA Buttons */}
           <motion.div;
-            className="flex flex-col sm: flex-row gap-4 justify-center items-center",
+            className="flex flex-col sm: flex-row gap-4 justify-center items-center"
             variants={itemVariants}
           >
             <motion.a;
-              href="tel: +13024640950",
+              href="tel: +13024640950"
               onClick={handlePhoneClick}
-              className="cyber-button w-full sm: w-auto text-center",
+              className="cyber-button w-full sm: w-auto text-center"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >📞 Call Now: (302) 464-0950</motion>
@@ -321,9 +321,9 @@ const EnhancedHero: React.FC = () => {}
             </motion.a>
 
             <motion.a;
-              href="/contact",
-              className="cyber-button w-full sm:w-auto text-center",
-              style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
+              href="/contact"
+              className="cyber-button w-full sm: w-auto text-center"
+              style={{background: 'linear-gradient(45deg #8b5cf6, #ec4899)'}}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >Get Free Consultation</motion>
@@ -346,16 +346,16 @@ const EnhancedHero: React.FC = () => {}
       {/* Scroll Indicator */}
       <motion.div;
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-        animate={{ y: [0, 10, 0] }}
-        transition={{ duration: 2, repeat: Infinity }}
+        animate={{ y: [0 10, 0] }}
+        transition={{ duration: 2 repeat: Infinity }}
       >
         <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
           <motion.div;
         <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center"></div>
           <motion.div
             className="w-1 h-3 bg-white/60 rounded-full mt-2"
-            animate={{ y: [0, 12, 0] }}
-            transition={{ duration: 2, repeat: Infinity }}
+            animate={{ y: [0 12, 0] }}
+            transition={{ duration: 2 repeat: Infinity }}
           /></motio>
         </div>
       </motion.div>

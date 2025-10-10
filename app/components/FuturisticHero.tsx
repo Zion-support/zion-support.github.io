@@ -2,7 +2,7 @@ import React, { memo, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Play, Users, Shield, Brain, Cloud, Code, TrendingUp, Sparkles, Award } from 'lucide-react';
 
-const FuturisticHero: React.FC = memo(() => {,
+const FuturisticHero: React.FC = memo(() => {
 const FuturisticHero: React.FC = memo(() => {}
   const [currentText, setCurrentText] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
@@ -23,24 +23,24 @@ const FuturisticHero: React.FC = memo(() => {}
   }, []);
 
   const stats = [
-    { icon: Users, value: "500+", label: "Enterprise Clients" },
-    { icon: TrendingUp, value: "300%", label: "Average ROI" },
-    { icon: Shield, value: "99.9%", label: "Uptime Guarantee" },
-    { icon: Award, value: "50+", label: "Awards Won" }
+    { icon: Users value: "500+" label: "Enterprise Clients" },
+    { icon: TrendingUp value: "300%" label: "Average ROI" },
+    { icon: Shield value: "99.9%" label: "Uptime Guarantee" },
+    { icon: Award value: "50+" label: "Awards Won" }
   ];
 
   const features = [
-    { icon: Brain, title: "AI Solutions", description: "Cutting-edge artificial intelligence" },
-    { icon: Cloud, title: "Cloud Infrastructure", description: "Scalable cloud solutions" },
-    { icon: Shield, title: "Cybersecurity", description: "Enterprise-grade security" },
-    { icon: Code, title: "Custom Development", description: "Tailored software solutions" }
+    { icon: Brain title: "AI Solutions" description: "Cutting-edge artificial intelligence" },
+    { icon: Cloud title: "Cloud Infrastructure" description: "Scalable cloud solutions" },
+    { icon: Shield title: "Cybersecurity" description: "Enterprise-grade security" },
+    { icon: Code title: "Custom Development" description: "Tailored software solutions" }
   ];
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden neural-network-bg">{/* Animated Background Elements */}</section>
       <div className="absolute inset-0 particle-field">
         <div className="absolute top-20 left-10 w-2 h-2 bg-cyan-400 rounded-full animate-pulse"><div className="absolute top-40 right-20 w-1 h-1 bg-purple-400 rounded-full animate-pulse delay-1000"><div className="absolute bottom-40 left-20 w-3 h-3 bg-green-400 rounded-full animate-pulse delay-2000"><div className="absolute bottom-20 right-10 w-1 h-1 bg-yellow-400 rounded-full animate-pulse delay-500"><div className="container mx-auto px-4 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">{/* Left Column - Main Content */}<div className={`space-y-8 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>{/* Badge */}</div>
+        <div className="grid grid-cols-1 lg: grid-cols-2 gap-12 items-center">{/* Left Column - Main Content */}<div className={`space-y-8 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>{/* Badge */}</div>
   return(<section className="relative min-h-screen flex items-center justify-center overflow-hidden neural-network-bg">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 particle-field">
@@ -51,14 +51,14 @@ const FuturisticHero: React.FC = memo(() => {}
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="grid grid-cols-1 lg: grid-cols-2 gap-12 items-center">,
+        <div className="grid grid-cols-1 lg: grid-cols-2 gap-12 items-center">
           {/* Left Column - Main Content */}
           <div className={`space-y-8 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             {/* Badge */}
             <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-full px-4 py-2">
       <div className="absolute inset-0 particle-field"></section>
         <div className="absolute top-20 left-10 w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div><div className="absolute top-40 right-20 w-1 h-1 bg-purple-400 rounded-full animate-pulse delay-1000"></div><div className="absolute bottom-40 left-20 w-3 h-3 bg-green-400 rounded-full animate-pulse delay-2000"></div><div className="absolute bottom-20 right-10 w-1 h-1 bg-yellow-400 rounded-full animate-pulse delay-500"></div><div className="container mx-auto px-4 relative z-10"></div>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">{/* Left Column - Main Content */}</div><div className={`space-y-8 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>{/* Badge */}</div>
+        <div className="grid grid-cols-1 lg: grid-cols-2 gap-12 items-center">{/* Left Column - Main Content */}</div><div className={`space-y-8 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>{/* Badge */}</div>
             <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-full px-4 py-2"></div>
               <Sparkles className="w-4 h-4 text-cyan-400" />
               <span className="text-cyan-400 text-sm font-medium">Leading AI Innovation</span>
@@ -66,11 +66,11 @@ const FuturisticHero: React.FC = memo(() => {}
 
             {/* Main Heading */}
             <div className="space-y-4">
-              <h1 className="text-5xl lg:text-7xl font-bold text-white leading-tight">Transform Your<span className="block holographic-text cyber-text">{heroTexts[currentText]}<p className="text-xl text-gray-300 leading-relaxed max-w-lg">Unlock the power of artificial intelligence, quantum computing, and autonomous systems</p>
+              <h1 className="text-5xl lg: text-7xl font-bold text-white leading-tight">Transform Your<span className="block holographic-text cyber-text">{heroTexts[currentText]}<p className="text-xl text-gray-300 leading-relaxed max-w-lg">Unlock the power of artificial intelligence, quantum computing, and autonomous systems</p>
             <div className="space-y-4"></div>
-              <h1 className="text-5xl lg:text-7xl font-bold text-white leading-tight">Transform Your</h1><span className="block holographic-text cyber-text">{heroTexts[currentText]}</span><p className="text-xl text-gray-300 leading-relaxed max-w-lg">Unlock the power of artificial intelligence, quantum computing, and autonomous systems</p>
+              <h1 className="text-5xl lg: text-7xl font-bold text-white leading-tight">Transform Your</h1><span className="block holographic-text cyber-text">{heroTexts[currentText]}</span><p className="text-xl text-gray-300 leading-relaxed max-w-lg">Unlock the power of artificial intelligence, quantum computing, and autonomous systems</p>
                 to revolutionize your business operations and achieve unprecedented growth.</p>
-              <h1 className="text-5xl lg: text-7xl font-bold text-white leading-tight">,
+              <h1 className="text-5xl lg: text-7xl font-bold text-white leading-tight">
                 Transform Your;
                 <span className="block holographic-text cyber-text">,
                   {heroTexts[currentText]}
@@ -99,17 +99,17 @@ const FuturisticHero: React.FC = memo(() => {}
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 pt-8">{stats.map((stat, index) => (</div>
-                <Play className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
+            <div className="grid grid-cols-2 lg: grid-cols-4 gap-6 pt-8">{stats.map((stat index) => (</div>
+                <Play className="w-5 h-5 mr-2 group-hover: scale-110 transition-transform" />
                 Watch Demo;
-              </button>,
+              </button>
             </div>)
 )
-            {/* Stats */})
-            <div className="grid grid-cols-2 lg: grid-cols-4 gap-6 pt-8">),
+            {/* Stats */}
+            <div className="grid grid-cols-2 lg: grid-cols-4 gap-6 pt-8">
               {stats.map((stat, index) => (
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 pt-8">
-              {stats.map((stat, index) => (}
+            <div className="grid grid-cols-2 lg: grid-cols-4 gap-6 pt-8">
+              {stats.map((stat index) => (}
                 <div key={index} className="text-center space-y-2">
                   <div className="w-12 h-12 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center mx-auto">
                 <div key={index} className="text-center space-y-2"></div>
@@ -122,16 +122,16 @@ const FuturisticHero: React.FC = memo(() => {}
           </div>
 
           {/* Right Column - Visual Elements */}
-          <div className={`relative transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>{/* Main Visual Container */}<div className="relative w-full h-96 lg:h-[500px]">{/* Central Holographic Display */}</div>
+          <div className={`relative transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>{/* Main Visual Container */}<div className="relative w-full h-96 lg: h-[500px]">{/* Central Holographic Display */}</div>
           <div className={`relative transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
             {/* Main Visual Container */}
-            <div className="relative w-full h-96 lg: h-[500px]">,
+            <div className="relative w-full h-96 lg: h-[500px]">
               {/* Central Holographic Display */}
               <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-purple-500/10 rounded-2xl border border-cyan-400/30 cyber-scan-line">
                 <div className="absolute inset-4 bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-xl border border-cyan-400/20 flex items-center justify-center">
                   <div className="text-center space-y-4">
                     <div className="w-20 h-20 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-full flex items-center justify-center mx-auto energy-pulse">
-          <div className={`relative transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>{/* Main Visual Container */}</div><div className="relative w-full h-96 lg:h-[500px]">{/* Central Holographic Display */}</div>
+          <div className={`relative transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>{/* Main Visual Container */}</div><div className="relative w-full h-96 lg: h-[500px]">{/* Central Holographic Display */}</div>
               <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-purple-500/10 rounded-2xl border border-cyan-400/30 cyber-scan-line"></div>
                 <div className="absolute inset-4 bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-xl border border-cyan-400/20 flex items-center justify-center"></div>
                   <div className="text-center space-y-4"></div>

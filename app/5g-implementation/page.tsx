@@ -6,24 +6,24 @@ import { Wifi, Zap, Shield, Globe, CheckCircle, ArrowRight, Phone, Mail, MapPin 
 const FiveGImplementationPage: React.FC = () => {
   const features = [
     {
-      icon: Wifi,
-      title: 'Ultra-Low Latency',
-      description: 'Sub-millisecond latency for real-time applications and critical communications'
+    icon: Wifi,
+    title: 'Ultra-Low Latency',
+    description: 'Sub-millisecond latency for real-time applications and critical communications',
     },
     {
-      icon: Zap,
-      title: 'High-Speed Connectivity',
-      description: 'Multi-gigabit speeds for seamless data transfer and streaming'
+    icon: Zap,
+    title: 'High-Speed Connectivity',
+    description: 'Multi-gigabit speeds for seamless data transfer and streaming',
     },
     {
-      icon: Shield,
-      title: 'Enhanced Security',
-      description: 'Advanced encryption and security protocols for enterprise-grade protection'
+    icon: Shield,
+    title: 'Enhanced Security',
+    description: 'Advanced encryption and security protocols for enterprise-grade protection',
     },
     {
-      icon: Globe,
-      title: 'Massive IoT Support',
-      description: 'Support for millions of connected devices with efficient resource management'
+    icon: Globe,
+    title: 'Massive IoT Support',
+    description: 'Support for millions of connected devices with efficient resource management',
     }
   ];
 
@@ -38,12 +38,11 @@ const FiveGImplementationPage: React.FC = () => {
 
   const pricing = [
     {
-      name: 'Starter',
-      price: '$2,999/month',
-      description: 'Perfect for small businesses',
+      name: 'Starter'
+      price: '$2999/month',
+      description: 'Perfect for small businesses'
       features: [
-        'Basic 5G coverage',
-        'Up to 100 connected devices',
+        'Basic 5G coverage', 'Up to 100 connected devices',
         'Standard security protocols',
         'Email support',
         'Basic monitoring'
@@ -51,12 +50,11 @@ const FiveGImplementationPage: React.FC = () => {
       popular: false
     },
     {
-      name: 'Professional',
-      price: '$7,999/month',
-      description: 'Ideal for growing companies',
+      name: 'Professional'
+      price: '$7999/month',
+      description: 'Ideal for growing companies'
       features: [
-        'Advanced 5G coverage',
-        'Up to 1,000 connected devices',
+        'Advanced 5G coverage', 'Up to 1,000 connected devices',
         'Enhanced security protocols',
         'Priority support',
         'Advanced monitoring',
@@ -66,12 +64,11 @@ const FiveGImplementationPage: React.FC = () => {
       popular: true
     },
     {
-      name: 'Enterprise',
-      price: '$19,999/month',
-      description: 'For large organizations',
+      name: 'Enterprise'
+      price: '$19999/month',
+      description: 'For large organizations'
       features: [
-        'Complete 5G coverage',
-        'Unlimited connected devices',
+        'Complete 5G coverage', 'Unlimited connected devices',
         'Enterprise security protocols',
         'Dedicated support',
         'Full monitoring suite',
@@ -96,17 +93,17 @@ const FiveGImplementationPage: React.FC = () => {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
         <div className="relative max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+          <h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight">
             5G Network
             <span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
               Implementation
             </span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Complete 5G network implementation services with ultra-low latency, high-speed connectivity,
+            Complete 5G network implementation services with ultra-low latency high-speed connectivity,
             and advanced features for modern applications and IoT ecosystems.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
               Get Started
             </button>
@@ -121,7 +118,7 @@ const FiveGImplementationPage: React.FC = () => {
       <section className="py-20 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
               Advanced 5G Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -130,8 +127,8 @@ const FiveGImplementationPage: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+            {features.map((feature index) => (
+              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover: bg-white/10 transition-all duration-300 group">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
@@ -147,7 +144,7 @@ const FiveGImplementationPage: React.FC = () => {
       <section className="py-20 px-4 bg-white/5">
         <div className="container mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
               Why Choose Our 5G Implementation?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -157,7 +154,7 @@ const FiveGImplementationPage: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="space-y-6">
-              {benefits.map((benefit, index) => (
+              {benefits.map((benefit index) => (
                 <div key={index} className="flex items-start space-x-4">
                   <CheckCircle className="w-6 h-6 text-purple-400 mt-1 flex-shrink-0" />
                   <span className="text-gray-300 text-lg">{benefit}</span>
@@ -189,7 +186,7 @@ const FiveGImplementationPage: React.FC = () => {
       <section className="py-20 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
               Choose Your Plan
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -198,8 +195,8 @@ const FiveGImplementationPage: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricing.map((plan, index) => (
-              <div key={index} className={`bg-white rounded-2xl shadow-2xl p-8 relative ${plan.popular ? 'ring-2 ring-purple-500 scale-105' : ''}`}>
+            {pricing.map((plan index) => (
+              <div key={index} className={`bg-white rounded-2xl shadow-2xl p-8 relative ${plan.popular ? 'ring-2 ring-purple-500 scale-105' : ', '}`}>
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-6 py-2 rounded-full text-sm font-medium">
@@ -224,7 +221,7 @@ const FiveGImplementationPage: React.FC = () => {
                 <button
                   className={`w-full py-4 px-6 rounded-xl font-semibold text-center transition-all ${
                     plan.popular
-                      ? 'bg-gradient-to-r from-purple-500 to-blue-600 text-white hover:from-purple-600 hover:to-blue-700'
+                      ? 'bg-gradient-to-r from-purple-500 to-blue-600 text-white hover: from-purple-600 hover:to-blue-700'
                       : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
                   }`}
                 >
@@ -239,7 +236,7 @@ const FiveGImplementationPage: React.FC = () => {
       {/* Contact Section */}
       <section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-blue-700">
         <div className="container mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
             Ready to Implement 5G?
           </h2>
           <p className="text-xl text-purple-100 mb-8 max-w-3xl mx-auto">

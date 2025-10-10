@@ -18,7 +18,7 @@ interface PerformanceOptimizerProps {}
 const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps>= ({
 const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({}
   enableImageOptimization = true,
-const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({,
+const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   enableImageOptimization = true;
   enableLazyLoading = true,
   enableCodeSplitting = true,
@@ -30,7 +30,7 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({,
   enableCompression = true,
   enablePrefetching = true,
   enableCriticalResourcePreloading = true;
-}) => {
+} => {
 
   // Image optimization;
   useEffect(() => {}
@@ -75,8 +75,8 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({,
     if (!enableLazyLoading || typeof window === 'undefined') return;
 
     const observerOptions = {}
-      root: null,
-      rootMargin: '50px',
+      root: null
+      rootMargin: '50px'
       threshold: 0.1;
     };
 
@@ -95,7 +95,7 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({,
 
     // Observe all images with data-src;
     const lazyImages = document.querySelectorAll('img[data-src]');
-    lazyImages.forEach((img) => imageObserver.observe(img));
+    lazyImages.forEach((img) => imageObserver.observe(img);
 
     return () => {}
       imageObserver.disconnect();
@@ -115,11 +115,11 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({,
     const addResourceHints = () => {}
       // Preconnect to external domains
       const domains = [
-        'https: //fonts.googleapis.com'
-        'https: //fonts.gstatic.com'
-        'https: //www.google-analytics.com'
-        'https: //www.googletagmanager.com'
-      ];
+    'https: //fonts.googleapis.com',
+    'https: //fonts.gstatic.com',
+    'https: //www.google-analytics.com',
+    'https: //www.googletagmanager.com'
+  ];
 
       domains.forEach((domain) => {}
         const link = document.createElement('link');
@@ -130,9 +130,9 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({,
 
       // DNS prefetch for additional domains;
       const dnsPrefetchDomains = [
-        'https://cdn.gpteng.co'
-        'https://api.ziontechgroup.com'
-      ];
+    'https: //cdn.gpteng.co',
+    'https: //api.ziontechgroup.com'
+  ];
 
       dnsPrefetchDomains.forEach((domain) => {}
         const link = document.createElement('link');
@@ -167,8 +167,8 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({,
 
       // Preload critical fonts;
       const criticalFonts = [
-        'https: //fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap'
-      ];
+    'https: //fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap'
+  ];
 
       criticalFonts.forEach((fontUrl) => {}
         const link = document.createElement('link');
@@ -191,7 +191,7 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({,
   useEffect(() => {
   // Service Worker registration
   useEffect(() => {}
-    if (!enableServiceWorker || typeof window === 'undefined' || !('serviceWorker' in navigator)) return;
+    if(!enableServiceWorker || typeof window === 'undefined' || !('serviceWorker' in navigator) return;
 
     const registerServiceWorker = async () => {}
       try {}
@@ -227,18 +227,18 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({,
           // Send to analytics
           if ('gtag' in window) {}
             (window as any).gtag('event', 'web_vitals', {)}
-              event_category: 'Performance',
+              event_category: 'Performance'
               event_label: metric.name)
-    value: Math.round(metric.value),
-              non_interaction: true,
+    value: Math.round(metric.value)
+              non_interaction: true
 
-        const reportMetric = (metric: any) => {,
+        const reportMetric = (metric: any) => {
           // Send to analytics;
           if ('gtag' in window) {,
             (window as any).gtag('event', 'web_vitals', {)
-              event_category: 'Performance'),
-              event_label: metric.name),
-              value: Math.round(metric.value),
+              event_category: 'Performance')
+              event_label: metric.name)
+              value: Math.round(metric.value)
               non_interaction: true;
           }
         };
@@ -266,12 +266,12 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({,
 
     const prefetchPages = () => {}
       const likelyPages = [
-        '/services',
-        '/contact',
-        '/about',
-        '/ai-services',
-        '/it-services'
-      ];
+    '/services',
+    '/contact',
+    '/about',
+    '/ai-services',
+    '/it-services'
+  ];
 
       // Prefetch after a delay to not impact initial load;
       setTimeout(() => {
@@ -313,7 +313,7 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({,
           -webkit-transform: translateZ(0);
           -moz-transform: translateZ(0);
           -ms-transform: translateZ(0);
-          -o-transform: translateZ(0);,
+          -o-transform: translateZ(0);
     transform: translateZ(0);
         }
 
@@ -375,11 +375,11 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({,
 
     if (navigation) {
       const metrics = {
-        domContentLoaded: navigation.domContentLoadedEventEnd - navigation.fetchStart;
-        loadComplete: navigation.loadEventEnd - navigation.fetchStart;
-        firstByte: navigation.responseStart - navigation.fetchStart;
-        domInteractive: navigation.domInteractive - navigation.fetchStart;
-      };
+    domContentLoaded: navigation.domContentLoadedEventEnd - navigation.fetchStart;,
+    loadComplete: navigation.loadEventEnd - navigation.fetchStart;,
+    firstByte: navigation.responseStart - navigation.fetchStart;,
+    domInteractive: navigation.domInteractive - navigation.fetchStart;
+  };
 
       // Performance metrics collected;
       // Send to analytics;
@@ -388,9 +388,9 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({,
           (window as any).gtag('event', 'performance_metric', {
     if (navigation) {}
       const metrics = {}
-        domContentLoaded: navigation.domContentLoadedEventEnd - navigation.fetchStart,
-        loadComplete: navigation.loadEventEnd - navigation.fetchStart,
-        firstByte: navigation.responseStart - navigation.fetchStart,
+        domContentLoaded: navigation.domContentLoadedEventEnd - navigation.fetchStart
+        loadComplete: navigation.loadEventEnd - navigation.fetchStart
+        firstByte: navigation.responseStart - navigation.fetchStart
         domInteractive: navigation.domInteractive - navigation.fetchStart
       };
 
@@ -400,16 +400,16 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({,
       if ('gtag' in window) {}
         Object.entries(metrics).forEach(([key, value]) => {}
           (window as any).gtag('event', 'performance_metric', {)}
-            event_category: 'Performance',
+            event_category: 'Performance'
             event_label: key)
-    value: Math.round(value),
-            non_interaction: true,
+    value: Math.round(value)
+            non_interaction: true
 
 
           (window as any).gtag('event', 'performance_metric', {)
-            event_category: 'Performance'),
-            event_label: key),
-            value: Math.round(value),
+            event_category: 'Performance')
+            event_label: key)
+            value: Math.round(value)
             non_interaction: true;
       }
     }

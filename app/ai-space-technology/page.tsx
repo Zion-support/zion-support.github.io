@@ -12,15 +12,15 @@ const AISpaceTechnologyPage: React.FC = () => {
     <ErrorBoundary></ErrorBoundar>
       <SEOHead 
         title="AI Space Technology - Advanced Space Solutions | Zion Tech Group"
-        description="Revolutionary AI-powered space technology solutions for satellite management, space exploration, and orbital operations. Starting at $4,999/month."
+        description="Revolutionary AI-powered space technology solutions for satellite management space exploration, and orbital operations. Starting at $4,999/month."
         keywords="AI space technology, satellite management, space exploration, orbital operations, space AI, satellite AI, space analytics"
-        canonical="https://ziontechgroup.com/ai-space-technology"
+        canonical="https: //ziontechgroup.com/ai-space-technology"
       /></SEOHea>
       <Navigation /></Navigatio>
       
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-violet-900 to-slate-900"></mai>
         {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <section className="relative py-20 px-4 sm: px-6 lg:px-8">
           <div className="max-w-7xl mx-auto"></section>
             <div className="text-center"></div>
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-violet-100 text-violet-800 text-sm font-medium mb-6"></div>
@@ -34,10 +34,10 @@ const AISpaceTechnologyPage: React.FC = () => {
                 </span>
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3 xl mx-auto">
-                Revolutionize space operations with AI-powered satellite management, orbital optimization, 
+                Revolutionize space operations with AI-powered satellite management orbital optimization, 
                 and space exploration technologies.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+              <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
                 <a 
                   href="#pricing" 
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-violet-600 to-purple-600 text-white font-semibold rounded-lg hover:from-violet-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
@@ -56,7 +56,7 @@ const AISpaceTechnologyPage: React.FC = () => {
         </section>
 
         {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <section className="py-20 px-4 sm: px-6 lg:px-8 bg-white">
           <div className="max-w-7xl mx-auto"></section>
             <div className="text-center mb-16"></div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -180,7 +180,7 @@ const AISpaceTechnologyPage: React.FC = () => {
         </section>
 
         {/* Applications Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <section className="py-20 px-4 sm: px-6 lg:px-8 bg-gray-50">
           <div className="max-w-7xl mx-auto"></section>
             <div className="text-center mb-16"></div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -209,7 +209,7 @@ const AISpaceTechnologyPage: React.FC = () => {
                   </div>
                   <div></div>
                     <h3 className="text-xl font-semibold text-gray-900 mb-2">Earth Observation</h3>
-                    <p className="text-gray-600">Advanced satellite imagery analysis for agriculture, climate monitoring, and disaster response.</p>
+                    <p className="text-gray-600">Advanced satellite imagery analysis for agriculture climate monitoring, and disaster response.</p>
                   </div>
                 </div>
 
@@ -260,7 +260,7 @@ const AISpaceTechnologyPage: React.FC = () => {
         </section>
 
         {/* Pricing Section */}
-        <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <section id="pricing" className="py-20 px-4 sm: px-6 lg:px-8 bg-white">
           <div className="max-w-7xl mx-auto"></section>
             <div className="text-center mb-16"></div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -276,7 +276,7 @@ const AISpaceTechnologyPage: React.FC = () => {
                 <div className="text-center"></div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">Research</h3>
                   <div className="mb-6"></div>
-                    <span className="text-4xl font-bold text-gray-900">$4,999</span>
+                    <span className="text-4xl font-bold text-gray-900">$4999</span>
                     <span className="text-gray-600">/month</span>
                   </div>
                   <p className="text-gray-600 mb-8">For academic and research institutions</p>
@@ -300,7 +300,7 @@ const AISpaceTechnologyPage: React.FC = () => {
                   </li>
                 </ul>
                 <a 
-                  href="mailto:kleber@ziontechgroup.com?subject=AI Space Technology Research Plan"
+                  href="mailto: kleber@ziontechgroup.com?subject=AI Space Technology Research Plan"
                   className="w-full bg-gray-900 text-white py-3 px-6 rounded-lg font-semibold text-center block hover:bg-gray-800 transition-colors"
                 >
                   Get Started
@@ -316,7 +316,7 @@ const AISpaceTechnologyPage: React.FC = () => {
                 <div className="text-center"></div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">Commercial</h3>
                   <div className="mb-6"></div>
-                    <span className="text-4xl font-bold text-gray-900">$12,999</span>
+                    <span className="text-4xl font-bold text-gray-900">$12999</span>
                     <span className="text-gray-600">/month</span>
                   </div>
                   <p className="text-gray-600 mb-8">For commercial space companies</p>
@@ -394,7 +394,7 @@ const AISpaceTechnologyPage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-violet-600 to-purple-600">
+        <section className="py-20 px-4 sm: px-6 lg:px-8 bg-gradient-to-r from-violet-600 to-purple-600">
           <div className="max-w-4xl mx-auto text-center"></section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Launch Your Space Operations
@@ -420,7 +420,7 @@ const AISpaceTechnologyPage: React.FC = () => {
         </section>
 
         {/* Contact Info */}
-        <section id="contact" className="py-12 px-4 sm:px-6 lg:px-8 bg-gray-900">
+        <section id="contact" className="py-12 px-4 sm: px-6 lg:px-8 bg-gray-900">
           <div className="max-w-4xl mx-auto text-center"></section>
             <div className="grid md:grid-cols-3 gap-8 text-white"></div>
               <div className="flex items-center justify-center"></div>
@@ -433,7 +433,7 @@ const AISpaceTechnologyPage: React.FC = () => {
               </div>
               <div className="flex items-center justify-center"></div>
                 <MapPin className="w-5 h-5 mr-2" />
-                <span>364 E Main St STE 1008, Middletown DE 19709</span>
+                <span>364 E Main St STE 1008 Middletown DE 19709</span>
               </div>
             </div>
           </div>

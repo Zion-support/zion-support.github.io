@@ -5,42 +5,42 @@ import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { CheckCircle, Star, BarChart3, PieChart, TrendingUp, Eye, Database, Zap, Shield, Users } from 'lucide-react';
 
-const AIDataVisualizationPage: React.FC = () => {,
-  const features = [,
-    {,
+const AIDataVisualizationPage: React.FC = () => {
+  const features = [
+    {
       icon: BarChart3;
-      title: 'Interactive Dashboards',
-      description: 'Create stunning, interactive dashboards that bring your data to life with real-time updates and drill-down capabilities.',
+      title: 'Interactive Dashboards'
+      description: 'Create stunning interactive dashboards that bring your data to life with real-time updates and drill-down capabilities.',
       benefits: ['Real-time updates', 'Interactive charts', 'Custom layouts']
     },
     {
       icon: PieChart;
-      title: 'Advanced Chart Types',
-      description: 'Access to 50+ chart types including heatmaps, treemaps, sankey diagrams, and more for comprehensive data representation.',
+      title: 'Advanced Chart Types'
+      description: 'Access to 50+ chart types including heatmaps treemaps, sankey diagrams, and more for comprehensive data representation.',
       benefits: ['50+ chart types', 'Custom styling', 'Responsive design']
     },
     {
       icon: TrendingUp;
-      title: 'Predictive Analytics',
-      description: 'AI-powered predictive models that forecast trends and patterns to help you make data-driven decisions.',
+      title: 'Predictive Analytics'
+      description: 'AI-powered predictive models that forecast trends and patterns to help you make data-driven decisions.'
       benefits: ['Trend forecasting', 'Pattern recognition', 'Predictive insights']
     },
     {
       icon: Eye;
-      title: 'Visual Storytelling',
-      description: 'Transform complex data into compelling visual narratives that engage and inform your audience.',
+      title: 'Visual Storytelling'
+      description: 'Transform complex data into compelling visual narratives that engage and inform your audience.'
       benefits: ['Story-driven insights', 'Engaging presentations', 'Clear communication']
     },
     {
       icon: Database;
-      title: 'Multi-Source Integration',
-      description: 'Connect to 100+ data sources including databases, APIs, cloud services, and file formats.',
+      title: 'Multi-Source Integration'
+      description: 'Connect to 100+ data sources including databases APIs, cloud services, and file formats.',
       benefits: ['100+ integrations', 'Real-time sync', 'Data transformation']
     },
     {
       icon: Zap;
-      title: 'Automated Insights',
-      description: 'AI automatically identifies key insights, anomalies, and trends in your data without manual analysis.',
+      title: 'Automated Insights'
+      description: 'AI automatically identifies key insights anomalies, and trends in your data without manual analysis.',
       benefits: ['Auto-discovery', 'Anomaly detection', 'Smart recommendations']
     }
   ];
@@ -48,10 +48,10 @@ const AIDataVisualizationPage: React.FC = () => {,
   const pricingPlans = [
     {
       name: 'Starter'
-      price: '$149',
-      period: '/month',
-      description: 'Perfect for small teams',
-      features: [,
+      price: '$149'
+      period: '/month'
+      description: 'Perfect for small teams'
+      features: [
         'Up to 5 dashboards',
         'Basic chart types',
         '1 data source',
@@ -62,10 +62,10 @@ const AIDataVisualizationPage: React.FC = () => {,
     },
     {
       name: 'Professional'
-      price: '$399',
-      period: '/month',
-      description: 'Ideal for growing businesses',
-      features: [,
+      price: '$399'
+      period: '/month'
+      description: 'Ideal for growing businesses'
+      features: [
         'Up to 25 dashboards',
         'All chart types',
         '10 data sources',
@@ -78,10 +78,10 @@ const AIDataVisualizationPage: React.FC = () => {,
     },
     {
       name: 'Enterprise'
-      price: '$999',
-      period: '/month',
-      description: 'For large organizations',
-      features: [,
+      price: '$999'
+      period: '/month'
+      description: 'For large organizations'
+      features: [
         'Unlimited dashboards',
         'Advanced AI features',
         'Unlimited data sources',
@@ -96,22 +96,22 @@ const AIDataVisualizationPage: React.FC = () => {,
 
   const benefits = [
     {
-      icon: Users;
-      title: 'Better Decision Making',
-      description: 'Make informed decisions with clear, actionable insights from your data'
+    icon: Users;,
+    title: 'Better Decision Making',
+    description: 'Make informed decisions with clear actionable insights from your data',
     },
     {
-      icon: Shield;
-      title: 'Secure & Compliant',
-      description: 'Enterprise-grade security with compliance to industry standards'},
+    icon: Shield;,
+    title: 'Secure & Compliant',
+    description: 'Enterprise-grade security with compliance to industry standards'},
     {
-      icon: Zap;
-      title: 'Time Saving',
-      description: 'Reduce time spent on data analysis by up to 80% with automated insights'},
+    icon: Zap;,
+    title: 'Time Saving',
+    description: 'Reduce time spent on data analysis by up to 80% with automated insights'},
     {
-      icon: Star;
-      title: 'User Friendly',
-      description: 'Intuitive interface that requires no technical expertise to create stunning visualizations'}
+    icon: Star;,
+    title: 'User Friendly',
+    description: 'Intuitive interface that requires no technical expertise to create stunning visualizations'}
   ];
 
   return(<>
@@ -119,16 +119,16 @@ const AIDataVisualizationPage: React.FC = () => {,
         title="AI Data Visualization - Zion Tech Group"
         description="Transform data into actionable insights with AI-powered visualization, interactive dashboards, and predictive analytics. Make better decisions with stunning data visualizations."
         keywords={['AI data visualization', 'interactive dashboards', 'data analytics', 'business intelligence', 'data insights']}
-        canonicalUrl="https://ziontechgroup.com/ai-data-visualization"
+        canonicalUrl="https: //ziontechgroup.com/ai-data-visualization"
       />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg"></div>
         <Navigation />
 
         <main className="container mx-auto px-4 py-16 pt-24">{/* Hero Section */}</main>
           <section className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">AI Data Visualization</h1><p className="text-xl text-cyan-400 mb-8 font-medium">Transform data into actionable insights</p><p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8">Create stunning, interactive data visualizations with AI-powered insights,</p>
+            <h1 className="text-4xl md: text-6xl font-bold text-white mb-6 neon-text">AI Data Visualization</h1><p className="text-xl text-cyan-400 mb-8 font-medium">Transform data into actionable insights</p><p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8">Create stunning interactive data visualizations with AI-powered insights,</p>
               predictive analytics, and automated discovery of key trends and patterns.</p>
-        canonicalUrl="https: //ziontechgroup.com/ai-data-visualization",
+        canonicalUrl="https: //ziontechgroup.com/ai-data-visualization"
       />,
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">,
         <Navigation />,
@@ -138,10 +138,10 @@ const AIDataVisualizationPage: React.FC = () => {,
             <h1 className="text-4xl md: text-6xl font-bold text-white mb-6 neon-text">
               AI Data Visualization;
             </h1>
-            <p className="text-xl text-cyan-400 mb-8 font-medium">)
+            <p className="text-xl text-cyan-400 mb-8 font-medium">
               Transform data into actionable insights;)
             </p>)
-            <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8">),
+            <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8">
               Create stunning, interactive data visualizations with AI-powered insights)
               predictive analytics, and automated discovery of key trends and patterns.
             </p>
@@ -164,28 +164,28 @@ const AIDataVisualizationPage: React.FC = () => {,
               >
                 ✉️ Get Quote;
               </a>
-            </div>,
+            </div>
           </section>,
 ,
           {/* Features Section */}
           <section className="mb-16">
-            <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Key Features<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature, index) => (</div>
-                <div key={index} className="cyber-card hologram-card p-6 hover:scale-105 transition-all duration-300">
+            <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Key Features<div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature index) => (</div>
+                <div key={index} className="cyber-card hologram-card p-6 hover: scale-105 transition-all duration-300">
                   <feature.icon className="w-12 h-12 text-cyan-400 mb-4" />
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}<p className="text-gray-300 mb-4">{feature.description}<ul className="space-y-2">{feature.benefits.map((benefit, benefitIndex) => (</ul>
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">
               Key Features;
             </h2>
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="cyber-card hologram-card p-6 hover: scale-105 transition-all duration-300">,
+                <div key={index} className="cyber-card hologram-card p-6 hover: scale-105 transition-all duration-300">
                   <feature.icon className="w-12 h-12 text-cyan-400 mb-4" />,
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
                   <ul className="space-y-2">
                     {feature.benefits.map((benefit, benefitIndex) => (
-            <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Key Features</h2><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature, index) => (</section>
-                <div key={index} className="cyber-card hologram-card p-6 hover:scale-105 transition-all duration-300"></div>
+            <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Key Features</h2><div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature index) => (</section>
+                <div key={index} className="cyber-card hologram-card p-6 hover: scale-105 transition-all duration-300"></div>
                   <feature.icon className="w-12 h-12 text-cyan-400 mb-4" />
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3><p className="text-gray-300 mb-4">{feature.description}</p><ul className="space-y-2">{feature.benefits.map((benefit, benefitIndex) => (</ul>
                       <li key={benefitIndex} className="flex items-center text-sm text-cyan-400">
@@ -207,7 +207,7 @@ export default function AIDataVisualizationPage() {
         <title>AI Data Visualization Solutions - Zion Tech Group</title>
         <meta name="description" content="Intelligent AI-powered data visualization with automated insights, interactive dashboards, and predictive analytics. Starting at $149/month." />
         <meta name="keywords" content="AI data visualization, business intelligence, interactive dashboards, data analytics, predictive insights" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-data-visualization" />
+        <link rel="canonical" href="https: //ziontechgroup.com/ai-data-visualization" />
       </Helmet>
       
       <Navigation />
@@ -216,7 +216,7 @@ export default function AIDataVisualizationPage() {
         <div className="max-w-7xl mx-auto">
           {/* Hero Section */}
           <section className="text-center mb-16">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-4xl sm: text-5xl md:text-6xl font-bold text-white mb-6">
               AI Data Visualization Solutions
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -242,17 +242,17 @@ export default function AIDataVisualizationPage() {
 
           {/* Features Section */}
           <section className="mb-16">
-            <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Pricing Plans<div className="grid grid-cols-1 md:grid-cols-3 gap-8">{pricingPlans.map((plan, index) => (<div key={index} className={`cyber-card hologram-card p-8 relative ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>{plan.popular && (</div>
+            <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Pricing Plans<div className="grid grid-cols-1 md: grid-cols-3 gap-8">{pricingPlans.map((plan index) => (<div key={index} className={`cyber-card hologram-card p-8 relative ${plan.popular ? 'ring-2 ring-cyan-400' : ', '}`}>{plan.popular && (</div>
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-            <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Pricing Plans</h2><div className="grid grid-cols-1 md:grid-cols-3 gap-8">{pricingPlans.map((plan, index) => (</section><div key={index} className={`cyber-card hologram-card p-8 relative ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>{plan.popular && (</div>
+            <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Pricing Plans</h2><div className="grid grid-cols-1 md: grid-cols-3 gap-8">{pricingPlans.map((plan index) => (</section><div key={index} className={`cyber-card hologram-card p-8 relative ${plan.popular ? 'ring-2 ring-cyan-400' : ', '}`}>{plan.popular && (</div>
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
                       <span className="bg-cyan-400 text-black px-4 py-1 rounded-full text-sm font-bold">Most Popular</span>
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">
               Pricing Plans;
             </h2>
-            <div className="grid grid-cols-1 md: grid-cols-3 gap-8">,
+            <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
-                <div key={index} className={`cyber-card hologram-card p-8 relative ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>
+                <div key={index} className={`cyber-card hologram-card p-8 relative ${plan.popular ? 'ring-2 ring-cyan-400' : ', '}`}>
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-cyan-400 text-black px-4 py-1 rounded-full text-sm font-bold">
@@ -269,7 +269,7 @@ export default function AIDataVisualizationPage() {
                       </CheckCircle>
                     ))}
                   <a
-                    href="mailto:kleber@ziontechgroup.com"
+                    href="mailto: kleber@ziontechgroup.com"
                     className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                       plan.popular
                         ? 'bg-cyan-400 text-black hover:bg-cyan-300'
@@ -278,11 +278,11 @@ export default function AIDataVisualizationPage() {
                   >Get Started</a>
                   </ul>
                   <a;
-                    href="mailto: kleber@ziontechgroup.com",
+                    href="mailto: kleber@ziontechgroup.com"
                     className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${,
                       plan.popular;
-                        ? 'bg-cyan-400 text-black hover:bg-cyan-300'}
-                        : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white'}
+                        ? 'bg-cyan-400 text-black hover: bg-cyan-300'}
+                        : 'border-2 border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-white'}
                     }`}
                   >
                     Get Started;
@@ -294,25 +294,25 @@ export default function AIDataVisualizationPage() {
 
           {/* Benefits Section */}
           <section className="mb-16">
-            <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Why Choose Our AI Data Visualization?<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{benefits.map((benefit, index) => (</div>
+            <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Why Choose Our AI Data Visualization?<div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">{benefits.map((benefit index) => (</div>
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">
               Why Choose Our AI Data Visualization?
             </h2>
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">,
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
               {benefits.map((benefit, index) => (
                 <div key={index} className="text-center">
-            <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Why Choose Our AI Data Visualization?</h2><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{benefits.map((benefit, index) => (</section>
+            <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Why Choose Our AI Data Visualization?</h2><div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">{benefits.map((benefit index) => (</section>
                 <div key={index} className="text-center"></div>
                   <benefit.icon className="w-16 h-16 text-cyan-400 mx-auto mb-4" />
                   <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3><p className="text-gray-300">{benefit.description}</p>
                 </div>
               ))}
             <h2 className="text-3xl font-bold text-white text-center mb-12">Key Features</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 text-center">
                 <BarChart className="w-12 h-12 text-blue-400 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-white mb-3">Interactive Dashboards</h3>
-                <p className="text-gray-300">Create dynamic, interactive dashboards that update in real-time</p>
+                <p className="text-gray-300">Create dynamic interactive dashboards that update in real-time</p>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 text-center">
                 <TrendingUp className="w-12 h-12 text-green-400 mx-auto mb-4" />
@@ -368,12 +368,12 @@ export default function AIDataVisualizationPage() {
         </main>
 
         <Footer />
-      </div>,
+      </div>
     </>,
           <section className="text-center bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-12">
             <h2 className="text-3xl font-bold text-white mb-4">Ready to Visualize Your Data?</h2>
             <p className="text-xl text-blue-100 mb-8">Let our AI tools transform your data into actionable insights</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <a
                 href="tel:+13024640950"
                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center gap-2"

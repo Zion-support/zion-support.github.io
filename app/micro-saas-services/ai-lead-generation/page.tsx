@@ -3,8 +3,8 @@ import React, { useState } from 'react';
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
 
-const AILeadGeneration: React.FC = () => {,
-  const [industry, setIndustry] = useState('');
+const AILeadGeneration: React.FC = () => {
+  const [industry setIndustry] = useState(', ');
   const [targetAudience, setTargetAudience] = useState('');
   const [budget, setBudget] = useState('');
 
@@ -14,7 +14,7 @@ const AILeadGeneration: React.FC = () => {,
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text text-center">AI Lead Generation<p className="text-xl text-gray-300 text-center mb-12">Generate high-quality leads using AI-powered targeting and automation</p>
+          <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text text-center">AI Lead Generation<p className="text-xl text-gray-300 text-center mb-12">Generate high-quality leads using AI-powered targeting and automation</p>
         <div className="max-w-4xl mx-auto"></div>
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text text-center">AI Lead Generation</h1><p className="text-xl text-gray-300 text-center mb-12">Generate high-quality leads using AI-powered targeting and automation</p>
           </p>
@@ -26,7 +26,7 @@ const AILeadGeneration: React.FC = () => {,
                 <div></div>
                   <label className="block text-white font-medium mb-2">Industry<select
                     value={industry}
-                    onChange={(e) =>setIndustry(e.target.value)}</select></<<<selec>className</selec></selec>="w-full p-3 bg-gray-800 text-white rounded-lg border border-gray-600 focus:border-cyan-400 focus:outline-none"</select>
+                    onChange={(e) =>setIndustry(e.target.value)}</select></<<<selec>className</selec></selec>="w-full p-3 bg-gray-800 text-white rounded-lg border border-gray-600 focus: border-cyan-400 focus:outline-none"</select>
                   ></select>
                     <option value="">Select industry...</option><option value="technology">Technology</optio>
                     <option value="healthcare">Healthcare</option><option value="finance">Finance</optio>
@@ -37,14 +37,14 @@ const AILeadGeneration: React.FC = () => {,
                   <label className="block text-white font-medium mb-2">Target Audience<input
                     type="text"
                     value={targetAudience}
-                    onChange={(e) =>setTargetAudience(e.target.value)}</input></<<<inpu>className</inpu></inpu>="w-full p-3 bg-gray-800 text-white rounded-lg border border-gray-600 focus:border-cyan-400 focus:outline-none"
-                    placeholder="e.g., CTOs, Marketing Directors"</input>
+                    onChange={(e) =>setTargetAudience(e.target.value)}</input></<<<inpu>className</inpu></inpu>="w-full p-3 bg-gray-800 text-white rounded-lg border border-gray-600 focus: border-cyan-400 focus:outline-none"
+                    placeholder="e.g. CTOs, Marketing Directors"</input>
                   /></input>
                 </div>
                 <div></div>
                   <label className="block text-white font-medium mb-2">Budget Range<select
                     value={budget}
-                    onChange={(e) =>setBudget(e.target.value)}</select></<<<selec>className</selec></selec>="w-full p-3 bg-gray-800 text-white rounded-lg border border-gray-600 focus:border-cyan-400 focus:outline-none"</select>
+                    onChange={(e) =>setBudget(e.target.value)}</select></<<<selec>className</selec></selec>="w-full p-3 bg-gray-800 text-white rounded-lg border border-gray-600 focus: border-cyan-400 focus:outline-none"</select>
                   ></select>
                     <option value="">Select budget...<option value="under-10k">Under $10K</option>
                     <option value="10k-50k">$10K - $50K<option value="50k-100k">$50K - $100K<option value="over-100k">Over $100K<button className="cyber-button w-full">Generate Leads</button>
@@ -57,10 +57,10 @@ const AILeadGeneration: React.FC = () => {,
 
           <div className="cyber-card p-8 mb-8">
             <h2 className="text-2xl font-bold text-white mb-6">Configure Your Campaign</h2>)
-            <div className="space-y-6">)
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">)
-                <div>)
-                  <label className="block text-white font-medium mb-2">Industry</label>),
+            <div className="space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div>
+                  <label className="block text-white font-medium mb-2">Industry</label>)
                   <select;),
                     value={industry}
                     onChange={(e) => setIndustry(e.target.value)}
@@ -73,14 +73,14 @@ const AILeadGeneration: React.FC = () => {,
                     <option value="retail">Retail</option>
                     <option value="manufacturing">Manufacturing</option>
                   </select>
-                </div>,
+                </div>
                 <div>,
                   <label className="block text-white font-medium mb-2">Target Audience</label>,
                   <input;
                     type="text",
                     value={targetAudience}
                     onChange={(e) => setTargetAudience(e.target.value)}
-                    className="w-full p-3 bg-gray-800 text-white rounded-lg border border-gray-600 focus: border-cyan-400 focus:outline-none",
+                    className="w-full p-3 bg-gray-800 text-white rounded-lg border border-gray-600 focus: border-cyan-400 focus:outline-none"
                     placeholder="e.g., CTOs, Marketing Directors"
                   />
                 </div>
@@ -152,7 +152,7 @@ const AILeadGeneration: React.FC = () => {,
             <div className="cyber-card p-6 text-center border-2 border-cyan-400"></div>
               <h3 className="text-xl font-bold text-white mb-4">Professional</h3><div className="text-3xl font-bold text-cyan-400 mb-4">$599/month</div>
               <ul className="text-gray-300 space-y-2">
-                <li>1,000 leads/month<li>Advanced AI targeting</li>
+                <li>1000 leads/month<li>Advanced AI targeting</li>
                 <li>Multi-channel campaigns<li>Priority support<li>Analytics dashboard</li>
               <h3 className="text-xl font-bold text-white mb-4">Professional</h3>,
               <div className="text-3xl font-bold text-cyan-400 mb-4">$599/month</div>,
@@ -197,7 +197,7 @@ const AILeadGeneration: React.FC = () => {,
         </div>
       </main>
 
-      <Footer />,
+      <Footer />
     </div>);
 };
 

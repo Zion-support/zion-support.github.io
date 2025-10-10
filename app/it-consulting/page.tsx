@@ -74,21 +74,20 @@ import {
 } from 'lucide-react';
 
 const ITConsultingPage: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory setSelectedCategory] = useState('all');
+  const [searchTerm, setSearchTerm] = useState(', ');
 
   const itServices = [
     // IT Infrastructure Services
     {
-      id: 'it-infrastructure-design',
-      name: 'IT Infrastructure Design & Implementation',
-      description: 'Complete IT infrastructure design, deployment, and optimization for modern businesses',
-      category: 'infrastructure',
-      icon: Server,
-      price: 'Starting at $5,000',
+      id: 'it-infrastructure-design'
+      name: 'IT Infrastructure Design & Implementation'
+      description: 'Complete IT infrastructure design deployment, and optimization for modern businesses',
+      category: 'infrastructure'
+      icon: Server
+      price: 'Starting at $5000',
       features: [
-        'Network architecture design',
-        'Server deployment and configuration',
+        'Network architecture design', 'Server deployment and configuration',
         'Storage solutions implementation',
         'Backup and disaster recovery setup',
         'Security infrastructure deployment',
@@ -97,30 +96,28 @@ const ITConsultingPage: React.FC = () => {
         'Ongoing support and maintenance'
       ],
       benefits: [
-        'Scalable and reliable infrastructure',
-        'Improved system performance',
+        'Scalable and reliable infrastructure', 'Improved system performance',
         'Enhanced security posture',
         'Reduced downtime and outages',
         'Future-proof technology stack'
       ],
-      targetAudience: 'Small to large businesses, Startups, Enterprises',
-      setupTime: '2-8 weeks',
-      freeConsultation: 'Yes',
-      support: '24/7 technical support',
+      targetAudience: 'Small to large businesses Startups, Enterprises',
+      setupTime: '2-8 weeks'
+      freeConsultation: 'Yes'
+      support: '24/7 technical support'
       certifications: ['Cisco', 'Microsoft', 'VMware', 'AWS', 'Azure'],
-      link: 'https://ziontechgroup.com/it-infrastructure-design',
+      link: 'https://ziontechgroup.com/it-infrastructure-design'
       caseStudy: 'Manufacturing company reduced IT downtime by 95% with our infrastructure design'
     },
     {
-      id: 'cloud-migration-services',
-      name: 'Cloud Migration & Optimization',
-      description: 'Seamless migration to cloud platforms with optimization for cost and performance',
-      category: 'cloud',
-      icon: Cloud,
-      price: 'Starting at $3,000',
+      id: 'cloud-migration-services'
+      name: 'Cloud Migration & Optimization'
+      description: 'Seamless migration to cloud platforms with optimization for cost and performance'
+      category: 'cloud'
+      icon: Cloud
+      price: 'Starting at $3000',
       features: [
-        'Cloud readiness assessment',
-        'Migration strategy development',
+        'Cloud readiness assessment', 'Migration strategy development',
         'Data and application migration',
         'Cloud security implementation',
         'Cost optimization analysis',
@@ -129,30 +126,28 @@ const ITConsultingPage: React.FC = () => {
         'Training and documentation'
       ],
       benefits: [
-        'Reduce IT costs by 30-50%',
-        'Improve scalability and flexibility',
+        'Reduce IT costs by 30-50%', 'Improve scalability and flexibility',
         'Enhanced security and compliance',
         'Better disaster recovery capabilities',
         'Access to latest technologies'
       ],
-      targetAudience: 'Businesses looking to modernize IT infrastructure',
-      setupTime: '1-6 weeks',
-      freeConsultation: 'Yes',
-      support: 'Migration specialist and ongoing support',
+      targetAudience: 'Businesses looking to modernize IT infrastructure'
+      setupTime: '1-6 weeks'
+      freeConsultation: 'Yes'
+      support: 'Migration specialist and ongoing support'
       certifications: ['AWS', 'Azure', 'Google Cloud', 'VMware'],
-      link: 'https://ziontechgroup.com/cloud-migration-services',
+      link: 'https://ziontechgroup.com/cloud-migration-services'
       caseStudy: 'Retail chain saved $2M annually by migrating to cloud infrastructure'
     },
     {
-      id: 'cybersecurity-services',
-      name: 'Cybersecurity Solutions',
-      description: 'Comprehensive security assessment, implementation, and ongoing protection',
-      category: 'security',
-      icon: Shield,
-      price: 'Starting at $2,500',
+      id: 'cybersecurity-services'
+      name: 'Cybersecurity Solutions'
+      description: 'Comprehensive security assessment implementation, and ongoing protection',
+      category: 'security'
+      icon: Shield
+      price: 'Starting at $2500',
       features: [
-        'Security risk assessment',
-        'Penetration testing',
+        'Security risk assessment', 'Penetration testing',
         'Security policy development',
         'Firewall and endpoint protection',
         'Email security implementation',
@@ -161,30 +156,28 @@ const ITConsultingPage: React.FC = () => {
         'Incident response planning'
       ],
       benefits: [
-        'Protect against cyber threats',
-        'Ensure regulatory compliance',
+        'Protect against cyber threats', 'Ensure regulatory compliance',
         'Reduce security risks by 90%',
         'Improve incident response time',
         'Maintain customer trust'
       ],
-      targetAudience: 'All businesses handling sensitive data',
-      setupTime: '1-4 weeks',
-      freeConsultation: 'Yes',
-      support: 'Security specialist and 24/7 monitoring',
+      targetAudience: 'All businesses handling sensitive data'
+      setupTime: '1-4 weeks'
+      freeConsultation: 'Yes'
+      support: 'Security specialist and 24/7 monitoring'
       certifications: ['CISSP', 'CISM', 'CEH', 'CompTIA Security+'],
-      link: 'https://ziontechgroup.com/cybersecurity-services',
+      link: 'https://ziontechgroup.com/cybersecurity-services'
       caseStudy: 'Healthcare provider achieved 100% compliance with HIPAA regulations'
     },
     {
-      id: 'network-design-optimization',
-      name: 'Network Design & Optimization',
-      description: 'High-performance network infrastructure design and optimization for reliability',
-      category: 'networking',
-      icon: Network,
-      price: 'Starting at $2,000',
+      id: 'network-design-optimization'
+      name: 'Network Design & Optimization'
+      description: 'High-performance network infrastructure design and optimization for reliability'
+      category: 'networking'
+      icon: Network
+      price: 'Starting at $2000',
       features: [
-        'Network architecture design',
-        'Bandwidth optimization',
+        'Network architecture design', 'Bandwidth optimization',
         'Quality of Service (QoS) setup',
         'Wireless network deployment',
         'Network monitoring implementation',
@@ -193,30 +186,28 @@ const ITConsultingPage: React.FC = () => {
         'Performance tuning'
       ],
       benefits: [
-        'Improve network performance by 200%',
-        'Reduce network downtime',
+        'Improve network performance by 200%', 'Reduce network downtime',
         'Optimize bandwidth usage',
         'Enhance user experience',
         'Future-proof network design'
       ],
-      targetAudience: 'Businesses with complex networking needs',
-      setupTime: '1-3 weeks',
-      freeConsultation: 'Yes',
-      support: 'Network specialist and ongoing optimization',
+      targetAudience: 'Businesses with complex networking needs'
+      setupTime: '1-3 weeks'
+      freeConsultation: 'Yes'
+      support: 'Network specialist and ongoing optimization'
       certifications: ['CCNA', 'CCNP', 'JNCIA', 'CompTIA Network+'],
-      link: 'https://ziontechgroup.com/network-design-optimization',
+      link: 'https://ziontechgroup.com/network-design-optimization'
       caseStudy: 'Law firm improved network speed by 300% and eliminated connectivity issues'
     },
     {
-      id: 'database-management',
-      name: 'Database Management & Optimization',
-      description: 'Database design, implementation, optimization, and ongoing management',
-      category: 'database',
-      icon: Database,
-      price: 'Starting at $1,500',
+      id: 'database-management'
+      name: 'Database Management & Optimization'
+      description: 'Database design implementation, optimization, and ongoing management',
+      category: 'database'
+      icon: Database
+      price: 'Starting at $1500',
       features: [
-        'Database design and architecture',
-        'Performance optimization',
+        'Database design and architecture', 'Performance optimization',
         'Backup and recovery setup',
         'Security implementation',
         'Monitoring and alerting',
@@ -225,30 +216,28 @@ const ITConsultingPage: React.FC = () => {
         'Maintenance and updates'
       ],
       benefits: [
-        'Improve database performance by 150%',
-        'Ensure data integrity and security',
+        'Improve database performance by 150%', 'Ensure data integrity and security',
         'Reduce maintenance overhead',
         'Optimize storage usage',
         'Minimize downtime'
       ],
-      targetAudience: 'Businesses with critical data requirements',
-      setupTime: '1-2 weeks',
-      freeConsultation: 'Yes',
-      support: 'Database specialist and 24/7 monitoring',
+      targetAudience: 'Businesses with critical data requirements'
+      setupTime: '1-2 weeks'
+      freeConsultation: 'Yes'
+      support: 'Database specialist and 24/7 monitoring'
       certifications: ['Oracle', 'Microsoft SQL Server', 'MySQL', 'PostgreSQL'],
-      link: 'https://ziontechgroup.com/database-management',
+      link: 'https://ziontechgroup.com/database-management'
       caseStudy: 'E-commerce platform improved query performance by 400% and reduced costs by 60%'
     },
     {
-      id: 'it-support-services',
-      name: 'Managed IT Support Services',
-      description: 'Comprehensive IT support and management for ongoing operations',
-      category: 'support',
-      icon: Headphones,
-      price: 'Starting at $99/user/month',
+      id: 'it-support-services'
+      name: 'Managed IT Support Services'
+      description: 'Comprehensive IT support and management for ongoing operations'
+      category: 'support'
+      icon: Headphones
+      price: 'Starting at $99/user/month'
       features: [
-        '24/7 technical support',
-        'Remote monitoring and management',
+        '24/7 technical support', 'Remote monitoring and management',
         'Proactive maintenance',
         'Software updates and patches',
         'Hardware support and replacement',
@@ -257,30 +246,28 @@ const ITConsultingPage: React.FC = () => {
         'Help desk services'
       ],
       benefits: [
-        'Reduce IT downtime by 80%',
-        'Lower IT support costs',
+        'Reduce IT downtime by 80%', 'Lower IT support costs',
         'Improve user productivity',
         'Proactive issue resolution',
         'Focus on core business activities'
       ],
-      targetAudience: 'Small to medium businesses without dedicated IT staff',
-      setupTime: '1 week',
-      freeConsultation: 'Yes',
-      support: 'Dedicated support team',
+      targetAudience: 'Small to medium businesses without dedicated IT staff'
+      setupTime: '1 week'
+      freeConsultation: 'Yes'
+      support: 'Dedicated support team'
       certifications: ['Microsoft', 'CompTIA', 'Cisco', 'VMware'],
-      link: 'https://ziontechgroup.com/it-support-services',
+      link: 'https://ziontechgroup.com/it-support-services'
       caseStudy: 'Marketing agency reduced IT issues by 90% and improved employee productivity'
     },
     {
-      id: 'software-development',
-      name: 'Custom Software Development',
-      description: 'Tailored software solutions built to meet specific business requirements',
-      category: 'development',
-      icon: Code,
-      price: 'Starting at $5,000',
+      id: 'software-development'
+      name: 'Custom Software Development'
+      description: 'Tailored software solutions built to meet specific business requirements'
+      category: 'development'
+      icon: Code
+      price: 'Starting at $5000',
       features: [
-        'Requirements analysis',
-        'Custom application development',
+        'Requirements analysis', 'Custom application development',
         'Web and mobile app development',
         'API development and integration',
         'Database design and implementation',
@@ -289,30 +276,28 @@ const ITConsultingPage: React.FC = () => {
         'User training and documentation'
       ],
       benefits: [
-        'Streamline business processes',
-        'Improve operational efficiency',
+        'Streamline business processes', 'Improve operational efficiency',
         'Gain competitive advantage',
         'Reduce manual work',
         'Scale with business growth'
       ],
-      targetAudience: 'Businesses needing custom software solutions',
-      setupTime: '4-16 weeks',
-      freeConsultation: 'Yes',
-      support: 'Development team and ongoing maintenance',
+      targetAudience: 'Businesses needing custom software solutions'
+      setupTime: '4-16 weeks'
+      freeConsultation: 'Yes'
+      support: 'Development team and ongoing maintenance'
       technologies: ['React', 'Node.js', 'Python', 'Java', 'C#', 'PHP', 'Mobile'],
-      link: 'https://ziontechgroup.com/software-development',
+      link: 'https://ziontechgroup.com/software-development'
       caseStudy: 'Logistics company automated 80% of manual processes with custom software'
     },
     {
-      id: 'it-consulting',
-      name: 'Strategic IT Consulting',
-      description: 'Technology strategy and roadmap development for digital transformation',
-      category: 'consulting',
-      icon: Briefcase,
-      price: 'Starting at $200/hour',
+      id: 'it-consulting'
+      name: 'Strategic IT Consulting'
+      description: 'Technology strategy and roadmap development for digital transformation'
+      category: 'consulting'
+      icon: Briefcase
+      price: 'Starting at $200/hour'
       features: [
-        'IT strategy development',
-        'Technology roadmap planning',
+        'IT strategy development', 'Technology roadmap planning',
         'Digital transformation consulting',
         'Vendor evaluation and selection',
         'Cost-benefit analysis',
@@ -321,30 +306,28 @@ const ITConsultingPage: React.FC = () => {
         'Implementation guidance'
       ],
       benefits: [
-        'Align IT with business goals',
-        'Optimize technology investments',
+        'Align IT with business goals', 'Optimize technology investments',
         'Reduce implementation risks',
         'Accelerate digital transformation',
         'Improve ROI on technology'
       ],
-      targetAudience: 'Businesses planning technology initiatives',
-      setupTime: '1-4 weeks',
-      freeConsultation: 'Yes',
-      support: 'Senior consultant and ongoing guidance',
+      targetAudience: 'Businesses planning technology initiatives'
+      setupTime: '1-4 weeks'
+      freeConsultation: 'Yes'
+      support: 'Senior consultant and ongoing guidance'
       certifications: ['PMP', 'ITIL', 'COBIT', 'TOGAF'],
-      link: 'https://ziontechgroup.com/it-consulting',
+      link: 'https://ziontechgroup.com/it-consulting'
       caseStudy: 'Manufacturing company achieved 40% cost reduction through strategic IT planning'
     },
     {
-      id: 'disaster-recovery',
-      name: 'Disaster Recovery & Business Continuity',
-      description: 'Comprehensive disaster recovery planning and implementation',
-      category: 'recovery',
-      icon: RefreshCw,
-      price: 'Starting at $3,500',
+      id: 'disaster-recovery'
+      name: 'Disaster Recovery & Business Continuity'
+      description: 'Comprehensive disaster recovery planning and implementation'
+      category: 'recovery'
+      icon: RefreshCw
+      price: 'Starting at $3500',
       features: [
-        'Business impact analysis',
-        'Recovery time objective planning',
+        'Business impact analysis', 'Recovery time objective planning',
         'Backup strategy implementation',
         'Disaster recovery testing',
         'Business continuity planning',
@@ -353,30 +336,28 @@ const ITConsultingPage: React.FC = () => {
         'Regular testing and updates'
       ],
       benefits: [
-        'Minimize business disruption',
-        'Ensure rapid recovery',
+        'Minimize business disruption', 'Ensure rapid recovery',
         'Protect critical data',
         'Maintain customer service',
         'Comply with regulations'
       ],
-      targetAudience: 'Businesses requiring high availability',
-      setupTime: '2-6 weeks',
-      freeConsultation: 'Yes',
-      support: 'Recovery specialist and ongoing testing',
+      targetAudience: 'Businesses requiring high availability'
+      setupTime: '2-6 weeks'
+      freeConsultation: 'Yes'
+      support: 'Recovery specialist and ongoing testing'
       certifications: ['CBCP', 'DRII', 'ITIL', 'ISO 22301'],
-      link: 'https://ziontechgroup.com/disaster-recovery',
+      link: 'https://ziontechgroup.com/disaster-recovery'
       caseStudy: 'Financial services firm achieved 99.9% uptime with our disaster recovery solution'
     },
     {
-      id: 'compliance-auditing',
-      name: 'IT Compliance & Auditing',
-      description: 'Compliance assessment and implementation for various industry standards',
-      category: 'compliance',
-      icon: CheckSquare,
-      price: 'Starting at $2,000',
+      id: 'compliance-auditing'
+      name: 'IT Compliance & Auditing'
+      description: 'Compliance assessment and implementation for various industry standards'
+      category: 'compliance'
+      icon: CheckSquare
+      price: 'Starting at $2000',
       features: [
-        'Compliance gap analysis',
-        'Policy and procedure development',
+        'Compliance gap analysis', 'Policy and procedure development',
         'Security control implementation',
         'Audit preparation and support',
         'Training and awareness programs',
@@ -385,57 +366,56 @@ const ITConsultingPage: React.FC = () => {
         'Remediation planning'
       ],
       benefits: [
-        'Ensure regulatory compliance',
-        'Reduce audit findings',
+        'Ensure regulatory compliance', 'Reduce audit findings',
         'Improve security posture',
         'Avoid penalties and fines',
         'Build customer trust'
       ],
-      targetAudience: 'Healthcare, Finance, Government, Education sectors',
-      setupTime: '2-8 weeks',
-      freeConsultation: 'Yes',
-      support: 'Compliance specialist and ongoing monitoring',
+      targetAudience: 'Healthcare Finance, Government, Education sectors',
+      setupTime: '2-8 weeks'
+      freeConsultation: 'Yes'
+      support: 'Compliance specialist and ongoing monitoring'
       standards: ['HIPAA', 'SOX', 'PCI-DSS', 'GDPR', 'ISO 27001', 'NIST'],
-      link: 'https://ziontechgroup.com/compliance-auditing',
+      link: 'https://ziontechgroup.com/compliance-auditing'
       caseStudy: 'Healthcare provider achieved 100% HIPAA compliance and passed all audits'
     }
   ];
 
   const categories = [
-    { id: 'all', name: 'All IT Services', icon: Grid3X3 },
-    { id: 'infrastructure', name: 'Infrastructure', icon: Server },
-    { id: 'cloud', name: 'Cloud Services', icon: Cloud },
-    { id: 'security', name: 'Cybersecurity', icon: Shield },
-    { id: 'networking', name: 'Networking', icon: Network },
-    { id: 'database', name: 'Database', icon: Database },
-    { id: 'support', name: 'IT Support', icon: Headphones },
-    { id: 'development', name: 'Development', icon: Code },
-    { id: 'consulting', name: 'Consulting', icon: Briefcase },
-    { id: 'recovery', name: 'Disaster Recovery', icon: RefreshCw },
-    { id: 'compliance', name: 'Compliance', icon: CheckSquare }
+    { id: 'all' name: 'All IT Services' icon: Grid3X3 },
+    { id: 'infrastructure' name: 'Infrastructure' icon: Server },
+    { id: 'cloud' name: 'Cloud Services' icon: Cloud },
+    { id: 'security' name: 'Cybersecurity' icon: Shield },
+    { id: 'networking' name: 'Networking' icon: Network },
+    { id: 'database' name: 'Database' icon: Database },
+    { id: 'support' name: 'IT Support' icon: Headphones },
+    { id: 'development' name: 'Development' icon: Code },
+    { id: 'consulting' name: 'Consulting' icon: Briefcase },
+    { id: 'recovery' name: 'Disaster Recovery' icon: RefreshCw },
+    { id: 'compliance' name: 'Compliance' icon: CheckSquare }
   ];
 
   const filteredServices = itServices.filter(service => {
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase() ||
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase();
     return matchesCategory && matchesSearch;
-  });
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8 cyber-grid">
+      <section className="relative py-20 px-4 sm: px-6 lg:px-8 cyber-grid">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20" aria-hidden="true"></div>
         <div className="relative z-10 max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight cyber-text neon-pulse">
             Professional <span className="holographic-text">IT Services</span>
           </h1>
           <p className="text-xl md:text-2xl text-cyan-400 mb-8 max-w-4xl mx-auto neon-glow">
-            Comprehensive IT solutions designed to optimize your technology infrastructure, 
+            Comprehensive IT solutions designed to optimize your technology infrastructure 
             enhance security, and drive business growth. Expert consulting and implementation.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center mb-12">
             <a
               href="tel:+13024640950"
               className="cyber-button px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-cyan-400/50"
@@ -455,7 +435,7 @@ const ITConsultingPage: React.FC = () => {
       </section>
 
       {/* Search and Filter Section */}
-      <section className="py-12 px-4 sm:px-6 lg:px-8">
+      <section className="py-12 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col lg:flex-row gap-6 mb-8">
             {/* Search */}
@@ -467,17 +447,17 @@ const ITConsultingPage: React.FC = () => {
                   placeholder="Search IT services..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-cyan-400/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
+                  className="w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-cyan-400/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
                 />
               </div>
             </div>
             
             {/* Category Filter */}
-            <div className="lg:w-64">
+            <div className="lg: w-64">
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="w-full px-4 py-3 bg-slate-800/50 border border-cyan-400/20 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
+                className="w-full px-4 py-3 bg-slate-800/50 border border-cyan-400/20 rounded-lg text-white focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
               >
                 {categories.map((category) => (
                   <option key={category.id} value={category.id}>
@@ -497,7 +477,7 @@ const ITConsultingPage: React.FC = () => {
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                   selectedCategory === category.id
                     ? 'bg-cyan-500 text-white'
-                    : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 hover:text-cyan-400'
+                    : 'bg-slate-800/50 text-gray-300 hover: bg-slate-700/50 hover:text-cyan-400'
                 }`}
               >
                 {category.name}
@@ -508,11 +488,11 @@ const ITConsultingPage: React.FC = () => {
       </section>
 
       {/* Services Grid */}
-      <section className="py-12 px-4 sm:px-6 lg:px-8">
+      <section className="py-12 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredServices.map((service) => (
-              <div key={service.id} className="quantum-card p-6 group hover:scale-105 transition-all duration-300 energy-pulse">
+              <div key={service.id} className="quantum-card p-6 group hover: scale-105 transition-all duration-300 energy-pulse">
                 <div className="flex items-start justify-between mb-4">
                   <div className="text-cyan-400 group-hover:text-cyan-300 transition-colors">
                     <service.icon className="w-12 h-12" />
@@ -528,9 +508,9 @@ const ITConsultingPage: React.FC = () => {
                 
                 <div className="space-y-3 mb-6">
                   <div>
-                    <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h4>
+                    <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features: </h4>
                     <ul className="space-y-1">
-                      {service.features.slice(0, 4).map((feature, idx) => (
+                      {service.features.slice(0 4).map((feature, idx) => (
                         <li key={idx} className="flex items-center text-sm text-gray-300">
                           <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
                           <span>{feature}</span>
@@ -540,9 +520,9 @@ const ITConsultingPage: React.FC = () => {
                   </div>
                   
                   <div>
-                    <h4 className="text-sm font-semibold text-cyan-400 mb-2">Benefits:</h4>
+                    <h4 className="text-sm font-semibold text-cyan-400 mb-2">Benefits: </h4>
                     <ul className="space-y-1">
-                      {service.benefits.slice(0, 2).map((benefit, idx) => (
+                      {service.benefits.slice(0 2).map((benefit, idx) => (
                         <li key={idx} className="flex items-center text-sm text-gray-300">
                           <TrendingUp className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                           <span>{benefit}</span>
@@ -554,15 +534,15 @@ const ITConsultingPage: React.FC = () => {
 
                 <div className="space-y-2 mb-6 text-sm">
                   <div className="flex justify-between">
-                    <span className="text-gray-400">Setup Time:</span>
+                    <span className="text-gray-400">Setup Time: </span>
                     <span className="text-white">{service.setupTime}</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-gray-400">Free Consultation:</span>
+                    <span className="text-gray-400">Free Consultation: </span>
                     <span className="text-green-400">{service.freeConsultation}</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-gray-400">Target:</span>
+                    <span className="text-gray-400">Target: </span>
                     <span className="text-white">{service.targetAudience}</span>
                   </div>
                 </div>
@@ -578,7 +558,7 @@ const ITConsultingPage: React.FC = () => {
                     href={service.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-3 px-4 rounded-lg font-semibold text-center hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+                    className="block w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-3 px-4 rounded-lg font-semibold text-center hover: from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
                   >
                     Get Free Consultation
                   </a>
@@ -597,16 +577,16 @@ const ITConsultingPage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 cyber-scan-effect">
+      <section className="py-20 px-4 sm: px-6 lg:px-8 cyber-scan-effect">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 cyber-text neon-pulse">
             Ready to Optimize Your IT Infrastructure?
           </h2>
           <p className="text-xl text-cyan-400 mb-8 neon-glow">
-            Our certified IT professionals deliver reliable, secure, and scalable solutions. 
+            Our certified IT professionals deliver reliable secure, and scalable solutions. 
             All services include free consultations and ongoing support.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <a
               href="tel:+13024640950"
               className="cyber-button px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2 focus:outline-none focus:ring-4 focus:ring-cyan-400/50"

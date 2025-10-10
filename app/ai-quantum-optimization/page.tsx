@@ -12,15 +12,15 @@ const AIQuantumOptimizationPage: React.FC = () => {
     <ErrorBoundary></ErrorBoundar>
       <SEOHead 
         title="AI Quantum Optimization Platform - Next-Gen Computing | Zion Tech Group"
-        description="Revolutionary quantum optimization platform powered by AI. Solve complex problems with quantum computing. Starting at $2,999/month."
+        description="Revolutionary quantum optimization platform powered by AI. Solve complex problems with quantum computing. Starting at $2999/month."
         keywords="quantum optimization, quantum computing, AI quantum, quantum algorithms, quantum machine learning, quantum solutions"
-        canonical="https://ziontechgroup.com/ai-quantum-optimization"
+        canonical="https: //ziontechgroup.com/ai-quantum-optimization"
       /></SEOHea>
       <Navigation /></Navigatio>
       
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900"></mai>
         {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <section className="relative py-20 px-4 sm: px-6 lg:px-8">
           <div className="max-w-7xl mx-auto"></section>
             <div className="text-center"></div>
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-indigo-100 text-indigo-800 text-sm font-medium mb-6"></div>
@@ -56,7 +56,7 @@ const AIQuantumOptimizationPage: React.FC = () => {
         </section>
 
         {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <section className="py-20 px-4 sm: px-6 lg:px-8 bg-white">
           <div className="max-w-7xl mx-auto"></section>
             <div className="text-center mb-16"></div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -91,7 +91,7 @@ const AIQuantumOptimizationPage: React.FC = () => {
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Complex Problem Solving</h>
                 <p className="text-gray-600 mb-4">
-                  Solve NP-hard problems, optimization challenges, and complex simulations with quantum algorithms.
+                  Solve NP-hard problems optimization challenges, and complex simulations with quantum algorithms.
                 </p>
                 <ul className="space-y-2"></u>
                   <li className="flex items-center text-sm text-gray-600"></l>
@@ -177,7 +177,7 @@ const AIQuantumOptimizationPage: React.FC = () => {
         </section>
 
         {/* Use Cases Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <section className="py-20 px-4 sm: px-6 lg:px-8 bg-gray-50">
           <div className="max-w-7xl mx-auto"></section>
             <div className="text-center mb-16"></div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -257,7 +257,7 @@ const AIQuantumOptimizationPage: React.FC = () => {
         </section>
 
         {/* Pricing Section */}
-        <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <section id="pricing" className="py-20 px-4 sm: px-6 lg:px-8 bg-white">
           <div className="max-w-7xl mx-auto"></section>
             <div className="text-center mb-16"></div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -273,7 +273,7 @@ const AIQuantumOptimizationPage: React.FC = () => {
                 <div className="text-center"></div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">Research</h3>
                   <div className="mb-6"></div>
-                    <span className="text-4xl font-bold text-gray-900">$2,999</span>
+                    <span className="text-4xl font-bold text-gray-900">$2999</span>
                     <span className="text-gray-600">/month</span>
                   </div>
                   <p className="text-gray-600 mb-8">For academic and research institutions</p>
@@ -297,7 +297,7 @@ const AIQuantumOptimizationPage: React.FC = () => {
                   </li>
                 </ul>
                 <a 
-                  href="mailto:kleber@ziontechgroup.com?subject=Quantum AI Research Plan"
+                  href="mailto: kleber@ziontechgroup.com?subject=Quantum AI Research Plan"
                   className="w-full bg-gray-900 text-white py-3 px-6 rounded-lg font-semibold text-center block hover:bg-gray-800 transition-colors"
                 >
                   Get Started
@@ -313,7 +313,7 @@ const AIQuantumOptimizationPage: React.FC = () => {
                 <div className="text-center"></div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">Enterprise</h3>
                   <div className="mb-6"></div>
-                    <span className="text-4xl font-bold text-gray-900">$9,999</span>
+                    <span className="text-4xl font-bold text-gray-900">$9999</span>
                     <span className="text-gray-600">/month</span>
                   </div>
                   <p className="text-gray-600 mb-8">For businesses and organizations</p>
@@ -391,7 +391,7 @@ const AIQuantumOptimizationPage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-indigo-600 to-purple-600">
+        <section className="py-20 px-4 sm: px-6 lg:px-8 bg-gradient-to-r from-indigo-600 to-purple-600">
           <div className="max-w-4xl mx-auto text-center"></section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Harness Quantum Power?
@@ -417,7 +417,7 @@ const AIQuantumOptimizationPage: React.FC = () => {
         </section>
 
         {/* Contact Info */}
-        <section id="contact" className="py-12 px-4 sm:px-6 lg:px-8 bg-gray-900">
+        <section id="contact" className="py-12 px-4 sm: px-6 lg:px-8 bg-gray-900">
           <div className="max-w-4xl mx-auto text-center"></section>
             <div className="grid md:grid-cols-3 gap-8 text-white"></div>
               <div className="flex items-center justify-center"></div>
@@ -430,7 +430,7 @@ const AIQuantumOptimizationPage: React.FC = () => {
               </div>
               <div className="flex items-center justify-center"></div>
                 <MapPin className="w-5 h-5 mr-2" />
-                <span>364 E Main St STE 1008, Middletown DE 19709</span>
+                <span>364 E Main St STE 1008 Middletown DE 19709</span>
               </div>
             </div>
           </div>

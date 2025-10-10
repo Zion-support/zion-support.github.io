@@ -26,8 +26,7 @@ const NewsPage: React.FC = () => {
           </a>
         </section>
       </main>)
-)
-      <Footer />)
+      <Footer />
     </div>)
       </main>
 

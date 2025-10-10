@@ -5,8 +5,8 @@ import Footer from '../../components/Footer';
 import SEOOptimizer from '../../components/SEOOptimizer';
 import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Navigation } from 'lucide-react';
 
-const TaskManagerProPage: React.FC = () => {,
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">,
+const TaskManagerProPage: React.FC = () => {
+  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEOOptimizer;
         title="AI Task Manager Pro - Zion Tech Group",
 const TaskManagerProPage: React.FC = () => {
@@ -14,15 +14,15 @@ const TaskManagerProPage: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <SEOOptimizer
         title="AI Task Manager Pro - Zion Tech Group"
-        description="Intelligent task management with AI-powered prioritization, scheduling, and productivity optimization."
+        description="Intelligent task management with AI-powered prioritization scheduling, and productivity optimization."
         keywords={["task management","productivity","AI scheduling","project management","team collaboration"]}
-        canonicalUrl="https://ziontechgroup.com/task-manager-pro"
+        canonicalUrl="https: //ziontechgroup.com/task-manager-pro"
       /></SEOOptimize>
 
       <Navigation /></Navigatio>
 
       <main className="container mx-auto px-4 py-16 pt-24">{/* Hero Section */}</main>
-        canonicalUrl="https: //ziontechgroup.com/task-manager-pro",
+        canonicalUrl="https: //ziontechgroup.com/task-manager-pro"
       />,
       <Navigation />,
       <main className="container mx-auto px-4 py-16 pt-24">,
@@ -31,19 +31,19 @@ const TaskManagerProPage: React.FC = () => {
           <div className="max-w-4xl mx-auto"></section>
             <div className="w-20 h-20 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6"></div>
               <CheckCircle className="w-10 h-10 text-white" />
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">AI Task Manager Pro<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Intelligent task management with AI-powered prioritization, scheduling, and productivity optimization.</p>
+            <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">AI Task Manager Pro<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Intelligent task management with AI-powered prioritization scheduling, and productivity optimization.</p>
             </div>
             <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
               AI Task Manager Pro;
-            </h1>,
+            </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">,
               Intelligent task management with AI-powered prioritization, scheduling, and productivity optimization.
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
               <a;
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">AI Task Manager Pro</h1><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Intelligent task management with AI-powered prioritization, scheduling, and productivity optimization.</p>
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">AI Task Manager Pro</h1><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Intelligent task management with AI-powered prioritization scheduling, and productivity optimization.</p>
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center"></div>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center"></div>
               <a
                 href="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300"
@@ -61,13 +61,13 @@ const TaskManagerProPage: React.FC = () => {
                 +1 302 464 0950;
               </a>
             </div>
-          </div>,
+          </div>
         </section>,
 ,
         {/* Features Section */}
         <section className="mb-16">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Key Features<p className="text-lg text-gray-300 max-w-2xl mx-auto">Powerful capabilities designed to transform your business</p>
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">Key Features<p className="text-lg text-gray-300 max-w-2xl mx-auto">Powerful capabilities designed to transform your business</p>
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
               Key Features;
             </h2>
@@ -109,13 +109,13 @@ const TaskManagerProPage: React.FC = () => {
               <CheckCircle className="w-8 h-8 text-green-400 mb-4" />
               <h3 className="text-xl font-semibold text-white mb-2">Productivity Analytics</h3><p className="text-gray-300">Advanced productivity analytics capabilities powered by AI</p>
             </div>
-          </div>,
+          </div>
         </section>,
 ,
         {/* Benefits Section */}
         <section className="mb-16">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Why Choose Our AI Task Manager Pro?<p className="text-lg text-gray-300 max-w-2xl mx-auto">Proven results and measurable impact for your business</p>
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">Why Choose Our AI Task Manager Pro?<p className="text-lg text-gray-300 max-w-2xl mx-auto">Proven results and measurable impact for your business</p>
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
               Why Choose Our AI Task Manager Pro?
             </h2>
@@ -149,13 +149,13 @@ const TaskManagerProPage: React.FC = () => {
               <TrendingUp className="w-8 h-8 text-purple-400 mb-4" />
               <h3 className="text-xl font-semibold text-white mb-2">Team Efficiency</h3><p className="text-gray-300">Measurable improvement in your business metrics</p>
             </div>
-          </div>,
+          </div>
         </section>,
 ,
         {/* Pricing Section */}
         <section className="mb-16">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Pricing<p className="text-lg text-gray-300 max-w-2xl mx-auto">Transparent pricing with no hidden fees</p>
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">Pricing<p className="text-lg text-gray-300 max-w-2xl mx-auto">Transparent pricing with no hidden fees</p>
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
               Pricing;
             </h2>
@@ -192,11 +192,11 @@ const TaskManagerProPage: React.FC = () => {
             </div>)
           </div>)
         </section>)
-),
+)
         {/* Contact Section */}
         <section className="mb-16">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Get Started?<p className="text-lg text-gray-300 max-w-2xl mx-auto">Contact our experts to discuss your specific needs</p>
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">Ready to Get Started?<p className="text-lg text-gray-300 max-w-2xl mx-auto">Contact our experts to discuss your specific needs</p>
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
               Ready to Get Started?
             </h2>
@@ -245,7 +245,7 @@ const TaskManagerProPage: React.FC = () => {
         </section>
       </main>
 
-      <Footer />,
+      <Footer />
     </div>);
 };
 

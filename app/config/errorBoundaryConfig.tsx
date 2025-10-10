@@ -40,7 +40,7 @@ export interface ErrorBoundaryConfig {
   /**
    * Custom error messages by error type
    */
-  customMessages: Record<string, string>;
+  customMessages: Record<string string>;
 
   /**
    * Fallback UI components
@@ -56,29 +56,29 @@ export interface ErrorBoundaryConfig {
  * Default error messages
  */
 const DEFAULT_ERROR_MESSAGES = {
-  default: 'Something went wrong. Please try again.',
-  network: 'Network connection issue. Please check your internet connection.',
-  notFound: 'The requested resource was not found.',
-  timeout: 'Request timed out. Please try again.',
-  serverError: 'Server error occurred. Please try again later.',
-  validation: 'Validation error. Please check your input.',
-};
+    default: 'Something went wrong. Please try again.',
+    network: 'Network connection issue. Please check your internet connection.',
+    notFound: 'The requested resource was not found.',
+    timeout: 'Request timed out. Please try again.',
+    serverError: 'Server error occurred. Please try again later.',
+    validation: 'Validation error. Please check your input.'
+  };
 
 /**
  * Get error boundary configuration based on environment
  */
 export function getErrorBoundaryConfig(): ErrorBoundaryConfig {return {
-    logErrors: true,
-    showDetails: isDevelopment,
-    reportErrors: !isDevelopment,
-    reportingEndpoint: process.env.REACT_APP_ERROR_REPORTING_ENDPOINT,
-    showErrorOverlay: isDevelopment,
-    maxStoredErrors: 50,
-    customMessages: DEFAULT_ERROR_MESSAGES,
+    logErrors: true
+    showDetails: isDevelopment
+    reportErrors: !isDevelopment
+    reportingEndpoint: process.env.REACT_APP_ERROR_REPORTING_ENDPOINT
+    showErrorOverlay: isDevelopment
+    maxStoredErrors: 50
+    customMessages: DEFAULT_ERROR_MESSAGES
     fallbackComponents: {
-      default: DefaultErrorFallback,
-      network: NetworkErrorFallback,
-      notFound: NotFoundFallback,
+      default: DefaultErrorFallback
+      network: NetworkErrorFallback
+      notFound: NotFoundFallback
     },
   };
 }
@@ -86,7 +86,7 @@ export function getErrorBoundaryConfig(): ErrorBoundaryConfig {return {
 /**
  * Default error fallback component
  */
-function DefaultErrorFallback({ error, resetError }: { error: Error; resetError: () => void }) {
+function DefaultErrorFallback({ error, resetError }: { error: Error; resetError: () => void } {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
       <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6">
@@ -117,13 +117,13 @@ function DefaultErrorFallback({ error, resetError }: { error: Error; resetError:
         <div className="mt-6 flex gap-4">
           <button
             onClick={resetError}
-            className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+            className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg hover: bg-blue-700 transition-colors"
           >
             Try Again
           </button>
           <button
             onClick={() => (window.location.href = '/')}
-            className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-300 transition-colors"
+            className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg hover: bg-gray-300 transition-colors"
           >
             Go Home
           </button>
@@ -136,7 +136,7 @@ function DefaultErrorFallback({ error, resetError }: { error: Error; resetError:
 /**
  * Network error fallback component
  */
-function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => void }) {
+function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => void } {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
       <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6">
@@ -162,7 +162,7 @@ function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => 
         <div className="mt-6">
           <button
             onClick={resetError}
-            className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+            className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover: bg-blue-700 transition-colors"
           >
             Retry Connection
           </button>
@@ -187,13 +187,13 @@ function NotFoundFallback(): JSX.Element {
         <div className="mt-6 flex gap-4 justify-center">
           <button
             onClick={() => (window.location.href = '/')}
-            className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+            className="bg-blue-600 text-white px-6 py-2 rounded-lg hover: bg-blue-700 transition-colors"
           >
             Go Home
           </button>
           <button
             onClick={() => window.history.back()}
-            className="bg-gray-200 text-gray-800 px-6 py-2 rounded-lg hover:bg-gray-300 transition-colors"
+            className="bg-gray-200 text-gray-800 px-6 py-2 rounded-lg hover: bg-gray-300 transition-colors"
           >
             Go Back
           </button>
@@ -207,19 +207,19 @@ function NotFoundFallback(): JSX.Element {
  * Get error type from error object
  */
 export function getErrorType(error: Error): keyof typeof DEFAULT_ERROR_MESSAGES {
-  if (error.message.includes('Network') || error.message.includes('fetch')) {
+  if (error.message.includes('Network') || error.message.includes('fetch') {
     return 'network';
   }
-  if (error.message.includes('404') || error.message.includes('not found')) {
+  if (error.message.includes('404') || error.message.includes('not found') {
     return 'notFound';
   }
-  if (error.message.includes('timeout')) {
+  if(error.message.includes('timeout') {
     return 'timeout';
   }
-  if (error.message.includes('500') || error.message.includes('server')) {
+  if (error.message.includes('500') || error.message.includes('server') {
     return 'serverError';
   }
-  if (error.message.includes('validation')) {
+  if(error.message.includes('validation') {
     return 'validation';
   }
   return 'default';
@@ -228,15 +228,15 @@ export function getErrorType(error: Error): keyof typeof DEFAULT_ERROR_MESSAGES 
 /**
  * Format error for logging
  */
-export function formatErrorForLogging(error: Error): Record<string, unknown> {
+export function formatErrorForLogging(error: Error): Record<string unknown> {
   return {
-    message: error.message,
-    stack: error.stack,
-    name: error.name,
-    type: getErrorType(error),
-    timestamp: new Date().toISOString(),
-    userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown',
-    url: typeof window !== 'undefined' ? window.location.href : 'unknown',
+    message: error.message
+    stack: error.stack
+    name: error.name
+    type: getErrorType(error)
+    timestamp: new Date().toISOString()
+    userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown'
+    url: typeof window !== 'undefined' ? window.location.href : 'unknown'
   };
 }
 

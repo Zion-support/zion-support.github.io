@@ -5,41 +5,38 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 const PricingPage: React.FC = () => {
-  const [selectedPlan, setSelectedPlan] = useState('ai-services');
+  const [selectedPlan setSelectedPlan] = useState('ai-services');
   const [billingCycle, setBillingCycle] = useState('monthly');
 
   const aiServicesPricing = [
     {
-      name: 'AI Starter',
-      description: 'Perfect for small businesses getting started with AI',
-      price: { monthly: 199, yearly: 1990 },
-      icon: Brain,
-      popular: false,
+      name: 'AI Starter'
+      description: 'Perfect for small businesses getting started with AI'
+      price: { monthly: 199 yearly: 1990 },
+      icon: Brain
+      popular: false
       features: [
-        'Basic AI automation',
-        'Email support',
+        'Basic AI automation', 'Email support',
         'Standard templates',
         'Up to 5 users',
         'Basic analytics',
         '1 AI model'
       ],
       limitations: [
-        'Limited customizations',
-        'Basic reporting',
+        'Limited customizations', 'Basic reporting',
         'Standard response time'
       ],
-      cta: 'Start Free Trial',
+      cta: 'Start Free Trial'
       link: '/contact'
     },
     {
-      name: 'AI Professional',
-      description: 'Advanced AI solutions for growing businesses',
-      price: { monthly: 499, yearly: 4990 },
-      icon: Zap,
-      popular: true,
+      name: 'AI Professional'
+      description: 'Advanced AI solutions for growing businesses'
+      price: { monthly: 499 yearly: 4990 },
+      icon: Zap
+      popular: true
       features: [
-        'Advanced AI automation',
-        'Priority support',
+        'Advanced AI automation', 'Priority support',
         'Custom templates',
         'Up to 25 users',
         'Advanced analytics',
@@ -48,21 +45,19 @@ const PricingPage: React.FC = () => {
         'Custom integrations'
       ],
       limitations: [
-        'Limited custom development',
-        'Standard SLA'
+        'Limited custom development', 'Standard SLA'
       ],
-      cta: 'Get Started',
+      cta: 'Get Started'
       link: '/contact'
     },
     {
-      name: 'AI Enterprise',
-      description: 'Complete AI transformation for large organizations',
-      price: { monthly: 1299, yearly: 12990 },
-      icon: Crown,
-      popular: false,
+      name: 'AI Enterprise'
+      description: 'Complete AI transformation for large organizations'
+      price: { monthly: 1299 yearly: 12990 },
+      icon: Crown
+      popular: false
       features: [
-        'Full AI suite',
-        '24/7 dedicated support',
+        'Full AI suite', '24/7 dedicated support',
         'Unlimited customizations',
         'Unlimited users',
         'Enterprise analytics',
@@ -72,43 +67,40 @@ const PricingPage: React.FC = () => {
         'Dedicated account manager',
         'SLA guarantees'
       ],
-      limitations: [],
-      cta: 'Contact Sales',
+      limitations: []
+      cta: 'Contact Sales'
       link: '/contact'
     }
   ];
 
   const microSaasPricing = [
     {
-      name: 'Micro SaaS Basic',
-      description: 'Essential tools for small teams',
-      price: { monthly: 29, yearly: 290 },
-      icon: Settings,
-      popular: false,
+      name: 'Micro SaaS Basic'
+      description: 'Essential tools for small teams'
+      price: { monthly: 29 yearly: 290 },
+      icon: Settings
+      popular: false
       features: [
-        '1 micro SaaS tool',
-        'Basic support',
+        '1 micro SaaS tool', 'Basic support',
         'Standard templates',
         'Up to 3 users',
         'Basic analytics',
         'Email support'
       ],
       limitations: [
-        'Limited integrations',
-        'Basic customization'
+        'Limited integrations', 'Basic customization'
       ],
-      cta: 'Start Free',
+      cta: 'Start Free'
       link: '/contact'
     },
     {
-      name: 'Micro SaaS Pro',
-      description: 'Powerful tools for growing businesses',
-      price: { monthly: 79, yearly: 790 },
-      icon: Rocket,
-      popular: true,
+      name: 'Micro SaaS Pro'
+      description: 'Powerful tools for growing businesses'
+      price: { monthly: 79 yearly: 790 },
+      icon: Rocket
+      popular: true
       features: [
-        'Up to 5 micro SaaS tools',
-        'Priority support',
+        'Up to 5 micro SaaS tools', 'Priority support',
         'Custom templates',
         'Up to 15 users',
         'Advanced analytics',
@@ -118,19 +110,18 @@ const PricingPage: React.FC = () => {
       ],
       limitations: [
         'Limited custom development'
-      ],
-      cta: 'Get Started',
+      ]
+      cta: 'Get Started'
       link: '/contact'
     },
     {
-      name: 'Micro SaaS Enterprise',
-      description: 'Complete micro SaaS suite for enterprises',
-      price: { monthly: 199, yearly: 1990 },
-      icon: Building,
-      popular: false,
+      name: 'Micro SaaS Enterprise'
+      description: 'Complete micro SaaS suite for enterprises'
+      price: { monthly: 199 yearly: 1990 },
+      icon: Building
+      popular: false
       features: [
-        'Unlimited micro SaaS tools',
-        '24/7 dedicated support',
+        'Unlimited micro SaaS tools', '24/7 dedicated support',
         'Unlimited customizations',
         'Unlimited users',
         'Enterprise analytics',
@@ -139,43 +130,40 @@ const PricingPage: React.FC = () => {
         'Dedicated account manager',
         'SLA guarantees'
       ],
-      limitations: [],
-      cta: 'Contact Sales',
+      limitations: []
+      cta: 'Contact Sales'
       link: '/contact'
     }
   ];
 
   const itServicesPricing = [
     {
-      name: 'IT Support Basic',
-      description: 'Essential IT support for small businesses',
-      price: { monthly: 99, yearly: 990 },
-      icon: Headphones,
-      popular: false,
+      name: 'IT Support Basic'
+      description: 'Essential IT support for small businesses'
+      price: { monthly: 99 yearly: 990 },
+      icon: Headphones
+      popular: false
       features: [
-        'Email support',
-        'Basic monitoring',
+        'Email support', 'Basic monitoring',
         'Standard response time',
         'Up to 10 devices',
         'Basic security',
         'Monthly reports'
       ],
       limitations: [
-        'Limited remote support',
-        'Business hours only'
+        'Limited remote support', 'Business hours only'
       ],
-      cta: 'Get Started',
+      cta: 'Get Started'
       link: '/contact'
     },
     {
-      name: 'IT Support Professional',
-      description: 'Comprehensive IT support for growing businesses',
-      price: { monthly: 199, yearly: 1990 },
-      icon: Shield,
-      popular: true,
+      name: 'IT Support Professional'
+      description: 'Comprehensive IT support for growing businesses'
+      price: { monthly: 199 yearly: 1990 },
+      icon: Shield
+      popular: true
       features: [
-        '24/7 phone & email support',
-        'Proactive monitoring',
+        '24/7 phone & email support', 'Proactive monitoring',
         'Fast response time',
         'Up to 50 devices',
         'Advanced security',
@@ -185,19 +173,18 @@ const PricingPage: React.FC = () => {
       ],
       limitations: [
         'Limited on-site visits'
-      ],
-      cta: 'Get Started',
+      ]
+      cta: 'Get Started'
       link: '/contact'
     },
     {
-      name: 'IT Support Enterprise',
-      description: 'Complete IT management for large organizations',
-      price: { monthly: 399, yearly: 3990 },
-      icon: Globe,
-      popular: false,
+      name: 'IT Support Enterprise'
+      description: 'Complete IT management for large organizations'
+      price: { monthly: 399 yearly: 3990 },
+      icon: Globe
+      popular: false
       features: [
-        '24/7 dedicated support',
-        'Full monitoring suite',
+        '24/7 dedicated support', 'Full monitoring suite',
         'Immediate response',
         'Unlimited devices',
         'Enterprise security',
@@ -206,43 +193,40 @@ const PricingPage: React.FC = () => {
         'Dedicated account manager',
         'SLA guarantees'
       ],
-      limitations: [],
-      cta: 'Contact Sales',
+      limitations: []
+      cta: 'Contact Sales'
       link: '/contact'
     }
   ];
 
   const cloudServicesPricing = [
     {
-      name: 'Cloud Starter',
-      description: 'Basic cloud infrastructure for small businesses',
-      price: { monthly: 149, yearly: 1490 },
-      icon: Cloud,
-      popular: false,
+      name: 'Cloud Starter'
+      description: 'Basic cloud infrastructure for small businesses'
+      price: { monthly: 149 yearly: 1490 },
+      icon: Cloud
+      popular: false
       features: [
-        'Basic cloud setup',
-        'Email support',
+        'Basic cloud setup', 'Email support',
         'Standard monitoring',
         'Up to 5 servers',
         'Basic backup',
         'Monthly optimization'
       ],
       limitations: [
-        'Limited customization',
-        'Basic security'
+        'Limited customization', 'Basic security'
       ],
-      cta: 'Get Started',
+      cta: 'Get Started'
       link: '/contact'
     },
     {
-      name: 'Cloud Professional',
-      description: 'Advanced cloud solutions for growing businesses',
-      price: { monthly: 299, yearly: 2990 },
-      icon: Zap,
-      popular: true,
+      name: 'Cloud Professional'
+      description: 'Advanced cloud solutions for growing businesses'
+      price: { monthly: 299 yearly: 2990 },
+      icon: Zap
+      popular: true
       features: [
-        'Advanced cloud setup',
-        'Priority support',
+        'Advanced cloud setup', 'Priority support',
         'Advanced monitoring',
         'Up to 25 servers',
         'Advanced backup',
@@ -252,19 +236,18 @@ const PricingPage: React.FC = () => {
       ],
       limitations: [
         'Limited custom development'
-      ],
-      cta: 'Get Started',
+      ]
+      cta: 'Get Started'
       link: '/contact'
     },
     {
-      name: 'Cloud Enterprise',
-      description: 'Complete cloud transformation for enterprises',
-      price: { monthly: 599, yearly: 5990 },
-      icon: Crown,
-      popular: false,
+      name: 'Cloud Enterprise'
+      description: 'Complete cloud transformation for enterprises'
+      price: { monthly: 599 yearly: 5990 },
+      icon: Crown
+      popular: false
       features: [
-        'Full cloud transformation',
-        '24/7 dedicated support',
+        'Full cloud transformation', '24/7 dedicated support',
         'Enterprise monitoring',
         'Unlimited servers',
         'Enterprise backup',
@@ -274,43 +257,40 @@ const PricingPage: React.FC = () => {
         'Dedicated account manager',
         'SLA guarantees'
       ],
-      limitations: [],
-      cta: 'Contact Sales',
+      limitations: []
+      cta: 'Contact Sales'
       link: '/contact'
     }
   ];
 
   const cybersecurityPricing = [
     {
-      name: 'Security Basic',
-      description: 'Essential security for small businesses',
-      price: { monthly: 79, yearly: 790 },
-      icon: Shield,
-      popular: false,
+      name: 'Security Basic'
+      description: 'Essential security for small businesses'
+      price: { monthly: 79 yearly: 790 },
+      icon: Shield
+      popular: false
       features: [
-        'Basic firewall',
-        'Email security',
+        'Basic firewall', 'Email security',
         'Standard monitoring',
         'Up to 10 devices',
         'Basic backup',
         'Monthly reports'
       ],
       limitations: [
-        'Limited threat detection',
-        'Basic compliance'
+        'Limited threat detection', 'Basic compliance'
       ],
-      cta: 'Get Started',
+      cta: 'Get Started'
       link: '/contact'
     },
     {
-      name: 'Security Professional',
-      description: 'Advanced security for growing businesses',
-      price: { monthly: 149, yearly: 1490 },
-      icon: Lock,
-      popular: true,
+      name: 'Security Professional'
+      description: 'Advanced security for growing businesses'
+      price: { monthly: 149 yearly: 1490 },
+      icon: Lock
+      popular: true
       features: [
-        'Advanced firewall',
-        'Comprehensive email security',
+        'Advanced firewall', 'Comprehensive email security',
         'Advanced monitoring',
         'Up to 50 devices',
         'Advanced backup',
@@ -320,19 +300,18 @@ const PricingPage: React.FC = () => {
       ],
       limitations: [
         'Limited custom policies'
-      ],
-      cta: 'Get Started',
+      ]
+      cta: 'Get Started'
       link: '/contact'
     },
     {
-      name: 'Security Enterprise',
-      description: 'Complete security suite for enterprises',
-      price: { monthly: 299, yearly: 2990 },
-      icon: Globe,
-      popular: false,
+      name: 'Security Enterprise'
+      description: 'Complete security suite for enterprises'
+      price: { monthly: 299 yearly: 2990 },
+      icon: Globe
+      popular: false
       features: [
-        'Enterprise firewall',
-        'Full email security suite',
+        'Enterprise firewall', 'Full email security suite',
         'Enterprise monitoring',
         'Unlimited devices',
         'Enterprise backup',
@@ -342,8 +321,8 @@ const PricingPage: React.FC = () => {
         'Dedicated security manager',
         'SLA guarantees'
       ],
-      limitations: [],
-      cta: 'Contact Sales',
+      limitations: []
+      cta: 'Contact Sales'
       link: '/contact'
     }
   ];
@@ -360,17 +339,16 @@ const PricingPage: React.FC = () => {
         return cloudServicesPricing;
       case 'cybersecurity':
         return cybersecurityPricing;
-      default:
-        return aiServicesPricing;
+      default: return aiServicesPricing;
     }
   };
 
   const pricingPlans = [
-    { id: 'ai-services', name: 'AI Services', icon: Brain },
-    { id: 'micro-saas', name: 'Micro SaaS', icon: Settings },
-    { id: 'it-services', name: 'IT Services', icon: Headphones },
-    { id: 'cloud-services', name: 'Cloud Services', icon: Cloud },
-    { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield }
+    { id: 'ai-services' name: 'AI Services' icon: Brain },
+    { id: 'micro-saas' name: 'Micro SaaS' icon: Settings },
+    { id: 'it-services' name: 'IT Services' icon: Headphones },
+    { id: 'cloud-services' name: 'Cloud Services' icon: Cloud },
+    { id: 'cybersecurity' name: 'Cybersecurity' icon: Shield }
   ];
 
   return (
@@ -388,7 +366,7 @@ const PricingPage: React.FC = () => {
           {/* Hero Section */}
           <section className="container mx-auto px-4 py-16">
             <div className="text-center mb-16">
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">
                 Transparent <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Pricing</span>
               </h1>
               <p className="text-xl text-cyan-400 mb-8 max-w-4xl mx-auto">
@@ -407,7 +385,7 @@ const PricingPage: React.FC = () => {
                   className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                     selectedPlan === plan.id
                       ? 'bg-gradient-to-r from-cyan-600 to-purple-600 text-white'
-                      : 'bg-white/10 text-gray-300 hover:bg-white/20'
+                      : 'bg-white/10 text-gray-300 hover: bg-white/20'
                   }`}
                 >
                   <plan.icon className="w-5 h-5" />
@@ -426,7 +404,7 @@ const PricingPage: React.FC = () => {
                   className={`px-6 py-2 rounded-md font-semibold transition-all duration-300 ${
                     billingCycle === 'monthly'
                       ? 'bg-gradient-to-r from-cyan-600 to-purple-600 text-white'
-                      : 'text-gray-300 hover:text-white'
+                      : 'text-gray-300 hover: text-white'
                   }`}
                 >
                   Monthly
@@ -436,7 +414,7 @@ const PricingPage: React.FC = () => {
                   className={`px-6 py-2 rounded-md font-semibold transition-all duration-300 ${
                     billingCycle === 'yearly'
                       ? 'bg-gradient-to-r from-cyan-600 to-purple-600 text-white'
-                      : 'text-gray-300 hover:text-white'
+                      : 'text-gray-300 hover: text-white'
                   }`}
                 >
                   Yearly
@@ -448,11 +426,11 @@ const PricingPage: React.FC = () => {
 
           {/* Pricing Cards */}
           <section className="container mx-auto px-4 py-16">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
-              {getCurrentPricing().map((plan, index) => (
+            <div className="grid grid-cols-1 md: grid-cols-3 gap-8 max-w-7xl mx-auto">
+              {getCurrentPricing().map((plan index) => (
                 <div
                   key={index}
-                  className={`bg-white/10 backdrop-blur-lg rounded-xl p-8 border transition-all duration-300 hover:scale-105 ${
+                  className={`bg-white/10 backdrop-blur-lg rounded-xl p-8 border transition-all duration-300 hover: scale-105 ${
                     plan.popular
                       ? 'border-cyan-400/50 ring-2 ring-cyan-400/20'
                       : 'border-white/20 hover:border-cyan-400/50'
@@ -487,8 +465,8 @@ const PricingPage: React.FC = () => {
                   </div>
 
                   <div className="space-y-4 mb-8">
-                    <h4 className="text-lg font-semibold text-white mb-4">What's included:</h4>
-                    {plan.features.map((feature, featureIndex) => (
+                    <h4 className="text-lg font-semibold text-white mb-4">What's included: </h4>
+                    {plan.features.map((feature featureIndex) => (
                       <div key={featureIndex} className="flex items-center text-gray-300">
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                         <span>{feature}</span>
@@ -498,8 +476,8 @@ const PricingPage: React.FC = () => {
 
                   {plan.limitations.length > 0 && (
                     <div className="space-y-2 mb-8">
-                      <h4 className="text-lg font-semibold text-white mb-4">Limitations:</h4>
-                      {plan.limitations.map((limitation, limitationIndex) => (
+                      <h4 className="text-lg font-semibold text-white mb-4">Limitations: </h4>
+                      {plan.limitations.map((limitation limitationIndex) => (
                         <div key={limitationIndex} className="flex items-center text-gray-400">
                           <X className="w-5 h-5 text-red-400 mr-3 flex-shrink-0" />
                           <span>{limitation}</span>
@@ -510,7 +488,7 @@ const PricingPage: React.FC = () => {
 
                   <a
                     href={plan.link}
-                    className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 transform hover:scale-105 ${
+                    className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 transform hover: scale-105 ${
                       plan.popular
                         ? 'bg-gradient-to-r from-cyan-600 to-purple-600 text-white hover:from-cyan-700 hover:to-purple-700'
                         : 'bg-white/10 text-white hover:bg-white/20 border border-white/20'
@@ -555,7 +533,7 @@ const PricingPage: React.FC = () => {
           {/* CTA Section */}
           <section className="container mx-auto px-4 py-16">
             <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-lg p-12 text-center">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
                 Ready to Get Started?
               </h2>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">

@@ -7,23 +7,23 @@ import Footer from '../components/Footer';
 const ServicesPage: React.FC = () => {
   const services = [
     {
-      icon: Brain,
-      title: 'AI Services',
-      description: 'Transform your business with intelligent automation and AI-powered solutions',
+      icon: Brain
+      title: 'AI Services'
+      description: 'Transform your business with intelligent automation and AI-powered solutions'
       features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
       href: '/ai-services'
     },
     {
-      icon: Zap,
-      title: 'IT Services',
-      description: 'Comprehensive IT infrastructure and support for modern businesses',
+      icon: Zap
+      title: 'IT Services'
+      description: 'Comprehensive IT infrastructure and support for modern businesses'
       features: ['Cloud Migration', 'System Administration', 'Network Security', 'Database Management'],
       href: '/it-services'
     },
     {
-      icon: Globe,
-      title: 'Micro SaaS',
-      description: 'Purpose-built applications that solve specific business challenges',
+      icon: Globe
+      title: 'Micro SaaS'
+      description: 'Purpose-built applications that solve specific business challenges'
       features: ['Custom Development', 'API Integration', 'Scalable Architecture', 'User Management'],
       href: '/micro-saas'
     }
@@ -31,30 +31,30 @@ const ServicesPage: React.FC = () => {
 
   const itServices = [
     {
-      title: 'Cloud Infrastructure',
-      description: 'Scalable and secure cloud solutions for modern businesses.',
-      icon: Cloud,
+      title: 'Cloud Infrastructure'
+      description: 'Scalable and secure cloud solutions for modern businesses.'
+      icon: Cloud
       features: ['AWS/Azure/GCP Migration', 'Auto-scaling', 'Disaster Recovery', 'Cost Optimization'],
       path: '/cloud-infrastructure'
     },
     {
-      title: 'Cybersecurity',
-      description: 'Comprehensive security solutions to protect your digital assets.',
-      icon: Shield,
+      title: 'Cybersecurity'
+      description: 'Comprehensive security solutions to protect your digital assets.'
+      icon: Shield
       features: ['Security Audits', 'Threat Detection', 'Compliance', 'Incident Response'],
       path: '/cybersecurity'
     },
     {
-      title: 'IT Support',
-      description: '24/7 technical support and maintenance services.',
-      icon: Settings,
+      title: 'IT Support'
+      description: '24/7 technical support and maintenance services.'
+      icon: Settings
       features: ['Remote Support', 'System Monitoring', 'Proactive Maintenance', 'Help Desk'],
       path: '/it-support'
     },
     {
-      title: 'Database Management',
-      description: 'Optimize and secure your database infrastructure.',
-      icon: Database,
+      title: 'Database Management'
+      description: 'Optimize and secure your database infrastructure.'
+      icon: Database
       features: ['Performance Tuning', 'Backup & Recovery', 'Security Hardening', 'Migration Services'],
       path: '/database-management'
     }
@@ -62,9 +62,9 @@ const ServicesPage: React.FC = () => {
 
   const microSaasServices = [
     {
-      title: 'Custom Micro SAAS',
-      description: 'Build tailored software solutions for your specific business needs.',
-      icon: Code,
+      title: 'Custom Micro SAAS'
+      description: 'Build tailored software solutions for your specific business needs.'
+      icon: Code
       features: ['Custom Development', 'User Management', 'Payment Integration', 'Analytics Dashboard'],
       path: '/micro-saas'
     }
@@ -73,7 +73,7 @@ const ServicesPage: React.FC = () => {
   const contactInfo = {
     phone: '(302) 464-0950',
     email: 'kleber@ziontechgroup.com',
-    address: 'Middletown, DE 19709'
+    address: 'Middletown DE 19709'
   };
 
   return (
@@ -90,14 +90,14 @@ const ServicesPage: React.FC = () => {
           {/* Hero Section */}
           <section className="container mx-auto px-4 py-16 text-center">
             <div className="max-w-4xl mx-auto">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              <h1 className="text-4xl md: text-6xl font-bold text-white mb-6">
                 Our <span className="text-cyan-400">Services</span>
               </h1>
               <p className="text-xl text-gray-300 mb-8">
                 Comprehensive solutions designed to accelerate your digital transformation
               </p>
               <p className="text-lg text-gray-400 mb-12 max-w-3xl mx-auto">
-                From AI-powered automation to robust IT infrastructure, we provide end-to-end 
+                From AI-powered automation to robust IT infrastructure we provide end-to-end 
                 solutions that drive measurable business outcomes and sustainable growth.
               </p>
             </div>
@@ -105,9 +105,9 @@ const ServicesPage: React.FC = () => {
 
           {/* Services Grid */}
           <section className="container mx-auto px-4 py-16">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {services.map((service, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 hover:border-cyan-400/50 transition-all duration-300 group">
+            <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
+              {services.map((service index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 hover: border-cyan-400/50 transition-all duration-300 group">
                   <div className="flex items-center mb-6">
                     <service.icon className="w-12 h-12 text-cyan-400 mr-4 group-hover:text-cyan-300 transition-colors" />
                     <h3 className="text-2xl font-bold text-white">{service.title}</h3>
@@ -123,7 +123,7 @@ const ServicesPage: React.FC = () => {
                   </ul>
                   <a
                     href={service.href}
-                    className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold transition-colors"
+                    className="inline-flex items-center text-cyan-400 hover: text-cyan-300 font-semibold transition-colors"
                   >
                     Learn More
                     <ArrowRight className="w-4 h-4 ml-2" />
@@ -137,7 +137,7 @@ const ServicesPage: React.FC = () => {
           <section className="bg-white/5 py-20">
             <div className="container mx-auto px-4">
               <div className="text-center mb-16">
-                <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
                   Why Choose Zion Tech Group?
                 </h2>
                 <p className="text-xl text-gray-300">
@@ -184,7 +184,7 @@ const ServicesPage: React.FC = () => {
           {/* CTA Section */}
           <section className="bg-gradient-to-r from-cyan-600 to-purple-600 py-20">
             <div className="container mx-auto px-4 text-center">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
                 Ready to Get Started?
               </h2>
               <p className="text-xl text-cyan-100 mb-8 max-w-3xl mx-auto">

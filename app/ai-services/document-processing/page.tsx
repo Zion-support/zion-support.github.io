@@ -5,34 +5,34 @@ import { FileText, Brain, Zap, Shield, CheckCircle, ArrowRight, Star, Award, Clo
 const AIDocumentProcessingPage: React.FC = () => {
   const features = [
     {
-      icon: FileText,
-      title: 'Multi-Format Support',
-      description: 'Process PDFs, Word docs, images, and scanned documents with 99.9% accuracy.'
+    icon: FileText,
+    title: 'Multi-Format Support',
+    description: 'Process PDFs Word docs, images, and scanned documents with 99.9% accuracy.',
     },
     {
-      icon: Brain,
-      title: 'Intelligent Extraction',
-      description: 'AI-powered data extraction from complex documents and forms automatically.'
+    icon: Brain,
+    title: 'Intelligent Extraction',
+    description: 'AI-powered data extraction from complex documents and forms automatically.',
     },
     {
-      icon: Zap,
-      title: 'Real-time Processing',
-      description: 'Process thousands of documents in seconds with our high-performance AI engine.'
+    icon: Zap,
+    title: 'Real-time Processing',
+    description: 'Process thousands of documents in seconds with our high-performance AI engine.',
     },
     {
-      icon: Shield,
-      title: 'Secure Processing',
-      description: 'Enterprise-grade security with encryption and compliance standards.'
+    icon: Shield,
+    title: 'Secure Processing',
+    description: 'Enterprise-grade security with encryption and compliance standards.',
     },
     {
-      icon: Target,
-      title: 'Smart Classification',
-      description: 'Automatically categorize and route documents based on content and context.'
+    icon: Target,
+    title: 'Smart Classification',
+    description: 'Automatically categorize and route documents based on content and context.',
     },
     {
-      icon: Clock,
-      title: '24/7 Automation',
-      description: 'Continuous document processing without manual intervention or downtime.'
+    icon: Clock,
+    title: '24/7 Automation',
+    description: 'Continuous document processing without manual intervention or downtime.',
     }
   ];
 
@@ -64,7 +64,7 @@ const AIDocumentProcessingPage: React.FC = () => {
         <title>AI Document Processing | Zion Tech Group - Intelligent Document Analysis</title>
         <meta name="description" content="Automate document processing with AI-powered solutions. Extract data, classify documents, and streamline workflows with 99.9% accuracy." />
         <meta name="keywords" content="AI document processing, document automation, data extraction, OCR, document analysis, Zion Tech Group" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-services/document-processing" />
+        <link rel="canonical" href="https: //ziontechgroup.com/ai-services/document-processing" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -76,15 +76,15 @@ const AIDocumentProcessingPage: React.FC = () => {
                 <FileText className="w-4 h-4" />
                 <span>AI Document Processing</span>
               </div>
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text">
+              <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 cyber-text">
                 Intelligent Document 
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400"> Analysis</span>
               </h1>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-                Transform your document workflows with AI-powered processing that extracts, classifies, and analyzes 
+                Transform your document workflows with AI-powered processing that extracts classifies, and analyzes 
                 documents with unprecedented accuracy and speed.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all flex items-center justify-center space-x-2">
                   <span>Start Processing</span>
                   <ArrowRight className="w-5 h-5" />
@@ -106,9 +106,9 @@ const AIDocumentProcessingPage: React.FC = () => {
                 Our AI document processing platform handles complex documents with ease
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-slate-800/50 backdrop-blur-lg rounded-lg p-6 border border-slate-700/50 hover:border-cyan-400/50 transition-all group">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature index) => (
+                <div key={index} className="bg-slate-800/50 backdrop-blur-lg rounded-lg p-6 border border-slate-700/50 hover: border-cyan-400/50 transition-all group">
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                     <feature.icon className="w-6 h-6 text-white" />
                   </div>
@@ -129,9 +129,9 @@ const AIDocumentProcessingPage: React.FC = () => {
                 Process virtually any document format with our comprehensive AI solution
               </p>
             </div>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-              {documentTypes.map((type, index) => (
-                <div key={index} className="bg-slate-800/50 backdrop-blur-lg rounded-lg p-4 border border-slate-700/50 hover:border-purple-400/50 transition-all text-center">
+            <div className="grid grid-cols-2 md: grid-cols-3 lg:grid-cols-5 gap-4">
+              {documentTypes.map((type index) => (
+                <div key={index} className="bg-slate-800/50 backdrop-blur-lg rounded-lg p-4 border border-slate-700/50 hover: border-purple-400/50 transition-all text-center">
                   <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center mx-auto mb-3">
                     <FileText className="w-4 h-4 text-white" />
                   </div>
@@ -151,9 +151,9 @@ const AIDocumentProcessingPage: React.FC = () => {
                 Experience the power of intelligent document processing
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
               <div className="space-y-6">
-                {benefits.map((benefit, index) => (
+                {benefits.map((benefit index) => (
                   <div key={index} className="flex items-start space-x-3">
                     <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0 mt-1" />
                     <span className="text-gray-300 text-lg">{benefit}</span>
@@ -196,7 +196,7 @@ const AIDocumentProcessingPage: React.FC = () => {
                 Join thousands of businesses already using our AI document processing solutions 
                 to streamline their workflows and reduce costs.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all flex items-center justify-center space-x-2">
                   <span>Start Free Trial</span>
                   <ArrowRight className="w-5 h-5" />

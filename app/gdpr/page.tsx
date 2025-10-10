@@ -4,15 +4,15 @@ import { Shield, Lock, Eye, Database, UserCheck, FileText, AlertTriangle } from 
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const GDPRPage: React.FC = () => {,
-  const lastUpdated = 'January 1, 2024';
+const GDPRPage: React.FC = () => {
+  const lastUpdated = 'January 1 2024';
 
   const rights = [
     {
       title: 'Right of Access'
       icon: Eye;
-      description: 'You have the right to obtain confirmation as to whether or not personal data concerning you is being processed.',
-      details: [,
+      description: 'You have the right to obtain confirmation as to whether or not personal data concerning you is being processed.'
+      details: [
         'Request a copy of your personal data',
         'Know the purposes of processing',
         'Understand data retention periods',
@@ -22,8 +22,8 @@ const GDPRPage: React.FC = () => {,
     {
       title: 'Right to Rectification'
       icon: FileText;
-      description: 'You have the right to have inaccurate personal data corrected and incomplete data completed.',
-      details: [,
+      description: 'You have the right to have inaccurate personal data corrected and incomplete data completed.'
+      details: [
         'Correct factual errors in your data',
         'Update outdated information',
         'Complete missing data fields',
@@ -33,8 +33,8 @@ const GDPRPage: React.FC = () => {,
     {
       title: 'Right to Erasure'
       icon: AlertTriangle;
-      description: 'You have the right to request the deletion of your personal data under certain circumstances.',
-      details: [,
+      description: 'You have the right to request the deletion of your personal data under certain circumstances.'
+      details: [
         'Data no longer necessary for original purposes',
         'Withdrawal of consent for processing',
         'Unlawful processing of personal data',
@@ -44,8 +44,8 @@ const GDPRPage: React.FC = () => {,
     {
       title: 'Right to Restrict Processing'
       icon: Lock;
-      description: 'You have the right to limit how we process your personal data in certain situations.',
-      details: [,
+      description: 'You have the right to limit how we process your personal data in certain situations.'
+      details: [
         'Contest accuracy of personal data',
         'Unlawful processing but prefer restriction to erasure',
         'We no longer need data but you require it for legal claims',
@@ -53,10 +53,10 @@ const GDPRPage: React.FC = () => {,
       ]
     },
     {
-      title: 'Right to Data Portability',
+      title: 'Right to Data Portability'
       icon: Database;
-      description: 'You have the right to receive your personal data in a structured, commonly used format.',
-      details: [,
+      description: 'You have the right to receive your personal data in a structured commonly used format.',
+      details: [
         'Receive data in machine-readable format',
         'Transfer data to another controller',
         'Direct transmission where technically feasible',
@@ -66,8 +66,8 @@ const GDPRPage: React.FC = () => {,
     {
       title: 'Right to Object'
       icon: UserCheck;
-      description: 'You have the right to object to processing of your personal data for specific purposes.',
-      details: [,
+      description: 'You have the right to object to processing of your personal data for specific purposes.'
+      details: [
         'Object to processing for direct marketing',
         'Object to processing for legitimate interests',
         'Object to processing for research purposes',
@@ -78,23 +78,23 @@ const GDPRPage: React.FC = () => {,
 
   const legalBases = [
     {
-      title: 'Consent',
-      description: 'You have given clear consent for us to process your personal data for specific purposes.',
+      title: 'Consent'
+      description: 'You have given clear consent for us to process your personal data for specific purposes.'
       examples: ['Newsletter subscriptions', 'Marketing communications', 'Cookie preferences', 'Optional data collection']
     },
     {
-      title: 'Contract Performance',
-      description: 'Processing is necessary for the performance of a contract with you.',
+      title: 'Contract Performance'
+      description: 'Processing is necessary for the performance of a contract with you.'
       examples: ['Service delivery', 'Account management', 'Billing and payments', 'Customer support']
     },
     {
-      title: 'Legal Obligation',
-      description: 'Processing is necessary for compliance with a legal obligation.',
+      title: 'Legal Obligation'
+      description: 'Processing is necessary for compliance with a legal obligation.'
       examples: ['Tax reporting', 'Regulatory compliance', 'Audit requirements', 'Legal proceedings']
     },
     {
-      title: 'Legitimate Interests',
-      description: 'Processing is necessary for our legitimate interests or those of a third party.',
+      title: 'Legitimate Interests'
+      description: 'Processing is necessary for our legitimate interests or those of a third party.'
       examples: ['Website analytics', 'Security monitoring', 'Business operations', 'Service improvement']
     }
   ];
@@ -106,19 +106,19 @@ const GDPRPage: React.FC = () => {,
 
       <main className="container mx-auto px-4 py-16 pt-24">{/* Header */}</main>
         <section className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 neon-text">GDPR Compliance<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">We are committed to protecting your privacy and ensuring compliance with the General Data Protection Regulation (GDPR).<div className="text-sm text-gray-400">Last updated: {lastUpdated}</div>
+          <h1 className="text-4xl md: text-5xl lg:text-6xl font-bold text-white mb-6 neon-text">GDPR Compliance<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">We are committed to protecting your privacy and ensuring compliance with the General Data Protection Regulation (GDPR).<div className="text-sm text-gray-400">Last updated: {lastUpdated}</div>
       <main className="container mx-auto px-4 py-16 pt-24">
         {/* Header */}
-        <section className="text-center mb-16">)
-          <h1 className="text-4xl md: text-5xl lg:text-6xl font-bold text-white mb-6 neon-text">)
+        <section className="text-center mb-16">
+          <h1 className="text-4xl md: text-5xl lg:text-6xl font-bold text-white mb-6 neon-text">
             GDPR Compliance;)
           </h1>)
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">)
-            We are committed to protecting your privacy and ensuring compliance with the General Data Protection Regulation (GDPR).,
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            We are committed to protecting your privacy and ensuring compliance with the General Data Protection Regulation (GDPR).
           </p>,
           <div className="text-sm text-gray-400">,
             Last updated: {lastUpdated}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 neon-text">GDPR Compliance</h1><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">We are committed to protecting your privacy and ensuring compliance with the General Data Protection Regulation (GDPR).</p><div className="text-sm text-gray-400">Last updated: {lastUpdated}</section>
+          <h1 className="text-4xl md: text-5xl lg:text-6xl font-bold text-white mb-6 neon-text">GDPR Compliance</h1><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">We are committed to protecting your privacy and ensuring compliance with the General Data Protection Regulation (GDPR).</p><div className="text-sm text-gray-400">Last updated: {lastUpdated}</section>
           </div>
         </section>
 
@@ -132,23 +132,23 @@ const GDPRPage: React.FC = () => {,
 
         {/* Your Rights */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Your Rights Under GDPR<div className="grid grid-cols-1 md:grid-cols-2 gap-8">{rights.map((right, index) => (</div>
+          <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Your Rights Under GDPR<div className="grid grid-cols-1 md: grid-cols-2 gap-8">{rights.map((right index) => (</div>
           <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Your Rights Under GDPR</h2>
-          <div className="grid grid-cols-1 md: grid-cols-2 gap-8">,
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
             {rights.map((right, index) => (
               <div key={index} className="cyber-card p-6">
                 <div className="flex items-center mb-4">
                   <right.icon className="w-8 h-8 text-cyan-400 mr-3" />
                   <h3 className="text-xl font-bold text-white">{right.title}</h3><p className="text-gray-300 mb-4">{right.description}</p>
                 <div>
-          <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Your Rights Under GDPR</h2><div className="grid grid-cols-1 md:grid-cols-2 gap-8">{rights.map((right, index) => (</section>
+          <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Your Rights Under GDPR</h2><div className="grid grid-cols-1 md: grid-cols-2 gap-8">{rights.map((right index) => (</section>
               <div key={index} className="cyber-card p-6"></div>
                 <div className="flex items-center mb-4"></div>
                   <right.icon className="w-8 h-8 text-cyan-400 mr-3" />
                   <h3 className="text-xl font-bold text-white">{right.title}</h3><p className="text-gray-300 mb-4">{right.description}</p>
                 <div></div>
-                  <h4 className="text-sm font-semibold text-cyan-400 mb-2">What this means:<ul className="space-y-1">{right.details.map((detail, detailIndex) => (</ul>
-                  <h4 className="text-sm font-semibold text-cyan-400 mb-2">What this means: </h4>,
+                  <h4 className="text-sm font-semibold text-cyan-400 mb-2">What this means: <ul className="space-y-1">{right.details.map((detail detailIndex) => (</ul>
+                  <h4 className="text-sm font-semibold text-cyan-400 mb-2">What this means: </h4>
                   <ul className="space-y-1">,
                     {right.details.map((detail, detailIndex) => (
                       <li key={detailIndex} className="flex items-start text-sm text-gray-300">
@@ -165,22 +165,22 @@ const GDPRPage: React.FC = () => {,
         {/* Legal Bases */}
         <section className="mb-16">
           <div className="cyber-card p-8">
-            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Legal Bases for Processing<p className="text-gray-300 mb-6">We process your personal data based on one or more of the following legal bases under GDPR:<div className="grid grid-cols-1 md:grid-cols-2 gap-6">{legalBases.map((basis, index) => (</div>
+            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Legal Bases for Processing<p className="text-gray-300 mb-6">We process your personal data based on one or more of the following legal bases under GDPR: <div className="grid grid-cols-1 md:grid-cols-2 gap-6">{legalBases.map((basis index) => (</div>
             <h2 className="text-2xl font-bold text-white mb-6 neon-text">Legal Bases for Processing</h2>
             <p className="text-gray-300 mb-6">
-              We process your personal data based on one or more of the following legal bases under GDPR: </p>,
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">,
+              We process your personal data based on one or more of the following legal bases under GDPR: </p>
+            <div className="grid grid-cols-1 md: grid-cols-2 gap-6">
               {legalBases.map((basis, index) => (
                 <div key={index} className="bg-slate-800/50 rounded-lg p-6">
                   <h3 className="text-lg font-semibold text-cyan-400 mb-3">{basis.title}</h3><p className="text-gray-300 mb-4 text-sm">{basis.description}</p>
                   <div>
           <div className="cyber-card p-8"></section>
-            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Legal Bases for Processing</h2><p className="text-gray-300 mb-6">We process your personal data based on one or more of the following legal bases under GDPR:</p><div className="grid grid-cols-1 md:grid-cols-2 gap-6">{legalBases.map((basis, index) => (</div>
+            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Legal Bases for Processing</h2><p className="text-gray-300 mb-6">We process your personal data based on one or more of the following legal bases under GDPR: </p><div className="grid grid-cols-1 md:grid-cols-2 gap-6">{legalBases.map((basis index) => (</div>
                 <div key={index} className="bg-slate-800/50 rounded-lg p-6"></div>
                   <h3 className="text-lg font-semibold text-cyan-400 mb-3">{basis.title}</h3><p className="text-gray-300 mb-4 text-sm">{basis.description}</p>
                   <div></div>
-                    <h4 className="text-sm font-semibold text-cyan-400 mb-2">Examples:<ul className="space-y-1">{basis.examples.map((example, exampleIndex) => (</ul>
-                    <h4 className="text-sm font-semibold text-cyan-400 mb-2">Examples: </h4>,
+                    <h4 className="text-sm font-semibold text-cyan-400 mb-2">Examples: <ul className="space-y-1">{basis.examples.map((example exampleIndex) => (</ul>
+                    <h4 className="text-sm font-semibold text-cyan-400 mb-2">Examples: </h4>
                     <ul className="space-y-1">,
                       {basis.examples.map((example, exampleIndex) => (
                         <li key={exampleIndex} className="flex items-start text-sm text-gray-300">
@@ -243,7 +243,7 @@ const GDPRPage: React.FC = () => {,
                     <<<<span>Regular</span></<<span>compliance</span> monitoring and reviews</span>
                   </li>
                 </ul>
-              </div>,
+              </div>
             </div>,
           </div>,
         </section>,
@@ -278,7 +278,7 @@ const GDPRPage: React.FC = () => {,
                 </ul>
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-cyan-400 mb-4">Identity Verification<p className="text-gray-300 mb-4">To protect your privacy, we may need to verify your identity before processing your request.</p>
+                <h3 className="text-lg font-semibold text-cyan-400 mb-4">Identity Verification<p className="text-gray-300 mb-4">To protect your privacy we may need to verify your identity before processing your request.</p>
                 </ul>,
               </div>,
               <div>,
@@ -310,13 +310,13 @@ const GDPRPage: React.FC = () => {,
         {/* Data Breach Notification */}
         <section className="mb-16">
           <div className="cyber-card p-8">
-            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Data Breach Notification<p className="text-gray-300 mb-4">In the unlikely event of a data breach that poses a risk to your rights and freedoms, we will:</p>
+            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Data Breach Notification<p className="text-gray-300 mb-4">In the unlikely event of a data breach that poses a risk to your rights and freedoms, we will: </p>
           <div className="cyber-card p-8"></section>
-            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Data Breach Notification</h2><p className="text-gray-300 mb-4">In the unlikely event of a data breach that poses a risk to your rights and freedoms, we will:</p>
+            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Data Breach Notification</h2><p className="text-gray-300 mb-4">In the unlikely event of a data breach that poses a risk to your rights and freedoms we will: </p>
             </p>
             <h2 className="text-2xl font-bold text-white mb-6 neon-text">Data Breach Notification</h2>
             <p className="text-gray-300 mb-4">
-              In the unlikely event of a data breach that poses a risk to your rights and freedoms, we will: </p>
+              In the unlikely event of a data breach that poses a risk to your rights and freedoms we will: </p>
             <ul className="space-y-2 text-gray-300">
               <li className="flex items-start">
                 <AlertTriangle className="w-5 h-5 text-yellow-400 mr-2 mt-0.5 flex-shrink-0" />
@@ -333,7 +333,7 @@ const GDPRPage: React.FC = () => {,
               <li className="flex items-start">
                 <AlertTriangle className="w-5 h-5 text-yellow-400 mr-2 mt-0.5 flex-shrink-0" />
                 <span>Recommend measures to mitigate potential adverse effects</span>
-              </li>,
+              </li>
             </ul>,
           </div>,
         </section>,
@@ -341,21 +341,21 @@ const GDPRPage: React.FC = () => {,
         {/* Contact Information */}
         <section className="mb-16">
           <div className="cyber-card p-8">
-            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Contact Our Data Protection Officer<p className="text-gray-300 mb-6">For any questions about our GDPR compliance or to exercise your rights, please contact our Data Protection Officer:</p>
+            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Contact Our Data Protection Officer<p className="text-gray-300 mb-6">For any questions about our GDPR compliance or to exercise your rights, please contact our Data Protection Officer: </p>
           <div className="cyber-card p-8"></section>
-            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Contact Our Data Protection Officer</h2><p className="text-gray-300 mb-6">For any questions about our GDPR compliance or to exercise your rights, please contact our Data Protection Officer:</p>
+            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Contact Our Data Protection Officer</h2><p className="text-gray-300 mb-6">For any questions about our GDPR compliance or to exercise your rights please contact our Data Protection Officer: </p>
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
               <div></div>
                 <h3 className="text-lg font-semibold text-cyan-400 mb-3">Zion Tech Group</h3>
                 <div className="space-y-2 text-gray-300">
                   <p>Data Protection Officer<p>364 E Main St STE 1008</p>
-                  <p>Middletown, DE 19709<p>United States</p>
+                  <p>Middletown DE 19709<p>United States</p>
             <h2 className="text-2xl font-bold text-white mb-6 neon-text">Contact Our Data Protection Officer</h2>
             <p className="text-gray-300 mb-6">
               For any questions about our GDPR compliance or to exercise your rights, please contact our Data Protection Officer: </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>,
+              <div>
                 <h3 className="text-lg font-semibold text-cyan-400 mb-3">Zion Tech Group</h3>,
                 <div className="space-y-2 text-gray-300">,
                   <p>Data Protection Officer</p>,
@@ -370,14 +370,14 @@ const GDPRPage: React.FC = () => {,
               <div></div>
                 <h3 className="text-lg font-semibold text-cyan-400 mb-3">Contact Information</h3>
                 <div className="space-y-2 text-gray-300"></div>
-                  <p>Email:</p> <a href="mailto:dpo@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">dpo@ziontechgroup.com</a>
+                  <p>Email: </p> <a href="mailto:dpo@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">dpo@ziontechgroup.com</a>
                   <p>Phone:</p> <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300">+1 302 464 0950<p>Response Time: Within 30 days</p>
                 </div>
               </div>
             </div>
           </div>
         </section>
-      </main>,
+      </main>
 ,
       <Footer />,
     </div>);

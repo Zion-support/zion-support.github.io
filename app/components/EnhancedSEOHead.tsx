@@ -31,21 +31,21 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       
       {/* Open Graph Meta Tags */}
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={image} />
-      <meta property="og:url" content={url} />
-      <meta property="og:type" content={type} />
-      <meta property="og:site_name" content="Zion Tech Group" />
+      <meta property="og: title" content={title} />
+      <meta property="og: description" content={description} />
+      <meta property="og: image" content={image} />
+      <meta property="og: url" content={url} />
+      <meta property="og: type" content={type} />
+      <meta property="og: site_name" content="Zion Tech Group" />
       <meta property="og:locale" content="en_US" />
       
       {/* Twitter Card Meta Tags */}
-      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter: card" content="summary_large_image" />
       <meta name="twitter:url" content={url} />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image} />
-      <meta name="twitter:creator" content="@ziontechgroup" />
+      <meta name="twitter: title" content={title} />
+      <meta name="twitter: description" content={description} />
+      <meta name="twitter: image" content={image} />
+      <meta name="twitter: creator" content="@ziontechgroup" />
       <meta name="twitter:site" content="@ziontechgroup" />
       
       {/* Additional SEO Meta Tags */}
@@ -63,13 +63,13 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
       )}
       
       {/* Preconnect to external domains for performance */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https: //fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
       <link rel="preconnect" href="https://www.googletagmanager.com" />
       <link rel="preconnect" href="https://www.google-analytics.com" />
       
       {/* DNS prefetch for performance */}
-      <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+      <link rel="dns-prefetch" href="https: //fonts.googleapis.com" />
       <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
       <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
       <link rel="dns-prefetch" href="https://www.google-analytics.com" />

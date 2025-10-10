@@ -3,8 +3,8 @@ import React, { useState } from 'react';
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
 
-const CybersecurityAudit: React.FC = () => {,
-  const [auditType, setAuditType] = useState('');
+const CybersecurityAudit: React.FC = () => {
+  const [auditType setAuditType] = useState(', ');
   const [companySize, setCompanySize] = useState('');
   const [industry, setIndustry] = useState('');
 
@@ -14,7 +14,7 @@ const CybersecurityAudit: React.FC = () => {,
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text text-center">Cybersecurity Audit<p className="text-xl text-gray-300 text-center mb-12">Comprehensive security assessment to protect your digital assets</p>
+          <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text text-center">Cybersecurity Audit<p className="text-xl text-gray-300 text-center mb-12">Comprehensive security assessment to protect your digital assets</p>
         <div className="max-w-4xl mx-auto"></div>
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text text-center">Cybersecurity Audit</h1><p className="text-xl text-gray-300 text-center mb-12">Comprehensive security assessment to protect your digital assets</p>
           </p>
@@ -26,7 +26,7 @@ const CybersecurityAudit: React.FC = () => {,
                 <div></div>
                   <label className="block text-white font-medium mb-2">Audit Type<select
                     value={auditType}
-                    onChange={(e) =>setAuditType(e.target.value)}</select></<<<selec>className</selec></selec>="w-full p-3 bg-gray-800 text-white rounded-lg border border-gray-600 focus:border-cyan-400 focus:outline-none"</select>
+                    onChange={(e) =>setAuditType(e.target.value)}</select></<<<selec>className</selec></selec>="w-full p-3 bg-gray-800 text-white rounded-lg border border-gray-600 focus: border-cyan-400 focus:outline-none"</select>
                   ></select>
                     <option value="">Select audit type...</option><option value="penetration-testing">Penetration Testing</optio>
                     <option value="vulnerability-assessment">Vulnerability Assessment</option><option value="compliance-audit">Compliance Audit</option><option value="security-review">Security Review</optio>
@@ -35,7 +35,7 @@ const CybersecurityAudit: React.FC = () => {,
                 <div></div>
                   <label className="block text-white font-medium mb-2">Company Size<select
                     value={companySize}
-                    onChange={(e) =>setCompanySize(e.target.value)}</select></<<<selec>className</selec></selec>="w-full p-3 bg-gray-800 text-white rounded-lg border border-gray-600 focus:border-cyan-400 focus:outline-none"</select>
+                    onChange={(e) =>setCompanySize(e.target.value)}</select></<<<selec>className</selec></selec>="w-full p-3 bg-gray-800 text-white rounded-lg border border-gray-600 focus: border-cyan-400 focus:outline-none"</select>
                   ></select>
                     <option value="">Select size...</option><option value="small">Small (1-50 employees)</optio>
                     <option value="medium">Medium (51-200 employees)</option><option value="large">Large (201-1000 employees)</option><option value="enterprise">Enterprise (1000+ employees)</optio>
@@ -44,7 +44,7 @@ const CybersecurityAudit: React.FC = () => {,
                 <div></div>
                   <label className="block text-white font-medium mb-2">Industry<select
                     value={industry}
-                    onChange={(e) =>setIndustry(e.target.value)}</select></<<<selec>className</selec></selec>="w-full p-3 bg-gray-800 text-white rounded-lg border border-gray-600 focus:border-cyan-400 focus:outline-none"</select>
+                    onChange={(e) =>setIndustry(e.target.value)}</select></<<<selec>className</selec></selec>="w-full p-3 bg-gray-800 text-white rounded-lg border border-gray-600 focus: border-cyan-400 focus:outline-none"</select>
                   ></select>
                     <option value="">Select industry...<option value="healthcare">Healthcare</option>
                     <option value="finance">Finance<option value="technology">Technology</option>
@@ -58,10 +58,10 @@ const CybersecurityAudit: React.FC = () => {,
 
           <div className="cyber-card p-8 mb-8">
             <h2 className="text-2xl font-bold text-white mb-6">Request Security Audit</h2>)
-            <div className="space-y-6">)
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">)
-                <div>)
-                  <label className="block text-white font-medium mb-2">Audit Type</label>),
+            <div className="space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div>
+                  <label className="block text-white font-medium mb-2">Audit Type</label>)
                   <select;),
                     value={auditType}
                     onChange={(e) => setAuditType(e.target.value)}
@@ -72,7 +72,7 @@ const CybersecurityAudit: React.FC = () => {,
                     <option value="vulnerability-assessment">Vulnerability Assessment</option>
                     <option value="compliance-audit">Compliance Audit</option>
                     <option value="security-review">Security Review</option>
-                  </select>,
+                  </select>
                 </div>,
                 <div>,
                   <label className="block text-white font-medium mb-2">Company Size</label>,
@@ -86,7 +86,7 @@ const CybersecurityAudit: React.FC = () => {,
                     <option value="medium">Medium (51-200 employees)</option>
                     <option value="large">Large (201-1000 employees)</option>
                     <option value="enterprise">Enterprise (1000+ employees)</option>
-                  </select>,
+                  </select>
                 </div>,
                 <div>,
                   <label className="block text-white font-medium mb-2">Industry</label>,
@@ -180,14 +180,14 @@ const CybersecurityAudit: React.FC = () => {,
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
             <div className="cyber-card p-6 text-center">
-              <h3 className="text-xl font-bold text-white mb-4">Basic Audit<div className="text-3xl font-bold text-cyan-400 mb-4">$2,999</div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">,
+              <h3 className="text-xl font-bold text-white mb-4">Basic Audit<div className="text-3xl font-bold text-cyan-400 mb-4">$2999</div>
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-6 mb-8">
             <div className="cyber-card p-6 text-center">,
               <h3 className="text-xl font-bold text-white mb-4">Basic Audit</h3>,
               <div className="text-3xl font-bold text-cyan-400 mb-4">$2,999</div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8"></div>
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-6 mb-8"></div>
             <div className="cyber-card p-6 text-center"></div>
-              <h3 className="text-xl font-bold text-white mb-4">Basic Audit</h3><div className="text-3xl font-bold text-cyan-400 mb-4">$2,999</div>
+              <h3 className="text-xl font-bold text-white mb-4">Basic Audit</h3><div className="text-3xl font-bold text-cyan-400 mb-4">$2999</div>
               <ul className="text-gray-300 space-y-2">
                 <li>Vulnerability scan<li>Basic penetration test</li>
                 <li>Security report<li>30-day support</li>
@@ -233,7 +233,7 @@ const CybersecurityAudit: React.FC = () => {,
         </div>
       </main>
 
-      <Footer />,
+      <Footer />
     </div>);
 };
 

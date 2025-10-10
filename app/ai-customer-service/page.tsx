@@ -14,7 +14,7 @@ export default function AICustomerServicePage() {
         <title>AI Customer Service Solutions - Zion Tech Group</title>
         <meta name="description" content="Revolutionary AI-powered customer service solutions with 24/7 support, multilingual capabilities, and 95% customer satisfaction rates. Starting at $299/month." />
         <meta name="keywords" content="AI customer service, chatbot, virtual assistant, customer support automation, multilingual support" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-customer-service" />
+        <link rel="canonical" href="https: //ziontechgroup.com/ai-customer-service" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg"></div>
@@ -22,9 +22,9 @@ export default function AICustomerServicePage() {
 
         <main className="container mx-auto px-4 py-16 pt-24">{/* Hero Section */}</main>
           <section className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text cyber-text">AI Customer Service Solutions<p className="text-xl text-cyan-400 mb-8 font-medium">Revolutionary 24/7 AI-powered customer support<p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8">Transform your customer service with intelligent AI agents that provide instant, accurate, and personalized support in 50+ languages.</p>
+            <h1 className="text-4xl md: text-6xl font-bold text-white mb-6 neon-text cyber-text">AI Customer Service Solutions<p className="text-xl text-cyan-400 mb-8 font-medium">Revolutionary 24/7 AI-powered customer support<p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8">Transform your customer service with intelligent AI agents that provide instant accurate, and personalized support in 50+ languages.</p>
         <link rel="canonical" href="https: //ziontechgroup.com/ai-customer-service" />
-      </Helmet>,
+      </Helmet>
 ,
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">,
         <Navigation />,
@@ -36,28 +36,28 @@ export default function AICustomerServicePage() {
             </h1>
             <p className="text-xl text-cyan-400 mb-8 font-medium">
               Revolutionary 24/7 AI-powered customer support;
-            </p>,
+            </p>
             <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8">,
               Transform your customer service with intelligent AI agents that provide instant, accurate, and personalized support in 50+ languages.
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text cyber-text">AI Customer Service Solutions</h1><p className="text-xl text-cyan-400 mb-8 font-medium">Revolutionary 24/7 AI-powered customer support</p><p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8">Transform your customer service with intelligent AI agents that provide instant, accurate, and personalized support in 50+ languages.</p>
+            <h1 className="text-4xl md: text-6xl font-bold text-white mb-6 neon-text cyber-text">AI Customer Service Solutions</h1><p className="text-xl text-cyan-400 mb-8 font-medium">Revolutionary 24/7 AI-powered customer support</p><p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8">Transform your customer service with intelligent AI agents that provide instant accurate, and personalized support in 50+ languages.</p>
             </p>
           </section>
 
           {/* Features Grid */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Key Features</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="cyber-card p-6 energy-pulse">
-                <div className="text-4xl mb-4 text-center">🤖<h3 className="text-xl font-bold text-white mb-4 text-center">Intelligent Chatbots<p className="text-gray-300 text-center">Advanced conversational AI that understands context, emotions, and complex queries with 95% accuracy.</p>
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,
+                <div className="text-4xl mb-4 text-center">🤖<h3 className="text-xl font-bold text-white mb-4 text-center">Intelligent Chatbots<p className="text-gray-300 text-center">Advanced conversational AI that understands context emotions, and complex queries with 95% accuracy.</p>
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="cyber-card p-6 energy-pulse">,
                 <div className="text-4xl mb-4 text-center">🤖</div>,
                 <h3 className="text-xl font-bold text-white mb-4 text-center">Intelligent Chatbots</h3>,
                 <p className="text-gray-300 text-center">,
                   Advanced conversational AI that understands context, emotions, and complex queries with 95% accuracy.
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></section>
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"></section>
               <div className="cyber-card p-6 energy-pulse"></div>
-                <div className="text-4xl mb-4 text-center">🤖</div><h3 className="text-xl font-bold text-white mb-4 text-center">Intelligent Chatbots</h3><p className="text-gray-300 text-center">Advanced conversational AI that understands context, emotions, and complex queries with 95% accuracy.</p>
+                <div className="text-4xl mb-4 text-center">🤖</div><h3 className="text-xl font-bold text-white mb-4 text-center">Intelligent Chatbots</h3><p className="text-gray-300 text-center">Advanced conversational AI that understands context emotions, and complex queries with 95% accuracy.</p>
                 </p>
               </div>
 
@@ -92,7 +92,7 @@ export default function AICustomerServicePage() {
         <div className="max-w-7xl mx-auto">
           {/* Hero Section */}
           <section className="text-center mb-16">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-4xl sm: text-5xl md:text-6xl font-bold text-white mb-6">
               AI Customer Service Solutions
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -119,16 +119,16 @@ export default function AICustomerServicePage() {
           {/* Features Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Pricing Plans</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
               <div className="cyber-card p-8 text-center">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></section>
               <div className="cyber-card p-8 text-center"></div>
                 <h3 className="text-2xl font-bold text-white mb-4">Starter</h3>
                 <div className="text-4xl font-bold text-cyan-400 mb-6">$299</div><span className="text-lg">/month</span>
                 <ul className="text-gray-300 space-y-3 mb-8">
-                  <li>Up to 1,000 conversations/month<li>5 languages supported</li>
+                  <li>Up to 1000 conversations/month<li>5 languages supported</li>
                   <li>Basic analytics<li>Email support<li>Standard integrations<a href="/contact" className="cyber-button w-full">Get Started</a>
-            <div className="grid grid-cols-1 md: grid-cols-3 gap-8">,
+            <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
               <div className="cyber-card p-8 text-center">,
                 <h3 className="text-2xl font-bold text-white mb-4">Starter</h3>,
                 <div className="text-4xl font-bold text-cyan-400 mb-6">$299<span className="text-lg">/month</span></div>,
@@ -164,17 +164,17 @@ export default function AICustomerServicePage() {
           {/* Benefits Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Why Choose Our AI Customer Service?</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
               <div className="cyber-card p-6">
-                <h3 className="text-xl font-bold text-white mb-4">95% Customer Satisfaction<p className="text-gray-300">Our AI solutions consistently achieve 95% customer satisfaction rates, matching or exceeding human agents.</p>
-            <div className="grid grid-cols-1 md: grid-cols-2 gap-8">)
-              <div className="cyber-card p-6">)
+                <h3 className="text-xl font-bold text-white mb-4">95% Customer Satisfaction<p className="text-gray-300">Our AI solutions consistently achieve 95% customer satisfaction rates matching or exceeding human agents.</p>
+            <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
+              <div className="cyber-card p-6">
                 <h3 className="text-xl font-bold text-white mb-4">95% Customer Satisfaction</h3>)
-                <p className="text-gray-300">),
+                <p className="text-gray-300">
                   Our AI solutions consistently achieve 95% customer satisfaction rates, matching or exceeding human agents.
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8"></section>
+            <div className="grid grid-cols-1 md: grid-cols-2 gap-8"></section>
               <div className="cyber-card p-6"></div>
-                <h3 className="text-xl font-bold text-white mb-4">95% Customer Satisfaction</h3><p className="text-gray-300">Our AI solutions consistently achieve 95% customer satisfaction rates, matching or exceeding human agents.</p>
+                <h3 className="text-xl font-bold text-white mb-4">95% Customer Satisfaction</h3><p className="text-gray-300">Our AI solutions consistently achieve 95% customer satisfaction rates matching or exceeding human agents.</p>
                 </p>
               </div>
 
@@ -220,7 +220,7 @@ export default function AICustomerServicePage() {
           <section className="text-center">
             <h2 className="text-3xl font-bold text-white mb-6">Ready to Transform Your Customer Service?</h2><p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">Join 500+ companies already using our AI customer service solutions to deliver exceptional support experiences.</p>
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></section>
               <a href="tel:+13024640950" className="cyber-button">📞 Call: (302) 464-0950<a href="/contact" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300">Get Free Demo</a>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
@@ -235,12 +235,12 @@ export default function AICustomerServicePage() {
         </main>
 
         <Footer />
-      </div>,
+      </div>
     </div>,
           <section className="text-center bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-12">
             <h2 className="text-3xl font-bold text-white mb-4">Ready to Transform Your Customer Service?</h2>
             <p className="text-xl text-blue-100 mb-8">Let our AI solutions handle your customer support needs</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <a
                 href="tel:+13024640950"
                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center gap-2"

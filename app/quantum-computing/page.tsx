@@ -6,200 +6,202 @@ import { CheckCircle, Star, Atom, Zap, Brain, Target, BarChart, Cpu, Sparkles } 
 const QuantumComputingPage: React.FC = () => {
   const quantumServices = [
     {
-      title: 'Quantum Algorithm Development',
-      description: 'Custom quantum algorithms for optimization, cryptography, and machine learning applications.',
-      icon: '⚛️',
-      price: 'Starting at $15,000/project',
+      title: 'Quantum Algorithm Development'
+      description: 'Custom quantum algorithms for optimization cryptography, and machine learning applications.',
+      icon: '⚛️'
+      price: 'Starting at $15000/project',
       features: ['Custom quantum algorithms', 'Quantum circuit design', 'Optimization problems', 'Cryptographic protocols', 'Performance benchmarking'],
       benefits: ['Solve complex problems exponentially faster', 'Break through classical computing limits', 'Enable new computational possibilities'],
-      marketPrice: '$25,000-75,000/project',
-      category: 'Algorithm Development',
+      marketPrice: '$25000-75,000/project',
+      category: 'Algorithm Development'
       technologies: ['Qiskit', 'Cirq', 'PennyLane', 'Q#', 'Quantum Assembly']
     },
     {
-      title: 'Quantum Cryptography Solutions',
-      description: 'Unbreakable encryption using quantum key distribution and quantum-resistant algorithms.',
-      icon: '🔐',
-      price: 'Starting at $12,000/project',
+      title: 'Quantum Cryptography Solutions'
+      description: 'Unbreakable encryption using quantum key distribution and quantum-resistant algorithms.'
+      icon: '🔐'
+      price: 'Starting at $12000/project',
       features: ['Quantum key distribution', 'Post-quantum cryptography', 'Quantum random number generation', 'Secure communication protocols', 'Quantum-resistant encryption'],
       benefits: ['Unbreakable security', 'Future-proof against quantum attacks', 'Ensure data protection for decades'],
-      marketPrice: '$20,000-50,000/project',
-      category: 'Quantum Security',
+      marketPrice: '$20000-50,000/project',
+      category: 'Quantum Security'
       technologies: ['BB84 Protocol', 'E91 Protocol', 'NIST PQC Standards', 'Quantum Random Generators']
     },
     {
-      title: 'Quantum Machine Learning',
-      description: 'Quantum-enhanced machine learning models for pattern recognition and optimization.',
-      icon: '🧠',
-      price: 'Starting at $18,000/project',
+      title: 'Quantum Machine Learning'
+      description: 'Quantum-enhanced machine learning models for pattern recognition and optimization.'
+      icon: '🧠'
+      price: 'Starting at $18000/project',
       features: ['Quantum neural networks', 'Variational quantum algorithms', 'Quantum feature maps', 'Quantum support vector machines', 'Hybrid classical-quantum models'],
       benefits: ['Exponential speedup for ML tasks', 'Handle exponentially large feature spaces', 'Discover new patterns in data'],
-      marketPrice: '$30,000-80,000/project',
-      category: 'Quantum ML',
+      marketPrice: '$30000-80,000/project',
+      category: 'Quantum ML'
       technologies: ['TensorFlow Quantum', 'PennyLane', 'Qiskit Machine Learning', 'Variational Quantum Eigensolver']
     },
     {
-      title: 'Quantum Optimization Services',
-      description: 'Quantum annealing and variational algorithms for complex optimization problems.',
-      icon: '🎯',
-      price: 'Starting at $10,000/project',
+      title: 'Quantum Optimization Services'
+      description: 'Quantum annealing and variational algorithms for complex optimization problems.'
+      icon: '🎯'
+      price: 'Starting at $10000/project',
       features: ['Traveling salesman problems', 'Portfolio optimization', 'Supply chain optimization', 'Resource allocation', 'Scheduling optimization'],
       benefits: ['Find optimal solutions faster', 'Handle NP-hard problems', 'Reduce operational costs significantly'],
-      marketPrice: '$15,000-40,000/project',
-      category: 'Optimization',
+      marketPrice: '$15000-40,000/project',
+      category: 'Optimization'
       technologies: ['D-Wave Systems', 'IBM Quantum', 'Rigetti Computing', 'Quantum Annealing']
     },
     {
-      title: 'Quantum Simulation Services',
-      description: 'Quantum simulation of molecular systems, materials, and chemical reactions.',
-      icon: '🧪',
-      price: 'Starting at $20,000/project',
+      title: 'Quantum Simulation Services'
+      description: 'Quantum simulation of molecular systems materials, and chemical reactions.',
+      icon: '🧪'
+      price: 'Starting at $20000/project',
       features: ['Molecular dynamics simulation', 'Chemical reaction modeling', 'Material property prediction', 'Drug discovery simulation', 'Catalyst optimization'],
       benefits: ['Accelerate drug discovery', 'Design new materials', 'Reduce R&D costs and time'],
-      marketPrice: '$35,000-100,000/project',
-      category: 'Quantum Simulation',
+      marketPrice: '$35000-100,000/project',
+      category: 'Quantum Simulation'
       technologies: ['VQE', 'QAOA', 'Quantum Chemistry Libraries', 'Molecular Quantum Gates']
     },
     {
-      title: 'Quantum Cloud Computing',
-      description: 'Access to quantum computers through cloud platforms with managed services.',
-      icon: '☁️',
-      price: 'Starting at $2,500/month',
+      title: 'Quantum Cloud Computing'
+      description: 'Access to quantum computers through cloud platforms with managed services.'
+      icon: '☁️'
+      price: 'Starting at $2500/month',
       features: ['Quantum cloud access', 'Managed quantum infrastructure', 'Quantum job scheduling', 'Performance monitoring', 'Expert support'],
       benefits: ['Access cutting-edge quantum hardware', 'No upfront infrastructure costs', 'Scale quantum resources as needed'],
-      marketPrice: '$4,000-10,000/month',
-      category: 'Quantum Cloud',
+      marketPrice: '$4000-10,000/month',
+      category: 'Quantum Cloud'
       technologies: ['IBM Quantum Network', 'AWS Braket', 'Azure Quantum', 'Google Quantum AI']
     },
     {
-      title: 'Quantum Error Correction',
-      description: 'Implementation of quantum error correction codes for reliable quantum computing.',
-      icon: '🔧',
-      price: 'Starting at $25,000/project',
+      title: 'Quantum Error Correction'
+      description: 'Implementation of quantum error correction codes for reliable quantum computing.'
+      icon: '🔧'
+      price: 'Starting at $25000/project',
       features: ['Surface code implementation', 'Fault-tolerant quantum gates', 'Error syndrome detection', 'Logical qubit encoding', 'Quantum error mitigation'],
       benefits: ['Enable fault-tolerant quantum computing', 'Reduce quantum errors', 'Build reliable quantum systems'],
-      marketPrice: '$40,000-120,000/project',
-      category: 'Error Correction',
+      marketPrice: '$40000-120,000/project',
+      category: 'Error Correction'
       technologies: ['Surface Codes', 'Stabilizer Codes', 'Topological Codes', 'Quantum Error Mitigation']
     },
     {
-      title: 'Quantum Communication Networks',
-      description: 'Quantum communication infrastructure for secure data transmission and quantum internet.',
-      icon: '🌐',
-      price: 'Starting at $30,000/project',
+      title: 'Quantum Communication Networks'
+      description: 'Quantum communication infrastructure for secure data transmission and quantum internet.'
+      icon: '🌐'
+      price: 'Starting at $30000/project',
       features: ['Quantum network design', 'Quantum repeaters', 'Entanglement distribution', 'Quantum teleportation', 'Quantum internet protocols'],
       benefits: ['Enable quantum internet', 'Ultra-secure communication', 'Quantum distributed computing'],
-      marketPrice: '$50,000-150,000/project',
-      category: 'Quantum Networks',
+      marketPrice: '$50000-150,000/project',
+      category: 'Quantum Networks'
       technologies: ['Quantum Repeaters', 'Entanglement Swapping', 'Quantum Teleportation', 'Quantum Internet Protocols']
     },
     {
-      title: 'Quantum Sensing Solutions',
-      description: 'Ultra-precise quantum sensors for navigation, imaging, and measurement applications.',
-      icon: '📡',
-      price: 'Starting at $15,000/project',
+      title: 'Quantum Sensing Solutions'
+      description: 'Ultra-precise quantum sensors for navigation imaging, and measurement applications.',
+      icon: '📡'
+      price: 'Starting at $15000/project',
       features: ['Quantum magnetometers', 'Quantum gravimeters', 'Quantum clocks', 'Quantum imaging', 'Precision measurement'],
       benefits: ['Ultra-precise measurements', 'Revolutionary sensing capabilities', 'Enable new applications'],
-      marketPrice: '$25,000-60,000/project',
-      category: 'Quantum Sensing',
+      marketPrice: '$25000-60,000/project',
+      category: 'Quantum Sensing'
       technologies: ['NV Centers', 'Cold Atoms', 'Quantum Interferometry', 'Quantum Metrology']
     },
     {
-      title: 'Quantum Consulting & Strategy',
-      description: 'Strategic quantum computing consulting and technology roadmap development.',
-      icon: '💡',
-      price: 'Starting at $500/hour',
+      title: 'Quantum Consulting & Strategy'
+      description: 'Strategic quantum computing consulting and technology roadmap development.'
+      icon: '💡'
+      price: 'Starting at $500/hour'
       features: ['Quantum strategy development', 'Technology assessment', 'Use case identification', 'ROI analysis', 'Implementation planning'],
       benefits: ['Navigate quantum landscape', 'Make informed technology decisions', 'Maximize quantum investment'],
-      marketPrice: '$800-1,500/hour',
-      category: 'Consulting',
+      marketPrice: '$800-1500/hour',
+      category: 'Consulting'
       technologies: ['Strategic Planning', 'Technology Assessment', 'Risk Analysis', 'ROI Modeling']
       features: ['Custom algorithm design', 'Quantum circuit optimization', 'Performance analysis', 'Error correction', 'Hybrid classical-quantum integration'],
       benefits: ['Exponential speedup potential', 'Solve intractable problems', 'Breakthrough optimization results'],
-      marketPrice: '$25,000-100,000/project',
-      category: 'Algorithm Development',
+      marketPrice: '$25000-100,000/project',
+      category: 'Algorithm Development'
       technologies: ['Qiskit', 'Cirq', 'PennyLane', 'Q#', 'Quantum Hardware']
     },
     {
-      title: 'Quantum Machine Learning',
-      description: 'Quantum-enhanced machine learning models for complex pattern recognition and optimization.',
-      icon: '🧠',
-      price: 'Starting at $12,000/month',
+      title: 'Quantum Machine Learning'
+      description: 'Quantum-enhanced machine learning models for complex pattern recognition and optimization.'
+      icon: '🧠'
+      price: 'Starting at $12000/month',
       features: ['Quantum neural networks', 'Quantum feature maps', 'Variational algorithms', 'Quantum data encoding', 'Hybrid training'],
       benefits: ['Exponential computational advantage', 'Enhanced pattern recognition', 'Faster convergence'],
-      marketPrice: '$20,000-80,000/month',
-      category: 'Quantum ML',
+      marketPrice: '$20000-80,000/month',
+      category: 'Quantum ML'
       technologies: ['TensorFlow Quantum', 'PennyLane', 'Qiskit ML', 'Cirq', 'Quantum Simulators']
     },
     {
-      title: 'Quantum Cryptography',
-      description: 'Quantum-safe encryption and secure communication systems using quantum principles.',
-      icon: '🔐',
-      price: 'Starting at $18,000/month',
+      title: 'Quantum Cryptography'
+      description: 'Quantum-safe encryption and secure communication systems using quantum principles.'
+      icon: '🔐'
+      price: 'Starting at $18000/month',
       features: ['Quantum key distribution', 'Post-quantum cryptography', 'Quantum random number generation', 'Secure communication protocols', 'Quantum authentication'],
       benefits: ['Unbreakable security', 'Future-proof encryption', 'Quantum-safe communications'],
-      marketPrice: '$30,000-120,000/month',
-      category: 'Quantum Security',
+      marketPrice: '$30000-120,000/month',
+      category: 'Quantum Security'
       technologies: ['BB84 Protocol', 'Quantum Key Distribution', 'Post-Quantum Algorithms', 'Quantum Random Generators']
     },
     {
-      title: 'Quantum Optimization',
-      description: 'Quantum optimization solutions for complex logistics, finance, and resource allocation problems.',
-      icon: '🎯',
-      price: 'Starting at $10,000/month',
+      title: 'Quantum Optimization'
+      description: 'Quantum optimization solutions for complex logistics finance, and resource allocation problems.',
+      icon: '🎯'
+      price: 'Starting at $10000/month',
       features: ['Combinatorial optimization', 'Portfolio optimization', 'Supply chain optimization', 'Scheduling problems', 'Resource allocation'],
       benefits: ['Solve NP-hard problems', 'Find global optima', 'Exponential speedup'],
-      marketPrice: '$18,000-75,000/month',
-      category: 'Optimization',
+      marketPrice: '$18000-75,000/month',
+      category: 'Optimization'
       technologies: ['QAOA', 'VQE', 'Quantum Annealing', 'D-Wave', 'IBM Quantum']
     },
     {
-      title: 'Quantum Simulation',
-      description: 'Quantum simulation of physical systems for materials science, chemistry, and physics research.',
-      icon: '🔬',
-      price: 'Starting at $20,000/month',
+      title: 'Quantum Simulation'
+      description: 'Quantum simulation of physical systems for materials science chemistry, and physics research.',
+      icon: '🔬'
+      price: 'Starting at $20000/month',
       features: ['Molecular simulation', 'Material property prediction', 'Chemical reaction modeling', 'Quantum chemistry', 'Physical system simulation'],
       benefits: ['Accurate quantum simulations', 'Accelerate research', 'Enable new discoveries'],
-      marketPrice: '$35,000-150,000/month',
-      category: 'Simulation',
+      marketPrice: '$35000-150,000/month',
+      category: 'Simulation'
       technologies: ['VQE', 'QPE', 'Quantum Chemistry', 'Materials Science', 'Quantum Simulators']
     },
     {
-      title: 'Quantum Cloud Platform',
-      description: 'Managed quantum computing platform with access to multiple quantum hardware providers.',
-      icon: '☁️',
-      price: 'Starting at $5,000/month',
+      title: 'Quantum Cloud Platform'
+      description: 'Managed quantum computing platform with access to multiple quantum hardware providers.'
+      icon: '☁️'
+      price: 'Starting at $5000/month',
       features: ['Multi-provider access', 'Quantum job scheduling', 'Result analysis', 'Cost optimization', 'Performance monitoring'],
       benefits: ['Access to latest hardware', 'Reduce quantum costs', 'Simplify quantum development'],
-      marketPrice: '$8,000-30,000/month',
-      category: 'Cloud Platform',
+      marketPrice: '$8000-30,000/month',
+      category: 'Cloud Platform'
       technologies: ['IBM Quantum', 'Google Quantum', 'IonQ', 'Rigetti', 'Amazon Braket']
     },
     {
-      title: 'Quantum Error Correction',
-      description: 'Advanced error correction and fault-tolerant quantum computing solutions.',
-      icon: '🛠️',
-      price: 'Starting at $25,000/month',
+      title: 'Quantum Error Correction'
+      description: 'Advanced error correction and fault-tolerant quantum computing solutions.'
+      icon: '🛠️'
+      price: 'Starting at $25000/month',
       features: ['Error detection', 'Fault tolerance', 'Logical qubits', 'Error mitigation', 'Noise characterization'],
       benefits: ['Improve quantum reliability', 'Enable large-scale quantum computing', 'Reduce quantum errors'],
-      marketPrice: '$40,000-200,000/month',
-      category: 'Error Correction',
+      marketPrice: '$40000-200,000/month',
+      category: 'Error Correction'
       technologies: ['Surface Codes', 'LDPC Codes', 'Concatenated Codes', 'Quantum Error Correction']
     },
     {
-      title: 'Quantum Communication Networks',
-      description: 'Quantum communication infrastructure for secure quantum networks and distributed quantum computing.',
-      icon: '🌐',
-      price: 'Starting at $30,000/month',
+      title: 'Quantum Communication Networks'
+      description: 'Quantum communication infrastructure for secure quantum networks and distributed quantum computing.'
+      icon: '🌐'
+      price: 'Starting at $30000/month',
       features: ['Quantum networks', 'Quantum repeaters', 'Entanglement distribution', 'Quantum internet', 'Secure quantum channels'],
       benefits: ['Enable quantum internet', 'Secure quantum communications', 'Distributed quantum computing'],
-      marketPrice: '$50,000-300,000/month',
-      category: 'Quantum Networks',
+      marketPrice: '$50000-300,000/month',
+      category: 'Quantum Networks'
       technologies: ['Quantum Repeaters', 'Entanglement Swapping', 'Quantum Teleportation', 'Quantum Internet']
     }
   ];
 
-  const categories = [...new Set(quantumServices.map(service => service.category))];
+  const categories = [
+    ...new Set(quantumServices.map(service => service.category)
+  ];
 
   return (
     <>
@@ -215,7 +217,7 @@ const QuantumComputingPage: React.FC = () => {
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-gradient-to-r from-purple-600 to-indigo-700 text-white py-20">
           <div className="absolute inset-0 bg-black opacity-20"></div>
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
                 Quantum Computing Services
@@ -249,7 +251,7 @@ const QuantumComputingPage: React.FC = () => {
 
         {/* Key Benefits */}
         <section className="py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Why Choose Our Quantum Services?
@@ -313,7 +315,7 @@ const QuantumComputingPage: React.FC = () => {
         {/* Services by Category */}
         {categories.map(category => (
           <section key={category} className="py-16 bg-gray-50">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
               <div className="text-center mb-12">
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                   {category} Services
@@ -323,11 +325,11 @@ const QuantumComputingPage: React.FC = () => {
                   Advanced {category.toLowerCase()} solutions powered by quantum computing technology
                 </p>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
                 {quantumServices
                   .filter(service => service.category === category)
-                  .map((service, index) => (
-                    <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                  .map((service index) => (
+                    <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover: shadow-xl transition-shadow">
                       <div className="text-4xl mb-4">{service.icon}</div>
                       <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
                       <p className="text-gray-600 mb-4">{service.description}</p>
@@ -343,9 +345,9 @@ const QuantumComputingPage: React.FC = () => {
                       </div>
 
                       <div className="mb-4">
-                        <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
+                        <h4 className="font-semibold text-gray-900 mb-2">Key Features: </h4>
                         <ul className="space-y-1">
-                          {service.features.map((feature, featureIndex) => (
+                          {service.features.map((feature featureIndex) => (
                             <li key={featureIndex} className="flex items-center text-sm text-gray-600">
                               <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
                               {feature}
@@ -355,9 +357,9 @@ const QuantumComputingPage: React.FC = () => {
                       </div>
 
                       <div className="mb-4">
-                        <h4 className="font-semibold text-gray-900 mb-2">Technologies:</h4>
+                        <h4 className="font-semibold text-gray-900 mb-2">Technologies: </h4>
                         <div className="flex flex-wrap gap-2">
-                          {service.technologies.map((tech, techIndex) => (
+                          {service.technologies.map((tech techIndex) => (
                             <span key={techIndex} className="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">
                               {tech}
                             </span>
@@ -366,10 +368,10 @@ const QuantumComputingPage: React.FC = () => {
                       </div>
 
                       <div className="mb-6">
-                        <h4 className="font-semibold text-gray-900 mb-2">Business Benefits:</h4>
+                        <h4 className="font-semibold text-gray-900 mb-2">Business Benefits: </h4>
                         <h4 className="font-semibold text-gray-900 mb-2">Quantum Benefits:</h4>
                         <ul className="space-y-1">
-                          {service.benefits.map((benefit, benefitIndex) => (
+                          {service.benefits.map((benefit benefitIndex) => (
                             <li key={benefitIndex} className="flex items-center text-sm text-gray-600">
                               <Star className="w-4 h-4 text-yellow-500 mr-2 flex-shrink-0" />
                               {benefit}
@@ -378,7 +380,7 @@ const QuantumComputingPage: React.FC = () => {
                         </ul>
                       </div>
 
-                      <button className="w-full bg-purple-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-purple-700 transition-colors">
+                      <button className="w-full bg-purple-600 text-white py-2 px-4 rounded-lg font-semibold hover: bg-purple-700 transition-colors">
                         Get Quantum Consultation
                       </button>
                     </div>
@@ -390,7 +392,7 @@ const QuantumComputingPage: React.FC = () => {
 
         {/* Quantum Capabilities Showcase */}
         <section className="py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Our Quantum Capabilities
@@ -407,7 +409,7 @@ const QuantumComputingPage: React.FC = () => {
               <div className="text-center p-6 bg-gradient-to-br from-purple-50 to-indigo-100 rounded-lg">
                 <Atom className="w-12 h-12 text-purple-600 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Quantum Algorithms</h3>
-                <p className="text-gray-600">Custom quantum algorithms for optimization, search, and simulation</p>
+                <p className="text-gray-600">Custom quantum algorithms for optimization search, and simulation</p>
               </div>
               <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-cyan-100 rounded-lg">
                 <Lock className="w-12 h-12 text-blue-600 mx-auto mb-4" />
@@ -459,7 +461,7 @@ const QuantumComputingPage: React.FC = () => {
 
         {/* Contact Section */}
         <section className="py-16 bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Ready to Explore Quantum Computing?
             </h2>
@@ -485,7 +487,7 @@ const QuantumComputingPage: React.FC = () => {
               </a>
             </div>
             <div className="mt-8 text-sm text-purple-200">
-              <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
+              <p>📍 364 E Main St STE 1008 Middletown DE 19709</p>
             </div>
           </div>
         </section>

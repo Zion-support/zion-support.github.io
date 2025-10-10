@@ -9,8 +9,8 @@ const DigitalTransformationPage: React.FC = () => {
       title: 'Assessment & Strategy'
       description: 'Comprehensive analysis of current state and digital readiness'
       icon: Target;
-      duration: '2-4 weeks',
-      deliverables: [,
+      duration: '2-4 weeks'
+      deliverables: [
         'Digital maturity assessment',
         'Technology gap analysis',
         'Strategic roadmap development',
@@ -21,8 +21,8 @@ const DigitalTransformationPage: React.FC = () => {
       title: 'Planning & Design'
       description: 'Detailed planning and architecture design for transformation'
       icon: Users;
-      duration: '3-6 weeks',
-      deliverables: [,
+      duration: '3-6 weeks'
+      deliverables: [
         'Solution architecture design',
         'Implementation timeline',
         'Change management plan',
@@ -33,8 +33,8 @@ const DigitalTransformationPage: React.FC = () => {
       title: 'Implementation'
       description: 'Phased implementation of digital solutions and processes'
       icon: Cloud;
-      duration: '8-16 weeks',
-      deliverables: [,
+      duration: '8-16 weeks'
+      deliverables: [
         'System integration',
         'Process automation',
         'User training',
@@ -45,8 +45,8 @@ const DigitalTransformationPage: React.FC = () => {
       title: 'Optimization'
       description: 'Continuous improvement and optimization of digital systems'
       icon: TrendingUp;
-      duration: 'Ongoing',
-      deliverables: [,
+      duration: 'Ongoing'
+      deliverables: [
         'Performance optimization',
         'User feedback integration',
         'Technology updates',
@@ -57,26 +57,26 @@ const DigitalTransformationPage: React.FC = () => {
 
   const solutions = [
     {
-      title: 'Process Automation',
-      description: 'Automate repetitive tasks and streamline workflows',
+      title: 'Process Automation'
+      description: 'Automate repetitive tasks and streamline workflows'
       benefits: ['50% time savings', 'Reduced errors', 'Improved efficiency'],
       icon: Zap;
     },
     {
-      title: 'Cloud Migration',
-      description: 'Move to cloud infrastructure for scalability and flexibility',
+      title: 'Cloud Migration'
+      description: 'Move to cloud infrastructure for scalability and flexibility'
       benefits: ['Cost reduction', 'Better scalability', 'Enhanced security'],
       icon: Cloud;
     },
     {
-      title: 'Data Analytics',
-      description: 'Implement advanced analytics for data-driven decisions',
+      title: 'Data Analytics'
+      description: 'Implement advanced analytics for data-driven decisions'
       benefits: ['Better insights', 'Predictive analytics', 'Improved forecasting'],
       icon: BarChart;
     },
     {
-      title: 'Security Enhancement',
-      description: 'Strengthen cybersecurity and compliance measures',
+      title: 'Security Enhancement'
+      description: 'Strengthen cybersecurity and compliance measures'
       benefits: ['Enhanced protection', 'Compliance assurance', 'Risk mitigation'],
       icon: Shield;
     }
@@ -84,21 +84,21 @@ const DigitalTransformationPage: React.FC = () => {
 
   const benefits = [
     {
-      title: 'Increased Efficiency',
-      description: 'Streamline operations and reduce manual work by up to 70%',
-      metric: '70% efficiency gain'},
+    title: 'Increased Efficiency',
+    description: 'Streamline operations and reduce manual work by up to 70%',
+    metric: '70% efficiency gain'},
     {
-      title: 'Cost Reduction',
-      description: 'Reduce operational costs through automation and optimization',
-      metric: '40% cost savings'},
+    title: 'Cost Reduction',
+    description: 'Reduce operational costs through automation and optimization',
+    metric: '40% cost savings'},
     {
-      title: 'Better Customer Experience',
-      description: 'Improve customer satisfaction with faster, more reliable services',
-      metric: '85% customer satisfaction'},
+    title: 'Better Customer Experience',
+    description: 'Improve customer satisfaction with faster more reliable services',
+    metric: '85% customer satisfaction'},
     {
-      title: 'Competitive Advantage',
-      description: 'Stay ahead of competitors with modern digital capabilities',
-      metric: '3x faster innovation'}
+    title: 'Competitive Advantage',
+    description: 'Stay ahead of competitors with modern digital capabilities',
+    metric: '3x faster innovation'}
   ];
 
   return (
@@ -111,11 +111,11 @@ const DigitalTransformationPage: React.FC = () => {
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
       <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">)
-          <h1 className="text-5xl font-bold text-white mb-6">)
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-white mb-6">
             Digital <span className="text-cyan-400">Transformation</span>)
           </h1>)
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">)
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
             Transform your business with cutting-edge digital solutions. Our comprehensive approach helps you modernize operations)
             improve efficiency, and stay competitive in the digital age.
           </p>
@@ -141,10 +141,10 @@ const DigitalTransformationPage: React.FC = () => {
         <div className="mb-16"></div>
           <h2 className="text-3xl font-bold text-white text-center mb-12">
             Our</h2> <span className="text-cyan-400">Transformation</span> Process
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">{phases.map((phase, index) => (</div>
+          <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">{phases.map((phase index) => (</div>
               <div
                 key={index}
-                className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-gray-600 hover:border-cyan-400/50 transition-all duration-300"
+                className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-gray-600 hover: border-cyan-400/50 transition-all duration-300"
               >
                 <div className="p-3 bg-cyan-400 rounded-lg w-fit mb-4">
                   <phase.icon className="w-6 h-6 text-white" />
@@ -158,7 +158,7 @@ const DigitalTransformationPage: React.FC = () => {
               <Target className="w-5 h-5 mr-2" />
               Free Assessment;
             </Link>
-          </div>,
+          </div>
         </div>,
 ,
         {/* Transformation Phases */}
@@ -166,11 +166,11 @@ const DigitalTransformationPage: React.FC = () => {
           <h2 className="text-3xl font-bold text-white text-center mb-12">
             Our <span className="text-cyan-400">Transformation</span> Process;
           </h2>
-          <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">,
+          <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">
             {phases.map((phase, index) => (
               <div;
                 key={index}
-                className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-gray-600 hover: border-cyan-400/50 transition-all duration-300",
+                className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-gray-600 hover: border-cyan-400/50 transition-all duration-300"
               >,
                 <div className="p-3 bg-cyan-400 rounded-lg w-fit mb-4">,
                   <phase.icon className="w-6 h-6 text-white" />,
@@ -193,12 +193,12 @@ const DigitalTransformationPage: React.FC = () => {
         {/* Solutions Section */}
         <div className="mb-16"></div>
           <h2 className="text-3xl font-bold text-white text-center mb-12">
-            Digital <span className="text-cyan-400">Solutions<div className="grid md:grid-cols-2 gap-8">{solutions.map((solution, index) => (</div>
-            Digital</h2> <span className="text-cyan-400">Solutions</span><div className="grid md:grid-cols-2 gap-8">{solutions.map((solution, index) => (</div>
+            Digital <span className="text-cyan-400">Solutions<div className="grid md: grid-cols-2 gap-8">{solutions.map((solution index) => (</div>
+            Digital</h2> <span className="text-cyan-400">Solutions</span><div className="grid md: grid-cols-2 gap-8">{solutions.map((solution index) => (</div>
               <div
             Digital <span className="text-cyan-400">Solutions</span>
           </h2>
-          <div className="grid md: grid-cols-2 gap-8">,
+          <div className="grid md: grid-cols-2 gap-8">
             {solutions.map((solution, index) => (
               <div;
                 key={index}
@@ -219,7 +219,7 @@ const DigitalTransformationPage: React.FC = () => {
                     <p className="text-gray-300 mb-6">{solution.description}</p>
                     <ul className="space-y-2">
                       {solution.benefits.map((benefit, benefitIndex) => (
-                className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-gray-600 hover:border-cyan-400/50 transition-all duration-300"
+                className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-gray-600 hover: border-cyan-400/50 transition-all duration-300"
               ></div>
                 <div className="flex items-start space-x-4"></div>
                   <div className="p-3 bg-cyan-400 rounded-lg"></div>
@@ -242,14 +242,14 @@ const DigitalTransformationPage: React.FC = () => {
         {/* Benefits Section */}
         <div className="mb-16"></div>
           <h2 className="text-3xl font-bold text-white text-center mb-12">
-            Transformation <span className="text-cyan-400">Benefits<div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">{benefits.map((benefit, index) => (</div>
+            Transformation <span className="text-cyan-400">Benefits<div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">{benefits.map((benefit index) => (</div>
             Transformation <span className="text-cyan-400">Benefits</span>
           </h2>
-          <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">,
+          <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
               <div key={index} className="text-center">
                 <div className="p-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full w-fit mx-auto mb-4">
-            Transformation</h2> <span className="text-cyan-400">Benefits</span><div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">{benefits.map((benefit, index) => (</div>
+            Transformation</h2> <span className="text-cyan-400">Benefits</span><div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">{benefits.map((benefit index) => (</div>
               <div key={index} className="text-center"></div>
                 <div className="p-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full w-fit mx-auto mb-4"></div>
                   <TrendingUp className="w-8 h-8 text-white" />
@@ -293,7 +293,7 @@ const DigitalTransformationPage: React.FC = () => {
                 <li>• IoT Integration</li>
                 <li>• Predictive Maintenance</li>
                 <li>• Supply Chain Optimization</li>
-              </ul>,
+              </ul>
             </div>,
           </div>,
         </div>,
@@ -305,10 +305,10 @@ const DigitalTransformationPage: React.FC = () => {
           </h2>
           <div className="grid md: grid-cols-2 gap-8">
             <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 rounded-2xl p-8">
-              <h3 className="text-2xl font-semibold text-white mb-4">Manufacturing Company<p className="text-gray-300 mb-4">"Zion Tech Group helped us implement IoT sensors and predictive analytics,</p>
-          <div className="grid md:grid-cols-2 gap-8"></div>
+              <h3 className="text-2xl font-semibold text-white mb-4">Manufacturing Company<p className="text-gray-300 mb-4">"Zion Tech Group helped us implement IoT sensors and predictive analytics</p>
+          <div className="grid md: grid-cols-2 gap-8"></div>
             <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 rounded-2xl p-8"></div>
-              <h3 className="text-2xl font-semibold text-white mb-4">Manufacturing Company</h3><p className="text-gray-300 mb-4">"Zion Tech Group helped us implement IoT sensors and predictive analytics,</p>
+              <h3 className="text-2xl font-semibold text-white mb-4">Manufacturing Company</h3><p className="text-gray-300 mb-4">"Zion Tech Group helped us implement IoT sensors and predictive analytics</p>
                 reducing equipment downtime by 60% and increasing production efficiency by 40%."<div className="text-cyan-400 font-semibold">- CEO, Tech Manufacturing Inc.</div>
               <h3 className="text-2xl font-semibold text-white mb-4">Manufacturing Company</h3>
               <p className="text-gray-300 mb-4">
@@ -355,7 +355,7 @@ const DigitalTransformationPage: React.FC = () => {
             </Link>
           </div>
         </div>
-      </div>,
+      </div>
     </div>);
 };
 

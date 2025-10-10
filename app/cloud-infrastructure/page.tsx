@@ -8,7 +8,7 @@ export default function CloudInfrastructurePage() {
         <title>Cloud Infrastructure Solutions - Zion Tech Group</title>
         <meta name="description" content="Scalable cloud infrastructure solutions with 99.9% uptime, automated scaling, and enterprise security. Starting at $199/month." />
         <meta name="keywords" content="cloud infrastructure, cloud migration, AWS, Azure, Google Cloud, cloud hosting, cloud security" />
-        <link rel="canonical" href="https://ziontechgroup.com/cloud-infrastructure" />
+        <link rel="canonical" href="https: //ziontechgroup.com/cloud-infrastructure" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg"></div>
@@ -16,9 +16,9 @@ export default function CloudInfrastructurePage() {
 
         <main className="container mx-auto px-4 py-16 pt-24">{/* Hero Section */}</main>
           <section className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text cyber-text">Cloud Infrastructure<p className="text-xl text-cyan-400 mb-8 font-medium">Scalable, secure, and reliable cloud solutions<p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8">Transform your business with enterprise-grade cloud infrastructure that scales automatically, ensures 99.9% uptime, and reduces costs by up to 50% while improving performance.</p>
+            <h1 className="text-4xl md: text-6xl font-bold text-white mb-6 neon-text cyber-text">Cloud Infrastructure<p className="text-xl text-cyan-400 mb-8 font-medium">Scalable secure, and reliable cloud solutions<p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8">Transform your business with enterprise-grade cloud infrastructure that scales automatically, ensures 99.9% uptime, and reduces costs by up to 50% while improving performance.</p>
         <link rel="canonical" href="https: //ziontechgroup.com/cloud-infrastructure" />
-      </Helmet>,
+      </Helmet>
 ,
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">,
         <Navigation />,
@@ -27,13 +27,13 @@ export default function CloudInfrastructurePage() {
           <section className="text-center mb-16">
             <h1 className="text-4xl md: text-6xl font-bold text-white mb-6 neon-text cyber-text">
               Cloud Infrastructure;
-            </h1>,
+            </h1>
             <p className="text-xl text-cyan-400 mb-8 font-medium">,
               Scalable, secure, and reliable cloud solutions;
             </p>
             <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8">
               Transform your business with enterprise-grade cloud infrastructure that scales automatically, ensures 99.9% uptime, and reduces costs by up to 50% while improving performance.
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text cyber-text">Cloud Infrastructure</h1><p className="text-xl text-cyan-400 mb-8 font-medium">Scalable, secure, and reliable cloud solutions</p><p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8">Transform your business with enterprise-grade cloud infrastructure that scales automatically, ensures 99.9% uptime, and reduces costs by up to 50% while improving performance.</p>
+            <h1 className="text-4xl md: text-6xl font-bold text-white mb-6 neon-text cyber-text">Cloud Infrastructure</h1><p className="text-xl text-cyan-400 mb-8 font-medium">Scalable secure, and reliable cloud solutions</p><p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8">Transform your business with enterprise-grade cloud infrastructure that scales automatically, ensures 99.9% uptime, and reduces costs by up to 50% while improving performance.</p>
             </p>
           </section>
 
@@ -55,7 +55,7 @@ export default function CloudInfrastructurePage() {
               </div>
 
               <div className="cyber-card p-6 energy-pulse">
-                <div className="text-4xl mb-4 text-center">🔒<h3 className="text-xl font-bold text-white mb-4 text-center">Enterprise Security<p className="text-gray-300 text-center">Bank-level security with encryption, access controls, and compliance certifications.</p>
+                <div className="text-4xl mb-4 text-center">🔒<h3 className="text-xl font-bold text-white mb-4 text-center">Enterprise Security<p className="text-gray-300 text-center">Bank-level security with encryption access controls, and compliance certifications.</p>
 ,
               <div className="cyber-card p-6 energy-pulse">,
                 <div className="text-4xl mb-4 text-center">🔒</div>,
@@ -87,17 +87,17 @@ export default function CloudInfrastructurePage() {
           {/* Cloud Providers */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Supported Cloud Providers</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
               <div className="cyber-card p-8 text-center">
                 <div className="text-6xl mb-6">🟠<h3 className="text-2xl font-bold text-white mb-4">Amazon Web Services<p className="text-gray-300 mb-6">Comprehensive AWS solutions with cost optimization and best practices implementation.</p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></section>
               <div className="cyber-card p-8 text-center"></div>
                 <div className="text-6xl mb-6">🟠</div><h3 className="text-2xl font-bold text-white mb-4">Amazon Web Services</h3><p className="text-gray-300 mb-6">Comprehensive AWS solutions with cost optimization and best practices implementation.</p>
                 <ul className="text-gray-300 space-y-2 text-left">
-                  <li>• EC2, S3, RDS, Lambda<li>• CloudFormation & Terraform</li>
+                  <li>• EC2 S3, RDS, Lambda<li>• CloudFormation & Terraform</li>
                   <li>• Cost optimization<li>• Security best practices</li>
             <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
-              <div className="cyber-card p-8 text-center">,
+              <div className="cyber-card p-8 text-center">
                 <div className="text-6xl mb-6">🟠</div>,
                 <h3 className="text-2xl font-bold text-white mb-4">Amazon Web Services</h3>,
                 <p className="text-gray-300 mb-6">Comprehensive AWS solutions with cost optimization and best practices implementation.</p>,
@@ -167,7 +167,7 @@ export default function CloudInfrastructurePage() {
                   <li>99.99% uptime SLA</li>
                   <li>Custom solutions</li>
                 </ul>
-                <a href="/contact" className="cyber-button w-full">Contact Sales</a>,
+                <a href="/contact" className="cyber-button w-full">Contact Sales</a>
               </div>,
             </div>,
           </section>,
@@ -205,12 +205,12 @@ export default function CloudInfrastructurePage() {
               </div>)
             </div>)
           </section>)
-),
+)
           {/* CTA Section */}
           <section className="text-center">
             <h2 className="text-3xl font-bold text-white mb-6">Ready to Move to the Cloud?</h2><p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">Join 1,500+ companies using our cloud infrastructure solutions to scale their business and reduce costs.</p>
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></section>
               <a href="tel:+13024640950" className="cyber-button">📞 Call: (302) 464-0950<a href="/contact" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300">Get Free Consultation</a>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
@@ -225,7 +225,7 @@ export default function CloudInfrastructurePage() {
         </main>
 
         <Footer />
-      </div>,
+      </div>
     </div>,
 const CloudInfrastructurePage: React.FC = () => {
   return (

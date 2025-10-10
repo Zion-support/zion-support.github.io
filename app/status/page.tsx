@@ -1,5 +1,6 @@
-'use client';
 import React, { useState, useEffect } from 'react';
+'use client';
+
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -19,62 +20,62 @@ import {
   AlertTriangle;
 } from 'lucide-react';
 
-const StatusPage: React.FC = () => {,
-  const [lastUpdated, setLastUpdated] = useState(new Date());
+const StatusPage: React.FC = () => {
+  const [lastUpdated setLastUpdated] = useState(new Date();
   const [isRefreshing, setIsRefreshing] = useState(false);
-import React from 'react';
+
 
   const refreshStatus = () => {
     setIsRefreshing(true);
     setTimeout(() => {
-      setLastUpdated(new Date());
+      setLastUpdated(new Date();
       setIsRefreshing(false);
     }, 1000);
   };
 
   const services = [
     {
-      name: 'AI Services API'
-      status: 'operational',
-      uptime: '99.9%',
-      responseTime: '45 ms',
-      lastIncident: '2024-01-15',
-      description: 'Core AI and machine learning services'},
+    name: 'AI Services API',
+    status: 'operational',
+    uptime: '99.9%',
+    responseTime: '45 ms',
+    lastIncident: '2024-01-15',
+    description: 'Core AI and machine learning services'},
     {
-      name: 'Micro SAAS Platform'
-      status: 'operational',
-      uptime: '99.8%',
-      responseTime: '32 ms',
-      lastIncident: '2024-01-10',
-      description: 'Micro SAAS tools and applications'},
+    name: 'Micro SAAS Platform',
+    status: 'operational',
+    uptime: '99.8%',
+    responseTime: '32 ms',
+    lastIncident: '2024-01-10',
+    description: 'Micro SAAS tools and applications'},
     {
-      name: 'IT Infrastructure'
-      status: 'operational',
-      uptime: '99.95%',
-      responseTime: '28 ms',
-      lastIncident: '2024-01-05',
-      description: 'Cloud infrastructure and hosting'},
+    name: 'IT Infrastructure',
+    status: 'operational',
+    uptime: '99.95%',
+    responseTime: '28 ms',
+    lastIncident: '2024-01-05',
+    description: 'Cloud infrastructure and hosting'},
     {
-      name: 'Database Services'
-      status: 'operational',
-      uptime: '99.9%',
-      responseTime: '15 ms',
-      lastIncident: '2024-01-12',
-      description: 'Primary and backup database systems'},
+    name: 'Database Services',
+    status: 'operational',
+    uptime: '99.9%',
+    responseTime: '15 ms',
+    lastIncident: '2024-01-12',
+    description: 'Primary and backup database systems'},
     {
-      name: 'CDN & Edge'
-      status: 'operational',
-      uptime: '99.7%',
-      responseTime: '8 ms',
-      lastIncident: '2024-01-08',
-      description: 'Content delivery and edge services'},
+    name: 'CDN & Edge',
+    status: 'operational',
+    uptime: '99.7%',
+    responseTime: '8 ms',
+    lastIncident: '2024-01-08',
+    description: 'Content delivery and edge services'},
     {
-      name: 'Authentication'
-      status: 'operational',
-      uptime: '99.9%',
-      responseTime: '22 ms',
-      lastIncident: '2024-01-14',
-      description: 'User authentication and authorization'}
+    name: 'Authentication',
+    status: 'operational',
+    uptime: '99.9%',
+    responseTime: '22 ms',
+    lastIncident: '2024-01-14',
+    description: 'User authentication and authorization'}
   ];
 
   const incidents = [
@@ -83,9 +84,9 @@ import React from 'react';
       title: 'Scheduled Maintenance - Database Optimization'
       status: 'resolved'
       severity: 'minor'
-      startTime: '2024-01-15T02:00:00Z',
-      endTime: '2024-01-15T04:00:00Z',
-      description: 'Planned maintenance to optimize database performance and add new indexes.',
+      startTime: '2024-01-15T02:00:00Z'
+      endTime: '2024-01-15T04:00:00Z'
+      description: 'Planned maintenance to optimize database performance and add new indexes.'
       affectedServices: ['Database Services', 'AI Services API']
     },
     {
@@ -93,9 +94,9 @@ import React from 'react';
       title: 'CDN Performance Degradation'
       status: 'resolved'
       severity: 'major'
-      startTime: '2024-01-10T14:30:00Z',
-      endTime: '2024-01-10T16:45:00Z',
-      description: 'Temporary performance issues with our CDN provider affecting static asset delivery.',
+      startTime: '2024-01-10T14:30:00Z'
+      endTime: '2024-01-10T16:45:00Z'
+      description: 'Temporary performance issues with our CDN provider affecting static asset delivery.'
       affectedServices: ['CDN & Edge', 'Micro SAAS Platform']
     },
     {
@@ -103,9 +104,9 @@ import React from 'react';
       title: 'API Rate Limiting Update'
       status: 'resolved'
       severity: 'minor'
-      startTime: '2024-01-08T09:00:00Z',
-      endTime: '2024-01-08T09:30:00Z',
-      description: 'Updated rate limiting policies to improve service stability.',
+      startTime: '2024-01-08T09:00:00Z'
+      endTime: '2024-01-08T09:30:00Z'
+      description: 'Updated rate limiting policies to improve service stability.'
       affectedServices: ['AI Services API', 'Authentication']
     }
   ];
@@ -125,7 +126,7 @@ import React from 'react';
         return <AlertCircle className="w-5 h-5 text-yellow-400" />;
       case 'outage':
         return <XCircle className="w-5 h-5 text-red-400" />;
-      default:,
+      default:
         return <Clock className="w-5 h-5 text-gray-400" />;
     }
   };
@@ -138,7 +139,7 @@ import React from 'react';
         return 'text-yellow-400 bg-yellow-500/10';
       case 'outage':
         return 'text-red-400 bg-red-500/10';
-      default:,
+      default:
         return 'text-gray-400 bg-gray-500/10';
     }
   };
@@ -151,7 +152,7 @@ import React from 'react';
         return 'text-orange-400 bg-orange-500/10';
       case 'minor':
         return 'text-yellow-400 bg-yellow-500/10';
-      default:,
+      default:
         return 'text-gray-400 bg-gray-500/10';
     }
   };
@@ -164,7 +165,7 @@ import React from 'react';
 
       <main className="container mx-auto px-4 py-16 pt-24">{/* Header */}</main>
         <section className="text-center mb-12">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">System Status</h1><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Real-time status of all our services and systems. We monitor our infrastructure 24/7 to ensure optimal performance.</p>
+          <h1 className="text-4xl md: text-6xl font-bold text-white mb-6 neon-text">System Status</h1><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Real-time status of all our services and systems. We monitor our infrastructure 24/7 to ensure optimal performance.</p>
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
@@ -178,38 +179,38 @@ import React from 'react';
           <h1 className="text-4xl md: text-6xl font-bold text-white mb-6 neon-text">
             System Status;
           </h1>)
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">)
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Real-time status of all our services and systems. We monitor our infrastructure 24/7 to ensure optimal performance.)
           </p>)
-          ),
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">),
+          )
+          <div className="flex flex-col sm: flex-row items-center justify-center gap-4 mb-8">
             <div className={`flex items-center space-x-2 px-4 py-2 rounded-lg ${getStatusColor(overallStatus)}`}>
               {getStatusIcon(overallStatus)}
               <span className="font-semibold">
                 {overallStatus === 'operational' ? 'All Systems Operational' : 'Some Issues Detected'}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8"></section>
+          <div className="flex flex-col sm: flex-row items-center justify-center gap-4 mb-8"></section>
             <div className={`flex items-center space-x-2 px-4 py-2 rounded-lg ${getStatusColor(overallStatus)}`}>{getStatusIcon(overallStatus)}</div><span className="font-semibold">{overallStatus === 'operational' ? 'All Systems Operational' : 'Some Issues Detected'}</span>
               </span>
             </div>
             <button;
               onClick={refreshStatus}
               disabled={isRefreshing}
-              className="flex items-center space-x-2 px-4 py-2 bg-cyan-500/20 text-cyan-400 rounded-lg hover: bg-cyan-500/30 transition-colors disabled:opacity-50",
+              className="flex items-center space-x-2 px-4 py-2 bg-cyan-500/20 text-cyan-400 rounded-lg hover: bg-cyan-500/30 transition-colors disabled:opacity-50"
             >,
-              <RefreshCw className={`w-4 h-4 ${isRefreshing ? 'animate-spin' : ''}`} />
+              <RefreshCw className={`w-4 h-4 ${isRefreshing ? 'animate-spin' : ', '}`} />
               <span>Refresh</span><div className="text-sm text-gray-400">Last updated: {lastUpdated.toLocaleString()}</div>
           </div>
         </section>
 
         {/* Service Status */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold text-white mb-8 text-center">Service Status<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">{services.map((service, index) => (</div>
+          <h2 className="text-3xl font-bold text-white mb-8 text-center">Service Status<div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">{services.map((service index) => (</div>
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Service Status</h2>
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">,
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service, index) => (
               <div key={index} className="cyber-card p-6">
                 <div className="flex items-center justify-between mb-4">
-          <h2 className="text-3xl font-bold text-white mb-8 text-center">Service Status</h2><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">{services.map((service, index) => (</section>
+          <h2 className="text-3xl font-bold text-white mb-8 text-center">Service Status</h2><div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">{services.map((service index) => (</section>
               <div key={index} className="cyber-card p-6"></div>
                 <div className="flex items-center justify-between mb-4"></div>
                   <h3 className="text-xl font-bold text-white">{service.name}</h3>
@@ -246,32 +247,32 @@ import React from 'react';
                   </div>
                 </div>
                 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+                <div className="grid grid-cols-1 md: grid-cols-3 gap-4 text-sm">
                   <div>
                     <span className="text-gray-400">Start Time:<div className="text-white">{new Date(incident.startTime).toLocaleString()}</div>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm"></div>
+                <div className="grid grid-cols-1 md: grid-cols-3 gap-4 text-sm"></div>
                   <div></div>
                     <span className="text-gray-400">Start Time:</span><div className="text-white">{new Date(incident.startTime).toLocaleString()}</div>
                   </div>
                   <div></div>
-                    <span className="text-gray-400">End Time:</span><div className="text-white">{new Date(incident.endTime).toLocaleString()}</div>
+                    <span className="text-gray-400">End Time: </span><div className="text-white">{new Date(incident.endTime).toLocaleString()}</div>
                   </div>
                   <div>
-                    <span className="text-gray-400">Affected Services:<div className="text-white">{incident.affectedServices.join(', ')}</div>
-                <div className="grid grid-cols-1 md: grid-cols-3 gap-4 text-sm">,
+                    <span className="text-gray-400">Affected Services: <div className="text-white">{incident.affectedServices.join(' ')}</div>
+                <div className="grid grid-cols-1 md: grid-cols-3 gap-4 text-sm">
                   <div>,
-                    <span className="text-gray-400">Start Time:</span>,
+                    <span className="text-gray-400">Start Time: </span>
                     <div className="text-white">{new Date(incident.startTime).toLocaleString()}</div>
                   </div>
                   <div>
-                    <span className="text-gray-400">End Time: </span>,
+                    <span className="text-gray-400">End Time: </span>
                     <div className="text-white">{new Date(incident.endTime).toLocaleString()}</div>
                   </div>
                   <div>
-                    <span className="text-gray-400">Affected Services: </span>,
+                    <span className="text-gray-400">Affected Services: </span>
                     <div className="text-white">{incident.affectedServices.join(', ')}</div>
                   <div></div>
-                    <span className="text-gray-400">Affected Services:</span><div className="text-white">{incident.affectedServices.join(', ')}</div>
+                    <span className="text-gray-400">Affected Services: </span><div className="text-white">{incident.affectedServices.join(', ')}</div>
                   </div>
                 </div>
               </div>
@@ -306,7 +307,7 @@ import React from 'react';
         </section>
 
               <div className="text-3xl font-bold text-white mb-2">0</div>
-              <div className="text-gray-400 text-sm">Active Incidents</div>,
+              <div className="text-gray-400 text-sm">Active Incidents</div>
             </div>,
           </div>,
         </section>,
@@ -346,7 +347,7 @@ import React from 'react';
         </section>
       </main>
 
-      <Footer />,
+      <Footer />
     </div>,
 const StatusPage: React.FC = () => {
   return (

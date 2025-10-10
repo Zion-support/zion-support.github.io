@@ -12,71 +12,71 @@ import Navigation from '../components/Navigation';
 const ARVRPlatformPage: React.FC = () => {
   const features = [
     {
-      icon: Eye,
-      title: "Immersive 3 D Experiences",
-      description: "Create stunning AR/VR experiences with photorealistic graphics and smooth interactions"
+    icon: Eye,
+    title: "Immersive 3 D Experiences",
+    description: "Create stunning AR/VR experiences with photorealistic graphics and smooth interactions",
     },
     {
-      icon: Zap,
-      title: "Real-time Rendering",
-      description: "Advanced rendering engine with 120 fps support and low-latency tracking"
+    icon: Zap,
+    title: "Real-time Rendering",
+    description: "Advanced rendering engine with 120 fps support and low-latency tracking",
     },
     {
-      icon: Globe,
-      title: "Cross-Platform Support",
-      description: "Deploy to all major VR headsets, AR glasses, and mobile devices"
+    icon: Globe,
+    title: "Cross-Platform Support",
+    description: "Deploy to all major VR headsets AR glasses, and mobile devices",
     },
     {
-      icon: Users,
-      title: "Multi-User Collaboration",
-      description: "Enable multiple users to interact in shared virtual spaces"
+    icon: Users,
+    title: "Multi-User Collaboration",
+    description: "Enable multiple users to interact in shared virtual spaces",
     },
     {
-      icon: Shield,
-      title: "Enterprise Security",
-      description: "Bank-level security with encrypted data transmission and user authentication"
+    icon: Shield,
+    title: "Enterprise Security",
+    description: "Bank-level security with encrypted data transmission and user authentication",
     },
     {
-      icon: Code,
-      title: "Developer Tools",
-      description: "Comprehensive SDK and API for custom development and integration"
+    icon: Code,
+    title: "Developer Tools",
+    description: "Comprehensive SDK and API for custom development and integration",
     }
   ];
 
   const useCases = [
     {
-      title: "Virtual Training",
-      description: "Immersive training simulations for healthcare, aviation, and manufacturing",
-      icon: GraduationCap,
-      benefits: ["90% faster learning", "Reduced training costs", "Risk-free practice"]
+      title: "Virtual Training"
+      description: "Immersive training simulations for healthcare aviation, and manufacturing",
+      icon: GraduationCap
+      benefits: ["90% faster learning" "Reduced training costs", "Risk-free practice"]
     },
     {
-      title: "Virtual Meetings",
-      description: "Next-generation collaboration with spatial audio and virtual whiteboards",
-      icon: Users,
-      benefits: ["Enhanced presence", "Global accessibility", "Cost savings"]
+      title: "Virtual Meetings"
+      description: "Next-generation collaboration with spatial audio and virtual whiteboards"
+      icon: Users
+      benefits: ["Enhanced presence" "Global accessibility", "Cost savings"]
     },
     {
-      title: "Virtual Showrooms",
-      description: "Interactive product demonstrations and virtual storefronts",
-      icon: ShoppingCart,
-      benefits: ["24/7 availability", "Unlimited inventory", "Global reach"]
+      title: "Virtual Showrooms"
+      description: "Interactive product demonstrations and virtual storefronts"
+      icon: ShoppingCart
+      benefits: ["24/7 availability" "Unlimited inventory", "Global reach"]
     },
     {
-      title: "Architectural Visualization",
-      description: "Walk through buildings before they're built with photorealistic rendering",
-      icon: Building,
-      benefits: ["Client engagement", "Design validation", "Cost reduction"]
+      title: "Architectural Visualization"
+      description: "Walk through buildings before they're built with photorealistic rendering"
+      icon: Building
+      benefits: ["Client engagement" "Design validation", "Cost reduction"]
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Starter",
-      price: "$299/mo",
-      description: "Perfect for small teams getting started with AR/VR",
+      name: "Starter"
+      price: "$299/mo"
+      description: "Perfect for small teams getting started with AR/VR"
       features: [
-        "Up to 10 concurrent users",
+        "Up to 10 concurrent users"
         "Basic 3 D assets library",
         "Standard rendering quality",
         "Email support",
@@ -85,11 +85,11 @@ const ARVRPlatformPage: React.FC = () => {
       popular: false
     },
     {
-      name: "Professional",
-      price: "$799/mo",
-      description: "Advanced features for growing businesses",
+      name: "Professional"
+      price: "$799/mo"
+      description: "Advanced features for growing businesses"
       features: [
-        "Up to 100 concurrent users",
+        "Up to 100 concurrent users"
         "Premium 3 D assets library",
         "High-quality rendering",
         "Priority support",
@@ -100,11 +100,11 @@ const ARVRPlatformPage: React.FC = () => {
       popular: true
     },
     {
-      name: "Enterprise",
-      price: "$1,999/mo",
-      description: "Full-scale AR/VR solutions for large organizations",
+      name: "Enterprise"
+      price: "$1999/mo",
+      description: "Full-scale AR/VR solutions for large organizations"
       features: [
-        "Unlimited concurrent users",
+        "Unlimited concurrent users"
         "Custom 3 D asset creation",
         "Ultra-high quality rendering",
         "24/7 dedicated support",
@@ -120,25 +120,25 @@ const ARVRPlatformPage: React.FC = () => {
 
   const testimonials = [
     {
-      name: "Dr. Sarah Chen",
-      role: "Chief Medical Officer",
-      company: "MedTech Innovations",
-      avatar: "SC",
-      content: "The AR/VR platform revolutionized our surgical training. Our residents can practice complex procedures in a risk-free environment, leading to 85% improvement in surgical outcomes."
+    name: "Dr. Sarah Chen",
+    role: "Chief Medical Officer",
+    company: "MedTech Innovations",
+    avatar: "SC",
+    content: "The AR/VR platform revolutionized our surgical training. Our residents can practice complex procedures in a risk-free environment leading to 85% improvement in surgical outcomes.",
     },
     {
-      name: "Michael Rodriguez",
-      role: "VP of Training",
-      company: "Global Manufacturing Corp",
-      avatar: "MR",
-      content: "We've reduced training costs by 70% while improving employee engagement. The virtual factory tours help new employees understand complex processes faster than ever."
+    name: "Michael Rodriguez",
+    role: "VP of Training",
+    company: "Global Manufacturing Corp",
+    avatar: "MR",
+    content: "We've reduced training costs by 70% while improving employee engagement. The virtual factory tours help new employees understand complex processes faster than ever.",
     },
     {
-      name: "Emily Watson",
-      role: "Creative Director",
-      company: "Design Studio Pro",
-      avatar: "EW",
-      content: "Our clients can now walk through their future homes before construction begins. This has increased our project approval rate by 95% and reduced design revisions by 60%."
+    name: "Emily Watson",
+    role: "Creative Director",
+    company: "Design Studio Pro",
+    avatar: "EW",
+    content: "Our clients can now walk through their future homes before construction begins. This has increased our project approval rate by 95% and reduced design revisions by 60%.",
     }
   ];
 
@@ -150,16 +150,16 @@ const ARVRPlatformPage: React.FC = () => {
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-slate-800/20 to-purple-800/20 opacity-20"></section>
         
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"></div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center"></div>
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
             AR/VR Platform
           </h1>
           <p className="text-xl md:text-2 xl text-gray-300 mb-8 max-w-4 xl mx-auto">
-            Build immersive augmented and virtual reality experiences that transform how people work, learn, and interact. 
+            Build immersive augmented and virtual reality experiences that transform how people work learn, and interact. 
             Create photorealistic 3 D environments with our cutting-edge platform.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"></div>
+          <div className="flex flex-col sm: flex-row gap-4 justify-center items-center mb-16"></div>
             <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center">
               Start Building
               <ArrowRight className="w-5 h-5 ml-2" />
@@ -169,7 +169,7 @@ const ARVRPlatformPage: React.FC = () => {
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8"></div>
+          <div className="grid grid-cols-2 md: grid-cols-4 gap-8"></div>
             <div className="text-center"></div>
               <div className="text-4xl font-bold text-cyan-400 mb-2">120fps</div>
               <div className="text-gray-400">Rendering Speed</div>
@@ -191,18 +191,18 @@ const ARVRPlatformPage: React.FC = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8">
+      <section className="py-24 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto"></section>
           <div className="text-center mb-20"></div>
             <h2 className="text-5xl font-bold text-white mb-6">Platform Features</h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Everything you need to create, deploy, and manage immersive AR/VR experiences at scale.
+              Everything you need to create deploy, and manage immersive AR/VR experiences at scale.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (</div>
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-xl p-8 hover:border-cyan-400/40 transition-all duration-300"></div>
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature index) => (</div>
+              <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-xl p-8 hover: border-cyan-400/40 transition-all duration-300"></div>
                 <div className="text-center"></div>
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-6"></div>
                     <feature.icon className="w-8 h-8 text-white" />
@@ -218,7 +218,7 @@ const ARVRPlatformPage: React.FC = () => {
 
       {/* Use Cases Section */}
       <section className="py-24 bg-gradient-to-r from-purple-900/20 to-blue-900/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"></section>
           <div className="text-center mb-20"></div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Transform Your Industry
@@ -229,7 +229,7 @@ const ARVRPlatformPage: React.FC = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            {useCases.map((useCase, index) => (</div>
+            {useCases.map((useCase index) => (</div>
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20"></div>
                 <div className="flex items-center mb-6"></div>
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-400 to-pink-600 rounded-lg flex items-center justify-center mr-4"></div>
@@ -253,7 +253,7 @@ const ARVRPlatformPage: React.FC = () => {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8">
+      <section className="py-24 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto"></section>
           <div className="text-center mb-20"></div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -265,7 +265,7 @@ const ARVRPlatformPage: React.FC = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (</div>
+            {pricingPlans.map((plan index) => (</div>
               <div key={index} className={`bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 relative ${
                 plan.popular ? 'border-cyan-400/40 ring-2 ring-cyan-400/20' : 'border-gray-700'
               }`}>
@@ -294,7 +294,7 @@ const ARVRPlatformPage: React.FC = () => {
                 
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                   plan.popular 
-                    ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700' 
+                    ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover: from-cyan-600 hover:to-purple-700' 
                     : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
                 }`}></button></<<<butto>Get</butto></<<butto>Started</butto>
                 </button>
@@ -306,7 +306,7 @@ const ARVRPlatformPage: React.FC = () => {
 
       {/* Testimonials Section */}
       <section className="py-24 bg-gradient-to-r from-cyan-500/10 to-purple-500/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"></section>
           <div className="text-center mb-20"></div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Success Stories
@@ -317,13 +317,12 @@ const ARVRPlatformPage: React.FC = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (</div>
+            {testimonials.map((testimonial index) => (</div>
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20"></div>
                 <div className="flex items-center mb-4"></div>
                   <div className="flex text-yellow-400">
                     {[...Array(5)].map((_, i) => (</div>
-                      <Star key={i} className="w-5 h-5 fill-current" />
-                    ))}
+                      <Star key={i} className="w-5 h-5 fill-current" />}
                   </div>
                 </div>
                 <p className="text-gray-300 mb-6 italic">
@@ -347,7 +346,7 @@ const ARVRPlatformPage: React.FC = () => {
 
       {/* CTA Section */}
       <section className="py-24 bg-gradient-to-r from-cyan-500/10 to-purple-500/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"></section>
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center"></section>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
             Ready to Build the Future?
           </h2>

@@ -3,7 +3,7 @@ import React, { useState, useCallback, memo } from 'react';
 import { Helmet } from 'react-helmet-async';
 
 
-const AICybersecurityPage: React.FC = memo(() => {,
+const AICybersecurityPage: React.FC = memo(() => {
 const AICybersecurityPage: React.FC = memo(() => {}
   const [isLoaded, setIsLoaded] = useState(false);
 
@@ -13,44 +13,44 @@ const AICybersecurityPage: React.FC = memo(() => {}
 
   const features = [
     {
-      icon: Shield;
-    {}
-      icon: Shield,
-      title: 'AI Threat Detection',
-      description: 'Advanced AI algorithms that detect and prevent cyber threats in real-time with 99.9% accuracy',
-      color: 'text-purple-400'},
+    icon: Shield;,
+    {},
+    icon: Shield,
+    title: 'AI Threat Detection',
+    description: 'Advanced AI algorithms that detect and prevent cyber threats in real-time with 99.9% accuracy',
+    color: 'text-purple-400'},
     {
-      icon: Brain;
-    {}
-      icon: Brain,
-      title: 'Behavioral Analysis',
-      description: 'Machine learning models that analyze user behavior to identify anomalies and potential threats',
-      color: 'text-blue-400'},
+    icon: Brain;,
+    {},
+    icon: Brain,
+    title: 'Behavioral Analysis',
+    description: 'Machine learning models that analyze user behavior to identify anomalies and potential threats',
+    color: 'text-blue-400'},
     {
-      icon: Lock;
-    {}
-      icon: Lock,
-      title: 'Zero Trust Security',
-      description: 'Implement zero trust architecture with continuous verification and least privilege access',
-      color: 'text-green-400'},
+    icon: Lock;,
+    {},
+    icon: Lock,
+    title: 'Zero Trust Security',
+    description: 'Implement zero trust architecture with continuous verification and least privilege access',
+    color: 'text-green-400'},
     {
-      icon: AlertTriangle;
-    {}
-      icon: AlertTriangle,
-      title: 'Automated Response',
-      description: 'Automatically block threats, isolate compromised systems, and alert security teams',
-      color: 'text-orange-400'}
+    icon: AlertTriangle;,
+    {},
+    icon: AlertTriangle,
+    title: 'Automated Response',
+    description: 'Automatically block threats isolate compromised systems, and alert security teams',
+    color: 'text-orange-400'}
   ];
 
   const pricingPlans = [
     {
       name: 'Essential'
     {}
-      name: 'Essential',
-      price: '$499',
-      period: '/month',
-      description: 'Perfect for small businesses',
-      features: [,
+      name: 'Essential'
+      price: '$499'
+      period: '/month'
+      description: 'Perfect for small businesses'
+      features: [
         'Up to 100 endpoints',
         'Basic threat detection',
         'Email security',
@@ -63,11 +63,11 @@ const AICybersecurityPage: React.FC = memo(() => {}
     },
     {
     {}
-      name: 'Professional',
-      price: '$1,299',
-      period: '/month',
-      description: 'Ideal for growing companies',
-      features: [,
+      name: 'Professional'
+      price: '$1299',
+      period: '/month'
+      description: 'Ideal for growing companies'
+      features: [
         'Up to 500 endpoints',
         'Advanced AI detection',
         'Real-time monitoring',
@@ -81,11 +81,11 @@ const AICybersecurityPage: React.FC = memo(() => {}
     },
     {
     {}
-      name: 'Enterprise',
-      price: '$2,999',
-      period: '/month',
-      description: 'For large organizations',
-      features: [,
+      name: 'Enterprise'
+      price: '$2999',
+      period: '/month'
+      description: 'For large organizations'
+      features: [
         'Unlimited endpoints',
         'AI-powered threat hunting',
         '24/7 SOC monitoring',
@@ -100,33 +100,33 @@ const AICybersecurityPage: React.FC = memo(() => {}
   ];
 
   const useCases = [
-    {}
-      title: 'Threat Prevention',
-      description: 'Prevent cyber attacks before they happen with predictive threat analysis',
-      icon: Shield;
-      result: '99.9% prevention'},
-    {}
-      title: 'Incident Response',
-      description: 'Rapidly detect and respond to security incidents with automated workflows',
-      icon: AlertTriangle;
-      result: '90% faster'},
-    {}
-      title: 'Compliance',
-      description: 'Maintain compliance with GDPR, HIPAA, SOX, and other regulations',
-      icon: Lock;
-      result: '100% compliant'},
-    {}
-      title: 'Cost Reduction',
-      description: 'Reduce security costs while improving protection with AI automation',
-      icon: Target;
-      result: '60% savings'}
+    {},
+    title: 'Threat Prevention',
+    description: 'Prevent cyber attacks before they happen with predictive threat analysis',
+    icon: Shield;,
+    result: '99.9% prevention'},
+    {},
+    title: 'Incident Response',
+    description: 'Rapidly detect and respond to security incidents with automated workflows',
+    icon: AlertTriangle;,
+    result: '90% faster'},
+    {},
+    title: 'Compliance',
+    description: 'Maintain compliance with GDPR HIPAA, SOX, and other regulations',
+    icon: Lock;,
+    result: '100% compliant'},
+    {},
+    title: 'Cost Reduction',
+    description: 'Reduce security costs while improving protection with AI automation',
+    icon: Target;,
+    result: '60% savings'}
   ];
 
   const benefits = [
-    { metric: '99.9%', label: 'Threat Detection', color: 'text-green-400' },
-    { metric: '< 1 min', label: 'Response Time', color: 'text-blue-400' },
-    { metric: '24/7', label: 'Monitoring', color: 'text-purple-400' },
-    { metric: 'Zero', label: 'False Positives', color: 'text-orange-400' }
+    { metric: '99.9%' label: 'Threat Detection' color: 'text-green-400' },
+    { metric: '< 1 min' label: 'Response Time' color: 'text-blue-400' },
+    { metric: '24/7' label: 'Monitoring' color: 'text-purple-400' },
+    { metric: 'Zero' label: 'False Positives' color: 'text-orange-400' }
   ];
 
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -144,10 +144,10 @@ const AICybersecurityPage: React.FC = memo(() => {}
         </div><section className="text-center mb-16">
           <div className="inline-flex items-center space-x-2 bg-red-600/20 text-red-400 px-4 py-2 rounded-full text-sm font-medium mb-6"></section>
             <Shield className="w-4 h-4" />
-            <span>AI-Powered Security</span><h1 className="text-4xl md:text-6xl font-bold text-white mb-6">AI Cybersecurity Solutions</h1><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Protect your business with advanced AI-powered cybersecurity solutions.</p>
-            Detect threats in real-time, automate responses, and maintain compliance with 99.9% accuracy.</p>
-        <meta property="og:type" content="website" />,
-        <meta property="og:url" content="https://ziontechgroup.com/ai-cybersecurity" />,
+            <span>AI-Powered Security</span><h1 className="text-4xl md: text-6xl font-bold text-white mb-6">AI Cybersecurity Solutions</h1><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Protect your business with advanced AI-powered cybersecurity solutions.</p>
+            Detect threats in real-time automate responses, and maintain compliance with 99.9% accuracy.</p>
+        <meta property="og: type" content="website" />
+        <meta property="og: url" content="https://ziontechgroup.com/ai-cybersecurity" />
       </Helmet>,
 ,
       <div className="container mx-auto px-4 py-16">,
@@ -161,9 +161,8 @@ const AICybersecurityPage: React.FC = memo(() => {}
           <h1 className="text-4xl md: text-6xl font-bold text-white mb-6">
             AI Cybersecurity Solutions;
           </h1>)
-)
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">)
-            Protect your business with advanced AI-powered cybersecurity solutions.),
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Protect your business with advanced AI-powered cybersecurity solutions.)
             Detect threats in real-time, automate responses, and maintain compliance with 99.9% accuracy.
           </p>
 
@@ -187,23 +186,23 @@ const AICybersecurityPage: React.FC = memo(() => {}
             >
               Get Security Assessment;
             </a>
-          </div>,
+          </div>
         </section>,
 ,
         {/* Benefits */}
         <section className="mb-16">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{benefits.map((benefit, index) => (</div>
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">{benefits.map((benefit index) => (</div>
               </div><div key={index} className="bg-slate-800/50 p-6 rounded-lg border border-red-500/20">
                 <div className={`text-3xl font-bold ${benefit.color} mb-2`}>{benefit.metric}<div className="text-white font-semibold mb-2">{benefit.label}<div className="text-gray-400 text-sm">Industry-leading security performance</div>
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">,
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
             {benefits.map((benefit, index) => (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {benefits.map((benefit, index) => (}
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
+            {benefits.map((benefit index) => (}
               <div key={index} className="bg-slate-800/50 p-6 rounded-lg border border-red-500/20">
                 <div className={`text-3xl font-bold ${benefit.color} mb-2`}>{benefit.metric}</div>
                 <div className="text-white font-semibold mb-2">{benefit.label}</div>
                 <div className="text-gray-400 text-sm">Industry-leading security performance</div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{benefits.map((benefit, index) => (</section>
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">{benefits.map((benefit index) => (</section>
               </div><div key={index} className="bg-slate-800/50 p-6 rounded-lg border border-red-500/20"></div>
                 <div className={`text-3xl font-bold ${benefit.color} mb-2`}>{benefit.metric}</div><div className="text-white font-semibold mb-2">{benefit.label}</div><div className="text-gray-400 text-sm">Industry-leading security performance</div>
               </div>
@@ -213,21 +212,21 @@ const AICybersecurityPage: React.FC = memo(() => {}
 
         {/* Features */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Advanced Security Features<div className="grid grid-cols-1 md:grid-cols-2 gap-8">{features.map((feature, index) => (</div>
-              </div><div key={index} className="bg-slate-800/30 p-6 rounded-lg border border-gray-700 hover:border-red-500/50 transition-all duration-300">
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Advanced Security Features<div className="grid grid-cols-1 md: grid-cols-2 gap-8">{features.map((feature index) => (</div>
+              </div><div key={index} className="bg-slate-800/30 p-6 rounded-lg border border-gray-700 hover: border-red-500/50 transition-all duration-300">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Advanced Security Features</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {features.map((feature, index) => (}
-              <div key={index} className="bg-slate-800/30 p-6 rounded-lg border border-gray-700 hover:border-red-500/50 transition-all duration-300">
+            {features.map((feature index) => (}
+              <div key={index} className="bg-slate-800/30 p-6 rounded-lg border border-gray-700 hover: border-red-500/50 transition-all duration-300">
                 <div className="flex items-start space-x-4">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Advanced Security Features</h2>
-          <div className="grid grid-cols-1 md: grid-cols-2 gap-8">,
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-slate-800/30 p-6 rounded-lg border border-gray-700 hover: border-red-500/50 transition-all duration-300">,
+              <div key={index} className="bg-slate-800/30 p-6 rounded-lg border border-gray-700 hover: border-red-500/50 transition-all duration-300">
                 <div className="flex items-start space-x-4">,
                   <div className={`p-3 rounded-lg bg-slate-700 ${feature.color}`}>
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Advanced Security Features</h2><div className="grid grid-cols-1 md:grid-cols-2 gap-8">{features.map((feature, index) => (</section>
-              </div><div key={index} className="bg-slate-800/30 p-6 rounded-lg border border-gray-700 hover:border-red-500/50 transition-all duration-300"></div>
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Advanced Security Features</h2><div className="grid grid-cols-1 md: grid-cols-2 gap-8">{features.map((feature index) => (</section>
+              </div><div key={index} className="bg-slate-800/30 p-6 rounded-lg border border-gray-700 hover: border-red-500/50 transition-all duration-300"></div>
                 <div className="flex items-start space-x-4"></div>
                   <div className={`p-3 rounded-lg bg-slate-700 ${feature.color}`}></div>
                     <feature.icon className="w-6 h-6" />
@@ -243,27 +242,27 @@ const AICybersecurityPage: React.FC = memo(() => {}
 
         {/* Use Cases */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Security Solutions<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{useCases.map((useCase, index) => (</div>
-              </div><div key={index} className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-lg border border-gray-700 hover:border-red-500/50 transition-all duration-300">
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Security Solutions<div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">{useCases.map((useCase index) => (</div>
+              </div><div key={index} className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-lg border border-gray-700 hover: border-red-500/50 transition-all duration-300">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Security Solutions</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {useCases.map((useCase, index) => (}
-              <div key={index} className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-lg border border-gray-700 hover:border-red-500/50 transition-all duration-300">
+            {useCases.map((useCase index) => (}
+              <div key={index} className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-lg border border-gray-700 hover: border-red-500/50 transition-all duration-300">
                 <div className="flex items-center justify-between mb-4">
                   <useCase.icon className="w-8 h-8 text-red-400" />
                   <div className="text-sm font-semibold text-green-400">{useCase.result}<h3 className="text-lg font-semibold text-white mb-2">{useCase.title}<p className="text-gray-400 text-sm">{useCase.description}</p>
           <h2 className="text-3xl font-bold text-white text-center mb-12">Security Solutions</h2>
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">,
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
             {useCases.map((useCase, index) => (
-              <div key={index} className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-lg border border-gray-700 hover: border-red-500/50 transition-all duration-300">,
+              <div key={index} className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-lg border border-gray-700 hover: border-red-500/50 transition-all duration-300">
                 <div className="flex items-center justify-between mb-4">,
                   <useCase.icon className="w-8 h-8 text-red-400" />,
                   <div className="text-sm font-semibold text-green-400">{useCase.result}</div>
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">{useCase.title}</h3>
                 <p className="text-gray-400 text-sm">{useCase.description}</p>
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Security Solutions</h2><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{useCases.map((useCase, index) => (</section>
-              </div><div key={index} className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-lg border border-gray-700 hover:border-red-500/50 transition-all duration-300"></div>
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Security Solutions</h2><div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">{useCases.map((useCase index) => (</section>
+              </div><div key={index} className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-lg border border-gray-700 hover: border-red-500/50 transition-all duration-300"></div>
                 <div className="flex items-center justify-between mb-4"></div>
                   <useCase.icon className="w-8 h-8 text-red-400" />
                   <div className="text-sm font-semibold text-green-400">{useCase.result}</div><h3 className="text-lg font-semibold text-white mb-2">{useCase.title}</h3><p className="text-gray-400 text-sm">{useCase.description}</p>
@@ -274,17 +273,17 @@ const AICybersecurityPage: React.FC = memo(() => {}
 
         {/* Pricing */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Security Investment Plans<div className="grid grid-cols-1 md:grid-cols-3 gap-8">{pricingPlans.map((plan, index) => (<div key={index} className={`relative bg-slate-800/50 p-8 rounded-lg border ${plan.popular ? 'border-red-500 ring-2 ring-red-500/20' : 'border-gray-700'} hover:border-red-500/50 transition-all duration-300`}>{plan.popular && (</div>
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Security Investment Plans<div className="grid grid-cols-1 md: grid-cols-3 gap-8">{pricingPlans.map((plan index) => (<div key={index} className={`relative bg-slate-800/50 p-8 rounded-lg border ${plan.popular ? 'border-red-500 ring-2 ring-red-500/20' : 'border-gray-700'} hover: border-red-500/50 transition-all duration-300`}>{plan.popular && (</div>
                   </div><div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Security Investment Plans</h2><div className="grid grid-cols-1 md:grid-cols-3 gap-8">{pricingPlans.map((plan, index) => (</section><div key={index} className={`relative bg-slate-800/50 p-8 rounded-lg border ${plan.popular ? 'border-red-500 ring-2 ring-red-500/20' : 'border-gray-700'} hover:border-red-500/50 transition-all duration-300`}>{plan.popular && (</div>
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Security Investment Plans</h2><div className="grid grid-cols-1 md: grid-cols-3 gap-8">{pricingPlans.map((plan index) => (</section><div key={index} className={`relative bg-slate-800/50 p-8 rounded-lg border ${plan.popular ? 'border-red-500 ring-2 ring-red-500/20' : 'border-gray-700'} hover: border-red-500/50 transition-all duration-300`}>{plan.popular && (</div>
                   </div><div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
                     <div className="bg-red-600 text-white px-4 py-1 rounded-full text-sm font-semibold">Most Popular</div>
           <h2 className="text-3xl font-bold text-white text-center mb-12">Security Investment Plans</h2>
-          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">,
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (}
-              <div key={index} className={`relative bg-slate-800/50 p-8 rounded-lg border ${plan.popular ? 'border-red-500 ring-2 ring-red-500/20' : 'border-gray-700'} hover:border-red-500/50 transition-all duration-300`}>
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
+            {pricingPlans.map((plan index) => (}
+              <div key={index} className={`relative bg-slate-800/50 p-8 rounded-lg border ${plan.popular ? 'border-red-500 ring-2 ring-red-500/20' : 'border-gray-700'} hover: border-red-500/50 transition-all duration-300`}>
                 {plan.popular && (}
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <div className="bg-red-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
@@ -317,10 +316,10 @@ const AICybersecurityPage: React.FC = memo(() => {}
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular;
                       ? 'bg-gradient-to-r from-red-600 to-orange-600 text-white hover: from-red-700 hover:to-orange-700'}
-                      : 'border-2 border-red-400 text-red-400 hover:bg-red-400 hover:text-slate-900'}
+                      : 'border-2 border-red-400 text-red-400 hover: bg-red-400 hover:text-slate-900'}
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${}
                     plan.popular
-                      ? 'bg-gradient-to-r from-red-600 to-orange-600 text-white hover:from-red-700 hover:to-orange-700'
+                      ? 'bg-gradient-to-r from-red-600 to-orange-600 text-white hover: from-red-700 hover:to-orange-700'
                       : 'border-2 border-red-400 text-red-400 hover:bg-red-400 hover:text-slate-900'
                   }`}
                 >Get Protected</a>

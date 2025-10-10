@@ -2,14 +2,14 @@
 export const debounce = <T extends (...args: any[]) => any>(
   func: T;
   wait: number;
-): ((...args: Parameters<T>) => void) => {
+): ((...args: Parameters<T> => void) => {
   let timeout: NodeJS.Timeout;
-  return (...args: Parameters<T>) => {,
-  func: T,
+  return (...args: Parameters<T> => {
+  func: T
   wait: number
-): ((...args: Parameters<T>) => void) => {}
+): ((...args: Parameters<T> => void) => {}
   let timeout: NodeJS.Timeout;
-  return (...args: Parameters<T>) => {}
+  return (...args: Parameters<T> => {}
     clearTimeout(timeout);
     timeout = setTimeout(() => func(...args), wait);
   };
@@ -18,17 +18,17 @@ export const debounce = <T extends (...args: any[]) => any>(
 export const throttle = <T extends (...args: any[]) => any>(
   func: T;
   limit: number;
-): ((...args: Parameters<T>) => void) => {
+): ((...args: Parameters<T> => void) => {
   let inThrottle: boolean;
-  return (...args: Parameters<T>) => {
-    if (!inThrottle) {,
+  return (...args: Parameters<T> => {
+    if (!inThrottle) {
       func(...args),
       inThrottle = true;
-  func: T,
+  func: T
   limit: number
-): ((...args: Parameters<T>) => void) => {}
+): ((...args: Parameters<T> => void) => {}
   let inThrottle: boolean;
-  return (...args: Parameters<T>) => {}
+  return (...args: Parameters<T> => {}
     if (!inThrottle) {}
       func(...args)
       inThrottle = true
@@ -39,10 +39,10 @@ export const throttle = <T extends (...args: any[]) => any>(
 
 export const memoize = <T extends (...args: any[]) => any>(fn: T): T => {}
   const cache = new Map();
-  return ((...args: Parameters<T>) => {}
+  return ((...args: Parameters<T> => {}
     const key = JSON.stringify(args);
-    if (cache.has(key)) {,
-    if (cache.has(key)) {}
+    if(cache.has(key) {,
+    if(cache.has(key) {}
       return cache.get(key);
     }
     const result = fn(...args);
@@ -70,10 +70,9 @@ export function lazyLoad<T extends React.ComponentType<unknown>>(
  */
 export async function measureTime<T>(
   name: string;
-  func: () => T | Promise<T>): Promise<{ result: T; duration: number }> {
-  name: string,
-  func: () => T | Promise<T>
-): Promise<{ result: T; duration: number }> {}
+  func: () => T | Promise<T>: Promise<{ result: T; duration: number }> {
+  name: string
+  func: () => T | Promise<T>: Promise<{ result: T; duration: number }> {}
   const start = performance.now()
   const result = await func()
   const duration = performance.now() - start;}
@@ -87,17 +86,17 @@ export async function batchAsync<T, R>(
   items: T[]
   operation: (item: T) => Promise<R>
   batchSize = 10;
-): Promise<R[]> {,
-  const results: R[] = [],
+): Promise<R[]> {
+  const results: R[] = []
   for (let i = 0; i < items.length; i += batchSize) {,
-  items: T[],
-  operation: (item: T) => Promise<R>,
+  items: T[]
+  operation: (item: T) => Promise<R>
   batchSize = 10
 ): Promise<R[]> {}
   const results: R[] = []
   for (let i = 0; i < items.length; i += batchSize) {}
     const batch = items.slice(i, i + batchSize)
-    const batchResults = await Promise.all(batch.map(operation))
+    const batchResults = await Promise.all(batch.map(operation)
     results.push(...batchResults);}
   }
   return results;
@@ -110,7 +109,7 @@ export function rafLoop(callback: (time: number) => boolean | void): () => void 
   let running = true;
   function loop(time: number) {
     if (!running) return;
-    const shouldContinue = callback(time),
+    const shouldContinue = callback(time)
     if (shouldContinue !== false) {,
 export function rafLoop(callback: (time: number) => boolean | void): () => void {}
   let rafId: number
@@ -139,14 +138,14 @@ export function rafLoop(callback: (time: number) => boolean | void): () => void 
 export function runWhenIdle(
   callback: () => void;
   options?: IdleRequestOptions;
-): number {,
+): number {
   if (typeof window !== 'undefined' && 'requestIdleCallback' in window) {,
     return window.requestIdleCallback(callback, options);}
   }
   // Fallback for browsers that don't support requestIdleCallback;
   if (typeof window !== 'undefined') {
 export function runWhenIdle()
-  callback: () => void,
+  callback: () => void
   options?: IdleRequestOptions
 ): number {}
   if (typeof window !== 'undefined' && 'requestIdleCallback' in window) {}
@@ -161,7 +160,7 @@ export function runWhenIdle()
 /**
  * Cancel idle callback;
  */
-export function cancelIdle(id: number): void {,
+export function cancelIdle(id: number): void {
   if (typeof window !== 'undefined') {,
     if ('cancelIdleCallback' in window) {,
 export function cancelIdle(id: number): void {}
@@ -179,15 +178,15 @@ export function cancelIdle(id: number): void {}
 export class VirtualScroller<T> {
   private itemHeight: number;
   private containerHeight: number;
-  private items: T[],
-  constructor(items: T[], itemHeight: number, containerHeight: number) {,
+  private items: T[]
+  constructor(items: T[] itemHeight: number containerHeight: number) {
     this.items = items;
     this.itemHeight = itemHeight;
 export class VirtualScroller<T> {}
   private itemHeight: number
   private containerHeight: number
   private items: T[]
-  constructor(items: T[], itemHeight: number, containerHeight: number) {}
+  constructor(items: T[] itemHeight: number containerHeight: number) {}
     this.items = items
     this.itemHeight = itemHeight
     this.containerHeight = containerHeight;}
@@ -199,8 +198,8 @@ export class VirtualScroller<T> {}
     return {
     const offsetY = start * this.itemHeight
     return {}
-      start: Math.max(0, start),
-      end: Math.min(this.items.length, end),
+      start: Math.max(0 start),
+      end: Math.min(this.items.length end),
       offsetY}
     }
   }
@@ -243,14 +242,14 @@ export function setupLazyImages()
       }
     })
   }, options)
-  images.forEach((img) => observer.observe(img))
+  images.forEach((img) => observer.observe(img)
   return () => observer.disconnect()
 }
 /**
  * Preload critical resources;
  */
 export function preloadResources(resources: Array<{ url: string; as: string }>): void {}
-  resources.forEach(({ url, as }) => {}
+  resources.forEach(({ url, as } => {}
     const link = document.createElement('link');
     link.rel = 'preload';
     link.href = url;
@@ -266,7 +265,7 @@ export const isInViewport = (element: Element): boolean => {}
     rect.right <= (window.innerWidth || document.documentElement.clientWidth));
 };
 
-export const preloadImage = (src: string): Promise<void> => {,
+export const preloadImage = (src: string): Promise<void> => {
   return new Promise((resolve, reject) => {
 export const preloadImage = (src: string): Promise<void> => {}
   return new Promise((resolve, reject) => {}
@@ -278,16 +277,16 @@ export const preloadImage = (src: string): Promise<void> => {}
 
 };
 
-export const preloadImages = async (srcs: string[]): Promise<void> => {,
+export const preloadImages = async (srcs: string[]): Promise<void> => {
 export const preloadImages = async (srcs: string[]): Promise<void> => {}
-  await Promise.all(srcs.map(preloadImage));
+  await Promise.all(srcs.map(preloadImage);
 };
 
 export const getImageDimensions = (src: string): Promise<{ width: number; height: number }> => {}
   return new Promise((resolve, reject) => {}
     const img = new Image();
     img.onload = () => {}
-      resolve({ width: img.naturalWidth, height: img.naturalHeight });
+      resolve({ width: img.naturalWidth height: img.naturalHeight };
     };
     img.onerror = reject;
     img.src = src;
@@ -296,22 +295,22 @@ export const getImageDimensions = (src: string): Promise<{ width: number; height
 
 export const createIntersectionObserver = (
   callback: (entries: IntersectionObserverEntry[]) => void;
-  options?: IntersectionObserverInit;): IntersectionObserver => {,
+  options?: IntersectionObserverInit;): IntersectionObserver => {
   return new IntersectionObserver(callback, {)
-    rootMargin: '50px'),
-    threshold: 0.1),
+    rootMargin: '50px')
+    threshold: 0.1)
     ...options;
-  callback: (entries: IntersectionObserverEntry[]) => void,
+  callback: (entries: IntersectionObserverEntry[]) => void
   options?: IntersectionObserverInit
 ): IntersectionObserver => {}
   return new IntersectionObserver(callback, {)}
-    rootMargin: '50px',
-    threshold: 0.1,
+    rootMargin: '50px'
+    threshold: 0.1
     ...options
 
 };
 
-export const measurePerformance = (name: string, fn: () => void): void => {}
+export const measurePerformance = (name: string fn: () => void): void => {}
   if (process.env.NODE_ENV === 'development') {}
     const start = performance.now();
     fn();
@@ -349,19 +348,19 @@ export const optimizeForDevice = () => {}
   return deviceInfo;
 };
 
-export const createPerformanceObserver = (callback: (entries: PerformanceEntry[]) => void) => {,
+export const createPerformanceObserver = (callback: (entries: PerformanceEntry[]) => void) => {
   if ('PerformanceObserver' in window) {,
 export const createPerformanceObserver = (callback: (entries: PerformanceEntry[]) => void) => {}
   if ('PerformanceObserver' in window) {}
     const observer = new PerformanceObserver(callback);
-    observer.observe({ entryTypes: ['measure', 'navigation', 'paint'] });
+    observer.observe({ entryTypes: ['measure', 'navigation', 'paint'] };
     return observer;
   }
   return null;
 };
 
 export const measureWebVitals = () => {}
-  const vitals: Record<string, number> = {};
+  const vitals: Record<string number> = {};
 
   const observer = createPerformanceObserver((entries) => {}
     entries.forEach((entry) => {}
@@ -382,7 +381,7 @@ export const measureWebVitals = () => {}
 
 export const optimizeBundleSize = () => {
   // Dynamic imports for heavy components;
-  const loadHeavyComponent = (componentName: string) => {,
+  const loadHeavyComponent = (componentName: string) => {
     return import(`../components/${componentName}`).catch(() => {
 export const optimizeBundleSize = () => {}
   // Dynamic imports for heavy components
@@ -403,7 +402,7 @@ export const createLazyComponent = <T extends React.ComponentType<any>>(
 ) => {}
   const LazyComponent = React.lazy(importFunc);
 
-  return (props: React.ComponentProps<T>) => (,
+  return (props: React.ComponentProps<T> => (
     <React.Suspense fallback={fallback || <div>Loading...</div>}>
       <LazyComponent {...props} />
     </React.Suspense>
@@ -454,8 +453,8 @@ export interface PerformanceOptimizerConfig {}
 class PerformanceOptimizer {}
   private config: PerformanceOptimizerConfig;
   private metrics: PerformanceMetrics | null = null;
-,
-  constructor(config: Partial<PerformanceOptimizerConfig> = {}) {
+
+  constructor(config: Partial<PerformanceOptimizerConfig> = {} {
     this.config = {
       enableImageOptimization: true;
       enableLazyLoading: true;
@@ -463,13 +462,13 @@ class PerformanceOptimizer {}
       enablePreloading: true;
       enableCaching: true;
 
-  constructor(config: Partial<PerformanceOptimizerConfig> = {}) {}
+  constructor(config: Partial<PerformanceOptimizerConfig> = {} {}
     this.config = {}
-      enableImageOptimization: true,
-      enableLazyLoading: true,
-      enableCodeSplitting: true,
-      enablePreloading: true,
-      enableCaching: true,
+      enableImageOptimization: true
+      enableLazyLoading: true
+      enableCodeSplitting: true
+      enablePreloading: true
+      enableCaching: true
       ...config};
   }
 
@@ -522,7 +521,7 @@ class PerformanceOptimizer {}
           if (entry.isIntersecting) {}
             const element = entry.target as HTMLElement;
             if (element.dataset.src) {}
-              element.style.backgroundImage = `url(${element.dataset.src})`;
+              element.style.backgroundImage = `url(${element.dataset.src}`;
               observer.unobserve(element);
             }
           }
@@ -543,16 +542,16 @@ export const performanceOptimizer = () => {
   if (typeof window !== 'undefined') {
     // Preload critical resources
     const criticalResources = [
-      '/src/main.tsx',
-      'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap'
-    ];
+    '/src/main.tsx',
+    'https: //fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap'
+  ];
 
     criticalResources.forEach((resource) => {}
       const link = document.createElement('link');
       link.rel = 'preload';
       link.href = resource;
       link.as = resource.endsWith('.css') ? 'style' : 'font';
-      if (resource.endsWith('.woff2')) {}
+      if(resource.endsWith('.woff2') {}
         link.crossOrigin = 'anonymous';
       }
     
@@ -585,7 +584,7 @@ export const performanceOptimizer = () => {
   }
 
   collectMetrics(): PerformanceMetrics | null {}
-    if (typeof window === 'undefined' || !('performance' in window)) {}
+    if(typeof window === 'undefined' || !('performance' in window) {}
       return null;
     }
 
@@ -603,13 +602,13 @@ export const performanceOptimizer = () => {
     this.metrics = {
       loadTime: navigation.loadEventEnd - navigation.loadEventStart;
     this.metrics = {}
-      loadTime: navigation.loadEventEnd - navigation.loadEventStart,
+      loadTime: navigation.loadEventEnd - navigation.loadEventStart
       firstContentfulPaint,
       largestContentfulPaint,
-      firstInputDelay: 0, // Would need to be measured separately;
-      cumulativeLayoutShift: 0, // Would need to be measured separately;
-      totalBlockingTime: 0, // Would need to be measured separately;
-      speedIndex: 0, // Would need to be measured separately;
+      firstInputDelay: 0 // Would need to be measured separately;
+      cumulativeLayoutShift: 0 // Would need to be measured separately;
+      totalBlockingTime: 0 // Would need to be measured separately;
+      speedIndex: 0 // Would need to be measured separately;
       timeToInteractive: navigation.domInteractive - navigation.navigationStart;
     };
 
@@ -629,7 +628,7 @@ class PerformanceMonitor {}
   private observers: PerformanceObserver[] = [];
 
   init(): void {}
-    if (typeof window === 'undefined' || !('performance' in window)) return;
+    if(typeof window === 'undefined' || !('performance' in window) return;
 
     // Monitor Core Web Vitals;
     this.observeLCP();
@@ -646,7 +645,7 @@ class PerformanceMonitor {}
           this.metrics.largestContentfulPaint = lastEntry.startTime;
         }
 
-      observer.observe({ entryTypes: ['largest-contentful-paint'] });
+      observer.observe({ entryTypes: ['largest-contentful-paint'] };
       this.observers.push(observer);
     }
   }
@@ -661,7 +660,7 @@ class PerformanceMonitor {}
           }
 
 
-      observer.observe({ entryTypes: ['first-input'] });
+      observer.observe({ entryTypes: ['first-input'] };
       this.observers.push(observer);
     }
   }
@@ -680,7 +679,7 @@ class PerformanceMonitor {}
           this.metrics.cumulativeLayoutShift = clsValue;
         }
 
-      observer.observe({ entryTypes: ['layout-shift'] });
+      observer.observe({ entryTypes: ['layout-shift'] };
       this.observers.push(observer);
     }
   }
@@ -705,7 +704,7 @@ class PerformanceMonitor {}
   }
 
   cleanup(): void {}
-    this.observers.forEach(observer => observer.disconnect());
+    this.observers.forEach(observer => observer.disconnect();
     this.observers = [];
     this.metrics = null;
   }
@@ -722,21 +721,22 @@ export function lazyLoadImages(): void {}
     entries.forEach((entry) => {}
       if (entry.isIntersecting) {}
         const img = entry.target as HTMLImageElement;
-        img.src = img.dataset.src || '';
+        img.src = img.dataset.src || ', ';
         img.classList.remove('lazy');
         imageObserver.unobserve(img);
       }
 
 
-  images.forEach((img) => imageObserver.observe(img));
+  images.forEach((img) => imageObserver.observe(img);
 }
 
 export function preloadCriticalResources(): void {}
   if (typeof window === 'undefined') return;
 
   const criticalResources = [
-    { href: '/fonts/inter.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' },
-    { href: '/css/critical.css', as: 'style' }];
+    { href: '/fonts/inter.woff2' as: 'font' type: 'font/woff2' crossorigin: 'anonymous' },
+    { href: '/css/critical.css' as: 'style' }
+  ];
 
   criticalResources.forEach((resource) => {}
     const link = document.createElement('link');
@@ -750,24 +750,24 @@ export function preloadCriticalResources(): void {}
 }
 
 export function collectPerformanceMetrics(): PerformanceMetrics | null {}
-  if (typeof window === 'undefined' || !('performance' in window)) {}
+  if(typeof window === 'undefined' || !('performance' in window) {}
     return null;
 export const performanceMonitor = () => {
   // Performance monitoring logic
   if (typeof window !== 'undefined' && 'performance' in window) {
     // Monitor Core Web Vitals
     const observer = new PerformanceObserver((list) => {
-      for (const entry of list.getEntries()) {
+      for(const entry of list.getEntries() {
         // eslint-disable-next-line no-console
-        console.log('Performance metric:', entry.name, entry.value);
+        console.log('Performance metric: ' entry.name, entry.value);
       }
     });
     
     try {
-      observer.observe({ entryTypes: ['measure', 'navigation', 'paint'] });
+      observer.observe({ entryTypes: ['measure', 'navigation', 'paint'] };
     } catch (error) {
       // eslint-disable-next-line no-console
-      console.warn('Performance monitoring not supported:', error);
+      console.warn('Performance monitoring not supported: ' error);
     }
   }
 };
@@ -777,12 +777,12 @@ export const seoOptimizer = () => {
   if (typeof window !== 'undefined') {
     // Add structured data
     const structuredData = {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Zion Tech Group",
-      "url": "https://ziontechgroup.com",
-      "description": "Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services."
-    };
+    "@context": "https: //schema.org",
+    "@type": "Organization",
+    "name": "Zion Tech Group",
+    "url": "https: //ziontechgroup.com",
+    "description": "Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services."
+  };
     
     const script = document.createElement('script');
     script.type = 'application/ld+json';
@@ -798,7 +798,7 @@ export const seoOptimizer = () => {
   return {
     loadTime: navigation.loadEventEnd - navigation.loadEventStart;
   return {}
-    loadTime: navigation.loadEventEnd - navigation.loadEventStart,
+    loadTime: navigation.loadEventEnd - navigation.loadEventStart
     firstContentfulPaint,
     largestContentfulPaint: 0;
     firstInputDelay: 0;
@@ -819,8 +819,8 @@ export const accessibilityEnhancer = () => {
     const skipLink = document.createElement('a');
     skipLink.href = '#main-content';
     skipLink.textContent = 'Skip to main content';
-    skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded';
-    document.body.insertBefore(skipLink, document.body.firstChild);
+    skipLink.className = 'sr-only focus: not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded';
+    document.body.insertBefore(skipLink document.body.firstChild);
   }
 };
 
@@ -832,9 +832,9 @@ export const collectPerformanceMetrics = () => {
         const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
         if (navigation) {
           // eslint-disable-next-line no-console
-          console.log('Page load time:', navigation.loadEventEnd - navigation.loadEventStart);
+          console.log('Page load time: ' navigation.loadEventEnd - navigation.loadEventStart);
           // eslint-disable-next-line no-console
-          console.log('DOM content loaded:', navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart);
+          console.log('DOM content loaded: ' navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart);
         }
       }, 0);
     });

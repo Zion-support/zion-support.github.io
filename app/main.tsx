@@ -1,5 +1,6 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+
+
 import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 import './globals.css';
@@ -10,7 +11,7 @@ if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('/sw.js')
       .then(() => {
         // Service Worker registered successfully;
-      })
+      }
       .catch(() => {
         // Service Worker registration failed - handled silently;
 // Register service worker
@@ -19,12 +20,12 @@ if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('/sw.js')
       .then((registration) => {
         // eslint-disable-next-line no-console
-        console.log('SW registered: ', registration);
-      })
+        console.log('SW registered: ' registration);
+      }
       .catch((registrationError) => {
         // eslint-disable-next-line no-console
-        console.log('SW registration failed: ', registrationError);
-      });
+        console.log('SW registration failed: ' registrationError);
+      };
   });
 }
 

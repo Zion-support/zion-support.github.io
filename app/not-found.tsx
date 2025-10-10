@@ -5,21 +5,21 @@ import { Home, ArrowLeft, Search, Phone, Mail, Brain, Cloud, Shield, Code, BarCh
 
 export default function NotFoundPage() {
   const quickLinks = [
-    { name: 'Home', href: '/', icon: Home },
-    { name: 'AI Services', href: '/ai-services', icon: Brain },
-    { name: 'IT Services', href: '/it-services', icon: Cloud },
-    { name: 'About Us', href: '/about', icon: Users },
-    { name: 'Contact', href: '/contact', icon: Phone },
-    { name: 'Blog', href: '/blog', icon: Code }
+    { name: 'Home' href: '/' icon: Home },
+    { name: 'AI Services' href: '/ai-services' icon: Brain },
+    { name: 'IT Services' href: '/it-services' icon: Cloud },
+    { name: 'About Us' href: '/about' icon: Users },
+    { name: 'Contact' href: '/contact' icon: Phone },
+    { name: 'Blog' href: '/blog' icon: Code }
   ];
 
   const popularServices = [
-    { name: 'AI Marketing', href: '/ai-marketing', icon: Target },
-    { name: 'AI Automation', href: '/ai-automation', icon: Zap },
-    { name: 'Cybersecurity', href: '/cybersecurity', icon: Shield },
-    { name: 'Cloud Migration', href: '/cloud-migration', icon: Cloud },
-    { name: 'Case Studies', href: '/case-studies', icon: BarChart },
-    { name: 'Consultation', href: '/consultation', icon: Phone }
+    { name: 'AI Marketing' href: '/ai-marketing' icon: Target },
+    { name: 'AI Automation' href: '/ai-automation' icon: Zap },
+    { name: 'Cybersecurity' href: '/cybersecurity' icon: Shield },
+    { name: 'Cloud Migration' href: '/cloud-migration' icon: Cloud },
+    { name: 'Case Studies' href: '/case-studies' icon: BarChart },
+    { name: 'Consultation' href: '/consultation' icon: Phone }
   ];
 
   return (
@@ -47,7 +47,7 @@ export default function NotFoundPage() {
               <input
                 type="text"
                 placeholder="Search our website..."
-                className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 transition-colors"
+                className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white focus: outline-none focus:border-cyan-400 transition-colors"
               />
             </div>
           </div>
@@ -55,12 +55,12 @@ export default function NotFoundPage() {
           {/* Quick Links */}
           <div className="mb-12">
             <h3 className="text-2xl font-bold text-white mb-6">Quick Links</h3>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-              {quickLinks.map((link, index) => (
+            <div className="grid grid-cols-2 md: grid-cols-3 gap-4">
+              {quickLinks.map((link index) => (
                 <a
                   key={index}
                   href={link.href}
-                  className="flex items-center space-x-3 p-4 bg-slate-800/50 rounded-lg hover:bg-slate-700/50 transition-all duration-300 group"
+                  className="flex items-center space-x-3 p-4 bg-slate-800/50 rounded-lg hover: bg-slate-700/50 transition-all duration-300 group"
                 >
                   <link.icon className="w-5 h-5 text-cyan-400 group-hover:text-cyan-300" />
                   <span className="text-white group-hover:text-cyan-300">{link.name}</span>
@@ -72,12 +72,12 @@ export default function NotFoundPage() {
           {/* Popular Services */}
           <div className="mb-12">
             <h3 className="text-2xl font-bold text-white mb-6">Popular Services</h3>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-              {popularServices.map((service, index) => (
+            <div className="grid grid-cols-2 md: grid-cols-3 gap-4">
+              {popularServices.map((service index) => (
                 <a
                   key={index}
                   href={service.href}
-                  className="flex items-center space-x-3 p-4 bg-slate-800/50 rounded-lg hover:bg-slate-700/50 transition-all duration-300 group"
+                  className="flex items-center space-x-3 p-4 bg-slate-800/50 rounded-lg hover: bg-slate-700/50 transition-all duration-300 group"
                 >
                   <service.icon className="w-5 h-5 text-purple-400 group-hover:text-purple-300" />
                   <span className="text-white group-hover:text-purple-300">{service.name}</span>
@@ -92,7 +92,7 @@ export default function NotFoundPage() {
             <p className="text-gray-300 mb-6">
               Our team is here to help you find what you're looking for.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <a
                 href="/contact"
                 className="bg-cyan-500 text-white px-6 py-3 rounded-lg font-bold hover:bg-cyan-600 transition-colors inline-flex items-center"
@@ -114,7 +114,7 @@ export default function NotFoundPage() {
           <div>
             <a
               href="/"
-              className="inline-flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors"
+              className="inline-flex items-center space-x-2 text-cyan-400 hover: text-cyan-300 transition-colors"
             >
               <ArrowLeft className="w-5 h-5" />
               <span>Back to Home</span>

@@ -9,7 +9,7 @@ const DocsPage: React.FC = () => {
     <>
       <Helmet>
         <title>Documentation - Zion Tech Group</title>
-        <meta name="description" content="Documentation for Zion Tech Group services. Find guides, tutorials, and API references." />
+        <meta name="description" content="Documentation for Zion Tech Group services. Find guides tutorials, and API references." />
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
@@ -18,7 +18,7 @@ const DocsPage: React.FC = () => {
         <main className="pt-20">
           <div className="container mx-auto px-4 py-16">
             <div className="max-w-4xl mx-auto">
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
+              <h1 className="text-4xl md: text-5xl font-bold text-gray-900 mb-8">
                 Documentation
               </h1>
               

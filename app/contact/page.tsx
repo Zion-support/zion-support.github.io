@@ -4,25 +4,25 @@ import { Phone, Mail, MapPin, Clock, Send, CheckCircle, AlertCircle, Calendar, U
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
-const Navigation = lazy(() => import('../components/Navigation'));
-const Footer = lazy(() => import('../components/Footer'));
+const Navigation = lazy(() => import('../components/Navigation');
+const Footer = lazy(() => import('../components/Footer');
 
 const ContactPage: React.FC = React.memo(() => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    phone: '',
-    service: '',
-    budget: '',
-    message: '',
-    urgency: 'normal',
+  const [formData setFormData] = useState({
+    name: ', '
+    email: ''
+    company: ', '
+    phone: ''
+    service: ', '
+    budget: ''
+    message: ', '
+    urgency: 'normal'
     preferredContact: 'email'
-  });
+  };
   
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-  const [selectedDate, setSelectedDate] = useState('');
+  const [selectedDate, setSelectedDate] = useState(', ');
   const [selectedTime, setSelectedTime] = useState('');
 
   const services = [
@@ -46,28 +46,28 @@ const ContactPage: React.FC = React.memo(() => {
   ];
 
   const urgencyLevels = [
-    { value: 'urgent', label: 'Urgent (Within 1 week)', color: 'text-red-400' },
-    { value: 'high', label: 'High (Within 2 weeks)', color: 'text-orange-400' },
-    { value: 'normal', label: 'Normal (Within 1 month)', color: 'text-yellow-400' },
-    { value: 'low', label: 'Low (Flexible timeline)', color: 'text-green-400' }
+    { value: 'urgent' label: 'Urgent (Within 1 week)' color: 'text-red-400' },
+    { value: 'high' label: 'High (Within 2 weeks)' color: 'text-orange-400' },
+    { value: 'normal' label: 'Normal (Within 1 month)' color: 'text-yellow-400' },
+    { value: 'low' label: 'Low (Flexible timeline)' color: 'text-green-400' }
   ];
 
   const timeSlots = [
-    '9:00 AM - 10:00 AM',
-    '10:00 AM - 11:00 AM',
-    '11:00 AM - 12:00 PM',
-    '1:00 PM - 2:00 PM',
-    '2:00 PM - 3:00 PM',
-    '3:00 PM - 4:00 PM',
-    '4:00 PM - 5:00 PM'
+    '9: 00 AM - 10:00 AM',
+    '10: 00 AM - 11:00 AM',
+    '11: 00 AM - 12:00 PM',
+    '1: 00 PM - 2:00 PM',
+    '2: 00 PM - 3:00 PM',
+    '3: 00 PM - 4:00 PM',
+    '4: 00 PM - 5:00 PM'
   ];
 
-  const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
+  const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement> => {
+    const { name value } = e.target;
     setFormData(prev => ({
       ...prev,
       [name]: value
-    }));
+    };
   }, []);
 
   const handleSubmit = useCallback(async (e: React.FormEvent) => {
@@ -75,7 +75,7 @@ const ContactPage: React.FC = React.memo(() => {
     setIsSubmitting(true);
     
     // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    await new Promise(resolve => setTimeout(resolve 2000);
     
     setIsSubmitting(false);
     setSubmitStatus('success');
@@ -83,16 +83,16 @@ const ContactPage: React.FC = React.memo(() => {
     // Reset form after successful submission
     setTimeout(() => {
       setFormData({
-        name: '',
-        email: '',
-        company: '',
-        phone: '',
-        service: '',
-        budget: '',
-        message: '',
-        urgency: 'normal',
+        name: ', '
+        email: ''
+        company: ', '
+        phone: ''
+        service: ', '
+        budget: ''
+        message: ', '
+        urgency: 'normal'
         preferredContact: 'email'
-      });
+      };
       setSubmitStatus('idle');
     }, 3000);
   };
@@ -100,7 +100,7 @@ const ContactPage: React.FC = React.memo(() => {
   const contactInfo = {
     phone: '(302) 464-0950',
     email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown, DE 19709',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
     hours: 'Mon-Fri 9AM-6PM EST'
   };
 
@@ -119,7 +119,7 @@ const ContactPage: React.FC = React.memo(() => {
           {/* Hero Section */}
           <section className="container mx-auto px-4 py-16">
             <div className="text-center mb-16">
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">
                 Get Your <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Free Consultation</span>
               </h1>
               <p className="text-xl text-cyan-400 mb-8 max-w-4xl mx-auto">
@@ -149,7 +149,7 @@ const ContactPage: React.FC = React.memo(() => {
                 )}
 
                 <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="grid grid-cols-1 md: grid-cols-2 gap-6">
                     <div>
                       <label htmlFor="name" className="block text-sm font-medium text-white mb-2">
                         Full Name *
@@ -161,7 +161,7 @@ const ContactPage: React.FC = React.memo(() => {
                         value={formData.name}
                         onChange={handleInputChange}
                         required
-                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-400"
                         placeholder="Your full name"
                       />
                     </div>
@@ -176,7 +176,7 @@ const ContactPage: React.FC = React.memo(() => {
                         value={formData.email}
                         onChange={handleInputChange}
                         required
-                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-400"
                         placeholder="your@email.com"
                       />
                     </div>
@@ -193,7 +193,7 @@ const ContactPage: React.FC = React.memo(() => {
                         name="company"
                         value={formData.company}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-400"
                         placeholder="Your company name"
                       />
                     </div>
@@ -207,7 +207,7 @@ const ContactPage: React.FC = React.memo(() => {
                         name="phone"
                         value={formData.phone}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-400"
                         placeholder="(555) 123-4567"
                       />
                     </div>
@@ -224,7 +224,7 @@ const ContactPage: React.FC = React.memo(() => {
                         value={formData.service}
                         onChange={handleInputChange}
                         required
-                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400"
+                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-cyan-400"
                       >
                         <option value="" className="bg-slate-800">Select a service</option>
                         {services.map((service) => (
@@ -243,7 +243,7 @@ const ContactPage: React.FC = React.memo(() => {
                         name="budget"
                         value={formData.budget}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400"
+                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-cyan-400"
                       >
                         <option value="" className="bg-slate-800">Select budget range</option>
                         {budgetRanges.map((range) => (
@@ -262,7 +262,7 @@ const ContactPage: React.FC = React.memo(() => {
                     <label htmlFor="urgency" className="block text-sm font-medium text-white mb-2">
                       Project Urgency
                     </label>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    <div className="grid grid-cols-1 md: grid-cols-2 gap-3">
                       {urgencyLevels.map((level) => (
                         <label key={level.value} className="flex items-center space-x-3 cursor-pointer">
                           <input
@@ -271,7 +271,7 @@ const ContactPage: React.FC = React.memo(() => {
                             value={level.value}
                             checked={formData.urgency === level.value}
                             onChange={handleInputChange}
-                            className="w-4 h-4 text-cyan-400 bg-white/10 border-white/20 focus:ring-cyan-400"
+                            className="w-4 h-4 text-cyan-400 bg-white/10 border-white/20 focus: ring-cyan-400"
                           />
                           <span className={`text-sm ${level.color}`}>{level.label}</span>
                         </label>
@@ -291,7 +291,7 @@ const ContactPage: React.FC = React.memo(() => {
                           value="email"
                           checked={formData.preferredContact === 'email'}
                           onChange={handleInputChange}
-                          className="w-4 h-4 text-cyan-400 bg-white/10 border-white/20 focus:ring-cyan-400"
+                          className="w-4 h-4 text-cyan-400 bg-white/10 border-white/20 focus: ring-cyan-400"
                         />
                         <span className="text-white">Email</span>
                       </label>
@@ -302,7 +302,7 @@ const ContactPage: React.FC = React.memo(() => {
                           value="phone"
                           checked={formData.preferredContact === 'phone'}
                           onChange={handleInputChange}
-                          className="w-4 h-4 text-cyan-400 bg-white/10 border-white/20 focus:ring-cyan-400"
+                          className="w-4 h-4 text-cyan-400 bg-white/10 border-white/20 focus: ring-cyan-400"
                         />
                         <span className="text-white">Phone</span>
                       </label>
@@ -320,15 +320,15 @@ const ContactPage: React.FC = React.memo(() => {
                       onChange={handleInputChange}
                       required
                       rows={5}
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400"
-                      placeholder="Tell us about your project, goals, and any specific requirements..."
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-400"
+                      placeholder="Tell us about your project goals, and any specific requirements..."
                     />
                   </div>
 
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full bg-gradient-to-r from-cyan-600 to-purple-600 text-white py-4 px-8 rounded-lg font-semibold text-lg hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+                    className="w-full bg-gradient-to-r from-cyan-600 to-purple-600 text-white py-4 px-8 rounded-lg font-semibold text-lg hover: from-cyan-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
                   >
                     {isSubmitting ? (
                       <>
@@ -358,7 +358,7 @@ const ContactPage: React.FC = React.memo(() => {
                       </div>
                       <div>
                         <h3 className="text-lg font-semibold text-white">Call Us</h3>
-                        <a href={`tel:${contactInfo.phone}`} className="text-cyan-400 hover:text-cyan-300 transition-colors">
+                        <a href={`tel: ${contactInfo.phone}`} className="text-cyan-400 hover: text-cyan-300 transition-colors">
                           {contactInfo.phone}
                         </a>
                         <p className="text-sm text-gray-400">Available 24/7 for urgent issues</p>
@@ -371,7 +371,7 @@ const ContactPage: React.FC = React.memo(() => {
                       </div>
                       <div>
                         <h3 className="text-lg font-semibold text-white">Email Us</h3>
-                        <a href={`mailto:${contactInfo.email}`} className="text-cyan-400 hover:text-cyan-300 transition-colors">
+                        <a href={`mailto: ${contactInfo.email}`} className="text-cyan-400 hover: text-cyan-300 transition-colors">
                           {contactInfo.email}
                         </a>
                         <p className="text-sm text-gray-400">We respond within 24 hours</p>
@@ -408,7 +408,7 @@ const ContactPage: React.FC = React.memo(() => {
                   
                   <div className="space-y-4">
                     <a
-                      href="tel:+13024640950"
+                      href="tel: +13024640950"
                       className="w-full bg-gradient-to-r from-cyan-600 to-purple-600 text-white py-4 px-6 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
                     >
                       <Phone className="w-5 h-5 mr-2" />
@@ -482,7 +482,7 @@ const ContactPage: React.FC = React.memo(() => {
                     onChange={handleInputChange}
                     required
                     rows={4}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="Tell us about your project or question..."
                   />
                 </div>
@@ -505,7 +505,7 @@ const ContactPage: React.FC = React.memo(() => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white font-semibold py-3 px-6 rounded-lg transition-colors flex items-center justify-center space-x-2"
+                  className="w-full bg-blue-600 hover: bg-blue-700 disabled:bg-blue-400 text-white font-semibold py-3 px-6 rounded-lg transition-colors flex items-center justify-center space-x-2"
                 >
                   {isSubmitting ? (
                     <>
@@ -526,7 +526,7 @@ const ContactPage: React.FC = React.memo(() => {
           {/* CTA Section */}
           <section className="container mx-auto px-4 py-16">
             <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-lg p-12 text-center">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
                 Ready to Transform Your Business?
               </h2>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">

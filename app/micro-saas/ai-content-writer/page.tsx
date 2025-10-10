@@ -9,8 +9,8 @@ export default function AIContentWriterPage() {
 
   const features = [
     {
-      category: 'Content Generation',
-      items: [,
+      category: 'Content Generation'
+      items: [
         'GPT-4 powered content creation',
         'Blog posts and articles',
         'Social media content',
@@ -22,8 +22,8 @@ export default function AIContentWriterPage() {
       ]
     },
     {
-      category: 'SEO & Optimization',
-      items: [,
+      category: 'SEO & Optimization'
+      items: [
         'Keyword research and integration',
         'SEO score optimization',
         'Meta descriptions and titles',
@@ -35,8 +35,8 @@ export default function AIContentWriterPage() {
       ]
     },
     {
-      category: 'Brand & Customization',
-      items: [,
+      category: 'Brand & Customization'
+      items: [
         'Brand voice training',
         'Tone and style customization',
         'Industry-specific templates',
@@ -48,8 +48,8 @@ export default function AIContentWriterPage() {
       ]
     },
     {
-      category: 'Analytics & Insights',
-      items: [,
+      category: 'Analytics & Insights'
+      items: [
         'Content performance tracking',
         'Engagement metrics analysis',
         'ROI measurement',
@@ -66,9 +66,9 @@ export default function AIContentWriterPage() {
     {
       name: 'Starter'
       price: 49;
-      period: 'month',
-      description: 'Perfect for small businesses and freelancers',
-      features: [,
+      period: 'month'
+      description: 'Perfect for small businesses and freelancers'
+      features: [
         '10,000 words per month',
         'Basic SEO optimization',
         '5 brand voice profiles',
@@ -81,9 +81,9 @@ export default function AIContentWriterPage() {
     {
       name: 'Professional'
       price: 99;
-      period: 'month',
-      description: 'Ideal for growing businesses and marketing teams',
-      features: [,
+      period: 'month'
+      description: 'Ideal for growing businesses and marketing teams'
+      features: [
         '50,000 words per month',
         'Advanced SEO optimization',
         'Unlimited brand voice profiles',
@@ -99,8 +99,8 @@ export default function AIContentWriterPage() {
       name: 'Enterprise'
       price: 199;
       period: 'month'
-      description: 'For large organizations with high content needs',
-      features: [,
+      description: 'For large organizations with high content needs'
+      features: [
         'Unlimited words',
         'Full SEO suite',
         'Custom integrations',
@@ -116,25 +116,25 @@ export default function AIContentWriterPage() {
 
   const testimonials = [
     {
-      name: 'Sarah Johnson',
-      company: 'TechStart Inc.',
-      role: 'Marketing Director',
-      content: 'AI Content Writer Pro has revolutionized our content strategy. We\'ve increased our blog traffic by 300% and reduced content creation time by 70%.',
-      rating: 5;
+    name: 'Sarah Johnson',
+    company: 'TechStart Inc.',
+    role: 'Marketing Director',
+    content: 'AI Content Writer Pro has revolutionized our content strategy. We\'ve increased our blog traffic by 300% and reduced content creation time by 70%.',
+    rating: 5;,
     },
     {
-      name: 'Michael Chen',
-      company: 'Digital Marketing Agency',
-      role: 'Content Manager',
-      content: 'The SEO optimization features are incredible. Our content now ranks higher and drives more qualified leads than ever before.',
-      rating: 5;
+    name: 'Michael Chen',
+    company: 'Digital Marketing Agency',
+    role: 'Content Manager',
+    content: 'The SEO optimization features are incredible. Our content now ranks higher and drives more qualified leads than ever before.',
+    rating: 5;,
     },
     {
-      name: 'Emily Rodriguez',
-      company: 'E-commerce Store',
-      role: 'Founder',
-      content: 'As a solo entrepreneur, this tool has been a game-changer. I can now produce professional-quality content at scale without a team.',
-      rating: 5;
+    name: 'Emily Rodriguez',
+    company: 'E-commerce Store',
+    role: 'Founder',
+    content: 'As a solo entrepreneur this tool has been a game-changer. I can now produce professional-quality content at scale without a team.',
+    rating: 5;,
     }
   ];
 
@@ -146,7 +146,7 @@ export default function AIContentWriterPage() {
       <main className="relative z-10 pt-20">{/* Hero Section */}</main>
         <section className="py-20 px-4 text-center">
           <div className="max-w-6xl mx-auto"></section>
-            <div className="text-6xl mb-6">✍️</div><h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text cyber-text">AI Content Writer Pro</h1><p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium cyber-glow">Advanced AI-powered content creation platform</p><p className="text-base sm:text-lg text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed">Transform your content strategy with our cutting-edge AI technology. Generate high-quality,</p>
+            <div className="text-6xl mb-6">✍️</div><h1 className="text-4xl md: text-6xl font-bold text-white mb-6 neon-text cyber-text">AI Content Writer Pro</h1><p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium cyber-glow">Advanced AI-powered content creation platform</p><p className="text-base sm:text-lg text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed">Transform your content strategy with our cutting-edge AI technology. Generate high-quality</p>
               SEO-optimized content at scale while maintaining your unique brand voice.</p>
       <main className="relative z-10 pt-20">
         {/* Hero Section */}
@@ -156,10 +156,10 @@ export default function AIContentWriterPage() {
             <h1 className="text-4xl md: text-6xl font-bold text-white mb-6 neon-text cyber-text">
               AI Content Writer Pro;
             </h1>)
-            <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium cyber-glow">)
+            <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium cyber-glow">
               Advanced AI-powered content creation platform;)
             </p>)
-            <p className="text-base sm:text-lg text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed">)
+            <p className="text-base sm:text-lg text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed">
               Transform your content strategy with our cutting-edge AI technology. Generate high-quality)
               SEO-optimized content at scale while maintaining your unique brand voice.
             </p>
@@ -185,7 +185,7 @@ export default function AIContentWriterPage() {
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
               >
                 Watch Demo;
-              </a>,
+              </a>
             </div>,
 ,
             {/* Key Stats */}
@@ -232,7 +232,7 @@ export default function AIContentWriterPage() {
                   className={`px-6 py-3 rounded-lg transition-all duration-300 capitalize ${
                     activeTab === tab;
                       ? 'bg-cyan-400 text-slate-900 font-semibold'}
-                      : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 hover:text-white'}
+                      : 'bg-slate-800/50 text-gray-300 hover: bg-slate-700/50 hover:text-white'}
                   }`}
                 ></button>
                   {tab}</button>
@@ -247,7 +247,7 @@ export default function AIContentWriterPage() {
           <div className="max-w-6xl mx-auto">{activeTab === 'overview' && (</div>
               <div className="space-y-16">
                 <div className="text-center">
-                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">Why Choose AI Content Writer Pro?<p className="text-lg text-gray-300 max-w-3xl mx-auto">Our platform combines the power of GPT-4 with advanced SEO optimization and brand customization</p>
+                  <h2 className="text-3xl md: text-4xl font-bold text-white mb-6 neon-text">Why Choose AI Content Writer Pro?<p className="text-lg text-gray-300 max-w-3xl mx-auto">Our platform combines the power of GPT-4 with advanced SEO optimization and brand customization</p>
           <div className="max-w-6xl mx-auto">{activeTab === 'overview' && (</section>
               <div className="space-y-16"></div>
                 <div className="text-center"></div>
@@ -274,37 +274,37 @@ export default function AIContentWriterPage() {
                   <div className="cyber-card hologram-card p-6"></div>
                     <div className="text-4xl mb-4">⚡</div><h3 className="text-xl font-bold text-white mb-4">Scale Efficiently</h3><p className="text-gray-300">Produce 10x more content in the same time while maintaining quality and consistency across all channels.</p>
                     </p>
-                  </div>,
+                  </div>
                 </div>,
               </div>)}
 
             {activeTab === 'features' && (
               <div className="space-y-16">
                 <div className="text-center">
-                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">Comprehensive Feature Set<p className="text-lg text-gray-300 max-w-3xl mx-auto">Everything you need to create, optimize, and manage content at scale.</p>
+                  <h2 className="text-3xl md: text-4xl font-bold text-white mb-6 neon-text">Comprehensive Feature Set<p className="text-lg text-gray-300 max-w-3xl mx-auto">Everything you need to create optimize, and manage content at scale.</p>
                   <h2 className="text-3xl md: text-4xl font-bold text-white mb-6 neon-text">
                     Comprehensive Feature Set;
-                  </h2>,
+                  </h2>
                   <p className="text-lg text-gray-300 max-w-3xl mx-auto">,
                     Everything you need to create, optimize, and manage content at scale.
               <div className="space-y-16"></div>
                 <div className="text-center"></div>
-                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">Comprehensive Feature Set</h2><p className="text-lg text-gray-300 max-w-3xl mx-auto">Everything you need to create, optimize, and manage content at scale.</p>
+                  <h2 className="text-3xl md: text-4xl font-bold text-white mb-6 neon-text">Comprehensive Feature Set</h2><p className="text-lg text-gray-300 max-w-3xl mx-auto">Everything you need to create optimize, and manage content at scale.</p>
                   </p>
                 </div>
 
                 {features.map((category, index) => (
                   <div key={index} className="cyber-card hologram-card p-8">
-                    <h3 className="text-2xl font-bold text-white mb-6 text-center neon-text">{category.category}<div className="grid grid-cols-1 md:grid-cols-2 gap-4">{category.items.map((item, itemIndex) => (</div>
+                    <h3 className="text-2xl font-bold text-white mb-6 text-center neon-text">{category.category}<div className="grid grid-cols-1 md: grid-cols-2 gap-4">{category.items.map((item itemIndex) => (</div>
                     <h3 className="text-2xl font-bold text-white mb-6 text-center neon-text">
                       {category.category}
                     </h3>
-                    <div className="grid grid-cols-1 md: grid-cols-2 gap-4">,
+                    <div className="grid grid-cols-1 md: grid-cols-2 gap-4">
                       {category.items.map((item, itemIndex) => (
                         <div key={itemIndex} className="flex items-center space-x-3">
                           <span className="text-cyan-400 text-xl">✓<span className="text-gray-300">{item}</span>
                   <div key={index} className="cyber-card hologram-card p-8"></div>
-                    <h3 className="text-2xl font-bold text-white mb-6 text-center neon-text">{category.category}</h3><div className="grid grid-cols-1 md:grid-cols-2 gap-4">{category.items.map((item, itemIndex) => (</div>
+                    <h3 className="text-2xl font-bold text-white mb-6 text-center neon-text">{category.category}</h3><div className="grid grid-cols-1 md: grid-cols-2 gap-4">{category.items.map((item itemIndex) => (</div>
                         <div key={itemIndex} className="flex items-center space-x-3"></div>
                           <span className="text-cyan-400 text-xl">✓</span><span className="text-gray-300">{item}</span>
                         </div>
@@ -318,8 +318,8 @@ export default function AIContentWriterPage() {
             {activeTab === 'pricing' && (
               <div className="space-y-16">
                 <div className="text-center">
-                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">Simple, Transparent Pricing<p className="text-lg text-gray-300 max-w-3xl mx-auto">Choose the plan that fits your content needs. All plans include a 14-day free trial.<div className="grid grid-cols-1 md:grid-cols-3 gap-8">{pricingPlans.map((plan, index) => (<div
-                  <h2 className="text-3xl md: text-4xl font-bold text-white mb-6 neon-text">,
+                  <h2 className="text-3xl md: text-4xl font-bold text-white mb-6 neon-text">Simple Transparent Pricing<p className="text-lg text-gray-300 max-w-3xl mx-auto">Choose the plan that fits your content needs. All plans include a 14-day free trial.<div className="grid grid-cols-1 md: grid-cols-3 gap-8">{pricingPlans.map((plan index) => (<div
+                  <h2 className="text-3xl md: text-4xl font-bold text-white mb-6 neon-text">
                     Simple, Transparent Pricing;
                   </h2>
                   <p className="text-lg text-gray-300 max-w-3xl mx-auto">
@@ -327,15 +327,15 @@ export default function AIContentWriterPage() {
                   </p>
                 </div>
 
-                <div className="grid grid-cols-1 md: grid-cols-3 gap-8">,
+                <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
                   {pricingPlans.map((plan, index) => (
                     <div;
               <div className="space-y-16"></div>
                 <div className="text-center"></div>
-                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">Simple, Transparent Pricing</h2><p className="text-lg text-gray-300 max-w-3xl mx-auto">Choose the plan that fits your content needs. All plans include a 14-day free trial.</p><div className="grid grid-cols-1 md:grid-cols-3 gap-8">{pricingPlans.map((plan, index) => (</div><div
+                  <h2 className="text-3xl md: text-4xl font-bold text-white mb-6 neon-text">Simple Transparent Pricing</h2><p className="text-lg text-gray-300 max-w-3xl mx-auto">Choose the plan that fits your content needs. All plans include a 14-day free trial.</p><div className="grid grid-cols-1 md: grid-cols-3 gap-8">{pricingPlans.map((plan index) => (</div><div
                       key={index}
                       className={`cyber-card hologram-card p-8 ${}
-                        plan.popular ? 'ring-2 ring-cyan-400 scale-105' : ''}
+                        plan.popular ? 'ring-2 ring-cyan-400 scale-105' : ', '}
                       }`}
                     >{plan.popular && (</div>
                         <div className="text-center mb-6">
@@ -356,7 +356,7 @@ export default function AIContentWriterPage() {
                         ))}
                       <a
                         href={`/contact?service=ai-content-writer&plan=${plan.name.toLowerCase()}`}
-                        className="w-full bg-cyan-400 text-slate-900 py-3 px-4 rounded-lg font-semibold hover:bg-cyan-300 transition-all duration-300 text-center block"
+                        className="w-full bg-cyan-400 text-slate-900 py-3 px-4 rounded-lg font-semibold hover: bg-cyan-300 transition-all duration-300 text-center block"
                       >Start Free Trial</a>
                       </a>
                     </div>
@@ -367,7 +367,7 @@ export default function AIContentWriterPage() {
                         className="w-full bg-cyan-400 text-slate-900 py-3 px-4 rounded-lg font-semibold hover: bg-cyan-300 transition-all duration-300 text-center block"
                       >
                         Start Free Trial;
-                      </a>,
+                      </a>
                     </div>))}
                 </div>
 
@@ -376,7 +376,7 @@ export default function AIContentWriterPage() {
                 <div className="text-center"></div>
                   <p className="text-gray-300 mb-4">Need a custom plan? We offer enterprise solutions tailored to your specific needs.</p><a
                     href="/contact?service=ai-content-writer&plan=enterprise"
-                    className="text-cyan-400 hover:text-cyan-300 font-semibold"
+                    className="text-cyan-400 hover: text-cyan-300 font-semibold"
                   >Contact Sales →</a>
                   </a>
                 </div>
@@ -387,7 +387,7 @@ export default function AIContentWriterPage() {
                   <a;
                     href="/contact?service=ai-content-writer&plan=enterprise"
                     className="text-cyan-400 hover: text-cyan-300 font-semibold"
-                  >,
+                  >
                     Contact Sales →,
                   </a>,
                 </div>,
@@ -396,22 +396,22 @@ export default function AIContentWriterPage() {
             {activeTab === 'testimonials' && (
               <div className="space-y-16">
                 <div className="text-center">
-                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">What Our Customers Say<p className="text-lg text-gray-300 max-w-3xl mx-auto">Join thousands of satisfied customers who have transformed their content strategy.<div className="grid grid-cols-1 md:grid-cols-3 gap-8">{testimonials.map((testimonial, index) => (</div>
+                  <h2 className="text-3xl md: text-4xl font-bold text-white mb-6 neon-text">What Our Customers Say<p className="text-lg text-gray-300 max-w-3xl mx-auto">Join thousands of satisfied customers who have transformed their content strategy.<div className="grid grid-cols-1 md:grid-cols-3 gap-8">{testimonials.map((testimonial index) => (</div>
                   <h2 className="text-3xl md: text-4xl font-bold text-white mb-6 neon-text">
                     What Our Customers Say;
                   </h2>
                   <p className="text-lg text-gray-300 max-w-3xl mx-auto">
                     Join thousands of satisfied customers who have transformed their content strategy.
                   </p>
-                </div>,
+                </div>
 ,
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">,
+                <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
                   {testimonials.map((testimonial, index) => (
                     <div key={index} className="cyber-card hologram-card p-6">
                       <div className="flex mb-4">{[...Array(testimonial.rating)].map((_, i) => (<span key={i} className="text-yellow-400 text-xl">★</span>
               <div className="space-y-16"></div>
                 <div className="text-center"></div>
-                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">What Our Customers Say</h2><p className="text-lg text-gray-300 max-w-3xl mx-auto">Join thousands of satisfied customers who have transformed their content strategy.</p><div className="grid grid-cols-1 md:grid-cols-3 gap-8">{testimonials.map((testimonial, index) => (</div>
+                  <h2 className="text-3xl md: text-4xl font-bold text-white mb-6 neon-text">What Our Customers Say</h2><p className="text-lg text-gray-300 max-w-3xl mx-auto">Join thousands of satisfied customers who have transformed their content strategy.</p><div className="grid grid-cols-1 md:grid-cols-3 gap-8">{testimonials.map((testimonial index) => (</div>
                     <div key={index} className="cyber-card hologram-card p-6"></div>
                       <div className="flex mb-4">{[...Array(testimonial.rating)].map((_, i) => (</div><span key={i} className="text-yellow-400 text-xl">★</span>
                         ))}
@@ -428,7 +428,7 @@ export default function AIContentWriterPage() {
             {activeTab === 'faq' && (
               <div className="space-y-16">
                 <div className="text-center">
-                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">Frequently Asked Questions<div className="space-y-6">{[
+                  <h2 className="text-3xl md: text-4xl font-bold text-white mb-6 neon-text">Frequently Asked Questions<div className="space-y-6">{[
               <div className="space-y-16"></div>
                 <div className="text-center"></div>
                   <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">Frequently Asked Questions</h2><div className="space-y-6">{[
@@ -439,30 +439,30 @@ export default function AIContentWriterPage() {
                 </div>
 
                 <div className="space-y-6">
-                  {[,
+                  {[
                     {,
-                      question: "How does the AI content generation work?",
-                      answer: "Our platform uses GPT-4 technology combined with advanced prompts and your brand guidelines to generate high-quality content. You simply provide a topic, tone, and any specific requirements, and our AI creates content that matches your brand voice."
+                      question: "How does the AI content generation work?"
+                      answer: "Our platform uses GPT-4 technology combined with advanced prompts and your brand guidelines to generate high-quality content. You simply provide a topic tone, and any specific requirements, and our AI creates content that matches your brand voice."
                     },
                     {
-                      question: "Can I customize the AI to match my brand voice?",
-                      answer: "Yes! You can train the AI on your existing content to learn your brand voice, tone, and style. You can also create multiple brand profiles for different content types or audiences."
+                      question: "Can I customize the AI to match my brand voice?"
+                      answer: "Yes! You can train the AI on your existing content to learn your brand voice tone, and style. You can also create multiple brand profiles for different content types or audiences."
                     },
                     {
-                      question: "Is the content SEO-optimized?",
-                      answer: "Absolutely. Every piece of content is automatically optimized for SEO with keyword integration, meta descriptions, proper heading structure, and readability optimization. You can also specify target keywords for each piece of content."
+                      question: "Is the content SEO-optimized?"
+                      answer: "Absolutely. Every piece of content is automatically optimized for SEO with keyword integration meta descriptions, proper heading structure, and readability optimization. You can also specify target keywords for each piece of content."
                     },
                     {
-                      question: "What content types can I create?",
-                      answer: "You can create blog posts, articles, social media content, email campaigns, product descriptions, press releases, white papers, ad copy, landing pages, and much more. We also support multiple languages."
+                      question: "What content types can I create?"
+                      answer: "You can create blog posts articles, social media content, email campaigns, product descriptions, press releases, white papers, ad copy, landing pages, and much more. We also support multiple languages."
                     },
                     {
-                      question: "How accurate is the content?",
-                      answer: "Our AI generates highly accurate and relevant content, but we always recommend reviewing and editing the output to ensure it meets your specific needs. The platform also includes plagiarism detection and fact-checking tools."
+                      question: "How accurate is the content?"
+                      answer: "Our AI generates highly accurate and relevant content but we always recommend reviewing and editing the output to ensure it meets your specific needs. The platform also includes plagiarism detection and fact-checking tools."
                     },
                     {
-                      question: "Can I collaborate with my team?",
-                      answer: "Yes! The Professional and Enterprise plans include team collaboration features, approval workflows, and shared brand guidelines. You can assign roles and permissions to team members."
+                      question: "Can I collaborate with my team?"
+                      answer: "Yes! The Professional and Enterprise plans include team collaboration features approval workflows, and shared brand guidelines. You can assign roles and permissions to team members."
                     }</div>
                   ].map((faq, index) => (</div>
                     <div key={index} className="cyber-card hologram-card p-6"></div>
@@ -478,7 +478,7 @@ export default function AIContentWriterPage() {
         {/* CTA Section */}
         <section className="py-20 px-4 bg-slate-800/30">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">Ready to Transform Your Content Strategy?<p className="text-lg text-gray-300 mb-8">Start your free trial today and experience the power of AI-driven content creation.</p>
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-6 neon-text">Ready to Transform Your Content Strategy?<p className="text-lg text-gray-300 mb-8">Start your free trial today and experience the power of AI-driven content creation.</p>
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-6 neon-text">
               Ready to Transform Your Content Strategy?
             </h2>
@@ -513,6 +513,6 @@ export default function AIContentWriterPage() {
       </main>
 
       <Footer />
-      <ScrollToTop />,
+      <ScrollToTop />
     </div>);
 }

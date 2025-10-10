@@ -9,8 +9,8 @@ export const preloadCriticalResources = useCallback((...args) => {}
   if (typeof window === 'undefined') return
   // Preload critical fonts
   const fontPreloads = [
-    'https: //fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap'
-    'https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap'
+    'https: //fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap',
+    'https: //fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap'
   ]
   fontPreloads.forEach(href => {)
   fontPreloads.forEach(href => {)}
@@ -20,7 +20,7 @@ export const preloadCriticalResources = useCallback((...args) => {}
     link.href = href;
     link.crossOrigin = 'anonymous',
     document.head.appendChild(link)}
-export const preloadCriticalResources = () => {/* TODO: Fix JSX expression */}
+export const preloadCriticalResources = () => {}
   })
   // Preload critical images;
   const criticalImages = [
@@ -93,27 +93,27 @@ export const optimizeImages = useCallback((...args) => {}
             img.removeAttribute('data-src')
             imageObserver.unobserve(img)}
   ];
-  criticalImages.forEach(src => {/* TODO: Fix JSX expression */})
+  criticalImages.forEach(src => {}
   })
 }
 export const preloadRoute = (rout)
-  e: string) => {/* TODO: Fix JSX expression */}
+  e: string) => {}
   };
   const resources = routeResources[route as keyof typeof routeResources]
-  if (resources) {/* TODO: Fix JSX expression */}
+  if (resources) {}
     })
   }
 }
-export const optimizeImages = () => {/* TODO: Fix JSX expression */}
+export const optimizeImages = () => {}
   })
   // Add intersection observer for lazy loading;
-  if ('IntersectionObserver' in window) {/* TODO: Fix JSX expression */}
+  if ('IntersectionObserver' in window) {}
           }
         }
       })
     })
     const lazyImages = document.querySelectorAll('img[data-src]')
-    lazyImages.forEach(img => imageObserver.observe(img))
+    lazyImages.forEach(img => imageObserver.observe(img)
   }
 }
 export const optimizeThirdPartyScripts = useCallback((...args) => {
@@ -121,7 +121,7 @@ export const optimizeThirdPartyScripts = useCallback((...args) => {
   // Defer non-critical scripts;
   const scripts = document.querySelectorAll('script[data-defer]')
   scripts.forEach(script => {)
-    script.setAttribute('defer', '')}
+    script.setAttribute('defer', ', ')}
   })
   // Load analytics after page load;
   if (document.readyState === 'loading') {
@@ -131,7 +131,7 @@ export const optimizeThirdPartyScripts = useCallback((...args) => {}
   // Defer non-critical scripts
   const scripts = document.querySelectorAll('script[data-defer]')
   scripts.forEach(script => {)}
-    script.setAttribute('defer', '')}
+    script.setAttribute('defer', ', ')}
   })
   // Load analytics after page load
   if (document.readyState === 'loading') {}
@@ -148,15 +148,15 @@ const loadAnalytics = useCallback((...args) => {}
   // Load Google Analytics after page load
   const gaScript = document.createElement('script')
   gaScript.async = true;
-  gaScript['src'] = 'https: //www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID',
+  gaScript['src'] = 'https: //www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID'
   document.head.appendChild(gaScript)}
-export const optimizeThirdPartyScripts = () => {/* TODO: Fix JSX expression */}
+export const optimizeThirdPartyScripts = () => {}
   })
   // Load analytics after page load;
-  if (document.readyState === 'loading') {/* TODO: Fix JSX expression */}
+  if (document.readyState === 'loading') {}
     })
-  } else {/* TODO: Fix JSX expression */}
+  } else {}
   }
 }
-const loadAnalytics = () => {/* TODO: Fix JSX expression */}
+const loadAnalytics = () => {}
 }

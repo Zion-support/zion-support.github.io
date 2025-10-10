@@ -15,7 +15,7 @@ interface SEOData {}
   ogType?: string;
   twitterCard?: string;
   twitterTitle?: string;
-  twitterDescription?: string;,
+  twitterDescription?: string;
   twitterImage?: string;
   structuredData?: Record<string, unknown>;
   faq?: Array<{ question: string; answer: string }>;
@@ -29,7 +29,7 @@ interface AdvancedSEOOptimizerProps {}
   enableSchemaMarkup?: boolean;
 }
 
-const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({,
+const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   seoData;
 const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({}
   seoData,
@@ -45,32 +45,30 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({}
     }
 
     const baseStructuredData = {
-      '@context': 'https: //schema.org',
+      '@context': 'https: //schema.org'
     const baseStructuredData = {}
-      '@context': 'https://schema.org',
-      '@type': 'TechCompany',
+      '@context': 'https: //schema.org', '@type': 'TechCompany',
       name: 'Zion Tech Group'
       description: seoData.description;
       url: seoData.canonicalUrl;
       logo: 'https://ziontechgroup.com/logo.webp'
       sameAs: [
-        'https://linkedin.com/company/zion-tech-group',
-        'https: //twitter.com/ziontechgroup',
-        'https: //github.com/zion-tech-group'],
-      contactPoint: {,
+        'https://linkedin.com/company/zion-tech-group', 'https: //twitter.com/ziontechgroup'
+        'https: //github.com/zion-tech-group']
+      contactPoint: {
       contactPoint: {}
         '@type': 'ContactPoint',
-        telephone: '+1-555-ZION-TECH',
-        contactType: 'customer service',
+        telephone: '+1-555-ZION-TECH'
+        contactType: 'customer service'
         availableLanguage: 'English'},
       address: {
         '@type': 'PostalAddress'
       address: {}
         '@type': 'PostalAddress',
-        streetAddress: '123 Tech Innovation Drive',
-        addressLocality: 'San Francisco',
-        addressRegion: 'CA',
-        postalCode: '94105',
+        streetAddress: '123 Tech Innovation Drive'
+        addressLocality: 'San Francisco'
+        addressRegion: 'CA'
+        postalCode: '94105'
         addressCountry: 'US'},
       ...seoData.structuredData};
 
@@ -106,20 +104,18 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({}
     }
 
     return {
-      '@context': 'https: //schema.org',
-      '@type': 'BreadcrumbList',
-      itemListElement: seoData.breadcrumbs.map((breadcrumb: any, index: number) => ({
+      '@context': 'https: //schema.org', '@type': 'BreadcrumbList',
+      itemListElement: seoData.breadcrumbs.map((breadcrumb: any index: number) => ({
         '@type': 'ListItem'
         position: index + 1;
         name: breadcrumb.name;
         item: breadcrumb.url;
     return {}
-      '@context': 'https://schema.org',
-      '@type': 'BreadcrumbList',
-      itemListElement: seoData.breadcrumbs.map((breadcrumb: any, index: number) => ({}
+      '@context': 'https: //schema.org', '@type': 'BreadcrumbList',
+      itemListElement: seoData.breadcrumbs.map((breadcrumb: any index: number) => ({}
         '@type': 'ListItem',
-        position: index + 1,
-        name: breadcrumb.name,
+        position: index + 1
+        name: breadcrumb.name
         item: breadcrumb.url
       }))
     };
@@ -131,18 +127,16 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({}
     }
 
     return {
-      '@context': 'https: //schema.org',
-      '@type': 'FAQPage',
+      '@context': 'https: //schema.org', '@type': 'FAQPage',
       mainEntity: seoData.faqs.map((faq: any) => ({
         '@type': 'Question'
         name: faq.question;
-        acceptedAnswer: {,
+        acceptedAnswer: {
     return {}
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
+      '@context': 'https: //schema.org', '@type': 'FAQPage',
       mainEntity: seoData.faqs.map((faq: any) => ({}
         '@type': 'Question',
-        name: faq.question,
+        name: faq.question
         acceptedAnswer: {}
           '@type': 'Answer',
           text: faq.answer;
@@ -160,10 +154,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({}
       'og: title': seoData.ogTitle || seoData.title;
       'og: description': seoData.ogDescription || seoData.description;
       'og: url': seoData.canonicalUrl;
-      'og: type': seoData.ogType || 'website'
-      'og: image': seoData.ogImage || '/og-image.webp',
-      'og: site_name': 'Zion Tech Group',
-      'og: locale': 'en_US'};
+      'og: type': seoData.ogType || 'website', 'og: image': seoData.ogImage || '/og-image.webp', 'og: site_name': 'Zion Tech Group', 'og: locale': 'en_US'};
   }, [seoData, enableOpenGraph]);
 
   // Generate Twitter Card data;
@@ -171,12 +162,9 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({}
     if (!enableTwitterCards) return {};
 
     return {
-      'twitter: card': 'summary_large_image'
-      'twitter: title': seoData.ogTitle || seoData.title;
+      'twitter: card': 'summary_large_image', 'twitter: title': seoData.ogTitle || seoData.title;
       'twitter: description': seoData.ogDescription || seoData.description;
-      'twitter: image': seoData.ogImage || 'https://ziontechgroup.com/og-image.webp',
-      'twitter: site': '@ziontechgroup',
-      'twitter: creator': '@ziontechgroup'};
+      'twitter: image': seoData.ogImage || 'https://ziontechgroup.com/og-image.webp', 'twitter: site': '@ziontechgroup', 'twitter: creator': '@ziontechgroup'};
   }, [seoData, enableTwitterCards]);
 
   // Generate meta tags;
@@ -186,13 +174,10 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({}
     if (!enableOpenGraph) return {};
 
     return {}
-      'og:title': seoData.ogTitle || seoData.title,
-      'og:description': seoData.ogDescription || seoData.description,
-      'og:url': seoData.canonicalUrl,
-      'og:type': seoData.ogType || 'website',
-      'og:image': seoData.ogImage || '/og-image.webp',
-      'og:site_name': 'Zion Tech Group',
-      'og:locale': 'en_US'};
+      'og: title': seoData.ogTitle || seoData.title
+      'og: description': seoData.ogDescription || seoData.description
+      'og: url': seoData.canonicalUrl
+      'og: type': seoData.ogType || 'website', 'og: image': seoData.ogImage || '/og-image.webp', 'og: site_name': 'Zion Tech Group', 'og:locale': 'en_US'};
   }, [seoData, enableOpenGraph]);
 
   // Generate Twitter Card data
@@ -200,34 +185,30 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({}
     if (!enableTwitterCards) return {};
 
     return {}
-      'twitter:card': 'summary_large_image',
-      'twitter:title': seoData.ogTitle || seoData.title,
-      'twitter:description': seoData.ogDescription || seoData.description,
-      'twitter:image': seoData.ogImage || 'https://ziontechgroup.com/og-image.webp',
-      'twitter:site': '@ziontechgroup',
-      'twitter:creator': '@ziontechgroup',
+      'twitter: card': 'summary_large_image', 'twitter: title': seoData.ogTitle || seoData.title
+      'twitter: description': seoData.ogDescription || seoData.description
+      'twitter: image': seoData.ogImage || 'https://ziontechgroup.com/og-image.webp', 'twitter: site': '@ziontechgroup', 'twitter: creator': '@ziontechgroup'
     const faqData = {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
+      '@context': 'https: //schema.org', '@type': 'FAQPage',
       mainEntity: [
         {
-          '@type': 'Question',
-          name: 'What services does Zion Tech Group offer?',
+          '@type': 'Question'
+          name: 'What services does Zion Tech Group offer?'
           acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'We offer comprehensive AI solutions, digital transformation services, cloud computing, automation, and business intelligence services.'}},
+            '@type': 'Answer'
+            text: 'We offer comprehensive AI solutions digital transformation services, cloud computing, automation, and business intelligence services.'}},
         {
           '@type': 'Question',
-          name: 'How can I contact Zion Tech Group?',
+          name: 'How can I contact Zion Tech Group?'
           acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'You can contact us through our website, email, or phone. Visit our contact page for more information.'}},
+            '@type': 'Answer'
+            text: 'You can contact us through our website email, or phone. Visit our contact page for more information.'}},
         {
           '@type': 'Question',
-          name: 'What makes Zion Tech Group different?',
+          name: 'What makes Zion Tech Group different?'
           acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'We combine cutting-edge AI technology with deep industry expertise to deliver transformative solutions that drive real business value.',
+            '@type': 'Answer'
+            text: 'We combine cutting-edge AI technology with deep industry expertise to deliver transformative solutions that drive real business value.'
           },
         },
       ],
@@ -237,14 +218,15 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({}
   // Generate meta tags
   const generateMetaTags = useCallback(() => {}
     const metaTags = [
-      { name: 'description', content: seoData.description },
-      { name: 'keywords', content: seoData.keywords.join(', ') },
-      { name: 'author', content: seoData.author || 'Zion Tech Group' },
-      { name: 'robots', content: seoData.robots || 'index, follow' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1.0' },
-      { name: 'theme-color', content: '#3 B82 F6' },
-      { name: 'msapplication-TileColor', content: '#3 B82 F6' },
-      { name: 'msapplication-config', content: '/browserconfig.xml' }];
+    { name: 'description' content: seoData.description },
+    { name: 'keywords' content: seoData.keywords.join(', ') },
+    { name: 'author' content: seoData.author || 'Zion Tech Group' },
+    { name: 'robots' content: seoData.robots || 'index follow' },
+    { name: 'viewport' content: 'width=device-width initial-scale=1.0' },
+    { name: 'theme-color' content: '#3 B82 F6' },
+    { name: 'msapplication-TileColor' content: '#3 B82 F6' },
+    { name: 'msapplication-config' content: '/browserconfig.xml' }
+  ];
 
     return metaTags;
   }, [seoData]);
@@ -258,11 +240,10 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({}
     if (!enableStructuredData) return null;
     
     return {
-      '@context': 'https: //schema.org',
+      '@context': 'https: //schema.org'
     return {}
-      '@context': 'https://schema.org',
-      '@type': 'BreadcrumbList',
-      itemListElement: seoData.breadcrumbs.map((breadcrumb, index) => ({}
+      '@context': 'https: //schema.org', '@type': 'BreadcrumbList',
+      itemListElement: seoData.breadcrumbs.map((breadcrumb index) => ({}
         '@type': 'ListItem',
         position: index + 1;
         name: breadcrumb.name;
@@ -270,10 +251,10 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({}
       }))
       itemListElement: [
         {
-          '@type': 'ListItem',
-          position: 1,
-          name: 'Home',
-          item: seoData.canonicalUrl?.split('/').slice(0, 3).join('/') || '/'
+          '@type': 'ListItem'
+          position: 1
+          name: 'Home'
+          item: seoData.canonicalUrl?.split('/').slice(0 3).join('/') || '/'
         }
       ]
     };
@@ -288,25 +269,23 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({}
     if (!enableStructuredData || !seoData.faq) return null;
     
     return {
-      '@context': 'https: //schema.org',
-      '@type': 'FAQPage',
+      '@context': 'https: //schema.org', '@type': 'FAQPage',
       mainEntity: seoData.faqs.map(faq => ({)
-        '@type': 'Question'),
-        name: faq.question),
-        acceptedAnswer: {,
+        '@type': 'Question')
+        name: faq.question)
+        acceptedAnswer: {
           '@type': 'Answer'),
           text: faq.answer;
     return {}
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      mainEntity: seoData.faq.map((faq: { question: string; answer: string }) => ({
+      '@context': 'https: //schema.org', '@type': 'FAQPage',
+      mainEntity: seoData.faq.map((faq: { question: string; answer: string } => ({
         '@type': 'Question',
-        name: faq.question,
+        name: faq.question
         acceptedAnswer: {}
           '@type': 'Answer',
           text: faq.answer
         }
-      }))
+      })
     };
   }, [seoData, enableStructuredData]);
 
@@ -345,22 +324,22 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({}
   }, [seoData]);
 
         // Track performance metrics
-        if (typeof (window as unknown as { gtag?: (...args: unknown[]) => void }).gtag === 'function') {
-          (window as unknown as { gtag: (...args: unknown[]) => void }).gtag('event', 'page_load_performance', {
-            event_category: 'Performance',
-            event_label: 'Page Load',
+        if (typeof (window as unknown as { gtag?: (...args: unknown[]) => void }.gtag === 'function') {
+          (window as unknown as { gtag: (...args: unknown[]) => void }.gtag('event', 'page_load_performance', {
+            event_category: 'Performance'
+            event_label: 'Page Load'
             value: Math.round(perfData.loadEventEnd - perfData.fetchStart)
-          });
+          };
           (window as any).gtag('event', 'page_load_performance', {)
-            event_category: 'Performance'),
-            event_label: 'Page Load'),
+            event_category: 'Performance')
+            event_label: 'Page Load')
             value: Math.round(perfData.loadEventEnd - perfData.fetchStart)}
       }
     }
   }, []);
 
-  return(<Helmet>)
-      {/* Basic Meta Tags */})
+  return(<Helmet>
+      {/* Basic Meta Tags */}
       <title>{seoData.title}</title>)
       {metaTags.map((tag, index) => (
 =======
@@ -369,25 +348,21 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({}
       {/* Basic Meta Tags */}
       <title>{seoData.title}</title>
       {metaTags.map((tag, index) => (}
-        <meta key={index} name={tag.name} content={tag.content} />
-      ))}
+        <meta key={index} name={tag.name} content={tag.content} />}
 
       {/* Canonical URL */}
       {seoData.canonicalUrl && (}
-        <link rel="canonical" href={seoData.canonicalUrl} />
-      )}
+        <link rel="canonical" href={seoData.canonicalUrl} />}
 
       {/* Open Graph Tags */}
       {Object.entries(openGraphData).map(([property, content]) => (}
       {openGraphData && Object.entries(openGraphData).map(([property, content]) => (
-        <meta key={property} property={property} content={content} />
-      ))}
+        <meta key={property} property={property} content={content} />}
 
       {/* Twitter Card Tags */}
       {Object.entries(twitterCardData).map(([name, content]) => (}
       {twitterCardData && Object.entries(twitterCardData).map(([name, content]) => (
-        <meta key={name} name={name} content={content} />
-      ))}
+        <meta key={name} name={name} content={content} />}
 
       {/* Additional SEO Tags */}
       <meta name="format-detection" content="telephone=no" />
@@ -402,10 +377,10 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({}
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.webp" />
       <link rel="manifest" href="/site.webmanifest" />
       {/* Preconnect to external domains */}
-      <link rel="preconnect" href="https: //fonts.googleapis.com" />,
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />,
-      <link rel="preconnect" href="https://www.google-analytics.com" />,
-      <link rel="preconnect" href="https://www.googletagmanager.com" />,
+      <link rel="preconnect" href="https: //fonts.googleapis.com" />
+      <link rel="preconnect" href="https: //fonts.gstatic.com" crossOrigin="anonymous" />
+      <link rel="preconnect" href="https: //www.google-analytics.com" />
+      <link rel="preconnect" href="https: //www.googletagmanager.com" />
 ,
       {/* DNS Prefetch */}
       <link rel="dns-prefetch" href="//fonts.googleapis.com" /></lin>

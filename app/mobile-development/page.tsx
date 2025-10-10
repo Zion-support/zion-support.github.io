@@ -4,8 +4,8 @@ import { Smartphone, Code, Zap, CheckCircle, Phone } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const MobileDevelopmentPage: React.FC = () => {,
-  const features = [,
+const MobileDevelopmentPage: React.FC = () => {
+  const features = [
     'iOS & Android Development',
     'Cross-platform Solutions',
     'UI/UX Design',
@@ -25,19 +25,19 @@ const MobileDevelopmentPage: React.FC = () => {,
 
   const services = [
     {
-      title: 'Native Apps',
-      description: 'High-performance native iOS and Android applications',
-      icon: Smartphone;
+    title: 'Native Apps',
+    description: 'High-performance native iOS and Android applications',
+    icon: Smartphone;,
     },
     {
-      title: 'Cross-platform',
-      description: 'React Native and Flutter apps for maximum reach',
-      icon: Code;
+    title: 'Cross-platform',
+    description: 'React Native and Flutter apps for maximum reach',
+    icon: Code;,
     },
     {
-      title: 'App Optimization',
-      description: 'Performance tuning and app store optimization',
-      icon: Zap;
+    title: 'App Optimization',
+    description: 'Performance tuning and app store optimization',
+    icon: Zap;,
     }
   ];
 
@@ -48,32 +48,32 @@ const MobileDevelopmentPage: React.FC = () => {,
 
       <main className="container mx-auto px-4 py-16 pt-24">{/* Header */}</main>
         <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse glitch" data-text="Mobile App Development">Mobile App Development<p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">Native and cross-platform mobile application development with cutting-edge technologies and exceptional user experience.<div className="text-2xl font-bold text-cyan-400 mb-8">Starting at $1,500/month</div>
+          <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse glitch" data-text="Mobile App Development">Mobile App Development<p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">Native and cross-platform mobile application development with cutting-edge technologies and exceptional user experience.<div className="text-2xl font-bold text-cyan-400 mb-8">Starting at $1500/month</div>
       <main className="container mx-auto px-4 py-16 pt-24">
         {/* Header */}
         <section className="text-center mb-16">
           <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse glitch" data-text="Mobile App Development">
             Mobile App Development;
           </h1>
-          <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">,
+          <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
             Native and cross-platform mobile application development with cutting-edge technologies and exceptional user experience.,
           </p>,
           <div className="text-2xl font-bold text-cyan-400 mb-8">Starting at $1,500/month</div>
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse glitch" data-text="Mobile App Development">Mobile App Development</h1><p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">Native and cross-platform mobile application development with cutting-edge technologies and exceptional user experience.</p><div className="text-2xl font-bold text-cyan-400 mb-8">Starting at $1,500/month</section>
+          <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse glitch" data-text="Mobile App Development">Mobile App Development</h1><p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">Native and cross-platform mobile application development with cutting-edge technologies and exceptional user experience.</p><div className="text-2xl font-bold text-cyan-400 mb-8">Starting at $1500/month</section>
         </section>
 
         {/* Features */}
         <section className="mb-16">
           <div className="cyber-card p-8">
-            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Development Features<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{features.map((feature, index) => (</div>
-            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">)
+            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Development Features<div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">{features.map((feature index) => (</div>
+            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
               Development Features;)
             </h2>)
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">),
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
               {features.map((feature, index) => (
                 <div key={index} className="flex items-center space-x-3">
           <div className="cyber-card p-8"></section>
-            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Development Features</h2><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{features.map((feature, index) => (</div>
+            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Development Features</h2><div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">{features.map((feature index) => (</div>
                 <div key={index} className="flex items-center space-x-3"></div>
                   <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
                   <span className="text-gray-300">{feature}</span>
@@ -86,16 +86,16 @@ const MobileDevelopmentPage: React.FC = () => {,
         {/* Benefits */}
         <section className="mb-16">
           <div className="cyber-card p-8">
-            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Proven Benefits<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{benefits.map((benefit, index) => (</div>
+            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Proven Benefits<div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">{benefits.map((benefit index) => (</div>
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
               Proven Benefits;
             </h2>
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">,
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
               {benefits.map((benefit, index) => (
                 <div key={index} className="text-center">
-                  <div className="text-3xl font-bold text-cyan-400 mb-2">{benefit.split(' ')[0]}<p className="text-gray-300 text-sm">{benefit}</p>
+                  <div className="text-3xl font-bold text-cyan-400 mb-2">{benefit.split(', ')[0]}<p className="text-gray-300 text-sm">{benefit}</p>
           <div className="cyber-card p-8"></section>
-            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Proven Benefits</h2><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{benefits.map((benefit, index) => (</div>
+            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Proven Benefits</h2><div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">{benefits.map((benefit index) => (</div>
                 <div key={index} className="text-center"></div>
                   <div className="text-3xl font-bold text-cyan-400 mb-2">{benefit.split(' ')[0]}</div><p className="text-gray-300 text-sm">{benefit}</p>
                 </div>
@@ -106,14 +106,14 @@ const MobileDevelopmentPage: React.FC = () => {,
 
         {/* Services */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Our Mobile Services<div className="grid grid-cols-1 md:grid-cols-3 gap-8">{services.map((service, index) => (</div>
+          <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Our Mobile Services<div className="grid grid-cols-1 md: grid-cols-3 gap-8">{services.map((service index) => (</div>
           <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
             Our Mobile Services;
           </h2>
-          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">,
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
             {services.map((service, index) => (
               <div key={index} className="cyber-card p-6 text-center">
-          <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Our Mobile Services</h2><div className="grid grid-cols-1 md:grid-cols-3 gap-8">{services.map((service, index) => (</section>
+          <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Our Mobile Services</h2><div className="grid grid-cols-1 md: grid-cols-3 gap-8">{services.map((service index) => (</section>
               <div key={index} className="cyber-card p-6 text-center"></div>
                 <service.icon className="w-12 h-12 text-pink-400 mx-auto mb-4" />
                 <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3><p className="text-gray-300">{service.description}</p>
@@ -151,7 +151,7 @@ const MobileDevelopmentPage: React.FC = () => {,
         </section>
       </main>
 
-      <Footer />,
+      <Footer />
     </div>);
 };
 

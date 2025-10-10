@@ -33,10 +33,10 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
 
       // Preload critical images
       const imagePreloads = [
-        '/og-image.jpg',
-        '/logo.png',
-        '/favicon.svg'
-      ];
+    '/og-image.jpg',
+    '/logo.png',
+    '/favicon.svg'
+  ];
 
       imagePreloads.forEach(image => {
         const link = document.createElement('link');
@@ -55,18 +55,18 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     setOptimizations([]);
     
     const optimizationsList = [
-      'Optimizing images...',
-      'Minifying CSS and JavaScript...',
-      'Enabling compression...',
-      'Caching static assets...',
-      'Lazy loading non-critical content...',
-      'Preloading critical resources...',
-      'Optimizing fonts...',
-      'Reducing bundle size...'
-    ];
+    'Optimizing images...',
+    'Minifying CSS and JavaScript...',
+    'Enabling compression...',
+    'Caching static assets...',
+    'Lazy loading non-critical content...',
+    'Preloading critical resources...',
+    'Optimizing fonts...',
+    'Reducing bundle size...'
+  ];
 
     for (let i = 0; i < optimizationsList.length; i++) {
-      await new Promise(resolve => setTimeout(resolve, 500));
+      await new Promise(resolve => setTimeout(resolve, 500);
       setOptimizations(prev => [...prev, optimizationsList[i]]);
     }
 
@@ -86,7 +86,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     if ('caches' in window) {
       caches.keys().then(names => {
         names.forEach(name => {
-          if (name.includes('old-') || name.includes('temp-')) {
+          if (name.includes('old-') || name.includes('temp-') {
             caches.delete(name);
           }
         });
@@ -109,7 +109,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         <button
           onClick={runOptimizations}
           disabled={isOptimizing}
-          className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed flex items-center"
+          className="bg-blue-600 text-white px-4 py-2 rounded-lg hover: bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed flex items-center"
         >
           <Zap className="h-4 w-4 mr-2" />
           {isOptimizing ? 'Optimizing...' : 'Optimize'}

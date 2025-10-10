@@ -5,8 +5,8 @@ import Footer from '../../components/Footer';
 import SEOOptimizer from '../../components/SEOOptimizer';
 import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Database, Navigation } from 'lucide-react';
 
-const DataCenterPage: React.FC = () => {,
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">,
+const DataCenterPage: React.FC = () => {
+  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEOOptimizer;
         title="Data Center Solutions - Zion Tech Group",
 const DataCenterPage: React.FC = () => {
@@ -14,15 +14,15 @@ const DataCenterPage: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <SEOOptimizer
         title="Data Center Solutions - Zion Tech Group"
-        description="Modern data center design, implementation, and management with energy efficiency optimization."
+        description="Modern data center design implementation, and management with energy efficiency optimization."
         keywords={["data center","server infrastructure","data center design","energy efficiency","data center management"]}
-        canonicalUrl="https://ziontechgroup.com/data-center"
+        canonicalUrl="https: //ziontechgroup.com/data-center"
       /></SEOOptimize>
 
       <Navigation /></Navigatio>
 
       <main className="container mx-auto px-4 py-16 pt-24">{/* Hero Section */}</main>
-        canonicalUrl="https: //ziontechgroup.com/data-center",
+        canonicalUrl="https: //ziontechgroup.com/data-center"
       />,
       <Navigation />,
       <main className="container mx-auto px-4 py-16 pt-24">,
@@ -31,19 +31,19 @@ const DataCenterPage: React.FC = () => {
           <div className="max-w-4xl mx-auto"></section>
             <div className="w-20 h-20 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6"></div>
               <Database className="w-10 h-10 text-white" />
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Data Center Solutions<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Modern data center design, implementation, and management with energy efficiency optimization.</p>
+            <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Data Center Solutions<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Modern data center design implementation, and management with energy efficiency optimization.</p>
             </div>
             <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
               Data Center Solutions;
-            </h1>,
+            </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">,
               Modern data center design, implementation, and management with energy efficiency optimization.
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
               <a;
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Data Center Solutions</h1><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Modern data center design, implementation, and management with energy efficiency optimization.</p>
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Data Center Solutions</h1><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Modern data center design implementation, and management with energy efficiency optimization.</p>
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center"></div>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center"></div>
               <a
                 href="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300"
@@ -61,13 +61,13 @@ const DataCenterPage: React.FC = () => {
                 +1 302 464 0950;
               </a>
             </div>
-          </div>,
+          </div>
         </section>,
 ,
         {/* Features Section */}
         <section className="mb-16">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Key Features<p className="text-lg text-gray-300 max-w-2xl mx-auto">Powerful capabilities designed to transform your business</p>
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">Key Features<p className="text-lg text-gray-300 max-w-2xl mx-auto">Powerful capabilities designed to transform your business</p>
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
               Key Features;
             </h2>
@@ -109,13 +109,13 @@ const DataCenterPage: React.FC = () => {
               <CheckCircle className="w-8 h-8 text-green-400 mb-4" />
               <h3 className="text-xl font-semibold text-white mb-2">Disaster Recovery</h3><p className="text-gray-300">Advanced disaster recovery capabilities powered by AI</p>
             </div>
-          </div>,
+          </div>
         </section>,
 ,
         {/* Benefits Section */}
         <section className="mb-16">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Why Choose Our Data Center Solutions?<p className="text-lg text-gray-300 max-w-2xl mx-auto">Proven results and measurable impact for your business</p>
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">Why Choose Our Data Center Solutions?<p className="text-lg text-gray-300 max-w-2xl mx-auto">Proven results and measurable impact for your business</p>
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
               Why Choose Our Data Center Solutions?
             </h2>
@@ -149,13 +149,13 @@ const DataCenterPage: React.FC = () => {
               <TrendingUp className="w-8 h-8 text-purple-400 mb-4" />
               <h3 className="text-xl font-semibold text-white mb-2">Cost Optimization</h3><p className="text-gray-300">Measurable improvement in your business metrics</p>
             </div>
-          </div>,
+          </div>
         </section>,
 ,
         {/* Pricing Section */}
         <section className="mb-16">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Pricing<p className="text-lg text-gray-300 max-w-2xl mx-auto">Transparent pricing with no hidden fees</p>
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">Pricing<p className="text-lg text-gray-300 max-w-2xl mx-auto">Transparent pricing with no hidden fees</p>
           <div className="text-center mb-12"></section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Pricing</h2><p className="text-lg text-gray-300 max-w-2xl mx-auto">Transparent pricing with no hidden fees</p>
             </p>
@@ -163,10 +163,10 @@ const DataCenterPage: React.FC = () => {
 
           <div className="max-w-md mx-auto"></div>
             <div className="bg-slate-800/50 backdrop-blur-lg rounded-2xl p-8 border border-cyan-400/20 text-center"></div>
-              <h3 className="text-2xl font-bold text-white mb-4">Data Center Solutions</h3><div className="text-4xl font-bold text-cyan-400 mb-4">$1,400/month</div>
+              <h3 className="text-2xl font-bold text-white mb-4">Data Center Solutions</h3><div className="text-4xl font-bold text-cyan-400 mb-4">$1400/month</div>
               <p className="text-gray-300 mb-6">per month</p><a
                 href="/contact"
-                className="w-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white py-3 px-6 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 inline-block"
+                className="w-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white py-3 px-6 rounded-lg font-semibold hover: from-cyan-600 hover:to-purple-600 transition-all duration-300 inline-block"
               >Get Started</a>
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
               Pricing;
@@ -176,7 +176,7 @@ const DataCenterPage: React.FC = () => {
             </p>
           </div>
 
-          <div className="max-w-md mx-auto">,
+          <div className="max-w-md mx-auto">
             <div className="bg-slate-800/50 backdrop-blur-lg rounded-2xl p-8 border border-cyan-400/20 text-center">,
               <h3 className="text-2xl font-bold text-white mb-4">Data Center Solutions</h3>,
               <div className="text-4xl font-bold text-cyan-400 mb-4">$1,400/month</div>
@@ -190,11 +190,11 @@ const DataCenterPage: React.FC = () => {
             </div>)
           </div>)
         </section>)
-),
+)
         {/* Contact Section */}
         <section className="mb-16">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Get Started?<p className="text-lg text-gray-300 max-w-2xl mx-auto">Contact our experts to discuss your specific needs</p>
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">Ready to Get Started?<p className="text-lg text-gray-300 max-w-2xl mx-auto">Contact our experts to discuss your specific needs</p>
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
               Ready to Get Started?
             </h2>
@@ -243,7 +243,7 @@ const DataCenterPage: React.FC = () => {
         </section>
       </main>
 
-      <Footer />,
+      <Footer />
     </div>);
 };
 

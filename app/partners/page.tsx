@@ -20,69 +20,69 @@ import {}
 
 const PartnersPage: React.FC = () => {}
   const partners = [
-    {}
-      name: 'Microsoft',
-      logo: '🏢',
-      description: 'Strategic cloud and AI partnership',
-      category: 'Technology',
-      tier: 'Platinum'},
-    {}
-      name: 'Amazon Web Services',
-      logo: '☁️',
-      description: 'Cloud infrastructure and AI services',
-      category: 'Cloud',
-      tier: 'Platinum'},
-    {}
-      name: 'Google Cloud',
-      logo: 'search',
-      description: 'AI and machine learning solutions',
-      category: 'AI/ML',
-      tier: 'Gold'},
-    {}
-      name: 'IBM',
-      logo: 'briefcase',
-      description: 'Enterprise AI and quantum computing',
-      category: 'Enterprise',
-      tier: 'Gold'},
-    {}
-      name: 'NVIDIA',
-      logo: 'gamepad',
-      description: 'GPU acceleration and AI hardware',
-      category: 'Hardware',
-      tier: 'Silver'},
-    {}
-      name: 'Salesforce',
-      logo: 'briefcase',
-      description: 'CRM and business automation',
-      category: 'Software',
-      tier: 'Silver'}
+    {},
+    name: 'Microsoft',
+    logo: '🏢',
+    description: 'Strategic cloud and AI partnership',
+    category: 'Technology',
+    tier: 'Platinum'},
+    {},
+    name: 'Amazon Web Services',
+    logo: '☁️',
+    description: 'Cloud infrastructure and AI services',
+    category: 'Cloud',
+    tier: 'Platinum'},
+    {},
+    name: 'Google Cloud',
+    logo: 'search',
+    description: 'AI and machine learning solutions',
+    category: 'AI/ML',
+    tier: 'Gold'},
+    {},
+    name: 'IBM',
+    logo: 'briefcase',
+    description: 'Enterprise AI and quantum computing',
+    category: 'Enterprise',
+    tier: 'Gold'},
+    {},
+    name: 'NVIDIA',
+    logo: 'gamepad',
+    description: 'GPU acceleration and AI hardware',
+    category: 'Hardware',
+    tier: 'Silver'},
+    {},
+    name: 'Salesforce',
+    logo: 'briefcase',
+    description: 'CRM and business automation',
+    category: 'Software',
+    tier: 'Silver'}
   ];
 
   const benefits = [
     {
-      icon: Handshake;
-    {}
-      icon: Handshake,
-      title: 'Strategic Partnerships',
-      description: 'Collaborate with industry leaders to deliver cutting-edge solutions'},
+    icon: Handshake;,
+    {},
+    icon: Handshake,
+    title: 'Strategic Partnerships',
+    description: 'Collaborate with industry leaders to deliver cutting-edge solutions'},
     {
-      icon: Globe;
-    {}
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Access to worldwide markets through our partner network'},
+    icon: Globe;,
+    {},
+    icon: Globe,
+    title: 'Global Reach',
+    description: 'Access to worldwide markets through our partner network'},
     {
-      icon: Award;
-    {}
-      icon: Award,
-      title: 'Certified Solutions',
-      description: 'Verified and certified integrations with top platforms'},
+    icon: Award;,
+    {},
+    icon: Award,
+    title: 'Certified Solutions',
+    description: 'Verified and certified integrations with top platforms'},
     {
-      icon: Users;
-    {}
-      icon: Users,
-      title: 'Joint Innovation',
-      description: 'Co-develop innovative solutions with our partners'}
+    icon: Users;,
+    {},
+    icon: Users,
+    title: 'Joint Innovation',
+    description: 'Co-develop innovative solutions with our partners'}
   ];
 
   return (
@@ -91,22 +91,22 @@ const PartnersPage: React.FC = () => {}
 
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">)
-      <Navigation />)
-      {/* Hero Section */})
-      <section className="relative py-20 overflow-hidden">)
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http: //www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></section>
+        <div className="absolute inset-0 bg-[url('data: image/svg+xml%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Navigation />
+      {/* Hero Section */}
+      <section className="relative py-20 overflow-hidden">
+        <div className="absolute inset-0 bg-[url('data: image/svg+xml%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http: //www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></section>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"></div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center"></div>
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
             Our Partners;
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
             Strategic partnerships with industry leaders to deliver world-class AI and IT solutions;
           </p>
-        </div>,
+        </div>
       </section>,
 ,
       {/* Partners Grid */}
@@ -121,23 +121,23 @@ const PartnersPage: React.FC = () => {}
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               We work with the world's leading technology companies to deliver exceptional solutions;
             </p>
-          </div>,
+          </div>
 ,
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">,
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             {partners.map((partner, index) => (
               <div;
                 key={index}
-                className="cyber-card p-8 hover: scale-105 transition-all duration-300 relative",
+                className="cyber-card p-8 hover: scale-105 transition-all duration-300 relative"
               >,
                 <div className="text-center">,
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {partners.map((partner, index) => (</div>
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {partners.map((partner index) => (</div>
             {partners.map((partner, index) => (}
               <div
                 key={index}
-                className="cyber-card p-8 hover:scale-105 transition-all duration-300 relative"
+                className="cyber-card p-8 hover: scale-105 transition-all duration-300 relative"
               ></div>
                 <div className="text-center"></div>
                   <div className="text-6xl mb-4">{partner.logo}</div>
@@ -175,20 +175,20 @@ const PartnersPage: React.FC = () => {}
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Why partner with Zion Tech Group? Discover the advantages of joining our ecosystem;
             </p>
-          </div>,
+          </div>
 ,
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">,
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (}
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit index) => (}
               <div key={index} className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (</div>
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit index) => (</div>
               <div key={index} className="text-center"></div>
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6"></div>
                   <benefit.icon className="w-8 h-8 text-white" />
@@ -224,7 +224,7 @@ const PartnersPage: React.FC = () => {}
         </div>
       </section>
 
-      <Footer />,
+      <Footer />
     </div>);
 };
 

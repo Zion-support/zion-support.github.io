@@ -6,44 +6,44 @@ import Link from 'next/link';
 const EmailOptimizerPage: React.FC = () => {
   const features = [
     {
-      icon: Target;
-      title: 'AI-Powered Subject Lines',
-      description: 'Generate compelling subject lines that increase open rates by up to 40%'},
+    icon: Target;,
+    title: 'AI-Powered Subject Lines',
+    description: 'Generate compelling subject lines that increase open rates by up to 40%'},
     {
-      icon: BarChart;
-      title: 'Performance Analytics',
-      description: 'Track email performance with detailed analytics and insights'},
+    icon: BarChart;,
+    title: 'Performance Analytics',
+    description: 'Track email performance with detailed analytics and insights'},
     {
-      icon: Users;
-      title: 'Audience Segmentation',
-      description: 'Automatically segment your audience for personalized campaigns'},
+    icon: Users;,
+    title: 'Audience Segmentation',
+    description: 'Automatically segment your audience for personalized campaigns'},
     {
-      icon: Zap;
-      title: 'A/B Testing',
-      description: 'Test different versions to find the most effective content'},
+    icon: Zap;,
+    title: 'A/B Testing',
+    description: 'Test different versions to find the most effective content'},
     {
-      icon: Shield;
-      title: 'Deliverability Optimization',
-      description: 'Ensure your emails reach the inbox with advanced deliverability tools'},
+    icon: Shield;,
+    title: 'Deliverability Optimization',
+    description: 'Ensure your emails reach the inbox with advanced deliverability tools'},
     {
-      icon: TrendingUp;
-      title: 'ROI Tracking',
-      description: 'Measure and optimize your email marketing ROI in real-time'}
+    icon: TrendingUp;,
+    title: 'ROI Tracking',
+    description: 'Measure and optimize your email marketing ROI in real-time'}
   ];
 
   const benefits = [
     {
-      title: '40% Higher Open Rates',
-      description: 'AI-optimized subject lines and content'},
+    title: '40% Higher Open Rates',
+    description: 'AI-optimized subject lines and content'},
     {
-      title: '60% More Clicks',
-      description: 'Personalized content that resonates with your audience'},
+    title: '60% More Clicks',
+    description: 'Personalized content that resonates with your audience'},
     {
-      title: '3x Better ROI',
-      description: 'Data-driven optimization for maximum returns'},
+    title: '3x Better ROI',
+    description: 'Data-driven optimization for maximum returns'},
     {
-      title: 'Save 10 Hours/Week',
-      description: 'Automated optimization and campaign management'}
+    title: 'Save 10 Hours/Week',
+    description: 'Automated optimization and campaign management'}
   ];
 
   return (
@@ -56,11 +56,11 @@ const EmailOptimizerPage: React.FC = () => {
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
       <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">)
-          <h1 className="text-5xl font-bold text-white mb-6">)
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-white mb-6">
             Email <span className="text-cyan-400">Optimizer</span>)
           </h1>)
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">)
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
             Transform your email marketing with AI-powered optimization. Increase open rates)
             boost engagement, and maximize ROI with our intelligent email optimization platform.
           </p>
@@ -85,10 +85,10 @@ const EmailOptimizerPage: React.FC = () => {
         {/* Features Section */}
         <div className="mb-16"></div>
           <h2 className="text-3xl font-bold text-white text-center mb-12">
-            Powerful</h2> <span className="text-cyan-400">Features</span><div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature, index) => (</div>
+            Powerful</h2> <span className="text-cyan-400">Features</span><div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature index) => (</div>
               <div
                 key={index}
-                className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-gray-600 hover:border-cyan-400/50 transition-all duration-300"
+                className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-gray-600 hover: border-cyan-400/50 transition-all duration-300"
               ></div>
                 <div className="p-3 bg-cyan-400 rounded-lg w-fit mb-4"></div>
                   <feature.icon className="w-6 h-6 text-white" />
@@ -98,12 +98,12 @@ const EmailOptimizerPage: React.FC = () => {
             </Link>
             <Link;
               href="/demo"
-              className="bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-gray-600 hover:border-cyan-400 hover:bg-cyan-400/10 transition-all duration-300 flex items-center justify-center"
+              className="bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-gray-600 hover: border-cyan-400 hover:bg-cyan-400/10 transition-all duration-300 flex items-center justify-center"
             >
               <BarChart className="w-5 h-5 mr-2" />
               View Demo;
             </Link>
-          </div>,
+          </div>
         </div>,
 ,
         {/* Features Section */}
@@ -111,11 +111,11 @@ const EmailOptimizerPage: React.FC = () => {
           <h2 className="text-3xl font-bold text-white text-center mb-12">
             Powerful <span className="text-cyan-400">Features</span>
           </h2>
-          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">,
+          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div;
                 key={index}
-                className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-gray-600 hover: border-cyan-400/50 transition-all duration-300",
+                className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-gray-600 hover: border-cyan-400/50 transition-all duration-300"
               >,
                 <div className="p-3 bg-cyan-400 rounded-lg w-fit mb-4">,
                   <feature.icon className="w-6 h-6 text-white" />,
@@ -131,14 +131,14 @@ const EmailOptimizerPage: React.FC = () => {
         {/* Benefits Section */}
         <div className="mb-16"></div>
           <h2 className="text-3xl font-bold text-white text-center mb-12">
-            Proven <span className="text-cyan-400">Results<div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">{benefits.map((benefit, index) => (</div>
+            Proven <span className="text-cyan-400">Results<div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">{benefits.map((benefit index) => (</div>
             Proven <span className="text-cyan-400">Results</span>
           </h2>
-          <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">,
+          <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
               <div key={index} className="text-center">
                 <div className="p-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full w-fit mx-auto mb-4">
-            Proven</h2> <span className="text-cyan-400">Results</span><div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">{benefits.map((benefit, index) => (</div>
+            Proven</h2> <span className="text-cyan-400">Results</span><div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">{benefits.map((benefit index) => (</div>
               <div key={index} className="text-center"></div>
                 <div className="p-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full w-fit mx-auto mb-4"></div>
                   <TrendingUp className="w-8 h-8 text-white" />
@@ -179,7 +179,7 @@ const EmailOptimizerPage: React.FC = () => {
             </Link>
           </div>
         </div>
-      </div>,
+      </div>
     </div>);
 };
 

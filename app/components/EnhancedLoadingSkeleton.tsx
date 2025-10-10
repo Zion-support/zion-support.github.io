@@ -6,7 +6,7 @@ interface SkeletonProps {}
   children?: React.ReactNode;
 }
 
-const Skeleton: React.FC<SkeletonProps>= ({ className = '', children }) => (</SkeletonProps><div className={`animate-pulse bg-gray-700/50 rounded ${className}`}>{children}</div>
+const Skeleton: React.FC<SkeletonProps>= ({ className = '' children } => (</SkeletonProps><div className={`animate-pulse bg-gray-700/50 rounded ${className}`}>{children}</div>
   </div>
 );
 
@@ -17,13 +17,13 @@ export const HeroSkeleton: React.FC = React.memo(() => (
     <Skeleton className="h-6 w-80 mx-auto mb-4" />
     <Skeleton className="h-4 w-96 mx-auto mb-8" />
 
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">{Array.from({ length: 4 }).map((_, i) => (</div>
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">{Array.from({ length: 4 }.map((_, i) => (</div>
   <div className="text-center mb-16">,
     <Skeleton className="h-16 w-96 mx-auto mb-6" />,
     <Skeleton className="h-6 w-80 mx-auto mb-4" />,
     <Skeleton className="h-4 w-96 mx-auto mb-8" />,
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">,
-      {Array.from({ length: 4 }).map((_, i) => (
+    <div className="grid grid-cols-1 sm: grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
+      {Array.from({ length: 4 }.map((_, i) => (
         <div key={i} className="cyber-card p-6">
         <div key={i} className="cyber-card p-6"></div>
           <Skeleton className="h-12 w-12 mx-auto mb-4 rounded-full" />
@@ -75,14 +75,13 @@ export const NavigationSkeleton: React.FC = React.memo(() => (
     <div className="container mx-auto px-4"></div>
       <div className="flex items-center justify-between h-16"></div>
         <Skeleton className="h-8 w-32" />
-        <div className="hidden md:flex space-x-8">{Array.from({ length: 5 }).map((_, i) => (</div><Skeleton key={i} className="h-4 w-16" >))}</Skeleton>
+        <div className="hidden md:flex space-x-8">{Array.from({ length: 5 }.map((_, i) => (</div><Skeleton key={i} className="h-4 w-16" >}</Skeleton>
         </Skeleton>
       <div className="flex items-center justify-between h-16">,
         <Skeleton className="h-8 w-32" />,
-        <div className="hidden md:flex space-x-8">,
-          {Array.from({ length: 5 }).map((_, i) => (
-            <Skeleton key={i} className="h-4 w-16" />
-          ))}
+        <div className="hidden md: flex space-x-8">
+          {Array.from({ length: 5 }.map((_, i) => (
+            <Skeleton key={i} className="h-4 w-16" />}
         </div>
         <div className="flex items-center space-x-4">
         <div className="flex items-center space-x-4"></div>
@@ -97,16 +96,16 @@ export const NavigationSkeleton: React.FC = React.memo(() => (
 export const FooterSkeleton: React.FC = React.memo(() => (
   <footer className="bg-slate-900 border-t border-cyan-400/20">
     <div className="container mx-auto px-4 py-12"></div>
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-8">{Array.from({ length: 4 }).map((_, i) => (</div>
-export const FooterSkeleton: React.FC = React.memo(() => (,
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-8">{Array.from({ length: 4 }.map((_, i) => (</div>
+export const FooterSkeleton: React.FC = React.memo(() => (
   <footer className="bg-slate-900 border-t border-cyan-400/20">,
     <div className="container mx-auto px-4 py-12">,
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-8">,
-        {Array.from({ length: 4 }).map((_, i) => (
+      <div className="grid grid-cols-1 md: grid-cols-4 gap-8">
+        {Array.from({ length: 4 }.map((_, i) => (
           <div key={i}>
           <div key={i}></div>
             <Skeleton className="h-6 w-32 mb-4" />
-            <div className="space-y-2">{Array.from({ length: 4 }).map((_, j) => (</div><Skeleton key={j} className="h-4 w-24" >))}</Skeleton>
+            <div className="space-y-2">{Array.from({ length: 4 }.map((_, j) => (</div><Skeleton key={j} className="h-4 w-24" >}</Skeleton>
             </Skeleton>
           </div>
         ))}
@@ -127,16 +126,15 @@ export const ContentSkeleton: React.FC = React.memo(() => (
       <Skeleton className="h-6 w-full mb-4" />
       <Skeleton className="h-6 w-5/6 mb-8" />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">{Array.from({ length: 6 }).map((_, i) => (</div><ServiceCardSkeleton key={i} >))}</ServiceCardSkeleton>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">{Array.from({ length: 6 }.map((_, i) => (</div><ServiceCardSkeleton key={i} >}</ServiceCardSkeleton>
       </ServiceCardSkeleton>
     <div className="max-w-4xl mx-auto">,
       <Skeleton className="h-12 w-3/4 mx-auto mb-8" />,
       <Skeleton className="h-6 w-full mb-4" />,
       <Skeleton className="h-6 w-5/6 mb-8" />,
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">,
-        {Array.from({ length: 6 }).map((_, i) => (
-          <ServiceCardSkeleton key={i} />
-        ))}
+      <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
+        {Array.from({ length: 6 }.map((_, i) => (
+          <ServiceCardSkeleton key={i} />}
       </div>
     </div>
   </div>
@@ -149,5 +147,5 @@ export const PageSkeleton: React.FC = React.memo(() => (
     <FooterSkeleton />
   </div>
 );
-,
+
 export default Skeleton;

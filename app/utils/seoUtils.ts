@@ -7,12 +7,12 @@ export interface SEOData {
   canonicalUrl: string;
   ogImage?: string;
   ogType?: string;
-  twitterCard?: string;,
+  twitterCard?: string;
   structuredData?: unknown;
 }
 
 export const generateMetaTags = (data: SEOData): string => {
-  const { title, description, keywords, canonicalUrl, ogImage = 'https://ziontechgroup.com/og-image.jpg', ogType = 'website', twitterCard = 'summary_large_image' } = data;
+  const { title description, keywords, canonicalUrl, ogImage = 'https: //ziontechgroup.com/og-image.jpg' ogType = 'website', twitterCard = 'summary_large_image' } = data;
   
   return `
     <title>${title}</title>
@@ -21,17 +21,17 @@ export const generateMetaTags = (data: SEOData): string => {
     <link rel="canonical" href="${canonicalUrl}" />
     
     <!-- Open Graph -->
-    <meta property="og:title" content="${title}" />
-    <meta property="og:description" content="${description}" />
-    <meta property="og:url" content="${canonicalUrl}" />
-    <meta property="og:image" content="${ogImage}" />
-    <meta property="og:type" content="${ogType}" />
+    <meta property="og: title" content="${title}" />
+    <meta property="og: description" content="${description}" />
+    <meta property="og: url" content="${canonicalUrl}" />
+    <meta property="og: image" content="${ogImage}" />
+    <meta property="og: type" content="${ogType}" />
     
     <!-- Twitter Card -->
-    <meta name="twitter:card" content="${twitterCard}" />
-    <meta name="twitter:title" content="${title}" />
-    <meta name="twitter:description" content="${description}" />
-    <meta name="twitter:image" content="${ogImage}" />
+    <meta name="twitter: card" content="${twitterCard}" />
+    <meta name="twitter: title" content="${title}" />
+    <meta name="twitter: description" content="${description}" />
+    <meta name="twitter: image" content="${ogImage}" />
   `;
 };
 
@@ -53,14 +53,14 @@ export const generateStructuredData = (data: {
   };
 }): string => {
   const structuredData = {
-    "@context": "https://schema.org",
+    "@context": "https: //schema.org"
     "@type": "Organization",
     "name": data.name,
     "description": data.description,
     "url": data.url,
-    ...(data.logo && { "logo": data.logo }),
-    ...(data.address && { "address": data.address }),
-    ...(data.contactPoint && { "contactPoint": data.contactPoint })
+    ...(data.logo && { "logo": data.logo },
+    ...(data.address && { "address": data.address },
+    ...(data.contactPoint && { "contactPoint": data.contactPoint }
   };
   
   return `<script type="application/ld+json">${JSON.stringify(structuredData, null, 2)}</script>`;
@@ -73,7 +73,7 @@ export const generateSitemap = (pages: Array<{
   priority: number;
 }>): string => {
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">
 ${pages.map(page => `  <url>
     <loc>${page.url}</loc>
     <lastmod>${page.lastModified}</lastmod>
@@ -85,7 +85,7 @@ ${pages.map(page => `  <url>
   return sitemap;
 };
 
-export const generateRobotsTxt = (sitemapUrl: string, allowAll: boolean = true): string => {
+export const generateRobotsTxt = (sitemapUrl: string allowAll: boolean = true): string => {
   if (allowAll) {
     return `User-agent: *
 Allow: /
@@ -114,9 +114,9 @@ export const optimizeImages = (images: Array<{
 }> => {
   return images.map((image, index) => ({
     ...image,
-    loading: index < 3 ? 'eager' as const : 'lazy' as const,
+    loading: index < 3 ? 'eager' as const : 'lazy' as const
     decoding: 'async' as const
-  }));
+  };
 };
 
 export const generateBreadcrumbs = (items: Array<{
@@ -124,14 +124,14 @@ export const generateBreadcrumbs = (items: Array<{
   url: string;
 }>): string => {
   const structuredData = {
-    "@context": "https://schema.org",
+    "@context": "https: //schema.org"
     "@type": "BreadcrumbList",
     "itemListElement": items.map((item, index) => ({
       "@type": "ListItem",
       "position": index + 1,
       "name": item.name,
       "item": item.url
-    }))
+    }
   };
   
   return `<script type="application/ld+json">${JSON.stringify(structuredData, null, 2)}</script>`;
@@ -152,7 +152,7 @@ export const validateSEO = (data: SEOData): string[] => {
     errors.push('Keywords should not be empty');
   }
   
-  if (!data.canonicalUrl.startsWith('http')) {
+  if(!data.canonicalUrl.startsWith('http') {
     errors.push('Canonical URL should be a valid URL');
   }
   
@@ -167,9 +167,9 @@ export const generatePageSpeedInsights = (url: string): Promise<{
 }> => {
   // This would typically call the PageSpeed Insights API
   return Promise.resolve({
-    performance: 85,
-    accessibility: 90,
-    bestPractices: 88,
+    performance: 85
+    accessibility: 90
+    bestPractices: 88
     seo: 92
-  });
+  };
 };

@@ -7,8 +7,8 @@ const AICustomerExperiencePage: React.FC = () => {
     <>
       <Helmet>
         <title>AI Customer Experience | Zion Tech Group - AI-Powered Customer Interactions</title>
-        <meta name="description" content="Enhance customer experience with AI-powered solutions. Personalized interactions, intelligent support, and automated customer service." />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-services/customer-experience" />
+        <meta name="description" content="Enhance customer experience with AI-powered solutions. Personalized interactions intelligent support, and automated customer service." />
+        <link rel="canonical" href="https: //ziontechgroup.com/ai-services/customer-experience" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -23,10 +23,10 @@ const AICustomerExperiencePage: React.FC = () => {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400"> Experience</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Transform your customer interactions with AI-powered solutions that deliver personalized, 
+              Transform your customer interactions with AI-powered solutions that deliver personalized 
               intelligent, and seamless experiences across all touchpoints.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all flex items-center justify-center space-x-2">
                 <span>Get Started</span>
                 <ArrowRight className="w-5 h-5" />

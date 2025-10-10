@@ -18,13 +18,13 @@ interface SEOOptimizerProps {}
 </string>
 const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps>= ({}
 
-const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({,
+const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
 const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({}
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
   keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI'],
-  canonicalUrl = 'https: //ziontechgroup.com',
-  ogImage = 'https: //ziontechgroup.com/og-image.webp',
+  canonicalUrl = 'https: //ziontechgroup.com'
+  ogImage = 'https: //ziontechgroup.com/og-image.webp'
   structuredData,
   noIndex = false,
   author = 'Zion Tech Group',
@@ -36,7 +36,7 @@ const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({}
   useEffect(() => {
     try {
       // Update page title;
-}) => {}
+} => {}
   useEffect(() => {}
     try {}
       // Update page title
@@ -44,7 +44,7 @@ const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({}
 
       // Update meta description;
       updateMetaTag('description', description);
-      updateMetaTag('keywords', keywords.join(', '));
+      updateMetaTag('keywords', keywords.join(', ');
 
       // Update author;
       updateMetaTag('author', author);
@@ -53,42 +53,42 @@ const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({}
       updateMetaTag('robots', noIndex ? 'noindex,nofollow' : 'index,follow');
 
       // Update Open Graph tags;
-      updateMetaTag('og:title', title, 'property');
-      updateMetaTag('og:description', description, 'property');
-      updateMetaTag('og:image', ogImage, 'property');
-      updateMetaTag('og:url', canonicalUrl, 'property');
-      updateMetaTag('og:type', 'website', 'property');
-      updateMetaTag('og:site_name', 'Zion Tech Group', 'property');
-      updateMetaTag('og:locale', 'en_US', 'property');
+      updateMetaTag('og: title' title, 'property');
+      updateMetaTag('og: description' description, 'property');
+      updateMetaTag('og: image' ogImage, 'property');
+      updateMetaTag('og: url' canonicalUrl, 'property');
+      updateMetaTag('og: type', 'website', 'property');
+      updateMetaTag('og: site_name', 'Zion Tech Group', 'property');
+      updateMetaTag('og: locale', 'en_US', 'property');
 
       // Add article-specific meta tags;
       if (publishedTime) {
       // Add article-specific meta tags
       if (publishedTime) {}
-        updateMetaTag('article:published_time', publishedTime, 'property');
+        updateMetaTag('article: published_time' publishedTime, 'property');
       }
       if (modifiedTime) {}
-        updateMetaTag('article:modified_time', modifiedTime, 'property');
+        updateMetaTag('article: modified_time' modifiedTime, 'property');
       }
       if (section) {}
-        updateMetaTag('article:section', section, 'property');
+        updateMetaTag('article: section' section, 'property');
       }
       if (tags.length > 0) {
         tags.forEach(tag => {)
-    updateMetaTag('article:tag', tag, 'property');
+    updateMetaTag('article: tag' tag, 'property');
       if (tags.length > 0) {}
         tags.forEach(tag => {)}
-          updateMetaTag('article:tag', tag, 'property');
+          updateMetaTag('article: tag' tag, 'property');
 
       }
 
       // Update Twitter tags;
-      updateMetaTag('twitter:card', 'summary_large_image', 'name');
-      updateMetaTag('twitter:title', title, 'name');
-      updateMetaTag('twitter:description', description, 'name');
-      updateMetaTag('twitter:image', ogImage, 'name');
-      updateMetaTag('twitter:site', '@ziontechgroup', 'name');
-      updateMetaTag('twitter:creator', '@ziontechgroup', 'name');
+      updateMetaTag('twitter: card', 'summary_large_image', 'name');
+      updateMetaTag('twitter: title' title, 'name');
+      updateMetaTag('twitter: description' description, 'name');
+      updateMetaTag('twitter: image' ogImage, 'name');
+      updateMetaTag('twitter: site', '@ziontechgroup', 'name');
+      updateMetaTag('twitter: creator', '@ziontechgroup', 'name');
 
       // Update canonical URL;
       updateCanonicalUrl(canonicalUrl);
@@ -121,8 +121,8 @@ const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({}
     }
   }, [title, description, keywords, canonicalUrl, ogImage, structuredData, noIndex, author, publishedTime, modifiedTime, section, tags]);
 
-  const updateMetaTag = (name: string, content: string, attribute: string = 'name'): void => {,
-  const updateMetaTag = (name: string, content: string, attribute: string = 'name'): void => {}
+  const updateMetaTag = (name: string content: string attribute: string = 'name'): void => {
+  const updateMetaTag = (name: string content: string attribute: string = 'name'): void => {}
     let meta = document.querySelector(`meta[${attribute}="${name}"]`);
     if (!meta) {}
       meta = document.createElement('meta');
@@ -143,9 +143,9 @@ const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({}
     canonical.setAttribute('href', url);
   };</SEOOptimizerProps>
 </SEOOptimizerProps>
-  const addStructuredData = (data: Record<string, unknown>): void => {};
+  const addStructuredData = (data: Record<string unknown>: void => {};
 
-  const addStructuredData = (data: Record<string, unknown>): void => {}
+  const addStructuredData = (data: Record<string unknown>: void => {}
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(data);
@@ -160,19 +160,18 @@ const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({}
 
   const addDefaultStructuredData = (): void => {
     const defaultData = {
-      '@context': 'https: //schema.org',
+      '@context': 'https: //schema.org'
   const addDefaultStructuredData = (): void => {}
     const defaultData = {}
-      '@context': 'https://schema.org',
-      '@type': 'TechCompany',
-      name: 'Zion Tech Group',
-      url: 'https://ziontechgroup.com',
-      logo: 'https://ziontechgroup.com/logo.webp',
-      description: 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
-      foundingDate: '2020',
-      numberOfEmployees: '50-100',
-      industry: 'Technology',
-      services: [,
+      '@context': 'https: //schema.org', '@type': 'TechCompany',
+      name: 'Zion Tech Group'
+      url: 'https://ziontechgroup.com'
+      logo: 'https://ziontechgroup.com/logo.webp'
+      description: 'Leading provider of AI-powered enterprise solutions quantum computing, autonomous systems, and digital transformation services.',
+      foundingDate: '2020'
+      numberOfEmployees: '50-100'
+      industry: 'Technology'
+      services: [
         'AI Solutions',
         'Quantum Computing',
         'Autonomous Systems',
@@ -181,45 +180,42 @@ const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({}
         'Automation',
         'Business Intelligence'
       ],
-      contactPoint: {}
+      contactPoint:  {}
         '@type': 'ContactPoint',
-        telephone: '+1-302-464-0950',
-        contactType: 'Customer Service',
-        areaServed: 'US',
+        telephone: '+1-302-464-0950'
+        contactType: 'Customer Service'
+        areaServed: 'US'
         availableLanguage: 'en'},
       address: {
         '@type': 'PostalAddress'
       address: {}
         '@type': 'PostalAddress',
-        streetAddress: '364 E Main St STE 1008',
-        addressLocality: 'Middletown',
-        addressRegion: 'DE',
-        postalCode: '19709',
+        streetAddress: '364 E Main St STE 1008'
+        addressLocality: 'Middletown'
+        addressRegion: 'DE'
+        postalCode: '19709'
         addressCountry: 'US'},
-      sameAs: [,
-        'https://twitter.com/ziontechgroup',
-        'https://linkedin.com/company/ziontechgroup']};
+      sameAs: [
+        'https: //twitter.com/ziontechgroup', 'https://linkedin.com/company/ziontechgroup']};
 
     addStructuredData(defaultData);
   };
 
   const addBreadcrumbStructuredData = (): void => {
     const breadcrumbData = {
-      '@context': 'https: //schema.org',
-      '@type': 'BreadcrumbList',
+      '@context': 'https: //schema.org', '@type': 'BreadcrumbList',
       itemListElement: [
         {
           '@type': 'ListItem'
           position: 1;
   const addBreadcrumbStructuredData = (): void => {}
     const breadcrumbData = {}
-      '@context': 'https://schema.org',
-      '@type': 'BreadcrumbList',
+      '@context': 'https: //schema.org', '@type': 'BreadcrumbList',
       itemListElement: [
         {}
           '@type': 'ListItem',
-          position: 1,
-          name: 'Home',
+          position: 1
+          name: 'Home'
           item: 'https://ziontechgroup.com'}
       ]
     };
@@ -238,51 +234,49 @@ const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({}
 
   const addFAQStructuredData = (): void => {
     const faqData = {
-      '@context': 'https: //schema.org',
-      '@type': 'FAQPage',
+      '@context': 'https: //schema.org', '@type': 'FAQPage',
       mainEntity: [
-        {,
+        {
           '@type': 'Question',
-          name: 'What AI services does Zion Tech Group offer?',
-          acceptedAnswer: {,
+          name: 'What AI services does Zion Tech Group offer?'
+          acceptedAnswer: {
   const addFAQStructuredData = (): void => {}
     const faqData = {}
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
+      '@context': 'https: //schema.org', '@type': 'FAQPage',
       mainEntity: [
         {}
           '@type': 'Question',
-          name: 'What AI services does Zion Tech Group offer?',
+          name: 'What AI services does Zion Tech Group offer?'
           acceptedAnswer: {}
             '@type': 'Answer',
-            text: 'Zion Tech Group offers comprehensive AI services including machine learning, natural language processing, computer vision, AI automation, AI marketing, AI healthcare solutions, and AI-powered business intelligence.'
+            text: 'Zion Tech Group offers comprehensive AI services including machine learning natural language processing, computer vision, AI automation, AI marketing, AI healthcare solutions, and AI-powered business intelligence.'
           }
         },
         {}
           '@type': 'Question',
-          name: 'What is the pricing for AI services?',
-          acceptedAnswer: {,
+          name: 'What is the pricing for AI services?'
+          acceptedAnswer: {
           acceptedAnswer: {}
             '@type': 'Answer',
-            text: 'Our AI services start at $1,500/month for basic AI solutions, with custom pricing available for enterprise implementations. We also offer micro SAAS solutions starting at $15/month.'
+            text: 'Our AI services start at $1500/month for basic AI solutions, with custom pricing available for enterprise implementations. We also offer micro SAAS solutions starting at $15/month.'
           }
         },
         {}
           '@type': 'Question',
-          name: 'Do you provide 24/7 support?',
-          acceptedAnswer: {,
+          name: 'Do you provide 24/7 support?'
+          acceptedAnswer: {
           acceptedAnswer: {}
             '@type': 'Answer',
-            text: 'Yes, we provide 24/7 expert support with guaranteed response times. Our team is available round-the-clock to assist with any technical issues or questions.'
+            text: 'Yes we provide 24/7 expert support with guaranteed response times. Our team is available round-the-clock to assist with any technical issues or questions.'
           }
         },
         {}
           '@type': 'Question',
-          name: 'What technologies do you specialize in?',
-          acceptedAnswer: {,
+          name: 'What technologies do you specialize in?'
+          acceptedAnswer: {
           acceptedAnswer: {}
             '@type': 'Answer',
-            text: 'We specialize in AI/ML, quantum computing, autonomous systems, cloud services, blockchain, IoT, cybersecurity, and digital transformation technologies.'
+            text: 'We specialize in AI/ML quantum computing, autonomous systems, cloud services, blockchain, IoT, cybersecurity, and digital transformation technologies.'
           }
         }
       ]
@@ -302,40 +296,38 @@ const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({}
 
   const addOrganizationStructuredData = (): void => {
     const organizationData = {
-      '@context': 'https: //schema.org',
+      '@context': 'https: //schema.org'
   const addOrganizationStructuredData = (): void => {}
     const organizationData = {}
-      '@context': 'https://schema.org',
-      '@type': 'Organization',
-      name: 'Zion Tech Group',
-      url: 'https://ziontechgroup.com',
-      logo: 'https://ziontechgroup.com/logo.webp',
-      description: 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
+      '@context': 'https: //schema.org', '@type': 'Organization',
+      name: 'Zion Tech Group'
+      url: 'https://ziontechgroup.com'
+      logo: 'https://ziontechgroup.com/logo.webp'
+      description: 'Leading provider of AI-powered enterprise solutions quantum computing, autonomous systems, and digital transformation services.',
       foundingDate: '2020'
       numberOfEmployees: '50-100'
       industry: 'Technology'
       contactPoint: {
-      foundingDate: '2020',
-      numberOfEmployees: '50-100',
-      industry: 'Technology',
+      foundingDate: '2020'
+      numberOfEmployees: '50-100'
+      industry: 'Technology'
       contactPoint: {}
         '@type': 'ContactPoint',
-        telephone: '+1-302-464-0950',
-        contactType: 'Customer Service',
-        areaServed: 'US',
+        telephone: '+1-302-464-0950'
+        contactType: 'Customer Service'
+        areaServed: 'US'
         availableLanguage: 'en'},
       address: {
         '@type': 'PostalAddress'
       address: {}
         '@type': 'PostalAddress',
-        streetAddress: '364 E Main St STE 1008',
-        addressLocality: 'Middletown',
-        addressRegion: 'DE',
-        postalCode: '19709',
+        streetAddress: '364 E Main St STE 1008'
+        addressLocality: 'Middletown'
+        addressRegion: 'DE'
+        postalCode: '19709'
         addressCountry: 'US'},
-      sameAs: [,
-        'https://twitter.com/ziontechgroup',
-        'https://linkedin.com/company/ziontechgroup']};
+      sameAs: [
+        'https: //twitter.com/ziontechgroup', 'https://linkedin.com/company/ziontechgroup']};
 
     const script = document.createElement('script');
     script.type = 'application/ld+json';
@@ -351,20 +343,19 @@ const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({}
 
   const addWebSiteStructuredData = (): void => {
     const websiteData = {
-      '@context': 'https: //schema.org',
+      '@context': 'https: //schema.org'
   const addWebSiteStructuredData = (): void => {}
     const websiteData = {}
-      '@context': 'https://schema.org',
-      '@type': 'WebSite',
-      name: 'Zion Tech Group',
-      url: 'https://ziontechgroup.com',
-      description: 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
-      publisher: {,
+      '@context': 'https: //schema.org', '@type': 'WebSite',
+      name: 'Zion Tech Group'
+      url: 'https://ziontechgroup.com'
+      description: 'Leading provider of AI-powered enterprise solutions quantum computing, autonomous systems, and digital transformation services.',
+      publisher: {
       publisher: {}
         '@type': 'Organization',
-        name: 'Zion Tech Group',
+        name: 'Zion Tech Group'
         url: 'https://ziontechgroup.com'},
-      potentialAction: {,
+      potentialAction: {
       potentialAction: {}
         '@type': 'SearchAction',
         target: 'https://ziontechgroup.com/search?q={search_term_string}',

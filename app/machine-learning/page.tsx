@@ -7,29 +7,29 @@ import SEOOptimizer from '../components/SEOOptimizer';
 import PerformanceOptimizer from '../components/PerformanceOptimizer';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
 import SecurityEnhancer from '../components/SecurityEnhancer';
-const MachineLearningPage: React.FC = () => {,
-  const services = [,
-    {,
-      title: 'Predictive Analytics',
-      description: 'Build models that forecast future trends and behaviors with high accuracy',
+const MachineLearningPage: React.FC = () => {
+  const services = [
+    {
+      title: 'Predictive Analytics'
+      description: 'Build models that forecast future trends and behaviors with high accuracy'
       features: ['Time Series Forecasting', 'Customer Behavior Prediction', 'Sales Forecasting', 'Risk Assessment'],
       icon: BarChart;
       color: 'text-blue-400'},
     {
-      title: 'Custom Model Development',
-      description: 'Tailored machine learning models designed for your specific business needs',
+      title: 'Custom Model Development'
+      description: 'Tailored machine learning models designed for your specific business needs'
       features: ['Algorithm Selection', 'Feature Engineering', 'Model Training', 'Performance Optimization'],
       icon: Brain;
       color: 'text-purple-400'},
     {
-      title: 'Data Pipeline Setup',
-      description: 'Automated data processing and preparation for machine learning workflows',
+      title: 'Data Pipeline Setup'
+      description: 'Automated data processing and preparation for machine learning workflows'
       features: ['Data Collection', 'Data Cleaning', 'Feature Extraction', 'Real-time Processing'],
       icon: Zap;
       color: 'text-green-400'},
     {
-      title: 'Model Monitoring',
-      description: 'Continuous monitoring and optimization of deployed machine learning models',
+      title: 'Model Monitoring'
+      description: 'Continuous monitoring and optimization of deployed machine learning models'
       features: ['Performance Tracking', 'Drift Detection', 'Model Retraining', 'Alert Systems'],
       icon: Target;
       color: 'text-cyan-400'}
@@ -48,7 +48,7 @@ const MachineLearningPage: React.FC = () => {,
         title="Machine Learning Solutions - Zion Tech Group"
         description="Advanced machine learning solutions including predictive analytics, custom model development, and AI infrastructure. Transform your business with data-driven insights."
         keywords={['machine learning', 'predictive analytics', 'AI models', 'data science', 'ML solutions', 'custom AI development']}
-        canonicalUrl="https: //ziontechgroup.com/machine-learning",
+        canonicalUrl="https: //ziontechgroup.com/machine-learning"
       />,
       <PerformanceOptimizer;
         enableImageOptimization={true}
@@ -76,15 +76,15 @@ const MachineLearningPage: React.FC = () => {,
 
         <main className="container mx-auto px-4 py-16 pt-24">{/* Hero Section */}</main>
           <section className="text-center mb-16">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse glitch" data-text="Machine Learning Solutions">Machine Learning Solutions</h1><p className="text-xl text-cyan-400 mb-8 font-medium">Advanced AI Models for Business Intelligence</p><p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8">Transform your business with cutting-edge machine learning solutions. From predictive analytics</p>
-              to custom AI models, we help you harness the power of data to drive growth and efficiency.</p>
+            <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse glitch" data-text="Machine Learning Solutions">Machine Learning Solutions</h1><p className="text-xl text-cyan-400 mb-8 font-medium">Advanced AI Models for Business Intelligence</p><p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8">Transform your business with cutting-edge machine learning solutions. From predictive analytics</p>
+              to custom AI models we help you harness the power of data to drive growth and efficiency.</p>
             </p>
           </section>
 
           {/* Services */}
           <section className="mb-16">
-            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Our ML Services<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{services.map((service, index) => (</div>
-                <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
+            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Our ML Services<div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">{services.map((service index) => (</div>
+                <div key={index} className="cyber-card p-6 hover: scale-105 transition-all duration-300">
         <main className="container mx-auto px-4 py-16 pt-24">
           {/* Hero Section */}
           <section className="text-center mb-16">
@@ -93,21 +93,21 @@ const MachineLearningPage: React.FC = () => {,
             </h1>
             <p className="text-xl text-cyan-400 mb-8 font-medium">
               Advanced AI Models for Business Intelligence;
-            </p>,
+            </p>
             <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8">,
               Transform your business with cutting-edge machine learning solutions. From predictive analytics;
               to custom AI models, we help you harness the power of data to drive growth and efficiency.
             </p>
           </section>
 
-          {/* Services */})
-          <section className="mb-16">)
+          {/* Services */}
+          <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Our ML Services</h2>)
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">),
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
               {services.map((service, index) => (
-                <div key={index} className="cyber-card p-6 hover: scale-105 transition-all duration-300">,
-            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Our ML Services</h2><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{services.map((service, index) => (</section>
-                <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300"></div>
+                <div key={index} className="cyber-card p-6 hover: scale-105 transition-all duration-300">
+            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Our ML Services</h2><div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">{services.map((service index) => (</section>
+                <div key={index} className="cyber-card p-6 hover: scale-105 transition-all duration-300"></div>
                   <service.icon className={`w-16 h-16 ${service.color} mx-auto mb-4`} />
                   <h3 className="text-xl font-bold text-white mb-3 neon-text text-center">{service.title}</h3><p className="text-gray-300 mb-4 text-sm text-center leading-relaxed">{service.description}</p><ul className="space-y-2">{service.features.map((feature, featureIndex) => (</ul>
                       <li key={featureIndex} className="flex items-center text-xs text-gray-300">
@@ -124,17 +124,17 @@ const MachineLearningPage: React.FC = () => {,
           <section className="mb-16">
             <div className="cyber-card p-8 max-w-4xl mx-auto"></section>
               <h2 className="text-3xl font-bold text-white mb-6 text-center neon-text">Why Choose Our ML Solutions?</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 md: grid-cols-2 gap-6">
                 <div>
-                  <h3 className="text-xl font-bold text-cyan-400 mb-4">Key Benefits<ul className="space-y-3">{benefits.map((benefit, index) => (</ul>
-              <div className="grid grid-cols-1 md: grid-cols-2 gap-6">,
+                  <h3 className="text-xl font-bold text-cyan-400 mb-4">Key Benefits<ul className="space-y-3">{benefits.map((benefit index) => (</ul>
+              <div className="grid grid-cols-1 md: grid-cols-2 gap-6">
                 <div>,
                   <h3 className="text-xl font-bold text-cyan-400 mb-4">Key Benefits</h3>,
                   <ul className="space-y-3">,
                     {benefits.map((benefit, index) => (
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+              <div className="grid grid-cols-1 md: grid-cols-2 gap-6"></div>
                 <div></div>
-                  <h3 className="text-xl font-bold text-cyan-400 mb-4">Key Benefits</h3><ul className="space-y-3">{benefits.map((benefit, index) => (</ul>
+                  <h3 className="text-xl font-bold text-cyan-400 mb-4">Key Benefits</h3><ul className="space-y-3">{benefits.map((benefit index) => (</ul>
                       <li key={index} className="flex items-center text-gray-300">
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                         <span>{benefit}</span>
@@ -206,7 +206,7 @@ const MachineLearningPage: React.FC = () => {,
         </main>
 
         <Footer />
-      </div>,
+      </div>
     </>);
 };
 

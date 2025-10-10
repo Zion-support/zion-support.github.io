@@ -2,17 +2,17 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 const smartcontractsecurityauditPage: React.FC = () => {
-  return(<>)
-      <Helmet>)
+  return (<>
+      <Helmet>
         <title>Smart Contract Security Audit | Zion Tech Group</title>)
-        <meta name="description" content="Professional smart contract security audit services by Zion Tech Group. Advanced AI and IT solutions for your business." />),
+        <meta name="description" content="Professional smart contract security audit services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="smart contract security audit, AI solutions, IT services, Zion Tech Group" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">Smart Contract Security Audit<p className="text-xl text-gray-300 mb-8">Professional smart contract security audit services powered by advanced AI and cutting-edge technology.</p>
+            <h1 className="text-4xl md: text-6xl font-bold text-white mb-6">Smart Contract Security Audit<p className="text-xl text-gray-300 mb-8">Professional smart contract security audit services powered by advanced AI and cutting-edge technology.</p>
             <h1 className="text-4xl md: text-6xl font-bold text-white mb-6">
               Smart Contract Security Audit;
             </h1>
@@ -63,7 +63,7 @@ const smartcontractsecurityauditPage: React.FC = () => {
             </div>
           </div>
         </div>
-      </div>,
+      </div>
     </>);
 };
 

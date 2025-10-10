@@ -5,140 +5,142 @@ import { CheckCircle, Star, Link, Shield, Zap, Target, BarChart, Cpu, Sparkles }
 const BlockchainPage: React.FC = () => {
   const blockchainServices = [
     {
-      title: 'Smart Contract Development',
-      description: 'Custom smart contract development for DeFi, NFTs, and enterprise blockchain applications.',
-      icon: '📜',
-      price: 'Starting at $8,000/project',
+      title: 'Smart Contract Development'
+      description: 'Custom smart contract development for DeFi NFTs, and enterprise blockchain applications.',
+      icon: '📜'
+      price: 'Starting at $8000/project',
       features: ['Custom smart contracts', 'Security auditing', 'Gas optimization', 'Testing & deployment', 'Maintenance & updates'],
       benefits: ['Automate business processes', 'Reduce intermediaries', 'Ensure transparency'],
-      marketPrice: '$15,000-50,000/project',
-      category: 'Smart Contracts',
+      marketPrice: '$15000-50,000/project',
+      category: 'Smart Contracts'
       technologies: ['Solidity', 'Vyper', 'Rust', 'Go', 'JavaScript']
     },
     {
-      title: 'DeFi Protocol Development',
-      description: 'Decentralized finance protocols including DEXs, lending platforms, and yield farming solutions.',
-      icon: '💰',
-      price: 'Starting at $25,000/project',
+      title: 'DeFi Protocol Development'
+      description: 'Decentralized finance protocols including DEXs lending platforms, and yield farming solutions.',
+      icon: '💰'
+      price: 'Starting at $25000/project',
       features: ['DEX development', 'Lending protocols', 'Yield farming', 'Liquidity pools', 'Governance tokens'],
       benefits: ['Enable decentralized finance', 'Increase financial inclusion', 'Reduce traditional banking costs'],
-      marketPrice: '$50,000-200,000/project',
-      category: 'DeFi',
+      marketPrice: '$50000-200,000/project',
+      category: 'DeFi'
       technologies: ['Ethereum', 'Polygon', 'BSC', 'Avalanche', 'Arbitrum']
     },
     {
-      title: 'NFT Marketplace Development',
-      description: 'Complete NFT marketplace solutions with minting, trading, and auction capabilities.',
-      icon: '🎨',
-      price: 'Starting at $15,000/project',
+      title: 'NFT Marketplace Development'
+      description: 'Complete NFT marketplace solutions with minting trading, and auction capabilities.',
+      icon: '🎨'
+      price: 'Starting at $15000/project',
       features: ['NFT minting', 'Marketplace UI/UX', 'Auction system', 'Royalty management', 'Multi-chain support'],
       benefits: ['Enable digital ownership', 'Create new revenue streams', 'Support digital artists'],
-      marketPrice: '$30,000-100,000/project',
-      category: 'NFTs',
+      marketPrice: '$30000-100,000/project',
+      category: 'NFTs'
       technologies: ['ERC-721', 'ERC-1155', 'IPFS', 'OpenSea API', 'Web3']
     },
     {
-      title: 'Enterprise Blockchain Solutions',
-      description: 'Private and consortium blockchain solutions for enterprise applications and supply chain management.',
-      icon: '🏢',
-      price: 'Starting at $20,000/month',
+      title: 'Enterprise Blockchain Solutions'
+      description: 'Private and consortium blockchain solutions for enterprise applications and supply chain management.'
+      icon: '🏢'
+      price: 'Starting at $20000/month',
       features: ['Private blockchain setup', 'Consortium management', 'Supply chain tracking', 'Identity management', 'Data privacy'],
       benefits: ['Improve transparency', 'Reduce fraud', 'Streamline operations'],
-      marketPrice: '$40,000-150,000/month',
-      category: 'Enterprise',
+      marketPrice: '$40000-150,000/month',
+      category: 'Enterprise'
       technologies: ['Hyperledger', 'Ethereum Enterprise', 'Corda', 'Quorum', 'Fabric']
     },
     {
-      title: 'Cross-Chain Bridge Development',
-      description: 'Interoperability solutions for seamless asset and data transfer between different blockchain networks.',
-      icon: '🌉',
-      price: 'Starting at $30,000/project',
+      title: 'Cross-Chain Bridge Development'
+      description: 'Interoperability solutions for seamless asset and data transfer between different blockchain networks.'
+      icon: '🌉'
+      price: 'Starting at $30000/project',
       features: ['Cross-chain bridges', 'Asset wrapping', 'Liquidity pools', 'Security audits', 'Multi-chain support'],
       benefits: ['Enable blockchain interoperability', 'Increase liquidity', 'Reduce fragmentation'],
-      marketPrice: '$60,000-300,000/project',
-      category: 'Interoperability',
+      marketPrice: '$60000-300,000/project',
+      category: 'Interoperability'
       technologies: ['Polkadot', 'Cosmos', 'LayerZero', 'Wormhole', 'Chainlink']
     },
     {
-      title: 'Blockchain Security Auditing',
-      description: 'Comprehensive security audits for smart contracts, DeFi protocols, and blockchain applications.',
-      icon: '🔒',
-      price: 'Starting at $5,000/audit',
+      title: 'Blockchain Security Auditing'
+      description: 'Comprehensive security audits for smart contracts DeFi protocols, and blockchain applications.',
+      icon: '🔒'
+      price: 'Starting at $5000/audit',
       features: ['Smart contract auditing', 'Vulnerability assessment', 'Penetration testing', 'Code review', 'Security recommendations'],
       benefits: ['Prevent security breaches', 'Ensure code quality', 'Protect user funds'],
-      marketPrice: '$10,000-50,000/audit',
-      category: 'Security',
+      marketPrice: '$10000-50,000/audit',
+      category: 'Security'
       technologies: ['Mythril', 'Slither', 'Echidna', 'Foundry', 'Custom Tools']
     },
     {
-      title: 'Token Economics Design',
-      description: 'Comprehensive tokenomics design including token distribution, utility, and governance mechanisms.',
-      icon: '🪙',
-      price: 'Starting at $10,000/project',
+      title: 'Token Economics Design'
+      description: 'Comprehensive tokenomics design including token distribution utility, and governance mechanisms.',
+      icon: '🪙'
+      price: 'Starting at $10000/project',
       features: ['Token design', 'Economic modeling', 'Governance structure', 'Vesting schedules', 'Incentive mechanisms'],
       benefits: ['Create sustainable token economy', 'Align incentives', 'Ensure long-term viability'],
-      marketPrice: '$20,000-100,000/project',
-      category: 'Tokenomics',
+      marketPrice: '$20000-100,000/project',
+      category: 'Tokenomics'
       technologies: ['Economic Modeling', 'Game Theory', 'Token Standards', 'Governance', 'DeFi Protocols']
     },
     {
-      title: 'Blockchain Infrastructure Management',
-      description: 'Complete blockchain infrastructure setup, monitoring, and maintenance services.',
-      icon: '⚙️',
-      price: 'Starting at $3,000/month',
+      title: 'Blockchain Infrastructure Management'
+      description: 'Complete blockchain infrastructure setup monitoring, and maintenance services.',
+      icon: '⚙️'
+      price: 'Starting at $3000/month',
       features: ['Node management', 'Network monitoring', 'Backup & recovery', 'Performance optimization', 'Security updates'],
       benefits: ['Ensure network reliability', 'Reduce operational costs', 'Improve performance'],
-      marketPrice: '$6,000-25,000/month',
-      category: 'Infrastructure',
+      marketPrice: '$6000-25,000/month',
+      category: 'Infrastructure'
       technologies: ['Ethereum', 'Bitcoin', 'Polygon', 'AWS', 'Kubernetes']
     },
     {
-      title: 'Web3 Application Development',
-      description: 'Full-stack Web3 applications with wallet integration, smart contract interaction, and user-friendly interfaces.',
-      icon: '🌐',
-      price: 'Starting at $12,000/project',
+      title: 'Web3 Application Development'
+      description: 'Full-stack Web3 applications with wallet integration smart contract interaction, and user-friendly interfaces.',
+      icon: '🌐'
+      price: 'Starting at $12000/project',
       features: ['Frontend development', 'Wallet integration', 'Smart contract integration', 'User authentication', 'Mobile support'],
       benefits: ['Enable Web3 adoption', 'Improve user experience', 'Increase accessibility'],
-      marketPrice: '$25,000-100,000/project',
-      category: 'Web3',
+      marketPrice: '$25000-100,000/project',
+      category: 'Web3'
       technologies: ['React', 'Next.js', 'Web3.js', 'Ethers.js', 'WalletConnect']
     },
     {
-      title: 'Blockchain Analytics Platform',
-      description: 'Comprehensive blockchain data analysis and visualization platform for insights and monitoring.',
-      icon: '📊',
-      price: 'Starting at $8,000/month',
+      title: 'Blockchain Analytics Platform'
+      description: 'Comprehensive blockchain data analysis and visualization platform for insights and monitoring.'
+      icon: '📊'
+      price: 'Starting at $8000/month',
       features: ['Transaction analysis', 'Address tracking', 'DeFi analytics', 'NFT metrics', 'Custom dashboards'],
       benefits: ['Gain blockchain insights', 'Monitor network activity', 'Make data-driven decisions'],
-      marketPrice: '$15,000-60,000/month',
-      category: 'Analytics',
+      marketPrice: '$15000-60,000/month',
+      category: 'Analytics'
       technologies: ['The Graph', 'Alchemy', 'Moralis', 'Infura', 'Custom APIs']
     },
     {
-      title: 'Staking & Validator Services',
-      description: 'Professional staking services and validator node management for various blockchain networks.',
-      icon: '🏦',
-      price: 'Starting at $2,000/month',
+      title: 'Staking & Validator Services'
+      description: 'Professional staking services and validator node management for various blockchain networks.'
+      icon: '🏦'
+      price: 'Starting at $2000/month',
       features: ['Validator setup', 'Staking management', 'Reward optimization', 'Security monitoring', 'Slashing protection'],
       benefits: ['Earn passive income', 'Support network security', 'Contribute to decentralization'],
-      marketPrice: '$4,000-20,000/month',
-      category: 'Staking',
+      marketPrice: '$4000-20,000/month',
+      category: 'Staking'
       technologies: ['Ethereum 2.0', 'Cosmos', 'Polkadot', 'Solana', 'Cardano']
     },
     {
-      title: 'Blockchain Consulting',
-      description: 'Strategic blockchain consulting for enterprise adoption, technology selection, and implementation planning.',
-      icon: '💡',
-      price: 'Starting at $300/hour',
+      title: 'Blockchain Consulting'
+      description: 'Strategic blockchain consulting for enterprise adoption technology selection, and implementation planning.',
+      icon: '💡'
+      price: 'Starting at $300/hour'
       features: ['Technology assessment', 'Use case analysis', 'Implementation strategy', 'Risk assessment', 'ROI analysis'],
       benefits: ['Make informed decisions', 'Reduce implementation risks', 'Maximize blockchain value'],
-      marketPrice: '$500-1,500/hour',
-      category: 'Consulting',
+      marketPrice: '$500-1500/hour',
+      category: 'Consulting'
       technologies: ['Strategic Planning', 'Technology Evaluation', 'Risk Assessment', 'ROI Analysis']
     }
   ];
 
-  const categories = [...new Set(blockchainServices.map(service => service.category))];
+  const categories = [
+    ...new Set(blockchainServices.map(service => service.category)
+  ];
 
   return (
     <>
@@ -153,7 +155,7 @@ const BlockchainPage: React.FC = () => {
         <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-indigo-800 text-white py-20">
           <div className="absolute inset-0 bg-black opacity-30"></div>
           <div className="absolute inset-0 bg-gradient-to-r from-blue-600/50 to-indigo-800/50"></div>
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
                 Blockchain Solutions
@@ -175,16 +177,16 @@ const BlockchainPage: React.FC = () => {
 
         {/* Key Benefits */}
         <section className="py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Why Choose Our Blockchain Services?
               </h2>
               <p className="text-xl text-gray-600">
-                Leading blockchain expertise with proven track record in DeFi, NFTs, and enterprise solutions
+                Leading blockchain expertise with proven track record in DeFi NFTs, and enterprise solutions
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="text-center">
                 <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Link className="w-8 h-8 text-blue-600" />
@@ -220,7 +222,7 @@ const BlockchainPage: React.FC = () => {
         {/* Services by Category */}
         {categories.map(category => (
           <section key={category} className="py-16 bg-gray-50">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
               <div className="text-center mb-12">
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                   {category} Services
@@ -229,11 +231,11 @@ const BlockchainPage: React.FC = () => {
                   Professional {category.toLowerCase()} solutions powered by blockchain technology
                 </p>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
                 {blockchainServices
                   .filter(service => service.category === category)
-                  .map((service, index) => (
-                    <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                  .map((service index) => (
+                    <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover: shadow-xl transition-shadow">
                       <div className="text-4xl mb-4">{service.icon}</div>
                       <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
                       <p className="text-gray-600 mb-4">{service.description}</p>
@@ -249,9 +251,9 @@ const BlockchainPage: React.FC = () => {
                       </div>
 
                       <div className="mb-4">
-                        <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
+                        <h4 className="font-semibold text-gray-900 mb-2">Key Features: </h4>
                         <ul className="space-y-1">
-                          {service.features.map((feature, featureIndex) => (
+                          {service.features.map((feature featureIndex) => (
                             <li key={featureIndex} className="flex items-center text-sm text-gray-600">
                               <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
                               {feature}
@@ -261,9 +263,9 @@ const BlockchainPage: React.FC = () => {
                       </div>
 
                       <div className="mb-4">
-                        <h4 className="font-semibold text-gray-900 mb-2">Technologies:</h4>
+                        <h4 className="font-semibold text-gray-900 mb-2">Technologies: </h4>
                         <div className="flex flex-wrap gap-2">
-                          {service.technologies.map((tech, techIndex) => (
+                          {service.technologies.map((tech techIndex) => (
                             <span key={techIndex} className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">
                               {tech}
                             </span>
@@ -272,9 +274,9 @@ const BlockchainPage: React.FC = () => {
                       </div>
 
                       <div className="mb-6">
-                        <h4 className="font-semibold text-gray-900 mb-2">Business Benefits:</h4>
+                        <h4 className="font-semibold text-gray-900 mb-2">Business Benefits: </h4>
                         <ul className="space-y-1">
-                          {service.benefits.map((benefit, benefitIndex) => (
+                          {service.benefits.map((benefit benefitIndex) => (
                             <li key={benefitIndex} className="flex items-center text-sm text-gray-600">
                               <Star className="w-4 h-4 text-yellow-500 mr-2 flex-shrink-0" />
                               {benefit}
@@ -283,7 +285,7 @@ const BlockchainPage: React.FC = () => {
                         </ul>
                       </div>
 
-                      <button className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                      <button className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg font-semibold hover: bg-blue-700 transition-colors">
                         Get Blockchain Quote
                       </button>
                     </div>
@@ -295,7 +297,7 @@ const BlockchainPage: React.FC = () => {
 
         {/* Blockchain Capabilities Showcase */}
         <section className="py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Our Blockchain Capabilities
@@ -341,7 +343,7 @@ const BlockchainPage: React.FC = () => {
 
         {/* Contact Section */}
         <section className="py-16 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Ready to Transform with Blockchain?
             </h2>
@@ -363,7 +365,7 @@ const BlockchainPage: React.FC = () => {
               </a>
             </div>
             <div className="mt-8 text-sm text-blue-200">
-              <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
+              <p>📍 364 E Main St STE 1008 Middletown DE 19709</p>
             </div>
           </div>
         </section>

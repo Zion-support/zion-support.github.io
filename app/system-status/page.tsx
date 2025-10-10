@@ -1,4 +1,5 @@
 import React from 'react';
+
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -26,14 +27,13 @@ const SystemStatusPage: React.FC = () => {
           </a>
         </section>
       </main>)
-)
-      <Footer />)
+      <Footer />
     </div>)
       </main>
 
       <Footer />
     </section>
-import React from 'react';
+
 
 
 const SystemStatusPage: React.FC = () => {

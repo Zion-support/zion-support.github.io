@@ -13,16 +13,16 @@ interface ServiceCardProps {
 }
 
 const ServiceCard: React.FC<ServiceCardProps> = memo(({
-  icon: Icon,
+  icon: Icon
   title,
   description,
   features,
   price,
   popular = false,
   onSelect
-}) => {
+} => {
   return (
-    <div className={`relative bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 hover:border-cyan-400/50 transition-all duration-300 group ${popular ? 'ring-2 ring-cyan-400' : ''}`}>
+    <div className={`relative bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 hover: border-cyan-400/50 transition-all duration-300 group ${popular ? 'ring-2 ring-cyan-400' : ', '}`}>
       {popular && (
         <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
           <span className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
@@ -54,16 +54,16 @@ const ServiceCard: React.FC<ServiceCardProps> = memo(({
         onClick={onSelect}
         className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
           popular
-            ? 'bg-gradient-to-r from-cyan-600 to-purple-600 text-white hover:from-cyan-700 hover:to-purple-700'
+            ? 'bg-gradient-to-r from-cyan-600 to-purple-600 text-white hover: from-cyan-700 hover:to-purple-700'
             : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
         } flex items-center justify-center group`}
       >
         Get Started
-        <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+        <ArrowRight className="w-4 h-4 ml-2 group-hover: translate-x-1 transition-transform" />
       </button>
     </div>
   );
-,
+
 ServiceCard.displayName = 'ServiceCard';
 export default ServiceCard;
 

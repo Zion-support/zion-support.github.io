@@ -1,77 +1,78 @@
-'use client';
 import React, { useState, useEffect } from 'react';
+'use client';
+
 import { ArrowRight, X, Zap, Brain, Cpu, Shield, Star, TrendingUp, Users, Award } from 'lucide-react';
 
 const ContentPromotionBanner: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(true);
+  const [isVisible setIsVisible] = useState(true);
   const [currentPromo, setCurrentPromo] = useState(0);
 
   const promotions = [
     {
-      icon: Zap,
-      title: '🚀 New AI Services Available!',
-      description: 'Discover our latest AI-powered solutions for analytics, automation, and customer support.',
-      cta: 'Explore Now',
-      href: '/ai-services',
+      icon: Zap
+      title: '🚀 New AI Services Available!'
+      description: 'Discover our latest AI-powered solutions for analytics automation, and customer support.',
+      cta: 'Explore Now'
+      href: '/ai-services'
       color: 'from-cyan-400 to-blue-600'
     },
     {
-      icon: Brain,
-      title: '🧠 AI Analytics Platform',
-      description: 'Get 95% accuracy in data insights with our advanced AI analytics platform.',
-      cta: 'Learn More',
-      href: '/ai-analytics',
+      icon: Brain
+      title: '🧠 AI Analytics Platform'
+      description: 'Get 95% accuracy in data insights with our advanced AI analytics platform.'
+      cta: 'Learn More'
+      href: '/ai-analytics'
       color: 'from-purple-400 to-pink-600'
     },
     {
-      icon: Shield,
-      title: '🔒 Enterprise Security',
-      description: 'Bank-level security and compliance for all your critical data and systems.',
-      cta: 'Secure Now',
-      href: '/cybersecurity',
+      icon: Shield
+      title: '🔒 Enterprise Security'
+      description: 'Bank-level security and compliance for all your critical data and systems.'
+      cta: 'Secure Now'
+      href: '/cybersecurity'
       color: 'from-green-400 to-emerald-600'
     },
     {
-      icon: TrendingUp,
-      title: '📈 300% Average ROI',
-      description: 'Our clients achieve 300% ROI and $50M+ in annual savings with our solutions.',
-      cta: 'See Results',
-      href: '/case-studies',
+      icon: TrendingUp
+      title: '📈 300% Average ROI'
+      description: 'Our clients achieve 300% ROI and $50M+ in annual savings with our solutions.'
+      cta: 'See Results'
+      href: '/case-studies'
       color: 'from-yellow-400 to-orange-600'
-import { X, Sparkles, ArrowRight, Star, Zap } from 'lucide-react';
+import { X Sparkles, ArrowRight, Star, Zap } from 'lucide-react';
 
-const ContentPromotionBanner: React.FC = () => {,
-  const [isVisible, setIsVisible] = useState(true);
+const ContentPromotionBanner: React.FC = () => {
+  const [isVisible setIsVisible] = useState(true);
   const [currentBanner, setCurrentBanner] = useState(0);
 
   const banners = [
     {
-      id: 1;
-      title: "🚀 New AI Solutions Available!"
-      description: "Discover our latest AI-powered tools and services"
-      cta: "Explore Now"
-      link: "/ai-services",
-      color: "from-cyan-500 to-blue-600",
-      icon: Sparkles;
+    id: 1;,
+    title: "🚀 New AI Solutions Available!",
+    description: "Discover our latest AI-powered tools and services",
+    cta: "Explore Now",
+    link: "/ai-services",
+    color: "from-cyan-500 to-blue-600",
+    icon: Sparkles;,
     },
     {
-      id: 2;
-      title: "⚡ Special Offer: 30% Off First Month"
-      description: "Get started with our AI services at a discounted rate"
-      cta: "Claim Offer"
-      link: "/contact",
-      color: "from-purple-500 to-pink-600",
-      icon: Star;
+    id: 2;,
+    title: "⚡ Special Offer: 30% Off First Month",
+    description: "Get started with our AI services at a discounted rate",
+    cta: "Claim Offer",
+    link: "/contact",
+    color: "from-purple-500 to-pink-600",
+    icon: Star;,
     },
     {
-      id: 3;
-      title: "🎯 Free AI Consultation"
-      description: "Book a free consultation to discuss your AI needs"
-      cta: "Book Now"
-      link: "/consultation",
-      color: "from-green-500 to-emerald-600",
-      icon: Zap;
-      icon: Zap
+    id: 3;,
+    title: "🎯 Free AI Consultation",
+    description: "Book a free consultation to discuss your AI needs",
+    cta: "Book Now",
+    link: "/consultation",
+    color: "from-green-500 to-emerald-600",
+    icon: Zap;,
+    icon: Zap,
     }
   ];
 
@@ -92,7 +93,7 @@ const ContentPromotionBanner: React.FC = () => {,
       {/* Animated Background */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/10 via-purple-400/10 to-pink-400/10 animate-pulse"></div>
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%2300ffff" fill-opacity="0.05"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] animate-pulse"></div>
+        <div className="absolute inset-0 bg-[url('data: image/svg+xml%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%2300ffff" fill-opacity="0.05"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] animate-pulse"></div>
       </div>
 
       <div className="relative container mx-auto px-4 py-4">
@@ -106,7 +107,7 @@ const ContentPromotionBanner: React.FC = () => {,
               <h3 className="text-lg font-bold text-white mb-1 neon-text">
                 {current.title}
               </h3>
-              <p className="text-sm text-gray-300 hidden sm:block">
+              <p className="text-sm text-gray-300 hidden sm: block">
                 {current.description}
               </p>
             </div>
@@ -116,7 +117,7 @@ const ContentPromotionBanner: React.FC = () => {,
           <div className="flex items-center space-x-4">
             <a
               href={current.href}
-              className="cyber-button text-sm px-4 py-2 inline-flex items-center hover:scale-105 transition-transform"
+              className="cyber-button text-sm px-4 py-2 inline-flex items-center hover: scale-105 transition-transform"
             >
               {current.cta}
               <ArrowRight className="w-4 h-4 ml-1" />
@@ -125,7 +126,7 @@ const ContentPromotionBanner: React.FC = () => {,
             {/* Close Button */}
             <button
               onClick={() => setIsVisible(false)}
-              className="text-gray-400 hover:text-white transition-colors p-1"
+              className="text-gray-400 hover: text-white transition-colors p-1"
               aria-label="Close banner"
             >
               <X className="w-4 h-4" />
@@ -143,8 +144,7 @@ const ContentPromotionBanner: React.FC = () => {,
                   ? 'bg-cyan-400 w-8' 
                   : 'bg-gray-600 w-2'
               }`}
-            />
-          ))}
+            />}
         </div>
       setCurrentBanner((prev) => (prev + 1) % banners.length);
     }, 5000);
@@ -195,7 +195,7 @@ const ContentPromotionBanner: React.FC = () => {,
               {/* CTA Button */}
               <Link
                 to={banner.ctaLink}
-                className="inline-block bg-white text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg"
+                className="inline-block bg-white text-gray-900 px-8 py-3 rounded-lg font-semibold hover: bg-gray-100 transition-colors shadow-lg"
               >
                 {banner.ctaText}
                 <svg className="ml-2 w-4 h-4 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -207,7 +207,7 @@ const ContentPromotionBanner: React.FC = () => {,
             {/* Close button */}
             <button
               onClick={handleClose}
-              className={`ml-6 p-2 rounded-full hover:bg-white hover:bg-opacity-20 transition-colors ${banner.textColor}`}
+              className={`ml-6 p-2 rounded-full hover: bg-white hover:bg-opacity-20 transition-colors ${banner.textColor}`}
               aria-label="Close banner"
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -219,18 +219,18 @@ const ContentPromotionBanner: React.FC = () => {,
 
         <div className="flex items-center space-x-2">
           <a;)
-            href={currentBannerData.link})
+            href={currentBannerData.link}
             className="bg-white/20 hover: bg-white/30 text-white px-4 py-1 rounded-full text-sm font-medium transition-all duration-300 flex items-center space-x-1")
-          >),
+          >
         <div className="flex items-center space-x-2"></div>
           <a
             href={currentBannerData.link}
-            className="bg-white/20 hover:bg-white/30 text-white px-4 py-1 rounded-full text-sm font-medium transition-all duration-300 flex items-center space-x-1"
+            className="bg-white/20 hover: bg-white/30 text-white px-4 py-1 rounded-full text-sm font-medium transition-all duration-300 flex items-center space-x-1"
           >
             <span>{currentBannerData.cta}</span>
             <ArrowRight className="w-3 h-3" />
           <button
-            onClick={() =>setIsVisible(false)}</button></<<<butto>className</butto></butto>="text-white/80 hover:text-white transition-colors p-1"
+            onClick={() =>setIsVisible(false)}</button></<<<butto>className</butto></butto>="text-white/80 hover: text-white transition-colors p-1"
             aria-label="Close banner"</button>
           ></button>
             <X className="w-4 h-4" /></X>
@@ -250,7 +250,7 @@ const ContentPromotionBanner: React.FC = () => {,
             className="text-white/80 hover: text-white transition-colors p-1"
             aria-label="Close banner"
           >
-            <X className="w-4 h-4" />,
+            <X className="w-4 h-4" />
           </button>,
         </div>,
       </div>,
@@ -267,7 +267,7 @@ const ContentPromotionBanner: React.FC = () => {,
             aria-label={`Go to banner ${index + 1}`}
           /></button>
         ))}</button>
-import React from 'react';
+
 import { Star, Zap, ArrowRight } from 'lucide-react';
 
 const ContentPromotionBanner: React.FC = () => {

@@ -5,34 +5,34 @@ import { BarChart, TrendingUp, Users, DollarSign, Zap, Target, ArrowRight, Check
 const AIAnalyticsDashboardPage: React.FC = () => {
   const features = [
     {
-      icon: BarChart,
-      title: 'Real-time Analytics',
-      description: 'Live data visualization with instant updates and interactive charts.'
+    icon: BarChart,
+    title: 'Real-time Analytics',
+    description: 'Live data visualization with instant updates and interactive charts.',
     },
     {
-      icon: TrendingUp,
-      title: 'Predictive Insights',
-      description: 'AI-powered forecasting and trend analysis for better decision making.'
+    icon: TrendingUp,
+    title: 'Predictive Insights',
+    description: 'AI-powered forecasting and trend analysis for better decision making.',
     },
     {
-      icon: Users,
-      title: 'User Behavior Tracking',
-      description: 'Comprehensive user analytics and engagement metrics tracking.'
+    icon: Users,
+    title: 'User Behavior Tracking',
+    description: 'Comprehensive user analytics and engagement metrics tracking.',
     },
     {
-      icon: DollarSign,
-      title: 'Revenue Analytics',
-      description: 'Detailed financial metrics and revenue optimization insights.'
+    icon: DollarSign,
+    title: 'Revenue Analytics',
+    description: 'Detailed financial metrics and revenue optimization insights.',
     },
     {
-      icon: Zap,
-      title: 'Custom Dashboards',
-      description: 'Build personalized dashboards tailored to your business needs.'
+    icon: Zap,
+    title: 'Custom Dashboards',
+    description: 'Build personalized dashboards tailored to your business needs.',
     },
     {
-      icon: Target,
-      title: 'Goal Tracking',
-      description: 'Monitor KPIs and business objectives with automated alerts.'
+    icon: Target,
+    title: 'Goal Tracking',
+    description: 'Monitor KPIs and business objectives with automated alerts.',
     }
   ];
 
@@ -46,10 +46,10 @@ const AIAnalyticsDashboardPage: React.FC = () => {
   ];
 
   const metrics = [
-    { label: 'Data Sources', value: '50+', icon: BarChart },
-    { label: 'Update Frequency', value: 'Real-time', icon: Clock },
-    { label: 'Accuracy Rate', value: '99.9%', icon: Shield },
-    { label: 'User Satisfaction', value: '4.9/5', icon: Star }
+    { label: 'Data Sources' value: '50+' icon: BarChart },
+    { label: 'Update Frequency' value: 'Real-time' icon: Clock },
+    { label: 'Accuracy Rate' value: '99.9%' icon: Shield },
+    { label: 'User Satisfaction' value: '4.9/5' icon: Star }
   ];
 
   return (
@@ -58,7 +58,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
         <title>AI Analytics Dashboard | Zion Tech Group - Real-time Business Intelligence</title>
         <meta name="description" content="Transform your data into actionable insights with our AI-powered analytics dashboard. Real-time visualization, predictive analytics, and custom reporting." />
         <meta name="keywords" content="AI analytics dashboard, business intelligence, data visualization, real-time analytics, predictive insights, Zion Tech Group" />
-        <link rel="canonical" href="https://ziontechgroup.com/micro-saas/analytics-dashboard" />
+        <link rel="canonical" href="https: //ziontechgroup.com/micro-saas/analytics-dashboard" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -70,15 +70,15 @@ const AIAnalyticsDashboardPage: React.FC = () => {
                 <BarChart className="w-4 h-4" />
                 <span>AI Analytics Dashboard</span>
               </div>
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text">
+              <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 cyber-text">
                 Real-time Business 
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-green-400"> Intelligence</span>
               </h1>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
                 Transform your data into actionable insights with our AI-powered analytics dashboard. 
-                Get real-time visualization, predictive analytics, and custom reporting in one powerful platform.
+                Get real-time visualization predictive analytics, and custom reporting in one powerful platform.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all flex items-center justify-center space-x-2">
                   <span>Start Free Trial</span>
                   <ArrowRight className="w-5 h-5" />
@@ -100,9 +100,9 @@ const AIAnalyticsDashboardPage: React.FC = () => {
                 Everything you need to make data-driven decisions with confidence
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-slate-800/50 backdrop-blur-lg rounded-lg p-6 border border-slate-700/50 hover:border-cyan-400/50 transition-all group">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature index) => (
+                <div key={index} className="bg-slate-800/50 backdrop-blur-lg rounded-lg p-6 border border-slate-700/50 hover: border-cyan-400/50 transition-all group">
                   <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                     <feature.icon className="w-6 h-6 text-white" />
                   </div>
@@ -123,8 +123,8 @@ const AIAnalyticsDashboardPage: React.FC = () => {
                 Built for scale and reliability
               </p>
             </div>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {metrics.map((metric, index) => (
+            <div className="grid grid-cols-2 md: grid-cols-4 gap-8">
+              {metrics.map((metric index) => (
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-cyan-500 rounded-lg flex items-center justify-center mx-auto mb-4">
                     <metric.icon className="w-8 h-8 text-white" />
@@ -146,9 +146,9 @@ const AIAnalyticsDashboardPage: React.FC = () => {
                 Experience the difference with our AI-powered analytics platform
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
               <div className="space-y-6">
-                {benefits.map((benefit, index) => (
+                {benefits.map((benefit index) => (
                   <div key={index} className="flex items-start space-x-3">
                     <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0 mt-1" />
                     <span className="text-gray-300 text-lg">{benefit}</span>
@@ -187,7 +187,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
                 Join thousands of businesses already using our AI analytics dashboard 
                 to make smarter, data-driven decisions.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all flex items-center justify-center space-x-2">
                   <span>Start Free Trial</span>
                   <ArrowRight className="w-5 h-5" />

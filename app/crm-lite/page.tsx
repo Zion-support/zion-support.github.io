@@ -6,39 +6,39 @@ import Link from 'next/link';
 const CRMLitePage: React.FC = () => {
   const features = [
     {
-      icon: Users;
-      title: 'Contact Management',
-      description: 'Organize and manage all your customer contacts in one place'},
+    icon: Users;,
+    title: 'Contact Management',
+    description: 'Organize and manage all your customer contacts in one place'},
     {
-      icon: Phone;
-      title: 'Communication Tracking',
-      description: 'Track all interactions with customers across multiple channels'},
+    icon: Phone;,
+    title: 'Communication Tracking',
+    description: 'Track all interactions with customers across multiple channels'},
     {
-      icon: Calendar;
-      title: 'Task Management',
-      description: 'Schedule and track follow-ups, meetings, and important tasks'
+    icon: Calendar;,
+    title: 'Task Management',
+    description: 'Schedule and track follow-ups meetings, and important tasks',
     },
     {
-      icon: BarChart;
-      title: 'Sales Analytics',
-      description: 'Monitor sales performance with detailed reports and insights'},
+    icon: BarChart;,
+    title: 'Sales Analytics',
+    description: 'Monitor sales performance with detailed reports and insights'},
     {
-      icon: Target;
-      title: 'Lead Management',
-      description: 'Track leads from initial contact to conversion'},
+    icon: Target;,
+    title: 'Lead Management',
+    description: 'Track leads from initial contact to conversion'},
     {
-      icon: Mail;
-      title: 'Email Integration',
-      description: 'Sync with your email for seamless communication tracking'}
+    icon: Mail;,
+    title: 'Email Integration',
+    description: 'Sync with your email for seamless communication tracking'}
   ];
 
   const plans = [
     {
-      name: 'Starter',
-      price: '$29',
-      period: '/month',
-      description: 'Perfect for small teams getting started',
-      features: [,
+      name: 'Starter'
+      price: '$29'
+      period: '/month'
+      description: 'Perfect for small teams getting started'
+      features: [
         'Up to 1,000 contacts',
         'Basic reporting',
         'Email integration',
@@ -48,11 +48,11 @@ const CRMLitePage: React.FC = () => {
       popular: false;
     },
     {
-      name: 'Professional',
-      price: '$59',
-      period: '/month',
-      description: 'Ideal for growing businesses',
-      features: [,
+      name: 'Professional'
+      price: '$59'
+      period: '/month'
+      description: 'Ideal for growing businesses'
+      features: [
         'Up to 10,000 contacts',
         'Advanced analytics',
         'Custom fields',
@@ -64,10 +64,10 @@ const CRMLitePage: React.FC = () => {
     },
     {
       name: 'Enterprise'
-      price: '$99',
-      period: '/month',
-      description: 'For large organizations',
-      features: [,
+      price: '$99'
+      period: '/month'
+      description: 'For large organizations'
+      features: [
         'Unlimited contacts',
         'Custom reporting',
         'Advanced automation',
@@ -81,21 +81,21 @@ const CRMLitePage: React.FC = () => {
 
   const benefits = [
     {
-      title: 'Easy Setup',
-      description: 'Get started in minutes with our intuitive setup wizard',
-      metric: '5 min setup'},
+    title: 'Easy Setup',
+    description: 'Get started in minutes with our intuitive setup wizard',
+    metric: '5 min setup'},
     {
-      title: 'Mobile Ready',
-      description: 'Access your CRM anywhere with our mobile app',
-      metric: '100% mobile'},
+    title: 'Mobile Ready',
+    description: 'Access your CRM anywhere with our mobile app',
+    metric: '100% mobile'},
     {
-      title: 'Affordable',
-      description: 'Powerful CRM features at a fraction of the cost',
-      metric: '80% savings'},
+    title: 'Affordable',
+    description: 'Powerful CRM features at a fraction of the cost',
+    metric: '80% savings'},
     {
-      title: 'No Training Required',
-      description: 'Intuitive interface that anyone can use immediately',
-      metric: 'Zero learning curve'}
+    title: 'No Training Required',
+    description: 'Intuitive interface that anyone can use immediately',
+    metric: 'Zero learning curve'}
   ];
 
   return (
@@ -137,10 +137,10 @@ const CRMLitePage: React.FC = () => {
         {/* Features Section */}
         <div className="mb-16"></div>
           <h2 className="text-3xl font-bold text-white text-center mb-12">
-            Essential</h2> <span className="text-cyan-400">Features</span><div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature, index) => (</div>
+            Essential</h2> <span className="text-cyan-400">Features</span><div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature index) => (</div>
               <div
                 key={index}
-                className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-gray-600 hover:border-cyan-400/50 transition-all duration-300"
+                className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-gray-600 hover: border-cyan-400/50 transition-all duration-300"
               ></div>
                 <div className="p-3 bg-cyan-400 rounded-lg w-fit mb-4"></div>
                   <feature.icon className="w-6 h-6 text-white" />
@@ -150,24 +150,24 @@ const CRMLitePage: React.FC = () => {
             </Link>
             <Link;
               href="/demo"
-              className="bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-gray-600 hover:border-cyan-400 hover:bg-cyan-400/10 transition-all duration-300 flex items-center justify-center"
+              className="bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-gray-600 hover: border-cyan-400 hover:bg-cyan-400/10 transition-all duration-300 flex items-center justify-center"
             >
               <BarChart className="w-5 h-5 mr-2" />
               Try Demo;
             </Link>
-          </div>,
+          </div>
         </div>,
 ,
         {/* Features Section */}
         <div className="mb-16">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">)
+          <h2 className="text-3xl font-bold text-white text-center mb-12">
             Essential <span className="text-cyan-400">Features</span>)
           </h2>)
-          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">),
+          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div;
                 key={index}
-                className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-gray-600 hover: border-cyan-400/50 transition-all duration-300",
+                className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-gray-600 hover: border-cyan-400/50 transition-all duration-300"
               >,
                 <div className="p-3 bg-cyan-400 rounded-lg w-fit mb-4">,
                   <feature.icon className="w-6 h-6 text-white" />,
@@ -183,18 +183,18 @@ const CRMLitePage: React.FC = () => {
         {/* Pricing Section */}
         <div className="mb-16"></div>
           <h2 className="text-3xl font-bold text-white text-center mb-12">
-            Simple <span className="text-cyan-400">Pricing<div className="grid md:grid-cols-3 gap-8">{plans.map((plan, index) => (<div
+            Simple <span className="text-cyan-400">Pricing<div className="grid md: grid-cols-3 gap-8">{plans.map((plan index) => (<div
             Simple <span className="text-cyan-400">Pricing</span>
           </h2>
-          <div className="grid md: grid-cols-3 gap-8">,
+          <div className="grid md: grid-cols-3 gap-8">
             {plans.map((plan, index) => (
               <div;
-            Simple</h2> <span className="text-cyan-400">Pricing</span><div className="grid md:grid-cols-3 gap-8">{plans.map((plan, index) => (</div><div
+            Simple</h2> <span className="text-cyan-400">Pricing</span><div className="grid md: grid-cols-3 gap-8">{plans.map((plan index) => (</div><div
                 key={index}
                 className={`relative bg-white/10 backdrop-blur-lg rounded-2xl p-8 border ${
                   plan.popular;
                     ? 'border-cyan-400 shadow-2xl shadow-cyan-400/20 scale-105'}
-                    : 'border-gray-600 hover:border-cyan-400/50'}
+                    : 'border-gray-600 hover: border-cyan-400/50'}
                 } transition-all duration-300`}
               >{plan.popular && (</div>
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -225,7 +225,7 @@ const CRMLitePage: React.FC = () => {
                   className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
                     plan.popular;
                       ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover: from-cyan-600 hover:to-blue-700'}
-                      : 'bg-white/10 text-white border border-gray-600 hover:border-cyan-400 hover:bg-cyan-400/10'}
+                      : 'bg-white/10 text-white border border-gray-600 hover: border-cyan-400 hover:bg-cyan-400/10'}
                   }`}
                 >Choose Plan</Link>
                 >
@@ -240,14 +240,14 @@ const CRMLitePage: React.FC = () => {
         <div className="mb-16"></div>
           <h2 className="text-3xl font-bold text-white text-center mb-12">
             Why Choose <span className="text-cyan-400">CRM Lite</span>?
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">{benefits.map((benefit, index) => (</div>
+          <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">{benefits.map((benefit index) => (</div>
           </h2>
-          <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">,
+          <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
               <div key={index} className="text-center">
                 <div className="p-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full w-fit mx-auto mb-4">
             Why Choose</h2> <span className="text-cyan-400">CRM Lite</span>?
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">{benefits.map((benefit, index) => (</div>
+          <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">{benefits.map((benefit index) => (</div>
               <div key={index} className="text-center"></div>
                 <div className="p-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full w-fit mx-auto mb-4"></div>
                   <TrendingUp className="w-8 h-8 text-white" />
@@ -264,14 +264,14 @@ const CRMLitePage: React.FC = () => {
             Clean & <span className="text-cyan-400">Intuitive</span> Interface;
           </h2>
           <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-gray-600">
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md: grid-cols-3 gap-8">
               <div className="bg-white/5 rounded-lg p-6">
                 <h3 className="text-lg font-semibold text-white mb-4">Dashboard Overview</h3>
                 <div className="space-y-3">
                   <div className="flex justify-between text-sm">
-                    <span className="text-gray-300">Total Contacts<span className="text-cyan-400">1,247</span>
+                    <span className="text-gray-300">Total Contacts<span className="text-cyan-400">1247</span>
             <div className="grid md: grid-cols-3 gap-8">
-              <div className="bg-white/5 rounded-lg p-6">,
+              <div className="bg-white/5 rounded-lg p-6">
                 <h3 className="text-lg font-semibold text-white mb-4">Dashboard Overview</h3>,
                 <div className="space-y-3">,
                   <div className="flex justify-between text-sm">,
@@ -280,12 +280,12 @@ const CRMLitePage: React.FC = () => {
             Clean &</h2> <span className="text-cyan-400">Intuitive</span> Interface
           </h2>
           <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-gray-600"></div>
-            <div className="grid md:grid-cols-3 gap-8"></div>
+            <div className="grid md: grid-cols-3 gap-8"></div>
               <div className="bg-white/5 rounded-lg p-6"></div>
                 <h3 className="text-lg font-semibold text-white mb-4">Dashboard Overview</h3>
                 <div className="space-y-3"></div>
                   <div className="flex justify-between text-sm"></div>
-                    <span className="text-gray-300">Total Contacts</span><span className="text-cyan-400">1,247</span>
+                    <span className="text-gray-300">Total Contacts</span><span className="text-cyan-400">1247</span>
                   </div>
                   <div className="flex justify-between text-sm"></div>
                     <span className="text-gray-300">Active Leads</span><span className="text-green-400">89</span>
@@ -319,7 +319,7 @@ const CRMLitePage: React.FC = () => {
                 </div>
               </div>
             </div>
-          </div>,
+          </div>
         </div>,
 ,
         {/* Integration Section */}
@@ -327,23 +327,23 @@ const CRMLitePage: React.FC = () => {
           <h2 className="text-3xl font-bold text-white text-center mb-12">
             Seamless</h2> <span className="text-cyan-400">Integrations</span>
           </h2>
-          <div className="grid md:grid-cols-4 gap-8">
+          <div className="grid md: grid-cols-4 gap-8">
             <div className="text-center">
               <div className="p-4 bg-white/10 rounded-lg mb-4">
                 <Mail className="w-8 h-8 text-cyan-400 mx-auto" />
-              <h3 className="text-lg font-semibold text-white">Email<p className="text-gray-300 text-sm">Gmail, Outlook, Yahoo</p>
+              <h3 className="text-lg font-semibold text-white">Email<p className="text-gray-300 text-sm">Gmail Outlook, Yahoo</p>
           <div className="grid md: grid-cols-4 gap-8">
-            <div className="text-center">,
+            <div className="text-center">
               <div className="p-4 bg-white/10 rounded-lg mb-4">,
                 <Mail className="w-8 h-8 text-cyan-400 mx-auto" />,
               </div>,
               <h3 className="text-lg font-semibold text-white">Email</h3>,
               <p className="text-gray-300 text-sm">Gmail, Outlook, Yahoo</p>
-          <div className="grid md:grid-cols-4 gap-8"></div>
+          <div className="grid md: grid-cols-4 gap-8"></div>
             <div className="text-center"></div>
               <div className="p-4 bg-white/10 rounded-lg mb-4"></div>
                 <Mail className="w-8 h-8 text-cyan-400 mx-auto" />
-              <h3 className="text-lg font-semibold text-white">Email</h3><p className="text-gray-300 text-sm">Gmail, Outlook, Yahoo</p>
+              <h3 className="text-lg font-semibold text-white">Email</h3><p className="text-gray-300 text-sm">Gmail Outlook, Yahoo</p>
             </div>
             <div className="text-center"></div>
               <div className="p-4 bg-white/10 rounded-lg mb-4"></div>
@@ -402,7 +402,7 @@ const CRMLitePage: React.FC = () => {
             </Link>
           </div>
         </div>
-      </div>,
+      </div>
     </div>);
 };
 

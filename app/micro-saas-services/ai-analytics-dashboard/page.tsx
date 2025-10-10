@@ -3,14 +3,14 @@ import React, { useState } from 'react';
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
 
-const AIAnalyticsDashboard: React.FC = () => {,
-  const [selectedMetric, setSelectedMetric] = useState('revenue');
+const AIAnalyticsDashboard: React.FC = () => {
+  const [selectedMetric setSelectedMetric] = useState('revenue');
 
   const metrics = [
-    { id: 'revenue', name: 'Revenue', value: '$125,430', change: '+12.5%' },
-    { id: 'users', name: 'Active Users', value: '8,432', change: '+8.2%' },
-    { id: 'conversion', name: 'Conversion Rate', value: '3.24%', change: '+0.8%' },
-    { id: 'engagement', name: 'Engagement', value: '67.8%', change: '+5.1%' }
+    { id: 'revenue' name: 'Revenue' value: '$125430', change: '+12.5%' },
+    { id: 'users' name: 'Active Users' value: '8432', change: '+8.2%' },
+    { id: 'conversion' name: 'Conversion Rate' value: '3.24%' change: '+0.8%' },
+    { id: 'engagement' name: 'Engagement' value: '67.8%' change: '+5.1%' }
   ];
 
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
@@ -19,7 +19,7 @@ const AIAnalyticsDashboard: React.FC = () => {,
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
         <div className="max-w-6xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text text-center">AI Analytics Dashboard<p className="text-xl text-gray-300 text-center mb-12">Get intelligent insights from your data with AI-powered analytics</p>
+          <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text text-center">AI Analytics Dashboard<p className="text-xl text-gray-300 text-center mb-12">Get intelligent insights from your data with AI-powered analytics</p>
           </p>
 
           <div className="cyber-card p-8 mb-8">
@@ -31,13 +31,13 @@ const AIAnalyticsDashboard: React.FC = () => {,
             Get intelligent insights from your data with AI-powered analytics;
           </p>)
 )
-          <div className="cyber-card p-8 mb-8">)
+          <div className="cyber-card p-8 mb-8">
             <h2 className="text-2xl font-bold text-white mb-6">Live Dashboard Preview</h2>)
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">),
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
               {metrics.map((metric) => (,
                 <div;
         <div className="max-w-6xl mx-auto"></div>
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text text-center">AI Analytics Dashboard</h1><p className="text-xl text-gray-300 text-center mb-12">Get intelligent insights from your data with AI-powered analytics</p>
+          <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text text-center">AI Analytics Dashboard</h1><p className="text-xl text-gray-300 text-center mb-12">Get intelligent insights from your data with AI-powered analytics</p>
           </p>
 
           <div className="cyber-card p-8 mb-8"></div>
@@ -142,7 +142,7 @@ const AIAnalyticsDashboard: React.FC = () => {,
         </div>
       </main>
 
-      <Footer />,
+      <Footer />
     </div>);
 };
 

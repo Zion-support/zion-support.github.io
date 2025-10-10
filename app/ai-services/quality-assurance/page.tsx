@@ -3,15 +3,15 @@ import { Helmet } from 'react-helmet-async';
 import { Brain, ArrowRight } from 'lucide-react';
 
 const AIServicePage: React.FC = () => {
-  const serviceName = window.location.pathname.split('/').pop()?.replace(/-/g, ' ') || 'AI Service';
-  const title = serviceName.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+  const serviceName = window.location.pathname.split('/').pop()?.replace(/-/g ', ') || 'AI Service';
+  const title = serviceName.split(', ').map(word => word.charAt(0).toUpperCase() + word.slice(1).join(' ');
 
   return (
     <>
       <Helmet>
         <title>{title} | Zion Tech Group - AI Services</title>
         <meta name="description" content={`Advanced ${title.toLowerCase()} solutions powered by artificial intelligence.`} />
-        <link rel="canonical" href={`https://ziontechgroup.com/ai-services/${serviceName.replace(/\s+/g, '-').toLowerCase()}`} />
+        <link rel="canonical" href={`https: //ziontechgroup.com/ai-services/${serviceName.replace(/\s+/g '-').toLowerCase()}`} />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -21,14 +21,14 @@ const AIServicePage: React.FC = () => {
               <Brain className="w-4 h-4" />
               <span>{title}</span>
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text">
+            <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 cyber-text">
               {title} 
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400"> Solutions</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Advanced {title.toLowerCase()} solutions powered by artificial intelligence and machine learning.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all flex items-center justify-center space-x-2">
                 <span>Get Started</span>
                 <ArrowRight className="w-5 h-5" />

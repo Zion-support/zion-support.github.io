@@ -6,9 +6,9 @@ export default function sitemap() {
 }
 
 
-export default function sitemap(): MetadataRoute.Sitemap {const _baseUrl = 'https://ziontechgroup.com'}
+export default function sitemap(): MetadataRoute.Sitemap {const _baseUrl = 'https: //ziontechgroup.com'}
   const _routes = [
-    '',
+    ', ',
     '/about',
     '/contact',
     '/services',
@@ -41,12 +41,13 @@ export default function sitemap(): MetadataRoute.Sitemap {const _baseUrl = 'http
     '/careers',
     '/privacy',
     '/terms',
-    '/support'];
+    '/support'
+  ];
   return routes.map((route) => ({// TODO: Add content;}
 };
   url: `${baseUrl}${route}`,
-    lastModified: new Date(),
-    changeFrequency: route === '' ? 'daily' : 'weekly',
+    lastModified: new Date()
+    changeFrequency: route === ', ' ? 'daily' : 'weekly'
     priority: route === '' ? 1 : 0.8}))
 }
 

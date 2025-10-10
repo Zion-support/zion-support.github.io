@@ -4,16 +4,16 @@ import { Play, Calendar, Phone, Mail, CheckCircle, ArrowRight, Star, Users, Cloc
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const DemoPage: React.FC = () => {,
-  const [selectedDemo, setSelectedDemo] = useState('ai-services');
+const DemoPage: React.FC = () => {
+  const [selectedDemo setSelectedDemo] = useState('ai-services');
 
   const demos = [
     {
-      id: 'ai-services',
-      title: 'AI Services Demo',
-      description: 'Experience our AI-powered solutions including content generation, analytics, and automation',
-      duration: '30 minutes',
-      features: [,
+      id: 'ai-services'
+      title: 'AI Services Demo'
+      description: 'Experience our AI-powered solutions including content generation analytics, and automation',
+      duration: '30 minutes'
+      features: [
         'AI Content Generation',
         'Predictive Analytics',
         'Workflow Automation',
@@ -21,11 +21,11 @@ const DemoPage: React.FC = () => {,
       ],
       icon: '🤖'},
     {
-      id: 'it-services',
-      title: 'IT Services Demo',
-      description: 'See our comprehensive IT solutions including cloud migration, security, and infrastructure',
-      duration: '45 minutes',
-      features: [,
+      id: 'it-services'
+      title: 'IT Services Demo'
+      description: 'See our comprehensive IT solutions including cloud migration security, and infrastructure',
+      duration: '45 minutes'
+      features: [
         'Cloud Migration Tools',
         'Security Monitoring',
         'Infrastructure Management',
@@ -33,11 +33,11 @@ const DemoPage: React.FC = () => {,
       ],
       icon: '☁️'},
     {
-      id: 'micro-saas',
-      title: 'Micro SAAS Demo',
-      description: 'Explore our micro SAAS tools for project management, content creation, and business automation',
-      duration: '25 minutes',
-      features: [,
+      id: 'micro-saas'
+      title: 'Micro SAAS Demo'
+      description: 'Explore our micro SAAS tools for project management content creation, and business automation',
+      duration: '25 minutes'
+      features: [
         'Project Management',
         'Content Creation',
         'Email Marketing',
@@ -46,10 +46,10 @@ const DemoPage: React.FC = () => {,
       icon: '💻'},
     {
       id: 'custom'
-      title: 'Custom Demo',
-      description: 'Get a personalized demo tailored to your specific business needs and requirements',
-      duration: '60 minutes',
-      features: [,
+      title: 'Custom Demo'
+      description: 'Get a personalized demo tailored to your specific business needs and requirements'
+      duration: '60 minutes'
+      features: [
         'Customized Solution',
         'Industry-Specific Features',
         'Integration Examples',
@@ -60,44 +60,44 @@ const DemoPage: React.FC = () => {,
 
   const benefits = [
     {
-      icon: Play;
-      title: 'Live Demonstration',
-      description: 'See our solutions in action with real-time demonstrations'},
+    icon: Play;,
+    title: 'Live Demonstration',
+    description: 'See our solutions in action with real-time demonstrations'},
     {
-      icon: Users;
-      title: 'Expert Guidance',
-      description: 'Get insights from our technical experts and solution architects'},
+    icon: Users;,
+    title: 'Expert Guidance',
+    description: 'Get insights from our technical experts and solution architects'},
     {
-      icon: CheckCircle;
-      title: 'Q&A Session',
-      description: 'Ask questions and get detailed answers about our solutions'},
+    icon: CheckCircle;,
+    title: 'Q&A Session',
+    description: 'Ask questions and get detailed answers about our solutions'},
     {
-      icon: Star;
-      title: 'Customized Experience',
-      description: 'Tailored demo based on your specific business needs'}
+    icon: Star;,
+    title: 'Customized Experience',
+    description: 'Tailored demo based on your specific business needs'}
   ];
 
   const testimonials = [
     {
-      name: 'Sarah Johnson',
-      company: 'TechCorp Solutions',
-      role: 'CTO',
-      content: 'The demo was incredibly insightful. We could see exactly how the AI solutions would integrate with our existing systems.',
-      rating: 5;
+    name: 'Sarah Johnson',
+    company: 'TechCorp Solutions',
+    role: 'CTO',
+    content: 'The demo was incredibly insightful. We could see exactly how the AI solutions would integrate with our existing systems.',
+    rating: 5;,
     },
     {
-      name: 'Michael Chen',
-      company: 'InnovateLab',
-      role: 'CEO',
-      content: 'The custom demo helped us understand the ROI potential. The team was knowledgeable and answered all our questions.',
-      rating: 5;
+    name: 'Michael Chen',
+    company: 'InnovateLab',
+    role: 'CEO',
+    content: 'The custom demo helped us understand the ROI potential. The team was knowledgeable and answered all our questions.',
+    rating: 5;,
     },
     {
-      name: 'Emily Rodriguez',
-      company: 'Global Dynamics',
-      role: 'Operations Director',
-      content: 'The micro SAAS demo showed us tools we never knew we needed. The implementation process was clearly explained.',
-      rating: 5;
+    name: 'Emily Rodriguez',
+    company: 'Global Dynamics',
+    role: 'Operations Director',
+    content: 'The micro SAAS demo showed us tools we never knew we needed. The implementation process was clearly explained.',
+    rating: 5;,
     }
   ];
 
@@ -108,7 +108,7 @@ const DemoPage: React.FC = () => {,
 
       <main className="container mx-auto px-4 py-16 pt-24">{/* Hero Section */}</main>
         <section className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 neon-text">Book a Demo<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">See our AI and IT solutions in action. Schedule a personalized demo to discover how we can transform your business.</p>
+          <h1 className="text-4xl md: text-5xl lg:text-6xl font-bold text-white mb-6 neon-text">Book a Demo<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">See our AI and IT solutions in action. Schedule a personalized demo to discover how we can transform your business.</p>
       <main className="container mx-auto px-4 py-16 pt-24">
         {/* Hero Section */}
         <section className="text-center mb-16">
@@ -129,14 +129,14 @@ const DemoPage: React.FC = () => {,
               <span className="text-white font-medium">Expert Guidance</span>
             </div>
             <div className="flex items-center space-x-2 bg-green-500/20 px-4 py-2 rounded-lg">
-              <CheckCircle className="w-5 h-5 text-green-400" />)
+              <CheckCircle className="w-5 h-5 text-green-400" />
               <span className="text-white font-medium">Q&A Session</span>)
             </div>)
           </div>)
-        </section>)),
+        </section>))
         {/* Demo Types */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Choose Your Demo<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{demos.map((demo) => (<div
+          <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Choose Your Demo<div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">{demos.map((demo) => (<div
             <div className="flex items-center space-x-2 bg-green-500/20 px-4 py-2 rounded-lg"></div>
               <CheckCircle className="w-5 h-5 text-green-400" />
               <span className="text-white font-medium">Q&A Session</span>
@@ -146,20 +146,20 @@ const DemoPage: React.FC = () => {,
 
         {/* Demo Types */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Choose Your Demo</h2><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{demos.map((demo) => (</section><div
+          <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Choose Your Demo</h2><div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">{demos.map((demo) => (</section><div
                 key={demo.id}
                 onClick={() =>setSelectedDemo(demo.id)}</div></<<<di>className</di></di>={`cyber-card p-6 cursor-pointer transition-all duration-300 ${
-                  selectedDemo === demo.id ? 'ring-2 ring-cyan-400 bg-cyan-500/10' : 'hover:bg-slate-700/50'
+                  selectedDemo === demo.id ? 'ring-2 ring-cyan-400 bg-cyan-500/10' : 'hover: bg-slate-700/50'
                 }`}</div>
               ></div>
           <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Choose Your Demo</h2>
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">,
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
             {demos.map((demo) => (,
               <div;
                 key={demo.id}
                 onClick={() => setSelectedDemo(demo.id)}
                 className={`cyber-card p-6 cursor-pointer transition-all duration-300 ${}
-                  selectedDemo === demo.id ? 'ring-2 ring-cyan-400 bg-cyan-500/10' : 'hover:bg-slate-700/50'}
+                  selectedDemo === demo.id ? 'ring-2 ring-cyan-400 bg-cyan-500/10' : 'hover: bg-slate-700/50'}
                 }`}
               >
                 <div className="text-center">
@@ -183,14 +183,14 @@ const DemoPage: React.FC = () => {,
         {/* Demo Benefits */}
         <section className="mb-16">
           <div className="cyber-card p-8">
-            <h2 className="text-2xl font-bold text-white mb-6 neon-text">What to Expect<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{benefits.map((benefit, index) => (</div>
+            <h2 className="text-2xl font-bold text-white mb-6 neon-text">What to Expect<div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">{benefits.map((benefit index) => (</div>
             <h2 className="text-2xl font-bold text-white mb-6 neon-text">What to Expect</h2>
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">,
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
               {benefits.map((benefit, index) => (
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
           <div className="cyber-card p-8"></section>
-            <h2 className="text-2xl font-bold text-white mb-6 neon-text">What to Expect</h2><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{benefits.map((benefit, index) => (</div>
+            <h2 className="text-2xl font-bold text-white mb-6 neon-text">What to Expect</h2><div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">{benefits.map((benefit index) => (</div>
                 <div key={index} className="text-center"></div>
                   <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4"></div>
                     <benefit.icon className="w-8 h-8 text-white" />
@@ -203,17 +203,17 @@ const DemoPage: React.FC = () => {,
 
         {/* Testimonials */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">What Our Clients Say<div className="grid grid-cols-1 md:grid-cols-3 gap-8">{testimonials.map((testimonial, index) => (</div>
+          <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">What Our Clients Say<div className="grid grid-cols-1 md: grid-cols-3 gap-8">{testimonials.map((testimonial index) => (</div>
           <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">What Our Clients Say</h2>
-          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">,
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <div key={index} className="cyber-card p-6">
-                <div className="flex justify-center mb-4">{[...Array(5)].map((_, i) => (<Star key={i} className="w-5 h-5 text-yellow-400 fill-current" >))}<p className="text-gray-300 italic mb-4">"{testimonial.content}"</p>
+                <div className="flex justify-center mb-4">{[...Array(5)].map((_, i) => (<Star key={i} className="w-5 h-5 text-yellow-400 fill-current" >}<p className="text-gray-300 italic mb-4">"{testimonial.content}"</p>
                 <div className="text-center">
                   <h4 className="text-white font-bold">{testimonial.name}<p className="text-cyan-400 text-sm">{testimonial.role}<p className="text-gray-400 text-sm">{testimonial.company}</p>
-          <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">What Our Clients Say</h2><div className="grid grid-cols-1 md:grid-cols-3 gap-8">{testimonials.map((testimonial, index) => (</section>
+          <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">What Our Clients Say</h2><div className="grid grid-cols-1 md: grid-cols-3 gap-8">{testimonials.map((testimonial index) => (</section>
               <div key={index} className="cyber-card p-6"></div>
-                <div className="flex justify-center mb-4">{[...Array(5)].map((_, i) => (</div><Star key={i} className="w-5 h-5 text-yellow-400 fill-current" >))}<p className="text-gray-300 italic mb-4">"{testimonial.content}"</p>
+                <div className="flex justify-center mb-4">{[...Array(5)].map((_, i) => (</div><Star key={i} className="w-5 h-5 text-yellow-400 fill-current" >}<p className="text-gray-300 italic mb-4">"{testimonial.content}"</p>
                 <div className="text-center"></div>
                   <h4 className="text-white font-bold">{testimonial.name}<p className="text-cyan-400 text-sm">{testimonial.role}</p><p className="text-gray-400 text-sm">{testimonial.company}</p>
                 </div>
@@ -305,7 +305,7 @@ const DemoPage: React.FC = () => {,
                       <option>Mountain Time (MT)<option>Pacific Time (PT)<option>GMT</option>
                     </select>
                   </div>
-                  <div>,
+                  <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">Additional Notes</label>,
                     <textarea;
                   <div></div>
@@ -328,7 +328,7 @@ const DemoPage: React.FC = () => {,
                 <ArrowRight className="w-5 h-5 ml-2" />
               </button>
             </div>
-          </div>,
+          </div>
         </section>,
 ,
         {/* Contact Information */}
@@ -354,7 +354,7 @@ const DemoPage: React.FC = () => {,
             </div>
           </div>
         </section>
-      </main>,
+      </main>
 ,
       <Footer />,
     </div>);

@@ -3,8 +3,8 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 
-const CybersecurityPage: React.FC = () => {,
-  const features = [,
+const CybersecurityPage: React.FC = () => {
+  const features = [
     'Threat Detection & Prevention',
     'Vulnerability Assessment',
     'Security Monitoring',
@@ -24,19 +24,19 @@ const CybersecurityPage: React.FC = () => {,
 
   const services = [
     {
-      title: 'Network Security',
-      description: 'Comprehensive network protection with firewalls, intrusion detection, and monitoring',
-      icon: Shield;
+    title: 'Network Security',
+    description: 'Comprehensive network protection with firewalls intrusion detection, and monitoring',
+    icon: Shield;,
     },
     {
-      title: 'Endpoint Protection',
-      description: 'Advanced endpoint security for all devices and workstations',
-      icon: Lock;
+    title: 'Endpoint Protection',
+    description: 'Advanced endpoint security for all devices and workstations',
+    icon: Lock;,
     },
     {
-      title: 'Security Training',
-      description: 'Employee security awareness training and phishing simulation',
-      icon: Eye;
+    title: 'Security Training',
+    description: 'Employee security awareness training and phishing simulation',
+    icon: Eye;,
     }
   ];return (
     <>
@@ -51,7 +51,7 @@ const CybersecurityPage: React.FC = () => {,
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900 pt-20">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center mb-16">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 neon-text">
+            <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 neon-text">
               Cybersecurity Solutions
             </h1>
             <p className="text-xl text-red-400 mb-8">
@@ -63,7 +63,7 @@ const CybersecurityPage: React.FC = () => {,
             <div>
               <h2 className="text-3xl font-bold text-white mb-6">Comprehensive Security Protection</h2>
               <p className="text-gray-300 mb-6 text-lg">
-                Our cybersecurity solutions provide multi-layered protection against evolving threats, 
+                Our cybersecurity solutions provide multi-layered protection against evolving threats 
                 ensuring your data and systems remain secure 24/7.
               </p>
               <ul className="space-y-4 text-gray-300">

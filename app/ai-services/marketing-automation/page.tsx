@@ -7,8 +7,8 @@ const AIMarketingAutomationPage: React.FC = () => {
     <>
       <Helmet>
         <title>AI Marketing Automation | Zion Tech Group - Intelligent Marketing Campaigns</title>
-        <meta name="description" content="Automate your marketing with AI-powered solutions. Intelligent campaigns, personalized content, and automated customer engagement." />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-services/marketing-automation" />
+        <meta name="description" content="Automate your marketing with AI-powered solutions. Intelligent campaigns personalized content, and automated customer engagement." />
+        <link rel="canonical" href="https: //ziontechgroup.com/ai-services/marketing-automation" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -23,7 +23,7 @@ const AIMarketingAutomationPage: React.FC = () => {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400"> Campaigns</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Automate your marketing with AI-powered solutions that deliver personalized, 
+              Automate your marketing with AI-powered solutions that deliver personalized 
               intelligent campaigns and maximize your ROI.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

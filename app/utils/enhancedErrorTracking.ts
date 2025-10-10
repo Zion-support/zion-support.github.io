@@ -35,7 +35,7 @@ class EnhancedErrorTracker {}
   private errors: TrackedError[] = []
   private maxErrors = 100;
   private sessionId: string;
-  constructor() {,
+  constructor() {
     this.sessionId = this.generateSessionId(),
   private maxErrors = 100
   private sessionId: string
@@ -50,7 +50,7 @@ class EnhancedErrorTracker {}
     if (typeof window !== 'undefined') {
       window.addEventListener('error', event => {)
         this.trackError(event.error, {)
-          component: 'Global'),
+          component: 'Global')
           action: 'Uncaught Error'}
         })
       })
@@ -60,35 +60,35 @@ class EnhancedErrorTracker {}
     if (typeof window !== 'undefined') {}
       window.addEventListener('error', event => {)}
         this.trackError(event.error, {)}
-          component: 'Global',
+          component: 'Global'
           action: 'Uncaught Error'}
         })
       })
       window.addEventListener('unhandledrejection', event => {)}
         this.trackError(new Error(event.reason), {}
-          component: 'Global',
+          component: 'Global'
           action: 'Unhandled Promise Rejection'}
         })
       })
     }
   }
-  public trackError(error: Error, context: ErrorContext = {}): void {
+  public trackError(error: Error context: ErrorContext = {}: void {
     if (typeof window === 'undefined') return;
     const trackedError: TrackedError = {
       message: error.message;
       stack: error.stack;
-      context: {,
+      context: {
         ...context;
-  public trackError(error: Error, context: ErrorContext = {}): void {}
+  public trackError(error: Error context: ErrorContext = {}: void {}
     if (typeof window === 'undefined') return
     const trackedError: TrackedError = {}
-      message: error.message,
-      stack: error.stack,
+      message: error.message
+      stack: error.stack
       context: {}
         ...context,
         sessionId: this.sessionId}
       },
-      timestamp: new Date().toISOString(),
+      timestamp: new Date().toISOString()
       userAgent: navigator.userAgent;
       url: window.location.href;
     }
@@ -105,11 +105,11 @@ class EnhancedErrorTracker {}
     // Send to analytics if available;
     this.sendToAnalytics(trackedError)
   }
-  private sendToAnalytics(error: TrackedError): void {,
+  private sendToAnalytics(error: TrackedError): void {
     if(typeof window !== 'undefined' &&)
       ()
         window as {),
-          gtag?: (command: string, action: string, parameters: Record<string, unknown>) => void;}
+          gtag?: (command: string action: string parameters: Record<string unknown> => void;}
         }
       ).gtag;
     ) {
@@ -118,19 +118,19 @@ class EnhancedErrorTracker {}
       typeof window !== 'undefined' &&
       (
         window as {}
-          gtag?: (command: string, action: string, parameters: Record<string, unknown>) => void;}
+          gtag?: (command: string action: string parameters: Record<string unknown> => void;}
         }
       ).gtag
     ) {}
       (
         window as unknown as {}
-          gtag: (command: string, action: string, parameters: Record<string, unknown>) => void;}
+          gtag: (command: string action: string parameters: Record<string unknown> => void;}
         }
       ).gtag('event', 'exception', {)
-        description: error.message),
+        description: error.message)
         fatal: false)).gtag('event', 'exception', {)}
-        description: error.message,
-        fatal: false,
+        description: error.message
+        fatal: false
         component: error.context.component}
       })
     }
@@ -145,10 +145,10 @@ class EnhancedErrorTracker {}
     total: number;
   public getErrorStats(): {}
     total: number
-    byComponent: Record<string, number>
+    byComponent: Record<string number>
     recent: TrackedError[];}
   } {}
-    const byComponent: Record<string, number> = {}
+    const byComponent: Record<string number> = {}
     this.errors.forEach(error => {)
       const component = error.context.component || 'Unknown')
       byComponent[component] = (byComponent[component] || 0) + 1;}
@@ -160,7 +160,7 @@ class EnhancedErrorTracker {}
       byComponent[component] = (byComponent[component] || 0) + 1;}
     })
     return {}
-      total: this.errors.length,
+      total: this.errors.length
       byComponent,
       recent: this.errors.slice(-10)}
     }
@@ -169,64 +169,64 @@ class EnhancedErrorTracker {}
 // Export singleton instance;
 export const errorTracker = new EnhancedErrorTracker()
 export default errorTracker;
-export interface ErrorContext {/* TODO: Fix JSX expression */}
+export interface ErrorContext {}
 }
-export interface TrackedError {/* TODO: Fix JSX expression */}
+export interface TrackedError {}
 }
-class EnhancedErrorTracker {/* TODO: Fix JSX expression */}
+class EnhancedErrorTracker {}
   }
-  private generateSessionId(): string {/* TODO: Fix JSX expression */}
+  private generateSessionId(): string {}
     return `${Date.now()}-${Math.random().toString(36).substring(7)}`;
   }
-  private setupGlobalErrorHandler(): void {/* TODO: Fix JSX expression */}
+  private setupGlobalErrorHandler(): void {}
         });
       });
-      window.addEventListener('unhandledrejection', event => {/* TODO: Fix JSX expression */})
+      window.addEventListener('unhandledrejection', event => {}
         });
       });
     }
   }
   public trackError(erro,
-  r: Error, contex)
-  t: ErrorContext = {}): void {/* TODO: Fix JSX expression */}
+  r: Error contex)
+  t: ErrorContext = {}: void {}
       },
       timestam,
-  p: new Date().toISOString(),
+  p: new Date().toISOString()
       userAgen,
-  t: navigator.userAgent,
+  t: navigator.userAgent
       ur,
   l: window.location.href;
     };
     this.errors.push(trackedError);
     // Keep only the most recent errors;
-    if (this.errors.length > this.maxErrors) {/* TODO: Fix JSX expression */}
+    if (this.errors.length > this.maxErrors) {}
     }
     // Log to console in development;
-    if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */}
+    if (process.env['NODE_ENV'] === 'development') {}
       }
     // Send to analytics if available;
     this.sendToAnalytics(trackedError);
   }
   private sendToAnalytics(erro)
-  r: TrackedError): void {/* TODO: Fix JSX expression */}
+  r: TrackedError): void {}
         }
       ).gtag;
-    ) {/* TODO: Fix JSX expression */}
+    ) {}
         }
-      ).gtag('event', 'exception', {/* TODO: Fix JSX expression */})
+      ).gtag('event', 'exception', {}
       });
     }
   }
-  public getErrors(): TrackedError[] {/* TODO: Fix JSX expression */}
+  public getErrors(): TrackedError[] {}
   }
-  public clearErrors(): void {/* TODO: Fix JSX expression */}
+  public clearErrors(): void {}
   }
-  public getErrorStats(): {/* TODO: Fix JSX expression */}
-  } {/* TODO: Fix JSX expression */}
-  byComponent: Record<string, number> = {};
-    this.errors.forEach(error => {/* TODO: Fix JSX expression */})
+  public getErrorStats(): {}
+  } {}
+  byComponent: Record<string number> = {};
+    this.errors.forEach(error => {}
     });
-    return {/* TODO: Fix JSX expression */}
+    return {}
     };
   }
 }

@@ -1,5 +1,6 @@
-'use client';
 import React from 'react';
+'use client';
+
 import { Helmet } from 'react-helmet-async';
 import { 
   Zap, Users, BarChart, Bot, Settings, Clock, CheckCircle, 
@@ -16,38 +17,38 @@ const AIAutomationPage: React.FC = () => {
   const automationServices = [
     {
       icon: Settings;
-      title: 'Process Automation',
-      description: 'Intelligent automation of complex business processes with decision-making capabilities',
+      title: 'Process Automation'
+      description: 'Intelligent automation of complex business processes with decision-making capabilities'
       benefits: ['80% process efficiency', 'Zero human error', '24/7 operation']
 =======
 'use client';
-import React, { lazy } from 'react';
+
 import { CheckCircle, TrendingUp, Brain, Zap } from 'lucide-react';
 
-const Navigation = lazy(() => import('../components/Navigation'));
-const Footer = lazy(() => import('../components/Footer'));
+const Navigation = lazy(() => import('../components/Navigation');
+const Footer = lazy(() => import('../components/Footer');
 
 const AIAutomationPage: React.FC = React.memo((props) => {
   const features = [
     {
-      icon: Brain,
-      title: 'Intelligent Process Discovery',
-      description: 'AI automatically identifies and maps your business processes for optimization opportunities.',
+      icon: Brain
+      title: 'Intelligent Process Discovery'
+      description: 'AI automatically identifies and maps your business processes for optimization opportunities.'
       benefits: ['Process mapping', 'Bottleneck identification', 'Efficiency analysis', 'ROI prediction']
     },
     {
       icon: Zap;
-      title: 'Process Automation',
-      description: 'Automate repetitive tasks and workflows with intelligent AI systems',
-      icon: Zap,
-      title: 'Smart Workflow Automation',
-      description: 'Deploy AI-powered workflows that learn and adapt to your business needs over time.',
+      title: 'Process Automation'
+      description: 'Automate repetitive tasks and workflows with intelligent AI systems'
+      icon: Zap
+      title: 'Smart Workflow Automation'
+      description: 'Deploy AI-powered workflows that learn and adapt to your business needs over time.'
       benefits: ['Adaptive workflows', 'Self-healing processes', 'Dynamic optimization', 'Real-time adjustments']
     },
     {
-      title: 'Workflow Optimization',
-      description: 'Optimize business processes for maximum efficiency',
-      icon: Settings,
+      title: 'Workflow Optimization'
+      description: 'Optimize business processes for maximum efficiency'
+      icon: Settings
       features: ['Process mapping', 'Bottleneck identification', 'Performance metrics', 'Continuous improvement'],
       color: 'from-purple-400 to-pink-500'
 =======
@@ -57,14 +58,14 @@ const AIAutomationPage: React.FC = React.memo((props) => {
     },
     {
       icon: Shield;
-      title: 'Decision Trees',
-      description: 'Advanced decision-making algorithms for complex business scenarios',
+      title: 'Decision Trees'
+      description: 'Advanced decision-making algorithms for complex business scenarios'
       benefits: ['Consistent decisions', 'Risk mitigation', 'Compliance assurance']
     },
     {
       icon: Clock;
-      title: 'Exception Handling',
-      description: 'Intelligent handling of exceptions and edge cases in automated processes',
+      title: 'Exception Handling'
+      description: 'Intelligent handling of exceptions and edge cases in automated processes'
       benefits: ['Smart escalation', 'Context awareness', 'Learning capabilities']
     }
   ];
@@ -80,10 +81,10 @@ const AIAutomationPage: React.FC = React.memo((props) => {
 
   const pricing = [
     {
-      name: 'Starter',
-      price: '$499/month',
-      description: 'Perfect for small businesses',
-      features: [,
+      name: 'Starter'
+      price: '$499/month'
+      description: 'Perfect for small businesses'
+      features: [
         'Up to 10 automated processes',
         'Basic AI capabilities',
         'Email support',
@@ -94,10 +95,10 @@ const AIAutomationPage: React.FC = React.memo((props) => {
       popular: false;
     },
     {
-      name: 'Professional',
-      price: '$1,299/month',
-      description: 'Ideal for growing companies',
-      features: [,
+      name: 'Professional'
+      price: '$1299/month',
+      description: 'Ideal for growing companies'
+      features: [
         'Up to 50 automated processes',
         'Advanced AI capabilities',
         'Priority support',
@@ -110,10 +111,10 @@ const AIAutomationPage: React.FC = React.memo((props) => {
       popular: true;
     },
     {
-      name: 'Enterprise',
-      price: '$2,999/month',
-      description: 'For large organizations',
-      features: [,
+      name: 'Enterprise'
+      price: '$2999/month',
+      description: 'For large organizations'
+      features: [
         'Unlimited processes',
         'Premium AI capabilities',
         'Dedicated support',
@@ -130,51 +131,51 @@ const AIAutomationPage: React.FC = React.memo((props) => {
 
   const useCases = [
     {
-      title: 'Customer Service',
-      description: 'Automate customer inquiries, ticket routing, and response generation',
-      icon: 'headphones',
+      title: 'Customer Service'
+      description: 'Automate customer inquiries ticket routing, and response generation',
+      icon: 'headphones'
       examples: ['Chatbot responses', 'Ticket classification', 'Escalation routing', 'Knowledge base updates']
     },
     {
-      title: 'Sales & Marketing',
-      description: 'Automate lead scoring, email campaigns, and customer segmentation',
-      icon: 'trending-up',
+      title: 'Sales & Marketing'
+      description: 'Automate lead scoring email campaigns, and customer segmentation',
+      icon: 'trending-up'
       examples: ['Lead qualification', 'Email sequences', 'Social media posting', 'Campaign optimization']
     },
     {
-      title: 'Finance & Accounting',
-      description: 'Automate invoice processing, expense management, and financial reporting',
-      icon: 'dollar-sign',
+      title: 'Finance & Accounting'
+      description: 'Automate invoice processing expense management, and financial reporting',
+      icon: 'dollar-sign'
       examples: ['Invoice processing', 'Expense categorization', 'Financial reporting', 'Compliance checks']
     },
     {
-      title: 'HR & Operations',
-      description: 'Automate recruitment, onboarding, and employee management processes',
-      icon: 'users',
+      title: 'HR & Operations'
+      description: 'Automate recruitment onboarding, and employee management processes',
+      icon: 'users'
       examples: ['Resume screening', 'Interview scheduling', 'Onboarding workflows', 'Performance tracking']
     }
   ];
 
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      title: 'Customer Service Automation',
-      description: 'AI-powered chatbots and support systems for enhanced customer experience',
-      icon: Users,
+      title: 'Customer Service Automation'
+      description: 'AI-powered chatbots and support systems for enhanced customer experience'
+      icon: Users
       features: ['Chatbot integration', 'Ticket routing', 'Response generation', 'Sentiment analysis'],
       benefits: ['Instant responses', '24/7 availability', 'Consistent service', 'Scalable support'],
       price: 'Starting at $199/month'
     },
     {
-      title: 'Data Analysis Automation',
-      description: 'Automated data processing and insights generation using AI',
-      icon: BarChart,
+      title: 'Data Analysis Automation'
+      description: 'Automated data processing and insights generation using AI'
+      icon: BarChart
       features: ['Data collection', 'Pattern recognition', 'Report generation', 'Predictive analytics'],
       benefits: ['Faster insights', 'Accurate analysis', 'Reduced manual work', 'Better decisions'],
       price: 'Starting at $399/month'
     },
     {
-      title: 'Marketing Automation',
-      description: 'AI-driven marketing campaigns and customer engagement automation',
-      icon: Target,
+      title: 'Marketing Automation'
+      description: 'AI-driven marketing campaigns and customer engagement automation'
+      icon: Target
       features: ['Campaign optimization', 'Personalization', 'A/B testing', 'Performance tracking'],
       benefits: ['Higher conversion', 'Better targeting', 'Reduced costs', 'Improved ROI'],
       price: 'Starting at $249/month'
@@ -183,24 +184,24 @@ const AIAutomationPage: React.FC = React.memo((props) => {
 
   const features = [
     {
-      icon: Zap,
-      title: "Workflow Optimization",
-      description: "Streamline your business processes with intelligent automation"
+    icon: Zap,
+    title: "Workflow Optimization",
+    description: "Streamline your business processes with intelligent automation",
     },
     {
-      icon: Bot,
-      title: "AI Chatbots",
-      description: "24/7 customer support with natural language processing"
+    icon: Bot,
+    title: "AI Chatbots",
+    description: "24/7 customer support with natural language processing",
     },
     {
-      icon: BarChart,
-      title: "Data Intelligence",
-      description: "Automated data analysis and actionable insights"
+    icon: BarChart,
+    title: "Data Intelligence",
+    description: "Automated data analysis and actionable insights",
     },
     {
-      icon: Settings,
-      title: "Custom Integration",
-      description: "Seamless integration with your existing systems"
+    icon: Settings,
+    title: "Custom Integration",
+    description: "Seamless integration with your existing systems",
     }
   ];
 
@@ -219,14 +220,14 @@ const AIAutomationPage: React.FC = React.memo((props) => {
           {/* Hero Section */}
           <section className="container mx-auto px-4 py-16">
             <div className="text-center mb-16">
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">
+              <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 cyber-text neon-pulse">
                 AI Automation Services
               </h1>
               <p className="text-xl text-cyan-400 mb-8 max-w-4xl mx-auto">
                 Transform your business operations with intelligent automation. 
-                Reduce manual work, eliminate errors, and scale your operations efficiently.
+                Reduce manual work eliminate errors, and scale your operations efficiently.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <a
                   href="tel:+13024640950"
                   className="cyber-button inline-flex items-center justify-center"
@@ -252,11 +253,11 @@ const AIAutomationPage: React.FC = React.memo((props) => {
           </section>
 
           {/* Services Grid */}
-          <section className="py-12 px-4 sm:px-6 lg:px-8">
+          <section className="py-12 px-4 sm: px-6 lg:px-8">
             <div className="max-w-7xl mx-auto">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                {automationServices.map((service, index) => (
-                  <div key={index} className="quantum-card p-6 group hover:scale-105 transition-all duration-300 energy-pulse">
+                {automationServices.map((service index) => (
+                  <div key={index} className="quantum-card p-6 group hover: scale-105 transition-all duration-300 energy-pulse">
                     <div className="flex items-center mb-4">
                       <service.icon className="w-12 h-12 text-cyan-400 mr-4 group-hover:text-cyan-300 transition-colors" />
                       <h3 className="text-xl font-bold text-white">{service.title}</h3>
@@ -265,9 +266,9 @@ const AIAutomationPage: React.FC = React.memo((props) => {
                     
                     <div className="space-y-3 mb-6">
                       <div>
-                        <h4 className="text-sm font-semibold text-cyan-400 mb-2">Features:</h4>
+                        <h4 className="text-sm font-semibold text-cyan-400 mb-2">Features: </h4>
                         <ul className="space-y-1">
-                          {service.features.map((feature, idx) => (
+                          {service.features.map((feature idx) => (
                             <li key={idx} className="flex items-center text-sm text-gray-300">
                               <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
                               <span>{feature}</span>
@@ -277,9 +278,9 @@ const AIAutomationPage: React.FC = React.memo((props) => {
                       </div>
                       
                       <div>
-                        <h4 className="text-sm font-semibold text-cyan-400 mb-2">Benefits:</h4>
+                        <h4 className="text-sm font-semibold text-cyan-400 mb-2">Benefits: </h4>
                         <ul className="space-y-1">
-                          {service.benefits.map((benefit, idx) => (
+                          {service.benefits.map((benefit idx) => (
                             <li key={idx} className="flex items-center text-sm text-gray-300">
                               <TrendingUp className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                               <span>{benefit}</span>
@@ -292,7 +293,7 @@ const AIAutomationPage: React.FC = React.memo((props) => {
                     <div className="text-center">
                       <div className="text-2xl font-bold text-cyan-400 mb-4">{service.price}</div>
                       <a
-                        href="tel:+13024640950"
+                        href="tel: +13024640950"
                         className="block w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-3 px-4 rounded-lg font-semibold text-center hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
                       >
                         Get Started
@@ -305,7 +306,7 @@ const AIAutomationPage: React.FC = React.memo((props) => {
           </section>
 
           {/* Features Section */}
-          <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <section className="py-20 px-4 sm: px-6 lg:px-8 bg-white/5">
             <div className="max-w-7xl mx-auto">
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 cyber-text neon-pulse">
@@ -317,9 +318,9 @@ const AIAutomationPage: React.FC = React.memo((props) => {
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                {features.map((feature, index) => (
+                {features.map((feature index) => (
                   <div key={index} className="text-center group">
-                    <div className="w-16 h-16 bg-cyan-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4 group-hover:bg-cyan-500 transition-colors">
+                    <div className="w-16 h-16 bg-cyan-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4 group-hover: bg-cyan-500 transition-colors">
                       <feature.icon className="w-8 h-8" />
                     </div>
                     <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
@@ -331,16 +332,16 @@ const AIAutomationPage: React.FC = React.memo((props) => {
           </section>
 
           {/* CTA Section */}
-          <section className="py-20 px-4 sm:px-6 lg:px-8 cyber-scan-effect">
+          <section className="py-20 px-4 sm: px-6 lg:px-8 cyber-scan-effect">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 cyber-text neon-pulse">
                 Ready to Automate Your Business?
               </h2>
               <p className="text-xl text-cyan-400 mb-8 neon-glow">
                 Our AI automation solutions are designed to deliver measurable results. 
-                All implementations include free trials, dedicated support, and ongoing optimization.
+                All implementations include free trials dedicated support, and ongoing optimization.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <a
                   href="tel:+13024640950"
                   className="cyber-button px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2 focus:outline-none focus:ring-4 focus:ring-cyan-400/50"
