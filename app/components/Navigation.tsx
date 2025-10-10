@@ -163,8 +163,8 @@ const Navigation: React.FC = () => {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
             <Link href="/" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
-              Home;
-  </
+              Home
+            </Link>
             {/* AI Services Dropdown */}
             <div className="relative group">
               <button

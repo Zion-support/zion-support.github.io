@@ -186,11 +186,9 @@ const Navigation: React.FC = () => {
           {/* Desktop Menu */}
           <div className="hidden lg:flex space-x-8">
             <Link href="/" className="text-white hover:text-cyan-400 transition-colors font-medium">
-              Home;
-  </
+              Home</button>
             <Link href="/about" className="text-white hover:text-cyan-400 transition-colors font-medium">              
-              About;
-  </
+              About</button>
             {/* Services Dropdown */}
             <div className="relative">
               <button
@@ -247,8 +245,7 @@ const Navigation: React.FC = () => {
                       className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all"
                       onClick={closeAllMenus}
                     >
-                      View All Services;
-  </
+                      View All Services</button>
                   </div>
                 </div>
               )}
@@ -261,22 +258,19 @@ const Navigation: React.FC = () => {
               className="font-medium transition-colors hover:text-cyan-400 text-white"
               onClick={closeAllMenus}
             >
-              Case Studies;
-  </
+              Case Studies</button>
             <Link
               href="/blog"
               className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
               onClick={closeAllMenus}
             >
-              Blog;
-  </
+              Blog</button>
             <Link
               href="/contact"
               className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
               onClick={closeAllMenus}
             >
-              Contact;
-  </
+              Contact</button>
             {/* CTA Button */}
             <Link
               href="/contact"
@@ -284,8 +278,7 @@ const Navigation: React.FC = () => {
               onClick={closeAllMenus}
             >
               <Phone className="w-4 h-4 mr-2" />
-              (302) 464-0950;
-  </
+              (302) 464-0950</button>
           </div>
           {/* Mobile Menu Button */}
           <div className="lg:hidden">
@@ -307,15 +300,13 @@ const Navigation: React.FC = () => {
                 className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
                 onClick={closeAllMenus}
               >
-                Home;
-  </
+                Home</button>
               <Link
                 href="/about"
                 className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
                 onClick={closeAllMenus}
               >
-                About;
-  </
+                About</button>
               {/* Mobile Services */}
               <div>
                 <button
@@ -369,8 +360,7 @@ const Navigation: React.FC = () => {
             <a
               href="/contact"
               className="cyber-button px-4 py-2 text-sm font-medium">
-              Get Started;
-  </
+              Get Started</button>
           </div>
           {/* Mobile Menu Button */}
           <button
@@ -405,8 +395,7 @@ const Navigation: React.FC = () => {
                 onClick={closeAllMenus}
               >
                 <Phone className="w-4 h-4 inline mr-2" />
-                (302) 464-0950;
-  </
+                (302) 464-0950</button>
             </div>
           </div>
         )}

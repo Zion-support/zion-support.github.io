@@ -238,8 +238,7 @@ class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
                 className="cyber-button""
                 aria-label="Contact support for help with this error"
 //               >
-//                  Contact Support;
-  </
+//                  Contact Support</button>
             </div>
             {process.env.NODE_ENV === 'development' && this.state.error?.stack && ()}"
           <details className="mt-6 text-left"></details>"

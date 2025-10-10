@@ -2,7 +2,7 @@
 /**
  * Improved Error Boundary
  * Enhanced error handling with recovery mechanisms and user-friendly fallbacks
- */
+ *
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
@@ -304,8 +304,7 @@ class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
                 style={styles.button}"
                 aria-label="Try Again"
               >
-                Try Again;
-  </
+                Try Again</button>
               <button
 // >
 //                 Try Again;
@@ -315,8 +314,7 @@ class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
                 style={{...styles.button, ...styles.secondaryButton}}"
                 aria-label="Reload Page"
               >
-                Reload Page;
-  </
+                Reload Page</button>
               <button
 // >
 //                 Reload Page;
@@ -326,8 +324,7 @@ class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
                 style={{...styles.button, ...styles.secondaryButton}}"
                 aria-label="Go to Homepage"
               >
-                Go Home;
-  </
+                Go Home</button>
             </div>
             {this.state.errorCount > 1 && (
               <p style={styles.errorCount}>

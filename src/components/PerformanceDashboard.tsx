@@ -64,8 +64,7 @@ fps
       <div className="flex items-center justify-between mb-6">
         <h3 className="text-xl font-semibold text-white flex items-center gap-2">
           <Activity className="w-5 h-5" />
-          Performance Dashboard;
-  </
+          Performance Dashboard</button>
         <button
           onClick={toggleMonitoring}
           className={`px-4 py-2 rounded-lg font-medium transition-colors ${
@@ -97,8 +96,7 @@ fps
             <span className="text-gray-300 text-sm">Load Time</span>
           </div>
           <div className={`text-2xl font-bold ${getPerformanceColor(metrics.loadTime, { good: 1000, warning: 2000 })}`}>
-            {metrics.loadTime.toFixed(0)}ms;
-  </
+            {metrics.loadTime.toFixed(0)}ms</button>
         </div>
         <div className="bg-white/5 rounded-lg p-4">
           <div className="flex items-center gap-2 mb-2">
@@ -106,8 +104,7 @@ fps
             <span className="text-gray-300 text-sm">Render Time</span>
           </div>
           <div className={`text-2xl font-bold ${getPerformanceColor(metrics.renderTime, { good: 16, warning: 33 })}`}>
-            {metrics.renderTime.toFixed(2)}ms;
-  </
+            {metrics.renderTime.toFixed(2)}ms</button>
         </div>
         <div className="bg-white/5 rounded-lg p-4">
           <div className="flex items-center gap-2 mb-2">

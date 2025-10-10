@@ -99,8 +99,8 @@ const Footer: React.FC = memo(() => {
           <div>
             <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
               <Brain className="w-5 h-5 mr-2" />
-              AI Services;
-  </
+              AI Services
+            </h3>
             <ul className="space-y-2">
               {aiServices.slice(0, 8).map((service, index) => (
                 <li key={index}>

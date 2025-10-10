@@ -109,8 +109,7 @@ class AdvancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
               </div>
               <div className="ml-3">
                 <h3 className="text-lg font-medium text-gray-900">
-                  Something went wrong;
-  </
+                  Something went wrong</button>
                 <p className="text-sm text-gray-500">
                   We're sorry, but something unexpected happened.
                 </p>
@@ -129,13 +128,11 @@ class AdvancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
               <button
                 onClick={this.handleRetry}
                 className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
-                Try Again;
-  </
+                Try Again</button>
               <button
                 onClick={this.handleReload}
                 className="flex-1 bg-gray-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2">
-                Reload Page;
-  </
+                Reload Page</button>
             </div>
             {this.state.errorId && (
               <p className="mt-4 text-xs text-gray-500 text-center">
