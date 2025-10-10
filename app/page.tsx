@@ -188,7 +188,7 @@ const HomePage: React.FC = () => {
                 📧 Email Us
               </a>
               <a 
-                href="/contact"
+                href="https://ziontechgroup.com/contact"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
               >
                 Get Free Consultation
@@ -225,7 +225,7 @@ const HomePage: React.FC = () => {
                 </p>
                 <div className="text-center">
                   <div className="text-lg sm:text-2xl font-bold text-cyan-400 mb-2 neon-text">Starting at $1,500/month</div>
-                  <a href="/ai-services" className="text-cyan-400 hover:text-cyan-300 font-medium text-sm sm:text-base transition-all duration-300 hover:neon-glow">
+                  <a href="https://ziontechgroup.com/ai-services" className="text-cyan-400 hover:text-cyan-300 font-medium text-sm sm:text-base transition-all duration-300 hover:neon-glow">
                     Learn More →
                   </a>
                 </div>
@@ -240,7 +240,7 @@ const HomePage: React.FC = () => {
                 </p>
                 <div className="text-center">
                   <div className="text-lg sm:text-2xl font-bold text-pink-400 mb-2 neon-text">Starting at $199/month</div>
-                  <a href="/ai-marketing" className="text-pink-400 hover:text-pink-300 font-medium text-sm sm:text-base transition-all duration-300 hover:neon-glow">
+                  <a href="https://ziontechgroup.com/ai-services" className="text-pink-400 hover:text-pink-300 font-medium text-sm sm:text-base transition-all duration-300 hover:neon-glow">
                     Learn More →
                   </a>
                 </div>
@@ -255,7 +255,7 @@ const HomePage: React.FC = () => {
                 </p>
                 <div className="text-center">
                   <div className="text-lg sm:text-2xl font-bold text-blue-400 mb-2 neon-text">Starting at $399/month</div>
-                  <a href="/ai-automation" className="text-blue-400 hover:text-blue-300 font-medium text-sm sm:text-base transition-all duration-300 hover:neon-glow">
+                  <a href="https://ziontechgroup.com/ai-services" className="text-blue-400 hover:text-blue-300 font-medium text-sm sm:text-base transition-all duration-300 hover:neon-glow">
                     Learn More →
                   </a>
                 </div>
@@ -325,7 +325,7 @@ const HomePage: React.FC = () => {
                   </p>
                   <div className="text-center">
                     <div className="text-lg sm:text-2xl font-bold text-orange-400 mb-2">$149/month</div>
-                    <a href="/ai-crm" className="text-orange-400 hover:text-orange-300 font-medium text-sm sm:text-base">
+                    <a href="https://ziontechgroup.com/micro-saas" className="text-orange-400 hover:text-orange-300 font-medium text-sm sm:text-base">
                       Learn More →
                     </a>
                   </div>
@@ -340,7 +340,7 @@ const HomePage: React.FC = () => {
                   </p>
                   <div className="text-center">
                     <div className="text-lg sm:text-2xl font-bold text-cyan-400 mb-2">$199/month</div>
-                    <a href="/ai-analytics" className="text-cyan-400 hover:text-cyan-300 font-medium text-sm sm:text-base">
+                    <a href="https://ziontechgroup.com/micro-saas" className="text-cyan-400 hover:text-cyan-300 font-medium text-sm sm:text-base">
                       Learn More →
                     </a>
                   </div>
@@ -355,7 +355,7 @@ const HomePage: React.FC = () => {
                   </p>
                   <div className="text-center">
                     <div className="text-lg sm:text-2xl font-bold text-pink-400 mb-2">$299/month</div>
-                    <a href="/ai-content-studio" className="text-pink-400 hover:text-pink-300 font-medium text-sm sm:text-base">
+                    <a href="https://ziontechgroup.com/micro-saas" className="text-pink-400 hover:text-pink-300 font-medium text-sm sm:text-base">
                       Learn More →
                     </a>
                   </div>
@@ -370,7 +370,7 @@ const HomePage: React.FC = () => {
                   </p>
                   <div className="text-center">
                     <div className="text-lg sm:text-2xl font-bold text-green-400 mb-2">$99/month</div>
-                    <a href="/ai-chatbot-builder" className="text-green-400 hover:text-green-300 font-medium text-sm sm:text-base">
+                    <a href="https://ziontechgroup.com/micro-saas" className="text-green-400 hover:text-green-300 font-medium text-sm sm:text-base">
                       Learn More →
                     </a>
                   </div>
@@ -385,7 +385,7 @@ const HomePage: React.FC = () => {
                   </p>
                   <div className="text-center">
                     <div className="text-lg sm:text-2xl font-bold text-purple-400 mb-2">$179/month</div>
-                    <a href="/ai-email-marketing" className="text-purple-400 hover:text-purple-300 font-medium text-sm sm:text-base">
+                    <a href="https://ziontechgroup.com/micro-saas" className="text-purple-400 hover:text-purple-300 font-medium text-sm sm:text-base">
                       Learn More →
                     </a>
                   </div>
@@ -400,7 +400,7 @@ const HomePage: React.FC = () => {
                   </p>
                   <div className="text-center">
                     <div className="text-lg sm:text-2xl font-bold text-blue-400 mb-2">$399/month</div>
-                    <a href="/ai-mobile-builder" className="text-blue-400 hover:text-blue-300 font-medium text-sm sm:text-base">
+                    <a href="https://ziontechgroup.com/micro-saas" className="text-blue-400 hover:text-blue-300 font-medium text-sm sm:text-base">
                       Learn More →
                     </a>
                   </div>
@@ -415,7 +415,7 @@ const HomePage: React.FC = () => {
                   </p>
                   <div className="text-center">
                     <div className="text-lg sm:text-2xl font-bold text-yellow-400 mb-2">$129/month</div>
-                    <a href="/ai-seo-optimizer" className="text-yellow-400 hover:text-yellow-300 font-medium text-sm sm:text-base">
+                    <a href="https://ziontechgroup.com/micro-saas" className="text-yellow-400 hover:text-yellow-300 font-medium text-sm sm:text-base">
                       Learn More →
                     </a>
                   </div>
@@ -430,7 +430,7 @@ const HomePage: React.FC = () => {
                   </p>
                   <div className="text-center">
                     <div className="text-lg sm:text-2xl font-bold text-indigo-400 mb-2">$79/month</div>
-                    <a href="/ai-invoice-generator" className="text-indigo-400 hover:text-indigo-300 font-medium text-sm sm:text-base">
+                    <a href="https://ziontechgroup.com/micro-saas" className="text-indigo-400 hover:text-indigo-300 font-medium text-sm sm:text-base">
                       Learn More →
                     </a>
                   </div>
@@ -452,7 +452,7 @@ const HomePage: React.FC = () => {
                 </p>
                 <div className="text-center">
                   <div className="text-lg sm:text-2xl font-bold text-blue-400 mb-2">$1,299/month</div>
-                  <a href="/cloud-migration" className="text-blue-400 hover:text-blue-300 font-medium text-sm sm:text-base">
+                  <a href="https://ziontechgroup.com/it-services" className="text-blue-400 hover:text-blue-300 font-medium text-sm sm:text-base">
                     Learn More →
                   </a>
                 </div>
@@ -465,7 +465,7 @@ const HomePage: React.FC = () => {
                 </p>
                 <div className="text-center">
                   <div className="text-lg sm:text-2xl font-bold text-red-400 mb-2">$799/month</div>
-                  <a href="/cybersecurity-suite" className="text-red-400 hover:text-red-300 font-medium text-sm sm:text-base">
+                  <a href="https://ziontechgroup.com/it-services" className="text-red-400 hover:text-red-300 font-medium text-sm sm:text-base">
                     Learn More →
                   </a>
                 </div>
@@ -478,7 +478,7 @@ const HomePage: React.FC = () => {
                 </p>
                 <div className="text-center">
                   <div className="text-lg sm:text-2xl font-bold text-green-400 mb-2">$599/month</div>
-                  <a href="/devops-cicd" className="text-green-400 hover:text-green-300 font-medium text-sm sm:text-base">
+                  <a href="https://ziontechgroup.com/it-services" className="text-green-400 hover:text-green-300 font-medium text-sm sm:text-base">
                     Learn More →
                   </a>
                 </div>
@@ -491,7 +491,7 @@ const HomePage: React.FC = () => {
                 </p>
                 <div className="text-center">
                   <div className="text-lg sm:text-2xl font-bold text-teal-400 mb-2">$399/month</div>
-                  <a href="/database-management" className="text-teal-400 hover:text-teal-300 font-medium text-sm sm:text-base">
+                  <a href="https://ziontechgroup.com/it-services" className="text-teal-400 hover:text-teal-300 font-medium text-sm sm:text-base">
                     Learn More →
                   </a>
                 </div>
@@ -504,7 +504,7 @@ const HomePage: React.FC = () => {
                 </p>
                 <div className="text-center">
                   <div className="text-lg sm:text-2xl font-bold text-indigo-400 mb-2">$699/month</div>
-                  <a href="/network-solutions" className="text-indigo-400 hover:text-indigo-300 font-medium text-sm sm:text-base">
+                  <a href="https://ziontechgroup.com/it-services" className="text-indigo-400 hover:text-indigo-300 font-medium text-sm sm:text-base">
                     Learn More →
                   </a>
                 </div>
@@ -517,7 +517,7 @@ const HomePage: React.FC = () => {
                 </p>
                 <div className="text-center">
                   <div className="text-lg sm:text-2xl font-bold text-purple-400 mb-2">$1,999/month</div>
-                  <a href="/mobile-app-development" className="text-purple-400 hover:text-purple-300 font-medium text-sm sm:text-base">
+                  <a href="https://ziontechgroup.com/it-services" className="text-purple-400 hover:text-purple-300 font-medium text-sm sm:text-base">
                     Learn More →
                   </a>
                 </div>
@@ -530,7 +530,7 @@ const HomePage: React.FC = () => {
                 </p>
                 <div className="text-center">
                   <div className="text-lg sm:text-2xl font-bold text-yellow-400 mb-2">$299/hour</div>
-                  <a href="/it-consulting" className="text-yellow-400 hover:text-yellow-300 font-medium text-sm sm:text-base">
+                  <a href="https://ziontechgroup.com/it-services" className="text-yellow-400 hover:text-yellow-300 font-medium text-sm sm:text-base">
                     Learn More →
                   </a>
                 </div>
@@ -543,7 +543,7 @@ const HomePage: React.FC = () => {
                 </p>
                 <div className="text-center">
                   <div className="text-lg sm:text-2xl font-bold text-cyan-400 mb-2">$499/month</div>
-                  <a href="/it-support" className="text-cyan-400 hover:text-cyan-300 font-medium text-sm sm:text-base">
+                  <a href="https://ziontechgroup.com/it-services" className="text-cyan-400 hover:text-cyan-300 font-medium text-sm sm:text-base">
                     Learn More →
                   </a>
                 </div>
