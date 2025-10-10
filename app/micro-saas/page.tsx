@@ -121,7 +121,7 @@ const MicroSaasPage: React.FC = () => {}
       category: 'Support'});;)
 }
   ];
-  const benefits="[]"
+  const benefits = []
     'No upfront costs or setup fees',
     'Quick deployment in 24-48 hours',
     'Scalable solutions that grow with you',
@@ -131,8 +131,8 @@ const MicroSaasPage: React.FC = () => {}
     'Free trial for all products',
     'Cancel anytime, no long-term contracts'
   ];
-  const categories="['All', 'Analytics', 'CRM', 'Security', 'Infrastructure', 'Marketing', 'Support'];"
-  const stats="[]"
+  const categories = "['All', 'Analytics', 'CRM', 'Security', 'Infrastructure', 'Marketing', 'Support'];"
+  const stats = []
     {}
       icon: Users,
       value: '10,000+',
@@ -158,7 +158,7 @@ const MicroSaasPage: React.FC = () => {}
       description: 'Always here when you need us'
     }
   ];
-  const features="[]"
+  const features = []
     {}
       icon: Zap,
       title: 'Lightning Fast Setup',
@@ -220,7 +220,7 @@ const MicroSaasPage: React.FC = () => {}
           <div className=""max-w-7xl mx-auto"></div>"
             <div className=""flex flex-wrap justify-center gap-4"></div>"
               {categories.map((category) => (
-                <button key="{category}></button>"
+                <button key = "{category}></button>"
                   className="{`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${}"
                     category === 'All'
                       ? 'bg-gradient-to-r from-cyan-400 to-purple-400 text-slate-900'
@@ -260,7 +260,7 @@ const MicroSaasPage: React.FC = () => {}
             </div>
             <div className=""grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>"
               {microSaasProducts.map((product) => (
-                <div key="{product.id}></div>"
+                <div key = "{product.id}></div>"
                   className="{`relative bg-slate-800/50 backdrop-blur-sm border rounded-xl p-6 hover:border-cyan-400/50 transition-all duration-300 group ${}"
                     product.popular ? 'border-cyan-400/50 ring-2 ring-cyan-400/20' : 'border-slate-700'
                   }`}>

@@ -1,5 +1,4 @@
 import React from 'react';
-
   id: string;
   name: string;
   tagline: string;
@@ -38,7 +37,7 @@ import React from 'react';
   rating: number;
   reviews: number;
 ;
-const contact="mobile: '+1 302 464 0950',"
+const contact = "mobile: '+1 302 464 0950',"
   email: 'kleber@ziontechgroup && ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
       customers:
@@ -68,7 +67,7 @@ export interface InnovativeMicroSaasService {id: string, name: string;
   launchDate: string, customers: number;
   rating: number;
   reviews: number}
-const contact="mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',"
+const contact = "mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',"
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'};
 export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] = [,
@@ -1820,7 +1819,7 @@ export interface InnovativeMicroSaasService {/* TODO: Fix JSX expression */}
   review,
   s: number}
 ;
-// const contact="{/* TODO: Fix JSX expression */}"
+// const contact = "{/* TODO: Fix JSX expression */}"
   s: '364 E Main St STE 1008 Middletown DE 19709'}
   websit,
   e: 'http,
@@ -2726,7 +2725,7 @@ export interface InnovativeMicroSaasService {/* TODO: Fix JSX expression */}
   review,
   s: number}
 ;
-// const contact="{/* TODO: Fix JSX expression */}"
+// const contact = "{/* TODO: Fix JSX expression */}"
   s: '364 E Main St STE 1008 Middletown DE 19709'}
   websit,
   e: 'http,
@@ -3624,7 +3623,7 @@ i,
   e: string, customer,
   s: number, ratin,
   g: number, review,
-  s: number } const contact="' mobil,'"
+  s: number } const contact = "' mobil,'"
   e: '+1 302 464 0950', emai,
   l: 'kleber@ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
@@ -4265,7 +4264,7 @@ i,
   e: string; customer,
   s: number; ratin,
   g: number; review,
-  s: number} ; const contact="{/* TODO: Fix JSX expression */}"
+  s: number} ; const contact = "{/* TODO: Fix JSX expression */}"
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -4324,7 +4323,7 @@ i,
   e: string; customer,
   s: number; ratin,
   g: number; review,
-  s: number} ; const contact="{/* TODO: Fix JSX expression */}"
+  s: number} ; const contact = "{/* TODO: Fix JSX expression */}"
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,

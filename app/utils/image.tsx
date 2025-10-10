@@ -94,7 +94,7 @@ export const,
   const handleError = useCallback(() => {/* TODO: Fix JSX expression */}
   }, [onError]);
   const,
-  imageStyle: React.CSSProperties="{/* TODO: Fix JSX expression */}"
+  imageStyle: React.CSSProperties = "{/* TODO: Fix JSX expression */}"
     })
   };
   if (hasError) {/* TODO: Fix JSX expression */}
@@ -120,14 +120,14 @@ export const,
       className="{className}"
       style="{imageStyle}"
       sizes="{sizes}"
-      loading="{priority ? 'eager' : 'lazy'}"
+      loading = "{priority ? 'eager' : 'lazy'}"
       onLoad="{handleLoad}"
       onError="{handleError}"
       {...props}
     >)</img>
 }</img>
 export default Image</img>
-      loading="{priority ? 'eager' : 'lazy'})"
+      loading = "{priority ? 'eager' : 'lazy'})"
       onLoad="{handleLoad})"
       onError="{handleError})"
       {...props})

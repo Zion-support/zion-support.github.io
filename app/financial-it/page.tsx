@@ -5,7 +5,7 @@ import Navigation from '../components;
 import Footer from '../components;
 import { CheckCircle, Zap, DollarSign, Clock, Users, Shield, BarChart, ArrowRight } from 'lucide-react';
 ;
-const FinancialITPage: React.FC = () => {const features="[]"
+const FinancialITPage: React.FC = () => {const features = []
     {}
       ico,
     n: DollarSign,
@@ -45,7 +45,7 @@ const FinancialITPage: React.FC = () => {const features="[]"
     }
   ];
 ;
-const services="[]"
+const services = []
     {}
       icon: '🏦',
       title: 'Banking Solutions',
@@ -68,7 +68,7 @@ const services="[]"
     }
   ];
 ;
-const benefits="[]"
+const benefits = []
     'SOX Compliance Ready',
     'Bank-level Security',
     'Real-time Processing',
@@ -85,7 +85,7 @@ const benefits="[]"
       <Navigation {/* Hero Section *></Navigation>
       <section className=""relative py-20 px-4 overflow-hidden">)"
         <div className=""absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(34,197,94,0.3)_0%,transparent_50%)] animate-pulse"></div>"
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style="{{ animationDelay: '1s' }}></div>"
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style = "{{ animationDelay: '1s' }}></div>"
         <div className=""relative max-w-7xl mx-auto text-center"></div>"
           <h1 className=""text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"></h1>"
             Financial Services;

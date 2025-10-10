@@ -1,17 +1,16 @@
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
-
 export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {}
-  return(<div, classNam, e="'m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e'></div>"
+  return(<div, classNam, e = "'m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e'></div>"
 export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {}
   return (
-    <div, classNam, e="'m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e'></div>"
+    <div, classNam, e = "'m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e'></div>"
       <Helm, e, t></Helm>
         <title>Edge, 2025, Oct 01, Private, Consentless Experimen, t, s</title>
-        <meta , nam, e="'description'></meta>"
-          conte, n, t="'Learn, about, edge 2025, oct, 01 private, consentless, experiments and, how, it can, benefit, your enterpri, s, e.'"
+        <meta , nam, e = "'description'></meta>"
+          conte, n, t = "'Learn, about, edge 2025, oct, 01 private, consentless, experiments and, how, it can, benefit, your enterpri, s, e.'"
         />)
-        <link , re, l="'canonic, a, l')></link>"
-          hr, e, f="'htt, p, s: //ziontechgro u p.c o m/bl o g/ed g e-20 2 5-o c t-01-priva t e-consentle s s-experimen t s')"
+        <link , re, l = "'canonic, a, l')></link>"
+          hr, e, f = "'htt, p, s: //ziontechgro u p.c o m/bl o g/ed g e-20 2 5-o c t-01-priva t e-consentle s s-experimen t s')"
         />),
       </Helm, e, t>
       <div, className="'container, m, x-auto, p, x-6, p, y-16'></div>"

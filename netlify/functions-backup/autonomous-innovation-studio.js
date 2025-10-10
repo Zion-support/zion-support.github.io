@@ -1,5 +1,5 @@
 // netlify/functions/autonomous-innovation-studio.js;
-exports.handler="async function () {;"
+exports.handler = "async function () {;"
 const { execSync } = require('child_process');
   try {execSync('node automation/autonomous-innovation-studio.cjs', {)
       stdio: inherit),
@@ -14,7 +14,7 @@ const { execSync } = require('child_process');
       statusCode: 200;
       body: JSON.stringify({ ok: false),
         error: String(e;),
-exports.handler="async function () {/* TODO: Fix JSX expression */}"
+exports.handler = "async function () {/* TODO: Fix JSX expression */}"
   const { execSync } = require('child_process');
   try {/* TODO: Fix JSX expression */}
   l: true}

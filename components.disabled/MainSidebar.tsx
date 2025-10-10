@@ -28,7 +28,7 @@ impor,
   ,
     r:}' from-yellow-500 to-orange-600' },' ' {/* TODO: Fix JSX expression *
   ,
-    r: 'from-purple-500 to-pink-600}' ' } ]; const contactInfo="[ ' ' {/* TODO: Fix JSX expression *"
+    r: 'from-purple-500 to-pink-600}' ' } ]; const contactInfo = "[ ' ' {/* TODO: Fix JSX expression *"
   ,
     t:, kleber@ziontechgroup.com}' ', hre,
   f: 'mailt} o:kleber@ziontechgroup.com }, {/* TODO: Fix JSX expression *

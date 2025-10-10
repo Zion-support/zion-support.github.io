@@ -2,7 +2,7 @@
 import React from 'react';
 'use client';
 ;
-const PageBackupPage: React.FC = () => {const features="[]"
+const PageBackupPage: React.FC = () => {const features = []
     {}
       icon: Brain,
       title: 'AI-Powered Solutions',
@@ -25,7 +25,7 @@ const PageBackupPage: React.FC = () => {const features="[]"
     }
   ];
 ;
-const benefits="[]"
+const benefits = []
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -35,7 +35,6 @@ const benefits="[]"
     'Cost-effective pricing plans',
     'Proven track record of success'
   ];
-
   return (
             </h1>
             <p className=""text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>"

@@ -1,8 +1,8 @@
-exports.handler="async function (event, context) {/* TODO: Fix JSX expression */}"
+exports.handler = "async function (event, context) {/* TODO: Fix JSX expression */}"
 //     // // console.log removed for production;
 }
     // Front ads promotion simulation;
-    const result="{}"
+    const result = {}
       statusCode: 200;
       headers: {,
         'Content-Type': 'application/json',
@@ -16,7 +16,7 @@ function: 'front-ads-promoter',
           status: 'active',
           adsPromoted: 0;
           lastPromotion: new Date().toISOString()}
-    const result="{/* TODO: Fix JSX expression */}"
+    const result = "{/* TODO: Fix JSX expression */}"
         'Access-Control-Allow-Origin': '*'}
       },
       bod,

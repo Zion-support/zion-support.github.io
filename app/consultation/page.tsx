@@ -32,7 +32,7 @@ const ConsultationPage: React.FC = () => {}
 }
 
 const ConsultationPage: React.FC = () => {}
-  const consultationServices="[]"
+  const consultationServices = []
     'AI Strategy & Implementation',
     'Cloud Migration Planning',
     'Cybersecurity Assessment',
@@ -168,7 +168,7 @@ const ConsultationPage: React.FC = () => {}
     service: '',
     message: ''
   });
-  const experts="[]"
+  const experts = []
     {}
       name: 'Dr. Sarah Chen',
       role: 'AI & Machine Learning Consultant',
@@ -209,7 +209,7 @@ const ConsultationPage: React.FC = () => {}
     preferredTime: '',
     urgency: 'medium'
   });
-  const services="[]"
+  const services = []
     {}
       icon: Zap,
       title: 'AI Strategy & Implementation',
@@ -235,7 +235,7 @@ const ConsultationPage: React.FC = () => {}
       duration: '60-90 minutes'
     }
   ];
-  const consultationTypes="[]"
+  const consultationTypes = []
     {}
       title: 'Discovery Call',
       description: 'Free 30-minute consultation to understand your needs',
@@ -260,7 +260,7 @@ const ConsultationPage: React.FC = () => {}
   ];
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {}
     const { name, value } = e.target;
-    setFormData(prev="> ({}"
+    setFormData(prev = "> ({}"
       ...prev,
       [name]: value;
     }));
@@ -393,7 +393,7 @@ const PagePage: React.FC = () => {}
             </div>
             <div className=""grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>"
               {consultationTypes.map((type) => (
-                <div key="{type.id}></div>"
+                <div key = "{type.id}></div>"
                   className="{`bg-white/10 backdrop-blur-lg rounded-2xl border p-8 hover:border-cyan-400/50 transition-all duration-300 cursor-pointer ${}"
                     selectedType === type.id ? 'border-cyan-400' : 'border-white/20'
                   } ${type.popular ? 'ring-2 ring-cyan-400/50' : ''}`}
@@ -618,7 +618,7 @@ const PagePage: React.FC = () => {}
           <h2 className=""text-3xl font-bold text-white mb-12 text-center">Consultation Services</h2>"
           <div className=""grid grid-cols-1 md:grid-cols-3 gap-8"></div>"
             {consultationTypes.map((type) => (
-              <div key="{type.id}></div>"
+              <div key = "{type.id}></div>"
                 className="{`bg-white/10 backdrop-blur-sm rounded-2xl p-8 border ${}"
                   type.popular ? 'border-purple-400' : 'border-white/20'
                 } hover:bg-white/20 transition-all duration-300 relative`}>
@@ -679,7 +679,7 @@ const PagePage: React.FC = () => {}
             {experts.map((expert, index) => (
               <div key={index} className=""bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center hover:bg-white/20 transition-all duration-300"></div>"
                 <div className=""w-24 h-24 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center"></div>"
-                  <span className="text-2xl font-bold text-white">{expert.name.split(' ').map(n="> n[0]).join('')}</span>"
+                  <span className="text-2xl font-bold text-white">{expert.name.split(' ').map(n = "> n[0]).join('')}</span>"
                 </div>
                 <h3 className=""text-xl font-bold text-white mb-2">{expert.name}</h3>"
                 <p className=""text-purple-400 mb-2">{expert.role}</p>"

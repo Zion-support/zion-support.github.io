@@ -8,11 +8,11 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 ;
 const AICustomerSupportBotPage: React.FC = () => {;
-const features="[]"
+const features = []
 import Navigation from '../components;
 import Footer from '../components;
 const AICustomerSupportBotPage: React.FC = () => {}
-  const features="[]"
+  const features = []
     {}
       ico,
     n: Bot,
@@ -36,7 +36,7 @@ const AICustomerSupportBotPage: React.FC = () => {}
     }
   ];
 ;
-const pricingPlans="[]"
+const pricingPlans = []
       name: 'Starter',
       price: '$149',
       period: '
@@ -72,7 +72,7 @@ const pricingPlans="[]"
         'White-label options',
         'API access',
         'Custom training';
-const stats="[]"
+const stats = []
     { icon: Users, value: '1,000+', label: 'Happy Customers' },
     { icon: TrendingUp, value: '90%', label: 'Response Time Reduction' },
     { icon: Clock, value: '45%', label: 'Satisfaction Increase' },

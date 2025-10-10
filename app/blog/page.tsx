@@ -97,7 +97,7 @@ const BlogPage: React.FC = () => {}
       featured: false;
     }
   ];
-  const categories="[]"
+  const categories = []
     { id: 'all', name: 'All Categories' },
     { id: 'AI', name: 'Artificial Intelligence' },
     { id: 'Quantum', name: 'Quantum Computing' },
@@ -161,25 +161,25 @@ const BlogPage: React.FC = () => {}
       image: '/images/blog/microservices.jpg'
     }
   ];
-  const categories="['all', 'AI & Machine Learning', 'Cybersecurity', 'Cloud Computing', 'Software Development'];"
-  const filteredPosts = blogPosts.filter(post="> {}"
-    const matchesSearch="post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||"
+  const categories = "['all', 'AI & Machine Learning', 'Cybersecurity', 'Cloud Computing', 'Software Development'];"
+  const filteredPosts = blogPosts.filter(post = "> {}"
+    const matchesSearch = "post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||"
                          post.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         post.tags.some(tag="> tag.toLowerCase().includes(searchQuery.toLowerCase()));"
+                         post.tags.some(tag = "> tag.toLowerCase().includes(searchQuery.toLowerCase()));"
     const matchesCategory = selectedCategory === 'all' || post.category === selectedCategory;
     return matchesSearch && matchesCategory;
   });
   const filteredPosts = useMemo(() => {}
-    return blogPosts.filter(post="> {}"
-      const matchesSearch="post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||"
+    return blogPosts.filter(post = "> {}"
+      const matchesSearch = "post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||"
                            post.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           post.tags.some(tag="> tag.toLowerCase().includes(searchTerm.toLowerCase()))"
+                           post.tags.some(tag = "> tag.toLowerCase().includes(searchTerm.toLowerCase()))"
       const matchesCategory = selectedCategory === 'all' || post.category === selectedCategory;
       return matchesSearch && matchesCategory;
     })
   }, [searchTerm, selectedCategory]);
-  const featuredPosts = blogPosts.filter(post="> post.featured);"
-  const regularPosts = filteredPosts.filter(post="> !post.featured);"
+  const featuredPosts = blogPosts.filter(post = "> post.featured);"
+  const regularPosts = filteredPosts.filter(post = "> !post.featured);"
   return (
     <>
       <Helmet></Helmet>
@@ -221,7 +221,7 @@ const BlogPage: React.FC = () => {}
             {/* Category Filter */}
             <div className=""flex flex-wrap justify-center gap-4"></div>"
               {categories.map((category) => (
-                <button key="{category.id}></button>"
+                <button key = "{category.id}></button>"
                   onClick={() => setSelectedCategory(category.id)}
                   className="{`px-6 py-3 rounded-full font-medium transition-all duration-300 ${}"
                     selectedCategory === category.id;
@@ -256,10 +256,10 @@ const BlogPage: React.FC = () => {}
                   className=""w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-colors""
                 />
               </div>
-              <select value="{selectedCategory}></select>"
+              <select value = "{selectedCategory}></select>"
                 onChange={(e) => setSelectedCategory(e.target.value)}
                 className=""px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-white focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-colors">"
-                {categories.map(category="> ("
+                {categories.map(category = "> ("
                   <option key={category} value={category} className=""bg-slate-800"></option>"
                     {category === 'all' ? 'All Categories' : category}
                   </option>
@@ -332,7 +332,7 @@ const BlogPage: React.FC = () => {}
                           <Calendar className=""w-4 h-4 ml-2" /></Calendar>"
                           <span>{new Date(post.date).toLocaleDateString()}</span>
                         </div>
-                        <Link to="{`/blog/${post.id}`}></Link>"
+                        <Link to = "{`/blog/${post.id}`}></Link>"
                           className=""text-cyan-400 hover:text-cyan-300 font-medium flex items-center gap-1 transition-colors">"
                           Read More;
                           <ArrowRight className=""w-4 h-4" /></ArrowRight>"
@@ -399,7 +399,7 @@ const BlogPage: React.FC = () => {}
                         <Calendar className=""w-4 h-4 ml-2" /></Calendar>"
                         <span>{new Date(post.date).toLocaleDateString()}</span>
                       </div>
-                      <Link to="{`/blog/${post.id}`}></Link>"
+                      <Link to = "{`/blog/${post.id}`}></Link>"
                         className=""text-cyan-400 hover:text-cyan-300 font-medium flex items-center gap-1 transition-colors">"
                         Read More;
                         <ArrowRight className=""w-4 h-4" /></ArrowRight>"

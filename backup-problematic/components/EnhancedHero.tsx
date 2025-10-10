@@ -1,5 +1,4 @@
 import React from 'react';
-
 interface EnhancedHeroProps {/* TODO: Fix JSX expression */}
 }
 ;
@@ -17,6 +16,5 @@ const EnhancedHero = React.memo(function EnhancedHero({ className="'' }: Enhance
       <p className=""text-blue-600">This component is under development.</p>"
     </div>
   )});
-
 export default EnhancedHero;
 "`

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-
 interface PerformanceMetrics {}
   loadTime: number;
   renderTime: number;
@@ -17,28 +16,24 @@ const [metrics, setMetrics] = useState<PerformanceMetrics></PerformanceMetrics>
     memoryUsage: 0,
     fps: 0});
   const [isVisible, setIsVisible] = useState(false);
-
   useEffect(() => {;
 const updateMetrics = () => {;
 const navigation="performance.getEntriesByType("
         'navigation'
       )[0] as PerformanceNavigationTiming;
-      const loadTime="navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0;"
+      const loadTime = "navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0;"
 ;
-const memory="(performance as Performance & { memory?: { usedJSHeapSize: number } }).memory;"
-      const memoryUsage="memory ? memory.usedJSHeapSize / 1024 / 1024 : 0;"
-      setMetrics(prev="> ({}"
+const memory = "(performance as Performance & { memory?: { usedJSHeapSize: number } }).memory;"
+      const memoryUsage = "memory ? memory.usedJSHeapSize / 1024 / 1024 : 0;"
+      setMetrics(prev = "> ({}"
         ...prev,
         loadTime,
         memoryUsage}))};
-
     //Update metrics on load;
     updateMetrics();
-
     //Update metrics periodically;
-const interval="setInterval(updateMetrics, 1000);"
+const interval = "setInterval(updateMetrics, 1000);"
     return () => clearInterval(interval)}, []);
-
   //Only show in development;
   if (process.env['NODE_ENV'] !== 'development') {}
     return null}
@@ -72,5 +67,4 @@ const interval="setInterval(updateMetrics, 1000);"
       )}
     </div>
   )};
-
 export default PerformanceDashboard;

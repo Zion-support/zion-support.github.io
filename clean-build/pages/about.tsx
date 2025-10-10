@@ -9,7 +9,7 @@ export default function About() {}
           name=""description""
           content=""Learn about Zion Tech Group's mission, values, and commitment to delivering cutting-edge technology solutions that transform businesses.""
         /><
-        <meta name="viewport" content="width=device-width, initial-scale="1" /><"
+        <meta name="viewport" content = "width=device-width, initial-scale="1" /><"
         <link rel="icon" href=""/favicon.ico" /><"
       <
       <div className=""min-h-screen bg-gray-50"></div>"
@@ -151,7 +151,7 @@ export default function About() {/* TODO: Fix JSX expression *
         <meta><
           name=""description"""
           content=""Learn about Zion Tech Group's mission, values, and commitment to delivering cutting-edge technology solutions that transform businesses.""
-        <meta name="viewport" content="width=device-width, initial-scale="1" /><"
+        <meta name="viewport" content = "width=device-width, initial-scale="1" /><"
         <link rel="icon" href=""/favicon.ico" /><"
       <
       <div className=""min-h-screen bg-gray-50"><"

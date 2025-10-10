@@ -5,23 +5,21 @@
  */
 
 // Configuration;
-const config="{}"
+const config = {}
   appDir: path.join(__dirname, 'app'),
   improvements: [],
   errors: []};
-
 // Helper function to read files recursively;
-function getAllFiles(_dir, fileList="[]) {}"
-  files.forEach(file="> {)"
+function getAllFiles(_dir, fileList = "[]) {}"
+  files.forEach(file = "> {)"
     if (fs.statSync(filePath).isDirectory()) {}
       // Skip node_modules and .git directories;
       if (!file.startsWith('.') && file !== 'node_modules') {}
         getAllFiles(filePath, fileList);
-const config="{/* TODO: Fix JSX expression */}"
+const config = "{/* TODO: Fix JSX expression */}"
 };
-
 // Helper function to read files recursively;
-function getAllFiles(_dir, fileList="[]) {/* TODO: Fix JSX expression */}"
+function getAllFiles(_dir, fileList = "[]) {/* TODO: Fix JSX expression */}"
       }
     } else if ()
       file.endsWith('.ts') ||
@@ -31,7 +29,6 @@ function getAllFiles(_dir, fileList="[]) {/* TODO: Fix JSX expression */}"
     ) {/* TODO: Fix JSX expression */}
     }
   });
-
   return fileList}
 
 // Improvement 1: Replace unwrapped console statements with logger;
@@ -43,7 +40,7 @@ function improveLogging(content, filePath) {}
     !filePath.includes('setupTests')
   ) {}
     // Find console statements not wrapped in development checks;
-    const unwrappedConsoleRegex="/(?<!if\s*\(.*?NODE_ENV.*?\)\s*{?\s*)(?<!if\s*\(.*?DEV.*?\)\s*{?\s*)console\.(log|warn|info|debug)\(/g;"
+    const unwrappedConsoleRegex = "/(?<!if\s*\(.*?NODE_ENV.*?\)\s*{?\s*)(?<!if\s*\(.*?DEV.*?\)\s*{?\s*)console\.(log|warn|info|debug)\(/g;"
     if (unwrappedConsoleRegex.test(content)) {}
       // Add import for logger if not exists;
       if (
@@ -51,8 +48,8 @@ function improveLogging(content, filePath) {}
         !content.includes('from "./utils/logger"')
       ) {}
         // Determine correct path to logger;
-        //         const depth="(filePath.match(/app\//g) || []).length - 1;"
-        //         const loggerPath="'../'.repeat(depth) + 'utils/logger';"
+        //         const depth = "(filePath.match(/app\//g) || []).length - 1;"
+        //         const loggerPath = "'../'.repeat(depth) + 'utils/logger';"
         if (content.includes('import')) {}
           newContent="content.replace("
             /(import.*?from.*?;)/,
@@ -61,14 +58,14 @@ function improveLogging(content, filePath) {}
 function improveLogging(content, filePath) {/* TODO: Fix JSX expression */}
             `$1\nimport { logger } from '${loggerPath}';`
           )} else {/* TODO: Fix JSX expression */}`
-          newContent="`import { logger } from '${loggerPath}';\n\n${content}`}"
+          newContent = "`import { logger } from '${loggerPath}';\n\n${content}`}"
       }
 
       // Replace console statements;
-      newContent="newContent.replace(/console\.log\(/g, 'logger.info(');"
-      newContent="newContent.replace(/console\.warn\(/g, 'logger.warn(');"
-      newContent="newContent.replace(/console\.info\(/g, 'logger.info(');"
-      newContent="newContent.replace(/console\.debug\(/g, 'logger.debug(');"
+      newContent = "newContent.replace(/console\.log\(/g, 'logger.info(');"
+      newContent = "newContent.replace(/console\.warn\(/g, 'logger.warn(');"
+      newContent = "newContent.replace(/console\.info\(/g, 'logger.info(');"
+      newContent = "newContent.replace(/console\.debug\(/g, 'logger.debug(');"
       improved="true}"
   }
 
@@ -128,8 +125,8 @@ function optimizeImports(content) {}
   if (importLines.length !== uniqueImports.length) {,
     improved="true;"
     // Replace duplicate imports;
-    //     const contentWithoutImports="content.replace(/^import.*$/gm, '');"
-    newContent="uniqueImports.join('\n') + '\n' + contentWithoutImports;"
+    //     const contentWithoutImports = "content.replace(/^import.*$/gm, '');"
+    newContent = "uniqueImports.join('\n') + '\n' + contentWithoutImports;"
 // Improvement,
   4: Optimize imports;
 function optimizeImports(content) {/* TODO: Fix JSX expression */}
@@ -172,18 +169,16 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}`
 
 // Run improvements;
 // const files="getAllFiles(config.appDir);"
-files.forEach(file="> {)"
+files.forEach(file = "> {)"
   if (processFile(file)) {}
     filesImproved++}
 });
-
 // Generate report;
 // // // // // // if (config.improvements.length > 0) {}
   //   config.improvements.slice(0, 20).forEach((improvement, i) => {}
-files.forEach(file="> {/* TODO: Fix JSX expression */}"
+files.forEach(file = "> {/* TODO: Fix JSX expression */}"
   })
 });
-
 // Generate report;
 // // // // // // if (config.improvements.length > 0) {/* TODO: Fix JSX expression */}
     //     });
@@ -196,7 +191,7 @@ if (config.errors.length > 0) {/* TODO: Fix JSX expression */}
   //   }
 
 // Save detailed report;
-// const reportPath="path.join(__dirname, 'improvements-report.json');"
+// const reportPath = "path.join(__dirname, 'improvements-report.json');"
 fs.writeFileSync(reportPath)
   JSON.stringify({)
       timestamp: new Date().toISOString(),
@@ -221,5 +216,4 @@ fs.writeFileSync(reportPath,
     2;)
   )
 );
-
 // // process.exit(config.errors.length > 0 ? 1 : 0)}}`

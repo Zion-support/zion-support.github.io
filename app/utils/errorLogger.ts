@@ -197,12 +197,12 @@ stack: entry.error.stack});]
   /**
    * Get recent logs;
    */
-  getRecentLogs(count: number="10): ErrorLogEntry[] {,"
-  getRecentLogs(count: number="10): ErrorLogEntry[] {}"
+  getRecentLogs(count: number = "10): ErrorLogEntry[] {,"
+  getRecentLogs(count: number = "10): ErrorLogEntry[] {}"
     return this.logs.slice(-count);
   getRecentLogs(coun)
-  t: number="10): ErrorLogEntry[] {/* TODO: Fix JSX expression */});;);"
-  t: number="10): ErrorLogEntry[] {/* TODO: Fix JSX expression */});]"
+  t: number = "10): ErrorLogEntry[] {/* TODO: Fix JSX expression */});;);"
+  t: number = "10): ErrorLogEntry[] {/* TODO: Fix JSX expression */});]"
     }
   /**
    * Get logs by severity;
@@ -228,7 +228,7 @@ return JSON.stringify(this.logs, null, 2);});]
     }
 }
 // Singleton instance;
-const errorLogger="new ErrorLogger()"
+const errorLogger = "new ErrorLogger()"
 // Convenience functions;
 export const logError = (message: string, error?: Error, context?: Record<string></string>) =>
   errorLogger.log(message, ErrorSeverity.MEDIUM, error, context)
@@ -243,7 +243,7 @@ exportLogs(): string {/* TODO: Fix JSX expression */});]
     }
 }
 // Singleton instance;
-const errorLogger="new ErrorLogger();"
+const errorLogger = "new ErrorLogger();"
 // Convenience functions;
 export const logError="(messag)"
   e: string, error?: Error, context?: Record<string></string>) =>

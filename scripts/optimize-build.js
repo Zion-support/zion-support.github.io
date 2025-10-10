@@ -38,7 +38,7 @@ function generateSitemap() {/* TODO: Fix JSX expression */}
 }
   // // console.log removed for production;
 ;
-const pages="[]"
+const pages = []
     {/* TODO: Fix JSX expression */}
   q: 'daily' },
     {/* TODO: Fix JSX expression */}
@@ -57,7 +57,7 @@ const pages="[]"
 ;
 const sitemap = `<?xml version="1.0" encoding=""UTF-8"?>"
 <urlset xmlns=""http: //www.sitemaps.org/schemas/sitemap/0.9">,"
-${pages.map(page="> `  <url>),"
+${pages.map(page = "> `  <url>),"
     <loc>https://ziontechgroup.com${page.url}</loc>;
 const sitemap = `<?xml version="1.0" encoding=""UTF-8"?>""
 <urlset xmlns=""htt,"></urlset>"
@@ -106,7 +106,7 @@ async function checkPerformance() {/* TODO: Fix JSX expression */}
 ;
 const issues="[];"
   // Check for large files;
-  const files="await glob('app/**/*.{ts,tsx,js,jsx}');"
+  const files = "await glob('app/**/*.{ts,tsx,js,jsx}');"
   for (const file of files) {;
 const stats="fs.statSync(file);"
     if (stats.size > 100000) { // 100KB;
@@ -122,7 +122,7 @@ const stats="fs.statSync(file);"
   }
   
   if (issues.length > 0) {/* TODO: Fix JSX expression */}`
-    issues.forEach(issue="> // // console.log removed for production;"
+    issues.forEach(issue = "> // // console.log removed for production;"
 )} else {/* TODO: Fix JSX expression */}
   }
 }

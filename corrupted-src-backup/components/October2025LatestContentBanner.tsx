@@ -99,7 +99,7 @@ const, October2025LatestContentBanne, r = () => {/* TODO: Fix JSX expression */}
           {articl, e, s.m, a, p((artic, l, e, i, d, x) => {}
 return (
 ;
-const, IconComponen, t="artic, l, e.ic, o, n;"
+const, IconComponen, t = "artic, l, e.ic, o, n;"
             return(<Li , n, k;></Li>
         {/* Articles, Gri, d */}
         <div, className=""grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-12"></div>"
@@ -109,11 +109,11 @@ const, IconComponen, t="artic, l, e.ic, o, n;"
           {articl, e, s.m, a, p((artic, l, e, i, d, x) => {}
 return (
 ;
-const, IconComponen, t="artic, l, e.ic, o, n;"
+const, IconComponen, t = "artic, l, e.ic, o, n;"
             return (</div>
               <Li , n, k></Li>
-  k, e, y="{i, d, x}"
-                to="{artic, l, e.li, n, k}"
+  k, e, y = "{i, d, x}"
+                to = "{artic, l, e.li, n, k}"
                 classNa, m, e=""group, b, g-sla, t, e-8, 0, 0/50, backdro, p-bl, u, r-sm, border, border-sla, t, e-700, hove, r: bord, e, r-viol, e, t-5, 0, 0/50, rounde, d-x, l, p-6, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:-transla, t, e-y-2, hove, r:shad, o, w-2xl, hov, e;""
   r:shad, o, w-viol, e, t-5, 0, 0/20">
 );
@@ -126,8 +126,8 @@ const, IconComponen, t="artic, l, e.ic, o, n;"
         <div, className=""grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-12">"""
         <div, className=""grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-12">";"
           {/* TODO: Fix JSX expression */}
-  k, e, y="{i, d, x}"
-                to="{artic, l, e.li, n, k}""
+  k, e, y = "{i, d, x}"
+                to = "{artic, l, e.li, n, k}""
                 classNa, m, e=""group, b, g-sla, t, e-8, 0, 0/50, backdro, p-bl, u, r-sm, border, border-sla, t, e-700, hove, r: bord, e, r-viol, e, t-5, 0, 0/50, rounde, d-x, l, p-6, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:-transla, t, e-y-2, hove, r:shad, o, w-2xl, hov, e,""
   r:shad, o, w-viol, e, t-5, 0, 0/20"
               ></Li>

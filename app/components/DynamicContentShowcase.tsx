@@ -65,7 +65,7 @@ const DynamicContentShowcase: React.FC = () => {}
       ]
     }
   ];
-  const benefits="[]"
+  const benefits = []
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -216,15 +216,15 @@ const DynamicContentShowcase: React.FC = () => {}
             </div>
             {/* Navigation Controls */}
             <div className=""flex items-center justify-center gap-4 mt-8"></div>"
-              <button onClick="{prevTestimonial}></button>"
+              <button onClick = "{prevTestimonial}></button>"
                 className=""p-3 bg-white/10 hover:bg-white/20 text-white rounded-full transition-colors duration-200">"
                 <ChevronLeft className=""w-6 h-6" /></ChevronLeft>"
               </button>
-              <button onClick="{togglePlayPause}></button>"
+              <button onClick = "{togglePlayPause}></button>"
                 className=""p-3 bg-white/10 hover:bg-white/20 text-white rounded-full transition-colors duration-200">"
                 {isPlaying ? <Pause className="w-6 h-6" /> : <Play className=""w-6 h-6" />}"
               </button>
-              <button onClick="{nextTestimonial}></button>"
+              <button onClick = "{nextTestimonial}></button>"
                 className=""p-3 bg-white/10 hover:bg-white/20 text-white rounded-full transition-colors duration-200">"
                 <ChevronRight className=""w-6 h-6" /></ChevronRight>"
               </button>
@@ -232,7 +232,7 @@ const DynamicContentShowcase: React.FC = () => {}
             {/* Dots Indicator */}
             <div className=""flex justify-center mt-6 space-x-2"></div>"
               {testimonials.map((_, index) => (
-                <button key="{index}></button>"
+                <button key = "{index}></button>"
                   onClick={() => setCurrentIndex(index)}
                   className="{`w-3 h-3 rounded-full transition-colors duration-200 ${}"
                     index === currentIndex ? 'bg-purple-400' : 'bg-white/30'

@@ -8,7 +8,6 @@ import fs from 'fs/promises';
 import path from 'path';
 import { execSync } from 'child_process';
 import { fileURLToPath } from 'url';
-
 // const __filename="fileURLToPath(import.meta.url);"
 // // __dirname removed;
 class PerformanceEnhancer {;
@@ -35,9 +34,8 @@ class PerformanceEnhancer {/* TODO: Fix JSX expression */}
       execSync('npm run build:analyze', { stdio: 'pipe' });
   async analyzeBundle() {/* TODO: Fix JSX expression */}
   o: 'pipe' });
-      
-//       const distPath="path.join(process.cwd(), 'dist');"
-//       const files="await fs.readdir(distPath);"
+//       const distPath = "path.join(process.cwd(), 'dist');"
+//       const files = "await fs.readdir(distPath);"
       ;
 let _totalSize="0;"
       const _fileSizes="{};"
@@ -70,8 +68,8 @@ let _totalSize="0;"
 
   async optimizeImages() {}
 //     try {}
-//       const publicPath="path.join(process.cwd(), 'public');"
-//       const imagesPath="path.join(publicPath, 'images');"
+//       const publicPath = "path.join(process.cwd(), 'public');"
+//       const imagesPath = "path.join(publicPath, 'images');"
       // Check if images directory exists;
       try {}
         await fs.access(imagesPath)} catch {}
@@ -80,7 +78,7 @@ let _totalSize="0;"
       } catch {/* TODO: Fix JSX expression */}
       }
       ;
-const _images="await fs.readdir(imagesPath);"
+const _images = "await fs.readdir(imagesPath);"
       let _optimizedCount="0;"
       for (const image of images) {/* TODO: Fix JSX expression */}`
   detected: ${image} (${(stats.size / 1024).toFixed(2)} KB)`)}
@@ -95,7 +93,6 @@ const _images="await fs.readdir(imagesPath);"
       this.report.optimizations.push({/* TODO: Fix JSX expression */}`
   s: `Processed ${optimizedCount} images`)
       });
-      
 //       } catch (error) {/* TODO: Fix JSX expression */}
 //       }
   }
@@ -136,17 +133,14 @@ const _images="await fs.readdir(imagesPath);"
 .rounded {/* TODO: Fix JSX expression */}
   s: 0.25rem}`
 `;
-
-//       const criticalCSSPath="path.join(process.cwd(), 'public', 'critical.css');"
+//       const criticalCSSPath = "path.join(process.cwd(), 'public', 'critical.css');"
       await fs.writeFile(criticalCSSPath, criticalCSS);
-      
       this.report.optimizations.push({)
         type: 'css-optimization'),
         status: 'completed'),
         details: 'Critical CSS generated',
       this.report.optimizations.push({/* TODO: Fix JSX expression */})
       });
-      
 //       } catch (error) {/* TODO: Fix JSX expression */}
 //       }
   }
@@ -158,16 +152,14 @@ const _images="await fs.readdir(imagesPath);"
 // Performance monitoring script;
 (function() {}
   'use strict';
-  
   // Monitor Core Web Vitals;
   function observeWebVitals() {}
     if ('PerformanceObserver' in window) {}
       // LCP;
       new PerformanceObserver((list) => {;
 const _entries="list.getEntries();"
-        const _lastEntry="entries[entries.length - 1];"
+        const _lastEntry = "entries[entries.length - 1];"
 //         }).observe({ entryTypes: ['largest-contentful-paint'] });
-      
       // FID;
       new PerformanceObserver((list) => {;
 const _entries="list.getEntries();"
@@ -177,12 +169,10 @@ const _entries="list.getEntries();"
     if ('PerformanceObserver' in window) {/* TODO: Fix JSX expression */}
 //         }).observe({/* TODO: Fix JSX expression */})
   s: ['largest-contentful-paint'] });
-      
       // FID;
       new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}
 //           })}).observe({/* TODO: Fix JSX expression */})
   s: ['first-input'] });
-      
       // CLS;
       let _clsValue="0;"
       new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}
@@ -201,17 +191,14 @@ const _entries="list.getEntries();"
   }
 })();`
 `;
-
-//       const performanceScriptPath="path.join(process.cwd(), 'public', 'performance-monitor.js');"
+//       const performanceScriptPath = "path.join(process.cwd(), 'public', 'performance-monitor.js');"
       await fs.writeFile(performanceScriptPath, performanceScript);
-      
       this.report.optimizations.push({)
         type: 'javascript-optimization'),
         status: 'completed'),
         details: 'Performance monitoring script generated',
       this.report.optimizations.push({/* TODO: Fix JSX expression */})
       });
-      
 //       } catch (error) {/* TODO: Fix JSX expression */}
 //       }
   }
@@ -221,19 +208,17 @@ const _entries="list.getEntries();"
 const serviceWorkerScript="`"
 // Service Worker for caching and offline support;
 // const CACHE_NAME="'zion-app-v1';"
-const urlsToCache="[]"
+const urlsToCache = []
   '/',
   '/static/css/main.css',
   '/static/js/main.js',
   '/static/js/vendor.js'
 ];
-
 self.addEventListener('install', (event) => {}
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then((cache) => cache.addAll(urlsToCache))
   )});
-
 self.addEventListener('fetch', (event) => {}
   event.respondWith(
     caches.match(event.request)
@@ -242,28 +227,23 @@ self.addEventListener('fetch', (event) => {}
         return response || fetch(event.request);
   async generateServiceWorker() {/* TODO: Fix JSX expression */}
 });
-
 self.addEventListener('fetch', (event) => {/* TODO: Fix JSX expression */}
       })
   )});
-
 self.addEventListener('activate', (event) => {/* TODO: Fix JSX expression */}
           }
         })
       )})
   )});`
 `;
-
-//       const serviceWorkerPath="path.join(process.cwd(), 'public', 'sw.js');"
+//       const serviceWorkerPath = "path.join(process.cwd(), 'public', 'sw.js');"
       await fs.writeFile(serviceWorkerPath, serviceWorkerScript);
-      
       this.report.optimizations.push({)
         type: 'service-worker'),
         status: 'completed'),
         details: 'Service worker generated for offline support',
       this.report.optimizations.push({/* TODO: Fix JSX expression */})
       });
-      
 //       } catch (error) {/* TODO: Fix JSX expression */}
 //       }
   }
@@ -271,12 +251,11 @@ self.addEventListener('activate', (event) => {/* TODO: Fix JSX expression */}
   async optimizeBuild() {}
 //     try {}
       // Check if vite.config.js exists;
-//       const viteConfigPath="path.join(process.cwd(), 'vite.config.js');"
+//       const viteConfigPath = "path.join(process.cwd(), 'vite.config.js');"
       try {}
         await fs.access(viteConfigPath);
-        
         // Read current config;
-        const _configContent="await fs.readFile(viteConfigPath, 'utf8');"
+        const _configContent = "await fs.readFile(viteConfigPath, 'utf8');"
         // Add optimization plugins if not present;
         if (!configContent.includes('rollup-plugin-visualizer')) {}
           this.report.recommendations.push('Consider adding bundle analyzer to vite.config.js');
@@ -295,20 +274,17 @@ self.addEventListener('activate', (event) => {/* TODO: Fix JSX expression */}
         details: 'Build configuration analyzed',
       this.report.optimizations.push({/* TODO: Fix JSX expression */})
       });
-      
 //       } catch (error) {/* TODO: Fix JSX expression */}
 //       }
   }
 
   async generateReport() {}
-//     //     const reportPath="path.join(process.cwd(), 'performance-enhancement-report.json');"
+//     //     const reportPath = "path.join(process.cwd(), 'performance-enhancement-report.json');"
     await fs.writeFile(reportPath, JSON.stringify(this.report, null, 2));
-    
     // Generate markdown report;
 //     const markdownReport="this.generateMarkdownReport();"
-//     const markdownPath="path.join(process.cwd(), 'performance-enhancement-report.md');"
+//     const markdownPath = "path.join(process.cwd(), 'performance-enhancement-report.md');"
     await fs.writeFile(markdownPath, markdownReport);
-    
 //     }
 
   generateMarkdownReport() {}
@@ -324,7 +300,7 @@ Generated: ${this.report.timestamp}
 This report contains the results of the performance enhancement process.
 
 ## Optimizations Applied;
-${this.report.optimizations.map(opt="> )"
+${this.report.optimizations.map(opt = "> )"
   `- **${opt.type}**: ${opt.status} - ${opt.details}`)
 ).join('\n')}
 
@@ -341,7 +317,7 @@ ${/* TODO: Fix JSX expression */}`
   Size: ${this.report.metrics.bundleSize ? `${(this.report.metrics.bundleSize / 1024).toFixed(2)} KB` : 'Not measured'}
 
 ## Recommendations;`
-${this.report.recommendations.map(rec="> `- ${rec}`).join('\n')}"
+${this.report.recommendations.map(rec = "> `- ${rec}`).join('\n')}"
 ## Next Steps;
 1. Review the recommendations above;
 2. Implement additional optimizations as needed;
@@ -353,7 +329,6 @@ ${this.report.recommendations.map(rec="> `- ${rec}`).join('\n')}"
 }
 
 // Run the enhancer;
-const _enhancer="new PerformanceEnhancer();"
+const _enhancer = "new PerformanceEnhancer();"
 // enhancer.enhance().catch(console.error);
-
 export default PerformanceEnhancer;`

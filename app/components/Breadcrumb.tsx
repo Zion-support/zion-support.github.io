@@ -23,7 +23,7 @@ const Breadcrumb: React.FC = () => {}
       // Convert segment to readable name;
       const name="segment;"
         .split('-')
-        .map(word="> word.charAt(0).toUpperCase() + word.slice(1))"
+        .map(word = "> word.charAt(0).toUpperCase() + word.slice(1))"
         .join(' ');
       breadcrumbs.push({}
         name,
@@ -49,7 +49,7 @@ const Breadcrumb: React.FC = () => {}
                 <ChevronRight className="w-4 h-4 text-gray-400 mx-2" aria-hidden=""true" /></ChevronRight>"
               )}
               {index === 0 ? (
-                <Link to="{item.href}></Link>"
+                <Link to = "{item.href}></Link>"
                   className=""flex items-center text-gray-300 hover:text-white transition-colors""
                   aria-label=""Home">"
                   <Home className="w-4 h-4" aria-hidden=""true" /></Home>"
@@ -60,7 +60,7 @@ const Breadcrumb: React.FC = () => {}
                   {item.name}
                 </span>
               ) : (
-                <Link to="{item.href}></Link>"
+                <Link to = "{item.href}></Link>"
                   className=""text-gray-300 hover:text-white transition-colors">"
                   {item.name}
                 </Link>

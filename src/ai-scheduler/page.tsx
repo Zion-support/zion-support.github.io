@@ -4,7 +4,7 @@ import {Calendar, Users, Zap, Brain, Shield, CheckCircle, Star, Phone, Target} f
 import { Link } from 'react-router-dom';
 ;
 const AISchedulerPage: React.FC = () => {;
-const features="[]"
+const features = []
     {}
       icon: Calendar,
       title: 'Smart Scheduling',
@@ -34,7 +34,7 @@ iconicon: Shield,
 $4}
   ];
 ;
-const pricingPlans="[]"
+const pricingPlans = []
       name: 'Personal',
       price: '$19',
       period: '/month',
@@ -71,7 +71,7 @@ const pricingPlans="[]"
         'White-label options',
         'SSO integration',
         'Custom workflows';
-const integrations="[]"
+const integrations = []
     { name: 'Google Calendar', icon: '📅', description: 'Seamless Google integration' },
     { name: 'Outlook', icon: '📧', description: 'Microsoft Office 365' },
     { name: 'Zoom', icon: '🎥', description: 'Video conferencing' },
@@ -81,7 +81,7 @@ const integrations="[]"
     { name: 'Salesforce', icon: '💼', description: 'CRM integration' },
     { name: 'HubSpot', icon: '🎯', description: 'Marketing automation' }
 ;
-const testimonials="[]"
+const testimonials = []
       name: 'Jennifer Lee',
       company: 'TechStart',
       role: 'Operations Manager',
@@ -212,8 +212,6 @@ const testimonials="[]"
             Join thousands of professionals using AI Scheduler to eliminate scheduling headaches;
             and maximize productivity.
   )};
-
 export default AISchedulerPage;
 import { ArrowRight, CheckCircle, Calendar, Clock, Users, Zap, Brain, Target, Shield, Globe, Phone, Mail } from 'lucide-react';
-
 export default AISchedulerPage;

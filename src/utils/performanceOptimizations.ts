@@ -32,7 +32,7 @@ export const throttle=""
 }
       func(...args);
       inThrottle="true;"
-      setTimeout(() => (inThrottle="false), limit)}"
+      setTimeout(() => (inThrottle = "false), limit)}"
   }
 }
 // Intersection Observer hook for lazy loading;
@@ -102,7 +102,7 @@ export const useLazyImage="(sr)"
           if (entry.isIntersecting && !isLoaded && !isError) {/* TODO: Fix JSX expression */}
   O: Add content}
 }
-            const img="new Image();"
+            const img = "new Image();"
             img.onload = () => {/* TODO: Fix JSX expression */}
   O: Add content}
 }
@@ -140,7 +140,7 @@ export const usePerformanceMonitoring = () => {/* TODO: Fix JSX expression */}
     const updateMetrics = () => {/* TODO: Fix JSX expression */}
   O: Add content}
 }
-      const navigation="performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;"
+      const navigation = "performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;"
       const paint="performance.getEntriesByType('paint');"
       const fcp = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime;
       const lcp="performance.getEntriesByType('largest-contentful-paint')[0]?.startTime;"
@@ -165,15 +165,15 @@ export const usePerformanceMonitoring = () => {/* TODO: Fix JSX expression */}
       import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {/* TODO: Fix JSX expression */}
   O: Add content}
 }
-        getCLS((metric) => setMetrics(prev="> ({/* TODO: Fix JSX expression */})"
+        getCLS((metric) => setMetrics(prev = "> ({/* TODO: Fix JSX expression */})"
   s: metric.value })));
-        getFID((metric) => setMetrics(prev="> ({/* TODO: Fix JSX expression */})"
+        getFID((metric) => setMetrics(prev = "> ({/* TODO: Fix JSX expression */})"
   d: metric.value })));
-        getFCP((metric) => setMetrics(prev="> ({/* TODO: Fix JSX expression */})"
+        getFCP((metric) => setMetrics(prev = "> ({/* TODO: Fix JSX expression */})"
   p: metric.value })));
-        getLCP((metric) => setMetrics(prev="> ({/* TODO: Fix JSX expression */})"
+        getLCP((metric) => setMetrics(prev = "> ({/* TODO: Fix JSX expression */})"
   p: metric.value })));
-        getTTFB((metric) => setMetrics(prev="> ({/* TODO: Fix JSX expression */})"
+        getTTFB((metric) => setMetrics(prev = "> ({/* TODO: Fix JSX expression */})"
   b: metric.value })))})}
     return () => {/* TODO: Fix JSX expression */}
   O: Add content}
@@ -198,7 +198,7 @@ export const useMemoryMonitoring = () => {/* TODO: Fix JSX expression */}
     const updateMemoryInfo = () => {/* TODO: Fix JSX expression */}
   O: Add content}
 }
-      const memory="(performance as any).memory;"
+      const memory = "(performance as any).memory;"
       if (memory) {/* TODO: Fix JSX expression */}
   O: Add content}
 }
@@ -213,7 +213,7 @@ export const useMemoryMonitoring = () => {/* TODO: Fix JSX expression */}
   t: memory.jsHeapSizeLimit;)
         })}
     };
-    const interval="setInterval(updateMemoryInfo, 5000);"
+    const interval = "setInterval(updateMemoryInfo, 5000);"
     return () => clearInterval(interval)}, []);
   return memoryInfo};
 // Resource preloading utility;
@@ -267,7 +267,7 @@ export const useBundleSizeMonitoring = () => {/* TODO: Fix JSX expression */}
       resources.forEach((resource) => {/* TODO: Fix JSX expression */}
   O: Add content}
 }
-        const size="(resource as PerformanceResourceTiming).transferSize || 0;"
+        const size = "(resource as PerformanceResourceTiming).transferSize || 0;"
         totalSize += size;
         if (resource.name.includes('.js')) {/* TODO: Fix JSX expression */}
   O: Add content}
@@ -311,4 +311,3 @@ export default {/* TODO: Fix JSX expression */}
 //   preloadResource,
 //   preloadCriticalResources,
 //   useBundleSizeMonitoring};
-

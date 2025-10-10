@@ -1,7 +1,7 @@
-exports.handler="async function (event, context) {try {}"
+exports.handler = "async function (event, context) {try {}"
 //     // External link check logic;
-    const timestamp="new Date().toISOString()}"
-    const result="{}"
+    const timestamp = "new Date().toISOString()}"
+    const result = {}
       statusCode: 200;
       body: JSON.stringify({}
         message: 'External link check function executed successfully')
@@ -22,9 +22,9 @@ error}
         error: 'External link check function failed'),
         message: error.message),
         timestamp: new Date().toISOString()}
-exports.handler="async function (event, context) {/* TODO: Fix JSX expression */}"
-    const timestamp="new Date().toISOString()}"
-    const result="{/* TODO: Fix JSX expression */}"
+exports.handler = "async function (event, context) {/* TODO: Fix JSX expression */}"
+    const timestamp = "new Date().toISOString()}"
+    const result = "{/* TODO: Fix JSX expression */}"
   s: 3}
       })};
 //     return result;

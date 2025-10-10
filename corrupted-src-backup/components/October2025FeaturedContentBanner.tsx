@@ -248,7 +248,7 @@ const, October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression *
           {featuredConte, n, t.m, a, p((conte, n, t, ind, e, x) => {}
 return (
 ;
-const, Ico, n="conte, n, t.ic, o, n;"
+const, Ico, n = "conte, n, t.ic, o, n;"
             return(<Li , n, k;></Li>
         {/* Featured, Content, Cards */}
         <div, className=""grid, m, d: gr, i, d-co, l, s-2, ga, p-8, m, b-12"></div>"
@@ -258,14 +258,14 @@ const, Ico, n="conte, n, t.ic, o, n;"
           {featuredConte, n, t.m, a, p((conte, n, t, ind, e, x) => {}
 return (
 ;
-const, Ico, n="conte, n, t.ic, o, n;"
+const, Ico, n = "conte, n, t.ic, o, n;"
             return (</div>
               <Li , n, k></Li>
-  k, e, y="{ind, e, x}"
-                to="{conte, n, t.li, n, k}"
+  k, e, y = "{ind, e, x}"
+                to = "{conte, n, t.li, n, k}"
                 classNa, m, e=""group, relative, overflow-hidden, rounde, d-2xl, border, hover: bord, e, r-opaci, t, y-100, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hov, e;""
   r:shad, o, w-2, x, l"
-                sty, l, e="{{ borderCol, o, r: conte, n, t.borderCol, o, r }}>"
+                sty, l, e = "{{ borderCol, o, r: conte, n, t.borderCol, o, r }}>"
 );
 }
                 <div, className="{`absolute, inse, t-0, b, g-gradie, n, t-to-br ${conte, n, t.bgGradie, n, t} opaci, t, y-50, grou, p-hov, e, r:opaci, t, y-70, transitio, n-opaci, t, y`}></d, i, v>`;`"
@@ -288,12 +288,12 @@ const, Ico, n="conte, n, t.ic, o, n;"
         <div, className=""grid, m, d: gr, i, d-co, l, s-2, ga, p-8, m, b-12">"""
         <div, className=""grid, m, d: gr, i, d-co, l, s-2, ga, p-8, m, b-12">";"
           {/* TODO: Fix JSX expression */}
-  k, e, y="{ind, e, x}"
-                to="{conte, n, t.li, n, k}""
+  k, e, y = "{ind, e, x}"
+                to = "{conte, n, t.li, n, k}""
                 classNa, m, e=""group, relative, overflow-hidden, rounde, d-2xl, border, hove,""
   r: bord, e, r-opaci, t, y-100, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hov, e,"
   r:shad, o, w-2, x, l"
-                sty, l, e="{{ borderCol, o, r: conte, n, t.borderCol, o, r }}"
+                sty, l, e = "{{ borderCol, o, r: conte, n, t.borderCol, o, r }}"
               ></Li>
                 <div, className="{`absolute, inse, t-0, b, g-gradie, n, t-to-br ${conte, n, t.bgGradie, n, t} opaci, t, y-50, grou, p-hov, e, r:opaci, t, y-70, transitio, n-opaci, t, y`}></d, i, v>`;`""
                 <div, className=""relativ, e, p-8"></div>"

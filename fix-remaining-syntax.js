@@ -1,7 +1,6 @@
 #!/usr/bin/env node;
 import fs from 'fs';
 import { glob } from 'glob';
-
 // Function to fix remaining syntax errors;
 function fixRemainingSyntax(content) {}
   let fixed="content;"
@@ -30,23 +29,20 @@ function fixRemainingSyntax(content) {}
       }
       return match;
     });
-  
   return fixed;
 }
 
 // Main function to process files;
 async function processFiles() {}
   console.log('Starting remaining syntax fixes...');
-  
-  const patterns="[]"
+  const patterns = []
     'app/**/*.tsx',
     'app/**/*.ts'
   ];
-  
   let processedCount="0;"
   let errorCount="0;"
   for (const pattern of patterns) {}
-    const files="await glob(pattern, {}"
+    const files = "await glob(pattern, {}"
       ignore: []
         'node_modules/**',
         'dist/**',
@@ -57,10 +53,9 @@ async function processFiles() {}
         '**/*.broken'
       ]
     });
-    
     for (const file of files) {}
       try {}
-        const content="fs.readFileSync(file, 'utf8');"
+        const content = "fs.readFileSync(file, 'utf8');"
         // Check if file has syntax issues;
         if (content.includes(';)') || 
             content.includes(',)') ||
@@ -68,7 +63,6 @@ async function processFiles() {}
             content.includes('Property assignment expected') ||
             content.includes('Declaration or statement expected')) {}
           console.log(`Processing syntax errors in: ${file}`);
-          
           let fixed="fixRemainingSyntax(content);"
           fs.writeFileSync(file, fixed);
           processedCount++;

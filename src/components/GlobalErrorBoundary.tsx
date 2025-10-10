@@ -1,5 +1,4 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-
 interface Props {}
   children: ReactNode;
   fallback?: ReactNode;
@@ -13,13 +12,12 @@ interface State {}
 class GlobalErrorBoundary extends Component<Props, State> {;
 constructor(props: Props) {}
     super(props);
-    this.state="{ hasError: false }}"
+    this.state = "{ hasError: false }}"
   static getDerivedStateFromError(error: Error): State {}
     return { hasError: true, error }}
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {}
     this.setState({ error, errorInfo });
-    
     // Log error to console in development;
     if (process.env.NODE_ENV === 'development') {}
       // console.error removed for production;

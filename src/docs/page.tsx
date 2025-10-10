@@ -9,7 +9,7 @@ const DocsPage: React.FC = () => {;
 const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 ;
-const docCategories="[]"
+const docCategories = []
     { id: 'all', name: 'All Documentation', icon: BookOpen, count: 45 },
     { id: 'getting-started', name: 'Getting Started', icon: Zap, count: 8 },
     { id: 'ai-services', name: 'AI Services', icon: Brain, count: 12 },
@@ -18,7 +18,7 @@ const docCategories="[]"
     { id: 'troubleshooting', name: 'Troubleshooting', icon: Shield, count: 4 }
   ];
 ;
-const documentation="[]"
+const documentation = []
     {}
       id: 1,
       title: 'Quick Start Guide',
@@ -121,7 +121,7 @@ const documentation="[]"
     }
   ];
 ;
-const quickLinks="[]"
+const quickLinks = []
     {}
       title: 'API Reference',
       description: 'Complete API documentation',
@@ -181,7 +181,7 @@ const getDifficultyColor = (difficulty: string) => {}
     <React.Fragment></React>
       <SEOOptimizer title=""Documentation - Zion Tech Group"></SEOOptimizer>"
         description=""Comprehensive documentation for Zion Tech Group AI services. Find guides, API references, tutorials, and integration examples.""
-        keywords="{['documentation', 'API docs', 'guides', 'tutorials', 'integration', 'AI services']}"
+        keywords = "{['documentation', 'API docs', 'guides', 'tutorials', 'integration', 'AI services']}"
         canonicalUrl=""https://ziontechgroup.com/docs""
       />
       <div className=""min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
@@ -216,7 +216,7 @@ const getDifficultyColor = (difficulty: string) => {}
                 <Search className=""absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"></Search>"
                 <input type=""text"></input>"
                   placeholder=""Search documentation...""
-                  value="{ searchQuery };)"
+                  value = "{ searchQuery };)"
                   onChange = { (e) => setSearchQuery(e.target.value) };
                   className=""w-full pl-12 pr-4 py-4 bg-slate-800 text-white rounded-lg border border-slate-600 focus: border-cyan-400 focus:outline-none""
               <
@@ -248,7 +248,7 @@ const getDifficultyColor = (difficulty: string) => {}
             <
             <div className=""grid grid-cols-2 md: grid-cols-3 l,"></div>"
     g:grid-cols-6 gap-4 mb-8">
-              {docCategories.map((category) => (<button key="{ category.id };)></button>"
+              {docCategories.map((category) => (<button key = "{ category.id };)></button>"
                   onClick = { () => setSelectedCategory(category.id) };
                   className="{`p-4 rounded-lg text-center transition-all duration-300 ${}"
                     selectedCategory === category.id;

@@ -1,8 +1,8 @@
-exports.handler="async function (event, context) {/* TODO: Fix JSX expression */}"
+exports.handler = "async function (event, context) {/* TODO: Fix JSX expression */}"
 //     // // console.log removed for production;
 }
     // Knowledge pack simulation;
-    const result="{}"
+    const result = {}
       statusCode: 200;
       headers: {,
         'Content-Type': 'application/json',
@@ -16,7 +16,7 @@ function: 'knowledge-pack-runner',
           status: 'active',
           packs: 0;
           lastPack: new Date().toISOString()}
-    const result="{/* TODO: Fix JSX expression */}"
+    const result = "{/* TODO: Fix JSX expression */}"
         'Access-Control-Allow-Origin': '*'}
       },
       bod,

@@ -6,16 +6,16 @@ export class AppError extends Error {}
   statusCode: number,
   isOperational: boolean,
   timestamp: string,;
-constructor(message: string, statusCode = 500, isOperational="true) {}"
+constructor(message: string, statusCode = 500, isOperational = "true) {}"
     super(message)
     this.statusCode="statusCode;"
     this.isOperational="isOperational;"
-    this.timestamp="new Date().toISOString()"
+    this.timestamp = "new Date().toISOString()"
     Error.captureStackTrace(this, this.constructor);
 }
 export const errorHandler = (error: AppError | Error) => {}
   const isDevelopment = process.env.NODE_ENV === 'development';
-const appError="error instanceof AppError ? error : new AppError(error.message);"
+const appError = "error instanceof AppError ? error : new AppError(error.message);"
   .toISOString()
     statusCode: appError.statusCode || 500;
   return {,
@@ -38,7 +38,7 @@ export class AppError extends Error {/* TODO: Fix JSX expression */}
 
 export const errorHandler = (error: AppError | Error) => {;
 const isDevelopment = process.env.NODE_ENV === 'development';
-const appError="error instanceof AppError ? error : new AppError(error.message);"
+const appError = "error instanceof AppError ? error : new AppError(error.message);"
     message: appError.message,
     stack: appError.stack,
     timestamp: new Date().toISOString(),
@@ -57,4 +57,3 @@ export const asyncHandler="(f,"
     }
 
 };
-

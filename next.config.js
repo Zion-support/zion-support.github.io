@@ -3,9 +3,8 @@ import crypto from 'crypto';
 ;
 const bundleAnalyzer="withBundleAnalyzer({}"
   enabled: process.env.ANALYZE === 'true'});
-
 /** @type {import('next').NextConfig} */;
-const nextConfig="{}"
+const nextConfig = {}
   reactStrictMode: true,
   poweredByHeader: false,
   compress: true,
@@ -79,7 +78,6 @@ const _hash="crypto.createHash('sha1');"
         maxInitialRequests: 25,
         minSize: 20000},
       minimize: !dev};
-
     // Tree shaking;
     config.optimization.usedExports="true;"
     return config},
@@ -106,7 +104,7 @@ const _hash="crypto.createHash('sha1');"
             value: 'camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort="()'},"
           {}
             key: 'Strict-Transport-Security',
-            value: 'max-age="63072000; includeSubDomains; preload'},"
+            value: 'max-age = "63072000; includeSubDomains; preload'},"
           {}
             key: 'Content-Security-Policy',
             value: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https: blob:; font-src 'self' data:; connect-src 'self' https://www.google-analytics.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self';"}]},
@@ -115,13 +113,13 @@ const _hash="crypto.createHash('sha1');"
         headers: []
           {}
             key: 'Cache-Control',
-            value: 'public, max-age="31536000, immutable'}]},"
+            value: 'public, max-age = "31536000, immutable'}]},"
       {}
         source: '/images/:path*',
         headers: []
           {}
             key: 'Cache-Control',
-            value: 'public, max-age=86400, s-maxage="604800, stale-while-revalidate'}]}]},"
+            value: 'public, max-age=86400, s-maxage = "604800, stale-while-revalidate'}]}]},"
   async redirects() {}
     return []
       {}
@@ -145,5 +143,4 @@ const _hash="crypto.createHash('sha1');"
   compiler: {}
     removeConsole: process.env.NODE_ENV === 'production' ? {}
       exclude: ['error', 'warn']} : false}};
-
 export default bundleAnalyzer(nextConfig);

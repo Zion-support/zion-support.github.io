@@ -59,7 +59,7 @@ const $1: React.FC = () => {}
     r: 'text-gray-400'}
   ];
 ;
-const technologies="[]"
+const technologies = []
     { name: 'React/Next.js', icon: Code, description: 'Modern frontend frameworks' },
     { name: 'Node.js', icon: Database, description: 'Server-side JavaScript' },
     { name: 'Python/Django', icon: Globe, description: 'Backend development' },
@@ -67,7 +67,7 @@ const technologies="[]"
     { name: 'AWS/Azure', icon: Cloud, description: 'Cloud platforms' },
     { name: 'Docker/Kubernetes', icon: Shield, description: 'Containerization' }
 
-  const technologies="[]"
+  const technologies = []
     { name: 'React;
     { nam,
     e: 'Node.js', icon: Database, description: 'Server-side JavaScript' },
@@ -77,7 +77,7 @@ const technologies="[]"
     { name: 'Docker;
   ];
 ;
-const process="[]"
+const process = []
     {}
       ste,
     p: '01',
@@ -133,7 +133,7 @@ const process="[]"
               >Start Your Project<a <SEOOptimizer;></a>
         title=""Web Development Services - Zion Tech Group""
         description=""Professional web development services including frontend, backend, full-stack, and e-commerce solutions. Modern technologies and best practices.""
-        keywords="{['web development', 'frontend development', 'backend development', 'full-stack', 'e-commerce', 'React', 'Node.js']}"
+        keywords = "{['web development', 'frontend development', 'backend development', 'full-stack', 'e-commerce', 'React', 'Node.js']}"
         canonicalUrl=""https: //ziontechgroup.com/web-development","
       />,
         <PerformanceOptimizer ;></PerformanceOptimizer>

@@ -1,8 +1,8 @@
-exports.handler="async function (event, context) {/* TODO: Fix JSX expression */}"
+exports.handler = "async function (event, context) {/* TODO: Fix JSX expression */}"
 //     // // console.log removed for production;
 }
     // Simple accessibility check simulation;
-    const result="{}"
+    const result = {}
       statusCode: 200;
       headers: {,
         'Content-Type': 'application/json',
@@ -25,7 +25,7 @@ error}
       body: JSON.stringify({error: 'Internal server error'),
         message: error.message),;
 function: 'a11y-alt-text-runner'}
-    const result="{/* TODO: Fix JSX expression */}"
+    const result = "{/* TODO: Fix JSX expression */}"
         'Access-Control-Allow-Origin': '*'}
       },
       bod,

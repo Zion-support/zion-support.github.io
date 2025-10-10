@@ -1,9 +1,7 @@
 import React from 'react';
-
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
 import { Shield, Zap, Settings, BarChart, CheckCircle, Star,  Shield,  Zap,  BarChart } from 'lucide-react';
 const ITDisasterRecoveryPage: React.FC = () => {;
 const features="[];"
@@ -37,7 +35,6 @@ const features="[];"
   s: ['Health monitoring', 'Alert systems', 'Status reporting']
     }
   ];
-
   return (
     <div className=""min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
       <Navigation /></Navigation>
@@ -51,7 +48,6 @@ const features="[];"
           </p>"
           <p className=""text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed"></p>"
             Protect your business with comprehensive disaster recovery solutions. Ensure business continuity;
-
             and minimize downtime with our robust backup and recovery services.
           <div className=""flex flex-col sm:flex-row gap-4 justify-center items-center"></div>"
             <a href="/contact" className=""cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"></a>"
@@ -93,6 +89,4 @@ const features="[];"
       <Footer /></Footer>
     </div>
   )};
-
 export default ItDisasterRecoveryPage;
-

@@ -22,7 +22,7 @@ import {}
   Target,
   Calendar} from 'lucide-react';
 ;
-const ProjectManagementProPage: React.FC = () => {const features="[]"
+const ProjectManagementProPage: React.FC = () => {const features = []
     {}
       ico,
     n: CheckSquare,
@@ -46,7 +46,7 @@ const ProjectManagementProPage: React.FC = () => {const features="[]"
     }
   ];
 ;
-const benefits="[]"
+const benefits = []
     'Improve project delivery times',
     'Enhance team collaboration',
     'Track progress and performance',

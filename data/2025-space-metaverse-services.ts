@@ -1,5 +1,4 @@
 import React from 'react';
-
       'Unity, Unreal Engine, React, Node && Node.js, PostgreSQL, Redis, Blockchain platforms'],
     realImplementation: true;
 export interface SpaceMetaverseService;

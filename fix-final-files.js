@@ -6,7 +6,7 @@ import { fileURLToPath } from 'url';
 // const __filename="fileURLToPath(import.meta.url);"
 // // __dirname removed;
 //Files that need to be fixed;
-const filesToFix="[]"
+const filesToFix = []
   'src/components/SiteHeader.tsx',
   'src/components/SiteSidebar.tsx',
   'src/content/blog-posts.ts',
@@ -61,7 +61,7 @@ export default {}
 export interface ${componentName}Config {/* TODO: Fix JSX expression */}
 }
 export const default${componentName}Confi,
-  g: ${componentName}Config="{/* TODO: Fix JSX expression */}"
+  g: ${componentName}Config = "{/* TODO: Fix JSX expression */}"
 };
 export default {/* TODO: Fix JSX expression */}
   default${componentName}Config};`

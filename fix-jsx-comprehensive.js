@@ -4,13 +4,13 @@ import path from 'path';
 ;
 function fixJsxFile(filePath) {}
   try {;
-let content="fs.readFileSync(filePath, 'utf8');"
+let content = "fs.readFileSync(filePath, 'utf8');"
     let modified="false;"
     // Fix self-closing div tags that have content after them;
-const selfClosingDivPattern="/<div([^>]*?)\s*\/>\s*\n\s*<[^/]/g;"
+const selfClosingDivPattern = "/<div([^>]*?)\s*\/>\s*\n\s*<[^/]/g;"
     const selfClosingDivReplacement="'<div$1>';"
     ;
-const newContent="content.replace(selfClosingDivPattern, selfClosingDivReplacement);"
+const newContent = "content.replace(selfClosingDivPattern, selfClosingDivReplacement);"
     if (newContent !== content) {}
       content="newContent;"
       modified="true;"
@@ -18,7 +18,7 @@ const newContent="content.replace(selfClosingDivPattern, selfClosingDivReplaceme
 }
     
     // Fix mismatched section/div tags;
-const sectionDivPattern="/<section([^>]*)>[\s\S]*?<\/div>/g;"
+const sectionDivPattern = "/<section([^>]*)>[\s\S]*?<\/div>/g;"
     const sectionDivReplacement = (match, sectionAttrs) => {}
 return (
 
@@ -26,7 +26,7 @@ return (
 );
 }')};
     ;
-const newContent2="content.replace(sectionDivPattern, sectionDivReplacement);"
+const newContent2 = "content.replace(sectionDivPattern, sectionDivReplacement);"
     if (newContent2 !== content) {}
       content="newContent2;"
       modified="true;"
@@ -45,7 +45,7 @@ function findTsxFiles(dir) {;
 const files="[];"
   const items="fs.readdirSync(dir);"
   for (const item of items) {;
-const fullPath="path.join(dir, item);"
+const fullPath = "path.join(dir, item);"
     const stat="fs.statSync(fullPath);"
     if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {}
       files.push(...findTsxFiles(fullPath))} else if (item.endsWith('.tsx') || item.endsWith('.ts')) {}
@@ -57,12 +57,11 @@ const fullPath="path.join(dir, item);"
 // Main execution;
 // console.log removed for production;
 ;
-const tsxFiles="findTsxFiles('/workspace');"
+const tsxFiles = "findTsxFiles('/workspace');"
 let fixedCount="0;"
-tsxFiles.forEach(file="> {}"
+tsxFiles.forEach(file = "> {}"
   if (fixJsxFile(file)) {}
     fixedCount++}
 });
-
 // console.log removed for production;
 // console.log removed for production;

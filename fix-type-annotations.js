@@ -14,43 +14,37 @@ function fixTypeAnnotations(content) {/* TODO: Fix JSX expression */}
     (match, body) => {/* TODO: Fix JSX expression */}
       return `{ ${body.trim()} }`}
   );
-
   // Fix specific patterns we've seen;
-  content="content.replace(/\{\/\*\/\s*usedJSHeapSize:\s*number\s*\/\*\/\}/g)"
+  content = "content.replace(/\{\/\*\/\s*usedJSHeapSize:\s*number\s*\/\*\/\}/g)"
     '{ usedJSHeapSize: number }'
   );
-
-  content="content.replace(/\{\/\*\/\s*value:\s*number\s*\/\*\/\}/g)"
+  content = "content.replace(/\{\/\*\/\s*value:\s*number\s*\/\*\/\}/g)"
     '{ value: number }'
   );
-
   // Fix variable name issues;
   content="content.replace("
-  content="content.replace(/\{/* TODO: Fix JSX expression */}"
+  content = "content.replace(/\{/* TODO: Fix JSX expression */}"
   e:\s*number\s*\/\*\/\}/g,
     '{/* TODO: Fix JSX expression */}
   e: number }')
   );
-
-  content="content.replace(/\{/* TODO: Fix JSX expression */}"
+  content = "content.replace(/\{/* TODO: Fix JSX expression */}"
   e:\s*number\s*\/\*\/\}/g,
     '{/* TODO: Fix JSX expression */}
   e: number }')
   );
-
   // Fix variable name issues;
   content="content.replace()"
-    /const _memory = \([^)]+\)\.memory;\s*memoryUsage="memory\?/g,"
-    'const _memory="(performance as {/* TODO: Fix JSX expression */})"
+    /const _memory = \([^)]+\)\.memory;\s*memoryUsage = "memory\?/g,"
+    'const _memory = "(performance as {/* TODO: Fix JSX expression */})"
   e: number } }).memory;\n          memoryUsage="_memory?.'"
   );
-
   return content}
 
 // Function to process a single file;
 function processFile(filePath) {}
   try {;
-let content="fs.readFileSync(filePath, 'utf8');"
+let content = "fs.readFileSync(filePath, 'utf8');"
     let modified="false;"
     // Apply fixes;
     const originalContent="content;"
@@ -73,7 +67,7 @@ const files="[];"
 function walkDir(currentPath) {;
 const items="fs.readdirSync(currentPath);"
     for (const item of items) {;
-const fullPath="path.join(currentPath, item);"
+const fullPath = "path.join(currentPath, item);"
       const stat="fs.statSync(fullPath);"
       if (stat.isDirectory()) {}
         // Skip node_modules and other common directories;
@@ -97,9 +91,9 @@ function findSourceFiles(dir) {/* TODO: Fix JSX expression */}
 // Main execution;
 // console.log removed for production;
 ;
-const srcDir="path.join(__dirname, 'src');"
-const appDir="path.join(__dirname, 'app');"
-const files="[...findSourceFiles(srcDir), ...findSourceFiles(appDir)];"
+const srcDir = "path.join(__dirname, 'src');"
+const appDir = "path.join(__dirname, 'app');"
+const files = "[...findSourceFiles(srcDir), ...findSourceFiles(appDir)];"
 `
 // console.log removed for production;
 ;

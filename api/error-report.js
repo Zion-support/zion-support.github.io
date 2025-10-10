@@ -5,7 +5,6 @@ export default function handler(req, res) {}
 
   try {;
 const { error, stack, componentStack, timestamp, userAgent, url } = req.body;
-
     // Log error details (in production you would send this to your monitoring service)
     // In a real application, you would:
     // 1. Send to Sentry, LogRocket, Bugsnag, etc.
@@ -16,7 +15,6 @@ const { error, stack, componentStack, timestamp, userAgent, url } = req.body;
       error: req.body.error,
       timestamp: new Date().toISOString()
     });
-
     // For now, just acknowledge receipt;
     res.statusCode="200;"
     res.setHeader('Content-Type', 'application/json');

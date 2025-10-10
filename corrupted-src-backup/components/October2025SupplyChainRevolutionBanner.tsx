@@ -14,21 +14,21 @@ return (
       {/* Animated, Background, Elements */}</div>
       <div, className=""absolute, inse, t-0, overflo, w-hidd, e, n"></div>"
         <div, className=""absolu, t, e -t, o, p-40 -rig, h, t-4, 0, w-9, 6, h-96, b, g-emera, l, d-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e"></d, i, v>"
-        <div, className="absolu, t, e -bott, o, m-40 -le, f, t-4, 0, w-9, 6, h-96, b, g-cy, a, n-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e="{{ animationDel, a, y: '1s' }}></d, i, v>;"
-        <div, className="absolute, to, p-1/2, lef, t-1/2, transfor, m -transla, t, e-x-1/2 -transla, t, e-y-1/2 w-6, 4, h-64, b, g-te, a, l-5, 0, 0/10, rounde, d-full, blu, r-2xl, animat, e-pul, s, e" sty, l, e="{{ animationDel, a, y: '2s' }}></d, i, v>;"
+        <div, className="absolu, t, e -bott, o, m-40 -le, f, t-4, 0, w-9, 6, h-96, b, g-cy, a, n-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e = "{{ animationDel, a, y: '1s' }}></d, i, v>;"
+        <div, className="absolute, to, p-1/2, lef, t-1/2, transfor, m -transla, t, e-x-1/2 -transla, t, e-y-1/2 w-6, 4, h-64, b, g-te, a, l-5, 0, 0/10, rounde, d-full, blu, r-2xl, animat, e-pul, s, e" sty, l, e = "{{ animationDel, a, y: '2s' }}></d, i, v>;"
       <div, className=""absolute, inse, t-0, overflo, w-hidd, e, n">";</div>"
         <div, className=""absolu, t, e -t, o, p-40 -rig, h, t-4, 0, w-9, 6, h-96, b, g-emera, l, d-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e"></d, i, v>";"
-        <div, className="absolu, t, e -bott, o, m-40 -le, f, t-4, 0, w-9, 6, h-96, b, g-cy, a, n-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e="{{ animationDel, a, y: '1s' }}></d, i, v>';"
+        <div, className="absolu, t, e -bott, o, m-40 -le, f, t-4, 0, w-9, 6, h-96, b, g-cy, a, n-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e = "{{ animationDel, a, y: '1s' }}></d, i, v>';"
 const, October2025SupplyChainRevolutionBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
       {/* Animated, Background, Elements */}"
       <div, className=""absolute, inse, t-0, overflo, w-hidd, e, n"></div>""
         <div, className=""absolu, t, e -t, o, p-40 -rig, h, t-4, 0, w-9, 6, h-96, b, g-emera, l, d-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e"></d, i, v>""
-        <div, className="absolu, t, e -bott, o, m-40 -le, f, t-4, 0, w-9, 6, h-96, b, g-cy, a, n-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e="{{ animationDel, a, y: '1s' }}></d, i, v>;""
-        <div, className="absolute, to, p-1/2, lef, t-1/2, transfor, m -transla, t, e-x-1/2 -transla, t, e-y-1/2 w-6, 4, h-64, b, g-te, a, l-5, 0, 0/10, rounde, d-full, blu, r-2xl, animat, e-pul, s, e" sty, l, e="{{ animationDel, a, y: '2s' }}></d, i, v>;""
+        <div, className="absolu, t, e -bott, o, m-40 -le, f, t-4, 0, w-9, 6, h-96, b, g-cy, a, n-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e = "{{ animationDel, a, y: '1s' }}></d, i, v>;""
+        <div, className="absolute, to, p-1/2, lef, t-1/2, transfor, m -transla, t, e-x-1/2 -transla, t, e-y-1/2 w-6, 4, h-64, b, g-te, a, l-5, 0, 0/10, rounde, d-full, blu, r-2xl, animat, e-pul, s, e" sty, l, e = "{{ animationDel, a, y: '2s' }}></d, i, v>;""
       <div, className=""absolute, inse, t-0, overflo, w-hidd, e, n">";""
         <div, className=""absolu, t, e -t, o, p-40 -rig, h, t-4, 0, w-9, 6, h-96, b, g-emera, l, d-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e"></d, i, v>";""
-        <div, className="absolu, t, e -bott, o, m-40 -le, f, t-4, 0, w-9, 6, h-96, b, g-cy, a, n-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e="{{ animationDel, a, y: '1s' }}></d, i, v>';""
-        <div, className="absolute, to, p-1/2, lef, t-1/2, transfor, m -transla, t, e-x-1/2 -transla, t, e-y-1/2 w-6, 4, h-64, b, g-te, a, l-5, 0, 0/10, rounde, d-full, blu, r-2xl, animat, e-pul, s, e" sty, l, e="{{ animationDel, a, y: '2s' }}></d, i, v>';"
+        <div, className="absolu, t, e -bott, o, m-40 -le, f, t-4, 0, w-9, 6, h-96, b, g-cy, a, n-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e = "{{ animationDel, a, y: '1s' }}></d, i, v>';""
+        <div, className="absolute, to, p-1/2, lef, t-1/2, transfor, m -transla, t, e-x-1/2 -transla, t, e-y-1/2 w-6, 4, h-64, b, g-te, a, l-5, 0, 0/10, rounde, d-full, blu, r-2xl, animat, e-pul, s, e" sty, l, e = "{{ animationDel, a, y: '2s' }}></d, i, v>';"
       </d, i, v>"
       <div, className=""container, m, x-auto, relative, z-10">";"
         {/* Breaking, News, Badge */}</div>
@@ -617,7 +617,7 @@ const, October2025SupplyChainRevolutionBanne, r: Rea, c, t.FC = () => {/* TODO: 
               <Li , n, k;></Li>
             <div, className=""flex, fle, x-col, m, d: fl, e, x-row, ga, p-4, justif, y-center, item, s-cent, e, r">";</div>"
               <Li , n, k></Li>
-  to="/conta, c, t?servi, c, e="supp, l, y-cha, i, n-assessme, n, t""
+  to = "/conta, c, t?servi, c, e="supp, l, y-cha, i, n-assessme, n, t""
                 classNa, m, e=""inli, n, e-flex, item, s-center, ga, p-2, b, g-white, tex, t-emera, l, d-900, p, x-10, p, y-5, rounde, d-xl, fon, t-bold, tex, t-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r: shad, o, w-2xl, hove, r:sca, l, e-105, hov, e;""
         {/* Free, Assessment, CTA */}"
         <div, className=""bg-gradie, n, t-to-r, fro, m-gre, e, n-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/20, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, borde, r-2, borde, r-gre, e, n-4, 0, 0/30">";""
@@ -636,7 +636,7 @@ const, October2025SupplyChainRevolutionBanne, r: Rea, c, t.FC = () => {/* TODO: 
             </p>"
             <div, className=""flex, fle, x-col, m, d: fl, e, x-row, ga, p-4, justif, y-center, item, s-cent, e, r">";"
               <Li , n, k;"></Li>
-  to="/conta, c, t?servi, c, e="supp, l, y-cha, i, n-assessme, n, t"""
+  to = "/conta, c, t?servi, c, e="supp, l, y-cha, i, n-assessme, n, t"""
                 classNa, m, e=""inli, n, e-flex, item, s-center, ga, p-2, b, g-white, tex, t-emera, l, d-900, p, x-10, p, y-5, rounde, d-xl, fon, t-bold, tex, t-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r: shad, o, w-2xl, hove, r:sca, l, e-105, hov, e,""
   r:bg-emera, l, d-50"
               ></Li>

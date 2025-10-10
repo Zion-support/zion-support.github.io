@@ -1,5 +1,4 @@
 import React from 'react';
-
 'use client'
 /**
  * Error Boundary Configuration;
@@ -12,9 +11,7 @@ export interface ErrorBoundaryConfig {// TODO: Add content}
   /**
    * Whether to log errors to console;
    */;
-
   logErrors: boolean;
-
   /**
    * Whether to show detailed error messages;
    */,
@@ -45,7 +42,6 @@ export interface ErrorBoundaryConfig {// TODO: Add content}
    */,
 
   customMessages: Record;
-
           <string, string>;
   /**
    * Fallback UI components;
@@ -91,7 +87,6 @@ export function getErrorBoundaryConfig(): ErrorBoundaryConfig {// TODO: Add cont
   return {/* TODO: Fix JSX expression */}
   O: Add content}
 };
-
   logErrors: true,
     showDetails: isDevelopment,
     reportErrors: !isDevelopment,
@@ -283,7 +278,6 @@ export function formatErrorForLogging(error: Error): Record;
   return {/* TODO: Fix JSX expression */}
   O: Add content}
 };
-
   message: error.message,
     stack: error.stack,
     name: error.name,

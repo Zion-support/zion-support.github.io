@@ -13,7 +13,6 @@ import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } fr
     {}
     }
   ];
-
   return (
             <p className=""text-xl text-gray-300 max-w-3xl mx-auto"></p>"
               Our IoT platform provides everything you need to build, deploy, and scale;

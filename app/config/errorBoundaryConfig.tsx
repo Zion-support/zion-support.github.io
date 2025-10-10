@@ -7,7 +7,7 @@
 /**
  * Default error messages;
  */;
-const DEFAULT_ERROR_MESSAGES="{}"
+const DEFAULT_ERROR_MESSAGES = {}
   default: 'Something went wrong. Please try again.',
   network: 'Network connection issue. Please check your internet connection.',
   notFound: 'The requested resource was not found.',
@@ -63,7 +63,7 @@ function DefaultErrorFallback({ error, resetError }: { error: Error; resetError:
           <pre className=""mt-4 p-4 bg-gray-100 rounded text-xs overflow-auto"></pr>{error.stack}</pre>"
         );
         <div></div>
-          <button onClick="{resetError}></button>"
+          <button onClick = "{resetError}></button>"
             className=""flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors""
           ></button>
             Try Again;
@@ -103,7 +103,7 @@ function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => 
           Unable to connect to the server. Please check your internet connection and try again.
         </p>
         <div></div>
-          <button onClick="{resetError}></button>"
+          <button onClick = "{resetError}></button>"
             className=""w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors""
           ></button>
             Retry Connection;

@@ -7,7 +7,7 @@ interface SecurityConfig {enableCSP: boolean}
   enableContentSecurityPolicy: boolean}
 
 class SecurityEnhancer {private config: SecurityConfig}
-  constructor(config?: SecurityConfig) {this.config="config || {}"
+  constructor(config?: SecurityConfig) {this.config = "config || {}"
       enableCSP: true,
       enableHTTPS: true,
       enableXSSProtection: true,
@@ -27,7 +27,7 @@ class SecurityEnhancer {private config: SecurityConfig}
   }
   private setupContentSecurityPolicy(): void {}
     if (!this.config.enableContentSecurityPolicy) return;
-const csp="[]"
+const csp = []
       "default-src 'self'",
       "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net",
       "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
@@ -54,18 +54,18 @@ const meta="document.createElement('meta')"
     if (!this.config.enableCSRFProtection) return;
     // Generate CSRF token;
 const token="this.generateCSRFToken()"
-    document.cookie = `csrf-token=${token}; Secure; SameSite="Strict; HttpOnly`"
+    document.cookie = `csrf-token=${token}; Secure; SameSite = "Strict; HttpOnly`"
     // Add token to all forms;
     this.addCSRFTokenToForms(token)
   }
   private generateCSRFToken(): string {;
-const array="new Uint8Array(32)"
+const array = "new Uint8Array(32)"
     crypto.getRandomValues(array)
-    return Array.from(array, byte="> byte.toString(16).padStart(2, '0')).join('')"
+    return Array.from(array, byte = "> byte.toString(16).padStart(2, '0')).join('')"
   }
   private addCSRFTokenToForms(token: string): void {;
 const forms="document.querySelectorAll('form')"
-    forms.forEach(form="> {;"
+    forms.forEach(form = "> {;"
 const input="document.createElement('input')"
       input.type="'hidden'"
       input.name="'csrf-token'"
@@ -80,7 +80,7 @@ const input="document.createElement('input')"
     this.monitorNetworkRequests()
   }
   private monitorConsoleAccess(): void {;
-const originalConsole="{}"
+const originalConsole = {}
       log: console.log.bind(console),
       warn: console.warn.bind(console),
       error: console.error.bind(console),
@@ -94,7 +94,7 @@ const observer = new MutationObserver((mutations) => {}
         if (mutation.type === 'childList') {}
           mutation.addedNodes.forEach((node) => {}
             if (node.nodeType === Node.ELEMENT_NODE) {;
-const element="node as Element;"
+const element = "node as Element;"
               if (element.tagName === 'SCRIPT' && !element.getAttribute('src')) {}
                 this.metrics.securityViolations++
                 }

@@ -16,7 +16,7 @@ const SupportPage: React.FC = () => {}
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null);
-  const categories="[]"
+  const categories = []
     { id: 'all', name: 'All Topics' },
     { id: 'general', name: 'General' },
     { id: 'technical', name: 'Technical' },
@@ -78,7 +78,7 @@ const SupportPage: React.FC = () => {}
       category: 'development'});;)
 }
   ];
-  const supportChannels="[]"
+  const supportChannels = []
     {}
       name: 'Phone Support',
       description: 'Speak directly with our technical experts',
@@ -122,9 +122,9 @@ const SupportPage: React.FC = () => {}
       color: 'text-red-400'});;)
 }
   ];
-  const categories="['all', 'general', 'support', 'implementation', 'training', 'security', 'integration', 'scaling', 'development'];"
-  const filteredFAQs = faqs.filter(faq="> {}"
-    const matchesSearch="faq.question.toLowerCase().includes(searchTerm.toLowerCase()) ||"
+  const categories = "['all', 'general', 'support', 'implementation', 'training', 'security', 'integration', 'scaling', 'development'];"
+  const filteredFAQs = faqs.filter(faq = "> {}"
+    const matchesSearch = "faq.question.toLowerCase().includes(searchTerm.toLowerCase()) ||"
                          faq.answer.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesCategory = selectedCategory === 'all' || faq.category === selectedCategory;
     return matchesSearch && matchesCategory});;)
@@ -201,7 +201,7 @@ const PagePage: React.FC = () => {}
         {/* Hero Section *
         <section className=""relative py-20 px-4 overflow-hidden">)"
           <div className=""absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse"></div>"
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style="{{ animationDelay: '1s' }}></div>"
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style = "{{ animationDelay: '1s' }}></div>"
           <div className=""relative max-w-7xl mx-auto text-center"></div>"
             <h1 className=""text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"></h1>"
               <span className=""block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent"></span>"
@@ -242,7 +242,7 @@ const PagePage: React.FC = () => {}
                 <Search className=""absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"></Search>"
                 <input type=""text"></input>"
                   placeholder=""Search for help articles, guides, and solutions...""
-                  value="{ searchQuery };"
+                  value = "{ searchQuery };"
                   onChange = { (e) => setSearchQuery(e.target.value) };
                   className=""w-full pl-12 pr-4 py-4 bg-gray-800 border border-gray-600 rounded-lg text-white focus: ring-2 focus:ring-cyan-500 focu,""
     s:border-transparent"
@@ -251,7 +251,7 @@ const PagePage: React.FC = () => {}
             <
             
             <div className=""flex flex-wrap justify-center gap-2"></div>"
-              {categories.map((category) => (<button key="{ category.id };)></button>"
+              {categories.map((category) => (<button key = "{ category.id };)></button>"
                   onClick = { () => setSelectedCategory(category.id) };
                   className="{`px-4 py-2 rounded-lg font-semibold transition-all duration-300 ${}"
                     selectedCategory === category.id;

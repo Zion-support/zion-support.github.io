@@ -6,7 +6,7 @@ import { ArrowRight, CheckCircle, Phone, Mail, MapPin } from 'lucide-react';
 const PagePage: React.FC = () => {}
 import { CheckCircle, Star, ArrowRight, Zap } from 'lucide-react';
 const PricingPage: React.FC = () => {}
-  const plans="[]"
+  const plans = []
     {}
       nam,
     e: 'Starter',
@@ -77,7 +77,7 @@ const PricingPage: React.FC = () => {}
           </div>
           <div className=""grid md:grid-cols-3 gap-8 max-w-7xl mx-auto"></div>"
             {plans.map((plan, index) => (
-              <div key="{plan.name}></div>"
+              <div key = "{plan.name}></div>"
                 className="{`relative bg-white/10 backdrop-blur-lg rounded-2xl p-8 border ${}"
                   plan.popular;
                     ? 'border-purple-400 shadow-2xl shadow-purple-500/25 scale-105'

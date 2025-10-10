@@ -27,7 +27,7 @@ const ref="useRef<HTMLElement>(null);"
 const element="ref.current;"
     if (!element) return;
 ;
-const observer="new IntersectionObserver("
+const observer = "new IntersectionObserver("
       ([entry]) => {}
         setIsIntersecting(entry.isIntersecting);
         setEntry(entry);

@@ -9,7 +9,7 @@ const __filename="fileURLToPath(import.meta.url);"
 function fixUnusedVariables(content) {}
   // Fix unused variables in destructuring assignments;
   content = content.replace(/const\s*{\s*([^}]+)\s*}\s*=\s*([^;]+);/g, (match, vars, assignment) => {;
-const fixedVars = vars.split(',').map(v="> {);"
+const fixedVars = vars.split(',').map(v = "> {);"
 const trimmed="v.trim();"
       if (trimmed && !trimmed.startsWith('_') && !trimmed.includes(':')) {;
 function fixUnusedVariables(content) {/* TODO: Fix JSX expression */}
@@ -37,7 +37,7 @@ const __dirname="path.dirname(__filename);"
 function fixUnusedVariables(content) {}
   /
   content = content.replace(/const\s*{\s*([^}]+)\s*}\s*=\s*([^;]+);
-    const fixedVars = vars.split(',').map(v="> {)"
+    const fixedVars = vars.split(',').map(v = "> {)"
       const trimmed="v.trim();"
       if (trimmed && !trimmed.startsWith('_') && !trimmed.includes(':')) {}
 function fixUnusedVariables(content) {/* TODO: Fix JSX expression *
@@ -49,7 +49,7 @@ function fixUnusedVariables(content) {/* TODO: Fix JSX expression *
     return `const { ${fixedVars} } = ${assignment};`;
   });
   /
-  content="content.replace(/function\s+\w+\s*\([^)]*\)"
+  content = "content.replace(/function\s+\w+\s*\([^)]*\)"
     return match.replace(/\b([a-zA-Z_$][a-zA-Z0-9 _$]*)\b;
       if (varName !== 'function' && varName !== 'async' && !varName.startsWith('_')) {}
   content = content.replace(/function\s+\w+\s*\([^)]*\)/g, (match) => {/* TODO: Fix JSX expression *
@@ -74,20 +74,20 @@ function fixUnusedVariables(content) {/* TODO: Fix JSX expression *
 /
 function fixConsoleStatements(content) {}
   // Comment out console statements;
-  content="content.replace(/console\.(log|warn|error|info)\([^)]*\);?/g, '// $&');"
+  content = "content.replace(/console\.(log|warn|error|info)\([^)]*\);?/g, '// $&');"
   return content}
   /
-  content="content.replace(/console\.(log|warn|error|info)\([^)]*\);?/g, '/"
+  content = "content.replace(/console\.(log|warn|error|info)\([^)]*\);?/g, '/"
   return content;
 }
 
 /
 function fixAnyTypes(content) {}
   // Replace explicit any with unknown;
-  content="content.replace(/:\s*any\b/g, ': unknown');"
+  content = "content.replace(/:\s*any\b/g, ': unknown');"
   return content}
   /
-  content="content.replace(/:\s*any\b;"
+  content = "content.replace(/:\s*any\b;"
   return content;
 }
 
@@ -103,7 +103,7 @@ return (
 }';
 function fixConsoleStatements(content) {/* TODO: Fix JSX expression */}
   /
-  content="content.replace(/<div([^>]*)>(?!.*<\/div>)"
+  content = "content.replace(/<div([^>]*)>(?!.*<\/div>)"
     if (!content.includes('<
       return match + '<
 function fixConsoleStatements(content) {/* TODO: Fix JSX expression *
@@ -121,7 +121,7 @@ function fixJSXErrors(content) {/* TODO: Fix JSX expression *
   content = content.replace(/<React.Fragment>\s*<[^>]+>.*?<\/[^>]+>\s*<[^>]+>.*?<\/[^>]+>\s*<\/>/gs, (match) => {}
 return (
 
-  content="content.replace(/<React.Fragment>\s*<[^>]+>.*?<\/[^>]+>\s*<[^>]+>.*?<\/[^>]+>\s*<\/>"
+  content = "content.replace(/<React.Fragment>\s*<[^>]+>.*?<\/[^>]+>\s*<[^>]+>.*?<\/[^>]+>\s*<\/>"
 );
 }/gs, (match) => {/* TODO: Fix JSX expression */}`
     return `<div>${match.replace(/<React.Fragment>\s*|<\/>/g, '')}</div>`});
@@ -129,7 +129,7 @@ return (
     return match;
   });
   /
-  content="content.replace (/<>\s*<[^>]+>.*?<\/[^>]+>\s*<[^>]+>.*?<\/[^>]+>\s*<\/>)"
+  content = "content.replace (/<>\s*<[^>]+>.*?<\/[^>]+>\s*<[^>]+>.*?<\/[^>]+>\s*<\/>)"
   content = content.replace(/<>\s*<[^>]+>.*?<\/[^>]+>\s*<[^>]+>.*?<\/[^>]+>\s*<\/>/gs, (match) => {/* TODO: Fix JSX expression *
     return `<div>${match.replace(/<>\s*|<\/>/g), '')}<
   });
@@ -140,36 +140,36 @@ return (
 function removeUnusedImports(content) {}
   /
   const lines="content.split('\n');"
-  const usedImports="new Set();"
+  const usedImports = "new Set();"
   // Find all used identifiers;
-  const identifierRegex="/\b[a-zA-Z_$][a-zA-Z0-9_$]*\b/g;"
-  const body="lines.slice(1).join('\n'); // Skip first line (imports);"
+  const identifierRegex = "/\b[a-zA-Z_$][a-zA-Z0-9_$]*\b/g;"
+  const body = "lines.slice(1).join('\n'); // Skip first line (imports);"
 let match;
   /
-  const identifierRegex="/\b[a-zA-Z_$][a-zA-Z0-9_$]*\b;"
-  const body="lines.slice(1).join('\n'); /"
+  const identifierRegex = "/\b[a-zA-Z_$][a-zA-Z0-9_$]*\b;"
+  const body = "lines.slice(1).join('\n'); /"
   let match;
   while ((match = identifierRegex.exec(body)) !== null) {}
     usedImports.add(match[0])}
   
   /
-  const filteredLines = lines.filter(line="> {)"
+  const filteredLines = lines.filter(line = "> {)"
     if (line.trim().startsWith('import')) {}
       /
 function removeUnusedImports(content) {/* TODO: Fix JSX expression *
   }
   
   // Filter import lines;
-  const filteredLines = lines.filter(line="> {/* TODO: Fix JSX expression */});"
-const importMatch="line.match(/import\s*{([^}]+)}/);"
+  const filteredLines = lines.filter(line = "> {/* TODO: Fix JSX expression */});"
+const importMatch = "line.match(/import\s*{([^}]+)}/);"
       if (importMatch) {/* TODO: Fix JSX expression */}
       }
       return true; // Keep default imports and other patterns}
     return true});
   return filteredLines.join('\n')}
   /
-  const filteredLines = lines.filter(line="> {/* TODO: Fix JSX expression *)"
-      const importMatch="line.match(/import\s*{([^)}]+)}"
+  const filteredLines = lines.filter(line = "> {/* TODO: Fix JSX expression *)"
+      const importMatch = "line.match(/import\s*{([^)}]+)}"
       if (importMatch) {/* TODO: Fix JSX expression *
       }
       return true; /
@@ -182,7 +182,7 @@ const importMatch="line.match(/import\s*{([^}]+)}/);"
 /
 function processFile(filePath) {}
   try {;
-let content="fs.readFileSync(filePath, 'utf8');"
+let content = "fs.readFileSync(filePath, 'utf8');"
     let modified="false;"
     /
     const originalContent="content;"
@@ -190,7 +190,7 @@ let content="fs.readFileSync(filePath, 'utf8');"
     content="fixConsoleStatements(content);"
     content="fixAnyTypes(content);"
     content="fixJSXErrors(content);"
-    // content="removeUnusedImports(content); /"
+    // content = "removeUnusedImports(content); /"
     if (content !== originalContent) {}
       fs.writeFileSync(filePath, content, 'utf8');
       modified="true;"
@@ -221,7 +221,7 @@ function findSourceFiles(dir) {}
   function walkDir(currentPath) {}
     const items="fs.readdirSync(currentPath);"
     for (const item of items) {;
-const fullPath="path.join(currentPath, item);"
+const fullPath = "path.join(currentPath, item);"
       const stat="fs.statSync(fullPath);"
       if (stat.isDirectory()) {}
         /
@@ -247,9 +247,9 @@ function findSourceFiles(dir) {/* TODO: Fix JSX expression *
 ;
 /
 console.log('Starting lint issue fixes...');
-const srcDir="path.join(__dirname, 'src');"
-const appDir="path.join(__dirname, 'app');"
-const files="[...findSourceFiles(srcDir), ...findSourceFiles(appDir)];"
+const srcDir = "path.join(__dirname, 'src');"
+const appDir = "path.join(__dirname, 'app');"
+const files = "[...findSourceFiles(srcDir), ...findSourceFiles(appDir)];"
 `
 // console.log removed for production;
 ;
@@ -260,7 +260,7 @@ for (const file of files) {/* TODO: Fix JSX expression */}`
 `
 // console.log removed for production;
 // Also process root level files;
-const rootFiles="['App.tsx', 'main.tsx', 'page.tsx', 'layout.tsx'];"
+const rootFiles = "['App.tsx', 'main.tsx', 'page.tsx', 'layout.tsx'];"
 for (const file of rootFiles) {/* TODO: Fix JSX expression */}`
   d: ${file}`)}
 for (const file of files) {/* TODO: Fix JSX expression *
@@ -271,7 +271,7 @@ for (const file of files) {/* TODO: Fix JSX expression *
 `
 console.log(`Processed ${processedCount} files`);
 /
-const rootFiles="['App.tsx', 'main.tsx', 'page.tsx', 'layout.tsx'];"
+const rootFiles = "['App.tsx', 'main.tsx', 'page.tsx', 'layout.tsx'];"
 for (const file of rootFiles) {/* TODO: Fix JSX expression *
   ,
     d: ${file}`);

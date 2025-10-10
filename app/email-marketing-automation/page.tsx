@@ -21,7 +21,7 @@ import {}
   Database,
   Send} from 'lucide-react';
 ;
-const EmailMarketingAutomationPage: React.FC = () => {const features="[]"
+const EmailMarketingAutomationPage: React.FC = () => {const features = []
     {}
       ico,
     n: Mail,
@@ -45,7 +45,7 @@ const EmailMarketingAutomationPage: React.FC = () => {const features="[]"
     }
   ];
 ;
-const benefits="[]"
+const benefits = []
     'Increase email engagement rates',
     'Automate repetitive marketing tasks',
     'Personalize customer experiences',

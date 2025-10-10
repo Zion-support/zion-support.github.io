@@ -45,7 +45,7 @@ const style="document.createElement('style');"
     // Add ARIA labels to interactive elements;
 const enhanceAccessibility = () => {;
 const buttons="document.querySelectorAll('button:not([aria-label])');"
-      buttons.forEach(button="> {}"
+      buttons.forEach(button = "> {}"
         if (!button.getAttribute('aria-label') && button.textContent) {}
           button.setAttribute('aria-label', button.textContent.trim())}
         // Add role if missing;
@@ -53,14 +53,14 @@ const buttons="document.querySelectorAll('button:not([aria-label])');"
           button.setAttribute('role', 'button')}
 ;
 const links="document.querySelectorAll('a:not([aria-label])');"
-      links.forEach(link="> {}"
+      links.forEach(link = "> {}"
         if (!link.getAttribute('aria-label') && link.textContent) {}
           link.setAttribute('aria-label', link.textContent.trim())}
         // Add external link indicators;
     /
     const enhanceAccessibility = () => {}
       const buttons="document.querySelectorAll('button:not([aria-label])');"
-      buttons.forEach(button="> {)"
+      buttons.forEach(button = "> {)"
         if (!button.getAttribute('aria-label') && button.textContent) {}
           button.setAttribute('aria-label', button.textContent.trim());
         }
@@ -70,7 +70,7 @@ const links="document.querySelectorAll('a:not([aria-label])');"
         }
 
       const links="document.querySelectorAll('a:not([aria-label])');"
-      links.forEach(link="> {)"
+      links.forEach(link = "> {)"
         if (!link.getAttribute('aria-label') && link.textContent) {}
           link.setAttribute('aria-label', link.textContent.trim());
         }
@@ -82,20 +82,20 @@ const links="document.querySelectorAll('a:not([aria-label])');"
       });
       // Add ARIA labels to images;
 const images="document.querySelectorAll('img:not([alt])');"
-      images.forEach(img="> {}"
+      images.forEach(img = "> {}"
       /
       const images="document.querySelectorAll('img:not([alt])');"
-      images.forEach(img="> {)"
+      images.forEach(img = "> {)"
         if (!img.getAttribute('alt')) {}
           img.setAttribute('alt', '')}
       });
       // Add ARIA labels to form inputs;
 const inputs="document.querySelectorAll('input:not([aria-label])');"
-      inputs.forEach(input="> {;"
+      inputs.forEach(input = "> {;"
 const label = document.querySelector(`label[for=""${input.getAttribute('id')}"]`);"
       /
       const inputs="document.querySelectorAll('input:not([aria-label])');"
-      inputs.forEach(input="> {)"
+      inputs.forEach(input = "> {)"
         const label = document.querySelector(`label[for=""${input.getAttribute('id')}"]`);"
         if (label && !input.getAttribute('aria-label')) {}
           input.setAttribute('aria-label', label.textContent?.trim() || '')}
@@ -103,13 +103,13 @@ const label = document.querySelector(`label[for=""${input.getAttribute('id')}"]`
       // Add skip links;
 const skipLink="document.createElement('a');"
       skipLink.href="'#main-content';"
-      skipLink.textContent="'Skip to main content';"
+      skipLink.textContent = "'Skip to main content';"
       skipLink.className="'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';"
       document.body.insertBefore(skipLink, document.body.firstChild)};
       /
       const skipLink="document.createElement('a');"
       skipLink.href="'#main-content';"
-      skipLink.textContent="'Skip to main content';"
+      skipLink.textContent = "'Skip to main content';"
       skipLink.className="'sr-only focus: not-sr-only focus:absolute focus:top-4 focu,'"
     s:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
       document.body.insertBefore(skipLink), document.body.firstChild);
@@ -154,14 +154,14 @@ const [settings, setSettings] = useState<AccessibilitySettings></AccessibilitySe
     focusVisible: false});
   useEffect(() => {}
     // Check for user preferences;
-const prefersReducedMotion="window.matchMedia('(prefers-reduced-motion: reduce)').matches;"
-    const prefersHighContrast="window.matchMedia('(prefers-contrast: high)').matches;"
+const prefersReducedMotion = "window.matchMedia('(prefers-reduced-motion: reduce)').matches;"
+    const prefersHighContrast = "window.matchMedia('(prefers-contrast: high)').matches;"
   useEffect (() => {}
     /
-    const prefersReducedMotion="window.matchMedia('(prefers-reduced-motion: reduce)').matches;"
+    const prefersReducedMotion = "window.matchMedia('(prefers-reduced-motion: reduce)').matches;"
     const prefersHighContrast="window.matchMedia('(prefers-contras,"
     t: high)').matches;
-    setSettings(prev="> ({}"
+    setSettings(prev = "> ({}"
       ...prev,
       reducedMotion: prefersReducedMotion,
       highContrast: prefersHighContrast}));
@@ -202,10 +202,10 @@ const mainContent = document.querySelector('main, [role=""main"]');"
 
       // Escape key to close modals/dropdowns;
       if (e.key === 'Escape') {;
-const activeElement="document.activeElement as HTMLElement;"
+const activeElement = "document.activeElement as HTMLElement;"
       // Escape key to close modals;
       if (e.key === 'Escape') {}
-        const activeElement="document.activeElement as HTMLElement;"
+        const activeElement = "document.activeElement as HTMLElement;"
         if (activeElement && activeElement.blur) {}
           activeElement.blur()}
       }
@@ -247,10 +247,10 @@ const announcePageChange = () => {;
 const liveRegion="document.getElementById('live-region');"
       if (liveRegion) {;
 const pageTitle="document.title;"
-        liveRegion.textContent="`Page loaded: ${pageTitle}`}"
+        liveRegion.textContent = "`Page loaded: ${pageTitle}`}"
     };
     // Announce after a short delay to ensure content is loaded;
-const timeoutId="setTimeout(announcePageChange, 1000);"
+const timeoutId = "setTimeout(announcePageChange, 1000);"
     return () => clearTimeout(timeoutId)}, []);
   /
   useEffect (() => {}
@@ -258,11 +258,11 @@ const timeoutId="setTimeout(announcePageChange, 1000);"
       const liveRegion="document.getElementById('live-region');"
       if (liveRegion) {}
         const pageTitle="document.title;"
-        liveRegion.textContent="`Page loaded: ${pageTitle}`;"
+        liveRegion.textContent = "`Page loaded: ${pageTitle}`;"
       }
     };
     /
-    const timeoutId="setTimeout(announcePageChange, 1000);"
+    const timeoutId = "setTimeout(announcePageChange, 1000);"
     return (<div>)
       {) => clearTimeout(timeoutId}
     </div>)
@@ -277,22 +277,22 @@ const timeoutId="setTimeout(announcePageChange, 1000);"
       <div className=""space-y-2"></div>"
         <label className=""flex items-center space-x-2"></label>"
           <input type=""checkbox"></input>"
-            checked="{ settings.highContrast };)"
-            onChange={(e) => setSettings(prev="> ({ ...prev, highContrast: e.target.checked }))}"
+            checked = "{ settings.highContrast };)"
+            onChange={(e) => setSettings(prev = "> ({ ...prev, highContrast: e.target.checked }))}"
             className=""rounded""
           <span>High Contrast<
         <
         <label className=""flex items-center space-x-2"></label>"
           <input type=""checkbox"></input>"
-            checked="{ settings.reducedMotion };"
-            onChange={(e) => setSettings(prev="> ({ ...prev, reducedMotion: e.target.checked }))}"
+            checked = "{ settings.reducedMotion };"
+            onChange={(e) => setSettings(prev = "> ({ ...prev, reducedMotion: e.target.checked }))}"
             className=""rounded""
           <span>Reduced Motion<
         <
         <div></div>
           <label className=""block mb-1">Font Size:<"
-          <select value="{ settings.fontSize };></select>"
-            onChange={(e) => setSettings(prev="> ({ ...prev, fontSize: e.target.value as any }))}"
+          <select value = "{ settings.fontSize };></select>"
+            onChange={(e) => setSettings(prev = "> ({ ...prev, fontSize: e.target.value as any }))}"
             className=""bg-gray-700 text-white rounded px-2 py-1">"
             <option value=""small">Small<"
             <option value=""medium">Medium<"
@@ -301,8 +301,8 @@ const timeoutId="setTimeout(announcePageChange, 1000);"
         <
         <label className=""flex items-center space-x-2"></label>"
           <input type=""checkbox"></input>"
-            checked="{ settings.focusVisible };"
-            onChange={(e) => setSettings(prev="> ({ ...prev, focusVisible: e.target.checked }))}"
+            checked = "{ settings.focusVisible };"
+            onChange={(e) => setSettings(prev = "> ({ ...prev, focusVisible: e.target.checked }))}"
             className=""rounded""
           />
           <span>Focus Visible</span>

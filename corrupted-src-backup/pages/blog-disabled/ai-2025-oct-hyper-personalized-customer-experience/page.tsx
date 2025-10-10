@@ -11,14 +11,14 @@ export default function HyperPersonalizedCustomerExperience20, 2, 5() {}
           Hyp, e, r-Personalized, AI, Customer Experience, Platform, 2025 — 97.8%
           Satisfacti, o, n, 12.4x, Engagemen, t, $3.2B+ Reven, u, e | Zion, Tech, Group;
         <
-        <meta , nam, e="'description'></meta>"
-          conte, n, t="'Deploy, A, I-powered, hype, r-personalization, that, understands each, customer, individually. Achieve, 9, 7.8% satisfaction, scor, e, s, increase, engagement, by 12.4 x, reduce, churn, by 89%, and, driv, e $3.2 B+ in, incremental, revenue through, truly, personalized experienc, e, s.'"
+        <meta , nam, e = "'description'></meta>"
+          conte, n, t = "'Deploy, A, I-powered, hype, r-personalization, that, understands each, customer, individually. Achieve, 9, 7.8% satisfaction, scor, e, s, increase, engagement, by 12.4 x, reduce, churn, by 89%, and, driv, e $3.2 B+ in, incremental, revenue through, truly, personalized experienc, e, s.'"
         /><
-        <meta , nam, e="'keywor, d, s'></meta>"
-          conte, n, t="'AI, personalizati, o, n, customer, experienc, e, hyp, e, r-personalizati, o, n, customer, engagemen, t, AI, CX, platform, behavioral, A, I, customer, journe, y, experience, optimizatio, n'"
+        <meta , nam, e = "'keywor, d, s'></meta>"
+          conte, n, t = "'AI, personalizati, o, n, customer, experienc, e, hyp, e, r-personalizati, o, n, customer, engagemen, t, AI, CX, platform, behavioral, A, I, customer, journe, y, experience, optimizatio, n'"
         /><
-        <link , re, l="'canonic, a, l'></link>"
-          hr, e, f="'htt, p, s: //ziontechgro u p.c o m/bl o g'"
+        <link , re, l = "'canonic, a, l'></link>"
+          hr, e, f = "'htt, p, s: //ziontechgro u p.c o m/bl o g'"
       <
     <div><
       
@@ -41,19 +41,19 @@ export default function HyperPersonalizedCustomerExperience20, 2, 5() {}
         <div, className="'container, m, x-auto, p, x-4, p, y-12, ma, x-w-4, x, l'><"
               Hyp, e, r-Personalized, AI, Customer Experien, c, e: T, h, e $3.2B, Revenue, Engine;
               Hyp, e, r-Personalized, AI, Customer Experien, c, e: T, h, e $3.2B, Revenue, Engine<
-                <li, classNam, e="'flex, item, s-start, ga, p-3'></li>"
+                <li, classNam, e = "'flex, item, s-start, ga, p-3'></li>"
                     <stro, n, g>89% Churn, Reductio, n:<
                   <
               <span, className="'te, x, t-gr, a, y-4, 0, 0'></span>Octo</span>, b, e, r , 1, 20, 2, 5<"
             <
 
-            <h1, classNam, e="'te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, m, b-6, b, g-gradie, n, t-to-r, fro, m-pi, n, k-400, vi, a-ro, s, e-400, t, o-purp, l, e-400, tex, t-transparent, b, g-cl, i, p-text, leadin, g-tig, h, t'></h1>"
+            <h1, classNam, e = "'te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, m, b-6, b, g-gradie, n, t-to-r, fro, m-pi, n, k-400, vi, a-ro, s, e-400, t, o-purp, l, e-400, tex, t-transparent, b, g-cl, i, p-text, leadin, g-tig, h, t'></h1>"
               Hyp, e, r-Personalized, AI, Customer Experien, c, e: T, h, e $3.2B, Revenue, Engine;
               Hyp, e, r-Personalized, AI, Customer Experien, c, e: T, h, e $3.2B, Revenue, Engine<
                 <li, className="'flex, item, s-start, ga, p-3'></li>"
                     <stro, n, g>89% Churn, Reductio, n:<
                   <
-              <p, classNam, e="'te, x, t-gr, a, y-300, m, b-4, leadin, g-relax, e, d'></p>"
+              <p, classNam, e = "'te, x, t-gr, a, y-300, m, b-4, leadin, g-relax, e, d'></p>"
                 The, cost, of poor, customer, experience is, staggerin, g: $1.6, trillion, lost annually, to, customer chu, r, n. Traditional, personalizatio, n—basic, segmentation, and rul, e, s—achieves, only, 31%
                 relevan, c, e. True, hype, r-personalization, powered, by AI, treats, every;
                 customer, as, a segment, of, o, n, e, understanding, contex, t,
@@ -62,7 +62,7 @@ export default function HyperPersonalizedCustomerExperience20, 2, 5() {}
               <
             <
 
-            <section, classNam, e="'mb-12'></section>"
+            <section, classNam, e = "'mb-12'></section>"
               <h2, className="'te, x, t-3xl, fon, t-bold, m, b-6, tex, t-pi, n, k-3, 0, 0'></h2>"
                 The, Hype, r-Personalization, Platform, Architecture;
               <
@@ -180,7 +180,7 @@ export default function HyperPersonalizedCustomerExperience20, 2, 5() {}
                 <h3, className="'te, x, t-2xl, fon, t-bold, m, b-4, tex, t-ro, s, e-3, 0, 0'></h3>"
                   Phas, e, 1: Foundati, o, n (Month, s, 1-, 2)
                 <
-                <ul, classNam, e="'li, s, t-disc, lis, t-inside, spac, e-y-2, tex, t-gr, a, y-300, m, l-4'></ul>"
+                <ul, classNam, e = "'li, s, t-disc, lis, t-inside, spac, e-y-2, tex, t-gr, a, y-300, m, l-4'></ul>"
                   <li></li>
                     Data, integration, across customer, touchpoints, and syste, m, s;
                   <
@@ -298,7 +298,7 @@ export default function HyperPersonalizedCustomerExperience20, 2, 5() {/* TODO: 
                 <h3, className="'te, x, t-2xl, fon, t-bold, m, b-4, tex, t-ro, s, e-3, 0, 0'></h3>"
                   Phas, e, 2: Pil, o, t (Month, s, 3-, 4)
                 <
-                <ul, classNam, e="'li, s, t-disc, lis, t-inside, spac, e-y-2, tex, t-gr, a, y-300, m, l-4'></ul>"
+                <ul, classNam, e = "'li, s, t-disc, lis, t-inside, spac, e-y-2, tex, t-gr, a, y-300, m, l-4'></ul>"
                   <li></li>
                     Deploy, personalization, AI for, highes, t-impact, customer, segments;
                   <
@@ -312,7 +312,7 @@ export default function HyperPersonalizedCustomerExperience20, 2, 5() {/* TODO: 
                 <h3, className="'te, x, t-2xl, fon, t-bold, m, b-4, tex, t-ro, s, e-3, 0, 0'><"
                   Phas, e, 2: Pil, o, t (Month, s, 3-, 4)
                 <
-                <ul, classNam, e="'li, s, t-disc, lis, t-inside, spac, e-y-2, tex, t-gr, a, y-300, m, l-4'><"
+                <ul, classNam, e = "'li, s, t-disc, lis, t-inside, spac, e-y-2, tex, t-gr, a, y-300, m, l-4'><"
                   <li><
                     Deploy, personalization, AI for, highes, t-impact, customer, segments;
                   <
@@ -333,8 +333,8 @@ export default function HyperPersonalizedCustomerExperience20, 2, 5() {/* TODO: 
                 <h3, className="'te, x, t-2xl, fon, t-bold, m, b-4, tex, t-ro, s, e-3, 0, 0'><"
                   Phas, e, 3: Sca, l, e (Month, s, 5-1, 2)
                 <
-                <ul, classNam, e="'li, s, t-disc, lis, t-inside, spac, e-y-2, tex, t-gr, a, y-300, m, l-4'><"
-              <p, classNam, e="'te, x, t-gr, a, y-300, m, b-4, leadin, g-relax, e, d'><"
+                <ul, classNam, e = "'li, s, t-disc, lis, t-inside, spac, e-y-2, tex, t-gr, a, y-300, m, l-4'><"
+              <p, classNam, e = "'te, x, t-gr, a, y-300, m, b-4, leadin, g-relax, e, d'><"
                 The, competitive, advantage is, overwhelmin, g: 12x, higher, engageme, n, t, 89% lower, chur, n, a, n, d $3.2B+ in, incremental, revenue.
                 With, average, ROI exceeding, 7x, within 18, month, s, the, business, case is, irrefutabl, e. The, question, is not, whether, to deploy, A, I-powered, personalizatio, n, but, how, quickly you, can, implement it, before, competitors capture, your, customers' hear, t, s.
                 Schedule, Your, CX Transformation, Assessmen, t;
@@ -346,8 +346,8 @@ export default function HyperPersonalizedCustomerExperience20, 2, 5() {/* TODO: 
                 Schedule, Your, CX Transformation, Assessmen, t<
                 <ArrowLeft , className="'ml-2 h-5 w-5, rotat, e-1, 8, 0'></ArrowLeft>"
                 Schedule, Your, CX Transformation, Assessmen, t;
-                <ArrowLeft, classNam, e="'ml-2 h-5 w-5, rotat, e-1, 8, 0' /><"
-              <p, classNam, e="'te, x, t-gr, a, y-300, m, b-4, leadin, g-relax, e, d'><"
+                <ArrowLeft, classNam, e = "'ml-2 h-5 w-5, rotat, e-1, 8, 0' /><"
+              <p, classNam, e = "'te, x, t-gr, a, y-300, m, b-4, leadin, g-relax, e, d'><"
                 The, competitive, advantage is, overwhelmin, g: 12x, higher, engageme, n, t, 89% lower, chur, n, a, n, d $3.2B+ in, incremental, revenue.
                 With, average, ROI exceeding, 7x, within 18, month, s, the, business, case is, irrefutabl, e. The, question, is not, whether, to deploy, A, I-powered, personalizatio, n, but, how, quickly you, can, implement it, before, competitors capture, your, customers' hear, t, s.
                 Schedule, Your, CX Transformation, Assessmen, t;

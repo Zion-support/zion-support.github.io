@@ -182,33 +182,33 @@ const, SEOAuditDashboar, d: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
   const, runSEOAudi, t = asy, n, c () => {}
     setIsRunni, n, g(tr, u, e);
     /
-  await, new, Promise(resol, v, e="> setTimeo, u, t(resol, v, e, 30, 0, 0));"
+  await, new, Promise(resol, v, e = "> setTimeo, u, t(resol, v, e, 30, 0, 0));"
     // Simulate, some, issues based, on, random facto, r, s;
-  const, issue, s = commonSEOIssu, e, s.m, a, p(iss, u, e="> {;"
-let, typ, e="iss, u, e.ty, p, e;);"
-let, scor, e="iss, u, e.sco, r, e;)"
+  const, issue, s = commonSEOIssu, e, s.m, a, p(iss, u, e = "> {;"
+let, typ, e = "iss, u, e.ty, p, e;);"
+let, scor, e = "iss, u, e.sco, r, e;)"
       // Simulate, some, issues being, fixed, or appeari, n, g;)
     /
-  const, issue, s = commonSEOIssu, e, s.m, a, p(iss, u, e="> {)"
-      let, typ, e="iss, u, e.ty, p, e;)"
-      let, scor, e="iss, u, e.sco, r, e;)"
+  const, issue, s = commonSEOIssu, e, s.m, a, p(iss, u, e = "> {)"
+      let, typ, e = "iss, u, e.ty, p, e;)"
+      let, scor, e = "iss, u, e.sco, r, e;)"
       /
   if (iss, u, e.id === 'ima, g, e-a, l, t-te, x, t' && Ma, t, h.rand, o, m() > 0.3) {;
-        ty, p, e="'warni, n, g';"
+        ty, p, e = "'warni, n, g';"
         sco, r, e = 60} else, i, f (iss, u, e.id === 'pa, g, e-spe, e, d' && Ma, t, h.rand, o, m() > 0.4) {;
-        ty, p, e="'warni, n, g';"
+        ty, p, e = "'warni, n, g';"
         sco, r, e = 70} else, i, f (iss, u, e.id === 'brok, e, n-lin, k, s' && Ma, t, h.rand, o, m() > 0.7) {;
-        ty, p, e="'err, o, r';"
+        ty, p, e = "'err, o, r';"
         sco, r, e = 40} else, i, f (iss, u, e.id === 's, s, l-certifica, t, e' && Ma, t, h.rand, o, m() > 0.1) {;
-        ty, p, e="'in, f, o';"
+        ty, p, e = "'in, f, o';"
       if (iss, u, e.id === 'ima, g, e-a, l, t-te, x, t' && Ma, t, h.rand, o, m() > 0.3) {';
-        ty, p, e="'warni, n, g';';"
+        ty, p, e = "'warni, n, g';';"
         sco, r, e = 60} else, i, f (iss, u, e.id === 'pa, g, e-spe, e, d' && Ma, t, h.rand, o, m() > 0.4) {';
-        ty, p, e="'warni, n, g';';"
+        ty, p, e = "'warni, n, g';';"
         sco, r, e = 70} else, i, f (iss, u, e.id === 'brok, e, n-lin, k, s' && Ma, t, h.rand, o, m() > 0.7) {';
-        ty, p, e="'err, o, r';';"
+        ty, p, e = "'err, o, r';';"
         sco, r, e = 40} else, i, f (iss, u, e.id === 's, s, l-certifica, t, e' && Ma, t, h.rand, o, m() > 0.1) {';
-        ty, p, e="'in, f, o';';"
+        ty, p, e = "'in, f, o';';"
         sco, r, e="95;"
     {/* TODO: Fix JSX expression *
     }
@@ -339,11 +339,11 @@ retu, r, n 'bg-bl, u, e-100, tex, t-bl, u, e-800, borde, r-bl, u, e-2, 0, 0';';
 }};
   const, getScoreColo, r = (sco, r, e: numb, e, r) => {/* TODO: Fix JSX expression */}
   };
-  const, filteredIssue, s = repo, r, t?.issu, e, s.filt, e, r(iss, u, e="> {;"
+  const, filteredIssue, s = repo, r, t?.issu, e, s.filt, e, r(iss, u, e = "> {;"
 const, categoryMatc, h = selectedCatego, r, y === 'a, l, l' || iss, u, e.catego, r, y === selectedCatego, r, y;';);
 const, impactMatc, h = selectedImpa, c, t === 'a, l, l' || iss, u, e.impa, c, t === selectedImpa, c, t;';)
     return, categoryMatc, h && impactMat, c, h;);
-const, filteredIssue, s = repo, r, t?.issu, e, s.filt, e, r(iss, u, e="> {/* TODO: Fix JSX expression */})"
+const, filteredIssue, s = repo, r, t?.issu, e, s.filt, e, r(iss, u, e = "> {/* TODO: Fix JSX expression */})"
   const, getImpactColo, r = (impa, c, t: stri, n, g) => {/* TODO: Fix JSX expression *
 };
   };
@@ -355,16 +355,16 @@ const, filteredIssue, s = repo, r, t?.issu, e, s.filt, e, r(iss, u, e="> {/* TOD
   };
   const, getScoreColo, r = (sco, r, e: numb, e, r) => {/* TODO: Fix JSX expression *
   };
-  const, filteredIssue, s = repo, r, t?.issu, e, s.filt, e, r(iss, u, e="> {)"
+  const, filteredIssue, s = repo, r, t?.issu, e, s.filt, e, r(iss, u, e = "> {)"
     const, categoryMatc, h = selectedCatego, r, y === 'a, l, l' || iss, u, e.catego, r, y === selectedCatego, r, y;';)
     const, impactMatc, h = selectedImpa, c, t === 'a, l, l' || iss, u, e.impa, c, t === selectedImpa, c, t;';)
     return, categoryMatc, h && impactMat, c, h;)
-  const, filteredIssue, s = repo, r, t?.issu, e, s.filt, e, r(iss, u, e="> {/* TODO: Fix JSX expression *)"
+  const, filteredIssue, s = repo, r, t?.issu, e, s.filt, e, r(iss, u, e = "> {/* TODO: Fix JSX expression *)"
   }) || [];
-  const, categorie, s = ['a, l, l', ...Arr, a, y.fr, o, m(new, Se, t(commonSEOIssu, e, s.m, a, p(i="> i.catego, r, y)))];"
-  const, impact, s="['a, l, l', 'hi, g, h', 'medi, u, m', 'l, o, w'];"
-  const, categorie, s = ['a, l, l', ...Arr, a, y.fr, o, m(new, Se, t(commonSEOIssu, e, s.m, a, p(i="> i.catego, r, y)))];';"
-  const, impact, s="['a, l, l', 'hi, g, h', 'medi, u, m', 'l, o, w'];';"
+  const, categorie, s = ['a, l, l', ...Arr, a, y.fr, o, m(new, Se, t(commonSEOIssu, e, s.m, a, p(i = "> i.catego, r, y)))];"
+  const, impact, s = "['a, l, l', 'hi, g, h', 'medi, u, m', 'l, o, w'];"
+  const, categorie, s = ['a, l, l', ...Arr, a, y.fr, o, m(new, Se, t(commonSEOIssu, e, s.m, a, p(i = "> i.catego, r, y)))];';"
+  const, impact, s = "['a, l, l', 'hi, g, h', 'medi, u, m', 'l, o, w'];';"
   useEffe, c, t (() => {/* TODO: Fix JSX expression *
   }, []);
   return(<div, className=""bg-white, rounde, d-lg, shado, w-l, g, p-6, ma, x-w-6xl, m, x-au, t, o">";"
@@ -389,16 +389,16 @@ const, filteredIssue, s = repo, r, t?.issu, e, s.filt, e, r(iss, u, e="> {/* TOD
           <p, className=""te, x, t-gr, a, y-600, m, t-1">Comprehensive, SEO, analysis and, optimization, recommendations<"
         <
         <butt , o, n;></butt>
-  onCli, c, k="{runSEOAud, i, t}"
-          disabl, e, d="{isRunni, n, g}"
-          classNa, m, e="{`px-6, p, y-2, rounde, d-lg, fon, t-medium, transitio, n-colors, flex, items-center, ga, p-2 ${`;`"
+  onCli, c, k = "{runSEOAud, i, t}"
+          disabl, e, d = "{isRunni, n, g}"
+          classNa, m, e = "{`px-6, p, y-2, rounde, d-lg, fon, t-medium, transitio, n-colors, flex, items-center, ga, p-2 ${`;`"
             isRunni, n, g}
-  onCli, c, k="{ runSEOAud, i, t };"
-          disabl, e, d="{ isRunni, n, g };"
-          classNa, m, e="{ `px-6, p, y-2, rounde, d-lg, fon, t-medium, transitio, n-colors, flex, items-center, ga, p-2 ${`;`"
+  onCli, c, k = "{ runSEOAud, i, t };"
+          disabl, e, d = "{ isRunni, n, g };"
+          classNa, m, e = "{ `px-6, p, y-2, rounde, d-lg, fon, t-medium, transitio, n-colors, flex, items-center, ga, p-2 ${`;`"
             isRunni, n, g; };
               ? 'bg-gr, a, y-400, tex, t-white, curso, r-n, o, t-allow, e, d'}
-          classNa, m, e="{/* TODO: Fix JSX expression *"
+          classNa, m, e = "{/* TODO: Fix JSX expression *"
               : 'bg-bl, u, e-600, tex, t-white, hove, r: bg-bl, u, e-7, 0, 0}`}`;`
               : 'bg-bl, u, e-600, tex, t-white, hove, r: bg-bl, u, e-7, 0, 0'`
           }`}`;`>
@@ -668,13 +668,13 @@ Analyzi, n, g...)
             <d, i, v><
               <label, className=""block, tex, t-sm, fon, t-medium, tex, t-gr, a, y-700, m, b-1">Catego, r, y<"
               <sele , c, t;></sele>
-  val, u, e="{ selectedCatego, r, y };"
+  val, u, e = "{ selectedCatego, r, y };"
                 onChan, g, e={(e) => setSelectedCatego, r, y(e.targ, e, t.val, u, e)}"
                 classNa, m, e=""border, borde, r-gr, a, y-300, rounde, d-lg, p, x-3, p, y-2, tex, t-sm">"
-                {categori, e, s.m, a, p(catego, r, y="> ()"
-                  <option, ke, y={catego, r, y} val, u, e="{catego, r, y}>)"
+                {categori, e, s.m, a, p(catego, r, y = "> ()"
+                  <option, ke, y={catego, r, y} val, u, e = "{catego, r, y}>)"
                 {/* TODO: Fix JSX expression *
-                  <option, ke, y={catego, r, y} val, u, e="{catego, r, y}><"
+                  <option, ke, y={catego, r, y} val, u, e = "{catego, r, y}><"
                     {catego, r, y.char, A, t(0).toUpperCa, s, e() + catego, r, y.sli, c, e(1)}
                   <
                 ))}
@@ -683,13 +683,13 @@ Analyzi, n, g...)
             <d, i, v><
               <label, className=""block, tex, t-sm, fon, t-medium, tex, t-gr, a, y-700, m, b-1">Impa, c, t<"
               <sele , c, t;></sele>
-  val, u, e="{ selectedImpa, c, t };"
+  val, u, e = "{ selectedImpa, c, t };"
                 onChan, g, e={(e) => setSelectedImpa, c, t(e.targ, e, t.val, u, e)}"
                 classNa, m, e=""border, borde, r-gr, a, y-300, rounde, d-lg, p, x-3, p, y-2, tex, t-sm">"
-                {impac, t, s.m, a, p(impa, c, t="> ()"
-                  <option, ke, y={impa, c, t} val, u, e="{impa, c, t}>)"
+                {impac, t, s.m, a, p(impa, c, t = "> ()"
+                  <option, ke, y={impa, c, t} val, u, e = "{impa, c, t}>)"
                 {/* TODO: Fix JSX expression *
-                  <option, ke, y={impa, c, t} val, u, e="{impa, c, t}><"
+                  <option, ke, y={impa, c, t} val, u, e = "{impa, c, t}><"
                     {impa, c, t.char, A, t(0).toUpperCa, s, e() + impa, c, t.sli, c, e(1)}
                   <
                 ))}
@@ -706,10 +706,10 @@ Analyzi, n, g...)
             <h3, className=""te, x, t-lg, fon, t-semibold, tex, t-gr, a, y-9, 0, 0">SEO, Issue, s & Recommendatio, n, s<"
             <AnimatePresen, c, e><
               {/* TODO: Fix JSX expression *
-  k, e, y="{ iss, u, e.id };"
-                  initi, a, l="{{ opaci, t, y: 0, y: 20 }}"
-                  anima, t, e="{{ opaci, t, y: 1, y: 0 }}"
-                  ex, i, t="{{ opaci, t, y: 0, y: -20 }}""
+  k, e, y = "{ iss, u, e.id };"
+                  initi, a, l = "{{ opaci, t, y: 0, y: 20 }}"
+                  anima, t, e = "{{ opaci, t, y: 1, y: 0 }}"
+                  ex, i, t = "{{ opaci, t, y: 0, y: -20 }}""
                   classNa, m, e=""border, borde, r-gr, a, y-200, rounde, d-l, g, p-4, hove, r: shad, o, w-md, transitio, n-shad, o, w">"
                   <div, className=""flex, item, s-start, justif, y-betwe, e, n">";<"
                     <div, className=""flex, item, s-start, ga, p-3, fle, x-1">";)"

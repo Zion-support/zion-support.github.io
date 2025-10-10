@@ -1,7 +1,7 @@
-exports.handler="async function (event, context) {}"
+exports.handler = "async function (event, context) {}"
   try {}
     // Unused media scanning simulation;
-    const result="{}"
+    const result = {}
       statusCode: 200;
       headers: {,
         'Content-Type': 'application/json',
@@ -30,7 +30,7 @@ timestamp: new Date().toISOString()
         error: 'Internal server error'),
         message: error.message),;
 function: 'unused-media-scanner',
-exports.handler="async function (event, context) {/* TODO: Fix JSX expression */}"
+exports.handler = "async function (event, context) {/* TODO: Fix JSX expression */}"
       },
       bod,
   y: JSON.stringify({/* TODO: Fix JSX expression */}

@@ -1,8 +1,8 @@
-exports.handler="async function (event, context) {/* TODO: Fix JSX expression */}"
+exports.handler = "async function (event, context) {/* TODO: Fix JSX expression */}"
 //     // // console.log removed for production;
 }
     // OG image update simulation;
-    const result="{}"
+    const result = {}
       statusCode: 200;
       headers: {,
         'Content-Type': 'application/json',
@@ -16,7 +16,7 @@ function: 'og-image-update-runner',
           status: 'active',
           imagesUpdated: 0;
           lastUpdate: new Date().toISOString()}
-    const result="{/* TODO: Fix JSX expression */}"
+    const result = "{/* TODO: Fix JSX expression */}"
         'Access-Control-Allow-Origin': '*'}
       },
       bod,

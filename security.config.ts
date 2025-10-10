@@ -3,7 +3,7 @@
  * Comprehensive security settings and best practices;
  */
 
-export const securityConfig="{}"
+export const securityConfig = {}
   // Content Security Policy;
   csp: {,
     directives: {,
@@ -29,7 +29,7 @@ export const securityConfig="{}"
     'X-XSS-Protection': '1; mode="block',"
     'Referrer-Policy': 'strict-origin-when-cross-origin',
     'Permissions-Policy': 'camera=(), microphone=(), geolocation="()',"
-    'Strict-Transport-Security': 'max-age="31536000; includeSubDomains; preload'},"
+    'Strict-Transport-Security': 'max-age = "31536000; includeSubDomains; preload'},"
   // Input validation;
   validation: {,
     maxInputLength: 10000;
@@ -67,7 +67,7 @@ export const securityConfig="{}"
     encodeSpecialChars: true;
     trimWhitespace: true;
     removeNullBytes: true;
-export const securityConfig="{/* TODO: Fix JSX expression */}"
+export const securityConfig = "{/* TODO: Fix JSX expression */}"
     },
     reportOnl,
   y: false},
@@ -95,5 +95,4 @@ export const securityConfig="{/* TODO: Fix JSX expression */}"
   // Data sanitization,
   sanitization: {/* TODO: Fix JSX expression */}
   }};
-
 export default securityConfig;

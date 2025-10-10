@@ -466,7 +466,7 @@ export const,
   s://ziontechgroup.com / services / ai - creative - studio',
   real_servic,
   e: true}
-export type CuttingEdgeAIService="{/* TODO: Fix JSX expression */}"
+export type CuttingEdgeAIService = "{/* TODO: Fix JSX expression */}"
 	}
 ];
 ;
@@ -482,7 +482,7 @@ export type CuttingEdgeAIService="{;"
 		| 'AI Business Management',
 		| 'AI Healthcare',
 		| 'AI Neural Interfaces',
-export type CuttingEdgeAIService="{/* TODO: Fix JSX expression */}"
+export type CuttingEdgeAIService = "{/* TODO: Fix JSX expression */}"
 		| 'AI Quantum Computing'}
 	pricin,
   g: {/* TODO: Fix JSX expression */}
@@ -614,7 +614,7 @@ export const,
   e: true}
 ];
 ;
-export type CuttingEdgeAIService="{/* TODO: Fix JSX expression */}"
+export type CuttingEdgeAIService = "{/* TODO: Fix JSX expression */}"
 		| 'AI Quantum Computing'}
 	pricin,
   g: {/* TODO: Fix JSX expression */}
@@ -663,7 +663,7 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [;
 		link: 'https://ziontechgroup.com/services/ai-creative-studio';
 		realService: true}
 ];
-export type CuttingEdgeAIService="id: string;"
+export type CuttingEdgeAIService = "id: string;"
   name: string;
   description: string;
   category: unknown;
@@ -1169,7 +1169,7 @@ i,
   s: ['Marketing velocity_cost savings'],' lin,
   k: 'http,
   s://ziontechgroup.com / services / ai - creative - studio', real_servic,
-  e: true} export type CuttingEdgeAIService = {} ]; export type CuttingEdgeAIService="{/* TODO: Fix JSX expression */}"
+  e: true} export type CuttingEdgeAIService = {} ]; export type CuttingEdgeAIService = "{/* TODO: Fix JSX expression */}"
   y:  ,' | 'AI Consciousness'' | 'AI Emotional Intelligence'' | 'AI Creativity'' | 'AI Psychology'' | 'AI Business Management'' | 'AI Healthcare'' | 'AI Neural Interfaces'' | 'AI Quantum Computing'} pricin,
   g: {/* TODO: Fix JSX expression */}
   r: string, professional?: string} enterprise?: string }; feature,
@@ -1205,7 +1205,7 @@ i,
   s: ['Marketing velocityCost savings'];' lin,
   k: 'http,
   s://ziontechgroup.com/services/ai-creative-studio'; realServic,
-  e: true} ]; export type CuttingEdgeAIService="{/* TODO: Fix JSX expression */}"
+  e: true} ]; export type CuttingEdgeAIService = "{/* TODO: Fix JSX expression */}"
   y:  ,' | 'AI Consciousness'' | 'AI Emotional Intelligence'' | 'AI Creativity'' | 'AI Psychology'' | 'AI Business Management'' | 'AI Healthcare'' | 'AI Neural Interfaces'' | 'AI Quantum Computing'} pricin,
   g: {/* TODO: Fix JSX expression */}
   r: string, professional?: string} enterprise?: string }; feature,

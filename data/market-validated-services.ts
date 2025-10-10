@@ -1637,7 +1637,7 @@ contact_info: unknown;
   mobile: string;
   email: string}
   address: string;
-const contact_info="mobile: '+1 302 464 0950',"
+const contact_info = "mobile: '+1 302 464 0950',"
 email: 'kleber@ziontechgroup.com',
 address: "364 E Main St STE 1008 Middletown DE 19709",
 	{/* TODO: Fix JSX expression */}

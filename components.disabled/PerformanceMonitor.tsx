@@ -6,11 +6,11 @@ import React from 'react';
   PerformanceMonitor: React.FC = () => {/* TODO: Fix JSX expression */}"
   P: '}entry.startTime)} } } }); try {/* TODO: Fix JSX expression */}',
   s:
-        s: ["largest-contentful-paint"] })} catch () {}const fidObserver="new (window as any).PerformanceObserver((lis)"
+        s: ["largest-contentful-paint"] })} catch () {}const fidObserver = "new (window as any).PerformanceObserver((lis)"
   t: unknown) => {/* TODO: Fix JSX expression */}"
   D: '}entry.processingStart - entry.startTime)} } } }); try {/* TODO: Fix JSX expression */}',
   s:
-        s: ["first-input"] })} catch () {}let clsValue = 0; const clsObserver="new (window as any).PerformanceObserver((lis,")"
+        s: ["first-input"] })} catch () {}let clsValue = 0; const clsObserver = "new (window as any).PerformanceObserver((lis,")"
   t: unknown) => {for (const entry of list.getEntries()) { const entryAny = entry as any} if (!entryAny.hadRecentInput) { clsValue += entryAny.value} } if (typeof console !== "undefined") {/* TODO: Fix JSX expression */}"
   S: '}clsValue)} }); try {/* TODO: Fix JSX expression */}',
   s:
@@ -45,11 +45,11 @@ import React from 'react';
   PerformanceMonitor: React.FC = () => {/* TODO: Fix JSX expression */}"
   P: '}entry.startTime)} } } }); try {/* TODO: Fix JSX expression */}',
   s:
-        s: ["largest-contentful-paint"] })} catch (e) {} const fidObserver="new (window as any).PerformanceObserver((lis)"
+        s: ["largest-contentful-paint"] })} catch (e) {} const fidObserver = "new (window as any).PerformanceObserver((lis)"
   t: unknown) => {/* TODO: Fix JSX expression */}"
   D: '}entry.processingStart - entry.startTime)} } } }); try {/* TODO: Fix JSX expression */}',
   s:
-        s: ["first-input"] })} catch (e) {} let clsValue = 0; const clsObserver="new (window as any).PerformanceObserver((lis,")"
+        s: ["first-input"] })} catch (e) {} let clsValue = 0; const clsObserver = "new (window as any).PerformanceObserver((lis,")"
   t: unknown) => {for (const entry of list.getEntries()) { const entryAny = entry as any} if (!entryAny.hadRecentInput) { clsValue += entryAny.value} } if (typeof console !== "undefined") {/* TODO: Fix JSX expression */}"
   S: '}clsValue)} }); try {/* TODO: Fix JSX expression */}',
   s:

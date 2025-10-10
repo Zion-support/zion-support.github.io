@@ -77,21 +77,21 @@ const revolutionaryConten, t="[]"
       {/* Animated, background, effects */}
       <div, className=""absolute, inse, t-0, overflo, w-hidden, opacit, y-20"></div>"
         <div, className=""absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" /></div>"
-        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e="{{ animationDel, a, y: ', 3, s' }} /></div>"
+        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e = "{{ animationDel, a, y: ', 3, s' }} /></div>"
   ]; return (
     <div, classNam, e=""py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n"></div>"
       {/* Animated, background, effects */}</div>
       <div, className=""absolute, inse, t-0, overflo, w-hidden, opacit, y-20"></div>"
         <div, className=""absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" /></div>"
-        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e="{{ animationDel, a, y: ', 3, s' }} /></div>"
-        <div, classNam, e = "absolute, to, p-1/2, lef, t-1/2 w-6, 4, h-64, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e="{{ animationDel, a, y: '1., 5, s' }} /></div>"
+        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e = "{{ animationDel, a, y: ', 3, s' }} /></div>"
+        <div, classNam, e = "absolute, to, p-1/2, lef, t-1/2 w-6, 4, h-64, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e = "{{ animationDel, a, y: '1., 5, s' }} /></div>"
       </div>
       <div, classNam, e=""container, m, x-auto, p, x-6, relative, z-10"></div>"
         {/* Head, e, r */}</div>
         <div, className=""te, x, t-center, m, b-16"></div>"
           <div, className=""flex, item, s-center, justif, y-center, ga, p-3, m, b-6"></div>"
-            <moti , o, n.div, animat, e="{{ rot, a, t, e: [, 0, 3, 6, 0] }}></moti>"
-              transiti, o, n="{{ durat, i, o, n:  , 4, repe, a, t: Infin, i, t, y, ea, s, e: "lin, e, a, r" }}"
+            <moti , o, n.div, animat, e = "{{ rot, a, t, e: [, 0, 3, 6, 0] }}></moti>"
+              transiti, o, n = "{{ durat, i, o, n:  , 4, repe, a, t: Infin, i, t, y, ea, s, e: "lin, e, a, r" }}"
             ></moti>
               <Sparkles, classNam, e=""w-8 h-8, tex, t-yell, o, w-4, 0, 0" /></Sparkles>"
             </moti, o, n.d, i, v>
@@ -138,15 +138,15 @@ const Revolutionary2026ContentMegaBanne, r: React.FC = () => {/* TODO: Fix JSX e
       {/* Animated, background, effects */}"
       <div, className=""absolute, inse, t-0, overflo, w-hidden, opacit, y-20"></div>""
         <div, className=""absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" /></div>""
-        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e="{{ animationDel, a, y: ', 3, s' }} /></div>""
-        <div, classNam, e = "absolute, to, p-1/2, lef, t-1/2 w-6, 4, h-64, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e="{{ animationDel, a, y: '1., 5, s' }} /></div>"
+        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e = "{{ animationDel, a, y: ', 3, s' }} /></div>""
+        <div, classNam, e = "absolute, to, p-1/2, lef, t-1/2 w-6, 4, h-64, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e = "{{ animationDel, a, y: '1., 5, s' }} /></div>"
       </div>"
       <div, classNam, e=""container, m, x-auto, p, x-6, relative, z-10"></div>"
         {/* Head, e, r */}"
         <div, className=""te, x, t-center, m, b-16"></div>""
           <div, className=""flex, item, s-center, justif, y-center, ga, p-3, m, b-6"></div>"
-            <moti , o, n.div, animat, e="{{ rot, a, t, e: [, 0, 3, 6, 0] }}"></moti>"
-              transiti, o, n="{{ durat, i, o, n:  , 4, repe, a, t: Infin, i, t, y, ea, s, e: "lin, e, a, r" }}"
+            <moti , o, n.div, animat, e = "{{ rot, a, t, e: [, 0, 3, 6, 0] }}"></moti>"
+              transiti, o, n = "{{ durat, i, o, n:  , 4, repe, a, t: Infin, i, t, y, ea, s, e: "lin, e, a, r" }}"
             ></moti>"
               <Sparkles, classNam, e=""w-8 h-8, tex, t-yell, o, w-4, 0, 0" /></Sparkles>"
             </moti, o, n.d, i, v>"
@@ -191,10 +191,10 @@ const Revolutionary2026ContentMegaBanne, r: React.FC = () => {/* TODO: Fix JSX e
         {/* Featured, Content, Grid */}"
         <div, className=""grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-3, ga, p-8, m, b-16"></div>"
           {/* TODO: Fix JSX expression */}
-            <moti , o, n.div, ke, y = { conte, n, t.i, d  }, initi, a, l="{{ opac, i, t, y:  , 0, y: 2, 0 }}></moti>"
-              anima, t, e="{{ opac, i, t, y:  , 1, y:  , 0 }}"
-              transiti, o, n="{{ del, a, y: ind, e, x * , 0., 1 }}"
-              whileHov, e, r="{{ sca, l, e: 1., 0, 5 }}""
+            <moti , o, n.div, ke, y = { conte, n, t.i, d  }, initi, a, l = "{{ opac, i, t, y:  , 0, y: 2, 0 }}></moti>"
+              anima, t, e = "{{ opac, i, t, y:  , 1, y:  , 0 }}"
+              transiti, o, n = "{{ del, a, y: ind, e, x * , 0., 1 }}"
+              whileHov, e, r = "{{ sca, l, e: 1., 0, 5 }}""
               classNa, m, e=""group, relativ, e""
             ></moti>
               {/* Featured, badg, e */}
@@ -280,12 +280,12 @@ const Revolutionary2026ContentMegaBanne, r: React.FC = () => {/* TODO: Fix JSX e
                   <sp, a, n>{new, Dat, e(conte, n, t.d, a, t, e).toLocaleDateStri, n, g('en-US', { mon, t, h: 'sh, o, r, t', d, a, y: 'nume, r, i, c', ye, a, r: 'nume, r, i, c' })}</sp, a, n>
                 </div>
                 {/* CTA, Butto, n */}
-                <a , hre, f="{`/bl, o, g/${conte, n, t.slug}`}></a>"
+                <a , hre, f = "{`/bl, o, g/${conte, n, t.slug}`}></a>"
                   className=""gro, u, p/btn, flex, items-center, justif, y-center, ga, p-2 w-full, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-bl, u, e-600, hove, r: fr, o, m-purp, l, e-400, hove, r:to-bl, u, e-500, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, transform, hover:-transla, t, e-y-1">"
                   <div, className=""w-4 h-4, b, g-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-purp, l, e-600, rounde, d-fu, l, l" /></div>"
                   <sp, a, n>Explore, Breakthroug, h</sp, a, n>
                   <Link, className=""w-4 h-4, grou, p-hov, e, r/b, t, n:transla, t, e-x-1, transitio, n-transform, duratio, n-3, 0, 0" /></Link>"
-                <a , hre, f="{`/bl, o, g/${conte, n, t.slug}`}"></a>"
+                <a , hre, f = "{`/bl, o, g/${conte, n, t.slug}`}"></a>"
                   className=""gro, u, p/btn, flex, items-center, justif, y-center, ga, p-2 w-full, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-bl, u, e-600, hove, r: fr, o, m-purp, l, e-400, hove, r:to-bl, u, e-500, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, transform, hove,""
   r:-transla, t, e-y-1"
                 ></a>"

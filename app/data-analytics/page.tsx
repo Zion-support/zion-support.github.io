@@ -22,7 +22,7 @@ import {}
   Eye,
   PieChart} from 'lucide-react';
 ;
-const DataAnalyticsPage: React.FC = () => {const features="[]"
+const DataAnalyticsPage: React.FC = () => {const features = []
     {}
       ico,
     n: BarChart,
@@ -46,7 +46,7 @@ const DataAnalyticsPage: React.FC = () => {const features="[]"
     }
   ];
 ;
-const benefits="[]"
+const benefits = []
     'Make data-driven business decisions',
     'Identify new opportunities and trends',
     'Improve operational efficiency',

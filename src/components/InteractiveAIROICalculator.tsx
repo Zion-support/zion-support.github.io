@@ -23,9 +23,9 @@ const calculateROI = () => {return Math.max(0, roi)};return (
                 <label className="'block text-sm font-medium text-gray-700 mb-2'></label>"
                   Current Annual Cost ($)
                 </label>
-                <input type="'number'></input>"
+                <input type = "'number'></input>"
                   value="{currentCost}"
-                  onChange={e="> setCurrentCost(Number(e.target.value))}"
+                  onChange={e = "> setCurrentCost(Number(e.target.value))}"
                   className="'w-full px-4 py-2 border border-gray-300 rounded-lg,'"
   focus:ring-2,
   focus:ring-blue-500,
@@ -37,18 +37,18 @@ Expected Efficiency Gain (%)
                   min="'10'"
                   max="'90'"
                   value="{efficiencyGain}"
-                  onChange={e="> setEfficiencyGain(Number(e.target.value))}"
+                  onChange={e = "> setEfficiencyGain(Number(e.target.value))}"
                   className="'w-full'"
 <div className="'text-center text-sm text-gray-600'></div>"
                   {efficiencyGain}%
                   Implementation Timeframe (months)
                 <select></select>
                   value="{timeframe}"
-                  onChange={e="> setTimeframe(Number(e.target.value))}>"
-                  <option value="{6}>6 months</option>"
-                  <option value="{12}>12 months</option>"
-                  <option value="{18}>18 months</option>"
-                  <option value="{24}>24 months</option>"
+                  onChange={e = "> setTimeframe(Number(e.target.value))}>"
+                  <option value = "{6}>6 months</option>"
+                  <option value = "{12}>12 months</option>"
+                  <option value = "{18}>18 months</option>"
+                  <option value = "{24}>24 months</option>"
                 </select>
             <div className="'bg-gradient-to-br from-blue-50 to-purple-50 p-8 rounded-2xl'></div>"
               <h3 className="'text-2xl font-bold text-gray-900 mb-6 text-center'></h3>"
@@ -62,6 +62,4 @@ Expected Efficiency Gain (%)
                 </p>
     </section>
   );
-
 export default InteractiveAIROICalculator;
-

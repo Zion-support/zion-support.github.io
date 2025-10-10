@@ -2,7 +2,7 @@
 import React from 'react';
   ];
 ;
-const benefits="[]"
+const benefits = []
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -12,7 +12,6 @@ const benefits="[]"
     'Cost-effective pricing plans',
     'Proven track record of success'
   ];
-
             </h1>
             <p className=""text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>"
               Transform your business with our advanced page solutions. 

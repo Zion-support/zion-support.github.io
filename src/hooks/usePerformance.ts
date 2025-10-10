@@ -1,5 +1,4 @@
 import { useState, useEffect, useCallback } from 'react';
-
 interface PerformanceMetrics {}
   loadTime: number;
   renderTime: number;
@@ -24,31 +23,26 @@ const optimize = useCallback(() => {}
         // console.log removed for production;
 })}
   }, []);
-
   useEffect(() => {}
     // Measure performance metrics;
 const measurePerformance = () => {}
       if (typeof window !== 'undefined' && 'performance' in window) {;
-const navigation="performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;"
-        const memory="(performance as any).memory;"
+const navigation = "performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;"
+        const memory = "(performance as any).memory;"
         setMetrics({}
           loadTime: navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0,
           renderTime: navigation ? navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart : 0,
           memoryUsage: memory ? memory.usedJSHeapSize : 0,
           networkLatency: navigation ? navigation.responseEnd - navigation.requestStart : 0})}
     };
-
     measurePerformance()}, []);
-
   return {}
     metrics,
     optimize}};
-
 'use client';
 interface PerformanceMetrics {/* TODO: Fix JSX expression */}
   O: Add content}
 };
-
   loadTime: number;,
     domContentLoaded: number;,
     firstContentfulPaint: number;,
@@ -82,7 +76,7 @@ const firstContentfulPaint=""
       if ('PerformanceObserver' in window) {// TODO: Add content}
 
 }
-        const observer = new PerformanceObserver(list="> {/* TODO: Fix JSX expression */}"
+        const observer = new PerformanceObserver(list = "> {/* TODO: Fix JSX expression */}"
   O: Add content}
 })
           for (const entry of list.getEntries()) {/* TODO: Fix JSX expression */}
@@ -108,7 +102,7 @@ const firstContentfulPaint=""
       if ('PerformanceObserver' in window) {// TODO: Add content}
 
 }
-        const observer = new PerformanceObserver(list="> {/* TODO: Fix JSX expression */}"
+        const observer = new PerformanceObserver(list = "> {/* TODO: Fix JSX expression */}"
   O: Add content}
 })
           for (const entry of list.getEntries()) {/* TODO: Fix JSX expression */}
@@ -121,7 +115,7 @@ const firstContentfulPaint=""
             if (entry.entryType === 'first-input') {// TODO: Add content}
 }
 
-              firstInputDelay="(entry as unknown as {/* TODO: Fix JSX expression */})"
+              firstInputDelay = "(entry as unknown as {/* TODO: Fix JSX expression */})"
   t: number }).processingStart - entry.startTime}
           }
         }
@@ -170,4 +164,3 @@ const firstContentfulPaint=""
 }
       window.removeEventListener('load', measurePerformance)}}, []);
   return { metrics, isMonitoring }};
-

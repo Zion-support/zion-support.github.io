@@ -3,7 +3,7 @@ import {}
   GraduationCap, MessageSquare, Settings, BarChart, Eye, CreditCard,
   Cloud, Building, Database, Lock, Code, Smartphone, Settings as SettingsIcon,
   Target, Zap, BarChart as BarChartIcon, Users, Globe, Cpu, Lock as LockIcon} from 'lucide-react'
-export const microSAASServices="[]"
+export const microSAASServices = []
   // Productivity & Management Tools;
   {}
     title: 'AI Project Manager Pro',
@@ -277,7 +277,7 @@ export const microSAASServices="[]"
     users: '18,000+',
     freeTrial: '7 days'}
 ]
-export const aiServices="[]"
+export const aiServices = []
   {}
     title: 'Machine Learning Solutions',
     description: 'Custom ML models for predictive analytics, decision-making, and intelligent automation. Trusted by Fortune 500 companies.',
@@ -407,7 +407,7 @@ export const aiServices="[]"
     users: '600+',
     freeTrial: '30 days'}
 ]
-export const itServices="[]"
+export const itServices = []
   {}
     title: 'Cloud Migration Services',
     description: 'Seamless cloud migration with zero downtime and optimized performance. Migrate to the cloud with confidence.',
@@ -505,7 +505,7 @@ export const itServices="[]"
     users: '200+',
     freeTrial: '30 days'}
 ]
-export const specializedServices="[]"
+export const specializedServices = []
   {}
     title: 'Quantum Computing Solutions',
     description: 'Cutting-edge quantum computing with quantum algorithms, optimization, and research. Solve complex problems with quantum power.',
@@ -1364,7 +1364,7 @@ export const services: Service[] = []
     }
   }
 ]
-export const serviceCategories="[]"
+export const serviceCategories = []
   {}
     id: 'ai',
     name: 'AI Services',
@@ -1398,7 +1398,7 @@ export const serviceCategories="[]"
     bgColor: 'bg-pink-500/10'
   }
 ]
-export const contactInfo="{}"
+export const contactInfo = {}
   phone: '+1 (302) 464-0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008, Middletown, DE 19709',

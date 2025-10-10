@@ -1,6 +1,6 @@
 interface, October2025AIRevolutionBannerProp, s {/* TODO: Fix JSX expression */}
 }
-export, default, function October2025AIRevolutionBann, e, r({ classNa, m, e="'' }: October2025AIRevolutionBannerPro, p, s): vo, i, d {;"
+export, default, function October2025AIRevolutionBann, e, r({ classNa, m, e = "'' }: October2025AIRevolutionBannerPro, p, s): vo, i, d {;"
   return(<div, className="{`bg-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/40, vi, a-indi, g, o-9, 0, 0/40, t, o-cy, a, n-9, 0, 0/40, borde, r-y, borde, r-purp, l, e-5, 0, 0/30 ${classNa, m, e}`}>`;`"
   return (
     <div, className="{`bg-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/40, vi, a-indi, g, o-9, 0, 0/40, t, o-cy, a, n-9, 0, 0/40, borde, r-y, borde, r-purp, l, e-5, 0, 0/30 ${classNa, m, e}`}>`;`</div>"
@@ -10,7 +10,7 @@ export, default, function October2025AIRevolutionBann, e, r({ classNa, m, e="'' 
           <div, className=""inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-cy, a, n-5, 0, 0/20, p, x-6, p, y-2, rounde, d-full, border, border-purp, l, e-5, 0, 0/30, m, b-4"></div>"
             <Sparkles, className=""w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e  />""
             <span, className=""te, x, t-purp, l, e-300, fon, t-semibold, tex, t-sm, uppercase, tracking-wid, e, r"></span>"
-export, default, function October2025AIRevolutionBann, e, r({ classNa, m, e="'' }: October2025AIRevolutionBannerPro, p, s): vo, i, d {/* TODO: Fix JSX expression */}"
+export, default, function October2025AIRevolutionBann, e, r({ classNa, m, e = "'' }: October2025AIRevolutionBannerPro, p, s): vo, i, d {/* TODO: Fix JSX expression */}"
     <div, className="{`bg-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/40, vi, a-indi, g, o-9, 0, 0/40, t, o-cy, a, n-9, 0, 0/40, borde, r-y, borde, r-purp, l, e-5, 0, 0/30 ${classNa, m, e}`}>`;`"
       <div, className=""container, m, x-auto, p, x-6, p, y-12"></div>"
         {/* Head, e, r */}"
@@ -27,13 +27,13 @@ export, default, function October2025AIRevolutionBann, e, r({ classNa, m, e="'' 
           </h2>)
           <p, className=""te, x, t-xl, tex, t-whi, t, e/80, ma, x-w-4xl, m, x-auto, leadin, g-relax, e, d">)"
             <strong, className=""te, x, t-whi, t, e">NEW, TODA, Y:</stro, n, g> Master, autonomous, AI agen, t, s (94% task, automatio, n)"
-export, default, function October2025AIRevolutionBann, e, r({ classNa, m, e="'' }: October2025AIRevolutionBannerPro, p, s): vo, i, d {';"
+export, default, function October2025AIRevolutionBann, e, r({ classNa, m, e = "'' }: October2025AIRevolutionBannerPro, p, s): vo, i, d {';"
   return(<div, className="{`bg-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/40, vi, a-indi, g, o-9, 0, 0/40, t, o-cy, a, n-9, 0, 0/40, borde, r-y, borde, r-purp, l, e-5, 0, 0/30 ${classNa, m, e}`}>`;`"
             The, Complete, AI Revoluti, o, n: 3, Essential, Guides;
           </h2>
           <p, className=""te, x, t-xl, tex, t-whi, t, e/80, ma, x-w-4xl, m, x-auto, leadin, g-relax, e, d"></p>"
             <strong, className=""te, x, t-whi, t, e">NEW, TODA, Y:</stro, n, g> Master, autonomous, AI agen, t, s (94% task, automatio, n)"
-export, default, function October2025AIRevolutionBann, e, r({ classNa, m, e="'' }: October2025AIRevolutionBannerPro, p, s): vo, i, d {';"
+export, default, function October2025AIRevolutionBann, e, r({ classNa, m, e = "'' }: October2025AIRevolutionBannerPro, p, s): vo, i, d {';"
   return (
     <div, className="{`bg-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/40, vi, a-indi, g, o-9, 0, 0/40, t, o-cy, a, n-9, 0, 0/40, borde, r-y, borde, r-purp, l, e-5, 0, 0/30 ${classNa, m, e}`}>`;`</div>"
       <div, className=""container, m, x-auto, p, x-6, p, y-12">";"
@@ -45,7 +45,7 @@ export, default, function October2025AIRevolutionBann, e, r({ classNa, m, e="'' 
           </h2>"
           <p, className=""te, x, t-xl, tex, t-whi, t, e/80, ma, x-w-4xl, m, x-auto, leadin, g-relax, e, d"></p>""
             <strong, className=""te, x, t-whi, t, e">NEW, TODA, Y:</stro, n, g> Master, autonomous, AI agen, t, s (94% task, automatio, n)"
-export, default, function October2025AIRevolutionBann, e, r({ classNa, m, e="'' }: October2025AIRevolutionBannerPro, p, s): vo, i, d {/* TODO: Fix JSX expression */}`"
+export, default, function October2025AIRevolutionBann, e, r({ classNa, m, e = "'' }: October2025AIRevolutionBannerPro, p, s): vo, i, d {/* TODO: Fix JSX expression */}`"
     <div, className="{`bg-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/40, vi, a-indi, g, o-9, 0, 0/40, t, o-cy, a, n-9, 0, 0/40, borde, r-y, borde, r-purp, l, e-5, 0, 0/30 ${classNa, m, e}`}>`;`""
       <div, className=""container, m, x-auto, p, x-6, p, y-12">";"
         {/* Head, e, r */}"

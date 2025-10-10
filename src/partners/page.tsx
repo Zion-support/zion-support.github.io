@@ -6,11 +6,11 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 ;
 const PartnersPage: React.FC = () => {;
-const partnerTypes="[]"
+const partnerTypes = []
 import Navigation from '../components;
 import Footer from '../components;
 const PartnersPage: React.FC = () => {}
-  const partnerTypes="[]"
+  const partnerTypes = []
     {}
       titl,
     e: 'Technology Partners',
@@ -56,7 +56,7 @@ const PartnersPage: React.FC = () => {}
     }
   ];
 ;
-const benefits="[]"
+const benefits = []
       icon: Globe,
       title: 'Global Reach',
       description:       ,
@@ -69,11 +69,11 @@ icon$5: Star,
 icon$5: CheckCircle,
       title: 'Quality Assurance',
       description: 'Rigorous partner certification and quality standards';
-const partnershipTiers="[]"
+const partnershipTiers = []
       name: 'Strategic Partners',
       description: 'Rigorous partner certification and quality standards'
 
-  const partnershipTiers="[]"
+  const partnershipTiers = []
       nam,
     e: 'Strategic Partners',
       level: 'Platinum',
@@ -208,7 +208,7 @@ const partnerTypes="[];"
     o: '📋' }
     }
   ];
-  const benefits="[]"
+  const benefits = []
 icon: Globe,
       title: 'Global Reach',
       description: 'Access to worldwide markets and customers through our partner network',;

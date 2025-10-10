@@ -59,7 +59,7 @@ const,
     }
   ];
 ;
-const migrationSteps="[]"
+const migrationSteps = []
       titl,
   e: 'Assessment & Planning',
       descriptio,
@@ -108,7 +108,7 @@ const migrationSteps="[]"
   n: TrendingUp,
       duratio,
   n: 'Ongoing';
-const pricingPlans="[]"
+const pricingPlans = []
       nam,
   e: 'Small Business',
       pric,
@@ -161,7 +161,7 @@ const pricingPlans="[]"
         'Multi-cloud architecture',
         'Dedicated account manager',
         'Custom integrations';
-const benefits="[]"
+const benefits = []
       titl,
   e: 'Cost Reduction',
       descriptio,
@@ -402,10 +402,7 @@ const benefits="[]"
         <a href="/contact" className=""bg-cyan-500 text-white px-6 py-3 rounded-lg,"></a>"
   hover:bg-cyan-600 transition-colors"></a>
           Contact Us;
-
   )};
-
 export default CloudMigrationPage;
-
 "`
 

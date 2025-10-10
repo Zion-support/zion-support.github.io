@@ -5,7 +5,6 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, Zap, Heart, Clock, Users, Shield, BarChart, ArrowRight } from 'lucide-react';
 import SEOOptimizer from '../components/SEOOptimizer';
-
       icon: Heart,
       title: 'HIPAA Compliance',
       description: 'Full HIPAA compliance solutions with automated controls, monitoring, and reporting capabilities.',
@@ -42,7 +41,6 @@ import SEOOptimizer from '../components/SEOOptimizer';
       benefits: ['Patient insights', 'Operational metrics', 'Outcome tracking']
     }
   ];
-
   return (
     <div className=""min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900"></div>"
       <SEOOptimizer title=""Healthcare IT Solutions - Zion Tech Group"></SEOOptimizer>"
@@ -53,7 +51,7 @@ import SEOOptimizer from '../components/SEOOptimizer';
       {/* Hero Section */}
       <section className=""relative py-20 px-4 overflow-hidden"></section>"
         <div className=""absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(239,68,68,0.3)_0%,transparent_50%)] animate-pulse" /></div>"
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style="{{ animationDelay: '1s' }} /></div>"
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style = "{{ animationDelay: '1s' }} /></div>"
         <div className=""relative max-w-7xl mx-auto text-center"></div>"
           <h1 className=""text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"></h1>"
             Healthcare;

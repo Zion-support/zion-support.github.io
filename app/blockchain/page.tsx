@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Link, Shield, Zap, Target, BarChart, Cpu, Sparkles } from 'lucide-react';
 ;
-const BlockchainPage: React.FC = () => {const blockchainServices="[]"
+const BlockchainPage: React.FC = () => {const blockchainServices = []
     {}
       titl,
     e: 'Smart Contract Development',
@@ -145,7 +145,7 @@ technologies: ['React', 'Next.js', 'Web3.js', 'Ethers.js', 'WalletConnect'];)
       technologies: ['Strategic Planning', 'Technology Evaluation', 'Risk Assessment', 'ROI Analysis'];);
   ];
 ;
-const categories = [...new Set(blockchainServices.map(service="> service.category))];"
+const categories = [...new Set(blockchainServices.map(service = "> service.category))];"
   return (
     <div></div>
         <title>Blockchain Services - Zion Tech Group<
@@ -318,7 +318,7 @@ const categories = [...new Set(blockchainServices.map(service="> service.categor
           </div>
         </section>
         {/* Services by Category *
-        {categories.map(category="> ("
+        {categories.map(category = "> ("
           <section key={category)} className=""py-16 bg-gray-50"></section>"
             <div className=""max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"><"
               <div className=""text-center mb-12"><"

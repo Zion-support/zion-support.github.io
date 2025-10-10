@@ -11,11 +11,11 @@ const [isRefreshing, setIsRefreshing] = useState(false);
 const refreshStatus = async () => {}
     setIsRefreshing(true);
     // Simulate API call;
-    await new Promise(resolve="> setTimeout(resolve, 1000))"
+    await new Promise(resolve = "> setTimeout(resolve, 1000))"
     setLastUpdated(new Date())
     setIsRefreshing(false);
 ;
-const services="[]"
+const services = []
     {}
       name: 'API Services',
       status: 'operational',
@@ -66,7 +66,7 @@ const services="[]"
     }
   ];
 ;
-const incidents="[]"
+const incidents = []
     {}
       id: 1,
       title: 'API Response Time Degradation',
@@ -134,7 +134,6 @@ const overallStatus = services.every(service => service.status === 'operational'
     : services.some(service => service.status === 'outage') 
       ? 'outage' 
       : 'degraded';
-
   return (
           </h1>
           <p className=""text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed"></p>"
@@ -149,7 +148,7 @@ const overallStatus = services.every(service => service.status === 'operational'
                  overallStatus === 'degraded' ? 'Degraded Performance' : 'Service Outage'}
               </span>
             </div>
-            <button onClick="{refreshStatus}></button>"
+            <button onClick = "{refreshStatus}></button>"
               disabled="{isRefreshing}"
               className=""flex items-center gap-2 text-gray-400 hover:text-white transition-colors disabled:opacity-50">"
               <RefreshCw className="{`w-5 h-5 ${isRefreshing ? 'animate-spin' : ''}`} /></RefreshCw>"

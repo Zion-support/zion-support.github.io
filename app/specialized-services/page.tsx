@@ -6,7 +6,7 @@ import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 const PagePage: React.FC = () => {}
 return (;
-const features="[]"
+const features = []
     {}
       icon: Brain,
       title: 'AI-Powered Intelligence',
@@ -44,7 +44,7 @@ const features="[]"
       benefits: ['End-to-end encryption', 'Access controls', 'Audit trails', 'Compliance support']
     }
   ];
-  const benefits="[]"
+  const benefits = []
     'Transform your business with AI technology',
     'Make data-driven decisions with confidence',
     'Identify trends and opportunities early',

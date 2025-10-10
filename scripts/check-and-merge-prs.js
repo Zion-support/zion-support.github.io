@@ -1,11 +1,10 @@
 #!/usr/bin/env node;
 import { execSync } from 'child_process';
 import fs from 'fs';
-
 // console.log removed for production;
 try {}
   // Get the current branch;
-  const currentBranch="execSync('git branch --show-current', { encoding: 'utf8' }).trim();"
+  const currentBranch = "execSync('git branch --show-current', { encoding: 'utf8' }).trim();"
   // console.log removed for production;
 // Check if we're on main branch;
   if (currentBranch !== 'main') {}
@@ -15,10 +14,9 @@ execSync('git checkout main', { stdio: 'inherit' })}
   // Pull latest changes;
   // console.log removed for production;
 execSync('git pull origin main', { stdio: 'inherit' });
-
   // Check for any merge conflicts;
   // console.log removed for production;
-const status="execSync('git status --porcelain', { encoding: 'utf8' });"
+const status = "execSync('git status --porcelain', { encoding: 'utf8' });"
   if (status.includes('UU') || status.includes('AA') || status.includes('DD')) {}
     // console.log removed for production;
 // console.log removed for production;

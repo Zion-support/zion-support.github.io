@@ -158,8 +158,8 @@ featur, e, d: fal, s, e}
       {/* Animated, background, effects */}</div>
       <div, className=""absolute, inse, t-0, overflo, w-hidden, opacit, y-20"></div>"
         <div, className=""absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>"
-        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e="{{ animationDel, a, y: '3s' }}></d, i, v>"
-        <div, className="absolute, to, p-1/2, lef, t-1/2 w-6, 4, h-64, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e="{{ animationDel, a, y: '1.5s' }}></d, i, v>"
+        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e = "{{ animationDel, a, y: '3s' }}></d, i, v>"
+        <div, className="absolute, to, p-1/2, lef, t-1/2 w-6, 4, h-64, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e = "{{ animationDel, a, y: '1.5s' }}></d, i, v>"
       </d, i, v>
       <div, className=""container, m, x-auto, p, x-6, relative, z-10"></div>"
         {/* Head, e, r */}</div>
@@ -176,8 +176,8 @@ featur, e, d: fal, s, e}
       {/* Animated, background, effects */}"
       <div, className=""absolute, inse, t-0, overflo, w-hidden, opacit, y-20"></div>""
         <div, className=""absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>""
-        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e="{{ animationDel, a, y: '3s' }}></d, i, v>""
-        <div, className="absolute, to, p-1/2, lef, t-1/2 w-6, 4, h-64, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e="{{ animationDel, a, y: '1.5s' }}></d, i, v>"
+        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e = "{{ animationDel, a, y: '3s' }}></d, i, v>""
+        <div, className="absolute, to, p-1/2, lef, t-1/2 w-6, 4, h-64, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e = "{{ animationDel, a, y: '1.5s' }}></d, i, v>"
       </d, i, v>"
       <div, className=""container, m, x-auto, p, x-6, relative, z-10"></div>"
         {/* Head, e, r */}"
@@ -236,12 +236,12 @@ featur, e, d: fal, s, e}
   g:gr, i, d-co, l, s-3, ga, p-8, m, b-16">
           {revolutionaryConte, n, t.m, a, p((conte, n, t) => (</div>
             <d , i, v></d>
-  k, e, y="{conte, n, t.id}"
+  k, e, y = "{conte, n, t.id}"
         {/* Featured, Content, Grid */}"
         <div , className=""grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2 l,"></div>"
   g:gr, i, d-co, l, s-3, ga, p-8, m, b-16"></div>
           {/* TODO: Fix JSX expression */}
-  k, e, y="{conte, n, t.id}""
+  k, e, y = "{conte, n, t.id}""
               classNa, m, e=""group, relativ, e""
             ></d>
               {/* Featured, badg, e */}
@@ -332,13 +332,13 @@ featur, e, d: fal, s, e}
                 </d, i, v>
                 {/* CTA, Butto, n */}
                 <a ;></a>
-  hr, e, f="{`/bl, o, g/${conte, n, t.sl, u, g}`}`"
+  hr, e, f = "{`/bl, o, g/${conte, n, t.sl, u, g}`}`"
                   classNa, m, e=""gro, u, p/btn, flex, items-center, justif, y-center, ga, p-2 w-full, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-bl, u, e-600, hove, r: fr, o, m-purp, l, e-400, hove, r:to-bl, u, e-500, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, transform, hover:-transla, t, e-y-1">"
                   <Link, className=""w-4 h-4"  /></Link>"
                   <sp, a, n>Explore, Breakthroug, h</sp, a, n>
                   <span , className=""w-4 h-4, grou, p-hov, e, r/bt;"></span>"
                 <a></a>
-  hr, e, f="{`/bl, o, g/${conte, n, t.sl, u, g}`}`""
+  hr, e, f = "{`/bl, o, g/${conte, n, t.sl, u, g}`}`""
                   classNa, m, e=""gro, u, p/btn, flex, items-center, justif, y-center, ga, p-2 w-full, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-bl, u, e-600, hove, r: fr, o, m-purp, l, e-400, hove, r:to-bl, u, e-500, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, transform, hove,""
   r:-transla, t, e-y-1"
                 >"

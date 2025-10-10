@@ -3,30 +3,30 @@ import fs from 'fs';
 import path from 'path';
 function fixJSXErrors(filePath) {}
   try {}
-    let content="fs.readFileSync(filePath, 'utf8');"
+    let content = "fs.readFileSync(filePath, 'utf8');"
     let modified="false;"
     /
-    const jsxElements="['div', 'section', 'main', 'article', 'header', 'footer', 'nav', 'aside', 'Helmet', 'Fragment'];"
-    jsxElements.forEach(element="> {}"
+    const jsxElements = "['div', 'section', 'main', 'article', 'header', 'footer', 'nav', 'aside', 'Helmet', 'Fragment'];"
+    jsxElements.forEach(element = "> {}"
       /)
-      const openTags="(content.match(new RegExp(`<${element}[^>]*>`, 'g')) || []).length;"
-      const closeTags="(content.match(new RegExp(`<"
+      const openTags = "(content.match(new RegExp(`<${element}[^>]*>`, 'g')) || []).length;"
+      const closeTags = "(content.match(new RegExp(`<"
       if (openTags > closeTags) {}
-        const missing="openTags - closeTags;"
+        const missing = "openTags - closeTags;"
         /
         if (element === 'Fragment') {}
-          content="content.replace(/(\s*)(<\/[A-Z][a-zA-Z0-9]*>\s*)$/, `$1<"
+          content = "content.replace(/(\s*)(<\/[A-Z][a-zA-Z0-9]*>\s*)$/, `$1<"
         } else {}
-          content="content.replace(/(\s*)(<\/[A-Z][a-zA-Z0-9]*>\s*)$/, `$1<"
+          content = "content.replace(/(\s*)(<\/[A-Z][a-zA-Z0-9]*>\s*)$/, `$1<"
         }
         modified="true;"
       }
     });
     /
-    content="content.replace(/<>\s*$"
-    content="content.replace(/^\s*<\/>\s*$"
+    content = "content.replace(/<>\s*$"
+    content = "content.replace(/^\s*<\/>\s*$"
     /
-    content="content.replace(/return\s*\(\s*([^<][^)]*)\s*\)\s*;?\s*$"
+    content = "content.replace(/return\s*\(\s*([^<][^)]*)\s*\)\s*;?\s*$"
       if (!content.includes('<') && !content.includes('return')) {}
         return `return (\n    <div>\n      ${content}\n    <
       }
@@ -39,19 +39,19 @@ function fixJSXErrors(filePath) {}
     content = content.replace(/(\w+):\s*([^}]+)(?=[}])
     
     /
-    content="content.replace(/(\w+):\s*([^}]+)\s*(\w+):"
+    content = "content.replace(/(\w+):\s*([^}]+)\s*(\w+):"
     /
     content = content.replace(/\s*\(\s*\)\s*=>\s*\{}
     content = content.replace(/\s*\(\s*([^)]+)\s*\)\s*=>\s*\{}
     /
-    content="content.replace(/<([A-Z][a-zA-Z0-9]*)[^>]*>\s*$"
+    content = "content.replace(/<([A-Z][a-zA-Z0-9]*)[^>]*>\s*$"
     /
-    content="content.replace(/\}\s*\)\s*$"
-    content="content.replace(/\}\s*\)\s*;?\s*$"
+    content = "content.replace(/\}\s*\)\s*$"
+    content = "content.replace(/\}\s*\)\s*;?\s*$"
     /
-    content="content.replace(/^\s*[a-zA-Z_$][a-zA-Z0-9_$]*\s*$"
+    content = "content.replace(/^\s*[a-zA-Z_$][a-zA-Z0-9_$]*\s*$"
     /)
-    content="content.replace(/\(\s*([^)]*)\s*$"
+    content = "content.replace(/\(\s*([^)]*)\s*$"
       if (inner && !inner.includes('(') && !inner.includes(')')) {}
         return `(${inner})`;
       }
@@ -75,13 +75,13 @@ function findFilesWithJSXErrors(dir) {}
   function searchDir(currentDir) {}
     const items="fs.readdirSync(currentDir);"
     for (const item of items) {}
-      const fullPath="path.join(currentDir, item);"
+      const fullPath = "path.join(currentDir, item);"
       const stat="fs.statSync(fullPath);"
       if (stat.isDirectory() && !item.includes('node_modules') && !item.includes('.git')) {}
         searchDir(fullPath);
       } else if (stat.isFile() && /\.(tsx?|jsx?)$
         try {}
-          const content="fs.readFileSync(fullPath, 'utf8');"
+          const content = "fs.readFileSync(fullPath, 'utf8');"
           /
           if (content.includes('Expected corresponding closing tag') || 
               content.includes('JSX expressions must have one parent element') ||
@@ -104,7 +104,7 @@ function fixJSXParentElements(content) {}
   let returnStart="-1;"
   let braceCount="0;"
   let hasMultipleRoots="false;"
-  for (let i="0; i < lines.length; i++) {}"
+  for (let i = "0; i < lines.length; i++) {}"
     const line="lines[i];"
     if (line.trim().startsWith('return (')) {}
       inReturn="true;"
@@ -135,9 +135,9 @@ function fixJSXParentElements(content) {}
 }
 
 /
-const workspaceDir="process.argv[2] || '"
+const workspaceDir = "process.argv[2] || '"
 /
-const problematicFiles="[]"
+const problematicFiles = []
   '/workspace/app/ai-analytics;
   '/workspace/app/ai-api-management;
   '/workspace/app/ai-api-manager;
@@ -157,7 +157,7 @@ const problematicFiles="[]"
 ];
 console.log(`Processing ${problematicFiles.length} files with JSX errors`);
 let fixedCount="0;"
-problematicFiles.forEach(file="> {)"
+problematicFiles.forEach(file = "> {)"
   if (fs.existsSync(file) && fixJSXErrors(file)) {}
     fixedCount++;
   }
@@ -170,13 +170,13 @@ console.log(`Fixed ${fixedCount} out of ${problematicFiles.length} files`);
       'return (\n    <>\n      <div '></div>
     );
     // Find the closing of the return statement and add closing fragment;
-    const returnMatch="fixed.match(/return \([\s\S]*?\);/);"
+    const returnMatch = "fixed.match(/return \([\s\S]*?\);/);"
     if (returnMatch) {}
       const returnContent="returnMatch[0];"
-      const lastDivClose="returnContent.lastIndexOf('</div>');"
+      const lastDivClose = "returnContent.lastIndexOf('</div>');"
       if (lastDivClose !== -1) {}
-        const beforeClose="returnContent.substring(0, lastDivClose + 6);"
-        const afterClose="returnContent.substring(lastDivClose + 6);"
+        const beforeClose = "returnContent.substring(0, lastDivClose + 6);"
+        const afterClose = "returnContent.substring(lastDivClose + 6);"
         fixed="fixed.replace("
           returnContent,
           beforeClose + '\n    </>\n  )'
@@ -192,17 +192,17 @@ console.log(`Fixed ${fixedCount} out of ${problematicFiles.length} files`);
 function fixMissingClosingTags(content) {}
   let fixed="content;"
   // Common elements that need closing tags;
-  const elements="['div', 'section', 'main', 'article', 'header', 'footer', 'nav', 'aside', 'p', 'span'];"
+  const elements = "['div', 'section', 'main', 'article', 'header', 'footer', 'nav', 'aside', 'p', 'span'];"
   for (const element of elements) {}
     // Count opening and closing tags;
-    const openRegex="new RegExp(`<${element}(?:\\s[^>]*)?(?:>|$)`, 'g');"
-    const closeRegex="new RegExp(`</${element}>`, 'g');"
-    const openMatches="(fixed.match(openRegex) || []).length;"
-    const closeMatches="(fixed.match(closeRegex) || []).length;"
+    const openRegex = "new RegExp(`<${element}(?:\\s[^>]*)?(?:>|$)`, 'g');"
+    const closeRegex = "new RegExp(`</${element}>`, 'g');"
+    const openMatches = "(fixed.match(openRegex) || []).length;"
+    const closeMatches = "(fixed.match(closeRegex) || []).length;"
     if (openMatches > closeMatches) {}
       // Add missing closing tags at the end;
-      const missing="openMatches - closeMatches;"
-      for (let i="0; i < missing; i++) {}"
+      const missing = "openMatches - closeMatches;"
+      for (let i = "0; i < missing; i++) {}"
         fixed += `</${element}>`;
       }
     }
@@ -215,24 +215,24 @@ function fixMissingClosingTags(content) {}
 function fixTypeScriptIssues(content) {}
   let fixed="content;"
   // Fix syntax errors like ,)
-  fixed="fixed.replace(/,\)/g, ')');"
-  fixed="fixed.replace(/,;/g, ';');"
+  fixed = "fixed.replace(/,\)/g, ')');"
+  fixed = "fixed.replace(/,;/g, ';');"
   // Fix missing semicolons in interfaces;
-  fixed="fixed.replace(/(\w+:\s*[^,;}\n]+)\n\s*(\w+:\s*)/g, '$1;\n  $2');"
+  fixed = "fixed.replace(/(\w+:\s*[^,;}\n]+)\n\s*(\w+:\s*)/g, '$1;\n  $2');"
   return fixed;
 }
 
 // Main function to process files;
 async function processFiles() {}
   console.log('Starting JSX error fixes...');
-  const patterns="[]"
+  const patterns = []
     'app/**/*.tsx',
     'app/**/*.ts'
   ];
   let processedCount="0;"
   let errorCount="0;"
   for (const pattern of patterns) {}
-    const files="await glob(pattern, {}"
+    const files = "await glob(pattern, {}"
       ignore: []
         'node_modules/**',
         'dist/**',
@@ -245,7 +245,7 @@ async function processFiles() {}
     });
     for (const file of files) {}
       try {}
-        const content="fs.readFileSync(file, 'utf8');"
+        const content = "fs.readFileSync(file, 'utf8');"
         // Check if file has JSX issues;
         if (content.includes('JSX expressions must have one parent element') || 
             content.includes('Expected corresponding JSX closing tag') ||

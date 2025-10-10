@@ -107,7 +107,7 @@ $4})}, 100)};
       if (this.props.fallback) {}
         return this.props.fallback}
       return (
-        <ErrorFallback error="{this.state.error}></ErrorFallback>"
+        <ErrorFallback error = "{this.state.error}></ErrorFallback>"
           errorInfo="{this.state.errorInfo}"
           errorId="{this.state.errorId}"
           onRetry="{this.handleRetry}"
@@ -129,11 +129,11 @@ const ErrorFallback="memo<ErrorFallbackProps>("
             <svg className="'w-6 h-6 text-red-600'></svg>"
               fill="'none'"
               stroke="'currentColor'"
-              viewBox="'0 0 24 24'>"
-              <path strokeLinecap="'round'></path>"
+              viewBox = "'0 0 24 24'>"
+              <path strokeLinecap = "'round'></path>"
                 strokeLinejoin="'round'"
                 strokeWidth="{2}"
-                d="'M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.732-.833-2.5 0L4.268 19.5c-.77.833.192 2.5 1.732 2.5z'"
+                d = "'M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.732-.833-2.5 0L4.268 19.5c-.77.833.192 2.5 1.732 2.5z'"
               />
             </svg>
           </div>
@@ -200,7 +200,6 @@ const ErrorFallback="memo<ErrorFallbackProps>("
   focus:ring-offset-2 transition-colors'
 //>
 //             Try Again;
-
           </button>
           <button></button>
             onClick={() => window.location.reload()}

@@ -1,5 +1,4 @@
 import React from 'react';
-
 interface EnhancedFooterProps {/* TODO: Fix JSX expression */}
 }
 ;
@@ -17,6 +16,5 @@ const EnhancedFooter = React.memo(function EnhancedFooter({ className="'' }: Enh
       <p className=""text-blue-600">This component is under development.</p>"
     </div>
   )});
-
 export default EnhancedFooter;
 "`

@@ -19,13 +19,13 @@ const CognitiveComputingTransformatio, n: React.FC = () => { ,
         <title></title>
           Cognitive, Computing, Enterprise Transformati, o, n | Hum, a, n-Like, AI, Intelligence | Zion, Tech, Group;
         <
-        <meta , nam, e="'description'></meta>"
-          conte, n, t="'Discover, cognitive, computing systems, that, understa, n, d, reas, o, n, and, learn, like huma, n, s. Achieve, 9, 8.5% decision, accurac, y, $1.2 B+ val, u, e, and, 9, 2% faster, proble, m-solving, with, cognitive AI.'"
+        <meta , nam, e = "'description'></meta>"
+          conte, n, t = "'Discover, cognitive, computing systems, that, understa, n, d, reas, o, n, and, learn, like huma, n, s. Achieve, 9, 8.5% decision, accurac, y, $1.2 B+ val, u, e, and, 9, 2% faster, proble, m-solving, with, cognitive AI.'"
         /><
-        <meta , nam, e="'keywor, d, s'></meta>"
-          conte, n, t="'cognitive, computi, n, g, AI, intelligenc, e, natural, language, understanding, knowledge, reasonin, g, continuous, learnin, g, explainable, A, I, enterprise, transformatio, n')"
-        <link , re, l="'canonic, a, l')></link>"
-          hr, e, f="'htt, p, s: //ziontechgro u p.c o m/bl o g'"
+        <meta , nam, e = "'keywor, d, s'></meta>"
+          conte, n, t = "'cognitive, computi, n, g, AI, intelligenc, e, natural, language, understanding, knowledge, reasonin, g, continuous, learnin, g, explainable, A, I, enterprise, transformatio, n')"
+        <link , re, l = "'canonic, a, l')></link>"
+          hr, e, f = "'htt, p, s: //ziontechgro u p.c o m/bl o g'"
       <
 
       <div, className="'m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-da, r, k'></div>"
@@ -34,34 +34,34 @@ const CognitiveComputingTransformatio, n: React.FC = () => { ,
 } {/* Hero, Sect, i, o, n */ }
       <div, className="'m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-da, r, k'><"
         <Head, e, r / > {/* Hero, Sect, i, o, n *
-        <div, classNam, e="'relative, p, t-24, p, b-16, overflo, w-hidd, e, n'></div>"
+        <div, classNam, e = "'relative, p, t-24, p, b-16, overflo, w-hidd, e, n'></div>"
           <div , className="'absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle, at, 30% 5, 0%,rg, b, a(1, 3, 9,92,2, 4, 6,0.2),transparent_, 5, 0%)]'></div>"
-          <div, classNam, e="'relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8'>,"
+          <div, classNam, e = "'relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8'>,"
             {/* Breadc, r, u, m, b *
-        <div, classNam, e="'relative, p, t-24, p, b-16, overflo, w-hidd, e, n'><"
+        <div, classNam, e = "'relative, p, t-24, p, b-16, overflo, w-hidd, e, n'><"
           <div, className="'absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle, at, 30% 5, 0%,rg, b, a(1, 3, 9,92,2, 4, 6,0.2),transparent_, 5, 0%)]' /><"
-          <div, classNam, e="'relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8'></div>"
+          <div, classNam, e = "'relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8'></div>"
             {/* Breadc, r, u, m, b */}<
-            <nav, classNam, e="'flex, item, s-center, spac, e-x-2, tex, t-sm, m, b-8'></nav>"
+            <nav, classNam, e = "'flex, item, s-center, spac, e-x-2, tex, t-sm, m, b-8'></nav>"
 const CognitiveComputingTransformatio, n: React.FC = () => {/* TOD,
     O: Fix JSX expression *
         <Head, e, r / > {/* Hero, Sect, i, o, n *
-        <div, classNam, e="'relative, p, t-24, p, b-16, overflo, w-hidd, e, n'><"
+        <div, classNam, e = "'relative, p, t-24, p, b-16, overflo, w-hidd, e, n'><"
           <div, className="'absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle, at, 30% 5, 0%,rg, b, a(1, 3, 9,92,2, 4, 6,0.2),transparent_, 5, 0%)]' /><"
-          <div, classNam, e="'relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8'><"
+          <div, classNam, e = "'relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8'><"
             {/* Breadc, r, u, m, b *
-            <nav, classNam, e="'flex, item, s-center, spac, e-x-2, tex, t-sm, m, b-8'><"
-              <Link , t, o="''></Link>"
+            <nav, classNam, e = "'flex, item, s-center, spac, e-x-2, tex, t-sm, m, b-8'><"
+              <Link , t, o = "''></Link>"
                 className="'te, x, t-purp, l, e-300, hove, r: te, x, t-white, transitio, n-colo, r, s'"
               >;
 const CognitiveComputingTransformatio, n: React.FC = () => {/* TODO: Fix JSX expression */}
         <Head, e, r / > {/* Hero, Sect, i, o, n */ }
-        <div, classNam, e="'relative, p, t-24, p, b-16, overflo, w-hidd, e, n'></div>"
+        <div, classNam, e = "'relative, p, t-24, p, b-16, overflo, w-hidd, e, n'></div>"
           <div, className="'absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle, at, 30% 5, 0%,rg, b, a(1, 3, 9,92,2, 4, 6,0.2),transparent_, 5, 0%)]' /></div>"
-          <div, classNam, e="'relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8'></div>"
+          <div, classNam, e = "'relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8'></div>"
             {/* Breadc, r, u, m, b */}
-            <nav, classNam, e="'flex, item, s-center, spac, e-x-2, tex, t-sm, m, b-8'></nav>"
-              <Link , t, o="'/'></Link>"
+            <nav, classNam, e = "'flex, item, s-center, spac, e-x-2, tex, t-sm, m, b-8'></nav>"
+              <Link , t, o = "'/'></Link>"
                 className="'te, x, t-purp, l, e-300, hove, r: te, x, t-white, transitio, n-colo, r, s'"
               ></Link>
               ><
@@ -71,50 +71,50 @@ const CognitiveComputingTransformatio, n: React.FC = () => {/* TODO: Fix JSX exp
               ><
                 Bl, o, g;
               <
-              <span, classNam, e="'te, x, t-purp, l, e-4, 0, 0'></span>/<"
-              <span, classNam, e="'te, x, t-whi, t, e'></span>Cognitive</span>, Computin, g<"
+              <span, classNam, e = "'te, x, t-purp, l, e-4, 0, 0'></span>/<"
+              <span, classNam, e = "'te, x, t-whi, t, e'></span>Cognitive</span>, Computin, g<"
               <p, className="'te, x, t-xl, tex, t-purp, l, e-100, leadin, g-relaxed, m, b-8'></p>"
                 Leading, organizations, are achie, v, i, n, g{' '}<
-                <span, classNam, e="'fo, n, t-bold, tex, t-gre, e, n-3, 0, 0'></span>"
+                <span, classNam, e = "'fo, n, t-bold, tex, t-gre, e, n-3, 0, 0'></span>"
               <p, className="'te, x, t-xl, tex, t-purp, l, e-100, leadin, g-relaxed, m, b-8'><"
                 Leading, organizations, are achie, v, i, n, g{' '}
-                <span, classNam, e="'fo, n, t-bold, tex, t-gre, e, n-3, 0, 0'><"
+                <span, classNam, e = "'fo, n, t-bold, tex, t-gre, e, n-3, 0, 0'><"
                   98.5% decision, accurac, y;
                 <
                 ,
-                <span, classNam, e="'fo, n, t-bold, tex, t-gre, e, n-3, 0, 0'><"
+                <span, classNam, e = "'fo, n, t-bold, tex, t-gre, e, n-3, 0, 0'><"
                   {' '}
                   $1.2B+ in, annual, value;
                 <
                 , a, n, d;
-                <span, classNam, e="'fo, n, t-bold, tex, t-gre, e, n-3, 0, 0'></span>"
-                <span, classNam, e="'fo, n, t-bold, tex, t-gre, e, n-3, 0, 0'><"
+                <span, classNam, e = "'fo, n, t-bold, tex, t-gre, e, n-3, 0, 0'></span>"
+                <span, classNam, e = "'fo, n, t-bold, tex, t-gre, e, n-3, 0, 0'><"
                   {' '}
                   92% faster, proble, m-solvi, n, g;
                 <
                 by, deploying, cognitive AI, platforms, that underst, a, n, d, reas, o, n, and, learn, like huma, n, s.
-        <div , classNam, e="'bg-whi, t, e/5, backdro, p-bl, u, r-sm, borde, r-y, borde, r-whi, t, e'></div>"
-          <div, classNam, e="'m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8'>,"
-            <div, classNam, e="'grid, gri, d-co, l, s-2, m, d:gr, i, d-co, l, s-4, ga, p-6, tex, t-cent, e, r'></div>"
-                <li, classNam, e="'flex, item, s-start, ga, p-3, tex, t-purp, l, e-1, 0, 0'></li>"
-                  <CheckCircle , classNam, e="'w-5 h-5, tex, t-gre, e, n-400, m, t-1, fle, x-shri, n, k-0'></CheckCircle>"
+        <div , classNam, e = "'bg-whi, t, e/5, backdro, p-bl, u, r-sm, borde, r-y, borde, r-whi, t, e'></div>"
+          <div, classNam, e = "'m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8'>,"
+            <div, classNam, e = "'grid, gri, d-co, l, s-2, m, d:gr, i, d-co, l, s-4, ga, p-6, tex, t-cent, e, r'></div>"
+                <li, classNam, e = "'flex, item, s-start, ga, p-3, tex, t-purp, l, e-1, 0, 0'></li>"
+                  <CheckCircle , classNam, e = "'w-5 h-5, tex, t-gre, e, n-400, m, t-1, fle, x-shri, n, k-0'></CheckCircle>"
         <div , className="'bg-whi, t, e/5, backdro, p-bl, u, r-sm, borde, r-y, borde, r-whi, t, e'></div>"
           <div, className="'m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8'>,"
             <div, className="'grid, gri, d-co, l, s-2, m, d:gr, i, d-co, l, s-4, ga, p-6, tex, t-cent, e, r'></div>"
-        <div, classNam, e="'bg-whi, t, e/5, backdro, p-bl, u, r-sm, borde, r-y, borde, r-whi, t, e/10, p, y-8'><"
-          <div, classNam, e="'m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8'><"
-            <div, classNam, e="'grid, gri, d-co, l, s-2, m, d:gr, i, d-co, l, s-4, ga, p-6, tex, t-cent, e, r'><"
-                <li, classNam, e="'flex, item, s-start, ga, p-3, tex, t-purp, l, e-1, 0, 0'></li>"
-                  <CheckCircle , classNam, e="'w-5 h-5, tex, t-gre, e, n-400, m, t-1, fle, x-shri, n, k-0'></CheckCircle>"
+        <div, classNam, e = "'bg-whi, t, e/5, backdro, p-bl, u, r-sm, borde, r-y, borde, r-whi, t, e/10, p, y-8'><"
+          <div, classNam, e = "'m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8'><"
+            <div, classNam, e = "'grid, gri, d-co, l, s-2, m, d:gr, i, d-co, l, s-4, ga, p-6, tex, t-cent, e, r'><"
+                <li, classNam, e = "'flex, item, s-start, ga, p-3, tex, t-purp, l, e-1, 0, 0'></li>"
+                  <CheckCircle , classNam, e = "'w-5 h-5, tex, t-gre, e, n-400, m, t-1, fle, x-shri, n, k-0'></CheckCircle>"
         <div, className="'bg-whi, t, e/5, backdro, p-bl, u, r-sm, borde, r-y, borde, r-whi, t, e/10, p, y-8'><"
           <div, className="'m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8'><"
             <div, className="'grid, gri, d-co, l, s-2, m, d:gr, i, d-co, l, s-4, ga, p-6, tex, t-cent, e, r'><"
                 <li, className="'flex, item, s-start, ga, p-3, tex, t-purp, l, e-1, 0, 0'></li>"
-        <div, classNam, e="'bg-whi, t, e/5, backdro, p-bl, u, r-sm, borde, r-y, borde, r-whi, t, e/10, p, y-8'><"
-          <div, classNam, e="'m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8'><"
-            <div, classNam, e="'grid, gri, d-co, l, s-2, m, d:gr, i, d-co, l, s-4, ga, p-6, tex, t-cent, e, r'><"
-                <li, classNam, e="'flex, item, s-start, ga, p-3, tex, t-purp, l, e-1, 0, 0'><"
-                  <CheckCircle, classNam, e="'w-5 h-5, tex, t-gre, e, n-400, m, t-1, fle, x-shri, n, k-0' /><"
+        <div, classNam, e = "'bg-whi, t, e/5, backdro, p-bl, u, r-sm, borde, r-y, borde, r-whi, t, e/10, p, y-8'><"
+          <div, classNam, e = "'m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8'><"
+            <div, classNam, e = "'grid, gri, d-co, l, s-2, m, d:gr, i, d-co, l, s-4, ga, p-6, tex, t-cent, e, r'><"
+                <li, classNam, e = "'flex, item, s-start, ga, p-3, tex, t-purp, l, e-1, 0, 0'><"
+                  <CheckCircle, classNam, e = "'w-5 h-5, tex, t-gre, e, n-400, m, t-1, fle, x-shri, n, k-0' /><"
         <div, className="'bg-whi, t, e/5, backdro, p-bl, u, r-sm, borde, r-y, borde, r-whi, t, e/10, p, y-8'><"
           <div, className="'m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8'><"
             <div, className="'grid, gri, d-co, l, s-2, m, d:gr, i, d-co, l, s-4, ga, p-6, tex, t-cent, e, r'><"
@@ -124,11 +124,11 @@ const CognitiveComputingTransformatio, n: React.FC = () => {/* TODO: Fix JSX exp
                     <strong, className="'te, x, t-whi, t, e'>Explain, decision, s<"
                     with, transparent, logic;
                   <
-                <h2, classNam, e="'te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-center, ga, p-3'><"
+                <h2, classNam, e = "'te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-center, ga, p-3'><"
                   Core, Capabilitie, s;
                 <h2, className="'te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-center, ga, p-3'><"
                   <Sparkles , className="'w-8 h-8, tex, t-yell, o, w-4, 0, 0'></Sparkles>"
-                  <Sparkles, classNam, e="'w-8 h-8, tex, t-yell, o, w-4, 0, 0' /><"
+                  <Sparkles, classNam, e = "'w-8 h-8, tex, t-yell, o, w-4, 0, 0' /><"
                   Core, Capabilitie, s;
                 <h2, className="'te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-center, ga, p-3'><"
                   <Sparkles, className="'w-8 h-8, tex, t-yell, o, w-4, 0, 0' /><"
@@ -148,37 +148,37 @@ const CognitiveComputingTransformatio, n: React.FC = () => {/* TODO: Fix JSX exp
                         'Transparent, decision, pathway, s',
                         'Confidence, scoring, for recommendatio, n, s',
                         'Audit, trails, for complian, c, e',
-                        'Hum, a, n-interpretable, explanation, s']}].m, a, p((capabili, t, y, i, d, x) => (<div , ke, y = { id, x }, classNa, m, e="'bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/30, t, o-bl, u, e-9, 0, 0/30, border, border-purp, l, e-5, 0, 0/30, rounde, d-x, l, p-6, hove, r: bord, e, r-purp, l, e-5, 0, 0)'></div>"
-                  ].m, a, p((capabili, t, y, i, d, x) => (<div , ke, y = { id, x }, classNa, m, e="'bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/30, t, o-bl, u, e-9, 0, 0/30, border, border-purp, l, e-5, 0, 0/30, rounde, d-x, l, p-6, hove, r: bord, e, r-purp, l, e-5, 0, 0'></div>"
+                        'Hum, a, n-interpretable, explanation, s']}].m, a, p((capabili, t, y, i, d, x) => (<div , ke, y = { id, x }, classNa, m, e = "'bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/30, t, o-bl, u, e-9, 0, 0/30, border, border-purp, l, e-5, 0, 0/30, rounde, d-x, l, p-6, hove, r: bord, e, r-purp, l, e-5, 0, 0)'></div>"
+                  ].m, a, p((capabili, t, y, i, d, x) => (<div , ke, y = { id, x }, classNa, m, e = "'bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/30, t, o-bl, u, e-9, 0, 0/30, border, border-purp, l, e-5, 0, 0/30, rounde, d-x, l, p-6, hove, r: bord, e, r-purp, l, e-5, 0, 0'></div>"
                     ><
                       <h3, className="'te, x, t-xl, fon, t-bold, tex, t-white, m, b-4, flex, items-center, ga, p-3'><"
                         <span, className="'te, x, t-3, x, l'>{capabili, t, y.ic, o, n}<"
                         {capabili, t, y.title}
-                <h2, classNam, e="'te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-center, ga, p-3'><"
+                <h2, classNam, e = "'te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-center, ga, p-3'><"
                   <TrendingUp , className="'w-8 h-8, tex, t-gre, e, n-4, 0, 0'></TrendingUp>"
                   <TrendingUp, className="'w-8 h-8, tex, t-gre, e, n-4, 0, 0' /><"
                   Enterprise, Application, s;
-                    <div , ke, y = { id, x }, classNa, m, e="'bg-whi, t, e/5, backdro, p-bl, u, r-sm, border, border-whi, t, e/10, rounde, d-x, l, p-6, hove, r: bord, e, r-purp, l, e-5, 0, 0'></div>"
+                    <div , ke, y = { id, x }, classNa, m, e = "'bg-whi, t, e/5, backdro, p-bl, u, r-sm, border, border-whi, t, e/10, rounde, d-x, l, p-6, hove, r: bord, e, r-purp, l, e-5, 0, 0'></div>"
                     ><
-                      <div, classNam, e="'flex, item, s-start, justif, y-between, m, b-4'><"
-                        <Award , classNam, e="'w-8 h-8, tex, t-yell, o, w-4, 0, 0'></Award>"
-                    <div , ke, y = { id, x }, classNa, m, e="'bg-whi, t, e/5, backdro, p-bl, u, r-sm, border, border-whi, t, e/10, rounde, d-x, l, p-6, hove, r: bord, e, r-purp, l, e-5, 0, 0'></div>"
+                      <div, classNam, e = "'flex, item, s-start, justif, y-between, m, b-4'><"
+                        <Award , classNam, e = "'w-8 h-8, tex, t-yell, o, w-4, 0, 0'></Award>"
+                    <div , ke, y = { id, x }, classNa, m, e = "'bg-whi, t, e/5, backdro, p-bl, u, r-sm, border, border-whi, t, e/10, rounde, d-x, l, p-6, hove, r: bord, e, r-purp, l, e-5, 0, 0'></div>"
                     ><
                       <div, className="'flex, item, s-start, justif, y-between, m, b-4'><"
                         <d, i, v></d>
                           <h3, className="'te, x, t-xl, fon, t-bold, tex, t-white, m, b-1'></h3>"
                             {a, p, p.t, i, t, l, e}
                           <
-                          <p, classNam, e="'te, x, t-sm, tex, t-purp, l, e-3, 0, 0'></p>"
-                        <Award, classNam, e="'w-8 h-8, tex, t-yell, o, w-4, 0, 0' /><"
-                    <div , ke, y = { id, x }, classNa, m, e="'bg-whi, t, e/5, backdro, p-bl, u, r-sm, border, border-whi, t, e/10, rounde, d-x, l, p-6, hove, r: bord, e, r-purp, l, e-5, 0, 0'></div>"
+                          <p, classNam, e = "'te, x, t-sm, tex, t-purp, l, e-3, 0, 0'></p>"
+                        <Award, classNam, e = "'w-8 h-8, tex, t-yell, o, w-4, 0, 0' /><"
+                    <div , ke, y = { id, x }, classNa, m, e = "'bg-whi, t, e/5, backdro, p-bl, u, r-sm, border, border-whi, t, e/10, rounde, d-x, l, p-6, hove, r: bord, e, r-purp, l, e-5, 0, 0'></div>"
                     ><
                       <div, className="'flex, item, s-start, justif, y-between, m, b-4'><"
                         <d, i, v><
                           <h3, className="'te, x, t-xl, fon, t-bold, tex, t-white, m, b-1'><"
                             {a, p, p.t, i, t, l, e}
                           <
-                          <p, classNam, e="'te, x, t-sm, tex, t-purp, l, e-3, 0, 0'><"
+                          <p, classNam, e = "'te, x, t-sm, tex, t-purp, l, e-3, 0, 0'><"
                             {a, p, p.industry} Use, Cas, e;
                           <
                         <
@@ -187,12 +187,12 @@ const CognitiveComputingTransformatio, n: React.FC = () => {/* TODO: Fix JSX exp
 
                       <div, className="'grid, gri, d-co, l, s-2, ga, p-3'>)"
                         { Obje, c, t.entri, e, s(a, p, p.imp, a, c, t).m, a, p(([k, e, y, val, u, e], i) = > (<
-                          <div , ke, y = { , i  }, classNa, m, e="'bg-gradie, n, t-to-br, fro, m-gre, e, n-9, 0, 0/20, t, o-emera, l, d-9, 0, 0/20, border, border-gre, e, n-5, 0, 0'></div>"
+                          <div , ke, y = { , i  }, classNa, m, e = "'bg-gradie, n, t-to-br, fro, m-gre, e, n-9, 0, 0/20, t, o-emera, l, d-9, 0, 0/20, border, border-gre, e, n-5, 0, 0'></div>"
                           ><
                             <div, className="'te, x, t-xs, tex, t-purp, l, e-300, m, b-1, capitaliz, e'></div>"
                       <div, className="'grid, gri, d-co, l, s-2, ga, p-3'><"
                         {/* TODO: Fix JSX expression *
-                          <div , ke, y = { , i  }, classNa, m, e="'bg-gradie, n, t-to-br, fro, m-gre, e, n-9, 0, 0/20, t, o-emera, l, d-9, 0, 0/20, border, border-gre, e, n-5, 0, 0'></div>"
+                          <div , ke, y = { , i  }, classNa, m, e = "'bg-gradie, n, t-to-br, fro, m-gre, e, n-9, 0, 0/20, t, o-emera, l, d-9, 0, 0/20, border, border-gre, e, n-5, 0, 0'></div>"
                           ><
                             <div, className="'te, x, t-xs, tex, t-purp, l, e-300, m, b-1, capitaliz, e'><"
                               {k, e, y}:
@@ -237,8 +237,8 @@ const CognitiveComputingTransformatio, n: React.FC = () => {/* TODO: Fix JSX exp
                           $2.8, 7, B;
                         <
                       <
-          <div, classNam, e="'mt-16, b, g-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/50, t, o-pi, n, k-9, 0, 0/50, border, border-purp, l, e-5, 0, 0/30, rounde, d-2x, l, p-8, tex, t-cent, e, r'><"
-            <h2, classNam, e="'te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4'><"
+          <div, classNam, e = "'mt-16, b, g-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/50, t, o-pi, n, k-9, 0, 0/50, border, border-purp, l, e-5, 0, 0/30, rounde, d-2x, l, p-8, tex, t-cent, e, r'><"
+            <h2, classNam, e = "'te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4'><"
           <div, className="'mt-16, b, g-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/50, t, o-pi, n, k-9, 0, 0/50, border, border-purp, l, e-5, 0, 0/30, rounde, d-2x, l, p-8, tex, t-cent, e, r'><"
             <h2, className="'te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4'></h2>"
               Transform, Your, Enterprise with, Cognitive, AI;
@@ -248,7 +248,7 @@ const CognitiveComputingTransformatio, n: React.FC = () => {/* TODO: Fix JSX exp
               deployment, of, human-like, AI, intelligence. Achieve, 9, 8.5%+ decision, accuracy, and $1.2B+ in, annual, value creati, o, n.
                 Schedule, Assessmen, t;
                 Schedule, Assessmen, t<
-                <Link , classNam, e="'ml-2 w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m'></Link>"
+                <Link , classNam, e = "'ml-2 w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m'></Link>"
                 Schedule, Assessmen, t;
                 <Link , className="'ml-2 w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m'></Link>"
             <h2, className="'te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4'><"
@@ -258,7 +258,7 @@ const CognitiveComputingTransformatio, n: React.FC = () => {/* TODO: Fix JSX exp
               Zion, Tech, Group's, Cognitive, Computing Platform, enables, rapid;
               deployment, of, human-like, AI, intelligence. Achieve, 9, 8.5%+ decision, accuracy, and $1.2B+ in, annual, value creati, o, n.
                 Schedule, Assessmen, t;
-                <Link, classNam, e="'ml-2 w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' /><"
+                <Link, classNam, e = "'ml-2 w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' /><"
                 Schedule, Assessmen, t;
                 <Link, className="'ml-2 w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' /><"
             <
@@ -272,11 +272,11 @@ const CognitiveComputingTransformatio, n: React.FC = () => {/* TODO: Fix JSX exp
             <
             <div, className="'grid, m, d: gr, i, d-co, l, s-2, ga, p-6'><"
                   Mul, t, i-Agent, Enterprise, Orchestration Revoluti, o, n;
-                <h3, classNam, e="'te, x, t-xl, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r:te, x, t-purp, l, e-300, transitio, n-colo, r, s'></h3>"
+                <h3, classNam, e = "'te, x, t-xl, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r:te, x, t-purp, l, e-300, transitio, n-colo, r, s'></h3>"
                   Fortune, 20, Telecom: $4.7B, Cognitive, Transformation;
                 <div, className="'flex, item, s-center, ga, p-3, m, b-3'></div>"
                   Mul, t, i-Agent, Enterprise, Orchestration Revoluti, o, n<
-                <h3, classNam, e="'te, x, t-xl, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r:te, x, t-purp, l, e-300, transitio, n-colo, r, s'></h3>"
+                <h3, classNam, e = "'te, x, t-xl, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r:te, x, t-purp, l, e-300, transitio, n-colo, r, s'></h3>"
                   Fortune, 20, Telecom: $4.7B, Cognitive, Transformation<
                 <div, className="'flex, item, s-center, ga, p-3, m, b-3'><"
                     CASE, STUD, Y;
@@ -285,9 +285,9 @@ const CognitiveComputingTransformatio, n: React.FC = () => {/* TODO: Fix JSX exp
                 <h3, className="'te, x, t-xl, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r:te, x, t-purp, l, e-300, transitio, n-colo, r, s'></h3>"
                   Fortune, 20, Telecom: $4.7B, Cognitive, Transformation;
                   Fortune, 20, Telecom: $4.7B, Cognitive, Transformation<
-                <h3, classNam, e="'te, x, t-xl, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r:te, x, t-purp, l, e-300, transitio, n-colo, r, s'><"
+                <h3, classNam, e = "'te, x, t-xl, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r:te, x, t-purp, l, e-300, transitio, n-colo, r, s'><"
                   Mul, t, i-Agent, Enterprise, Orchestration Revoluti, o, n;
-                <h3, classNam, e="'te, x, t-xl, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r:te, x, t-purp, l, e-300, transitio, n-colo, r, s'><"
+                <h3, classNam, e = "'te, x, t-xl, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r:te, x, t-purp, l, e-300, transitio, n-colo, r, s'><"
                   Fortune, 20, Teleco,
   m: $4.7B, Cognitive, Transformation;
                 <div, className="'flex, item, s-center, ga, p-3, m, b-3'><"

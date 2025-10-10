@@ -5,12 +5,12 @@ import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 ;
 const AIVideoGenerationPage: React.FC = () => {;
-const features="[]"
+const features = []
 import Navigation from '../components;
 import Footer from '../components;
 import SEOOptimizer from '../components;
 const AIVideoGenerationPage: React.FC = () => {}
-  const features="[]"
+  const features = []
     'AI Video Creation',
     'Auto-editing',
     'Voice Synthesis',
@@ -23,7 +23,7 @@ const AIVideoGenerationPage: React.FC = () => {}
     'Collaboration Tools'
   ];
 ;
-const benefits="[]"
+const benefits = []
     '90% time savings',
     'Professional quality',
     'Unlimited videos',
@@ -32,7 +32,7 @@ const benefits="[]"
     'Cost-effective solution'
   ];
 ;
-const pricingPlans="[]"
+const pricingPlans = []
     {}
       name: 'Starter',
       price: '$199',
@@ -62,7 +62,7 @@ const pricingPlans="[]"
     <React.Fragment></React>
       <SEOOptimizer title=""AI Video Generator Pro - Create Professional Videos with AI | Zion Tech Group"></SEOOptimizer>"
         description=""Transform your content creation with AI Video Generator Pro. Create professional videos, animations, and presentations with AI-powered editing and voice synthesis. Starting at $199/month.""
-        keywords="{['AI video generation', 'video creation', 'AI editing', 'voice synthesis', 'text to video', 'video automation']}"
+        keywords = "{['AI video generation', 'video creation', 'AI editing', 'voice synthesis', 'text to video', 'video automation']}"
         canonicalUrl=""https://ziontechgroup.com/ai-video-generation""
       />
       <div className=""min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"

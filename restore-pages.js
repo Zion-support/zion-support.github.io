@@ -2,9 +2,8 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-
 // List of all page files that need to be restored;
-const pageFiles="[]"
+const pageFiles = []
   'ai-services/page.tsx',
   'ai-marketing/page.tsx',
   'ai-automation/page.tsx',
@@ -53,19 +52,17 @@ const pageFiles="[]"
   'ai-customer-support-bot/page.tsx',
   'ai-ml-platform/page.tsx'
 ];
-
 // Function to create a basic page component;
 function createPageComponent(pageName) {;
-const componentName="pageName.split('/')[0]"
+const componentName = "pageName.split('/')[0]"
     .split('-')
-    .map(word="> word.charAt(0).toUpperCase() + word.slice(1))"
+    .map(word = "> word.charAt(0).toUpperCase() + word.slice(1))"
     .join('') + 'Page';
   ;
-const displayName="pageName.split('/')[0]"
+const displayName = "pageName.split('/')[0]"
     .split('-')
-    .map(word="> word.charAt(0).toUpperCase() + word.slice(1))"
+    .map(word = "> word.charAt(0).toUpperCase() + word.slice(1))"
     .join(' ');
-
   return `import React from 'react';
 ;
 const ${componentName}: React.FC = () => {}
@@ -88,12 +85,11 @@ const ${componentName}: React.FC = () => {/* TODO: Fix JSX expression */}
         </a>
       </div>,
     </div>)};
-
 export default ${componentName};`}
 
 // Function to restore a page file;
 function restorePageFile(pagePath) {;
-const fullPath="path.join(__dirname, 'src', pagePath);"
+const fullPath = "path.join(__dirname, 'src', pagePath);"
   const dir="path.dirname(fullPath);"
   // Create directory if it doesn't exist;
   if (!fs.existsSync(dir)) {}
@@ -101,7 +97,7 @@ const fullPath="path.join(__dirname, 'src', pagePath);"
 function restorePageFile(pagePath) {/* TODO: Fix JSX expression */}
   e: true })}
   ;
-const pageName="pagePath.replace('.tsx', '');"
+const pageName = "pagePath.replace('.tsx', '');"
   const content="createPageComponent(pageName);"
   fs.writeFileSync(fullPath, content, 'utf8');`
   // console.log removed for production;

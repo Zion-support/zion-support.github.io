@@ -8,7 +8,7 @@ import React, { useState } from 'react';
 const SolutionsPage: React.FC = () => {;
 const [activeTab, setActiveTab] = useState('ai');
 ;
-const _solutionCategories="[]"
+const _solutionCategories = []
     {}
       id: 'ai',
       name: 'AI Solutions',
@@ -47,7 +47,7 @@ $4},
 $4}
   ];
 ;
-const solutions="{}"
+const solutions = {}
     ai: []
       {}
         titl,
@@ -205,7 +205,7 @@ $4}
     ]
   };
 ;
-const benefits="[]"
+const benefits = []
     {}
       icon: Star,
       title: 'Proven Results',
@@ -247,7 +247,7 @@ $4}
           {/* Solution Categories Tabs *
           <div className=""mb-12"></div>"
             <div className=""flex flex-wrap justify-center gap-4 mb-8">)"
-              {solutionCategories.map((category) => (<button key="{ category.id };)></button>"
+              {solutionCategories.map((category) => (<button key = "{ category.id };)></button>"
                   onClick = { () => setActiveTab(category.id) };
                   className="{`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${}"
                     activeTab === category.id;
@@ -266,7 +266,7 @@ $4}
 
   )};
   const [activeTab, setActiveTab] = useState('ai');
-  const _solutionCategories="[]"
+  const _solutionCategories = []
   /
   O: Add items;
 ];;
@@ -347,9 +347,9 @@ $4}
   n: 'Streamline operations with intelligent automation'
     }
   ];
-  const solutions="{/* TODO: Fix JSX expression */}"
+  const solutions = "{/* TODO: Fix JSX expression */}"
   O: Add content}
-  const solutions="{ /* TODO: Fix JSX expression *"
+  const solutions = "{ /* TODO: Fix JSX expression *"
   ,
     O: Add content; };
 };
@@ -678,7 +678,7 @@ $4}
       }
 /
   };
-  const benefits="[]"
+  const benefits = []
   /
   O: Add items;
 ];;
@@ -771,7 +771,7 @@ $4}
   // TOD,
   O: Add content}
           <button><
-                  key="{ category.id };"
+                  key = "{ category.id };"
                   onClick = { () => setActiveTab(category.id) };
                   className="{ `flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${ };"
   /

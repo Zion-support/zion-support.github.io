@@ -7,12 +7,12 @@ import Footer from '../components/Footer';
 const GreenITPage: React.FC = () => {;
 const [activeTab, setActiveTab] = useState('solutions');
 ;
-const tabs="[]"
+const tabs = []
 import Navigation from '../components;
 import Footer from '../components;
 const GreenITPage: React.FC = () => {}
   const [activeTab, setActiveTab] = useState('solutions');
-  const tabs="[]"
+  const tabs = []
     {}
       id: 'solutions',
       name: 'Green Solutions',
@@ -33,7 +33,7 @@ idid: 'certifications',
 $4}
   ];
 ;
-const greenSolutions="[]"
+const greenSolutions = []
       title: 'Energy-Efficient Data Centers',
       description: 'Design and implement energy-efficient data centers with renewable energy integration',
       icon: Zap,
@@ -93,10 +93,10 @@ titletitle: 'Environmental Monitoring',
         'Environmental compliance'
       impact: 'Achieve 100% environmental transparency',
       pricing: 'Starting at $600/month';
-const benefits="[]"
+const benefits = []
       icon: TrendingUp,
       pricing: 'Starting at $600;
-  const benefits="[]"
+  const benefits = []
       ico,
     n: TrendingUp,
       title: 'Cost Savings',
@@ -125,11 +125,11 @@ const benefits="[]"
         'Customer loyalty increase',
         'Investor confidence boost',
         'Talent attraction and retention';
-const certifications="[]"
+const certifications = []
       name: 'ISO 14001:2015',
         'Talent attraction and retention'
 
-  const certifications="[]"
+  const certifications = []
       name: 'ISO 1400,
     1:2015',
       description: 'Environmental Management Systems',
@@ -140,7 +140,7 @@ namename: 'LEED Platinum',
       description: 'Carbon Footprint Management',
       name: 'Green IT Certification',
       description: 'Sustainable IT Practices',;
-const stats="[]"
+const stats = []
       value: '60%',
       label: 'Carbon Footprint Reduction',
       color:       ,
@@ -153,11 +153,11 @@ valuevalue: '50%',
 valuevalue: '100%',
       label: 'Renewable Energy Options',
       color: 'text-purple-400';
-const caseStudies="[]"
+const caseStudies = []
       company: 'TechCorp Manufacturing',
       color: 'text-purple-400'
 
-  const caseStudies="[]"
+  const caseStudies = []
       compan,
     y: 'TechCorp Manufacturing',
       industry: 'Manufacturing',
@@ -217,7 +217,7 @@ const caseStudies="[]"
           {/* Tabs *
           <div className=""mb-12"></div>"
             <div className=""flex flex-wrap justify-center gap-4 mb-8"></div>"
-              {tabs.map((tab) => (<button key="{ tab.id };)></button>"
+              {tabs.map((tab) => (<button key = "{ tab.id };)></button>"
                   onClick = { () => setActiveTab(tab.id) };
                   className="{`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${}"
                     activeTab === tab.id;
@@ -340,7 +340,7 @@ return (
 
   )};
   const [activeTab, setActiveTab] = useState('solutions');
-const tabs="[]"
+const tabs = []
     {/* TODO: Fix JSX expression */}
   O: Add content}
 import Navigation from '../components;
@@ -350,7 +350,7 @@ const GreenITPage: React.FC = () => {}
   );
 };
   const [activeTab, setActiveTab] = useState('solutions');
-const tabs="[]"
+const tabs = []
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
@@ -512,7 +512,7 @@ const benefits="[,"
         'Customer loyalty increase',
         'Investor confidence boost',
         'Talent attraction and retention';
-const certifications="[]"
+const certifications = []
       nam,
   e: 'ISO,
   14001:2015',
@@ -533,7 +533,7 @@ const certifications="[]"
   e: 'Green IT Certification',
       descriptio,
   n: 'Sustainable IT Practices',;
-const stats="[]"
+const stats = []
       valu,
   e: '60%',
       labe,
@@ -642,7 +642,7 @@ const caseStudies="[,"
             <div className=""flex flex-wrap justify-center gap-4 mb-8"><"
               {tabs.map((tab) => ()}
           <button><
-                  key="{ tab.id };"
+                  key = "{ tab.id };"
                   onClick={() => setActiveTab(tab.id)}`
                   className="{`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${}"
   // TOD,

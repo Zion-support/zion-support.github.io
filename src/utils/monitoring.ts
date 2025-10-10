@@ -54,8 +54,8 @@ constructor() {}
       try {;
 const lcpObserver = new PerformanceObserver((list) => {;
 const entries="list.getEntries();"
-const lastEntry="entries[entries.length - 1] as PerformanceEntry & { renderTime?: number; loadTime?: number }"
-          this.metrics.lcp="lastEntry.renderTime || lastEntry.loadTime || 0;"
+const lastEntry = "entries[entries.length - 1] as PerformanceEntry & { renderTime?: number; loadTime?: number }"
+          this.metrics.lcp = "lastEntry.renderTime || lastEntry.loadTime || 0;"
           this.reportMetric('lcp', this.metrics.lcp)
         })
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] })
@@ -64,12 +64,12 @@ const lastEntry="entries[entries.length - 1] as PerformanceEntry & { renderTime?
 const fidObserver = new PerformanceObserver((list) => {;
 const entries="list.getEntries();"
           entries.forEach((entry: PerformanceEntry) => {}
-            this.metrics.fid="(entry as any).processingStart - entry.startTime;"
+            this.metrics.fid = "(entry as any).processingStart - entry.startTime;"
             this.reportMetric('fid', this.metrics.fid)})});
         fidObserver.observe({ entryTypes: ['first-input'] });
 ;
 let clsValue="0;"
-        const clsObserver = new PerformanceObserver(list="> {;"
+        const clsObserver = new PerformanceObserver(list = "> {;"
 const entries="list.getEntries();"
           entries.forEach((entry: PerformanceEntry) => {}
             if (!(entry as any).hadRecentInput) {}
@@ -81,9 +81,9 @@ const entries="list.getEntries();"
         clsObserver.observe({ entryTypes: ['layout-shift'] })
 
         // First Contentful Paint;
-const fcpObserver = new PerformanceObserver(list="> {;"
+const fcpObserver = new PerformanceObserver(list = "> {;"
 const entries="list.getEntries();"
-          entries.forEach(entry="> {}"
+          entries.forEach(entry = "> {}"
             this.metrics.fcp="entry.startTime;"
             this.reportMetric('fcp', entry.startTime)})});
         fcpObserver.observe({ entryTypes: ['paint'] })} catch (error) {}
@@ -113,7 +113,7 @@ const longTaskObserver = new PerformanceObserver((list) => {}
 const resourceObserver = new PerformanceObserver((list) => {;
 const entries="list.getEntries();"
           entries.forEach((entry: PerformanceEntry) => {;
-const resourceEntry="entry as PerformanceResourceTiming;"
+const resourceEntry = "entry as PerformanceResourceTiming;"
             if (resourceEntry.duration && resourceEntry.duration > 1000) {}
               // // console.warn removed for production;
 }
@@ -150,7 +150,7 @@ const resourceEntry="entry as PerformanceResourceTiming;"
     if (Math.random() > performanceConfig.monitoring.sampleRate) {}
       return;
     }
-    const thresholds="performanceConfig.webVitals[name as keyof typeof performanceConfig.webVitals]"
+    const thresholds = "performanceConfig.webVitals[name as keyof typeof performanceConfig.webVitals]"
     if (thresholds) {;
 const rating = value <= thresholds.good ? 'good' : value <= thresholds.needsImprovement ? 'needs-improvement' : 'poor'
     }
@@ -184,7 +184,7 @@ const rating = value <= thresholds.good ? 'good' : value <= thresholds.needsImpr
 
   public measureMemory(): void {}
     if ('memory' in performance && performanceConfig.monitoring.enableMemoryMonitoring) {;
-const memory="(performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;"
+const memory = "(performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;"
       if (memory) {}
         // // console.log removed for production;
 }MB`,
@@ -197,7 +197,7 @@ const memory="(performance as Performance & { memory?: { usedJSHeapSize: number;
 
   public measureNavigationTiming(): void {}
     if ('performance' in window && 'getEntriesByType' in performance) {;
-const navigation="performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;"
+const navigation = "performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;"
       if (navigation) {}
         // // console.log removed for production;
 }ms`,
@@ -213,6 +213,6 @@ const navigation="performance.getEntriesByType('navigation')[0] as PerformanceNa
   }
 }
 ;
-const monitoring="new MonitoringService()"
+const monitoring = "new MonitoringService()"
 export default monitoring;`
 

@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 const _UltimateBusinessIntelligenceShowcase2025 = () => {;
 const [selectedCategory, setSelectedCategory] = useState('all');
-  const content="[]"
+  const content = []
     {}
       id: 'ultimate-business-intelligence-revolution',
       title: 'AI 2025: The Ultimate Business Intelligence Revolution',
@@ -45,7 +45,7 @@ readingTimereadingTime: '45 min read',
       tags: ['Implementation', 'Guide', '30,000% ROI', 'Roadmap', 'Best Practices']
     }
   ];
-  const categories="[]"
+  const categories = []
     { id: 'all', name: 'All Content' },
     { id: 'blog', name: 'Blog Posts' },
     { id: 'case-study', name: 'Case Studies' },
@@ -58,10 +58,10 @@ readingTimereadingTime: '45 min read',
       <div></div>
         <div className=""absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse"></div>"
         <div className=""absolute top-3/4 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse"></div>"
-          style="{{ animationDelay: '2s' }}"
+          style = "{{ animationDelay: '2s' }}"
         ></div>
           className=""absolute bottom-1/4 left-1/3 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse""
-          style="{{ animationDelay: '1s' }}"
+          style = "{{ animationDelay: '1s' }}"
       </div>
         {/* Header */}
             <span className=""text-2xl">🚀</span>"
@@ -73,7 +73,7 @@ readingTimereadingTime: '45 min read',
             content that&apos;s transforming enterprises worldwide</p>
         {/* Category Filter */}
           {categories.map((category) => (
-            <button key="{category.id}></button>"
+            <button key = "{category.id}></button>"
               onClick={() =>setSelectedCategory(category.id)}
               className="{`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${}"
                 selectedCategory === category.id;
@@ -106,7 +106,7 @@ readingTimereadingTime: '45 min read',
                   <div className=""text-gray-400 text-xs">Timeline</div>"
               {/* Tags */}
                 {item.tags.slice(0, 3).map((tag, index) => (
-                  <span key="{index}></span>"
+                  <span key = "{index}></span>"
                     className=""px-3 py-1 bg-white/10 text-gray-300 text-xs rounded-full""
                     {tag}
               {/* CTA */}
@@ -140,7 +140,7 @@ const _UltimateBusinessIntelligenceShowcase2025 = () => {/* TODO: Fix JSX expres
   O: Add content}
 }
   const [selectedCategory, setSelectedCategory] = useState('all');
-  const content="[]"
+  const content = []
   // TOD,
   O: Add items;
 ];;
@@ -255,4 +255,3 @@ const _UltimateBusinessIntelligenceShowcase2025 = () => {/* TODO: Fix JSX expres
 >Learn More</Link>
     </section>);
 export default UltimateBusinessIntelligenceShowcase2025;
-

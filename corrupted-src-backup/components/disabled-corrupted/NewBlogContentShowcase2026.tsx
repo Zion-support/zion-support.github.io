@@ -42,14 +42,14 @@ const NewBlogContentShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expressio
       {/* Animated, background, effects */}
       <div, className=""absolute, inse, t-0, overflo, w-hidden, opacit, y-20"></div>"
         <div, className=""absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" /></div>"
-        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e="{{ animationDel, a, y: ', 2, s' }} /></div>"
+        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e = "{{ animationDel, a, y: ', 2, s' }} /></div>"
   ]; return (
     <div, classNam, e=""py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, relative, overflow-hidd, e, n"></div>"
       {/* Animated, background, effects */}</div>
       <div, className=""absolute, inse, t-0, overflo, w-hidden, opacit, y-20"></div>"
         <div, className=""absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" /></div>"
-        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e="{{ animationDel, a, y: ', 2, s' }} /></div>"
-        <div, classNam, e = "absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e="{{ animationDel, a, y: ', 4, s' }} /></div>"
+        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e = "{{ animationDel, a, y: ', 2, s' }} /></div>"
+        <div, classNam, e = "absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e = "{{ animationDel, a, y: ', 4, s' }} /></div>"
       </div>
       <div, classNam, e=""container, m, x-auto, p, x-6, relative, z-10"></div>"
         {/* Header, Sectio, n */}</div>
@@ -70,8 +70,8 @@ const NewBlogContentShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expressio
       {/* Animated, background, effects */}"
       <div, className=""absolute, inse, t-0, overflo, w-hidden, opacit, y-20"></div>""
         <div, className=""absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" /></div>""
-        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e="{{ animationDel, a, y: ', 2, s' }} /></div>""
-        <div, classNam, e = "absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e="{{ animationDel, a, y: ', 4, s' }} /></div>"
+        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e = "{{ animationDel, a, y: ', 2, s' }} /></div>""
+        <div, classNam, e = "absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e = "{{ animationDel, a, y: ', 4, s' }} /></div>"
       </div>"
       <div, classNam, e=""container, m, x-auto, p, x-6, relative, z-10"></div>"
         {/* Header, Sectio, n */}"
@@ -121,9 +121,9 @@ const NewBlogContentShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expressio
         <div, classNam, e=""grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-3, ga, p-8, m, b-16"></div>"
           { blogPos, t, s.m, a, p((po, s, t, ind, e, x) = > (</div>
             <div , ke, y = { po, s, t.i, d  }, classNa, m, e=""group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/10, hove, r: bord, e, r-bl, u, e-5, 0, 0/50, transitio, n-all, duratio, n-500, overflo, w-hidden, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-bl, u, e-5, 0, 0/20"></div>"
-              sty, l, e="{ { animationDel, a, y: `${ind, e, x * 1, 5, 0 }, ms` }}"
+              sty, l, e = "{ { animationDel, a, y: `${ind, e, x * 1, 5, 0 }, ms` }}"
              > {/* Card, glow, effect */}</div>
-              <div, classNam, e="{ `absolute, inse, t-0, b, g-gradie, n, t-to-br ${po, s, t.gradi, e, n, t }, opaci, t, y-0, grou, p-hov, e, r: opaci, t, y-10, transitio, n-all, duratio, n-50, 0`} /></div>"
+              <div, classNam, e = "{ `absolute, inse, t-0, b, g-gradie, n, t-to-br ${po, s, t.gradi, e, n, t }, opaci, t, y-0, grou, p-hov, e, r: opaci, t, y-10, transitio, n-all, duratio, n-50, 0`} /></div>"
               <div, classNam, e=""relativ, e, p-8"></div>"
                 {/* Bad, g, e & Featur, e, d */}</div>
                 <div, className=""flex, item, s-start, justif, y-between, m, b-6"></div>"
@@ -136,14 +136,14 @@ const NewBlogContentShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expressio
                         <TrendingUp, className=""w-3 h-3" /></TrendingUp>"
                         <sp, a, n>TRENDI, N, G</sp, a, n>
                       </di, v  > )  }
-                    <div, classNam, e="{ `px-3, p, y-1.5, rounde, d-full, b, g-gradie, n, t-to-r ${po, s, t.gradi, e, n, t }, te, x, t-white, tex, t-xs, fon, t-bold, border, border-whi, t, e/30`}></div>"
+                    <div, classNam, e = "{ `px-3, p, y-1.5, rounde, d-full, b, g-gradie, n, t-to-r ${po, s, t.gradi, e, n, t }, te, x, t-white, tex, t-xs, fon, t-bold, border, border-whi, t, e/30`}></div>"
         {/* Featured, Blog, Posts */}"
         <div, classNam, e=""grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-3, ga, p-8, m, b-16"></div>"
           {/* TODO: Fix JSX expression */}"
             <div , ke, y = { po, s, t.i, d  }, classNa, m, e=""group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/10, hove, r: bord, e, r-bl, u, e-5, 0, 0/50, transitio, n-all, duratio, n-500, overflo, w-hidden, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-bl, u, e-5, 0, 0/20"></div>"
-              sty, l, e="{ { animationDel, a, y: `${ind, e, x * 1, 5, 0 }, ms` }}"
+              sty, l, e = "{ { animationDel, a, y: `${ind, e, x * 1, 5, 0 }, ms` }}"
              > {/* Card, glow, effect */}`
-              <div, classNam, e="{ `absolute, inse, t-0, b, g-gradie, n, t-to-br ${po, s, t.gradi, e, n, t }, opaci, t, y-0, grou, p-hov, e, r: opaci, t, y-10, transitio, n-all, duratio, n-50, 0`} /></div>""
+              <div, classNam, e = "{ `absolute, inse, t-0, b, g-gradie, n, t-to-br ${po, s, t.gradi, e, n, t }, opaci, t, y-0, grou, p-hov, e, r: opaci, t, y-10, transitio, n-all, duratio, n-50, 0`} /></div>""
               <div, classNam, e=""relativ, e, p-8"></div>"
                 {/* Bad, g, e & Featur, e, d */}"
                 <div, className=""flex, item, s-start, justif, y-between, m, b-6"></div>""
@@ -153,7 +153,7 @@ const NewBlogContentShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expressio
                   <div, className=""flex, fle, x-col, ga, p-2"></div>"
                     {/* TODO: Fix JSX expression */}
                       </di, v  > )  }`
-                    <div, classNam, e="{ `px-3, p, y-1.5, rounde, d-full, b, g-gradie, n, t-to-r ${po, s, t.gradi, e, n, t }, te, x, t-white, tex, t-xs, fon, t-bold, border, border-whi, t, e/30`}></div>"
+                    <div, classNam, e = "{ `px-3, p, y-1.5, rounde, d-full, b, g-gradie, n, t-to-r ${po, s, t.gradi, e, n, t }, te, x, t-white, tex, t-xs, fon, t-bold, border, border-whi, t, e/30`}></div>"
                       {po, s, t.bad, g, e}
                     </div>
                   </div>
@@ -229,8 +229,8 @@ const NewBlogContentShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expressio
                     <span, className=""te, x, t-yell, o, w-400, fon, t-bold, tex, t-sm">{po, s, t.rati, n, g}</sp, a, n>"
                   </div>
                 </d, i, v > {/* CTA, Butto, n */}`
-                <a , hre, f="{`/bl, o, g/${po, s, t.slug}`}`></a>"
-                  classNa, m, e="{ `gro, u, p/btn, flex, items-center, justif, y-center, ga, p-2 w-full, b, g-gradie, n, t-to-r ${po, s, t.gradi, e, n, t }, hov, e, r: opaci, t, y-90, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-bl, u, e-5, 0, 0/50, transform, hove,`"
+                <a , hre, f = "{`/bl, o, g/${po, s, t.slug}`}`></a>"
+                  classNa, m, e = "{ `gro, u, p/btn, flex, items-center, justif, y-center, ga, p-2 w-full, b, g-gradie, n, t-to-r ${po, s, t.gradi, e, n, t }, hov, e, r: opaci, t, y-90, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-bl, u, e-5, 0, 0/50, transform, hove,`"
   r:-transla, t, e-y-, 1`}
                 ></a>
                   <sp, a, n>Read, Articl, e</sp, a, n>"

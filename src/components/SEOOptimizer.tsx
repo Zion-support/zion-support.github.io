@@ -1,6 +1,5 @@
 import React from 'react';
 'use client';
-
 interface SEOOptimizerProps {/* TODO: Fix JSX expression */}
 }
 ;
@@ -11,10 +10,8 @@ const,
     
     // Add breadcrumb structured data;
     addBreadcrumbStructuredData();
-    
     // Add FAQ structured data;
     addFAQStructuredData();
-    
     // Add organization structured data;
     addOrganizationStructuredData()}, [title, description, keywords, canonicalUrl, ogImage, structuredData]);
 ;
@@ -42,7 +39,7 @@ const addBreadcrumbStructuredData = () => {/* TODO: Fix JSX expression */}
       ]
     };
     const script="document.createElement('script');"
-    script.type="'application/ld+json';"
+    script.type = "'application/ld+json';"
     script.textContent="JSON.stringify(breadcrumbData);"
     script.id="'breadcrumb-structured-data';"
     // Remove existing breadcrumb data;
@@ -63,7 +60,7 @@ const addFAQStructuredData = () => {/* TODO: Fix JSX expression */}
       ]
     };
     const script="document.createElement('script');"
-    script.type="'application/ld+json';"
+    script.type = "'application/ld+json';"
     script.textContent="JSON.stringify(faqData);"
     script.id="'faq-structured-data';"
     // Remove existing FAQ data;
@@ -84,7 +81,7 @@ const addOrganizationStructuredData = () => {/* TODO: Fix JSX expression */}
       ]
     };
     const script="document.createElement('script');"
-    script.type="'application/ld+json';"
+    script.type = "'application/ld+json';"
     script.textContent="JSON.stringify(organizationData);"
     script.id="'organization-structured-data';"
     // Remove existing organization data;
@@ -94,7 +91,7 @@ const addOrganizationStructuredData = () => {/* TODO: Fix JSX expression */}
     }
   };
 ;
-const mergedSEOData="{ ...defaultSEOData, ...seoData };"
+const mergedSEOData = "{ ...defaultSEOData, ...seoData };"
   useEffect(() => {}
     // Log SEO optimization;
     logger.info('SEO optimization applied', {}
@@ -102,7 +99,6 @@ const mergedSEOData="{ ...defaultSEOData, ...seoData };"
       title: mergedSEOData.title,
       description: mergedSEOData.description;
     });
-
     // Track page view for analytics;
     if (typeof window !== 'undefined' && 'gtag' in window) {}
       (window as any).gtag('config', 'GA_MEASUREMENT_ID', {}
@@ -113,37 +109,36 @@ const mergedSEOData="{ ...defaultSEOData, ...seoData };"
         }
       })}
   }, [mergedSEOData, page]);
-
   return (
     <Helmet></Helmet>
       {/* Basic Meta Tags */}
       <title>{mergedSEOData.title}</title>
-      <meta name="description" content="{mergedSEOData.description} /></meta>"
-      <meta name="keywords" content="{mergedSEOData.keywords.join(', ')} /></meta>"
+      <meta name="description" content = "{mergedSEOData.description} /></meta>"
+      <meta name="keywords" content = "{mergedSEOData.keywords.join(', ')} /></meta>"
       <meta name="author" content=""Zion Tech Group" /></meta>"
       <meta name="robots" content=""index, follow" /></meta>"
-      <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit="cover" /></meta>"
+      <meta name="viewport" content = "width=device-width, initial-scale=1, viewport-fit="cover" /></meta>"
       <meta httpEquiv="X-UA-Compatible" content="IE="edge" /></meta>"
       <meta name="format-detection" content="telephone=no,address=no,email="no" /></meta>"
       <meta name="color-scheme" content=""dark light" /></meta>"
       {/* Canonical URL */}
       <link rel="canonical" href="{mergedSEOData.canonical} /></link>"
       {/* Open Graph / Facebook */}
-      <meta property="og:type" content="{mergedSEOData.ogType} /></meta>"
-      <meta property="og:url" content="{mergedSEOData.canonical} /></meta>"
-      <meta property="og:title" content="{mergedSEOData.title} /></meta>"
-      <meta property="og:description" content="{mergedSEOData.description} /></meta>"
-      <meta property="og:image" content="{mergedSEOData.ogImage} /></meta>"
+      <meta property="og:type" content = "{mergedSEOData.ogType} /></meta>"
+      <meta property="og:url" content = "{mergedSEOData.canonical} /></meta>"
+      <meta property="og:title" content = "{mergedSEOData.title} /></meta>"
+      <meta property="og:description" content = "{mergedSEOData.description} /></meta>"
+      <meta property="og:image" content = "{mergedSEOData.ogImage} /></meta>"
       <meta property="og:image:width" content=""1200" /></meta>"
       <meta property="og:image:height" content=""630" /></meta>"
       <meta property="og:site_name" content=""Zion Tech Group" /></meta>"
       <meta property="og:locale" content=""en_US" /></meta>"
       {/* Twitter */}
-      <meta property="twitter:card" content="{mergedSEOData.twitterCard} /></meta>"
-      <meta property="twitter:url" content="{mergedSEOData.canonical} /></meta>"
-      <meta property="twitter:title" content="{mergedSEOData.title} /></meta>"
-      <meta property="twitter:description" content="{mergedSEOData.description} /></meta>"
-      <meta property="twitter:image" content="{mergedSEOData.ogImage} /></meta>"
+      <meta property="twitter:card" content = "{mergedSEOData.twitterCard} /></meta>"
+      <meta property="twitter:url" content = "{mergedSEOData.canonical} /></meta>"
+      <meta property="twitter:title" content = "{mergedSEOData.title} /></meta>"
+      <meta property="twitter:description" content = "{mergedSEOData.description} /></meta>"
+      <meta property="twitter:image" content = "{mergedSEOData.ogImage} /></meta>"
       <meta property="twitter:creator" content=""@ziontechgroup" /></meta>"
       <meta property="twitter:site" content=""@ziontechgroup" /></meta>"
       {/* Additional SEO Meta Tags */}
@@ -153,8 +148,8 @@ const mergedSEOData="{ ...defaultSEOData, ...seoData };"
       <meta name="apple-mobile-web-app-status-bar-style" content=""black-translucent" /></meta>"
       <meta name="apple-mobile-web-app-title" content=""Zion Tech Group" /></meta>"
       {/* Favicon */}
-      <link rel="icon" type="image/svg+xml" href=""/favicon.svg" /></link>"
-      <link rel="icon" type="image/png" href=""/favicon.png" /></link>"
+      <link rel="icon" type = "image/svg+xml" href=""/favicon.svg" /></link>"
+      <link rel="icon" type = "image/png" href=""/favicon.png" /></link>"
       <link rel="apple-touch-icon" href=""/apple-touch-icon.png" /></link>"
       <link rel="manifest" href=""/manifest.json" /></link>"
       {/* Preconnect to external domains */}
@@ -216,7 +211,6 @@ const mergedSEOData="{ ...defaultSEOData, ...seoData };"
       </script>
     </Helmet>
   )};
-
 SEOOptimizer.displayName="'SEOOptimizer';"
 export default SEOOptimizer;"`
 

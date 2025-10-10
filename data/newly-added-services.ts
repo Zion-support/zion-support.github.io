@@ -11,12 +11,12 @@ const contact=","
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'};
-const contact="mobile: '+1 302 464 0950',"
+const contact = "mobile: '+1 302 464 0950',"
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'}
 export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
-  {const contact="mobile: '+1 302 464 0950'"
+  {const contact = "mobile: '+1 302 464 0950'"
 export const newlyAddedServices: EnhancedRealMicroSaasService[] = []
   {const contact=","
 	mobile: '+1 302 464 0950',
@@ -23681,12 +23681,12 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
   s://ziontechgroup && ziontechgroup.com' }; export const,
-  newlyAddedServices: EnhancedRealMicroSaasService[] = [ const contact="' mobil,'"
+  newlyAddedServices: EnhancedRealMicroSaasService[] = [ const contact = "' mobil,'"
   e: '+1 302 464 0950',' emai,
   l: 'kleber@ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
   e: 'http,
-  s://ziontechgroup.com'}; const contact="' mobil,'"
+  s://ziontechgroup.com'}; const contact = "' mobil,'"
   e: '+1 302 464 0950'' emai,
   l: 'kleber@ziontechgroup.com'' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'' websit,

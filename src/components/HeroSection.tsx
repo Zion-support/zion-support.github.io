@@ -92,6 +92,5 @@ export default function HeroSection() {}
       </div>
     </section>
   )};
-
 export default HeroSection;"`
 

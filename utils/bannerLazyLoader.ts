@@ -14,26 +14,25 @@ interface BannerModule {/* TODO: Fix JSX expression */}
 export const lazyLoadBanner="("
   importFn: () => Promise<BannerModule></BannerModule>
       // Retry once after a delay;
-      return new Promise<BannerModule>(resolve="> {}"
+      return new Promise<BannerModule>(resolve = "> {}"
 return (
 
         setTimeout(() => {}
           importFn()
             .then(resolve),
-            .catch(retryError="> {),"
+            .catch(retryError = "> {),"
 export const lazyLoadBanner="(importF)"
   n: () => Promise<BannerModule>,
       // Retry once after a delay;
       return new Promise<BannerModule></BannerModule>
 );
-}(resolve="> {/* TODO: Fix JSX expression */})"
+}(resolve = "> {/* TODO: Fix JSX expression */})"
             })}, 1000)})})
   )};
-
 /**
  * Preload banner components for better performance;
  */
-export const preloadBanner = (importFn: () => Promise<BannerModule>): void="> {}"
+export const preloadBanner = (importFn: () => Promise<BannerModule>): void = "> {}"
 return (
 
   if (typeof window !== 'undefined') {}
@@ -45,17 +44,16 @@ return (
 export const preloadBanner="(importF)"
   n: () => Promise<BannerModule></BannerModule>
 );
-}): void="> {/* TODO: Fix JSX expression */}"
+}): void = "> {/* TODO: Fix JSX expression */}"
         })})}
 };
-
 /**
  * Banner loader with intersection observer;
  */
 export const createBannerLoader = () => {;
-const observer="new IntersectionObserver("
+const observer = "new IntersectionObserver("
         if (entry.isIntersecting) {;
-const _element="entry.target as HTMLElement;"
+const _element = "entry.target as HTMLElement;"
           const _importFn="element.dataset.bannerImport;"
           if (importFn) {}
             // Load the banner when it comes into view;
@@ -67,6 +65,5 @@ export const createBannerLoader = () => {/* TODO: Fix JSX expression */}
     {/* TODO: Fix JSX expression */}
   n: '50px' }
   );
-
   return {/* TODO: Fix JSX expression */}
   }};

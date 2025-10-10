@@ -67,7 +67,7 @@ const ContentCarousel: React.FC = () => {}
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
   };
   useEffect(() => {}
-    const timer="setInterval(nextSlide, 5000);"
+    const timer = "setInterval(nextSlide, 5000);"
     return () => clearInterval(timer);
   }, []);
   const currentSlideData="slides[currentSlide];"
@@ -192,18 +192,18 @@ const ContentCarousel: React.FC = () => {}
             </div>
           </div>
           {/* Navigation Buttons */}
-          <button onClick="{prevSlide}></button>"
+          <button onClick = "{prevSlide}></button>"
             className=""absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20">"
             <ChevronLeft className=""w-6 h-6" /></ChevronLeft>"
           </button>
-          <button onClick="{nextSlide}></button>"
+          <button onClick = "{nextSlide}></button>"
             className=""absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20">"
             <ChevronRight className=""w-6 h-6" /></ChevronRight>"
           </button>
           {/* Dots Indicator */}
           <div className=""flex justify-center mt-8 space-x-2"></div>"
             {slides.map((_, index) => (
-              <button key="{index}></button>"
+              <button key = "{index}></button>"
                 onClick={() => setCurrentSlide(index)}
                 className="{`w-3 h-3 rounded-full transition-colors duration-200 ${}"
                   index === currentSlide ? 'bg-purple-400' : 'bg-white/30'

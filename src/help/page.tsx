@@ -13,7 +13,7 @@ const HelpPage: React.FC = () => {}
   const [searchTerm, setSearchTerm] = useState('');
   const [activeCategory, setActiveCategory] = useState('getting-started');
 ;
-const categories="[]"
+const categories = []
     {}
       id: 'getting-started',
       name: 'Getting Started',
@@ -39,7 +39,7 @@ idid: 'technical',
 $4}
   ];
 ;
-const helpArticles="{}"
+const helpArticles = {}
     'getting-started': []
         title: 'How to Get Started with AI Services',
         description: 'Complete guide to setting up your AI services and making the most of our platform',
@@ -98,7 +98,7 @@ titletitle: 'Security Best Practices',
         description: 'Set up monitoring and logging for your AI services and applications']
   };
 ;
-const resources="[]"
+const resources = []
       title: 'Video Tutorials',
       description: 'Step-by-step video guides for all our services',
       icon: Video,
@@ -113,11 +113,11 @@ titletitle: 'Download Center',
       description: 'SDKs, tools, and resources for developers',
       icon: Download,
       count: '25+ downloads';
-const supportChannels="[]"
+const supportChannels = []
       title: 'Live Chat',
       count: '25+ downloads'
 
-  const supportChannels="[]"
+  const supportChannels = []
       titl,
     e: 'Live Chat',
       description: 'Get instant help from our support team',
@@ -138,11 +138,11 @@ titletitle: 'Community Forum',
       description: 'Connect with other users and share knowledge',
       icon: Users,
       responseTime: 'Community driven';
-const faqs="[]"
+const faqs = []
       question: 'How quickly can I get started with your AI services?',
       responseTime: 'Community driven'
 
-  const faqs="[]"
+  const faqs = []
       questio,
     n: 'How quickly can I get started with your AI services?',
       answer: 'Most of our AI services can be set up within 24-48 hours. We provide comprehensive onboarding support to ensure you\'re up and running quickly.'
@@ -192,14 +192,14 @@ const filteredArticles = getCurrentArticles().filter(article=">"
               <Search className=""absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"></Search>"
               <input type=""text"></input>"
                 placeholder=""Search help articles...""
-                value="{ searchTerm };)"
+                value = "{ searchTerm };)"
                 onChange = { (e) => setSearchTerm(e.target.value) };
                 className=""w-full pl-10 pr-4 py-4 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focu,""
     s:ring-cyan-400;
           {/* Categories *
           <div className=""mb-12"></div>"
             <div className=""flex flex-wrap justify-center gap-4 mb-8"></div>"
-              {categories.map((category) => (<button key="{ category.id };)></button>"
+              {categories.map((category) => (<button key = "{ category.id };)></button>"
                   onClick = { () => setActiveCategory(category.id) };
                   className="{`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${}"
                     activeCategory === category.id;
@@ -294,7 +294,7 @@ const filteredArticles = getCurrentArticles().filter(article=">"
   )};
   const [searchTerm, setSearchTerm] = useState('');
   const [activeCategory, setActiveCategory] = useState('getting-started');
-const categories="[]"
+const categories = []
     {/* TODO: Fix JSX expression */}
   O: Add content}
       <Footer <></Footer>
@@ -303,7 +303,7 @@ const categories="[]"
 };
   const [searchTerm, setSearchTerm] = useState('');
   const [activeCategory, setActiveCategory] = useState('getting-started');
-const categories="[]"
+const categories = []
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
@@ -341,9 +341,9 @@ const categories="[]"
   r: 'bg-purple-500;
     }
   ];
-  const helpArticles="{/* TODO: Fix JSX expression */}"
+  const helpArticles = "{/* TODO: Fix JSX expression */}"
   O: Add content}
-  const helpArticles="{ /* TODO: Fix JSX expression *"
+  const helpArticles = "{ /* TODO: Fix JSX expression *"
   ,
     O: Add content; };
 }

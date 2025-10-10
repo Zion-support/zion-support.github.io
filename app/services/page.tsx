@@ -14,10 +14,10 @@ import {}
   ArrowRight,
   Search} from 'lucide-react';
 ;
-const ServicesPage: React.FC = () => {const services="[]"
+const ServicesPage: React.FC = () => {const services = []
     // AI Services;
 const ServicesPage: React.FC = () => {}
-  const services="[]"
+  const services = []
     /
     {}
       ico,
@@ -801,7 +801,7 @@ const ServicesPage: React.FC = () => {}
     }
   ];
 ;
-const categories="[]"
+const categories = []
     'All',
     'AI Services',
     'Cloud Services',
@@ -820,30 +820,30 @@ const [searchTerm, setSearchTerm] = React.useState('');
 const [currentPage, setCurrentPage] = React.useState(1);
 const servicesPerPage="12;"
 ;
-const filteredServices = services.filter(service="> {;"
+const filteredServices = services.filter(service = "> {;"
 const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory;
-const matchesSearch="service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||"
+const matchesSearch = "service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||"
                          service.description.toLowerCase().includes(searchTerm.toLowerCase())
     return matchesCategory && matchesSearch})
 ;
-const totalPages="Math.ceil(filteredServices.length / servicesPerPage);"
-const startIndex="(currentPage - 1) * servicesPerPage;"
-const endIndex="startIndex + servicesPerPage;"
-const currentServices="filteredServices.slice(startIndex, endIndex);"
+const totalPages = "Math.ceil(filteredServices.length / servicesPerPage);"
+const startIndex = "(currentPage - 1) * servicesPerPage;"
+const endIndex = "startIndex + servicesPerPage;"
+const currentServices = "filteredServices.slice(startIndex, endIndex);"
   const [selectedCategory, setSelectedCategory] = React.useState('All');
   const [searchTerm, setSearchTerm] = React.useState('');
   const [currentPage, setCurrentPage] = React.useState(1);
   const servicesPerPage="12;"
-  const filteredServices = services.filter(service="> {}"
+  const filteredServices = services.filter(service = "> {}"
     const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory;)
-    const matchesSearch="service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||"
+    const matchesSearch = "service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||"
                          service.description.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch;
   });
-  const totalPages="Math.ceil(filteredServices.length / servicesPerPage);"
-  const startIndex="(currentPage - 1) * servicesPerPage;"
-  const endIndex="startIndex + servicesPerPage;"
-  const currentServices="filteredServices.slice(startIndex, endIndex);"
+  const totalPages = "Math.ceil(filteredServices.length / servicesPerPage);"
+  const startIndex = "(currentPage - 1) * servicesPerPage;"
+  const endIndex = "startIndex + servicesPerPage;"
+  const currentServices = "filteredServices.slice(startIndex, endIndex);"
   // Reset to first page when filters change;
   React.useEffect(() => {}
     setCurrentPage(1)}, [selectedCategory, searchTerm]);
@@ -864,7 +864,7 @@ const currentServices="filteredServices.slice(startIndex, endIndex);"
         {/* Hero Section *
         <section className=""relative py-20 px-4 overflow-hidden">)"
           <div className=""absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse"></div>"
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style="{{ animationDelay: '1s' }}></div>"
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style = "{{ animationDelay: '1s' }}></div>"
           <div className=""relative max-w-7xl mx-auto text-center"></div>"
             <h1 className=""text-4xl md: text-6xl font-bold text-white mb-6"></h1>"
               Our Services;
@@ -892,7 +892,7 @@ const currentServices="filteredServices.slice(startIndex, endIndex);"
                     />
                   </div>
                 </div>
-                      value="{ searchTerm };"
+                      value = "{ searchTerm };"
                       onChange = { (e) => setSearchTerm(e.target.value) };
                       className=""w-full pl-10 pr-4 py-3 bg-white/10 border border-white""
                   <
@@ -900,10 +900,10 @@ const currentServices="filteredServices.slice(startIndex, endIndex);"
                 <div className=""md:w-64"></div>"
                   <div className=""relative"></div>"
                     <Filter className=""absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"></Filter>"
-                    <select value="{selectedCategory}></select>"
+                    <select value = "{selectedCategory}></select>"
                       onChange={(e) => setSelectedCategory(e.target.value);
                       className=""w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors appearance-none""
-                      value="{ selectedCategory };"
+                      value = "{ selectedCategory };"
                       onChange = { (e) => setSelectedCategory(e.target.value) };
                       className=""w-full pl-10 pr-4 py-3 bg-white/10 border border-white">"
                       {categories.map((category) => (<option key={category} value={category} className=""bg-gray-800"></option>"
@@ -916,7 +916,7 @@ const currentServices="filteredServices.slice(startIndex, endIndex);"
               </div>
               <div className=""flex flex-wrap gap-2 justify-center"></div>"
                 {categories.slice(1).map((category) => (
-                  <button key="{category}></button>"
+                  <button key = "{category}></button>"
                     onClick={() => setSelectedCategory(category);
                         <)
                       ))}
@@ -926,7 +926,7 @@ const currentServices="filteredServices.slice(startIndex, endIndex);"
               <
               
               <div className=""flex flex-wrap gap-2 justify-center"></div>"
-                {categories.slice(1).map((category) => (<button key="{ category };)></button>"
+                {categories.slice(1).map((category) => (<button key = "{ category };)></button>"
                     onClick = { () => setSelectedCategory(category) };
                     className="{`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${}"
                       selectedCategory === category;
@@ -1034,14 +1034,14 @@ const currentServices="filteredServices.slice(startIndex, endIndex);"
             {totalPages > 1 && (
               <div className=""flex justify-center items-center mt-12 space-x-2"></div>"
                 <button></button>
-                  onClick={() => setCurrentPage(prev="> Math.max(prev - 1, 1))"
+                  onClick={() => setCurrentPage(prev = "> Math.max(prev - 1, 1))"
                   disabled={currentPage === 1}
                   className=""px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white hover:bg-white/20 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300">"
                   Previous;
                 </button>
                 <div className=""flex space-x-2"></div>"
-                  {Array.from({ length: totalPages }, (_, i) => i + 1).map(page="> ("
-                    <button key="{page}></button>"
+                  {Array.from({ length: totalPages }, (_, i) => i + 1).map(page = "> ("
+                    <button key = "{page}></button>"
                       onClick={() => setCurrentPage(page);
                       className="{`px-4 py-2 rounded-lg transition-all duration-300 ${}"
                         currentPage === page;
@@ -1053,7 +1053,7 @@ const currentServices="filteredServices.slice(startIndex, endIndex);"
                   ))
                 </div>
                 <button></button>
-                  onClick={() => setCurrentPage(prev="> Math.min(prev + 1, totalPages))"
+                  onClick={() => setCurrentPage(prev = "> Math.min(prev + 1, totalPages))"
                   disabled={currentPage === totalPages}
                   className=""px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white hover:bg-white/20 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300">"
                   Next;

@@ -11,14 +11,14 @@ export default function AutonomousSupplyChainRevolution20, 2, 5() {}
           Autonomous, AI, Supply Chain, Revolution, 2025 — 99.2% Forecast, Accurac, y,
           78% Cost, Reductio, n, $1.8B+ Savin, g, s | Zion, Tech, Group;
         <
-        <meta , nam, e="'description'></meta>"
-          conte, n, t="'Transform, supply, chain operations, with, autonomous AI, system, s. Achieve, 9, 9.2% demand, forecast, accurac, y, reduce, operational, costs by, 7, 8%, preve, n, t $45, 0, M+ in, disruption, s, and, unloc, k $1.8 B+ in, total, value through, intelligent, automation.'"
+        <meta , nam, e = "'description'></meta>"
+          conte, n, t = "'Transform, supply, chain operations, with, autonomous AI, system, s. Achieve, 9, 9.2% demand, forecast, accurac, y, reduce, operational, costs by, 7, 8%, preve, n, t $45, 0, M+ in, disruption, s, and, unloc, k $1.8 B+ in, total, value through, intelligent, automation.'"
         /><
-        <meta , nam, e="'keywor, d, s'></meta>"
-          conte, n, t="'AI, supply, chai, n, autonomous, logistic, s, demand, forecastin, g, inventory, optimizatio, n, supply, chain, AI, predictive, analytic, s, logistics, automatio, n, supply, chain, management'"
+        <meta , nam, e = "'keywor, d, s'></meta>"
+          conte, n, t = "'AI, supply, chai, n, autonomous, logistic, s, demand, forecastin, g, inventory, optimizatio, n, supply, chain, AI, predictive, analytic, s, logistics, automatio, n, supply, chain, management'"
         /><
-        <link , re, l="'canonic, a, l'></link>"
-          hr, e, f="'htt, p, s: //ziontechgro u p.c o m/bl o g'"
+        <link , re, l = "'canonic, a, l'></link>"
+          hr, e, f = "'htt, p, s: //ziontechgro u p.c o m/bl o g'"
       <
     <div><
       
@@ -41,12 +41,12 @@ export default function AutonomousSupplyChainRevolution20, 2, 5() {}
         <div, className="'container, m, x-auto, p, x-4, p, y-12, ma, x-w-4, x, l'><"
               Autonomous, AI, Supply Cha, i, n: T, h, e $1.8B, Efficiency, Revolution;
               Autonomous, AI, Supply Cha, i, n: T, h, e $1.8B, Efficiency, Revolution<
-                <li, classNam, e="'flex, item, s-start, ga, p-3'></li>"
-                  <Globe , classNam, e="'h-6 w-6, tex, t-bl, u, e-400, m, t-1, fle, x-shri, n, k-0'></Globe>"
+                <li, classNam, e = "'flex, item, s-start, ga, p-3'></li>"
+                  <Globe , classNam, e = "'h-6 w-6, tex, t-bl, u, e-400, m, t-1, fle, x-shri, n, k-0'></Globe>"
               <span, className="'te, x, t-gr, a, y-4, 0, 0'>Octo, b, e, r , 1, 20, 2, 5<"
             <
 
-            <h1, classNam, e="'te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, m, b-6, b, g-gradie, n, t-to-r, fro, m-bl, u, e-400, vi, a-cy, a, n-400, t, o-te, a, l-400, tex, t-transparent, b, g-cl, i, p-text, leadin, g-tig, h, t'></h1>"
+            <h1, classNam, e = "'te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, m, b-6, b, g-gradie, n, t-to-r, fro, m-bl, u, e-400, vi, a-cy, a, n-400, t, o-te, a, l-400, tex, t-transparent, b, g-cl, i, p-text, leadin, g-tig, h, t'></h1>"
               Autonomous, AI, Supply Cha, i, n: T, h, e $1.8B, Efficiency, Revolution;
               Autonomous, AI, Supply Cha, i, n: T, h, e $1.8B, Efficiency, Revolution<
                 <li, className="'flex, item, s-start, ga, p-3'></li>"
@@ -209,7 +209,7 @@ export default function AutonomousSupplyChainRevolution20, 2, 5() {}
               <p, className="'te, x, t-gr, a, y-300, m, b-4, leadin, g-relax, e, d'></p>"
                 Global, supply, chains face, unprecedented, complexity and, volatilit, y. Traditional, manual, planning c, a, n't, keep, pace with, modern, dynamics—geopolitical, shi, f, t, s, climate, event, s, demand, volatilit, y, and, supplier, disruptions create, chaos, that costs, enterprises, billions annual, l, y. The, average, Fortune 500, company, loses $184M, per, year to, supply, chain inefficienci, e, s.<
 
-            <section, classNam, e="'mb-12'></section>"
+            <section, classNam, e = "'mb-12'></section>"
               <h2, className="'te, x, t-3xl, fon, t-bold, m, b-6, tex, t-bl, u, e-3, 0, 0'></h2>"
                 The, Autonomous, Supply Chain, Architectur, e;
               <
@@ -228,7 +228,7 @@ export default function AutonomousSupplyChainRevolution20, 2, 5() {}
                   with, 9, 9.2% accuracy, at, SKU-locati, o, n-week, granularit, y. Deep, learning, captures complex, seasonal, patterns, promotional, effect, s, and, market, dynamics that, traditional, forecasting;
                   methods, mis, s.<
 
-            <section, classNam, e="'mb-12'></section>"
+            <section, classNam, e = "'mb-12'></section>"
               <h2, className="'te, x, t-3xl, fon, t-bold, m, b-6, tex, t-bl, u, e-3, 0, 0'></h2>"
                 Enterprise, Success, Stories;
               <
@@ -252,7 +252,7 @@ export default function AutonomousSupplyChainRevolution20, 2, 5() {}
                 <h3, className="'te, x, t-2xl, fon, t-bold, m, b-4, tex, t-cy, a, n-3, 0, 0'></h3>"
                   Phas, e, 1: Foundati, o, n (Month, s, 1-, 3)
                 <
-                <ul, classNam, e="'li, s, t-disc, lis, t-inside, spac, e-y-2, tex, t-gr, a, y-300, m, l-4'></ul>"
+                <ul, classNam, e = "'li, s, t-disc, lis, t-inside, spac, e-y-2, tex, t-gr, a, y-300, m, l-4'></ul>"
                   <li></li>
                     Data, integration, and quality, assessment, across supply, chain, systems;
                   <
@@ -273,7 +273,7 @@ export default function AutonomousSupplyChainRevolution20, 2, 5() {}
                 <h3, className="'te, x, t-2xl, fon, t-bold, m, b-4, tex, t-cy, a, n-3, 0, 0'></h3>"
                   Phas, e, 2: Pilot, Deploymen, t (Month, s, 4-, 6)
                 <
-                <ul, classNam, e="'li, s, t-disc, lis, t-inside, spac, e-y-2, tex, t-gr, a, y-300, m, l-4'></ul>"
+                <ul, classNam, e = "'li, s, t-disc, lis, t-inside, spac, e-y-2, tex, t-gr, a, y-300, m, l-4'></ul>"
                   <li></li>
                     Deploy, demand, forecasting AI, for, key product, categorie, s;
                   <

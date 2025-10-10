@@ -1,7 +1,6 @@
 'use client';
 import React from 'react';
 import { ArrowRight, CheckCircle } from 'lucide-react';
-
 interface ServiceCardProps {}
   title: string;
   description: string;
@@ -44,7 +43,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({}
         ))
       </ul>
       {onClick && (
-        <button onClick="{onClick}></button>"
+        <button onClick = "{onClick}></button>"
           className=""w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-4 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center">"
           Get Started;
           <ArrowRight className=""w-4 h-4 ml-2" /></ArrowRight>"

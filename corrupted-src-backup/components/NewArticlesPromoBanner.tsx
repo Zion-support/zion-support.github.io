@@ -3,19 +3,19 @@ import, Reac, t, { useSta, t, e, useEffe, c, t } fr, o, m "rea, c, t";';
 interface, NewArticlesPromoBannerProp, s {/* TODO: Fix JSX expression */}
 }
 const, NewArticlesPromoBanne, r: Rea, c, t.FC<NewArticlesPromoBannerPro, p, s> = ({;
-varia, n, t="'def, a, u, l, t',"
-  showCou, n, t=", 3,"
-  autoRota, t, e="fa, l, s, e,"
-  rotationInterv, a, l="5, 0, 0, 0,"
+varia, n, t = "'def, a, u, l, t',"
+  showCou, n, t = ", 3,"
+  autoRota, t, e = "fa, l, s, e,"
+  rotationInterv, a, l = "5, 0, 0, 0,"
   if (varia, n, t = == 'comp, a, c, t') {}
-    retu, r, n(<div, classNam, e="{`bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-cy, a, n-600, rounde, d-l, g, p-4 ${classNa, m, e}`}></div>"
+    retu, r, n(<div, classNam, e = "{`bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-cy, a, n-600, rounde, d-l, g, p-4 ${classNa, m, e}`}></div>"
         <div, classNam, e=""flex, item, s-center, justif, y-betwe, e, n"></div>"
           <div, classNam, e=""flex, item, s-center, ga, p-3">)"
             <BookOpen, classNam, e=""w-6 h-6, tex, t-whi, t, e" />)"
           <div, classNam, e=""grid, m, d: gr, i, d-co, l, s-3, ga, p-6">)"
             { featuredArticl, e, s.m, a, p((arti, c, l, e) = > (
     retu, r, n (
-      <div, classNam, e="{`bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-cy, a, n-600, rounde, d-l, g, p-4 ${classNa, m, e}`}></div>"
+      <div, classNam, e = "{`bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-cy, a, n-600, rounde, d-l, g, p-4 ${classNa, m, e}`}></div>"
         <div, classNam, e=""flex, item, s-center, justif, y-betwe, e, n"></div>"
           <div, classNam, e=""flex, item, s-center, ga, p-3"></div>"
             <BookOpen, classNam, e=""w-6 h-6, tex, t-whi, t, e" /></BookOpen>"
@@ -30,7 +30,7 @@ varia, n, t="'def, a, u, l, t',"
               View, All, Articles;
               <Link, classNam, e=""w-5 h-5" /></Link>"
   if (varia, n, t = == 'featu, r, e, d') {}
-    retu, r, n(<div, classNam, e="{`bg-white, rounde, d-2xl, shado, w-2xl, overflo, w-hidd, e, n ${classNa, m, e}`}></div>"
+    retu, r, n(<div, classNam, e = "{`bg-white, rounde, d-2xl, shado, w-2xl, overflo, w-hidd, e, n ${classNa, m, e}`}></div>"
         <div, classNam, e=""bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-60, 0, p-6"></div>"
           <div, classNam, e=""flex, item, s-center, justif, y-betwe, e, n"></div>"
             <div, classNam, e=""flex, item, s-center, ga, p-3"></div>"
@@ -40,7 +40,7 @@ varia, n, t="'def, a, u, l, t',"
           <div, classNam, e=""grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-4, ga, p-6">)"
             { featuredArticl, e, s.m, a, p((arti, c, l, e) = > (
     retu, r, n (
-      <div, classNam, e="{`bg-white, rounde, d-2xl, shado, w-2xl, overflo, w-hidd, e, n ${classNa, m, e}`}></div>"
+      <div, classNam, e = "{`bg-white, rounde, d-2xl, shado, w-2xl, overflo, w-hidd, e, n ${classNa, m, e}`}></div>"
         <div, classNam, e=""bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-60, 0, p-6"></div>"
           <div, classNam, e=""flex, item, s-center, justif, y-betwe, e, n"></div>"
             <div, classNam, e=""flex, item, s-center, ga, p-3"></div>"
@@ -62,7 +62,7 @@ varia, n, t="'def, a, u, l, t',"
             <Link, t, o = { artic, l, e.l, i, n, k }, classNa, m, e=""te, x, t-yell, o, w-300, tex, t-sm, fon, t-semibold, hove, r: underli, n, e"></Link>"
 }}}}}}
 const, NewArticlesPromoBanne, r: Rea, c, t.FC<NewArticlesPromoBannerPro, p, s> = ({/* TODO: Fix JSX expression */}
-      <div, classNam, e="{`bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-cy, a, n-600, rounde, d-l, g, p-4 ${classNa, m, e}`}></div>""
+      <div, classNam, e = "{`bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-cy, a, n-600, rounde, d-l, g, p-4 ${classNa, m, e}`}></div>""
         <div, classNam, e=""flex, item, s-center, justif, y-betwe, e, n"></div>""
           <div, classNam, e=""flex, item, s-center, ga, p-3"></div>""
             <BookOpen, classNam, e=""w-6 h-6, tex, t-whi, t, e" /></BookOpen>""
@@ -77,7 +77,7 @@ const, NewArticlesPromoBanne, r: Rea, c, t.FC<NewArticlesPromoBannerPro, p, s> =
               View, All, Articles;"
               <Link, classNam, e=""w-5 h-5" /></Link>)"
   if (varia, n, t = == 'featu, r, e, d') {/* TODO: Fix JSX expression */}`
-      <div, classNam, e="{`bg-white, rounde, d-2xl, shado, w-2xl, overflo, w-hidd, e, n ${classNa, m, e}`}></div>""
+      <div, classNam, e = "{`bg-white, rounde, d-2xl, shado, w-2xl, overflo, w-hidd, e, n ${classNa, m, e}`}></div>""
         <div, classNam, e=""bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-60, 0, p-6"></div>""
           <div, classNam, e=""flex, item, s-center, justif, y-betwe, e, n"></div>""
             <div, classNam, e=""flex, item, s-center, ga, p-3"></div>""

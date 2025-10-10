@@ -95,11 +95,11 @@ const _sitemap="this.buildSitemapXML(pages);"
 
   buildSitemapXML(pages) {}
     //     const baseUrl="this.seoConfig.siteUrl;"
-    //     const lastmod="new Date().toISOString().split('T')[0];"
+    //     const lastmod = "new Date().toISOString().split('T')[0];"
 ;
 let _xml = '<?xml version="1.0" encoding=""UTF-8"?>\n';"
     xml += '<urlset xmlns=""http: //www.sitemaps.org/schemas/sitemap/0.9">\n';"
-    pages.forEach(page="> {}"
+    pages.forEach(page = "> {}"
 return (
 ),
       xml += '  <url>\n';),
@@ -114,7 +114,6 @@ return (
       xml += `    <changefreq>${page.changefreq}</changefreq>\n`;`
       xml += `    <priority>${page.priority}</priority>\n`;
       xml += '  </url>\n'});
-
     xml += '</urlset>';
     return xml}
 
@@ -124,7 +123,7 @@ return (
     document.documentElement.setAttribute('data-sitemap', sitemap)}
 
   setupRobotsTxt() {;
-const robotsTxt="`User-agent: *,"
+const robotsTxt = "`User-agent: *,"
 Allow: /,
 ,
 Sitemap: ${this.seoConfig.siteUrl}/sitemap.xml;
@@ -267,7 +266,6 @@ Disallo,
   w: /services/
 Disallo,`
   w: /middleware/`;
-
     document.documentElement.setAttribute('data-robots-txt', robotsTxt)}
 
   setupCanonicalUrls() {/* TODO: Fix JSX expression */}
@@ -369,7 +367,7 @@ Disallo,`
 
   optimizeImages() {;
 const _images="document.querySelectorAll('img');"
-    images.forEach(img="> {)"
+    images.forEach(img = "> {)"
       // Add loading=""lazy" for non-critical images;)"
       if (!img.hasAttribute('loading')) {}
         img.loading="'lazy'}"
@@ -419,11 +417,10 @@ const _images="document.querySelectorAll('img');"
 
   optimizeFonts() {}
     // Preload critical fonts;
-    const criticalFonts="[]"
+    const criticalFonts = []
       'https: //fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display="swap'"
     ];
-
-    criticalFonts.forEach(font="> {);"
+    criticalFonts.forEach(font = "> {);"
 const _link="document.createElement('link');"
       link.rel="'preload';"
       link.href="font;"
@@ -476,7 +473,6 @@ const _style="document.createElement('style');"
     document.title="title;"
     // Update meta description;
     this.updateMetaTag('description', description);
-
     // Update Open Graph tags;
     this.updateOGTag('og:title', title);
     this.updateOGTag('og:description', description);
@@ -522,7 +518,7 @@ const _meta = document.querySelector(`meta[name=""${name}"]`);"
   }
 
   generateBreadcrumbs(items) {;
-const breadcrumbSchema="{}"
+const breadcrumbSchema = {}
       '@context': 'https: //schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: items.map((item, index) => ({}
@@ -532,7 +528,6 @@ const breadcrumbSchema="{}"
         item: item.url;
   generateBreadcrumbs(items) {/* TODO: Fix JSX expression */}
       }))};
-
     this.addStructuredData(breadcrumbSchema)}
 
   trackPageView() {}
@@ -547,10 +542,9 @@ const breadcrumbSchema="{}"
 }
 
 // Initialize SEO optimizer;
-// const seoOptimizer="new SEOOptimizer();"
+// const seoOptimizer = "new SEOOptimizer();"
 // Export for use in other modules;
 export default seoOptimizer;
-
 // Global SEO instance;
 window.seoOptimizer="seoOptimizer;"
 "`

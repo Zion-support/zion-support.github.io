@@ -7,7 +7,7 @@ import SEOOptimizer from '../components/SEOOptimizer'
 export default function DocsPage() {;
 const [searchQuery, setSearchQuery] = useState('');
 ;
-const docCategories="[]"
+const docCategories = []
     {}
       title: 'Getting Started',
       icon: 'rocket',
@@ -50,20 +50,20 @@ const docCategories="[]"
     }
   ];
 ;
-const popularDocs="[]"
+const popularDocs = []
     { title: 'Quick Start Guide', description: 'Get started in minutes', category: 'Getting Started', link: '/docs/quick-start' },
     { title: 'API Authentication', description: 'Learn how to authenticate', category: 'API Reference', link: '/docs/api/auth' },
     { title: 'AI Model Training', description: 'Train your own models', category: 'AI Solutions', link: '/docs/ai/training' },
     { title: 'Cloud Security', description: 'Secure your cloud infrastructure', category: 'Cloud Services', link: '/docs/cloud/security' }
   ];
 ;
-const filteredDocs = docCategories.map(category="> ({}"
+const filteredDocs = docCategories.map(category = "> ({}"
     ...category,
     docs: category.docs.filter(doc=">"
       doc.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       doc.description.toLowerCase().includes(searchQuery.toLowerCase())
     )
-  })).filter(category="> category.docs.length > 0);"
+  })).filter(category = "> category.docs.length > 0);"
   return (
     <div className=""min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
       <SEOOptimizer title=""Documentation - Zion Tech Group"></SEOOptimizer>"
@@ -120,7 +120,7 @@ const filteredDocs = docCategories.map(category="> ({}"
                 </div>
                 <div className=""space-y-4"></div>"
                   {category.docs.map((doc, docIndex) => (
-                    <a key="{docIndex}></a>"
+                    <a key = "{docIndex}></a>"
                       href="{doc.link}"
                       className=""block p-4 bg-white/5 rounded-lg border border-white/10 hover:border-purple-500/50 transition-all duration-300 group">"
                       <div className=""flex items-center justify-between"></div>"

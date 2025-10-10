@@ -160,7 +160,6 @@ class EnvironmentConfig {// TODO: Add content}
       console.table({/* TODO: Fix JSX expression */}
   O: Add content}
 };
-
   Environment: this.config.nodeEnv,
 
         'API URL': this.config.apiUrl,
@@ -175,7 +174,7 @@ class EnvironmentConfig {// TODO: Add content}
   }
 }
 // Export singleton instance;
-export const envConfig="new EnvironmentConfig()"
+export const envConfig = "new EnvironmentConfig()"
 // Export convenient helper functions;
 export const isProduction = () => envConfig.isProduction()
 export const isDevelopment = () => envConfig.isDevelopment()

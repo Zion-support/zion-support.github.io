@@ -52,7 +52,6 @@ class AdvancedCacheManager<T> {/* TODO: Fix JSX expression */}
     entry.accessCount++;
     entry.lastAccessed="Date.now();"
     this.hits++;
-
     return entry.value}
 
   public set(key: string, value: T): void {}
@@ -74,7 +73,6 @@ const entry: CacheEntry<T> = {,
 const,
   entry: CacheEntry<T> = {/* TODO: Fix JSX expression */}
     };
-
     this.cache.set(key, entry)}
 
   public has(key: string): boolean {;
@@ -110,7 +108,7 @@ const _entry="this.cache.get(key);"
   }
 
   public getStats(): { hits: number; misses: number; hitRate: number } {}
-    //     const total="this.hits + this.misses;"
+    //     const total = "this.hits + this.misses;"
     return {}
       hits: this.hits;
       misses: this.misses;
@@ -158,7 +156,7 @@ const _now="Date.now();"
       }
     }
 
-    expiredKeys.forEach(key="> this.cache.delete(key))}"
+    expiredKeys.forEach(key = "> this.cache.delete(key))}"
 }
 
 export default AdvancedCacheManager;

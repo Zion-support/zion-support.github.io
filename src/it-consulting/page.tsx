@@ -6,11 +6,11 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 ;
 const ITConsultingPage: React.FC = () => {;
-const consultingServices="[]"
+const consultingServices = []
 import Navigation from '../components;
 import Footer from '../components;
 const ITConsultingPage: React.FC = () => {}
-  const consultingServices="[]"
+  const consultingServices = []
     {}
       titl,
     e: 'Digital Transformation',

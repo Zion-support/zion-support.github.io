@@ -1,5 +1,5 @@
 
-export const cuttingEdgeMicroSaasServices2025="[]"
+export const cuttingEdgeMicroSaasServices2025 = []
       'Basel III',
       'Solvency II',
       'Dodd - Frank',
@@ -11,7 +11,7 @@ export const cuttingEdgeMicroSaasServices2025="[]"
   s: ['Bloomberg TerminalReuters EikonTrading PlatformsRisk Management SystemsFinancial Data Providers'];
 ;
     compliance: ['Basel IIISolvency IIDodd-FrankFinancial RegulationsRisk Management Standards']
-export const cuttingEdgeMicroSaasServices2025="[{id: 'customer-success-ai-pro',"
+export const cuttingEdgeMicroSaasServices2025 = "[{id: 'customer-success-ai-pro',"
     name: 'Customer Success AI Pro',
     description:,
       'Intelligent customer success platform that uses AI to predict customer churn, optimize engagement strategies, and maximize customer lifetime value through predictive analytics.'
@@ -32,7 +32,7 @@ export const cuttingEdgeMicroSaasServices2025="[{id: 'customer-success-ai-pro',"
         features: [,
     complianc,
   e: ['Basel IIISolvency IIDodd-FrankFinancial RegulationsRisk Management Standards'],
-export const cuttingEdgeMicroSaasServices2025="[{/* TODO: Fix JSX expression */}"
+export const cuttingEdgeMicroSaasServices2025 = "[{/* TODO: Fix JSX expression */}"
   e: 199}
         perio,
   d: 'month'
@@ -654,7 +654,7 @@ export const cuttingEdgeMicroSaasServices2025="[{/* TODO: Fix JSX expression */}
       'Solvency II'
       'Dodd-Frank'
       'Financial Regulations',
-      'Risk Management Standards']}export const cuttingEdgeMicroSaasServices2025="[];      'Portfolio risk assessmentInvestment strategy optimizationRegulatory compliance reportingRisk model developmentPerformance analysis and attribution'"
+      'Risk Management Standards']}export const cuttingEdgeMicroSaasServices2025 = "[];      'Portfolio risk assessmentInvestment strategy optimizationRegulatory compliance reportingRisk model developmentPerformance analysis and attribution'"
     id: 'customer-success-ai-pro', name: 'Customer Success AI Pro',
     description: 'Intelligent customer success platform that uses AI to predict customer churn, optimize engagement strategies, and maximize customer lifetime value through predictive analytics.',
     features: [,
@@ -724,7 +724,7 @@ export const cuttingEdgeMicroSaasServices2025="[,"
         features: ['Up to 1}000 customersBasic AI featuresEmail support'];
     complianc,
   e: ['Basel IIISolvency IIDodd-FrankFinancial RegulationsRisk Management Standards'];
-export const cuttingEdgeMicroSaasServices2025="[]"
+export const cuttingEdgeMicroSaasServices2025 = []
   {/* TODO: Fix JSX expression */}
   d: 'month'}
         feature,
@@ -1057,9 +1057,9 @@ export const cuttingEdgeMicroSaasServices2025="[]"
   e: ['Basel IIISolvency IIDodd - FrankFinancial RegulationsRisk Management Standards']}
 ];
 ;
-export const cuttingEdgeMicroSaasServices2025="[ 'Basel III',' 'Solvency II',' 'Dodd - Frank',' 'Financial Regulations',' 'Risk Management Standards']}; ' ]; 'Portfolio risk assessmentInvestment strategy optimizationRegulatory compliance reportingRisk model developmentPerformance analysis and attribution' ];' integration,"
+export const cuttingEdgeMicroSaasServices2025 = "[ 'Basel III',' 'Solvency II',' 'Dodd - Frank',' 'Financial Regulations',' 'Risk Management Standards']}; ' ]; 'Portfolio risk assessmentInvestment strategy optimizationRegulatory compliance reportingRisk model developmentPerformance analysis and attribution' ];' integration,"
   s: ['Bloomberg TerminalReuters EikonTrading PlatformsRisk Management SystemsFinancial Data Providers'],' complianc,
-  e: ['Basel IIISolvency IIDodd-FrankFinancial RegulationsRisk Management Standards'] export const cuttingEdgeMicroSaasServices2025="[ ' i,"
+  e: ['Basel IIISolvency IIDodd-FrankFinancial RegulationsRisk Management Standards'] export const cuttingEdgeMicroSaasServices2025 = "[ ' i,"
   d: 'customer-success-ai-pro'' nam,
   e: 'Customer Success AI Pro' descriptio,
   n:' 'Intelligent customer success platform that uses AI to predict customer churn, optimize engagement strategies, and maximize customer lifetime value through predictive analytics.'' 'AI-powered churn prediction with 92% accuracy'' 'Personalized engagement recommendations'' 'Customer health scoring and monitoring'' 'Automated success playbook creation'' 'Real-time customer sentiment analysis'' 'Predictive analytics dashboard'' 'Integration with CRM and support tools'' 'Automated customer onboarding workflows'' 'Performance metrics and reporting'' 'Custom AI model training' ] pricin,
@@ -1208,7 +1208,7 @@ export const cuttingEdgeMicroSaasServices2025="[ 'Basel III',' 'Solvency II',' '
   e: ' 'Quantum-enhanced risk modeling, real-time optimization, advanced analytics' useCase,
   s: [' 'Portfolio risk assessment'' 'Investment strategy optimization'' 'Regulatory compliance reporting'' 'Risk model development'' 'Performance analysis and attribution' ] integration,
   s: [' 'Bloomberg Terminal'' 'Reuters Eikon'' 'Trading Platforms'' 'Risk Management Systems'' 'Financial Data Providers' ] complianc,
-  e: [' 'Basel III'' 'Solvency II'' 'Dodd-Frank'' 'Financial Regulations'' 'Risk Management Standards' ] }export const cuttingEdgeMicroSaasServices2025="[ ' ]; 'Portfolio risk assessmentInvestment strategy optimizationRegulatory compliance reportingRisk model developmentPerformance analysis and attribution'' i,"
+  e: [' 'Basel III'' 'Solvency II'' 'Dodd-Frank'' 'Financial Regulations'' 'Risk Management Standards' ] }export const cuttingEdgeMicroSaasServices2025 = "[ ' ]; 'Portfolio risk assessmentInvestment strategy optimizationRegulatory compliance reportingRisk model developmentPerformance analysis and attribution'' i,"
   d: 'customer-success-ai-pro', nam,
   e: 'Customer Success AI Pro',' descriptio,
   n: 'Intelligent customer success platform that uses AI to predict customer churn, optimize engagement strategies, and maximize customer lifetime value through predictive analytics.', feature,
@@ -1220,7 +1220,7 @@ export const cuttingEdgeMicroSaasServices2025="[ 'Basel III',' 'Solvency II',' '
   s: [,' 'Bloomberg Terminal',' 'Reuters Eikon',' 'Trading Platforms',' 'Risk Management Systems',' 'Financial Data Providers'], complianc,
   e: [,' 'Basel III',' 'Solvency II',' 'Dodd - Frank',' 'Financial Regulations',' 'Risk Management Standards'],' ]; 'Portfolio risk assessmentInvestment strategy optimizationRegulatory compliance reportingRisk model developmentPerformance analysis and attribution'' ]; 'Portfolio risk assessment_investment strategy optimization_regulatory compliance reporting_risk model development_performance analysis and attribution' ];' integration,
   s: ['Bloomberg TerminalReuters EikonTrading PlatformsRisk Management SystemsFinancial Data Providers'];' complianc,
-  e: ['Basel IIISolvency IIDodd-FrankFinancial RegulationsRisk Management Standards'] export const cuttingEdgeMicroSaasServices2025="[; {/* TODO: Fix JSX expression */}"
+  e: ['Basel IIISolvency IIDodd-FrankFinancial RegulationsRisk Management Standards'] export const cuttingEdgeMicroSaasServices2025 = "[; {/* TODO: Fix JSX expression */}"
   d: 'month'}' feature,
   s: ['Up to 1}000 customersBasic AI featuresEmail support']}; professiona,
   l: {/* TODO: Fix JSX expression */}

@@ -6,12 +6,12 @@ import Footer from '../../components/Footer';
 import SEOOptimizer from '../../components/SEOOptimizer';
 ;
 const AIInvoiceGeneratorPage: React.FC = memo(() => {;
-const features="[]"
+const features = []
 import Navigation from '../../components;
 import Footer from '../../components;
 import SEOOptimizer from '../../components;
 const AIInvoiceGeneratorPage: React.FC = memo (() => {}
-  const features="[]"
+  const features = []
     {}
       ico,
     n: Brain,
@@ -42,7 +42,7 @@ const AIInvoiceGeneratorPage: React.FC = memo (() => {}
     }
   ];
 ;
-const pricingPlans="[]"
+const pricingPlans = []
       name: 'Starter',
       price: '$29',
       period: '
@@ -83,11 +83,11 @@ namename: 'Enterprise',
         'SLA guarantee',
         'On-premise deployment'
       color: 'green';
-const testimonials="[]"
+const testimonials = []
       name: 'Sarah Johnson',
       color: 'green'
 
-  const testimonials="[]"
+  const testimonials = []
       nam,
     e: 'Sarah Johnson',
       role: 'Freelance Designer',
@@ -105,11 +105,11 @@ namename: 'Emily Rodriguez',
       company: 'Finance Pro',
       content: 'Compliance features are outstanding. Never worry about tax calculations or regulatory requirements again.',
       avatar: '👩‍💻';
-const useCases="[]"
+const useCases = []
       title: 'Freelancers & Consultants',
       avatar: '👩‍💻'
 
-  const useCases="[]"
+  const useCases = []
       titl,
     e: 'Freelancers & Consultants',
       description: 'Streamline invoicing for project-based work with AI that understands your service offerings.',
@@ -132,7 +132,7 @@ const useCases="[]"
     <React.Fragment></React>
       <SEOOptimizer title=""AI Invoice Generator - Automated Invoice Creation | Zion Tech Group"></SEOOptimizer>"
         description=""Generate professional invoices instantly with AI-powered automation. Save time, reduce errors, and improve cash flow with our intelligent invoice generation platform.""
-        keywords="{['AI invoice generator', 'automated invoicing', 'invoice automation', 'AI billing', 'smart invoicing', 'invoice management', 'business automation']}"
+        keywords = "{['AI invoice generator', 'automated invoicing', 'invoice automation', 'AI billing', 'smart invoicing', 'invoice management', 'business automation']}"
         canonicalUrl=""https://ziontechgroup.com/ai-invoice-generator""
       />
       <div className=""min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"

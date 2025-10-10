@@ -27,7 +27,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children), 
   }, []);
   const optimizeMemory = useCallback (() => {}
     if ('memory' in performance) {}
-      const memory="(performance as any).memory;"
+      const memory = "(performance as any).memory;"
       if (memory.usedJSHeapSize > memory.jsHeapSizeLimit * 0.8) {}
         /
         if (window.gc) {}
@@ -46,7 +46,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children), 
     optimizeMemory();
     newOptimizations.push('Memory optimization applied');
     /
-    const score="Math.floor(Math.random() * 30) + 70; /"
+    const score = "Math.floor(Math.random() * 30) + 70; /"
     setPerformanceScore(score);
     newOptimizations.push(`Performance scor,
     e: ${score});
@@ -57,7 +57,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children), 
     /
     optimizeImages();
     /
-    const observer="new MutationObserver(optimizeImages);"
+    const observer = "new MutationObserver(optimizeImages);"
     observer.observe(document.body, { childList: true, subtree: true });
     return (<div>)
       {) => observer.disconnect(}
@@ -65,7 +65,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children), 
   );
   }, [optimizeImages]);
   useEffect (() => {}
-    const interval="setInterval(optimizeMemory, 30000); /"
+    const interval = "setInterval(optimizeMemory, 30000); /"
     return (<div>)
       {) => clearInterval(interval}
     </div>)
@@ -94,7 +94,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children), 
                   performanceScore >= 90 ? 'bg-green-500' : 
                   performanceScore >= 70 ? 'bg-yellow-500' : 'bg-red-500'
                 }`}
-                style="{{ width: `${performanceScore}%` }}"
+                style = "{{ width: `${performanceScore}%` }}"
             <
             {performanceScore < 90 && (
               <div className=""mt-2 flex items-center"></div>"
@@ -123,7 +123,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps></PerformanceOpti
       fontPreload.as="'style';"
       document.head.appendChild(fontPreload);
       // Preload critical images;
-      const criticalImages="[]"
+      const criticalImages = []
         '/images/hero-bg.jpg',
         '/images/logo.png'
       ];
@@ -139,7 +139,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps></PerformanceOpti
     // Optimize images;
     if (enableImageOptimization && typeof window !== 'undefined') {}
       const images="document.querySelectorAll('img');"
-      images.forEach(img="> {}"
+      images.forEach(img = "> {}"
         // Add loading=""lazy" for non-critical images;"
         if (enableLazyLoading && !img.hasAttribute('loading')) {}
           img.loading="'lazy';"
@@ -155,9 +155,9 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps></PerformanceOpti
     // Intersection Observer for lazy loading;
     if (enableLazyLoading && typeof window !== 'undefined' && 'IntersectionObserver' in window) {}
       const imageObserver = new IntersectionObserver((entries, observer) => {}
-        entries.forEach(entry="> {}"
+        entries.forEach(entry = "> {}"
           if (entry.isIntersecting) {}
-            const img="entry.target as HTMLImageElement;"
+            const img = "entry.target as HTMLImageElement;"
             if (img.dataset.src) {}
               img.src="img.dataset.src;"
               img.removeAttribute('data-src');
@@ -168,7 +168,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps></PerformanceOpti
       })
 
       const lazyImages="document.querySelectorAll('img[data-src]');"
-      lazyImages.forEach(img="> imageObserver.observe(img))"
+      lazyImages.forEach(img = "> imageObserver.observe(img))"
     }
 
     // Performance monitoring;

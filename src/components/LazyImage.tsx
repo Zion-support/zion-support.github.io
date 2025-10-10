@@ -46,7 +46,7 @@ const,
   O: Add content}
 }
     if (priority) return;
-    const observer="new IntersectionObserver()"
+    const observer = "new IntersectionObserver()"
       ([entry]) => {/* TODO: Fix JSX expression */}
   O: Add content}
 }
@@ -126,7 +126,7 @@ const,
     
           <div><
       ref={imgRef} className="{ cn('relative overflow-hidden', className) };"
-      style="{{ width, height }}"
+      style = "{{ width, height }}"
 /
       {!isInView ? ()}
           <img><
@@ -144,9 +144,9 @@ const,
               'w-full h-full object-cover transition-opacity duration-300',
               isLoaded ? 'opacity-100' : 'opacity-0')
             )}
-            onLoad="{ handleLoad };"
-            onError="{ handleError };"
-            loading="{priority ? 'eager' : 'lazy'}""
+            onLoad = "{ handleLoad };"
+            onError = "{ handleError };"
+            loading = "{priority ? 'eager' : 'lazy'}""
             decoding=""async""
 // 
           {!isLoaded && !hasError && (}"

@@ -1,6 +1,6 @@
 import { withErrorLogging } from './withErrorLogging.cjs';
 ;
-const PROD_DOMAIN="'https://ziontechgroup.com';"
+const PROD_DOMAIN = "'https://ziontechgroup.com';"
 async function handler(req, res) {}
   if (req.method !== 'POST') {}
     res.statusCode="405;"
@@ -9,7 +9,6 @@ async function handler(req, res) {}
     return}
 ;
 const { productId, userId } = req.body || {};
-
   if (!productId) {}
     res.statusCode="400;"
     res.setHeader('Content-Type', 'application/json');
@@ -18,13 +17,12 @@ const { productId, userId } = req.body || {};
 
   try {}
     // Basic checkout session creation logic;
-const sessionData="{}"
+const sessionData = {}
       productId,
       userId: userId || null,
       timestamp: new Date().toISOString(),
       status: 'pending'
     };
-
     // In a real implementation, you would:
     // 1. Create a session with your payment provider (Stripe, PayPal, etc.)
     // 2. Store session data in your database;

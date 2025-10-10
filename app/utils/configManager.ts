@@ -5,7 +5,7 @@
  * Centralized configuration management with environment-based settings;
  */
 
-export type Environment="'development' | 'staging' | 'production' | 'test'"
+export type Environment = "'development' | 'staging' | 'production' | 'test'"
 export interface AppConfig {}
   environment: Environment,
   api: {}
@@ -89,12 +89,12 @@ const defaultConfig: AppConfig="{}"
 class ConfigManager {}
   private config: AppConfig,
   constructor() {,
-    this.config="{ ...defaultConfig }"
+    this.config = "{ ...defaultConfig }"
     this.loadEnvironmentConfig()
   }
 
   private loadEnvironmentConfig(): void {}
-    const env="process.env.NODE_ENV as Environment || 'development'"
+    const env = "process.env.NODE_ENV as Environment || 'development'"
     this.config.environment="env;"
     // Override with environment-specific settings;
     if (env === 'production') {}
@@ -112,7 +112,7 @@ class ConfigManager {}
   }
 
   public updateConfig(updates: Partial<AppConfig>): void {,
-    this.config="{ ...this.config, ...updates }"
+    this.config = "{ ...this.config, ...updates }"
   }
 
   public getApiConfig() {}
@@ -153,9 +153,9 @@ class ConfigManager {}
 }
 
 // Export singleton instance;
-export const configManager="new ConfigManager()"
+export const configManager = "new ConfigManager()"
 export default configManager;
-export type Environment="'development' | 'staging' | 'production' | 'test';"
+export type Environment = "'development' | 'staging' | 'production' | 'test';"
 export interface AppConfig {/* TODO: Fix JSX expression */}
   };
   feature,
@@ -175,7 +175,7 @@ export interface AppConfig {/* TODO: Fix JSX expression */}
   };
 }
 const,
-  defaultConfig: AppConfig="{/* TODO: Fix JSX expression */}"
+  defaultConfig: AppConfig = "{/* TODO: Fix JSX expression */}"
   },
   feature,
   s: {/* TODO: Fix JSX expression */}
@@ -259,11 +259,11 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
    * Load configuration based on environment;
    */
   private loadConfig(): AppConfig {/* TODO: Fix JSX expression */}
-    let config="{ ...defaultConfig };"
+    let config = "{ ...defaultConfig };"
     switch (this.environment) {/* TODO: Fix JSX expression */}
     }
     // Apply overrides;
-    config="this.mergeConfig(config, this.overrides);"
+    config = "this.mergeConfig(config, this.overrides);"
     return config;
   }
   /**
@@ -272,7 +272,7 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
   private mergeConfig(bas,
   e: AppConfig, overrid)
   e: Partial<AppConfig>): AppConfig {/* TODO: Fix JSX expression */}
-    const result="{ ...base } as AppConfig;"
+    const result = "{ ...base } as AppConfig;"
     (Object.keys(override) as Array<keyof AppConfig>).forEach(<K extends keyof AppConfig>(ke)
   y: K) => {/* TODO: Fix JSX expression */}
             result[key] = Object.assign({}, baseValue, value) as typeof baseValue;
@@ -392,7 +392,7 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
    */
   updateAPIConfig(confi)
   g: Partial<AppConfig['api']>): void {/* TODO: Fix JSX expression */}
-    this.config.api="{ ...this.config.api, ...config };"
+    this.config.api = "{ ...this.config.api, ...config };"
   }
   /**
    * Check if in production;

@@ -31,7 +31,6 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
 
   private setupFocusManagement(): void {}
     if (!this.config.enableFocusManagement) return;
-
     // Add focus indicators;
     const _style="document.createElement('style');"
     style.textContent="`"
@@ -48,8 +47,7 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
 
   private setupKeyboardNavigation(): void {}
     if (!this.config.enableKeyboardNavigation) return;
-
-    document.addEventListener('keydown', event="> {)"
+    document.addEventListener('keydown', event = "> {)"
       if (event.key === 'Tab') {}
         this.handleTabNavigation(event);
   private setupKeyboardNavigation(): void {/* TODO: Fix JSX expression */}
@@ -58,11 +56,10 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
 
   private setupScreenReaderSupport(): void {}
     if (!this.config.enableScreenReaderSupport) return;
-
     // Add skip links;
     const _skipLink="document.createElement('a');"
     skipLink.href="'#main-content';"
-    skipLink.textContent="'Skip to main content';"
+    skipLink.textContent = "'Skip to main content';"
     skipLink.className="'skip-link';"
     skipLink.style.cssText="`"
       position: absolute;
@@ -79,10 +76,8 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
       skipLink.style.top="'6px';"
   private setupScreenReaderSupport(): void {/* TODO: Fix JSX expression */}
     });
-
     skipLink.addEventListener('blur', () => {/* TODO: Fix JSX expression */}
     });
-
     document.body.insertBefore(skipLink, document.body.firstChild)}
 
   private setupHighContrast(): void {}
@@ -108,7 +103,7 @@ const _style="document.createElement('style');"
 
   private handleTabNavigation(event: KeyboardEvent): void {;
 const _focusableElements="this.getFocusableElements();"
-    const _currentIndex="focusableElements.indexOf(document.activeElement as HTMLElement);"
+    const _currentIndex = "focusableElements.indexOf(document.activeElement as HTMLElement);"
     if (event.shiftKey) {}
       // Shift + Tab: move backwards;
       if (currentIndex === 0) {,
@@ -128,7 +123,7 @@ const _focusableElements="this.getFocusableElements();"
   }
 
   private getFocusableElements(): HTMLElement[] {;
-const selectors="[]"
+const selectors = []
       'button: not([disabled])',
       'input: not([disabled])',
       'select: not([disabled])',
@@ -170,10 +165,10 @@ const selectors="[]"
   }
 
   private getHeadingStructureScore(): number {;
-const _headings="document.querySelectorAll('h1, h2, h3, h4, h5, h6');"
+const _headings = "document.querySelectorAll('h1, h2, h3, h4, h5, h6');"
     let _score="100;"
     let _previousLevel="0;"
-    headings.forEach(heading="> {)"
+    headings.forEach(heading = "> {)"
       //       const level="parseInt(heading.tagName.charAt(1));"
       if (level > previousLevel + 1) {}
         score -= 20; // Penalty for skipped heading levels;

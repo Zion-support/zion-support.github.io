@@ -35,14 +35,14 @@ class Logger {/* TODO: Fix JSX expression */}
     return process.env['NODE_ENV'] === 'production' ? LogLevel.INFO : LogLevel.DEBUG}
 
   private formatMessage(level: string, message: string, ...args: unknown[]): string {,;
-const _timestamp="this.config.timestamp ? `[${new Date().toISOString()}]` : '';"
+const _timestamp = "this.config.timestamp ? `[${new Date().toISOString()}]` : '';"
   private formatMessage(leve,
   l: string, messag,
   e: string, ...arg)
   s: unknown[]): string {/* TODO: Fix JSX expression */}
-    const _timestamp="this.config.timestamp ? `[${new Date().toISOString()}]` : '';`"
-    //     const prefix="this.config.prefix ? `[${this.config.prefix}]` : '';"
-    //     const formattedArgs="args.length > 0 ? JSON.stringify(args, null, 2) : '';`"
+    const _timestamp = "this.config.timestamp ? `[${new Date().toISOString()}]` : '';`"
+    //     const prefix = "this.config.prefix ? `[${this.config.prefix}]` : '';"
+    //     const formattedArgs = "args.length > 0 ? JSON.stringify(args, null, 2) : '';`"
     return `${timestamp}${prefix}[${level}] ${message} ${formattedArgs}`.trim()}
 
   private shouldLog(level: LogLevel): boolean {,
@@ -133,6 +133,5 @@ export const error="(messag,"
   e: string, error?: Error | any, ...arg)
   s: unknown[]) =>
   logger.error(message, error, ...args);
-
 export default logger;
 `

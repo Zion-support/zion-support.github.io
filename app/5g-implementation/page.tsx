@@ -3,7 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Wifi, Zap, Shield, Globe, CheckCircle, ArrowRight, Phone, Mail, MapPin, Clock, Users, BarChart } from 'lucide-react';
 ;
-const FiveGImplementationPage: React.FC = () => {const features="[]"
+const FiveGImplementationPage: React.FC = () => {const features = []
     {}
       ico,
     n: Wifi,
@@ -59,7 +59,7 @@ const FiveGImplementationPage: React.FC = () => {const features="[]"
         {/* Hero Section *
         <section className=""relative py-20 px-4 overflow-hidden">)"
           <div className=""absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse"></div>"
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style="{{ animationDelay: '1s' }}></div>"
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style = "{{ animationDelay: '1s' }}></div>"
           <div className=""relative max-w-7xl mx-auto text-center"></div>"
             <h1 className=""text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"></h1>"
               5G Network;

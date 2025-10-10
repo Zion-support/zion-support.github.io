@@ -5,11 +5,11 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 ;
 const AIAnalyticsPage: React.FC = () => {;
-const features="[]"
+const features = []
 import Navigation from '../components;
 import Footer from '../components;
 const AIAnalyticsPage: React.FC = () => {}
-  const features="[]"
+  const features = []
     {}
       ico,
     n: Brain,
@@ -98,7 +98,7 @@ ico,
     }
   ];
 ;
-const useCases="[]"
+const useCases = []
       title: 'Sales Performance Analysis',
       description: 'Track sales metrics, identify top performers, and optimize sales strategies',
       icon: TrendingUp,
@@ -113,11 +113,11 @@ titletitle: 'Financial Forecasting',
 titletitle: 'Operational Efficiency',
       description: 'Optimize business processes and identify areas for improvement',
       color: 'text-yellow-400';
-const pricingTiers="[]"
+const pricingTiers = []
       name: 'Starter',
       color: 'text-yellow-400'
 
-  const pricingTiers="[]"
+  const pricingTiers = []
       nam,
     e: 'Starter',
       price: '$1,500',
@@ -159,10 +159,10 @@ namename: 'Professional',
         'SLA guarantees'
       color: 'text-cyan-400',
       bgColor: 'bg-cyan-500/10';
-const benefits="[]"
+const benefits = []
       icon: Star,
       bgColor: 'bg-cyan-500;
-  const benefits="[]"
+  const benefits = []
       ico,
     n: Star,
       title: '95% Accuracy',
@@ -174,7 +174,7 @@ title$5: 'Actionable Insights',
 icon$5: Award,
       title: 'Proven Results',
       description: '300% average ROI for our analytics clients';
-const useCases="[]"
+const useCases = []
       titl,
     e: 'Sales Performance Analysis',
       description: 'Track sales metrics, identify top performers, and optimize sales strategies',

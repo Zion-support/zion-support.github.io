@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Search, X, ArrowRight, Clock, TrendingUp, Star } from 'lucide-react';
-
 interface SearchResult {}
   id: string;
   title: string;
@@ -68,13 +67,13 @@ const mockSearchResults: SearchResult[] = []
   }
 ];
 ;
-const recentSearches="[]"
+const recentSearches = []
   'AI Analytics',
   'Workflow Automation',
   'Healthcare AI'
 ];
 ;
-const popularSearches="[]"
+const popularSearches = []
   'AI Services',
   'Quantum Computing',
   'Cybersecurity',
@@ -88,17 +87,15 @@ return (
   const [selectedIndex, setSelectedIndex] = useState(-1);
   const [showSuggestions, setShowSuggestions] = useState(false);
   ;
-const inputRef = useRef<HTMLInputElement>(null);</HTMLInputElement>const</HTMLInputElement> resultsRef="useRef<HTMLDivElement>(null);</HTMLDivElement>useEffect</HTMLDivElement>"
+const inputRef = useRef<HTMLInputElement>(null);</HTMLInputElement>const</HTMLInputElement> resultsRef = "useRef<HTMLDivElement>(null);</HTMLDivElement>useEffect</HTMLDivElement>"
 );
 }(() => {}
     if (isOpen && inputRef.current) {}
       inputRef.current.focus()}
   }, [isOpen]);
-
   useEffect(() => {;
 const handleKeyDown = (e: KeyboardEvent) => {}
       if (!isOpen) return;
-
       if (e.key === 'Escape') {}
         onClose()} else if (e.key === 'ArrowDown') {}
         e.preventDefault();
@@ -110,7 +107,6 @@ const handleKeyDown = (e: KeyboardEvent) => {}
         e.preventDefault();
         handleResultClick(results[selectedIndex])}
     };
-
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown)}, [isOpen, results, selectedIndex, onClose]);
 ;
@@ -122,22 +118,19 @@ const searchResults = async (searchQuery: string) => {}
 
     setIsSearching(true);
     setShowSuggestions(false);
-
     // Simulate API call delay;
-    await new Promise(resolve="> setTimeout(resolve, 300));"
+    await new Promise(resolve = "> setTimeout(resolve, 300));"
 ;
 const filteredResults = mockSearchResults.filter(result=">"
       result.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       result.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
       result.category.toLowerCase().includes(searchQuery.toLowerCase())
     );
-
     // Sort by popularity and relevance;
 const sortedResults = filteredResults.sort((a, b) => {;
-const aRelevance="a.title.toLowerCase().includes(searchQuery.toLowerCase()) ? 2 : 1;"
-      const bRelevance="b.title.toLowerCase().includes(searchQuery.toLowerCase()) ? 2 : 1;"
+const aRelevance = "a.title.toLowerCase().includes(searchQuery.toLowerCase()) ? 2 : 1;"
+      const bRelevance = "b.title.toLowerCase().includes(searchQuery.toLowerCase()) ? 2 : 1;"
       return (b.popularity || 0) * bRelevance - (a.popularity || 0) * aRelevance});
-
     setResults(sortedResults);
     setSelectedIndex(-1);
     setIsSearching(false)};
@@ -187,9 +180,7 @@ const getTypeColor = (type: string) => {}
       default:
         return 'text-gray-400'}
   };
-
   if (!isOpen) return null;
-
   return (
     <div className=""fixed inset-0 z-50 flex min-h-screen items-start justify-center p-4 pt-16"></div>"
       {/* Backdrop */}
@@ -201,14 +192,14 @@ const getTypeColor = (type: string) => {}
         {/* Header */}
         <div className=""flex items-center p-4 border-b border-cyan-400/20"></div>"
           <Search className=""w-5 h-5 text-cyan-400 mr-3" /></Search>"
-          <input ref="{inputRef}></input>"
+          <input ref = "{inputRef}></input>"
             type=""text""
             placeholder=""Search services, pages, documentation...""
             value="{query}"
             onChange="{handleInputChange}"
             className=""flex-1 bg-transparent text-white placeholder-gray-400 outline-none text-lg""
           />
-          <button onClick="{onClose}></button>"
+          <button onClick = "{onClose}></button>"
             className=""p-2 text-gray-400 hover:text-white transition-colors">"
             <X className=""w-5 h-5" /></X>"
           </button>
@@ -225,7 +216,7 @@ const getTypeColor = (type: string) => {}
                 </h3>
                 <div className=""flex flex-wrap gap-2"></div>"
                   {recentSearches.map((search, index) => (
-                    <button key="{index}></button>"
+                    <button key = "{index}></button>"
                       onClick={() => handleSuggestionClick(search)}
                       className=""px-3 py-1 bg-slate-800/50 text-gray-300 rounded-full text-sm hover:bg-cyan-400/20 hover:text-cyan-400 transition-colors">"
                       {search}
@@ -241,7 +232,7 @@ const getTypeColor = (type: string) => {}
                 </h3>
                 <div className=""flex flex-wrap gap-2"></div>"
                   {popularSearches.map((search, index) => (
-                    <button key="{index}></button>"
+                    <button key = "{index}></button>"
                       onClick={() => handleSuggestionClick(search)}
                       className=""px-3 py-1 bg-slate-800/50 text-gray-300 rounded-full text-sm hover:bg-cyan-400/20 hover:text-cyan-400 transition-colors">"
                       {search}
@@ -262,7 +253,7 @@ const getTypeColor = (type: string) => {}
               ) : results.length > 0 ? (
                 <div className=""space-y-2"></div>"
                   {results.map((result, index) => (
-                    <button key="{result.id}></button>"
+                    <button key = "{result.id}></button>"
                       onClick={() => handleResultClick(result)}
                       className="{`w-full text-left p-3 rounded-lg transition-colors ${}"
                         index === selectedIndex;
@@ -315,5 +306,4 @@ const getTypeColor = (type: string) => {}
       </div>
     </div>
   )};
-
 export default EnhancedSearchModal;

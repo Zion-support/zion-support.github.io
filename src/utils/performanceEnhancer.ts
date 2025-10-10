@@ -31,7 +31,6 @@ constructor(config: OptimizationConfig) {this.config="config}"
           entries.forEach((entry) => {// Process performance entries}
             // console.log removed for production;
 entry:', entry.name, entry.duration)})});
-
         observer.observe({ entryTypes: ['measure', 'navigation'] })} catch (error) {// console.warn removed for production;
 }
 
@@ -47,4 +46,3 @@ entry:', entry.name, entry.duration)})});
 }
 
 export default PerformanceEnhancer;
-

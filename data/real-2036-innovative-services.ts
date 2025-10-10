@@ -1,7 +1,7 @@
-export type Real2036InnovativeService="id: string, name: string;"
+export type Real2036InnovativeService = "id: string, name: string;"
   tagline: string, description: string;
   category: string, price: string;
-export type Real2036InnovativeService="id: string;"
+export type Real2036InnovativeService = "id: string;"
   name: string;
   tagline: string;
   description: string;
@@ -1232,7 +1232,7 @@ export type Real2036 InnovativeService="{;"
     useCase,
   s: ['Demand planningInventory managementLogistics optimizationRisk management']}
 ];
-export type Real2036InnovativeService="{/* TODO: Fix JSX expression */}"
+export type Real2036InnovativeService = "{/* TODO: Fix JSX expression */}"
     ]}
   },
   // Autonomous DevOps Platform;
@@ -1332,7 +1332,7 @@ export type Real2036 InnovativeService="{;"
     useCase,
   s: ['Demand planningInventory managementLogistics optimizationRisk management']}
 ];
-export type Real2036InnovativeService="{/* TODO: Fix JSX expression */}"
+export type Real2036InnovativeService = "{/* TODO: Fix JSX expression */}"
   useCases?: string[]}
 };
 export const,
@@ -2067,7 +2067,7 @@ export type Real2036InnovativeService="i,"
   e: 'Manufacturing companies, Retail businesses, Logistics providers'' competitiveAdvantag,
   e: 'AI optimization, Real-time insights, Comprehensive coverage'' integratio,
   n: ['ERP systemsWMS platformsTMS solutionsIoT devicesCloud services']' useCase,
-  s: ['Demand planningInventory managementLogistics optimizationRisk management'] } ]; export type Real2036InnovativeService="{/* TODO: Fix JSX expression */}"
+  s: ['Demand planningInventory managementLogistics optimizationRisk management'] } ]; export type Real2036InnovativeService = "{/* TODO: Fix JSX expression */}"
   s: [,' 'Government communications',' 'Financial transactions',' 'Healthcare data sharing',' 'Military operations']} }, // Autonomous DevOps Platform; ' i,
   d: 'autonomous - devops - platform - enterprise',' nam,
   e: 'Autonomous DevOps Platform Enterprise',' taglin,
@@ -2094,7 +2094,7 @@ export type Real2036InnovativeService="i,"
   e: 'Manufacturing companies, Retail businesses, Logistics providers'' competitiveAdvantag,
   e: 'AI optimization, Real-time insights, Comprehensive coverage'' integratio,
   n: ['ERP systemsWMS platformsTMS solutionsIoT devicesCloud services']' useCase,
-  s: ['Demand planningInventory managementLogistics optimizationRisk management'] } ]; export type Real2036InnovativeService="{/* TODO: Fix JSX expression */}"
+  s: ['Demand planningInventory managementLogistics optimizationRisk management'] } ]; export type Real2036InnovativeService = "{/* TODO: Fix JSX expression */}"
   k: string; launchDate?: string; rating?: number; marketSize?: string; targetAudience?: string; competitiveAdvantage?: string} integration?: string[]}; useCases?: string[]}; export const,
   real2036InnovativeServices: Real2036InnovativeService[] = [; // AI-Powered Business Intelligence; {/* TODO: Fix JSX expression */}
   n: ['SalesforceHubSpotGoogle AnalyticsAWSAzureSlack']}' useCase,

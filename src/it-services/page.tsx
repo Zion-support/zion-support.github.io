@@ -5,7 +5,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 ;
 const ITServicesPage: React.FC = () => {;
-const itServices="[]"
+const itServices = []
     // Infrastructure & Cloud Services;
     {}
       title: 'Data Center Services',
@@ -241,7 +241,7 @@ const itServices="[]"
     }
   ];
 ;
-const categories="[]"
+const categories = []
     { name: 'All', count: itServices.length },
     { name: 'Infrastructure', count: itServices.filter(s => s.category === 'Infrastructure').length },
     { name: 'Security', count: itServices.filter(s => s.category === 'Security').length },
@@ -255,7 +255,7 @@ const categories="[]"
     { name: 'Training', count: itServices.filter(s => s.category === 'Training').length },
     { name: 'Project Management', count: itServices.filter(s => s.category === 'Project Management').length }
   ];
-  const services="[]"
+  const services = []
     {}
       icon: Cloud,
       title: 'Cloud Migration & Management',
@@ -306,7 +306,7 @@ const categories="[]"
     }
   ];
 ;
-const additionalServices="[]"
+const additionalServices = []
     {}
       icon: Users,
       title: 'IT Consulting',
@@ -345,7 +345,7 @@ const additionalServices="[]"
     }
   ];
 ;
-const benefits="[]"
+const benefits = []
     {}
       icon: Star,
       title: 'Proven Expertise',
@@ -367,7 +367,6 @@ const benefits="[]"
       description: 'Microsoft, AWS, and Google certified engineers'
     }
   ];
-
   return (
     <div className=""min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
       <Navigation /></Navigation>
@@ -579,5 +578,4 @@ const benefits="[]"
         <Footer /></Footer>
       </div>
   )};
-
 export default ITServicesPage;

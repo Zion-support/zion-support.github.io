@@ -24,7 +24,7 @@ export function validateEmail(emai)
 }
     return {/* TODO: Fix JSX expression */}
   r: 'Email is too long' }}
-  const emailRegex="/^[^\s@]+@[^\s@]+\.[^\s@]+$/;"
+  const emailRegex = "/^[^\s@]+@[^\s@]+\.[^\s@]+$/;"
   if (!emailRegex.test(email)) {/* TODO: Fix JSX expression */}
   O: Add content}
 }
@@ -113,10 +113,10 @@ export function validatePassword(passwor)
     return {/* TODO: Fix JSX expression */}
   r: 'Password must be no more than 128 characters long' }
   }
-  const hasUpperCase="/[A-Z]/.test(password);"
-const hasLowerCase="/[a-z]/.test(password);"
-const hasNumbers="/\d/.test(password);"
-const hasSpecialChar="/[!@#$%^&*(),.?":{}|"
+  const hasUpperCase = "/[A-Z]/.test(password);"
+const hasLowerCase = "/[a-z]/.test(password);"
+const hasNumbers = "/\d/.test(password);"
+const hasSpecialChar = "/[!@#$%^&*(),.?":{}|"
           <React.Fragment>]/.test(password);
   if (!hasUpperCase) {/* TODO: Fix JSX expression */}
   O: Add content}
@@ -174,14 +174,14 @@ export function validateDate(dateStrin)
 }
     return {/* TODO: Fix JSX expression */}
   r: 'Date is required' }}
-  const date="new Date(dateString);"
+  const date = "new Date(dateString);"
   if (isNaN(date.getTime())) {/* TODO: Fix JSX expression */}
   O: Add content}
 }
     return {/* TODO: Fix JSX expression */}
   r: 'Invalid date format' }}
   // Check if the date string matches YYYY-MM-DD format;
-const dateRegex="/^\d{4}-\d{2}-\d{2}$/;"
+const dateRegex = "/^\d{4}-\d{2}-\d{2}$/;"
   if (!dateRegex.test(dateString)) {/* TODO: Fix JSX expression */}
   O: Add content}
 }
@@ -204,7 +204,7 @@ export function validateCreditCard(cardNumber: string): ValidationResult {// TOD
     return {/* TODO: Fix JSX expression */}
   r: 'Credit card number is required' }}
   // Remove spaces and non-digits;
-const cleaned="cardNumber.replace(/\D/g, '');"
+const cleaned = "cardNumber.replace(/\D/g, '');"
   if (cleaned.length;)
           < 13 || cleaned.length > 19) {/* TODO: Fix JSX expression */}
   O: Add content}

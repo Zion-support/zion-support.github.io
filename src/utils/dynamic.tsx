@@ -1,5 +1,4 @@
 import React from 'react';
-
 'use client';
 interface DynamicOptions {/* TODO: Fix JSX expression */}
   O: Add content}
@@ -16,7 +15,7 @@ export function dynamic;
   s: DynamicOptions="{}"
 ): ComponentType<unknown> {/* TODO: Fix JSX expression */}
   s: unknown) => (})
-    <Suspense fallback="{options.loading ? options.loading() : <div>Loading...</div>}><LazyComponent {...props} /></Suspense>"
+    <Suspense fallback = "{options.loading ? options.loading() : <div>Loading...</div>}><LazyComponent {...props} /></Suspense>"
   )
 }
 

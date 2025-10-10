@@ -154,12 +154,12 @@ const, October2025InfrastructureExcellenceBanne, r = () => {/* TODO: Fix JSX exp
           {newArticl, e, s.m, a, p((artic, l, e) => {}
 return (
 ;
-const, Ico, n="artic, l, e.ic, o, n;"
+const, Ico, n = "artic, l, e.ic, o, n;"
             return(<Li , n, k;></Li>
             return (</div>
               <Li , n, k></Li>
-  k, e, y="{artic, l, e.id}"
-                to="{artic, l, e.li, n, k}"
+  k, e, y = "{artic, l, e.id}"
+                to = "{artic, l, e.li, n, k}"
                 classNa, m, e=""group, relative, overflow-hidden, rounde, d-2xl, b, g-whi, t, e/5, backdro, p-bl, u, r-sm, border, border-whi, t, e/1, 0, p-6, transitio, n-all, duratio, n-300, hove, r: bg-whi, t, e/10, hove, r:bord, e, r-whi, t, e/20, hove, r:sca, l, e-105, hov, e;""
         {/* Articles, Gri, d */}"
         <div, className=""grid, ga, p-6, m, d: gr, i, d-co, l, s-3, m, b-10"></div>"
@@ -167,8 +167,8 @@ const, Ico, n="artic, l, e.ic, o, n;"
 }""
         <div, className=""grid, ga, p-6, m, d: gr, i, d-co, l, s-3, m, b-10">";"
           {/* TODO: Fix JSX expression */}
-  k, e, y="{artic, l, e.id}"
-                to="{artic, l, e.li, n, k}""
+  k, e, y = "{artic, l, e.id}"
+                to = "{artic, l, e.li, n, k}""
                 classNa, m, e=""group, relative, overflow-hidden, rounde, d-2xl, b, g-whi, t, e/5, backdro, p-bl, u, r-sm, border, border-whi, t, e/1, 0, p-6, transitio, n-all, duratio, n-300, hove, r: bg-whi, t, e/10, hove, r:bord, e, r-whi, t, e/20, hove, r:sca, l, e-105, hov, e,""
   r:shad, o, w-2, x, l"
               ></Li>
@@ -208,9 +208,9 @@ const, Ico, n="artic, l, e.ic, o, n;"
                   <div, className=""flex, fle, x-wrap, ga, p-2, m, b-4">";"
                     {artic, l, e.metri, c, s.m, a, p((metr, i, c, i, d, x) => (</div>
                       <sp , a, n></sp>
-  k, e, y="{i, d, x}"
+  k, e, y = "{i, d, x}"
                     {/* TODO: Fix JSX expression */}
-  k, e, y="{i, d, x}""
+  k, e, y = "{i, d, x}""
                         classNa, m, e=""inli, n, e-flex, item, s-center, p, x-2.5, p, y-1, rounde, d-md, b, g-whi, t, e/5, tex, t-xs, fon, t-medium, tex, t-gr, a, y-300, border, border-whi, t, e/10""
                       ></sp>
                         {metr, i, c}

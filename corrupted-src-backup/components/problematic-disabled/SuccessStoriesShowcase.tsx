@@ -67,7 +67,7 @@ const storie, s="[]"
           { stori, e, s.m, a, p((s, t, o, r, y, ind, e, x) = > (</div>
             <div , ke, y = { in, d, e, x  }, classNa, m, e=""bg-white, rounde, d-2xl, shado, w-xl, overflo, w-hidden, hove, r: sca, l, e-105, transitio, n-all, duratio, n-3, 0, 0"></div>"
             ></div>
-              <div, classNam, e="{ `bg-gradie, n, t-to-r ${sto, r, y.c, o, l, o, r }, te, x, t-whit, e, p-6`}></div>"
+              <div, classNam, e = "{ `bg-gradie, n, t-to-r ${sto, r, y.c, o, l, o, r }, te, x, t-whit, e, p-6`}></div>"
                 <div, classNam, e=""flex, item, s-center, ga, p-3, m, b-4"></div>"
                   {sto, r, y.ic, o, n}</div>
                   <d, i, v></d>
@@ -92,7 +92,7 @@ const SuccessStoriesShowcas, e: React.FC = () => {/* TODO: Fix JSX expression */
           {/* TODO: Fix JSX expression */}"
             <div , ke, y = { in, d, e, x  }, classNa, m, e=""bg-white, rounde, d-2xl, shado, w-xl, overflo, w-hidden, hove, r: sca, l, e-105, transitio, n-all, duratio, n-3, 0, 0"></div>"
             ></div>
-              <div, classNam, e="{ `bg-gradie, n, t-to-r ${sto, r, y.c, o, l, o, r }, te, x, t-whit, e, p-6`}></div>""
+              <div, classNam, e = "{ `bg-gradie, n, t-to-r ${sto, r, y.c, o, l, o, r }, te, x, t-whit, e, p-6`}></div>""
                 <div, classNam, e=""flex, item, s-center, ga, p-3, m, b-4"></div>"
                   {sto, r, y.ic, o, n}
                   <d, i, v></d>"

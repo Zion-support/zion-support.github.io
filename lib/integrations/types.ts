@@ -1,4 +1,4 @@
-export type IntegrationProviderId="| 'salesforce'"
+export type IntegrationProviderId = "| 'salesforce'"
   | 'hubspot'
   | 'zoho'
   | 'pipedrive'
@@ -6,26 +6,24 @@ export type IntegrationProviderId="| 'salesforce'"
   | 'lever'
   | 'workable'
   | 'bamboohr';
-
-export type SyncStatus="'connected' | 'warning' | 'disconnected';"
-export type SyncStatus="'connected' | 'warning' | 'disconnected';"
-export type SyncStatus="'connected' | 'warning' | 'disconnected';"
-export type SyncStatus="'connected' | 'warning' | 'disconnected';"
-export type SyncStatus="'connected' | 'warning' | 'disconnected';"
-export type SyncStatus="'connected' | 'warning' | 'disconnected';"
+export type SyncStatus = "'connected' | 'warning' | 'disconnected';"
+export type SyncStatus = "'connected' | 'warning' | 'disconnected';"
+export type SyncStatus = "'connected' | 'warning' | 'disconnected';"
+export type SyncStatus = "'connected' | 'warning' | 'disconnected';"
+export type SyncStatus = "'connected' | 'warning' | 'disconnected';"
+export type SyncStatus = "'connected' | 'warning' | 'disconnected';"
 export interface IntegrationProviderMeta {}
   id: IntegrationProviderId;
   name: string;
   category: 'crm' | 'ats';
   description: string;
-
-export type SyncStatus="'connected' | 'warning' | 'disconnected';"
+export type SyncStatus = "'connected' | 'warning' | 'disconnected';"
 ,
-export type SyncStatus="'connected' | 'warning' | 'disconnected'}"
-export type SyncStatus="'connected' | 'warning' | 'disconnected';"
-export type SyncStatus="'connected' | 'warning' | 'disconnected';"
-export type SyncStatus="'connected' | 'warning' | 'disconnected'}"
-export type SyncStatus="'connected' | 'warning' | 'disconnected';"
+export type SyncStatus = "'connected' | 'warning' | 'disconnected'}"
+export type SyncStatus = "'connected' | 'warning' | 'disconnected';"
+export type SyncStatus = "'connected' | 'warning' | 'disconnected';"
+export type SyncStatus = "'connected' | 'warning' | 'disconnected'}"
+export type SyncStatus = "'connected' | 'warning' | 'disconnected';"
 export interface IntegrationProviderMeta {}
   id: string;
   name: string;
@@ -33,7 +31,7 @@ export interface IntegrationProviderMeta {}
   description: string}
 }
 
-export type SyncStatus="'connected' | 'warning' | 'disconnected';"
+export type SyncStatus = "'connected' | 'warning' | 'disconnected';"
 export interface ProviderConnection {}
   id: string;
   providerId: IntegrationProviderId;
@@ -71,13 +69,13 @@ export interface ProviderConnection {}
   config?: Record<string, any>;</string>
 }
 
-export type SyncStatus="'connected' | 'warning' | 'disconnected';"
+export type SyncStatus = "'connected' | 'warning' | 'disconnected';"
   status: SyncStatus;
   lastSync?: number;
   createdAt: number;
   expiresAt?: number}
 
-export type SyncStatus="'connected' | 'warning' | 'disconnected'}"
+export type SyncStatus = "'connected' | 'warning' | 'disconnected'}"
   status: SyncStatus;
   lastSync?: number;
   createdAt: number}

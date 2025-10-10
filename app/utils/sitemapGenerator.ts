@@ -1,9 +1,9 @@
 export const generateSitemap = useCallback((...args) => {;
-const baseUrl="'https: //ziontechgroup.com',;"
+const baseUrl = "'https: //ziontechgroup.com',;"
 const staticPages="[,"
 export const generateSitemap = useCallback((...args) => {}
-  const baseUrl="'https://ziontechgroup.com';"
-const staticPages="[]"
+  const baseUrl = "'https://ziontechgroup.com';"
+const staticPages = []
     '',
     '/services',
     '/contact',
@@ -192,5 +192,5 @@ export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expressio
       priorit,
   y: 0.3}
   ]}
-export const generateRobotsTxt = (): string="> {/* TODO: Fix JSX expression */}"
+export const generateRobotsTxt = (): string = "> {/* TODO: Fix JSX expression */}"
 };`

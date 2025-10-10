@@ -31,7 +31,6 @@ export interface AppConfig {// TODO: Add content}
   s: {/* TODO: Fix JSX expression */}
   O: Add content}
 };
-
   analytics: boolean;,
     monitoring: boolean;,
     errorTracking: boolean;,
@@ -84,7 +83,7 @@ export function getConfig;
     if (value && typeof value === 'object' && key in value) {/* TODO: Fix JSX expression */}
   O: Add content}
 }
-      value="(value as Record;)"
+      value = "(value as Record;)"
           <string, unknown>)[key]} else {/* TODO: Fix JSX expression */}
   O: Add content}
 }
@@ -112,4 +111,3 @@ export function isDevelopment(): boolean {/* TODO: Fix JSX expression */}
 }
   return config.app.environment === 'development';
 export default config;
-

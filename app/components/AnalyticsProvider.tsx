@@ -6,7 +6,7 @@ interface AnalyticsContextType {}
   trackPageView: (pageName: string, pagePath: string) => void;
 }
 
-const AnalyticsContext="createContext<AnalyticsContextType | undefined>(undefined);"
+const AnalyticsContext = "createContext<AnalyticsContextType | undefined>(undefined);"
 export const useAnalytics = () => {}
   const context="useContext(AnalyticsContext);"
   if (!context) {}
@@ -65,7 +65,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
     trackEvent,
     trackPageView};
   return (
-    <AnalyticsContext.Provider value="{value}></AnalyticsContext>"
+    <AnalyticsContext.Provider value = "{value}></AnalyticsContext>"
       {children}
     </AnalyticsContext.Provider>
   );

@@ -1,8 +1,8 @@
 const fs="require('fs');"
 const path="require('path');"
 ;
-const dir="path.join(process.cwd(), 'data');"
-const file="path.join(dir, 'subscribers.json');"
+const dir = "path.join(process.cwd(), 'data');"
+const file = "path.join(dir, 'subscribers.json');"
 export default function handler(req, res) {}
   if (req.method !== 'POST') {}
     res.statusCode="405;"
@@ -11,7 +11,6 @@ export default function handler(req, res) {}
     return}
 ;
 const { email, name, preferences } = req.body || {};
-
   if (!email) {}
     res.statusCode="400;"
     res.setHeader('Content-Type', 'application/json');
@@ -24,7 +23,7 @@ const { email, name, preferences } = req.body || {};
 let existing="[];"
   try {}
     if (fs.existsSync(file)) {;
-const data="fs.readFileSync(file, 'utf8');"
+const data = "fs.readFileSync(file, 'utf8');"
       existing="JSON.parse(data);"
       if (!Array.isArray(existing)) existing="[]}"
   } catch (error) {}
@@ -38,7 +37,7 @@ const existingSubscriber = existing.find(sub => sub.email === email);
     res.end(JSON.stringify({ error: 'Email already subscribed' }));
     return}
 ;
-const newSubscriber="{}"
+const newSubscriber = {}
     id: Date.now().toString(),
     email,
     name: name || '',
@@ -46,9 +45,7 @@ const newSubscriber="{}"
     timestamp: new Date().toISOString(),
     status: 'active'
   };
-
   existing.push(newSubscriber);
-
   try {}
     fs.writeFileSync(file, JSON.stringify(existing, null, 2));
     res.statusCode="200;"

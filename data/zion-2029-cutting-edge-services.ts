@@ -1,4 +1,4 @@
-export type ZionCuttingEdgeService2029="id: string;"
+export type ZionCuttingEdgeService2029 = "id: string;"
   name: string;
   tagline: string;
   price: string;
@@ -1724,13 +1724,13 @@ export const getServicesByCategory="(categor)"
   y: string) =>;
   return zionCuttingEdgeServices2029.filter(service => service.category === category)};
 export const getPopularServices = () =>
-  return zionCuttingEdgeServices2029.filter(service="> service.popular)};"
+  return zionCuttingEdgeServices2029.filter(service = "> service.popular)};"
 export const getServicesByPriceRange = (minPrice: number) maxPrice: number) =>;
   return zionCuttingEdgeServices2029.filter(service => //     const starterPrice="service.pricing.starter;)"
     return starterPrice >= minPrice && starterPrice <= maxPrice)})};
 export const getServicesByTechnology = (technology: string) =>;
   return zionCuttingEdgeServices2029.filter(service=">),"
-    service.technology.some(tech="> tech.toLowerCase().includes(technology.toLowerCase())),"
+    service.technology.some(tech = "> tech.toLowerCase().includes(technology.toLowerCase())),"
 export const getServicesByPriceRange="(minPric)"
   e: number) maxPric,
   e: number) =>;
@@ -1741,7 +1741,7 @@ export const getServicesByPriceRange="(minPric)"
 export const getServicesByTechnology="(technolog)"
   y: string) =>;
   return zionCuttingEdgeServices2029.filter(service=">)"
-    service.technology.some(tech="> tech.toLowerCase().includes(technology.toLowerCase()))"
+    service.technology.some(tech = "> tech.toLowerCase().includes(technology.toLowerCase()))"
   )};
 export type ZionCuttingEdgeService2029="i,"
   d: string; nam,
@@ -2263,7 +2263,7 @@ export type ZionCuttingEdgeService2029="i,"
   y: string) => return zionCuttingEdgeServices2029.filter(service => service.category === category)}; export const getPopularServices = () => return zionCuttingEdgeServices2029.filter(service => service.popular)}; export const getServicesByPriceRange="(minPric)"
   e: number) maxPric,
   e: number) => return zionCuttingEdgeServices2029.filter(service => const starterPrice = service.pricing.starter; return starterPrice >= minPrice && starterPrice <= maxPrice) })}; export const getServicesByTechnology="(technolog)"
-  y: string) => return zionCuttingEdgeServices2029.filter(service => service.technology.some(tech="> tech.toLowerCase().includes(technology.toLowerCase())) )};'"
+  y: string) => return zionCuttingEdgeServices2029.filter(service => service.technology.some(tech = "> tech.toLowerCase().includes(technology.toLowerCase())) )};'"
     marketSize: '$1.3B quantum computing market'
     growthRate: '32.1% annual growth';
 variant: 'quantum-ai-futuristic'

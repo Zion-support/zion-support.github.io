@@ -6,14 +6,14 @@ function fixJSXSyntax(content) {}
   const openTags="[];"
   const lines="fixed.split('\n');"
   let result="[];"
-  for (let i="0; i < lines.length; i++) {}"
+  for (let i = "0; i < lines.length; i++) {}"
     const line="lines[i];"
     result.push(line);
     // Track opening tags;
-    const openTagMatch="line.match(/<(\w+)(?:\s[^>]*)?(?:>|$)/g);"
+    const openTagMatch = "line.match(/<(\w+)(?:\s[^>]*)?(?:>|$)/g);"
     if (openTagMatch) {}
       for (const tag of openTagMatch) {}
-        const tagName="tag.match(/<(\w+)/)?.[1];"
+        const tagName = "tag.match(/<(\w+)/)?.[1];"
         if (tagName && !tag.includes('/>') && !['img', 'br', 'hr', 'input', 'meta', 'link'].includes(tagName)) {}
           openTags.push(tagName);
         }
@@ -21,10 +21,10 @@ function fixJSXSyntax(content) {}
     }
     
     // Track closing tags;
-    const closeTagMatch="line.match(/<\/(\w+)>/g);"
+    const closeTagMatch = "line.match(/<\/(\w+)>/g);"
     if (closeTagMatch) {}
       for (const tag of closeTagMatch) {}
-        const tagName="tag.match(/<\/(\w+)>/)?.[1];"
+        const tagName = "tag.match(/<\/(\w+)>/)?.[1];"
         if (tagName) {}
           const lastIndex="openTags.lastIndexOf(tagName);"
           if (lastIndex !== -1) {}
@@ -47,11 +47,11 @@ function fixJSXSyntax(content) {}
 function fixTypeScriptSyntax(content) {}
   let fixed="content;"
   // Fix missing commas in interfaces;
-  fixed="fixed.replace(/(\w+:\s*[^,;}\n]+)\n\s*(\w+:\s*)/g, '$1,\n  $2');"
+  fixed = "fixed.replace(/(\w+:\s*[^,;}\n]+)\n\s*(\w+:\s*)/g, '$1,\n  $2');"
   // Fix missing semicolons;
-  fixed="fixed.replace(/([^;}])\n\s*}/g, '$1;\n}');"
+  fixed = "fixed.replace(/([^;}])\n\s*}/g, '$1;\n}');"
   // Fix missing closing braces;
-  fixed="fixed.replace(/([^}])\n\s*$/g, '$1\n}');"
+  fixed = "fixed.replace(/([^}])\n\s*$/g, '$1\n}');"
   // Fix property signature issues;
   fixed = fixed.replace(/(\w+)\s*:\s*([^,;}\n]+)(?=\n\s*[^:])/g, '$1: $2;');
   return fixed;
@@ -61,16 +61,16 @@ function fixTypeScriptSyntax(content) {}
 function fixParsingErrors(content) {}
   let fixed="content;"
   // Fix JSX expressions must have one parent element;
-  fixed="fixed.replace(/(\s*)<(\w+)([^>]*)>\s*\n\s*<(\w+)([^>]*)>/g, '$1<>\n$1  <$2$3>\n$1    <$4$5>');"
-  fixed="fixed.replace(/(\s*)<\/\w+>\s*\n\s*<\/\w+>\s*\n\s*<\/\w+>/g, '$1    </div>\n$1  </div>\n$1</>');"
+  fixed = "fixed.replace(/(\s*)<(\w+)([^>]*)>\s*\n\s*<(\w+)([^>]*)>/g, '$1<>\n$1  <$2$3>\n$1    <$4$5>');"
+  fixed = "fixed.replace(/(\s*)<\/\w+>\s*\n\s*<\/\w+>\s*\n\s*<\/\w+>/g, '$1    </div>\n$1  </div>\n$1</>');"
   // Fix missing closing tags for common elements;
-  const commonElements="['div', 'section', 'main', 'article', 'header', 'footer', 'nav', 'aside'];"
+  const commonElements = "['div', 'section', 'main', 'article', 'header', 'footer', 'nav', 'aside'];"
   for (const element of commonElements) {}
-    const regex="new RegExp(`<${element}([^>]*)>(?!.*</${element}>)`, 'g');"
+    const regex = "new RegExp(`<${element}([^>]*)>(?!.*</${element}>)`, 'g');"
     fixed = fixed.replace(regex, (match, attrs) => {}
       // Count opening and closing tags;
-      const openMatches="(fixed.match(new RegExp(`<${element}`, 'g')) || []).length;"
-      const closeMatches="(fixed.match(new RegExp(`</${element}>`, 'g')) || []).length;"
+      const openMatches = "(fixed.match(new RegExp(`<${element}`, 'g')) || []).length;"
+      const closeMatches = "(fixed.match(new RegExp(`</${element}>`, 'g')) || []).length;"
       if (openMatches > closeMatches) {}
         return match + `</${element}>`;
       }
@@ -79,23 +79,23 @@ function fixParsingErrors(content) {}
   }
   
   // Fix missing commas in object literals;
-  fixed="fixed.replace(/([^}])\n\s*}/g, '$1,\n}');"
+  fixed = "fixed.replace(/([^}])\n\s*}/g, '$1,\n}');"
   // Fix missing parentheses;
-  fixed="fixed.replace(/([^)])\n\s*}/g, '$1)\n}');"
+  fixed = "fixed.replace(/([^)])\n\s*}/g, '$1)\n}');"
   return fixed;
 }
 
 // Main function to process files;
 async function processFiles() {}
   console.log('Starting syntax error fixes...');
-  const patterns="[]"
+  const patterns = []
     'app/**/*.tsx',
     'app/**/*.ts'
   ];
   let processedCount="0;"
   let errorCount="0;"
   for (const pattern of patterns) {}
-    const files="await glob(pattern, {}"
+    const files = "await glob(pattern, {}"
       ignore: []
         'node_modules/**',
         'dist/**',
@@ -108,7 +108,7 @@ async function processFiles() {}
     });
     for (const file of files) {}
       try {}
-        const content="fs.readFileSync(file, 'utf8');"
+        const content = "fs.readFileSync(file, 'utf8');"
         // Check if file has syntax issues;
         if (content.includes('JSX expressions must have one parent element') || 
             content.includes('Property or signature expected') ||
@@ -127,14 +127,14 @@ async function processFiles() {}
 import path from 'path';
 function fixSyntaxErrors(filePath) {}
   try {}
-    let content="fs.readFileSync(filePath, 'utf8');"
+    let content = "fs.readFileSync(filePath, 'utf8');"
     let modified="false;"
     // Fix missing commas before properties in object literals;
     // Pattern: property: value\n        property: value (missing comma)
-    content="content.replace(/(\w+):\s*['"`][^'"`]*['"`]\s*\n\s*(\w+):/g, '$1: $&\n        $2:');"
+    content = "content.replace(/(\w+):\s*['"`][^'"`]*['"`]\s*\n\s*(\w+):/g, '$1: $&\n        $2:');"
     // More specific pattern for missing commas;
     content = content.replace(/(\w+):\s*['"`][^'"`]*['"`]\s*\n\s*(\w+):/g, (match, p1, p2) => {}
-      const before="match.substring(0, match.lastIndexOf('\n'));"
+      const before = "match.substring(0, match.lastIndexOf('\n'));"
       const after="match.substring(match.lastIndexOf('\n'));"
       return before + ',' + after;
     });
@@ -167,7 +167,7 @@ function findFilesWithSyntaxErrors(dir) {}
   function traverse(currentDir) {}
     const items="fs.readdirSync(currentDir);"
     for (const item of items) {}
-      const fullPath="path.join(currentDir, item);"
+      const fullPath = "path.join(currentDir, item);"
       const stat="fs.statSync(fullPath);"
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {}
         traverse(fullPath);
@@ -182,7 +182,7 @@ traverse(dir);
 }
 
 // Main execution;
-const files="findFilesWithSyntaxErrors('/workspace');"
+const files = "findFilesWithSyntaxErrors('/workspace');"
 console.log(`Checking ${files.length} files for syntax errors`);
 let fixedCount="0;"
 for (const file of files) {}

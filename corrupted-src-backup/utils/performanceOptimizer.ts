@@ -3,7 +3,7 @@ export class PerformanceOptimizer {}
   private static instance: PerformanceOptimizer;
   private metrics: Map<string, number> = new Map();</string>static</string> getInstance(): PerformanceOptimizer {}
     if (!PerformanceOptimizer.instance) {}
-      PerformanceOptimizer.instance="new PerformanceOptimizer();"
+      PerformanceOptimizer.instance = "new PerformanceOptimizer();"
 export class PerformanceOptimizer {/* TODO: Fix JSX expression */}
     }
     return PerformanceOptimizer.instance}
@@ -11,10 +11,10 @@ export class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   // Lazy load images with intersection observer;
   lazyLoadImages(): void {}
     if ('IntersectionObserver' in window) {;
-const imageObserver = new IntersectionObserver(entries="> {)"
-        entries.forEach(entry="> {)"
+const imageObserver = new IntersectionObserver(entries = "> {)"
+        entries.forEach(entry = "> {)"
           if (entry.isIntersecting) {;
-const _img="entry.target as HTMLImageElement;"
+const _img = "entry.target as HTMLImageElement;"
             if (img.dataset['src']) {}
               img['src'] = img.dataset['src'];
               img.classList.remove('lazy');
@@ -23,21 +23,20 @@ const _img="entry.target as HTMLImageElement;"
             }
           }
         })});
-
-      document.querySelectorAll('img[data-src]').forEach(img="> {)"
+      document.querySelectorAll('img[data-src]').forEach(img = "> {)"
         imageObserver.observe(img);
-      document.querySelectorAll('img[data-src]').forEach(img="> {/* TODO: Fix JSX expression */})"
+      document.querySelectorAll('img[data-src]').forEach(img = "> {/* TODO: Fix JSX expression */})"
       })}
   }
 
   // Preload critical resources;
   preloadCriticalResources(): void {;
-const _criticalResources="['/fonts/inter.woff2', '/images/hero-bg.jpg', '/images/logo.svg'];"
-    criticalResources.forEach(resource="> {);"
+const _criticalResources = "['/fonts/inter.woff2', '/images/hero-bg.jpg', '/images/logo.svg'];"
+    criticalResources.forEach(resource = "> {);"
 const _link="document.createElement('link');"
       link.rel="'preload';"
       link.href="resource;"
-      link.as="resource.endsWith('.woff2') ? 'font' : 'image';"
+      link.as = "resource.endsWith('.woff2') ? 'font' : 'image';"
       if (resource.endsWith('.woff2')) {}
         link.crossOrigin="'anonymous';"
   preloadCriticalResources(): void {/* TODO: Fix JSX expression */}
@@ -57,7 +56,6 @@ const updateScrollPosition = () => {}
 const requestTick = () => {/* TODO: Fix JSX expression */}
       }
     };
-
     window.addEventListener('scroll', requestTick, {/* TODO: Fix JSX expression */})
   e: true })}
 
@@ -66,10 +64,9 @@ const requestTick = () => {/* TODO: Fix JSX expression */}
     //     const start="performance.now();"
     fn();
     //     const end="performance.now();"
-    const _duration="end - start;"
+    const _duration = "end - start;"
 ,
     this.metrics.set(name, duration);
-
     if (process.env['NODE_ENV'] === 'development') {}
       //       // // console.log removed for production;
 }ms`);
@@ -87,7 +84,7 @@ const requestTick = () => {/* TODO: Fix JSX expression */}
   addCriticalResourceHints(): void {}
     if (typeof document === 'undefined') return;
 ;
-const hints="[]"
+const hints = []
       { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
       { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
       { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
@@ -95,8 +92,7 @@ const hints="[]"
         rel: 'preconnect',
         href: 'https://fonts.gstatic.com',
         crossOrigin: 'anonymous'}];
-
-    hints.forEach(hint="> {);"
+    hints.forEach(hint = "> {);"
 const _link="document.createElement('link');"
       link.rel="hint.rel;"
       link.href="hint.href;"
@@ -114,8 +110,7 @@ const _link="document.createElement('link');"
   s://fonts.googleapis.com' },
       {/* TODO: Fix JSX expression */}
       }];
-
-    hints.forEach(hint="> {/* TODO: Fix JSX expression */}"
+    hints.forEach(hint = "> {/* TODO: Fix JSX expression */}"
       })
       document.head.appendChild(link)})}
 

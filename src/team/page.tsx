@@ -5,7 +5,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 ;
 const TeamPage: React.FC = () => {;
-const teamMembers="[]"
+const teamMembers = []
     {}
       name: 'Kleber Santos',
       role: 'CEO & Founder',
@@ -62,14 +62,14 @@ const teamMembers="[]"
     }
   ];
 ;
-const stats="[]"
+const stats = []
     { icon: Users, label: 'Team Members', value: '50+' },
     { icon: Award, label: 'Awards Won', value: '25+' },
     { icon: Brain, label: 'Years Experience', value: '15+' },
     { icon: Shield, label: 'Client Satisfaction', value: '99%' }
   ];
 ;
-const values="[]"
+const values = []
     {}
       title: 'Innovation',
       description: 'We constantly push the boundaries of what\'s possible with AI and technology.',
@@ -91,7 +91,6 @@ const values="[]"
       icon: Shield;
     }
   ];
-
   return (
     <div className=""min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
       <Navigation /></Navigation>
@@ -221,5 +220,4 @@ const values="[]"
       <Footer /></Footer>
     </div>
   )};
-
 export default TeamPage;

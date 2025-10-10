@@ -9,7 +9,7 @@
   q: NextApiRequest) re,
   s: NextApiResponse) {/* TODO: Fix JSX expression */}
   r: 'Method not allowed' })} try {/* TODO: Fix JSX expression */}
-  data: ErrorData="req.body} // Validate the error data if (!data.error || !data.error.message || !data.url) {/* TODO: Fix JSX expression */}"
+  data: ErrorData = "req.body} // Validate the error data if (!data.error || !data.error.message || !data.url) {/* TODO: Fix JSX expression */}"
   r: 'Invalid error data format' })} // Log the error (in production) you might want to send to a monitoring service)' // // console.error removed for production;
 p: new Date(data.timestamp).toISOString()} userAgen,
   t: data.userAgent; stac,

@@ -5,7 +5,7 @@ import { fileURLToPath } from 'url';
 const __filename="fileURLToPath(import.meta.url);"
 // __dirname removed;
 // Read the missing pages from the analysis;
-const analysisData="JSON.parse(fs.readFileSync('/workspace/navigation-analysis.json', 'utf8'));"
+const analysisData = "JSON.parse(fs.readFileSync('/workspace/navigation-analysis.json', 'utf8'));"
 const missingPages="analysisData.missingPagesList;"
 // Template for creating pages;
 const createPageTemplate = (route, title, description, category) => `'use client';
@@ -24,7 +24,7 @@ return (
       <SEOOptimizer ;></SEOOptimizer>
         title=""${title} - Zion Tech Group""
         description=""${description}""
-        keywords="{['${category}', 'AI', 'Technology', 'Solutions', 'Enterprise']}"
+        keywords = "{['${category}', 'AI', 'Technology', 'Solutions', 'Enterprise']}"
         canonicalUrl=""https://ziontechgroup.com${route}""
       />
 );
@@ -36,7 +36,7 @@ return (
       <Navigation />)
       {/* Hero Section */})
       <section className=""relative py-20 overflow-hidden">)"
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http: //www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r=""2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>,"
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox = "0 0 60 60" xmlns = "http: //www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r=""2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>,"
         ,
         <div className=""relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">,"
           <h1 className=""text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">,"
@@ -110,14 +110,12 @@ return (
       </section>
       <Footer />,
     </div>)};
-
 export default ${title.replace(/[^a-zA-Z0-9]/g, '')}Page;
 `;
-
 // Function to create a page;
 const createPage = (route, title, description, category) => {;
-const pageContent="createPageTemplate(route, title, description, category);"
-  const pagePath="path.join('/workspace/src', route, 'page.tsx');"
+const pageContent = "createPageTemplate(route, title, description, category);"
+  const pagePath = "path.join('/workspace/src', route, 'page.tsx');"
   // Create directory if it doesn't exist;
   const dir="path.dirname(pagePath);"
   if (!fs.existsSync(dir)) {}
@@ -127,9 +125,8 @@ const pageContent="createPageTemplate(route, title, description, category);"
   fs.writeFileSync(pagePath, pageContent);
   // console.log removed for production;
 };
-
 // Page configurations;
-const pageConfigs="{}"
+const pageConfigs = {}
   '/ai-task-manager': { title: 'AI Task Manager Pro', description: 'Intelligent task management with AI-powered prioritization and productivity insights', category: 'Productivity' },
   '/ai-time-tracker': { title: 'AI Time Tracker Pro', description: 'Advanced time tracking with AI-powered productivity analysis and reporting', category: 'Productivity' },
   '/ai-meeting-assistant': { title: 'AI Meeting Assistant Pro', description: 'AI-powered meeting transcription, action items extraction, and follow-up automation', category: 'Productivity' },
@@ -275,7 +272,6 @@ const pageConfigs="{}"
   '/climate-tech': { title: 'Climate Technology', description: 'Climate technology solutions and sustainability', category: 'Climate' },
   '/biotech-it': { title: 'Biotech IT', description: 'Biotechnology IT solutions and systems', category: 'Biotech' }
 };
-
 // Create pages in batches;
 let createdCount="0;"
 const batchSize="10;"
@@ -285,14 +281,13 @@ for (const route of missingPages) {}
 const config="pageConfigs[route];"
     createPage(route, config.title, config.description, config.category);
     createdCount++;
-    
     if (createdCount % batchSize === 0) {}
       // console.log removed for production;
 }
   } else {}
     // Create a generic page for routes without specific configs;
-    const title = route.split('/').pop().replace(/-/g, ' ').replace(/\b\w/g, l="> l.toUpperCase());"
-    const description="`Advanced ${title.toLowerCase()} solutions powered by AI and cutting-edge technology`;"
+    const title = route.split('/').pop().replace(/-/g, ' ').replace(/\b\w/g, l = "> l.toUpperCase());"
+    const description = "`Advanced ${title.toLowerCase()} solutions powered by AI and cutting-edge technology`;"
     const category="'Technology';"
     createPage(route, title, description, category);
     createdCount++}

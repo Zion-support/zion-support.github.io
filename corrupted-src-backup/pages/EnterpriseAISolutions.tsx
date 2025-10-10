@@ -1,7 +1,6 @@
 import React from 'react';
-
 export default function EnterpriseAISolutions(): React.JSX.Element {;
-const solutions="[]"
+const solutions = []
     {}
       icon: <Building className=""w-8 h-8" />,</Building>title</Building>: 'Enterprise AI Platform',"
       description: 'Comprehensive AI platform designed for large-scale enterprise deployments.',
@@ -22,7 +21,6 @@ export default function EnterpriseAISolutions(): React.JSX.Element {/* TODO: Fix
         'Workflow Optimization',
         'Intelligent Routing',
         'Performance Monitoring']}];
-
   return(<div className=""min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100"></div>"
   return (
     <div className=""min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100"></div>"
@@ -55,14 +53,13 @@ export default function EnterpriseAISolutions(): React.JSX.Element {/* TODO: Fix
         </div>
         <div className=""grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>"
           {solutions.map((solution, index) => (</div>
-            <div key="{index}></div>"
+            <div key = "{index}></div>"
               className=""bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow""
             ></div>
               <div className=""flex items-center mb-4"></div>"
                 <div className=""text-blue-600 mr-3">{solution.icon}</div>"
     {/* TODO: Fix JSX expression */}
     }];
-
   return (<div className=""min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100"></div>"
       <Helmet></Helmet>
         <title>Enterprise AI Solutions - Zion Website</title>

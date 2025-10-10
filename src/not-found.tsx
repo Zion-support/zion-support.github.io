@@ -1,6 +1,6 @@
 import { Home, Phone } from 'lucide-react';
 export default function NotFound() {;
-const popularPages="[]"
+const popularPages = []
     {}
       title: 'Home',
       description: 'Return to our homepage',
@@ -60,7 +60,7 @@ const popularPages="[]"
         {/* Popular Pages */}
         <div className=""grid grid-cols-1 md:grid-cols-2 gap-4 mb-8"></div>"
           {popularPages.map((page, index) => (
-            <Link key="{index}></Link>"
+            <Link key = "{index}></Link>"
               to="{page.href}"
               className=""block p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 text-left">"
               <div className=""text-3xl mb-3">{page.icon}</div>"

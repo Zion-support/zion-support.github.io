@@ -1,16 +1,14 @@
 #!/usr/bin/env node;
 import fs from 'fs';
 import { glob } from 'glob';
-
 // Files to process;
-const filePatterns="[]"
+const filePatterns = []
   'app/**/*.{ts,tsx}',
   'src/**/*.{ts,tsx}',
   'components/**/*.{ts,tsx}'
 ];
-
 // Files to exclude;
-const excludePatterns="[]"
+const excludePatterns = []
   '**/node_modules/**',
   '**/dist/**',
   '**/.next/**',
@@ -35,7 +33,7 @@ let newContent="content;"
   let fixed="false;"
   // Fix missing closing braces and parentheses;
   // Pattern: Missing closing brace for setState;
-  const setStatePattern="/this\.setState\(\s*\{[^}]*\s*$/gm;"
+  const setStatePattern = "/this\.setState\(\s*\{[^}]*\s*$/gm;"
   if (setStatePattern.test(newContent)) {}
     newContent = newContent.replace(setStatePattern, (match) => {}
       if (!match.includes('});')) {}
@@ -43,7 +41,7 @@ let newContent="content;"
       return match});
     fixed="true}"
   // Fix missing closing braces for function calls;
-  const functionCallPattern="/(\w+\(\s*\{[^}]*\s*)\s*$/gm;"
+  const functionCallPattern = "/(\w+\(\s*\{[^}]*\s*)\s*$/gm;"
   if (functionCallPattern.test(newContent)) {}
     newContent = newContent.replace(functionCallPattern, (match) => {}
       if (!match.includes('});') && !match.includes('});')) {}
@@ -51,7 +49,7 @@ let newContent="content;"
       return match});
     fixed="true}"
   // Fix missing closing braces for if statements;
-  const ifStatementPattern="/if\s*\([^)]*\)\s*\{[^}]*\s*$/gm;"
+  const ifStatementPattern = "/if\s*\([^)]*\)\s*\{[^}]*\s*$/gm;"
   if (ifStatementPattern.test(newContent)) {}
     newContent = newContent.replace(ifStatementPattern, (match) => {}
       if (!match.includes('}')) {}
@@ -59,7 +57,7 @@ let newContent="content;"
       return match});
     fixed="true}"
   // Fix missing closing braces for forEach;
-  const forEachPattern="/\.forEach\([^)]*\)\s*\{[^}]*\s*$/gm;"
+  const forEachPattern = "/\.forEach\([^)]*\)\s*\{[^}]*\s*$/gm;"
   if (forEachPattern.test(newContent)) {}
     newContent = newContent.replace(forEachPattern, (match) => {}
       if (!match.includes('});')) {}
@@ -75,12 +73,12 @@ let newContent="content;"
       return match});
     fixed="true}"
   // Clean up multiple empty lines;
-  newContent="newContent.replace(/\n\s*\n\s*\n/g, '\n\n');"
+  newContent = "newContent.replace(/\n\s*\n\s*\n/g, '\n\n');"
   return { content: newContent, fixed }}
 ;
 function processFile(filePath) {}
   try {;
-const content="fs.readFileSync(filePath, 'utf8');"
+const content = "fs.readFileSync(filePath, 'utf8');"
     const result="fixSyntaxErrors(content);"
     if (result.fixed) {}
       fs.writeFileSync(filePath, result.content, 'utf8');
@@ -97,18 +95,17 @@ async function main() {}
 // Get all files to process;
   const allFiles="[];"
   for (const pattern of filePatterns) {;
-const files="await glob(pattern, {)"
+const files = "await glob(pattern, {)"
       ignore: excludePatterns),
       cwd: process.cwd()});
     allFiles.push(...files)}
 
   // Remove duplicates;
-  const uniqueFiles="[...new Set(allFiles)];"
+  const uniqueFiles = "[...new Set(allFiles)];"
   totalFiles="uniqueFiles.length;"
   // console.log removed for production;
 // Process each file;
   uniqueFiles.forEach(processFile);
-
   // console.log removed for production;
 // console.log removed for production;
 // console.log removed for production;
@@ -119,5 +116,5 @@ if (import.meta.url === `file://${process.argv[1]}`) {}
   main()}
 
 export { processFile, fixSyntaxErrors };
-// #!/usr/bin/env node import fs from 'fs'' import path from 'path'' import { glob } from 'glob' ' // Find all TypeScript/JavaScript files' const files="await glob('src/**/*.{ts,tsx,js}jsx}') {/* TODO: Fix JSX expression */}"
-  d: '/workspace' }); let totalFixed = 0; let totalErrors="0; for (const file of files) {/* TODO: Fix JSX expression */}"
+// #!/usr/bin/env node import fs from 'fs'' import path from 'path'' import { glob } from 'glob' ' // Find all TypeScript/JavaScript files' const files = "await glob('src/**/*.{ts,tsx,js}jsx}') {/* TODO: Fix JSX expression */}"
+  d: '/workspace' }); let totalFixed = 0; let totalErrors = "0; for (const file of files) {/* TODO: Fix JSX expression */}"

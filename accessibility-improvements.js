@@ -10,7 +10,7 @@ const focusableElements="element.querySelectorAll("
     'button, [href], input, select, textarea, [tabindex]:not([tabindex=""-1"])'"
   );
   const firstElement="focusableElements[0];"
-  const lastElement="focusableElements[focusableElements.length - 1];"
+  const lastElement = "focusableElements[focusableElements.length - 1];"
   element.addEventListener('keydown', (e) => {}
     if (e.key === 'Tab') {}
       if (e.shiftKey) {}
@@ -24,7 +24,6 @@ const focusableElements="element.querySelectorAll("
       }
     }
   })};
-
 // 3. Add live regions for dynamic content;
 // Example JSX:
 // <div aria-live="polite" aria-atomic="true" className=""sr-only"></div>"
@@ -75,7 +74,7 @@ const focusableElements="element.querySelectorAll("
 
 // 9. Keyboard navigation;
 // Example JSX:
-// <div role="button" tabIndex={0} onKeyDown="{handleKeyDown}></div>"
+// <div role="button" tabIndex={0} onKeyDown = "{handleKeyDown}></div>"
 //   Clickable div;
 // </div>
 // 10. Screen reader announcements;

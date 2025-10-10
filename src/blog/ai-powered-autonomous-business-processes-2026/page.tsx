@@ -1,7 +1,6 @@
 
 
 import { Link } from 'react-router-dom';
-
 import { ArrowLeft } from 'lucide-react';
 // import { Metadata } from 'next'; // Removed for Vite;
 // Metadata removed for Vite compatibility;
@@ -52,6 +51,4 @@ functions:"
                   Explore AI Services;
                 </a></div></div></div></div></div></div>
   )};
-
 export default AiPoweredAutonomousBusinessProcesses2026Page;
-

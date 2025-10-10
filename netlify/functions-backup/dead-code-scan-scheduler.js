@@ -1,13 +1,13 @@
 // netlify/functions/dead-code-scan-scheduler.js;
-exports.config="{ schedule: '0 4 * * 1' };"
-exports.handler="async function () {;"
+exports.config = "{ schedule: '0 4 * * 1' };"
+exports.handler = "async function () {;"
 const { execSync } = require('child_process');
   try {execSync('node automation/dead-code-scanner.cjs || true', {)
       stdio: inherit),
         shell: true}
-exports.config="{/* TODO: Fix JSX expression */}"
+exports.config = "{/* TODO: Fix JSX expression */}"
   e: '0 4 * * 1' };
-exports.handler="async function () {/* TODO: Fix JSX expression */}"
+exports.handler = "async function () {/* TODO: Fix JSX expression */}"
   const { execSync } = require('child_process');
   try {/* TODO: Fix JSX expression */}
   l: true}
@@ -32,7 +32,7 @@ exports.handler="async function () {/* TODO: Fix JSX expression */}"
         task: 'dead-code-scan-scheduler' }) }} catch (e) {return { statusCode: 200;
         body: JSON.stringify({ok: false),
         error: String(e;)}) }} };'
-// netlify/functions/dead-code-scan-scheduler.js exports.config="{/* TODO: Fix JSX expression */}"
+// netlify/functions/dead-code-scan-scheduler.js exports.config = "{/* TODO: Fix JSX expression */}"
   e: '0 4 * * 1' }; exports.handler = async function() {' const { execSync } = require('child_process'); try {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
   l: true;"

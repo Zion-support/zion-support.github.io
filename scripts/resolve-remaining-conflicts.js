@@ -5,7 +5,7 @@ import fs from 'fs';
 // Function to resolve merge conflicts in a file;
 function resolveMergeConflicts(filePath) {}
   try {;
-const content="fs.readFileSync(filePath, 'utf8');"
+const content = "fs.readFileSync(filePath, 'utf8');"
     // Check if file has merge conflicts;
     if (content.includes('<<<<<<<') || content.includes('') || content.includes('>>>>>>>')) {}
       // console.log removed for production;
@@ -14,13 +14,13 @@ const content="fs.readFileSync(filePath, 'utf8');"
         // Handle standard merge conflicts - prefer incoming changes;
         .replace(/[\s\S]*?[\s\S]*?          const parts="match.split('');"
           if (parts.length > 1) {;
-const incoming="parts[1].replace(/            return incoming;)"
+const incoming = "parts[1].replace(/            return incoming;)"
           })
           return match;)
         })
         // Handle other conflict patterns;
         .replace(/          if (parts.length > 1) {;
-const incoming="parts[1].replace(/            return incoming;)"
+const incoming = "parts[1].replace(/            return incoming;)"
           })
           return match;)
         })
@@ -36,7 +36,7 @@ return false}
 }
 
 // List of files with conflicts;
-const conflictedFiles="[]"
+const conflictedFiles = []
   'App.tsx',
   'app/ai-services/page.tsx',
   'app/components/Navigation.tsx',
@@ -77,7 +77,7 @@ try {}
   // Final status;
   // console.log removed for production;
 try {,;
-const status="execSync('git status', { encoding: 'utf8', cwd: process.cwd() });"
+const status = "execSync('git status', { encoding: 'utf8', cwd: process.cwd() });"
     // console.log removed for production;
 } catch (error) {}
     // console.log removed for production;

@@ -42,8 +42,8 @@ class AccessibilityOptimizer {/* TODO: Fix JSX expression */}
     return this.results}
 
   private optimizeARIALabels(): void {;
-const _elements="document.querySelectorAll('button, input, select, textarea, a, img');"
-    elements.forEach(element="> {;"
+const _elements = "document.querySelectorAll('button, input, select, textarea, a, img');"
+    elements.forEach(element = "> {;"
 const improvements: string[] = [];);
 let _score="0;)"
 )
@@ -77,10 +77,9 @@ let _score="0;)"
     })}
 
   private optimizeKeyboardNavigation(): void {;
-const focusableElements="document.querySelectorAll('button, input, select, textarea, a, [tabindex]')"
+const focusableElements = "document.querySelectorAll('button, input, select, textarea, a, [tabindex]')"
     );
-
-    focusableElements.forEach(element="> {);"
+    focusableElements.forEach(element = "> {);"
 const improvements: string[] = [];);
 let _score="0;)"
 )
@@ -109,7 +108,7 @@ let _score="0;)"
 
   private optimizeColorContrast(): void {;
 const _elements="document.querySelectorAll('*');"
-    elements.forEach(element="> {);"
+    elements.forEach(element = "> {);"
 const _styles="window.getComputedStyle(element);"
       const improvements: string[] = [];
       let _score="0;"
@@ -137,10 +136,9 @@ const _styles="window.getComputedStyle(element);"
     })}
 
   private optimizeFocusManagement(): void {;
-const focusableElements="document.querySelectorAll('button, input, select, textarea, a, [tabindex]')"
+const focusableElements = "document.querySelectorAll('button, input, select, textarea, a, [tabindex]')"
     );
-
-    focusableElements.forEach(element="> {);"
+    focusableElements.forEach(element = "> {);"
 const improvements: string[] = [];);
 let _score="0;)"
 )
@@ -148,7 +146,7 @@ let _score="0;)"
         !element.getAttribute('aria-describedby') &&,
         element.getAttribute('aria-invalid') === 'true') {,
   private optimizeFocusManagement(): void {/* TODO: Fix JSX expression */}
-        //         const errorId="`error-${Math.random().toString(36).substr(2, 9)}`;"
+        //         const errorId = "`error-${Math.random().toString(36).substr(2, 9)}`;"
         element.setAttribute('aria-describedby', errorId);
         improvements.push('Added aria-describedby for error state');
         score += 15}
@@ -164,7 +162,7 @@ let _score="0;)"
 
   private optimizeScreenReaderSupport(): void {;
 const _elements="document.querySelectorAll('*');"
-    elements.forEach(element="> {);"
+    elements.forEach(element = "> {);"
 const improvements: string[] = [];);
 let _score="0;)"
 )
@@ -195,7 +193,7 @@ let _score="0;)"
 
   public getOverallScore(): number {;
 const _totalScore = this.results.reduce((sum, result) => sum + result.score, 0);
-    const maxPossibleScore="this.results.length * 100; // Assuming max score per element is 100;"
+    const maxPossibleScore = "this.results.length * 100; // Assuming max score per element is 100;"
     return Math.round((totalScore / maxPossibleScore) * 100)}
 
   public getResultsByScore(minScore: number): OptimizationResult[] {,

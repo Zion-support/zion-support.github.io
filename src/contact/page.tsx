@@ -38,7 +38,7 @@ const [isSubmitting, setIsSubmitting] = useState(false);
 ;
 const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;
 const { name, value } = e.target;
-    setFormData(prev="> ({}"
+    setFormData(prev = "> ({}"
       ...prev,
       [name]: value;
     }))};
@@ -61,11 +61,11 @@ setIsSubmitted(true);
     e.preventDefault();
     setIsSubmitting(true);
     /
-    await new Promise(resolve="> setTimeout(resolve, 2000));"
+    await new Promise(resolve = "> setTimeout(resolve, 2000));"
     setIsSubmitted(true);
     setIsSubmitting(false)};
 ;
-const contactInfo="{}"
+const contactInfo = {}
     phone: '+1 (302) 464-0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008, Middletown, DE 19709',
@@ -73,7 +73,7 @@ const contactInfo="{}"
     i: 9AM-6PM EST'
   };
 ;
-const services="[]"
+const services = []
     'AI Services',
     'IT Services',
     'Micro SAAS Solutions',
@@ -86,7 +86,7 @@ const services="[]"
     'Other'
   ];
 ;
-const achievements="[]"
+const achievements = []
     { icon: Users, text: '100+ Happy Clients' },
     { icon: Award, text: '50+ Successful Projects' },
     { icon: TrendingUp, text: '300% Average ROI' },
@@ -111,7 +111,7 @@ export default ContactPage;
     'Other'
   ];
 ;
-const budgetRanges="[]"
+const budgetRanges = []
     'Under $10K',
     '$10K - $50K',
     '$50K - $100K',
@@ -120,7 +120,7 @@ const budgetRanges="[]"
     'Not sure'
   ];
 ;
-const timelines="[]"
+const timelines = []
     'ASAP',
     'Within 1 month',
     '1-3 months',
@@ -129,7 +129,7 @@ const timelines="[]"
     'Just exploring'
   ];
 ;
-const offices="[]"
+const offices = []
     {}
       city: 'Middletown, DE',
       address: '364 E Main St STE 1008, Middletown, DE 19709',
@@ -159,7 +159,7 @@ const offices="[]"
     }
   ];
 ;
-const faqs="[]"
+const faqs = []
     {}
       question: 'How quickly can you start my project?',
       answer: 'We can typically begin most projects within 1-2 weeks of contract signing. For urgent projects, we offer expedited onboarding.'
@@ -263,8 +263,8 @@ const faqs="[]"
                     <
                     <input type=""text"></input>"
                       name=""name""
-                      value="{ formData.name };"
-                      onChange="{ handleInputChange };"
+                      value = "{ formData.name };"
+                      onChange = "{ handleInputChange };"
                       className=""w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus: outline-none focu,""
     s:border-cyan-400 transition-colors"
                       placeholder=""Your full name""
@@ -275,8 +275,8 @@ const faqs="[]"
                     <
                     <input type=""email"></input>"
                       name=""email""
-                      value="{ formData.email };"
-                      onChange="{ handleInputChange };"
+                      value = "{ formData.email };"
+                      onChange = "{ handleInputChange };"
                       className=""w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus: outline-none focus:border-cyan-400 transition-colors""
                       placeholder=""your@email.com""
                   <
@@ -289,8 +289,8 @@ const faqs="[]"
                     <
                     <input type=""text"></input>"
                       name=""company""
-                      value="{ formData.company };"
-                      onChange="{ handleInputChange };"
+                      value = "{ formData.company };"
+                      onChange = "{ handleInputChange };"
                       className=""w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus: outline-none focu,""
     s:border-cyan-400 transition-colors"
                       placeholder=""Your company name""
@@ -301,8 +301,8 @@ const faqs="[]"
                     <
                     <input type=""tel"></input>"
                       name=""phone""
-                      value="{ formData.phone };"
-                      onChange="{ handleInputChange };"
+                      value = "{ formData.phone };"
+                      onChange = "{ handleInputChange };"
                       className=""w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus: outline-none focus:border-cyan-400 transition-colors")"
                       placeholder=""+1 (555) 123-4567""
                   <
@@ -315,8 +315,8 @@ const faqs="[]"
                       Service Interest;
                     <
                     <select name=""service"></select>"
-                      value="{ formData.service };"
-                      onChange="{ handleInputChange };"
+                      value = "{ formData.service };"
+                      onChange = "{ handleInputChange };"
                       className=""w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus: outline-none focu,""
     s:border-cyan-400 transition-colors">
                       <option value=""">Select a service<"
@@ -329,8 +329,8 @@ const faqs="[]"
                       Budget Range;
                     <
                     <select name=""budget"></select>"
-                      value="{ formData.budget };"
-                      onChange="{ handleInputChange };"
+                      value = "{ formData.budget };"
+                      onChange = "{ handleInputChange };"
                       className=""w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus: outline-none focu,""
     s:border-cyan-400 transition-colors">
                       <option value=""">Select budget range<"
@@ -344,8 +344,8 @@ const faqs="[]"
                   <label className=""block text-sm font-medium text-gray-300 mb-2"></label>"
                   <
                   <select name=""timeline"></select>"
-                    value="{ formData.timeline };"
-                    onChange="{ handleInputChange };"
+                    value = "{ formData.timeline };"
+                    onChange = "{ handleInputChange };"
                     className=""w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus: outline-none focu,""
     s:border-cyan-400 transition-colors">
                     <option value=""">Select timeline<"
@@ -359,16 +359,16 @@ const faqs="[]"
                     Message *
                   <
                   <textarea name=""message"></textarea>"
-                    value="{ formData.message };"
-                    onChange="{ handleInputChange };"
-                    rows="{ 5 };"
+                    value = "{ formData.message };"
+                    onChange = "{ handleInputChange };"
+                    rows = "{ 5 };"
                     className=""w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus: outline-none focu,""
     s:border-cyan-400 transition-colors resize-none"
                     placeholder=""Tell us about your project, goals, and any specific requirements...""
                 <
 
                 <button type=""submit"></button>"
-                  disabled="{ isSubmitting };"
+                  disabled = "{ isSubmitting };"
                   className=""w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-3 px-6 rounded-lg font-bold hover: from-cyan-600 hover:to-purple-700 transition-all disabled:opacity-50 disable,""
     d:cursor-not-allowed flex items-center justify-center">
                   {isSubmitting ? (

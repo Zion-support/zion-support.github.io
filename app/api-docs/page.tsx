@@ -20,7 +20,7 @@ export default function APIDocsPage() {}
     setCopiedCode(id);
     setTimeout(() => setCopiedCode(null), 2000);
 ;
-const apiEndpoints="[]"
+const apiEndpoints = []
     {}
       title: 'AI Services',
       description: 'Artificial Intelligence and Machine Learning APIs',
@@ -113,14 +113,14 @@ const apiEndpoints="[]"
     }
   ];
 ;
-const filteredEndpoints = apiEndpoints.map(category="> ({}"
+const filteredEndpoints = apiEndpoints.map(category = "> ({}"
     ...category,
     endpoints: category.endpoints.filter(endpoint=">"
       endpoint.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
       endpoint.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
       endpoint.path.toLowerCase().includes(searchQuery.toLowerCase())
     )
-  })).filter(category="> category.endpoints.length > 0);"
+  })).filter(category = "> category.endpoints.length > 0);"
   return (<div className=""min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
       {/* Hero Section */}
       <section className=""relative py-20 px-4"></section>"

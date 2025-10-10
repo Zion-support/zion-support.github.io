@@ -1,7 +1,6 @@
 impo, r, t {/* TODO: Fix JSX expression *
 } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
-
 export default function NextGenSecurityOperations20, 2, 5() {}
   return(<React.Fragment>)
       <Helm, e, t>)
@@ -9,14 +8,14 @@ export default function NextGenSecurityOperations20, 2, 5() {}
           Ne, x, t-Gen, AI, Security Operations, 202, 5 — 99.97% Threat, Detectio, n)
           S, u, b-Second, Respons, e, $2.3B+ Protecti, o, n | Zion, Tech, Group;
         <
-        <meta , nam, e="'description'></meta>"
-          conte, n, t="'Deploy, autonomous, AI security, operations, that detect, threats, in milliseco, n, d, s, respond, automaticall, y, and, prevent, breaches before, they, happen. Achieve, 9, 9.97% detection, accurac, y, reduce, incident, response time, by, 95%, and, protec, t $2.3 B+ in, enterprise, assets.'"
+        <meta , nam, e = "'description'></meta>"
+          conte, n, t = "'Deploy, autonomous, AI security, operations, that detect, threats, in milliseco, n, d, s, respond, automaticall, y, and, prevent, breaches before, they, happen. Achieve, 9, 9.97% detection, accurac, y, reduce, incident, response time, by, 95%, and, protec, t $2.3 B+ in, enterprise, assets.'"
         /><
-        <meta , nam, e="'keywor, d, s'></meta>"
-          conte, n, t="'AI, securi, t, y, autonomous, SecOp, s, threat, detectio, n, incident, respons, e, cybersecurity, A, I, ze, r, o-day, protectio, n, security, automatio, n, AI-powered, defens, e'"
+        <meta , nam, e = "'keywor, d, s'></meta>"
+          conte, n, t = "'AI, securi, t, y, autonomous, SecOp, s, threat, detectio, n, incident, respons, e, cybersecurity, A, I, ze, r, o-day, protectio, n, security, automatio, n, AI-powered, defens, e'"
         /><
-        <link , re, l="'canonic, a, l'></link>"
-          hr, e, f="'htt, p, s: //ziontechgro u p.c o m/bl o g'"
+        <link , re, l = "'canonic, a, l'></link>"
+          hr, e, f = "'htt, p, s: //ziontechgro u p.c o m/bl o g'"
       <
 
       <article, className="'m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, tex, t-whi, t, e'></article>"
@@ -38,7 +37,7 @@ export default function NextGenSecurityOperations20, 2, 5() {}
                 The, average, enterprise face, s, 4,8, 0, 0+ security, alerts, daily, with, security, analysts spending, 7, 3% of, their, time on, false, positives;
                 while, real, threats slip, throug, h.<
 
-            <section, classNam, e="'mb-12'></section>"
+            <section, classNam, e = "'mb-12'></section>"
               <h2, className="'te, x, t-3xl, fon, t-bold, m, b-6, tex, t-purp, l, e-3, 0, 0'></h2>"
                 The, Autonomous, SecOps Architectu, r, e;
               <
@@ -125,22 +124,22 @@ export default function NextGenSecurityOperations20, 2, 5() {/* TODO: Fix JSX ex
                 <h3, className="'te, x, t-2xl, fon, t-bold, m, b-4, tex, t-pi, n, k-3, 0, 0'><"
                   Phas, e, 1: Assessme, n, t (Week, s, 1-, 4)
                 <
-                <ul, classNam, e="'li, s, t-disc, lis, t-inside, spac, e-y-2, tex, t-gr, a, y-300, m, l-4'><"
+                <ul, classNam, e = "'li, s, t-disc, lis, t-inside, spac, e-y-2, tex, t-gr, a, y-300, m, l-4'><"
               <
 
-              <div, classNam, e="'bg-sla, t, e-8, 0, 0/50, rounde, d-x, l, p-6, m, b-6, border, border-purp, l, e-5, 0, 0/20'><"
+              <div, classNam, e = "'bg-sla, t, e-8, 0, 0/50, rounde, d-x, l, p-6, m, b-6, border, border-purp, l, e-5, 0, 0/20'><"
                 <h3, className="'te, x, t-2xl, fon, t-bold, m, b-4, tex, t-pi, n, k-3, 0, 0'></h3>"
                 <h3, className="'te, x, t-2xl, fon, t-bold, m, b-4, tex, t-pi, n, k-3, 0, 0'><"
                   Phas, e, 2: Deployme, n, t (Week, s, 5-1, 2)
                 <
-                <ul, classNam, e="'li, s, t-disc, lis, t-inside, spac, e-y-2, tex, t-gr, a, y-300, m, l-4'><"
+                <ul, classNam, e = "'li, s, t-disc, lis, t-inside, spac, e-y-2, tex, t-gr, a, y-300, m, l-4'><"
               <
 
               <div, className="'bg-sla, t, e-8, 0, 0/50, rounde, d-x, l, p-6, m, b-6, border, border-purp, l, e-5, 0, 0/20'><"
                 <h3, className="'te, x, t-2xl, fon, t-bold, m, b-4, tex, t-pi, n, k-3, 0, 0'></h3>"
                   Phas, e, 3: Optimizati, o, n (Weeks, 1, 3-2, 4)
                 <
-                <ul, classNam, e="'li, s, t-disc, lis, t-inside, spac, e-y-2, tex, t-gr, a, y-300, m, l-4'></ul>"
+                <ul, classNam, e = "'li, s, t-disc, lis, t-inside, spac, e-y-2, tex, t-gr, a, y-300, m, l-4'></ul>"
                   <li></li>
                     Autonomous, response, activated for, verified, threat typ, e, s;
                   <
@@ -152,7 +151,7 @@ export default function NextGenSecurityOperations20, 2, 5() {/* TODO: Fix JSX ex
                 <h3, className="'te, x, t-2xl, fon, t-bold, m, b-4, tex, t-pi, n, k-3, 0, 0'><"
                   Phas, e, 3: Optimizati, o, n (Weeks, 1, 3-2, 4)
                 <
-                <ul, classNam, e="'li, s, t-disc, lis, t-inside, spac, e-y-2, tex, t-gr, a, y-300, m, l-4'><"
+                <ul, classNam, e = "'li, s, t-disc, lis, t-inside, spac, e-y-2, tex, t-gr, a, y-300, m, l-4'><"
                   <li><
                     Autonomous, response, activated for, verified, threat typ, e, s;
                   <
@@ -163,7 +162,7 @@ export default function NextGenSecurityOperations20, 2, 5() {/* TODO: Fix JSX ex
                     Advanced, capabilities, enable,
   d: threat, hunt, i, n, g, predictive, analytic, s;
                   <
-              <p, classNam, e="'te, x, t-gr, a, y-300, m, b-4, leadin, g-relax, e, d'><"
+              <p, classNam, e = "'te, x, t-gr, a, y-300, m, b-4, leadin, g-relax, e, d'><"
                 Leading, enterprises, have achieved, security, postures that, were, unimaginable just, two, years a, g, o: ne, a, r-perfect, threat, detecti, o, n,
                 s, u, b-second, response, times, and, dramatically, reduced cos, t, s. The, question, is not, whether, to adopt, autonomous, SecOps, but, how, quickly you, can, deploy it, before, the next, breac, h.
                 Schedule, Your, Security Assessme, n, t;
@@ -175,7 +174,7 @@ export default function NextGenSecurityOperations20, 2, 5() {/* TODO: Fix JSX ex
                 Schedule, Your, Security Assessme, n, t<
                 <ArrowLeft , className="'ml-2 h-5 w-5, rotat, e-1, 8, 0'></ArrowLeft>"
                 Schedule, Your, Security Assessme, n, t;
-                <ArrowLeft, classNam, e="'ml-2 h-5 w-5, rotat, e-1, 8, 0' /><"
+                <ArrowLeft, classNam, e = "'ml-2 h-5 w-5, rotat, e-1, 8, 0' /><"
               <p, className="'te, x, t-gr, a, y-300, m, b-4, leadin, g-relax, e, d'><"
                 Leading, enterprises, have achieved, security, postures that, were, unimaginable just, two, years a, g, o: ne, a, r-perfect, threat, detecti, o, n,
                 s, u, b-second, response, times, and, dramatically, reduced cos, t, s. The, question, is not, whether, to adopt, autonomous, SecOps, but, how, quickly you, can, deploy it, before, the next, breac, h.

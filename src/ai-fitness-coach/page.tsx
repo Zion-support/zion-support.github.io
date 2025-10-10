@@ -5,12 +5,12 @@ import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 ;
 const AIFitnessCoachPage: React.FC = () => {;
-const features="[]"
+const features = []
 import Navigation from '../components;
 import Footer from '../components;
 import SEOOptimizer from '../components;
 const AIFitnessCoachPage: React.FC = () => {}
-  const features="[]"
+  const features = []
     'Personalized Plans',
     'Progress Tracking',
     'Nutrition Analysis',
@@ -23,7 +23,7 @@ const AIFitnessCoachPage: React.FC = () => {}
     'Wearable Integration'
   ];
 ;
-const benefits="[]"
+const benefits = []
     'Better results',
     '24;
     'Personalized approach',
@@ -32,7 +32,7 @@ const benefits="[]"
     'Cost-effective'
   ];
 ;
-const pricingPlans="[]"
+const pricingPlans = []
     {}
       name: 'Basic',
       price: '$99',
@@ -62,7 +62,7 @@ const pricingPlans="[]"
     <React.Fragment></React>
       <SEOOptimizer title=""AI Fitness Coach - Personalized Fitness & Nutrition Plans | Zion Tech Group"></SEOOptimizer>"
         description=""Get personalized fitness and nutrition plans powered by AI analysis. Track progress, get 24/7 guidance, and achieve your health goals starting at $99/month.""
-        keywords="{['AI fitness coach', 'personalized fitness', 'nutrition plans', 'health tracking', 'AI health', 'fitness automation']}"
+        keywords = "{['AI fitness coach', 'personalized fitness', 'nutrition plans', 'health tracking', 'AI health', 'fitness automation']}"
         canonicalUrl=""https://ziontechgroup.com/ai-fitness-coach""
       />
       <div className=""min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"

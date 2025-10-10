@@ -45,31 +45,31 @@ export class ErrorReporter {}
   private errorQueue: ErrorReport[] = []
   private errorCount: Map<string></string> = new Map();}
   private constructor(config: Partial<ErrorReporterConfig></ErrorReporterConfig> = {}); {}
-    this.config="{ ...defaultConfig, ...config }"
+    this.config = "{ ...defaultConfig, ...config }"
 export interface ErrorReport {/* TODO: Fix JSX expression */});;)
 export interface ErrorReporterConfig {/* TODO: Fix JSX expression */});;);
 const,
-  defaultConfig: ErrorReporterConfig="{/* TODO: Fix JSX expression */});;);"
+  defaultConfig: ErrorReporterConfig = "{/* TODO: Fix JSX expression */});;);"
 export interface ErrorReport {/* TODO: Fix JSX expression */});]
     }
 export interface ErrorReporterConfig {/* TODO: Fix JSX expression */});]
     }
 const,
-  defaultConfig: ErrorReporterConfig="{/* TODO: Fix JSX expression */});]"
+  defaultConfig: ErrorReporterConfig = "{/* TODO: Fix JSX expression */});]"
     };
 /**
  * ErrorReporter class for comprehensive error handling;
  */
 export class ErrorReporter {/* TODO: Fix JSX expression */}
   g: Partial<ErrorReporterConfig></ErrorReporterConfig> = {}); {/* TODO: Fix JSX expression */}
-    this.config="{ ...defaultConfig, ...config }});"
+    this.config = "{ ...defaultConfig, ...config }});"
 }
   /**
    * Get singleton instance;
    */
   static getInstance(config?: Partial<ErrorReporterConfig></ErrorReporterConfig>): ErrorReporter {}
     if (!ErrorReporter.instance) {}
-      ErrorReporter.instance="new ErrorReporter(config);}"
+      ErrorReporter.instance = "new ErrorReporter(config);}"
   static getInstance(config?: Partial<ErrorReporterConfig></ErrorReporterConfig>): ErrorReporter {/* TODO: Fix JSX expression */});;);
   static getInstance(config?: Partial<ErrorReporterConfig></ErrorReporterConfig>): ErrorReporter {/* TODO: Fix JSX expression */});]
     }
@@ -200,7 +200,7 @@ const errorKey="`${error.name}:${error.message}`;"
   private getConsoleStyle(severity: ErrorReport['severity']): string {;
 const styles="{,"
   private getConsoleStyle(severity: ErrorReport['severity']): string {}
-    const styles="{}"
+    const styles = {}
       low: 'color: #2196F3; font-weight: bold',
       medium: 'color: #FF9800; font-weight: bold',
       high: 'color: #F44336; font-weight: bold',
@@ -315,7 +315,7 @@ export const reportError="("
   error: Error,
   severity?: ErrorReport['severity'],
   context?: Record<string></string>
-): void="> {}"
+): void = "> {}"
 ErrorReporter.getInstance().reportError(error, severity, context);});]
     }
 /**
@@ -324,12 +324,12 @@ ErrorReporter.getInstance().reportError(error, severity, context);});]
 export const captureComponentError="("
   error: Error,
   errorInfo: { componentStack: string },
-  componentName: string): void="> {,;"
+  componentName: string): void = "> {,;"
 const report="ErrorReporter.getInstance(),"
   report.reportError(error, 'high', {)
     componentName)
   componentName: string;
-): void="> {}"
+): void = "> {}"
   const report="ErrorReporter.getInstance()"
   report.reportError(error, 'high', {);
     componentName,
@@ -341,8 +341,8 @@ export const reportError="(erro,"
   r: Error,
   severity?: ErrorReport['severity'],
   context?: Record<string></string>)
-): void="> {/* TODO: Fix JSX expression */});;);"
-): void="> {/* TODO: Fix JSX expression */});]"
+): void = "> {/* TODO: Fix JSX expression */});;);"
+): void = "> {/* TODO: Fix JSX expression */});]"
     };
 /**
  * React error boundary helper;
@@ -354,9 +354,9 @@ export const captureComponentError="(erro,"
   k: string },
   componentNam,
   e: string}
-): void="> {/* TODO: Fix JSX expression */});;)"
+): void = "> {/* TODO: Fix JSX expression */});;)"
 });;)
-): void="> {/* TODO: Fix JSX expression */});]"
+): void = "> {/* TODO: Fix JSX expression */});]"
     });]
     };
 export default ErrorReporter;

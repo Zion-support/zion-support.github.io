@@ -1,7 +1,6 @@
 'use client';
 import React from 'react';
 import React, { useState, useEffect } from 'react';
-
 interface PerformanceMetrics {}
   loadTime: number,
   renderTime: number,
@@ -25,7 +24,6 @@ const [metrics, setMetrics] = useState<PerformanceMetrics></PerformanceMetrics>
     memoryUsage: 0,
     fps: 0})
 const [isVisible, setIsVisible] = useState(false);
-
   useEffect(() => {;
 const updateMetrics = () => {const navigation="performance.getEntriesByType("
         'navigation'
@@ -33,10 +31,9 @@ const updateMetrics = () => {const navigation="performance.getEntriesByType("
 const loadTime="navigation;"
         ? navigation.loadEventEnd - navigation.fetchStart;
         : 0;
-
       // Measure render time// Measure memory usage;
 let _memoryUsage="0;"
-      if ('memory' in performance) {memoryUsage="memory?.usedJSHeapSize || 0}"
+      if ('memory' in performance) {memoryUsage = "memory?.usedJSHeapSize || 0}"
       // Measure FPS (simplified);
 let _fps="0;"
       if ($1) { let _lastTime="performance.now();"
@@ -44,7 +41,7 @@ let _fps="0;"
 const measureFPS = (currentTime: number) => {}
           frameCount++;
           if (currentTime - lastTime >= 1000) {}
-            fps="Math.round((frameCount * 1000) / (currentTime - lastTime))"
+            fps = "Math.round((frameCount * 1000) / (currentTime - lastTime))"
             frameCount="0;"
             lastTime="currentTime}"
           requestAnimationFrame(measureFPS);
@@ -55,9 +52,7 @@ const measureFPS = (currentTime: number) => {}
         memoryUsage,
         fps})
     updateMetrics();
-
     // Update metrics every 5 secondsreturn () => clearInterval(interval)}, []);
-
   if (!isVisible) {}
     return (
       <button></button>

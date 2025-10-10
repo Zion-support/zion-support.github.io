@@ -1,5 +1,5 @@
 
-export const real2036AIServices="[{id: 'ai-emotion-intelligence-platform',"
+export const real2036AIServices = "[{id: 'ai-emotion-intelligence-platform',"
     name: 'AI Emotion Intelligence Platform',
     tagline: 'Advanced emotional AI understanding',
     description:,
@@ -19,7 +19,7 @@ export const real2036AIServices="[{id: 'ai-emotion-intelligence-platform',"
     marketPrice: '$5,000-8,000/month',
     benefits:
         benefits: [}
-export const real2036AIServices="[{/* TODO: Fix JSX expression */}"
+export const real2036AIServices = "[{/* TODO: Fix JSX expression */}"
   s: [}
       'Enhanced customer experience'
       'Better emotional understanding'
@@ -553,7 +553,7 @@ export const real2036AIServices="[{/* TODO: Fix JSX expression */}"
     ]
   }
 ];
-export const real2036AIServices="[{id: 'ai-emotion-intelligence-platform',"
+export const real2036AIServices = "[{id: 'ai-emotion-intelligence-platform',"
     name: 'AI Emotion Intelligence Platform',
     tagline: 'Advanced emotional AI understanding',
     description:,
@@ -573,7 +573,7 @@ export const real2036AIServices="[{id: 'ai-emotion-intelligence-platform',"
     marketPrice: '$5,000-8,000/month',
     benefits:
         benefits: [}
-export const real2036AIServices="[{/* TODO: Fix JSX expression */}"
+export const real2036AIServices = "[{/* TODO: Fix JSX expression */}"
   s: [}
       'Enhanced customer experience'
       'Better emotional understanding'
@@ -1068,7 +1068,7 @@ export const real2036AIServices="[{/* TODO: Fix JSX expression */}"
       'Predictive maintenance'
     ]
     useCases: []
-export const real2036AIServices="[{id: 'ai - emotion - intelligence - platform',"
+export const real2036AIServices = "[{id: 'ai - emotion - intelligence - platform',"
     name: 'AI Emotion Intelligence Platform',
     tagline: 'Advanced emotional AI understanding',
     description: unknown;
@@ -1102,7 +1102,7 @@ export const real2036AIServices="[{id: 'ai - emotion - intelligence - platform',
     description: unknown;
     useCase,
   s: [,
-export const real2036AIServices="[{/* TODO: Fix JSX expression */}"
+export const real2036AIServices = "[{/* TODO: Fix JSX expression */}"
     ]}
   },
     i,
@@ -1563,7 +1563,7 @@ export const real2036 AIServices="[]"
       'Safety systems']};
 ];      'Autonomous vehiclesFleet managementTraffic optimizationSafety systems'
     ]
-export const real2036AIServices="[]"
+export const real2036AIServices = []
   {;
     id: 'ai-emotion-intelligence-platform';
     name: 'AI Emotion Intelligence Platform';
@@ -1815,7 +1815,7 @@ export const real2036AIServices="[]"
 };
 ];      'Autonomous vehiclesFleet managementTraffic optimizationSafety systems'
     ]
-export const real2036AIServices="[]"
+export const real2036AIServices = []
   {;
     id: 'ai-emotion-intelligence-platform';
     name: 'AI Emotion Intelligence Platform';
@@ -2064,7 +2064,7 @@ export const real2036AIServices="[]"
     ]}
   }
 ];
-export const real2036AIServices="[ i,"
+export const real2036AIServices = "[ i,"
   d: 'ai-emotion-intelligence-platform'' nam,
   e: 'AI Emotion Intelligence Platform'' taglin,
   e: 'Advanced emotional AI understanding' descriptio,
@@ -2199,7 +2199,7 @@ export const real2036AIServices="[ i,"
   n: '😊🤖'' marketPric,
   e: '$5,000-8,000/month' benefit,
   s: [' 'Enhanced customer experience'' 'Better emotional understanding'' 'Improved human-AI interaction'' 'Emotional intelligence development' ] useCase,
-  s: [' 'Customer service'' 'Mental health support'' 'Education technology'' 'Human resources' ] } ' ]; 'Autonomous vehiclesFleet managementTraffic optimizationSafety systems' ] } ]; export const real2036AIServices="[ ' i,"
+  s: [' 'Customer service'' 'Mental health support'' 'Education technology'' 'Human resources' ] } ' ]; 'Autonomous vehiclesFleet managementTraffic optimizationSafety systems' ] } ]; export const real2036AIServices = "[ ' i,"
   d: 'ai-emotion-intelligence-platform'' nam,
   e: 'AI Emotion Intelligence Platform'' taglin,
   e: 'Advanced emotional AI understanding' descriptio,
@@ -2328,7 +2328,7 @@ export const real2036AIServices="[ i,"
   n: '🚗🤖'' marketPric,
   e: '$15,000-25,000/month' benefit,
   s: [' 'Enhanced vehicle safety'' 'Autonomous operation'' 'Traffic optimization'' 'Predictive maintenance' ] useCase,
-  s: [ export const real2036AIServices="[, ' i,"
+  s: [ export const real2036AIServices = "[, ' i,"
   d: 'ai - emotion - intelligence - platform',' nam,
   e: 'AI Emotion Intelligence Platform',' taglin,
   e: 'Advanced emotional AI understanding', descriptio,
@@ -2457,7 +2457,7 @@ export const real2036AIServices="[ i,"
   n: '🚗🤖',' market_pric,
   e: '$15, 000 - 25, 000 / month', benefit,
   s: [,' 'Enhanced vehicle safety',' 'Autonomous operation',' 'Traffic optimization',' 'Predictive maintenance'], use_case,
-  s: [,' 'Autonomous vehicles',' 'Fleet management',' 'Traffic optimization',' 'Safety systems']};' ]; 'Autonomous vehiclesFleet managementTraffic optimizationSafety systems' ] };' ]; 'Autonomous vehiclesFleet managementTraffic optimizationSafety systems' ] export const real2036AIServices = [ ' 'Autonomous vehicles',' 'Fleet management',' 'Traffic optimization',' 'Safety systems']};' ]; 'Autonomous vehiclesFleet managementTraffic optimizationSafety systems' ] export const real2036AIServices="[; {/* TODO: Fix JSX expression */}"
+  s: [,' 'Autonomous vehicles',' 'Fleet management',' 'Traffic optimization',' 'Safety systems']};' ]; 'Autonomous vehiclesFleet managementTraffic optimizationSafety systems' ] };' ]; 'Autonomous vehiclesFleet managementTraffic optimizationSafety systems' ] export const real2036AIServices = [ ' 'Autonomous vehicles',' 'Fleet management',' 'Traffic optimization',' 'Safety systems']};' ]; 'Autonomous vehiclesFleet managementTraffic optimizationSafety systems' ] export const real2036AIServices = "[; {/* TODO: Fix JSX expression */}"
   s: [}' 'Customer serviceMental health supportEducation technologyHuman resources' ]} }; {/* TODO: Fix JSX expression */}
   s: [}' 'Marketing campaignsProduct designContent creationResearch and development' ]} }; {/* TODO: Fix JSX expression */}
   s: [}' 'Mental health supportPsychological researchPersonal developmentTherapeutic applications' ]} }; {/* TODO: Fix JSX expression */}
@@ -2467,7 +2467,7 @@ export const real2036AIServices="[ i,"
   s: [}' 'Market researchAcademic researchBusiness intelligenceCompetitive analysis' ]} }; {/* TODO: Fix JSX expression */}
   s: [}' 'Financial decisionsOperational decisionsStrategic planningRisk management' ]} }; {/* TODO: Fix JSX expression */}
   s: [}' 'Business partnershipsPlatform ecosystemsSupply chain managementDigital transformation' ]} }; {/* TODO: Fix JSX expression */}
-  s: [}' 'Autonomous vehiclesFleet managementTraffic optimizationSafety systems' ]} } ]};' ]; 'Autonomous vehiclesFleet managementTraffic optimizationSafety systems' ] export const real2036AIServices="[; {/* TODO: Fix JSX expression */}"
+  s: [}' 'Autonomous vehiclesFleet managementTraffic optimizationSafety systems' ]} } ]};' ]; 'Autonomous vehiclesFleet managementTraffic optimizationSafety systems' ] export const real2036AIServices = "[; {/* TODO: Fix JSX expression */}"
   s: [}' 'Customer serviceMental health supportEducation technologyHuman resources' ]} }; {/* TODO: Fix JSX expression */}
   s: [}' 'Marketing campaignsProduct designContent creationResearch and development' ]} }; {/* TODO: Fix JSX expression */}
   s: [}' 'Mental health supportPsychological researchPersonal developmentTherapeutic applications' ]} }; {/* TODO: Fix JSX expression */}

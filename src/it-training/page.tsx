@@ -1,9 +1,7 @@
 import React from 'react';
-
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
 import { GraduationCap, BookOpen, Users, Award, CheckCircle, Star,  GraduationCap,  BookOpen,  Award } from 'lucide-react';
 const ITTrainingPage: React.FC = () => {;
 const features="[];"
@@ -37,7 +35,6 @@ const features="[];"
   s: ['Real-world experience', 'Industry insights', 'Mentorship']
     }
   ];
-
   return (
     <div className=""min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
       <Navigation /></Navigation>
@@ -93,6 +90,4 @@ const features="[];"
       <Footer /></Footer>
     </div>
   )};
-
 export default ItTrainingPage;
-

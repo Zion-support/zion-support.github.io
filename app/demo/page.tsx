@@ -6,9 +6,9 @@ import Navigation from '../components;
 import Footer from '../components;
 import { Play, ArrowRight, CheckCircle } from 'lucide-react';
 ;
-const DemoPage: React.FC = () => {const demos="[]"
+const DemoPage: React.FC = () => {const demos = []
 const DemoPage: React.FC = () => {}
-  const demos="[]"
+  const demos = []
     {}
       title: 'AI Analytics Dashboard',
       description: 'See how our AI analytics can transform your business intelligence',
@@ -40,7 +40,7 @@ const DemoPage: React.FC = () => {}
       features: ['Blog posts', 'Social media content', 'Product descriptions']
     }
   ];
-  const testimonials="[]"
+  const testimonials = []
     {}
       name: 'Sarah Johnson',
       company: 'TechCorp Inc.',
@@ -73,7 +73,7 @@ const DemoPage: React.FC = () => {}
       <Navigation {/* Hero Section *></Navigation>
       <section className=""relative py-20 px-4 overflow-hidden">)"
         <div className=""absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse"></div>"
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style="{{ animationDelay: '1s' }}></div>"
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style = "{{ animationDelay: '1s' }}></div>"
         <div className=""relative max-w-7xl mx-auto text-center"></div>"
           <h1 className=""text-5xl md: text-7xl font-bold text-white mb-6 leading-tight"></h1>"
             See It in;
@@ -102,7 +102,7 @@ const DemoPage: React.FC = () => {}
           
           <div className=""grid grid-cols-1 md:grid-cols-2 l,"></div>"
     g:grid-cols-4 gap-6">
-            {demos.map((demo) => (<button key="{ demo.id };)></button>"
+            {demos.map((demo) => (<button key = "{ demo.id };)></button>"
                 onClick = { () => setSelectedDemo(demo.id) };
                 className="{`p-6 rounded-xl border transition-all duration-300 text-left ${}"
                   selectedDemo === demo.id;

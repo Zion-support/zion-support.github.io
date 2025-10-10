@@ -16,21 +16,21 @@ const January2026RevolutionaryContentBanne, r: React.FC = () => {/* TODO: Fix JS
     {/* TODO: Fix JSX expression */}
     },
     {/* TODO: Fix JSX expression */}
-    }]; return(<section, classNam, e="'py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, relative, overflow-hidd, e, n'></section>"
+    }]; return(<section, classNam, e = "'py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, relative, overflow-hidd, e, n'></section>"
       {/* Animated, Backgroun, d */}
       <div, className="'absolute, inse, t-0, overflo, w-hidden, opacit, y-20'></section>"
-  ]; return (<section, classNam, e="'py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, relative, overflow-hidd, e, n'></section>"
+  ]; return (<section, classNam, e = "'py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, relative, overflow-hidd, e, n'></section>"
       {/* Animated, Backgroun, d */}
       <div, className="'absolute, inse, t-0, overflo, w-hidden, opacit, y-20'></div>"
         <div, className="'absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e' /></div>"
         <div , className="'absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e'></div>"
-          sty, l, e="{{ animationDel, a, y: ', 2, s' }}"
+          sty, l, e = "{{ animationDel, a, y: ', 2, s' }}"
          /></div>
-        <div , classNam, e="'absolute, to, p-1/2, lef, t-1/2 w-6, 4, h-64, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e'></div>"
-          sty, l, e="{{ animationDel, a, y: ', 4, s' }}"
+        <div , classNam, e = "'absolute, to, p-1/2, lef, t-1/2 w-6, 4, h-64, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e'></div>"
+          sty, l, e = "{{ animationDel, a, y: ', 4, s' }}"
          /></div>
       </div>
-      <div, classNam, e="'container, m, x-auto, p, x-6, relative, z-10'></div>"
+      <div, classNam, e = "'container, m, x-auto, p, x-6, relative, z-10'></div>"
         {/* Head, e, r */}</div>
         <div, className="'te, x, t-center, m, b-16'></div>"
           <div, className="'inli, n, e-flex, item, s-center, ga, p-2, p, x-6, p, y-3, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/20, t, o-purp, l, e-5, 0, 0/20, border, border-bl, u, e-5, 0, 0/30, m, b-8'></div>"
@@ -41,7 +41,7 @@ const January2026RevolutionaryContentBanne, r: React.FC = () => {/* TODO: Fix JS
           </div>
           <h2, className="'te, x, t-4xl, m, d: te, x, t-5xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-bl, u, e-400, vi, a-cy, a, n-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t'></h2>"
             Revolutionary, AI, Breakthroughs: The, Future, is He, r, e;
-      <div, classNam, e="'container, m, x-auto, p, x-6, relative, z-10'></div>"
+      <div, classNam, e = "'container, m, x-auto, p, x-6, relative, z-10'></div>"
         {/* Head, e, r */}
         <div, className="'te, x, t-center, m, b-16'></div>"
           <div, className="'inli, n, e-flex, item, s-center, ga, p-2, p, x-6, p, y-3, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/20, t, o-purp, l, e-5, 0, 0/20, border, border-bl, u, e-5, 0, 0/30, m, b-8'></div>"
@@ -60,24 +60,24 @@ const January2026RevolutionaryContentBanne, r: React.FC = () => {/* TODO: Fix JS
           </p>
         </div>)
         {/* Content, Gri, d */})
-        <div, classNam, e="'grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12'>)"
+        <div, classNam, e = "'grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12'>)"
           { revolutionaryConte, n, t.m, a, p((con, t, e, n, t, ind, e, x) = > (
         </div>
         {/* Content, Gri, d */}
-        <div, classNam, e="'grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12'></div>"
+        <div, classNam, e = "'grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12'></div>"
           { revolutionaryConte, n, t.m, a, p((con, t, e, n, t, ind, e, x) = > (</div>
-            <div , ke, y = { in, d, e, x  }, classNa, m, e="'group, b, g-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-6, border, border-whi, t, e/10, hove, r: bord, e, r-bl, u, e-5, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:sca, l, e-1, 0, 5'>>"
+            <div , ke, y = { in, d, e, x  }, classNa, m, e = "'group, b, g-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-6, border, border-whi, t, e/10, hove, r: bord, e, r-bl, u, e-5, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:sca, l, e-1, 0, 5'>>"
               {/* Content, Hea, d, e, r */}</div>
-              <div, classNam, e="'flex, item, s-start, justif, y-between, m, b-4'></div>"
+              <div, classNam, e = "'flex, item, s-start, justif, y-between, m, b-4'></div>"
                 <div, className="'te, x, t-4, x, l'>{conte, n, t.emo, j, i}</div>"
                 <div, className="'flex, fle, x-col, item, s-end, ga, p-2'></div>"
                   <span, className="'bg-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-purp, l, e-500, tex, t-white, tex, t-xs, fon, t-bold, p, x-3, p, y-1, rounde, d-fu, l, l'></span>"
-        <div, classNam, e="'grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12'></div>"
+        <div, classNam, e = "'grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12'></div>"
           {/* TODO: Fix JSX expression */}
-            <div , ke, y = { in, d, e, x  }, classNa, m, e="'group, b, g-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-6, border, border-whi, t, e/10, hove, r: bord, e, r-bl, u, e-5, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:sca, l, e-1, 0, 5'></div>"
+            <div , ke, y = { in, d, e, x  }, classNa, m, e = "'group, b, g-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-6, border, border-whi, t, e/10, hove, r: bord, e, r-bl, u, e-5, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:sca, l, e-1, 0, 5'></div>"
             ></div>
               {/* Content, Hea, d, e, r */}
-              <div, classNam, e="'flex, item, s-start, justif, y-between, m, b-4'></div>"
+              <div, classNam, e = "'flex, item, s-start, justif, y-between, m, b-4'></div>"
                 <div, className="'te, x, t-4, x, l'>{conte, n, t.emo, j, i}</div>"
                 <div, className="'flex, fle, x-col, item, s-end, ga, p-2'></div>"
                   <span, className="'bg-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-purp, l, e-500, tex, t-white, tex, t-xs, fon, t-bold, p, x-3, p, y-1, rounde, d-fu, l, l'></span>"
@@ -97,7 +97,7 @@ const January2026RevolutionaryContentBanne, r: React.FC = () => {/* TODO: Fix JS
                 <h3, className="'te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-bl, u, e-300, transitio, n-colo, r, s'></h3>"
                   {conte, n, t.t, i, t, l, e}
                 </h3>
-                <p, classNam, e="'te, x, t-gr, a, y-400, tex, t-sm, leadin, g-relaxed, m, b-4'></p>"
+                <p, classNam, e = "'te, x, t-gr, a, y-400, tex, t-sm, leadin, g-relaxed, m, b-4'></p>"
                   {conte, n, t.description}
                 </p>
               </div>
@@ -117,13 +117,13 @@ const January2026RevolutionaryContentBanne, r: React.FC = () => {/* TODO: Fix JS
                 className="'w-full, b, g-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-purp, l, e-600, hove, r: fr, o, m-bl, u, e-400, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, flex, items-center, justif, y-center, ga, p-2, grou, p-hov, e, r:shad, o, w-lg, grou, p-hov, e, r:shad, o, w-bl, u, e-5, 0, 0/25'"
               ></Link>
                 { conte, n, t.ty, p, e === 'bl, o, g'  ? 'Read, Articl, e'  : 'View, Case, Stu, d, y' }
-                <Link, classNam, e="'w-4 h-4' /></Link>"
+                <Link, classNam, e = "'w-4 h-4' /></Link>"
               </Li, n, k>
             </di, v>)
           ))}
         </div>
         {/* Stats, Sectio, n */}
-        <div, classNam, e="'grid, m, d: gr, i, d-co, l, s-4, ga, p-6, m, b-12'></div>"
+        <div, classNam, e = "'grid, m, d: gr, i, d-co, l, s-4, ga, p-6, m, b-12'></div>"
           {/* TODO: Fix JSX expression */}
             },
             {/* TODO: Fix JSX expression */}
@@ -132,22 +132,22 @@ const January2026RevolutionaryContentBanne, r: React.FC = () => {/* TODO: Fix JS
             },
             {/* TODO: Fix JSX expression */}
             }].m, a, p((st, a, t, ind, e, x) => (</div>
-            <div , ke, y = { in, d, e, x }, classNa, m, e="'bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-4, border, border-whi, t, e/10, tex, t-cent, e, r'></div>"
+            <div , ke, y = { in, d, e, x }, classNa, m, e = "'bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-4, border, border-whi, t, e/10, tex, t-cent, e, r'></div>"
             ></div>
-          ].m, a, p((st, a, t, ind, e, x) => (<div , ke, y = { in, d, e, x }, classNa, m, e="'bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-4, border, border-whi, t, e/10, tex, t-cent, e, r'></div>"
+          ].m, a, p((st, a, t, ind, e, x) => (<div , ke, y = { in, d, e, x }, classNa, m, e = "'bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-4, border, border-whi, t, e/10, tex, t-cent, e, r'></div>"
             ></div>`
-              <div, className='te, x, t-3xl, m, b-2'>{st, a, t.ic, o, n}</d, i, v > <div , classNam, e="{ `te, x, t-2xl, fon, t-extrabold, b, g-gradie, n, t-to-r ${st, a, t.co, l, o, r }, bg-cl, i, p-text, tex, t-transparent, m, b-1`}></div>"
+              <div, className='te, x, t-3xl, m, b-2'>{st, a, t.ic, o, n}</d, i, v > <div , classNam, e = "{ `te, x, t-2xl, fon, t-extrabold, b, g-gradie, n, t-to-r ${st, a, t.co, l, o, r }, bg-cl, i, p-text, tex, t-transparent, m, b-1`}></div>"
               ></div>
                 {st, a, t.val, u, e}
               </div>
-              <div, classNam, e="'te, x, t-gr, a, y-400, tex, t-xs, fon, t-medi, u, m'></div>"
+              <div, classNam, e = "'te, x, t-gr, a, y-400, tex, t-xs, fon, t-medi, u, m'></div>"
                 {st, a, t.lab, e, l}
               </div>
             </di, v>)
           ))}
         </div>
         {/* Call, to, Action */}
-        <div, classNam, e="'te, x, t-cent, e, r'></div>"
+        <div, classNam, e = "'te, x, t-cent, e, r'></div>"
           <div, className="'bg-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/10, t, o-purp, l, e-5, 0, 0/10, border, border-bl, u, e-5, 0, 0/20, rounde, d-2x, l, p-8'></div>"
             <h3, className="'te, x, t-2xl, fon, t-bold, m, b-4, tex, t-whi, t, e'></h3>"
             <h3, className="'te, x, t-2xl, fon, t-bold, m, b-4, tex, t-whi, t, e'></h3>"
@@ -157,14 +157,14 @@ const January2026RevolutionaryContentBanne, r: React.FC = () => {/* TODO: Fix JS
               Join, the, Fortune 500, companies, already transforming, their, operations with, Zion, Tech Gro, u, p's, breakthrough, AI solutio, n, s.
             </p>
             <div, className="'flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r'></div>"
-              <Link , t, o="'/conta, c, t'></Link>"
+              <Link , t, o = "'/conta, c, t'></Link>"
                 className="'bg-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-purp, l, e-600, hove, r:fr, o, m-bl, u, e-400, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-bl, u, e-5, 0, 0/50, transform, hover:-transla, t, e-y-1'>"
                 className="'bg-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-purp, l, e-600, hove, r:fr, o, m-bl, u, e-400, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-bl, u, e-5, 0, 0/50, transform, hove,'"
   r:-transla, t, e-y-1'
               ></Link>
                 Start, Your, Transformation;
               </Li, n, k>
-              <Link , t, o="'/servic, e, s'></Link>"
+              <Link , t, o = "'/servic, e, s'></Link>"
                 className="'bord, e, r-2, borde, r-bl, u, e-500, tex, t-bl, u, e-400, hove, r:bg-bl, u, e-500, hove, r:te, x, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-3, 0, 0'>"
               ></Link>
                 Explore, Our, Services;

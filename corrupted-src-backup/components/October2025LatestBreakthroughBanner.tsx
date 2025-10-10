@@ -11,7 +11,7 @@ return (
       {/* Animated, background, effects */};</div>
       <div, className=""absolute, inse, t-0, opacit, y-20"></div>"
         <div, className=""absolute, to, p-0, lef, t-0 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>"
-        <div, className="absolute, botto, m-0, righ, t-0 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e" sty, l, e="{{ animationDel, a, y: '1s' }}></d, i, v>;"
+        <div, className="absolute, botto, m-0, righ, t-0 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e" sty, l, e = "{{ animationDel, a, y: '1s' }}></d, i, v>;"
     <div, className=""bg-gradie, n, t-to-br, fro, m-bl, u, e-900, vi, a-purp, l, e-900, t, o-indi, g, o-900, p, y-16, p, x-4, relative, overflow-hidd, e, n">";"
       {/* Animated, background, effects */};</div>
       <div, className=""absolute, inse, t-0, opacit, y-20">";</div>"
@@ -20,12 +20,12 @@ const, October2025LatestBreakthroughBanne, r = () => {/* TODO: Fix JSX expressio
       {/* Animated, background, effects */};
       <div, className=""absolute, inse, t-0, opacit, y-20"></div>""
         <div, className=""absolute, to, p-0, lef, t-0 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>""
-        <div, className="absolute, botto, m-0, righ, t-0 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e" sty, l, e="{{ animationDel, a, y: '1s' }}></d, i, v>;""
+        <div, className="absolute, botto, m-0, righ, t-0 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e" sty, l, e = "{{ animationDel, a, y: '1s' }}></d, i, v>;""
     <div, className=""bg-gradie, n, t-to-br, fro, m-bl, u, e-900, vi, a-purp, l, e-900, t, o-indi, g, o-900, p, y-16, p, x-4, relative, overflow-hidd, e, n">";"
       {/* Animated, background, effects */};"
       <div, className=""absolute, inse, t-0, opacit, y-20">";""
         <div, className=""absolute, to, p-0, lef, t-0 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>";""
-        <div, className="absolute, botto, m-0, righ, t-0 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e" sty, l, e="{{ animationDel, a, y: '1s' }}></d, i, v>';"
+        <div, className="absolute, botto, m-0, righ, t-0 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e" sty, l, e = "{{ animationDel, a, y: '1s' }}></d, i, v>';"
       </d, i, v>"
       <div, className=""m, a, x-w-7xl, m, x-auto, relative, z-10">";"
         {/* Header, Sectio, n */}</div>
@@ -74,13 +74,13 @@ const, Ico, n = conte, n, t.ic, o, n === "🚀" ? Z, a, p : conte, n, t.ic, o, n
 octoberLatestBreakthroughConte, n, t.m, a, p((conte, n, t) => {;
 const, Ico, n = conte, n, t.ic, o, n === "🚀" ? Z, a, p : conte, n, t.ic, o, n === "⚡" ? Databa, s, e : B, o, t;";
 return(<Li , n, k;></Li>
-  k, e, y="{conte, n, t.id}"
+  k, e, y = "{conte, n, t.id}"
 return (</div>
 );
 }
 <Li , n, k></Li>
-  k, e, y="{conte, n, t.id}"
-                to="{`/bl, o, g/${conte, n, t.sl, u, g}`}`;`"
+  k, e, y = "{conte, n, t.id}"
+                to = "{`/bl, o, g/${conte, n, t.sl, u, g}`}`;`"
                 classNa, m, e=""group, b, g-whi, t, e/10, backdro, p-bl, u, r-md, border, border-whi, t, e/20, rounde, d-x, l, p-6, hove, r: bg-whi, t, e/20, hov, e;""
   r:sca, l, e-105, transitio, n-all, duratio, n-3, 0, 0">
                 <div, className=""flex, item, s-start, ga, p-4, m, b-4"></div>"
@@ -100,7 +100,7 @@ return (</div>
         <div, className=""grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">""
           {/* TODO: Fix JSX expression */}
 }
-                to="{`/bl, o, g/${conte, n, t.sl, u, g}`}`;`""
+                to = "{`/bl, o, g/${conte, n, t.sl, u, g}`}`;`""
                 classNa, m, e=""group, b, g-whi, t, e/10, backdro, p-bl, u, r-md, border, border-whi, t, e/20, rounde, d-x, l, p-6, hove, r: bg-whi, t, e/20, hov, e,""
   r:sca, l, e-105, transitio, n-all, duratio, n-3, 0, 0"
               ></Li>"

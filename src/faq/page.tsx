@@ -26,7 +26,7 @@ const FAQPage: React.FC = () => {}
         : [...prev, index]
     )};
 ;
-const faqData="[]"
+const faqData = []
     {}
       category: 'General Questions',
       questions: []
@@ -91,13 +91,13 @@ questionquestion: 'How quickly do you respond to support requests?',
           answer:   ,
 $4];
 ;
-const filteredData = faqData.map(category="> ({}"
+const filteredData = faqData.map(category = "> ({}"
     ...category,
     questions: category.questions.filter(q=">"
       q.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
       q.answer.toLowerCase().includes(searchTerm.toLowerCase())
     )
-  })).filter(category="> category.questions.length > 0);"
+  })).filter(category = "> category.questions.length > 0);"
   return (
     <React.Fragment></React>
       <Navigation /></Navigation>
@@ -118,7 +118,7 @@ const filteredData = faqData.map(category="> ({}"
               <Search className=""absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"></Search>"
               <input type=""text"></input>"
                 placeholder=""Search FAQs...""
-                value="{ searchTerm };)"
+                value = "{ searchTerm };)"
                 onChange = { (e) => setSearchTerm(e.target.value) };
                 className=""w-full pl-10 pr-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focu,""
     s:ring-cyan-400;
@@ -134,7 +134,7 @@ const filteredData = faqData.map(category="> ({}"
                   {category.questions.map((item, itemIndex) => {}
 return (
 ;
-const globalIndex="categoryIndex * 100 + itemIndex;"
+const globalIndex = "categoryIndex * 100 + itemIndex;"
                     const isOpen="openItems.includes(globalIndex);"
                       <div key={itemIndex} className=""bg-slate-800/50 rounded-lg border border-gray-700/50"></div>"
 );
@@ -197,7 +197,7 @@ const toggleItem="(inde)"
         ? prev.filter(i => i !== index)
         : [...prev, index]
     )};
-  const faqData="[]"
+  const faqData = []
   /
   O: Add items;
 ];;
@@ -324,9 +324,9 @@ const toggleItem="(inde)"
           answe,
   r: 'We respond to support requests within 1 hour during business hours and within 4 hours for non-critical issues outside business hours. Critical issues receive immediate attention.'
   ];
-  const filteredData = faqData.map(category="> ({/* TODO: Fix JSX expression */}"
+  const filteredData = faqData.map(category = "> ({/* TODO: Fix JSX expression */}"
   O: Add content}
-  const filteredData = faqData.map(category="> ({/* TODO: Fix JSX expression *"
+  const filteredData = faqData.map(category = "> ({/* TODO: Fix JSX expression *"
   ,
     O: Add content;)}
 }
@@ -336,7 +336,7 @@ const toggleItem="(inde)"
 /
 /
 /
-  })).filter(category="> category.questions.length > 0);"
+  })).filter(category = "> category.questions.length > 0);"
   return (<div>Coming Soon<)
   )
     
@@ -365,7 +365,7 @@ const toggleItem="(inde)"
             <div className=""max-w-md mx-auto relative"></div>"
               <Search className=""absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"></Search>"
               <input type="text" placeholder=""Search FAQs..."></input>"
-                value="{ searchTerm };"
+                value = "{ searchTerm };"
                 onChange={(e) => setSearchTerm(e.target.value)}"
                 className=""w-full pl-10 pr-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400,""
   focus:outline-none,
@@ -392,7 +392,7 @@ const toggleItem="(inde)"
   /
   O: Add content;
 }
-                    const globalIndex="categoryIndex * 100 + itemIndex;"
+                    const globalIndex = "categoryIndex * 100 + itemIndex;"
                     const isOpen="openItems.includes(globalIndex);"
           "
           <div key={itemIndex} className=""bg-slate-800/50 rounded-lg border border-gray-700/50"><"

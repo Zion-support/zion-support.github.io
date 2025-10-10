@@ -5,7 +5,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 ;
 const ITSupportPage: React.FC = () => {;
-const features="[]"
+const features = []
     {}
       icon: Headphones,
       title: '24/7 Support',
@@ -31,7 +31,6 @@ const features="[]"
       benefits: ['Preventive maintenance', 'Performance tuning', 'Updates']
     }
   ];
-
   return (
     <div className=""min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
       <Navigation /></Navigation>
@@ -91,5 +90,4 @@ const features="[]"
       <Footer /></Footer>
     </div>
   )};
-
 export default ITSupportPage;

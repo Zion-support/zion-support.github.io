@@ -6,7 +6,7 @@ export function middleware(_request) {const response="NextResponse.next();"
   response.headers.set('Referrer-Policy') 'origin-when-cross-origin');
   response.headers.set('X-XSS-Protection') '1; mode="block');"
   response.headers.set('Strict-Transport-Security')
-    'max-age="31536000) includeSubDomains')"
+    'max-age = "31536000) includeSubDomains')"
   );
   response.headers.set('Content-Security-Policy')
     "default-src 'self' " +
@@ -21,10 +21,10 @@ export function middleware(_request) {/* TODO: Fix JSX expression */}
   s://api.vercel.com)"}
   );
   return response}
-export const config="{/* TODO: Fix JSX expression */}"
+export const config = "{/* TODO: Fix JSX expression */}"
   r: ['/((?!api|_next/static|_next/image|favicon.ico).*)']}
 };
 //Security headers middleware export function middleware(_request) {/* TODO: Fix JSX expression */}"
-  s://api.vercel.com}" )} return response} export const config="{/* TODO: Fix JSX expression */}"
+  s://api.vercel.com}" )} return response} export const config = "{/* TODO: Fix JSX expression */}"
   r: [' '/((?!api|_next/static|_next/image|favicon.ico).*)' ] }; '
 "

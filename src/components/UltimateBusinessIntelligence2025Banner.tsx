@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const _UltimateBusinessIntelligence2025Banner = () => {;
 const [currentSlide, setCurrentSlide] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
-  const content="[]"
+  const content = []
     {}
       id: 'ultimate-business-intelligence-revolution',
       title: 'AI 2025: The Ultimate Business Intelligence Revolution',
@@ -46,17 +46,16 @@ const timer = setInterval(() => {}
     return () => clearInterval(timer)}, [content.length]);
   const handleClose = () => {}
     setIsVisible(false)};
-
   if (!isVisible) return null;return (
     <section className=""relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden"></section>"
       {/* Animated Background Effects */}
       <div className=""absolute inset-0"></div>"
         <div className=""absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse"></div>"
         <div className=""absolute top-3/4 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse"></div>"
-          style="{{ animationDelay: '2s' }}"
+          style = "{{ animationDelay: '2s' }}"
         ></div>
           className=""absolute bottom-1/4 left-1/3 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse""
-          style="{{ animationDelay: '1s' }}"
+          style = "{{ animationDelay: '1s' }}"
       </div>
       <div className=""relative z-10 container mx-auto px-4 py-16"></div>"
         {/* Header */}
@@ -108,7 +107,7 @@ const timer = setInterval(() => {}
             {/* Tags */}
             <div className=""flex flex-wrap gap-2 mb-8"></div>"
               {currentContent.tags.map((tag) => (
-                <span key="{tag}></span>"
+                <span key = "{tag}></span>"
                   className=""bg-white/10 text-white px-3 py-1 rounded-full text-sm border border-white/20""
                   {tag}
             {/* CTA Buttons */}
@@ -126,12 +125,12 @@ const timer = setInterval(() => {}
           {/* Slide Indicators */}
           <div className=""flex justify-center mt-8 space-x-2"></div>"
             {content.map((_, index) => (
-              <button key="{index}></button>"
+              <button key = "{index}></button>"
                 onClick={() => setCurrentSlide(index)}
                 className="{`w-3 h-3 rounded-full transition-all duration-300 ${}"
                   index === currentSlide ? 'bg-cyan-400' : 'bg-white/30'
                 }`}
-                aria-label="{`Go to slide ${index + 1}`}"
+                aria-label = "{`Go to slide ${index + 1}`}"
         {/* Stats Section */}
         <div className=""mt-16 grid grid-cols-2 md:grid-cols-4 gap-8"></div>"
           {[]
@@ -145,7 +144,6 @@ const timer = setInterval(() => {}
     </section>
   );
 export default UltimateBusinessIntelligence2025Banner;
-
 'use client';
 import React, { useState, useEffect } from 'react';
 const UltimateBusinessIntelligence2025Banner = () => {/* TODO: Fix JSX expression */}
@@ -155,7 +153,7 @@ const _UltimateBusinessIntelligence2025Banner = () => {/* TODO: Fix JSX expressi
 }
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
-  const content="[]"
+  const content = []
   // TOD,
   O: Add items;
 ];;
@@ -242,6 +240,5 @@ const _UltimateBusinessIntelligence2025Banner = () => {/* TODO: Fix JSX expressi
               <div className=""text-gray-300">{stat.label}</div>"
     </section>
   )};
-
 export default UltimateBusinessIntelligence2025Banner;"
 

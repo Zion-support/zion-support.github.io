@@ -1,7 +1,6 @@
 
 
 import { Link } from 'react-router-dom';
-
 import { ArrowLeft, ArrowRight, Target, CheckCircle, Star } from 'lucide-react';
 export default function ServicesAdvertisingPage() {/* TODO: Fix JSX expression */}
   O: Add content}
@@ -210,7 +209,6 @@ Transparent Pricing;
                   <span>Custom integrations</span>
                   <span>White-label options</span>
                 Contact Sales;
-
       {/* CTA Section */}
       <section className=""py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white"></section>"
         <div className=""max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"></div>"
@@ -222,6 +220,4 @@ Ready to Transform Your Advertising?
               href="/case-studies" className=""border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold py-3 px-8 rounded-lg transition-colors duration-200""
               View Success Stories;
   )};
-
 export default ServicesAdvertisingPage;
-

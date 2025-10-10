@@ -1,5 +1,4 @@
 import React from 'react';
-
   id: string;
   name: string;
   tagline: string;
@@ -41,7 +40,7 @@ import React from 'react';
   capabilities: string[];
   market_advantage: string;
 ;
-const contact="mobile: '+1 302 464 0950',"
+const contact = "mobile: '+1 302 464 0950',"
   email: 'kleber@ziontechgroup && ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
         'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities'}
@@ -312,7 +311,7 @@ varian,
   s: ['Neural architecturesCognitive computingHardware integrationCustom algorithms'];
     marketAdvantag,
   e: 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities';
-const contact="{/* TODO: Fix JSX expression */}"
+const contact = "{/* TODO: Fix JSX expression */}"
   s: '364 E Main St STE 1008 Middletown DE 19709'}
   websit,
   e: 'http,
@@ -918,7 +917,7 @@ i,
   s: 34' benefit,
   s: ['Energy efficiencyCognitive capabilitiesReal-time learningBrain-inspired processing'], capabilitie,
   s: ['Neural architecturesCognitive computingHardware integrationCustom algorithms']' marketAdvantag,
-  e: 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities' const contact="{/* TODO: Fix JSX expression */}"
+  e: 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities' const contact = "{/* TODO: Fix JSX expression */}"
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,

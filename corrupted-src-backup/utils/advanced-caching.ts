@@ -1,6 +1,5 @@
-const cacheSystem="{}"
+const cacheSystem = {}
   loadFromStorage: () => {,;
-const cacheSystem="{/* TODO: Fix JSX expression */}"
+const cacheSystem = "{/* TODO: Fix JSX expression */}"
     //     }};
-
 export default cacheSystem;

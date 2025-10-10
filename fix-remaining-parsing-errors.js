@@ -1,9 +1,8 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-
 // Files with parsing errors;
-const filesWithErrors="[]"
+const filesWithErrors = []
   'src/blog/ai-2026-autonomous-agent-factories/page.tsx',
   'src/blog/ai-2026-autonomous-business-intelligence-breakthrough/page.tsx',
   'src/blog/ai-2026-autonomous-business-intelligence-mega-breakthrough/page.tsx',
@@ -23,13 +22,13 @@ const filesWithErrors="[]"
 ;
 function fixParsingError(filePath) {}
   try {;
-let content="fs.readFileSync(filePath, 'utf8');"
+let content = "fs.readFileSync(filePath, 'utf8');"
     let modified="false;"
     // Check if file ends with ); but is missing the closing brace;
     if (content.trim().endsWith(');') && !content.trim().endsWith('};')) {;
 function fixParsingError(filePath) {/* TODO: Fix JSX expression */}
     if (content.trim().endsWith(');') && !content.trim().endsWith('};')) {/* TODO: Fix JSX expression */}
-      content="content.trim() + '\n};';"
+      content = "content.trim() + '\n};';"
       modified="true}"
     if (modified) {/* TODO: Fix JSX expression */}
   d: ${path.relative(__dirname, filePath)}`)}
@@ -39,13 +38,12 @@ function fixParsingError(filePath) {/* TODO: Fix JSX expression */}
 }
 
 // Process all files;
-filesWithErrors.forEach(file="> {);"
-const fullPath="path.join(__dirname, file);"
+filesWithErrors.forEach(file = "> {);"
+const fullPath = "path.join(__dirname, file);"
   if (fs.existsSync(fullPath)) {}
     fixParsingError(fullPath)}
-filesWithErrors.forEach(file="> {/* TODO: Fix JSX expression */}"
+filesWithErrors.forEach(file = "> {/* TODO: Fix JSX expression */}"
   })
 });
-
 // console.log removed for production;
 `

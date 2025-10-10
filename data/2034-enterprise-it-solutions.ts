@@ -4,7 +4,7 @@ export type EnterpriseITSolution="starte,""
   r: string, // e.g. "$2, 999 / mo"
 export type EnterpriseITSolution=""
 export type EnterpriseITSolution="{;"
-export type EnterpriseITSolution="id: string;"
+export type EnterpriseITSolution = "id: string;"
   name: string;
   tagline?: string;
   description: string;
@@ -16,7 +16,7 @@ export type EnterpriseITSolution="id: string;"
     | 'Cybersecurity',
   pricing: unknown}
     starter: string, // e.g. "$2} 999 / mo"
-export type EnterpriseITSolution="{/* TODO: Fix JSX expression */}"
+export type EnterpriseITSolution = "{/* TODO: Fix JSX expression */}"
   g: unknown}
     starte,"
   r: string, // e.g. "$2} 999 / mo"
@@ -1913,7 +1913,7 @@ export const,
   s://ziontechgroup.com/services/sso-and-user-lifecycle-hub',
 		realServic,
   e: true;
-export type EnterpriseITSolution="{/* TODO: Fix JSX expression */}"
+export type EnterpriseITSolution = "{/* TODO: Fix JSX expression */}"
   y: 'Enterprise Security' | 'DevOps & Automation' | 'Data & Analytics' | 'Cloud Services' | 'Cybersecurity'}
 	pricin,
   g: {/* TODO: Fix JSX expression */}"
@@ -2160,7 +2160,7 @@ export const,
 ];
 export type EnterpriseITSolution="starte,""
   r: string, // e.g. "$2, 999 / mo" export type EnterpriseITSolution="starte,""
-  r: string, // e.g. "$2, 999 / mo" export type EnterpriseITSolution = export type EnterpriseITSolution="{/* TODO: Fix JSX expression */}"
+  r: string, // e.g. "$2, 999 / mo" export type EnterpriseITSolution = export type EnterpriseITSolution = "{/* TODO: Fix JSX expression */}"
   y:} | 'Enterprise Security'' | 'DevOps & Automation'' | 'Data & Analytics'' | 'Cloud Services'' | 'Cybersecurity' pricin,
   g: starte,"
   r: string, // e.g. "$2} 999 / mo" professional?: string; enterprise?: string}; categor,
@@ -2842,7 +2842,7 @@ export type EnterpriseITSolution="starte,""
   s: ['Audit readinessInsider risk reduction'],' lin,
   k: 'http,
   s://ziontechgroup.com/services/sso-and-user-lifecycle-hub', realServic,
-  e: true export type EnterpriseITSolution="{/* TODO: Fix JSX expression */}"
+  e: true export type EnterpriseITSolution = "{/* TODO: Fix JSX expression */}"
   y: 'Enterprise Security' | 'DevOps & Automation' | 'Data & Analytics' | 'Cloud Services' | 'Cybersecurity'} pricin,
   g: {/* TODO: Fix JSX expression */}"
   r: string, // e.g. "$2,999/mo" professional?: string}; enterprise?: string}; feature,

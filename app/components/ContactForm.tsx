@@ -38,7 +38,7 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElemen
 const { name, value } = e.target;
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {}
     const { name, value } = e.target;
-    setFormData(prev="> ({}"
+    setFormData(prev = "> ({}"
       ...prev,
       [name]: value;
     }))
@@ -49,12 +49,12 @@ const handleSubmit = async (e: React.FormEvent) => {}
     e: 'loading', message: 'Sending message...' });
     try {}
       /
-      await new Promise(resolve="> setTimeout(resolve, 2000));"
+      await new Promise(resolve = "> setTimeout(resolve, 2000));"
     setStatus({ type: 'loading', message: 'Sending message...' })
 
     try {}
       // Simulate API call;
-      await new Promise(resolve="> setTimeout(resolve, 2000))"
+      await new Promise(resolve = "> setTimeout(resolve, 2000))"
       setStatus({}
         type: 'success',
         message: 'Thank you! Your message has been sent successfully.'
@@ -82,7 +82,7 @@ const handleSubmit = async (e: React.FormEvent) => {}
         message: 'Sorry, there was an error sending your message. Please try again.'
       })
   }
-const services="[]"
+const services = []
     'AI & Machine Learning',
     'Cloud Computing',
     'Cybersecurity',
@@ -119,8 +119,8 @@ const services="[]"
                 placeholder=""Your full name""
               />
             </div>
-                value="{ formData.name };"
-                onChange="{ handleChange };"
+                value = "{ formData.name };"
+                onChange = "{ handleChange };"
                 className=""w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focu,""
     s:border-transparent transition-all duration-200"
                 placeholder=""Your full name""
@@ -142,8 +142,8 @@ const services="[]"
             </div>
           </div>
           <div className=""grid md:grid-cols-2 gap-6"></div>"
-                value="{ formData.email };"
-                onChange="{ handleChange };"
+                value = "{ formData.email };"
+                onChange = "{ handleChange };"
                 className=""w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200""
                 placeholder=""your.email@company.com""
             <
@@ -162,8 +162,8 @@ const services="[]"
                 placeholder=""Your company name""
               />
             </div>
-                value="{ formData.company };"
-                onChange="{ handleChange };"
+                value = "{ formData.company };"
+                onChange = "{ handleChange };"
                 className=""w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focu,""
     s:border-transparent transition-all duration-200"
                 placeholder=""Your company name""
@@ -179,8 +179,8 @@ const services="[]"
                 value="{formData.phone}"
                 onChange="{handleChange}"
                 className=""w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent""
-                value="{ formData.phone };"
-                onChange="{ handleChange };"
+                value = "{ formData.phone };"
+                onChange = "{ handleChange };"
                 className=""w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focu,""
     s:border-transparent transition-all duration-200"
                 placeholder=""+1 (555) 123-4567""
@@ -198,14 +198,14 @@ const services="[]"
               className=""w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">"
               <option value=""">Select a service</option>"
               {services.map((service) => (
-                <option key={service} value="{service}></option>"
+                <option key={service} value = "{service}></option>"
                   {service}
                 </option>
               ))
             </select>
           </div>
-              value="{ formData.service };"
-              onChange="{ handleChange };"
+              value = "{ formData.service };"
+              onChange = "{ handleChange };"
               className=""w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focu,""
     s:border-transparent transition-all duration-200">
               ) : (<div className=""h-5 w-5 border-2 border-blue-500 border-t-transparent rounded-full animate-spin")></div>"

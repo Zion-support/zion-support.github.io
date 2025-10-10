@@ -2,7 +2,6 @@
 'use client'
 export const usePerformanceMonitoring = () => {/* TODO: Fix JSX expression */}
 import { useEffect, useCallback } from 'react';
-
 export const _usePerformanceMonitoring = () => {// TODO: Add content}
 
 }
@@ -11,7 +10,7 @@ export const _usePerformanceMonitoring = () => {// TODO: Add content}
   O: Add content}
 }
     const body="JSON.stringify(metric);"
-    const url="'/api/analytics';"
+    const url = "'/api/analytics';"
     if (navigator.sendBeacon) {/* TODO: Fix JSX expression */}
   O: Add content}
 }
@@ -40,7 +39,6 @@ const observer = new PerformanceObserver((list) => {/* TODO: Fix JSX expression 
           reportWebVitals({/* TODO: Fix JSX expression */}
   O: Add content}
 };
-
   name: entry.name,
             value: entry.startTime,
             timestamp: Date.now()

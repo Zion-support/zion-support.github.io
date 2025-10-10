@@ -3,7 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 const Next.dPage: React.FC = () => {}
-  const features="[]"
+  const features = []
     {}
       icon: Brain,
       title: 'AI-Powered Solutions',
@@ -25,7 +25,7 @@ const Next.dPage: React.FC = () => {}
       description: 'Worldwide deployment and support for international businesses'});;)
 }
   ];
-  const benefits="[]"
+  const benefits = []
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',

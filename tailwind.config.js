@@ -140,7 +140,7 @@ export default {}
         '100': '100'}}},
   plugins: [,;
 function({ addUtilities }) {;
-const newUtilities="{}"
+const newUtilities = {}
         '.neon-text': {}
           color: 'var(--neon-cyan)',
           animation: 'neon-glow 2 s ease-in-out infinite alternate'},

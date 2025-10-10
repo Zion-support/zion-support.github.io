@@ -43,7 +43,7 @@ export interface Q3Service {id: string, name: string;
 variant?: ServiceVariant;
   customers?: number}
   rating?: number,;
-const contact="mobile: '+1 302 464 0950',"
+const contact = "mobile: '+1 302 464 0950',"
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'}}
@@ -95,7 +95,7 @@ const contact="mobil,"
   websit,
   e: 'http,
   s://ziontechgroup.com';
-const contact="mobile: '+1 302 464 0950',"
+const contact = "mobile: '+1 302 464 0950',"
   address: '364 E Main St STE 1008 Middletown DE 19709'
 // const contact="{;"
   mobile: '+1 302 464 0950',
@@ -106,7 +106,7 @@ const contact="mobile: '+1 302 464 0950',"
   e: '+1 302 464 0950',
   addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',
-// const contact="{/* TODO: Fix JSX expression */}"
+// const contact = "{/* TODO: Fix JSX expression */}"
   s: '364 E Main St STE 1008 Middletown DE 19709'}
   websit,
   e: 'http,
@@ -121,7 +121,7 @@ export const realServicesQ32025: Q3Service[] = [,
   address: '364 E Main St STE 1008 Middletown DE 19709',
 export const realServicesQ32025: Q3Service[] = [,
   {  reviews?: number}
-const contact="mobile: '+1 302 464 0950'};"
+const contact = "mobile: '+1 302 464 0950'};"
 export const realServicesQ32025: Q3Service[] = [,
     tagline:,
       'Churn insights, cohort analysis, and pricing experiments for SaaS growth'
@@ -1691,14 +1691,14 @@ i,
   s: '364 E Main St STE 1008 Middletown DE 19709'' websit,
   e: 'http,
   s://ziontechgroup.com'} export const,
-  realServicesQ32025: Q3Service[] = [ { reviews?: number } const contact="' mobil,'"
+  realServicesQ32025: Q3Service[] = [ { reviews?: number } const contact = "' mobil,'"
   e: '+1 302 464 0950'' emai,
   l: 'kleber@ziontechgroup.com'' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'' websit,
   e: 'http,
-  s://ziontechgroup.com' const contact="' mobil,'"
+  s://ziontechgroup.com' const contact = "' mobil,'"
   e: '+1 302 464 0950', ' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709', const contact="{/* TODO: Fix JSX expression */}"
+  s: '364 E Main St STE 1008 Middletown DE 19709', const contact = "{/* TODO: Fix JSX expression */}"
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
   s://ziontechgroup && ziontechgroup.com' } }; export const,
@@ -1707,7 +1707,7 @@ i,
   d: 'subscription-analytics-revenue-optimization'' nam,
   e: 'Subscription Analytics & Revenue Optimization' }' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709', export const,
-  realServicesQ32025: Q3Service[] = [ { reviews?: number } const contact="' mobil,'"
+  realServicesQ32025: Q3Service[] = [ { reviews?: number } const contact = "' mobil,'"
   e: '+1 302 464 0950' }; export const,
   realServicesQ32025: Q3Service[] = [ taglin,
   e:' 'Churn insights, cohort analysis, and pricing experiments for SaaS growth'' pric,

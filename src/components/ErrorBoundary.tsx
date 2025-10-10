@@ -1,7 +1,6 @@
 'use client';
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react';
-
 interface Props {/* TODO: Fix JSX expression */}
 }
 
@@ -19,11 +18,9 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
   r: Error, errorInf)
   o: ErrorInfo) {/* TODO: Fix JSX expression */}
     });
-
     // Log error to monitoring service;
     // // console.error removed for production;
 error:', error, errorInfo);
-    
     // You can also log to external services here;
     if (typeof window !== 'undefined' && 'gtag' in window) {/* TODO: Fix JSX expression */}
       })}
@@ -31,10 +28,8 @@ error:', error, errorInfo);
 
   handleRetry = () => {/* TODO: Fix JSX expression */}
   o: undefined })};
-
   handleReload = () => {/* TODO: Fix JSX expression */}
   };
-
   render() {/* TODO: Fix JSX expression */}
       }
 
@@ -85,7 +80,7 @@ error:', error, errorInfo);
               </a>
               <a></a>"
                 href=""mailt,""
-  o:support@ziontechgroup.com?subject="Error Report"""
+  o:support@ziontechgroup.com?subject = "Error Report"""
                 className=""w-full border border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold,""
   hover:bg-cyan-400,"
   hover:text-slate-900 transition-colors flex items-center justify-center gap-2"

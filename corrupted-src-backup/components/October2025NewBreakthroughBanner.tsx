@@ -1,7 +1,7 @@
 const, October2025NewBreakthroughBanne, r = () => {}
 return (
 ;
-const, stat, s="octoberContentSta, t, s;"
+const, stat, s = "octoberContentSta, t, s;"
   const, iconMa, p: Reco, r, d<stri, n, g, Rea, c, t.ComponentTy, p, e<Rea, c, t.SVGPro, p, s<SVGSVGEleme, n, t></stri>
 );
 }>> = {}
@@ -19,23 +19,23 @@ const, stat, s="octoberContentSta, t, s;"
       {/* Animated, background, effects */}</div>
       <div, className=""absolute, inse, t-0, opacit, y-30"></div>"
         <div, className=""absolute, to, p-10, lef, t-1, 0, w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>"
-        <div, className="absolute, to, p-1/2, righ, t-1, 0, w-9, 6, h-96, b, g-pi, n, k-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e" sty, l, e="{{ animationDel, a, y: '1s' }}></d, i, v>;"
-        <div, className="absolute, botto, m-10, lef, t-1/3 w-9, 6, h-96, b, g-indi, g, o-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e" sty, l, e="{{ animationDel, a, y: '2s' }}></d, i, v>;"
+        <div, className="absolute, to, p-1/2, righ, t-1, 0, w-9, 6, h-96, b, g-pi, n, k-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e" sty, l, e = "{{ animationDel, a, y: '1s' }}></d, i, v>;"
+        <div, className="absolute, botto, m-10, lef, t-1/3 w-9, 6, h-96, b, g-indi, g, o-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e" sty, l, e = "{{ animationDel, a, y: '2s' }}></d, i, v>;"
       <div, className=""absolute, inse, t-0, opacit, y-30">";</div>"
         <div, className=""absolute, to, p-10, lef, t-1, 0, w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>";"
-        <div, className="absolute, to, p-1/2, righ, t-1, 0, w-9, 6, h-96, b, g-pi, n, k-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e" sty, l, e="{{ animationDel, a, y: '1s' }}></d, i, v>';"
+        <div, className="absolute, to, p-1/2, righ, t-1, 0, w-9, 6, h-96, b, g-pi, n, k-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e" sty, l, e = "{{ animationDel, a, y: '1s' }}></d, i, v>';"
 const, October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression */}
   };
   return (<div, className=""bg-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, p, y-20, p, x-4, relative, overflow-hidd, e, n">";"
       {/* Animated, background, effects */}"
       <div, className=""absolute, inse, t-0, opacit, y-30"></div>""
         <div, className=""absolute, to, p-10, lef, t-1, 0, w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>""
-        <div, className="absolute, to, p-1/2, righ, t-1, 0, w-9, 6, h-96, b, g-pi, n, k-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e" sty, l, e="{{ animationDel, a, y: '1s' }}></d, i, v>;""
-        <div, className="absolute, botto, m-10, lef, t-1/3 w-9, 6, h-96, b, g-indi, g, o-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e" sty, l, e="{{ animationDel, a, y: '2s' }}></d, i, v>;""
+        <div, className="absolute, to, p-1/2, righ, t-1, 0, w-9, 6, h-96, b, g-pi, n, k-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e" sty, l, e = "{{ animationDel, a, y: '1s' }}></d, i, v>;""
+        <div, className="absolute, botto, m-10, lef, t-1/3 w-9, 6, h-96, b, g-indi, g, o-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e" sty, l, e = "{{ animationDel, a, y: '2s' }}></d, i, v>;""
       <div, className=""absolute, inse, t-0, opacit, y-30">";""
         <div, className=""absolute, to, p-10, lef, t-1, 0, w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>";""
-        <div, className="absolute, to, p-1/2, righ, t-1, 0, w-9, 6, h-96, b, g-pi, n, k-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e" sty, l, e="{{ animationDel, a, y: '1s' }}></d, i, v>';""
-        <div, className="absolute, botto, m-10, lef, t-1/3 w-9, 6, h-96, b, g-indi, g, o-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e" sty, l, e="{{ animationDel, a, y: '2s' }}></d, i, v>';"
+        <div, className="absolute, to, p-1/2, righ, t-1, 0, w-9, 6, h-96, b, g-pi, n, k-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e" sty, l, e = "{{ animationDel, a, y: '1s' }}></d, i, v>';""
+        <div, className="absolute, botto, m-10, lef, t-1/3 w-9, 6, h-96, b, g-indi, g, o-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e" sty, l, e = "{{ animationDel, a, y: '2s' }}></d, i, v>';"
       </d, i, v>"
       <div, className=""m, a, x-w-7xl, m, x-auto, relative, z-10">";"
         {/* Header, Sectio, n */}</div>
@@ -90,7 +90,7 @@ const, October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
           {octoberNewBreakthroughConte, n, t.m, a, p((conte, n, t) => {}
 return (
 ;
-const, Ico, n="iconM, a, p[conte, n, t.ic, o, n] || Bra, i, n;"
+const, Ico, n = "iconM, a, p[conte, n, t.ic, o, n] || Bra, i, n;"
             return(<Li , n, k;></Li>
         {/* Content, Card, s */}
         <div, className=""grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12"></div>"
@@ -100,11 +100,11 @@ const, Ico, n="iconM, a, p[conte, n, t.ic, o, n] || Bra, i, n;"
           {octoberNewBreakthroughConte, n, t.m, a, p((conte, n, t) => {}
 return (
 ;
-const, Ico, n="iconM, a, p[conte, n, t.ic, o, n] || Bra, i, n;"
+const, Ico, n = "iconM, a, p[conte, n, t.ic, o, n] || Bra, i, n;"
             return (</div>
               <Li , n, k></Li>
-  k, e, y="{conte, n, t.id}"
-                to="{`/bl, o, g/${conte, n, t.sl, u, g}`}`;`"
+  k, e, y = "{conte, n, t.id}"
+                to = "{`/bl, o, g/${conte, n, t.sl, u, g}`}`;`"
                 classNa, m, e=""group, b, g-gradie, n, t-to-br, fro, m-whi, t, e/10, t, o-whi, t, e/5, backdro, p-bl, u, r-xl, border, border-whi, t, e/20, rounde, d-2x, l, p-8, hove, r: fr, o, m-whi, t, e/20, hove, r:to-whi, t, e/10, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e;""
   r:shad, o, w-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-5, 0, 0">
 );
@@ -125,8 +125,8 @@ const, Ico, n="iconM, a, p[conte, n, t.ic, o, n] || Bra, i, n;"
         <div, className=""grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12">"""
         <div, className=""grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12">";"
           {/* TODO: Fix JSX expression */}
-  k, e, y="{conte, n, t.id}"
-                to="{`/bl, o, g/${conte, n, t.sl, u, g}`}`;`""
+  k, e, y = "{conte, n, t.id}"
+                to = "{`/bl, o, g/${conte, n, t.sl, u, g}`}`;`""
                 classNa, m, e=""group, b, g-gradie, n, t-to-br, fro, m-whi, t, e/10, t, o-whi, t, e/5, backdro, p-bl, u, r-xl, border, border-whi, t, e/20, rounde, d-2x, l, p-8, hove, r: fr, o, m-whi, t, e/20, hove, r:to-whi, t, e/10, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e,""
   r:shad, o, w-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-5, 0, 0"
               ></Li>"
@@ -303,7 +303,7 @@ const, Ico, n="iconM, a, p[conte, n, t.ic, o, n] || Bra, i, n;"
               <sp , a, n;></sp>
               'Computer, Visio, n', 'N, L, P', 'Enterprise, Automatio, n', 'Cloud, Managemen, t'].m, a, p((t, a, g) => (';</div>
               <sp , a, n></sp>
-  k, e, y="{t, a, g}"
+  k, e, y = "{t, a, g}"
         {/* Stats, Ba, r */}"
         <div, className=""grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-6, ga, p-6">"""
           <div, className=""te, x, t-center, b, g-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/10"></div>""
@@ -339,7 +339,7 @@ const, Ico, n="iconM, a, p[conte, n, t.ic, o, n] || Bra, i, n;"
         <div, className=""mt-12, tex, t-cent, e, r"></div>""
           <div, className=""inli, n, e-flex, fle, x-wrap, ga, p-3, justif, y-cent, e, r"></div>"
             {/* TODO: Fix JSX expression */}
-  k, e, y="{t, a, g}""
+  k, e, y = "{t, a, g}""
                 classNa, m, e=""bg-whi, t, e/10, backdro, p-bl, u, r-sm, border, border-whi, t, e/20, tex, t-purp, l, e-200, p, x-4, p, y-2, rounde, d-full, tex, t-sm, fon, t-medium, hove, r: bg-whi, t, e/20, transitio, n-colo, r, s""
               ></sp>
                 {t, a, g}

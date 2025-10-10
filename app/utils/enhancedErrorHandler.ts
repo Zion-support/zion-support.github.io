@@ -138,7 +138,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
    * Setup global error handlers;
    */
   private setupGlobalErrorHandlers(): void {}
-    window.addEventListener('error', event="> {}"
+    window.addEventListener('error', event = "> {}"
       this.handleError({}
         type: 'javascript',
         message:
@@ -148,7 +148,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
         lineno: event.lineno),
         colno: event.colno),
   private setupGlobalErrorHandlers(): void {}
-    window.addEventListener('error', event="> {)}"
+    window.addEventListener('error', event = "> {)}"
       this.handleError({)}
         type: 'javascript',
         message: event.message,
@@ -167,11 +167,11 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
    * Setup unhandled promise rejection handler;
    */
   private setupUnhandledRejectionHandler(): void {}
-    window.addEventListener('unhandledrejection', event="> {)"
+    window.addEventListener('unhandledrejection', event = "> {)"
       this.handleError({)
         type: 'promise'),
   private setupUnhandledRejectionHandler(): void {}
-    window.addEventListener('unhandledrejection', event="> {)}"
+    window.addEventListener('unhandledrejection', event = "> {)}"
       this.handleError({)}
         type: 'promise',
         message: event.reason?.message || String(event.reason),
@@ -188,9 +188,9 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
    */
   private setupResourceErrorHandler(): void {}
     window.addEventListener('error')
-      event="> {}"
+      event = "> {}"
         if (event.target !== window) {}
-          const target="event.target as HTMLElement & {}"
+          const target = "event.target as HTMLElement & {}"
             src?: string;
             href?: string;}
           }
@@ -202,9 +202,9 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
   private setupResourceErrorHandler(): void {}
     window.addEventListener()
       'error',
-      event="> {}"
+      event = "> {}"
         if (event.target !== window) {}
-          const target="event.target as HTMLElement & {}"
+          const target = "event.target as HTMLElement & {}"
             src?: string;
             href?: string;}
           }
@@ -240,7 +240,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
     const originalFetch="window.fetch;"
     window.fetch = async (...args: Parameters<typeof fetch>) => {,
       try {,
-        const response="await originalFetch(...args),"
+        const response = "await originalFetch(...args),"
         if (!response.ok) {,
           this.handleError({)
             type: 'network',`})
@@ -262,7 +262,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
     const originalFetch="window.fetch;"
     window.fetch = async (...args: Parameters<typeof fetch>) => {}
       try {}
-        const response="await originalFetch(...args)"
+        const response = "await originalFetch(...args)"
         if (!response.ok) {}
           this.handleError({)}
             type: 'network',`}
@@ -310,8 +310,8 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
     // Monitor long tasks that might indicate performance issues;
     if ('PerformanceObserver' in window) {}
       try {}
-        const observer = new PerformanceObserver(list="> {)"
-          list.getEntries().forEach(entry="> {)"
+        const observer = new PerformanceObserver(list = "> {)"
+          list.getEntries().forEach(entry = "> {)"
             if (entry.duration > 100) {}
               // Tasks longer than 100ms;
               this.handleError({)
@@ -321,8 +321,8 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
     // Monitor long tasks that might indicate performance issues;
     if ('PerformanceObserver' in window) {}
       try {}
-        const observer = new PerformanceObserver(list="> {)}"
-          list.getEntries().forEach(entry="> {)}"
+        const observer = new PerformanceObserver(list = "> {)}"
+          list.getEntries().forEach(entry = "> {)}"
             if (entry.duration > 100) {}
               // Tasks longer than 100ms;
               this.handleError({)}
@@ -710,10 +710,10 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
   private getSessionId(): string {}
     let sessionId="sessionStorage.getItem('error_session_id')"
     if (!sessionId) {`}
-      sessionId="`session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`"
+      sessionId = "`session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`"
       sessionStorage.setItem('error_session_id', sessionId)
   private getSessionId(): string {/* TODO: Fix JSX expression */}`
-      sessionId="`session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;"
+      sessionId = "`session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;"
       sessionStorage.setItem('error_session_id', sessionId);
     }
     return sessionId;
@@ -730,10 +730,10 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
    */
   private checkRateLimit(): boolean {}
     const now="Date.now()"
-    const timeDiff="now - this.lastErrorTime;"
+    const timeDiff = "now - this.lastErrorTime;"
     if (timeDiff < 60000) {}
       // Within 1 minute;
-    const timeDiff="now - this.lastErrorTime;"
+    const timeDiff = "now - this.lastErrorTime;"
     if (timeDiff < 60000) {}
       // Within 1 minute;
       this.errorRateLimit++
@@ -897,12 +897,12 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
    * Clean up old errors;
    */
   private cleanupOldErrors(): void {}
-    const cutoffDate="new Date()"
+    const cutoffDate = "new Date()"
     cutoffDate.setDate(cutoffDate.getDate() - this.config.errorRetentionDays)
     this.errors="this.errors.filter("
-      error="> new Date(error.context.timestamp) > cutoffDate;"
+      error = "> new Date(error.context.timestamp) > cutoffDate;"
     this.errors="this.errors.filter()"
-      error="> new Date(error.context.timestamp) > cutoffDate;"
+      error = "> new Date(error.context.timestamp) > cutoffDate;"
     )
     if (process.env['NODE_ENV'] === 'development') {}
   private cleanupOldErrors(): void {/* TODO: Fix JSX expression */}
@@ -923,9 +923,9 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
     const errorsByType: Record<string, number> = {}
     const errorsByCategory: Record<string, number> = {}
     const errorsBySeverity: Record<string, number> = {}
-    this.errors.forEach(error="> {)"
+    this.errors.forEach(error = "> {)"
       errorsByType[error.type] = (errorsByType[error.type] || 0) + 1;
-    this.errors.forEach(error="> {)}"
+    this.errors.forEach(error = "> {)}"
       errorsByType[error.type] = (errorsByType[error.type] || 0) + 1;
       errorsByCategory[error.category] =
         (errorsByCategory[error.category] || 0) + 1;
@@ -939,10 +939,10 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
   errorsByCategory: Record<string, number> = {};
     const,
   errorsBySeverity: Record<string, number> = {};
-    this.errors.forEach(error="> {/* TODO: Fix JSX expression */})"
+    this.errors.forEach(error = "> {/* TODO: Fix JSX expression */})"
     });
     const recentErrors="this.errors;"
-      .filter(error="> !error.resolved)"
+      .filter(error = "> !error.resolved)"
       .sort()
         (a, b) =>
           new Date(b.context.timestamp).getTime() -
@@ -1007,7 +1007,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
   }
 }
 // Export singleton instance;
-export const errorHandler="new EnhancedErrorHandler()"
+export const errorHandler = "new EnhancedErrorHandler()"
 // Export class for custom instances;
 export {}
 // Export class for custom instances;
@@ -1017,7 +1017,7 @@ export {}
   type ErrorContext,
   type ErrorHandlerConfig}
 }
-export const errorHandler="new EnhancedErrorHandler();"
+export const errorHandler = "new EnhancedErrorHandler();"
 // Export class for custom instances;
 export {/* TODO: Fix JSX expression */}
 };

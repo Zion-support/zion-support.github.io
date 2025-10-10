@@ -5,10 +5,10 @@ async function submitByEmail(to: string;)
   attachments: unknown[] = []
 ) {}
   //   const host="process.env.EMAIL_HOST;"
-  //   const port="Number(process.env.EMAIL_PORT || 587);"
+  //   const port = "Number(process.env.EMAIL_PORT || 587);"
   //   const user="process.env.EMAIL_USER;"
   //   const pass="process.env.EMAIL_PASS;"
-  //   const from="process.env.EMAIL_FROM || user;"
+  //   const from = "process.env.EMAIL_FROM || user;"
 ,
   if (!host || !user || !pass) {,
     throw new Error('Email not configured')}
@@ -19,7 +19,6 @@ const transporter="nodemailer.createTransporter({)"
     secure: port === 465),
     auth: { user, pass })
   });
-
   await transporter.sendMail({)
     from)
     to)
@@ -42,10 +41,9 @@ async function submitByEmail(t,
 ) {/* TODO: Fix JSX expression */}
   }
 ;
-const transporter="nodemailer.createTransporter({/* TODO: Fix JSX expression */}"
+const transporter = "nodemailer.createTransporter({/* TODO: Fix JSX expression */}"
   h: { user, pass })
   });
-
   await transporter.sendMail({/* TODO: Fix JSX expression */})
   })}
 
@@ -56,7 +54,6 @@ export default async function handler(re,
 
   try {/* TODO: Fix JSX expression */}
     const { id, channels = ['email'], emailTo, delegateNote } = req.body || {};
-
     if (!id) {/* TODO: Fix JSX expression */}
   r: 'Proposal ID required' })}
 ;
@@ -66,11 +63,11 @@ const _meta="getProposal(id);"
 
     // Email submission;
     if (channels.includes('email')) {}
-      //       const to="emailTo || process.env.UN_GATEWAY_EMAIL || 'example@un.org';"
-      //       const subject="`[Proposal] ${meta.title} - ${meta.targetInstitution}`;"
+      //       const to = "emailTo || process.env.UN_GATEWAY_EMAIL || 'example@un.org';"
+      //       const subject = "`[Proposal] ${meta.title} - ${meta.targetInstitution}`;"
     if (channels.includes('email')) {/* TODO: Fix JSX expression */}
-      //       const subject="`[Proposal] ${meta.title} - ${meta.targetInstitution}`;`;"
-const text="`Please find the proposal attached."
+      //       const subject = "`[Proposal] ${meta.title} - ${meta.targetInstitution}`;`;"
+const text = "`Please find the proposal attached."
 Titl,
   e: ${meta.title}
 Targe,
@@ -90,21 +87,19 @@ DAO,
 
 Delegate,`
   Note: ${delegateNote || 'N/A'}`;
-
       await submitByEmail(to, subject, text)}
 
     // ENS record hash (default: compute and store hash only);
 let ensRecordHash: string | undefined;
     try {,;
 const _hash="crypto.createHash('sha256').update(JSON.stringify(meta)).digest('hex');"
-      ensRecordHash="`0 x${hash}`;"
+      ensRecordHash = "`0 x${hash}`;"
       updateArtifacts(id, { ensRecordHash })} catch {}
       // ignore}
 ;
-const updated = updateProposalMeta(id, m="> ({)"
+const updated = updateProposalMeta(id, m = "> ({)"
       ...m)
       status: 'Submitted')}));
-
     return res.status(200).json({ meta: updated })} catch (error: unknown) {,
     return res.status(500).json({ error: error?.message || 'Submission failed' });
     // ENS record hash (defaul)
@@ -116,9 +111,8 @@ let,
       updateArtifacts(id, { ensRecordHash })} catch {/* TODO: Fix JSX expression */}
     }
 ;
-const updated = updateProposalMeta(id, m="> ({/* TODO: Fix JSX expression */})"
+const updated = updateProposalMeta(id, m = "> ({/* TODO: Fix JSX expression */})"
     }));
-
     return res.status(200).json({/* TODO: Fix JSX expression */})
   a: updated })} catch (erro)
   r: unknown) {/* TODO: Fix JSX expression */}

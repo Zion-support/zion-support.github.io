@@ -1,10 +1,9 @@
 #!/usr/bin/env node;
 import { execSync } from 'child_process';
 import fs from 'fs';
-
 // // Read the open PRs data;
 try {}
-//   const prData="fs.readFileSync('open_prs_current.json', 'utf8');"
+//   const prData = "fs.readFileSync('open_prs_current.json', 'utf8');"
   openPRs="JSON.parse(prData);"
 //   } catch (error) {}
 //   process.exit(1)}
@@ -33,7 +32,6 @@ function mergePR(pr) {/* TODO: Fix JSX expression */}
 
     // Fetch the latest changes;
 //     execSync(`git fetch origin ${branchName}`, { stdio: 'inherit' });
-
     // Check for merge conflicts;
 //     try {}
       execSync(`git merge --no-commit --no-ff origin/${branchName}`, {)
@@ -45,7 +43,6 @@ function mergePR(pr) {/* TODO: Fix JSX expression */}
 //       return true} catch (mergeError) {}
 //       // Reset the merge attempt;
       execSync('git merge --abort', { stdio: 'pipe' });
-
       // Try to resolve conflicts automatically;
       try {}
 //         execSync(`git merge origin/${branchName} -X theirs --no-ff -m "Auto-merge PR #${prNumber}: ${prTitle}"`)
@@ -57,7 +54,6 @@ function mergePR(pr) {/* TODO: Fix JSX expression */}
     // Fetch the latest changes;`
 //     execSync(`git fetch origin ${branchName}`, {/* TODO: Fix JSX expression */})
   o: 'inherit' });
-
     // Check for merge conflicts;
 //     try {/* TODO: Fix JSX expression */}`
       execSync(`git merge --no-commit --no-ff origin/${branchName}`, {/* TODO: Fix JSX expression */})
@@ -69,7 +65,6 @@ function mergePR(pr) {/* TODO: Fix JSX expression */}
       );
 //       return true} catch (mergeError) {/* TODO: Fix JSX expression */}
   o: 'pipe' });
-
       // Try to resolve conflicts automatically;
       try {/* TODO: Fix JSX expression */}"`
           `git merge origin/${branchName} -X theirs --no-ff -m "Auto-merge PR #${prNumber}: ${prTitle}"`,
@@ -94,24 +89,21 @@ for (const pr of openPRs) {}
     success: success),
 for (const pr of openPRs) {/* TODO: Fix JSX expression */}
   });
-
   if (success) {/* TODO: Fix JSX expression */}
   } else {/* TODO: Fix JSX expression */}
   }
 }
 
 // Create summary report;
-const summary="{}"
+const summary = {}
   totalPRs: openPRs.length;
   successfulMerges: successCount;
   failedMerges: failCount;
   results: results;
   timestamp: new Date().toISOString(),;
-const summary="{/* TODO: Fix JSX expression */}"
+const summary = "{/* TODO: Fix JSX expression */}"
 };
-
 fs.writeFileSync('pr-merge-results.json', JSON.stringify(summary, null, 2));
-
 // // // // // Push changes to main if there were successful merges;
 if (successCount > 0) {}
   try {}

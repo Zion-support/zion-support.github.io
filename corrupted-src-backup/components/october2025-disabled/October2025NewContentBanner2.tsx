@@ -31,9 +31,9 @@ const October2025NewContentBanner, 2 = () => {/* TODO: Fix JSX expression */}
         {/* Articles, G, r, i, d */})
         <div, classNam, e=""grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-12">)"
           { newArticl, e, s.m, a, p((arti, c, l, e) = > {;
-const Ico, n = artic, l, e.ic, o, n; return(<Link , ke, y = { artic, l, e.slug  }, to="{`/bl, o, g/${artic, l, e.slug}`}></Link>"
-            const Ico, n="artic, l, e.ic, o, n; return (</div>"
-              <Link , ke, y = { artic, l, e.slug  }, to="{`/bl, o, g/${artic, l, e.slug}`}></Link>"
+const Ico, n = artic, l, e.ic, o, n; return(<Link , ke, y = { artic, l, e.slug  }, to = "{`/bl, o, g/${artic, l, e.slug}`}></Link>"
+            const Ico, n = "artic, l, e.ic, o, n; return (</div>"
+              <Link , ke, y = { artic, l, e.slug  }, to = "{`/bl, o, g/${artic, l, e.slug}`}></Link>"
                 className=""group, relative, bg-gradie, n, t-to-br, fro, m-sla, t, e-8, 0, 0/80, t, o-sla, t, e-9, 0, 0/80, backdro, p-bl, u, r-xl, rounde, d-2x, l, p-6, border, border-sla, t, e-7, 0, 0/50, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/20, hove, r:-transla, t, e-y-1">"
                 {/* B, a, d, g, e */}
                 <div, classNam, e=""absolute, to, p-4, righ, t-4"></div>"
@@ -41,7 +41,7 @@ const Ico, n = artic, l, e.ic, o, n; return(<Link , ke, y = { artic, l, e.slug  
                     {artic, l, e.bad, g, e}
                   </sp, a, n>
                 </d, i, v  > {/* Ic, o, n */}
-                <div, classNam, e="{ `w-1, 6, h-16, rounde, d-xl, b, g-gradie, n, t-to-br ${artic, l, e.gradi, e, n, t }, flex, item, s-center, justif, y-center, m, b-4, grou, p-hov, e, r: sca, l, e-110, transitio, n-transform, duratio, n-30, 0`}></div>"
+                <div, classNam, e = "{ `w-1, 6, h-16, rounde, d-xl, b, g-gradie, n, t-to-br ${artic, l, e.gradi, e, n, t }, flex, item, s-center, justif, y-center, m, b-4, grou, p-hov, e, r: sca, l, e-110, transitio, n-transform, duratio, n-30, 0`}></div>"
                   <Icon, classNam, e=""w-8 h-8, tex, t-whi, t, e"</div></Icon>"
                 {/* Conte, n, t */}
                 <h3, className=""te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-purp, l, e-400, transitio, n-colo, r, s"></h3>"
@@ -69,7 +69,7 @@ const Ico, n = artic, l, e.ic, o, n; return(<Link , ke, y = { artic, l, e.slug  
         {/* Articles, G, r, i, d */}"
         <div, classNam, e=""grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-12"></div>"
           {/* TODO: Fix JSX expression */}
-              <Link , ke, y = { artic, l, e.slug  }, to="{`/bl, o, g/${artic, l, e.slug}`}"></Link>"
+              <Link , ke, y = { artic, l, e.slug  }, to = "{`/bl, o, g/${artic, l, e.slug}`}"></Link>"
                 className=""group, relative, bg-gradie, n, t-to-br, fro, m-sla, t, e-8, 0, 0/80, t, o-sla, t, e-9, 0, 0/80, backdro, p-bl, u, r-xl, rounde, d-2x, l, p-6, border, border-sla, t, e-7, 0, 0/50, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/20, hove, r:-transla, t, e-y-1""
               ></Link>
                 {/* B, a, d, g, e */}"
@@ -78,7 +78,7 @@ const Ico, n = artic, l, e.ic, o, n; return(<Link , ke, y = { artic, l, e.slug  
                     {artic, l, e.bad, g, e}
                   </sp, a, n>
                 </d, i, v  > {/* Ic, o, n */}`
-                <div, classNam, e="{ `w-1, 6, h-16, rounde, d-xl, b, g-gradie, n, t-to-br ${artic, l, e.gradi, e, n, t }, flex, item, s-center, justif, y-center, m, b-4, grou, p-hov, e, r: sca, l, e-110, transitio, n-transform, duratio, n-30, 0`}></div>""
+                <div, classNam, e = "{ `w-1, 6, h-16, rounde, d-xl, b, g-gradie, n, t-to-br ${artic, l, e.gradi, e, n, t }, flex, item, s-center, justif, y-center, m, b-4, grou, p-hov, e, r: sca, l, e-110, transitio, n-transform, duratio, n-30, 0`}></div>""
                   <Icon, classNam, e=""w-8 h-8, tex, t-whi, t, e"</div></Icon>"
                 {/* Conte, n, t */}"
                 <h3, className=""te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-purp, l, e-400, transitio, n-colo, r, s"></h3>"
@@ -93,14 +93,14 @@ const Ico, n = artic, l, e.ic, o, n; return(<Link , ke, y = { artic, l, e.slug  
                   <Link, className=""w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m" /></Link>"
                 </div>
                 </d, i, v  > {/* Hover, Gradient, Effe, c, t */})
-                <div, classNam, e="{ `absolute, inse, t-0, b, g-gradie, n, t-to-br ${artic, l, e.gradi, e, n, t }, opaci, t, y-0, grou, p-hov, e, r: opaci, t, y-5, rounde, d-2xl, transitio, n-opacity, duratio, n-30, 0`} />)"
+                <div, classNam, e = "{ `absolute, inse, t-0, b, g-gradie, n, t-to-br ${artic, l, e.gradi, e, n, t }, opaci, t, y-0, grou, p-hov, e, r: opaci, t, y-5, rounde, d-2xl, transitio, n-opacity, duratio, n-30, 0`} />)"
                 {/* Read, More, Link */}"
                 <div, className=""flex, item, s-center, ga, p-2, tex, t-purp, l, e-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l"></div>"
                   <sp, a, n>Read, Articl, e</sp, a, n>"
                   <Link, className=""w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m" /></Link>"
                 </div>
                 </d, i, v  > {/* Hover, Gradient, Effe, c, t */}`
-                <div, classNam, e="{ `absolute, inse, t-0, b, g-gradie, n, t-to-br ${artic, l, e.gradi, e, n, t }, opaci, t, y-0, grou, p-hov, e, r: opaci, t, y-5, rounde, d-2xl, transitio, n-opacity, duratio, n-30, 0`} /></div>"
+                <div, classNam, e = "{ `absolute, inse, t-0, b, g-gradie, n, t-to-br ${artic, l, e.gradi, e, n, t }, opaci, t, y-0, grou, p-hov, e, r: opaci, t, y-5, rounde, d-2xl, transitio, n-opacity, duratio, n-30, 0`} /></div>"
               </Li, n, k>)
             )})}
         </div>

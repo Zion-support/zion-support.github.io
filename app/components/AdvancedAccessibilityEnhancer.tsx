@@ -10,13 +10,13 @@ const [isEnhanced, setIsEnhanced] = useState(false);
     // Initialize accessibility enhancements;
 const initAccessibility = () => {}
       // Add high contrast mode support;
-const prefersHighContrast="window.matchMedia('(prefers-contrast: high)').matches;"
+const prefersHighContrast = "window.matchMedia('(prefers-contrast: high)').matches;"
       if (prefersHighContrast) {}
         document.documentElement.classList.add('high-contrast');
       }
 
       // Add reduced motion support;
-const prefersReducedMotion="window.matchMedia('(prefers-reduced-motion: reduce)').matches;"
+const prefersReducedMotion = "window.matchMedia('(prefers-reduced-motion: reduce)').matches;"
       if (prefersReducedMotion) {}
         document.documentElement.classList.add('reduced-motion');
       }
@@ -69,7 +69,7 @@ const cleanup="initAccessibility();"
     <div className=""accessibility-enhanced"></div>"
       {children}
     </div>
-  const benefits="[]"
+  const benefits = []
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',

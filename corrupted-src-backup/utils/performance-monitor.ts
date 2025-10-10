@@ -36,7 +36,6 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
     this.trackUserInteractions();
     this.measureCoreWebVitals();
     this.trackPageLoadMetrics();
-
     this.isInitialized="true;"
 //     }
 
@@ -44,13 +43,12 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
     }
 
     try {}
-      this.observer = new PerformanceObserver(list="> {)"
+      this.observer = new PerformanceObserver(list = "> {)"
         for (const entry of list.getEntries()) {}
           this.processPerformanceEntry(entry);
     try {/* TODO: Fix JSX expression */}
         }
       });
-
       // Observe different types of performance entries;
       this.observer.observe({)
         entryTypes: [)
@@ -80,7 +78,7 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
         this.metrics.lcp="entry.startTime;"
         break;
       case 'first-input':
-        this.metrics.fid="entry.processingStart - entry.startTime;"
+        this.metrics.fid = "entry.processingStart - entry.startTime;"
         break;
       case 'layout-shift':
         if (!(entry as any).hadRecentInput) {/* TODO: Fix JSX expression */}
@@ -96,20 +94,17 @@ const interactionTypes: (keyof WindowEventMap)[] = [,
       'scroll',
       'keydown',
       'resize'];
-
-    interactionTypes.forEach(type="> {)"
+    interactionTypes.forEach(type = "> {)"
       window.addEventListener()
         type)
-        event="> {;"
+        event = "> {;"
 const interaction: UserInteraction="{,"
             type: type as UserInteraction['type']),
             timestamp: performance.now(),
             element: (event.target as Element)?.tagName?.toLowerCase(),
   private trackUserInteractions(): void {/* TODO: Fix JSX expression */}
           };
-
           this.interactions.push(interaction);
-
           // Keep only last 100 interactions;
           if (this.interactions.length > 100) {}
             this.interactions="this.interactions.slice(-100);"
@@ -122,19 +117,17 @@ const interaction: UserInteraction="{,"
 
   private measureCoreWebVitals(): void {}
     if (typeof window === 'undefined') return;
-
     // Measure Time to First Byte;
     if (performance.timing) {}
-      this.metrics.ttfb="performance.timing.responseStart - performance.timing.navigationStart}"
+      this.metrics.ttfb = "performance.timing.responseStart - performance.timing.navigationStart}"
     // Measure page load time;
     window.addEventListener('load', () => {}
-      this.metrics.loadTime="performance.now() - this.metrics.navigationStart});"
+      this.metrics.loadTime = "performance.now() - this.metrics.navigationStart});"
     // Measure DOM content loaded;
     document.addEventListener('DOMContentLoaded', () => {}
-      this.metrics.domContentLoaded="performance.now() - this.metrics.navigationStart})}"
+      this.metrics.domContentLoaded = "performance.now() - this.metrics.navigationStart})}"
   private trackPageLoadMetrics(): void {}
     if (typeof window === 'undefined') return;
-
     // Track resource loading;
     const _resources="performance.getEntriesByType('resource');"
     const totalResourceSize = resources.reduce((total, resource) => {}
@@ -145,14 +138,12 @@ const interaction: UserInteraction="{,"
     // Measure page load time;
     window.addEventListener('load', () => {/* TODO: Fix JSX expression */}
     });
-
     // Measure DOM content loaded;
     document.addEventListener('DOMContentLoaded', () => {/* TODO: Fix JSX expression */}
     })}
 
   private trackPageLoadMetrics(): void {/* TODO: Fix JSX expression */}
     }, 0);
-
 //     // // console.log removed for production;
 `
   size: ${(totalResourceSize / 1024).toFixed(2)} KB`

@@ -1,7 +1,7 @@
-// module.exports = {}; module.exports = {}; module.exports = {}; module.exports = {}; module.exports = {}; module.exports = {}; module.exports = {}; module.exports = {}; module.exports = {}; module.exports="{}; export {}; interface AnalyticsEvent {/* TODO: Fix JSX expression */}"
+// module.exports = {}; module.exports = {}; module.exports = {}; module.exports = {}; module.exports = {}; module.exports = {}; module.exports = {}; module.exports = {}; module.exports = {}; module.exports = "{}; export {}; interface AnalyticsEvent {/* TODO: Fix JSX expression */}"
   d: string} page_ur,
   l: string} user_agen,
-  t: string} module.exports="{}; export default async function handler(re)"
+  t: string} module.exports = "{}; export default async function handler(re)"
   q: NextApiRequest) re,
   s: NextApiResponse ) {/* TODO: Fix JSX expression */}
   r: 'Method not allowed' })} // Validate required fields if (!event.name || !event.category || !event.timestamp) {/* TODO: Fix JSX expression */}
@@ -12,7 +12,7 @@ p: event.timestamp) session_i,
   s: true })} catch (error) {/* TODO: Fix JSX expression */}
   r: 'Internal server error' })} } async function sendToExternalServices(even)
   t: AnalyticsEvent) {/* TODO: Fix JSX expression */}
-  s://www.google-analytics.com/mp/collect?measurement_id=${process.env.GA_MEASUREMENT_ID}&api_secret="${process.env.GA_API_SECRET}` {/* TODO: Fix JSX expression */}"
+  s://www.google-analytics.com/mp/collect?measurement_id=${process.env.GA_MEASUREMENT_ID}&api_secret = "${process.env.GA_API_SECRET}` {/* TODO: Fix JSX expression */}"
   d: 'POST'} header,
   s: {' 'Content-Type': 'application/json' }, bod,
   y: JSON.stringify({/* TODO: Fix JSX expression */})

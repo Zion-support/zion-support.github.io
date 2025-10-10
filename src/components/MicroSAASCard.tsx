@@ -1,5 +1,4 @@
 import React from 'react';
-
 'use client';
 interface MicroSAASCardProps {/* TODO: Fix JSX expression */}
   O: Add content}
@@ -119,6 +118,5 @@ return (
       </div>
     </div>
   )};
-
 export default MicroSAASCard;"`
 

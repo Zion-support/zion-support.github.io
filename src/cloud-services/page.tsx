@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -13,7 +12,7 @@ return (
 }
 
   )};
-  const _services="[]"
+  const _services = []
   // TOD,
   O: Add items;
 ];;
@@ -66,7 +65,7 @@ return (
   s: ['Real-time Monitoring', 'Cost Analytics', 'Performance Metrics', 'Predictive Insights']
     }
   ];
-  const benefits="[]"
+  const benefits = []
   // TOD,
   O: Add items;
 ];;
@@ -165,6 +164,4 @@ return (
       <Footer /></Footer>
     </div>
   )};
-
 export default CloudServicesPage;
-

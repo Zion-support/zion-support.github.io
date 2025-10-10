@@ -28,7 +28,7 @@ class AnalyticsTracker {}
     if (typeof window === 'undefined') return;
     this.isInitialized="true;"
     // Process queued events;
-    this.queue.forEach(fn="> fn());"
+    this.queue.forEach(fn = "> fn());"
     this.queue="[];"
     // Track initial page view;
     this.trackPageView(window.location.pathname)}
@@ -96,7 +96,7 @@ class AnalyticsTracker {// TODO: Add content}
     if (typeof window === 'undefined') return;
     this.isInitialized="true;"
     // Process queued events;
-    this.queue.forEach(fn="> fn());"
+    this.queue.forEach(fn = "> fn());"
     this.queue="[];"
     // Track initial page view;
     this.trackPageView(window.location.pathname)}
@@ -291,14 +291,14 @@ $4})}
   }
 }
 // Export singleton instance;
-export const analyticsTracker="new AnalyticsTracker();"
+export const analyticsTracker = "new AnalyticsTracker();"
 // Auto-initialize when window is available;
 if (typeof window !== 'undefined') {}
   if (document.readyState === 'complete') {}
     analyticsTracker.initialize()} else {}
     window.addEventListener('load', () => {}
 // Export singleton instance;
-export const analyticsTracker="new AnalyticsTracker();"
+export const analyticsTracker = "new AnalyticsTracker();"
 // Auto-initialize when window is available;
 if (typeof window !== 'undefined') {/* TODO: Fix JSX expression */}
   O: Add content}
@@ -315,6 +315,4 @@ if (typeof window !== 'undefined') {/* TODO: Fix JSX expression */}
       analyticsTracker.initialize()})}
 }
 export default analyticsTracker;
-
 export default analyticsTracker;
-

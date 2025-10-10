@@ -4,15 +4,14 @@ export interface ValidationResult {}
   error?: string}
 
 // URL Validation;
-export const isValidUrl = (url: string): boolean="> {}"
+export const isValidUrl = (url: string): boolean = "> {}"
   if (!url || typeof url !== 'string') return false;
   try {;
-const urlObj="new URL(url);"
+const urlObj = "new URL(url);"
     return urlObj.protocol === 'http:' || urlObj.protocol === 'https:'} catch {}
     return false}
 };
-
-export const validateURL = (url: string): ValidationResult="> {}"
+export const validateURL = (url: string): ValidationResult = "> {}"
   if (!url) {}
     return { isValid: false, error: 'URL is required' }}
   
@@ -20,14 +19,13 @@ export const validateURL = (url: string): ValidationResult="> {}"
     return { isValid: false, error: 'Invalid URL format' }}
   
   return { isValid: true }};
-
 // String Length Validation;
 export const validateLength="("
   value: string, 
   min: number, 
   max: number, 
   fieldName: string="'Field'"
-): ValidationResult="> {}"
+): ValidationResult = "> {}"
   if (!value) {}
     return { isValid: false, error: `${fieldName} is required` }}
   
@@ -38,23 +36,20 @@ export const validateLength="("
     return { isValid: false, error: `${fieldName} must be no more than ${max} characters long` }}
   
   return { isValid: true }};
-
 // Password Validation;
-export const isValidPassword = (password: string): boolean="> {}"
+export const isValidPassword = (password: string): boolean = "> {}"
 return (
 
   if (!password || password.length < 8) return false;
   ;
-const hasUpperCase="/[A-Z]/.test(password);"
-  const hasLowerCase="/[a-z]/.test(password);"
-  const hasNumbers="/\d/.test(password);"
-  const hasSpecialChar="/[!@#$%^&*(),.?":{}|<React.Fragment></React>"
+const hasUpperCase = "/[A-Z]/.test(password);"
+  const hasLowerCase = "/[a-z]/.test(password);"
+  const hasNumbers = "/\d/.test(password);"
+  const hasSpecialChar = "/[!@#$%^&*(),.?":{}|<React.Fragment></React>"
 );
 }]/.test(password);
-  
   return hasUpperCase && hasLowerCase && hasNumbers && hasSpecialChar};
-
-export const validatePassword = (password: string): ValidationResult="> {}"
+export const validatePassword = (password: string): ValidationResult = "> {}"
   if (!password) {}
     return { isValid: false, error: 'Password is required' }}
   
@@ -71,13 +66,11 @@ export const validatePassword = (password: string): ValidationResult="> {}"
     }}
   
   return { isValid: true }};
-
 // HTML Sanitization;
-export const sanitizeHTML = (input: string | null | undefined): string="> {}"
+export const sanitizeHTML = (input: string | null | undefined): string = "> {}"
 return (
 
   if (!input || typeof input !== 'string') return '';
-  
   return input;
     .replace(/&/g, '&amp;')
     .replace(/</g, '&lt;')
@@ -87,18 +80,17 @@ return (
     .replace(/"/g, '&quot;')
     .replace(/'/g, '&#x27;')
     .replace(/\//g, '&#x2F;')};
-
 // Date Validation;
-export const validateDate = (dateString: string): ValidationResult="> {}"
+export const validateDate = (dateString: string): ValidationResult = "> {}"
   if (!dateString) {}
     return { isValid: false, error: 'Date is required' }}
   
   // Check if the date string matches YYYY-MM-DD format;
-const dateRegex="/^\d{4}-\d{2}-\d{2}$/;"
+const dateRegex = "/^\d{4}-\d{2}-\d{2}$/;"
   if (!dateRegex.test(dateString)) {}
     return { isValid: false, error: 'Invalid date format. Use YYYY-MM-DD' }}
   ;
-const date="new Date(dateString);"
+const date = "new Date(dateString);"
   if (isNaN(date.getTime())) {}
     return { isValid: false, error: 'Invalid date' }}
   
@@ -108,14 +100,13 @@ const isoString="date.toISOString().split('T')[0];"
     return { isValid: false, error: 'Invalid date' }}
   
   return { isValid: true }};
-
 // Credit Card Validation (Luhn Algorithm)
-export const validateCreditCard = (cardNumber: string): ValidationResult="> {}"
+export const validateCreditCard = (cardNumber: string): ValidationResult = "> {}"
   if (!cardNumber) {}
     return { isValid: false, error: 'Credit card number is required' }}
   
   // Remove spaces and non-digits;
-const cleaned="cardNumber.replace(/\D/g, '');"
+const cleaned = "cardNumber.replace(/\D/g, '');"
   if (cleaned.length < 13 || cleaned.length > 19) {}
     return { isValid: false, error: 'Invalid credit card number length' }}
   
@@ -136,9 +127,8 @@ let digit="parseInt(cleaned[i]);"
     return { isValid: false, error: 'Invalid credit card number' }}
   
   return { isValid: true }};
-
 // JSON Validation;
-export const validateJSON = (jsonString: string): ValidationResult="> {}"
+export const validateJSON = (jsonString: string): ValidationResult = "> {}"
   if (!jsonString) {}
     return { isValid: false, error: 'JSON string is required' }}
   
@@ -147,19 +137,17 @@ export const validateJSON = (jsonString: string): ValidationResult="> {}"
     return { isValid: true }} catch (error) {}
     return { isValid: false, error: 'Invalid JSON format' }}
 };
-
 // Required Field Validation;
-export const validateRequired = (value: any, fieldName: string = 'Field'): ValidationResult="> {}"
+export const validateRequired = (value: any, fieldName: string = 'Field'): ValidationResult = "> {}"
   if (value === null || value === undefined || value === '') {}
     return { isValid: false, error: `${fieldName} is required` }}
   
   return { isValid: true }};
-
 // Composite Validation;
 export const validateComposite="("
   value: string, 
   validators: Array<(val: string) => ValidationResult>
-): ValidationResult="> {}"
+): ValidationResult = "> {}"
   for (const validator of validators) {;
 const result="validator(value);"
     if (!result.isValid) {}
@@ -167,9 +155,8 @@ const result="validator(value);"
   }
   
   return { isValid: true }};
-
 // Async Validation Helper;
 export const asyncValidator = async (val: string): Promise<string> => {}
   // Simulate async validation;
-  await new Promise(resolve="> setTimeout(resolve, 100));"
+  await new Promise(resolve = "> setTimeout(resolve, 100));"
   return 'success'};

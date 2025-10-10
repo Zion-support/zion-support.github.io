@@ -4,7 +4,6 @@ export default async function handler(req, res) {}
 
   try {;
 const { name, email, phone, details, country, service } = req.body || {};
-
     if (!name || !email || !phone || !details) {}
       return}
 
@@ -14,7 +13,7 @@ const { name, email, phone, details, country, service } = req.body || {};
     // 2. Send notification to your sales team;
     // 3. Send confirmation email to the customer;
     // 4. Integrate with your CRM;
-const quoteData="{}"
+const quoteData = {}
       name,
       email,
       phone,
@@ -24,7 +23,6 @@ const quoteData="{}"
       timestamp: new Date().toISOString(),
       status: 'pending'
     };
-
     // console.log removed for production;
 res.statusCode="200;"
     res.setHeader('Content-Type', 'application/json');

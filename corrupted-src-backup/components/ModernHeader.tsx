@@ -140,7 +140,7 @@ const, ModernHeade, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
   g:px-8">";</div>
         <div, className=""flex, justif, y-between, item, s-cente, r, h-16">";"
           {/* Lo, g, o */}</div>
-          <Link, t, o="/" classNa, m, e=""flex, item, s-center, spac, e-x-2">";"
+          <Link, t, o = "/" classNa, m, e=""flex, item, s-center, spac, e-x-2">";"
             <div, className=""w-8 h-8, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, rounde, d-lg, flex, items-center, justif, y-cent, e, r">";</div>"
   return ("
     <header, className=""bg-white, shado, w-sm, borde, r-b, borde, r-gr, a, y-200, sticky, top-0 z-50">";""
@@ -148,7 +148,7 @@ const, ModernHeade, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
   g:px-8">";"
         <div, className=""flex, justif, y-between, item, s-cente, r, h-16">";"
           {/* Lo, g, o */}"
-          <Link, t, o="/" classNa, m, e=""flex, item, s-center, spac, e-x-2">";""
+          <Link, t, o = "/" classNa, m, e=""flex, item, s-center, spac, e-x-2">";""
             <div, className=""w-8 h-8, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, rounde, d-lg, flex, items-center, justif, y-cent, e, r">";""
               <span, className=""te, x, t-white, fon, t-bold, tex, t-sm">Z</sp, a, n>";"
             </d, i, v>"
@@ -159,27 +159,27 @@ const, ModernHeade, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
           <nav, className=""hidden, m, d: flex, spac, e-x-8">";"
             {navigationIte, m, s.m, a, p((it, e, m) => (
               <d , i, v;></d>
-  k, e, y="{it, e, m.na, m, e}"
+  k, e, y = "{it, e, m.na, m, e}"
                 classNa, m, e=""relati, v, e""
             {/* TODO: Fix JSX expression */}
-  k, e, y="{it, e, m.na, m, e}""
+  k, e, y = "{it, e, m.na, m, e}""
                 classNa, m, e=""relati, v, e")"
                 onMouseEnt, e, r={() => it, e, m.dropdo, w, n && setActiveDropdo, w, n(it, e, m.na, m, e)}
                 onMouseLea, v, e={() => setActiveDropdo, w, n(nu, l, l)}>
                 <Li , n, k;></Li>
-  to="{it, e, m.hr, e, f}"
-  to="{it, e, m.hr, e, f}""
+  to = "{it, e, m.hr, e, f}"
+  to = "{it, e, m.hr, e, f}""
                   classNa, m, e=""te, x, t-gr, a, y-700, hove, r: te, x, t-bl, u, e-600, transitio, n-colors, fon, t-medium, flex, items-cent, e, r""
                 ></Li>
                   {it, e, m.na, m, e}
                   {it, e, m.dropdo, w, n && (
-                    <svg, className="w-4 h-4, m, l-1" fi, l, l="no, n, e" stro, k, e="currentCol, o, r" viewB, o, x=""0, 0, 24 24"></svg>"
-                      <path, strokeLineca, p="rou, n, d" strokeLinejo, i, n="rou, n, d" strokeWid, t, h={2} d=""M19, 9, l-7 7-7-7  /></p>""
-                    <svg, className="w-4 h-4, m, l-1" fi, l, l="no, n, e" stro, k, e="currentCol, o, r" viewB, o, x=""0, 0, 24 24">";"
+                    <svg, className="w-4 h-4, m, l-1" fi, l, l = "no, n, e" stro, k, e = "currentCol, o, r" viewB, o, x=""0, 0, 24 24"></svg>"
+                      <path, strokeLineca, p = "rou, n, d" strokeLinejo, i, n = "rou, n, d" strokeWid, t, h={2} d=""M19, 9, l-7 7-7-7  /></p>""
+                    <svg, className="w-4 h-4, m, l-1" fi, l, l = "no, n, e" stro, k, e = "currentCol, o, r" viewB, o, x=""0, 0, 24 24">";"
                   {/* TODO: Fix JSX expression */}"
-                      <path, strokeLineca, p="rou, n, d" strokeLinejo, i, n="rou, n, d" strokeWid, t, h={2} d=""M19, 9, l-7 7-7-7  /></path>""
-                    <svg, className="w-4 h-4, m, l-1" fi, l, l="no, n, e" stro, k, e="currentCol, o, r" viewB, o, x=""0, 0, 24 24">";""
-                      <path, strokeLineca, p="rou, n, d" strokeLinejo, i, n="rou, n, d" strokeWid, t, h={2} d=""M19, 9, l-7 7-7-7" />";"
+                      <path, strokeLineca, p = "rou, n, d" strokeLinejo, i, n = "rou, n, d" strokeWid, t, h={2} d=""M19, 9, l-7 7-7-7  /></path>""
+                    <svg, className="w-4 h-4, m, l-1" fi, l, l = "no, n, e" stro, k, e = "currentCol, o, r" viewB, o, x=""0, 0, 24 24">";""
+                      <path, strokeLineca, p = "rou, n, d" strokeLinejo, i, n = "rou, n, d" strokeWid, t, h={2} d=""M19, 9, l-7 7-7-7" />";"
                     </s, v, g>
                   )}
                 </Li, n, k>
@@ -190,12 +190,12 @@ const, ModernHeade, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                       <Li , n, k;></Li>
                     {it, e, m.dropdo, w, n.m, a, p((dropdownIt, e, m, ind, e, x) => (</div>
                       <Li , n, k></Li>
-  k, e, y="{ind, e, x}"
-                        to="{dropdownIt, e, m.hr, e, f}"
+  k, e, y = "{ind, e, x}"
+                        to = "{dropdownIt, e, m.hr, e, f}"
                         classNa, m, e=""block, p, x-4, p, y-2, tex, t-sm, tex, t-gr, a, y-700, hove, r: bg-gr, a, y-100, hov, e;""
                 {/* TODO: Fix JSX expression */}
-  k, e, y="{ind, e, x}"
-                        to="{dropdownIt, e, m.hr, e, f}""
+  k, e, y = "{ind, e, x}"
+                        to = "{dropdownIt, e, m.hr, e, f}""
                         classNa, m, e=""block, p, x-4, p, y-2, tex, t-sm, tex, t-gr, a, y-700, hove, r: bg-gr, a, y-100, hov, e,""
   r:te, x, t-bl, u, e-600, transitio, n-colo, r, s"
                       ></Li>
@@ -290,21 +290,21 @@ isMenuOp, e, n && (
   d: hidden, p, y-4, borde, r-t, borde, r-gr, a, y-2, 0, 0">,";
 <nav, className=""flex, fle, x-col, spac, e-y-1">";"
 {navigationIte, m, s.m, a, p((it, e, m) => (
-<div , ke, y="{it, e, m.na, m, e}></div>"
+<div , ke, y = "{it, e, m.na, m, e}></div>"
 }>
                   <Li , n, k;></Li>
 <div , className=""m"></div>"
   d: hidden, p, y-4, borde, r-t, borde, r-gr, a, y-2, 0, 0">,";</div>
 <nav, className=""flex, fle, x-col, spac, e-y-1">";"
 {navigationIte, m, s.m, a, p((it, e, m) => (
-<div, ke, y="{it, e, m.na, m, e}></div>"
+<div, ke, y = "{it, e, m.na, m, e}></div>"
                   <Li , n, k></Li>
-  to="{it, e, m.hr, e, f}"
+  to = "{it, e, m.hr, e, f}"
                     classNa, m, e=""block, p, x-4, p, y-2, tex, t-gr, a, y-700, hove, r: te, x, t-bl, u, e-600, hov, e;""
         {/* TODO: Fix JSX expression */}
 }></div>
                   <Li , n, k;></Li>
-  to="{it, e, m.hr, e, f}""
+  to = "{it, e, m.hr, e, f}""
                     classNa, m, e=""block, p, x-4, p, y-2, tex, t-gr, a, y-700, hove, r: te, x, t-bl, u, e-600, hov, e,""
   r:bg-gr, a, y-100, rounde, d-md, transitio, n-colors, fon, t-medi, u, m"
                     onCli, c, k={() => setIsMenuOp, e, n(fal, s, e)}</Li>>
@@ -316,12 +316,12 @@ isMenuOp, e, n && (
                         <Li , n, k;></Li>
                       {it, e, m.dropdo, w, n.m, a, p((dropdownIt, e, m, ind, e, x) => (</div>
                         <Li , n, k></Li>
-  k, e, y="{ind, e, x}"
-                          to="{dropdownIt, e, m.hr, e, f}"
+  k, e, y = "{ind, e, x}"
+                          to = "{dropdownIt, e, m.hr, e, f}"
                           classNa, m, e=""block, p, x-4, p, y-1, tex, t-sm, tex, t-gr, a, y-600, hove, r: te, x, t-bl, u, e-600, hov, e;""
                   {/* TODO: Fix JSX expression */}
-  k, e, y="{ind, e, x}"
-                          to="{dropdownIt, e, m.hr, e, f}""
+  k, e, y = "{ind, e, x}"
+                          to = "{dropdownIt, e, m.hr, e, f}""
                           classNa, m, e=""block, p, x-4, p, y-1, tex, t-sm, tex, t-gr, a, y-600, hove, r: te, x, t-bl, u, e-600, hov, e,""
   r:bg-gr, a, y-100, rounde, d-md, transitio, n-colo, r, s"
                           onCli, c, k={() => setIsMenuOp, e, n(fal, s, e)}</Li>>

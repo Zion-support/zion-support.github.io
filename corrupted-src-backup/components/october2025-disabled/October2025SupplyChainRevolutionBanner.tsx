@@ -18,7 +18,7 @@ return (
 } {/* Animated, Background, Elemen, t, s */ }
       <div, classNam, e=""absolute, inse, t-0, overflo, w-hidd, e, n"></div>"
         <div, className=""absolu, t, e -t, o, p-40 -rig, h, t-4, 0, w-9, 6, h-96, b, g-emera, l, d-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" /></div>"
-        <div, className="absolu, t, e -bott, o, m-40 -le, f, t-4, 0, w-9, 6, h-96, b, g-cy, a, n-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e="{{ animationDel, a, y: ', 1, s' }} />;"
+        <div, className="absolu, t, e -bott, o, m-40 -le, f, t-4, 0, w-9, 6, h-96, b, g-cy, a, n-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e = "{{ animationDel, a, y: ', 1, s' }} />;"
 const October2025SupplyChainRevolutionBanne, r: React.FC = () => {}
 return (
  
@@ -28,8 +28,8 @@ return (
 } {/* Animated, Background, Elemen, t, s */ }</div>
       <div, classNam, e=""absolute, inse, t-0, overflo, w-hidd, e, n"></div>"
         <div, className=""absolu, t, e -t, o, p-40 -rig, h, t-4, 0, w-9, 6, h-96, b, g-emera, l, d-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" /></div>"
-        <div, className="absolu, t, e -bott, o, m-40 -le, f, t-4, 0, w-9, 6, h-96, b, g-cy, a, n-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e="{{ animationDel, a, y: ', 1, s' }} /></div>"
-        <div, classNam, e = "absolute, to, p-1/2, lef, t-1/2, transfor, m -transla, t, e-x-1/2 -transla, t, e-y-1/2 w-6, 4, h-64, b, g-te, a, l-5, 0, 0/10, rounde, d-full, blu, r-2xl, animat, e-pul, s, e" sty, l, e="{{ animationDel, a, y: ', 2, s' }} /></div>"
+        <div, className="absolu, t, e -bott, o, m-40 -le, f, t-4, 0, w-9, 6, h-96, b, g-cy, a, n-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e = "{{ animationDel, a, y: ', 1, s' }} /></div>"
+        <div, classNam, e = "absolute, to, p-1/2, lef, t-1/2, transfor, m -transla, t, e-x-1/2 -transla, t, e-y-1/2 w-6, 4, h-64, b, g-te, a, l-5, 0, 0/10, rounde, d-full, blu, r-2xl, animat, e-pul, s, e" sty, l, e = "{{ animationDel, a, y: ', 2, s' }} /></div>"
       </div>
       <div, classNam, e=""container, m, x-auto, relative, z-10"></div>"
         {/* Breaking, News, Badge */}</div>
@@ -46,8 +46,8 @@ const October2025SupplyChainRevolutionBanne, r: React.FC = () => {/* TODO: Fix J
     <div, classNam, e=""relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-te, a, l-800, t, o-cy, a, n-900, p, y-16, p, x-6, rounde, d-3xl, shado, w-2xl, m, y-12, borde, r-4, borde, r-emera, l, d-4, 0, 0/50"  > {/* Animated, Background, Elemen, t, s */ }""
       <div, classNam, e=""absolute, inse, t-0, overflo, w-hidd, e, n"></div>""
         <div, className=""absolu, t, e -t, o, p-40 -rig, h, t-4, 0, w-9, 6, h-96, b, g-emera, l, d-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" /></div>""
-        <div, className="absolu, t, e -bott, o, m-40 -le, f, t-4, 0, w-9, 6, h-96, b, g-cy, a, n-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e="{{ animationDel, a, y: ', 1, s' }} /></div>""
-        <div, classNam, e = "absolute, to, p-1/2, lef, t-1/2, transfor, m -transla, t, e-x-1/2 -transla, t, e-y-1/2 w-6, 4, h-64, b, g-te, a, l-5, 0, 0/10, rounde, d-full, blu, r-2xl, animat, e-pul, s, e" sty, l, e="{{ animationDel, a, y: ', 2, s' }} /></div>"
+        <div, className="absolu, t, e -bott, o, m-40 -le, f, t-4, 0, w-9, 6, h-96, b, g-cy, a, n-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e = "{{ animationDel, a, y: ', 1, s' }} /></div>""
+        <div, classNam, e = "absolute, to, p-1/2, lef, t-1/2, transfor, m -transla, t, e-x-1/2 -transla, t, e-y-1/2 w-6, 4, h-64, b, g-te, a, l-5, 0, 0/10, rounde, d-full, blu, r-2xl, animat, e-pul, s, e" sty, l, e = "{{ animationDel, a, y: ', 2, s' }} /></div>"
       </div>
 "
       <div, classNam, e=""container, m, x-auto, relative, z-10"></div>"
@@ -368,7 +368,7 @@ const October2025SupplyChainRevolutionBanne, r: React.FC = () => {/* TODO: Fix J
               See, how, you can, achieve, similar results, with, autonomous supply, chain, intelligence.
             </p>
             <div, className=""flex, fle, x-col, m, d: fl, e, x-row, ga, p-4, justif, y-center, item, s-cent, e, r"></div>"
-              <Link , t, o="/conta, c, t?servi, c, e="supp, l, y-cha, i, n-assessme, n, t"></Link>"
+              <Link , t, o = "/conta, c, t?servi, c, e="supp, l, y-cha, i, n-assessme, n, t"></Link>"
                 className=""inli, n, e-flex, item, s-center, ga, p-2, b, g-white, tex, t-emera, l, d-900, p, x-10, p, y-5, rounde, d-xl, fon, t-bold, tex, t-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-2xl, hove, r:sca, l, e-105, hove, r:bg-emera, l, d-50">"
                 Schedule, Free, Assessment;
                 <LinkIcon, className=""w-6 h-6"</Li, n, k> />"
@@ -406,7 +406,7 @@ const October2025SupplyChainRevolutionBanne, r: React.FC = () => {/* TODO: Fix J
               See, how, you can, achieve, similar results, with, autonomous supply, chain, intelligence.
             </p>"
             <div, className=""flex, fle, x-col, m, d: fl, e, x-row, ga, p-4, justif, y-center, item, s-cent, e, r"></div>""
-              <Link , t, o="/conta, c, t?servi, c, e="supp, l, y-cha, i, n-assessme, n, t""></Link>"
+              <Link , t, o = "/conta, c, t?servi, c, e="supp, l, y-cha, i, n-assessme, n, t""></Link>"
                 className=""inli, n, e-flex, item, s-center, ga, p-2, b, g-white, tex, t-emera, l, d-900, p, x-10, p, y-5, rounde, d-xl, fon, t-bold, tex, t-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-2xl, hove, r:sca, l, e-105, hove, r:bg-emera, l, d-50""
               ></Link>
                 Schedule, Free, Assessment;"
@@ -464,6 +464,5 @@ const October2025SupplyChainRevolutionBanne, r: React.FC = () => {/* TODO: Fix J
       </div>
     </di, v>
   )};
-
 export default October2025SupplyChainRevolutionBanner;
 "

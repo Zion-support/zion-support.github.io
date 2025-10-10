@@ -22,7 +22,7 @@ import {}
   Database,
   Workflow} from 'lucide-react';
 ;
-const ProcessAutomationPage: React.FC = () => {const features="[]"
+const ProcessAutomationPage: React.FC = () => {const features = []
     {}
       ico,
     n: Zap,
@@ -46,7 +46,7 @@ const ProcessAutomationPage: React.FC = () => {const features="[]"
     }
   ];
 ;
-const benefits="[]"
+const benefits = []
     'Reduce manual work and human errors',
     'Increase operational efficiency',
     'Lower operational costs',

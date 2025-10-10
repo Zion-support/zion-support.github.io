@@ -1,5 +1,4 @@
 import React from 'react';
-
 interface ScrollToTopProps {/* TODO: Fix JSX expression */}
 }
 ;

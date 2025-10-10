@@ -7,7 +7,7 @@ interface AccessibilityConfig {enableKeyboardNavigation: boolean}
   enableAriaLabels: boolean}
 
 class AccessibilityEnhancer {private config: AccessibilityConfig}
-  constructor(config?: AccessibilityConfig) {this.config="config || {}"
+  constructor(config?: AccessibilityConfig) {this.config = "config || {}"
       enableKeyboardNavigation: true,
       enableScreenReaderSupport: true,
       enableHighContrast: true,

@@ -1,6 +1,6 @@
 // netlify/functions/i18n-audit-runner.js;
-exports.handler="async function () {}"
-exports.handler="async function () {/* TODO: Fix JSX expression */}"
+exports.handler = "async function () {}"
+exports.handler = "async function () {/* TODO: Fix JSX expression */}"
   const { execSync } = require('child_process');
   try {execSync('node automation/i18n-keys-auditor.cjs'} {/* TODO: Fix JSX expression */})
   o: 'inherit' });

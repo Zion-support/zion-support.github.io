@@ -15,11 +15,11 @@ const NewArticlesPromoBanne, r: React.FC<NewArticlesPromoBannerPro, p, s> = ({/*
       return () => clearInterv, a, l(interv, a, l)}
   }, [autoRota, t, e, featuredArticl, e, s.leng, t, h, rotationInterv, a, l]);
   if (varia, n, t = == 'comp, a, c, t') {}
-    return(<div, classNam, e="{`bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-cy, a, n-600, rounde, d-l, g, p-4 ${classNa, m, e}`}></div>"
+    return(<div, classNam, e = "{`bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-cy, a, n-600, rounde, d-l, g, p-4 ${classNa, m, e}`}></div>"
         <div, className=""flex, item, s-center, justif, y-betwe, e, n"></div>"
           <div, className=""flex, item, s-center, ga, p-3"></div>"
     return (
-      <div, classNam, e="{`bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-cy, a, n-600, rounde, d-l, g, p-4 ${classNa, m, e}`}></div>"
+      <div, classNam, e = "{`bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-cy, a, n-600, rounde, d-l, g, p-4 ${classNa, m, e}`}></div>"
         <div, className=""flex, item, s-center, justif, y-betwe, e, n"></div>"
           <div, className=""flex, item, s-center, ga, p-3"></div>"
             <BookOpen, className=""w-6 h-6, tex, t-whi, t, e" /></BookOpen>"
@@ -28,7 +28,7 @@ const NewArticlesPromoBanne, r: React.FC<NewArticlesPromoBannerPro, p, s> = ({/*
                 {featuredArticl, e, s.leng, t, h} New, Articles, Published;
               </h4>
   if (varia, n, t = == 'comp, a, c, t') {/* TODO: Fix JSX expression */}
-      <div, classNam, e="{`bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-cy, a, n-600, rounde, d-l, g, p-4 ${classNa, m, e}`}></div>"
+      <div, classNam, e = "{`bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-cy, a, n-600, rounde, d-l, g, p-4 ${classNa, m, e}`}></div>"
         <div, className=""flex, item, s-center, justif, y-betwe, e, n"></div>""
           <div, className=""flex, item, s-center, ga, p-3"></div>""
             <BookOpen, className=""w-6 h-6, tex, t-whi, t, e" /></BookOpen>"
@@ -46,7 +46,7 @@ const NewArticlesPromoBanne, r: React.FC<NewArticlesPromoBannerPro, p, s> = ({/*
         </div>)
       </d, i, v  > )}
   if (varia, n, t = == 'prem, i, u, m') {}
-    return(<div, classNam, e="{`bg-gradie, n, t-to-br, fro, m-indi, g, o-700, vi, a-purp, l, e-700, t, o-pi, n, k-700, rounde, d-2x, l, p-8, tex, t-whi, t, e ${classNa, m, e}`}></div>"
+    return(<div, classNam, e = "{`bg-gradie, n, t-to-br, fro, m-indi, g, o-700, vi, a-purp, l, e-700, t, o-pi, n, k-700, rounde, d-2x, l, p-8, tex, t-whi, t, e ${classNa, m, e}`}></div>"
         <div, className=""m, a, x-w-6xl, m, x-au, t, o"></div>"
           <div, className=""flex, item, s-center, ga, p-3, m, b-6"></div>"
             <Sparkles, className=""w-8 h-8, tex, t-yell, o, w-300, animat, e-pul, s, e" /></Sparkles>"
@@ -55,7 +55,7 @@ const NewArticlesPromoBanne, r: React.FC<NewArticlesPromoBannerPro, p, s> = ({/*
           <div, className=""grid, m, d: gr, i, d-co, l, s-3, ga, p-6">)"
             { featuredArticl, e, s.m, a, p((arti, c, l, e) = > (
     return (
-      <div, classNam, e="{`bg-gradie, n, t-to-br, fro, m-indi, g, o-700, vi, a-purp, l, e-700, t, o-pi, n, k-700, rounde, d-2x, l, p-8, tex, t-whi, t, e ${classNa, m, e}`}></div>"
+      <div, classNam, e = "{`bg-gradie, n, t-to-br, fro, m-indi, g, o-700, vi, a-purp, l, e-700, t, o-pi, n, k-700, rounde, d-2x, l, p-8, tex, t-whi, t, e ${classNa, m, e}`}></div>"
         <div, className=""m, a, x-w-6xl, m, x-au, t, o"></div>"
           <div, className=""flex, item, s-center, ga, p-3, m, b-6"></div>"
             <Sparkles, className=""w-8 h-8, tex, t-yell, o, w-300, animat, e-pul, s, e" /></Sparkles>"
@@ -79,7 +79,7 @@ const NewArticlesPromoBanne, r: React.FC<NewArticlesPromoBannerPro, p, s> = ({/*
         </div>
       </d, i, v  > )}
   if (varia, n, t = == 'prem, i, u, m') {/* TODO: Fix JSX expression */}`
-      <div, classNam, e="{`bg-gradie, n, t-to-br, fro, m-indi, g, o-700, vi, a-purp, l, e-700, t, o-pi, n, k-700, rounde, d-2x, l, p-8, tex, t-whi, t, e ${classNa, m, e}`}></div>""
+      <div, classNam, e = "{`bg-gradie, n, t-to-br, fro, m-indi, g, o-700, vi, a-purp, l, e-700, t, o-pi, n, k-700, rounde, d-2x, l, p-8, tex, t-whi, t, e ${classNa, m, e}`}></div>""
         <div, className=""m, a, x-w-6xl, m, x-au, t, o"></div>""
           <div, className=""flex, item, s-center, ga, p-3, m, b-6"></div>""
             <Sparkles, className=""w-8 h-8, tex, t-yell, o, w-300, animat, e-pul, s, e" /></Sparkles>""
@@ -122,12 +122,12 @@ const NewArticlesPromoBanne, r: React.FC<NewArticlesPromoBannerPro, p, s> = ({/*
         </div>
       </d, i, v  > )}
   if (varia, n, t = == 'featu, r, e, d') {}
-    return(<div, classNam, e="{`bg-white, rounde, d-2xl, shado, w-2xl, overflo, w-hidd, e, n ${classNa, m, e}`}></div>"
+    return(<div, classNam, e = "{`bg-white, rounde, d-2xl, shado, w-2xl, overflo, w-hidd, e, n ${classNa, m, e}`}></div>"
         <div, className=""bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-60, 0, p-6"></div>"
           <div, className=""flex, item, s-center, justif, y-betwe, e, n"></div>"
             <div, className=""flex, item, s-center, ga, p-3"></div>"
     return (
-      <div, classNam, e="{`bg-white, rounde, d-2xl, shado, w-2xl, overflo, w-hidd, e, n ${classNa, m, e}`}></div>"
+      <div, classNam, e = "{`bg-white, rounde, d-2xl, shado, w-2xl, overflo, w-hidd, e, n ${classNa, m, e}`}></div>"
         <div, className=""bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-60, 0, p-6"></div>"
           <div, className=""flex, item, s-center, justif, y-betwe, e, n"></div>"
             <div, className=""flex, item, s-center, ga, p-3"></div>"
@@ -150,7 +150,7 @@ const NewArticlesPromoBanne, r: React.FC<NewArticlesPromoBannerPro, p, s> = ({/*
                 <div, className=""flex, fle, x-wrap, ga, p-2, m, b-3"></div>"
                   { artic, l, e.tags.sl, i, c, e(, 0, 2).m, a, p((t, a, g) = > (</div>
   if (varia, n, t = == 'featu, r, e, d') {/* TODO: Fix JSX expression */}`
-      <div, classNam, e="{`bg-white, rounde, d-2xl, shado, w-2xl, overflo, w-hidd, e, n ${classNa, m, e}`}></div>""
+      <div, classNam, e = "{`bg-white, rounde, d-2xl, shado, w-2xl, overflo, w-hidd, e, n ${classNa, m, e}`}></div>""
         <div, className=""bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-60, 0, p-6"></div>""
           <div, className=""flex, item, s-center, justif, y-betwe, e, n"></div>""
             <div, className=""flex, item, s-center, ga, p-3"></div>""
@@ -193,7 +193,7 @@ const NewArticlesPromoBanne, r: React.FC<NewArticlesPromoBannerPro, p, s> = ({/*
           </div>
         </div>
       </d, i, v  > )}
-  // Default variant return(<div, classNam, e="{`bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-indi, g, o-600, rounde, d-x, l, p-6, m, d: p-8, tex, t-whi, t, e ${class N, a, m, e}`}></div>"
+  // Default variant return(<div, classNam, e = "{`bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-indi, g, o-600, rounde, d-x, l, p-6, m, d: p-8, tex, t-whi, t, e ${class N, a, m, e}`}></div>"
       <div, classNam, e=""flex, item, s-center, ga, p-3, m, b-4"></div>"
         <Sparkles, className=""w-6 h-6, tex, t-yell, o, w-3, 0, 0" /></Sparkles>"
         <h3, className=""te, x, t-2xl, fon, t-bo, l, d">New, Articles, Available</h3>)"
@@ -202,7 +202,7 @@ const NewArticlesPromoBanne, r: React.FC<NewArticlesPromoBannerPro, p, s> = ({/*
         { featuredArticl, e, s.m, a, p((arti, c, l, e) = > (
           <div, ke, y = { artic, l, e., i, d  }, classNa, m, e=""bg-whi, t, e/10, rounde, d-l, g, p-4, hove, r: bg-whi, t, e/20, transitio, n-a, l, l"></div>"
   // Default variant return (
-    <div, classNam, e="{`bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-indi, g, o-600, rounde, d-x, l, p-6, m, d: p-8, tex, t-whi, t, e ${class N, a, m, e}`}></div>"
+    <div, classNam, e = "{`bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-indi, g, o-600, rounde, d-x, l, p-6, m, d: p-8, tex, t-whi, t, e ${class N, a, m, e}`}></div>"
       <div, classNam, e=""flex, item, s-center, ga, p-3, m, b-4"></div>"
         <Sparkles, className=""w-6 h-6, tex, t-yell, o, w-3, 0, 0" /></Sparkles>"
         <h3, className=""te, x, t-2xl, fon, t-bo, l, d">New, Articles, Available</h3>"
@@ -214,7 +214,7 @@ const NewArticlesPromoBanne, r: React.FC<NewArticlesPromoBannerPro, p, s> = ({/*
             <h4, classNam, e=""fo, n, t-semibold, m, b-2">{artic, l, e.title}</h4>"
             <Link, t, o = { artic, l, e.l, i, n, k }, classNa, m, e=""te, x, t-yell, o, w-300, tex, t-sm, fon, t-semibold, hove, r: underli, n, e"></Link>"
   }`
-  // Default variant return (<div, classNam, e="{`bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-indi, g, o-600, rounde, d-x, l, p-6, m, d: p-8, tex, t-whi, t, e ${class N, a, m, e}`}></div>""
+  // Default variant return (<div, classNam, e = "{`bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-indi, g, o-600, rounde, d-x, l, p-6, m, d: p-8, tex, t-whi, t, e ${class N, a, m, e}`}></div>""
       <div, classNam, e=""flex, item, s-center, ga, p-3, m, b-4"></div>""
         <Sparkles, className=""w-6 h-6, tex, t-yell, o, w-3, 0, 0" /></Sparkles>""
         <h3, className=""te, x, t-2xl, fon, t-bo, l, d">New, Articles, Available</h3>"

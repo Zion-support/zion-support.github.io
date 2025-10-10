@@ -18,35 +18,32 @@ if (currentNodeVersion < requiredNodeVersion) {/* TODO: Fix JSX expression */}
 //   }
 
 // Check for required files;
-const requiredFiles="[]"
+const requiredFiles = []
   'package.json',
   'next.config.js',
   'tsconfig.json',
   'tailwind.config.cjs',
   'postcss.config.cjs'];
-
 requiredFiles.forEach((file) => {/* TODO: Fix JSX expression */}`
   missing: ${file}`)} else {/* TODO: Fix JSX expression */}
 //     }
 });
-
 // Check package.json for critical dependencies;
 try {;
-const _packageJson="JSON.parse(readFileSync(resolve(process.cwd(), 'package.json'), 'utf-8'));"
-  const _requiredDeps="['next', 'react', 'react-dom'];"
+const _packageJson = "JSON.parse(readFileSync(resolve(process.cwd(), 'package.json'), 'utf-8'));"
+  const _requiredDeps = "['next', 'react', 'react-dom'];"
   requiredDeps.forEach((dep) => {}
     if (!packageJson.dependencies[dep]) {}
       errors.push(`Missing required dependency: ${dep}`);
 try {/* TODO: Fix JSX expression */}`
   dependency: ${dep}`)}
   });
-  
 //   } catch (error) {/* TODO: Fix JSX expression */}
 }
 
 // Check TypeScript configuration;
 try {;
-const _tsConfig="JSON.parse(readFileSync(resolve(process.cwd(), 'tsconfig.json'), 'utf-8'));"
+const _tsConfig = "JSON.parse(readFileSync(resolve(process.cwd(), 'tsconfig.json'), 'utf-8'));"
   if (!tsConfig.compilerOptions) {}
     warnings.push('tsconfig.json missing compilerOptions')} else {}
 try {/* TODO: Fix JSX expression */}

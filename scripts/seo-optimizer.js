@@ -1,7 +1,6 @@
 import fs from 'fs';
 import path from 'path';
 import { glob } from 'glob';
-
 // SEO optimization script;
 class SEOOptimizer {;
 constructor() {}
@@ -11,10 +10,10 @@ constructor() {}
   async checkMetaTags() {}
     // console.log removed for production;
 ;
-const htmlFiles="await glob('dist/**/*.html');"
+const htmlFiles = "await glob('dist/**/*.html');"
     for (const file of htmlFiles) {}
       try {;
-const content="fs.readFileSync(file, 'utf8');"
+const content = "fs.readFileSync(file, 'utf8');"
         // Check for essential meta tags;
         const hasTitle="content.includes('<title>');"
         const hasDescription = content.includes('name=""description"');"
@@ -44,18 +43,18 @@ this.optimizations.push('Meta tags validation')}
   async checkHeadingStructure() {}
     // console.log removed for production;
 ;
-const tsxFiles="await glob('src/**/*.tsx', {)"
+const tsxFiles = "await glob('src/**/*.tsx', {)"
       ignore: ['**/node_modules/**', '**/dist/**'])
     });
 ;
 let headingIssues="0;"
     for (const file of tsxFiles) {}
       try {;
-const content="fs.readFileSync(file, 'utf8');"
+const content = "fs.readFileSync(file, 'utf8');"
         // Check for h1 tags;
-        const h1Count="(content.match(/<h1 /g) || []).length;></h1>"
-        const h2Count="(content.match(/<h2 /g) || []).length;></h2>"
-        const h3Count="(content.match(/<h3 /g) || []).length;></h3>"
+        const h1Count = "(content.match(/<h1 /g) || []).length;></h1>"
+        const h2Count = "(content.match(/<h2 /g) || []).length;></h2>"
+        const h3Count = "(content.match(/<h3 /g) || []).length;></h3>"
         if (h1 Count === 0) {}
           this.issues.push(`${file}: No h1 tag found`);
           headingIssues++}
@@ -78,18 +77,18 @@ if (headingIssues > 0) {}
   async checkAltAttributes() {}
     // console.log removed for production;
 ;
-const tsxFiles="await glob('src/**/*.tsx', {)"
+const tsxFiles = "await glob('src/**/*.tsx', {)"
       ignore: ['**/node_modules/**', '**/dist/**'])
     });
 ;
 let altIssues="0;"
     for (const file of tsxFiles) {}
       try {;
-const content="fs.readFileSync(file, 'utf8');"
+const content = "fs.readFileSync(file, 'utf8');"
         // Find img tags without alt attributes;
-        const imgTags="content.match(/<img[^>]*>/g) || [];"
+        const imgTags = "content.match(/<img[^>]*>/g) || [];"
         for (const imgTag of imgTags) {}
-          if (!imgTag.includes('alt="')) {'"
+          if (!imgTag.includes('alt = "')) {'"
             this.issues.push(`${file}: Image without alt attribute`);
             altIssues++}
         }
@@ -109,14 +108,14 @@ if (altIssues > 0) {}
   async checkInternalLinks() {}
     // console.log removed for production;
 ;
-const tsxFiles="await glob('src/**/*.tsx', {)"
+const tsxFiles = "await glob('src/**/*.tsx', {)"
       ignore: ['**/node_modules/**', '**/dist/**'])
     });
 ;
 let linkCount="0;"
     for (const file of tsxFiles) {}
       try {;
-const content="fs.readFileSync(file, 'utf8');"
+const content = "fs.readFileSync(file, 'utf8');"
         // Count internal links;
         const internalLinks = content.match(/href="["']\/(?!\/)[^"']*["']/g) || [];"
         linkCount += internalLinks.length} catch (error) {}
@@ -135,7 +134,6 @@ this.optimizations.push('Internal links analysis')}
 this.optimizations.forEach((opt, index) => {}
       // console.log removed for production;
 });
-    
     if (this.issues.length > 0) {}
       // console.log removed for production;
 this.issues.slice(0, 10).forEach((issue, index) => {}
@@ -171,7 +169,6 @@ try {}
       await this.checkAltAttributes();
       await this.checkInternalLinks();
       this.generateReport();
-      
       // console.log removed for production;
 } catch (error) {}
       // console.error removed for production;
@@ -181,7 +178,7 @@ try {}
 
 // Run the optimizer;
 if (import.meta.url === `file://${process.argv[1]}`) {;
-const optimizer="new SEOOptimizer();"
+const optimizer = "new SEOOptimizer();"
   optimizer.run()}
 
 export default SEOOptimizer;
@@ -192,25 +189,21 @@ function optimizeSEO() {/* TODO: Fix JSX expression */}
 // 1. Generate sitemap;
   // // console.log removed for production;
 generateSitemap();
-  
   // 2. Optimize meta tags;
   // // console.log removed for production;
 optimizeMetaTags();
-  
   // 3. Generate robots.txt;
   // // console.log removed for production;
 generateRobotsTxt();
-  
   // 4. Generate structured data;
   // // console.log removed for production;
 generateStructuredData();
-  
   // // console.log removed for production;
 }
 ;
 function generateSitemap() {/* TODO: Fix JSX expression */}
 }
-  const pages="[]"
+  const pages = []
     '/',
     '/about',
     '/ai-services',
@@ -276,21 +269,18 @@ ${/* TODO: Fix JSX expression */}
     <priority>${page === '/' ? '1.0' : '0.8'}</priority>`
   </url>`).join('\n')}`
 </urlset>`;
-  
   fs.writeFileSync(path.join(__dirname, '../public/sitemap.xml'), sitemap);
   // // console.log removed for production;
 generated: public/sitemap.xml')}
 ;
 function optimizeMetaTags() {/* TODO: Fix JSX expression */}
 }
-  const metaOptimizations="{/* TODO: Fix JSX expression */}"
+  const metaOptimizations = "{/* TODO: Fix JSX expression */}"
   };
-  
   fs.writeFileSync()
     path.join(__dirname, '../seo-optimizations.json'),
     JSON.stringify(metaOptimizations, null, 2)
   );
-  
   // // console.log removed for production;
 optimized: seo-optimizations.json')}
 ;
@@ -321,14 +311,13 @@ Allo,
   Allow: /contact,
   Allow: /ai-services,`
   Allow: /it-services`;
-  
   fs.writeFileSync(path.join(__dirname, '../public/robots.txt'), robotsTxt);
   // // console.log removed for production;
 generated: public/robots.txt')}
 ;
 function generateStructuredData() {/* TODO: Fix JSX expression */}
 }
-  const structuredData="{/* TODO: Fix JSX expression */}"
+  const structuredData = "{/* TODO: Fix JSX expression */}"
     },"
     "address": {/* TODO: Fix JSX expression */}
     },"
@@ -339,12 +328,10 @@ function generateStructuredData() {/* TODO: Fix JSX expression */}
   s://linkedin.com/company/ziontechgroup"
     ]
   };
-  
   fs.writeFileSync()
     path.join(__dirname, '../public/structured-data.json'),
     JSON.stringify(structuredData, null, 2)
   );
-  
   // // console.log removed for production;
 generated: public/structured-data.json')}
 

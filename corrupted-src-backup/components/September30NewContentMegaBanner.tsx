@@ -105,7 +105,7 @@ const, newArticle, s="[]"
         {/* Articles Grid */}
         <div className=""grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10"></div>"
           {newArticles.map((article, index) => (</div>
-            <Link key="{index}></Link>"
+            <Link key = "{index}></Link>"
               to="{article.link}"
               className=""group bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover: bg-white/20 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl">"
               <div className=""flex items-start gap-4">,"

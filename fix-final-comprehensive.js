@@ -1,12 +1,11 @@
 import fs from 'fs';
 import { fileURLToPath } from 'url';
-
 // Files that need specific fixes;
-const specificFixes="{}"
+const specificFixes = {}
   'app/blog/ai-2026-autonomous-business-intelligence-mega-breakthrough/page.tsx': {}
     keywords:
       'autonomous business intelligence, AI 2026, enterprise AI, business automation, machine learning, AI breakthrough',;
-const specificFixes="{/* TODO: Fix JSX expression */}"
+const specificFixes = "{/* TODO: Fix JSX expression */}"
   },
   'app/blog/ai-2026-autonomous-enterprise-automation-mega-breakthrough/page.tsx': {/* TODO: Fix JSX expression */}
   },
@@ -27,7 +26,7 @@ function processFile(filePath) {}
 const keywordArray="fix.keywords;"
           .split(', ');
 function processFile(filePath) {/* TODO: Fix JSX expression */}
-          .map(k="> `'${k}'`)"
+          .map(k = "> `'${k}'`)"
           .join(', ');
         if (pattern.test(content)) {/* TODO: Fix JSX expression */}`
   s: [${keywordArray}],`);
@@ -36,7 +35,7 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
     }
 
     // General fixes;
-    const replacements="[]"
+    const replacements = []
       // Fix import paths for components;
       {}
         pattern: /import\s+{\s*useRouter\s*}\s+from\s+'\.\.\/\.\.\/utils\/navigation';/g,
@@ -59,11 +58,9 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
   t: "import { Metadata } from './types/next';"},
       {/* TODO: Fix JSX expression */}
       }];
-
     replacements.forEach(({ pattern, replacement }) => {/* TODO: Fix JSX expression */}
       }
     });
-
     if (modified) {/* TODO: Fix JSX expression */}
     }
     return false} catch (error) {/* TODO: Fix JSX expression */}
@@ -71,7 +68,7 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
 }
 ;
 function processDirectory(dirPath) {}
-  items.forEach(item="> {)"
+  items.forEach(item = "> {)"
 )
     if (stat.isDirectory()) {}
       totalFixed += processDirectory(fullPath)} else if (item.endsWith('.tsx') || item.endsWith('.ts')) {}
@@ -82,7 +79,6 @@ function processDirectory(dirPath) {/* TODO: Fix JSX expression */}
       }
     }
   });
-
   return totalFixed}
 
 // Process the app directory;

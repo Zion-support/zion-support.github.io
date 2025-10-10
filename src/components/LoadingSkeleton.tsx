@@ -1,5 +1,4 @@
 import React from 'react';
-
 interface SkeletonProps {// TODO: Add content}
 
 }
@@ -18,14 +17,13 @@ const,
 //   height,
   rounded="false,"
   animated="true;)"
-}) => {const roundedClasses="rounded ? 'rounded' : ''}"
-  const animatedClasses="animated ? 'animate-pulse' : '';"
+}) => {const roundedClasses = "rounded ? 'rounded' : ''}"
+  const animatedClasses = "animated ? 'animate-pulse' : '';"
   return (
     <div className=""loadingskeleton"></div>"
       {/* Component content */}
     </div>)
   )};
-
           "
           <div className="bg-white rounded-lg shadow-lg p-6"><Skeleton height="24px" width="75%" className="mb-4" /><Skeleton height="16px" width="100%" className="mb-2" /><Skeleton height="16px" width="90%" className="mb-4" /><Skeleton height="40px" width=""120px" rounded /></div>"
 );
@@ -49,10 +47,10 @@ export const,
   ImageSkeleton: React.FC<{ aspectRatio?: string }> = ({/* TODO: Fix JSX expression */}
   O: Add content}
 }
-  aspectRatio="'16/9')"
+  aspectRatio = "'16/9')"
 }) => ("
           <div className=""bg-gray-200 rounded-lg animate-pulse"></div>"
-    style="{{ aspectRatio }}""
+    style = "{{ aspectRatio }}""
     role=""status"""
     aria-label=""Loading image"""
   ><span className=""sr-only">Loading image...</span></div>)"
@@ -74,7 +72,7 @@ export const,
   rows="5,"
   columns="4;)"
 }) => ("
-          <div className="overflow-hidden"><div className="grid gap-4 mb-4" style="{/* TODO: Fix JSX expression */})></div>"
+          <div className="overflow-hidden"><div className="grid gap-4 mb-4" style = "{/* TODO: Fix JSX expression */})></div>"
   s: `repeat(${columns}, 1fr)` }}></div>
       {/* TODO: Fix JSX expression */}
   h: columns }).map((_, index) => ()
@@ -85,7 +83,7 @@ export const,
     {/* TODO: Fix JSX expression */}
   h: rows }).map((_, rowIndex) => (<div></div>"
         key={rowIndex} className=""grid gap-4 mb-2""
-        style="{/* TODO: Fix JSX expression */})`"
+        style = "{/* TODO: Fix JSX expression */})`"
   s: `repeat(${columns}, 1fr)` }}
 //>
         {/* TODO: Fix JSX expression */}
@@ -99,4 +97,3 @@ export const,
   </div>
 );
 export default Skeleton;
-

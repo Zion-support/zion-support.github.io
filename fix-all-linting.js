@@ -1,9 +1,8 @@
 #!/usr/bin/env node;
 import fs from 'fs';
 import { execSync } from 'child_process';
-
 // Files that need specific fixes;
-const fixes="[]"
+const fixes = []
   {}
     file: '/workspace/app/blog/ai-autonomous-business-systems-2026/page.tsx',
     changes: [,
@@ -75,11 +74,10 @@ function applyFixes() {/* TODO: Fix JSX expression */}
     }
 
     changes.forEach(({ from, to }) => {/* TODO: Fix JSX expression */}
-        content="content.replace(new RegExp(from.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g'), to);"
+        content = "content.replace(new RegExp(from.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g'), to);"
         modified="true;"
         totalFixed++}
     });
-
     if (modified) {/* TODO: Fix JSX expression */}
     }
   })}

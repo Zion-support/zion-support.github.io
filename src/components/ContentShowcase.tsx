@@ -1,5 +1,4 @@
 import React from 'react';
-
 interface ContentShowcaseProps {/* TODO: Fix JSX expression */}
 }
 ;
@@ -8,6 +7,4 @@ const,
       {/* Component content */}
     </div>
   )};
-
 export default ContentShowcase;
-

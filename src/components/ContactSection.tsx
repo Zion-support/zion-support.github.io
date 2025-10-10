@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-
 export default function ContactSection() {;
 const [formData, setFormData] = useState({}
     name: '',
@@ -21,7 +20,7 @@ const handleSubmit = (e: React.FormEvent) => {}
     // console.log removed for production;
 };
 ;
-const contactInfo="[]"
+const contactInfo = []
     {}
       icon: (
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox=""0 0 24 24"></svg>"
@@ -55,7 +54,7 @@ const contactInfo="[]"
     }
   ];
 ;
-const services="[]"
+const services = []
     'AI & Machine Learning',
     'Cloud Solutions',
     'Web Development',
@@ -65,7 +64,6 @@ const services="[]"
     'IT Consulting',
     'Other'
   ];
-
   return (
     <section id="contact" className=""py-20 relative"></section>"
       <div className=""max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>"
@@ -94,7 +92,7 @@ const services="[]"
               {/* Contact Info Cards */}
               <div className=""space-y-6"></div>"
                 {contactInfo.map((info, index) => (
-                  <a key="{index}></a>"
+                  <a key = "{index}></a>"
                     href="{info.link}"
                     className=""flex items-center p-4 cyber-card hover:scale-105 transition-all duration-300 group">"
                     <div className=""w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center mr-4 text-black group-hover:scale-110 transition-transform duration-300"></div>"
@@ -203,7 +201,7 @@ const services="[]"
                   className=""w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300">"
                   <option value=""">Select a service</option>"
                   {services.map((service, index) => (
-                    <option key={index} value="{service}></option>"
+                    <option key={index} value = "{service}></option>"
                       {service}
                     </option>
                   ))}

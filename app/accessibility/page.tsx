@@ -3,7 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Eye, MousePointer, Volume2, Shield, Users, Globe, Zap, ArrowRight, Star } from 'lucide-react';
 ;
-const AccessibilityPage: React.FC = () => {const features="[]"
+const AccessibilityPage: React.FC = () => {const features = []
     {}
       ico,
     n: Eye,
@@ -43,7 +43,7 @@ const AccessibilityPage: React.FC = () => {const features="[]"
     }
   ];
 ;
-const standards="[]"
+const standards = []
     {}
       name: 'WCAG 2.1 AA',
       description: 'Web Content Accessibility Guidelines 2.1 Level AA compliance',
@@ -82,7 +82,7 @@ const standards="[]"
         {/* Hero Section *
         <section className=""relative py-20 px-4 overflow-hidden">)"
           <div className=""absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse"></div>"
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style="{{ animationDelay: '1s' }}></div>"
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style = "{{ animationDelay: '1s' }}></div>"
           <div className=""relative max-w-7xl mx-auto text-center"></div>"
             <h1 className=""text-5xl md: text-7xl font-bold text-white mb-6 leading-tight"></h1>"
               <span className=""block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent"></span>"
@@ -117,7 +117,7 @@ const standards="[]"
 
             <div className=""grid grid-cols-1 md:grid-cols-2 l,"></div>"
     g:grid-cols-3 gap-8">
-              {features.map((feature), index) => (<div key="{ index };></div>"
+              {features.map((feature), index) => (<div key = "{ index };></div>"
                   className=""bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover: border-cyan-400">"
                   <div className=""w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"></div>"
                     <feature .icon className=""w-8 h-8 text-white"></feature>"
@@ -158,7 +158,7 @@ const standards="[]"
 
             <div className=""grid grid-cols-1 md:grid-cols-2 l,"></div>"
     g:grid-cols-4 gap-8">
-              {standards.map((standard), index) => (<div key="{ index };></div>"
+              {standards.map((standard), index) => (<div key = "{ index };></div>"
                   className=""bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white">"
                   <div className=""w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-6"></div>"
                     <CheckCircle className=""w-8 h-8 text-white"></CheckCircle>"

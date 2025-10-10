@@ -4,9 +4,9 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Cloud, Shield, Settings, Database, Smartphone, Globe, Zap, ArrowRight } from 'lucide-react';
 ;
-const ItServicesPage: React.FC = () => {const itServices="[]"
+const ItServicesPage: React.FC = () => {const itServices = []
 const ItServicesPage: React.FC = () => {}
-  const itServices="[]"
+  const itServices = []
     {}
       titl,
     e: 'Cloud Infrastructure Management',
@@ -428,7 +428,7 @@ const ItServicesPage: React.FC = () => {}
         <
 
         {/* Services by Category *
-        {categories.map(category="> ("
+        {categories.map(category = "> ("
           <section key={category} className=""py-16 bg-gray-50"></section>"
             <div className=""max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"><"
               <div className=""text-center mb-12"><"
@@ -542,7 +542,7 @@ const ItServicesPage: React.FC = () => {}
           <div className=""max-w-7xl mx-auto"></div>"
             <div className=""grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>"
               {itServices.map((service, index) => (
-                <Link key="{index}></Link>"
+                <Link key = "{index}></Link>"
                   to="{service.href}"
                   className=""bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300 group">"
                   <service.icon className=""w-12 h-12 text-cyan-400 mb-4 group-hover:text-cyan-300 transition-colors" /></service>"

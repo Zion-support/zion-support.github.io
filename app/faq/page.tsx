@@ -15,7 +15,7 @@ const toggleItem = (index: number) => {}
         ? prev.filter(item => item !== index)
         : [...prev, index]);
 ;
-const faqs="[]"
+const faqs = []
     {}
       questio,
     n: "What services does Zion Tech Group offer?",
@@ -95,7 +95,7 @@ const faqs="[]"
         <section className=""py-16 px-4"></section>"
           <div className=""max-w-4xl mx-auto"></div>"
             <div className=""space-y-6">)"
-              {faqs.map((faq, index) => (<div key="{ index };></div>"
+              {faqs.map((faq, index) => (<div key = "{ index };></div>"
                   className=""bg-white/10 backdrop-blur-lg rounded-lg p-6 border border-white">"
                   <h3 className=""text-xl font-semibold text-white mb-3"></h3>"
                     {faq.question}

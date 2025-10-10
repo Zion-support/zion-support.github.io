@@ -7,16 +7,16 @@ export const getAllPages = () => []
   { path: '/contact', priority: 0.7 },
   { path: '/about', priority: 0.6 }
 ];
-export const generateSitemap="(pages: Array;)"
+export const generateSitemap = "(pages: Array;)"
           <{ path: string; priority: number }>) => {// TODO: Add content}
 }
-  const baseUrl="'https://ziontechgroup.com';"
+  const baseUrl = "'https://ziontechgroup.com';"
   let sitemap="''"
           <?xml version="1.0" encoding=""UTF-8"?>"
 ';
   sitemap += '<urlset xmlns=""http:// www.sitemaps.org/schemas/sitemap/0.9"></urlset>"
 ';
-  pages.forEach(page="> {// TODO: Add content}"
+  pages.forEach(page = "> {// TODO: Add content}"
 }
     sitemap += `  
 
@@ -35,4 +35,3 @@ export const generateSitemap="(pages: Array;)"
 export const generateStaticSitemap = () => {// TODO: Add content}
 }
   return generateSitemap(getAllPages())};
-

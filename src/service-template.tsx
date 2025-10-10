@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 import { CheckCircle, Star, Phone } from 'lucide-react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
-
 interface ServicePageProps {/* TODO: Fix JSX expression */}
   O: Add content}
 };
@@ -41,7 +40,7 @@ const,
             Blog Post;
           </p>
           <div className=""flex flex-col sm:flex-row gap-4 justify-center"></div>"
-            <Link to="/contact" className=""cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg"></Link>"
+            <Link to = "/contact" className=""cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg"></Link>"
 //>
           "
           <Phone className=""w-5 h-5 mr-2" /></Phone>"
@@ -99,6 +98,4 @@ Ready to Transform Your Business?"
       <Footer /></Footer>
     </div>
   )};
-
 export default ServicePage;
-

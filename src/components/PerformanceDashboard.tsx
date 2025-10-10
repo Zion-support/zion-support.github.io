@@ -39,12 +39,12 @@ const,
         : 0;
       // Measure render time;
       const renderStart="performance.now();"
-      const renderTime="performance.now() - renderStart;"
+      const renderTime = "performance.now() - renderStart;"
       // Measure memory usage;
       let memoryUsage="0;"
       if ('memory' in performance) {}
-        const memory="(performance as { memory?: { usedJSHeapSize: number } }).memory;"
-        memoryUsage="memory?.usedJSHeapSize || 0;"
+        const memory = "(performance as { memory?: { usedJSHeapSize: number } }).memory;"
+        memoryUsage = "memory?.usedJSHeapSize || 0;"
       }
       
       // Measure FPS (simplified)
@@ -55,7 +55,7 @@ const,
         const measureFPS = (currentTime: number) => {}
           frameCount++;
           if (currentTime - lastTime >= 1000) {}
-            fps="Math.round((frameCount * 1000) / (currentTime - lastTime));"
+            fps = "Math.round((frameCount * 1000) / (currentTime - lastTime));"
             frameCount="0;"
             lastTime="currentTime;"
           }

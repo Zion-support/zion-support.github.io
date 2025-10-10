@@ -1,4 +1,4 @@
-export type Zion2026AIMarketplaceService="id: string;"
+export type Zion2026AIMarketplaceService = "id: string;"
   name: string;
   description: string;
   category: 'AI Marketplace' | 'AI Integration' | 'AI Automation' | 'AI Analytics' | 'AI Development'

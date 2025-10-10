@@ -5,7 +5,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 ;
 const CareersPage: React.FC = () => {;
-const openPositions="[]"
+const openPositions = []
     {}
       id: 'senior-ai-engineer',
       title: 'Senior AI Engineer',
@@ -110,7 +110,7 @@ const openPositions="[]"
     }
   ];
 ;
-const benefits="[]"
+const benefits = []
     {}
       icon: Heart,
       title: 'Health & Wellness',
@@ -133,7 +133,7 @@ const benefits="[]"
     }
   ];
 ;
-const culture="[]"
+const culture = []
     'Innovation-driven environment where creativity is encouraged',
     'Collaborative team culture with diverse perspectives',
     'Opportunities to work on cutting-edge AI and technology projects',
@@ -141,7 +141,6 @@ const culture="[]"
     'Regular team events and company retreats',
     'Open communication and transparent leadership'
   ];
-
   return (
     <div className=""min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
       <Navigation /></Navigation>
@@ -333,5 +332,4 @@ const culture="[]"
       <Footer /></Footer>
     </div>
   )};
-
 export default CareersPage;

@@ -69,21 +69,19 @@ $4})
       className="{className}"
       style="{imageStyle}"
       sizes="{sizes}"
-      loading="{priority ? 'eager' : 'lazy'}"
+      loading = "{priority ? 'eager' : 'lazy'}"
       onLoad="{handleLoad}"
       onError="{handleError}"
       {...props}
     />
   )};
 export default Image;
-
 'use client';
 import React, { useState, useCallback } from 'react';
 const,
   Image: React.FC = () => {interface ImageProps {}
   // TOD,
   O: Add content};
-
   src: string;,
     alt: string;
   width?: number;
@@ -134,14 +132,13 @@ quality="75,"
     setHasError(true);
     if (onError) onError()}, [onError]);
   const,
-  imageStyle: React.CSSProperties="{/* TODO: Fix JSX expression */}"
+  imageStyle: React.CSSProperties = "{/* TODO: Fix JSX expression */}"
   O: Add content}
 }
 //     ...style,
     ...(fill && {/* TODO: Fix JSX expression */}
   O: Add content}
 };
-
   position: 'absolute',
       top: 0,
       left: 0,
@@ -180,7 +177,7 @@ className="{`bg-gray-200 flex items-center justify-center ${className}`}"
       className="{className}"
       style="{imageStyle}"
       sizes="{sizes}"
-      loading="{priority ? 'eager' : 'lazy'}"
+      loading = "{priority ? 'eager' : 'lazy'}"
       onLoad="{handleLoad}"
       onError="{handleError}"
       {...props}

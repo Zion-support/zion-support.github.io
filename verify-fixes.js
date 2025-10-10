@@ -2,16 +2,14 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-
 // const __filename="fileURLToPath(import.meta.url);"
 // // __dirname removed;
 // try {}
-  //   const appTsxPath="path.join(__dirname, 'App.tsx');"
+  //   const appTsxPath = "path.join(__dirname, 'App.tsx');"
   // Check for duplicate class definitions;
   //   //   //   // Check for syntax issues;
   //   // // console.log removed for production;
 ' : 'NOT FOUND (GOOD)');
-
   if(classMatches &&
     classMatches.length === 1 &&
     interfaceStateMatches &&)

@@ -53,7 +53,7 @@ key="{index}"
         </div>
         <div className=""grid md:grid-cols-3 gap-8 max-w-7xl mx-auto mb-12"></div>"
           {stories.map((story, index) => (</div>
-            <div key="{index}></div>"
+            <div key = "{index}></div>"
               className=""bg-white rounded-2xl shadow-xl overflow-hidden hover:scale-105 transition-all duration-300""
             ></div>
               <div className="{`bg-gradient-to-r ${story.color} text-white p-6`}></div>"

@@ -16,7 +16,7 @@ const ModernLoadingSpinner: React.FC<ModernLoadingSpinnerProps> = ({}
     lg: 'w-12 h-12',
     xl:   ,
 $4};
-  const colorClasses="{}"
+  const colorClasses = {}
     primary: 'text-cyan-400',
     secondary: 'text-purple-400',
     accent:   ,
@@ -70,7 +70,7 @@ const,
     x,
   l: 'w-16 h-16'
   };
-  const colorClasses="{/* TODO: Fix JSX expression */}"
+  const colorClasses = "{/* TODO: Fix JSX expression */}"
   O: Add content}
 };
   primar,
@@ -109,6 +109,5 @@ const,
     </div>
   )};
 export default ModernLoadingSpinner;
-
 export default ModernLoadingSpinner;"`
 

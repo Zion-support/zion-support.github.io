@@ -13,15 +13,15 @@ export interface ValidationResult {}
 /**
  * Email validation regex pattern;
  */
-const EMAIL_REGEX="/^[^\s@]+@[^\s@]+\.[^\s@]+$/;"
+const EMAIL_REGEX = "/^[^\s@]+@[^\s@]+\.[^\s@]+$/;"
 /**
  * Phone number validation regex (US format)
  */
-const PHONE_REGEX="/^(\+1\s?)?(\([0-9]{3}\)|[0-9]{3})[-\s]?[0-9]{3}[-\s]?[0-9]{4}$/;"
+const PHONE_REGEX = "/^(\+1\s?)?(\([0-9]{3}\)|[0-9]{3})[-\s]?[0-9]{3}[-\s]?[0-9]{4}$/;"
 /**
  * Name validation regex (letters, spaces, hyphens, apostrophes)
  */
-const NAME_REGEX="/^[a-zA-Z\s\-'\.]+$/;"
+const NAME_REGEX = "/^[a-zA-Z\s\-'\.]+$/;"
 /**
  * URL validation regex;
  */

@@ -7,10 +7,10 @@ import Navigation from '../components;
 import Footer from '../components;
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 ;
-const PagePage: React.FC = () => {const features="[]"
+const PagePage: React.FC = () => {const features = []
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 const PagePage: React.FC = () => {}
-  const features="[]"
+  const features = []
     {}
       icon: Brain,
       title: 'AI-Powered Intelligence',
@@ -52,7 +52,7 @@ const PagePage: React.FC = () => {}
       benefits: ['End-to-end encryption', 'Access controls', 'Audit trails', 'Compliance support']
     }
   ];
-  const benefits="[]"
+  const benefits = []
     'Transform your business with AI technology',
     'Make data-driven decisions with confidence',
     'Identify trends and opportunities early',
@@ -215,7 +215,7 @@ const PagePage: React.FC = () => {}
         {/* Hero Section *
         <section className=""relative py-20 px-4 overflow-hidden">)"
           <div className=""absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse"></div>"
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style="{{ animationDelay: '1s' }}></div>"
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style = "{{ animationDelay: '1s' }}></div>"
           <div className=""relative max-w-7xl mx-auto text-center"></div>"
             <h1 className=""text-5xl md: text-7xl font-bold text-white mb-6 leading-tight"></h1>"
             <
@@ -285,4 +285,4 @@ const PagePage: React.FC = () => {}
 export default PagePage;
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 ;
-const PagePage: React.FC = () => {const features="[]"
+const PagePage: React.FC = () => {const features = []

@@ -92,11 +92,11 @@ const lcpObserver = new PerformanceObserver((entryList) => {/* TODO: Fix JSX exp
   O: Add content}
 }
         const entries="entryList.getEntries();"
-        const lastEntry="entries[entries.length - 1]"
+        const lastEntry = "entries[entries.length - 1]"
         if (lastEntry && 'renderTime' in lastEntry) {/* TODO: Fix JSX expression */}
   O: Add content}
 }
-          const value="(lastEntry as PerformanceEntry & { renderTime?: number; loadTime?: number }).renderTime ||"
+          const value = "(lastEntry as PerformanceEntry & { renderTime?: number; loadTime?: number }).renderTime ||"
                        (lastEntry as PerformanceEntry & { renderTime?: number; loadTime?: number }).loadTime || 0;
           this.addMetric('LCP', value, this.getRating('lcp', value))
         }
@@ -116,7 +116,7 @@ const fidObserver = new PerformanceObserver((entryList) => {// TODO: Add content
           if ('processingStart' in entry && 'startTime' in entry) {/* TODO: Fix JSX expression */}
   O: Add content}
 }
-            const value="(entry as PerformanceEventTiming).processingStart - (entry as PerformanceEventTiming).startTime;"
+            const value = "(entry as PerformanceEventTiming).processingStart - (entry as PerformanceEventTiming).startTime;"
             this.addMetric('FID', value, this.getRating('fid', value))}
         }
   )
@@ -185,18 +185,18 @@ const fcpObserver = new PerformanceObserver((entryList) => {// TODO: Add content
       setTimeout(() => {/* TODO: Fix JSX expression */}
   O: Add content}
 }
-        const navigation="performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;"
+        const navigation = "performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;"
         if (navigation) {/* TODO: Fix JSX expression */}
   O: Add content}
 }
           // Time to First Byte (TTFB);
-const ttfb="navigation.responseStart - navigation.requestStart;"
+const ttfb = "navigation.responseStart - navigation.requestStart;"
 //           this.addMetric('TTFB', ttfb, this.getRating('ttfb', ttfb))
           // DOM Content Loaded;
-const dcl="navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart;"
+const dcl = "navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart;"
 //           this.addMetric('DCL', dcl, this.getRating('dcl', dcl))
           // Load Complete;
-const loadComplete="navigation.loadEventEnd - navigation.loadEventStart;"
+const loadComplete = "navigation.loadEventEnd - navigation.loadEventStart;"
 //           this.addMetric('Load', loadComplete, this.getRating('load', loadComplete))
         }
       }, 0)
@@ -220,7 +220,7 @@ const loadComplete="navigation.loadEventEnd - navigation.loadEventStart;"
       setTimeout(() => {/* TODO: Fix JSX expression */}
   O: Add content}
 }
-        const resources="performance.getEntriesByType('resource') as PerformanceResourceTiming[]"
+        const resources = "performance.getEntriesByType('resource') as PerformanceResourceTiming[]"
         // Find slowest resources;
 const slowResources="resources;"
           .filter((resource) => resource.duration > 1000)
@@ -251,7 +251,7 @@ const slowResources="resources;"
 
 }
     const,
-  metric: PerformanceMetric="{/* TODO: Fix JSX expression */}"
+  metric: PerformanceMetric = "{/* TODO: Fix JSX expression */}"
   O: Add content}
 }
 //       name,
@@ -283,7 +283,6 @@ const slowResources="resources;"
   r: number }> = {/* TODO: Fix JSX expression */}
   O: Add content}
 };
-
   lcp: { good: 2500, poor: 4000 },
       fid: { good: 100, poor: 300 },
       cls: { good: 0.1, poor: 0.25 },
@@ -351,8 +350,8 @@ const slowResources="resources;"
   O: Add content}
 }
       return null}
-    const navigation="performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;"
-const resources="performance.getEntriesByType('resource') as PerformanceResourceTiming[]"
+    const navigation = "performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;"
+const resources = "performance.getEntriesByType('resource') as PerformanceResourceTiming[]"
     return {// TODO: Add content}
 };
   metrics: this.metrics,
@@ -392,7 +391,6 @@ const resources="performance.getEntriesByType('resource') as PerformanceResource
   n: {/* TODO: Fix JSX expression */}
   O: Add content}
 };
-
   ttfb: report.navigation?.responseStart ?
 
           report.navigation.responseStart - report.navigation.requestStart : null,
@@ -420,7 +418,7 @@ const resources="performance.getEntriesByType('resource') as PerformanceResource
   }
 }
 // Export singleton instance;
-export const performanceReporter="new PerformanceReporter()"
+export const performanceReporter = "new PerformanceReporter()"
 // Auto-initialize in browser;
 if (typeof window !== 'undefined') {/* TODO: Fix JSX expression */}
   O: Add content}

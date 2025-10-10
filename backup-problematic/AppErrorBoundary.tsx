@@ -1,5 +1,4 @@
 import React, { Component, type ErrorInfo, type ReactNode } from 'react';
-
 interface ErrorFallbackProps {/* TODO: Fix JSX expression */}
 }
 ;
@@ -46,7 +45,7 @@ function ErrorFallback({ error, resetError }: ErrorFallbackProps) {/* TODO: Fix 
           </pre>
         </div>
         <div className=""flex space-x-3"></div>"
-          <button onClick="{resetError}></button>"
+          <button onClick = "{resetError}></button>"
             className=""bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover: bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500""
           >)
             Try again;)
@@ -98,7 +97,7 @@ interface AppErrorBoundaryState {/* TODO: Fix JSX expression */}
 export class AppErrorBoundary extends Component<AppErrorBoundaryProps, AppErrorBoundaryState> {;
 constructor(props: AppErrorBoundaryProps) {,
     super(props);
-    this.state="{ hasError: false, error: undefined }}"
+    this.state = "{ hasError: false, error: undefined }}"
   static getDerivedStateFromError(error: Error): AppErrorBoundaryState {,
     return { hasError: true, error }}
 
@@ -122,7 +121,7 @@ export class AppErrorBoundary extends Component<AppErrorBoundaryProps, AppErrorB
   r: undefined })}
 
   render() {/* TODO: Fix JSX expression */}
-      return <ErrorFallback error={this.state.error} resetError="{this.resetError} />}"
+      return <ErrorFallback error={this.state.error} resetError = "{this.resetError} />}"
     return this.props.children}
 }
 "

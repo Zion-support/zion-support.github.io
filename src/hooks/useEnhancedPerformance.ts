@@ -13,7 +13,7 @@ export interface UseEnhancedPerformanceOptions {// TODO: Add content}
   trackPerformance?: boolean;
   trackAnalytics?: boolean}
 export function useEnhancedPerformance(__option)
-  s: UseEnhancedPerformanceOptions="{}) {/* TODO: Fix JSX expression */}"
+  s: UseEnhancedPerformanceOptions = "{}) {/* TODO: Fix JSX expression */}"
   O: Add content}
 }
   const {/* TODO: Fix JSX expression */}
@@ -45,7 +45,7 @@ export function useEnhancedPerformance(__option)
       if (trackPerformance) {/* TODO: Fix JSX expression */}
   O: Add content}
 }
-        const duration="performance.now() - mountTimeRef.current;"
+        const duration = "performance.now() - mountTimeRef.current;"
         if (duration > 5000) {/* TODO: Fix JSX expression */}
   O: Add content}
 }
@@ -98,7 +98,7 @@ const measureOperation="useCallback()"
   O: Add content}
 }
 ;
-const duration="performance.now() - startTime;"
+const duration = "performance.now() - startTime;"
 analytics.trackPerformance(
               `${component}-${operationName}`,
 

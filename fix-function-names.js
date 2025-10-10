@@ -1,28 +1,27 @@
 #!/usr/bin/env node;
 import fs from 'fs';
 import path from 'path';
-
 // console.log removed for production;
 // Function to fix function names;
 function fixFunctionNames(filePath) {}
   try {;
-let content="fs.readFileSync(filePath, 'utf8');"
+let content = "fs.readFileSync(filePath, 'utf8');"
     let modified="false;"
     // Fix function names with hyphens;
-    const fileName="path.basename(filePath, path.extname(filePath));"
-    const validFunctionName="fileName.replace(/[^a-zA-Z0-9 _$]/g, '_');"
+    const fileName = "path.basename(filePath, path.extname(filePath));"
+    const validFunctionName = "fileName.replace(/[^a-zA-Z0-9 _$]/g, '_');"
     // Replace invalid function names;
     const lines="content.split('\n');"
     const newLines="[];"
-    for (let i="0; i < lines.length; i++) {;"
+    for (let i = "0; i < lines.length; i++) {;"
 let line="lines[i];"
       // Fix function declarations with hyphens;
       if (line.includes('function ') && line.includes('(')) {}
-        line="line.replace(/function\s+[^(]+/, `function ${validFunctionName}`);"
+        line = "line.replace(/function\s+[^(]+/, `function ${validFunctionName}`);"
         modified="true}"
       // Fix export default function declarations;
       if (line.includes('export default function ') && line.includes('(')) {}
-        line="line.replace(/export default function\s+[^(]+/, `export default function ${validFunctionName}`);"
+        line = "line.replace(/export default function\s+[^(]+/, `export default function ${validFunctionName}`);"
         modified="true}"
       newLines.push(line)}
     
@@ -38,14 +37,14 @@ return false}
 }
 
 // Function to find all TypeScript/JavaScript files;
-function findFiles(dir, extensions="['.ts', '.tsx', '.js', '.jsx']) {;"
+function findFiles(dir, extensions = "['.ts', '.tsx', '.js', '.jsx']) {;"
 const files="[];"
   ;
 function traverse(currentDir) {}
     try {;
 const items="fs.readdirSync(currentDir);"
       for (const item of items) {;
-const fullPath="path.join(currentDir, item);"
+const fullPath = "path.join(currentDir, item);"
         const stat="fs.statSync(fullPath);"
         if (stat.isDirectory()) {}
           // Skip node_modules and other common directories;
@@ -65,7 +64,7 @@ const ext="path.extname(item);"
   return files}
 
 // Main execution;
-const srcDir="path.join(process.cwd(), 'src');"
+const srcDir = "path.join(process.cwd(), 'src');"
 const files="findFiles(srcDir);"
 // console.log removed for production;
 ;

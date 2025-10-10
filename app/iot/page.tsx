@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Wifi, Shield, Zap, Target, BarChart, Cpu, Sparkles } from 'lucide-react';
 ;
-const IoTPage: React.FC = () => {const iotServices="[]"
+const IoTPage: React.FC = () => {const iotServices = []
     {}
       titl,
     e: 'IoT Device Management Platform',
@@ -146,7 +146,7 @@ technologies: ['Apache Kafka', 'Apache Spark', 'InfluxDB', 'Grafana', 'Machine L
     }
   ];
 ;
-const categories = [...new Set(iotServices.map(service="> service.category))];"
+const categories = [...new Set(iotServices.map(service = "> service.category))];"
   return (
     <div></div>
         <title>IoT Services - Zion Tech Group<
@@ -293,7 +293,7 @@ const categories = [...new Set(iotServices.map(service="> service.category))];"
           </div>
         </section>
         {/* Services by Category *
-        {categories.map(category="> ("
+        {categories.map(category = "> ("
           <section key={category)} className=""py-16 bg-gray-50"></section>"
             <div className=""max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"><"
               <div className=""text-center mb-12"><"

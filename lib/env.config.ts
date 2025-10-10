@@ -8,22 +8,17 @@ interface EnvConfig {}
   NODE_ENV: 'development' | 'production' | 'test';
   APP_URL: string;
   APP_NAME: string;
-
   // Analytics;
   GOOGLE_ANALYTICS_ID?: string;
-
   // API Configuration;
   API_BASE_URL: string;
   API_TIMEOUT: number;
-
   // Feature Flags;
   ENABLE_ANALYTICS: boolean;
   ENABLE_ERROR_TRACKING: boolean;
   ENABLE_PERFORMANCE_MONITORING: boolean;
-
   // Logging;
   LOG_LEVEL: 'DEBUG' | 'INFO' | 'WARN' | 'ERROR' | 'NONE';
-
   // Build Configuration;
   BUILD_ID?: string;
   VERSION?: string}
@@ -31,7 +26,6 @@ interface EnvConfig {}
 class EnvironmentConfig {}
   private static instance: EnvironmentConfig;
   private config: EnvConfig;
-
   private constructor() {,
     this.config="this.loadConfig();"
     this.validate();
@@ -55,12 +49,12 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
 
   private getBooleanEnvVar(ke,
   y: string, defaultValu)
-  e: boolean="false): boolean {/* TODO: Fix JSX expression */}"
+  e: boolean = "false): boolean {/* TODO: Fix JSX expression */}"
   }
 
   private getNumberEnvVar(key: string, defaultValue: number): number {,;
 const _value="this.getEnvVar(key);"
-    //     const parsed="parseInt(value, 10);"
+    //     const parsed = "parseInt(value, 10);"
     return isNaN(parsed) ? defaultValue : parsed}
 
   private loadConfig(): EnvConfig {}
@@ -181,6 +175,5 @@ const errors: string[] = [];
 export const env="EnvironmentConfig.getInstance();"
 // Export typed config;
 export type { EnvConfig };
-
 export default env;
 `

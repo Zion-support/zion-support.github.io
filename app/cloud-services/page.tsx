@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Cloud, Shield, Zap, Globe } from 'lucide-react';
-const CloudServicesPage: React.FC = () => {const features="[]"
+const CloudServicesPage: React.FC = () => {const features = []
     {}
       icon: Cloud,
       title: 'Cloud Infrastructure',
@@ -30,7 +30,7 @@ const CloudServicesPage: React.FC = () => {const features="[]"
       description: 'Worldwide cloud deployment and support for international businesses'
     }
   ];
-const benefits="[]"
+const benefits = []
     'Scalable cloud infrastructure',
     'Enterprise-grade security',
     '24/7 monitoring and support',
@@ -40,7 +40,7 @@ const benefits="[]"
     'High availability and reliability',
     'Expert cloud management'
 
-  const benefits="[]"
+  const benefits = []
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',

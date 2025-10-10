@@ -45,11 +45,11 @@ const addContentTypeSniffingProtection = () => {/* TODO: Fix JSX expression */}
 const addSecurityHeaders = () => {/* TODO: Fix JSX expression */}
   t: 'strict-origin-when-cross-origin' },
       {/* TODO: Fix JSX expression */}
-  t: 'camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort="()' },"
+  t: 'camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort = "()' },"
       {/* TODO: Fix JSX expression */}
-  t: 'max-age="63072000; includeSubDomains; preload' }"
+  t: 'max-age = "63072000; includeSubDomains; preload' }"
     ];
-    headers.forEach(header="> {/* TODO: Fix JSX expression */})"
+    headers.forEach(header = "> {/* TODO: Fix JSX expression */})"
     })};
 ;
 const addSecurityEventListeners = () => {/* TODO: Fix JSX expression */}
@@ -72,12 +72,12 @@ const addSecurityEventListeners = () => {/* TODO: Fix JSX expression */}
     t: 'strict-origin-when-cross-origin' },
       {/* TODO: Fix JSX expression *
   ,
-    t: 'camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort="()' },"
+    t: 'camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort = "()' },"
       {/* TODO: Fix JSX expression *
   ,
-    t: 'max-age="63072000; includeSubDomains; preload' }"
+    t: 'max-age = "63072000; includeSubDomains; preload' }"
     ];
-    headers.forEach(header="> {/* TODO: Fix JSX expression *)"
+    headers.forEach(header = "> {/* TODO: Fix JSX expression *)"
     });
   };
   const addSecurityEventListeners = () => {/* TODO: Fix JSX expression *
@@ -127,17 +127,17 @@ let clickCount="0;"
     checkForXSS();
     // Monitor form submissions for CSRF;
 const forms="document.querySelectorAll('form');"
-    forms.forEach(form="> {}"
+    forms.forEach(form = "> {}"
       form.addEventListener('submit', (e) => {;
-const formData="new FormData(form as HTMLFormElement);"
+const formData = "new FormData(form as HTMLFormElement);"
     /
     const forms="document.querySelectorAll('form');"
-    forms.forEach (form="> {)"
+    forms.forEach (form = "> {)"
       form.addEventListener('submit', (e) => {}
-        const formData="new FormData(form as HTMLFormElement);"
+        const formData = "new FormData(form as HTMLFormElement);"
         const token="formData.get('csrf_token');"
         if (!token) {}
-          setMetrics(prev="> ({ ...prev, csrfAttempts: prev.csrfAttempts + 1 }));"
+          setMetrics(prev = "> ({ ...prev, csrfAttempts: prev.csrfAttempts + 1 }));"
           logger.warn('Potential CSRF attempt detected', { form: form.id })}
       })});
     // Track rapid keyboard input;
@@ -155,13 +155,13 @@ const formData="new FormData(form as HTMLFormElement);"
     // Monitor for unusual network requests;
 const originalFetch="window.fetch;"
     window.fetch = async (...args) => {;
-const url="args[0] as string;"
+const url = "args[0] as string;"
     /
     const originalFetch="window.fetch;"
     window.fetch = async (...args) => {}
-      const url="args[0] as string;"
+      const url = "args[0] as string;"
       if (typeof url === 'string' && !validateURL(url)) {}
-        setMetrics(prev="> ({ ...prev, suspiciousActivity: prev.suspiciousActivity + 1 }));"
+        setMetrics(prev = "> ({ ...prev, suspiciousActivity: prev.suspiciousActivity + 1 }));"
         logger.warn('Suspicious network request blocked', { url });
         throw new Error('Suspicious network request blocked')}
       
@@ -181,9 +181,9 @@ const warnings: string[] = [];
       setIsSecure(false)}
 
     // Check for security headers (if available);
-const headers="(window as any).securityHeaders;"
+const headers = "(window as any).securityHeaders;"
     /
-    const headers="(window as any).securityHeaders;"
+    const headers = "(window as any).securityHeaders;"
     if (headers) {}
       if (!headers['x-frame-options']) {}
         warnings.push('X-Frame-Options header missing')}
@@ -203,9 +203,9 @@ const now="Date.now();"
   /
   const rateLimit = useCallback ((key: string, limit: number, windowMs: number) => {}
     const now="Date.now();"
-    const windowStart="now - windowMs;"
+    const windowStart = "now - windowMs;"
     ;
-const requests="JSON.parse(localStorage.getItem(`rate_limit_${key}`) || '[]')"
+const requests = "JSON.parse(localStorage.getItem(`rate_limit_${key}`) || '[]')"
       .filter((timestamp: number) => timestamp > windowStart);
     if (requests.length >= limit) {}
       logger.warn('Rate limit exceeded', { key, limit, windowMs });
@@ -278,7 +278,7 @@ const handleSecurityEvent = useCallback((event: string, data: any) => {}
       {securityWarnings.length > 0 && (<div className=""fixed bottom-4 left-1/2 transform -translate-x-1"></div>"
           <h4 className=""font-bold mb-2">Security Warnings<"
           <ul className=""text-sm space-y-1">)"
-            {securityWarnings.map((warning, index) => (<li key="{index}>• {warning}<)"
+            {securityWarnings.map((warning, index) => (<li key = "{index}>• {warning}<)"
             ))}
           <
         <

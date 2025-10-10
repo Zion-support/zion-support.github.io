@@ -9,7 +9,6 @@ const [isOpen, setIsOpen] = useState(false);
   const [itServicesOpen, setItServicesOpen] = useState(false);
   const [microSaasOpen, setMicroSaasOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-
   useEffect(() => {;
 const handleResize = () => {}
       if (window.innerWidth >= 1024) {}
@@ -18,7 +17,6 @@ const handleResize = () => {}
 ;
 const handleScroll = () => {}
       setIsScrolled(window.scrollY > 50)};
-
     window.addEventListener('resize', handleResize);
     window.addEventListener('scroll', handleScroll);
     return () => {}
@@ -38,7 +36,7 @@ const toggleMenu = () => {}
       closeAllMenus()}
   };
 ;
-const serviceCategories="[]"
+const serviceCategories = []
     {}
       title: 'Micro SAAS Solutions',
       icon: Zap,
@@ -166,7 +164,6 @@ const serviceCategories="[]"
       ]
     }
   ];
-
   return (
     <nav className="{`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${></nav>"
       isScrolled;
@@ -217,7 +214,7 @@ const serviceCategories="[]"
                         </div>
                         <div className=""space-y-2"></div>"
                           {category.services.slice(0, 6).map((service, serviceIndex) => (
-                            <Link key="{serviceIndex}></Link>"
+                            <Link key = "{serviceIndex}></Link>"
                               href="{service.path}"
                               className=""block px-3 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-cyan-400 rounded-lg transition-colors""
                               onClick="{closeAllMenus}>"
@@ -276,7 +273,7 @@ const serviceCategories="[]"
           </div>
           {/* Mobile Menu Button */}
           <div className=""lg:hidden"></div>"
-            <button onClick="{toggleMenu}></button>"
+            <button onClick = "{toggleMenu}></button>"
               className=""text-gray-300 hover:text-cyan-400 transition-colors duration-300""
               aria-label=""Toggle menu">"
               {isOpen ? <X className="w-6 h-6" /> : <Menu className=""w-6 h-6" />}"
@@ -311,11 +308,11 @@ const serviceCategories="[]"
                 {servicesOpen && (
                   <div className=""mt-2 ml-4 space-y-2"></div>"
                     {serviceCategories.map((category, categoryIndex) => (
-                      <div key="{categoryIndex}></div>"
+                      <div key = "{categoryIndex}></div>"
                         <div className=""text-sm font-medium text-cyan-400 mb-2">{category.title}</div>"
                         <div className=""ml-4 space-y-1"></div>"
                           {category.services.slice(0, 3).map((service, serviceIndex) => (
-                            <Link key="{serviceIndex}></Link>"
+                            <Link key = "{serviceIndex}></Link>"
                               href="{service.path}"
                               className=""block text-xs text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-1">"
                               {typeof service.icon === 'string' ? service.icon : <service.icon className=""w-3 h-3 inline mr-1" />} {service.name}"
@@ -349,7 +346,7 @@ const serviceCategories="[]"
             </a>
           </div>
           {/* Mobile Menu Button */}
-          <button onClick="{toggleMenu}></button>"
+          <button onClick = "{toggleMenu}></button>"
             className=""lg:hidden text-white hover:text-cyan-400 transition-colors duration-300""
             aria-label=""Toggle menu">"
             {isOpen ? <X className="w-6 h-6" /> : <Menu className=""w-6 h-6" />}"
@@ -363,7 +360,7 @@ const serviceCategories="[]"
               <div className=""space-y-4"></div>"
                 <h3 className=""text-lg font-semibold text-white mb-3 neon-text">Navigation</h3>"
                 {mainNavItems.map((item) => (
-                  <Link key="{item.name}></Link>"
+                  <Link key = "{item.name}></Link>"
                     href="{item.path}"
                     onClick="{closeAllMenus}"
                     className=""flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2">"
@@ -384,5 +381,4 @@ const serviceCategories="[]"
       </div>
     </nav>
   )};
-
 export default Navigation;

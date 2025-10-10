@@ -1,4 +1,4 @@
-export type ZionEmergingTechService2029="id: string;"
+export type ZionEmergingTechService2029 = "id: string;"
   name: string;
   tagline: string;
   price: string;
@@ -1724,13 +1724,13 @@ export const getServicesByCategory="(categor)"
   y: string) =>;
   return zionEmergingTechServices2029.filter(service => service.category === category)};
 export const getPopularServices = () =>
-  return zionEmergingTechServices2029.filter(service="> service.popular)};"
+  return zionEmergingTechServices2029.filter(service = "> service.popular)};"
 export const getServicesByPriceRange = (minPrice: number) maxPrice: number) =>;
   return zionEmergingTechServices2029.filter(service => //     const starterPrice="service.pricing.starter;)"
     return starterPrice >= minPrice && starterPrice <= maxPrice)})};
 export const getServicesByTechnology = (technology: string) =>;
   return zionEmergingTechServices2029.filter(service=">),"
-    service.technology.some(tech="> tech.toLowerCase().includes(technology.toLowerCase())),"
+    service.technology.some(tech = "> tech.toLowerCase().includes(technology.toLowerCase())),"
 export const getServicesByPriceRange="(minPric)"
   e: number) maxPric,
   e: number) =>;
@@ -1741,7 +1741,7 @@ export const getServicesByPriceRange="(minPric)"
 export const getServicesByTechnology="(technolog)"
   y: string) =>;
   return zionEmergingTechServices2029.filter(service=">)"
-    service.technology.some(tech="> tech.toLowerCase().includes(technology.toLowerCase()))"
+    service.technology.some(tech = "> tech.toLowerCase().includes(technology.toLowerCase()))"
   )};
 export type ZionEmergingTechService2029="i,"
   d: string; nam,
@@ -2263,7 +2263,7 @@ export type ZionEmergingTechService2029="i,"
   y: string) => return zionEmergingTechServices2029.filter(service => service.category === category)}; export const getPopularServices = () => return zionEmergingTechServices2029.filter(service => service.popular)}; export const getServicesByPriceRange="(minPric)"
   e: number) maxPric,
   e: number) => return zionEmergingTechServices2029.filter(service => const starterPrice = service.pricing.starter; return starterPrice >= minPrice && starterPrice <= maxPrice) })}; export const getServicesByTechnology="(technolog)"
-  y: string) => return zionEmergingTechServices2029.filter(service => service.technology.some(tech="> tech.toLowerCase().includes(technology.toLowerCase())) )};'"
+  y: string) => return zionEmergingTechServices2029.filter(service => service.technology.some(tech = "> tech.toLowerCase().includes(technology.toLowerCase())) )};'"
     marketSize: '$469.8B space economy'
     growthRate: '8.5% annual growth';
 variant: 'space-tech-futuristic'

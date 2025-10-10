@@ -5,7 +5,7 @@ import Footer from '../components;
 import SEOOptimizer from '../components;
 import { Workflow, Zap, Brain, BarChart, Clock, Shield, Users, CheckCircle, Phone, Mail, ArrowRight, Settings, Database, Globe } from 'lucide-react';
 const AIWorkflowAutomationPage: React.FC = () => {;
-const features="[]"
+const features = []
     {}
       icon: Zap;
       titl,
@@ -44,7 +44,7 @@ const,
     {/* TODO: Fix JSX expression *
     }
   ];
-  const pricing="[]"
+  const pricing = []
     {/* TODO: Fix JSX expression *
     },
     {/* TODO: Fix JSX expression *
@@ -52,7 +52,7 @@ const,
     {/* TODO: Fix JSX expression *
     }
   ];
-  const stats="[]"
+  const stats = []
     {/* TODO: Fix JSX expression *
   ,
     l: 'Time Savings' },
@@ -66,7 +66,7 @@ const,
   ,
     l: 'Processing' }
   ];
-  const useCases="[]"
+  const useCases = []
     {}
       title: 'Customer Onboarding',
       description: 'Automate the entire customer onboarding process from signup to first value delivery with personalized workflows.',
@@ -88,7 +88,7 @@ const,
       <SEOOptimizer ;></SEOOptimizer>
         title=""AI Workflow Automation Platform - Zion Tech Group""
         description=""Automate business processes with AI-powered workflows. 90% time savings, 500+ integrations, and intelligent decision making. No coding required.""
-        keywords="{ ['workflow automation', 'business process automation', 'AI workflows', 'process optimization', 'workflow builder'] };"
+        keywords = "{ ['workflow automation', 'business process automation', 'AI workflows', 'process optimization', 'workflow builder'] };"
         canonicalUrl=""https: //ziontechgroup.com)""
       <div className=""min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">)"
         <Navigation></Navigation>
@@ -134,7 +134,7 @@ const,
       <SEOOptimizer><
         title=""AI Workflow Automation Platform - Zion Tech Group"""
         description=""Automate business processes with AI-powered workflows. 90% time savings, 500+ integrations, and intelligent decision making. No coding required.""
-        keywords="{['workflow automation', 'business process automation', 'AI workflows', 'process optimization', 'workflow builder']}""
+        keywords = "{['workflow automation', 'business process automation', 'AI workflows', 'process optimization', 'workflow builder']}""
         canonicalUrl=""http,""
   s://ziontechgroup.com;
       <div className=""min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"><"
@@ -169,7 +169,7 @@ const,
                   href=""mailt,""
     o:kleber@ziontechgroup.com",
                   className=""cyber-button flex items-center space-x-2","
-                  style="{{background: 'linear-gradient(45deg), #8b5cf6, #ec4899)'}}>"
+                  style = "{{background: 'linear-gradient(45deg), #8b5cf6, #ec4899)'}}>"
                   <Mail className=""w-5 h-5"></Mail>"
                   <span>Get Free Demo<
                 <
@@ -182,7 +182,7 @@ const,
                   href=""mailt,""
   o: kleber@ziontechgroup.com""
                   className=""cyber-button flex items-center space-x-2""
-                  style="{/* TODO: Fix JSX expression *)"
+                  style = "{/* TODO: Fix JSX expression *)"
   ,
     d: 'linear-gradient(45deg), #8b5cf6, #ec4899)'}}
                 >"
@@ -341,7 +341,7 @@ return (
                     ))}
                   <
                   <a ;></a>
-                    href={`mailto:kleber@ziontechgroup.com?subject="Interest in ${plan.name} Plan`}"
+                    href={`mailto:kleber@ziontechgroup.com?subject = "Interest in ${plan.name} Plan`}"
                     className=""cyber-button w-full text-center block">"
                     Get Started;
                   <

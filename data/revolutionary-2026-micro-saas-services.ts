@@ -1,4 +1,4 @@
-export const revolutionary2026MicroSaasServices="[{name: 'Revolutionary 2026 Micro-SaaS Platform',"
+export const revolutionary2026MicroSaasServices = "[{name: 'Revolutionary 2026 Micro-SaaS Platform',"
     path: '/services/revolutionary-2026-micro-saas-platform',
     description: 'Next-generation 2026 micro-SaaS development and deployment',
     icon: 'Rocket',
@@ -20,7 +20,7 @@ export const revolutionary2026MicroSaasServices="[{name: 'Revolutionary 2026 Mic
     icon: 'BarChart3',
     category: 'Analytics',
     features: [,
-export const revolutionary2026MicroSaasServices="[{/* TODO: Fix JSX expression */}"
+export const revolutionary2026MicroSaasServices = "[{/* TODO: Fix JSX expression */}"
   l: '$599/month'}
       enterpris,
   e: 'Custom'
@@ -64,7 +64,7 @@ export const revolutionary2026 MicroSaasCategories="[]"
   'User Management',
   'Revenue Optimization'
 ];
-export const revolutionary2026MicroSaasStats="totalServices: 2;"
+export const revolutionary2026MicroSaasStats = "totalServices: 2;"
   categories: 4;
   averageRating: 4.8;
   activeUsers: 1800;
@@ -77,7 +77,7 @@ export const revolutionary2026MicroSaasStats="{};"
   g: 4.8,
   activeUser,
   s: 1800};
-export const revolutionary2026MicroSaasServices="[ nam,"
+export const revolutionary2026MicroSaasServices = "[ nam,"
   e: 'Revolutionary 2026 Micro-SaaS Platform',' pat,
   h: '/services/revolutionary-2026-micro-saas-platform',' descriptio,
   n: 'Next-generation 2026 micro-SaaS development and deployment',' ico,

@@ -1,5 +1,4 @@
 import React from 'react';
-
 interface LinkProps {// TODO: Add content}
 };
   href: string;,
@@ -49,4 +48,3 @@ export const Link: React.FC;
   )
 }
 export default Link;
-

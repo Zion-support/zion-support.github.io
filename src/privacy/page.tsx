@@ -1,11 +1,10 @@
 'use client';
 import React from 'react';
 import { Shield, Lock, Eye, Database, User, Mail, Phone, Calendar, CheckCircle, ArrowRight, Globe, Server, Key, FileText, AlertTriangle } from 'lucide-react';
-
 export default function PrivacyPage() {;
-const lastUpdated="'January 1, 2024';"
+const lastUpdated = "'January 1, 2024';"
 ;
-const dataTypes="[]"
+const dataTypes = []
     {}
       category: 'Personal Information',
       icon: User,
@@ -32,7 +31,7 @@ const dataTypes="[]"
     }
   ];
 ;
-const rights="[]"
+const rights = []
     {}
       title: 'Right to Access',
       description: 'Request a copy of your personal data',
@@ -65,7 +64,7 @@ const rights="[]"
     }
   ];
 ;
-const securityMeasures="[]"
+const securityMeasures = []
     'SSL/TLS encryption for data transmission',
     'Regular security audits and penetration testing',
     'Access controls and authentication systems',
@@ -73,7 +72,6 @@ const securityMeasures="[]"
     'Employee training on data protection',
     'Incident response and breach notification procedures'
   ];
-
   return (
     <div className=""min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
       {/* Hero Section */}

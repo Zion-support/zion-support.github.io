@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import {CheckCircle, Star, TrendingUp, Brain, Target, BarChart, Phone, Mail, MapPin} from 'lucide-react';
 import React from 'react';
 const AnalyticsToolsPage: React.FC = () => {;
-const analyticsTools="[]"
+const analyticsTools = []
     {}
       titl,
     e: 'AI Business Intelligence',
@@ -51,7 +51,7 @@ titletitle: 'AI Financial Analytics',
       category:     ,
 $4}
   ];
-  const benefits="[]"
+  const benefits = []
       icon: TrendingUp,
       title: 'Data-Driven Decisions',
       description:       ,
@@ -166,7 +166,7 @@ const PagePage: React.FC = () => {}
                   <ul className=""space-y-2">)"
                     {tool.features.map((feature), featureIndex) => (<li key={featureIndex} className=""flex items-center text-sm text-gray-300"></li>"
                   <div className=""text-2xl font-bold text-cyan-400 mb-4">{tool.price}<"
-                  <a href={`mailto:kleber@ziontechgroup.com?subject="Interest in ${tool.title}`}></a>"
+                  <a href={`mailto:kleber@ziontechgroup.com?subject = "Interest in ${tool.title}`}></a>"
                     className=""w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover: from-cyan-600 hover:to-blue-700 transition-all inline-block">"
                     Get Started;
                   <
@@ -235,7 +235,7 @@ const PagePage: React.FC = () => {}
                   <a><
                     href="{/* TODO: Fix JSX expression *"
   ,
-    o:kleber@ziontechgroup.com?subject="Interest in ${tool.title}`}""
+    o:kleber@ziontechgroup.com?subject = "Interest in ${tool.title}`}""
                     className=""w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium,""
   hover:from-cyan-600,"
   hover:to-blue-700 transition-all inline-block"

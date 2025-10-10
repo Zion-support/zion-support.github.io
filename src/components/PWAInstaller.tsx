@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-
 interface BeforeInstallPromptEvent extends Event {}
   prompt(): Promise<void>;
   userChoice: Promise<{ outcome: 'accepted' | 'dismissed' }>}
@@ -12,7 +11,6 @@ const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | 
 }(null);
   const [showInstallButton, setShowInstallButton] = useState(false);
   const [isInstalled, setIsInstalled] = useState(false);
-
   useEffect(() => {}
     // Check if app is already installed;
     if (window.matchMedia('(display-mode: standalone)').matches) {}
@@ -24,27 +22,22 @@ const handleBeforeInstallPrompt = (e: Event) => {}
       e.preventDefault();
       setDeferredPrompt(e as BeforeInstallPromptEvent);
       setShowInstallButton(true)};
-
     // Listen for the appinstalled event;
 const handleAppInstalled = () => {}
       setIsInstalled(true);
       setShowInstallButton(false);
       setDeferredPrompt(null)};
-
     window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
     window.addEventListener('appinstalled', handleAppInstalled);
-
     return () => {}
       window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
       window.removeEventListener('appinstalled', handleAppInstalled)}}, []);
 ;
 const handleInstallClick = async () => {}
     if (!deferredPrompt) return;
-
     try {}
       await deferredPrompt.prompt();
       const { outcome } = await deferredPrompt.userChoice;
-      
       if (outcome === 'accepted') {}
         // console.log removed for production;
 } else {}
@@ -56,7 +49,6 @@ const handleInstallClick = async () => {}
       // console.error removed for production;
 }
   };
-
   if (isInstalled || !showInstallButton) {}
     return null}
 
@@ -74,7 +66,7 @@ const handleInstallClick = async () => {}
             Install Zion Tech Group app for a better experience with offline access and faster loading.
           </p>
           <div className=""flex space-x-2"></div>"
-            <button onClick="{handleInstallClick}></button>"
+            <button onClick = "{handleInstallClick}></button>"
               className=""bg-white text-purple-600 text-xs font-medium px-3 py-1.5 rounded hover:bg-white/90 transition-colors duration-200">"
               Install;
             </button>
@@ -93,5 +85,4 @@ const handleInstallClick = async () => {}
       </div>
     </div>
   )};
-
 export default PWAInstaller;

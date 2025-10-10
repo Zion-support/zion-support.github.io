@@ -51,7 +51,7 @@ export interface ErrorConfig {// TODO: Add content}
     ignoreErrors: RegExp[];,
     severityThreshold: ErrorSeverity;
 }
-export const _errorHandlingConfig: ErrorConfig="{// TODO: Add content}"
+export const _errorHandlingConfig: ErrorConfig = "{// TODO: Add content}"
 };
   enabled: true,
   logToConsole: process.env['NODE_ENV'] !== 'production',
@@ -64,7 +64,7 @@ export const _errorHandlingConfig: ErrorConfig="{// TODO: Add content}"
     /Loading chunk \d+ failed/i],
   severityThreshold: ErrorSeverity.LOW;
 };
-export const _errorMessages="{}"
+export const _errorMessages = {}
   network: {}
     offline: 'You are currently offline. Please check your internet connection.',
     timeout: 'Request timed out. Please try again.',
@@ -179,7 +179,6 @@ export class AppError extends Error {}
     public,
   severity: ErrorSeverity="ErrorSeverity.MEDIUM,"
     public metadata?: Record;
-
           <string, unknown></string>
   ) {// TODO: Add content}
 
@@ -189,4 +188,3 @@ export class AppError extends Error {}
     Error.captureStackTrace(this, this.constructor)}
 }
 export default errorHandlingConfig;
-

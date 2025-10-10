@@ -6,7 +6,6 @@ import React from 'react';
  */
 interface Props {}
   children: ReactNode;
-
   fallback?: ReactNode;
   onError?: (erro,
   r: Error, errorInf)
@@ -77,7 +76,7 @@ constructor(props: Props) {// TODO: Add content}
 class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {;
 constructor(props: ErrorBoundaryProps) {}
     super(props);
-    this.state="{// TODO: Add content}"
+    this.state = "{// TODO: Add content}"
 };
   hasErro,
   r: false,
@@ -169,15 +168,15 @@ p: Date.now(),
         this.resetErrorBoundary()}
     }
   }
-  resetErrorBoundary = (): void="> {}"
+  resetErrorBoundary = (): void = "> {}"
     this.setState({}
       hasError: false,
       error: null,
       errorInfo: null;
     })};
-  handleReload = (): void="> {}"
+  handleReload = (): void = "> {}"
     window.location.reload()};
-  handleGoHome = (): void="> {}"
+  handleGoHome = (): void = "> {}"
     window.location.href="'/'};"
   render(): ReactNode {}
     if (this.state.hasError) {}
@@ -186,16 +185,16 @@ p: Date.now(),
         return this.props.fallback}
       // Default error UI;
       return (
-        <div className="error-boundary-container" style="{styles.container}></div>"
-          <div style="{styles.content}></div>"
-            <div style="{styles.icon}>⚠️</div>"
-            <h1 style="{styles.title}>Oops! Something went wrong</h1>"
-            <p style="{styles.message}></p>"
+        <div className="error-boundary-container" style = "{styles.container}></div>"
+          <div style = "{styles.content}></div>"
+            <div style = "{styles.icon}>⚠️</div>"
+            <h1 style = "{styles.title}>Oops! Something went wrong</h1>"
+            <p style = "{styles.message}></p>"
               We're sorry for the inconvenience. The application encountered an unexpected error.
             </p>
             {process.env['NODE_ENV'] === 'development' && this.state.error && (
-              <details style="{styles.details}></details>"
-  resetErrorBoundary = (): void="> {/* TODO: Fix JSX expression */}"
+              <details style = "{styles.details}></details>"
+  resetErrorBoundary = (): void = "> {/* TODO: Fix JSX expression */}"
   O: Add content}
 }
     this.setState({/* TODO: Fix JSX expression */}
@@ -208,11 +207,11 @@ p: Date.now(),
       errorInf,
   o: null;)
     })};
-  handleReload = (): void="> {/* TODO: Fix JSX expression */}"
+  handleReload = (): void = "> {/* TODO: Fix JSX expression */}"
   O: Add content}
 }
     window.location.reload()};
-  handleGoHome = (): void="> {/* TODO: Fix JSX expression */}"
+  handleGoHome = (): void = "> {/* TODO: Fix JSX expression */}"
   O: Add content}
 }
     window.location.href="'/'};"
@@ -231,36 +230,36 @@ p: Date.now(),
       return (<div>Coming Soon</div>)
   )
         
-          <div className="error-boundary-container" style="{styles.container}></div>"
-          <div style="{styles.content}></div>"
-            <div style="{styles.icon}></div>"
-            <h1 style="{styles.title}>Oops! Something went wrong</h1>"
-            <p style="{styles.message}></p>"
+          <div className="error-boundary-container" style = "{styles.container}></div>"
+          <div style = "{styles.content}></div>"
+            <div style = "{styles.icon}></div>"
+            <h1 style = "{styles.title}>Oops! Something went wrong</h1>"
+            <p style = "{styles.message}></p>"
               We're sorry for the inconvenience. The application encountered an unexpected error.
             </p>
             {process.env['NODE_ENV'] === 'development' && this.state.error && ()}
-          <details style="{styles.details}></details>"
-                <summary style="{styles.summary}>Error Details (Development Only)</summary>"
-                <div style="{styles.errorDetails}></div>"
-                  <p style="{styles.errorMessage}></p>"
+          <details style = "{styles.details}></details>"
+                <summary style = "{styles.summary}>Error Details (Development Only)</summary>"
+                <div style = "{styles.errorDetails}></div>"
+                  <p style = "{styles.errorMessage}></p>"
                     <strong>Erro,
   r:</strong> {this.state.error.message}
                   </p>
                   {this.state.error.stack && (
-                    <pre style="{styles.stack}></pre>"
+                    <pre style = "{styles.stack}></pre>"
                       {this.state.error.stack}
                     </pre>
                   )}
                   {this.state.errorInfo?.componentStack && (
-                    <pre style="{styles.stack}></pre>"
+                    <pre style = "{styles.stack}></pre>"
                       <strong>Component Stack:</strong>
                   {this.state.error.stack && ()}
-          <pre style="{styles.stack}></pre>"
+          <pre style = "{styles.stack}></pre>"
                       {this.state.error.stack}
                     </pre>
                   )}
                   {this.state.errorInfo?.componentStack && ()}
-          <pre style="{styles.stack}></pre>"
+          <pre style = "{styles.stack}></pre>"
                       <strong>Component,
   Stack:</strong>
                       {this.state.errorInfo.componentStack}
@@ -269,7 +268,7 @@ p: Date.now(),
                 </div>
               </details>
             )}
-            <div style="{styles.actions}></div>"
+            <div style = "{styles.actions}></div>"
               <button></button>
                 onClick="{this.resetErrorBoundary}"
                 style="{styles.button}""
@@ -282,7 +281,7 @@ p: Date.now(),
           </button>
               <button></button>
                 onClick="{this.handleReload}"
-                style="{{...styles.button, ...styles.secondaryButton}}""
+                style = "{{...styles.button, ...styles.secondaryButton}}""
                 aria-label=""Reload Page">"
                 Reload Page;
               </button>
@@ -292,18 +291,17 @@ p: Date.now(),
           </button>
               <button></button>
                 onClick="{this.handleGoHome}"
-                style="{{...styles.button, ...styles.secondaryButton}}""
+                style = "{{...styles.button, ...styles.secondaryButton}}""
                 aria-label=""Go to Homepage">"
                 Go Home;
               </button>
             </div>
             {this.state.errorCount > 1 && (
-              <p style="{styles.errorCount}></p>"
+              <p style = "{styles.errorCount}></p>"
                 This error has occurred {this.state.errorCount} times;
             {this.state.errorCount > 1 && ()}
-          <p style="{styles.errorCount}></p>"
+          <p style = "{styles.errorCount}></p>"
                 This error has occurred {this.state.errorCount} times;
-
               </p>
             )}
           </div>
@@ -311,7 +309,7 @@ p: Date.now(),
       )}
     return this.props.children}
 }
-const styles="{}"
+const styles = {}
   container: {}
     minHeight: '100vh',
     display: 'flex',
@@ -403,13 +401,12 @@ $4},
     color:   ,
 $4}
 };
-
       )}
 
     return this.props.children}
 }
 ;
-const styles="{// TODO: Add content}"
+const styles = "{// TODO: Add content}"
 }
   containe,
   r: {/* TODO: Fix JSX expression */}
@@ -602,4 +599,3 @@ const styles="{// TODO: Add content}"
   r: '#999'
   }
 };
-

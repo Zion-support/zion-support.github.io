@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'}
   ];
 ;
-const benefits="[]"
+const benefits = []
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -14,7 +14,6 @@ const benefits="[]"
     'Cost-effective pricing plans',
     'Proven track record of success'
   ];
-
       {/* Hero Section */}
       <section className=""relative py-20 px-4 sm:px-6 lg:px-8"></section>"
         <div className=""max-w-7xl mx-auto"></div>"

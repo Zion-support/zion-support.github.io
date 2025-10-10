@@ -3,7 +3,6 @@
  * Comprehensive PR Merge - Handles all remaining branches and PRs;
  */ import { execSync } from 'child_process';
 import fs from 'fs';
-
 // //Step 1: Ensure we're on main and up to date;
 // try {,
   execSync('git checkout main', { stdio: 'inherit' });
@@ -35,25 +34,25 @@ const recentBranches = execSync('git for-each-ref --sort=-committerdate refs/rem
   g: 'utf8' }
 )
   .split('\n')
-  .map(line="> line.trim())"
-  .filter(line="> line && !line.includes('HEAD'))"
-  .filter(line="> !line.includes('backup'))"
-  .filter(line="> !line.includes('aggressive'))"
-  .filter(line="> !line.includes('automation'))"
-  .map(line="> {)"
+  .map(line = "> line.trim())"
+  .filter(line = "> line && !line.includes('HEAD'))"
+  .filter(line = "> !line.includes('backup'))"
+  .filter(line = "> !line.includes('aggressive'))"
+  .filter(line = "> !line.includes('automation'))"
+  .map(line = "> {)"
     return {)
       date: parts[0]),
       branch: parts[1].replace('origin/', '')}})
-  .filter(item="> {)"
-//     const branchDate="new Date(item.date);"
+  .filter(item = "> {)"
+//     const branchDate = "new Date(item.date);"
     sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 7);
     return branchDate >= sevenDaysAgo;
-  .map(line="> {/* TODO: Fix JSX expression */}"
+  .map(line = "> {/* TODO: Fix JSX expression */}"
     };)
   })
-  .filter(item="> {/* TODO: Fix JSX expression */})"
+  .filter(item = "> {/* TODO: Fix JSX expression */})"
   })
-  .map(item="> item.branch)"
+  .map(item = "> item.branch)"
   .filter(branch=">)"
       branch.includes('cursor') ||
       branch.includes('fix') ||
@@ -64,22 +63,19 @@ const recentBranches = execSync('git for-each-ref --sort=-committerdate refs/rem
       branch.includes('ai-') ||
       branch.includes('codex')
   );
-
 // //Step 3: Enhanced merge function with conflict resolution;
 function mergeBranch(branchName) {,
 //   try {,
     //Check if branch exists;
     execSync(`git fetch origin ${branchName}`, { stdio: 'pipe' });
-
     //Check if already merged;
-    const isMerged="execSync(`git branch --merged main | grep -q "${branchName}" || echo "not_merged"`)"
+    const isMerged = "execSync(`git branch --merged main | grep -q "${branchName}" || echo "not_merged"`)"
       { encoding: 'utf8' }
 // //Step,
   3: Enhanced merge function with conflict resolution;
 function mergeBranch(branchName) {/* TODO: Fix JSX expression */}
     execSync(`git fetch origin ${branchName}`, {/* TODO: Fix JSX expression */})
   o: 'pipe' });
-
     //Check if already merged;
     const isMerged="execSync("`"
       `git branch --merged main | grep -q "${branchName}" || echo "not_merged"`,
@@ -98,13 +94,13 @@ function mergeBranch(branchName) {/* TODO: Fix JSX expression */}
 //       //Try different conflict resolution strategies;
       try {}
         //Strategy 1: Use theirs;
-        execSync(`git merge origin/${branchName} --strategy-option="theirs --no-ff -m "Merge ${branchName}: using theirs strategy"`)"
+        execSync(`git merge origin/${branchName} --strategy-option = "theirs --no-ff -m "Merge ${branchName}: using theirs strategy"`)"
           { stdio: 'inherit' }
         );
 //         return { success: true, method: 'theirs' }} catch (theirsError) {}
         try {}
           //Strategy 2: Use ours;
-          execSync(`git merge origin/${branchName} --strategy-option="ours --no-ff -m "Merge ${branchName}: using ours strategy"`)"
+          execSync(`git merge origin/${branchName} --strategy-option = "ours --no-ff -m "Merge ${branchName}: using ours strategy"`)"
             { stdio: 'inherit' }
     try {/* TODO: Fix JSX expression */}"`
         `git merge origin/${branchName} --no-ff -m "Merge ${branchName}: automated merge"`,
@@ -113,13 +109,13 @@ function mergeBranch(branchName) {/* TODO: Fix JSX expression */}
       );
 //       return {/* TODO: Fix JSX expression */}
   d: 'direct' }} catch (mergeError) {/* TODO: Fix JSX expression */}"`
-          `git merge origin/${branchName} --strategy-option="theirs --no-ff -m "Merge ${branchName}: using theirs strategy"`,"
+          `git merge origin/${branchName} --strategy-option = "theirs --no-ff -m "Merge ${branchName}: using theirs strategy"`,"
           {/* TODO: Fix JSX expression */}
   o: 'inherit' }
         );
 //         return {/* TODO: Fix JSX expression */}
   d: 'theirs' }} catch (theirsError) {/* TODO: Fix JSX expression */}"`
-            `git merge origin/${branchName} --strategy-option="ours --no-ff -m "Merge ${branchName}: using ours strategy"`,"
+            `git merge origin/${branchName} --strategy-option = "ours --no-ff -m "Merge ${branchName}: using ours strategy"`,"
             {/* TODO: Fix JSX expression */}
   o: 'inherit' }
           );
@@ -133,7 +129,7 @@ function mergeBranch(branchName) {/* TODO: Fix JSX expression */}
 }
 
 //Step 4: Process branches in batches;
-const results="{}"
+const results = {}
   successful: []
   failed: []
   summary: {}
@@ -149,19 +145,16 @@ const results="{}"
       failed: 0;
 //Step,
   4: Process branches in batches;
-const results="{/* TODO: Fix JSX expression */}"
+const results = "{/* TODO: Fix JSX expression */}"
     }}};
-
 // //Process in batches of 20 to avoid overwhelming the system;
 // const batchSize="20;"
-// const totalBatches="Math.ceil(recentBranches.length / batchSize);"
-for (let batch="0; batch < totalBatches; batch++) {/* TODO: Fix JSX expression */}`"
+// const totalBatches = "Math.ceil(recentBranches.length / batchSize);"
+for (let batch = "0; batch < totalBatches; batch++) {/* TODO: Fix JSX expression */}`"
     `\n📦 Processing batch ${batch + 1}/${totalBatches} (${batchBranches.length} branches)...`
   );
-
   for (const branch of batchBranches) {}
     results.summary.total++;
-
     if (result.success) {}
       results.successful.push({)
         branch: branch;),
@@ -198,11 +191,9 @@ for (let batch="0; batch < totalBatches; batch++) {/* TODO: Fix JSX expression *
 // const report="{,"
   ...results;
   timestamp: new Date().toISOString()};
-
 fs.writeFileSync('comprehensive-pr-merge-report.json')
   JSON.stringify(report, null, 2)
 );
-
 //Step 6: Final push;
 // try {,
   execSync('git push origin main', { stdio: 'inherit' });
@@ -213,13 +204,11 @@ fs.writeFileSync('comprehensive-pr-merge-report.json')
 // // // // // // // // // // // // // // ,
 //Step,
   5: Generate final report;
-// const report="{/* TODO: Fix JSX expression */}"
+// const report = "{/* TODO: Fix JSX expression */}"
 };
-
 fs.writeFileSync('comprehensive-pr-merge-report.json')
   JSON.stringify(report, null, 2)
 );
-
 //Step,
   6: Final push;
 // try {/* TODO: Fix JSX expression */}

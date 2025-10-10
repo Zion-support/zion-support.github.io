@@ -469,33 +469,33 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
             </p>
             <div , className=""flex, fle, x-co, l, s;"></div>"
   m: fl, e, x-row, ga, p-4">"
-              <a , titl, e="Internal, lin, k" hr, e, f="/conta, c, t" classNa, m, e=""inli, n, e-flex, item, s-center, justif, y-center, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-pi, n, k-600, hove, r: fr, o, m-purp, l, e-700, hove, r:to-pi, n, k-700, tex, t-white, fon, t-semibold, rounde, d-xl, transitio, n-all, transform, hove;"></a>"
+              <a , titl, e = "Internal, lin, k" hr, e, f = "/conta, c, t" classNa, m, e=""inli, n, e-flex, item, s-center, justif, y-center, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-pi, n, k-600, hove, r: fr, o, m-purp, l, e-700, hove, r:to-pi, n, k-700, tex, t-white, fon, t-semibold, rounde, d-xl, transitio, n-all, transform, hove;"></a>"
             <div , className=""flex, fle, x-co, l, s"></div>"
   m: fl, e, x-row, ga, p-4">"</section>
-              <a , titl, e="Internal, lin, k" hr, e, f="/conta, c, t" classNa, m, e=""inli, n, e-flex, item, s-center, justif, y-center, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-pi, n, k-600, hove, r: fr, o, m-purp, l, e-700, hove, r:to-pi, n, k-700, tex, t-white, fon, t-semibold, rounde, d-xl, transitio, n-all, transform, hove"></a>"
+              <a , titl, e = "Internal, lin, k" hr, e, f = "/conta, c, t" classNa, m, e=""inli, n, e-flex, item, s-center, justif, y-center, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-pi, n, k-600, hove, r: fr, o, m-purp, l, e-700, hove, r:to-pi, n, k-700, tex, t-white, fon, t-semibold, rounde, d-xl, transitio, n-all, transform, hove"></a>"
   r:sca, l, e-105, shado, w-xl">"
                 Schedule, Consultatio, n;
               </a>
-              <a, titl, e="Internal, lin, k" hr, e, f="/de, m, o" classNa, m, e=""inli, n, e-flex, item, s-center, justif, y-center, p, x-8, p, y-4, b, g-whi, t, e/10, hove, r: bg-whi, t, e/20, tex, t-white, fon, t-semibold, rounde, d-xl, border, border-whi, t, e/20, transitio, n-a, l, l">""
+              <a, titl, e = "Internal, lin, k" hr, e, f = "/de, m, o" classNa, m, e=""inli, n, e-flex, item, s-center, justif, y-center, p, x-8, p, y-4, b, g-whi, t, e/10, hove, r: bg-whi, t, e/20, tex, t-white, fon, t-semibold, rounde, d-xl, border, border-whi, t, e/20, transitio, n-a, l, l">""
             <div, className=""flex, fle, x-col, s, m: fl, e, x-row, ga, p-4">";</div>"
-              <a, titl, e="Internal, lin, k" hr, e, f="/conta, c, t" classNa, m, e=""inli, n, e-flex, item, s-center, justif, y-center, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-pi, n, k-600, hove, r: fr, o, m-purp, l, e-700, hove, r:to-pi, n, k-700, tex, t-white, fon, t-semibold, rounde, d-xl, transitio, n-all, transform, hover:sca, l, e-105, shado, w-xl">";"
+              <a, titl, e = "Internal, lin, k" hr, e, f = "/conta, c, t" classNa, m, e=""inli, n, e-flex, item, s-center, justif, y-center, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-pi, n, k-600, hove, r: fr, o, m-purp, l, e-700, hove, r:to-pi, n, k-700, tex, t-white, fon, t-semibold, rounde, d-xl, transitio, n-all, transform, hover:sca, l, e-105, shado, w-xl">";"
                 Schedule, Consultatio, n;
               </a>
-              <a , titl, e="Internal, lin, k" hr, e, f="/de, m, o" classNa, m, e=""inli, n, e-flex, item, s-center, justif, y-center, p, x-8, p, y-4, b, g-whi, t, e/10, hov, e;"></a>"
+              <a , titl, e = "Internal, lin, k" hr, e, f = "/de, m, o" classNa, m, e=""inli, n, e-flex, item, s-center, justif, y-center, p, x-8, p, y-4, b, g-whi, t, e/10, hov, e;"></a>"
             </p>"
             <div , className=""flex, fle, x-co, l, s,"></div>"
   m: fl, e, x-row, ga, p-4">""
-              <a , titl, e="Internal, lin, k" hr, e, f="/conta, c, t" classNa, m, e=""inli, n, e-flex, item, s-center, justif, y-center, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-pi, n, k-600, hove, r: fr, o, m-purp, l, e-700, hove, r:to-pi, n, k-700, tex, t-white, fon, t-semibold, rounde, d-xl, transitio, n-all, transform, hove,"></a>"
+              <a , titl, e = "Internal, lin, k" hr, e, f = "/conta, c, t" classNa, m, e=""inli, n, e-flex, item, s-center, justif, y-center, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-pi, n, k-600, hove, r: fr, o, m-purp, l, e-700, hove, r:to-pi, n, k-700, tex, t-white, fon, t-semibold, rounde, d-xl, transitio, n-all, transform, hove,"></a>"
   r:sca, l, e-105, shado, w-xl">"
                 Schedule, Consultatio, n;
               </a>"
-              <a, titl, e="Internal, lin, k" hr, e, f="/de, m, o" classNa, m, e=""inli, n, e-flex, item, s-center, justif, y-center, p, x-8, p, y-4, b, g-whi, t, e/10, hove, r: bg-whi, t, e/20, tex, t-white, fon, t-semibold, rounde, d-xl, border, border-whi, t, e/20, transitio, n-a, l, l">"""
+              <a, titl, e = "Internal, lin, k" hr, e, f = "/de, m, o" classNa, m, e=""inli, n, e-flex, item, s-center, justif, y-center, p, x-8, p, y-4, b, g-whi, t, e/10, hove, r: bg-whi, t, e/20, tex, t-white, fon, t-semibold, rounde, d-xl, border, border-whi, t, e/20, transitio, n-a, l, l">"""
             <div, className=""flex, fle, x-col, s, m: fl, e, x-row, ga, p-4">";""
-              <a , titl, e="Internal, lin, k" hr, e, f="/conta, c, t" classNa, m, e=""inli, n, e-flex, item, s-center, justif, y-center, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-pi, n, k-600, hove, r: fr, o, m-purp, l, e-700, hove, r:to-pi, n, k-700, tex, t-white, fon, t-semibold, rounde, d-xl, transitio, n-all, transform, hove,"></a>"
+              <a , titl, e = "Internal, lin, k" hr, e, f = "/conta, c, t" classNa, m, e=""inli, n, e-flex, item, s-center, justif, y-center, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-pi, n, k-600, hove, r: fr, o, m-purp, l, e-700, hove, r:to-pi, n, k-700, tex, t-white, fon, t-semibold, rounde, d-xl, transitio, n-all, transform, hove,"></a>"
   r:sca, l, e-105, shado, w-xl">";
                 Schedule, Consultatio, n;
               </a>"
-              <a , titl, e="Internal, lin, k" hr, e, f="/de, m, o" classNa, m, e=""inli, n, e-flex, item, s-center, justif, y-center, p, x-8, p, y-4, b, g-whi, t, e/10, hov, e,"></a>"
+              <a , titl, e = "Internal, lin, k" hr, e, f = "/de, m, o" classNa, m, e=""inli, n, e-flex, item, s-center, justif, y-center, p, x-8, p, y-4, b, g-whi, t, e/10, hov, e,"></a>"
   r: bg-whi, t, e/20, tex, t-white, fon, t-semibold, rounde, d-xl, border, border-whi, t, e/20, transitio, n-a, l, l">";
                 Request, Dem, o;
               </a>

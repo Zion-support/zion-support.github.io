@@ -10,13 +10,13 @@ import Footer from '../components/Footer';
 const AIProjectManagerPage: React.FC = () => {;
 const _features="[;"
 const AiProjectManagerPage: React.FC = () => {;
-const features="[]"
+const features = []
 import Navigation from '../components;
 import Footer from '../components;
 const AIProjectManagerPage: React.FC = () => {}
-  const _features="[]"
+  const _features = []
 const AiProjectManagerPage: React.FC = () => {}
-  const features="[]"
+  const features = []
     {}
       ico,
     n: BarChart,
@@ -39,7 +39,7 @@ const AiProjectManagerPage: React.FC = () => {}
     }
   ];
 ;
-const pricingPlans="[]"
+const pricingPlans = []
       name: 'Starter',
       price: '$99',
       period: '
@@ -75,7 +75,7 @@ const pricingPlans="[]"
         'Custom analytics',
         'White-label options',
         'API access';
-const stats="[]"
+const stats = []
     { icon: Users, value: '500+', label: 'Active Teams' },
     { icon: TrendingUp, value: '40%', label: 'Productivity Increase' },
     { icon: Clock, value: '70%', label: 'Time Saved' },

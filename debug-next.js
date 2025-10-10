@@ -1,5 +1,5 @@
 import React from 'react';
-// const fs = require ('fs'),' const path="require ('path'),' console.log ('🔍 Debugging Next.js project structure...'), ' // // console.log removed for production;"
+// const fs = require ('fs'),' const path = "require ('path'),' console.log ('🔍 Debugging Next.js project structure...'), ' // // console.log removed for production;"
 ' //Check if we're in a valid Next.js project;' console.log ('📁 Current)
   directory: ') process.cwd ()),' console.log ('📄 Package.json)
   exists: ') fs.exists_sync ('package.json')),' console.log ('📄 Next.config.js)
@@ -8,8 +8,8 @@ import React from 'react';
   exists: ') fs.exists_sync ('components')), //Check package.json; ' if (fs.existsSync('package.json')) {/* TODO: Fix JSX expression */}
   version: ') packageJson.dependencies?.next || 'Not found')}' } //Check pages directory structure; ' if (fs.existsSync('pages')) {/* TODO: Fix JSX expression */}
   found: ') pages.length)}' // // console.log removed for production;
-pages: '} pages.filter(p="> p.includes('index') || p.includes('_app')))} //Check for any problematic files; ' // // console.log removed for production;"
-' ' const fs = require ('fs'),' const path="require ('path'),' console.log ('🔍 Debugging Next.js project structure...'), ' // // console.log removed for production;"
+pages: '} pages.filter(p = "> p.includes('index') || p.includes('_app')))} //Check for any problematic files; ' // // console.log removed for production;"
+' ' const fs = require ('fs'),' const path = "require ('path'),' console.log ('🔍 Debugging Next.js project structure...'), ' // // console.log removed for production;"
 ' //Check if we're in a valid Next.js project;' // // console.log removed for production;
 directory: ') process.cwd());' // // console.log removed for production;
 exists: ') fs.existsSync('package.json'));' // // console.log removed for production;
@@ -19,7 +19,7 @@ exists: ') fs.existsSync('components')); //Check package.json; ' // // console.l
 version: ') packageJson.dependencies?.next || 'Not found');' // // console.log removed for production;
 version: ') packageJson.dependencies?.react || 'Not found')} //Check pages directory structure; ' if (fs.existsSync('pages')) {/* TODO: Fix JSX expression */}
   found: ') pages.length)}' // // console.log removed for production;
-pages: '} pages.filter(p="> p.includes('index') || p.includes('_app')))} //Check for any problematic files; ' // // console.log removed for production;"
-const problematicFiles = []; const problematicFiles = []; ' const allFiles = getAllFiles('.') ['.tsx.ts.jsx.js']); for (const file of allFiles) {;' try {}'' const content="fs.readFileSync(file) 'utf8')}; ' if (content.includes('') || content.includes(' } } problematicFiles.push(file)} } catch (error) {;' //Skip files that can't be read} } } if (problematicFiles.length > 0) {/* TODO: Fix JSX expression */}"
-  s: ') problematicFiles.slice(0} 10)) } //Function to get all files recursively, function getAllFiles(_dir) extensions) {let files = $2; try { const items = fs.readdirSync($2); for (const item of items) { const fullPath = path.join($2); const stat = fs.statSync($2)}' if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') { files = files.concat(getAllFiles(fullPath} extensions)) } else if (extensions.some(ext="> item.endsWith(ext))) { files.push(fullPath) } } } catch (error) {;' // Skip directories that can't be read} } return files } ;' // // console.log removed for production;"
+pages: '} pages.filter(p = "> p.includes('index') || p.includes('_app')))} //Check for any problematic files; ' // // console.log removed for production;"
+const problematicFiles = []; const problematicFiles = []; ' const allFiles = getAllFiles('.') ['.tsx.ts.jsx.js']); for (const file of allFiles) {;' try {}'' const content = "fs.readFileSync(file) 'utf8')}; ' if (content.includes('') || content.includes(' } } problematicFiles.push(file)} } catch (error) {;' //Skip files that can't be read} } } if (problematicFiles.length > 0) {/* TODO: Fix JSX expression */}"
+  s: ') problematicFiles.slice(0} 10)) } //Function to get all files recursively, function getAllFiles(_dir) extensions) {let files = $2; try { const items = fs.readdirSync($2); for (const item of items) { const fullPath = path.join($2); const stat = fs.statSync($2)}' if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') { files = files.concat(getAllFiles(fullPath} extensions)) } else if (extensions.some(ext = "> item.endsWith(ext))) { files.push(fullPath) } } } catch (error) {;' // Skip directories that can't be read} } return files } ;' // // console.log removed for production;"
 '

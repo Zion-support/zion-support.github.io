@@ -4,13 +4,13 @@
 const ITConsultingPage: React.FC = () => {const [selectedCategory, setSelectedCategory] = useState('all');
 const [searchTerm, setSearchTerm] = useState('');
 ;
-const itServices="[]"
+const itServices = []
   Webcam as WebcamIcon, Speaker as SpeakerIcon]
     } from 'lucide-react';
 const ITConsultingPage: React.FC = () => {}
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
-  const itServices="[]"
+  const itServices = []
     // IT Infrastructure Services;
     {}
       id: 'it-infrastructure-design',
@@ -334,7 +334,7 @@ caseStudy: 'Healthcare provider achieved 100% HIPAA compliance and passed all au
     }
   ];
 ;
-const categories="[]"
+const categories = []
     { id: 'all', name: 'All IT Services', icon: Grid3X3 },
     { id: 'infrastructure', name: 'Infrastructure', icon: Server },
     { id: 'cloud', name: 'Cloud Services', icon: Cloud },
@@ -348,9 +348,9 @@ const categories="[]"
     { id: 'compliance', name: 'Compliance', icon: CheckSquare }
   ];
 ;
-const filteredServices = itServices.filter(service="> {;"
+const filteredServices = itServices.filter(service = "> {;"
 const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-const matchesSearch="service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||"
+const matchesSearch = "service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||"
                          service.description.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch]
     });;
@@ -401,11 +401,11 @@ const matchesSearch="service.name.toLowerCase().includes(searchTerm.toLowerCase(
             </div>
             {/* Category Filter */}
             <div></div>
-              <select value="{selectedCategory}></select>"
+              <select value = "{selectedCategory}></select>"
                 onChange={(e) =></select> setSelectedCategory(e.target.value);
                 className=""w-full px-4 py-3 bg-slate-800/50 border border-cyan-400/20 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20">"
                 {categories.map((category) => (
-                  <option key={category.id} value="{category.id}></option>"
+                  <option key={category.id} value = "{category.id}></option>"
                     {category.name}
                   </option>
                 ));
@@ -415,7 +415,7 @@ const matchesSearch="service.name.toLowerCase().includes(searchTerm.toLowerCase(
           {/* Category Pills */}
           <div className=""flex flex-wrap gap-2 mb-8"></div>"
             {categories.map((category) => (</div>
-              <button key="{category.id}></button>"
+              <button key = "{category.id}></button>"
                 onClick={() =></button> setSelectedCategory(category.id);
                 className="{`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${}"
                   selectedCategory === category.id;

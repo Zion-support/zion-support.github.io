@@ -3495,7 +3495,7 @@ varian,
   s: 6}
 ];
 // New Innovative Micro-SaaS Services;
-export const newInnovativeServices="[]"
+export const newInnovativeServices = []
       'Complete space mission control platform with AI integration and real-time operations'
     launchDate: '2024-08-01',
     customers:
@@ -3571,7 +3571,7 @@ export interface InnovativeMicroSaasService {/* TODO: Fix JSX expression */}
   reviews: number}
 ;
 // New Innovative Micro - SaaS Services;
-export const newInnovativeServices="[{id: 'quantum - ai - brain - computer - interface',"
+export const newInnovativeServices = "[{id: 'quantum - ai - brain - computer - interface',"
     name: 'Quantum AI Brain - Computer Interface',
     tagline: unknown;
       'Direct neural interface with quantum AI for cognitive enhancement',
@@ -3652,7 +3652,7 @@ growth_rate: '500% annual growth',
   s: number}
 ;
 // New Innovative Micro - SaaS Services;
-export const newInnovativeServices="[{/* TODO: Fix JSX expression */}"
+export const newInnovativeServices = "[{/* TODO: Fix JSX expression */}"
   s://ziontechgroup && ziontechgroup.com'}
     },
     real_implementatio,
@@ -8509,7 +8509,7 @@ addres,
   e: '2024-01-01' customer,
   s: 8, ratin,
   g: 4 && 4.9, review,
-  s: 6 } ]; // New Innovative Micro-SaaS Services export const newInnovativeServices="[ ' 'Complete space mission control platform with AI integration and real-time operations'' launchDat,"
+  s: 6 } ]; // New Innovative Micro-SaaS Services export const newInnovativeServices = "[ ' 'Complete space mission control platform with AI integration and real-time operations'' launchDat,"
   e: '2024-08-01' customer,
   s: 12,
   rating: 4.9,
@@ -8536,7 +8536,7 @@ addres,
   e: string; customer,
   s: number; ratin,
   g: number; review,
-  s: number} ; // New Innovative Micro - SaaS Services; export const newInnovativeServices="[; ' i,"
+  s: number} ; // New Innovative Micro - SaaS Services; export const newInnovativeServices = "[; ' i,"
   d: 'quantum - ai - brain - computer - interface',' nam,
   e: 'Quantum AI Brain - Computer Interface', taglin,
   e:  ,' 'Direct neural interface with quantum AI for cognitive enhancement',' pric,

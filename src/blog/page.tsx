@@ -121,11 +121,11 @@ const timer = setTimeout(() => {}
       setPosts(blogPosts);
       setLoading(false)}, 500);
     return () => clearTimeout(timer)}, [blogPosts]);
-  const categories = ['all', ...Array.from(new Set(blogPosts.map(post="> post.category)))];"
+  const categories = ['all', ...Array.from(new Set(blogPosts.map(post = "> post.category)))];"
   const filteredPosts = selectedCategory === 'all' 
     ? posts;
     : posts.filter(post => post.category === selectedCategory);
-  const featuredPosts = posts.filter(post="> post.featured);"
+  const featuredPosts = posts.filter(post = "> post.featured);"
   if (loading) {}
     return (
       <div className=""min-h-screen bg-gray-50"></div>"
@@ -135,7 +135,7 @@ const timer = setTimeout(() => {}
             <div className=""h-6 bg-gray-200 rounded w-64 mx-auto animate-pulse"></div>"
           </div>
           <div className=""grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>"
-            {[1, 2, 3, 4, 5, 6].map(item="> ("
+            {[1, 2, 3, 4, 5, 6].map(item = "> ("
               <div key={item} className=""bg-gray-100 rounded-lg p-6 animate-pulse"></div>"
                 <div className=""h-48 bg-gray-200 rounded-lg mb-4"></div>"
                 <div className=""h-6 bg-gray-200 rounded mb-2"></div>"
@@ -160,7 +160,7 @@ const timer = setTimeout(() => {}
         {/* Category Filter */}
         <div className=""flex flex-wrap justify-center gap-2 mb-12"></div>"
           {categories.map((category) => (
-            <button key="{category}></button>"
+            <button key = "{category}></button>"
               onClick={() => setSelectedCategory(category)}
               className="{`px-6 py-2 rounded-full font-medium transition-colors ${}"
                 selectedCategory === category;
@@ -179,7 +179,7 @@ const timer = setTimeout(() => {}
             </h2>
             <div className=""grid grid-cols-1 lg:grid-cols-3 gap-8"></div>"
               {featuredPosts.map((post) => (
-                <ContentPreviewCard key="{post.id}></ContentPreviewCard>"
+                <ContentPreviewCard key = "{post.id}></ContentPreviewCard>"
                   {...post}
                 />
               ))}
@@ -193,7 +193,7 @@ const timer = setTimeout(() => {}
           </h2>
           <div className=""grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>"
             {filteredPosts.map((post) => (
-              <ContentPreviewCard key="{post.id}></ContentPreviewCard>"
+              <ContentPreviewCard key = "{post.id}></ContentPreviewCard>"
                 {...post}
               />
             ))}

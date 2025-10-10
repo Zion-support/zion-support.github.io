@@ -1,10 +1,8 @@
 import React from 'react';
-
 export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expression */}
   const { slug } = useParams();
-
   // Mock data - in a real app, this would come from an API or CMS;
-  const latestArticles="[]"
+  const latestArticles = []
     {}
       slug: 'ai-autonomous-workflows-2026',
       title: 'AI Autonomous Workflows 2026',
@@ -19,7 +17,7 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
     {/* TODO: Fix JSX expression */}
     }];
 ;
-const blogPosts="[]"
+const blogPosts = []
     {}
       slug: 'enterprise-ai-transformation-roadmap-2026',
       title: 'Enterprise AI Transformation Roadmap 2026',
@@ -53,7 +51,7 @@ const blogPosts="[]"
     {/* TODO: Fix JSX expression */}
     }];
 ;
-const featuredPosts="[]"
+const featuredPosts = []
     {}
       slug: 'autonomous-enterprise-operations-2026',
       title: 'Autonomous Enterprise Operations 2026',
@@ -86,11 +84,9 @@ const featuredPosts="[]"
     },
     {/* TODO: Fix JSX expression */}
     }];
-
   // Find the current post;
   const currentPost = [...latestArticles, ...blogPosts, ...featuredPosts].find(post => post.slug === slug;)
   );
-
   if (!currentPost) {}
     return(<div className=""min-h-screen bg-gray-50"></div>"
     return (
@@ -217,7 +213,7 @@ const featuredPosts="[]"
             <h2 className=""text-3xl font-bold text-gray-900 mb-8 text-center">Related Articles</h2>"
             <div className=""grid grid-cols-1 md:grid-cols-3 gap-8"></div>"
               {featuredPosts.slice(0, 3).map((post, index) => (</div>
-                <div key="{index}></div>"
+                <div key = "{index}></div>"
                   className=""bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow""
                 ></div>
                   <div className=""text-sm text-blue-600 font-semibold mb-2">{post.category}</div>"

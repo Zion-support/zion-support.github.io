@@ -6,7 +6,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 ;
 const AIHRAssistantPage: React.FC = () => {;
-const features="[]"
+const features = []
     {}
       icon: Users,
       title: 'HR Automation',
@@ -32,7 +32,6 @@ const features="[]"
       benefits: ['Workforce analytics', 'Performance metrics', 'Predictive insights']
     }
   ];
-
   return (
     <div className=""min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
       <Navigation /></Navigation>
@@ -92,5 +91,4 @@ const features="[]"
       <Footer /></Footer>
     </div>
   )};
-
 export default AIHRAssistantPage;

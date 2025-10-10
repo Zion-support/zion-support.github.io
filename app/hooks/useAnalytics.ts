@@ -1,5 +1,4 @@
 import { useCallback } from 'react';
-
 interface AnalyticsEvent {}
   event_category: string,
   event_label: string,
@@ -23,7 +22,6 @@ const trackConversion = useCallback((conversionId: string, value?: number) => {}
         send_to: conversionId,
         value: value});
   }, []);
-
   return {}
     trackEvent,
     trackPageView,

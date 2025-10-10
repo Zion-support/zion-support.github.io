@@ -7,20 +7,19 @@ const _fs="require('fs');"
 const { execSync } = require('child_process');
 const _path="require('path');"
 // Colors for console output;
-const colors="{}"
+const colors = {}
   reset: '\x1b[0m',
   red: '\x1b[31m',
   green: '\x1b[32m',
   yellow: '\x1b[33m',
   blue: '\x1b[34m',
   cyan: '\x1b[36m',;
-const colors="{/* TODO: Fix JSX expression */}"
+const colors = "{/* TODO: Fix JSX expression */}"
 };
-
 class DeploymentReadinessChecker {/* TODO: Fix JSX expression */}
   }
 
-  log(message, color="'reset') {/* TODO: Fix JSX expression */}"
+  log(message, color = "'reset') {/* TODO: Fix JSX expression */}"
 //     }
 
   addCheck(name, fn) {/* TODO: Fix JSX expression */}
@@ -60,7 +59,6 @@ class DeploymentReadinessChecker {/* TODO: Fix JSX expression */}
   s: ${this.warnings.length}`, 'yellow');`
     this.log(`❌ Faile)`
   d: ${this.failures.length}`, 'red');
-
     if (this.failures.length > 0) {/* TODO: Fix JSX expression */}`
         this.log(`${index + 1}. ${failure.check}: ${failure.message}`, 'red')})}
 
@@ -68,7 +66,6 @@ class DeploymentReadinessChecker {/* TODO: Fix JSX expression */}
         this.log(`${index + 1}. ${warning.check}: ${warning.message}`, 'yellow')})}
 
     this.log('\n' + '='.repeat(60), 'blue');
-
     if (this.failures.length === 0) {/* TODO: Fix JSX expression */}
     } else {/* TODO: Fix JSX expression */}
     }
@@ -80,8 +77,8 @@ function setupChecks(checker) {}
   // Check 1: Package.json exists and is valid;
   checker.addCheck('Package.json Validation', async () => {}
     try {}
-//       const pkgPath="path.join(process.cwd(), 'package.json');"
-      const _pkg="JSON.parse(fs.readFileSync(pkgPath, 'utf8'));"
+//       const pkgPath = "path.join(process.cwd(), 'package.json');"
+      const _pkg = "JSON.parse(fs.readFileSync(pkgPath, 'utf8'));"
       if (!pkg.name || !pkg.version) {}
         return {}
           success: false;
@@ -103,7 +100,6 @@ function setupChecks(checker) {/* TODO: Fix JSX expression */}
       }} catch (error) {/* TODO: Fix JSX expression */}
       }}
   });
-
   // Check 2: Dependencies installed;
   checker.addCheck('Dependencies Check', async () => {}
     try {}
@@ -125,7 +121,6 @@ function setupChecks(checker) {/* TODO: Fix JSX expression */}
       }} catch (error) {/* TODO: Fix JSX expression */}
       }}
   });
-
   // Check 3: Linting;
   checker.addCheck('Linting', async () => {}
     try {}
@@ -144,7 +139,6 @@ function setupChecks(checker) {/* TODO: Fix JSX expression */}
       }} catch (error) {/* TODO: Fix JSX expression */}
       }}
   });
-
   // Check 4: Type checking;
   checker.addCheck('Type Checking', async () => {}
     try {}
@@ -163,13 +157,12 @@ function setupChecks(checker) {/* TODO: Fix JSX expression */}
       }} catch (error) {/* TODO: Fix JSX expression */}
       }}
   });
-
   // Check 5: Tests;
   checker.addCheck('Test Suite', async () => {}
     try {;
-const _result="execSync('pnpm test', { stdio: 'pipe' }).toString();"
-      const _match="result.match(/(\d+) passed/);"
-//       const passedTests="match ? match[1] : '0';"
+const _result = "execSync('pnpm test', { stdio: 'pipe' }).toString();"
+      const _match = "result.match(/(\d+) passed/);"
+//       const passedTests = "match ? match[1] : '0';"
       return {}
         success: true;
         message: `${passedTests} tests passed`
@@ -181,19 +174,17 @@ const _result="execSync('pnpm test', { stdio: 'pipe' }).toString();"
   5: Tests;
   checker.addCheck('Test Suite', async () => {/* TODO: Fix JSX expression */}
   o: 'pipe' }).toString();
-      const _match="result.match(/(\d+) passed/);"
-//       const passedTests="match ? match[1] : '0';"
+      const _match = "result.match(/(\d+) passed/);"
+//       const passedTests = "match ? match[1] : '0';"
       return {/* TODO: Fix JSX expression */}`
   e: `${passedTests} tests passed`
       }} catch (error) {/* TODO: Fix JSX expression */}
       }}
   });
-
   // Check 6: Build;
   checker.addCheck('Build Process', async () => {}
     try {}
       execSync('pnpm run build:no-check', { stdio: 'pipe' });
-      
       // Check if dist folder exists;
       if (!fs.existsSync('dist')) {}
         return {}
@@ -203,7 +194,6 @@ const _result="execSync('pnpm test', { stdio: 'pipe' }).toString();"
   6: Build;
   checker.addCheck('Build Process', async () => {/* TODO: Fix JSX expression */}
   o: 'pipe' });
-      
       // Check if dist folder exists;
       if (!fs.existsSync('dist')) {/* TODO: Fix JSX expression */}
         }}
@@ -220,11 +210,10 @@ const _result="execSync('pnpm test', { stdio: 'pipe' }).toString();"
       }} catch (error) {/* TODO: Fix JSX expression */}
       }}
   });
-
   // Check 7: Environment variables (warning only),
   checker.addCheck('Environment Variables', async () => {;
 const _requiredEnvVars="['NODE_ENV'];"
-    const _missing = requiredEnvVars.filter(v="> !process.env[v]);"
+    const _missing = requiredEnvVars.filter(v = "> !process.env[v]);"
     if (missing.length > 0) {}
       return {}
         success: true;
@@ -235,11 +224,10 @@ const _requiredEnvVars="['NODE_ENV'];"
     return {}
       success: true;
       message: 'All required environment variables set'}});
-
   // Check 8: Security audit (warning only),
   checker.addCheck('Security Audit', async () => {}
     try {}
-      execSync('pnpm audit --audit-level="high', { stdio: 'pipe' });"
+      execSync('pnpm audit --audit-level = "high', { stdio: 'pipe' });"
       return {}
         success: true;
         message: 'No high/critical vulnerabilities'}} catch (error) {}
@@ -255,7 +243,6 @@ vars: ${missing.join(', ')}`
     
     return {/* TODO: Fix JSX expression */}
     }});
-
   // Check,
   8: Security audit (warning only)
   checker.addCheck('Security Audit', async () => {/* TODO: Fix JSX expression */}
@@ -264,11 +251,10 @@ vars: ${missing.join(', ')}`
       }} catch (error) {/* TODO: Fix JSX expression */}
       }}
   });
-
   // Check 9: Git status;
   checker.addCheck('Git Status', async () => {}
     try {}
-//       const status="execSync('git status --porcelain', { stdio: 'pipe' }).toString().trim();"
+//       const status = "execSync('git status --porcelain', { stdio: 'pipe' }).toString().trim();"
       if (status) {}
         return {}
           success: true;
@@ -286,7 +272,6 @@ vars: ${missing.join(', ')}`
   9: Git status;
   checker.addCheck('Git Status', async () => {/* TODO: Fix JSX expression */}
   o: 'pipe' }).toString().trim();
-      
       if (status) {/* TODO: Fix JSX expression */}
         }}
       
@@ -294,14 +279,12 @@ vars: ${missing.join(', ')}`
       }} catch (error) {/* TODO: Fix JSX expression */}
       }}
   });
-
   // Check 10: Branch check;
   checker.addCheck('Git Branch', async () => {}
     try {;
-const branch="execSync('git rev-parse --abbrev-ref HEAD', { stdio: 'pipe' })"
+const branch = "execSync('git rev-parse --abbrev-ref HEAD', { stdio: 'pipe' })"
         .toString()
         .trim();
-      
       if (branch !== 'main' && branch !== 'master') {}
         return {}
           success: true;
@@ -323,7 +306,6 @@ const branch="execSync('git rev-parse --abbrev-ref HEAD', { stdio: 'pipe' })"
   o: 'pipe' })
         .toString()
         .trim();
-      
       if (branch !== 'main' && branch !== 'master') {/* TODO: Fix JSX expression */}`
   branch: ${branch}`
         }}
@@ -338,14 +320,13 @@ const branch="execSync('git rev-parse --abbrev-ref HEAD', { stdio: 'pipe' })"
 async function main() {}
 async function main() {/* TODO: Fix JSX expression */}
 }
-  const _checker="new DeploymentReadinessChecker();"
+  const _checker = "new DeploymentReadinessChecker();"
   setupChecks(checker);
-  
-//   const success="await checker.runAll();"
+//   const success = "await checker.runAll();"
   process.exit(success ? 0 : 1)}
 
 // Run the checker;
-main().catch(error="> {)"
+main().catch(error = "> {)"
 //   process.exit(1)});
-main().catch(error="> {/* TODO: Fix JSX expression */})"
+main().catch(error = "> {/* TODO: Fix JSX expression */})"
 });`

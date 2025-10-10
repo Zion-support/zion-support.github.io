@@ -56,7 +56,7 @@ constructor(props: Props) {}
   logErrorToService = (error: Error, errorInfo: ErrorInfo) => {}
     // In a real application, you would send this to an error reporting service;
     // like Sentry, LogRocket, or Bugsnag;
-const errorData="{}"
+const errorData = {}
       message: error.message,
       stack: error.stack,
       componentStack: errorInfo.componentStack,
@@ -133,12 +133,12 @@ const errorData="{}"
                 </details>
               )}
             <div className=""flex flex-col sm:flex-row gap-4"></div>"
-              <button onClick="{this.handleRetry}></button>"
+              <button onClick = "{this.handleRetry}></button>"
                 className=""flex items-center justify-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300">"
                 <RefreshCw className=""w-4 h-4" /></RefreshCw>"
                 Try Again;
               </button>
-              <button onClick="{this.handleGoHome}></button>"
+              <button onClick = "{this.handleGoHome}></button>"
                 className=""flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 border border-white/20">"
                 <Home className=""w-4 h-4" /></Home>"
                 Go Home;

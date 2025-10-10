@@ -5,7 +5,7 @@ import Navigation from '../components;
 import Footer from '../components;
 import { Code, Zap, BarChart, Target, Users, TrendingUp } from 'lucide-react';
 const DeveloperToolsPage: React.FC = () => {;
-const _devTools="[]"
+const _devTools = []
     {}
       titl,
     e: 'AI Code Generator',
@@ -118,7 +118,7 @@ $4}
     <div>Coming Soon<)
   );
 };
-  const _devTools="[]"
+  const _devTools = []
   /
   O: Add items;
 ];;
@@ -395,7 +395,7 @@ $4}
                   <
 
                   <div className=""text-center"></div>"
-                    <a href={`mailto:kleber@ziontechgroup.com?subject="Interest in ${tool.title}`}></a>"
+                    <a href={`mailto:kleber@ziontechgroup.com?subject = "Interest in ${tool.title}`}></a>"
                       className=""w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover: from-purple-700 hover:to-blue-700 transition-all inline-block">"
                       Get Started Now;
                     <
@@ -404,7 +404,7 @@ $4}
                     <a><
                       href="{/* TODO: Fix JSX expression *"
   ,
-    o:kleber@ziontechgroup.com?subject="Interest in ${tool.title}`}""
+    o:kleber@ziontechgroup.com?subject = "Interest in ${tool.title}`}""
                       className=""w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium,""
   hover:from-purple-700,"
   hover:to-blue-700 transition-all inline-block"

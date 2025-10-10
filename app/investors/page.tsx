@@ -1,11 +1,11 @@
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 ;
-const PagePage: React.FC = () => {const features="[]"
+const PagePage: React.FC = () => {const features = []
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 const PagePage: React.FC = () => {}
-  const features="[]"
+  const features = []
     {}
       icon: Brain,
       title: 'AI-Powered Intelligence',
@@ -47,7 +47,7 @@ const PagePage: React.FC = () => {}
       benefits: ['End-to-end encryption', 'Access controls', 'Audit trails', 'Compliance support']
     }
   ];
-  const benefits="[]"
+  const benefits = []
     'Transform your business with AI technology',
     'Make data-driven decisions with confidence',
     'Identify trends and opportunities early',

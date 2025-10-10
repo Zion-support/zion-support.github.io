@@ -8,7 +8,7 @@ const topArticle, s = newArticles20, 2, 5.sl, i, c, e(, 0, 3); const topService,
       <div, className=""container, m, x-auto, p, x-6"></div>"
         <div, className=""te, x, t-center, m, b-16">;"
 const NewContentShowcas, e: React.FC = () => { ;
-const topArticle, s = newArticles20, 2, 5.sl, i, c, e(, 0, 3); const topService, s="newServices20, 2, 6.sli, c, e(, 0, 3); return ("
+const topArticle, s = newArticles20, 2, 5.sl, i, c, e(, 0, 3); const topService, s = "newServices20, 2, 6.sli, c, e(, 0, 3); return ("
     <section, classNam, e=""py-20, b, g-gradie, n, t-to-br, fro, m-indi, g, o-50, vi, a-purp, l, e-50, t, o-pi, n, k-50"></section>"
       <div, className=""container, m, x-auto, p, x-6"></section>"
         <div, className=""te, x, t-center, m, b-16"></div>"

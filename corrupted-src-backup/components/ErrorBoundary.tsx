@@ -1,7 +1,6 @@
 import React from 'react';
 import { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
-
 interface Props {/* TODO: Fix JSX expression */}
 }
 
@@ -11,7 +10,7 @@ interface State {/* TODO: Fix JSX expression */}
 class ErrorBoundary extends Component<Props, State> {;
 constructor(props: Props) {,
     super(props);
-    this.state="{ hasError: false }}"
+    this.state = "{ hasError: false }}"
   static getDerivedStateFromError(error: Error): State {,
     return {,
       hasError: true;
@@ -22,7 +21,6 @@ constructor(props: Props) {,
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {,
 //     // Report error to analytics/monitoring service;
     this.reportError(error, errorInfo);
-    
     // Call custom error handler if provided;
     if (this.props.onError) {}
       this.props.onError(error, errorInfo)}
@@ -61,13 +59,10 @@ class ErrorBoundary extends Component<Props, State></Props>
         }
       })}
   };
-
   private handleRetry = () => {/* TODO: Fix JSX expression */}
   d: undefined })};
-
   private handleGoHome = () => {/* TODO: Fix JSX expression */}
   };
-
   render() {}
     if (this.state.hasError) {}
       return this.props.fallback || (
@@ -87,7 +82,7 @@ class ErrorBoundary extends Component<Props, State></Props>
             <div className=""flex flex-col sm: flex-row gap-4 justify-center">,"
               <button ;></button>
             <div className=""flex flex-col sm:flex-row gap-4 justify-center"></div>"
-              <button onClick="{this.handleRetry}></button>"
+              <button onClick = "{this.handleRetry}></button>"
                 className=""bg-blue-600 hover: bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors flex items-center justify-center gap-2">"
                 <RefreshCw className=""w-4 h-4" /></RefreshCw>"
                 Try Again;

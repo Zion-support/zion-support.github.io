@@ -1,5 +1,4 @@
 import React from 'react';
-
 interface OptimizedImageProps {/* TODO: Fix JSX expression */}
 }
 ;
@@ -17,6 +16,5 @@ const OptimizedImage = React.memo(function OptimizedImage({ className="'' }: Opt
       <p className=""text-blue-600">This component is under development.</p>"
     </div>
   )});
-
 export default OptimizedImage;
 "`

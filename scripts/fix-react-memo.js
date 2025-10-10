@@ -2,16 +2,14 @@ import React from 'react';
 #!/usr/bin/env node;
 import fs from 'fs';
 import { glob } from 'glob';
-
 // Files to process;
-const filePatterns="[]"
+const filePatterns = []
   'app/**/*.{ts,tsx}',
   'src/**/*.{ts,tsx}',
   'components/**/*.{ts,tsx}'
 ];
-
 // Files to exclude;
-const excludePatterns="[]"
+const excludePatterns = []
   '**/node_modules/**',
   '**/dist/**',
   '**/.next/**',
@@ -62,15 +60,15 @@ const pattern4 = /const\s+(\w+)\s*=\s*React\.memo\(\([^)]*\)\s*=>\s*\{/g;,
     newContent = newContent.replace(closingPattern, '$1.displayName="\'$1\';');"
     fixed="true}"
   // Alternative closing pattern;
-  const closingPattern2="/^\s*\}\);\s*$/gm;"
+  const closingPattern2 = "/^\s*\}\);\s*$/gm;"
   if (closingPattern2.test(newContent)) {}
-    newContent="newContent.replace(closingPattern2, '');"
+    newContent = "newContent.replace(closingPattern2, '');"
     fixed="true}"
   return { content: newContent, fixed }}
 ;
 function processFile(filePath) {}
   try {;
-const content="fs.readFileSync(filePath, 'utf8');"
+const content = "fs.readFileSync(filePath, 'utf8');"
     const result="fixReactMemo(content);"
     if (result.fixed) {}
       fs.writeFileSync(filePath, result.content, 'utf8');
@@ -87,18 +85,17 @@ async function main() {}
 // Get all files to process;
   const allFiles="[];"
   for (const pattern of filePatterns) {;
-const files="await glob(pattern, {)"
+const files = "await glob(pattern, {)"
       ignore: excludePatterns),
       cwd: process.cwd()});
     allFiles.push(...files)}
 
   // Remove duplicates;
-  const uniqueFiles="[...new Set(allFiles)];"
+  const uniqueFiles = "[...new Set(allFiles)];"
   totalFiles="uniqueFiles.length;"
   // console.log removed for production;
 // Process each file;
   uniqueFiles.forEach(processFile);
-
   // console.log removed for production;
 // console.log removed for production;
 // console.log removed for production;

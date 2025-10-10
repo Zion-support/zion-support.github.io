@@ -1,14 +1,13 @@
 import React from 'react';
-
 export default function AboutSection() {;
-const stats="[]"
+const stats = []
     { number: '500+', label: 'Projects Completed' },
     { number: '50+', label: 'Happy Clients' },
     { number: '5+', label: 'Years Experience' },
     { number: '99%', label: 'Success Rate' }
   ];
 ;
-const values="[]"
+const values = []
     {}
       title: 'Innovation First',
       description: 'We stay at the forefront of technology, constantly exploring new AI and IT solutions.',
@@ -37,7 +36,6 @@ const values="[]"
       )
     }
   ];
-
   return (
     <section id="about" className=""py-20 relative"></section>"
       <div className=""max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>"
@@ -125,7 +123,7 @@ const values="[]"
                   <div key={index} className=""flex items-center justify-between"></div>"
                     <span className=""text-gray-300">{skill}</span>"
                     <div className=""w-24 bg-gray-700 rounded-full h-2"></div>"
-                      <div className="bg-gradient-to-r from-cyan-400 to-purple-500 h-2 rounded-full" style="{{ width: '95%' }}></div>"
+                      <div className="bg-gradient-to-r from-cyan-400 to-purple-500 h-2 rounded-full" style = "{{ width: '95%' }}></div>"
                     </div>
                   </div>
                 ))}

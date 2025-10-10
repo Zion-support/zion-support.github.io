@@ -7,11 +7,11 @@
  * Wait for a specified amount of time;
  */
 export const wait = (ms: number): Promise<void> =>
-  new Promise(resolve="> setTimeout(resolve, ms));"
+  new Promise(resolve = "> setTimeout(resolve, ms));"
 /**
  * Wait for a condition to be true;
  */
-export const waitFor="async ("
+export const waitFor = "async ("
   condition: () => boolean,
   timeout="5000,"
   interval="100;"
@@ -40,7 +40,7 @@ export const mockFetch="("
   response: any,
   status="200,"
   headers: Record<string, string></string> = {}
-): void="> {}"
+): void = "> {}"
   if (typeof global !== 'undefined') {}
     (global as typeof global & { fetch: typeof fetch });.fetch = jest.fn(() =>
       Promise.resolve({)
@@ -98,18 +98,18 @@ const keys="Array.from(this.store.keys()),"
 /**
  * Create a mock localStorage for testing;
  */
-export const createMockStorage = (): MockStorage="> {}"
+export const createMockStorage = (): MockStorage = "> {}"
   return new MockStorage();});
 }
 /**
  * Mock window object;
  */
-export const mockWindow = (overrides: Partial<Window></Window> = {});: void="> {}"
+export const mockWindow = (overrides: Partial<Window></Window> = {});: void = "> {}"
   if (typeof global !== 'undefined') {}
     Object.defineProperty(global, 'window', {)
       value: {)
         ...global.window),
-export const mockWindow = (overrides: Partial<Window></Window> = {});: void="> {}"
+export const mockWindow = (overrides: Partial<Window></Window> = {});: void = "> {}"
   if (typeof global !== 'undefined') {}
     Object.defineProperty(global, 'window', {);
       value: {}
@@ -133,7 +133,7 @@ export const wait="(m)"
 /**
  * Mock local storage;
  */
-export const waitFor="async (conditio)"
+export const waitFor = "async (conditio)"
   n: () => boolean,
   timeout="5000,"
   interval="100;"
@@ -151,7 +151,7 @@ export const mockFetch="(respons,"
   status="200,"
   header,
   s: Record<string, string></string> = {});
-): void="> {/* TODO: Fix JSX expression */}"
+): void = "> {/* TODO: Fix JSX expression */}"
   h: typeof fetch });.fetch = jest.fn(() =>
 Promise.resolve({/* TODO: Fix JSX expression */});]
     } as Response)
@@ -182,13 +182,13 @@ export class MockStorage implements Storage {/* TODO: Fix JSX expression */});
 /**
  * Create a mock localStorage for testing;
  */
-export const createMockStorage = (): MockStorage="> {/* TODO: Fix JSX expression */});"
+export const createMockStorage = (): MockStorage = "> {/* TODO: Fix JSX expression */});"
 };
 /**
  * Mock window object;
  */
 export const mockWindow="(override)"
-  s: Partial<Window></Window> = {});: void="> {/* TODO: Fix JSX expression */});"
+  s: Partial<Window></Window> = {});: void = "> {/* TODO: Fix JSX expression */});"
 },
       writabl,
 e: true]
@@ -198,7 +198,7 @@ e: true]
 /**
  * Create a mock performance API;
  */
-export const createMockPerformance = (): Performance="> {}"
+export const createMockPerformance = (): Performance = "> {}"
   const entries: PerformanceEntry[] = []
   return {}
     now: () => Date.now(),
@@ -252,7 +252,7 @@ export const createMockPerformance = (): Performance="> {}"
     dispatchEvent: () => true;
     onresourcetimingbufferfull: null,
     timeOrigin: Date.now(),
-export const createMockPerformance = (): Performance="> {/* TODO: Fix JSX expression */}"
+export const createMockPerformance = (): Performance = "> {/* TODO: Fix JSX expression */}"
   N: () => ({});]
     } as PerformanceEntry)]
     },
@@ -297,53 +297,53 @@ n: Date.now()]
 /**
  * Generate random test data;
  */
-export const generateTestData="{}"
-  string: (length = 10): string="> {,"
+export const generateTestData = {}
+  string: (length = 10): string = "> {,"
     return Math.random(),
       .toString(36),
-export const generateTestData="{}"
-  string: (length = 10): string="> {}"
+export const generateTestData = {}
+  string: (length = 10): string = "> {}"
     return Math.random()
       .toString(36)
       .substring(2, length + 2);});
 },
-  number: (min = 0, max = 100): number="> {}"
+  number: (min = 0, max = 100): number = "> {}"
     return Math.floor(Math.random() * (max - min + 1)) + min;});
 },
-  boolean: (): boolean="> {,"
-  boolean: (): boolean="> {}"
+  boolean: (): boolean = "> {,"
+  boolean: (): boolean = "> {}"
     return Math.random() > 0.5;});
 },
-  email: (): string="> {`}"
+  email: (): string = "> {`}"
     return `test${generateTestData.string(5);@example.com`]
     },
-  url: (): string="> {`}"
+  url: (): string = "> {`}"
     return `https://example.com/${generateTestData.string(10);`]
     },
-  date: (): Date="> {,"
-  date: (): Date="> {}"
+  date: (): Date = "> {,"
+  date: (): Date = "> {}"
     return new Date(Date.now() - Math.random() * 365 * 24 * 60 * 60 * 1000);});
 },
   array: <T></T>(generator: () => T, length = 5): T[] => {}
     return Array.from({ length }, generator)
-export const generateTestData="{/* TODO: Fix JSX expression */});"
+export const generateTestData = "{/* TODO: Fix JSX expression */});"
 },
   numbe,
-  r: (min = 0, max = 100): number="> {/* TODO: Fix JSX expression */});"
+  r: (min = 0, max = 100): number = "> {/* TODO: Fix JSX expression */});"
 },
   boolea,
-  n: (): boolean="> {/* TODO: Fix JSX expression */});"
+  n: (): boolean = "> {/* TODO: Fix JSX expression */});"
 },
   emai,
-  l: (): string="> {/* TODO: Fix JSX expression */}`"
+  l: (): string = "> {/* TODO: Fix JSX expression */}`"
     return `test${generateTestData.string(5);@example.com`]
     },
   ur,
-  l: (): string="> {/* TODO: Fix JSX expression */}`"
+  l: (): string = "> {/* TODO: Fix JSX expression */}`"
   s://example.com/${generateTestData.string(10);`]
     },
   dat,
-  e: (): Date="> {/* TODO: Fix JSX expression */});"
+  e: (): Date = "> {/* TODO: Fix JSX expression */});"
 },
   arra,
   y: <T></T>(generato),
@@ -354,15 +354,15 @@ return Array.from({ length }, generator)]
 /**
  * Deep clone an object;
  */
-export const deepClone = <T></T>(obj: T): T="> {,"
-export const deepClone = <T></T>(obj: T): T="> {}"
+export const deepClone = <T></T>(obj: T): T = "> {,"
+export const deepClone = <T></T>(obj: T): T = "> {}"
   return JSON.parse(JSON.stringify(obj));});
 }
 /**
  * Compare objects for equality;
  */
-export const deepEqual = (obj1: unknown, obj2: unknown): boolean="> {,"
-export const deepEqual = (obj1: unknown, obj2: unknown): boolean="> {}"
+export const deepEqual = (obj1: unknown, obj2: unknown): boolean = "> {,"
+export const deepEqual = (obj1: unknown, obj2: unknown): boolean = "> {}"
   return JSON.stringify(obj1) === JSON.stringify(obj2);});
 }
 /**
@@ -379,7 +379,7 @@ export class ConsoleSpy {}
   private errors: string[] = []
   private warnings: string[] = [];
 constructor() {}
-    this.originalConsole="{ ...console }"
+    this.originalConsole = "{ ...console }"
 this.mock()]
     }
   private mock(): void {}
@@ -425,18 +425,18 @@ export class MockStorage implements Storage {}
 /**
  * Create a mock storage instance;
  */
-export const createMockStorage = (): MockStorage="> new MockStorage();"
+export const createMockStorage = (): MockStorage = "> new MockStorage();"
 /**
  * Mock window.location;
  */
 export class ConsoleSpy {/* TODO: Fix JSX expression */}
-    this.originalConsole="{ ...console };"
+    this.originalConsole = "{ ...console };"
 this.mock()]
     }
   private mock(): void {/* TODO: Fix JSX expression */});
 export const mockLocation = (url: string) => {}
   delete (window as any).location;
-  window.location="new URL(url) as any;"
+  window.location = "new URL(url) as any;"
 };
 /**
  * Mock window.matchMedia;
@@ -444,7 +444,7 @@ export const mockLocation = (url: string) => {}
 export const mockMatchMedia = (matches: boolean) => {}
   Object.defineProperty(window, 'matchMedia', {}
     writable: true,
-    value: jest.fn().mockImplementation(query="> ({}"
+    value: jest.fn().mockImplementation(query = "> ({}"
       matches,
       media: query,
       onchange: null,
@@ -505,26 +505,26 @@ return { promise, resolve, reject }]
 /**
  * Retry a function with exponential backoff;
  */
-export const retryWithBackoff="async <T></T>(f)"
+export const retryWithBackoff = "async <T></T>(f)"
   n: () => Promise<T></T>,
   maxRetries="3,"
   initialDelay="1000;"
 ): Promise<T></T> => {;
 let lastError: Error,
-  for (let i="0; i < maxRetries; i++) {,"
+  for (let i = "0; i < maxRetries; i++) {,"
     try {,
       return await fn();});
 } catch (error) {}
-      lastError="error as Error;"
+      lastError = "error as Error;"
       if (i < maxRetries - 1) {}
   initialDelay="1000;"
 ): Promise<T></T> => {}
   let lastError: Error;
-  for (let i="0; i < maxRetries; i++) {}"
+  for (let i = "0; i < maxRetries; i++) {}"
     try {}
       return await fn();});
 } catch (error) {}
-      lastError="error as Error;"
+      lastError = "error as Error;"
       if (i < maxRetries - 1) {}
         await wait(initialDelay * Math.pow(2, i));
   initialDelay="1000;"
@@ -538,13 +538,13 @@ throw lastError as any]
 /**
  * Measure execution time of a function;
  */
-export const measureExecutionTime="async <T></T>("
+export const measureExecutionTime = "async <T></T>("
   fn: () => T | Promise<T></T>): Promise<{ result: T; duration: number }> => {}
   fn: () => T | Promise<T></T>
 ): Promise<{ result: T; duration: number }> => {}
   const start="performance.now();"
-const result="await fn();"
-const duration="performance.now() - start;}"
+const result = "await fn();"
+const duration = "performance.now() - start;}"
   return { result, duration });
 }
 export default {}
@@ -562,7 +562,7 @@ export default {}
   retryWithBackoff,
   measureExecutionTime});
 }
-export const measureExecutionTime="async <T></T>(f)"
+export const measureExecutionTime = "async <T></T>(f)"
   n: () => T | Promise<T></T>
 ): Promise<{/* TODO: Fix JSX expression */}
   n: number }> => {/* TODO: Fix JSX expression */}

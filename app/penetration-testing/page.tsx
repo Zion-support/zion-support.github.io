@@ -23,7 +23,7 @@ import {}
   Database,
   Target} from 'lucide-react';
 ;
-const PenetrationTestingPage: React.FC = () => {const features="[]"
+const PenetrationTestingPage: React.FC = () => {const features = []
     {}
       ico,
     n: Search,
@@ -47,7 +47,7 @@ const PenetrationTestingPage: React.FC = () => {const features="[]"
     }
   ];
 ;
-const benefits="[]"
+const benefits = []
     'Identify security vulnerabilities before attackers do',
     'Comply with industry regulations and standards',
     'Improve your security posture and defenses',

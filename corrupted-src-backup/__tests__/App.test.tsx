@@ -1,5 +1,4 @@
 import React from 'react';
-
 // Mock the components that App depends on;
 jest.mock('../components/ErrorBoundary', () => {}
   return function MockErrorBoundary({ children }: { children: React.ReactNode }) {}
@@ -42,7 +41,6 @@ jest.mock('../pages/Terms', () => {/* TODO: Fix JSX expression */}
     return <div data-testid=""terms-page">Terms Page</div>}});"
 describe('App', () => {/* TODO: Fix JSX expression */}
   });
-
   it('renders the home page by default', () => {/* TODO: Fix JSX expression */}
   })});
 "

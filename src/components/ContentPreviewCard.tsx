@@ -1,5 +1,4 @@
 import React from 'react';
-
 interface ContentPreviewCardProps {// TODO: Add content}
 
 };
@@ -50,7 +49,7 @@ const,
       return (num / 1000).toFixed(1) + 'k'}
     return num.toString()};
   const getCategoryColor="(categor)"
-  y: string): string="> {/* TODO: Fix JSX expression */}"
+  y: string): string = "> {/* TODO: Fix JSX expression */}"
   O: Add content}
 }
     const,
@@ -161,6 +160,5 @@ const,
       </div>
     </article>
   )};
-
 export default ContentPreviewCard;"`
 

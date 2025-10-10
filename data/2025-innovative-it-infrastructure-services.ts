@@ -1,5 +1,5 @@
 
-export const innovativeITInfrastructureServices2025="[{pricing: starter: unknown;"
+export const innovativeITInfrastructureServices2025 = "[{pricing: starter: unknown;"
         price: 299;
         period: 'month',
         features: [,
@@ -12,7 +12,7 @@ export const innovativeITInfrastructureServices2025="[{pricing: starter: unknown
         price: 799;
         period: 'month',
         features: [,
-export const innovativeITInfrastructureServices2025="[{/* TODO: Fix JSX expression */}"
+export const innovativeITInfrastructureServices2025 = "[{/* TODO: Fix JSX expression */}"
         ]}
       },
       professiona,
@@ -50,7 +50,7 @@ export const innovativeITInfrastructureServices2025="[,"
   y: 'Cybersecurity',
     tag,
   s: [,
-export const innovativeITInfrastructureServices2025="[]"
+export const innovativeITInfrastructureServices2025 = []
       'Revolutionary edge computing platform that leverages quantum computing principles to provide ultra-fast, secure, and intelligent edge processing for IoT, autonomous systems, and real-time applications.'
       'Quantum-enhanced edge processing with 1000 x speed improvement'
       'Intelligent workload distribution and optimization'
@@ -929,7 +929,7 @@ export const innovativeITInfrastructureServices2025="[]"
       'Compliance tools'],
     complianc,
   e: [,
-export const innovativeITInfrastructureServices2025="[ pricin,"
+export const innovativeITInfrastructureServices2025 = "[ pricin,"
   g: starte,
   r: pric,
   e: 299, perio,
@@ -944,7 +944,7 @@ export const innovativeITInfrastructureServices2025="[ pricin,"
   d: 'month', feature,
   s: [,' 'Complete security suite',' 'Custom deployment',' 'Dedicated support',' 'White - label solution']}},' categor,
   y: 'Cybersecurity', tag,
-  s: [, export const innovativeITInfrastructureServices2025="[ ' 'Revolutionary edge computing platform that leverages quantum computing principles to provide ultra-fast, secure, and intelligent edge processing for IoT, autonomous systems, and real-time applications.'' 'Quantum-enhanced edge processing with 1000x speed improvement'' 'Intelligent workload distribution and optimization'' 'Real-time data processing and analytics'' 'Advanced security with quantum encryption'' 'Autonomous edge node management'' 'Multi-cloud edge orchestration'' 'AI-powered predictive maintenance'' 'Zero-latency communication protocols'' 'Scalable edge infrastructure'' 'Energy-efficient quantum processing' pricin,"
+  s: [, export const innovativeITInfrastructureServices2025 = "[ ' 'Revolutionary edge computing platform that leverages quantum computing principles to provide ultra-fast, secure, and intelligent edge processing for IoT, autonomous systems, and real-time applications.'' 'Quantum-enhanced edge processing with 1000x speed improvement'' 'Intelligent workload distribution and optimization'' 'Real-time data processing and analytics'' 'Advanced security with quantum encryption'' 'Autonomous edge node management'' 'Multi-cloud edge orchestration'' 'AI-powered predictive maintenance'' 'Zero-latency communication protocols'' 'Scalable edge infrastructure'' 'Energy-efficient quantum processing' pricin,"
   g: starte,
   r: ' 'Zero Trust',' 'Quantum Security',' 'AI Security',' 'Threat Detection',' 'Network Security'], ' websit,
   e: 'http,

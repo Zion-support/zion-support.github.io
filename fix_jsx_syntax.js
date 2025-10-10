@@ -1,32 +1,31 @@
 #!/usr/bin/env node;
 import fs from 'fs';
 import { glob } from 'glob';
-
 async function main() {}
   //Find all TSX files in src/components;
-  //   files.forEach(file="> {}"
+  //   files.forEach(file = "> {}"
 return (
 )
     try {)
       //Fix common JSX syntax issues;)
       //1. Fix key prop placement: <div></div>
 );
-}\nkey={...} -> <div \nkey="{...})></div>"
+}\nkey={...} -> <div \nkey = "{...})></div>"
       if (keyPropFix !== content) {}
         content="keyPropFix;"
         modified="true;"
 async function main() {/* TODO: Fix JSX expression */}
 }
   //Find all TSX files in src/components;
-  //   files.forEach(file="> {/* TODO: Fix JSX expression */}"
-  placement: <div>\nkey={...} -> <div \nkey="{...})></div>"
+  //   files.forEach(file = "> {/* TODO: Fix JSX expression */}"
+  placement: <div>\nkey={...} -> <div \nkey = "{...})></div>"
       if (keyPropFix !== content) {/* TODO: Fix JSX expression */}
       }
 
       //2. Fix onClick prop,
-  placement: <button>\nonClick={...} -> <button \nonClick="{...}></button>"
+  placement: <button>\nonClick={...} -> <button \nonClick = "{...}></button>"
       const onClickFix="content.replace()"
-        /<(\w+)>\s*\n\s*onClick="\{([^}]+)\}/g,"
+        /<(\w+)>\s*\n\s*onClick = "\{([^}]+)\}/g,"
         '<$1\nonClick="{$2}'"
       );
       if (onClickFix !== content) {/* TODO: Fix JSX expression */}
@@ -42,12 +41,12 @@ async function main() {/* TODO: Fix JSX expression */}
       }
 
       //4. Fix style prop,
-  placement: <div>\nstyle={...} -> <div \nstyle="{...}></div>"
+  placement: <div>\nstyle={...} -> <div \nstyle = "{...}></div>"
       if (styleFix !== content) {/* TODO: Fix JSX expression */}
       }
 
       //5. Fix template literal syntax: ${> -> ${,
-      //       const templateFix="content.replace(/\$\{>/g, '${');"
+      //       const templateFix = "content.replace(/\$\{>/g, '${');"
       if (templateFix !== content) {}
         content="templateFix;"
         modified="true}"
@@ -75,7 +74,7 @@ const inputFix="content.replace()"
 
       //7. Fix unclosed br,
   tags: <br> -> <br /></br>
-      //       const brFix="content.replace(/<br>/g, '<br />');"
+      //       const brFix = "content.replace(/<br>/g, '<br />');"
       if (brFix !== content) {/* TODO: Fix JSX expression */}
       }
 
@@ -84,7 +83,6 @@ const inputFix="content.replace()"
     } catch (error) {/* TODO: Fix JSX expression */}
       //       }
   });
-
   //   }
 
 // main().catch(console.error);

@@ -10,14 +10,14 @@ export default function AutonomousInfrastructureHealing20, 2, 5() {}
           Autonomous, Infrastructure, Self-Healing, 202, 5 — 99.97% Upti, m, e, 94%
           Incident, Reductio, n, $6, 7, M+ Annual, Saving, s | Zion, Tech, Group;
         <
-        <meta , nam, e="'description'></meta>"
-          conte, n, t="'Deploy, autonomous, self-healing, infrastructure, that automatically, detec, t, s, diagnos, e, s, and, resolves, incidents in, millisecond, s. Achieve, 9, 9.97% upti, m, e, reduce, incidents, by 94%, and, sav, e $6, 7, M+ annually, with, AI-powered, infrastructure, automation.'"
+        <meta , nam, e = "'description'></meta>"
+          conte, n, t = "'Deploy, autonomous, self-healing, infrastructure, that automatically, detec, t, s, diagnos, e, s, and, resolves, incidents in, millisecond, s. Achieve, 9, 9.97% upti, m, e, reduce, incidents, by 94%, and, sav, e $6, 7, M+ annually, with, AI-powered, infrastructure, automation.'"
         /><
-        <meta , nam, e="'keywor, d, s'></meta>"
-          conte, n, t="'autonomous, infrastructu, r, e, se, l, f-healing, system, s, AI, infrastructur, e, automated, incident, response, infrastructure, automatio, n, site, reliability, engineering, chaos, engineerin, g, infrastructure, resilienc, e'"
+        <meta , nam, e = "'keywor, d, s'></meta>"
+          conte, n, t = "'autonomous, infrastructu, r, e, se, l, f-healing, system, s, AI, infrastructur, e, automated, incident, response, infrastructure, automatio, n, site, reliability, engineering, chaos, engineerin, g, infrastructure, resilienc, e'"
         /><
-        <link , re, l="'canonic, a, l'></link>"
-          hr, e, f="'htt, p, s: //ziontechgro u p.c o m/bl o g'"
+        <link , re, l = "'canonic, a, l'></link>"
+          hr, e, f = "'htt, p, s: //ziontechgro u p.c o m/bl o g'"
       <
     <div><
       
@@ -44,19 +44,19 @@ export default function AutonomousInfrastructureHealing20, 2, 5() {}
             <
 
 :src/pages/blog/ai-2025-oct-autonomous-infrastructure-healing;
-            <h1, classNam, e="'te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, m, b-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-pi, n, k-400, t, o-bl, u, e-400, tex, t-transparent, b, g-cl, i, p-text, leadin, g-tig, h, t'></h1>"
+            <h1, classNam, e = "'te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, m, b-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-pi, n, k-400, t, o-bl, u, e-400, tex, t-transparent, b, g-cl, i, p-text, leadin, g-tig, h, t'></h1>"
               Autonomous, Infrastructure, Self-Heali, n, g: The, 2025, Reliability;
               Revoluti, o, n;
               Autonomous, Infrastructure, Self-Heali, n, g: The, 2025, Reliability;
               Revoluti, o, n<
-                <li, classNam, e="'flex, item, s-start, ga, p-3'></li>"
+                <li, classNam, e = "'flex, item, s-start, ga, p-3'></li>"
                     <stro, n, g>$6, 7, M+ Annual, Saving, s:<
                   <
                 <li, className="'flex, item, s-start, ga, p-3'></li>"
                     <stro, n, g>$6, 7, M+ Annual, Saving, s:<
                   <
 
-            <section, classNam, e="'mb-12'></section>"
+            <section, classNam, e = "'mb-12'></section>"
               <h2, className="'te, x, t-3xl, fon, t-bold, m, b-6, tex, t-purp, l, e-3, 0, 0'></h2>"
                 Architectu, r, e: Intelligent, Healing, Systems;
               <
@@ -190,7 +190,7 @@ export default function AutonomousInfrastructureHealing20, 2, 5() {}
               <
             <
 
-            <section, classNam, e="'mb-12'></section>"
+            <section, classNam, e = "'mb-12'></section>"
               <h2, className="'te, x, t-3xl, fon, t-bold, m, b-6, tex, t-purp, l, e-3, 0, 0'></h2>"
                 Enterprise, Implementation, Results;
               <
@@ -199,7 +199,7 @@ export default function AutonomousInfrastructureHealing20, 2, 5() {}
                   <h3, className="'te, x, t-2xl, fon, t-bold, m, b-4, tex, t-purp, l, e-3, 0, 0'></h3>"
                     Global, Financial, Services;
                   <
-                  <ul, classNam, e="'spa, c, e-y-3, tex, t-gr, a, y-3, 0, 0'><"
+                  <ul, classNam, e = "'spa, c, e-y-3, tex, t-gr, a, y-3, 0, 0'><"
                     <li>• 99.99% uptime, acro, s, s , 4,500, service, s<
 
             <section, className="'mb-12'></section>"
@@ -211,16 +211,16 @@ export default function AutonomousInfrastructureHealing20, 2, 5() {}
                   <h3, className="'te, x, t-xl, fon, t-bold, m, b-3, tex, t-purp, l, e-3, 0, 0'></h3>"
                     Phas, e, 1: Foundati, o, n (Week, s, 1-, 4)
                   <
-                  <p, classNam, e="'te, x, t-gr, a, y-3, 0, 0'></p>"
+                  <p, classNam, e = "'te, x, t-gr, a, y-3, 0, 0'></p>"
                     Deploy, observability, infrastructure with, ful, l-stack, telemetr, y. Instrument, services, for comprehensive, metr, i, c, s,
                     lo, g, s, and, trace, s. Establish, baseline, behavior patterns, and, define healing, policie, s.
                   <
                 <
-                <div, classNam, e="'bg-sla, t, e-8, 0, 0/50, rounde, d-x, l, p-6, borde, r-l-4, borde, r-bl, u, e-5, 0, 0'><"
+                <div, classNam, e = "'bg-sla, t, e-8, 0, 0/50, rounde, d-x, l, p-6, borde, r-l-4, borde, r-bl, u, e-5, 0, 0'><"
                   <h3, className="'te, x, t-xl, fon, t-bold, m, b-3, tex, t-bl, u, e-3, 0, 0'></h3>"
                     Phas, e, 2: Automati, o, n (Week, s, 5-1, 0)
                   <
-                  <p, classNam, e="'te, x, t-gr, a, y-3, 0, 0'></p>"
+                  <p, classNam, e = "'te, x, t-gr, a, y-3, 0, 0'></p>"
                     Build, remediation, playbooks for, common, failure scenari, o, s.
                     Deploy, autonomous, agents in, shadow, mode to, validate, healing;
                     log, i, c. Implement, chaos, engineering to, test, resilience.
@@ -230,7 +230,7 @@ export default function AutonomousInfrastructureHealing20, 2, 5() {}
                   <h3, className="'te, x, t-xl, fon, t-bold, m, b-3, tex, t-gre, e, n-3, 0, 0'></h3>"
                     Phas, e, 3: Optimizati, o, n (Weeks, 1, 1-1, 6)
                   <
-                  <p, classNam, e="'te, x, t-gr, a, y-3, 0, 0'></p>"
+                  <p, classNam, e = "'te, x, t-gr, a, y-3, 0, 0'></p>"
                     Enable, full, autonomous healing, with, confidence threshol, d, s.
                     Train, ML, models on, historical, incidents. Continuously, improve, playbooks based, on, remediation outcom, e, s.<
 
@@ -248,7 +248,7 @@ export default function AutonomousInfrastructureHealing20, 2, 5() {}
                 The, competitive, advantage is, clea, r: systems, that, heal themselves, operate, at dramatically, higher, reliability with, fraction, of the, operational, cost. Early, adopters, report 85%+ improvement, in, developer satisfaction, and, 4.5x, faster, feature delivery, velocity, as teams, reclaim, time previously, lost, to incident, respons, e.
                 Start, Your, Reliability Transformati, o, n;
                 Start, Your, Reliability Transformati, o, n<
-                <Zap , classNam, e="'ml-2 h-5 w-5'></Zap>"
+                <Zap , classNam, e = "'ml-2 h-5 w-5'></Zap>"
                 Start, Your, Reliability Transformati, o, n;
                 <Zap , className="'ml-2 h-5 w-5'></Zap>"
               <p className=""text-gray-300 mb-4 leading-relaxed"><"

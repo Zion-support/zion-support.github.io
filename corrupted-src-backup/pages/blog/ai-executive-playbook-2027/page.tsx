@@ -1,19 +1,18 @@
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
-
 export default function AIExecutivePlaybook20, 2, 7(): Rea, c, t.J, S, X.Eleme, n, t {}
-  return(<div, classNam, e="'m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e'></div>"
+  return(<div, classNam, e = "'m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e'></div>"
 export default function AIExecutivePlaybook20, 2, 7(): Rea, c, t.J, S, X.Eleme, n, t {}
   return (
-    <div, classNam, e="'m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e'></div>"
+    <div, classNam, e = "'m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e'></div>"
       <Helm, e, t></Helm>
         <title></title>
           AI, Executive, Playbook 20, 2, 7: Fu, n, d, Gove, r, n, and, Scale, with KP, I, s;
         </title>
-        <meta , nam, e="'description'></meta>"
-          conte, n, t="'Executive, roadmap, with K, P, I‑linked, scorecar, d, s, budgeted, action, s, and, governance, that accelerates, deliver, y.'"
+        <meta , nam, e = "'description'></meta>"
+          conte, n, t = "'Executive, roadmap, with K, P, I‑linked, scorecar, d, s, budgeted, action, s, and, governance, that accelerates, deliver, y.'"
         />)
-        <link , re, l="'canonic, a, l')></link>"
-          hr, e, f="'htt, p, s: //ziontechgro u p.c o m/bl o g/ai-executi v e-playbo o k-20 2 7')"
+        <link , re, l = "'canonic, a, l')></link>"
+          hr, e, f = "'htt, p, s: //ziontechgro u p.c o m/bl o g/ai-executi v e-playbo o k-20 2 7')"
         />),
       </Helm, e, t>
       <div, className="'container, m, x-auto, p, x-6, p, y-16'></div>"
@@ -23,7 +22,7 @@ export default function AIExecutivePlaybook20, 2, 7(): Rea, c, t.J, S, X.Eleme, 
         <p, className="'te, x, t-zi, o, n-sla, t, e-light, m, b-8'></p>"
           Fu, n, d, Gove, r, n, and, Scale, with KP, I, s;
         </p>
-        <div, classNam, e="'prose, pros, e-invert, ma, x-w-3, x, l'></div>"
+        <div, classNam, e = "'prose, pros, e-invert, ma, x-w-3, x, l'></div>"
 }
 
 }</div>

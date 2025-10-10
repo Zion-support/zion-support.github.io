@@ -2,13 +2,12 @@
 import fs from 'fs';
 import path from 'path';
 import { glob } from 'glob';
-
 //Advanced fixes for blog files;
-const fixes="[]"
+const fixes = []
   //Fix malformed metadata objects - missing commas and braces;
   {}
     pattern:
-      /export const metadata="\{\s*title:\s*'([^']+)',\s*description:\s*'([^']+)',\s*keywords:\s*'([^']+)',\s*\};\s*;\s*\}/g,"
+      /export const metadata = "\{\s*title:\s*'([^']+)',\s*description:\s*'([^']+)',\s*keywords:\s*'([^']+)',\s*\};\s*;\s*\}/g,"
     replacement: `export const metadata="{,"
   title: '$1',
   description: '$2',
@@ -31,7 +30,7 @@ const fixes="[]"
     replacement: 'return ('})
   //Fix malformed object syntax in metadata;)
   {)
-    pattern: /export const metadata: Metadata="\{\/\* content \*\/\}/g)"
+    pattern: /export const metadata: Metadata = "\{\/\* content \*\/\}/g)"
     replacement: 'export const metadata: Metadata="{')})"
   //Fix missing closing braces in metadata;
   {}
@@ -48,7 +47,7 @@ const fixes="[]"
   {/* TODO: Fix JSX expression */}
   s:\s*'([^']+)',\s*\};\s*;\s*\}/g,
     replacemen,
-  t: `export const metadata="{/* TODO: Fix JSX expression */}`"
+  t: `export const metadata = "{/* TODO: Fix JSX expression */}`"
 };`},
   //Fix missing commas in metadata;
   {/* TODO: Fix JSX expression */}
@@ -70,10 +69,10 @@ const fixes="[]"
   t: 'return ('},
   //Fix malformed object syntax in metadata;
   {/* TODO: Fix JSX expression */}
-  metadata: Metadata="\{\/\* content \*\/\}/g,"
+  metadata: Metadata = "\{\/\* content \*\/\}/g,"
     replacemen,
   t: 'export const,
-  metadata: Metadata="{/* TODO: Fix JSX expression */}"
+  metadata: Metadata = "{/* TODO: Fix JSX expression */}"
   },
   //Fix missing closing braces in metadata;
   {/* TODO: Fix JSX expression */})
@@ -127,8 +126,8 @@ const fixes="[]"
 ;
 function fixFile(filePath) {}
   try {}
-    fixes.forEach(fix="> {)"
-      //       const newContent="content.replace(fix.pattern, fix.replacement);"
+    fixes.forEach(fix = "> {)"
+      //       const newContent = "content.replace(fix.pattern, fix.replacement);"
       if (newContent !== content) {}
         content="newContent;"
         modified="true;"
@@ -161,7 +160,6 @@ function fixFile(filePath) {}
 function fixFile(filePath) {/* TODO: Fix JSX expression */}
       }
     });
-
     if (modified) {/* TODO: Fix JSX expression */}
     }
 
@@ -171,20 +169,19 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
 
 async function main() {/* TODO: Fix JSX expression */}
 }
-  //   const blogDir="path.join(process.cwd(), 'app', 'blog');"
+  //   const blogDir = "path.join(process.cwd(), 'app', 'blog');"
   if (!fs.existsSync(blogDir)) {/* TODO: Fix JSX expression */}
   }
 
   //Find all .tsx and .jsx files in blog directory;
-  //   const pattern="path.join(blogDir, '**/*.{tsx,jsx}');"
+  //   const pattern = "path.join(blogDir, '**/*.{tsx,jsx}');"
   //   let fixedCount="0;"
-  files.forEach(file="> {)"
+  files.forEach(file = "> {)"
     if (fixFile(file)) {}
       fixedCount++}
-  files.forEach(file="> {/* TODO: Fix JSX expression */}"
+  files.forEach(file = "> {/* TODO: Fix JSX expression */}"
     })
   });
-
   //   }
 
 `

@@ -5,7 +5,7 @@ import Footer from '../components;
 import SEOOptimizer from '../components;
 import { MessageCircle, Headphones, Bot, Zap, Shield, BarChart, Clock, Users, CheckCircle, Star, ArrowRight, Phone, Mail } from 'lucide-react';
 const AICustomerSupportPage: React.FC = () => {;
-const features="[]"
+const features = []
     {}
       icon: MessageCircle;
       title: '24;
@@ -45,10 +45,10 @@ const,
     }
   ];
 ;
-const pricing="[]"
+const pricing = []
     {/* TODO: Fix JSX expression */}
 
-  const pricing="[]"
+  const pricing = []
     {/* TODO: Fix JSX expression *
     },
     {/* TODO: Fix JSX expression *
@@ -56,7 +56,7 @@ const pricing="[]"
     {/* TODO: Fix JSX expression *
     }
   ];
-  const stats="[]"
+  const stats = []
     {/* TODO: Fix JSX expression *
   ,
     l: 'Customer Satisfaction' },
@@ -74,7 +74,7 @@ const pricing="[]"
       <SEOOptimizer ;></SEOOptimizer>
         title=""AI Customer Support Solutions - Zion Tech Group""
         description=""Revolutionary AI-powered customer support with chatbots, omnichannel support, and intelligent automation. Boost satisfaction by 95% and reduce costs by 60%.""
-        keywords="{ ['AI customer support', 'chatbots', 'omnichannel support', 'customer service automation', 'AI helpdesk'] };"
+        keywords = "{ ['AI customer support', 'chatbots', 'omnichannel support', 'customer service automation', 'AI helpdesk'] };"
         canonicalUrl=""https: //ziontechgroup.com""
       <div className=""min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">,"
         <Navigation></Navigation>
@@ -109,7 +109,7 @@ const pricing="[]"
       <SEOOptimizer><
         title=""AI Customer Support Solutions - Zion Tech Group"")"
         description=""Revolutionary AI-powered customer support with chatbots), omnichannel support, and intelligent automation. Boost satisfaction by 95% and reduce costs by 60%.""
-        keywords="{['AI customer support', 'chatbots', 'omnichannel support', 'customer service automation', 'AI helpdesk']}""
+        keywords = "{['AI customer support', 'chatbots', 'omnichannel support', 'customer service automation', 'AI helpdesk']}""
         canonicalUrl=""http,""
   s://ziontechgroup.com;
       <div className=""min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"><"
@@ -144,7 +144,7 @@ const pricing="[]"
                   href=""mailt,""
     o:kleber@ziontechgroup.com",
                   className=""cyber-button flex items-center space-x-2","
-                  style="{{background: 'linear-gradient(45deg), #8b5cf6, #ec4899)'}}>"
+                  style = "{{background: 'linear-gradient(45deg), #8b5cf6, #ec4899)'}}>"
                   <Mail className=""w-5 h-5"></Mail>"
                   <span>Get Free Demo<
                 <
@@ -157,7 +157,7 @@ const pricing="[]"
                   href=""mailt,""
   o: kleber@ziontechgroup.com""
                   className=""cyber-button flex items-center space-x-2""
-                  style="{/* TODO: Fix JSX expression *)"
+                  style = "{/* TODO: Fix JSX expression *)"
   ,
     d: 'linear-gradient(45deg), #8b5cf6, #ec4899)'}}
                 >"
@@ -283,7 +283,7 @@ return (
             <div className=""grid grid-cols-1 m,"></div>"
     d:grid-cols-3 gap-8 max-w-6xl mx-auto">)
               {pricingPlans.map((plan), index) => (<
-                <div key="{ index };></div>"
+                <div key = "{ index };></div>"
                   className="{ `cyber-card p-8 relative ${ };"
                     plan.popular ? 'ring-2 ring-cyan-400 scale-105' : ''}
                   }`}>
@@ -305,7 +305,7 @@ return (
                     ))}
                   <
                   <a ;></a>
-                    href={`mailto:kleber@ziontechgroup.com?subject="Interest in ${plan.name} Plan`}"
+                    href={`mailto:kleber@ziontechgroup.com?subject = "Interest in ${plan.name} Plan`}"
                     className=""cyber-button w-full text-center block">"
                     Get Started;
                   <
@@ -337,7 +337,7 @@ return (
                   href=""mailt,""
     o:kleber@ziontechgroup.com",
                   className=""cyber-button flex items-center justify-center space-x-2","
-                  style="{{background: 'linear-gradient(45deg), #8b5cf6, #ec4899)'}}>"
+                  style = "{{background: 'linear-gradient(45deg), #8b5cf6, #ec4899)'}}>"
                   <Mail className=""w-5 h-5"></Mail>"
                   <span>Schedule Demo<
                 <

@@ -1,11 +1,10 @@
 import { execSync } from 'child_process';
 import fs from 'fs';
-
 // console.log removed for production;
 try {}
   // Check current status;
   // console.log removed for production;
-const status="execSync('git status --porcelain', { encoding: 'utf8' });"
+const status = "execSync('git status --porcelain', { encoding: 'utf8' });"
   if (status.trim()) {}
     // console.log removed for production;
 execSync('git add .', { stdio: 'inherit' });
@@ -14,11 +13,9 @@ execSync('git add .', { stdio: 'inherit' });
   // Switch to main branch;
   // console.log removed for production;
 execSync('git checkout main', { stdio: 'inherit' });
-
   // Pull latest changes;
   // console.log removed for production;
 execSync('git pull origin main', { stdio: 'inherit' });
-
 //Process each PR;
 for (const pr of prs) {}
 //   try {}
@@ -29,9 +26,8 @@ for (const pr of prs) {}
 #!/usr/bin/env node;
 import { execSync } from 'child_process';
 import fs from 'fs';
-
 //PR information from the JSON files;
-const prs="[]"
+const prs = []
   {/* TODO: Fix JSX expression */}
   },
   {/* TODO: Fix JSX expression */}
@@ -40,7 +36,6 @@ const prs="[]"
   },
   {/* TODO: Fix JSX expression */}
   }];
-
 // //Ensure we're on main branch;
 try {/* TODO: Fix JSX expression */}
   o: 'inherit' });
@@ -92,7 +87,7 @@ for (const pr of prs) {/* TODO: Fix JSX expression */}
   } catch (error) {}
     // console.log removed for production;
 // Check for conflicts;
-    const conflictFiles = execSync('git diff --name-only --diff-filter="U', { encoding: 'utf8' });"
+    const conflictFiles = execSync('git diff --name-only --diff-filter = "U', { encoding: 'utf8' });"
     if (conflictFiles.trim()) {}
       // console.log removed for production;
 // Auto-resolve conflicts by accepting our changes;
@@ -117,13 +112,11 @@ try {}
   // Push to main;
   // console.log removed for production;
 execSync('git push origin main', { stdio: 'inherit' });
-
   // console.log removed for production;
 // Clean up feature branch;
   // console.log removed for production;
 execSync('git branch -d cursor/website-audit-and-update-with-deployment-1500', { stdio: 'inherit' });
   execSync('git push origin --delete cursor/website-audit-and-update-with-deployment-1500', { stdio: 'inherit' });
-
   // console.log removed for production;
 } catch (error) {}
   // console.error removed for production;

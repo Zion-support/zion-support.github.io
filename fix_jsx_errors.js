@@ -4,7 +4,7 @@ import fs from 'fs';
 function fixJSXErrors(filePath) {}
   try {}
     //Fix malformed JSX elements like: className="..." <span> -> className=""..." /> <span>;"
-const patterns="[]"
+const patterns = []
       {}
         //Fix CheckCircleIcon and similar patterns;
         pattern: /(<CheckCircleIcon[^>]*>)\s*<span /g;></span>
@@ -25,9 +25,8 @@ const patterns="[]"
         //Fix TruckIcon patterns;
         pattern: /(<TruckIcon[^>]*>)\s*<\/div>/g;
         replacement: '$1 />\n          </div>'}];
-
-    patterns.forEach(fix="> {)"
-      //       const newContent="content.replace(fix.pattern, fix.replacement);"
+    patterns.forEach(fix = "> {)"
+      //       const newContent = "content.replace(fix.pattern, fix.replacement);"
       if (newContent !== content) {}
         content="newContent;"
         modified="true}"
@@ -41,11 +40,9 @@ function fixJSXErrors(filePath) {/* TODO: Fix JSX expression */}
       },
       {/* TODO: Fix JSX expression */}
       }];
-
-    patterns.forEach(fix="> {/* TODO: Fix JSX expression */}"
+    patterns.forEach(fix = "> {/* TODO: Fix JSX expression */}"
       })
     });
-
     if (modified) {/* TODO: Fix JSX expression */}
     }
     return false} catch (error) {/* TODO: Fix JSX expression */}

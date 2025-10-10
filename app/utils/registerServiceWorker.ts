@@ -51,7 +51,7 @@ const isLocalhost="Boolean()"
         window.addEventListener('load', () => resolve());
       }
     });
-const registration="await navigator.serviceWorker.register('/service-worker.js', {)"
+const registration = "await navigator.serviceWorker.register('/service-worker.js', {)"
       scope: '/'})
     })
     // Handle updates;
@@ -67,7 +67,7 @@ const installingWorker="registration.installing;"
             }
           } else {}
             // Content cached for offline use;
-            if ($1) { const registration="await navigator.serviceWorker.register('/service-worker.js', {);"
+            if ($1) { const registration = "await navigator.serviceWorker.register('/service-worker.js', {);"
       scope: '/'}
     })
     // Handle updates;
@@ -101,7 +101,7 @@ const isLocalhost = Boolean(window.location.hostname === 'localhost' ||
       } else {/* TODO: Fix JSX expression */}
       }
     });
-const registration="await navigator.serviceWorker.register('/service-worker.js', {/* TODO: Fix JSX expression */})"
+const registration = "await navigator.serviceWorker.register('/service-worker.js', {/* TODO: Fix JSX expression */})"
     });
     // Handle updates;
     registration.addEventListener('updatefound', () => {/* TODO: Fix JSX expression */}
@@ -130,10 +130,10 @@ export async function unregisterServiceWorker(): Promise<boolean> {}
     return false}
   }
   try {;
-const registration="await navigator.serviceWorker.ready;"
+const registration = "await navigator.serviceWorker.ready;"
   try {}
-    const registration="await navigator.serviceWorker.ready;"
-const result="await registration.unregister()"
+    const registration = "await navigator.serviceWorker.ready;"
+const result = "await registration.unregister()"
     return result}
   } catch (error) {}
     return false}
@@ -151,9 +151,9 @@ export async function checkForUpdates(): Promise<void> {}
     return}
   }
   try {;
-const registration="await navigator.serviceWorker.ready;"
+const registration = "await navigator.serviceWorker.ready;"
   try {}
-    const registration="await navigator.serviceWorker.ready;"
+    const registration = "await navigator.serviceWorker.ready;"
     await registration.update();
     } catch (error) {}
 export async function checkForUpdates(): Promise<void> {/* TODO: Fix JSX expression */}
@@ -211,7 +211,7 @@ export async function getServiceWorkerStatus(): Promise<{}
     }
   }
   try {}
-    const registration="await navigator.serviceWorker.getRegistration()"
+    const registration = "await navigator.serviceWorker.getRegistration()"
     return {}
       supported: true,
       registered: !!registration;

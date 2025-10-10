@@ -66,7 +66,7 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
     }
   };
   const updateSetting = (key: keyof AccessibilitySettings, value: boolean) => {}
-    const newSettings="{ ...settings, [key]: value };"
+    const newSettings = "{ ...settings, [key]: value };"
     setSettings(newSettings);
     applyAccessibilitySettings(newSettings);
     localStorage.setItem('accessibility-settings', JSON.stringify(newSettings));

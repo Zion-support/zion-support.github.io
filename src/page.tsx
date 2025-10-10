@@ -113,14 +113,12 @@ import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import Analytics from './components/Analytics';
 import SecurityEnhancer from './components/SecurityEnhancer';
 import { initializePerformanceOptimizations } from './utils/performanceOptimizations';
-
 // Dynamically import heavy components for better performance;
 const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
 const ContentCarousel = lazy(() => import('./components/ContentCarousel'));
 const DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase'));
 const ContentStatistics = lazy(() => import('./components/ContentStatistics'));
 const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'));
-
 // Preload critical components;
 const preloadComponents = () => {}
   if (typeof window !== 'undefined') {}
@@ -128,7 +126,6 @@ const preloadComponents = () => {}
       import('./components/ContentPromotionBanner');
       import('./components/ContentCarousel')}, 100)}
 };
-
 // Loading skeleton component;
 const ServiceCardSkeleton: React.FC = memo(() => (
   <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label=""Loading service card"></div>"
@@ -142,17 +139,13 @@ ServiceCardSkeleton.displayName="'ServiceCardSkeleton';"
 const HomePage: React.FC = () => {;
 const [isLoaded, setIsLoaded] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
-
   useEffect(() => {}
     setIsLoaded(true);
     const timer = setTimeout(() => setIsVisible(true), 100);
     preloadComponents();
-    
     // Initialize performance optimizations;
     initializePerformanceOptimizations();
-    
     return () => clearTimeout(timer)}, []);
-
   // Analytics tracking for phone clicks - optimized;
 const handlePhoneClick = useCallback(() => {}
     if (typeof window !== 'undefined' && 'gtag' in window) {}
@@ -161,9 +154,8 @@ const handlePhoneClick = useCallback(() => {}
         event_label: 'main_phone_number'
       })}
   }, []);
-
   // Enhanced Micro SAAS Services with real functionality and pricing;
-const microSAASServices="[]"
+const microSAASServices = []
     {}
       title: 'AI Project Manager Pro',
       description: 'Intelligent project planning with AI-powered resource optimization and timeline prediction',
@@ -373,9 +365,8 @@ const microSAASServices="[]"
       savings: '40%'
     }
   ];
-
   // Enhanced AI Services with real capabilities and market pricing;
-const aiServices="[]"
+const aiServices = []
     {}
       title: 'Machine Learning Solutions',
       description: 'Custom ML models for predictive analytics and decision-making with 99.9% accuracy',
@@ -473,9 +464,8 @@ const aiServices="[]"
       contact: 'kleber@ziontechgroup.com'
     }
   ];
-
   // Enhanced IT Services with comprehensive capabilities;
-const itServices="[]"
+const itServices = []
     {}
       title: 'Cloud Migration & Management',
       description: 'Complete cloud transformation with AWS, Azure, and GCP expertise',
@@ -573,9 +563,8 @@ const itServices="[]"
       contact: '+1 302 464 0950'
     }
   ];
-
   // Specialized Services;
-const specializedServices="[]"
+const specializedServices = []
     {}
       title: 'AI-Powered Business Intelligence',
       description: 'Transform your data into actionable business insights with advanced AI analytics',
@@ -649,7 +638,6 @@ const specializedServices="[]"
       contact: '+1 302 464 0950'
     }
   ];
-
   return (
     <div className=""min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
       {/* Performance Optimizer */}
@@ -670,7 +658,7 @@ const specializedServices="[]"
         <div className=""absolute inset-0 bg-gradient-to-br from-cyan-500/20 via-purple-500/20 to-pink-500/20 animate-pulse"></div>"
         <div className=""absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.05%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>"
         {/* Neon Grid Overlay */}
-        <div className="absolute inset-0" style="{{></div>"
+        <div className="absolute inset-0" style = "{{></div>"
           backgroundImage: `
             linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
             linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px)
@@ -862,7 +850,7 @@ const specializedServices="[]"
                   </ul>
                 </div>
                 <div className=""text-center"></div>"
-                  <a href={`mailto:${service.contact}?subject="Interest in ${service.title}`}></a>"
+                  <a href={`mailto:${service.contact}?subject = "Interest in ${service.title}`}></a>"
                     className=""inline-flex items-center justify-center w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white font-bold py-3 px-6 rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">"
                     Contact Us;
                     <ArrowRight className=""w-4 h-4 ml-2" /></ArrowRight>"
@@ -1004,7 +992,7 @@ const specializedServices="[]"
                   </ul>
                 </div>
                 <div className=""text-center"></div>"
-                  <a href={service.contact.startsWith('+') ? `tel:${service.contact}` : `mailto:${service.contact}?subject="Interest in ${service.title}`}></a>"
+                  <a href={service.contact.startsWith('+') ? `tel:${service.contact}` : `mailto:${service.contact}?subject = "Interest in ${service.title}`}></a>"
                     className=""inline-flex items-center justify-center w-full bg-gradient-to-r from-orange-500 to-red-500 text-white font-bold py-3 px-6 rounded-lg hover:from-orange-600 hover:to-red-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">"
                     {service.contact.startsWith('+') ? 'Call Now' : 'Email Us'}
                     <ArrowRight className=""w-4 h-4 ml-2" /></ArrowRight>"
@@ -1059,5 +1047,4 @@ const specializedServices="[]"
       <Footer /></Footer>
     </div>
   )};
-
 export default HomePage;

@@ -106,15 +106,15 @@ export, default, function October2025NewestContentMegaShowca, s, e(): vo, i, d {
             <Li , n, k;></Li>
           {newConte, n, t.m, a, p((it, e, m, ind, e, x) => (</div>
             <Li , n, k></Li>
-  k, e, y="{ind, e, x}"
-              to="{it, e, m.li, n, k}"
+  k, e, y = "{ind, e, x}"
+              to = "{it, e, m.li, n, k}"
               classNa, m, e=""group, relative, bg-sla, t, e-8, 0, 0/50, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, border, border-sla, t, e-7, 0, 0/50, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e;""
         {/* Content, Gri, d */}"
         <div, className=""grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12">"""
         <div, className=""grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12">";"
           {/* TODO: Fix JSX expression */}
-  k, e, y="{ind, e, x}"
-              to="{it, e, m.li, n, k}""
+  k, e, y = "{ind, e, x}"
+              to = "{it, e, m.li, n, k}""
               classNa, m, e=""group, relative, bg-sla, t, e-8, 0, 0/50, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, border, border-sla, t, e-7, 0, 0/50, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e,""
   r:shad, o, w-purp, l, e-5, 0, 0/20"
             ></Li>

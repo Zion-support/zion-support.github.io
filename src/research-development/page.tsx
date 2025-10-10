@@ -8,7 +8,7 @@ import React, { useState } from 'react';
 const ResearchDevelopmentPage: React.FC = () => {;
 const [activeTab, setActiveTab] = useState('ai');
 ;
-const _researchAreas="[]"
+const _researchAreas = []
     {}
       id: 'ai',
       name: 'Artificial Intelligence',
@@ -47,7 +47,7 @@ $4},
 $4}
   ];
 ;
-const researchProjects="{}"
+const researchProjects = {}
     ai: []
       {}
         titl,
@@ -197,7 +197,7 @@ $4}
     ]
   };
 ;
-const publications="[]"
+const publications = []
     {}
       title: 'Consensus Intelligenc,
     e: A Framework for Multi-Agent Decision Making',
@@ -233,7 +233,7 @@ $4},
 $4}
   ];
 ;
-const achievements="[]"
+const achievements = []
     {}
       icon: Award,
       title: '50+ Research Papers',
@@ -275,7 +275,7 @@ $4}
           {/* Research Areas Tabs *
           <div className=""mb-12"></div>"
             <div className=""flex flex-wrap justify-center gap-4 mb-8">)"
-              {researchAreas.map((area) => (<button key="{ area.id };)></button>"
+              {researchAreas.map((area) => (<button key = "{ area.id };)></button>"
                   onClick = { () => setActiveTab(area.id) };
                   className="{`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${}"
                     activeTab === area.id;
@@ -294,7 +294,7 @@ $4}
 
   )};
   const [activeTab, setActiveTab] = useState('ai');
-  const _researchAreas="[]"
+  const _researchAreas = []
   /
   O: Add items;
 ];;
@@ -375,9 +375,9 @@ $4}
   n: 'Researching next-generation technologies'
     }
   ];
-  const researchProjects="{/* TODO: Fix JSX expression */}"
+  const researchProjects = "{/* TODO: Fix JSX expression */}"
   O: Add content}
-  const researchProjects="{ /* TODO: Fix JSX expression *"
+  const researchProjects = "{ /* TODO: Fix JSX expression *"
   ,
     O: Add content; };
 };
@@ -690,7 +690,7 @@ $4}
       }
 /
   };
-  const publications="[]"
+  const publications = []
   /
   O: Add items;
 ];;
@@ -772,7 +772,7 @@ $4}
   k: '#'
     }
   ];
-  const achievements="[]"
+  const achievements = []
   /
   O: Add items;
 ];;
@@ -864,7 +864,7 @@ $4}
   // TOD,
   O: Add content}
           <button><
-                  key="{ area.id };"
+                  key = "{ area.id };"
                   onClick = { () => setActiveTab(area.id) };
                   className="{ `flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${ };"
   /

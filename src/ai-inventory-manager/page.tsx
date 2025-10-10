@@ -1,9 +1,7 @@
 import React from 'react';
-
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
 import { Package, Target, Zap, Settings, CheckCircle, Star,  Package,  Target,  Settings } from 'lucide-react';
 const AIInventoryManagerPage: React.FC = () => {;
 const features="[];"
@@ -37,7 +35,6 @@ const features="[];"
   s: ['Performance metrics', 'Cost analysis', 'Optimization recommendations']
     }
   ];
-
   return (
     <div className=""min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
       <Navigation /></Navigation>
@@ -93,6 +90,4 @@ const features="[];"
       <Footer /></Footer>
     </div>
   )};
-
 export default PagePage;
-

@@ -3,7 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Cloud, Server, Database } from 'lucide-react';
 ;
-const CloudInfrastructurePage: React.FC = () => {const features="[]"
+const CloudInfrastructurePage: React.FC = () => {const features = []
     {}
       icon: Cloud,
       title: 'Cloud Migration',
@@ -26,7 +26,7 @@ const CloudInfrastructurePage: React.FC = () => {const features="[]"
     }
   ];
 ;
-const benefits="[]"
+const benefits = []
     'Scalable cloud infrastructure',
     'Cost-effective solutions',
     'High availability and reliability',
@@ -36,7 +36,6 @@ const benefits="[]"
     'Cost-effective pricing plans',
     'Proven track record of success'
   ];
-
   return (
     <div className=""min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
       <Helmet></Helmet>

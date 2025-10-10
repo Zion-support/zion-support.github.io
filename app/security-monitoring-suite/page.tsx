@@ -23,7 +23,7 @@ import {}
   Database,
   Target} from 'lucide-react';
 ;
-const SecurityMonitoringSuitePage: React.FC = () => {const features="[]"
+const SecurityMonitoringSuitePage: React.FC = () => {const features = []
     {}
       ico,
     n: Monitor,
@@ -47,10 +47,10 @@ const SecurityMonitoringSuitePage: React.FC = () => {const features="[]"
     }
   ];
 ;
-const benefits="[]"
+const benefits = []
     '24/7 security monitoring and protection',
 
-  const benefits="[]"
+  const benefits = []
     '24;
     'Real-time threat detection and alerts',
     'Comprehensive security analytics',

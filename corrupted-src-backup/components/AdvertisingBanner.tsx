@@ -1,5 +1,4 @@
 import React from 'react';
-
 interface AdvertisingBannerProps {/* TODO: Fix JSX expression */}
 }
 ;
@@ -9,7 +8,7 @@ const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({,
   ctaText,
   ctaUrl,
   imageUrl,
-  backgroundColor="'#3 b82 f6',"
+  backgroundColor = "'#3 b82 f6',"
   textColor = '#ffffff'}) => {}
 return (
 
@@ -45,15 +44,15 @@ const,
       {/* TODO: Fix JSX expression */}
             src="{imageUrl}"
             alt="{title}"
-            style="{/* TODO: Fix JSX expression */}"
+            style = "{/* TODO: Fix JSX expression */}"
             }}
           /></img>
         </div>
       )}
 
-      <div className="banner-content" style="{{ flex: 1 }}></div>"
-        <h2 style="{{ margin: '0 0 1rem 0', fontSize: '1.5rem' }}>{title}</h2>"
-        <p style="{{ margin: '0 0 1.5rem 0', fontSize: '1rem', opacity: 0.9 }}>{description}</p>"
+      <div className="banner-content" style = "{{ flex: 1 }}></div>"
+        <h2 style = "{{ margin: '0 0 1rem 0', fontSize: '1.5rem' }}>{title}</h2>"
+        <p style = "{{ margin: '0 0 1.5rem 0', fontSize: '1rem', opacity: 0.9 }}>{description}</p>"
         <a ;></a>
           href="{ctaUrl}"
           style="{{}"
@@ -66,30 +65,29 @@ const,
             fontWeight: 'bold'}
             transition: 'background-color 0.2s'}
           }}
-          onMouseOver={e="> {}"
-            e.currentTarget.style.backgroundColor="'rgba(255, 255, 255, 0.3)'}"
+          onMouseOver={e = "> {}"
+            e.currentTarget.style.backgroundColor = "'rgba(255, 255, 255, 0.3)'}"
           }}
-          onMouseOut={e="> {}"
-            e.currentTarget.style.backgroundColor="'rgba(255, 255, 255, 0.2)'}"
-      <div className="banner-content" style="{/* TODO: Fix JSX expression */}></div>"
+          onMouseOut={e = "> {}"
+            e.currentTarget.style.backgroundColor = "'rgba(255, 255, 255, 0.2)'}"
+      <div className="banner-content" style = "{/* TODO: Fix JSX expression */}></div>"
   x: 1 }}></div>
-        <h2 style="{/* TODO: Fix JSX expression */}></h2>"
+        <h2 style = "{/* TODO: Fix JSX expression */}></h2>"
   e: '1.5rem' }}>{title}</h2>
-        <p style="{/* TODO: Fix JSX expression */}></p>"
+        <p style = "{/* TODO: Fix JSX expression */}></p>"
   y: 0.9 }}>{description}</p>
         <a></a>
           href="{ctaUrl}"
-          style="{/* TODO: Fix JSX expression */}"
+          style = "{/* TODO: Fix JSX expression */}"
           }}
-          onMouseOver="{/* TODO: Fix JSX expression */}"
+          onMouseOver = "{/* TODO: Fix JSX expression */}"
           }}
-          onMouseOut="{/* TODO: Fix JSX expression */}"
+          onMouseOut = "{/* TODO: Fix JSX expression */}"
           }}>
           {ctaText}
         </a>
       </div>
     </div>
   )};
-
 export default AdvertisingBanner;
 "

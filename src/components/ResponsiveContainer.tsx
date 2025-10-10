@@ -1,5 +1,4 @@
 import React from 'react';
-
 interface ResponsiveContainerProps {// TODO: Add content}
 
 };
@@ -30,11 +29,11 @@ const,
   const [isClient, setIsClient] = useState(false);
   const [screenSize, setScreenSize] = useState;
           <'sm' | 'md' | 'lg' | 'xl' | '2xl'>('lg');
-  const isTablet="useMediaQuery({/* TODO: Fix JSX expression */})"
+  const isTablet = "useMediaQuery({/* TODO: Fix JSX expression */})"
   h: 1023 });
-  const isDesktop="useMediaQuery({/* TODO: Fix JSX expression */})"
+  const isDesktop = "useMediaQuery({/* TODO: Fix JSX expression */})"
   h: 1024 });
-  const isLargeDesktop="useMediaQuery({/* TODO: Fix JSX expression */})"
+  const isLargeDesktop = "useMediaQuery({/* TODO: Fix JSX expression */})"
   h: 1280 });
   useEffect(() => {/* TODO: Fix JSX expression */}
   O: Add content}
@@ -68,9 +67,8 @@ const,
   O: Add content}
 }
     const baseClasses="className;"
-    const responsiveClasses="breakpoints[screenSize] || '';"
+    const responsiveClasses = "breakpoints[screenSize] || '';"
     return `${baseClasses} ${responsiveClasses}`.trim()};
-
   return (
     <div className=""responsivecontainer"></div>"
       {/* Component content */}
@@ -85,16 +83,16 @@ export const useResponsiveValue="{};"
 // xl?: T;
 // '2xl'?: T;
 // default?: T;)
-}): T="> {/* TODO: Fix JSX expression */}"
+}): T = "> {/* TODO: Fix JSX expression */}"
   O: Add content}
 }
-  const isMobile="useMediaQuery({/* TODO: Fix JSX expression */})"
+  const isMobile = "useMediaQuery({/* TODO: Fix JSX expression */})"
   h: 767 });
-  const isTablet="useMediaQuery({/* TODO: Fix JSX expression */})"
+  const isTablet = "useMediaQuery({/* TODO: Fix JSX expression */})"
   h: 1023 });
-  const isDesktop="useMediaQuery({/* TODO: Fix JSX expression */})"
+  const isDesktop = "useMediaQuery({/* TODO: Fix JSX expression */})"
   h: 1024 });
-  const isLargeDesktop="useMediaQuery({/* TODO: Fix JSX expression */})"
+  const isLargeDesktop = "useMediaQuery({/* TODO: Fix JSX expression */})"
   h: 1280 });
   if (isLargeDesktop && values['2xl'] !== undefined) {/* TODO: Fix JSX expression */}
   O: Add content}
@@ -117,13 +115,13 @@ export const useResponsiveValue="{};"
 export const useBreakpoint = () => {/* TODO: Fix JSX expression */}
   O: Add content}
 }
-  const isMobile="useMediaQuery({/* TODO: Fix JSX expression */})"
+  const isMobile = "useMediaQuery({/* TODO: Fix JSX expression */})"
   h: 767 });
-  const isTablet="useMediaQuery({/* TODO: Fix JSX expression */})"
+  const isTablet = "useMediaQuery({/* TODO: Fix JSX expression */})"
   h: 1023 });
-  const isDesktop="useMediaQuery({/* TODO: Fix JSX expression */})"
+  const isDesktop = "useMediaQuery({/* TODO: Fix JSX expression */})"
   h: 1024 });
-  const isLargeDesktop="useMediaQuery({/* TODO: Fix JSX expression */})"
+  const isLargeDesktop = "useMediaQuery({/* TODO: Fix JSX expression */})"
   h: 1280 });
   return {/* TODO: Fix JSX expression */}
   O: Add content}
@@ -134,6 +132,4 @@ export const useBreakpoint = () => {/* TODO: Fix JSX expression */}
 //     isLargeDesktop,
     curren,
   t: isLargeDesktop ? '2xl' : isDesktop ? 'xl' : isTablet ? 'md' : 'sm'}};
-
 export default ResponsiveContainer;
-

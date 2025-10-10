@@ -3,10 +3,10 @@
 import fs from 'fs';
 function fixJSXSyntax(filePath) {}
   try {}
-    let content="fs.readFileSync(filePath, 'utf8');"
+    let content = "fs.readFileSync(filePath, 'utf8');"
     let modified="false;"
     // Fix common JSX syntax issues;
-    const patterns="[]"
+    const patterns = []
       // Fix self-closing div tags that should be properly closed;
       {}
         regex: /<div([^>]*)><\/div>/g,
@@ -58,8 +58,8 @@ function fixJSXSyntax(filePath) {}
         replacement: '<input$1>$2</input>'
       }
     ];
-    patterns.forEach(pattern="> {}"
-      const newContent="content.replace(pattern.regex, pattern.replacement);"
+    patterns.forEach(pattern = "> {}"
+      const newContent = "content.replace(pattern.regex, pattern.replacement);"
 /
 function fixJSXSyntax(content) {}
   /
@@ -70,21 +70,21 @@ function fixJSXSyntax(content) {}
 ,
   /
   //Pattern: <div><
-  fixed="fixed.replace(/<(\w+)([^>]*?)><\/\1>\s*([^<]+)/g, '<$1$2>$3<"
+  fixed = "fixed.replace(/<(\w+)([^>]*?)><\/\1>\s*([^<]+)/g, '<$1$2>$3<"
   /
-  fixed="fixed.replace(/<(\w+)([^>]*?)><\/\1>\s*<(\w+)([^>]*?)><\/\3>/g, '<$1$2><$3$4></$3><"
+  fixed = "fixed.replace(/<(\w+)([^>]*?)><\/\1>\s*<(\w+)([^>]*?)><\/\3>/g, '<$1$2><$3$4></$3><"
   /
-  fixed="fixed.replace(/\[\s*\{\/\*\s*content\s*\/\}"
+  fixed = "fixed.replace(/\[\s*\{\/\*\s*content\s*\/\}"
   /
-  fixed="fixed.replace(/\{\/\*\s*content\s*\/\}"
+  fixed = "fixed.replace(/\{\/\*\s*content\s*\/\}"
   /
   fixed="fixed.replace("
 function fixJSXSyntax(content) {/* TODO: Fix JSX expression *
     /const\s+(\w+):\s+React\.FC\s*=\s*\(\)\s*=>\s*\{\/\*\s*content\s*\/\}
     'const $1: React.FC = () => {/* TOD,
     O: Fix JSX expression *
-  fixed="fixed.replace(/\[\s*\{\/\*\s*content\s*\/\}/g, '[{/* TODO: Fix JSX expression *)"
-  fixed="fixed.replace(/\{\/\*\s*content\s*\/\)}/g, '{/* TODO: Fix JSX expression *"
+  fixed = "fixed.replace(/\[\s*\{\/\*\s*content\s*\/\}/g, '[{/* TODO: Fix JSX expression *)"
+  fixed = "fixed.replace(/\{\/\*\s*content\s*\/\)}/g, '{/* TODO: Fix JSX expression *"
     /(\w+):\s*'([^']*)',?\s*(\w+):\s*'([^']*)',?\s*(\w+):\s*'([^']*)',?\s*(\w+):\s*'([^']*)',?\s*\}
     "$1: '$2',\n      $3: '$4',\n      $5: '$6',\n      $7: '$8'\n    }"
   );
@@ -111,10 +111,10 @@ function processFile(filePath) {/* TODO: Fix JSX expression *
 ];
 function fixFile(filePath) {}
   try {}
-    let content="fs.readFileSync(filePath, 'utf8');"
+    let content = "fs.readFileSync(filePath, 'utf8');"
     let modified="false;"
-    fixes.forEach(fix="> {)"
-      const newContent="content.replace(fix.pattern, fix.replacement);"
+    fixes.forEach(fix = "> {)"
+      const newContent = "content.replace(fix.pattern, fix.replacement);"
       if (newContent !== content) {}
         content="newContent;"
         modified="true;"
@@ -133,7 +133,7 @@ function fixFile(filePath) {}
 }
 
 // Fix the main page file;
-const filePath="'/workspace/app/page.tsx';"
+const filePath = "'/workspace/app/page.tsx';"
 if (fixJSXSyntax(filePath)) {}
   console.log('JSX syntax fixed successfully');
 } else {}
@@ -146,10 +146,10 @@ if (fixJSXSyntax(filePath)) {}
 /
 async function main() {}
   /
-  const files="await glob('app/**)"
+  const files = "await glob('app/**)"
   console.log(`Found ${files.length} TSX files to check...`);
   for (const pattern of patterns) {}
-    const files="await glob(pattern, {}"
+    const files = "await glob(pattern, {}"
       ignore: [,
         '**/node_modules;
         '**/dist;

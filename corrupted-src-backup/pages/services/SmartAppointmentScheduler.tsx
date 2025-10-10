@@ -11,8 +11,8 @@ return (
   return(<React.Fragment></React>
       <Helmet></Helmet>
         <title>Smart, Appointment, Scheduler - Zion, Tech, Group</title>
-        <meta name="descripti, o, n" content=""Healthca, r, e-focused, SaaS, for online, appointment, s, virtual, consultation, s, patient, data, management, and, automated, reminders." /></Helmet>"
-        <meta name="descripti, o, n" content=""Healthca, r, e-focused, SaaS, for online, appointment, s, virtual, consultation, s, patient, data, management, and, automated, reminders." />";</meta>"
+        <meta name = "descripti, o, n" content=""Healthca, r, e-focused, SaaS, for online, appointment, s, virtual, consultation, s, patient, data, management, and, automated, reminders." /></Helmet>"
+        <meta name = "descripti, o, n" content=""Healthca, r, e-focused, SaaS, for online, appointment, s, virtual, consultation, s, patient, data, management, and, automated, reminders." />";</meta>"
       </Helmet>
       <div, className=""m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-gr, a, y-50, t, o-gre, e, n-50">";</div>"
         <div, className=""container, m, x-auto, p, x-4, p, y-12"></div>"
@@ -37,8 +37,8 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expre
             </d, i, v>"
   return (<div></div>
         <title>Smart, Appointment, Scheduler - Zion, Tech, Group<
-        <meta name="descripti, o, n" content=""Healthca, r, e-focused, SaaS, for online, appointment, s, virtual, consultation, s, patient, data, management, and, automated, reminders." /><"
-        <meta name="descripti, o, n" content=""Healthca, r, e-focused, SaaS, for online, appointment, s, virtual, consultation, s, patient, data, management, and, automated, reminders." />";<"
+        <meta name = "descripti, o, n" content=""Healthca, r, e-focused, SaaS, for online, appointment, s, virtual, consultation, s, patient, data, management, and, automated, reminders." /><"
+        <meta name = "descripti, o, n" content=""Healthca, r, e-focused, SaaS, for online, appointment, s, virtual, consultation, s, patient, data, management, and, automated, reminders." />";<"
       <
       <div, className=""m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-gr, a, y-50, t, o-gre, e, n-50">";<"
         <div, className=""container, m, x-auto, p, x-4, p, y-12">";"

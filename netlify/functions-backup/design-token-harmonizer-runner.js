@@ -1,4 +1,4 @@
-exports.handler="async function () {/* TODO: Fix JSX expression */}"
+exports.handler = "async function () {/* TODO: Fix JSX expression */}"
   const { execSync } = require('child_process');
   try {execSync('node automation/design-token-harmonizer.cjs || true', {)
       stdio: inherit),

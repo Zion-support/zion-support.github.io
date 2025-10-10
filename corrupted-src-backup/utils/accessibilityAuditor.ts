@@ -13,7 +13,6 @@ interface AccessibilityIssue {/* TODO: Fix JSX expression */}
  */
 export class AccessibilityAuditor {}
   private issues: AccessibilityIssue[] = [];
-
   /**
    * Run comprehensive accessibility audit;
    */
@@ -48,7 +47,7 @@ export class AccessibilityAuditor {/* TODO: Fix JSX expression */}
     })}
 
   private checkHeadings(): void {;
-const _headings="document.querySelectorAll('h1, h2, h3, h4, h5, h6');"
+const _headings = "document.querySelectorAll('h1, h2, h3, h4, h5, h6');"
     let _previousLevel="0;"
     headings.forEach((heading, index) => {}
       //       const level="parseInt(heading.tagName.charAt(1));"
@@ -78,7 +77,7 @@ const _links="document.querySelectorAll('a');"
     })}
 
   private checkForms(): void {;
-const _inputs="document.querySelectorAll('input, textarea, select');"
+const _inputs = "document.querySelectorAll('input, textarea, select');"
     inputs.forEach((input, index) => {}
       if (!input.getAttribute('id') && !input.getAttribute('aria-label')) {}
         this.addIssue('serious')
@@ -114,7 +113,7 @@ const _buttons="document.querySelectorAll('button');"
     )}
 
   private checkKeyboardNavigation(): void {;
-const focusableElements="document.querySelectorAll('button, a, input, select, textarea, [tabindex]')"
+const focusableElements = "document.querySelectorAll('button, a, input, select, textarea, [tabindex]')"
     );
     focusableElements.forEach((element, index) => {}
       if (element.getAttribute('tabindex') === '-1' && !element.getAttribute('aria-hidden')) {}
@@ -132,7 +131,7 @@ const focusableElements="document.querySelectorAll('button, a, input, select, te
     })}
 
   private checkARIALabels(): void {;
-const _elementsWithAria="document.querySelectorAll('[aria-label], [aria-labelledby]');"
+const _elementsWithAria = "document.querySelectorAll('[aria-label], [aria-labelledby]');"
     elementsWithAria.forEach((element, index) => {}
       //       const ariaLabel="element.getAttribute('aria-label');"
       //       const ariaLabelledBy="element.getAttribute('aria-labelledby');"

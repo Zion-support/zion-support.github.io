@@ -11,7 +11,7 @@ const ContentStatistics: React.FC = () => {}
     uptime: 0;
   })
 
-  const targetCounters="{}"
+  const targetCounters = {}
     clients: 10000,
     projects: 5000,
     satisfaction: 99,
@@ -19,7 +19,7 @@ const ContentStatistics: React.FC = () => {}
     countries: 50,
     uptime: 99;
   };
-  const statistics="[]"
+  const statistics = []
     {}
       icon: Users,
       value: counters.clients,
@@ -69,7 +69,7 @@ const ContentStatistics: React.FC = () => {}
       description: 'Service reliability'
     }
   ];
-  const features="[]"
+  const features = []
     {}
       icon: Brain,
       title: 'AI-Powered Solutions',
@@ -95,7 +95,7 @@ const ContentStatistics: React.FC = () => {}
       stats: ['50+ Countries', '15+ Languages', '24/7 Support']
     }
   ];
-  const benefits="[]"
+  const benefits = []
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -105,7 +105,7 @@ const ContentStatistics: React.FC = () => {}
     'Cost-effective pricing plans',
     'Proven track record of success'
   ];
-  const achievements="[]"
+  const achievements = []
     {}
       icon: Star,
       title: 'Industry Recognition',
@@ -126,19 +126,19 @@ const ContentStatistics: React.FC = () => {}
     }
   ];
   useEffect(() => {}
-    const duration="3000; // 3 seconds;"
+    const duration = "3000; // 3 seconds;"
     const steps="60;"
-    const stepDuration="duration / steps;"
+    const stepDuration = "duration / steps;"
     const timers = Object.keys(targetCounters).map((key) => {}
-      const target="targetCounters[key as keyof typeof targetCounters];"
-      const increment="target / steps;"
+      const target = "targetCounters[key as keyof typeof targetCounters];"
+      const increment = "target / steps;"
       let current="0;"
       return setInterval(() => {}
         current += increment;
         if (current >= target) {}
           current="target;"
         }
-        setCounters(prev="> ({}"
+        setCounters(prev = "> ({}"
           ...prev,
           [key]: Math.floor(current)
         }))
@@ -146,7 +146,7 @@ const ContentStatistics: React.FC = () => {}
     })
 
     return () => {}
-      timers.forEach(timer="> clearInterval(timer))"
+      timers.forEach(timer = "> clearInterval(timer))"
     };
   }, []);
   return (

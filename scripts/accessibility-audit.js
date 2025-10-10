@@ -6,7 +6,7 @@ const __filename="fileURLToPath(import.meta.url);"
 // __dirname removed;
 // console.log removed for production;
 // Accessibility checklist;
-const accessibilityChecklist="{}"
+const accessibilityChecklist = {}
   semanticHTML: {,
     description: 'Use semantic HTML elements',
     checks: [,
@@ -72,16 +72,15 @@ const accessibilityChecklist="{}"
     ]
   }
 };
-
 // Check HTML files for accessibility issues;
 function auditHTMLFiles() {}
   // console.log removed for production;
 ;
-const distDir="path.join(__dirname, '../dist');"
-  const htmlFiles = fs.readdirSync(distDir).filter(file="> file.endsWith('.html'));"
-  htmlFiles.forEach(file="> {);"
-const filePath="path.join(distDir, file);"
-    const content="fs.readFileSync(filePath, 'utf8');"
+const distDir = "path.join(__dirname, '../dist');"
+  const htmlFiles = fs.readdirSync(distDir).filter(file = "> file.endsWith('.html'));"
+  htmlFiles.forEach(file = "> {);"
+const filePath = "path.join(distDir, file);"
+    const content = "fs.readFileSync(filePath, 'utf8');"
     // console.log removed for production;
 // Check for semantic HTML;
     if (!content.includes('<main ')) {></main>
@@ -95,15 +94,14 @@ const filePath="path.join(distDir, file);"
     }
     
     // Check for alt attributes;
-    const imgTags="content.match(/<img[^>]*>/g) || [];"
-    imgTags.forEach(img="> {)"
-      if (!img.includes('alt="')) {'"
+    const imgTags = "content.match(/<img[^>]*>/g) || [];"
+    imgTags.forEach(img = "> {)"
+      if (!img.includes('alt = "')) {'"
         // console.log removed for production;
 }
     });
-    
     // Check for heading hierarchy;
-    const headings="content.match(/<h[1-6][^>]*>/g) || [];"
+    const headings = "content.match(/<h[1-6][^>]*>/g) || [];"
     if (headings.length === 0) {}
       // console.log removed for production;
 }
@@ -118,11 +116,11 @@ const filePath="path.join(distDir, file);"
 function auditCSSFiles() {}
   // console.log removed for production;
 ;
-const distDir="path.join(__dirname, '../dist');"
-  const cssFiles = fs.readdirSync(distDir).filter(file="> file.endsWith('.css'));"
-  cssFiles.forEach(file="> {);"
-const filePath="path.join(distDir, file);"
-    const content="fs.readFileSync(filePath, 'utf8');"
+const distDir = "path.join(__dirname, '../dist');"
+  const cssFiles = fs.readdirSync(distDir).filter(file = "> file.endsWith('.css'));"
+  cssFiles.forEach(file = "> {);"
+const filePath = "path.join(distDir, file);"
+    const content = "fs.readFileSync(filePath, 'utf8');"
     // console.log removed for production;
 // Check for focus styles;
     if (!content.includes(':focus')) {}
@@ -144,7 +142,7 @@ const filePath="path.join(distDir, file);"
 function generateAccessibilityReport() {}
   // console.log removed for production;
 ;
-const report="{}"
+const report = {}
     timestamp: new Date().toISOString()
     checklist: accessibilityChecklist;
     recommendations: [,
@@ -168,12 +166,10 @@ const report="{}"
       'Color contrast analyzers'
     ]
   };
-  
   fs.writeFileSync(
     path.join(__dirname, '../accessibility-report.json'), 
     JSON.stringify(report, null, 2)
   );
-  
   // console.log removed for production;
 }
 
@@ -193,7 +189,7 @@ const focusableElements="element.querySelectorAll("
     'button, [href], input, select, textarea, [tabindex]:not([tabindex=""-1"])'"
   );
   const firstElement="focusableElements[0];"
-  const lastElement="focusableElements[focusableElements.length - 1];"
+  const lastElement = "focusableElements[focusableElements.length - 1];"
   element.addEventListener('keydown', (e) => {}
     if (e.key === 'Tab') {}
       if (e.shiftKey) {}
@@ -207,7 +203,6 @@ const focusableElements="element.querySelectorAll("
       }
     }
   })};
-
 // 3. Add live regions for dynamic content;
 <div aria-live="polite" aria-atomic="true" className=""sr-only"></div>"
   {announcement}
@@ -272,7 +267,6 @@ const focusableElements="element.querySelectorAll("
     path.join(__dirname, '../accessibility-improvements.js'), 
     improvements;
   );
-  
   // console.log removed for production;
 }
 
@@ -283,7 +277,6 @@ function audit() {}
     auditCSSFiles();
     generateAccessibilityReport();
     generateAccessibilityImprovements();
-    
     // console.log removed for production;
 // console.log removed for production;
 // console.log removed for production;

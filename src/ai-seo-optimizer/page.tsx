@@ -6,7 +6,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 ;
 const AISEOOptimizerPage: React.FC = () => {;
-const features="[]"
+const features = []
     {}
       icon: Search,
       title: 'SEO Analysis',
@@ -32,7 +32,6 @@ const features="[]"
       benefits: ['Rank tracking', 'Competitor analysis', 'Performance reports']
     }
   ];
-
   return (
     <div className=""min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
       <Navigation /></Navigation>
@@ -92,5 +91,4 @@ const features="[]"
       <Footer /></Footer>
     </div>
   )};
-
 export default AISEOOptimizerPage;

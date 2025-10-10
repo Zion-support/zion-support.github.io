@@ -48,7 +48,7 @@ const Ico, n = currentIt, e, m.ic, o, n; return (<div, className=""bg-gradie, n,
               <TrendingUp, className=""w-5 h-5, tex, t-zi, o, n-cyan, animat, e-pul, s, e" /></TrendingUp>""
               <span, className=""te, x, t-sm, fon, t-semibold, tex, t-zi, o, n-cy, a, n">TRENDING, NO, W</sp, a, n>"
             </div>)
-            <div, classNam, e="{ `px-2, p, y-1, rounde, d-full, tex, t-xs, fon, t-bo, l, d ${getBadgeCol, o, r(currentIt, e, m.b, a, d, g, e) }, anima, t, e-boun, c, e`}></div>"
+            <div, classNam, e = "{ `px-2, p, y-1, rounde, d-full, tex, t-xs, fon, t-bo, l, d ${getBadgeCol, o, r(currentIt, e, m.b, a, d, g, e) }, anima, t, e-boun, c, e`}></div>"
               {currentIt, e, m.bad, g, e}
             </div>
           </div>"
@@ -98,12 +98,12 @@ const Ico, n = currentIt, e, m.ic, o, n; return (<div, className=""bg-gradie, n,
           {/* Navigation, d, o, t, s */}"
           <div, classNam, e=""flex, ga, p-2"></div>"
             { trendingIte, m, s.m, a, p((, _, ind, e, x) = > (
-              <button, ke, y = { in, d, e, x  }, onCli, c, k={  () =  > setCurrentInd, e, x(ind, e, x)  } classNa, m, e="{ `w-2 h-2, rounde, d-full, transitio, n-all, duratio, n-3, 0, 0 ${}"
+              <button, ke, y = { in, d, e, x  }, onCli, c, k={  () =  > setCurrentInd, e, x(ind, e, x)  } classNa, m, e = "{ `w-2 h-2, rounde, d-full, transitio, n-all, duratio, n-3, 0, 0 ${}"
                   ind, e, x === currentInd, e, x;
                      ? 'bg-zi, o, n-cyan, scal, e-1, 2, 5' 
                     : 'bg-whi, t, e/30, hove, r : bg-whi, t, e/, 5, 0'
             {/* TODO: Fix JSX expression */}
-              <button, ke, y = { in, d, e, x  }, onCli, c, k={  () =  > setCurrentInd, e, x(ind, e, x)  } classNa, m, e="{/* TODO: Fix JSX expression */}`"
+              <button, ke, y = { in, d, e, x  }, onCli, c, k={  () =  > setCurrentInd, e, x(ind, e, x)  } classNa, m, e = "{/* TODO: Fix JSX expression */}`"
                  }`}
             ))}
           </button></div>
@@ -112,7 +112,7 @@ const Ico, n = currentIt, e, m.ic, o, n; return (<div, className=""bg-gradie, n,
       {/* Progress, ba, r */}"
       <div, classNam, e=""mt-4 w-full, b, g-whi, t, e/10, rounde, d-ful, l, h-1"></div>""
         <d, i, v > className=""bg-gradie, n, t-to-r, fro, m-zi, o, n-cyan, t, o-zi, o, n-bl, u, e-ligh, t, h-1, rounde, d-full, transitio, n-all, duratio, n-100, eas, e-line, a, r"`"
-          sty, l, e="{{ wid, t, h: `${((currentInd, e, x + , 1) / trendingIte, m, s.leng, t, h) * 10, 0}%` }}"
+          sty, l, e = "{{ wid, t, h: `${((currentInd, e, x + , 1) / trendingIte, m, s.leng, t, h) * 10, 0}%` }}"
       </div>
     </div>
   )};

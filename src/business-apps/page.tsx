@@ -1,9 +1,7 @@
 import React from 'react';
-
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
 import { CheckCircle, Star } from 'lucide-react';
 const BusinessAppsPage: React.FC = () => {}
 return (
@@ -44,7 +42,7 @@ return (
               <h3 className=""text-xl font-bold text-white mb-3">Real-time Analytics</h3>""
               <p className=""text-gray-300 text-sm">Live insights and analytics to drive better decisions</p>"
         {/* Apps by Category */})
-        {categories.map(category="> ()}""
+        {categories.map(category = "> ()}""
           <section key={category} className=""mb-16"></section>""
             <h3 className=""text-2xl font-bold text-white mb-8 text-center neon-text">{category} Applications</h3>"
             <div>{businessApps}
@@ -93,4 +91,3 @@ className=""bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 roun
       <Footer /></Footer>
 </div>)}
 export default BusinessAppsPage;
-

@@ -36,7 +36,7 @@ const [isSubmitting, setIsSubmitting] = useState(false);
 const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement></HTMLInputElement>) => {;
 const { name, value } = e.target;
-    setFormData(prev="> ({}"
+    setFormData(prev = "> ({}"
       ...prev,
       [name]: value;)
 }););)
@@ -48,7 +48,7 @@ const handleSubmit = async (e: React.FormEvent) => {}
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
   const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement></HTMLInputElement>) => {}
     const { name, value } = e.target;
-    setFormData(prev="> ({}"
+    setFormData(prev = "> ({}"
       ...prev,
       [name]: value]
     });)]
@@ -59,7 +59,7 @@ const handleSubmit = async (e: React.FormEvent) => {}
     setSubmitStatus('idle');
     try {}
       /
-      await new Promise(resolve="> setTimeout(resolve, 1000));"
+      await new Promise(resolve = "> setTimeout(resolve, 1000));"
       setSubmitStatus('success');
       setFormData({}
         name: '',
@@ -92,7 +92,7 @@ message: '']
 }
   };
 ;
-const services="[]"
+const services = []
     'AI Solutions',
     'Cloud Computing',
     'Mobile App Development',
@@ -104,7 +104,7 @@ const services="[]"
     'Other'
   ];
 ;
-const contactInfo="[]"
+const contactInfo = []
     {}
       icon: Phone,
       title: 'Phone',
@@ -229,7 +229,7 @@ description: 'Eastern Time']
                   <
                   <div className=""relative"></div>"
                       <option value=""">Select a service<"
-                      {services.map((service) => (<option key={service} value="{service}></option>"
+                      {services.map((service) => (<option key={service} value = "{service}></option>"
                           {service}
                         <)
                       ))}
@@ -311,7 +311,7 @@ description: 'Eastern Time']
                     ></select>
                       <option value="""></optio>Select a service</option>"
                       {services.map((service) => (
-                        <option key={service} value="{service}></option>"
+                        <option key={service} value = "{service}></option>"
                           {service}
                         </option>
                       ));

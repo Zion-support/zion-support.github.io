@@ -68,7 +68,7 @@ export class PerformanceMetrics {}
   }
   static getInstance(): PerformanceMetrics {}
     if (!PerformanceMetrics.instance) {}
-      PerformanceMetrics.instance="new PerformanceMetrics();}"
+      PerformanceMetrics.instance = "new PerformanceMetrics();}"
 export interface PerformanceMetric {/* TODO: Fix JSX expression */}
 }
 export interface WebVitalsMetrics {/* TODO: Fix JSX expression */}
@@ -97,10 +97,10 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
     if ('PerformanceObserver' in window) {}
       try {}
         // Navigation timing;
-        const navObserver = new PerformanceObserver(list="> {)"
+        const navObserver = new PerformanceObserver(list = "> {)"
           for (const entry of list.getEntries()) {}
             if (entry.entryType === 'navigation') {}
-              const navEntry="entry as PerformanceNavigationTiming;"
+              const navEntry = "entry as PerformanceNavigationTiming;"
               this.recordMetric({)
                 name: 'pageLoadTime')
                 value: navEntry.loadEventEnd - navEntry.fetchStart)
@@ -114,10 +114,10 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
     if ('PerformanceObserver' in window) {}
       try {}
         // Navigation timing;
-        const navObserver = new PerformanceObserver(list="> {)}"
+        const navObserver = new PerformanceObserver(list = "> {)}"
           for (const entry of list.getEntries()) {}
             if (entry.entryType === 'navigation') {}
-              const navEntry="entry as PerformanceNavigationTiming;"
+              const navEntry = "entry as PerformanceNavigationTiming;"
               this.recordMetric({)}
                 name: 'pageLoadTime',
                 value: navEntry.loadEventEnd - navEntry.fetchStart,
@@ -136,7 +136,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
         navObserver.observe({ entryTypes: ['navigation'] })
         this.observers.push(navObserver)
         // Paint timing;
-        const paintObserver = new PerformanceObserver(list="> {)"
+        const paintObserver = new PerformanceObserver(list = "> {)"
           for (const entry of list.getEntries()) {}
             if (entry.name === 'first-contentful-paint') {}
               this.webVitals.FCP="entry.startTime;"
@@ -145,7 +145,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
                 value: entry.startTime),
                 unit: 'ms'),
         // Paint timing;
-        const paintObserver = new PerformanceObserver(list="> {)}"
+        const paintObserver = new PerformanceObserver(list = "> {)}"
           for (const entry of list.getEntries()) {}
             if (entry.name === 'first-contentful-paint') {}
               this.webVitals.FCP="entry.startTime;"
@@ -162,9 +162,9 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
         paintObserver.observe({ entryTypes: ['paint'] })
         this.observers.push(paintObserver)
         // Largest Contentful Paint;
-        const lcpObserver = new PerformanceObserver(list="> {)"
+        const lcpObserver = new PerformanceObserver(list = "> {)"
           const entries="list.getEntries()"
-          const lastEntry="entries[entries.length - 1]"
+          const lastEntry = "entries[entries.length - 1]"
           if (lastEntry) {}
             this.webVitals.LCP="lastEntry.startTime;"
             this.recordMetric({)
@@ -172,9 +172,9 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
               value: lastEntry.startTime),
               unit: 'ms'),
         // Largest Contentful Paint;
-        const lcpObserver = new PerformanceObserver(list="> {)}"
+        const lcpObserver = new PerformanceObserver(list = "> {)}"
           const entries="list.getEntries()"
-          const lastEntry="entries[entries.length - 1]"
+          const lastEntry = "entries[entries.length - 1]"
           if (lastEntry) {}
             this.webVitals.LCP="lastEntry.startTime;"
             this.recordMetric({)}
@@ -189,7 +189,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] })
         this.observers.push(lcpObserver)
         // Layout Shift;
-        const clsObserver = new PerformanceObserver(list="> {)"
+        const clsObserver = new PerformanceObserver(list = "> {)"
           let clsValue="0;)"
           for (const entry of list.getEntries()) {}
             if ((entry as LayoutShift).hadRecentInput) continue;
@@ -201,7 +201,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
             value: clsValue),
             unit: 'score'),
         // Layout Shift;
-        const clsObserver = new PerformanceObserver(list="> {)}"
+        const clsObserver = new PerformanceObserver(list = "> {)}"
           let clsValue="0;"
           for (const entry of list.getEntries()) {}
             if ((entry as LayoutShift).hadRecentInput) continue;
@@ -224,7 +224,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
   s: ['navigation'] });
         this.observers.push(navObserver);
         // Paint timing;
-        const paintObserver = new PerformanceObserver(list="> {/* TODO: Fix JSX expression */})"
+        const paintObserver = new PerformanceObserver(list = "> {/* TODO: Fix JSX expression */})"
               });
             }
           }
@@ -233,7 +233,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
   s: ['paint'] });
         this.observers.push(paintObserver);
         // Largest Contentful Paint;
-        const lcpObserver = new PerformanceObserver(list="> {/* TODO: Fix JSX expression */})"
+        const lcpObserver = new PerformanceObserver(list = "> {/* TODO: Fix JSX expression */})"
             });
           }
         });
@@ -241,7 +241,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
   s: ['largest-contentful-paint'] });
         this.observers.push(lcpObserver);
         // Layout Shift;
-        const clsObserver = new PerformanceObserver(list="> {/* TODO: Fix JSX expression */}"
+        const clsObserver = new PerformanceObserver(list = "> {/* TODO: Fix JSX expression */}"
           }
           this.webVitals.CLS="clsValue;"
           this.recordMetric({/* TODO: Fix JSX expression */})
@@ -276,7 +276,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
   recordPageLoad(): void {}
     if (typeof window === 'undefined') return;
     const perfData="window.performance.timing;"
-    const pageLoadTime="perfData.loadEventEnd - perfData.navigationStart;"
+    const pageLoadTime = "perfData.loadEventEnd - perfData.navigationStart;"
     this.recordMetric({)
       name: 'pageLoad')
       value: pageLoadTime)
@@ -291,7 +291,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
   recordPageLoad(): void {}
     if (typeof window === 'undefined') return;
     const perfData="window.performance.timing;"
-    const pageLoadTime="perfData.loadEventEnd - perfData.navigationStart;"
+    const pageLoadTime = "perfData.loadEventEnd - perfData.navigationStart;"
     this.recordMetric({)}
       name: 'pageLoad',
       value: pageLoadTime,
@@ -342,7 +342,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
   recordMemoryUsage(): void {}
     if (typeof window === 'undefined') return;
     if (!(performance as PerformanceWithMemory).memory) return;
-    const memory="(performance as PerformanceWithMemory).memory;"
+    const memory = "(performance as PerformanceWithMemory).memory;"
     this.recordMetric({)
       name: 'memoryUsage')
       value: memory.usedJSHeapSize)
@@ -355,7 +355,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
   recordMemoryUsage(): void {}
     if (typeof window === 'undefined') return;
     if (!(performance as PerformanceWithMemory).memory) return;
-    const memory="(performance as PerformanceWithMemory).memory;"
+    const memory = "(performance as PerformanceWithMemory).memory;"
     this.recordMetric({)}
       name: 'memoryUsage',
       value: memory.usedJSHeapSize,
@@ -411,7 +411,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
    */
   async measureAsyncFunction<T>(name: string, fn: () => Promise<T>): Promise<T> {,
     const startTime="performance.now(),"
-    const result="await fn(),"
+    const result = "await fn(),"
     const endTime="performance.now(),"
     this.recordMetric({`})
       name: `async:${name}`)
@@ -419,7 +419,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
       unit: 'ms'),
   async measureAsyncFunction<T>(name: string, fn: () => Promise<T>): Promise<T> {}
     const startTime="performance.now()"
-    const result="await fn()"
+    const result = "await fn()"
     const endTime="performance.now()"
     this.recordMetric({`})
       name: `async:${name}`,
@@ -621,7 +621,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
    * Cleanup observers;
    */
   cleanup(): void {}
-    this.observers.forEach(observer="> observer.disconnect())"
+    this.observers.forEach(observer = "> observer.disconnect())"
     this.observers="[];}"
   }
 }

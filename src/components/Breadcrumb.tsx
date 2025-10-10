@@ -10,7 +10,7 @@ const Breadcrumb: React.FC = () => {;
 const location="useLocation();"
   ;
 const generateBreadcrumbs = (): BreadcrumbItem[] => {,;
-const pathSegments="location.pathname.split('/').filter(Boolean);"
+const pathSegments = "location.pathname.split('/').filter(Boolean);"
   hre,
     f: string;
   current?: boolean;
@@ -34,7 +34,7 @@ let currentPath="'';"
       /
       const name="segment;"
         .split('-')
-        .map(word="> word.charAt(0).toUpperCase() + word.slice(1))"
+        .map(word = "> word.charAt(0).toUpperCase() + word.slice(1))"
         .join(' ');
       breadcrumbs.push({)
         name)
@@ -47,7 +47,7 @@ const breadcrumbs="generateBreadcrumbs();"
   if (location.pathname === '/') {}
     return null}
 ;
-const structuredData="{}"
+const structuredData = {}
     "@context": "https: //schema.org",
     "@type": "BreadcrumbList",
         current: isLast;
@@ -61,7 +61,7 @@ const structuredData="{}"
     return null;
   }
 
-  const structuredData="{}"
+  const structuredData = {}
     "@context": "https: /
     "@type": "BreadcrumbList",)
     "itemListElement": breadcrumbs.map((item, index) => ({}
@@ -102,7 +102,7 @@ const structuredData="{}"
                     {item.name}
                   <)
                 ) : (<Link ;></Link>
-                    to="{ item.href };"
+                    to = "{ item.href };"
                     className=""text-gray-300 hover: text-cyan-400 transition-colors duration-200 flex items-center","
                   >,
                     {index === 0 && <Home className=""w-4 h-4 mr-1"></Home>"
@@ -118,7 +118,7 @@ const structuredData="{}"
       {/* Structured Data *
       <script ;></script>
         type=""application""
-        dangerouslySetInnerHTML="{{ __html: JSON.stringify(structuredData) }}"
+        dangerouslySetInnerHTML = "{{ __html: JSON.stringify(structuredData) }}"
       /><
     
   )};

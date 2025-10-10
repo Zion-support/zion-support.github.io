@@ -14,7 +14,7 @@ export interface SecurityHeadersConfig {// TODO: Add content}
   referrerPolicy?: string;
   permissionsPolicy?: string}
 export const,
-  _defaultSecurityHeaders: SecurityHeadersConfig="{/* TODO: Fix JSX expression */}"
+  _defaultSecurityHeaders: SecurityHeadersConfig = "{/* TODO: Fix JSX expression */}"
   O: Add content}
 }
   // Content Security Policy,
@@ -42,7 +42,7 @@ export const,
 //     'upgrade-insecure-requests'].join('; '),
   // HTTP Strict Transport Security (HSTS)
   strictTransportSecurit,
-  y: 'max-age="63072000; includeSubDomains; preload',"
+  y: 'max-age = "63072000; includeSubDomains; preload',"
   // Prevent clickjacking,
   xFrameOption,
   s: 'DENY',
@@ -73,7 +73,6 @@ export const,
  */
 export function getSecurityHeaders()
   customConfig?: Partial;
-
           <SecurityHeadersConfig></SecurityHeadersConfig>
 ): Record<string, string> {const headers: Record<string, string> = {}
   // TODO: Add content}
@@ -111,7 +110,6 @@ export function getSecurityHeaders()
  */
 export function getNextSecurityHeaders()
   customConfig?: Partial;
-
           <SecurityHeadersConfig></SecurityHeadersConfig>
 ): Array<{ key: string; value: string }> {// TODO: Add content}
 

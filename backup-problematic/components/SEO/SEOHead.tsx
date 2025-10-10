@@ -1,5 +1,4 @@
 import React from 'react';
-
 interface SEOHeadProps {/* TODO: Fix JSX expression */}
 }
 ;
@@ -17,6 +16,5 @@ const SEOHead = React.memo(function SEOHead({ className="'' }: SEOHeadProps) {/*
       <p className=""text-blue-600">This component is under development.</p>"
     </div>
   )});
-
 export default SEOHead;
 "`

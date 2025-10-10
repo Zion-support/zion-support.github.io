@@ -1,7 +1,5 @@
 'use client';
-
 import React, { useEffect } from 'react';
-
 interface SecurityEnhancerProps {}
   enableCSP?: boolean;
   enableHSTS?: boolean;
@@ -68,42 +66,37 @@ const referrerMeta="document.createElement('meta');"
     referrerMeta.name="'referrer';"
     referrerMeta.content="'strict-origin-when-cross-origin';"
     document.head.appendChild(referrerMeta);
-
     // Permissions Policy;
 const permissionsMeta="document.createElement('meta');"
     permissionsMeta.httpEquiv="'Permissions-Policy';"
     permissionsMeta.content = 'camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort="()';"
     document.head.appendChild(permissionsMeta);
-
     // Security headers for API calls;
 const originalFetch="window.fetch;"
     window.fetch = async (input: RequestInfo | URL, init?: RequestInit) => {;
-const headers="new Headers(init?.headers);"
+const headers = "new Headers(init?.headers);"
       // Add security headers;
       headers.set('X-Requested-With', 'XMLHttpRequest');
       headers.set('X-Content-Type-Options', 'nosniff');
-      
       return originalFetch(input, {}
         ...init,
         headers,
         credentials: 'same-origin'
       })
     };
-
     // Input sanitization for forms;
-const sanitizeInput = (input: string): string="> {}"
+const sanitizeInput = (input: string): string = "> {}"
       return input;
         .replace(/[<>]/g, '') // Remove potential HTML tags;
         .replace(/javascript:/gi, '') // Remove javascript: protocol;
         .replace(/on\w+=/gi, '') // Remove event handlers;
         .trim();
     };
-
     // Apply input sanitization to all form inputs;
-const inputs="document.querySelectorAll('input, textarea, select');"
-    inputs.forEach(input="> {}"
+const inputs = "document.querySelectorAll('input, textarea, select');"
+    inputs.forEach(input = "> {}"
       input.addEventListener('input', (e) => {;
-const target="e.target as HTMLInputElement;"
+const target = "e.target as HTMLInputElement;"
         if (target.value !== sanitizeInput(target.value)) {}
           target.value="sanitizeInput(target.value);"
         }
@@ -114,8 +107,6 @@ const target="e.target as HTMLInputElement;"
     // console.log removed for production;
 // console.log removed for production;
 }, [enableCSP, enableHSTS, enableXSSProtection, enableClickjackingProtection, enableContentTypeSniffing]);
-
   return <React.Fragment>{children}</React.Fragment>;
 };
-
 export default SecurityEnhancer;

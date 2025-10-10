@@ -1,5 +1,4 @@
 import React from 'react';
-
 interface SkipLinkProps {}
   to: string;
   children: React.ReactNode}
@@ -26,11 +25,10 @@ return (
       onFocus={(e) =>
 );
 } {}
-        e.currentTarget.style.top="'6 px'}}"
+        e.currentTarget.style.top = "'6 px'}}"
       onBlur={(e) => {}
-        e.currentTarget.style.top="'-40 px'}}>"
+        e.currentTarget.style.top = "'-40 px'}}>"
       {children}
     </a>
   )};
-
 export default SkipLink;

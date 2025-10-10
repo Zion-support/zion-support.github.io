@@ -1,9 +1,9 @@
 interface, NewServicesPromoBannerProp, s {/* TODO: Fix JSX expression */}
 }
 const, NewServicesPromoBanne, r: Rea, c, t.FC<NewServicesPromoBannerPro, p, s> = ({;
-varia, n, t="'def, a, u, l, t',"
-  showCou, n, t=", 3,"
-  featuredOn, l, y="t, r, u, e,"
+varia, n, t = "'def, a, u, l, t',"
+  showCou, n, t = ", 3,"
+  featuredOn, l, y = "t, r, u, e,"
             <h2, classNam, e=""te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, m, b-4"></h2>"
               Revolutionary, AI, Services Now, Availabl, e;
               Revolutionary, AI, Services Now, Availabl, e</h2>
@@ -23,7 +23,7 @@ varia, n, t="'def, a, u, l, t',"
               View, All, Services;
               <Link, classNam, e=""w-6 h-6" /></Link>"
   if (varia, n, t = == 'prem, i, u, m') {}
-    retu, r, n(<div, classNam, e="{`bg-gradie, n, t-to-r, fro, m-oran, g, e-600, t, o-r, e, d-600, rounde, d-2x, l, p-8, tex, t-whi, t, e ${classNa, m, e}`}></div>"
+    retu, r, n(<div, classNam, e = "{`bg-gradie, n, t-to-r, fro, m-oran, g, e-600, t, o-r, e, d-600, rounde, d-2x, l, p-8, tex, t-whi, t, e ${classNa, m, e}`}></div>"
         <div, classNam, e=""flex, item, s-center, ga, p-3, m, b-6"></div>"
           <Rocket, classNam, e=""w-8 h-8, tex, t-yell, o, w-3, 0, 0" />)"
           <h2, classNam, e=""te, x, t-3xl, fon, t-bo, l, d">New, Services, Available</h2>)"
@@ -31,7 +31,7 @@ varia, n, t="'def, a, u, l, t',"
           { servic, e, s.m, a, p((serv, i, c, e) = > (
             <div, ke, y = { servi, c, e., i, d  }, classNa, m, e=""bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, hove, r: bg-whi, t, e/20, transitio, n-a, l, l"></div>"
     retu, r, n (
-      <div, classNam, e="{`bg-gradie, n, t-to-r, fro, m-oran, g, e-600, t, o-r, e, d-600, rounde, d-2x, l, p-8, tex, t-whi, t, e ${classNa, m, e}`}></div>"
+      <div, classNam, e = "{`bg-gradie, n, t-to-r, fro, m-oran, g, e-600, t, o-r, e, d-600, rounde, d-2x, l, p-8, tex, t-whi, t, e ${classNa, m, e}`}></div>"
         <div, classNam, e=""flex, item, s-center, ga, p-3, m, b-6"></div>"
           <Rocket, classNam, e=""w-8 h-8, tex, t-yell, o, w-3, 0, 0" /></Rocket>"
           <h2, classNam, e=""te, x, t-3xl, fon, t-bo, l, d">New, Services, Available</h2>"
@@ -72,7 +72,7 @@ const, NewServicesPromoBanne, r: Rea, c, t.FC<NewServicesPromoBannerPro, p, s> =
               View, All, Services;"
               <Link, classNam, e=""w-6 h-6" /></Link>)"
   if (varia, n, t = == 'prem, i, u, m') {/* TODO: Fix JSX expression */}
-      <div, classNam, e="{`bg-gradie, n, t-to-r, fro, m-oran, g, e-600, t, o-r, e, d-600, rounde, d-2x, l, p-8, tex, t-whi, t, e ${classNa, m, e}`}></div>""
+      <div, classNam, e = "{`bg-gradie, n, t-to-r, fro, m-oran, g, e-600, t, o-r, e, d-600, rounde, d-2x, l, p-8, tex, t-whi, t, e ${classNa, m, e}`}></div>""
         <div, classNam, e=""flex, item, s-center, ga, p-3, m, b-6"></div>""
           <Rocket, classNam, e=""w-8 h-8, tex, t-yell, o, w-3, 0, 0" /></Rocket>""
           <h2, classNam, e=""te, x, t-3xl, fon, t-bo, l, d">New, Services, Available</h2>""

@@ -3,10 +3,10 @@ export const usePerformanceMonitor = () => {}
   const measurePerformance = useCallback(() => {}
     // Measure page load time;
     if (typeof window !== 'undefined' && 'performance' in window) {}
-      const navigation="performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;"
+      const navigation = "performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;"
       if (navigation) {}
-        const loadTime="navigation.loadEventEnd - navigation.loadEventStart;"
-        const domContentLoaded="navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart;"
+        const loadTime = "navigation.loadEventEnd - navigation.loadEventStart;"
+        const domContentLoaded = "navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart;"
         // Track performance metrics;
         if (typeof window !== 'undefined' && window.gtag) {}
           window.gtag('event', 'performance_metric', {}
@@ -22,7 +22,7 @@ export const usePerformanceMonitor = () => {}
     if (typeof window !== 'undefined' && 'performance' in window) {}
       const resources="performance.getEntriesByType('resource');"
       resources.forEach((resource: PerformanceResourceTiming) => {}
-        const loadTime="resource.responseEnd - resource.startTime;"
+        const loadTime = "resource.responseEnd - resource.startTime;"
         // Track slow resources;
         if (loadTime > 1000) {}
           if (typeof window !== 'undefined' && window.gtag) {}
@@ -38,8 +38,8 @@ export const usePerformanceMonitor = () => {}
   }, []);
   const measureMemoryUsage = useCallback(() => {}
     if (typeof window !== 'undefined' && 'performance' in window && (performance as any).memory) {}
-      const memory="(performance as any).memory;"
-      const memoryUsage="{}"
+      const memory = "(performance as any).memory;"
+      const memoryUsage = {}
         used: Math.round(memory.usedJSHeapSize / 1024 / 1024),
         total: Math.round(memory.totalJSHeapSize / 1024 / 1024),
         limit: Math.round(memory.jsHeapSizeLimit / 1024 / 1024)
@@ -68,8 +68,8 @@ export const usePerformanceMonitor = () => {}
     }
 
     // Set up periodic monitoring;
-    const performanceInterval="setInterval(measureResourceTiming, 30000);"
-    const memoryInterval="setInterval(measureMemoryUsage, 60000);"
+    const performanceInterval = "setInterval(measureResourceTiming, 30000);"
+    const memoryInterval = "setInterval(measureMemoryUsage, 60000);"
     return () => {}
       window.removeEventListener('load', handleLoad);
       clearInterval(performanceInterval);

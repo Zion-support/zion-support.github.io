@@ -1,5 +1,5 @@
 
-export const real2036ITServices="[{id: 'quantum-cloud-infrastructure-platform',"
+export const real2036ITServices = "[{id: 'quantum-cloud-infrastructure-platform',"
     name: 'Quantum Cloud Infrastructure Platform',
     tagline: 'Next-generation quantum cloud computing',
     description:,
@@ -19,7 +19,7 @@ export const real2036ITServices="[{id: 'quantum-cloud-infrastructure-platform',"
     marketPrice: '$8,000-15,000/month',
     benefits:
         benefits: [}
-export const real2036ITServices="[{/* TODO: Fix JSX expression */}"
+export const real2036ITServices = "[{/* TODO: Fix JSX expression */}"
   s: [}
       'Access to quantum computing power'
       'Hybrid classical-quantum processing'
@@ -553,7 +553,7 @@ export const real2036ITServices="[{/* TODO: Fix JSX expression */}"
     ]
   }
 ];
-export const real2036ITServices="[{id: 'quantum-cloud-infrastructure-platform',"
+export const real2036ITServices = "[{id: 'quantum-cloud-infrastructure-platform',"
     name: 'Quantum Cloud Infrastructure Platform',
     tagline: 'Next-generation quantum cloud computing',
     description:,
@@ -573,7 +573,7 @@ export const real2036ITServices="[{id: 'quantum-cloud-infrastructure-platform',"
     marketPrice: '$8,000-15,000/month',
     benefits:
         benefits: [}
-export const real2036ITServices="[{/* TODO: Fix JSX expression */}"
+export const real2036ITServices = "[{/* TODO: Fix JSX expression */}"
   s: [}
       'Access to quantum computing power'
       'Hybrid classical-quantum processing'
@@ -1068,7 +1068,7 @@ export const real2036ITServices="[{/* TODO: Fix JSX expression */}"
       'Reduced recovery time'
     ]
     useCases: []
-export const real2036ITServices="[{id: 'quantum - cloud - infrastructure - platform',"
+export const real2036ITServices = "[{id: 'quantum - cloud - infrastructure - platform',"
     name: 'Quantum Cloud Infrastructure Platform',
     tagline: 'Next - generation quantum cloud computing',
     description: unknown;
@@ -1102,7 +1102,7 @@ export const real2036ITServices="[{id: 'quantum - cloud - infrastructure - platf
     description: unknown;
     useCase,
   s: [,
-export const real2036ITServices="[{/* TODO: Fix JSX expression */}"
+export const real2036ITServices = "[{/* TODO: Fix JSX expression */}"
     ]}
   },
     i,
@@ -1563,7 +1563,7 @@ export const real2036 ITServices="[]"
       'Business continuity']};
 ];      'Data center recoveryCloud recoveryApplication recoveryBusiness continuity'
     ]
-export const real2036ITServices="[]"
+export const real2036ITServices = []
   {;
     id: 'quantum-cloud-infrastructure-platform';
     name: 'Quantum Cloud Infrastructure Platform';
@@ -1815,7 +1815,7 @@ export const real2036ITServices="[]"
 };
 ];      'Data center recoveryCloud recoveryApplication recoveryBusiness continuity'
     ]
-export const real2036ITServices="[]"
+export const real2036ITServices = []
   {;
     id: 'quantum-cloud-infrastructure-platform';
     name: 'Quantum Cloud Infrastructure Platform';
@@ -2064,7 +2064,7 @@ export const real2036ITServices="[]"
     ]}
   }
 ];
-export const real2036ITServices="[ i,"
+export const real2036ITServices = "[ i,"
   d: 'quantum-cloud-infrastructure-platform'' nam,
   e: 'Quantum Cloud Infrastructure Platform'' taglin,
   e: 'Next-generation quantum cloud computing' descriptio,
@@ -2199,7 +2199,7 @@ export const real2036ITServices="[ i,"
   n: '☁️⚛️'' marketPric,
   e: '$8,000-15,000/month' benefit,
   s: [' 'Access to quantum computing power'' 'Hybrid classical-quantum processing'' 'Future-proof cloud infrastructure'' 'Quantum advantage in the cloud' ] useCase,
-  s: [' 'Scientific research computing'' 'Financial modeling'' 'Drug discovery'' 'Climate simulation' ] } ' ]; 'Data center recoveryCloud recoveryApplication recoveryBusiness continuity' ] } ]; export const real2036ITServices="[ ' i,"
+  s: [' 'Scientific research computing'' 'Financial modeling'' 'Drug discovery'' 'Climate simulation' ] } ' ]; 'Data center recoveryCloud recoveryApplication recoveryBusiness continuity' ] } ]; export const real2036ITServices = "[ ' i,"
   d: 'quantum-cloud-infrastructure-platform'' nam,
   e: 'Quantum Cloud Infrastructure Platform'' taglin,
   e: 'Next-generation quantum cloud computing' descriptio,
@@ -2328,7 +2328,7 @@ export const real2036ITServices="[ i,"
   n: '🔄🤖'' marketPric,
   e: '$4,500-7,000/month' benefit,
   s: [' 'Automated recovery procedures'' 'Intelligent backup management'' 'Predictive recovery planning'' 'Reduced recovery time' ] useCase,
-  s: [ export const real2036ITServices="[, ' i,"
+  s: [ export const real2036ITServices = "[, ' i,"
   d: 'quantum - cloud - infrastructure - platform',' nam,
   e: 'Quantum Cloud Infrastructure Platform',' taglin,
   e: 'Next - generation quantum cloud computing', descriptio,
@@ -2457,7 +2457,7 @@ export const real2036ITServices="[ i,"
   n: '🔄🤖',' market_pric,
   e: '$4, 500 - 7, 000 / month', benefit,
   s: [,' 'Automated recovery procedures',' 'Intelligent backup management',' 'Predictive recovery planning',' 'Reduced recovery time'], use_case,
-  s: [,' 'Data center recovery',' 'Cloud recovery',' 'Application recovery',' 'Business continuity']};' ]; 'Data center recoveryCloud recoveryApplication recoveryBusiness continuity' ] };' ]; 'Data center recoveryCloud recoveryApplication recoveryBusiness continuity' ] export const real2036ITServices = [ ' 'Data center recovery',' 'Cloud recovery',' 'Application recovery',' 'Business continuity']};' ]; 'Data center recoveryCloud recoveryApplication recoveryBusiness continuity' ] export const real2036ITServices="[; {/* TODO: Fix JSX expression */}"
+  s: [,' 'Data center recovery',' 'Cloud recovery',' 'Application recovery',' 'Business continuity']};' ]; 'Data center recoveryCloud recoveryApplication recoveryBusiness continuity' ] };' ]; 'Data center recoveryCloud recoveryApplication recoveryBusiness continuity' ] export const real2036ITServices = [ ' 'Data center recovery',' 'Cloud recovery',' 'Application recovery',' 'Business continuity']};' ]; 'Data center recoveryCloud recoveryApplication recoveryBusiness continuity' ] export const real2036ITServices = "[; {/* TODO: Fix JSX expression */}"
   s: [}' 'Scientific research computingFinancial modelingDrug discoveryClimate simulation' ]} }; {/* TODO: Fix JSX expression */}
   s: [}' 'Continuous deploymentInfrastructure automationTesting automationMonitoring and alerting' ]} }; {/* TODO: Fix JSX expression */}
   s: [}' 'Government securityFinancial institutionsHealthcare data protectionCritical infrastructure' ]} }; {/* TODO: Fix JSX expression */}
@@ -2467,7 +2467,7 @@ export const real2036ITServices="[ i,"
   s: [}' 'Government communicationsFinancial networksResearch networksQuantum internet backbone' ]} }; {/* TODO: Fix JSX expression */}
   s: [}' 'Server monitoringNetwork monitoringApplication monitoringCloud infrastructure' ]} }; {/* TODO: Fix JSX expression */}
   s: [}' 'Big data storageData archivingCloud storageData backup' ]} }; {/* TODO: Fix JSX expression */}
-  s: [}' 'Data center recoveryCloud recoveryApplication recoveryBusiness continuity' ]} } ]};' ]; 'Data center recoveryCloud recoveryApplication recoveryBusiness continuity' ] export const real2036ITServices="[; {/* TODO: Fix JSX expression */}"
+  s: [}' 'Data center recoveryCloud recoveryApplication recoveryBusiness continuity' ]} } ]};' ]; 'Data center recoveryCloud recoveryApplication recoveryBusiness continuity' ] export const real2036ITServices = "[; {/* TODO: Fix JSX expression */}"
   s: [}' 'Scientific research computingFinancial modelingDrug discoveryClimate simulation' ]} }; {/* TODO: Fix JSX expression */}
   s: [}' 'Continuous deploymentInfrastructure automationTesting automationMonitoring and alerting' ]} }; {/* TODO: Fix JSX expression */}
   s: [}' 'Government securityFinancial institutionsHealthcare data protectionCritical infrastructure' ]} }; {/* TODO: Fix JSX expression */}

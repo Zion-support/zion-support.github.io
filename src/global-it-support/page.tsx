@@ -1,9 +1,7 @@
 import React from 'react';
-
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
 import { Globe, Headphones, Shield, Zap, CheckCircle, Star,  Globe,  Headphones,  Zap } from 'lucide-react';
 const GlobalITSupportPage: React.FC = () => {;
 const features="[];"
@@ -37,7 +35,6 @@ const features="[];"
   s: ['Fast resolution', 'Escalation procedures', 'SLA guarantees']
     }
   ];
-
   return (
     <div className=""min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
       <Navigation /></Navigation>
@@ -51,7 +48,6 @@ const features="[];"
           </p>"
           <p className=""text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed"></p>"
             Get comprehensive IT support wherever you are in the world. Our global team of experts provides;
-
             24/7 support across all time zones with local expertise and multi-language capabilities.
           <div className=""flex flex-col sm:flex-row gap-4 justify-center items-center"></div>"
             <a href="/contact" className=""cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"></a>"
@@ -93,6 +89,4 @@ const features="[];"
       <Footer /></Footer>
     </div>
   )};
-
 export default GlobalItSupportPage;
-

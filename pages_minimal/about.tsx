@@ -7,7 +7,6 @@ export const metadata: Metadata="{,"
     title: 'About',
     description: 'Discover the latest AI breakthroughs and enterprise automation solutions.',
     type: 'article'}};
-
 export default function about() {}
   return(<div className=""min-h-screen bg-gray-50"></div>"
       <div className=""max-w-4xl mx-auto px-4 py-8"></div>"
@@ -41,9 +40,8 @@ export default function about() {}
         </div>)
       </div>)
 export const,
-  metadata: Metadata="{/* TODO: Fix JSX expression */}"
+  metadata: Metadata = "{/* TODO: Fix JSX expression */}"
   }};
-
 export default function about() {/* TODO: Fix JSX expression */}
 }
   return (<div className=""min-h-screen bg-gray-50"></div>""

@@ -51,7 +51,7 @@ const updateMetrics = useCallback((newMetrics: Partial<PerformanceMetrics>) => {
   });
   const [isMonitoring, setIsMonitoring] = useState(false);
   const updateMetrics = useCallback((newMetrics: Partial<PerformanceMetrics>) => {}
-    setMetrics(prev="> ({ ...prev, ...newMetrics }));"
+    setMetrics(prev = "> ({ ...prev, ...newMetrics }));"
     if (onMetricsUpdate) {}
       onMetricsUpdate({ ...metrics, ...newMetrics });
     }
@@ -71,25 +71,25 @@ const measureWebVitals = useCallback(() => {}
 ;
 const observers: PerformanceObserver[] = [];
     // Measure First Contentful Paint (FCP);
-const fcpEntries="performance.getEntriesByName('first-contentful-paint') || [];"
-const fcp="fcpEntries.length > 0 ? fcpEntries[0].startTime : null;"
+const fcpEntries = "performance.getEntriesByName('first-contentful-paint') || [];"
+const fcp = "fcpEntries.length > 0 ? fcpEntries[0].startTime : null;"
     // Measure Largest Contentful Paint (LCP)
     if ('PerformanceObserver' in window) {}
       try {;
-const lcpObserver = new PerformanceObserver(list="> {;"
+const lcpObserver = new PerformanceObserver(list = "> {;"
 const entries="list.getEntries();"
-const lastEntry="entries[entries.length - 1];"
-          setMetrics(prev="> ({ ...prev, lcp: lastEntry.startTime }););)"
+const lastEntry = "entries[entries.length - 1];"
+          setMetrics(prev = "> ({ ...prev, lcp: lastEntry.startTime }););)"
 });;
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });;
         observers.push(lcpObserver);)
 } catch (error) {}
         // eslint-disable-next-line no-console;);
       try {}
-        const lcpObserver = new PerformanceObserver(list="> {}"
+        const lcpObserver = new PerformanceObserver(list = "> {}"
           const entries="list.getEntries();"
-          const lastEntry="entries[entries.length - 1];"
-          setMetrics(prev="> ({ ...prev, lcp: lastEntry.startTime });)]"
+          const lastEntry = "entries[entries.length - 1];"
+          setMetrics(prev = "> ({ ...prev, lcp: lastEntry.startTime });)]"
     });;
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });;
         observers.push(lcpObserver)]
@@ -101,11 +101,11 @@ const lastEntry="entries[entries.length - 1];"
     // Measure First Input Delay (FID)
     if ('PerformanceObserver' in window) {}
       try {;
-const fidObserver = new PerformanceObserver(list="> {;"
+const fidObserver = new PerformanceObserver(list = "> {;"
 const entries="list.getEntries();"
-          entries.forEach(entry="> {}"
-            if ($1) { const fidEntry="entry as PerformanceEventTiming;"
-              setMetrics(prev="> ({}"
+          entries.forEach(entry = "> {}"
+            if ($1) { const fidEntry = "entry as PerformanceEventTiming;"
+              setMetrics(prev = "> ({}"
                 ...prev,
 fid: fidEntry.processingStart - fidEntry.startTime]
     });)]
@@ -123,14 +123,14 @@ fid: fidEntry.processingStart - fidEntry.startTime]
     if ('PerformanceObserver' in window) {}
       try {;
 let clsValue="0;"
-const clsObserver = new PerformanceObserver(list="> {;"
+const clsObserver = new PerformanceObserver(list = "> {;"
 const entries="list.getEntries();"
-          entries.forEach(entry="> {}"
-            if ($1) { const clsEntry="entry as LayoutShift;"
+          entries.forEach(entry = "> {}"
+            if ($1) { const clsEntry = "entry as LayoutShift;"
               if (!clsEntry.hadRecentInput) {}
                 clsValue += clsEntry.value;
-                setMetrics(prev="> ({ ...prev, cls: clsValue });););"
-                setMetrics(prev="> ({ ...prev, cls: clsValue });)]"
+                setMetrics(prev = "> ({ ...prev, cls: clsValue });););"
+                setMetrics(prev = "> ({ ...prev, cls: clsValue });)]"
     }
             });
 });]
@@ -144,15 +144,15 @@ observers.push(clsObserver)]
 
     // Measure Time to First Byte (TTFB)
     try {;
-const navigationEntries="performance.getEntriesByType?.('navigation') || [];"
-const navigationEntry="navigationEntries[0] as PerformanceNavigationTiming;"
+const navigationEntries = "performance.getEntriesByType?.('navigation') || [];"
+const navigationEntry = "navigationEntries[0] as PerformanceNavigationTiming;"
 const ttfb="navigationEntry;"
         ? navigationEntry.responseStart - navigationEntry.requestStart;
         : null;
       // Measure Memory Usage;
-const memory="(performance as Performance & { memory?: { usedJSHeapSize: number } });"
+const memory = "(performance as Performance & { memory?: { usedJSHeapSize: number } });"
           .memory?.usedJSHeapSize || null;
-      setMetrics(prev="> ({}"
+      setMetrics(prev = "> ({}"
         ...prev,
         fcp,
         ttfb,
@@ -163,7 +163,7 @@ memory]
     }
     // Cleanup observers;
     return () => {}
-      observers.forEach(observer="> {}"
+      observers.forEach(observer = "> {}"
         try {}
           observer.disconnect();)
 } catch (error) {}
@@ -203,23 +203,23 @@ const measureCoreWebVitals = useCallback(() => {}
     // Use web-vitals library if available;
     try {}
       import('web-vitals')
-        .then(webVitals="> {;"
+        .then(webVitals = "> {;"
 const { onCLS, onFCP, onLCP, onTTFB } = webVitals;
           if (onCLS) {}
             onCLS((metric: { value: number }); =>
-              setMetrics(prev="> ({ ...prev, cls: metric.value });)"
+              setMetrics(prev = "> ({ ...prev, cls: metric.value });)"
             ););
           if (onFCP) {}
             onFCP((metric: { value: number }); =>
-              setMetrics(prev="> ({ ...prev, fcp: metric.value });)"
+              setMetrics(prev = "> ({ ...prev, fcp: metric.value });)"
             ););
           if (onLCP) {}
             onLCP((metric: { value: number }); =>
-              setMetrics(prev="> ({ ...prev, lcp: metric.value });)"
+              setMetrics(prev = "> ({ ...prev, lcp: metric.value });)"
             ););
           if (onTTFB) {}
             onTTFB((metric: { value: number }); =>
-              setMetrics(prev="> ({ ...prev, ttfb: metric.value });)"
+              setMetrics(prev = "> ({ ...prev, ttfb: metric.value });)"
             ););
         });
         .catch(() => {}
@@ -229,22 +229,22 @@ const { onCLS, onFCP, onLCP, onTTFB } = webVitals;
       // web-vitals not available, continue without it;);
   }, []);
 const lcpEntries="performance.getEntriesByType('largest-contentful-paint');"
-    if ($1) { const lcp="lcpEntries[lcpEntries.length - 1];"
+    if ($1) { const lcp = "lcpEntries[lcpEntries.length - 1];"
             )]
     }
           if (onFCP) {}
             onFCP((metric: { value: number }); =>
-              setMetrics(prev="> ({ ...prev, fcp: metric.value });)"
+              setMetrics(prev = "> ({ ...prev, fcp: metric.value });)"
             )]
     }
           if (onLCP) {}
             onLCP((metric: { value: number }); =>
-              setMetrics(prev="> ({ ...prev, lcp: metric.value });)"
+              setMetrics(prev = "> ({ ...prev, lcp: metric.value });)"
             )]
     }
           if (onTTFB) {}
             onTTFB((metric: { value: number }); =>
-              setMetrics(prev="> ({ ...prev, ttfb: metric.value });)"
+              setMetrics(prev = "> ({ ...prev, ttfb: metric.value });)"
             )]
     }
         });
@@ -257,13 +257,13 @@ const lcpEntries="performance.getEntriesByType('largest-contentful-paint');"
   }, []);
     const lcpEntries="performance.getEntriesByType('largest-contentful-paint');"
     if (lcpEntries.length > 0) {}
-      const lcp="lcpEntries[lcpEntries.length - 1];"
+      const lcp = "lcpEntries[lcpEntries.length - 1];"
       updateMetrics({ lcp: lcp.startTime });
     }
 
     // Measure First Input Delay (FID);
 const fidEntries="performance.getEntriesByType('first-input');"
-    if ($1) { const fid="fidEntries[0] as PerformanceEventTiming;"
+    if ($1) { const fid = "fidEntries[0] as PerformanceEventTiming;"
       updateMetrics({ fid: fid.processingStart - fid.startTime });
     }
 
@@ -277,13 +277,13 @@ const clsEntries="performance.getEntriesByType('layout-shift');"
     });
     updateMetrics({ cls: clsValue });
     // Measure Time to First Byte (TTFB);
-const navigationEntry="performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;"
+const navigationEntry = "performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;"
     if (navigationEntry) {}
       updateMetrics({ ttfb: navigationEntry.responseStart - navigationEntry.requestStart });
     }
 
     // Measure memory usage;
-    if ($1) { const memory="(performance as any).memory;"
+    if ($1) { const memory = "(performance as any).memory;"
       updateMetrics({ memory: memory.usedJSHeapSize / 1024 / 1024 }); // Convert to MB;
     }
   }, [updateMetrics]);
@@ -315,22 +315,22 @@ const interval = setInterval(() => {}
       onMetricsUpdate(metrics););
   }, [metrics, onMetricsUpdate]);
       // Set up periodic monitoring;
-const interval="setInterval(measurePerformance, 5000);"
+const interval = "setInterval(measurePerformance, 5000);"
       onMetricsUpdate(metrics)]
     }
   }, [metrics, onMetricsUpdate]);
       // Set up periodic monitoring;
-      const interval="setInterval(measurePerformance, 5000);"
+      const interval = "setInterval(measurePerformance, 5000);"
       // Set up performance observer for real-time updates;
 const observer = new PerformanceObserver((list) => {}
         list.getEntries().forEach((entry) => {}
           if (entry.entryType === 'largest-contentful-paint') {}
             updateMetrics({ lcp: entry.startTime });
-          } else if ($1) { const fid="entry as PerformanceEventTiming;"
+          } else if ($1) { const fid = "entry as PerformanceEventTiming;"
             updateMetrics({ fid: fid.processingStart - fid.startTime });
-          } else if ($1) { const cls="entry as any;"
+          } else if ($1) { const cls = "entry as any;"
             if (!cls.hadRecentInput) {}
-              setMetrics(prev="> ({}"
+              setMetrics(prev = "> ({}"
                 ...prev, 
                 cls: (prev.cls || 0) + cls.value;
               }));
@@ -348,8 +348,8 @@ const observer = new PerformanceObserver((list) => {}
 const cleanup="startMonitoring();"
     return cleanup;
   }, [enableRealTimeMonitoring, measurePerformance, updateMetrics]);
-const getPerformanceScore = (metric: number | null, thresholds: { good: number; poor: number }): string="> {}"
-  const getPerformanceScore = (metric: number | null, thresholds: { good: number; poor: number }): string="> {}"
+const getPerformanceScore = (metric: number | null, thresholds: { good: number; poor: number }): string = "> {}"
+  const getPerformanceScore = (metric: number | null, thresholds: { good: number; poor: number }): string = "> {}"
     if (metric === null) return 'N/A';
     if (metric <= thresholds.good) return 'Good';
     if (metric <= thresholds.poor) return 'Needs Improvement';
@@ -432,7 +432,7 @@ const _recommendations="getPerformanceRecommendations();"
             </h4>
             <ul className="'text-xs text-red-600'></ul>"
               {_recommendations.map((rec, index) => (
-                <li key="{index}></l>• {rec}</li>"
+                <li key = "{index}></l>• {rec}</li>"
               ));
             </ul>
           </div>
@@ -440,10 +440,10 @@ const _recommendations="getPerformanceRecommendations();"
       </div>
     ););
   return null;)
-  const fcpScore="getPerformanceScore(metrics.fcp, { good: 1800, poor: 3000 });"
-  const lcpScore="getPerformanceScore(metrics.lcp, { good: 2500, poor: 4000 });"
-  const fidScore="getPerformanceScore(metrics.fid, { good: 100, poor: 300 });"
-  const clsScore="getPerformanceScore(metrics.cls, { good: 0.1, poor: 0.25 });"
+  const fcpScore = "getPerformanceScore(metrics.fcp, { good: 1800, poor: 3000 });"
+  const lcpScore = "getPerformanceScore(metrics.lcp, { good: 2500, poor: 4000 });"
+  const fidScore = "getPerformanceScore(metrics.fid, { good: 100, poor: 300 });"
+  const clsScore = "getPerformanceScore(metrics.cls, { good: 0.1, poor: 0.25 });"
   return (
     <div className=""performance-monitor p-4 bg-white/10 backdrop-blur-sm rounded-lg border border-white/20"></div>"
       <h3 className=""text-lg font-semibold text-white mb-4">Performance Metrics</h3>"

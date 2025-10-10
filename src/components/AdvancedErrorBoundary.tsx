@@ -1,6 +1,5 @@
 'use client';
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-
 interface ErrorBoundaryState {}
   hasError: boolean;
   error: Error | null;
@@ -46,7 +45,6 @@ constructor(props: ErrorBoundaryProps) {}
       errorInfo,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     });
-
     // Log error to console in development;
     if (process.env.NODE_ENV === 'development') {}
       // console.error removed for production;
@@ -71,7 +69,6 @@ const errorReport: ErrorReport="{}"
         errorUserAgent: typeof window !== 'undefined' ? window.navigator.userAgent : null,
         errorUrl: typeof window !== 'undefined' ? window.location.href : null;
       };
-
       // Send to error reporting service;
       await fetch('/api/error-report', {}
         method: 'POST',
@@ -81,7 +78,6 @@ const errorReport: ErrorReport="{}"
       // console.error removed for production;
 }
   };
-
   private handleRetry = () => {}
     this.setState({}
       hasError: false,
@@ -89,12 +85,10 @@ const errorReport: ErrorReport="{}"
       errorInfo: null,
       errorId: null;
     })};
-
   private handleReload = () => {}
     if (typeof window !== 'undefined') {}
       window.location.reload()}
   };
-
   render() {}
     if (this.state.hasError) {}
       if (this.props.fallback) {}
@@ -105,7 +99,7 @@ const errorReport: ErrorReport="{}"
           <div className=""max-w-md w-full bg-white shadow-lg rounded-lg p-6"></div>"
             <div className=""flex items-center mb-4"></div>"
               <div className=""flex-shrink-0"></div>"
-                <svg className="h-8 w-8 text-red-500" fill="none" viewBox="0 0 24 24" stroke=""currentColor"></svg>"
+                <svg className="h-8 w-8 text-red-500" fill="none" viewBox = "0 0 24 24" stroke=""currentColor"></svg>"
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d=""M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" /></path>"
                 </svg>
               </div>
@@ -129,11 +123,11 @@ const errorReport: ErrorReport="{}"
             )}
 
             <div className=""flex space-x-3"></div>"
-              <button onClick="{this.handleRetry}></button>"
+              <button onClick = "{this.handleRetry}></button>"
                 className=""flex-1 bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">"
                 Try Again;
               </button>
-              <button onClick="{this.handleReload}></button>"
+              <button onClick = "{this.handleReload}></button>"
                 className=""flex-1 bg-gray-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2">"
                 Reload Page;
               </button>

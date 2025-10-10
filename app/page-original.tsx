@@ -125,7 +125,7 @@ const handlePhoneClick = useCallback(() => {}
     <React.Fragment></React>
       <SEOOptimizer title=""Zion Tech Group - Advanced AI and IT Solutions"></SEOOptimizer>"
         description=""Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology.""
-        keywords="{['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services']}"
+        keywords = "{['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services']}"
         canonicalUrl=""https://ziontechgroup.com""
         structuredData="{{}"
           '@context': 'https://schema.org',
@@ -162,24 +162,24 @@ addressCountry: 'US']
     }
         }}
       />
-      <PerformanceOptimizer enableImageOptimization="{true}></PerformanceOptimizer>"
+      <PerformanceOptimizer enableImageOptimization = "{true}></PerformanceOptimizer>"
         enableLazyLoading="{true}"
         enablePreloading="{true}"
         enableCodeSplitting="{true}"
       />
-      <AccessibilityEnhancer enableKeyboardNavigation="{true}></AccessibilityEnhancer>"
+      <AccessibilityEnhancer enableKeyboardNavigation = "{true}></AccessibilityEnhancer>"
         enableScreenReaderSupport="{true}"
         enableHighContrast="{true}"
         enableFocusManagement="{true}"
         enableSkipLinks="{true}"
         enableARIALabels="{true}"
       />
-      <Analytics enableGoogleAnalytics="{true}></Analytics>"
+      <Analytics enableGoogleAnalytics = "{true}></Analytics>"
         enablePerformanceMonitoring="{true}"
         enableErrorTracking="{true}"
         enableUserBehaviorTracking="{true}"
       />
-      <SecurityEnhancer enableCSP="{true}></SecurityEnhancer>"
+      <SecurityEnhancer enableCSP = "{true}></SecurityEnhancer>"
         enableHTTPSRedirect="{true}"
         enableXSSProtection="{true}"
         enableClickjackingProtection="{true}"
@@ -195,7 +195,7 @@ addressCountry: 'US']
           Skip to main content;
         </a>
       {/* Content Promotion Banner */}
-      <Suspense fallback="{<div></Suspense>}>"
+      <Suspense fallback = "{<div></Suspense>}>"
         <ContentPromotionBanner /></ContentPromotionBanner>
       </Suspense>
       <main id="main-content" className="container mx-auto px-4 py-16 pt-24" role=""main"></main>"
@@ -287,7 +287,7 @@ addressCountry: 'US']
             <div></div>
               <a href=""te,"></a>"
     l:+13024640950"
-                onClick="{ handlePhoneClick };"
+                onClick = "{ handlePhoneClick };"
                 className=""cyber-button w-full sm: w-auto text-center")"
                 aria-label=""Call us at (302) 464-0950""
             ></a>
@@ -978,7 +978,7 @@ addressCountry: 'US']
           </p>
           {/* Primary Services Grid */}
           <div></div>
-            <Suspense fallback="{<ServiceCardSkeleton />}>"
+            <Suspense fallback = "{<ServiceCardSkeleton />}>"
               <article className=""quantum-card p-4 sm:p-6 energy-pulse"></article>"
                 <div className=""text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line"></di>🤖</div>"
                 <h3 className=""text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center neon-text"></h>AI Services</h3>"
@@ -993,7 +993,7 @@ addressCountry: 'US']
                 </div>
               </article>
             </Suspense>
-            <Suspense fallback="{<ServiceCardSkeleton />}>"
+            <Suspense fallback = "{<ServiceCardSkeleton />}>"
               <article className=""quantum-card p-4 sm:p-6 energy-pulse"></article>"
                 <div className=""text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line"></di>📢</div>"
                 <h3 className=""text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center neon-text"></h>AI Marketing</h3>"
@@ -1008,7 +1008,7 @@ addressCountry: 'US']
                 </div>
               </article>
             </Suspense>
-            <Suspense fallback="{<ServiceCardSkeleton />}>"
+            <Suspense fallback = "{<ServiceCardSkeleton />}>"
               <article className=""quantum-card p-4 sm:p-6 energy-pulse"></article>"
                 <div className=""text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line"></di>⚙️</div>"
                 <h3 className=""text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center neon-text"></h>AI Automation</h3>"
@@ -1026,7 +1026,7 @@ addressCountry: 'US']
           </div>
           {/* Secondary Services Grid */}
           <div></div>
-            <Suspense fallback="{<ServiceCardSkeleton />}>"
+            <Suspense fallback = "{<ServiceCardSkeleton />}>"
               <article className=""cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>"
                 <div className=""text-4xl sm:text-5xl mb-4 sm:mb-6 text-center"></di>🏥</div>"
                 <h3 className=""text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center"></h>AI Healthcare</h3>"
@@ -1041,7 +1041,7 @@ addressCountry: 'US']
                 </div>
               </article>
             </Suspense>
-            <Suspense fallback="{<ServiceCardSkeleton />}>"
+            <Suspense fallback = "{<ServiceCardSkeleton />}>"
               <article className=""cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>"
                 <div className=""text-4xl sm:text-5xl mb-4 sm:mb-6 text-center"></di>💰</div>"
                 <h3 className=""text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center"></h>AI Fintech</h3>"
@@ -1056,7 +1056,7 @@ addressCountry: 'US']
                 </div>
               </article>
             </Suspense>
-            <Suspense fallback="{<ServiceCardSkeleton />}>"
+            <Suspense fallback = "{<ServiceCardSkeleton />}>"
               <article className=""cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>"
                 <div className=""text-4xl sm:text-5xl mb-4 sm:mb-6 text-center"></di>⚛️</div>"
                 <h3 className=""text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center"></h>Quantum Computing</h3>"
@@ -1078,7 +1078,7 @@ addressCountry: 'US']
               Micro SAAS Solutions;
             </h3>
             <div></div>
-              <Suspense fallback="{<ServiceCardSkeleton />}>"
+              <Suspense fallback = "{<ServiceCardSkeleton />}>"
                 <article className=""cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>"
                   <div className=""text-4xl sm:text-5xl mb-4 sm:mb-6 text-center"></di>💻</div>"
                   <h3 className=""text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center"></h>AI-Powered CRM</h3>"
@@ -1093,7 +1093,7 @@ addressCountry: 'US']
                   </div>
                 </article>
               </Suspense>
-              <Suspense fallback="{<ServiceCardSkeleton />}>"
+              <Suspense fallback = "{<ServiceCardSkeleton />}>"
                 <article className=""cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>"
                   <div className=""text-4xl sm:text-5xl mb-4 sm:mb-6 text-center"></di>📊</div>"
                   <h3 className=""text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center"></h>AI Analytics Dashboard</h3>"
@@ -1108,7 +1108,7 @@ addressCountry: 'US']
                   </div>
                 </article>
               </Suspense>
-              <Suspense fallback="{<ServiceCardSkeleton />}>"
+              <Suspense fallback = "{<ServiceCardSkeleton />}>"
                 <article className=""cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>"
                   <div className=""text-4xl sm:text-5xl mb-4 sm:mb-6 text-center"></di>✍️</div>"
                   <h3 className=""text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center"></h>AI Content Studio</h3>"
@@ -1123,7 +1123,7 @@ addressCountry: 'US']
                   </div>
                 </article>
               </Suspense>
-              <Suspense fallback="{<ServiceCardSkeleton />}>"
+              <Suspense fallback = "{<ServiceCardSkeleton />}>"
                 <article className=""cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>"
                   <div className=""text-4xl sm:text-5xl mb-4 sm:mb-6 text-center"></di>🤖</div>"
                   <h3 className=""text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center"></h>AI Chatbot Builder</h3>"
@@ -1138,7 +1138,7 @@ addressCountry: 'US']
                   </div>
                 </article>
               </Suspense>
-              <Suspense fallback="{<ServiceCardSkeleton />}>"
+              <Suspense fallback = "{<ServiceCardSkeleton />}>"
                 <article className=""cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>"
                   <div className=""text-4xl sm:text-5xl mb-4 sm:mb-6 text-center"></di>📧</div>"
                   <h3 className=""text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center"></h>AI Email Marketing</h3>"
@@ -1153,7 +1153,7 @@ addressCountry: 'US']
                   </div>
                 </article>
               </Suspense>
-              <Suspense fallback="{<ServiceCardSkeleton />}>"
+              <Suspense fallback = "{<ServiceCardSkeleton />}>"
                 <article className=""cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>"
                   <div className=""text-4xl sm:text-5xl mb-4 sm:mb-6 text-center"></di>📱</div>"
                   <h3 className=""text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center"></h>AI Mobile App Builder</h3>"
@@ -1168,7 +1168,7 @@ addressCountry: 'US']
                   </div>
                 </article>
               </Suspense>
-              <Suspense fallback="{<ServiceCardSkeleton />}>"
+              <Suspense fallback = "{<ServiceCardSkeleton />}>"
                 <article className=""cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>"
                   <div className=""text-4xl sm:text-5xl mb-4 sm:mb-6 text-center"></di>🔍</div>"
                   <h3 className=""text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center"></h>AI SEO Optimizer</h3>"
@@ -1183,7 +1183,7 @@ addressCountry: 'US']
                   </div>
                 </article>
               </Suspense>
-              <Suspense fallback="{<ServiceCardSkeleton />}>"
+              <Suspense fallback = "{<ServiceCardSkeleton />}>"
                 <article className=""cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>"
                   <div className=""text-4xl sm:text-5xl mb-4 sm:mb-6 text-center"></di>💰</div>"
                   <h3 className=""text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center"></h>AI Invoice Generator</h3>"
@@ -1198,7 +1198,7 @@ addressCountry: 'US']
                   </div>
                 </article>
               </Suspense>
-              <Suspense fallback="{<ServiceCardSkeleton />}>"
+              <Suspense fallback = "{<ServiceCardSkeleton />}>"
                 <article className=""cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>"
                   <div className=""text-4xl sm:text-5xl mb-4 sm:mb-6 text-center"></di>🎯</div>"
                   <h3 className=""text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center"></h>AI Lead Scoring</h3>"
@@ -1213,7 +1213,7 @@ addressCountry: 'US']
                   </div>
                 </article>
               </Suspense>
-              <Suspense fallback="{<ServiceCardSkeleton />}>"
+              <Suspense fallback = "{<ServiceCardSkeleton />}>"
                 <article className=""cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>"
                   <div className=""text-4xl sm:text-5xl mb-4 sm:mb-6 text-center"></di>📈</div>"
                   <h3 className=""text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center"></h>AI Social Media Manager</h3>"
@@ -1228,7 +1228,7 @@ addressCountry: 'US']
                   </div>
                 </article>
               </Suspense>
-              <Suspense fallback="{<ServiceCardSkeleton />}>"
+              <Suspense fallback = "{<ServiceCardSkeleton />}>"
                 <article className=""cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>"
                   <div className=""text-4xl sm:text-5xl mb-4 sm:mb-6 text-center"></di>🛒</div>"
                   <h3 className=""text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center"></h>AI E-commerce Assistant</h3>"
@@ -1243,7 +1243,7 @@ addressCountry: 'US']
                   </div>
                 </article>
               </Suspense>
-              <Suspense fallback="{<ServiceCardSkeleton />}>"
+              <Suspense fallback = "{<ServiceCardSkeleton />}>"
                 <article className=""cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>"
                   <div className=""text-4xl sm:text-5xl mb-4 sm:mb-6 text-center"></di>📝</div>"
                   <h3 className=""text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center"></h>AI Document Processor</h3>"
@@ -1258,7 +1258,7 @@ addressCountry: 'US']
                   </div>
                 </article>
               </Suspense>
-              <Suspense fallback="{<ServiceCardSkeleton />}>"
+              <Suspense fallback = "{<ServiceCardSkeleton />}>"
                 <article className=""cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>"
                   <div className=""text-4xl sm:text-5xl mb-4 sm:mb-6 text-center"></di>🎨</div>"
                   <h3 className=""text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center"></h>AI Design Studio</h3>"
@@ -1273,7 +1273,7 @@ addressCountry: 'US']
                   </div>
                 </article>
               </Suspense>
-              <Suspense fallback="{<ServiceCardSkeleton />}>"
+              <Suspense fallback = "{<ServiceCardSkeleton />}>"
                 <article className=""cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>"
                   <div className=""text-4xl sm:text-5xl mb-4 sm:mb-6 text-center"></di>🔐</div>"
                   <h3 className=""text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center"></h>AI Security Monitor</h3>"
@@ -1288,7 +1288,7 @@ addressCountry: 'US']
                   </div>
                 </article>
               </Suspense>
-              <Suspense fallback="{<ServiceCardSkeleton />}>"
+              <Suspense fallback = "{<ServiceCardSkeleton />}>"
                 <article className=""cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>"
                   <div className=""text-4xl sm:text-5xl mb-4 sm:mb-6 text-center"></di>📊</div>"
                   <h3 className=""text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center"></h>AI Financial Planner</h3>"
@@ -1303,7 +1303,7 @@ addressCountry: 'US']
                   </div>
                 </article>
               </Suspense>
-              <Suspense fallback="{<ServiceCardSkeleton />}>"
+              <Suspense fallback = "{<ServiceCardSkeleton />}>"
                 <article className=""cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>"
                   <div className=""text-4xl sm:text-5xl mb-4 sm:mb-6 text-center"></di>🏥</div>"
                   <h3 className=""text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center"></h>AI Health Tracker</h3>"
@@ -1318,7 +1318,7 @@ addressCountry: 'US']
                   </div>
                 </article>
               </Suspense>
-              <Suspense fallback="{<ServiceCardSkeleton />}>"
+              <Suspense fallback = "{<ServiceCardSkeleton />}>"
                 <article className=""cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>"
                   <div className=""text-4xl sm:text-5xl mb-4 sm:mb-6 text-center"></di>🎓</div>"
                   <h3 className=""text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center"></h>AI Learning Platform</h3>"
@@ -2509,19 +2509,19 @@ addressCountry: 'US']
           </div>
         </section>
         {/* Statistics Section */}
-        <Suspense fallback="{<div></Suspense>}>"
+        <Suspense fallback = "{<div></Suspense>}>"
           <ContentStatistics /></ContentStatistics>
         </Suspense>
         {/* Content Carousel */}
-        <Suspense fallback="{<div></Suspense>}>"
+        <Suspense fallback = "{<div></Suspense>}>"
           <ContentCarousel /></ContentCarousel>
         </Suspense>
         {/* Dynamic Content Showcase */}
-        <Suspense fallback="{<div></Suspense>}>"
+        <Suspense fallback = "{<div></Suspense>}>"
           <DynamicContentShowcase /></DynamicContentShowcase>
         </Suspense>
         {/* Newsletter Signup */}
-        <Suspense fallback="{<div></Suspense>}>"
+        <Suspense fallback = "{<div></Suspense>}>"
           <ContentNewsletterSignup /></ContentNewsletterSignup>
         </Suspense>
         {/* Contact Section */}
@@ -2713,7 +2713,7 @@ addressCountry: 'US']
                     <
                     <textarea id=""message"></textarea>"
                       name=""message""
-                      rows="{ 4 };"
+                      rows = "{ 4 };"
                       className=""w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: border-cyan-500 focus:ring-1 focu,""
     s:ring-cyan-500 transition-colors"
                       placeholder=""Tell us about your project or requirements""

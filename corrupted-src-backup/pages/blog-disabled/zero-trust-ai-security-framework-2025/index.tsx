@@ -14,20 +14,20 @@ const ZeroTrustAISecurityFramework202, 5 = () => {}
           Zion, Tech, Group;
         <
 :src/pages/blog/zero-trust-ai-security-framework-2025;
-        <meta , nam, e="'description'></meta>"
-          conte, n, t="'Comprehensive, zer, o-trust, security, framework for, AI, systems. Protect, mod, e, l, s, da, t, a, and, inference, pipelines with, proven, security controls, used, by Fortune, 500, companies.'"
+        <meta , nam, e = "'description'></meta>"
+          conte, n, t = "'Comprehensive, zer, o-trust, security, framework for, AI, systems. Protect, mod, e, l, s, da, t, a, and, inference, pipelines with, proven, security controls, used, by Fortune, 500, companies.'"
         /><
-        <meta , nam, e="'keywor, d, s'></meta>"
-          conte, n, t="'AI, securi, t, y, zero, trus, t, model, securit, y, ML, securit, y, AI, governanc, e, enterprise, securit, y'"
+        <meta , nam, e = "'keywor, d, s'></meta>"
+          conte, n, t = "'AI, securi, t, y, zero, trus, t, model, securit, y, ML, securit, y, AI, governanc, e, enterprise, securit, y'"
         /><
-        <link , re, l="'canonic, a, l'></link>"
-          hr, e, f="'htt, p, s: //ziontechgro u p.c o m/bl o g'"
+        <link , re, l = "'canonic, a, l'></link>"
+          hr, e, f = "'htt, p, s: //ziontechgro u p.c o m/bl o g'"
       <
 
       <div, className="'m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-r, e, d-9, 0, 0/30, t, o-sla, t, e-9, 0, 0' > {/* Hero, Sect, i, o, n */ }<)"
 const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression *
       <div, className="'m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-r, e, d-9, 0, 0/30, t, o-sla, t, e-9, 0, 0' > {/* Hero, Sect, i, o, n *"
-        <div, classNam, e="'relative, overflo, w-hidden, b, g-gradie, n, t-to-r, fro, m-r, e, d-600, t, o-oran, g, e-600, p, y-16'><"
+        <div, classNam, e = "'relative, overflo, w-hidden, b, g-gradie, n, t-to-r, fro, m-r, e, d-600, t, o-oran, g, e-600, p, y-16'><"
           <div, className="'absolute, inse, t-0, b, g-bla, c, k/20' /><"
           <div, className="'container, m, x-auto, p, x-6, relative, z-10'><"
       <div, className="'m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-r, e, d-9, 0, 0/30, t, o-sla, t, e-9, 0, 0'></div>"
@@ -35,16 +35,16 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression *
 } {/* Hero, Sect, i, o, n */ }</div>;
 const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */}
       <div, className="'m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-r, e, d-9, 0, 0/30, t, o-sla, t, e-9, 0, 0' > {/* Hero, Sect, i, o, n */ }"
-        <div, classNam, e="'relative, overflo, w-hidden, b, g-gradie, n, t-to-r, fro, m-r, e, d-600, t, o-oran, g, e-600, p, y-16'></div>"
+        <div, classNam, e = "'relative, overflo, w-hidden, b, g-gradie, n, t-to-r, fro, m-r, e, d-600, t, o-oran, g, e-600, p, y-16'></div>"
           <div, className="'absolute, inse, t-0, b, g-bla, c, k/20' /></div>"
           <div, className="'container, m, x-auto, p, x-6, relative, z-10'></div>"
-            <Link , t, o="'/bl, o, g'></Link>"
+            <Link , t, o = "'/bl, o, g'></Link>"
               className="'inli, n, e-flex, item, s-center, tex, t-whi, t, e/90, hove, r: te, x, t-white, m, b-8, transitio, n-colo, r, s'>"
               <ArrowLeft, className="'w-4 h-4, m, r-2' /></ArrowLeft>"
               Back, to, Blog;
-                <div, classNam, e="'flex, item, s-cent, e, r'></div>"
+                <div, classNam, e = "'flex, item, s-cent, e, r'></div>"
               Back, to, Blog;
-                <div, classNam, e="'flex, item, s-cent, e, r'><"
+                <div, classNam, e = "'flex, item, s-cent, e, r'><"
                 <
                 <div, className="'flex, item, s-cent, e, r'><"
                 AI, systems, face unprecedented, security, challenges: model, th, e, f, t,
@@ -53,32 +53,32 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
                 enterprise, AI, deployments.
                 Traditional, perimeter, security fails, for, distributed AI, architecture, s. Ze, r, o-trust, frameworks, are now, mandatory, for;
                 enterprise, AI, deployments.<
-            <section, classNam, e="'mb-12'></section>"
-              <h2, classNam, e="'te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-cent, e, r'><"
+            <section, classNam, e = "'mb-12'></section>"
+              <h2, classNam, e = "'te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-cent, e, r'><"
                     Every, request, to mod, e, l, s, data, store, s, and, inference, endpoints requires, authenticatio, n, authorizati, o, n, and, continuous, validation—even, from, internal servic, e, s.<
-                      <p, classNam, e="'te, x, t-sm, tex, t-emera, l, d-4, 0, 0'></p>"
+                      <p, classNam, e = "'te, x, t-sm, tex, t-emera, l, d-4, 0, 0'></p>"
                         Too, l, s: Keyc, l, o, a, k, Ok, t, a, AWS, IAM, Identity Cent, e, r;
-                      <p, classNam, e="'te, x, t-sm, tex, t-cy, a, n-4, 0, 0'></p>"
+                      <p, classNam, e = "'te, x, t-sm, tex, t-cy, a, n-4, 0, 0'></p>"
                         Too, l, s: I, s, t, i, o, Linke, r, d, Cili, u, m, Consul, Connec, t;
-                      <p, classNam, e="'te, x, t-sm, tex, t-bl, u, e-4, 0, 0'></p>"
+                      <p, classNam, e = "'te, x, t-sm, tex, t-bl, u, e-4, 0, 0'></p>"
                         Too, l, s: Open, Policy, Age, n, t, Kong, Gatewa, y, AWS, API, Gateway;
-                      <p, classNam, e="'te, x, t-sm, tex, t-purp, l, e-4, 0, 0'></p>"
+                      <p, classNam, e = "'te, x, t-sm, tex, t-purp, l, e-4, 0, 0'></p>"
                         Too, l, s: Datadog, Secur, i, t, y, Splunk, SIE, M, W, i, z, Lacewo, r, k;
-                      <p, classNam, e="'te, x, t-sm, tex, t-pi, n, k-4, 0, 0'></p>"
+                      <p, classNam, e = "'te, x, t-sm, tex, t-pi, n, k-4, 0, 0'></p>"
                         Too, l, s: AWS, CloudTr, a, i, l, GCP, Audit, Logs, Van, t, a, Dra, t, a;
                         Too, l, s: Keyc, l, o, a, k, Ok, t, a, AWS, IAM, Identity Cent, e, r<
-                      <p, classNam, e="'te, x, t-sm, tex, t-cy, a, n-4, 0, 0'></p>"
+                      <p, classNam, e = "'te, x, t-sm, tex, t-cy, a, n-4, 0, 0'></p>"
                         Too, l, s: I, s, t, i, o, Linke, r, d, Cili, u, m, Consul, Connec, t<
-                      <p, classNam, e="'te, x, t-sm, tex, t-bl, u, e-4, 0, 0'></p>"
+                      <p, classNam, e = "'te, x, t-sm, tex, t-bl, u, e-4, 0, 0'></p>"
                         Too, l, s: Open, Policy, Age, n, t, Kong, Gatewa, y, AWS, API, Gateway<
-                      <p, classNam, e="'te, x, t-sm, tex, t-purp, l, e-4, 0, 0'></p>"
+                      <p, classNam, e = "'te, x, t-sm, tex, t-purp, l, e-4, 0, 0'></p>"
                         Too, l, s: Datadog, Secur, i, t, y, Splunk, SIE, M, W, i, z, Lacewo, r, k<
-                      <p, classNam, e="'te, x, t-sm, tex, t-pi, n, k-4, 0, 0'></p>"
+                      <p, classNam, e = "'te, x, t-sm, tex, t-pi, n, k-4, 0, 0'></p>"
                         Too, l, s: AWS, CloudTr, a, i, l, GCP, Audit, Logs, Van, t, a, Dra, t, a<
-            <section, classNam, e="'mb-12'></section>"
+            <section, classNam, e = "'mb-12'></section>"
               <h2, className="'te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-cent, e, r'><"
                     Every, request, to mod, e, l, s, data, store, s, and, inference, endpoints requires, authenticatio, n, authorizati, o, n, and, continuous, validation—even, from internal servic, e, s.<
-                      <p, classNam, e="'te, x, t-sm, tex, t-emera, l, d-4, 0, 0'></p>"
+                      <p, classNam, e = "'te, x, t-sm, tex, t-emera, l, d-4, 0, 0'></p>"
                         Too, l, s: Keyc, l, o, a, k, Ok, t, a, AWS, IAM, Identity Cent, e, r;
 :src/pages/blog/zero-trust-ai-security-framework-2025;
         <meta name=""description;"></meta>"
@@ -97,9 +97,9 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
             ><
               <ArrowLeft, className="'w-4 h-4, m, r-2' /><"
               Back, to, Blog;
-                <div, classNam, e="'flex, item, s-cent, e, r'><"
-                  <TrendingUp, classNam, e="'w-5 h-5, m, r-2' /><"
-              <p, classNam, e="'te, x, t-gr, a, y-300, leadin, g-relaxed, m, b-4'><"
+                <div, classNam, e = "'flex, item, s-cent, e, r'><"
+                  <TrendingUp, classNam, e = "'w-5 h-5, m, r-2' /><"
+              <p, classNam, e = "'te, x, t-gr, a, y-300, leadin, g-relaxed, m, b-4'><"
                 <
                 <div, className="'flex, item, s-cent, e, r'><"
                   <TrendingUp, className="'w-5 h-5, m, r-2' /><"
@@ -110,26 +110,26 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
                 Traditional, perimeter, security fails, for, distributed AI, architecture, s. Ze, r, o-trust, frameworks, are now, mandatory, for;
                 enterprise, AI, deployments.
             <section, classNam, e="'mb-12'><"
-              <h2, classNam, e="'te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-cent, e, r'><"
-                <ShieldCheck, classNam, e="'w-8 h-8, m, r-3, tex, t-emera, l, d-4, 0, 0' /><"
-                  <p, classNam, e="'te, x, t-gr, a, y-300, m, b-4'><"
+              <h2, classNam, e = "'te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-cent, e, r'><"
+                <ShieldCheck, classNam, e = "'w-8 h-8, m, r-3, tex, t-emera, l, d-4, 0, 0' /><"
+                  <p, classNam, e = "'te, x, t-gr, a, y-300, m, b-4'><"
                     Every, request, to mod, e, l, s, data, store, s, and, inference, endpoints requires, authenticatio, n, authorizati, o, n, and, continuous, validation—even, from, internal servic, e, s.
-                      <p, classNam, e="'te, x, t-sm, tex, t-emera, l, d-4, 0, 0'><"
+                      <p, classNam, e = "'te, x, t-sm, tex, t-emera, l, d-4, 0, 0'><"
                         Too, l, s: Keyc, l, o, a, k, Ok, t, a, AWS, IAM, Identity Cent, e, r;
-                      <p, classNam, e="'te, x, t-sm, tex, t-cy, a, n-4, 0, 0'><"
+                      <p, classNam, e = "'te, x, t-sm, tex, t-cy, a, n-4, 0, 0'><"
                         Too, l, s: I, s, t, i, o, Linke, r, d, Cili, u, m, Consul, Connec, t;
-                      <p, classNam, e="'te, x, t-sm, tex, t-bl, u, e-4, 0, 0'><"
+                      <p, classNam, e = "'te, x, t-sm, tex, t-bl, u, e-4, 0, 0'><"
                         Too, l, s: Open, Policy, Age, n, t, Kong, Gatewa, y, AWS, API, Gateway;
-                      <p, classNam, e="'te, x, t-sm, tex, t-purp, l, e-4, 0, 0'><"
+                      <p, classNam, e = "'te, x, t-sm, tex, t-purp, l, e-4, 0, 0'><"
                         Too, l, s: Datadog, Secur, i, t, y, Splunk, SIE, M, W, i, z, Lacewo, r, k;
-                      <p, classNam, e="'te, x, t-sm, tex, t-pi, n, k-4, 0, 0'><"
+                      <p, classNam, e = "'te, x, t-sm, tex, t-pi, n, k-4, 0, 0'><"
                         Too, l, s: AWS, CloudTr, a, i, l, GCP, Audit, Logs, Van, t, a, Dra, t, a;
             <section, classNam, e="'mb-12'><"
               <h2, className="'te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-cent, e, r'><"
                 <ShieldCheck, className="'w-8 h-8, m, r-3, tex, t-emera, l, d-4, 0, 0' /><"
-                  <p, classNam, e="'te, x, t-gr, a, y-300, m, b-4'><"
+                  <p, classNam, e = "'te, x, t-gr, a, y-300, m, b-4'><"
                     Every, request, to mod, e, l, s, data, store, s, and, inference, endpoints requires, authenticatio, n, authorizati, o, n, and, continuous, validation—even, from internal servic, e, s.
-                      <p, classNam, e="'te, x, t-sm, tex, t-emera, l, d-4, 0, 0'><"
+                      <p, classNam, e = "'te, x, t-sm, tex, t-emera, l, d-4, 0, 0'><"
                         Too, l, s: Keyc, l, o, a, k, Ok, t, a, AWS, IAM, Identity Cent, e, r;
 :src/pages/blog/zero-trust-ai-security-framework-2025;
         <meta name=""description;"></meta>"
@@ -714,30 +714,30 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
                     <
                   <
 
-                  <div, classNam, e="'flex, item, s-sta, r, t'><"
+                  <div, classNam, e = "'flex, item, s-sta, r, t'><"
                     <div, className="'fl, e, x-shri, n, k-0 w-1, 6, h-16, b, g-oran, g, e-5, 0, 0/20, rounde, d-lg, flex, items-center, justif, y-center, m, r-4'><"
                       <span, className="'te, x, t-3, x, l'>🛡️<"
                     <
-                      <p, classNam, e="'te, x, t-sm, tex, t-bl, u, e-4, 0, 0'></p>"
+                      <p, classNam, e = "'te, x, t-sm, tex, t-bl, u, e-4, 0, 0'></p>"
                         Too, l, s: Open, Policy, Age, n, t, Kong, Gatewa, y, AWS, API, Gateway;
-                      <p, classNam, e="'te, x, t-sm, tex, t-purp, l, e-4, 0, 0'></p>"
+                      <p, classNam, e = "'te, x, t-sm, tex, t-purp, l, e-4, 0, 0'></p>"
                         Too, l, s: Datadog, Secur, i, t, y, Splunk, SIE, M, W, i, z, Lacewo, r, k;
                         Too, l, s: Open, Policy, Age, n, t, Kong, Gatewa, y, AWS, API, Gateway<
-                      <p, classNam, e="'te, x, t-sm, tex, t-purp, l, e-4, 0, 0'></p>"
+                      <p, classNam, e = "'te, x, t-sm, tex, t-purp, l, e-4, 0, 0'></p>"
                         Too, l, s: Datadog, Secur, i, t, y, Splunk, SIE, M, W, i, z, Lacewo, r, k<
-                      <p, classNam, e="'te, x, t-sm, tex, t-pi, n, k-4, 0, 0'></p>"
-                      <p, classNam, e="'te, x, t-sm, tex, t-bl, u, e-4, 0, 0'><"
+                      <p, classNam, e = "'te, x, t-sm, tex, t-pi, n, k-4, 0, 0'></p>"
+                      <p, classNam, e = "'te, x, t-sm, tex, t-bl, u, e-4, 0, 0'><"
                         Too, l, s: Open, Policy, Age, n, t, Kong, Gatewa, y, AWS, API, Gateway;
-                      <p, classNam, e="'te, x, t-sm, tex, t-purp, l, e-4, 0, 0'><"
+                      <p, classNam, e = "'te, x, t-sm, tex, t-purp, l, e-4, 0, 0'><"
                         Too, l, s: Datadog, Secur, i, t, y, Splunk, SIE, M, W, i, z, Lacewo, r, k;
-                      <p, classNam, e="'te, x, t-sm, tex, t-pi, n, k-4, 0, 0'><"
+                      <p, classNam, e = "'te, x, t-sm, tex, t-pi, n, k-4, 0, 0'><"
                         Too, l, s: AWS, CloudTr, a, i, l, GCP, Audit, Logs, Van, t, a, Dra, t, a;
                       <
                     <
                   <
                 <
               <
-                  <div, classNam, e="'bg-sla, t, e-9, 0, 0/7, 0, p-4, rounde, d'><"
+                  <div, classNam, e = "'bg-sla, t, e-9, 0, 0/7, 0, p-4, rounde, d'><"
                     <p, className="'te, x, t-emera, l, d-400, fon, t-semibold, m, b-2'></p>"
                       Mitigatio, n, s: <
                     <ul, className="'te, x, t-sm, tex, t-gr, a, y-300, spac, e-y-1'></ul>"
@@ -761,8 +761,8 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
                       <li><
                         • Output, validation, to detect, leaked, system instructio, n, s;
                       <
-                  <div, classNam, e="'bg-sla, t, e-9, 0, 0/7, 0, p-4, rounde, d'><"
-                    <p, classNam, e="'te, x, t-cy, a, n-400, fon, t-semibold, m, b-2'><"
+                  <div, classNam, e = "'bg-sla, t, e-9, 0, 0/7, 0, p-4, rounde, d'><"
+                    <p, classNam, e = "'te, x, t-cy, a, n-400, fon, t-semibold, m, b-2'><"
                   <div, className="'bg-sla, t, e-9, 0, 0/7, 0, p-4, rounde, d'><"
                     <p, className="'te, x, t-cy, a, n-400, fon, t-semibold, m, b-2'></p>"
                       Mitigatio, n, s: <
@@ -787,8 +787,8 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
                       <li><
                         • Model, behavioral, testing p, r, e;
                       <
-                  <div, classNam, e="'bg-sla, t, e-9, 0, 0/7, 0, p-4, rounde, d'><"
-                    <p, classNam, e="'te, x, t-bl, u, e-400, fon, t-semibold, m, b-2'><"
+                  <div, classNam, e = "'bg-sla, t, e-9, 0, 0/7, 0, p-4, rounde, d'><"
+                    <p, classNam, e = "'te, x, t-bl, u, e-400, fon, t-semibold, m, b-2'><"
                   <div, className="'bg-sla, t, e-9, 0, 0/7, 0, p-4, rounde, d'><"
                     <p, className="'te, x, t-bl, u, e-400, fon, t-semibold, m, b-2'></p>"
                       Mitigatio, n, s: <
@@ -806,15 +806,15 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
 
 :src/pages/blog/zero-trust-ai-security-framework-2025;
             {/* Resu, l, t, s *
-            <section, classNam, e="'mb-12'></section>"
+            <section, classNam, e = "'mb-12'></section>"
               <div, className="'bg-gradie, n, t-to-r, fro, m-emera, l, d-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/2, 0, p-8, rounde, d-lg, border, border-emera, l, d-5, 0, 0/30'><"
                 <h2, className="'te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6'></h2>"
                   Security, Posture, Improvements;
                 <
-                <div, classNam, e="'grid, m, d: gr, i, d-co, l, s-2, ga, p-6'></div>"
+                <div, classNam, e = "'grid, m, d: gr, i, d-co, l, s-2, ga, p-6'></div>"
                   Request, Security, Assessment;
                   Request, Security, Assessment<
-                  <ArrowLeft , classNam, e="'w-5 h-5, m, l-2, rotat, e-1, 8, 0'></ArrowLeft>"
+                  <ArrowLeft , classNam, e = "'w-5 h-5, m, l-2, rotat, e-1, 8, 0'></ArrowLeft>"
                 <h3 className=""text-2xl font-semibold text-white mb-6">Five-Layer Security Model<"
                       <h4 className=""text-lg font-semibold text-white mb-2">Layer 1: Identity & Access Management<"
                       <p className=""text-gray-400 mb-2">,""
@@ -836,9 +836,9 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
                 <h2, className="'te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6'><"
                   Security, Posture, Improvements;
                 <
-                <div, classNam, e="'grid, m, d: gr, i, d-co, l, s-2, ga, p-6'><"
+                <div, classNam, e = "'grid, m, d: gr, i, d-co, l, s-2, ga, p-6'><"
                   Request, Security, Assessment;
-                  <ArrowLeft, classNam, e="'w-5 h-5, m, l-2, rotat, e-1, 8, 0' /><"
+                  <ArrowLeft, classNam, e = "'w-5 h-5, m, l-2, rotat, e-1, 8, 0' /><"
                 <h3 className=""text-2xl font-semibold text-white mb-6">Five-Layer Security Model<"
                       <h4 className=""text-lg font-semibold text-white mb-2">Layer,"
   1: Identity & Access Management<

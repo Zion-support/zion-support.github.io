@@ -15,14 +15,13 @@ export interface CacheEntry;
           <T> {/* TODO: Fix JSX expression */}
   O: Add content}
 };
-
   value: T;,
     expiry: number;,
     hits: number;,
     lastAccessed: number;
 }
 class AdvancedCache;
-          <T="unknown> {/* TODO: Fix JSX expression */}"
+          <T = "unknown> {/* TODO: Fix JSX expression */}"
   O: Add content}
 }
   private,
@@ -34,10 +33,10 @@ class AdvancedCache;
   options: Required<CacheOptions>;
   private storageKey="'advanced-cache';"
   constructor(_option)
-  s: CacheOptions="{}) {/* TODO: Fix JSX expression */}"
+  s: CacheOptions = "{}) {/* TODO: Fix JSX expression */}"
   O: Add content}
 }
-    this.options="{/* TODO: Fix JSX expression */}"
+    this.options = "{/* TODO: Fix JSX expression */}"
   O: Add content}
 };
   tt,
@@ -74,8 +73,8 @@ class AdvancedCache;
   O: Add content}
 }
         const parsed="JSON.parse(data);"
-        this.cache="new Map(Object.entries(parsed.cache));"
-        this.accessOrder="parsed.accessOrder || []}"
+        this.cache = "new Map(Object.entries(parsed.cache));"
+        this.accessOrder = "parsed.accessOrder || []}"
     } catch (error) {/* TODO: Fix JSX expression */}
   O: Add content}
 }
@@ -89,7 +88,7 @@ class AdvancedCache;
   O: Add content}
 }
       const storage="this.getStorage();"
-      const data="{/* TODO: Fix JSX expression */}"
+      const data = "{/* TODO: Fix JSX expression */}"
   O: Add content}
 };
   cach,
@@ -117,7 +116,7 @@ class AdvancedCache;
   public set(key: string, value: T, ttl?: number): void {// TODO: Add content}
 
 }
-    const expiry="Date.now() + (ttl || this.options.ttl);"
+    const expiry = "Date.now() + (ttl || this.options.ttl);"
     // Check if we need to evict;
     if (this.cache.size >= this.options.maxSize && !this.cache.has(key)) {/* TODO: Fix JSX expression */}
   O: Add content}
@@ -236,7 +235,7 @@ class AdvancedCache;
 }
         keysToDelete.push(key)}
     });
-    keysToDelete.forEach(key="> this.delete(key));"
+    keysToDelete.forEach(key = "> this.delete(key));"
     if (keysToDelete.length > 0 && this.options.storage !== 'memory') {/* TODO: Fix JSX expression */}
   O: Add content}
 }
@@ -285,7 +284,6 @@ class AdvancedCache;
     return {/* TODO: Fix JSX expression */}
   O: Add content}
 };
-
   size: this.cache.size,
       maxSize: this.options.maxSize,
       hitRate: totalHits / Math.max(this.cache.size, 1),
@@ -309,16 +307,16 @@ class AdvancedCache;
   O: Add content}
 }
       return cached as unknown as R}
-    const value="await fetcher()"
+    const value = "await fetcher()"
     this.set(key, value, ttl)
     return value}
 }
 // Export factory function;
 export function createCache;
-          <T="unknown>(options?: CacheOptions): AdvancedCache<T> {/* TODO: Fix JSX expression */}"
+          <T = "unknown>(options?: CacheOptions): AdvancedCache<T> {/* TODO: Fix JSX expression */}"
   O: Add content}
 }
   return new AdvancedCache;
           <T>(options)}
 // Export default cache instance;
-export const defaultCache="new AdvancedCache();"
+export const defaultCache = "new AdvancedCache();"

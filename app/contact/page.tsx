@@ -25,7 +25,7 @@ const ContactPage: React.FC = () => {}
 const [isSubmitting, setIsSubmitting] = useState(false);
 const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement></HTMLInputElement>) => {}
-    setFormData(prev="> ({}"
+    setFormData(prev = "> ({}"
       ...prev,
       [e.target.name]: e.target.value;)
 })))
@@ -36,7 +36,7 @@ const handleSubmit = useCallback(async (e: React.FormEvent) => {}
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
   const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement></HTMLInputElement>) => {}
-    setFormData(prev="> ({}"
+    setFormData(prev = "> ({}"
       ...prev,
       [e.target.name]: e.target.value]
     });)]
@@ -47,7 +47,7 @@ const handleSubmit = useCallback(async (e: React.FormEvent) => {}
     setIsSubmitting(true);
     try {}
       /
-      await new Promise(resolve="> setTimeout(resolve, 1000));"
+      await new Promise(resolve = "> setTimeout(resolve, 1000));"
       setSubmitStatus('success');
       setFormData({}
         name: '',
@@ -79,7 +79,7 @@ message: '']
       <Navigation {/* Hero Section *></Navigation>
       <section className=""relative py-20 px-4 overflow-hidden">)"
         <div className=""absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse"></div>"
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style="{{ animationDelay: '1s' }}></div>"
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style = "{{ animationDelay: '1s' }}></div>"
         <div className=""relative max-w-7xl mx-auto text-center"></div>"
           <h1 className=""text-5xl md: text-7xl font-bold text-white mb-6 leading-tight"></h1>"
             Get in;
@@ -106,7 +106,7 @@ message: '']
       {/* Hero Section */}
       <section className=""relative py-20 px-4 overflow-hidden"></section>"
         <div className=""absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" /></div>"
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style="{{ animationDelay: '1s' }} /></div>"
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style = "{{ animationDelay: '1s' }} /></div>"
         <div className=""relative max-w-7xl mx-auto text-center"></div>"
           <h1 className=""text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"></h1>"
             Get in;
@@ -166,8 +166,8 @@ message: '']
                     <input type=""text"></input>"
                       id=""name""
                       name=""name""
-                      value="{ formData.name };"
-                      onChange="{ handleChange };"
+                      value = "{ formData.name };"
+                      onChange = "{ handleChange };"
                       className=""w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus: ring-2 focus:ring-cyan-500 focu,""
     s:border-transparent"
                     
@@ -187,8 +187,8 @@ message: '']
                     <input type=""email"></input>"
                       id=""email""
                       name=""email""
-                      value="{ formData.email };"
-                      onChange="{ handleChange };"
+                      value = "{ formData.email };"
+                      onChange = "{ handleChange };"
                       className=""w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus: ring-2 focus:ring-cyan-500 focus:border-transparent""
                   <
                 <
@@ -205,8 +205,8 @@ message: '']
                     <input type=""text"></input>"
                       id=""company""
                       name=""company""
-                      value="{ formData.company };"
-                      onChange="{ handleChange };"
+                      value = "{ formData.company };"
+                      onChange = "{ handleChange };"
                       className=""w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus: ring-2 focus:ring-cyan-500 focu,""
     s:border-transparent"
                     
@@ -225,8 +225,8 @@ message: '']
                     <input type=""tel"></input>"
                       id=""phone""
                       name=""phone""
-                      value="{ formData.phone };"
-                      onChange="{ handleChange };"
+                      value = "{ formData.phone };"
+                      onChange = "{ handleChange };"
                       className=""w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus: ring-2 focus:ring-cyan-500 focu,""
     s:border-transparent"
                     
@@ -239,8 +239,8 @@ message: '']
                   <
                   <select id=""service"></select>"
                     name=""service""
-                    value="{ formData.service };"
-                    onChange="{ handleChange };"
+                    value = "{ formData.service };"
+                    onChange = "{ handleChange };"
                     className=""w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus: ring-2 focus:ring-cyan-500 focu,""
     s:border-transparent">
                     <option value=""">Select a service<"
@@ -269,16 +269,16 @@ message: '']
                   <
                   <textarea id=""message"></textarea>"
                     name=""message""
-                    value="{ formData.message };"
-                    onChange="{ handleChange };"
-                    rows="{ 5 };"
+                    value = "{ formData.message };"
+                    onChange = "{ handleChange };"
+                    rows = "{ 5 };"
                     className=""w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus: ring-2 focus:ring-cyan-500 focu,""
     s:border-transparent"
                     placeholder=""Tell us about your project...""
                 <
 
                 <button type=""submit"></button>"
-                  disabled="{ isSubmitting };"
+                  disabled = "{ isSubmitting };"
                   className=""w-full bg-gradient-to-r from-purple-500 to-blue-600 hover: from-purple-600 hover:to-blue-700 disabled:opacity-50 disable,""
     d:cursor-not-allowed text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 flex items-center justify-center">
                   {isSubmitting ? (<>

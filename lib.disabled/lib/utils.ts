@@ -3,14 +3,14 @@ export function cn(...inputs: ClassValue[]) {,
   return twMerge(clsx(inputs))}
 
 export function formatPhoneNumber(phone: string): string {,;
-const _cleaned="phone.replace(/\D/g, '');"
+const _cleaned = "phone.replace(/\D/g, '');"
 export function cn(...input)
   s: ClassValue[]) {/* TODO: Fix JSX expression */}
 }
 
 export function formatPhoneNumber(phon)
   e: string): string {/* TODO: Fix JSX expression */}
-  const _match="cleaned.match(/^(\d{3})(\d{3})(\d{4})$/);"
+  const _match = "cleaned.match(/^(\d{3})(\d{3})(\d{4})$/);"
   if (match) {/* TODO: Fix JSX expression */}
     return `(${match[1]}) ${match[2]}-${match[3]}`}
   return phone}
@@ -36,7 +36,7 @@ let inThrottle: boolean;
     if (!inThrottle) {,
       func(...args);
       inThrottle="true;"
-      setTimeout(() => (inThrottle="false), limit);"
+      setTimeout(() => (inThrottle = "false), limit);"
 export function formatEmail(emai)
   l: string): string {/* TODO: Fix JSX expression */}
 }

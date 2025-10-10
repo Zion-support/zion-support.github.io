@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Cloud, Code, BarChart, Users, Globe, Facebook, Twitter, Linkedin, Instagram, Youtube, Github, MessageSquare, Star, TrendingUp, CheckCircle } from 'lucide-react';
 ;
 const Footer: React.FC = memo(() => {;
-const currentYear="new Date().getFullYear();"
+const currentYear = "new Date().getFullYear();"
   ;
-const microSaasServices="[]"
+const microSaasServices = []
     { name: 'AI Project Manager', url: '/ai-project-manager', description: 'Intelligent project planning', icon: '📊', popular: true },
     { name: 'AI Social Media Manager', url: '/ai-social-media-manager', description: 'Automated social media', icon: '📱', popular: true },
     { name: 'AI Analytics Dashboard', url: '/ai-analytics-dashboard', description: 'AI-powered analytics', icon: '📈', popular: true },
@@ -17,7 +17,7 @@ const microSaasServices="[]"
     { name: 'AI SEO Optimizer', url: '/ai-marketing', description: 'AI-driven SEO', icon: '🎯', popular: false }
   ];
 ;
-const aiServices="[]"
+const aiServices = []
     { name: 'AI Services', url: '/ai-services', description: 'Comprehensive AI solutions' },
     { name: 'AI Marketing', url: '/ai-marketing', description: 'AI-powered marketing automation' },
     { name: 'AI Automation', url: '/ai-automation', description: 'Intelligent process automation' },
@@ -42,7 +42,7 @@ const aiServices="[]"
     { name: 'AI Edge Computing', url: '/ai-edge-computing', description: 'AI at the edge' }
   ];
 ;
-const itServices="[]"
+const itServices = []
     { name: 'IT Services', url: '/it-services', description: 'Comprehensive IT support' },
     { name: 'IT Infrastructure', url: '/it-infrastructure', description: 'Enterprise infrastructure' },
     { name: 'Cybersecurity', url: '/cybersecurity', description: 'Security solutions' },
@@ -61,7 +61,7 @@ const itServices="[]"
     { name: 'Global IT Support', url: '/global-it-support', description: 'Worldwide support' }
   ];
 ;
-const emergingTech="[]"
+const emergingTech = []
     { name: 'Quantum Computing', url: '/quantum-computing', description: 'Quantum solutions' },
     { name: 'Robotics', url: '/robotics', description: 'Intelligent robotics' },
     { name: 'IoT & Edge Computing', url: '/iot-edge-computing', description: 'Connected devices' },
@@ -76,7 +76,7 @@ const emergingTech="[]"
     { name: 'Future Technologies', url: '/future-technologies', description: 'Emerging tech solutions' }
   ];
 ;
-const companyLinks="[]"
+const companyLinks = []
     { name: 'About Us', url: '/about' },
     { name: 'Our Team', url: '/team' },
     { name: 'Careers', url: '/careers' },
@@ -84,7 +84,7 @@ const companyLinks="[]"
     { name: 'Contact', url: '/contact' }
   ];
 ;
-const supportLinks="[]"
+const supportLinks = []
     { name: 'Documentation', url: '/docs' },
     { name: 'API Reference', url: '/api-docs' },
     { name: 'Support Center', url: '/support' },
@@ -93,7 +93,7 @@ const supportLinks="[]"
     { name: 'Terms of Service', url: '/terms' }
   ];
 ;
-const socialLinks="[]"
+const socialLinks = []
     { name: 'Facebook', url: 'https://facebook.com/ziontechgroup', icon: Facebook },
     { name: 'Twitter', url: 'https://twitter.com/ziontechgroup', icon: Twitter },
     { name: 'LinkedIn', url: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },
@@ -102,20 +102,19 @@ const socialLinks="[]"
     { name: 'GitHub', url: 'https://github.com/ziontechgroup', icon: Github }
   ];
 ;
-const contactInfo="{}"
+const contactInfo = {}
     phone: '+1 (302) 464-0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008, Middletown, DE 19709',
     hours: 'Mon-Fri: 9AM-6PM EST'
   };
 ;
-const achievements="[]"
+const achievements = []
     { icon: Award, text: '50+ Successful Projects' },
     { icon: Users, text: '100+ Happy Clients' },
     { icon: TrendingUp, text: '300% Average ROI' },
     { icon: Shield, text: '99.9% Uptime Guarantee' }
   ];
-
   return (
     <footer className=""bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid"></footer>"
       {/* Main Footer Content */}
@@ -141,7 +140,7 @@ const achievements="[]"
             {/* Social Links */}
             <div className=""flex space-x-4"></div>"
               {socialLinks.map((social, index) => (
-                <a key="{index}></a>"
+                <a key = "{index}></a>"
                   href="{social.url}"
                   target=""_blank""
                   rel=""noopener noreferrer""
@@ -157,7 +156,7 @@ const achievements="[]"
             <h3 className=""text-lg font-semibold mb-6 text-cyan-400 neon-text">AI Services</h3>"
             <ul className=""space-y-3"></ul>"
               {aiServices.slice(0, 8).map((service, index) => (
-                <li key="{index}></li>"
+                <li key = "{index}></li>"
                   <Link href="{service.url}></Link>"
                     className=""text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group flex items-center">"
                     <ArrowRight className=""w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" /></ArrowRight>"
@@ -179,7 +178,7 @@ const achievements="[]"
             <h3 className=""text-lg font-semibold mb-6 text-cyan-400 neon-text">IT Services</h3>"
             <ul className=""space-y-3"></ul>"
               {itServices.slice(0, 6).map((service, index) => (
-                <li key="{index}></li>"
+                <li key = "{index}></li>"
                   <Link href="{service.url}></Link>"
                     className=""text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group flex items-center">"
                     <ArrowRight className=""w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" /></ArrowRight>"
@@ -214,7 +213,7 @@ const achievements="[]"
                 <h5 className=""text-sm font-semibold text-purple-400 mb-2">AI Services</h5>"
                 <div className=""space-y-2"></div>"
                   {aiServices.slice(0, 4).map((service, index) => (
-                    <Link key="{index}></Link>"
+                    <Link key = "{index}></Link>"
                       href="{service.url}"
                       className=""flex items-center space-x-2 text-gray-300 hover:text-purple-400 transition-colors duration-300 text-sm">"
                       <service.icon className=""w-3 h-3" /></service>"
@@ -227,7 +226,7 @@ const achievements="[]"
                 <h5 className=""text-sm font-semibold text-blue-400 mb-2">IT Services</h5>"
                 <div className=""space-y-2"></div>"
                   {itServices.slice(0, 4).map((service, index) => (
-                    <Link key="{index}></Link>"
+                    <Link key = "{index}></Link>"
                       href="{service.url}"
                       className=""flex items-center space-x-2 text-gray-300 hover:text-blue-400 transition-colors duration-300 text-sm">"
                       <service.icon className=""w-3 h-3" /></service>"
@@ -279,7 +278,7 @@ const achievements="[]"
             <h4 className=""text-sm font-semibold text-white mb-4">Company</h4>"
             <ul className=""space-y-2"></ul>"
               {companyLinks.map((link, index) => (
-                <li key="{index}></li>"
+                <li key = "{index}></li>"
                   <Link href="{link.url}></Link>"
                     className=""text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">"
                     {link.name}
@@ -292,7 +291,7 @@ const achievements="[]"
             <h4 className=""text-sm font-semibold text-white mb-4">Support</h4>"
             <ul className=""space-y-2"></ul>"
               {supportLinks.map((link, index) => (
-                <li key="{index}></li>"
+                <li key = "{index}></li>"
                   <Link href="{link.url}></Link>"
                     className=""text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">"
                     {link.name}
@@ -362,6 +361,5 @@ const achievements="[]"
       </div>
     </footer>
   )});
-
 Footer.displayName="'Footer';"
 export default Footer;

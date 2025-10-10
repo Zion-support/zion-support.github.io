@@ -1,11 +1,10 @@
 'use client';
 import React from 'react';
 import { FileText, Scale, Shield, AlertTriangle, CheckCircle, ArrowRight, Globe, User, Mail, Phone, Calendar, Lock, Database, Server, Key } from 'lucide-react';
-
 export default function TermsPage() {;
-const lastUpdated="'January 1, 2024';"
+const lastUpdated = "'January 1, 2024';"
 ;
-const sections="[]"
+const sections = []
     {}
       title: 'Acceptance of Terms',
       icon: CheckCircle,
@@ -38,7 +37,7 @@ const sections="[]"
     }
   ];
 ;
-const prohibitedUses="[]"
+const prohibitedUses = []
     'Violating any applicable laws or regulations',
     'Transmitting malicious code or harmful content',
     'Attempting to gain unauthorized access to our systems',
@@ -49,7 +48,7 @@ const prohibitedUses="[]"
     'Engaging in any form of harassment or abuse'
   ];
 ;
-const serviceLevels="[]"
+const serviceLevels = []
     {}
       service: 'AI Services',
       uptime: '99.9%',
@@ -75,7 +74,6 @@ const serviceLevels="[]"
       response: '4 hours'
     }
   ];
-
   return (
     <div className=""min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
       {/* Hero Section */}

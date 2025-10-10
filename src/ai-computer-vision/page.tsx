@@ -1,10 +1,8 @@
 import React from 'react';
-
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { Eye, Camera, Video, Target, Shield, CheckCircle, ArrowRight, Settings } from 'lucide-react';
-
 import { Target, Shield, Eye,  Camera,  Target,  Shield,  Settings } from 'lucide-react';
 const AIComputerVisionPage: React.FC = () => {;
 const features="[];"
@@ -38,7 +36,7 @@ const features="[];"
   s: ['Identity verification', 'Access control', 'Privacy protection']
     }
   ];
-  const applications="[]"
+  const applications = []
       titl,
   e: 'Security & Surveillance',
       descriptio,
@@ -55,7 +53,7 @@ const features="[];"
   n: Settings,
       useCase,
   s: ['Defect detection', 'Quality assurance', 'Process monitoring'];
-const pricing="[]"
+const pricing = []
       nam,
   e: 'Starter',
       pric,
@@ -200,6 +198,4 @@ Ready to See the Future?"
       <Footer /></Footer>
     </div>
   )};
-
 export default PagePage;
-

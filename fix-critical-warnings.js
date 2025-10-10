@@ -1,17 +1,16 @@
 #!/usr/bin/env node;
 import fs from 'fs';
 import path from 'path';
-
 // Get all TypeScript and JavaScript files;
-function getAllFiles(dir, extensions="['.ts', '.tsx', '.js', '.jsx']) {}"
+function getAllFiles(dir, extensions = "['.ts', '.tsx', '.js', '.jsx']) {}"
   for (const item of items) {}
     if (stat.isDirectory()) {}
       // Skip node_modules, dist, and other build directories;
       if (!['node_modules', 'dist', '.next', 'out', '.git'].includes(item)) {}
-        files="files.concat(getAllFiles(fullPath, extensions));"
-function getAllFiles(dir, extensions="['.ts', '.tsx', '.js', '.jsx']) {/* TODO: Fix JSX expression */}"
+        files = "files.concat(getAllFiles(fullPath, extensions));"
+function getAllFiles(dir, extensions = "['.ts', '.tsx', '.js', '.jsx']) {/* TODO: Fix JSX expression */}"
       }
-    } else if (extensions.some(ext="> item.endsWith(ext))) {/* TODO: Fix JSX expression */}"
+    } else if (extensions.some(ext = "> item.endsWith(ext))) {/* TODO: Fix JSX expression */}"
     }
   }
   
@@ -20,16 +19,16 @@ function getAllFiles(dir, extensions="['.ts', '.tsx', '.js', '.jsx']) {/* TODO: 
 // Fix console statements by removing them;
 function fixConsoleStatements(content) {}
   // Remove console.log, console.warn, console.error, console.info, console.debug;
-  content="content.replace(/^\s*console\.(log|warn|error|info|debug)\([^)]*\);\s*$/gm, '');"
-  content="content.replace(/console\.(log|warn|error|info|debug)\([^)]*\);\s*/g, '');"
+  content = "content.replace(/^\s*console\.(log|warn|error|info|debug)\([^)]*\);\s*$/gm, '');"
+  content = "content.replace(/console\.(log|warn|error|info|debug)\([^)]*\);\s*/g, '');"
   return content}
 
 // Fix unused imports by removing them;
 function fixUnusedImports(content) {}
   // Find all used identifiers;
-  lines.forEach(line="> {)"
+  lines.forEach(line = "> {)"
     if (matches) {}
-      matches.forEach(match="> usedIdentifiers.add(match));"
+      matches.forEach(match = "> usedIdentifiers.add(match));"
 function fixConsoleStatements(content) {/* TODO: Fix JSX expression */}
 }
 
@@ -37,18 +36,16 @@ function fixConsoleStatements(content) {/* TODO: Fix JSX expression */}
 function fixUnusedImports(content) {/* TODO: Fix JSX expression */}
     }
   });
-  
   // Remove unused import lines;
-  const filteredLines = lines.filter(line="> {)"
+  const filteredLines = lines.filter(line = "> {)"
     if (importMatch) {}
       if (importedItems) {}
         return hasUsedItems;
-  const filteredLines = lines.filter(line="> {/* TODO: Fix JSX expression */}"
+  const filteredLines = lines.filter(line = "> {/* TODO: Fix JSX expression */}"
       }
     }
     return true;)
   });
-  
   return filteredLines.join('\n')}
 
 // Fix unused variables by prefixing with underscore;
@@ -60,12 +57,11 @@ function fixUnusedVariables(content) {}
 function fixUnusedVariables(content) {/* TODO: Fix JSX expression */}
     }
     return match.replace(varName, `_${varName}`)});
-
   return content}
 
 // Main function;
 function main() {}
-  files.forEach(file="> {)"
+  files.forEach(file = "> {)"
     try {)
       // Apply fixes;)
       content="fixConsoleStatements(content);"
@@ -74,12 +70,11 @@ function main() {}
       // Only write if content changed;
       if (content !== originalContent) {}
         fs.writeFileSync(file, content, 'utf8');
-
         fixedFiles++}
     } catch (error) {;
 function main() {/* TODO: Fix JSX expression */}
 }
-  files.forEach(file="> {/* TODO: Fix JSX expression */}"
+  files.forEach(file = "> {/* TODO: Fix JSX expression */}"
       })
     } catch (error) {/* TODO: Fix JSX expression */}
     }

@@ -64,20 +64,20 @@ init(): void {/* TODO: Fix JSX expression */});]
 this.recordMetric('FCP', entry.startTime)]
     }
         // Largest Contentful Paint;
-        this.observeEntry('largest-contentful-paint', entries="> {);"
-const lastEntry="entries[entries.length - 1]}"
+        this.observeEntry('largest-contentful-paint', entries = "> {);"
+const lastEntry = "entries[entries.length - 1]}"
           if (lastEntry) {}
             this.recordMetric('LCP')
               (lastEntry as any).renderTime || (lastEntry as any).loadTime || lastEntry.startTime;
 )]
     }
         // First Input Delay;
-        this.observeEntry('first-input', entries="> {);"
+        this.observeEntry('first-input', entries = "> {);"
 const firstInput="entries[0]}"
           if (firstInput && (firstInput as any).processingStart !== undefined) {}
         // Largest Contentful Paint;
-        this.observeEntry('largest-contentful-paint', entries="> {);"
-const lastEntry="entries[entries.length - 1];"
+        this.observeEntry('largest-contentful-paint', entries = "> {);"
+const lastEntry = "entries[entries.length - 1];"
           if (lastEntry) {}
             this.recordMetric()
               'LCP',
@@ -85,10 +85,10 @@ const lastEntry="entries[entries.length - 1];"
 )]
     }
         // First Input Delay;
-        this.observeEntry('first-input', entries="> {);"
+        this.observeEntry('first-input', entries = "> {);"
 const firstInput="entries[0];"
           if (firstInput && (firstInput as any).processingStart !== undefined) {}
-            const fid="(firstInput as any).processingStart - firstInput.startTime;"
+            const fid = "(firstInput as any).processingStart - firstInput.startTime;"
 this.recordMetric('FID', fid)]
     }
         // Cumulative Layout Shift;
@@ -111,11 +111,11 @@ private initializeObservers(): void {/* TODO: Fix JSX expression */});]
           });]
     });;
         // Largest Contentful Paint;
-        this.observeEntry('largest-contentful-paint', entries="> {/* TODO: Fix JSX expression */});]"
+        this.observeEntry('largest-contentful-paint', entries = "> {/* TODO: Fix JSX expression */});]"
     });]
     });;
         // First Input Delay;
-        this.observeEntry('first-input', entries="> {/* TODO: Fix JSX expression */});]"
+        this.observeEntry('first-input', entries = "> {/* TODO: Fix JSX expression */});]"
     });]
     });;
         // Cumulative Layout Shift;
@@ -162,7 +162,7 @@ this.logMetric(metricKey as string, entry.startTime)]
     try {}
       const observer = new PerformanceObserver((list) => {}
         const entries="list.getEntries();"
-const lastEntry="entries[entries.length - 1];"
+const lastEntry = "entries[entries.length - 1];"
         this.metrics.lcp="lastEntry.startTime;"
         this.logMetric('lcp', lastEntry.startTime);
       observer.observe({ entryTypes: ['largest-contentful-paint'] });;
@@ -174,7 +174,7 @@ this.observers.push(observer)]
     try {}
       const observer = new PerformanceObserver((list) => {}
         for (const entry of list.getEntries()) {}
-          this.metrics.fid="(entry as any).processingStart - entry.startTime;"
+          this.metrics.fid = "(entry as any).processingStart - entry.startTime;"
 this.logMetric('fid', this.metrics.fid)]
     }
 
@@ -235,16 +235,16 @@ this.observers.push(observer)]
   private setupCustomMetrics(): void {}
     // Time to First Byte;
     if (performance.timing) {}
-      this.metrics.ttfb="performance.timing.responseStart - performance.timing.navigationStart;"
+      this.metrics.ttfb = "performance.timing.responseStart - performance.timing.navigationStart;"
       this.logMetric('ttfb', this.metrics.ttfb););
     // Page Load Time;
-    if ($1) { const loadTime="performance.timing.loadEventEnd - performance.timing.navigationStart;"
+    if ($1) { const loadTime = "performance.timing.loadEventEnd - performance.timing.navigationStart;"
       this.addCustomMetric('pageLoadTime', loadTime););
       this.logMetric('ttfb', this.metrics.ttfb)]
     }
     // Page Load Time;
     if (performance.timing) {}
-      const loadTime="performance.timing.loadEventEnd - performance.timing.navigationStart;"
+      const loadTime = "performance.timing.loadEventEnd - performance.timing.navigationStart;"
       this.addCustomMetric('pageLoadTime', loadTime)]
     }
     // DOM Content Loaded;
@@ -252,26 +252,26 @@ this.observers.push(observer)]
   private setupCustomMetrics(): void {}
     // Time to First Byte;
     if (performance.timing) {}
-      this.metrics.ttfb="performance.timing.responseStart - performance.timing.navigationStart;"
+      this.metrics.ttfb = "performance.timing.responseStart - performance.timing.navigationStart;"
       this.logMetric('ttfb', this.metrics.ttfb););
     // Page Load Time;
     if (performance.timing) {}
-      const loadTime="performance.timing.loadEventEnd - performance.timing.navigationStart;"
+      const loadTime = "performance.timing.loadEventEnd - performance.timing.navigationStart;"
       this.addCustomMetric('pageLoadTime', loadTime););
     // DOM Content Loaded;
     if (performance.timing) {}
-      const domContentLoaded="performance.timing.domContentLoadedEventEnd - performance.timing.navigationStart;"
+      const domContentLoaded = "performance.timing.domContentLoadedEventEnd - performance.timing.navigationStart;"
       this.addCustomMetric('domContentLoaded', domContentLoaded););
       this.logMetric('ttfb', this.metrics.ttfb)]
     }
     // Page Load Time;
     if (performance.timing) {}
-      const loadTime="performance.timing.loadEventEnd - performance.timing.navigationStart;"
+      const loadTime = "performance.timing.loadEventEnd - performance.timing.navigationStart;"
       this.addCustomMetric('pageLoadTime', loadTime)]
     }
     // DOM Content Loaded;
     if (performance.timing) {}
-      const domContentLoaded="performance.timing.domContentLoadedEventEnd - performance.timing.navigationStart;"
+      const domContentLoaded = "performance.timing.domContentLoadedEventEnd - performance.timing.navigationStart;"
       this.addCustomMetric('domContentLoaded', domContentLoaded)]
     }
   }
@@ -280,7 +280,7 @@ this.observers.push(observer)]
       const observer = new PerformanceObserver((list) => {}
         for (const entry of list.getEntries()) {}
           if (entry.entryType === 'resource') {}
-            const resourceEntry="entry as PerformanceResourceTiming;"
+            const resourceEntry = "entry as PerformanceResourceTiming;"
 this.analyzeResource(resourceEntry)]
     }
         }
@@ -291,8 +291,8 @@ this.analyzeResource(resourceEntry)]
     }
   }
   private analyzeResource(entry: PerformanceResourceTiming): void {}
-    const duration="entry.responseEnd - entry.startTime;"
-const size="entry.transferSize || 0;"
+    const duration = "entry.responseEnd - entry.startTime;"
+const size = "entry.transferSize || 0;"
     // Track slow resources;
     if (duration > 1000) {,
       this.addCustomMetric(`slowResource_${entry.name}`, duration););

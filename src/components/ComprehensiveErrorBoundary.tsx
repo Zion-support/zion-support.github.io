@@ -1,7 +1,5 @@
 import React from 'react';
-
   children: ReactNode;
-
   fallback?: ReactNode;
   onError?: (erro,
   r: Error, errorInf)
@@ -34,7 +32,7 @@ class ComprehensiveErrorBoundary extends Component;
 class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {;
 constructor(props: ErrorBoundaryProps) {}
     super(props);
-    this.state="{// TODO: Add content}"
+    this.state = "{// TODO: Add content}"
 };
   hasErro,
   r: false,
@@ -45,7 +43,7 @@ constructor(props: ErrorBoundaryProps) {}
       errorI,
   d: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     };
-    this.maxRetries="props.maxRetries || 3}"
+    this.maxRetries = "props.maxRetries || 3}"
   static getDerivedStateFromError(erro)
   r: Error): Partial;
           <State> {/* TODO: Fix JSX expression */}
@@ -140,8 +138,8 @@ constructor(props: ErrorBoundaryProps) {}
       this.setState({/* TODO: Fix JSX expression */})
   g: true });
       // Simulate retry delay;
-      await new Promise(resolve="> setTimeout(resolve, 1000));"
-      this.setState(prevState="> ({/* TODO: Fix JSX expression */}"
+      await new Promise(resolve = "> setTimeout(resolve, 1000));"
+      this.setState(prevState = "> ({/* TODO: Fix JSX expression */}"
   O: Add content}
 };
   hasErro,
@@ -218,7 +216,7 @@ constructor(props: ErrorBoundaryProps) {}
           <button></button>
                   onClick="{this.handleRetry}""
                   className=""cyber-button"`"
-                  aria-label="{`Retry loading content. ${this.maxRetries - this.state.retryCount} attempts remaining.`}"
+                  aria-label = "{`Retry loading content. ${this.maxRetries - this.state.retryCount} attempts remaining.`}"
 //>
                    Try Again ({this.maxRetries - this.state.retryCount} left)
                 </button>

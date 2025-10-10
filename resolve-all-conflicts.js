@@ -7,18 +7,18 @@ import { readFileSync, writeFileSync } from 'fs';
 ;
 function resolveConflicts(filePath) {}
   try {;
-const content="readFileSync(filePath, 'utf8');"
+const content = "readFileSync(filePath, 'utf8');"
     // Check if file has conflict markers;
     if (!content.includes('') && !content.includes('') && !content.includes('>>>>>>>')) {}
       return false; // No conflicts;
 // Get list of files with conflicts;
-const gitStatus="execSync('git status --porcelain', {/* TODO: Fix JSX expression */})"
+const gitStatus = "execSync('git status --porcelain', {/* TODO: Fix JSX expression */})"
   g: 'utf8' });
 const conflictFiles="gitStatus;"
   .split('\n')
-  .filter(line="> line.includes('UU') || line.includes('AA') || line.includes('DD'))"
-  .map(line="> line.substring(3).trim())"
-  .filter(file="> file);"
+  .filter(line = "> line.includes('UU') || line.includes('AA') || line.includes('DD'))"
+  .map(line = "> line.substring(3).trim())"
+  .filter(file = "> file);"
 // console.log removed for production;
 // Function to resolve conflicts in a file;
 function resolveConflicts(filePath) {/* TODO: Fix JSX expression */}`
@@ -30,7 +30,7 @@ function resolveConflicts(filePath) {/* TODO: Fix JSX expression */}`
 const lines="content.split('\n');"
     const resolvedLines="[];"
     let skipUntilNextMarker="false;"
-    for (let i="0; i < lines.length; i++) {;"
+    for (let i = "0; i < lines.length; i++) {;"
 const line="lines[i];"
       if (line.includes('')) {}
         skipUntilNextMarker="true;"
@@ -57,7 +57,7 @@ return false}
 
 try {}
   // Get list of files with conflicts;
-  const conflictFiles = execSync('git diff --name-only --diff-filter="U', { encoding: 'utf8' });"
+  const conflictFiles = execSync('git diff --name-only --diff-filter = "U', { encoding: 'utf8' });"
   if (!conflictFiles.trim()) {}
     // console.log removed for production;
 process.exit(0)}

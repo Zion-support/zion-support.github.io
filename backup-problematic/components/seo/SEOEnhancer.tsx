@@ -1,5 +1,4 @@
 import React from 'react';
-
 interface SEOEnhancerProps {/* TODO: Fix JSX expression */}
 }
 ;
@@ -17,6 +16,5 @@ const SEOEnhancer = React.memo(function SEOEnhancer({ className="'' }: SEOEnhanc
       <p className=""text-blue-600">This component is under development.</p>"
     </div>
   )});
-
 export default SEOEnhancer;
 "`

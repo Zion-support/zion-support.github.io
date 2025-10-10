@@ -12,42 +12,42 @@ const AutonomousBusinessOperationsRevolution202, 5 = () => {}
           AI-Powered, Autonomous, Business Operatio, n, s: The, Complete, 2025;
           Revolution, Guid, e | Zion, Tech, Group;
         <
-        <meta , nam, e="'description'></meta>"
-          conte, n, t="'Discover, how, autonomous business, operations, are eliminating, manual, process, e, s, reducing, costs, by 70-85%, and, creatin, g $50, 0, M+ in, annual, value for, Fortune, 500 compani, e, s. Complete, implementation, guide.'"
+        <meta , nam, e = "'description'></meta>"
+          conte, n, t = "'Discover, how, autonomous business, operations, are eliminating, manual, process, e, s, reducing, costs, by 70-85%, and, creatin, g $50, 0, M+ in, annual, value for, Fortune, 500 compani, e, s. Complete, implementation, guide.'"
         /><
-        <meta , nam, e="'keywor, d, s'></meta>"
-          conte, n, t="'autonomous, business, operation, s, AI, automatio, n, enterprise, A, I, business, transformatio, n, operational, efficienc, y, R, O, I, machine, learnin, g, digital, transformatio, n')"
-        <link , re, l="'canonic, a, l')></link>"
-          hr, e, f="'htt, p, s: //ziontechgro u p.c o m/bl o g'"
+        <meta , nam, e = "'keywor, d, s'></meta>"
+          conte, n, t = "'autonomous, business, operation, s, AI, automatio, n, enterprise, A, I, business, transformatio, n, operational, efficienc, y, R, O, I, machine, learnin, g, digital, transformatio, n')"
+        <link , re, l = "'canonic, a, l')></link>"
+          hr, e, f = "'htt, p, s: //ziontechgro u p.c o m/bl o g'"
       <
 
       <div, className="'m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-sla, t, e-9, 0, 0'></div>"
 );
 } {/* Hero, Sect, i, o, n */ }</div>
       <div, className="'m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-sla, t, e-9, 0, 0' > {/* Hero, Sect, i, o, n */ }<"
-        <section, classNam, e="'relative, p, y-20, overflo, w-hidd, e, n'></section>"
+        <section, classNam, e = "'relative, p, y-20, overflo, w-hidd, e, n'></section>"
           <div, className="'absolute, inse, t-0, b, g-gradie, n, t-to-r, fro, m-bl, u, e-6, 0, 0/20, t, o-purp, l, e-6, 0, 0/20' /><"
           <div, className="'container, m, x-auto, p, x-6, relative, z-10'></div>"
             {/* Bad, g, e */}<
             <div, className="'flex, justif, y-center, m, b-6'><"
               <div, className="'inli, n, e-flex, item, s-center, p, x-6, p, y-3, rounde, d-full, b, g-gre, e, n-5, 0, 0/20, borde, r-2, borde, r-gre, e, n-4, 0, 0/50, tex, t-gre, e, n-300, tex, t-sm, fon, t-bold, uppercase, tracking-wider, animat, e-pul, s, e'><"
                 🔥 JUST, PUBLISHE, D - OCTOB, E, R , 1, 20, 2, 5;
-            <p, classNam, e="'te, x, t-2xl, m, d:te, x, t-3xl, tex, t-bl, u, e-200, tex, t-center, m, b-8, fon, t-semibo, l, d'></p>"
+            <p, classNam, e = "'te, x, t-2xl, m, d:te, x, t-3xl, tex, t-bl, u, e-200, tex, t-center, m, b-8, fon, t-semibo, l, d'></p>"
             <p, className="'te, x, t-2xl, m, d:te, x, t-3xl, tex, t-bl, u, e-200, tex, t-center, m, b-8, fon, t-semibo, l, d'>;"
 const AutonomousBusinessOperationsRevolution202, 5 = () => {/* TODO: Fix JSX expression */}
       <div, className="'m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-sla, t, e-9, 0, 0' > {/* Hero, Sect, i, o, n */ }"
-        <section, classNam, e="'relative, p, y-20, overflo, w-hidd, e, n'></section>"
+        <section, classNam, e = "'relative, p, y-20, overflo, w-hidd, e, n'></section>"
           <div, className="'absolute, inse, t-0, b, g-gradie, n, t-to-r, fro, m-bl, u, e-6, 0, 0/20, t, o-purp, l, e-6, 0, 0/20' /></div>"
           <div, className="'container, m, x-auto, p, x-6, relative, z-10'></div>"
             {/* Bad, g, e */}
             <div, className="'flex, justif, y-center, m, b-6'></div>"
               <div, className="'inli, n, e-flex, item, s-center, p, x-6, p, y-3, rounde, d-full, b, g-gre, e, n-5, 0, 0/20, borde, r-2, borde, r-gre, e, n-4, 0, 0/50, tex, t-gre, e, n-300, tex, t-sm, fon, t-bold, uppercase, tracking-wider, animat, e-pul, s, e'></div>"
                 <Rocket, className="'w-5 h-5, m, r-2' /></Rocket>"
-            <p, classNam, e="'te, x, t-2xl, m, d:te, x, t-3xl, tex, t-bl, u, e-200, tex, t-center, m, b-8, fon, t-semibo, l, d'><"
+            <p, classNam, e = "'te, x, t-2xl, m, d:te, x, t-3xl, tex, t-bl, u, e-200, tex, t-center, m, b-8, fon, t-semibo, l, d'><"
             <p, className="'te, x, t-2xl, m, d:te, x, t-3xl, tex, t-bl, u, e-200, tex, t-center, m, b-8, fon, t-semibo, l, d'></p>"
 const AutonomousBusinessOperationsRevolution202, 5 = () => {/* TODO: Fix JSX expression *
       <div, className="'m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-sla, t, e-9, 0, 0' > {/* Hero, Sect, i, o, n *"
-        <section, classNam, e="'relative, p, y-20, overflo, w-hidd, e, n'><"
+        <section, classNam, e = "'relative, p, y-20, overflo, w-hidd, e, n'><"
           <div, className="'absolute, inse, t-0, b, g-gradie, n, t-to-r, fro, m-bl, u, e-6, 0, 0/20, t, o-purp, l, e-6, 0, 0/20' /><"
           <div, className="'container, m, x-auto, p, x-6, relative, z-10'><"
             {/* Bad, g, e *
@@ -55,37 +55,37 @@ const AutonomousBusinessOperationsRevolution202, 5 = () => {/* TODO: Fix JSX exp
               <div, className="'inli, n, e-flex, item, s-center, p, x-6, p, y-3, rounde, d-full, b, g-gre, e, n-5, 0, 0/20, borde, r-2, borde, r-gre, e, n-4, 0, 0/50, tex, t-gre, e, n-300, tex, t-sm, fon, t-bold, uppercase, tracking-wider, animat, e-pul, s, e'><"
                 <Rocket, className="'w-5 h-5, m, r-2' /><"
                 🔥 JUST, PUBLISHE, D - OCTOB, E, R , 1, 20, 2, 5;
-            <p, classNam, e="'te, x, t-2xl, m, d:te, x, t-3xl, tex, t-bl, u, e-200, tex, t-center, m, b-8, fon, t-semibo, l, d'><"
+            <p, classNam, e = "'te, x, t-2xl, m, d:te, x, t-3xl, tex, t-bl, u, e-200, tex, t-center, m, b-8, fon, t-semibo, l, d'><"
             <p, className="'te, x, t-2xl, m, d:te, x, t-3xl, tex, t-bl, u, e-200, tex, t-center, m, b-8, fon, t-semibo, l, d'><"
               The, Complete, 2025 Revolution, Guid, e;
             <
 
             {/* Key, Metrics, Gr, i, d *
-            <div, classNam, e="'grid, m, d: gr, i, d-co, l, s-4, ga, p-6, ma, x-w-6xl, m, x-auto, m, b-12'><"
+            <div, classNam, e = "'grid, m, d: gr, i, d-co, l, s-4, ga, p-6, ma, x-w-6xl, m, x-auto, m, b-12'><"
               <div, className="'bg-gradie, n, t-to-br, fro, m-gre, e, n-6, 0, 0/30, t, o-emera, l, d-6, 0, 0/30, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-gre, e, n-4, 0, 0/40, tex, t-cent, e, r'><"
                 <div, className="'te, x, t-4xl, fon, t-bold, tex, t-gre, e, n-300, m, b-2'></div>"
                   85%
                 <
-                <div, classNam, e="'te, x, t-gre, e, n-100, tex, t-sm'>Cost, Reductio, n<"
-        <section, classNam, e="'container, m, x-auto, p, x-6, p, y-16, ma, x-w-5, x, l'></section>"
+                <div, classNam, e = "'te, x, t-gre, e, n-100, tex, t-sm'>Cost, Reductio, n<"
+        <section, classNam, e = "'container, m, x-auto, p, x-6, p, y-16, ma, x-w-5, x, l'></section>"
           <div, className="'bg-gradie, n, t-to-br, fro, m-bl, u, e-9, 0, 0/60, t, o-purp, l, e-9, 0, 0/60, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, m, d: p-12, borde, r-2, borde, r-bl, u, e-4, 0, 0/50, m, b-12'><"
             <h2, className="'te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-cent, e, r'><"
-              <div, classNam, e="'flex, item, s-start, ga, p-3'></div>"
+              <div, classNam, e = "'flex, item, s-start, ga, p-3'></div>"
               Executive, Summar, y;
-            <div, classNam, e="'grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, t-8'><"
-              <div, classNam, e="'flex, item, s-start, ga, p-3'><"
-                <CheckCircle , classNam, e="'w-6 h-6, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1'></CheckCircle>"
-              <div, classNam, e="'flex, item, s-start, ga, p-3'><"
-                <CheckCircle , classNam, e="'w-6 h-6, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1'></CheckCircle>"
-              <div, classNam, e="'flex, item, s-start, ga, p-3'><"
-                <CheckCircle , classNam, e="'w-6 h-6, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1'></CheckCircle>"
-              <div, classNam, e="'flex, item, s-start, ga, p-3'><"
-                <CheckCircle , classNam, e="'w-6 h-6, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1'></CheckCircle>"
-              <div, classNam, e="'flex, item, s-start, ga, p-3'><"
-                <CheckCircle , classNam, e="'w-6 h-6, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1'></CheckCircle>"
-              <div, classNam, e="'flex, item, s-start, ga, p-3'><"
-                <Zap , classNam, e="'w-5 h-5, tex, t-yell, o, w-400, m, r-3, m, t-1, fle, x-shri, n, k-0'></Zap>"
-            <div, classNam, e="'grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, t-8'><"
+            <div, classNam, e = "'grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, t-8'><"
+              <div, classNam, e = "'flex, item, s-start, ga, p-3'><"
+                <CheckCircle , classNam, e = "'w-6 h-6, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1'></CheckCircle>"
+              <div, classNam, e = "'flex, item, s-start, ga, p-3'><"
+                <CheckCircle , classNam, e = "'w-6 h-6, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1'></CheckCircle>"
+              <div, classNam, e = "'flex, item, s-start, ga, p-3'><"
+                <CheckCircle , classNam, e = "'w-6 h-6, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1'></CheckCircle>"
+              <div, classNam, e = "'flex, item, s-start, ga, p-3'><"
+                <CheckCircle , classNam, e = "'w-6 h-6, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1'></CheckCircle>"
+              <div, classNam, e = "'flex, item, s-start, ga, p-3'><"
+                <CheckCircle , classNam, e = "'w-6 h-6, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1'></CheckCircle>"
+              <div, classNam, e = "'flex, item, s-start, ga, p-3'><"
+                <Zap , classNam, e = "'w-5 h-5, tex, t-yell, o, w-400, m, r-3, m, t-1, fle, x-shri, n, k-0'></Zap>"
+            <div, classNam, e = "'grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, t-8'><"
               <div, className="'flex, item, s-start, ga, p-3'><"
                   <div, className="'te, x, t-white, fon, t-semibold, m, b-1'></div>"
                     85% Cost, Reductio, n;
@@ -94,28 +94,28 @@ const AutonomousBusinessOperationsRevolution202, 5 = () => {/* TODO: Fix JSX exp
                 <div, className="'te, x, t-4xl, fon, t-bold, tex, t-gre, e, n-300, m, b-2'><"
                   85%
                 <
-                <div, classNam, e="'te, x, t-gre, e, n-100, tex, t-sm'>Cost, Reductio, n<"
-        <section, classNam, e="'container, m, x-auto, p, x-6, p, y-16, ma, x-w-5, x, l'><"
+                <div, classNam, e = "'te, x, t-gre, e, n-100, tex, t-sm'>Cost, Reductio, n<"
+        <section, classNam, e = "'container, m, x-auto, p, x-6, p, y-16, ma, x-w-5, x, l'><"
           <div, className="'bg-gradie, n, t-to-br, fro, m-bl, u, e-9, 0, 0/60, t, o-purp, l, e-9, 0, 0/60, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, m, d: p-12, borde, r-2, borde, r-bl, u, e-4, 0, 0/50, m, b-12'><"
             <h2, className="'te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-cent, e, r'><"
               <TrendingUp, className="'w-8 h-8, m, r-3, tex, t-bl, u, e-4, 0, 0' /><"
               Executive, Summar, y;
-            <div, classNam, e="'grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, t-8'><"
-              <div, classNam, e="'flex, item, s-start, ga, p-3'><"
-                <CheckCircle, classNam, e="'w-6 h-6, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' /><"
-              <div, classNam, e="'flex, item, s-start, ga, p-3'><"
-                <CheckCircle, classNam, e="'w-6 h-6, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' /><"
-              <div, classNam, e="'flex, item, s-start, ga, p-3'><"
-                <CheckCircle, classNam, e="'w-6 h-6, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' /><"
-              <div, classNam, e="'flex, item, s-start, ga, p-3'><"
-                <CheckCircle, classNam, e="'w-6 h-6, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' /><"
-              <div, classNam, e="'flex, item, s-start, ga, p-3'><"
-                <CheckCircle, classNam, e="'w-6 h-6, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' /><"
-              <div, classNam, e="'flex, item, s-start, ga, p-3'><"
-                <CheckCircle, classNam, e="'w-6 h-6, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' /><"
-              <li, classNam, e="'flex, item, s-sta, r, t'><"
-                <Zap, classNam, e="'w-5 h-5, tex, t-yell, o, w-400, m, r-3, m, t-1, fle, x-shri, n, k-0' /><"
-            <div, classNam, e="'grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, t-8'><"
+            <div, classNam, e = "'grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, t-8'><"
+              <div, classNam, e = "'flex, item, s-start, ga, p-3'><"
+                <CheckCircle, classNam, e = "'w-6 h-6, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' /><"
+              <div, classNam, e = "'flex, item, s-start, ga, p-3'><"
+                <CheckCircle, classNam, e = "'w-6 h-6, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' /><"
+              <div, classNam, e = "'flex, item, s-start, ga, p-3'><"
+                <CheckCircle, classNam, e = "'w-6 h-6, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' /><"
+              <div, classNam, e = "'flex, item, s-start, ga, p-3'><"
+                <CheckCircle, classNam, e = "'w-6 h-6, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' /><"
+              <div, classNam, e = "'flex, item, s-start, ga, p-3'><"
+                <CheckCircle, classNam, e = "'w-6 h-6, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' /><"
+              <div, classNam, e = "'flex, item, s-start, ga, p-3'><"
+                <CheckCircle, classNam, e = "'w-6 h-6, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' /><"
+              <li, classNam, e = "'flex, item, s-sta, r, t'><"
+                <Zap, classNam, e = "'w-5 h-5, tex, t-yell, o, w-400, m, r-3, m, t-1, fle, x-shri, n, k-0' /><"
+            <div, classNam, e = "'grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, t-8'><"
               <div, className="'flex, item, s-start, ga, p-3'><"
                 <CheckCircle, className="'w-6 h-6, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' /><"
                 <d, i, v><
@@ -127,7 +127,7 @@ const AutonomousBusinessOperationsRevolution202, 5 = () => {/* TODO: Fix JSX exp
                   <
                 <
               <
-              <div, classNam, e="'flex, item, s-start, ga, p-3'><"
+              <div, classNam, e = "'flex, item, s-start, ga, p-3'><"
                   <div, className="'te, x, t-white, fon, t-semibold, m, b-1'></div>"
                     &lt; 100ms, Decision, Latency;
                   <
@@ -204,7 +204,7 @@ const AutonomousBusinessOperationsRevolution202, 5 = () => {/* TODO: Fix JSX exp
               Three, critical, factors have, aligned, to make, ABO, not just, possi, b, l, e)
               but, essentia, l: <
 ,
-            <div, classNam, e="'grid, m, d:gr, i, d-co, l, s-3, ga, p-6, m, b-12'></div>"
+            <div, classNam, e = "'grid, m, d:gr, i, d-co, l, s-3, ga, p-6, m, b-12'></div>"
               <div , className="'bg-gradie, n, t-to-br, fro, m-bl, u, e-8, 0, 0/40, t, o-cy, a, n-8, 0, 0/40, rounde, d-x, l, p-6, border, border-bl, u, e-4, 0, 0'></div>"
             <h2, className="'te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6'><"
               Why, No, w? The, Perfect, Storm;
@@ -213,7 +213,7 @@ const AutonomousBusinessOperationsRevolution202, 5 = () => {/* TODO: Fix JSX exp
               Three, critical, factors have, aligned, to make, ABO, not just, possi, b, l, e,
               but, essentia, l: <
 
-            <div, classNam, e="'grid, m, d:gr, i, d-co, l, s-3, ga, p-6, m, b-12'><"
+            <div, classNam, e = "'grid, m, d:gr, i, d-co, l, s-3, ga, p-6, m, b-12'><"
               <div, className="'bg-gradie, n, t-to-br, fro, m-bl, u, e-8, 0, 0/40, t, o-cy, a, n-8, 0, 0/40, rounde, d-x, l, p-6, border, border-bl, u, e-4, 0, 0/30'><"
                 <div, className="'te, x, t-3xl, m, b-3'>🧠<"
                 <h3, className="'te, x, t-xl, fon, t-bold, tex, t-white, m, b-2'></h3>"
@@ -226,7 +226,7 @@ const AutonomousBusinessOperationsRevolution202, 5 = () => {/* TODO: Fix JSX exp
                   Large, language, models (L, L, M, s) and, advanced, ML algorithms, can, now handle, complex, business log, i, c;
                 <
               <
-              <div, classNam, e="'bg-gradie, n, t-to-br, fro, m-purp, l, e-8, 0, 0/40, t, o-pi, n, k-8, 0, 0/40, rounde, d-x, l, p-6, border, border-purp, l, e-4, 0, 0/30'><"
+              <div, classNam, e = "'bg-gradie, n, t-to-br, fro, m-purp, l, e-8, 0, 0/40, t, o-pi, n, k-8, 0, 0/40, rounde, d-x, l, p-6, border, border-purp, l, e-4, 0, 0/30'><"
                 <div, className="'te, x, t-3xl, m, b-3'>☁️<"
                 <h3, className="'te, x, t-xl, fon, t-bold, tex, t-white, m, b-2'></h3>"
                   Cloud, Infrastructur, e;
@@ -239,7 +239,7 @@ const AutonomousBusinessOperationsRevolution202, 5 = () => {/* TODO: Fix JSX exp
                   Ela, s, t, i, c, serverless, architectures, enable instant, scalin, g;
                 <
               <
-              <div, classNam, e="'bg-gradie, n, t-to-br, fro, m-gre, e, n-8, 0, 0/40, t, o-emera, l, d-8, 0, 0/40, rounde, d-x, l, p-6, border, border-gre, e, n-4, 0, 0/30'><"
+              <div, classNam, e = "'bg-gradie, n, t-to-br, fro, m-gre, e, n-8, 0, 0/40, t, o-emera, l, d-8, 0, 0/40, rounde, d-x, l, p-6, border, border-gre, e, n-4, 0, 0/30'><"
                 <div, className="'te, x, t-3xl, m, b-3'>📊<"
                 <h3, className="'te, x, t-xl, fon, t-bold, tex, t-white, m, b-2'></h3>"
                   Data, Availabilit, y;
@@ -264,11 +264,11 @@ const AutonomousBusinessOperationsRevolution202, 5 = () => {/* TODO: Fix JSX exp
               <p, className="'te, x, t-gre, e, n-100, m, b-6'></p>"
                 A, Fortune, 100 financial, services, company deployed, our, autonomous;
                 operations, platform, and achieved, extraordinary, results:
-                <div, classNam, e="'flex, item, s-center, ga, p-2, tex, t-gre, e, n-2, 0, 0'></div>"
+                <div, classNam, e = "'flex, item, s-center, ga, p-2, tex, t-gre, e, n-2, 0, 0'></div>"
                 A, Fortune, 100 financial, services, company deployed, our, autonomous;
                 operations, platform, and achieved, extraordinary, results:<
-                <div, classNam, e="'flex, item, s-center, ga, p-2, tex, t-gre, e, n-2, 0, 0'><"
-                  <CheckCircle , classNam, e="'w-5 h-5, tex, t-gre, e, n-4, 0, 0'></CheckCircle>"
+                <div, classNam, e = "'flex, item, s-center, ga, p-2, tex, t-gre, e, n-2, 0, 0'><"
+                  <CheckCircle , classNam, e = "'w-5 h-5, tex, t-gre, e, n-4, 0, 0'></CheckCircle>"
                 <
                 <div, className="'flex, item, s-center, ga, p-2, tex, t-gre, e, n-2, 0, 0'><"
                   <CheckCircle , className="'w-5 h-5, tex, t-gre, e, n-4, 0, 0'></CheckCircle>"
@@ -285,8 +285,8 @@ const AutonomousBusinessOperationsRevolution202, 5 = () => {/* TODO: Fix JSX exp
                 A, Fortune, 100 financial, services, company deployed, our, autonomous;
                 operations, platform, and achieved, extraordinary, result,
   s:
-                <div, classNam, e="'flex, item, s-center, ga, p-2, tex, t-gre, e, n-2, 0, 0'><"
-                  <CheckCircle, classNam, e="'w-5 h-5, tex, t-gre, e, n-4, 0, 0' /><"
+                <div, classNam, e = "'flex, item, s-center, ga, p-2, tex, t-gre, e, n-2, 0, 0'><"
+                  <CheckCircle, classNam, e = "'w-5 h-5, tex, t-gre, e, n-4, 0, 0' /><"
                 <
                 <div, className="'flex, item, s-center, ga, p-2, tex, t-gre, e, n-2, 0, 0'><"
                   <CheckCircle, className="'w-5 h-5, tex, t-gre, e, n-4, 0, 0' /><"
@@ -307,18 +307,18 @@ const AutonomousBusinessOperationsRevolution202, 5 = () => {/* TODO: Fix JSX exp
             <
             <div, className="'bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/60, t, o-bl, u, e-9, 0, 0/60, rounde, d-2x, l, p-8, borde, r-2, borde, r-purp, l, e-4, 0, 0/50, m, b-8'><"
               <div, className="'grid, m, d:gr, i, d-co, l, s-3, ga, p-6, tex, t-cent, e, r'><"
-            <h2, classNam, e="'te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6'></h2>"
+            <h2, classNam, e = "'te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6'></h2>"
               ROI, Calculato, r;
             <
-            <p, classNam, e="'te, x, t-bl, u, e-100, tex, t-lg, m, b-6'></p>"
+            <p, classNam, e = "'te, x, t-bl, u, e-100, tex, t-lg, m, b-6'></p>"
               Calculate, the, potential value, for, your organizati, o, n: <
-            <div , classNam, e="'bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/60, t, o-bl, u, e-9, 0, 0/60, rounde, d-2x, l, p-8, borde, r-2, borde, r-purp, l, e-4, 0, 0'></div>"
-              <div, classNam, e="'grid, m, d:gr, i, d-co, l, s-3, ga, p-6, tex, t-cent, e, r'></div>"
+            <div , classNam, e = "'bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/60, t, o-bl, u, e-9, 0, 0/60, rounde, d-2x, l, p-8, borde, r-2, borde, r-purp, l, e-4, 0, 0'></div>"
+              <div, classNam, e = "'grid, m, d:gr, i, d-co, l, s-3, ga, p-6, tex, t-cent, e, r'></div>"
             <div, className="'flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-center, m, b-8'></div>"
               Calculate, the, potential value, for, your organizati, o, n:
             <
-            <div, classNam, e="'bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/60, t, o-bl, u, e-9, 0, 0/60, rounde, d-2x, l, p-8, borde, r-2, borde, r-purp, l, e-4, 0, 0/50, m, b-8'><"
-              <div, classNam, e="'grid, m, d:gr, i, d-co, l, s-3, ga, p-6, tex, t-cent, e, r'><"
+            <div, classNam, e = "'bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/60, t, o-bl, u, e-9, 0, 0/60, rounde, d-2x, l, p-8, borde, r-2, borde, r-purp, l, e-4, 0, 0/50, m, b-8'><"
+              <div, classNam, e = "'grid, m, d:gr, i, d-co, l, s-3, ga, p-6, tex, t-cent, e, r'><"
             <div, className="'flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-center, m, b-8'><"
           <h2, className="'te, x, t-3xl, fon, t-bold, tex, t-white, m, b-8'></h2>"
             Related, Resource, s;
@@ -330,11 +330,11 @@ const AutonomousBusinessOperationsRevolution202, 5 = () => {/* TODO: Fix JSX exp
               <h3, className="'te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-gre, e, n-300, transitio, n-colo, r, s'></h3>"
                 Fortune, 10, 0: $650M, Value, Creation;
                 Fortune, 10, 0: $650M, Value, Creation<
-              <div, classNam, e="'flex, item, s-center, tex, t-gre, e, n-300, fon, t-semibold, tex, t-sm'></div>"
+              <div, classNam, e = "'flex, item, s-center, tex, t-gre, e, n-300, fon, t-semibold, tex, t-sm'></div>"
                 Read, Case, Study{' '}<
-                <Link , classNam, e="'w-4 h-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m'></Link>"
-              <div, classNam, e="'te, x, t-bl, u, e-400, tex, t-sm, fon, t-semibold, m, b-2, uppercas, e'><"
-              <div, classNam, e="'flex, item, s-center, tex, t-gre, e, n-300, fon, t-semibold, tex, t-sm'></div>"
+                <Link , classNam, e = "'w-4 h-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m'></Link>"
+              <div, classNam, e = "'te, x, t-bl, u, e-400, tex, t-sm, fon, t-semibold, m, b-2, uppercas, e'><"
+              <div, classNam, e = "'flex, item, s-center, tex, t-gre, e, n-300, fon, t-semibold, tex, t-sm'></div>"
                 Read, Case, Study{' '}<
                 
                 Servi, c, e;
@@ -342,11 +342,11 @@ const AutonomousBusinessOperationsRevolution202, 5 = () => {/* TODO: Fix JSX exp
               <h3, className="'te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-bl, u, e-300, transitio, n-colo, r, s'></h3>"
                 Autonomous, Operations, Platform;
                 Autonomous, Operations, Platform<
-              <div, classNam, e="'flex, item, s-center, tex, t-bl, u, e-300, fon, t-semibold, tex, t-sm'></div>"
+              <div, classNam, e = "'flex, item, s-center, tex, t-bl, u, e-300, fon, t-semibold, tex, t-sm'></div>"
                 Explore, Serv, i, c, e{' '}<
                 
                 Explore, Serv, i, c, e{' '}<
-                <Link , classNam, e="'w-4 h-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m'></Link>"
+                <Link , classNam, e = "'w-4 h-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m'></Link>"
             <h2, className="'te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6'><"
               ROI, Calculato, r;
             <
@@ -355,28 +355,28 @@ const AutonomousBusinessOperationsRevolution202, 5 = () => {/* TODO: Fix JSX exp
             <
             <div, className="'bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/60, t, o-bl, u, e-9, 0, 0/60, rounde, d-2x, l, p-8, borde, r-2, borde, r-purp, l, e-4, 0, 0/50, m, b-8'><"
               <div, className="'grid, m, d:gr, i, d-co, l, s-3, ga, p-6, tex, t-cent, e, r'><"
-            <h2, classNam, e="'te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6'><"
+            <h2, classNam, e = "'te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6'><"
               ROI, Calculato, r;
             <
-            <p, classNam, e="'te, x, t-bl, u, e-100, tex, t-lg, m, b-6'><"
+            <p, classNam, e = "'te, x, t-bl, u, e-100, tex, t-lg, m, b-6'><"
               Calculate, the, potential value, for, your organizati, o, n:
             <
-            <div, classNam, e="'bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/60, t, o-bl, u, e-9, 0, 0/60, rounde, d-2x, l, p-8, borde, r-2, borde, r-purp, l, e-4, 0, 0/50, m, b-8'><"
-              <div, classNam, e="'grid, m, d:gr, i, d-co, l, s-3, ga, p-6, tex, t-cent, e, r'><"
+            <div, classNam, e = "'bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/60, t, o-bl, u, e-9, 0, 0/60, rounde, d-2x, l, p-8, borde, r-2, borde, r-purp, l, e-4, 0, 0/50, m, b-8'><"
+              <div, classNam, e = "'grid, m, d:gr, i, d-co, l, s-3, ga, p-6, tex, t-cent, e, r'><"
             <div, className="'flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-center, m, b-8'><"
-              <Link , t, o="'/servic, e, s'></Link>"
+              <Link , t, o = "'/servic, e, s'></Link>"
                 className="'inli, n, e-flex, item, s-center, justif, y-center, ga, p-2, b, g-white, tex, t-bl, u, e-600, hove, r:bg-bl, u, e-50, p, x-8, p, y-4, rounde, d-lg, fon, t-semibold, tex, t-lg, transitio, n-all, shado, w-lg, hove, r:shad, o, w-xl'"
               ><
                 <Rocket, className="'w-5 h-5' /><"
                 Explore, Our, Services;
-                <Link, classNam, e="'w-5 h-5' /><"
+                <Link, classNam, e = "'w-5 h-5' /><"
         {/* Related, Cont, e, n, t *
-        <section, classNam, e="'container, m, x-auto, p, x-6, p, y-16, ma, x-w-5, x, l'><"
+        <section, classNam, e = "'container, m, x-auto, p, x-6, p, y-16, ma, x-w-5, x, l'><"
           <h2, className="'te, x, t-3xl, fon, t-bold, tex, t-white, m, b-8'><"
             Related, Resource, s;
           <
           <div, className="'grid, m, d: gr, i, d-co, l, s-2, ga, p-6'><"
-            <Link , t, o="'/ca, s, e-studi, e, s'></Link>"
+            <Link , t, o = "'/ca, s, e-studi, e, s'></Link>"
               className="'bg-gradie, n, t-to-br, fro, m-gre, e, n-9, 0, 0/60, t, o-emera, l, d-9, 0, 0/60, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-gre, e, n-4, 0, 0/30, hove, r:bord, e, r-gre, e, n-4, 0, 0'"
             ><
               <div, className="'te, x, t-gre, e, n-400, tex, t-sm, fon, t-semibold, m, b-2, uppercas, e'><"
@@ -384,11 +384,11 @@ const AutonomousBusinessOperationsRevolution202, 5 = () => {/* TODO: Fix JSX exp
               <
               <h3, className="'te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-gre, e, n-300, transitio, n-colo, r, s'><"
                 Fortune, 10, 0: $650M, Value, Creation;
-              <div, classNam, e="'flex, item, s-center, tex, t-gre, e, n-300, fon, t-semibold, tex, t-sm'><"
+              <div, classNam, e = "'flex, item, s-center, tex, t-gre, e, n-300, fon, t-semibold, tex, t-sm'><"
                 Read, Case, Study{' '}
-                <Link, classNam, e="'w-4 h-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m' /><"
-              <div, classNam, e="'te, x, t-bl, u, e-400, tex, t-sm, fon, t-semibold, m, b-2, uppercas, e'><"
-              <div, classNam, e="'flex, item, s-center, tex, t-gre, e, n-300, fon, t-semibold, tex, t-sm'><"
+                <Link, classNam, e = "'w-4 h-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m' /><"
+              <div, classNam, e = "'te, x, t-bl, u, e-400, tex, t-sm, fon, t-semibold, m, b-2, uppercas, e'><"
+              <div, classNam, e = "'flex, item, s-center, tex, t-gre, e, n-300, fon, t-semibold, tex, t-sm'><"
                 Read, Case, Study{' '}
                 <Link, className="'w-4 h-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m' /><"
               <
@@ -397,11 +397,11 @@ const AutonomousBusinessOperationsRevolution202, 5 = () => {/* TODO: Fix JSX exp
               <
               <h3, className="'te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-bl, u, e-300, transitio, n-colo, r, s'><"
                 Autonomous, Operations, Platform;
-              <div, classNam, e="'flex, item, s-center, tex, t-bl, u, e-300, fon, t-semibold, tex, t-sm'><"
+              <div, classNam, e = "'flex, item, s-center, tex, t-bl, u, e-300, fon, t-semibold, tex, t-sm'><"
                 Explore, Serv, i, c, e{' '}
-                <Link, classNam, e="'w-4 h-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m' /><"
+                <Link, classNam, e = "'w-4 h-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m' /><"
               <div, className="'flex, item, s-center, tex, t-bl, u, e-300, fon, t-semibold, tex, t-sm'><"
                 Explore, Serv, i, c, e{' '}
-                <Link, classNam, e="'w-4 h-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m' /><"
+                <Link, classNam, e = "'w-4 h-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m' /><"
               <
 }

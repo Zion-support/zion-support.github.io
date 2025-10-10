@@ -148,11 +148,11 @@ const, showcaseConten, t="[]"
       {/* Animated, background, effects */}</div>
       <div, className=""absolute, inse, t-0, overflo, w-hidden, opacit, y-15"></div>"
         <div, className=""absolute, to, p-0, lef, t-1/3 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>"
-        <div, className="absolute, botto, m-0, righ, t-1/3 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e="{{ animationDel, a, y: '2s' }}></d, i, v>;"
-        <div, className="absolute, to, p-1/2, lef, t-1/2 w-6, 4, h-64, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e="{{ animationDel, a, y: '4s' }}></d, i, v>;"
+        <div, className="absolute, botto, m-0, righ, t-1/3 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e = "{{ animationDel, a, y: '2s' }}></d, i, v>;"
+        <div, className="absolute, to, p-1/2, lef, t-1/2 w-6, 4, h-64, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e = "{{ animationDel, a, y: '4s' }}></d, i, v>;"
       <div, className=""absolute, inse, t-0, overflo, w-hidden, opacit, y-15">";</div>"
         <div, className=""absolute, to, p-0, lef, t-1/3 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>";"
-        <div, className="absolute, botto, m-0, righ, t-1/3 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e="{{ animationDel, a, y: '2s' }}></d, i, v>';"
+        <div, className="absolute, botto, m-0, righ, t-1/3 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e = "{{ animationDel, a, y: '2s' }}></d, i, v>';"
 const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
   s: "$10, 0, M+", automati, o, n: "95%", r, o, i: "3, 0, 0%" }"}
     {/* TODO: Fix JSX expression */}"
@@ -171,12 +171,12 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
       {/* Animated, background, effects */}"
       <div, className=""absolute, inse, t-0, overflo, w-hidden, opacit, y-15"></div>""
         <div, className=""absolute, to, p-0, lef, t-1/3 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>""
-        <div, className="absolute, botto, m-0, righ, t-1/3 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e="{{ animationDel, a, y: '2s' }}></d, i, v>;""
-        <div, className="absolute, to, p-1/2, lef, t-1/2 w-6, 4, h-64, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e="{{ animationDel, a, y: '4s' }}></d, i, v>;""
+        <div, className="absolute, botto, m-0, righ, t-1/3 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e = "{{ animationDel, a, y: '2s' }}></d, i, v>;""
+        <div, className="absolute, to, p-1/2, lef, t-1/2 w-6, 4, h-64, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e = "{{ animationDel, a, y: '4s' }}></d, i, v>;""
       <div, className=""absolute, inse, t-0, overflo, w-hidden, opacit, y-15">";""
         <div, className=""absolute, to, p-0, lef, t-1/3 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>";""
-        <div, className="absolute, botto, m-0, righ, t-1/3 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e="{{ animationDel, a, y: '2s' }}></d, i, v>';""
-        <div, className="absolute, to, p-1/2, lef, t-1/2 w-6, 4, h-64, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e="{{ animationDel, a, y: '4s' }}></d, i, v>';"
+        <div, className="absolute, botto, m-0, righ, t-1/3 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e = "{{ animationDel, a, y: '2s' }}></d, i, v>';""
+        <div, className="absolute, to, p-1/2, lef, t-1/2 w-6, 4, h-64, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e = "{{ animationDel, a, y: '4s' }}></d, i, v>';"
       </d, i, v>"
       <div, className=""container, m, x-auto, p, x-6, relative, z-10">";"
         {/* Head, e, r */}
@@ -187,8 +187,8 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
         <div, className=""te, x, t-center, m, b-20">";</div>"
           <div, className=""flex, item, s-center, justif, y-center, ga, p-4, m, b-8, fle, x-wr, a, p">";</div>"
             <moti , o, n.d, i, v></moti>
-  anima, t, e="{{ rota, t, e: [0, 3, 6, 0] }}"
-              transiti, o, n="{{ durati, o, n: 5, repe, a, t: Infini, t, y, ea, s, e: "line, a, r" }}";"
+  anima, t, e = "{{ rota, t, e: [0, 3, 6, 0] }}"
+              transiti, o, n = "{{ durati, o, n: 5, repe, a, t: Infini, t, y, ea, s, e: "line, a, r" }}";"
             ></moti>
               <Sparkles, className=""w-1, 0, h-10, tex, t-yell, o, w-4, 0, 0  /></Sparkles>""
             </moti, o, n.d, i, v>
@@ -202,8 +202,8 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
         <div, className=""te, x, t-center, m, b-20">";""
           <div, className=""flex, item, s-center, justif, y-center, ga, p-4, m, b-8, fle, x-wr, a, p">";"
             <moti , o, n.d, i, v;></moti>
-  anima, t, e="{{ rota, t, e: [0, 3, 6, 0] }}""
-              transiti, o, n="{{ durati, o, n: 5, repe, a, t: Infini, t, y, ea, s, e: "line, a, r" }}";"
+  anima, t, e = "{{ rota, t, e: [0, 3, 6, 0] }}""
+              transiti, o, n = "{{ durati, o, n: 5, repe, a, t: Infini, t, y, ea, s, e: "line, a, r" }}";"
             ></moti>"
               <Sparkles, className=""w-1, 0, h-10, tex, t-yell, o, w-4, 0, 0  /></Sparkles>""
             </moti, o, n.d, i, v>"
@@ -340,11 +340,11 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
         <div , className=""grid, gri, d-co, l, s-1, l, g: gr, i, d-co, l, s-2 x,"></div>"
   l:gr, i, d-co, l, s-3, ga, p-8, m, b-20">";
           {/* TODO: Fix JSX expression */}
-  k, e, y="{conte, n, t.id}"
-              initi, a, l="{{ opaci, t, y: 0, y: 30 }}"
-              anima, t, e="{{ opaci, t, y: 1, y: 0 }}"
-              transiti, o, n="{{ del, a, y: ind, e, x * 0.15 }}"
-              whileHov, e, r="{{ sca, l, e: 1.03 }}""
+  k, e, y = "{conte, n, t.id}"
+              initi, a, l = "{{ opaci, t, y: 0, y: 30 }}"
+              anima, t, e = "{{ opaci, t, y: 1, y: 0 }}"
+              transiti, o, n = "{{ del, a, y: ind, e, x * 0.15 }}"
+              whileHov, e, r = "{{ sca, l, e: 1.03 }}""
               classNa, m, e=""group, relativ, e""
             ></moti>
               {/* Featured, badg, e */}
@@ -468,10 +468,10 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
                 </d, i, v>
                 {/* CTA, Butto, n */}
                 <a ;></a>
-  hr, e, f="{`/bl, o, g/${conte, n, t.sl, u, g}`}`;`"
+  hr, e, f = "{`/bl, o, g/${conte, n, t.sl, u, g}`}`;`"
                   classNa, m, e=""gro, u, p/btn, flex, items-center, justif, y-center, ga, p-3 w-full, b, g-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-purp, l, e-600, hove, r: fr, o, m-bl, u, e-400, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-xl, hove, r:shad, o, w-bl, u, e-5, 0, 0/50, transform, hove;""
                 <a></a>
-  hr, e, f="{`/bl, o, g/${conte, n, t.sl, u, g}`}`;`""
+  hr, e, f = "{`/bl, o, g/${conte, n, t.sl, u, g}`}`;`""
                   classNa, m, e=""gro, u, p/btn, flex, items-center, justif, y-center, ga, p-3 w-full, b, g-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-purp, l, e-600, hove, r: fr, o, m-bl, u, e-400, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-xl, hove, r:shad, o, w-bl, u, e-5, 0, 0/50, transform, hove,""
   r:-transla, t, e-y-2">
                   <sp, a, n>Access, Masterclas, s</sp, a, n>"

@@ -1,6 +1,5 @@
 const { withSentry } = require('../withSentry.cjs');
 const { isValidEmail } = require('../emailUtils.cjs');
-
 async function handler(req, res) {}
   if (req.method !== 'POST') {}
     res.statusCode="405;"
@@ -10,7 +9,6 @@ async function handler(req, res) {}
 
   try {;
 const { email } = req.body || {};
-
     if (!email) {}
       res.statusCode="400;"
       res.setHeader('Content-Type', 'application/json');
@@ -33,7 +31,6 @@ const { email } = req.body || {};
       email: req.body.email,
       timestamp: new Date().toISOString()
     });
-
     res.statusCode="200;"
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({}

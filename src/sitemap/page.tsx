@@ -6,7 +6,7 @@ import SEOOptimizer from '../components;
 import { ArrowRight, Globe, FileText, Users, Settings, Brain, Zap, Shield, Database, Cloud, Code, BarChart, MessageSquare, Eye, Cpu, Target, Lock, BarChart3, FileText as FileTextIcon, Search, Bot, Calculator, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calendar, Clock3, Compass, PieChart, TrendingDown, Activity } from 'lucide-react';
 ;
 const SitemapPage: React.FC = () => {;
-const mainPages="[]"
+const mainPages = []
     { name: 'Home', path: '/', description: 'Main homepage with company overview' },
     { name: 'About Us', path: '/about', description: 'Learn about our company and mission' },
     { name: 'Services', path: '/services', description: 'Comprehensive AI and IT services' },
@@ -22,7 +22,7 @@ const mainPages="[]"
     { name: 'Terms of Service', path: '/terms', description: 'Terms and conditions' }
   ];
 ;
-const microSaasServices="[]"
+const microSaasServices = []
     { name: 'AI Project Manager', path: '/ai-project-manager', description: 'Intelligent project planning and management' },
     { name: 'AI Social Media Manager', path: '/ai-social-media-manager', description: 'Automated social media management' },
     { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard', description: 'AI-powered business intelligence' },
@@ -37,7 +37,7 @@ const microSaasServices="[]"
     { name: 'AI Financial Analyzer', path: '/ai-financial-analyzer', description: 'Financial analysis and forecasting' }
   ];
 ;
-const aiServices="[]"
+const aiServices = []
     { name: 'Machine Learning Solutions', path: '/machine-learning', description: 'Custom ML models and algorithms' },
     { name: 'Natural Language Processing', path: '/nlp', description: 'Text analysis and language understanding' },
     { name: 'Computer Vision', path: '/computer-vision', description: 'Image and video analysis' },
@@ -46,7 +46,7 @@ const aiServices="[]"
     { name: 'AI Cybersecurity', path: '/ai-cybersecurity', description: 'AI-powered security solutions' }
   ];
 ;
-const itServices="[]"
+const itServices = []
     { name: 'Cloud Services', path: '/cloud-services', description: 'Cloud migration and infrastructure' },
     { name: 'Cybersecurity', path: '/cybersecurity', description: 'Advanced security solutions' },
     { name: 'DevOps & CI/CD', path: '/devops', description: 'Development and deployment automation' },
@@ -55,7 +55,7 @@ const itServices="[]"
     { name: 'IT Support & Helpdesk', path: '/it-support', description: '24/7 technical support' }
   ];
 ;
-const specializedServices="[]"
+const specializedServices = []
     { name: 'Quantum Computing', path: '/quantum-computing', description: 'Quantum algorithms and security' },
     { name: 'Autonomous Systems', path: '/autonomous-systems', description: 'Self-managing systems' },
     { name: 'Blockchain & Web3', path: '/blockchain', description: 'Decentralized solutions' },
@@ -64,18 +64,18 @@ const specializedServices="[]"
     { name: 'Robotics Solutions', path: '/robotics', description: 'Intelligent automation' }
   ];
 ;
-const blogCategories="[]"
-    { name: 'AI Trends', path: '/blog?category="AI Trends', description: 'Latest AI trends and developments' },"
-    { name: 'Enterprise Transformation', path: '/blog?category="Transformation', description: 'Business transformation insights' },"
-    { name: 'Success Stories', path: '/blog?category="Success Story', description: 'Client success stories' },"
-    { name: 'Technical Guides', path: '/blog?category="Architecture', description: 'Technical implementation guides' },"
-    { name: 'Cost Optimization', path: '/blog?category="Cost Optimization', description: 'Efficiency and cost reduction' }"
+const blogCategories = []
+    { name: 'AI Trends', path: '/blog?category = "AI Trends', description: 'Latest AI trends and developments' },"
+    { name: 'Enterprise Transformation', path: '/blog?category = "Transformation', description: 'Business transformation insights' },"
+    { name: 'Success Stories', path: '/blog?category = "Success Story', description: 'Client success stories' },"
+    { name: 'Technical Guides', path: '/blog?category = "Architecture', description: 'Technical implementation guides' },"
+    { name: 'Cost Optimization', path: '/blog?category = "Cost Optimization', description: 'Efficiency and cost reduction' }"
   ];
   return (
     <React.Fragment></React>
       <SEOOptimizer title=""Sitemap - Zion Tech Group"></SEOOptimizer>"
         description=""Complete sitemap of all pages and services available on Zion Tech Group website. Find AI services, IT solutions, and resources easily.""
-        keywords="{['sitemap', 'AI services', 'IT solutions', 'website navigation', 'pages']}"
+        keywords = "{['sitemap', 'AI services', 'IT solutions', 'website navigation', 'pages']}"
         canonicalUrl=""https://ziontechgroup.com/sitemap""
       />
       <div className=""min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
@@ -84,7 +84,7 @@ const blogCategories="[]"
           {/* Hero Section */}
 
 const SitemapPage: React.FC = () => {}
-  const mainPages="[]"
+  const mainPages = []
     { nam,
     e: 'Home', path: '
     { nam,
@@ -112,7 +112,7 @@ const SitemapPage: React.FC = () => {}
     { nam,
     e: 'Terms of Service', path: '
   ];
-  const microSaasServices="[]"
+  const microSaasServices = []
     { nam,
     e: 'AI Project Manager', path: '
     { nam,
@@ -138,7 +138,7 @@ const SitemapPage: React.FC = () => {}
     { nam,
     e: 'AI Financial Analyzer', path: '
   ];
-  const aiServices="[]"
+  const aiServices = []
     { nam,
     e: 'Machine Learning Solutions', path: '
     { nam,
@@ -152,7 +152,7 @@ const SitemapPage: React.FC = () => {}
     { nam,
     e: 'AI Cybersecurity', path: '
   ];
-  const itServices="[]"
+  const itServices = []
     { nam,
     e: 'Cloud Services', path: '
     { nam,
@@ -166,7 +166,7 @@ const SitemapPage: React.FC = () => {}
     { nam,
     e: 'IT Support & Helpdesk', path: '/it-support', description: '24;
   ];
-  const specializedServices="[]"
+  const specializedServices = []
     { nam,
     e: 'Quantum Computing', path: '
     { nam,
@@ -180,7 +180,7 @@ const SitemapPage: React.FC = () => {}
     { nam,
     e: 'Robotics Solutions', path: '
   ];
-  const blogCategories="[]"
+  const blogCategories = []
     { nam,
     e: 'AI Trends', path: '
     { nam,

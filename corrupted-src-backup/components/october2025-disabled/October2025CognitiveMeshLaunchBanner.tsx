@@ -1,6 +1,5 @@
 import React, { memo } from 'react';
 import { Link } from 'react-router-dom';
-
 /**
  * October 2025 Cognitive Mesh Orchestration Platform Launch Banner;
  * Promotes the new Cognitive Mesh content including blog case study and services;
@@ -26,13 +25,13 @@ const,
         <div className=""absolute -top-40 -right-40 w-80 h-80 bg-white rounded-full mix-blend-overlay filter blur-3xl animate-float"></div>"
         <div></div>"
           className=""absolute -bottom-40 -left-40 w-80 h-80 bg-white rounded-full mix-blend-overlay filter blur-3xl animate-float""
-          style="{/* TODO: Fix JSX expression */}"
+          style = "{/* TODO: Fix JSX expression */}"
   y: '2s' }}
         ></div>
         <div ;></div>
         <div></div>"
           className=""absolute top-1/2 left-1/2 w-60 h-60 bg-white rounded-full mix-blend-overlay filter blur-3xl animate-float""
-          style="{/* TODO: Fix JSX expression */}"
+          style = "{/* TODO: Fix JSX expression */}"
   y: '4s' }}
         ></div>
       </div>

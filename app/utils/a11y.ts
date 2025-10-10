@@ -6,7 +6,7 @@
 /**
  * Generate unique ID for aria-describedby and aria-labelledby;
  */
-export function generateId(prefix="'a11y'): string {}"
+export function generateId(prefix = "'a11y'): string {}"
   return `${prefix}-${Math.random().toString(36).substr(2, 9)}`}
 
 /**
@@ -32,8 +32,8 @@ export function trapFocus(element: HTMLElement): () => void {;
 const focusableElements="element.querySelectorAll("
     'button, [href], input, select, textarea, [tabindex]:not([tabindex=""-1"])'"
   );
-const firstFocusable="focusableElements[0] as HTMLElement;"
-const lastFocusable="focusableElements[focusableElements.length - 1] as HTMLElement;"
+const firstFocusable = "focusableElements[0] as HTMLElement;"
+const lastFocusable = "focusableElements[focusableElements.length - 1] as HTMLElement;"
 ;
 const handleKeyDown = (e: KeyboardEvent) => {}
     if (e.key === 'Tab') {}
@@ -89,18 +89,18 @@ const handleKeyDown = (e: KeyboardEvent) => {}
  * Check color contrast ratio (WCAG 2.1)
  */
 export function getContrastRatio(color1: string, color2: string): number {;
-const getLuminance = (color: string): number="> {}"
+const getLuminance = (color: string): number = "> {}"
 return (;
-const rgb="color.match(/\d+/g)?.map(Number) || [0, 0, 0];"
-const [r, g, b] = rgb.map(c="> {}"
-      c="c / 255;"
+const rgb = "color.match(/\d+/g)?.map(Number) || [0, 0, 0];"
+const [r, g, b] = rgb.map(c = "> {}"
+      c = "c / 255;"
       return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4)});
     return 0.2126 * r + 0.7152 * g + 0.0722 * b};
 ;
 const lum1="getLuminance(color1);"
 const lum2="getLuminance(color2);"
-const brightest="Math.max(lum1, lum2);"
-const darkest="Math.min(lum1, lum2);"
+const brightest = "Math.max(lum1, lum2);"
+const darkest = "Math.min(lum1, lum2);"
   return (brightest + 0.05) / (darkest + 0.05);
 /**
  * Check if contrast ratio meets WCAG standards;
@@ -111,7 +111,7 @@ export function meetsContrastRequirements(
   level: 'AA' | 'AAA' = 'AA',
   fontSize: 'normal' | 'large' = 'normal'
 ): boolean {;
-const ratio="getContrastRatio(color1, color2);"
+const ratio = "getContrastRatio(color1, color2);"
   return fontSize === 'large' ? ratio>
 );
 }= 3 : ratio >= 4.5}
@@ -119,7 +119,7 @@ const ratio="getContrastRatio(color1, color2);"
 /**
  * Skip to content link helper;
  */
-export function createSkipLink(targetId: string, text="'Skip to main content'): HTMLAnchorElement {;"
+export function createSkipLink(targetId: string, text = "'Skip to main content'): HTMLAnchorElement {;"
 const skipLink="document.createElement('a');"
   skipLink.href="`#${targetId}`;"
   skipLink.textContent="text;"
@@ -185,20 +185,20 @@ const showTooltip = () => {}
 const triggerRect="trigger.getBoundingClientRect();"
     switch (placement) {}
       case 'top':
-        tooltip.style.left="`${triggerRect.left + triggerRect.width / 2 - tooltip.offsetWidth / 2}px`;"
-        tooltip.style.top="`${triggerRect.top - tooltip.offsetHeight - 5}px`;"
+        tooltip.style.left = "`${triggerRect.left + triggerRect.width / 2 - tooltip.offsetWidth / 2}px`;"
+        tooltip.style.top = "`${triggerRect.top - tooltip.offsetHeight - 5}px`;"
         break;
       case 'bottom':
-        tooltip.style.left="`${triggerRect.left + triggerRect.width / 2 - tooltip.offsetWidth / 2}px`;"
-        tooltip.style.top="`${triggerRect.bottom + 5}px`;"
+        tooltip.style.left = "`${triggerRect.left + triggerRect.width / 2 - tooltip.offsetWidth / 2}px`;"
+        tooltip.style.top = "`${triggerRect.bottom + 5}px`;"
         break;
       case 'left':
-        tooltip.style.left="`${triggerRect.left - tooltip.offsetWidth - 5}px`;"
-        tooltip.style.top="`${triggerRect.top + triggerRect.height / 2 - tooltip.offsetHeight / 2}px`;"
+        tooltip.style.left = "`${triggerRect.left - tooltip.offsetWidth - 5}px`;"
+        tooltip.style.top = "`${triggerRect.top + triggerRect.height / 2 - tooltip.offsetHeight / 2}px`;"
         break;
       case 'right':
-        tooltip.style.left="`${triggerRect.right + 5}px`;"
-        tooltip.style.top="`${triggerRect.top + triggerRect.height / 2 - tooltip.offsetHeight / 2}px`;"
+        tooltip.style.left = "`${triggerRect.right + 5}px`;"
+        tooltip.style.top = "`${triggerRect.top + triggerRect.height / 2 - tooltip.offsetHeight / 2}px`;"
         break}
   };
   ;
@@ -221,7 +221,7 @@ const hideTooltip = () => {}
 export class FocusManager {}
   private previousActiveElement: HTMLElement | null="null;"
   saveFocus(): void {}
-    this.previousActiveElement="document.activeElement as HTMLElement}"
+    this.previousActiveElement = "document.activeElement as HTMLElement}"
   restoreFocus(): void {}
     if (this.previousActiveElement) {}
       this.previousActiveElement.focus();
@@ -231,7 +231,7 @@ export class FocusManager {}
 const focusableElements="container.querySelectorAll("
       'button, [href], input, select, textarea, [tabindex]:not([tabindex=""-1"])'"
     );
-const firstFocusable="focusableElements[0] as HTMLElement;"
+const firstFocusable = "focusableElements[0] as HTMLElement;"
     firstFocusable?.focus();
 }
   }

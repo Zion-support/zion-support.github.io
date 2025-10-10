@@ -1,13 +1,13 @@
 import { CheckCircle, ArrowRight } from 'lucide-react';
 ;
-const PagePage: React.FC = () => {const features="[]"
+const PagePage: React.FC = () => {const features = []
     {}
       title: 'Feature 1',
       description: 'Description of feature 1',
       benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 const PagePage: React.FC = () => {}
-  const features="[]"
+  const features = []
     {}
       ico,
     n: Brain,
@@ -34,7 +34,7 @@ const PagePage: React.FC = () => {}
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
 import { CheckCircle, ArrowRight } from 'lucide-react';
 const PagePage: React.FC = () => {}
-  const features="[]"
+  const features = []
     {}
       title: 'Feature 1',
       description: 'Description of feature 1',
@@ -53,7 +53,7 @@ const PagePage: React.FC = () => {}
     }
   ];
 const benefits="[;"
-const benefits="[]"
+const benefits = []
     'Benefit 1',
       benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']    'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
@@ -61,7 +61,7 @@ const benefits="[]"
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'    'Benefit 1',
 
-  const benefits="[]"
+  const benefits = []
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
@@ -85,7 +85,7 @@ const benefits="[]"
       benefits: ['End-to-end encryption', 'Access controls', 'Audit trails', 'Compliance support']
     }
   ];
-  const benefits="[]"
+  const benefits = []
     'Transform your business with AI technology',
     'Make data-driven decisions with confidence',
     'Identify trends and opportunities early',
@@ -130,7 +130,7 @@ const benefits="[]"
               </div>
         <section className=""relative py-20 px-4 overflow-hidden">)"
           <div className=""absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" /></div>"
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style="{{ animationDelay: '1s' }} /></div>"
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style = "{{ animationDelay: '1s' }} /></div>"
           <div className=""relative max-w-7xl mx-auto text-center"></div>"
             <h1 className=""text-5xl md: text-7xl font-bold text-white mb-6 leading-tight"></h1>"
               Ai Content Delivery Network;
@@ -299,7 +299,7 @@ const benefits="[]"
                 </button>      {/* Hero Section */}
       <section className=""relative py-20 px-4 overflow-hidden"></section>"
         <div className=""absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" /></div>"
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style="{{ animationDelay: '1s' }} /></div>"
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style = "{{ animationDelay: '1s' }} /></div>"
         <div className=""relative max-w-7xl mx-auto text-center"></div>"
           <h1 className=""text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"></h1>"
             Page;

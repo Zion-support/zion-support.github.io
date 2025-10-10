@@ -1,4 +1,4 @@
-// module.exports = {}; module.exports = {}; module.exports = {}; module.exports = {}; module.exports = {}; module.exports = {}; module.exports = {}; module.exports = {}; module.exports = {}; module.exports="{}; export {}; interface WebVitalsData {/* TODO: Fix JSX expression */}"
+// module.exports = {}; module.exports = {}; module.exports = {}; module.exports = {}; module.exports = {}; module.exports = {}; module.exports = {}; module.exports = {}; module.exports = {}; module.exports = "{}; export {}; interface WebVitalsData {/* TODO: Fix JSX expression */}"
   p: number} ur,
   l: string} userAgen,
   t: string} export default async function handler(re)

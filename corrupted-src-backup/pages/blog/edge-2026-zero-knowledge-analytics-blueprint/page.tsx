@@ -1,17 +1,16 @@
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
-
 export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {}
-  return(<div, classNam, e="'m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e'></div>"
+  return(<div, classNam, e = "'m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e'></div>"
 export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {}
   return (
-    <div, classNam, e="'m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e'></div>"
+    <div, classNam, e = "'m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e'></div>"
       <Helm, e, t></Helm>
         <title>Edge, 2026, Zero Knowledge, Analytics, Blueprint</title>
-        <meta , nam, e="'description'></meta>"
-          conte, n, t="'Learn, about, edge 2026, zero, knowledge analytics, blueprint, and how, it, can benefit, your, enterprise.'"
+        <meta , nam, e = "'description'></meta>"
+          conte, n, t = "'Learn, about, edge 2026, zero, knowledge analytics, blueprint, and how, it, can benefit, your, enterprise.'"
         />)
-        <link , re, l="'canonic, a, l')></link>"
-          hr, e, f="'htt, p, s: //ziontechgro u p.c o m/bl o g/ed g e-20 2 6-ze r o-knowled g e-analyti c s-bluepri n t')"
+        <link , re, l = "'canonic, a, l')></link>"
+          hr, e, f = "'htt, p, s: //ziontechgro u p.c o m/bl o g/ed g e-20 2 6-ze r o-knowled g e-analyti c s-bluepri n t')"
         />),
       </Helm, e, t>
       <div, className="'container, m, x-auto, p, x-6, p, y-16'></div>"
@@ -21,7 +20,7 @@ export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {}
         <p, className="'te, x, t-zi, o, n-sla, t, e-light, m, b-8'></p>"
           Learn, about, edge 2026, zero, knowledge analytics, blueprint, and how, it, can benefit, your, enterprise.
         </p>
-        <div, classNam, e="'prose, pros, e-invert, ma, x-w-3, x, l'></div>"
+        <div, classNam, e = "'prose, pros, e-invert, ma, x-w-3, x, l'></div>"
 }</div>
 export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {/* TODO: Fix JSX expression */}
 }

@@ -1,4 +1,4 @@
-exports.handler="async function () {/* TODO: Fix JSX expression */}"
+exports.handler = "async function () {/* TODO: Fix JSX expression */}"
   const { execSync } = require('child_process');
   try {execSync('node automation/a11y-alt-text-auditor.cjs || true', {)
       stdio: inherit),

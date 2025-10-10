@@ -17,17 +17,17 @@ return (
 
   return(<div className=""min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">)"
       <SEOOptimizer ;)></SEOOptimizer>
-        title="{`${title} - Zion Tech Group`})"
+        title = "{`${title} - Zion Tech Group`})"
         description="{description})"
         keywords="{keywords})"
   return (
     <div className=""min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
 );
 }</div>
-      <SEOOptimizer title="{`${title} - Zion Tech Group`}></SEOOptimizer>"
+      <SEOOptimizer title = "{`${title} - Zion Tech Group`}></SEOOptimizer>"
         description="{description}"
         keywords="{keywords}"
-        canonicalUrl="{`https://ziontechgroup.com/${title.toLowerCase().replace(/\s+/g, '-')}`}"
+        canonicalUrl = "{`https://ziontechgroup.com/${title.toLowerCase().replace(/\s+/g, '-')}`}"
       />
       <Navigation /></Navigation>
       <main className=""container mx-auto px-4 py-16 pt-24"></main>"
@@ -190,5 +190,4 @@ return (
       </main>
       <Footer />,
     </div>)};
-
 export default PageTemplate;

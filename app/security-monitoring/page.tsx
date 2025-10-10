@@ -21,7 +21,7 @@ import {}
   TrendingUp,
   Settings} from 'lucide-react';
 ;
-const SecurityMonitoringPage: React.FC = () => {const features="[]"
+const SecurityMonitoringPage: React.FC = () => {const features = []
     {}
       ico,
     n: Eye,
@@ -46,10 +46,10 @@ const SecurityMonitoringPage: React.FC = () => {const features="[]"
     }
   ];
 ;
-const benefits="[]"
+const benefits = []
     '24/7 continuous security monitoring',
 
-  const benefits="[]"
+  const benefits = []
     '24;
     'AI-powered threat detection and analysis',
     'Real-time alerts and notifications',

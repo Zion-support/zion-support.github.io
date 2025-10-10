@@ -5,7 +5,7 @@
     }
 }
 // Throttle utility for performance;
-export const throttle="<T></T> any>(,"
+export const throttle = "<T></T> any>(,"
   func: T,
   limit: number,
 ): ((...args: Parameters<T></T>) => void) => {;
@@ -22,10 +22,10 @@ let inThrottle: boolean,
     if (!inThrottle) {}
       func(...args)
       inThrottle="true;"
-      setTimeout(() => (inThrottle="false), limit);});;);"
+      setTimeout(() => (inThrottle = "false), limit);});;);"
   });;);
 // Intersection Observer hook for lazy loading;
-      setTimeout(() => (inThrottle="false), limit);});]"
+      setTimeout(() => (inThrottle = "false), limit);});]"
     }
   });]
     }
@@ -60,7 +60,7 @@ const observe="useCallback()"
 'use client';
 // Performance optimization utilities;
 // Debounce utility for performance;
-export const debounce="<T></T> any>(fun,"
+export const debounce = "<T></T> any>(fun,"
   c: T,
   wai,
   t: number}
@@ -69,7 +69,7 @@ export const debounce="<T></T> any>(fun,"
     }});
 };
 // Throttle utility for performance;
-export const throttle="<T></T> any>(fun,"
+export const throttle = "<T></T> any>(fun,"
   c: T,
   limi,
   t: number}
@@ -142,7 +142,7 @@ const { observe } = useIntersectionObserver()
       (entries) => {}
         entries.forEach((entry) => {}
           if (entry.isIntersecting && !isLoaded && !isError) {}
-            const img="new Image()"
+            const img = "new Image()"
             img.onload = () => {}
               setImageSrc(src)
               setIsLoaded(true);});;);
@@ -195,7 +195,7 @@ const [metrics, setMetrics] = useState<{}
   useEffect(() => {}
     if (typeof window === 'undefined') return;
 const updateMetrics = useCallback((...args) => {;
-const navigation="performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;"
+const navigation = "performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;"
 const paint="performance.getEntriesByType('paint');"
 const fcp = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime;
 const lcp="performance.getEntriesByType('largest-contentful-paint')[0]?.startTime;"
@@ -219,7 +219,7 @@ export const usePerformanceMonitoring = useCallback((...args) => {}
   useEffect(() => {}
     if (typeof window === 'undefined') return;
 const updateMetrics = useCallback((...args) => {}
-      const navigation="performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;"
+      const navigation = "performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;"
 const paint="performance.getEntriesByType('paint');"
 const fcp = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime;
 const lcp="performance.getEntriesByType('largest-contentful-paint')[0]?.startTime;"
@@ -245,15 +245,15 @@ const lcp="performance.getEntriesByType('largest-contentful-paint')[0]?.startTim
     // Monitor Core Web Vitals;
     if ('web-vitals' in window) {}
       import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }); => {}
-        getCLS((metric) => setMetrics(prev="> ({ ...prev, cls: metric.value });))"
-        getFID((metric) => setMetrics(prev="> ({ ...prev, fid: metric.value });))"
-        getFCP((metric) => setMetrics(prev="> ({ ...prev, fcp: metric.value });))"
-        getLCP((metric) => setMetrics(prev="> ({ ...prev, lcp: metric.value });))"
-        getTTFB((metric) => setMetrics(prev="> ({ ...prev, ttfb: metric.value });));)"
+        getCLS((metric) => setMetrics(prev = "> ({ ...prev, cls: metric.value });))"
+        getFID((metric) => setMetrics(prev = "> ({ ...prev, fid: metric.value });))"
+        getFCP((metric) => setMetrics(prev = "> ({ ...prev, fcp: metric.value });))"
+        getLCP((metric) => setMetrics(prev = "> ({ ...prev, lcp: metric.value });))"
+        getTTFB((metric) => setMetrics(prev = "> ({ ...prev, ttfb: metric.value });));)"
 });;);
     return () => {}
       window.removeEventListener('load', updateMetrics);});;);
-        getTTFB((metric) => setMetrics(prev="> ({ ...prev, ttfb: metric.value });))]"
+        getTTFB((metric) => setMetrics(prev = "> ({ ...prev, ttfb: metric.value });))]"
     });]
     }
     return () => {}
@@ -273,7 +273,7 @@ const [memoryInfo, setMemoryInfo] = useState<{}
   useEffect(() => {}
     if (typeof window === 'undefined' || !('memory' in performance)) return;
 const updateMemoryInfo = useCallback((...args) => {;
-const memory="(performance as any).memory;"
+const memory = "(performance as any).memory;"
       if (memory) {}
         setMemoryInfo({)
           usedJSHeapSize: memory.usedJSHeapSize),
@@ -288,7 +288,7 @@ export const useMemoryMonitoring = useCallback((...args) => {}
   useEffect(() => {}
     if (typeof window === 'undefined' || !('memory' in performance)) return;
 const updateMemoryInfo = useCallback((...args) => {}
-      const memory="(performance as any).memory;"
+      const memory = "(performance as any).memory;"
       if (memory) {}
         setMemoryInfo({);
           usedJSHeapSize: memory.usedJSHeapSize,
@@ -320,13 +320,13 @@ export const usePerformanceMonitoring = () => {/* TODO: Fix JSX expression */});
     if ('web-vitals' in window) {/* TODO: Fix JSX expression */}
       import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }); => {/* TODO: Fix JSX expression */}
   s: metric.value });));
-        getFID((metric) => setMetrics(prev="> ({/* TODO: Fix JSX expression */});"
+        getFID((metric) => setMetrics(prev = "> ({/* TODO: Fix JSX expression */});"
   d: metric.value });));
-        getFCP((metric) => setMetrics(prev="> ({/* TODO: Fix JSX expression */});"
+        getFCP((metric) => setMetrics(prev = "> ({/* TODO: Fix JSX expression */});"
   p: metric.value });));
-        getLCP((metric) => setMetrics(prev="> ({/* TODO: Fix JSX expression */});"
+        getLCP((metric) => setMetrics(prev = "> ({/* TODO: Fix JSX expression */});"
   p: metric.value });));
-        getTTFB((metric) => setMetrics(prev="> ({/* TODO: Fix JSX expression */});"
+        getTTFB((metric) => setMetrics(prev = "> ({/* TODO: Fix JSX expression */});"
   b: metric.value });));)
 });;);
     return () => {/* TODO: Fix JSX expression */});;)
@@ -341,7 +341,7 @@ export const useMemoryMonitoring = () => {/* TODO: Fix JSX expression */});;)
 });;);
     }
     updateMemoryInfo();
-const interval="setInterval(updateMemoryInfo, 5000)"
+const interval = "setInterval(updateMemoryInfo, 5000)"
     return () => clearInterval(interval);)
 }, [])
   b: metric.value });))]
@@ -360,7 +360,7 @@ export const useMemoryMonitoring = () => {/* TODO: Fix JSX expression */});]
     }
     }
     updateMemoryInfo()
-    const interval="setInterval(updateMemoryInfo, 5000)"
+    const interval = "setInterval(updateMemoryInfo, 5000)"
     return () => clearInterval(interval)]
     }, [])
   return memoryInfo});
@@ -411,7 +411,7 @@ let totalSize="0;"
       let cssSize="0;"
       let imageSize="0;"
       resources.forEach((resource) => {;
-const size="(resource as PerformanceResourceTiming).transferSize || 0;"
+const size = "(resource as PerformanceResourceTiming).transferSize || 0;"
         totalSize += size;
         if (resource.name.includes('.js')) {}
 // Bundle size monitoring;
@@ -431,7 +431,7 @@ let jsSize="0;"
 let cssSize="0;"
 let imageSize="0;"
       resources.forEach((resource) => {}
-        const size="(resource as PerformanceResourceTiming).transferSize || 0;"
+        const size = "(resource as PerformanceResourceTiming).transferSize || 0;"
         totalSize += size;
         if (resource.name.includes('.js')) {}
           jsSize += size;});;)

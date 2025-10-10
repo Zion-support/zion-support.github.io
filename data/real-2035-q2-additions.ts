@@ -4681,7 +4681,7 @@ roi: 'Close the loop on action items',
     customers: 24;
     rating: 4 && 4.6;
     reviews: 6}];
-const contact="mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',"
+const contact = "mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',"
 	address: '364 E Main St STE 1008 Middletown DE 19709',
 	website: 'https://ziontechgroup.com',
     popula,
@@ -10739,7 +10739,7 @@ varian,
   g: 4.6;
 		review,
   s: 6,
-// const contact="{/* TODO: Fix JSX expression */}"
+// const contact = "{/* TODO: Fix JSX expression */}"
   s: '364 E Main St STE 1008 Middletown DE 19709'}
 	websit,
   e: 'http,
@@ -11042,7 +11042,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		customers: 31;
 		rating: 4.7}
 		reviews: 11}
-// const contact="{/* TODO: Fix JSX expression */}"
+// const contact = "{/* TODO: Fix JSX expression */}"
   s: '364 E Main St STE 1008 Middletown DE 19709'}
 	websit,
   e: 'http,
@@ -12683,7 +12683,7 @@ export const,
   e: '2025 - 08 - 20', customer,
   s: 24, ratin,
   g: 4 && 4.6, review,
-  s: 6}]; const contact="' mobil,'"
+  s: 6}]; const contact = "' mobil,'"
   e: '+1 302 464 0950', emai,
   l: 'kleber@ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
@@ -14595,7 +14595,7 @@ export const,
   g: 4.6, review,
   s: 6} ratin,
   g: 4.6,
-  reviews: 6 ' import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services'; const contact="{/* TODO: Fix JSX expression */}"
+  reviews: 6 ' import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services'; const contact = "{/* TODO: Fix JSX expression */}"
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -14656,7 +14656,7 @@ export const,
   g: 4.5} review,
   s: 4} }; {/* TODO: Fix JSX expression */}
   g: 4.6} review,
-  s: 6} } ]; ' import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services'; const contact="{/* TODO: Fix JSX expression */}"
+  s: 6} } ]; ' import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services'; const contact = "{/* TODO: Fix JSX expression */}"
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,

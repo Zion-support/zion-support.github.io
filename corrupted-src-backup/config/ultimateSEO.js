@@ -57,7 +57,7 @@ module.exports="{}"
       about: 0.8;
       contact: 0.7;
       blog: 0.6;
-module.exports="{/* TODO: Fix JSX expression */}"
+module.exports = "{/* TODO: Fix JSX expression */}"
     },
     twitterCard,
   s: {/* TODO: Fix JSX expression */}

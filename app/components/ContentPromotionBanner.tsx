@@ -2,7 +2,7 @@
 import React from 'react';
 import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, TrendingUp } from 'lucide-react';
 const ContentPromotionBanner: React.FC = () => {}
-  const features="[]"
+  const features = []
     {}
       icon: Brain,
       title: 'AI-Powered Solutions',
@@ -24,7 +24,7 @@ const ContentPromotionBanner: React.FC = () => {}
       description: 'Worldwide deployment with local support and compliance'
     }
   ];
-  const benefits="[]"
+  const benefits = []
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -34,7 +34,7 @@ const ContentPromotionBanner: React.FC = () => {}
     'Cost-effective pricing plans',
     'Proven track record of success'
   ];
-  const stats="[]"
+  const stats = []
     {}
       icon: Users,
       value: '10,000+',

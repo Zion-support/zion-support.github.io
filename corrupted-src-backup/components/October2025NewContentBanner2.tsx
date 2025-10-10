@@ -127,7 +127,7 @@ const, October2025NewContentBanner, 2 = () => {/* TODO: Fix JSX expression */}
           {newArticl, e, s.m, a, p((artic, l, e) => {}
 return (
 ;
-const, Ico, n="artic, l, e.ic, o, n;"
+const, Ico, n = "artic, l, e.ic, o, n;"
             return(<Li , n, k;></Li>
         {/* Articles, Gri, d */}
         <div, className=""grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-12"></div>"
@@ -137,11 +137,11 @@ const, Ico, n="artic, l, e.ic, o, n;"
           {newArticl, e, s.m, a, p((artic, l, e) => {}
 return (
 ;
-const, Ico, n="artic, l, e.ic, o, n;"
+const, Ico, n = "artic, l, e.ic, o, n;"
             return (</div>
               <Li , n, k></Li>
-  k, e, y="{artic, l, e.sl, u, g}"
-                to="{`/bl, o, g/${artic, l, e.sl, u, g}`}`;`"
+  k, e, y = "{artic, l, e.sl, u, g}"
+                to = "{`/bl, o, g/${artic, l, e.sl, u, g}`}`;`"
                 classNa, m, e=""group, relative, bg-gradie, n, t-to-br, fro, m-sla, t, e-8, 0, 0/80, t, o-sla, t, e-9, 0, 0/80, backdro, p-bl, u, r-xl, rounde, d-2x, l, p-6, border, border-sla, t, e-7, 0, 0/50, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/20, hov, e;""
   r:-transla, t, e-y-1">
 );
@@ -152,8 +152,8 @@ const, Ico, n="artic, l, e.ic, o, n;"
         <div, className=""grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-12">"""
         <div, className=""grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-12">";"
           {/* TODO: Fix JSX expression */}
-  k, e, y="{artic, l, e.sl, u, g}"
-                to="{`/bl, o, g/${artic, l, e.sl, u, g}`}`;`""
+  k, e, y = "{artic, l, e.sl, u, g}"
+                to = "{`/bl, o, g/${artic, l, e.sl, u, g}`}`;`""
                 classNa, m, e=""group, relative, bg-gradie, n, t-to-br, fro, m-sla, t, e-8, 0, 0/80, t, o-sla, t, e-9, 0, 0/80, backdro, p-bl, u, r-xl, rounde, d-2x, l, p-6, border, border-sla, t, e-7, 0, 0/50, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/20, hov, e,""
   r:-transla, t, e-y-1"
               ></Li>

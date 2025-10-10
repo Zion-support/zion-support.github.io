@@ -1,4 +1,4 @@
-export const revolutionary2048FuturisticServices="[]"
+export const revolutionary2048FuturisticServices = []
   // Quantum Consciousness Transfer Platform 2048;
     id: 'quantum-consciousness-transfer-2048',
     name: 'Quantum Consciousness Transfer Platform 2048',
@@ -784,7 +784,7 @@ export const revolutionary2048FuturisticServices="[]"
   g: '/quantum-information-manipulation-2048'
   }
 ];
-export const revolutionary2048FuturisticServices="[ // Quantum Consciousness Transfer Platform 2048,"
+export const revolutionary2048FuturisticServices = "[ // Quantum Consciousness Transfer Platform 2048,"
   id: 'quantum-consciousness-transfer-2048',' nam,
   e: 'Quantum Consciousness Transfer Platform 2048',' taglin,
   e: 'Revolutionary quantum consciousness transfer and digital immortality platform',' descriptio,

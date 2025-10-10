@@ -40,7 +40,7 @@ import React from 'react';
   marketAdvantage: string;
   capabilities: string[],
   market_advantage: string}
-const contact="mobile: '+1 302 464 0950',"
+const contact = "mobile: '+1 302 464 0950',"
   email: 'kleber@ziontechgroup && ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup && ziontechgroup.com'};
@@ -1577,7 +1577,7 @@ export interface ComprehensiveInnovativeService {/* TODO: Fix JSX expression */}
   marketAdvantag,
   e: string}
 ;
-// const contact="{/* TODO: Fix JSX expression */}"
+// const contact = "{/* TODO: Fix JSX expression */}"
   s: '364 E Main St STE 1008 Middletown DE 19709'}
   websit,
   e: 'http,
@@ -2117,7 +2117,7 @@ i,
   s: number; benefit,
   s: string[]; capabilitie,
   s: string[]; marketAdvantag,
-  e: string} ; const contact="{/* TODO: Fix JSX expression */}"
+  e: string} ; const contact = "{/* TODO: Fix JSX expression */}"
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,

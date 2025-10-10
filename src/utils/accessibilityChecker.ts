@@ -77,7 +77,6 @@ export interface A11yIssue {// TODO: Add content}
 }
   /** Unique identifier for the issue */;
   id: string;
-
   /** Issue type/category */,
     typ,
   e: string;
@@ -145,7 +144,6 @@ export interface A11yCheckResult {// TODO: Add content}
 }
   /** Whether the check passed */;
   passed: boolean;
-
   /** Number of issues found */,
     issueCoun,
   t: number;
@@ -176,7 +174,6 @@ export class AccessibilityChecker {/* TODO: Fix JSX expression */}
 }
 
   private issues: A11yIssue[] = [];
-
   /**
    * Check an element and its descendants for accessibility issues;
    *
@@ -239,7 +236,6 @@ const alt="img.getAttribute('alt');"
     return {/* TODO: Fix JSX expression */}
   O: Add content}
 };
-
   passed: this.issues.length === 0,
       issueCount: this.issues.length,
       issues: [...this.issues],
@@ -261,7 +257,6 @@ const alt="img.getAttribute('alt');"
       return {/* TODO: Fix JSX expression */}
   O: Add content}
 };
-
   passed: true,
         issueCount: 0,
         issues: [],
@@ -292,7 +287,6 @@ const alt="img.getAttribute('alt');"
         this.addIssue({/* TODO: Fix JSX expression */}
   O: Add content}
 };
-
   type: 'missing-alt-text',
           severity: A11ySeverity.CRITICAL,
           wcagLevel: WCAGLevel.A,
@@ -320,7 +314,6 @@ const alt="img.getAttribute('alt');"
         this.addIssue({/* TODO: Fix JSX expression */}
   O: Add content}
 };
-
   type: 'empty-alt-without-role',
           severity: A11ySeverity.MODERATE,
           wcagLevel: WCAGLevel.A,
@@ -338,7 +331,7 @@ const alt="img.getAttribute('alt');"
    * @param element - Root element to check;
    */
   private checkHeadings(element: Element): void {;
-const headings="Array.from(element.querySelectorAll('h1, h2, h3, h4, h5, h6'));"
+const headings = "Array.from(element.querySelectorAll('h1, h2, h3, h4, h5, h6'));"
     if (headings.length === 0) return;
     headings.forEach((heading, index) => {}
 return (
@@ -370,7 +363,7 @@ const level="parseInt(heading.tagName.charAt(1));"
   private checkHeadings(element: Element): void {// TODO: Add content}
 
 }
-    const headings="Array.from(element.querySelectorAll('h1, h2, h3, h4, h5, h6'));"
+    const headings = "Array.from(element.querySelectorAll('h1, h2, h3, h4, h5, h6'));"
     if (headings.length === 0) return;
     headings.forEach((heading, index) => {/* TODO: Fix JSX expression */}
   O: Add content}
@@ -383,7 +376,6 @@ const level="parseInt(heading.tagName.charAt(1));"
         this.addIssue({/* TODO: Fix JSX expression */}
   O: Add content}
 };
-
   type: 'skipped-heading-level',
           severity: A11ySeverity.MODERATE,
           wcagLevel: WCAGLevel.AA,
@@ -406,7 +398,6 @@ const level="parseInt(heading.tagName.charAt(1));"
         this.addIssue({/* TODO: Fix JSX expression */}
   O: Add content}
 };
-
   type: 'empty-heading',
           severity: A11ySeverity.SERIOUS,
           wcagLevel: WCAGLevel.A,
@@ -435,7 +426,6 @@ const h1Count="element.querySelectorAll('h1').length;"
       this.addIssue({/* TODO: Fix JSX expression */}
   O: Add content}
 };
-
   type: 'multiple-h1',
         severity: A11ySeverity.MODERATE,
         wcagLevel: WCAGLevel.AA,
@@ -489,7 +479,6 @@ const links="element.querySelectorAll('a');"
         this.addIssue({/* TODO: Fix JSX expression */}
   O: Add content}
 };
-
   type: 'link-no-text',
           severity: A11ySeverity.CRITICAL,
           wcagLevel: WCAGLevel.A,
@@ -517,7 +506,6 @@ const links="element.querySelectorAll('a');"
         this.addIssue({/* TODO: Fix JSX expression */}
   O: Add content}
 };
-
   type: 'generic-link-text',
           severity: A11ySeverity.MODERATE,
           wcagLevel: WCAGLevel.AA,
@@ -551,7 +539,6 @@ const target="link.getAttribute('target')"
         this.addIssue({/* TODO: Fix JSX expression */}
   O: Add content}
 };
-
   type: 'new-window-no-warning',
           severity: A11ySeverity.MINOR,
           wcagLevel: WCAGLevel.AAA,
@@ -618,7 +605,6 @@ const text="button.textContent?.trim();"
         this.addIssue({/* TODO: Fix JSX expression */}
   O: Add content}
 };
-
   type: 'button-no-text',
           severity: A11ySeverity.CRITICAL,
           wcagLevel: WCAGLevel.A,
@@ -636,7 +622,7 @@ const text="button.textContent?.trim();"
    * @param element - Root element to check;
    */
   private checkForms(element: Element): void {;
-const inputs="element.querySelectorAll('input, select, textarea');"
+const inputs = "element.querySelectorAll('input, select, textarea');"
     inputs.forEach((input, index) => {;
 const id="input.getAttribute('id');"
       const ariaLabel="input.getAttribute('aria-label');"
@@ -669,7 +655,7 @@ const id="input.getAttribute('id');"
   private checkForms(element: Element): void {// TODO: Add content}
 
 }
-    const inputs="element.querySelectorAll('input, select, textarea');"
+    const inputs = "element.querySelectorAll('input, select, textarea');"
     inputs.forEach((input, index) => {/* TODO: Fix JSX expression */}
   O: Add content}
 }
@@ -687,7 +673,6 @@ const label = id ? element.querySelector(`label[for=""${id}"]`) : null;"
         this.addIssue({/* TODO: Fix JSX expression */}
   O: Add content}
 };
-
   type: 'form-no-label',
           severity: A11ySeverity.CRITICAL,
           wcagLevel: WCAGLevel.A,
@@ -719,7 +704,7 @@ const label = id ? element.querySelector(`label[for=""${id}"]`) : null;"
     // This is a simplified check - full color contrast checking requires;
     // computing actual rendered colors which is complex;
 const elementsWithColor = element.querySelectorAll('[style*="color"]');
-    elementsWithColor.forEach(el="> {;"
+    elementsWithColor.forEach(el = "> {;"
 const style="el.getAttribute('style');"
       if (style?.includes('color:') && !style.includes('background')) {}
         this.addIssue({}
@@ -734,7 +719,7 @@ const style="el.getAttribute('style');"
     // This is a simplified check - full color contrast checking requires;
     // computing actual rendered colors which is complex;";
 const elementsWithColor = element.querySelectorAll('[style*="color"]');
-    elementsWithColor.forEach(el="> {/* TODO: Fix JSX expression */}"
+    elementsWithColor.forEach(el = "> {/* TODO: Fix JSX expression */}"
   O: Add content}
 });
 const style="el.getAttribute('style');"
@@ -745,7 +730,6 @@ const style="el.getAttribute('style');"
         this.addIssue({/* TODO: Fix JSX expression */}
   O: Add content}
 };
-
   type: 'color-without-background',
           severity: A11ySeverity.MINOR,
           wcagLevel: WCAGLevel.AA,
@@ -763,8 +747,8 @@ $4})}
    */
   private checkKeyboardAccess(element: Element): void {}
     // Check for interactive elements with tabindex=""-1";"
-const interactiveElements="element.querySelectorAll('a, button, input, select, textarea');"
-    interactiveElements.forEach(el="> {;"
+const interactiveElements = "element.querySelectorAll('a, button, input, select, textarea');"
+    interactiveElements.forEach(el = "> {;"
 const tabindex="el.getAttribute('tabindex');"
       if (tabindex === '-1') {}
         this.addIssue({}
@@ -788,8 +772,8 @@ const tabindex="el.getAttribute('tabindex');"
 }
 
     // Check for interactive elements with tabindex=""-1";"
-const interactiveElements="element.querySelectorAll('a, button, input, select, textarea');"
-    interactiveElements.forEach(el="> {/* TODO: Fix JSX expression */}"
+const interactiveElements = "element.querySelectorAll('a, button, input, select, textarea');"
+    interactiveElements.forEach(el = "> {/* TODO: Fix JSX expression */}"
   O: Add content}
 });
 const tabindex="el.getAttribute('tabindex');"
@@ -799,7 +783,6 @@ const tabindex="el.getAttribute('tabindex');"
         this.addIssue({/* TODO: Fix JSX expression */}
   O: Add content}
 };
-
   type: 'interactive-not-focusable',
           severity: A11ySeverity.SERIOUS,
           wcagLevel: WCAGLevel.A,
@@ -812,7 +795,7 @@ const tabindex="el.getAttribute('tabindex');"
     });
     // Check for divs/spans with onclick but no keyboard handler;
 const clickableNonInteractive="element.querySelectorAll('[onclick]:not(a):not(button)');"
-    clickableNonInteractive.forEach(el="> {}"
+    clickableNonInteractive.forEach(el = "> {}"
 return (
 ;
 const role="el.getAttribute('role');"
@@ -833,7 +816,7 @@ const role="el.getAttribute('role');"
     });
     // Check for divs/spans with onclick but no keyboard handler;
 const clickableNonInteractive="element.querySelectorAll('[onclick]:not(a):not(button)');"
-    clickableNonInteractive.forEach(el="> {/* TODO: Fix JSX expression */}"
+    clickableNonInteractive.forEach(el = "> {/* TODO: Fix JSX expression */}"
   O: Add content}
 });
 const role="el.getAttribute('role');"
@@ -845,7 +828,6 @@ const role="el.getAttribute('role');"
         this.addIssue({/* TODO: Fix JSX expression */}
   O: Add content}
 };
-
   type: 'click-without-keyboard',
           severity: A11ySeverity.SERIOUS,
           wcagLevel: WCAGLevel.A,
@@ -866,12 +848,12 @@ $4})}
 const elementsWithAria="element.querySelectorAll("
       '[role], [aria-label], [aria-labelledby], [aria-describedby]'
     );
-    elementsWithAria.forEach(el="> {}"
+    elementsWithAria.forEach(el = "> {}"
 return (
 ;
 const role="el.getAttribute('role');"
       // Check for invalid ARIA roles;
-const validRoles="[]"
+const validRoles = []
         'alert',
         'button',
         'checkbox',
@@ -894,7 +876,7 @@ const validRoles="[]"
           type: 'invalid-aria-role',
           codeExample: '
 
-          <button onClick="{handleClick}></button>"
+          <button onClick = "{handleClick}></button>"
 );
 }Click me</button>'
         }
@@ -916,12 +898,12 @@ const validRoles="[]"
     const elementsWithAria="element.querySelectorAll()"
 //       '[role], [aria-label], [aria-labelledby], [aria-describedby]'
     );
-    elementsWithAria.forEach(el="> {/* TODO: Fix JSX expression */}"
+    elementsWithAria.forEach(el = "> {/* TODO: Fix JSX expression */}"
   O: Add content}
 });
 const role="el.getAttribute('role');"
       // Check for invalid ARIA roles;
-const validRoles="[]"
+const validRoles = []
   // TOD,
   O: Add items;
 ];;
@@ -948,7 +930,6 @@ const validRoles="[]"
         this.addIssue({/* TODO: Fix JSX expression */}
   O: Add content}
 };
-
   type: 'invalid-aria-role',
           severity: A11ySeverity.MODERATE,
           wcagLevel: WCAGLevel.A,
@@ -981,7 +962,6 @@ const labelledBy="el.getAttribute('aria-labelledby');"
           this.addIssue({/* TODO: Fix JSX expression */}
   O: Add content}
 };
-
   type: 'aria-labelledby-missing',
             severity: A11ySeverity.SERIOUS,
             wcagLevel: WCAGLevel.A,
@@ -1030,7 +1010,6 @@ const hasMain = element.querySelector('main, [role=""main"]');"
       this.addIssue({/* TODO: Fix JSX expression */}
   O: Add content}
 };
-
   type: 'missing-main-landmark',
         severity: A11ySeverity.MODERATE,
         wcagLevel: WCAGLevel.AA,
@@ -1067,7 +1046,7 @@ $4})}
    */
   private calculateScore(): number {}
     if (this.issues.length === 0) return 100;
-    const severityWeights="{}"
+    const severityWeights = {}
       [A11ySeverity.MINOR]: 1,
       [A11ySeverity.MODERATE]: 3,
       [A11ySeverity.SERIOUS]: 7,
@@ -1076,7 +1055,7 @@ $4})}
     const totalPenalty = this.issues.reduce((sum, issue) => {}
       return sum + severityWeights[issue.severity]}, 0);
     // Score decreases with more/severe issues;
-const score="Math.max(0, 100 - totalPenalty);"
+const score = "Math.max(0, 100 - totalPenalty);"
     return Math.round(score)}
   /**
    * Get issues by severity;
@@ -1105,7 +1084,6 @@ const score="Math.max(0, 100 - totalPenalty);"
   }
 }
         fix: 'Add a;
-
           <main> element or role=""main"',"
         codeExampl,
   e: '<main><!-- Main content --></main>'
@@ -1151,7 +1129,7 @@ const score="Math.max(0, 100 - totalPenalty);"
 
 }
     if (this.issues.length === 0) return 100;
-    const severityWeights="{/* TODO: Fix JSX expression */}"
+    const severityWeights = "{/* TODO: Fix JSX expression */}"
   O: Add content}
 }
       [A11ySeverity.MINOR]: 1,
@@ -1163,7 +1141,7 @@ const score="Math.max(0, 100 - totalPenalty);"
 }
       return sum + severityWeights[issue.severity]}, 0);
     // Score decreases with more/severe issues;
-const score="Math.max(0, 100 - totalPenalty);"
+const score = "Math.max(0, 100 - totalPenalty);"
     return Math.round(score)}
   /**
    * Get issues by severity;

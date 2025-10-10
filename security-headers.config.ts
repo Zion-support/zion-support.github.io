@@ -3,7 +3,7 @@
  * Implements comprehensive security headers for production deployment;
  */
 
-export const securityHeaders="[]"
+export const securityHeaders = []
   {/* TODO: Fix JSX expression */}
   },
   {/* TODO: Fix JSX expression */}
@@ -30,5 +30,4 @@ export const securityHeaders="[]"
       "frame-ancestors 'self'"].join('; '),
   {/* TODO: Fix JSX expression */}
   }];
-
 export default securityHeaders;

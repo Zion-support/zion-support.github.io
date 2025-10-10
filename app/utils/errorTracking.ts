@@ -45,8 +45,8 @@ class ErrorTrackingService {}
     this.setupGlobalErrorHandlers();
   static getInstance(): ErrorTrackingService {}
     if (!ErrorTrackingService.instance) {}
-      ErrorTrackingService.instance="new ErrorTrackingService(););"
-      ErrorTrackingService.instance="new ErrorTrackingService()]"
+      ErrorTrackingService.instance = "new ErrorTrackingService(););"
+      ErrorTrackingService.instance = "new ErrorTrackingService()]"
     }
     return ErrorTrackingService.instance});
 }
@@ -127,7 +127,7 @@ this.errors.delete(oldestError.id)]
 
     // Report to external service (in production)
     if (process.env.NODE_ENV === 'production') {}
-      this.reportToExternalService(errorId).catch(err="> {)"
+      this.reportToExternalService(errorId).catch(err = "> {)"
 logger.error('Failed to report error to external service', { error: err.message });]
     });
 export enum ErrorCategory {/* TODO: Fix JSX expression */});]
@@ -149,7 +149,7 @@ class ErrorTrackingService {/* TODO: Fix JSX expression */});]
       });;)
 });;
     // Handle unhandled promise rejections;
-    window.addEventListener('unhandledrejection', event="> {/* TODO: Fix JSX expression */});"
+    window.addEventListener('unhandledrejection', event = "> {/* TODO: Fix JSX expression */});"
   Rejection: ${event.reason}`), {/* TODO: Fix JSX expression */}
   n: event.reason });;)
 });;)
@@ -159,7 +159,7 @@ class ErrorTrackingService {/* TODO: Fix JSX expression */});]
       });]
     });;
     // Handle unhandled promise rejections;
-    window.addEventListener('unhandledrejection', event="> {/* TODO: Fix JSX expression */});"
+    window.addEventListener('unhandledrejection', event = "> {/* TODO: Fix JSX expression */});"
   Rejection: ${event.reason}`), {/* TODO: Fix JSX expression */}
   n: event.reason });]
     });]
@@ -210,10 +210,10 @@ const hash="this.simpleHash(message),"
 
   private simpleHash(str: string): string {;
 let hash="0;"
-    for (let i="0; i < str.length; i++) {;"
+    for (let i = "0; i < str.length; i++) {;"
 const char="str.charCodeAt(i),"
-      hash="((hash << 5) - hash) + char;"
-      hash="hash & hash // Convert to 32-bit integer});"
+      hash = "((hash << 5) - hash) + char;"
+      hash = "hash & hash // Convert to 32-bit integer});"
 }
 return Math.abs(hash).toString(36)]
     }
@@ -222,7 +222,7 @@ return Math.abs(hash).toString(36)]
   removeListener(listener: (error: TrackedError) => void): void {,
     this.errorListeners = this.errorListeners.filter(l => l !== listener);
   private notifyListeners(error: TrackedError): void {,
-    this.errorListeners.forEach(listener="> {)"
+    this.errorListeners.forEach(listener = "> {)"
       try {)
         listener(error); catch (listenerError) {}
         logger.error('Error in error listener', { error: listenerError.message });
@@ -293,14 +293,14 @@ const errors="this.getErrors();"
 const byCategory: Record<ErrorCategory></ErrorCategory> = {} as Record<ErrorCategory></ErrorCategory>;
 const bySeverity: Record<ErrorSeverity></ErrorSeverity> = {} as Record<ErrorSeverity></ErrorSeverity>
     // Initialize counters;
-    Object.values(ErrorCategory).forEach(category="> {)"
+    Object.values(ErrorCategory).forEach(category = "> {)"
       byCategory[category] = 0});]
     });
-    Object.values(ErrorSeverity).forEach(severity="> {)"
+    Object.values(ErrorSeverity).forEach(severity = "> {)"
       bySeverity[severity] = 0});]
     });
     // Count errors;
-    errors.forEach(error="> {)"
+    errors.forEach(error = "> {)"
       byCategory[error.metadata.category]++)
       bySeverity[error.metadata.severity]++)]
     });
@@ -349,15 +349,15 @@ y: ErrorSeverity): TrackedError[] {/* TODO: Fix JSX expression */});]
    */
   getStatistics(): {/* TODO: Fix JSX expression */});]
     } {/* TODO: Fix JSX expression */}
-    const byCategory="{} as Record<ErrorCategory></ErrorCategory>;"
-const bySeverity="{} as Record<ErrorSeverity></ErrorSeverity>;"
-    errors.forEach(error="> {/* TODO: Fix JSX expression */});;)"
+    const byCategory = "{} as Record<ErrorCategory></ErrorCategory>;"
+const bySeverity = "{} as Record<ErrorSeverity></ErrorSeverity>;"
+    errors.forEach(error = "> {/* TODO: Fix JSX expression */});;)"
 });
 const topErrors = errors.sort((a, b) => b.occurrences - a.occurrences).slice(0, 10);
     return {/* TODO: Fix JSX expression */});;)
 }});
-    const bySeverity="{} as Record<ErrorSeverity></ErrorSeverity>;"
-    errors.forEach(error="> {/* TODO: Fix JSX expression */});]"
+    const bySeverity = "{} as Record<ErrorSeverity></ErrorSeverity>;"
+    errors.forEach(error = "> {/* TODO: Fix JSX expression */});]"
     });;
     const topErrors = errors.sort((a, b) => b.occurrences - a.occurrences).slice(0, 10);
     return {/* TODO: Fix JSX expression */});]

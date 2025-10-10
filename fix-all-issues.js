@@ -10,7 +10,7 @@ const __filename="fileURLToPath(import.meta.url);"
 // Function to fix a specific file;
 function fixFile(filePath) {}
   try {;
-let content="fs.readFileSync(filePath, 'utf8');"
+let content = "fs.readFileSync(filePath, 'utf8');"
     let originalContent="content;"
     // Remove duplicate function declarations;
     content = content.replace(/const\s+(\w+)\s*:\s*React\.FC\s*=\s*\(\)\s*=>\s*{[\s\S]*?};\s*const\s+\1\s*:\s*React\.FC\s*=\s*\(\)\s*=>\s*{/g, (match, name) => {}
@@ -19,11 +19,9 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
     content = content.replace(/const\s+(\w+)\s*:\s*React\.FC\s*=\s*\(\)\s*=>\s*{[\s\S]*?};\s*const\s+\1\s*:\s*React\.FC\s*=\s*\(\)\s*=>\s*{/* TODO: Fix JSX expression */}
       return `const ${name}: React.FC = () => {/* TODO: Fix JSX expression */}
     });
-    
     content = content.replace(/const\s+(\w+)\s*=\s*\(\)\s*=>\s*{[\s\S]*?};\s*const\s+\1\s*=\s*\(\)\s*=>\s*{/* TODO: Fix JSX expression */}`
       return `const ${name} = () => {/* TODO: Fix JSX expression */}
     });
-    
     // Fix missing closing braces;
     content = content.replace(/(\w+)\s*=\s*\(\)\s*=>\s*{([\s\S]*?)(?=\n\s*const|\n\s*export|\n\s*$)/g, (match, name, body) => {;
 const lines="body.split('\n');"
@@ -37,7 +35,6 @@ const lines="body.split('\n');"
       if (openBraces > closeBraces) {/* TODO: Fix JSX expression */}`
         return `${name} = () => {${body}${'  '.repeat(missingBraces).replace(/  /g, '}\n')}`}
       return match});
-    
     // Fix missing semicolons;
     content = content.replace(/(\w+)\s*=\s*\[[\s\S]*?\]\s*(?=\n\s*const|\n\s*export|\n\s*$)/g, (match) => {}
       if (!match.endsWith(';')) {}
@@ -45,7 +42,6 @@ const lines="body.split('\n');"
     content = content.replace(/(\w+)\s*=\s*\[[\s\S]*?\]\s*(?=\n\s*const|\n\s*export|\n\s*$)/g, (match) => {/* TODO: Fix JSX expression */}
       }
       return match});
-    
     // Fix missing closing braces for JSX;
     content = content.replace(/(<[^>]*>)([^<]*?)(?=\n\s*const|\n\s*export|\n\s*$)/g, (match, tag, body) => {}
 return (
@@ -57,7 +53,6 @@ return (
 } {/* TODO: Fix JSX expression */}
       }
       return match});
-    
     // Only write if content changed;
     if (content !== originalContent) {}
       fs.writeFileSync(filePath, content, 'utf8');
@@ -79,7 +74,7 @@ function walkDir(currentPath) {}
     try {;
 const items="fs.readdirSync(currentPath);"
       for (const item of items) {;
-const fullPath="path.join(currentPath, item);"
+const fullPath = "path.join(currentPath, item);"
         const stat="fs.statSync(fullPath);"
         if (stat.isDirectory()) {}
           if (!['node_modules', '.git', 'dist', 'build', '.next'].includes(item)) {}
@@ -100,7 +95,7 @@ function findFiles(dir) {/* TODO: Fix JSX expression */}
 
 // Main execution;
 // console.log removed for production;
-const srcDir="path.join(__dirname, 'src');"
+const srcDir = "path.join(__dirname, 'src');"
 const files="findFiles(srcDir);"
 `
 // console.log removed for production;

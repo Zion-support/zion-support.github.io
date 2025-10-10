@@ -1,5 +1,4 @@
 import React from 'react';
-
 interface SearchProps {/* TODO: Fix JSX expression */}
 }
 ;
@@ -17,6 +16,5 @@ const Search = React.memo(function Search({ className="'' }: SearchProps) {/* TO
       <p className=""text-blue-600">This component is under development.</p>"
     </div>
   )});
-
 export default Search;
 "`

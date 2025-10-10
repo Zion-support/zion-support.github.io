@@ -3,7 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 const AccessibilityEnhancerPage: React.FC = () => {}
-  const features="[]"
+  const features = []
     {}
       icon: Brain,
       title: 'AI-Powered Solutions',
@@ -35,13 +35,13 @@ const AccessibilityEnhancerPage: React.FC = () => {}
   private handleEscapeKey(event: KeyboardEvent): void {}
     // Close any open modals or dropdowns;
     const modals = document.querySelectorAll('[role="dialog"][aria-hidden=""false"]');"
-    modals.forEach(modal="> {}"
+    modals.forEach(modal = "> {}"
       const closeButton = modal.querySelector('[aria-label*="close"], [aria-label*="Close"]') as HTMLElement;
       closeButton?.click(););)
 });;
     // Close any open menus;
     const menus = document.querySelectorAll('[role="menu"][aria-expanded=""true"]');"
-    menus.forEach(menu="> {}"
+    menus.forEach(menu = "> {}"
       const trigger = document.querySelector(`[aria-controls=""${menu.id}"]`) as HTMLElement;"
       trigger?.click(););)
 });;);)
@@ -50,7 +50,7 @@ const AccessibilityEnhancerPage: React.FC = () => {}
    * Handle arrow key navigation;
    */
   private handleArrowNavigation(event: KeyboardEvent): void {}
-    const currentElement="document.activeElement as HTMLElement;"
+    const currentElement = "document.activeElement as HTMLElement;"
     if (!currentElement) return;
     // Handle radio button groups;
     if (currentElement instanceof HTMLInputElement && currentElement.type === 'radio') {}
@@ -71,9 +71,9 @@ const AccessibilityEnhancerPage: React.FC = () => {}
     const currentIndex="radioButtons.indexOf(currentElement);"
     let nextIndex: number;
     if (event.key === 'ArrowUp' || event.key === 'ArrowLeft') {}
-      nextIndex="currentIndex > 0 ? currentIndex - 1 : radioButtons.length - 1});;)"
+      nextIndex = "currentIndex > 0 ? currentIndex - 1 : radioButtons.length - 1});;)"
 } else {}
-      nextIndex="currentIndex < radioButtons.length - 1 ? currentIndex + 1 : 0});;)"
+      nextIndex = "currentIndex < radioButtons.length - 1 ? currentIndex + 1 : 0});;)"
 }
     radioButtons[nextIndex]?.focus();
     radioButtons[nextIndex]?.click();
@@ -89,9 +89,9 @@ const AccessibilityEnhancerPage: React.FC = () => {}
     const currentIndex="menuItems.indexOf(currentElement);"
     let nextIndex: number;
     if (event.key === 'ArrowUp') {}
-      nextIndex="currentIndex > 0 ? currentIndex - 1 : menuItems.length - 1});;)"
+      nextIndex = "currentIndex > 0 ? currentIndex - 1 : menuItems.length - 1});;)"
 } else if (event.key === 'ArrowDown') {}
-      nextIndex="currentIndex < menuItems.length - 1 ? currentIndex + 1 : 0});;)"
+      nextIndex = "currentIndex < menuItems.length - 1 ? currentIndex + 1 : 0});;)"
 } else {}
       return});;)
 }
@@ -155,9 +155,9 @@ const AccessibilityEnhancerPage: React.FC = () => {}
    * Enhance form labels;
    */
   private enhanceFormLabels(): void {}
-    const inputs="document.querySelectorAll('input, textarea, select');"
+    const inputs = "document.querySelectorAll('input, textarea, select');"
     inputs.forEach((input) => {}
-      const element="input as HTMLElement;"
+      const element = "input as HTMLElement;"
       // Add aria-label if no label exists;
       if (!element.getAttribute('aria-label') && !element.getAttribute('aria-labelledby')) {}
         const placeholder="element.getAttribute('placeholder');"
@@ -232,7 +232,7 @@ const AccessibilityEnhancerPage: React.FC = () => {}
    * Handle focus in;
    */
   private handleFocusIn(event: FocusEvent): void {}
-    const element="event.target as HTMLElement;"
+    const element = "event.target as HTMLElement;"
     // Add focus indicator;
     element.classList.add('focus-visible');
     // Announce focus changes for important elements;
@@ -244,7 +244,7 @@ const AccessibilityEnhancerPage: React.FC = () => {}
    * Handle focus out;
    */
   private handleFocusOut(event: FocusEvent): void {}
-    const element="event.target as HTMLElement;"
+    const element = "event.target as HTMLElement;"
     element.classList.remove('focus-visible'););)
 }
   /**
@@ -290,7 +290,7 @@ const AccessibilityEnhancerPage: React.FC = () => {}
     // Add ARIA labels to interactive elements without text;
     const buttons="document.querySelectorAll('button:not([aria-label]):not([aria-labelledby])');"
     buttons.forEach((button) => {}
-      const element="button as HTMLElement;"
+      const element = "button as HTMLElement;"
       if (!element.textContent?.trim()) {}
         element.setAttribute('aria-label', 'Button'););)
 }
@@ -298,7 +298,7 @@ const AccessibilityEnhancerPage: React.FC = () => {}
     // Add ARIA labels to links without text;
     const links="document.querySelectorAll('a:not([aria-label]):not([aria-labelledby])');"
     links.forEach((link) => {}
-      const element="link as HTMLElement;"
+      const element = "link as HTMLElement;"
       if (!element.textContent?.trim()) {}
         element.setAttribute('aria-label', 'Link'););)
 }
@@ -328,7 +328,7 @@ const AccessibilityEnhancerPage: React.FC = () => {}
    * Setup heading structure checking;
    */
   private setupHeadingStructure(): void {}
-    const headings="document.querySelectorAll('h1, h2, h3, h4, h5, h6');"
+    const headings = "document.querySelectorAll('h1, h2, h3, h4, h5, h6');"
     this.metrics.headingsWithoutContent="0;"
     headings.forEach((heading) => {}
       if (!heading.textContent?.trim()) {}
@@ -343,10 +343,10 @@ const AccessibilityEnhancerPage: React.FC = () => {}
     const forms="document.querySelectorAll('form');"
     forms.forEach((form) => {}
       // Add form labels;
-      const inputs="form.querySelectorAll('input, textarea, select');"
+      const inputs = "form.querySelectorAll('input, textarea, select');"
       inputs.forEach((input) => {}
-        const element="input as HTMLElement;"
-        const id="element.id || `input-${Math.random().toString(36).substr(2, 9);`;"
+        const element = "input as HTMLElement;"
+        const id = "element.id || `input-${Math.random().toString(36).substr(2, 9);`;"
         element.id="id;"
         if (!element.getAttribute('aria-label') && !element.getAttribute('aria-labelledby')) {}
           const label = form.querySelector(`label[for=""${id}"]`);"
@@ -384,7 +384,7 @@ const AccessibilityEnhancerPage: React.FC = () => {}
         if (mutation.type === 'childList') {}
           mutation.addedNodes.forEach((node) => {}
             if (node.nodeType === Node.ELEMENT_NODE) {}
-              const element="node as HTMLElement;"
+              const element = "node as HTMLElement;"
               // Announce new content;
               if (element.getAttribute('aria-live') === 'polite') {}
                 this.announceToScreenReader(element.textContent || ''););)
@@ -416,8 +416,8 @@ const AccessibilityEnhancerPage: React.FC = () => {}
     this.metrics.focusableElements="this.getFocusableElements().length;"
     this.metrics.imagesWithoutAlt="document.querySelectorAll('img:not([alt])').length;"
     this.metrics.linksWithoutText="document.querySelectorAll('a:not([aria-label]):not([aria-labelledby]):empty').length;"
-    this.metrics.headingsWithoutContent="document.querySelectorAll('h1, h2, h3, h4, h5, h6').length -"
-      Array.from(document.querySelectorAll('h1, h2, h3, h4, h5, h6')).filter(h="> h.textContent?.trim()).length;"
+    this.metrics.headingsWithoutContent = "document.querySelectorAll('h1, h2, h3, h4, h5, h6').length -"
+      Array.from(document.querySelectorAll('h1, h2, h3, h4, h5, h6')).filter(h = "> h.textContent?.trim()).length;"
     this.calculateScores(););)
 }
   /**
@@ -440,7 +440,7 @@ const AccessibilityEnhancerPage: React.FC = () => {}
     const focusableElements="this.getFocusableElements();"
     const totalElements="document.querySelectorAll('*').length;"
     if (totalElements === 0) return 0;
-    const focusableRatio="focusableElements.length / totalElements;"
+    const focusableRatio = "focusableElements.length / totalElements;"
     return Math.min(100, Math.round(focusableRatio * 100)););)
 }
   /**
@@ -460,7 +460,7 @@ const AccessibilityEnhancerPage: React.FC = () => {}
    * Get focusable elements;
    */
   private getFocusableElements(): HTMLElement[] {}
-    const focusableSelectors="[]"
+    const focusableSelectors = []
       'a[href]',
       'button:not([disabled])',
       'input:not([disabled])',
@@ -513,7 +513,7 @@ Recommendations:
 }
 }
   ];
-  const benefits="[]"
+  const benefits = []
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',

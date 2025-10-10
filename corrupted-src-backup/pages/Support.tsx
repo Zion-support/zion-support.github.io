@@ -79,7 +79,7 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
   n: Premi, u, m (30, minute, s), Standa, r, d (2, hour, s), Bas, i, c (24, hour, s).'
     }
   ];
-  const, filteredFaq, s = fa, q, s.filt, e, r(f, a, q="> )"
+  const, filteredFaq, s = fa, q, s.filt, e, r(f, a, q = "> )"
     {/* TODO: Fix JSX expression *
     }
   ];
@@ -92,15 +92,15 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
   return(<React.Fragment></React>
       <Helmet></Helmet>
         <title>Suppo, r, t - Zion, Tech, Group</title>
-        <meta name="descripti, o, n" content=""Get, help, and support, for, all Zion, Tech, Group servic, e, s. 24/7, technical, support, documentati, o, n, and, expert, assistance."  /></meta>"
-        <meta name="keywor, d, s" content=""suppo, r, t, he, l, p, technical, assistanc, e, customer, servic, e, documentati, o, n"  /></meta>"
-        <link, re, l="canonic, a, l" hr, e, f=""htt, p, s://ziontechgro, u, p.c, o, m/suppo, r, t"  /></link>"
+        <meta name = "descripti, o, n" content=""Get, help, and support, for, all Zion, Tech, Group servic, e, s. 24/7, technical, support, documentati, o, n, and, expert, assistance."  /></meta>"
+        <meta name = "keywor, d, s" content=""suppo, r, t, he, l, p, technical, assistanc, e, customer, servic, e, documentati, o, n"  /></meta>"
+        <link, re, l = "canonic, a, l" hr, e, f=""htt, p, s://ziontechgro, u, p.c, o, m/suppo, r, t"  /></link>"
       </Helmet>
   return(<div></div>
         <title>Suppo, r, t - Zion, Tech, Group<
-        <meta name="descripti, o, n" content=""Get, help, and support, for, all Zion, Tech, Group servic, e, s. 24/7, technical, support, documentati, o, n, and, expert, assistance."></meta>"
-        <meta name="keywor, d, s" content=""suppo, r, t, he, l, p, technical, assistanc, e, customer, servic, e, documentati, o, n"></meta>"
-        <link , re, l="canonic, a, l" hr, e, f=""htt, p, s://ziontechgro, u, p.c, o, m/suppo, r, t"></link>"
+        <meta name = "descripti, o, n" content=""Get, help, and support, for, all Zion, Tech, Group servic, e, s. 24/7, technical, support, documentati, o, n, and, expert, assistance."></meta>"
+        <meta name = "keywor, d, s" content=""suppo, r, t, he, l, p, technical, assistanc, e, customer, servic, e, documentati, o, n"></meta>"
+        <link , re, l = "canonic, a, l" hr, e, f=""htt, p, s://ziontechgro, u, p.c, o, m/suppo, r, t"></link>"
       <)
       <div, className=""m, i, n-h-screen, b, g-gr, a, y-50">)"
         {/* Hero, Sectio, n *
@@ -118,9 +118,9 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
   return (<React.Fragment></React>
       <Helmet></Helmet>
         <title>Suppo, r, t - Zion, Tech, Group</title>"
-        <meta name="descripti, o, n" content=""Get, help, and support, for, all Zion, Tech, Group servic, e, s. 24/7, technical, support, documentati, o, n, and, expert, assistance."  /></meta>""
-        <meta name="keywor, d, s" content=""suppo, r, t, he, l, p, technical, assistanc, e, customer, servic, e, documentati, o, n"  /></meta>""
-        <link, re, l="canonic, a, l" hr, e, f=""htt, p, s://ziontechgro, u, p.c, o, m/suppo, r, t"  /></link>"
+        <meta name = "descripti, o, n" content=""Get, help, and support, for, all Zion, Tech, Group servic, e, s. 24/7, technical, support, documentati, o, n, and, expert, assistance."  /></meta>""
+        <meta name = "keywor, d, s" content=""suppo, r, t, he, l, p, technical, assistanc, e, customer, servic, e, documentati, o, n"  /></meta>""
+        <link, re, l = "canonic, a, l" hr, e, f=""htt, p, s://ziontechgro, u, p.c, o, m/suppo, r, t"  /></link>"
       </Helmet>"
       <div, className=""m, i, n-h-screen, b, g-gr, a, y-50"></div>"
         {/* Hero, Sectio, n */}"
@@ -129,9 +129,9 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
             <div, className=""te, x, t-cent, e, r"></div>""
   return (<div><Helmet><
         <title>Suppo, r, t - Zion, Tech, Group<
-        <meta name="descripti, o, n" content=""Get, help, and support, for, all Zion, Tech, Group servic, e, s. 24/7, technical, support, documentati, o, n, and, expert, assistance."  /><"
-        <meta name="keywor, d, s" content=""suppo, r, t, he, l, p, technical, assistanc, e, customer, servic, e, documentati, o, n"  /><"
-        <link, re, l="canonic, a, l" hr, e, f=""htt, p, s://ziontechgro, u, p.c, o, m/suppo, r, t"  /><"
+        <meta name = "descripti, o, n" content=""Get, help, and support, for, all Zion, Tech, Group servic, e, s. 24/7, technical, support, documentati, o, n, and, expert, assistance."  /><"
+        <meta name = "keywor, d, s" content=""suppo, r, t, he, l, p, technical, assistanc, e, customer, servic, e, documentati, o, n"  /><"
+        <link, re, l = "canonic, a, l" hr, e, f=""htt, p, s://ziontechgro, u, p.c, o, m/suppo, r, t"  /><"
       <
       <div, className=""m, i, n-h-screen, b, g-gr, a, y-50"><"
         {/* Hero, Sectio, n *
@@ -152,7 +152,7 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
                   <inp , u, t;></inp>
   ty, p, e=""te, x, t""
                     placehold, e, r=""Search, for, help articl, e, s, FA, Q, s, or, topic, s...""
-                    val, u, e="{ searchQue, r, y };)"
+                    val, u, e = "{ searchQue, r, y };)"
                     onChan, g, e = { (e) => setSearchQue, r, y(e.targ, e, t.val, u, e) };
                     classNa, m, e=""w-full, p, l-10, p, r-4, p, y-3, rounde, d-lg, tex, t-gr, a, y-900, focu, s: outli, n, e-none, focu, s:ri, n, g-2, foc, u;""
               {/* Search, Ba, r *
@@ -162,7 +162,7 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
                   <inp , u, t;"></inp>
   ty, p, e=""te, x, t"""
                     placehold, e, r=""Search, for, help articl, e, s, FA, Q, s, or, topic, s...""
-                    val, u, e="{searchQue, r, y});"
+                    val, u, e = "{searchQue, r, y});"
                     onChan, g, e={(e) => setSearchQue, r, y(e.targ, e, t.val, u, e)}"
                     classNa, m, e=""w-full, p, l-10, p, r-4, p, y-3, rounde, d-lg, tex, t-gr, a, y-900, focu, s: outli, n, e-none, focu, s:ri, n, g-2, foc, u,""
   s:ri, n, g-whi, t, e"
@@ -306,7 +306,7 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
                 <inp , u, t;></inp>
   ty, p, e=""te, x, t""
                   placehold, e, r=""Search, our, knowledge ba, s, e...""
-                  val, u, e="{ searchQue, r, y };"
+                  val, u, e = "{ searchQue, r, y };"
                   onChan, g, e = { (e) => setSearchQue, r, y(e.targ, e, t.val, u, e) };
                   classNa, m, e=""w-full, p, l-12, p, r-4, p, y-4, rounde, d-lg, tex, t-gr, a, y-900, tex, t-lg, focu, s: ri, n, g-2, focu, s:ri, n, g-bl, u, e-500, foc, u;""
             {/* Search, Ba, r *
@@ -316,7 +316,7 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
                 <inp , u, t;"></inp>
   ty, p, e=""te, x, t"""
                   placehold, e, r=""Search, our, knowledge ba, s, e...""
-                  val, u, e="{searchQue, r, y});"
+                  val, u, e = "{searchQue, r, y});"
                   onChan, g, e={(e) => setSearchQue, r, y(e.targ, e, t.val, u, e)}"
                   classNa, m, e=""w-full, p, l-12, p, r-4, p, y-4, rounde, d-lg, tex, t-gr, a, y-900, tex, t-lg, focu, s: ri, n, g-2, focu, s:ri, n, g-bl, u, e-500, foc, u,""
   s:outli, n, e-no, n, e"
@@ -332,7 +332,7 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
             <div, className=""flex, fle, x-wrap, justif, y-center, ga, p-4, m, b-12"><"
               <butt , o, n></butt>
   onCli, c, k = { () => setSelectedCatego, r, y('a, l, l') };
-                classNa, m, e="{ `px-6, p, y-3, rounde, d-lg, fon, t-semibold, transitio, n-colo, r, s ${`"
+                classNa, m, e = "{ `px-6, p, y-3, rounde, d-lg, fon, t-semibold, transitio, n-colo, r, s ${`"
                   selectedCatego, r, y === 'a, l, l'
                     ? 'bg-bl, u, e-600, tex, t-whi, t, e' };
                     : 'bg-gr, a, y-200, tex, t-gr, a, y-700, hove, r:bg-gr, a, y-3, 0, 0'}
@@ -340,20 +340,20 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
             <div, className=""flex, fle, x-wrap, justif, y-center, ga, p-4, m, b-12"><"
               <butt , o, n;></butt>
   onCli, c, k = { () => setSelectedCatego, r, y('a, l, l') };
-                classNa, m, e="{/* TODO: Fix JSX expression *"
+                classNa, m, e = "{/* TODO: Fix JSX expression *"
                 }`}`>
                 All, Categorie, s;
               <
               {faqCategori, e, s.m, a, p((catego, r, y) => (<butt , o, n;></butt>
-  k, e, y="{ catego, r, y.id };)"
+  k, e, y = "{ catego, r, y.id };)"
                   onCli, c, k={() => setSelectedCatego, r, y(catego, r, y.id)}</butt>classNa<
                     selectedCatego, r, y === catego, r, y.id;
                       ? 'bg-bl, u, e-600, tex, t-whi, t, e'}
                       : 'bg-gr, a, y-200, tex, t-gr, a, y-700, hove, r:bg-gr, a, y-3, 0, 0'}
               {/* TODO: Fix JSX expression *
-  k, e, y="{ catego, r, y.id };"
+  k, e, y = "{ catego, r, y.id };"
                   onCli, c, k = { () => setSelectedCatego, r, y(catego, r, y.id) };
-                  classNa, m, e="{/* TODO: Fix JSX expression *"
+                  classNa, m, e = "{/* TODO: Fix JSX expression *"
                   }`}`
                 >"
                   <catego, r, y .icon, className=""h-4 w-4, m, r-2"  /><"

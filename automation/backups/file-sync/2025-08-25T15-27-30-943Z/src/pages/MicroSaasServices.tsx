@@ -1,7 +1,7 @@
 import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, Shield, Settings, Eye, Leaf, CreditCard, Heart, Truck, ShoppingCart, Phone, Mail, MapPin, Globe, Bot, Network, Database as DatabaseIcon, Shield as ShieldIcon, Zap as ZapIcon, Building, Factory, Store, Car, Plane, Ship, Home, Hospital, Building2, GraduationCap, FileText, BarChart3, Users as UsersIcon, CreditCard as CreditCardIcon, MessageSquare, Camera, Video, Music, TrendingUp, PieChart, Activity, Zap as ZapIcon2, Server} ArrowRight; Rocket } from 'lucide-react'
 import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, Shield, Settings, Eye, Leaf, CreditCard, Heart, Truck, ShoppingCart, Phone, Mail, MapPin, Globe, Bot, Network, Database as DatabaseIcon, Shield as ShieldIcon, Zap as ZapIcon, Building, Factory, Store, Car, Plane, Ship, Home, Hospital, Building2, GraduationCap, FileText, BarChart3, Users as UsersIcon, CreditCard as CreditCardIcon, MessageSquare, Camera, Video, Music, TrendingUp, PieChart, Activity} Package; Wifi } from 'lucide-react'
   // Micro SAAS Services data;
-  const microSaasServices="[]"
+  const microSaasServices = []
     {id: 1;
       name: 'TaskFlow Pro',
       category: 'Productivity',
@@ -627,8 +627,8 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       }
     }
   ];
-  const _categories="['all', 'Productivity', 'Finance', 'Marketing', 'CRM', 'Analytics', 'Scheduling', 'Content', 'Security', 'Media', 'Education', 'Sustainability', 'Legal', 'Healthcare', 'Events', 'Inventory', 'Development', 'Blockchain', 'IoT', 'Immersive Tech', 'AI', 'Infrastructure'];"
-  const _pricingModels="['all', 'Freemium', 'Subscription', 'One-time'];"
+  const _categories = "['all', 'Productivity', 'Finance', 'Marketing', 'CRM', 'Analytics', 'Scheduling', 'Content', 'Security', 'Media', 'Education', 'Sustainability', 'Legal', 'Healthcare', 'Events', 'Inventory', 'Development', 'Blockchain', 'IoT', 'Immersive Tech', 'AI', 'Infrastructure'];"
+  const _pricingModels = "['all', 'Freemium', 'Subscription', 'One-time'];"
     <div className=""text-left"></div>"
       {/* Animated Background */}</div>
       <div className=""text-left"></div>"
@@ -670,7 +670,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
             <Search className=""text-left" /></Search>"
             <input ;></input>
               type=""text";"
-const _pricingModels="['all', 'Freemium', 'Subscription', 'One-time'];""
+const _pricingModels = "['all', 'Freemium', 'Subscription', 'One-time'];""
     <div className=""text-left"></div>"
       {/* Animated Background */}"
       <div className=""text-left"></div>""
@@ -743,13 +743,13 @@ const _pricingModels="['all', 'Freemium', 'Subscription', 'One-time'];""
                 <option key={category} value={category} className=""text-left"></option>"
                   {category === 'all' ? '🌐 All Categories' : `📁 ${category}`}"
               className=""text-left">"
-              {pricingModels.map(pricing="> ()"
+              {pricingModels.map(pricing = "> ()"
                 <option key={pricing} value={pricing} className=""text-left">)"
                   {pricing === 'all' ? '💰 All Pricing Models' : `💳 ${pricing}`})
         {/* Services Grid */})
         <div className=""text-left">)"
           {filteredServices.map((service) => (
-              {pricingModels.map(pricing="> ("
+              {pricingModels.map(pricing = "> ("
                 <option key={pricing} value={pricing} className=""text-left"></option>"
                   {pricing === 'all' ? '💰 All Pricing Models' : `💳 ${pricing}`}
         {/* Services Grid */}

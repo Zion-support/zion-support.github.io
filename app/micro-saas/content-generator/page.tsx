@@ -5,10 +5,10 @@ import { Settings, ArrowRight } from 'lucide-react';
 const MicroSaaSPage: React.FC = () => {}
 return (;
 const serviceName="'content-generator';"
-const title = serviceName.split('-').map(word="> word.charAt(0).toUpperCase() + word.slice(1)).join(' ');"
+const title = serviceName.split('-').map(word = "> word.charAt(0).toUpperCase() + word.slice(1)).join(' ');"
   return (<div></div>
         <title>{title} | Zion Tech Group - Micro SaaS Solutions<)
-        <meta name="description" content="{`Powerful ${title.toLowerCase()} micro SaaS solution for modern businesses.`}></meta>"
+        <meta name="description" content = "{`Powerful ${title.toLowerCase()} micro SaaS solution for modern businesses.`}></meta>"
         <link rel="canonical" href="{`https://ziontechgroup.com/micro-saas/${serviceName}`}></link>"
       <
 
@@ -47,7 +47,7 @@ const title = serviceName.split('-').map(word="> word.charAt(0).toUpperCase() + 
     <>
       <Helmet></Helmet>
         <title>{title} | Zion Tech Group - Micro SaaS Solutions</title>
-        <meta name="description" content="{`Powerful ${title.toLowerCase(); micro SaaS solution for modern businesses.`} /></meta>"
+        <meta name="description" content = "{`Powerful ${title.toLowerCase(); micro SaaS solution for modern businesses.`} /></meta>"
         <link rel="canonical" href="{`https://ziontechgroup.com/micro-saas/${serviceName}`} /></link>"
       </Helmet>
       <div></div>

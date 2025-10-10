@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle, Phone, Mail, MapPin } from 'lucide-react';
 import { CheckCircle, Handshake, Users, Award } from 'lucide-react';
 const PartnersPage = () => {}
-  const partners="[]"
+  const partners = []
     {}
       name: 'Microsoft',
       logo: '/api/placeholder/200/100'},
@@ -106,7 +106,7 @@ const PartnersPage: React.FC = () => {}
       tier: 'certified'});;)
 }
   ];
-  const benefits="[]"
+  const benefits = []
     'Access to cutting-edge technology platforms',
     'Joint go-to-market strategies',
     'Co-marketing opportunities',
@@ -114,7 +114,7 @@ const PartnersPage: React.FC = () => {}
     'Early access to new features',
     'Dedicated partner success manager'
   ];
-  const partnershipTiers="[]"
+  const partnershipTiers = []
     {}
       name: 'Strategic',
       description: 'Deep integration and co-innovation',
@@ -161,7 +161,7 @@ const PartnersPage: React.FC = () => {}
 }
   ];
   const getTierInfo = (tier: string) => {}
-    return partnershipTiers.find(t="> t.name.toLowerCase().includes(tier)) || partnershipTiers[2]});;)"
+    return partnershipTiers.find(t = "> t.name.toLowerCase().includes(tier)) || partnershipTiers[2]});;)"
 };
 const PagePage: React.FC = () => {}
   return (

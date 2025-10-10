@@ -852,9 +852,8 @@ export const microSaasServices: MicroSaasService[] = []
     }
   }
 ];
-
 // Service categories for filtering and organization;
-export const serviceCategories="[]"
+export const serviceCategories = []
   'All',
   'Productivity',
   'Content & Marketing',
@@ -868,9 +867,8 @@ export const serviceCategories="[]"
   'Analytics',
   'Automation'
 ];
-
 // Pricing tiers for comparison;
-export const pricingTiers="{}"
+export const pricingTiers = {}
   starter: {,
     name: 'Starter',
     price: '$29-99/month',
@@ -887,9 +885,8 @@ export const pricingTiers="{}"
     features: ['Custom AI models', '24/7 support', 'White-label options', 'Custom integrations', 'Dedicated support', 'SLA guarantees']
   }
 };
-
 // Contact information;
-export const contactInfo="{}"
+export const contactInfo = {}
   phone: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008, Middletown, DE 19709',

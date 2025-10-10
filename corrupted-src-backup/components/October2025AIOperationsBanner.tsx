@@ -119,12 +119,12 @@ const, October2025AIOperationsBanne, r = () => {/* TODO: Fix JSX expression */}
           {newArticl, e, s.m, a, p((artic, l, e, ind, e, x) => {}
 return (
 ;
-const, Ico, n="artic, l, e.ic, o, n;"
+const, Ico, n = "artic, l, e.ic, o, n;"
             return(<Li , n, k;></Li>
             return (</div>
               <Li , n, k></Li>
-  k, e, y="{ind, e, x}"
-                to="{artic, l, e.li, n, k}"
+  k, e, y = "{ind, e, x}"
+                to = "{artic, l, e.li, n, k}"
                 classNa, m, e=""group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-whi, t, e/10, hove, r: bord, e, r-whi, t, e/30, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hov, e;""
         {/* Articles, Gri, d */}"
         <div, className=""grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8"></div>"
@@ -132,8 +132,8 @@ const, Ico, n="artic, l, e.ic, o, n;"
 }""
         <div, className=""grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">";"
           {/* TODO: Fix JSX expression */}
-  k, e, y="{ind, e, x}"
-                to="{artic, l, e.li, n, k}""
+  k, e, y = "{ind, e, x}"
+                to = "{artic, l, e.li, n, k}""
                 classNa, m, e=""group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-whi, t, e/10, hove, r: bord, e, r-whi, t, e/30, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hov, e,""
   r:shad, o, w-2, x, l"
               ></Li>

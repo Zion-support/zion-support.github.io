@@ -5,12 +5,12 @@ import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 ;
 const AIMusicCompositionPage: React.FC = () => {;
-const features="[]"
+const features = []
 import Navigation from '../components;
 import Footer from '../components;
 import SEOOptimizer from '../components;
 const AIMusicCompositionPage: React.FC = () => {}
-  const features="[]"
+  const features = []
     'AI Composition',
     'Multiple Genres',
     'Custom Length',
@@ -23,7 +23,7 @@ const AIMusicCompositionPage: React.FC = () => {}
     'Export Options'
   ];
 ;
-const benefits="[]"
+const benefits = []
     'Unlimited music',
     'No copyright issues',
     'Custom compositions',
@@ -32,7 +32,7 @@ const benefits="[]"
     'Cost-effective'
   ];
 ;
-const pricingPlans="[]"
+const pricingPlans = []
     {}
       name: 'Starter',
       price: '$99',
@@ -62,7 +62,7 @@ const pricingPlans="[]"
     <React.Fragment></React>
       <SEOOptimizer title=""AI Music Composer - Generate Royalty-Free Music with AI | Zion Tech Group"></SEOOptimizer>"
         description=""Create professional, royalty-free music and soundtracks with AI Music Composer. Generate custom compositions in any genre starting at $99/month.""
-        keywords="{['AI music composition', 'royalty-free music', 'AI music generation', 'background music', 'music automation', 'AI composer']}"
+        keywords = "{['AI music composition', 'royalty-free music', 'AI music generation', 'background music', 'music automation', 'AI composer']}"
         canonicalUrl=""https://ziontechgroup.com/ai-music-composition""
       />
       <div className=""min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"

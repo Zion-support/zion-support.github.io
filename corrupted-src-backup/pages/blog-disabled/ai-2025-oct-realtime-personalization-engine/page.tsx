@@ -9,14 +9,14 @@ export default function RealtimePersonalizationEngine20, 2, 5() {}
         <title></title>
           Re, a, l-Time, AI, Personalization Engine, 202, 5 — 98.4% Relevan, c, e, 8.7x, Conversion, Lift, $23, 4, M+ Revenue, Growt, h | Zion, Tech, Group;
         <
-        <meta , nam, e="'description'></meta>"
-          conte, n, t="'Deploy, rea, l-time, AI, personalization that, adapts, to user, behavior, in millisecon, d, s. Achieve, 9, 8.4% relevance, scori, n, g, 8.7 x, conversion, improvements, and, driv, e $23, 4, M+ incremental, revenue, growth.'"
+        <meta , nam, e = "'description'></meta>"
+          conte, n, t = "'Deploy, rea, l-time, AI, personalization that, adapts, to user, behavior, in millisecon, d, s. Achieve, 9, 8.4% relevance, scori, n, g, 8.7 x, conversion, improvements, and, driv, e $23, 4, M+ incremental, revenue, growth.'"
         /><
-        <meta , nam, e="'keywor, d, s'></meta>"
-          conte, n, t="'AI, personalizati, o, n, re, a, l-time, personalizatio, n, recommendation, engin, e, customer, experienc, e, conversion, optimizatio, n, behavioral, targetin, g, predictive, personalizatio, n, marketing, A, I'"
+        <meta , nam, e = "'keywor, d, s'></meta>"
+          conte, n, t = "'AI, personalizati, o, n, re, a, l-time, personalizatio, n, recommendation, engin, e, customer, experienc, e, conversion, optimizatio, n, behavioral, targetin, g, predictive, personalizatio, n, marketing, A, I'"
         /><
-        <link , re, l="'canonic, a, l'></link>"
-          hr, e, f="'htt, p, s: //ziontechgro u p.c o m/bl o g'"
+        <link , re, l = "'canonic, a, l'></link>"
+          hr, e, f = "'htt, p, s: //ziontechgro u p.c o m/bl o g'"
       <
     <div><
       
@@ -39,12 +39,12 @@ export default function RealtimePersonalizationEngine20, 2, 5() {}
         <div, className="'container, m, x-auto, p, x-4, p, y-12, ma, x-w-4, x, l'><"
               Re, a, l-Time, AI, Personalization: The, Revenue, Multiplication Engi, n, e;
               Re, a, l-Time, AI, Personalization: The, Revenue, Multiplication Engi, n, e<
-                <li, classNam, e="'flex, item, s-start, ga, p-3'></li>"
-                  <DollarSign , classNam, e="'h-6 w-6, tex, t-gre, e, n-400, m, t-1, fle, x-shri, n, k-0'></DollarSign>"
+                <li, classNam, e = "'flex, item, s-start, ga, p-3'></li>"
+                  <DollarSign , classNam, e = "'h-6 w-6, tex, t-gre, e, n-400, m, t-1, fle, x-shri, n, k-0'></DollarSign>"
               <span, className="'te, x, t-gr, a, y-4, 0, 0'>Octo, b, e, r , 1, 20, 2, 5<"
             <
 
-            <h1, classNam, e="'te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, m, b-6, b, g-gradie, n, t-to-r, fro, m-ro, s, e-400, vi, a-pi, n, k-400, t, o-purp, l, e-400, tex, t-transparent, b, g-cl, i, p-text, leadin, g-tig, h, t'></h1>"
+            <h1, classNam, e = "'te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, m, b-6, b, g-gradie, n, t-to-r, fro, m-ro, s, e-400, vi, a-pi, n, k-400, t, o-purp, l, e-400, tex, t-transparent, b, g-cl, i, p-text, leadin, g-tig, h, t'></h1>"
               Re, a, l-Time, AI, Personalization: The, Revenue, Multiplication Engi, n, e;
               Re, a, l-Time, AI, Personalization: The, Revenue, Multiplication Engi, n, e<
                 <li, className="'flex, item, s-start, ga, p-3'></li>"
@@ -52,7 +52,7 @@ export default function RealtimePersonalizationEngine20, 2, 5() {}
                     for, enterprise, deployments;
                   <
 
-            <section, classNam, e="'mb-12'></section>"
+            <section, classNam, e = "'mb-12'></section>"
               <h2, className="'te, x, t-3xl, fon, t-bold, m, b-6, tex, t-ro, s, e-3, 0, 0'></h2>"
                 The, Personalization, Engine Architectu, r, e;
               <
@@ -74,9 +74,9 @@ export default function RealtimePersonalizationEngine20, 2, 5() {}
                   <h3, className="'te, x, t-2xl, fon, t-bold, m, b-4, tex, t-ro, s, e-3, 0, 0'></h3>"
                     Global, Retail, Leader;
                   <
-                  <ul, classNam, e="'spa, c, e-y-3, tex, t-gr, a, y-3, 0, 0'></ul>"
+                  <ul, classNam, e = "'spa, c, e-y-3, tex, t-gr, a, y-3, 0, 0'></ul>"
                 Start, Your, Personalization Journ, e, y;
-                <Target , classNam, e="'ml-2 h-5 w-5'></Target>"
+                <Target , classNam, e = "'ml-2 h-5 w-5'></Target>"
                 Start, Your, Personalization Journ, e, y;
                 <Target , className="'ml-2 h-5 w-5'></Target>"
           <div><

@@ -1,9 +1,8 @@
 import fs from 'fs';
-
 // Read missing pages;
-const missingPages = fs.readFileSync('missing_pages.txt', 'utf8').split('\n').filter(page="> page.trim());"
+const missingPages = fs.readFileSync('missing_pages.txt', 'utf8').split('\n').filter(page = "> page.trim());"
 // Page configurations;
-const pageConfigs="{}"
+const pageConfigs = {}
   'ai-fintech': {}
     title: 'AI Fintech Solutions',
     description: 'Advanced AI-powered financial technology solutions for banking, trading, risk management, and fraud detection.',
@@ -500,15 +499,14 @@ const pageConfigs="{}"
     keywords: ['smart analytics', 'AI analytics', 'automated reporting', 'predictive analytics', 'intelligent insights']
   }
 };
-
 // Create missing pages;
-missingPages.forEach(pageName="> {);"
+missingPages.forEach(pageName = "> {);"
 const config="pageConfigs[pageName];)"
   if (!config) {}
     // console.log removed for production;
 return}
 ;
-const pageContent="`'use client';"
+const pageContent = "`'use client';"
 import React from 'react';
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
@@ -568,7 +566,7 @@ return (
             </p>
           </div>
           <div className=""grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>"
-            ${config.features.map(feature="> `)"
+            ${config.features.map(feature = "> `)"
             <div className=""bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-cyan-400/20 hover:border-cyan-400/60 transition-all duration-300">),"
               <CheckCircle className=""w-8 h-8 text-green-400 mb-4" />),"
               <h3 className=""text-xl font-semibold text-white mb-2">${feature}</h3>"
@@ -587,7 +585,7 @@ return (
             </p>
           </div>
           <div className=""grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">,"
-            ${config.benefits.map(benefit="> `)"
+            ${config.benefits.map(benefit = "> `)"
             <div className=""bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20 hover:border-purple-400/60 transition-all duration-300">)"
               <TrendingUp className=""w-8 h-8 text-purple-400 mb-4" />),"
               <h3 className=""text-xl font-semibold text-white mb-2">${benefit}</h3>"
@@ -661,10 +659,9 @@ return (
       </main>
       <Footer />,
     </div>)};
-
-export default ${pageName.split('-').map(word="> word.charAt(0).toUpperCase() + word.slice(1)).join('')}Page;`;"
+export default ${pageName.split('-').map(word = "> word.charAt(0).toUpperCase() + word.slice(1)).join('')}Page;`;"
   // Create directory if it doesn't exist;
-  const dirPath="`app/${pageName}`;"
+  const dirPath = "`app/${pageName}`;"
   if (!fs.existsSync(dirPath)) {}
     fs.mkdirSync(dirPath, { recursive: true })}
 
@@ -672,5 +669,4 @@ export default ${pageName.split('-').map(word="> word.charAt(0).toUpperCase() + 
   fs.writeFileSync(`${dirPath}/page.tsx`, pageContent);
   // console.log removed for production;
 });
-
 // console.log removed for production;

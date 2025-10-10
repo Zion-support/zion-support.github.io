@@ -1,5 +1,4 @@
 import React from 'react';
-
 interface SkeletonProps {/* TODO: Fix JSX expression */}
 }
 ;
@@ -17,6 +16,5 @@ const Skeleton = React.memo(function Skeleton({ className="'' }: SkeletonProps) 
       <p className=""text-blue-600">This component is under development.</p>"
     </div>
   )});
-
 export default Skeleton;
 "`

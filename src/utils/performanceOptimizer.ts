@@ -48,10 +48,9 @@ class PerformanceOptimizer {// TODO: Add content}
 
 }
   private,
-  _metrics: PerformanceMetrics="{/* TODO: Fix JSX expression */}"
+  _metrics: PerformanceMetrics = "{/* TODO: Fix JSX expression */}"
   O: Add content}
 };
-
   loadTime: 0,
     renderTime: 0,
     memoryUsage: 0,
@@ -59,10 +58,9 @@ class PerformanceOptimizer {// TODO: Add content}
     cacheHitRate: 0,
     lazyLoading: false};
   private,
-  config: OptimizationConfig="{/* TODO: Fix JSX expression */}"
+  config: OptimizationConfig = "{/* TODO: Fix JSX expression */}"
   O: Add content}
 };
-
   enableLazyLoading: true,
     enableCodeSplitting: true,
     enableImageOptimization: true,
@@ -76,7 +74,7 @@ class PerformanceOptimizer {// TODO: Add content}
           <OptimizationConfig>) {/* TODO: Fix JSX expression */}
   O: Add content}
 }
-    this.config="{ ...this.config, ...config };"
+    this.config = "{ ...this.config, ...config };"
     this.initializePerformanceMonitoring()}
   /**
    * Initialize performance monitoring;
@@ -114,11 +112,11 @@ class PerformanceOptimizer {// TODO: Add content}
     try {/* TODO: Fix JSX expression */}
   O: Add content}
 }
-      const navigation="window.performance.getEntriesByType?.('navigation')[0] as PerformanceNavigationTiming;"
+      const navigation = "window.performance.getEntriesByType?.('navigation')[0] as PerformanceNavigationTiming;"
       if (navigation) {/* TODO: Fix JSX expression */}
   O: Add content}
 }
-        this.metrics.loadTime="navigation.loadEventEnd - navigation.loadEventStart}"
+        this.metrics.loadTime = "navigation.loadEventEnd - navigation.loadEventStart}"
     } catch (error) {/* TODO: Fix JSX expression */}
   O: Add content}
 }
@@ -165,7 +163,7 @@ class PerformanceOptimizer {// TODO: Add content}
   O: Add content}
 }
         const entries="list.getEntries();"
-const lastEntry="entries[entries.length - 1]"
+const lastEntry = "entries[entries.length - 1]"
         this.metrics.lcp="lastEntry.startTime})"
       observer.observe({/* TODO: Fix JSX expression */})
   s: ['largest-contentful-paint'] })
@@ -189,9 +187,9 @@ const lastEntry="entries[entries.length - 1]"
   y: PerformanceEntry) => {/* TODO: Fix JSX expression */}
   O: Add content}
 }
-          const fidEntry="entry as PerformanceEntry & {/* TODO: Fix JSX expression */}"
+          const fidEntry = "entry as PerformanceEntry & {/* TODO: Fix JSX expression */}"
   t: number }
-          this.metrics.fid="fidEntry.processingStart - fidEntry.startTime})"
+          this.metrics.fid = "fidEntry.processingStart - fidEntry.startTime})"
       })
       observer.observe({/* TODO: Fix JSX expression */})
   s: ['first-input'] })
@@ -210,7 +208,7 @@ const lastEntry="entries[entries.length - 1]"
   y: PerformanceEntry) => {/* TODO: Fix JSX expression */}
   O: Add content}
 }
-          const clsEntry="entry as PerformanceEntry & {/* TODO: Fix JSX expression */}"
+          const clsEntry = "entry as PerformanceEntry & {/* TODO: Fix JSX expression */}"
   e: number }
           if (!clsEntry.hadRecentInput) {/* TODO: Fix JSX expression */}
   O: Add content}
@@ -271,12 +269,12 @@ const lastEntry="entries[entries.length - 1]"
   y: PerformanceEntry) => {/* TODO: Fix JSX expression */}
   O: Add content}
 }
-          const navEntry="entry as PerformanceEntry & {/* TODO: Fix JSX expression */}"
+          const navEntry = "entry as PerformanceEntry & {/* TODO: Fix JSX expression */}"
   t: number }
           if (navEntry.responseStart > 0) {/* TODO: Fix JSX expression */}
   O: Add content}
 }
-            this.metrics.ttfb="navEntry.responseStart - navEntry.requestStart}"
+            this.metrics.ttfb = "navEntry.responseStart - navEntry.requestStart}"
         }
   )
       }
@@ -297,7 +295,7 @@ const lastEntry="entries[entries.length - 1]"
     if (typeof window !== 'undefined' && 'memory' in performance) {/* TODO: Fix JSX expression */}
   O: Add content}
 }
-      const memory="(performance as Performance & {/* TODO: Fix JSX expression */})"
+      const memory = "(performance as Performance & {/* TODO: Fix JSX expression */})"
   t: number } }).memory;
       if (memory) {/* TODO: Fix JSX expression */}
   O: Add content}
@@ -313,7 +311,7 @@ const lastEntry="entries[entries.length - 1]"
 
 }
     if (typeof window === 'undefined' || !('memory' in window.performance)) return;
-    const memory="(window.performance as Performance & {/* TODO: Fix JSX expression */}"
+    const memory = "(window.performance as Performance & {/* TODO: Fix JSX expression */}"
   O: Add content}
 }
       memory?: {/* TODO: Fix JSX expression */}
@@ -403,7 +401,7 @@ const lastEntry="entries[entries.length - 1]"
           if (entry.isIntersecting) {/* TODO: Fix JSX expression */}
   O: Add content}
 }
-            const element="entry.target as HTMLElement;"
+            const element = "entry.target as HTMLElement;"
             const src="element.getAttribute('data-lazy');"
             if (src) {/* TODO: Fix JSX expression */}
   O: Add content}
@@ -506,13 +504,13 @@ const lastEntry="entries[entries.length - 1]"
     const imageObserver = new IntersectionObserver((entries) => {/* TODO: Fix JSX expression */}
   O: Add content}
 }
-      entries.forEach(entry="> {/* TODO: Fix JSX expression */}"
+      entries.forEach(entry = "> {/* TODO: Fix JSX expression */}"
   O: Add content}
 })
         if (entry.isIntersecting) {/* TODO: Fix JSX expression */}
   O: Add content}
 }
-          const img="entry.target as HTMLImageElement;"
+          const img = "entry.target as HTMLImageElement;"
           img.src="img.dataset.src || '';"
           img.removeAttribute('data-src');
           imageObserver.unobserve(img)}
@@ -520,7 +518,7 @@ const lastEntry="entries[entries.length - 1]"
   )
     }
   )
-    images.forEach(img="> imageObserver.observe(img))"
+    images.forEach(img = "> imageObserver.observe(img))"
     logger.info('Lazy loading initialized for images', 'PerformanceOptimizer')
   }
   /**
@@ -531,7 +529,7 @@ const lastEntry="entries[entries.length - 1]"
 
 }
     if (typeof window === 'undefined') return;
-    const criticalResources="[]"
+    const criticalResources = []
   // TOD,
   O: Add items;
 ];;
@@ -539,7 +537,7 @@ const lastEntry="entries[entries.length - 1]"
   n: 'anonymous' },
       {/* TODO: Fix JSX expression */}
   s: 'style' }];
-    criticalResources.forEach(resource="> {/* TODO: Fix JSX expression */}"
+    criticalResources.forEach(resource = "> {/* TODO: Fix JSX expression */}"
   O: Add content}
 });
 const link="document.createElement('link');"
@@ -558,12 +556,11 @@ const link="document.createElement('link');"
 
 }
     if (typeof window === 'undefined' || !('performance' in window)) return null;
-    const navigation="performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;"
+    const navigation = "performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;"
     if (!navigation) return null;
     return {/* TODO: Fix JSX expression */}
   O: Add content}
 };
-
   loadTime: this.metrics.loadTime,
       renderTime: this.metrics.renderTime,
       memoryUsage: this.metrics.memoryUsage,
@@ -599,11 +596,9 @@ const link="document.createElement('link');"
   g: Function }).gtag('event', 'web_vitals', {/* TODO: Fix JSX expression */}
   O: Add content}
 };
-
   metric_name: key,
             metric_value: value,
             metric_rating: value;
-
           < 100 ? 'good' : value < 300 ? 'needs-improvement' : 'poor'
           })
   )
@@ -619,7 +614,7 @@ const link="document.createElement('link');"
   public cleanup(): void {// TODO: Add content}
 
 }
-    this.observers.forEach(observer="> observer.disconnect());"
+    this.observers.forEach(observer = "> observer.disconnect());"
     this.observers="[];"
     this.isMonitoring="false}"
   /**
@@ -633,7 +628,6 @@ const link="document.createElement('link');"
     const metrics="this.getMetrics();`"
     return `
 // Performance Report - Zion Tech Group Website;
-
 Performance Score: ${score}/100;
 Load Time: ${metrics.loadTime.toFixed(2)}ms;
 Render Time: ${metrics.renderTime.toFixed(2)}ms;
@@ -665,6 +659,6 @@ ${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize c
   }
 }
 // Export singleton instance;
-export const performanceOptimizer="new PerformanceOptimizer()"
+export const performanceOptimizer = "new PerformanceOptimizer()"
 export default PerformanceOptimizer;"`
 

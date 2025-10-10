@@ -1,5 +1,4 @@
 import React from 'react';
-
       'OpenAI GPT-4, TensorFlow, Solidity, React, Node && Node.js, PostgreSQL, Redis'],
     realImplementation: true;
 export interface BlockchainWeb3Service;

@@ -146,14 +146,14 @@ const missing: string[] = [],
   }
 }
 // Export singleton instance;
-export const envConfig="new EnvironmentConfig()"
+export const envConfig = "new EnvironmentConfig()"
 // Export convenient helper functions;
 export const isProduction = () => envConfig.isProduction()
 export const isDevelopment = () => envConfig.isDevelopment()
 export const isTest = () => envConfig.isTest()
 export const getConfig = () => envConfig.getConfig()
 export const getApiHeaders = () => envConfig.getApiHeaders()
-export const envConfig="new EnvironmentConfig();"
+export const envConfig = "new EnvironmentConfig();"
 // Export convenient helper functions;
 export const isProduction = () => envConfig.isProduction()
 export const isDevelopment = () => envConfig.isDevelopment()

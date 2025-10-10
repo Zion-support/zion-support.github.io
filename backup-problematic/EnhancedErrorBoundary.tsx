@@ -1,7 +1,5 @@
 'use client';
-
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-
 interface Props {/* TODO: Fix JSX expression */}
 }
 
@@ -11,7 +9,7 @@ interface State {/* TODO: Fix JSX expression */}
 class EnhancedErrorBoundary extends Component<Props, State> {;
 constructor(props: Props) {,
     super(props);
-    this.state="{ hasError: false }}"
+    this.state = "{ hasError: false }}"
   static getDerivedStateFromError(error: Error): State {,
     return { hasError: true, error }}
 
@@ -19,7 +17,6 @@ constructor(props: Props) {,
     this.setState({)
       error),
       errorInfo});
-
     // Log error to console in development;
     if (process.env.NODE_ENV === 'development') {}
       // // console.error removed for production;
@@ -78,7 +75,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
   r: Error, errorInf)
   o: ErrorInfo) {/* TODO: Fix JSX expression */}
     });
-
     // Log error to console in development;
     if (process.env.NODE_ENV === 'development') {/* TODO: Fix JSX expression */}
     }

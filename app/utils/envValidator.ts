@@ -58,7 +58,7 @@ class EnvValidator {/* TODO: Fix JSX expression */}
       NEXT_PUBLIC_SITE_URL: process.env['NEXT_PUBLIC_SITE_URL']}}
   private validateNodeEnv(): void {}
     const nodeEnv="process.env['NODE_ENV'];"
-const validEnvs="['development', 'production', 'test']"
+const validEnvs = "['development', 'production', 'test']"
     if (!nodeEnv) {}
       this.errors.push('NODE_ENV is not set');
       return}
@@ -83,7 +83,7 @@ const validEnvs="['development', 'production', 'test']"
     }
   }
   private getNodeEnv(): 'development' | 'production' | 'test' {}
-    const env="process.env['NODE_ENV'] || 'development'"
+    const env = "process.env['NODE_ENV'] || 'development'"
     return env as 'development' | 'production' | 'test'
   getConfig(): EnvConfig {/* TODO: Fix JSX expression */}
   failed:
@@ -112,7 +112,7 @@ ${validation.errors.join('
   }
 }
 // Export singleton instance;
-export const envValidator="new EnvValidator()"
+export const envValidator = "new EnvValidator()"
 // Export convenience function;
 export function validateEnv(): EnvConfig {}
 // Export convenience function;

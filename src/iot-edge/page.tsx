@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer'};
@@ -144,7 +143,7 @@ titl,
   s: ['Time Series DB', 'Apache Kafka', 'Apache Spark', 'Data Lakes', 'ETL Tools']
     }
   ];
-  const categories = [...new Set(iotServices.map(service="> service.category))];"
+  const categories = [...new Set(iotServices.map(service = "> service.category))];"
   return (<div>Coming Soon</div>)
   )
     
@@ -209,7 +208,7 @@ Expert IoT engineers delivering scalable, secure, and intelligent connected solu
                 <h3 className=""text-xl font-semibold text-gray-900 mb-2">Proven Results</h3>""
                 <p className=""text-gray-600">Successfully deployed 500+ IoT projects across industries</p>"
         {/* Services by Category */}
-        {categories.map(category="> ()}""
+        {categories.map(category = "> ()}""
           <section key={category} className=""py-16 bg-gray-50"></section>"
                   {category} Solutions;
                   Specialized {category.toLowerCase()} services for connected and intelligent systems;"
@@ -296,7 +295,6 @@ Save up to 40% vs market rates;"
 Ready to Connect Your World?"
             <p className=""text-xl mb-8 text-cyan-100"></p>"
               Contact our IoT experts for a free consultation and custom connected solution strategy;
-
               <a href="tel:+13024640950" className=""bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-50 transition-colors inline-flex items-center"></a>"
 //>
 //                  +1 302 464 0950;
@@ -306,6 +304,4 @@ href="mailto:kleber@ziontechgroup.com" className=""border-2 border-white text-wh
             <div className=""mt-8 text-sm text-cyan-200"></div>"
               <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
   )};
-
 export default IotEdgePage;
-

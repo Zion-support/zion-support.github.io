@@ -2,10 +2,10 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import {CheckCircle, Star, TrendingUp, Brain, Target, Phone, Mail, MapPin} from 'lucide-react';
 const MicroSAASPage: React.FC = () => {;
-const _microSAASServices="[]"
+const _microSAASServices = []
     // AI-Powered Developer Tools;
 const MicroSAASPage: React.FC = () => {}
-  const _microSAASServices="[]"
+  const _microSAASServices = []
     /
     {}
       titl,
@@ -3935,7 +3935,7 @@ $4},
       contactInfo:     ,
 $4}
   ];
-  const categories="[]"
+  const categories = []
       contactInfo: 'Contac,
     t: kleber@ziontechgroup.com | +1 302 464 0950'
     }
@@ -3990,7 +3990,7 @@ return (
   return (<div>Coming Soon<)
   );
 };
-  const _microSAASServices="[]"
+  const _microSAASServices = []
   /
   O: Add items;
 ];;
@@ -7849,7 +7849,7 @@ return (
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     }
   ];
-const realEstateSaaS="[]"
+const realEstateSaaS = []
     {/* TODO: Fix JSX expression */}
   O: Add content}
     {/* TODO: Fix JSX expression *
@@ -11763,7 +11763,7 @@ const realEstateSaaS="[]"
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     }
   ];
-const categories="[]"
+const categories = []
     {/* TODO: Fix JSX expression *
   ,
     t: microSAASServices.length },
@@ -12036,7 +12036,7 @@ const categories="[]"
                   <
                 <
                 <div className=""text-center"></div>"
-                  <a href={`mailto:kleber@ziontechgroup.com?subject="Interest in ${service.title}`}></a>"
+                  <a href={`mailto:kleber@ziontechgroup.com?subject = "Interest in ${service.title}`}></a>"
                     className=""w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover: from-purple-700 hover:to-blue-700 transition-all inline-block">"
                     Get Started Now;
                   <
@@ -12046,7 +12046,7 @@ const categories="[]"
                   <a><
                     href="{/* TODO: Fix JSX expression *"
   ,
-    o:kleber@ziontechgroup.com?subject="Interest in ${service.title}`}""
+    o:kleber@ziontechgroup.com?subject = "Interest in ${service.title}`}""
                     className=""w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium,""
   hover:from-purple-700,"
   hover:to-blue-700 transition-all inline-block"

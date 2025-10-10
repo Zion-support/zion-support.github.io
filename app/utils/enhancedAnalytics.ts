@@ -33,7 +33,7 @@ class EnhancedAnalytics {}
   private sessionId: string,
   private isInitialized="false;"
   private batchSize="10;"
-  private flushInterval="30000; // 30 seconds;"
+  private flushInterval = "30000; // 30 seconds;"
   private offlineQueue: AnalyticsEvent[] = []
   constructor() {,
     this.sessionId="this.generateSessionId(),"
@@ -189,7 +189,7 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
   sessionId: string,
   private isInitialized="false;"
   private batchSize="10;"
-  private flushInterval="30000; // 30 seconds;"
+  private flushInterval = "30000; // 30 seconds;"
   private,
   offlineQueue: AnalyticsEvent[] = [];
   constructor() {/* TODO: Fix JSX expression */}
@@ -414,7 +414,7 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
   }
 }
 // Export singleton instance;
-export const analytics="new EnhancedAnalytics()"
+export const analytics = "new EnhancedAnalytics()"
 export default analytics;
   public trackCustomEvent(categor,
   y: string,
@@ -449,6 +449,6 @@ export default analytics;
   }
 }
 // Export singleton instance;
-export const analytics="new EnhancedAnalytics();"
+export const analytics = "new EnhancedAnalytics();"
 export default analytics;
 `

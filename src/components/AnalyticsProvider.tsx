@@ -1,11 +1,10 @@
 import React, { createContext, useContext, useEffect, ReactNode } from 'react';
-
 interface AnalyticsContextType {}
   track: (event: string, properties?: Record<string, any>) => void;
   page: (name: string, properties?: Record<string, any>) => void;
   identify: (userId: string, traits?: Record<string, any>) => void}
 ;
-const AnalyticsContext="createContext<AnalyticsContextType | undefined>(undefined);"
+const AnalyticsContext = "createContext<AnalyticsContextType | undefined>(undefined);"
 interface AnalyticsProviderProps {}
   children: ReactNode;
   trackingId?: string}
@@ -22,9 +21,8 @@ const script="document.createElement('script');"
       script.async="true;"
       script.src = `https://www.googletagmanager.com/gtag/js?id="${trackingId}`;"
       document.head.appendChild(script);
-
       // Initialize gtag;
-      window.dataLayer="window.dataLayer || [];"
+      window.dataLayer = "window.dataLayer || [];"
       function gtag(...args: any[]) {}
         window.dataLayer.push(args)}
       window.gtag="gtag;"
@@ -73,19 +71,16 @@ const value: AnalyticsContextType="{}"
     track,
     page,
     identify};
-
   return (
-    <AnalyticsContext.Provider value="{value}></AnalyticsContext>"
+    <AnalyticsContext.Provider value = "{value}></AnalyticsContext>"
       {children}
     </AnalyticsContext.Provider>
   )};
-
-export const useAnalytics = (): AnalyticsContextType="> {;"
+export const useAnalytics = (): AnalyticsContextType = "> {;"
 const context="useContext(AnalyticsContext);"
   if (context === undefined) {}
     throw new Error('useAnalytics must be used within an AnalyticsProvider')}
   return context};
-
 // Declare global gtag function;
 declare global {}
   interface Window {}

@@ -1,5 +1,4 @@
 import React from 'react';
-
 interface NewestContent2025BannerProps {/* TODO: Fix JSX expression */}
 }
 ;
@@ -8,6 +7,4 @@ const,
       {/* Component content */}
     </div>
   )};
-
 export default NewestContent2025Banner;
-

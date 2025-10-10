@@ -1,6 +1,5 @@
 #!/usr/bin/env node;
 import fs from 'fs';
-
 // Function to fix the blog page specifically;
 function fixBlogPage(content) {}
   let fixed="content;"
@@ -26,13 +25,12 @@ function fixBlogPage(content) {}
     .replace(/([^;}])\n\s*}/g, '$1;\n}')
     // Fix missing closing parentheses;
     .replace(/([^)])\n\s*}/g, '$1)\n}');
-  
   return fixed;
 }
 
 // Read and fix the blog page;
 try {}
-  const content="fs.readFileSync('app/blog/page.tsx', 'utf8');"
+  const content = "fs.readFileSync('app/blog/page.tsx', 'utf8');"
   const fixed="fixBlogPage(content);"
   fs.writeFileSync('app/blog/page.tsx', fixed);
   console.log('Blog page fixed successfully!');

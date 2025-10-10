@@ -1,5 +1,4 @@
 import React from 'react';
-
       'Quantum computing, Biological algorithms, Bioinformatics, React, Node && Node.js, PostgreSQL, Redis, AWS'],
     realImplementation: true;
   id: string;

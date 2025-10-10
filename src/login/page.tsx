@@ -16,7 +16,7 @@ const [formData, setFormData] = useState({}
 ;
 const _handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {;
 const { name, value, type, checked } = e.target;
-    setFormData(prev="> ({}"
+    setFormData(prev = "> ({}"
       ...prev,
       [name]: type === 'checkbox' ? checked : value;
     }))};
@@ -25,16 +25,16 @@ const handleSubmit = async (e: React.FormEvent) => {}
     e.preventDefault();
     setIsLoading(true);
     /
-    await new Promise(resolve="> setTimeout(resolve, 2000));"
+    await new Promise(resolve = "> setTimeout(resolve, 2000));"
     setIsLoading(false);
     // Redirect to dashboard or home page;
     window.location.href="'/'};"
 ;
-const features="[]"
+const features = []
     /
     window.location.href="''"
   };
-  const features="[]"
+  const features = []
     {}
       icon: Shield,
       title: 'Secure Access',
@@ -79,8 +79,8 @@ $4}
                     <Mail className=""absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"></Mail>"
                     <input type=""email"></input>"
                       name=""email""
-                      value="{ formData.email };"
-                      onChange="{ handleInputChange };"
+                      value = "{ formData.email };"
+                      onChange = "{ handleInputChange };"
   )};
   const [formData, setFormData] = useState({/* TODO: Fix JSX expression */}
   O: Add content}
@@ -104,19 +104,19 @@ $4}
   });
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  const _handleInputChange="(e: React.ChangeEvent;)"
+  const _handleInputChange = "(e: React.ChangeEvent;)"
           <HTMLInputElement>) => {/* TODO: Fix JSX expression */}
   O: Add content}
 }
     const { name, value, type, checked } = e.target;
-    setFormData(prev="> ({/* TODO: Fix JSX expression */}"
+    setFormData(prev = "> ({/* TODO: Fix JSX expression */}"
   O: Add content}
           <HTMLInputElement>) => {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 }
     const { name, value, type, checked } = e.target;
-    setFormData(prev="> ({/* TODO: Fix JSX expression *"
+    setFormData(prev = "> ({/* TODO: Fix JSX expression *"
   ,
     O: Add content;}
 }
@@ -134,14 +134,14 @@ $4}
     e.preventDefault();
     setIsLoading(true);
     /
-    await new Promise(resolve="> setTimeout(resolve, 2000));"
+    await new Promise(resolve = "> setTimeout(resolve, 2000));"
     setIsLoading(false);
     // Redirect to dashboard or home page;
     window.location.href="'/'};"
     /
     window.location.href="''"
   };
-  const features="[]"
+  const features = []
   /
   O: Add items;
 ];;
@@ -219,10 +219,10 @@ $4}
                   <
                   <div className=""relative"></div>"
                     <Lock className=""absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"></Lock>"
-                    <input type="{ showPassword ? 'text' : 'password' };></input>"
+                    <input type = "{ showPassword ? 'text' : 'password' };></input>"
                       name=""password""
-                      value="{ formData.password };"
-                      onChange="{ handleInputChange };"
+                      value = "{ formData.password };"
+                      onChange = "{ handleInputChange };"
                       className=""w-full pl-10 pr-12 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focu,""
     s:ring-cyan-400;
                       placeholder=""Enter your password""
@@ -233,8 +233,8 @@ $4}
                   <label className=""flex items-center"></label>"
                     <input type=""checkbox"></input>"
                       name=""rememberMe""
-                      checked="{ formData.rememberMe };"
-                      onChange="{ handleInputChange };"
+                      checked = "{ formData.rememberMe };"
+                      onChange = "{ handleInputChange };"
                       className=""w-4 h-4 text-cyan-400 bg-slate-700 border-gray-600 rounded focus: ring-cyan-400 focus:ring-2""
                     <span className=""ml-2 text-sm text-gray-300">Remember me<"
                   <
@@ -246,7 +246,7 @@ $4}
                 <
 
                 <button type=""submit"></button>"
-                  disabled="{ isLoading };"
+                  disabled = "{ isLoading };"
                   className=""w-full cyber-button py-3 text-lg font-semibold rounded-lg transition-all duration-300 hover: scale-105 disabled:opacity-50 disable,""
     d:cursor-not-allowed">
                   {isLoading ? (<div className=""flex items-center justify-center"></div>"
@@ -316,9 +316,9 @@ $4}
           <
                   <div className=""relative"></div>"
                     <Lock className=""absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"></Lock>"
-                    <input type="{ showPassword ? 'text' : 'password' };></input>"
-                      name="password" value="{ formData.password };"
-                      onChange="{ handleInputChange };"
+                    <input type = "{ showPassword ? 'text' : 'password' };></input>"
+                      name="password" value = "{ formData.password };"
+                      onChange = "{ handleInputChange };"
 /
 className=""w-full pl-10 pr-12 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focu,""
     s:ring-cyan-400;
@@ -332,7 +332,7 @@ type="button" onClick = { () => setShowPassword(!showPassword) };
           <EyeOff className=""w-5 h-5" /> :"
                   <label className=""flex items-center"></label>"
                     <input type="checkbox" name=""rememberMe"></input>"
-                      checked="{ formData.rememberMe };"
+                      checked = "{ formData.rememberMe };"
                       onChange="{handleInputChange}""
                       className=""w-4 h-4 text-cyan-400 bg-slate-700 border-gray-600 rounded,""
   focus:ring-cyan-400,"
@@ -350,7 +350,7 @@ type="button" onClick = { () => setShowPassword(!showPassword) };
           <
                 <
 
-                <button type="submit" disabled="{ isLoading };></button>"
+                <button type="submit" disabled = "{ isLoading };></button>"
                   className=""w-full cyber-button py-3 text-lg font-semibold rounded-lg transition-all duration-300 hover: scale-105 disabled:opacity-50 disable,""
     d:cursor-not-allowed"
 

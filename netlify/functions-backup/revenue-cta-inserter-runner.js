@@ -1,4 +1,4 @@
-exports.handler="async function () {/* TODO: Fix JSX expression */}"
+exports.handler = "async function () {/* TODO: Fix JSX expression */}"
   const { execSync } = require('child_process');
   try {execSync('node automation/revenue-ideas-agents/generate_paid_consultation_booking_component.cjs || true')
       { stdio: 'inherit'} shell: true})

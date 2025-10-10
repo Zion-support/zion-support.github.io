@@ -59,11 +59,11 @@ return (
 switch (variant) {}
         case 'dots':
           return (
-            <div className='flex space-x-1' role='status' aria-label="'Loading'></div>"
-              {[0, 1, 2].map(i="> (</div>"
-                <div key="{i}></div>"
+            <div className='flex space-x-1' role='status' aria-label = "'Loading'></div>"
+              {[0, 1, 2].map(i = "> (</div>"
+                <div key = "{i}></div>"
                   className="{`w-2 h-2 rounded-full animate-bounce ${colorClasses[color].split(' ')[1]}`}"
-                  style="{{ animationDelay: `${i * 0.1}s` }}"
+                  style = "{{ animationDelay: `${i * 0.1}s` }}"
                 />
               ));</div>
           );
@@ -83,9 +83,9 @@ switch (variant) {}
           );
         case 'bars':
           return (
-            <div className='flex space-x-1' role='status' aria-label="'Loading'></div>"
-              {[0, 1, 2, 3].map(i="> (</div>"
-                <div key="{i}></div>"
+            <div className='flex space-x-1' role='status' aria-label = "'Loading'></div>"
+              {[0, 1, 2, 3].map(i = "> (</div>"
+                <div key = "{i}></div>"
                   className="{`w-1 ${colorClasses[color].split(' ')[1]} animate-pulse`}"
                   style="{{}"
                     height: `${12 + i * 4}px`,

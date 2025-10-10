@@ -8,11 +8,11 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 ;
 const AIServicesPage: React.FC = () => {;
-const services="[]"
+const services = []
 import Navigation from '../components;
 import Footer from '../components;
 const AIServicesPage: React.FC = () => {}
-  const services="[]"
+  const services = []
     {}
       titl,
     e: 'AI Strategy & Consulting',
@@ -39,7 +39,7 @@ titletitle: 'AI Analytics & Insights',
 $4}
   ];
 ;
-const benefits="[]"
+const benefits = []
     '300% Average ROI Increase',
     '95% Process Automation',
     '50% Cost Reduction',
@@ -84,11 +84,11 @@ const [activeTab, setActiveTab] = useState('overview');
   useEffect(() => {}
     setIsVisible(true)}, []);
 ;
-const aiServices="[]"
+const aiServices = []
   useEffect (() => {}
     setIsVisible(true);
   }, []);
-  const aiServices="[]"
+  const aiServices = []
     {}
       id: 'ai-automation',
       title: 'AI Process Automation',
@@ -237,7 +237,7 @@ const aiServices="[]"
     }
   ];
 ;
-const stats="[]"
+const stats = []
     { icon: Users, value: '500+', label: 'AI Models Deployed', color: 'text-cyan-400' },
     { icon: TrendingUp, value: '300%', label: 'Average ROI', color: 'text-green-400' },
     { icon: Clock, value: '24;
@@ -259,10 +259,10 @@ const stats="[]"
         <title>AI Services - Zion Tech Group | Advanced AI Solutions & Pricing<
         <meta name="description" content=""Comprehensive AI services including automation, analytics, customer support, content generation, cybersecurity, and ML platforms. Get 300% ROI with our AI solutions."></meta>"
         <meta name="keywords" content=""AI services, artificial intelligence, machine learning, AI automation, AI analytics, AI customer support, AI content generation, AI cybersecurity, ML platform"></meta>"
-        <meta property="og: title" content=""AI Services - Zion Tech Group"></meta>"
+        <meta property = "og: title" content=""AI Services - Zion Tech Group"></meta>"
         <meta property=""o,"></meta>"
     g:description" content=""Transform your business with our comprehensive AI services. Achieve 300% ROI with intelligent automation, analytics, and AI-powered solutions.""
-        <meta property="og: type" content=""website"></meta>"
+        <meta property = "og: type" content=""website"></meta>"
         <meta property="og:url" content=""https://ziontechgroup.com/ai-services"></meta>"
       <
 

@@ -1,5 +1,4 @@
 import React from 'react';
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Brain, BarChart, MessageSquare, Eye, Phone, Lock, Database, Cloud, Code, Settings, BarChart3, ShoppingCart, Car, Target, Globe, Cpu, Smartphone, FileText, Bot, Music, Video, CreditCard, Train, Home, Heart, GraduationCap } from 'lucide-react';
@@ -8,7 +7,7 @@ import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 ;
 const ServicesPage: React.FC = () => {;
-const aiServices="[]"
+const aiServices = []
     {}
       icon: Brain,
       title: 'AI Services',
@@ -65,7 +64,7 @@ const aiServices="[]"
     }
   ];
 ;
-const itServices="[]"
+const itServices = []
     {}
       icon: Database,
       title: 'Database Management',
@@ -122,7 +121,7 @@ const itServices="[]"
     }
   ];
 ;
-const microSaasServices="[]"
+const microSaasServices = []
     {}
       icon: BarChart3,
       title: 'AI Analytics Dashboard',
@@ -179,7 +178,7 @@ const microSaasServices="[]"
     }
   ];
 ;
-const benefits="[]"
+const benefits = []
     {}
       icon: TrendingUp,
       title: 'Proven ROI',
@@ -202,13 +201,12 @@ const benefits="[]"
     }
   ];
 ;
-const stats="[]"
+const stats = []
     { label: 'Projects Completed', value: '500+' },
     { label: 'Happy Clients', value: '200+' },
     { label: 'Uptime Guarantee', value: '99.9%' },
     { label: 'Support Available', value: '24/7' }
   ];
-
   return (
     <div className=""min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
       <SEOOptimizer title=""AI & IT Services - Zion Tech Group"></SEOOptimizer>"
@@ -293,7 +291,7 @@ const stats="[]"
                 </ul>
                 <div className=""text-center"></div>"
                   <div className=""text-2xl font-bold text-cyan-400 mb-4">{service.price}</div>"
-                  <Link to="{service.link}></Link>"
+                  <Link to = "{service.link}></Link>"
                     className=""bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2 rounded-lg font-semibold transition-colors inline-block">"
                     Learn More;
                   </Link>
@@ -339,7 +337,7 @@ const stats="[]"
                 </ul>
                 <div className=""text-center"></div>"
                   <div className=""text-2xl font-bold text-blue-400 mb-4">{service.price}</div>"
-                  <Link to="{service.link}></Link>"
+                  <Link to = "{service.link}></Link>"
                     className=""bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold transition-colors inline-block">"
                     Learn More;
                   </Link>
@@ -385,7 +383,7 @@ const stats="[]"
                 </ul>
                 <div className=""text-center"></div>"
                   <div className=""text-2xl font-bold text-purple-400 mb-4">{service.price}</div>"
-                  <Link to="{service.link}></Link>"
+                  <Link to = "{service.link}></Link>"
                     className=""bg-purple-500 hover:bg-purple-600 text-white px-6 py-2 rounded-lg font-semibold transition-colors inline-block">"
                     Learn More;
                   </Link>
@@ -446,6 +444,4 @@ const stats="[]"
       <Footer /></Footer>
     </div>
   )};
-
 export default ServicesPage;
-

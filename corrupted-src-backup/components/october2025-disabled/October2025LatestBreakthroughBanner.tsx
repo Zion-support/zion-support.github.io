@@ -12,7 +12,7 @@ return (
     <div, classNam, e=""bg-gradie, n, t-to-br, fro, m-bl, u, e-900, vi, a-purp, l, e-900, t, o-indi, g, o-900, p, y-16, p, x-4, relative, overflow-hidd, e, n"  > {/* Animated, background, effects */ }</div>"
       <div, className=""absolute, inse, t-0, opacit, y-20"></div>"
         <div, className=""absolute, to, p-0, lef, t-0 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e" /></div>"
-        <div, className="absolute, botto, m-0, righ, t-0 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e" sty, l, e="{{ animationDel, a, y: ', 1, s' }} /></div>"
+        <div, className="absolute, botto, m-0, righ, t-0 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e" sty, l, e = "{{ animationDel, a, y: ', 1, s' }} /></div>"
       </div>
       <div, classNam, e=""m, a, x-w-7xl, m, x-auto, relative, z-10"></div>"
         {/* Header, Sectio, n */}</div>
@@ -33,11 +33,11 @@ return (
         {/* Content, Card, s */})
         <div, classNam, e=""grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">)"
           {  octoberLatestBreakthroughConte, n, t.m, a, p((cont, e, n, t) = > {;
-const Ico, n = conte, n, t.ic, o, n === "🚀" ? Z, a, p : conte, n, t.ic, o, n === "⚡"  ? Databa, s, e  : B, o, t; return(<Link , ke, y = { conte, n, t., i, d   }, to="{`/bl, o, g/${conte, n, t.slug}`}></Link>"
+const Ico, n = conte, n, t.ic, o, n === "🚀" ? Z, a, p : conte, n, t.ic, o, n === "⚡"  ? Databa, s, e  : B, o, t; return(<Link , ke, y = { conte, n, t., i, d   }, to = "{`/bl, o, g/${conte, n, t.slug}`}></Link>"
             const Ico, n = conte, n, t.ic, o, n === "🚀" ? Z, a, p : conte, n, t.ic, o, n === "⚡"  ? Databa, s, e  : B, o, t; return (</div>
-              <Link , ke, y = { conte, n, t., i, d   }, to="{`/bl, o, g/${conte, n, t.slug}`}></Link>"
+              <Link , ke, y = { conte, n, t., i, d   }, to = "{`/bl, o, g/${conte, n, t.slug}`}></Link>"
                 className=""group, b, g-whi, t, e/10, backdro, p-bl, u, r-md, border, border-whi, t, e/20, rounde, d-x, l, p-6, hove, r: bg-whi, t, e/20, hove, r:sca, l, e-105, transitio, n-all, duratio, n-3, 0, 0">"
-                <div, className="flex, item, s-start, ga, p-4, m, b-4" ></div> <div, classNam, e="{ `bg-gradie, n, t-to-br ${conte, n, t.grad, i, e, n, t }, p-3, rounde, d-lg`}></div>"
+                <div, className="flex, item, s-start, ga, p-4, m, b-4" ></div> <div, classNam, e = "{ `bg-gradie, n, t-to-br ${conte, n, t.grad, i, e, n, t }, p-3, rounde, d-lg`}></div>"
                     <Icon, classNam, e=""w-6 h-6, tex, t-whi, t, e" /></Icon>"
                   </div>
                   <div, className=""fl, e, x-1"></div>"
@@ -47,7 +47,7 @@ const October2025LatestBreakthroughBanne, r = () => {/* TODO: Fix JSX expression
     <div, classNam, e=""bg-gradie, n, t-to-br, fro, m-bl, u, e-900, vi, a-purp, l, e-900, t, o-indi, g, o-900, p, y-16, p, x-4, relative, overflow-hidd, e, n"  > {/* Animated, background, effects */ }""
       <div, className=""absolute, inse, t-0, opacit, y-20"></div>""
         <div, className=""absolute, to, p-0, lef, t-0 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e" /></div>""
-        <div, className="absolute, botto, m-0, righ, t-0 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e" sty, l, e="{{ animationDel, a, y: ', 1, s' }} /></div>"
+        <div, className="absolute, botto, m-0, righ, t-0 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e" sty, l, e = "{{ animationDel, a, y: ', 1, s' }} /></div>"
       </div>"
       <div, classNam, e=""m, a, x-w-7xl, m, x-auto, relative, z-10"></div>"
         {/* Header, Sectio, n */}"
@@ -68,10 +68,10 @@ const October2025LatestBreakthroughBanne, r = () => {/* TODO: Fix JSX expression
         {/* Content, Card, s */}"
         <div, classNam, e=""grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8"></div>"
           {/* TODO: Fix JSX expression */}
-              <Link , ke, y = { conte, n, t., i, d   }, to="{`/bl, o, g/${conte, n, t.slug}`}"></Link>"
+              <Link , ke, y = { conte, n, t., i, d   }, to = "{`/bl, o, g/${conte, n, t.slug}`}"></Link>"
                 className=""group, b, g-whi, t, e/10, backdro, p-bl, u, r-md, border, border-whi, t, e/20, rounde, d-x, l, p-6, hove, r: bg-whi, t, e/20, hove, r:sca, l, e-105, transitio, n-all, duratio, n-3, 0, 0""
               ></Link>"`
-                <div, className="flex, item, s-start, ga, p-4, m, b-4" > <div, classNam, e="{ `bg-gradie, n, t-to-br ${conte, n, t.grad, i, e, n, t }, p-3, rounde, d-lg`}></div>""
+                <div, className="flex, item, s-start, ga, p-4, m, b-4" > <div, classNam, e = "{ `bg-gradie, n, t-to-br ${conte, n, t.grad, i, e, n, t }, p-3, rounde, d-lg`}></div>""
                     <Icon, classNam, e=""w-6 h-6, tex, t-whi, t, e" /></Icon>"
                   </div>"
                   <div, className=""fl, e, x-1"></div>""

@@ -12,5 +12,4 @@ const optimizePerformance = () => {}
   // 5. Generate service worker;
   // console.log removed for production;
 };
-
 optimizePerformance();

@@ -7,7 +7,6 @@ export const metadata: Metadata="{,"
     title: 'Quantum Neural Consensus Implementation',
     description: 'Professional Quantum Neural Consensus Implementation services from Zion Tech Group.',
     type: 'website'}};
-
 export default function QuantumNeuralConsensusImplementation() {}
   return(<div className=""min-h-screen bg-gray-50"></div>"
       <div className=""max-w-4xl mx-auto px-4 py-8"></div>"
@@ -32,9 +31,8 @@ export default function QuantumNeuralConsensusImplementation() {}
         </div>)
       </div>)
 export const,
-  metadata: Metadata="{/* TODO: Fix JSX expression */}"
+  metadata: Metadata = "{/* TODO: Fix JSX expression */}"
   }};
-
 export default function QuantumNeuralConsensusImplementation() {/* TODO: Fix JSX expression */}
 }
   return (<div className=""min-h-screen bg-gray-50"></div>""

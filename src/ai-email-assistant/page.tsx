@@ -3,7 +3,6 @@
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
   return (
 
     <div className=""min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
@@ -16,7 +15,6 @@ import Footer from '../components/Footer';
           <p className=""text-xl,"></p>"
   md:text-2xl text-cyan-400 mb-8 font-medium neon-glow"></p>
 // Smart Email Management with AI-Powered Intelligence;
-
           </p>
           <p className=""text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed"></p>"
             This page is under development. Please check back soon for updates.
@@ -178,6 +176,4 @@ import Footer from '../components/Footer';
       <Footer /></Footer>
     </div>
   )};
-
 export default PagePage;
-

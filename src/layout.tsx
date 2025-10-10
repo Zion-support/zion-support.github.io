@@ -1,16 +1,13 @@
 import Analytics from './components/Analytics';
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
 import Analytics from './components/Analytics';
-
 export default function RootLayout({}
   children}: {}
   children: React.ReactNode}) {;
-const structuredData="{}"
+const structuredData = {}
     '@context': 'https://schema.org',
     '@type': 'TechCompany',
     name: 'Zion Tech Group',
@@ -47,7 +44,7 @@ const structuredData="{}"
       addressCountry: 'US',
     offers: []
       {;
-const address="{}"
+const address = {}
     '@type': 'PostalAddress',
     streetAddress: '364 E Main St STE 1008',
     addressLocality: 'Middletown',
@@ -93,10 +90,10 @@ name$5: 'Cloud Infrastructure',
 $4]
   };
   return (
-    <html lang="'en'></html>"
+    <html lang = "'en'></html>"
       <head></head>
         <meta charSet=""UTF-8" /></meta>"
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit="cover" /></meta>"
+        <meta name="viewport" content = "width=device-width, initial-scale=1.0, viewport-fit="cover" /></meta>"
         {/* Primary meta tags */}
         <meta name="description" content=""Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology." /></meta>"
         <meta name="keywords" content=""AI solutions, quantum computing, autonomous systems, digital transformation, enterprise AI, machine learning, automation, cloud services, business intelligence" /></meta>"
@@ -111,22 +108,22 @@ $4]
         <link rel='icon' type='image/png' sizes='32x32' href="'/favicon-32x32.png' /></link>"
         <link rel='icon' type='image/png' sizes='16x16' href="'/favicon-16x16.png' /></link>"
         <link rel='manifest' href="'/site.webmanifest' /></link>"
-        <meta name='theme-color' content="'#4f46e5' /></meta>"
+        <meta name='theme-color' content = "'#4f46e5' /></meta>"
         {/* Enhanced SEO meta tags */}
-        <meta name='publisher' content="'Zion Tech Group' /></meta>"
-        <meta name='copyright' content="'Zion Tech Group' /></meta>"
-        <meta name='language' content="'en' /></meta>"
-        <meta name='revisit-after' content="'3 days' /></meta>"
-        <meta name='distribution' content="'global' /></meta>"
-        <meta name='rating' content="'general' /></meta>"
-        <meta name='format-detection' content='telephone="yes' /></meta>"
-        <meta name='mobile-web-app-capable' content="'yes' /></meta>"
-        <meta name='apple-mobile-web-app-capable' content="'yes' /></meta>"
-        <meta name='apple-mobile-web-app-status-bar-style' content="'default' /></meta>"
-        <meta name='apple-mobile-web-app-title' content="'Zion Tech Group' /></meta>"
-        <meta name='application-name' content="'Zion Tech Group' /></meta>"
-        <meta name='msapplication-TileColor' content="'#4f46e5' /></meta>"
-        <meta name='msapplication-config' content="'/browserconfig.xml' /></meta>"
+        <meta name='publisher' content = "'Zion Tech Group' /></meta>"
+        <meta name='copyright' content = "'Zion Tech Group' /></meta>"
+        <meta name='language' content = "'en' /></meta>"
+        <meta name='revisit-after' content = "'3 days' /></meta>"
+        <meta name='distribution' content = "'global' /></meta>"
+        <meta name='rating' content = "'general' /></meta>"
+        <meta name='format-detection' content='telephone = "yes' /></meta>"
+        <meta name='mobile-web-app-capable' content = "'yes' /></meta>"
+        <meta name='apple-mobile-web-app-capable' content = "'yes' /></meta>"
+        <meta name='apple-mobile-web-app-status-bar-style' content = "'default' /></meta>"
+        <meta name='apple-mobile-web-app-title' content = "'Zion Tech Group' /></meta>"
+        <meta name='application-name' content = "'Zion Tech Group' /></meta>"
+        <meta name='msapplication-TileColor' content = "'#4f46e5' /></meta>"
+        <meta name='msapplication-config' content = "'/browserconfig.xml' /></meta>"
         <link rel='canonical' href="'https://ziontechgroup.com' /></link>"
         <link rel='alternate' hrefLang='en' href="'https://ziontechgroup.com' /></link>"
         {/* Resource hints for better performance */}
@@ -152,14 +149,14 @@ $4]
         <meta name="twitter:site" content=""@ziontechgroup" /></meta>"
         <meta name="twitter:creator" content=""@ziontechgroup" /></meta>"
         {/* Enhanced Twitter Card tags */}
-        <meta name='twitter:card' content="'summary_large_image' /></meta>"
-        <meta name='twitter:title' content="'Zion Tech Group - AI & Technology Solutions' /></meta>"
-        <meta name='twitter:description' content="'Transform your business with cutting-edge AI solutions and digital transformation services.' /></meta>"
-        <meta name='twitter:image' content="'https://ziontechgroup.com/og-image.jpg' /></meta>"
-        <meta name='twitter:site' content="'@ziontechgroup' /></meta>"
-        <meta name='twitter:creator' content="'@ziontechgroup' /></meta>"
-        <script type="'application/ld+json'></script>"
-          dangerouslySetInnerHTML="{{ __html: JSON.stringify(structuredData) }}"
+        <meta name='twitter:card' content = "'summary_large_image' /></meta>"
+        <meta name='twitter:title' content = "'Zion Tech Group - AI & Technology Solutions' /></meta>"
+        <meta name='twitter:description' content = "'Transform your business with cutting-edge AI solutions and digital transformation services.' /></meta>"
+        <meta name='twitter:image' content = "'https://ziontechgroup.com/og-image.jpg' /></meta>"
+        <meta name='twitter:site' content = "'@ziontechgroup' /></meta>"
+        <meta name='twitter:creator' content = "'@ziontechgroup' /></meta>"
+        <script type = "'application/ld+json'></script>"
+          dangerouslySetInnerHTML = "{{ __html: JSON.stringify(structuredData) }}"
         />
       </head>
       <body className="'antialiased'></body>"
@@ -171,7 +168,6 @@ $4]
       </body>
     </html>
   );
-
 export default RootLayout;
         priceSpecification: {// TODO: Add content}
 }

@@ -1,11 +1,10 @@
 #!/usr/bin/env node;
 import fs from 'fs';
 import { glob } from 'glob';
-
 // Function to optimize React components for better performance;
 function optimizeComponent(filePath) {}
   try {;
-let content="fs.readFileSync(filePath, 'utf8');"
+let content = "fs.readFileSync(filePath, 'utf8');"
     let modified="false;"
     // Add React.memo to functional components that don't have it;
     if (content.includes('const ') && content.includes(': React.FC') && !content.includes('React.memo')) {}
@@ -21,14 +20,14 @@ function optimizeComponent(filePath) {/* TODO: Fix JSX expression */}
 }
     
     // Check for missing key props in lists;
-    if (content.includes('.map(') && !content.includes('key="')) {'"
-    if (content.includes('.map(') && !content.includes('key="')) {/* TODO: Fix JSX expression */}`'"
+    if (content.includes('.map(') && !content.includes('key = "')) {'"
+    if (content.includes('.map(') && !content.includes('key = "')) {/* TODO: Fix JSX expression */}`'"
       // // console.log removed for production;
 without key props`)}
     
     // Check for inline object/function definitions in JSX;
-    if (content.includes('style={{') || content.includes('onClick="{()')) {}"
-    if (content.includes('style="{/* TODO: Fix JSX expression */})`"
+    if (content.includes('style={{') || content.includes('onClick = "{()')) {}"
+    if (content.includes('style = "{/* TODO: Fix JSX expression */})`"
       // // console.log removed for production;
 }
     
@@ -39,13 +38,12 @@ return false}
 
 // Function to add performance optimizations;
 async function addPerformanceOptimizations() {;
-const componentFiles="await glob('app/components/**/*.{ts,tsx}', {)"
+const componentFiles = "await glob('app/components/**/*.{ts,tsx}', {)"
     ignore: ['**/node_modules/**', '**/dist/**', '**/build/**'])
 async function addPerformanceOptimizations() {/* TODO: Fix JSX expression */}
 }
-  const componentFiles="await glob('app/components/**/*.{ts,tsx}', {/* TODO: Fix JSX expression */})"
+  const componentFiles = "await glob('app/components/**/*.{ts,tsx}', {/* TODO: Fix JSX expression */})"
   });
-  
   // // console.log removed for production;
 ;
 let totalFiles="0;"
@@ -75,13 +73,12 @@ function createPerformanceMonitor() {}
 // Function to create a performance monitoring component;
 function createPerformanceMonitor() {/* TODO: Fix JSX expression */}
 }`;
-const performanceMonitorContent="`import React, { useEffect, useState } from 'react';"
+const performanceMonitorContent = "`import React, { useEffect, useState } from 'react';"
 interface PerformanceMetrics {/* TODO: Fix JSX expression */}
 }
 
 export default PerformanceMonitor;`
 `;
-
   fs.writeFileSync('app/components/PerformanceMonitor.tsx', performanceMonitorContent);
   // // console.log removed for production;
 }
@@ -90,7 +87,7 @@ export default PerformanceMonitor;`
 function createImageOptimization() {;
 function createImageOptimization() {/* TODO: Fix JSX expression */}
 }`;
-const imageOptimizationContent="`import React from 'react';"
+const imageOptimizationContent = "`import React from 'react';"
 interface OptimizedImageProps {/* TODO: Fix JSX expression */}
 }
 ;
@@ -109,7 +106,7 @@ return (
       width="{width}"
       height="{height})"
       className="{\`\${className}\`})"
-      loading="{priority ? 'eager' : 'lazy'})"
+      loading = "{priority ? 'eager' : 'lazy'})"
       decoding=""async")"
       style="{{})"
         width: width ? \`\${width}px\` : 'auto')
@@ -124,19 +121,17 @@ const,
       width="{width}"
       height="{height}`"
       className="{\`\${className}\`}"
-      loading="{priority ? 'eager' : 'lazy'}"
+      loading = "{priority ? 'eager' : 'lazy'}"
       decoding=""async""
-      style="{/* TODO: Fix JSX expression */}`"
+      style = "{/* TODO: Fix JSX expression */}`"
   h: width ? \`\${width}px\` : 'auto',
         heigh,`
   t: height ? \`\${height}px\` : 'auto'
       }}
     /></img>
   )};
-
 export default OptimizedImage;`
 `;
-
   fs.writeFileSync('app/components/OptimizedImage.tsx', imageOptimizationContent);
   // // console.log removed for production;
 }
@@ -149,7 +144,6 @@ async function main() {/* TODO: Fix JSX expression */}
 await addPerformanceOptimizations();
   createPerformanceMonitor();
   createImageOptimization();
-  
   // // console.log removed for production;
 }
 

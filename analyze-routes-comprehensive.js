@@ -2,11 +2,10 @@ import https from 'https';
 import http from 'http';
 import { JSDOM } from 'jsdom';
 import fs from 'fs';
-
 // Configuration;
-const BASE_URL="'https: //ziontechgroup.com';"
+const BASE_URL = "'https: //ziontechgroup.com';"
 const TIMEOUT="10000;"
-const USER_AGENT="'Mozilla/5.0 (compatible; ZionTechBot/1.0)';"
+const USER_AGENT = "'Mozilla/5.0 (compatible; ZionTechBot/1.0)';"
 // All routes defined in the app;
 const definedRoutes="[,"
   '/',
@@ -229,22 +228,20 @@ const definedRoutes="[,"
   '/accessibility',
   '/sitemap'
 ];
-
 // Track results;
-const results="{}"
+const results = {}
   working: [],
   broken: [],
   errors: [],
   total: 0};
-
 // Helper function to make HTTP requests;
 function makeRequest(url) {}
   return new Promise((resolve, reject) => {;
-const urlObj="new URL(url);"
+const urlObj = "new URL(url);"
     const isHttps = urlObj.protocol === 'https: ';
-    const client="isHttps ? https : http;"
+    const client = "isHttps ? https : http;"
     ;
-const requestOptions="{}"
+const requestOptions = {}
       hostname: urlObj.hostname;
       port: urlObj.port || (isHttps ? 443 : 80)
       path: urlObj.pathname + urlObj.search;
@@ -263,32 +260,27 @@ const req = client.request(requestOptions, (res) => {;
 let data="'';"
       res.on('data', (chunk) => {}
         data += chunk});
-      
       res.on('end', () => {}
         resolve({)
           statusCode: res.statusCode;)
           headers: res.headers),
           body: data),
           url: url})})});
-
     req.on('error', (error) => {}
       reject(error)});
-
     req.on('timeout', () => {}
       req.destroy();
       reject(new Error('Request timeout'))});
-
     req.setTimeout(TIMEOUT);
     req.end()})}
 
 // Analyze a single route;
 async function analyzeRoute(route) {;
-const url="BASE_URL + route;"
+const url = "BASE_URL + route;"
   results.total++;
-  
   try {}
     // console.log removed for production;
-const response="await makeRequest(url);"
+const response = "await makeRequest(url);"
     if (response.statusCode >= 200 && response.statusCode < 300) {}
       results.working.push({)
         route: route),
@@ -322,8 +314,8 @@ async function analyzeAllRoutes() {}
 // Process routes in batches to avoid overwhelming the server;
   const batchSize="10;"
   for (let i = 0; i < definedRoutes.length; i += batchSize) {;
-const batch="definedRoutes.slice(i, i + batchSize);"
-    const promises = batch.map(route="> analyzeRoute(route));"
+const batch = "definedRoutes.slice(i, i + batchSize);"
+    const promises = batch.map(route = "> analyzeRoute(route));"
     try {}
       await Promise.all(promises)} catch (error) {}
       // console.log removed for production;
@@ -331,11 +323,11 @@ const batch="definedRoutes.slice(i, i + batchSize);"
     
     // Small delay between batches;
     if (i + batchSize < definedRoutes.length) {}
-      await new Promise(resolve="> setTimeout(resolve, 1000))}"
+      await new Promise(resolve = "> setTimeout(resolve, 1000))}"
   }
 
   // Generate report;
-  const report="{}"
+  const report = {}
     timestamp: new Date().toISOString()
     baseUrl: BASE_URL;
     summary: {}
@@ -346,10 +338,8 @@ const batch="definedRoutes.slice(i, i + batchSize);"
     working: results.working;
     broken: results.broken;
     errors: results.errors};
-
   // Save detailed report;
   fs.writeFileSync('route-analysis-report.json', JSON.stringify(report, null, 2));
-  
   // Generate summary;
   // console.log removed for production;
 // console.log removed for production;
@@ -358,13 +348,13 @@ const batch="definedRoutes.slice(i, i + batchSize);"
 // console.log removed for production;
 if (results.broken.length > 0) {}
     // console.log removed for production;
-results.broken.forEach(route="> {)"
+results.broken.forEach(route = "> {)"
       // console.log removed for production;
 })}
 
   if (results.errors.length > 0) {}
     // console.log removed for production;
-results.errors.forEach(route="> {)"
+results.errors.forEach(route = "> {)"
       // console.log removed for production;
 })}
 

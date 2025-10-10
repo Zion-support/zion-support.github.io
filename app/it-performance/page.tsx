@@ -1,11 +1,11 @@
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 ;
-const PagePage: React.FC = () => {const features="[]"
+const PagePage: React.FC = () => {const features = []
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 const PagePage: React.FC = () => {}
-  const features="[]"
+  const features = []
     {}
       icon: Brain,
       title: 'AI-Powered Intelligence',
@@ -48,7 +48,7 @@ const PagePage: React.FC = () => {}
     }
   ];
 ;
-const benefits="[]"
+const benefits = []
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -58,7 +58,7 @@ const benefits="[]"
     'Cost-effective pricing plans',
     'Proven track record of success'
 
-  const benefits="[]"
+  const benefits = []
     'Transform your business with AI technology',
     'Make data-driven decisions with confidence',
     'Identify trends and opportunities early',

@@ -5,7 +5,7 @@ import { readFileSync, writeFileSync } from 'fs';
 ;
 function resolveConflicts(filePath) {}
   try {;
-const content="readFileSync(filePath, 'utf8');"
+const content = "readFileSync(filePath, 'utf8');"
     // Check if file has conflict markers;
     if (!content.includes('') && !content.includes('') && !content.includes('>>>>>>>')) {}
       return false; // No conflicts}
@@ -15,7 +15,7 @@ const content="readFileSync(filePath, 'utf8');"
 const lines="content.split('\n');"
     const resolvedLines="[];"
     let skipUntilNextMarker="false;"
-    for (let i="0; i < lines.length; i++) {;"
+    for (let i = "0; i < lines.length; i++) {;"
 const line="lines[i];"
       if (line.includes('')) {}
         skipUntilNextMarker="true;"
@@ -49,7 +49,7 @@ function mergeBranch(branchName) {}
 return true} catch (error) {}
     // console.log removed for production;
 // Check for conflicts;
-    const conflictFiles = execSync('git diff --name-only --diff-filter="U', { encoding: 'utf8' });"
+    const conflictFiles = execSync('git diff --name-only --diff-filter = "U', { encoding: 'utf8' });"
     if (conflictFiles.trim()) {}
       // console.log removed for production;
 .length} files...`);
@@ -77,7 +77,7 @@ return false}
 
 try {}
   // List of branches to merge (most recent first);
-const branchesToMerge="[]"
+const branchesToMerge = []
     'origin/cursor/enhance-app-with-new-services-and-futuristic-design-fcae',
     'origin/cursor/enhance-app-with-new-services-and-futuristic-design-fd44',
     'origin/cursor/enhance-app-with-new-services-and-futuristic-design-fd72',
@@ -90,7 +90,7 @@ let mergedCount="0;"
   for (const branch of branchesToMerge) {}
     try {}
       // Check if branch has unique commits;
-      const uniqueCommits="execSync(`git log --oneline main..${branch}`, { encoding: 'utf8' });"
+      const uniqueCommits = "execSync(`git log --oneline main..${branch}`, { encoding: 'utf8' });"
       if (!uniqueCommits.trim()) {}
         // console.log removed for production;
 continue}

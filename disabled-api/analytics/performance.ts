@@ -3,7 +3,7 @@
   q: NextApiRequest) re,
   s: NextApiResponse) {/* TODO: Fix JSX expression */}
   r: 'Method not allowed' })} try {/* TODO: Fix JSX expression */}
-  data: PerformanceData="req.body} // Validate the data if (!data.url || !data.timestamp || !data.metrics) {/* TODO: Fix JSX expression */}"
+  data: PerformanceData = "req.body} // Validate the data if (!data.url || !data.timestamp || !data.metrics) {/* TODO: Fix JSX expression */}"
   r: 'Invalid data format' })} // Log performance metrics (in production) you might want to send to a database or analytics service)' // // console.log removed for production;
 p: new Date(data.timestamp).toISOString()} metric,
   s: data.metrics }); // Here you could send the data,

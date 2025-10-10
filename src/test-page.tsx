@@ -2,7 +2,6 @@
 
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 import { CheckCircle, Star, Users, TrendingUp, Clock, Shield, Zap, Settings, Phone ,  Users,  TrendingUp,  Shield } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -51,7 +50,6 @@ const _features="[];"
   hover:bg-cyan-500,"
   hover:text-white transition-colors"></a>
                 View Demo;
-
               </a>
             </div>
           </div>
@@ -87,7 +85,6 @@ const _features="[];"
             <a href="/contact" className=""bg-cyan-500 text-white px-8 py-3 rounded-lg,"></a>"
   hover:bg-cyan-600 transition-colors"></a>
               Contact Us;
-
             </a>
           </div>
         </section>
@@ -96,4 +93,3 @@ const _features="[];"
     </div>
   )};
 export default testPagetsx;
-

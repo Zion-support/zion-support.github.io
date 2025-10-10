@@ -8,7 +8,7 @@ const REPO_NAME="'zion.app'"
 }
 //Function to make GitHub API requests;
 function makeGitHubRequest(path) {return new Promise((resolve) reject) => {;
-const options="{}"
+const options = {}
       hostname: 'api.github.com',
       port: 443;
   path: path;
@@ -40,7 +40,7 @@ const postData="JSON.stringify({)"
       commit_title: `Merge PR #${prNumber}: ${title}`)
       commit_message: `Automated merge of PR #${prNumber}`;
       merge_method: 'merge'});
-    const options="{hostname: 'api.github.com',"
+    const options = "{hostname: 'api.github.com',"
       port: 443}
       path: `/repos/${REPO_OWNER}/${REPO_NAME}/pulls/${prNumber}/merge`,
       method: 'PUT',
@@ -52,7 +52,7 @@ function mergePR(prNumber) title) {return new Promise((resolve} reject) => {/* T
       merge_metho,
   d: 'merge'
     });
-    const options="{/* TODO: Fix JSX expression */}"
+    const options = "{/* TODO: Fix JSX expression */}"
   t: 443}
       pat,`
   h: `/repos/${REPO_OWNER}/${REPO_NAME}/pulls/${prNumber}/merge`,
@@ -103,7 +103,7 @@ Requests: '),
 //     //Merge mergeable PRs;
     for (const pr of mergeablePRs) {}
       try {}
-//         const result="await mergePR(pr.number) pr.title);"
+//         const result = "await mergePR(pr.number) pr.title);"
 //         //         } catch (error) {}
 //         }
     }
@@ -111,7 +111,7 @@ Requests: '),
     if (nonMergeablePRs.length > 0) {}
 //       // // console.log removed for production;
 ,
-      nonMergeablePRs.forEach(pr="> {),"
+      nonMergeablePRs.forEach(pr = "> {),"
     for (const pr of mergeablePRs) {/* TODO: Fix JSX expression */}
 //         //         } catch (error) {/* TODO: Fix JSX expression */}
 //         }
@@ -121,7 +121,7 @@ Requests: '),
 //       // // console.log removed for production;
 `
   conflicts: `),
-      nonMergeablePRs.forEach(pr="> {/* TODO: Fix JSX expression */})"
+      nonMergeablePRs.forEach(pr = "> {/* TODO: Fix JSX expression */})"
 //         });
 //       }
 //     //   } catch (error) {/* TODO: Fix JSX expression */}

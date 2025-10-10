@@ -47,13 +47,13 @@ const Sidebar: React.FC = () => {}
     return () => window.removeEventListener('resize', handleResize);)
 }, []);
 const toggleSection = (section: string) => {;
-const newExpanded="new Set(expandedSections);"
+const newExpanded = "new Set(expandedSections);"
     if (newExpanded.has(section)) {}
       newExpanded.delete(section);)
 } else {}
       newExpanded.add(section););
     setExpandedSections(newExpanded););
-const navigationSections="[]"
+const navigationSections = []
         setIsOpen(false)]
     }
     };
@@ -61,7 +61,7 @@ const navigationSections="[]"
     return () => window.removeEventListener('resize', handleResize)]
     }, []);
   const toggleSection = (section: string) => {}
-    const newExpanded="new Set(expandedSections);"
+    const newExpanded = "new Set(expandedSections);"
     if (newExpanded.has(section)) {}
       newExpanded.delete(section)]
     } else {}
@@ -69,7 +69,7 @@ const navigationSections="[]"
     }
     setExpandedSections(newExpanded)]
     };
-  const navigationSections="[]"
+  const navigationSections = []
     {}
       title: 'Main',
       items: []
@@ -269,7 +269,7 @@ const navigationSections="[]"
 }
   ];
 ;
-const contactInfo="{}"
+const contactInfo = {}
     phone: '(302) 464-0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown, DE 19709',
@@ -333,8 +333,8 @@ hours: 'Mon-Fri 9AM-6PM EST']
                   
                   {(!section.key || expandedSections.has(section.key)) && (<div className=""ml-4 space-y-1">)"
                       {section.items.map((item, itemIndex) => (<
-                        <Link key="{ itemIndex };></Link>"
-                          to="{ item.path };)"
+                        <Link key = "{ itemIndex };></Link>"
+                          to = "{ item.path };)"
                           onClick = { () => setIsOpen(false) };
                           className="{`flex items-center space-x-3 px-3 py-2 rounded-lg text-sm transition-all ${}"
                             location.pathname === item.path;
@@ -390,7 +390,7 @@ hours: 'Mon-Fri 9AM-6PM EST']
         <div className=""flex flex-col h-full"></div>"
           {/* Header */}</div>
           <div className=""flex items-center justify-between p-6 border-b border-slate-700/50"></div>"
-            <Link to="/" className="flex items-center space-x-3" onClick={() =></Link> setIsOpen(false);>
+            <Link to = "/" className="flex items-center space-x-3" onClick={() =></Link> setIsOpen(false);>
               <div className=""w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-lg flex items-center justify-center"></div>"
                 <Brain className=""w-6 h-6 text-white" /></Brain>"
               </div>
@@ -424,7 +424,7 @@ hours: 'Mon-Fri 9AM-6PM EST']
                   {(!section.key || expandedSections.has(section.key)) && (
                     <div className=""ml-4 space-y-1"></div>"
                       {section.items.map((item, itemIndex) => (</div>
-                        <Link key="{itemIndex}></Link>"
+                        <Link key = "{itemIndex}></Link>"
                           to="{item.path}"
                           onClick={() =></Link> setIsOpen(false);
                           className="{`flex items-center space-x-3 px-3 py-2 rounded-lg text-sm transition-all ${}"

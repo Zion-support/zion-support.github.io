@@ -253,13 +253,13 @@ const, AIWorkflowAutomatio, n: Rea, c, t.FC = () => {}
         <title>AI, Workflow, Automation - Zion, Tech, Group | Transform, Your, Business Process, e, s</title>
         <me , t, a;></me>
   na, m, e=""descripti, o, n""
-          content="Revolutionary, AI, workflow automation, that, reduces costs, by, 75%, increases, efficiency, by 1, 0, x, and, eliminates, manual erro, r, s. Enterpri, s, e-grade, security, and 24/7, operation, s." /><meta name="keywor, d, s" content="AI, workflow, automation, business, process, automation, intelligent, automatio, n, workflow, optimizatio, n, enterprise, automatio, n" /><link, re, l="canonic, a, l" hr, e, f=""htt, p, s://ziontechgro, u, p.c, o, m/servic, e, s/ai-workfl, o, w-automati, o, n/>";"
+          content = "Revolutionary, AI, workflow automation, that, reduces costs, by, 75%, increases, efficiency, by 1, 0, x, and, eliminates, manual erro, r, s. Enterpri, s, e-grade, security, and 24/7, operation, s." /><meta name = "keywor, d, s" content = "AI, workflow, automation, business, process, automation, intelligent, automatio, n, workflow, optimizatio, n, enterprise, automatio, n" /><link, re, l = "canonic, a, l" hr, e, f=""htt, p, s://ziontechgro, u, p.c, o, m/servic, e, s/ai-workfl, o, w-automati, o, n/>";"
 const, AIWorkflowAutomatio, n: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
   return (<div></div>
         <title>AI, Workflow, Automation - Zion, Tech, Group | Transform, Your, Business Process, e, s<
         <me , t, a;></me>
   na, m, e=""descripti, o, n""
-          content="Revolutionary, AI, workflow automation, that, reduces costs, by, 75%, increases, efficiency, by 1, 0, x, and, eliminates, manual erro, r, s. Enterpri, s, e-grade, security, and 24/7, operation, s." /><meta name="keywor, d, s" content="AI, workflow, automation, business, process, automation, intelligent, automatio, n, workflow, optimizatio, n, enterprise, automatio, n" /><link , re, l="canonic, a, l" hr, e, f=""htt, p, s://ziontechgro, u, p.c, o, m/servic, e, s/ai-workfl, o, w-automati, o, n)"></link>"
+          content = "Revolutionary, AI, workflow automation, that, reduces costs, by, 75%, increases, efficiency, by 1, 0, x, and, eliminates, manual erro, r, s. Enterpri, s, e-grade, security, and 24/7, operation, s." /><meta name = "keywor, d, s" content = "AI, workflow, automation, business, process, automation, intelligent, automatio, n, workflow, optimizatio, n, enterprise, automatio, n" /><link , re, l = "canonic, a, l" hr, e, f=""htt, p, s://ziontechgro, u, p.c, o, m/servic, e, s/ai-workfl, o, w-automati, o, n)"></link>"
 const, AIWorkflowAutomatio, n: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
     }
     {/* TODO: Fix JSX expression *
@@ -308,10 +308,10 @@ const, AIWorkflowAutomatio, n: Rea, c, t.FC = () => {/* TODO: Fix JSX expression
         <title>AI, Workflow, Automation - Zion, Tech, Group | Transform, Your, Business Process, e, s<
         <me , t, a;"></me>
   na, m, e=""descripti, o, n"""
-          content="Revolutionary, AI, workflow automation, that, reduces costs, by, 75%, increases, efficiency, by 1, 0, x, and, eliminates, manual erro, r, s. Enterpri, s, e-grade, security, and 24/7, operation, s." /><meta name="keywor, d, s" content="AI, workflow, automation, business, process, automation, intelligent, automatio, n, workflow, optimizatio, n, enterprise, automatio, n" /><link , re, l="canonic, a, l" hr, e, f=""htt, p, s://ziontechgro, u, p.c, o, m/servic, e, s/ai-workfl, o, w-automati, o, n"></link>"
+          content = "Revolutionary, AI, workflow automation, that, reduces costs, by, 75%, increases, efficiency, by 1, 0, x, and, eliminates, manual erro, r, s. Enterpri, s, e-grade, security, and 24/7, operation, s." /><meta name = "keywor, d, s" content = "AI, workflow, automation, business, process, automation, intelligent, automatio, n, workflow, optimizatio, n, enterprise, automatio, n" /><link , re, l = "canonic, a, l" hr, e, f=""htt, p, s://ziontechgro, u, p.c, o, m/servic, e, s/ai-workfl, o, w-automati, o, n"></link>"
           content=""Revolutionary, AI, workflow automation, that, reduces costs, by, 75%, increases, efficiency, by 1, 0, x, and, eliminates, manual erro, r, s. Enterpri, s, e-grade, security, and 24""
-        <meta name="keywor, d, s" content=""AI, workflow, automation, business, process, automation, intelligent, automatio, n, workflow, optimizatio, n, enterprise, automatio, n"></meta>"
-        <link , re, l="canonic, a, l" hr, e, f=""htt, p, s: //ziontechgro, u, p.c, o, m/servic, e, s/ai-workfl, o, w-automati, o, n"></link>"
+        <meta name = "keywor, d, s" content=""AI, workflow, automation, business, process, automation, intelligent, automatio, n, workflow, optimizatio, n, enterprise, automatio, n"></meta>"
+        <link , re, l = "canonic, a, l" hr, e, f=""htt, p, s: //ziontechgro, u, p.c, o, m/servic, e, s/ai-workfl, o, w-automati, o, n"></link>"
       <
       <Head, e, r   /><
       <main, className=""m, i, n-h-screen, b, g-whi, t, e">";"
@@ -526,12 +526,12 @@ const, AIWorkflowAutomatio, n: Rea, c, t.FC = () => {/* TODO: Fix JSX expression
               {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {}
 return (
 ;
-const, Ico, n="featu, r, e.ic, o, n;"
+const, Ico, n = "featu, r, e.ic, o, n;"
                 return(<div, ke, y={ind, e, x} classNa, m, e=""bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w"></div>"
 );
 }"
               {featur, e, s.m, a, p ((featu, r, e, ind, e, x) => {}
-                const, Ico, n="featu, r, e.ic, o, n;"
+                const, Ico, n = "featu, r, e.ic, o, n;"
                 return(<div, ke, y={ind, e, x} classNa, m, e=""bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">""
                     <div, className=""inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-bl, u, e-100, rounde, d-lg, m, b-4"></div>"
                 return (<
@@ -548,12 +548,12 @@ const, Ico, n="featu, r, e.ic, o, n;"
               {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {}
 return (
 ;
-const, Ico, n="featu, r, e.ic, o, n;"
+const, Ico, n = "featu, r, e.ic, o, n;"
                 return(<div, ke, y={ind, e, x} classNa, m, e=""bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w"></div>"
 );
 }";
               {featur, e, s.m, a, p ((featu, r, e, ind, e, x) => {}
-                const, Ico, n="featu, r, e.ic, o, n;"
+                const, Ico, n = "featu, r, e.ic, o, n;"
                 return (<div, ke, y={ind, e, x} classNa, m, e=""bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";"
                     <div, className=""inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-bl, u, e-100, rounde, d-lg, m, b-4">";"
                     <div, className=""inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm"><"
@@ -563,7 +563,7 @@ const, Ico, n="featu, r, e.ic, o, n;"
               {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {}
 return (
 ;
-const, Ico, n="featu, r, e.ic, o, n;"
+const, Ico, n = "featu, r, e.ic, o, n;"
                 return (</div>
                   <div, ke, y={ind, e, x} classNa, m, e=""bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w"></div>"
 );
@@ -578,7 +578,7 @@ const, Ico, n="featu, r, e.ic, o, n;"
                       {featu, r, e.benef, i, t})
                     </d, i, v>)
             </d, i, v>"
-                const, Ico, n="featu, r, e.ic, o, n;"
+                const, Ico, n = "featu, r, e.ic, o, n;"
                 return (<
                   <div, ke, y={ind, e, x} classNa, m, e=""bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";<"
                     <div, className=""inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-bl, u, e-100, rounde, d-lg, m, b-4">";<"
@@ -621,13 +621,13 @@ const, Ico, n="featu, r, e.ic, o, n;"
           </d, i, v>
         </secti, o, n>
         {/* Prici, n, g */}
-        <section, i, d="prici, n, g" classNa, m, e=""py-20, b, g-gr, a, y-50"></section>"
+        <section, i, d = "prici, n, g" classNa, m, e=""py-20, b, g-gr, a, y-50"></section>"
           <div , className=""m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;"></div>"
   ,
     g:px-8">",
             <div, className=""te, x, t-center, m, b-16"></div>"
               <h2, className=""te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>"
-        <section, i, d="prici, n, g" classNa, m, e=""py-20, b, g-gr, a, y-50">";"
+        <section, i, d = "prici, n, g" classNa, m, e=""py-20, b, g-gr, a, y-50">";"
           <div, className=""m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">";"
             <div, className=""te, x, t-center, m, b-16">";"
           <div , className=""m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l"></div>"
@@ -635,16 +635,16 @@ const, Ico, n="featu, r, e.ic, o, n;"
     g:px-8">"<
             <div, className=""te, x, t-center, m, b-16"><"
               <h2, className=""te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"><"
-        <section, i, d="prici, n, g" classNa, m, e=""py-20, b, g-gr, a, y-50">";"
+        <section, i, d = "prici, n, g" classNa, m, e=""py-20, b, g-gr, a, y-50">";"
           <div, className=""m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";<"
             <div, className=""te, x, t-center, m, b-16">";<"
         {/* Prici, n, g *
-        <section, i, d="prici, n, g" classNa, m, e=""py-20, b, g-gr, a, y-50"><"
+        <section, i, d = "prici, n, g" classNa, m, e=""py-20, b, g-gr, a, y-50"><"
           <div , className=""m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,"></div>"
   g:px-8">""
             <div, className=""te, x, t-center, m, b-16"><"
               <h2, className=""te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"><"
-        <section, i, d="prici, n, g" classNa, m, e=""py-20, b, g-gr, a, y-50">";""
+        <section, i, d = "prici, n, g" classNa, m, e=""py-20, b, g-gr, a, y-50">";""
           <div, className=""m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";""
             <div, className=""te, x, t-center, m, b-16">";""
               <h2, className=""te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">";"
@@ -660,7 +660,7 @@ const, Ico, n="featu, r, e.ic, o, n;"
   d: gr, i, d-co, l, s-3, ga, p-8">"<
             <div, className=""grid, m, d: gr, i, d-co, l, s-3, ga, p-8">";"
               {prici, n, g.m, a, p((pl, a, n, ind, e, x) => (<
-                <div, ke, y={ind, e, x} classNa, m, e="{`bg-white, rounde, d-2xl, shado, w-l, g, p-8 ${pl, a, n.popul, a, r ? 'ri, n, g-2, rin, g-bl, u, e-500, relativ, e' : ''}`}>`;`"
+                <div, ke, y={ind, e, x} classNa, m, e = "{`bg-white, rounde, d-2xl, shado, w-l, g, p-8 ${pl, a, n.popul, a, r ? 'ri, n, g-2, rin, g-bl, u, e-500, relativ, e' : ''}`}>`;`"
                   {pl, a, n.popul, a, r && (<
                     <div, className=""absolu, t, e -t, o, p-4, lef, t-1/2, transfor, m -transla, t, e-x-1/2">";<"
                       <span, className=""bg-bl, u, e-500, tex, t-white, p, x-4, p, y-1, rounde, d-full, tex, t-sm, fon, t-semibo, l, d">";"
@@ -677,7 +677,7 @@ const, Ico, n="featu, r, e.ic, o, n;"
   d: gr, i, d-co, l, s-3, ga, p-8">""
             <div, className=""grid, m, d: gr, i, d-co, l, s-3, ga, p-8">";"
               {/* TODO: Fix JSX expression *
-                <div, ke, y={ind, e, x} classNa, m, e="{`bg-white, rounde, d-2xl, shado, w-l, g, p-8 ${pl, a, n.popul, a, r ? 'ri, n, g-2, rin, g-bl, u, e-500, relativ, e' : ''}`}>`;`"
+                <div, ke, y={ind, e, x} classNa, m, e = "{`bg-white, rounde, d-2xl, shado, w-l, g, p-8 ${pl, a, n.popul, a, r ? 'ri, n, g-2, rin, g-bl, u, e-500, relativ, e' : ''}`}>`;`"
                   {/* TODO: Fix JSX expression *
                   )}"
                   <div, className=""te, x, t-center, m, b-8">";""
@@ -711,7 +711,7 @@ pl, a, n.popul, a, r;
 : 'bg-gr, a, y-100, tex, t-gr, a, y-900, hove, r:bg-gr, a, y-2, 0, 0'}
                   <a><
   hr, e, f=""""
-                    classNa, m, e="{/* TODO: Fix JSX expression *"
+                    classNa, m, e = "{/* TODO: Fix JSX expression *"
 }`}`;`>
                     Get, Starte, d;
                   <

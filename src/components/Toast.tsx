@@ -1,7 +1,6 @@
 import React from 'react';
-
 'use client';
-export type ToastType="'success' | 'error' | 'warning' | 'info';"
+export type ToastType = "'success' | 'error' | 'warning' | 'info';"
 export interface ToastProps {/* TODO: Fix JSX expression */}
   O: Add content}
 };
@@ -99,6 +98,5 @@ className="{`fixed top-4 right-4 px-6 py-3 rounded-lg shadow-lg z-50 flex items-
           </button>
     </div>
   )};
-
 export default Toast;"`
 

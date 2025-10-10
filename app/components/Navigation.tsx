@@ -44,7 +44,7 @@ const closeAllMenus = () => {}
 const toggleMenu = () => {}
     setIsOpen(!isOpen);
   }
-const aiServices="[]"
+const aiServices = []
     { name: 'AI Solutions', href: '/ai-services', icon: Brain, description: 'Core AI Solutions' },
     { name: 'AI Marketing Automation', href: '/ai-marketing', icon: Target, description: 'AI-Powered Marketing' },
     { name: 'AI Customer Support', href: '/ai-customer-support', icon: Users, description: 'AI Support Systems' },
@@ -77,7 +77,7 @@ const aiServices="[]"
     { name: 'AI Sports', href: '/ai-sports', icon: BarChart, description: 'Sports AI' },
     { name: 'AI Mental Health', href: '/ai-mental-health', icon: Users, description: 'Mental Health AI' }
   ];
-const itServices="[]"
+const itServices = []
     { name: 'Cloud Services', href: '/cloud-services', icon: Cloud, description: 'Cloud Solutions' },
     { name: 'Cloud Migration', href: '/cloud-migration', icon: Cloud, description: 'Seamless Migration' },
     { name: 'DevOps & CI/CD', href: '/devops', icon: Settings, description: 'Development Operations' },
@@ -108,7 +108,7 @@ const itServices="[]"
     { name: 'API Development', href: '/api-development', icon: Globe, description: 'API Services' },
     { name: 'IT Governance', href: '/it-governance', icon: Settings, description: 'Governance Solutions' }
   ];
-const microSaasServices="[]"
+const microSaasServices = []
     { name: 'Micro SAAS Solutions', href: '/micro-saas', icon: Cpu, description: '50+ AI Tools' },
     { name: 'AI Analytics Dashboard', href: '/ai-analytics-dashboard', icon: BarChart, description: 'Business Intelligence' },
     { name: 'AI-Powered CRM', href: '/ai-crm', icon: Users, description: 'Customer Management' },
@@ -142,7 +142,7 @@ const microSaasServices="[]"
     { name: 'Online Learning Platform', href: '/online-learning-platform', icon: Users, description: 'Education' },
     { name: 'Supply Chain Optimizer', href: '/supply-chain-optimizer', icon: BarChart, description: 'Manufacturing' }
   ];
-const emergingTech="[]"
+const emergingTech = []
     { name: 'Quantum Computing', href: '/quantum-computing', icon: Cpu, description: 'Quantum Solutions' },
     { name: 'Robotics & Automation', href: '/robotics', icon: Brain, description: 'Intelligent Robotics' },
     { name: 'IoT & Edge Computing', href: '/iot-edge-computing', icon: Globe, description: 'Connected Devices' },
@@ -160,7 +160,7 @@ const emergingTech="[]"
       <div className=""max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>"
         <div className=""flex items-center justify-between h-16"></div>"
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2 group" onClick="{closeAllMenus}></Link>"
+          <Link href="/" className="flex items-center space-x-2 group" onClick = "{closeAllMenus}></Link>"
             <div className=""w-8 h-8 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300"></div>"
               <Brain className=""w-5 h-5 text-white" /></Brain>"
             </div>
@@ -184,7 +184,7 @@ const emergingTech="[]"
                 <div className=""absolute top-full left-0 mt-2 w-96 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-500/20 p-4 cyber-card"></div>"
                   <div className=""grid grid-cols-1 gap-2"></div>"
                     {aiServices.map((service) => (
-                      <Link key="{service.name}></Link>"
+                      <Link key = "{service.name}></Link>"
                         href="{service.href}"
                         className=""flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-colors duration-300 group""
                         onClick="{closeAllMenus}>"
@@ -213,7 +213,7 @@ const emergingTech="[]"
                 <div className=""absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-500/20 p-4 cyber-card"></div>"
                   <div className=""grid grid-cols-1 gap-2"></div>"
                     {itServices.map((service) => (
-                      <Link key="{service.name}></Link>"
+                      <Link key = "{service.name}></Link>"
                         href="{service.href}"
                         className=""flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-colors duration-300 group""
                         onClick="{closeAllMenus}>"
@@ -242,7 +242,7 @@ const emergingTech="[]"
                 <div className=""absolute top-full left-0 mt-2 w-96 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-500/20 p-4 cyber-card"></div>"
                   <div className=""grid grid-cols-1 gap-2"></div>"
                     {microSaasServices.map((service) => (
-                      <Link key="{service.name}></Link>"
+                      <Link key = "{service.name}></Link>"
                         href="{service.href}"
                         className=""flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-colors duration-300 group""
                         onClick="{closeAllMenus}>"
@@ -271,7 +271,7 @@ const emergingTech="[]"
                 <div className=""absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-500/20 p-4 cyber-card"></div>"
                   <div className=""grid grid-cols-1 gap-2"></div>"
                     {emergingTech.map((service) => (
-                      <Link key="{service.name}></Link>"
+                      <Link key = "{service.name}></Link>"
                         href="{service.href}"
                         className=""flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-colors duration-300 group""
                         onClick="{closeAllMenus}>"
@@ -318,7 +318,7 @@ const emergingTech="[]"
           </div>
           {/* Mobile Menu Button */}
           <div className=""lg:hidden"></div>"
-            <button onClick="{toggleMenu}></button>"
+            <button onClick = "{toggleMenu}></button>"
               className=""text-gray-300 hover:text-cyan-400 transition-colors duration-300""
               aria-label=""Toggle menu">"
               {isOpen ? <X className="w-6 h-6" /> : <Menu className=""w-6 h-6" />}"
@@ -329,7 +329,7 @@ const emergingTech="[]"
         {isOpen && (
           <div className=""lg:hidden mt-4 pb-4 border-t border-cyan-500/20"></div>"
             <div className=""pt-4 space-y-4"></div>"
-              <Link href="/" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick="{closeAllMenus}></Link>"
+              <Link href="/" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick = "{closeAllMenus}></Link>"
                 Home;
               </Link>
               {/* Mobile AI Services */}
@@ -346,7 +346,7 @@ const emergingTech="[]"
                 {aiServicesOpen && (
                   <div className=""mt-2 ml-4 space-y-2"></div>"
                     {aiServices.slice(0, 8).map((service) => (
-                      <Link key="{service.name}></Link>"
+                      <Link key = "{service.name}></Link>"
                         href="{service.href}"
                         className=""block text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300""
                         onClick="{closeAllMenus}>"
@@ -375,7 +375,7 @@ const emergingTech="[]"
                 {itServicesOpen && (
                   <div className=""mt-2 ml-4 space-y-2"></div>"
                     {itServices.map((service) => (
-                      <Link key="{service.name}></Link>"
+                      <Link key = "{service.name}></Link>"
                         href="{service.href}"
                         className=""block text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300""
                         onClick="{closeAllMenus}>"
@@ -399,7 +399,7 @@ const emergingTech="[]"
                 {microSaasOpen && (
                   <div className=""mt-2 ml-4 space-y-2"></div>"
                     {microSaasServices.slice(0, 8).map((service) => (
-                      <Link key="{service.name}></Link>"
+                      <Link key = "{service.name}></Link>"
                         href="{service.href}"
                         className=""block text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300""
                         onClick="{closeAllMenus}>"
@@ -414,19 +414,19 @@ const emergingTech="[]"
                   </div>
                 )}
               </div>
-              <Link href="/about" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick="{closeAllMenus}></Link>"
+              <Link href="/about" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick = "{closeAllMenus}></Link>"
                 About;
               </Link>
-              <Link href="/services" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick="{closeAllMenus}></Link>"
+              <Link href="/services" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick = "{closeAllMenus}></Link>"
                 Services;
               </Link>
-              <Link href="/pricing" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick="{closeAllMenus}></Link>"
+              <Link href="/pricing" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick = "{closeAllMenus}></Link>"
                 Pricing;
               </Link>
-              <Link href="/blog" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick="{closeAllMenus}></Link>"
+              <Link href="/blog" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick = "{closeAllMenus}></Link>"
                 Blog;
               </Link>
-              <Link href="/contact" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick="{closeAllMenus}></Link>"
+              <Link href="/contact" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick = "{closeAllMenus}></Link>"
                 Contact;
               </Link>
               {/* Mobile Contact Info */}

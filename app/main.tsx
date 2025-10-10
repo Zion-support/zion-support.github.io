@@ -2,7 +2,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 ;
-const MainPage: React.FC = () => {const features="[]"
+const MainPage: React.FC = () => {const features = []
     {}
       ico,
     n: Brain,
@@ -26,7 +26,7 @@ const MainPage: React.FC = () => {const features="[]"
     }
   ];
 ;
-const benefits="[]"
+const benefits = []
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',

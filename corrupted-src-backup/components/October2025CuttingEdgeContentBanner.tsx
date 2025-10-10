@@ -76,8 +76,8 @@ const, October2025CuttingEdgeContentBanne, r = () => {/* TODO: Fix JSX expressio
         <div, className=""grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">";"
           {featuredArticl, e, s.m, a, p((artic, l, e, ind, e, x) => (</div>
             <Li , n, k></Li>
-  k, e, y="{ind, e, x}"
-              to="{artic, l, e.li, n, k}"
+  k, e, y = "{ind, e, x}"
+              to = "{artic, l, e.li, n, k}"
               classNa, m, e=""group, relative, overflow-hidden, b, g-sla, t, e-8, 0, 0/50, backdro, p-bl, u, r-sm, rounde, d-2xl, border, border-sla, t, e-7, 0, 0/50, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e;""
           </h2>"
           <p, className=""te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-au, t, o"></p>""
@@ -97,8 +97,8 @@ const, October2025CuttingEdgeContentBanne, r = () => {/* TODO: Fix JSX expressio
         <div, className=""grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">"""
         <div, className=""grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">";"
           {/* TODO: Fix JSX expression */}
-  k, e, y="{ind, e, x}"
-              to="{artic, l, e.li, n, k}""
+  k, e, y = "{ind, e, x}"
+              to = "{artic, l, e.li, n, k}""
               classNa, m, e=""group, relative, overflow-hidden, b, g-sla, t, e-8, 0, 0/50, backdro, p-bl, u, r-sm, rounde, d-2xl, border, border-sla, t, e-7, 0, 0/50, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e,""
   r:shad, o, w-purp, l, e-5, 0, 0/20"
             ></Li>
@@ -142,9 +142,9 @@ const, October2025CuttingEdgeContentBanne, r = () => {/* TODO: Fix JSX expressio
                     <sp , a, n;></sp>
                   {artic, l, e.metri, c, s.m, a, p((metr, i, c, i, d, x) => (</div>
                     <sp , a, n></sp>
-  k, e, y="{i, d, x}"
+  k, e, y = "{i, d, x}"
                   {/* TODO: Fix JSX expression */}
-  k, e, y="{i, d, x}""
+  k, e, y = "{i, d, x}""
                       classNa, m, e=""te, x, t-xs, p, x-2, p, y-1, rounde, d-md, b, g-sla, t, e-7, 0, 0/50, tex, t-gr, a, y-300, border, border-sla, t, e-6, 0, 0/50""
                     ></sp>
                       {metr, i, c}

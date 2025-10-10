@@ -222,7 +222,7 @@ const CaseStudiesPage: React.FC = () => {}
       team: 'Mobile & UX Team'
     }
   ];
-  const stats="[]"
+  const stats = []
     { label: 'Projects Completed', value: '150+', icon: CheckCircle },
     { label: 'Client Satisfaction', value: '98%', icon: TrendingUp },
     { label: 'Team Members', value: '50+', icon: Users },
@@ -337,7 +337,7 @@ const CaseStudiesPage: React.FC = () => {}
                       </ul>
                     </div>
                     <div className=""flex items-center justify-between"></div>"
-                      <Link to="{`/case-studies/${study.id}`}></Link>"
+                      <Link to = "{`/case-studies/${study.id}`}></Link>"
                         className=""flex items-center gap-2 text-purple-400 hover:text-purple-300 transition-colors">"
                         Read Full Case Study;
                         <ArrowRight className=""w-4 h-4" /></ArrowRight>"
@@ -374,7 +374,7 @@ const CaseStudiesPage: React.FC = () => {}
                         </div>
                       ))}
                     </div>
-                    <Link to="{`/case-studies/${study.id}`}></Link>"
+                    <Link to = "{`/case-studies/${study.id}`}></Link>"
                       className=""text-cyan-400 hover:text-cyan-300 font-medium flex items-center gap-1 transition-colors">"
                       Read Full Case Study;
                       <ExternalLink className=""w-4 h-4" /></ExternalLink>"

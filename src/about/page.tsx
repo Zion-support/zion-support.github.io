@@ -7,7 +7,7 @@ import { Users, Target, Brain, Shield } from 'lucide-react';
 import Footer from '../components/Footer';
 ;
 const AboutPage: React.FC = () => {;
-const team="[]"
+const team = []
     {}
       name: 'Kleber Santos',
       role: 'CEO & Founder',
@@ -24,14 +24,14 @@ const team="[]"
       image: '/images/team/michael.jpg',
       bio: 'AI researcher and developer with expertise in deep learning and NLP.'}];
 ;
-const stats="[]"
+const stats = []
     { number: '500+', label: 'Projects Completed' },
     { number: '50+', label: 'Happy Clients' },
     { number: '5+', label: 'Years Experience' },
     { number: '99%', label: 'Client Satisfaction' }
   ];
 ;
-const values="[]"
+const values = []
     {}
       icon: Brain,
       title: 'Innovation',
@@ -48,7 +48,6 @@ const values="[]"
       icon: Users,
       title: 'Partnership',
       description: 'We work closely with our clients as strategic technology partners.'}];
-
   return (
     <div className=""min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
       <div className=""container mx-auto px-4 py-16"></div>"
@@ -59,7 +58,7 @@ const values="[]"
           </p>
 import { Users, CheckCircle, Star, Shield, Award, Target, Globe, Brain, Cloud, Code, BarChart, TrendingUp, Phone, Mail, MapPin, Clock, ArrowRight, Zap, Cpu, Database, Lock, Smartphone, Settings, Calendar, FileText, MessageSquare, Star as StarIcon, Award as AwardIcon, Shield as ShieldIcon, Users as UsersIcon } from 'lucide-react';
 export default function AboutPage() {;
-const teamMembers="[]"
+const teamMembers = []
     {}
       name: 'Kleber Santos',
       role: 'CEO & Founder',
@@ -89,7 +88,7 @@ const teamMembers="[]"
       expertise: ['NLP', 'Computer Vision', 'Deep Learning']
     }
   ];
-  const values="[]"
+  const values = []
     {}
       icon: Brain,
       title: 'Innovation First',
@@ -111,13 +110,13 @@ const teamMembers="[]"
       description: 'We believe technology should make the world better, more efficient, and more connected.'
     }
   ];
-  const achievements="[]"
+  const achievements = []
     { number: '500+', label: 'Successful Projects', icon: Target },
     { number: '100+', label: 'Enterprise Clients', icon: Users },
     { number: '300%', label: 'Average ROI', icon: TrendingUp },
     { number: '99.9%', label: 'Uptime Guarantee', icon: Shield }
   ];
-  const timeline="[]"
+  const timeline = []
     {}
       year: '2018',
       title: 'Company Founded',
@@ -476,7 +475,7 @@ const teamMembers="[]"
               <div key={index} className=""bg-slate-800/50 rounded-lg p-6 text-center group hover:bg-slate-700/50 transition-all duration-300"></div>"
                 <div className=""w-24 h-24 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-full mx-auto mb-4 flex items-center justify-center group-hover:scale-110 transition-transform duration-300"></div>"
                   <span className=""text-2xl font-bold text-white"></span>"
-                    {member.name.split(' ').map(n="> n[0]).join('')}"
+                    {member.name.split(' ').map(n = "> n[0]).join('')}"
                   </span>
                 </div>
                 <h3 className=""text-xl font-bold text-white mb-2">{member.name}</h3>"

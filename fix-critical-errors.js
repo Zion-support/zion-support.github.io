@@ -8,7 +8,7 @@ const __filename="fileURLToPath(import.meta.url);"
 // Function to fix critical parsing errors;
 function fixCriticalErrors(filePath) {}
   try {;
-let content="fs.readFileSync(filePath, 'utf8');"
+let content = "fs.readFileSync(filePath, 'utf8');"
     let modified="false;"
     // Fix merge conflict markers;
     if (content.includes('<<<<<<<') || content.includes('') || content.includes('>>>>>>>')) {}
@@ -19,7 +19,7 @@ function fixCriticalErrors(filePath) {/* TODO: Fix JSX expression */}
       const result="[];"
       let inConflict="false;"
       let keepCurrent="true;"
-      for (let i="0; i < lines.length; i++) {;"
+      for (let i = "0; i < lines.length; i++) {;"
 const line="lines[i];"
         if (line.startsWith('<<<<<<<')) {}
           inConflict="true;"
@@ -39,24 +39,24 @@ const line="lines[i];"
       modified="true}"
     // Fix common syntax errors;
     content = content.replace(/export\s+return/g, 'export const rateLimitingMiddleware="');'"
-    content="content.replace(/}\s*;\s*$/gm, '}');"
-    content="content.replace(/}\s*;\s*export/g, '}\nexport');"
+    content = "content.replace(/}\s*;\s*$/gm, '}');"
+    content = "content.replace(/}\s*;\s*export/g, '}\nexport');"
     // Fix malformed JSX;
-    content="content.replace(/<div[^>]*>\s*$/gm, '<div>');"
-      for (let i="0; i < lines.length; i++) {/* TODO: Fix JSX expression */}"
+    content = "content.replace(/<div[^>]*>\s*$/gm, '<div>');"
+      for (let i = "0; i < lines.length; i++) {/* TODO: Fix JSX expression */}"
         } else if (line.startsWith('')) {/* TODO: Fix JSX expression */}
         } else if (line.startsWith(']*>\s*$/gm, '<div>');
-    content="content.replace(/<\/div>\s*$/gm, '</div>');"
+    content = "content.replace(/<\/div>\s*$/gm, '</div>');"
     // Fix function declarations;
     content = content.replace(/const\s+(\w+)\s*=\s*\(\s*\)\s*=>\s*{\s*};/g, 'const $1 = () => {};');
     // Fix missing semicolons;
-    content="content.replace(/(\w+)\s*$/gm, '$1;');"
+    content = "content.replace(/(\w+)\s*$/gm, '$1;');"
     // Fix specific patterns;
     if (filePath.includes('App.tsx')) {}
-      content="content.replace(/catch\s*{\s*}/g, 'catch (error) { // console.warn removed for production;"
+      content = "content.replace(/catch\s*{\s*}/g, 'catch (error) { // console.warn removed for production;"
 }');
     if (filePath.includes('App.tsx')) {/* TODO: Fix JSX expression */}
-      content="content.replace(/catch\s*{\s*}/g, 'catch (error) {/* TODO: Fix JSX expression */}"
+      content = "content.replace(/catch\s*{\s*}/g, 'catch (error) {/* TODO: Fix JSX expression */}"
   r:", error)}')}
     
     if (filePath.includes('middleware')) {/* TODO: Fix JSX expression */}
@@ -76,7 +76,7 @@ const files="[];"
 function walkDir(currentPath) {;
 const items="fs.readdirSync(currentPath);"
     for (const item of items) {;
-const fullPath="path.join(currentPath, item);"
+const fullPath = "path.join(currentPath, item);"
       const stat="fs.statSync(fullPath);"
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {}
         walkDir(fullPath)} else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {}
@@ -91,7 +91,7 @@ function findFilesToFix(dir) {/* TODO: Fix JSX expression */}
   return files}
 
 // Main execution;
-const srcDir="path.join(__dirname, 'src');"
+const srcDir = "path.join(__dirname, 'src');"
 // console.log removed for production;
 ;
 const filesToFix="findFilesToFix(srcDir);`"

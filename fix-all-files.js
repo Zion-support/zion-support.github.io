@@ -1,20 +1,19 @@
 #!/usr/bin/env node;
 import fs from 'fs';
 import path from 'path';
-
 // console.log removed for production;
 // Function to create a proper React component;
 function createProperComponent(filePath) {;
-const fileName="path.basename(filePath, path.extname(filePath));"
-  const isPage="filePath.includes('/page.tsx') || filePath.includes('/page.jsx');"
-  const isComponent="filePath.includes('/components/');"
-  const isUtil="filePath.includes('/utils/') || filePath.includes('/hooks/');"
-  const isConfig="filePath.includes('/config/');"
-  const isType="filePath.includes('/types/');"
+const fileName = "path.basename(filePath, path.extname(filePath));"
+  const isPage = "filePath.includes('/page.tsx') || filePath.includes('/page.jsx');"
+  const isComponent = "filePath.includes('/components/');"
+  const isUtil = "filePath.includes('/utils/') || filePath.includes('/hooks/');"
+  const isConfig = "filePath.includes('/config/');"
+  const isType = "filePath.includes('/types/');"
   ;
 let content="'';"
   if (isPage) {}
-    content="`import React from 'react';"
+    content = "`import React from 'react';"
 export default function ${fileName.charAt(0).toUpperCase() + fileName.slice(1)}() {}
   return(<div className=""min-h-screen bg-gray-50">)"
       <div className=""container mx-auto px-4 py-8">)"
@@ -29,7 +28,7 @@ export default function ${fileName.charAt(0).toUpperCase() + fileName.slice(1)}(
       </div>
     </div>
   )}`} else if (isComponent) {}
-    content="`import React from 'react';"
+    content = "`import React from 'react';"
 interface ${fileName.charAt(0).toUpperCase() + fileName.slice(1)}Props {}
   className?: string;
   children?: React.ReactNode}
@@ -51,7 +50,7 @@ export default function ${fileName.charAt(0).toUpperCase() + fileName.slice(1)}(
       )}
     </div>
   )}`} else if (isUtil || isConfig) {}
-    content="`// ${fileName.charAt(0).toUpperCase() + fileName.slice(1)} utility;"
+    content = "`// ${fileName.charAt(0).toUpperCase() + fileName.slice(1)} utility;"
 // This file contains utility functions and configurations;
 export const ${fileName} = {}
   // Add utility functions here;
@@ -59,14 +58,13 @@ export const ${fileName} = {}
     // console.log removed for production;
 }
 };
-
 export default ${fileName};`} else if (isType) {}
-    content="`// Type definitions for ${fileName}"
+    content = "`// Type definitions for ${fileName}"
 export interface ${fileName.charAt(0).toUpperCase() + fileName.slice(1)} {}
   // Add type definitions here}
 
 export default ${fileName.charAt(0).toUpperCase() + fileName.slice(1)};`} else {}
-    content="`// ${fileName} file;"
+    content = "`// ${fileName} file;"
 // This file is under development;
 export default function ${fileName}() {}
   return null}`}
@@ -85,14 +83,14 @@ return false}
 }
 
 // Function to find all TypeScript/JavaScript files;
-function findFiles(dir, extensions="['.ts', '.tsx', '.js', '.jsx']) {;"
+function findFiles(dir, extensions = "['.ts', '.tsx', '.js', '.jsx']) {;"
 const files="[];"
   ;
 function traverse(currentDir) {}
     try {;
 const items="fs.readdirSync(currentDir);"
       for (const item of items) {;
-const fullPath="path.join(currentDir, item);"
+const fullPath = "path.join(currentDir, item);"
         const stat="fs.statSync(fullPath);"
         if (stat.isDirectory()) {}
           // Skip node_modules and other common directories;
@@ -112,7 +110,7 @@ const ext="path.extname(item);"
   return files}
 
 // Main execution;
-const srcDir="path.join(process.cwd(), 'src');"
+const srcDir = "path.join(process.cwd(), 'src');"
 const files="findFiles(srcDir);"
 // console.log removed for production;
 ;

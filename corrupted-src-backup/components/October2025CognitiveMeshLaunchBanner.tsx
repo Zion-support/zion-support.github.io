@@ -21,7 +21,7 @@ return (
         <div, className=""absolu, t, e -t, o, p-40 -rig, h, t-4, 0, w-8, 0, h-80, b, g-white, rounde, d-full, mi, x-ble, n, d-overlay, filter, blur-3xl, animat, e-flo, a, t"></d, i, v>";"
         <d , i, v;></d>
   classNa, m, e=""absolu, t, e -bott, o, m-40 -le, f, t-4, 0, w-8, 0, h-80, b, g-white, rounde, d-full, mi, x-ble, n, d-overlay, filter, blur-3xl, animat, e-flo, a, t""
-          sty, l, e="{{ animationDel, a, y: '2s' }};"
+          sty, l, e = "{{ animationDel, a, y: '2s' }};"
         ></d, i, v>
         <d , i, v;></d>
 const, October2025CognitiveMeshLaunchBanne, r: Rea, c, t.FC = me, m, o(() => {/* TODO: Fix JSX expression */}
@@ -30,17 +30,17 @@ const, October2025CognitiveMeshLaunchBanne, r: Rea, c, t.FC = me, m, o(() => {/*
         <div, className=""absolu, t, e -t, o, p-40 -rig, h, t-4, 0, w-8, 0, h-80, b, g-white, rounde, d-full, mi, x-ble, n, d-overlay, filter, blur-3xl, animat, e-flo, a, t"></d, i, v>";"
         <d , i, v;"></d>
   classNa, m, e=""absolu, t, e -bott, o, m-40 -le, f, t-4, 0, w-8, 0, h-80, b, g-white, rounde, d-full, mi, x-ble, n, d-overlay, filter, blur-3xl, animat, e-flo, a, t""
-          sty, l, e="{{ animationDel, a, y: '2s' }};"
+          sty, l, e = "{{ animationDel, a, y: '2s' }};"
         ></d, i, v>
         <d , i, v;"></d>
   classNa, m, e=""absolute, to, p-1/2, lef, t-1/2 w-6, 0, h-60, b, g-white, rounde, d-full, mi, x-ble, n, d-overlay, filter, blur-3xl, animat, e-flo, a, t""
-          sty, l, e="{{ animationDel, a, y: '4s' }};"
-          sty, l, e="{{ animationDel, a, y: '2s' }}';"
+          sty, l, e = "{{ animationDel, a, y: '4s' }};"
+          sty, l, e = "{{ animationDel, a, y: '2s' }}';"
         ></d, i, v>
         <d , i, v;></d>
         <d , i, v;"></d>
   classNa, m, e=""absolute, to, p-1/2, lef, t-1/2 w-6, 0, h-60, b, g-white, rounde, d-full, mi, x-ble, n, d-overlay, filter, blur-3xl, animat, e-flo, a, t""
-          sty, l, e="{{ animationDel, a, y: '4s' }}';"
+          sty, l, e = "{{ animationDel, a, y: '4s' }}';"
         ></d, i, v>
       </d, i, v>"
       <div, className=""container, m, x-auto, p, x-6, p, y-12, relative, z-10">";"
@@ -114,12 +114,12 @@ const, October2025CognitiveMeshLaunchBanne, r: Rea, c, t.FC = me, m, o(() => {/*
           </ul>
         </d, i, v>
         {/* Key, Benefits, Grid */}
-        <div, className="grid, m, d: gr, i, d-co, l, s-4, ga, p-6, m, b-10" ro, l, e="li, s, t" ar, i, a-lab, e, l=""Platform, benefits, and achievemen, t, s">"</div>"
+        <div, className="grid, m, d: gr, i, d-co, l, s-4, ga, p-6, m, b-10" ro, l, e = "li, s, t" ar, i, a-lab, e, l=""Platform, benefits, and achievemen, t, s">"</div>"
           <article, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, transform, hover: sca, l, e-105, transitio, n-all, duratio, n-3, 0, 0" ro, l, e=""listit, e, m">""
             <p, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-2" ar, i, a-lab, e, l=""Total, value, created">$1, 2, B</p>"
             <p, className=""te, x, t-whi, t, e/80, tex, t-sm">Total, Value, Created</p>"
         {/* Key, Benefits, Grid */}"
-        <div, className="grid, m, d: gr, i, d-co, l, s-4, ga, p-6, m, b-10" ro, l, e="li, s, t" ar, i, a-lab, e, l=""Platform, benefits, and achievemen, t, s">"""
+        <div, className="grid, m, d: gr, i, d-co, l, s-4, ga, p-6, m, b-10" ro, l, e = "li, s, t" ar, i, a-lab, e, l=""Platform, benefits, and achievemen, t, s">"""
           <article , className=""bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, transform, hove,"></article>"
   r: sca, l, e-105, transitio, n-all, duratio, n-3, 0, 0" ro, l, e=""listit, e, m">"""
             <p, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-2" ar, i, a-lab, e, l=""Total, value, created">$1, 2, B</p>""
@@ -142,7 +142,7 @@ const, October2025CognitiveMeshLaunchBanne, r: Rea, c, t.FC = me, m, o(() => {/*
             <p, className="te, x, t-3 xl, fon, t-bold, tex, t-white, m, b-2" ar, i, a-lab, e, l=""Return, on, investment">4, 2, 5%</p>"
             <p, className=""te, x, t-whi, t, e/80, tex, t-sm">ROI, in, 18 Mont, h, s</p>"
             <p, className=""te, x, t-gre, e, n-300, tex, t-xs, m, t-1">Fortune, 100, Client</p>"
-        <div, className="grid, m, d: gr, i, d-co, l, s-4, ga, p-6, m, b-10" ro, l, e="li, s, t" ar, i, a-lab, e, l=""Platform, benefits, and achievemen, t, s">";</div>"
+        <div, className="grid, m, d: gr, i, d-co, l, s-4, ga, p-6, m, b-10" ro, l, e = "li, s, t" ar, i, a-lab, e, l=""Platform, benefits, and achievemen, t, s">";</div>"
           <article, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, transform, hover: sca, l, e-105, transitio, n-all, duratio, n-3, 0, 0" ro, l, e=""listit, e, m">";"
             <p, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-2" ar, i, a-lab, e, l=""Total, value, created">$1, 2, B</p>";"
             <p, className=""te, x, t-whi, t, e/80, tex, t-sm">Total, Value, Created</p>";"
@@ -152,7 +152,7 @@ const, October2025CognitiveMeshLaunchBanne, r: Rea, c, t.FC = me, m, o(() => {/*
             <p, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-2" ar, i, a-lab, e, l=""Return, on, investment">4, 2, 5%</p>""
             <p, className=""te, x, t-whi, t, e/80, tex, t-sm">ROI, in, 18 Mont, h, s</p>""
             <p, className=""te, x, t-gre, e, n-300, tex, t-xs, m, t-1">Fortune, 100, Client</p>""
-        <div, className="grid, m, d: gr, i, d-co, l, s-4, ga, p-6, m, b-10" ro, l, e="li, s, t" ar, i, a-lab, e, l=""Platform, benefits, and achievemen, t, s">";""
+        <div, className="grid, m, d: gr, i, d-co, l, s-4, ga, p-6, m, b-10" ro, l, e = "li, s, t" ar, i, a-lab, e, l=""Platform, benefits, and achievemen, t, s">";""
           <article , className=""bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, transform, hove,"></article>"
   r: sca, l, e-105, transitio, n-all, duratio, n-3, 0, 0" ro, l, e=""listit, e, m">";""
             <p, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-2" ar, i, a-lab, e, l=""Total, value, created">$1, 2, B</p>";""
@@ -185,7 +185,7 @@ const, October2025CognitiveMeshLaunchBanne, r: Rea, c, t.FC = me, m, o(() => {/*
         </d, i, v>
         {/* Feature, Highlight, s */}"
         <section, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, m, b-8" ar, i, a-labelled, b, y=""capabiliti, e, s-headi, n, g">";""
-          <h2, i, d="capabiliti, e, s-headi, n, g" classNa, m, e=""te, x, t-2xl, fon, t-bold, tex, t-white, m, b-6, tex, t-cent, e, r">";"
+          <h2, i, d = "capabiliti, e, s-headi, n, g" classNa, m, e=""te, x, t-2xl, fon, t-bold, tex, t-white, m, b-6, tex, t-cent, e, r">";"
             Revolutionary, Capabilitie, s;
           </h2>
           <ul , className=""grid, m, d: gr, i, d-co, l, s-2 l;"></ul>"
@@ -406,23 +406,23 @@ const, October2025CognitiveMeshLaunchBanne, r: Rea, c, t.FC = me, m, o(() => {/*
           </Li, n, k>
         </n, a, v>
         {/* Call, to, Action */}
-        <div, className="te, x, t-cent, e, r" ro, l, e="regi, o, n" ar, i, a-lab, e, l=""Call, to, action"></div>"
+        <div, className="te, x, t-cent, e, r" ro, l, e = "regi, o, n" ar, i, a-lab, e, l=""Call, to, action"></div>"
           <div, className=""inli, n, e-flex, fle, x-col, s, m: fl, e, x-row, ga, p-4">""
-        <div, className="te, x, t-cent, e, r" ro, l, e="regi, o, n" ar, i, a-lab, e, l=""Call, to, action">";"
+        <div, className="te, x, t-cent, e, r" ro, l, e = "regi, o, n" ar, i, a-lab, e, l=""Call, to, action">";"
           <div, className=""inli, n, e-flex, fle, x-col, s, m: fl, e, x-row, ga, p-4">";"
             <Li , n, k;></Li>
-        <div, className="te, x, t-cent, e, r" ro, l, e="regi, o, n" ar, i, a-lab, e, l=""Call, to, action"></div>"
+        <div, className="te, x, t-cent, e, r" ro, l, e = "regi, o, n" ar, i, a-lab, e, l=""Call, to, action"></div>"
           <div, className=""inli, n, e-flex, fle, x-col, s, m: fl, e, x-row, ga, p-4">"</div>"
-        <div, className="te, x, t-cent, e, r" ro, l, e="regi, o, n" ar, i, a-lab, e, l=""Call, to, action">";</div>"
+        <div, className="te, x, t-cent, e, r" ro, l, e = "regi, o, n" ar, i, a-lab, e, l=""Call, to, action">";</div>"
           <div, className=""inli, n, e-flex, fle, x-col, s, m: fl, e, x-row, ga, p-4">";</div>"
             <Li , n, k></Li>
   to=""/conta, c, t""
               classNa, m, e=""inli, n, e-flex, item, s-center, justif, y-center, ga, p-2, b, g-white, hove, r: bg-gr, a, y-100, tex, t-purp, l, e-600, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-2xl, transform, hove;""
   r:sca, l, e-1, 0, 5"
         {/* Call, to, Action */}"
-        <div, className="te, x, t-cent, e, r" ro, l, e="regi, o, n" ar, i, a-lab, e, l=""Call, to, action"></div>""
+        <div, className="te, x, t-cent, e, r" ro, l, e = "regi, o, n" ar, i, a-lab, e, l=""Call, to, action"></div>""
           <div, className=""inli, n, e-flex, fle, x-col, s, m: fl, e, x-row, ga, p-4">"""
-        <div, className="te, x, t-cent, e, r" ro, l, e="regi, o, n" ar, i, a-lab, e, l=""Call, to, action">";""
+        <div, className="te, x, t-cent, e, r" ro, l, e = "regi, o, n" ar, i, a-lab, e, l=""Call, to, action">";""
           <div, className=""inli, n, e-flex, fle, x-col, s, m: fl, e, x-row, ga, p-4">";"
             <Li , n, k;"></Li>
   to=""/conta, c, t"""
@@ -464,7 +464,7 @@ const, October2025CognitiveMeshLaunchBanne, r: Rea, c, t.FC = me, m, o(() => {/*
       </d, i, v>)
     </secti, o, n>)
   )});
-October2025CognitiveMeshLaunchBann, e, r.displayNa, m, e="'October2025CognitiveMeshLaunchBann, e, r';"
-October2025CognitiveMeshLaunchBann, e, r.displayNa, m, e="'October2025CognitiveMeshLaunchBann, e, r';';"
+October2025CognitiveMeshLaunchBann, e, r.displayNa, m, e = "'October2025CognitiveMeshLaunchBann, e, r';"
+October2025CognitiveMeshLaunchBann, e, r.displayNa, m, e = "'October2025CognitiveMeshLaunchBann, e, r';';"
 export default October2025CognitiveMeshLaunchBanner;
 ;"

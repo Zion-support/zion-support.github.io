@@ -23,7 +23,7 @@ const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 ;
-const _serviceTypes="[]"
+const _serviceTypes = []
     'AI Services',
     'IT Infrastructure',
     'Cybersecurity',
@@ -35,14 +35,14 @@ const _serviceTypes="[]"
     'Other'
   ];
 ;
-const projectSizes="[]"
+const projectSizes = []
     'Small (1-10 employees)',
     'Medium (11-100 employees)',
     'Large (101-1000 employees)',
     'Enterprise (1000+ employees)'
   ];
 ;
-const timelines="[]"
+const timelines = []
     'ASAP',
     '1-3 months',
     '3-6 months',
@@ -51,7 +51,7 @@ const timelines="[]"
     'Flexible'
   ];
 ;
-const budgetRanges="[]"
+const budgetRanges = []
     'Under $10,000',
     '$10,000 - $50,000',
     '$50,000 - $100,000',
@@ -62,7 +62,7 @@ const budgetRanges="[]"
 ;
 const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;
 const { name, value } = e.target;
-    setFormData(prev="> ({}"
+    setFormData(prev = "> ({}"
       ...prev,
       [name]: value;
     }))};
@@ -71,11 +71,11 @@ const handleSubmit = async (e: React.FormEvent) => {}
     e.preventDefault();
     setIsSubmitting(true);
     /
-    await new Promise(resolve="> setTimeout(resolve, 2000));"
+    await new Promise(resolve = "> setTimeout(resolve, 2000));"
     setIsSubmitting(false);
     setIsSubmitted(true)};
 ;
-const benefits="[]"
+const benefits = []
     {}
       icon: Calculator,
       title: 'Free Quote',
@@ -98,7 +98,7 @@ $4},
 $4}
   ];
 ;
-const whyChooseUs="[]"
+const whyChooseUs = []
     {}
       icon: Users,
       title: '50+ Successful Projects',
@@ -204,8 +204,8 @@ $4}
                       <
                       <input type=""text"></input>"
                         name=""name""
-                        value="{ formData.name };"
-                        onChange="{ handleInputChange };"
+                        value = "{ formData.name };"
+                        onChange = "{ handleInputChange };"
                         className=""w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focu,""
     s:ring-cyan-400;
                         placeholder=""Enter your full name""
@@ -216,8 +216,8 @@ $4}
                       <
                       <input type=""email"></input>"
                         name=""email""
-                        value="{ formData.email };"
-                        onChange="{ handleInputChange };"
+                        value = "{ formData.email };"
+                        onChange = "{ handleInputChange };"
                         className=""w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400""
                         placeholder=""Enter your email""
                     <
@@ -231,8 +231,8 @@ $4}
                       <
                       <input type=""text"></input>"
                         name=""company""
-                        value="{ formData.company };"
-                        onChange="{ handleInputChange };"
+                        value = "{ formData.company };"
+                        onChange = "{ handleInputChange };"
                         className=""w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focu,""
     s:ring-cyan-400;
                         placeholder=""Enter your company name""
@@ -243,8 +243,8 @@ $4}
                       <
                       <input type=""tel"></input>"
                         name=""phone""
-                        value="{ formData.phone };"
-                        onChange="{ handleInputChange };"
+                        value = "{ formData.phone };"
+                        onChange = "{ handleInputChange };"
                         className=""w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focu,""
     s:ring-cyan-400;
                         placeholder=""Enter your phone number""
@@ -257,8 +257,8 @@ $4}
                       Service Type *
                     <
                     <select name=""serviceType"></select>"
-                      value="{ formData.serviceType };"
-                      onChange="{ handleInputChange };"
+                      value = "{ formData.serviceType };"
+                      onChange = "{ handleInputChange };"
                       className=""w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus: outline-none focus:border-cyan-400 focus:ring-2 focu,""
     s:ring-cyan-400>
                       <option value=""">Select a service type<)"
@@ -273,8 +273,8 @@ $4}
                         Project Size;
                       <
                       <select name=""projectSize"></select>"
-                        value="{ formData.projectSize };"
-                        onChange="{ handleInputChange };"
+                        value = "{ formData.projectSize };"
+                        onChange = "{ handleInputChange };"
                         className=""w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus: outline-none focus:border-cyan-400 focus:ring-2 focu,""
     s:ring-cyan-400>
                         <option value=""">Select project size<"
@@ -286,8 +286,8 @@ $4}
                       <label className=""block text-sm font-medium text-gray-300 mb-2"></label>"
                       <
                       <select name=""timeline"></select>"
-                        value="{ formData.timeline };"
-                        onChange="{ handleInputChange };"
+                        value = "{ formData.timeline };"
+                        onChange = "{ handleInputChange };"
                         className=""w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus: outline-none focus:border-cyan-400 focus:ring-2 focu,""
     s:ring-cyan-400>
                         <option value=""">Select timeline<"
@@ -302,8 +302,8 @@ $4}
                       Budget Range;
                     <
                     <select name=""budget"></select>"
-                      value="{ formData.budget };"
-                      onChange="{ handleInputChange };"
+                      value = "{ formData.budget };"
+                      onChange = "{ handleInputChange };"
                       className=""w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus: outline-none focus:border-cyan-400 focus:ring-2 focu,""
     s:ring-cyan-400>
                       <option value=""">Select budget range<"
@@ -317,9 +317,9 @@ $4}
                       Project Description *
                     <
                     <textarea name=""description"></textarea>"
-                      value="{ formData.description };"
-                      onChange="{ handleInputChange };"
-                      rows="{ 4 };"
+                      value = "{ formData.description };"
+                      onChange = "{ handleInputChange };"
+                      rows = "{ 4 };"
                       className=""w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focu,""
     s:ring-cyan-400;
                       placeholder=""Describe your project requirements and goals...""
@@ -330,16 +330,16 @@ $4}
                       Specific Requirements;
                     <
                     <textarea name=""requirements"></textarea>"
-                      value="{ formData.requirements };"
-                      onChange="{ handleInputChange };"
-                      rows="{ 3 };"
+                      value = "{ formData.requirements };"
+                      onChange = "{ handleInputChange };"
+                      rows = "{ 3 };"
                       className=""w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focu,""
     s:ring-cyan-400;
                       placeholder=""Any specific technical requirements, integrations, or constraints...""
                   <
 
                   <button type=""submit"></button>"
-                    disabled="{ isSubmitting };"
+                    disabled = "{ isSubmitting };"
                     className=""w-full cyber-button py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover: scale-105 disabled:opacity-50 disable,""
     d:cursor-not-allowed">
                     {isSubmitting ? (<div className=""flex items-center justify-center"></div>"
@@ -447,7 +447,7 @@ $4}
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const _serviceTypes="[]"
+  const _serviceTypes = []
   /
   O: Add items;
 ];;
@@ -461,7 +461,7 @@ $4}
 /
 /
   ];
-  const projectSizes="[]"
+  const projectSizes = []
   /
   O: Add items;
 ];;
@@ -470,18 +470,7 @@ $4}
 /
 /
   ];
-  const timelines="[]"
-  /
-  O: Add items;
-];;
-/
-/
-/
-/
-/
-/
-  ];
-  const budgetRanges="[]"
+  const timelines = []
   /
   O: Add items;
 ];;
@@ -492,19 +481,30 @@ $4}
 /
 /
   ];
-  const handleInputChange="(e: React.ChangeEvent;)"
+  const budgetRanges = []
+  /
+  O: Add items;
+];;
+/
+/
+/
+/
+/
+/
+  ];
+  const handleInputChange = "(e: React.ChangeEvent;)"
           <HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {/* TODO: Fix JSX expression */}
   O: Add content}
 }
     const { name, value } = e.target;
-    setFormData(prev="> ({/* TODO: Fix JSX expression */}"
+    setFormData(prev = "> ({/* TODO: Fix JSX expression */}"
   O: Add content}
           <HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 }
     const { name, value } = e.target;
-    setFormData(prev="> ({/* TODO: Fix JSX expression *"
+    setFormData(prev = "> ({/* TODO: Fix JSX expression *"
   ,
     O: Add content;}
 }
@@ -522,10 +522,10 @@ $4}
     e.preventDefault();
     setIsSubmitting(true);
     /
-    await new Promise(resolve="> setTimeout(resolve, 2000));"
+    await new Promise(resolve = "> setTimeout(resolve, 2000));"
     setIsSubmitting(false);
     setIsSubmitted(true)};
-  const benefits="[]"
+  const benefits = []
   /
   O: Add items;
 ];;
@@ -582,7 +582,7 @@ $4}
   n: 'Free consultation with our technology experts'
     }
   ];
-  const whyChooseUs="[]"
+  const whyChooseUs = []
   /
   O: Add items;
 ];;
@@ -798,8 +798,8 @@ $4}
           <
 
                       <input type="text" name=""name"></input>"
-                        value="{ formData.name };"
-                        onChange="{ handleInputChange };"
+                        value = "{ formData.name };"
+                        onChange = "{ handleInputChange };"
 /
 className=""w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focu,""
     s:ring-cyan-400;
@@ -813,8 +813,8 @@ className=""w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text
           <
 
                       <input type="email" name=""email"></input>"
-                        value="{ formData.email };"
-                        onChange="{ handleInputChange };"
+                        value = "{ formData.email };"
+                        onChange = "{ handleInputChange };"
 /
 className=""w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focu,""
     s:ring-cyan-400;
@@ -830,8 +830,8 @@ className=""w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text
           <
 
                       <input type="text" name=""company"></input>"
-                        value="{ formData.company };"
-                        onChange="{ handleInputChange };"
+                        value = "{ formData.company };"
+                        onChange = "{ handleInputChange };"
                         className=""w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focu,""
     s:ring-cyan-400;
 // 
@@ -843,8 +843,8 @@ className=""w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text
           <
 
                       <input type="tel" name=""phone"></input>"
-                        value="{ formData.phone };"
-                        onChange="{ handleInputChange };"
+                        value = "{ formData.phone };"
+                        onChange = "{ handleInputChange };"
                         className=""w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focu,""
     s:ring-cyan-400;
 // 
@@ -858,8 +858,8 @@ className=""w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text
 
           <
 
-                    <select name="serviceType" value="{ formData.serviceType };></select>"
-                      onChange="{ handleInputChange };"
+                    <select name="serviceType" value = "{ formData.serviceType };></select>"
+                      onChange = "{ handleInputChange };"
 /
 className=""w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus: outline-none focus:border-cyan-400 focus:ring-2 focu,""
     s:ring-cyan-400;
@@ -879,8 +879,8 @@ className=""w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text
 /
           <
 
-                      <select name="projectSize" value="{ formData.projectSize };></select>"
-                        onChange="{ handleInputChange };"
+                      <select name="projectSize" value = "{ formData.projectSize };></select>"
+                        onChange = "{ handleInputChange };"
                         className=""w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus: outline-none focus:border-cyan-400 focus:ring-2 focu,""
     s:ring-cyan-400;
 /
@@ -897,8 +897,8 @@ className=""w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text
                       <label className=""block text-sm font-medium text-gray-300 mb-2"></label>"
 /
           <
-                      <select name="timeline" value="{ formData.timeline };></select>"
-                        onChange="{ handleInputChange };"
+                      <select name="timeline" value = "{ formData.timeline };></select>"
+                        onChange = "{ handleInputChange };"
                         className=""w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus: outline-none focus:border-cyan-400 focus:ring-2 focu,""
     s:ring-cyan-400;
 /
@@ -916,8 +916,8 @@ className=""w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text
 /
           <
 
-                    <select name="budget" value="{ formData.budget };></select>"
-                      onChange="{ handleInputChange };"
+                    <select name="budget" value = "{ formData.budget };></select>"
+                      onChange = "{ handleInputChange };"
                       className=""w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus: outline-none focus:border-cyan-400 focus:ring-2 focu,""
     s:ring-cyan-400;
 /
@@ -935,10 +935,10 @@ className=""w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text
 
           <
 
-                    <textarea name="description" value="{ formData.description };></textarea>"
-                      onChange="{ handleInputChange };"
+                    <textarea name="description" value = "{ formData.description };></textarea>"
+                      onChange = "{ handleInputChange };"
 /
-                      rows="{ 4 };"
+                      rows = "{ 4 };"
                       className=""w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focu,""
     s:ring-cyan-400;
 //                     
@@ -949,16 +949,16 @@ className=""w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text
 /
           <
 
-                    <textarea name="requirements" value="{ formData.requirements };></textarea>"
-                      onChange="{ handleInputChange };"
-                      rows="{ 3 };"
+                    <textarea name="requirements" value = "{ formData.requirements };></textarea>"
+                      onChange = "{ handleInputChange };"
+                      rows = "{ 3 };"
                       className=""w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focu,""
     s:ring-cyan-400;
 // 
 
           <
 
-                  <button type="submit" disabled="{ isSubmitting };></button>"
+                  <button type="submit" disabled = "{ isSubmitting };></button>"
                     className=""w-full cyber-button py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover: scale-105 disabled:opacity-50 disable,""
     d:cursor-not-allowed"
 

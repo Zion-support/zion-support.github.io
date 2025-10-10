@@ -1,11 +1,9 @@
 import React from 'react';
 'use client';
-
 interface OptimizedLoadingSpinnerProps {}
   size?: 'sm' | 'md' | 'lg';
   color?: 'primary' | 'secondary' | 'white';
   className?: string;
-
 'use client';
 interface OptimizedLoadingSpinnerProps {/* TODO: Fix JSX expression */}
   O: Add content}
@@ -23,7 +21,7 @@ const,
       l,
   g: 'w-12 h-12'
     };
-    const colorClasses="{/* TODO: Fix JSX expression */}"
+    const colorClasses = "{/* TODO: Fix JSX expression */}"
   O: Add content}
 };
   primar,
@@ -75,12 +73,11 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
       lg:     ,
 $4};
 ;
-const colorClasses="{}"
+const colorClasses = {}
       primary: 'text-cyan-400',
       secondary: 'text-purple-400',
       white:     ,
 $4};
-
     return (
       <div className="{`${sizeClasses[size]} ${colorClasses[color]} ${className}`}></div>"
         role=""status""
@@ -104,6 +101,5 @@ $4};
       </div>
     )}
 );
-
 OptimizedLoadingSpinner.displayName="'OptimizedLoadingSpinner';"
 export default OptimizedLoadingSpinner;

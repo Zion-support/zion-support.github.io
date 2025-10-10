@@ -3,12 +3,11 @@ import React from 'react';
 import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
-
 // Function to fix common syntax patterns;
 function fixCommonSyntaxErrors(content) {;
 let modified="false;"
   // Fix malformed imports;
-const importFixes="[]"
+const importFixes = []
     // Fix malformed import statements with missing commas;
     {}
       pattern: /import\s+{([^}]*),\s*([^}]*),\s*([^}]*)\s+from\s+'([^']*)';\s*}/g,
@@ -25,25 +24,24 @@ const importFixes="[]"
       replacement: "import { $1 } from '$2';"
     }
   ];
-  
   for (const fix of importFixes) {;
-const newContent="content.replace(fix.pattern, fix.replacement);"
+const newContent = "content.replace(fix.pattern, fix.replacement);"
     if (newContent !== content) {}
       content="newContent;"
       modified="true}"
   }
   
   // Fix malformed function declarations;
-const functionFixes="[]"
+const functionFixes = []
     // Fix malformed function with missing return;
     {}
       pattern: /const\s+(\w+):\s*React\.FC\s*=\s*\(\s*\)\s*=>\s*{\s*const\s+(\w+)\s*=\s*\[\s*}\s*const\s+(\w+)\s*=\s*\[\s*}/g,
-      replacement: 'const $1: React.FC = () => {\n  const $2 = [];\n  const $3="[];\n  return ('"
+      replacement: 'const $1: React.FC = () => {\n  const $2 = [];\n  const $3 = "[];\n  return ('"
     },
     // Fix malformed function with missing return;
     {}
       pattern: /const\s+(\w+):\s*React\.FC\s*=\s*\(\s*\)\s*=>\s*{\s*const\s+(\w+)\s*=\s*\[\s*}/g,
-      replacement: 'const $1: React.FC = () => {\n  const $2="[];\n  return ('"
+      replacement: 'const $1: React.FC = () => {\n  const $2 = "[];\n  return ('"
     },
     // Fix malformed function with missing return;
     {}
@@ -53,16 +51,15 @@ return (
 \n  return (\n    <div '></div>
     }
   ];
-  
   for (const fix of functionFixes) {;
-const newContent="content.replace(fix.pattern, fix.replacement);"
+const newContent = "content.replace(fix.pattern, fix.replacement);"
     if (newContent !== content) {}
       content="newContent;"
       modified="true}"
   }
   
   // Fix malformed object literals;
-const objectFixes="[]"
+const objectFixes = []
     // Fix malformed object with missing commas;
     {}
       pattern: /(\w+):\s*(\w+),?\s*}\s*(\w+):/g,
@@ -79,16 +76,15 @@ const objectFixes="[]"
       replacement: '$1: $2,\n    $3:'
     }
   ];
-  
   for (const fix of objectFixes) {;
-const newContent="content.replace(fix.pattern, fix.replacement);"
+const newContent = "content.replace(fix.pattern, fix.replacement);"
     if (newContent !== content) {}
       content="newContent;"
       modified="true}"
   }
   
   // Fix malformed JSX;
-const jsxFixes="[]"
+const jsxFixes = []
     // Fix malformed JSX attributes;
     {}
       pattern: /(\w+)="([^"]*)"\s*(\w+)/g,
@@ -107,16 +103,15 @@ const jsxFixes="[]"
       replacement: '<$1$2>$3</$1>'
     }
   ];
-  
   for (const fix of jsxFixes) {;
-const newContent="content.replace(fix.pattern, fix.replacement);"
+const newContent = "content.replace(fix.pattern, fix.replacement);"
     if (newContent !== content) {}
       content="newContent;"
       modified="true}"
   }
   
   // Fix malformed comments;
-const commentFixes="[]"
+const commentFixes = []
     // Fix malformed comments;
     {}
       pattern: /\/\/\s*(\w+);/g,
@@ -128,9 +123,8 @@ const commentFixes="[]"
       replacement: '// $1'
     }
   ];
-  
   for (const fix of commentFixes) {;
-const newContent="content.replace(fix.pattern, fix.replacement);"
+const newContent = "content.replace(fix.pattern, fix.replacement);"
     if (newContent !== content) {}
       content="newContent;"
       modified="true}"
@@ -141,7 +135,7 @@ const newContent="content.replace(fix.pattern, fix.replacement);"
 // Function to fix syntax errors in a file;
 function fixSyntaxErrors(filePath) {}
   try {;
-let content="fs.readFileSync(filePath, 'utf8');"
+let content = "fs.readFileSync(filePath, 'utf8');"
     let modified="false;"
     // Apply common fixes;
 const result="fixCommonSyntaxErrors(content);"
@@ -160,8 +154,8 @@ return false}
 // Function to find files with syntax errors;
 function findFilesWithSyntaxErrors() {}
   try {;
-const result="execSync('npm run lint 2>&1 | grep -B1 "error.*Parsing error" | grep "^/workspace" | sort -u 2>/dev/null || true', { encoding: 'utf8' });"
-    return result.trim().split('\n').filter(file="> file.length > 0)} catch (error) {}"
+const result = "execSync('npm run lint 2>&1 | grep -B1 "error.*Parsing error" | grep "^/workspace" | sort -u 2>/dev/null || true', { encoding: 'utf8' });"
+    return result.trim().split('\n').filter(file = "> file.length > 0)} catch (error) {}"
     // console.error removed for production;
 return []}
 }
@@ -181,7 +175,7 @@ for (const file of filesWithErrors) {}
 // console.log removed for production;
 // Verify no more syntax errors exist;
 try {;
-const remainingErrors="execSync('npm run lint 2>&1 | grep -c "error.*Parsing error" 2>/dev/null || echo "0"', { encoding: 'utf8' });"
+const remainingErrors = "execSync('npm run lint 2>&1 | grep -c "error.*Parsing error" 2>/dev/null || echo "0"', { encoding: 'utf8' });"
   const count="parseInt(remainingErrors.trim());"
   if (count === 0) {}
     // console.log removed for production;

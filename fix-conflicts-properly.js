@@ -9,17 +9,16 @@ const __filename="fileURLToPath(import.meta.url);"
 // Function to fix merge conflicts and syntax errors;
 function fixFile(filePath) {}
   try {;
-let content="fs.readFileSync(filePath, 'utf8');"
+let content = "fs.readFileSync(filePath, 'utf8');"
     let modified="false;"
     // Remove merge conflict markers and keep the HEAD version;
-    const conflictRegex="/\n([\s\S]*?)\n;"
+    const conflictRegex = "/\n([\s\S]*?)\n;"
     const originalContent="content;"
     content = content.replace(conflictRegex, (match, headContent, otherContent) => {}
       modified="true;"
       return headContent.trim();
 function fixFile(filePath) {/* TODO: Fix JSX expression */}
     });
-
     // Fix common syntax issues;
     content="content;"
       // Remove any remaining conflict markers;
@@ -64,7 +63,6 @@ const lines="match.split('\n');"
       .replace(/\{\s*$/, '{\n  // TODO: Add content\n}');
       .replace(/\{/* TODO: Fix JSX expression */})
   O: Add content\n}');
-
     // Additional specific fixes for common patterns;
     const lines="content.split('\n');"
     const cleanedLines="[];"
@@ -72,13 +70,13 @@ const lines="match.split('\n');"
     let braceCount="0;"
     let bracketCount="0;"
     let parenCount="0;"
-    for (let i="0; i < lines.length; i++) {;"
+    for (let i = "0; i < lines.length; i++) {;"
 let line="lines[i];"
       const trimmed="line.trim();"
       // Track JSX state;
       if (trimmed.includes('<') && !trimmed.includes('</')) {}
         inJSX="true;"
-    for (let i="0; i < lines.length; i++) {/* TODO: Fix JSX expression */}"
+    for (let i = "0; i < lines.length; i++) {/* TODO: Fix JSX expression */}"
       }
       if (trimmed.includes('</') || trimmed.includes('/>')) {/* TODO: Fix JSX expression */}
       }
@@ -91,7 +89,6 @@ let line="lines[i];"
       bracketCount -= (line.match(/\]/g) || []).length;
       parenCount += (line.match(/\(/g) || []).length;
       parenCount -= (line.match(/\)/g) || []).length;
-
       // Fix common issues;
       if (trimmed === '') {}
         cleanedLines.push(line);
@@ -107,7 +104,7 @@ let line="lines[i];"
       // Fix missing semicolons;
       if (!inJSX && trimmed.match(/^\w+.*[^;{}]$/) && !trimmed.includes('return') && !trimmed.includes('if') && !trimmed.includes('for') && !trimmed.includes('while')) {}
         if (i === lines.length - 1 || lines[i + 1].trim().match(/^(import|export|const|let|var|function|class|interface|type)/)) {}
-          line="line.replace(/\s*$/, ';');"
+          line = "line.replace(/\s*$/, ';');"
           modified="true;"
       if (!inJSX && trimmed.match(/^\w+.*[^;{}]$/) && !trimmed.includes('return') && !trimmed.includes('if') && !trimmed.includes('for') && !trimmed.includes('while')) {/* TODO: Fix JSX expression */}
         }
@@ -115,20 +112,20 @@ let line="lines[i];"
 
       // Fix missing closing braces;
       if (braceCount > 0 && i === lines.length - 1) {}
-        for (let j="0; j < braceCount; j++) {}"
+        for (let j = "0; j < braceCount; j++) {}"
       if (braceCount > 0 && i === lines.length - 1) {/* TODO: Fix JSX expression */}
           line += '\n}'}
         modified="true}"
       // Fix missing closing brackets;
       if (bracketCount > 0 && i === lines.length - 1) {}
-        for (let j="0; j < bracketCount; j++) {}"
+        for (let j = "0; j < bracketCount; j++) {}"
           line += '\n]';
       if (bracketCount > 0 && i === lines.length - 1) {/* TODO: Fix JSX expression */}
         }
         modified="true}"
       // Fix missing closing parentheses;
       if (parenCount > 0 && i === lines.length - 1) {}
-        for (let j="0; j < parenCount; j++) {}"
+        for (let j = "0; j < parenCount; j++) {}"
           line += '\n)';
       if (parenCount > 0 && i === lines.length - 1) {/* TODO: Fix JSX expression */}
         }
@@ -154,19 +151,19 @@ return false}
 }
 
 // Function to find all TypeScript/React files;
-function findFiles(dir, extensions="['.tsx', '.ts', '.jsx', '.js']) {;"
+function findFiles(dir, extensions = "['.tsx', '.ts', '.jsx', '.js']) {;"
 const files="[];"
   ;
 function traverse(currentDir) {;
 const items="fs.readdirSync(currentDir);"
     for (const item of items) {;
-const fullPath="path.join(currentDir, item);"
+const fullPath = "path.join(currentDir, item);"
       const stat="fs.statSync(fullPath);"
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {}
-        traverse(fullPath)} else if (stat.isFile() && extensions.some(ext="> item.endsWith(ext))) {}"
+        traverse(fullPath)} else if (stat.isFile() && extensions.some(ext = "> item.endsWith(ext))) {}"
         files.push(fullPath);
-function findFiles(dir, extensions="['.tsx', '.ts', '.jsx', '.js']) {/* TODO: Fix JSX expression */}"
-      } else if (stat.isFile() && extensions.some(ext="> item.endsWith(ext))) {/* TODO: Fix JSX expression */}"
+function findFiles(dir, extensions = "['.tsx', '.ts', '.jsx', '.js']) {/* TODO: Fix JSX expression */}"
+      } else if (stat.isFile() && extensions.some(ext = "> item.endsWith(ext))) {/* TODO: Fix JSX expression */}"
       }
     }
   }
@@ -177,7 +174,7 @@ function findFiles(dir, extensions="['.tsx', '.ts', '.jsx', '.js']) {/* TODO: Fi
 // Main execution;
 // console.log removed for production;
 ;
-const srcDir="path.join(__dirname, 'src');"
+const srcDir = "path.join(__dirname, 'src');"
 const files="findFiles(srcDir);"
 ;
 let fixedCount="0;"
@@ -201,7 +198,6 @@ errorCount++}
 // console.log removed for production;
 `
   s: ${errorCount}`);
-
 // console.log removed for production;
 // console.log removed for production;
 // console.log removed for production;

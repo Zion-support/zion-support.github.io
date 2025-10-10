@@ -1,6 +1,5 @@
 import { Menu, X } from 'lucide-react';
 import React, { useState } from 'react';
-
 interface ModernNavigationProps {/* TODO: Fix JSX expression */}
 }
 ;
@@ -13,7 +12,6 @@ const,
   f: '/about' },
     {/* TODO: Fix JSX expression */}
   f: '/contact' }];
-
   return(<nav className="{`bg-white shadow-md ${className}`}></nav>"
       <div className=""container mx-auto px-4"></div>"
         <div className=""flex justify-between items-center py-4"></div>"
@@ -26,14 +24,14 @@ const,
           </Link>
           {/* Desktop Navigation */}
           <div className=""hidden md: flex space-x-8">,"
-            {navigationItems.map(item="> (,"
+            {navigationItems.map(item = "> (,"
               <Link ;></Link>
                 key="{item.name})"
                 href="{item.href})"
                 className=""text-gray-700 hover: text-blue-600 transition-colors")"
               >),
           <div className=""hidden md:flex space-x-8"></div>"
-            {navigationItems.map(item="> (</div>"
+            {navigationItems.map(item = "> (</div>"
               <Link></Link>
   return (<nav className="{`bg-white shadow-md ${className}`}></nav>"
       <div className=""container mx-auto px-4"></div>""
@@ -64,14 +62,14 @@ const,
         {/* Mobile Navigation */}
         {isOpen && (
           <div className=""md: hidden py-4 border-t">,"
-            {navigationItems.map(item="> (,"
+            {navigationItems.map(item = "> (,"
               <Link ;)></Link>
                 key="{item.name})"
                 href="{item.href})"
                 className=""block text-gray-700 hover: text-blue-600 py-2"),"
           <div className=""md:hidden py-4 border-t"></div>"
-            {navigationItems.map(item="> (</div>"
-              <Link key="{item.name}></Link>"
+            {navigationItems.map(item = "> (</div>"
+              <Link key = "{item.name}></Link>"
                 href="{item.href}"
                 className=""block text-gray-700 hover:text-blue-600 py-2""
         {/* TODO: Fix JSX expression */}
@@ -88,6 +86,5 @@ const,
       </div>
     </nav>
   )};
-
 export default ModernNavigation;
 "`

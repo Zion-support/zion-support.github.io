@@ -6,7 +6,7 @@ import SEOOptimizer from '../components;
 import { Calendar, ArrowRight, TrendingUp, Users, Award, Globe, Zap, Brain, Shield, Code, BarChart, MessageSquare, Eye, Cpu, Target, Lock, BarChart3, FileText, Search, Bot, Calculator, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Clock3, Compass, PieChart, TrendingDown, Activity } from 'lucide-react';
 ;
 const NewsPage: React.FC = () => {;
-const newsArticles="[]"
+const newsArticles = []
     {}
       i,
     d: 1,
@@ -75,9 +75,9 @@ const newsArticles="[]"
     }
   ];
 ;
-const categories="['All', 'Product Launch', 'Success Story', 'Technology', 'Innovation', 'Security'];"
+const categories = "['All', 'Product Launch', 'Success Story', 'Technology', 'Innovation', 'Security'];"
 ;
-const stats="[]"
+const stats = []
     { icon: Users, number: '100+', label: 'Happy Clients' },
     { icon: Award, number: '50+', label: 'Awards Won' },
     { icon: TrendingUp, number: '300%', label: 'Average ROI' },
@@ -87,7 +87,7 @@ const stats="[]"
     <React.Fragment></React>
       <SEOOptimizer title=""News & Updates - Zion Tech Group"></SEOOptimizer>"
         description=""Stay updated with the latest news, product launches, and success stories from Zion Tech Group. Discover our AI innovations and enterprise transformations.""
-        keywords="{['AI news', 'technology updates', 'product launches', 'success stories', 'enterprise AI', 'innovation']}"
+        keywords = "{['AI news', 'technology updates', 'product launches', 'success stories', 'enterprise AI', 'innovation']}"
         canonicalUrl=""https://ziontechgroup.com/news""
       />
       <div className=""min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"

@@ -72,7 +72,7 @@ const LatestContentBanner202, 5: React.FC = () => {/* TODO: Fix JSX expression *
       {/* Animated, background, effects */}</div>
       <div, className=""absolute, inse, t-0, overflo, w-hidden, opacit, y-30"></div>"
         <div, className=""absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" /></div>"
-        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-fuchs, i, a-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e="{{ animationDel, a, y: ', 2, s' }} /></div>"
+        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-fuchs, i, a-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e = "{{ animationDel, a, y: ', 2, s' }} /></div>"
       </div>
       <div, classNam, e=""container, m, x-auto, p, x-6, relative, z-10"></div>"
         {/* Header, Sectio, n */}</div>
@@ -115,7 +115,7 @@ const LatestContentBanner202, 5: React.FC = () => {/* TODO: Fix JSX expression *
       {/* Animated, background, effects */}"
       <div, className=""absolute, inse, t-0, overflo, w-hidden, opacit, y-30"></div>""
         <div, className=""absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" /></div>""
-        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-fuchs, i, a-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e="{{ animationDel, a, y: ', 2, s' }} /></div>"
+        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-fuchs, i, a-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e = "{{ animationDel, a, y: ', 2, s' }} /></div>"
       </div>"
       <div, classNam, e=""container, m, x-auto, p, x-6, relative, z-10"></div>"
         {/* Header, Sectio, n */}"
@@ -146,10 +146,10 @@ const LatestContentBanner202, 5: React.FC = () => {/* TODO: Fix JSX expression *
         {/* Featured, highligh, t, s */}"
         <div, classNam, e=""grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-4, ga, p-4, m, b-8"></div>"
           {/* TODO: Fix JSX expression */}
-            <moti , o, n.div, ke, y = { artic, l, e.s, l, u, g  }, initi, a, l="{{ opac, i, t, y:  , 0, y: 2, 0 }}></moti>"
-              anima, t, e="{{ opac, i, t, y:  , 1, y:  , 0 }}"
-              transiti, o, n="{{ del, a, y: ind, e, x * , 0., 1 }}"
-              whileHov, e, r="{{ sca, l, e: 1., 0, 5 }}""
+            <moti , o, n.div, ke, y = { artic, l, e.s, l, u, g  }, initi, a, l = "{{ opac, i, t, y:  , 0, y: 2, 0 }}></moti>"
+              anima, t, e = "{{ opac, i, t, y:  , 1, y:  , 0 }}"
+              transiti, o, n = "{{ del, a, y: ind, e, x * , 0., 1 }}"
+              whileHov, e, r = "{{ sca, l, e: 1., 0, 5 }}""
               classNa, m, e=""gro, u, p">"
               {/* Card, glow, effect */}
               <div, className=""absolute, inse, t-0, b, g-gradie, n, t-to-br, fro, m-cy, a, n-5, 0, 0/0, vi, a-fuchs, i, a-5, 0, 0/0, t, o-cy, a, n-5, 0, 0/0, grou, p-hov, e, r: fr, o, m-cy, a, n-5, 0, 0/10, grou, p-hov, e, r:v, i, a-fuchs, i, a-5, 0, 0/10, grou, p-hov, e, r:to-cy, a, n-5, 0, 0/10, transitio, n-all, duratio, n-5, 0, 0" /></div>"
@@ -213,7 +213,7 @@ const LatestContentBanner202, 5: React.FC = () => {/* TODO: Fix JSX expression *
                   <sp, a, n>{ artic, l, e.date  ? new, Dat, e(artic, l, e.d, a, t, e).toLocaleDateStri, n, g('en-US', { mon, t, h: 'sh, o, r, t', d, a, y: 'nume, r, i, c', ye, a, r : 'nume, r, i, c'  }) : 'Rece, n, t'}</sp, a, n>
                 </div>
                 {/* CTA, Butto, n */}
-                <a , hre, f="{`/bl, o, g/${artic, l, e.slug}`}"></a>"
+                <a , hre, f = "{`/bl, o, g/${artic, l, e.slug}`}"></a>"
                   className=""gro, u, p/btn, flex, items-center, justif, y-center, ga, p-2 w-full, b, g-gradie, n, t-to-r, fro, m-cy, a, n-500, t, o-bl, u, e-600, hove, r: fr, o, m-cy, a, n-400, hove, r:to-bl, u, e-500, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-cy, a, n-5, 0, 0/50, transform, hove,""
   r:-transla, t, e-y-1"
                 ></a>

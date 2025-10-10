@@ -1,11 +1,9 @@
 'use client';
 import React from 'react';
 import { WifiOff, RefreshCw, Home, Wifi } from 'lucide-react';
-
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
 'use client';
 /**
  * Offline Page;
@@ -57,6 +55,4 @@ onClick="{handleGoHome}""
             Some content may be available offline thanks to our service worker.
             Try refreshing the page once you're back online.
   )};
-
 export default OfflinePage;
-

@@ -9,7 +9,7 @@ const SupportPage: React.FC = () => {;
 const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 ;
-const supportCategories="[]"
+const supportCategories = []
     { id: 'all', name: 'All Topics', icon: Search, count: 45 },
     { id: 'getting-started', name: 'Getting Started', icon: Zap, count: 12 },
     { id: 'ai-services', name: 'AI Services', icon: Brain, count: 8 },
@@ -19,7 +19,7 @@ const supportCategories="[]"
     { id: 'api', name: 'API & Integration', icon: BarChart, count: 4 }
   ];
 ;
-const faqs="[]"
+const faqs = []
     {}
       id: 1,
       question: 'How do I get started with Zion Tech Group services?',
@@ -60,7 +60,7 @@ const faqs="[]"
     }
   ];
 ;
-const supportChannels="[]"
+const supportChannels = []
     {}
       icon: Phone,
       title: 'Phone Support',
@@ -96,7 +96,7 @@ const supportChannels="[]"
     }
   ];
 ;
-const resources="[]"
+const resources = []
     {}
       title: 'Documentation',
       description: 'Comprehensive guides and API documentation',
@@ -151,7 +151,7 @@ const searchResults="searchQuery;"
     <React.Fragment></React>
       <SEOOptimizer title=""Support Center - Zion Tech Group"></SEOOptimizer>"
         description=""Get help and support for Zion Tech Group services. Find answers to common questions, contact our team, and access comprehensive resources.""
-        keywords="{['support', 'help', 'FAQ', 'technical support', 'customer service', 'AI support']}"
+        keywords = "{['support', 'help', 'FAQ', 'technical support', 'customer service', 'AI support']}"
         canonicalUrl=""https://ziontechgroup.com/support""
       />
       <div className=""min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
@@ -180,7 +180,7 @@ const searchResults="searchQuery;"
                 <Search className=""absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"></Search>"
                 <input type=""text"></input>"
                   placeholder=""Search for help...""
-                  value="{ searchQuery };)"
+                  value = "{ searchQuery };)"
                   onChange = { (e) => setSearchQuery(e.target.value) };
                   className=""w-full pl-12 pr-4 py-4 bg-slate-800 text-white rounded-lg border border-slate-600 focus: border-cyan-400 focus:outline-none""
               <
@@ -212,7 +212,7 @@ const searchResults="searchQuery;"
             <
             <div className=""grid grid-cols-2 md: grid-cols-4 l,"></div>"
     g:grid-cols-7 gap-4 mb-8">
-              {supportCategories.map((category) => (<button key="{ category.id };)></button>"
+              {supportCategories.map((category) => (<button key = "{ category.id };)></button>"
                   onClick = { () => setSelectedCategory(category.id) };
                   className="{`p-4 rounded-lg text-center transition-all duration-300 ${}"
                     selectedCategory === category.id;

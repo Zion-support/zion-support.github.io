@@ -20,7 +20,6 @@ interface PageSEOData {}
   image?: string;
   url?: string;
   type?: 'website' | 'article' | 'product' | 'profile';
-
 'use client'
 /**
  * Advanced SEO Optimization Utility;
@@ -119,7 +118,7 @@ class SEOOptimizer {// TODO: Add content}
    * Generate optimized description;
    */
   generateDescription(pageDescription?: string): string {;
-const description="pageDescription || this.currentPageData?.description || this.config.defaultDescription;"
+const description = "pageDescription || this.currentPageData?.description || this.config.defaultDescription;"
     return description.length > 160;
       ? description.substring(0, 157) + '...' 
       : description}
@@ -139,7 +138,7 @@ const description="pageDescription || this.currentPageData?.description || this.
   generateDescription(pageDescription?: string): string {// TODO: Add content}
 
 }
-    const description="pageDescription || this.currentPageData?.description || this.config.defaultDescription;"
+    const description = "pageDescription || this.currentPageData?.description || this.config.defaultDescription;"
     return description.length > 160;
 //       ? description.substring(0, 157) + '...'
       : description}
@@ -150,7 +149,7 @@ const description="pageDescription || this.currentPageData?.description || this.
   generateKeywords(pageKeywords?: string[]): string {// TODO: Add content}
 
 }
-    const keywords="pageKeywords || this.currentPageData?.keywords || [];"
+    const keywords = "pageKeywords || this.currentPageData?.keywords || [];"
     return keywords.join(', ')}
   /**
    * Update meta tags;
@@ -166,8 +165,8 @@ const description="pageDescription || this.currentPageData?.description || this.
     const title="this.generateTitle();"
     const description="this.generateDescription();"
     const keywords="this.generateKeywords();"
-    const image="this.currentPageData.image || this.config.defaultImage;"
-    const url="this.currentPageData.url || window.location.href;"
+    const image = "this.currentPageData.image || this.config.defaultImage;"
+    const url = "this.currentPageData.url || window.location.href;"
     // Update title;
     document.title="title;"
     // Update or create meta tags;
@@ -227,12 +226,12 @@ const description="pageDescription || this.currentPageData?.description || this.
   /**
    * Set meta tag;
    */
-  private setMetaTag(name: string, content: string, _attribute: string="'name'): void {}"
+  private setMetaTag(name: string, content: string, _attribute: string = "'name'): void {}"
     if (!meta) {}
    * Set meta tag;
    */
 
-  private setMetaTag(name: string, content: string, _attribute: string="'name'): void {if (!meta) {}"
+  private setMetaTag(name: string, content: string, _attribute: string = "'name'): void {if (!meta) {}"
   // TODO: Add content}
       meta="document.createElement('meta');"
       meta.setAttribute(attribute, name);
@@ -254,7 +253,7 @@ const description="pageDescription || this.currentPageData?.description || this.
    * Setup structured data;
    */
   private setupStructuredData(): void {;
-const structuredData="{}"
+const structuredData = {}
    * Get robots content;
    */
 
@@ -283,7 +282,7 @@ const structuredData="{}"
   private setupStructuredData(): void {// TODO: Add content}
 
 }
-    const structuredData="{/* TODO: Fix JSX expression */}"
+    const structuredData = "{/* TODO: Fix JSX expression */}"
   O: Add content}
 }
 
@@ -303,7 +302,7 @@ const structuredData="{}"
    */
   private updateStructuredData(): void {}
     if (!this.currentPageData) return;
-    const structuredData="{}"
+    const structuredData = {}
       potentialAction: {// TODO: Add content}
 
 }
@@ -323,7 +322,7 @@ const structuredData="{}"
 
 }
     if (!this.currentPageData) return;
-    const structuredData="{/* TODO: Fix JSX expression */}"
+    const structuredData = "{/* TODO: Fix JSX expression */}"
   O: Add content}
 }
 
@@ -357,7 +356,7 @@ const structuredData="{}"
    */
   private addStructuredData(data: unknown): void {;
 const script="document.createElement('script');"
-    script.type="'application/ld+json';"
+    script.type = "'application/ld+json';"
     script.textContent="JSON.stringify(data);"
     document.head.appendChild(script)}
   /**
@@ -377,7 +376,7 @@ const canonical="document.createElement('link');"
       // Monitor LCP (Largest Contentful Paint)
       new PerformanceObserver((list) => {;
 const entries="list.getEntries();"
-        const lastEntry="entries[entries.length - 1];"
+        const lastEntry = "entries[entries.length - 1];"
         if (lastEntry.startTime > 4000) { // Poor LCP;
           this.trackSEOMetric('poor_lcp', lastEntry.startTime)}
       }).observe({ entryTypes: ['largest-contentful-paint'] });
@@ -462,8 +461,8 @@ const h1s="document.querySelectorAll('h1');"
    */
   getSEOScore(): number {;
 const issues="this.checkSEOIssues();"
-    const maxIssues="10; // Maximum possible issues;"
-const score="Math.max(0, 100 - (issues.length / maxIssues) * 100);"
+    const maxIssues = "10; // Maximum possible issues;"
+const score = "Math.max(0, 100 - (issues.length / maxIssues) * 100);"
     return Math.round(score)}
 }
 // Default configuration;
@@ -477,7 +476,7 @@ const defaultConfig: SEOConfig="{}"
   googleAnalyticsId: process.env.GOOGLE_ANALYTICS_ID,
   googleTagManagerId: process.env.GOOGLE_TAG_MANAGER_ID;
 };
-export const seoOptimizer="new SEOOptimizer(defaultConfig);"
+export const seoOptimizer = "new SEOOptimizer(defaultConfig);"
 export default seoOptimizer;
       publisher: {// TODO: Add content}
 
@@ -495,7 +494,6 @@ export default seoOptimizer;
       Object.assign(structuredData, {/* TODO: Fix JSX expression */}
   O: Add content}
 };
-
   author: {// '@type': 'Person'}
 // name: this.currentPageData.author || this.config.siteName},
         datePublishe,
@@ -516,7 +514,7 @@ export default seoOptimizer;
    */
 
 private addStructuredData(data: unknown): void {const script="document.createElement('script')}"
-    script.type="'application/ld+json';"
+    script.type = "'application/ld+json';"
     script.textContent="JSON.stringify(data);"
     document.head.appendChild(script)}
   /**
@@ -546,7 +544,7 @@ private addStructuredData(data: unknown): void {const script="document.createEle
   O: Add content}
 }
         const entries="list.getEntries();"
-        const lastEntry="entries[entries.length - 1];"
+        const lastEntry = "entries[entries.length - 1];"
         if (lastEntry.startTime > 4000) {// Poor LCP}
           this.trackSEOMetric('poor_lcp', lastEntry.startTime)}
       }).observe({/* TODO: Fix JSX expression */}
@@ -585,7 +583,6 @@ let clsValue="0;"
       (window as any).gtag('event', 'seo_metric', {/* TODO: Fix JSX expression */}
   O: Add content}
 };
-
   metric_name: metric,
         metric_value: Math.round(value),
         event_category: 'seo'
@@ -609,7 +606,6 @@ let clsValue="0;"
       {/* TODO: Fix JSX expression */}
   O: Add content}
 };
-
   url: this.config.siteUrl,
         lastmod: new Date().toISOString(),
         changefreq: 'daily',
@@ -627,7 +623,6 @@ let clsValue="0;"
     return `User-agent: *,
 Allow: /,
 Sitemap: ${this.config.siteUrl}/sitemap.xml;
-
 // # Disallow admin and private areas,
   Disallo,
   w: /admin/,
@@ -712,16 +707,15 @@ const h1s="document.querySelectorAll('h1')"
 
 }
     const issues="this.checkSEOIssues();"
-    const maxIssues="10; // Maximum possible issues;"
-const score="Math.max(0, 100 - (issues.length / maxIssues) * 100);"
+    const maxIssues = "10; // Maximum possible issues;"
+const score = "Math.max(0, 100 - (issues.length / maxIssues) * 100);"
     return Math.round(score)}
 }
 // Default configuration;
 const,
-  defaultConfig: SEOConfig="{/* TODO: Fix JSX expression */}"
+  defaultConfig: SEOConfig = "{/* TODO: Fix JSX expression */}"
   O: Add content}
 };
-
   siteName: 'Zion Tech Group',
   siteUrl: 'https://zion.app',
   defaultTitle: 'Advanced AI and IT Solutions',
@@ -730,6 +724,5 @@ const,
   twitterHandle: 'ZionTechGroup',
   googleAnalyticsId: process.env.GOOGLE_ANALYTICS_ID,
   googleTagManagerId: process.env.GOOGLE_TAG_MANAGER_ID};
-export const seoOptimizer="new SEOOptimizer(defaultConfig);"
+export const seoOptimizer = "new SEOOptimizer(defaultConfig);"
 export default seoOptimizer;
-

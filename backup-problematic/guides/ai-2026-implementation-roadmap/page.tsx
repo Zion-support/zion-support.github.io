@@ -1,9 +1,7 @@
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Calendar, User, Clock, Tag } from 'lucide-react';
-
-export const metadata="{/* TODO: Fix JSX expression */}"
+export const metadata = "{/* TODO: Fix JSX expression */}"
 };
-
 export default function AI2026ImplementationRoadmap() {}
   return(<div className=""min-h-screen bg-white"></div>"
       {/* Header */}
@@ -606,6 +604,5 @@ export default function AI2026ImplementationRoadmap() {/* TODO: Fix JSX expressi
         </div>
       </article>,
     </div>)};
-
 export default AI2026ImplementationRoadmap;
 "

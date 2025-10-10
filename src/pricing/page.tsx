@@ -5,7 +5,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 ;
 const PricingPage: React.FC = () => {;
-const plans="[]"
+const plans = []
     {}
       name: 'Starter',
       description: 'Perfect for small businesses getting started with AI',
@@ -76,7 +76,7 @@ const plans="[]"
     }
   ];
 ;
-const addOns="[]"
+const addOns = []
     {}
       name: 'Additional AI Models',
       description: 'Extra custom AI models beyond your plan limits',
@@ -103,7 +103,7 @@ const addOns="[]"
     }
   ];
 ;
-const faqs="[]"
+const faqs = []
     {}
       question: 'Can I change my plan at any time?',
       answer: 'Yes, you can upgrade or downgrade your plan at any time. Changes take effect at the beginning of your next billing cycle.'
@@ -165,7 +165,6 @@ const getColorClasses = (color: string) => {}
           textLight: 'text-gray-600'
         }}
   };
-
   return (
     <div className=""min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
       <Navigation /></Navigation>
@@ -189,7 +188,7 @@ return (
 ;
 const colors="getColorClasses(plan.color);"
               return (
-                <div key="{index}></div>"
+                <div key = "{index}></div>"
                   className="{`relative bg-white rounded-2xl shadow-lg border-2 ${}"
                     plan.popular ? colors.border : 'border-gray-200'
                   } overflow-hidden`}>
@@ -322,5 +321,4 @@ const colors="getColorClasses(plan.color);"
       <Footer /></Footer>
     </div>
   )};
-
 export default PricingPage;

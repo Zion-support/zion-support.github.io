@@ -1,11 +1,10 @@
 import React from 'react';
 import {BarChart, Target, Zap, Brain, Shield, CheckCircle, Star, Phone, Mail, MapPin, Users} from 'lucide-react';
 import { Link } from 'react-router-dom';
-
 import React from 'react';
 ;
 const SmartAnalyticsPage: React.FC = () => {;
-const features="[]"
+const features = []
     {}
       icon: BarChart,
       title: 'Real-time Dashboards',
@@ -35,7 +34,7 @@ iconicon: Shield,
 $4}
   ];
 ;
-const pricingPlans="[]"
+const pricingPlans = []
       name: 'Starter',
       price: '$299',
       period: '/month',
@@ -112,7 +111,7 @@ const pricingPlans="[]"
             Simple, Transparent Pricing;
           <div className=""grid md:grid-cols-3 gap-8"></div>"
             {pricingPlans.map((plan, index) => (
-              <div key="{index}></div>"
+              <div key = "{index}></div>"
                 className="{`bg-white/10 backdrop-blur-sm rounded-lg p-8 border ${}"
                   plan.popular ? 'border-cyan-500' : 'border-gray-600'
                 } relative`}
@@ -198,7 +197,7 @@ return (
 
     }
   ];
-  const pricingPlans="[]"
+  const pricingPlans = []
       nam,
   e: 'Professional',
       pric,
@@ -264,6 +263,4 @@ return (
                 <MapPin className=""w-5 h-5 mr-2 text-cyan-400" /></MapPin>"
                 <span>364 E Main St STE 1008, Middletown DE 19709</span>
   )};
-
 export default SmartAnalyticsPage;
-

@@ -2,7 +2,7 @@
 import fs from 'fs';
 // console.log removed for production;
 ;
-const content="`'use client';"
+const content = "`'use client';"
 import React from 'react';
 import { Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, Users, Award, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Cube, Mic, DollarSign, Truck, Link, HardDrive, FileCheck } from 'lucide-react';
 import Navigation from '../components/Navigation';
@@ -117,7 +117,7 @@ const AIServicesPage: React.FC = () => {}
       <SEOOptimizer ;></SEOOptimizer>
         title=""AI Services - Zion Tech Group""
         description=""Advanced AI services including machine learning, natural language processing, computer vision, and automation solutions for enterprise applications.""
-        keywords="{ ['AI services', 'machine learning', 'NLP', 'computer vision', 'automation', 'artificial intelligence'] };"
+        keywords = "{ ['AI services', 'machine learning', 'NLP', 'computer vision', 'automation', 'artificial intelligence'] };"
         canonicalUrl=""https: //ziontechgroup.com)""
       <div className=""min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain particle-field">)"
         <Navigation></Navigation>

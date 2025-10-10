@@ -2,7 +2,7 @@
  * Performance Configuration;
  * Centralized performance monitoring and optimization settings;
  */
-export const _performanceConfig="{}"
+export const _performanceConfig = {}
   // Core Web Vitals thresholds;
   metrics: {}
 // lcp: {}
@@ -83,15 +83,14 @@ export const _performanceConfig="{}"
 // logThreshold:   ,
 $4}
 };
-export type PerformanceConfig="typeof performanceConfig;"
+export type PerformanceConfig = "typeof performanceConfig;"
 export default performanceConfig;
-
 /**
  * Performance Configuration;
  * Centralized performance monitoring and optimization settings;
  */
 
-export const _performanceConfig="{// TODO: Add content}"
+export const _performanceConfig = "{// TODO: Add content}"
 }
   // Core Web Vitals thresholds,
   metric,
@@ -204,6 +203,5 @@ export const _performanceConfig="{// TODO: Add content}"
   d: 'needsImprovement'
   }
 }
-export type PerformanceConfig="typeof performanceConfig;"
+export type PerformanceConfig = "typeof performanceConfig;"
 export default performanceConfig;
-

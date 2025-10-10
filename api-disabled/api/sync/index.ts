@@ -4,7 +4,7 @@ const _state="readState();"
 ,
   if (req.method === 'GET') {,
     //     const scope="state.config.scope;"
-    const _scopedEvents="filterEventsByScope(state.events, scope);"
+    const _scopedEvents = "filterEventsByScope(state.events, scope);"
     return res.status(200).json({)
       status: 'ok')
       instanceId: state.config.instanceId;)

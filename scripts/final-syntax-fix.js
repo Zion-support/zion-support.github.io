@@ -7,7 +7,7 @@ const __filename="fileURLToPath(import.meta.url);"
 // __dirname removed;
 // console.log removed for production;
 // Final syntax fixes;
-const fixes="[]"
+const fixes = []
   // Fix missing commas in object arrays;
   { pattern: /icon: '[^']+'}\s*},/g, replacement: (match) => match.replace('}', '') },
   { pattern: /color: 'text-\w+-\d+'\s*}\s*},/g, replacement: (match) => match.replace('}', '') },
@@ -21,15 +21,14 @@ const fixes="[]"
 ;
 function fixFile(filePath) {}
   try {;
-let content="fs.readFileSync(filePath, 'utf8');"
+let content = "fs.readFileSync(filePath, 'utf8');"
     let modified="false;"
-    fixes.forEach(fix="> {);"
-const newContent="content.replace(fix.pattern, fix.replacement);"
+    fixes.forEach(fix = "> {);"
+const newContent = "content.replace(fix.pattern, fix.replacement);"
       if (newContent !== content) {}
         content="newContent;"
         modified="true}"
     });
-
     if (modified) {}
       fs.writeFileSync(filePath, content);
       // console.log removed for production;
@@ -40,17 +39,17 @@ return false}
 }
 
 // Find all TypeScript/JavaScript files;
-function findFiles(dir, extensions="['.ts', '.tsx', '.js', '.jsx']) {;"
+function findFiles(dir, extensions = "['.ts', '.tsx', '.js', '.jsx']) {;"
 let files="[];"
   try {;
 const items="fs.readdirSync(dir);"
     for (const item of items) {;
-const fullPath="path.join(dir, item);"
+const fullPath = "path.join(dir, item);"
       const stat="fs.statSync(fullPath);"
       if (stat.isDirectory()) {}
         if (!['node_modules', '.git', 'dist', 'build', '.next', 'backup-problematic'].includes(item)) {}
-          files="files.concat(findFiles(fullPath, extensions))}"
-      } else if (extensions.some(ext="> item.endsWith(ext))) {}"
+          files = "files.concat(findFiles(fullPath, extensions))}"
+      } else if (extensions.some(ext = "> item.endsWith(ext))) {}"
         files.push(fullPath)}
     }
   } catch (error) {}
@@ -59,12 +58,11 @@ const fullPath="path.join(dir, item);"
   return files}
 
 // Main fix process;
-const files="findFiles('./app');"
+const files = "findFiles('./app');"
 let fixedCount="0;"
 // console.log removed for production;
-files.forEach(file="> {)"
+files.forEach(file = "> {)"
   if (fixFile(file)) {}
     fixedCount++}
 });
-
 // console.log removed for production;

@@ -1,6 +1,5 @@
 import React from 'react';
 import './index.css';
-
 async function reportWebVitals() {/* TODO: Fix JSX expression */}
 }
   try {/* TODO: Fix JSX expression */}
@@ -10,7 +9,6 @@ async function reportWebVitals() {/* TODO: Fix JSX expression */}
   e: number }) => {/* TODO: Fix JSX expression */}
         //         }
     };
-
     onCLS(log);
     onLCP(log);
     onFCP(log);
@@ -29,5 +27,4 @@ root.render(<React.StrictMode></React>
     <App /></App>
   </React.StrictMode>)
 );
-
 reportWebVitals();

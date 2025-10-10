@@ -1,5 +1,4 @@
 import React from 'react';
-
 export interface CybersecurityQuantumService;
 export interface CybersecurityQuantumService {;
   id: string;

@@ -28,7 +28,7 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
   customers: number;
   rating: number;
   reviews: number}
-const contact="mobile: "+1 302 464 0950","
+const contact = "mobile: "+1 302 464 0950","
   email: "kleber@ziontechgroup.com",
   address: "364 E Main St STE 1008 Middletown DE 19709"};
 export const comprehensiveExpandedServices: ComprehensiveService[] = []
@@ -2273,7 +2273,7 @@ reviews: 34;
     rating: 4.7;
     reviews: 28}
 ];
-export const serviceCategories="[{name: 'Micro SaaS',"
+export const serviceCategories = "[{name: 'Micro SaaS',"
     description: 'Affordable, specialized software solutions for small businesses',
     services: comprehensiveExpandedServices.filter(s => s.category === 'Micro SaaS'),
     icon: ''}
@@ -2363,7 +2363,7 @@ export const serviceCategories="[{name: 'Micro SaaS',"
     review,
   s: 28}
 ];
-export const serviceCategories="[{/* TODO: Fix JSX expression */}"
+export const serviceCategories = "[{/* TODO: Fix JSX expression */}"
   n: ''}
     colo,
   r: 'from-blue-600 to-cyan-700'
@@ -3218,7 +3218,7 @@ export interface ComprehensiveService,
   e: '2025-02-15', customer,
   s: 34, ratin,
   g: 4.7, review,
-  s: 28 } ]; export const serviceCategories="[ ' nam,"
+  s: 28 } ]; export const serviceCategories = "[ ' nam,"
   e: 'Micro SaaS',' descriptio,
   n: 'Affordable, specialized software solutions for small businesses',' service,
   s: comprehensiveExpandedServices.filter(s => s.category === 'Micro SaaS'),' ico,

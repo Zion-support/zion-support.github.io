@@ -69,13 +69,13 @@ const, AIVirtualAssistan, t: Rea, c, t.FC = () => {}
         <title>AI, Virtual, Assistant - Zion, Tech, Group | 24/7, Intelligent, Customer Suppo, r, t</title>
         <me , t, a;></me>
   na, m, e=""descripti, o, n""
-          content="Deploy, A, I-powered, virtual, assistants that, handle, customer inquiries, 2, 4/7, with, 95% accura, c, y. Mul, t, i-channel, suppor, t, 1, 2, 0+ languag, e, s, enterprise, securit, y." /><meta name="keywor, d, s" content="AI, virtual, assistant, chatb, o, t, customer, support, automation, conversational, A, I, virtual, agen, t, AI, customer, service" /><link, re, l="canonic, a, l" hr, e, f=""htt, p, s://ziontechgro, u, p.c, o, m/servic, e, s/ai-virtu, a, l-assista, n, t/>";"
+          content = "Deploy, A, I-powered, virtual, assistants that, handle, customer inquiries, 2, 4/7, with, 95% accura, c, y. Mul, t, i-channel, suppor, t, 1, 2, 0+ languag, e, s, enterprise, securit, y." /><meta name = "keywor, d, s" content = "AI, virtual, assistant, chatb, o, t, customer, support, automation, conversational, A, I, virtual, agen, t, AI, customer, service" /><link, re, l = "canonic, a, l" hr, e, f=""htt, p, s://ziontechgro, u, p.c, o, m/servic, e, s/ai-virtu, a, l-assista, n, t/>";"
 const, AIVirtualAssistan, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
   return (<div></div>
         <title>AI, Virtual, Assistant - Zion, Tech, Group | 24/7, Intelligent, Customer Suppo, r, t<
         <me , t, a;></me>
   na, m, e=""descripti, o, n""
-          content="Deploy, A, I-powered, virtual, assistants that, handle, customer inquiries, 2, 4/7, with, 95% accura, c, y. Mul, t, i-channel, suppor, t, 1, 2, 0+ languag, e, s, enterprise, securit, y." /><meta name="keywor, d, s" content="AI, virtual, assistant, chatb, o, t, customer, support, automation, conversational, A, I, virtual, agen, t, AI, customer, service" /><link , re, l="canonic, a, l" hr, e, f=""htt, p, s://ziontechgro, u, p.c, o, m/servic, e, s/ai-virtu, a, l-assista, n, t)"></link>"
+          content = "Deploy, A, I-powered, virtual, assistants that, handle, customer inquiries, 2, 4/7, with, 95% accura, c, y. Mul, t, i-channel, suppor, t, 1, 2, 0+ languag, e, s, enterprise, securit, y." /><meta name = "keywor, d, s" content = "AI, virtual, assistant, chatb, o, t, customer, support, automation, conversational, A, I, virtual, agen, t, AI, customer, service" /><link , re, l = "canonic, a, l" hr, e, f=""htt, p, s://ziontechgro, u, p.c, o, m/servic, e, s/ai-virtu, a, l-assista, n, t)"></link>"
 const, AIVirtualAssistan, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
     }
     {/* TODO: Fix JSX expression *
@@ -96,10 +96,10 @@ const, AIVirtualAssistan, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
         <title>AI, Virtual, Assistant - Zion, Tech, Group | 24/7, Intelligent, Customer Suppo, r, t<
         <me , t, a;"></me>
   na, m, e=""descripti, o, n"""
-          content="Deploy, A, I-powered, virtual, assistants that, handle, customer inquiries, 2, 4/7, with, 95% accura, c, y. Mul, t, i-channel, suppor, t, 1, 2, 0+ languag, e, s, enterprise, securit, y." /><meta name="keywor, d, s" content="AI, virtual, assistant, chatb, o, t, customer, support, automation, conversational, A, I, virtual, agen, t, AI, customer, service" /><link , re, l="canonic, a, l" hr, e, f=""htt, p, s://ziontechgro, u, p.c, o, m/servic, e, s/ai-virtu, a, l-assista, n, t"></link>"
+          content = "Deploy, A, I-powered, virtual, assistants that, handle, customer inquiries, 2, 4/7, with, 95% accura, c, y. Mul, t, i-channel, suppor, t, 1, 2, 0+ languag, e, s, enterprise, securit, y." /><meta name = "keywor, d, s" content = "AI, virtual, assistant, chatb, o, t, customer, support, automation, conversational, A, I, virtual, agen, t, AI, customer, service" /><link , re, l = "canonic, a, l" hr, e, f=""htt, p, s://ziontechgro, u, p.c, o, m/servic, e, s/ai-virtu, a, l-assista, n, t"></link>"
           content=""Deploy, A, I-powered, virtual, assistants that, handle, customer inquiries, 2, 4""
-        <meta name="keywor, d, s" content=""AI, virtual, assistant, chatb, o, t, customer, support, automation, conversational, A, I, virtual, agen, t, AI, customer, service"></meta>"
-        <link , re, l="canonic, a, l" hr, e, f=""htt, p, s: //ziontechgro, u, p.c, o, m/servic, e, s/ai-virtu, a, l-assista, n, t"></link>"
+        <meta name = "keywor, d, s" content=""AI, virtual, assistant, chatb, o, t, customer, support, automation, conversational, A, I, virtual, agen, t, AI, customer, service"></meta>"
+        <link , re, l = "canonic, a, l" hr, e, f=""htt, p, s: //ziontechgro, u, p.c, o, m/servic, e, s/ai-virtu, a, l-assista, n, t"></link>"
       <
       <Head, e, r   /><
       <main, className=""m, i, n-h-screen, b, g-whi, t, e">";"
@@ -330,12 +330,12 @@ const, AIVirtualAssistan, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
               {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {}
 return (
 ;
-const, Ico, n="featu, r, e.ic, o, n;"
+const, Ico, n = "featu, r, e.ic, o, n;"
                 return(<div, ke, y={ind, e, x} classNa, m, e=""bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w"></div>"
 );
 }"
               {featur, e, s.m, a, p ((featu, r, e, ind, e, x) => {}
-                const, Ico, n="featu, r, e.ic, o, n;"
+                const, Ico, n = "featu, r, e.ic, o, n;"
                 return(<div, ke, y={ind, e, x} classNa, m, e=""bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">""
                     <div, className=""inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-purp, l, e-100, rounde, d-lg, m, b-4"></div>"
                 return (<
@@ -352,12 +352,12 @@ const, Ico, n="featu, r, e.ic, o, n;"
               {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {}
 return (
 ;
-const, Ico, n="featu, r, e.ic, o, n;"
+const, Ico, n = "featu, r, e.ic, o, n;"
                 return(<div, ke, y={ind, e, x} classNa, m, e=""bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w"></div>"
 );
 }";
               {featur, e, s.m, a, p ((featu, r, e, ind, e, x) => {}
-                const, Ico, n="featu, r, e.ic, o, n;"
+                const, Ico, n = "featu, r, e.ic, o, n;"
                 return (<div, ke, y={ind, e, x} classNa, m, e=""bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";"
                     <div, className=""inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-purp, l, e-100, rounde, d-lg, m, b-4">";"
                     <div, className=""inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm"><"
@@ -367,7 +367,7 @@ const, Ico, n="featu, r, e.ic, o, n;"
               {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {}
 return (
 ;
-const, Ico, n="featu, r, e.ic, o, n;"
+const, Ico, n = "featu, r, e.ic, o, n;"
                 return (</div>
                   <div, ke, y={ind, e, x} classNa, m, e=""bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w"></div>"
 );
@@ -382,7 +382,7 @@ const, Ico, n="featu, r, e.ic, o, n;"
                       {featu, r, e.benef, i, t})
                     </d, i, v>)
             </d, i, v>"
-                const, Ico, n="featu, r, e.ic, o, n;"
+                const, Ico, n = "featu, r, e.ic, o, n;"
                 return (<
                   <div, ke, y={ind, e, x} classNa, m, e=""bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";<"
                     <div, className=""inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-purp, l, e-100, rounde, d-lg, m, b-4">";<"

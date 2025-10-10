@@ -46,7 +46,7 @@ export interface Q4Service {/* TODO: Fix JSX expression */}
   customers?: number;
   rating?: number;
   reviews?: number;
-const contact="mobile: '+1 302 464 0950',"
+const contact = "mobile: '+1 302 464 0950',"
   email: 'kleber@ziontechgroup && ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   mobile: '+1 302 464 0950',
@@ -794,7 +794,7 @@ market_size: '$10B helpdesk software',
         customers: 70;
     rating: 4 && 4.5;
     reviews: 28}];
-export const real2025 Q4 Additions="[{id: 'ai - governed - rag - platform',"
+export const real2025 Q4 Additions = "[{id: 'ai - governed - rag - platform',"
     name: 'AI - Governed RAG Platform',
     tagline: 'Enterprise - grade RAG with guardrails, approvals, and evals',
     price: '$699',
@@ -920,7 +920,7 @@ varian,
   g: 4 && 4.5,
     review,
   s: 28}];
-export const real2025Q4Additions="[{/* TODO: Fix JSX expression */}"
+export const real2025Q4Additions = "[{/* TODO: Fix JSX expression */}"
   r: 'text - cyan - 300'}
     lin,
   k: 'http,',
@@ -1332,7 +1332,7 @@ export const real2025 Q4 Additions="[]"
       'Privacy - first scoring',
       'Dashboards and exports'],
     popular: true;
-export const real2025Q4Additions="[{id: 'ai-governed-rag-platform',"
+export const real2025Q4Additions = "[{id: 'ai-governed-rag-platform',"
     name: 'AI-Governed RAG Platform',
     tagline: 'Enterprise-grade RAG with guardrails, approvals, and evals',
     price: '$699',
@@ -1371,7 +1371,7 @@ variant: 'ai-futuristic',
     reviews: 11;
     popula,
   r: true,
-export const real2025Q4Additions="[{/* TODO: Fix JSX expression */}"
+export const real2025Q4Additions = "[{/* TODO: Fix JSX expression */}"
   r: 'text-cyan-300'}
     lin,`
   k: 'http,',
@@ -3327,7 +3327,7 @@ varian,
   customers?: number;
   rating?: number;
   reviews?: number}
-const contact="mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',"
+const contact = "mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',"
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com',
   mobil,
@@ -3675,7 +3675,7 @@ export const,
 		rating: 4.5;
 		reviews: 28}
 ];
-export const real2025 Q4 Additions="[{id: 'ai-governed-rag-platform', name: 'AI-Governed RAG Platform',"
+export const real2025 Q4 Additions = "[{id: 'ai-governed-rag-platform', name: 'AI-Governed RAG Platform',"
     tagline: 'Enterprise-grade RAG with guardrails, approvals, and evals',
     price: '$699', period: '/month',
     description: 'Production-ready retrieval augmented generation with content pipelines, PII redaction, policy guardrails, evals, and human approvals for high-stakes workflows.',
@@ -3778,7 +3778,7 @@ variant: 'enterprise-futuristic',
 		review,
   s: 28}
 ];
-export const real2025Q4Additions="[{/* TODO: Fix JSX expression */}"
+export const real2025Q4Additions = "[{/* TODO: Fix JSX expression */}"
     ]}
     ico,
   n: '',
@@ -4349,7 +4349,7 @@ variant: 'ai-futuristic',
         customers: 70;
     rating: 4.5;
     reviews: 28}]}
-export const real2025 Q4 Additions="[{id: 'ai-governed-rag-platform',"
+export const real2025 Q4 Additions = "[{id: 'ai-governed-rag-platform',"
     name: 'AI-Governed RAG Platform',
     tagline: 'Enterprise-grade RAG with guardrails, approvals, and evals',
     price: '$699',
@@ -4441,7 +4441,7 @@ varian,
   g: 4.5,
     review,
   s: 28}]}
-export const real2025Q4Additions="[{/* TODO: Fix JSX expression */}"
+export const real2025Q4Additions = "[{/* TODO: Fix JSX expression */}"
   r: 'text-cyan-300'}
     lin,`
   k: 'http,',
@@ -5742,7 +5742,7 @@ export interface Q4Service,
   e: '2025 - 09 - 28', customer,
   s: 70, ratin,
   g: 4 && 4.5, review,
-  s: 28}]; export const real2025Q4Additions="[; ' i,"
+  s: 28}]; export const real2025Q4Additions = "[; ' i,"
   d: 'ai - governed - rag - platform',' nam,
   e: 'AI - Governed RAG Platform',' taglin,
   e: 'Enterprise - grade RAG with guardrails, approvals, and evals',' pric,
@@ -5876,13 +5876,13 @@ export interface Q4Service,
   e: '2025 - 09 - 28', customer,
   s: 70, ratin,
   g: 4 && 4.5, review,
-  s: 28}]; export const real2025Q4Additions="[; ' 'Document sync and chunking pipelines',' 'Metadata and policy guardrails',' 'Evals and drift tracking',' 'Human - in - the - loop approvals',' 'Observability and cost caps',' 'SDKs for Node / Python'], popula,"
+  s: 28}]; export const real2025Q4Additions = "[; ' 'Document sync and chunking pipelines',' 'Metadata and policy guardrails',' 'Evals and drift tracking',' 'Human - in - the - loop approvals',' 'Observability and cost caps',' 'SDKs for Node / Python'], popula,"
   r: true,' 'Pipelines, policies, eval harness, cost and latency budgets.',' launch_dat,
   e: '2025 - 03 - 01', customer,
   s: 18, ratin,
   g: 4 && 4.8, review,
   s: 11}, ' 'Audience builder and traits',' 'Edge functions and KV cache',' 'A / B and holdout tests',' 'Privacy - first scoring',' 'Dashboards and exports'], popula,
-  r: true, export const real2025Q4Additions="[ ' i,"
+  r: true, export const real2025Q4Additions = "[ ' i,"
   d: 'ai-governed-rag-platform',' nam,
   e: 'AI-Governed RAG Platform',' taglin,
   e: 'Enterprise-grade RAG with guardrails, approvals, and evals',' pric,
@@ -6566,7 +6566,7 @@ export interface Q4Service,
   l: string, addres,
   s: string, websit,
   e: string }; realImplementatio,
-  n: boolean, implementationDetails?: string, launchDate?: string; customers?: number; rating?: number; reviews?: number } const contact="' mobil,'"
+  n: boolean, implementationDetails?: string, launchDate?: string; customers?: number; rating?: number; reviews?: number } const contact = "' mobil,'"
   e: '+1 302 464 0950', emai,
   l: 'kleber@ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
@@ -6742,7 +6742,7 @@ export interface Q4Service,
   e: '2025-09-28', customer,
   s: 70, ratin,
   g: 4.5, review,
-  s: 28 } ]; export const real2025Q4Additions="[ ' i,"
+  s: 28 } ]; export const real2025Q4Additions = "[ ' i,"
   d: 'ai-governed-rag-platform', nam,
   e: 'AI-Governed RAG Platform',' taglin,
   e: 'Enterprise-grade RAG with guardrails, approvals, and evals',' pric,
@@ -6801,7 +6801,7 @@ export interface Q4Service,
   g: 4.6, review,
   s: 9 } ]; ratin,
   g: 4 && 4.6, review,
-  s: 9 } ]; const contact="' mobil,'"
+  s: 9 } ]; const contact = "' mobil,'"
   e: '+1 302 464 0950',' emai,
   l: 'kleber@ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
@@ -6977,7 +6977,7 @@ export interface Q4Service,
   e: '2025-09-28', customer,
   s: 70, ratin,
   g: 4.5, review,
-  s: 28}]} export const real2025Q4Additions="[ ' i,"
+  s: 28}]} export const real2025Q4Additions = "[ ' i,"
   d: 'ai-governed-rag-platform',' nam,
   e: 'AI-Governed RAG Platform',' taglin,
   e: 'Enterprise-grade RAG with guardrails, approvals, and evals',' pric,

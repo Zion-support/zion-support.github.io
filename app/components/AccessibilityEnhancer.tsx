@@ -29,7 +29,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({}
         // Close dropdowns with Escape key;
         if (event.key === 'Escape') {}
           const openDropdowns = document.querySelectorAll('[aria-expanded=""true"]');"
-          openDropdowns.forEach(dropdown="> {}"
+          openDropdowns.forEach(dropdown = "> {}"
             (dropdown as HTMLElement).setAttribute('aria-expanded', 'false');
           })
         }
@@ -43,8 +43,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({}
       const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex=""-1"])';"
       const trapFocus = (container: HTMLElement) => {}
         const focusableContent="container.querySelectorAll(focusableElements);"
-        const firstFocusableElement="focusableContent[0] as HTMLElement;"
-        const lastFocusableElement="focusableContent[focusableContent.length - 1] as HTMLElement;"
+        const firstFocusableElement = "focusableContent[0] as HTMLElement;"
+        const lastFocusableElement = "focusableContent[focusableContent.length - 1] as HTMLElement;"
         const handleTabKey = (e: KeyboardEvent) => {}
           if (e.key !== 'Tab') return;
           if (e.shiftKey) {}
@@ -65,7 +65,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({}
       };
       // Apply focus trap to modals and dropdowns;
       const modals = document.querySelectorAll('[role="dialog"], [aria-modal=""true"]');"
-      modals.forEach(modal="> trapFocus(modal as HTMLElement))"
+      modals.forEach(modal = "> trapFocus(modal as HTMLElement))"
     }
 
     // Screen reader support;
@@ -87,11 +87,11 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({}
       // Listen for route changes (if using React Router)
       const originalPushState="history.pushState;"
       const originalReplaceState="history.replaceState;"
-      history.pushState="function(...args) {}"
+      history.pushState = "function(...args) {}"
         originalPushState.apply(history, args);
         announcePageChange('Page changed');
       };
-      history.replaceState="function(...args) {}"
+      history.replaceState = "function(...args) {}"
         originalReplaceState.apply(history, args);
         announcePageChange('Page updated');
       };
@@ -104,7 +104,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({}
 
     // High contrast mode support;
     if (enableHighContrast && typeof window !== 'undefined') {}
-      const prefersHighContrast="window.matchMedia('(prefers-contrast: high)');"
+      const prefersHighContrast = "window.matchMedia('(prefers-contrast: high)');"
       const updateHighContrast = (e: MediaQueryListEvent) => {}
         if (e.matches) {}
           document.documentElement.classList.add('high-contrast');

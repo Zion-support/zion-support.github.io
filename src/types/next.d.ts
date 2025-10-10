@@ -79,7 +79,7 @@ export interface MetadataRoute {/* TODO: Fix JSX expression */}
   sitemap?: string;
   robots?: string;
   manifest?: string}
-export type MetadataRouteType="'sitemap' | 'robots' | 'manifest';"
+export type MetadataRouteType = "'sitemap' | 'robots' | 'manifest';"
 export interface MetadataRouteSitemap {/* TODO: Fix JSX expression */}
   O: Add content}
 };

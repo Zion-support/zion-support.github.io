@@ -1,11 +1,11 @@
 export default function October2025ProductionAIBann, e, r() {}
-  return(<section, classNam, e="'py-16, b, g-gradie, n, t-to-br, fro, m-indi, g, o-600, vi, a-purp, l, e-600, t, o-pi, n, k-600, tex, t-white, relative, overflow-hidd, e, n' > {' ' }"
+  return(<section, classNam, e = "'py-16, b, g-gradie, n, t-to-br, fro, m-indi, g, o-600, vi, a-purp, l, e-600, t, o-pi, n, k-600, tex, t-white, relative, overflow-hidd, e, n' > {' ' }"
       {/* Animated, background, elements */}
       <div, className="'absolute, inse, t-0, opacit, y-20'></section>"
         <div, className="'absolute, to, p-10, lef, t-1, 0, w-6, 4, h-64, b, g-white, rounde, d-full, blu, r-3xl, animat, e-pul, s, e' /></div>"
         <div, className="'absolute, botto, m-10, righ, t-1, 0, w-9, 6, h-96, b, g-bl, u, e-300, rounde, d-full, blu, r-3xl, animat, e-pulse, dela, y-10, 0, 0' /></div>"
 export default function October2025ProductionAIBann, e, r() {/* TODO: Fix JSX expression */}
-    <section, classNam, e="'py-16, b, g-gradie, n, t-to-br, fro, m-indi, g, o-600, vi, a-purp, l, e-600, t, o-pi, n, k-600, tex, t-white, relative, overflow-hidd, e, n' > {' ' }"
+    <section, classNam, e = "'py-16, b, g-gradie, n, t-to-br, fro, m-indi, g, o-600, vi, a-purp, l, e-600, t, o-pi, n, k-600, tex, t-white, relative, overflow-hidd, e, n' > {' ' }"
       {/* Animated, background, elements */}
       <div, className="'absolute, inse, t-0, opacit, y-20'></div>"
         <div, className="'absolute, to, p-10, lef, t-1, 0, w-6, 4, h-64, b, g-white, rounde, d-full, blu, r-3xl, animat, e-pul, s, e' /></div>"
@@ -24,9 +24,9 @@ export default function October2025ProductionAIBann, e, r() {/* TODO: Fix JSX ex
             Master, production, AI deploy, m, e, n, t, re, a, l-time, monitorin, g, and, multimodal, RAG systems, with, our comprehensive, October, 2025 guid, e, s;
           </p>
         </div>
-        <div, classNam, e="'grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-10'></div>"
+        <div, classNam, e = "'grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-10'></div>"
           {/* Articl, e, 1: Production, AI, Agen, t, s */}</div>
-          <Link , t, o="'/bl, o, g/ai-20, 2, 5-octob, e, r-producti, o, n-ai-agen, t, s-be, s, t-practic, e, s'></Link>"
+          <Link , t, o = "'/bl, o, g/ai-20, 2, 5-octob, e, r-producti, o, n-ai-agen, t, s-be, s, t-practic, e, s'></Link>"
             className="'group, b, g-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-2x, l, p-6, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, border, border-whi, t, e/20'>"
             <div, className="'flex, item, s-start, ga, p-4, m, b-4'></div>"
               <div, className="'p-3, b, g-indi, g, o-500, rounde, d-lg, grou, p-hov, e, r:bg-indi, g, o-400, transitio, n-colo, r, s'></div>"
@@ -46,9 +46,9 @@ export default function October2025ProductionAIBann, e, r() {/* TODO: Fix JSX ex
             Master, production, AI deploy, m, e, n, t, re, a, l-time, monitorin, g, and, multimodal, RAG systems, with, our comprehensive, October, 2025 guid, e, s;
           </p>
         </div>
-        <div, classNam, e="'grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-10'></div>"
+        <div, classNam, e = "'grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-10'></div>"
           {/* Articl, e, 1: Production, AI, Agen, t, s */}
-          <Link , t, o="'/bl, o, g/ai-20, 2, 5-octob, e, r-producti, o, n-ai-agen, t, s-be, s, t-practic, e, s'></Link>"
+          <Link , t, o = "'/bl, o, g/ai-20, 2, 5-octob, e, r-producti, o, n-ai-agen, t, s-be, s, t-practic, e, s'></Link>"
             className="'group, b, g-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-2x, l, p-6, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, border, border-whi, t, e/20'"
           ></Link>
             <div, className="'flex, item, s-start, ga, p-4, m, b-4'></div>"
@@ -65,7 +65,7 @@ export default function October2025ProductionAIBann, e, r() {/* TODO: Fix JSX ex
             <p, className="'te, x, t-whi, t, e/80, m, b-4, leadin, g-relax, e, d'></p>"
               Deploy, AI, agents with, 9, 9.9% up, t, i, m, e, 40% cost, reductio, n, and, 3x, productivity gai, n, s. Learn, enterprise, architecture, monitori, n, g, and, governance, strategies.
             </p>
-            <div, classNam, e="'spa, c, e-y-2, m, b-4'></div>"
+            <div, classNam, e = "'spa, c, e-y-2, m, b-4'></div>"
               <div, className="'flex, item, s-center, ga, p-2, tex, t-sm'></div>"
                 <CheckCircle, className="'w-4 h-4, tex, t-gre, e, n-3, 0, 0' /></CheckCircle>"
                 <sp, a, n>Mul, t, i-tier, architecture, patterns</sp, a, n>
@@ -94,7 +94,7 @@ export default function October2025ProductionAIBann, e, r() {/* TODO: Fix JSX ex
             </div>
           </Li, n, k>
           {/* Articl, e, 2: Re, a, l-Time, AI, Monitori, n, g */}
-          <Link , t, o="'/bl, o, g/ai-20, 2, 5-octob, e, r-realti, m, e-ai-mod, e, l-monitori, n, g-enterpri, s, e'></Link>"
+          <Link , t, o = "'/bl, o, g/ai-20, 2, 5-octob, e, r-realti, m, e-ai-mod, e, l-monitori, n, g-enterpri, s, e'></Link>"
             className="'group, b, g-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-2x, l, p-6, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, border, border-whi, t, e/20'>"
             <div, className="'flex, item, s-start, ga, p-4, m, b-4'></div>"
               <div, className="'p-3, b, g-purp, l, e-500, rounde, d-lg, grou, p-hov, e, r:bg-purp, l, e-400, transitio, n-colo, r, s'></div>"
@@ -117,7 +117,7 @@ export default function October2025ProductionAIBann, e, r() {/* TODO: Fix JSX ex
               Detect, model, dri, f, t, prevent, hallucination, s, ensure, 9, 9.95%
               reliabili, t, y. Enterprise, observability, platform reducing, incident, response by, 8, 5%.
             </p>
-            <div, classNam, e="'spa, c, e-y-2, m, b-4'></div>"
+            <div, classNam, e = "'spa, c, e-y-2, m, b-4'></div>"
               <div, className="'flex, item, s-center, ga, p-2, tex, t-sm'></div>"
                 <CheckCircle, className="'w-4 h-4, tex, t-gre, e, n-3, 0, 0' /></CheckCircle>"
                 <sp, a, n>Silent, failure, detection</sp, a, n>
@@ -146,7 +146,7 @@ export default function October2025ProductionAIBann, e, r() {/* TODO: Fix JSX ex
             </div>
           </Li, n, k>
           {/* Articl, e, 3: Multimoda, l, R, A, G */}
-          <Link , t, o="'/bl, o, g/ai-20, 2, 5-octob, e, r-multimod, a, l-r, a, g-syste, m, s-revoluti, o, n'></Link>"
+          <Link , t, o = "'/bl, o, g/ai-20, 2, 5-octob, e, r-multimod, a, l-r, a, g-syste, m, s-revoluti, o, n'></Link>"
             className="'group, b, g-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-2x, l, p-6, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, border, border-whi, t, e/20'>"
             <div, className="'flex, item, s-start, ga, p-4, m, b-4'></div>"
               <div, className="'p-3, b, g-pi, n, k-500, rounde, d-lg, grou, p-hov, e, r:bg-pi, n, k-400, transitio, n-colo, r, s'></div>"
@@ -168,12 +168,12 @@ export default function October2025ProductionAIBann, e, r() {/* TODO: Fix JSX ex
             <p, className="'te, x, t-whi, t, e/80, m, b-4, leadin, g-relax, e, d'></p>"
               Unlock, image, s, vid, e, o, aud, i, o, and, diagrams, with 68% higher, accurac, y. Ne, x, t-generation, knowledge, retrieval for, enterprise, knowledge bas, e, s.
             </p>
-            <div, classNam, e="'spa, c, e-y-2, m, b-4'></div>"
+            <div, classNam, e = "'spa, c, e-y-2, m, b-4'></div>"
               <div, className="'flex, item, s-center, ga, p-2, tex, t-sm'></div>"
                 <CheckCircle, className="'w-4 h-4, tex, t-gre, e, n-3, 0, 0' /></CheckCircle>"
                 <sp, a, n>Ima, g, e, s, vid, e, o & audio, searc, h</sp, a, n>
               </div>
-              <div, classNam, e="'flex, item, s-center, ga, p-2, tex, t-sm'></div>"
+              <div, classNam, e = "'flex, item, s-center, ga, p-2, tex, t-sm'></div>"
                 <CheckCircle, className="'w-4 h-4, tex, t-gre, e, n-3, 0, 0' /></CheckCircle>"
                 <sp, a, n>68% higher, retrieval, accuracy</sp, a, n>
               </div>
@@ -182,7 +182,7 @@ export default function October2025ProductionAIBann, e, r() {/* TODO: Fix JSX ex
                 <CheckCircle, className="'w-4 h-4, tex, t-gre, e, n-3, 0, 0' /></CheckCircle>"
                 <sp, a, n>Ima, g, e, s, vid, e, o & audio, searc, h</sp, a, n>
               </div>
-              <div, classNam, e="'flex, item, s-center, ga, p-2, tex, t-sm'></div>"
+              <div, classNam, e = "'flex, item, s-center, ga, p-2, tex, t-sm'></div>"
                 <CheckCircle, className="'w-4 h-4, tex, t-gre, e, n-3, 0, 0' /></CheckCircle>"
                 <sp, a, n>68% higher, retrieval, accuracy</sp, a, n>
               </div>
@@ -199,12 +199,12 @@ export default function October2025ProductionAIBann, e, r() {/* TODO: Fix JSX ex
         </div>
         <div, className="'te, x, t-cent, e, r'></div>"
           <div, className="'inli, n, e-flex, fle, x-col, s, m:fl, e, x-row, ga, p-4'></div>"
-            <Link , t, o="'/bl, o, g'></Link>"
+            <Link , t, o = "'/bl, o, g'></Link>"
               className="'px-8, p, y-4, b, g-white, tex, t-indi, g, o-600, rounde, d-lg, fon, t-bold, tex, t-lg, hove, r:bg-yell, o, w-300, hove, r:te, x, t-indi, g, o-700, transitio, n-all, duratio, n-300, shado, w-xl, hove, r:shad, o, w-2xl, hove, r:sca, l, e-1, 0, 5'>"
             ></Link>
               Explore, All, Production AI, Article, s;
             </Li, n, k>
-            <Link , t, o="'/conta, c, t'></Link>"
+            <Link , t, o = "'/conta, c, t'></Link>"
               className="'px-8, p, y-4, b, g-indi, g, o-9, 0, 0/50, backdro, p-bl, u, r-sm, borde, r-2, borde, r-whi, t, e/30, tex, t-white, rounde, d-lg, fon, t-bold, tex, t-lg, hove, r:bg-indi, g, o-9, 0, 0/70, transitio, n-all, duratio, n-300, hove, r:sca, l, e-1, 0, 5'>"
               Get, Expert, Implementation He, l, p;
             </Li, n, k>

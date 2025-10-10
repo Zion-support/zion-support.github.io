@@ -4,7 +4,7 @@ import {Receipt, TrendingUp, Shield, Zap, Brain, Target, CheckCircle, Star, Phon
 import { Link } from 'react-router-dom';
 ;
 const ExpenseTrackerPage: React.FC = () => {;
-const features="[]"
+const features = []
     {}
       icon: Receipt,
       title: 'Smart Receipt Scanning',
@@ -34,7 +34,7 @@ iconicon: Shield,
 $4}
   ];
 ;
-const pricingPlans="[]"
+const pricingPlans = []
       name: 'Personal',
       price: '$9',
       period: '/month',
@@ -71,7 +71,7 @@ const pricingPlans="[]"
         'White-label options',
         'Unlimited data retention',
         'Custom compliance rules';
-const integrations="[]"
+const integrations = []
     { name: 'QuickBooks', icon: '📊', description: 'Accounting software' },
     { name: 'Xero', icon: '💰', description: 'Cloud accounting' },
     { name: 'Sage', icon: '📈', description: 'Business management' },
@@ -81,7 +81,7 @@ const integrations="[]"
     { name: 'Microsoft Teams', icon: '👥', description: 'Collaboration' },
     { name: 'Google Workspace', icon: '📧', description: 'Productivity suite' }
 ;
-const testimonials="[]"
+const testimonials = []
       name: 'Michael Johnson',
       company: 'Small Business Owner',
       role: 'CEO',
@@ -264,7 +264,6 @@ return (
           <p className=""text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed"></p>"
 Transform your expense management with AI-powered receipt scanning, automated categorization,
             and intelligent financial insights. Save time, reduce errors, and gain complete control;
-
             over your business finances.
           <div className=""flex flex-col sm: flex-row gap-4 justify-center items-center"></div>"
             <a href="tel:+13024640950" className=""bg-gradient-to-r from-cyan-400 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-purple-600 transition-all duration-300 flex items-center"></a>"
@@ -382,6 +381,4 @@ Most Popular;
             Join thousands of businesses using AI Expense Tracker to streamline financial;
             management and gain better control over their spending.
   )};
-
 export default ExpenseTrackerPage;
-

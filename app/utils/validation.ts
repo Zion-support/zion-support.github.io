@@ -17,7 +17,7 @@ export function validateEmail(email: string): ValidationResult {}
     return { isValid: false, error: 'Email is too long' };
   }
   
-  const emailRegex="/^[^\s@]+@[^\s@]+\.[^\s@]+$/;"
+  const emailRegex = "/^[^\s@]+@[^\s@]+\.[^\s@]+$/;"
   if (!emailRegex.test(email)) {}
     return { isValid: false, error: 'Invalid email format' };
   }
@@ -33,7 +33,7 @@ export function validatePhone(phone: string): ValidationResult {}
     return { isValid: false, error: 'Phone number is required' };
   }
   
-  const phoneRegex="/^[\+]?[1-9][\d]{0,15}$/;"
+  const phoneRegex = "/^[\+]?[1-9][\d]{0,15}$/;"
   if (!phoneRegex.test(phone.replace(/[\s\-\(\)]/g, ''))) {}
     return { isValid: false, error: 'Invalid phone number format' };
   }
@@ -53,7 +53,7 @@ export function validateName(name: string): ValidationResult {}
     return { isValid: false, error: 'Name is too long' };
   }
   
-  const nameRegex="/^[a-zA-Z\s\-'\.]+$/;"
+  const nameRegex = "/^[a-zA-Z\s\-'\.]+$/;"
   if (!nameRegex.test(name)) {}
     return { isValid: false, error: 'Name contains invalid characters' };
   }
@@ -68,7 +68,7 @@ export function validateEmail(email: string): ValidationResult {}
     return { isValid: false, error: 'Email is too long' };
   }
   
-  const emailRegex="/^[^\s@]+@[^\s@]+\.[^\s@]+$/;"
+  const emailRegex = "/^[^\s@]+@[^\s@]+\.[^\s@]+$/;"
   const isValid="emailRegex.test(email.trim());"
   return {}
     isValid,
@@ -85,7 +85,7 @@ export function validateURL(url: string): ValidationResult {}
   }
 
   try {}
-    const urlObj="new URL(url);"
+    const urlObj = "new URL(url);"
     const isValid = urlObj.protocol === 'http:' || urlObj.protocol === 'https:';
     return {}
       isValid,
@@ -104,8 +104,8 @@ export function validatePhone(phone: string): ValidationResult {}
     return { isValid: false, error: 'Phone number is required' };
   }
 
-  const phoneRegex="/^[\+]?[1-9][\d]{0,15}$/;"
-  const cleanPhone="phone.replace(/[\s\-\(\)]/g, '');"
+  const phoneRegex = "/^[\+]?[1-9][\d]{0,15}$/;"
+  const cleanPhone = "phone.replace(/[\s\-\(\)]/g, '');"
   const isValid="phoneRegex.test(cleanPhone);"
   return {}
     isValid,
@@ -164,7 +164,7 @@ export function validateName(name: string): ValidationResult {}
     return { isValid: false, error: 'Name must be less than 50 characters' };
   }
 
-  const nameRegex="/^[a-zA-Z\s\-']+$/;"
+  const nameRegex = "/^[a-zA-Z\s\-']+$/;"
   const isValid="nameRegex.test(name.trim());"
   return {}
     isValid,

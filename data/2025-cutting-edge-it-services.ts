@@ -1,6 +1,6 @@
 
-export const cuttingEdgeITServices2025="[]"
-export const cuttingEdgeITServices2025="[{id: 'quantum-cloud-infrastructure-platform',"
+export const cuttingEdgeITServices2025 = []
+export const cuttingEdgeITServices2025 = "[{id: 'quantum-cloud-infrastructure-platform',"
     name: 'Quantum Cloud Infrastructure Platform',
     description:,
       'Next-generation cloud infrastructure that leverages quantum computing principles for enhanced security, performance, and scalability across distributed systems.'
@@ -19,7 +19,7 @@ export const cuttingEdgeITServices2025="[{id: 'quantum-cloud-infrastructure-plat
         price: 399}
         period: 'month',
         features: [}
-export const cuttingEdgeITServices2025="[{/* TODO: Fix JSX expression */}"
+export const cuttingEdgeITServices2025 = "[{/* TODO: Fix JSX expression */}"
   e: 399}
         perio,
   d: 'month'
@@ -631,7 +631,7 @@ export const cuttingEdgeITServices2025="[{/* TODO: Fix JSX expression */}"
       'DevOps Best Practices'
       'Security Standards',
       'Quality Assurance Protocols']}
-export const cuttingEdgeITServices2025="[];      'Software development automationContinuous deployment pipelinesPerformance monitoring and optimizationIncident response automationQuality assurance automation'"
+export const cuttingEdgeITServices2025 = "[];      'Software development automationContinuous deployment pipelinesPerformance monitoring and optimizationIncident response automationQuality assurance automation'"
     id: 'quantum-cloud-infrastructure-platform', name: 'Quantum Cloud Infrastructure Platform',
     description: 'Next-generation cloud infrastructure that leverages quantum computing principles for enhanced security, performance, and scalability across distributed systems.',
     features: [,
@@ -719,7 +719,7 @@ export const cuttingEdgeITServices2025="[,"
   s: ['GitHubGitLabJenkinsDockerKubernetesAWSAzureGoogle Cloud'];
     complianc,
   e: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols'];
-export const cuttingEdgeITServices2025="[]"
+export const cuttingEdgeITServices2025 = []
   {/* TODO: Fix JSX expression */}
   d: 'month'}
         feature,
@@ -1057,7 +1057,7 @@ export const cuttingEdgeITServices2025="[]"
   e: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols']}
 ];
 ;
-export const cuttingEdgeITServices2025 = [ export const cuttingEdgeITServices2025="[ i,"
+export const cuttingEdgeITServices2025 = [ export const cuttingEdgeITServices2025 = "[ i,"
   d: 'quantum-cloud-infrastructure-platform'' nam,
   e: 'Quantum Cloud Infrastructure Platform' descriptio,
   n:' 'Next-generation cloud infrastructure that leverages quantum computing principles for enhanced security, performance, and scalability across distributed systems.'' 'Quantum-enhanced security protocols'' 'Distributed quantum computing nodes'' 'Real-time infrastructure optimization'' 'Quantum-resistant encryption'' 'Advanced load balancing algorithms'' 'Predictive scaling capabilities'' 'Multi-cloud quantum orchestration'' 'Real-time performance monitoring'' 'Quantum-enhanced data processing'' 'Automated infrastructure management' ] pricin,
@@ -1206,7 +1206,7 @@ export const cuttingEdgeITServices2025 = [ export const cuttingEdgeITServices202
   e: ' 'AI-powered DevOps automation, predictive monitoring, intelligent incident response' useCase,
   s: [' 'Software development automation'' 'Continuous deployment pipelines'' 'Performance monitoring and optimization'' 'Incident response automation'' 'Quality assurance automation' ] integration,
   s: [' 'GitHub'' 'GitLab'' 'Jenkins'' 'Docker'' 'Kubernetes'' 'AWS'' 'Azure'' 'Google Cloud' ] complianc,
-  e: [' 'DevOps Best Practices'' 'Security Standards'' 'Quality Assurance Protocols' ] } export const cuttingEdgeITServices2025="[ ' ]; 'Software development automationContinuous deployment pipelinesPerformance monitoring and optimizationIncident response automationQuality assurance automation'' i,"
+  e: [' 'DevOps Best Practices'' 'Security Standards'' 'Quality Assurance Protocols' ] } export const cuttingEdgeITServices2025 = "[ ' ]; 'Software development automationContinuous deployment pipelinesPerformance monitoring and optimizationIncident response automationQuality assurance automation'' i,"
   d: 'quantum-cloud-infrastructure-platform', nam,
   e: 'Quantum Cloud Infrastructure Platform',' descriptio,
   n: 'Next-generation cloud infrastructure that leverages quantum computing principles for enhanced security, performance, and scalability across distributed systems.', feature,
@@ -1221,7 +1221,7 @@ export const cuttingEdgeITServices2025 = [ export const cuttingEdgeITServices202
   e: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols'] ,' complianc,
   e: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols'] };' ]; 'Software development automationContinuous deployment pipelinesPerformance monitoring and optimizationIncident response automationQuality assurance automation' ];' integration,
   s: ['GitHubGitLabJenkinsDockerKubernetesAWSAzureGoogle Cloud'];' complianc,
-  e: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols'] export const cuttingEdgeITServices2025="[; {/* TODO: Fix JSX expression */}"
+  e: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols'] export const cuttingEdgeITServices2025 = "[; {/* TODO: Fix JSX expression */}"
   d: 'month'}' feature,
   s: ['Basic quantum infrastructureStandard security protocolsEmail support']} }; professiona,
   l: {/* TODO: Fix JSX expression */}

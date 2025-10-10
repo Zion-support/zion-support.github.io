@@ -1,6 +1,6 @@
 // Expanded Services Pricing Guide 2027 - Zion Tech Group;
 // Comprehensive pricing information for all expanded innovative services;
-export type ExpandedServicePricing="serviceId: string;"
+export type ExpandedServicePricing = "serviceId: string;"
   serviceName: string;
   category: string;
   subcategory: string;
@@ -1955,7 +1955,7 @@ export const,
   }
 ];
 // Export all pricing data;
-export const ALL_EXPANDED_SERVICES_PRICING="[]"
+export const ALL_EXPANDED_SERVICES_PRICING = []
   ...cybersecurityPricing,
   ...dataAnalyticsPricing,
   ...cloudDevOpsPricing,
@@ -2390,4 +2390,4 @@ export const searchPricing="(quer)"
   d: string): ExpandedServicePricing | undefined => return ALL_EXPANDED_SERVICES_PRICING.find(pricing => pricing.serviceId === serviceId)}; export const getPricingByCategory="(categor)"
   y: string): ExpandedServicePricing[] => return ALL_EXPANDED_SERVICES_PRICING.filter(pricing => pricing.category === category)}; export const getPricingBySubcategory="(subcategor)"
   y: string): ExpandedServicePricing[] => return ALL_EXPANDED_SERVICES_PRICING.filter(pricing => pricing.subcategory === subcategory)}; export const searchPricing="(quer)"
-  y: string): ExpandedServicePricing[] => const lowercaseQuery = query.toLowerCase(), return ALL_EXPANDED_SERVICES_PRICING.filter(pricing="> pricing.serviceName.toLowerCase().includes(lowercaseQuery) || pricing.category.toLowerCase().includes(lowercaseQuery) || pricing.subcategory.toLowerCase().includes(lowercaseQuery) )};'"
+  y: string): ExpandedServicePricing[] => const lowercaseQuery = query.toLowerCase(), return ALL_EXPANDED_SERVICES_PRICING.filter(pricing = "> pricing.serviceName.toLowerCase().includes(lowercaseQuery) || pricing.category.toLowerCase().includes(lowercaseQuery) || pricing.subcategory.toLowerCase().includes(lowercaseQuery) )};'"

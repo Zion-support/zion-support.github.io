@@ -4,7 +4,7 @@ import {CheckSquare, Users, Zap, Brain, Target, BarChart, CheckCircle, Star, Pho
 import { Link } from 'react-router-dom';
 ;
 const TaskManagerProPage: React.FC = () => {;
-const features="[]"
+const features = []
     {}
       icon: CheckSquare,
       title: 'AI Task Prioritization',
@@ -34,7 +34,7 @@ iconicon: BarChart,
 $4}
   ];
 ;
-const pricingPlans="[]"
+const pricingPlans = []
       name: 'Individual',
       price: '$19',
       period: '/month',
@@ -71,7 +71,7 @@ const pricingPlans="[]"
         'Advanced security',
         'Unlimited data retention',
         'Custom compliance';
-const integrations="[]"
+const integrations = []
     { name: 'Slack', icon: '💬', description: 'Team communication' },
     { name: 'Microsoft Teams', icon: '👥', description: 'Collaboration platform' },
     { name: 'Google Workspace', icon: '📧', description: 'Productivity suite' },
@@ -81,7 +81,7 @@ const integrations="[]"
     { name: 'Notion', icon: '📝', description: 'Documentation' },
     { name: 'GitHub', icon: '💻', description: 'Development workflow' }
 ;
-const testimonials="[]"
+const testimonials = []
       name: 'Rachel Green',
       company: 'Marketing Agency',
       role: 'Project Manager',
@@ -265,7 +265,6 @@ return (
           <p className=""text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed"></p>"
 Supercharge your productivity with our AI-powered task management platform.
             Get intelligent prioritization, automated workflows, and team collaboration;
-
             tools that help you achieve more in less time.
           <div className=""flex flex-col sm: flex-row gap-4 justify-center items-center"></div>"
             <a href="tel:+13024640950" className=""bg-gradient-to-r from-cyan-400 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-purple-600 transition-all duration-300 flex items-center"></a>"
@@ -383,6 +382,4 @@ Most Popular;
             Join thousands of professionals using Task Manager Pro to achieve more,
             work smarter, and reach their goals faster.
   )};
-
 export default TaskManagerProPage;
-

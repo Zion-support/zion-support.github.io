@@ -1,8 +1,6 @@
 'use client';
-
 import React, { useEffect, useCallback, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
-
 interface SEOData {}
  title: string;
  description: string;
@@ -36,12 +34,12 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({,
  enableSchemaMarkup = true}) => {}
 return (
 ;
-const _structuredDataRef="useRef<HTMLScriptElement | null>(null);</HTMLScriptElement>const</HTMLScriptElement>"
+const _structuredDataRef = "useRef<HTMLScriptElement | null>(null);</HTMLScriptElement>const</HTMLScriptElement>"
 );
 } generateStructuredData = useCallback(() => {}
  if (!enableStructuredData || !seoData.structuredData) return null;
 ;
-const baseStructuredData="{}"
+const baseStructuredData = {}
  '@context': 'https: //schema.org',
  '@type': 'Organization',
  name: 'Zion Tech Group',
@@ -81,12 +79,10 @@ const,
  'http,
   s://github.com/Zion-Holdings'],
  ...seoData.structuredData};
-
  return baseStructuredData}, [seoData, enableStructuredData]);
 ;
 const generateBreadcrumbStructuredData = useCallback(() => {}
  if (!enableSchemaMarkup) return null;
-
  return {}
  '@context': 'https: //schema.org',
  '@type': 'BreadcrumbList',
@@ -109,7 +105,7 @@ const generateBreadcrumbStructuredData = useCallback(() => {}
 const generateFAQStructuredData = useCallback(() => {}
  if (!enableSchemaMarkup) return null;
 ;
-const faqData="{}"
+const faqData = {}
  '@context': 'https: //schema.org',
  '@type': 'FAQPage',
  mainEntity: []
@@ -137,7 +133,6 @@ const generateFAQStructuredData = useCallback(() => {/* TODO: Fix JSX expression
  }},
  {/* TODO: Fix JSX expression */}
  }}]};
-
  return faqData}, [enableSchemaMarkup]);
 ;
 const _structuredData="generateStructuredData();"
@@ -156,21 +151,18 @@ let _metaDescription = document.querySelector('meta[name=""description"]');"
  useEffect(() => {/* TODO: Fix JSX expression */}
  }
  metaDescription.setAttribute('content', seoData.description);
-
  // Update canonical URL;
  let _canonicalLink = document.querySelector('link[rel=""canonical"]');"
  if (!canonicalLink) {/* TODO: Fix JSX expression */}
  }
  canonicalLink.setAttribute('href', seoData.canonicalUrl)}
  }, [seoData]);
-
  // const _addMetaTag = (name: string, content: string, attribute: string = 'name') => {,
  // const metaTag="document.createElement('meta');"
  // metaTag.setAttribute(attribute, name);
  // metaTag.content="content;"
  // document.head.appendChild(metaTag);
  // };
-
  // const _updateCanonicalUrl = (url: string) => {}
  // let canonicalLink = document.querySelector('link[rel=""canonical"]') as HTMLLinkElement;"
  // ,
@@ -193,7 +185,6 @@ let _metaDescription = document.querySelector('meta[name=""description"]');"
   t: string, attribut)
   e: string = 'name') => {/* TODO: Fix JSX expression */}
  // };
-
  // const _updateCanonicalUrl="(ur)"
   l: string) => {/* TODO: Fix JSX expression */}
  // } else {/* TODO: Fix JSX expression */}
@@ -205,14 +196,13 @@ let _metaDescription = document.querySelector('meta[name=""description"]');"
  // // }
  // 
  // const script="document.createElement('script');"
- // script.type="'application/ld+json';"
+ // script.type = "'application/ld+json';"
  // script.textContent="JSON.stringify(data);"
  // document.head.appendChild(script);
  // };
-
  // Add new structured data;
  const _script="document.createElement('script');"
- script.type="'application/ld+json';"
+ script.type = "'application/ld+json';"
  script.textContent="JSON.stringify(data);"
  script.id="'structured-data';"
  document.head.appendChild(script);
@@ -238,7 +228,7 @@ return (
 
  if (typeof window !== 'undefined' && 'performance' in window) {}
  window.addEventListener('load', () => {;
-const _perfData="performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;"
+const _perfData = "performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;"
  if (perfData && typeof window !== 'undefined' && 'gtag' in window) {}
  (window as unknown as { gtag: (command: string, action: string, parameters: Record<string, unknown></string>
 );
@@ -255,14 +245,14 @@ const _trackPerformanceMetrics = () => {/* TODO: Fix JSX expression */}
  return(<Helmet>)
  {/* Basic Meta Tags */})
  <title>{seoData.title}</title>)
- <meta name="description" content="{seoData.description} />)"
- <meta name="keywords" content="{seoData.keywords.join(', ')} /></meta>"
+ <meta name="description" content = "{seoData.description} />)"
+ <meta name="keywords" content = "{seoData.keywords.join(', ')} /></meta>"
  <link rel="canonical" href="{seoData.canonicalUrl} /></link>"
  {/* Open Graph Tags */}
  {enableOpenGraph && (
  <React.Fragment></React>
- <meta property="og:title" content="{seoData.title} /></meta>"
- <meta property="og: image:height" content=""630" />,"
+ <meta property="og:title" content = "{seoData.title} /></meta>"
+ <meta property = "og: image:height" content=""630" />,"
  <meta property="og:site_name" content=""Zion Tech Group" />,"
  <meta property="og:locale" content=""en_US" />,"
  </React.Fragment>)}
@@ -270,11 +260,11 @@ const _trackPerformanceMetrics = () => {/* TODO: Fix JSX expression */}
  {/* Twitter Card Tags */}
  {enableTwitterCards && (
  <React.Fragment></React>
- <meta name="twitter: card" content=""summary_large_image" />,"
- <meta name="twitter:title" content="{seoData.title} /></meta>"
- <meta name="twitter:description" content="{seoData.description} /></meta>"
- <meta name="twitter:image" content="{seoData.ogImage} /></meta>"
- <meta name="twitter: site" content=""@ziontechgroup" />,"
+ <meta name = "twitter: card" content=""summary_large_image" />,"
+ <meta name="twitter:title" content = "{seoData.title} /></meta>"
+ <meta name="twitter:description" content = "{seoData.description} /></meta>"
+ <meta name="twitter:image" content = "{seoData.ogImage} /></meta>"
+ <meta name = "twitter: site" content=""@ziontechgroup" />,"
  <meta name="twitter:creator" content=""@ziontechgroup" />,"
  </React.Fragment>)}
 
@@ -293,12 +283,12 @@ const _trackPerformanceMetrics = () => {/* TODO: Fix JSX expression */}
  return (<Helmet></Helmet>
  {/* Basic Meta Tags */}
  <title>{seoData.title}</title>"
- <meta name="description" content="{seoData.description} /></meta>")"
- <meta name="keywords" content="{seoData.keywords.join(', ')} /></meta>""
+ <meta name="description" content = "{seoData.description} /></meta>")"
+ <meta name="keywords" content = "{seoData.keywords.join(', ')} /></meta>""
  <link rel="canonical" href="{seoData.canonicalUrl} /></link>"
  {/* Open Graph Tags */}
  {/* TODO: Fix JSX expression */}"
-  g:title" content="{seoData.title} /></meta>""
+  g:title" content = "{seoData.title} /></meta>""
  <meta property=""o,"></meta>"
   g:imag,"
   e:height" content=""630" /></meta>""
@@ -311,11 +301,11 @@ const _trackPerformanceMetrics = () => {/* TODO: Fix JSX expression */}
 
  {/* Twitter Card Tags */}
  {/* TODO: Fix JSX expression */}"
-  r:title" content="{seoData.title} /></meta>""
+  r:title" content = "{seoData.title} /></meta>""
  <meta name=""twitte,"></meta>"
-  r:description" content="{seoData.description} /></meta>""
+  r:description" content = "{seoData.description} /></meta>""
  <meta name=""twitte,"></meta>"
-  r:image" content="{seoData.ogImage} /></meta>""
+  r:image" content = "{seoData.ogImage} /></meta>""
  <meta name=""twitte,"></meta>"
   r:site" content=""@ziontechgroup" /></meta>""
  <meta name=""twitte,"></meta>"
@@ -379,5 +369,4 @@ const _trackPerformanceMetrics = () => {/* TODO: Fix JSX expression */}
  <link rel="dns-prefetch" href=""//www.googletagmanager.com" /></link>"
  </Helmet>
  )};
-
 export default AdvancedSEOOptimizer;"

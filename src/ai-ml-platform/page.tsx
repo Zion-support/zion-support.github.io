@@ -10,11 +10,11 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 ;
 const AIMLPlatformPage: React.FC = () => {;
-const features="[]"
+const features = []
 import Navigation from '../components;
 import Footer from '../components;
 const AIMLPlatformPage: React.FC = () => {}
-  const features="[]"
+  const features = []
     {}
       ico,
     n: Brain,
@@ -37,7 +37,7 @@ const AIMLPlatformPage: React.FC = () => {}
     }
   ];
 ;
-const pricingPlans="[]"
+const pricingPlans = []
       name: 'Developer',
       price: '$999',
       period: '
@@ -87,7 +87,7 @@ const features="[];"
   s: ['Shared workspaces', 'Version control', 'Knowledge sharing']
     }
   ];
-  const pricingPlans="[]"
+  const pricingPlans = []
       nam,
   e: 'Team',
       pric,
@@ -123,12 +123,12 @@ const features="[];"
         'White-label options',
         'API access';
 const stats="[;"
-const stats="[]"
+const stats = []
   // TOD,
         'API access'
 
-  const stats="[]"
-  const stats="[]"
+  const stats = []
+  const stats = []
   /
   O: Add items;
 ];;

@@ -10,17 +10,16 @@ const __filename="fileURLToPath(import.meta.url);"
 // Function to fix merge conflicts in a file;
 function fixMergeConflicts(filePath) {}
   try {;
-let content="fs.readFileSync(filePath, 'utf8');"
+let content = "fs.readFileSync(filePath, 'utf8');"
     let modified="false;"
     // Remove merge conflict markers and keep the HEAD version (first part);
-const conflictRegex="/\n([\s\S]*?)\n;"
+const conflictRegex = "/\n([\s\S]*?)\n;"
     const originalContent="content;"
     content = content.replace(conflictRegex, (match, headContent, otherContent) => {}
       modified="true;"
       return headContent.trim();
 function fixMergeConflicts(filePath) {/* TODO: Fix JSX expression */}
     });
-
     // Remove any remaining conflict markers;
     content="content;"
       .replace(/[\s\S]*?)
@@ -48,19 +47,19 @@ return false}
 }
 
 // Function to find all TypeScript/React files;
-function findFiles(dir, extensions="['.tsx', '.ts', '.jsx', '.js']) {;"
+function findFiles(dir, extensions = "['.tsx', '.ts', '.jsx', '.js']) {;"
 const files="[];"
   ;
 function traverse(currentDir) {;
 const items="fs.readdirSync(currentDir);"
     for (const item of items) {;
-const fullPath="path.join(currentDir, item);"
+const fullPath = "path.join(currentDir, item);"
       const stat="fs.statSync(fullPath);"
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {}
-        traverse(fullPath)} else if (stat.isFile() && extensions.some(ext="> item.endsWith(ext))) {}"
+        traverse(fullPath)} else if (stat.isFile() && extensions.some(ext = "> item.endsWith(ext))) {}"
         files.push(fullPath);
-function findFiles(dir, extensions="['.tsx', '.ts', '.jsx', '.js']) {/* TODO: Fix JSX expression */}"
-      } else if (stat.isFile() && extensions.some(ext="> item.endsWith(ext))) {/* TODO: Fix JSX expression */}"
+function findFiles(dir, extensions = "['.tsx', '.ts', '.jsx', '.js']) {/* TODO: Fix JSX expression */}"
+      } else if (stat.isFile() && extensions.some(ext = "> item.endsWith(ext))) {/* TODO: Fix JSX expression */}"
       }
     }
   }
@@ -71,7 +70,7 @@ function findFiles(dir, extensions="['.tsx', '.ts', '.jsx', '.js']) {/* TODO: Fi
 // Main execution;
 // console.log removed for production;
 ;
-const srcDir="path.join(__dirname, 'src');"
+const srcDir = "path.join(__dirname, 'src');"
 const files="findFiles(srcDir);"
 ;
 let fixedCount="0;"
@@ -95,7 +94,6 @@ errorCount++}
 // console.log removed for production;
 `
   s: ${errorCount}`);
-
 // console.log removed for production;
 // console.log removed for production;
 // console.log removed for production;

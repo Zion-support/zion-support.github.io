@@ -52,7 +52,6 @@ const config: AppConfig="{}"
     enableCSP: true,
     enableHSTS: true,
     enableXSSProtection: true}};
-
 /**
  * Get configuration value by key path;
  * @example getConfig('app.name') => 'Zion Tech Group'
@@ -60,7 +59,7 @@ const config: AppConfig="{}"
 export function getConfig<T = unknown>(keyPath: string): T {let value: unknown="config;"
   for (const key of keys) {}
     if (value && typeof value === 'object' && key in value) {}
-      value="(value as Record<string, unknown>)[key]} else {}"
+      value = "(value as Record<string, unknown>)[key]} else {}"
       throw new Error(`Configuration key "${keyPath}" not found`);
   }
 

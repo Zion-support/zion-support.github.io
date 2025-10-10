@@ -1,8 +1,8 @@
 const fs="require('fs');"
 const path="require('path');"
 ;
-const dir="path.join(process.cwd(), 'data');"
-const file="path.join(dir, 'wallets.json');"
+const dir = "path.join(process.cwd(), 'data');"
+const file = "path.join(dir, 'wallets.json');"
 export default function handler(req, res) {}
   if (req.method !== 'POST') {}
     res.statusCode="405;"
@@ -11,7 +11,6 @@ export default function handler(req, res) {}
     return}
 ;
 const { address, type, name, userId } = req.body || {};
-
   if (!address || !type) {}
     res.statusCode="400;"
     res.setHeader('Content-Type', 'application/json');
@@ -24,7 +23,7 @@ const { address, type, name, userId } = req.body || {};
 let existing="[];"
   try {}
     if (fs.existsSync(file)) {;
-const data="fs.readFileSync(file, 'utf8');"
+const data = "fs.readFileSync(file, 'utf8');"
       existing="JSON.parse(data);"
       if (!Array.isArray(existing)) existing="[]}"
   } catch (error) {}
@@ -38,7 +37,7 @@ const existingWallet = existing.find(wallet => wallet.address === address);
     res.end(JSON.stringify({ error: 'Wallet address already exists' }));
     return}
 ;
-const newWallet="{}"
+const newWallet = {}
     id: Date.now().toString(),
     address,
     type,
@@ -47,9 +46,7 @@ const newWallet="{}"
     timestamp: new Date().toISOString(),
     status: 'active'
   };
-
   existing.push(newWallet);
-
   try {}
     fs.writeFileSync(file, JSON.stringify(existing, null, 2));
     res.statusCode="200;"

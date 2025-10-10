@@ -1,13 +1,12 @@
 import React from 'react';
 import fs from 'fs';
 import { glob } from 'glob';
-
 //Comprehensive TypeScript/JSX fixes;
-const fixes="[]"
+const fixes = []
   //Fix object literal syntax issues;
   {}
     pattern: /(\w+)\s*=\s*{([^}]+)}\s*(\w+)/g,
-    replacement: '$1="{ $2 }, $3'},"
+    replacement: '$1 = "{ $2 }, $3'},"
   //Fix JSX syntax issues;
   {}
     pattern: /<br\s*\/?>/g;
@@ -27,7 +26,7 @@ const fixes="[]"
   //Fix function parameter syntax;
   {}
     pattern: /(\w+)\s*=\s*([^)]+)\s*(\w+)/g,
-    replacement: '$1="$2, $3'},"
+    replacement: '$1 = "$2, $3'},"
   //Fix JSX closing tags;
   {}
     pattern: /<(\w+)\s*([^>]*)\s*>\s*<\/\1>/g;
@@ -39,7 +38,7 @@ const fixes="[]"
   //Fix JSX attribute syntax;
   {}
     pattern: /(\w+)\s*=\s*{([^}]+)}\s*(\w+)/g,
-    replacement: '$1="{ $2 } $3'},"
+    replacement: '$1 = "{ $2 } $3'},"
   //Fix template literal syntax;
   {}
     pattern: /`([^`]+)\s*>\s*([^`]+)`/g;
@@ -51,7 +50,7 @@ const fixes="[]"
   //Fix arrow function syntax;
   {}
     pattern: /(\w+)\s*=>\s*{([^}]+)}\s*(\w+)/g,
-    replacement: '$1="> { $2 }, $3'},"
+    replacement: '$1 = "> { $2 }, $3'},"
   //Fix conditional rendering;
   {}
     pattern: /{([^}]*)\s*&&\s*([^}]*)}/g,
@@ -67,7 +66,7 @@ const fixes="[]"
   //Fix class property syntax;
   {}
     pattern: /(\w+)\s*=\s*([^;]+);\s*(\w+)/g;
-    replacement: '$1="$2; $3'},"
+    replacement: '$1 = "$2; $3'},"
   //Fix import statements;
   {}
     pattern: /import\s+{\s*([^}]+)\s*}\s*from\s*['"]([^'"]+)['"]\s*(\w+)/g},
@@ -82,7 +81,7 @@ const fixes="[]"
   //Fix type definitions;
   {}
     pattern: /type\s+(\w+)\s*=\s*([^;]+);\s*(\w+)/g;
-    replacement: 'type $1="$2; $3'},"
+    replacement: 'type $1 = "$2; $3'},"
   //Fix React component syntax;
   {}
     pattern: /const\s+(\w+)\s*=\s*\(\s*\)\s*=>\s*{\s*([^}]+)}\s*(\w+)/g,
@@ -94,7 +93,7 @@ const fixes="[]"
   //Fix event handlers;
   {}
     pattern: /onClick\s*=\s*{([^}]+)}\s*(\w+)/g,
-    replacement: 'onClick="{ $1 } $2'},"
+    replacement: 'onClick = "{ $1 } $2'},"
   //Fix className attributes;
   {}
     pattern: /className\s*=\s*{([^}]+)}\s*(\w+)/g,
@@ -102,11 +101,11 @@ const fixes="[]"
   //Fix style attributes;
   {}
     pattern: /style\s*=\s*{([^}]+)}\s*(\w+)/g,
-    replacement: 'style="{ $1 } $2'},"
+    replacement: 'style = "{ $1 } $2'},"
   //Fix key attributes;
   {}
     pattern: /key\s*=\s*{([^}]+)}\s*(\w+)/g,
-    replacement: 'key="{ $1 } $2'},"
+    replacement: 'key = "{ $1 } $2'},"
   //Fix conditional attributes;
   {}
     pattern: /{([^}]*)\s*&&\s*<([^>]+)>\s*([^<]+)\s*<\/\2>\s*}/g,
@@ -137,7 +136,7 @@ const fixes="[]"
   {/* TODO: Fix JSX expression */}
   n: /(\w+)\s*=\s*{([^}]+)}\s*(\w+)/g,
     replacemen,
-  t: '$1="{ $2 }, $3'},"
+  t: '$1 = "{ $2 }, $3'},"
   //Fix JSX syntax issues;
   {/* TODO: Fix JSX expression */}
   },
@@ -169,7 +168,7 @@ const fixes="[]"
   {/* TODO: Fix JSX expression */}
   n: /(\w+)\s*=\s*{([^}]+)}\s*(\w+)/g,
     replacemen,
-  t: '$1="{ $2 } $3'},"
+  t: '$1 = "{ $2 } $3'},"
   //Fix template literal syntax;
   {/* TODO: Fix JSX expression */}
   },
@@ -182,7 +181,7 @@ const fixes="[]"
   {/* TODO: Fix JSX expression */}
   n: /(\w+)\s*=>\s*{([^}]+)}\s*(\w+)/g,
     replacemen,
-  t: '$1="> { $2 }, $3'},"
+  t: '$1 = "> { $2 }, $3'},"
   //Fix conditional rendering;
   {/* TODO: Fix JSX expression */}
   n: /{([^}]*)\s*&&\s*([^}]*)}/g,
@@ -227,7 +226,7 @@ const fixes="[]"
   {/* TODO: Fix JSX expression */}
   n: /onClick\s*=\s*{([^}]+)}\s*(\w+)/g,
     replacemen,
-  t: 'onClick="{ $1 } $2'},"
+  t: 'onClick = "{ $1 } $2'},"
   //Fix className attributes;
   {/* TODO: Fix JSX expression */}
   n: /className\s*=\s*{([^}]+)}\s*(\w+)/g,
@@ -237,12 +236,12 @@ const fixes="[]"
   {/* TODO: Fix JSX expression */}
   n: /style\s*=\s*{([^}]+)}\s*(\w+)/g,
     replacemen,
-  t: 'style="{ $1 } $2'},"
+  t: 'style = "{ $1 } $2'},"
   //Fix key attributes;
   {/* TODO: Fix JSX expression */}
   n: /key\s*=\s*{([^}]+)}\s*(\w+)/g,
     replacemen,
-  t: 'key="{ $1 } $2'},"
+  t: 'key = "{ $1 } $2'},"
   //Fix conditional attributes;
   {/* TODO: Fix JSX expression */}
   n: /{([^}]*)\s*&&\s*<([^>]+)>\s*([^<]+)\s*<\/\2>\s*}/g,
@@ -280,15 +279,14 @@ const fixes="[]"
 ;
 function fixFile(filePath) {}
   try {}
-    fixes.forEach(fix="> {)"
-      //       const newContent="content.replace(fix.pattern, fix.replacement);"
+    fixes.forEach(fix = "> {)"
+      //       const newContent = "content.replace(fix.pattern, fix.replacement);"
       if (newContent !== content) {}
         content="newContent;"
         modified="true;"
 function fixFile(filePath) {/* TODO: Fix JSX expression */}
       }
     });
-
     if (modified) {/* TODO: Fix JSX expression */}
     }
     return false} catch (error) {/* TODO: Fix JSX expression */}
@@ -299,17 +297,16 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
 async function main() {}
   //Find all TypeScript/TSX files;
   //   let fixedCount="0;"
-  files.forEach(file="> {)"
+  files.forEach(file = "> {)"
     if (fixFile(file)) {}
       fixedCount++}
 async function main() {/* TODO: Fix JSX expression */}
 }
   //Find all TypeScript/TSX files;
   //   let fixedCount="0;"
-  files.forEach(file="> {/* TODO: Fix JSX expression */}"
+  files.forEach(file = "> {/* TODO: Fix JSX expression */}"
     })
   });
-
   //   }
 
 // main().catch(console.error);

@@ -1,7 +1,6 @@
 'use client';
 import React, { memo } from 'react';
 import { LucideIcon, ArrowRight } from 'lucide-react';
-
 interface ServiceCardProps {/* TODO: Fix JSX expression */}
 }
 ;
@@ -10,14 +9,13 @@ const,
 }) => {/* TODO: Fix JSX expression */}
   };
 ;
-const bgColorClasses="{/* TODO: Fix JSX expression */}"
+const bgColorClasses = "{/* TODO: Fix JSX expression */}"
   };
-
   return (<article></article>
       className=""quantum-card p-4,""
   sm:p-6 energy-pulse group relative""
       role=""article")"
-      aria-labelledby="{`${title.toLowerCase().replace(/\s+/g, '-')}-title`}>"
+      aria-labelledby = "{`${title.toLowerCase().replace(/\s+/g, '-')}-title`}>"
       {/* TODO: Fix JSX expression */}
       )}
       "
@@ -27,7 +25,7 @@ const bgColorClasses="{/* TODO: Fix JSX expression */}"
         {typeof Icon === 'string' ? Icon : <Icon className=""w-12 h-12 mx-auto" />}"
       </div>
       <h3></h3>`
-        id="{`${title.toLowerCase().replace(/\s+/g, '-')}-title`}""
+        id = "{`${title.toLowerCase().replace(/\s+/g, '-')}-title`}""
         className=""text-xl,""
   sm:text-2xl font-bold text-white mb-3,"
   sm:mb-4 text-center neon-text">
@@ -62,7 +60,7 @@ const bgColorClasses="{/* TODO: Fix JSX expression */}"
   s:</h4>"
         <div className=""flex flex-wrap gap-1"></div>"
           {/* TODO: Fix JSX expression */}
-              key="{idx} `"
+              key = "{idx} `"
               className="{`px-2 py-1 ${bgColorClasses[color as keyof typeof bgColorClasses]} text-cyan-300 text-xs rounded`}>"
               {tech}
             </span>
@@ -92,12 +90,11 @@ const bgColorClasses="{/* TODO: Fix JSX expression */}"
   focus:ring-cyan-400,
   focus:ring-offset-2,`
   focus:ring-offset-slate-900 rounded inline-flex items-center justify-center w-full py-2`}`
-        aria-label="{`Learn more about ${title}`}>"
+        aria-label = "{`Learn more about ${title}`}>"
         Learn More;"
         <ArrowRight className=""w-4 h-4 ml-1" /></ArrowRight>"
       </a>
     </article>
   )});
-
 ServiceCard.displayName="'ServiceCard';"
 export default ServiceCard;"`

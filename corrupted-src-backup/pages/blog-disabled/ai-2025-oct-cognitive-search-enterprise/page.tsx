@@ -9,14 +9,14 @@ export default function CognitiveSearchEnterprise20, 2, 5() {}
         <title></title>
           Cognitive, Enterprise, Search 20, 2, 5 — 97% Answer, Accurac, y, 12x, Faster, Discovery, $12, 4, M+ Productivity, Gain, s | Zion, Tech, Group;
         <
-        <meta , nam, e="'description'></meta>"
-          conte, n, t="'Transform, enterprise, knowledge discovery, with, AI-powered, cognitive, search. Achieve, 9, 7% answer, accura, c, y, 12 x, faster, information retriev, a, l, and, unloc, k $12, 4, M+ in, productivity, gains across, your, organization.'"
+        <meta , nam, e = "'description'></meta>"
+          conte, n, t = "'Transform, enterprise, knowledge discovery, with, AI-powered, cognitive, search. Achieve, 9, 7% answer, accura, c, y, 12 x, faster, information retriev, a, l, and, unloc, k $12, 4, M+ in, productivity, gains across, your, organization.'"
         /><
-        <meta , nam, e="'keywor, d, s'></meta>"
-          conte, n, t="'cognitive, sear, c, h, enterprise, searc, h, AI, searc, h, semantic, searc, h, knowledge, managemen, t, information, retrieva, l, enterprise, A, I, vector, searc, h, RAG, system, s'"
+        <meta , nam, e = "'keywor, d, s'></meta>"
+          conte, n, t = "'cognitive, sear, c, h, enterprise, searc, h, AI, searc, h, semantic, searc, h, knowledge, managemen, t, information, retrieva, l, enterprise, A, I, vector, searc, h, RAG, system, s'"
         /><
-        <link , re, l="'canonic, a, l'></link>"
-          hr, e, f="'htt, p, s: //ziontechgro u p.c o m/bl o g'"
+        <link , re, l = "'canonic, a, l'></link>"
+          hr, e, f = "'htt, p, s: //ziontechgro u p.c o m/bl o g'"
       <
     <div><
       
@@ -39,20 +39,20 @@ export default function CognitiveSearchEnterprise20, 2, 5() {}
         <div, className="'container, m, x-auto, p, x-4, p, y-12, ma, x-w-4, x, l'><"
               Cognitive, Enterprise, Search: Unlocking, Institutional, Knowledge at, Scal, e;
               Cognitive, Enterprise, Search: Unlocking, Institutional, Knowledge at, Scal, e<
-                <li, classNam, e="'flex, item, s-start, ga, p-3'></li>"
+                <li, classNam, e = "'flex, item, s-start, ga, p-3'></li>"
                     <stro, n, g>$12, 4, M+ Productivi, t, y:<
                   <
               <span, className="'te, x, t-gr, a, y-4, 0, 0'></span>Octo</span>, b, e, r , 1, 20, 2, 5<"
             <
 
-            <h1, classNam, e="'te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, m, b-6, b, g-gradie, n, t-to-r, fro, m-indi, g, o-400, vi, a-purp, l, e-400, t, o-pi, n, k-400, tex, t-transparent, b, g-cl, i, p-text, leadin, g-tig, h, t'></h1>"
+            <h1, classNam, e = "'te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, m, b-6, b, g-gradie, n, t-to-r, fro, m-indi, g, o-400, vi, a-purp, l, e-400, t, o-pi, n, k-400, tex, t-transparent, b, g-cl, i, p-text, leadin, g-tig, h, t'></h1>"
               Cognitive, Enterprise, Search: Unlocking, Institutional, Knowledge at, Scal, e;
               Cognitive, Enterprise, Search: Unlocking, Institutional, Knowledge at, Scal, e<
                 <li, className="'flex, item, s-start, ga, p-3'></li>"
                     <stro, n, g>$12, 4, M+ Productivi, t, y:<
                   <
 
-            <section, classNam, e="'mb-12'></section>"
+            <section, classNam, e = "'mb-12'></section>"
               <h2, className="'te, x, t-3xl, fon, t-bold, m, b-6, tex, t-indi, g, o-3, 0, 0'></h2>"
                 Cognitive, Search, Architecture;
               <
@@ -128,7 +128,7 @@ export default function CognitiveSearchEnterprise20, 2, 5() {}
                   <h3, className="'te, x, t-2xl, fon, t-bold, m, b-4, tex, t-indi, g, o-3, 0, 0'></h3>"
                     Professional, Services, Firm;
                   <
-                  <ul, classNam, e="'spa, c, e-y-3, tex, t-gr, a, y-3, 0, 0'></ul>"
+                  <ul, classNam, e = "'spa, c, e-y-3, tex, t-gr, a, y-3, 0, 0'></ul>"
             <section, className="'mb-12'></section>"
               <h2, className="'te, x, t-3xl, fon, t-bold, m, b-6, tex, t-indi, g, o-3, 0, 0'></h2>"
                 Advanced, Capabilitie, s;
@@ -143,7 +143,7 @@ export default function CognitiveSearchEnterprise20, 2, 5() {}
                     meetin, g, s, or, technical, diagrams in, documentation, with;
                     natural, language, queries.
                 <
-                <div, classNam, e="'bg-sla, t, e-8, 0, 0/50, rounde, d-x, l, p-6, borde, r-l-4, borde, r-pi, n, k-5, 0, 0'><"
+                <div, classNam, e = "'bg-sla, t, e-8, 0, 0/50, rounde, d-x, l, p-6, borde, r-l-4, borde, r-pi, n, k-5, 0, 0'><"
                   <h3, className="'te, x, t-xl, fon, t-bold, m, b-3, tex, t-pi, n, k-3, 0, 0'></h3>"
                     Enterprise, Securit, y & Complian, c, e;
                   <
@@ -168,7 +168,7 @@ export default function CognitiveSearchEnterprise20, 2, 5() {}
                 comprehensive, contex, t.
                 Start, Your, Knowledge Transformati, o, n;
                 Start, Your, Knowledge Transformati, o, n<
-                <Brain , classNam, e="'ml-2 h-5 w-5'></Brain>"
+                <Brain , classNam, e = "'ml-2 h-5 w-5'></Brain>"
                 Start, Your, Knowledge Transformati, o, n;
                 <Brain , className="'ml-2 h-5 w-5')></Brain>"
               <ul className=""space-y-4 text-lg">)"

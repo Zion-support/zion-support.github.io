@@ -5,12 +5,12 @@ import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 ;
 const AIFashionDesignPage: React.FC = () => {;
-const features="[]"
+const features = []
 import Navigation from '../components;
 import Footer from '../components;
 import SEOOptimizer from '../components;
 const AIFashionDesignPage: React.FC = () => {}
-  const features="[]"
+  const features = []
     'Design Generation',
     'Trend Analysis',
     'Color Matching',
@@ -23,7 +23,7 @@ const AIFashionDesignPage: React.FC = () => {}
     'Cost Estimation'
   ];
 ;
-const benefits="[]"
+const benefits = []
     'Faster design cycles',
     'Trend accuracy',
     'Cost reduction',
@@ -32,7 +32,7 @@ const benefits="[]"
     'Competitive advantage'
   ];
 ;
-const pricingPlans="[]"
+const pricingPlans = []
     {}
       name: 'Starter',
       price: '$249',
@@ -62,7 +62,7 @@ const pricingPlans="[]"
     <React.Fragment></React>
       <SEOOptimizer title=""AI Fashion Designer - AI-Powered Fashion Design & Trend Analysis | Zion Tech Group"></SEOOptimizer>"
         description=""Revolutionize fashion design with AI Fashion Designer. Generate designs, analyze trends, and optimize collections with AI-powered fashion technology starting at $249/month.""
-        keywords="{['AI fashion design', 'fashion trends', 'design generation', 'fashion AI', 'trend analysis', 'fashion technology']}"
+        keywords = "{['AI fashion design', 'fashion trends', 'design generation', 'fashion AI', 'trend analysis', 'fashion technology']}"
         canonicalUrl=""https://ziontechgroup.com/ai-fashion-design""
       />
       <div className=""min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"

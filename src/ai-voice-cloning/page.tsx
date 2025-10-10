@@ -5,12 +5,12 @@ import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 ;
 const AIVoiceCloningPage: React.FC = () => {;
-const features="[]"
+const features = []
 import Navigation from '../components;
 import Footer from '../components;
 import SEOOptimizer from '../components;
 const AIVoiceCloningPage: React.FC = () => {}
-  const features="[]"
+  const features = []
     'Voice Cloning',
     'Text-to-Speech',
     'Emotion Control',
@@ -23,7 +23,7 @@ const AIVoiceCloningPage: React.FC = () => {}
     'Batch Processing'
   ];
 ;
-const benefits="[]"
+const benefits = []
     'Natural voice quality',
     'Cost-effective solution',
     'Scalable technology',
@@ -32,7 +32,7 @@ const benefits="[]"
     'Easy integration'
   ];
 ;
-const pricingPlans="[]"
+const pricingPlans = []
     {}
       name: 'Starter',
       price: '$199',
@@ -62,7 +62,7 @@ const pricingPlans="[]"
     <React.Fragment></React>
       <SEOOptimizer title=""AI Voice Cloning Studio - Create Realistic Voice Clones | Zion Tech Group"></SEOOptimizer>"
         description=""Create realistic voice clones for content, presentations, and customer service with AI Voice Cloning Studio. Professional voice synthesis technology starting at $199/month.""
-        keywords="{['AI voice cloning', 'voice synthesis', 'text to speech', 'voice generation', 'AI voices', 'voice automation']}"
+        keywords = "{['AI voice cloning', 'voice synthesis', 'text to speech', 'voice generation', 'AI voices', 'voice automation']}"
         canonicalUrl=""https://ziontechgroup.com/ai-voice-cloning""
       />
       <div className=""min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"

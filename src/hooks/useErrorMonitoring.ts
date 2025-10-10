@@ -34,9 +34,9 @@ const handleError="(even)"
   t: unknown) => {/* TODO: Fix JSX expression */}
   O: Add content}
 }
-      const errorEvent="event as {/* TODO: Fix JSX expression */}"
+      const errorEvent = "event as {/* TODO: Fix JSX expression */}"
   e: string; error?: Error };
-      const error="new Error(errorEvent.message);"
+      const error = "new Error(errorEvent.message);"
       error.stack="errorEvent.error?.stack;"
       reportError(error, 'global_error')};
     // Unhandled promise rejection handler;
@@ -44,9 +44,9 @@ const handleUnhandledRejection="(even)"
   t: unknown) => {/* TODO: Fix JSX expression */}
   O: Add content}
 }
-      const rejectionEvent="event as {/* TODO: Fix JSX expression */}"
+      const rejectionEvent = "event as {/* TODO: Fix JSX expression */}"
   n: unknown };
-      const error="//         rejectionEvent.reason instanceof Error;"
+      const error = "//         rejectionEvent.reason instanceof Error;"
 //           ? rejectionEvent.reason;
           : new Error(String(rejectionEvent.reason));
       reportError(error, 'unhandled_promise_rejection')};
@@ -56,7 +56,7 @@ const handleReactError="(erro,"
   o: unknown) => {/* TODO: Fix JSX expression */}
   O: Add content}
 }
-      const componentStack="(errorInfo as { componentStack?: string })?.componentStack || 'unknown';"
+      const componentStack = "(errorInfo as { componentStack?: string })?.componentStack || 'unknown';"
       reportError(error, `react_error_boundar)`
   y: ${componentStack}`)};
     // Add event listeners;
@@ -80,4 +80,3 @@ const handleReactError="(erro,"
 }
 //     reportError}};
 export default useErrorMonitoring;
-

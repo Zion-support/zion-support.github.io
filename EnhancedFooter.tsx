@@ -3,9 +3,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 ;
 const EnhancedFooter: React.FC = () => {;
-const currentYear="new Date().getFullYear();"
+const currentYear = "new Date().getFullYear();"
   ;
-const services="[]"
+const services = []
     { name: 'AI Solutions', href: '/services/ai' },
     { name: 'Cloud Architecture', href: '/services/cloud' },
     { name: 'Web Development', href: '/services/web' },
@@ -13,20 +13,19 @@ const services="[]"
     { name: 'Data Analytics', href: '/services/analytics' },
     { name: 'DevOps', href: '/services/devops' }];
 ;
-const products="[]"
+const products = []
     { name: 'AI Platform', href: '/products/ai-platform' },
     { name: 'Cloud Suite', href: '/products/cloud-suite' },
     { name: 'Analytics Dashboard', href: '/products/analytics' },
     { name: 'Mobile SDK', href: '/products/mobile-sdk' }];
 ;
-const quickLinks="[]"
+const quickLinks = []
     { name: 'About Us', href: '/about' },
     { name: 'Contact', href: '/contact' },
     { name: 'Blog', href: '/blog' },
     { name: 'Careers', href: '/careers' },
     { name: 'Privacy Policy', href: '/legal/privacy' },
     { name: 'Terms of Service', href: '/legal/terms' }];
-
   return (
     <footer className=""bg-gray-900 text-white"></footer>"
       <div className=""container mx-auto px-4 py-12"></div>"
@@ -64,9 +63,9 @@ const quickLinks="[]"
           <div></div>
             <h3 className=""text-lg font-semibold mb-4">Services</h3>"
             <ul className=""space-y-2"></ul>"
-              {services.slice(0, 6).map(service="> ("
-                <li key="{service.name}></li>"
-                  <Link to="{service.href}></Link>"
+              {services.slice(0, 6).map(service = "> ("
+                <li key = "{service.name}></li>"
+                  <Link to = "{service.href}></Link>"
                     <span className=""text-gray-300 hover:text-white transition-colors"></span>"
                       {service.name}
                     </span>
@@ -78,9 +77,9 @@ const quickLinks="[]"
           <div></div>
             <h3 className=""text-lg font-semibold mb-4">Products</h3>"
             <ul className=""space-y-2"></ul>"
-              {products.slice(0, 6).map(product="> ("
-                <li key="{product.name}></li>"
-                  <Link to="{product.href}></Link>"
+              {products.slice(0, 6).map(product = "> ("
+                <li key = "{product.name}></li>"
+                  <Link to = "{product.href}></Link>"
                     <span className=""text-gray-300 hover:text-white transition-colors"></span>"
                       {product.name}
                     </span>
@@ -92,9 +91,9 @@ const quickLinks="[]"
           <div></div>
             <h3 className=""text-lg font-semibold mb-4">Quick Links</h3>"
             <ul className=""space-y-2"></ul>"
-              {quickLinks.map(item="> ("
-                <li key="{item.name}></li>"
-                  <Link to="{item.href}></Link>"
+              {quickLinks.map(item = "> ("
+                <li key = "{item.name}></li>"
+                  <Link to = "{item.href}></Link>"
                     <span className=""text-gray-300 hover:text-white transition-colors"></span>"
                       {item.name}
                     </span>
@@ -156,5 +155,4 @@ const quickLinks="[]"
       </div>
     </footer>
   )};
-
 export default EnhancedFooter;

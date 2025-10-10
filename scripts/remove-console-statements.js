@@ -2,9 +2,8 @@
 import fs from 'fs';
 import path from 'path';
 import { glob } from 'glob';
-
 // Patterns to match console statements;
-const consolePatterns="[]"
+const consolePatterns = []
   /console\.log\([^)]*\);?/g,
   /console\.warn\([^)]*\);?/g,
   /console\.error\([^)]*\);?/g,
@@ -19,9 +18,8 @@ const consolePatterns="[]"
   /console\.count\([^)]*\);?/g,
   /console\.clear\([^)]*\);?/g;
 ];
-
 // Files to process;
-const filePatterns="[]"
+const filePatterns = []
   'app/**/*.{ts,tsx,js,jsx}',
   'src/**/*.{ts,tsx,js,jsx}',
   'components/**/*.{ts,tsx,js,jsx}',
@@ -30,9 +28,8 @@ const filePatterns="[]"
   'hooks/**/*.{ts,tsx,js,jsx}',
   'lib/**/*.{ts,tsx,js,jsx}'
 ];
-
 // Files to exclude;
-const excludePatterns="[]"
+const excludePatterns = []
   '**/node_modules/**',
   '**/dist/**',
   '**/.next/**',
@@ -54,15 +51,15 @@ let removedStatements="0;"
 ;
 function processFile(filePath) {}
   try {;
-const content="fs.readFileSync(filePath, 'utf8');"
+const content = "fs.readFileSync(filePath, 'utf8');"
     let newContent="content;"
     let fileRemovedCount="0;"
     // Remove console statements;
-    consolePatterns.forEach(pattern="> {);"
+    consolePatterns.forEach(pattern = "> {);"
 const matches="newContent.match(pattern);"
       if (matches) {}
         fileRemovedCount += matches.length;
-        newContent="newContent.replace(pattern, '');"
+        newContent = "newContent.replace(pattern, '');"
 // Function to remove console statements from a file;
 function removeConsoleStatements(filePath) {/* TODO: Fix JSX expression */}
   from: ${filePath}`)}
@@ -77,7 +74,7 @@ async function main() {/* TODO: Fix JSX expression */}
 }
   // // console.log removed for production;
 // Get all TypeScript and JavaScript files in the app directory;
-  const patterns="[]"
+  const patterns = []
     'app/**/*.{ts,tsx,js,jsx}',
     '!app/**/*.test.{ts,tsx,js,jsx}',
     '!app/**/*.spec.{ts,tsx,js,jsx}',
@@ -91,9 +88,8 @@ let totalFiles="0;"
   for (const pattern of patterns) {/* TODO: Fix JSX expression */}
       }
     });
-
     // Clean up empty lines that might be left behind;
-    newContent="newContent.replace(/\n\s*\n\s*\n/g, '\n\n');"
+    newContent = "newContent.replace(/\n\s*\n\s*\n/g, '\n\n');"
     if (fileRemovedCount > 0) {}
       fs.writeFileSync(filePath, newContent, 'utf8');
       // console.log removed for production;
@@ -109,18 +105,17 @@ async function main() {}
 // Get all files to process;
   const allFiles="[];"
   for (const pattern of filePatterns) {;
-const files="await glob(pattern, {)"
+const files = "await glob(pattern, {)"
       ignore: excludePatterns),
       cwd: process.cwd()});
     allFiles.push(...files)}
 
   // Remove duplicates;
-  const uniqueFiles="[...new Set(allFiles)];"
+  const uniqueFiles = "[...new Set(allFiles)];"
   totalFiles="uniqueFiles.length;"
   // console.log removed for production;
 // Process each file;
   uniqueFiles.forEach(processFile);
-
   // console.log removed for production;
 // console.log removed for production;
 // console.log removed for production;
@@ -144,7 +139,6 @@ export { processFile, consolePatterns }}
   // // console.log removed for production;
 `
   removed: ${modifiedFiles > 0 ? 'Yes' : 'No'}`);
-  
   if (modifiedFiles > 0) {/* TODO: Fix JSX expression */}
   } else {/* TODO: Fix JSX expression */}
   }
@@ -152,5 +146,4 @@ export { processFile, consolePatterns }}
 
 // Run the script;
 main().catch(console.error);
-
 export { removeConsoleStatements };`

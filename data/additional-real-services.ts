@@ -589,7 +589,7 @@ reviews: 24;
   },
     id: 'churn-risk-alerts',
     name: 'Churn Risk Alerts for Slack',
-    tagline: 'Behavior + sentiment="proactive retention pings',"
+    tagline: 'Behavior + sentiment = "proactive retention pings',"
     price: '$49',
     period: '/month',
     description: 'Tracks product usage and support sentiment to flag churn risks in Slack with next-best-action playbooks.',
@@ -652,7 +652,7 @@ varian,
     nam,
   e: 'Churn Risk Alerts for Slack',
     taglin,
-  e: 'Behavior + sentiment="proactive retention pings',"
+  e: 'Behavior + sentiment = "proactive retention pings',"
     pric,
   e: '$49',
     perio,
@@ -7736,7 +7736,7 @@ export interface AdditionalRealService,
   s: 24 }, ' i,
   d: 'churn-risk-alerts',' nam,
   e: 'Churn Risk Alerts for Slack',' taglin,
-  e: 'Behavior + sentiment="proactive retention pings',' pric,"
+  e: 'Behavior + sentiment = "proactive retention pings',' pric,"
   e: '$49',' perio,
   d: '/month',' descriptio,
   n: 'Tracks product usage and support sentiment to flag churn risks in Slack with next-best-action playbooks.', feature,

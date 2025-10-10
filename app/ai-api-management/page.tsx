@@ -1,6 +1,6 @@
 import { CheckCircle, ArrowRight } from 'lucide-react';
 ;
-const PagePage: React.FC = () => {const features="[]"
+const PagePage: React.FC = () => {const features = []
     {}
       title: 'Feature 1',
       description: 'Description of feature 1',
@@ -8,7 +8,7 @@ const PagePage: React.FC = () => {const features="[]"
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Code, Cloud, Lock, Monitor } from 'lucide-react';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 const AiApiManagementPage: React.FC = () => {}
-  const features="[]"
+  const features = []
     {}
       icon: Brain,
       title: 'AI-Powered API Intelligence',
@@ -41,7 +41,7 @@ const AiApiManagementPage: React.FC = () => {}
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
 import { CheckCircle, ArrowRight } from 'lucide-react';
 const PagePage: React.FC = () => {}
-  const features="[]"
+  const features = []
     {}
       title: 'Feature 1',
       description: 'Description of feature 1',
@@ -60,7 +60,7 @@ const PagePage: React.FC = () => {}
     }
   ];
 const benefits="[;"
-const benefits="[]"
+const benefits = []
     'Benefit 1',
       benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']    'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
@@ -68,7 +68,7 @@ const benefits="[]"
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'    'Benefit 1',
 
-  const benefits="[]"
+  const benefits = []
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
@@ -92,7 +92,7 @@ const benefits="[]"
       benefits: ['End-to-end encryption', 'Access controls', 'Audit trails', 'Compliance support']
     }
   ];
-  const benefits="[]"
+  const benefits = []
     'Streamline API development and management',
     'Improve API performance and reliability',
     'Reduce development time and costs',
@@ -100,7 +100,7 @@ const benefits="[]"
     'Scale APIs efficiently',
     'Ensure security and compliance'
   ];
-  const useCases="[]"
+  const useCases = []
     {}
       title: 'API Gateway Management',
       description: 'Centralized management of all your APIs through a single gateway',
@@ -141,7 +141,7 @@ const benefits="[]"
         {/* Hero Section */}
         <section className=""relative py-20 px-4 overflow-hidden">)"
           <div className=""absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" /></div>"
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style="{{ animationDelay: '1s' }} /></div>"
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style = "{{ animationDelay: '1s' }} /></div>"
           <div className=""relative max-w-7xl mx-auto text-center"></div>"
             <h1 className=""text-5xl md: text-7xl font-bold text-white mb-6 leading-tight"></h1>"
               Ai Api Management;
@@ -164,7 +164,7 @@ const benefits="[]"
         </section>      {/* Hero Section */}
       <section className=""relative py-20 px-4 overflow-hidden"></section>"
         <div className=""absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" /></div>"
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style="{{ animationDelay: '1s' }} /></div>"
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style = "{{ animationDelay: '1s' }} /></div>"
         <div className=""relative max-w-7xl mx-auto text-center"></div>"
           <h1 className=""text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"></h1>"
             Page;

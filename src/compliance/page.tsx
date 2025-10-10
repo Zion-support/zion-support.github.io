@@ -1,8 +1,6 @@
 'use client';
 import React from 'react';
-
 import { Link } from 'react-router-dom';
-
 import { ArrowLeft, CheckCircle, Shield, FileText, Users, Lock,  Shield,  FileText,  Users } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -17,7 +15,7 @@ const certifications="[];"
     { name: 'NIST Framework', status: 'Implemented' }
 
   ];
-  const complianceAreas="[]"
+  const complianceAreas = []
   // TOD,
   O: Add items;
 ];;
@@ -59,7 +57,7 @@ const certifications="[];"
         <section className=""bg-white shadow-sm border-b"></section>"
           <div className=""max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6"></div>"
             <div className=""flex items-center"></div>"
-              <Link to="/privacy" className=""inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200 mr-6"></Link>"
+              <Link to = "/privacy" className=""inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200 mr-6"></Link>"
 //>
           "
           <ArrowLeft className=""w-4 h-4 mr-2" /></ArrowLeft>"
@@ -130,6 +128,4 @@ Compliance Areas;"
         </main>
         <Footer /></Footer>
   )};
-
 export default CompliancePage;
-

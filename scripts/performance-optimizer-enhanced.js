@@ -3,9 +3,8 @@ import React from 'react';
 import fs from 'fs';
 import path from 'path';
 import { glob } from 'glob';
-
 // Performance optimization patterns;
-const optimizations="{}"
+const optimizations = {}
   // Remove unused CSS classes;
   removeUnusedCSS: (content) => {,
     // This is a simplified version - in production, use tools like PurgeCSS;
@@ -40,12 +39,12 @@ const minified="styles;"
     // Add React.memo to functional components;
     if (content.includes('const ') && content.includes(': React.FC')) {}
       content="content.replace("
-        /const (\w+): React\.FC="\(/g;"
+        /const (\w+): React\.FC = "\(/g;"
         'const $1: React.FC="React.memo((')"
       );
       // Add closing parenthesis for React.memo;
       content="content.replace()"
-        /(\w+)\.displayName="'\w+';/g;"
+        /(\w+)\.displayName = "'\w+';/g;"
         '$1.displayName="\'$1\';\n});'"
       )}
     return content},
@@ -60,14 +59,13 @@ const preloadHints="`"
     <link rel="preload" href="/assets/vendor-ConSr3PY.js" as=""script" crossorigin>,"
     <link rel="preload" href="/assets/index-BRi0Fmgq.js" as=""script" crossorigin>,"
     <link rel="preload" href="/assets/index-C1QbpZNs.css" as=""style">`;"
-      content="content.replace('<head>', `<head></head>"
+      content = "content.replace('<head>', `<head></head>"
 );
 }${preloadHints}`)}
     return content}
 };
-
 // Files to process;
-const filePatterns="[]"
+const filePatterns = []
   'app/**/*.{ts,tsx,js,jsx}',
   'src/**/*.{ts,tsx,js,jsx}',
   'components/**/*.{ts,tsx,js,jsx}',
@@ -77,9 +75,8 @@ const filePatterns="[]"
   'lib/**/*.{ts,tsx,js,jsx}',
   'dist/**/*.{html,css,js}'
 ];
-
 // Files to exclude;
-const excludePatterns="[]"
+const excludePatterns = []
   '**/node_modules/**',
   '**/.next/**',
   '**/build/**',
@@ -100,7 +97,7 @@ let optimizationsApplied="0;"
 ;
 function processFile(filePath) {}
   try {;
-const content="fs.readFileSync(filePath, 'utf8');"
+const content = "fs.readFileSync(filePath, 'utf8');"
     let newContent="content;"
     let fileOptimizations="0;"
     // Apply optimizations;
@@ -110,7 +107,6 @@ const before="newContent;"
       if (newContent !== before) {}
         fileOptimizations++}
     });
-
     if (fileOptimizations > 0) {}
       fs.writeFileSync(filePath, newContent, 'utf8');
       // console.log removed for production;
@@ -126,18 +122,17 @@ async function main() {}
 // Get all files to process;
   const allFiles="[];"
   for (const pattern of filePatterns) {;
-const files="await glob(pattern, {)"
+const files = "await glob(pattern, {)"
       ignore: excludePatterns),
       cwd: process.cwd()});
     allFiles.push(...files)}
 
   // Remove duplicates;
-  const uniqueFiles="[...new Set(allFiles)];"
+  const uniqueFiles = "[...new Set(allFiles)];"
   totalFiles="uniqueFiles.length;"
   // console.log removed for production;
 // Process each file;
   uniqueFiles.forEach(processFile);
-
   // console.log removed for production;
 // console.log removed for production;
 // console.log removed for production;

@@ -11,25 +11,22 @@ function fixJSXTags(content) {}
   content = content.replace(/<(_[a-zA-Z][a-zA-Z0-9]*)/g, (match, tagName) => {;
 function fixJSXTags(content) {/* TODO: Fix JSX expression */}
     return `<${tagName.substring(1)}`; // Remove the underscore});
-  
   // Fix JSX closing tags;
   content = content.replace(/<\/(_[a-zA-Z][a-zA-Z0-9]*)>/g, (match, tagName) => {}
 return (
 
-  content="content.replace(/<\/(_[a-zA-Z][a-zA-Z0-9]*)>"
+  content = "content.replace(/<\/(_[a-zA-Z][a-zA-Z0-9]*)>"
 );
 }/g, (match, tagName) => {/* TODO: Fix JSX expression */}`
     return `</${tagName.substring(1)}>`; // Remove the underscore});
-  
   // Fix self-closing JSX tags;
   content = content.replace(/<(_[a-zA-Z][a-zA-Z0-9]*)\s*\/>/g, (match, tagName) => {}
 return (
 
-  content="content.replace(/<(_[a-zA-Z][a-zA-Z0-9]*)\s*\/>"
+  content = "content.replace(/<(_[a-zA-Z][a-zA-Z0-9]*)\s*\/>"
 );
 }/g, (match, tagName) => {/* TODO: Fix JSX expression */}`
     return `<${tagName.substring(1)} />`; // Remove the underscore});
-  
   return content}
 
 // Function to fix variable names that were incorrectly prefixed with underscores in destructuring;
@@ -37,36 +34,31 @@ function fixDestructuringVariables(content) {}
   // Fix destructuring in function parameters;
   content = content.replace(/function\s+\w+\s*\([^)]*\)/g, (match) => {}
     return match.replace(/\b_([a-zA-Z_$][a-zA-Z0-9 _$]*)\b/g, '$1')});
-  
   // Fix arrow function parameters;
   content = content.replace(/\([^)]*\)\s*=>/g, (match) => {}
     return match.replace(/\b_([a-zA-Z_$][a-zA-Z0-9 _$]*)\b/g, '$1')});
-  
   // Fix destructuring assignments;
   content = content.replace(/const\s*{\s*([^}]+)\s*}\s*=\s*([^;]+);/g, (match, vars, assignment) => {;
-const fixedVars = vars.split(',').map(v="> {);"
+const fixedVars = vars.split(',').map(v = "> {);"
 const trimmed="v.trim();"
       if (trimmed.startsWith('_') && trimmed.length > 1) {}
         return trimmed.substring(1);
 function fixDestructuringVariables(content) {/* TODO: Fix JSX expression */}
   });
-  
   // Fix arrow function parameters;
   content = content.replace(/\([^)]*\)\s*=>/g, (match) => {/* TODO: Fix JSX expression */}
   });
-  
   // Fix destructuring assignments;
   content = content.replace(/const\s*{\s*([^}]+)\s*}\s*=\s*([^;]+);/g, (match, vars, assignment) => {/* TODO: Fix JSX expression */}
       }
       return trimmed}).join(', ');`
     return `const { ${fixedVars} } = ${assignment};`});
-  
   return content}
 
 // Function to process a single file;
 function processFile(filePath) {}
   try {;
-let content="fs.readFileSync(filePath, 'utf8');"
+let content = "fs.readFileSync(filePath, 'utf8');"
     let modified="false;"
     // Apply fixes;
     const originalContent="content;"
@@ -90,7 +82,7 @@ const files="[];"
 function walkDir(currentPath) {;
 const items="fs.readdirSync(currentPath);"
     for (const item of items) {;
-const fullPath="path.join(currentPath, item);"
+const fullPath = "path.join(currentPath, item);"
       const stat="fs.statSync(fullPath);"
       if (stat.isDirectory()) {}
         // Skip node_modules and other common directories;
@@ -114,9 +106,9 @@ function findSourceFiles(dir) {/* TODO: Fix JSX expression */}
 // Main execution;
 // console.log removed for production;
 ;
-const srcDir="path.join(__dirname, 'src');"
-const appDir="path.join(__dirname, 'app');"
-const files="[...findSourceFiles(srcDir), ...findSourceFiles(appDir)];"
+const srcDir = "path.join(__dirname, 'src');"
+const appDir = "path.join(__dirname, 'app');"
+const files = "[...findSourceFiles(srcDir), ...findSourceFiles(appDir)];"
 `
 // console.log removed for production;
 ;
@@ -127,7 +119,7 @@ for (const file of files) {/* TODO: Fix JSX expression */}`
 `
 // console.log removed for production;
 // Also process root level files;
-const rootFiles="['App.tsx', 'main.tsx', 'page.tsx', 'layout.tsx'];"
+const rootFiles = "['App.tsx', 'main.tsx', 'page.tsx', 'layout.tsx'];"
 for (const file of rootFiles) {/* TODO: Fix JSX expression */}`
   d: ${file}`)}
   }

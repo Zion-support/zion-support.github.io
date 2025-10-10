@@ -1,5 +1,4 @@
 import { ProviderConnection, SyncLogEntry } from './types';
-
 export async function simulateAction<T="unknown>("
   connection: ProviderConnection;
   action: string;
@@ -8,11 +7,9 @@ export async function simulateAction<T="unknown>("
 const log: SyncLogEntry="{,"
     id: Math.random().toString(36).substr(2, 9),
 // Simple UUID generator since uuid package is not available}};
-
 // Simple UUID generator since uuid package is not available;
-const generateId = (): string="> {}"
+const generateId = (): string = "> {}"
   return Math.random().toString(36).substr(2, 9)};
-
 export async function simulateAction<T="any>("
   connection: ProviderConnection;
   action: string;
@@ -35,7 +32,6 @@ const log: SyncLogEntry="{,"
     providerId: connection.providerId;
     level: 'info',
     connectionId: connection.id;
-
 export async function simulateAction<T="any>(connectio,"
   n: ProviderConnection,
   actio,
@@ -83,31 +79,29 @@ export async function simulateAction<T="any>(connectio,"
     details,
     timestam,
   p: new Date()};
-
   // Simulate occasional errors;
   if (Math.random() < 0.1) {}
     log.status="'error';"
-    log.message="`Action ${action} failed: Simulated error`;"
+    log.message = "`Action ${action} failed: Simulated error`;"
   if (Math.random() < 0.1) {/* TODO: Fix JSX expression */}`
-    log.message="`Action ${action} faile,`"
+    log.message = "`Action ${action} faile,`"
   d: Simulated error`;
     throw new Error(log.message)}
 
   // Simulate occasional warnings;
   if (Math.random() < 0.2) {}
     log.status="'warning';"
-    log.message="`Action ${action} completed with warnings`}"
+    log.message = "`Action ${action} completed with warnings`}"
 ;
-const result="{}"
+const result = {}
     success: true;
     data: details;
     timestamp: new Date().toISOString(),
   if (Math.random() < 0.2) {/* TODO: Fix JSX expression */}`
-    log.message="`Action ${action} completed with warnings`}"
+    log.message = "`Action ${action} completed with warnings`}"
 ;
-const result="{/* TODO: Fix JSX expression */}"
+const result = "{/* TODO: Fix JSX expression */}"
   } as T;
-
   return { log, result }}
 
   async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {}
@@ -141,9 +135,9 @@ const result="{/* TODO: Fix JSX expression */}"
     return simulateAction(connection, 'crm.addEmailTouchpoint', { touch })}
 };
 // ATS actions;
-export const ats="{}"
+export const ats = {}
   async pushApplicant(connection: ProviderConnection, applicant: Record<string, unknown>) {}
-export const ats="{/* TODO: Fix JSX expression */}"
+export const ats = "{/* TODO: Fix JSX expression */}"
     return simulateAction(connection, 'ats.pushApplicant', { applicant })},
 
 export async function testConnection(connection: ProviderConnection;)): Promise<boolean> {,
@@ -159,7 +153,7 @@ const logs: SyncLogEntry[] = [];
 ,
   async updateStatus(connection: ProviderConnection, change: Record<string, any>) {}
 // CRM actions;
-export const crm="{}"
+export const crm = {}
   async syncContact(connection: ProviderConnection, contact: Record<string, any>) {}
 export async function testConnection(connectio,
   n: ProviderConnection;)

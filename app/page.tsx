@@ -56,7 +56,7 @@ const HomePage: React.FC = () => {}
           Skip to main content;
         </a>
         {/* Content Promotion Banner */}
-        <Suspense fallback="{<div>Loading...</div>}>"
+        <Suspense fallback = "{<div>Loading...</div>}>"
           <ContentPromotionBanner /></ContentPromotionBanner>
         </Suspense>
         <main id="main-content" className="container mx-auto px-4 py-16 pt-24" role=""main"></main>"
@@ -92,7 +92,7 @@ const HomePage: React.FC = () => {}
           </p>
           {/* Primary Services Grid */}
           <div className=""grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-12"></div>"
-            <Suspense fallback="{<ServiceCardSkeleton />}>"
+            <Suspense fallback = "{<ServiceCardSkeleton />}>"
               <article className=""quantum-card p-4 sm:p-6 energy-pulse"></article>"
                 <div className=""text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line"></di>🤖</div>"
                 <h3 className=""text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center neon-text"></h>AI Services</h3>"
@@ -107,7 +107,7 @@ const HomePage: React.FC = () => {}
                 </div>
               </article>
             </Suspense>
-            <Suspense fallback="{<ServiceCardSkeleton />}>"
+            <Suspense fallback = "{<ServiceCardSkeleton />}>"
               <article className=""quantum-card p-4 sm:p-6 energy-pulse"></article>"
                 <div className=""text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line"></di>📢</div>"
                 <h3 className=""text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center neon-text"></h>AI Marketing</h3>"
@@ -122,7 +122,7 @@ const HomePage: React.FC = () => {}
                 </div>
               </article>
             </Suspense>
-            <Suspense fallback="{<ServiceCardSkeleton />}>"
+            <Suspense fallback = "{<ServiceCardSkeleton />}>"
               <article className=""quantum-card p-4 sm:p-6 energy-pulse"></article>"
                 <div className=""text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line"></di>⚙️</div>"
                 <h3 className=""text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center neon-text"></h>AI Automation</h3>"
@@ -140,7 +140,7 @@ const HomePage: React.FC = () => {}
           </div>
           {/* Secondary Services Grid */}
           <div className=""grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-12"></div>"
-            <Suspense fallback="{<ServiceCardSkeleton />}>"
+            <Suspense fallback = "{<ServiceCardSkeleton />}>"
               <article className=""cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>"
                 <div className=""text-4xl sm:text-5xl mb-4 sm:mb-6 text-center"></di>🏥</div>"
                 <h3 className=""text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center"></h>AI Healthcare</h3>"
@@ -155,7 +155,7 @@ const HomePage: React.FC = () => {}
                 </div>
               </article>
             </Suspense>
-            <Suspense fallback="{<ServiceCardSkeleton />}>"
+            <Suspense fallback = "{<ServiceCardSkeleton />}>"
               <article className=""cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>"
                 <div className=""text-4xl sm:text-5xl mb-4 sm:mb-6 text-center"></di>💰</div>"
                 <h3 className=""text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center"></h>AI Fintech</h3>"
@@ -170,7 +170,7 @@ const HomePage: React.FC = () => {}
                 </div>
               </article>
             </Suspense>
-            <Suspense fallback="{<ServiceCardSkeleton />}>"
+            <Suspense fallback = "{<ServiceCardSkeleton />}>"
               <article className=""cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>"
                 <div className=""text-4xl sm:text-5xl mb-4 sm:mb-6 text-center"></di>⚛️</div>"
                 <h3 className=""text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center"></h>Quantum Computing</h3>"
@@ -192,7 +192,7 @@ const HomePage: React.FC = () => {}
               Micro SAAS Solutions;
             </h3>
             <div className=""grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8"></div>"
-              <Suspense fallback="{<ServiceCardSkeleton />}>"
+              <Suspense fallback = "{<ServiceCardSkeleton />}>"
                 <article className=""cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>"
                   <div className=""text-4xl sm:text-5xl mb-4 sm:mb-6 text-center"></di>💻</div>"
                   <h3 className=""text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center"></h>AI-Powered CRM</h3>"
@@ -207,7 +207,7 @@ const HomePage: React.FC = () => {}
                   </div>
                 </article>
               </Suspense>
-              <Suspense fallback="{<ServiceCardSkeleton />}>"
+              <Suspense fallback = "{<ServiceCardSkeleton />}>"
                 <article className=""cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>"
                   <div className=""text-4xl sm:text-5xl mb-4 sm:mb-6 text-center"></di>📊</div>"
                   <h3 className=""text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center"></h>AI Analytics Dashboard</h3>"
@@ -222,7 +222,7 @@ const HomePage: React.FC = () => {}
                   </div>
                 </article>
               </Suspense>
-              <Suspense fallback="{<ServiceCardSkeleton />}>"
+              <Suspense fallback = "{<ServiceCardSkeleton />}>"
                 <article className=""cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>"
                   <div className=""text-4xl sm:text-5xl mb-4 sm:mb-6 text-center"></di>✍️</div>"
                   <h3 className=""text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center"></h>AI Content Studio</h3>"
@@ -237,7 +237,7 @@ const HomePage: React.FC = () => {}
                   </div>
                 </article>
               </Suspense>
-              <Suspense fallback="{<ServiceCardSkeleton />}>"
+              <Suspense fallback = "{<ServiceCardSkeleton />}>"
                 <article className=""cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>"
                   <div className=""text-4xl sm:text-5xl mb-4 sm:mb-6 text-center"></di>🤖</div>"
                   <h3 className=""text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center"></h>AI Chatbot Builder</h3>"
@@ -252,7 +252,7 @@ const HomePage: React.FC = () => {}
                   </div>
                 </article>
               </Suspense>
-              <Suspense fallback="{<ServiceCardSkeleton />}>"
+              <Suspense fallback = "{<ServiceCardSkeleton />}>"
                 <article className=""cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>"
                   <div className=""text-4xl sm:text-5xl mb-4 sm:mb-6 text-center"></di>📧</div>"
                   <h3 className=""text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center"></h>AI Email Marketing</h3>"
@@ -267,7 +267,7 @@ const HomePage: React.FC = () => {}
                   </div>
                 </article>
               </Suspense>
-              <Suspense fallback="{<ServiceCardSkeleton />}>"
+              <Suspense fallback = "{<ServiceCardSkeleton />}>"
                 <article className=""cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>"
                   <div className=""text-4xl sm:text-5xl mb-4 sm:mb-6 text-center"></di>📱</div>"
                   <h3 className=""text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center"></h>AI Mobile App Builder</h3>"
@@ -282,7 +282,7 @@ const HomePage: React.FC = () => {}
                   </div>
                 </article>
               </Suspense>
-              <Suspense fallback="{<ServiceCardSkeleton />}>"
+              <Suspense fallback = "{<ServiceCardSkeleton />}>"
                 <article className=""cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>"
                   <div className=""text-4xl sm:text-5xl mb-4 sm:mb-6 text-center"></di>🔍</div>"
                   <h3 className=""text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center"></h>AI SEO Optimizer</h3>"
@@ -297,7 +297,7 @@ const HomePage: React.FC = () => {}
                   </div>
                 </article>
               </Suspense>
-              <Suspense fallback="{<ServiceCardSkeleton />}>"
+              <Suspense fallback = "{<ServiceCardSkeleton />}>"
                 <article className=""cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>"
                   <div className=""text-4xl sm:text-5xl mb-4 sm:mb-6 text-center"></di>💰</div>"
                   <h3 className=""text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center"></h>AI Invoice Generator</h3>"
@@ -1166,19 +1166,19 @@ const HomePage: React.FC = () => {}
           </div>
         </section>
         {/* Statistics Section */}
-        <Suspense fallback="{<div></Suspense>}>"
+        <Suspense fallback = "{<div></Suspense>}>"
           <ContentStatistics /></ContentStatistics>
         </Suspense>
         {/* Content Carousel */}
-        <Suspense fallback="{<div></Suspense>}>"
+        <Suspense fallback = "{<div></Suspense>}>"
           <ContentCarousel /></ContentCarousel>
         </Suspense>
         {/* Dynamic Content Showcase */}
-        <Suspense fallback="{<div></Suspense>}>"
+        <Suspense fallback = "{<div></Suspense>}>"
           <DynamicContentShowcase /></DynamicContentShowcase>
         </Suspense>
         {/* Newsletter Signup */}
-        <Suspense fallback="{<div></Suspense>}>"
+        <Suspense fallback = "{<div></Suspense>}>"
           <ContentNewsletterSignup /></ContentNewsletterSignup>
         </Suspense>
         {/* Contact Section */}
@@ -1268,7 +1268,7 @@ const HomePage: React.FC = () => {}
             </p>
             {/* Services Grid */}
             <div className=""grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-12"></div>"
-              <Suspense fallback="{<ServiceCardSkeleton />}>"
+              <Suspense fallback = "{<ServiceCardSkeleton />}>"
                 <article className=""bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300"></article>"
                   <div className=""text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🤖</div>"
                   <h3 className=""text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4 text-center">AI Services</h3>"
@@ -1277,7 +1277,7 @@ const HomePage: React.FC = () => {}
                   </p>
                 </article>
               </Suspense>
-              <Suspense fallback="{<ServiceCardSkeleton />}>"
+              <Suspense fallback = "{<ServiceCardSkeleton />}>"
                 <article className=""bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300"></article>"
                   <div className=""text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">⚡</div>"
                   <h3 className=""text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4 text-center">IT Solutions</h3>"
@@ -1286,7 +1286,7 @@ const HomePage: React.FC = () => {}
                   </p>
                 </article>
               </Suspense>
-              <Suspense fallback="{<ServiceCardSkeleton />}>"
+              <Suspense fallback = "{<ServiceCardSkeleton />}>"
                 <article className=""bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300"></article>"
                   <div className=""text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🔒</div>"
                   <h3 className=""text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4 text-center">Cybersecurity</h3>"
@@ -1295,7 +1295,7 @@ const HomePage: React.FC = () => {}
                   </p>
                 </article>
               </Suspense>
-              <Suspense fallback="{<ServiceCardSkeleton />}>"
+              <Suspense fallback = "{<ServiceCardSkeleton />}>"
                 <article className=""bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300"></article>"
                   <div className=""text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🌐</div>"
                   <h3 className=""text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4 text-center">Cloud Services</h3>"

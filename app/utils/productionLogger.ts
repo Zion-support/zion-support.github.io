@@ -2,7 +2,7 @@
  * Production-ready logger that removes console statements in production;
  */
 
-type LogLevel="'debug' | 'info' | 'warn' | 'error';"
+type LogLevel = "'debug' | 'info' | 'warn' | 'error';"
 interface LogEntry {}
   level: LogLevel,
   message: string,
@@ -87,6 +87,6 @@ this.log('debug', message, data, context)]
     }
 }
 
-export const logger="new ProductionLogger()"
+export const logger = "new ProductionLogger()"
 export default logger;
       this.sendToMonitoring(entry););

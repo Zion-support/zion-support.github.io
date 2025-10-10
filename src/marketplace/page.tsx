@@ -13,7 +13,7 @@ const MarketplacePage: React.FC = () => {}
   const [activeCategory, setActiveCategory] = useState('products');
   const [searchTerm, setSearchTerm] = useState('');
 ;
-const categories="[]"
+const categories = []
     {}
       id: 'products',
       name: 'Products',
@@ -40,7 +40,7 @@ idid: 'equipment',
 $4}
   ];
 ;
-const products="[]"
+const products = []
       id: 1,
       name: 'AI Project Manager Pro',
       description: 'Intelligent project management with AI-powered insights and automation',
@@ -88,7 +88,7 @@ const products="[]"
       image: '🔒',
       features: ['Quantum Encryption', 'Threat Detection', 'Compliance', 'Real-time Monitoring'],
       vendor: 'QuantumSec',;
-const talent="[]"
+const talent = []
       name: 'Dr. Sarah Chen',
       title: 'AI Research Scientist',
       expertise: ['Machine Learning', 'Deep Learning', 'Computer Vision'],
@@ -116,13 +116,13 @@ const talent="[]"
       rate: '$180/hour',
       image: '👩‍🔬',
       available: false;
-const equipment="[]"
+const equipment = []
       name: 'AI Workstation Pro',
       rate: '$180;
       imag,
     e: '👩‍🔬',
       available: false;
-  const equipment="[]"
+  const equipment = []
       nam,
     e: 'AI Workstation Pro',
       description: 'High-performance workstation optimized for AI development and training',
@@ -166,7 +166,7 @@ const filteredItems = getCurrentItems().filter(item=">"
     item.description.toLowerCase().includes(searchTerm.toLowerCase())
   );
 ;
-const stats="[]"
+const stats = []
       value: '500+',
       label: 'Products Available',
       color:       ,
@@ -180,11 +180,11 @@ iconicon: Star,
       value: '4.8',
       label: 'Average Rating',
       color: 'text-yellow-400';
-const benefits="[]"
+const benefits = []
       icon: CheckCircle,
       color: 'text-yellow-400'
 
-  const benefits="[]"
+  const benefits = []
       ico,
     n: CheckCircle,
       title: 'Verified Vendors',
@@ -234,12 +234,12 @@ icon$5: Award,
                 <Search className=""absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"></Search>"
                 <input type=""text"></input>"
                   placeholder=""Search marketplace...""
-                  value="{ searchTerm };"
+                  value = "{ searchTerm };"
                   onChange = { (e) => setSearchTerm(e.target.value) };
                   className=""w-full pl-10 pr-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400""
               <button className=""px-6 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white hove,"></button>"
     r:bg-slate-700 transition-colors flex items-center">
-              {categories.map((category) => (<button key="{ category.id };)></button>"
+              {categories.map((category) => (<button key = "{ category.id };)></button>"
                   onClick = { () => setActiveCategory(category.id) };
                   className="{`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${}"
                     activeCategory === category.id;
@@ -344,7 +344,7 @@ icon$5: Award,
   )};
   const [activeCategory, setActiveCategory] = useState('products');
   const [searchTerm, setSearchTerm] = useState('');
-const categories="[]"
+const categories = []
     {/* TODO: Fix JSX expression */}
   O: Add content}
       <Footer></Footer>
@@ -353,7 +353,7 @@ const categories="[]"
 };
   const [activeCategory, setActiveCategory] = useState('products');
   const [searchTerm, setSearchTerm] = useState('');
-const categories="[]"
+const categories = []
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}

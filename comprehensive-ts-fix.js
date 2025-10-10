@@ -10,7 +10,7 @@ function getAllTsxFiles(dir) {;
 const files="[];"
   const items="fs.readdirSync(dir);"
   for (const item of items) {;
-const fullPath="path.join(dir, item);"
+const fullPath = "path.join(dir, item);"
     const stat="fs.statSync(fullPath);"
     if (stat.isDirectory()) {}
       files.push(...getAllTsxFiles(fullPath))} else if (item.endsWith('.tsx')) {}
@@ -21,10 +21,10 @@ const fullPath="path.join(dir, item);"
 ;
 function fixTsxFile(filePath) {}
   try {;
-let content="fs.readFileSync(filePath, 'utf8');"
+let content = "fs.readFileSync(filePath, 'utf8');"
     let modified="false;"
     // Fix 1: Fix malformed JSX with missing opening tags;
-const malformedJsxPattern="/<(\w+)([^>]*)\s*>\s*<\/\1>\s*([^<]+)/g;"
+const malformedJsxPattern = "/<(\w+)([^>]*)\s*>\s*<\/\1>\s*([^<]+)/g;"
     content = content.replace(malformedJsxPattern, (match, tagName, attributes, text) => {}
 return (
 
@@ -34,9 +34,8 @@ return (
 );
 }${text}</${tagName}>`}
       return match});
-
     // Fix 2: Fix self-closing tags that should have content;
-const selfClosingWithContentPattern="/<(\w+)([^>]*)\s*\/>\s*([^<]+)/g;"
+const selfClosingWithContentPattern = "/<(\w+)([^>]*)\s*\/>\s*([^<]+)/g;"
     content = content.replace(selfClosingWithContentPattern, (match, tagName, attributes, text) => {}
 return (
 
@@ -46,32 +45,28 @@ return (
 );
 }${text}</${tagName}>`}
       return match});
-
     // Fix 3: Fix missing closing braces in object literals;
-const missingBracePattern="/(\w+):\s*([^}\n]+)\s*\n\s*(\w+):/g;"
+const missingBracePattern = "/(\w+):\s*([^}\n]+)\s*\n\s*(\w+):/g;"
     content = content.replace(missingBracePattern, (match, key1, value1, key2) => {}
       if (!value1.trim().endsWith(',') && !value1.trim().endsWith('}')) {}
         modified="true;"
         return `${key1}: ${value1.trim()},\n    ${key2}:`}
       return match});
-
     // Fix 4: Fix malformed SVG URLs;
-const svgUrlPattern="/bg-\[url\('data:image\/svg\+xml,([^']+)'\)\]/g;"
+const svgUrlPattern = "/bg-\[url\('data:image\/svg\+xml,([^']+)'\)\]/g;"
     content = content.replace(svgUrlPattern, (match, svgContent) => {;
 const encodedSvg="encodeURIComponent(svgContent);"
       modified="true;"
       return `bg-[url('data:image/svg+xml,${encodedSvg}')]`});
-
     // Fix 5: Fix missing closing parentheses in function calls;
-const missingParenPattern="/(\w+\([^)]*)\s*\n\s*(\w+)/g;"
+const missingParenPattern = "/(\w+\([^)]*)\s*\n\s*(\w+)/g;"
     content = content.replace(missingParenPattern, (match, funcCall, nextToken) => {}
       if (!funcCall.includes(')') && !nextToken.startsWith(')')) {}
         modified="true;"
         return `${funcCall})\n    ${nextToken}`}
       return match});
-
     // Fix 6: Fix JSX elements with missing content between tags;
-const emptyJsxPattern="/<(\w+)([^>]*)>\s*<\/\1>\s*([^<\n]+)/g;"
+const emptyJsxPattern = "/<(\w+)([^>]*)>\s*<\/\1>\s*([^<\n]+)/g;"
     content = content.replace(emptyJsxPattern, (match, tagName, attributes, content) => {}
 return (
 
@@ -81,18 +76,17 @@ return (
 );
 }${content}</${tagName}>`}
       return match});
-
     // Fix 7: Fix malformed className attributes with quotes;
 const malformedClassPattern = /className=""([^"]*"[^"]*)"([^>]*)>/g;"
     content = content.replace(malformedClassPattern, (match, className, rest) => {;
-const fixedClassName="className.replace(/"/g, '&quot;');"
+const fixedClassName = "className.replace(/"/g, '&quot;');"
       modified="true;"
       return `className=""${fixedClassName}"${rest}>`});"
     // Fix 8: Fix missing closing tags in JSX;
-const unclosedTagPattern="/<(\w+)([^>]*)>\s*$/gm;"
+const unclosedTagPattern = "/<(\w+)([^>]*)>\s*$/gm;"
     const lines="content.split('\n');"
     let newContent="content;"
-    for (let i="0; i < lines.length; i++) {;"
+    for (let i = "0; i < lines.length; i++) {;"
 const line="lines[i];"
       const match="line.match(unclosedTagPattern);"
       if (match) {;
@@ -100,7 +94,7 @@ const tagName="match[1];"
         const attributes="match[2];"
         // Look ahead to see if there's a closing tag;
 let foundClosing="false;"
-        for (let j="i + 1; j < lines.length; j++) {;"
+        for (let j = "i + 1; j < lines.length; j++) {;"
 const nextLine="lines[j].trim();"
           if (nextLine.startsWith(`</${tagName}>`)) {}
             foundClosing="true;"
@@ -111,7 +105,7 @@ const nextLine="lines[j].trim();"
         
         if (!foundClosing) {}
           // Add closing tag;
-          newContent="newContent.replace(line, line + `</${tagName}>`);"
+          newContent = "newContent.replace(line, line + `</${tagName}>`);"
           modified="true}"
       }
     }
@@ -129,13 +123,12 @@ return false}
 
 // console.log removed for production;
 ;
-const appDir="path.join(__dirname, 'app');"
+const appDir = "path.join(__dirname, 'app');"
 const tsxFiles="getAllTsxFiles(appDir);"
 ;
 let fixedCount="0;"
-tsxFiles.forEach(filePath="> {}"
+tsxFiles.forEach(filePath = "> {}"
   if (fixTsxFile(filePath)) {}
     fixedCount++}
 });
-
 // console.log removed for production;

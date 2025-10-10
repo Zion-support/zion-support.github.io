@@ -182,7 +182,7 @@ const CareersPage: React.FC = () => {}
       featured: false;
     }
   ];
-  const departments="[]"
+  const departments = []
     { id: 'all', name: 'All Departments' },
     { id: 'Engineering', name: 'Engineering' },
     { id: 'Research', name: 'Research' },
@@ -190,7 +190,7 @@ const CareersPage: React.FC = () => {}
     { id: 'Security', name: 'Security' },
     { id: 'Data', name: 'Data' }
   ];
-  const locations="[]"
+  const locations = []
     { id: 'all', name: 'All Locations' },
     { id: 'Remote', name: 'Remote' },
     { id: 'San Francisco, CA', name: 'San Francisco, CA' },
@@ -198,13 +198,13 @@ const CareersPage: React.FC = () => {}
     { id: 'Austin, TX', name: 'Austin, TX' },
     { id: 'Seattle, WA', name: 'Seattle, WA' }
   ];
-  const filteredPositions = positions.filter(position="> {}"
+  const filteredPositions = positions.filter(position = "> {}"
     const matchesDepartment = selectedDepartment === 'all' || position.department === selectedDepartment;
     const matchesLocation = selectedLocation === 'all' || position.location === selectedLocation;
     return matchesDepartment && matchesLocation;
   });
-  const featuredPositions = filteredPositions.filter(position="> position.featured);"
-  const regularPositions = filteredPositions.filter(position="> !position.featured);"
+  const featuredPositions = filteredPositions.filter(position = "> position.featured);"
+  const regularPositions = filteredPositions.filter(position = "> !position.featured);"
       id: '1',
       title: 'Senior AI Engineer',
       titl,
@@ -241,7 +241,7 @@ const CareersPage: React.FC = () => {}
       requirements: ['AWS, Azure, GCP', '7+ years cloud experience', 'Architecture certifications']});;)
 }
   ];
-  const benefits="[]"
+  const benefits = []
     'Competitive salary and equity',
     'Comprehensive health insurance',
     'Flexible work arrangements',
@@ -253,7 +253,7 @@ const CareersPage: React.FC = () => {}
     'Unlimited PTO',
     'Mental health support'
   ];
-  const values="[]"
+  const values = []
     {}
       icon: Lightbulb,
       title: 'Innovation',
@@ -279,7 +279,7 @@ const CareersPage: React.FC = () => {}
       color: 'text-red-400'});;)
 }
   ];
-  const culture="[]"
+  const culture = []
     {}
       stat: '98%',
       label: 'Employee Satisfaction',
@@ -332,7 +332,7 @@ const CareersPage: React.FC = () => {}
             </p>
             {/* Filter Controls */}
             <div className=""flex flex-wrap justify-center gap-4 mb-8"></div>"
-              <select value="{selectedDepartment}></select>"
+              <select value = "{selectedDepartment}></select>"
                 onChange={(e) => setSelectedDepartment(e.target.value)}
                 className=""px-6 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400 transition-colors">"
                 {departments.map((dept) => (
@@ -341,7 +341,7 @@ const CareersPage: React.FC = () => {}
                   </option>
                 ))}
               </select>
-              <select value="{selectedLocation}></select>"
+              <select value = "{selectedLocation}></select>"
                 onChange={(e) => setSelectedLocation(e.target.value)}
                 className=""px-6 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400 transition-colors">"
                 {locations.map((loc) => (
@@ -376,7 +376,7 @@ const CareersPage: React.FC = () => {}
       <div className=""min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
         <section className=""relative py-20 px-4 overflow-hidden">)"
           <div className=""absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse"></div>"
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style="{{ animationDelay: '1s' }}></div>"
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style = "{{ animationDelay: '1s' }}></div>"
           <div className=""relative max-w-7xl mx-auto text-center"></div>"
             <h1 className=""text-4xl md: text-6xl font-bold text-white mb-6"></h1>"
               Join Our Team;
@@ -596,14 +596,14 @@ const CareersPage: React.FC = () => {}
             </div>
             <div></div>
               {openPositions.map((position) => (
-                <div key="{position.id}></div>"
+                <div key = "{position.id}></div>"
                   className="{`bg-white/10 backdrop-blur-lg rounded-2xl p-8 border ${}"
                     position.featured ? 'border-purple-400 shadow-2xl shadow-purple-500/25' : 'border-white/20'
                   } hover:border-purple-400 transition-all duration-300 group`}
             <h2 className=""text-3xl font-bold text-white mb-8 text-center">Open Positions<"
             <div className=""grid grid-cols-1 m,"></div>"
     d:grid-cols-2 gap-6 mb-16">
-              {openPositions.map((position), index) => (<div key="{ index };></div>"
+              {openPositions.map((position), index) => (<div key = "{ index };></div>"
                   className=""bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover: border-cyan-400">"
                 <div></div>
                   {position.featured && (

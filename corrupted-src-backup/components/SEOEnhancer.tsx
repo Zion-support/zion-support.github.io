@@ -6,8 +6,8 @@ interface SEOEnhancerProps {/* TODO: Fix JSX expression *
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({,
 
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({),
-  title="'Zion Tech Group - Advanced AI and IT Solutions',"
-  description="'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services. Discover cutting-edge technology solutions for modern businesses.',"
+  title = "'Zion Tech Group - Advanced AI and IT Solutions',"
+  description = "'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services. Discover cutting-edge technology solutions for modern businesses.',"
   keywords="[]"
     'AI',
     'artificial intelligence',
@@ -29,7 +29,7 @@ return (
     // Add structured data to the page;
     if (structuredData) {;
 const _script="document.createElement('script');"
-      script.type="'application/ld+json';"
+      script.type = "'application/ld+json';"
   useEffect (() => {}
     /
     if (structuredData) {}
@@ -55,7 +55,7 @@ const,
     }
   }, [structuredData]);
   /
-  const defaultStructuredData="{}"
+  const defaultStructuredData = {}
     '@context': 'https: /
     '@type': 'Organization',
     name: 'Zion Tech Group',
@@ -71,10 +71,10 @@ const,
       telephone: '+1-555-0123',
       contactType: 'customer service',
       availableLanguage: 'English',;
-const defaultStructuredData="{/* TODO: Fix JSX expression */}"
+const defaultStructuredData = "{/* TODO: Fix JSX expression */}"
   o: `${window.location.origin}/logo.png`,
       availableLanguage: 'English',
-  const defaultStructuredData="{ /* TODO: Fix JSX expression *"
+  const defaultStructuredData = "{ /* TODO: Fix JSX expression *"
   ,
     o: `${window.location.origin };
     sameA,
@@ -92,29 +92,29 @@ const defaultStructuredData="{/* TODO: Fix JSX expression */}"
       <Helmet>)
         {/* Basic Meta Tags *
         <title>{title}<
-        <meta name="description" content="{ description };></meta>"
-        <meta name="keywords" content="{ keywords.join(', ') };></meta>"
+        <meta name="description" content = "{ description };></meta>"
+        <meta name="keywords" content = "{ keywords.join(', ') };></meta>"
         <meta name="author" content=""Zion Tech Group"></meta>"
         <meta name="robots" content=""index, follow"></meta>"
-        <meta name="viewport" content="width=device-width, initial-scale="1.0"></meta>"
+        <meta name="viewport" content = "width=device-width, initial-scale="1.0"></meta>"
         {/* Canonical URL *
         {canonicalUrl && <link rel="canonical" href="{canonicalUrl} />}<"
         {/* Open Graph Meta Tags *
-        <meta property="og:title" content="{ title };></meta>"
-        <meta property="og:description" content="{ description };></meta>"
-        <meta property="og:type" content="{ ogType };></meta>"
-        <meta property="og:image" content="{ ogImage };></meta>"
-        <meta property="og:url" content="{ canonicalUrl || window.location.href };></meta>"
-        <meta property="og: site_name" content=""Zion Tech Group"></meta>"
+        <meta property="og:title" content = "{ title };></meta>"
+        <meta property="og:description" content = "{ description };></meta>"
+        <meta property="og:type" content = "{ ogType };></meta>"
+        <meta property="og:image" content = "{ ogImage };></meta>"
+        <meta property="og:url" content = "{ canonicalUrl || window.location.href };></meta>"
+        <meta property = "og: site_name" content=""Zion Tech Group"></meta>"
         <meta property=""o,"></meta>"
     g:locale" content=""en_US""
 ,
         {/* Twitter Card Meta Tags *
-        <meta name="twitter:card" content="{ twitterCard };></meta>"
-        <meta name="twitter:title" content="{ title };></meta>"
-        <meta name="twitter:description" content="{ description };></meta>"
-        <meta name="twitter:image" content="{ ogImage };></meta>"
-        <meta name="twitter: site" content=""@ziontechgroup"></meta>"
+        <meta name="twitter:card" content = "{ twitterCard };></meta>"
+        <meta name="twitter:title" content = "{ title };></meta>"
+        <meta name="twitter:description" content = "{ description };></meta>"
+        <meta name="twitter:image" content = "{ ogImage };></meta>"
+        <meta name = "twitter: site" content=""@ziontechgroup"></meta>"
         <meta name=""twitte,"></meta>"
     r:creator" content=""@ziontechgroup""
 ,
@@ -136,9 +136,9 @@ const defaultStructuredData="{/* TODO: Fix JSX expression */}"
     s://fonts.gstatic.com" crossOrigin=""anonymous""
 ,
         {/* Favicon and Icons */}
-        <link rel="icon" type="image/x-icon" href=""/favicon.ico" /></link>"
-        <link rel="icon" type="image/png" sizes="32x32" href=""/favicon-32x32.png" /></link>"
-        <link rel="icon" type="image/png" sizes="16x16" href=""/favicon-16x16.png" /></link>"
+        <link rel="icon" type = "image/x-icon" href=""/favicon.ico" /></link>"
+        <link rel="icon" type = "image/png" sizes="32x32" href=""/favicon-32x32.png" /></link>"
+        <link rel="icon" type = "image/png" sizes="16x16" href=""/favicon-16x16.png" /></link>"
         <link rel="apple-touch-icon" sizes="180x180" href=""/apple-touch-icon.png" /></link>"
         <link rel="manifest" href=""/site.webmanifest" /></link>"
         {/* Structured Data */}
@@ -146,55 +146,55 @@ const defaultStructuredData="{/* TODO: Fix JSX expression */}"
       <Helmet></Helmet>
         {/* Basic Meta Tags */}
         <title>{title}</title>
-        <meta name="description" content="{description} /></meta>")"
-        <meta name="keywords" content="{keywords.join(', ')} /></meta>""
+        <meta name="description" content = "{description} /></meta>")"
+        <meta name="keywords" content = "{keywords.join(', ')} /></meta>""
         <meta name="author" content=""Zion Tech Group" /></meta>""
         <meta name="robots" content=""index, follow" /></meta>""
-        <meta name="viewport" content="width=device-width, initial-scale="1.0" /></meta>"
+        <meta name="viewport" content = "width=device-width, initial-scale="1.0" /></meta>"
         {/* Canonical URL */}"
         {canonicalUrl && <link rel="canonical" href="{canonicalUrl} />}"
         {/* Open Graph Meta Tags */}"
         {/* Favicon and Icons *
-        <link rel="icon" type="image/x-icon" href=""/favicon.ico"></link>"
-        <link rel="icon" type="image/png" sizes="32x32" href=""/favicon-32x32.png"></link>"
-        <link rel="icon" type="image/png" sizes="16x16" href=""/favicon-16x16.png"></link>"
+        <link rel="icon" type = "image/x-icon" href=""/favicon.ico"></link>"
+        <link rel="icon" type = "image/png" sizes="32x32" href=""/favicon-32x32.png"></link>"
+        <link rel="icon" type = "image/png" sizes="16x16" href=""/favicon-16x16.png"></link>"
         <link rel="apple-touch-icon" sizes="180x180" href=""/apple-touch-icon.png"></link>"
         <link rel="manifest" href=""/site.webmanifest"></link>"
         {/* Structured Data *
   return (<div><Helmet><
         {/* Basic Meta Tags *
         <title>{title}<
-        <meta name="description" content="{description} /><)"
-        <meta name="keywords" content="{keywords.join(', ')} /><"
+        <meta name="description" content = "{description} /><)"
+        <meta name="keywords" content = "{keywords.join(', ')} /><"
         <meta name="author" content=""Zion Tech Group" /><"
         <meta name="robots" content=""index, follow" /><"
-        <meta name="viewport" content="width=device-width, initial-scale="1.0" /><"
+        <meta name="viewport" content = "width=device-width, initial-scale="1.0" /><"
         {/* Canonical URL *
         {canonicalUrl && <link rel="canonical" href="{ canonicalUrl };></link>"
         {/* Open Graph Meta Tags *
         <meta property=""o,"></meta>"
-  g:title" content="{title} /><"
+  g:title" content = "{title} /><"
         <meta property=""o,"></meta>"
-  g:description" content="{description} /><"
+  g:description" content = "{description} /><"
         <meta property=""o,"></meta>"
-  g:type" content="{ogType} /><"
+  g:type" content = "{ogType} /><"
         <meta property=""o,"></meta>"
-  g:image" content="{ogImage} /><"
+  g:image" content = "{ogImage} /><"
         <meta property=""o,"></meta>"
-  g:url" content="{canonicalUrl || window.location.href} /><"
+  g:url" content = "{canonicalUrl || window.location.href} /><"
         <meta property=""o,"></meta>"
   g:site_name" content=""Zion Tech Group" /><"
         <meta property=""o,"></meta>"
   g:locale" content=""en_US" /><"
         {/* Twitter Card Meta Tags *
         <meta name=""twitte,"></meta>"
-  r:card" content="{twitterCard} /><"
+  r:card" content = "{twitterCard} /><"
         <meta name=""twitte,"></meta>"
-  r:title" content="{title} /><"
+  r:title" content = "{title} /><"
         <meta name=""twitte,"></meta>"
-  r:description" content="{description} /><"
+  r:description" content = "{description} /><"
         <meta name=""twitte,"></meta>"
-  r:image" content="{ogImage} /><"
+  r:image" content = "{ogImage} /><"
         <meta name=""twitte,"></meta>"
   r:site" content=""@ziontechgroup" /><"
         <meta name=""twitte,"></meta>"
@@ -217,9 +217,9 @@ const defaultStructuredData="{/* TODO: Fix JSX expression */}"
         <link rel="preconnect" href=""http,"></link>"
   s://fonts.gstatic.com" crossOrigin=""anonymous" /></link>"
         {/* Favicon and Icons */}"
-        <link rel="icon" type="image/x-icon" href=""/favicon.ico" /></link>""
-        <link rel="icon" type="image/png" sizes="32x32" href=""/favicon-32x32.png" /></link>""
-        <link rel="icon" type="image/png" sizes="16x16" href=""/favicon-16x16.png" /></link>""
+        <link rel="icon" type = "image/x-icon" href=""/favicon.ico" /></link>""
+        <link rel="icon" type = "image/png" sizes="32x32" href=""/favicon-32x32.png" /></link>""
+        <link rel="icon" type = "image/png" sizes="16x16" href=""/favicon-16x16.png" /></link>""
         <link rel="apple-touch-icon" sizes="180x180" href=""/apple-touch-icon.png" /></link>""
         <link rel="manifest" href=""/site.webmanifest" /></link>"
         {/* Structured Data */}"
@@ -230,9 +230,9 @@ const defaultStructuredData="{/* TODO: Fix JSX expression */}"
   )};
   s://fonts.gstatic.com" crossOrigin=""anonymous" /><"
         {/* Favicon and Icons *
-        <link rel="icon" type="image/x-icon" href=""/favicon.ico" /><"
-        <link rel="icon" type="image/png" sizes="32x32" href=""/favicon-32x32.png" /><"
-        <link rel="icon" type="image/png" sizes="16x16" href=""/favicon-16x16.png" /><"
+        <link rel="icon" type = "image/x-icon" href=""/favicon.ico" /><"
+        <link rel="icon" type = "image/png" sizes="32x32" href=""/favicon-32x32.png" /><"
+        <link rel="icon" type = "image/png" sizes="16x16" href=""/favicon-16x16.png" /><"
         <link rel="apple-touch-icon" sizes="180x180" href=""/apple-touch-icon.png" /><"
         <link rel="manifest" href=""/site.webmanifest" /><"
         {/* Structured Data *

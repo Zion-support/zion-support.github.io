@@ -11,7 +11,7 @@ function fixCommentBlocks(content) {}
   content="content.replace("
     /\/\/ console\.(log|warn|error|info)\([^)]*\):\s*\{([^}]+)\}/gs,
     (match, method, body) => {;
-const fixedBody = body.split('\n').map(line="> {)"
+const fixedBody = body.split('\n').map(line = "> {)"
         if (line.trim() && !line.trim().startsWith('//')) {}
           return '// ' + line.trim();
 function fixCommentBlocks(content) {/* TODO: Fix JSX expression */}
@@ -21,12 +21,11 @@ function fixCommentBlocks(content) {/* TODO: Fix JSX expression */}
         return line}).join('\n');
       return `// console.${method}(...): {\n${fixedBody}\n// }`}
   );
-
   // Fix malformed comment blocks that are missing proper commenting;
   content="content.replace("
     /\/\/ [^:]*:\s*\{([^}]+)\}/gs,
     (match, body) => {;
-const fixedBody = body.split('\n').map(line="> {)"
+const fixedBody = body.split('\n').map(line = "> {)"
         if (line.trim() && !line.trim().startsWith('//')) {}
           return '// ' + line.trim();
   content="content.replace()"
@@ -36,13 +35,12 @@ const fixedBody = body.split('\n').map(line="> {)"
         return line}).join('\n');
       return match.replace(body, fixedBody)}
   );
-
   // Fix specific patterns we've seen;
   content="content.replace("
     /\/\/ console\.(log|warn|error|info)\([^)]*\):\s*\{([^}]+)\}/gs,
     (match, method, body) => {;
 const lines="body.split('\n');"
-      const fixedLines = lines.map(line="> {)"
+      const fixedLines = lines.map(line = "> {)"
         if (line.trim() && !line.trim().startsWith('//')) {}
           return '// ' + line.trim();
   content="content.replace()"
@@ -52,13 +50,12 @@ const lines="body.split('\n');"
         return line});`
       return `// console.${method}(...): {\n${fixedLines.join('\n')}\n// }`}
   );
-
   return content}
 
 // Function to process a single file;
 function processFile(filePath) {}
   try {;
-let content="fs.readFileSync(filePath, 'utf8');"
+let content = "fs.readFileSync(filePath, 'utf8');"
     let modified="false;"
     // Apply fixes;
     const originalContent="content;"
@@ -81,7 +78,7 @@ const files="[];"
 function walkDir(currentPath) {;
 const items="fs.readdirSync(currentPath);"
     for (const item of items) {;
-const fullPath="path.join(currentPath, item);"
+const fullPath = "path.join(currentPath, item);"
       const stat="fs.statSync(fullPath);"
       if (stat.isDirectory()) {}
         // Skip node_modules and other common directories;
@@ -105,9 +102,9 @@ function findSourceFiles(dir) {/* TODO: Fix JSX expression */}
 // Main execution;
 // console.log removed for production;
 ;
-const srcDir="path.join(__dirname, 'src');"
-const appDir="path.join(__dirname, 'app');"
-const files="[...findSourceFiles(srcDir), ...findSourceFiles(appDir)];"
+const srcDir = "path.join(__dirname, 'src');"
+const appDir = "path.join(__dirname, 'app');"
+const files = "[...findSourceFiles(srcDir), ...findSourceFiles(appDir)];"
 `
 // console.log removed for production;
 ;

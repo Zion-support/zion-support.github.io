@@ -23,7 +23,7 @@ import {}
   Database,
   Server} from 'lucide-react';
 ;
-const CloudInfrastructureManagerPage: React.FC = () => {const features="[]"
+const CloudInfrastructureManagerPage: React.FC = () => {const features = []
     {}
       ico,
     n: Cloud,
@@ -47,7 +47,7 @@ const CloudInfrastructureManagerPage: React.FC = () => {const features="[]"
     }
   ];
 ;
-const benefits="[]"
+const benefits = []
     'Centralized cloud infrastructure management',
     'Automated scaling and optimization',
     'Cost reduction and optimization',
