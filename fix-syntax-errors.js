@@ -1,66 +1,114 @@
 #!/usr/bin/env node
 
 import fs from 'fs';
+import path from 'path';
+import { glob } from 'glob';
 
-// Files that need syntax fixes
-const filesToFix = [
-  './app/ai-analytics/page.tsx',
-  './app/ai-api-management/page.tsx',
-  './app/ai-api-manager/page.tsx',
-  './app/ai-autonomous-systems/page.tsx',
-  './app/ai-blockchain-analytics/page.tsx',
-  './app/ai-blockchain-solutions/page.tsx',
-  './app/ai-climate-solutions-pro/page.tsx',
-  './app/ai-cloud-infrastructure/page.tsx',
-  './app/ai-code-assistant/page.tsx',
-  './app/ai-code-security-auditor/page.tsx',
-  './app/ai-computer-vision/page.tsx',
-  './app/ai-content-delivery-network/page.tsx',
-  './app/ai-content-generation/page.tsx',
-  './app/ai-content-studio/page.tsx',
-  './app/ai-content-writer/page.tsx',
-  './app/ai-crm-assistant/page.tsx'
-];
+// Function to fix common syntax errors
+function fixSyntaxErrors(content) {
+  let fixed = content;
+  
+  // Remove merge conflict markers
+  fixed = fixed.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
+  fixed = fixed.replace(/<<<<<<< [^\n]+[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
+  
+  // Fix semicolons in wrong places (after JSX elements, imports, etc.)
+  // Remove semicolons after closing JSX tags
+  fixed = fixed.replace(/;\s*<\/[^>]+>/g, '</$1>');
+  
+  // Remove semicolons after JSX opening tags
+  fixed = fixed.replace(/;\s*<[^>]+>/g, '<$1>');
+  
+  // Remove semicolons after React component declarations
+  fixed = fixed.replace(/const\s+(\w+):\s*React\.FC\s*=\s*\(\)\s*=>\s*{;/g, 'const $1: React.FC = () => {');
+  
+  // Remove semicolons after array/object declarations
+  fixed = fixed.replace(/\[\s*;/g, '[');
+  fixed = fixed.replace(/{\s*;/g, '{');
+  
+  // Remove semicolons after return statements
+  fixed = fixed.replace(/return\s*\(;/g, 'return (');
+  
+  // Fix malformed JSX fragments
+  fixed = fixed.replace(/<>\s*<\/>/g, '<></>');
+  
+  // Remove semicolons after import statements (keep the import itself)
+  fixed = fixed.replace(/import\s+[^;]+;\s*;/g, (match) => match.replace(/;$/, ''));
+  
+  // Fix empty JSX elements
+  fixed = fixed.replace(/<(\w+)\s*;\s*>/g, '<$1>');
+  
+  // Remove semicolons after function declarations
+  fixed = fixed.replace(/function\s+(\w+)\s*\([^)]*\)\s*{;/g, 'function $1($2) {');
+  
+  // Fix array/object syntax
+  fixed = fixed.replace(/\[\s*{;\s*/g, '[{');
+  fixed = fixed.replace(/}\s*;\s*\]/g, '}]');
+  fixed = fixed.replace(/{\s*;\s*/g, '{');
+  fixed = fixed.replace(/}\s*;\s*}/g, '}}');
+  
+  // Remove semicolons after variable declarations
+  fixed = fixed.replace(/const\s+(\w+)\s*=\s*\[;/g, 'const $1 = [');
+  fixed = fixed.replace(/const\s+(\w+)\s*=\s*{;/g, 'const $1 = {');
+  
+  // Fix JSX attributes
+  fixed = fixed.replace(/<(\w+)\s+([^>]+);\s*>/g, '<$1 $2>');
+  
+  // Remove semicolons after closing braces
+  fixed = fixed.replace(/}\s*;\s*$/gm, '}');
+  
+  // Fix malformed JSX closing tags
+  fixed = fixed.replace(/<\/\s*;\s*>/g, '</>');
+  
+  return fixed;
+}
 
-function fixFile(filePath) {
+// Function to process a single file
+function processFile(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
+    const content = fs.readFileSync(filePath, 'utf8');
+    const fixed = fixSyntaxErrors(content);
     
-    // Fix common syntax issues
-    content = content.replace(/\s+return\s*\(\s*<>/g, '\n    }\n  ];\n\n  return (\n    <>');
-    
-    // Fix missing closing brackets for features array
-    content = content.replace(/(benefits:\s*\[[^\]]+\])\s+return\s*\(/g, '$1\n    }\n  ];\n\n  return (');
-    
-    // Fix malformed JSX structure
-    content = content.replace(/(benefits:\s*\[[^\]]+\])\s*}\s*return\s*\(/g, '$1\n    }\n  ];\n\n  return (');
-    
-    // Fix missing closing tags
-    content = content.replace(/<Helmet>\s*<title>[^<]+<\/title>\s*<meta[^>]+>\s*<meta[^>]+>\s*<meta[^>]+>\s*<\/Helmet>/g, 
-      '<Helmet>\n        <title>AI Analytics - Zion Tech Group</title>\n        <meta name="description" content="Advanced AI-powered analytics solution for modern businesses." />\n        <meta name="keywords" content="AI analytics, artificial intelligence, data analytics, AI solutions, intelligent automation" />\n      </Helmet>');
-    
-    // Ensure proper JSX structure
-    if (!content.includes('export default')) {
-      content = content.replace(/(const\s+\w+Page:\s*React\.FC\s*=\s*\(\)\s*=>\s*{[\s\S]*?)(\s*};?\s*)$/m, '$1\n};\n\nexport default $1Page;');
+    if (content !== fixed) {
+      fs.writeFileSync(filePath, fixed, 'utf8');
+      console.log(`Fixed: ${filePath}`);
+      return true;
     }
-    
-    fs.writeFileSync(filePath, content, 'utf8');
-    console.log(`✅ Fixed syntax errors in ${filePath}`);
-    
+    return false;
   } catch (error) {
-    console.error(`❌ Error processing ${filePath}:`, error.message);
+    console.error(`Error processing ${filePath}:`, error.message);
+    return false;
   }
 }
 
-// Process all files
-console.log('🔧 Fixing syntax errors...\n');
-
-filesToFix.forEach(filePath => {
-  if (fs.existsSync(filePath)) {
-    fixFile(filePath);
-  } else {
-    console.log(`⚠️  File not found: ${filePath}`);
+// Main function
+function main() {
+  const patterns = [
+    'app/**/*.tsx',
+    'app/**/*.ts',
+    'components/**/*.tsx',
+    'components/**/*.ts'
+  ];
+  
+  let totalFiles = 0;
+  let fixedFiles = 0;
+  
+  for (const pattern of patterns) {
+    const files = await glob(pattern, { cwd: process.cwd() });
+    
+    for (const file of files) {
+      totalFiles++;
+      if (processFile(file)) {
+        fixedFiles++;
+      }
+    }
   }
-});
+  
+  console.log(`\nProcessed ${totalFiles} files, fixed ${fixedFiles} files`);
+}
 
-console.log('\n✨ Syntax error fixes complete!');
+if (require.main === module) {
+  main();
+}
+
+module.exports = { fixSyntaxErrors, processFile };
