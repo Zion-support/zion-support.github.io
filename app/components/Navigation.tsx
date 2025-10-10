@@ -1,7 +1,7 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
+import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, Search, Mail as MailIcon } from 'lucide-react';
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
@@ -9,6 +9,8 @@ const Navigation: React.FC = () => {
   const [itServicesOpen, setItServicesOpen] = useState(false);
   const [microSaasOpen, setMicroSaasOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
+  
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 1024) {
@@ -309,11 +311,26 @@ const Navigation: React.FC = () => {
               Contact
             </Link>
           </div>
+          {/* Search Bar */}
+          <div className="hidden lg:flex items-center space-x-4">
+            <div className="relative">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
+              <input
+                type="text"
+                placeholder="Search services..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-64 pl-10 pr-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-300 focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors text-sm"
+              />
+            </div>
+          </div>
+
           {/* Contact Info */}
           <div className="hidden lg:flex items-center space-x-4">
             <a
               href="tel:+13024640950"
               className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
+              title="Call us at (302) 464-0950"
             >
               <Phone className="w-4 h-4" />
               <span className="text-sm">(302) 464-0950</span>
@@ -321,10 +338,15 @@ const Navigation: React.FC = () => {
             <a
               href="mailto:kleber@ziontechgroup.com"
               className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
+              title="Email us at kleber@ziontechgroup.com"
             >
               <Mail className="w-4 h-4" />
               <span className="text-sm">Email</span>
             </a>
+            <div className="flex items-center space-x-2 text-gray-300 text-xs">
+              <MapPin className="w-3 h-3" />
+              <span>Middletown, DE</span>
+            </div>
           </div>
           {/* Mobile Menu Button */}
           <div className="lg:hidden">
@@ -341,6 +363,20 @@ const Navigation: React.FC = () => {
         {isOpen && (
           <div className="lg:hidden mt-4 pb-4 border-t border-cyan-500/20">
             <div className="pt-4 space-y-4">
+              {/* Mobile Search */}
+              <div className="px-4">
+                <div className="relative">
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
+                  <input
+                    type="text"
+                    placeholder="Search services..."
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    className="w-full pl-10 pr-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-300 focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors text-sm"
+                  />
+                </div>
+              </div>
+              
               <Link href="/" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
                 Home
               </Link>
@@ -455,24 +491,50 @@ const Navigation: React.FC = () => {
                 Contact
               </Link>
               {/* Mobile Contact Info */}
-              <div className="pt-4 border-t border-cyan-500/20 space-y-2">
-                <a
-                  href="tel:+13024640950"
-                  className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
-                >
-                  <Phone className="w-4 h-4" />
-                  <span>(302) 464-0950</span>
-                </a>
-                <a
-                  href="mailto:kleber@ziontechgroup.com"
-                  className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
-                >
-                  <Mail className="w-4 h-4" />
-                  <span>kleber@ziontechgroup.com</span>
-                </a>
-                <div className="flex items-center space-x-2 text-gray-400">
-                  <MapPin className="w-4 h-4" />
-                  <span className="text-sm">364 E Main St STE 1008, Middletown DE 19709</span>
+              <div className="pt-4 border-t border-cyan-500/20 space-y-3">
+                <div className="px-4">
+                  <h3 className="text-sm font-semibold text-cyan-400 mb-3">Contact Information</h3>
+                  <div className="space-y-3">
+                    <a
+                      href="tel:+13024640950"
+                      className="flex items-center space-x-3 text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
+                    >
+                      <div className="w-8 h-8 bg-cyan-500/20 rounded-lg flex items-center justify-center">
+                        <Phone className="w-4 h-4" />
+                      </div>
+                      <div>
+                        <div className="text-sm text-gray-300">Phone</div>
+                        <div className="font-semibold">(302) 464-0950</div>
+                      </div>
+                    </a>
+                    <a
+                      href="mailto:kleber@ziontechgroup.com"
+                      className="flex items-center space-x-3 text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
+                    >
+                      <div className="w-8 h-8 bg-cyan-500/20 rounded-lg flex items-center justify-center">
+                        <Mail className="w-4 h-4" />
+                      </div>
+                      <div>
+                        <div className="text-sm text-gray-300">Email</div>
+                        <div className="font-semibold text-sm">kleber@ziontechgroup.com</div>
+                      </div>
+                    </a>
+                    <div className="flex items-center space-x-3 text-gray-300">
+                      <div className="w-8 h-8 bg-cyan-500/20 rounded-lg flex items-center justify-center">
+                        <MapPin className="w-4 h-4" />
+                      </div>
+                      <div>
+                        <div className="text-sm text-gray-300">Address</div>
+                        <div className="text-sm">364 E Main St STE 1008<br />Middletown, DE 19709</div>
+                      </div>
+                    </div>
+                    <div className="pt-2">
+                      <div className="text-xs text-gray-400">
+                        ⏰ Mon-Fri: 9AM-6PM EST<br />
+                        24/7 Emergency Support Available
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
