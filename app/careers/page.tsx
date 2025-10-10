@@ -3,31 +3,6 @@ import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Star, Users, Heart, Award, MapPin, Clock, Briefcase, CheckCircle, ArrowRight, Zap } from 'lucide-react';
-<<<<<<< HEAD
-interface JobPosition {
-  id: string;
-  title: string;
-  department: string;
-  location: string;
-  type: string;
-  experience: string;
-  description: string;
-  requirements: string[];
-  benefits: string[];
-  posted: string;
-  featured: boolean;
-}
-=======
-
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
-const CareersPage: React.FC = () => {
-  const [selectedDepartment, setSelectedDepartment] = useState('all');
-
-  const jobOpenings = [
-    {
-      id: 1,
-      title: 'Senior AI Engineer',
-<<<<<<< HEAD
       department: 'AI Solutions',
       location: 'Remote',
       type: 'Full-time',
@@ -77,9 +52,7 @@ description: 'Lead the development of cutting-edge AI solutions and machine lear
       icon: Lightbulb,
       title: 'Innovation',
       description: 'We push the boundaries of what\'s possible with technology',
-      color: 'text-yellow-400'
-=======
-      department: 'Engineering',
+      color: 'text-yellow-400'      department: 'Engineering',
       location: 'Remote',
       type: 'Full-time',
       experience: '5+ years',
@@ -241,26 +214,7 @@ description: 'Lead the development of cutting-edge AI solutions and machine lear
     {
       icon: Star,
       title: 'Excellence',
-      description: 'We strive for excellence in everything we do, delivering the highest quality solutions to our clients.'
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
-    },
-    {
-      icon: Users,
-      title: 'Collaboration',
-      description: 'We believe in the power of teamwork and collaboration to achieve extraordinary results.'
-    },
-    {
-      icon: Heart,
-      title: 'Passion',
-      description: 'We are passionate about technology and its potential to transform businesses and improve lives.'
-    },
-    {
-      icon: Award,
-      title: 'Innovation',
-      description: 'We constantly push the boundaries of what\'s possible with cutting-edge technology and creative thinking.'
-    }
-<<<<<<< HEAD
-  ]
+      description: 'We strive for excellence in everything we do, delivering the highest quality solutions to our clients.'  ]
   const culture = [
     {
       stat: '98%',
@@ -281,9 +235,7 @@ description: 'Lead the development of cutting-edge AI solutions and machine lear
       stat: '4.9/5',
       label: 'Glassdoor Rating',
       description: 'Highly rated workplace'
-    }
-=======
-  ];
+    }  ];
 
   const benefits = [
     'Competitive salary and equity package',
@@ -295,26 +247,7 @@ description: 'Lead the development of cutting-edge AI solutions and machine lear
     'Stock options for all employees',
     'Wellness programs and gym memberships',
     'Team building events and company retreats',
-    'Cutting-edge technology and tools'
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
-  ];
-
-  const filteredJobs = selectedDepartment === 'all' 
-    ? jobOpenings 
-    : jobOpenings.filter(job => job.department === selectedDepartment);
-
-  const featuredJob = jobOpenings.find(job => job.featured);
-  const regularJobs = filteredJobs.filter(job => !job.featured);
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Careers | Zion Tech Group</title>
-        <meta name="description" content="Join our team of AI and technology experts. Explore career opportunities at Zion Tech Group and help us build the future of technology." />
-        <meta name="keywords" content="careers, jobs, AI engineer, cloud architect, data scientist, technology careers" />
-      </Helmet>
-<<<<<<< HEAD
-      <section className="relative py-20 px-4 overflow-hidden">
+    'Cutting-edge technology and tools'      <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
         <div className="relative max-w-7xl mx-auto text-center">
@@ -511,8 +444,6 @@ description: 'Lead the development of cutting-edge AI solutions and machine lear
         </div>
       </section>
       <section className="py-20 px-4 bg-white/5">
-=======
-
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -527,155 +458,13 @@ description: 'Lead the development of cutting-edge AI solutions and machine lear
       </section>
 
       {/* Company Values */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Our Values</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {companyValues.map((value, index) => (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <value.icon className="w-8 h-8 text-slate-900" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-3">{value.title}</h3>
-                <p className="text-gray-300">{value.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Why Work With Us?</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="space-y-4">
-              {benefits.slice(0, 5).map((benefit, index) => (
-                <div key={index} className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
-                  <span className="text-gray-300">{benefit}</span>
-                </div>
-              ))}
-            </div>
-            <div className="space-y-4">
-              {benefits.slice(5).map((benefit, index) => (
-                <div key={index} className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
-                  <span className="text-gray-300">{benefit}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Job Openings */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Open Positions</h2>
-          
-          {/* Department Filter */}
-          <div className="flex flex-wrap justify-center gap-4 mb-8">
-            {departments.map((department) => (
-              <button
-                key={department.id}
-                onClick={() => setSelectedDepartment(department.id)}
-                className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
-                  selectedDepartment === department.id
-                    ? 'bg-cyan-500 text-white'
-                    : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
-                }`}
-              >
-                {department.name}
-              </button>
-            ))}
-          </div>
-
-          {/* Featured Job */}
-          {featuredJob && (
-            <div className="mb-12">
-              <h3 className="text-2xl font-bold text-white mb-6">Featured Position</h3>
-              <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500">
-                <div className="flex items-start justify-between mb-4">
-                  <div>
-                    <h4 className="text-2xl font-bold text-white mb-2">{featuredJob.title}</h4>
-                    <div className="flex items-center space-x-4 text-sm text-gray-400 mb-4">
-                      <div className="flex items-center">
-                        <Briefcase className="w-4 h-4 mr-1" />
-                        {featuredJob.department}
-                      </div>
-                      <div className="flex items-center">
-                        <MapPin className="w-4 h-4 mr-1" />
-                        {featuredJob.location}
-                      </div>
-                      <div className="flex items-center">
-                        <Clock className="w-4 h-4 mr-1" />
-                        {featuredJob.type}
-                      </div>
-                    </div>
-                  </div>
-                  <span className="bg-cyan-500 text-white text-sm font-bold px-3 py-1 rounded-full">
-                    Featured
-                  </span>
-                </div>
-                <p className="text-gray-300 mb-6">{featuredJob.description}</p>
-                <div className="flex items-center justify-between">
-                  <div className="text-sm text-gray-400">
-                    Posted: {new Date(featuredJob.posted).toLocaleDateString()}
-                  </div>
-                  <button className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors">
-                    Apply Now
-                    <ArrowRight className="w-4 h-4 ml-1" />
-                  </button>
-                </div>
-              </div>
-            </div>
-          )}
-
-          {/* Job Listings */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {regularJobs.map((job) => (
-              <div key={job.id} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700 hover:border-slate-600 transition-all duration-300">
-                <div className="flex items-start justify-between mb-4">
-                  <h4 className="text-xl font-bold text-white mb-2">{job.title}</h4>
-                  <span className="bg-slate-700 text-cyan-400 text-xs font-medium px-2 py-1 rounded">
-                    {job.department}
-                  </span>
-                </div>
-                <div className="space-y-2 mb-4">
-                  <div className="flex items-center text-sm text-gray-400">
-                    <MapPin className="w-4 h-4 mr-2" />
-                    {job.location}
-                  </div>
-                  <div className="flex items-center text-sm text-gray-400">
-                    <Clock className="w-4 h-4 mr-2" />
-                    {job.type} • {job.experience}
-                  </div>
-                </div>
-                <p className="text-gray-300 mb-4 line-clamp-3">{job.description}</p>
-                <div className="flex items-center justify-between">
-                  <div className="text-xs text-gray-400">
-                    Posted: {new Date(job.posted).toLocaleDateString()}
-                  </div>
-                  <button className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors text-sm">
-                    View Details
-                    <ArrowRight className="w-3 h-3 ml-1" />
-                  </button>
-                </div>
-              </div>
-            ))}
-          </div>
-<<<<<<< HEAD
-          <div className="mt-8">
+      <section className="py-16 px-4 sm:px-6 lg:px-8">          <div className="mt-8">
             <Link
               to="/contact"
               className="inline-flex items-center bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
               Get in Touch
               <ArrowRight className="w-5 h-5 ml-2" />
-            </Link>
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
+            </Link>>>>>>>> cursor/analyze-improve-and-deploy-application-e765
         </div>
       </section>
 
@@ -719,4 +508,3 @@ export default CareersPage
 };
 
 export default CareersPage;
->>>>>>> cursor/analyze-improve-and-deploy-application-e765

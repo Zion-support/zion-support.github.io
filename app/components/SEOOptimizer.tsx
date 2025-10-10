@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-'use client'import React from 'react'
-import { Helmet  } from 'react-helmet-async'
-interface SEOOptimizerProps {
-  title: string
-  description: string
-  keywords?: string[]
-  canonicalUrl?: string
-  structuredData?: object
-=======
 'use client';
 import React, { useEffect } from 'react';
 
@@ -15,12 +5,7 @@ interface SEOOptimizerProps {
   enableMetaTags?: boolean;
   enableStructuredData?: boolean;
   enableSitemap?: boolean;
-  enableRobots?: boolean;
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
-}
-const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
-<<<<<<< HEAD
-  title,
+  enableRobots?: boolean;  title,
   description,
   keywords = [],
   canonicalUrl,
@@ -49,9 +34,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
         </script>
       )}
     </Helmet>
-  );
-=======
-  enableMetaTags = true,
+  );  enableMetaTags = true,
   enableStructuredData = true,
   enableSitemap = true,
   enableRobots = true
@@ -126,7 +109,3 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   }, [enableMetaTags, enableStructuredData, enableSitemap, enableRobots]);
 
   return null; // This component doesn't render anything visible
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
-};
-
-export default SEOOptimizer;

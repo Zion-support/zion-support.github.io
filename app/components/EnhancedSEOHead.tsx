@@ -1,11 +1,6 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-
-const EnhancedSEOHead: React.FC = () => {
-  const structuredData = {
-=======
 import { useLocation } from 'react-router-dom';
 
 interface SEOHeadProps {
@@ -33,16 +28,7 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
   const currentUrl = url || `https://ziontechgroup.com${location.pathname}`;
   const fullImageUrl = image.startsWith('http') ? image : `https://ziontechgroup.com${image}`;
 
-  const defaultStructuredData = {
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Zion Tech Group",
-    "description": "Leading provider of AI and IT solutions, empowering businesses with cutting-edge technology and innovative digital transformation services.",
-    "url": "https://ziontechgroup.com",
-    "logo": "https://ziontechgroup.com/logo.png",
-<<<<<<< HEAD
-=======
+  const defaultStructuredData = {=======
     "description": "Leading provider of AI-powered enterprise solutions, quantum computing, and digital transformation services.",
 >>>>>>> cursor/analyze-improve-and-deploy-application-e765
     "foundingDate": "2020",
@@ -62,43 +48,11 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
       "email": "kleber@ziontechgroup.com"
     },
     "sameAs": [
-      "https://www.linkedin.com/company/ziontechgroup",
-=======
-      "contactType": "customer service",
+      "https://www.linkedin.com/company/ziontechgroup",      "contactType": "customer service",
       "email": "kleber@ziontechgroup.com"
     },
     "sameAs": [
-      "https://linkedin.com/company/zion-tech-group",
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
-      "https://twitter.com/ziontechgroup",
-      "https://github.com/zion-tech-group"
-    ],
-    "service": [
-      {
-        "@type": "Service",
-        "name": "AI Solutions",
-        "description": "Comprehensive artificial intelligence solutions for business transformation"
-      },
-      {
-        "@type": "Service", 
-        "name": "Cloud Infrastructure",
-        "description": "Scalable and secure cloud solutions for modern businesses"
-      },
-      {
-        "@type": "Service",
-        "name": "Cybersecurity",
-        "description": "Advanced security solutions to protect digital assets"
-      },
-      {
-        "@type": "Service",
-        "name": "IT Consulting",
-        "description": "Strategic IT consulting to optimize business operations"
-      }
-    ]
-  };
-
-<<<<<<< HEAD
-=======
+      "https://linkedin.com/company/zion-tech-group",=======
   const websiteStructuredData = {
     "@context": "https://schema.org",
     "@type": "WebSite",
@@ -156,9 +110,7 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
       <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-      
-=======
-      <meta name="googlebot" content="index, follow" />
+            <meta name="googlebot" content="index, follow" />
       <meta name="bingbot" content="index, follow" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
       
@@ -206,19 +158,8 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
       {/* Preconnect to external domains */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
-      {/* Structured Data */}
-      <script type="application/ld+json">
-        {JSON.stringify(structuredData || defaultStructuredData)}
-      </script>
-    </Helmet>
-<<<<<<< HEAD
   )}
-export default EnhancedSEOHead
-=======
-  );
+export default EnhancedSEOHead  );
 };
 
 export default EnhancedSEOHead;
->>>>>>> cursor/analyze-improve-and-deploy-application-e765

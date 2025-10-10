@@ -1,69 +1,5 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
-import { ChevronLeft, ChevronRight, CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, TrendingUp } from 'lucide-react';
-interface Slide {
-  icon: React.ComponentType<any>
-  title: string
-  description: string
-  features: string[]
-  stats?: {
-    value: string
-    label: string
-  }[]
-}
-const ContentCarousel: React.FC = () => {
-  const [currentSlide, setCurrentSlide] = useState(0)
-  const slides: Slide[] = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency',
-      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
-      stats: [
-        { value: '95%', label: 'Accuracy Rate' },
-        { value: '10x', label: 'Faster Processing' },
-        { value: '24/7', label: 'Automation' }
-      ]
-    },
-    {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results',
-      features: ['Real-time Processing', 'Scalable Architecture', 'Optimized Performance', 'Low Latency'],
-      stats: [
-        { value: '99.9%', label: 'Uptime' },
-        { value: '< 100ms', label: 'Response Time' },
-        { value: '10M+', label: 'Requests/Day' }
-      ]
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards',
-      features: ['End-to-End Encryption', 'Compliance Standards', 'Security Audits', '24/7 Monitoring'],
-      stats: [
-        { value: '256-bit', label: 'Encryption' },
-        { value: 'SOC 2', label: 'Compliance' },
-        { value: 'Zero', label: 'Security Breaches' }
-      ]
-    },
-    {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses',
-      features: ['Multi-Region Support', 'Local Compliance', 'Global CDN', 'International Support'],
-      stats: [
-        { value: '50+', label: 'Countries' },
-        { value: '15+', label: 'Languages' },
-        { value: '24/7', label: 'Global Support' }
-      ]
-    }
-  ]const nextSlide  = () => {
-    setCurrentSlide((prev) => (prev + 1) % slides.length)
-  }const prevSlide  = () => {
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)}
-=======
 import { ChevronLeft, ChevronRight, Play, Pause } from 'lucide-react';
 
 interface CarouselItem {
@@ -91,40 +27,6 @@ const ContentCarousel: React.FC<ContentCarouselProps> = ({
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(autoPlay);
-
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
-  useEffect(() => {
-    if (isPlaying && items.length > 1) {
-      const timer = setInterval(() => {
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % items.length);
-      }, interval);
-
-      return () => clearInterval(timer);
-    }
-  }, [isPlaying, interval, items.length]);
-
-  const goToPrevious = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + items.length) % items.length);
-  };
-
-  const goToNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % items.length);
-  };
-
-  const goToSlide = (index: number) => {
-    setCurrentIndex(index);
-  };
-
-  const togglePlayPause = () => {
-    setIsPlaying(!isPlaying);
-  };
-
-  if (!items || items.length === 0) {
-    return null;
-  }
-
-  return (
-<<<<<<< HEAD
     <div className="relative bg-gradient-to-r from-purple-600 to-blue-600 text-white py-16 px-4">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
@@ -287,9 +189,7 @@ const ContentCarousel: React.FC<ContentCarouselProps> = ({
               key={index}
               onClick={() => setCurrentSlide(index)}
               className={`w-3 h-3 rounded-full transition-colors duration-200 ${
-                index === currentSlide ? 'bg-cyan-400' : 'bg-white/30'
-=======
-    <div className="relative w-full h-96 bg-slate-800 rounded-2xl overflow-hidden">
+                index === currentSlide ? 'bg-cyan-400' : 'bg-white/30'    <div className="relative w-full h-96 bg-slate-800 rounded-2xl overflow-hidden">
       {/* Carousel Content */}
       <div className="relative h-full">
         {items.map((item, index) => (
@@ -357,14 +257,7 @@ const ContentCarousel: React.FC<ContentCarouselProps> = ({
               key={index}
               onClick={() => goToSlide(index)}
               className={`w-3 h-3 rounded-full transition-colors ${
-                index === currentIndex ? 'bg-cyan-500' : 'bg-white bg-opacity-50'
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
-              }`}
-            />
-          ))}
-        </div>
-<<<<<<< HEAD
-        {/* Additional Info */}
+                index === currentIndex ? 'bg-cyan-500' : 'bg-white bg-opacity-50'        {/* Additional Info */}
         <div className="mt-16 text-center">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <div className="flex items-center justify-center gap-3 text-white">
@@ -409,12 +302,9 @@ export default ContentCarousel
   </h2>
   </div>
   </div>
-  </any>
-=======
-      )}
+  </any>      )}
     </div>
   );
 };
 
 export default ContentCarousel;
->>>>>>> cursor/analyze-improve-and-deploy-application-e765

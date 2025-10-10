@@ -2,116 +2,7 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { Cloud, Shield, Settings, Database, Smartphone, Globe, Zap, ArrowRight } from 'lucide-react';
-=======
 import { Cloud, Shield, Settings, Database, Smartphone, Globe, Zap, ArrowRight, CheckCircle, Star, Users, Clock } from 'lucide-react';
-
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
-const ItServicesPage: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-
-  const itServices = [
-    {
-      id: 1,
-      title: 'Cloud Infrastructure',
-      description: 'Scalable and secure cloud solutions with AWS, Azure, and GCP',
-      category: 'Cloud',
-      icon: Cloud,
-      features: [
-        'Cloud migration and setup',
-        'Auto-scaling capabilities',
-        'Load balancing',
-        'Disaster recovery',
-        'Cost optimization',
-        '24/7 monitoring'
-      ],
-      price: 'Starting at $999/month',
-      popular: true
-    },
-    {
-      id: 2,
-      title: 'Cybersecurity Solutions',
-      description: 'Comprehensive security solutions to protect your digital assets',
-      category: 'Security',
-      icon: Shield,
-      features: [
-        'Threat detection and prevention',
-        'Vulnerability assessments',
-        'Compliance management',
-        'Incident response',
-        'Security training',
-        'Regular security audits'
-      ],
-      price: 'Starting at $799/month',
-      popular: false
-    },
-    {
-      id: 3,
-      title: 'Database Management',
-      description: 'Expert database design, optimization, and maintenance',
-      category: 'Database',
-      icon: Database,
-      features: [
-        'Database design and architecture',
-        'Performance optimization',
-        'Data migration',
-        'Backup and recovery',
-        'Security implementation',
-        'Monitoring and maintenance'
-      ],
-      price: 'Starting at $599/month',
-      popular: false
-    },
-    {
-      id: 4,
-      title: 'Mobile App Development',
-      description: 'Native and cross-platform mobile applications',
-      category: 'Development',
-      icon: Smartphone,
-      features: [
-        'iOS and Android development',
-        'Cross-platform solutions',
-        'UI/UX design',
-        'App store optimization',
-        'Performance optimization',
-        'Ongoing support and updates'
-      ],
-      price: 'Starting at $2,000/month',
-      popular: true
-    },
-    {
-      id: 5,
-      title: 'Web Development',
-      description: 'Modern, responsive web applications and websites',
-      category: 'Development',
-      icon: Globe,
-      features: [
-        'Responsive web design',
-        'E-commerce solutions',
-        'Content management systems',
-        'API development',
-        'Performance optimization',
-        'SEO optimization'
-      ],
-      price: 'Starting at $1,500/month',
-      popular: false
-    },
-    {
-      id: 6,
-      title: 'IT Consulting',
-      description: 'Strategic IT guidance and technology roadmaps',
-      category: 'Consulting',
-      icon: Settings,
-      features: [
-        'Technology strategy',
-        'Digital transformation',
-        'Process optimization',
-        'Vendor management',
-        'Project management',
-        'Training and support'
-      ],
-<<<<<<< HEAD
       price: 'Starting at $200/hour',
       marketPrice: '$300-500/hour',
       benefits: ['Strategic guidance', 'Technology expertise', 'Cost optimization', 'Digital transformation']
@@ -270,9 +161,7 @@ const ItServicesPage: React.FC = () => {
     { icon: <Server className="w-8 h-8 text-cyan-500" />, value: '500+', label: 'Servers Managed' },
     { icon: <Shield className="w-8 h-8 text-green-500" />, value: '99.9%', label: 'Security Uptime' },
     { icon: <Users className="w-8 h-8 text-purple-500" />, value: '200+', label: 'Clients Served' },
-    { icon: <Zap className="w-8 h-8 text-orange-500" />, value: '50%', label: 'Cost Reduction' }
-=======
-      price: '$299/hour',
+    { icon: <Zap className="w-8 h-8 text-orange-500" />, value: '50%', label: 'Cost Reduction' }      price: '$299/hour',
       popular: false
     }
   ];
@@ -283,36 +172,7 @@ const ItServicesPage: React.FC = () => {
     { id: 'Security', name: 'Security' },
     { id: 'Database', name: 'Database' },
     { id: 'Development', name: 'Development' },
-    { id: 'Consulting', name: 'Consulting' }
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
-  ];
-
-  const benefits = [
-    'Expert team with 10+ years experience',
-    '24/7 technical support',
-    'Scalable solutions that grow with your business',
-    'Cutting-edge technology and best practices',
-    'Competitive pricing and flexible plans',
-    'Proven track record of successful implementations'
-  ];
-
-  const filteredServices = selectedCategory === 'all' 
-    ? itServices 
-    : itServices.filter(service => service.category === selectedCategory);
-
-  return (
-<<<<<<< HEAD
-    <React.Fragment>
-=======
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
-      <Helmet>
-        <title>IT Services | Zion Tech Group</title>
-        <meta name="description" content="Comprehensive IT services including cloud infrastructure, cybersecurity, database management, and custom development solutions." />
-        <meta name="keywords" content="IT services, cloud computing, cybersecurity, database management, web development, mobile development" />
-      </Helmet>
-<<<<<<< HEAD
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    { id: 'Consulting', name: 'Consulting' }    <React.Fragment>    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -321,8 +181,6 @@ const ItServicesPage: React.FC = () => {
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Complete IT solutions to modernize your infrastructure, enhance security, and drive business growth. 
               From cloud migration to cybersecurity, we deliver enterprise-grade technology services.
-=======
-
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -440,20 +298,7 @@ const ItServicesPage: React.FC = () => {
             </h2>
             <p className="text-xl text-gray-300 mb-8">
               Let our expert team help you modernize your IT infrastructure and 
-              secure your business for the future.
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                Get Started
-              </button>
-              <button className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                Schedule Consultation
-              </button>
-            </div>
-          </div>
-<<<<<<< HEAD
-        </section>
+              secure your business for the future.        </section>
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -523,13 +368,6 @@ const ItServicesPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </React.Fragment>
-=======
-        </div>
+    </React.Fragment>        </div>
       </section>
     </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
-  );
-};
-
-export default ItServicesPage;

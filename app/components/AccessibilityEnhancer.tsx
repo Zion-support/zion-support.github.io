@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-'use client'import React, { useEffect } from 'react'
-interface AccessibilityEnhancerProps {
-  children: React.ReactNode
-  enableKeyboardNavigation?: boolean
-  enableScreenReaderSupport?: boolean
-  enableHighContrast?: boolean
-  enableFocusManagement?: boolean
-}
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
-  children,
-=======
 'use client';
 import React, { useEffect } from 'react';
 
@@ -21,20 +9,7 @@ interface AccessibilityEnhancerProps {
   children?: React.ReactNode;
 }
 
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ 
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
-  enableKeyboardNavigation = true,
-  enableScreenReaderSupport = true,
-  enableHighContrast = true,
-  enableFocusManagement = true,
-  children 
-}) => {
-  useEffect(() => {
-    // Keyboard navigation enhancements
-    if (enableKeyboardNavigation) {
-      const handleKeyDown = (event: KeyboardEvent) => {
-<<<<<<< HEAD
-        // Skip to main content
+const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({         // Skip to main content
         if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {
           const skipLink = document.querySelector('a[href="#main-content"]') as HTMLAnchorElement
           if (skipLink) {
@@ -119,9 +94,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     }
   }, [enableKeyboardNavigation, enableScreenReaderSupport, enableHighContrast, enableFocusManagement])
   return <React.Fragment>{children}</React.Fragment>}
-export default AccessibilityEnhancer
-=======
-        // Add keyboard navigation logic here
+export default AccessibilityEnhancer        // Add keyboard navigation logic here
         if (event.key === 'Tab') {
           // Handle tab navigation
         }
@@ -160,4 +133,3 @@ export default AccessibilityEnhancer
 };
 
 export default AccessibilityEnhancer;
->>>>>>> cursor/analyze-improve-and-deploy-application-e765

@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-'use client'import React, { useState } from 'react'
-import { Mail, CheckCircle, ArrowRight, Star, Users, Globe, Zap } from 'lucide-react'
-interface ContentNewsletterSignupProps {
-  title?: string
-  subtitle?: string
-  placeholder?: string
-  buttonText?: string
-  features?: Array<{
-    icon: React.ComponentType<{ className?: string }>
-    text: string
-  }>
-  onSubscribe?: (email: string) => void
-=======
 'use client';
 import React, { useState } from 'react';
 import { Mail, CheckCircle, AlertCircle, Send } from 'lucide-react';
@@ -29,30 +15,7 @@ interface NewsletterSignupProps {
   showIcon?: boolean;
   showDescription?: boolean;
   showSuccessMessage?: boolean;
-  showErrorMessage?: boolean;
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
-}
-
-const ContentNewsletterSignup: React.FC<NewsletterSignupProps> = ({
-  title = 'Stay Updated',
-  description = 'Get the latest news and updates delivered to your inbox.',
-  placeholder = 'Enter your email address',
-  buttonText = 'Subscribe',
-  successMessage = 'Thank you for subscribing!',
-  errorMessage = 'Something went wrong. Please try again.',
-  backgroundColor = 'bg-slate-800',
-  textColor = 'text-white',
-  buttonColor = 'bg-cyan-500 hover:bg-cyan-600',
-  showIcon = true,
-  showDescription = true,
-  showSuccessMessage = true,
-  showErrorMessage = true
-}) => {
-  const [email, setEmail] = useState('');
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubscribed, setIsSubscribed] = useState(false);
-<<<<<<< HEAD
-  const [isLoading, setIsLoading] = useState(false);
+  showErrorMessage?: boolean;  const [isLoading, setIsLoading] = useState(false);
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!email) return;
@@ -66,9 +29,7 @@ const ContentNewsletterSignup: React.FC<NewsletterSignupProps> = ({
       setIsSubscribed(true)
       setEmail('')
     } catch (error) {
-      console.error('Subscription error:', error)
-=======
-  const [error, setError] = useState('');
+      console.error('Subscription error:', error)  const [error, setError] = useState('');
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -87,25 +48,7 @@ const ContentNewsletterSignup: React.FC<NewsletterSignupProps> = ({
         setError('Please enter a valid email address');
       }
     } catch (err) {
-      setError(errorMessage);
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
-    } finally {
-      setIsSubmitting(false)
-    }
-<<<<<<< HEAD
-  }
-=======
-  };
-
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
-  if (isSubscribed) {
-    return (
-      <div className={`${backgroundColor} ${textColor} py-16 px-4`}>
-        <div className="max-w-2xl mx-auto text-center">
-          <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6">
-            <CheckCircle className="w-8 h-8 text-white" />
-          </div>
-<<<<<<< HEAD
+      setError(errorMessage);  }  };
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Welcome to Our Community!
           </h2>
@@ -116,19 +59,8 @@ const ContentNewsletterSignup: React.FC<NewsletterSignupProps> = ({
             onClick={() => setIsSubscribed(false)}
             className="text-white underline hover:text-blue-200 transition-colors">
             Subscribe another email;
-  </
-=======
-          <h3 className="text-2xl font-bold mb-4">{successMessage}</h3>
-          <p className="text-lg">You'll receive our latest updates soon.</p>
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
-        </div>
-      </div>
-    );
-  }
-
-  return (
-<<<<<<< HEAD
-    <div className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+  </          <h3 className="text-2xl font-bold mb-4">{successMessage}</h3>
+          <p className="text-lg">You'll receive our latest updates soon.</p>    <div className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="max-w-4xl mx-auto">
         <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12 border border-white/20">
           <div className="text-center mb-12">
@@ -186,9 +118,7 @@ const ContentNewsletterSignup: React.FC<NewsletterSignupProps> = ({
               </p>
             </form>
           </div>
-        </div>
-=======
-    <div className={`${backgroundColor} ${textColor} py-16 px-4`}>
+        </div>    <div className={`${backgroundColor} ${textColor} py-16 px-4`}>
       <div className="max-w-2xl mx-auto text-center">
         {showIcon && (
           <div className="w-16 h-16 bg-cyan-500 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -237,18 +167,8 @@ const ContentNewsletterSignup: React.FC<NewsletterSignupProps> = ({
               {error}
             </div>
           )}
-        </form>
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
-      </div>
-    </div>
-  );
-};
-<<<<<<< HEAD
-export default ContentNewsletterSignup;
+        </form>export default ContentNewsletterSignup;
   </label>
   </button>
   </ContentNewsletterSignupProps>
-=======
-
 export default ContentNewsletterSignup;
->>>>>>> cursor/analyze-improve-and-deploy-application-e765

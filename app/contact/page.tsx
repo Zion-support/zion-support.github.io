@@ -1,27 +1,9 @@
-<<<<<<< HEAD
-'use client'import React, { useState, useCallback } from 'react'
-import { Helmet } from 'react-helmet-async'import { Phone, Mail, MapPin, Clock, Send, CheckCircle } from 'lucide-react'
-import Navigation from '../components/Navigation'import Footer from '../components/Footer'const ContactPage: React.FC  = () => {
-=======
 'use client';
 import React, { useState, useCallback } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle, AlertCircle } from 'lucide-react';
 
-const ContactPage: React.FC = () => {
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    company: '',
-    service: '',
-    message: ''
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-<<<<<<< HEAD
-  const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+const ContactPage: React.FC = () => {  const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData(prev => ({
       ...prev,
       [name]: value
@@ -33,8 +15,6 @@ const ContactPage: React.FC = () => {
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 2000))
-=======
-
   const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
@@ -50,30 +30,8 @@ const ContactPage: React.FC = () => {
     try {
       // Simulate form submission
       await new Promise(resolve => setTimeout(resolve, 1000));
-      setSubmitStatus('success');
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        company: '',
-        service: '',
-        message: ''
-<<<<<<< HEAD
-      })
-      setSubmitStatus('success')
-=======
-      });
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
-    } catch (error) {
-      setSubmitStatus('error')
-    } finally {
-      setIsSubmitting(false)
-    }
-<<<<<<< HEAD
-  }, []);
-=======
-  };
+      setSubmitStatus('success');      })
+      setSubmitStatus('success')      });  }, []);  };
 
   const contactInfo = [
     {
@@ -101,16 +59,6 @@ const ContactPage: React.FC = () => {
       href: '#'
     }
   ];
-
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Contact Us | Zion Tech Group</title>
-        <meta name="description" content="Get in touch with Zion Tech Group. Contact us for AI solutions, IT services, and digital transformation consulting. Free consultation available." />
-        <meta name="keywords" content="contact us, AI consulting, IT services, digital transformation, free consultation, Zion Tech Group" />
-      </Helmet>
-<<<<<<< HEAD
       <Navigation />
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
@@ -122,23 +70,11 @@ const ContactPage: React.FC = () => {
             <span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
               Touch
   </
-=======
-
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Contact <span className="text-cyan-400">Us</span>
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Ready to transform your business with AI and technology? 
-            Let's discuss how we can help you achieve your goals.
-          </p>
-        </div>
-      </section>
-<<<<<<< HEAD
-      {/* Contact Form and Info */}
+            Contact <span className="text-cyan-400">Us</span>      {/* Contact Form and Info */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -158,8 +94,6 @@ const ContactPage: React.FC = () => {
               )}
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-=======
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Information */}
@@ -170,19 +104,7 @@ const ContactPage: React.FC = () => {
                 <div key={index} className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-lg flex items-center justify-center flex-shrink-0">
                     <info.icon className="w-6 h-6 text-slate-900" />
-                  </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
-                  <div>
-                    <h3 className="text-lg font-semibold text-white mb-2">{info.title}</h3>
-                    <a 
-                      href={info.href}
-                      className="text-gray-300 hover:text-cyan-400 transition-colors whitespace-pre-line"
-                    >
-                      {info.value}
-                    </a>
-                  </div>
-<<<<<<< HEAD
-                  <div>
+                  </div>                  <div>
                     <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
                       Message *
                     </label>
@@ -260,9 +182,7 @@ const ContactPage: React.FC = () => {
                 </div>
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
-                    Message *
-=======
-                </div>
+                    Message *                </div>
               ))}
             </div>
           </div>
@@ -289,22 +209,7 @@ const ContactPage: React.FC = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
-                    Full Name *
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors"
-                    placeholder="Enter your full name"
-                  />
-                </div>
-<<<<<<< HEAD
-                <button
+                    Full Name *                <button
                   type="submit"
                   disabled={isSubmitting}
                   className="w-full bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 disabled:opacity-50 disabled:cursor-not-allowed text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 flex items-center justify-center">
@@ -371,9 +276,7 @@ const ContactPage: React.FC = () => {
                     <p className="text-gray-300">Monday - Friday: 9:00 AM - 6:00 PM</p>
                     <p className="text-gray-300">Saturday: 10:00 AM - 4:00 PM</p>
                     <p className="text-gray-300">Sunday: Closed</p>
-                  </div>
-=======
-                <div>
+                  </div>                <div>
                   <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
                     Email Address *
                   </label>
@@ -386,102 +289,7 @@ const ContactPage: React.FC = () => {
                     required
                     className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors"
                     placeholder="Enter your email"
-                  />
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
-                </div>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
-                    Phone Number
-                  </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors"
-                    placeholder="Enter your phone number"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
-                    Company
-                  </label>
-                  <input
-                    type="text"
-                    id="company"
-                    name="company"
-                    value={formData.company}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors"
-                    placeholder="Enter your company name"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
-                  Service Interest
-                </label>
-                <select
-                  id="service"
-                  name="service"
-                  value={formData.service}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors"
-                >
-                  <option value="">Select a service</option>
-                  <option value="ai-solutions">AI Solutions</option>
-                  <option value="cloud-infrastructure">Cloud Infrastructure</option>
-                  <option value="cybersecurity">Cybersecurity</option>
-                  <option value="custom-development">Custom Development</option>
-                  <option value="data-analytics">Data Analytics</option>
-                  <option value="it-consulting">IT Consulting</option>
-                  <option value="other">Other</option>
-                </select>
-              </div>
-
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
-                  Message *
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
-                  rows={6}
-                  className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors resize-none"
-                  placeholder="Tell us about your project or requirements"
-                />
-              </div>
-
-              <button
-                type="submit"
-                disabled={isSubmitting}
-                className="w-full bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 disabled:opacity-50 disabled:cursor-not-allowed text-white font-bold py-4 px-6 rounded-lg transition-all duration-300 flex items-center justify-center"
-              >
-                {isSubmitting ? (
-                  <>
-                    <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin mr-2"></div>
-                    Sending...
-                  </>
-                ) : (
-                  <>
-                    <Send className="w-5 h-5 mr-2" />
-                    Send Message
-                  </>
-                )}
-              </button>
-            </form>
-          </div>
-        </div>
-<<<<<<< HEAD
-      </section>
+                  />      </section>
       <Footer />
     </div>
   );
@@ -492,12 +300,9 @@ export default ContactPage;
   </label>
   </label>
   </span>
-  </HTMLInputElement>
-=======
-      </div>
+  </HTMLInputElement>      </div>
     </div>
   );
 };
 
 export default ContactPage;
->>>>>>> cursor/analyze-improve-and-deploy-application-e765

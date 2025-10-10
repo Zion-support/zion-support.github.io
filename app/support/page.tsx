@@ -1,19 +1,5 @@
 'use client';
 import React, { useState } from 'react';
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Phone, Mail, MessageCircle, Clock, CheckCircle, Search, HelpCircle, BookOpen, Users, Zap } from 'lucide-react';
-interface FAQ {
-  question: string
-  answer: string
-  category: string
-}
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { Search, Phone, Mail, MessageCircle, Clock, CheckCircle } from 'lucide-react';
-=======
 import { Helmet } from 'react-helmet-async';
 import { 
   Phone, 
@@ -26,14 +12,7 @@ import {
   FileText,
   Video,
   Headphones
-} from 'lucide-react';
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
-
-const SupportPage: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-<<<<<<< HEAD
-  const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null);
+} from 'lucide-react';  const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null);
   const faqs: FAQ[] = [
     {
       question: 'How do I get started with your AI solutions?',
@@ -79,25 +58,10 @@ answer: 'Yes, we provide comprehensive training programs to ensure your team can
   const supportChannels = [
     {
       name: 'Phone Support',
-=======
-
   const supportOptions = [
     {
       id: 1,
-      title: 'Phone Support',
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
-      description: 'Speak directly with our technical experts',
-      icon: Phone,
-      availability: '24/7',
-      responseTime: 'Immediate',
-      contact: '+1 (302) 464-0950',
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-      id: 2,
-      title: 'Email Support',
-<<<<<<< HEAD
-      description: 'Send us your questions and we\'ll respond quickly',
+      title: 'Phone Support',      description: 'Send us your questions and we\'ll respond quickly',
       contact: 'support@ziontechgroup.com',
       availability: '24/7'
       contact: '+1 (555) 123-4567',
@@ -106,25 +70,7 @@ answer: 'Yes, we provide comprehensive training programs to ensure your team can
     },
     {
       name: 'Email Support',
-      description: 'Get detailed responses to your questions',
-=======
-      description: 'Send us detailed questions and get comprehensive answers',
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
-      icon: Mail,
-      availability: '24/7',
-      responseTime: 'Within 2 hours',
-      contact: 'support@ziontechgroup.com',
-      color: 'from-green-500 to-emerald-500'
-    },
-    {
-      id: 3,
-      title: 'Live Chat',
-      description: 'Get instant help with our AI-powered chat system',
-      icon: MessageCircle,
-<<<<<<< HEAD
-availability: 'Mon-Fri: 9AM-6PM EST'
-=======
-      availability: '24/7',
+      description: 'Get detailed responses to your questions',      description: 'Send us detailed questions and get comprehensive answers',availability: 'Mon-Fri: 9AM-6PM EST'      availability: '24/7',
       responseTime: 'Immediate',
       contact: 'Start Chat',
       color: 'from-purple-500 to-pink-500'
@@ -137,30 +83,7 @@ availability: 'Mon-Fri: 9AM-6PM EST'
       availability: 'Business Hours',
       responseTime: 'Within 24 hours',
       contact: 'Schedule Call',
-      color: 'from-orange-500 to-red-500'
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
-    }
-  ];
-
-  const faqs = [
-    {
-      question: 'How do I get started with your AI solutions?',
-      answer: 'Getting started is easy! Contact our sales team for a free consultation, and we\'ll help you choose the right AI solution for your business needs.',
-      category: 'Getting Started'
-    },
-    {
-      question: 'What is your typical response time for support requests?',
-      answer: 'We pride ourselves on fast response times. Phone and live chat support is immediate, email support responds within 2 hours, and video consultations are scheduled within 24 hours.',
-      category: 'Support'
-    },
-    {
-      question: 'Do you offer training for your AI solutions?',
-      answer: 'Yes! We provide comprehensive training for all our AI solutions, including documentation, video tutorials, and live training sessions with our experts.',
-      category: 'Training'
-    },
-    {
-<<<<<<< HEAD
-      question: 'Do you offer training for your solutions?',
+      color: 'from-orange-500 to-red-500'      question: 'Do you offer training for your solutions?',
       answer: 'Yes! We provide comprehensive training programs to help your team get the most out of our AI and IT solutions.'
     }
   ];
@@ -184,31 +107,15 @@ availability: 'Mon-Fri: 9AM-6PM EST'
   ];
   const categories = ['all', 'general', 'support', 'implementation', 'training', 'security', 'integration', 'scaling', 'development'];
       question: 'Can I integrate with my existing systems?',
-      answer: 'Yes! Our solutions are designed to integrate seamlessly with your existing systems through APIs, webhooks, and custom connectors. Our team will help you set up integrations during implementation.',
-=======
-      question: 'What security measures do you have in place?',
+      answer: 'Yes! Our solutions are designed to integrate seamlessly with your existing systems through APIs, webhooks, and custom connectors. Our team will help you set up integrations during implementation.',      question: 'What security measures do you have in place?',
       answer: 'We implement enterprise-grade security including encryption, secure data centers, regular security audits, and compliance with industry standards like SOC 2 and GDPR.',
       category: 'Security'
     },
     {
       question: 'Can I integrate your AI solutions with my existing systems?',
-      answer: 'Absolutely! Our AI solutions are designed with integration in mind. We provide APIs, SDKs, and custom integration services to connect with your existing infrastructure.',
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
-      category: 'Integration'
-    },
-    {
-      question: 'What happens if I need to scale my AI solution?',
-      answer: 'Our solutions are built to scale with your business. We offer flexible pricing plans and can help you upgrade or expand your AI capabilities as your needs grow.',
-      category: 'Scaling'
-    }
-  ];
+      answer: 'Absolutely! Our AI solutions are designed with integration in mind. We provide APIs, SDKs, and custom integration services to connect with your existing infrastructure.',  const categories = ['all', 'Getting Started', 'Support', 'Security', 'Integration', 'Service Level', 'Data Management'];
 
-<<<<<<< HEAD
-  const categories = ['all', 'Getting Started', 'Support', 'Security', 'Integration', 'Service Level', 'Data Management'];
-
-  const filteredFAQs = faqs.filter(faq => {
-=======
-  const categories = [
+  const filteredFAQs = faqs.filter(faq => {  const categories = [
     { id: 'all', name: 'All Topics' },
     { id: 'Getting Started', name: 'Getting Started' },
     { id: 'Support', name: 'Support' },
@@ -218,15 +125,7 @@ availability: 'Mon-Fri: 9AM-6PM EST'
     { id: 'Scaling', name: 'Scaling' }
   ];
 
-  const filteredFaqs = faqs.filter(faq => {
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
-    const matchesSearch = faq.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         faq.answer.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesCategory = selectedCategory === 'all' || faq.category === selectedCategory;
-    return matchesSearch && matchesCategory;
-  });
-<<<<<<< HEAD
-  const toggleFAQ = (index: number) => {
+  const filteredFaqs = faqs.filter(faq => {  const toggleFAQ = (index: number) => {
     setExpandedFAQ(expandedFAQ === index ? null : index);
   };
   return (
@@ -496,8 +395,6 @@ export default SupportPage;
       </main>
       <Footer />
     </>
-=======
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -632,8 +529,3 @@ export default SupportPage;
         </div>
       </section>
     </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
-  );
-};
-
-export default SupportPage;

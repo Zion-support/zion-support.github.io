@@ -1,57 +1,3 @@
-<<<<<<< HEAD
-'use client'import React from 'react'
-import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, TrendingUp } from 'lucide-react'const ContentPromotionBanner: React.FC  = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
-    },
-    {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
-    },
-    {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment with local support and compliance'
-    }
-  ]
-  const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ]
-  const stats = [
-    {
-      icon: Users,
-      value: '10,000+',
-      label: 'Happy Customers',
-      description: 'Businesses trust our solutions'
-    },
-    {
-      icon: TrendingUp,
-      value: '99.9%',
-      label: 'Uptime',
-      description: 'Reliable service guarantee'
-    },
-    {
-      icon: Star,
-      value: '4.9/5',
-      label: 'Rating',
-      description: 'Highly rated by clients'
-=======
 'use client';
 import React, { useState, useEffect } from 'react';
 import { X, ChevronLeft, ChevronRight, Star, CheckCircle } from 'lucide-react';
@@ -106,22 +52,7 @@ const ContentPromotionBanner: React.FC<PromotionBannerProps> = ({
         setCurrentFeatureIndex((prevIndex) => (prevIndex + 1) % features.length);
       }, 3000);
 
-      return () => clearInterval(interval);
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
-    }
-  }, [features.length]);
-
-  const handleClose = () => {
-    setIsVisible(false);
-  };
-
-  if (!isVisible) {
-    return null;
-  }
-
-  return (
-<<<<<<< HEAD
-<div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
+      return () => clearInterval(interval);<div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
       <div className="max-w-7xl mx-auto">
         {/* Hero Section */}
         <div className="text-center mb-16">
@@ -156,57 +87,11 @@ const ContentPromotionBanner: React.FC<PromotionBannerProps> = ({
           ))}
         </div>
 <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-=======
-    <div className={`${backgroundColor} ${textColor} py-20 px-4`}>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">    <div className={`${backgroundColor} ${textColor} py-20 px-4`}>
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
-          <div className="space-y-8">
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
-            <div>
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">{title}</h2>
-              <p className="text-xl mb-8">{description}</p>
-            </div>
-
-            {/* Features */}
-            {features.length > 0 && (
-              <div className="space-y-4">
-                <div className="flex items-center space-x-2">
-                  <CheckCircle className="w-6 h-6" />
-                  <span className="text-lg font-semibold">
-                    {features[currentFeatureIndex]}
-                  </span>
-                </div>
-                {features.length > 1 && (
-                  <div className="flex space-x-2">
-                    {features.map((_, index) => (
-                      <button
-                        key={index}
-                        onClick={() => setCurrentFeatureIndex(index)}
-                        className={`w-2 h-2 rounded-full transition-colors ${
-                          index === currentFeatureIndex ? 'bg-white' : 'bg-white/50'
-                        }`}
-                      />
-                    ))}
-                  </div>
-                )}
-              </div>
-            )}
-
-            {/* Rating */}
-            <div className="flex items-center space-x-4">
-              <div className="flex items-center space-x-1">
-                {[...Array(5)].map((_, index) => (
-                  <Star
-                    key={index}
-                    className={`w-5 h-5 ${
-                      index < Math.floor(rating) ? 'fill-current' : ''
-                    }`}
-                  />
-                ))}
-<<<<<<< HEAD
-              </ul>
+          <div className="space-y-8">              </ul>
             </div>
             <div>
               <h3 className="text-2xl font-bold mb-4">Additional Benefits</h3>
@@ -232,9 +117,7 @@ const ContentPromotionBanner: React.FC<PromotionBannerProps> = ({
           {features.map((feature, index) => (
             <div key={index} className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl flex items-center justify-center mx-auto mb-4">
-                <feature.icon className="w-8 h-8 text-white" />
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
+                <feature.icon className="w-8 h-8 text-white" />>>>>>>> cursor/analyze-improve-and-deploy-application-e765
               </div>
               <span className="text-lg font-semibold">{rating}</span>
               <span className="text-lg">({reviewCount} reviews)</span>
@@ -306,31 +189,11 @@ const ContentPromotionBanner: React.FC<PromotionBannerProps> = ({
               </a>
               <button className="border-2 border-white text-white hover:bg-white hover:text-cyan-600 font-bold py-4 px-8 rounded-lg transition-colors">
                 Learn More
-              </button>
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
-            </div>
-          </div>
-
-          {/* Image */}
-          {image && (
-            <div className="relative">
-              <img
-                src={image}
-                alt={title}
-                className="w-full h-96 object-cover rounded-2xl shadow-2xl"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-2xl" />
-            </div>
-          )}
-        </div>
-<<<<<<< HEAD
-      <div className="text-center">
+              </button>      <div className="text-center">
         <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 inline-flex items-center">
           Get Started Now
           <ArrowRight className="w-5 h-5 ml-2" />
-        </button>
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
+        </button>>>>>>>> cursor/analyze-improve-and-deploy-application-e765
       </div>
 
       {/* Close Button */}
@@ -355,4 +218,3 @@ export default ContentPromotionBanner
 };
 
 export default ContentPromotionBanner;
->>>>>>> cursor/analyze-improve-and-deploy-application-e765

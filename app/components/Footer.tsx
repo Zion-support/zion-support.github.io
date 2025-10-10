@@ -131,41 +131,11 @@ const Footer: React.FC = React.memo(() => {
             </ul>
           </div>
 
-<<<<<<< HEAD
-          {/* Micro SaaS */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
-              <Zap className="w-5 h-5 mr-2" />
-              Micro SaaS
-=======
           {/* Micro SAAS */}
           <div>
             <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
               <Code className="w-5 h-5 mr-2" />
-              Micro SAAS
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
-            </h3>
-            <ul className="space-y-2">
-              {microSaasServices.map((service, index) => (
-                <li key={index}>
-                  <Link 
-                    to={service.url}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
-                    {service.name}
-                  </Link>
-                </li>
-              ))}
-              <li>
-                <Link 
-                  to="/micro-saas"
-                  className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium">
-                  View All Micro SaaS →
-                </Link>
-              </li>
-            </ul>
-          </div>
-<<<<<<< HEAD
-        </div>
+              Micro SAAS        </div>
 
         {/* Quick Links */}
         <div className="border-t border-gray-700 mt-8 pt-8">
@@ -198,9 +168,7 @@ const Footer: React.FC = React.memo(() => {
                 ))}
               </ul>
             </div>
-          </div>
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
+          </div>>>>>>>> cursor/analyze-improve-and-deploy-application-e765
         </div>
 
         {/* Bottom Section */}
@@ -230,22 +198,11 @@ const Footer: React.FC = React.memo(() => {
               </Link>
               <Link to="/cookies" className="text-gray-400 hover:text-cyan-400 text-sm transition-colors">
                 Cookie Policy
-              </Link>
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-<<<<<<< HEAD
-  )
+              </Link>  )
 })
-Footer.displayName = 'Footer'export default Footer
-=======
-  );
+Footer.displayName = 'Footer'export default Footer  );
 });
 
 Footer.displayName = 'Footer';
 
 export default Footer;
->>>>>>> cursor/analyze-improve-and-deploy-application-e765

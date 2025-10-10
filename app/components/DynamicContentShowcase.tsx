@@ -1,112 +1,5 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
-import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, Clock, Award, Play, Pause, ChevronLeft, ChevronRight } from 'lucide-react';
-interface Feature {
-  icon: React.ComponentType<any>
-  title: string
-  description: string
-  stats?: {
-    value: string
-    label: string
-  }[]
-}
-
-interface Testimonial {
-  id: number
-  name: string
-  company: string
-  role: string
-  content: string
-  rating: number
-  avatar: string
-}
-interface Feature {
-  icon: React.ComponentType<any>
-  title: string
-  description: string
-  benefits: string[]
-}
-const DynamicContentShowcase: React.FC = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isPlaying, setIsPlaying] = useState(true);
-  const features: Feature[] = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced artificial intelligence to automate and optimize your business processes',
-      benefits: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics']
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
-    },
-    {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results',
-      benefits: ['Real-time Processing', 'Scalable Architecture', 'Optimized Performance', 'Low Latency']
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards',
-      benefits: ['End-to-End Encryption', 'Compliance Standards', 'Security Audits', '24/7 Monitoring']
-    },
-    {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses',
-      benefits: ['Multi-Region Support', 'Local Compliance', 'Global CDN', 'International Support']
-    }
-  ];
-  const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ];
-  const testimonials: Testimonial[] = [
-    {
-      name: 'Sarah Johnson',
-      role: 'CTO',
-      content: 'This solution transformed our operations completely. The AI insights are incredible and have helped us make data-driven decisions that increased our efficiency by 300%.',
-      rating: 5
-    },
-    {
-      name: 'Michael Chen',
-      role: 'CEO',
-content: 'The performance improvements we\'ve seen are remarkable. Highly recommended!',
-      rating: 5
-    },
-    {
-      name: 'Emily Rodriguez',
-company: 'InnovateLab',
-      role: 'Product Manager',
-      content: 'The best investment we made this year. ROI was evident within the first month, and the support team is absolutely fantastic.',
-      rating: 5
-    },
-    {
-      name: 'David Kim',
-      company: 'CloudFirst Solutions',
-      role: 'VP Engineering',
-      content: 'Seamless integration with our existing systems. The scalability and performance exceeded our expectations.',
-      rating: 5
-    }
-  ]
-  useEffect(() => {
-    if (!isPlaying) return
-    const timer = setInterval(() => {
-setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-    }, 4000);
-    return () => clearInterval(timer);
-  }, [isPlaying, testimonials.length]);
-=======
 import { ChevronLeft, ChevronRight, Play, Pause, Star, CheckCircle, ArrowRight } from 'lucide-react';
 
 interface ShowcaseItem {
@@ -150,27 +43,9 @@ const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({
     if (isPlaying && items.length > 1) {
       const timer = setInterval(() => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % items.length);
-      }, interval);
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
-
-      return () => clearInterval(timer);
-    }
-  }, [isPlaying, interval, items.length]);
-
-<<<<<<< HEAD
-  const nextTestimonial = () => {
-    setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
-=======
-  const goToPrevious = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + items.length) % items.length);
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
-  };
-
-  const goToNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % items.length);
-  };
-<<<<<<< HEAD
-  const togglePlayPause = () => {
+      }, interval);  const nextTestimonial = () => {
+    setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);  const goToPrevious = () => {
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + items.length) % items.length);  const togglePlayPause = () => {
     setIsPlaying(!isPlaying);
   };
   const currentTestimonial = testimonials[currentIndex];
@@ -324,8 +199,6 @@ const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({
             </div>
             {/* Navigation Controls */}
             <div className="flex items-center justify-center gap-4 mt-8">
-=======
-
   const goToSlide = (index: number) => {
     setCurrentIndex(index);
   };
@@ -414,48 +287,7 @@ const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({
 
           {/* Controls */}
           {showControls && items.length > 1 && (
-            <>
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
-              <button
-                onClick={goToPrevious}
-                className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 hover:bg-opacity-75 text-white p-3 rounded-full transition-colors"
-              >
-                <ChevronLeft className="w-6 h-6" />
-              </button>
-              <button
-                onClick={goToNext}
-                className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 hover:bg-opacity-75 text-white p-3 rounded-full transition-colors"
-              >
-                <ChevronRight className="w-6 h-6" />
-              </button>
-            </>
-          )}
-
-          {/* Play/Pause Button */}
-          {items.length > 1 && (
-            <button
-              onClick={togglePlayPause}
-              className="absolute top-4 right-4 bg-black bg-opacity-50 hover:bg-opacity-75 text-white p-2 rounded-full transition-colors"
-            >
-              {isPlaying ? <Pause className="w-5 h-5" /> : <Play className="w-5 h-5" />}
-            </button>
-          )}
-
-          {/* Indicators */}
-          {showIndicators && items.length > 1 && (
-            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
-              {items.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => goToSlide(index)}
-                  className={`w-3 h-3 rounded-full transition-colors ${
-                    index === currentIndex ? 'bg-cyan-500' : 'bg-white bg-opacity-50'
-                  }`}
-                />
-              ))}
-            </div>
-<<<<<<< HEAD
-          </div>
+            <>          </div>
         </div>
       </section>
       {/* Benefits Section */}
@@ -511,14 +343,6 @@ export default DynamicContentShowcase
   </button>
   </button>
   </section>
-  </any>
-=======
-          )}
+  </any>          )}
         </div>
       </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
-    </div>
-  );
-};
-
-export default DynamicContentShowcase;
