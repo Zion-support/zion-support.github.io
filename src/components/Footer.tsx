@@ -106,7 +106,7 @@ const Footer: React.FC = memo(() => {
     { icon: Shield, text: '99.9% Uptime Guarantee' }
   ];
   return (
-    <footer className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid">
+    <footer className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg relative overflow-hidden">
       {/* Main Footer Content */}
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">

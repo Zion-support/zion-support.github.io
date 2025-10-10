@@ -173,6 +173,253 @@ const HomePage: React.FC = () => {
       savings: '33%'
     },
     {
+      title: 'AI Invoice Generator Pro',
+      description: 'Automated invoice creation with AI-powered pricing optimization and payment tracking',
+      icon: '🧾',
+      price: '$89/month',
+      features: ['Auto-invoice generation', 'Smart pricing', 'Payment tracking', 'Tax calculations', 'Multi-currency', 'Client portal'],
+      benefits: ['90% time savings', 'Zero errors', 'Faster payments', 'Professional invoices'],
+      link: '/ai-invoice-generator',
+      popular: true,
+      category: 'Finance',
+      marketPrice: '$149',
+      savings: '40%'
+    },
+    {
+      title: 'AI Time Tracker Elite',
+      description: 'Intelligent time tracking with AI-powered productivity insights and automatic categorization',
+      icon: '⏰',
+      price: '$79/month',
+      features: ['Auto time tracking', 'Productivity analytics', 'Project billing', 'Team insights', 'Mobile app', 'Integrations'],
+      benefits: ['25% productivity boost', 'Accurate billing', 'Better insights', 'Seamless tracking'],
+      link: '/ai-time-tracker',
+      popular: true,
+      category: 'Productivity',
+      marketPrice: '$129',
+      savings: '39%'
+    },
+    {
+      title: 'AI Expense Tracker Pro',
+      description: 'Smart expense management with AI-powered categorization and receipt processing',
+      icon: '💳',
+      price: '$99/month',
+      features: ['Receipt scanning', 'Auto categorization', 'Tax compliance', 'Budget alerts', 'Expense reports', 'Team management'],
+      benefits: ['95% accuracy', 'Tax ready', 'Time savings', 'Better control'],
+      link: '/ai-expense-tracker',
+      popular: true,
+      category: 'Finance',
+      marketPrice: '$179',
+      savings: '45%'
+    },
+    {
+      title: 'AI Meeting Scheduler Pro',
+      description: 'Intelligent meeting scheduling with AI-powered optimization and conflict resolution',
+      icon: '📅',
+      price: '$69/month',
+      features: ['Smart scheduling', 'Conflict resolution', 'Time zone handling', 'Calendar sync', 'Meeting prep', 'Follow-ups'],
+      benefits: ['50% fewer conflicts', 'Better meetings', 'Time savings', 'Improved efficiency'],
+      link: '/ai-scheduler',
+      popular: false,
+      category: 'Productivity',
+      marketPrice: '$119',
+      savings: '42%'
+    },
+    {
+      title: 'AI Password Manager Elite',
+      description: 'Advanced password management with AI-powered security recommendations and breach monitoring',
+      icon: '🔐',
+      price: '$59/month',
+      features: ['Password generation', 'Security scoring', 'Breach monitoring', 'Team sharing', '2FA integration', 'Dark web scan'],
+      benefits: ['Enhanced security', 'Zero breaches', 'Easy management', 'Team protection'],
+      link: '/ai-password-manager',
+      popular: true,
+      category: 'Security',
+      marketPrice: '$99',
+      savings: '40%'
+    },
+    {
+      title: 'AI Document Processor Pro',
+      description: 'Intelligent document processing with AI-powered extraction and analysis',
+      icon: '📄',
+      price: '$149/month',
+      features: ['OCR processing', 'Data extraction', 'Document analysis', 'Format conversion', 'Batch processing', 'API access'],
+      benefits: ['99% accuracy', '10x faster', 'Cost reduction', 'Better insights'],
+      link: '/ai-document-processor',
+      popular: true,
+      category: 'Productivity',
+      marketPrice: '$249',
+      savings: '40%'
+    },
+    {
+      title: 'AI Inventory Manager Pro',
+      description: 'Smart inventory management with AI-powered demand forecasting and optimization',
+      icon: '📦',
+      price: '$179/month',
+      features: ['Demand forecasting', 'Auto reordering', 'Stock optimization', 'Analytics dashboard', 'Multi-location', 'Integrations'],
+      benefits: ['30% cost reduction', 'Zero stockouts', 'Better forecasting', 'Automated management'],
+      link: '/ai-inventory-manager',
+      popular: true,
+      category: 'Operations',
+      marketPrice: '$299',
+      savings: '40%'
+    },
+    {
+      title: 'AI HR Assistant Pro',
+      description: 'Intelligent HR management with AI-powered candidate screening and employee insights',
+      icon: '👥',
+      price: '$199/month',
+      features: ['Resume screening', 'Interview scheduling', 'Employee analytics', 'Performance tracking', 'Compliance monitoring', 'Onboarding'],
+      benefits: ['60% faster hiring', 'Better candidates', 'Reduced bias', 'Improved retention'],
+      link: '/ai-hr-assistant',
+      popular: true,
+      category: 'HR',
+      marketPrice: '$349',
+      savings: '43%'
+    },
+    {
+      title: 'AI Customer Insights Pro',
+      description: 'Deep customer analytics with AI-powered behavior analysis and predictive insights',
+      icon: '👤',
+      price: '$249/month',
+      features: ['Behavior analysis', 'Predictive insights', 'Segmentation', 'Churn prediction', 'Lifetime value', 'Personalization'],
+      benefits: ['40% better retention', 'Higher LTV', 'Personalized experiences', 'Data-driven decisions'],
+      link: '/ai-customer-insights',
+      popular: true,
+      category: 'Analytics',
+      marketPrice: '$399',
+      savings: '38%'
+    },
+    {
+      title: 'AI A/B Testing Platform',
+      description: 'Advanced A/B testing with AI-powered optimization and statistical analysis',
+      icon: '🧪',
+      price: '$129/month',
+      features: ['Smart testing', 'Statistical analysis', 'Auto optimization', 'Multi-variate', 'Real-time results', 'Integrations'],
+      benefits: ['50% better results', 'Faster insights', 'Automated optimization', 'Higher conversions'],
+      link: '/ai-ab-testing',
+      popular: false,
+      category: 'Marketing',
+      marketPrice: '$199',
+      savings: '35%'
+    },
+    {
+      title: 'AI Sales Forecasting Pro',
+      description: 'Predictive sales analytics with AI-powered forecasting and pipeline optimization',
+      icon: '📈',
+      price: '$199/month',
+      features: ['Sales forecasting', 'Pipeline analysis', 'Lead scoring', 'Revenue prediction', 'Trend analysis', 'Alerts'],
+      benefits: ['85% accuracy', 'Better planning', 'Higher revenue', 'Risk mitigation'],
+      link: '/ai-sales-forecasting',
+      popular: true,
+      category: 'Sales',
+      marketPrice: '$329',
+      savings: '39%'
+    },
+    {
+      title: 'AI Lead Scoring Elite',
+      description: 'Intelligent lead qualification with AI-powered scoring and conversion optimization',
+      icon: '🎯',
+      price: '$149/month',
+      features: ['Lead scoring', 'Behavior tracking', 'Conversion prediction', 'CRM integration', 'Custom models', 'Analytics'],
+      benefits: ['300% more qualified leads', 'Higher conversion', 'Better targeting', 'ROI tracking'],
+      link: '/ai-lead-scoring',
+      popular: true,
+      category: 'Sales',
+      marketPrice: '$249',
+      savings: '40%'
+    },
+    {
+      title: 'AI Performance Tracker Pro',
+      description: 'Comprehensive performance monitoring with AI-powered insights and optimization',
+      icon: '📊',
+      price: '$119/month',
+      features: ['Real-time monitoring', 'Performance analytics', 'Anomaly detection', 'Custom dashboards', 'Alerts', 'Reporting'],
+      benefits: ['Proactive monitoring', 'Faster resolution', 'Better insights', 'Cost optimization'],
+      link: '/ai-performance-tracker',
+      popular: false,
+      category: 'Analytics',
+      marketPrice: '$199',
+      savings: '40%'
+    },
+    {
+      title: 'AI Security Monitor Pro',
+      description: 'Advanced security monitoring with AI-powered threat detection and response',
+      icon: '🛡️',
+      price: '$299/month',
+      features: ['Threat detection', 'Anomaly analysis', 'Incident response', 'Compliance monitoring', 'Real-time alerts', 'Forensics'],
+      benefits: ['99.9% threat detection', 'Faster response', 'Compliance ready', 'Peace of mind'],
+      link: '/ai-security-monitor',
+      popular: true,
+      category: 'Security',
+      marketPrice: '$499',
+      savings: '40%'
+    },
+    {
+      title: 'AI Voice Assistant Pro',
+      description: 'Custom voice assistants with AI-powered natural language processing and integration',
+      icon: '🎤',
+      price: '$179/month',
+      features: ['Voice recognition', 'Natural language', 'Custom commands', 'API integration', 'Multi-language', 'Analytics'],
+      benefits: ['Hands-free operation', 'Better accessibility', 'Custom solutions', 'Easy integration'],
+      link: '/ai-voice-assistant',
+      popular: false,
+      category: 'Automation',
+      marketPrice: '$299',
+      savings: '40%'
+    },
+    {
+      title: 'AI 3D Generation Studio',
+      description: 'AI-powered 3D model generation and animation with professional quality output',
+      icon: '🎨',
+      price: '$399/month',
+      features: ['3D model generation', 'Animation creation', 'Texture generation', 'Rendering', 'Export options', 'API access'],
+      benefits: ['10x faster creation', 'Professional quality', 'Cost effective', 'Unlimited models'],
+      link: '/ai-3d-generation',
+      popular: true,
+      category: 'Design',
+      marketPrice: '$699',
+      savings: '43%'
+    },
+    {
+      title: 'AI Mobile App Builder',
+      description: 'No-code mobile app development with AI-powered design and functionality generation',
+      icon: '📱',
+      price: '$249/month',
+      features: ['No-code builder', 'AI design', 'Cross-platform', 'App store deployment', 'Analytics', 'Push notifications'],
+      benefits: ['90% faster development', 'No coding required', 'Professional apps', 'Easy deployment'],
+      link: '/ai-mobile-builder',
+      popular: true,
+      category: 'Development',
+      marketPrice: '$399',
+      savings: '38%'
+    },
+    {
+      title: 'AI E-commerce Optimizer',
+      description: 'Complete e-commerce optimization with AI-powered recommendations and conversion tracking',
+      icon: '🛒',
+      price: '$199/month',
+      features: ['Product recommendations', 'Price optimization', 'Conversion tracking', 'A/B testing', 'Analytics', 'Integrations'],
+      benefits: ['40% higher conversion', 'Better recommendations', 'Optimized pricing', 'Increased revenue'],
+      link: '/ai-ecommerce-optimizer',
+      popular: true,
+      category: 'E-commerce',
+      marketPrice: '$329',
+      savings: '39%'
+    },
+    {
+      title: 'AI Design Assistant Pro',
+      description: 'AI-powered design tool with automated layout generation and brand consistency',
+      icon: '🎨',
+      price: '$149/month',
+      features: ['Auto design generation', 'Brand consistency', 'Layout optimization', 'Color matching', 'Template library', 'Export options'],
+      benefits: ['10x faster design', 'Consistent branding', 'Professional quality', 'Easy customization'],
+      link: '/ai-design-assistant',
+      popular: true,
+      category: 'Design',
+      marketPrice: '$249',
+      savings: '40%'
+    },
+    {
       title: 'AI Social Media Manager',
       description: 'Automate your social media with AI-powered content creation and smart scheduling',
       icon: '📱',
@@ -383,6 +630,90 @@ const HomePage: React.FC = () => {
       contact: 'kleber@ziontechgroup.com'
     },
     {
+      title: 'AI-Powered Business Intelligence',
+      description: 'Advanced BI solutions with AI-driven insights and automated reporting for enterprise decision-making',
+      icon: BarChart,
+      price: '$3,200/month',
+      features: ['AI Analytics', 'Automated Reporting', 'Predictive Insights', 'Real-time Dashboards', 'Data Visualization', 'Custom Models', 'API Integration', 'Mobile Access'],
+      color: 'text-blue-400',
+      benefits: ['50% faster decisions', 'Real-time insights', 'Automated reports', 'Better forecasting', 'ROI tracking'],
+      marketPrice: '$5,500',
+      savings: '42%',
+      contact: 'kleber@ziontechgroup.com'
+    },
+    {
+      title: 'AI Cloud Infrastructure',
+      description: 'Scalable AI cloud solutions with automated scaling and cost optimization for enterprise workloads',
+      icon: Cloud,
+      price: '$2,800/month',
+      features: ['Auto-scaling', 'Cost Optimization', 'GPU Acceleration', 'Model Deployment', 'Data Pipeline', 'Monitoring', 'Security', 'Compliance'],
+      color: 'text-cyan-400',
+      benefits: ['60% cost reduction', 'Auto-scaling', 'High availability', 'Security compliance', 'Easy management'],
+      marketPrice: '$4,800',
+      savings: '42%',
+      contact: 'kleber@ziontechgroup.com'
+    },
+    {
+      title: 'AI Research & Development',
+      description: 'Custom AI research and development services for cutting-edge solutions and innovation',
+      icon: Microscope,
+      price: '$5,000/month',
+      features: ['Custom AI Research', 'Algorithm Development', 'Proof of Concept', 'Prototype Development', 'Technical Consulting', 'Patent Support', 'Academic Collaboration', 'Innovation Labs'],
+      color: 'text-yellow-400',
+      benefits: ['Cutting-edge solutions', 'Competitive advantage', 'Innovation leadership', 'Custom development', 'Research partnership'],
+      marketPrice: '$8,500',
+      savings: '41%',
+      contact: 'kleber@ziontechgroup.com'
+    },
+    {
+      title: 'AI Edge Computing Solutions',
+      description: 'Edge AI deployment for real-time processing and low-latency applications in IoT environments',
+      icon: Cpu,
+      price: '$2,200/month',
+      features: ['Edge Deployment', 'Real-time Processing', 'Low Latency', 'IoT Integration', 'Model Optimization', 'Device Management', 'Data Synchronization', 'Offline Capability'],
+      color: 'text-green-400',
+      benefits: ['Real-time processing', 'Reduced latency', 'Cost efficiency', 'Offline capability', 'Scalable deployment'],
+      marketPrice: '$3,800',
+      savings: '42%',
+      contact: 'kleber@ziontechgroup.com'
+    },
+    {
+      title: 'AI Blockchain Integration',
+      description: 'AI-powered blockchain solutions for smart contracts, DeFi, and decentralized applications',
+      icon: Layers,
+      price: '$3,500/month',
+      features: ['Smart Contracts', 'DeFi Solutions', 'NFT Platforms', 'Token Development', 'AI Integration', 'Security Audits', 'Compliance', 'Consulting'],
+      color: 'text-orange-400',
+      benefits: ['Decentralized solutions', 'Enhanced security', 'AI-powered automation', 'Future-proof technology', 'Innovation'],
+      marketPrice: '$6,000',
+      savings: '42%',
+      contact: 'kleber@ziontechgroup.com'
+    },
+    {
+      title: 'AI IoT Solutions',
+      description: 'Intelligent IoT systems with AI-powered data processing and device management',
+      icon: Wifi,
+      price: '$2,600/month',
+      features: ['Device Management', 'Data Processing', 'Predictive Maintenance', 'Real-time Analytics', 'Edge Computing', 'Security', 'Integration', 'Monitoring'],
+      color: 'text-indigo-400',
+      benefits: ['Smart automation', 'Predictive maintenance', 'Real-time insights', 'Cost reduction', 'Enhanced efficiency'],
+      marketPrice: '$4,500',
+      savings: '42%',
+      contact: 'kleber@ziontechgroup.com'
+    },
+    {
+      title: 'AI AR/VR Solutions',
+      description: 'Immersive AI-powered augmented and virtual reality applications for enterprise and consumer use',
+      icon: Eye,
+      price: '$4,200/month',
+      features: ['AR Development', 'VR Applications', 'AI Integration', '3D Modeling', 'Spatial Computing', 'Gesture Recognition', 'Voice Control', 'Analytics'],
+      color: 'text-pink-400',
+      benefits: ['Immersive experiences', 'AI-powered interactions', 'Enhanced engagement', 'Innovative solutions', 'Future technology'],
+      marketPrice: '$7,200',
+      savings: '42%',
+      contact: 'kleber@ziontechgroup.com'
+    },
+    {
       title: 'Natural Language Processing',
       description: 'Advanced NLP solutions for text analysis and language understanding with 95%+ accuracy',
       icon: MessageSquare,
@@ -479,6 +810,114 @@ const HomePage: React.FC = () => {
       benefits: ['50% cost reduction', '99.9% uptime', 'Scalable infrastructure', 'Enhanced security', 'ROI tracking'],
       marketPrice: '$2,800',
       savings: '46%',
+      contact: '+1 302 464 0950'
+    },
+    {
+      title: 'Enterprise IT Consulting',
+      description: 'Strategic IT consulting for digital transformation and technology optimization',
+      icon: Briefcase,
+      price: '$200/hour',
+      features: ['Technology Strategy', 'Digital Transformation', 'Process Optimization', 'Technology Selection', 'Implementation Planning', 'Change Management', 'Training', 'Ongoing Support'],
+      color: 'text-indigo-400',
+      benefits: ['Strategic guidance', 'Cost optimization', 'Technology alignment', 'Expert advice', 'Implementation support'],
+      marketPrice: '$350/hour',
+      savings: '43%',
+      contact: '+1 302 464 0950'
+    },
+    {
+      title: 'Managed IT Services',
+      description: 'Comprehensive managed IT services with 24/7 monitoring and proactive maintenance',
+      icon: Settings,
+      price: '$1,200/month',
+      features: ['24/7 Monitoring', 'Proactive Maintenance', 'Help Desk Support', 'Security Management', 'Backup & Recovery', 'Software Updates', 'Performance Optimization', 'Compliance'],
+      color: 'text-green-400',
+      benefits: ['Reduced downtime', 'Proactive support', 'Cost predictability', 'Expert management', 'Peace of mind'],
+      marketPrice: '$2,200',
+      savings: '45%',
+      contact: '+1 302 464 0950'
+    },
+    {
+      title: 'IT Security & Compliance',
+      description: 'Comprehensive security services including threat detection, incident response, and compliance',
+      icon: Shield,
+      price: '$2,200/month',
+      features: ['Security Assessment', 'Threat Detection', 'Incident Response', 'Penetration Testing', 'Compliance Audit', 'Security Training', 'Vulnerability Management', 'Zero Trust'],
+      color: 'text-red-400',
+      benefits: ['Enhanced security', 'Compliance ready', 'Risk reduction', '24/7 protection', 'Expert support'],
+      marketPrice: '$3,800',
+      savings: '42%',
+      contact: '+1 302 464 0950'
+    },
+    {
+      title: 'IT Infrastructure Design',
+      description: 'Custom IT infrastructure design and implementation for enterprise environments',
+      icon: Server,
+      price: '$1,800/month',
+      features: ['Infrastructure Design', 'Network Architecture', 'Server Configuration', 'Storage Solutions', 'Security Implementation', 'Performance Optimization', 'Scalability Planning', 'Documentation'],
+      color: 'text-purple-400',
+      benefits: ['Custom solutions', 'Scalable design', 'Performance optimized', 'Future-proof', 'Expert implementation'],
+      marketPrice: '$3,200',
+      savings: '44%',
+      contact: '+1 302 464 0950'
+    },
+    {
+      title: 'IT Performance Monitoring',
+      description: 'Advanced IT performance monitoring with real-time analytics and optimization',
+      icon: Activity,
+      price: '$1,400/month',
+      features: ['Real-time Monitoring', 'Performance Analytics', 'Capacity Planning', 'Alert Management', 'Reporting', 'Trend Analysis', 'Optimization', 'Predictive Maintenance'],
+      color: 'text-cyan-400',
+      benefits: ['Proactive monitoring', 'Performance optimization', 'Cost reduction', 'Better insights', 'Preventive maintenance'],
+      marketPrice: '$2,500',
+      savings: '44%',
+      contact: '+1 302 464 0950'
+    },
+    {
+      title: 'IT Disaster Recovery',
+      description: 'Comprehensive disaster recovery planning and implementation for business continuity',
+      icon: Backup,
+      price: '$1,600/month',
+      features: ['Disaster Recovery Planning', 'Backup Solutions', 'Recovery Testing', 'Business Continuity', 'Data Protection', 'RTO/RPO Optimization', 'Documentation', 'Training'],
+      color: 'text-orange-400',
+      benefits: ['Business continuity', 'Data protection', 'Fast recovery', 'Risk mitigation', 'Compliance ready'],
+      marketPrice: '$2,800',
+      savings: '43%',
+      contact: '+1 302 464 0950'
+    },
+    {
+      title: 'IT Training & Certification',
+      description: 'Comprehensive IT training programs and certification support for staff development',
+      icon: GraduationCap,
+      price: '$800/month',
+      features: ['Technical Training', 'Certification Programs', 'Skill Assessment', 'Custom Curriculum', 'Hands-on Labs', 'Exam Preparation', 'Progress Tracking', 'Certification Support'],
+      color: 'text-yellow-400',
+      benefits: ['Skill development', 'Certification support', 'Better performance', 'Career growth', 'Team productivity'],
+      marketPrice: '$1,400',
+      savings: '43%',
+      contact: '+1 302 464 0950'
+    },
+    {
+      title: 'Global IT Support',
+      description: 'Worldwide IT support services with multilingual support and 24/7 availability',
+      icon: Globe,
+      price: '$1,000/month',
+      features: ['24/7 Support', 'Multilingual Support', 'Remote Assistance', 'On-site Support', 'Global Coverage', 'Time Zone Coverage', 'Escalation Management', 'SLA Guarantee'],
+      color: 'text-blue-400',
+      benefits: ['Global coverage', '24/7 support', 'Multilingual', 'Fast response', 'Consistent service'],
+      marketPrice: '$1,800',
+      savings: '44%',
+      contact: '+1 302 464 0950'
+    },
+    {
+      title: 'IT Automation Services',
+      description: 'IT process automation and workflow optimization for improved efficiency',
+      icon: Zap,
+      price: '$1,300/month',
+      features: ['Process Automation', 'Workflow Optimization', 'Script Development', 'Integration Services', 'Monitoring Automation', 'Deployment Automation', 'Maintenance Automation', 'Custom Solutions'],
+      color: 'text-cyan-400',
+      benefits: ['Process efficiency', 'Cost reduction', 'Error reduction', 'Scalable automation', 'Better reliability'],
+      marketPrice: '$2,200',
+      savings: '41%',
       contact: '+1 302 464 0950'
     },
     {
@@ -655,12 +1094,14 @@ const HomePage: React.FC = () => {
       <SecurityEnhancer />
       {/* Navigation */}
       <Navigation />
-      {/* Hero Section with Futuristic Design */}
+      {/* Hero Section with Enhanced Futuristic Design */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Animated Background */}
+        {/* Enhanced Animated Background */}
         <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 via-purple-500/20 to-pink-500/20 animate-pulse"></div>
+        <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/10 via-purple-600/10 to-cyan-600/10 animate-pulse"></div>
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.05%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
-        {/* Neon Grid Overlay */}
+        
+        {/* Enhanced Neon Grid Overlay */}
         <div className="absolute inset-0" style={{
           backgroundImage: `
             linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
@@ -668,47 +1109,97 @@ const HomePage: React.FC = () => {
           `,
           backgroundSize: '50px 50px'
         }}></div>
+        
+        {/* Animated Particles */}
+        <div className="absolute inset-0">
+          {[...Array(50)].map((_, i) => (
+            <div
+              key={i}
+              className="absolute w-1 h-1 bg-cyan-400 rounded-full animate-pulse"
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+                animationDelay: `${Math.random() * 3}s`,
+                animationDuration: `${2 + Math.random() * 3}s`
+              }}
+            />
+          ))}
+        </div>
+        
+        {/* Floating Geometric Shapes */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-20 left-10 w-20 h-20 border border-cyan-400/30 rotate-45 animate-spin" style={{ animationDuration: '20s' }}></div>
+          <div className="absolute top-40 right-20 w-16 h-16 border border-purple-400/30 rounded-full animate-bounce" style={{ animationDelay: '1s' }}></div>
+          <div className="absolute bottom-32 left-1/4 w-12 h-12 border border-pink-400/30 rotate-12 animate-pulse"></div>
+          <div className="absolute bottom-20 right-1/3 w-24 h-24 border border-cyan-400/20 rotate-45 animate-spin" style={{ animationDuration: '15s', animationDirection: 'reverse' }}></div>
+        </div>
         <div className="relative z-10 container mx-auto px-4 text-center">
           <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            <h1 className="text-6xl md: text-8xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-pulse">
-              ZION TECH GROUP
-  </
-            <p className="text-2xl md:text-3xl text-white mb-8 font-light">
-              AI-Powered Enterprise Solutions & Digital Transformation,
-  </
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-              <div className="flex items-center text-cyan-400 text-lg">
-                <Phone className="w-6 h-6 mr-2" />
-                <a href="tel:+13024640950" onClick={handlePhoneClick} className="hover: text-cyan-300 transition-colors">
+            {/* Enhanced Main Title with Neon Effects */}
+            <div className="relative mb-8">
+              <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-pulse relative">
+                ZION TECH GROUP
+                <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent blur-sm opacity-50">
+                  ZION TECH GROUP
+                </div>
+              </h1>
+              <div className="absolute -top-4 -left-4 w-full h-full border border-cyan-400/20 rounded-lg animate-pulse"></div>
+            </div>
+            
+            {/* Enhanced Subtitle */}
+            <p className="text-2xl md:text-3xl text-white mb-4 font-light">
+              AI-Powered Enterprise Solutions & Digital Transformation
+            </p>
+            <p className="text-lg md:text-xl text-cyan-300 mb-8 font-medium">
+              Transforming Businesses with Cutting-Edge Technology & Innovation
+            </p>
+            {/* Enhanced Contact Information */}
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
+              <div className="group flex items-center text-cyan-400 text-lg bg-slate-800/50 backdrop-blur-sm px-6 py-3 rounded-lg border border-cyan-400/30 hover:border-cyan-400/60 transition-all duration-300 hover:scale-105">
+                <Phone className="w-6 h-6 mr-3 group-hover:animate-pulse" />
+                <a href="tel:+13024640950" onClick={handlePhoneClick} className="hover:text-cyan-300 transition-colors font-medium">
                   +1 302 464 0950
-  </
+                </a>
               </div>
-              <div className="flex items-center text-purple-400 text-lg">
-                <Mail className="w-6 h-6 mr-2" />
-                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-purple-300 transition-colors">
-                  kleber@ziontechgroup.com,
-  </
+              <div className="group flex items-center text-purple-400 text-lg bg-slate-800/50 backdrop-blur-sm px-6 py-3 rounded-lg border border-purple-400/30 hover:border-purple-400/60 transition-all duration-300 hover:scale-105">
+                <Mail className="w-6 h-6 mr-3 group-hover:animate-pulse" />
+                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-purple-300 transition-colors font-medium">
+                  kleber@ziontechgroup.com
+                </a>
               </div>
-              <div className="flex items-center text-pink-400 text-lg">
-                <MapPin className="w-6 h-6 mr-2" />
-                <span>364 E Main St STE 1008, Middletown DE 19709</span>
+              <div className="group flex items-center text-pink-400 text-lg bg-slate-800/50 backdrop-blur-sm px-6 py-3 rounded-lg border border-pink-400/30 hover:border-pink-400/60 transition-all duration-300 hover:scale-105">
+                <MapPin className="w-6 h-6 mr-3 group-hover:animate-pulse" />
+                <span className="font-medium">364 E Main St STE 1008, Middletown DE 19709</span>
               </div>
             </div>
+            {/* Enhanced Statistics Cards */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-              <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-cyan-400/30 hover:border-cyan-400/60 transition-all duration-300 hover:scale-105">
-                <div className="text-4xl mb-4">🚀</div>
-                <h3 className="text-xl font-bold text-white mb-2">300% ROI</h3>
-                <p className="text-gray-300">Average return on AI investments</p>
+              <div className="group relative bg-gradient-to-br from-cyan-500/10 to-blue-600/10 backdrop-blur-lg rounded-xl p-6 border border-cyan-400/30 hover:border-cyan-400/60 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20">
+                <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="relative z-10">
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">🚀</div>
+                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">300% ROI</h3>
+                  <p className="text-gray-300 group-hover:text-cyan-200 transition-colors">Average return on AI investments</p>
+                  <div className="mt-4 h-1 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+                </div>
               </div>
-              <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-purple-400/30 hover:border-purple-400/60 transition-all duration-300 hover:scale-105">
-                <div className="text-4xl mb-4">⚡</div>
-                <h3 className="text-xl font-bold text-white mb-2">70% Cost Reduction</h3>
-                <p className="text-gray-300">Through intelligent automation</p>
+              <div className="group relative bg-gradient-to-br from-purple-500/10 to-pink-600/10 backdrop-blur-lg rounded-xl p-6 border border-purple-400/30 hover:border-purple-400/60 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20">
+                <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="relative z-10">
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">⚡</div>
+                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">70% Cost Reduction</h3>
+                  <p className="text-gray-300 group-hover:text-purple-200 transition-colors">Through intelligent automation</p>
+                  <div className="mt-4 h-1 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+                </div>
               </div>
-              <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-pink-400/30 hover:border-pink-400/60 transition-all duration-300 hover:scale-105">
-                <div className="text-4xl mb-4">🎯</div>
-                <h3 className="text-xl font-bold text-white mb-2">90% Efficiency</h3>
-                <p className="text-gray-300">Gains with our AI solutions</p>
+              <div className="group relative bg-gradient-to-br from-pink-500/10 to-red-600/10 backdrop-blur-lg rounded-xl p-6 border border-pink-400/30 hover:border-pink-400/60 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-pink-500/20">
+                <div className="absolute inset-0 bg-gradient-to-br from-pink-500/5 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="relative z-10">
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">🎯</div>
+                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-pink-400 transition-colors">90% Efficiency</h3>
+                  <p className="text-gray-300 group-hover:text-pink-200 transition-colors">Gains with our AI solutions</p>
+                  <div className="mt-4 h-1 bg-gradient-to-r from-pink-400 to-red-400 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+                </div>
               </div>
             </div>
           </div>
