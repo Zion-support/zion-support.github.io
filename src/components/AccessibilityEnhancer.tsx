@@ -36,6 +36,10 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
         if (!button.getAttribute('aria-label') && button.textContent) {
           button.setAttribute('aria-label', button.textContent.trim());
         }
+        // Add role if missing
+        if (!button.getAttribute('role')) {
+          button.setAttribute('role', 'button');
+        }
       });
 
       const links = document.querySelectorAll('a:not([aria-label])');
@@ -43,7 +47,37 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
         if (!link.getAttribute('aria-label') && link.textContent) {
           link.setAttribute('aria-label', link.textContent.trim());
         }
+        // Add external link indicators
+        if (link.getAttribute('href')?.startsWith('http') && !link.getAttribute('href')?.includes('ziontechgroup.com')) {
+          link.setAttribute('aria-label', `${link.textContent?.trim()} (opens in new tab)`);
+          link.setAttribute('target', '_blank');
+          link.setAttribute('rel', 'noopener noreferrer');
+        }
       });
+
+      // Add ARIA labels to images
+      const images = document.querySelectorAll('img:not([alt])');
+      images.forEach(img => {
+        if (!img.getAttribute('alt')) {
+          img.setAttribute('alt', '');
+        }
+      });
+
+      // Add ARIA labels to form inputs
+      const inputs = document.querySelectorAll('input:not([aria-label])');
+      inputs.forEach(input => {
+        const label = document.querySelector(`label[for="${input.getAttribute('id')}"]`);
+        if (label && !input.getAttribute('aria-label')) {
+          input.setAttribute('aria-label', label.textContent?.trim() || '');
+        }
+      });
+
+      // Add skip links
+      const skipLink = document.createElement('a');
+      skipLink.href = '#main-content';
+      skipLink.textContent = 'Skip to main content';
+      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
+      document.body.insertBefore(skipLink, document.body.firstChild);
     };
 
     addFocusIndicators();

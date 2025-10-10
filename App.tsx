@@ -12,8 +12,10 @@ import SEOHead from './src/components/EnhancedSEOHead';
 import SkipLink from './src/components/SkipLink';
 import PerformanceOptimizer from './src/components/PerformanceOptimizer';
 import AccessibilityEnhancer from './src/components/AccessibilityEnhancer';
+import EnhancedAccessibility from './src/components/EnhancedAccessibility';
 import { usePerformanceMonitor } from './src/hooks/usePerformanceMonitor';
 import { AnalyticsProvider } from './src/components/Analytics';
+import PerformanceMonitor from './src/components/PerformanceMonitor';
 
 // Structured data for SEO
 const structuredData = {
@@ -78,40 +80,8 @@ const StatusPage = React.lazy(() => import('./app/status/page'));
 const DemoPage = React.lazy(() => import('./app/demo/page'));
 const ConsultationPage = React.lazy(() => import('./app/consultation/page'));
 const ServicesPage = React.lazy(() => import('./app/services/page'));
-
-// AI Services Pages
-const AI3DGenerationPage = React.lazy(() => import('./app/ai-3d-generation/page'));
-const AIAgriculturalIntelligenceProPage = React.lazy(() => import('./app/ai-agricultural-intelligence-pro/page'));
-const AIAnalyticsDashboardPage = React.lazy(() => import('./app/ai-analytics-dashboard/page'));
-const AIAPIManagementPage = React.lazy(() => import('./app/ai-api-management/page'));
-const AIAutonomousSystemsPage = React.lazy(() => import('./app/ai-autonomous-systems/page'));
-const AIBlockchainSolutionsPage = React.lazy(() => import('./app/ai-blockchain-solutions/page'));
-const AIClimateSolutionsProPage = React.lazy(() => import('./app/ai-climate-solutions-pro/page'));
-const AIComputerVisionPage = React.lazy(() => import('./app/ai-computer-vision/page'));
-const AIContentGenerationPage = React.lazy(() => import('./app/ai-content-generation/page'));
-const AIContentStudioPage = React.lazy(() => import('./app/ai-content-studio/page'));
-const AIContentWriterPage = React.lazy(() => import('./app/ai-content-writer/page'));
-const AICRMAssistantPage = React.lazy(() => import('./app/ai-crm-assistant/page'));
-const AICustomerSupportPage = React.lazy(() => import('./app/ai-customer-support/page'));
-const AICustomerSupportBotPage = React.lazy(() => import('./app/ai-customer-support-bot/page'));
-const AIDataAnalyticsPage = React.lazy(() => import('./app/ai-data-analytics/page'));
-const AIDrugDiscoveryProPage = React.lazy(() => import('./app/ai-drug-discovery-pro/page'));
-const AIEmailMarketingPage = React.lazy(() => import('./app/ai-email-marketing/page'));
-const AIEnergyPage = React.lazy(() => import('./app/ai-energy/page'));
-const AIEnergyGridManagementProPage = React.lazy(() => import('./app/ai-energy-grid-management-pro/page'));
-const AIFashionDesignPage = React.lazy(() => import('./app/ai-fashion-design/page'));
-const AIFinancialAdvisorPage = React.lazy(() => import('./app/ai-financial-advisor/page'));
-const AIFinancialCrimeDetectionProPage = React.lazy(() => import('./app/ai-financial-crime-detection-pro/page'));
-const AIFintechPage = React.lazy(() => import('./app/ai-fintech/page'));
-const AIHealthcarePage = React.lazy(() => import('./app/ai-healthcare/page'));
-const AIHolographicWorkspacePage = React.lazy(() => import('./app/ai-holographic-workspace/page'));
-const AIInfrastructureMonitoringPage = React.lazy(() => import('./app/ai-infrastructure-monitoring/page'));
-const AILogoDesignerPage = React.lazy(() => import('./app/ai-logo-designer/page'));
-const AIMLPlatformPage = React.lazy(() => import('./app/ai-ml-platform/page'));
-const AIMobileAppBuilderPage = React.lazy(() => import('./app/ai-mobile-app-builder/page'));
-const AIMusicCompositionPage = React.lazy(() => import('./app/ai-music-composition/page'));
-const AINeuralMemoryAssistantPage = React.lazy(() => import('./app/ai-neural-memory-assistant/page'));
 const AIOpsPage = React.lazy(() => import('./app/ai-ops/page'));
+<<<<<<< HEAD
 const AIProjectManagerPage = React.lazy(() => import('./app/ai-project-manager/page'));
 const AIQuantumComputingPage = React.lazy(() => import('./app/ai-quantum-computing/page'));
 const AIQuantumFinancialOraclePage = React.lazy(() => import('./app/ai-quantum-financial-oracle/page'));
@@ -162,9 +132,14 @@ const CompliancePage = React.lazy(() => import('./app/compliance/page'));
 const GDPRPage = React.lazy(() => import('./app/gdpr/page'));
 const EdgeComputingPage = React.lazy(() => import('./app/edge-computing/page'));
 const FinancialITPage = React.lazy(() => import('./app/financial-it/page'));
+=======
+>>>>>>> origin/main
 const HealthcareITPage = React.lazy(() => import('./app/healthcare-it/page'));
-const IoTPlatformPage = React.lazy(() => import('./app/iot-platform/page'));
+const FinancialITPage = React.lazy(() => import('./app/financial-it/page'));
+const EdgeComputingPage = React.lazy(() => import('./app/edge-computing/page'));
 const FiveGImplementationPage = React.lazy(() => import('./app/5g-implementation/page'));
+const IoTPlatformPage = React.lazy(() => import('./app/iot-platform/page'));
+
 
 // Performance monitoring hook
 const AppWithPerformanceMonitoring: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -179,7 +154,8 @@ const App: React.FC = memo(() => {
         <AnalyticsProvider>
           <PerformanceOptimizer>
             <AccessibilityEnhancer>
-              <AppWithPerformanceMonitoring>
+              <EnhancedAccessibility>
+                <AppWithPerformanceMonitoring>
                 <SEOHead />
                 <Router>
                 <div className="min-h-screen bg-white overflow-x-hidden">
@@ -188,6 +164,7 @@ const App: React.FC = memo(() => {
                   <main id="main-content" className="w-full">
                     <Suspense fallback={<PageLoader message="Loading Zion Tech Group..." />}>
                     <Routes>
+<<<<<<< HEAD
 <<<<<<< HEAD
                       <Route path="/" element={
                         <div className="w-full">
@@ -202,10 +179,15 @@ const App: React.FC = memo(() => {
 =======
                       <Route path="/" element={<HomePage />} />
 >>>>>>> origin/main
+=======
+<Route path="/" element={<HomePage />} />
+>>>>>>> origin/main
                       <Route path="/about" element={<AboutPage />} />
                       <Route path="/contact" element={<ContactPage />} />
                       <Route path="/pricing" element={<PricingPage />} />
-                      <Route path="/services" element={<ServicesPage />} />
+                      <Route path="/ai-services" element={<AIServicesPage />} />
+                      <Route path="/it-services" element={<ITServicesPage />} />
+                      <Route path="/micro-saas" element={<MicroSaasPage />} />
                       <Route path="/blog" element={<BlogPage />} />
                       <Route path="/case-studies" element={<CaseStudiesPage />} />
                       <Route path="/team" element={<TeamPage />} />
@@ -219,6 +201,7 @@ const App: React.FC = memo(() => {
                       <Route path="/status" element={<StatusPage />} />
                       <Route path="/demo" element={<DemoPage />} />
                       <Route path="/consultation" element={<ConsultationPage />} />
+<<<<<<< HEAD
                       <Route path="/health" element={<HealthPage />} />
                       <Route path="/security" element={<SecurityPage />} />
                       <Route path="/compliance" element={<CompliancePage />} />
@@ -311,13 +294,17 @@ const App: React.FC = memo(() => {
                       <Route path="/healthcare-it" element={<HealthcareITPage />} />
                       <Route path="/iot-platform" element={<IoTPlatformPage />} />
                       <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
+=======
+<Route path="/services" element={<ServicesPage />} />
+>>>>>>> origin/main
                     </Routes>
                   </Suspense>
                   </main>
                   <Footer />
                 </div>
                 </Router>
-              </AppWithPerformanceMonitoring>
+                </AppWithPerformanceMonitoring>
+              </EnhancedAccessibility>
             </AccessibilityEnhancer>
           </PerformanceOptimizer>
         </AnalyticsProvider>

@@ -26,7 +26,7 @@ import {
   Database,
   ShoppingCart,
   Scale,
-  Palette
+Palette
 } from 'lucide-react';
 
 const MicroSAASPage: React.FC = () => {
@@ -50,7 +50,7 @@ const MicroSAASPage: React.FC = () => {
       rating: 4.8,
       users: '2,500+',
       trial: '14-day free trial',
-      link: 'https://ziontechgroup.com/ai-project-manager',
+link: 'https://ziontechgroup.com/ai-project-manager',
       capabilities: ['40% faster project delivery', '60% reduction in project overruns', 'Real-time team insights', 'Automated risk detection']
     },
     { 
@@ -231,8 +231,8 @@ const MicroSAASPage: React.FC = () => {
       trial: '14-day free trial'
     },
     { 
-      name: 'AI API Builder Pro', 
-      href: '/ai-api-builder', 
+      name: 'AI API Manager Pro', 
+      href: '/ai-api-manager', 
       icon: Settings, 
       category: 'Development', 
       price: '$249/mo',
@@ -244,8 +244,8 @@ const MicroSAASPage: React.FC = () => {
       trial: '21-day free trial'
     },
     { 
-      name: 'AI Database Optimizer', 
-      href: '/ai-database-optimizer', 
+      name: 'AI Database Management', 
+      href: '/database-management', 
       icon: Database, 
       category: 'Development', 
       price: '$199/mo',
@@ -260,7 +260,7 @@ const MicroSAASPage: React.FC = () => {
     // Security & Compliance
     { 
       name: 'AI Security Monitor Pro', 
-      href: '/ai-security-monitor', 
+      href: '/ai-cybersecurity-monitor', 
       icon: Shield, 
       category: 'Security', 
       price: '$299/mo',
@@ -288,7 +288,7 @@ const MicroSAASPage: React.FC = () => {
     // Specialized Industry Solutions
     { 
       name: 'AI Healthcare Assistant Pro', 
-      href: '/ai-healthcare-assistant', 
+      href: '/ai-healthcare', 
       icon: Stethoscope, 
       category: 'Healthcare', 
       price: '$399/mo',
@@ -336,6 +336,7 @@ const MicroSAASPage: React.FC = () => {
       popular: true,
       rating: 4.6,
       users: '1,700+',
+<<<<<<< HEAD
       trial: '21-day free trial'
     },
     { 
@@ -381,6 +382,8 @@ const MicroSAASPage: React.FC = () => {
 =======
 =======
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-8860
+>>>>>>> origin/main
+=======
 >>>>>>> origin/main
       trial: '21-day free trial',
       link: 'https://ziontechgroup.com/ai-hr-assistant',
@@ -491,10 +494,15 @@ const MicroSAASPage: React.FC = () => {
       users: '6,800+',
       trial: '14-day free trial',
       link: 'https://ziontechgroup.com/ai-password-generator',
+<<<<<<< HEAD
       capabilities: ['Military-grade encryption', 'Real-time breach monitoring', 'Cross-platform sync', 'Team password sharing']
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+>>>>>>> origin/main
+=======
+      capabilities: ['Military-grade encryption', 'Real-time breach monitoring', 'Cross-platform sync', 'Team password sharing'],
+      users: '900+'
 >>>>>>> origin/main
     },
     { 
@@ -638,6 +646,7 @@ const MicroSAASPage: React.FC = () => {
       popular: false,
       rating: 4.7,
       users: '900+',
+>>>>>>> cursor/analyze-improve-and-deploy-application-7116
       trial: '30-day free trial'
     },
     { 
@@ -697,6 +706,7 @@ const MicroSAASPage: React.FC = () => {
       trial: '14-day free trial',
       link: 'https://ziontechgroup.com/ai-social-media-scheduler',
       capabilities: ['Optimal posting times', 'Content recommendations', 'Multi-platform management', 'Engagement analytics']
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-8860
     },
@@ -1157,6 +1167,110 @@ const MicroSAASPage: React.FC = () => {
   ];
 
   const categories = ['All', 'Productivity', 'Content', 'Marketing', 'Business', 'Finance', 'Development', 'Security', 'Healthcare', 'Legal', 'E-commerce', 'HR', 'AI Tools', 'Document Management', 'Communication', 'Web Development', 'Analytics', 'Email Tools', 'Design', 'Social Media', 'Space Tech', 'Climate Tech', 'Science', 'Computing', 'Transportation', 'Optimization', 'Education', 'Audio', 'IoT', 'Blockchain', 'Creative'];
+=======
+    }
+  ];
+
+  const categories = ['All', 'Productivity', 'Content', 'Marketing', 'Business', 'Finance', 'Development', 'Security', 'Healthcare', 'Legal', 'E-commerce', 'HR', 'AI Tools', 'Document Management', 'Communication', 'Web Development', 'Analytics', 'Email Tools', 'Design', 'Social Media'];
+
+      name: 'AI Holographic Workspace', 
+      href: '/ai-holographic-workspace', 
+      icon: Rocket, 
+      category: 'Immersive Tech', 
+      price: '$1,200/mo',
+      description: 'Next-generation 3D workspace with holographic interfaces and spatial computing capabilities',
+      features: ['3D Workspace', 'Holographic UI', 'Spatial Computing', 'Collaborative Environment', 'Virtual Meetings', 'AR Integration'],
+      popular: true,
+      rating: 4.7,
+      users: '400+',
+      trial: '7-day free trial'
+    },
+    { 
+      name: 'AI Autonomous Systems Pro', 
+      href: '/ai-autonomous-systems', 
+      icon: Settings, 
+      category: 'Autonomous AI', 
+      price: '$4,200/mo',
+      description: 'Self-managing systems with advanced AI decision-making and autonomous operations',
+      features: ['Autonomous Operations', 'Self-Healing Systems', 'Predictive Maintenance', 'Intelligent Monitoring', 'Adaptive Learning', 'Risk Management'],
+      popular: true,
+      rating: 4.8,
+      users: '300+',
+      trial: '21-day free trial'
+    },
+    { 
+      name: 'AI Blockchain Solutions Pro', 
+      href: '/ai-blockchain-solutions', 
+      icon: Shield, 
+      category: 'Blockchain AI', 
+      price: '$3,800/mo',
+      description: 'Advanced blockchain integration with AI-powered smart contracts and DeFi protocols',
+      features: ['Smart Contracts', 'DeFi Integration', 'NFT Marketplace', 'Cross-chain Operations', 'Token Economics', 'Governance Systems'],
+      popular: false,
+      rating: 4.6,
+      users: '250+',
+      trial: '14-day free trial'
+    },
+    { 
+      name: 'AI Energy Grid Management', 
+      href: '/ai-energy-grid-management', 
+      icon: Zap, 
+      category: 'Energy AI', 
+      price: '$6,500/mo',
+      description: 'Intelligent energy distribution and optimization for smart cities and utilities',
+      features: ['Grid Optimization', 'Demand Forecasting', 'Renewable Integration', 'Load Balancing', 'Energy Trading', 'Carbon Tracking'],
+      popular: false,
+      rating: 4.7,
+
+      users: '180+',
+      trial: '30-day free trial'
+    },
+    { 
+      name: 'AI Space Technology Pro', 
+      href: '/ai-space-technology-pro', 
+      icon: Rocket, 
+      category: 'Space Tech', 
+      price: '$5,500/mo',
+      description: 'Advanced space exploration and satellite management solutions with AI optimization',
+      features: ['Satellite Operations', 'Space Mission Planning', 'Astronomical Data Analysis', 'Orbital Mechanics', 'Space Weather', 'Mission Control'],
+      popular: false,
+      rating: 4.9,
+users: '120+',
+      trial: '30-day free trial'
+    },
+    { 
+      name: 'AI Climate Solutions Pro', 
+      href: '/ai-climate-solutions-pro',
+      icon: Globe, 
+      category: 'Environmental AI', 
+      price: '$3,200/mo',
+      description: 'Combat climate change with intelligent environmental monitoring and prediction systems',
+      features: ['Carbon Footprint Analysis', 'Weather Prediction', 'Sustainability Planning', 'Emission Tracking', 'Climate Modeling', 'Green Energy'],
+      popular: false,
+      rating: 4.8,
+      users: '350+',
+      trial: '21-day free trial'
+    },
+    { 
+      name: 'AI Drug Discovery Pro', 
+      href: '/ai-drug-discovery-pro', 
+      icon: Stethoscope, 
+      category: 'Pharma AI', 
+      price: '$4,500/mo',
+      description: 'Accelerate pharmaceutical research with AI-powered molecular analysis and drug development',
+      features: ['Molecular Modeling', 'Drug Interaction Analysis', 'Clinical Trial Optimization', 'Protein Folding', 'Toxicity Prediction', 'Patent Analysis'],
+      popular: true,
+      rating: 4.9,
+      users: '200+',
+      trial: '30-day free trial'
+    }
+  ];
+
+
+
+  const categories = ['All', 'Productivity', 'Content', 'Marketing', 'Business', 'Finance', 'Development', 'Security', 'Healthcare', 'Legal', 'E-commerce', 'HR', 'AI Tools', 'Document Management', 'Communication', 'Web Development', 'Analytics', 'Email Tools', 'Design', 'Social Media', 'Space Tech', 'Climate Tech', 'Science', 'Computing', 'Transportation', 'Optimization', 'Education'];
+>>>>>>> origin/main
+
 
   if (!isLoaded) {
     return (
@@ -1167,30 +1281,79 @@ const MicroSAASPage: React.FC = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 cyber-grid-enhanced quantum-particles">
+
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 relative overflow-hidden">
+      {/* Futuristic Background Effects */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(0,255,255,0.1)_0%,transparent_50%)] animate-pulse" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(139,92,246,0.1)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.03)_1px,transparent_1px)] bg-[length:50px_50px]" />
+      
+      {/* Animated Grid Pattern */}
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute top-0 left-0 w-full h-full bg-[linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px)] bg-[length:100px_100px] animate-pulse" />
+      </div>
+
       {/* Header */}
-      <div className="relative overflow-hidden quantum-field">
+      <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16 relative z-10">
           <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 cyber-text-enhanced neon-pulse">
+
+            <div className="inline-block mb-6">
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 neon-text">
+                Micro SAAS Solutions
+              </h1>
+              <div className="h-1 w-32 bg-gradient-to-r from-cyan-400 to-purple-600 mx-auto rounded-full"></div>
+            </div>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Revolutionary AI-powered micro SaaS tools that transform your business operations with cutting-edge technology
+            </p>
+            
+            {/* Stats */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-12">
+              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/20">
+                <div className="text-3xl font-bold text-cyan-400 mb-2">50+</div>
+                <div className="text-gray-300">Micro SAAS Tools</div>
+              </div>
+              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-purple-400/20">
+                <div className="text-3xl font-bold text-purple-400 mb-2">25K+</div>
+                <div className="text-gray-300">Active Users</div>
+              </div>
+              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-pink-400/20">
+                <div className="text-3xl font-bold text-pink-400 mb-2">99.9%</div>
+                <div className="text-gray-300">Uptime SLA</div>
               Micro SAAS Solutions
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto neon-glow-cyan">
               Powerful AI-powered micro SaaS tools to streamline your business operations
             </p>
             <div className="flex flex-wrap justify-center gap-4 mb-8">
-              <div className="holographic-card px-6 py-3 rounded-lg">
+              <div className="holographic px-6 py-3 rounded-lg">
                 <span className="text-cyan-400 font-semibold">50+ AI Tools</span>
               </div>
-              <div className="holographic-card px-6 py-3 rounded-lg">
+              <div className="holographic px-6 py-3 rounded-lg">
                 <span className="text-purple-400 font-semibold">50,000+ Users</span>
               </div>
-              <div className="holographic-card px-6 py-3 rounded-lg">
+              <div className="holographic px-6 py-3 rounded-lg">
                 <span className="text-pink-400 font-semibold">99.9% Uptime</span>
+
               </div>
             </div>
           </div>
+        </div>
+      </div>
+
+      {/* Category Filter */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="flex flex-wrap justify-center gap-4">
+          {categories.map((category) => (
+            <button
+              key={category}
+              className="px-6 py-3 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 text-white hover:bg-white/20 hover:border-cyan-400/50 transition-all duration-300 font-medium"
+            >
+              {category}
+            </button>
+          ))}
         </div>
       </div>
 
@@ -1200,37 +1363,44 @@ const MicroSAASPage: React.FC = () => {
           {microSAASServices.map((service) => (
             <div
               key={service.name}
-              className={`futuristic-card-enhanced hover-lift p-8 ${
+
+              className={`group bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-cyan-400/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 relative overflow-hidden ${
+                service.popular ? 'ring-2 ring-purple-500/50 shadow-lg shadow-purple-500/20' : ''
                 service.popular ? 'ring-2 ring-purple-500 neon-glow-purple' : ''
+
               }`}
             >
-              <div className="flex items-start justify-between mb-4">
-                <div className="p-3 rounded-lg bg-gradient-to-r from-purple-500 to-blue-600 text-white">
-                  <service.icon className="h-8 w-8" />
-                </div>
-                <div className="flex items-center space-x-2">
-                  {service.popular && (
-                    <span className="px-2 py-1 bg-orange-500 text-white text-xs rounded-full flex items-center">
-                      <Star className="w-3 h-3 mr-1" />
-                      Popular
-                    </span>
-                  )}
-                  <div className="flex items-center text-yellow-400">
-                    <Star className="w-4 h-4 fill-current" />
-                    <span className="ml-1 text-sm font-medium">{service.rating}</span>
+              {/* Animated Background */}
+              <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-purple-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              
+              <div className="relative z-10">
+                <div className="flex items-start justify-between mb-6">
+                  <div className="p-4 rounded-xl bg-gradient-to-r from-cyan-500 to-purple-600 text-white group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                    <service.icon className="h-8 w-8" />
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    {service.popular && (
+                      <span className="px-3 py-1 bg-gradient-to-r from-orange-500 to-red-500 text-white text-xs rounded-full flex items-center font-bold shadow-lg">
+                        <Star className="w-3 h-3 mr-1" />
+                        Popular
+                      </span>
+                    )}
+                    <div className="flex items-center text-yellow-400">
+                      <Star className="w-4 h-4 fill-current" />
+                      <span className="ml-1 text-sm font-medium">{service.rating}</span>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <h3 className="text-2xl font-bold text-white mb-4">
-                {service.name}
-              </h3>
+                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300">
+                  {service.name}
+                </h3>
 
-              <p className="text-gray-300 mb-6 leading-relaxed">
-                {service.description}
-              </p>
+                <p className="text-gray-300 mb-6 leading-relaxed">
+                  {service.description}
+                </p>
 
-              <div className="mb-6">
+<div className="mb-6">
                 <h4 className="text-lg font-semibold text-white mb-3">Key Features:</h4>
                 <ul className="space-y-2">
                   {service.features.slice(0, 6).map((feature, index) => (
@@ -1260,12 +1430,43 @@ const MicroSAASPage: React.FC = () => {
                 <div className="text-2xl font-bold text-white">
                   {service.price}
                 </div>
-                <div className="text-sm text-gray-400">
-                  {service.category}
+
+                <div className="flex items-center justify-between mb-6">
+                  <div className="text-2xl font-bold text-white">
+                    {service.price}
+                  </div>
+                  <div className="px-3 py-1 bg-white/10 rounded-full text-sm text-cyan-400 font-medium">
+                    {service.category}
+                  </div>
+                </div>
+
+                <div className="flex items-center justify-between mb-6 text-sm">
+                  <div className="flex items-center text-gray-400">
+                    <Users className="w-4 h-4 mr-1" />
+                    {service.users} users
+                  </div>
+                  <div className="text-cyan-400 font-medium">
+                    {service.trial}
+                  </div>
+                </div>
+
+                <div className="space-y-3">
+                  <a
+                    href={service.link}
+                    className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-3 px-6 rounded-xl font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group-hover:shadow-lg group-hover:shadow-cyan-500/25"
+                  >
+                    Get Started
+                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                  </a>
+                  <a
+                    href="/contact"
+                    className="w-full border border-cyan-400/50 text-cyan-400 py-3 px-6 rounded-xl font-semibold hover:bg-cyan-400/10 transition-all duration-300 flex items-center justify-center"
+                  >
+                    Learn More
+                  </a>
                 </div>
               </div>
-
-              <div className="flex items-center justify-between mb-6 text-sm">
+<div className="flex items-center justify-between mb-6 text-sm">
                 <div className="flex items-center text-gray-400">
                   <Users className="w-4 h-4 mr-1" />
                   {service.users}
@@ -1277,7 +1478,7 @@ const MicroSAASPage: React.FC = () => {
 
               <a
                 href={service.link || '#'}
-                className="w-full neon-button-enhanced py-3 px-6 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center"
+                className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -1290,7 +1491,7 @@ const MicroSAASPage: React.FC = () => {
       </div>
 
       {/* CTA Section */}
-      <div className="bg-gradient-to-r from-purple-600 to-blue-600 py-16">
+<div className="bg-gradient-to-r from-purple-600 to-blue-600 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Ready to Transform Your Business?
@@ -1301,13 +1502,13 @@ const MicroSAASPage: React.FC = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
             <a
               href="https://ziontechgroup.com/contact"
-              className="neon-button-enhanced py-4 px-8 rounded-lg font-semibold text-lg transition-all duration-300"
+              className="bg-white text-purple-600 py-4 px-8 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all duration-300"
             >
               Start Your Free Trial
             </a>
             <a
               href="tel:+13024640950"
-              className="neon-button-enhanced py-4 px-8 rounded-lg font-semibold text-lg transition-all duration-300"
+              className="border-2 border-white text-white py-4 px-8 rounded-lg font-semibold text-lg hover:bg-white hover:text-purple-600 transition-all duration-300"
             >
               Call: +1 (302) 464-0950
             </a>

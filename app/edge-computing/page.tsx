@@ -33,7 +33,7 @@ const EdgeComputingPage: React.FC = () => {
     {
       icon: Shield,
       title: 'Edge Security',
-      description: 'Comprehensive security measures designed specifically for edge computing environments.',
+description: 'Comprehensive security measures designed specifically for edge computing environments.',
       benefits: ['Data protection', 'Secure communication', 'Compliance ready']
     },
     {
@@ -76,7 +76,7 @@ const EdgeComputingPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Features Section */}
+{/* Features Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -109,7 +109,7 @@ const EdgeComputingPage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4">
+<section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Deploy Edge Computing?</h2>
           <p className="text-xl text-gray-300 mb-8">

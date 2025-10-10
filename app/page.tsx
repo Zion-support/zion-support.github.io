@@ -1,8 +1,41 @@
 'use client';
 
-import React from 'react';
-import { ArrowRight, Star, CheckCircle, Phone, Mail, MapPin, Brain, Zap, Target, BarChart, Shield, Users, Globe, Clock, Award, Rocket, TrendingUp, Building, Activity, Settings, Database, Heart, Home, Video, Palette, Code } from 'lucide-react';
+import React, { Suspense } from 'react';
+import { ArrowRight, Star, CheckCircle, Phone, Mail, MapPin } from 'lucide-react';
 import Footer from './components/Footer';
+import SEOHead from './components/SEOHead';
+import ErrorBoundary from './components/ErrorBoundary';
+import Loading from './components/Loading';
+import PerformanceMonitor from './components/PerformanceMonitor';
+import ServiceCardSkeleton from './components/ServiceCardSkeleton';
+import LazyImage from './components/LazyImage';
+import AnimatedCounter from './components/AnimatedCounter';
+import Navigation from './components/Navigation';
+import { 
+  Brain, 
+  Zap, 
+  Target, 
+  BarChart, 
+  Shield, 
+  Users, 
+  Globe, 
+  Lock, 
+  Settings, 
+  FileText,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  Clock,
+  Award,
+  Rocket,
+  Code,
+  Cloud,
+  Smartphone,
+  TrendingUp,
+  Award as Trophy,
+  Users as People,
+  CheckCircle2
+} from 'lucide-react';
 
 // Service data
 const microSAASServices = [
@@ -12,9 +45,7 @@ const microSAASServices = [
     price: "$99/mo",
     features: ["Smart Scheduling", "Risk Prediction", "Team Optimization", "Progress Tracking"],
     category: "Productivity",
-    popular: true,
-    icon: BarChart,
-    link: "https://ziontechgroup.com/ai-project-manager"
+    popular: true
   },
   {
     name: "AI Analytics Dashboard",
@@ -22,9 +53,7 @@ const microSAASServices = [
     price: "$149/mo",
     features: ["Real-time Analytics", "Predictive Insights", "Custom Reports", "Data Visualization"],
     category: "Analytics",
-    popular: true,
-    icon: Target,
-    link: "https://ziontechgroup.com/ai-analytics-dashboard"
+    popular: true
   },
   {
     name: "AI Customer Support Bot",
@@ -308,7 +337,7 @@ const microSAASServices = [
   }
 ];
 
-const aiServices = [
+const aiServices: AIService[] = [
   {
     name: "AI Drug Discovery Pro",
     description: "Accelerate pharmaceutical research with AI-powered molecular analysis and drug interaction prediction",
@@ -391,7 +420,7 @@ const aiServices = [
   }
 ];
 
-const itServices = [
+const itServices: ITService[] = [
   {
     name: "Cloud Migration & Setup",
     description: "Seamless cloud migration with zero downtime and comprehensive security",
@@ -502,43 +531,22 @@ const itServices = [
   }
 ];
 
-const testimonials = [
-  {
-    name: "Sarah Chen",
-    role: "CTO, TechCorp",
-    company: "Fortune 500 Technology Company",
-    content: "Zion Tech Group's AI solutions increased our operational efficiency by 85% and reduced costs by $2.3M annually. Their quantum computing integration was revolutionary.",
-    rating: 5,
-    avatar: "SC"
-  },
-  {
-    name: "Dr. Michael Rodriguez",
-    role: "Research Director",
-    company: "Global Pharmaceuticals Inc.",
-    content: "The AI Drug Discovery Pro platform accelerated our research timeline by 60%. We discovered 3 new potential compounds in just 6 months instead of the usual 2 years.",
-    rating: 5,
-    avatar: "MR"
-  },
-  {
-    name: "Jennifer Walsh",
-    role: "VP of Operations",
-    company: "GreenTech Solutions",
-    content: "Their climate solutions helped us reduce our carbon footprint by 40% while improving operational efficiency. The ROI was evident within the first quarter.",
-    rating: 5,
-    avatar: "JW"
-  }
-];
-
-const stats = [
-  { number: "500+", label: "Enterprise Clients", icon: Building },
-  { number: "99.9%", label: "Uptime Guarantee", icon: Shield },
-  { number: "24/7", label: "Expert Support", icon: Clock },
-  { number: "50+", label: "Countries Served", icon: Globe }
-];
+// Loading skeleton component
+const ServiceCardSkeleton = () => (
+  <div className="cyber-card p-6 animate-pulse">
+    <div className="h-8 bg-gray-700 rounded mb-4"></div>
+    <div className="h-4 bg-gray-700 rounded mb-2"></div>
+    <div className="h-4 bg-gray-700 rounded mb-4"></div>
+    <div className="h-6 bg-gray-700 rounded"></div>
+  </div>
+);
 
 const HomePage: React.FC = () => {
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Navigation />
+      
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
@@ -551,7 +559,7 @@ const HomePage: React.FC = () => {
             Transform your business with cutting-edge AI technology. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
+<div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
             <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center">
               Get Started Today
               <ArrowRight className="w-5 h-5 ml-2" />
@@ -580,20 +588,111 @@ const HomePage: React.FC = () => {
               <div className="text-gray-400">Uptime Guarantee</div>
             </div>
           </div>
-        </div>
+</div>
       </section>
 
-      {/* Micro SAAS Section */}
-      <section className="py-16 bg-white/5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Services Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Micro SAAS Solutions
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Powerful AI-powered micro SaaS tools to streamline your business operations
-            </p>
+            <h2 className="text-4xl font-bold text-white mb-4">Our Services</h2>
+            <p className="text-xl text-gray-300">Comprehensive AI and IT solutions for modern enterprises</p>
           </div>
+          
+          {/* Micro SAAS Services */}
+          <div className="mb-16">
+            <h3 className="text-2xl font-bold text-white mb-8 text-center">Micro SAAS Solutions</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+              {microSAASServices.map((service, index) => (
+                <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-xl p-6 hover:border-cyan-400/40 transition-all duration-300">
+                  <div className="text-center mb-4">
+                    <div className="text-4xl mb-4">🤖</div>
+                    <h3 className="text-xl font-bold text-white mb-3">{service.name}</h3>
+                    <p className="text-gray-300 mb-4 text-sm">{service.description}</p>
+                    
+                    <div className="space-y-2 mb-6">
+                      {service.features.map((feature, featureIndex) => (
+                        <div key={featureIndex} className="flex items-center text-sm text-gray-300">
+                          <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
+                          {feature}
+                        </div>
+                      ))}
+                    </div>
+                    
+                    <div className="text-center">
+                      <div className="text-2xl font-bold text-cyan-400 mb-2">{service.price}</div>
+                      <button className="text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors">
+                        Learn More →
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* AI Services */}
+          <div className="mb-16">
+            <h3 className="text-2xl font-bold text-white mb-8 text-center">Enterprise AI Solutions</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {aiServices.map((service, index) => (
+                <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-purple-400/20 rounded-xl p-6 hover:border-purple-400/40 transition-all duration-300">
+                  <div className="text-center mb-4">
+                    <div className="text-4xl mb-4">🚀</div>
+                    <h3 className="text-xl font-bold text-white mb-3">{service.name}</h3>
+                    <p className="text-gray-300 mb-4 text-sm">{service.description}</p>
+                    
+                    <div className="space-y-2 mb-6">
+                      {service.features.map((feature, featureIndex) => (
+                        <div key={featureIndex} className="flex items-center text-sm text-gray-300">
+                          <CheckCircle className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0" />
+                          {feature}
+                        </div>
+                      ))}
+                    </div>
+                    
+                    <div className="text-center">
+                      <div className="text-2xl font-bold text-purple-400 mb-2">{service.price}</div>
+                      <button className="text-purple-400 hover:text-purple-300 font-medium text-sm transition-colors">
+                        Learn More →
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* IT Services */}
+          <div className="mb-16">
+            <h3 className="text-2xl font-bold text-white mb-8 text-center">IT Infrastructure Services</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {itServices.map((service, index) => (
+                <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-green-400/20 rounded-xl p-6 hover:border-green-400/40 transition-all duration-300">
+                  <div className="text-center mb-4">
+                    <div className="text-4xl mb-4">⚡</div>
+                    <h3 className="text-xl font-bold text-white mb-3">{service.name}</h3>
+                    <p className="text-gray-300 mb-4 text-sm">{service.description}</p>
+                    
+                    <div className="space-y-2 mb-6">
+                      {service.features.map((feature, featureIndex) => (
+                        <div key={featureIndex} className="flex items-center text-sm text-gray-300">
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                          {feature}
+                        </div>
+                      ))}
+                    </div>
+                    
+                    <div className="text-center">
+                      <div className="text-2xl font-bold text-green-400 mb-2">{service.price}</div>
+                      <button className="text-green-400 hover:text-green-300 font-medium text-sm transition-colors">
+                        Learn More →
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              ))}
+
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {microSAASServices.map((service, index) => (
@@ -629,9 +728,9 @@ const HomePage: React.FC = () => {
                   
                   <div className="text-center">
                     <div className="text-2xl font-bold text-cyan-400 mb-2">{service.price}</div>
-                    <div className="text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors group-hover:underline">
+                    <button className="text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors">
                       Learn More →
-                    </div>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -840,6 +939,7 @@ const HomePage: React.FC = () => {
               <p className="text-cyan-400 font-medium">
                 Middletown, DE
               </p>
+
             </div>
           </div>
           
@@ -853,5 +953,7 @@ const HomePage: React.FC = () => {
     </div>
   );
 };
+
+HomePage.displayName = 'HomePage';
 
 export default HomePage;
