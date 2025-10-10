@@ -4,6 +4,47 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider, Helmet } from 'react-helmet-async';
 import Navigation from './app/components/Navigation';
 import Footer from './app/components/Footer';
+import UnifiedContentPromotion from './src/components/UnifiedContentPromotion';
+import InteractiveAIROICalculator from './src/components/InteractiveAIROICalculator';
+import ContentShowcase from './src/components/ContentShowcase';
+import InteractiveContentShowcase2026 from './src/components/InteractiveContentShowcase2026';
+
+// Structured data for SEO
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Zion Tech Group",
+  "description": "Leading provider of AI-powered enterprise solutions and digital transformation services",
+  "url": "https://ziontechgroup.com",
+  "logo": "https://ziontechgroup.com/logo.png",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+1-302-464-0950",
+    "contactType": "customer service",
+    "email": "kleber@ziontechgroup.com"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "364 E Main St STE 1008",
+    "addressLocality": "Middletown",
+    "addressRegion": "DE",
+    "postalCode": "19709",
+    "addressCountry": "US"
+  },
+  "sameAs": [
+    "https://ziontechgroup.com"
+  ]
+};
+
+// Loading Spinner Component
+const LoadingSpinner = () => (
+  <div className="min-h-screen flex items-center justify-center bg-slate-900">
+    <div className="text-center">
+      <div className="w-16 h-16 border-4 border-cyan-400 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+      <p className="text-cyan-400 text-lg font-medium">Loading...</p>
+    </div>
+  </div>
+);
 
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import('./app/about/page'));

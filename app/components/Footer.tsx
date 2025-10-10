@@ -1,5 +1,5 @@
 import React, { memo } from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Cloud, Code, BarChart, Users, Globe, Facebook, Twitter, Linkedin, Instagram, Youtube, Github, MessageSquare, Star, TrendingUp, CheckCircle } from 'lucide-react';
 
 const Footer: React.FC = memo(() => {
@@ -154,7 +154,7 @@ const Footer: React.FC = memo(() => {
                     {category.services.map((service, serviceIndex) => (
                       <li key={serviceIndex}>
                         <Link 
-                          href={service.href}
+                          to={service.href}
                           className="text-gray-300 hover:text-cyan-400 transition-colors text-sm"
                         >
                           {service.name}
@@ -177,7 +177,7 @@ const Footer: React.FC = memo(() => {
                   {companyLinks.map((link, index) => (
                     <li key={index}>
                       <Link 
-                        href={link.href}
+                        to={link.href}
                         className="text-gray-300 hover:text-cyan-400 transition-colors text-sm"
                       >
                         {link.name}
@@ -194,7 +194,7 @@ const Footer: React.FC = memo(() => {
                   {supportLinks.map((link, index) => (
                     <li key={index}>
                       <Link 
-                        href={link.href}
+                        to={link.href}
                         className="text-gray-300 hover:text-cyan-400 transition-colors text-sm"
                       >
                         {link.name}
@@ -211,7 +211,7 @@ const Footer: React.FC = memo(() => {
                   {legalLinks.map((link, index) => (
                     <li key={index}>
                       <Link 
-                        href={link.href}
+                        to={link.href}
                         className="text-gray-300 hover:text-cyan-400 transition-colors text-sm"
                       >
                         {link.name}
