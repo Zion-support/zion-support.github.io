@@ -1,42 +1,40 @@
-'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Shield, Clock, Users, TrendingUp, Brain, Target, BarChart, MessageSquare, Sparkles, Phone, Calendar, Bot } from 'lucide-react';
-
 const AICustomerSupportChatbotPage: React.FC = () => {
   const features = [
     {
-      icon: Brain;
+      icon: Brain,
       title: 'Natural Language Processing',
       description: 'Advanced NLP capabilities for understanding customer intent and providing accurate responses',
       benefits: ['95% accuracy in understanding queries', 'Multi-language support', 'Context awareness', 'Sentiment analysis']
     },
     {
-      icon: MessageSquare;
+      icon: MessageSquare,
       title: '24/7 Availability',
       description: 'Round-the-clock customer support with instant responses and escalation to human agents',
       benefits: ['Instant response time', 'No waiting queues', 'Consistent service quality', 'Reduced support costs']
     },
     {
-      icon: Users;
+      icon: Users,
       title: 'Multi-Channel Support',
       description: 'Deploy across websites, mobile apps, social media, and messaging platforms',
       benefits: ['Website chat widget', 'Mobile app integration', 'Social media support', 'WhatsApp integration']
     },
     {
-      icon: BarChart;
+      icon: BarChart,
       title: 'Advanced Analytics',
       description: 'Comprehensive analytics dashboard with customer insights and performance metrics',
       benefits: ['Real-time analytics', 'Customer satisfaction tracking', 'Response time metrics', 'Conversion tracking']
     },
     {
-      icon: Bot;
+      icon: Bot,
       title: 'Smart Escalation',
       description: 'Intelligent routing to human agents when complex issues require human intervention',
       benefits: ['Seamless handoff', 'Context preservation', 'Priority queuing', 'Agent workload balancing']
     },
     {
-      icon: Shield;
+      icon: Shield,
       title: 'Enterprise Security',
       description: 'Bank-level security with data encryption and compliance with industry standards',
       benefits: ['End-to-end encryption', 'GDPR compliance', 'SOC 2 certified', 'Data privacy protection']
@@ -47,37 +45,37 @@ const AICustomerSupportChatbotPage: React.FC = () => {
     {
       name: 'E-commerce Support',
       description: 'Handle product inquiries, order tracking, and returns',
-      icon: ShoppingCart;
+      icon: ShoppingCart,
       benefits: ['Order status updates', 'Product recommendations', 'Return processing', 'Shipping inquiries']
     },
     {
       name: 'Technical Support',
       description: 'Provide technical assistance and troubleshooting',
-      icon: Settings;
+      icon: Settings,
       benefits: ['Troubleshooting guides', 'FAQ responses', 'Ticket creation', 'Escalation to specialists']
     },
     {
       name: 'Lead Qualification',
       description: 'Qualify leads and schedule demos or consultations',
-      icon: Target;
+      icon: Target,
       benefits: ['Lead scoring', 'Appointment scheduling', 'Qualification questions', 'CRM integration']
     },
     {
       name: 'FAQ Automation',
       description: 'Answer frequently asked questions instantly',
-      icon: HelpCircle;
+      icon: HelpCircle,
       benefits: ['Instant responses', 'Knowledge base integration', 'Self-service options', 'Reduced ticket volume']
     },
     {
       name: 'Appointment Booking',
       description: 'Schedule appointments and manage calendars',
-      icon: Calendar;
+      icon: Calendar,
       benefits: ['Calendar integration', 'Availability checking', 'Confirmation emails', 'Reminder notifications']
     },
     {
       name: 'Complaint Handling',
       description: 'Process complaints and escalate when necessary',
-      icon: AlertTriangle;
+      icon: AlertTriangle,
       benefits: ['Issue categorization', 'Priority assessment', 'Resolution tracking', 'Follow-up automation']
     }
   ];

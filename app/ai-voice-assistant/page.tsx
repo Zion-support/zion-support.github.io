@@ -1,42 +1,6 @@
-'use client';
 import React, { useState, useEffect } from 'react';
 import {
-  Mic, 
-  MicOff, 
-  Volume2, 
-  VolumeX, 
-  Settings, 
-  Brain, 
-  Zap, 
-  Globe, 
-  Shield, 
-  Clock, 
-  Users, 
-  Star, 
-  CheckCircle, 
-  ArrowRight, 
-  Play, 
-  Pause, 
-  RotateCcw,
-  Languages,
-  Headphones,
-  MessageSquare,
-  Phone,
-  Video,
-  FileText,
-  Calendar,
-  Mail,
-  Search,
-  Command,
-  Sparkles,
-  Bot,
-  Cpu,
-  Wifi,
-  Battery,
-  Signal;
-} from 'lucide-react';
-
-const AIVoiceAssistantPage: React.FC = () => {,
+const $1Page: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isListening, setIsListening] = useState(false);
   const [isSpeaking, setIsSpeaking] = useState(false);
@@ -49,32 +13,32 @@ const AIVoiceAssistantPage: React.FC = () => {,
 
   const features = [
     {
-      icon: Brain;
+      icon: Brain,
       title: 'Natural Language Processing',
       description: 'Advanced NLP with 99.5% accuracy in understanding context and intent',
       stats: '99.5% accuracy'},
     {
-      icon: Languages;
+      icon: Languages,
       title: 'Multi-Language Support',
       description: 'Support for 50+ languages with real-time translation capabilities',
       stats: '50+ languages'},
     {
-      icon: Headphones;
+      icon: Headphones,
       title: 'Custom Voice Training',
       description: 'Train the AI with your voice patterns and speaking style',
       stats: 'Custom voices'},
     {
-      icon: Zap;
+      icon: Zap,
       title: 'Real-Time Processing',
       description: 'Ultra-low latency voice processing for natural conversations',
       stats: '<100ms latency'},
     {
-      icon: Shield;
+      icon: Shield,
       title: 'Privacy & Security',
       description: 'End-to-end encryption with local processing options',
       stats: 'Bank-level security'},
     {
-      icon: Globe;
+      icon: Globe,
       title: 'Cloud & Edge Computing',
       description: 'Hybrid processing for optimal performance and privacy',
       stats: 'Hybrid processing'}

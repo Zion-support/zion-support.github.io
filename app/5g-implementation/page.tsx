@@ -7,7 +7,6 @@ const FiveGImplementationPage: React.FC = () => {
   const features = [
     {
       icon: Wifi,
-<<<<<<< HEAD
       title: '5G Network Design',
       description: 'Complete 5G network design and implementation with optimal coverage and performance.',
       benefits: ['Network planning', 'Coverage optimization', 'Performance tuning']
@@ -29,7 +28,6 @@ const FiveGImplementationPage: React.FC = () => {
       title: 'Scalable Infrastructure',
       description: 'Scalable 5G infrastructure that grows with your business needs and user demands.',
       benefits: ['Auto-scaling', 'Capacity planning', 'Future-proof design']
-=======
       title: 'Ultra-Low Latency',
       description: 'Sub-millisecond latency for real-time applications and critical communications'
     },
@@ -37,7 +35,6 @@ const FiveGImplementationPage: React.FC = () => {
       icon: Zap,
       title: 'High-Speed Connectivity',
       description: 'Multi-gigabit speeds for seamless data transfer and streaming'
->>>>>>> origin/main
     },
     {
       icon: Shield,
@@ -45,12 +42,10 @@ const FiveGImplementationPage: React.FC = () => {
       description: 'Advanced encryption and security protocols for enterprise-grade protection'
     },
     {
-<<<<<<< HEAD
       icon: BarChart,
       title: 'Performance Analytics',
       description: 'Advanced analytics and reporting for 5G network performance and optimization.',
       benefits: ['Performance insights', 'Usage analytics', 'Optimization recommendations']
-=======
       icon: Globe,
       title: 'Massive IoT Support',
       description: 'Support for millions of connected devices with efficient resource management'
@@ -110,22 +105,18 @@ const FiveGImplementationPage: React.FC = () => {
         'SLA guarantee'
       ],
       popular: false
->>>>>>> origin/main
     }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-<<<<<<< HEAD
       <Navigation />
-=======
       <Helmet>
         <title>5G Network Implementation - Zion Tech Group | Zion Tech Group - AI & IT Solutions</title>
         <meta name="description" content="Complete 5G network implementation services with ultra-low latency, high-speed connectivity, and advanced features for modern applications and IoT ecosystems." />
         <meta name="keywords" content="5G implementation, network infrastructure, IoT connectivity, edge computing, Zion Tech Group" />
       </Helmet>
 
->>>>>>> origin/main
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
@@ -142,20 +133,17 @@ const FiveGImplementationPage: React.FC = () => {
             and advanced features for modern applications and IoT ecosystems.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<<<<<<< HEAD
             <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25">
               Get Started Today
               <ArrowRight className="inline-block ml-2 w-5 h-5" />
             </button>
             <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
               Schedule Demo
-=======
             <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
               Get Started
             </button>
             <button className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300">
               Learn More
->>>>>>> origin/main
             </button>
           </div>
         </div>
@@ -229,9 +217,7 @@ const FiveGImplementationPage: React.FC = () => {
         </div>
       </section>
 
-<<<<<<< HEAD
       <Footer />
-=======
       {/* Pricing Section */}
       <section className="py-20 px-4">
         <div className="container mx-auto">
@@ -308,7 +294,6 @@ const FiveGImplementationPage: React.FC = () => {
           </div>
         </div>
       </section>
->>>>>>> origin/main
     </div>
   );
 };

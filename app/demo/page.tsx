@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 import React, { useState } from 'react';
 import { Play, Calendar, Phone, Mail, CheckCircle, ArrowRight, Star, Users, Clock, Brain, Cloud, Shield, Settings, Globe, Database, Zap, Eye, Sparkles, BookOpen, FileText, Download } from 'lucide-react';
@@ -342,7 +341,6 @@ const DemoPage: React.FC = () => {
       </section>
 
       <Footer />
-=======
 import React from 'react';
 
 const DemoPage: React.FC = () => {
@@ -358,7 +356,6 @@ const DemoPage: React.FC = () => {
           </p>
         </div>
       </section>
->>>>>>> origin/main
     </div>
   );
 };

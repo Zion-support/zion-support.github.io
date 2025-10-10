@@ -1,43 +1,41 @@
-'use client';
 import React from 'react';
 import { Settings, Brain, Zap, Shield, Target, ArrowRight, CheckCircle, Users, Building, Factory, Car, Stethoscope, Clock3, Navigation, TrendingDown, Zap, Target, Shield, Users, CheckCircle, ArrowRight, TrendingUp } from 'lucide-react'
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
 const AIAutonomousSystemsPage: React.FC = () => {
   const features = [
     {
-      icon: Brain;
+      icon: Brain,
       title: 'Autonomous Decision Making',
       description: 'AI systems that make independent decisions based on real-time data analysis and learned patterns.',
       benefits: ['Real-time decisions', 'Pattern recognition', 'Adaptive learning', 'Risk assessment']
     },
     {
-      icon: Settings;
+      icon: Settings,
       title: 'Self-Managing Systems',
       description: 'Systems that automatically configure, optimize, and maintain themselves without human intervention.',
       benefits: ['Auto-configuration', 'Self-optimization', 'Predictive maintenance', 'Resource management']
     },
     {
-      icon: Zap;
+      icon: Zap,
       title: 'Adaptive Intelligence',
       description: 'AI that continuously learns and adapts to changing environments and requirements.',
       benefits: ['Continuous learning', 'Environment adaptation', 'Performance improvement', 'Dynamic optimization']
     },
     {
-      icon: Shield;
+      icon: Shield,
       title: 'Autonomous Security',
       description: 'Self-protecting systems that detect and respond to threats automatically.',
       benefits: ['Threat detection', 'Automatic response', 'Security updates', 'Incident handling']
     },
     {
-      icon: Target;
+      icon: Target,
       title: 'Goal-Oriented Behavior',
       description: 'Systems that work towards specific objectives while adapting to changing conditions.',
       benefits: ['Objective tracking', 'Dynamic planning', 'Resource allocation', 'Progress monitoring']
     },
     {
-      icon: Users;
+      icon: Users,
       title: 'Human-AI Collaboration',
       description: 'Seamless integration between autonomous systems and human operators.',
       benefits: ['Human oversight', 'Collaborative decision making', 'Transparency', 'Control interfaces']
@@ -48,37 +46,37 @@ const AIAutonomousSystemsPage: React.FC = () => {
     {
       title: 'Autonomous Vehicles',
       description: 'Self-driving cars, trucks, and drones with advanced AI navigation and safety systems.',
-      icon: Car;
+      icon: Car,
       useCases: ['Self-driving cars', 'Autonomous trucks', 'Delivery drones', 'Fleet management']
     },
     {
       title: 'Smart Manufacturing',
       description: 'Autonomous production lines and robotic systems for industrial automation.',
-      icon: Factory;
+      icon: Factory,
       useCases: ['Robotic assembly', 'Quality control', 'Predictive maintenance', 'Supply chain automation']
     },
     {
       title: 'Smart Cities',
       description: 'Autonomous infrastructure management for traffic, energy, and public services.',
-      icon: Building;
+      icon: Building,
       useCases: ['Traffic management', 'Energy optimization', 'Waste management', 'Public safety']
     },
     {
       title: 'Healthcare Systems',
       description: 'Autonomous medical devices and diagnostic systems for patient care.',
-      icon: Stethoscope;
+      icon: Stethoscope,
       useCases: ['Medical diagnosis', 'Surgical robots', 'Patient monitoring', 'Drug delivery']
     },
     {
       title: 'Financial Trading',
       description: 'Autonomous trading systems and algorithmic investment management.',
-      icon: TrendingUp;
+      icon: TrendingUp,
       useCases: ['Algorithmic trading', 'Risk management', 'Portfolio optimization', 'Fraud detection']
     },
     {
       title: 'Space Exploration',
       description: 'Autonomous spacecraft and planetary rovers for space missions.',
-      icon: Rocket;
+      icon: Rocket,
       useCases: ['Planetary rovers', 'Satellite operations', 'Space station automation', 'Mission planning']
     }
   ];
@@ -87,22 +85,22 @@ const AIAutonomousSystemsPage: React.FC = () => {
     {
       metric: '99.9%',
       description: 'Uptime for autonomous operations',
-      icon: Shield;
+      icon: Shield,
     },
     {
       metric: '50%',
       description: 'Reduction in operational costs',
-      icon: TrendingDown;
+      icon: TrendingDown,
     },
     {
       metric: '24/7',
       description: 'Continuous autonomous operation',
-      icon: Clock3;
+      icon: Clock3,
     },
     {
       metric: '10 x',
       description: 'Faster response to changes',
-      icon: Zap;
+      icon: Zap,
     }
   ];
 

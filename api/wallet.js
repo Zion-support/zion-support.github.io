@@ -14,16 +14,13 @@ export default function handler(req, res) {
 
   const { address, type, name, userId } = req.body || {};
 
-<<<<<<< HEAD
   if (!action) {
     res.statusCode = 400;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Action is required' }));
     return;
-=======
   if (!address || !type) {
     return res.status(400).json({ error: 'Address and type are required' });
->>>>>>> origin/main
   }
 
   if (!fs.existsSync(dir)) {
@@ -61,7 +58,6 @@ export default function handler(req, res) {
   existing.push(newWallet);
 
   try {
-<<<<<<< HEAD
     switch (action) {
       case 'create_payment_intent': {
         if (!amount) {
@@ -111,7 +107,6 @@ export default function handler(req, res) {
         break;
       }
     }
-=======
     fs.writeFileSync(file, JSON.stringify(existing, null, 2));
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
@@ -120,15 +115,11 @@ export default function handler(req, res) {
       message: 'Wallet added successfully',
       id: newWallet.id
     }));
->>>>>>> origin/main
   } catch (error) {
     console.error('Error saving wallet:', error);
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
-<<<<<<< HEAD
     res.end(JSON.stringify({ error: 'Failed to process wallet operation' }));
-=======
     res.end(JSON.stringify({ error: 'Failed to save wallet' }));
->>>>>>> origin/main
   }
 }

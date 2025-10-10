@@ -1,11 +1,9 @@
-'use client';
 import React from 'react';
 import { BarChart, Target, Zap, CheckCircle, Phone } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
-const AIMLPage: React.FC = () => {,
-  const features = [,
+const $1Page: React.FC = () => {
+  const $1 = [
     'Custom Model Development',
     'Predictive Analytics',
     'Data Pipeline Setup',
@@ -27,17 +25,17 @@ const AIMLPage: React.FC = () => {,
     {
       title: 'Sales Forecasting',
       description: 'Predict future sales with 95% accuracy using historical data and market trends',
-      icon: BarChart;
+      icon: BarChart,
     },
     {
       title: 'Customer Segmentation',
       description: 'Automatically segment customers based on behavior and preferences',
-      icon: Target;
+      icon: Target,
     },
     {
       title: 'Predictive Maintenance',
       description: 'Prevent equipment failures before they happen with IoT sensor data',
-      icon: Zap;
+      icon: Zap,
     }
   ];
 

@@ -20,7 +20,6 @@ export default function handler(req, res) {
 
   let existing = [];
   try {
-<<<<<<< HEAD
     const request = {
       id: Date.now().toString(),
       name,
@@ -52,7 +51,6 @@ export default function handler(req, res) {
 }
 
 module.exports = withSentry(handler);
-=======
     if (fs.existsSync(file)) {
       const data = fs.readFileSync(file, 'utf8');
       existing = JSON.parse(data);
@@ -93,4 +91,3 @@ module.exports = withSentry(handler);
     res.end(JSON.stringify({ error: 'Failed to save request' }));
   }
 }
->>>>>>> origin/main

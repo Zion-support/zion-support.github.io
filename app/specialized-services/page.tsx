@@ -1,15 +1,13 @@
-'use client';
 import React from 'react';
 import { Cpu, Settings, Lock, Globe, BarChart, Building, CheckCircle, ArrowRight, Zap, Brain, Shield, Target, Users, DollarSign, Star } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
 const SpecializedServicesPage: React.FC = () => {
   const specializedServices = [
     {
       title: 'Quantum Computing Solutions'
-      description: 'Revolutionary quantum algorithms and computing infrastructure for complex problem solving'
-      icon: Cpu;
+      , description: 'Revolutionary quantum algorithms and computing infrastructure for complex problem solving'
+      icon: Cpu,
       price: 'Custom Pricing',
       features: [,
         'Quantum Algorithm Development',
@@ -31,8 +29,8 @@ const SpecializedServicesPage: React.FC = () => {
       category: 'Quantum Technology'},
     {
       title: 'Autonomous Systems'
-      description: 'Self-managing intelligent systems that operate independently with minimal human intervention'
-      icon: Settings;
+      , description: 'Self-managing intelligent systems that operate independently with minimal human intervention'
+      icon: Settings,
       price: 'Custom Pricing',
       features: [,
         'Autonomous Decision Making',
@@ -55,7 +53,7 @@ const SpecializedServicesPage: React.FC = () => {
     {
       title: 'Blockchain & Web3 Solutions',
       description: 'Decentralized applications, smart contracts, and Web3 infrastructure development',
-      icon: Lock;
+      icon: Lock,
       price: 'Custom Pricing',
       features: [,
         'Smart Contract Development',
@@ -77,8 +75,8 @@ const SpecializedServicesPage: React.FC = () => {
       category: 'Blockchain Technology'},
     {
       title: 'IoT & Edge Computing'
-      description: 'Connected devices and edge computing solutions for real-time data processing'
-      icon: Globe;
+      , description: 'Connected devices and edge computing solutions for real-time data processing'
+      icon: Globe,
       price: 'Custom Pricing',
       features: [,
         'IoT Device Development',
@@ -100,8 +98,8 @@ const SpecializedServicesPage: React.FC = () => {
       category: 'IoT Technology'},
     {
       title: 'Business Intelligence Platform'
-      description: 'Advanced analytics and business intelligence solutions for data-driven decision making'
-      icon: BarChart;
+      , description: 'Advanced analytics and business intelligence solutions for data-driven decision making'
+      icon: BarChart,
       price: 'Custom Pricing',
       features: [,
         'Advanced Analytics',
@@ -123,8 +121,8 @@ const SpecializedServicesPage: React.FC = () => {
       category: 'Analytics'},
     {
       title: 'Robotics Solutions'
-      description: 'Intelligent robotics and automation systems for industrial and commercial applications'
-      icon: Settings;
+      , description: 'Intelligent robotics and automation systems for industrial and commercial applications'
+      icon: Settings,
       price: 'Custom Pricing',
       features: [,
         'Robotic Process Automation',
@@ -146,8 +144,8 @@ const SpecializedServicesPage: React.FC = () => {
       category: 'Robotics'},
     {
       title: 'Enterprise Solutions'
-      description: 'Comprehensive enterprise-grade solutions for large organizations and complex requirements'
-      icon: Building;
+      , description: 'Comprehensive enterprise-grade solutions for large organizations and complex requirements'
+      icon: Building,
       price: 'Custom Pricing',
       features: [,
         'Enterprise Architecture',
@@ -169,8 +167,8 @@ const SpecializedServicesPage: React.FC = () => {
       category: 'Enterprise'},
     {
       title: 'Analytics Tools Suite'
-      description: 'Comprehensive suite of advanced analytics tools for business intelligence and insights'
-      icon: BarChart;
+      , description: 'Comprehensive suite of advanced analytics tools for business intelligence and insights'
+      icon: BarChart,
       price: 'Custom Pricing',
       features: [,
         'Advanced Analytics',
@@ -196,21 +194,21 @@ const SpecializedServicesPage: React.FC = () => {
     {
       title: 'Expense Tracker Pro',
       description: 'AI-powered expense management and financial tracking',
-      icon: DollarSign;
+      icon: DollarSign,
       price: '$99/month',
       features: ['AI Receipt Scanning', 'Automatic Categorization', 'Expense Analytics', 'Budget Planning'],
       color: 'text-green-400'},
     {
       title: 'Task Manager Pro',
       description: 'Intelligent task management and project coordination',
-      icon: CheckCircle;
+      icon: CheckCircle,
       price: '$79/month',
       features: ['AI Task Prioritization', 'Team Collaboration', 'Progress Tracking', 'Deadline Management'],
       color: 'text-blue-400'},
     {
       title: 'Smart Analytics',
       description: 'Advanced business analytics and reporting platform',
-      icon: BarChart;
+      icon: BarChart,
       price: '$149/month',
       features: ['Real-time Dashboards', 'Predictive Analytics', 'Custom Reports', 'Data Visualization'],
       color: 'text-purple-400'}

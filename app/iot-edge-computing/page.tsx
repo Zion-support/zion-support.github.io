@@ -1,47 +1,45 @@
-'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Cpu, Wifi, Shield, Zap, CheckCircle, ArrowRight, Star, Database, Globe, Settings, Smartphone, BarChart, Clock, Users } from 'lucide-react';
-
 const IoTEdgeComputingPage: React.FC = () => {
   const services = [
     {
-      icon: Cpu;
+      icon: Cpu,
       title: 'Edge AI Processing',
       description: 'Deploy AI models directly on edge devices for real-time decision making and reduced latency.',
       features: ['Real-time AI inference', 'Model optimization', 'Edge training', 'Federated learning'],
       benefits: ['Ultra-low latency', 'Reduced bandwidth', 'Offline capabilities', 'Privacy protection']
     },
     {
-      icon: Wifi;
+      icon: Wifi,
       title: 'IoT Device Management',
       description: 'Comprehensive platform for managing, monitoring, and updating IoT devices at scale.',
       features: ['Device provisioning', 'Remote monitoring', 'OTA updates', 'Fleet management'],
       benefits: ['Centralized control', 'Automated updates', 'Predictive maintenance', 'Cost optimization']
     },
     {
-      icon: Shield;
+      icon: Shield,
       title: 'Edge Security',
       description: 'Advanced security solutions for edge devices and IoT networks with zero-trust architecture.',
       features: ['Device authentication', 'Encrypted communication', 'Threat detection', 'Compliance management'],
       benefits: ['End-to-end security', 'Real-time monitoring', 'Automated response', 'Regulatory compliance']
     },
     {
-      icon: Database;
+      icon: Database,
       title: 'Edge Data Management',
       description: 'Intelligent data processing and storage at the edge with cloud synchronization.',
       features: ['Local data processing', 'Smart filtering', 'Cloud sync', 'Data analytics'],
       benefits: ['Reduced data transfer', 'Faster insights', 'Cost efficiency', 'Real-time analytics']
     },
     {
-      icon: Globe;
+      icon: Globe,
       title: '5G Integration',
       description: 'Seamless integration with 5G networks for ultra-fast connectivity and low latency.',
       features: ['5G connectivity', 'Network slicing', 'Edge computing', 'Mobile edge computing'],
       benefits: ['Ultra-fast speeds', 'Low latency', 'High reliability', 'Massive connectivity']
     },
     {
-      icon: Settings;
+      icon: Settings,
       title: 'Edge Infrastructure',
       description: 'Complete edge computing infrastructure setup and management for your IoT ecosystem.',
       features: ['Edge servers', 'Network setup', 'Monitoring systems', 'Backup solutions'],
@@ -367,7 +365,6 @@ import { Wifi, Cpu, Cloud, Shield, Zap, CheckCircle, ArrowRight, Database, Globe
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
-const IotEdgeComputingPage: React.FC = () => {
   const features = [
     {
       icon: Wifi,

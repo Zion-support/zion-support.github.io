@@ -1,33 +1,31 @@
-'use client';
 import React from 'react';
 import { Layout, Wand2, Palette, Zap, CheckCircle, ArrowRight, Monitor, Globe } from 'lucide-react';
 import Link from 'next/link';
-
 const LandingPageBuilderPage: React.FC = () => {
   const features = [
     {
-      icon: Wand2;
+      icon: Wand2,
       title: 'AI-Powered Design',
       description: 'Generate stunning landing pages with AI assistance in minutes'},
     {
-      icon: Palette;
+      icon: Palette,
       title: 'Drag & Drop Builder',
       description: 'Easy-to-use visual editor with no coding required'},
     {
-      icon: Zap;
+      icon: Zap,
       title: 'Lightning Fast',
       description: 'Optimized for speed with 99.9% uptime guarantee'},
     {
-      icon: Monitor;
+      icon: Monitor,
       title: 'Responsive Design',
       description: 'Perfect on all devices - desktop, tablet, and mobile'
     },
     {
-      icon: Globe;
+      icon: Globe,
       title: 'SEO Optimized',
       description: 'Built-in SEO tools to rank higher in search results'},
     {
-      icon: CheckCircle;
+      icon: CheckCircle,
       title: 'A/B Testing',
       description: 'Test different versions to maximize conversions'}
   ];

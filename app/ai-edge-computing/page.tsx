@@ -1,5 +1,3 @@
-'use client';
-
 import React from 'react';
 import { ArrowRight, Star, CheckCircle, Phone, Mail, MapPin, Building, Zap, Globe, Users, Shield, Code, BarChart, Brain, Cloud, Settings, Target, Rocket, Palette, Video, Music, Gamepad2, ShoppingCart, CreditCard, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation as NavIcon, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Truck, Smartphone, ChefHat, Rocket as RocketIcon, Sprout, Scale } from 'lucide-react';
 import Footer from '../components/Footer';
@@ -8,7 +6,6 @@ import ErrorBoundary from '../components/ErrorBoundary';
 import Loading from '../components/Loading';
 import PerformanceMonitor from '../components/PerformanceMonitor';
 import Navigation from '../components/Navigation';
-
 const AIEdgeComputingPage: React.FC = () => {
   const features = [
     {
@@ -445,7 +442,4 @@ const AIEdgeComputingPage: React.FC = () => {
     </div>
   );
 };
-
-AIEdgeComputingPage.displayName = 'AIEdgeComputingPage';
-
 export default AIEdgeComputingPage;

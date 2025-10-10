@@ -1,10 +1,7 @@
-'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
-
-const CybersecurityPage: React.FC = () => {,
-  const features = [,
+const $1Page: React.FC = () => {
+  const $1 = [
     'Threat Detection & Prevention',
     'Vulnerability Assessment',
     'Security Monitoring',
@@ -26,17 +23,17 @@ const CybersecurityPage: React.FC = () => {,
     {
       title: 'Network Security',
       description: 'Comprehensive network protection with firewalls, intrusion detection, and monitoring',
-      icon: Shield;
+      icon: Shield,
     },
     {
       title: 'Endpoint Protection',
       description: 'Advanced endpoint security for all devices and workstations',
-      icon: Lock;
+      icon: Lock,
     },
     {
       title: 'Security Training',
       description: 'Employee security awareness training and phishing simulation',
-      icon: Eye;
+      icon: Eye,
     }
   ];return (
     <>
@@ -128,5 +125,4 @@ const CybersecurityPage: React.FC = () => {,
     </>
   );
 };
-
 export default CybersecurityPage;

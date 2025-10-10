@@ -1,32 +1,30 @@
-'use client';
 import React from 'react';
 import { Mail, Target, BarChart, Zap, ArrowRight, Mail, Users, TrendingUp, Shield } from 'lucide-react';
 import Link from 'next/link';
-
 const EmailOptimizerPage: React.FC = () => {
   const features = [
     {
-      icon: Target;
+      icon: Target,
       title: 'AI-Powered Subject Lines',
       description: 'Generate compelling subject lines that increase open rates by up to 40%'},
     {
-      icon: BarChart;
+      icon: BarChart,
       title: 'Performance Analytics',
       description: 'Track email performance with detailed analytics and insights'},
     {
-      icon: Users;
+      icon: Users,
       title: 'Audience Segmentation',
       description: 'Automatically segment your audience for personalized campaigns'},
     {
-      icon: Zap;
+      icon: Zap,
       title: 'A/B Testing',
       description: 'Test different versions to find the most effective content'},
     {
-      icon: Shield;
+      icon: Shield,
       title: 'Deliverability Optimization',
       description: 'Ensure your emails reach the inbox with advanced deliverability tools'},
     {
-      icon: TrendingUp;
+      icon: TrendingUp,
       title: 'ROI Tracking',
       description: 'Measure and optimize your email marketing ROI in real-time'}
   ];

@@ -1,8 +1,5 @@
-'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
-
 const AIEcommerceSolutionsPage: React.FC = () => {
   const ecommerceServices = [
     {
@@ -193,11 +190,9 @@ const AIEcommerceSolutionsPage: React.FC = () => {
     { metric: '95%', description: 'Fraud Detection Accuracy' }
   ];
 
-const AiEcommerceSolutionsPage: React.FC = () => {,
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">,
       <SEOOptimizer;
         title="AI E-commerce Solutions - Zion Tech Group",
-const AiEcommerceSolutionsPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <SEOOptimizer
@@ -436,5 +431,4 @@ const AiEcommerceSolutionsPage: React.FC = () => {
       <Footer />,
     </div>);
 };
-
 export default AiEcommerceSolutionsPage;

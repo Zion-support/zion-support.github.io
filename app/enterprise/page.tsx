@@ -3,7 +3,6 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-<<<<<<< HEAD
 import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Building, Users, Shield, Globe, Brain, Cloud, Code, BarChart, Zap, ArrowRight, Star, Award, Target, Clock, Settings, Lock, Database, Smartphone, Eye, Sparkles } from 'lucide-react';
 
 const EnterprisePage: React.FC = () => {
@@ -89,7 +88,6 @@ const EnterprisePage: React.FC = () => {
     { number: '99.9%', label: 'Uptime Guarantee', icon: Shield },
     { number: '50%', label: 'Cost Reduction', icon: TrendingUp },
     { number: '24/7', label: 'Support Available', icon: Clock }
-=======
 import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Building, Shield, Users, Award, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Zap, Globe, Brain, Cloud, Code, Clock, Star, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation as NavIcon, PieChart, TrendingDown, Activity } from 'lucide-react';
 
 const EnterprisePage: React.FC = () => {
@@ -220,7 +218,6 @@ const EnterprisePage: React.FC = () => {
       ],
       popular: false
     }
->>>>>>> origin/main
   ];
 
   return (
@@ -228,12 +225,9 @@ const EnterprisePage: React.FC = () => {
       <SEOOptimizer
         title="Enterprise Solutions - Zion Tech Group"
         description="Comprehensive enterprise-grade solutions for large-scale business operations."
-<<<<<<< HEAD
         keywords="enterprise solutions, enterprise software, large-scale solutions, enterprise integration, business solutions"
-=======
         keywords={["enterprise solutions","enterprise software","large-scale solutions","enterprise integration","business solutions"]}
         canonicalUrl="https://ziontechgroup.com/enterprise"
->>>>>>> origin/main
       />
       <Navigation />
       
@@ -249,7 +243,6 @@ const EnterprisePage: React.FC = () => {
             </span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-<<<<<<< HEAD
             Comprehensive enterprise-grade solutions designed for large-scale business operations. 
             Transform your organization with cutting-edge technology and expert implementation.
           </p>
@@ -260,7 +253,6 @@ const EnterprisePage: React.FC = () => {
             </button>
             <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
               View Case Studies
-=======
             Comprehensive enterprise-grade solutions designed to scale with your business and drive digital transformation across your organization.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -270,13 +262,11 @@ const EnterprisePage: React.FC = () => {
             </button>
             <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
               Schedule Demo
->>>>>>> origin/main
             </button>
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Stats Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -295,9 +285,7 @@ const EnterprisePage: React.FC = () => {
       </section>
 
       {/* Features Section */}
-=======
       {/* Enterprise Features */}
->>>>>>> origin/main
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -310,11 +298,8 @@ const EnterprisePage: React.FC = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-<<<<<<< HEAD
             {features.map((feature, index) => (
-=======
             {enterpriseFeatures.map((feature, index) => (
->>>>>>> origin/main
               <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300">
                 <div className="flex items-center mb-4">
                   <feature.icon className="w-8 h-8 text-purple-400 mr-3" />
@@ -335,7 +320,6 @@ const EnterprisePage: React.FC = () => {
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Solutions Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -361,7 +345,6 @@ const EnterprisePage: React.FC = () => {
                     <li key={idx} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
                       {benefit}
-=======
       {/* Industries */}
       <section className="py-20 px-4 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -385,7 +368,6 @@ const EnterprisePage: React.FC = () => {
                     <li key={idx} className="flex items-center text-sm text-gray-400">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                       {feature}
->>>>>>> origin/main
                     </li>
                   ))}
                 </ul>
@@ -395,7 +377,6 @@ const EnterprisePage: React.FC = () => {
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Benefits Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -430,7 +411,6 @@ const EnterprisePage: React.FC = () => {
                 </button>
               </div>
             </div>
-=======
       {/* Pricing */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -498,12 +478,10 @@ const EnterprisePage: React.FC = () => {
             <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
               Contact Enterprise Team
             </button>
->>>>>>> origin/main
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* CTA Section */}
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
@@ -525,8 +503,6 @@ const EnterprisePage: React.FC = () => {
         </div>
       </section>
 
-=======
->>>>>>> origin/main
       <Footer />
     </div>
   );

@@ -4,11 +4,8 @@ import { BarChart, TrendingUp, Users, Target, Zap, CheckCircle, ArrowRight, Star
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-<<<<<<< HEAD
-=======
 import React, { lazy } from 'react';
 import { CheckCircle, TrendingUp, Brain, BarChart } from 'lucide-react';
->>>>>>> origin/main
 
 const Navigation = lazy(() => import('../components/Navigation'));
 const Footer = lazy(() => import('../components/Footer'));
@@ -34,8 +31,6 @@ const AIAnalyticsPage: React.FC = React.memo((props) => {
       benefits: ['Scheduled reports', 'Custom templates', 'PDF export', 'Email delivery']
     },
     {
-<<<<<<< HEAD
-=======
       icon: TrendingUp;
       icon: BarChart,
       title: 'Real-time Analytics',
@@ -65,7 +60,6 @@ const AIAnalyticsPage: React.FC = React.memo((props) => {
       title: 'Data Integration',
       description: 'Seamlessly connect with 100+ data sources and platforms',
       benefits: ['API integrations', 'Database connections', 'File uploads']
->>>>>>> origin/main
       icon: TrendingUp,
       title: 'Performance Tracking',
       description: 'Track KPIs and performance metrics with advanced analytics and benchmarking.',

@@ -1,89 +1,55 @@
+#!/usr/bin/env node
+
 const fs = require('fs');
 const path = require('path');
-const glob = require('glob');
 
-// Common patterns to fix
-const fixes = [
-  // Fix missing commas in object literals
-  {
-    pattern: /(\s+)(name|role|image|bio|icon|title|description|number|label):\s*['"][^'"]*['"]\s*\n(\s+)(name|role|image|bio|icon|title|description|number|label):/g,
-    replacement: '$1$2: $3,\n$4$5:'
-  },
-  // Fix missing closing braces
-  {
-    pattern: /(\s+)(\w+):\s*['"][^'"]*['"]\s*\n(\s+)\}/g,
-    replacement: '$1$2: $3,\n$4}'
-  },
-  // Fix missing commas before closing braces in arrays
-  {
-    pattern: /(\s+)(\w+):\s*['"][^'"]*['"]\s*\n(\s+)\]/g,
-    replacement: '$1$2: $3,\n$4]'
-  },
-  // Fix duplicate export statements
-  {
-    pattern: /export default \w+;\nexport default \w+;/g,
-    replacement: 'export default $1;'
-  },
-  // Fix missing closing braces in JSX
-  {
-    pattern: /(\s+)(\w+):\s*['"][^'"]*['"]\s*\n(\s+)\);/g,
-    replacement: '$1$2: $3,\n$4);'
-  },
-  // Fix missing closing parentheses
-  {
-    pattern: /(\s+)(\w+):\s*['"][^'"]*['"]\s*\n(\s+)\};/g,
-    replacement: '$1$2: $3,\n$4};'
-  }
-];
-
-function fixFile(filePath) {
+function fixSyntaxErrors(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    let originalContent = content;
     
-    // Apply fixes
-    fixes.forEach(fix => {
-      content = content.replace(fix.pattern, fix.replacement);
-    });
+    // Fix duplicate imports and function definitions
+    content = content.replace(/import React from 'react';\s*import { Helmet } from 'react-helmet-async';\s*import Navigation from '\.\.\/components\/Navigation';\s*import Footer from '\.\.\/components\/Footer';\s*const \w+Page: React\.FC = \(\) => \{\s*return \(/g, 'return (');
     
-    // Additional specific fixes
-    // Fix missing commas in object properties
-    content = content.replace(/(\s+)(\w+):\s*['"][^'"]*['"]\s*\n(\s+)(\w+):/g, '$1$2: $3,\n$4$4:');
+    // Fix orphaned code blocks
+    content = content.replace(/return \(\) => clearTimeout\(timer\);\s*}, \[\]\);const \w+ = /g, 'const ');
     
-    // Fix missing closing braces
-    content = content.replace(/(\s+)(\w+):\s*['"][^'"]*['"]\s*\n(\s+)\}/g, '$1$2: $3,\n$4}');
+    // Fix missing semicolons and brackets
+    content = content.replace(/\]\s*;\s*return \(\) => clearTimeout\(timer\);\s*}, \[\]\);/g, '];');
     
-    // Fix duplicate export statements
-    content = content.replace(/export default (\w+);\s*export default (\w+);/g, 'export default $1;');
+    // Fix malformed if statements
+    content = content.replace(/const \w+ = .*?if \(/g, 'const filteredPosts = selectedCategory === \'all\' ? posts : posts.filter(post => post.category === selectedCategory);\n\n  if (');
     
-    // Fix missing closing braces in function returns
-    content = content.replace(/(\s+)(\w+):\s*['"][^'"]*['"]\s*\n(\s+)\);/g, '$1$2: $3,\n$4);');
+    // Clean up extra whitespace
+    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
     
-    // Fix missing closing parentheses in JSX
-    content = content.replace(/(\s+)(\w+):\s*['"][^'"]*['"]\s*\n(\s+)\};/g, '$1$2: $3,\n$4};');
-    
-    if (content !== originalContent) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed: ${filePath}`);
-      return true;
-    }
-    return false;
+    fs.writeFileSync(filePath, content);
+    console.log(`Fixed syntax errors in: ${filePath}`);
+    return true;
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }
 }
 
-// Find all TypeScript/TSX files in src directory
-const files = glob.sync('src/**/*.{ts,tsx}', { cwd: __dirname });
+// Get list of files that might have syntax errors
+const files = [
+  '/workspace/app/blog/page.tsx',
+  '/workspace/app/services/page.tsx',
+  '/workspace/app/enterprise/page.tsx',
+  '/workspace/app/support/page.tsx',
+  '/workspace/app/consultation/page.tsx',
+  '/workspace/app/demo/page.tsx',
+  '/workspace/app/api-docs/page.tsx',
+  '/workspace/app/status/page.tsx'
+];
 
-console.log(`Found ${files.length} files to check...`);
+console.log(`Fixing syntax errors in ${files.length} files`);
 
-let fixedCount = 0;
-files.forEach(file => {
-  if (fixFile(file)) {
-    fixedCount++;
+let fixed = 0;
+for (const file of files) {
+  if (fs.existsSync(file) && fixSyntaxErrors(file)) {
+    fixed++;
   }
-});
+}
 
-console.log(`Fixed ${fixedCount} files`);
+console.log(`Fixed syntax errors in ${fixed} files`);

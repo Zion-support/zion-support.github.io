@@ -1,6 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 const healthPage: React.FC = () => {
   return(<>)
       <Helmet>)
@@ -66,5 +65,4 @@ const healthPage: React.FC = () => {
       </div>,
     </>);
 };
-
 export default healthPage;

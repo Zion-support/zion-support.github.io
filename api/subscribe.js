@@ -15,14 +15,11 @@ export default function handler(req, res) {
   const { email, name, preferences } = req.body || {};
 
   if (!email) {
-<<<<<<< HEAD
     res.statusCode = 400;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Email is required' }));
     return;
-=======
     return res.status(400).json({ error: 'Email is required' });
->>>>>>> origin/main
   }
 
   if (!fs.existsSync(dir)) {
@@ -31,7 +28,6 @@ export default function handler(req, res) {
 
   let existing = [];
   try {
-<<<<<<< HEAD
     if (!isValidEmail(email)) {
       res.statusCode = 400;
       res.setHeader('Content-Type', 'application/json');
@@ -50,7 +46,6 @@ export default function handler(req, res) {
     // In a real application, you would save this to a database
     // For now, we'll just log it
     console.log('Subscription created:', subscription);
-=======
     if (fs.existsSync(file)) {
       const data = fs.readFileSync(file, 'utf8');
       existing = JSON.parse(data);
@@ -66,7 +61,6 @@ export default function handler(req, res) {
   if (existingSubscriber) {
     return res.status(400).json({ error: 'Email already subscribed' });
   }
->>>>>>> origin/main
 
   const newSubscriber = {
     id: Date.now().toString(),
@@ -92,10 +86,7 @@ export default function handler(req, res) {
     console.error('Error saving subscriber:', error);
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
-<<<<<<< HEAD
     res.end(JSON.stringify({ error: 'Failed to subscribe to newsletter' }));
-=======
     res.end(JSON.stringify({ error: 'Failed to save subscription' }));
->>>>>>> origin/main
   }
 }

@@ -1,42 +1,39 @@
-'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
-
 const AIWorkflowAutomationPage: React.FC = () => {
   const features = [
     {
-      icon: Workflow;
+      icon: Workflow,
       title: 'Intelligent Process Automation',
       description: 'AI-powered workflow automation that learns from your processes and optimizes them automatically.',
       benefits: ['90% time savings', 'Error reduction', 'Process optimization']
     },
     {
-      icon: Zap;
+      icon: Zap,
       title: '500+ Integrations',
       description: 'Connect with 500+ popular business tools and platforms for seamless automation.',
       benefits: ['Wide compatibility', 'Easy setup', 'Unified workflow']
     },
     {
-      icon: Clock;
+      icon: Clock,
       title: 'Real-time Monitoring',
       description: 'Monitor workflow performance in real-time with detailed analytics and insights.',
       benefits: ['Live tracking', 'Performance metrics', 'Instant alerts']
     },
     {
-      icon: Users;
+      icon: Users,
       title: 'Team Collaboration',
       description: 'Enable seamless collaboration with role-based access and approval workflows.',
       benefits: ['Role management', 'Approval chains', 'Team coordination']
     },
     {
-      icon: Shield;
+      icon: Shield,
       title: 'Enterprise Security',
       description: 'Bank-level security with encryption, audit trails, and compliance features.',
       benefits: ['Data protection', 'Audit compliance', 'Secure access']
     },
     {
-      icon: BarChart;
+      icon: BarChart,
       title: 'Analytics & Reporting',
       description: 'Comprehensive analytics to track workflow performance and identify optimization opportunities.',
       benefits: ['Performance insights', 'ROI tracking', 'Optimization suggestions']
@@ -94,19 +91,19 @@ const AIWorkflowAutomationPage: React.FC = () => {
 
   const benefits = [
     {
-      icon: Clock;
+      icon: Clock,
       title: 'Save 20+ Hours/Week',
       description: 'Automate repetitive tasks and focus on high-value activities'},
     {
-      icon: Zap;
+      icon: Zap,
       title: '90% Process Efficiency',
       description: 'Dramatically improve process efficiency with intelligent automation'},
     {
-      icon: Users;
+      icon: Users,
       title: 'Better Team Coordination',
       description: 'Streamline team workflows and improve collaboration'},
     {
-      icon: Star;
+      icon: Star,
       title: 'Scalable Solutions',
       description: 'Scale your automation as your business grows'}
   ];
@@ -234,7 +231,7 @@ const AIWorkflowAutomationPage: React.FC = () => {
                   </ul>
                   <a;
                     href="mailto: kleber@ziontechgroup.com",
-                    className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${,
+                    className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                       plan.popular;
                         ? 'bg-cyan-400 text-black hover:bg-cyan-300'}
                         : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white'}

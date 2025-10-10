@@ -1,16 +1,14 @@
-'use client';
 import React from 'react';
 import { Shield, Lock, Eye, Database, UserCheck, FileText, AlertTriangle } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
-const GDPRPage: React.FC = () => {,
+const $1Page: React.FC = () => {
   const lastUpdated = 'January 1, 2024';
 
   const rights = [
     {
       title: 'Right of Access'
-      icon: Eye;
+      icon: Eye,
       description: 'You have the right to obtain confirmation as to whether or not personal data concerning you is being processed.',
       details: [,
         'Request a copy of your personal data',
@@ -21,7 +19,7 @@ const GDPRPage: React.FC = () => {,
     },
     {
       title: 'Right to Rectification'
-      icon: FileText;
+      icon: FileText,
       description: 'You have the right to have inaccurate personal data corrected and incomplete data completed.',
       details: [,
         'Correct factual errors in your data',
@@ -32,7 +30,7 @@ const GDPRPage: React.FC = () => {,
     },
     {
       title: 'Right to Erasure'
-      icon: AlertTriangle;
+      icon: AlertTriangle,
       description: 'You have the right to request the deletion of your personal data under certain circumstances.',
       details: [,
         'Data no longer necessary for original purposes',
@@ -43,7 +41,7 @@ const GDPRPage: React.FC = () => {,
     },
     {
       title: 'Right to Restrict Processing'
-      icon: Lock;
+      icon: Lock,
       description: 'You have the right to limit how we process your personal data in certain situations.',
       details: [,
         'Contest accuracy of personal data',
@@ -54,7 +52,7 @@ const GDPRPage: React.FC = () => {,
     },
     {
       title: 'Right to Data Portability',
-      icon: Database;
+      icon: Database,
       description: 'You have the right to receive your personal data in a structured, commonly used format.',
       details: [,
         'Receive data in machine-readable format',
@@ -65,7 +63,7 @@ const GDPRPage: React.FC = () => {,
     },
     {
       title: 'Right to Object'
-      icon: UserCheck;
+      icon: UserCheck,
       description: 'You have the right to object to processing of your personal data for specific purposes.',
       details: [,
         'Object to processing for direct marketing',

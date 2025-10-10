@@ -4,40 +4,40 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, Zap, Settings, Clock, Users, Shield, BarChart, ArrowRight } from 'lucide-react';
 
-const AIOpsPage: React.FC = () => {,
-  const features = [,
-    {,
-      icon: Settings;
+const AIOpsPage: React.FC = () => {
+  const features = [
+    {
+      icon: Settings,
       title: 'Intelligent IT Operations',
       description: 'AI-powered IT operations that automatically detect, diagnose, and resolve issues before they impact your business.',
       benefits: ['Proactive monitoring', 'Automated remediation', 'Predictive analytics']
     },
     {
-      icon: Zap;
+      icon: Zap,
       title: 'Automated Incident Response',
       description: 'Automatically respond to incidents with intelligent root cause analysis and resolution recommendations.',
       benefits: ['Faster resolution', 'Reduced downtime', 'Smart diagnostics']
     },
     {
-      icon: Clock;
+      icon: Clock,
       title: '24/7 Monitoring',
       description: 'Continuous monitoring of your entire IT infrastructure with real-time alerts and notifications.',
       benefits: ['Always-on monitoring', 'Instant alerts', 'Comprehensive coverage']
     },
     {
-      icon: Users;
+      icon: Users,
       title: 'Team Collaboration',
       description: 'Enable seamless collaboration between IT teams with shared dashboards and communication tools.',
       benefits: ['Team coordination', 'Shared visibility', 'Efficient workflows']
     },
     {
-      icon: Shield;
+      icon: Shield,
       title: 'Enterprise Security',
       description: 'Bank-level security with encryption, audit trails, and compliance features for IT operations.',
       benefits: ['Data protection', 'Audit compliance', 'Secure operations']
     },
     {
-      icon: BarChart;
+      icon: BarChart,
       title: 'Performance Analytics',
       description: 'Comprehensive analytics to track IT performance and identify optimization opportunities.',
       benefits: ['Performance insights', 'Trend analysis', 'Optimization recommendations']

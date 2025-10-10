@@ -1,10 +1,8 @@
-'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, Leaf, BarChart, Zap, Shield, Users, ArrowRight } from 'lucide-react';
-
 const AIAgriculturalIntelligenceProPage: React.FC = () => {
   const features = [
     {
@@ -182,5 +180,4 @@ const AIAgriculturalIntelligenceProPage: React.FC = () => {
     </div>
   );
 };
-
 export default AIAgriculturalIntelligenceProPage;

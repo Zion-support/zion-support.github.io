@@ -24,7 +24,6 @@ export default function handler(req, res) {
 
   let existing = [];
   try {
-<<<<<<< HEAD
     const { fromAddress, toAddress, parcel } = req.body || {};
     const apiKey = process.env.EASYPOST_API_KEY;
 
@@ -33,19 +32,16 @@ export default function handler(req, res) {
       res.setHeader('Content-Type', 'application/json');
       res.end(JSON.stringify({ error: 'EasyPost API key not configured' }));
       return;
-=======
     if (fs.existsSync(file)) {
       const data = fs.readFileSync(file, 'utf8');
       existing = JSON.parse(data);
       if (!Array.isArray(existing)) existing = [];
->>>>>>> origin/main
     }
   } catch (error) {
     console.error('Error reading existing rates:', error);
     existing = [];
   }
 
-<<<<<<< HEAD
     const response = await fetch('https://api.easypost.com/v2/shipments', {
       method: 'POST',
       headers: {
@@ -64,7 +60,6 @@ export default function handler(req, res) {
     if (!response.ok) {
       throw new Error(`EasyPost API error: ${response.status}`);
     }
-=======
   // Calculate shipping rates based on destination and weight
   const baseRate = 10;
   const weightMultiplier = weight * 0.5;
@@ -79,7 +74,6 @@ export default function handler(req, res) {
     rate: totalRate,
     timestamp: new Date().toISOString()
   };
->>>>>>> origin/main
 
   existing.push(newRate);
 
@@ -96,10 +90,7 @@ export default function handler(req, res) {
     console.error('Error saving shipping rate:', error);
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
-<<<<<<< HEAD
     res.end(JSON.stringify({ error: 'Failed to retrieve shipping rates' }));
-=======
     res.end(JSON.stringify({ error: 'Failed to save rate' }));
->>>>>>> origin/main
   }
 }

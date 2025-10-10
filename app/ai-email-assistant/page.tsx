@@ -1,15 +1,12 @@
-'use client';
 import React from 'react';
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
 import SEOOptimizer from '../../components/SEOOptimizer';
 import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Navigation } from 'lucide-react';
-
-const AiEmailAssistantPage: React.FC = () => {,
+const $1Page: React.FC = () => {
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">,
       <SEOOptimizer;
         title="AI Email Assistant - Zion Tech Group",
-const AiEmailAssistantPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <SEOOptimizer
@@ -248,5 +245,4 @@ const AiEmailAssistantPage: React.FC = () => {
       <Footer />,
     </div>);
 };
-
 export default AiEmailAssistantPage;

@@ -1,9 +1,8 @@
 'use client';
-import React from 'react';
+import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
 import { Search, Code, Key, Zap, ArrowRight, Copy, Check, Globe, Brain, Cloud, Shield, Settings, Users, Database, Eye, Sparkles, BookOpen, FileText, Download } from 'lucide-react';
 
 const APIDocsPage: React.FC = () => {
@@ -217,7 +216,13 @@ print(f"Sentiment: {result['sentiment']}")`
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <>
+      <Helmet>
+        <title>API Documentation - Zion Tech Group</title>
+        <meta name="description" content="Complete API documentation for Zion Tech Group services. Get started with our APIs for AI, cloud, and IT solutions." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       
       {/* Hero Section */}
@@ -402,108 +407,16 @@ print(f"Sentiment: {result['sentiment']}")`
                     {copiedCode === `example-${index}` ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
                   </button>
                 </div>
-=======
-
-const ApiDocsPage: React.FC = () => {
-  return (
-    <>
-      <Helmet>
-        <title>API Documentation - Zion Tech Group</title>
-        <meta name="description" content="API Documentation for Zion Tech Group. Complete reference for our REST APIs and SDKs." />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-        <Navigation />
-        
-        <main className="pt-20">
-          <div className="container mx-auto px-4 py-16">
-            <div className="max-w-4xl mx-auto">
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
-                API Documentation
-              </h1>
-              
-              <div className="prose prose-lg max-w-none">
-                <p className="text-xl text-gray-600 mb-8">
-                  Complete API reference for integrating with our services.
-                </p>
-                
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">Authentication</h2>
-                <p className="text-gray-700 mb-6">
-                  Learn how to authenticate with our APIs using API keys and OAuth.
-                </p>
-                
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">Endpoints</h2>
-                <p className="text-gray-700 mb-6">
-                  Browse our complete list of API endpoints with examples.
-                </p>
-                
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">SDKs</h2>
-                <p className="text-gray-700 mb-6">
-                  Download our official SDKs for popular programming languages.
-                </p>
->>>>>>> origin/main
-              </div>
-            ))}
-          </div>
-<<<<<<< HEAD
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-white mb-4">Why Our API?</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Built for developers, by developers. Our API is designed to be powerful, reliable, and easy to use.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <feature.icon className="w-8 h-8 text-purple-400" />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">{feature.title}</h3>
-                <p className="text-gray-400 text-sm">{feature.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">
-            Ready to Get Started?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Get your API key and start building amazing applications with our powerful API.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-              Get API Key
-              <ArrowRight className="inline-block ml-2 w-5 h-5" />
-            </button>
-            <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-              View Pricing
-            </button>
-          </div>
-        </div>
-      </section>
-
-      <Footer />
-    </div>
-=======
-        </main>
-        
         <Footer />
       </div>
     </>
->>>>>>> origin/main
   );
 };
 
-export default APIDocsPage;
+export default ApiDocsPage;

@@ -3,9 +3,14 @@
 const fs = require('fs');
 const path = require('path');
 
-function fixAllSyntax(filePath) {
+function fixRemainingSyntax(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
+    
+    // Fix extra commas in function definitions
+    content = content.replace(/const \w+Page: React\.FC = \(\) => \{,/g, 'const $1Page: React.FC = () => {');
+    content = content.replace(/const \w+ = \[,/g, 'const $1 = [');
+    content = content.replace(/\{\s*,/g, '{');
     
     // Fix semicolons in object properties
     content = content.replace(/icon: \w+;/g, (match) => match.replace(';', ','));
@@ -22,11 +27,6 @@ function fixAllSyntax(filePath) {
     content = content.replace(/description: '[^']+'\s*benefits:/g, (match) => match.replace('benefits:', ', benefits:'));
     content = content.replace(/name: '[^']+'\s*label:/g, (match) => match.replace('label:', ', label:'));
     content = content.replace(/label: '[^']+'\s*count:/g, (match) => match.replace('count:', ', count:'));
-    
-    // Fix extra commas in function definitions
-    content = content.replace(/const \w+Page: React\.FC = \(\) => \{,/g, 'const $1Page: React.FC = () => {');
-    content = content.replace(/const \w+ = \[,/g, 'const $1 = [');
-    content = content.replace(/\{\s*,/g, '{');
     
     // Remove duplicate function definitions and orphaned JSX
     const lines = content.split('\n');
@@ -82,7 +82,7 @@ function fixAllSyntax(filePath) {
 const { execSync } = require('child_process');
 
 try {
-  const files = execSync('find /workspace/app -name "*.tsx" -o -name "*.ts" | head -50', { encoding: 'utf8' })
+  const files = execSync('find /workspace/app -name "*.tsx" -o -name "*.ts" | head -100', { encoding: 'utf8' })
     .trim()
     .split('\n')
     .filter(f => f && !f.includes('node_modules'));
@@ -91,7 +91,7 @@ try {
   
   let fixed = 0;
   for (const file of files) {
-    if (fixAllSyntax(file)) {
+    if (fixRemainingSyntax(file)) {
       fixed++;
     }
   }

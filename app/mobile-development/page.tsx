@@ -1,11 +1,9 @@
-'use client';
 import React from 'react';
 import { Smartphone, Code, Zap, CheckCircle, Phone } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
-const MobileDevelopmentPage: React.FC = () => {,
-  const features = [,
+const $1Page: React.FC = () => {
+  const $1 = [
     'iOS & Android Development',
     'Cross-platform Solutions',
     'UI/UX Design',
@@ -27,17 +25,17 @@ const MobileDevelopmentPage: React.FC = () => {,
     {
       title: 'Native Apps',
       description: 'High-performance native iOS and Android applications',
-      icon: Smartphone;
+      icon: Smartphone,
     },
     {
       title: 'Cross-platform',
       description: 'React Native and Flutter apps for maximum reach',
-      icon: Code;
+      icon: Code,
     },
     {
       title: 'App Optimization',
       description: 'Performance tuning and app store optimization',
-      icon: Zap;
+      icon: Zap,
     }
   ];
 

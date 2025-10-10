@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 import React, { useState, useEffect } from 'react';
 import { Brain, Cpu, Shield, Globe, Users, Award, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, Phone, Mail, MapPin, Clock, Star, Zap, Database, Cloud, Code, Smartphone, Settings, Lock, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation as NavIcon, PieChart, TrendingDown, Activity } from 'lucide-react';
@@ -96,7 +95,6 @@ const ServicesPage: React.FC = () => {
     { number: '99%', label: 'Client Satisfaction', icon: Star },
     { number: '24/7', label: 'Support Available', icon: Clock },
     { number: '15+', label: 'Years Experience', icon: Award }
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, CheckCircle, Star, TrendingUp, Building, Clock, Phone, Mail, MapPin, Target, Globe, Database, Smartphone, Lock, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation as NavIcon, PieChart, TrendingDown, Activity, Atom, Link } from 'lucide-react';
@@ -167,7 +165,6 @@ const ServicesPage: React.FC = () => {
       features: ['Custom Development', 'User Management', 'Payment Integration', 'Analytics Dashboard'],
       path: '/micro-saas'
     }
->>>>>>> origin/main
   ];
 
   const contactInfo = {
@@ -177,7 +174,6 @@ const ServicesPage: React.FC = () => {
   };
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEOOptimizer 
         title="Our Services - Zion Tech Group"
@@ -309,7 +305,6 @@ const ServicesPage: React.FC = () => {
 };
 
 export default ServicesPage;
-=======
     <>
       <Helmet>
         <title>Our Services - Zion Tech Group</title>
@@ -449,4 +444,3 @@ export default ServicesPage;
 };
 
 export default ServicesPage;
->>>>>>> origin/main
