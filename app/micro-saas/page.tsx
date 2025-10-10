@@ -54,6 +54,36 @@ const MicroSAASPage: React.FC = () => {
       capabilities: ['40% faster project delivery', '60% reduction in project overruns', 'Real-time team insights', 'Automated risk detection']
     },
     { 
+      name: 'AI Quantum Task Optimizer', 
+      href: '/ai-quantum-task-optimizer', 
+      icon: Zap, 
+      category: 'Productivity', 
+      price: '$299/mo',
+      description: 'Revolutionary quantum-powered task optimization that finds the most efficient way to complete complex projects using quantum algorithms.',
+      features: ['Quantum Task Scheduling', 'Multi-dimensional Optimization', 'Resource Quantum Mapping', 'Parallel Processing', 'Energy Efficiency', 'Time Dilation Analysis', 'Quantum Collaboration', 'Entanglement-based Sync'],
+      popular: true,
+      rating: 4.9,
+      users: '850+',
+      trial: '21-day free trial',
+      link: 'https://ziontechgroup.com/ai-quantum-task-optimizer',
+      capabilities: ['300% faster task completion', '90% resource optimization', 'Quantum-level efficiency', 'Zero task conflicts']
+    },
+    { 
+      name: 'AI Neural Memory Workspace', 
+      href: '/ai-neural-memory-workspace', 
+      icon: Brain, 
+      category: 'Productivity', 
+      price: '$179/mo',
+      description: 'AI workspace that learns and remembers your work patterns, automatically organizing information and predicting your next actions.',
+      features: ['Pattern Recognition', 'Memory Consolidation', 'Predictive Organization', 'Context Awareness', 'Learning Algorithms', 'Adaptive Interface', 'Knowledge Graphs', 'Cognitive Load Management'],
+      popular: true,
+      rating: 4.7,
+      users: '1,200+',
+      trial: '14-day free trial',
+      link: 'https://ziontechgroup.com/ai-neural-memory-workspace',
+      capabilities: ['50% faster information retrieval', '90% context accuracy', 'Adaptive learning', 'Cognitive enhancement']
+    },
+    { 
       name: 'AI Smart Calendar Pro', 
       href: '/ai-smart-calendar', 
       icon: Calendar, 
