@@ -14,6 +14,12 @@ importers:
       '@heroicons/react':
         specifier: ^2.2.0
         version: 2.2.0(react@18.3.1)
+<<<<<<< HEAD
+=======
+      '@tailwindcss/postcss':
+        specifier: ^4.1.14
+        version: 4.1.14
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0090
       '@types/react-router-dom':
         specifier: ^5.3.3
         version: 5.3.3
@@ -38,9 +44,12 @@ importers:
       lucide-react:
         specifier: ^0.544.0
         version: 0.544.0(react@18.3.1)
+<<<<<<< HEAD
       next:
         specifier: ^15.5.4
         version: 15.5.4(@babel/core@7.28.4)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0090
       react:
         specifier: ^18.3.1
         version: 18.3.1
@@ -96,9 +105,12 @@ importers:
       '@rollup/rollup-linux-x64-gnu':
         specifier: 4.52.3
         version: 4.52.3
+<<<<<<< HEAD
       '@tailwindcss/postcss':
         specifier: ^4.1.14
         version: 4.1.14
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0090
       '@testing-library/dom':
         specifier: ^10.4.1
         version: 10.4.1
@@ -150,9 +162,12 @@ importers:
       cheerio:
         specifier: ^1.1.2
         version: 1.1.2
+<<<<<<< HEAD
       cssnano:
         specifier: ^7.1.1
         version: 7.1.1(postcss@8.5.6)
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0090
       eslint:
         specifier: ^9.37.0
         version: 9.37.0(jiti@2.6.1)
@@ -1430,6 +1445,7 @@ packages:
   '@napi-rs/wasm-runtime@0.2.12':
     resolution: {integrity: sha512-ZVWUcfwY4E/yPitQJl481FjFo3K22D6qF0DuFH6Y/nbnE11GY5uguDxZMGXPQ8WQ0128MXQD7TnfHyK4oWoIJQ==}
 
+<<<<<<< HEAD
   '@next/env@15.5.4':
     resolution: {integrity: sha512-27SQhYp5QryzIT5uO8hq99C69eLQ7qkzkDPsk3N+GuS2XgOgoYEeOav7Pf8Tn4drECOVDsDg8oj+/DVy8qQL2A==}
 
@@ -1481,6 +1497,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0090
   '@nodelib/fs.scandir@2.1.5':
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
     engines: {node: '>= 8'}
@@ -1876,9 +1894,12 @@ packages:
   '@standard-schema/utils@0.3.0':
     resolution: {integrity: sha512-e7Mew686owMaPJVNNLs55PUvgz371nKgwsc4vxE49zsODpJEnxgxRo2y/OKrqueavXgZNMDVj3DdHFlaSAeU8g==}
 
+<<<<<<< HEAD
   '@swc/helpers@0.5.15':
     resolution: {integrity: sha512-JQ5TuMi45Owi4/BIMAJBoSQoOJu12oOk/gADqlcUL9JEdHB8vyjUSsxqeNXnmXHjYKMi2WcYtezGEEhqUI/E2g==}
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0090
   '@tailwindcss/node@4.1.14':
     resolution: {integrity: sha512-hpz+8vFk3Ic2xssIA3e01R6jkmsAhvkQdXlEbRTk6S10xDAtiQiM3FyvZVGsucefq764euO/b8WUW9ysLdThHw==}
 
@@ -2644,9 +2665,12 @@ packages:
     resolution: {integrity: sha512-Gmy6FhYlCY7uOElZUSbxo2UCDH8owEk996gkbrpsgGtrJLM3J7jGxl9Ic7Qwwj4ivOE5AWZWRMecDdF7hqGjFA==}
     engines: {node: '>=10'}
 
+<<<<<<< HEAD
   caniuse-api@3.0.0:
     resolution: {integrity: sha512-bsTwuIg/BZZK/vreVTYYbSWoe2F+71P7K5QGEX+pT250DZbfU1MQ5prOKpPR+LL6uWKK3KMwMCAS74QB3Um1uw==}
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0090
   caniuse-lite@1.0.30001749:
     resolution: {integrity: sha512-0rw2fJOmLfnzCRbkm8EyHL8SvI2Apu5UbnQuTsJ0ClgrH8hcwFooJ1s5R0EP8o8aVrFu8++ae29Kt9/gZAZp/Q==}
 
@@ -2689,9 +2713,12 @@ packages:
   cjs-module-lexer@2.1.0:
     resolution: {integrity: sha512-UX0OwmYRYQQetfrLEZeewIFFI+wSTofC+pMBLNuH3RUuu/xzG1oz84UCEDOSoQlN3fZ4+AzmV50ZYvGqkMh9yA==}
 
+<<<<<<< HEAD
   client-only@0.0.1:
     resolution: {integrity: sha512-IV3Ou0jSMzZrd3pZ48nLkT9DA7Ag1pnPzaiQhpW7c3RbcqqzvzzVu+L8gfqMp/8IM2MQtSiqaCxrrcfu8I8rMA==}
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0090
   cliui@8.0.1:
     resolution: {integrity: sha512-BSeNnyus75C4//NQ9gQt1/csTXyo/8Sb+afLAkzAptFuMsod9HFokGNudZpi/oQV73hnVK+sR+5PVRMd+Dr7YQ==}
     engines: {node: '>=12'}
@@ -2718,17 +2745,23 @@ packages:
   color-name@1.1.4:
     resolution: {integrity: sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==}
 
+<<<<<<< HEAD
   colord@2.9.3:
     resolution: {integrity: sha512-jeC1axXpnb0/2nn/Y1LPuLdgXBLH7aDcHu4KEKfqw3CUhX7ZpfBSlPKyqXE6btIgEzfWtrX3/tyBCaCvXvMkOw==}
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0090
   combined-stream@1.0.8:
     resolution: {integrity: sha512-FQN4MRfuJeHf7cBbBMJFXhKSDq+2kAArBlmRBvcvFE5BB1HZKXtSFASDhdlz9zOYwxh8lDdnvmMOe/+5cdoEdg==}
     engines: {node: '>= 0.8'}
 
+<<<<<<< HEAD
   commander@11.1.0:
     resolution: {integrity: sha512-yPVavfyCcRhmorC7rWlkHn15b4wDVgVmBA7kV4QVBsF7kv/9TKJAbAXVTxvTnwP8HHKjRCJDClKbciiYS7p0DQ==}
     engines: {node: '>=16'}
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0090
   commander@2.20.3:
     resolution: {integrity: sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ==}
 
@@ -2759,22 +2792,28 @@ packages:
   csp_evaluator@1.1.5:
     resolution: {integrity: sha512-EL/iN9etCTzw/fBnp0/uj0f5BOOGvZut2mzsiiBZ/FdT6gFQCKRO/tmcKOxn5drWZ2Ndm/xBb1SI4zwWbGtmIw==}
 
+<<<<<<< HEAD
   css-declaration-sorter@7.3.0:
     resolution: {integrity: sha512-LQF6N/3vkAMYF4xoHLJfG718HRJh34Z8BnNhd6bosOMIVjMlhuZK5++oZa3uYAgrI5+7x2o27gUqTR2U/KjUOQ==}
     engines: {node: ^14 || ^16 || >=18}
     peerDependencies:
       postcss: ^8.0.9
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0090
   css-mediaquery@0.1.2:
     resolution: {integrity: sha512-COtn4EROW5dBGlE/4PiKnh6rZpAPxDeFLaEEwt4i10jpDMFt2EhQGS79QmmrO+iKCHv0PU/HrOWEhijFd1x99Q==}
 
   css-select@5.2.2:
     resolution: {integrity: sha512-TizTzUddG/xYLA3NXodFM0fSbNizXjOKhqiQQwvhlspadZokn1KDy0NZFS0wuEubIYAV5/c1/lAr0TaaFXEXzw==}
 
+<<<<<<< HEAD
   css-tree@2.2.1:
     resolution: {integrity: sha512-OA0mILzGc1kCOCSJerOeqDxDQ4HOh+G8NbOJFOTgOCzpw7fCBubk0fEyxp8AgOL/jvLgYA/uV0cMbe43ElF1JA==}
     engines: {node: ^10 || ^12.20.0 || ^14.13.0 || >=15.0.0, npm: '>=7.0.0'}
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0090
   css-tree@3.1.0:
     resolution: {integrity: sha512-0eW44TGN5SQXU1mWSkKwFstI/22X2bG1nYzZTYMAWjylYURhse752YgbE4Cx46AC+bAvI+/dYTPRk1LqSUnu6w==}
     engines: {node: ^10 || ^12.20.0 || ^14.13.0 || >=15.0.0}
@@ -2786,6 +2825,7 @@ packages:
   css.escape@1.5.1:
     resolution: {integrity: sha512-YUifsXXuknHlUsmlgyY0PKzgPOr7/FjCePfHNt0jxm83wHZi44VDMQ7/fGNkjY3/jV1MC+1CmZbaHzugyeRtpg==}
 
+<<<<<<< HEAD
   cssesc@3.0.0:
     resolution: {integrity: sha512-/Tb/JcjK111nNScGob5MNtsntNM1aCNUDipB/TkwZFhyDrrE47SOx/18wF2bbjgc3ZzCSKW1T5nt5EbFoAz/Vg==}
     engines: {node: '>=4'}
@@ -2813,6 +2853,8 @@ packages:
     resolution: {integrity: sha512-0LrrStPOdJj+SPCCrGhzryycLjwcgUSHBtxNA8aIDxf0GLsRh1cKYhB00Gd1lDOS4yGH69+SNn13+TWbVHETFQ==}
     engines: {node: ^10 || ^12.20.0 || ^14.13.0 || >=15.0.0, npm: '>=7.0.0'}
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0090
   cssstyle@3.0.0:
     resolution: {integrity: sha512-N4u2ABATi3Qplzf0hWbVCdjenim8F3ojEXpBDF5hBpjzW182MjNGLqfmQ0SkSPeQ+V86ZXgeH8aXj6kayd4jgg==}
     engines: {node: '>=14'}
@@ -4025,10 +4067,13 @@ packages:
     resolution: {integrity: sha512-xi6IyHML+c9+Q3W0S4fCQJOym42pyurFiJUHEcEyHS0CeKzia4yZDEsLlqOFykxOdHpNy0NmvVO31vcSqAxJCg==}
     engines: {node: '>= 12.0.0'}
 
+<<<<<<< HEAD
   lilconfig@3.1.3:
     resolution: {integrity: sha512-/vlFKAoH5Cgt3Ie+JLhRbwOsCQePABiU3tJ1egGvyQ+33R/vcwM2Zl2QR/LzjsBeItPt3oSVXapn+m4nQDvpzw==}
     engines: {node: '>=14'}
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0090
   lines-and-columns@1.2.4:
     resolution: {integrity: sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==}
 
@@ -4055,9 +4100,12 @@ packages:
   lodash.throttle@4.1.1:
     resolution: {integrity: sha512-wIkUCfVKpVsWo3JSZlc+8MB5it+2AN5W8J7YVMST30UrvcQNZ1Okbj+rbVniijTWE6FGYy4XJq/rHkas8qJMLQ==}
 
+<<<<<<< HEAD
   lodash.uniq@4.5.0:
     resolution: {integrity: sha512-xfBaXQd9ryd9dlSDvnvI0lvxfLJlYAZzXomUYzLKtUeOQvOP5piqAWuGtrhWeqaXK9hhoM/iyJc5AV+XfsX3HQ==}
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0090
   lodash@4.17.21:
     resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==}
 
@@ -4114,9 +4162,12 @@ packages:
     resolution: {integrity: sha512-/IXtbwEk5HTPyEwyKX6hGkYXxM9nbj64B+ilVJnC/R6B0pH5G4V3b0pVbL7DBj4tkhBAppbQUlf6F6Xl9LHu1g==}
     engines: {node: '>= 0.4'}
 
+<<<<<<< HEAD
   mdn-data@2.0.28:
     resolution: {integrity: sha512-aylIc7Z9y4yzHYAJNuESG3hfhC+0Ibp/MAMiaOZgNv4pmEdFyfZhhhny4MNiAfWdBQ1RQ2mfDWmM1x8SvGyp8g==}
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0090
   mdn-data@2.12.2:
     resolution: {integrity: sha512-IEn+pegP1aManZuckezWCO+XZQDplx1366JoVhTpMpBB1sPey/SbveZQUosKiKiGYjg1wH4pMlNgXbCiYgihQA==}
 
@@ -4211,6 +4262,7 @@ packages:
     resolution: {integrity: sha512-dBpDMdxv9Irdq66304OLfEmQ9tbNRFnFTuZiLo+bD+r332bBmMJ8GBLXklIXXgxd3+v9+KUnZaUR5PJMa75Gsg==}
     engines: {node: '>= 0.4.0'}
 
+<<<<<<< HEAD
   next@15.5.4:
     resolution: {integrity: sha512-xH4Yjhb82sFYQfY3vbkJfgSDgXvBB6a8xPs9i35k6oZJRoQRihZH+4s9Yo2qsWpzBmZ3lPXaJ2KPXLfkvW4LnA==}
     engines: {node: ^18.18.0 || ^19.8.0 || >= 20.0.0}
@@ -4232,6 +4284,8 @@ packages:
       sass:
         optional: true
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0090
   node-fetch@2.7.0:
     resolution: {integrity: sha512-c4FRfUm/dbcWZ7U+1Wq0AwCyFL+3nt2bEw05wfxSz+DWpWsitgmSgYmy2dQdWyKC1694ELPqMs/YzUSNozLt8A==}
     engines: {node: 4.x || >=6.0.0}
@@ -4423,6 +4477,7 @@ packages:
     resolution: {integrity: sha512-/+5VFTchJDoVj3bhoqi6UeymcD00DAwb1nJwamzPvHEszJ4FpF6SNNbUbOS8yI56qHzdV8eK0qEfOSiodkTdxg==}
     engines: {node: '>= 0.4'}
 
+<<<<<<< HEAD
   postcss-calc@10.1.1:
     resolution: {integrity: sha512-NYEsLHh8DgG/PRH2+G9BTuUdtf9ViS+vdoQ0YA5OQdGsfN4ztiwtDWNtBl9EKeqNMFnIu8IKZ0cLxEQ5r5KVMw==}
     engines: {node: ^18.12 || ^20.9 || >=22.0}
@@ -4599,6 +4654,14 @@ packages:
     resolution: {integrity: sha512-PS08Iboia9mts/2ygV3eLpY5ghnUcfLV/EXTOW1E2qYxJKGGBUtNjN76FYHnMs36RmARn41bC0AZmn+rR0OVpQ==}
     engines: {node: ^10 || ^12 || >=14}
 
+=======
+  postcss-media-query-parser@0.2.3:
+    resolution: {integrity: sha512-3sOlxmbKcSHMjlUXQZKQ06jOswE7oVkXPxmZdoB1r5l0q6gTFTQSHxNxOrCccElbW7dxNytifNEo8qidX2Vsig==}
+
+  postcss-value-parser@4.2.0:
+    resolution: {integrity: sha512-1NNCs6uurfkVbeXG4S8JFT9t19m45ICnif8zWLd5oPSZ50QnwMfK+H3jv408d4jw/7Bttv5axS5IiHoLaVNHeQ==}
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0090
   postcss@8.5.6:
     resolution: {integrity: sha512-3Ybi1tAuwAP9s0r1UQ2J4n5Y0G05bJkpUIO0/bI9MhwmD70S5aTWbXGBwxHrelT+XM1k6dM0pk+SwNkpTRN7Pg==}
     engines: {node: ^10 || ^12 || >=14}
@@ -4891,9 +4954,12 @@ packages:
   safer-buffer@2.1.2:
     resolution: {integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==}
 
+<<<<<<< HEAD
   sax@1.4.1:
     resolution: {integrity: sha512-+aWOz7yVScEGoKNd4PA10LZ8sk0A/z5+nXQG5giUO5rprX9jgYsTdov9qCchZiPIZezbZH+jRut8nPodFAX4Jg==}
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0090
   saxes@6.0.0:
     resolution: {integrity: sha512-xAg7SOnEhrm5zI3puOOKyy1OMcMlIJZYNJY7xLBwSze0UjhPLnWfj2GF2EpT0jmzaJKIWKHLsaSSajf35bcYnA==}
     engines: {node: '>=v12.22.7'}
@@ -5087,6 +5153,7 @@ packages:
   stubborn-fs@1.2.5:
     resolution: {integrity: sha512-H2N9c26eXjzL/S/K+i/RHHcFanE74dptvvjM8iwzwbVcWY/zjBbgRqF3K0DY4+OD+uTTASTBvDoxPDaPN02D7g==}
 
+<<<<<<< HEAD
   styled-jsx@5.1.6:
     resolution: {integrity: sha512-qSVyDTeMotdvQYoHWLNGwRFJHC+i+ZvdBRYosOFgC+Wg1vx4frN2/RG/NA7SYqqvKNLf39P2LSRA2pu6n0XYZA==}
     engines: {node: '>= 12.0.0'}
@@ -5106,6 +5173,8 @@ packages:
     peerDependencies:
       postcss: ^8.4.32
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0090
   supports-color@7.2.0:
     resolution: {integrity: sha512-qpCAvRl9stuOHveKsn7HncJRvv501qIacKzQlO/+Lwxc9+0q2wLyv4Dfvt80/DPn2pqOBsJdDiogXGR9+OvwRw==}
     engines: {node: '>=8'}
@@ -5118,11 +5187,14 @@ packages:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
 
+<<<<<<< HEAD
   svgo@4.0.0:
     resolution: {integrity: sha512-VvrHQ+9uniE+Mvx3+C9IEe/lWasXCU0nXMY2kZeLrHNICuRiC8uMPyM14UEaMOFA5mhyQqEkB02VoQ16n3DLaw==}
     engines: {node: '>=16'}
     hasBin: true
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0090
   symbol-tree@3.2.4:
     resolution: {integrity: sha512-9QNk5KwDF+Bvz+PyObkmSYjI5ksVUYtjW7AU22r2NKcfLJcXp96hkDWU3+XndOsUb+AQ9QhfzfCT2O+CNWT5Tw==}
 
@@ -5366,9 +5438,12 @@ packages:
     peerDependencies:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
 
+<<<<<<< HEAD
   util-deprecate@1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0090
   v8-to-istanbul@9.3.0:
     resolution: {integrity: sha512-kiGUalWN+rgBJ/1OHZsBtU4rXZOfj/7rKQxULKlIzwzQSvMJUUNgPwJEEh7gU6xEVxC0ahoOBvN2YI8GH6FNgA==}
     engines: {node: '>=10.12.0'}
@@ -6990,6 +7065,7 @@ snapshots:
       '@tybys/wasm-util': 0.10.1
     optional: true
 
+<<<<<<< HEAD
   '@next/env@15.5.4': {}
 
   '@next/swc-darwin-arm64@15.5.4':
@@ -7016,6 +7092,8 @@ snapshots:
   '@next/swc-win32-x64-msvc@15.5.4':
     optional: true
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0090
   '@nodelib/fs.scandir@2.1.5':
     dependencies:
       '@nodelib/fs.stat': 2.0.5
@@ -7461,10 +7539,13 @@ snapshots:
 
   '@standard-schema/utils@0.3.0': {}
 
+<<<<<<< HEAD
   '@swc/helpers@0.5.15':
     dependencies:
       tslib: 2.8.1
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0090
   '@tailwindcss/node@4.1.14':
     dependencies:
       '@jridgewell/remapping': 2.3.5
@@ -8332,6 +8413,7 @@ snapshots:
 
   camelcase@6.3.0: {}
 
+<<<<<<< HEAD
   caniuse-api@3.0.0:
     dependencies:
       browserslist: 4.26.3
@@ -8339,6 +8421,8 @@ snapshots:
       lodash.memoize: 4.1.2
       lodash.uniq: 4.5.0
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0090
   caniuse-lite@1.0.30001749: {}
 
   chalk@4.1.2:
@@ -8394,8 +8478,11 @@ snapshots:
 
   cjs-module-lexer@2.1.0: {}
 
+<<<<<<< HEAD
   client-only@0.0.1: {}
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0090
   cliui@8.0.1:
     dependencies:
       string-width: 4.2.3
@@ -8419,14 +8506,20 @@ snapshots:
 
   color-name@1.1.4: {}
 
+<<<<<<< HEAD
   colord@2.9.3: {}
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0090
   combined-stream@1.0.8:
     dependencies:
       delayed-stream: 1.0.0
 
+<<<<<<< HEAD
   commander@11.1.0: {}
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0090
   commander@2.20.3: {}
 
   concat-map@0.0.1: {}
@@ -8464,10 +8557,13 @@ snapshots:
 
   csp_evaluator@1.1.5: {}
 
+<<<<<<< HEAD
   css-declaration-sorter@7.3.0(postcss@8.5.6):
     dependencies:
       postcss: 8.5.6
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0090
   css-mediaquery@0.1.2: {}
 
   css-select@5.2.2:
@@ -8478,11 +8574,14 @@ snapshots:
       domutils: 3.2.2
       nth-check: 2.1.1
 
+<<<<<<< HEAD
   css-tree@2.2.1:
     dependencies:
       mdn-data: 2.0.28
       source-map-js: 1.2.1
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0090
   css-tree@3.1.0:
     dependencies:
       mdn-data: 2.12.2
@@ -8492,6 +8591,7 @@ snapshots:
 
   css.escape@1.5.1: {}
 
+<<<<<<< HEAD
   cssesc@3.0.0: {}
 
   cssnano-preset-default@7.0.9(postcss@8.5.6):
@@ -8542,6 +8642,8 @@ snapshots:
     dependencies:
       css-tree: 2.2.1
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0090
   cssstyle@3.0.0:
     dependencies:
       rrweb-cssom: 0.6.0
@@ -10162,8 +10264,11 @@ snapshots:
       lightningcss-win32-arm64-msvc: 1.30.1
       lightningcss-win32-x64-msvc: 1.30.1
 
+<<<<<<< HEAD
   lilconfig@3.1.3: {}
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0090
   lines-and-columns@1.2.4: {}
 
   locate-path@5.0.0:
@@ -10184,8 +10289,11 @@ snapshots:
 
   lodash.throttle@4.1.1: {}
 
+<<<<<<< HEAD
   lodash.uniq@4.5.0: {}
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0090
   lodash@4.17.21: {}
 
   lookup-closest-locale@6.2.0: {}
@@ -10232,8 +10340,11 @@ snapshots:
 
   math-intrinsics@1.1.0: {}
 
+<<<<<<< HEAD
   mdn-data@2.0.28: {}
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0090
   mdn-data@2.12.2: {}
 
   merge-stream@2.0.0: {}
@@ -10313,6 +10424,7 @@ snapshots:
 
   netmask@2.0.2: {}
 
+<<<<<<< HEAD
   next@15.5.4(@babel/core@7.28.4)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
     dependencies:
       '@next/env': 15.5.4
@@ -10337,6 +10449,8 @@ snapshots:
       - '@babel/core'
       - babel-plugin-macros
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0090
   node-fetch@2.7.0:
     dependencies:
       whatwg-url: 5.0.0
@@ -10534,6 +10648,7 @@ snapshots:
 
   possible-typed-array-names@1.1.0: {}
 
+<<<<<<< HEAD
   postcss-calc@10.1.1(postcss@8.5.6):
     dependencies:
       postcss: 8.5.6
@@ -10698,6 +10813,12 @@ snapshots:
       picocolors: 1.1.1
       source-map-js: 1.2.1
 
+=======
+  postcss-media-query-parser@0.2.3: {}
+
+  postcss-value-parser@4.2.0: {}
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0090
   postcss@8.5.6:
     dependencies:
       nanoid: 3.3.11
@@ -11035,8 +11156,11 @@ snapshots:
 
   safer-buffer@2.1.2: {}
 
+<<<<<<< HEAD
   sax@1.4.1: {}
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0090
   saxes@6.0.0:
     dependencies:
       xmlchars: 2.2.0
@@ -11292,6 +11416,7 @@ snapshots:
 
   stubborn-fs@1.2.5: {}
 
+<<<<<<< HEAD
   styled-jsx@5.1.6(@babel/core@7.28.4)(react@18.3.1):
     dependencies:
       client-only: 0.0.1
@@ -11305,6 +11430,8 @@ snapshots:
       postcss: 8.5.6
       postcss-selector-parser: 7.1.0
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0090
   supports-color@7.2.0:
     dependencies:
       has-flag: 4.0.0
@@ -11315,6 +11442,7 @@ snapshots:
 
   supports-preserve-symlinks-flag@1.0.0: {}
 
+<<<<<<< HEAD
   svgo@4.0.0:
     dependencies:
       commander: 11.1.0
@@ -11325,6 +11453,8 @@ snapshots:
       picocolors: 1.1.1
       sax: 1.4.1
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0090
   symbol-tree@3.2.4: {}
 
   synckit@0.11.11:
@@ -11600,8 +11730,11 @@ snapshots:
     dependencies:
       react: 18.3.1
 
+<<<<<<< HEAD
   util-deprecate@1.0.2: {}
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0090
   v8-to-istanbul@9.3.0:
     dependencies:
       '@jridgewell/trace-mapping': 0.3.31

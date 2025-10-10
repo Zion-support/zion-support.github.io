@@ -30,13 +30,13 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = memo(({ childr
       {
         href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap',
         as: 'style',
-        type: 'text/css'
-      },
+        type:       ,
+$4},
       {
         href: '/styles/critical.css',
         as: 'style',
-        type: 'text/css'
-      }
+        type:       ,
+$4}
     ];
 
     criticalResources.forEach((resource) => {
@@ -86,10 +86,35 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = memo(({ childr
       try {
         const registration = await navigator.serviceWorker.register('/sw.js');
         setOptimizationStatus(prev => ({ ...prev, serviceWorker: true }));
+<<<<<<< HEAD
 =======
       // Observe all lazy images
       document.querySelectorAll('img[data-src]').forEach(img => {
         imageObserver.observe(img);
+=======
+      } catch (error) {
+        // Service Worker registration failed - handled silently in production
+      }
+    }
+  };
+
+  // Performance monitoring
+  useEffect(() => {
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.entryType === 'largest-contentful-paint') {
+            // Track LCP
+            if (typeof window !== 'undefined' && 'gtag' in window) {
+              (window as any).gtag('event', 'web_vitals', {
+                name: 'LCP',
+                value: Math.round(entry.startTime),
+                event_category:               ,
+$4});
+            }
+          }
+        }
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0090
       });
     }
   }, []);
