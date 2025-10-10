@@ -1,63 +1,55 @@
 'use client';
 
-import { useEffect } from 'react'
+import { useEffect } from 'react';
+
 export const usePerformanceMonitor = () => {
   useEffect(() => {
     if (typeof window === 'undefined') return;
 
-    // Monitor page load performance;
-const handleLoad = () => {const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      
-      if ($1) { const metrics = {
-          domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-          loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
-          totalLoadTime: navigation.loadEventEnd - navigation.fetchStart};
+    // Performance monitoring
+    const observer = new PerformanceObserver((list) => {
+      list.getEntries().forEach((entry) => {
+        if (entry.entryType === 'largest-contentful-paint') {
+          console.log('LCP:', entry.startTime);
+        }
+        if (entry.entryType === 'first-input') {
+          console.log('FID:', entry.processingStart - entry.startTime);
+        }
+        if (entry.entryType === 'layout-shift') {
+          console.log('CLS:', entry.value);
+        }
+      });
+    });
 
-        // console.log removed for production
-// Send to analytics if available
-        if ($1) { const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, any>) => void }).gtag;
-          gtag('event', 'page_performance', {
-            event_category: 'performance',
-            dom_content_loaded: Math.round(metrics.domContentLoaded),
-            load_complete: Math.round(metrics.loadComplete),
-            total_load_time: Math.round(metrics.totalLoadTime)});
-      }
-    };
+    try {
+      observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
+    } catch (e) {
+      console.warn('Performance Observer not supported');
+    }
 
-    // Monitor resource loading;
-const handleResourceTiming = () => {const resources = performance.getEntriesByType('resource');
-const slowResources = resources.filter(resource => resource.duration > 1000);
-      
-      if (slowResources.length > 0) {
-        // console.warn removed for production
-}
-    };
-
-    // Monitor memory usage;
-const handleMemoryUsage = () => {
-      if ($1) { const memory = (performance as any).memory;
-const memoryUsage = {
+    // Memory usage monitoring
+    const handleMemoryUsage = () => {
+      if ('memory' in performance) {
+        const memory = (performance as any).memory;
+        const memoryUsage = {
           used: Math.round(memory.usedJSHeapSize / 1024 / 1024),
           total: Math.round(memory.totalJSHeapSize / 1024 / 1024),
-          limit: Math.round(memory.jsHeapSizeLimit / 1024 / 1024);
+          limit: Math.round(memory.jsHeapSizeLimit / 1024 / 1024)
+        };
+        
         if (memoryUsage.used > memoryUsage.limit * 0.8) {
-          // console.warn removed for production
-}
+          console.warn('High memory usage detected:', memoryUsage);
+        }
       }
     };
 
-    // Set up monitoring
-    if (document.readyState === 'complete') {
-      handleLoad()} else {
-      window.addEventListener('load', handleLoad);
-    // Monitor resources after a delay
-    setTimeout(handleResourceTiming, 2000);
-    setTimeout(handleMemoryUsage, 5000);
+    // Check memory usage every 30 seconds
+    const memoryInterval = setInterval(handleMemoryUsage, 30000);
 
     // Cleanup
     return () => {
-      window.removeEventListener('load', handleLoad);
+      observer?.disconnect();
+      clearInterval(memoryInterval);
     };
   }, []);
 };
-      window.removeEventListener('load', handleLoad)}}, []);

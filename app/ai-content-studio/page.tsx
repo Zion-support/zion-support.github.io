@@ -1,293 +1,312 @@
 'use client';
+
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight } from 'lucide-react';
-;
-const AiContentStudioPage: React.FC = () => {const features = [
+import { CheckCircle, ArrowRight, Code, Zap, Shield, Target, TrendingUp, Clock, Star, Image, Video, FileText, Palette, Globe, Award } from 'lucide-react';
+
+const AiContentStudioPage: React.FC = () => {
+  const features = [
+    'AI writing for 50+ content types (blogs, social media, emails, ads)',
+    'Image generation and editing with DALL-E and Midjourney integration',
+    'Video creation and editing with AI-powered tools',
+    'Social media content calendar with optimal posting times',
+    'SEO optimization for all content types',
+    'Brand voice training and consistency checking',
+    'Multi-language support for 25+ languages',
+    'Content plagiarism detection and originality scoring',
+    'Automated content scheduling across platforms',
+    'Team collaboration and approval workflows',
+    'Content performance analytics and insights',
+    'Template library with 1000+ pre-designed templates'
+  ];
+
+  const contentTypes = [
+    'Blog Posts & Articles', 'Social Media Posts', 'Email Campaigns', 'Product Descriptions',
+    'Ad Copy & Headlines', 'Press Releases', 'Case Studies', 'White Papers',
+    'Website Copy', 'Landing Pages', 'Sales Letters', 'Newsletters',
+    'Video Scripts', 'Podcast Scripts', 'Presentation Slides', 'Infographics',
+    'Social Media Stories', 'LinkedIn Posts', 'Twitter Threads', 'Instagram Captions',
+    'Facebook Ads', 'Google Ads', 'YouTube Descriptions', 'TikTok Scripts'
+  ];
+
+  const pricingPlans = [
     {
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+      name: 'Creator',
+      price: '$89',
+      period: '/month',
+      users: 'Up to 5 users',
+      features: [
+        '10,000 words/month',
+        '50 images/month',
+        '5 videos/month',
+        'Basic templates',
+        'Email support',
+        '1 brand voice'
+      ],
+      popular: false
     },
     {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+      name: 'Studio',
+      price: '$179',
+      period: '/month',
+      users: 'Up to 20 users',
+      features: [
+        '50,000 words/month',
+        '200 images/month',
+        '20 videos/month',
+        'All templates',
+        'Priority support',
+        '5 brand voices',
+        'Team collaboration',
+        'API access'
+      ],
+      popular: true
     },
     {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
-    {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-      title: 'AI Content Generation',
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']      title: 'AI Content Generation',
-      description: 'Generate high-quality content using advanced AI algorithms',
-      benefits: ['Automated writing', 'Content optimization', 'Multi-language support']
-    },
-    {
-      title: 'Design Tools',
-      description: 'Professional design tools for creating stunning visuals',
-      benefits: ['Templates', 'Custom designs', 'Brand consistency']
-    },
-    {
-      title: 'Collaboration',
-      description: 'Work together with your team on content projects',
-      benefits: ['Real-time editing', 'Comments', 'Version control']
+      name: 'Enterprise',
+      price: '$349',
+      period: '/month',
+      users: 'Unlimited users',
+      features: [
+        'Unlimited words',
+        'Unlimited images',
+        'Unlimited videos',
+        'Custom templates',
+        'Dedicated support',
+        'Unlimited brand voices',
+        'White-label options',
+        'Custom integrations'
+      ],
+      popular: false
     }
   ];
-const benefits = [
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology'
+
+  const stats = [
+    { icon: FileText, value: '1M+', label: 'Content Pieces Created' },
+    { icon: TrendingUp, value: '400%', label: 'Content Production' },
+    { icon: Clock, value: '90%', label: 'Time Saved' },
+    { icon: Star, value: '4.9/5', label: 'Customer Rating' }
+  ];
+
+  const benefits = [
+    'Create 10x more content in half the time',
+    'Maintain consistent brand voice across all channels',
+    'Generate SEO-optimized content that ranks higher',
+    'Reduce content creation costs by up to 80%',
+    'Scale content production without hiring more writers',
+    'Improve content quality with AI-powered suggestions'
   ];
 
   return (
-    <>
+    <React.Fragment>
       <Helmet>
-        <title>Ai Content Studio - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI-powered ai content studio solution for modern businesses." />
-        <meta name="keywords" content="AI ai content studio, artificial intelligence, ai content studio, AI solutions, intelligent automation" />
+        <title>AI Content Studio - Complete Content Creation Suite | Zion Tech Group</title>
+        <meta name="description" content="Create professional content at scale with our AI-powered content studio. Writing, design, video generation, and social media management in one platform." />
+        <meta name="keywords" content="AI content creation, content marketing, AI writing, video generation, social media content, content automation" />
+        <link rel="canonical" href="https://ziontechgroup.com/ai-content-studio" />
       </Helmet>
 
-      <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Ai Content Studio
+        <section className="py-20 px-4 relative overflow-hidden">
+          <div className="absolute inset-0 cyber-grid"></div>
+          <div className="max-w-7xl mx-auto text-center relative z-10">
+            <div className="mb-8">
+              <Code className="w-20 h-20 text-pink-400 mx-auto mb-6 neon-glow" />
+            </div>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 holographic-text">
+              AI Content <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-400 neon-text">Studio</span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Advanced AI-powered ai content studio solution for modern businesses.
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed">
+              Create professional content at scale with our complete AI-powered content creation suite. 
+              Generate written content, images, videos, and social media posts that engage your audience 
+              and drive results for your business.
             </p>
+
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto mb-12">
+              {stats.map((stat, index) => (
+                <div key={index} className="text-center cyber-card p-6 rounded-xl">
+                  <stat.icon className="w-8 h-8 text-pink-400 mx-auto mb-3" />
+                  <div className="text-2xl font-bold text-white mb-1 neon-text">{stat.value}</div>
+                  <div className="text-gray-400 text-sm">{stat.label}</div>
+                </div>
+              ))}
+            </div>
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-teal-500 to-blue-600 hover:from-teal-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                Get Started
+              <button className="cyber-button w-full sm:w-auto text-center">
+                Start 14-Day Free Trial
               </button>
-              <button className="border border-teal-400 text-teal-400 hover:bg-teal-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                View Demo
-              </button>
+              <a 
+                href="tel:+13024640950"
+                className="border-2 border-pink-400 text-pink-400 px-8 py-3 rounded-lg font-semibold hover:bg-pink-400 hover:text-slate-900 transition-all duration-300"
+              >
+                📞 Call: (302) 464-0950
+              </a>
             </div>
           </div>
         </section>
 
-        {/* Features Section */}
-        <section className="py-20 px-4">
+        {/* Content Types Section */}
+        <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Key Features
-              </h2>
+              <h2 className="text-3xl font-bold text-white mb-6 neon-text">50+ Content Types</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Advanced AI technology that drives results
+                Create any type of content your business needs
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <feature.icon className="w-8 h-8 text-white" />
+            <div className="cyber-card p-8">
+              <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                {contentTypes.map((type, index) => (
+                  <div key={index} className="text-center p-4 bg-white/5 rounded-lg hover:bg-white/10 transition-all duration-300">
+                    <div className="text-gray-300 text-sm font-medium">{type}</div>
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  {feature.benefits && (
-                    <ul className="space-y-2">
-                      {feature.benefits.map((benefit, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-gray-400">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                          {benefit}
-                        </li>
-                      ));
-                    </ul>);
-                </div>
-              ));
+                ))}
+              </div>
             </div>
           </div>
         </section>
 
         {/* Benefits Section */}
-        <section className="py-20 px-4">
+        <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Why Choose Our Solution?
-              </h2>
+              <h2 className="text-3xl font-bold text-white mb-6 neon-text">Why Choose Our AI Content Studio?</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Proven results that drive business growth and efficiency
+                Experience the power of AI in content creation
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <CheckCircle className="w-8 h-8 text-white" />
+                <div key={index} className="cyber-card hologram-card p-6 hover:scale-105 transition-all duration-300">
+                  <div className="flex items-start space-x-3">
+                    <CheckCircle className="w-5 h-5 text-pink-400 flex-shrink-0 mt-1" />
+                    <span className="text-gray-300">{benefit}</span>
                   </div>
-                  <p className="text-lg text-white font-medium">{benefit}</p>
                 </div>
-              ));
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold text-white mb-6 neon-text">Powerful Features</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Everything you need to create amazing content at scale
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="cyber-card hologram-card p-6 hover:scale-105 transition-all duration-300">
+                  <div className="flex items-start space-x-3">
+                    <CheckCircle className="w-5 h-5 text-pink-400 flex-shrink-0 mt-1" />
+                    <span className="text-gray-300">{feature}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Pricing Section */}
+        <section className="py-16 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold text-white mb-6 neon-text">Simple Pricing</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Choose the plan that fits your content needs
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {pricingPlans.map((plan, index) => (
+                <div
+                  key={index}
+                  className={`relative cyber-card p-8 ${
+                    plan.popular ? 'border-2 border-pink-400 shadow-2xl shadow-pink-500/25 scale-105' : 'border border-white/20'
+                  }`}
+                >
+                  {plan.popular && (
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                      <div className="bg-gradient-to-r from-pink-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center gap-2">
+                        <Star className="w-4 h-4 fill-current" />
+                        Most Popular
+                      </div>
+                    </div>
+                  )}
+
+                  <div className="text-center mb-8">
+                    <h3 className="text-2xl font-bold text-white mb-4">{plan.name}</h3>
+                    <div className="mb-4">
+                      <span className="text-4xl font-bold text-white neon-text">{plan.price}</span>
+                      <span className="text-gray-400 ml-2">{plan.period}</span>
+                    </div>
+                    <p className="text-gray-400">{plan.users}</p>
+                  </div>
+
+                  <ul className="space-y-4 mb-8">
+                    {plan.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-gray-300">
+                        <CheckCircle className="w-5 h-5 text-pink-400 mr-3 flex-shrink-0" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+
+                  <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                    plan.popular
+                      ? 'bg-gradient-to-r from-pink-500 to-purple-500 text-white hover:from-pink-600 hover:to-purple-600'
+                      : 'bg-white/10 text-white border border-white/20 hover:bg-white/20'
+                  }`}>
+                    Get Started
+                  </button>
+                </div>
+              ))}
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Ready to Get Started?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Contact our experts to discuss your requirements and get started today.
+        <section className="py-16 px-4">
+          <div className="max-w-7xl mx-auto text-center">
+            <div className="cyber-card hologram-card p-12 border border-pink-500/20">
+              <h2 className="text-3xl font-bold text-white mb-4 neon-text">Ready to Create Amazing Content?</h2>
+              <p className="text-xl mb-8 text-gray-300 max-w-3xl mx-auto">
+                Start your free trial today and see how AI can transform your content creation
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-teal-500 to-blue-600 hover:from-teal-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                  Contact Us
+                <button className="cyber-button w-full sm:w-auto text-center">
+                  Start Free Trial
                 </button>
-                <button className="border border-teal-400 text-teal-400 hover:bg-teal-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                  Learn More
-                </button>;
-const benefits = [
-    'Increase content production by 10x',
-                </button>    'Increase content production by 10x',
-    'Improve engagement by 200%',
-    'Save 50+ hours per week',
-    'Reduce content costs by 70%',
-    'Enable consistent branding',
-    'Automate content workflows'
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
-      <Helmet>
-        <title>AI Content Studio | Zion Tech Group</title>
-        <meta name="description" content="Professional AI content studio solutions by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="ai content studio, AI solutions, IT services, Zion Tech Group" />
-      </Helmet>
-      
-      <Navigation />
-
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-        <div className="relative max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            AI Content Studio
-            <span className="block bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
-              Solutions
-            </span>
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Create stunning content with our AI Content Studio. Advanced design tools, 
-            content generation, and collaboration features for better content creation.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25">
-              Get Started Today
-              <ArrowRight className="inline-block ml-2 w-5 h-5" />
-            </button>
-            <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-              View Demo
-            </button>
-          </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">AI Content Studio Features</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Advanced solutions designed for modern business needs
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-blue-400/50 transition-all duration-300 group">
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <CheckCircle className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300 mb-4">{feature.description}</p>
-                <ul className="space-y-2">
-                  {feature.benefits.map((benefit, benefitIndex) => (
-                    <li key={benefitIndex} className="flex items-center text-sm text-gray-400">
-                      <CheckCircle className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
-                      {benefit}
-                    </li>
-                  ));
-                </ul>
+                <a 
+                  href="mailto:kleber@ziontechgroup.com"
+                  className="border-2 border-pink-400 text-pink-400 px-8 py-4 rounded-lg font-semibold hover:bg-pink-400 hover:text-slate-900 transition-all duration-300"
+                >
+                  📧 Email Us
+                </a>
               </div>
-            ));
-          </div>
-        </div>
-                </ul>        </section>
-      </div>        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our AI Content Studio?</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the benefits of our proven solutions
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <CheckCircle className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-lg font-semibold text-white">{benefit}</h3>
+              
+              <div className="mt-8 text-center">
+                <p className="text-gray-300 text-sm mb-2">
+                  📍 364 E Main St STE 1008, Middletown, DE 19709
+                </p>
+                <p className="text-gray-300 text-sm">
+                  ⏰ Mon-Fri: 9AM-6PM EST | 24/7 Emergency Support Available
+                </p>
               </div>
-            ));
+            </div>
           </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Transform your content creation with our AI Content Studio solutions today
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-              Start Free Trial
-            </button>
-            <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-              Contact Sales
-            </button>
-          </div>
-        </div>
-      </section>
-
-      <Footer />
-    </div>
+        </section>
+      </div>
+    </React.Fragment>
   );
 };
 
-    </div>)
-export default AIContentStudioPage
-export default AiContentStudioPage
-export default AIContentStudioPage;
+export default AiContentStudioPage;
