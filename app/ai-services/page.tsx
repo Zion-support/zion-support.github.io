@@ -1527,7 +1527,7 @@ const AIServicesPage: React.FC = () => {
         '30% inventory optimization',
         'Real-time tracking',
         'Predictive analytics'
-]
+      ]
     },
 <<<<<<< HEAD
     {
