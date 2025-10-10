@@ -57,7 +57,7 @@ export default function NotFound() {
               <p className="text-gray-300 text-sm">
                 {page.description}
               </p>
-            </a>
+            </Link>
           ))}
         </div>
         
@@ -76,7 +76,7 @@ export default function NotFound() {
           >
             <Phone className="w-4 h-4 mr-2" />
             Contact Support
-          </a>
+          </Link>
         </div>
       </div>
     </div>
