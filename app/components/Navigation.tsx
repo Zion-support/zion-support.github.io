@@ -615,6 +615,9 @@ const Navigation: React.FC = () => {
   ];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4ed2
   const toggleServices = () => {
     setServicesOpen(!servicesOpen);
   };

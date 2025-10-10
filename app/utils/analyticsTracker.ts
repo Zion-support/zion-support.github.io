@@ -4,6 +4,7 @@
  */
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 interface AnalyticsEvent {
   action: string;
   category: string;
@@ -192,11 +193,55 @@ class AnalyticsTracker {
     }
   }
 
+=======
+interface AnalyticsEvent {
+  category: string
+  action: string
+  label?: string
+  value?: number
+  nonInteraction?: boolean
+}
+
+interface PerformanceMetrics {
+  metric: string
+  value: number
+  rating?: 'good' | 'needs-improvement' | 'poor'
+}
+
+interface ErrorReport {
+  message: string
+  stack?: string
+  componentStack?: string
+  severity: 'low' | 'medium' | 'high' | 'critical'
+}
+
+class AnalyticsTracker {
+  private isInitialized = false
+  private queue: Array<() => void> = []
+
+  /**
+   * Initialize the analytics tracker
+   */
+  initialize(): void {
+    if (typeof window === 'undefined') return
+    
+    this.isInitialized = true
+    
+    // Process queued events
+    this.queue.forEach(fn => fn())
+    this.queue = []
+    
+    // Track initial page view
+    this.trackPageView(window.location.pathname)
+  }
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4ed2
   /**
    * Track a custom event
    */
 <<<<<<< HEAD
   trackEvent(event: AnalyticsEvent): void {
+<<<<<<< HEAD
     const trackFn = () => {
       // Add your analytics implementation here
     };
@@ -228,6 +273,52 @@ class AnalyticsTracker {
     } catch (error) {
       console.error('Failed to track event:', error);
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1595
+=======
+    if (typeof window === 'undefined') return
+
+    const track = () => {
+      // Send to analytics service
+      if (typeof gtag !== 'undefined') {
+        gtag('event', event.action, {
+          event_category: event.category,
+          event_label: event.label,
+          value: event.value,
+          non_interaction: event.nonInteraction
+        })
+      }
+      
+      // Also log to console in development
+      if (process.env.NODE_ENV === 'development') {
+        console.log('Analytics Event:', event)
+      }
+    }
+
+    if (this.isInitialized) {
+      track()
+    } else {
+      this.queue.push(track)
+    }
+  }
+
+  /**
+   * Track page views
+   */
+  trackPageView(path: string): void {
+    if (typeof window === 'undefined') return
+
+    const track = () => {
+      if (typeof gtag !== 'undefined') {
+        gtag('config', 'GA_MEASUREMENT_ID', {
+          page_path: path
+        })
+      }
+    }
+
+    if (this.isInitialized) {
+      track()
+    } else {
+      this.queue.push(track)
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4ed2
     }
   }
 
@@ -236,6 +327,7 @@ class AnalyticsTracker {
    */
 <<<<<<< HEAD
   trackPerformance(metrics: PerformanceMetrics): void {
+<<<<<<< HEAD
     const trackFn = () => {
       // Add your performance tracking implementation here
     };
@@ -244,6 +336,24 @@ class AnalyticsTracker {
       trackFn();
     } else {
       this.queue.push(trackFn);
+=======
+    if (typeof window === 'undefined') return
+
+    const track = () => {
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'timing_complete', {
+          name: metrics.metric,
+          value: Math.round(metrics.value),
+          event_category: 'Performance'
+        })
+      }
+    }
+
+    if (this.isInitialized) {
+      track()
+    } else {
+      this.queue.push(track)
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4ed2
     }
 =======
   public trackPerformance(metrics: PerformanceMetrics): void {
@@ -261,6 +371,7 @@ class AnalyticsTracker {
    */
 <<<<<<< HEAD
   trackError(error: ErrorReport): void {
+<<<<<<< HEAD
     const trackFn = () => {
       // Add your error tracking implementation here
     };
@@ -269,10 +380,28 @@ class AnalyticsTracker {
       trackFn();
     } else {
       this.queue.push(trackFn);
+=======
+    if (typeof window === 'undefined') return
+
+    const track = () => {
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'exception', {
+          description: error.message,
+          fatal: error.severity === 'critical' || error.severity === 'high'
+        })
+      }
+    }
+
+    if (this.isInitialized) {
+      track()
+    } else {
+      this.queue.push(track)
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4ed2
     }
   }
 
   /**
+<<<<<<< HEAD
    * Track user interaction
 =======
   public trackError(error: any): void {
@@ -421,3 +550,37 @@ export default AnalyticsTracker;
 export const analyticsTracker = new AnalyticsTracker();
 export default analyticsTracker;
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1595
+=======
+   * Track user engagement
+   */
+  trackEngagement(action: string, value?: number): void {
+    this.trackEvent({
+      category: 'Engagement',
+      action,
+      value
+    })
+  }
+
+  /**
+   * Track business events
+   */
+  trackBusinessEvent(event: string, value?: number, label?: string): void {
+    this.trackEvent({
+      category: 'Business',
+      action: event,
+      label,
+      value
+    })
+  }
+}
+
+// Create singleton instance
+export const analyticsTracker = new AnalyticsTracker()
+
+// Initialize on client side
+if (typeof window !== 'undefined') {
+  analyticsTracker.initialize()
+}
+
+export default AnalyticsTracker
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4ed2
