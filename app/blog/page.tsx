@@ -1,59 +1,5 @@
 'use client';
 
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { Calendar, User, ArrowRight } from 'lucide-react';
-
-const BlogPage: React.FC = () => {
-  const blogPosts = [
-    {
-      title: 'The Future of AI in Business',
-      excerpt: 'Exploring how artificial intelligence is transforming modern business operations and what to expect in the coming years.',
-      author: 'Zion Tech Team',
-      date: '2024-01-15',
-      readTime: '5 min read',
-      category: 'AI'
-    },
-    {
-      title: 'Cloud Migration Best Practices',
-      excerpt: 'A comprehensive guide to successfully migrating your business to the cloud with minimal downtime and maximum efficiency.',
-      author: 'Sarah Johnson',
-      date: '2024-01-10',
-      readTime: '8 min read',
-      category: 'Cloud'
-    },
-    {
-      title: 'Cybersecurity Trends 2024',
-      excerpt: 'Stay ahead of the latest cybersecurity threats and learn about emerging security technologies and strategies.',
-      author: 'Mike Chen',
-      date: '2024-01-05',
-      readTime: '6 min read',
-      category: 'Security'
-    }
-  ];
-
-  return (
-    <>
-      <Helmet>
-        <title>Blog - Zion Tech Group | AI & IT Insights</title>
-        <meta name="description" content="Stay updated with the latest insights on AI, cloud computing, cybersecurity, and IT solutions from Zion Tech Group experts." />
-        <meta name="keywords" content="AI blog, cloud computing, cybersecurity, data analytics, mobile development, automation, tech insights" />
-      </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Tech Insights & News
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Stay updated with the latest trends and insights in AI, cloud computing, and IT solutions.
-            </p>
-=======
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Calendar, User, ArrowRight, Search, Filter } from 'lucide-react';
@@ -128,73 +74,54 @@ const BlogPage: React.FC = () => {
                 Insights, trends, and expert perspectives on AI, technology, and business transformation.
               </p>
             </div>
-          </div>
-        </section>
 
-        {/* Search and Filter */}
-        <section className="py-8 px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="flex flex-col md:flex-row gap-4 mb-8">
-              <div className="relative flex-1">
-                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <input
-                  type="text"
-                  placeholder="Search articles..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-12 pr-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                />
-              </div>
-              <div className="relative">
-                <Filter className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <select
-                  value={selectedCategory}
-                  onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="pl-12 pr-8 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent appearance-none"
-                >
-                  {categories.map((category) => (
-                    <option key={category} value={category}>{category}</option>
-                  ))}
-                </select>
+            {/* Search and Filter */}
+            <div className="max-w-4xl mx-auto mb-16">
+              <div className="flex flex-col md:flex-row gap-4">
+                <div className="flex-1 relative">
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                  <input
+                    type="text"
+                    placeholder="Search articles..."
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    className="w-full pl-10 pr-4 py-3 bg-white/5 backdrop-blur-lg border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                  />
+                </div>
+                <div className="relative">
+                  <Filter className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                  <select
+                    value={selectedCategory}
+                    onChange={(e) => setSelectedCategory(e.target.value)}
+                    className="pl-10 pr-8 py-3 bg-white/5 backdrop-blur-lg border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 appearance-none"
+                  >
+                    {categories.map((category) => (
+                      <option key={category} value={category}>{category}</option>
+                    ))}
+                  </select>
+                </div>
               </div>
             </div>
->>>>>>> origin/main
           </div>
         </section>
 
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-<<<<<<< HEAD
-              {blogPosts.map((post, index) => (
-                <article key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300">
-                  <div className="mb-4">
-                    <span className="inline-block bg-cyan-500/20 text-cyan-400 text-xs px-2 py-1 rounded-full mb-3">
-                      {post.category}
-                    </span>
-                    <h2 className="text-xl font-semibold text-white mb-3">{post.title}</h2>
-                    <p className="text-gray-300 mb-4">{post.excerpt}</p>
-                  </div>
-                  
-=======
               {searchResults.map((post) => (
                 <article key={post.id} className="cyber-card p-6">
                   <div className="mb-4">
                     <div className="w-full h-48 bg-gray-800 rounded-lg mb-4 flex items-center justify-center">
                       <span className="text-2xl font-bold text-cyan-400">{post.title.charAt(0)}</span>
                     </div>
-                    <div className="flex items-center justify-between text-sm text-gray-400 mb-2">
-                      <span className="bg-cyan-500/20 text-cyan-400 px-2 py-1 rounded-full text-xs">
-                        {post.category}
-                      </span>
-                      <span>{post.readTime}</span>
-                    </div>
+                    <span className="inline-block bg-cyan-500/20 text-cyan-400 text-xs px-2 py-1 rounded-full mb-3">
+                      {post.category}
+                    </span>
                   </div>
                   
                   <h2 className="text-xl font-semibold text-white mb-3">{post.title}</h2>
                   <p className="text-gray-300 mb-4">{post.excerpt}</p>
                   
->>>>>>> origin/main
                   <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
                     <div className="flex items-center space-x-4">
                       <div className="flex items-center space-x-1">
@@ -209,28 +136,18 @@ const BlogPage: React.FC = () => {
                     <span>{post.readTime}</span>
                   </div>
                   
-<<<<<<< HEAD
-                  <Link
-                    to={`/blog/${post.title.toLowerCase().replace(/\s+/g, '-')}`}
-                    className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium transition-colors"
-                  >
-                    Read More
-                    <ArrowRight className="w-4 h-4 ml-1" />
-                  </Link>
-=======
                   <div className="flex items-center justify-between">
                     <button className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors">
                       Read More
                       <ArrowRight className="w-4 h-4 ml-1" />
                     </button>
                   </div>
->>>>>>> origin/main
                 </article>
               ))}
             </div>
             
             {searchResults.length === 0 && (
-              <div className="text-center py-12">
+              <div className="text-center py-16">
                 <p className="text-gray-400 text-lg">No articles found matching your search criteria.</p>
               </div>
             )}
@@ -241,8 +158,4 @@ const BlogPage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default BlogPage;
-=======
-export default BlogPage;
->>>>>>> origin/main
