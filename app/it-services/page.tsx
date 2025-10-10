@@ -235,6 +235,198 @@ export default function ITServicesPage() {
           popular: false
         }
       ]
+    },
+    {
+      category: 'Advanced IT Solutions',
+      icon: Cpu,
+      color: 'text-purple-400',
+      bgColor: 'bg-purple-500/10',
+      services: [
+        {
+          name: 'AI-Powered IT Operations',
+          description: 'Intelligent IT operations with AI-driven automation, predictive analytics, and self-healing systems',
+          features: ['AI Automation', 'Predictive Analytics', 'Self-healing Systems', 'Intelligent Alerting', 'Root Cause Analysis', 'Performance Optimization'],
+          pricing: 'Starting at $8,000/month',
+          trial: 'Free AI assessment',
+          timeline: '4-8 weeks',
+          link: 'https://ziontechgroup.com/ai-it-operations',
+          popular: true
+        },
+        {
+          name: 'Quantum Computing Infrastructure',
+          description: 'Quantum computing infrastructure setup and management for advanced computational needs',
+          features: ['Quantum Hardware Setup', 'Quantum Software Development', 'Hybrid Computing', 'Quantum Security', 'Performance Optimization', 'Expert Support'],
+          pricing: 'Starting at $25,000',
+          trial: 'Free quantum consultation',
+          timeline: '12-24 weeks',
+          link: 'https://ziontechgroup.com/quantum-infrastructure',
+          popular: false
+        },
+        {
+          name: 'Edge Computing Solutions',
+          description: 'Distributed edge computing infrastructure for low-latency applications and IoT devices',
+          features: ['Edge Node Deployment', 'Data Processing', 'Real-time Analytics', 'IoT Integration', 'Security Management', 'Performance Monitoring'],
+          pricing: 'Starting at $12,000',
+          trial: 'Free edge assessment',
+          timeline: '6-12 weeks',
+          link: 'https://ziontechgroup.com/edge-computing',
+          popular: true
+        },
+        {
+          name: 'Blockchain Infrastructure Services',
+          description: 'Complete blockchain infrastructure setup with smart contracts and decentralized applications',
+          features: ['Blockchain Setup', 'Smart Contract Development', 'DApp Development', 'Security Auditing', 'Node Management', 'Integration Services'],
+          pricing: 'Starting at $15,000',
+          trial: 'Free blockchain consultation',
+          timeline: '8-16 weeks',
+          link: 'https://ziontechgroup.com/blockchain-infrastructure',
+          popular: true
+        }
+      ]
+    },
+    {
+      category: 'Specialized IT Services',
+      icon: Target,
+      color: 'text-green-400',
+      bgColor: 'bg-green-500/10',
+      services: [
+        {
+          name: 'IoT Platform Development',
+          description: 'Comprehensive IoT platform development with device management and data analytics',
+          features: ['Device Management', 'Data Analytics', 'Real-time Monitoring', 'Firmware Updates', 'Security Protocols', 'Scalability Planning'],
+          pricing: 'Starting at $18,000',
+          trial: 'Free IoT assessment',
+          timeline: '10-20 weeks',
+          link: 'https://ziontechgroup.com/iot-platform',
+          popular: true
+        },
+        {
+          name: 'AR/VR Development Services',
+          description: 'Immersive technology development with augmented and virtual reality applications',
+          features: ['AR/VR Development', '3D Modeling', 'User Experience Design', 'Performance Optimization', 'Cross-platform Support', 'Content Management'],
+          pricing: 'Starting at $22,000',
+          trial: 'Free AR/VR demo',
+          timeline: '12-24 weeks',
+          link: 'https://ziontechgroup.com/ar-vr-development',
+          popular: false
+        },
+        {
+          name: 'Smart City Technology Solutions',
+          description: 'Comprehensive smart city technology implementation with urban data analytics',
+          features: ['Urban Data Analytics', 'Traffic Management', 'Energy Optimization', 'Public Safety', 'Citizen Services', 'Infrastructure Monitoring'],
+          pricing: 'Starting at $50,000',
+          trial: 'Free smart city consultation',
+          timeline: '24-48 weeks',
+          link: 'https://ziontechgroup.com/smart-city-solutions',
+          popular: false
+        },
+        {
+          name: 'Digital Twin Development',
+          description: 'Digital twin creation and management for physical assets and processes',
+          features: ['3D Modeling', 'Real-time Synchronization', 'Predictive Analytics', 'Simulation Capabilities', 'Integration Services', 'Performance Monitoring'],
+          pricing: 'Starting at $30,000',
+          trial: 'Free digital twin demo',
+          timeline: '16-32 weeks',
+          link: 'https://ziontechgroup.com/digital-twin-development',
+          popular: true
+        }
+      ]
+    },
+    {
+      category: 'Enterprise Integration',
+      icon: Settings,
+      color: 'text-indigo-400',
+      bgColor: 'bg-indigo-500/10',
+      services: [
+        {
+          name: 'Enterprise Resource Planning (ERP)',
+          description: 'Complete ERP system implementation and customization for business process optimization',
+          features: ['ERP Implementation', 'Process Optimization', 'Data Migration', 'User Training', 'Custom Development', 'Ongoing Support'],
+          pricing: 'Starting at $35,000',
+          trial: 'Free ERP assessment',
+          timeline: '20-40 weeks',
+          link: 'https://ziontechgroup.com/erp-implementation',
+          popular: true
+        },
+        {
+          name: 'Customer Relationship Management (CRM)',
+          description: 'Advanced CRM system setup with AI-powered customer insights and automation',
+          features: ['CRM Setup', 'AI Integration', 'Customer Analytics', 'Automation Workflows', 'Mobile Access', 'Third-party Integrations'],
+          pricing: 'Starting at $12,000',
+          trial: 'Free CRM demo',
+          timeline: '8-16 weeks',
+          link: 'https://ziontechgroup.com/crm-implementation',
+          popular: true
+        },
+        {
+          name: 'Business Intelligence Platform',
+          description: 'Comprehensive BI platform with advanced analytics and data visualization',
+          features: ['Data Warehousing', 'Advanced Analytics', 'Interactive Dashboards', 'Report Automation', 'Predictive Modeling', 'Self-service BI'],
+          pricing: 'Starting at $20,000',
+          trial: 'Free BI assessment',
+          timeline: '12-24 weeks',
+          link: 'https://ziontechgroup.com/business-intelligence',
+          popular: true
+        },
+        {
+          name: 'Master Data Management (MDM)',
+          description: 'Centralized master data management with data quality and governance',
+          features: ['Data Governance', 'Data Quality Management', 'Data Integration', 'Master Data Hub', 'Compliance Monitoring', 'Data Stewardship'],
+          pricing: 'Starting at $25,000',
+          trial: 'Free MDM consultation',
+          timeline: '16-32 weeks',
+          link: 'https://ziontechgroup.com/master-data-management',
+          popular: false
+        }
+      ]
+    },
+    {
+      category: 'Emerging Technologies',
+      icon: Sparkles,
+      color: 'text-pink-400',
+      bgColor: 'bg-pink-500/10',
+      services: [
+        {
+          name: '5G Network Implementation',
+          description: '5G network infrastructure setup and optimization for high-speed connectivity',
+          features: ['5G Infrastructure', 'Network Optimization', 'Performance Testing', 'Security Implementation', 'Coverage Planning', 'Device Management'],
+          pricing: 'Starting at $40,000',
+          trial: 'Free 5G assessment',
+          timeline: '16-32 weeks',
+          link: 'https://ziontechgroup.com/5g-implementation',
+          popular: true
+        },
+        {
+          name: 'Machine Learning Operations (MLOps)',
+          description: 'Complete MLOps platform for machine learning model deployment and management',
+          features: ['Model Deployment', 'Pipeline Automation', 'Model Monitoring', 'Version Control', 'A/B Testing', 'Performance Optimization'],
+          pricing: 'Starting at $15,000',
+          trial: 'Free MLOps consultation',
+          timeline: '10-20 weeks',
+          link: 'https://ziontechgroup.com/mlops-platform',
+          popular: true
+        },
+        {
+          name: 'Robotic Process Automation (RPA)',
+          description: 'Intelligent process automation with RPA bots and workflow optimization',
+          features: ['Bot Development', 'Process Analysis', 'Workflow Automation', 'Integration Services', 'Monitoring & Maintenance', 'Scalability Planning'],
+          pricing: 'Starting at $8,000',
+          trial: 'Free RPA assessment',
+          timeline: '6-12 weeks',
+          link: 'https://ziontechgroup.com/rpa-implementation',
+          popular: true
+        },
+        {
+          name: 'Low-Code/No-Code Platform',
+          description: 'Custom low-code platform development for rapid application development',
+          features: ['Platform Development', 'Visual Development Tools', 'API Integration', 'User Management', 'Deployment Automation', 'Custom Components'],
+          pricing: 'Starting at $18,000',
+          trial: 'Free platform demo',
+          timeline: '12-24 weeks',
+          link: 'https://ziontechgroup.com/low-code-platform',
+          popular: false
+        }
+      ]
     }
   ];
 

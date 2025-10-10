@@ -332,10 +332,285 @@ const MicroSAASPage: React.FC = () => {
       rating: 4.6,
       users: '1,700+',
       trial: '21-day free trial'
+    },
+
+    // NEW INNOVATIVE MICRO SAAS SERVICES
+    { 
+      name: 'AI Voice Assistant Pro', 
+      href: '/ai-voice-assistant', 
+      icon: Users, 
+      category: 'Productivity', 
+      price: '$89/mo',
+      description: 'Advanced voice-controlled AI assistant for hands-free productivity and task management',
+      features: ['Voice Commands', 'Natural Language Processing', 'Multi-language Support', 'Calendar Integration', 'Email Management', 'Smart Reminders'],
+      popular: true,
+      rating: 4.8,
+      users: '2,100+',
+      trial: '14-day free trial'
+    },
+    { 
+      name: 'AI Meeting Transcriber Pro', 
+      href: '/ai-meeting-transcriber', 
+      icon: FileText, 
+      category: 'Productivity', 
+      price: '$69/mo',
+      description: 'Real-time meeting transcription with AI-powered insights and action item extraction',
+      features: ['Real-time Transcription', 'Speaker Identification', 'Action Item Extraction', 'Meeting Summaries', 'Search & Archive', 'Multi-language Support'],
+      popular: true,
+      rating: 4.7,
+      users: '1,900+',
+      trial: '7-day free trial'
+    },
+    { 
+      name: 'AI Data Scraper Pro', 
+      href: '/ai-data-scraper', 
+      icon: Database, 
+      category: 'Data', 
+      price: '$149/mo',
+      description: 'Intelligent web scraping with AI-powered data extraction and cleaning capabilities',
+      features: ['Smart Data Extraction', 'Anti-Detection Technology', 'Data Cleaning', 'API Integration', 'Scheduled Scraping', 'Export Formats'],
+      popular: true,
+      rating: 4.6,
+      users: '1,400+',
+      trial: '14-day free trial'
+    },
+    { 
+      name: 'AI Logo Designer Pro', 
+      href: '/ai-logo-designer', 
+      icon: Palette, 
+      category: 'Design', 
+      price: '$79/mo',
+      description: 'AI-powered logo design with brand analysis and multiple style variations',
+      features: ['Brand Analysis', 'Style Variations', 'Vector Export', 'Brand Guidelines', 'Color Palette', 'Font Matching'],
+      popular: true,
+      rating: 4.9,
+      users: '3,200+',
+      trial: '10-day free trial'
+    },
+    { 
+      name: 'AI Music Composer Pro', 
+      href: '/ai-music-composer', 
+      icon: Music, 
+      category: 'Creative', 
+      price: '$129/mo',
+      description: 'AI-powered music composition with genre analysis and royalty-free generation',
+      features: ['Genre Analysis', 'Mood Detection', 'Instrument Selection', 'Royalty-free Music', 'Custom Length', 'Export Options'],
+      popular: false,
+      rating: 4.5,
+      users: '800+',
+      trial: '14-day free trial'
+    },
+    { 
+      name: 'AI Fitness Coach Pro', 
+      href: '/ai-fitness-coach', 
+      icon: Stethoscope, 
+      category: 'Health', 
+      price: '$99/mo',
+      description: 'Personalized AI fitness coaching with workout plans and nutrition guidance',
+      features: ['Personalized Workouts', 'Nutrition Planning', 'Progress Tracking', 'Form Analysis', 'Goal Setting', 'Community Features'],
+      popular: true,
+      rating: 4.7,
+      users: '2,500+',
+      trial: '21-day free trial'
+    },
+    { 
+      name: 'AI Language Tutor Pro', 
+      href: '/ai-language-tutor', 
+      icon: Globe, 
+      category: 'Education', 
+      price: '$59/mo',
+      description: 'AI-powered language learning with personalized curriculum and pronunciation coaching',
+      features: ['Personalized Learning', 'Pronunciation Analysis', 'Conversation Practice', 'Progress Tracking', 'Multiple Languages', 'Gamification'],
+      popular: true,
+      rating: 4.8,
+      users: '4,100+',
+      trial: '14-day free trial'
+    },
+    { 
+      name: 'AI Recipe Generator Pro', 
+      href: '/ai-recipe-generator', 
+      icon: ChefHat, 
+      category: 'Lifestyle', 
+      price: '$39/mo',
+      description: 'AI-powered recipe creation with dietary restrictions and nutritional analysis',
+      features: ['Dietary Restrictions', 'Nutritional Analysis', 'Ingredient Substitution', 'Cooking Instructions', 'Shopping Lists', 'Meal Planning'],
+      popular: false,
+      rating: 4.4,
+      users: '1,200+',
+      trial: '7-day free trial'
+    },
+    { 
+      name: 'AI Travel Planner Pro', 
+      href: '/ai-travel-planner', 
+      icon: Plane, 
+      category: 'Travel', 
+      price: '$79/mo',
+      description: 'Intelligent travel planning with itinerary optimization and real-time updates',
+      features: ['Itinerary Optimization', 'Budget Planning', 'Real-time Updates', 'Local Recommendations', 'Weather Integration', 'Booking Integration'],
+      popular: true,
+      rating: 4.6,
+      users: '1,800+',
+      trial: '14-day free trial'
+    },
+    { 
+      name: 'AI Stock Trader Pro', 
+      href: '/ai-stock-trader', 
+      icon: TrendingUp, 
+      category: 'Finance', 
+      price: '$199/mo',
+      description: 'AI-powered stock trading with market analysis and automated portfolio management',
+      features: ['Market Analysis', 'Automated Trading', 'Portfolio Management', 'Risk Assessment', 'Real-time Alerts', 'Backtesting'],
+      popular: true,
+      rating: 4.7,
+      users: '1,100+',
+      trial: '30-day free trial'
+    },
+    { 
+      name: 'AI Home Automation Pro', 
+      href: '/ai-home-automation', 
+      icon: Home, 
+      category: 'IoT', 
+      price: '$149/mo',
+      description: 'Smart home automation with AI learning and energy optimization',
+      features: ['Device Integration', 'Learning Patterns', 'Energy Optimization', 'Voice Control', 'Security Monitoring', 'Remote Access'],
+      popular: false,
+      rating: 4.5,
+      users: '900+',
+      trial: '21-day free trial'
+    },
+    { 
+      name: 'AI Plant Care Pro', 
+      href: '/ai-plant-care', 
+      icon: Sprout, 
+      category: 'Lifestyle', 
+      price: '$29/mo',
+      description: 'AI-powered plant care with species identification and watering schedules',
+      features: ['Species Identification', 'Care Schedules', 'Problem Diagnosis', 'Growth Tracking', 'Community Features', 'Expert Tips'],
+      popular: false,
+      rating: 4.3,
+      users: '600+',
+      trial: '14-day free trial'
+    },
+    { 
+      name: 'AI Sleep Optimizer Pro', 
+      href: '/ai-sleep-optimizer', 
+      icon: Clock, 
+      category: 'Health', 
+      price: '$49/mo',
+      description: 'AI-powered sleep analysis and optimization with personalized recommendations',
+      features: ['Sleep Analysis', 'Personalized Recommendations', 'Sleep Tracking', 'Environment Optimization', 'Habit Building', 'Progress Reports'],
+      popular: true,
+      rating: 4.6,
+      users: '1,500+',
+      trial: '14-day free trial'
+    },
+    { 
+      name: 'AI Memory Palace Pro', 
+      href: '/ai-memory-palace', 
+      icon: Brain, 
+      category: 'Education', 
+      price: '$69/mo',
+      description: 'AI-powered memory enhancement with spaced repetition and visualization techniques',
+      features: ['Spaced Repetition', 'Visualization Techniques', 'Memory Games', 'Progress Tracking', 'Custom Decks', 'Performance Analytics'],
+      popular: false,
+      rating: 4.4,
+      users: '700+',
+      trial: '14-day free trial'
+    },
+    { 
+      name: 'AI Mood Tracker Pro', 
+      href: '/ai-mood-tracker', 
+      icon: Heart, 
+      category: 'Health', 
+      price: '$39/mo',
+      description: 'AI-powered mood tracking with pattern analysis and wellness recommendations',
+      features: ['Mood Tracking', 'Pattern Analysis', 'Wellness Recommendations', 'Journal Integration', 'Progress Reports', 'Professional Insights'],
+      popular: true,
+      rating: 4.7,
+      users: '2,200+',
+      trial: '14-day free trial'
+    },
+    { 
+      name: 'AI Habit Builder Pro', 
+      href: '/ai-habit-builder', 
+      icon: Target, 
+      category: 'Productivity', 
+      price: '$49/mo',
+      description: 'AI-powered habit formation with personalized strategies and progress tracking',
+      features: ['Habit Formation', 'Personalized Strategies', 'Progress Tracking', 'Motivation System', 'Streak Tracking', 'Community Support'],
+      popular: true,
+      rating: 4.8,
+      users: '3,000+',
+      trial: '21-day free trial'
+    },
+    { 
+      name: 'AI Weather Predictor Pro', 
+      href: '/ai-weather-predictor', 
+      icon: Cloud, 
+      category: 'Data', 
+      price: '$79/mo',
+      description: 'Advanced weather prediction with AI analysis and personalized forecasts',
+      features: ['Advanced Forecasting', 'Personalized Alerts', 'Historical Analysis', 'Location-based Data', 'API Integration', 'Custom Reports'],
+      popular: false,
+      rating: 4.5,
+      users: '1,000+',
+      trial: '7-day free trial'
+    },
+    { 
+      name: 'AI Pet Care Pro', 
+      href: '/ai-pet-care', 
+      icon: Heart, 
+      category: 'Lifestyle', 
+      price: '$59/mo',
+      description: 'AI-powered pet care with health monitoring and behavior analysis',
+      features: ['Health Monitoring', 'Behavior Analysis', 'Vet Reminders', 'Nutrition Planning', 'Activity Tracking', 'Emergency Alerts'],
+      popular: true,
+      rating: 4.6,
+      users: '1,300+',
+      trial: '14-day free trial'
+    },
+    { 
+      name: 'AI Meditation Guide Pro', 
+      href: '/ai-meditation-guide', 
+      icon: Brain, 
+      category: 'Health', 
+      price: '$39/mo',
+      description: 'AI-powered meditation guidance with personalized sessions and progress tracking',
+      features: ['Personalized Sessions', 'Progress Tracking', 'Mood-based Recommendations', 'Guided Breathing', 'Sleep Stories', 'Community Features'],
+      popular: true,
+      rating: 4.8,
+      users: '2,800+',
+      trial: '14-day free trial'
+    },
+    { 
+      name: 'AI Investment Analyzer Pro', 
+      href: '/ai-investment-analyzer', 
+      icon: BarChart, 
+      category: 'Finance', 
+      price: '$179/mo',
+      description: 'AI-powered investment analysis with market predictions and portfolio optimization',
+      features: ['Market Analysis', 'Portfolio Optimization', 'Risk Assessment', 'Investment Recommendations', 'Performance Tracking', 'Tax Optimization'],
+      popular: true,
+      rating: 4.7,
+      users: '1,600+',
+      trial: '30-day free trial'
+    },
+    { 
+      name: 'AI Learning Path Pro', 
+      href: '/ai-learning-path', 
+      icon: GraduationCap, 
+      category: 'Education', 
+      price: '$89/mo',
+      description: 'AI-powered personalized learning paths with skill assessment and progress tracking',
+      features: ['Skill Assessment', 'Personalized Paths', 'Progress Tracking', 'Certification Prep', 'Expert Content', 'Peer Learning'],
+      popular: true,
+      rating: 4.8,
+      users: '2,400+',
+      trial: '21-day free trial'
     }
   ];
 
-  const categories = ['All', 'Productivity', 'Content', 'Marketing', 'Business', 'Finance', 'Development', 'Security', 'Healthcare', 'Legal', 'E-commerce', 'HR'];
+  const categories = ['All', 'Productivity', 'Content', 'Marketing', 'Business', 'Finance', 'Development', 'Security', 'Healthcare', 'Legal', 'E-commerce', 'HR', 'Data', 'Design', 'Creative', 'Health', 'Education', 'Lifestyle', 'Travel', 'IoT'];
 
   if (!isLoaded) {
     return (
@@ -363,7 +638,7 @@ const MicroSAASPage: React.FC = () => {
 
       {/* Services Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
           {microSAASServices.map((service) => (
             <div
               key={service.name}

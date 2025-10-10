@@ -125,7 +125,11 @@ const Navigation: React.FC = () => {
         { name: 'AI Customer Support Bot', path: '/ai-customer-support-bot', description: '24/7 AI customer support', icon: '🤖', popular: true },
         { name: 'AI Content Studio', path: '/ai-content-studio', description: 'Complete content creation suite', icon: '✍️', popular: true },
         { name: 'AI Financial Advisor', path: '/ai-financial-advisor', description: 'Personalized financial planning', icon: '💰', popular: false },
-        { name: 'AI Workflow Automation', path: '/ai-workflow-automation', description: 'Visual workflow builder', icon: '⚡', popular: true }
+        { name: 'AI Workflow Automation', path: '/ai-workflow-automation', description: 'Visual workflow builder', icon: '⚡', popular: true },
+        { name: 'AI Voice Assistant Pro', path: '/ai-voice-assistant', description: 'Advanced voice-controlled AI assistant', icon: '🎤', popular: true },
+        { name: 'AI Meeting Transcriber', path: '/ai-meeting-transcriber', description: 'Real-time meeting transcription', icon: '📝', popular: true },
+        { name: 'AI Logo Designer Pro', path: '/ai-logo-designer', description: 'AI-powered logo design', icon: '🎨', popular: true },
+        { name: 'AI Fitness Coach Pro', path: '/ai-fitness-coach', description: 'Personalized fitness coaching', icon: '💪', popular: true }
       ]
     },
     {
@@ -140,9 +144,12 @@ const Navigation: React.FC = () => {
         { name: 'AI Content Generation Studio', path: '/ai-content-generation', description: 'Complete content creation suite', icon: '✍️', popular: true },
         { name: 'AI Healthcare Solutions', path: '/ai-healthcare', description: 'Medical AI and diagnosis support', icon: '🏥', popular: true },
         { name: 'AI Fintech Platform', path: '/ai-fintech', description: 'Financial AI and fraud detection', icon: '💳', popular: true },
-        { name: 'AI Computer Vision Platform', path: '/ai-computer-vision', description: 'Advanced image recognition', icon: '👁️', popular: false },
-        { name: 'AI Machine Learning Platform', path: '/ai-ml-platform', description: 'Complete ML platform', icon: '🧠', popular: false },
-        { name: 'AI Quantum Computing', path: '/ai-quantum-computing', description: 'Next-gen quantum solutions', icon: '⚛️', popular: false }
+        { name: 'AI Quantum Machine Learning', path: '/ai-quantum-ml', description: 'Next-gen quantum ML platform', icon: '⚛️', popular: true },
+        { name: 'AI Autonomous Vehicle Systems', path: '/ai-autonomous-vehicles', description: 'Advanced autonomous vehicle AI', icon: '🚗', popular: true },
+        { name: 'AI Climate Solutions', path: '/ai-climate-solutions', description: 'Climate monitoring and optimization', icon: '🌍', popular: true },
+        { name: 'AI Drug Discovery Platform', path: '/ai-drug-discovery', description: 'Pharmaceutical AI research', icon: '💊', popular: true },
+        { name: 'AI Space Technology', path: '/ai-space-technology', description: 'Space exploration AI solutions', icon: '🚀', popular: false },
+        { name: 'AI Holographic Interface', path: '/ai-holographic-interface', description: 'Revolutionary holographic AI', icon: '🥽', popular: true }
       ]
     },
     {
@@ -156,9 +163,13 @@ const Navigation: React.FC = () => {
         { name: 'IT Infrastructure Design', path: '/it-infrastructure', description: 'Scalable infrastructure architecture', icon: '🏗️', popular: true },
         { name: '24/7 IT Support & Monitoring', path: '/it-support', description: 'Round-the-clock technical support', icon: '🔄', popular: true },
         { name: 'Custom Software Development', path: '/custom-development', description: 'Tailored software solutions', icon: '💻', popular: true },
-        { name: 'DevOps & CI/CD Implementation', path: '/devops-cicd', description: 'Streamlined development processes', icon: '⚙️', popular: false },
-        { name: 'Database Management & Optimization', path: '/database-management', description: 'Performance tuning & security', icon: '🗄️', popular: false },
-        { name: 'Network Design & Implementation', path: '/network-design', description: 'Secure network infrastructure', icon: '🌐', popular: false }
+        { name: 'AI-Powered IT Operations', path: '/ai-it-operations', description: 'Intelligent IT operations', icon: '🤖', popular: true },
+        { name: 'Quantum Computing Infrastructure', path: '/quantum-infrastructure', description: 'Quantum computing setup', icon: '⚛️', popular: false },
+        { name: 'Edge Computing Solutions', path: '/edge-computing', description: 'Distributed edge infrastructure', icon: '📡', popular: true },
+        { name: 'Blockchain Infrastructure', path: '/blockchain-infrastructure', description: 'Complete blockchain setup', icon: '⛓️', popular: true },
+        { name: 'IoT Platform Development', path: '/iot-platform', description: 'Comprehensive IoT solutions', icon: '🌐', popular: true },
+        { name: '5G Network Implementation', path: '/5g-implementation', description: '5G infrastructure setup', icon: '📶', popular: true },
+        { name: 'MLOps Platform', path: '/mlops-platform', description: 'Machine learning operations', icon: '🔬', popular: true }
       ]
     },
     {
