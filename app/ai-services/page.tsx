@@ -11,6 +11,7 @@ import Analytics from '../components/Analytics';
 
 const AIServicesPage: React.FC = () => {
   const aiServices = [
+    // Core AI Services
     {
       title: 'Machine Learning Solutions',
       description: 'Custom ML models for predictive analytics and decision-making',
@@ -43,6 +44,8 @@ const AIServicesPage: React.FC = () => {
       features: ['Process Automation', 'Workflow Optimization', 'Decision Trees', 'Exception Handling'],
       color: 'text-cyan-400'
     },
+
+    // Advanced AI Services
     {
       title: 'AI Data Visualization',
       description: 'Transform complex data into interactive visualizations',
@@ -75,6 +78,8 @@ const AIServicesPage: React.FC = () => {
       features: ['Blog Writing', 'Social Media Content', 'Email Campaigns', 'SEO Optimization'],
       color: 'text-yellow-400'
     },
+
+    // Specialized AI Services
     {
       title: 'AI Predictive Analytics',
       description: 'Advanced forecasting and trend analysis with machine learning',

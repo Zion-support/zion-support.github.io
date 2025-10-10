@@ -282,6 +282,7 @@ const Footer: React.FC = () => {
                 Subscribe
               </button>
             </div>
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-1ed2
           </div>
         </div>
 
@@ -306,6 +307,7 @@ const Footer: React.FC = () => {
             </div>
             
             {/* Social Links */}
+<<<<<<< HEAD
             <div className="flex space-x-4">
               {socialLinks.map((social) => (
                 <a
