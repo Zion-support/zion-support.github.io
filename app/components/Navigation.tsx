@@ -124,12 +124,12 @@ const Navigation: React.FC = () => {
         { name: 'AI Email Marketing Suite', path: '/ai-email-marketing', description: 'Intelligent email campaigns', icon: '📧', popular: true },
         { name: 'AI Customer Support Bot', path: '/ai-customer-support-bot', description: '24/7 AI customer support', icon: '🤖', popular: true },
         { name: 'AI Content Studio', path: '/ai-content-studio', description: 'Complete content creation suite', icon: '✍️', popular: true },
-        { name: 'AI Financial Advisor', path: '/ai-financial-advisor', description: 'Personalized financial planning', icon: '💰', popular: false },
-        { name: 'AI Workflow Automation', path: '/ai-workflow-automation', description: 'Visual workflow builder', icon: '⚡', popular: true },
-        { name: 'AI Quantum Financial Oracle', path: '/ai-quantum-financial-oracle', description: 'Quantum-powered financial analysis', icon: '⚛️', popular: true },
-        { name: 'AI 3D Generation Studio', path: '/ai-3d-generation', description: 'AI-powered 3D model generation', icon: '🎨', popular: true },
-        { name: 'AI Mobile App Builder', path: '/ai-mobile-app-builder', description: 'AI-powered mobile app development', icon: '📱', popular: true },
-        { name: 'AI Logo Designer Pro', path: '/ai-logo-designer', description: 'AI-powered logo design', icon: '🎨', popular: true }
+        { name: 'AI Voice Cloning Studio', path: '/ai-voice-cloning', description: 'Create realistic voice clones', icon: '🎤', popular: true },
+        { name: 'AI Code Review Assistant', path: '/ai-code-review', description: 'Automated code review and security analysis', icon: '🔍', popular: true },
+        { name: 'AI Meeting Transcriber Pro', path: '/ai-meeting-transcriber', description: 'Real-time meeting transcription', icon: '📝', popular: true },
+        { name: 'AI Resume Builder Pro', path: '/ai-resume-builder', description: 'AI-powered resume creation', icon: '📄', popular: true },
+        { name: 'AI Website Builder Pro', path: '/ai-website-builder', description: 'AI-powered website creation', icon: '🌐', popular: true },
+        { name: 'AI Quantum Financial Oracle', path: '/ai-quantum-financial-oracle', description: 'Quantum-powered financial analysis', icon: '⚛️', popular: true }
       ]
     },
     {
@@ -196,7 +196,7 @@ const Navigation: React.FC = () => {
   };
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg border-b border-cyan-400/20' : 'bg-transparent'
+      isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg border-b border-cyan-400/20 neon-border' : 'bg-transparent'
     }`}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">

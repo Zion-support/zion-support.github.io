@@ -10,14 +10,14 @@ const Footer: React.FC = memo(() => {
       title: 'AI Services',
       icon: Brain,
       services: [
-        { name: 'AI Drug Discovery Pro', href: '/ai-drug-discovery-pro' },
+        { name: 'AI Quantum Financial Oracle', href: '/ai-quantum-financial-oracle' },
+        { name: 'AI Neural Memory Assistant', href: '/ai-neural-memory-assistant' },
+        { name: 'AI Holographic Workspace', href: '/ai-holographic-workspace' },
         { name: 'AI Climate Solutions Pro', href: '/ai-climate-solutions-pro' },
-        { name: 'AI Space Technology Pro', href: '/ai-space-technology-pro' },
-        { name: 'AI Financial Crime Detection Pro', href: '/ai-financial-crime-detection-pro' },
-        { name: 'AI Supply Chain Optimization Pro', href: '/ai-supply-chain-optimization-pro' },
-        { name: 'AI Energy Grid Management Pro', href: '/ai-energy-grid-management-pro' },
-        { name: 'AI Agricultural Intelligence Pro', href: '/ai-agricultural-intelligence-pro' },
-        { name: 'AI Legal Research Pro', href: '/ai-legal-research-pro' }
+        { name: 'AI Drug Discovery Pro', href: '/ai-drug-discovery-pro' },
+        { name: 'AI Fashion Design Studio', href: '/ai-fashion-design' },
+        { name: 'AI Music Composition Suite', href: '/ai-music-composition' },
+        { name: 'AI Autonomous Systems', href: '/ai-autonomous-systems' }
       ]
     },
     {
@@ -38,18 +38,18 @@ const Footer: React.FC = memo(() => {
       title: 'Micro SAAS',
       icon: Code,
       services: [
-        { name: 'AI Project Manager Pro', href: '/ai-project-manager' },
-        { name: 'AI Smart Calendar Pro', href: '/ai-smart-calendar' },
-        { name: 'AI Content Writer Pro', href: '/ai-content-writer' },
-        { name: 'AI Video Generator Pro', href: '/ai-video-generator' },
-        { name: 'AI Social Media Manager Pro', href: '/ai-social-media-manager' },
-        { name: 'AI Email Marketing Suite', href: '/ai-email-marketing' },
-        { name: 'AI CRM Assistant Pro', href: '/ai-crm-assistant' },
-        { name: 'AI Financial Analyzer Pro', href: '/ai-financial-analyzer' },
-        { name: 'AI Code Assistant Pro', href: '/ai-code-assistant' },
-        { name: 'AI API Manager Pro', href: '/ai-api-manager' },
-        { name: 'AI Cybersecurity Monitor Pro', href: '/ai-cybersecurity-monitor' },
-        { name: 'AI Password Manager Pro', href: '/ai-password-manager' }
+        { name: 'AI Voice Cloning Studio', href: '/ai-voice-cloning' },
+        { name: 'AI Code Review Assistant', href: '/ai-code-review' },
+        { name: 'AI Meeting Transcriber Pro', href: '/ai-meeting-transcriber' },
+        { name: 'AI Resume Builder Pro', href: '/ai-resume-builder' },
+        { name: 'AI Website Builder Pro', href: '/ai-website-builder' },
+        { name: 'AI Color Palette Generator', href: '/ai-color-palette' },
+        { name: 'AI QR Code Generator Pro', href: '/ai-qr-generator' },
+        { name: 'AI Text Summarizer Pro', href: '/ai-text-summarizer' },
+        { name: 'AI Image Upscaler Pro', href: '/ai-image-upscaler' },
+        { name: 'AI Font Generator Pro', href: '/ai-font-generator' },
+        { name: 'AI Chart Generator Pro', href: '/ai-chart-generator' },
+        { name: 'AI Screenshot Tool Pro', href: '/ai-screenshot-tool' }
       ]
     },
     {
