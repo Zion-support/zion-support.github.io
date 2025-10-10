@@ -5,86 +5,76 @@ import { CheckCircle, Eye, MousePointer, Volume2, Shield, Users, Globe, Zap, Arr
 const AccessibilityPage: React.FC = () => {
     const features = [
     {
-      icon: Eye,;
-      title: 'Visual Accessibility',;
-      description: 'Comprehensive visual accessibility features including high contrast modes, text scaling, and screen reader compatibility.',;
+      icon: Eye,
+      title: 'Visual Accessibility',
+      description: 'Comprehensive visual accessibility features including high contrast modes, text scaling, and screen reader compatibility.',
       benefits: ['High contrast mode', 'Text scaling', 'Screen reader support', 'Color blind friendly']
-  }
-    },;
+    },
     {
-    icon: MousePointer,;
-      title: 'Motor Accessibility',;
-      description: 'Keyboard navigation and alternative input methods for users with motor impairments.',;
+      icon: MousePointer,
+      title: 'Motor Accessibility',
+      description: 'Keyboard navigation and alternative input methods for users with motor impairments.',
       benefits: ['Keyboard navigation', 'Voice commands', 'Switch control', 'Customizable controls']
-  }
-    },;
+    },
     {
-    icon: Volume2,;
-      title: 'Audio Accessibility',;
-      description: 'Audio alternatives and visual indicators for users with hearing impairments.',;
+      icon: Volume2,
+      title: 'Audio Accessibility',
+      description: 'Audio alternatives and visual indicators for users with hearing impairments.',
       benefits: ['Audio descriptions', 'Visual alerts', 'Captions', 'Sign language support']
-  }
-    },;
+    },
     {
-    icon: Shield,;
-      title: 'Security & Privacy',;
-      description: 'Secure accessibility features that protect user data while providing inclusive experiences.',;
+      icon: Shield,
+      title: 'Security & Privacy',
+      description: 'Secure accessibility features that protect user data while providing inclusive experiences.',
       benefits: ['Data protection', 'Secure forms', 'Privacy controls', 'Encrypted communications']
-  }
-    },;
+    },
     {
-    icon: Users,;
-      title: 'Inclusive Design',;
-      description: 'Design principles that ensure our solutions work for users of all abilities and backgrounds.',;
+      icon: Users,
+      title: 'Inclusive Design',
+      description: 'Design principles that ensure our solutions work for users of all abilities and backgrounds.',
       benefits: ['Universal design', 'Cultural sensitivity', 'Language support', 'Age-friendly interfaces']
-  }
-    },;
+    },
     {
-    icon: Globe,;
-      title: 'Global Standards',;
-      description: 'Compliance with international accessibility standards including WCAG 2.1 AA and Section 508.',;
+      icon: Globe,
+      title: 'Global Standards',
+      description: 'Compliance with international accessibility standards including WCAG 2.1 AA and Section 508.',
       benefits: ['WCAG 2.1 AA', 'Section 508', 'ADA compliance', 'International standards']
-  }
     }
   ];
 const standards = [
     {
-    name: 'WCAG 2.1 AA',;
-      description: 'Web Content Accessibility Guidelines 2.1 Level AA compliance',;
+      name: 'WCAG 2.1 AA',
+      description: 'Web Content Accessibility Guidelines 2.1 Level AA compliance',
       status: 'Fully Compliant'
-  }
-    },;
+    },
     {
-    name: 'Section 508',;
-      description: 'US federal accessibility standards for electronic and information technology',;
+      name: 'Section 508',
+      description: 'US federal accessibility standards for electronic and information technology',
       status: 'Fully Compliant'
-  }
-    },;
+    },
     {
-    name: 'ADA',;
-      description: 'Americans with Disabilities Act compliance for digital accessibility',;
+      name: 'ADA',
+      description: 'Americans with Disabilities Act compliance for digital accessibility',
       status: 'Fully Compliant'
-  }
-    },;
+    },
     {
-    name: 'EN 301 549',;
-      description: 'European accessibility standard for ICT products and services',;
+      name: 'EN 301 549',
+      description: 'European accessibility standard for ICT products and services',
       status: 'Fully Compliant'
-  }
     }
   ];
 return (
-    <></>
+    <>
       <Helmet>
         <title>Accessibility Solutions - Zion Tech Group | Inclusive Digital Experiences</title>
-        <meta>
-        <meta>
+        <meta name="description" content="Comprehensive accessibility solutions ensuring inclusive digital experiences for all users. WCAG 2.1 AA compliant, Section 508, and ADA compliant solutions." />
+        <meta name="keywords" content="accessibility, WCAG, Section 508, ADA compliance, inclusive design, digital accessibility, screen reader, keyboard navigation" />
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden"></section>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" /></div>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div>
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
           <div className="relative max-w-7xl mx-auto text-center"></div>
             <h1>
               Accessibility;
