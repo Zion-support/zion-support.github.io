@@ -3,7 +3,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ExternalLink, CheckCircle, ArrowRight, Globe, Shield, Zap, Users } from 'lucide-react';
+import { ExternalLink, CheckCircle, ArrowRight, Globe, Shield, Zap, Users, Cloud, Cpu, Building } from 'lucide-react';
 
 interface Partner {
   id: string;

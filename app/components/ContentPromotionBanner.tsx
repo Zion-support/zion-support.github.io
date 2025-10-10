@@ -1,66 +1,77 @@
 'use client';
 
-import React from 'react';
-import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, TrendingUp } from 'lucide-react';
+import React, { useState } from 'react';
+import { X, ArrowRight, Star, CheckCircle } from 'lucide-react';
 
-const ContentPromotionBanner: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
-    },
-    {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
-    },
-    {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment with local support and compliance'
-    }
-  ];
+interface ContentPromotionBannerProps {
+  title?: string;
+  description?: string;
+  ctaText?: string;
+  ctaLink?: string;
+  features?: string[];
+  onClose?: () => void;
+}
 
-  const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ];
+const ContentPromotionBanner: React.FC<ContentPromotionBannerProps> = ({
+  title = 'Transform Your Business with AI',
+  description = 'Discover how our AI solutions can revolutionize your operations and drive growth.',
+  ctaText = 'Get Started',
+  ctaLink = '/contact',
+  features = [
+    '24/7 AI-powered automation',
+    'Real-time analytics and insights',
+    'Seamless integration with existing systems',
+    'Expert support and training'
+  ],
+  onClose
+}) => {
+  const [isVisible, setIsVisible] = useState(true);
 
-  const stats = [
-    {
-      icon: Users,
-      value: '10,000+',
-      label: 'Happy Customers',
-      description: 'Businesses trust our solutions'
-    },
-    {
-      icon: TrendingUp,
-      value: '99.9%',
-      label: 'Uptime',
-      description: 'Reliable service guarantee'
-    },
-    {
-      icon: Star,
-      value: '4.9/5',
-      label: 'Rating',
-      description: 'Highly rated by clients'
-    }
-  ];
+  const handleClose = () => {
+    setIsVisible(false);
+    onClose?.();
+  };
+
+  if (!isVisible) return null;
 
   return (
+    <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20 rounded-lg p-6 mb-8 relative">
+      <button
+        onClick={handleClose}
+        className="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors duration-200"
+        aria-label="Close banner"
+      >
+        <X className="w-5 h-5" />
+      </button>
+
+      <div className="flex flex-col lg:flex-row items-start lg:items-center gap-6">
+        <div className="flex-1">
+          <div className="flex items-center gap-2 mb-2">
+            <Star className="w-5 h-5 text-yellow-400" />
+            <span className="text-sm font-semibold text-cyan-400">Special Offer</span>
           </div>
+          
+          <h3 className="text-xl font-bold text-white mb-2">{title}</h3>
+          <p className="text-gray-300 mb-4">{description}</p>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-4">
+            {features.map((feature, index) => (
+              <div key={index} className="flex items-center gap-2">
+                <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
+                <span className="text-sm text-gray-300">{feature}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="flex-shrink-0">
+          <a
+            href={ctaLink}
+            className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-purple-400 text-slate-900 px-6 py-3 rounded-lg font-semibold hover:from-cyan-300 hover:to-purple-300 transition-all duration-300 transform hover:scale-105"
+          >
+            {ctaText}
+            <ArrowRight className="w-4 h-4" />
+          </a>
         </div>
       </div>
     </div>
