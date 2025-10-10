@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -24,6 +25,10 @@ import {;
   Target,;
   Eye;}
 } from 'lucide-react';
+const PenetrationTestingPage: React.FC;
+
+export default PenetrationTestingPage
+=======
 const PenetrationTestingPage: React.FC = () => {
   const features = [
     {
@@ -162,6 +167,7 @@ const PenetrationTestingPage: React.FC = () => {
   );
 };
 export default PenetrationTestingPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853
   </button>
   </button>
   </h2>

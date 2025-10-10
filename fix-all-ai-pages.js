@@ -1,16 +1,8 @@
 #!/usr/bin/env node
-
-import fs from 'fs';
-
-// Template for AI pages
-const createAiPageTemplate = (pageName, title, description, keywords) => `'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
-
-const ${pageName}Page: React.FC = () => {
+import fs from 'fs'
+const createAiPageTemplate = (pageName, title, description, keywords) => `'use client'import React from 'react'
+import { Helmet  } from 'react-helmet-async'import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings  } from 'lucide-react'const ${pageName}Page: React.FC  = () => {
   const features = [
     {
       icon: Brain,
@@ -36,18 +28,14 @@ const ${pageName}Page: React.FC = () => {
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-  ];
-
-  return (
+  ]return (
     <>
       <Helmet>
         <title>${title} - Zion Tech Group</title>
         <meta name="description" content="${description}" />
         <meta name="keywords" content="${keywords}" />
       </Helmet>
-      
       <Navigation />
-      
       <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         {/* Hero Section */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -70,7 +58,6 @@ const ${pageName}Page: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -82,7 +69,6 @@ const ${pageName}Page: React.FC = () => {
                 Discover how our AI platform can revolutionize your business operations.
               </p>
             </div>
-            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
@@ -104,7 +90,6 @@ const ${pageName}Page: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-blue-600">
           <div className="max-w-4xl mx-auto text-center">
@@ -120,15 +105,10 @@ const ${pageName}Page: React.FC = () => {
           </div>
         </section>
       </main>
-      
       <Footer />
     </>
-  );
-};
-
-export default ${pageName}Page;`;
-
-// AI pages to fix
+  )}
+export default ${pageName}Page;`
 const aiPages = [
   {
     file: './app/ai-api-manager/page.tsx',
@@ -228,19 +208,15 @@ const aiPages = [
     description: 'Intelligent CRM assistant powered by AI technology.',
     keywords: 'AI CRM assistant, artificial intelligence, customer relationship management, AI solutions, intelligent CRM'
   }
-];
-
-// Process all AI pages
-console.log('🔧 Fixing all AI pages...\n');
-
+]
+console.log('🔧 Fixing all AI pages...\n')
 aiPages.forEach(page => {
   try {
-    const content = createAiPageTemplate(page.name, page.title, page.description, page.keywords);
-    fs.writeFileSync(page.file, content, 'utf8');
-    console.log(`✅ Fixed ${page.file}`);
+    const content = createAiPageTemplate(page.name, page.title, page.description, page.keywords)
+    fs.writeFileSync(page.file, content, 'utf8')
+    console.log(`✅ Fixed ${page.file}`)
   } catch (error) {
-    console.error(`❌ Error processing ${page.file}:`, error.message);
+    console.error(`❌ Error processing ${page.file}:`, error.message)
   }
-});
-
-console.log('\n✨ All AI pages fixed!');
+})
+console.log('\n✨ All AI pages fixed!')

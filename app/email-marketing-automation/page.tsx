@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -22,6 +23,10 @@ import {;
   Send,;
   PieChart;}
 } from 'lucide-react';
+const EmailMarketingAutomationPage: React.FC;
+
+export default EmailMarketingAutomationPage
+=======
 const EmailMarketingAutomationPage: React.FC = () => {
   const features = [
     {
@@ -160,6 +165,7 @@ const EmailMarketingAutomationPage: React.FC = () => {
   );
 };
 export default EmailMarketingAutomationPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853
   </button>
   </button>
   </h2>

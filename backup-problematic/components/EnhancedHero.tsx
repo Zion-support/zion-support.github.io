@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 interface EnhancedHeroProps {/* TODO: Fix JSX expression */}
 }
 const EnhancedHero = React.memo(function EnhancedHero({ className = '' }: EnhancedHeroProps) {
@@ -14,7 +14,6 @@ const EnhancedHero = React.memo(function EnhancedHero({ className = '' }: Enhanc
       <h3 className="text-lg font-semibold text-blue-800">EnhancedHero</h3>"
       <p className="text-blue-600">This component is under development.</p>
     </div>
-  );
-});
-export default EnhancedHero;
+  )
+})export default EnhancedHero
 "`

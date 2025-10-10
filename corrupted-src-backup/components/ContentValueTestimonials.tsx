@@ -1,2 +1,1 @@
-import React from 'react';
-export default ContentValueTestimonials;
+import React from 'react'export default ContentValueTestimonials

@@ -1,9 +1,6 @@
-import React from 'react';
-import { Music, Mic, Play, Download, Share, Star, CheckCircle, Zap, Clock, Users, Award, ArrowRight, Sparkles } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
-const AIVoiceCloningPage: React.FC = () => {
+import React from 'react'import { Music, Mic, Play, Download, Share, Star, CheckCircle, Zap, Clock, Users, Award, ArrowRight, Sparkles  } from 'lucide-react'
+import Navigation from '../components/Navigation'import Footer from '../components/Footer'
+import SEOOptimizer from '../components/SEOOptimizer'const AIVoiceCloningPage: React.FC  = () => {
   const features = [
     'Voice Cloning',
     'Text-to-Speech',
@@ -15,7 +12,7 @@ const AIVoiceCloningPage: React.FC = () => {
     'High Quality Audio',
     'Custom Voice Models',
     'Batch Processing'
-  ];
+  ]
   const benefits = [
     'Natural voice quality',
     'Cost-effective solution',
@@ -23,7 +20,7 @@ const AIVoiceCloningPage: React.FC = () => {
     'Custom voices',
     'Multi-language support',
     'Easy integration'
-  ];
+  ]
   const pricingPlans = [
     {
       name: 'Starter',
@@ -46,8 +43,7 @@ const AIVoiceCloningPage: React.FC = () => {
       features: ['Everything in Pro', 'Unlimited hours', 'Custom training', 'Dedicated support', 'White-label'],
       popular: false
     }
-  ];
-  return (
+  ]return (
     <React.Fragment>
       <SEOOptimizer
         title="AI Voice Cloning Studio - Create Realistic Voice Clones | Zion Tech Group"
@@ -66,23 +62,23 @@ const AIVoiceCloningPage: React.FC = () => {
                   <Music className="w-8 h-8 text-white" />
                 </div>
                 <h1 className="text-4xl md:text-5xl font-bold text-white neon-text">
-                  AI Voice Cloning Studio;
+                  AI Voice Cloning Studio
   </
               </div>
               <p className="text-xl text-gray-300 mb-8">
-                Create realistic voice clones for content, presentations, and customer service with cutting-edge AI technology;
+                Create realistic voice clones for content, presentations, and customer service with cutting-edge AI technology
   </
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="/contact"
                   className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300">
-                  Start Free Trial;
+                  Start Free Trial
   </
                 <a
                   href="#demo"
                   className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
                   <Play className="w-5 h-5" />
-                  Listen to Samples;
+                  Listen to Samples
   </
               </div>
             </div>
@@ -90,7 +86,7 @@ const AIVoiceCloningPage: React.FC = () => {
           {/* Features Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-              Advanced Voice Cloning Features;
+              Advanced Voice Cloning Features
   </
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {features.map((feature, index) => (
@@ -122,7 +118,7 @@ const AIVoiceCloningPage: React.FC = () => {
           {/* Pricing Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-              Simple, Transparent Pricing;
+              Simple, Transparent Pricing
   </
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
               {pricingPlans.map((plan, index) => (
@@ -130,7 +126,7 @@ const AIVoiceCloningPage: React.FC = () => {
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <div className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-semibold">
-                        Most Popular;
+                        Most Popular
   </
                     </div>
                   )}
@@ -157,7 +153,7 @@ const AIVoiceCloningPage: React.FC = () => {
                         : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
                     }`}
                   >
-                    Get Started;
+                    Get Started
   </
                 </div>
               ))}
@@ -170,13 +166,13 @@ const AIVoiceCloningPage: React.FC = () => {
                 Ready to Create Amazing Voice Content?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Join thousands of businesses using AI voice technology;
+                Join thousands of businesses using AI voice technology
   </
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="/contact"
                   className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300">
-                  Start Your Free Trial;
+                  Start Your Free Trial
   </
                 <a
                   href="tel:+13024640950"
@@ -190,9 +186,8 @@ const AIVoiceCloningPage: React.FC = () => {
         <Footer />
       </div>
     </React.Fragment>
-  );
-};
-export default AIVoiceCloningPage;
+  )}
+export default AIVoiceCloningPage
   </a>
   </p>
   </a>

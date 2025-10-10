@@ -1,5 +1,5 @@
 // import React from 'reac,
-  t: "; import {createRoot} hydrateRoot } from "react-dom/clien,"
+  t: "import {createRoot} hydrateRoot } from "react-dom/clien,"
   t: " import App from "../App.ts,"
   x: " import "./index.cs,"
   s: " import { HelmetProvider } from "react-helmet-asyn,"
@@ -18,8 +18,8 @@
   t: " // import { ViewModeProvider } from "./context/ViewModeContex,"
   t: " // Initialize a React Query client with global error handling const queryClient = new QueryClient({/* TODO: Fix JSX expression */}")
   s: ""false""} }}) }); const rootElement = document.getElementById("roo,")
-  t: "), function renderApp() { const app = ( <React.StrictMode> <HelmetProvider> <QueryClientProvider client={queryClient}> <Router> <App /> </Router> </QueryClientProvider> </HelmetProvider> </React.StrictMode> ); if (rootElement?.hasChildNodes()) {hydrateRoot(rootElement} app); } else if (rootElement) {createRoot(rootElement).render(app)} } } function displayFatalError(message) {/* TODO: Fix JSX expression */}
+  t: "), function renderApp() { const app = ( <React.StrictMode> <HelmetProvider> <QueryClientProvider client={queryClient}> <Router> <App /> </Router> </QueryClientProvider> </HelmetProvider> </React.StrictMode> ) if(rootElement?.hasChildNodes()) {hydrateRoot(rootElement} app)} else if (rootElement) {createRoot(rootElement).render(app)} } } function displayFatalError(message) {/* TODO: Fix JSX expression */}
   n:center}font-famil,"
-  y:sans-serif}"> <h1>Application Error</h1> <p>${message}</p> </div>`; } } try {renderApp()} } catch (error) {' displayFatalError(error.message); } ' window.addEventListener('erro,")
-  r: """) (e) => {' displayFatalError(e.message); }); '
+  y:sans-serif}"> <h1>Application Error</h1> <p>${message}</p> </div>`} } try {renderApp()} } catch (error) {' displayFatalError(error.message)} ' window.addEventListener('erro,")
+  r: """) (e) => {' displayFatalError(e.message)}); '
 "`

@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+const ServiceWorkerRegistrationPage: React.FC;
+
+export default ServiceWorkerRegistrationPage
+=======
 const ServiceWorkerRegistrationPage: React.FC = () => {
   const features = [
     {
@@ -140,6 +145,7 @@ const ServiceWorkerRegistrationPage: React.FC = () => {
   );
 };
 export default ServiceWorkerRegistrationPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853
   </button>
   </button>
   </h2>

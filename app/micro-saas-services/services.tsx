@@ -1,7 +1,12 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+const ServicesPage: React.FC;
+
+export default ServicesPage
+=======
 const ServicesPage: React.FC = () => {
   const features = [
     {
@@ -141,6 +146,7 @@ const ServicesPage: React.FC = () => {
   );
 };
 export default ServicesPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853
   </button>
   </button>
   </h2>

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -23,6 +24,10 @@ import {;
   Workflow,;
   Bot;}
 } from 'lucide-react';
+const ProcessAutomationPage: React.FC;
+
+export default ProcessAutomationPage
+=======
 const ProcessAutomationPage: React.FC = () => {
   const features = [
     {
@@ -161,6 +166,7 @@ const ProcessAutomationPage: React.FC = () => {
   );
 };
 export default ProcessAutomationPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853
   </button>
   </button>
   </h2>

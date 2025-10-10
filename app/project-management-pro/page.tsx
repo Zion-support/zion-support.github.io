@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -23,6 +24,10 @@ import {;
   Calendar,;
   FileText;}
 } from 'lucide-react';
+const ProjectManagementProPage: React.FC;
+
+export default ProjectManagementProPage
+=======
 const ProjectManagementProPage: React.FC = () => {
   const features = [
     {
@@ -161,6 +166,7 @@ const ProjectManagementProPage: React.FC = () => {
   );
 };
 export default ProjectManagementProPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853
   </button>
   </button>
   </h2>

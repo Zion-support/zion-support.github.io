@@ -1,9 +1,6 @@
-'use client';
-import React from 'react';
-import { Database, Shield, Zap, ArrowRight, CheckCircle, Star, Users, Clock, Settings, TrendingUp } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-const DatabaseManagementPage: React.FC = () => {
+'use client'import React from 'react'
+import { Database, Shield, Zap, ArrowRight, CheckCircle, Star, Users, Clock, Settings, TrendingUp  } from 'lucide-react'import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'const DatabaseManagementPage: React.FC  = () => {
   const features = [
     {
       icon: Database,
@@ -29,8 +26,7 @@ const DatabaseManagementPage: React.FC = () => {
       description: 'Automated database maintenance and updates',
       benefits: ['Automated backups', 'Patch management', 'Health checks']
     }
-  ];
-  return (
+  ]return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
@@ -85,8 +81,7 @@ const DatabaseManagementPage: React.FC = () => {
       </main>
       <Footer />
     </div>
-  );
-};
+  )}
 export default DatabaseManagementPage</h2>
   </a>
   </a>

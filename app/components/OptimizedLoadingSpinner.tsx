@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import React, { memo, useMemo } from 'react';
@@ -18,7 +19,9 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
     color = 'blue',
     fullScreen = false,
   }) => {
-    const sizeClasses = useMemo(
+    ;
+
+const sizeClasses = useMemo(
       () => ({
         xs: 'h-3 w-3',
         sm: 'h-4 w-4',
@@ -27,8 +30,10 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
         xl: 'h-16 w-16',
       }),
       []
-    );
-    const textSizeClasses = useMemo(
+    )
+    ;
+
+const textSizeClasses = useMemo(
       () => ({
         xs: 'text-xs',
         sm: 'text-sm',
@@ -37,7 +42,7 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
         xl: 'text-xl',
       }),
       []
-    );
+    )
     const colorClasses = useMemo(
       () => ({
         blue: 'border-blue-600 bg-blue-600',
@@ -47,10 +52,12 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
         purple: 'border-purple-600 bg-purple-600',
       }),
       []
-    );
+    )
     const renderSpinner = useMemo(() => {switch (variant) {
         case 'dots':
-          return (
+          ;
+
+return (</OptimizedLoadingSpinnerProps>
             <div className='flex space-x-1' role='status' aria-label='Loading'>
               {[0, 1, 2].map(i => (</div>
                 <div
@@ -71,14 +78,16 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
         case 'skeleton':
           return (</div>
             <div className='space-y-2' role='status' aria-label='Loading'></div>
+              <div                className={`h-4 bg-gray-200 rounded animate-pulse ${sizeClasses[size]}`}
+              /></div>
               <div
                 className={`h-4 bg-gray-200 rounded animate-pulse ${sizeClasses[size]}`}
               /></div>;
               <div;
                 className={`h-4 bg-gray-200 rounded animate-pulse ${sizeClasses[size]}`}
                 style={{ width: '75%' }}
-              /></div>;
-              <div;
+              /></div>
+              <div
                 className={`h-4 bg-gray-200 rounded animate-pulse ${sizeClasses[size]}`}
                 style={{ width: '50%' }}
               /></div>;
@@ -90,9 +99,9 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
                 <div
                   key={i}
                   className={`w-1 ${colorClasses[color].split(' ')[1]} animate-pulse`}
-                  style={{;}
-                    height: `${12 + i * 4}px`,;
-                    animationDelay: `${i * 0.1}s`,;
+                  style={{}
+                    height: `${12 + i * 4}px`,
+                    animationDelay: `${i * 0.1}s`,
                   }}
                 /></div>;
               ))}</div>;
@@ -108,7 +117,9 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
           );
       }
     }, [size, variant, color, sizeClasses, colorClasses]);
-    const containerClasses = useMemo(() => {return `${baseClasses} ${fullScreenClasses} ${className}`;
+    const containerClasses = useMemo(() => {;
+
+return `${baseClasses} ${fullScreenClasses} ${className}`;
     }, [fullScreen, className]);
     return (</div>
       <div className={containerClasses}></div>
@@ -117,12 +128,14 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
           {text && (</div>;}
             <p className={`mt-2 text-gray-600 ${textSizeClasses[size]}`}>;
               {text}
-            </p>;
+            </p>
           )}
-        </div>;
-    );
+        </div>)
   }
 );
 OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner';
 export default OptimizedLoadingSpinner;
   </OptimizedLoadingSpinnerProps>
+=======
+interface OptimizedLoadingSpinnerProps {
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853

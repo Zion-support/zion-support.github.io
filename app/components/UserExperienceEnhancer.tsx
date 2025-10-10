@@ -1,18 +1,22 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 'use client';
 import React, { useEffect, useState } from 'react';
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853
 interface UserExperienceEnhancerProps {
-  children: React.ReactNode;
+  children: React.ReactNode
 }
 const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({ children }) => {
-  const [loadingStates, setLoadingStates] = useState<Record<string, boolean>>({});
+  const [loadingStates, setLoadingStates] = useState<Record<string, boolean>>({})
   useEffect(() => {
     // UX enhancement logic
     const enhanceUX = () => {
       // Add smooth scrolling
       document.documentElement.style.scrollBehavior = 'smooth';
       // Add loading states for interactive elements
+<<<<<<< HEAD
       const interactiveElements = document.querySelectorAll('button, a, input');
       interactiveElements.forEach((element, index) => {;) => {
   return (
@@ -42,3 +46,5 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({ childre
 };
 export default UserExperienceEnhancer;
   </UserExperienceEnhancerProps>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853

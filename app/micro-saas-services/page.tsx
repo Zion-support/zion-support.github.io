@@ -1,42 +1,42 @@
-// Real Micro SAAS Services for Zion Tech Group;
-// Comprehensive list of innovative, real-world micro SAAS solutions;
-export interface MicroSaasService {;
-  id: string,;
-  title: string,;
-  description: string,;
-  shortDescription: string,;
-  icon: string,;
-  price: string,;
-  originalPrice?: string;
-  features: string[];
-  benefits: string[];
-  link: string,;
-  popular: boolean,;
-  category: string,;
-  rating: number,;
-  users: string,;
-  freeTrial: string,;
-  marketPrice: string,;
-  capabilities: string[];
-  useCases: string[];
-  integrations: string[];
-  apiAvailable: boolean,;
-  mobileApp: boolean,;
-  whiteLabel: boolean,;
-  support: string,;
-  setupTime: string,;
-  technicalSpecs: {;
-    languages: string[];
-    frameworks: string[];
-    databases: string[];
-    cloudProviders: string[];}
-  };
-  pricing: {;
-    monthly: number,;
-    yearly: number,;
-    enterprise: number,;
-    features: string[];}
-  };
+<<<<<<< HEAD
+// Real Micro SAAS Services for Zion Tech Group
+export interface MicroSaasService {
+  id: string,
+  title: string,
+  description: string,
+  shortDescription: string,
+  icon: string,
+  price: string,
+  originalPrice?: string
+  features: string[]
+  benefits: string[]
+  link: string,
+  popular: boolean,
+  category: string,
+  rating: number,
+  users: string,
+  freeTrial: string,
+  marketPrice: string,
+  capabilities: string[]
+  useCases: string[]
+  integrations: string[]
+  apiAvailable: boolean,
+  mobileApp: boolean,
+  whiteLabel: boolean,
+  support: string,
+  setupTime: string,
+  technicalSpecs: {
+    languages: string[]
+    frameworks: string[]
+    databases: string[]
+    cloudProviders: string[]}
+  }
+  pricing: {
+    monthly: number,
+    yearly: number,
+    enterprise: number,
+    features: string[]}
+  }
 }
 export const microSaasServices: MicroSaasService[] = [
   // AI-Powered Productivity Tools;
@@ -879,3 +879,6 @@ export const contactInfo = {;
   website: 'https://ziontechgroup.com',;
   hours: '24/7 Support Available',;}
   timezone: 'EST (Eastern Standard Time)'};
+=======
+export const microSaasServices: MicroSaasService[] = [
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853

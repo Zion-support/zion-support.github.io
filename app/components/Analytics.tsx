@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import React, { useEffect } from 'react';
@@ -15,21 +16,23 @@ const Analytics: React.FC<AnalyticsProps> = ({
 }) => {
   useEffect(() => {
     if (enableGoogleAnalytics) {
-      initializeGoogleAnalytics();
+      initializeGoogleAnalytics()
     }
     if (enablePerformanceMonitoring) {
-      initializePerformanceMonitoring();
+      initializePerformanceMonitoring()
     }
     if (enableErrorTracking) {
-      initializeErrorTracking();
+      initializeErrorTracking()
     }
     if (enableUserBehaviorTracking) {
-      initializeUserBehaviorTracking();
+      initializeUserBehaviorTracking()
     }
   }, [enableGoogleAnalytics, enablePerformanceMonitoring, enableErrorTracking, enableUserBehaviorTracking]);
   const initializeGoogleAnalytics = () => {
     // Load Google Analytics
-    const script = document.createElement('script');
+    ;
+
+const script = document.createElement('script');
     script.async = true;
     script.src = 'https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID';
     document.head.appendChild(script);
@@ -38,9 +41,8 @@ const Analytics: React.FC<AnalyticsProps> = ({
     function gtag(...args: any[]) {;) => {
   return (
     $3
-  );
-};
-      (window as any).dataLayer.push(args);}
+  )}
+      (window as any).dataLayer.push(args)}
     }
     (window as any).gtag = gtag;
     gtag('js', new Date());
@@ -53,12 +55,18 @@ const Analytics: React.FC<AnalyticsProps> = ({
   const initializePerformanceMonitoring = () => {
     if ('PerformanceObserver' in window) {
       // Monitor Core Web Vitals
-      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
+      ;
+
+const observer = new PerformanceObserver((list) => {
+        for (;
+
+const entry of list.getEntries()) {
           if (entry.entryType === 'largest-contentful-paint') {
             trackEvent('web_vitals', 'LCP', Math.round(entry.startTime));
           } else if (entry.entryType === 'first-input') {
-            const fid = (entry as any).processingStart - entry.startTime;
+            ;
+
+const fid = (entry as any).processingStart - entry.startTime;
             trackEvent('web_vitals', 'FID', Math.round(fid));}
           } else if (entry.entryType === 'layout-shift') {;
             if (!(entry as any).hadRecentInput) {;
@@ -74,7 +82,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
         if (navigation) {;
           trackEvent('performance', 'page_load_time', Math.round(navigation.loadEventEnd - navigation.fetchStart));}
         }
-      });
+      })
     }
   };
   const initializeErrorTracking = () => {
@@ -86,16 +94,14 @@ const Analytics: React.FC<AnalyticsProps> = ({
         lineno: event.lineno,
         colno: event.colno,
         error: event.error?.stack
-      });
-    });
-    // Track unhandled promise rejections
+      })
+    })
     window.addEventListener('unhandledrejection', (event) => {
       trackEvent('error', 'unhandled_promise_rejection', {
         reason: event.reason,
         promise: event.promise
-      });
-    });
-    // Track resource loading errors
+      })
+    })
     window.addEventListener('error', (event) => {
       if (event.target !== window) {
         trackEvent('error', 'resource_error', {
@@ -135,7 +141,9 @@ const Analytics: React.FC<AnalyticsProps> = ({
       const target = event.target as HTMLElement;
       const tagName = target.tagName.toLowerCase();
       if (tagName === 'a') {
-        const href = (target as HTMLAnchorElement).href;
+        ;
+
+const href = (target as HTMLAnchorElement).href;
         trackEvent('engagement', 'link_click', {;
           link_url: href,;
           link_text: target.textContent?.trim();}
@@ -163,12 +171,13 @@ const Analytics: React.FC<AnalyticsProps> = ({
         event_category: category,
         event_label: typeof value === 'object' ? JSON.stringify(value) : value,
         value: typeof value === 'number' ? value : undefined
-      });
+      })
     }
-  };
-  return null;
-};
-// Extend Window interface for gtag
+  }
+  ;
+
+return null
+}
 declare global {
   interface Window {
     dataLayer: any[];
@@ -177,12 +186,15 @@ declare global {
 }
 export default Analytics;
 // Analytics Provider for context
-export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+export const AnalyticsProvider: React.FC</AnalyticsProps><{ children: React.ReactNode }> = ({ children }) => {
   return (
-    <React.Fragment>
+    <React.Fragment></React>
       <Analytics />
       {children}
     </React.Fragment>
   );
 };
   </AnalyticsProps>
+=======
+interface AnalyticsProps {
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853

@@ -1,7 +1,5 @@
 #!/usr/bin/env node
-
-import fs from 'fs';
-
+import fs from 'fs'
 function fixFooter() {
   const footerContent = `'use client';
 import React from 'react';
@@ -228,5 +226,4 @@ export default Footer;`;
   fs.writeFileSync('/workspace/app/components/Footer.tsx', footerContent);
   console.log('Fixed Footer component');
 }
-
-fixFooter();
+fixFooter()

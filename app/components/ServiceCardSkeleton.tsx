@@ -1,9 +1,12 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853
 const ServiceCardSkeletonPage: React.FC = () => {
-  const features = [
+const features = [
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
@@ -25,7 +28,7 @@ const ServiceCardSkeletonPage: React.FC = () => {
       description: 'Worldwide deployment and support for international businesses'
     }
   ];
-  const benefits = [
+const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -37,4 +40,7 @@ const ServiceCardSkeletonPage: React.FC = () => {
   ];
   );
 };
+<<<<<<< HEAD
 export default ServiceCardSkeletonPage;
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853

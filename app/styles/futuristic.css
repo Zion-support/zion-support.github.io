@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* Futuristic CSS Styles for Zion Tech Group */
 /* Import accessibility styles */
 @import './accessibility.css';
@@ -368,6 +369,8 @@ body {
   }
 }
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853
 /* Advanced Cyber Effects */
 .cyber-matrix {
   position: relative;
@@ -559,6 +562,7 @@ body {
   .quantum-particle,
   .neural-network-advanced::before,
   .cyber-grid-advanced::before {
+<<<<<<< HEAD
     animation: none;
   }
   
@@ -570,3 +574,8 @@ body {
     transform: none;
   }
 }
+=======
+    animation: none !important;
+  }
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853

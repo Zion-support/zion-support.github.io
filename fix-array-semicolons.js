@@ -1,28 +1,21 @@
-#!/usr/bin/env node;
-import fs from 'fs';
-
-// Function to fix semicolons in arrays;
+#!/usr/bin/env nodeimport fs from 'fs'
 function fixArraySemicolons(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    
-    // Fix semicolons after arrays in object properties;
+    let content = fs.readFileSync(filePath, 'utf8')
     content = content.replace(/:\s*\[[^\]]+\];/g, (match) => {
-      return match.replace(';', '');
+      return match.replace(';', '')
 function fixArraySemicolons(filePath) {/* TODO: Fix JSX expression */}
-    });
-    
-    fs.writeFileSync(filePath, content);
+    })
+    fs.writeFileSync(filePath, content)
     console.log(`Fixed array semicolons)`
-  in: ${filePath}`);
-    return true;
+  in: ${filePath}`)
+    return true
   } catch (error) {/* TODO: Fix JSX expression */}`
-    console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
+    console.error(`Error fixing ${filePath}:`, error.message)
+    return false
   }
 }
-
-// Main function;
+// Main function
 function main() {
 function main() {/* TODO: Fix JSX expression */}
 }
@@ -38,21 +31,18 @@ function main() {/* TODO: Fix JSX expression */}
     'src/security/page.tsx',
     'src/system-status/page.tsx',
     'src/test-page.tsx'
-  ];
-  
-  console.log('Fixing array semicolons...');
-  
-  let fixedCount = 0;
+  ]
+  console.log('Fixing array semicolons...')
+  let fixedCount = 0
   files.forEach(file => {)
     if (fs.existsSync(file)) {
       if (fixArraySemicolons(file)) {
-        fixedCount++;
+        fixedCount++
   files.forEach(file => {/* TODO: Fix JSX expression */}
       }
     })
-  });
+  })
   `
-  console.log(`Fixed ${fixedCount} files`);
+  console.log(`Fixed ${fixedCount} files`)
 }
-
 main();`

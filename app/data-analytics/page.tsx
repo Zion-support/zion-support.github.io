@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -23,6 +24,10 @@ import {;
   PieChart,;
   LineChart;}
 } from 'lucide-react';
+const DataAnalyticsPage: React.FC;
+
+export default DataAnalyticsPage
+=======
 const DataAnalyticsPage: React.FC = () => {
   const features = [
     {
@@ -161,6 +166,7 @@ const DataAnalyticsPage: React.FC = () => {
   );
 };
 export default DataAnalyticsPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853
   </button>
   </button>
   </h2>

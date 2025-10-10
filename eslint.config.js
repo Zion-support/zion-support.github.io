@@ -91,8 +91,7 @@ export default [
     },
     rules: {
       ...tseslint.configs.recommended.rules,
-...reactHooks.configs.recommended.rules,
-
+      ...reactHooks.configs.recommended.rules,
       'react-refresh/only-export-components': [
         'warn',
         { allowConstantExport: true }
@@ -106,4 +105,4 @@ export default [
       'no-unused-vars': 'off'
     }
   }
-];
+]

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -24,6 +25,10 @@ import {;
   Server,;
   Monitor;}
 } from 'lucide-react';
+const CloudInfrastructureManagerPage: React.FC;
+
+export default CloudInfrastructureManagerPage
+=======
 const CloudInfrastructureManagerPage: React.FC = () => {
   const features = [
     {
@@ -162,6 +167,7 @@ const CloudInfrastructureManagerPage: React.FC = () => {
   );
 };
 export default CloudInfrastructureManagerPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853
   </button>
   </button>
   </h2>

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import React, { memo, useState, useEffect } from 'react';
@@ -20,21 +21,26 @@ import {;
   MapPin,;
   Clock;}
 } from 'lucide-react';
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853
 const Sidebar: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
+const [isOpen, setIsOpen] = useState(false);
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['ai-services', 'micro-saas', 'it-services']));
   const location = useLocation();
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 1024) {
-        setIsOpen(false);
+        setIsOpen(false)
       }
     };
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
   const toggleSection = (section: string) => {
-    const newExpanded = new Set(expandedSections);
+<<<<<<< HEAD
+    ;
+
+const newExpanded = new Set(expandedSections);
     if (newExpanded.has(section)) {;) => {
   return (
     $3
@@ -129,8 +135,10 @@ const Sidebar: React.FC = () => {
         { name: 'Status', path: '/status', icon: Settings },
       ]
     }
-  ];
-  const contactInfo = {
+  ]
+  ;
+
+const contactInfo = {
     phone: '(302) 464-0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown, DE 19709',
@@ -138,7 +146,7 @@ const Sidebar: React.FC = () => {
   };
   return (
     <React.Fragment>
-      {/* Mobile Menu Button */}
+      {/* Mobile Menu Button */}</React.Fragment>
       <button;
         onClick={() => setIsOpen(true)}
         className="lg:hidden fixed top-4 left-4 z-50 bg-slate-800/90 backdrop-blur-lg text-white p-3 rounded-lg border border-cyan-400/20 hover:bg-slate-700/90 transition-all"
@@ -151,17 +159,17 @@ const Sidebar: React.FC = () => {
         <div;
           className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden";}
           onClick={() => setIsOpen(false)}
-        />;
+        />
       )}
       {/* Sidebar */}</div>
       <aside className={`fixed top-0 left-0 h-full w-80 bg-slate-900/95 backdrop-blur-lg border-r border-cyan-400/20 z-50 transform transition-transform duration-300 ${
         isOpen ? 'translate-x-0' : '-translate-x-full'
-      } lg:translate-x-0 lg:static lg:z-auto`}>
+      } lg:translate-x-0 lg:static lg:z-auto`}></aside>
         <div className="flex flex-col h-full">
           {/* Header */}</div>
-          <div className="flex items-center justify-between p-6 border-b border-slate-700/50">
+          <div className="flex items-center justify-between p-6 border-b border-slate-700/50"></div>
             <Link to="/" className="flex items-center space-x-3" onClick={() => setIsOpen(false)}>
-              <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-lg flex items-center justify-center">
+              <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-lg flex items-center justify-center"></div>
                 <Brain className="w-6 h-6 text-white" />
               </div>
               <div></div>
@@ -183,64 +191,10 @@ const Sidebar: React.FC = () => {
               {navigationSections.map((section, sectionIndex) => (;}
                 <div key={sectionIndex} className="space-y-1"></div>;
                   <button;
-                    onClick={() => section.key && toggleSection(section.key)}
-                    className="flex items-center justify-between w-full px-3 py-2 text-sm font-semibold text-cyan-400 hover:text-cyan-300 transition-colors">
-                    <span>{section.title}</span>
-                    {section.key && (
-                      expandedSections.has(section.key) ? 
-                        <ChevronDown className="w-4 h-4" /> : 
-                        <ChevronRight className="w-4 h-4" />
-                    )}
-                  </button>
-                  {(!section.key || expandedSections.has(section.key)) && (
-                    <div className="ml-4 space-y-1">
-                      {section.items.map((item, itemIndex) => (</div>
-                        <Link
-                          key={itemIndex}
-                          to={item.path}
-                          onClick={() => setIsOpen(false)}
-                          className={`flex items-center space-x-3 px-3 py-2 rounded-lg text-sm transition-all ${;
-                            location.pathname === item.path;
-                              ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-400/30';
-                              : 'text-gray-300 hover:text-white hover:bg-slate-800/50';}
-                          }`}
-                        >;
-                          <item.icon className="w-4 h-4 flex-shrink-0" />;
-                          <span>{item.name}</span>;
-                        </Link>;
-                      ))}
-                    </div>;
-                  )}
-                </div>;
-              ))}
-            </nav>
-          </div>
-          {/* Contact Info */}
-          <div className="border-t border-slate-700/50 p-6">
-            <h3 className="text-sm font-semibold text-cyan-400 mb-4">Contact Information</h3>
-            <div className="space-y-3 text-sm text-gray-300">
-              <div className="flex items-center space-x-3">
-                <Phone className="w-4 h-4 text-cyan-400 flex-shrink-0" />
-                <span>{contactInfo.phone}</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <Mail className="w-4 h-4 text-cyan-400 flex-shrink-0" />
-                <span className="truncate">{contactInfo.email}</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <MapPin className="w-4 h-4 text-cyan-400 flex-shrink-0" />
-                <span className="text-xs">{contactInfo.address}</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <Clock className="w-4 h-4 text-cyan-400 flex-shrink-0" />
-                <span className="text-xs">{contactInfo.hours}</span>
-              </div>
-          </div>
-      </aside>
-    </React.Fragment>
-  );
-};
-Sidebar.displayName = 'Sidebar';
-export default Sidebar;
+                    onClick;
+
+export default Sidebar
   </div>
-  </string>
+  </string></React.Fragment>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853

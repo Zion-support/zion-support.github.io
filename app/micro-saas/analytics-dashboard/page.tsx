@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { BarChart, TrendingUp, Users, DollarSign, Zap, Target, ArrowRight, CheckCircle, Star, Award, Clock, Shield } from 'lucide-react';
+const AIAnalyticsDashboardPage: React.FC;
+
+export default AIAnalyticsDashboardPage
+=======
 const AIAnalyticsDashboardPage: React.FC = () => {
   const features = [
     {
@@ -195,6 +200,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
   );
 };
 export default AIAnalyticsDashboardPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853
   </button>
   </p>
   </p>

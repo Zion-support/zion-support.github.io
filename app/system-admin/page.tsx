@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
+const PagePage: React.FC;
+
+export default PagePage
+=======
 const PagePage: React.FC = () => {
   const features = [
     {
@@ -99,6 +104,7 @@ const PagePage: React.FC = () => {
   );
 };
 export default PagePage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853
   </button>
   </button>
   </h2>

@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+const MainPage: React.FC;
+
+export default MainPage
+=======
 const MainPage: React.FC = () => {
   const features = [
     {
@@ -140,6 +145,7 @@ const MainPage: React.FC = () => {
   );
 };
 export default MainPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853
   </button>
   </button>
   </h2>

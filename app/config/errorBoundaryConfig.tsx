@@ -2,8 +2,7 @@
  * Error Boundary Configuration
  * Centralized configuration for error handling across the application
  */
-import React from 'react';
-export interface ErrorBoundaryConfig {
+import React from 'react'export interface ErrorBoundaryConfig {
   /**
    * Whether to log errors to console
    */
@@ -19,7 +18,7 @@ export interface ErrorBoundaryConfig {
   /**
    * Error reporting endpoint
    */
-  reportingEndpoint?: string;
+  reportingEndpoint?: string
   /**
    * Whether to show error overlay in development
    */
@@ -31,11 +30,12 @@ export interface ErrorBoundaryConfig {
   /**
    * Custom error messages by error type
    */
-  customMessages: Record<string, string>;
+  customMessages: Record<string, string>
   /**
    * Fallback UI components
    */
   fallbackComponents: {
+<<<<<<< HEAD
     default: React.ComponentType<{ error: Error; resetError: () => void }>;
     network: React.ComponentType<{ error: Error; resetError: () => void }>;
     notFound: React.ComponentType<{ error: Error; resetError: () => void }>;
@@ -44,17 +44,8 @@ export interface ErrorBoundaryConfig {
 /**
  * Default error messages
  */
-const DEFAULT_ERROR_MESSAGES = {
-  default: 'Something went wrong. Please try again.',
-  network: 'Network connection issue. Please check your internet connection.',
-  notFound: 'The requested resource was not found.',
-  timeout: 'Request timed out. Please try again.',
-  serverError: 'Server error occurred. Please try again later.',
-  validation: 'Validation error. Please check your input.',
-};
-/**
- * Get error boundary configuration based on environment
- */
+const DEFAULT_ERROR_MESSAGES;
+
 export function getErrorBoundaryConfig(): ErrorBoundaryConfig {return {
     logErrors: true,
     showDetails: isDevelopment,
@@ -68,7 +59,7 @@ export function getErrorBoundaryConfig(): ErrorBoundaryConfig {return {
       network: NetworkErrorFallback,
       notFound: NotFoundFallback,
     },
-  };
+  }
 }
 /**
  * Default error fallback component
@@ -83,7 +74,7 @@ function DefaultErrorFallback({ error, resetError }: { error: Error; resetError:
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
-          >
+          ></svg>
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -93,7 +84,7 @@ function DefaultErrorFallback({ error, resetError }: { error: Error; resetError:
           </svg>
         </div>
         <h2 className="mt-4 text-2xl font-bold text-center text-gray-900">
-          Oops! Something went wrong;
+          Oops! Something went wrong
   </
         <p className="mt-2 text-center text-gray-600">
           {error.message || 'An unexpected error occurred'}
@@ -101,21 +92,21 @@ function DefaultErrorFallback({ error, resetError }: { error: Error; resetError:
         {process.env['NODE_ENV'] === 'development' && (;}
           <pre className="mt-4 p-4 bg-gray-100 rounded text-xs overflow-auto">{error.stack}</pre>;
         )}
-        <div className="mt-6 flex gap-4"></div>;
-          <button;
+        <div className="mt-6 flex gap-4"></div>
+          <button
             onClick={resetError}
             className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
-            Try Again;
+            Try Again
   </
           <button
             onClick={() => (window.location.href = '/')}
             className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-300 transition-colors">
-            Go Home;
+            Go Home
   </
         </div>
       </div>
     </div>
-  );
+  )
 }
 /**
  * Network error fallback component
@@ -130,7 +121,7 @@ function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => 
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
-          >
+          ></svg>
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -145,46 +136,8 @@ function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => 
         </p>;
         <div className="mt-6"></div>;
           <button;
-            onClick={resetError}
-            className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
-            Retry Connection;
-  </
-        </div>
-      </div>
-    </div>
-  );
-}
-/**
- * Not found error fallback component
- */
-function NotFoundFallback(): JSX.Element {
-  return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4"></div>
-      <div className="max-w-md w-full text-center"></div>
-        <h1 className="text-6xl font-bold text-gray-900">404</h1>
-        <h2 className="mt-4 text-2xl font-bold text-gray-900">Page Not Found</h2>
-        <p className="mt-2 text-gray-600">
-          The page you're looking for doesn't exist or has been moved.
-        </p>
-        <div className="mt-6 flex gap-4 justify-center"></div>
-          <button
-            onClick={() => (window.location.href = '/')}
-            className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors">
-            Go Home;
-  </
-          <button
-            onClick={() => window.history.back()}
-            className="bg-gray-200 text-gray-800 px-6 py-2 rounded-lg hover:bg-gray-300 transition-colors">
-            Go Back;
-  </
-        </div>
-      </div>
-    </div>
-  );
-}
-/**
- * Get error type from error object
- */
+            onClick;
+
 export function getErrorType(error: Error): keyof typeof DEFAULT_ERROR_MESSAGES {
   if (error.message.includes('Network') || error.message.includes('fetch')) {
     return 'network';
@@ -215,9 +168,9 @@ export function formatErrorForLogging(error: Error): Record<string, unknown> {
     timestamp: new Date().toISOString(),
     userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown',
     url: typeof window !== 'undefined' ? window.location.href : 'unknown',
-  };
+  }
 }
-export default getErrorBoundaryConfig;
+export default getErrorBoundaryConfig
   </button>
   </button>
   </button>
@@ -226,3 +179,5 @@ export default getErrorBoundaryConfig;
   </button>
   </h2>
   </path>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853

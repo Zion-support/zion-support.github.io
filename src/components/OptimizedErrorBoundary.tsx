@@ -1,63 +1,62 @@
-'use client';
+'use client'
 interface OptimizedErrorBoundaryProps {
-  children: ReactNode;
-  fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
-  resetOnPropsChange?: boolean;
-  resetKeys?: Array<string | number>;
+  children: ReactNode
+  fallback?: ReactNode
+  onError?: (error: Error, errorInfo: ErrorInfo) => void
+  resetOnPropsChange?: boolean
+  resetKeys?: Array<string | number>
 }
 interface State {
-  hasError: boolean;
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
-  errorId: string;
+  hasError: boolean
+  error: Error | null
+  errorInfo: ErrorInfo | null
+  errorId: string
 }
 class OptimizedErrorBoundary extends Component
   OptimizedErrorBoundaryProps,
   State
 > {
-  private resetTimeoutId: number | null = null;
+  private resetTimeoutId: number | null = null
   constructor(props: OptimizedErrorBoundaryProps) {
-    super(props);
+    super(props)
     this.state = {
       hasError: false,
       error: null,
       errorInfo: null,
       errorId:     ,
-$4};
+$4}
   }
   static getDerivedStateFromError(error: Error): Partial<State> {
     return {
       hasError: true,
       error,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-    };
+    }
   }
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
       errorInfo
-    });
-    // Log error to console in development
+    })
     if (process.env['NODE_ENV'] === 'development') {}
     // Call custom error handler if provided
     if (this.props.onError) {
-      this.props.onError(error, errorInfo);
+      this.props.onError(error, errorInfo)
     }
     // Send error to monitoring service in production
     if (process.env['NODE_ENV'] === 'production') {
-      this.reportError(error, errorInfo);
+      this.reportError(error, errorInfo)
     }
   }
   componentDidUpdate(prevProps: OptimizedErrorBoundaryProps) {
-    const { resetKeys, resetOnPropsChange } = this.props;
-    const { hasError } = this.state;
+    const { resetKeys, resetOnPropsChange } = this.props
+    const { hasError } = this.state
     if (hasError && prevProps.resetKeys !== resetKeys) {
       if (resetKeys && prevProps.resetKeys) {
           (key, index) => key !== prevProps.resetKeys?.[index]
-        );
+        )
         if (hasResetKeyChanged) {
-          this.resetErrorBoundary();
+          this.resetErrorBoundary()
         }
       }
     }
@@ -66,12 +65,12 @@ $4};
       resetOnPropsChange &&
       prevProps.children !== this.props.children
     ) {
-      this.resetErrorBoundary();
+      this.resetErrorBoundary()
     }
   }
   componentWillUnmount() {
     if (this.resetTimeoutId) {
-      clearTimeout(this.resetTimeoutId);
+      clearTimeout(this.resetTimeoutId)
     }
   }
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
@@ -83,9 +82,9 @@ $4};
             command: string,
             action: string,
             parameters: Record<string, unknown>
-          ) => void;
+          ) => void
         }
-      ).gtag;
+      ).gtag
       gtag('event', 'exception', {
         description: error.message,
         fatal: false,
@@ -93,12 +92,12 @@ $4};
           error_id: this.state.errorId,
           component_stack: errorInfo.componentStack
         }
-      });
+      })
     }
-  };
+  }
   private resetErrorBoundary = () => {
     if (this.resetTimeoutId) {
-      clearTimeout(this.resetTimeoutId);
+      clearTimeout(this.resetTimeoutId)
     }
     this.resetTimeoutId = window.setTimeout(() => {
       this.setState({
@@ -106,16 +105,14 @@ $4};
         error: null,
         errorInfo: null,
         errorId:       ,
-$4});
-    }, 100);
-  };
+$4})
+    }, 100)}
   private handleRetry = () => {
-    this.resetErrorBoundary();
-  };
+    this.resetErrorBoundary()}
   render() {
     if (this.state.hasError) {
       if (this.props.fallback) {
-        return this.props.fallback;
+        return this.props.fallback
       }
       return (
         <ErrorFallback
@@ -124,16 +121,16 @@ $4});
           errorId={this.state.errorId}
           onRetry={this.handleRetry}
         />
-      );
+      )
     }
-    return this.props.children;
+    return this.props.children
   }
 }
 interface ErrorFallbackProps {
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
-  errorId: string;
-  onRetry: () => void;
+  error: Error | null
+  errorInfo: ErrorInfo | null
+  errorId: string
+  onRetry: () => void
 }
 const ErrorFallback = memo<ErrorFallbackProps>(
   ({ error, errorInfo, errorId, onRetry }) => (
@@ -228,8 +225,8 @@ const ErrorFallback = memo<ErrorFallbackProps>(
       </div>
     </div>
   )
-);
-ErrorFallback.displayName = 'ErrorFallback';
+)
+ErrorFallback.displayName = 'ErrorFallback'
             className='px-4 py-2 bg-gray-600 text-white rounded-md,
   hover:bg-gray-700,
   focus:outline-none,
@@ -246,7 +243,7 @@ ErrorFallback.displayName = 'ErrorFallback';
       </div>
     </div>
 //   )
-);
+)
 ErrorFallback.displayName = 'ErrorFallback'</h1>
   </path>
   </ErrorFallbackProps>

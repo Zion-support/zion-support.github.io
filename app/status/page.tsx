@@ -1,13 +1,17 @@
+<<<<<<< HEAD
 'use client';
 import React, { useState, useEffect } from 'react';
 import { CheckCircle, XCircle, AlertTriangle, Clock, RefreshCw, Globe, Server, Database, Cloud, Shield, Zap, Activity, TrendingUp, Users, Eye, BarChart } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853
 export default function StatusPage() {
   const [lastUpdated, setLastUpdated] = useState(new Date());
   const [isRefreshing, setIsRefreshing] = useState(false);
   const refreshStatus = async () => {
+<<<<<<< HEAD
     setIsRefreshing(true);
     // Simulate API call;
     await new Promise(resolve => setTimeout(resolve, 1000));
@@ -64,7 +68,7 @@ export default function StatusPage() {
       description: 'System monitoring and alerts'
     }
   ];
-  const incidents = [
+const incidents = [
     {
       id: 1,
       title: 'API Response Time Degradation',
@@ -86,67 +90,93 @@ export default function StatusPage() {
       affectedServices: ['Database', 'API Services']
     }
   ];
-  const getStatusIcon = (status: string) => {
+
+const getStatusIcon  = () => {
     switch (status) {
       case 'operational':
-        return <CheckCircle className="w-5 h-5 text-green-400" />;
+        ;
+
+return <CheckCircle className="w-5 h-5 text-green-400" />;
       case 'degraded':;
-        return <AlertTriangle className="w-5 h-5 text-yellow-400" />;
+        return</CheckCircle> <AlertTriangle className="w-5 h-5 text-yellow-400" />;
       case 'outage':;
-        return <XCircle className="w-5 h-5 text-red-400" />;
+        return</AlertTriangle> <XCircle className="w-5 h-5 text-red-400" />;
       default:
-        return <Clock className="w-5 h-5 text-gray-400" />;
+        return</XCircle> <Clock className="w-5 h-5 text-gray-400" />;
     }
   };
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'operational':
-        return 'text-green-400';
+        ;
+
+return 'text-green-400';
       case 'degraded':
-        return 'text-yellow-400';
+        return</Clock> <AlertTriangle className="w-5 h-5 text-yellow-400" />
       case 'outage':
-        return 'text-red-400';
+        ;
+
+return</AlertTriangle> <XCircle className="w-5 h-5 text-red-400" />
       default:
-        return 'text-gray-400';
+        ;
+
+return</XCircle> <Clock className="w-5 h-5 text-gray-400" />
     }
   };
-  const getSeverityColor = (severity: string) => {
+
+const getStatusColor  = () => {
+    switch (status) {
+      case 'operational':
+        ;
+
+return 'text-green-400'
+      case 'degraded':
+        return 'text-yellow-400'
+      case 'outage':
+        return 'text-red-400'
+      default:
+        return 'text-gray-400'
+    }
+  };
+
+const getSeverityColor  = () => {
     switch (severity) {
       case 'critical':
-        return 'bg-red-500/20 text-red-400 border-red-500/50';
+        ;
+
+return 'bg-red-500/20 text-red-400 border-red-500/50'
       case 'major':
-        return 'bg-orange-500/20 text-orange-400 border-orange-500/50';
+        return 'bg-orange-500/20 text-orange-400 border-orange-500/50'
       case 'minor':
-        return 'bg-yellow-500/20 text-yellow-400 border-yellow-500/50';
+        return 'bg-yellow-500/20 text-yellow-400 border-yellow-500/50'
       default:
-        return 'bg-gray-500/20 text-gray-400 border-gray-500/50';
+        return 'bg-gray-500/20 text-gray-400 border-gray-500/50'
     }
-  };
+  }
   const overallStatus = services.every(service => service.status === 'operational') 
     ? 'operational' 
     : services.some(service => service.status === 'outage') 
       ? 'outage' 
-      : 'degraded';
-  return (
-          </h1>
+      : 'degraded'return (
+          </Clock>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
             Real-time status of all our services. We're committed to providing reliable, 
             high-performance AI and IT solutions.
           </p>
-          <div className="flex items-center justify-center gap-4 mb-8">
+          <div className="flex items-center justify-center gap-4 mb-8"></div>
             <div className="flex items-center gap-2">
-              {getStatusIcon(overallStatus)}
+              {getStatusIcon(overallStatus)}</div>
               <span className={`text-2xl font-bold ${getStatusColor(overallStatus)}`}>;
                 {overallStatus === 'operational' ? 'All Systems Operational' :;}
                  overallStatus === 'degraded' ? 'Degraded Performance' : 'Service Outage'}
-              </span>;
-            </div>;
-            <button;
+              </span>
+            </div>
+            <button
               onClick={refreshStatus}
               disabled={isRefreshing}
-              className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors disabled:opacity-50">
+              className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors disabled:opacity-50"></button>
               <RefreshCw className={`w-5 h-5 ${isRefreshing ? 'animate-spin' : ''}`} />
-              Refresh;
+              Refresh
   </
           </div>
           <p className="text-gray-400 text-sm">
@@ -164,23 +194,23 @@ export default function StatusPage() {
                 <div className="flex items-center justify-between mb-4"></div>;
                   <div className="flex items-center gap-3"></div>;
                     {getStatusIcon(service.status)}
-                    <h3 className="text-lg font-semibold text-white">{service.name}</h3>;
-                  </div>;
-                  <span className={`px-3 py-1 rounded-full text-sm font-medium ${getStatusColor(service.status)}`}>;
+                    <h3 className="text-lg font-semibold text-white">{service.name}</h3>
+                  </div>
+                  <span className={`px-3 py-1 rounded-full text-sm font-medium ${getStatusColor(service.status)}`}>
                     {service.status}
                   </span>
                 </div>
                 <p className="text-gray-300 text-sm mb-4">{service.description}</p>
-                <div className="space-y-2 text-sm">
-                  <div className="flex justify-between">
+                <div className="space-y-2 text-sm"></div>
+                  <div className="flex justify-between"></div>
                     <span className="text-gray-400">Uptime:</span>
                     <span className="text-white">{service.uptime}</span>
                   </div>
-                  <div className="flex justify-between">
+                  <div className="flex justify-between"></div>
                     <span className="text-gray-400">Response Time:</span>
                     <span className="text-white">{service.responseTime}</span>
                   </div>
-                  <div className="flex justify-between">
+                  <div className="flex justify-between"></div>
                     <span className="text-gray-400">Last Incident:</span>
                     <span className="text-white">{service.lastIncident}</span>
                   </div>
@@ -208,18 +238,18 @@ export default function StatusPage() {
                   <div className="flex items-center gap-2"></div>;
                     <span className={`px-3 py-1 rounded-full text-sm font-medium border ${getSeverityColor(incident.severity)}`}>;
                       {incident.severity}
-                    </span>;
-                    <span className={`px-3 py-1 rounded-full text-sm font-medium ${;
-                      incident.status === 'resolved';
-                        ? 'bg-green-500/20 text-green-400';
-                        : 'bg-yellow-500/20 text-yellow-400';}
-                    }`}>;
+                    </span>
+                    <span className={`px-3 py-1 rounded-full text-sm font-medium ${
+                      incident.status === 'resolved'
+                        ? 'bg-green-500/20 text-green-400'
+                        : 'bg-yellow-500/20 text-yellow-400'}
+                    }`}>
                       {incident.status}
                     </span>
                   </div>
                 </div>
                 <p className="text-gray-300 mb-4">{incident.description}</p>
-                <div>
+                <div></div>
                   <span className="text-gray-400 text-sm">Affected Services: </span>
                   <span className="text-white text-sm">{incident.affectedServices.join(', ')}</span>
                 </div>
@@ -229,35 +259,35 @@ export default function StatusPage() {
         </div>
       </section>
       {/* Performance Metrics */}
-      <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-16 px-4"></section>
+        <div className="max-w-7xl mx-auto"></div>
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Performance Metrics</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center">
-              <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-green-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center"></div>
+              <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-green-600 rounded-lg flex items-center justify-center mx-auto mb-4"></div>
                 <TrendingUp className="w-6 h-6 text-white" />
-              </div>
+              </TrendingUp>
               <div className="text-3xl font-bold text-white mb-2">99.9%</div>
               <div className="text-gray-400">Overall Uptime</div>
             </div>
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center">
-              <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center"></div>
+              <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4"></div>
                 <Zap className="w-6 h-6 text-white" />
-              </div>
+              </Zap>
               <div className="text-3xl font-bold text-white mb-2">45ms</div>
               <div className="text-gray-400">Avg Response Time</div>
             </div>
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center">
-              <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center"></div>
+              <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4"></div>
                 <Users className="w-6 h-6 text-white" />
-              </div>
+              </Users>
               <div className="text-3xl font-bold text-white mb-2">50K+</div>
               <div className="text-gray-400">Active Users</div>
             </div>
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center">
-              <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-orange-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center"></div>
+              <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-orange-600 rounded-lg flex items-center justify-center mx-auto mb-4"></div>
                 <Activity className="w-6 h-6 text-white" />
-              </div>
+              </Activity>
               <div className="text-3xl font-bold text-white mb-2">1.2M</div>
               <div className="text-gray-400">Requests Today</div>
             </div>
@@ -265,28 +295,30 @@ export default function StatusPage() {
         </div>
       </section>
       {/* CTA Section */}
-      <section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-blue-700">
-        <div className="max-w-4xl mx-auto text-center">
+      <section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-blue-700"></section>
+        <div className="max-w-4xl mx-auto text-center"></div>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Need More Information?
           </h2>
           <p className="text-xl text-purple-100 mb-8">
             Subscribe to status updates or contact our support team for more details.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <button className="bg-white text-purple-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors">
-              Subscribe to Updates;
+              Subscribe to Updates
   </
             <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-purple-600 transition-colors">
-              Contact Support;
+              Contact Support
   </
           </div>
         </div>
       </section>
       <Footer />
-    </div>
-  );
+    </Footer>
+  )
 }
   </button>
   </button>
   </button>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853

@@ -1,207 +1,113 @@
-'use client';
-import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
 import { Cloud, Shield, Settings, Database, Smartphone, Globe, Zap, ArrowRight } from 'lucide-react';
+<<<<<<< HEAD
+=======
+import { Cloud, Shield, Settings, Database, Smartphone, Globe, Zap, ArrowRight, CheckCircle, Star, Users, Clock } from 'lucide-react';
+
+>>>>>>> cursor/analyze-improve-and-deploy-application-e765
 const ItServicesPage: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const itServices = [
     {
       id: 1,
-      title: 'Cloud Infrastructure & Migration',
-      description: 'Complete cloud solutions including AWS, Azure, and GCP with seamless migration services.',
-      icon: Cloud,
+      title: 'Cloud Infrastructure',
+      description: 'Scalable and secure cloud solutions with AWS, Azure, and GCP',
       category: 'Cloud',
+      icon: Cloud,
       features: [
-        'Cloud architecture design',
-        'Multi-cloud strategies',
-        'Cost optimization',
+        'Cloud migration and setup',
+        'Auto-scaling capabilities',
+        'Load balancing',
         'Disaster recovery',
-        'Auto-scaling solutions',
-        'Security compliance'
+        'Cost optimization',
+        '24/7 monitoring'
       ],
-      price: 'Starting at $2,500/month',
-      marketPrice: '$4000-15000/month',
-      benefits: ['99.9% uptime guarantee', 'Cost reduction up to 40%', 'Scalable infrastructure', 'Expert migration support']
+      price: 'Starting at $999/month',
+      popular: true
     },
     {
       id: 2,
       title: 'Cybersecurity Solutions',
-      description: 'Comprehensive security services including threat detection, compliance, and incident response.',
-      icon: Shield,
+      description: 'Comprehensive security solutions to protect your digital assets',
       category: 'Security',
+      icon: Shield,
       features: [
-        'Threat detection & response',
+        'Threat detection and prevention',
         'Vulnerability assessments',
-        'Penetration testing',
-        'Security monitoring',
         'Compliance management',
-        'Employee training'
+        'Incident response',
+        'Security training',
+        'Regular security audits'
       ],
-      price: 'Starting at $1,800/month',
-      marketPrice: '$3000-12000/month',
-      benefits: ['24/7 security monitoring', 'Reduced security incidents', 'Compliance assurance', 'Expert security team']
+      price: 'Starting at $799/month',
+      popular: false
     },
     {
       id: 3,
-      title: 'DevOps & CI/CD',
-      description: 'Modern development operations with automated deployment, monitoring, and infrastructure as code.',
-      icon: Settings,
-      category: 'DevOps',
+      title: 'Database Management',
+      description: 'Expert database design, optimization, and maintenance',
+      category: 'Database',
+      icon: Database,
       features: [
-        'CI/CD pipeline setup',
-        'Infrastructure as Code',
-        'Container orchestration',
-        'Monitoring & logging',
-        'Automated testing',
-        'Deployment automation'
+        'Database design and architecture',
+        'Performance optimization',
+        'Data migration',
+        'Backup and recovery',
+        'Security implementation',
+        'Monitoring and maintenance'
       ],
-      price: 'Starting at $2,200/month',
-      marketPrice: '$3500-10000/month',
-      benefits: ['Faster deployments', 'Reduced downtime', 'Improved code quality', 'Automated workflows']
+      price: 'Starting at $599/month',
+      popular: false
     },
     {
       id: 4,
-      title: 'Database Management',
-      description: 'Expert database design, optimization, and management for all major database systems.',
-      icon: Database,
-      category: 'Database',
+      title: 'Mobile App Development',
+      description: 'Native and cross-platform mobile applications',
+      category: 'Development',
+      icon: Smartphone,
       features: [
-        'Database design & optimization',
-        'Performance tuning',
-        'Backup & recovery',
-        'Data migration',
-        'Security hardening',
-        'Monitoring & maintenance'
+        'iOS and Android development',
+        'Cross-platform solutions',
+        'UI/UX design',
+        'App store optimization',
+        'Performance optimization',
+        'Ongoing support and updates'
       ],
-      price: 'Starting at $1,200/month',
-      marketPrice: '$2000-8000/month',
-      benefits: ['Improved performance', 'Data security', 'Automated backups', 'Expert DBA support']
+      price: 'Starting at $2,000/month',
+      popular: true
     },
     {
       id: 5,
-      title: 'IT Infrastructure Management',
-      description: 'Complete infrastructure setup and management including servers, networks, and hardware.',
-      icon: Server,
-      category: 'Infrastructure',
+      title: 'Web Development',
+      description: 'Modern, responsive web applications and websites',
+      category: 'Development',
+      icon: Globe,
       features: [
-        'Server setup & configuration',
-        'Network design & implementation',
-        'Hardware procurement',
-        'System administration',
-        'Performance monitoring',
-        'Capacity planning'
+        'Responsive web design',
+        'E-commerce solutions',
+        'Content management systems',
+        'API development',
+        'Performance optimization',
+        'SEO optimization'
       ],
       price: 'Starting at $1,500/month',
-      marketPrice: '$2500-10000/month',
-      benefits: ['Reliable infrastructure', 'Proactive monitoring', 'Cost optimization', 'Expert administration']
+      popular: false
     },
     {
       id: 6,
-      title: 'Managed IT Services',
-      description: 'Comprehensive IT support and management including helpdesk, maintenance, and monitoring.',
-      icon: Headphones,
-      category: 'Support',
-      features: [
-        '24/7 helpdesk support',
-        'Remote monitoring',
-        'Proactive maintenance',
-        'Software management',
-        'User support',
-        'Incident management'
-      ],
-      price: 'Starting at $800/month',
-      marketPrice: '$1200-5000/month',
-      benefits: ['Reduced IT costs', 'Improved uptime', 'Expert support', 'Proactive maintenance']
-    },
-    {
-      id: 7,
-      title: 'Web Development',
-      description: 'Custom web applications and websites built with modern technologies and best practices.',
-      icon: Globe,
-      category: 'Development',
-      features: [
-        'Custom web applications',
-        'Responsive design',
-        'E-commerce solutions',
-        'API development',
-        'Performance optimization',
-        'Security implementation'
-      ],
-      price: 'Starting at $5,000/project',
-      marketPrice: '$8000-50000/project',
-      benefits: ['Modern technology stack', 'Mobile-responsive design', 'SEO optimization', 'Security best practices']
-    },
-    {
-      id: 8,
-      title: 'Mobile App Development',
-      description: 'Native and cross-platform mobile applications for iOS and Android with modern UI/UX.',
-      icon: Smartphone,
-      category: 'Development',
-      features: [
-        'iOS & Android apps',
-        'Cross-platform development',
-        'UI/UX design',
-        'App store optimization',
-        'Push notifications',
-        'Offline capabilities'
-      ],
-      price: 'Starting at $8,000/project',
-      marketPrice: '$15000-100000/project',
-      benefits: ['Native performance', 'Cross-platform compatibility', 'Modern UI/UX', 'App store optimization']
-    },
-    {
-      id: 9,
-      title: 'Data Analytics & BI',
-      description: 'Business intelligence solutions with data visualization, reporting, and analytics.',
-      icon: BarChart3,
-      category: 'Analytics',
-      features: [
-        'Data visualization',
-        'Business intelligence',
-        'Custom dashboards',
-        'Data warehousing',
-        'Predictive analytics',
-        'Report automation'
-      ],
-      price: 'Starting at $1,800/month',
-      marketPrice: '$3000-15000/month',
-      benefits: ['Data-driven insights', 'Custom dashboards', 'Automated reporting', 'Predictive analytics']
-    },
-    {
-      id: 10,
-      title: 'Network Solutions',
-      description: 'Complete network design, implementation, and management including LAN, WAN, and wireless.',
-      icon: Network,
-      category: 'Networking',
-      features: [
-        'Network design & implementation',
-        'Wireless solutions',
-        'VPN setup',
-        'Network security',
-        'Performance optimization',
-        'Monitoring & maintenance'
-      ],
-      price: 'Starting at $1,000/month',
-      marketPrice: '$1500-6000/month',
-      benefits: ['Reliable connectivity', 'Enhanced security', 'Performance optimization', 'Expert management']
-    },
-    {
-      id: 11,
       title: 'IT Consulting',
-      description: 'Strategic IT consulting to help plan, implement, and optimize your technology infrastructure.',
-      icon: Users,
+      description: 'Strategic IT guidance and technology roadmaps',
       category: 'Consulting',
+      icon: Settings,
       features: [
-        'IT strategy planning',
-        'Technology assessment',
+        'Technology strategy',
         'Digital transformation',
+        'Process optimization',
         'Vendor management',
         'Project management',
-        'Change management'
+        'Training and support'
       ],
+<<<<<<< HEAD
       price: 'Starting at $200/hour',
       marketPrice: '$300-500/hour',
       benefits: ['Strategic guidance', 'Technology expertise', 'Cost optimization', 'Digital transformation']
@@ -352,24 +258,56 @@ const ItServicesPage: React.FC = () => {
 
   const filteredServices = itServices.filter(service => {
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    return matchesSearch && matchesCategory;
-  });
-
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase())
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory
+    return matchesSearch && matchesCategory
+  })
   const stats = [
     { icon: <Server className="w-8 h-8 text-cyan-500" />, value: '500+', label: 'Servers Managed' },
     { icon: <Shield className="w-8 h-8 text-green-500" />, value: '99.9%', label: 'Security Uptime' },
     { icon: <Users className="w-8 h-8 text-purple-500" />, value: '200+', label: 'Clients Served' },
     { icon: <Zap className="w-8 h-8 text-orange-500" />, value: '50%', label: 'Cost Reduction' }
+=======
+      price: '$299/hour',
+      popular: false
+    }
   ];
+
+  const categories = [
+    { id: 'all', name: 'All Services' },
+    { id: 'Cloud', name: 'Cloud' },
+    { id: 'Security', name: 'Security' },
+    { id: 'Database', name: 'Database' },
+    { id: 'Development', name: 'Development' },
+    { id: 'Consulting', name: 'Consulting' }
+>>>>>>> cursor/analyze-improve-and-deploy-application-e765
+  ];
+
+  const benefits = [
+    'Expert team with 10+ years experience',
+    '24/7 technical support',
+    'Scalable solutions that grow with your business',
+    'Cutting-edge technology and best practices',
+    'Competitive pricing and flexible plans',
+    'Proven track record of successful implementations'
+  ];
+
+  const filteredServices = selectedCategory === 'all' 
+    ? itServices 
+    : itServices.filter(service => service.category === selectedCategory);
+
   return (
+<<<<<<< HEAD
     <React.Fragment>
+=======
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+>>>>>>> cursor/analyze-improve-and-deploy-application-e765
       <Helmet>
-        <title>IT Services - Zion Tech Group | Comprehensive Information Technology Solutions</title>
-        <meta name="description" content="Complete IT services including cloud solutions, cybersecurity, infrastructure management, DevOps, and more. Expert IT support and consulting for modern businesses." />
-        <meta name="keywords" content="IT services, cloud solutions, cybersecurity, IT infrastructure, managed IT, IT consulting, DevOps, database management, web development" />
+        <title>IT Services | Zion Tech Group</title>
+        <meta name="description" content="Comprehensive IT services including cloud infrastructure, cybersecurity, database management, and custom development solutions." />
+        <meta name="keywords" content="IT services, cloud computing, cybersecurity, database management, web development, mobile development" />
       </Helmet>
+<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
@@ -379,22 +317,138 @@ const ItServicesPage: React.FC = () => {
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Complete IT solutions to modernize your infrastructure, enhance security, and drive business growth. 
               From cloud migration to cybersecurity, we deliver enterprise-grade technology services.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                to="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
-              >
-                Get Started
-              </Link>
-              <Link 
-                to="/consultation"
-                className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300"
-              >
-                Free Consultation
-              </Link>
+=======
+
+      {/* Hero Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            IT <span className="text-cyan-400">Services</span>
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Comprehensive IT solutions designed to modernize your infrastructure, 
+            enhance security, and drive business growth.
+          </p>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Why Choose Our IT Services?</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="space-y-4">
+              {benefits.slice(0, 3).map((benefit, index) => (
+                <div key={index} className="flex items-center">
+                  <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
+                  <span className="text-gray-300">{benefit}</span>
+                </div>
+              ))}
+            </div>
+            <div className="space-y-4">
+              {benefits.slice(3).map((benefit, index) => (
+                <div key={index} className="flex items-center">
+                  <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
+                  <span className="text-gray-300">{benefit}</span>
+                </div>
+              ))}
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Our IT Services</h2>
+          
+          {/* Category Filter */}
+          <div className="flex flex-wrap justify-center gap-4 mb-12">
+            {categories.map((category) => (
+              <button
+                key={category.id}
+                onClick={() => setSelectedCategory(category.id)}
+                className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
+                  selectedCategory === category.id
+                    ? 'bg-cyan-500 text-white'
+                    : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
+                }`}
+              >
+                {category.name}
+              </button>
+            ))}
+          </div>
+
+          {/* Services Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredServices.map((service) => (
+              <div key={service.id} className={`bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border transition-all duration-300 hover:scale-105 ${
+                service.popular
+                  ? 'border-cyan-500 shadow-2xl shadow-cyan-500/20'
+                  : 'border-slate-700 hover:border-slate-600'
+              }`}>
+                {service.popular && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <div className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white text-sm font-bold px-4 py-2 rounded-full flex items-center">
+                      <Star className="w-4 h-4 mr-1" />
+                      Most Popular
+                    </div>
+                  </div>
+                )}
+
+                <div className="text-center mb-6">
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                    <service.icon className="w-8 h-8 text-slate-900" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-white mb-2">{service.title}</h3>
+                  <p className="text-gray-300 mb-4">{service.description}</p>
+                  <div className="text-2xl font-bold text-cyan-400 mb-6">{service.price}</div>
+                </div>
+
+                <ul className="space-y-3 mb-8">
+                  {service.features.map((feature, index) => (
+                    <li key={index} className="flex items-center text-gray-300">
+                      <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+
+                <button className={`w-full py-4 px-6 rounded-lg font-bold text-lg transition-all duration-300 ${
+                  service.popular
+                    ? 'bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white'
+                    : 'bg-slate-700 hover:bg-slate-600 text-white border border-slate-600'
+                }`}>
+                  Learn More
+                </button>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="bg-slate-800/50 backdrop-blur-sm rounded-3xl p-12 border border-slate-700">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Transform Your IT Infrastructure?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Let our expert team help you modernize your IT infrastructure and 
+              secure your business for the future.
+>>>>>>> cursor/analyze-improve-and-deploy-application-e765
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                Get Started
+              </button>
+              <button className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                Schedule Consultation
+              </button>
+            </div>
+          </div>
+<<<<<<< HEAD
         </section>
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
@@ -466,6 +520,14 @@ const ItServicesPage: React.FC = () => {
         </section>
       </div>
     </React.Fragment>
+=======
+        </div>
+      </section>
+    </div>
+>>>>>>> cursor/analyze-improve-and-deploy-application-e765
   );
 };
+
 export default ItServicesPage;
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853

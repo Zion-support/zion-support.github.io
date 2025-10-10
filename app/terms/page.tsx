@@ -1,6 +1,9 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { FileText, Scale, Shield, AlertTriangle, CheckCircle, ArrowRight, Globe, User, Mail, Phone, Calendar, Lock, Database, Server, Key } from 'lucide-react';
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853
 export default function TermsPage() {
   const lastUpdated = 'January 1, 2024';
   const sections = [
@@ -42,10 +45,12 @@ export default function TermsPage() {
     {
       title: 'Governing Law',
       icon: Scale,
-      content: 'These terms shall be governed by and construed in accordance with the laws of the United States.'
+      content: 'These terms shall be governed by and ;
+
+construed in accordance with the laws of the United States.'
     }
   ];
-  return (
+return (
     <div className="min-h-screen bg-white"></div>
       <div className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20"></div>
         <div className="container mx-auto px-4 text-center"></div>
@@ -53,12 +58,12 @@ export default function TermsPage() {
             Terms of Service</h1>
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-            Please read these terms carefully before using our services;
+            Please read these terms carefully before using our services
   </
           <div className="flex items-center justify-center text-sm text-blue-200"></div>
             <Calendar className="h-4 w-4 mr-2" />
             Last updated: {lastUpdated}
-          </div>
+          </Calendar>
         </div>
       </div>
       <div className="py-20"></div>
@@ -70,17 +75,18 @@ export default function TermsPage() {
                   <div className="flex items-start"></div>
                     <div className="flex-shrink-0 mr-4"></div>
                       <section.icon className="h-6 w-6 text-blue-600" />
-                    </div>
+                    </section>
                     <div></div>
                       <h2 className="text-2xl font-bold text-gray-900 mb-3">
+<<<<<<< HEAD
                         {index + 1}. {section.title}
                       </h2>;
                       <p className="text-gray-700 leading-relaxed">;
                         {section.content}
-                      </p>;
-                    </div>;
-                  </div>;
-                </div>;
+                      </p>
+                    </div>
+                  </div>
+                </div>
               ))}
             </div>
             <div className="mt-16 bg-gray-50 rounded-lg p-8"></div>
@@ -90,19 +96,19 @@ export default function TermsPage() {
               </p>
               <div className="grid md:grid-cols-2 gap-6"></div>
                 <div className="flex items-center"></div>
-                  <Mail className="h-5 w-5 text-blue-600 mr-3" />
+                  <Mail className="h-5 w-5 text-blue-600 mr-3" /></Mail>
                   <span className="text-gray-700">legal@ziontechgroup.com</span>
                 </div>
                 <div className="flex items-center"></div>
-                  <Phone className="h-5 w-5 text-blue-600 mr-3" />
+                  <Phone className="h-5 w-5 text-blue-600 mr-3" /></Phone>
                   <span className="text-gray-700">(302) 464-0950</span>
                 </div>
                 <div className="flex items-center"></div>
-                  <Globe className="h-5 w-5 text-blue-600 mr-3" />
+                  <Globe className="h-5 w-5 text-blue-600 mr-3" /></Globe>
                   <span className="text-gray-700">ziontechgroup.com</span>
                 </div>
                 <div className="flex items-center"></div>
-                  <User className="h-5 w-5 text-blue-600 mr-3" />
+                  <User className="h-5 w-5 text-blue-600 mr-3" /></User>
                   <span className="text-gray-700">Zion Tech Group Legal Team</span>
                 </div>
               </div>
@@ -116,6 +122,8 @@ export default function TermsPage() {
         </div>
       </div>
     </div>
-  );
+  )
 }
   </p>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853

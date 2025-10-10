@@ -1,12 +1,15 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853
 const PagePage: React.FC = () => {
-  const features = [
+const features = [
     {
   ];
-  const benefits = [
+const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -16,7 +19,7 @@ const PagePage: React.FC = () => {
     'Cost-effective pricing plans',
     'Proven track record of success'
   ];
-  return (
+return (
           </div>
         </div>
       </section>
@@ -38,4 +41,7 @@ const PagePage: React.FC = () => {
     </div>
   );
 };
+<<<<<<< HEAD
 export default PagePage;
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853

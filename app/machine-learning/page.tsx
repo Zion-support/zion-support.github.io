@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
   ];
+  const benefits;
+
+export default PagePage
+=======
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -60,5 +65,6 @@ import React from 'react';
   );
 };
 export default PagePage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853
   </button>
   </button>

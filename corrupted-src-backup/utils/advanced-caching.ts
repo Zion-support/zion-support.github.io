@@ -1,6 +1,4 @@
 const cacheSystem = {
   loadFromStorage: () => {,
 const cacheSystem = {/* TODO: Fix JSX expression */}
-    //     }};
-
-export default cacheSystem;
+    //     }}export default cacheSystem

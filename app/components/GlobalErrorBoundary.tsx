@@ -1,5 +1,10 @@
+<<<<<<< HEAD
     }
   ];
+  const benefits;
+
+export default GlobalErrorBoundaryPage
+=======
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -89,6 +94,7 @@
   );
 };
 export default GlobalErrorBoundaryPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853
   </button>
   </button>
   </h2>

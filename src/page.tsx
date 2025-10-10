@@ -1,7 +1,5 @@
-'use client';
-import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
-import { 
-  Phone, 
+'use client'import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react'
+import { Phone, 
   Mail, 
   MapPin, 
   Clock, 
@@ -104,60 +102,48 @@ import {
   Analytics, 
   Reporting, 
   Dashboard 
-} from 'lucide-react';
-import Navigation from './components/Navigation';
-import Footer from './components/Footer';
-import PerformanceOptimizer from './components/PerformanceOptimizer';
-import SEOOptimizer from './components/SEOOptimizer';
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-import Analytics from './components/Analytics';
-import SecurityEnhancer from './components/SecurityEnhancer';
-import { initializePerformanceOptimizations } from './utils/performanceOptimizations';
-// Dynamically import heavy components for better performance
-const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
-const ContentCarousel = lazy(() => import('./components/ContentCarousel'));
-const DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase'));
-const ContentStatistics = lazy(() => import('./components/ContentStatistics'));
-const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'));
-// Preload critical components
+ } from 'lucide-react'import Navigation from './components/Navigation'
+import Footer from './components/Footer'import PerformanceOptimizer from './components/PerformanceOptimizer'
+import SEOOptimizer from './components/SEOOptimizer'import AccessibilityEnhancer from './components/AccessibilityEnhancer'
+import Analytics from './components/Analytics'import SecurityEnhancer from './components/SecurityEnhancer'
+import { initializePerformanceOptimizations  } from './utils/performanceOptimizations'
+const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'))
+const ContentCarousel = lazy(() => import('./components/ContentCarousel'))
+const DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase'))
+const ContentStatistics = lazy(() => import('./components/ContentStatistics'))
+const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'))
 const preloadComponents = () => {
   if (typeof window !== 'undefined') {
     setTimeout(() => {
-      import('./components/ContentPromotionBanner');
-      import('./components/ContentCarousel');
-    }, 100);
+      import('./components/ContentPromotionBanner')
+      import('./components/ContentCarousel')
+    }, 100)
   }
-};
-// Loading skeleton component
+}
 const ServiceCardSkeleton: React.FC = memo(() => (
   <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card">
     <div className="h-8 bg-gray-200 rounded mb-4 w-3/4"></div>
     <div className="h-4 bg-gray-200 rounded mb-2"></div>
     <div className="h-4 bg-gray-200 rounded w-5/6"></div>
   </div>
-));
-ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
-const HomePage: React.FC = () => {
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
+))
+ServiceCardSkeleton.displayName = 'ServiceCardSkeleton'const HomePage: React.FC  = () => {
+  const [isLoaded, setIsLoaded] = useState(false)
+  const [isVisible, setIsVisible] = useState(false)
   useEffect(() => {
-    setIsLoaded(true);
-    const timer = setTimeout(() => setIsVisible(true), 100);
-    preloadComponents();
-    // Initialize performance optimizations
-    initializePerformanceOptimizations();
-    return () => clearTimeout(timer);
-  }, []);
-  // Analytics tracking for phone clicks - optimized
+    setIsLoaded(true)
+    const timer = setTimeout(() => setIsVisible(true), 100)
+    preloadComponents()
+    initializePerformanceOptimizations()return () => clearTimeout(timer)
+  }, [])
   const handlePhoneClick = useCallback(() => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as any).gtag('event', 'phone_click', {
         event_category: 'engagement',
         event_label: 'main_phone_number'
-      });
+      })
     }
-  }, []);
-  // Enhanced Micro SAAS Services with real functionality and pricing
+  }, [])
   const microSAASServices = [
     {
       title: 'AI Project Manager Pro',
@@ -367,8 +353,7 @@ const HomePage: React.FC = () => {
       marketPrice: '$499',
       savings: '40%'
     }
-  ];
-  // Enhanced AI Services with real capabilities and market pricing
+  ]
   const aiServices = [
     {
       title: 'Machine Learning Solutions',
@@ -466,8 +451,7 @@ const HomePage: React.FC = () => {
       savings: '42%',
       contact: 'kleber@ziontechgroup.com'
     }
-  ];
-  // Enhanced IT Services with comprehensive capabilities
+  ]
   const itServices = [
     {
       title: 'Cloud Migration & Management',
@@ -565,8 +549,7 @@ const HomePage: React.FC = () => {
       savings: '43%',
       contact: '+1 302 464 0950'
     }
-  ];
-  // Specialized Services
+  ]
   const specializedServices = [
     {
       title: 'AI-Powered Business Intelligence',
@@ -640,8 +623,7 @@ const HomePage: React.FC = () => {
       savings: '46%',
       contact: '+1 302 464 0950'
     }
-  ];
-  return (
+  ]return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Performance Optimizer */}
       <PerformanceOptimizer />
@@ -671,22 +653,22 @@ const HomePage: React.FC = () => {
         <div className="relative z-10 container mx-auto px-4 text-center">
           <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-pulse">
-              ZION TECH GROUP;
+              ZION TECH GROUP
   </
             <p className="text-2xl md:text-3xl text-white mb-8 font-light">
-              AI-Powered Enterprise Solutions & Digital Transformation;
+              AI-Powered Enterprise Solutions & Digital Transformation
   </
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
               <div className="flex items-center text-cyan-400 text-lg">
                 <Phone className="w-6 h-6 mr-2" />
                 <a href="tel:+13024640950" onClick={handlePhoneClick} className="hover:text-cyan-300 transition-colors">
-                  +1 302 464 0950;
+                  +1 302 464 0950
   </
               </div>
               <div className="flex items-center text-purple-400 text-lg">
                 <Mail className="w-6 h-6 mr-2" />
                 <a href="mailto:kleber@ziontechgroup.com" className="hover:text-purple-300 transition-colors">
-                  kleber@ziontechgroup.com;
+                  kleber@ziontechgroup.com
   </
               </div>
               <div className="flex items-center text-pink-400 text-lg">
@@ -719,7 +701,7 @@ const HomePage: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-5xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-              Micro SAAS Services;
+              Micro SAAS Services
   </
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Powerful, affordable AI-powered tools designed for modern businesses. 
@@ -732,7 +714,7 @@ const HomePage: React.FC = () => {
                 {service.popular && (
                   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                     <div className="bg-gradient-to-r from-cyan-400 to-purple-400 text-slate-900 px-4 py-1 rounded-full text-sm font-bold shadow-lg">
-                      🔥 POPULAR;
+                      🔥 POPULAR
   </
                   </div>
                 )}
@@ -798,7 +780,7 @@ const HomePage: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-5xl font-bold text-white mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-              AI Services & Solutions;
+              AI Services & Solutions
   </
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Cutting-edge artificial intelligence solutions tailored for enterprise needs. 
@@ -870,7 +852,7 @@ const HomePage: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-5xl font-bold text-white mb-6 bg-gradient-to-r from-green-400 to-cyan-400 bg-clip-text text-transparent">
-              IT Services & Solutions;
+              IT Services & Solutions
   </
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Comprehensive IT services to support your digital transformation journey. 
@@ -942,7 +924,7 @@ const HomePage: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-5xl font-bold text-white mb-6 bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">
-              Specialized Solutions;
+              Specialized Solutions
   </
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Advanced specialized solutions for complex business challenges. 
@@ -1026,7 +1008,7 @@ const HomePage: React.FC = () => {
               <h3 className="text-xl font-bold text-white mb-2">Call Us</h3>
               <p className="text-gray-300 mb-4">Speak directly with our experts</p>
               <a href="tel:+13024640950" onClick={handlePhoneClick} className="text-cyan-400 hover:text-cyan-300 text-lg font-semibold">
-                +1 302 464 0950;
+                +1 302 464 0950
   </
             </div>
             <div className="text-center bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-purple-400/20 hover:border-purple-400/60 transition-all duration-300">
@@ -1034,7 +1016,7 @@ const HomePage: React.FC = () => {
               <h3 className="text-xl font-bold text-white mb-2">Email Us</h3>
               <p className="text-gray-300 mb-4">Send us your requirements</p>
               <a href="mailto:kleber@ziontechgroup.com" className="text-purple-400 hover:text-purple-300 text-lg font-semibold">
-                kleber@ziontechgroup.com;
+                kleber@ziontechgroup.com
   </
             </div>
             <div className="text-center bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-pink-400/20 hover:border-pink-400/60 transition-all duration-300">
@@ -1043,7 +1025,7 @@ const HomePage: React.FC = () => {
               <p className="text-gray-300 mb-4">Our headquarters location</p>
               <p className="text-pink-400 text-sm">
                 364 E Main St STE 1008<br />
-                Middletown DE 19709;
+                Middletown DE 19709
   </
             </div>
           </div>
@@ -1052,9 +1034,8 @@ const HomePage: React.FC = () => {
       {/* Footer */}
       <Footer />
     </div>
-  );
-};
-export default HomePage;
+  )}
+export default HomePage
   </p>
   </a>
   </a>

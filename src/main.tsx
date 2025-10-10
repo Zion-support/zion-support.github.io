@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom/client';
 import App from '../App';
 import './globals.css';
 import { measureWebVitals } from './utils/performanceMonitor';
-// Initialize performance monitoring
 if (typeof window !== 'undefined') {
   measureWebVitals();
 }
@@ -39,6 +38,7 @@ if ('serviceWorker' in navigator) {
       });
   });
 }
+
 const root = document.getElementById('root');
 if (root) {
   ReactDOM.createRoot(root).render(
