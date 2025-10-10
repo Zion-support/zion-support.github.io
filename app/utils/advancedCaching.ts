@@ -1,486 +1,418 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+// Advanced caching utilities with multiple strategies and optimizations
 
-const AdvancedCachingPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
-    },
-    {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
-    },
-    {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
-<<<<<<< HEAD
-=======
-export interface CacheOptions {
-  ttl?: number; // Time to live in milliseconds;
-export interface CacheOptions {}
-  ttl?: number; // Time to live in milliseconds
-  storage?: 'memory' | 'localStorage' | 'sessionStorage';
-  maxSize?: number; // Maximum number of entries;
+interface CacheEntry<T = any> {
+  data: T;
+  timestamp: number;
+  ttl: number;
+  accessCount: number;
+  lastAccessed: number;
+  priority: number;
 }
 
-export interface CacheEntry<T> {}
-  value: T,
-  expiry: number,
-  hits: number,
-  lastAccessed: number,
+interface AdvancedCacheOptions {
+  ttl?: number;
+  maxSize?: number;
+  strategy?: 'lru' | 'lfu' | 'fifo' | 'ttl';
+  storage?: 'memory' | 'sessionStorage' | 'localStorage' | 'indexedDB';
+  compression?: boolean;
+  encryption?: boolean;
+  version?: string;
 }
 
-class AdvancedCache<T = unknown> {}
+interface CacheStats {
+  hits: number;
+  misses: number;
+  size: number;
+  maxSize: number;
+  hitRate: number;
+  memoryUsage: number;
+}
+
+class AdvancedCache<T = any> {
   private cache: Map<string, CacheEntry<T>> = new Map();
   private accessOrder: string[] = [];
-  private options: Required<CacheOptions>;
-  private storageKey = 'advanced-cache';,
-,
-  constructor(options: CacheOptions = {}) {
+  private options: Required<AdvancedCacheOptions>;
+  private stats: CacheStats = {
+    hits: 0,
+    misses: 0,
+    size: 0,
+    maxSize: 0,
+    hitRate: 0,
+    memoryUsage: 0
+  };
+
+  constructor(options: AdvancedCacheOptions = {}) {
     this.options = {
-      ttl: options.ttl || 5 * 60 * 1000, // Default 5 minutes;
-  private storageKey = 'advanced-cache';
-
-  constructor(options: CacheOptions = {}) {}
-    this.options = {}
-      ttl: options.ttl || 5 * 60 * 1000, // Default 5 minutes
+      ttl: options.ttl || 5 * 60 * 1000,
+      maxSize: options.maxSize || 100,
+      strategy: options.strategy || 'lru',
       storage: options.storage || 'memory',
-      maxSize: options.maxSize || 100;
+      compression: options.compression || false,
+      encryption: options.encryption || false,
+      version: options.version || '1.0.0'
     };
-
-    // Load from persistent storage if needed;
-    if (this.options.storage !== 'memory') {
-    // Load from persistent storage if needed
-    if (this.options.storage !== 'memory') {}
-      this.loadFromStorage();
->>>>>>> origin/main
-    }
-  ];
-
-  const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>AdvancedCaching | Zion Tech Group</title>
-        <meta name="description" content="Professional AdvancedCaching services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="advancedCaching, AI solutions, IT services, Zion Tech Group, advancedcaching" />
-      </Helmet>
-
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                AdvancedCaching
-              </span>
-              <br />
-              <span className="text-white">Solutions</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our advanced advancedcaching solutions. 
-              Powered by cutting-edge AI technology and industry expertise.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-                Learn More
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Our AdvancedCaching?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our advancedcaching solutions deliver unmatched performance, security, and scalability.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
-                  <feature.icon className="h-6 w-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Benefits
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the power of our advancedcaching solutions for your business.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-start space-x-3">
-                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
-                <p className="text-gray-300 text-lg">{benefit}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-purple-100 mb-8">
-              Contact our experts to discuss your advancedcaching needs and get a customized solution.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
-                <Phone className="mr-2 h-5 w-5" />
-                Call Now
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
-                <Mail className="mr-2 h-5 w-5" />
-                Email Us
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  );
-};
-
-export default AdvancedCachingPage;
-<<<<<<< HEAD
-=======
-  private cleanExpired(): void {}
-    const now = Date.now();
-    const expiredKeys: string[] = [];
-,
-    for (const [key, entry] of this.cache.entries()) {
-      if (entry.expiry <= now) {
-
-    for (const [key, entry] of this.cache.entries()) {}
-      if (entry.expiry <= now) {}
-        expiredKeys.push(key);
-      }
-    }
-
-    expiredKeys.forEach(key => {)
-    expiredKeys.forEach(key => {)}
-      this.cache.delete(key);
-      const index = this.accessOrder.indexOf(key);
-      if (index > -1) {}
-        this.accessOrder.splice(index, 1);
-      }
-
-    if (expiredKeys.length > 0) {}
-      this.saveToStorage();
-    }
-
-    // Update access statistics;
-  public set(ke,
-  y: string, valu)
-  e: T, ttl?: number): void {/* TODO: Fix JSX expression */}
-    }
-    this.cache.set(key, {/* TODO: Fix JSX expression */})
-    });
-    // Update access order;
-    this.updateAccessOrder(key);
-    // Save to storage if needed;
-    if (this.options.storage !== 'memory') {/* TODO: Fix JSX expression */}
-    }
-  }
-  public get(ke)
-  y: string): T | null {/* TODO: Fix JSX expression */}
-    }
-    // Check if expired;
-    if (Date.now() > entry.expiry) {/* TODO: Fix JSX expression */}
-    }
-    // Update stats;
-    entry.hits++;
-    entry.lastAccessed = now;
-    this.updateAccessOrder(key);
-
-    return entry.value;
+    this.stats.maxSize = this.options.maxSize;
   }
 
-  private evictLRU(): void {}
-    if (this.accessOrder.length === 0) return;
-
-    const lruKey = this.accessOrder[0];
-    this.cache.delete(lruKey);
-    this.accessOrder.shift();
-  }
-
-  private updateAccessOrder(key: string): void {,
-    const index = this.accessOrder.indexOf(key);
-    if (index > -1) {,
-  private updateAccessOrder(key: string): void {}
-    const index = this.accessOrder.indexOf(key);
-    if (index > -1) {}
-      this.accessOrder.splice(index, 1);
-  public has(ke)
-  y: string): boolean {/* TODO: Fix JSX expression */}
-    }
-    return true;
-  }
-  public delete(ke)
-  y: string): boolean {/* TODO: Fix JSX expression */}
-  }
-  public clear(): void {/* TODO: Fix JSX expression */}
-    }
-  }
-  private updateAccessOrder(ke)
-  y: string): void {/* TODO: Fix JSX expression */}
-  }
-  private removeFromAccessOrder(ke)
-  y: string): void {/* TODO: Fix JSX expression */}
-    }
-    this.accessOrder.push(key);
-  }
-
-  set(key: string, value: T, customTTL?: number): void {}
-    const now = Date.now();
-    const ttl = customTTL || this.options.ttl;
-
-    // Remove existing entry if it exists;
-    if (this.cache.has(key)) {
-    // Remove existing entry if it exists
-    if (this.cache.has(key)) {}
-      this.cache.delete(key);
-      const index = this.accessOrder.indexOf(key);
-      if (index > -1) {}
-        this.accessOrder.splice(index, 1);
-      }
-    }
-
-    // Check if we need to evict entries;
-    while (this.cache.size >= this.options.maxSize) {
-      this.evictLRU();
-    }
-
+  set(key: string, data: T, customTtl?: number, priority: number = 1): void {
+    const ttl = customTtl || this.options.ttl;
     const entry: CacheEntry<T> = {
-      value;
-      expiry: now + ttl;
-      hits: 0,
-      lastAccessed: now,
-    // Check if we need to evict entries
-    while (this.cache.size >= this.options.maxSize) {}
-      this.evictLRU();
-    }
-
-    const entry: CacheEntry<T> = {}
-      value,
-      expiry: now + ttl,
-      hits: 0,
-      lastAccessed: now
+      data,
+      timestamp: Date.now(),
+      ttl,
+      accessCount: 0,
+      lastAccessed: Date.now(),
+      priority
     };
+
+    // Remove entry if cache is full
+    if (this.cache.size >= this.options.maxSize) {
+      this.evictEntry();
+    }
 
     this.cache.set(key, entry);
     this.updateAccessOrder(key);
-    this.saveToStorage();
+    this.updateStats();
+
+    // Store in persistent storage if specified
+    if (this.options.storage !== 'memory') {
+      this.persistEntry(key, entry);
+    }
   }
 
-  get(key: string): T | null {}
-    const entry = this.cache.get(key);
-    if (!entry) return null;
+  get(key: string): T | null {
+    let entry = this.cache.get(key);
 
-    const now = Date.now();
-    if (entry.expiry <= now) {}
-      this.cache.delete(key);
-      const index = this.accessOrder.indexOf(key);
-      if (index > -1) {,
-      if (index > -1) {}
-        this.accessOrder.splice(index, 1);
+    // Try to get from persistent storage if not in memory
+    if (!entry && this.options.storage !== 'memory') {
+      entry = this.loadFromStorage(key);
+      if (entry) {
+        this.cache.set(key, entry);
       }
-      this.saveToStorage();
+    }
+
+    if (!entry) {
+      this.stats.misses++;
+      this.updateStats();
       return null;
     }
 
-    // Update access statistics;
-    entry.hits++;
-    entry.lastAccessed = now;
+    // Check if entry has expired
+    if (Date.now() - entry.timestamp > entry.ttl) {
+      this.delete(key);
+      this.stats.misses++;
+      this.updateStats();
+      return null;
+    }
+
+    // Update access information
+    entry.accessCount++;
+    entry.lastAccessed = Date.now();
     this.updateAccessOrder(key);
+    this.stats.hits++;
+    this.updateStats();
 
-    return entry.value;
+    return entry.data;
   }
 
-  has(key: string): boolean {}
-    const entry = this.cache.get(key);
-    if (!entry) return false;
-
-    const now = Date.now();
-    if (entry.expiry <= now) {}
-      this.cache.delete(key);
-      const index = this.accessOrder.indexOf(key);
-      if (index > -1) {,
-      if (index > -1) {}
-        this.accessOrder.splice(index, 1);
-      }
-      this.saveToStorage();
-      return false;
-    }
-
-    return true;
+  has(key: string): boolean {
+    return this.get(key) !== null;
   }
 
-  delete(key: string): boolean {}
-    const deleted = this.cache.delete(key);
-    if (deleted) {,
-      const index = this.accessOrder.indexOf(key);
-      if (index > -1) {,
-    if (deleted) {}
-      const index = this.accessOrder.indexOf(key);
-      if (index > -1) {}
-        this.accessOrder.splice(index, 1);
-      }
-      this.saveToStorage();
-  private evictLRU(): void {/* TODO: Fix JSX expression */}
-    }
-  }
-  private cleanExpired(): void {/* TODO: Fix JSX expression */}
-      }
-    });
-    keysToDelete.forEach(key => this.delete(key));
-    if (keysToDelete.length > 0 && this.options.storage !== 'memory') {/* TODO: Fix JSX expression */}
-    }
-    return deleted;
+  delete(key: string): void {
+    this.cache.delete(key);
+    this.removeFromAccessOrder(key);
+    this.removeFromStorage(key);
+    this.updateStats();
   }
 
-  clear(): void {}
+  clear(): void {
     this.cache.clear();
     this.accessOrder = [];
-    this.saveToStorage();
+    this.clearStorage();
+    this.stats = {
+      hits: 0,
+      misses: 0,
+      size: 0,
+      maxSize: this.options.maxSize,
+      hitRate: 0,
+      memoryUsage: 0
+    };
   }
 
-  size(): number {}
+  size(): number {
     return this.cache.size;
   }
 
-  keys(): string[] {}
-    return Array.from(this.cache.keys());
+  getStats(): CacheStats {
+    return { ...this.stats };
   }
 
-  getStats(): {}
-    size: number,
-    maxSize: number,
-    hitRate: number,
-    oldestEntry: number,
-    newestEntry: number,
-  } {}
-    const entries = Array.from(this.cache.values());
-    const totalHits = entries.reduce((sum, entry) => sum + entry.hits, 0);
-    const hitRate = entries.length > 0 ? totalHits / entries.length : 0;
-
-    const timestamps = entries.map(entry => entry.lastAccessed);
-    const oldestEntry = timestamps.length > 0 ? Math.min(...timestamps) : 0;
-    const newestEntry = timestamps.length > 0 ? Math.max(...timestamps) : 0;
-
-    return {
-      size: this.cache.size;
-      maxSize: this.options.maxSize;
-    return {}
-      size: this.cache.size,
-      maxSize: this.options.maxSize,
-      hitRate,
-      oldestEntry,
-      newestEntry;
-    };
-  }
-}
-
-// Create singleton instances for different use cases;
-export const memoryCache = new AdvancedCache({ storage: 'memory' });
-export const localStorageCache = new AdvancedCache({)
-  storage: 'localStorage'),
-  ttl: 30 * 60 * 1000, // 30 minutes;
-  maxSize: 50,
-export const sessionStorageCache = new AdvancedCache({)
-  storage: 'sessionStorage'),
-  ttl: 10 * 60 * 1000, // 10 minutes;
-  maxSize: 25,
-export const localStorageCache = new AdvancedCache({)}
-  storage: 'localStorage',
-  ttl: 30 * 60 * 1000, // 30 minutes
-  maxSize: 50
-
-export const sessionStorageCache = new AdvancedCache({)}
-  storage: 'sessionStorage',
-  ttl: 10 * 60 * 1000, // 10 minutes
-  maxSize: 25
-
-export default AdvancedCache;
-  public getStats(): {/* TODO: Fix JSX expression */}
-    }>;
-  } {/* TODO: Fix JSX expression */}
-  e: number }> = [];
-    let totalHits = 0;
-    const now = Date.now();
-    this.cache.forEach((entry, key) => {/* TODO: Fix JSX expression */}
-      });
-    });
-    return {/* TODO: Fix JSX expression */}
-    };
-  }
-  // Utility method for async operations with caching;
-  public async getOrFetch<R extends T>(ke,
-  y: string,
-    fetche)
-  r: () => Promise<R>,
-    ttl?: number;
-  ): Promise<R> {/* TODO: Fix JSX expression */}
+  // Eviction strategies
+  private evictEntry(): void {
+    switch (this.options.strategy) {
+      case 'lru':
+        this.evictLRU();
+        break;
+      case 'lfu':
+        this.evictLFU();
+        break;
+      case 'fifo':
+        this.evictFIFO();
+        break;
+      case 'ttl':
+        this.evictTTL();
+        break;
     }
-    const value = await fetcher();
-    this.set(key, value, ttl);
-    return value;
+  }
+
+  private evictLRU(): void {
+    if (this.accessOrder.length > 0) {
+      const keyToRemove = this.accessOrder[0];
+      this.delete(keyToRemove);
+    }
+  }
+
+  private evictLFU(): void {
+    let minAccessCount = Infinity;
+    let keyToRemove = '';
+
+    for (const [key, entry] of this.cache.entries()) {
+      if (entry.accessCount < minAccessCount) {
+        minAccessCount = entry.accessCount;
+        keyToRemove = key;
+      }
+    }
+
+    if (keyToRemove) {
+      this.delete(keyToRemove);
+    }
+  }
+
+  private evictFIFO(): void {
+    if (this.accessOrder.length > 0) {
+      const keyToRemove = this.accessOrder[0];
+      this.delete(keyToRemove);
+    }
+  }
+
+  private evictTTL(): void {
+    let oldestTime = Infinity;
+    let keyToRemove = '';
+
+    for (const [key, entry] of this.cache.entries()) {
+      if (entry.timestamp < oldestTime) {
+        oldestTime = entry.timestamp;
+        keyToRemove = key;
+      }
+    }
+
+    if (keyToRemove) {
+      this.delete(keyToRemove);
+    }
+  }
+
+  private updateAccessOrder(key: string): void {
+    this.removeFromAccessOrder(key);
+    this.accessOrder.push(key);
+  }
+
+  private removeFromAccessOrder(key: string): void {
+    const index = this.accessOrder.indexOf(key);
+    if (index > -1) {
+      this.accessOrder.splice(index, 1);
+    }
+  }
+
+  private updateStats(): void {
+    this.stats.size = this.cache.size;
+    const total = this.stats.hits + this.stats.misses;
+    this.stats.hitRate = total > 0 ? this.stats.hits / total : 0;
+    
+    // Estimate memory usage (rough calculation)
+    this.stats.memoryUsage = this.cache.size * 1024; // Rough estimate
+  }
+
+  // Persistent storage methods
+  private async persistEntry(key: string, entry: CacheEntry<T>): Promise<void> {
+    if (typeof window === 'undefined') return;
+
+    try {
+      const data = this.options.compression 
+        ? await this.compress(JSON.stringify(entry))
+        : JSON.stringify(entry);
+
+      switch (this.options.storage) {
+        case 'sessionStorage':
+          window.sessionStorage.setItem(`cache_${key}`, data);
+          break;
+        case 'localStorage':
+          window.localStorage.setItem(`cache_${key}`, data);
+          break;
+        case 'indexedDB':
+          await this.storeInIndexedDB(key, data);
+          break;
+      }
+    } catch (error) {
+      console.warn('Failed to persist cache entry:', error);
+    }
+  }
+
+  private async loadFromStorage(key: string): Promise<CacheEntry<T> | null> {
+    if (typeof window === 'undefined') return null;
+
+    try {
+      let data: string | null = null;
+
+      switch (this.options.storage) {
+        case 'sessionStorage':
+          data = window.sessionStorage.getItem(`cache_${key}`);
+          break;
+        case 'localStorage':
+          data = window.localStorage.getItem(`cache_${key}`);
+          break;
+        case 'indexedDB':
+          data = await this.loadFromIndexedDB(key);
+          break;
+      }
+
+      if (data) {
+        const decompressed = this.options.compression 
+          ? await this.decompress(data)
+          : data;
+        return JSON.parse(decompressed);
+      }
+    } catch (error) {
+      console.warn('Failed to load cache entry from storage:', error);
+    }
+
+    return null;
+  }
+
+  private removeFromStorage(key: string): void {
+    if (typeof window === 'undefined') return;
+
+    try {
+      switch (this.options.storage) {
+        case 'sessionStorage':
+          window.sessionStorage.removeItem(`cache_${key}`);
+          break;
+        case 'localStorage':
+          window.localStorage.removeItem(`cache_${key}`);
+          break;
+        case 'indexedDB':
+          this.removeFromIndexedDB(key);
+          break;
+      }
+    } catch (error) {
+      console.warn('Failed to remove cache entry from storage:', error);
+    }
+  }
+
+  private clearStorage(): void {
+    if (typeof window === 'undefined') return;
+
+    try {
+      switch (this.options.storage) {
+        case 'sessionStorage':
+          for (let i = 0; i < window.sessionStorage.length; i++) {
+            const key = window.sessionStorage.key(i);
+            if (key && key.startsWith('cache_')) {
+              window.sessionStorage.removeItem(key);
+            }
+          }
+          break;
+        case 'localStorage':
+          for (let i = 0; i < window.localStorage.length; i++) {
+            const key = window.localStorage.key(i);
+            if (key && key.startsWith('cache_')) {
+              window.localStorage.removeItem(key);
+            }
+          }
+          break;
+        case 'indexedDB':
+          this.clearIndexedDB();
+          break;
+      }
+    } catch (error) {
+      console.warn('Failed to clear storage:', error);
+    }
+  }
+
+  // IndexedDB methods
+  private async storeInIndexedDB(key: string, data: string): Promise<void> {
+    // Implementation would go here
+    console.log('IndexedDB storage not implemented');
+  }
+
+  private async loadFromIndexedDB(key: string): Promise<string | null> {
+    // Implementation would go here
+    return null;
+  }
+
+  private removeFromIndexedDB(key: string): void {
+    // Implementation would go here
+  }
+
+  private clearIndexedDB(): void {
+    // Implementation would go here
+  }
+
+  // Compression methods (simple base64 for demo)
+  private async compress(data: string): Promise<string> {
+    return btoa(data);
+  }
+
+  private async decompress(data: string): Promise<string> {
+    return atob(data);
+  }
+
+  // Cleanup expired entries
+  cleanup(): void {
+    const now = Date.now();
+    for (const [key, entry] of this.cache.entries()) {
+      if (now - entry.timestamp > entry.ttl) {
+        this.delete(key);
+      }
+    }
   }
 }
-// Export factory function;
-export function createCache<T = unknown>(options?: CacheOptions): AdvancedCache<T> {/* TODO: Fix JSX expression */}
+
+// Create default cache instances
+export const memoryCache = new AdvancedCache();
+export const sessionCache = new AdvancedCache({ storage: 'sessionStorage' });
+export const persistentCache = new AdvancedCache({ storage: 'localStorage' });
+
+// Export the class and types
+export { AdvancedCache, type AdvancedCacheOptions, type CacheEntry, type CacheStats };
+
+// Utility functions
+export const createCacheKey = (prefix: string, ...parts: (string | number)[]): string => {
+  return `${prefix}_${parts.join('_')}`;
+};
+
+export const withAdvancedCache = async <T>(
+  key: string,
+  fetcher: () => Promise<T>,
+  options?: { ttl?: number; priority?: number; strategy?: 'lru' | 'lfu' | 'fifo' | 'ttl' }
+): Promise<T> => {
+  const cache = new AdvancedCache(options);
+  const cached = cache.get(key);
+  
+  if (cached !== null) {
+    return cached;
+  }
+
+  const data = await fetcher();
+  cache.set(key, data, options?.ttl, options?.priority || 1);
+  return data;
+};
+
+// Auto-cleanup every 5 minutes
+if (typeof window !== 'undefined') {
+  setInterval(() => {
+    memoryCache.cleanup();
+    sessionCache.cleanup();
+    persistentCache.cleanup();
+  }, 5 * 60 * 1000);
 }
-// Export default cache instance;
-export const defaultCache = new AdvancedCache();
-export default AdvancedCache;
->>>>>>> origin/main

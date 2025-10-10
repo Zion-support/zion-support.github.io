@@ -8,16 +8,10 @@ import { CheckCircle, Zap, Cpu, Globe, Shield, ArrowRight, Cloud, Database, Wifi
 const EdgeComputingPage: React.FC = () => {
   const features = [
     {
-<<<<<<< HEAD
-      title: 'Low-Latency Processing',
-      description: 'Process data at the edge for ultra-low latency applications and real-time decision making.',
-      benefits: ['< 1 ms latency', 'Real-time processing', 'Instant responses']
-=======
       icon: Cpu,
       title: 'Edge Processing',
       description: 'Process data locally at the edge for ultra-low latency and real-time responsiveness.',
       benefits: ['Sub-millisecond latency', 'Real-time processing', 'Local data processing', 'Reduced bandwidth usage']
->>>>>>> cursor/fix-errors-and-merge-to-main-d2d0
     },
     {
       icon: Globe,

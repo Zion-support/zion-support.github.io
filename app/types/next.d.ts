@@ -1,37 +1,11 @@
 // Next.js specific type definitions
 
-<<<<<<< HEAD
-const Next.dPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
-    },
-    {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
-    },
-    {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
-    }
-  ];
-<<<<<<< HEAD
-=======
 // Type definitions for Next.js compatibility in Vite
 export interface Metadata {
   title?: string;
   description?: string;
   keywords?: string[];
-  authors?: Array<{ name: string; url?: string }> | string[];
+  authors?: Array<{ name: string; url?: string }>;
   creator?: string;
   publisher?: string;
   formatDetection?: {
@@ -39,7 +13,7 @@ export interface Metadata {
     address?: boolean;
     telephone?: boolean;
   };
-  metadataBase?: URL;
+  metadataBase?: string;
   alternates?: {
     canonical?: string;
     languages?: Record<string, string>;
@@ -50,23 +24,21 @@ export interface Metadata {
     url?: string;
     siteName?: string;
     images?: Array<{
-      url: string,
+      url: string;
       width?: number;
       height?: number;
       alt?: string;
     }>;
     locale?: string;
     type?: string;
-    authors?: Array<{ name: string; url?: string }> | string[];
-    publishedTime?: string;
   };
   twitter?: {
     card?: 'summary' | 'summary_large_image' | 'app' | 'player';
-    site?: string;
-    creator?: string;
     title?: string;
     description?: string;
     images?: string[];
+    creator?: string;
+    site?: string;
   };
   robots?: {
     index?: boolean;
@@ -85,147 +57,247 @@ export interface Metadata {
     yahoo?: string;
     other?: Record<string, string>;
   };
+  category?: string;
+  classification?: string;
+  referrer?: 'no-referrer' | 'origin' | 'no-referrer-when-downgrade' | 'origin-when-cross-origin' | 'same-origin' | 'strict-origin' | 'strict-origin-when-cross-origin' | 'unsafe-url';
+  colorScheme?: 'normal' | 'light' | 'dark' | 'light dark';
+  themeColor?: string | Array<{ media: string; color: string }>;
+  viewport?: {
+    width?: string;
+    height?: string;
+    initialScale?: number;
+    minimumScale?: number;
+    maximumScale?: number;
+    userScalable?: boolean;
+    viewportFit?: 'auto' | 'contain' | 'cover';
+  };
+  icons?: {
+    icon?: string | Array<{ url: string; sizes?: string; type?: string }>;
+    shortcut?: string | Array<{ url: string; sizes?: string; type?: string }>;
+    apple?: string | Array<{ url: string; sizes?: string; type?: string }>;
+    other?: Array<{ rel: string; url: string; sizes?: string; type?: string }>;
+  };
+  manifest?: string;
+  other?: Record<string, string>;
 }
 
-export interface MetadataRoute {
-  url: string,
-  lastModified?: string | Date;
-  changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
-  priority?: number;
-}
->>>>>>> origin/main
-=======
-import { NextRequest, NextResponse } from 'next/server'
->>>>>>> cursor/fix-errors-and-merge-to-main-d2d0
-
-// Extend Next.js types
-declare module 'next' {
-  interface NextApiRequest {
-    user?: {
-      id: string;
-      email: string;
-      name?: string;
-    };
-  }
-}
-
-<<<<<<< HEAD
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Next.d | Zion Tech Group</title>
-        <meta name="description" content="Professional Next.d services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="next.d, AI solutions, IT services, Zion Tech Group, next.d" />
-      </Helmet>
-<<<<<<< HEAD
-=======
-export interface MetadataRouteSitemap extends MetadataRoute {
-  url: string,
-  lastModified?: string | Date;
-  changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
-  priority?: number;
-}
->>>>>>> origin/main
-=======
-// Custom Next.js types
-export interface NextPageProps {
-  params: { [key: string]: string };
-  searchParams: { [key: string]: string | string[] | undefined };
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-d2d0
-
-export interface NextLayoutProps {
-  children: React.ReactNode;
-  params: { [key: string]: string };
-}
-
-// API route types
-export interface ApiRouteHandler {
-  (req: NextRequest): Promise<NextResponse>;
-}
-
-// Middleware types
-export interface MiddlewareConfig {
-  matcher: string[];
-}
-
-// Image optimization types
+// Next.js Image component props
 export interface ImageProps {
   src: string;
   alt: string;
   width?: number;
   height?: number;
-  priority?: boolean;
+  fill?: boolean;
+  sizes?: string;
   quality?: number;
+  priority?: boolean;
   placeholder?: 'blur' | 'empty';
   blurDataURL?: string;
-}
-
-// Metadata types
-export interface Metadata {
-  title?: string;
-  description?: string;
-  keywords?: string[];
-  openGraph?: {
-    title?: string;
-    description?: string;
-    images?: string[];
-  };
-  twitter?: {
-    card?: 'summary' | 'summary_large_image';
-    title?: string;
-    description?: string;
-    images?: string[];
-  };
-}
-
-// Server components types
-export interface ServerComponentProps {
-  params: { [key: string]: string };
-  searchParams: { [key: string]: string | string[] | undefined };
-}
-
-// Client components types
-export interface ClientComponentProps {
-  children?: React.ReactNode;
+  loader?: (props: { src: string; width: number; quality?: number }) => string;
+  unoptimized?: boolean;
   className?: string;
+  style?: React.CSSProperties;
+  onLoad?: (event: React.SyntheticEvent<HTMLImageElement, Event>) => void;
+  onError?: (event: React.SyntheticEvent<HTMLImageElement, Event>) => void;
+  onLoadingComplete?: (result: { naturalWidth: number; naturalHeight: number }) => void;
+  loading?: 'lazy' | 'eager';
 }
 
-// Route handlers
-export interface RouteHandler {
-  GET?: (req: NextRequest) => Promise<NextResponse>;
-  POST?: (req: NextRequest) => Promise<NextResponse>;
-  PUT?: (req: NextRequest) => Promise<NextResponse>;
-  DELETE?: (req: NextRequest) => Promise<NextResponse>;
-  PATCH?: (req: NextRequest) => Promise<NextResponse>;
+// Next.js Link component props
+export interface LinkProps {
+  href: string;
+  as?: string;
+  replace?: boolean;
+  scroll?: boolean;
+  shallow?: boolean;
+  passHref?: boolean;
+  prefetch?: boolean;
+  locale?: string;
+  legacyBehavior?: boolean;
+  className?: string;
+  style?: React.CSSProperties;
+  children: React.ReactNode;
+  onClick?: (event: React.MouseEvent<HTMLAnchorElement>) => void;
 }
 
-// Dynamic route types
-export interface DynamicRoute {
-  params: { [key: string]: string };
+// Next.js Router types
+export interface NextRouter {
+  route: string;
+  pathname: string;
+  query: Record<string, string | string[] | undefined>;
+  asPath: string;
+  basePath: string;
+  locale?: string;
+  locales?: string[];
+  defaultLocale?: string;
+  isReady: boolean;
+  isPreview: boolean;
+  isFallback: boolean;
+  events: {
+    on: (event: string, handler: (...args: any[]) => void) => void;
+    off: (event: string, handler: (...args: any[]) => void) => void;
+    emit: (event: string, ...args: any[]) => void;
+  };
+  push: (url: string, as?: string, options?: { shallow?: boolean; locale?: string }) => Promise<boolean>;
+  replace: (url: string, as?: string, options?: { shallow?: boolean; locale?: string }) => Promise<boolean>;
+  reload: () => void;
+  back: () => void;
+  beforePopState: (cb: (state: any) => boolean) => void;
+  prefetch: (url: string, as?: string, options?: { priority?: boolean; locale?: string }) => Promise<void>;
 }
 
-// Static generation types
-export interface StaticProps {
-  props: { [key: string]: any };
-  revalidate?: number;
-  notFound?: boolean;
+// Next.js Head component
+export interface HeadProps {
+  children: React.ReactNode;
 }
 
-// ISR types
-export interface ISRConfig {
-  revalidate: number;
-  tags?: string[];
+// Next.js Script component
+export interface ScriptProps {
+  src?: string;
+  strategy?: 'afterInteractive' | 'beforeInteractive' | 'lazyOnload' | 'worker';
+  onLoad?: () => void;
+  onError?: (error: Error) => void;
+  children?: React.ReactNode;
+  id?: string;
+  nonce?: string;
+  crossOrigin?: string;
+  async?: boolean;
+  defer?: boolean;
+  dangerouslySetInnerHTML?: { __html: string };
 }
 
-// Edge runtime types
-export interface EdgeRuntime {
-  runtime: 'edge';
+// Next.js Document types
+export interface DocumentProps {
+  __NEXT_DATA__: {
+    props: any;
+    page: string;
+    query: Record<string, any>;
+    buildId: string;
+    assetPrefix?: string;
+    isFallback: boolean;
+    dynamicIds: string[];
+    gssp: boolean;
+    customServer: boolean;
+    gip: boolean;
+    appGip: boolean;
+    scriptLoader: any[];
+  };
 }
 
-// Node.js runtime types
-export interface NodeRuntime {
-  runtime: 'nodejs';
+// Next.js API types
+export interface NextApiRequest extends Request {
+  query: Record<string, string | string[] | undefined>;
+  cookies: Record<string, string>;
+  body: any;
+  env: Record<string, string>;
+  preview?: boolean;
+  previewData?: any;
 }
 
-export {};
+export interface NextApiResponse<T = any> extends Response {
+  status: (code: number) => NextApiResponse<T>;
+  json: (data: T) => NextApiResponse<T>;
+  send: (data: any) => NextApiResponse<T>;
+  redirect: (statusOrUrl: string | number, url?: string) => NextApiResponse<T>;
+  setPreviewData: (data: any, options?: { maxAge?: number }) => NextApiResponse<T>;
+  clearPreviewData: () => NextApiResponse<T>;
+  revalidate: (urlPath: string, opts?: { unstable_onlyGenerated?: boolean }) => Promise<void>;
+}
+
+// Next.js middleware types
+export interface NextRequest extends Request {
+  nextUrl: URL;
+  ip?: string;
+  ua?: string;
+  geo?: {
+    country?: string;
+    region?: string;
+    city?: string;
+    latitude?: string;
+    longitude?: string;
+  };
+}
+
+export interface NextResponse extends Response {
+  cookies: {
+    get: (name: string) => { name: string; value: string } | undefined;
+    set: (name: string, value: string, options?: any) => void;
+    delete: (name: string) => void;
+  };
+  json: (data: any) => NextResponse;
+  redirect: (url: string | URL, status?: number) => NextResponse;
+  rewrite: (url: string | URL) => NextResponse;
+  next: () => NextResponse;
+}
+
+// Next.js page props
+export interface GetServerSidePropsContext {
+  params?: Record<string, string | string[]>;
+  query: Record<string, string | string[]>;
+  req: NextApiRequest;
+  res: NextApiResponse;
+  resolvedUrl: string;
+  locale?: string;
+  locales?: string[];
+  defaultLocale?: string;
+  preview?: boolean;
+  previewData?: any;
+}
+
+export interface GetStaticPropsContext {
+  params?: Record<string, string>;
+  preview?: boolean;
+  previewData?: any;
+  locale?: string;
+  locales?: string[];
+  defaultLocale?: string;
+}
+
+export interface GetStaticPathsContext {
+  locales?: string[];
+  defaultLocale?: string;
+}
+
+// Next.js page component props
+export interface PageProps {
+  [key: string]: any;
+}
+
+// Next.js app directory types
+export interface LayoutProps {
+  children: React.ReactNode;
+  params?: Record<string, string>;
+}
+
+export interface PageProps {
+  params?: Record<string, string>;
+  searchParams?: Record<string, string | string[] | undefined>;
+}
+
+// Next.js error types
+export interface NextErrorProps {
+  statusCode?: number;
+  hasGetInitialPropsRun?: boolean;
+  err?: Error;
+}
+
+// Next.js configuration types
+export interface NextConfig {
+  [key: string]: any;
+}
+
+// Global Next.js types
+declare global {
+  namespace NodeJS {
+    interface ProcessEnv {
+      NODE_ENV: 'development' | 'production' | 'test';
+      NEXT_PUBLIC_ANALYTICS_ID?: string;
+      NEXT_PUBLIC_GA_ID?: string;
+      NEXT_PUBLIC_GTM_ID?: string;
+      [key: string]: string | undefined;
+    }
+  }
+}
+
+// Export default for compatibility
+export default {};

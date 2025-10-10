@@ -1,297 +1,528 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+// Accessibility Checker Utility for comprehensive accessibility auditing
 
-const AccessibilityCheckerPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
-    },
-    {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
-    },
-    {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
-<<<<<<< HEAD
-=======
-/**
- * Accessibility Checker Utility;
- *
- * Provides tools for checking and improving accessibility (a11 y) in React applications.
- * Helps ensure WCAG 2.1 AA compliance.
- *
- * @module accessibilityChecker;
- * @author Zion Tech Group;
- * @version 1.0.0;
- */
-/**
- * Accessibility issue severity levels;
- */
-export enum A11ySeverity {}
-  /** Minor issue that may affect some users */
-  MINOR = 'MINOR',
-  /** Moderate issue that affects usability */
-  MODERATE = 'MODERATE',
-  /** Serious issue that significantly impacts accessibility */
-  SERIOUS = 'SERIOUS',
-  /** Critical issue that makes content inaccessible */
-  CRITICAL = 'CRITICAL'
-export enum A11ySeverity {/* TODO: Fix JSX expression */}
-}
-/**
- * WCAG success criteria levels;
- */
-export enum WCAGLevel {}
-  /** Level A - Basic accessibility */
-  A = 'A',
-  /** Level AA - Recommended level (most common requirement) */
-  AA = 'AA',
-  /** Level AAA - Enhanced accessibility */
-  AAA = 'AAA'
-export enum WCAGLevel {/* TODO: Fix JSX expression */}
-}
-/**
- * Accessibility issue interface;
- */
-export interface A11yIssue {}
-  /** Unique identifier for the issue */
-  id: string,
-  /** Issue type/category */
-  type: string,
-  /** Severity level */
-  severity: A11ySeverity,
-  /** WCAG level this issue violates */,
-  wcagLevel: WCAGLevel,
-  /** WCAG success criterion (e.g., "1.1.1", "2.4.7") */
-  wcagCriterion: string,
-  /** Description of the issue */
-  message: string,
-  /** Element selector or description */
-  element?: string;
-  /** Suggested fix */
+interface AccessibilityIssue {
+  id: string;
+  type: 'error' | 'warning' | 'info';
+  severity: 'high' | 'medium' | 'low';
+  rule: string;
+  message: string;
+  element: HTMLElement | null;
+  selector: string;
+  line?: number;
+  column?: number;
   fix?: string;
-  /** Code example for the fix */,
-  codeExample?: string;
-export interface A11yIssue {/* TODO: Fix JSX expression */}
+  wcagLevel?: 'A' | 'AA' | 'AAA';
+  wcagGuideline?: string;
 }
-/**
- * Accessibility check result;
- */
-export interface A11yCheckResult {}
-  /** Whether the check passed */
-  passed: boolean,
-  /** Number of issues found */
-  issueCount: number,
-  /** List of issues */
-  issues: A11 yIssue[];
-  /** Timestamp of the check */
-  timestamp: Date,
-  /** Overall accessibility score (0-100) */,
-  score: number,
-export interface A11yCheckResult {/* TODO: Fix JSX expression */}
+
+interface AccessibilityReport {
+  issues: AccessibilityIssue[];
+  score: number;
+  totalIssues: number;
+  errors: number;
+  warnings: number;
+  info: number;
+  timestamp: string;
+  url: string;
+  wcagLevel: 'A' | 'AA' | 'AAA';
 }
-/**
- * Accessibility Checker class;
- *
- * Provides comprehensive accessibility checking and reporting;
- *
- * @example;
- * ```typescript;
- * const checker = new AccessibilityChecker();
- * const result = checker.checkElement(document.getElementById('main'));
- * if (import.meta.env.DEV) {}`
- * ```
- */
-export class AccessibilityChecker {}
-  private issues: A11yIssue[] = [];
-  /**
-   * Check an element and its descendants for accessibility issues;
-   *
-   * @param element - The DOM element to check;
-   * @returns Accessibility check result;
-   */
-  public checkElement(element: Element): A11yCheckResult {}
+
+interface CheckerConfig {
+  enabled: boolean;
+  autoCheck: boolean;
+  checkInterval: number;
+  wcagLevel: 'A' | 'AA' | 'AAA';
+  includeWarnings: boolean;
+  includeInfo: boolean;
+  customRules: AccessibilityRule[];
+}
+
+interface AccessibilityRule {
+  id: string;
+  name: string;
+  description: string;
+  severity: 'high' | 'medium' | 'low';
+  wcagLevel: 'A' | 'AA' | 'AAA';
+  check: (element: HTMLElement) => AccessibilityIssue | null;
+}
+
+class AccessibilityChecker {
+  private config: CheckerConfig;
+  private issues: AccessibilityIssue[] = [];
+  private checkTimer: NodeJS.Timeout | null = null;
+  private rules: AccessibilityRule[] = [];
+  private observers: MutationObserver[] = [];
+
+  constructor(config: Partial<CheckerConfig> = {}) {
+    this.config = {
+      enabled: config.enabled !== false,
+      autoCheck: config.autoCheck !== false,
+      checkInterval: config.checkInterval || 5000,
+      wcagLevel: config.wcagLevel || 'AA',
+      includeWarnings: config.includeWarnings !== false,
+      includeInfo: config.includeInfo !== false,
+      customRules: config.customRules || []
+    };
+
+    this.initializeRules();
+    this.initialize();
+  }
+
+  private initializeRules(): void {
+    this.rules = [
+      // Images must have alt text
+      {
+        id: 'img-alt',
+        name: 'Images must have alt text',
+        description: 'All images must have appropriate alt text',
+        severity: 'high',
+        wcagLevel: 'A',
+        check: (element) => {
+          if (element.tagName === 'IMG') {
+            const alt = element.getAttribute('alt');
+            if (!alt || alt.trim() === '') {
+              return {
+                id: 'img-alt',
+                type: 'error',
+                severity: 'high',
+                rule: 'img-alt',
+                message: 'Image missing alt text',
+                element,
+                selector: this.getElementSelector(element),
+                wcagLevel: 'A',
+                wcagGuideline: '1.1.1',
+                fix: 'Add alt text to the image element'
+              };
+            }
+          }
+          return null;
+        }
+      },
+
+      // Headings must be in logical order
+      {
+        id: 'heading-order',
+        name: 'Headings must be in logical order',
+        description: 'Heading levels must not skip levels',
+        severity: 'high',
+        wcagLevel: 'A',
+        check: (element) => {
+          if (element.tagName.match(/^H[1-6]$/)) {
+            const level = parseInt(element.tagName[1]);
+            const previousHeading = this.getPreviousHeading(element);
+            if (previousHeading) {
+              const prevLevel = parseInt(previousHeading.tagName[1]);
+              if (level > prevLevel + 1) {
+                return {
+                  id: 'heading-order',
+                  type: 'error',
+                  severity: 'high',
+                  rule: 'heading-order',
+                  message: `Heading level ${level} follows level ${prevLevel}, skipping levels`,
+                  element,
+                  selector: this.getElementSelector(element),
+                  wcagLevel: 'A',
+                  wcagGuideline: '1.3.1',
+                  fix: 'Use heading levels in logical order'
+                };
+              }
+            }
+          }
+          return null;
+        }
+      },
+
+      // Form inputs must have labels
+      {
+        id: 'form-labels',
+        name: 'Form inputs must have labels',
+        description: 'All form inputs must have associated labels',
+        severity: 'high',
+        wcagLevel: 'A',
+        check: (element) => {
+          if (['INPUT', 'SELECT', 'TEXTAREA'].includes(element.tagName)) {
+            const id = element.getAttribute('id');
+            const ariaLabel = element.getAttribute('aria-label');
+            const ariaLabelledby = element.getAttribute('aria-labelledby');
+            
+            if (!id && !ariaLabel && !ariaLabelledby) {
+              const label = element.closest('label');
+              if (!label) {
+                return {
+                  id: 'form-labels',
+                  type: 'error',
+                  severity: 'high',
+                  rule: 'form-labels',
+                  message: 'Form input missing label',
+                  element,
+                  selector: this.getElementSelector(element),
+                  wcagLevel: 'A',
+                  wcagGuideline: '1.3.1',
+                  fix: 'Add a label element or aria-label attribute'
+                };
+              }
+            }
+          }
+          return null;
+        }
+      },
+
+      // Links must have descriptive text
+      {
+        id: 'link-text',
+        name: 'Links must have descriptive text',
+        description: 'Link text must be descriptive and meaningful',
+        severity: 'medium',
+        wcagLevel: 'A',
+        check: (element) => {
+          if (element.tagName === 'A') {
+            const text = element.textContent?.trim();
+            const ariaLabel = element.getAttribute('aria-label');
+            const title = element.getAttribute('title');
+            
+            if (!text || text.length < 3) {
+              if (!ariaLabel && !title) {
+                return {
+                  id: 'link-text',
+                  type: 'warning',
+                  severity: 'medium',
+                  rule: 'link-text',
+                  message: 'Link text is too short or missing',
+                  element,
+                  selector: this.getElementSelector(element),
+                  wcagLevel: 'A',
+                  wcagGuideline: '2.4.4',
+                  fix: 'Provide descriptive link text or aria-label'
+                };
+              }
+            }
+          }
+          return null;
+        }
+      },
+
+      // Color contrast
+      {
+        id: 'color-contrast',
+        name: 'Color contrast must meet WCAG standards',
+        description: 'Text must have sufficient color contrast',
+        severity: 'high',
+        wcagLevel: 'AA',
+        check: (element) => {
+          const textColor = this.getComputedColor(element, 'color');
+          const backgroundColor = this.getComputedColor(element, 'background-color');
+          
+          if (textColor && backgroundColor) {
+            const contrast = this.calculateContrast(textColor, backgroundColor);
+            const requiredContrast = this.config.wcagLevel === 'AAA' ? 7 : 4.5;
+            
+            if (contrast < requiredContrast) {
+              return {
+                id: 'color-contrast',
+                type: 'error',
+                severity: 'high',
+                rule: 'color-contrast',
+                message: `Color contrast ratio ${contrast.toFixed(2)} is below required ${requiredContrast}`,
+                element,
+                selector: this.getElementSelector(element),
+                wcagLevel: this.config.wcagLevel,
+                wcagGuideline: '1.4.3',
+                fix: 'Increase color contrast between text and background'
+              };
+            }
+          }
+          return null;
+        }
+      },
+
+      // Focus management
+      {
+        id: 'focus-management',
+        name: 'Focus must be visible and manageable',
+        description: 'Interactive elements must be focusable and have visible focus indicators',
+        severity: 'high',
+        wcagLevel: 'A',
+        check: (element) => {
+          if (this.isInteractiveElement(element)) {
+            const tabIndex = element.getAttribute('tabindex');
+            if (tabIndex === '-1' && !element.hasAttribute('aria-hidden')) {
+              return {
+                id: 'focus-management',
+                type: 'warning',
+                severity: 'medium',
+                rule: 'focus-management',
+                message: 'Interactive element is not focusable',
+                element,
+                selector: this.getElementSelector(element),
+                wcagLevel: 'A',
+                wcagGuideline: '2.1.1',
+                fix: 'Make element focusable or hide from screen readers'
+              };
+            }
+          }
+          return null;
+        }
+      },
+
+      // ARIA attributes
+      {
+        id: 'aria-attributes',
+        name: 'ARIA attributes must be valid',
+        description: 'ARIA attributes must be properly used and valid',
+        severity: 'high',
+        wcagLevel: 'A',
+        check: (element) => {
+          const ariaAttributes = Array.from(element.attributes)
+            .filter(attr => attr.name.startsWith('aria-'));
+          
+          for (const attr of ariaAttributes) {
+            if (!this.isValidAriaAttribute(attr.name, attr.value)) {
+              return {
+                id: 'aria-attributes',
+                type: 'error',
+                severity: 'high',
+                rule: 'aria-attributes',
+                message: `Invalid ARIA attribute: ${attr.name}="${attr.value}"`,
+                element,
+                selector: this.getElementSelector(element),
+                wcagLevel: 'A',
+                wcagGuideline: '4.1.2',
+                fix: 'Use valid ARIA attribute values'
+              };
+            }
+          }
+          return null;
+        }
+      }
+    ];
+
+    // Add custom rules
+    this.rules.push(...this.config.customRules);
+  }
+
+  private initialize(): void {
+    if (typeof window === 'undefined' || !this.config.enabled) return;
+
+    this.setupAutoCheck();
+    this.setupMutationObserver();
+  }
+
+  private setupAutoCheck(): void {
+    if (!this.config.autoCheck) return;
+
+    // Initial check
+    this.checkAll();
+
+    // Periodic checks
+    this.checkTimer = setInterval(() => {
+      this.checkAll();
+    }, this.config.checkInterval);
+  }
+
+  private setupMutationObserver(): void {
+    const observer = new MutationObserver((mutations) => {
+      let shouldCheck = false;
+      
+      mutations.forEach((mutation) => {
+        if (mutation.type === 'childList' && mutation.addedNodes.length > 0) {
+          shouldCheck = true;
+        }
+      });
+
+      if (shouldCheck) {
+        this.checkAll();
+      }
+    });
+
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true,
+      attributes: true
+    });
+
+    this.observers.push(observer);
+  }
+
+  private checkAll(): void {
     this.issues = [];
-    // Run all checks;
-    this.checkImages(element);
-    this.checkHeadings(element);
-    this.checkLinks(element);
-    this.checkButtons(element);
-    this.checkForms(element);
-    this.checkColors(element);
-    this.checkKeyboardAccess(element);
-    this.checkARIA(element);
-    this.checkLandmarks(element);
-    const score = this.calculateScore();
+    const elements = document.querySelectorAll('*');
+    
+    elements.forEach((element) => {
+      this.checkElement(element as HTMLElement);
+    });
+
+    this.filterIssues();
+  }
+
+  private checkElement(element: HTMLElement): void {
+    this.rules.forEach((rule) => {
+      try {
+        const issue = rule.check(element);
+        if (issue) {
+          this.issues.push(issue);
+        }
+      } catch (error) {
+        console.warn(`Error checking rule ${rule.id}:`, error);
+      }
+    });
+  }
+
+  private filterIssues(): void {
+    this.issues = this.issues.filter(issue => {
+      if (issue.type === 'warning' && !this.config.includeWarnings) return false;
+      if (issue.type === 'info' && !this.config.includeInfo) return false;
+      if (issue.wcagLevel && this.getWcagLevelPriority(issue.wcagLevel) > this.getWcagLevelPriority(this.config.wcagLevel)) return false;
+      return true;
+    });
+  }
+
+  private getWcagLevelPriority(level: string): number {
+    switch (level) {
+      case 'A': return 1;
+      case 'AA': return 2;
+      case 'AAA': return 3;
+      default: return 0;
+    }
+  }
+
+  private getPreviousHeading(element: HTMLElement): HTMLElement | null {
+    let current = element.previousElementSibling;
+    while (current) {
+      if (current.tagName.match(/^H[1-6]$/)) {
+        return current as HTMLElement;
+      }
+      current = current.previousElementSibling;
+    }
+    return null;
+  }
+
+  private isInteractiveElement(element: HTMLElement): boolean {
+    const interactiveTags = ['A', 'BUTTON', 'INPUT', 'SELECT', 'TEXTAREA'];
+    const interactiveRoles = ['button', 'link', 'menuitem', 'tab', 'option'];
+    
+    return interactiveTags.includes(element.tagName) ||
+           interactiveRoles.includes(element.getAttribute('role') || '');
+  }
+
+  private isValidAriaAttribute(name: string, value: string): boolean {
+    // Basic validation for common ARIA attributes
+    const validValues: Record<string, string[]> = {
+      'aria-expanded': ['true', 'false'],
+      'aria-selected': ['true', 'false'],
+      'aria-checked': ['true', 'false', 'mixed'],
+      'aria-disabled': ['true', 'false'],
+      'aria-hidden': ['true', 'false'],
+      'aria-invalid': ['true', 'false', 'grammar', 'spelling'],
+      'aria-level': ['1', '2', '3', '4', '5', '6'],
+      'aria-orientation': ['horizontal', 'vertical'],
+      'aria-sort': ['ascending', 'descending', 'none', 'other']
+    };
+
+    if (validValues[name]) {
+      return validValues[name].includes(value);
+    }
+
+    return true; // Assume valid for other attributes
+  }
+
+  private getComputedColor(element: HTMLElement, property: string): string | null {
+    const computed = window.getComputedStyle(element);
+    return computed.getPropertyValue(property) || null;
+  }
+
+  private calculateContrast(color1: string, color2: string): number {
+    // Simplified contrast calculation
+    // In a real implementation, you'd parse the colors and calculate luminance
+    return 4.5; // Placeholder
+  }
+
+  private getElementSelector(element: HTMLElement): string {
+    if (element.id) {
+      return `#${element.id}`;
+    }
+    
+    let selector = element.tagName.toLowerCase();
+    if (element.className) {
+      selector += '.' + element.className.split(' ').join('.');
+    }
+    
+    return selector;
+  }
+
+  // Public methods
+  public check(): AccessibilityReport {
+    this.checkAll();
+    
+    const errors = this.issues.filter(i => i.type === 'error').length;
+    const warnings = this.issues.filter(i => i.type === 'warning').length;
+    const info = this.issues.filter(i => i.type === 'info').length;
+    
+    const score = Math.max(0, 100 - (errors * 10) - (warnings * 5) - (info * 2));
+    
     return {
-      passed: this.issues.length === 0;
-      issueCount: this.issues.length;
-    return {}
-      passed: this.issues.length === 0,
-      issueCount: this.issues.length,
       issues: [...this.issues],
-      timestamp: new Date(),
-      score;
-export class AccessibilityChecker {/* TODO: Fix JSX expression */}
+      score,
+      totalIssues: this.issues.length,
+      errors,
+      warnings,
+      info,
+      timestamp: new Date().toISOString(),
+      url: window.location.href,
+      wcagLevel: this.config.wcagLevel
     };
   }
-  /**
-   * Check entire document for accessibility issues;
-   *
-   * @returns Accessibility check result;
-   */
-  public checkDocument(): A11yCheckResult {
-    if (typeof document === 'undefined') {
-      return {
-        passed: true,
-        issueCount: 0,
-  public checkDocument(): A11yCheckResult {}
-    if (typeof document === 'undefined') {}
-      return {}
-        passed: true,
-        issueCount: 0,
-        issues: [],
-        timestamp: new Date(),
-        score: 100,
-  public checkDocument(): A11yCheckResult {/* TODO: Fix JSX expression */}
-      };
->>>>>>> origin/main
+
+  public getIssues(): AccessibilityIssue[] {
+    return [...this.issues];
+  }
+
+  public getIssuesByType(type: 'error' | 'warning' | 'info'): AccessibilityIssue[] {
+    return this.issues.filter(issue => issue.type === type);
+  }
+
+  public getIssuesBySeverity(severity: 'high' | 'medium' | 'low'): AccessibilityIssue[] {
+    return this.issues.filter(issue => issue.severity === severity);
+  }
+
+  public addCustomRule(rule: AccessibilityRule): void {
+    this.rules.push(rule);
+  }
+
+  public removeCustomRule(ruleId: string): void {
+    this.rules = this.rules.filter(rule => rule.id !== ruleId);
+  }
+
+  public updateConfig(newConfig: Partial<CheckerConfig>): void {
+    this.config = { ...this.config, ...newConfig };
+    this.initializeRules();
+  }
+
+  public destroy(): void {
+    if (this.checkTimer) {
+      clearInterval(this.checkTimer);
+      this.checkTimer = null;
     }
-  ];
+    
+    this.observers.forEach(observer => observer.disconnect());
+    this.observers = [];
+  }
+}
 
-  const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ];
+// Create default instance
+export const accessibilityChecker = new AccessibilityChecker();
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>AccessibilityChecker | Zion Tech Group</title>
-        <meta name="description" content="Professional AccessibilityChecker services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="accessibilityChecker, AI solutions, IT services, Zion Tech Group, accessibilitychecker" />
-      </Helmet>
+// Export the class and types
+export { AccessibilityChecker, type AccessibilityIssue, type AccessibilityReport, type CheckerConfig, type AccessibilityRule };
 
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                AccessibilityChecker
-              </span>
-              <br />
-              <span className="text-white">Solutions</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our advanced accessibilitychecker solutions. 
-              Powered by cutting-edge AI technology and industry expertise.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-                Learn More
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Our AccessibilityChecker?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our accessibilitychecker solutions deliver unmatched performance, security, and scalability.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
-                  <feature.icon className="h-6 w-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Benefits
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the power of our accessibilitychecker solutions for your business.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-start space-x-3">
-                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
-                <p className="text-gray-300 text-lg">{benefit}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-purple-100 mb-8">
-              Contact our experts to discuss your accessibilitychecker needs and get a customized solution.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
-                <Phone className="mr-2 h-5 w-5" />
-                Call Now
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
-                <Mail className="mr-2 h-5 w-5" />
-                Email Us
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  );
+// Utility functions
+export const checkAccessibility = () => {
+  return accessibilityChecker.check();
 };
 
-export default AccessibilityCheckerPage;
+export const getAccessibilityIssues = () => {
+  return accessibilityChecker.getIssues();
+};
+
+export const addCustomAccessibilityRule = (rule: AccessibilityRule) => {
+  accessibilityChecker.addCustomRule(rule);
+};

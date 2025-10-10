@@ -1,12 +1,5 @@
 // SEO utilities for the application
 
-<<<<<<< HEAD
-export interface SEOData {
-  title: string,
-  description: string,
-  keywords: string[];
-  canonicalUrl: string,
-=======
 export interface SEOConfig {
   title: string;
   description: string;
@@ -14,7 +7,6 @@ export interface SEOConfig {
   canonicalUrl?: string;
   ogTitle?: string;
   ogDescription?: string;
->>>>>>> origin/main
   ogImage?: string;
   ogType?: string;
   twitterCard?: string;

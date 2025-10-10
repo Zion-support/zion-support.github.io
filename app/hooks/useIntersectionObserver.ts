@@ -8,15 +8,9 @@ interface UseIntersectionObserverOptions {
 }
 
 interface UseIntersectionObserverReturn {
-<<<<<<< HEAD
-  ref: React.RefObject<Element>;
-  isIntersecting: boolean;
-  entry?: IntersectionObserverEntry;
-=======
   ref: React.RefObject<HTMLElement>;
   isIntersecting: boolean;
   entry: IntersectionObserverEntry | undefined;
->>>>>>> cursor/fix-errors-and-merge-to-main-d2d0
 }
 
 export function useIntersectionObserver(

@@ -123,11 +123,6 @@ const AIContentDeliveryNetworkPage: React.FC = () => {
             </div>
           </div>
         </section>
-
-              </div>
-            </div>
-          </div>
-        </section>
       </main>
 
       <Footer />
