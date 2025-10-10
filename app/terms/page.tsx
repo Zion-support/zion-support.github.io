@@ -86,7 +86,7 @@ export default function TermsPage() {
                     </div>
                   </div>
                 </div>
-              )</div>
+              ))}
             </div>
 
             <div className="mt-16 bg-gray-50 rounded-lg p-8"></div>

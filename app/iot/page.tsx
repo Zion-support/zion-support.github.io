@@ -260,7 +260,7 @@ const IoTPage: React.FC = () => {
                               <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
                               {feature}
                             </li>
-                          )</div>
+                          ))}
                         </ul>
                       </div>
 
@@ -271,7 +271,7 @@ const IoTPage: React.FC = () => {
                             <span key={techIndex} className="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">
                               {tech}
                             </span>
-                          )</div>
+                          ))}
                         </div>
                       </div>
 
@@ -283,7 +283,7 @@ const IoTPage: React.FC = () => {
                               <Star className="w-4 h-4 text-yellow-500 mr-2 flex-shrink-0" />
                               {benefit}
                             </li>
-                          )</div>
+                          ))}
                         </ul>
                       </div>
 
@@ -291,11 +291,11 @@ const IoTPage: React.FC = () => {
                         Get IoT Quote
                       </button>
                     </div>
-                  )</div>
+                  ))}
               </div>
             </div>
           </section>
-        )</div>
+        ))}
         {/* IoT Capabilities Showcase */}
         <section className="py-16 bg-white">
         </section>

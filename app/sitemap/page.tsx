@@ -60,7 +60,7 @@ const SitemapPage: React.FC = () => {
                   {page.path}
                 </p>
               </div>
-            )</div>
+            ))}
           </div>
         </div>
 

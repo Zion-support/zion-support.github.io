@@ -49,13 +49,13 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
       </section>
 
               </div>
-            )</div>
+            ))}
           </div>
         </div>
       </section>
 
               </div>
-            )</div>
+            ))}
           </div>
         </div>
       </section>

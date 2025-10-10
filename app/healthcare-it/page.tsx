@@ -93,7 +93,7 @@ import SEOOptimizer from '../components/SEOOptimizer';
                 <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
                 <p className="text-gray-300">{service.description}</p>
               </div>
-            )</div>
+            ))}
           </div>
         ))
       </section>
@@ -120,7 +120,7 @@ import SEOOptimizer from '../components/SEOOptimizer';
                 <h3 className="text-lg font-semibold text-white">{benefit}</h3>
 
               </div>
-            )</div>
+            ))}
           ))
         </div>
       </section>

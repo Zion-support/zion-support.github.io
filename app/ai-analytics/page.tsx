@@ -133,7 +133,7 @@ return (
                   </div>
                   <p className="text-lg text-white font-medium">{benefit}</p>
                 </div>
-              )</div>
+              ))}
             </div>
           </div>
         </section>

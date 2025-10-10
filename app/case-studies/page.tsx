@@ -36,7 +36,7 @@ const CaseStudiesPage: React.FC = () => {
           </div>
         </section>
 
-              )</div>
+              ))}
             </div>
           </div>
         </section>

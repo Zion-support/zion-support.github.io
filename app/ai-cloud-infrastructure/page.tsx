@@ -103,11 +103,11 @@ const AiCloudInfrastructurePage: React.FC = () => {
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                           {benefit}
                         </li>
-                      )</div>
+                      ))}
                     </ul>
                   </div>
                 </div>
-              )</div>
+              ))}
             </div>
           </div>
         </section>
@@ -141,10 +141,10 @@ const AiCloudInfrastructurePage: React.FC = () => {
                       <CheckCircle className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
                       {benefit}
                     </li>
-                  )</div>
+                  ))}
                 </ul>
               </div>
-            )</div>
+            ))}
           </div>
         </div>
       </section>

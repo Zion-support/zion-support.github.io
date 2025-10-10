@@ -123,7 +123,7 @@ const SupportPage: React.FC = () => {
                 >
                   {category.name}
                 </button>
-              )</div>
+              ))}
             </div>
           </div>
         </section>
@@ -148,7 +148,7 @@ const SupportPage: React.FC = () => {
                   <p className="text-cyan-400 font-medium">{channel.contact}</p>
                   <p className="text-sm text-gray-400 mt-2">{channel.availability}</p>
                 </div>
-              )</div>
+              ))}
             </div>
           ))
         </section>
@@ -167,7 +167,7 @@ const SupportPage: React.FC = () => {
                   <h3 className="text-lg font-semibold text-white mb-3">{faq.question}</h3>
                   <p className="text-gray-300">{faq.answer}</p>
                 </div>
-              )</div>
+              ))}
             ))
           </div>
         </section>

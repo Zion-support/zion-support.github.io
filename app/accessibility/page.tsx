@@ -135,10 +135,10 @@ const AccessibilityPage: React.FC = () => {
                         <CheckCircle className="w-4 h-4 text-cyan-400 mr-3 flex-shrink-0" />
                         {benefit}
                       </li>
-                    )</div>
+                    ))}
                   </ul>
                 </div>
-              )</div>
+              ))}
             </div>
           </div>
         </section>
@@ -171,7 +171,7 @@ const AccessibilityPage: React.FC = () => {
                     {standard.status}
                   </span>
                 </div>
-              )</div>
+              ))}
             </div>
           </div>
         </section>

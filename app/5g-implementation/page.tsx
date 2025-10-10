@@ -107,11 +107,11 @@ const FiveGImplementationPage: React.FC = () => {
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                           {benefit}
                         </li>
-                      )</div>
+                      ))}
                     </ul>
                   </div>
                 </div>
-              )</div>
+              ))}
             </div>
           </div>
         </section>

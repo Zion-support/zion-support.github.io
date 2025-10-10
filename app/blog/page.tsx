@@ -147,7 +147,7 @@ const BlogPage: React.FC = () => {
                   </div>
                 </div>
               </div>
-            )</div>
+            ))}
           </div>
         </section>
 
@@ -192,7 +192,7 @@ const BlogPage: React.FC = () => {
                     </button>
                   </div>
                 </article>
-              )</div>
+              ))}
             </div>
           </div>
         </section>

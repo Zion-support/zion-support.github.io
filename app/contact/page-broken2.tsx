@@ -235,7 +235,7 @@ phone: '',
                         <option key={service} value={service}>
                           {service}
                         </option>
-                      )</div>
+                      ))}
                     </select>
                   </div>
                 </div>

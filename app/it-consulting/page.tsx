@@ -487,7 +487,7 @@ const ITConsultingPage: React.FC = () => {
                   <option key={category.id} value={category.id}>
                     {category.name}
                   </option>
-                )</div>
+                ))}
               </select>
             </div>
           </div>
@@ -506,7 +506,7 @@ const ITConsultingPage: React.FC = () => {
               >
                 {category.name}
               </button>
-            )</div>
+            ))}
           </div>
         </div>
       </section>
@@ -540,7 +540,7 @@ const ITConsultingPage: React.FC = () => {
                           <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
                           <span>{feature}</span>
                         </li>
-                      )</div>
+                      ))}
                     </ul>
                   </div>
                   
@@ -552,7 +552,7 @@ const ITConsultingPage: React.FC = () => {
                           <TrendingUp className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                           <span>{benefit}</span>
                         </li>
-                      )</div>
+                      ))}
                     </ul>
                   </div>
                 </div>
@@ -595,7 +595,7 @@ const ITConsultingPage: React.FC = () => {
                   </a>
                 </div>
               </div>
-            )</div>
+            ))}
           </div>
         </div>
       </section>

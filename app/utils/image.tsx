@@ -100,7 +100,7 @@ export const,
         className={`bg-gray-200 flex items-center justify-center ${className}`}
         style={imageStyle}
         {...props})
-      >)</div>
+      >))}
         <span className="text-gray-500 text-sm"><span className="sr-only">Screen reader: </span>Failed to load image</span>)
       </div>)
     ),

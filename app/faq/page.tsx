@@ -71,7 +71,7 @@ const FAQPage: React.FC = () => {
                     {faq.answer}
                   </p>
                 </div>
-              )</div>
+              ))}
             </div>
 
             <div className="mt-16 text-center">

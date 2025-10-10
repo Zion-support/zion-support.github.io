@@ -119,10 +119,10 @@ export default function PrivacyPage() {
                     <ul className="text-sm text-gray-600 space-y-1">
                       {type.examples.map((example, idx) => (
                         <li key={idx}>• {example}</li>
-                      )</div>
+                      ))}
                     </ul>
                   </li>
-                )</div>
+                ))}
               </li>
             </section>
 
@@ -141,7 +141,7 @@ export default function PrivacyPage() {
                       <p className="text-gray-700">{purpose.description}</p>
                     </li>
                   </li>
-                )</div>
+                ))}
               </li>
             </section>
 
@@ -181,7 +181,7 @@ export default function PrivacyPage() {
                     </li>
                     <p className="text-gray-700">{right.description}</p>
                   </li>
-                )</div>
+                ))}
               </li>
             </section>
 

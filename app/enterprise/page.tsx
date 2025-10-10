@@ -140,7 +140,7 @@ const EnterprisePage: React.FC = () => {
                 <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
                 <div className="text-gray-300 text-sm">{stat.label}</div>
               </div>
-            )</div>
+            ))}
           </div>
         </div>
       </section>
@@ -169,10 +169,10 @@ const EnterprisePage: React.FC = () => {
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                       {benefit}
                     </li>
-                  )</div>
+                  ))}
                 </ul>
               </div>
-            )</div>
+            ))}
           </div>
         </div>
       </section>
@@ -186,10 +186,10 @@ const EnterprisePage: React.FC = () => {
           </div>
           
                     </li>
-                  )</div>
+                  ))}
                 </ul>
               </div>
-            )</div>
+            ))}
           </div>
         </div>
       </section>

@@ -869,7 +869,7 @@ const ServicesPage: React.FC = () => {
                         <option key={category} value={category} className="bg-gray-800">
                           {category}
                         </option>
-                      )</div>
+                      ))}
                     </select>
                   </div>
                 </div>
@@ -888,7 +888,7 @@ const ServicesPage: React.FC = () => {
                   >
                     {category}
                   </button>
-                )</div>
+                ))}
               </div>
             ))
           </div>
@@ -939,7 +939,7 @@ const ServicesPage: React.FC = () => {
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                           {feature}
                         </li>
-                      )</div>
+                      ))}
                       {service.features.length > 4 && (
                         <li className="text-gray-400 text-sm">
                           +{service.features.length - 4} more features
@@ -963,14 +963,14 @@ const ServicesPage: React.FC = () => {
                     </button>
                   </div>
                 </div>
-              )</div>
+              ))}
             </div>
             
             {/* Pagination */}
             {totalPages > 1 && (
               <div className="flex justify-center items-center mt-12 space-x-2">
                 <button
-                  onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1)</div>
+                  onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
                   disabled={currentPage === 1}
                   className="px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white hover:bg-white/20 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300"
                 >
@@ -990,11 +990,11 @@ const ServicesPage: React.FC = () => {
                     >
                       {page}
                     </button>
-                  )</div>
+                  ))}
                 </div>
                 
                 <button
-                  onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages)</div>
+                  onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
                   disabled={currentPage === totalPages}
                   className="px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white hover:bg-white/20 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300"
                 >

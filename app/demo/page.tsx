@@ -161,7 +161,7 @@ const DemoPage: React.FC = () => {
                   <span className="text-xs text-cyan-400">{demo.duration}</span>
                 </div>
               </button>
-            )</div>
+            ))}
           </div>
         </div>
       </section>
@@ -194,7 +194,7 @@ const DemoPage: React.FC = () => {
                           <CheckCircle className="w-5 h-5 text-green-400 mr-2 flex-shrink-0" />
                           <span className="text-gray-300">{feature}</span>
                         </li>
-                      )</div>
+                      ))}
                     </ul>
                   </div>
                   
@@ -239,7 +239,7 @@ const DemoPage: React.FC = () => {
                 <div className="flex items-center mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                  )</div>
+                  ))}
                 </div>
                 <blockquote className="text-gray-300 mb-4 italic">
                   "{testimonial.quote}"
@@ -249,7 +249,7 @@ const DemoPage: React.FC = () => {
                   <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
                 </div>
               </div>
-            )</div>
+            ))}
           </div>
         </div>
       </section>

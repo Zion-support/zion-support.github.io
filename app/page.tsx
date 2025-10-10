@@ -56,7 +56,6 @@ const HomePage: React.FC = () => {
   }, []);
   return (
     <>
-  </>
       <SEOOptimizer
         title="Zion Tech Group - Advanced AI and IT Solutions"
         description="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology."
@@ -126,7 +125,6 @@ const HomePage: React.FC = () => {
       <main id="main-content" className="container mx-auto px-4 py-16 pt-24" role="main">
         {/* Hero Section */}
         <section
-        </section>
           className={`text-center mb-16 transition-all duration-1000 cyber-scan-line ${
             isLoaded && isVisible 
               ? 'opacity-100 translate-y-0' 
@@ -751,7 +749,6 @@ const HomePage: React.FC = () => {
         </section>
         {/* Micro SAAS Solutions Section */}
         <section className="mb-16" aria-labelledby="micro-saas-heading">
-        </section>
           <h2 id="micro-saas-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
             Micro SAAS Solutions
           </h2>
@@ -1162,12 +1159,11 @@ const HomePage: React.FC = () => {
               </div>
             </div>
           </div>
-        </section>
-      </main>
+        </main>
       {/* Footer */}
       <Footer />
     </div>
-
+    </>
   );
 };
 export default HomePage;

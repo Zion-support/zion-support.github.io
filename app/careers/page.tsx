@@ -126,12 +126,12 @@ const CareersPage: React.FC = () => {
                           <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
                           {req}
                         </li>
-                      )</div>
+                      ))}
                     </ul>
                   </div>
 
                 </div>
-              )</div>
+              ))}
             </div>
 
             </div>

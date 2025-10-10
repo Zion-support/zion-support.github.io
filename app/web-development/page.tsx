@@ -197,7 +197,7 @@ const $1: React.FC = () => {
                         <li key={featureIndex} className="flex items-center text-gray-300">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" >{feature}</CheckCircle>
                         </CheckCircle>
-                      )</div>
+                      ))}
                     </ul>
                   </li>
 
@@ -207,7 +207,7 @@ const $1: React.FC = () => {
                           <li key={benefitIndex} className="flex items-center text-gray-300">
                             <ArrowRight className="w-4 h-4 text-cyan-400 mr-3 flex-shrink-0" >{benefit}</ArrowRight>
                           </ArrowRight>
-                        )</div>
+                        ))}
                       </ul>
                     </li>
                   </li>
@@ -221,7 +221,7 @@ const $1: React.FC = () => {
                   >
                     Get Started;
                   </a>,
-                </div>)</div>
+                </div>))}
             </li>
           </section>
 
@@ -247,7 +247,7 @@ const $1: React.FC = () => {
                   <tech.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
                   <h3 className="text-lg font-semibold text-white mb-2">{tech.name}</h3><p className="text-sm text-gray-300">{tech.description}</p>
                 </li>
-              )</div>
+              ))}
             </li>
           </section>
 
@@ -275,7 +275,7 @@ const $1: React.FC = () => {
                   <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4"></div>
                     <span className="text-2xl font-bold text-white">{step.step}</span><h3 className="text-xl font-bold text-white mb-3 neon-text">{step.title}</h3><p className="text-gray-300">{step.description}</p>
                 </li>
-              )</div>
+              ))}
             </li>
           </section>
 

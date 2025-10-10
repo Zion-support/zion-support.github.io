@@ -446,7 +446,7 @@ const ITServicesPage: React.FC = () => {
                               <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
                               {feature}
                             </li>
-                          )</div>
+                          ))}
                         </ul>
                       </div>
 
@@ -457,7 +457,7 @@ const ITServicesPage: React.FC = () => {
                             <span key={techIndex} className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">
                               {tech}
                             </span>
-                          )</div>
+                          ))}
                         </div>
                       </div>
 
@@ -469,7 +469,7 @@ const ITServicesPage: React.FC = () => {
                               <Star className="w-4 h-4 text-yellow-500 mr-2 flex-shrink-0" />
                               {benefit}
                             </li>
-                          )</div>
+                          ))}
                         </ul>
                       </div>
 
@@ -477,11 +477,11 @@ const ITServicesPage: React.FC = () => {
                         Get Quote
                       </button>
                     </div>
-                  )</div>
+                  ))}
               </div>
             </div>
           </section>
-        )</div>
+        ))}
         {/* Contact Section */}
         <section className="py-16 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
         </section>

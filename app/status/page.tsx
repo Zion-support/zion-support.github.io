@@ -202,7 +202,7 @@ export default function StatusPage() {
                   </div>
                 ))
               </div>
-            )</div>
+            ))}
           </div>
         </div>
       </section>
@@ -244,7 +244,7 @@ export default function StatusPage() {
                   <span className="text-white text-sm">{incident.affectedServices.join(', ')}</span>
                 </div>
               </div>
-            )</div>
+            ))}
           </div>
         </div>
       </section>

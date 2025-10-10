@@ -104,11 +104,11 @@ const AiContentWriterPage: React.FC = () => {
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                           {benefit}
                         </li>
-                      )</div>
+                      ))}
                     </ul>
                   </div>
                 </div>
-              )</div>
+              ))}
             </div>
           </div>
         </section>
@@ -134,7 +134,7 @@ const AiContentWriterPage: React.FC = () => {
                   </div>
                   <p className="text-lg text-white font-medium">{benefit}</p>
                 </div>
-              )</div>
+              ))}
             </div>
           ))
         </section>

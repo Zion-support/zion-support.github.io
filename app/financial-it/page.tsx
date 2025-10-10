@@ -140,10 +140,10 @@ const FinancialITPage: React.FC = () => {
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                       {benefit}
                     </li>
-                  )</div>
+                  ))}
                 </ul>
               </div>
-            )</div>
+            ))}
           </div>
         </div>
       </section>
@@ -168,7 +168,7 @@ const FinancialITPage: React.FC = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
                 <p className="text-gray-300">{service.description}</p>
               </div>
-            )</div>
+            ))}
           </div>
         </div>
       </section>
@@ -194,7 +194,7 @@ const FinancialITPage: React.FC = () => {
                 </div>
                 <h3 className="text-lg font-semibold text-white">{benefit}</h3>
               </div>
-            )</div>
+            ))}
           </div>
         ))
       </section>

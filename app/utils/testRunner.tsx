@@ -1007,7 +1007,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
         <h3 id="heading-summary">Summary</h3><p>Total: ${this.results.length}</p>
         <p>Passed: ${this.results.filter(r => r.status === 'passed').length}</p><p>Failed: ${this.results.filter(r => r.status === 'failed').length}</p>
         <p>Skipped: ${this.results.filter(r => r.status === 'skipped').length}</p><p>Duration: ${Date.now() - this.startTime}ms</p><div class="tests">${this.results</div>
-          .map()</div>
+          .map())}
     result => `}</div>
             <div class="test ${result.status}"></div>
                 <h4 id="heading-${result.name}">${result.name}<p>Status: ${result.status}</p><p>Duration: ${result.duration}ms</p>

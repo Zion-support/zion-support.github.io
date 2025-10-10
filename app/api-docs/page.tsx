@@ -221,10 +221,10 @@ export default function APIDocsPage() {
                         </pre>
                       </div>
                     </div>
-                  )</div>
+                  ))}
                 </div>
               </div>
-            )</div>
+            ))}
           </div>
         </div>
       </section>
