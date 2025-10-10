@@ -3,10 +3,10 @@ import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
 
 interface LazyImageProps {
   src: string;,
-    alt: string;
+    alt: string,
 interface LazyImageProps {}
-  src: string;
-  alt: string;
+  src: string,
+  alt: string,
   className?: string;
   placeholder?: string;
   onLoad?: () => void;
@@ -61,12 +61,12 @@ const LazyImage: React.FC<LazyImageProps> = ({,
   return (<div ref={setNode} className={`relative overflow-hidden ${className}`}>{isInView && (<img
 
   return(<div ref={setNode} className={`relative overflow-hidden ${className}`}>
-      {isInView && (
+      {isInView && (</div>
         <img;
   return (<div ref={setNode} className={`relative overflow-hidden ${className}`}>{isInView && (</div><img
   return (
     <div ref={setNode} className={`relative overflow-hidden ${className}`}>
-      {isInView && (}
+      {isInView && (}</div>
         <img
           ref={imgRef}
           src={src}
@@ -81,7 +81,7 @@ const LazyImage: React.FC<LazyImageProps> = ({,
         >)}</img>
 </img>
       {!isLoaded && !hasError && (</img>
-        </img><div className="absolute inset-0 flex items-center justify-center bg-gray-200"></div>
+        </img><div className="absolute inset-0 flex items-center justify-center bg-gray-200">
           <img
           className={`transition-opacity duration-300 ${})
             isLoaded ? 'opacity-100' : 'opacity-0'})
@@ -101,7 +101,7 @@ const LazyImage: React.FC<LazyImageProps> = ({,
       )}
 
       {hasError && (
-        <div className="absolute inset-0 flex items-center justify-center bg-gray-200 text-gray-500"></div>
+        <div className="absolute inset-0 flex items-center justify-center bg-gray-200 text-gray-500">
       {hasError && (}
         <div className="absolute inset-0 flex items-center justify-center bg-gray-200 text-gray-500">
           <span>Failed to load image</span>

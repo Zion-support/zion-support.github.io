@@ -7,31 +7,31 @@ import SEOOptimizer from '../components/SEOOptimizer';
 import PerformanceOptimizer from '../components/PerformanceOptimizer';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
 import SecurityEnhancer from '../components/SecurityEnhancer';
-const MachineLearningPage: React.FC = () => {,
+const $1: React.FC = () => {
   const services = [,
     {,
       title: 'Predictive Analytics',
       description: 'Build models that forecast future trends and behaviors with high accuracy',
       features: ['Time Series Forecasting', 'Customer Behavior Prediction', 'Sales Forecasting', 'Risk Assessment'],
-      icon: BarChart;
+      icon: BarChart,
       color: 'text-blue-400'},
     {
       title: 'Custom Model Development',
       description: 'Tailored machine learning models designed for your specific business needs',
       features: ['Algorithm Selection', 'Feature Engineering', 'Model Training', 'Performance Optimization'],
-      icon: Brain;
+      icon: Brain,
       color: 'text-purple-400'},
     {
       title: 'Data Pipeline Setup',
       description: 'Automated data processing and preparation for machine learning workflows',
       features: ['Data Collection', 'Data Cleaning', 'Feature Extraction', 'Real-time Processing'],
-      icon: Zap;
+      icon: Zap,
       color: 'text-green-400'},
     {
       title: 'Model Monitoring',
       description: 'Continuous monitoring and optimization of deployed machine learning models',
       features: ['Performance Tracking', 'Drift Detection', 'Model Retraining', 'Alert Systems'],
-      icon: Target;
+      icon: Target,
       color: 'text-cyan-400'}
   ];
 
@@ -70,7 +70,7 @@ const MachineLearningPage: React.FC = () => {,
       />
       <Analytics />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain particle-field">
-
+</div>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain particle-field"></div>
         <Navigation />
 
@@ -84,12 +84,12 @@ const MachineLearningPage: React.FC = () => {,
           {/* Services */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Our ML Services<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{services.map((service, index) => (</div>
-                <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
+                <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300"></div>
         <main className="container mx-auto px-4 py-16 pt-24">
           {/* Hero Section */}
           <section className="text-center mb-16">
             <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse glitch" data-text="Machine Learning Solutions">
-              Machine Learning Solutions;
+              Machine Learning Solutions;</h1>
             </h1>
             <p className="text-xl text-cyan-400 mb-8 font-medium">
               Advanced AI Models for Business Intelligence;
@@ -104,8 +104,8 @@ const MachineLearningPage: React.FC = () => {,
           <section className="mb-16">)
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Our ML Services</h2>)
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">),
-              {services.map((service, index) => (
-                <div key={index} className="cyber-card p-6 hover: scale-105 transition-all duration-300">,
+              {services.map((service, index) => (</div>
+                <div key={index} className="cyber-card p-6 hover: scale-105 transition-all duration-300">,</div>
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Our ML Services</h2><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{services.map((service, index) => (</section>
                 <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300"></div>
                   <service.icon className={`w-16 h-16 ${service.color} mx-auto mb-4`} />
@@ -124,11 +124,11 @@ const MachineLearningPage: React.FC = () => {,
           <section className="mb-16">
             <div className="cyber-card p-8 max-w-4xl mx-auto"></section>
               <h2 className="text-3xl font-bold text-white mb-6 text-center neon-text">Why Choose Our ML Solutions?</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+                <div></div>
                   <h3 className="text-xl font-bold text-cyan-400 mb-4">Key Benefits<ul className="space-y-3">{benefits.map((benefit, index) => (</ul>
-              <div className="grid grid-cols-1 md: grid-cols-2 gap-6">,
-                <div>,
+              <div className="grid grid-cols-1 md: grid-cols-2 gap-6">,</div>
+                <div>,</div>
                   <h3 className="text-xl font-bold text-cyan-400 mb-4">Key Benefits</h3>,
                   <ul className="space-y-3">,
                     {benefits.map((benefit, index) => (
@@ -181,7 +181,7 @@ const MachineLearningPage: React.FC = () => {,
               <h2 className="text-3xl font-bold text-white mb-4 neon-text">Ready to Harness the Power of Machine Learning?</h2><p className="text-lg text-gray-300 mb-8">Our ML experts are ready to help you build custom models that transform your business.</p>
                 Contact us today for a free consultation and discover the potential of your data.</p>
               </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
                 <a;
               <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
                 <a

@@ -126,30 +126,30 @@ export const addFocusIndicators = (): void => {
   style.textContent = `
     *:focus {
       outline: 2px solid #3b82f6;
-      outline-offset: 2px;
+      outline-offset: 2px,
     }
     
     .sr-only {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      padding: 0;
+      position: absolute,
+      width: 1px,
+      height: 1px,
+      padding: 0,
       margin: -1px;
-      overflow: hidden;
+      overflow: hidden,
       clip: rect(0, 0, 0, 0);
-      white-space: nowrap;
-      border: 0;
+      white-space: nowrap,
+      border: 0,
     }
     
     .focus\\:not-sr-only:focus {
-      position: static;
-      width: auto;
-      height: auto;
+      position: static,
+      width: auto,
+      height: auto,
       padding: 0.5rem 1rem;
-      margin: 0;
-      overflow: visible;
-      clip: auto;
-      white-space: normal;
+      margin: 0,
+      overflow: visible,
+      clip: auto,
+      white-space: normal,
     }
   `;
   

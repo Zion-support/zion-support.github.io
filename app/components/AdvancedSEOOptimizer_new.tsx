@@ -7,10 +7,10 @@ import React, { useEffect, useCallback, useMemo } from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOData {
-  title: string;
-  description: string;
+  title: string,
+  description: string,
   keywords: string[];
-  canonicalUrl: string;
+  canonicalUrl: string,
 interface SEOData {
   title?: string;
   description?: string;
@@ -26,7 +26,7 @@ interface SEOData {
 }
 
 interface AdvancedSEOOptimizerProps {}
-  seoData: SEOData;
+  seoData: SEOData,
   enableStructuredData?: boolean;
   enableOpenGraph?: boolean;
   enableTwitterCards?: boolean;
@@ -143,8 +143,8 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
 }
 
 interface AdvancedSEOOptimizerProps {
-  title: string;
-  description: string;
+  title: string,
+  description: string,
   keywords?: string[];
   canonicalUrl?: string;
   ogTitle?: string;

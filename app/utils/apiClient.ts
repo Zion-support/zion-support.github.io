@@ -13,14 +13,14 @@ interface RequestConfig {}
 }
 
 interface APIResponse<T = any> {}
-  data: T;
-  status: number;
-  statusText: string;
+  data: T,
+  status: number,
+  statusText: string,
   headers: Record<string, string>;</strin>
 }
 
 class APIClient {}
-  private baseURL: string;
+  private baseURL: string,
   private defaultHeaders: Record<string, string>;
 
   constructor(baseURL: string = '', defaultHeaders: Record<string, string> = {}) {}
@@ -32,7 +32,7 @@ class APIClient {}
   }
 
   private async makeRequest<T>(
-    endpoint: string;
+    endpoint: string,
     config: RequestConfig = {}
   ): Promise<APIResponse<T>> {}
     const {}
@@ -218,7 +218,7 @@ class ApiClient {/* TODO: Fix JSX expression */}
         }
         const contentType = response.headers.get('content-type');
         let,
-  data: T;
+  data: T,
         if (contentType?.includes('application/json')) {/* TODO: Fix JSX expression */}
         } else {/* TODO: Fix JSX expression */}
         }

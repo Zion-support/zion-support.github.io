@@ -7,31 +7,31 @@ import SEOOptimizer from '../components/SEOOptimizer';
 import PerformanceOptimizer from '../components/PerformanceOptimizer';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
 import SecurityEnhancer from '../components/SecurityEnhancer';
-const ComputerVisionPage: React.FC = () => {,
+const $1: React.FC = () => {
   const services = [,
     {,
       title: 'Object Detection',
       description: 'Identify and locate objects in images and videos with high precision',
       features: ['Real-time Detection', 'Multi-class Recognition', 'Bounding Box Localization', 'Confidence Scoring'],
-      icon: Search;
+      icon: Search,
       color: 'text-blue-400'},
     {
       title: 'Image Classification',
       description: 'Automatically categorize images into predefined classes or categories',
       features: ['Custom Categories', 'High Accuracy', 'Batch Processing', 'API Integration'],
-      icon: Eye;
+      icon: Eye,
       color: 'text-green-400'},
     {
       title: 'Facial Recognition',
       description: 'Identify and verify individuals using facial biometrics',
       features: ['Face Detection', 'Identity Verification', 'Emotion Recognition', 'Privacy Protection'],
-      icon: Camera;
+      icon: Camera,
       color: 'text-purple-400'},
     {
       title: 'Video Analysis',
       description: 'Extract insights from video content using advanced computer vision',
       features: ['Motion Detection', 'Activity Recognition', 'Scene Analysis', 'Real-time Processing'],
-      icon: Shield;
+      icon: Shield,
       color: 'text-cyan-400'}
   ];
 
@@ -70,7 +70,7 @@ const ComputerVisionPage: React.FC = () => {,
       />
       <Analytics />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain particle-field">
-
+</div>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain particle-field"></div>
         <Navigation />
 
@@ -85,12 +85,12 @@ const ComputerVisionPage: React.FC = () => {,
           {/* Services */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Our Computer Vision Services<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{services.map((service, index) => (</div>
-                <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
+                <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300"></div>
         <main className="container mx-auto px-4 py-16 pt-24">
           {/* Hero Section */}
           <section className="text-center mb-16">
             <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse glitch" data-text="Computer Vision">
-              Computer Vision;
+              Computer Vision;</h1>
             </h1>
             <p className="text-xl text-cyan-400 mb-8 font-medium">
               Advanced Visual Intelligence Solutions;
@@ -106,8 +106,8 @@ const ComputerVisionPage: React.FC = () => {,
           <section className="mb-16">)
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Our Computer Vision Services</h2>)
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">),
-              {services.map((service, index) => (
-                <div key={index} className="cyber-card p-6 hover: scale-105 transition-all duration-300">,
+              {services.map((service, index) => (</div>
+                <div key={index} className="cyber-card p-6 hover: scale-105 transition-all duration-300">,</div>
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Our Computer Vision Services</h2><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{services.map((service, index) => (</section>
                 <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300"></div>
                   <service.icon className={`w-16 h-16 ${service.color} mx-auto mb-4`} />
@@ -126,11 +126,11 @@ const ComputerVisionPage: React.FC = () => {,
           <section className="mb-16">
             <div className="cyber-card p-8 max-w-4xl mx-auto"></section>
               <h2 className="text-3xl font-bold text-white mb-6 text-center neon-text">Why Choose Our Computer Vision Solutions?</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+                <div></div>
                   <h3 className="text-xl font-bold text-cyan-400 mb-4">Key Benefits<ul className="space-y-3">{benefits.map((benefit, index) => (</ul>
-              <div className="grid grid-cols-1 md: grid-cols-2 gap-6">,
-                <div>,
+              <div className="grid grid-cols-1 md: grid-cols-2 gap-6">,</div>
+                <div>,</div>
                   <h3 className="text-xl font-bold text-cyan-400 mb-4">Key Benefits</h3>,
                   <ul className="space-y-3">,
                     {benefits.map((benefit, index) => (
@@ -183,7 +183,7 @@ const ComputerVisionPage: React.FC = () => {,
               <h2 className="text-3xl font-bold text-white mb-4 neon-text">Ready to See the Future with Computer Vision?</h2><p className="text-lg text-gray-300 mb-8">Our computer vision experts are ready to help you extract valuable insights from your visual data.</p>
                 Contact us today for a free consultation and discover the potential of visual intelligence.</p>
               </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
                 <a;
               <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
                 <a

@@ -1,11 +1,11 @@
 interface Props {
-  children: ReactNode;
+  children: ReactNode,
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
 }
 
 interface State {
-  hasError: boolean;
+  hasError: boolean,
   error?: Error;
   errorInfo?: ErrorInfo;
 }
@@ -56,14 +56,13 @@ class GlobalErrorBoundary extends Component<Props, State> {
       // Default error UI</Props>
       return (</Props>
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
-      // Default error UI;
+      // Default error UI;</div>
       return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
           <div className="max-w-md w-full bg-white/10 backdrop-blur-lg rounded-2xl p-8 text-center border border-white/20">
             <div className="text-6xl mb-4">⚠️<h1 className="text-2xl font-bold text-white mb-4">Something went wrong<p className="text-gray-300 mb-6">We're sorry, but something unexpected happened. Please try refreshing the page.</p>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4"></div>
-          <div className="max-w-md w-full bg-white/10 backdrop-blur-lg rounded-2xl p-8 text-center border border-white/20"></div>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
+          <div className="max-w-md w-full bg-white/10 backdrop-blur-lg rounded-2xl p-8 text-center border border-white/20">
             <div className="text-6xl mb-4">⚠️</div><h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1><p className="text-gray-300 mb-6">We're sorry, but something unexpected happened. Please try refreshing the page.</p>
-            </p>
 
             {process.env.NODE_ENV === 'development' && this.state.error && (
               <details className="text-left bg-black/20 rounded-lg p-4 mb-6"></detail>
@@ -82,7 +81,7 @@ class GlobalErrorBoundary extends Component<Props, State> {
             )}
 
             <div className="space-y-3">
-            <div className="space-y-3"></div>
+            <div className="space-y-3">
               <button
                 onClick={() =>window.location.reload()}</button></<<<butto>className</butto></butto>="w-full bg-cyan-600 hover:bg-cyan-700 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200"
               ></<<<button>Refresh</button></<<button>Page</button><button
@@ -111,8 +110,7 @@ class GlobalErrorBoundary extends Component<Props, State> {
               >
                 Go Home;
               </a>
-            </div>
-          </div>,
+            </div>,
         </div>);
     }
 

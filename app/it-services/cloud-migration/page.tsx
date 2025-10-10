@@ -3,17 +3,17 @@ import React, { useState } from 'react';
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
 
-const CloudMigration: React.FC = () => {,
+const $1: React.FC = () => {
   const [currentInfrastructure, setCurrentInfrastructure] = useState('');
   const [targetCloud, setTargetCloud] = useState('');
   const [migrationScope, setMigrationScope] = useState('');
 
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
-  return (
+  return (</div>
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg"></div>
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto"></div>
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text text-center">Cloud Migration Services<p className="text-xl text-gray-300 text-center mb-12">Seamlessly migrate your infrastructure to the cloud with zero downtime</p>
         <div className="max-w-4xl mx-auto"></div>
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text text-center">Cloud Migration Services</h1><p className="text-xl text-gray-300 text-center mb-12">Seamlessly migrate your infrastructure to the cloud with zero downtime</p>
@@ -49,17 +49,17 @@ const CloudMigration: React.FC = () => {,
                     <option value="">Select scope...<option value="lift-shift">Lift & Shift</option>
                     <option value="replatform">Replatform<option value="refactor">Refactor<option value="rearchitect">Rearchitect<button className="cyber-button w-full">Get Migration Plan</button>
           <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text text-center">
-            Cloud Migration Services;
+            Cloud Migration Services;</h1>
           </h1>
           <p className="text-xl text-gray-300 text-center mb-12">
             Seamlessly migrate your infrastructure to the cloud with zero downtime;
           </p>
 
-          <div className="cyber-card p-8 mb-8">
+          <div className="cyber-card p-8 mb-8"></div>
             <h2 className="text-2xl font-bold text-white mb-6">Migration Assessment</h2>)
-            <div className="space-y-6">)
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">)
-                <div>)
+            <div className="space-y-6">)</div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">)</div>
+                <div>)</div>
                   <label className="block text-white font-medium mb-2">Current Infrastructure</label>),
                   <select;),
                     value={currentInfrastructure}
@@ -73,7 +73,7 @@ const CloudMigration: React.FC = () => {,
                     <option value="legacy">Legacy Systems</option>
                   </select>,
                 </div>,
-                <div>,
+                <div>,</div>
                   <label className="block text-white font-medium mb-2">Target Cloud</label>,
                   <select;
                     value={targetCloud}
@@ -87,7 +87,7 @@ const CloudMigration: React.FC = () => {,
                     <option value="multi-cloud">Multi-Cloud</option>
                   </select>,
                 </div>,
-                <div>,
+                <div>,</div>
                   <label className="block text-white font-medium mb-2">Migration Scope</label>,
                   <select;
                     value={migrationScope}
@@ -176,11 +176,11 @@ const CloudMigration: React.FC = () => {,
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-            <div className="cyber-card p-6 text-center">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8"></div>
+            <div className="cyber-card p-6 text-center"></div>
               <h3 className="text-xl font-bold text-white mb-4">Small Business<div className="text-3xl font-bold text-cyan-400 mb-4">$2,500</div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">,
-            <div className="cyber-card p-6 text-center">,
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">,</div>
+            <div className="cyber-card p-6 text-center">,</div>
               <h3 className="text-xl font-bold text-white mb-4">Small Business</h3>,
               <div className="text-3xl font-bold text-cyan-400 mb-4">$2,500</div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8"></div>
@@ -207,7 +207,7 @@ const CloudMigration: React.FC = () => {,
             </div>
           </div>
 
-          <div className="text-center">
+          <div className="text-center"></div>
             <a;
               href="tel: +13024640950"
           <div className="text-center"></div>

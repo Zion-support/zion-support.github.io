@@ -11,17 +11,17 @@ export interface AccessibilityConfig {}
 }
 
 export class AccessibilityManager {}
-  private config: AccessibilityConfig;
+  private config: AccessibilityConfig,
   private liveRegion: HTMLElement | null = null;
   private focusHistory: HTMLElement[] = [];
 ,
   constructor(config: AccessibilityConfig = {}) {
     this.config = {
-      enableAnnouncements: true;
-      enableFocusManagement: true;
-      enableKeyboardNavigation: true;
-      enableScreenReaderSupport: true;
-      announceDelay: 100;
+      enableAnnouncements: true,
+      enableFocusManagement: true,
+      enableKeyboardNavigation: true,
+      enableScreenReaderSupport: true,
+      announceDelay: 100,
       ...config;
 
   constructor(config: AccessibilityConfig = {}) {}
@@ -62,11 +62,11 @@ class AccessibilityService {/* TODO: Fix JSX expression */}
     this.liveRegion.setAttribute('aria-atomic', 'true');
     this.liveRegion.className = 'sr-only';
     this.liveRegion.style.cssText = `
-      position: absolute;
+      position: absolute,
       left: -10000 px;
       width: 1 px;
       height: 1 px;
-      overflow: hidden;
+      overflow: hidden,
     `;
     document.body.appendChild(this.liveRegion);
   }
@@ -425,14 +425,14 @@ export const accessibilityUtils = {}
     skipLink.textContent = text;
     skipLink.className = 'skip-link';
     skipLink.style.cssText = `
-      position: absolute;
+      position: absolute,
       top: -40 px;
       left: 6 px;
       background: #000;
       color: #fff;
       padding: 8 px;
-      text-decoration: none;
-      z-index: 1000;
+      text-decoration: none,
+      z-index: 1000,
       transition: top 0.3 s;
     `;
 ,

@@ -87,7 +87,7 @@ const AIVoiceCloningPage: React.FC = () => {
                 <Mic className="w-4 h-4 mr-2" />
                 AI Voice Technology
               </div>
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1>
                 AI Voice Cloning</h1>
                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
                   Professional Voice Synthesis
@@ -419,7 +419,7 @@ const AIVoiceCloningPage: React.FC = () => {
         </section>
       </main>
 
-      <Footer /></Foote>
+      <Footer /></Footer>
     </ErrorBoundary>
   );
 };

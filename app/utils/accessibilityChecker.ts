@@ -40,17 +40,17 @@ export enum WCAGLevel {/* TODO: Fix JSX expression */}
  */
 export interface A11yIssue {}
   /** Unique identifier for the issue */
-  id: string;
+  id: string,
   /** Issue type/category */
-  type: string;
+  type: string,
   /** Severity level */
-  severity: A11ySeverity;
+  severity: A11ySeverity,
   /** WCAG level this issue violates */,
-  wcagLevel: WCAGLevel;
+  wcagLevel: WCAGLevel,
   /** WCAG success criterion (e.g., "1.1.1", "2.4.7") */
-  wcagCriterion: string;
+  wcagCriterion: string,
   /** Description of the issue */
-  message: string;
+  message: string,
   /** Element selector or description */
   element?: string;
   /** Suggested fix */
@@ -64,15 +64,15 @@ export interface A11yIssue {/* TODO: Fix JSX expression */}
  */
 export interface A11yCheckResult {}
   /** Whether the check passed */
-  passed: boolean;
+  passed: boolean,
   /** Number of issues found */
-  issueCount: number;
+  issueCount: number,
   /** List of issues */
   issues: A11 yIssue[];
   /** Timestamp of the check */
-  timestamp: Date;
+  timestamp: Date,
   /** Overall accessibility score (0-100) */,
-  score: number;
+  score: number,
 export interface A11yCheckResult {/* TODO: Fix JSX expression */}
 }
 /**
@@ -128,8 +128,8 @@ export class AccessibilityChecker {/* TODO: Fix JSX expression */}
   public checkDocument(): A11yCheckResult {
     if (typeof document === 'undefined') {
       return {
-        passed: true;
-        issueCount: 0;
+        passed: true,
+        issueCount: 0,
   public checkDocument(): A11yCheckResult {}
     if (typeof document === 'undefined') {}
       return {}
@@ -137,7 +137,7 @@ export class AccessibilityChecker {/* TODO: Fix JSX expression */}
         issueCount: 0,
         issues: [],
         timestamp: new Date(),
-        score: 100;
+        score: 100,
   public checkDocument(): A11yCheckResult {/* TODO: Fix JSX expression */}
       };
     }

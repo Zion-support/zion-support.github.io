@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect } from 'react';
 
 interface AccessibilitySettings {
   fontSize: 'small' | 'medium' | 'large';
@@ -9,6 +9,7 @@ interface AccessibilitySettings {
 }
 
 const EnhancedAccessibility: React.FC = () => {
+  const [isVisible, setIsVisible] = useState(false);
   const [settings, setSettings] = useState<AccessibilitySettings>({
     fontSize: 'medium',
     highContrast: false,
@@ -17,109 +18,38 @@ const EnhancedAccessibility: React.FC = () => {
     keyboardNavigation: false
   });
 
-  const [isVisible, setIsVisible] = useState(false);
-
-  // Load settings from localStorage
   useEffect(() => {
-    if (typeof window === 'undefined') return;
-
+    // Load settings from localStorage
     const savedSettings = localStorage.getItem('accessibility-settings');
     if (savedSettings) {
-      try {
-        const parsed = JSON.parse(savedSettings);
-        setSettings(prev => ({ ...prev, ...parsed }));
-      } catch (error) {
-        console.error('Error parsing accessibility settings:', error);
-      }
+      setSettings(JSON.parse(savedSettings));
     }
-
-    // Detect screen reader
-    const detectScreenReader = () => {
-      const hasScreenReader = 
-        window.speechSynthesis ||
-        window.navigator.userAgent.includes('NVDA') ||
-        window.navigator.userAgent.includes('JAWS') ||
-        window.navigator.userAgent.includes('VoiceOver');
-      
-      setSettings(prev => ({ ...prev, screenReader: !!hasScreenReader }));
-    };
-
-    detectScreenReader();
   }, []);
 
-  // Apply settings to DOM
-  const applySettings = useCallback(() => {
-    if (typeof window === 'undefined') return;
-
-    const root = document.documentElement;
+  useEffect(() => {
+    // Apply settings to document
+    document.documentElement.style.fontSize = 
+      settings.fontSize === 'small' ? '14px' : 
+      settings.fontSize === 'large' ? '18px' : '16px';
     
-    // Font size
-    const fontSizeMap = {
-      small: '0.875rem',
-      medium: '1rem',
-      large: '1.125rem'
-    };
+    document.documentElement.classList.toggle('high-contrast', settings.highContrast);
+    document.documentElement.classList.toggle('reduced-motion', settings.reducedMotion);
     
-    root.style.setProperty('--font-size', fontSizeMap[settings.fontSize]);
-    
-    // High contrast
-    if (settings.highContrast) {
-      root.classList.add('high-contrast');
-    } else {
-      root.classList.remove('high-contrast');
-    }
-    
-    // Reduced motion
-    if (settings.reducedMotion) {
-      root.classList.add('reduced-motion');
-    } else {
-      root.classList.remove('reduced-motion');
-    }
-    
-    // Screen reader
     if (settings.screenReader) {
-      root.classList.add('screen-reader');
+      document.body.setAttribute('aria-live', 'polite');
     } else {
-      root.classList.remove('screen-reader');
-    }
-    
-    // Keyboard navigation
-    if (settings.keyboardNavigation) {
-      root.classList.add('keyboard-navigation');
-    } else {
-      root.classList.remove('keyboard-navigation');
+      document.body.removeAttribute('aria-live');
     }
   }, [settings]);
 
-  useEffect(() => {
-    applySettings();
-    localStorage.setItem('accessibility-settings', JSON.stringify(settings));
-  }, [settings, applySettings]);
-
-  const updateSetting = (key: keyof AccessibilitySettings, value: boolean | string) => {
-    setSettings(prev => ({ ...prev, [key]: value }));
+  const updateSetting = (key: keyof AccessibilitySettings, value: any) => {
+    const newSettings = { ...settings, [key]: value };
+    setSettings(newSettings);
+    localStorage.setItem('accessibility-settings', JSON.stringify(newSettings));
   };
 
-  const announceToScreenReader = (message: string) => {
-    const announcement = document.createElement('div');
-    announcement.setAttribute('aria-live', 'polite');
-    announcement.setAttribute('aria-atomic', 'true');
-    announcement.style.position = 'absolute';
-    announcement.style.left = '-10000px';
-    announcement.style.width = '1px';
-    announcement.style.height = '1px';
-    announcement.style.overflow = 'hidden';
-    announcement.textContent = message;
-    
-    document.body.appendChild(announcement);
-    
-    setTimeout(() => {
-      document.body.removeChild(announcement);
-    }, 1000);
-  };
-
-  const handleKeyDown = (event: React.KeyboardEvent) => {
-    if (event.key === 'Escape') {
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === 'Escape') {
       setIsVisible(false);
     }
   };
@@ -127,10 +57,9 @@ const EnhancedAccessibility: React.FC = () => {
   return (
     <>
       <button
-        onClick={() => setIsVisible(!isVisible)}
-        className="fixed bottom-4 left-4 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-colors z-50"
-        aria-label="Accessibility Settings"
-        title="Accessibility Settings"
+        onClick={() => setIsVisible(true)}
+        className="fixed bottom-4 right-4 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-colors z-40"
+        aria-label="Open accessibility settings"
       >
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4" />
@@ -160,7 +89,7 @@ const EnhancedAccessibility: React.FC = () => {
               </button>
             </div>
 
-            <div className="space-y-4">
+            <div className="space-y-6">
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
                   Font Size
@@ -182,77 +111,71 @@ const EnhancedAccessibility: React.FC = () => {
                 </div>
               </div>
 
-              <div className="flex items-center justify-between">
-                <label className="text-sm font-medium text-gray-700">
-                  High Contrast
-                </label>
-                <button
-                  onClick={() => updateSetting('highContrast', !settings.highContrast)}
-                  className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                    settings.highContrast ? 'bg-blue-600' : 'bg-gray-200'
-                  }`}
-                >
-                  <span
-                    className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                      settings.highContrast ? 'translate-x-6' : 'translate-x-1'
-                    }`}
+              <div>
+                <label className="flex items-center">
+                  <input
+                    type="checkbox"
+                    checked={settings.highContrast}
+                    onChange={(e) => updateSetting('highContrast', e.target.checked)}
+                    className="mr-2"
                   />
-                </button>
+                  <span className="text-sm font-medium text-gray-700">High Contrast</span>
+                </label>
               </div>
 
-              <div className="flex items-center justify-between">
-                <label className="text-sm font-medium text-gray-700">
-                  Reduced Motion
-                </label>
-                <button
-                  onClick={() => updateSetting('reducedMotion', !settings.reducedMotion)}
-                  className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                    settings.reducedMotion ? 'bg-blue-600' : 'bg-gray-200'
-                  }`}
-                >
-                  <span
-                    className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                      settings.reducedMotion ? 'translate-x-6' : 'translate-x-1'
-                    }`}
+              <div>
+                <label className="flex items-center">
+                  <input
+                    type="checkbox"
+                    checked={settings.reducedMotion}
+                    onChange={(e) => updateSetting('reducedMotion', e.target.checked)}
+                    className="mr-2"
                   />
-                </button>
+                  <span className="text-sm font-medium text-gray-700">Reduce Motion</span>
+                </label>
               </div>
 
-              <div className="flex items-center justify-between">
-                <label className="text-sm font-medium text-gray-700">
-                  Screen Reader Mode
-                </label>
-                <button
-                  onClick={() => updateSetting('screenReader', !settings.screenReader)}
-                  className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                    settings.screenReader ? 'bg-blue-600' : 'bg-gray-200'
-                  }`}
-                >
-                  <span
-                    className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                      settings.screenReader ? 'translate-x-6' : 'translate-x-1'
-                    }`}
+              <div>
+                <label className="flex items-center">
+                  <input
+                    type="checkbox"
+                    checked={settings.screenReader}
+                    onChange={(e) => updateSetting('screenReader', e.target.checked)}
+                    className="mr-2"
                   />
-                </button>
+                  <span className="text-sm font-medium text-gray-700">Screen Reader Support</span>
+                </label>
               </div>
 
-              <div className="flex items-center justify-between">
-                <label className="text-sm font-medium text-gray-700">
-                  Keyboard Navigation
-                </label>
-                <button
-                  onClick={() => updateSetting('keyboardNavigation', !settings.keyboardNavigation)}
-                  className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                    settings.keyboardNavigation ? 'bg-blue-600' : 'bg-gray-200'
-                  }`}
-                >
-                  <span
-                    className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                      settings.keyboardNavigation ? 'translate-x-6' : 'translate-x-1'
-                    }`}
+              <div>
+                <label className="flex items-center">
+                  <input
+                    type="checkbox"
+                    checked={settings.keyboardNavigation}
+                    onChange={(e) => updateSetting('keyboardNavigation', e.target.checked)}
+                    className="mr-2"
                   />
-                </button>
+                  <span className="text-sm font-medium text-gray-700">Enhanced Keyboard Navigation</span>
+                </label>
               </div>
+            </div>
+
+            <div className="mt-6 pt-4 border-t border-gray-200">
+              <button
+                onClick={() => {
+                  setSettings({
+                    fontSize: 'medium',
+                    highContrast: false,
+                    reducedMotion: false,
+                    screenReader: false,
+                    keyboardNavigation: false
+                  });
+                  localStorage.removeItem('accessibility-settings');
+                }}
+                className="w-full bg-gray-200 text-gray-700 py-2 px-4 rounded hover:bg-gray-300 transition-colors"
+              >
+                Reset to Defaults
+              </button>
             </div>
           </div>
         </div>

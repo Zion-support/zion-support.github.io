@@ -12,10 +12,10 @@ export interface CacheOptions {}
 }
 
 export interface CacheEntry<T> {}
-  value: T;
-  expiry: number;
-  hits: number;
-  lastAccessed: number;
+  value: T,
+  expiry: number,
+  hits: number,
+  lastAccessed: number,
 }
 
 class AdvancedCache<T = unknown> {}
@@ -244,8 +244,8 @@ class AdvancedCache<T = unknown> {/* TODO: Fix JSX expression */}
     const entry: CacheEntry<T> = {
       value;
       expiry: now + ttl;
-      hits: 0;
-      lastAccessed: now;
+      hits: 0,
+      lastAccessed: now,
     // Check if we need to evict entries
     while (this.cache.size >= this.options.maxSize) {}
       this.evictLRU();
@@ -344,11 +344,11 @@ class AdvancedCache<T = unknown> {/* TODO: Fix JSX expression */}
   }
 
   getStats(): {}
-    size: number;
-    maxSize: number;
-    hitRate: number;
-    oldestEntry: number;
-    newestEntry: number;
+    size: number,
+    maxSize: number,
+    hitRate: number,
+    oldestEntry: number,
+    newestEntry: number,
   } {}
     const entries = Array.from(this.cache.values());
     const totalHits = entries.reduce((sum, entry) => sum + entry.hits, 0);
@@ -376,11 +376,11 @@ export const memoryCache = new AdvancedCache({ storage: 'memory' });
 export const localStorageCache = new AdvancedCache({)
   storage: 'localStorage'),
   ttl: 30 * 60 * 1000, // 30 minutes;
-  maxSize: 50;
+  maxSize: 50,
 export const sessionStorageCache = new AdvancedCache({)
   storage: 'sessionStorage'),
   ttl: 10 * 60 * 1000, // 10 minutes;
-  maxSize: 25;
+  maxSize: 25,
 export const localStorageCache = new AdvancedCache({)}
   storage: 'localStorage',
   ttl: 30 * 60 * 1000, // 30 minutes

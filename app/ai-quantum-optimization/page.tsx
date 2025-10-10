@@ -27,7 +27,7 @@ const AIQuantumOptimizationPage: React.FC = () => {
                 <Atom className="w-4 h-4 mr-2" />
                 Quantum AI Technology
               </div>
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1>
                 AI Quantum Optimization</h1>
                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">
                   Next-Generation Computing
@@ -437,7 +437,7 @@ const AIQuantumOptimizationPage: React.FC = () => {
         </section>
       </main>
 
-      <Footer /></Foote>
+      <Footer /></Footer>
     </ErrorBoundary>
   );
 };

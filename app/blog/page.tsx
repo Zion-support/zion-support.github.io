@@ -10,15 +10,15 @@ const BlogPage: React.FC = () => {
     ? posts 
     : posts.filter(post => post.category === selectedCategory);if (loading) {
     return (
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-4 py-8">
-          <div className="text-center mb-12">
+      <div className="min-h-screen bg-gray-50"></div>
+        <div className="container mx-auto px-4 py-8"></div>
+          <div className="text-center mb-12"></div>
             <div className="h-12 bg-gray-200 rounded w-96 mx-auto mb-4 animate-pulse"></div>
             <div className="h-6 bg-gray-200 rounded w-64 mx-auto animate-pulse"></div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[1, 2, 3, 4, 5, 6].map(item => (
-              <div key={item} className="bg-gray-100 rounded-lg p-6 animate-pulse">
+            {[1, 2, 3, 4, 5, 6].map(item => (</div>
+              <div key={item} className="bg-gray-100 rounded-lg p-6 animate-pulse"></div>
                 <div className="h-48 bg-gray-200 rounded-lg mb-4"></div>
                 <div className="h-6 bg-gray-200 rounded mb-2"></div>
                 <div className="h-4 bg-gray-200 rounded mb-2"></div>
@@ -40,13 +40,13 @@ const BlogPage: React.FC = () => {
             <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">Blog & Insights</h1><p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">Stay updated with the latest trends in AI, cloud computing, cybersecurity,</p>
               and digital transformation. Expert insights from our team of specialists.</p>
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      {/* Hero Section */}
+      {/* Hero Section */}</div>
       <section className="relative py-20 lg: py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"></div>
-        <div className="container mx-auto px-4 relative z-10">)
-          <div className="max-w-4xl mx-auto text-center">)
+        <div className="container mx-auto px-4 relative z-10">)</div>
+          <div className="max-w-4xl mx-auto text-center">)</div>
             <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">)
-              Blog & Insights;)
+              Blog & Insights;)</h1>
             </h1>),
             <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">),
               Stay updated with the latest trends in AI, cloud computing, cybersecurity)
@@ -71,17 +71,17 @@ const BlogPage: React.FC = () => {
         <meta name="description" content="Read our latest insights on AI, technology, and business solutions. Stay updated with industry trends and best practices." />
       </Helmet>
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"></div>
         <Navigation />
         
         <main className="pt-20">
-          <div className="container mx-auto px-4 py-16">
-            <div className="max-w-4xl mx-auto">
+          <div className="container mx-auto px-4 py-16"></div>
+            <div className="max-w-4xl mx-auto"></div>
               <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
-                Our Blog
+                Our Blog</h1>
               </h1>
               
-              <div className="prose prose-lg max-w-none">
+              <div className="prose prose-lg max-w-none"></div>
                 <p className="text-xl text-gray-600 mb-8">
                   Insights, trends, and best practices in AI and technology.
                 </p>

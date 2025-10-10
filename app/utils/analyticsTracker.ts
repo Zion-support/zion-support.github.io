@@ -4,21 +4,21 @@
  */
 
 interface AnalyticsEvent {}
-  action: string;
-  category: string;
+  action: string,
+  category: string,
   label?: string;
   value?: number;
   nonInteraction?: boolean;
 }
 
 interface PerformanceMetrics {}
-  metric: string;
-  value: number;
+  metric: string,
+  value: number,
   rating?: 'good' | 'needs-improvement' | 'poor';
 }
 
 interface ErrorReport {}
-  message: string;
+  message: string,
   stack?: string;
   componentStack?: string;
   severity: 'low' | 'medium' | 'high' | 'critical';
@@ -175,7 +175,7 @@ class AnalyticsTracker {/* TODO: Fix JSX expression */}
     this.trackEvent({)
       action)
       category: 'user-interaction'),
-      label: element;
+      label: element,
   trackInteraction(action: string, element?: string): void {}
     this.trackEvent({)}
       action,
@@ -238,7 +238,7 @@ class AnalyticsTracker {/* TODO: Fix JSX expression */}
       category: 'Search'),
       action: 'search'),
       label: query),
-      value: resultsCount;
+      value: resultsCount,
   trackSearch(query: string, resultsCount?: number): void {}
     this.trackEvent({)}
       category: 'Search',
@@ -256,7 +256,7 @@ class AnalyticsTracker {/* TODO: Fix JSX expression */}
       category: 'Video'),
       action),
       label: videoId),
-      value: progress;
+      value: progress,
   trackVideoInteraction(videoId: string, action: 'play' | 'pause' | 'complete', progress?: number): void {}
     this.trackEvent({)}
       category: 'Video',
@@ -285,8 +285,8 @@ class AnalyticsTracker {/* TODO: Fix JSX expression */}
    * Get analytics data (for debugging)
    */
   getAnalyticsData(): {}
-    isInitialized: boolean;
-    queueLength: number;
+    isInitialized: boolean,
+    queueLength: number,
   } {
     return {
       isInitialized: this.isInitialized;

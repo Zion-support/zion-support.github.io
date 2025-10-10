@@ -188,7 +188,7 @@ const SmartCityInfrastructurePage: React.FC = () => {
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"></div>
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-            Smart City Infrastructure
+            Smart City Infrastructure</h1>
           </h1>
           <p className="text-xl md:text-2 xl text-gray-300 mb-8 max-w-4 xl mx-auto">
             Transform your city into a connected, efficient, and sustainable urban environment. 
@@ -238,7 +238,7 @@ const SmartCityInfrastructurePage: React.FC = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
             {features.map((feature, index) => (</div>
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-xl p-8 hover:border-cyan-400/40 transition-all duration-300"></div>
                 <div className="text-center"></div>
@@ -266,7 +266,7 @@ const SmartCityInfrastructurePage: React.FC = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12"></div>
             {solutions.map((solution, index) => (</div>
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20"></div>
                 <div className="flex items-center mb-6"></div>
@@ -276,7 +276,7 @@ const SmartCityInfrastructurePage: React.FC = () => {
                   <h3 className="text-2 xl font-bold text-white">{solution.title}</h>
                 </div>
                 <p className="text-gray-300 mb-6 leading-relaxed">{solution.description}</p>
-                <div className="space-y-2">
+                <div className="space-y-2"></div>
                   {solution.benefits.map((benefit, benefitIndex) => (</div>
                     <div key={benefitIndex} className="flex items-center text-gray-300"></div>
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
@@ -302,7 +302,7 @@ const SmartCityInfrastructurePage: React.FC = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
             {technologies.map((tech, index) => (</div>
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-green-400/20 rounded-xl p-6 hover:border-green-400/40 transition-all duration-300"></div>
                 <div className="text-center"></div>
@@ -330,11 +330,11 @@ const SmartCityInfrastructurePage: React.FC = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
             {pricingPlans.map((plan, index) => (</div>
               <div key={index} className={`bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 relative ${
                 plan.popular ? 'border-cyan-400/40 ring-2 ring-cyan-400/20' : 'border-gray-700'
-              }`}>
+              }`}></div>
                 {plan.popular && (</div>
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
                     <span className="bg-gradient-to-r from-cyan-400 to-purple-600 text-white text-sm font-bold px-4 py-2 rounded-full">
@@ -382,11 +382,11 @@ const SmartCityInfrastructurePage: React.FC = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
             {testimonials.map((testimonial, index) => (</div>
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20"></div>
                 <div className="flex items-center mb-4"></div>
-                  <div className="flex text-yellow-400">
+                  <div className="flex text-yellow-400"></div>
                     {[...Array(5)].map((_, i) => (</div>
                       <Star key={i} className="w-5 h-5 fill-current" />
                     ))}
@@ -397,7 +397,7 @@ const SmartCityInfrastructurePage: React.FC = () => {
                 </p>
                 <div className="flex items-center"></div>
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full flex items-center justify-center text-white font-bold mr-4">
-                    {testimonial.avatar}
+                    {testimonial.avatar}</div>
                   </div>
                   <div></div>
                     <h4 className="text-white font-semibold">{testimonial.name}</h4>
@@ -432,7 +432,7 @@ const SmartCityInfrastructurePage: React.FC = () => {
         </div>
       </section>
 
-      <Footer /></Foote>
+      <Footer /></Footer>
     </div>
   );
 };

@@ -2,11 +2,11 @@ import React, { ReactNode } from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOEnhancerProps {
-  title: string;
-  description: string;
+  title: string,
+  description: string,
   keywords?: string;
   canonicalUrl?: string;
-  children: ReactNode;
+  children: ReactNode,
 }
 
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({

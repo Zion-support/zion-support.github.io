@@ -351,7 +351,7 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
       position: absolute;,
     top: -40 px;
       left: 6 px;
-      z-index: 1000;
+      z-index: 1000,
     `;,
 ,
     skipLinks.forEach(({ href, text }) => {
@@ -369,7 +369,7 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
     background: #000;
         color: #fff;,
     padding: 8 px;
-        text-decoration: none;
+        text-decoration: none,
         z-index: 1000;,
     transition: top 0.3 s;
       `;
@@ -432,14 +432,14 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
     const style = document.createElement('style');
     style.textContent = `
       html {}
-        font-size: 16px;
+        font-size: 16px,
       }
 
       @media (prefers-font-size: large) {,
         html {,
       @media (prefers-font-size: large) {}
         html {}
-          font-size: 18px;
+          font-size: 18px,
         }
       }
 
@@ -447,7 +447,7 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
         html {,
       @media (prefers-font-size: x-large) {}
         html {}
-          font-size: 20px;
+          font-size: 20px,
         }
       }
 

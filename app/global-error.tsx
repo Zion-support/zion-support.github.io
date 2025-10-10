@@ -19,8 +19,8 @@ export default function GlobalError({)
               Try again</button>
   return(<html>
       <body>)
-        <div className="min-h-screen bg-gray-50 flex items-center justify-center">)
-          <div className="text-center">)
+        <div className="min-h-screen bg-gray-50 flex items-center justify-center">)</div>
+          <div className="text-center">)</div>
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Something went wrong!</h2>)
             <button;)
               onClick={() => reset()}
@@ -43,8 +43,8 @@ export default function GlobalError({
   return (
     <html>
       <body>
-        <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-          <div className="text-center">
+        <div className="min-h-screen bg-gray-50 flex items-center justify-center"></div>
+          <div className="text-center"></div>
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Something went wrong!</h2>
             <button
               onClick={() => reset()}

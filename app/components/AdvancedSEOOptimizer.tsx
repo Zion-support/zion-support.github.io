@@ -3,10 +3,10 @@ import React, { useEffect, useCallback, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOData {}
-  title: string;
-  description: string;
+  title: string,
+  description: string,
   keywords: string[];
-  canonicalUrl: string;
+  canonicalUrl: string,
   author?: string;
   robots?: string;
   ogTitle?: string;
@@ -22,7 +22,7 @@ interface SEOData {}
 }
 
 interface AdvancedSEOOptimizerProps {}
-  seoData: SEOData;
+  seoData: SEOData,
   enableStructuredData?: boolean;
   enableOpenGraph?: boolean;
   enableTwitterCards?: boolean;

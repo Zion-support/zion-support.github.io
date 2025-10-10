@@ -27,7 +27,7 @@ const AIBlockchainAnalyticsPage: React.FC = () => {
                 <TrendingUp className="w-4 h-4 mr-2" />
                 Blockchain AI Technology
               </div>
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1>
                 AI Blockchain Analytics</h1>
                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">
                   Advanced Crypto Intelligence
@@ -438,7 +438,7 @@ const AIBlockchainAnalyticsPage: React.FC = () => {
         </section>
       </main>
 
-      <Footer /></Foote>
+      <Footer /></Footer>
     </ErrorBoundary>
   );
 };

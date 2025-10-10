@@ -84,13 +84,13 @@ const ServicesPage: React.FC = () => {
         <meta name="keywords" content="AI services, IT services, business solutions, digital transformation, technology consulting" />
       </Helmet>
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         <Header />
         <main className="pt-24">
           {/* Hero Section */}
           <section className="container mx-auto px-4 py-16 text-center">
-            <div className="max-w-4xl mx-auto">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            <div className="max-w-4xl mx-auto"></div>
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1>
                 Our <span className="text-cyan-400">Services</span>
               </h1>
               <p className="text-xl text-gray-300 mb-8">
@@ -106,9 +106,9 @@ const ServicesPage: React.FC = () => {
           {/* Services Grid */}
           <section className="container mx-auto px-4 py-16">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {services.map((service, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 hover:border-cyan-400/50 transition-all duration-300 group">
-                  <div className="flex items-center mb-6">
+              {services.map((service, index) => (</div>
+                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 hover:border-cyan-400/50 transition-all duration-300 group"></div>
+                  <div className="flex items-center mb-6"></div>
                     <service.icon className="w-12 h-12 text-cyan-400 mr-4 group-hover:text-cyan-300 transition-colors" />
                     <h3 className="text-2xl font-bold text-white">{service.title}</h3>
                   </div>
@@ -135,8 +135,8 @@ const ServicesPage: React.FC = () => {
 
           {/* Why Choose Us */}
           <section className="bg-white/5 py-20">
-            <div className="container mx-auto px-4">
-              <div className="text-center mb-16">
+            <div className="container mx-auto px-4"></div>
+              <div className="text-center mb-16"></div>
                 <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                   Why Choose Zion Tech Group?
                 </h2>
@@ -145,33 +145,33 @@ const ServicesPage: React.FC = () => {
                 </p>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div className="text-center">
-                  <div className="bg-cyan-600 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
+                <div className="text-center"></div>
+                  <div className="bg-cyan-600 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4"></div>
                     <Star className="w-8 h-8" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-2">Proven Expertise</h3>
                   <p className="text-gray-400">Years of experience delivering successful projects</p>
                 </div>
                 
-                <div className="text-center">
-                  <div className="bg-cyan-600 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+                <div className="text-center"></div>
+                  <div className="bg-cyan-600 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4"></div>
                     <CheckCircle className="w-8 h-8" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-2">Enterprise Security</h3>
                   <p className="text-gray-400">Bank-grade security and compliance standards</p>
                 </div>
                 
-                <div className="text-center">
-                  <div className="bg-cyan-600 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+                <div className="text-center"></div>
+                  <div className="bg-cyan-600 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4"></div>
                     <Zap className="w-8 h-8" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-2">Rapid Deployment</h3>
                   <p className="text-gray-400">Quick implementation and time-to-value</p>
                 </div>
                 
-                <div className="text-center">
-                  <div className="bg-cyan-600 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+                <div className="text-center"></div>
+                  <div className="bg-cyan-600 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4"></div>
                     <Phone className="w-8 h-8" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-2">24/7 Support</h3>
@@ -183,14 +183,14 @@ const ServicesPage: React.FC = () => {
 
           {/* CTA Section */}
           <section className="bg-gradient-to-r from-cyan-600 to-purple-600 py-20">
-            <div className="container mx-auto px-4 text-center">
+            <div className="container mx-auto px-4 text-center"></div>
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Ready to Get Started?
               </h2>
               <p className="text-xl text-cyan-100 mb-8 max-w-3xl mx-auto">
                 Let's discuss how our services can help transform your business and drive growth.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
                 <a
                   href="/contact"
                   className="bg-white text-cyan-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center"

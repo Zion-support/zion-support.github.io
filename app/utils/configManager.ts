@@ -8,42 +8,42 @@
 export type Environment = 'development' | 'staging' | 'production' | 'test'
 
 export interface AppConfig {
-  environment: Environment;
+  environment: Environment,
   api: {
-    baseURL: string;
-    timeout: number;
-    retryAttempts: number;
-    enableCaching: boolean;
+    baseURL: string,
+    timeout: number,
+    retryAttempts: number,
+    enableCaching: boolean,
   }
   features: {
-    enableAnalytics: boolean;
-    enableErrorReporting: boolean;
-    enablePerformanceMonitoring: boolean;
-    enableAccessibility: boolean;
-    enableSEO: boolean;
-    enablePWA: boolean;
+    enableAnalytics: boolean,
+    enableErrorReporting: boolean,
+    enablePerformanceMonitoring: boolean,
+    enableAccessibility: boolean,
+    enableSEO: boolean,
+    enablePWA: boolean,
   }
   performance: {
-    enableCodeSplitting: boolean;
-    enableLazyLoading: boolean;
-    enableImageOptimization: boolean;
-    enableCaching: boolean;
+    enableCodeSplitting: boolean,
+    enableLazyLoading: boolean,
+    enableImageOptimization: boolean,
+    enableCaching: boolean,
   }
   security: {
-    enableCSP: boolean;
-    enableCORS: boolean;
-    enableRateLimiting: boolean;
-    maxRequestsPerMinute: number;
+    enableCSP: boolean,
+    enableCORS: boolean,
+    enableRateLimiting: boolean,
+    maxRequestsPerMinute: number,
   }
   ui: {,
     theme: 'light' | 'dark' | 'auto',
-    language: string;
-    timezone: string;
+    language: string,
+    timezone: string,
   }
   logging: {,
     level: 'debug' | 'info' | 'warn' | 'error',
-    enableConsole: boolean;
-    enableNetwork: boolean;
+    enableConsole: boolean,
+    enableNetwork: boolean,
   }
 }
 
@@ -51,29 +51,29 @@ const defaultConfig: AppConfig = {
   environment: 'development'
   api: {
     baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || 'https://api.ziontech.com'
-    timeout: 30000;
-    retryAttempts: 3;
-    enableCaching: true;
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true,
   },
   features: {
-    enableAnalytics: true;
-    enableErrorReporting: true;
-    enablePerformanceMonitoring: true;
-    enableAccessibility: true;
-    enableSEO: true;
-    enablePWA: true;
+    enableAnalytics: true,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true,
   },
   performance: {
-    enableCodeSplitting: true;
-    enableLazyLoading: true;
-    enableImageOptimization: true;
-    enableCaching: true;
+    enableCodeSplitting: true,
+    enableLazyLoading: true,
+    enableImageOptimization: true,
+    enableCaching: true,
   },
   security: {
-    enableCSP: true;
-    enableCORS: true;
-    enableRateLimiting: true;
-    maxRequestsPerMinute: 100;
+    enableCSP: true,
+    enableCORS: true,
+    enableRateLimiting: true,
+    maxRequestsPerMinute: 100,
   },
   ui: {,
     theme: 'auto',
@@ -81,13 +81,13 @@ const defaultConfig: AppConfig = {
     timezone: 'UTC'},
   logging: {,
     level: 'info',
-    enableConsole: true;
-    enableNetwork: false;
+    enableConsole: true,
+    enableNetwork: false,
   }
 }
 
 class ConfigManager {
-  private config: AppConfig;
+  private config: AppConfig,
   constructor() {,
     this.config = { ...defaultConfig }
     this.loadEnvironmentConfig()

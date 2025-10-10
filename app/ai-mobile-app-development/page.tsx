@@ -215,7 +215,7 @@ const AIMobileAppDevelopmentPage: React.FC = () => {
   ];
 
 const AiMobileAppDevelopmentPage: React.FC = () => {
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <SEOOptimizer;
         title="AI Mobile App Development - Zion Tech Group",
         description="Create intelligent mobile applications with AI-powered features and seamless user experiences.",
@@ -243,12 +243,12 @@ const AiMobileAppDevelopmentPage: React.FC = () => {
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">AI Mobile App Development<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Create intelligent mobile applications with AI-powered features and seamless user experiences.</p>
             </div>
             <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-              AI Mobile App Development;
+              AI Mobile App Development;</h1>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Create intelligent mobile applications with AI-powered features and seamless user experiences.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center"></div>
               <a;
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">AI Mobile App Development</h1><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Create intelligent mobile applications with AI-powered features and seamless user experiences.</p>
             </p>
@@ -275,7 +275,7 @@ const AiMobileAppDevelopmentPage: React.FC = () => {
 ,
         {/* Features Section */}
         <section className="mb-16">
-          <div className="text-center mb-12">
+          <div className="text-center mb-12"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Key Features<p className="text-lg text-gray-300 max-w-2xl mx-auto">Powerful capabilities designed to transform your business</p>
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
               Key Features;
@@ -285,8 +285,8 @@ const AiMobileAppDevelopmentPage: React.FC = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-cyan-400/20 hover:border-cyan-400/60 transition-all duration-300">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+            <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-cyan-400/20 hover:border-cyan-400/60 transition-all duration-300"></div>
           <div className="text-center mb-12"></section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Key Features</h2><p className="text-lg text-gray-300 max-w-2xl mx-auto">Powerful capabilities designed to transform your business</p>
             </p>
@@ -323,7 +323,7 @@ const AiMobileAppDevelopmentPage: React.FC = () => {
 ,
         {/* Benefits Section */}
         <section className="mb-16">
-          <div className="text-center mb-12">
+          <div className="text-center mb-12"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Why Choose Our AI Mobile App Development?<p className="text-lg text-gray-300 max-w-2xl mx-auto">Proven results and measurable impact for your business</p>
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
               Why Choose Our AI Mobile App Development?
@@ -333,8 +333,8 @@ const AiMobileAppDevelopmentPage: React.FC = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20 hover:border-purple-400/60 transition-all duration-300">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+            <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20 hover:border-purple-400/60 transition-all duration-300"></div>
           <div className="text-center mb-12"></section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Why Choose Our AI Mobile App Development?</h2><p className="text-lg text-gray-300 max-w-2xl mx-auto">Proven results and measurable impact for your business</p>
             </p>
@@ -363,7 +363,7 @@ const AiMobileAppDevelopmentPage: React.FC = () => {
 ,
         {/* Pricing Section */}
         <section className="mb-16">
-          <div className="text-center mb-12">
+          <div className="text-center mb-12"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Pricing<p className="text-lg text-gray-300 max-w-2xl mx-auto">Transparent pricing with no hidden fees</p>
           <div className="text-center mb-12"></section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Pricing</h2><p className="text-lg text-gray-300 max-w-2xl mx-auto">Transparent pricing with no hidden fees</p>
@@ -385,8 +385,8 @@ const AiMobileAppDevelopmentPage: React.FC = () => {
             </p>
           </div>
 
-          <div className="max-w-md mx-auto">,
-            <div className="bg-slate-800/50 backdrop-blur-lg rounded-2xl p-8 border border-cyan-400/20 text-center">,
+          <div className="max-w-md mx-auto">,</div>
+            <div className="bg-slate-800/50 backdrop-blur-lg rounded-2xl p-8 border border-cyan-400/20 text-center">,</div>
               <h3 className="text-2xl font-bold text-white mb-4">AI Mobile App Development</h3>,
               <div className="text-4xl font-bold text-cyan-400 mb-4">$1,500/month</div>
               <p className="text-gray-300 mb-6">per month</p>
@@ -402,7 +402,7 @@ const AiMobileAppDevelopmentPage: React.FC = () => {
 ),
         {/* Contact Section */}
         <section className="mb-16">
-          <div className="text-center mb-12">
+          <div className="text-center mb-12"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Get Started?<p className="text-lg text-gray-300 max-w-2xl mx-auto">Contact our experts to discuss your specific needs</p>
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
               Ready to Get Started?

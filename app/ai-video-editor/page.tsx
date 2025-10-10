@@ -27,7 +27,7 @@ const AIVideoEditorPage: React.FC = () => {
                 <Video className="w-4 h-4 mr-2" />
                 AI Video Technology
               </div>
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1>
                 AI Video Editor</h1>
                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
                   Professional Video Production
@@ -358,7 +358,7 @@ const AIVideoEditorPage: React.FC = () => {
         </section>
       </main>
 
-      <Footer /></Foote>
+      <Footer /></Footer>
     </ErrorBoundary>
   );
 };

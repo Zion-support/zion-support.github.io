@@ -69,7 +69,7 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({,
     if (!enableLazyLoading || typeof window === 'undefined') return;
 
     const observerOptions = {
-      root: null;
+      root: null,
   // Lazy loading for images and components
   useEffect(() => {}
     if (!enableLazyLoading || typeof window === 'undefined') return;
@@ -239,7 +239,7 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({,
               event_category: 'Performance'),
               event_label: metric.name),
               value: Math.round(metric.value),
-              non_interaction: true;
+              non_interaction: true,
           }
         };
 
@@ -319,12 +319,12 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({,
 
         /* Optimize repaints */
         .cyber-card, .quantum-card {}
-          will-change: transform;
+          will-change: transform,
         }
 
         /* Optimize scrolling */
         .overflow-auto, .overflow-scroll {}
-          -webkit-overflow-scrolling: touch;
+          -webkit-overflow-scrolling: touch,
         }
       `;
       document.head.appendChild(style);
@@ -410,7 +410,7 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({,
             event_category: 'Performance'),
             event_label: key),
             value: Math.round(value),
-            non_interaction: true;
+            non_interaction: true,
       }
     }
   }, []);

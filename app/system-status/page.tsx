@@ -4,7 +4,7 @@ import Footer from '../components/Footer';
 
 const SystemStatusPage: React.FC = () => {
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-  return (
+  return (</div>
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
@@ -38,11 +38,11 @@ import React from 'react';
 
 const SystemStatusPage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="container mx-auto px-4 py-8">
+    <div className="min-h-screen bg-gray-50"></div>
+      <div className="container mx-auto px-4 py-8"></div>
         <h1 className="text-3xl font-bold text-gray-900 mb-8">System Status</h1>
-        <div className="bg-white rounded-lg shadow p-6">
-          <div className="flex items-center mb-4">
+        <div className="bg-white rounded-lg shadow p-6"></div>
+          <div className="flex items-center mb-4"></div>
             <span className="w-3 h-3 bg-green-500 rounded-full mr-3"></span>
             <span className="text-lg font-semibold text-gray-900">All Systems Operational</span>
           </div>

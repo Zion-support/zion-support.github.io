@@ -27,7 +27,7 @@ const AISpaceTechnologyPage: React.FC = () => {
                 <Rocket className="w-4 h-4 mr-2" />
                 Space AI Technology
               </div>
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1>
                 AI Space Technology</h1>
                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-purple-400">
                   Advanced Space Solutions
@@ -440,7 +440,7 @@ const AISpaceTechnologyPage: React.FC = () => {
         </section>
       </main>
 
-      <Footer /></Foote>
+      <Footer /></Footer>
     </ErrorBoundary>
   );
 };

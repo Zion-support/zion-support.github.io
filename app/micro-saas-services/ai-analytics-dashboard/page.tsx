@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
 
-const AIAnalyticsDashboard: React.FC = () => {,
+const $1: React.FC = () => {
   const [selectedMetric, setSelectedMetric] = useState('revenue');
 
   const metrics = [
@@ -14,27 +14,27 @@ const AIAnalyticsDashboard: React.FC = () => {,
   ];
 
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
-  return (
+  return (</div>
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg"></div>
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-6xl mx-auto"></div>
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text text-center">AI Analytics Dashboard<p className="text-xl text-gray-300 text-center mb-12">Get intelligent insights from your data with AI-powered analytics</p>
           </p>
 
-          <div className="cyber-card p-8 mb-8">
+          <div className="cyber-card p-8 mb-8"></div>
             <h2 className="text-2xl font-bold text-white mb-6">Live Dashboard Preview<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">{metrics.map((metric) => (<div
-          <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text text-center">
-            AI Analytics Dashboard;
+          <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text text-center"></div>
+            AI Analytics Dashboard;</h1>
           </h1>
           <p className="text-xl text-gray-300 text-center mb-12">
             Get intelligent insights from your data with AI-powered analytics;
           </p>)
 )
-          <div className="cyber-card p-8 mb-8">)
+          <div className="cyber-card p-8 mb-8">)</div>
             <h2 className="text-2xl font-bold text-white mb-6">Live Dashboard Preview</h2>)
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">),
-              {metrics.map((metric) => (,
+              {metrics.map((metric) => (,</div>
                 <div;
         <div className="max-w-6xl mx-auto"></div>
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text text-center">AI Analytics Dashboard</h1><p className="text-xl text-gray-300 text-center mb-12">Get intelligent insights from your data with AI-powered analytics</p>
@@ -59,9 +59,9 @@ const AIAnalyticsDashboard: React.FC = () => {,
 
           <div className="cyber-card p-8 mb-8"></div>
             <h2 className="text-2xl font-bold text-white mb-6">AI-Powered Features</h2>
-            <div className="grid grid-cols-1 md: grid-cols-2 gap-6">
-              <div className="space-y-4">
-                <div className="flex items-center space-x-3">
+            <div className="grid grid-cols-1 md: grid-cols-2 gap-6"></div>
+              <div className="space-y-4"></div>
+                <div className="flex items-center space-x-3"></div>
                   <div className="w-2 h-2 bg-cyan-400 rounded-full"><span className="text-gray-300">Predictive analytics</span>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
               <div className="space-y-4"></div>
@@ -119,7 +119,7 @@ const AIAnalyticsDashboard: React.FC = () => {,
             </div>
           </div>
 
-          <div className="text-center">
+          <div className="text-center"></div>
             <a;
           <div className="text-center"></div>
             <a

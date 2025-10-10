@@ -4,7 +4,7 @@ import { Eye, Camera, Target, CheckCircle, Phone } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const AIVisionPage: React.FC = () => {,
+const $1: React.FC = () => {
   const features = [,
     'Object Detection & Recognition',
     'Image Classification',
@@ -27,22 +27,22 @@ const AIVisionPage: React.FC = () => {,
     {
       title: 'Quality Control',
       description: 'Automated quality inspection in manufacturing with defect detection',
-      icon: Target;
+      icon: Target,
     },
     {
       title: 'Security & Surveillance',
       description: 'Intelligent surveillance systems with real-time threat detection',
-      icon: Camera;
+      icon: Camera,
     },
     {
       title: 'Medical Imaging',
       description: 'AI-powered medical image analysis for faster diagnosis',
-      icon: Eye;
+      icon: Eye,
     }
   ];
 
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain particle-field">
-  return (
+  return (</div>
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain particle-field"></div>
       <Navigation />
 
@@ -53,7 +53,7 @@ const AIVisionPage: React.FC = () => {,
         {/* Header */}
         <section className="text-center mb-16">
           <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse glitch" data-text="Computer Vision">
-            Computer Vision;
+            Computer Vision;</h1>
           </h1>,
           <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">,
             Advanced image and video analysis solutions for object detection, recognition, and intelligent visual processing.
@@ -64,14 +64,14 @@ const AIVisionPage: React.FC = () => {,
 
         {/* Features */}
         <section className="mb-16">
-          <div className="cyber-card p-8">
+          <div className="cyber-card p-8"></div>
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Key Features<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{features.map((feature, index) => (</div>
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">)
               Key Features;)
             </h2>)
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">),
-              {features.map((feature, index) => (
-                <div key={index} className="flex items-center space-x-3">
+              {features.map((feature, index) => (</div>
+                <div key={index} className="flex items-center space-x-3"></div>
           <div className="cyber-card p-8"></section>
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Key Features</h2><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{features.map((feature, index) => (</div>
                 <div key={index} className="flex items-center space-x-3"></div>
@@ -85,14 +85,14 @@ const AIVisionPage: React.FC = () => {,
 
         {/* Benefits */}
         <section className="mb-16">
-          <div className="cyber-card p-8">
+          <div className="cyber-card p-8"></div>
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Proven Benefits<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{benefits.map((benefit, index) => (</div>
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
               Proven Benefits;
             </h2>
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">,
-              {benefits.map((benefit, index) => (
-                <div key={index} className="text-center">
+              {benefits.map((benefit, index) => (</div>
+                <div key={index} className="text-center"></div>
                   <div className="text-3xl font-bold text-cyan-400 mb-2">{benefit.split(' ')[0]}<p className="text-gray-300 text-sm">{benefit}</p>
           <div className="cyber-card p-8"></section>
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Proven Benefits</h2><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{benefits.map((benefit, index) => (</div>
@@ -111,8 +111,8 @@ const AIVisionPage: React.FC = () => {,
             Common Use Cases;
           </h2>
           <div className="grid grid-cols-1 md: grid-cols-3 gap-8">,
-            {useCases.map((useCase, index) => (
-              <div key={index} className="cyber-card p-6 text-center">
+            {useCases.map((useCase, index) => (</div>
+              <div key={index} className="cyber-card p-6 text-center"></div>
           <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Common Use Cases</h2><div className="grid grid-cols-1 md:grid-cols-3 gap-8">{useCases.map((useCase, index) => (</section>
               <div key={index} className="cyber-card p-6 text-center"></div>
                 <useCase.icon className="w-12 h-12 text-green-400 mx-auto mb-4" />
@@ -127,7 +127,7 @@ const AIVisionPage: React.FC = () => {,
           <div className="cyber-card p-8 max-w-4xl mx-auto"></section>
             <h2 className="text-3xl font-bold text-white mb-4 neon-text">Ready to Implement Computer Vision?</h2><p className="text-lg text-gray-300 mb-8">Contact us today to discuss your computer vision requirements and get a custom solution.</p>
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
               <a;
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <a

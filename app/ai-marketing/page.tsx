@@ -6,7 +6,7 @@ import SEOOptimizer from '../../components/SEOOptimizer';
 import { CheckCircle, TrendingUp, Target, Phone, Mail, MapPin, Navigation } from 'lucide-react';
 
 const AiMarketingPage: React.FC = () => {
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <SEOOptimizer;
         title="AI Marketing Automation - Zion Tech Group",
         description="Intelligent marketing automation with AI-powered campaign optimization and customer insights.",
@@ -34,12 +34,12 @@ const AiMarketingPage: React.FC = () => {
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">AI Marketing Automation<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Intelligent marketing automation with AI-powered campaign optimization and customer insights.</p>
             </div>
             <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-              AI Marketing Automation;
+              AI Marketing Automation;</h1>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Intelligent marketing automation with AI-powered campaign optimization and customer insights.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center"></div>
               <a;
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">AI Marketing Automation</h1><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Intelligent marketing automation with AI-powered campaign optimization and customer insights.</p>
             </p>
@@ -66,7 +66,7 @@ const AiMarketingPage: React.FC = () => {
 ,
         {/* Features Section */}
         <section className="mb-16">
-          <div className="text-center mb-12">
+          <div className="text-center mb-12"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Key Features<p className="text-lg text-gray-300 max-w-2xl mx-auto">Powerful capabilities designed to transform your business</p>
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
               Key Features;
@@ -76,8 +76,8 @@ const AiMarketingPage: React.FC = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-cyan-400/20 hover:border-cyan-400/60 transition-all duration-300">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+            <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-cyan-400/20 hover:border-cyan-400/60 transition-all duration-300"></div>
           <div className="text-center mb-12"></section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Key Features</h2><p className="text-lg text-gray-300 max-w-2xl mx-auto">Powerful capabilities designed to transform your business</p>
             </p>
@@ -114,7 +114,7 @@ const AiMarketingPage: React.FC = () => {
 ,
         {/* Benefits Section */}
         <section className="mb-16">
-          <div className="text-center mb-12">
+          <div className="text-center mb-12"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Why Choose Our AI Marketing Automation?<p className="text-lg text-gray-300 max-w-2xl mx-auto">Proven results and measurable impact for your business</p>
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
               Why Choose Our AI Marketing Automation?
@@ -124,8 +124,8 @@ const AiMarketingPage: React.FC = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20 hover:border-purple-400/60 transition-all duration-300">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+            <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20 hover:border-purple-400/60 transition-all duration-300"></div>
           <div className="text-center mb-12"></section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Why Choose Our AI Marketing Automation?</h2><p className="text-lg text-gray-300 max-w-2xl mx-auto">Proven results and measurable impact for your business</p>
             </p>
@@ -154,7 +154,7 @@ const AiMarketingPage: React.FC = () => {
 ,
         {/* Pricing Section */}
         <section className="mb-16">
-          <div className="text-center mb-12">
+          <div className="text-center mb-12"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Pricing<p className="text-lg text-gray-300 max-w-2xl mx-auto">Transparent pricing with no hidden fees</p>
           <div className="text-center mb-12"></section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Pricing</h2><p className="text-lg text-gray-300 max-w-2xl mx-auto">Transparent pricing with no hidden fees</p>
@@ -176,8 +176,8 @@ const AiMarketingPage: React.FC = () => {
             </p>
           </div>
 
-          <div className="max-w-md mx-auto">,
-            <div className="bg-slate-800/50 backdrop-blur-lg rounded-2xl p-8 border border-cyan-400/20 text-center">,
+          <div className="max-w-md mx-auto">,</div>
+            <div className="bg-slate-800/50 backdrop-blur-lg rounded-2xl p-8 border border-cyan-400/20 text-center">,</div>
               <h3 className="text-2xl font-bold text-white mb-4">AI Marketing Automation</h3>,
               <div className="text-4xl font-bold text-cyan-400 mb-4">$1,800/month</div>
               <p className="text-gray-300 mb-6">per month</p>
@@ -193,7 +193,7 @@ const AiMarketingPage: React.FC = () => {
 ),
         {/* Contact Section */}
         <section className="mb-16">
-          <div className="text-center mb-12">
+          <div className="text-center mb-12"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Get Started?<p className="text-lg text-gray-300 max-w-2xl mx-auto">Contact our experts to discuss your specific needs</p>
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
               Ready to Get Started?
@@ -264,18 +264,18 @@ const AIMarketingPage: React.FC = () => {
       <Navigation />
       
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-16">
+        <div className="container mx-auto px-4 py-16"></div>
+          <div className="text-center mb-16"></div>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 neon-text">
-              AI Marketing Solutions
+              AI Marketing Solutions</h1>
             </h1>
             <p className="text-xl text-cyan-400 mb-8">
               Revolutionize your marketing with AI-powered automation and optimization
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
-            <div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16"></div>
+            <div></div>
               <h2 className="text-3xl font-bold text-white mb-6">Transform Your Marketing Strategy</h2>
               <p className="text-gray-300 mb-6 text-lg">
                 Our AI marketing solutions leverage advanced machine learning algorithms to optimize your campaigns, 
@@ -300,18 +300,18 @@ const AIMarketingPage: React.FC = () => {
                 </li>
               </ul>
             </div>
-            <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 p-8 rounded-lg">
+            <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 p-8 rounded-lg"></div>
               <h3 className="text-2xl font-bold text-white mb-4">Key Features</h3>
-              <div className="space-y-4">
-                <div className="bg-white/10 p-4 rounded-lg">
+              <div className="space-y-4"></div>
+                <div className="bg-white/10 p-4 rounded-lg"></div>
                   <h4 className="text-lg font-semibold text-cyan-400 mb-2">Smart Ad Optimization</h4>
                   <p className="text-gray-300">AI continuously optimizes your ad spend and targeting for maximum ROI</p>
                 </div>
-                <div className="bg-white/10 p-4 rounded-lg">
+                <div className="bg-white/10 p-4 rounded-lg"></div>
                   <h4 className="text-lg font-semibold text-cyan-400 mb-2">Content Generation</h4>
                   <p className="text-gray-300">Generate high-quality marketing content at scale</p>
                 </div>
-                <div className="bg-white/10 p-4 rounded-lg">
+                <div className="bg-white/10 p-4 rounded-lg"></div>
                   <h4 className="text-lg font-semibold text-cyan-400 mb-2">Customer Insights</h4>
                   <p className="text-gray-300">Deep analytics to understand and predict customer behavior</p>
                 </div>
@@ -319,9 +319,9 @@ const AIMarketingPage: React.FC = () => {
             </div>
           </div>
 
-          <div className="text-center">
+          <div className="text-center"></div>
             <h2 className="text-3xl font-bold text-white mb-8">Ready to Transform Your Marketing?</h2>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <a
                 href="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"

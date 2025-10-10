@@ -1,37 +1,37 @@
-'use client';
-import React, { useState, useEffect } from 'react';
-import { BarChart, TrendingUp, Users, Target, Zap, CheckCircle, ArrowRight, Star, Award, Brain, Cpu, Database, Cloud, Code, Smartphone, Settings, Lock, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation as NavIcon, PieChart, TrendingDown, Activity, Phone, Mail, MapPin, Eye, Sparkles, Globe, Shield } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
-import React, { lazy } from 'react';
-import { CheckCircle, TrendingUp, Brain, BarChart } from 'lucide-react';
+'use client',
+import React, { useState, useEffect } from 'react',
+import { BarChart, TrendingUp, Users, Target, Zap, CheckCircle, ArrowRight, Star, Award, Brain, Cpu, Database, Cloud, Code, Smartphone, Settings, Lock, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation as NavIcon, PieChart, TrendingDown, Activity, Phone, Mail, MapPin, Eye, Sparkles, Globe, Shield } from 'lucide-react',
+import Navigation from '../components/Navigation',
+import Footer from '../components/Footer',
+import SEOOptimizer from '../components/SEOOptimizer',
+import React, { lazy } from 'react',
+import { CheckCircle, TrendingUp, Brain, BarChart } from 'lucide-react',
 
-const Navigation = lazy(() => import('../components/Navigation'));
-const Footer = lazy(() => import('../components/Footer'));
+const Navigation = lazy(() => import('../components/Navigation')),
+const Footer = lazy(() => import('../components/Footer')),
 
 const AIAnalyticsPage: React.FC = React.memo((props) => {
   const features = [
     {
-      icon: Brain;
+      icon: Brain,
       title: 'AI-Powered Insights',
       description: 'Get intelligent insights and recommendations powered by advanced machine learning algorithms.',
       benefits: ['Predictive analytics', 'Anomaly detection', 'Trend analysis', 'Smart recommendations']
     },
     {
-      icon: BarChart;
+      icon: BarChart,
       title: 'Real-Time Dashboards',
       description: 'Monitor your business metrics in real-time with customizable, interactive dashboards.',
       benefits: ['Live data updates', 'Custom widgets', 'Interactive charts', 'Mobile responsive']
     },
     {
-      icon: Target;
+      icon: Target,
       title: 'Automated Reporting',
       description: 'Generate comprehensive reports automatically with AI-optimized content and visualizations.',
       benefits: ['Scheduled reports', 'Custom templates', 'PDF export', 'Email delivery']
     },
     {
-      icon: TrendingUp;
+      icon: TrendingUp,
       icon: BarChart,
       title: 'Real-time Analytics',
       description: 'Get instant insights with real-time data processing and visualization',
@@ -70,25 +70,25 @@ const AIAnalyticsPage: React.FC = React.memo((props) => {
     {
       title: 'Sales Analytics',
       description: 'Track sales performance, pipeline health, and revenue trends.',
-      icon: TrendingUp;
+      icon: TrendingUp,
       metrics: ['Revenue tracking', 'Sales forecasting', 'Pipeline analysis', 'Conversion rates']
     },
     {
       title: 'Marketing Analytics',
       description: 'Measure marketing campaign effectiveness and ROI.',
-      icon: Target;
+      icon: Target,
       metrics: ['Campaign performance', 'Lead generation', 'Customer acquisition', 'ROI analysis']
     },
     {
       title: 'Customer Analytics',
       description: 'Understand customer behavior and preferences.',
-      icon: Users;
+      icon: Users,
       metrics: ['Customer segmentation', 'Behavior analysis', 'Retention rates', 'Lifetime value']
     },
     {
       title: 'Financial Analytics',
       description: 'Monitor financial health and profitability.',
-      icon: BarChart;
+      icon: BarChart,
       metrics: ['Revenue analysis', 'Cost tracking', 'Profit margins', 'Cash flow']
       icon: Shield,
       title: 'Enterprise Security',
@@ -101,7 +101,7 @@ const AIAnalyticsPage: React.FC = React.memo((props) => {
       description: 'Generate and schedule automated reports for stakeholders',
       benefits: ['Scheduled reports', 'Email delivery', 'Custom formats']
     }
-  ];
+  ],
 
   const benefits = [
     'Reduce data analysis time by 90%',
@@ -110,7 +110,7 @@ const AIAnalyticsPage: React.FC = React.memo((props) => {
     'Automate reporting and dashboards',
     'Scale analytics across all departments',
     'Integrate with existing systems seamlessly'
-  ];
+  ],
 
   const pricing = [
     {
@@ -133,7 +133,7 @@ const AIAnalyticsPage: React.FC = React.memo((props) => {
         '1GB data storage',
         'Real-time processing'
       ],
-      popular: false;
+      popular: false,
     },
     {
       name: 'Professional'
@@ -161,7 +161,7 @@ const AIAnalyticsPage: React.FC = React.memo((props) => {
         'API access',
         'Team collaboration'
       ],
-      popular: true;
+      popular: true,
     },
     {
       name: 'Enterprise'
@@ -177,7 +177,7 @@ const AIAnalyticsPage: React.FC = React.memo((props) => {
         'Custom integrations',
         'SLA guarantee'
       ],
-      popular: false;
+      popular: false,
       cta: 'Start Free Trial',
       popular: true
     },
@@ -199,7 +199,7 @@ const AIAnalyticsPage: React.FC = React.memo((props) => {
       cta: 'Contact Sales',
       popular: false
     }
-  ];
+  ],
 
   const useCases = [
     {
@@ -226,7 +226,7 @@ const AIAnalyticsPage: React.FC = React.memo((props) => {
       description: 'Risk assessment, fraud detection, and investment analysis',
       metrics: ['Risk scores', 'Fraud detection rates', 'Portfolio performance']
     }
-  ];
+  ],
 
   const testimonials = [
     {
@@ -253,7 +253,7 @@ const AIAnalyticsPage: React.FC = React.memo((props) => {
       rating: 5,
       image: '👩‍🎨'
     }
-  ];
+  ],
 
   return (
     <>
@@ -265,7 +265,7 @@ const AIAnalyticsPage: React.FC = React.memo((props) => {
       />
       <Navigation />
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain particle-field">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain particle-field"></div>
         <main className="container mx-auto px-4 py-16 pt-24">
           {/* Hero Section */}
           <section className={`text-center mb-16 transition-all duration-1000 ${
@@ -273,7 +273,7 @@ const AIAnalyticsPage: React.FC = React.memo((props) => {
           }`}>
             <div className="text-6xl mb-6 animate-bounce">📊</div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 holographic-text cyber-text glitch" data-text="AI Analytics Platform">
-              AI Analytics Platform
+              AI Analytics Platform</h1>
             </h1>
             <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium neon-pulse">
               Transform Data into Actionable Intelligence
@@ -284,16 +284,16 @@ const AIAnalyticsPage: React.FC = React.memo((props) => {
             </p>
             
             {/* Key Stats */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto mb-12">
-              <div className="cyber-card p-6 text-center">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto mb-12"></div>
+              <div className="cyber-card p-6 text-center"></div>
                 <div className="text-3xl font-bold text-cyan-400 neon-text mb-2">95%</div>
                 <div className="text-gray-300">Accuracy Rate</div>
               </div>
-              <div className="cyber-card p-6 text-center">
+              <div className="cyber-card p-6 text-center"></div>
                 <div className="text-3xl font-bold text-purple-400 neon-text mb-2">10x</div>
                 <div className="text-gray-300">Faster Insights</div>
               </div>
-              <div className="cyber-card p-6 text-center">
+              <div className="cyber-card p-6 text-center"></div>
                 <div className="text-3xl font-bold text-pink-400 neon-text mb-2">300%</div>
                 <div className="text-gray-300">ROI Increase</div>
   ]
@@ -317,31 +317,31 @@ const AIAnalyticsPage: React.FC = React.memo((props) => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <button className="cyber-button px-8 py-4 text-lg" aria-label="Start Free Trial" tabIndex="0">Start Free Trial<button className="cyber-button-outline px-8 py-4 text-lg" aria-label="View Demo" tabIndex="0">View Demo</button>
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Navigation />
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
             <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 neon-text">
-              AI-Powered Analytics Dashboard;
+              AI-Powered Analytics Dashboard,</h1>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Transform your data into actionable insights with our intelligent analytics platform. Make data-driven decisions with AI-powered recommendations.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <button className="cyber-button px-8 py-4 text-lg" aria-label="Start Free Trial" tabIndex="0">
-                Start Free Trial;
+                Start Free Trial,
               </button>
               <button className="cyber-button-outline px-8 py-4 text-lg" aria-label="View Demo" tabIndex="0">
-                View Demo;
+                View Demo,
               </button>
             </div>,
           </div>,
 ,
           {/* Stats */}
-          <div className="grid grid-cols-2 md: grid-cols-4 gap-8 mb-16">
-            <div className="text-center">
+          <div className="grid grid-cols-2 md: grid-cols-4 gap-8 mb-16"></div>
+            <div className="text-center"></div>
               <div className="text-4xl font-bold text-cyan-400 mb-2">95%<div className="text-gray-300">Faster Insights</div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"></div>
             <div className="text-center"></div>
@@ -353,7 +353,7 @@ const AIAnalyticsPage: React.FC = React.memo((props) => {
             <div className="text-center"></div>
               <div className="text-4xl font-bold text-cyan-400 mb-2">99.9%</div><div className="text-gray-300">Uptime</div>
             </div>
-            <div className="text-center">
+            <div className="text-center"></div>
               <div className="text-4xl font-bold text-cyan-400 mb-2">24/7<div className="text-gray-300">Real-time Data</div>
             <div className="text-center"></div>
               <div className="text-4xl font-bold text-cyan-400 mb-2">24/7</div><div className="text-gray-300">Real-time Data</div>
@@ -371,17 +371,17 @@ const AIAnalyticsPage: React.FC = React.memo((props) => {
 ,
       {/* Features Section */}
       <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
             <h2 className="text-4xl font-bold text-white mb-4">Powerful Analytics Features<p className="text-xl text-gray-300">Everything you need to understand your business data<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{features.map((feature, index) => (</div>
             <h2 className="text-4xl font-bold text-white mb-4">Powerful Analytics Features</h2>
             <p className="text-xl text-gray-300">Everything you need to understand your business data</p>)
           </div>)
 )
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">),
-            {features.map((feature, index) => (
-              <div key={index} className="cyber-card p-6">
-                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
+            {features.map((feature, index) => (</div>
+              <div key={index} className="cyber-card p-6"></div>
+                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-4"></div>
         <div className="max-w-7xl mx-auto"></section>
           <div className="text-center mb-16"></div>
             <h2 className="text-4xl font-bold text-white mb-4">Powerful Analytics Features</h2><p className="text-xl text-gray-300">Everything you need to understand your business data</p><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{features.map((feature, index) => (</div>
@@ -405,17 +405,17 @@ const AIAnalyticsPage: React.FC = React.memo((props) => {
 
       {/* Analytics Types Section */}
       <section className="py-16 px-4 bg-slate-800/50">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
             <h2 className="text-4xl font-bold text-white mb-4">Comprehensive Analytics Coverage<p className="text-xl text-gray-300">Track every aspect of your business with specialized analytics<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{analyticsTypes.map((type, index) => (</div>
             <h2 className="text-4xl font-bold text-white mb-4">Comprehensive Analytics Coverage</h2>
             <p className="text-xl text-gray-300">Track every aspect of your business with specialized analytics</p>
           </div>
 
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">,
-            {analyticsTypes.map((type, index) => (
-              <div key={index} className="cyber-card p-6">
-                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4">
+            {analyticsTypes.map((type, index) => (</div>
+              <div key={index} className="cyber-card p-6"></div>
+                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4"></div>
         <div className="max-w-7xl mx-auto"></section>
           <div className="text-center mb-16"></div>
             <h2 className="text-4xl font-bold text-white mb-4">Comprehensive Analytics Coverage</h2><p className="text-xl text-gray-300">Track every aspect of your business with specialized analytics</p><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{analyticsTypes.map((type, index) => (</div>
@@ -433,16 +433,16 @@ const AIAnalyticsPage: React.FC = React.memo((props) => {
 
       {/* Integrations Section */}
       <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
             <h2 className="text-4xl font-bold text-white mb-4">Seamless Integrations<p className="text-xl text-gray-300">Connect with your favorite tools and platforms<div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6">{integrations.map((integration, index) => (</div>
             <h2 className="text-4xl font-bold text-white mb-4">Seamless Integrations</h2>
             <p className="text-xl text-gray-300">Connect with your favorite tools and platforms</p>
           </div>
 
           <div className="grid grid-cols-2 md: grid-cols-4 lg:grid-cols-8 gap-6">,
-            {integrations.map((integration, index) => (
-              <div key={index} className="cyber-card p-4 text-center">
+            {integrations.map((integration, index) => (</div>
+              <div key={index} className="cyber-card p-4 text-center"></div>
                 <div className="text-3xl mb-2">{integration.icon}<div className="text-sm text-gray-300">{integration.name}</div>
         <div className="max-w-7xl mx-auto"></section>
           <div className="text-center mb-16"></div>
@@ -450,7 +450,7 @@ const AIAnalyticsPage: React.FC = React.memo((props) => {
               <div key={index} className="cyber-card p-4 text-center"></div>
                 <div className="text-3xl mb-2">{integration.icon}</div><div className="text-sm text-gray-300">{integration.name}</div>
               </div>
-              <div className="cyber-card p-6 text-center">
+              <div className="cyber-card p-6 text-center"></div>
                 <div className="text-3xl font-bold text-green-400 neon-text mb-2">24/7</div>
                 <div className="text-gray-300">Real-time Monitoring</div>
               </div>
@@ -464,11 +464,11 @@ const AIAnalyticsPage: React.FC = React.memo((props) => {
             </h2>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
+              {features.map((feature, index) => (</div>
                 <div key={feature.title} className={`cyber-card p-8 hover:scale-105 transition-all duration-300 ${
                   isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-                }`} style={{ transitionDelay: `${index * 100}ms` }}>
-                  <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-6">
+                }`} style={{ transitionDelay: `${index * 100}ms` }}></div>
+                  <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-6"></div>
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-4 text-center">{feature.title}</h3>
@@ -494,23 +494,23 @@ const AIAnalyticsPage: React.FC = React.memo((props) => {
             </h2>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              {pricingPlans.map((plan, index) => (
+              {pricingPlans.map((plan, index) => (</div>
                 <div key={plan.name} className={`cyber-card p-8 relative hover:scale-105 transition-all duration-300 ${
                   plan.popular ? 'border-2 border-cyan-400' : ''
                 } ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} 
                 style={{ transitionDelay: `${index * 100}ms` }}>
-                  {plan.popular && (
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                  {plan.popular && (</div>
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
                       <span className="bg-gradient-to-r from-cyan-400 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-bold">
                         Most Popular
                       </span>
                     </div>
                   )}
                   
-                  <div className="text-center mb-6">
+                  <div className="text-center mb-6"></div>
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                     <div className="text-4xl font-bold text-cyan-400 mb-2">
-                      {plan.price}
+                      {plan.price}</div>
                       <span className="text-lg text-gray-400">{plan.period}</span>
                     </div>
                     <p className="text-gray-300 text-sm">{plan.description}</p>
@@ -547,20 +547,20 @@ const AIAnalyticsPage: React.FC = React.memo((props) => {
             </h2>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {useCases.map((useCase, index) => (
+              {useCases.map((useCase, index) => (</div>
                 <div key={useCase.industry} className={`cyber-card p-6 text-center hover:scale-105 transition-all duration-300 ${
                   isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-                }`} style={{ transitionDelay: `${index * 100}ms` }}>
-                  <div className="w-12 h-12 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                }`} style={{ transitionDelay: `${index * 100}ms` }}></div>
+                  <div className="w-12 h-12 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4"></div>
                     <useCase.icon className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-lg font-bold text-white mb-3">{useCase.industry}</h3>
                   <p className="text-gray-300 text-sm mb-4">{useCase.description}</p>
                   
                   <div className="space-y-1">
-                    {useCase.metrics.map((metric, idx) => (
+                    {useCase.metrics.map((metric, idx) => (</div>
                       <div key={idx} className="text-xs text-cyan-400 bg-cyan-400/20 px-2 py-1 rounded">
-                        {metric}
+                        {metric}</div>
                       </div>
                     ))}
                   </div>
@@ -576,13 +576,13 @@ const AIAnalyticsPage: React.FC = React.memo((props) => {
             </h2>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {testimonials.map((testimonial, index) => (
+              {testimonials.map((testimonial, index) => (</div>
                 <div key={testimonial.name} className={`cyber-card p-6 ${
                   isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-                }`} style={{ transitionDelay: `${index * 100}ms` }}>
-                  <div className="flex items-center mb-4">
+                }`} style={{ transitionDelay: `${index * 100}ms` }}></div>
+                  <div className="flex items-center mb-4"></div>
                     <div className="text-4xl mr-4">{testimonial.image}</div>
-                    <div>
+                    <div></div>
                       <h4 className="text-white font-semibold">{testimonial.name}</h4>
                       <p className="text-cyan-400 text-sm">{testimonial.role}</p>
                       <p className="text-gray-400 text-sm">{testimonial.company}</p>
@@ -590,7 +590,7 @@ const AIAnalyticsPage: React.FC = React.memo((props) => {
                   </div>
                   
                   <div className="flex items-center mb-3">
-                    {[...Array(testimonial.rating)].map((_, i) => (
+                    {[...Array(testimonial.rating)].map((_, i) => (</div>
                       <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
                     ))}
                   </div>
@@ -603,14 +603,14 @@ const AIAnalyticsPage: React.FC = React.memo((props) => {
 
           {/* CTA Section */}
           <section className="text-center py-16">
-            <div className="cyber-card p-12 max-w-4xl mx-auto">
+            <div className="cyber-card p-12 max-w-4xl mx-auto"></div>
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">
                 Ready to Transform Your Data into Intelligence?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
                 Start your free trial today and see how AI analytics can revolutionize your business decision-making.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
                 <a
                   href="/contact"
                   className="cyber-button inline-flex items-center px-8 py-4 text-lg"
@@ -633,20 +633,20 @@ const AIAnalyticsPage: React.FC = React.memo((props) => {
       
       {/* Pricing Section */}
       <section className="py-16 px-4 bg-slate-800/50">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
             <h2 className="text-4xl font-bold text-white mb-4">Simple, Transparent Pricing<p className="text-xl text-gray-300">Choose the plan that fits your analytics needs<div className="grid grid-cols-1 md:grid-cols-3 gap-8">{pricingPlans.map((plan, index) => (<div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-cyan-500' : ''}`}>{plan.popular && (</div>
             <h2 className="text-4xl font-bold text-white mb-4">Simple, Transparent Pricing</h2>
             <p className="text-xl text-gray-300">Choose the plan that fits your analytics needs</p>
           </div>
 
           <div className="grid grid-cols-1 md: grid-cols-3 gap-8">,
-            {pricingPlans.map((plan, index) => (
+            {pricingPlans.map((plan, index) => (</div>
               <div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-cyan-500' : ''}`}>
-                {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                {plan.popular && (</div>
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
                     <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold"><span className="sr-only">Screen reader: </span>
-                      Most Popular;
+                      Most Popular,
                     </span>,
                   </div>,
         <div className="max-w-7xl mx-auto"></section>
@@ -670,11 +670,11 @@ const AIAnalyticsPage: React.FC = React.memo((props) => {
                     ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
                     : 'bg-slate-700 text-white hover:bg-slate-600'
                 }`} aria-label="Get Started" tabIndex="0">Get Started</button>
-                  plan.popular;
+                  plan.popular,
                     ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover: from-cyan-600 hover:to-purple-700'}
                     : 'bg-slate-700 text-white hover:bg-slate-600'}
                 }`} aria-label="Get Started" tabIndex="0">
-                  Get Started;
+                  Get Started,
                 </button>
               </div>
             ))}
@@ -687,15 +687,15 @@ const AIAnalyticsPage: React.FC = React.memo((props) => {
         <div className="max-w-4xl mx-auto text-center"></section>
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Data?</h2><p className="text-xl text-gray-300 mb-8">Join thousands of businesses using AI analytics to make smarter decisions and drive growth.</p>
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <button className="cyber-button px-8 py-4 text-lg" aria-label="Start Free Trial" tabIndex="0">Start Free Trial<button className="cyber-button-outline px-8 py-4 text-lg" aria-label="Contact Sales" tabIndex="0">Contact Sales</button>
-          <div className="flex flex-col sm: flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
             <button className="cyber-button px-8 py-4 text-lg" aria-label="Start Free Trial" tabIndex="0">
-              Start Free Trial;
+              Start Free Trial,
             </button>
             <button className="cyber-button-outline px-8 py-4 text-lg" aria-label="Contact Sales" tabIndex="0">
-              Contact Sales;
+              Contact Sales,
             </button>
           </div>
         </div>
@@ -705,7 +705,7 @@ const AIAnalyticsPage: React.FC = React.memo((props) => {
     </div>,
       <Footer />
     </>
-  );
-};
+  ),
+},
 
-export default AIAnalyticsPage;
+export default AIAnalyticsPage,

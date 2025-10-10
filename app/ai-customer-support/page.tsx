@@ -5,40 +5,40 @@ import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { MessageCircle, Bot, Zap, Shield, BarChart, Clock, Users, CheckCircle, Star } from 'lucide-react';
 
-const AICustomerSupportPage: React.FC = () => {,
+const $1: React.FC = () => {
   const features = [,
     {,
-      icon: Bot;
+      icon: Bot,
       title: 'AI-Powered Chatbots',
       description: 'Intelligent chatbots that understand context, handle complex queries, and provide instant responses 24/7.',
       benefits: ['99.9% uptime', 'Instant responses', 'Multi-language support']
     },
     {
-      icon: MessageCircle;
+      icon: MessageCircle,
       title: 'Omnichannel Communication',
       description: 'Seamless integration across email, chat, phone, and social media platforms.',
       benefits: ['Unified experience', 'Context preservation', 'Cross-platform sync']
     },
     {
-      icon: Zap;
+      icon: Zap,
       title: 'Intelligent Automation',
       description: 'Automated ticket routing, priority assignment, and resolution suggestions based on AI analysis.',
       benefits: ['Faster resolution', 'Reduced workload', 'Smart prioritization']
     },
     {
-      icon: Shield;
+      icon: Shield,
       title: 'Advanced Security',
       description: 'Enterprise-grade security with data encryption and compliance with industry standards.',
       benefits: ['Data protection', 'Compliance ready', 'Secure communication']
     },
     {
-      icon: BarChart;
+      icon: BarChart,
       title: 'Analytics & Insights',
       description: 'Real-time analytics and performance metrics to optimize customer support operations.',
       benefits: ['Performance tracking', 'Data-driven insights', 'Continuous improvement']
     },
     {
-      icon: Users;
+      icon: Users,
       title: 'Human-AI Collaboration',
       description: 'Seamless handoff between AI and human agents for complex issues requiring human touch.',
       benefits: ['Best of both worlds', 'Smooth transitions', 'Enhanced efficiency']
@@ -58,7 +58,7 @@ const AICustomerSupportPage: React.FC = () => {,
         'Standard analytics',
         'Email support'
       ],
-      popular: false;
+      popular: false,
     },
     {
       name: 'Professional',
@@ -73,7 +73,7 @@ const AICustomerSupportPage: React.FC = () => {,
         'Priority support',
         'API access'
       ],
-      popular: true;
+      popular: true,
     },
     {
       name: 'Enterprise',
@@ -89,26 +89,26 @@ const AICustomerSupportPage: React.FC = () => {,
         'Custom integrations',
         'SLA guarantee'
       ],
-      popular: false;
+      popular: false,
     }
   ];
 
   const benefits = [
     {
-      icon: Clock;
+      icon: Clock,
       title: '24/7 Availability',
       description: 'Never miss a customer inquiry with round-the-clock AI support'},
     {
-      icon: Users;
+      icon: Users,
       title: 'Scalable Solutions',
       description: 'Handle increasing support volume without proportional cost increase'},
     {
-      icon: CheckCircle;
+      icon: CheckCircle,
       title: 'Consistent Quality',
       description: 'Deliver consistent, high-quality support experiences every time'
     },
     {
-      icon: Star;
+      icon: Star,
       title: 'Customer Satisfaction',
       description: 'Improve customer satisfaction scores with faster, more accurate responses'
     }
@@ -130,13 +130,13 @@ const AICustomerSupportPage: React.FC = () => {,
               and automated workflows that deliver exceptional customer experiences 24/7.</p>
         canonicalUrl="https: //ziontechgroup.com/ai-customer-support",
       />,
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">,
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">,</div>
         <Navigation />,
         <main className="container mx-auto px-4 py-16 pt-24">,
           {/* Hero Section */}
           <section className="text-center mb-16">
             <h1 className="text-4xl md: text-6xl font-bold text-white mb-6 neon-text">
-              AI Customer Support;
+              AI Customer Support;</h1>
             </h1>
             <p className="text-xl text-cyan-400 mb-8 font-medium">)
               Revolutionary AI-powered customer support solutions;)
@@ -145,7 +145,7 @@ const AICustomerSupportPage: React.FC = () => {,
               Transform your customer service with intelligent chatbots, omnichannel communication)
               and automated workflows that deliver exceptional customer experiences 24/7.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
               <a;
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></section>
               <a
@@ -170,15 +170,15 @@ const AICustomerSupportPage: React.FC = () => {,
           {/* Features Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Key Features<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature, index) => (</div>
-                <div key={index} className="cyber-card hologram-card p-6 hover:scale-105 transition-all duration-300">
+                <div key={index} className="cyber-card hologram-card p-6 hover:scale-105 transition-all duration-300"></div>
                   <feature.icon className="w-12 h-12 text-cyan-400 mb-4" />
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}<p className="text-gray-300 mb-4">{feature.description}<ul className="space-y-2">{feature.benefits.map((benefit, benefitIndex) => (</ul>
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">
               Key Features;
             </h2>
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,
-              {features.map((feature, index) => (
-                <div key={index} className="cyber-card hologram-card p-6 hover: scale-105 transition-all duration-300">,
+              {features.map((feature, index) => (</div>
+                <div key={index} className="cyber-card hologram-card p-6 hover: scale-105 transition-all duration-300">,</div>
                   <feature.icon className="w-12 h-12 text-cyan-400 mb-4" />,
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
@@ -201,7 +201,7 @@ const AICustomerSupportPage: React.FC = () => {,
           {/* Pricing Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Pricing Plans<div className="grid grid-cols-1 md:grid-cols-3 gap-8">{pricingPlans.map((plan, index) => (<div key={index} className={`cyber-card hologram-card p-8 relative ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>{plan.popular && (</div>
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Pricing Plans</h2><div className="grid grid-cols-1 md:grid-cols-3 gap-8">{pricingPlans.map((plan, index) => (</section><div key={index} className={`cyber-card hologram-card p-8 relative ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>{plan.popular && (</div>
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
                       <span className="bg-cyan-400 text-black px-4 py-1 rounded-full text-sm font-bold">Most Popular</span>
@@ -209,10 +209,10 @@ const AICustomerSupportPage: React.FC = () => {,
               Pricing Plans;
             </h2>
             <div className="grid grid-cols-1 md: grid-cols-3 gap-8">,
-              {pricingPlans.map((plan, index) => (
+              {pricingPlans.map((plan, index) => (</div>
                 <div key={index} className={`cyber-card hologram-card p-8 relative ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>
-                  {plan.popular && (
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                  {plan.popular && (</div>
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
                       <span className="bg-cyan-400 text-black px-4 py-1 rounded-full text-sm font-bold">
                         Most Popular;
                       </span>
@@ -257,8 +257,8 @@ const AICustomerSupportPage: React.FC = () => {,
               Why Choose Our AI Customer Support?
             </h2>
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">,
-              {benefits.map((benefit, index) => (
-                <div key={index} className="text-center">
+              {benefits.map((benefit, index) => (</div>
+                <div key={index} className="text-center"></div>
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Why Choose Our AI Customer Support?</h2><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{benefits.map((benefit, index) => (</section>
                 <div key={index} className="text-center"></div>
                   <benefit.icon className="w-16 h-16 text-cyan-400 mx-auto mb-4" />
@@ -280,7 +280,7 @@ const AICustomerSupportPage: React.FC = () => {,
               Get started with our AI customer support solutions today. Contact us for a free consultation;
               and custom implementation plan.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
               <a;
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></section>
               <a

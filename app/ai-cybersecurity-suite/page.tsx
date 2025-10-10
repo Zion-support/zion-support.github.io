@@ -27,7 +27,7 @@ const AICybersecuritySuitePage: React.FC = () => {
                 <Shield className="w-4 h-4 mr-2" />
                 AI Security Technology
               </div>
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1>
                 AI Cybersecurity Suite</h1>
                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-orange-400">
                   Advanced Threat Protection
@@ -440,7 +440,7 @@ const AICybersecuritySuitePage: React.FC = () => {
         </section>
       </main>
 
-      <Footer /></Foote>
+      <Footer /></Footer>
     </ErrorBoundary>
   );
 };

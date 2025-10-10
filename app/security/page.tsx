@@ -8,7 +8,7 @@ const SecurityPage: React.FC = () => {
   const securityMeasures = [
     {
       title: 'Data Encryption'
-      icon: Lock;
+      icon: Lock,
       description: 'All data is encrypted both in transit and at rest using industry-standard encryption protocols.',
       details: [,
         'AES-256 encryption for data at rest',
@@ -19,7 +19,7 @@ const SecurityPage: React.FC = () => {
     },
     {
       title: 'Access Controls'
-      icon: UserCheck;
+      icon: UserCheck,
       description: 'Multi-layered access controls ensure only authorized personnel can access your data.',
       details: [,
         'Role-based access control (RBAC)',
@@ -30,7 +30,7 @@ const SecurityPage: React.FC = () => {
     },
     {
       title: 'Network Security'
-      icon: Shield;
+      icon: Shield,
       description: 'Advanced network security measures protect against external threats and unauthorized access.',
       details: [,
         'Firewall protection and intrusion detection',
@@ -41,7 +41,7 @@ const SecurityPage: React.FC = () => {
     },
     {
       title: 'Infrastructure Security'
-      icon: Database;
+      icon: Database,
       description: 'Secure infrastructure with physical and logical security controls.',
       details: [,
         'SOC 2 Type II certified data centers',
@@ -57,37 +57,37 @@ const SecurityPage: React.FC = () => {
       name: 'SOC 2 Type II',
       description: 'Audited controls for security, availability, and confidentiality',
       status: 'Certified',
-      icon: CheckCircle;
+      icon: CheckCircle,
     },
     {
       name: 'ISO 27001',
       description: 'International standard for information security management',
       status: 'Certified',
-      icon: CheckCircle;
+      icon: CheckCircle,
     },
     {
       name: 'GDPR',
       description: 'General Data Protection Regulation compliance',
       status: 'Compliant',
-      icon: CheckCircle;
+      icon: CheckCircle,
     },
     {
       name: 'CCPA',
       description: 'California Consumer Privacy Act compliance',
       status: 'Compliant',
-      icon: CheckCircle;
+      icon: CheckCircle,
     },
     {
       name: 'HIPAA',
       description: 'Health Insurance Portability and Accountability Act',
       status: 'Compliant',
-      icon: CheckCircle;
+      icon: CheckCircle,
     },
     {
       name: 'PCI DSS',
       description: 'Payment Card Industry Data Security Standard',
       status: 'Compliant',
-      icon: CheckCircle;
+      icon: CheckCircle,
     }
   ];
 
@@ -135,7 +135,7 @@ const SecurityPage: React.FC = () => {
   ];
 
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-  return (
+  return (</div>
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Navigation />
 
@@ -146,7 +146,7 @@ const SecurityPage: React.FC = () => {
         {/* Header */}
         <section className="text-center mb-16">
           <h1 className="text-4xl md: text-5xl lg:text-6xl font-bold text-white mb-6 neon-text">
-            Security & Compliance;
+            Security & Compliance;</h1>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Your data security is our top priority. We implement industry-leading security measures and maintain compliance with the highest standards.
@@ -178,9 +178,9 @@ const SecurityPage: React.FC = () => {
         <section className="mb-16">)
           <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Security Measures</h2>)
           <div className="grid grid-cols-1 md: grid-cols-2 gap-8">),
-            {securityMeasures.map((measure, index) => (
-              <div key={index} className="cyber-card p-6">
-                <div className="flex items-center mb-4">
+            {securityMeasures.map((measure, index) => (</div>
+              <div key={index} className="cyber-card p-6"></div>
+                <div className="flex items-center mb-4"></div>
           <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Security Measures</h2><div className="grid grid-cols-1 md:grid-cols-2 gap-8">{securityMeasures.map((measure, index) => (</section>
               <div key={index} className="cyber-card p-6"></div>
                 <div className="flex items-center mb-4"></div>
@@ -198,16 +198,16 @@ const SecurityPage: React.FC = () => {
 
         {/* Compliance Standards */}
         <section className="mb-16">
-          <div className="cyber-card p-8">
+          <div className="cyber-card p-8"></div>
             <h2 className="text-2xl font-bold text-white mb-6 neon-text">Compliance & Certifications<p className="text-gray-300 mb-8">We maintain compliance with industry-leading security and privacy standards to ensure your data is protected according to the highest requirements.<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">{complianceStandards.map((standard, index) => (</div>
             <h2 className="text-2xl font-bold text-white mb-6 neon-text">Compliance & Certifications</h2>
             <p className="text-gray-300 mb-8">
               We maintain compliance with industry-leading security and privacy standards to ensure your data is protected according to the highest requirements.
             </p>
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">,
-              {complianceStandards.map((standard, index) => (
-                <div key={index} className="bg-slate-800/50 rounded-lg p-6">
-                  <div className="flex items-center justify-between mb-3">
+              {complianceStandards.map((standard, index) => (</div>
+                <div key={index} className="bg-slate-800/50 rounded-lg p-6"></div>
+                  <div className="flex items-center justify-between mb-3"></div>
           <div className="cyber-card p-8"></section>
             <h2 className="text-2xl font-bold text-white mb-6 neon-text">Compliance & Certifications</h2><p className="text-gray-300 mb-8">We maintain compliance with industry-leading security and privacy standards to ensure your data is protected according to the highest requirements.</p><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">{complianceStandards.map((standard, index) => (</div>
                 <div key={index} className="bg-slate-800/50 rounded-lg p-6"></div>
@@ -227,8 +227,8 @@ const SecurityPage: React.FC = () => {
           <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Security Features<div className="grid grid-cols-1 md:grid-cols-2 gap-8">{securityFeatures.map((feature, index) => (</div>
           <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Security Features</h2>
           <div className="grid grid-cols-1 md: grid-cols-2 gap-8">,
-            {securityFeatures.map((feature, index) => (
-              <div key={index} className="cyber-card p-6">
+            {securityFeatures.map((feature, index) => (</div>
+              <div key={index} className="cyber-card p-6"></div>
                 <h3 className="text-xl font-bold text-white mb-3">{feature.title}<p className="text-gray-300 mb-4">{feature.description}<ul className="space-y-2">{feature.features.map((item, itemIndex) => (</ul>
           <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Security Features</h2><div className="grid grid-cols-1 md:grid-cols-2 gap-8">{securityFeatures.map((feature, index) => (</section>
               <div key={index} className="cyber-card p-6"></div>
@@ -247,8 +247,8 @@ const SecurityPage: React.FC = () => {
         <section className="mb-16">
           <div className="cyber-card p-8"></section>
             <h2 className="text-2xl font-bold text-white mb-6 neon-text">Security Best Practices</h2>
-            <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
-              <div>,
+            <div className="grid grid-cols-1 md: grid-cols-2 gap-8"></div>
+              <div>,</div>
                 <h3 className="text-xl font-semibold text-cyan-400 mb-4">For Our Clients</h3>,
                 <ul className="space-y-3 text-gray-300">,
                   <li className="flex items-start">,
@@ -313,8 +313,8 @@ const SecurityPage: React.FC = () => {
           <div className="cyber-card p-8"></section>
             <h2 className="text-2xl font-bold text-white mb-6 neon-text">Incident Response</h2><p className="text-gray-300 mb-6">In the unlikely event of a security incident, we have a comprehensive incident response plan to minimize impact and restore services quickly.</p>
             </p>
-            <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
-              <div>
+            <div className="grid grid-cols-1 md: grid-cols-2 gap-8"></div>
+              <div></div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
               <div></div>
                 <h3 className="text-lg font-semibold text-cyan-400 mb-4">Response Process</h3>
@@ -368,7 +368,7 @@ const SecurityPage: React.FC = () => {
 ,
         {/* Contact Information */}
         <section className="mb-16">
-          <div className="cyber-card p-8">
+          <div className="cyber-card p-8"></div>
             <h2 className="text-2xl font-bold text-white mb-6 neon-text">Security Questions?<p className="text-gray-300 mb-6">If you have any questions about our security measures or need to report a security concern, please contact our security team:</p>
           <div className="cyber-card p-8"></section>
             <h2 className="text-2xl font-bold text-white mb-6 neon-text">Security Questions?</h2><p className="text-gray-300 mb-6">If you have any questions about our security measures or need to report a security concern, please contact our security team:</p>
@@ -376,16 +376,16 @@ const SecurityPage: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
               <div></div>
                 <h3 className="text-lg font-semibold text-cyan-400 mb-3">Security Team</h3>
-                <div className="space-y-2 text-gray-300">
+                <div className="space-y-2 text-gray-300"></div>
                   <p>Chief Information Security Officer<p>Zion Tech Group</p>
                   <p>364 E Main St STE 1008<p>Middletown, DE 19709</p>
             <h2 className="text-2xl font-bold text-white mb-6 neon-text">Security Questions?</h2>
             <p className="text-gray-300 mb-6">
               If you have any questions about our security measures or need to report a security concern, please contact our security team: </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+              <div></div>
                 <h3 className="text-lg font-semibold text-cyan-400 mb-3">Security Team</h3>,
-                <div className="space-y-2 text-gray-300">,
+                <div className="space-y-2 text-gray-300">,</div>
                   <p>Chief Information Security Officer</p>,
                   <p>Zion Tech Group</p>,
                   <p>364 E Main St STE 1008</p>,
@@ -421,10 +421,10 @@ const SecurityPage: React.FC = () => {
         <meta name="description" content="Comprehensive cybersecurity solutions to protect your business from threats." />
       </Helmet>
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16 pt-24">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+        <div className="container mx-auto px-4 py-16 pt-24"></div>
+          <div className="text-center mb-16"></div>
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6"></h1>
               Security <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Services</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -432,8 +432,8 @@ const SecurityPage: React.FC = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20"></div>
               <h3 className="text-2xl font-bold text-white mb-4">Security Audits</h3>
               <p className="text-gray-300 mb-4">
                 Comprehensive security assessments to identify vulnerabilities and strengthen your defenses.
@@ -446,7 +446,7 @@ const SecurityPage: React.FC = () => {
               </ul>
             </div>
             
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
+            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20"></div>
               <h3 className="text-2xl font-bold text-white mb-4">Threat Detection</h3>
               <p className="text-gray-300 mb-4">
                 Advanced monitoring and detection systems to identify and respond to security threats.
@@ -459,7 +459,7 @@ const SecurityPage: React.FC = () => {
               </ul>
             </div>
             
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
+            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20"></div>
               <h3 className="text-2xl font-bold text-white mb-4">Compliance Management</h3>
               <p className="text-gray-300 mb-4">
                 Ensure your business meets industry standards and regulatory requirements.

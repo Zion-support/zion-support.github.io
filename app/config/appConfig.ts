@@ -5,31 +5,31 @@
 
 export interface AppConfig {
   app: {
-    name: string;
-    version: string;
+    name: string,
+    version: string,
     environment: 'development' | 'production' | 'test';
   };
   api: {
-    baseUrl: string;
-    timeout: number;
-    retryAttempts: number;
+    baseUrl: string,
+    timeout: number,
+    retryAttempts: number,
   };
   features: {
-    analytics: boolean;
-    monitoring: boolean;
-    errorTracking: boolean;
-    performanceOptimization: boolean;
+    analytics: boolean,
+    monitoring: boolean,
+    errorTracking: boolean,
+    performanceOptimization: boolean,
   };
   performance: {
-    enableLazyLoading: boolean;
-    imageLazyLoadThreshold: number;
-    componentLazyLoadThreshold: number;
-    cacheMaxAge: number;
+    enableLazyLoading: boolean,
+    imageLazyLoadThreshold: number,
+    componentLazyLoadThreshold: number,
+    cacheMaxAge: number,
   };
   security: {
-    enableCSP: boolean;
-    enableHSTS: boolean;
-    enableXSSProtection: boolean;
+    enableCSP: boolean,
+    enableHSTS: boolean,
+    enableXSSProtection: boolean,
   };
 }
 

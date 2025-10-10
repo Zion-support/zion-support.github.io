@@ -1,8 +1,8 @@
 'use client';
 
 interface OptimizedImageProps {
-  src: string;
-  alt: string;
+  src: string,
+  alt: string,
   width?: number;
   height?: number;
   className?: string;

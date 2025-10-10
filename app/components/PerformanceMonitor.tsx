@@ -3,10 +3,10 @@ import React, { useEffect, useState, useCallback } from 'react';
 import { Activity, Zap, Clock, Database } from 'lucide-react';
 
 interface PerformanceMetrics {
-  loadTime: number;
-  memoryUsage: number;
-  connectionSpeed: string;
-  renderTime: number;
+  loadTime: number,
+  memoryUsage: number,
+  connectionSpeed: string,
+  renderTime: number,
 }
 
 const PerformanceMonitor: React.FC = () => {
@@ -109,11 +109,9 @@ const PerformanceMonitor: React.FC = () => {
           </span>
           <span className="text-purple-400">{metrics.connectionSpeed}</span>
         </div>
-      </div>
       
       <div className="mt-2 text-xs text-gray-400">
-        Press Ctrl+Shift+P to toggle
-      </div>
+        Press Ctrl+Shift+P to toggle</div>
     </div>
   );
 };

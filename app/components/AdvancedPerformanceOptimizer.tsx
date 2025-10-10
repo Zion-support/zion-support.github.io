@@ -45,7 +45,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
     lcp: 0;)
     fid: 0),
     cls: 0),
-    ttfb: 0;
+    ttfb: 0,
   });
 
   // Web Vitals monitoring;

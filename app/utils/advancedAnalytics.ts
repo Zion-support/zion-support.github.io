@@ -1,23 +1,23 @@
 'use client'
 
 interface UserEvent {
-  id: string;
-  type: string;
-  name: string;
+  id: string,
+  type: string,
+  name: string,
   value?: number;
-  timestamp: string;
-  sessionId: string;
+  timestamp: string,
+  sessionId: string,
   userId?: string;
-  url: string;
+  url: string,
   metadata?: Record<string, unknown>
 }
 
 interface UserSession {
-  id: string;
-  startTime: string;
+  id: string,
+  startTime: string,
   endTime?: string;
   duration?: number;
-  pageViews: number;
+  pageViews: number,
 interface UserEvent {}
   id: string
   type: string
@@ -38,41 +38,41 @@ interface UserSession {}
   pageViews: number
   events: UserEvent[]
   referrer?: string;
-  userAgent: string;
+  userAgent: string,
   device: 'desktop' | 'mobile' | 'tablet'
-  browser: string;
-  os: string;
+  browser: string,
+  os: string,
   country?: string;,
   city?: string;
 }
 
 interface AnalyticsConfig {
-  enableTracking: boolean;
-  enableHeatmaps: boolean;
-  enableSessionRecording: boolean;
-  enableA_BTesting: boolean;
-  enableConversionTracking: boolean;
-  enablePerformanceTracking: boolean;
-  enableErrorTracking: boolean;
-  enableUserJourneyTracking: boolean;
+  enableTracking: boolean,
+  enableHeatmaps: boolean,
+  enableSessionRecording: boolean,
+  enableA_BTesting: boolean,
+  enableConversionTracking: boolean,
+  enablePerformanceTracking: boolean,
+  enableErrorTracking: boolean,
+  enableUserJourneyTracking: boolean,
 }
 
 class AdvancedAnalytics {
-  private static instance: AdvancedAnalytics;
-  private config: AnalyticsConfig;
-  private currentSession: UserSession;
+  private static instance: AdvancedAnalytics,
+  private config: AnalyticsConfig,
+  private currentSession: UserSession,
   private eventQueue: UserEvent[] = []
 
   constructor() {
     this.config = {
-      enableTracking: true;
-      enableHeatmaps: true;
-      enableSessionRecording: false;
-      enableA_BTesting: true;
-      enableConversionTracking: true;
-      enablePerformanceTracking: true;
-      enableErrorTracking: true;
-      enableUserJourneyTracking: true;
+      enableTracking: true,
+      enableHeatmaps: true,
+      enableSessionRecording: false,
+      enableA_BTesting: true,
+      enableConversionTracking: true,
+      enablePerformanceTracking: true,
+      enableErrorTracking: true,
+      enableUserJourneyTracking: true,
 interface AnalyticsConfig {}
   enableTracking: boolean
   enableHeatmaps: boolean
@@ -188,7 +188,7 @@ class AdvancedAnalytics {/* TODO: Fix JSX expression */}
     return {
       id: this.generateSessionId()
       startTime: new Date().toISOString()
-      pageViews: 0;
+      pageViews: 0,
       events: []
       userAgent: navigator.userAgent;
       device: this.detectDevice()
@@ -612,7 +612,7 @@ class AdvancedAnalytics {/* TODO: Fix JSX expression */}
   getAnalyticsSummary(): {/* TODO: Fix JSX expression */}
   s: number }>;
     conversionRat,
-  e: number;
+  e: number,
   } {/* TODO: Fix JSX expression */}
       },
       {} as Record<string, number></string>

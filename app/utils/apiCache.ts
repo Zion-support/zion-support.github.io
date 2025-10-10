@@ -4,9 +4,9 @@
  */
 
 interface CacheEntry {
-  data: any;
-  timestamp: number;
-  ttl: number;
+  data: any,
+  timestamp: number,
+  ttl: number,
 }
 
 class APICache {
@@ -22,7 +22,7 @@ class APICache {
     const now = Date.now();
     const entry: CacheEntry = {
       data;
-      timestamp: now;
+      timestamp: now,
       ttl: ttl || this.defaultTTL;
     };
 

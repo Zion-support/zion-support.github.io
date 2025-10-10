@@ -26,11 +26,11 @@ interface EnhancedSEOProps {
   colorScheme?: string;
   preload?: Array<{
     href: string;,
-    as: string;
+    as: string,
     type?: string;}>;
   prefetch?: Array<{
     href: string;,
-    as: string;
+    as: string,
   }>;
   dnsPrefetch?: string[];
   preconnect?: string[];

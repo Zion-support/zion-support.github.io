@@ -49,11 +49,11 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({,
   enableErrorReporting = true,
   enablePerformanceBudget = true,
   performanceBudget = {
-    lcp: 2500;
-    fid: 100;
+    lcp: 2500,
+    fid: 100,
     cls: 0.1;
-    fcp: 1800;
-    ttfb: 600;
+    fcp: 1800,
+    ttfb: 600,
   }
 }) => {
 
@@ -91,7 +91,7 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({,
       timestamp: Date.now()
       url: window.location.href;
       userAgent: navigator.userAgent;
-      performanceMetrics: performanceMetrics;
+      performanceMetrics: performanceMetrics,
   // Enhanced error reporting
   const reportError = useCallback((error: any, context?: string) => {}
     if (!enableErrorReporting) return;
@@ -177,7 +177,7 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({,
             event_category: 'Performance')
             event_label: metric.name)
             value: Math.round(metric.value)
-            non_interaction: true;
+            non_interaction: true,
             custom_parameter_1: metric.delta;
             custom_parameter_2: metric.id;
         }
@@ -207,7 +207,7 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({,
             timestamp: Date.now()
             url: window.location.href;
             userAgent: navigator.userAgent;
-            performanceMetrics: performanceMetrics;
+            performanceMetrics: performanceMetrics,
           navigator.sendBeacon('/api/analytics/performance', data);
         }
 

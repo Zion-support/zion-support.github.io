@@ -13,28 +13,28 @@ const AISentimentAnalyzer: React.FC = memo(() => {}
 
   const features = [
     {
-      icon: Brain;
+      icon: Brain,
     {}
       icon: Brain,
       title: 'Real-time Sentiment Analysis',
       description: 'Analyze customer sentiment across all channels in real-time with 95% accuracy',
       color: 'text-purple-400'},
     {
-      icon: BarChart;
+      icon: BarChart,
     {}
       icon: BarChart,
       title: 'Advanced Analytics Dashboard',
       description: 'Comprehensive insights with trend analysis, emotion mapping, and predictive modeling',
       color: 'text-blue-400'},
     {
-      icon: MessageSquare;
+      icon: MessageSquare,
     {}
       icon: MessageSquare,
       title: 'Multi-Channel Support',
       description: 'Monitor sentiment across social media, reviews, emails, and customer support tickets',
       color: 'text-green-400'},
     {
-      icon: Target;
+      icon: Target,
     {}
       icon: Target,
       title: 'Custom AI Models',
@@ -56,7 +56,7 @@ const AISentimentAnalyzer: React.FC = memo(() => {}
         'API access'
       ],
       popular: false},
-      popular: false;
+      popular: false,
     },
     {
     {}
@@ -73,7 +73,7 @@ const AISentimentAnalyzer: React.FC = memo(() => {}
         'Multi-language support'
       ],
       popular: true},
-      popular: true;
+      popular: true,
     },
     {
       name: 'Enterprise'
@@ -91,7 +91,7 @@ const AISentimentAnalyzer: React.FC = memo(() => {}
         'Custom reporting'
       ],
       popular: false}
-      popular: false;
+      popular: false,
     }
   ];
 
@@ -99,27 +99,27 @@ const AISentimentAnalyzer: React.FC = memo(() => {}
     {}
       title: 'Customer Experience Optimization',
       description: 'Identify pain points and improve customer satisfaction by 40%',
-      icon: Users;
+      icon: Users,
       result: '+40% satisfaction'},
     {}
       title: 'Brand Reputation Management',
       description: 'Monitor and protect your brand reputation across all platforms',
-      icon: Shield;
+      icon: Shield,
       result: '99.9% uptime'},
     {}
       title: 'Product Development Insights',
       description: 'Use customer feedback to guide product improvements and new features',
-      icon: TrendingUp;
+      icon: TrendingUp,
       result: '+60% engagement'},
     {}
       title: 'Competitive Intelligence',
       description: 'Track competitor sentiment and market positioning',
-      icon: Target;
+      icon: Target,
       result: 'Real-time insights'}
   ];
 
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-  return (
+  return (</div>
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Helmet>
         <title>AI Sentiment Analyzer - Advanced Customer Insights | Zion Tech Group</title>
@@ -140,15 +140,15 @@ const AISentimentAnalyzer: React.FC = memo(() => {}
       </Helmet>,
 ,
       <div className="container mx-auto px-4 py-16">,
-        {/* Hero Section */}
+        {/* Hero Section */}</div>
         <section className="text-center mb-16">
-          <div className="inline-flex items-center space-x-2 bg-purple-600/20 text-purple-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
+          <div className="inline-flex items-center space-x-2 bg-purple-600/20 text-purple-400 px-4 py-2 rounded-full text-sm font-medium mb-6"></div>
             <Brain className="w-4 h-4" />
             <span>AI-Powered Analytics</span>
           </div>
 
           <h1 className="text-4xl md: text-6xl font-bold text-white mb-6">
-            AI Sentiment Analyzer;
+            AI Sentiment Analyzer;</h1>
           </h1>)
 )
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">)
@@ -156,7 +156,7 @@ const AISentimentAnalyzer: React.FC = memo(() => {}
             Monitor brand perception, optimize customer experience, and drive business growth with 95% accuracy.
           </p>
 
-          <div className="flex flex-col sm: flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
             <a;
           <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <a
@@ -181,8 +181,8 @@ const AISentimentAnalyzer: React.FC = memo(() => {}
 ,
         {/* Key Benefits */}
         <section className="mb-16">
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-slate-800/50 p-6 rounded-lg border border-purple-500/20">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6"></div>
+            <div className="bg-slate-800/50 p-6 rounded-lg border border-purple-500/20"></div>
               <div className="text-3xl font-bold text-purple-400 mb-2">95%<div className="text-white font-semibold mb-2">Accuracy Rate<div className="text-gray-400 text-sm">Industry-leading sentiment analysis precision</div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"></section>
             <div className="bg-slate-800/50 p-6 rounded-lg border border-purple-500/20"></div>
@@ -194,7 +194,7 @@ const AISentimentAnalyzer: React.FC = memo(() => {}
             <div className="bg-slate-800/50 p-6 rounded-lg border border-green-500/20"></div>
               <div className="text-3xl font-bold text-green-400 mb-2">50+</div><div className="text-white font-semibold mb-2">Languages</div><div className="text-gray-400 text-sm">Multi-language sentiment analysis support</div>
             </div>
-            <div className="bg-slate-800/50 p-6 rounded-lg border border-orange-500/20">
+            <div className="bg-slate-800/50 p-6 rounded-lg border border-orange-500/20"></div>
               <div className="text-3xl font-bold text-orange-400 mb-2">24/7<div className="text-white font-semibold mb-2">Monitoring<div className="text-gray-400 text-sm">Continuous brand and sentiment tracking</div>
             <div className="bg-slate-800/50 p-6 rounded-lg border border-orange-500/20"></div>
               <div className="text-3xl font-bold text-orange-400 mb-2">24/7</div><div className="text-white font-semibold mb-2">Monitoring</div><div className="text-gray-400 text-sm">Continuous brand and sentiment tracking</div>
@@ -205,12 +205,12 @@ const AISentimentAnalyzer: React.FC = memo(() => {}
         {/* Features */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Powerful Features<div className="grid grid-cols-1 md:grid-cols-2 gap-8">{features.map((feature, index) => (</div>
-              </div><div key={index} className="bg-slate-800/30 p-6 rounded-lg border border-gray-700 hover:border-purple-500/50 transition-all duration-300">
+              </div><div key={index} className="bg-slate-800/30 p-6 rounded-lg border border-gray-700 hover:border-purple-500/50 transition-all duration-300"></div>
           <h2 className="text-3xl font-bold text-white text-center mb-12">Powerful Features</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {features.map((feature, index) => (}
-              <div key={index} className="bg-slate-800/30 p-6 rounded-lg border border-gray-700 hover:border-purple-500/50 transition-all duration-300">
-                <div className="flex items-start space-x-4">
+            {features.map((feature, index) => (}</div>
+              <div key={index} className="bg-slate-800/30 p-6 rounded-lg border border-gray-700 hover:border-purple-500/50 transition-all duration-300"></div>
+                <div className="flex items-start space-x-4"></div>
               <div className="text-3xl font-bold text-orange-400 mb-2">24/7</div>
               <div className="text-white font-semibold mb-2">Monitoring</div>
               <div className="text-gray-400 text-sm">Continuous brand and sentiment tracking</div>,
@@ -222,10 +222,10 @@ const AISentimentAnalyzer: React.FC = memo(() => {}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Powerful Features</h2>
           <div className="grid grid-cols-1 md: grid-cols-2 gap-8">,
-            {features.map((feature, index) => (
-              <div key={index} className="bg-slate-800/30 p-6 rounded-lg border border-gray-700 hover: border-purple-500/50 transition-all duration-300">,
-                <div className="flex items-start space-x-4">,
-                  <div className={`p-3 rounded-lg bg-slate-700 ${feature.color}`}>
+            {features.map((feature, index) => (</div>
+              <div key={index} className="bg-slate-800/30 p-6 rounded-lg border border-gray-700 hover: border-purple-500/50 transition-all duration-300">,</div>
+                <div className="flex items-start space-x-4">,</div>
+                  <div className={`p-3 rounded-lg bg-slate-700 ${feature.color}`}></div>
           <h2 className="text-3xl font-bold text-white text-center mb-12">Powerful Features</h2><div className="grid grid-cols-1 md:grid-cols-2 gap-8">{features.map((feature, index) => (</section>
               </div><div key={index} className="bg-slate-800/30 p-6 rounded-lg border border-gray-700 hover:border-purple-500/50 transition-all duration-300"></div>
                 <div className="flex items-start space-x-4"></div>
@@ -246,16 +246,16 @@ const AISentimentAnalyzer: React.FC = memo(() => {}
           <h2 className="text-3xl font-bold text-white text-center mb-12">Real-World Applications<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{useCases.map((useCase, index) => (</div>
           <h2 className="text-3xl font-bold text-white text-center mb-12">Real-World Applications</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {useCases.map((useCase, index) => (}
-              <div key={index} className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-lg border border-gray-700 hover:border-purple-500/50 transition-all duration-300">
-                <div className="flex items-center justify-between mb-4">
+            {useCases.map((useCase, index) => (}</div>
+              <div key={index} className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-lg border border-gray-700 hover:border-purple-500/50 transition-all duration-300"></div>
+                <div className="flex items-center justify-between mb-4"></div>
                   <useCase.icon className="w-8 h-8 text-purple-400" />
                   <div className="text-sm font-semibold text-green-400">{useCase.result}<h3 className="text-lg font-semibold text-white mb-2">{useCase.title}<p className="text-gray-400 text-sm">{useCase.description}</p>
           <h2 className="text-3xl font-bold text-white text-center mb-12">Real-World Applications</h2>
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">,
-            {useCases.map((useCase, index) => (
-              <div key={index} className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-lg border border-gray-700 hover: border-purple-500/50 transition-all duration-300">,
-                <div className="flex items-center justify-between mb-4">,
+            {useCases.map((useCase, index) => (</div>
+              <div key={index} className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-lg border border-gray-700 hover: border-purple-500/50 transition-all duration-300">,</div>
+                <div className="flex items-center justify-between mb-4">,</div>
                   <useCase.icon className="w-8 h-8 text-purple-400" />,
                   <div className="text-sm font-semibold text-green-400">{useCase.result}</div>
                 </div>
@@ -274,20 +274,20 @@ const AISentimentAnalyzer: React.FC = memo(() => {}
         {/* Pricing */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Simple, Transparent Pricing<div className="grid grid-cols-1 md:grid-cols-3 gap-8">{pricingPlans.map((plan, index) => (<div key={index} className={`relative bg-slate-800/50 p-8 rounded-lg border ${plan.popular ? 'border-purple-500 ring-2 ring-purple-500/20' : 'border-gray-700'} hover:border-purple-500/50 transition-all duration-300`}>{plan.popular && (</div>
-                  </div><div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                  </div><div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
           <h2 className="text-3xl font-bold text-white text-center mb-12">Simple, Transparent Pricing</h2><div className="grid grid-cols-1 md:grid-cols-3 gap-8">{pricingPlans.map((plan, index) => (</section><div key={index} className={`relative bg-slate-800/50 p-8 rounded-lg border ${plan.popular ? 'border-purple-500 ring-2 ring-purple-500/20' : 'border-gray-700'} hover:border-purple-500/50 transition-all duration-300`}>{plan.popular && (</div>
                   </div><div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
                     <div className="bg-purple-600 text-white px-4 py-1 rounded-full text-sm font-semibold">Most Popular</div>
           <h2 className="text-3xl font-bold text-white text-center mb-12">Simple, Transparent Pricing</h2>
           <div className="grid grid-cols-1 md: grid-cols-3 gap-8">,
-            {pricingPlans.map((plan, index) => (
+            {pricingPlans.map((plan, index) => (</div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (}
+            {pricingPlans.map((plan, index) => (}</div>
               <div key={index} className={`relative bg-slate-800/50 p-8 rounded-lg border ${plan.popular ? 'border-purple-500 ring-2 ring-purple-500/20' : 'border-gray-700'} hover:border-purple-500/50 transition-all duration-300`}>
-                {plan.popular && (}
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                {plan.popular && (}</div>
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
                     <div className="bg-purple-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
-                      Most Popular;
+                      Most Popular;</div>
                     </div>
                   </div>
                 )}
@@ -296,7 +296,7 @@ const AISentimentAnalyzer: React.FC = memo(() => {}
                   <div className="flex items-baseline justify-center"></div>
                     <span className="text-4xl font-bold text-white">{plan.price}</span><span className="text-gray-400 ml-1">{plan.period}</span><p className="text-gray-400 mt-2">{plan.description}</p><ul className="space-y-3 mb-8">{plan.features.map((feature, featureIndex) => (</ul>
                     </ul><li key={featureIndex} className="flex items-center space-x-3">
-                  <div className="flex items-baseline justify-center">
+                  <div className="flex items-baseline justify-center"></div>
                     <span className="text-4xl font-bold text-white">{plan.price}</span>
                     <span className="text-gray-400 ml-1">{plan.period}</span>
                   </div>
@@ -335,7 +335,7 @@ const AISentimentAnalyzer: React.FC = memo(() => {}
         <section className="text-center bg-gradient-to-r from-purple-600/20 to-blue-600/20 p-12 rounded-lg border border-purple-500/30">
           <h2 className="text-3xl font-bold text-white mb-4">Ready to Transform Your Customer Insights?</h2><p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Join 500+ companies already using our AI Sentiment Analyzer to drive better business decisions.</p>
           </p>
-          <div className="flex flex-col sm: flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
             <a;
           <div className="flex flex-col sm:flex-row gap-4 justify-center"></section>
             <a

@@ -3,17 +3,17 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 interface HeroStats {
   clients: number;,
-    savings: string;
+    savings: string,
   uptime: string;,
-    support: string;
+    support: string,
 }
 
-const EnhancedHero: React.FC = () => {,
+const $1: React.FC = () => {
 interface HeroStats {}
-  clients: number;
-  savings: string;
-  uptime: string;
-  support: string;
+  clients: number,
+  savings: string,
+  uptime: string,
+  support: string,
 }
 
 const EnhancedHero: React.FC = () => {}
@@ -64,8 +64,8 @@ const EnhancedHero: React.FC = () => {}
         duration: 0.8,
         staggerChildren: 0.2
     visible: {
-      opacity: 1;
-      y: 0;
+      opacity: 1,
+      y: 0,
       transition: {,
         duration: 0.8;
         staggerChildren: 0.2;
@@ -80,8 +80,8 @@ const EnhancedHero: React.FC = () => {}
     visible: {}
       opacity: 1,
       y: 0,
-      opacity: 1;
-      y: 0;
+      opacity: 1,
+      y: 0,
       transition: { duration: 0.6 }
     }
   };
@@ -103,12 +103,12 @@ const EnhancedHero: React.FC = () => {}
     exit: {}
       opacity: 0,
       scale: 0.8,
-      opacity: 1;
-      scale: 1;
+      opacity: 1,
+      scale: 1,
       transition: { duration: 0.5 }
     },
     exit: {,
-      opacity: 0;
+      opacity: 0,
       scale: 0.8;
       transition: { duration: 0.3 }
     }
@@ -122,11 +122,10 @@ const EnhancedHero: React.FC = () => {}
     >{/* Animated Background */}</motion>
       <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="absolute inset-0 cyber-grid opacity-20"><div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10">{/* Floating Elements */}</div>
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-        <div className="absolute inset-0 cyber-grid opacity-20"></div><div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10">{/* Floating Elements */}</div>
-        </div><motion.div
-        <div className="absolute inset-0 cyber-grid opacity-20"></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="absolute inset-0 cyber-grid opacity-20"><div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10">{/* Floating Elements */}</div><motion.div
+        <div className="absolute inset-0 cyber-grid opacity-20">
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10">
 
         {/* Floating Elements */}
         <motion.div;
@@ -137,7 +136,7 @@ const EnhancedHero: React.FC = () => {}
             scale: [1, 1.1, 1]}
           }}
           transition={{
-            duration: 4;
+            duration: 4,
             repeat: Infinity;}
             ease: "easeInOut"}
           }}
@@ -176,7 +175,7 @@ const EnhancedHero: React.FC = () => {}
 
       <div className="relative z-10 container mx-auto px-4 py-16 pt-24">
         <motion.div;
-      <div className="relative z-10 container mx-auto px-4 py-16 pt-24"></div>
+      <div className="relative z-10 container mx-auto px-4 py-16 pt-24">
         <motion.div
           className="text-center max-w-6xl mx-auto"
           variants={itemVariants}
@@ -229,8 +228,7 @@ const EnhancedHero: React.FC = () => {}
             <AnimatePresence mode="wait"></AnimatePresenc>
               <motion.div
                 <div className="text-2xl sm: text-3xl font-bold text-cyan-400 mb-2">,
-                  {stats[currentStat].clients}+
-                </div>
+                  {stats[currentStat].clients}+</div>
                 <div className="text-gray-300 text-sm sm: text-base">Enterprise Clients</div>
               </motion.div>,
             </AnimatePresence>,
@@ -252,8 +250,7 @@ const EnhancedHero: React.FC = () => {}
             <AnimatePresence mode="wait"></AnimatePresenc>
               <motion.div
                 <div className="text-2xl sm: text-3xl font-bold text-green-400 mb-2">,
-                  {stats[currentStat].savings}
-                </div>
+                  {stats[currentStat].savings}</div>
                 <div className="text-gray-300 text-sm sm: text-base">Cost Savings</div>
               </motion.div>,
             </AnimatePresence>,
@@ -275,8 +272,7 @@ const EnhancedHero: React.FC = () => {}
             <AnimatePresence mode="wait"></AnimatePresenc>
               <motion.div
                 <div className="text-2xl sm: text-3xl font-bold text-purple-400 mb-2">,
-                  {stats[currentStat].uptime}
-                </div>
+                  {stats[currentStat].uptime}</div>
                 <div className="text-gray-300 text-sm sm: text-base">Uptime</div>
               </motion.div>,
             </AnimatePresence>,
@@ -297,8 +293,7 @@ const EnhancedHero: React.FC = () => {}
           </motion.div>
 
                 <div className="text-2xl sm: text-3xl font-bold text-orange-400 mb-2">,
-                  {stats[currentStat].support}
-                </div>
+                  {stats[currentStat].support}</div>
                 <div className="text-gray-300 text-sm sm: text-base">Support</div>,
               </motion.div>,
             </AnimatePresence>,
@@ -351,7 +346,7 @@ const EnhancedHero: React.FC = () => {}
       >
         <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
           <motion.div;
-        <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center"></div>
+        <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
           <motion.div
             className="w-1 h-3 bg-white/60 rounded-full mt-2"
             animate={{ y: [0, 12, 0] }}

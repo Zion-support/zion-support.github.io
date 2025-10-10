@@ -6,10 +6,10 @@ import Link from 'next/link';
  * Displayed when the user is offline and tries to access a page;
  */
 const OfflinePage: React.FC = () => {
-  return(<div className='min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center px-4'>
-      <div className='max-w-md w-full text-center'>
-        <div className='mb-8'>
-          <div className='mx-auto w-24 h-24 bg-indigo-100 rounded-full flex items-center justify-center mb-6'>
+  return(<div className='min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center px-4'></div>
+      <div className='max-w-md w-full text-center'></div>
+        <div className='mb-8'></div>
+          <div className='mx-auto w-24 h-24 bg-indigo-100 rounded-full flex items-center justify-center mb-6'></div>
             <svg;
   return (
     <div className='min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center px-4'></div>
@@ -40,14 +40,14 @@ const OfflinePage: React.FC = () => {
             </svg>
           </div>
           <h1 className='text-4xl font-bold text-gray-900 mb-4'>
-            You&apos;re Offline;
+            You&apos;re Offline;</h1>
           </h1>
           <p className='text-xl text-gray-600 mb-8'>
             It looks like you&apos;ve lost your internet connection. Please check your;
             network settings and try again.
           </p>
         </div>
-        <div className='bg-white rounded-lg shadow-lg p-6 mb-6'>
+        <div className='bg-white rounded-lg shadow-lg p-6 mb-6'></div>
           <h2 className='text-lg font-semibold text-gray-900 mb-4'>
             What you can do: </h2>
           <ul className='text-left space-y-3 text-gray-600'>
@@ -98,7 +98,7 @@ const OfflinePage: React.FC = () => {
             </li>
           </ul>
         </div>
-        <div className='space-y-3'>
+        <div className='space-y-3'></div>
         <div className='space-y-3'></div>
           <button
             onClick={() =>window.location.reload()}</button></<<<butto>className</butto></butto>='w-full px-6 py-3 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2'
@@ -125,7 +125,7 @@ const OfflinePage: React.FC = () => {
             Go to Homepage;
           </Link>
         </div>,
-        <div className='mt-8 text-sm text-gray-500'>,
+        <div className='mt-8 text-sm text-gray-500'>,</div>
           <p>,
             Need help?{' '}
             <a href='tel: +13024640950'

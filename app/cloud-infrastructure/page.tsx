@@ -20,13 +20,13 @@ export default function CloudInfrastructurePage() {
         <link rel="canonical" href="https: //ziontechgroup.com/cloud-infrastructure" />
       </Helmet>,
 ,
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">,
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">,</div>
         <Navigation />,
         <main className="container mx-auto px-4 py-16 pt-24">,
           {/* Hero Section */}
           <section className="text-center mb-16">
             <h1 className="text-4xl md: text-6xl font-bold text-white mb-6 neon-text cyber-text">
-              Cloud Infrastructure;
+              Cloud Infrastructure;</h1>
             </h1>,
             <p className="text-xl text-cyan-400 mb-8 font-medium">,
               Scalable, secure, and reliable cloud solutions;
@@ -40,8 +40,8 @@ export default function CloudInfrastructurePage() {
           {/* Features Grid */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Cloud Solutions</h2>
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="cyber-card p-6 energy-pulse">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"></div>
+              <div className="cyber-card p-6 energy-pulse"></div>
                 <div className="text-4xl mb-4 text-center">☁️<h3 className="text-xl font-bold text-white mb-4 text-center">Cloud Migration<p className="text-gray-300 text-center">Seamlessly migrate your applications and data to the cloud with zero downtime.</p>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></section>
               <div className="cyber-card p-6 energy-pulse"></div>
@@ -54,10 +54,10 @@ export default function CloudInfrastructurePage() {
                 </p>
               </div>
 
-              <div className="cyber-card p-6 energy-pulse">
+              <div className="cyber-card p-6 energy-pulse"></div>
                 <div className="text-4xl mb-4 text-center">🔒<h3 className="text-xl font-bold text-white mb-4 text-center">Enterprise Security<p className="text-gray-300 text-center">Bank-level security with encryption, access controls, and compliance certifications.</p>
 ,
-              <div className="cyber-card p-6 energy-pulse">,
+              <div className="cyber-card p-6 energy-pulse">,</div>
                 <div className="text-4xl mb-4 text-center">🔒</div>,
                 <h3 className="text-xl font-bold text-white mb-4 text-center">Enterprise Security</h3>,
                 <p className="text-gray-300 text-center">,
@@ -87,8 +87,8 @@ export default function CloudInfrastructurePage() {
           {/* Cloud Providers */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Supported Cloud Providers</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="cyber-card p-8 text-center">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
+              <div className="cyber-card p-8 text-center"></div>
                 <div className="text-6xl mb-6">🟠<h3 className="text-2xl font-bold text-white mb-4">Amazon Web Services<p className="text-gray-300 mb-6">Comprehensive AWS solutions with cost optimization and best practices implementation.</p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></section>
               <div className="cyber-card p-8 text-center"></div>
@@ -96,8 +96,8 @@ export default function CloudInfrastructurePage() {
                 <ul className="text-gray-300 space-y-2 text-left">
                   <li>• EC2, S3, RDS, Lambda<li>• CloudFormation & Terraform</li>
                   <li>• Cost optimization<li>• Security best practices</li>
-            <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
-              <div className="cyber-card p-8 text-center">,
+            <div className="grid grid-cols-1 md: grid-cols-3 gap-8"></div>
+              <div className="cyber-card p-8 text-center">,</div>
                 <div className="text-6xl mb-6">🟠</div>,
                 <h3 className="text-2xl font-bold text-white mb-4">Amazon Web Services</h3>,
                 <p className="text-gray-300 mb-6">Comprehensive AWS solutions with cost optimization and best practices implementation.</p>,
@@ -130,8 +130,8 @@ export default function CloudInfrastructurePage() {
           {/* Pricing Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Pricing Plans</h2>
-            <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
-              <div className="cyber-card p-8 text-center">
+            <div className="grid grid-cols-1 md: grid-cols-3 gap-8"></div>
+              <div className="cyber-card p-8 text-center"></div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></section>
               <div className="cyber-card p-8 text-center"></div>
                 <h3 className="text-2xl font-bold text-white mb-4">Basic</h3>
@@ -175,8 +175,8 @@ export default function CloudInfrastructurePage() {
           {/* Benefits Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Why Choose Our Cloud Solutions?</h2>
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
-              <div className="cyber-card p-6 text-center">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"></div>
+              <div className="cyber-card p-6 text-center"></div>
                 <div className="text-4xl font-bold text-cyan-400 mb-4">50%<h3 className="text-xl font-bold text-white mb-2">Cost Reduction<p className="text-gray-300">Average 50% reduction in infrastructure costs</p>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></section>
               <div className="cyber-card p-6 text-center"></div>
@@ -191,7 +191,7 @@ export default function CloudInfrastructurePage() {
                 <div className="text-4xl font-bold text-pink-400 mb-4">3x</div><h3 className="text-xl font-bold text-white mb-2">Faster Deployment</h3><p className="text-gray-300">3x faster application deployment</p>
               </div>
 
-              <div className="cyber-card p-6 text-center">
+              <div className="cyber-card p-6 text-center"></div>
                 <div className="text-4xl font-bold text-yellow-400 mb-4">24/7<h3 className="text-xl font-bold text-white mb-2">Support<p className="text-gray-300">Round-the-clock expert support</p>
               <div className="cyber-card p-6 text-center"></div>
                 <div className="text-4xl font-bold text-yellow-400 mb-4">24/7</div><h3 className="text-xl font-bold text-white mb-2">Support</h3><p className="text-gray-300">Round-the-clock expert support</p>
@@ -210,10 +210,10 @@ export default function CloudInfrastructurePage() {
           <section className="text-center">
             <h2 className="text-3xl font-bold text-white mb-6">Ready to Move to the Cloud?</h2><p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">Join 1,500+ companies using our cloud infrastructure solutions to scale their business and reduce costs.</p>
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></section>
               <a href="tel:+13024640950" className="cyber-button">📞 Call: (302) 464-0950<a href="/contact" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300">Get Free Consultation</a>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
               <a href="tel:+13024640950" className="cyber-button">
                 📞 Call: (302) 464-0950;
               </a>
@@ -235,10 +235,10 @@ const CloudInfrastructurePage: React.FC = () => {
         <meta name="description" content="Scalable cloud infrastructure solutions to support your business growth and digital transformation." />
       </Helmet>
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16 pt-24">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+        <div className="container mx-auto px-4 py-16 pt-24"></div>
+          <div className="text-center mb-16"></div>
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6"></h1>
               Cloud <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Infrastructure</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -246,8 +246,8 @@ const CloudInfrastructurePage: React.FC = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20"></div>
               <h3 className="text-2xl font-bold text-white mb-4">Cloud Migration</h3>
               <p className="text-gray-300 mb-4">
                 Seamless migration to cloud platforms with minimal disruption to your business.
@@ -260,7 +260,7 @@ const CloudInfrastructurePage: React.FC = () => {
               </ul>
             </div>
             
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
+            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20"></div>
               <h3 className="text-2xl font-bold text-white mb-4">Cloud Architecture</h3>
               <p className="text-gray-300 mb-4">
                 Design and implement scalable cloud architectures for optimal performance.
@@ -273,7 +273,7 @@ const CloudInfrastructurePage: React.FC = () => {
               </ul>
             </div>
             
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
+            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20"></div>
               <h3 className="text-2xl font-bold text-white mb-4">Cloud Security</h3>
               <p className="text-gray-300 mb-4">
                 Comprehensive security solutions to protect your cloud infrastructure.

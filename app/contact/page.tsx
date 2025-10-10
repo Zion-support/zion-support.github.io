@@ -81,13 +81,13 @@ const ContactPage: React.FC = () => {
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
+        {/* Hero Section */}</div>
         <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" /></div>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div>
           <div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Contact
+              Contact</h1>
               <span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
                 Us
               </span>
@@ -102,7 +102,7 @@ const ContactPage: React.FC = () => {
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-              {contactInfo.map((info, index) => (
+              {contactInfo.map((info, index) => (</div>
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-6">
                     <info.icon className="w-8 h-8 text-white" />
@@ -151,7 +151,7 @@ const ContactPage: React.FC = () => {
 
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
-                  <div>
+                  <div></div>
                     <label htmlFor="name" className="block text-white font-semibold mb-2">
                       Full Name *
                     </label>
@@ -166,7 +166,7 @@ const ContactPage: React.FC = () => {
                       placeholder="Your full name"
                     />
                   </div>
-                  <div>
+                  <div></div>
                     <label htmlFor="email" className="block text-white font-semibold mb-2">
                       Email Address *
                     </label>
@@ -184,7 +184,7 @@ const ContactPage: React.FC = () => {
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-6">
-                  <div>
+                  <div></div>
                     <label htmlFor="company" className="block text-white font-semibold mb-2">
                       Company
                     </label>
@@ -198,7 +198,7 @@ const ContactPage: React.FC = () => {
                       placeholder="Your company name"
                     />
                   </div>
-                  <div>
+                  <div></div>
                     <label htmlFor="phone" className="block text-white font-semibold mb-2">
                       Phone Number
                     </label>
@@ -214,7 +214,7 @@ const ContactPage: React.FC = () => {
                   </div>
                 </div>
 
-                <div>
+                <div></div>
                   <label htmlFor="service" className="block text-white font-semibold mb-2">
                     Service Interest
                   </label>
@@ -234,7 +234,7 @@ const ContactPage: React.FC = () => {
                   </select>
                 </div>
 
-                <div>
+                <div></div>
                   <label htmlFor="message" className="block text-white font-semibold mb-2">
                     Message *
                   </label>
@@ -258,7 +258,7 @@ const ContactPage: React.FC = () => {
                   >
                     {isSubmitting ? (
                       <>
-                        <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-3"></div>
+                        <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-3">
                         Sending...
                       </>
                     ) : (

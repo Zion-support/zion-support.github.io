@@ -10,12 +10,12 @@ const aiapimanagementPage: React.FC = () => {
         <meta name="keywords" content="ai api management, AI solutions, IT services, Zion Tech Group" />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="max-w-4xl mx-auto text-center">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+        <div className="container mx-auto px-4 py-16"></div>
+          <div className="max-w-4xl mx-auto text-center"></div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">Ai Api Management<p className="text-xl text-gray-300 mb-8">Professional ai api management services powered by advanced AI and cutting-edge technology.</p>
             <h1 className="text-4xl md: text-6xl font-bold text-white mb-6">
-              Ai Api Management;
+              Ai Api Management;</h1>
             </h1>
             <p className="text-xl text-gray-300 mb-8">
               Professional ai api management services powered by advanced AI and cutting-edge technology.
@@ -40,7 +40,7 @@ const aiapimanagementPage: React.FC = () => {
               </div>
             </div>
 
-            <div className="space-y-4">
+            <div className="space-y-4"></div>
               <a;
             <div className="space-y-4"></div>
               <a
@@ -50,7 +50,7 @@ const aiapimanagementPage: React.FC = () => {
               >
                 Get Started Today;
               </a>
-              <div>
+              <div></div>
                 <a;
               <div></div>
                 <a

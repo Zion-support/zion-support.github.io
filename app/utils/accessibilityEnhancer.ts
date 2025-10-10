@@ -4,47 +4,47 @@
  * Provides comprehensive accessibility improvements and monitoring;
  */
 interface AccessibilityConfig {}
-  enableKeyboardNavigation: boolean;
-  enableScreenReaderSupport: boolean;
-  enableHighContrast: boolean;
-  enableReducedMotion: boolean;
-  enableFocusManagement: boolean;
-  announceChanges: boolean;
+  enableKeyboardNavigation: boolean,
+  enableScreenReaderSupport: boolean,
+  enableHighContrast: boolean,
+  enableReducedMotion: boolean,
+  enableFocusManagement: boolean,
+  announceChanges: boolean,
 }
 interface AccessibilityMetrics {}
-  focusableElements: number;
-  imagesWithoutAlt: number;
-  linksWithoutText: number;
-  headingsWithoutContent: number;
-  colorContrastIssues: number;
-  keyboardNavigationScore: number;
-  screenReaderScore: number;
-  overallScore: number;
+  focusableElements: number,
+  imagesWithoutAlt: number,
+  linksWithoutText: number,
+  headingsWithoutContent: number,
+  colorContrastIssues: number,
+  keyboardNavigationScore: number,
+  screenReaderScore: number,
+  overallScore: number,
 }
 class AccessibilityEnhancer {}
-  private config: AccessibilityConfig;
-  private metrics: AccessibilityMetrics;
+  private config: AccessibilityConfig,
+  private metrics: AccessibilityMetrics,
   private observers: MutationObserver[] = [];
   private isInitialized = false;,
   constructor(config: Partial<AccessibilityConfig> = {}) {
     this.config = {
-      enableKeyboardNavigation: true;
-      enableScreenReaderSupport: true;
-      enableHighContrast: true;
-      enableReducedMotion: true;
-      enableFocusManagement: true;
-      announceChanges: true;
+      enableKeyboardNavigation: true,
+      enableScreenReaderSupport: true,
+      enableHighContrast: true,
+      enableReducedMotion: true,
+      enableFocusManagement: true,
+      announceChanges: true,
       ...config;
     };
     this.metrics = {
-      focusableElements: 0;
-      imagesWithoutAlt: 0;
-      linksWithoutText: 0;
-      headingsWithoutContent: 0;
-      colorContrastIssues: 0;
-      keyboardNavigationScore: 0;
-      screenReaderScore: 0;
-      overallScore: 0;
+      focusableElements: 0,
+      imagesWithoutAlt: 0,
+      linksWithoutText: 0,
+      headingsWithoutContent: 0,
+      colorContrastIssues: 0,
+      keyboardNavigationScore: 0,
+      screenReaderScore: 0,
+      overallScore: 0,
   private isInitialized = false;
   constructor(config: Partial<AccessibilityConfig> = {}) {}
     this.config = {}
@@ -145,7 +145,7 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
     const focusableElements = this.getFocusableElements();
     const currentIndex = focusableElements.indexOf(document.activeElement as HTMLElement);
     if (currentIndex === -1) return;
-    let nextIndex: number;
+    let nextIndex: number,
     if (isShift) {,
     if (isShift) {}
       nextIndex = currentIndex > 0 ? currentIndex - 1 : focusableElements.length - 1;
@@ -222,7 +222,7 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
     if (!name) return;
     const radioButtons = Array.from(document.querySelectorAll(`input[type="radio"][name="${name}"]`)) as HTMLInputElement[];
     const currentIndex = radioButtons.indexOf(currentElement);
-    let nextIndex: number;
+    let nextIndex: number,
     if (event.key === 'ArrowUp' || event.key === 'ArrowLeft') {,
     if (event.key === 'ArrowUp' || event.key === 'ArrowLeft') {}
       nextIndex = currentIndex > 0 ? currentIndex - 1 : radioButtons.length - 1;
@@ -234,7 +234,7 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
     const radioButtons = Array.from(document.querySelectorAll(`input[type="radio"][name="${name}"]`)) as HTMLInputElement[];
     const currentIndex = radioButtons.indexOf(currentElement);
     let,
-  nextIndex: number;
+  nextIndex: number,
     if (event.key === 'ArrowUp' || event.key === 'ArrowLeft') {/* TODO: Fix JSX expression */}
     } else {/* TODO: Fix JSX expression */}
     }
@@ -250,7 +250,7 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
     if (!menu) return;
     const menuItems = Array.from(menu.querySelectorAll('[role="menuitem"]')) as HTMLElement[];
     const currentIndex = menuItems.indexOf(currentElement);
-    let nextIndex: number;
+    let nextIndex: number,
     if (event.key === 'ArrowUp') {,
     if (event.key === 'ArrowUp') {}
       nextIndex = currentIndex > 0 ? currentIndex - 1 : menuItems.length - 1;
@@ -297,26 +297,26 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
     const style = document.createElement('style');
     style.textContent = `
       .skip-links {}
-        position: absolute;
+        position: absolute,
         top: -40 px;
         left: 6 px;
-        z-index: 1000;
+        z-index: 1000,
       }
       .skip-link {}
-        position: absolute;
+        position: absolute,
         top: -40 px;
         left: 6 px;
         background: #000;
         color: #fff;
         padding: 8 px;
-        text-decoration: none;
+        text-decoration: none,
         border-radius: 4 px;
-        z-index: 1000;
+        z-index: 1000,
         transition: top 0.3 s;
       }
       .skip-link: focus {,
       .skip-link:focus {}
-        top: 6px;
+        top: 6px,
   private addSkipLinks(): void {/* TODO: Fix JSX expression */}
       }
       .skip-link {/* TODO: Fix JSX expression */}
@@ -698,7 +698,7 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
 
     observer.observe(document.body, {)
       childList: true),
-      subtree: true;
+      subtree: true,
     observer.observe(document.body, {)}
       childList: true,
       subtree: true

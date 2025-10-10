@@ -47,7 +47,7 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
     reducedMotion: false;)
     fontSize: 'normal'),
     screenReader: false),
-    keyboardNavigation: false;
+    keyboardNavigation: false,
   });
 
   // Detect user preferences;
@@ -73,7 +73,7 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
     setAccessibilitySettings(prev => ({)
       ...prev),
       reducedMotion: prefersReducedMotion),
-      highContrast: prefersHighContrast;
+      highContrast: prefersHighContrast,
     }));
 
     // Listen for changes in user preferences;

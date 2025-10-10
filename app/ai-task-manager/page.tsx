@@ -4,37 +4,37 @@ import { CheckCircle, Clock, Users, BarChart, Target, Calendar, TrendingUp } fro
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const AITaskManagerPage: React.FC = () => {,
+const $1: React.FC = () => {
   const features = [,
     {,
       title: 'Smart Task Prioritization',
       description: 'AI automatically prioritizes tasks based on deadlines, importance, and dependencies.',
-      icon: Target;
+      icon: Target,
     },
     {
       title: 'Intelligent Scheduling',
       description: 'Automatically schedule tasks based on your availability and workload capacity.',
-      icon: Calendar;
+      icon: Calendar,
     },
     {
       title: 'Progress Tracking',
       description: 'Real-time progress monitoring with predictive analytics and completion estimates.',
-      icon: BarChart;
+      icon: BarChart,
     },
     {
       title: 'Team Collaboration',
       description: 'Seamless team coordination with automated task assignment and communication.',
-      icon: Users;
+      icon: Users,
     },
     {
       title: 'Time Optimization',
       description: 'AI learns your work patterns to suggest optimal time blocks for different task types.',
-      icon: Clock;
+      icon: Clock,
     },
     {
       title: 'Performance Analytics',
       description: 'Detailed insights into productivity patterns and efficiency improvements.',
-      icon: TrendingUp;
+      icon: TrendingUp,
     }
   ];
 
@@ -53,26 +53,26 @@ const AITaskManagerPage: React.FC = () => {,
       </Navigation><section className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto"></section>
           <div className="text-center mb-16"></div>
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6"></h1>
               AI Task Manager</h1> <span className="text-cyan-400">Pro</span><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Revolutionize your productivity with AI-powered task management. Smart prioritization,</p>
               intelligent scheduling, and seamless team collaboration in one powerful platform.</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <a href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold">Start Free Trial<a href="tel:+13024640950" className="cyber-button-secondary px-8 py-4 text-lg font-semibold">Call +1 302 464 0950</a>
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Navigation />
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">,
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
+            <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">,</h1>
               AI Task Manager <span className="text-cyan-400">Pro</span>)
             </h1>)
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">)
               Revolutionize your productivity with AI-powered task management. Smart prioritization),
               intelligent scheduling, and seamless team collaboration in one powerful platform.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
               <a href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold">
                 Start Free Trial;
               </a>
@@ -86,10 +86,10 @@ const AITaskManagerPage: React.FC = () => {,
 ,
       {/* Features Grid */}
       <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-12"></div>
             <h2 className="text-4xl font-bold text-white mb-4">Powerful Features<p className="text-xl text-gray-300">Everything you need to manage tasks efficiently<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature, index) => (</div>
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-xl p-8 hover:border-cyan-400/40 transition-all duration-300">
+              <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-xl p-8 hover:border-cyan-400/40 transition-all duration-300"></div>
                 <feature.icon className="w-12 h-12 text-cyan-400 mb-4" />
                 <h3 className="text-xl font-bold text-white mb-3">{feature.title}<p className="text-gray-300">{feature.description}</p>
             <h2 className="text-4xl font-bold text-white mb-4">Powerful Features</h2>
@@ -97,8 +97,8 @@ const AITaskManagerPage: React.FC = () => {,
           </div>
 
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,
-            {features.map((feature, index) => (
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-xl p-8 hover: border-cyan-400/40 transition-all duration-300">,
+            {features.map((feature, index) => (</div>
+              <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-xl p-8 hover: border-cyan-400/40 transition-all duration-300">,</div>
                 <feature.icon className="w-12 h-12 text-cyan-400 mb-4" />,
                 <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
@@ -116,17 +116,17 @@ const AITaskManagerPage: React.FC = () => {,
 
       {/* Benefits Section */}
       <section className="py-16 px-4 bg-slate-800/30">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-12"></div>
             <h2 className="text-4xl font-bold text-white mb-4">Why Choose AI Task Manager Pro?<p className="text-xl text-gray-300">Proven results and cutting-edge technology<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{benefits.map((benefit, index) => (</div>
             <h2 className="text-4xl font-bold text-white mb-4">Why Choose AI Task Manager Pro?</h2>
             <p className="text-xl text-gray-300">Proven results and cutting-edge technology</p>
           </div>
 
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,
-            {benefits.map((benefit, index) => (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-cyan-400/20 rounded-full flex items-center justify-center mx-auto mb-4">
+            {benefits.map((benefit, index) => (</div>
+              <div key={index} className="text-center"></div>
+                <div className="w-16 h-16 bg-cyan-400/20 rounded-full flex items-center justify-center mx-auto mb-4"></div>
         <div className="max-w-7xl mx-auto"></section>
           <div className="text-center mb-12"></div>
             <h2 className="text-4xl font-bold text-white mb-4">Why Choose AI Task Manager Pro?</h2><p className="text-xl text-gray-300">Proven results and cutting-edge technology</p><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{benefits.map((benefit, index) => (</div>
@@ -201,10 +201,10 @@ const AITaskManagerPage: React.FC = () => {,
         <div className="max-w-4xl mx-auto text-center"></section>
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Productivity?</h2><p className="text-xl text-gray-300 mb-8">Join thousands of teams already using AI Task Manager Pro to boost their productivity and achieve more.</p>
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <a href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold">Start Free Trial<a href="tel:+13024640950" className="cyber-button-secondary px-8 py-4 text-lg font-semibold">Call +1 302 464 0950</a>
-          <div className="flex flex-col sm: flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
             <a href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold">
               Start Free Trial;
             </a>

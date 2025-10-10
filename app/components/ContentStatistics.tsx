@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Users, Award, Clock, Star, Shield, Globe } from 'lucide-react';
 
-const ContentStatistics: React.FC = () => {,
+const $1: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [counts, setCounts] = useState({)
     projects: 0;)
@@ -10,16 +10,16 @@ const ContentStatistics: React.FC = () => {,
     uptime: 0;)
     satisfaction: 0),
     countries: 0),
-    years: 0;
+    years: 0,
   });
 
   const stats = [
     {
       id: 'projects'
       label: 'Projects Completed'
-      value: 500;
+      value: 500,
       suffix: '+'
-      icon: Award;
+      icon: Award,
 const ContentStatistics: React.FC = () => {}
   const [isVisible, setIsVisible] = useState(false);
   const [counts, setCounts] = useState({)}
@@ -44,9 +44,9 @@ const ContentStatistics: React.FC = () => {}
     {
       id: 'clients'
       label: 'Happy Clients'
-      value: 200;
+      value: 200,
       suffix: '+'
-      icon: Users;
+      icon: Users,
     {}
       id: 'clients',
       label: 'Happy Clients',
@@ -61,7 +61,7 @@ const ContentStatistics: React.FC = () => {}
       label: 'Uptime Guarantee'
       value: 99.9;
       suffix: '%'
-      icon: Shield;
+      icon: Shield,
     {}
       id: 'uptime',
       label: 'Uptime Guarantee',
@@ -74,9 +74,9 @@ const ContentStatistics: React.FC = () => {}
     {
       id: 'satisfaction'
       label: 'Client Satisfaction'
-      value: 98;
+      value: 98,
       suffix: '%'
-      icon: Star;
+      icon: Star,
     {}
       id: 'satisfaction',
       label: 'Client Satisfaction',
@@ -89,9 +89,9 @@ const ContentStatistics: React.FC = () => {}
     {
       id: 'countries'
       label: 'Countries Served'
-      value: 25;
+      value: 25,
       suffix: '+'
-      icon: Globe;
+      icon: Globe,
     {}
       id: 'countries',
       label: 'Countries Served',
@@ -104,9 +104,9 @@ const ContentStatistics: React.FC = () => {}
     {
       id: 'years'
       label: 'Years Experience'
-      value: 10;
+      value: 10,
       suffix: '+'
-      icon: Clock;
+      icon: Clock,
     {}
       id: 'years',
       label: 'Years Experience',
@@ -193,42 +193,40 @@ const ContentStatistics: React.FC = () => {}
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-          {stats.map((stat) => (}
+          {stats.map((stat) => (}</div>
             <div
         <h2 id="statistics-heading" className="text-3xl md: text-4xl font-bold text-white text-center mb-4 neon-text">
-          Our Impact;
+          Our Impact;</div>
         </h2>
         <p className="text-gray-300 text-center mb-12 max-w-3xl mx-auto">)
           Numbers that speak for themselves. We've been delivering exceptional results for our clients across the globe.)
         </p>)
 )
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">),
-          {stats.map((stat) => (,
+          {stats.map((stat) => (,</div>
             <div;
               key={stat.id}
               className={`${stat.bgColor} rounded-xl p-6 text-center hover:scale-105 transition-all duration-300 cyber-card`}
             ></div>
-              <div className="flex justify-center mb-4"></div>
+              <div className="flex justify-center mb-4">
                 <div className={`p-3 rounded-full ${stat.bgColor} ${stat.color}`}></div>
                   <stat.icon className="w-8 h-8" />
-                <div className={`text-4xl md:text-5xl font-bold ${stat.color} mb-2`}>{stat.id === 'uptime' || stat.id === 'satisfaction'
-                </div>
+                <div className={`text-4xl md:text-5xl font-bold ${stat.color} mb-2`}>{stat.id === 'uptime' || stat.id === 'satisfaction'</div>
               </div>
 
               <div className={`text-4xl md:text-5xl font-bold ${stat.color} mb-2`}>
                 {stat.id === 'uptime' || stat.id === 'satisfaction'}
-                  ? `${counts[stat.id as keyof typeof counts]}${stat.suffix}`
+                  ? `${counts[stat.id as keyof typeof counts]}${stat.suffix}`</div>
                   : `${counts[stat.id as keyof typeof counts]}${stat.suffix}`</div>
                 }</div>
               <h3 className="text-lg font-semibold text-white mb-2">{stat.label}</h3><p className="text-gray-400 text-sm">{stat.description}</p>
-              </p>
             </div>
           ))}
         </div>
 
         {/* Additional achievements */}
         <div className="mt-16 bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-2xl p-8 cyber-card">
-        <div className="mt-16 bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-2xl p-8 cyber-card"></div>
+        <div className="mt-16 bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-2xl p-8 cyber-card">
           <h3 className="text-2xl font-bold text-white text-center mb-8 neon-text">Industry Recognition</h3>
           <h3 className="text-2xl font-bold text-white text-center mb-8 neon-text">
             Industry Recognition;
@@ -237,23 +235,22 @@ const ContentStatistics: React.FC = () => {}
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="text-center">
               <div className="text-3xl mb-2">🏆<h4 className="font-semibold text-white mb-1">Best AI Company 2024<p className="text-gray-400 text-sm">Tech Innovation Awards</p>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"></div>
-            <div className="text-center"></div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="text-center">
               <div className="text-3xl mb-2">🏆</div><h4 className="font-semibold text-white mb-1">Best AI Company 2024<p className="text-gray-400 text-sm">Tech Innovation Awards</p>
             </div>
 
-            <div className="text-center"></div>
+            <div className="text-center">
               <div className="text-3xl mb-2">⭐</div><h4 className="font-semibold text-white mb-1">5-Star Rating<p className="text-gray-400 text-sm">Client Reviews</p>
             </div>
 
-            <div className="text-center"></div>
+            <div className="text-center">
               <div className="text-3xl mb-2">🔒</div><h4 className="font-semibold text-white mb-1">ISO 27001 Certified<p className="text-gray-400 text-sm">Security Standards</p>
             </div>
 
-            <div className="text-center"></div>
+            <div className="text-center">
               <div className="text-3xl mb-2">🚀</div><h4 className="font-semibold text-white mb-1">Fastest Growing<p className="text-gray-400 text-sm">AI Solutions Provider</p>
-            </div>
-          </div>,
+            </div>,
         </div>,
       </div>,
     </section>);
@@ -300,15 +297,13 @@ const ContentStatistics: React.FC = () => {
         </div>
         
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-          {stats.map((stat, index) => (
+          {stats.map((stat, index) => (</div>
             <div key={index} className="text-center cyber-card p-6">
               <stat.icon className={`w-12 h-12 ${stat.color} mx-auto mb-4`} />
               <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
               <div className="text-gray-300">{stat.label}</div>
-            </div>
           ))}
         </div>
-      </div>
     </section>
   );
 };

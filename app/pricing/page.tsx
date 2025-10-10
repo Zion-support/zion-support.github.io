@@ -381,14 +381,14 @@ const PricingPage: React.FC = () => {
         <meta name="keywords" content="pricing, AI services pricing, micro SaaS pricing, IT services pricing, cloud services pricing, cybersecurity pricing" />
       </Helmet>
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         <Header />
         
         <main className="pt-24">
           {/* Hero Section */}
           <section className="container mx-auto px-4 py-16">
-            <div className="text-center mb-16">
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            <div className="text-center mb-16"></div>
+              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6"></h1>
                 Transparent <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Pricing</span>
               </h1>
               <p className="text-xl text-cyan-400 mb-8 max-w-4xl mx-auto">
@@ -400,7 +400,7 @@ const PricingPage: React.FC = () => {
           {/* Plan Selection */}
           <section className="container mx-auto px-4 py-8">
             <div className="flex flex-wrap justify-center gap-4 mb-8">
-              {pricingPlans.map((plan) => (
+              {pricingPlans.map((plan) => (</div>
                 <button
                   key={plan.id}
                   onClick={() => setSelectedPlan(plan.id)}
@@ -419,8 +419,8 @@ const PricingPage: React.FC = () => {
 
           {/* Billing Toggle */}
           <section className="container mx-auto px-4 py-4">
-            <div className="flex justify-center mb-8">
-              <div className="bg-white/10 rounded-lg p-1 flex">
+            <div className="flex justify-center mb-8"></div>
+              <div className="bg-white/10 rounded-lg p-1 flex"></div>
                 <button
                   onClick={() => setBillingCycle('monthly')}
                   className={`px-6 py-2 rounded-md font-semibold transition-all duration-300 ${
@@ -449,7 +449,7 @@ const PricingPage: React.FC = () => {
           {/* Pricing Cards */}
           <section className="container mx-auto px-4 py-16">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
-              {getCurrentPricing().map((plan, index) => (
+              {getCurrentPricing().map((plan, index) => (</div>
                 <div
                   key={index}
                   className={`bg-white/10 backdrop-blur-lg rounded-xl p-8 border transition-all duration-300 hover:scale-105 ${
@@ -458,8 +458,8 @@ const PricingPage: React.FC = () => {
                       : 'border-white/20 hover:border-cyan-400/50'
                   }`}
                 >
-                  {plan.popular && (
-                    <div className="flex justify-center mb-4">
+                  {plan.popular && (</div>
+                    <div className="flex justify-center mb-4"></div>
                       <span className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-gradient-to-r from-cyan-600 to-purple-600 text-white">
                         <Star className="w-4 h-4 mr-2" />
                         Most Popular
@@ -467,13 +467,13 @@ const PricingPage: React.FC = () => {
                     </div>
                   )}
                   
-                  <div className="text-center mb-8">
-                    <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <div className="text-center mb-8"></div>
+                    <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4"></div>
                       <plan.icon className="w-8 h-8 text-white" />
                     </div>
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                     <p className="text-gray-300 mb-4">{plan.description}</p>
-                    <div className="flex items-baseline justify-center">
+                    <div className="flex items-baseline justify-center"></div>
                       <span className="text-5xl font-bold text-cyan-400">
                         ${billingCycle === 'yearly' ? plan.price.yearly : plan.price.monthly}
                       </span>
@@ -486,10 +486,10 @@ const PricingPage: React.FC = () => {
                     )}
                   </div>
 
-                  <div className="space-y-4 mb-8">
+                  <div className="space-y-4 mb-8"></div>
                     <h4 className="text-lg font-semibold text-white mb-4">What's included:</h4>
                     {plan.features.map((feature, featureIndex) => (
-                      <div key={featureIndex} className="flex items-center text-gray-300">
+                      <div key={featureIndex} className="flex items-center text-gray-300"></div>
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                         <span>{feature}</span>
                       </div>
@@ -497,10 +497,10 @@ const PricingPage: React.FC = () => {
                   </div>
 
                   {plan.limitations.length > 0 && (
-                    <div className="space-y-2 mb-8">
+                    <div className="space-y-2 mb-8"></div>
                       <h4 className="text-lg font-semibold text-white mb-4">Limitations:</h4>
                       {plan.limitations.map((limitation, limitationIndex) => (
-                        <div key={limitationIndex} className="flex items-center text-gray-400">
+                        <div key={limitationIndex} className="flex items-center text-gray-400"></div>
                           <X className="w-5 h-5 text-red-400 mr-3 flex-shrink-0" />
                           <span>{limitation}</span>
                         </div>
@@ -525,26 +525,26 @@ const PricingPage: React.FC = () => {
 
           {/* FAQ Section */}
           <section className="container mx-auto px-4 py-16">
-            <div className="max-w-4xl mx-auto">
+            <div className="max-w-4xl mx-auto"></div>
               <h2 className="text-4xl font-bold text-white text-center mb-12">Frequently Asked Questions</h2>
-              <div className="space-y-6">
-                <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6">
+              <div className="space-y-6"></div>
+                <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6"></div>
                   <h3 className="text-xl font-semibold text-white mb-3">Can I change plans anytime?</h3>
                   <p className="text-gray-300">Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately, and we'll prorate any billing differences.</p>
                 </div>
-                <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6">
+                <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6"></div>
                   <h3 className="text-xl font-semibold text-white mb-3">Do you offer custom pricing?</h3>
                   <p className="text-gray-300">Yes, we offer custom pricing for enterprise clients with specific requirements. Contact our sales team to discuss your needs.</p>
                 </div>
-                <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6">
+                <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6"></div>
                   <h3 className="text-xl font-semibold text-white mb-3">What's included in support?</h3>
                   <p className="text-gray-300">All plans include email support. Professional and Enterprise plans include phone support, and Enterprise includes 24/7 dedicated support.</p>
                 </div>
-                <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6">
+                <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6"></div>
                   <h3 className="text-xl font-semibold text-white mb-3">Is there a free trial?</h3>
                   <p className="text-gray-300">Yes, we offer a 14-day free trial for all plans. No credit card required to start your trial.</p>
                 </div>
-                <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6">
+                <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6"></div>
                   <h3 className="text-xl font-semibold text-white mb-3">What payment methods do you accept?</h3>
                   <p className="text-gray-300">We accept all major credit cards, PayPal, and bank transfers for annual plans. Enterprise clients can also pay via invoice.</p>
                 </div>
@@ -554,7 +554,7 @@ const PricingPage: React.FC = () => {
 
           {/* CTA Section */}
           <section className="container mx-auto px-4 py-16">
-            <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-lg p-12 text-center">
+            <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-lg p-12 text-center"></div>
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Ready to Get Started?
               </h2>
@@ -562,7 +562,7 @@ const PricingPage: React.FC = () => {
                 Join thousands of businesses that trust Zion Tech Group for their AI and IT needs. 
                 Start your free trial today or contact us for a custom solution.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
                 <a
                   href="/contact"
                   className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 inline-flex items-center justify-center"

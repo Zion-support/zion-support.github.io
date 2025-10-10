@@ -8,25 +8,25 @@ import Footer from '../components/Footer';
 const AIPasswordManagerPage: React.FC = () => {
   const features = [
     {
-      icon: Shield;
+      icon: Shield,
       title: 'AI-Powered Security',
       description: 'Advanced AI algorithms detect and prevent security threats in real-time',
       benefits: ['Threat detection', 'Real-time monitoring', 'Automated responses']
     },
     {
-      icon: Lock;
+      icon: Lock,
       title: 'Zero-Knowledge Architecture',
       description: 'Your passwords are encrypted and only you can access them',
       benefits: ['End-to-end encryption', 'Zero-knowledge design', 'Privacy protection']
     },
     {
-      icon: Eye;
+      icon: Eye,
       title: 'Password Health Monitoring',
       description: 'Continuous monitoring and analysis of your password security',
       benefits: ['Weak password detection', 'Breach monitoring', 'Security scoring']
     },
     {
-      icon: Key;
+      icon: Key,
       title: 'Auto-Generate & Fill',
       description: 'Intelligent password generation and automatic form filling',
       benefits: ['Smart generation', 'Auto-fill forms', 'Cross-platform sync']
@@ -61,7 +61,7 @@ const AIPasswordManagerPage: React.FC = () => {
         'Secure sharing',
         '24/7 support'
       ],
-      popular: false;
+      popular: false,
     },
     {
       name: 'Business'
@@ -76,7 +76,7 @@ const AIPasswordManagerPage: React.FC = () => {
         'Priority support',
         'Custom policies'
       ],
-      popular: true;
+      popular: true,
     },
     {
       name: 'Enterprise'
@@ -91,12 +91,12 @@ const AIPasswordManagerPage: React.FC = () => {
         'Compliance tools',
         'White-label options'
       ],
-      popular: false;
+      popular: false,
     }
   ];
 
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-  return (
+  return (</div>
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Helmet>
         <title>AI Password Manager - Secure Password Management | Zion Tech Group</title>
@@ -116,14 +116,14 @@ const AIPasswordManagerPage: React.FC = () => {
               intelligent threat detection, and seamless user experience.</p>
               </div>
               <h1 className="text-5xl font-bold text-white neon-text">
-                AI Password Manager;
+                AI Password Manager;</h1>
               </h1>)
             </div>)
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">)
               Secure your digital life with our AI-powered password manager. Military-grade encryption)
               intelligent threat detection, and seamless user experience.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
               <a;
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <a
@@ -151,11 +151,11 @@ const AIPasswordManagerPage: React.FC = () => {
 ,
           {/* Features Section */}
           <section className="py-20 bg-slate-800/50">
-            <div className="container mx-auto px-4">
-              <div className="text-center mb-16">
+            <div className="container mx-auto px-4"></div>
+              <div className="text-center mb-16"></div>
                 <h2 className="text-4xl font-bold text-white mb-4">Advanced Security Features<p className="text-xl text-gray-300 max-w-3xl mx-auto">Our AI-powered password manager provides enterprise-grade security with an intuitive user experience.<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{features.map((feature, index) => (</div>
-                  <div key={index} className="cyber-card p-8 text-center group hover:scale-105 transition-transform duration-300">
-                    <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                  <div key={index} className="cyber-card p-8 text-center group hover:scale-105 transition-transform duration-300"></div>
+                    <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-6"></div>
             <div className="container mx-auto px-4"></section>
               <div className="text-center mb-16"></div>
                 <h2 className="text-4xl font-bold text-white mb-4">Advanced Security Features</h2><p className="text-xl text-gray-300 max-w-3xl mx-auto">Our AI-powered password manager provides enterprise-grade security with an intuitive user experience.</p><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{features.map((feature, index) => (</div>
@@ -168,9 +168,9 @@ const AIPasswordManagerPage: React.FC = () => {
                 </p>
               </div>
               <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">,
-                {features.map((feature, index) => (
-                  <div key={index} className="cyber-card p-8 text-center group hover: scale-105 transition-transform duration-300">,
-                    <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-6">,
+                {features.map((feature, index) => (</div>
+                  <div key={index} className="cyber-card p-8 text-center group hover: scale-105 transition-transform duration-300">,</div>
+                    <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-6">,</div>
                       <feature.icon className="w-8 h-8 text-white" />,
                     </div>,
                     <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
@@ -188,16 +188,16 @@ const AIPasswordManagerPage: React.FC = () => {
 
           {/* Benefits Section */}
           <section className="py-16 px-4">
-            <div className="max-w-6xl mx-auto">
-              <div className="text-center mb-12">
+            <div className="max-w-6xl mx-auto"></div>
+              <div className="text-center mb-12"></div>
                 <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Password Manager?<p className="text-xl text-gray-300">Proven benefits that protect your digital identity<div className="grid grid-cols-1 md:grid-cols-3 gap-8">{benefits.map((benefit, index) => (</div>
                 <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Password Manager?</h2>
                 <p className="text-xl text-gray-300">Proven benefits that protect your digital identity</p>
               </div>
               <div className="grid grid-cols-1 md: grid-cols-3 gap-8">,
-                {benefits.map((benefit, index) => (
-                  <div key={index} className="cyber-card p-6 text-center">
-                    <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                {benefits.map((benefit, index) => (</div>
+                  <div key={index} className="cyber-card p-6 text-center"></div>
+                    <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4"></div>
             <div className="max-w-6xl mx-auto"></section>
               <div className="text-center mb-12"></div>
                 <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Password Manager?</h2><p className="text-xl text-gray-300">Proven benefits that protect your digital identity</p><div className="grid grid-cols-1 md:grid-cols-3 gap-8">{benefits.map((benefit, index) => (</div>
@@ -214,10 +214,10 @@ const AIPasswordManagerPage: React.FC = () => {
 
           {/* Pricing Section */}
           <section className="py-16 px-4 bg-slate-800/50">
-            <div className="max-w-6xl mx-auto">
-              <div className="text-center mb-12">
+            <div className="max-w-6xl mx-auto"></div>
+              <div className="text-center mb-12"></div>
                 <h2 className="text-4xl font-bold text-white mb-4">Simple, Transparent Pricing<p className="text-xl text-gray-300">Choose the plan that fits your security needs<div className="grid grid-cols-1 md:grid-cols-3 gap-8">{pricingPlans.map((plan, index) => (<div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-green-500' : ''}`}>{plan.popular && (</div>
-                      <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                      <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
             <div className="max-w-6xl mx-auto"></section>
               <div className="text-center mb-12"></div>
                 <h2 className="text-4xl font-bold text-white mb-4">Simple, Transparent Pricing</h2><p className="text-xl text-gray-300">Choose the plan that fits your security needs</p><div className="grid grid-cols-1 md:grid-cols-3 gap-8">{pricingPlans.map((plan, index) => (</div><div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-green-500' : ''}`}>{plan.popular && (</div>
@@ -227,10 +227,10 @@ const AIPasswordManagerPage: React.FC = () => {
                 <p className="text-xl text-gray-300">Choose the plan that fits your security needs</p>
               </div>
               <div className="grid grid-cols-1 md: grid-cols-3 gap-8">,
-                {pricingPlans.map((plan, index) => (
+                {pricingPlans.map((plan, index) => (</div>
                   <div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-green-500' : ''}`}>
-                    {plan.popular && (
-                      <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    {plan.popular && (</div>
+                      <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
                         <span className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                           Most Popular;
                         </span>
@@ -265,7 +265,7 @@ const AIPasswordManagerPage: React.FC = () => {
             <div className="max-w-4xl mx-auto text-center"></section>
               <h2 className="text-4xl font-bold text-white mb-6">Secure Your Digital Life Today</h2><p className="text-xl text-gray-300 mb-8">Don't wait for a security breach. Protect your accounts with our AI-powered password manager.</p>
               </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
                 <a;
               <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
                 <a

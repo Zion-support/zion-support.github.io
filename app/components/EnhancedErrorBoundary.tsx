@@ -3,14 +3,14 @@ import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react';
 
 interface Props {
-  children: ReactNode;
+  children: ReactNode,
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
   enableReporting?: boolean;
 }
 
 interface State {
-  hasError: boolean;
+  hasError: boolean,
   error?: Error;
   errorInfo?: ErrorInfo;
   errorId?: string;
@@ -138,8 +138,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
               </div>
               
               <h1 className="text-3xl font-bold text-white mb-4">
-                Oops! Something went wrong
-              </h1>
+                Oops! Something went wrong</h1>
               
               <p className="text-gray-300 mb-6">
                 We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
@@ -210,9 +209,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                   </p>
                 )}
               </div>
-            </div>
           </div>
-        </div>
       );
     }
 

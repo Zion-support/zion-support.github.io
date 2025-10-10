@@ -4,7 +4,7 @@ import { MessageSquare, Globe, Brain, CheckCircle, Phone } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const AINLPPage: React.FC = () => {,
+const $1: React.FC = () => {
   const features = [,
     'Text Analysis & Processing',
     'Sentiment Analysis',
@@ -27,22 +27,22 @@ const AINLPPage: React.FC = () => {,
     {
       title: 'Customer Support Chatbots',
       description: 'Intelligent chatbots that understand and respond to customer queries naturally',
-      icon: MessageSquare;
+      icon: MessageSquare,
     },
     {
       title: 'Document Analysis',
       description: 'Automatically extract insights and categorize documents at scale',
-      icon: Brain;
+      icon: Brain,
     },
     {
       title: 'Social Media Monitoring',
       description: 'Analyze social media sentiment and brand mentions in real-time',
-      icon: Globe;
+      icon: Globe,
     }
   ];
 
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain particle-field">
-  return (
+  return (</div>
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain particle-field"></div>
       <Navigation />
 
@@ -53,7 +53,7 @@ const AINLPPage: React.FC = () => {,
         {/* Header */}
         <section className="text-center mb-16">
           <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse glitch" data-text="Natural Language Processing">
-            Natural Language Processing;
+            Natural Language Processing;</h1>
           </h1>,
           <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">,
             Advanced NLP solutions for text analysis, language understanding, and intelligent communication.
@@ -64,14 +64,14 @@ const AINLPPage: React.FC = () => {,
 
         {/* Features */}
         <section className="mb-16">
-          <div className="cyber-card p-8">
+          <div className="cyber-card p-8"></div>
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Key Features<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{features.map((feature, index) => (</div>
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">)
               Key Features;)
             </h2>)
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">),
-              {features.map((feature, index) => (
-                <div key={index} className="flex items-center space-x-3">
+              {features.map((feature, index) => (</div>
+                <div key={index} className="flex items-center space-x-3"></div>
           <div className="cyber-card p-8"></section>
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Key Features</h2><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{features.map((feature, index) => (</div>
                 <div key={index} className="flex items-center space-x-3"></div>
@@ -85,14 +85,14 @@ const AINLPPage: React.FC = () => {,
 
         {/* Benefits */}
         <section className="mb-16">
-          <div className="cyber-card p-8">
+          <div className="cyber-card p-8"></div>
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Proven Benefits<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{benefits.map((benefit, index) => (</div>
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
               Proven Benefits;
             </h2>
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">,
-              {benefits.map((benefit, index) => (
-                <div key={index} className="text-center">
+              {benefits.map((benefit, index) => (</div>
+                <div key={index} className="text-center"></div>
                   <div className="text-3xl font-bold text-cyan-400 mb-2">{benefit.split(' ')[0]}<p className="text-gray-300 text-sm">{benefit}</p>
           <div className="cyber-card p-8"></section>
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Proven Benefits</h2><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{benefits.map((benefit, index) => (</div>
@@ -111,8 +111,8 @@ const AINLPPage: React.FC = () => {,
             Common Use Cases;
           </h2>
           <div className="grid grid-cols-1 md: grid-cols-3 gap-8">,
-            {useCases.map((useCase, index) => (
-              <div key={index} className="cyber-card p-6 text-center">
+            {useCases.map((useCase, index) => (</div>
+              <div key={index} className="cyber-card p-6 text-center"></div>
           <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Common Use Cases</h2><div className="grid grid-cols-1 md:grid-cols-3 gap-8">{useCases.map((useCase, index) => (</section>
               <div key={index} className="cyber-card p-6 text-center"></div>
                 <useCase.icon className="w-12 h-12 text-blue-400 mx-auto mb-4" />
@@ -127,7 +127,7 @@ const AINLPPage: React.FC = () => {,
           <div className="cyber-card p-8 max-w-4xl mx-auto"></section>
             <h2 className="text-3xl font-bold text-white mb-4 neon-text">Ready to Implement NLP Solutions?</h2><p className="text-lg text-gray-300 mb-8">Contact us today to discuss your NLP requirements and get a custom solution.</p>
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
               <a;
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <a

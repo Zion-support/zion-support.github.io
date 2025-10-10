@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-const ServiceWorkerRegistration: React.FC = () => {,
+const $1: React.FC = () => {
   useEffect(() => {,
     if ('serviceWorker' in navigator) {,
       window.addEventListener('load', () => {

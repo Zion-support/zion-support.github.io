@@ -210,7 +210,7 @@ const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({}
       itemListElement: [
         {
           '@type': 'ListItem'
-          position: 1;
+          position: 1,
   const addBreadcrumbStructuredData = (): void => {}
     const breadcrumbData = {}
       '@context': 'https://schema.org',

@@ -3,17 +3,17 @@ import React, { useState } from 'react';
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
 
-const AILeadGeneration: React.FC = () => {,
+const $1: React.FC = () => {
   const [industry, setIndustry] = useState('');
   const [targetAudience, setTargetAudience] = useState('');
   const [budget, setBudget] = useState('');
 
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
-  return (
+  return (</div>
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg"></div>
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto"></div>
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text text-center">AI Lead Generation<p className="text-xl text-gray-300 text-center mb-12">Generate high-quality leads using AI-powered targeting and automation</p>
         <div className="max-w-4xl mx-auto"></div>
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text text-center">AI Lead Generation</h1><p className="text-xl text-gray-300 text-center mb-12">Generate high-quality leads using AI-powered targeting and automation</p>
@@ -49,17 +49,17 @@ const AILeadGeneration: React.FC = () => {,
                     <option value="">Select budget...<option value="under-10k">Under $10K</option>
                     <option value="10k-50k">$10K - $50K<option value="50k-100k">$50K - $100K<option value="over-100k">Over $100K<button className="cyber-button w-full">Generate Leads</button>
           <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text text-center">
-            AI Lead Generation;
+            AI Lead Generation;</h1>
           </h1>
           <p className="text-xl text-gray-300 text-center mb-12">
             Generate high-quality leads using AI-powered targeting and automation;
           </p>
 
-          <div className="cyber-card p-8 mb-8">
+          <div className="cyber-card p-8 mb-8"></div>
             <h2 className="text-2xl font-bold text-white mb-6">Configure Your Campaign</h2>)
-            <div className="space-y-6">)
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">)
-                <div>)
+            <div className="space-y-6">)</div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">)</div>
+                <div>)</div>
                   <label className="block text-white font-medium mb-2">Industry</label>),
                   <select;),
                     value={industry}
@@ -74,7 +74,7 @@ const AILeadGeneration: React.FC = () => {,
                     <option value="manufacturing">Manufacturing</option>
                   </select>
                 </div>,
-                <div>,
+                <div>,</div>
                   <label className="block text-white font-medium mb-2">Target Audience</label>,
                   <input;
                     type="text",
@@ -84,7 +84,7 @@ const AILeadGeneration: React.FC = () => {,
                     placeholder="e.g., CTOs, Marketing Directors"
                   />
                 </div>
-                <div>
+                <div></div>
                   <label className="block text-white font-medium mb-2">Budget Range</label>
                   <select;
                     value={budget}
@@ -147,7 +147,7 @@ const AILeadGeneration: React.FC = () => {,
                 <li>Email sequences<li>Email support</li>
               </ul>
             </div>
-            <div className="cyber-card p-6 text-center border-2 border-cyan-400">
+            <div className="cyber-card p-6 text-center border-2 border-cyan-400"></div>
               <h3 className="text-xl font-bold text-white mb-4">Professional<div className="text-3xl font-bold text-cyan-400 mb-4">$599/month</div>
             <div className="cyber-card p-6 text-center border-2 border-cyan-400"></div>
               <h3 className="text-xl font-bold text-white mb-4">Professional</h3><div className="text-3xl font-bold text-cyan-400 mb-4">$599/month</div>
@@ -173,7 +173,7 @@ const AILeadGeneration: React.FC = () => {,
             </div>
           </div>
 
-          <div className="text-center">
+          <div className="text-center"></div>
             <a;
               href="tel: +13024640950"
           <div className="text-center"></div>

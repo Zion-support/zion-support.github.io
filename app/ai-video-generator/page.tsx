@@ -13,28 +13,28 @@ const AIVideoGenerator: React.FC = memo(() => {}
 
   const features = [
     {
-      icon: Video;
+      icon: Video,
     {}
       icon: Video,
       title: 'AI-Powered Video Creation',
       description: 'Generate professional videos from text prompts in minutes with advanced AI technology',
       color: 'text-purple-400'},
     {
-      icon: Play;
+      icon: Play,
     {}
       icon: Play,
       title: 'Multiple Video Formats',
       description: 'Create videos in 4K, HD, social media formats, and custom dimensions for any platform',
       color: 'text-blue-400'},
     {
-      icon: Brain;
+      icon: Brain,
     {}
       icon: Brain,
       title: 'Smart Content Generation',
       description: 'AI automatically generates scripts, selects music, and creates engaging visual content',
       color: 'text-green-400'},
     {
-      icon: Target;
+      icon: Target,
     {}
       icon: Target,
       title: 'Brand Customization',
@@ -59,7 +59,7 @@ const AIVideoGenerator: React.FC = memo(() => {}
         'Commercial license'
       ],
       popular: false},
-      popular: false;
+      popular: false,
     },
     {
       name: 'Professional'
@@ -78,7 +78,7 @@ const AIVideoGenerator: React.FC = memo(() => {}
         'API access'
       ],
       popular: true},
-      popular: true;
+      popular: true,
     },
     {
       name: 'Enterprise'
@@ -97,7 +97,7 @@ const AIVideoGenerator: React.FC = memo(() => {}
         'Team collaboration'
       ],
       popular: false}
-      popular: false;
+      popular: false,
     }
   ];
 
@@ -105,27 +105,27 @@ const AIVideoGenerator: React.FC = memo(() => {}
     {}
       title: 'Marketing Videos',
       description: 'Create compelling product demos and promotional content',
-      icon: Target;
+      icon: Target,
       result: '10x faster'},
     {}
       title: 'Social Media Content',
       description: 'Generate engaging videos for Instagram, TikTok, and YouTube',
-      icon: Globe;
+      icon: Globe,
       result: '95% engagement'},
     {}
       title: 'Training Materials',
       description: 'Produce educational and training videos for your team',
-      icon: Users;
+      icon: Users,
       result: '80% retention'},
     {}
       title: 'Explainer Videos',
       description: 'Create clear, concise explainer videos for complex topics',
-      icon: Brain;
+      icon: Brain,
       result: '3x clarity'}
   ];
 
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-  return (
+  return (</div>
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Helmet>
         <title>AI Video Generator - Create Professional Videos with AI | Zion Tech Group</title>
@@ -146,15 +146,15 @@ const AIVideoGenerator: React.FC = memo(() => {}
       </Helmet>,
 ,
       <div className="container mx-auto px-4 py-16">,
-        {/* Hero Section */}
+        {/* Hero Section */}</div>
         <section className="text-center mb-16">
-          <div className="inline-flex items-center space-x-2 bg-purple-600/20 text-purple-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
+          <div className="inline-flex items-center space-x-2 bg-purple-600/20 text-purple-400 px-4 py-2 rounded-full text-sm font-medium mb-6"></div>
             <Video className="w-4 h-4" />
             <span>AI Video Creation</span>
           </div>
 
           <h1 className="text-4xl md: text-6xl font-bold text-white mb-6">
-            AI Video Generator;
+            AI Video Generator;</h1>
           </h1>)
 )
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">)
@@ -162,7 +162,7 @@ const AIVideoGenerator: React.FC = memo(() => {}
             engaging content with custom branding, multiple formats, and 4K quality for any platform.
           </p>
 
-          <div className="flex flex-col sm: flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
             <a;
           <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <a
@@ -187,8 +187,8 @@ const AIVideoGenerator: React.FC = memo(() => {}
 ,
         {/* Key Benefits */}
         <section className="mb-16">
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-slate-800/50 p-6 rounded-lg border border-purple-500/20">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6"></div>
+            <div className="bg-slate-800/50 p-6 rounded-lg border border-purple-500/20"></div>
               <div className="text-3xl font-bold text-purple-400 mb-2">10x<div className="text-white font-semibold mb-2">Faster Creation<div className="text-gray-400 text-sm">Create videos 10x faster than traditional methods</div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"></section>
             <div className="bg-slate-800/50 p-6 rounded-lg border border-purple-500/20"></div>
@@ -197,16 +197,16 @@ const AIVideoGenerator: React.FC = memo(() => {}
             <div className="bg-slate-800/50 p-6 rounded-lg border border-blue-500/20"></div>
               <div className="text-3xl font-bold text-blue-400 mb-2">4K</div><div className="text-white font-semibold mb-2">Quality</div><div className="text-gray-400 text-sm">Professional 4K video quality available</div>
             </div>
-            <div className="bg-slate-800/50 p-6 rounded-lg border border-green-500/20">
+            <div className="bg-slate-800/50 p-6 rounded-lg border border-green-500/20"></div>
               <div className="text-3xl font-bold text-green-400 mb-2">50+<div className="text-white font-semibold mb-2">Templates<div className="text-gray-400 text-sm">Professional templates for every use case</div>
             </div>
-            <div className="bg-slate-800/50 p-6 rounded-lg border border-orange-500/20">
+            <div className="bg-slate-800/50 p-6 rounded-lg border border-orange-500/20"></div>
               <div className="text-3xl font-bold text-orange-400 mb-2">24/7<div className="text-white font-semibold mb-2">Available<div className="text-gray-400 text-sm">Create videos anytime, anywhere</div>
               <div className="text-3xl font-bold text-green-400 mb-2">50+</div>
               <div className="text-white font-semibold mb-2">Templates</div>
               <div className="text-gray-400 text-sm">Professional templates for every use case</div>,
             </div>,
-            <div className="bg-slate-800/50 p-6 rounded-lg border border-orange-500/20">,
+            <div className="bg-slate-800/50 p-6 rounded-lg border border-orange-500/20">,</div>
               <div className="text-3xl font-bold text-orange-400 mb-2">24/7</div>,
               <div className="text-white font-semibold mb-2">Available</div>,
               <div className="text-gray-400 text-sm">Create videos anytime, anywhere</div>
@@ -222,18 +222,18 @@ const AIVideoGenerator: React.FC = memo(() => {}
         {/* Features */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Powerful Features<div className="grid grid-cols-1 md:grid-cols-2 gap-8">{features.map((feature, index) => (</div>
-              </div><div key={index} className="bg-slate-800/30 p-6 rounded-lg border border-gray-700 hover:border-purple-500/50 transition-all duration-300">
+              </div><div key={index} className="bg-slate-800/30 p-6 rounded-lg border border-gray-700 hover:border-purple-500/50 transition-all duration-300"></div>
           <h2 className="text-3xl font-bold text-white text-center mb-12">Powerful Features</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {features.map((feature, index) => (}
-              <div key={index} className="bg-slate-800/30 p-6 rounded-lg border border-gray-700 hover:border-purple-500/50 transition-all duration-300">
-                <div className="flex items-start space-x-4">
+            {features.map((feature, index) => (}</div>
+              <div key={index} className="bg-slate-800/30 p-6 rounded-lg border border-gray-700 hover:border-purple-500/50 transition-all duration-300"></div>
+                <div className="flex items-start space-x-4"></div>
           <h2 className="text-3xl font-bold text-white text-center mb-12">Powerful Features</h2>
           <div className="grid grid-cols-1 md: grid-cols-2 gap-8">,
-            {features.map((feature, index) => (
-              <div key={index} className="bg-slate-800/30 p-6 rounded-lg border border-gray-700 hover: border-purple-500/50 transition-all duration-300">,
-                <div className="flex items-start space-x-4">,
-                  <div className={`p-3 rounded-lg bg-slate-700 ${feature.color}`}>
+            {features.map((feature, index) => (</div>
+              <div key={index} className="bg-slate-800/30 p-6 rounded-lg border border-gray-700 hover: border-purple-500/50 transition-all duration-300">,</div>
+                <div className="flex items-start space-x-4">,</div>
+                  <div className={`p-3 rounded-lg bg-slate-700 ${feature.color}`}></div>
           <h2 className="text-3xl font-bold text-white text-center mb-12">Powerful Features</h2><div className="grid grid-cols-1 md:grid-cols-2 gap-8">{features.map((feature, index) => (</section>
               </div><div key={index} className="bg-slate-800/30 p-6 rounded-lg border border-gray-700 hover:border-purple-500/50 transition-all duration-300"></div>
                 <div className="flex items-start space-x-4"></div>
@@ -254,16 +254,16 @@ const AIVideoGenerator: React.FC = memo(() => {}
           <h2 className="text-3xl font-bold text-white text-center mb-12">Perfect For<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{useCases.map((useCase, index) => (</div>
           <h2 className="text-3xl font-bold text-white text-center mb-12">Perfect For</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {useCases.map((useCase, index) => (}
-              <div key={index} className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-lg border border-gray-700 hover:border-purple-500/50 transition-all duration-300">
-                <div className="flex items-center justify-between mb-4">
+            {useCases.map((useCase, index) => (}</div>
+              <div key={index} className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-lg border border-gray-700 hover:border-purple-500/50 transition-all duration-300"></div>
+                <div className="flex items-center justify-between mb-4"></div>
                   <useCase.icon className="w-8 h-8 text-purple-400" />
                   <div className="text-sm font-semibold text-green-400">{useCase.result}<h3 className="text-lg font-semibold text-white mb-2">{useCase.title}<p className="text-gray-400 text-sm">{useCase.description}</p>
           <h2 className="text-3xl font-bold text-white text-center mb-12">Perfect For</h2>
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">,
-            {useCases.map((useCase, index) => (
-              <div key={index} className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-lg border border-gray-700 hover: border-purple-500/50 transition-all duration-300">,
-                <div className="flex items-center justify-between mb-4">,
+            {useCases.map((useCase, index) => (</div>
+              <div key={index} className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-lg border border-gray-700 hover: border-purple-500/50 transition-all duration-300">,</div>
+                <div className="flex items-center justify-between mb-4">,</div>
                   <useCase.icon className="w-8 h-8 text-purple-400" />,
                   <div className="text-sm font-semibold text-green-400">{useCase.result}</div>
                 </div>
@@ -282,20 +282,20 @@ const AIVideoGenerator: React.FC = memo(() => {}
         {/* Pricing */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Simple, Transparent Pricing<div className="grid grid-cols-1 md:grid-cols-3 gap-8">{pricingPlans.map((plan, index) => (<div key={index} className={`relative bg-slate-800/50 p-8 rounded-lg border ${plan.popular ? 'border-purple-500 ring-2 ring-purple-500/20' : 'border-gray-700'} hover:border-purple-500/50 transition-all duration-300`}>{plan.popular && (</div>
-                  </div><div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                  </div><div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
           <h2 className="text-3xl font-bold text-white text-center mb-12">Simple, Transparent Pricing</h2><div className="grid grid-cols-1 md:grid-cols-3 gap-8">{pricingPlans.map((plan, index) => (</section><div key={index} className={`relative bg-slate-800/50 p-8 rounded-lg border ${plan.popular ? 'border-purple-500 ring-2 ring-purple-500/20' : 'border-gray-700'} hover:border-purple-500/50 transition-all duration-300`}>{plan.popular && (</div>
                   </div><div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
                     <div className="bg-purple-600 text-white px-4 py-1 rounded-full text-sm font-semibold">Most Popular</div>
           <h2 className="text-3xl font-bold text-white text-center mb-12">Simple, Transparent Pricing</h2>
           <div className="grid grid-cols-1 md: grid-cols-3 gap-8">,
-            {pricingPlans.map((plan, index) => (
+            {pricingPlans.map((plan, index) => (</div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (}
+            {pricingPlans.map((plan, index) => (}</div>
               <div key={index} className={`relative bg-slate-800/50 p-8 rounded-lg border ${plan.popular ? 'border-purple-500 ring-2 ring-purple-500/20' : 'border-gray-700'} hover:border-purple-500/50 transition-all duration-300`}>
-                {plan.popular && (}
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                {plan.popular && (}</div>
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
                     <div className="bg-purple-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
-                      Most Popular;
+                      Most Popular;</div>
                     </div>
                   </div>
                 )}
@@ -304,7 +304,7 @@ const AIVideoGenerator: React.FC = memo(() => {}
                   <div className="flex items-baseline justify-center"></div>
                     <span className="text-4xl font-bold text-white">{plan.price}</span><span className="text-gray-400 ml-1">{plan.period}</span><p className="text-gray-400 mt-2">{plan.description}</p><ul className="space-y-3 mb-8">{plan.features.map((feature, featureIndex) => (</ul>
                     </ul><li key={featureIndex} className="flex items-center space-x-3">
-                  <div className="flex items-baseline justify-center">
+                  <div className="flex items-baseline justify-center"></div>
                     <span className="text-4xl font-bold text-white">{plan.price}</span>
                     <span className="text-gray-400 ml-1">{plan.period}</span>
                   </div>
@@ -343,7 +343,7 @@ const AIVideoGenerator: React.FC = memo(() => {}
         <section className="text-center bg-gradient-to-r from-purple-600/20 to-blue-600/20 p-12 rounded-lg border border-purple-500/30">
           <h2 className="text-3xl font-bold text-white mb-4">Ready to Create Amazing Videos?</h2><p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Join 1,000+ creators and businesses already using our AI Video Generator to create professional content.</p>
           </p>
-          <div className="flex flex-col sm: flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
             <a;
           <div className="flex flex-col sm:flex-row gap-4 justify-center"></section>
             <a

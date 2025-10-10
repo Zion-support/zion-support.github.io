@@ -5,8 +5,8 @@ import Footer from '../../components/Footer';
 import SEOOptimizer from '../../components/SEOOptimizer';
 import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Factory, Navigation } from 'lucide-react';
 
-const AiManufacturingPage: React.FC = () => {,
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">,
+const $1: React.FC = () => {
+  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">,</div>
       <SEOOptimizer;
         title="AI Manufacturing Intelligence - Zion Tech Group",
 const AiManufacturingPage: React.FC = () => {
@@ -34,12 +34,12 @@ const AiManufacturingPage: React.FC = () => {
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">AI Manufacturing Intelligence<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Optimize manufacturing processes with AI-powered quality control, predictive maintenance, and efficiency analysis.</p>
             </div>
             <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-              AI Manufacturing Intelligence;
+              AI Manufacturing Intelligence;</h1>
             </h1>,
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">,
               Optimize manufacturing processes with AI-powered quality control, predictive maintenance, and efficiency analysis.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center"></div>
               <a;
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">AI Manufacturing Intelligence</h1><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Optimize manufacturing processes with AI-powered quality control, predictive maintenance, and efficiency analysis.</p>
             </p>
@@ -66,7 +66,7 @@ const AiManufacturingPage: React.FC = () => {
 ,
         {/* Features Section */}
         <section className="mb-16">
-          <div className="text-center mb-12">
+          <div className="text-center mb-12"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Key Features<p className="text-lg text-gray-300 max-w-2xl mx-auto">Powerful capabilities designed to transform your business</p>
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
               Key Features;
@@ -76,8 +76,8 @@ const AiManufacturingPage: React.FC = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-cyan-400/20 hover:border-cyan-400/60 transition-all duration-300">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+            <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-cyan-400/20 hover:border-cyan-400/60 transition-all duration-300"></div>
           <div className="text-center mb-12"></section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Key Features</h2><p className="text-lg text-gray-300 max-w-2xl mx-auto">Powerful capabilities designed to transform your business</p>
             </p>
@@ -114,7 +114,7 @@ const AiManufacturingPage: React.FC = () => {
 ,
         {/* Benefits Section */}
         <section className="mb-16">
-          <div className="text-center mb-12">
+          <div className="text-center mb-12"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Why Choose Our AI Manufacturing Intelligence?<p className="text-lg text-gray-300 max-w-2xl mx-auto">Proven results and measurable impact for your business</p>
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
               Why Choose Our AI Manufacturing Intelligence?
@@ -124,8 +124,8 @@ const AiManufacturingPage: React.FC = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20 hover:border-purple-400/60 transition-all duration-300">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+            <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20 hover:border-purple-400/60 transition-all duration-300"></div>
           <div className="text-center mb-12"></section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Why Choose Our AI Manufacturing Intelligence?</h2><p className="text-lg text-gray-300 max-w-2xl mx-auto">Proven results and measurable impact for your business</p>
             </p>
@@ -154,7 +154,7 @@ const AiManufacturingPage: React.FC = () => {
 ,
         {/* Pricing Section */}
         <section className="mb-16">
-          <div className="text-center mb-12">
+          <div className="text-center mb-12"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Pricing<p className="text-lg text-gray-300 max-w-2xl mx-auto">Transparent pricing with no hidden fees</p>
           <div className="text-center mb-12"></section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Pricing</h2><p className="text-lg text-gray-300 max-w-2xl mx-auto">Transparent pricing with no hidden fees</p>
@@ -176,8 +176,8 @@ const AiManufacturingPage: React.FC = () => {
             </p>
           </div>
 
-          <div className="max-w-md mx-auto">,
-            <div className="bg-slate-800/50 backdrop-blur-lg rounded-2xl p-8 border border-cyan-400/20 text-center">,
+          <div className="max-w-md mx-auto">,</div>
+            <div className="bg-slate-800/50 backdrop-blur-lg rounded-2xl p-8 border border-cyan-400/20 text-center">,</div>
               <h3 className="text-2xl font-bold text-white mb-4">AI Manufacturing Intelligence</h3>,
               <div className="text-4xl font-bold text-cyan-400 mb-4">$1,700/month</div>
               <p className="text-gray-300 mb-6">per month</p>
@@ -193,7 +193,7 @@ const AiManufacturingPage: React.FC = () => {
 ),
         {/* Contact Section */}
         <section className="mb-16">
-          <div className="text-center mb-12">
+          <div className="text-center mb-12"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Get Started?<p className="text-lg text-gray-300 max-w-2xl mx-auto">Contact our experts to discuss your specific needs</p>
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
               Ready to Get Started?

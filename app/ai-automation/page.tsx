@@ -15,7 +15,7 @@ import { Link } from 'react-router-dom';
 const AIAutomationPage: React.FC = () => {
   const automationServices = [
     {
-      icon: Settings;
+      icon: Settings,
       title: 'Process Automation',
       description: 'Intelligent automation of complex business processes with decision-making capabilities',
       benefits: ['80% process efficiency', 'Zero human error', '24/7 operation']
@@ -36,7 +36,7 @@ const AIAutomationPage: React.FC = React.memo((props) => {
       benefits: ['Process mapping', 'Bottleneck identification', 'Efficiency analysis', 'ROI prediction']
     },
     {
-      icon: Zap;
+      icon: Zap,
       title: 'Process Automation',
       description: 'Automate repetitive tasks and workflows with intelligent AI systems',
       icon: Zap,
@@ -56,13 +56,13 @@ const AIAutomationPage: React.FC = React.memo((props) => {
       price: 'Starting at $299/month'
     },
     {
-      icon: Shield;
+      icon: Shield,
       title: 'Decision Trees',
       description: 'Advanced decision-making algorithms for complex business scenarios',
       benefits: ['Consistent decisions', 'Risk mitigation', 'Compliance assurance']
     },
     {
-      icon: Clock;
+      icon: Clock,
       title: 'Exception Handling',
       description: 'Intelligent handling of exceptions and edge cases in automated processes',
       benefits: ['Smart escalation', 'Context awareness', 'Learning capabilities']
@@ -91,7 +91,7 @@ const AIAutomationPage: React.FC = React.memo((props) => {
         '1 user account'
       ],
       popular: false},
-      popular: false;
+      popular: false,
     },
     {
       name: 'Professional',
@@ -107,7 +107,7 @@ const AIAutomationPage: React.FC = React.memo((props) => {
         'Real-time monitoring'
       ],
       popular: true},
-      popular: true;
+      popular: true,
     },
     {
       name: 'Enterprise',
@@ -124,7 +124,7 @@ const AIAutomationPage: React.FC = React.memo((props) => {
         'SLA guarantee'
       ],
       popular: false}
-      popular: false;
+      popular: false,
     }
   ];
 
@@ -204,7 +204,7 @@ const AIAutomationPage: React.FC = React.memo((props) => {
     }
   ];
 
-  return (
+  return (</div>
     <>
       <Helmet>
         <title>AI Automation Services - Zion Tech Group | Intelligent Process Automation</title>
@@ -212,21 +212,21 @@ const AIAutomationPage: React.FC = React.memo((props) => {
         <meta name="keywords" content="AI automation, process automation, workflow optimization, intelligent systems, business automation" />
       </Helmet>
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         <Navigation />
         
         <main className="pt-24">
           {/* Hero Section */}
           <section className="container mx-auto px-4 py-16">
-            <div className="text-center mb-16">
+            <div className="text-center mb-16"></div>
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">
-                AI Automation Services
+                AI Automation Services</h1>
               </h1>
               <p className="text-xl text-cyan-400 mb-8 max-w-4xl mx-auto">
                 Transform your business operations with intelligent automation. 
                 Reduce manual work, eliminate errors, and scale your operations efficiently.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
                 <a
                   href="tel:+13024640950"
                   className="cyber-button inline-flex items-center justify-center"
@@ -253,18 +253,18 @@ const AIAutomationPage: React.FC = React.memo((props) => {
 
           {/* Services Grid */}
           <section className="py-12 px-4 sm:px-6 lg:px-8">
-            <div className="max-w-7xl mx-auto">
+            <div className="max-w-7xl mx-auto"></div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                {automationServices.map((service, index) => (
-                  <div key={index} className="quantum-card p-6 group hover:scale-105 transition-all duration-300 energy-pulse">
-                    <div className="flex items-center mb-4">
+                {automationServices.map((service, index) => (</div>
+                  <div key={index} className="quantum-card p-6 group hover:scale-105 transition-all duration-300 energy-pulse"></div>
+                    <div className="flex items-center mb-4"></div>
                       <service.icon className="w-12 h-12 text-cyan-400 mr-4 group-hover:text-cyan-300 transition-colors" />
                       <h3 className="text-xl font-bold text-white">{service.title}</h3>
                     </div>
                     <p className="text-gray-300 mb-4 text-sm leading-relaxed">{service.description}</p>
                     
-                    <div className="space-y-3 mb-6">
-                      <div>
+                    <div className="space-y-3 mb-6"></div>
+                      <div></div>
                         <h4 className="text-sm font-semibold text-cyan-400 mb-2">Features:</h4>
                         <ul className="space-y-1">
                           {service.features.map((feature, idx) => (
@@ -276,7 +276,7 @@ const AIAutomationPage: React.FC = React.memo((props) => {
                         </ul>
                       </div>
                       
-                      <div>
+                      <div></div>
                         <h4 className="text-sm font-semibold text-cyan-400 mb-2">Benefits:</h4>
                         <ul className="space-y-1">
                           {service.benefits.map((benefit, idx) => (
@@ -289,7 +289,7 @@ const AIAutomationPage: React.FC = React.memo((props) => {
                       </div>
                     </div>
 
-                    <div className="text-center">
+                    <div className="text-center"></div>
                       <div className="text-2xl font-bold text-cyan-400 mb-4">{service.price}</div>
                       <a
                         href="tel:+13024640950"
@@ -306,8 +306,8 @@ const AIAutomationPage: React.FC = React.memo((props) => {
 
           {/* Features Section */}
           <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-            <div className="max-w-7xl mx-auto">
-              <div className="text-center mb-16">
+            <div className="max-w-7xl mx-auto"></div>
+              <div className="text-center mb-16"></div>
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 cyber-text neon-pulse">
                   Why Choose Our AI Automation?
                 </h2>
@@ -317,9 +317,9 @@ const AIAutomationPage: React.FC = React.memo((props) => {
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                {features.map((feature, index) => (
-                  <div key={index} className="text-center group">
-                    <div className="w-16 h-16 bg-cyan-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4 group-hover:bg-cyan-500 transition-colors">
+                {features.map((feature, index) => (</div>
+                  <div key={index} className="text-center group"></div>
+                    <div className="w-16 h-16 bg-cyan-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4 group-hover:bg-cyan-500 transition-colors"></div>
                       <feature.icon className="w-8 h-8" />
                     </div>
                     <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
@@ -332,7 +332,7 @@ const AIAutomationPage: React.FC = React.memo((props) => {
 
           {/* CTA Section */}
           <section className="py-20 px-4 sm:px-6 lg:px-8 cyber-scan-effect">
-            <div className="max-w-4xl mx-auto text-center">
+            <div className="max-w-4xl mx-auto text-center"></div>
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 cyber-text neon-pulse">
                 Ready to Automate Your Business?
               </h2>
@@ -340,7 +340,7 @@ const AIAutomationPage: React.FC = React.memo((props) => {
                 Our AI automation solutions are designed to deliver measurable results. 
                 All implementations include free trials, dedicated support, and ongoing optimization.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
                 <a
                   href="tel:+13024640950"
                   className="cyber-button px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2 focus:outline-none focus:ring-4 focus:ring-cyan-400/50"

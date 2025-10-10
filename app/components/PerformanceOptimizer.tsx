@@ -140,8 +140,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
                 performanceScore >= 70 ? 'bg-yellow-500' : 'bg-red-500'
               }`}
               style={{ width: `${performanceScore}%` }}
-            />
-          </div>
+            /></div>
           {performanceScore < 90 && (
             <div className="mt-2 flex items-center">
               <AlertTriangle className="h-4 w-4 text-yellow-600" />

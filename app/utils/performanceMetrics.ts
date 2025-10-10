@@ -4,10 +4,10 @@
  * Advanced performance tracking and monitoring for web applications;
  */
 export interface PerformanceMetric {
-  name: string;
-  value: number;
-  unit: string;
-  timestamp: Date;
+  name: string,
+  value: number,
+  unit: string,
+  timestamp: Date,
   category: 'load' | 'runtime' | 'network' | 'memory' | 'custom',
   metadata?: Record<string, unknown>;}
 }
@@ -35,11 +35,11 @@ export interface WebVitalsMetrics {}
 }
 export interface PerformanceReport {}
   metrics: PerformanceMetric[]
-  webVitals: WebVitalsMetrics;
+  webVitals: WebVitalsMetrics,
   summary: {
-    avgLoadTime: number;
-    totalMetrics: number;
-    performanceScore: number;
+    avgLoadTime: number,
+    totalMetrics: number,
+    performanceScore: number,
   webVitals: WebVitalsMetrics
   summary: {}
     avgLoadTime: number
@@ -47,10 +47,10 @@ export interface PerformanceReport {}
     performanceScore: number
     recommendations: string[];}
   }
-  timestamp: Date;
+  timestamp: Date,
 }
 export class PerformanceMetrics {
-  private static instance: PerformanceMetrics;
+  private static instance: PerformanceMetrics,
   private metrics: PerformanceMetric[] = [];}
   private webVitals: WebVitalsMetrics = {}
   private observers: PerformanceObserver[] = [],
@@ -76,7 +76,7 @@ export interface WebVitalsMetrics {/* TODO: Fix JSX expression */}
 export interface PerformanceReport {/* TODO: Fix JSX expression */}
   };
   timestam,
-  p: Date;
+  p: Date,
 }
 export class PerformanceMetrics {/* TODO: Fix JSX expression */}
   webVitals: WebVitalsMetrics = {};
@@ -630,14 +630,14 @@ interface PerformanceWithMemory extends Performance {
 // Type for performance.memory
 interface PerformanceWithMemory extends Performance {}
   memory: {}
-// usedJSHeapSize: number;
-// totalJSHeapSize: number;
-// jsHeapSizeLimit: number;
+// usedJSHeapSize: number,
+// totalJSHeapSize: number,
+// jsHeapSizeLimit: number,
   };
 }
 // Type for LayoutShift;
 interface LayoutShift extends PerformanceEntry {
-  value: number;
+  value: number,
 // Type for LayoutShift
 interface LayoutShift extends PerformanceEntry {}
   value: number

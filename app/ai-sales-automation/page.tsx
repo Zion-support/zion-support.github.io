@@ -8,37 +8,37 @@ import { CheckCircle, Star, TrendingUp, Users, Target, BarChart3, Zap, Shield, C
 const AISalesAutomationPage: React.FC = () => {
   const features = [
     {
-      icon: Target;
+      icon: Target,
       title: 'Lead Scoring & Qualification',
       description: 'AI-powered lead scoring that automatically identifies high-value prospects and prioritizes them for your sales team.',
       benefits: ['Automated scoring', 'Higher conversion rates', 'Time savings']
     },
     {
-      icon: Users;
+      icon: Users,
       title: 'Automated Outreach',
       description: 'Intelligent email sequences and follow-ups that nurture leads through the sales funnel automatically.',
       benefits: ['Personalized messages', 'Optimal timing', 'Multi-channel approach']
     },
     {
-      icon: BarChart3;
+      icon: BarChart3,
       title: 'Sales Analytics',
       description: 'Comprehensive analytics and reporting that provide insights into sales performance and opportunities.',
       benefits: ['Real-time insights', 'Performance tracking', 'ROI analysis']
     },
     {
-      icon: Zap;
+      icon: Zap,
       title: 'CRM Integration',
       description: 'Seamless integration with popular CRM systems to streamline your sales workflow.',
       benefits: ['Unified data', 'Automated updates', 'Workflow optimization']
     },
     {
-      icon: Shield;
+      icon: Shield,
       title: 'Predictive Analytics',
       description: 'AI models that predict customer behavior, churn risk, and optimal sales strategies.',
       benefits: ['Predictive insights', 'Risk assessment', 'Strategy optimization']
     },
     {
-      icon: Clock;
+      icon: Clock,
       title: 'Automated Scheduling',
       description: 'Smart scheduling that finds optimal meeting times and sends automated reminders.',
       benefits: ['Time optimization', 'Reduced no-shows', 'Calendar sync']
@@ -58,7 +58,7 @@ const AISalesAutomationPage: React.FC = () => {
         'Standard analytics',
         'Email support'
       ],
-      popular: false;
+      popular: false,
     },
     {
       name: 'Professional',
@@ -74,7 +74,7 @@ const AISalesAutomationPage: React.FC = () => {
         'CRM integration',
         'Team collaboration'
       ],
-      popular: true;
+      popular: true,
     },
     {
       name: 'Enterprise',
@@ -90,25 +90,25 @@ const AISalesAutomationPage: React.FC = () => {
         'Custom integrations',
         'SLA guarantee'
       ],
-      popular: false;
+      popular: false,
     }
   ];
 
   const benefits = [
     {
-      icon: TrendingUp;
+      icon: TrendingUp,
       title: 'Increase Sales by 300%',
       description: 'Boost your sales performance with AI-powered automation and optimization'},
     {
-      icon: Clock;
+      icon: Clock,
       title: 'Save 20+ Hours/Week',
       description: 'Automate repetitive tasks and focus on high-value activities'},
     {
-      icon: Target;
+      icon: Target,
       title: 'Higher Conversion Rates',
       description: 'Convert more leads with intelligent targeting and personalization'},
     {
-      icon: Star;
+      icon: Star,
       title: 'Better Customer Experience',
       description: 'Deliver personalized, timely interactions that delight customers'
     }
@@ -130,13 +130,13 @@ const AISalesAutomationPage: React.FC = () => {
               and intelligent CRM integration that drives results and maximizes efficiency.</p>
         canonicalUrl="https: //ziontechgroup.com/ai-sales-automation",
       />,
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">,
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">,</div>
         <Navigation />,
         <main className="container mx-auto px-4 py-16 pt-24">,
           {/* Hero Section */}
           <section className="text-center mb-16">
             <h1 className="text-4xl md: text-6xl font-bold text-white mb-6 neon-text">
-              AI Sales Automation;
+              AI Sales Automation;</h1>
             </h1>
             <p className="text-xl text-cyan-400 mb-8 font-medium">)
               Boost sales by 300% with intelligent automation;)
@@ -145,7 +145,7 @@ const AISalesAutomationPage: React.FC = () => {
               Transform your sales process with AI-powered lead scoring, automated outreach)
               and intelligent CRM integration that drives results and maximizes efficiency.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
               <a;
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></section>
               <a
@@ -170,15 +170,15 @@ const AISalesAutomationPage: React.FC = () => {
           {/* Features Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Key Features<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature, index) => (</div>
-                <div key={index} className="cyber-card hologram-card p-6 hover:scale-105 transition-all duration-300">
+                <div key={index} className="cyber-card hologram-card p-6 hover:scale-105 transition-all duration-300"></div>
                   <feature.icon className="w-12 h-12 text-cyan-400 mb-4" />
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}<p className="text-gray-300 mb-4">{feature.description}<ul className="space-y-2">{feature.benefits.map((benefit, benefitIndex) => (</ul>
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">
               Key Features;
             </h2>
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,
-              {features.map((feature, index) => (
-                <div key={index} className="cyber-card hologram-card p-6 hover: scale-105 transition-all duration-300">,
+              {features.map((feature, index) => (</div>
+                <div key={index} className="cyber-card hologram-card p-6 hover: scale-105 transition-all duration-300">,</div>
                   <feature.icon className="w-12 h-12 text-cyan-400 mb-4" />,
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
@@ -201,7 +201,7 @@ const AISalesAutomationPage: React.FC = () => {
           {/* Pricing Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Pricing Plans<div className="grid grid-cols-1 md:grid-cols-3 gap-8">{pricingPlans.map((plan, index) => (<div key={index} className={`cyber-card hologram-card p-8 relative ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>{plan.popular && (</div>
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Pricing Plans</h2><div className="grid grid-cols-1 md:grid-cols-3 gap-8">{pricingPlans.map((plan, index) => (</section><div key={index} className={`cyber-card hologram-card p-8 relative ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>{plan.popular && (</div>
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
                       <span className="bg-cyan-400 text-black px-4 py-1 rounded-full text-sm font-bold">Most Popular</span>
@@ -209,10 +209,10 @@ const AISalesAutomationPage: React.FC = () => {
               Pricing Plans;
             </h2>
             <div className="grid grid-cols-1 md: grid-cols-3 gap-8">,
-              {pricingPlans.map((plan, index) => (
+              {pricingPlans.map((plan, index) => (</div>
                 <div key={index} className={`cyber-card hologram-card p-8 relative ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>
-                  {plan.popular && (
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                  {plan.popular && (</div>
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
                       <span className="bg-cyan-400 text-black px-4 py-1 rounded-full text-sm font-bold">
                         Most Popular;
                       </span>
@@ -257,8 +257,8 @@ const AISalesAutomationPage: React.FC = () => {
               Why Choose Our AI Sales Automation?
             </h2>
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">,
-              {benefits.map((benefit, index) => (
-                <div key={index} className="text-center">
+              {benefits.map((benefit, index) => (</div>
+                <div key={index} className="text-center"></div>
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Why Choose Our AI Sales Automation?</h2><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{benefits.map((benefit, index) => (</section>
                 <div key={index} className="text-center"></div>
                   <benefit.icon className="w-16 h-16 text-cyan-400 mx-auto mb-4" />
@@ -280,7 +280,7 @@ const AISalesAutomationPage: React.FC = () => {
               Get started with our AI sales automation platform today. Contact us for a free consultation;
               and custom implementation plan.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
               <a;
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></section>
               <a

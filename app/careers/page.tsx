@@ -12,17 +12,17 @@ const CareersPage: React.FC = () => {
         <meta name="description" content="Join our team at Zion Tech Group. Explore career opportunities in AI, technology, and business solutions." />
       </Helmet>
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"></div>
         <Navigation />
         
         <main className="pt-20">
-          <div className="container mx-auto px-4 py-16">
-            <div className="max-w-4xl mx-auto">
+          <div className="container mx-auto px-4 py-16"></div>
+            <div className="max-w-4xl mx-auto"></div>
               <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
-                Careers
+                Careers</h1>
               </h1>
               
-              <div className="prose prose-lg max-w-none">
+              <div className="prose prose-lg max-w-none"></div>
                 <p className="text-xl text-gray-600 mb-8">
                   Join our growing team of innovators.
                 </p>

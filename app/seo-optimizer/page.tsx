@@ -6,28 +6,28 @@ import Link from 'next/link';
 const SEOOptimizerPage: React.FC = () => {
   const features = [
     {
-      icon: Search;
+      icon: Search,
       title: 'Keyword Research',
       description: 'Find high-value keywords with AI-powered research tools'},
     {
-      icon: Target;
+      icon: Target,
       title: 'On-Page Optimization',
       description: 'Optimize titles, meta descriptions, and content structure'
     },
     {
-      icon: BarChart;
+      icon: BarChart,
       title: 'Rank Tracking',
       description: 'Monitor your search rankings across multiple keywords'},
     {
-      icon: Globe;
+      icon: Globe,
       title: 'Technical SEO',
       description: 'Fix technical issues that impact search visibility'},
     {
-      icon: Zap;
+      icon: Zap,
       title: 'Content Optimization',
       description: 'AI-powered content suggestions for better rankings'},
     {
-      icon: Users;
+      icon: Users,
       title: 'Competitor Analysis',
       description: 'Analyze competitors and discover new opportunities'}
   ];
@@ -50,16 +50,16 @@ const SEOOptimizerPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Hero Section */}</div>
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      {/* Hero Section */}
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
+      {/* Hero Section */}</div>
       <div className="container mx-auto px-4 py-16"></div>
         <div className="text-center mb-16"></div>
-          <h1 className="text-5xl font-bold text-white mb-6">
+      <div className="container mx-auto px-4 py-16"></div>
+        <div className="text-center mb-16"></div>
+          <h1 className="text-5xl font-bold text-white mb-6"></h1>
             SEO</h1> <span className="text-cyan-400">Optimizer</span><p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">Boost your search rankings with our AI-powered SEO optimization platform.</p>
             Get more organic traffic, higher rankings, and better visibility in search results.</p>
           </p>
-          <div className="flex flex-col sm: flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
             <Link;
           <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <Link
@@ -102,17 +102,17 @@ const SEOOptimizerPage: React.FC = () => {
         </div>,
 ,
         {/* Features Section */}
-        <div className="mb-16">
+        <div className="mb-16"></div>
           <h2 className="text-3xl font-bold text-white text-center mb-12">)
             Powerful <span className="text-cyan-400">SEO Tools</span>)
           </h2>)
           <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">),
-            {features.map((feature, index) => (
+            {features.map((feature, index) => (</div>
               <div;
                 key={index}
                 className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-gray-600 hover: border-cyan-400/50 transition-all duration-300",
-              >,
-                <div className="p-3 bg-cyan-400 rounded-lg w-fit mb-4">,
+              >,</div>
+                <div className="p-3 bg-cyan-400 rounded-lg w-fit mb-4">,</div>
                   <feature.icon className="w-6 h-6 text-white" />,
                 </div>,
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
@@ -130,9 +130,9 @@ const SEOOptimizerPage: React.FC = () => {
             Proven <span className="text-cyan-400">Results</span>
           </h2>
           <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">,
-            {benefits.map((benefit, index) => (
-              <div key={index} className="text-center">
-                <div className="p-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full w-fit mx-auto mb-4">
+            {benefits.map((benefit, index) => (</div>
+              <div key={index} className="text-center"></div>
+                <div className="p-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full w-fit mx-auto mb-4"></div>
             Proven</h2> <span className="text-cyan-400">Results</span><div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">{benefits.map((benefit, index) => (</div>
               <div key={index} className="text-center"></div>
                 <div className="p-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full w-fit mx-auto mb-4"></div>
@@ -147,7 +147,7 @@ const SEOOptimizerPage: React.FC = () => {
         <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 rounded-2xl p-12 text-center"></div>
           <h2 className="text-3xl font-bold text-white mb-4">Ready to Dominate Search Results?</h2><p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Join thousands of businesses using our SEO optimizer to rank higher and get more traffic.</p>
           </p>
-          <div className="flex flex-col sm: flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
             <Link;
           <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <Link

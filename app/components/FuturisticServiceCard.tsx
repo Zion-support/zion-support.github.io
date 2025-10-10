@@ -3,10 +3,10 @@ import React, { useState } from 'react';
 import { ArrowRight, CheckCircle } from 'lucide-react';
 
 interface FuturisticServiceCardProps {
-  title: string;
-  description: string;
+  title: string,
+  description: string,
   features: string[];
-  price: string;
+  price: string,
   popular?: boolean;
   icon: React.ComponentType<{ className?: string }>;
   onSelect: () => void;
@@ -17,8 +17,6 @@ const FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = ({
   description,
           )}
         </div>
-
-    </div>
   );
 };
 

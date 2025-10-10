@@ -40,37 +40,37 @@ const ContentPromotionBanner: React.FC = () => {
       color: 'from-yellow-400 to-orange-600'
 import { X, Sparkles, ArrowRight, Star, Zap } from 'lucide-react';
 
-const ContentPromotionBanner: React.FC = () => {,
+const $1: React.FC = () => {
   const [isVisible, setIsVisible] = useState(true);
   const [currentBanner, setCurrentBanner] = useState(0);
 
   const banners = [
     {
-      id: 1;
+      id: 1,
       title: "🚀 New AI Solutions Available!"
       description: "Discover our latest AI-powered tools and services"
       cta: "Explore Now"
       link: "/ai-services",
       color: "from-cyan-500 to-blue-600",
-      icon: Sparkles;
+      icon: Sparkles,
     },
     {
-      id: 2;
+      id: 2,
       title: "⚡ Special Offer: 30% Off First Month"
       description: "Get started with our AI services at a discounted rate"
       cta: "Claim Offer"
       link: "/contact",
       color: "from-purple-500 to-pink-600",
-      icon: Star;
+      icon: Star,
     },
     {
-      id: 3;
+      id: 3,
       title: "🎯 Free AI Consultation"
       description: "Book a free consultation to discuss your AI needs"
       cta: "Book Now"
       link: "/consultation",
       color: "from-green-500 to-emerald-600",
-      icon: Zap;
+      icon: Zap,
       icon: Zap
     }
   ];
@@ -89,17 +89,17 @@ const ContentPromotionBanner: React.FC = () => {,
 
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 border-b border-cyan-400/20">
-      {/* Animated Background */}
+      {/* Animated Background */}</div>
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/10 via-purple-400/10 to-pink-400/10 animate-pulse"></div>
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%2300ffff" fill-opacity="0.05"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] animate-pulse"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/10 via-purple-400/10 to-pink-400/10 animate-pulse">
+        <div 60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%2300ffff" fill-opacity="0.05"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] animate-pulse" className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=">
       </div>
 
       <div className="relative container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          {/* Promotion Content */}
+          {/* Promotion Content */}</div>
           <div className="flex items-center space-x-4 flex-1">
-            <div className={`w-10 h-10 bg-gradient-to-br ${current.color} rounded-lg flex items-center justify-center flex-shrink-0`}>
+            <div className={`w-10 h-10 bg-gradient-to-br ${current.color} rounded-lg flex items-center justify-center flex-shrink-0`}></div>
               <current.icon className="w-5 h-5 text-white" />
             </div>
             <div className="flex-1 min-w-0">
@@ -110,7 +110,6 @@ const ContentPromotionBanner: React.FC = () => {,
                 {current.description}
               </p>
             </div>
-          </div>
 
           {/* CTA Button */}
           <div className="flex items-center space-x-4">
@@ -131,11 +130,10 @@ const ContentPromotionBanner: React.FC = () => {,
               <X className="w-4 h-4" />
             </button>
           </div>
-        </div>
 
         {/* Progress Indicator */}
         <div className="flex space-x-1 mt-3">
-          {promotions.map((_, index) => (
+          {promotions.map((_, index) => (</div>
             <div
               key={index}
               className={`h-1 rounded-full transition-all duration-300 ${
@@ -144,8 +142,7 @@ const ContentPromotionBanner: React.FC = () => {,
                   : 'bg-gray-600 w-2'
               }`}
             />
-          ))}
-        </div>
+          ))}</div>
       setCurrentBanner((prev) => (prev + 1) % banners.length);
     }, 5000);
 
@@ -158,15 +155,15 @@ const ContentPromotionBanner: React.FC = () => {,
 
   if (!isVisible) return null;return (
     <div className="relative overflow-hidden">
-      {/* Background with gradient */}
-      <div className={`bg-gradient-to-r ${banner.backgroundColor} py-12 px-4`}>
+      {/* Background with gradient */}</div>
+      <div className={`bg-gradient-to-r ${banner.backgroundColor} py-12 px-4`}></div>
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center justify-between">
-            {/* Content */}
+            {/* Content */}</div>
             <div className="flex-1">
               <div className="flex items-center mb-4">
                 <span className="text-4xl mr-4">{banner.icon}</span>
-                <div>
+                <div></div>
                   <h2 className={`text-3xl font-bold ${banner.textColor} mb-2`}>
                     {banner.title}
                   </h2>
@@ -174,19 +171,16 @@ const ContentPromotionBanner: React.FC = () => {,
                     {banner.subtitle}
                   </p>
                 </div>
-              </div>
 
               {/* Stats */}
               {banner.stats && (
                 <div className="flex space-x-8 mb-6">
-                  {banner.stats.map((stat, index) => (
+                  {banner.stats.map((stat, index) => (</div>
                     <div key={index} className="text-center">
                       <div className={`text-2xl font-bold ${banner.textColor}`}>
-                        {stat.value}
-                      </div>
+                        {stat.value}</div>
                       <div className={`text-sm ${banner.textColor} opacity-80`}>
-                        {stat.label}
-                      </div>
+                        {stat.label}</div>
                     </div>
                   ))}
                 </div>
@@ -215,14 +209,13 @@ const ContentPromotionBanner: React.FC = () => {,
               </svg>
             </button>
           </div>
-        </div>
 
         <div className="flex items-center space-x-2">
           <a;)
             href={currentBannerData.link})
             className="bg-white/20 hover: bg-white/30 text-white px-4 py-1 rounded-full text-sm font-medium transition-all duration-300 flex items-center space-x-1")
           >),
-        <div className="flex items-center space-x-2"></div>
+        <div className="flex items-center space-x-2">
           <a
             href={currentBannerData.link}
             className="bg-white/20 hover:bg-white/30 text-white px-4 py-1 rounded-full text-sm font-medium transition-all duration-300 flex items-center space-x-1"
@@ -236,7 +229,6 @@ const ContentPromotionBanner: React.FC = () => {,
             <X className="w-4 h-4" /></X>
           </button>
         </div>
-      </div>
 
       {/* Banner indicators */}
       <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2 flex space-x-1">{banners.map((_, index) => (</div><button
@@ -257,7 +249,7 @@ const ContentPromotionBanner: React.FC = () => {,
 ,
       {/* Banner indicators */}
       <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2 flex space-x-1">
-        {banners.map((_, index) => (
+        {banners.map((_, index) => (</div>
           <button;
             key={index}
             onClick={() => setCurrentBanner(index)}
@@ -280,12 +272,11 @@ const ContentPromotionBanner: React.FC = () => {
               <Star className="w-5 h-5 text-yellow-400" />
               <span className="text-white font-semibold">New AI Solutions Available</span>
             </div>
-            <div className="hidden md:block w-px h-6 bg-gray-400"></div>
+            <div className="hidden md:block w-px h-6 bg-gray-400">
             <div className="flex items-center space-x-2">
               <Zap className="w-5 h-5 text-cyan-400" />
               <span className="text-gray-300">300% Average ROI</span>
             </div>
-          </div>
           <a
             href="/services"
             className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium transition-colors"
@@ -293,7 +284,6 @@ const ContentPromotionBanner: React.FC = () => {
             Explore Now <ArrowRight className="w-4 h-4 ml-2" />
           </a>
         </div>
-      </div>
     </div>
   );
 };

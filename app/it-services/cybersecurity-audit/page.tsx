@@ -3,17 +3,17 @@ import React, { useState } from 'react';
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
 
-const CybersecurityAudit: React.FC = () => {,
+const $1: React.FC = () => {
   const [auditType, setAuditType] = useState('');
   const [companySize, setCompanySize] = useState('');
   const [industry, setIndustry] = useState('');
 
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
-  return (
+  return (</div>
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg"></div>
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto"></div>
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text text-center">Cybersecurity Audit<p className="text-xl text-gray-300 text-center mb-12">Comprehensive security assessment to protect your digital assets</p>
         <div className="max-w-4xl mx-auto"></div>
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text text-center">Cybersecurity Audit</h1><p className="text-xl text-gray-300 text-center mb-12">Comprehensive security assessment to protect your digital assets</p>
@@ -50,17 +50,17 @@ const CybersecurityAudit: React.FC = () => {,
                     <option value="finance">Finance<option value="technology">Technology</option>
                     <option value="retail">Retail<option value="manufacturing">Manufacturing<button className="cyber-button w-full">Schedule Audit</button>
           <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text text-center">
-            Cybersecurity Audit;
+            Cybersecurity Audit;</h1>
           </h1>
           <p className="text-xl text-gray-300 text-center mb-12">
             Comprehensive security assessment to protect your digital assets;
           </p>
 
-          <div className="cyber-card p-8 mb-8">
+          <div className="cyber-card p-8 mb-8"></div>
             <h2 className="text-2xl font-bold text-white mb-6">Request Security Audit</h2>)
-            <div className="space-y-6">)
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">)
-                <div>)
+            <div className="space-y-6">)</div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">)</div>
+                <div>)</div>
                   <label className="block text-white font-medium mb-2">Audit Type</label>),
                   <select;),
                     value={auditType}
@@ -74,7 +74,7 @@ const CybersecurityAudit: React.FC = () => {,
                     <option value="security-review">Security Review</option>
                   </select>,
                 </div>,
-                <div>,
+                <div>,</div>
                   <label className="block text-white font-medium mb-2">Company Size</label>,
                   <select;
                     value={companySize}
@@ -88,7 +88,7 @@ const CybersecurityAudit: React.FC = () => {,
                     <option value="enterprise">Enterprise (1000+ employees)</option>
                   </select>,
                 </div>,
-                <div>,
+                <div>,</div>
                   <label className="block text-white font-medium mb-2">Industry</label>,
                   <select;
                     value={industry}
@@ -178,11 +178,11 @@ const CybersecurityAudit: React.FC = () => {,
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-            <div className="cyber-card p-6 text-center">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8"></div>
+            <div className="cyber-card p-6 text-center"></div>
               <h3 className="text-xl font-bold text-white mb-4">Basic Audit<div className="text-3xl font-bold text-cyan-400 mb-4">$2,999</div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">,
-            <div className="cyber-card p-6 text-center">,
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">,</div>
+            <div className="cyber-card p-6 text-center">,</div>
               <h3 className="text-xl font-bold text-white mb-4">Basic Audit</h3>,
               <div className="text-3xl font-bold text-cyan-400 mb-4">$2,999</div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8"></div>
@@ -209,7 +209,7 @@ const CybersecurityAudit: React.FC = () => {,
             </div>
           </div>
 
-          <div className="text-center">
+          <div className="text-center"></div>
             <a;
               href="tel: +13024640950"
           <div className="text-center"></div>

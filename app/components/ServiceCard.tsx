@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle } from 'lucide-react';
 
 interface ServiceCardProps {
-  icon: LucideIcon;
-  title: string;
-  description: string;
+  icon: LucideIcon,
+  title: string,
+  description: string,
   features: string[];
-  price: string;
+  price: string,
   popular?: boolean;
   onSelect: () => void;
 }
@@ -23,7 +23,7 @@ const ServiceCard: React.FC<ServiceCardProps> = memo(({
 }) => {
   return (
     <div className={`relative bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 hover:border-cyan-400/50 transition-all duration-300 group ${popular ? 'ring-2 ring-cyan-400' : ''}`}>
-      {popular && (
+      {popular && (</div>
         <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
           <span className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
             Most Popular
@@ -39,12 +39,11 @@ const ServiceCard: React.FC<ServiceCardProps> = memo(({
         <p className="text-gray-300 mb-4">{description}</p>
         <div className="text-3xl font-bold text-cyan-400 mb-2">{price}</div>
         <div className="text-sm text-gray-400">per month</div>
-      </div>
 
       <ul className="space-y-3 mb-8">
         {features.map((feature, index) => (
           <li key={index} className="flex items-center text-gray-300">
-            <div className="w-2 h-2 bg-cyan-400 rounded-full mr-3 flex-shrink-0"></div>
+            <div className="w-2 h-2 bg-cyan-400 rounded-full mr-3 flex-shrink-0">
             {feature}
           </li>
         ))}

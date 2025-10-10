@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { ArrowRight, Star, TrendingUp, Clock, Shield, Zap, Brain } from 'lucide-react';
 
-const DynamicContentShowcase: React.FC = () => {,
+const $1: React.FC = () => {
   const [activeTab, setActiveTab] = useState(0);
 
   const tabs = [
@@ -16,7 +16,7 @@ const DynamicContentShowcase: React.FC = () => {,
     title: 'Revolutionary AI Solutions',
       id: 'ai-solutions'
       title: 'AI Solutions'
-      icon: Brain;
+      icon: Brain,
       color: 'text-purple-400'
       bgColor: 'bg-purple-500/10'
       content: {
@@ -45,7 +45,7 @@ const DynamicContentShowcase: React.FC = () => {,
     title: 'Enterprise IT Solutions',
       id: 'it-services'
       title: 'IT Services'
-      icon: Shield;
+      icon: Shield,
       color: 'text-blue-400'
       bgColor: 'bg-blue-500/10'
       content: {
@@ -74,7 +74,7 @@ const DynamicContentShowcase: React.FC = () => {,
     title: 'Digital Transformation',
       id: 'digital-transformation'
       title: 'Digital Transformation'
-      icon: Zap;
+      icon: Zap,
       color: 'text-green-400'
       bgColor: 'bg-green-500/10'
       content: {
@@ -106,15 +106,15 @@ const DynamicContentShowcase: React.FC = () => {,
                 onClick={() =>setActiveTab(index)}</button></<<<butto>className</butto></butto>={`flex items-center space-x-2 px-6 py-3 rounded-lg transition-all duration-300 ${
                   activeTab === index
   return(<section className="py-16" aria-labelledby="showcase-heading">
-      <div className="container mx-auto px-4">)
+      <div className="container mx-auto px-4">)</div>
         <h2 id="showcase-heading" className="text-3xl md: text-4xl font-bold text-white text-center mb-12 neon-text">)
           Our Solutions;)
         </h2>)
 ),
         <div className="max-w-6xl mx-auto">),
-          {/* Tab Navigation */}
+          {/* Tab Navigation */}</div>
           <div className="flex flex-wrap justify-center gap-4 mb-8">
-            {tabs.map((tab, index) => (
+            {tabs.map((tab, index) => (</div>
               <button;
                 key={tab.id}
                 onClick={() => setActiveTab(index)}
@@ -134,14 +134,14 @@ const DynamicContentShowcase: React.FC = () => {,
           {/* Tab Content */}
           <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 md:p-12 cyber-card">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">{/* Content */}</div>
-              <div>
+              <div></div>
                 <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">{currentTab.content.title}<p className="text-gray-300 text-lg mb-8 leading-relaxed">{currentTab.content.description}<div className="grid grid-cols-1 sm:grid-cols-2 gap-4">{currentTab.content.features.map((feature, index) => (</div>
                     <div key={index} className="bg-slate-700/50 rounded-lg p-4 hover:bg-slate-700/70 transition-colors">
                       <div className="flex items-start space-x-3">
-          <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 md: p-12 cyber-card">,
+          <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 md: p-12 cyber-card">,</div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">,
-              {/* Content */}
-              <div>
+              {/* Content */}</div>
+              <div></div>
                 <h3 className="text-2xl md: text-3xl font-bold text-white mb-4">,
                   {currentTab.content.title}
                 </h3>
@@ -150,30 +150,28 @@ const DynamicContentShowcase: React.FC = () => {,
                 </p>
 
                 <div className="grid grid-cols-1 sm: grid-cols-2 gap-4">,
-                  {currentTab.content.features.map((feature, index) => (
-                    <div key={index} className="bg-slate-700/50 rounded-lg p-4 hover: bg-slate-700/70 transition-colors">,
-                      <div className="flex items-start space-x-3">,
-          <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 md:p-12 cyber-card"></div>
+                  {currentTab.content.features.map((feature, index) => (</div>
+                    <div key={index} className="bg-slate-700/50 rounded-lg p-4 hover: bg-slate-700/70 transition-colors">,</div>
+                      <div className="flex items-start space-x-3">,</div>
+          <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 md:p-12 cyber-card">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">{/* Content */}</div>
               <div></div>
                 <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">{currentTab.content.title}</h3><p className="text-gray-300 text-lg mb-8 leading-relaxed">{currentTab.content.description}</p><div className="grid grid-cols-1 sm:grid-cols-2 gap-4">{currentTab.content.features.map((feature, index) => (</div>
-                    <div key={index} className="bg-slate-700/50 rounded-lg p-4 hover:bg-slate-700/70 transition-colors"></div>
-                      <div className="flex items-start space-x-3"></div>
+                    <div key={index} className="bg-slate-700/50 rounded-lg p-4 hover:bg-slate-700/70 transition-colors">
+                      <div className="flex items-start space-x-3">
                         <span className="text-2xl">{feature.icon}</span>
                         <div></div>
                           <h4 className="font-semibold text-white mb-1">{feature.name}<p className="text-gray-400 text-sm">{feature.description}</p>
                         </div>
-                      </div>
                     </div>
                   ))}
                 </div>
-              </div>
 
               {/* Stats */}
-              <div className="space-y-6"></div>
+              <div className="space-y-6">
                 <h4 className="text-xl font-semibold text-white mb-6">Key Metrics<div className="space-y-4">{currentTab.content.stats.map((stat, index) => (</div>
-                    <div key={index} className="flex items-center justify-between bg-slate-700/30 rounded-lg p-4"></div>
-                      <div className="flex items-center space-x-3"></div>
+                    <div key={index} className="flex items-center justify-between bg-slate-700/30 rounded-lg p-4">
+                      <div className="flex items-center space-x-3">
                         <stat.icon className={`w-6 h-6 ${currentTab.color}`} />
                         <span className="text-gray-300">{stat.label}</span><span className={`text-2xl font-bold ${currentTab.color}`}>{stat.value}</span>
                       </span>
@@ -183,7 +181,7 @@ const DynamicContentShowcase: React.FC = () => {,
 
                 <div className="pt-6">
                   <a;
-                <div className="pt-6"></div>
+                <div className="pt-6">
                   <a
                     href={`/${currentTab.id}`}
                     className={`inline-flex items-center space-x-2 ${currentTab.color} hover:opacity-80 transition-opacity font-medium`}
@@ -192,9 +190,7 @@ const DynamicContentShowcase: React.FC = () => {,
                     <ArrowRight className="w-4 h-4" /></ArrowRigh>
                   </a>
                 </div>
-              </div>
             </div>
-          </div>
 import React from 'react';
 import { Brain, Cloud, Shield, Zap, ArrowRight, CheckCircle } from 'lucide-react';
 
@@ -243,7 +239,7 @@ const DynamicContentShowcase: React.FC = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {technologies.map((tech, index) => (
+          {technologies.map((tech, index) => (</div>
             <div key={index} className="cyber-card hologram-card p-8 group hover:scale-105 transition-all duration-300">
               <div className="flex items-center mb-6">
                 <tech.icon className={`w-12 h-12 ${tech.color} mr-4`} />
@@ -270,7 +266,6 @@ const DynamicContentShowcase: React.FC = () => {
             </div>
           ))}
         </div>
-      </div>
     </section>
   );
 };
