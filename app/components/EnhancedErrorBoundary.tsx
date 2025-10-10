@@ -3,6 +3,25 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
+const EnhancedErrorBoundary: React.FC = () => {
+  const services = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Error Detection',
+      description: 'Advanced machine learning algorithms that automatically detect and categorize errors in real-time.',
+      features: ['Real-time monitoring', 'Predictive analytics', 'Automated categorization', 'Smart alerting']
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Bank-level security with comprehensive error tracking and compliance reporting.',
+      features: ['Data encryption', 'Audit trails', 'Compliance reporting', 'Secure data handling']
+    },
+    {
+      icon: Globe,
+      title: 'Global Monitoring',
+      description: 'Monitor your applications across multiple regions and cloud providers.',
+      features: ['Multi-region support', 'Cloud provider agnostic', 'Global CDN', 'Edge computing']
     }
   ];
 

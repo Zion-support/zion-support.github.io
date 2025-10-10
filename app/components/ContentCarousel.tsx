@@ -64,7 +64,6 @@ const ContentCarousel: React.FC = () => {
               style={{ transform: `translateX(-${currentSlide * 100}%)` }}
             >
               {slides.map((slide, index) => (
-<<<<<<< HEAD
                 <div key={index} className="w-full flex-shrink-0">
                   <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
                     <div className="text-center mb-8">

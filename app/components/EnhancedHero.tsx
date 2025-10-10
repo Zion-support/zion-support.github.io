@@ -3,6 +3,26 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
+const EnhancedHero: React.FC = () => {
+  const services = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Cutting-edge artificial intelligence that transforms your business operations.',
+      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics']
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Bank-level security with comprehensive protection and compliance.',
+      features: ['Data Encryption', 'Access Control', 'Audit Trails', 'Compliance Reporting']
+    },
+    {
+      icon: Globe,
+      title: 'Global Reach',
+      description: 'Scale your business worldwide with our global infrastructure.',
+      features: ['Multi-Region Support', 'CDN Integration', 'Edge Computing', 'Global Monitoring']
+    }
   ];
 
   const benefits = [

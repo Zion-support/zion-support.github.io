@@ -58,25 +58,6 @@ const SupportPage: React.FC = () => {
     }
   ];
 
-  const faqs = [
-    {
-      question: 'How do I get started with your AI solutions?',
-      answer: 'Getting started is easy! Contact our team for a consultation, and we\'ll help you choose the right AI solution for your business needs.'
-    },
-    {
-      question: 'What kind of support do you provide?',
-      answer: 'We provide comprehensive support including technical assistance, training, documentation, and ongoing maintenance for all our solutions.'
-    },
-    {
-      question: 'How quickly can you respond to support requests?',
-      answer: 'We typically respond to support requests within 24 hours, with priority support available for enterprise customers.'
-    },
-    {
-      question: 'Do you offer training for your solutions?',
-      answer: 'Yes! We provide comprehensive training programs to help your team get the most out of our AI and IT solutions.'
-    }
-  ];
-
   const filteredFaqs = faqs.filter(faq =>
     faq.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
     faq.answer.toLowerCase().includes(searchTerm.toLowerCase())

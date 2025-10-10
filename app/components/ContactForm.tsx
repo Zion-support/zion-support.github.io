@@ -78,8 +78,13 @@ interface FormStatus {
     'Other'
   ];
 
-              </label>
-              <input
+  return (
+    <form onSubmit={handleSubmit} className="space-y-6">
+      <div>
+        <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+          Full Name
+        </label>
+        <input
                 type="text"
                 id="name"
                 name="name"
@@ -150,6 +155,8 @@ interface FormStatus {
               onChange={handleChange}
               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
             >
+              {status.type === 'loading' ? (
+                <div className="h-5 w-5 border-2 border-blue-500 border-t-transparent rounded-full animate-spin" />
               ) : (
                 <div className="h-5 w-5 border-2 border-blue-500 border-t-transparent rounded-full animate-spin" />
               )}

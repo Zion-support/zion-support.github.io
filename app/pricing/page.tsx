@@ -132,7 +132,6 @@ const PricingPage: React.FC = () => {
           </div>
         </section>
       </div>
->>>>>>> cursor/website-audit-and-update-with-deployment-758b
     </>
   );
 };
