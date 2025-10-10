@@ -11,7 +11,7 @@ const ConsultationPage: React.FC = () => {
     company: '',
     phone: '',
     service: '',
-    message: ''
+    message: "",
   });
 
   const handleSubmit = (e: React.FormEvent) => {

@@ -1,23 +1,21 @@
 'use client';
 import React from 'react';
-    },
-    {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
-    },
-    {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
-    }
-  ];
+import { Helmet } from 'react-helmet-async';
+
+const PageComponent = () => {
+  return (
+    <>
+      <Helmet>
+        <title>Page Title - Zion Tech Group</title>
+        <meta name="description" content="Page description" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+        <div className="container mx-auto px-4 py-16">
+          <h1 className="text-4xl font-bold text-white text-center">Page Title</h1>
+        </div>
+      </div>
+    </>
   );
 };
 
-export default PagePage;
+export default PageComponent;

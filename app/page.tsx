@@ -48,7 +48,7 @@ const HomePage: React.FC = () => {
       const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag;
       gtag('event', 'phone_click', {
         event_category: 'engagement',
-        event_label: 'main_phone_number'
+        event_label: "main_phone_number",
       });
     }
   }, []);
@@ -82,7 +82,7 @@ const HomePage: React.FC = () => {
             telephone: '+1-302-464-0950',
             contactType: 'Customer Service',
             areaServed: 'US',
-            availableLanguage: 'en'
+            availableLanguage: "en",
           },
           address: {
             '@type': 'PostalAddress',
@@ -90,7 +90,7 @@ const HomePage: React.FC = () => {
             addressLocality: 'Middletown',
             addressRegion: 'DE',
             postalCode: '19709',
-            addressCountry: 'US'
+            addressCountry: "US",
           }
         }}
       />

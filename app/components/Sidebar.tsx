@@ -46,8 +46,7 @@ const Sidebar: React.FC = () => {
   };
 
   const navigationSections = [
-    {
-      title: 'Main',
+    {"Main"}
       items: [
         { name: 'Home', path: '/', icon: Home },
         { name: 'About', path: '/about', icon: Users },
@@ -57,8 +56,7 @@ const Sidebar: React.FC = () => {
         { name: 'Case Studies', path: '/case-studies', icon: BarChart },
       ]
     },
-    {
-      title: 'AI Services',
+    {"AI Services"}
       key: 'ai-services',
       items: [
         { name: 'AI Services Overview', path: '/ai-services', icon: Brain },
@@ -76,8 +74,7 @@ const Sidebar: React.FC = () => {
         { name: 'Energy Management', path: '/ai-services/energy-management', icon: Settings },
       ]
     },
-    {
-      title: 'Micro SaaS',
+    {"Micro SaaS"}
       key: 'micro-saas',
       items: [
         { name: 'Micro SaaS Overview', path: '/micro-saas', icon: Settings },
@@ -95,8 +92,7 @@ const Sidebar: React.FC = () => {
         { name: 'Content Generator', path: '/micro-saas/content-generator', icon: Settings },
       ]
     },
-    {
-      title: 'IT Services',
+    {"IT Services"}
       key: 'it-services',
       items: [
         { name: 'IT Services Overview', path: '/it-services', icon: Code },
@@ -110,8 +106,7 @@ const Sidebar: React.FC = () => {
         { name: 'Managed IT', path: '/managed-it', icon: Settings },
       ]
     },
-    {
-      title: 'Company',
+    {"Company"}
       items: [
         { name: 'Team', path: '/team', icon: Users },
         { name: 'Careers', path: '/careers', icon: Users },
@@ -119,8 +114,7 @@ const Sidebar: React.FC = () => {
         { name: 'Pricing', path: '/pricing', icon: BarChart },
       ]
     },
-    {
-      title: 'Resources',
+    {"Resources"}
       items: [
         { name: 'Documentation', path: '/docs', icon: Settings },
         { name: 'API Docs', path: '/api-docs', icon: Code },
@@ -134,7 +128,7 @@ const Sidebar: React.FC = () => {
     phone: '(302) 464-0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown, DE 19709',
-    hours: 'Mon-Fri 9AM-6PM EST'
+    hours: "Mon-Fri 9AM-6PM EST",
   };
 
   return (

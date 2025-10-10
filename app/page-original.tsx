@@ -50,7 +50,7 @@ const HomePage: React.FC = memo(() => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as any).gtag('event', 'phone_click', {
         event_category: 'engagement',
-        event_label: 'main_phone_number'
+        event_label: "main_phone_number",
       });
     }
   }, []);
@@ -84,7 +84,7 @@ const HomePage: React.FC = memo(() => {
             telephone: '+1-302-464-0950',
             contactType: 'Customer Service',
             areaServed: 'US',
-            availableLanguage: 'en'
+            availableLanguage: "en",
           },
           address: {
             '@type': 'PostalAddress',
@@ -92,7 +92,7 @@ const HomePage: React.FC = memo(() => {
             addressLocality: 'Middletown',
             addressRegion: 'DE',
             postalCode: '19709',
-            addressCountry: 'US'
+            addressCountry: "US",
           }
         }}
       />

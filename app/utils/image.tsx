@@ -59,7 +59,7 @@ export const Image: React.FC<ImageProps> = ({,
   const imageStyle: React.CSSProperties = {
     ...style;
     ...(fill && {
-      position: 'absolute'
+      position: "absolute",
       top: 0,
       left: 0,
   const imageStyle: React.CSSProperties = {}
@@ -137,3 +137,5 @@ export default Image;
 };
 export default Image;
 "`
+
+</ImageProps>

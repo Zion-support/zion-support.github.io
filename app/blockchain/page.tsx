@@ -4,8 +4,7 @@ import { CheckCircle, Star, Link, Shield, Zap, Target, BarChart, Cpu, Sparkles }
 
 const BlockchainPage: React.FC = () => {
   const blockchainServices = [
-    {
-      title: 'Smart Contract Development',
+    {"Smart Contract Development"}
       description: 'Custom smart contract development for DeFi, NFTs, and enterprise blockchain applications.',
       icon: '📜',
       price: 'Starting at $8,000/project',
@@ -15,8 +14,7 @@ const BlockchainPage: React.FC = () => {
       category: 'Smart Contracts',
       technologies: ['Solidity', 'Vyper', 'Rust', 'Go', 'JavaScript']
     },
-    {
-      title: 'DeFi Protocol Development',
+    {"DeFi Protocol Development"}
       description: 'Decentralized finance protocols including DEXs, lending platforms, and yield farming solutions.',
       icon: '💰',
       price: 'Starting at $25,000/project',
@@ -26,8 +24,7 @@ const BlockchainPage: React.FC = () => {
       category: 'DeFi',
       technologies: ['Ethereum', 'Polygon', 'BSC', 'Avalanche', 'Arbitrum']
     },
-    {
-      title: 'NFT Marketplace Development',
+    {"NFT Marketplace Development"}
       description: 'Complete NFT marketplace solutions with minting, trading, and auction capabilities.',
       icon: '🎨',
       price: 'Starting at $15,000/project',
@@ -37,8 +34,7 @@ const BlockchainPage: React.FC = () => {
       category: 'NFTs',
       technologies: ['ERC-721', 'ERC-1155', 'IPFS', 'OpenSea API', 'Web3']
     },
-    {
-      title: 'Enterprise Blockchain Solutions',
+    {"Enterprise Blockchain Solutions"}
       description: 'Private and consortium blockchain solutions for enterprise applications and supply chain management.',
       icon: '🏢',
       price: 'Starting at $20,000/month',
@@ -48,8 +44,7 @@ const BlockchainPage: React.FC = () => {
       category: 'Enterprise',
       technologies: ['Hyperledger', 'Ethereum Enterprise', 'Corda', 'Quorum', 'Fabric']
     },
-    {
-      title: 'Cross-Chain Bridge Development',
+    {"Cross-Chain Bridge Development"}
       description: 'Interoperability solutions for seamless asset and data transfer between different blockchain networks.',
       icon: '🌉',
       price: 'Starting at $30,000/project',
@@ -59,8 +54,7 @@ const BlockchainPage: React.FC = () => {
       category: 'Interoperability',
       technologies: ['Polkadot', 'Cosmos', 'LayerZero', 'Wormhole', 'Chainlink']
     },
-    {
-      title: 'Blockchain Security Auditing',
+    {"Blockchain Security Auditing"}
       description: 'Comprehensive security audits for smart contracts, DeFi protocols, and blockchain applications.',
       icon: '🔒',
       price: 'Starting at $5,000/audit',
@@ -70,8 +64,7 @@ const BlockchainPage: React.FC = () => {
       category: 'Security',
       technologies: ['Mythril', 'Slither', 'Echidna', 'Foundry', 'Custom Tools']
     },
-    {
-      title: 'Token Economics Design',
+    {"Token Economics Design"}
       description: 'Comprehensive tokenomics design including token distribution, utility, and governance mechanisms.',
       icon: '🪙',
       price: 'Starting at $10,000/project',
@@ -81,8 +74,7 @@ const BlockchainPage: React.FC = () => {
       category: 'Tokenomics',
       technologies: ['Economic Modeling', 'Game Theory', 'Token Standards', 'Governance', 'DeFi Protocols']
     },
-    {
-      title: 'Blockchain Infrastructure Management',
+    {"Blockchain Infrastructure Management"}
       description: 'Complete blockchain infrastructure setup, monitoring, and maintenance services.',
       icon: '⚙️',
       price: 'Starting at $3,000/month',
@@ -92,8 +84,7 @@ const BlockchainPage: React.FC = () => {
       category: 'Infrastructure',
       technologies: ['Ethereum', 'Bitcoin', 'Polygon', 'AWS', 'Kubernetes']
     },
-    {
-      title: 'Web3 Application Development',
+    {"Web3 Application Development"}
       description: 'Full-stack Web3 applications with wallet integration, smart contract interaction, and user-friendly interfaces.',
       icon: '🌐',
       price: 'Starting at $12,000/project',
@@ -103,8 +94,7 @@ const BlockchainPage: React.FC = () => {
       category: 'Web3',
       technologies: ['React', 'Next.js', 'Web3.js', 'Ethers.js', 'WalletConnect']
     },
-    {
-      title: 'Blockchain Analytics Platform',
+    {"Blockchain Analytics Platform"}
       description: 'Comprehensive blockchain data analysis and visualization platform for insights and monitoring.',
       icon: '📊',
       price: 'Starting at $8,000/month',
@@ -114,8 +104,7 @@ const BlockchainPage: React.FC = () => {
       category: 'Analytics',
       technologies: ['The Graph', 'Alchemy', 'Moralis', 'Infura', 'Custom APIs']
     },
-    {
-      title: 'Staking & Validator Services',
+    {"Staking & Validator Services"}
       description: 'Professional staking services and validator node management for various blockchain networks.',
       icon: '🏦',
       price: 'Starting at $2,000/month',
@@ -125,8 +114,7 @@ const BlockchainPage: React.FC = () => {
       category: 'Staking',
       technologies: ['Ethereum 2.0', 'Cosmos', 'Polkadot', 'Solana', 'Cardano']
     },
-    {
-      title: 'Blockchain Consulting',
+    {"Blockchain Consulting"}
       description: 'Strategic blockchain consulting for enterprise adoption, technology selection, and implementation planning.',
       icon: '💡',
       price: 'Starting at $300/hour',

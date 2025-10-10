@@ -21,12 +21,12 @@ interface FormStatus {
     company: '',
     phone: '',
     service: '',
-    message: ''
+    message: "",
   });
 
   const [status, setStatus] = useState<FormStatus>({
     type: 'idle',
-    message: ''
+    message: "",
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -57,12 +57,12 @@ interface FormStatus {
         company: '',
         phone: '',
         service: '',
-        message: ''
+        message: "",
       });
     } catch (error) {
       setStatus({
         type: 'error',
-        message: 'Sorry, there was an error sending your message. Please try again.'
+        message: "Sorry, there was an error sending your message. Please try again.",
       });
     }
   };

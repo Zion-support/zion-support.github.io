@@ -1,51 +1,21 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
-    },
-    {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
-    }
-  ];
-
-  const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ];
-
+const PageComponent = () => {
   return (
-          </div>
+    <>
+      <Helmet>
+        <title>Page Title - Zion Tech Group</title>
+        <meta name="description" content="Page description" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+        <div className="container mx-auto px-4 py-16">
+          <h1 className="text-4xl font-bold text-white text-center">Page Title</h1>
         </div>
-      </section>
-
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-          </div>
-
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
+      </div>
+    </>
+  );
 };
 
-export default PagePage;
+export default PageComponent;

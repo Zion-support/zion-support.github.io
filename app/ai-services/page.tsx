@@ -4,8 +4,7 @@ import { CheckCircle, Star, Brain, Zap, Target, BarChart, MessageSquare, Eye, Cp
 
 const AIServicesPage: React.FC = () => {
   const aiServices = [
-    {
-      title: 'Machine Learning Model Development',
+    {"Machine Learning Model Development"}
       description: 'Custom ML models for predictive analytics, classification, and regression tasks tailored to your business needs.',
       icon: '🧠',
       price: 'Starting at $5,000/project',
@@ -15,8 +14,7 @@ const AIServicesPage: React.FC = () => {
       category: 'Machine Learning',
       technologies: ['Python', 'TensorFlow', 'PyTorch', 'Scikit-learn', 'Pandas']
     },
-    {
-      title: 'Natural Language Processing',
+    {"Natural Language Processing"}
       description: 'Advanced NLP solutions for text analysis, sentiment analysis, chatbots, and language understanding.',
       icon: '💬',
       price: 'Starting at $3,500/project',
@@ -26,8 +24,7 @@ const AIServicesPage: React.FC = () => {
       category: 'NLP',
       technologies: ['BERT', 'GPT', 'spaCy', 'NLTK', 'Transformers']
     },
-    {
-      title: 'Computer Vision Solutions',
+    {"Computer Vision Solutions"}
       description: 'Image and video analysis, object detection, facial recognition, and visual content understanding.',
       icon: '👁️',
       price: 'Starting at $4,500/project',
@@ -37,8 +34,7 @@ const AIServicesPage: React.FC = () => {
       category: 'Computer Vision',
       technologies: ['OpenCV', 'YOLO', 'ResNet', 'EfficientNet', 'TensorFlow Lite']
     },
-    {
-      title: 'AI-Powered Chatbots & Virtual Assistants',
+    {"AI-Powered Chatbots & Virtual Assistants"}
       description: 'Intelligent conversational AI that understands context and provides human-like interactions.',
       icon: '🤖',
       price: 'Starting at $2,500/month',
@@ -48,8 +44,7 @@ const AIServicesPage: React.FC = () => {
       category: 'Conversational AI',
       technologies: ['Dialogflow', 'Rasa', 'Microsoft Bot Framework', 'Amazon Lex', 'OpenAI GPT']
     },
-    {
-      title: 'Predictive Analytics & Forecasting',
+    {"Predictive Analytics & Forecasting"}
       description: 'Advanced forecasting models for sales, demand, inventory, and business trend prediction.',
       icon: '📈',
       price: 'Starting at $3,000/month',
@@ -59,8 +54,7 @@ const AIServicesPage: React.FC = () => {
       category: 'Predictive Analytics',
       technologies: ['Prophet', 'ARIMA', 'LSTM', 'XGBoost', 'Time Series DB']
     },
-    {
-      title: 'AI-Powered Recommendation Systems',
+    {"AI-Powered Recommendation Systems"}
       description: 'Personalized recommendation engines for e-commerce, content, and product suggestions.',
       icon: '🎯',
       price: 'Starting at $4,000/project',
@@ -70,8 +64,7 @@ const AIServicesPage: React.FC = () => {
       category: 'Recommendation Systems',
       technologies: ['Apache Spark', 'Mahout', 'Surprise', 'TensorFlow', 'Redis']
     },
-    {
-      title: 'Automated Document Processing',
+    {"Automated Document Processing"}
       description: 'AI-powered document extraction, classification, and data entry automation for business processes.',
       icon: '📄',
       price: 'Starting at $2,000/month',
@@ -81,8 +74,7 @@ const AIServicesPage: React.FC = () => {
       category: 'Document AI',
       technologies: ['Tesseract', 'AWS Textract', 'Azure Form Recognizer', 'Google Document AI', 'PyPDF2']
     },
-    {
-      title: 'AI-Powered Business Intelligence',
+    {"AI-Powered Business Intelligence"}
       description: 'Intelligent dashboards and analytics that automatically identify patterns and generate insights.',
       icon: '📊',
       price: 'Starting at $3,500/month',
@@ -92,8 +84,7 @@ const AIServicesPage: React.FC = () => {
       category: 'Business Intelligence',
       technologies: ['Tableau', 'Power BI', 'Looker', 'Apache Superset', 'Custom ML Models']
     },
-    {
-      title: 'AI-Powered Fraud Detection',
+    {"AI-Powered Fraud Detection"}
       description: 'Advanced fraud detection systems using machine learning to identify suspicious activities in real-time.',
       icon: '🛡️',
       price: 'Starting at $5,500/month',
@@ -103,8 +94,7 @@ const AIServicesPage: React.FC = () => {
       category: 'Fraud Detection',
       technologies: ['Isolation Forest', 'One-Class SVM', 'Autoencoders', 'XGBoost', 'Real-time Streaming']
     },
-    {
-      title: 'AI-Powered Content Generation',
+    {"AI-Powered Content Generation"}
       description: 'Automated content creation for marketing, social media, blogs, and product descriptions.',
       icon: '✍️',
       price: 'Starting at $1,500/month',
@@ -114,8 +104,7 @@ const AIServicesPage: React.FC = () => {
       category: 'Content Generation',
       technologies: ['GPT-3/4', 'Claude', 'Jasper', 'Copy.ai', 'Custom Fine-tuned Models']
     },
-    {
-      title: 'AI-Powered Process Automation',
+    {"AI-Powered Process Automation"}
       description: 'Intelligent automation of business processes using AI to make decisions and take actions.',
       icon: '⚙️',
       price: 'Starting at $4,500/month',
@@ -125,8 +114,7 @@ const AIServicesPage: React.FC = () => {
       category: 'Process Automation',
       technologies: ['UiPath', 'Automation Anywhere', 'Blue Prism', 'Custom AI Models', 'RPA Tools']
     },
-    {
-      title: 'AI-Powered Quality Assurance',
+    {"AI-Powered Quality Assurance"}
       description: 'Automated testing and quality assurance using AI to identify bugs and performance issues.',
       icon: '🔍',
       price: 'Starting at $3,000/month',
@@ -136,8 +124,7 @@ const AIServicesPage: React.FC = () => {
       category: 'Quality Assurance',
       technologies: ['Selenium', 'Appium', 'TestNG', 'Custom AI Models', 'CI/CD Integration']
     },
-    {
-      title: 'Quantum Machine Learning',
+    {"Quantum Machine Learning"}
       description: 'Advanced quantum machine learning algorithms for solving complex optimization problems.',
       icon: '⚛️',
       price: 'Starting at $8,000/month',
@@ -147,8 +134,7 @@ const AIServicesPage: React.FC = () => {
       category: 'Quantum AI',
       technologies: ['Qiskit', 'Cirq', 'PennyLane', 'TensorFlow Quantum', 'Quantum Hardware']
     },
-    {
-      title: 'Autonomous AI Agents',
+    {"Autonomous AI Agents"}
       description: 'Self-managing AI agents that can make decisions and take actions independently.',
       icon: '🤖',
       price: 'Starting at $5,500/month',
@@ -158,8 +144,7 @@ const AIServicesPage: React.FC = () => {
       category: 'Autonomous AI',
       technologies: ['Reinforcement Learning', 'Multi-Agent Systems', 'LLMs', 'Computer Vision', 'NLP']
     },
-    {
-      title: 'AI-Powered Drug Discovery',
+    {"AI-Powered Drug Discovery"}
       description: 'Machine learning models for pharmaceutical drug discovery and molecular design.',
       icon: '💊',
       price: 'Starting at $12,000/month',
@@ -169,8 +154,7 @@ const AIServicesPage: React.FC = () => {
       category: 'Pharmaceutical AI',
       technologies: ['DeepChem', 'RDKit', 'PyTorch', 'TensorFlow', 'Molecular Dynamics']
     },
-    {
-      title: 'AI-Powered Climate Modeling',
+    {"AI-Powered Climate Modeling"}
       description: 'Advanced climate prediction and environmental impact analysis using AI.',
       icon: '🌍',
       price: 'Starting at $6,000/month',
@@ -180,8 +164,7 @@ const AIServicesPage: React.FC = () => {
       category: 'Climate AI',
       technologies: ['TensorFlow', 'PyTorch', 'Climate Data', 'Satellite Imagery', 'IoT Sensors']
     },
-    {
-      title: 'AI-Powered Space Exploration',
+    {"AI-Powered Space Exploration"}
       description: 'Machine learning solutions for space mission planning and satellite data analysis.',
       icon: '🚀',
       price: 'Starting at $7,500/month',
@@ -191,8 +174,7 @@ const AIServicesPage: React.FC = () => {
       category: 'Space AI',
       technologies: ['Python', 'TensorFlow', 'Satellite Data', 'Orbital Mechanics', 'Computer Vision']
     },
-    {
-      title: 'AI-Powered Brain-Computer Interface',
+    {"AI-Powered Brain-Computer Interface"}
       description: 'Advanced neural interface technology for direct brain-computer communication.',
       icon: '🧠',
       price: 'Starting at $10,000/month',
@@ -202,8 +184,7 @@ const AIServicesPage: React.FC = () => {
       category: 'Neurotechnology',
       technologies: ['EEG Analysis', 'Machine Learning', 'Signal Processing', 'Neuroscience', 'Medical Devices']
     },
-    {
-      title: 'AI-Powered Materials Science',
+    {"AI-Powered Materials Science"}
       description: 'Machine learning for materials discovery, design, and property prediction.',
       icon: '🔬',
       price: 'Starting at $4,500/month',
@@ -213,8 +194,7 @@ const AIServicesPage: React.FC = () => {
       category: 'Materials AI',
       technologies: ['Python', 'TensorFlow', 'Materials Databases', 'DFT Calculations', 'High-Throughput Screening']
     },
-    {
-      title: 'AI-Powered Financial Risk Modeling',
+    {"AI-Powered Financial Risk Modeling"}
       description: 'Advanced risk assessment and financial modeling using machine learning.',
       icon: '💰',
       price: 'Starting at $5,000/month',
@@ -224,8 +204,7 @@ const AIServicesPage: React.FC = () => {
       category: 'FinTech AI',
       technologies: ['Python', 'R', 'TensorFlow', 'Financial Data', 'Risk Models']
     },
-    {
-      title: 'AI-Powered Cybersecurity Intelligence',
+    {"AI-Powered Cybersecurity Intelligence"}
       description: 'Advanced threat intelligence and automated security response systems.',
       icon: '🛡️',
       price: 'Starting at $4,000/month',
@@ -235,8 +214,7 @@ const AIServicesPage: React.FC = () => {
       category: 'Cybersecurity AI',
       technologies: ['Machine Learning', 'SIEM', 'EDR', 'Network Analysis', 'Threat Intelligence']
     },
-    {
-      title: 'AI-Powered Personalized Medicine',
+    {"AI-Powered Personalized Medicine"}
       description: 'Precision medicine solutions using AI for personalized treatment recommendations.',
       icon: '🧬',
       price: 'Starting at $6,500/month',
@@ -246,8 +224,7 @@ const AIServicesPage: React.FC = () => {
       category: 'Precision Medicine',
       technologies: ['Genomics', 'Machine Learning', 'Clinical Data', 'Biomarkers', 'Drug Databases']
     },
-    {
-      title: 'AI-Powered Smart Manufacturing',
+    {"AI-Powered Smart Manufacturing"}
       description: 'Intelligent manufacturing systems with predictive maintenance and quality control.',
       icon: '🏭',
       price: 'Starting at $3,500/month',
@@ -257,8 +234,7 @@ const AIServicesPage: React.FC = () => {
       category: 'Industrial AI',
       technologies: ['IoT', 'Computer Vision', 'Machine Learning', 'PLC Integration', 'SCADA Systems']
     },
-    {
-      title: 'AI-Powered Autonomous Drones',
+    {"AI-Powered Autonomous Drones"}
       description: 'Intelligent drone systems for surveillance, delivery, and inspection applications.',
       icon: '🚁',
       price: 'Starting at $4,500/month',
@@ -268,8 +244,7 @@ const AIServicesPage: React.FC = () => {
       category: 'Autonomous Systems',
       technologies: ['Computer Vision', 'SLAM', 'Path Planning', 'Drone SDKs', 'Edge Computing']
     },
-    {
-      title: 'AI-Powered Language Translation',
+    {"AI-Powered Language Translation"}
       description: 'Advanced real-time translation and language processing for global communication.',
       icon: '🌐',
       price: 'Starting at $2,500/month',
@@ -279,8 +254,7 @@ const AIServicesPage: React.FC = () => {
       category: 'Language AI',
       technologies: ['Transformer Models', 'Neural Machine Translation', 'Speech Recognition', 'NLP', 'Multilingual Models']
     },
-    {
-      title: 'AI-Powered Content Moderation',
+    {"AI-Powered Content Moderation"}
       description: 'Automated content moderation and safety systems for online platforms.',
       icon: '🛡️',
       price: 'Starting at $2,000/month',

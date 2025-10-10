@@ -204,3 +204,6 @@ export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ chi
     </>
   );
 };
+
+</AnalyticsProps>
+</Analytics>

@@ -9,53 +9,49 @@ export default function DocsPage() {
   const [searchQuery, setSearchQuery] = useState('');
 
   const docCategories = [
-    {
-      title: 'Getting Started',
+    {"Getting Started"}
       icon: 'rocket',
       description: 'Quick start guides and basic setup instructions',
       docs: [
-        { title: 'Quick Start Guide', description: 'Get up and running in 5 minutes', link: '/docs/quick-start' },
-        { title: 'Installation Guide', description: 'Step-by-step installation instructions', link: '/docs/installation' },
-        { title: 'Configuration', description: 'Configure your environment', link: '/docs/configuration' }
+        {"Quick Start Guide"} description: 'Get up and running in 5 minutes', link: '/docs/quick-start' },
+        {"Installation Guide"} description: 'Step-by-step installation instructions', link: '/docs/installation' },
+        {"Configuration"} description: 'Configure your environment', link: '/docs/configuration' }
       ]
     },
-    {
-      title: 'API Reference',
+    {"API Reference"}
       icon: 'code',
       description: 'Complete API documentation and endpoints',
       docs: [
-        { title: 'Authentication', description: 'API authentication methods', link: '/docs/api/auth' },
-        { title: 'Endpoints', description: 'All available API endpoints', link: '/docs/api/endpoints' },
-        { title: 'SDKs', description: 'Client SDKs and libraries', link: '/docs/api/sdks' }
+        {"Authentication"} description: 'API authentication methods', link: '/docs/api/auth' },
+        {"Endpoints"} description: 'All available API endpoints', link: '/docs/api/endpoints' },
+        {"SDKs"} description: 'Client SDKs and libraries', link: '/docs/api/sdks' }
       ]
     },
-    {
-      title: 'AI Solutions',
+    {"AI Solutions"}
       icon: 'brain',
       description: 'AI and machine learning documentation',
       docs: [
-        { title: 'AI Models', description: 'Available AI models and capabilities', link: '/docs/ai/models' },
-        { title: 'Training Data', description: 'Data preparation and training', link: '/docs/ai/training' },
-        { title: 'Deployment', description: 'Deploying AI models to production', link: '/docs/ai/deployment' }
+        {"AI Models"} description: 'Available AI models and capabilities', link: '/docs/ai/models' },
+        {"Training Data"} description: 'Data preparation and training', link: '/docs/ai/training' },
+        {"Deployment"} description: 'Deploying AI models to production', link: '/docs/ai/deployment' }
       ]
     },
-    {
-      title: 'Cloud Services',
+    {"Cloud Services"}
       icon: 'cloud',
       description: 'Cloud infrastructure and services',
       docs: [
-        { title: 'Infrastructure', description: 'Cloud infrastructure setup', link: '/docs/cloud/infrastructure' },
-        { title: 'Security', description: 'Cloud security best practices', link: '/docs/cloud/security' },
-        { title: 'Monitoring', description: 'Monitoring and logging', link: '/docs/cloud/monitoring' }
+        {"Infrastructure"} description: 'Cloud infrastructure setup', link: '/docs/cloud/infrastructure' },
+        {"Security"} description: 'Cloud security best practices', link: '/docs/cloud/security' },
+        {"Monitoring"} description: 'Monitoring and logging', link: '/docs/cloud/monitoring' }
       ]
     }
   ];
 
   const popularDocs = [
-    { title: 'Quick Start Guide', description: 'Get started in minutes', category: 'Getting Started', link: '/docs/quick-start' },
-    { title: 'API Authentication', description: 'Learn how to authenticate', category: 'API Reference', link: '/docs/api/auth' },
-    { title: 'AI Model Training', description: 'Train your own models', category: 'AI Solutions', link: '/docs/ai/training' },
-    { title: 'Cloud Security', description: 'Secure your cloud infrastructure', category: 'Cloud Services', link: '/docs/cloud/security' }
+    {"Quick Start Guide"} description: 'Get started in minutes', category: 'Getting Started', link: '/docs/quick-start' },
+    {"API Authentication"} description: 'Learn how to authenticate', category: 'API Reference', link: '/docs/api/auth' },
+    {"AI Model Training"} description: 'Train your own models', category: 'AI Solutions', link: '/docs/ai/training' },
+    {"Cloud Security"} description: 'Secure your cloud infrastructure', category: 'Cloud Services', link: '/docs/cloud/security' }
   ];
 
   const filteredDocs = docCategories.map(category => ({
@@ -176,3 +172,11 @@ export default function DocsPage() {
     </div>
   );
 }
+
+</SEOOptimizer>
+</Navigation>
+</BookOpen>
+</BookOpen>
+</ArrowRight>
+</ChevronRight>
+</Footer>

@@ -415,4 +415,5 @@ const Navigation: React.FC = () => {
     </nav>
   );
 };
+
 export default Navigation;

@@ -16,7 +16,7 @@ const ContactPage: React.FC = () => {
     name: '',
     email: '',
     company: '',
-    message: ''
+    message: "",
   });
 
   const handleSubmit = (e: React.FormEvent) => {

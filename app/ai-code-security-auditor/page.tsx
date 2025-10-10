@@ -23,35 +23,29 @@ const AICodeSecurityAuditorPage: React.FC = () => {
   ];
 
   const useCases = [
-    {
-      title: 'Application Security',
+    {"Application Security"}
       description: 'Secure web and mobile applications with comprehensive security auditing',
-      icon: '🔒'
+      icon: "🔒",
     },
-    {
-      title: 'Code Review',
+    {"Code Review"}
       description: 'Automate security code reviews and identify potential vulnerabilities',
-      icon: '🔍'
+      icon: "🔍",
     },
-    {
-      title: 'Compliance Auditing',
+    {"Compliance Auditing"}
       description: 'Ensure compliance with security standards and regulations',
-      icon: '📋'
+      icon: "📋",
     },
-    {
-      title: 'Penetration Testing',
+    {"Penetration Testing"}
       description: 'Identify security weaknesses through automated penetration testing',
-      icon: '🎯'
+      icon: "🎯",
     },
-    {
-      title: 'Security Training',
+    {"Security Training"}
       description: 'Educate developers on secure coding practices and common vulnerabilities',
-      icon: '📚'
+      icon: "📚",
     },
-    {
-      title: 'Risk Management',
+    {"Risk Management"}
       description: 'Assess and manage security risks across the development lifecycle',
-      icon: '⚠️'
+      icon: "⚠️",
     }
   ];
 

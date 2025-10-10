@@ -19,16 +19,13 @@ import { FileText, PenTool, Target, CheckCircle, Phone, Mail, MapPin, ArrowRight
   ];
 
   const useCases = [
-    {
-      title: 'Blog Writing',
+    {"Blog Writing"}
       description: 'High-quality blog posts that engage readers and rank well in search engines',
     },
-    {
-      title: 'Social Media',
+    {"Social Media"}
       description: 'Engaging social media content that drives engagement and conversions',
     },
-    {
-      title: 'Marketing Copy',
+    {"Marketing Copy"}
       description: 'Compelling marketing copy that converts visitors into customers',
             </div>
           </div>

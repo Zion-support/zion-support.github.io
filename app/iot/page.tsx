@@ -4,8 +4,7 @@ import { CheckCircle, Star, Wifi, Shield, Zap, Target, BarChart, Cpu, Sparkles }
 
 const IoTPage: React.FC = () => {
   const iotServices = [
-    {
-      title: 'IoT Device Management Platform',
+    {"IoT Device Management Platform"}
       description: 'Comprehensive IoT device management and monitoring platform for connected devices.',
       icon: '📱',
       price: 'Starting at $2,500/month',
@@ -15,8 +14,7 @@ const IoTPage: React.FC = () => {
       category: 'Device Management',
       technologies: ['AWS IoT', 'Azure IoT', 'Google Cloud IoT', 'MQTT', 'CoAP']
     },
-    {
-      title: 'Smart City Solutions',
+    {"Smart City Solutions"}
       description: 'Comprehensive smart city infrastructure including traffic management, environmental monitoring, and citizen services.',
       icon: '🏙️',
       price: 'Starting at $15,000/month',
@@ -26,8 +24,7 @@ const IoTPage: React.FC = () => {
       category: 'Smart Cities',
       technologies: ['LoRaWAN', 'NB-IoT', '5G', 'Edge Computing', 'AI Analytics']
     },
-    {
-      title: 'Industrial IoT (IIoT)',
+    {"Industrial IoT (IIoT)"}
       description: 'Industrial IoT solutions for manufacturing, energy, and logistics with predictive maintenance and optimization.',
       icon: '🏭',
       price: 'Starting at $8,000/month',
@@ -37,8 +34,7 @@ const IoTPage: React.FC = () => {
       category: 'Industrial IoT',
       technologies: ['OPC UA', 'Modbus', 'Ethernet/IP', 'Edge Computing', 'Machine Learning']
     },
-    {
-      title: 'Smart Agriculture Platform',
+    {"Smart Agriculture Platform"}
       description: 'IoT-powered agricultural monitoring and optimization for crop management and livestock tracking.',
       icon: '🌾',
       price: 'Starting at $3,500/month',
@@ -48,8 +44,7 @@ const IoTPage: React.FC = () => {
       category: 'Smart Agriculture',
       technologies: ['LoRaWAN', 'Sigfox', 'Satellite IoT', 'Drones', 'Computer Vision']
     },
-    {
-      title: 'Smart Home Automation',
+    {"Smart Home Automation"}
       description: 'Complete smart home solutions with energy management, security, and comfort automation.',
       icon: '🏠',
       price: 'Starting at $1,500/month',
@@ -59,8 +54,7 @@ const IoTPage: React.FC = () => {
       category: 'Smart Homes',
       technologies: ['Zigbee', 'Z-Wave', 'WiFi', 'Bluetooth', 'Matter']
     },
-    {
-      title: 'Healthcare IoT Solutions',
+    {"Healthcare IoT Solutions"}
       description: 'Medical IoT devices and platforms for patient monitoring, telemedicine, and health analytics.',
       icon: '🏥',
       price: 'Starting at $5,000/month',
@@ -70,8 +64,7 @@ const IoTPage: React.FC = () => {
       category: 'Healthcare IoT',
       technologies: ['Bluetooth LE', 'WiFi', 'Cellular', 'Edge Computing', 'AI Analytics']
     },
-    {
-      title: 'Fleet Management IoT',
+    {"Fleet Management IoT"}
       description: 'Comprehensive fleet tracking and management solutions for vehicles, drones, and logistics.',
       icon: '🚛',
       price: 'Starting at $2,000/month',
@@ -81,8 +74,7 @@ const IoTPage: React.FC = () => {
       category: 'Fleet Management',
       technologies: ['GPS', 'Cellular', 'Satellite', 'OBD-II', 'Telematics']
     },
-    {
-      title: 'Environmental Monitoring',
+    {"Environmental Monitoring"}
       description: 'IoT-based environmental monitoring for air quality, water quality, and climate data collection.',
       icon: '🌍',
       price: 'Starting at $3,000/month',
@@ -92,8 +84,7 @@ const IoTPage: React.FC = () => {
       category: 'Environmental',
       technologies: ['LoRaWAN', 'NB-IoT', 'Satellite', 'Edge Computing', 'AI Analytics']
     },
-    {
-      title: 'Retail IoT Solutions',
+    {"Retail IoT Solutions"}
       description: 'Smart retail solutions including inventory management, customer analytics, and automated checkout.',
       icon: '🛒',
       price: 'Starting at $4,000/month',
@@ -103,8 +94,7 @@ const IoTPage: React.FC = () => {
       category: 'Retail IoT',
       technologies: ['RFID', 'Computer Vision', 'Beacons', 'Edge Computing', 'AI Analytics']
     },
-    {
-      title: 'Energy Management IoT',
+    {"Energy Management IoT"}
       description: 'Smart energy management solutions for buildings, grids, and renewable energy systems.',
       icon: '⚡',
       price: 'Starting at $3,500/month',
@@ -114,8 +104,7 @@ const IoTPage: React.FC = () => {
       category: 'Energy Management',
       technologies: ['Modbus', 'BACnet', 'LoRaWAN', 'Edge Computing', 'AI Optimization']
     },
-    {
-      title: 'IoT Security Solutions',
+    {"IoT Security Solutions"}
       description: 'Comprehensive IoT security including device authentication, data encryption, and threat monitoring.',
       icon: '🔒',
       price: 'Starting at $2,800/month',
@@ -125,8 +114,7 @@ const IoTPage: React.FC = () => {
       category: 'IoT Security',
       technologies: ['PKI', 'TLS/SSL', 'Zero Trust', 'SIEM', 'Threat Intelligence']
     },
-    {
-      title: 'IoT Data Analytics Platform',
+    {"IoT Data Analytics Platform"}
       description: 'Advanced analytics platform for IoT data processing, visualization, and insights generation.',
       icon: '📊',
       price: 'Starting at $4,500/month',

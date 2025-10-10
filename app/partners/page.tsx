@@ -10,25 +10,25 @@ const PartnersPage: React.FC = () => {
       name: 'Microsoft',
       logo: '/api/placeholder/200/100',
       description: 'Cloud and AI solutions partner',
-      category: 'Technology'
+      category: "Technology",
     },
     {
       name: 'Amazon Web Services',
       logo: '/api/placeholder/200/100',
       description: 'Cloud infrastructure partner',
-      category: 'Cloud'
+      category: "Cloud",
     },
     {
       name: 'Google Cloud',
       logo: '/api/placeholder/200/100',
       description: 'AI and machine learning partner',
-      category: 'AI'
+      category: "AI",
     },
     {
       name: 'IBM',
       logo: '/api/placeholder/200/100',
       description: 'Enterprise solutions partner',
-      category: 'Enterprise'
+      category: "Enterprise",
     }
   ];
 

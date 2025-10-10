@@ -1,6 +1,4 @@
 // Accessibility utilities for the application
-
-=======
 export interface AccessibilityConfig {
   enableHighContrast: boolean;
   enableScreenReader: boolean;

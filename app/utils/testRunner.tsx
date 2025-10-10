@@ -236,7 +236,7 @@ export class TestRunner {}
       coverage: false,
       watch: false,
       bail: false,
-      reporter: 'console'
+      reporter: "console",
       outputDir: './test-results',
       includePattern: [,
         '**/*.test.ts',
@@ -2371,3 +2371,54 @@ export { Mock };
 export type {/* TODO: Fix JSX expression */}
 };
 "`
+
+</void>
+</void>
+</void>
+</void>
+</void>
+</void>
+</void>
+</void>
+</void>
+</void>
+</void>
+</void>
+</void>
+</void>
+</void>
+</void>
+</void>
+</void>
+</void>
+</void>
+</void>
+</void>
+</void>
+</void>
+</void>
+</void>
+</TestConfig>
+</TestConfig>
+</TestConfig>
+</RenderOptions>
+</RenderOptions>
+</TestResult>
+</TestResult>
+</link>
+</link>
+</link>
+</h3>
+</p>
+</p>
+</h4>
+</testsuites>
+</skipped>
+</string>
+</string>
+</T>
+</T>
+</T>
+</T>
+</T>
+</T>

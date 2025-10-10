@@ -4,8 +4,7 @@ import { CheckCircle, Star, Server, Shield, Cloud, Database, Network, Code, Moni
 
 const ITServicesPage: React.FC = () => {
   const itServices = [
-    {
-      title: 'Cloud Infrastructure Management',
+    {"Cloud Infrastructure Management"}
       description: 'Complete cloud migration, optimization, and management services for AWS, Azure, and Google Cloud.',
       icon: '☁️',
       price: 'Starting at $2,500/month',
@@ -15,8 +14,7 @@ const ITServicesPage: React.FC = () => {
       category: 'Cloud Services',
       technologies: ['AWS', 'Azure', 'Google Cloud', 'Kubernetes', 'Docker']
     },
-    {
-      title: 'Cybersecurity Solutions',
+    {"Cybersecurity Solutions"}
       description: 'Comprehensive security services including threat detection, vulnerability assessment, and incident response.',
       icon: '🔒',
       price: 'Starting at $3,000/month',
@@ -26,8 +24,7 @@ const ITServicesPage: React.FC = () => {
       category: 'Security',
       technologies: ['SIEM', 'EDR', 'Firewall', 'VPN', 'Zero Trust']
     },
-    {
-      title: 'DevOps & CI/CD Implementation',
+    {"DevOps & CI/CD Implementation"}
       description: 'Automated deployment pipelines, infrastructure as code, and continuous integration services.',
       icon: '🔄',
       price: 'Starting at $2,000/month',
@@ -37,8 +34,7 @@ const ITServicesPage: React.FC = () => {
       category: 'DevOps',
       technologies: ['Jenkins', 'GitLab CI', 'Terraform', 'Ansible', 'Prometheus']
     },
-    {
-      title: 'Database Administration',
+    {"Database Administration"}
       description: 'Database design, optimization, backup, and maintenance for SQL and NoSQL databases.',
       icon: '🗄️',
       price: 'Starting at $1,500/month',
@@ -48,8 +44,7 @@ const ITServicesPage: React.FC = () => {
       category: 'Database',
       technologies: ['PostgreSQL', 'MySQL', 'MongoDB', 'Redis', 'Elasticsearch']
     },
-    {
-      title: 'Network Infrastructure',
+    {"Network Infrastructure"}
       description: 'Network design, implementation, and management for enterprise-grade connectivity.',
       icon: '🌐',
       price: 'Starting at $2,200/month',
@@ -59,8 +54,7 @@ const ITServicesPage: React.FC = () => {
       category: 'Networking',
       technologies: ['Cisco', 'Juniper', 'Fortinet', 'SD-WAN', 'MPLS']
     },
-    {
-      title: 'IT Support & Helpdesk',
+    {"IT Support & Helpdesk"}
       description: '24/7 technical support, troubleshooting, and user assistance for all IT needs.',
       icon: '🛠️',
       price: 'Starting at $1,200/month',
@@ -70,8 +64,7 @@ const ITServicesPage: React.FC = () => {
       category: 'Support',
       technologies: ['ServiceNow', 'Jira', 'Remote Desktop', 'Active Directory', 'Office 365']
     },
-    {
-      title: 'Data Analytics & BI',
+    {"Data Analytics & BI"}
       description: 'Data warehouse design, ETL processes, and business intelligence dashboard development.',
       icon: '📊',
       price: 'Starting at $2,800/month',
@@ -81,8 +74,7 @@ const ITServicesPage: React.FC = () => {
       category: 'Analytics',
       technologies: ['Tableau', 'Power BI', 'Snowflake', 'Apache Airflow', 'Python']
     },
-    {
-      title: 'API Development & Integration',
+    {"API Development & Integration"}
       description: 'Custom API development, third-party integrations, and microservices architecture.',
       icon: '🔌',
       price: 'Starting at $2,000/month',
@@ -92,8 +84,7 @@ const ITServicesPage: React.FC = () => {
       category: 'Integration',
       technologies: ['Node.js', 'Python', 'GraphQL', 'Kong', 'Postman']
     },
-    {
-      title: 'Mobile App Development',
+    {"Mobile App Development"}
       description: 'Native and cross-platform mobile application development for iOS and Android.',
       icon: '📱',
       price: 'Starting at $3,500/month',
@@ -103,8 +94,7 @@ const ITServicesPage: React.FC = () => {
       category: 'Mobile',
       technologies: ['React Native', 'Flutter', 'Swift', 'Kotlin', 'Xamarin']
     },
-    {
-      title: 'Web Application Development',
+    {"Web Application Development"}
       description: 'Custom web applications, e-commerce solutions, and enterprise web platforms.',
       icon: '💻',
       price: 'Starting at $2,500/month',
@@ -114,8 +104,7 @@ const ITServicesPage: React.FC = () => {
       category: 'Web Development',
       technologies: ['React', 'Vue.js', 'Node.js', 'PHP', 'WordPress']
     },
-    {
-      title: 'IT Consulting & Strategy',
+    {"IT Consulting & Strategy"}
       description: 'Technology roadmap development, digital transformation planning, and IT strategy consulting.',
       icon: '💡',
       price: 'Starting at $200/hour',
@@ -125,8 +114,7 @@ const ITServicesPage: React.FC = () => {
       category: 'Consulting',
       technologies: ['Strategic Planning', 'Architecture Design', 'Risk Assessment', 'ROI Analysis']
     },
-    {
-      title: 'Disaster Recovery & Backup',
+    {"Disaster Recovery & Backup"}
       description: 'Comprehensive backup solutions, disaster recovery planning, and business continuity services.',
       icon: '🔄',
       price: 'Starting at $1,800/month',
@@ -136,8 +124,7 @@ const ITServicesPage: React.FC = () => {
       category: 'Backup & Recovery',
       technologies: ['Veeam', 'Commvault', 'AWS Backup', 'Azure Backup', 'VMware']
     },
-    {
-      title: 'Blockchain Infrastructure',
+    {"Blockchain Infrastructure"}
       description: 'Enterprise blockchain solutions, smart contract development, and decentralized application deployment.',
       icon: '⛓️',
       price: 'Starting at $4,500/month',
@@ -147,8 +134,7 @@ const ITServicesPage: React.FC = () => {
       category: 'Blockchain',
       technologies: ['Ethereum', 'Hyperledger', 'Solidity', 'Web3', 'IPFS']
     },
-    {
-      title: 'IoT Platform Management',
+    {"IoT Platform Management"}
       description: 'Comprehensive IoT infrastructure management and device connectivity solutions.',
       icon: '🌐',
       price: 'Starting at $3,200/month',
@@ -158,8 +144,7 @@ const ITServicesPage: React.FC = () => {
       category: 'IoT',
       technologies: ['AWS IoT', 'Azure IoT', 'MQTT', 'CoAP', 'Edge Computing']
     },
-    {
-      title: 'Edge Computing Infrastructure',
+    {"Edge Computing Infrastructure"}
       description: 'Distributed computing infrastructure for low-latency applications and edge data processing.',
       icon: '⚡',
       price: 'Starting at $3,800/month',
@@ -169,8 +154,7 @@ const ITServicesPage: React.FC = () => {
       category: 'Edge Computing',
       technologies: ['Kubernetes', 'Docker', 'CDN', 'Edge Servers', '5G Networks']
     },
-    {
-      title: 'Quantum Computing Infrastructure',
+    {"Quantum Computing Infrastructure"}
       description: 'Quantum computing platform setup and quantum algorithm development services.',
       icon: '⚛️',
       price: 'Starting at $8,000/month',
@@ -180,8 +164,7 @@ const ITServicesPage: React.FC = () => {
       category: 'Quantum Computing',
       technologies: ['IBM Qiskit', 'Google Cirq', 'Rigetti', 'IonQ', 'Quantum Simulators']
     },
-    {
-      title: '5G Network Implementation',
+    {"5G Network Implementation"}
       description: '5G network infrastructure deployment and optimization for enterprise applications.',
       icon: '📡',
       price: 'Starting at $5,500/month',
@@ -191,8 +174,7 @@ const ITServicesPage: React.FC = () => {
       category: '5G Networks',
       technologies: ['5G Core', 'RAN', 'Network Slicing', 'MEC', 'NFV']
     },
-    {
-      title: 'Microservices Architecture',
+    {"Microservices Architecture"}
       description: 'Modern microservices architecture design and implementation for scalable applications.',
       icon: '🔧',
       price: 'Starting at $3,500/month',
@@ -202,8 +184,7 @@ const ITServicesPage: React.FC = () => {
       category: 'Microservices',
       technologies: ['Kubernetes', 'Docker', 'Istio', 'API Gateway', 'Service Mesh']
     },
-    {
-      title: 'Serverless Computing Platform',
+    {"Serverless Computing Platform"}
       description: 'Serverless architecture implementation and management for event-driven applications.',
       icon: '☁️',
       price: 'Starting at $2,800/month',
@@ -213,8 +194,7 @@ const ITServicesPage: React.FC = () => {
       category: 'Serverless',
       technologies: ['AWS Lambda', 'Azure Functions', 'Google Cloud Functions', 'Serverless Framework']
     },
-    {
-      title: 'Data Lake Architecture',
+    {"Data Lake Architecture"}
       description: 'Enterprise data lake design and implementation for big data analytics and storage.',
       icon: '🏞️',
       price: 'Starting at $4,200/month',
@@ -224,8 +204,7 @@ const ITServicesPage: React.FC = () => {
       category: 'Data Architecture',
       technologies: ['AWS S3', 'Azure Data Lake', 'Hadoop', 'Spark', 'Delta Lake']
     },
-    {
-      title: 'AI Infrastructure Setup',
+    {"AI Infrastructure Setup"}
       description: 'AI/ML infrastructure deployment and management for machine learning workloads.',
       icon: '🤖',
       price: 'Starting at $4,800/month',
@@ -235,8 +214,7 @@ const ITServicesPage: React.FC = () => {
       category: 'AI Infrastructure',
       technologies: ['NVIDIA GPUs', 'Kubernetes', 'TensorFlow', 'PyTorch', 'MLflow']
     },
-    {
-      title: 'Hybrid Cloud Management',
+    {"Hybrid Cloud Management"}
       description: 'Multi-cloud and hybrid cloud infrastructure management and optimization.',
       icon: '☁️',
       price: 'Starting at $3,600/month',
@@ -246,8 +224,7 @@ const ITServicesPage: React.FC = () => {
       category: 'Cloud Management',
       technologies: ['AWS', 'Azure', 'Google Cloud', 'Terraform', 'CloudFormation']
     },
-    {
-      title: 'Zero Trust Security Architecture',
+    {"Zero Trust Security Architecture"}
       description: 'Zero trust security model implementation for enterprise network protection.',
       icon: '🔒',
       price: 'Starting at $4,000/month',
@@ -257,8 +234,7 @@ const ITServicesPage: React.FC = () => {
       category: 'Security Architecture',
       technologies: ['Zero Trust', 'Identity Management', 'Network Security', 'SIEM', 'EDR']
     },
-    {
-      title: 'High-Performance Computing (HPC)',
+    {"High-Performance Computing (HPC)"}
       description: 'High-performance computing cluster setup and management for scientific and engineering workloads.',
       icon: '💻',
       price: 'Starting at $6,000/month',
@@ -268,8 +244,7 @@ const ITServicesPage: React.FC = () => {
       category: 'HPC',
       technologies: ['Slurm', 'OpenMPI', 'CUDA', 'InfiniBand', 'Parallel File Systems']
     },
-    {
-      title: 'Content Delivery Network (CDN)',
+    {"Content Delivery Network (CDN)"}
       description: 'Global CDN implementation and optimization for improved content delivery performance.',
       icon: '🌍',
       price: 'Starting at $1,500/month',
@@ -279,8 +254,7 @@ const ITServicesPage: React.FC = () => {
       category: 'CDN',
       technologies: ['CloudFlare', 'AWS CloudFront', 'Azure CDN', 'Akamai', 'Fastly']
     },
-    {
-      title: 'Database Performance Optimization',
+    {"Database Performance Optimization"}
       description: 'Database performance tuning and optimization for improved application performance.',
       icon: '🗄️',
       price: 'Starting at $2,200/month',
@@ -290,8 +264,7 @@ const ITServicesPage: React.FC = () => {
       category: 'Database Optimization',
       technologies: ['PostgreSQL', 'MySQL', 'MongoDB', 'Redis', 'Elasticsearch']
     },
-    {
-      title: 'API Gateway Management',
+    {"API Gateway Management"}
       description: 'Enterprise API gateway setup and management for secure and scalable API operations.',
       icon: '🚪',
       price: 'Starting at $2,500/month',
@@ -301,8 +274,7 @@ const ITServicesPage: React.FC = () => {
       category: 'API Management',
       technologies: ['Kong', 'AWS API Gateway', 'Azure API Management', 'Apigee', 'Zuul']
     },
-    {
-      title: 'Container Orchestration',
+    {"Container Orchestration"}
       description: 'Kubernetes and container orchestration platform setup and management.',
       icon: '🐳',
       price: 'Starting at $3,200/month',
@@ -312,8 +284,7 @@ const ITServicesPage: React.FC = () => {
       category: 'Containerization',
       technologies: ['Kubernetes', 'Docker', 'Helm', 'Istio', 'Prometheus']
     },
-    {
-      title: 'Real-time Data Streaming',
+    {"Real-time Data Streaming"}
       description: 'Real-time data streaming platform setup and management for live data processing.',
       icon: '📊',
       price: 'Starting at $2,800/month',
