@@ -9,6 +9,8 @@ interface JobPosition {
   type: string
   experience: string
   description: string
+}
+
 const CareersPage: React.FC = () => {
   const openPositions: JobPosition[] = [
     {
