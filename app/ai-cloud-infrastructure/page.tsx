@@ -173,10 +173,3 @@ const AiCloudInfrastructurePage: React.FC = () => {
 };
 
 export default AiCloudInfrastructurePage;
-</Footer>
-</CheckCircle>
-</CheckCircle>
-</CheckCircle>
-</Navigation>
-</meta>
-</meta>

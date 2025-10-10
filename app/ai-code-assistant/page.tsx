@@ -173,10 +173,3 @@ const AiCodeAssistantPage: React.FC = () => {
 };
 
 export default AiCodeAssistantPage;
-</Footer>
-</CheckCircle>
-</CheckCircle>
-</CheckCircle>
-</Navigation>
-</meta>
-</meta>

@@ -162,12 +162,3 @@ const AiBlockchainSolutionsPage: React.FC = () => {
 };
 
 export default AiBlockchainSolutionsPage;
-</Footer>
-</CheckCircle>
-</CheckCircle>
-</div>
-</div>
-</div>
-</Navigation>
-</meta>
-</meta>
