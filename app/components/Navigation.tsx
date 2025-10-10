@@ -154,7 +154,7 @@ const Navigation: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2 group" onClick={closeAllMenus}>
+          <Link to="/" className="flex items-center space-x-2 group" onClick={closeAllMenus}>
             <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
               <Brain className="w-5 h-5 text-white" />
             </div>
@@ -162,7 +162,7 @@ const Navigation: React.FC = () => {
           </Link>
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-            <Link href="/" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+            <Link to="/" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
               Home
             </Link>
             {/* AI Services Dropdown */}
@@ -181,7 +181,7 @@ const Navigation: React.FC = () => {
                     {aiServices.map((service) => (
                       <Link
                         key={service.name}
-                        href={service.href}
+                        to={service.href}
                         className="flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-colors duration-300 group"
                         onClick={closeAllMenus}
                       >
@@ -213,7 +213,7 @@ const Navigation: React.FC = () => {
                     {itServices.map((service) => (
                       <Link
                         key={service.name}
-                        href={service.href}
+                        to={service.href}
                         className="flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-colors duration-300 group"
                         onClick={closeAllMenus}
                       >
@@ -245,7 +245,7 @@ const Navigation: React.FC = () => {
                     {microSaasServices.map((service) => (
                       <Link
                         key={service.name}
-                        href={service.href}
+                        to={service.href}
                         className="flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-colors duration-300 group"
                         onClick={closeAllMenus}
                       >
@@ -277,7 +277,7 @@ const Navigation: React.FC = () => {
                     {emergingTech.map((service) => (
                       <Link
                         key={service.name}
-                        href={service.href}
+                        to={service.href}
                         className="flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-colors duration-300 group"
                         onClick={closeAllMenus}
                       >
@@ -293,19 +293,19 @@ const Navigation: React.FC = () => {
                 </div>
               )}
             </div>
-            <Link href="/about" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+            <Link to="/about" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
               About
             </Link>
-            <Link href="/services" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+            <Link to="/services" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
               Services
             </Link>
-            <Link href="/pricing" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+            <Link to="/pricing" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
               Pricing
             </Link>
-            <Link href="/blog" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+            <Link to="/blog" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
               Blog
             </Link>
-            <Link href="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+            <Link to="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
               Contact
             </Link>
           </div>
@@ -341,7 +341,7 @@ const Navigation: React.FC = () => {
         {isOpen && (
           <div className="lg:hidden mt-4 pb-4 border-t border-cyan-500/20">
             <div className="pt-4 space-y-4">
-              <Link href="/" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
+              <Link to="/" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
                 Home
               </Link>
               {/* Mobile AI Services */}
@@ -361,7 +361,7 @@ const Navigation: React.FC = () => {
                     {aiServices.slice(0, 8).map((service) => (
                       <Link
                         key={service.name}
-                        href={service.href}
+                        to={service.href}
                         className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300"
                         onClick={closeAllMenus}
                       >
@@ -369,7 +369,7 @@ const Navigation: React.FC = () => {
                       </Link>
                     ))}
                     <Link
-                      href="/ai-services"
+                      to="/ai-services"
                       className="block text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
                       onClick={closeAllMenus}
                     >
@@ -395,7 +395,7 @@ const Navigation: React.FC = () => {
                     {itServices.map((service) => (
                       <Link
                         key={service.name}
-                        href={service.href}
+                        to={service.href}
                         className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300"
                         onClick={closeAllMenus}
                       >
@@ -422,7 +422,7 @@ const Navigation: React.FC = () => {
                     {microSaasServices.slice(0, 8).map((service) => (
                       <Link
                         key={service.name}
-                        href={service.href}
+                        to={service.href}
                         className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300"
                         onClick={closeAllMenus}
                       >
@@ -430,7 +430,7 @@ const Navigation: React.FC = () => {
                       </Link>
                     ))}
                     <Link
-                      href="/micro-saas"
+                      to="/micro-saas"
                       className="block text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
                       onClick={closeAllMenus}
                     >
@@ -439,19 +439,19 @@ const Navigation: React.FC = () => {
                   </div>
                 )}
               </div>
-              <Link href="/about" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
+              <Link to="/about" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
                 About
               </Link>
-              <Link href="/services" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
+              <Link to="/services" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
                 Services
               </Link>
-              <Link href="/pricing" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
+              <Link to="/pricing" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
                 Pricing
               </Link>
-              <Link href="/blog" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
+              <Link to="/blog" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
                 Blog
               </Link>
-              <Link href="/contact" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
+              <Link to="/contact" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
                 Contact
               </Link>
               {/* Mobile Contact Info */}

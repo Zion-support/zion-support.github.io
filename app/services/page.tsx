@@ -775,6 +775,297 @@ const ServicesPage: React.FC = () => {
       features: ['Demand Forecasting', 'Inventory Management', 'Supplier Analytics', 'Risk Assessment', 'Cost Optimization'],
       price: '$399/month',
       category: 'Micro SAAS'
+    },
+    
+    // New Innovative Micro SAAS Services
+    {
+      icon: Brain,
+      title: 'AI Voice Assistant Platform',
+      description: 'Build custom voice assistants with natural language understanding, multi-language support, and enterprise integration.',
+      features: ['Voice Recognition', 'Natural Language Processing', 'Multi-language Support', 'Enterprise Integration', 'Custom Wake Words'],
+      price: '$299/month',
+      category: 'Micro SAAS',
+      popular: true
+    },
+    {
+      icon: Brain,
+      title: 'AI Predictive Maintenance',
+      description: 'Prevent equipment failures with AI-powered predictive maintenance and real-time monitoring systems.',
+      features: ['Failure Prediction', 'Real-time Monitoring', 'Maintenance Scheduling', 'Cost Optimization', 'IoT Integration'],
+      price: '$599/month',
+      category: 'Micro SAAS'
+    },
+    {
+      icon: Brain,
+      title: 'AI Supply Chain Optimization',
+      description: 'Optimize supply chain operations with AI-driven demand forecasting, inventory management, and logistics planning.',
+      features: ['Demand Forecasting', 'Inventory Optimization', 'Route Planning', 'Supplier Management', 'Risk Assessment'],
+      price: '$899/month',
+      category: 'Micro SAAS'
+    },
+    {
+      icon: Brain,
+      title: 'AI Quality Control System',
+      description: 'Automated quality inspection using computer vision and machine learning for manufacturing and production lines.',
+      features: ['Computer Vision', 'Defect Detection', 'Real-time Inspection', 'Quality Reports', 'Integration APIs'],
+      price: '$1,199/month',
+      category: 'Micro SAAS'
+    },
+    {
+      icon: Brain,
+      title: 'AI Energy Management',
+      description: 'Optimize energy consumption with AI-powered smart grid management and renewable energy integration.',
+      features: ['Energy Optimization', 'Smart Grid Management', 'Renewable Integration', 'Cost Analysis', 'Carbon Footprint'],
+      price: '$799/month',
+      category: 'Micro SAAS'
+    },
+    {
+      icon: Brain,
+      title: 'AI Legal Document Analysis',
+      description: 'Automated legal document review, contract analysis, and compliance monitoring with AI technology.',
+      features: ['Document Review', 'Contract Analysis', 'Compliance Monitoring', 'Risk Assessment', 'Legal Research'],
+      price: '$1,299/month',
+      category: 'Micro SAAS'
+    },
+    {
+      icon: Brain,
+      title: 'AI Real Estate Analytics',
+      description: 'Property valuation, market analysis, and investment recommendations powered by artificial intelligence.',
+      features: ['Property Valuation', 'Market Analysis', 'Investment Insights', 'Trend Prediction', 'Portfolio Management'],
+      price: '$499/month',
+      category: 'Micro SAAS'
+    },
+    {
+      icon: Brain,
+      title: 'AI Human Resources Assistant',
+      description: 'Streamline HR processes with AI-powered recruitment, employee analytics, and performance management.',
+      features: ['Resume Screening', 'Candidate Matching', 'Performance Analytics', 'Employee Engagement', 'Retention Analysis'],
+      price: '$399/month',
+      category: 'Micro SAAS'
+    },
+    {
+      icon: Brain,
+      title: 'AI Insurance Risk Assessment',
+      description: 'Advanced risk evaluation and fraud detection for insurance companies using machine learning algorithms.',
+      features: ['Risk Evaluation', 'Fraud Detection', 'Claims Processing', 'Underwriting Support', 'Compliance Monitoring'],
+      price: '$1,499/month',
+      category: 'Micro SAAS'
+    },
+    {
+      icon: Brain,
+      title: 'AI Educational Platform',
+      description: 'Personalized learning experiences with AI-powered content adaptation and student performance analytics.',
+      features: ['Personalized Learning', 'Content Adaptation', 'Performance Analytics', 'Learning Paths', 'Progress Tracking'],
+      price: '$299/month',
+      category: 'Micro SAAS'
+    },
+    {
+      icon: Brain,
+      title: 'AI Transportation Optimization',
+      description: 'Optimize transportation routes, fleet management, and logistics with AI-powered decision making.',
+      features: ['Route Optimization', 'Fleet Management', 'Demand Prediction', 'Fuel Optimization', 'Driver Scheduling'],
+      price: '$699/month',
+      category: 'Micro SAAS'
+    },
+    {
+      icon: Brain,
+      title: 'AI Environmental Monitoring',
+      description: 'Monitor environmental conditions and predict climate impacts using AI and IoT sensor data.',
+      features: ['Environmental Sensing', 'Climate Prediction', 'Pollution Monitoring', 'Data Analysis', 'Alert Systems'],
+      price: '$599/month',
+      category: 'Micro SAAS'
+    },
+    {
+      icon: Brain,
+      title: 'AI Retail Personalization',
+      description: 'Create personalized shopping experiences with AI-driven product recommendations and customer insights.',
+      features: ['Product Recommendations', 'Customer Segmentation', 'Price Optimization', 'Inventory Management', 'Customer Analytics'],
+      price: '$799/month',
+      category: 'Micro SAAS'
+    },
+    {
+      icon: Brain,
+      title: 'AI Sports Analytics',
+      description: 'Advanced sports performance analysis, injury prediction, and team optimization using AI technology.',
+      features: ['Performance Analysis', 'Injury Prediction', 'Team Optimization', 'Player Scouting', 'Game Strategy'],
+      price: '$999/month',
+      category: 'Micro SAAS'
+    },
+    {
+      icon: Brain,
+      title: 'AI Mental Health Assistant',
+      description: 'AI-powered mental health monitoring, mood tracking, and therapeutic support applications.',
+      features: ['Mood Tracking', 'Stress Analysis', 'Therapeutic Support', 'Crisis Detection', 'Wellness Recommendations'],
+      price: '$199/month',
+      category: 'Micro SAAS'
+    },
+    {
+      icon: Brain,
+      title: 'AI Marketing Automation',
+      description: 'Revolutionary AI-powered marketing automation with personalized campaigns and intelligent optimization.',
+      features: ['Campaign Automation', 'Personalization', 'A/B Testing', 'ROI Optimization', 'Multi-channel'],
+      price: '$299/month',
+      category: 'Micro SAAS'
+    },
+    {
+      icon: Brain,
+      title: 'AI Customer Support',
+      description: 'Intelligent customer support with chatbots, sentiment analysis, and automated ticket routing.',
+      features: ['AI Chatbots', 'Sentiment Analysis', 'Ticket Routing', 'Knowledge Base', '24/7 Support'],
+      price: '$199/month',
+      category: 'Micro SAAS'
+    },
+    {
+      icon: Brain,
+      title: 'AI Data Analytics',
+      description: 'Transform your data into actionable insights with AI-powered analytics and predictive modeling.',
+      features: ['Predictive Analytics', 'Data Visualization', 'Real-time Insights', 'Custom Dashboards', 'ML Models'],
+      price: '$399/month',
+      category: 'Micro SAAS'
+    },
+    {
+      icon: Brain,
+      title: 'AI Content Generation',
+      description: 'Create high-quality content at scale with AI-powered writing, image generation, and video production.',
+      features: ['Content Writing', 'Image Generation', 'Video Creation', 'SEO Optimization', 'Multi-language'],
+      price: '$149/month',
+      category: 'Micro SAAS'
+    },
+    {
+      icon: Brain,
+      title: 'AI Healthcare Solutions',
+      description: 'HIPAA-compliant AI solutions for medical imaging, drug discovery, and patient care optimization.',
+      features: ['Medical Imaging', 'Drug Discovery', 'Patient Analytics', 'Diagnostic Support', 'HIPAA Compliance'],
+      price: '$1,999/month',
+      category: 'Micro SAAS'
+    },
+    {
+      icon: Brain,
+      title: 'AI Financial Services',
+      description: 'Advanced AI solutions for fraud detection, risk assessment, and algorithmic trading.',
+      features: ['Fraud Detection', 'Risk Assessment', 'Algorithmic Trading', 'Credit Scoring', 'Compliance'],
+      price: '$1,499/month',
+      category: 'Micro SAAS'
+    },
+    {
+      icon: Brain,
+      title: 'AI E-commerce Solutions',
+      description: 'Intelligent e-commerce platform with recommendation engines and dynamic pricing.',
+      features: ['Recommendation Engine', 'Dynamic Pricing', 'Inventory Optimization', 'Customer Insights', 'Sales Forecasting'],
+      price: '$799/month',
+      category: 'Micro SAAS'
+    },
+    {
+      icon: Brain,
+      title: 'AI 3D Generation',
+      description: 'Create stunning 3D models, animations, and virtual environments using AI-powered generation tools.',
+      features: ['3D Model Generation', 'Animation Creation', 'Virtual Environments', 'Texture Generation', 'Rendering Optimization'],
+      price: '$399/month',
+      category: 'Micro SAAS'
+    },
+    {
+      icon: Brain,
+      title: 'AI Agricultural Intelligence',
+      description: 'Smart farming solutions with crop monitoring, yield prediction, and automated irrigation systems.',
+      features: ['Crop Monitoring', 'Yield Prediction', 'Automated Irrigation', 'Pest Detection', 'Weather Analysis'],
+      price: '$599/month',
+      category: 'Micro SAAS'
+    },
+    {
+      icon: Brain,
+      title: 'AI Climate Solutions',
+      description: 'Advanced climate monitoring and carbon footprint optimization for sustainable business practices.',
+      features: ['Carbon Tracking', 'Climate Monitoring', 'Sustainability Metrics', 'Green Energy Optimization', 'Environmental Reporting'],
+      price: '$499/month',
+      category: 'Micro SAAS'
+    },
+    {
+      icon: Brain,
+      title: 'AI Drug Discovery',
+      description: 'Accelerate pharmaceutical research with AI-powered drug discovery and molecular analysis.',
+      features: ['Molecular Analysis', 'Drug Design', 'Clinical Trial Optimization', 'Side Effect Prediction', 'Patent Analysis'],
+      price: '$2,999/month',
+      category: 'Micro SAAS'
+    },
+    {
+      icon: Brain,
+      title: 'AI Energy Grid Management',
+      description: 'Smart grid optimization with AI-powered energy distribution and renewable integration.',
+      features: ['Grid Optimization', 'Renewable Integration', 'Load Balancing', 'Energy Storage', 'Predictive Maintenance'],
+      price: '$1,299/month',
+      category: 'Micro SAAS'
+    },
+    {
+      icon: Brain,
+      title: 'AI Financial Crime Detection',
+      description: 'Advanced fraud detection and anti-money laundering solutions for financial institutions.',
+      features: ['Fraud Detection', 'AML Compliance', 'Transaction Monitoring', 'Risk Scoring', 'Regulatory Reporting'],
+      price: '$1,799/month',
+      category: 'Micro SAAS'
+    },
+    {
+      icon: Brain,
+      title: 'AI Fashion Design',
+      description: 'Revolutionary fashion design platform with AI-powered trend analysis and automated design generation.',
+      features: ['Trend Analysis', 'Design Generation', 'Color Matching', 'Size Optimization', 'Sustainability Scoring'],
+      price: '$599/month',
+      category: 'Micro SAAS'
+    },
+    {
+      icon: Brain,
+      title: 'AI Fitness Coach',
+      description: 'Personalized fitness training with AI-powered workout optimization and health monitoring.',
+      features: ['Workout Optimization', 'Health Monitoring', 'Nutrition Planning', 'Progress Tracking', 'Injury Prevention'],
+      price: '$99/month',
+      category: 'Micro SAAS'
+    },
+    {
+      icon: Brain,
+      title: 'AI Holographic Workspace',
+      description: 'Next-generation collaborative workspace with AI-powered holographic interfaces and virtual meetings.',
+      features: ['Holographic Interfaces', 'Virtual Meetings', '3D Collaboration', 'Gesture Recognition', 'Spatial Computing'],
+      price: '$1,999/month',
+      category: 'Micro SAAS'
+    },
+    {
+      icon: Brain,
+      title: 'AI Insurance Solutions',
+      description: 'Intelligent insurance platform with automated underwriting and claims processing.',
+      features: ['Automated Underwriting', 'Claims Processing', 'Risk Assessment', 'Policy Optimization', 'Customer Service'],
+      price: '$899/month',
+      category: 'Micro SAAS'
+    },
+    {
+      icon: Brain,
+      title: 'AI Investment Optimizer',
+      description: 'AI-powered investment portfolio optimization with real-time market analysis and risk management.',
+      features: ['Portfolio Optimization', 'Market Analysis', 'Risk Management', 'Algorithmic Trading', 'Performance Tracking'],
+      price: '$1,299/month',
+      category: 'Micro SAAS'
+    },
+    {
+      icon: Brain,
+      title: 'AI Invoice Generator',
+      description: 'Automated invoice creation, payment tracking, and financial reporting with AI-powered insights.',
+      features: ['Automated Invoicing', 'Payment Tracking', 'Financial Reports', 'Tax Calculations', 'Client Portal'],
+      price: '$79/month',
+      category: 'Micro SAAS'
+    },
+    {
+      icon: Brain,
+      title: 'AI Lead Generation',
+      description: 'Intelligent lead generation and qualification with AI-powered prospect identification and scoring.',
+      features: ['Prospect Identification', 'Lead Scoring', 'Email Automation', 'CRM Integration', 'Performance Analytics'],
+      price: '$199/month',
+      category: 'Micro SAAS'
+    },
+    {
+      icon: Brain,
+      title: 'AI Legal Solutions',
+      description: 'Comprehensive legal AI platform with document analysis, case research, and compliance monitoring.',
+      features: ['Document Analysis', 'Case Research', 'Compliance Monitoring', 'Contract Review', 'Legal Research'],
+      price: '$1,199/month',
+      category: 'Micro SAAS'
     }
   ];
 
@@ -951,13 +1242,19 @@ const ServicesPage: React.FC = () => {
                   </div>
                   
                   <div className="flex flex-col sm:flex-row gap-3">
-                    <button className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center group-hover:scale-105">
+                    <a 
+                      href="https://ziontechgroup.com/contact" 
+                      className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center group-hover:scale-105"
+                    >
                       Get Quote
                       <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                    </button>
-                    <button className="flex-1 border border-white/20 text-white font-semibold py-3 px-6 rounded-lg hover:bg-white/10 transition-all duration-300">
+                    </a>
+                    <a 
+                      href={`https://ziontechgroup.com/services#${service.title.toLowerCase().replace(/\s+/g, '-')}`}
+                      className="flex-1 border border-white/20 text-white font-semibold py-3 px-6 rounded-lg hover:bg-white/10 transition-all duration-300 text-center"
+                    >
                       Learn More
-                    </button>
+                    </a>
                   </div>
                 </div>
               ))}
@@ -1011,13 +1308,43 @@ const ServicesPage: React.FC = () => {
             <p className="text-xl text-gray-300 mb-8">
               Let's discuss your project and find the perfect solution for your business needs.
             </p>
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 mb-8">
+              <h3 className="text-2xl font-bold text-white mb-4">Contact Information</h3>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                <div>
+                  <h4 className="text-lg font-semibold text-cyan-400 mb-2">Phone</h4>
+                  <a href="tel:+13024640950" className="text-white hover:text-cyan-400 transition-colors">
+                    +1 302 464 0950
+                  </a>
+                </div>
+                <div>
+                  <h4 className="text-lg font-semibold text-cyan-400 mb-2">Email</h4>
+                  <a href="mailto:kleber@ziontechgroup.com" className="text-white hover:text-cyan-400 transition-colors">
+                    kleber@ziontechgroup.com
+                  </a>
+                </div>
+                <div>
+                  <h4 className="text-lg font-semibold text-cyan-400 mb-2">Address</h4>
+                  <p className="text-white">
+                    364 E Main St STE 1008<br />
+                    Middletown DE 19709
+                  </p>
+                </div>
+              </div>
+            </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+              <a 
+                href="https://ziontechgroup.com/contact" 
+                className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
+              >
                 Get Free Consultation
-              </button>
-              <button className="border border-white/20 text-white font-semibold py-4 px-8 rounded-lg hover:bg-white/10 transition-all duration-300">
+              </a>
+              <a 
+                href="https://ziontechgroup.com/case-studies" 
+                className="border border-white/20 text-white font-semibold py-4 px-8 rounded-lg hover:bg-white/10 transition-all duration-300"
+              >
                 View Portfolio
-              </button>
+              </a>
             </div>
           </div>
         </section>

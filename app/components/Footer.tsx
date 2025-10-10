@@ -105,7 +105,7 @@ const Footer: React.FC = memo(() => {
               {aiServices.slice(0, 8).map((service, index) => (
                 <li key={index}>
                   <Link 
-                    href={service.url}
+                    to={service.url}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
                   >
                     {service.name}
@@ -132,7 +132,7 @@ const Footer: React.FC = memo(() => {
               {itServices.slice(0, 6).map((service, index) => (
                 <li key={index}>
                   <Link 
-                    href={service.url}
+                    to={service.url}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
                   >
                     {service.name}
@@ -159,7 +159,7 @@ const Footer: React.FC = memo(() => {
               {microSaasServices.slice(0, 8).map((service, index) => (
                 <li key={index}>
                   <Link 
-                    href={service.url}
+                    to={service.url}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
                   >
                     {service.name}
@@ -186,7 +186,7 @@ const Footer: React.FC = memo(() => {
               {emergingTech.map((service, index) => (
                 <li key={index}>
                   <Link 
-                    href={service.url}
+                    to={service.url}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
                   >
                     {service.name}
@@ -205,7 +205,7 @@ const Footer: React.FC = memo(() => {
               {companyLinks.map((link, index) => (
                 <li key={index}>
                   <Link 
-                    href={link.url}
+                    to={link.url}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
                   >
                     {link.name}
@@ -218,7 +218,7 @@ const Footer: React.FC = memo(() => {
               {supportLinks.map((link, index) => (
                 <li key={index}>
                   <Link 
-                    href={link.url}
+                    to={link.url}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
                   >
                     {link.name}
