@@ -8,6 +8,8 @@ const Footer: React.FC = () => {
   const quickLinks = [
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
+    { name: 'Team', href: '/team' },
+    { name: 'Careers', href: '/careers' },
     { name: 'Services', href: '/services' },
     { name: 'AI Solutions', href: '/ai-services' },
     { name: 'IT Services', href: '/it-services' },
@@ -282,7 +284,6 @@ const Footer: React.FC = () => {
                 Subscribe
               </button>
             </div>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-1ed2
           </div>
         </div>
 
@@ -307,7 +308,6 @@ const Footer: React.FC = () => {
             </div>
             
             {/* Social Links */}
-<<<<<<< HEAD
             <div className="flex space-x-4">
               {socialLinks.map((social) => (
                 <a
