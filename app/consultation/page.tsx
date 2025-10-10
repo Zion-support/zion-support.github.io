@@ -1,9 +1,6 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Users, Shield } from 'lucide-react';
 
 const ConsultationPage: React.FC = () => {
@@ -48,47 +45,6 @@ const ConsultationPage: React.FC = () => {
       step: '4',
       title: 'Ongoing Support',
       description: 'Provide continuous guidance and support throughout implementation.'
-=======
-import { Phone, Mail, Calendar, CheckCircle, ArrowRight } from 'lucide-react';
-
-const ConsultationPage: React.FC = () => {
-  const consultationTypes = [
-    {
-      title: 'AI Strategy Consultation',
-      description: 'Get expert guidance on implementing AI solutions that align with your business goals.',
-      duration: '2-4 hours',
-      price: 'Starting at $500/hour',
-      features: [
-        'AI readiness assessment',
-        'Technology roadmap development',
-        'ROI analysis and projections',
-        'Implementation timeline planning'
-      ]
-    },
-    {
-      title: 'Cloud Migration Planning',
-      description: 'Comprehensive cloud strategy and migration planning for your infrastructure.',
-      duration: '4-8 hours',
-      price: 'Starting at $400/hour',
-      features: [
-        'Current infrastructure analysis',
-        'Cloud platform selection',
-        'Migration strategy development',
-        'Cost optimization recommendations'
-      ]
-    },
-    {
-      title: 'Cybersecurity Audit',
-      description: 'Complete security assessment and recommendations for your digital infrastructure.',
-      duration: '6-12 hours',
-      price: 'Starting at $600/hour',
-      features: [
-        'Security vulnerability assessment',
-        'Compliance review',
-        'Security policy development',
-        'Incident response planning'
-      ]
->>>>>>> cursor/website-audit-and-update-with-deployment-758b
     }
   ];
 
@@ -100,9 +56,6 @@ const ConsultationPage: React.FC = () => {
         <meta name="keywords" content="IT consultation, AI consulting, cloud consulting, cybersecurity audit, technology strategy" />
       </Helmet>
 
-<<<<<<< HEAD
-      <Navigation />
-      
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -149,8 +102,6 @@ const ConsultationPage: React.FC = () => {
                   </ul>
                 </div>
               ))}
-=======
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -243,7 +194,6 @@ const ConsultationPage: React.FC = () => {
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </button>
               </div>
->>>>>>> cursor/website-audit-and-update-with-deployment-758b
             </div>
           </div>
         </section>
@@ -290,12 +240,8 @@ const ConsultationPage: React.FC = () => {
         </section>
       </main>
       
-      <Footer />
     </>
   );
 };
-<<<<<<< HEAD
 
 export default ConsultationPage;
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-758b

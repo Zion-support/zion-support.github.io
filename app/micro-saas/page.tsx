@@ -1,14 +1,8 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield } from 'lucide-react';
-=======
 import { Link } from 'react-router-dom';
 import { Zap, CheckCircle, ArrowRight, Brain, Shield, BarChart } from 'lucide-react';
->>>>>>> cursor/website-audit-and-update-with-deployment-758b
 
 const MicroSaasPage: React.FC = () => {
   const microSaasTools = [
@@ -32,7 +26,6 @@ const MicroSaasPage: React.FC = () => {
     }
   ];
 
-<<<<<<< HEAD
   const benefits = [
     'No upfront costs',
     'Quick deployment',
@@ -50,8 +43,6 @@ const MicroSaasPage: React.FC = () => {
         <meta name="keywords" content="micro SaaS, small business software, AI tools, business automation, cloud solutions" />
       </Helmet>
 
-      <Navigation />
-      
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -100,16 +91,6 @@ const MicroSaasPage: React.FC = () => {
                   </div>
                 </div>
               ))}
-=======
-  return (
-    <>
-      <Helmet>
-        <title>Micro SaaS Solutions | Zion Tech Group - 50+ AI-Powered Tools</title>
-        <meta name="description" content="Discover our comprehensive suite of 50+ micro SaaS solutions powered by AI. From analytics to security, find the perfect tool for your business needs." />
-        <meta name="keywords" content="micro SaaS, AI tools, business software, analytics dashboard, project management, security monitoring" />
-      </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -215,8 +196,6 @@ const MicroSaasPage: React.FC = () => {
           </div>
         </section>
       </main>
-      
-      <Footer />
     </>
   );
 };
