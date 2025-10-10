@@ -29,9 +29,9 @@ const CareersPage: React.FC = () => {
         'Flexible remote work',
         'Professional development budget'
       ],
-      posted: '2 days ago',
-      featured: true
-      description: 'Lead development of cutting-edge AI solutions and machine learning models for enterprise clients.',
+        posted: '2 days ago',
+        featured: true,
+        description: 'Lead development of cutting-edge AI solutions and machine learning models for enterprise clients.',
       requirements: ['Python, TensorFlow, PyTorch', '5+ years ML experience', 'PhD in Computer Science or related field', 'Experience with cloud platforms']
     },
     {
@@ -42,7 +42,6 @@ const CareersPage: React.FC = () => {
       type: 'Full-time',
       experience: '7+ years',
       description: 'Design and implement scalable cloud infrastructure solutions for enterprise clients.',
-      requirements: ['AWS, Azure, GCP', '7+ years cloud experience', 'Architecture certifications']
       requirements: ['AWS, Azure, GCP', '7+ years cloud experience', 'Architecture certifications', 'Kubernetes expertise']
     },
     {

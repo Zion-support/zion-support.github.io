@@ -1,10 +1,8 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import React, { useState, useMemo } from 'react';
-import { Helmet } from 'react-helmet-async';
 import { Search, Calendar, User, Clock, ArrowRight, Tag } from 'lucide-react';
 
 interface BlogPost {
@@ -19,8 +17,6 @@ interface BlogPost {
   tags: string[];
   image: string;
   featured: boolean;
-  featured: boolean;
-  image: string;
 }
 
 const BlogPage: React.FC = () => {
@@ -104,15 +100,12 @@ const BlogPage: React.FC = () => {
 
     setFilteredPosts(filtered);
   }, [searchTerm, selectedCategory]);
-import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Search, User, Calendar, Clock, ArrowRight } from 'lucide-react';
 
 const BlogPage: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [searchResults, setSearchResults] = useState([]);
 
-  const blogPosts = [
+  const blogPosts: BlogPost[] = [
     {
       id: 1,
       title: 'The Future of AI in Business',
@@ -160,17 +153,6 @@ const BlogPage: React.FC = () => {
   };
 
   const displayPosts = searchQuery ? searchResults : blogPosts;
-      excerpt: 'Exploring how artificial intelligence is transforming enterprise operations and driving innovation across industries.',
-      content: 'Full article content here...',
-      author: 'Dr. Sarah Chen',
-      date: '2024-01-15',
-      readTime: '5 min read',
-      category: 'AI',
-      tags: ['AI', 'Enterprise', 'Innovation'],
-      featured: true,
-      image: '/images/blog/ai-enterprise.jpg'
-    },
-    {
       id: '2',
       title: 'Quantum Computing: Breaking New Ground',
       excerpt: 'Understanding the latest breakthroughs in quantum computing and their practical applications.',

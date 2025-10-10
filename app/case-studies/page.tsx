@@ -36,8 +36,7 @@ const CaseStudiesPage: React.FC = () => {
       ],
       image: '/images/case-studies/ai-customer-service.jpg',
       duration: '3 months',
-      team: '8 specialists'
-      image: '/images/case-studies/ai-customer-service.jpg',
+      team: '8 specialists',
       challenge: 'High customer service costs and long response times',
       solution: 'Implemented AI chatbot and automated ticketing system',
       results: [
@@ -46,7 +45,7 @@ const CaseStudiesPage: React.FC = () => {
         '95% customer satisfaction rate'
       ],
       duration: '3 months',
-      team: '5 specialists'
+      team: '5 specialists',
     },
     {
       id: '2',
@@ -62,9 +61,8 @@ const CaseStudiesPage: React.FC = () => {
         'Enhanced security compliance'
       ],
       image: '/images/case-studies/cloud-migration.jpg',
-      duration: '6 months',
-      team: '12 specialists'
-      image: '/images/case-studies/cloud-migration.jpg',
+        duration: '6 months',
+        team: '12 specialists',
       challenge: 'Legacy systems causing performance issues and security concerns',
       solution: 'Complete cloud migration with enhanced security protocols',
       results: [
@@ -73,7 +71,7 @@ const CaseStudiesPage: React.FC = () => {
         'Zero security incidents'
       ],
       duration: '6 months',
-      team: '8 specialists'
+      team: '8 specialists',
     },
     {
       id: '3',
@@ -90,7 +88,7 @@ const CaseStudiesPage: React.FC = () => {
       ],
       image: '/images/case-studies/cybersecurity-healthcare.jpg',
       duration: '4 months',
-      team: '10 specialists'
+      team: '10 specialists',
     },
     {
       id: '4',
@@ -107,7 +105,7 @@ const CaseStudiesPage: React.FC = () => {
       ],
       image: '/images/case-studies/ml-predictive-analytics.jpg',
       duration: '5 months',
-      team: '6 specialists'
+      team: '6 specialists',
     },
     {
       id: '5',
@@ -124,7 +122,7 @@ const CaseStudiesPage: React.FC = () => {
       ],
       image: '/images/case-studies/digital-transformation.jpg',
       duration: '8 months',
-      team: '15 specialists'
+      team: '15 specialists',
     },
     {
       id: '6',
@@ -141,7 +139,7 @@ const CaseStudiesPage: React.FC = () => {
       ],
       image: '/images/case-studies/blockchain-supply-chain.jpg',
       duration: '7 months',
-      team: '11 specialists'
+      team: '11 specialists',
       image: '/images/case-studies/cybersecurity-healthcare.jpg',
       challenge: 'Increasing cyber threats targeting patient data',
       solution: 'Comprehensive security audit and implementation of advanced protection',
@@ -151,7 +149,7 @@ const CaseStudiesPage: React.FC = () => {
         '24/7 threat monitoring'
       ],
       duration: '4 months',
-      team: '6 specialists'
+      team: '6 specialists',
     },
     {
       id: '4',
@@ -167,7 +165,7 @@ const CaseStudiesPage: React.FC = () => {
         'International recognition'
       ],
       duration: '12 months',
-      team: '12 specialists'
+      team: '12 specialists',
     },
     {
       id: '5',
@@ -183,7 +181,7 @@ const CaseStudiesPage: React.FC = () => {
         '80% improvement in user engagement'
       ],
       duration: '5 months',
-      team: '7 specialists'
+      team: '7 specialists',
     },
     {
       id: '6',
@@ -199,7 +197,7 @@ const CaseStudiesPage: React.FC = () => {
         '99.5% safety record'
       ],
       duration: '8 months',
-      team: '10 specialists'
+      team: '10 specialists',
     }
   ];
 
@@ -208,10 +206,6 @@ const CaseStudiesPage: React.FC = () => {
     { label: 'Client Satisfaction', value: '98%', icon: TrendingUp },
     { label: 'Team Members', value: '50+', icon: Users },
     { label: 'Industry Awards', value: '25+', icon: Award }
-    { icon: Building2, label: 'Projects Completed', value: '150+' },
-    { icon: Users, label: 'Happy Clients', value: '200+' },
-    { icon: TrendingUp, label: 'Success Rate', value: '98%' },
-    { icon: Shield, label: 'Security Score', value: '100%' }
   ];
 
   return (
