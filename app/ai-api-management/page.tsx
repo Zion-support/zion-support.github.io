@@ -3,7 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 
 const AiApiManagementPage: React.FC = () => {
@@ -31,26 +30,6 @@ const AiApiManagementPage: React.FC = () => {
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-=======
-import { CheckCircle, ArrowRight } from 'lucide-react';
-
-const PagePage: React.FC = () => {
-  const features = [
-    {
-      title: 'Feature 1',
-      description: 'Description of feature 1',
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
-    },
-    {
-      title: 'Feature 2',
-      description: 'Description of feature 2',
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
-    },
-    {
-      title: 'Feature 3',
-      description: 'Description of feature 3',
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
->>>>>>> cursor/fix-errors-and-merge-to-main-00e4
     }
   ];
 
