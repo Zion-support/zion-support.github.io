@@ -2,8 +2,8 @@
 import React, { Suspense, memo } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider, Helmet } from 'react-helmet-async';
-import Navigation from './app/components/Navigation';
-import Footer from './app/components/Footer';
+import Navigation from './app/components/EnhancedNavigation';
+import Footer from './app/components/EnhancedFooter';
 import LoadingSpinner from './src/components/LoadingSpinner';
 import UnifiedContentPromotion from './src/components/UnifiedContentPromotion';
 import InteractiveAIROICalculator from './src/components/InteractiveAIROICalculator';
