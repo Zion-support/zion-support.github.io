@@ -28,7 +28,7 @@ export default async function handler(req, res) {
       status: 'pending'
     };
 
-    console.log('Quote request received:', quoteData);
+    // console.log('Quote request received:', quoteData);
 
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
@@ -39,8 +39,8 @@ export default async function handler(req, res) {
       data: quoteData
     }));
 
-  } catch (error) {
-    console.error('Quote submission error:', error);
+  } catch {
+    // console.error('Quote submission error:', error);
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Internal server error' }));
