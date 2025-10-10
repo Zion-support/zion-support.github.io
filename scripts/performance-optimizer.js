@@ -2,196 +2,258 @@
 
 import fs from 'fs';
 import path from 'path';
-import { fileURLToPath } from 'url';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+import { execSync } from 'child_process';
 
 console.log('🚀 Starting performance optimization...');
 
-// Performance optimizations
+// Performance optimizations to implement
 const optimizations = [
-  // Add React.memo to components
   {
-    pattern: /const\s+(\w+):\s*React\.FC\s*=\s*\([^)]*\)\s*=>\s*{/g,
-    replacement: 'const $1: React.FC = React.memo((props) => {'
-  },
-  // Add useCallback to event handlers
-  {
-    pattern: /const\s+(\w+)\s*=\s*\([^)]*\)\s*=>\s*{/g,
-    replacement: 'const $1 = useCallback((...args) => {'
-  },
-  // Add useMemo to expensive calculations
-  {
-    pattern: /const\s+(\w+)\s*=\s*useMemo\(/g,
-    replacement: 'const $1 = useMemo('
-  },
-  // Optimize imports - use specific imports
-  {
-    pattern: /import\s+\*\s+as\s+(\w+)\s+from\s+['"]([^'"]+)['"]/g,
-    replacement: (match, alias, module) => {
-      // This would need more sophisticated analysis to determine which specific imports are used
-      return match; // Keep as is for now
-    }
-  },
-  // Remove unused React imports
-  {
-    pattern: /import\s+React\s+from\s+['"]react['"];\s*(?=\n)/g,
-    replacement: ''
-  },
-  // Add lazy loading for heavy components
-  {
-    pattern: /import\s+(\w+)\s+from\s+['"]\.\.\/components\/(\w+)['"];/g,
-    replacement: 'const $1 = lazy(() => import(\'../components/$2\'));'
-  }
-];
-
-// Bundle size optimizations
-const bundleOptimizations = [
-  // Remove console statements in production
-  {
-    pattern: /console\.(log|warn|error|info|debug)\([^)]*\);/g,
-    replacement: '// console.$1(...); // Removed for production'
-  },
-  // Optimize object destructuring
-  {
-    pattern: /const\s+{\s*([^}]+)\s*}\s*=\s*(\w+);/g,
-    replacement: (match, props, obj) => {
-      const propList = props.split(',').map(p => p.trim()).join(', ');
-      return `const { ${propList} } = ${obj};`;
-    }
-  },
-  // Remove empty functions
-  {
-    pattern: /const\s+(\w+)\s*=\s*\(\)\s*=>\s*{\s*};/g,
-    replacement: '// const $1 = () => {}; // Removed empty function'
-  }
-];
-
-// SEO optimizations
-const seoOptimizations = [
-  // Add proper meta tags
-  {
-    pattern: /<title>([^<]+)<\/title>/g,
-    replacement: '<title>$1 | Zion Tech Group - AI & IT Solutions</title>'
-  },
-  // Add alt attributes to images
-  {
-    pattern: /<img([^>]*?)(?:\s+alt\s*=\s*['"][^'"]*['"])?([^>]*?)>/g,
-    replacement: (match, before, after) => {
-      if (match.includes('alt=')) return match;
-      return `<img${before} alt="Zion Tech Group AI Solutions"${after}>`;
-    }
-  },
-  // Add proper heading hierarchy
-  {
-    pattern: /<h(\d)>([^<]+)<\/h\d>/g,
-    replacement: (match, level, text) => {
-      const hLevel = Math.min(parseInt(level) + 1, 6);
-      return `<h${hLevel}>${text}</h${hLevel}>`;
-    }
-  }
-];
-
-function optimizeFile(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
-
-    // Apply performance optimizations
-    optimizations.forEach(opt => {
-      const newContent = content.replace(opt.pattern, opt.replacement);
-      if (newContent !== content) {
-        content = newContent;
-        modified = true;
-      }
-    });
-
-    // Apply bundle optimizations
-    bundleOptimizations.forEach(opt => {
-      const newContent = content.replace(opt.pattern, opt.replacement);
-      if (newContent !== content) {
-        content = newContent;
-        modified = true;
-      }
-    });
-
-    // Apply SEO optimizations
-    seoOptimizations.forEach(opt => {
-      const newContent = content.replace(opt.pattern, opt.replacement);
-      if (newContent !== content) {
-        content = newContent;
-        modified = true;
-      }
-    });
-
-    if (modified) {
-      fs.writeFileSync(filePath, content);
-      console.log(`✅ Optimized: ${filePath}`);
-      return true;
-    }
-    return false;
-  } catch (error) {
-    console.error(`❌ Error optimizing ${filePath}:`, error.message);
-    return false;
-  }
-}
-
-// Find all TypeScript/JavaScript files
-function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
-  let files = [];
-  
-  try {
-    const items = fs.readdirSync(dir);
-    
-    for (const item of items) {
-      const fullPath = path.join(dir, item);
-      const stat = fs.statSync(fullPath);
+    name: 'Add preload hints for critical resources',
+    file: 'index.html',
+    action: (content) => {
+      const preloadHints = `
+    <!-- Preload critical resources -->
+    <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/index.css" as="style">
+    <link rel="preload" href="/assets/index.js" as="script">
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//www.google-analytics.com">
+    <link rel="dns-prefetch" href="//www.googletagmanager.com">`;
       
-      if (stat.isDirectory()) {
-        if (!['node_modules', '.git', 'dist', 'build', '.next', 'backup-problematic'].includes(item)) {
-          files = files.concat(findFiles(fullPath, extensions));
-        }
-      } else if (extensions.some(ext => item.endsWith(ext))) {
-        files.push(fullPath);
-      }
+      return content.replace('</head>', `${preloadHints}\n  </head>`);
     }
-  } catch (error) {
-    // Skip directories we can't read
+  },
+  {
+    name: 'Optimize Vite config for better performance',
+    file: 'vite.config.ts',
+    action: (content) => {
+      // Add more aggressive optimization settings
+      const optimizedConfig = content.replace(
+        'chunkSizeWarningLimit: 500,',
+        `chunkSizeWarningLimit: 500,
+    rollupOptions: {
+      output: {
+        manualChunks: (id) => {
+          // Vendor chunks
+          if (id.includes('node_modules')) {
+            if (id.includes('react') || id.includes('react-dom')) {
+              return 'vendor-react';
+            }
+            if (id.includes('framer-motion') || id.includes('lucide-react') || id.includes('@heroicons')) {
+              return 'vendor-ui';
+            }
+            if (id.includes('recharts')) {
+              return 'vendor-charts';
+            }
+            if (id.includes('react-router-dom')) {
+              return 'vendor-router';
+            }
+            return 'vendor';
+          }
+          // Page chunks - group similar pages
+          if (id.includes('/src/ai-') || id.includes('/src/machine-learning') || id.includes('/src/nlp') || id.includes('/src/computer-vision')) {
+            return 'pages-ai';
+          }
+          if (id.includes('/src/it-') || id.includes('/src/cloud-') || id.includes('/src/cybersecurity') || id.includes('/src/devops')) {
+            return 'pages-it';
+          }
+          if (id.includes('/src/blog/')) {
+            return 'pages-blog';
+          }
+          if (id.includes('/src/')) {
+            return 'pages-other';
+          }
+        },
+        chunkFileNames: 'assets/[name]-[hash].js',
+        entryFileNames: 'assets/[name]-[hash].js',
+        assetFileNames: 'assets/[name]-[hash].[ext]',
+      },
+    },`
+      );
+      return optimizedConfig;
+    }
+  },
+  {
+    name: 'Add service worker for caching',
+    file: 'public/sw.js',
+    action: () => {
+      const serviceWorkerContent = `// Service Worker for caching
+const CACHE_NAME = 'zion-tech-v1';
+const urlsToCache = [
+  '/',
+  '/assets/index.css',
+  '/assets/index.js',
+  '/assets/vendor.js'
+];
+
+self.addEventListener('install', (event) => {
+  event.waitUntil(
+    caches.open(CACHE_NAME)
+      .then((cache) => cache.addAll(urlsToCache))
+  );
+});
+
+self.addEventListener('fetch', (event) => {
+  event.respondWith(
+    caches.match(event.request)
+      .then((response) => {
+        if (response) {
+          return response;
+        }
+        return fetch(event.request);
+      }
+    )
+  );
+});`;
+      return serviceWorkerContent;
+    }
   }
+];
+
+// Apply optimizations
+optimizations.forEach(opt => {
+  console.log(`📝 ${opt.name}...`);
   
-  return files;
-}
-
-// Main optimization process
-const files = findFiles('./app');
-let optimizedCount = 0;
-
-console.log(`Found ${files.length} files to optimize...`);
-
-files.forEach(file => {
-  if (optimizeFile(file)) {
-    optimizedCount++;
+  if (opt.file === 'public/sw.js') {
+    // Create new file
+    const filePath = path.join('public', 'sw.js');
+    fs.writeFileSync(filePath, opt.action());
+    console.log(`✅ Created ${filePath}`);
+  } else {
+    // Modify existing file
+    const filePath = path.join(opt.file);
+    if (fs.existsSync(filePath)) {
+      const content = fs.readFileSync(filePath, 'utf8');
+      const optimizedContent = opt.action(content);
+      fs.writeFileSync(filePath, optimizedContent);
+      console.log(`✅ Optimized ${filePath}`);
+    } else {
+      console.log(`⚠️  File not found: ${filePath}`);
+    }
   }
 });
 
-console.log(`\n🎉 Performance optimization complete! Modified ${optimizedCount} files.`);
+// Create performance monitoring component
+const performanceMonitorContent = `import React, { useEffect } from 'react';
 
-// Create a performance report
-const report = {
-  timestamp: new Date().toISOString(),
-  filesProcessed: files.length,
-  filesOptimized: optimizedCount,
-  optimizations: [
-    'React.memo for component memoization',
-    'useCallback for event handlers',
-    'useMemo for expensive calculations',
-    'Lazy loading for heavy components',
-    'Console statement removal',
-    'SEO meta tag improvements',
-    'Image alt attribute additions'
-  ]
+const PerformanceMonitor: React.FC = () => {
+  useEffect(() => {
+    // Monitor Core Web Vitals
+    if ('web-vitals' in window) {
+      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
+        getCLS(console.log);
+        getFID(console.log);
+        getFCP(console.log);
+        getLCP(console.log);
+        getTTFB(console.log);
+      });
+    }
+
+    // Monitor performance metrics
+    const observer = new PerformanceObserver((list) => {
+      for (const entry of list.getEntries()) {
+        if (entry.entryType === 'navigation') {
+          console.log('Navigation timing:', entry);
+        }
+      }
+    });
+    observer.observe({ entryTypes: ['navigation'] });
+
+    return () => observer.disconnect();
+  }, []);
+
+  return null;
 };
 
-fs.writeFileSync('./performance-optimization-report.json', JSON.stringify(report, null, 2));
-console.log('📊 Performance report saved to performance-optimization-report.json');
+export default PerformanceMonitor;`;
+
+fs.writeFileSync('src/components/PerformanceMonitor.tsx', performanceMonitorContent);
+console.log('✅ Created PerformanceMonitor component');
+
+// Create SEO optimization component
+const seoOptimizerContent = `import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+interface SEOOptimizerProps {
+  title?: string;
+  description?: string;
+  keywords?: string[];
+  canonicalUrl?: string;
+  ogImage?: string;
+}
+
+const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
+  title = 'Zion Tech Group - Advanced AI and IT Solutions',
+  description = 'Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology.',
+  keywords = ['AI solutions', 'enterprise AI', 'quantum computing', 'autonomous systems', 'digital transformation'],
+  canonicalUrl = 'https://ziontechgroup.com',
+  ogImage = 'https://ziontechgroup.com/og-image.jpg'
+}) => {
+  return (
+    <Helmet>
+      <title>{title}</title>
+      <meta name="description" content={description} />
+      <meta name="keywords" content={keywords.join(', ')} />
+      <link rel="canonical" href={canonicalUrl} />
+      
+      {/* Open Graph */}
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:image" content={ogImage} />
+      <meta property="og:url" content={canonicalUrl} />
+      <meta property="og:type" content="website" />
+      
+      {/* Twitter */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={ogImage} />
+      
+      {/* Structured Data */}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "TechCompany",
+          "name": "Zion Tech Group",
+          "description": description,
+          "url": canonicalUrl,
+          "logo": "https://ziontechgroup.com/logo.png",
+          "foundingDate": "2020",
+          "numberOfEmployees": "50-100",
+          "industry": "Technology",
+          "services": [
+            "AI Solutions",
+            "Digital Transformation",
+            "Cloud Services",
+            "Automation",
+            "Business Intelligence"
+          ],
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+1-302-464-0950",
+            "contactType": "customer service",
+            "email": "kleber@ziontechgroup.com"
+          }
+        })}
+      </script>
+    </Helmet>
+  );
+};
+
+export default SEOOptimizer;`;
+
+fs.writeFileSync('src/components/SEOOptimizer.tsx', seoOptimizerContent);
+console.log('✅ Created SEOOptimizer component');
+
+console.log('🎉 Performance optimization completed!');
+
+// Run build to verify everything still works
+console.log('🔨 Running build verification...');
+try {
+  execSync('npm run build', { stdio: 'inherit' });
+  console.log('✅ Build successful after performance optimization!');
+} catch (error) {
+  console.error('❌ Build failed after performance optimization:', error.message);
+  process.exit(1);
+}

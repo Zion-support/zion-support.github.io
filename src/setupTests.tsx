@@ -11,7 +11,7 @@ global.TextDecoder = TextDecoder as typeof globalThis.TextDecoder;
 // Suppress jsdom navigation warnings
 const originalConsoleError = console.error;
 // eslint-disable-next-line no-console
-console.error = (...args) => {
+console.error = (...args: any[]) => {
   const message = args[0]?.toString?.() || args[0]?.message || '';
   if (message.includes('Not implemented: navigation') || 
       message.includes('navigation (except hash changes)')) {
@@ -62,7 +62,7 @@ global.fetch = jest.fn();
 const originalConsoleWarn = console.warn;
 const originalConsoleInfo = console.info;
 // eslint-disable-next-line no-console
-console.warn = (...args) => {
+console.warn = (...args: any[]) => {
   const message = args[0]?.toString?.() || '';
   if (message.includes('Warning: ReactDOM.render is no longer supported')) {
     return;
@@ -70,7 +70,7 @@ console.warn = (...args) => {
   originalConsoleWarn(...args);
 };
 // eslint-disable-next-line no-console
-console.info = (...args) => {
+console.info = (...args: any[]) => {
   const message = args[0]?.toString?.() || '';
   if (message.includes('ReactDOM.render is no longer supported')) {
     return;

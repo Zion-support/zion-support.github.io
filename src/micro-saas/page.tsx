@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { BarChart, Palette, CreditCard, ShieldCheck, Settings2, CheckCircle, Star, Zap } from 'lucide-react';
+import { BarChart, Palette, CreditCard, ShieldCheck, CheckCircle, Star, Zap, Brain } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
