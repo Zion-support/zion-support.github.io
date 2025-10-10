@@ -171,7 +171,7 @@ const BusinessIntelligencePage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    </div>
   );
 };
 
