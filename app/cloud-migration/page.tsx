@@ -350,6 +350,7 @@ const CloudMigrationPage: React.FC = () => {
       <Footer />
     </div>
   );
+};
 
 CloudMigrationPage.displayName = 'CloudMigrationPage';
 

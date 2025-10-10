@@ -51,7 +51,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
       page_title: document.title,
       page_location: window.location.href,
       send_page_view: true
-
+    });
   };
 
   const initializePerformanceMonitoring = () => {
@@ -68,8 +68,8 @@ const Analytics: React.FC<AnalyticsProps> = ({
             if (!(entry as any).hadRecentInput) {
               trackEvent('web_vitals', 'CLS', (entry as any).value);
             }
-          }
         }
+      });
 
       observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
 
