@@ -37,6 +37,50 @@ const Navigation: React.FC = () => {
   const toggleItServices = () => setItServicesOpen(!itServicesOpen);
   const toggleMicroSaas = () => setMicroSaasOpen(!microSaasOpen);
 
+  const closeAllMenus = () => {
+    setServicesOpen(false);
+    setAiServicesOpen(false);
+    setItServicesOpen(false);
+    setMicroSaasOpen(false);
+  };
+
+  // Service data
+  const aiServices = [
+    { name: 'AI Analytics', href: '/ai-analytics', icon: BarChart, description: 'Advanced data insights' },
+    { name: 'AI Automation', href: '/ai-automation', icon: Zap, description: 'Process automation' },
+    { name: 'AI Customer Support', href: '/ai-customer-support', icon: Users, description: 'AI-powered support' },
+    { name: 'AI Content Generation', href: '/ai-content-generation', icon: FileText, description: 'Content creation' },
+    { name: 'AI Healthcare', href: '/ai-healthcare', icon: Shield, description: 'Medical AI solutions' },
+    { name: 'AI Fintech', href: '/ai-fintech', icon: TrendingUp, description: 'Financial AI' },
+    { name: 'AI Cybersecurity', href: '/ai-cybersecurity', icon: Lock, description: 'Security solutions' },
+    { name: 'AI Mobile Apps', href: '/ai-mobile-app-development', icon: Smartphone, description: 'Mobile AI' }
+  ];
+
+  const itServices = [
+    { name: 'Cloud Migration', href: '/cloud-migration', icon: Cloud, description: 'Seamless migration' },
+    { name: 'DevOps & CI/CD', href: '/devops', icon: Settings, description: 'Development operations' },
+    { name: 'Cybersecurity', href: '/cybersecurity', icon: Shield, description: 'Security solutions' },
+    { name: 'Database Services', href: '/database-services', icon: Database, description: 'Database management' },
+    { name: 'Network Solutions', href: '/network-solutions', icon: Globe, description: 'Network infrastructure' },
+    { name: 'IT Support', href: '/it-support', icon: Users, description: 'Technical support' }
+  ];
+
+  const microSaasServices = [
+    { name: 'Analytics Dashboard', href: '/micro-saas/analytics-dashboard', icon: BarChart, description: 'Business analytics' },
+    { name: 'Content Generator', href: '/micro-saas/content-generator', icon: FileText, description: 'AI content creation' },
+    { name: 'Email Marketing', href: '/micro-saas/email-marketing', icon: Mail, description: 'Email automation' },
+    { name: 'Social Manager', href: '/micro-saas/social-manager', icon: Users, description: 'Social media management' },
+    { name: 'Expense Tracker', href: '/micro-saas/expense-tracker', icon: TrendingUp, description: 'Financial tracking' },
+    { name: 'Appointment Scheduler', href: '/micro-saas/appointment-scheduler', icon: Calendar, description: 'Scheduling system' }
+  ];
+
+  const emergingTech = [
+    { name: 'Quantum Computing', href: '/quantum-computing', icon: Cpu, description: 'Next-gen computing' },
+    { name: 'IoT & Edge Computing', href: '/iot-edge-computing', icon: Globe, description: 'Connected devices' },
+    { name: 'Blockchain & Web3', href: '/blockchain-web3', icon: Shield, description: 'Decentralized solutions' },
+    { name: 'Business Intelligence', href: '/business-intelligence', icon: BarChart, description: 'Data insights' }
+  ];
+
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
