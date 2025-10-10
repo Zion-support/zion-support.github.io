@@ -919,8 +919,8 @@ const AboutPage: React.FC = () => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-33bd
                   ))}
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </section>
