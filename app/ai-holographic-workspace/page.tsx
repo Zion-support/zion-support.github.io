@@ -20,8 +20,8 @@ const AIHolographicWorkspacePage: React.FC = () => {
       <section className="py-20 px-4">
         <div className="container mx-auto text-center">
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">AI Holographic Workspace<p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">Step into the future with our immersive 3D holographic workspace that revolutionizes how you interact with digital content and collaborate with your team.</p>
-            </p>
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">AI Holographic Workspace</h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">Step into the future with our immersive 3D holographic workspace that revolutionizes how you interact with digital content and collaborate with your team.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold">Enter Holographic Space<a href="/demo" className="cyber-button-secondary px-8 py-4 text-lg font-semibold">View Demo</a>
               </a>
@@ -34,51 +34,51 @@ const AIHolographicWorkspacePage: React.FC = () => {
       <section className="py-20 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Immersive 3D Features<p className="text-xl text-gray-300 max-w-3xl mx-auto">Experience the next generation of workspace technology with holographic displays and spatial computing.</p>
-            </p>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Immersive 3D Features</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Experience the next generation of workspace technology with holographic displays and spatial computing.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-lg p-6 hover:border-cyan-400/40 transition-all duration-300">
               <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center mb-4">
                 <Cube className="w-6 h-6 text-white" />
-              <h3 className="text-xl font-semibold text-white mb-3">3D Holographic Displays<p className="text-gray-300">Interact with your data and applications in full 3D space using advanced holographic projection technology.</p>
-              </p>
+              <h3 className="text-xl font-semibold text-white mb-3"> className="text-gray-300"</h3>
+            <p className="text-gray-300">Interact with your data and applications in full 3D space using advanced holographic projection technology.</p>
             </div>
 
             <div className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-lg p-6 hover:border-cyan-400/40 transition-all duration-300">
               <div className="w-12 h-12 bg-gradient-to-r from-purple-400 to-pink-500 rounded-lg flex items-center justify-center mb-4">
                 <Users className="w-6 h-6 text-white" />
-              <h3 className="text-xl font-semibold text-white mb-3">Virtual Collaboration<p className="text-gray-300">Meet and collaborate with team members in shared virtual spaces with realistic avatars and spatial audio.</p>
-              </p>
+              <h3 className="text-xl font-semibold text-white mb-3"> className="text-gray-300"</h3>
+            <p className="text-gray-300">Meet and collaborate with team members in shared virtual spaces with realistic avatars and spatial audio.</p>
             </div>
 
             <div className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-lg p-6 hover:border-cyan-400/40 transition-all duration-300">
               <div className="w-12 h-12 bg-gradient-to-r from-pink-400 to-red-500 rounded-lg flex items-center justify-center mb-4">
                 <Target className="w-6 h-6 text-white" />
-              <h3 className="text-xl font-semibold text-white mb-3">Gesture Control<p className="text-gray-300">Control your workspace with natural hand gestures and eye tracking for intuitive interaction.</p>
-              </p>
+              <h3 className="text-xl font-semibold text-white mb-3"> className="text-gray-300"</h3>
+            <p className="text-gray-300">Control your workspace with natural hand gestures and eye tracking for intuitive interaction.</p>
             </div>
 
             <div className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-lg p-6 hover:border-cyan-400/40 transition-all duration-300">
               <div className="w-12 h-12 bg-gradient-to-r from-green-400 to-teal-500 rounded-lg flex items-center justify-center mb-4">
                 <BarChart className="w-6 h-6 text-white" />
-              <h3 className="text-xl font-semibold text-white mb-3">Spatial Data Visualization<p className="text-gray-300">Visualize complex data sets in 3D space for better understanding and analysis.</p>
-              </p>
+              <h3 className="text-xl font-semibold text-white mb-3"> className="text-gray-300"</h3>
+            <p className="text-gray-300">Visualize complex data sets in 3D space for better understanding and analysis.</p>
             </div>
 
             <div className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-lg p-6 hover:border-cyan-400/40 transition-all duration-300">
               <div className="w-12 h-12 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-lg flex items-center justify-center mb-4">
                 <Brain className="w-6 h-6 text-white" />
-              <h3 className="text-xl font-semibold text-white mb-3">AI Spatial Assistant<p className="text-gray-300">Intelligent AI assistant that understands spatial context and provides contextual help.</p>
-              </p>
+              <h3 className="text-xl font-semibold text-white mb-3"> className="text-gray-300"</h3>
+            <p className="text-gray-300">Intelligent AI assistant that understands spatial context and provides contextual help.</p>
             </div>
 
             <div className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-lg p-6 hover:border-cyan-400/40 transition-all duration-300">
               <div className="w-12 h-12 bg-gradient-to-r from-indigo-400 to-purple-500 rounded-lg flex items-center justify-center mb-4">
                 <Settings className="w-6 h-6 text-white" />
-              <h3 className="text-xl font-semibold text-white mb-3">Customizable Environment<p className="text-gray-300">Personalize your holographic workspace with custom themes, layouts, and virtual objects.</p>
-              </p>
+              <h3 className="text-xl font-semibold text-white mb-3"> className="text-gray-300"</h3>
+            <p className="text-gray-300">Personalize your holographic workspace with custom themes, layouts, and virtual objects.</p>
             </div>
           </div>
         </div>
@@ -88,8 +88,8 @@ const AIHolographicWorkspacePage: React.FC = () => {
       <section className="py-20 px-4 bg-slate-800/30">
         <div className="container mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Holographic Pricing<p className="text-xl text-gray-300 max-w-3xl mx-auto">Choose the perfect holographic workspace plan for your needs.</p>
-            </p>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Holographic Pricing</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Choose the perfect holographic workspace plan for your needs.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -161,8 +161,8 @@ const AIHolographicWorkspacePage: React.FC = () => {
       <section className="py-20 px-4">
         <div className="container mx-auto text-center">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Ready to Enter the Holographic Future?<p className="text-xl text-gray-300 mb-8">Join the revolution in workspace technology and experience productivity like never before.</p>
-            </p>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Ready to Enter the Holographic Future?</h2>
+            <p className="text-xl text-gray-300 mb-8">Join the revolution in workspace technology and experience productivity like never before.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold">Start Your Holographic Journey<a href="/demo" className="cyber-button-secondary px-8 py-4 text-lg font-semibold">Schedule Demo</a>
               </a>

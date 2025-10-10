@@ -383,9 +383,8 @@ export default function CaseStudiesPage() {
                       alt={study.title}
                       className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
                     />
-                    <div className="absolute top-4 left-4">
-                      <div className={`w-8 h-8 ${getIndustryColor(study.industry)}`}>{React.createElement(getIndustryIcon(study.industry), { className: 'w-8 h-8' })}</div>
-                      </div>
+                    <div className="$2" />
+            <div className={`w-8 h-8 ${getIndustryColor(study.industry)}`}>{React.createElement(getIndustryIcon(study.industry), { className: 'w-8 h-8' })}</div>
                     </div>
                     <div className="absolute top-4 right-4">
                       <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full">{study.industry.charAt(0).toUpperCase() + study.industry.slice(1)}</span>
@@ -434,12 +433,11 @@ export default function CaseStudiesPage() {
                     </div>
 
                     <div className="border-t border-gray-700 pt-4">
-                      <div className="flex items-center space-x-4">
-                        <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-sm">{study.testimonial.avatar}</div>
-                        </div>
+                      <div className="$2" />
+            <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-sm">{study.testimonial.avatar}</div>
                         <div className="flex-1">
-                          <p className="text-gray-300 text-sm italic mb-1">"{study.testimonial.quote}"<div className="text-cyan-400 text-xs font-medium">{study.testimonial.author}<div className="text-gray-400 text-xs">{study.testimonial.role}</div>
-                        </div>
+                          <p className="text-gray-300 text-sm italic mb-1">"{study.testimonial.quote}"<div className="text-cyan-400 text-xs font-medium">{study.testimonial.author}</div>
+            <div className="text-gray-400 text-xs">{study.testimonial.role}</div>
                       </div>
                     </div>
                   </div>
@@ -453,8 +451,8 @@ export default function CaseStudiesPage() {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-cyan-600 to-purple-700">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">Ready to Create Your Success Story?<p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">Join hundreds of businesses that have already transformed their operations with our AI and technology solutions.</p>
-          </p>
+          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">Ready to Create Your Success Story?</h2>
+            <p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">Join hundreds of businesses that have already transformed their operations with our AI and technology solutions.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"

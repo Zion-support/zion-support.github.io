@@ -112,8 +112,8 @@ const GDPRPage: React.FC = () => {
         {/* Introduction */}
         <section className="mb-16">
           <div className="cyber-card p-8">
-            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Our GDPR Commitment<p className="text-gray-300 mb-4 leading-relaxed">Zion Tech Group is fully committed to compliance with the General Data Protection Regulation (GDPR) and other applicable data protection laws. We have implemented comprehensive measures to ensure the protection of your personal data and respect for your privacy rights.<p className="text-gray-300 leading-relaxed">This page outlines our GDPR compliance measures, your rights under GDPR, and how you can exercise those rights.</p>
-            </p>
+            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Our GDPR Commitment<p className="text-gray-300 mb-4 leading-relaxed">Zion Tech Group is fully committed to compliance with the General Data Protection Regulation (GDPR) and other applicable data protection laws. We have implemented comprehensive measures to ensure the protection of your personal data and respect for your privacy rights.</p>
+            <p className="text-gray-300 leading-relaxed">This page outlines our GDPR compliance measures, your rights under GDPR, and how you can exercise those rights.</p>
           </div>
         </section>
 
@@ -211,8 +211,8 @@ const GDPRPage: React.FC = () => {
         {/* How to Exercise Your Rights */}
         <section className="mb-16">
           <div className="cyber-card p-8">
-            <h2 className="text-2xl font-bold text-white mb-6 neon-text">How to Exercise Your Rights<p className="text-gray-300 mb-6">To exercise any of your GDPR rights, please contact us using the information below. We will respond to your request within 30 days.</p>
-            </p>
+            <h2 className="text-2xl font-bold text-white mb-6 neon-text">How to Exercise Your Rights</h2>
+            <p className="text-gray-300 mb-6">To exercise any of your GDPR rights, please contact us using the information below. We will respond to your request within 30 days.</p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div>
                 <h3 className="text-lg font-semibold text-cyan-400 mb-4">Making a Request</h3>
@@ -236,8 +236,8 @@ const GDPRPage: React.FC = () => {
                 </ul>
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-cyan-400 mb-4">Identity Verification<p className="text-gray-300 mb-4">To protect your privacy, we may need to verify your identity before processing your request.</p>
-                </p>
+                <h3 className="text-lg font-semibold text-cyan-400 mb-4"> className="text-gray-300 mb-4"</h3>
+            <p className="text-gray-300 mb-4">To protect your privacy, we may need to verify your identity before processing your request.</p>
                 <ul className="space-y-2 text-gray-300">
                   <li className="flex items-start">
                     <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
@@ -260,8 +260,8 @@ const GDPRPage: React.FC = () => {
         {/* Data Breach Notification */}
         <section className="mb-16">
           <div className="cyber-card p-8">
-            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Data Breach Notification<p className="text-gray-300 mb-4">In the unlikely event of a data breach that poses a risk to your rights and freedoms, we will:</p>
-            </p>
+            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Data Breach Notification</h2>
+            <p className="text-gray-300 mb-4">In the unlikely event of a data breach that poses a risk to your rights and freedoms, we will:</p>
             <ul className="space-y-2 text-gray-300">
               <li className="flex items-start">
                 <AlertTriangle className="w-5 h-5 text-yellow-400 mr-2 mt-0.5 flex-shrink-0" />
@@ -286,8 +286,8 @@ const GDPRPage: React.FC = () => {
         {/* Contact Information */}
         <section className="mb-16">
           <div className="cyber-card p-8">
-            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Contact Our Data Protection Officer<p className="text-gray-300 mb-6">For any questions about our GDPR compliance or to exercise your rights, please contact our Data Protection Officer:</p>
-            </p>
+            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Contact Our Data Protection Officer</h2>
+            <p className="text-gray-300 mb-6">For any questions about our GDPR compliance or to exercise your rights, please contact our Data Protection Officer:</p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
                 <h3 className="text-lg font-semibold text-cyan-400 mb-3">Zion Tech Group</h3>

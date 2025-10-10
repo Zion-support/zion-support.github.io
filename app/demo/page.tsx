@@ -115,8 +115,8 @@ const DemoPage: React.FC = () => {
 
       <main className="container mx-auto px-4 py-16 pt-24">{/* Hero Section */}</main>
         <section className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 neon-text">Book a Demo<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">See our AI and IT solutions in action. Schedule a personalized demo to discover how we can transform your business.</p>
-          </p>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 neon-text">Book a Demo</h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">See our AI and IT solutions in action. Schedule a personalized demo to discover how we can transform your business.</p>
           <div className="flex flex-wrap justify-center gap-4">
             <div className="flex items-center space-x-2 bg-cyan-500/20 px-4 py-2 rounded-lg">
               <Play className="w-5 h-5 text-cyan-400" />
@@ -282,8 +282,8 @@ const DemoPage: React.FC = () => {
         {/* Contact Information */}
         <section className="mb-16">
           <div className="cyber-card p-8">
-            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Need Help Scheduling?<p className="text-gray-300 mb-6">If you need assistance scheduling your demo or have questions about our solutions, our team is here to help.</p>
-            </p>
+            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Need Help Scheduling?</h2>
+            <p className="text-gray-300 mb-6">If you need assistance scheduling your demo or have questions about our solutions, our team is here to help.</p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="text-center">
                 <Phone className="w-8 h-8 text-cyan-400 mx-auto mb-3" />

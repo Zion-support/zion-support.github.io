@@ -279,8 +279,8 @@ const CloudMigrationPage: React.FC = () => {
           {/* CTA Section */}
           <section className="py-16 px-4 bg-gradient-to-r from-purple-600/20 to-blue-600/20">
             <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-4xl font-bold text-white mb-6">Ready to Migrate to the Cloud?<p className="text-xl text-gray-300 mb-8">Join hundreds of businesses that have successfully migrated to the cloud with our expert team.</p>
-              </p>
+              <h2 className="text-4xl font-bold text-white mb-6">Ready to Migrate to the Cloud?</h2>
+            <p className="text-xl text-gray-300 mb-8">Join hundreds of businesses that have successfully migrated to the cloud with our expert team.</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="cyber-button px-8 py-4 text-lg">Start Your Migration<button className="cyber-button-outline px-8 py-4 text-lg">Contact Our Experts</button>
                 </button>

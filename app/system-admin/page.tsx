@@ -186,8 +186,8 @@ const SystemAdminPage: React.FC = () => {
           <div className="bg-gradient-to-r from-red-600/20 to-orange-600/20 rounded-2xl p-8 border border-red-500/30">
             <div className="flex items-center mb-4">
               <AlertTriangle className="w-8 h-8 text-red-400 mr-3" />
-              <h2 className="text-2xl font-bold text-white">24/7 Emergency Support<p className="text-gray-300 mb-6">Critical system issues can't wait. Our emergency support team is available around the clock to resolve urgent problems and minimize downtime.</p>
-            </p>
+              <h2 className="text-2xl font-bold text-white">24/7 Emergency Support</h2>
+            <p className="text-gray-300 mb-6">Critical system issues can't wait. Our emergency support team is available around the clock to resolve urgent problems and minimize downtime.</p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a
                 href="tel:+13024640950"
@@ -207,8 +207,8 @@ const SystemAdminPage: React.FC = () => {
 
         {/* CTA Section */}
         <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 rounded-2xl p-12 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">Secure Your Infrastructure Today<p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Don't wait for system failures. Let our expert administrators keep your infrastructure running smoothly and securely.</p>
-          </p>
+          <h2 className="text-3xl font-bold text-white mb-4">Secure Your Infrastructure Today</h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Don't wait for system failures. Let our expert administrators keep your infrastructure running smoothly and securely.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact"

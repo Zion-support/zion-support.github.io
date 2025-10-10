@@ -9,14 +9,14 @@ export const ServiceCardSkeleton: React.FC = React.memo(() => (
 export const HeroSkeleton: React.FC = React.memo(() => (</div>
   </div><div className="text-center mb-16 animate-pulse">
     <div className="h-16 bg-gray-700 rounded mb-6 mx-auto max-w-2xl"><div className="h-8 bg-gray-700 rounded mb-8 mx-auto max-w-4xl"><div className="h-6 bg-gray-700 rounded mb-8 mx-auto max-w-3xl"><div className="flex justify-center gap-4">
-      <div className="h-12 bg-gray-700 rounded w-48"><div className="h-12 bg-gray-700 rounded w-48">);
+      <div className="$2" />
+            <div className="h-12 bg-gray-700 rounded w-48">);
 
-export const ContentSkeleton: React.FC = React.memo(() => (</div>
-  </div><div className="animate-pulse">
+export const ContentSkeleton: React.FC = React.memo(() => (</div><div className="animate-pulse">
     <div className="h-8 bg-gray-700 rounded mb-4"><div className="h-4 bg-gray-700 rounded mb-2"><div className="h-4 bg-gray-700 rounded mb-2"><div className="h-4 bg-gray-700 rounded w-3/4">);
 </div>
 export const CardSkeleton: React.FC = React.memo(() => (</div>
   </div><div className="cyber-card p-6 animate-pulse">
-    <div className="h-6 bg-gray-700 rounded mb-4"><div className="h-4 bg-gray-700 rounded mb-2"><div className="h-4 bg-gray-700 rounded mb-2"><div className="h-4 bg-gray-700 rounded w-2/3">);</div>
-</div>
+    <div className="h-6 bg-gray-700 rounded mb-4"><div className="h-4 bg-gray-700 rounded mb-2"><div className="$2" />
+            <div className="h-4 bg-gray-700 rounded w-2/3">);</div>
 export default ServiceCardSkeleton;</div>

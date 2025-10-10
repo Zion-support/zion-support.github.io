@@ -104,8 +104,8 @@ const CookiesPage: React.FC = () => {
         {/* Introduction */}
         <section className="mb-16">
           <div className="cyber-card p-8">
-            <h2 className="text-2xl font-bold text-white mb-6 neon-text">What Are Cookies?<p className="text-gray-300 mb-4 leading-relaxed">Cookies are small text files that are placed on your computer or mobile device when you visit a website. They are widely used to make websites work more efficiently and to provide information to website owners.<p className="text-gray-300 leading-relaxed">We use cookies and similar technologies to improve your browsing experience, personalize content and ads, provide social media features, and analyze our traffic. We also share information about your use of our site with our social media, advertising, and analytics partners.</p>
-            </p>
+            <h2 className="text-2xl font-bold text-white mb-6 neon-text">What Are Cookies?<p className="text-gray-300 mb-4 leading-relaxed">Cookies are small text files that are placed on your computer or mobile device when you visit a website. They are widely used to make websites work more efficiently and to provide information to website owners.</p>
+            <p className="text-gray-300 leading-relaxed">We use cookies and similar technologies to improve your browsing experience, personalize content and ads, provide social media features, and analyze our traffic. We also share information about your use of our site with our social media, advertising, and analytics partners.</p>
           </div>
         </section>
 
@@ -168,8 +168,8 @@ const CookiesPage: React.FC = () => {
             <h2 className="text-2xl font-bold text-white mb-6 neon-text">Managing Your Cookie Preferences</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div>
-                <h3 className="text-xl font-semibold text-cyan-400 mb-4">Browser Settings<p className="text-gray-300 mb-4">Most web browsers allow you to control cookies through their settings preferences. You can set your browser to refuse cookies or delete certain cookies.</p>
-                </p>
+                <h3 className="text-xl font-semibold text-cyan-400 mb-4"> className="text-gray-300 mb-4"</h3>
+            <p className="text-gray-300 mb-4">Most web browsers allow you to control cookies through their settings preferences. You can set your browser to refuse cookies or delete certain cookies.</p>
                 <ul className="space-y-2 text-gray-300">
                   <li className="flex items-start">
                     <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
@@ -190,8 +190,8 @@ const CookiesPage: React.FC = () => {
                 </ul>
               </div>
               <div>
-                <h3 className="text-xl font-semibold text-cyan-400 mb-4">Cookie Consent<p className="text-gray-300 mb-4">When you first visit our website, you'll see a cookie consent banner where you can choose which types of cookies to accept.</p>
-                </p>
+                <h3 className="text-xl font-semibold text-cyan-400 mb-4"> className="text-gray-300 mb-4"</h3>
+            <p className="text-gray-300 mb-4">When you first visit our website, you'll see a cookie consent banner where you can choose which types of cookies to accept.</p>
                 <div className="space-y-3">
                   <div className="flex items-center justify-between p-3 bg-slate-800/50 rounded-lg">
                     <span className="text-white">Essential Cookies<span className="text-green-400 text-sm">Always Active</span>
@@ -211,8 +211,8 @@ const CookiesPage: React.FC = () => {
         {/* Third-Party Cookies */}
         <section className="mb-16">
           <div className="cyber-card p-8">
-            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Third-Party Cookies<p className="text-gray-300 mb-6">Some cookies on our site are set by third-party services that appear on our pages. We have no control over these cookies.</p>
-            </p>
+            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Third-Party Cookies</h2>
+            <p className="text-gray-300 mb-6">Some cookies on our site are set by third-party services that appear on our pages. We have no control over these cookies.</p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
                 <h3 className="text-lg font-semibold text-cyan-400 mb-3">Google Analytics<p className="text-gray-300 text-sm mb-2">We use Google Analytics to understand how visitors interact with our website.<a href="https://policies.google.com/privacy" className="text-cyan-400 hover:text-cyan-300 text-sm">Google Privacy Policy →</a>
@@ -229,8 +229,8 @@ const CookiesPage: React.FC = () => {
         {/* Contact Information */}
         <section className="mb-16">
           <div className="cyber-card p-8">
-            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Questions About Cookies?<p className="text-gray-300 mb-6">If you have any questions about our use of cookies or this Cookie Policy, please contact us:</p>
-            </p>
+            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Questions About Cookies?</h2>
+            <p className="text-gray-300 mb-6">If you have any questions about our use of cookies or this Cookie Policy, please contact us:</p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
                 <h3 className="text-lg font-semibold text-cyan-400 mb-3">Zion Tech Group</h3>

@@ -215,8 +215,8 @@ export default function AISpaceTechnologyProPage() {
                   <div className="w-20 h-20 mx-auto bg-gradient-to-r from-cyan-400 to-purple-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                     <stat.icon className="w-10 h-10 text-white" />
                   </div>
-                  <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-full blur opacity-30 group-hover:opacity-50 transition-opacity"><div className="text-4xl md:text-5xl font-bold text-white mb-2">{stat.number}<div className="text-gray-400 font-medium">{stat.label}</div>
-              </div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-full blur opacity-30 group-hover:opacity-50 transition-opacity"><div className="text-4xl md:text-5xl font-bold text-white mb-2">{stat.number}</div>
+            <div className="text-gray-400 font-medium">{stat.label}</div>
             ))}
           </div>
         </div>
@@ -269,8 +269,8 @@ export default function AISpaceTechnologyProPage() {
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Enterprise Pricing<p className="text-lg text-gray-300 max-w-3xl mx-auto">Flexible pricing options for space agencies and aerospace companies</p>
-            </p>
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Enterprise Pricing</h2>
+            <p className="text-lg text-gray-300 max-w-3xl mx-auto">Flexible pricing options for space agencies and aerospace companies</p>
           </div>
 
           <div className="max-w-4xl mx-auto">
@@ -330,8 +330,8 @@ export default function AISpaceTechnologyProPage() {
                     <span className="text-white font-bold text-lg">{testimonial.avatar}</span>
                   </div>
                   <div>
-                    <div className="font-semibold text-white">{testimonial.name}<div className="text-sm text-cyan-400">{testimonial.role}<div className="text-sm text-gray-400">{testimonial.company}</div>
-                  </div>
+                    <div className="font-semibold text-white">{testimonial.name}<div className="text-sm text-cyan-400">{testimonial.role}</div>
+            <div className="text-sm text-gray-400">{testimonial.company}</div>
                 </div>
               </div>
             ))}
@@ -342,8 +342,8 @@ export default function AISpaceTechnologyProPage() {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-cyan-600 to-purple-700">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">Ready to Explore the Universe?<p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">Join leading space agencies using AI to advance space exploration and satellite operations.</p>
-          </p>
+          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">Ready to Explore the Universe?</h2>
+            <p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">Join leading space agencies using AI to advance space exploration and satellite operations.</p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <a

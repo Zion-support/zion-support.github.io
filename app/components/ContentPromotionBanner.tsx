@@ -54,8 +54,8 @@ const ContentPromotionBanner: React.FC = () => {
         <div className="flex items-center space-x-3">
           <currentBannerData.icon className="w-5 h-5 animate-pulse" />
           <div>
-            <span className="font-semibold text-sm sm:text-base">{currentBannerData.title}<span className="hidden sm:inline ml-2 text-sm opacity-90">{currentBannerData.description}</span>
-            </span>
+            <span className="font-semibold text-sm sm:text-base">{currentBannerData.title}</span>
+            <span className="hidden sm:inline ml-2 text-sm opacity-90">{currentBannerData.description}</span>
           </div>
         </div>
 

@@ -182,8 +182,8 @@ const AIRoboticsPage: React.FC = () => {
               <div key={index} className="text-center">
                 <div className="w-16 h-16 bg-cyan-400/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <capability.icon className="w-8 h-8 text-cyan-400" />
-                <div className="text-3xl font-bold text-cyan-400 mb-2">{capability.metric}<div className="text-gray-300">{capability.description}</div>
-              </div>
+                <div className="text-3xl font-bold text-cyan-400 mb-2">{capability.metric}</div>
+            <div className="text-gray-300">{capability.description}</div>
             ))}
           </div>
         </div>
@@ -267,8 +267,8 @@ const AIRoboticsPage: React.FC = () => {
       {/* CTA Section */}
       <section className="py-16 px-4 bg-slate-800/30">
         <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">Ready to Build AI Robots?<p className="text-xl text-gray-300 mb-8">Start building intelligent robots that can see, learn, and adapt to any environment.</p>
-          </p>
+          <h2 className="text-4xl font-bold text-white mb-6">Ready to Build AI Robots?</h2>
+            <p className="text-xl text-gray-300 mb-8">Start building intelligent robots that can see, learn, and adapt to any environment.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="/contact" className="cyber-button px-8 py-4 text-lg">Start Building</a>
               <ArrowRight className="w-5 h-5 ml-2" />

@@ -698,17 +698,17 @@ name: 'AI-Powered Infrastructure Management',
             {/* Stats */}
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-5xl mx-auto mb-12">
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/20">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">150+<div className="text-gray-300">IT Services</div>
-              </div>
+                <div className="text-3xl font-bold text-cyan-400 mb-2">150+</div>
+            <div className="text-gray-300">IT Services</div>
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-purple-400/20">
-                <div className="text-3xl font-bold text-purple-400 mb-2">750+<div className="text-gray-300">Enterprise Clients</div>
-              </div>
+                <div className="text-3xl font-bold text-purple-400 mb-2">750+</div>
+            <div className="text-gray-300">Enterprise Clients</div>
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-pink-400/20">
-                <div className="text-3xl font-bold text-pink-400 mb-2">99.9%<div className="text-gray-300">Uptime SLA</div>
-              </div>
+                <div className="text-3xl font-bold text-pink-400 mb-2">99.9%</div>
+            <div className="text-gray-300">Uptime SLA</div>
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-green-400/20">
-                <div className="text-3xl font-bold text-green-400 mb-2">24/7<div className="text-gray-300">Support</div>
-              </div>
+                <div className="text-3xl font-bold text-green-400 mb-2">24/7</div>
+            <div className="text-gray-300">Support</div>
             </div>
 
             <div className="flex flex-wrap justify-center gap-4">
@@ -756,8 +756,8 @@ name: 'AI-Powered Infrastructure Management',
                   <h3 className="text-2xl font-bold text-white">{category.category}<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">{category.services.map((service, serviceIndex) => (</div>
 </div>
 <div key={serviceIndex} className="futuristic-card hover-lift p-6 relative">
-<div key={serviceIndex} className="futuristic-card-enhanced hover-lift p-6 relative">{service.popular && (<div className="absolute -top-2 -right-2 bg-gradient-to-r from-orange-500 to-red-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">Popular</div>
-                        </div>
+<div key={serviceIndex} className="futuristic-card-enhanced hover-lift p-6 relative">{service.popular && (</div>
+            <div className="absolute -top-2 -right-2 bg-gradient-to-r from-orange-500 to-red-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">Popular</div>
                       )}
 
                       <div className="relative z-10">
@@ -832,8 +832,8 @@ name: 'AI-Powered Infrastructure Management',
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <tech.icon className="w-8 h-8 text-white" />
                 <h3 className="text-xl font-bold text-white mb-4">{tech.category}</h3>
-                <div className="space-y-2">{tech.techs.map((technology, techIndex) => (<div key={techIndex} className="text-sm text-gray-300 bg-slate-700/50 px-3 py-1 rounded">{technology}</div>
-                    </div>
+                <div className="space-y-2">{tech.techs.map((technology, techIndex) => (</div>
+            <div key={techIndex} className="text-sm text-gray-300 bg-slate-700/50 px-3 py-1 rounded">{technology}</div>
                   ))}
                 </div>
               </div>
@@ -846,21 +846,20 @@ name: 'AI-Powered Infrastructure Management',
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Our IT Implementation Process<p className="text-lg text-gray-300 max-w-3xl mx-auto">A proven methodology that ensures successful IT implementation</p>
-            </p>
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Our IT Implementation Process</h2>
+            <p className="text-lg text-gray-300 max-w-3xl mx-auto">A proven methodology that ensures successful IT implementation</p>
           </div>
           <div className="max-w-4xl mx-auto">
-            <div className="relative">
-              <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-cyan-500 to-purple-600">{process.map((step, index) => (</div>
-                </div><div key={index} className={`relative flex items-center mb-12 ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
+            <div className="$2" />
+            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-cyan-500 to-purple-600">{process.map((step, index) => (</div><div key={index} className={`relative flex items-center mb-12 ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
                   <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}>
                     <div className="bg-slate-800/50 p-6 rounded-lg">
                       <div className="text-cyan-400 font-bold text-lg mb-2">Step {step.step}<h3 className="text-xl font-bold text-white mb-2">{step.title}</h3>
                       <p className="text-gray-300 mb-2">{step.description}<div className="text-sm text-cyan-400 font-medium">{step.duration}</div>
                     </div>
                   </div>
-                  <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-cyan-500 rounded-full border-4 border-slate-900"><div className="w-1/2">))}</div>
-            </div>
+                  <div className="$2" />
+            <div className="w-1/2">))}</div>
           </div>
         </div>
       </section>
@@ -902,8 +901,8 @@ name: 'AI-Powered Infrastructure Management',
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(255,255,255,0.05)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
 
         <div className="container mx-auto px-4 text-center relative z-10">
-          <h2 className="text-4xl lg:text-6xl font-bold text-white mb-6 neon-text">Ready to Modernize Your IT Infrastructure?<p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">Join 500+ enterprises that have already transformed their IT operations with our solutions. Get started today!</p>
-          </p>
+          <h2 className="text-4xl lg:text-6xl font-bold text-white mb-6 neon-text">Ready to Modernize Your IT Infrastructure?</h2>
+            <p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">Join 500+ enterprises that have already transformed their IT operations with our solutions. Get started today!</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <a
               href="https://ziontechgroup.com/contact"
@@ -923,10 +922,8 @@ className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover
               <Phone className="w-5 h-5 mr-2" >Call: +1 (302) 464-0950</Phone>
             </Phone>
           </div>
-          <div className="text-gray-200 text-sm">
+          <div className="$2" />
             <p>📧 kleber@ziontechgroup.com | 📍 364 E Main St STE 1008, Middletown, DE 19709</p>
-
-          </div>
         </div>
       </section>
     </div>

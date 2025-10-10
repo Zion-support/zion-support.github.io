@@ -146,8 +146,8 @@ const AIFintechPage: React.FC = () => {
         </Navigation><section className="relative overflow-hidden bg-gradient-to-r from-indigo-600 to-purple-700 text-white py-20">
           <div className="absolute inset-0 bg-black opacity-20"><div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">AI Fintech Solutions<p className="text-xl md:text-2xl mb-8 text-indigo-100 max-w-3xl mx-auto">Revolutionize financial services with cutting-edge AI technology that automates trading, prevents fraud, and optimizes financial decisions</p>
-              </p>
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">AI Fintech Solutions</h1>
+            <p className="text-xl md:text-2xl mb-8 text-indigo-100 max-w-3xl mx-auto">Revolutionize financial services with cutting-edge AI technology that automates trading, prevents fraud, and optimizes financial decisions</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition-colors">Start Fintech AI<button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors">View Trading Demo</button>
                 </button>
@@ -159,8 +159,8 @@ const AIFintechPage: React.FC = () => {
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Why Choose AI Fintech?<p className="text-xl text-gray-600">Revolutionary AI technology that transforms financial services and maximizes returns</p>
-              </p>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Why Choose AI Fintech?</h2>
+            <p className="text-xl text-gray-600">Revolutionary AI technology that transforms financial services and maximizes returns</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="text-center">
@@ -234,8 +234,8 @@ const AIFintechPage: React.FC = () => {
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">AI Fintech Capabilities<p className="text-xl text-gray-600">Cutting-edge AI technologies that power the future of financial services</p>
-              </p>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">AI Fintech Capabilities</h2>
+            <p className="text-xl text-gray-600">Cutting-edge AI technologies that power the future of financial services</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="text-center p-6 bg-gradient-to-br from-indigo-50 to-blue-100 rounded-lg">
@@ -268,8 +268,8 @@ const AIFintechPage: React.FC = () => {
         {/* Contact Section */}
         <section className="py-16 bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Transform Financial Services?<p className="text-xl mb-8 text-indigo-100">Contact our AI fintech experts for a free consultation and custom financial AI strategy</p>
-            </p>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Transform Financial Services?</h2>
+            <p className="text-xl mb-8 text-indigo-100">Contact our AI fintech experts for a free consultation and custom financial AI strategy</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="tel:+13024640950"
@@ -280,9 +280,8 @@ const AIFintechPage: React.FC = () => {
               >✉️ kleber@ziontechgroup.com</a>
               </a>
             </div>
-            <div className="mt-8 text-sm text-indigo-200">
-              <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
-            </div>
+            <div className="$2" />
+            <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
           </div>
         </section>
         <Footer />

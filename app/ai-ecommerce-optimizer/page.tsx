@@ -182,17 +182,17 @@ const AIEcommerceOptimizerPage: React.FC = () => {
           {/* Key Metrics */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
             <div className="text-center">
-              <div className="text-3xl font-bold text-cyan-400 mb-2">45%<div className="text-gray-300">Conversion Increase</div>
-            </div>
+              <div className="text-3xl font-bold text-cyan-400 mb-2">45%</div>
+            <div className="text-gray-300">Conversion Increase</div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-purple-400 mb-2">35%<div className="text-gray-300">Cart Abandonment Reduction</div>
-            </div>
+              <div className="text-3xl font-bold text-purple-400 mb-2">35%</div>
+            <div className="text-gray-300">Cart Abandonment Reduction</div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-green-400 mb-2">30%<div className="text-gray-300">Revenue Growth</div>
-            </div>
+              <div className="text-3xl font-bold text-green-400 mb-2">30%</div>
+            <div className="text-gray-300">Revenue Growth</div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-yellow-400 mb-2">50%<div className="text-gray-300">Faster Checkout</div>
-            </div>
+              <div className="text-3xl font-bold text-yellow-400 mb-2">50%</div>
+            <div className="text-gray-300">Faster Checkout</div>
           </div>
         </div>
       </section>
@@ -279,8 +279,8 @@ const AIEcommerceOptimizerPage: React.FC = () => {
               <div key={index} className="bg-slate-900/50 backdrop-blur-sm border border-gray-600/50 rounded-lg p-6">
                 <div className="flex items-center mb-4">{[...Array(testimonial.rating)].map((_, i) => (<Star key={i} className="w-5 h-5 text-yellow-400 fill-current" >))}<p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
                 <div>
-                  <div className="font-semibold text-white">{testimonial.name}<div className="text-cyan-400 text-sm">{testimonial.role}<div className="text-gray-400 text-sm">{testimonial.company}</div>
-                </div>
+                  <div className="font-semibold text-white">{testimonial.name}<div className="text-cyan-400 text-sm">{testimonial.role}</div>
+            <div className="text-gray-400 text-sm">{testimonial.company}</div>
               </div>
             ))}
           </div>
@@ -290,8 +290,8 @@ const AIEcommerceOptimizerPage: React.FC = () => {
       {/* CTA Section */}
       <section className="py-16 px-4">
         <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">Ready to Optimize Your E-commerce Store?<p className="text-xl text-gray-300 mb-8">Start your AI-powered optimization journey today and see immediate results.</p>
-          </p>
+          <h2 className="text-4xl font-bold text-white mb-6">Ready to Optimize Your E-commerce Store?</h2>
+            <p className="text-xl text-gray-300 mb-8">Start your AI-powered optimization journey today and see immediate results.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="/contact" className="cyber-button px-8 py-4 text-lg">Start Free Trial</a>
               <ArrowRight className="w-5 h-5 ml-2" />

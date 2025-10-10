@@ -290,8 +290,8 @@ export default function TeamPage() {
               <div key={index} className="text-center group">
                 <div className="w-20 h-20 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                   <stat.icon className="w-10 h-10 text-white" />
-                <div className="text-4xl font-bold text-white mb-2">{stat.number}<div className="text-gray-300 font-medium">{stat.label}</div>
-              </div>
+                <div className="text-4xl font-bold text-white mb-2">{stat.number}</div>
+            <div className="text-gray-300 font-medium">{stat.label}</div>
             ))}
           </div>
         </div>
@@ -357,8 +357,8 @@ export default function TeamPage() {
                   <dept.icon className="w-8 h-8 text-white" />
                 <h3 className="text-xl font-bold text-white mb-2">{dept.name}</h3>
                 <p className="text-gray-300 text-sm mb-4">{dept.description}<div className="text-cyan-400 font-medium mb-4">{dept.members} Members</div>
-                <div className="space-y-1">{dept.specialties.map((specialty, specIndex) => (<div key={specIndex} className="text-xs text-gray-400">{specialty}</div>
-                    </div>
+                <div className="space-y-1">{dept.specialties.map((specialty, specIndex) => (</div>
+            <div key={specIndex} className="text-xs text-gray-400">{specialty}</div>
                   ))}
                 </div>
               </div>

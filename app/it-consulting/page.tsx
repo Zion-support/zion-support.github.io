@@ -136,8 +136,8 @@ const ITConsultingPage: React.FC = () => {
 
             {/* CTA Section */}
             <section className="text-center bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-white">
-              <h2 className="text-3xl font-bold mb-4">Ready to Transform Your IT?<p className="text-xl mb-8">Contact our experts for a free consultation and discover how we can help your business.</p>
-              </p>
+              <h2 className="text-3xl font-bold mb-4">Ready to Transform Your IT?</h2>
+            <p className="text-xl mb-8">Contact our experts for a free consultation and discover how we can help your business.</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="tel:+13024640950"

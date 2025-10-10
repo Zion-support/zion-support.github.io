@@ -190,8 +190,8 @@ const DocsPage: React.FC = () => {
         {/* CTA Section */}
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">Can't Find What You're Looking For?<p className="text-lg text-gray-300 mb-8">Our support team is here to help you with any questions or issues you might have.</p>
-            </p>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">Can't Find What You're Looking For?</h2>
+            <p className="text-lg text-gray-300 mb-8">Our support team is here to help you with any questions or issues you might have.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"

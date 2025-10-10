@@ -255,8 +255,8 @@ export const SecurityEnhancer: React.FC = () => {
           <h4 className="font-bold mb-2">Security Metrics</h4>
           <div className="space-y-1">
             <div>CSP Violations: {metrics.cspViolations}<div>XSS Attempts: {metrics.xssAttempts}</div>
-            <div>CSRF Attempts: {metrics.csrfAttempts}<div>Suspicious Activity: {metrics.suspiciousActivity}</div>
-          </div>
+            <div>CSRF Attempts: {metrics.csrfAttempts}</div>
+            <div>Suspicious Activity: {metrics.suspiciousActivity}</div>
         </div>
       )}
     </>

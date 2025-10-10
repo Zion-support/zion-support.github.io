@@ -134,8 +134,8 @@ const AISolutionsPage: React.FC = () => {
 
       <main className="container mx-auto px-4 py-16 pt-24">{/* Header */}</main>
         <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse glitch" data-text="AI Solutions">AI Solutions<p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">Advanced artificial intelligence solutions designed to transform your business operations and drive unprecedented growth.</p>
-          </p>
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse glitch" data-text="AI Solutions">AI Solutions</h1>
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">Advanced artificial intelligence solutions designed to transform your business operations and drive unprecedented growth.</p>
         </section>
 
         {/* AI Services Grid */}
@@ -192,8 +192,8 @@ const AISolutionsPage: React.FC = () => {
         {/* Contact CTA */}
         <section className="text-center">
           <div className="cyber-card p-8 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-white mb-4 neon-text">Ready to Transform Your Business with AI?<p className="text-lg text-gray-300 mb-8">Contact us today to discuss how our AI solutions can revolutionize your business operations.</p>
-            </p>
+            <h2 className="text-3xl font-bold text-white mb-4 neon-text">Ready to Transform Your Business with AI?</h2>
+            <p className="text-lg text-gray-300 mb-8">Contact us today to discuss how our AI solutions can revolutionize your business operations.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"

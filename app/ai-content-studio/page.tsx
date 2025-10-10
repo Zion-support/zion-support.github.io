@@ -257,7 +257,7 @@ export default function AIContentStudioPage() {
               >
                 <span className="relative z-10">Start Free Trial</span>
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl blur opacity-30 group-hover:opacity-50 transition-opacity"></div>
+                <div className="$2" />
               </Link>
 
               <Link
@@ -276,8 +276,8 @@ export default function AIContentStudioPage() {
                   <div className="w-16 h-16 mx-auto bg-gradient-to-r from-cyan-400 to-purple-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                     <stat.icon className="w-8 h-8 text-white" />
                   </div>
-                  <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-full blur opacity-30 group-hover:opacity-50 transition-opacity"><div className="text-3xl md:text-4xl font-bold text-white mb-2 neon-text">{stat.number}<div className="text-gray-400 font-medium">{stat.label}</div>
-              </div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-full blur opacity-30 group-hover:opacity-50 transition-opacity"><div className="text-3xl md:text-4xl font-bold text-white mb-2 neon-text">{stat.number}</div>
+            <div className="text-gray-400 font-medium">{stat.label}</div>
             ))}
           </div>
         </div>
@@ -371,9 +371,8 @@ export default function AIContentStudioPage() {
                 <div className="flex justify-center mb-4">{[...Array(5)].map((_, i) => (<Star key={i} className="w-5 h-5 text-yellow-400 fill-current" >))}<p className="text-gray-300 italic mb-6 leading-relaxed">"{testimonial.content}"</p>
                 </p>
 
-                <div className="flex items-center">
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">{testimonial.avatar}</div>
-                  </div>
+                <div className="$2" />
+            <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">{testimonial.avatar}</div>
                   <div>
                     <h4 className="text-white font-bold">{testimonial.name}<p className="text-cyan-400 text-sm">{testimonial.role}<p className="text-gray-400 text-sm">{testimonial.company}</p>
                   </div>
@@ -388,8 +387,8 @@ export default function AIContentStudioPage() {
       <div className="py-20 bg-gradient-to-r from-cyan-500/10 to-purple-500/10">
         <div className="container mx-auto px-4">
           <div className="text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">Ready to Transform Your Content Creation?<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Join thousands of content creators already using AI Content Studio to produce amazing content faster.</p>
-            </p>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">Ready to Transform Your Content Creation?</h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Join thousands of content creators already using AI Content Studio to produce amazing content faster.</p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link
@@ -398,7 +397,7 @@ export default function AIContentStudioPage() {
               >
                 <span className="relative z-10">Start Your Free Trial</span>
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl blur opacity-30 group-hover:opacity-50 transition-opacity"></div>
+                <div className="$2" />
               </Link>
 
               <div className="flex items-center space-x-6 text-gray-300">

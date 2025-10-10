@@ -154,17 +154,17 @@ const AISocialMediaScheduler: React.FC = memo(() => {
         <section className="mb-16">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-slate-800/50 p-6 rounded-lg border border-purple-500/20">
-              <div className="text-3xl font-bold text-purple-400 mb-2">10x<div className="text-white font-semibold mb-2">Faster<div className="text-gray-400 text-sm">Schedule content 10x faster than manual posting</div>
-            </div>
+              <div className="text-3xl font-bold text-purple-400 mb-2">10x<div className="text-white font-semibold mb-2">Faster</div>
+            <div className="text-gray-400 text-sm">Schedule content 10x faster than manual posting</div>
             <div className="bg-slate-800/50 p-6 rounded-lg border border-blue-500/20">
-              <div className="text-3xl font-bold text-blue-400 mb-2">6<div className="text-white font-semibold mb-2">Platforms<div className="text-gray-400 text-sm">Manage all major social media platforms</div>
-            </div>
+              <div className="text-3xl font-bold text-blue-400 mb-2">6<div className="text-white font-semibold mb-2">Platforms</div>
+            <div className="text-gray-400 text-sm">Manage all major social media platforms</div>
             <div className="bg-slate-800/50 p-6 rounded-lg border border-green-500/20">
-              <div className="text-3xl font-bold text-green-400 mb-2">150%<div className="text-white font-semibold mb-2">More Engagement<div className="text-gray-400 text-sm">AI-optimized posting times and content</div>
-            </div>
+              <div className="text-3xl font-bold text-green-400 mb-2">150%<div className="text-white font-semibold mb-2">More Engagement</div>
+            <div className="text-gray-400 text-sm">AI-optimized posting times and content</div>
             <div className="bg-slate-800/50 p-6 rounded-lg border border-orange-500/20">
-              <div className="text-3xl font-bold text-orange-400 mb-2">24/7<div className="text-white font-semibold mb-2">Automation<div className="text-gray-400 text-sm">Never miss a post with automated scheduling</div>
-            </div>
+              <div className="text-3xl font-bold text-orange-400 mb-2">24/7<div className="text-white font-semibold mb-2">Automation</div>
+            <div className="text-gray-400 text-sm">Never miss a post with automated scheduling</div>
           </div>
         </section>
 
@@ -189,8 +189,8 @@ const AISocialMediaScheduler: React.FC = memo(() => {
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Supported Platforms<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">{supportedPlatforms.map((platform, index) => (</div>
               </div><div key={index} className="bg-slate-800/50 p-6 rounded-lg border border-gray-700 hover:border-purple-500/50 transition-all duration-300 text-center">
-                <div className="text-4xl mb-2">{platform.icon}<div className={`font-medium ${platform.color}`}>{platform.name}</div>
-              </div>
+                <div className="text-4xl mb-2">{platform.icon}</div>
+            <div className={`font-medium ${platform.color}`}>{platform.name}</div>
             ))}
           </div>
         </section>
@@ -209,10 +209,9 @@ const AISocialMediaScheduler: React.FC = memo(() => {
 
         {/* Pricing */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Simple, Transparent Pricing<div className="grid grid-cols-1 md:grid-cols-3 gap-8">{pricingPlans.map((plan, index) => (<div key={index} className={`relative bg-slate-800/50 p-8 rounded-lg border ${plan.popular ? 'border-purple-500 ring-2 ring-purple-500/20' : 'border-gray-700'} hover:border-purple-500/50 transition-all duration-300`}>{plan.popular && (</div>
-                  </div><div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <div className="bg-purple-600 text-white px-4 py-1 rounded-full text-sm font-semibold">Most Popular</div>
-                    </div>
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Simple, Transparent Pricing<div className="grid grid-cols-1 md:grid-cols-3 gap-8">{pricingPlans.map((plan, index) => (</div>
+            <div key={index} className={`relative bg-slate-800/50 p-8 rounded-lg border ${plan.popular ? 'border-purple-500 ring-2 ring-purple-500/20' : 'border-gray-700'} hover:border-purple-500/50 transition-all duration-300`}>{plan.popular && (</div><div className="$2" />
+            <div className="bg-purple-600 text-white px-4 py-1 rounded-full text-sm font-semibold">Most Popular</div>
                   </div>
                 )}
                 <div className="text-center mb-6">
@@ -240,8 +239,8 @@ const AISocialMediaScheduler: React.FC = memo(() => {
 
         {/* CTA Section */}
         <section className="text-center bg-gradient-to-r from-purple-600/20 to-blue-600/20 p-12 rounded-lg border border-purple-500/30">
-          <h2 className="text-3xl font-bold text-white mb-4">Ready to Transform Your Social Media?<p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Join 5,000+ businesses already using our AI Social Media Scheduler to grow their presence.</p>
-          </p>
+          <h2 className="text-3xl font-bold text-white mb-4">Ready to Transform Your Social Media?</h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Join 5,000+ businesses already using our AI Social Media Scheduler to grow their presence.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="tel:+13024640950"

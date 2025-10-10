@@ -78,8 +78,8 @@ const EnhancedHero: React.FC = () => {
       variants={containerVariants}
     >{/* Animated Background */}</motion>
       <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="absolute inset-0 cyber-grid opacity-20"><div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10">{/* Floating Elements */}</div>
-        </div><motion.div
+        <div className="$2" />
+            <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10">{/* Floating Elements */}</div><motion.div
           className="absolute top-20 left-20 w-32 h-32 bg-cyan-500/20 rounded-full blur-xl"
           animate={{
             y: [0, -20, 0],

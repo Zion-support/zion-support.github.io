@@ -181,8 +181,8 @@ const AIDataAnalyticsPage: React.FC = () => {
       <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-20">
         <div className="absolute inset-0 bg-black opacity-20"><div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">AI Data Analytics Services<p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">Transform your data into actionable insights with our advanced AI-powered analytics solutions</p>
-            </p>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">AI Data Analytics Services</h1>
+            <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">Transform your data into actionable insights with our advanced AI-powered analytics solutions</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="tel:+13024640950"
@@ -243,8 +243,8 @@ const AIDataAnalyticsPage: React.FC = () => {
       {/* Contact Section */}
       <section className="py-16 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Transform Your Data into Insights?<p className="text-xl mb-8 text-blue-100">Contact us today for a free consultation and custom analytics solution</p>
-          </p>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Transform Your Data into Insights?</h2>
+            <p className="text-xl mb-8 text-blue-100">Contact us today for a free consultation and custom analytics solution</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="tel:+13024640950"
@@ -255,9 +255,8 @@ const AIDataAnalyticsPage: React.FC = () => {
             >✉️ kleber@ziontechgroup.com</a>
             </a>
           </div>
-          <div className="mt-8 text-sm text-blue-200">
+          <div className="$2" />
             <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
-          </div>
         </div>
       </section>
     </div>

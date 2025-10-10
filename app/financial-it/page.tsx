@@ -88,8 +88,8 @@ const FinancialITPage: React.FC = () => {
       {/* CTA Section */}
 <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">Ready for Financial IT Excellence?<p className="text-xl text-gray-300 mb-8">Join leading financial institutions using our specialized IT solutions for compliance and security</p>
-          </p>
+          <h2 className="text-4xl font-bold text-white mb-6">Ready for Financial IT Excellence?</h2>
+            <p className="text-xl text-gray-300 mb-8">Join leading financial institutions using our specialized IT solutions for compliance and security</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">Start Free Trial<button className="border border-green-400 text-green-400 hover:bg-green-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">Contact Sales</button>
             </button>

@@ -15,8 +15,8 @@ export default function AIProjectManagementPage() {
 
         <main className="container mx-auto px-4 py-16 pt-24">{/* Hero Section */}</main>
           <section className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text cyber-text">AI Project Management<p className="text-xl text-cyan-400 mb-8 font-medium">Intelligent project management powered by AI<p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8">Revolutionize your project management with AI-driven insights, predictive analytics, and automated resource optimization that delivers projects 40% faster and 30% under budget.</p>
-            </p>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text cyber-text">AI Project Management<p className="text-xl text-cyan-400 mb-8 font-medium">Intelligent project management powered by AI</p>
+            <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8">Revolutionize your project management with AI-driven insights, predictive analytics, and automated resource optimization that delivers projects 40% faster and 30% under budget.</p>
           </section>
 
           {/* Features Grid */}
@@ -24,33 +24,33 @@ export default function AIProjectManagementPage() {
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">AI-Powered Features</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="cyber-card p-6 energy-pulse">
-                <div className="text-4xl mb-4 text-center">🔮<h3 className="text-xl font-bold text-white mb-4 text-center">Predictive Analytics<p className="text-gray-300 text-center">AI predicts project risks, delays, and resource needs with 90% accuracy to keep projects on track.</p>
-                </p>
+                <div className="text-4xl mb-4 text-center">🔮<h3 className="text-xl font-bold text-white mb-4 text-center"> className="text-gray-300 text-center"</h3>
+            <p className="text-gray-300 text-center">AI predicts project risks, delays, and resource needs with 90% accuracy to keep projects on track.</p>
               </div>
 
               <div className="cyber-card p-6 energy-pulse">
-                <div className="text-4xl mb-4 text-center">⚡<h3 className="text-xl font-bold text-white mb-4 text-center">Smart Task Allocation<p className="text-gray-300 text-center">Automatically assign tasks to the right team members based on skills, workload, and availability.</p>
-                </p>
+                <div className="text-4xl mb-4 text-center">⚡<h3 className="text-xl font-bold text-white mb-4 text-center"> className="text-gray-300 text-center"</h3>
+            <p className="text-gray-300 text-center">Automatically assign tasks to the right team members based on skills, workload, and availability.</p>
               </div>
 
               <div className="cyber-card p-6 energy-pulse">
-                <div className="text-4xl mb-4 text-center">📊<h3 className="text-xl font-bold text-white mb-4 text-center">Real-time Insights<p className="text-gray-300 text-center">Get instant visibility into project health, team performance, and budget utilization.</p>
-                </p>
+                <div className="text-4xl mb-4 text-center">📊<h3 className="text-xl font-bold text-white mb-4 text-center"> className="text-gray-300 text-center"</h3>
+            <p className="text-gray-300 text-center">Get instant visibility into project health, team performance, and budget utilization.</p>
               </div>
 
               <div className="cyber-card p-6 energy-pulse">
-                <div className="text-4xl mb-4 text-center">🎯<h3 className="text-xl font-bold text-white mb-4 text-center">Resource Optimization<p className="text-gray-300 text-center">AI optimizes resource allocation to maximize efficiency and minimize project costs.</p>
-                </p>
+                <div className="text-4xl mb-4 text-center">🎯<h3 className="text-xl font-bold text-white mb-4 text-center"> className="text-gray-300 text-center"</h3>
+            <p className="text-gray-300 text-center">AI optimizes resource allocation to maximize efficiency and minimize project costs.</p>
               </div>
 
               <div className="cyber-card p-6 energy-pulse">
-                <div className="text-4xl mb-4 text-center">🚨<h3 className="text-xl font-bold text-white mb-4 text-center">Risk Management<p className="text-gray-300 text-center">Proactive risk identification and mitigation strategies powered by machine learning.</p>
-                </p>
+                <div className="text-4xl mb-4 text-center">🚨<h3 className="text-xl font-bold text-white mb-4 text-center"> className="text-gray-300 text-center"</h3>
+            <p className="text-gray-300 text-center">Proactive risk identification and mitigation strategies powered by machine learning.</p>
               </div>
 
               <div className="cyber-card p-6 energy-pulse">
-                <div className="text-4xl mb-4 text-center">📈<h3 className="text-xl font-bold text-white mb-4 text-center">Performance Tracking<p className="text-gray-300 text-center">Advanced metrics and KPIs to track team productivity and project success rates.</p>
-                </p>
+                <div className="text-4xl mb-4 text-center">📈<h3 className="text-xl font-bold text-white mb-4 text-center"> className="text-gray-300 text-center"</h3>
+            <p className="text-gray-300 text-center">Advanced metrics and KPIs to track team productivity and project success rates.</p>
               </div>
             </div>
           </section>
@@ -110,8 +110,8 @@ export default function AIProjectManagementPage() {
 
           {/* CTA Section */}
           <section className="text-center">
-            <h2 className="text-3xl font-bold text-white mb-6">Transform Your Project Management Today<p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">Join 1,000+ teams using our AI project management solutions to deliver better projects faster and more efficiently.</p>
-            </p>
+            <h2 className="text-3xl font-bold text-white mb-6">Transform Your Project Management Today</h2>
+            <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">Join 1,000+ teams using our AI project management solutions to deliver better projects faster and more efficiently.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="tel:+13024640950" className="cyber-button">📞 Call: (302) 464-0950<a href="/contact" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300">Get Free Trial</a>
               </a>

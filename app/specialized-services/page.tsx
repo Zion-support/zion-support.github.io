@@ -250,8 +250,8 @@ const SpecializedServicesPage: React.FC = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">{stats.map((stat, index) => (</div>
               <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
                 <stat.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
-                <div className="text-3xl font-bold text-white mb-2 neon-text">{stat.value}<div className="text-gray-300">{stat.label}</div>
-              </div>
+                <div className="text-3xl font-bold text-white mb-2 neon-text">{stat.value}</div>
+            <div className="text-gray-300">{stat.label}</div>
             ))}
           </div>
         </section>
@@ -326,38 +326,38 @@ const SpecializedServicesPage: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
               <Brain className="w-16 h-16 text-cyan-400 mx-auto mb-4" />
-              <h3 className="text-xl font-bold text-white mb-3 neon-text">Cutting-Edge Technology<p className="text-gray-300">We leverage the latest technologies including quantum computing, AI, and blockchain to deliver innovative solutions.</p>
-              </p>
+              <h3 className="text-xl font-bold text-white mb-3 neon-text"> className="text-gray-300"</h3>
+            <p className="text-gray-300">We leverage the latest technologies including quantum computing, AI, and blockchain to deliver innovative solutions.</p>
             </div>
 
             <div className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
               <Shield className="w-16 h-16 text-green-400 mx-auto mb-4" />
-              <h3 className="text-xl font-bold text-white mb-3 neon-text">Proven Expertise<p className="text-gray-300">Our team has deep expertise in specialized technologies with a track record of successful implementations.</p>
-              </p>
+              <h3 className="text-xl font-bold text-white mb-3 neon-text"> className="text-gray-300"</h3>
+            <p className="text-gray-300">Our team has deep expertise in specialized technologies with a track record of successful implementations.</p>
             </div>
 
             <div className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
               <Target className="w-16 h-16 text-purple-400 mx-auto mb-4" />
-              <h3 className="text-xl font-bold text-white mb-3 neon-text">Custom Solutions<p className="text-gray-300">Every solution is tailored to your specific needs and business requirements for maximum impact.</p>
-              </p>
+              <h3 className="text-xl font-bold text-white mb-3 neon-text"> className="text-gray-300"</h3>
+            <p className="text-gray-300">Every solution is tailored to your specific needs and business requirements for maximum impact.</p>
             </div>
 
             <div className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
               <Users className="w-16 h-16 text-blue-400 mx-auto mb-4" />
-              <h3 className="text-xl font-bold text-white mb-3 neon-text">Dedicated Support<p className="text-gray-300">Our specialized team provides ongoing support and maintenance for all our advanced solutions.</p>
-              </p>
+              <h3 className="text-xl font-bold text-white mb-3 neon-text"> className="text-gray-300"</h3>
+            <p className="text-gray-300">Our specialized team provides ongoing support and maintenance for all our advanced solutions.</p>
             </div>
 
             <div className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
               <Zap className="w-16 h-16 text-yellow-400 mx-auto mb-4" />
-              <h3 className="text-xl font-bold text-white mb-3 neon-text">Rapid Implementation<p className="text-gray-300">We deliver complex solutions quickly without compromising on quality or security.</p>
-              </p>
+              <h3 className="text-xl font-bold text-white mb-3 neon-text"> className="text-gray-300"</h3>
+            <p className="text-gray-300">We deliver complex solutions quickly without compromising on quality or security.</p>
             </div>
 
             <div className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
               <DollarSign className="w-16 h-16 text-green-400 mx-auto mb-4" />
-              <h3 className="text-xl font-bold text-white mb-3 neon-text">ROI Focused<p className="text-gray-300">Our solutions are designed to deliver measurable ROI and long-term business value.</p>
-              </p>
+              <h3 className="text-xl font-bold text-white mb-3 neon-text"> className="text-gray-300"</h3>
+            <p className="text-gray-300">Our solutions are designed to deliver measurable ROI and long-term business value.</p>
             </div>
           </div>
         </section>
@@ -365,8 +365,8 @@ const SpecializedServicesPage: React.FC = () => {
         {/* CTA Section */}
         <section className="text-center">
           <div className="cyber-card p-12 max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">Ready to Explore Specialized Solutions?<p className="text-xl text-gray-300 mb-8">Contact our specialized solutions team to discuss your unique requirements and discover how we can help.</p>
-            </p>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">Ready to Explore Specialized Solutions?</h2>
+            <p className="text-xl text-gray-300 mb-8">Contact our specialized solutions team to discuss your unique requirements and discover how we can help.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"

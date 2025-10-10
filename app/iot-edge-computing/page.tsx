@@ -136,8 +136,8 @@ const IoTEdgeComputingPage: React.FC = () => {
                   <div key={index} className="text-center">
                     <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-green-500 to-cyan-500 rounded-full mx-auto mb-4">
                       <stat.icon className="w-8 h-8 text-white" />
-                    <div className="text-3xl font-bold text-white mb-2">{stat.number}<div className="text-gray-300">{stat.label}</div>
-                  </div>
+                    <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
+            <div className="text-gray-300">{stat.label}</div>
                 ))}
               </div>
             </div>
@@ -152,8 +152,8 @@ const IoTEdgeComputingPage: React.FC = () => {
                 <div className="flex items-center mb-6">
                   <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-cyan-500 rounded-lg flex items-center justify-center mr-4">
                     <service.icon className="w-6 h-6 text-white" />
-                  <h3 className="text-xl font-bold text-white">{service.title}<p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
-                </p>
+                  <h3 className="text-xl font-bold text-white"> className="text-gray-300 mb-6 leading-relaxed"</h3>
+            <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
                 <div className="space-y-3">
                   <h4 className="text-sm font-semibold text-green-400 mb-2">Features:</h4>
                   {service.features.map((feature, featureIndex) => (
@@ -195,8 +195,8 @@ const IoTEdgeComputingPage: React.FC = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">Solution Examples<p className="text-xl text-gray-300 max-w-3xl mx-auto">Real-world applications of IoT and edge computing across different industries.<div className="grid grid-cols-1 lg:grid-cols-3 gap-8">{solutions.map((solution, index) => (</div>
               <div key={index} className="bg-slate-900/50 backdrop-blur-sm rounded-2xl p-8 border border-green-500/20 hover:border-green-400/40 transition-all duration-300">
-                <h3 className="text-2xl font-bold text-white mb-4">{solution.title}<p className="text-gray-300 mb-6 leading-relaxed">{solution.description}</p>
-                </p>
+                <h3 className="text-2xl font-bold text-white mb-4"> className="text-gray-300 mb-6 leading-relaxed"</h3>
+            <p className="text-gray-300 mb-6 leading-relaxed">{solution.description}</p>
 
                 <div className="mb-6">
                   <h4 className="text-lg font-semibold text-green-400 mb-3">Key Features:<ul className="space-y-2">{solution.features.map((feature, featureIndex) => (</ul>

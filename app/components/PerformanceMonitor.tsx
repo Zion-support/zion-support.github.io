@@ -126,18 +126,18 @@ const PerformanceMonitor: React.FC = () => {
 
       <div className="space-y-2 text-xs">
         <div className="flex justify-between items-center">
-          <span className="text-gray-300">Load Time:<span className={getPerformanceColor(metrics.loadTime, { good: 2000, needsImprovement: 4000 })}>{metrics.loadTime}ms</span>
-          </span>
+          <span className="text-gray-300">Load Time:</span>
+            <span className={getPerformanceColor(metrics.loadTime, { good: 2000, needsImprovement: 4000 })}>{metrics.loadTime}ms</span>
         </div>
 
         <div className="flex justify-between items-center">
-          <span className="text-gray-300">First Paint:<span className={getPerformanceColor(metrics.firstContentfulPaint, { good: 1800, needsImprovement: 3000 })}>{metrics.firstContentfulPaint}ms</span>
-          </span>
+          <span className="text-gray-300">First Paint:</span>
+            <span className={getPerformanceColor(metrics.firstContentfulPaint, { good: 1800, needsImprovement: 3000 })}>{metrics.firstContentfulPaint}ms</span>
         </div>
 
         <div className="flex justify-between items-center">
-          <span className="text-gray-300">Largest Paint:<span className={getPerformanceColor(metrics.largestContentfulPaint, { good: 2500, needsImprovement: 4000 })}>{metrics.largestContentfulPaint}ms</span>
-          </span>
+          <span className="text-gray-300">Largest Paint:</span>
+            <span className={getPerformanceColor(metrics.largestContentfulPaint, { good: 2500, needsImprovement: 4000 })}>{metrics.largestContentfulPaint}ms</span>
         </div>
 
         <div className="flex justify-between items-center">

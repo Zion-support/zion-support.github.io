@@ -163,14 +163,14 @@ export default function AIContentWriterPage() {
             {/* Key Stats */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-4xl mx-auto">
               <div className="cyber-card hologram-card p-6">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">300%<div className="text-gray-300">Average Traffic Increase</div>
-              </div>
+                <div className="text-3xl font-bold text-cyan-400 mb-2">300%</div>
+            <div className="text-gray-300">Average Traffic Increase</div>
               <div className="cyber-card hologram-card p-6">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">70%<div className="text-gray-300">Time Saved</div>
-              </div>
+                <div className="text-3xl font-bold text-cyan-400 mb-2">70%</div>
+            <div className="text-gray-300">Time Saved</div>
               <div className="cyber-card hologram-card p-6">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">50K+<div className="text-gray-300">Happy Customers</div>
-              </div>
+                <div className="text-3xl font-bold text-cyan-400 mb-2">50K+</div>
+            <div className="text-gray-300">Happy Customers</div>
             </div>
           </div>
         </section>
@@ -206,16 +206,16 @@ export default function AIContentWriterPage() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                   <div className="cyber-card hologram-card p-6">
-                    <div className="text-4xl mb-4">🤖<h3 className="text-xl font-bold text-white mb-4">AI-Powered Generation<p className="text-gray-300">Leverage the latest GPT-4 technology to create high-quality content that matches your brand voice and style.</p>
-                    </p>
+                    <div className="text-4xl mb-4">🤖<h3 className="text-xl font-bold text-white mb-4"> className="text-gray-300"</h3>
+            <p className="text-gray-300">Leverage the latest GPT-4 technology to create high-quality content that matches your brand voice and style.</p>
                   </div>
                   <div className="cyber-card hologram-card p-6">
-                    <div className="text-4xl mb-4">📈<h3 className="text-xl font-bold text-white mb-4">SEO Optimization<p className="text-gray-300">Built-in SEO tools ensure your content ranks higher in search results and drives organic traffic.</p>
-                    </p>
+                    <div className="text-4xl mb-4">📈<h3 className="text-xl font-bold text-white mb-4"> className="text-gray-300"</h3>
+            <p className="text-gray-300">Built-in SEO tools ensure your content ranks higher in search results and drives organic traffic.</p>
                   </div>
                   <div className="cyber-card hologram-card p-6">
-                    <div className="text-4xl mb-4">⚡<h3 className="text-xl font-bold text-white mb-4">Scale Efficiently<p className="text-gray-300">Produce 10x more content in the same time while maintaining quality and consistency across all channels.</p>
-                    </p>
+                    <div className="text-4xl mb-4">⚡<h3 className="text-xl font-bold text-white mb-4"> className="text-gray-300"</h3>
+            <p className="text-gray-300">Produce 10x more content in the same time while maintaining quality and consistency across all channels.</p>
                   </div>
                 </div>
               </div>
@@ -224,8 +224,8 @@ export default function AIContentWriterPage() {
             {activeTab === 'features' && (
               <div className="space-y-16">
                 <div className="text-center">
-                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">Comprehensive Feature Set<p className="text-lg text-gray-300 max-w-3xl mx-auto">Everything you need to create, optimize, and manage content at scale.</p>
-                  </p>
+                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">Comprehensive Feature Set</h2>
+            <p className="text-lg text-gray-300 max-w-3xl mx-auto">Everything you need to create, optimize, and manage content at scale.</p>
                 </div>
 
                 {features.map((category, index) => (
@@ -291,8 +291,8 @@ export default function AIContentWriterPage() {
                         ))}
                       <p className="text-gray-300 mb-6 italic">"{testimonial.content}"</p>
                       <div>
-                        <div className="font-semibold text-white">{testimonial.name}<div className="text-sm text-gray-400">{testimonial.role}<div className="text-sm text-cyan-400">{testimonial.company}</div>
-                      </div>
+                        <div className="font-semibold text-white">{testimonial.name}<div className="text-sm text-gray-400">{testimonial.role}</div>
+            <div className="text-sm text-cyan-400">{testimonial.company}</div>
                     </div>
                   ))}
                 </div>
@@ -341,8 +341,8 @@ export default function AIContentWriterPage() {
         {/* CTA Section */}
         <section className="py-20 px-4 bg-slate-800/30">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">Ready to Transform Your Content Strategy?<p className="text-lg text-gray-300 mb-8">Start your free trial today and experience the power of AI-driven content creation.</p>
-            </p>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">Ready to Transform Your Content Strategy?</h2>
+            <p className="text-lg text-gray-300 mb-8">Start your free trial today and experience the power of AI-driven content creation.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="tel:+13024640950"

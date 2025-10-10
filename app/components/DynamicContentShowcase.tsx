@@ -120,8 +120,8 @@ const DynamicContentShowcase: React.FC = () => {
                     <div key={index} className="flex items-center justify-between bg-slate-700/30 rounded-lg p-4">
                       <div className="flex items-center space-x-3">
                         <stat.icon className={`w-6 h-6 ${currentTab.color}`} />
-                        <span className="text-gray-300">{stat.label}<span className={`text-2xl font-bold ${currentTab.color}`}>{stat.value}</span>
-                      </span>
+                        <span className="text-gray-300">{stat.label}</span>
+            <span className={`text-2xl font-bold ${currentTab.color}`}>{stat.value}</span>
                     </div>
                   ))}
                 </div>

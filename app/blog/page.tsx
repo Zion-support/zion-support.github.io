@@ -235,8 +235,8 @@ export default function BlogPage() {
                           className="w-10 h-10 rounded-full"
                         />
                         <div>
-                          <div className="text-white font-medium">{featuredPost.author}<div className="text-gray-400 text-sm">{featuredPost.authorRole}</div>
-                        </div>
+                          <div className="text-white font-medium">{featuredPost.author}</div>
+            <div className="text-gray-400 text-sm">{featuredPost.authorRole}</div>
                       </div>
                     </div>
                     <div className="flex items-center space-x-4 text-gray-400 text-sm">
@@ -281,9 +281,8 @@ export default function BlogPage() {
                       alt={post.title}
                       className="w-full h-48 object-cover"
                     />
-                    <div className="absolute top-4 left-4">
-                      <div className={`w-8 h-8 ${getCategoryColor(post.category)}`}>{React.createElement(getCategoryIcon(post.category), { className: 'w-8 h-8' })}</div>
-                      </div>
+                    <div className="$2" />
+            <div className={`w-8 h-8 ${getCategoryColor(post.category)}`}>{React.createElement(getCategoryIcon(post.category), { className: 'w-8 h-8' })}</div>
                     </div>
                   </div>
                   <div className="p-6">
@@ -301,8 +300,8 @@ export default function BlogPage() {
                           className="w-8 h-8 rounded-full"
                         />
                         <div>
-                          <div className="text-white font-medium text-sm">{post.author}<div className="text-gray-400 text-xs">{post.authorRole}</div>
-                        </div>
+                          <div className="text-white font-medium text-sm">{post.author}</div>
+            <div className="text-gray-400 text-xs">{post.authorRole}</div>
                       </div>
                       <div className="flex items-center space-x-4 text-gray-400 text-xs">
                         <div className="flex items-center space-x-1">
@@ -328,8 +327,8 @@ export default function BlogPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-gradient-to-r from-cyan-600 to-purple-700 rounded-lg p-8">
-              <h2 className="text-3xl font-bold text-white mb-4">Stay Updated with Our Latest Insights<p className="text-xl text-gray-200 mb-8">Get the latest articles, industry insights, and expert opinions delivered to your inbox.</p>
-              </p>
+              <h2 className="text-3xl font-bold text-white mb-4">Stay Updated with Our Latest Insights</h2>
+            <p className="text-xl text-gray-200 mb-8">Get the latest articles, industry insights, and expert opinions delivered to your inbox.</p>
               <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
                 <input
                   type="email"

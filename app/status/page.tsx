@@ -162,8 +162,8 @@ const StatusPage: React.FC = () => {
 
       <main className="container mx-auto px-4 py-16 pt-24">{/* Header */}</main>
         <section className="text-center mb-12">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">System Status<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Real-time status of all our services and systems. We monitor our infrastructure 24/7 to ensure optimal performance.</p>
-          </p>
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">System Status</h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Real-time status of all our services and systems. We monitor our infrastructure 24/7 to ensure optimal performance.</p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
             <div className={`flex items-center space-x-2 px-4 py-2 rounded-lg ${getStatusColor(overallStatus)}`}>{getStatusIcon(overallStatus)}<span className="font-semibold">{overallStatus === 'operational' ? 'All Systems Operational' : 'Some Issues Detected'}</span>
@@ -213,8 +213,8 @@ const StatusPage: React.FC = () => {
                     <h3 className="text-xl font-bold text-white mb-2">{incident.title}<p className="text-gray-300 mb-4">{incident.description}</p>
                   </div>
                   <div className="flex items-center space-x-2 ml-4">
-                    <span className={`px-3 py-1 rounded-full text-sm font-medium ${getSeverityColor(incident.severity)}`}>{incident.severity}<span className={`px-3 py-1 rounded-full text-sm font-medium ${getStatusColor(incident.status)}`}>{incident.status}</span>
-                    </span>
+                    <span className={`px-3 py-1 rounded-full text-sm font-medium ${getSeverityColor(incident.severity)}`}>{incident.severity}</span>
+            <span className={`px-3 py-1 rounded-full text-sm font-medium ${getStatusColor(incident.status)}`}>{incident.status}</span>
                   </div>
                 </div>
                 
@@ -240,28 +240,28 @@ const StatusPage: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="cyber-card p-6 text-center">
               <Activity className="w-8 h-8 text-cyan-400 mx-auto mb-3" />
-              <div className="text-3xl font-bold text-white mb-2">99.9%<div className="text-gray-400 text-sm">Overall Uptime</div>
-            </div>
+              <div className="text-3xl font-bold text-white mb-2">99.9%</div>
+            <div className="text-gray-400 text-sm">Overall Uptime</div>
             <div className="cyber-card p-6 text-center">
               <TrendingUp className="w-8 h-8 text-green-400 mx-auto mb-3" />
-              <div className="text-3xl font-bold text-white mb-2">28ms<div className="text-gray-400 text-sm">Average Response Time</div>
-            </div>
+              <div className="text-3xl font-bold text-white mb-2">28ms</div>
+            <div className="text-gray-400 text-sm">Average Response Time</div>
             <div className="cyber-card p-6 text-center">
               <Server className="w-8 h-8 text-blue-400 mx-auto mb-3" />
-              <div className="text-3xl font-bold text-white mb-2">6<div className="text-gray-400 text-sm">Active Services</div>
-            </div>
+              <div className="text-3xl font-bold text-white mb-2">6</div>
+            <div className="text-gray-400 text-sm">Active Services</div>
             <div className="cyber-card p-6 text-center">
               <Shield className="w-8 h-8 text-purple-400 mx-auto mb-3" />
-              <div className="text-3xl font-bold text-white mb-2">0<div className="text-gray-400 text-sm">Active Incidents</div>
-            </div>
+              <div className="text-3xl font-bold text-white mb-2">0</div>
+            <div className="text-gray-400 text-sm">Active Incidents</div>
           </div>
         </section>
 
         {/* Contact Information */}
         <section className="text-center">
           <div className="cyber-card p-8 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-white mb-4">Need Help?<p className="text-xl text-gray-300 mb-8">If you're experiencing issues not reflected in our status page, please contact our support team.</p>
-            </p>
+            <h2 className="text-3xl font-bold text-white mb-4">Need Help?</h2>
+            <p className="text-xl text-gray-300 mb-8">If you're experiencing issues not reflected in our status page, please contact our support team.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/support"

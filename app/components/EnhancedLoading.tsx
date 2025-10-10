@@ -27,12 +27,12 @@ const EnhancedLoading: React.FC<LoadingProps>= ({
 </LoadingProps>
   const renderSpinner = () => (<div className={`${sizeClasses[size]} border-2 border-cyan-400/20 border-t-cyan-400 rounded-full animate-spin`} >);
 </div>
-  const renderDots = () => (<div className="flex space-x-1">{[0, 1, 2].map((i) => (<div
+  const renderDots = () => (<div className="flex space-x-1">{[0, 1, 2].map((i) => (</div>
+            <div
           key={i}
           className={`w-2 h-2 bg-cyan-400 rounded-full animate-pulse`}
           style={{ animationDelay: `${i * 0.2}s` }}
         >))}</div>
-    </div>
   );
 
   const renderPulse = () => (

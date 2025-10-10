@@ -149,8 +149,8 @@ const AILogoDesignerPage: React.FC = () => {
           <div className="text-center mb-16">
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full mb-6">
               <Palette className="w-10 h-10 text-white" />
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">AI Logo Designer Pro<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Create stunning, professional logos in minutes with AI-powered design generation. From concept to completion, get the perfect logo for your brand with unlimited variations and commercial rights.</p>
-            </p>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">AI Logo Designer Pro</h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Create stunning, professional logos in minutes with AI-powered design generation. From concept to completion, get the perfect logo for your brand with unlimited variations and commercial rights.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
               <div className="flex items-center space-x-2 text-green-400">
                 <CheckCircle className="w-5 h-5" />
@@ -313,8 +313,8 @@ const AILogoDesignerPage: React.FC = () => {
       {/* Contact Section */}
       <section id="contact" className="py-16 px-4 bg-gradient-to-r from-purple-600 to-pink-600">
         <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Create Your Logo?<p className="text-xl text-purple-100 mb-8">Start designing your perfect logo today with AI Logo Designer Pro.</p>
-          </p>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Create Your Logo?</h2>
+            <p className="text-xl text-purple-100 mb-8">Start designing your perfect logo today with AI Logo Designer Pro.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="tel:+13024640950"

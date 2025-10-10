@@ -208,9 +208,8 @@ export default function PricingPage() {
                     plan.popular ? 'ring-2 ring-cyan-400 scale-105' : ''
                   } hover:bg-slate-700/50 transition-all duration-300`}
                 >{plan.popular && (</div>
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <div className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-1 rounded-full text-sm font-medium">Most Popular</div>
-                      </div>
+                    <div className="$2" />
+            <div className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-1 rounded-full text-sm font-medium">Most Popular</div>
                     </div>
                   )}
 
@@ -219,8 +218,8 @@ export default function PricingPage() {
                       <plan.icon className={`w-8 h-8 ${plan.color}`} />
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}<p className="text-gray-300 mb-4">{plan.description}</p>
                     <div className="mb-4">
-                      <span className="text-4xl font-bold text-white">${plan.price[billingCycle as keyof typeof plan.price].toLocaleString()}<span className="text-gray-400 ml-2">/{billingCycle === 'monthly' ? 'month' : 'year'}</span>
-                      </span>
+                      <span className="text-4xl font-bold text-white">${plan.price[billingCycle as keyof typeof plan.price].toLocaleString()}</span>
+            <span className="text-gray-400 ml-2">/{billingCycle === 'monthly' ? 'month' : 'year'}</span>
                     </div>
                     {billingCycle === 'yearly' && (
                       <div className="text-green-400 text-sm font-medium">Save ${savings.savings.toLocaleString()} ({savings.percentage}% off)</div>
@@ -280,8 +279,8 @@ export default function PricingPage() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Frequently Asked Questions<p className="text-lg text-gray-300 max-w-3xl mx-auto">Common questions about our pricing and plans</p>
-            </p>
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Frequently Asked Questions</h2>
+            <p className="text-lg text-gray-300 max-w-3xl mx-auto">Common questions about our pricing and plans</p>
           </div>
           <div className="max-w-4xl mx-auto">
             <div className="space-y-6">{faqs.map((faq, index) => (</div>
@@ -297,8 +296,8 @@ export default function PricingPage() {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-cyan-600 to-purple-700">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">Ready to Get Started?<p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">Start your 14-day free trial today. No credit card required, cancel anytime.</p>
-          </p>
+          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
+            <p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">Start your 14-day free trial today. No credit card required, cancel anytime.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="/contact"

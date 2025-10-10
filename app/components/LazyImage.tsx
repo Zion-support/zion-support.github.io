@@ -66,9 +66,8 @@ const LazyImage: React.FC<LazyImageProps>= ({
       )}
 
       {hasError && (
-        <div className="absolute inset-0 flex items-center justify-center bg-gray-200 text-gray-500">
-          <span>Failed to load image</span>
-        </div>
+        <div className="$2" />
+            <span>Failed to load image</span>
       )}
     </div>
   );

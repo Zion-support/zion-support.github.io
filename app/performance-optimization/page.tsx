@@ -194,8 +194,8 @@ const PerformanceOptimizationPage: React.FC = () => {
 
         {/* CTA Section */}
         <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 rounded-2xl p-12 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">Boost Your Performance Today<p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Don't let slow performance hold your business back. Let our experts optimize your systems for maximum speed and efficiency.</p>
-          </p>
+          <h2 className="text-3xl font-bold text-white mb-4">Boost Your Performance Today</h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Don't let slow performance hold your business back. Let our experts optimize your systems for maximum speed and efficiency.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact"

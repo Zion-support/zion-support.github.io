@@ -88,8 +88,8 @@ const HealthcareITPage: React.FC = () => {
       {/* CTA Section */}
 <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">Ready for Healthcare IT Excellence?<p className="text-xl text-gray-300 mb-8">Join leading healthcare organizations using our specialized IT solutions for compliance and security</p>
-          </p>
+          <h2 className="text-4xl font-bold text-white mb-6">Ready for Healthcare IT Excellence?</h2>
+            <p className="text-xl text-gray-300 mb-8">Join leading healthcare organizations using our specialized IT solutions for compliance and security</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-red-500 to-blue-600 hover:from-red-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">Start Free Trial<button className="border border-red-400 text-red-400 hover:bg-red-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">Contact Sales</button>
             </button>

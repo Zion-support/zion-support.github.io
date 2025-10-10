@@ -4166,10 +4166,10 @@ const itServices: ITService[] = [
 // Loading skeleton component
 const ServiceCardSkeleton = () => (
   <div className="cyber-card p-6 animate-pulse">
-    <div className="h-8 bg-gray-700 rounded mb-4"></div>
-    <div className="h-4 bg-gray-700 rounded mb-2"></div>
-    <div className="h-4 bg-gray-700 rounded mb-4"></div>
-    <div className="h-6 bg-gray-700 rounded"></div>
+    <div className="$2" />
+    <div className="$2" />
+    <div className="$2" />
+    <div className="$2" />
   </div>
 );
 // Stats data
@@ -4204,7 +4204,7 @@ const HomePage: React.FC = () => {
       
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+        <div className="$2" />
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 cyber-text-ultra neon-pulse">
@@ -4522,7 +4522,7 @@ const HomePage: React.FC = () => {
                   <div className="w-16 h-16 mx-auto bg-gradient-to-r from-cyan-400 to-purple-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-cyan-400/25">
                     <stat.icon className="w-8 h-8 text-white" />
                   </div>
-                  <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-full blur opacity-30 group-hover:opacity-50 transition-opacity"></div>
+                  <div className="$2" />
                 </div>
                 <div className="text-3xl md:text-4xl font-bold text-white mb-2 cyber-text-enhanced">{stat.number}</div>
                 <div className="text-gray-400 font-medium">{stat.label}</div>

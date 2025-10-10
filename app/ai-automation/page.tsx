@@ -143,8 +143,8 @@ const AIAutomationPage: React.FC = () => {
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8">{stats.map((stat, index) => (</div>
                   <div key={index} className="text-center cyber-card p-6">
                     <stat.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
-                    <div className="text-3xl font-bold text-white mb-2">{stat.value}<div className="text-gray-300">{stat.label}</div>
-                  </div>
+                    <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
+            <div className="text-gray-300">{stat.label}</div>
                 ))}
               </div>
             </section>
@@ -174,9 +174,8 @@ const AIAutomationPage: React.FC = () => {
             {/* Pricing Section */}
             <section className="mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">Choose Your Plan<div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">{pricingPlans.map((plan, index) => (<div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>{plan.popular && (</div>
-                      <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                        <div className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-semibold">Most Popular</div>
-                        </div>
+                      <div className="$2" />
+            <div className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-semibold">Most Popular</div>
                       </div>
                     )}
 
@@ -205,8 +204,8 @@ const AIAutomationPage: React.FC = () => {
             {/* CTA Section */}
             <section className="text-center">
               <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-lg p-12 text-center cyber-card">
-                <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">Ready to Automate Your Business?<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Join hundreds of businesses already using AI Automation to achieve unprecedented efficiency and growth.</p>
-                </p>
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">Ready to Automate Your Business?</h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Join hundreds of businesses already using AI Automation to achieve unprecedented efficiency and growth.</p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a
                     href="/contact"
@@ -220,9 +219,8 @@ const AIAutomationPage: React.FC = () => {
                     <Phone className="w-5 h-5" >+1 302 464 0950</Phone>
                   </Phone>
                 </div>
-                <div className="mt-8 text-sm opacity-90">
-                  <p>📧 kleber@ziontechgroup.com | 📍 364 E Main St STE 1008, Middletown DE 19709</p>
-                </div>
+                <div className="$2" />
+            <p>📧 kleber@ziontechgroup.com | 📍 364 E Main St STE 1008, Middletown DE 19709</p>
               </div>
             </section>
           </div>

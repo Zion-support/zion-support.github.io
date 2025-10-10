@@ -176,8 +176,8 @@ const SupportPage: React.FC = () => {
 
       <main className="container mx-auto px-4 py-16 pt-24">{/* Hero Section */}</main>
         <section className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">Support Center<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Get help when you need it. Our support team is here 24/7 to assist you with any questions or issues.</p>
-          </p>
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">Support Center</h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Get help when you need it. Our support team is here 24/7 to assist you with any questions or issues.</p>
           
           {/* Search Bar */}
           <div className="max-w-2xl mx-auto mb-8">
@@ -272,8 +272,8 @@ const SupportPage: React.FC = () => {
         {/* Contact CTA */}
         <section className="text-center">
           <div className="cyber-card p-8 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-white mb-4">Still Need Help?<p className="text-xl text-gray-300 mb-8">Our support team is standing by to help you succeed. Get in touch with us today.</p>
-            </p>
+            <h2 className="text-3xl font-bold text-white mb-4">Still Need Help?</h2>
+            <p className="text-xl text-gray-300 mb-8">Our support team is standing by to help you succeed. Get in touch with us today.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"

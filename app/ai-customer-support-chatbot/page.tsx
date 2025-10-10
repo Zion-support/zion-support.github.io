@@ -185,8 +185,8 @@ const AICustomerSupportChatbotPage: React.FC = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">{stats.map((stat, index) => (</div>
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 cyber-card">
                 <stat.icon className="w-8 h-8 text-green-400 mx-auto mb-2" />
-                <div className="text-2xl font-bold text-green-400 mb-1">{stat.value}<div className="text-gray-300 text-sm">{stat.label}</div>
-              </div>
+                <div className="text-2xl font-bold text-green-400 mb-1">{stat.value}</div>
+            <div className="text-gray-300 text-sm">{stat.label}</div>
             ))}
           </div>
 
@@ -280,8 +280,8 @@ const AICustomerSupportChatbotPage: React.FC = () => {
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 cyber-card">
                 <div className="flex items-center mb-4">{[...Array(testimonial.rating)].map((_, i) => (<Star key={i} className="w-5 h-5 text-yellow-400 fill-current" >))}<p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
                 <div>
-                  <div className="font-semibold text-white">{testimonial.name}<div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
-                </div>
+                  <div className="font-semibold text-white">{testimonial.name}</div>
+            <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
               </div>
             ))}
           </div>
@@ -291,8 +291,8 @@ const AICustomerSupportChatbotPage: React.FC = () => {
       {/* CTA Section */}
       <section className="py-16 px-4 bg-gradient-to-r from-green-600 to-blue-600">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Transform Your Customer Support?<p className="text-xl text-green-100 mb-8">Join thousands of businesses already using AI Customer Support Chatbot to improve their customer experience.</p>
-          </p>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Transform Your Customer Support?</h2>
+            <p className="text-xl text-green-100 mb-8">Join thousands of businesses already using AI Customer Support Chatbot to improve their customer experience.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="tel:+13024640950"

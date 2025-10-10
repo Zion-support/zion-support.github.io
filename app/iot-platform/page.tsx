@@ -88,8 +88,8 @@ description: 'Comprehensive security measures designed specifically for IoT envi
       {/* CTA Section */}
 <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">Ready to Build Your IoT Platform?<p className="text-xl text-gray-300 mb-8">Join leading organizations using our IoT platform to connect and manage millions of devices</p>
-          </p>
+          <h2 className="text-4xl font-bold text-white mb-6">Ready to Build Your IoT Platform?</h2>
+            <p className="text-xl text-gray-300 mb-8">Join leading organizations using our IoT platform to connect and manage millions of devices</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-orange-500 to-blue-600 hover:from-orange-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">Start Free Trial<button className="border border-orange-400 text-orange-400 hover:bg-orange-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">Contact Sales</button>
             </button>

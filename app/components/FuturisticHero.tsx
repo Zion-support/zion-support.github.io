@@ -71,8 +71,8 @@ const FuturisticHero: React.FC = memo(() => {
                 <div key={index} className="text-center space-y-2">
                   <div className="w-12 h-12 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center mx-auto">
                     <stat.icon className="w-6 h-6 text-cyan-400" />
-                  <div className="text-2xl font-bold text-white neon-text">{stat.value}<div className="text-sm text-gray-400">{stat.label}</div>
-                </div>
+                  <div className="text-2xl font-bold text-white neon-text">{stat.value}</div>
+            <div className="text-sm text-gray-400">{stat.label}</div>
               ))}
             </div>
           </div>
@@ -84,8 +84,8 @@ const FuturisticHero: React.FC = memo(() => {
                   <div className="text-center space-y-4">
                     <div className="w-20 h-20 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-full flex items-center justify-center mx-auto energy-pulse">
                       <Brain className="w-10 h-10 text-white" />
-                    <div className="text-cyan-400 font-bold text-lg">AI Core<div className="text-gray-300 text-sm">Processing...</div>
-                  </div>
+                    <div className="text-cyan-400 font-bold text-lg">AI Core</div>
+            <div className="text-gray-300 text-sm">Processing...</div>
                 </div>
               </div>
 
@@ -124,12 +124,12 @@ const FuturisticHero: React.FC = memo(() => {
             </div>
 
             {/* Floating Elements */}
-            <div className="absolute -top-4 -left-4 w-8 h-8 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full animate-bounce"><div className="absolute -bottom-4 -right-4 w-6 h-6 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full animate-bounce delay-1000"><div className="absolute top-1/2 -left-8 w-4 h-4 bg-gradient-to-br from-green-400 to-emerald-500 rounded-full animate-bounce delay-2000"></div>
+            <div className="absolute -top-4 -left-4 w-8 h-8 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full animate-bounce"><div className="absolute -bottom-4 -right-4 w-6 h-6 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full animate-bounce delay-1000"><div className="$2" />
 
       {/* Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
         <div className="w-6 h-10 border-2 border-cyan-400 rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-cyan-400 rounded-full mt-2 animate-pulse"></div>
+          <div className="$2" />
     </section>
   );
 

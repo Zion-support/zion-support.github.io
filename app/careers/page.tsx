@@ -429,8 +429,8 @@ export default function CareersPage() {
                           <span>Posted {new Date(position.postedDate).toLocaleDateString()}<p className="text-gray-300 mb-4">{position.description}</p>
                     </div>
                     <div className="lg:ml-6 lg:text-right">
-                      <div className="text-2xl font-bold text-cyan-400 mb-1">{position.salary}<div className="text-gray-400 text-sm">{position.experience}</div>
-                    </div>
+                      <div className="text-2xl font-bold text-cyan-400 mb-1">{position.salary}</div>
+            <div className="text-gray-400 text-sm">{position.experience}</div>
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">

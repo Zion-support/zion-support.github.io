@@ -160,8 +160,8 @@ const CompliancePage: React.FC = () => {
 
       <main className="container mx-auto px-4 py-16 pt-24">{/* Header */}</main>
         <section className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 neon-text">Compliance & Certifications<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">We maintain the highest standards of compliance and security to protect your data and ensure regulatory adherence across all industries.</p>
-          </p>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 neon-text">Compliance & Certifications</h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">We maintain the highest standards of compliance and security to protect your data and ensure regulatory adherence across all industries.</p>
           <div className="flex flex-wrap justify-center gap-4">
             <div className="flex items-center space-x-2 bg-green-500/20 px-4 py-2 rounded-lg">
               <Award className="w-5 h-5 text-green-400" />
@@ -293,8 +293,8 @@ const CompliancePage: React.FC = () => {
         {/* Industry-Specific Compliance */}
         <section className="mb-16">
           <div className="cyber-card p-8">
-            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Industry-Specific Compliance<p className="text-gray-300 mb-8">We understand that different industries have unique compliance requirements. Our solutions are designed to meet the specific needs of various sectors.</p>
-            </p>
+            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Industry-Specific Compliance</h2>
+            <p className="text-gray-300 mb-8">We understand that different industries have unique compliance requirements. Our solutions are designed to meet the specific needs of various sectors.</p>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               <div className="bg-slate-800/50 rounded-lg p-6">
                 <h3 className="text-lg font-semibold text-cyan-400 mb-3">Healthcare (HIPAA)</h3>
@@ -324,8 +324,8 @@ const CompliancePage: React.FC = () => {
         {/* Compliance Documentation */}
         <section className="mb-16">
           <div className="cyber-card p-8">
-            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Compliance Documentation<p className="text-gray-300 mb-6">We maintain comprehensive documentation of our compliance efforts and are happy to provide relevant documentation to our clients and prospects.</p>
-            </p>
+            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Compliance Documentation</h2>
+            <p className="text-gray-300 mb-6">We maintain comprehensive documentation of our compliance efforts and are happy to provide relevant documentation to our clients and prospects.</p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
                 <h3 className="text-lg font-semibold text-cyan-400 mb-4">Available Documents</h3>
@@ -349,8 +349,8 @@ const CompliancePage: React.FC = () => {
                 </ul>
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-cyan-400 mb-4">Request Documentation<p className="text-gray-300 mb-4">To request compliance documentation or schedule a compliance review, please contact our compliance team.</p>
-                </p>
+                <h3 className="text-lg font-semibold text-cyan-400 mb-4"> className="text-gray-300 mb-4"</h3>
+            <p className="text-gray-300 mb-4">To request compliance documentation or schedule a compliance review, please contact our compliance team.</p>
                 <a
                   href="mailto:compliance@ziontechgroup.com"
                   className="inline-flex items-center px-4 py-2 bg-cyan-500 text-white rounded-lg hover:bg-cyan-600 transition-colors"
@@ -365,8 +365,8 @@ const CompliancePage: React.FC = () => {
         {/* Contact Information */}
         <section className="mb-16">
           <div className="cyber-card p-8">
-            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Compliance Questions?<p className="text-gray-300 mb-6">If you have any questions about our compliance posture or need specific compliance documentation, please contact our compliance team:</p>
-            </p>
+            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Compliance Questions?</h2>
+            <p className="text-gray-300 mb-6">If you have any questions about our compliance posture or need specific compliance documentation, please contact our compliance team:</p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
                 <h3 className="text-lg font-semibold text-cyan-400 mb-3">Compliance Team</h3>

@@ -15,8 +15,8 @@ export default function AIInventoryManagementPage() {
 
         <main className="container mx-auto px-4 py-16 pt-24">{/* Hero Section */}</main>
           <section className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text cyber-text">AI Inventory Management<p className="text-xl text-cyan-400 mb-8 font-medium">Intelligent inventory optimization powered by AI<p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8">Revolutionize your inventory management with AI that predicts demand, optimizes stock levels, and automates reordering to reduce costs by 40% while eliminating stockouts.</p>
-            </p>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text cyber-text">AI Inventory Management<p className="text-xl text-cyan-400 mb-8 font-medium">Intelligent inventory optimization powered by AI</p>
+            <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8">Revolutionize your inventory management with AI that predicts demand, optimizes stock levels, and automates reordering to reduce costs by 40% while eliminating stockouts.</p>
           </section>
 
           {/* Features Grid */}
@@ -24,33 +24,33 @@ export default function AIInventoryManagementPage() {
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">AI-Powered Features</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="cyber-card p-6 energy-pulse">
-                <div className="text-4xl mb-4 text-center">🔮<h3 className="text-xl font-bold text-white mb-4 text-center">Demand Forecasting<p className="text-gray-300 text-center">AI predicts future demand with 95% accuracy using historical data, seasonality, and market trends.</p>
-                </p>
+                <div className="text-4xl mb-4 text-center">🔮<h3 className="text-xl font-bold text-white mb-4 text-center"> className="text-gray-300 text-center"</h3>
+            <p className="text-gray-300 text-center">AI predicts future demand with 95% accuracy using historical data, seasonality, and market trends.</p>
               </div>
 
               <div className="cyber-card p-6 energy-pulse">
-                <div className="text-4xl mb-4 text-center">📦<h3 className="text-xl font-bold text-white mb-4 text-center">Automated Reordering<p className="text-gray-300 text-center">Automatically reorder products when stock levels reach optimal thresholds to prevent stockouts.</p>
-                </p>
+                <div className="text-4xl mb-4 text-center">📦<h3 className="text-xl font-bold text-white mb-4 text-center"> className="text-gray-300 text-center"</h3>
+            <p className="text-gray-300 text-center">Automatically reorder products when stock levels reach optimal thresholds to prevent stockouts.</p>
               </div>
 
               <div className="cyber-card p-6 energy-pulse">
-                <div className="text-4xl mb-4 text-center">📊<h3 className="text-xl font-bold text-white mb-4 text-center">Real-time Analytics<p className="text-gray-300 text-center">Get instant insights into inventory performance, turnover rates, and optimization opportunities.</p>
-                </p>
+                <div className="text-4xl mb-4 text-center">📊<h3 className="text-xl font-bold text-white mb-4 text-center"> className="text-gray-300 text-center"</h3>
+            <p className="text-gray-300 text-center">Get instant insights into inventory performance, turnover rates, and optimization opportunities.</p>
               </div>
 
               <div className="cyber-card p-6 energy-pulse">
-                <div className="text-4xl mb-4 text-center">🎯<h3 className="text-xl font-bold text-white mb-4 text-center">Stock Optimization<p className="text-gray-300 text-center">AI optimizes stock levels to minimize carrying costs while maintaining service levels.</p>
-                </p>
+                <div className="text-4xl mb-4 text-center">🎯<h3 className="text-xl font-bold text-white mb-4 text-center"> className="text-gray-300 text-center"</h3>
+            <p className="text-gray-300 text-center">AI optimizes stock levels to minimize carrying costs while maintaining service levels.</p>
               </div>
 
               <div className="cyber-card p-6 energy-pulse">
-                <div className="text-4xl mb-4 text-center">🚨<h3 className="text-xl font-bold text-white mb-4 text-center">Alert System<p className="text-gray-300 text-center">Get notified about low stock, overstock, slow-moving items, and other critical inventory issues.</p>
-                </p>
+                <div className="text-4xl mb-4 text-center">🚨<h3 className="text-xl font-bold text-white mb-4 text-center"> className="text-gray-300 text-center"</h3>
+            <p className="text-gray-300 text-center">Get notified about low stock, overstock, slow-moving items, and other critical inventory issues.</p>
               </div>
 
               <div className="cyber-card p-6 energy-pulse">
-                <div className="text-4xl mb-4 text-center">📱<h3 className="text-xl font-bold text-white mb-4 text-center">Mobile Access<p className="text-gray-300 text-center">Manage inventory on-the-go with our mobile app for barcode scanning and real-time updates.</p>
-                </p>
+                <div className="text-4xl mb-4 text-center">📱<h3 className="text-xl font-bold text-white mb-4 text-center"> className="text-gray-300 text-center"</h3>
+            <p className="text-gray-300 text-center">Manage inventory on-the-go with our mobile app for barcode scanning and real-time updates.</p>
               </div>
             </div>
           </section>
@@ -132,8 +132,8 @@ export default function AIInventoryManagementPage() {
 
           {/* CTA Section */}
           <section className="text-center">
-            <h2 className="text-3xl font-bold text-white mb-6">Optimize Your Inventory Today<p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">Join 3,000+ businesses using our AI inventory management system to reduce costs and eliminate stockouts.</p>
-            </p>
+            <h2 className="text-3xl font-bold text-white mb-6">Optimize Your Inventory Today</h2>
+            <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">Join 3,000+ businesses using our AI inventory management system to reduce costs and eliminate stockouts.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="tel:+13024640950" className="cyber-button">📞 Call: (302) 464-0950<a href="/contact" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300">Get Free Demo</a>
               </a>

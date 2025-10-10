@@ -184,8 +184,8 @@ const PrivacyPage: React.FC = () => {
         {/* Introduction */}
         <section className="mb-16">
           <div className="cyber-card p-8">
-            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Introduction<p className="text-gray-300 mb-4 leading-relaxed">Zion Tech Group ("we," "our," or "us") is committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.<p className="text-gray-300 leading-relaxed">By using our website or services, you consent to the data practices described in this policy. If you do not agree with the terms of this Privacy Policy, please do not use our website or services.</p>
-            </p>
+            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Introduction<p className="text-gray-300 mb-4 leading-relaxed">Zion Tech Group ("we," "our," or "us") is committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.</p>
+            <p className="text-gray-300 leading-relaxed">By using our website or services, you consent to the data practices described in this policy. If you do not agree with the terms of this Privacy Policy, please do not use our website or services.</p>
           </div>
         </section>
 
@@ -212,8 +212,8 @@ const PrivacyPage: React.FC = () => {
         {/* Contact Information */}
         <section className="mb-16">
           <div className="cyber-card p-8">
-            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Contact Us<p className="text-gray-300 mb-6">If you have any questions about this Privacy Policy or our data practices, please contact us:</p>
-            </p>
+            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Contact Us</h2>
+            <p className="text-gray-300 mb-6">If you have any questions about this Privacy Policy or our data practices, please contact us:</p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
                 <h3 className="text-lg font-semibold text-cyan-400 mb-3">Zion Tech Group</h3>
@@ -235,8 +235,8 @@ const PrivacyPage: React.FC = () => {
         {/* Updates */}
         <section className="mb-16">
           <div className="cyber-card p-8">
-            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Policy Updates<p className="text-gray-300 mb-4">We may update this Privacy Policy from time to time to reflect changes in our practices or applicable laws. We will notify you of any material changes by:</p>
-            </p>
+            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Policy Updates</h2>
+            <p className="text-gray-300 mb-4">We may update this Privacy Policy from time to time to reflect changes in our practices or applicable laws. We will notify you of any material changes by:</p>
             <ul className="space-y-2 text-gray-300">
               <li className="flex items-start">
                 <span className="w-2 h-2 bg-cyan-400 rounded-full mt-2 mr-3 flex-shrink-0">Posting the updated policy on our website</span>

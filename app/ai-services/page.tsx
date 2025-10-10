@@ -1174,9 +1174,8 @@ const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Proc
 
   if (!isLoaded) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center">
-        <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-white"></div>
-      </div>
+      <div className="$2" />
+            <div className="$2" />
     );
   }
 
@@ -1195,7 +1194,7 @@ const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Proc
 
       {/* Header */}
       <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>
+        <div className="$2" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16 relative z-10">
           <div className="text-center">
 
@@ -1203,7 +1202,7 @@ const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Proc
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 neon-text">
                 AI Services
               </h1>
-              <div className="h-1 w-32 bg-gradient-to-r from-cyan-400 to-purple-600 mx-auto rounded-full"></div>
+              <div className="$2" />
             </div>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Transform your business with our comprehensive suite of cutting-edge AI-powered solutions
@@ -1401,9 +1400,8 @@ const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Proc
               Call: +1 (302) 464-0950
             </a>
           </div>
-          <div className="text-purple-100 text-sm">
+          <div className="$2" />
             <p>📧 kleber@ziontechgroup.com | 📍 364 E Main St STE 1008, Middletown, DE 19709</p>
-          </div>
         </div>
       </div>
     </div>

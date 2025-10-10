@@ -19,8 +19,8 @@ const AIAnalyticsDashboard: React.FC = () => {
 
       <main className="container mx-auto px-4 py-16 pt-24">
         <div className="max-w-6xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text text-center">AI Analytics Dashboard<p className="text-xl text-gray-300 text-center mb-12">Get intelligent insights from your data with AI-powered analytics</p>
-          </p>
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text text-center">AI Analytics Dashboard</h1>
+            <p className="text-xl text-gray-300 text-center mb-12">Get intelligent insights from your data with AI-powered analytics</p>
 
           <div className="cyber-card p-8 mb-8">
             <h2 className="text-2xl font-bold text-white mb-6">Live Dashboard Preview<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">{metrics.map((metric) => (<div
@@ -30,8 +30,8 @@ const AIAnalyticsDashboard: React.FC = () => {
                   }`}
                   onClick={() =>setSelectedMetric(metric.id)}</div>
                 ><h3 className="text-sm text-gray-400 mb-2">{metric.name}</h3>
-                  <div className="text-2xl font-bold text-white mb-1">{metric.value}<div className="text-sm text-green-400">{metric.change}</div>
-                </div>
+                  <div className="text-2xl font-bold text-white mb-1">{metric.value}</div>
+            <div className="text-sm text-green-400">{metric.change}</div>
               ))}
             </div>
             <div className="h-64 bg-gray-800 rounded-lg flex items-center justify-center">

@@ -142,9 +142,8 @@ const OptimizedImage: React.FC<OptimizedImageProps>= ({
 
       {/* Loading indicator */}</img>
       {!isLoaded && isInView && (</img>
-        </img><div className="absolute inset-0 flex items-center justify-center">
-          <div className="w-6 h-6 border-2 border-cyan-400/20 border-t-cyan-400 rounded-full animate-spin" >)}</div>
-    </div>
+        </img><div className="$2" />
+            <div className="w-6 h-6 border-2 border-cyan-400/20 border-t-cyan-400 rounded-full animate-spin" >)}</div>
   );
 };
 

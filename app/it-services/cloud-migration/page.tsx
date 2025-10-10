@@ -14,8 +14,8 @@ const CloudMigration: React.FC = () => {
 
       <main className="container mx-auto px-4 py-16 pt-24">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text text-center">Cloud Migration Services<p className="text-xl text-gray-300 text-center mb-12">Seamlessly migrate your infrastructure to the cloud with zero downtime</p>
-          </p>
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text text-center">Cloud Migration Services</h1>
+            <p className="text-xl text-gray-300 text-center mb-12">Seamlessly migrate your infrastructure to the cloud with zero downtime</p>
 
           <div className="cyber-card p-8 mb-8">
             <h2 className="text-2xl font-bold text-white mb-6">Migration Assessment</h2>

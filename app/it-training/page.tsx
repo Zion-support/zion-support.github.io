@@ -22,8 +22,8 @@ const ItTrainingPage: React.FC = () => {
           <div className="max-w-4xl mx-auto">
             <div className="w-20 h-20 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
               <GraduationCap className="w-10 h-10 text-white" />
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">IT Training & Support<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Comprehensive IT training and support services for teams and organizations.</p>
-            </p>
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">IT Training & Support</h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Comprehensive IT training and support services for teams and organizations.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
                 href="/contact"
@@ -43,8 +43,8 @@ const ItTrainingPage: React.FC = () => {
         {/* Features Section */}
         <section className="mb-16">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Key Features<p className="text-lg text-gray-300 max-w-2xl mx-auto">Powerful capabilities designed to transform your business</p>
-            </p>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Key Features</h2>
+            <p className="text-lg text-gray-300 max-w-2xl mx-auto">Powerful capabilities designed to transform your business</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -79,8 +79,8 @@ const ItTrainingPage: React.FC = () => {
         {/* Benefits Section */}
         <section className="mb-16">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Why Choose Our IT Training & Support?<p className="text-lg text-gray-300 max-w-2xl mx-auto">Proven results and measurable impact for your business</p>
-            </p>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Why Choose Our IT Training & Support?</h2>
+            <p className="text-lg text-gray-300 max-w-2xl mx-auto">Proven results and measurable impact for your business</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -107,8 +107,8 @@ const ItTrainingPage: React.FC = () => {
         {/* Pricing Section */}
         <section className="mb-16">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Pricing<p className="text-lg text-gray-300 max-w-2xl mx-auto">Transparent pricing with no hidden fees</p>
-            </p>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Pricing</h2>
+            <p className="text-lg text-gray-300 max-w-2xl mx-auto">Transparent pricing with no hidden fees</p>
           </div>
 
           <div className="max-w-md mx-auto">
@@ -126,8 +126,8 @@ const ItTrainingPage: React.FC = () => {
         {/* Contact Section */}
         <section className="mb-16">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Get Started?<p className="text-lg text-gray-300 max-w-2xl mx-auto">Contact our experts to discuss your specific needs</p>
-            </p>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
+            <p className="text-lg text-gray-300 max-w-2xl mx-auto">Contact our experts to discuss your specific needs</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">

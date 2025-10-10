@@ -182,8 +182,8 @@ const TermsPage: React.FC = () => {
         {/* Introduction */}
         <section className="mb-16">
           <div className="cyber-card p-8">
-            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Introduction<p className="text-gray-300 mb-4 leading-relaxed">These Terms of Service ("Terms") govern your use of Zion Tech Group's website, services, and applications (collectively, the "Service") operated by Zion Tech Group ("us", "we", or "our").<p className="text-gray-300 leading-relaxed">By accessing or using our Service, you agree to be bound by these Terms. If you disagree with any part of these terms, then you may not access the Service.</p>
-            </p>
+            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Introduction<p className="text-gray-300 mb-4 leading-relaxed">These Terms of Service ("Terms") govern your use of Zion Tech Group's website, services, and applications (collectively, the "Service") operated by Zion Tech Group ("us", "we", or "our").</p>
+            <p className="text-gray-300 leading-relaxed">By accessing or using our Service, you agree to be bound by these Terms. If you disagree with any part of these terms, then you may not access the Service.</p>
           </div>
         </section>
 
@@ -210,8 +210,8 @@ const TermsPage: React.FC = () => {
         {/* Contact Information */}
         <section className="mb-16">
           <div className="cyber-card p-8">
-            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Contact Us<p className="text-gray-300 mb-6">If you have any questions about these Terms of Service, please contact us:</p>
-            </p>
+            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Contact Us</h2>
+            <p className="text-gray-300 mb-6">If you have any questions about these Terms of Service, please contact us:</p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
                 <h3 className="text-lg font-semibold text-cyan-400 mb-3">Zion Tech Group</h3>
@@ -233,8 +233,8 @@ const TermsPage: React.FC = () => {
         {/* Updates */}
         <section className="mb-16">
           <div className="cyber-card p-8">
-            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Changes to Terms<p className="text-gray-300 mb-4">We reserve the right to modify or replace these Terms at any time. If a revision is material, we will try to provide at least 30 days notice prior to any new terms taking effect.<p className="text-gray-300">By continuing to access or use our Service after those revisions become effective, you agree to be bound by the revised terms.</p>
-            </p>
+            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Changes to Terms<p className="text-gray-300 mb-4">We reserve the right to modify or replace these Terms at any time. If a revision is material, we will try to provide at least 30 days notice prior to any new terms taking effect.</p>
+            <p className="text-gray-300">By continuing to access or use our Service after those revisions become effective, you agree to be bound by the revised terms.</p>
           </div>
         </section>
       </main>

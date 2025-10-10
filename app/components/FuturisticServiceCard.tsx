@@ -81,9 +81,8 @@ const FuturisticServiceCard: React.FC<FuturisticServiceCardProps>= ({
     >
       {/* Popular Badge */}</div>
       {popular && (</div>
-        <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-10">
-          <div className="bg-gradient-to-r from-purple-500 to-cyan-500 text-white px-4 py-1 rounded-full text-sm font-semibold shadow-lg">Most Popular</div>
-          </div>
+        <div className="$2" />
+            <div className="bg-gradient-to-r from-purple-500 to-cyan-500 text-white px-4 py-1 rounded-full text-sm font-semibold shadow-lg">Most Popular</div>
         </div>
       )}
 
@@ -114,8 +113,8 @@ const FuturisticServiceCard: React.FC<FuturisticServiceCardProps>= ({
 
         {/* Price */}
         <div className="mb-6">
-          <div className={`text-3xl font-bold ${currentColor.text} mb-2`}>{price}<div className="text-sm text-gray-400">per month</div>
-        </div>
+          <div className={`text-3xl font-bold ${currentColor.text} mb-2`}>{price}</div>
+            <div className="text-sm text-gray-400">per month</div>
 
         {/* Features */}
         <ul className="space-y-3 mb-8">{features.slice(0, 4).map((feature, index) => (</ul>
@@ -143,9 +142,9 @@ const FuturisticServiceCard: React.FC<FuturisticServiceCardProps>= ({
         {/* Hover Effect Overlay */}
         <div
           className={`absolute inset-0 bg-gradient-to-r ${currentColor.gradient} opacity-0 group-hover:opacity-5 rounded-2xl transition-opacity duration-500`}
-        >{/* Glow Effect */}<div
+        >{/* Glow Effect */}</div>
+            <div
         className={`absolute inset-0 bg-gradient-to-r ${currentColor.gradient} opacity-0 group-hover:opacity-20 rounded-2xl blur-xl transition-opacity duration-500 -z-10`}
       >);
 };</div>
-</div>
 export default FuturisticServiceCard;</div>

@@ -211,8 +211,8 @@ const ContactPage: React.FC = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Frequently Asked Questions<p className="text-lg text-gray-300 max-w-3xl mx-auto">Common questions about our services and process</p>
-            </p>
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Frequently Asked Questions</h2>
+            <p className="text-lg text-gray-300 max-w-3xl mx-auto">Common questions about our services and process</p>
           </div>
           <div className="max-w-4xl mx-auto">
             <div className="space-y-6">{faqs.map((faq, index) => (</div>

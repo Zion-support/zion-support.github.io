@@ -124,8 +124,8 @@ const AIAnalyticsPage: React.FC = () => {
       </Navigation><section className="pt-20 pb-16 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 neon-text">AI-Powered Analytics Dashboard<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Transform your data into actionable insights with our intelligent analytics platform. Make data-driven decisions with AI-powered recommendations.</p>
-            </p>
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 neon-text">AI-Powered Analytics Dashboard</h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Transform your data into actionable insights with our intelligent analytics platform. Make data-driven decisions with AI-powered recommendations.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="cyber-button px-8 py-4 text-lg" aria-label="Start Free Trial" tabIndex="0">Start Free Trial<button className="cyber-button-outline px-8 py-4 text-lg" aria-label="View Demo" tabIndex="0">View Demo</button>
               </button>
@@ -135,17 +135,17 @@ const AIAnalyticsPage: React.FC = () => {
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
             <div className="text-center">
-              <div className="text-4xl font-bold text-cyan-400 mb-2">95%<div className="text-gray-300">Faster Insights</div>
-            </div>
+              <div className="text-4xl font-bold text-cyan-400 mb-2">95%</div>
+            <div className="text-gray-300">Faster Insights</div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-cyan-400 mb-2">50+<div className="text-gray-300">Integrations</div>
-            </div>
+              <div className="text-4xl font-bold text-cyan-400 mb-2">50+</div>
+            <div className="text-gray-300">Integrations</div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-cyan-400 mb-2">99.9%<div className="text-gray-300">Uptime</div>
-            </div>
+              <div className="text-4xl font-bold text-cyan-400 mb-2">99.9%</div>
+            <div className="text-gray-300">Uptime</div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-cyan-400 mb-2">24/7<div className="text-gray-300">Real-time Data</div>
-            </div>
+              <div className="text-4xl font-bold text-cyan-400 mb-2">24/7</div>
+            <div className="text-gray-300">Real-time Data</div>
           </div>
         </div>
       </section>
@@ -195,8 +195,8 @@ const AIAnalyticsPage: React.FC = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">Seamless Integrations<p className="text-xl text-gray-300">Connect with your favorite tools and platforms<div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6">{integrations.map((integration, index) => (</div>
               <div key={index} className="cyber-card p-4 text-center">
-                <div className="text-3xl mb-2">{integration.icon}<div className="text-sm text-gray-300">{integration.name}</div>
-              </div>
+                <div className="text-3xl mb-2">{integration.icon}</div>
+            <div className="text-sm text-gray-300">{integration.name}</div>
             ))}
           </div>
         </div>
@@ -235,8 +235,8 @@ const AIAnalyticsPage: React.FC = () => {
       {/* CTA Section */}
       <section className="py-16 px-4 bg-gradient-to-r from-purple-600/20 to-blue-600/20">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Data?<p className="text-xl text-gray-300 mb-8">Join thousands of businesses using AI analytics to make smarter decisions and drive growth.</p>
-          </p>
+          <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Data?</h2>
+            <p className="text-xl text-gray-300 mb-8">Join thousands of businesses using AI analytics to make smarter decisions and drive growth.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="cyber-button px-8 py-4 text-lg" aria-label="Start Free Trial" tabIndex="0">Start Free Trial<button className="cyber-button-outline px-8 py-4 text-lg" aria-label="Contact Sales" tabIndex="0">Contact Sales</button>
             </button>

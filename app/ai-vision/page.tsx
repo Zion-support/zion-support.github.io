@@ -89,8 +89,8 @@ const AIVisionPage: React.FC = () => {
         {/* Contact CTA */}
         <section className="text-center">
           <div className="cyber-card p-8 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-white mb-4 neon-text">Ready to Implement Computer Vision?<p className="text-lg text-gray-300 mb-8">Contact us today to discuss your computer vision requirements and get a custom solution.</p>
-            </p>
+            <h2 className="text-3xl font-bold text-white mb-4 neon-text">Ready to Implement Computer Vision?</h2>
+            <p className="text-lg text-gray-300 mb-8">Contact us today to discuss your computer vision requirements and get a custom solution.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"

@@ -329,8 +329,8 @@ const ServicesPage: React.FC = () => {
                   </div>
                   <div>
                     <h3 className="text-3xl font-bold text-white mb-2">{category.title}<p className="text-gray-300 text-lg">{category.description}<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{category.services.map((service, serviceIndex) => (</div>
-                    <div key={serviceIndex} className="bg-slate-700/50 rounded-lg p-6 hover:bg-slate-600/50 transition-all duration-300 relative">{service.popular && (<div className="absolute -top-2 -right-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full">Popular</div>
-                        </div>
+                    <div key={serviceIndex} className="bg-slate-700/50 rounded-lg p-6 hover:bg-slate-600/50 transition-all duration-300 relative">{service.popular && (</div>
+            <div className="absolute -top-2 -right-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full">Popular</div>
                       )}
                       <h4 className="text-xl font-bold text-white mb-3">{service.name}<p className="text-gray-300 mb-4 text-sm">{service.description}</p>
                       <div className="space-y-2 mb-4">
@@ -357,8 +357,8 @@ const ServicesPage: React.FC = () => {
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Technologies We Work With<p className="text-lg text-gray-300 max-w-3xl mx-auto">We work with the latest and most reliable technologies in the industry<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">{technologies.map((tech, index) => (</div>
               <div key={index} className="bg-slate-800/50 rounded-lg p-4 text-center hover:bg-slate-700/50 transition-all duration-300">
-                <div className="text-white font-medium text-sm">{tech.name}<div className="text-gray-400 text-xs mt-1">{tech.category}</div>
-              </div>
+                <div className="text-white font-medium text-sm">{tech.name}</div>
+            <div className="text-gray-400 text-xs mt-1">{tech.category}</div>
             ))}
           </div>
         </div>
@@ -368,21 +368,20 @@ const ServicesPage: React.FC = () => {
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Our Implementation Process<p className="text-lg text-gray-300 max-w-3xl mx-auto">A proven methodology that ensures successful implementation</p>
-            </p>
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Our Implementation Process</h2>
+            <p className="text-lg text-gray-300 max-w-3xl mx-auto">A proven methodology that ensures successful implementation</p>
           </div>
           <div className="max-w-4xl mx-auto">
-            <div className="relative">
-              <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-cyan-500 to-purple-600">{process.map((step, index) => (</div>
-                </div><div key={index} className={`relative flex items-center mb-12 ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
+            <div className="$2" />
+            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-cyan-500 to-purple-600">{process.map((step, index) => (</div><div key={index} className={`relative flex items-center mb-12 ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
                   <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}>
                     <div className="bg-slate-800/50 p-6 rounded-lg">
                       <div className="text-cyan-400 font-bold text-lg mb-2">Step {step.step}<h3 className="text-xl font-bold text-white mb-2">{step.title}</h3>
                       <p className="text-gray-300 mb-2">{step.description}<div className="text-sm text-cyan-400 font-medium">{step.duration}</div>
                     </div>
                   </div>
-                  <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-cyan-500 rounded-full border-4 border-slate-900"><div className="w-1/2">))}</div>
-            </div>
+                  <div className="$2" />
+            <div className="w-1/2">))}</div>
           </div>
         </div>
       </section>
@@ -392,8 +391,8 @@ const ServicesPage: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl p-8 lg:p-12">
             <div className="text-center mb-8">
-              <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Ready to Transform Your Business?<p className="text-xl text-cyan-100 mb-8">Get in touch with our experts to discuss your project requirements</p>
-              </p>
+              <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Ready to Transform Your Business?</h2>
+            <p className="text-xl text-cyan-100 mb-8">Get in touch with our experts to discuss your project requirements</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
               <div className="text-center">

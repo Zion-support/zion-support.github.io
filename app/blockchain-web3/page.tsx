@@ -130,8 +130,8 @@ const BlockchainWeb3Page: React.FC = () => {
                   <div key={index} className="text-center">
                     <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full mx-auto mb-4">
                       <stat.icon className="w-8 h-8 text-white" />
-                    <div className="text-3xl font-bold text-white mb-2">{stat.number}<div className="text-gray-300">{stat.label}</div>
-                  </div>
+                    <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
+            <div className="text-gray-300">{stat.label}</div>
                 ))}
               </div>
             </div>
@@ -146,8 +146,8 @@ const BlockchainWeb3Page: React.FC = () => {
                 <div className="flex items-center mb-6">
                   <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center mr-4">
                     <service.icon className="w-6 h-6 text-white" />
-                  <h3 className="text-xl font-bold text-white">{service.title}<p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
-                </p>
+                  <h3 className="text-xl font-bold text-white"> className="text-gray-300 mb-6 leading-relaxed"</h3>
+            <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
                 <div className="space-y-3">
                   <h4 className="text-sm font-semibold text-indigo-400 mb-2">Features:</h4>
                   {service.features.map((feature, featureIndex) => (
