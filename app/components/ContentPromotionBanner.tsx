@@ -36,6 +36,15 @@ const ContentPromotionBannerPage: React.FC = () => {
   ];
 
   return (
+    <div className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-4 px-4">
+      <div className="max-w-7xl mx-auto text-center">
+        <p className="text-sm font-medium">
+          🚀 Transform your business with our AI and IT solutions. 
+          <a href="/contact" className="underline hover:no-underline ml-1">
+            Get started today →
+          </a>
+        </p>
+      </div>
     </div>
   );
 };

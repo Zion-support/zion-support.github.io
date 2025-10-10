@@ -1,104 +1,104 @@
 'use client';
+
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { Globe, Shield, Users, Award, CheckCircle, ArrowRight, Building, Handshake } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
+import { ExternalLink, CheckCircle } from 'lucide-react';
 
-export default function PartnersPage() {
+const PartnersPage: React.FC = () => {
   const partners = [
     {
       name: 'Microsoft',
-      logo: '/images/partners/microsoft.png',
-      description: 'Strategic cloud and AI partnership',
-      category: 'Technology'
+      logo: '/api/placeholder/200/100',
+      description: 'Strategic partnership for Azure cloud solutions and AI services',
+      category: 'Cloud & AI'
     },
     {
       name: 'Amazon Web Services',
-      logo: '/images/partners/aws.png',
-      description: 'Cloud infrastructure and services',
-      category: 'Cloud'
+      logo: '/api/placeholder/200/100',
+      description: 'Leading cloud infrastructure and machine learning platform provider',
+      category: 'Cloud Computing'
     },
     {
       name: 'Google Cloud',
-      logo: '/images/partners/google.png',
-      description: 'AI and machine learning solutions',
-      category: 'AI'
+      logo: '/api/placeholder/200/100',
+      description: 'Advanced AI and analytics solutions for enterprise clients',
+      category: 'AI & Analytics'
     },
     {
       name: 'IBM',
-      logo: '/images/partners/ibm.png',
-      description: 'Enterprise AI and consulting',
-      category: 'Enterprise'
-    },
-    {
-      name: 'Salesforce',
-      logo: '/images/partners/salesforce.png',
-      description: 'CRM and business automation',
-      category: 'Business'
-    },
-    {
-      name: 'Oracle',
-      logo: '/images/partners/oracle.png',
-      description: 'Database and enterprise solutions',
-      category: 'Database'
+      logo: '/api/placeholder/200/100',
+      description: 'Enterprise AI and hybrid cloud solutions partnership',
+      category: 'Enterprise AI'
     }
   ];
 
   const benefits = [
+    'Access to cutting-edge technology',
+    'Joint go-to-market strategies',
+    'Technical support and training',
+    'Co-marketing opportunities',
+    'Priority product updates',
+    'Dedicated partner success managers'
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <>
       <Helmet>
-        <title>Partners - Zion Tech Group | Strategic Technology Partnerships</title>
-        <meta name="description" content="Discover our strategic partnerships with leading technology companies. Learn how we collaborate to deliver cutting-edge AI and IT solutions." />
-        <meta name="keywords" content="partners, technology partnerships, strategic alliances, Microsoft, AWS, Google Cloud, IBM, NVIDIA" />
+        <title>Partners - Zion Tech Group | Strategic Alliances</title>
+        <meta name="description" content="Explore our strategic partnerships with leading technology companies. Learn about our alliances with Microsoft, AWS, Google Cloud, and more." />
+        <meta name="keywords" content="partners, technology partnerships, strategic alliances, Microsoft, AWS, Google Cloud, IBM" />
+      </Helmet>
 
-          </div>
-        </section>
-
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-            </h2>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Our Partners
+            </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Let's explore how we can work together to deliver exceptional 
-              value to our mutual customers.
+              Strategic alliances with leading technology companies to deliver the best solutions.
             </p>
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Ready to Partner With Us?
-              </h2>
-              <p className="text-xl text-purple-100 mb-8">
-                Join our partner ecosystem and unlock new opportunities for growth and innovation.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
-                  <Handshake className="mr-2 h-5 w-5" />
-                  Become a Partner
-                </button>
-                <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
-                  Learn More
-                </button>
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-3xl font-bold text-white mb-8 text-center">Technology Partners</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+              {partners.map((partner, index) => (
+                <div
+                  key={index}
+                  className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300 text-center"
+                >
+                  <div className="w-24 h-24 bg-white/10 rounded-lg mx-auto mb-4 flex items-center justify-center">
+                    <span className="text-2xl font-bold text-white">{partner.name.charAt(0)}</span>
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-2">{partner.name}</h3>
+                  <p className="text-cyan-400 text-sm mb-3">{partner.category}</p>
+                  <p className="text-gray-300 text-sm">{partner.description}</p>
+                </div>
+              ))}
+            </div>
+
+            <div className="bg-white/5 backdrop-blur-lg rounded-xl p-8 border border-white/10">
+              <h2 className="text-2xl font-bold text-white mb-6 text-center">Partnership Benefits</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                {benefits.map((benefit, index) => (
+                  <div key={index} className="flex items-center space-x-3">
+                    <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
+                    <span className="text-gray-300">{benefit}</span>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
         </section>
       </div>
-
+    </>
+  );
 };
 
 export default PartnersPage;
