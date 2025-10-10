@@ -25,7 +25,6 @@ const AccessibilityEnhancerPage: React.FC = () => {
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
     }
-<<<<<<< HEAD
     focusableElements[nextIndex]?.focus();
     event.preventDefault();
   }
@@ -513,7 +512,6 @@ Recommendations:
 `;
   }
 }
-=======
   ];
 
   const benefits = [

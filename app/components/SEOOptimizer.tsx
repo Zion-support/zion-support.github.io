@@ -1,5 +1,5 @@
 'use client';
-<<<<<<< HEAD
+
 import React, { useEffect } from 'react';
 import Head from 'next/head';
 interface SEOOptimizerProps {
@@ -98,8 +98,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     }
     document.head.appendChild(script);
   };
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
 
 import React from 'react';
 import { Helmet } from 'react-helmet-async';

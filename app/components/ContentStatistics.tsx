@@ -160,7 +160,6 @@ const ContentStatistics: React.FC = () => {
   }, []);
 
   return (
-<<<<<<< HEAD
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
@@ -185,7 +184,6 @@ const ContentStatistics: React.FC = () => {
               </div>
               <div className="text-lg font-semibold text-white mb-2">{stat.label}</div>
               <div className="text-gray-400 text-sm">{stat.description}</div>
-=======
     <div className="py-16 px-4">
       <div className="max-w-7xl mx-auto">
         {/* Statistics Section */}
@@ -208,13 +206,11 @@ const ContentStatistics: React.FC = () => {
                 {stat.value}{stat.suffix}
               </div>
               <div className="text-gray-300">{stat.label}</div>
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
             </div>
           ))}
         </div>
 
         {/* Features Section */}
-<<<<<<< HEAD
         <div className="mb-16">
           <div className="text-center mb-12">
             <h3 className="text-2xl font-bold text-white mb-4">Why We're the Right Choice</h3>
@@ -306,7 +302,6 @@ const ContentStatistics: React.FC = () => {
                 View Case Studies
               </button>
             </div>
-=======
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold text-white mb-4">
             Why Choose Our Solutions?
@@ -348,7 +343,6 @@ const ContentStatistics: React.FC = () => {
                 <span className="text-gray-300">{benefit}</span>
               </div>
             ))}
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
           </div>
         </div>
       </div>

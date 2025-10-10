@@ -100,7 +100,6 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
         </div>
       </section>
 
-
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-start space-x-3">
