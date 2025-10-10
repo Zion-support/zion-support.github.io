@@ -77,6 +77,7 @@ const Footer: React.FC = memo(() => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         { name: 'AI Workflow Automation', href: '/ai-workflow-automation' },
         { name: 'AI Customer Support', href: '/ai-customer-support' },
         { name: 'AI Data Analytics', href: '/ai-data-analytics' },
@@ -130,6 +131,16 @@ const Footer: React.FC = memo(() => {
         { name: 'AI Fintech Pro', href: '/ai-fintech' },
         { name: 'AI Manufacturing Pro', href: '/ai-manufacturing' }
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5694
+=======
+        { name: 'AI Services', href: '/ai-services' },
+        { name: 'AI Marketing', href: '/ai-marketing' },
+        { name: 'AI Automation', href: '/ai-automation' },
+        { name: 'AI Healthcare', href: '/ai-healthcare' },
+        { name: 'AI Fintech', href: '/ai-fintech' },
+        { name: 'AI Data Analytics', href: '/ai-data-analytics' },
+        { name: 'AI Cybersecurity', href: '/ai-cybersecurity' },
+        { name: 'AI Drug Discovery Pro', href: '/ai-drug-discovery-pro' }
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-dd48
       ]
     },
     {
@@ -138,6 +149,7 @@ const Footer: React.FC = memo(() => {
       color: 'text-blue-400',
       bgColor: 'bg-blue-500/10',
       services: [
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -216,6 +228,14 @@ const Footer: React.FC = memo(() => {
         { name: 'IT Consulting Pro', href: '/it-consulting' },
         { name: 'IT Training Pro', href: '/it-training' }
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5694
+=======
+        { name: 'IT Services', href: '/it-services' },
+        { name: 'IT Infrastructure', href: '/it-infrastructure' },
+        { name: 'Cybersecurity', href: '/cybersecurity' },
+        { name: 'Network Services', href: '/networking' },
+        { name: 'Cloud Infrastructure', href: '/ai-cloud-infrastructure' },
+        { name: 'Database Services', href: '/ai-data-analytics' }
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-dd48
       ]
     },
     {
@@ -224,6 +244,7 @@ const Footer: React.FC = memo(() => {
       color: 'text-green-400',
       bgColor: 'bg-green-500/10',
       services: [
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         { name: 'AI Smart Calendar Pro', href: '/ai-smart-calendar-pro' },
@@ -277,12 +298,21 @@ const Footer: React.FC = memo(() => {
         { name: 'AI Content Studio Pro', href: '/ai-content-studio' },
         { name: 'AI Video Generator Pro', href: '/ai-video-generator' }
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5694
+=======
+        { name: 'Micro SAAS', href: '/micro-saas' },
+        { name: 'AI Voice Cloning Studio', href: '/ai-voice-cloning-studio' },
+        { name: 'AI Code Security Auditor', href: '/ai-code-security-auditor' },
+        { name: 'AI Mental Health Companion', href: '/ai-mental-health-companion' },
+        { name: 'AI Smart Home Controller', href: '/ai-smart-home-controller' },
+        { name: 'AI Investment Optimizer', href: '/ai-investment-optimizer' }
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-dd48
       ]
     },
     {
       title: 'Emerging Technologies',
       icon: Zap,
       services: [
+<<<<<<< HEAD
         { name: 'Quantum Computing Solutions', href: '/ai-quantum-computing' },
         { name: 'AI Autonomous Systems', href: '/ai-autonomous-systems' },
         { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions' },
@@ -317,6 +347,9 @@ const Footer: React.FC = memo(() => {
       bgColor: 'bg-orange-500/10',
       services: [
         { name: 'Quantum Computing Solutions', href: '/quantum-computing' },
+=======
+        { name: 'Quantum Computing', href: '/quantum-computing' },
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-dd48
         { name: 'Autonomous Systems', href: '/autonomous-systems' },
         { name: 'AR/VR Solutions', href: '/ar-vr-solutions' },
         { name: 'IoT & Edge Computing', href: '/iot-edge-computing' },
@@ -658,7 +691,11 @@ const Footer: React.FC = memo(() => {
                       <li key={serviceIndex}>
                         <Link 
                           to={service.href}
+<<<<<<< HEAD
                           className="text-gray-300 hover:text-cyan-400 transition-colors text-sm hover:translate-x-1 transform duration-300"
+=======
+                          className="text-gray-300 hover:text-cyan-400 transition-colors text-sm"
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-dd48
                         >
                           {service.name}
                         </Link>
@@ -755,7 +792,11 @@ const Footer: React.FC = memo(() => {
                     <li key={index}>
                       <Link 
                         to={link.href}
+<<<<<<< HEAD
                         className="text-gray-300 hover:text-cyan-400 transition-colors text-sm flex items-center hover:translate-x-1 transform duration-300"
+=======
+                        className="text-gray-300 hover:text-cyan-400 transition-colors text-sm"
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-dd48
                       >
                         <link.icon className="w-3 h-3 mr-2" />
                         {link.name}
@@ -776,7 +817,11 @@ const Footer: React.FC = memo(() => {
                     <li key={index}>
                       <Link 
                         to={link.href}
+<<<<<<< HEAD
                         className="text-gray-300 hover:text-cyan-400 transition-colors text-sm flex items-center hover:translate-x-1 transform duration-300"
+=======
+                        className="text-gray-300 hover:text-cyan-400 transition-colors text-sm"
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-dd48
                       >
                         <link.icon className="w-3 h-3 mr-2" />
                         {link.name}
@@ -797,7 +842,11 @@ const Footer: React.FC = memo(() => {
                     <li key={index}>
                       <Link 
                         to={link.href}
+<<<<<<< HEAD
                         className="text-gray-300 hover:text-cyan-400 transition-colors text-sm flex items-center hover:translate-x-1 transform duration-300"
+=======
+                        className="text-gray-300 hover:text-cyan-400 transition-colors text-sm"
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-dd48
                       >
                         <link.icon className="w-3 h-3 mr-2" />
                         {link.name}

@@ -136,6 +136,7 @@ const ServicesPage = React.lazy(() => import('./app/services/page'));
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-aedf
 =======
@@ -174,6 +175,10 @@ const AISmartCalendarProPage = React.lazy(() => import('./app/ai-smart-calendar-
 const AIVoiceCloningStudioPage = React.lazy(() => import('./app/ai-voice-cloning-studio/page'));
 const AIFinancialAnalyzerProPage = React.lazy(() => import('./app/ai-financial-analyzer-pro/page'));
 const AIInfrastructureMonitoringProPage = React.lazy(() => import('./app/ai-infrastructure-monitoring-pro/page'));
+=======
+const NetworkingPage = React.lazy(() => import('./app/networking/page'));
+const HealthPage = React.lazy(() => import('./app/health/page'));
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-dd48
 const AIDrugDiscoveryProPage = React.lazy(() => import('./app/ai-drug-discovery-pro/page'));
 
 // Error Boundary Component
@@ -624,11 +629,16 @@ const App: React.FC = memo(() => {
                   <Route path="/demo" element={<DemoPage />} />
                   <Route path="/consultation" element={<ConsultationPage />} />
                   <Route path="/services" element={<ServicesPage />} />
+<<<<<<< HEAD
                   
                   {/* New AI Services Routes */}
                   <Route path="/ai-voice-cloning-studio" element={<AIVoiceCloningStudioPage />} />
                   <Route path="/ai-financial-analyzer-pro" element={<AIFinancialAnalyzerProPage />} />
                   <Route path="/ai-infrastructure-monitoring-pro" element={<AIInfrastructureMonitoringProPage />} />
+=======
+                  <Route path="/networking" element={<NetworkingPage />} />
+                  <Route path="/health" element={<HealthPage />} />
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-dd48
                   <Route path="/ai-drug-discovery-pro" element={<AIDrugDiscoveryProPage />} />
                 </Routes>
               </Suspense>

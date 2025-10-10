@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Sidebar from './Sidebar';
 import MobileNavigation from './MobileNavigation';
 =======
@@ -10,6 +11,8 @@ import Search from './Search';
 >>>>>>> origin/cursor/website-audit-and-update-with-deployment-04b6
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-01fd
+=======
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-dd48
 import { 
   ChevronDown, 
   Phone, 
@@ -851,6 +854,7 @@ const Navigation: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   ];
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1102,6 +1106,8 @@ const Navigation: React.FC = () => {
     }
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-01fd
+=======
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-dd48
   ];
 
   return (
@@ -1576,6 +1582,7 @@ const Navigation: React.FC = () => {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-cb01
         </div>
 
+<<<<<<< HEAD
         {/* Mobile Menu */}
         {isOpen && (
 <<<<<<< HEAD
@@ -1953,6 +1960,10 @@ const Navigation: React.FC = () => {
             </div>
           </div>
         )}
+=======
+        {/* Mobile Navigation */}
+        <Sidebar isOpen={isOpen} onClose={closeAllMenus} />
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-dd48
       </div>
     </nav>
 =======
