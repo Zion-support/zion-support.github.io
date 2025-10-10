@@ -1,19 +1,18 @@
 const fs = require('fs');
 const path = require('path');
 
-// List of AI service pages that likely have syntax errors
-const aiServicePages = [
-  'ai-healthcare/page.tsx',
-  'ai-customer-support/page.tsx',
-  'ai-data-analytics/page.tsx',
-  'ai-content-generation/page.tsx',
-  'ai-fintech/page.tsx',
-  'ai-ecommerce-solutions/page.tsx',
-  'ai-cybersecurity/page.tsx'
+// List of IT service pages that likely have syntax errors
+const itServicePages = [
+  'it-consulting/page.tsx',
+  'cloud-services/page.tsx',
+  'cybersecurity/page.tsx',
+  'database-services/page.tsx',
+  'network-solutions/page.tsx',
+  'it-support/page.tsx'
 ];
 
-// Template for a proper AI service page
-const createAiServicePage = (serviceName, title, description, keywords) => `'use client';
+// Template for a proper IT service page
+const createItServicePage = (serviceName, title, description, keywords) => `'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
@@ -24,36 +23,36 @@ const ${serviceName}Page: React.FC = () => {
   const features = [
     {
       icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+      title: 'Expert Consultation',
+      description: 'Professional IT consulting services to optimize your technology infrastructure.',
+      benefits: ['Strategic planning', 'Technology assessment', 'Best practices', 'Expert guidance']
     },
     {
       icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+      title: 'Performance Optimization',
+      description: 'Comprehensive analysis and optimization of your IT systems and processes.',
+      benefits: ['System analysis', 'Performance tuning', 'Efficiency improvements', 'Cost optimization']
     },
     {
       icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+      title: 'Custom Solutions',
+      description: 'Tailored IT solutions designed specifically for your business requirements.',
+      benefits: ['Custom development', 'System integration', 'Scalable solutions', 'Future-proof design']
     },
     {
       icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+      title: 'Digital Transformation',
+      description: 'Complete digital transformation services to modernize your business operations.',
+      benefits: ['Process automation', 'Digital workflows', 'Technology adoption', 'Change management']
     }
   ];
 
   const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology'
+    'Improve system performance by up to 60%',
+    'Reduce IT costs through optimization',
+    'Enhance security and compliance',
+    'Enable scalable and flexible infrastructure',
+    'Accelerate digital transformation initiatives'
   ];
 
   return (
@@ -95,7 +94,7 @@ const ${serviceName}Page: React.FC = () => {
                 Key Features
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Advanced AI technology that drives results
+                Advanced IT technology that drives business success
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -127,7 +126,7 @@ const ${serviceName}Page: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Why Choose Our Solution?
+                Why Choose Our IT Services?
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Proven results that drive business growth and efficiency
@@ -154,7 +153,7 @@ const ${serviceName}Page: React.FC = () => {
                 Ready to Get Started?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Contact our experts to discuss your requirements and get started today.
+                Contact our experts to discuss your IT requirements and get started today.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-indigo-500 to-blue-600 hover:from-indigo-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
@@ -177,58 +176,52 @@ export default ${serviceName}Page;`;
 
 // Service configurations
 const serviceConfigs = {
-  'ai-healthcare': {
-    serviceName: 'AiHealthcare',
-    title: 'AI Healthcare',
-    description: 'Advanced AI-powered healthcare solutions for modern medical practices.',
-    keywords: 'AI healthcare, medical AI, healthcare automation, AI diagnostics, medical technology'
+  'it-consulting': {
+    serviceName: 'ItConsulting',
+    title: 'IT Consulting',
+    description: 'Expert IT consulting services to optimize your technology infrastructure and operations.',
+    keywords: 'IT consulting, technology consulting, IT strategy, digital transformation, IT optimization'
   },
-  'ai-customer-support': {
-    serviceName: 'AiCustomerSupport',
-    title: 'AI Customer Support',
-    description: 'Intelligent AI-powered customer support solutions for enhanced user experience.',
-    keywords: 'AI customer support, chatbot, customer service automation, AI support, customer experience'
+  'cloud-services': {
+    serviceName: 'CloudServices',
+    title: 'Cloud Services',
+    description: 'Comprehensive cloud services and solutions for modern businesses.',
+    keywords: 'cloud services, cloud computing, AWS, Azure, GCP, cloud solutions'
   },
-  'ai-data-analytics': {
-    serviceName: 'AiDataAnalytics',
-    title: 'AI Data Analytics',
-    description: 'Advanced AI-driven data analytics solutions for business intelligence.',
-    keywords: 'AI data analytics, business intelligence, data insights, AI analytics, data science'
+  'cybersecurity': {
+    serviceName: 'Cybersecurity',
+    title: 'Cybersecurity',
+    description: 'Advanced cybersecurity solutions to protect your digital assets and data.',
+    keywords: 'cybersecurity, security solutions, data protection, network security, cyber defense'
   },
-  'ai-content-generation': {
-    serviceName: 'AiContentGeneration',
-    title: 'AI Content Generation',
-    description: 'Intelligent AI-powered content generation solutions for modern businesses.',
-    keywords: 'AI content generation, content creation, AI writing, automated content, content marketing'
+  'database-services': {
+    serviceName: 'DatabaseServices',
+    title: 'Database Services',
+    description: 'Professional database management and optimization services.',
+    keywords: 'database services, database management, data optimization, database consulting'
   },
-  'ai-fintech': {
-    serviceName: 'AiFintech',
-    title: 'AI Fintech',
-    description: 'Advanced AI-powered financial technology solutions for modern banking.',
-    keywords: 'AI fintech, financial AI, banking technology, AI finance, fintech solutions'
+  'network-solutions': {
+    serviceName: 'NetworkSolutions',
+    title: 'Network Solutions',
+    description: 'Advanced network infrastructure solutions for reliable connectivity.',
+    keywords: 'network solutions, network infrastructure, networking, connectivity, network design'
   },
-  'ai-ecommerce-solutions': {
-    serviceName: 'AiEcommerceSolutions',
-    title: 'AI E-commerce Solutions',
-    description: 'Intelligent AI-powered e-commerce solutions for online businesses.',
-    keywords: 'AI e-commerce, online retail AI, e-commerce automation, AI shopping, retail technology'
-  },
-  'ai-cybersecurity': {
-    serviceName: 'AiCybersecurity',
-    title: 'AI Cybersecurity',
-    description: 'Advanced AI-powered cybersecurity solutions for digital protection.',
-    keywords: 'AI cybersecurity, security AI, cyber protection, AI security, digital security'
+  'it-support': {
+    serviceName: 'ItSupport',
+    title: 'IT Support',
+    description: 'Comprehensive IT support services for businesses of all sizes.',
+    keywords: 'IT support, technical support, help desk, IT maintenance, IT services'
   }
 };
 
 // Fix each page
-aiServicePages.forEach(pagePath => {
+itServicePages.forEach(pagePath => {
   const fullPath = path.join('/workspace/app', pagePath);
   const serviceKey = pagePath.split('/')[0];
   const config = serviceConfigs[serviceKey];
   
   if (config) {
-    const content = createAiServicePage(
+    const content = createItServicePage(
       config.serviceName,
       config.title,
       config.description,
@@ -240,4 +233,4 @@ aiServicePages.forEach(pagePath => {
   }
 });
 
-console.log('All AI service pages have been fixed!');
+console.log('All IT service pages have been fixed!');

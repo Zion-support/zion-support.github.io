@@ -38,6 +38,31 @@ const MicroSaasPage = React.lazy(() => import('./app/micro-saas/page'));
 const AiServicesPage = React.lazy(() => import('./app/ai-services/page'));
 const ItServicesPage = React.lazy(() => import('./app/it-services/page'));
 
+// AI Services Pages
+const AiMarketingPage = React.lazy(() => import('./app/ai-marketing/page'));
+const AiCustomerSupportPage = React.lazy(() => import('./app/ai-customer-support/page'));
+const AiDataAnalyticsPage = React.lazy(() => import('./app/ai-data-analytics/page'));
+const AiContentGenerationPage = React.lazy(() => import('./app/ai-content-generation/page'));
+const AiHealthcarePage = React.lazy(() => import('./app/ai-healthcare/page'));
+const AiFintechPage = React.lazy(() => import('./app/ai-fintech/page'));
+const AiEcommerceSolutionsPage = React.lazy(() => import('./app/ai-ecommerce-solutions/page'));
+const AiCybersecurityPage = React.lazy(() => import('./app/ai-cybersecurity/page'));
+
+// IT Services Pages
+const CloudServicesPage = React.lazy(() => import('./app/cloud-services/page'));
+const CloudMigrationPage = React.lazy(() => import('./app/cloud-migration/page'));
+const DevOpsPage = React.lazy(() => import('./app/devops/page'));
+const CybersecurityPage = React.lazy(() => import('./app/cybersecurity/page'));
+const ItConsultingPage = React.lazy(() => import('./app/it-consulting/page'));
+const DatabaseServicesPage = React.lazy(() => import('./app/database-services/page'));
+const NetworkSolutionsPage = React.lazy(() => import('./app/network-solutions/page'));
+const ItSupportPage = React.lazy(() => import('./app/it-support/page'));
+
+// Legal Pages
+const PrivacyPage = React.lazy(() => import('./app/privacy/page'));
+const TermsPage = React.lazy(() => import('./app/terms/page'));
+const CookiesPage = React.lazy(() => import('./app/cookies/page'));
+
 // Performance monitoring hook
 const AppWithPerformanceMonitoring: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   usePerformanceMonitor();
@@ -80,6 +105,31 @@ const App: React.FC = () => {
                             <Route path="/micro-saas" element={<MicroSaasPage />} />
                             <Route path="/ai-services" element={<AiServicesPage />} />
                             <Route path="/it-services" element={<ItServicesPage />} />
+                            
+                            {/* AI Services Routes */}
+                            <Route path="/ai-marketing" element={<AiMarketingPage />} />
+                            <Route path="/ai-customer-support" element={<AiCustomerSupportPage />} />
+                            <Route path="/ai-data-analytics" element={<AiDataAnalyticsPage />} />
+                            <Route path="/ai-content-generation" element={<AiContentGenerationPage />} />
+                            <Route path="/ai-healthcare" element={<AiHealthcarePage />} />
+                            <Route path="/ai-fintech" element={<AiFintechPage />} />
+                            <Route path="/ai-ecommerce-solutions" element={<AiEcommerceSolutionsPage />} />
+                            <Route path="/ai-cybersecurity" element={<AiCybersecurityPage />} />
+                            
+                            {/* IT Services Routes */}
+                            <Route path="/cloud-services" element={<CloudServicesPage />} />
+                            <Route path="/cloud-migration" element={<CloudMigrationPage />} />
+                            <Route path="/devops" element={<DevOpsPage />} />
+                            <Route path="/cybersecurity" element={<CybersecurityPage />} />
+                            <Route path="/it-consulting" element={<ItConsultingPage />} />
+                            <Route path="/database-services" element={<DatabaseServicesPage />} />
+                            <Route path="/network-solutions" element={<NetworkSolutionsPage />} />
+                            <Route path="/it-support" element={<ItSupportPage />} />
+                            
+                            {/* Legal Pages Routes */}
+                            <Route path="/privacy" element={<PrivacyPage />} />
+                            <Route path="/terms" element={<TermsPage />} />
+                            <Route path="/cookies" element={<CookiesPage />} />
                           </Routes>
                         </Suspense>
                       </main>
