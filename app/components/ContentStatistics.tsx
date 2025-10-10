@@ -1,8 +1,5 @@
 'use client';
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
 import React, { useState, useEffect } from 'react';
 import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, TrendingUp, Users, Award, Clock, Star, BarChart3, Target, Rocket } from 'lucide-react';
 
@@ -79,15 +76,6 @@ const ContentStatistics: React.FC = () => {
   const achievements = [
     {
       icon: Brain,
-<<<<<<< HEAD
-      title: 'AI Innovation',
-      description: 'Leading the industry in AI-powered solutions'
-    },
-    {
-      icon: Shield,
-      title: 'Security Excellence',
-      description: 'Bank-level security for all our solutions'
-=======
       title: 'AI-Powered Solutions',
       description: 'Advanced AI technology to transform your business operations and improve efficiency',
       stats: ['95% Accuracy', '10x Faster', '24/7 Learning']
@@ -103,24 +91,10 @@ const ContentStatistics: React.FC = () => {
       title: 'Enterprise Security',
       description: 'Bank-level security with encryption and compliance standards',
       stats: ['256-bit Encryption', 'SOC 2 Compliant', 'Zero Breaches']
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
     },
     {
       icon: Globe,
       title: 'Global Reach',
-<<<<<<< HEAD
-      description: 'Serving clients across 50+ countries'
-    },
-    {
-      icon: Zap,
-      title: 'Performance',
-      description: '99.9% uptime and lightning-fast response'
-    }
-  ];
-
-  useEffect(() => {
-    const timers = Object.keys(targetCounters).map(key => {
-=======
       description: 'Worldwide deployment and support for international businesses',
       stats: ['50+ Countries', '15+ Languages', '24/7 Support']
     }
@@ -164,25 +138,11 @@ const ContentStatistics: React.FC = () => {
     const stepDuration = duration / steps;
 
     const timers = Object.keys(targetCounters).map((key) => {
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
       const target = targetCounters[key as keyof typeof targetCounters];
       const duration = 2000; // 2 seconds
       const increment = target / (duration / 16); // 60fps
       
       return setInterval(() => {
-<<<<<<< HEAD
-        setCounters(prev => {
-          const current = prev[key as keyof typeof prev];
-          if (current < target) {
-            return {
-              ...prev,
-              [key]: Math.min(current + increment, target)
-            };
-          }
-          return prev;
-        });
-      }, 16);
-=======
         current += increment;
         if (current >= target) {
           current = target;
@@ -192,7 +152,6 @@ const ContentStatistics: React.FC = () => {
           [key]: Math.floor(current)
         }));
       }, stepDuration);
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
     });
 
     return () => {
@@ -201,17 +160,6 @@ const ContentStatistics: React.FC = () => {
   }, []);
 
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Our Impact in Numbers
-          </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            See how we've transformed businesses and delivered exceptional results.
-=======
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
@@ -221,38 +169,10 @@ const ContentStatistics: React.FC = () => {
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Discover the measurable impact we've made for businesses worldwide through our innovative AI and IT solutions.
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
           </p>
         </div>
 
         {/* Statistics Grid */}
-<<<<<<< HEAD
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          {statistics.map((stat, index) => (
-            <div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 text-center">
-              <div className="flex justify-center mb-4">
-                <div className="bg-gradient-to-r from-purple-600 to-cyan-600 w-16 h-16 rounded-full flex items-center justify-center">
-                  <stat.icon className="h-8 w-8 text-white" />
-                </div>
-              </div>
-              <div className={`text-3xl font-bold ${stat.color} mb-2`}>
-                {Math.floor(stat.value)}{stat.suffix}
-              </div>
-              <div className="text-gray-300">{stat.label}</div>
-            </div>
-          ))}
-        </div>
-
-        {/* Achievements */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {achievements.map((achievement, index) => (
-            <div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300">
-              <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg mb-4">
-                <achievement.icon className="h-6 w-6 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-2">{achievement.title}</h3>
-              <p className="text-gray-300 text-sm">{achievement.description}</p>
-=======
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
@@ -270,10 +190,8 @@ const ContentStatistics: React.FC = () => {
               </div>
               <div className="text-white font-semibold mb-2">{stat.label}</div>
               <div className="text-gray-300 text-sm">{stat.description}</div>
->>>>>>> cursor/website-audit-and-update-with-deployment-758b
             </div>
           ))}
-=======
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {statistics.map((stat, index) => (
             <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-purple-400 transition-all duration-300 text-center group">
@@ -382,7 +300,6 @@ const ContentStatistics: React.FC = () => {
               </button>
             </div>
           </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
         </div>
       </div>
     </div>
