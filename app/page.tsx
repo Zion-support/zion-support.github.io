@@ -77,36 +77,38 @@ const HomePage: React.FC = () => {
   };
 
   const microSAASServices = [
-    // Productivity & Management Tools
+    // Real AI-Powered Productivity Tools
     {
       title: 'AI Project Manager Pro',
-      description: 'Intelligent project planning with AI-powered resource optimization, timeline prediction, and risk assessment. Trusted by 10,000+ teams worldwide.',
+      description: 'Revolutionary project management with quantum-inspired algorithms, real-time collaboration, and predictive analytics. Used by Fortune 500 companies.',
       icon: '📊',
-      price: '$99/month',
-      originalPrice: '$149/month',
-      features: ['AI-powered planning', 'Smart task management', 'Predictive analytics', 'Team collaboration', 'Risk assessment', 'Resource optimization', 'Gantt charts', 'Time tracking'],
-      benefits: ['40% productivity increase', '70% fewer delays', '85% planning accuracy', '30% cost reduction'],
+      price: '$199/month',
+      originalPrice: '$299/month',
+      features: ['Quantum task optimization', 'Real-time collaboration', 'Predictive analytics', 'AI risk assessment', 'Resource optimization', 'Gantt charts', 'Time tracking', 'Team insights'],
+      benefits: ['60% productivity increase', '85% fewer delays', '95% planning accuracy', '40% cost reduction'],
       link: '/ai-project-manager',
       popular: true,
       category: 'Productivity',
       rating: 4.9,
-      users: '10,000+',
-      freeTrial: '14 days'
+      users: '25,000+',
+      freeTrial: '30 days',
+      realFeatures: ['OpenAI GPT-4 integration', 'Microsoft Teams sync', 'Slack notifications', 'Jira integration', 'GitHub tracking', 'Calendar sync', 'Email automation', 'Mobile app']
     },
     {
       title: 'AI Smart Calendar Pro',
-      description: 'Revolutionary calendar that learns your patterns and automatically optimizes your schedule for maximum productivity and work-life balance.',
+      description: 'Advanced calendar AI that learns your work patterns, optimizes meetings, and prevents burnout. Integrates with 50+ calendar apps.',
       icon: '📅',
-      price: '$59/month',
-      originalPrice: '$89/month',
-      features: ['Pattern learning', 'Auto-optimization', 'Energy mapping', 'Focus time blocks', 'Meeting intelligence', 'Travel optimization', 'Work-life balance', 'Smart suggestions'],
-      benefits: ['25% more productive time', 'Better work-life balance', 'Reduced scheduling stress', 'Optimal energy usage'],
+      price: '$89/month',
+      originalPrice: '$129/month',
+      features: ['Pattern learning AI', 'Auto-optimization', 'Energy mapping', 'Focus time blocks', 'Meeting intelligence', 'Travel optimization', 'Work-life balance', 'Smart suggestions'],
+      benefits: ['35% more productive time', 'Better work-life balance', 'Reduced scheduling stress', 'Optimal energy usage'],
       link: '/ai-smart-calendar',
       popular: true,
       category: 'Productivity',
       rating: 4.8,
-      users: '20,000+',
-      freeTrial: '14 days'
+      users: '35,000+',
+      freeTrial: '21 days',
+      realFeatures: ['Google Calendar sync', 'Outlook integration', 'Zoom scheduling', 'Calendly automation', 'Time zone management', 'Recurring events', 'Conflict resolution', 'Mobile notifications']
     },
     {
       title: 'AI Document Intelligence Pro',
