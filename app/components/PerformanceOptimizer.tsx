@@ -1,4 +1,5 @@
 'use client';
+<<<<<<< HEAD
 import React, { useState, useEffect, useCallback } from 'react';
 import { Zap, CheckCircle, AlertTriangle, Settings } from 'lucide-react';
 
@@ -43,10 +44,30 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         link.rel = 'preload';
         link.href = image;
         link.as = 'image';
+=======
+
+import React, { useEffect } from 'react';
+
+const PerformanceOptimizer: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  useEffect(() => {
+    // Preload critical resources
+    const preloadResources = () => {
+      const criticalImages = [
+        '/images/hero-bg.jpg',
+        '/images/logo.png'
+      ];
+
+      criticalImages.forEach((src) => {
+        const link = document.createElement('link');
+        link.rel = 'preload';
+        link.as = 'image';
+        link.href = src;
+>>>>>>> origin/main
         document.head.appendChild(link);
       });
     };
 
+<<<<<<< HEAD
     preloadCriticalResources();
   }, []);
 
@@ -157,3 +178,33 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
 };
 
 export default PerformanceOptimizer;
+=======
+    // Optimize images
+    const optimizeImages = () => {
+      const images = document.querySelectorAll('img');
+      images.forEach((img) => {
+        if (!img.loading) {
+          img.loading = 'lazy';
+        }
+        if (!img.decoding) {
+          img.decoding = 'async';
+        }
+      });
+    };
+
+    // Initialize optimizations
+    preloadResources();
+    optimizeImages();
+
+    // Re-optimize on route changes
+    const observer = new MutationObserver(optimizeImages);
+    observer.observe(document.body, { childList: true, subtree: true });
+
+    return () => observer.disconnect();
+  }, []);
+
+  return <>{children}</>;
+};
+
+export default PerformanceOptimizer;
+>>>>>>> origin/main

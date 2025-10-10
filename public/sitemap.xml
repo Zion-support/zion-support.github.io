@@ -2,6 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://ziontechgroup.com</loc>
+<<<<<<< HEAD
     <lastmod>2025-10-10T09:37:31.443Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
@@ -33,10 +34,32 @@
   <url>
     <loc>https://ziontechgroup.com/pricing</loc>
     <lastmod>2025-10-10T09:37:31.444Z</lastmod>
+=======
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/about</loc>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ziontechgroup.com/services</loc>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/pricing</loc>
+    <lastmod>2025-10-10</lastmod>
+>>>>>>> origin/main
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+<<<<<<< HEAD
     <loc>https://ziontechgroup.com/ai-services</loc>
     <lastmod>2025-10-10T09:37:31.444Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -147,10 +170,51 @@
   <url>
     <loc>https://ziontechgroup.com/services</loc>
     <lastmod>2025-10-10T09:37:31.444Z</lastmod>
+=======
+    <loc>https://ziontechgroup.com/blog</loc>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ziontechgroup.com/case-studies</loc>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/careers</loc>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/partners</loc>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/support</loc>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/faq</loc>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/demo</loc>
+    <lastmod>2025-10-10</lastmod>
+>>>>>>> origin/main
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+<<<<<<< HEAD
     <loc>https://ziontechgroup.com/ai-ops</loc>
     <lastmod>2025-10-10T09:37:31.444Z</lastmod>
     <changefreq>monthly</changefreq>
@@ -179,6 +243,24 @@
     <lastmod>2025-10-10T09:37:31.444Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+=======
+    <loc>https://ziontechgroup.com/consultation</loc>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/contact</loc>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/micro-saas</loc>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+>>>>>>> origin/main
   </url>
   <url>
     <loc>https://ziontechgroup.com/iot-platform</loc>

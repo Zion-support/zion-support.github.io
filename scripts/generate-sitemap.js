@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -35,23 +36,47 @@ const pages = [,
   { url: '/5 g-implementation', priority: '0.7', changefreq: 'monthly' },
   { url: '/iot-platform', priority: '0.7', changefreq: 'monthly' }
 ];
+=======
+const fs = require('fs');
+const path = require('path');
+>>>>>>> origin/main
 
+// Generate sitemap for the website
 const generateSitemap = () => {
+  const baseUrl = 'https://ziontechgroup.com';
+  const pages = [
+    '',
+    '/about',
+    '/services',
+    '/pricing',
+    '/blog',
+    '/case-studies',
+    '/careers',
+    '/partners',
+    '/support',
+    '/faq',
+    '/demo',
+    '/consultation',
+    '/contact',
+    '/micro-saas'
+  ];
+
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">,
-${pages.map(page => `  <url>),
-    <loc>${baseUrl}${page.url}</loc>
-    <lastmod>${new Date().toISOString()}</lastmod>
-    <changefreq>${page.changefreq}</changefreq>
-    <priority></p>${page.priority}</priority>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${pages.map(page => `  <url>
+    <loc>${baseUrl}${page}</loc>
+    <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>${page === '' ? '1.0' : '0.8'}</priority>
   </url>`).join('\n')}
 </urlset>`;
 
   const sitemapPath = path.join(__dirname, '..', 'public', 'sitemap.xml');
   fs.writeFileSync(sitemapPath, sitemap);
-  console.log('Sitemap generated successfully at:', sitemapPath);
+  console.log('Sitemap generated successfully');
 };
 
+<<<<<<< HEAD
 generateSitemap();
 // #!/usr/bin/env node /** * Sitemap Generator for Zion Tech Group Website * * This script generates a comprehensive sitemap.xml file * including all pages, blog posts, and services. */ import fs from 'fs'' import path from 'path' ' const baseUrl = 'http,
   s: //zion.app'' const currentDate = new Date().toISOString().split('T')[0], // Define all static pages const staticPages = [ {/* TODO: Fix JSX expression */}
@@ -155,3 +180,6 @@ generateSitemap();
   p://www.sitemaps.org/schemas/sitemap/0.9"> <sitemap> <loc>${baseUrl}/sitemap.xml</loc> <lastmod>${currentDate}</lastmod> </sitemap> </sitemapindex>`; ' const sitemapIndexPath = path.join(publicDir) 'sitemap-index.xml');' fs.writeFileSync(sitemapIndexPath, sitemapIndex) 'utf8');' // console.log(`\\n📊 Sitemap)`
   Statistics:`), ' ' ' ' ' ' // console.log('4. Monitor sitemap indexing status in search consoles')} catch (error) {' process.exit(1); } } // Run if called directly if (import.meta.url === `fil)`
   e://${process.argv[1]}`) {generateSitemap()} } export {generateSitemap, generateSitemapXML, generateRobotsTxt, staticPages, blogPosts} servicePages };'"`
+=======
+generateSitemap();
+>>>>>>> origin/main

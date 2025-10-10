@@ -1,13 +1,24 @@
+<<<<<<< HEAD
 import React, { createContext, useContext, useEffect, useCallback } from 'react';
 
 interface AnalyticsContextType {
   track: (event: string, properties?: Record<string, any>) => void;
   page: (name: string, properties?: Record<string, any>) => void;
   identify: (userId: string, traits?: Record<string, any>) => void;
+=======
+'use client';
+
+import React, { createContext, useContext, useEffect } from 'react';
+
+interface AnalyticsContextType {
+  trackEvent: (eventName: string, parameters?: Record<string, any>) => void;
+  trackPageView: (pageName: string) => void;
+>>>>>>> origin/main
 }
 
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
 
+<<<<<<< HEAD
 interface AnalyticsProviderProps {
   children: React.ReactNode;
   trackingId?: string;
@@ -103,11 +114,17 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
 export const useAnalytics = () => {
   const context = useContext(AnalyticsContext);
   if (context === undefined) {
+=======
+export const useAnalytics = () => {
+  const context = useContext(AnalyticsContext);
+  if (!context) {
+>>>>>>> origin/main
     throw new Error('useAnalytics must be used within an AnalyticsProvider');
   }
   return context;
 };
 
+<<<<<<< HEAD
 // Global type declarations
 declare global {
   interface Window {
@@ -117,3 +134,44 @@ declare global {
 }
 
 export default AnalyticsProvider;
+=======
+const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  useEffect(() => {
+    // Initialize Google Analytics
+    if (typeof window !== 'undefined' && typeof gtag !== 'undefined') {
+      gtag('config', 'GA_MEASUREMENT_ID', {
+        page_title: document.title,
+        page_location: window.location.href,
+      });
+    }
+  }, []);
+
+  const trackEvent = (eventName: string, parameters?: Record<string, any>) => {
+    if (typeof window !== 'undefined' && typeof gtag !== 'undefined') {
+      gtag('event', eventName, parameters);
+    }
+  };
+
+  const trackPageView = (pageName: string) => {
+    if (typeof window !== 'undefined' && typeof gtag !== 'undefined') {
+      gtag('event', 'page_view', {
+        page_title: pageName,
+        page_location: window.location.href,
+      });
+    }
+  };
+
+  const value = {
+    trackEvent,
+    trackPageView,
+  };
+
+  return (
+    <AnalyticsContext.Provider value={value}>
+      {children}
+    </AnalyticsContext.Provider>
+  );
+};
+
+export { AnalyticsProvider };
+>>>>>>> origin/main

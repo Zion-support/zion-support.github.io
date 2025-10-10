@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Phone, Mail, ArrowRight, Zap, Shield, Cloud, Brain, Code, Users, Building, Crown, Rocket, DollarSign, Clock, Award, Target, BarChart, MessageSquare, Eye, Settings, FileText, Calendar, PieChart, TrendingUp, Activity, Globe, Database, Smartphone, Lock, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Clock3, Compass, Navigation, Home, Heart, Stethoscope, GraduationCap, Briefcase, Car, Plane, Ship, Train, Factory, ShoppingCart, CreditCard, Gamepad2, Music, Video, Camera, Palette, Bot, Package, Truck, Box, Archive, Folder, File, Image, Film, Headphones, Mic, Speaker, Volume2, VolumeX, Play, Pause, Stop, SkipBack, SkipForward, Repeat, Shuffle, Radio, Tv, Tablet, Watch, Headphones as Headset, Gamepad2 as Gamepad, Joystick, Mouse, Keyboard, Webcam, Wifi, Bluetooth, Usb, Hdmi, Ethernet, WifiOff, Signal, SignalZero, SignalLow, SignalMedium, SignalHigh, SignalFull, Send, Reply, Forward, Share, Copy, Paste, Cut, Save, Download, Upload, Refresh, RotateCcw, RotateCw, Maximize, Minimize, X, Plus, Minus, Divide, Equal, Percent, Hash, AtSign, Euro, Pound, Yen, Bitcoin, Wallet, Banknote, Coins, Receipt, Archive as ArchiveIcon, Folder as FolderIcon, File as FileIcon, Image as ImageIcon, Film as FilmIcon, Music as MusicIcon, Headphones as HeadphoneIcon, Mic as Microphone, Speaker as SpeakerIcon, Volume2 as Volume2Icon, VolumeX as VolumeXIcon, Play as PlayIcon, Pause as PauseIcon, Stop as StopIcon, SkipBack as SkipBackIcon, SkipForward as SkipForwardIcon, Repeat as RepeatIcon, Shuffle as ShuffleIcon, Radio as RadioIcon, Tv as TvIcon, Monitor, Laptop, Printer, Key, AlertTriangle, Headphones as Headphone, MessageSquare as Message, Calendar as CalendarIcon, FileText as FileTextIcon, Download as DownloadIcon, Upload as UploadIcon, Refresh as RefreshIcon, RotateCcw as RotateCcwIcon, RotateCw as RotateCwIcon, Maximize as MaximizeIcon, Minimize as MinimizeIcon, X as XIcon, Plus as PlusIcon, Minus as MinusIcon, Divide as DivideIcon, Equal as EqualIcon, Percent as PercentIcon, Hash as HashIcon, AtSign as AtSignIcon, Euro as EuroIcon, Pound as PoundIcon, Yen as YenIcon, Bitcoin as BitcoinIcon, Wallet as WalletIcon, Banknote as BanknoteIcon, Coins as CoinsIcon, Receipt as ReceiptIcon, Archive as ArchiveIcon2, Folder as FolderIcon2, File as FileIcon2, Image as ImageIcon2, Film as FilmIcon2, Music as MusicIcon2, Headphones as HeadphoneIcon2, Mic as MicrophoneIcon, Speaker as SpeakerIcon2, Volume2 as Volume2Icon2, VolumeX as VolumeXIcon2, Play as PlayIcon2, Pause as PauseIcon2, Stop as StopIcon2, SkipBack as SkipBackIcon2, SkipForward as SkipForwardIcon2, Repeat as RepeatIcon2, Shuffle as ShuffleIcon2, Radio as RadioIcon2, Tv as TvIcon2, Monitor as MonitorIcon, Laptop as LaptopIcon, Smartphone as PhoneIcon, Tablet as TabletIcon, Watch as WatchIcon, Headphones as HeadsetIcon, Gamepad2 as GamepadIcon, Joystick as JoystickIcon, Mouse as MouseIcon, Keyboard as KeyboardIcon, Webcam as WebcamIcon, Wifi as WifiSignalIcon, Bluetooth as BluetoothIcon, Usb as UsbIcon, Hdmi as HdmiIcon, Ethernet as EthernetIcon, WifiOff as WifiOffSignalIcon, Signal as SignalIcon, SignalZero as Signal0Icon, SignalLow as Signal1Icon, SignalMedium as Signal2Icon, SignalHigh as Signal3Icon, SignalFull as Signal4Icon, Wifi as WifiIcon2, WifiOff as WifiOffIcon2 } from 'lucide-react';
@@ -582,6 +583,209 @@ const PricingPage: React.FC = () => {
         </main>
         
         <Footer />
+=======
+'use client';
+
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { CheckCircle, Star, ArrowRight, Zap } from 'lucide-react';
+
+const PricingPage: React.FC = () => {
+  const plans = [
+    {
+      name: 'Starter',
+      price: '$2,999',
+      period: '/month',
+      description: 'Perfect for small businesses getting started with AI',
+      features: [
+        'Basic AI Integration',
+        'Cloud Infrastructure Setup',
+        'Email Support',
+        'Monthly Reports',
+        'Basic Analytics Dashboard'
+      ],
+      popular: false
+    },
+    {
+      name: 'Professional',
+      price: '$7,999',
+      period: '/month',
+      description: 'Ideal for growing companies with advanced needs',
+      features: [
+        'Advanced AI Solutions',
+        'Custom Development',
+        'Priority Support',
+        'Weekly Reports',
+        'Advanced Analytics',
+        'API Access',
+        'Training Sessions'
+      ],
+      popular: true
+    },
+    {
+      name: 'Enterprise',
+      price: 'Custom',
+      period: '',
+      description: 'Tailored solutions for large organizations',
+      features: [
+        'Custom AI Solutions',
+        'Dedicated Team',
+        '24/7 Support',
+        'Real-time Monitoring',
+        'Custom Integrations',
+        'White-label Options',
+        'On-site Training',
+        'SLA Guarantee'
+      ],
+      popular: false
+    }
+  ];
+
+  return (
+    <>
+      <Helmet>
+        <title>Pricing - Zion Tech Group | Transparent AI & IT Pricing</title>
+        <meta name="description" content="Transparent pricing for AI and IT solutions. Choose from Starter, Professional, or Enterprise plans. Custom solutions available. Get started today." />
+        <meta name="keywords" content="AI pricing, IT services pricing, cloud solutions cost, enterprise AI pricing, custom development pricing" />
+      </Helmet>
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
+        <div className="container mx-auto px-4">
+          {/* Header */}
+          <div className="text-center mb-16">
+            <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6">
+              Simple,
+              <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+                {' '}Transparent
+              </span>
+              {' '}Pricing
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Choose the plan that fits your business needs. All plans include 
+              our core AI and IT services with no hidden fees.
+            </p>
+          </div>
+
+          {/* Pricing Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            {plans.map((plan, index) => (
+              <div
+                key={index}
+                className={`relative bg-white/5 backdrop-blur-lg rounded-2xl p-8 border transition-all duration-300 ${
+                  plan.popular
+                    ? 'border-cyan-500 bg-cyan-500/10 scale-105'
+                    : 'border-white/10 hover:bg-white/10'
+                }`}
+              >
+                {plan.popular && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <div className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-full text-sm font-semibold flex items-center space-x-1">
+                      <Star className="w-4 h-4" />
+                      <span>Most Popular</span>
+                    </div>
+                  </div>
+                )}
+
+                <div className="text-center mb-8">
+                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                  <div className="flex items-baseline justify-center mb-2">
+                    <span className="text-5xl font-bold text-cyan-400">{plan.price}</span>
+                    <span className="text-gray-300 ml-1">{plan.period}</span>
+                  </div>
+                  <p className="text-gray-300">{plan.description}</p>
+                </div>
+
+                <ul className="space-y-4 mb-8">
+                  {plan.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center space-x-3">
+                      <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />
+                      <span className="text-gray-300">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <Link
+                  to="/consultation"
+                  className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center space-x-2 ${
+                    plan.popular
+                      ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
+                      : 'border border-white/20 text-white hover:bg-white/10'
+                  }`}
+                >
+                  <span>Get Started</span>
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+            ))}
+          </div>
+
+          {/* Additional Info */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+            <div className="bg-white/5 backdrop-blur-lg rounded-xl p-8 border border-white/10">
+              <h3 className="text-2xl font-bold text-white mb-4">What's Included</h3>
+              <ul className="space-y-3">
+                <li className="flex items-center space-x-3">
+                  <CheckCircle className="w-5 h-5 text-cyan-400" />
+                  <span className="text-gray-300">Free initial consultation</span>
+                </li>
+                <li className="flex items-center space-x-3">
+                  <CheckCircle className="w-5 h-5 text-cyan-400" />
+                  <span className="text-gray-300">30-day money-back guarantee</span>
+                </li>
+                <li className="flex items-center space-x-3">
+                  <CheckCircle className="w-5 h-5 text-cyan-400" />
+                  <span className="text-gray-300">No setup fees</span>
+                </li>
+                <li className="flex items-center space-x-3">
+                  <CheckCircle className="w-5 h-5 text-cyan-400" />
+                  <span className="text-gray-300">Flexible payment options</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="bg-white/5 backdrop-blur-lg rounded-xl p-8 border border-white/10">
+              <h3 className="text-2xl font-bold text-white mb-4">Custom Solutions</h3>
+              <p className="text-gray-300 mb-4">
+                Need something specific? We offer custom AI and IT solutions 
+                tailored to your unique business requirements.
+              </p>
+              <Link
+                to="/contact"
+                className="text-cyan-400 hover:text-cyan-300 font-semibold flex items-center space-x-2"
+              >
+                <span>Contact us for a quote</span>
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+          </div>
+
+          {/* CTA Section */}
+          <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2xl p-12 text-center backdrop-blur-lg border border-white/10">
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              Join hundreds of companies already achieving remarkable results with our AI solutions.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/consultation"
+                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2"
+              >
+                <Zap className="w-5 h-5" />
+                <span>Start Free Trial</span>
+              </Link>
+              <Link
+                to="/contact"
+                className="border border-white/20 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300"
+              >
+                Talk to Sales
+              </Link>
+            </div>
+          </div>
+        </div>
+>>>>>>> origin/main
       </div>
     </>
   );

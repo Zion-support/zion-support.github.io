@@ -1,4 +1,5 @@
 'use client';
+<<<<<<< HEAD
 import React, { useEffect, useCallback } from 'react';
 
 const AccessibilityEnhancer: React.FC = () => {
@@ -157,6 +158,40 @@ const AccessibilityEnhancer: React.FC = () => {
       childList: true,
       subtree: true
     });
+=======
+
+import React, { useEffect } from 'react';
+
+const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  useEffect(() => {
+    // Add keyboard navigation support
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Tab') {
+        document.body.classList.add('keyboard-navigation');
+      }
+    };
+
+    const handleMouseDown = () => {
+      document.body.classList.remove('keyboard-navigation');
+    };
+
+    // Add focus indicators
+    const addFocusStyles = () => {
+      const style = document.createElement('style');
+      style.textContent = `
+        .keyboard-navigation *:focus {
+          outline: 2px solid #06b6d4 !important;
+          outline-offset: 2px !important;
+        }
+      `;
+      document.head.appendChild(style);
+    };
+
+    // Initialize accessibility features
+    addFocusStyles();
+    document.addEventListener('keydown', handleKeyDown);
+    document.addEventListener('mousedown', handleMouseDown);
+>>>>>>> origin/main
 
     return () => {
       document.removeEventListener('keydown', handleKeyDown);
@@ -196,6 +231,7 @@ const AccessibilityEnhancer: React.FC = () => {
     document.body.insertBefore(skipLink, document.body.firstChild);
   }, []);
 
+<<<<<<< HEAD
   // Add accessibility styles
   useEffect(() => {
     if (typeof window === 'undefined') return;
@@ -254,6 +290,9 @@ const AccessibilityEnhancer: React.FC = () => {
   }, [addFocusManagement, addKeyboardNavigation, addAriaLabels, addSkipLinks, enhanceColorContrast, addScreenReaderSupport]);
 
   return null; // This component doesn't render anything
+=======
+  return <>{children}</>;
+>>>>>>> origin/main
 };
 
 export default AccessibilityEnhancer;
