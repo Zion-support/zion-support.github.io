@@ -1,7 +1,8 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, Search } from 'lucide-react';
+
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
@@ -9,6 +10,7 @@ const Navigation: React.FC = () => {
   const [itServicesOpen, setItServicesOpen] = useState(false);
   const [microSaasOpen, setMicroSaasOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 1024) {
@@ -25,6 +27,7 @@ const Navigation: React.FC = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
   const closeAllMenus = () => {
     setServicesOpen(false);
     setAiServicesOpen(false);
@@ -32,12 +35,14 @@ const Navigation: React.FC = () => {
     setMicroSaasOpen(false);
     setIsOpen(false);
   };
+
   const toggleMenu = () => {
     setIsOpen(!isOpen);
     if (isOpen) {
       closeAllMenus();
     }
   };
+
   const aiServices = [
     { name: 'AI Solutions', href: '/ai-services', icon: Brain, description: 'Core AI Solutions' },
     { name: 'AI Marketing Automation', href: '/ai-marketing', icon: Target, description: 'AI-Powered Marketing' },
@@ -71,6 +76,7 @@ const Navigation: React.FC = () => {
     { name: 'AI Sports', href: '/ai-sports', icon: BarChart, description: 'Sports AI' },
     { name: 'AI Mental Health', href: '/ai-mental-health', icon: Users, description: 'Mental Health AI' }
   ];
+
   const itServices = [
     { name: 'Cloud Services', href: '/cloud-services', icon: Cloud, description: 'Cloud Solutions' },
     { name: 'Cloud Migration', href: '/cloud-migration', icon: Cloud, description: 'Seamless Migration' },
@@ -102,6 +108,7 @@ const Navigation: React.FC = () => {
     { name: 'API Development', href: '/api-development', icon: Globe, description: 'API Services' },
     { name: 'IT Governance', href: '/it-governance', icon: Settings, description: 'Governance Solutions' }
   ];
+
   const microSaasServices = [
     { name: 'Micro SAAS Solutions', href: '/micro-saas', icon: Cpu, description: '50+ AI Tools' },
     { name: 'AI Analytics Dashboard', href: '/ai-analytics-dashboard', icon: BarChart, description: 'Business Intelligence' },
@@ -136,6 +143,7 @@ const Navigation: React.FC = () => {
     { name: 'Online Learning Platform', href: '/online-learning-platform', icon: Users, description: 'Education' },
     { name: 'Supply Chain Optimizer', href: '/supply-chain-optimizer', icon: BarChart, description: 'Manufacturing' }
   ];
+
   const emergingTech = [
     { name: 'Quantum Computing', href: '/quantum-computing', icon: Cpu, description: 'Quantum Solutions' },
     { name: 'Robotics & Automation', href: '/robotics', icon: Brain, description: 'Intelligent Robotics' },
@@ -147,24 +155,27 @@ const Navigation: React.FC = () => {
     { name: 'AI 3D Generation', href: '/ai-3d-generation', icon: Brain, description: '3D AI Solutions' },
     { name: 'Holographic Workspace', href: '/ai-holographic-workspace', icon: Brain, description: 'Holographic AI' }
   ];
+
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg border-b border-cyan-500/20' : 'bg-transparent'
+      isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg border-b border-cyan-500/20 cyber-scan-line' : 'bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2 group" onClick={closeAllMenus}>
-            <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+          <Link to="/" className="flex items-center space-x-2 group" onClick={closeAllMenus}>
+            <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 energy-pulse">
               <Brain className="w-5 h-5 text-white" />
             </div>
-            <span className="text-xl font-bold text-white neon-text">Zion Tech Group</span>
+            <span className="text-xl font-bold text-white holographic-text">Zion Tech Group</span>
           </Link>
+
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-            <Link href="/" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+            <Link to="/" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
               Home
             </Link>
+
             {/* AI Services Dropdown */}
             <div className="relative group">
               <button
@@ -181,7 +192,7 @@ const Navigation: React.FC = () => {
                     {aiServices.map((service) => (
                       <Link
                         key={service.name}
-                        href={service.href}
+                        to={service.href}
                         className="flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-colors duration-300 group"
                         onClick={closeAllMenus}
                       >
@@ -197,6 +208,7 @@ const Navigation: React.FC = () => {
                 </div>
               )}
             </div>
+
             {/* IT Services Dropdown */}
             <div className="relative group">
               <button
@@ -213,7 +225,7 @@ const Navigation: React.FC = () => {
                     {itServices.map((service) => (
                       <Link
                         key={service.name}
-                        href={service.href}
+                        to={service.href}
                         className="flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-colors duration-300 group"
                         onClick={closeAllMenus}
                       >
@@ -229,6 +241,7 @@ const Navigation: React.FC = () => {
                 </div>
               )}
             </div>
+
             {/* Micro SAAS Dropdown */}
             <div className="relative group">
               <button
@@ -245,7 +258,7 @@ const Navigation: React.FC = () => {
                     {microSaasServices.map((service) => (
                       <Link
                         key={service.name}
-                        href={service.href}
+                        to={service.href}
                         className="flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-colors duration-300 group"
                         onClick={closeAllMenus}
                       >
@@ -261,6 +274,7 @@ const Navigation: React.FC = () => {
                 </div>
               )}
             </div>
+
             {/* Emerging Technologies Dropdown */}
             <div className="relative group">
               <button
@@ -277,7 +291,7 @@ const Navigation: React.FC = () => {
                     {emergingTech.map((service) => (
                       <Link
                         key={service.name}
-                        href={service.href}
+                        to={service.href}
                         className="flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-colors duration-300 group"
                         onClick={closeAllMenus}
                       >
@@ -293,22 +307,24 @@ const Navigation: React.FC = () => {
                 </div>
               )}
             </div>
-            <Link href="/about" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+
+            <Link to="/about" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
               About
             </Link>
-            <Link href="/services" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+            <Link to="/services" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
               Services
             </Link>
-            <Link href="/pricing" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+            <Link to="/pricing" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
               Pricing
             </Link>
-            <Link href="/blog" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+            <Link to="/blog" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
               Blog
             </Link>
-            <Link href="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+            <Link to="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
               Contact
             </Link>
           </div>
+
           {/* Contact Info */}
           <div className="hidden lg:flex items-center space-x-4">
             <a
@@ -326,6 +342,7 @@ const Navigation: React.FC = () => {
               <span className="text-sm">Email</span>
             </a>
           </div>
+
           {/* Mobile Menu Button */}
           <div className="lg:hidden">
             <button
@@ -337,13 +354,15 @@ const Navigation: React.FC = () => {
             </button>
           </div>
         </div>
+
         {/* Mobile Menu */}
         {isOpen && (
           <div className="lg:hidden mt-4 pb-4 border-t border-cyan-500/20">
             <div className="pt-4 space-y-4">
-              <Link href="/" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
+              <Link to="/" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
                 Home
               </Link>
+
               {/* Mobile AI Services */}
               <div>
                 <button
@@ -361,7 +380,7 @@ const Navigation: React.FC = () => {
                     {aiServices.slice(0, 8).map((service) => (
                       <Link
                         key={service.name}
-                        href={service.href}
+                        to={service.href}
                         className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300"
                         onClick={closeAllMenus}
                       >
@@ -369,7 +388,7 @@ const Navigation: React.FC = () => {
                       </Link>
                     ))}
                     <Link
-                      href="/ai-services"
+                      to="/ai-services"
                       className="block text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
                       onClick={closeAllMenus}
                     >
@@ -378,6 +397,7 @@ const Navigation: React.FC = () => {
                   </div>
                 )}
               </div>
+
               {/* Mobile IT Services */}
               <div>
                 <button
@@ -392,19 +412,27 @@ const Navigation: React.FC = () => {
                 </button>
                 {itServicesOpen && (
                   <div className="mt-2 ml-4 space-y-2">
-                    {itServices.map((service) => (
+                    {itServices.slice(0, 8).map((service) => (
                       <Link
                         key={service.name}
-                        href={service.href}
+                        to={service.href}
                         className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300"
                         onClick={closeAllMenus}
                       >
                         {service.name}
                       </Link>
                     ))}
+                    <Link
+                      to="/it-services"
+                      className="block text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
+                      onClick={closeAllMenus}
+                    >
+                      View All IT Services →
+                    </Link>
                   </div>
                 )}
               </div>
+
               {/* Mobile Micro SAAS */}
               <div>
                 <button
@@ -422,7 +450,7 @@ const Navigation: React.FC = () => {
                     {microSaasServices.slice(0, 8).map((service) => (
                       <Link
                         key={service.name}
-                        href={service.href}
+                        to={service.href}
                         className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300"
                         onClick={closeAllMenus}
                       >
@@ -430,7 +458,7 @@ const Navigation: React.FC = () => {
                       </Link>
                     ))}
                     <Link
-                      href="/micro-saas"
+                      to="/micro-saas"
                       className="block text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
                       onClick={closeAllMenus}
                     >
@@ -439,21 +467,23 @@ const Navigation: React.FC = () => {
                   </div>
                 )}
               </div>
-              <Link href="/about" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
+
+              <Link to="/about" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
                 About
               </Link>
-              <Link href="/services" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
+              <Link to="/services" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
                 Services
               </Link>
-              <Link href="/pricing" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
+              <Link to="/pricing" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
                 Pricing
               </Link>
-              <Link href="/blog" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
+              <Link to="/blog" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
                 Blog
               </Link>
-              <Link href="/contact" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
+              <Link to="/contact" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
                 Contact
               </Link>
+
               {/* Mobile Contact Info */}
               <div className="pt-4 border-t border-cyan-500/20 space-y-2">
                 <a
@@ -482,4 +512,5 @@ const Navigation: React.FC = () => {
     </nav>
   );
 };
+
 export default Navigation;

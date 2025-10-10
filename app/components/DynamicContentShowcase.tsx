@@ -1,143 +1,173 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, Clock, Award } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { ArrowRight, Play, Star, Users, TrendingUp, Award } from 'lucide-react';
 
 const DynamicContentShowcase: React.FC = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentSlide, setCurrentSlide] = useState(0);
 
-  const features = [
+  const showcaseItems = [
     {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that learn and adapt to your business needs in real-time'
+      title: 'AI-Powered Business Transformation',
+      description: 'See how our AI solutions have helped businesses achieve 300% ROI and 95% process automation.',
+      image: '/api/placeholder/800/400',
+      stats: [
+        { label: 'ROI Increase', value: '300%' },
+        { label: 'Process Automation', value: '95%' },
+        { label: 'Cost Savings', value: '$50M+' }
+      ],
+      link: '/case-studies',
+      cta: 'View Success Stories'
     },
     {
-      icon: Zap,
-      title: 'Lightning Fast Performance',
-      description: 'Optimized for speed with sub-second response times and seamless user experience'
+      title: 'Micro SaaS Solutions Suite',
+      description: 'Discover our comprehensive collection of 50+ AI-powered micro SaaS tools for modern businesses.',
+      image: '/api/placeholder/800/400',
+      stats: [
+        { label: 'Available Tools', value: '50+' },
+        { label: 'Active Users', value: '10K+' },
+        { label: 'Satisfaction Rate', value: '98%' }
+      ],
+      link: '/micro-saas',
+      cta: 'Explore Tools'
     },
     {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with end-to-end encryption and compliance standards'
-    },
-    {
-      icon: Globe,
-      title: 'Global Scalability',
-      description: 'Scale effortlessly across multiple regions with automatic load balancing'
-    }
-  ];
-
-  const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ];
-
-  const testimonials = [
-    {
-      name: 'Sarah Johnson',
-      company: 'TechCorp Inc.',
-      role: 'CTO',
-      content: 'This solution transformed our operations completely. The AI insights are incredible.',
-      rating: 5
-    },
-    {
-      name: 'Michael Chen',
-      company: 'DataFlow Systems',
-      role: 'CEO',
-      content: 'The performance improvements we\'ve seen are remarkable. Highly recommended!',
-      rating: 5
-    },
-    {
-      name: 'Emily Rodriguez',
-      company: 'CloudFirst Solutions',
-      role: 'VP Engineering',
-      content: 'Outstanding security features and seamless integration. Perfect for our needs.',
-      rating: 5
+      title: 'Enterprise AI Implementation',
+      description: 'Learn about our enterprise-grade AI solutions that scale with your business needs.',
+      image: '/api/placeholder/800/400',
+      stats: [
+        { label: 'Enterprise Clients', value: '500+' },
+        { label: 'Uptime Guarantee', value: '99.9%' },
+        { label: 'Support Response', value: '<1hr' }
+      ],
+      link: '/ai-services',
+      cta: 'Learn More'
     }
   ];
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % features.length);
-    }, 3000);
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % showcaseItems.length);
+    }, 5000);
 
-    return () => clearInterval(timer);
-  }, [features.length]);
+    return () => clearInterval(interval);
+  }, [showcaseItems.length]);
 
   return (
-    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4 sm:px-6 lg:px-8">
+    <section className="py-20 px-4">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Dynamic Content Showcase
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">
+            Success in Action
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Experience our cutting-edge solutions through an interactive showcase of features and capabilities.
+            Discover how our AI and IT solutions are transforming businesses across industries.
           </p>
         </div>
 
-        {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          {features.map((feature, index) => (
-            <div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300">
-              <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg mb-4">
-                <feature.icon className="h-6 w-6 text-white" />
-              </div>
-<<<<<<< HEAD
-              <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-              <p className="text-gray-300">{feature.description}</p>
-            </div>
-          ))}
-        </div>
+        <div className="relative">
+          <div className="cyber-card hologram-card p-8 md:p-12">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <h3 className="text-2xl md:text-3xl font-bold text-white mb-6">
+                  {showcaseItems[currentSlide].title}
+                </h3>
+                <p className="text-lg text-gray-300 mb-8">
+                  {showcaseItems[currentSlide].description}
+                </p>
+                
+                <div className="grid grid-cols-3 gap-6 mb-8">
+                  {showcaseItems[currentSlide].stats.map((stat, index) => (
+                    <div key={index} className="text-center">
+                      <div className="text-2xl md:text-3xl font-bold text-cyan-400 mb-2">
+                        {stat.value}
+                      </div>
+                      <div className="text-sm text-gray-400">
+                        {stat.label}
+                      </div>
+                    </div>
+                  ))}
+                </div>
 
-        {/* Benefits Section */}
-        <div className="bg-white/5 backdrop-blur-lg rounded-xl p-8 border border-white/10 mb-16">
-          <h3 className="text-2xl font-bold text-white mb-6 text-center">Why Choose Us?</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-center">
-                <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />
-                <span className="text-gray-300">{benefit}</span>
+                <Link
+                  to={showcaseItems[currentSlide].link}
+                  className="cyber-button inline-flex items-center group"
+                >
+                  {showcaseItems[currentSlide].cta}
+                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                </Link>
               </div>
+
+              <div className="relative">
+                <img
+                  src={showcaseItems[currentSlide].image}
+                  alt={showcaseItems[currentSlide].title}
+                  className="w-full h-64 md:h-80 object-cover rounded-lg"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-lg"></div>
+                <div className="absolute bottom-4 left-4 right-4">
+                  <div className="flex items-center space-x-2 text-white">
+                    <Play className="w-5 h-5" />
+                    <span className="text-sm">Watch Demo</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Slide Indicators */}
+          <div className="flex justify-center mt-8 space-x-2">
+            {showcaseItems.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentSlide(index)}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  index === currentSlide
+                    ? 'bg-cyan-400 scale-125'
+                    : 'bg-gray-600 hover:bg-gray-400'
+                }`}
+                aria-label={`Go to slide ${index + 1}`}
+              />
             ))}
           </div>
         </div>
 
-        {/* Testimonials */}
-        <div className="text-center">
-          <h3 className="text-2xl font-bold text-white mb-8">What Our Clients Say</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10">
-                <div className="flex justify-center mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
-                  ))}
-                </div>
-                <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
-                <div className="text-center">
-                  <p className="text-white font-semibold">{testimonial.name}</p>
-                  <p className="text-gray-400 text-sm">{testimonial.role}, {testimonial.company}</p>
-                </div>
-              </div>
-            ))}
+        {/* Additional Stats */}
+        <div className="mt-16 grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="text-center">
+            <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Users className="w-8 h-8 text-white" />
+            </div>
+            <div className="text-3xl font-bold text-white mb-2">1000+</div>
+            <div className="text-gray-400">Happy Clients</div>
+          </div>
+          
+          <div className="text-center">
+            <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
+              <TrendingUp className="w-8 h-8 text-white" />
+            </div>
+            <div className="text-3xl font-bold text-white mb-2">500%</div>
+            <div className="text-gray-400">Average ROI</div>
+          </div>
+          
+          <div className="text-center">
+            <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Award className="w-8 h-8 text-white" />
+            </div>
+            <div className="text-3xl font-bold text-white mb-2">50+</div>
+            <div className="text-gray-400">Awards Won</div>
+          </div>
+          
+          <div className="text-center">
+            <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Star className="w-8 h-8 text-white" />
+            </div>
+            <div className="text-3xl font-bold text-white mb-2">4.9/5</div>
+            <div className="text-gray-400">Client Rating</div>
           </div>
         </div>
       </div>
-=======
-            ))}
-          </div>
-        </div>
-      </section>
->>>>>>> cursor/website-audit-and-update-with-deployment-758b
-    </div>
+    </section>
   );
 };
 
