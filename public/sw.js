@@ -6,10 +6,8 @@ const urlsToCache = [
   '/',
   '/static/js/bundle.js',
   '/static/css/main.css',
-
-  '/manifest.json',
-  '/favicon.ico'
-
+  '/site.webmanifest',
+  '/favicon.svg'
 ];
 
 self.addEventListener('install', (event) => {
