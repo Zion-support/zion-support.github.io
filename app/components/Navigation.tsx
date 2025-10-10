@@ -170,11 +170,11 @@ const Navigation: React.FC = () => {
         { name: 'AI Security Operations Center', path: '/ai-security-operations', description: 'AI-powered security monitoring', icon: '🛡️', popular: true },
         { name: 'AI Cloud Cost Optimization', path: '/ai-cloud-optimization', description: 'Smart cloud resource management', icon: '☁️', popular: true },
         { name: 'AI Data Center Management', path: '/ai-data-center', description: 'Intelligent data center operations', icon: '🏢', popular: true },
+        { name: 'Data Lake & Warehouse', path: '/data-warehouse', description: 'Enterprise data management', icon: '🗄️', popular: true },
+        { name: 'Real-time Analytics', path: '/real-time-analytics', description: 'Live data processing', icon: '⚡', popular: true },
         { name: 'Blockchain Integration Services Pro', path: '/blockchain-integration-services', description: 'Web3 and blockchain solutions', icon: '⛓️', popular: true },
         { name: 'Smart Contract Security Audit Pro', path: '/smart-contract-security-audit', description: 'Blockchain security auditing', icon: '🔒', popular: true },
         { name: 'AI Business Intelligence Pro', path: '/ai-business-intelligence', description: 'Advanced analytics platform', icon: '📈', popular: true },
-        { name: 'Data Lake & Warehouse Solutions', path: '/data-warehouse', description: 'Enterprise data management', icon: '🗄️', popular: true },
-        { name: 'Real-time Analytics Platform', path: '/real-time-analytics', description: 'Live data processing', icon: '⚡', popular: true },
         { name: 'IoT Platform Development', path: '/iot-platform', description: 'Comprehensive IoT solutions', icon: '🌐', popular: true },
         { name: 'Edge Computing Solutions', path: '/edge-computing', description: 'Low-latency edge infrastructure', icon: '📡', popular: true },
         { name: 'Smart City Solutions', path: '/smart-cities', description: 'Urban technology solutions', icon: '🏙️', popular: true }
@@ -195,6 +195,10 @@ const Navigation: React.FC = () => {
         { name: 'Smart Cities', path: '/smart-cities', description: 'Urban technology solutions', icon: '🏙️', popular: true },
         { name: 'AI Energy Management', path: '/ai-energy', description: 'Smart energy optimization', icon: '⚡', popular: true },
         { name: 'Digital Transformation', path: '/digital-transformation', description: 'Business modernization', icon: '🔄', popular: true },
+        { name: 'Quantum Security', path: '/quantum-security', description: 'Future-proof security', icon: '🔐', popular: true },
+        { name: 'AI Meeting Transcriber', path: '/ai-meeting-transcriber', description: 'AI-powered meeting notes', icon: '📝', popular: true },
+        { name: 'AI Neural Interface', path: '/ai-neural-interface', description: 'Brain-computer interface', icon: '🧠', popular: true },
+        { name: 'AI Immersive Learning', path: '/ai-immersive-learning', description: 'VR/AR education', icon: '🎓', popular: true },
         { name: 'Innovation Labs', path: '/innovation-labs', description: 'R&D and prototyping', icon: '🧪', popular: false }
       ]
     }

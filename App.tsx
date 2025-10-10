@@ -86,6 +86,15 @@ const FinancialITPage = React.lazy(() => import('./app/financial-it/page'));
 const EdgeComputingPage = React.lazy(() => import('./app/edge-computing/page'));
 const FiveGImplementationPage = React.lazy(() => import('./app/5g-implementation/page'));
 const IoTPlatformPage = React.lazy(() => import('./app/iot-platform/page'));
+const AISecurityOperationsPage = React.lazy(() => import('./app/ai-security-operations/page'));
+const AICloudOptimizationPage = React.lazy(() => import('./app/ai-cloud-optimization/page'));
+const AIDataCenterPage = React.lazy(() => import('./app/ai-data-center/page'));
+const DataWarehousePage = React.lazy(() => import('./app/data-warehouse/page'));
+const RealTimeAnalyticsPage = React.lazy(() => import('./app/real-time-analytics/page'));
+const QuantumSecurityPage = React.lazy(() => import('./app/quantum-security/page'));
+const AIMeetingTranscriberPage = React.lazy(() => import('./app/ai-meeting-transcriber/page'));
+const AINeuralInterfacePage = React.lazy(() => import('./app/ai-neural-interface/page'));
+const AIImmersiveLearningPage = React.lazy(() => import('./app/ai-immersive-learning/page'));
 
 // Performance monitoring hook
 const AppWithPerformanceMonitoring: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -137,6 +146,15 @@ const App: React.FC = memo(() => {
                       <Route path="/edge-computing" element={<EdgeComputingPage />} />
                       <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
                       <Route path="/iot-platform" element={<IoTPlatformPage />} />
+                      <Route path="/ai-security-operations" element={<AISecurityOperationsPage />} />
+                      <Route path="/ai-cloud-optimization" element={<AICloudOptimizationPage />} />
+                      <Route path="/ai-data-center" element={<AIDataCenterPage />} />
+                      <Route path="/data-warehouse" element={<DataWarehousePage />} />
+                      <Route path="/real-time-analytics" element={<RealTimeAnalyticsPage />} />
+                      <Route path="/quantum-security" element={<QuantumSecurityPage />} />
+                      <Route path="/ai-meeting-transcriber" element={<AIMeetingTranscriberPage />} />
+                      <Route path="/ai-neural-interface" element={<AINeuralInterfacePage />} />
+                      <Route path="/ai-immersive-learning" element={<AIImmersiveLearningPage />} />
                     </Routes>
                   </Suspense>
                   </main>

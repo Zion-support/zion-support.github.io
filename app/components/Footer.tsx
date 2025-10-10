@@ -41,6 +41,11 @@ const Footer: React.FC = memo(() => {
         { name: 'Database Management', href: '/database-management' },
         { name: 'Network Design', href: '/network-design' },
         { name: 'AI Infrastructure Monitoring', href: '/ai-infrastructure-monitoring' },
+        { name: 'AI Security Operations', href: '/ai-security-operations' },
+        { name: 'AI Cloud Optimization', href: '/ai-cloud-optimization' },
+        { name: 'AI Data Center Management', href: '/ai-data-center' },
+        { name: 'Data Lake & Warehouse', href: '/data-warehouse' },
+        { name: 'Real-time Analytics', href: '/real-time-analytics' },
         { name: 'Blockchain Integration', href: '/blockchain-integration-services' },
         { name: 'AI API Management', href: '/ai-api-management' },
         { name: 'Smart Contract Security', href: '/smart-contract-security-audit' },
@@ -69,7 +74,9 @@ const Footer: React.FC = memo(() => {
         { name: 'AI Voice Assistant Pro', href: '/ai-voice-assistant' },
         { name: 'AI Document Scanner Pro', href: '/ai-document-scanner' },
         { name: 'AI Meeting Transcriber Pro', href: '/ai-meeting-transcriber' },
-        { name: 'AI Website Builder Pro', href: '/ai-website-builder' }
+        { name: 'AI Website Builder Pro', href: '/ai-website-builder' },
+        { name: 'AI Neural Interface', href: '/ai-neural-interface' },
+        { name: 'AI Immersive Learning', href: '/ai-immersive-learning' }
       ]
     },
     {
@@ -91,7 +98,8 @@ const Footer: React.FC = memo(() => {
         { name: 'Drug Discovery', href: '/ai-drug-discovery-pro' },
         { name: 'Neural Interfaces', href: '/ai-neural-interface' },
         { name: 'Quantum Security', href: '/quantum-security' },
-        { name: 'Immersive Learning', href: '/ai-immersive-learning' }
+        { name: 'Immersive Learning', href: '/ai-immersive-learning' },
+        { name: 'AI Meeting Transcriber', href: '/ai-meeting-transcriber' }
       ]
     },
     {
