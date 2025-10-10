@@ -1,7 +1,7 @@
 'use client';
 import React, { useState, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
-import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package } from 'lucide-react';
+import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package, Search } from 'lucide-react';
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,6 +10,8 @@ const Navigation: React.FC = () => {
   const [aiServicesOpen, setAiServicesOpen] = useState(false);
   const [itServicesOpen, setItServicesOpen] = useState(false);
   const [microSaasOpen, setMicroSaasOpen] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
+  const [searchTerm, setSearchTerm] = useState('');
 
   // Handle scroll effect
   useEffect(() => {
@@ -69,7 +71,16 @@ const Navigation: React.FC = () => {
     setAiServicesOpen(false);
     setItServicesOpen(false);
     setMicroSaasOpen(false);
+    setSearchOpen(false);
   }, []);
+
+  const handleSearch = useCallback((e: React.FormEvent) => {
+    e.preventDefault();
+    if (searchTerm.trim()) {
+      // Navigate to services page with search term
+      window.location.href = `/services?search=${encodeURIComponent(searchTerm.trim())}`;
+    }
+  }, [searchTerm]);
 
   // Service data
   const aiServices = [
@@ -83,13 +94,10 @@ const Navigation: React.FC = () => {
     { name: 'AI Fintech', href: '/ai-fintech', icon: DollarSign, description: 'Financial technology' },
     { name: 'AI Computer Vision', href: '/ai-computer-vision', icon: Eye, description: 'Image & video analysis' },
     { name: 'AI Voice Processing', href: '/ai-voice-processing', icon: Mic, description: 'Speech recognition' },
-<<<<<<< HEAD
     { name: 'AI E-commerce', href: '/ai-ecommerce-optimizer', icon: Globe, description: 'E-commerce optimization' },
-    { name: 'AI HR Solutions', href: '/ai-hr', icon: Users, description: 'Human resources AI' }
-=======
+    { name: 'AI HR Solutions', href: '/ai-hr', icon: Users, description: 'Human resources AI' },
     { name: 'AI Content Generation', href: '/ai-content-generation', icon: FileText, description: 'Automated content' },
     { name: 'AI Workflow Automation', href: '/ai-workflow-automation', icon: Workflow, description: 'Process optimization' }
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-228f
   ];
 
   const itServices = [
@@ -99,46 +107,32 @@ const Navigation: React.FC = () => {
     { name: 'Data Management', href: '/ai-data-analytics', icon: Database, description: 'Data processing & storage' },
     { name: 'Mobile Development', href: '/mobile-development', icon: Smartphone, description: 'iOS & Android apps' },
     { name: 'Web Development', href: '/web-development', icon: Globe, description: 'Modern web applications' },
-<<<<<<< HEAD
     { name: 'DevOps & CI/CD', href: '/devops-ci-cd', icon: Settings, description: 'Development operations' },
     { name: 'Server Management', href: '/server-management', icon: Server, description: '24/7 server monitoring' },
     { name: 'Network Infrastructure', href: '/network-infrastructure', icon: Wifi, description: 'Network design & setup' },
-    { name: 'IT Consulting', href: '/it-consulting', icon: Package, description: 'Strategic IT planning' }
-  ];
-
-  const microSaasServices = [
-    { name: 'Zion Analytics Pro', href: '/zion-analytics-pro', icon: BarChart, description: 'Business intelligence platform' },
-=======
-    { name: 'DevOps & CI/CD', href: '/devops-cicd', icon: Settings, description: 'Automated deployment' },
+    { name: 'IT Consulting', href: '/it-consulting', icon: Package, description: 'Strategic IT planning' },
     { name: 'IT Support', href: '/it-support', icon: Monitor, description: '24/7 technical support' },
     { name: 'Infrastructure Management', href: '/infrastructure-management', icon: Server, description: 'IT infrastructure setup' },
     { name: 'Software Licensing', href: '/software-licensing', icon: Package, description: 'License management' }
   ];
 
   const microSaasServices = [
-    { name: 'Zion Analytics Pro', href: '/zion-analytics-pro', icon: BarChart, description: 'Business intelligence' },
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-228f
+    { name: 'Zion Analytics Pro', href: '/zion-analytics-pro', icon: BarChart, description: 'Business intelligence platform' },
     { name: 'Zion Chat AI', href: '/zion-chat-ai', icon: MessageCircle, description: 'AI customer support' },
     { name: 'Zion Security Shield', href: '/zion-security-shield', icon: Shield, description: 'Cybersecurity monitoring' },
     { name: 'Zion Cloud Vault', href: '/zion-cloud-vault', icon: Cloud, description: 'Cloud backup & recovery' },
     { name: 'Zion Content Studio', href: '/zion-content-studio', icon: FileText, description: 'AI content creation' },
-<<<<<<< HEAD
     { name: 'Zion HR Assistant', href: '/zion-hr-assistant', icon: Users, description: 'HR management AI' },
     { name: 'Zion Finance Pro', href: '/zion-finance-pro', icon: DollarSign, description: 'Financial management' },
     { name: 'Zion Lead Gen AI', href: '/zion-lead-gen-ai', icon: Target, description: 'Lead generation platform' },
     { name: 'Zion Project Manager', href: '/zion-project-manager', icon: Calendar, description: 'Project management AI' },
     { name: 'Zion Email Marketing', href: '/zion-email-marketing', icon: Mail, description: 'Email marketing AI' },
     { name: 'Zion Data Sync', href: '/zion-data-sync', icon: Database, description: 'Data integration platform' },
-    { name: 'Zion Mobile Builder', href: '/zion-mobile-builder', icon: Smartphone, description: 'No-code app builder' }
-=======
+    { name: 'Zion Mobile Builder', href: '/zion-mobile-builder', icon: Smartphone, description: 'No-code app builder' },
     { name: 'Zion CRM Pro', href: '/zion-crm-pro', icon: Users, description: 'AI-enhanced CRM' },
     { name: 'Zion Workflow Engine', href: '/zion-workflow-engine', icon: Settings, description: 'Process automation' },
     { name: 'Zion Finance AI', href: '/zion-finance-ai', icon: DollarSign, description: 'Financial management' },
-    { name: 'Zion Project Manager', href: '/zion-project-manager', icon: Calendar, description: 'AI project management' },
-    { name: 'Zion Email Marketing Pro', href: '/zion-email-marketing-pro', icon: Mail, description: 'Email automation' },
-    { name: 'Zion Lead Gen AI', href: '/zion-lead-gen-ai', icon: Target, description: 'Lead generation' },
-    { name: 'Zion Data Sync', href: '/zion-data-sync', icon: Database, description: 'Data integration' }
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-228f
+    { name: 'Zion Email Marketing Pro', href: '/zion-email-marketing-pro', icon: Mail, description: 'Email automation' }
   ];
 
   const emergingTech = [
@@ -324,6 +318,27 @@ const Navigation: React.FC = () => {
             </Link>
           </div>
 
+          {/* Search Bar */}
+          <div className="hidden lg:flex items-center space-x-4">
+            <div className="relative">
+              <form onSubmit={handleSearch} className="flex items-center">
+                <input
+                  type="text"
+                  placeholder="Search services..."
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  className="w-64 px-4 py-2 bg-slate-800/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                />
+                <button
+                  type="submit"
+                  className="ml-2 p-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300"
+                >
+                  <Search className="w-4 h-4" />
+                </button>
+              </form>
+            </div>
+          </div>
+
           {/* Contact Info */}
           <div className="hidden lg:flex items-center space-x-4">
             <a
@@ -472,6 +487,25 @@ const Navigation: React.FC = () => {
               <Link to="/contact" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
                 Contact
               </Link>
+
+              {/* Mobile Search */}
+              <div className="pt-4 border-t border-cyan-500/20">
+                <form onSubmit={handleSearch} className="flex items-center space-x-2">
+                  <input
+                    type="text"
+                    placeholder="Search services..."
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    className="flex-1 px-3 py-2 bg-slate-800/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                  />
+                  <button
+                    type="submit"
+                    className="p-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300"
+                  >
+                    <Search className="w-4 h-4" />
+                  </button>
+                </form>
+              </div>
 
               {/* Mobile Contact Info */}
               <div className="pt-4 border-t border-cyan-500/20 space-y-2">

@@ -7,7 +7,6 @@ const Footer: React.FC = memo(() => {
   const currentYear = new Date().getFullYear();
   
   const aiServices = [
-<<<<<<< HEAD
     { name: 'AI Chatbots & NLP', url: '/ai-chatbot-builder', description: 'Conversational AI' },
     { name: 'AI Content Generation', url: '/ai-content-writer', description: 'Automated content' },
     { name: 'AI Data Analytics', url: '/ai-data-analytics', description: 'Business intelligence' },
@@ -38,50 +37,6 @@ const Footer: React.FC = memo(() => {
     { name: 'Zion HR Assistant', url: '/zion-hr-assistant', description: 'HR management' },
     { name: 'Zion Finance Pro', url: '/zion-finance-pro', description: 'Financial management' },
     { name: 'Zion Lead Gen AI', url: '/zion-lead-gen-ai', description: 'Lead generation' }
-=======
-    { name: 'AI Strategy & Consulting', url: '/ai-services', description: 'Strategic AI consulting' },
-    { name: 'Machine Learning Solutions', url: '/ai-services', description: 'Custom ML models' },
-    { name: 'Natural Language Processing', url: '/ai-services', description: 'NLP and chatbots' },
-    { name: 'Computer Vision', url: '/ai-services', description: 'Image and video analysis' },
-    { name: 'AI Automation', url: '/ai-services', description: 'Process automation' },
-    { name: 'AI Data Analytics', url: '/ai-services', description: 'Intelligent analytics' },
-    { name: 'AI Healthcare Solutions', url: '/ai-services', description: 'Medical AI applications' },
-    { name: 'AI Financial Services', url: '/ai-services', description: 'Fintech AI solutions' },
-    { name: 'AI HR & Talent Management', url: '/ai-services', description: 'HR automation' },
-    { name: 'AI Supply Chain Optimization', url: '/ai-services', description: 'Supply chain AI' },
-    { name: 'AI Cybersecurity Suite', url: '/ai-services', description: 'Security AI' },
-    { name: 'AI Edge Computing', url: '/ai-services', description: 'Distributed AI processing' }
-  ];
-
-  const itServices = [
-    { name: 'Cloud Infrastructure', url: '/it-services', description: 'AWS, Azure, GCP' },
-    { name: 'DevOps & CI/CD', url: '/it-services', description: 'Automation pipelines' },
-    { name: 'Cybersecurity', url: '/it-services', description: 'Security solutions' },
-    { name: 'Managed IT Services', url: '/it-services', description: '24/7 IT support' },
-    { name: 'Database Management', url: '/it-services', description: 'Database optimization' },
-    { name: 'Network Solutions', url: '/it-services', description: 'Network infrastructure' },
-    { name: 'Mobile App Development', url: '/it-services', description: 'iOS & Android apps' },
-    { name: 'Web Development', url: '/it-services', description: 'Modern web applications' },
-    { name: 'IT Infrastructure Management', url: '/it-services', description: 'Infrastructure setup' },
-    { name: 'API Development', url: '/it-services', description: 'Custom API solutions' },
-    { name: 'IT Support & Helpdesk', url: '/it-services', description: 'Technical support' },
-    { name: 'Software Licensing', url: '/it-services', description: 'License management' }
-  ];
-
-  const microSaasServices = [
-    { name: 'Zion Analytics Pro', url: '/micro-saas', description: 'Business intelligence' },
-    { name: 'Zion Chat AI', url: '/micro-saas', description: 'AI customer support' },
-    { name: 'Zion Security Shield', url: '/micro-saas', description: 'Cybersecurity monitoring' },
-    { name: 'Zion Cloud Vault', url: '/micro-saas', description: 'Cloud backup & recovery' },
-    { name: 'Zion Content Studio', url: '/micro-saas', description: 'AI content creation' },
-    { name: 'Zion CRM Pro', url: '/micro-saas', description: 'AI-enhanced CRM' },
-    { name: 'Zion Workflow Engine', url: '/micro-saas', description: 'Process automation' },
-    { name: 'Zion Finance AI', url: '/micro-saas', description: 'Financial management' },
-    { name: 'Zion Project Manager', url: '/micro-saas', description: 'AI project management' },
-    { name: 'Zion Email Marketing Pro', url: '/micro-saas', description: 'Email automation' },
-    { name: 'Zion Lead Gen AI', url: '/micro-saas', description: 'Lead generation' },
-    { name: 'Zion Data Sync', url: '/micro-saas', description: 'Data integration' }
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-228f
   ];
 
   const companyLinks = [
@@ -90,7 +45,9 @@ const Footer: React.FC = memo(() => {
     { name: 'Blog', url: '/blog' },
     { name: 'Careers', url: '/careers' },
     { name: 'Partners', url: '/partners' },
-    { name: 'Support', url: '/support' }
+    { name: 'Support', url: '/support' },
+    { name: 'News & Press', url: '/news' },
+    { name: 'Investor Relations', url: '/investors' }
   ];
 
   const resourcesLinks = [
@@ -99,7 +56,31 @@ const Footer: React.FC = memo(() => {
     { name: 'Documentation', url: '/docs' },
     { name: 'API Reference', url: '/api' },
     { name: 'Tutorials', url: '/tutorials' },
-    { name: 'Community', url: '/community' }
+    { name: 'Community', url: '/community' },
+    { name: 'White Papers', url: '/whitepapers' },
+    { name: 'Webinars', url: '/webinars' }
+  ];
+
+  const solutionsLinks = [
+    { name: 'AI Solutions', url: '/ai-services' },
+    { name: 'IT Services', url: '/it-services' },
+    { name: 'Micro SaaS', url: '/micro-saas' },
+    { name: 'Cloud Migration', url: '/cloud-migration' },
+    { name: 'Digital Transformation', url: '/digital-transformation' },
+    { name: 'Cybersecurity', url: '/cybersecurity' },
+    { name: 'Data Analytics', url: '/data-analytics' },
+    { name: 'Custom Development', url: '/custom-development' }
+  ];
+
+  const industryLinks = [
+    { name: 'Healthcare', url: '/industries/healthcare' },
+    { name: 'Finance', url: '/industries/finance' },
+    { name: 'Manufacturing', url: '/industries/manufacturing' },
+    { name: 'Retail', url: '/industries/retail' },
+    { name: 'Education', url: '/industries/education' },
+    { name: 'Government', url: '/industries/government' },
+    { name: 'Non-Profit', url: '/industries/nonprofit' },
+    { name: 'Startups', url: '/industries/startups' }
   ];
 
   return (
@@ -218,9 +199,9 @@ const Footer: React.FC = memo(() => {
         </div>
 
         {/* Additional Links Section */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12 pt-8 border-t border-gray-700">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mt-12 pt-8 border-t border-gray-700">
           <div>
-            <h3 className="text-lg font-semibold mb-4">Company</h3>
+            <h3 className="text-lg font-semibold mb-4 text-cyan-400">Company</h3>
             <ul className="space-y-2">
               {companyLinks.map((link, index) => (
                 <li key={index}>
@@ -236,7 +217,39 @@ const Footer: React.FC = memo(() => {
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-4">Resources</h3>
+            <h3 className="text-lg font-semibold mb-4 text-cyan-400">Solutions</h3>
+            <ul className="space-y-2">
+              {solutionsLinks.map((link, index) => (
+                <li key={index}>
+                  <Link 
+                    to={link.url} 
+                    className="text-gray-300 hover:text-white text-sm transition-colors"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="text-lg font-semibold mb-4 text-cyan-400">Industries</h3>
+            <ul className="space-y-2">
+              {industryLinks.map((link, index) => (
+                <li key={index}>
+                  <Link 
+                    to={link.url} 
+                    className="text-gray-300 hover:text-white text-sm transition-colors"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="text-lg font-semibold mb-4 text-cyan-400">Resources</h3>
             <ul className="space-y-2">
               {resourcesLinks.map((link, index) => (
                 <li key={index}>
@@ -252,7 +265,7 @@ const Footer: React.FC = memo(() => {
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+            <h3 className="text-lg font-semibold mb-4 text-cyan-400">Quick Links</h3>
             <ul className="space-y-2">
               <li>
                 <Link to="/consultation" className="text-gray-300 hover:text-white text-sm transition-colors">
@@ -274,21 +287,57 @@ const Footer: React.FC = memo(() => {
                   Technical Support
                 </Link>
               </li>
+              <li>
+                <Link to="/careers" className="text-gray-300 hover:text-white text-sm transition-colors">
+                  Join Our Team
+                </Link>
+              </li>
+              <li>
+                <Link to="/partners" className="text-gray-300 hover:text-white text-sm transition-colors">
+                  Become a Partner
+                </Link>
+              </li>
             </ul>
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-4">Follow Us</h3>
-            <div className="flex space-x-4">
-              <a href="https://linkedin.com/company/ziontechgroup" className="text-gray-300 hover:text-white transition-colors">
-                LinkedIn
-              </a>
-              <a href="https://twitter.com/ziontechgroup" className="text-gray-300 hover:text-white transition-colors">
-                Twitter
-              </a>
-              <a href="https://github.com/ziontechgroup" className="text-gray-300 hover:text-white transition-colors">
-                GitHub
-              </a>
+            <h3 className="text-lg font-semibold mb-4 text-cyan-400">Connect</h3>
+            <div className="space-y-4">
+              <div className="flex space-x-4">
+                <a href="https://linkedin.com/company/ziontechgroup" className="text-gray-300 hover:text-white transition-colors">
+                  LinkedIn
+                </a>
+                <a href="https://twitter.com/ziontechgroup" className="text-gray-300 hover:text-white transition-colors">
+                  Twitter
+                </a>
+                <a href="https://github.com/ziontechgroup" className="text-gray-300 hover:text-white transition-colors">
+                  GitHub
+                </a>
+              </div>
+              <div className="flex space-x-4">
+                <a href="https://youtube.com/ziontechgroup" className="text-gray-300 hover:text-white transition-colors">
+                  YouTube
+                </a>
+                <a href="https://facebook.com/ziontechgroup" className="text-gray-300 hover:text-white transition-colors">
+                  Facebook
+                </a>
+                <a href="https://instagram.com/ziontechgroup" className="text-gray-300 hover:text-white transition-colors">
+                  Instagram
+                </a>
+              </div>
+              <div className="text-sm text-gray-400">
+                <p>Subscribe to our newsletter</p>
+                <div className="mt-2 flex">
+                  <input 
+                    type="email" 
+                    placeholder="Enter your email"
+                    className="flex-1 px-3 py-2 bg-slate-800 border border-gray-600 rounded-l-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                  />
+                  <button className="px-4 py-2 bg-cyan-500 text-white rounded-r-lg hover:bg-cyan-600 transition-colors">
+                    Subscribe
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>

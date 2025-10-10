@@ -491,6 +491,526 @@ const AiServicesPage: React.FC = () => {
       category: 'Edge Computing',
       popular: false,
       icon: Server
+    },
+    {
+      id: 'ai-3d-generation',
+      name: 'AI 3D Content Generation',
+      description: 'Advanced AI for creating 3D models, animations, and virtual environments',
+      price: '$2,499/month',
+      marketPrice: '$5000-20000/month',
+      features: [
+        '3D model generation from text prompts',
+        'Automated animation creation',
+        'Virtual environment design',
+        'Real-time 3D rendering',
+        'AR/VR content generation',
+        '3D asset optimization',
+        'Integration with game engines',
+        'Custom 3D pipeline automation'
+      ],
+      benefits: [
+        'Reduce 3D creation time by 80%',
+        'Lower production costs',
+        'Faster prototyping',
+        'Scalable 3D content production'
+      ],
+      category: '3D Generation',
+      popular: false,
+      icon: Box
+    },
+    {
+      id: 'ai-quantum-computing',
+      name: 'AI Quantum Computing Solutions',
+      description: 'Quantum-enhanced AI algorithms for complex optimization and machine learning',
+      price: '$4,999/month',
+      marketPrice: '$10000-50000/month',
+      features: [
+        'Quantum machine learning algorithms',
+        'Quantum optimization for complex problems',
+        'Quantum neural networks',
+        'Quantum data processing',
+        'Hybrid classical-quantum AI',
+        'Quantum simulation capabilities',
+        'Advanced cryptography',
+        'Research and development support'
+      ],
+      benefits: [
+        'Exponential computational speedup',
+        'Solve previously intractable problems',
+        'Advanced optimization capabilities',
+        'Future-proof technology investment'
+      ],
+      category: 'Quantum Computing',
+      popular: false,
+      icon: Cpu
+    },
+    {
+      id: 'ai-autonomous-systems',
+      name: 'AI Autonomous Systems',
+      description: 'Self-operating AI systems for robotics, vehicles, and industrial automation',
+      price: '$3,999/month',
+      marketPrice: '$8000-30000/month',
+      features: [
+        'Autonomous vehicle AI',
+        'Industrial robot control',
+        'Drone navigation systems',
+        'Smart city automation',
+        'Predictive maintenance AI',
+        'Real-time decision making',
+        'Safety and compliance monitoring',
+        'Human-robot collaboration'
+      ],
+      benefits: [
+        'Reduce operational costs by 60%',
+        'Improve safety and reliability',
+        '24/7 autonomous operation',
+        'Scalable automation solutions'
+      ],
+      category: 'Autonomous Systems',
+      popular: false,
+      icon: Settings
+    },
+    {
+      id: 'ai-blockchain-integration',
+      name: 'AI Blockchain Integration',
+      description: 'AI-powered blockchain solutions for smart contracts, DeFi, and Web3 applications',
+      price: '$2,999/month',
+      marketPrice: '$6000-25000/month',
+      features: [
+        'Smart contract AI optimization',
+        'DeFi protocol analysis',
+        'NFT generation and management',
+        'Blockchain data analytics',
+        'Cryptocurrency trading AI',
+        'Decentralized AI networks',
+        'Token economics optimization',
+        'Cross-chain AI solutions'
+      ],
+      benefits: [
+        'Optimize blockchain performance',
+        'Automated DeFi strategies',
+        'Enhanced security and transparency',
+        'Innovative Web3 applications'
+      ],
+      category: 'Blockchain AI',
+      popular: false,
+      icon: Link
+    },
+    {
+      id: 'ai-5g-optimization',
+      name: 'AI 5G Network Optimization',
+      description: 'AI-powered 5G network management and optimization for maximum performance',
+      price: '$3,499/month',
+      marketPrice: '$7000-25000/month',
+      features: [
+        '5G network performance optimization',
+        'Intelligent traffic management',
+        'Predictive network maintenance',
+        'Edge computing optimization',
+        'IoT device management',
+        'Network slicing automation',
+        'Real-time quality monitoring',
+        'Energy efficiency optimization'
+      ],
+      benefits: [
+        'Improve network performance by 40%',
+        'Reduce operational costs',
+        'Enhanced user experience',
+        'Scalable 5G infrastructure'
+      ],
+      category: '5G Technology',
+      popular: false,
+      icon: Zap
+    },
+    {
+      id: 'ai-holographic-workspace',
+      name: 'AI Holographic Workspace',
+      description: 'Immersive AI-powered holographic environments for collaboration and visualization',
+      price: '$4,499/month',
+      marketPrice: '$9000-35000/month',
+      features: [
+        'Holographic meeting rooms',
+        '3D data visualization',
+        'Immersive training environments',
+        'Virtual prototyping',
+        'Spatial computing AI',
+        'Gesture recognition',
+        'Eye tracking and interaction',
+        'Multi-user collaboration'
+      ],
+      benefits: [
+        'Revolutionary collaboration experience',
+        'Enhanced data visualization',
+        'Immersive training and education',
+        'Next-generation workspace solutions'
+      ],
+      category: 'Holographic Technology',
+      popular: false,
+      icon: Monitor
+    },
+    {
+      id: 'ai-climate-solutions',
+      name: 'AI Climate Solutions',
+      description: 'AI-powered environmental monitoring and climate change mitigation technologies',
+      price: '$2,799/month',
+      marketPrice: '$5500-20000/month',
+      features: [
+        'Climate data analysis and prediction',
+        'Carbon footprint optimization',
+        'Renewable energy management',
+        'Environmental monitoring',
+        'Sustainable supply chain optimization',
+        'Green technology integration',
+        'Climate risk assessment',
+        'ESG reporting automation'
+      ],
+      benefits: [
+        'Reduce environmental impact',
+        'Optimize energy consumption',
+        'Compliance with sustainability goals',
+        'Data-driven climate action'
+      ],
+      category: 'Climate Technology',
+      popular: false,
+      icon: Globe
+    },
+    {
+      id: 'ai-drug-discovery',
+      name: 'AI Drug Discovery Platform',
+      description: 'Advanced AI for pharmaceutical research, drug discovery, and development',
+      price: '$5,999/month',
+      marketPrice: '$12000-50000/month',
+      features: [
+        'Molecular design and optimization',
+        'Drug-target interaction prediction',
+        'Clinical trial optimization',
+        'Side effect prediction',
+        'Drug repurposing analysis',
+        'Biomarker discovery',
+        'Personalized medicine development',
+        'Regulatory compliance support'
+      ],
+      benefits: [
+        'Accelerate drug development by 70%',
+        'Reduce research costs significantly',
+        'Improve success rates',
+        'Enable personalized treatments'
+      ],
+      category: 'Pharmaceutical AI',
+      popular: false,
+      icon: Heart
+    },
+    {
+      id: 'ai-agricultural-intelligence',
+      name: 'AI Agricultural Intelligence',
+      description: 'Smart farming solutions with AI-powered crop monitoring and optimization',
+      price: '$1,999/month',
+      marketPrice: '$4000-15000/month',
+      features: [
+        'Crop health monitoring',
+        'Yield prediction and optimization',
+        'Precision agriculture automation',
+        'Weather and soil analysis',
+        'Pest and disease detection',
+        'Irrigation optimization',
+        'Livestock monitoring',
+        'Supply chain optimization'
+      ],
+      benefits: [
+        'Increase crop yields by 30%',
+        'Reduce resource usage',
+        'Improve food quality',
+        'Sustainable farming practices'
+      ],
+      category: 'Agricultural AI',
+      popular: false,
+      icon: Globe
+    },
+    {
+      id: 'ai-energy-grid-management',
+      name: 'AI Energy Grid Management',
+      description: 'Intelligent energy grid optimization and smart power distribution systems',
+      price: '$3,799/month',
+      marketPrice: '$7500-30000/month',
+      features: [
+        'Smart grid optimization',
+        'Renewable energy integration',
+        'Demand response management',
+        'Grid stability monitoring',
+        'Energy storage optimization',
+        'Predictive maintenance',
+        'Load balancing algorithms',
+        'Real-time energy trading'
+      ],
+      benefits: [
+        'Improve grid efficiency by 25%',
+        'Reduce energy waste',
+        'Better renewable integration',
+        'Enhanced grid reliability'
+      ],
+      category: 'Energy Management',
+      popular: false,
+      icon: Zap
+    },
+    {
+      id: 'ai-financial-crime-detection',
+      name: 'AI Financial Crime Detection',
+      description: 'Advanced AI for detecting money laundering, fraud, and financial crimes',
+      price: '$2,299/month',
+      marketPrice: '$4500-18000/month',
+      features: [
+        'Money laundering detection',
+        'Transaction pattern analysis',
+        'Suspicious activity monitoring',
+        'Regulatory compliance automation',
+        'Risk scoring algorithms',
+        'Real-time alert systems',
+        'Cross-border transaction analysis',
+        'AML/KYC automation'
+      ],
+      benefits: [
+        'Reduce false positives by 60%',
+        'Improve detection accuracy',
+        'Automated compliance reporting',
+        'Enhanced financial security'
+      ],
+      category: 'Financial Security',
+      popular: false,
+      icon: Shield
+    },
+    {
+      id: 'ai-accounting-automation',
+      name: 'AI Accounting Automation',
+      description: 'Intelligent accounting and financial management with automated processing',
+      price: '$899/month',
+      marketPrice: '$1800-6000/month',
+      features: [
+        'Automated bookkeeping',
+        'Invoice processing and matching',
+        'Expense categorization',
+        'Financial reporting automation',
+        'Tax preparation assistance',
+        'Audit trail generation',
+        'Compliance monitoring',
+        'Real-time financial insights'
+      ],
+      benefits: [
+        'Reduce accounting time by 80%',
+        'Improve accuracy and consistency',
+        'Automated compliance',
+        'Real-time financial visibility'
+      ],
+      category: 'Accounting AI',
+      popular: true,
+      icon: FileText
+    },
+    {
+      id: 'ai-fashion-design',
+      name: 'AI Fashion Design Platform',
+      description: 'AI-powered fashion design, trend analysis, and virtual try-on solutions',
+      price: '$1,599/month',
+      marketPrice: '$3200-12000/month',
+      features: [
+        'AI fashion design generation',
+        'Trend analysis and forecasting',
+        'Virtual try-on technology',
+        'Size recommendation algorithms',
+        'Fabric optimization',
+        'Sustainable fashion analysis',
+        'Personalized styling',
+        'Supply chain optimization'
+      ],
+      benefits: [
+        'Accelerate design process by 50%',
+        'Reduce waste and costs',
+        'Personalized customer experience',
+        'Data-driven fashion decisions'
+      ],
+      category: 'Fashion AI',
+      popular: false,
+      icon: Target
+    },
+    {
+      id: 'ai-fitness-coaching',
+      name: 'AI Fitness Coaching Platform',
+      description: 'Personalized AI fitness coaching with real-time monitoring and optimization',
+      price: '$299/month',
+      marketPrice: '$600-2000/month',
+      features: [
+        'Personalized workout plans',
+        'Real-time form analysis',
+        'Nutrition optimization',
+        'Progress tracking and analytics',
+        'Injury prevention algorithms',
+        'Wearable device integration',
+        'Virtual personal training',
+        'Community and social features'
+      ],
+      benefits: [
+        'Improve fitness outcomes by 40%',
+        'Personalized training programs',
+        'Real-time feedback and guidance',
+        'Scalable fitness solutions'
+      ],
+      category: 'Fitness AI',
+      popular: true,
+      icon: Heart
+    },
+    {
+      id: 'ai-investment-optimization',
+      name: 'AI Investment Optimization',
+      description: 'Advanced AI for portfolio management, risk assessment, and investment strategies',
+      price: '$1,799/month',
+      marketPrice: '$3600-15000/month',
+      features: [
+        'Portfolio optimization algorithms',
+        'Risk assessment and management',
+        'Market prediction models',
+        'Alternative investment analysis',
+        'ESG scoring and integration',
+        'Real-time trading signals',
+        'Tax optimization strategies',
+        'Performance attribution analysis'
+      ],
+      benefits: [
+        'Improve investment returns by 25%',
+        'Reduce portfolio risk',
+        'Automated investment management',
+        'Data-driven investment decisions'
+      ],
+      category: 'Investment AI',
+      popular: false,
+      icon: TrendingUp
+    },
+    {
+      id: 'ai-invoice-automation',
+      name: 'AI Invoice Automation Suite',
+      description: 'Intelligent invoice processing, approval workflows, and payment automation',
+      price: '$499/month',
+      marketPrice: '$1000-3000/month',
+      features: [
+        'Automated invoice processing',
+        'Smart approval workflows',
+        'Payment automation',
+        'Vendor management',
+        'Expense categorization',
+        'Compliance checking',
+        'Real-time reporting',
+        'Integration with accounting systems'
+      ],
+      benefits: [
+        'Reduce invoice processing time by 90%',
+        'Eliminate manual data entry',
+        'Improve accuracy and compliance',
+        'Streamlined financial operations'
+      ],
+      category: 'Invoice Automation',
+      popular: true,
+      icon: FileText
+    },
+    {
+      id: 'ai-lead-generation',
+      name: 'AI Lead Generation Engine',
+      description: 'Intelligent lead identification, qualification, and nurturing automation',
+      price: '$799/month',
+      marketPrice: '$1600-5000/month',
+      features: [
+        'AI-powered lead scoring',
+        'Multi-channel lead capture',
+        'Automated lead nurturing',
+        'Intent detection and analysis',
+        'Lead enrichment and verification',
+        'CRM integration and automation',
+        'Performance analytics',
+        'Custom lead qualification rules'
+      ],
+      benefits: [
+        'Increase qualified leads by 200%',
+        'Reduce lead acquisition costs',
+        'Automated lead nurturing',
+        'Higher conversion rates'
+      ],
+      category: 'Lead Generation',
+      popular: true,
+      icon: Target
+    },
+    {
+      id: 'ai-inventory-optimization',
+      name: 'AI Inventory Optimization',
+      description: 'Smart inventory management with demand forecasting and automated reordering',
+      price: '$1,299/month',
+      marketPrice: '$2600-8000/month',
+      features: [
+        'AI demand forecasting',
+        'Automated reorder optimization',
+        'Multi-location inventory sync',
+        'Supplier performance analysis',
+        'Cost optimization algorithms',
+        'Seasonal trend analysis',
+        'Integration with e-commerce platforms',
+        'Real-time inventory tracking'
+      ],
+      benefits: [
+        'Reduce inventory costs by 35%',
+        'Prevent stockouts and overstock',
+        'Optimize supplier relationships',
+        'Automated inventory management'
+      ],
+      category: 'Inventory AI',
+      popular: false,
+      icon: Box
+    },
+    {
+      id: 'ai-hr-analytics',
+      name: 'AI HR Analytics Platform',
+      description: 'Advanced human resources analytics and workforce optimization solutions',
+      price: '$1,199/month',
+      marketPrice: '$2400-8000/month',
+      features: [
+        'Employee performance analytics',
+        'Talent acquisition optimization',
+        'Retention prediction models',
+        'Workforce planning algorithms',
+        'Skills gap analysis',
+        'Employee engagement tracking',
+        'Diversity and inclusion metrics',
+        'Predictive HR insights'
+      ],
+      benefits: [
+        'Improve hiring decisions by 45%',
+        'Reduce employee turnover',
+        'Optimize workforce planning',
+        'Data-driven HR strategies'
+      ],
+      category: 'HR Analytics',
+      popular: false,
+      icon: Users
+    },
+    {
+      id: 'ai-insurance-optimization',
+      name: 'AI Insurance Optimization',
+      description: 'Intelligent insurance underwriting, claims processing, and risk assessment',
+      price: '$2,199/month',
+      marketPrice: '$4400-15000/month',
+      features: [
+        'Automated underwriting',
+        'Claims processing AI',
+        'Risk assessment algorithms',
+        'Fraud detection and prevention',
+        'Customer segmentation',
+        'Pricing optimization',
+        'Policy recommendation engine',
+        'Regulatory compliance automation'
+      ],
+      benefits: [
+        'Reduce processing time by 70%',
+        'Improve risk assessment accuracy',
+        'Lower fraud losses',
+        'Enhanced customer experience'
+      ],
+      category: 'Insurance AI',
+      popular: false,
+      icon: Shield
     }
   ];
 
@@ -514,7 +1034,27 @@ const AiServicesPage: React.FC = () => {
     { id: 'Energy', name: 'Energy', count: services.filter(s => s.category === 'Energy').length },
     { id: 'Human Resources', name: 'Human Resources', count: services.filter(s => s.category === 'Human Resources').length },
     { id: 'Blockchain', name: 'Blockchain', count: services.filter(s => s.category === 'Blockchain').length },
-    { id: 'Edge Computing', name: 'Edge Computing', count: services.filter(s => s.category === 'Edge Computing').length }
+    { id: 'Edge Computing', name: 'Edge Computing', count: services.filter(s => s.category === 'Edge Computing').length },
+    { id: '3D Generation', name: '3D Generation', count: services.filter(s => s.category === '3D Generation').length },
+    { id: 'Quantum Computing', name: 'Quantum Computing', count: services.filter(s => s.category === 'Quantum Computing').length },
+    { id: 'Autonomous Systems', name: 'Autonomous Systems', count: services.filter(s => s.category === 'Autonomous Systems').length },
+    { id: 'Blockchain AI', name: 'Blockchain AI', count: services.filter(s => s.category === 'Blockchain AI').length },
+    { id: '5G Technology', name: '5G Technology', count: services.filter(s => s.category === '5G Technology').length },
+    { id: 'Holographic Technology', name: 'Holographic Technology', count: services.filter(s => s.category === 'Holographic Technology').length },
+    { id: 'Climate Technology', name: 'Climate Technology', count: services.filter(s => s.category === 'Climate Technology').length },
+    { id: 'Pharmaceutical AI', name: 'Pharmaceutical AI', count: services.filter(s => s.category === 'Pharmaceutical AI').length },
+    { id: 'Agricultural AI', name: 'Agricultural AI', count: services.filter(s => s.category === 'Agricultural AI').length },
+    { id: 'Energy Management', name: 'Energy Management', count: services.filter(s => s.category === 'Energy Management').length },
+    { id: 'Financial Security', name: 'Financial Security', count: services.filter(s => s.category === 'Financial Security').length },
+    { id: 'Accounting AI', name: 'Accounting AI', count: services.filter(s => s.category === 'Accounting AI').length },
+    { id: 'Fashion AI', name: 'Fashion AI', count: services.filter(s => s.category === 'Fashion AI').length },
+    { id: 'Fitness AI', name: 'Fitness AI', count: services.filter(s => s.category === 'Fitness AI').length },
+    { id: 'Investment AI', name: 'Investment AI', count: services.filter(s => s.category === 'Investment AI').length },
+    { id: 'Invoice Automation', name: 'Invoice Automation', count: services.filter(s => s.category === 'Invoice Automation').length },
+    { id: 'Lead Generation', name: 'Lead Generation', count: services.filter(s => s.category === 'Lead Generation').length },
+    { id: 'Inventory AI', name: 'Inventory AI', count: services.filter(s => s.category === 'Inventory AI').length },
+    { id: 'HR Analytics', name: 'HR Analytics', count: services.filter(s => s.category === 'HR Analytics').length },
+    { id: 'Insurance AI', name: 'Insurance AI', count: services.filter(s => s.category === 'Insurance AI').length }
   ];
 
   const filteredServices = services.filter(service => 

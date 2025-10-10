@@ -462,6 +462,526 @@ const ItServicesPage: React.FC = () => {
       category: 'Compliance',
       popular: false,
       icon: CheckCircle
+    },
+    {
+      id: 'iot-solutions',
+      name: 'IoT Solutions & Integration',
+      description: 'Internet of Things solutions for smart devices, sensors, and connected systems',
+      price: '$2,800/month',
+      marketPrice: '$5000-20000/month',
+      features: [
+        'IoT device integration',
+        'Sensor data collection',
+        'Real-time monitoring',
+        'Edge computing solutions',
+        'Data analytics and insights',
+        'Remote device management',
+        'Security and encryption',
+        'Scalable IoT architecture'
+      ],
+      benefits: [
+        'Improved operational efficiency',
+        'Real-time data insights',
+        'Automated monitoring',
+        'Cost reduction through automation'
+      ],
+      category: 'IoT',
+      popular: false,
+      icon: Wifi
+    },
+    {
+      id: 'blockchain-solutions',
+      name: 'Blockchain Development',
+      description: 'Custom blockchain solutions including smart contracts, DeFi, and Web3 applications',
+      price: '$4,500/month',
+      marketPrice: '$8000-30000/month',
+      features: [
+        'Smart contract development',
+        'DeFi protocol creation',
+        'NFT marketplace development',
+        'Blockchain integration',
+        'Cryptocurrency wallet development',
+        'Token economics design',
+        'Security auditing',
+        'Cross-chain solutions'
+      ],
+      benefits: [
+        'Decentralized solutions',
+        'Enhanced security',
+        'Transparent transactions',
+        'Future-proof technology'
+      ],
+      category: 'Blockchain',
+      popular: false,
+      icon: Shield
+    },
+    {
+      id: 'ai-infrastructure',
+      name: 'AI Infrastructure Setup',
+      description: 'Complete AI infrastructure including GPU clusters, ML pipelines, and model deployment',
+      price: '$3,500/month',
+      marketPrice: '$6000-25000/month',
+      features: [
+        'GPU cluster setup and management',
+        'ML pipeline development',
+        'Model training infrastructure',
+        'Model deployment and serving',
+        'Data preprocessing pipelines',
+        'MLOps implementation',
+        'Model monitoring and versioning',
+        'Auto-scaling AI workloads'
+      ],
+      benefits: [
+        'Scalable AI infrastructure',
+        'Faster model development',
+        'Automated ML workflows',
+        'Cost-effective AI operations'
+      ],
+      category: 'AI Infrastructure',
+      popular: true,
+      icon: Zap
+    },
+    {
+      id: 'quantum-computing',
+      name: 'Quantum Computing Services',
+      description: 'Quantum computing solutions and hybrid classical-quantum systems',
+      price: '$8,000/month',
+      marketPrice: '$15000-50000/month',
+      features: [
+        'Quantum algorithm development',
+        'Hybrid classical-quantum systems',
+        'Quantum simulation services',
+        'Quantum optimization solutions',
+        'Quantum cryptography',
+        'Research and development',
+        'Quantum cloud access',
+        'Expert consultation'
+      ],
+      benefits: [
+        'Exponential computational power',
+        'Solve complex optimization problems',
+        'Future-proof technology',
+        'Competitive advantage'
+      ],
+      category: 'Quantum Computing',
+      popular: false,
+      icon: Cpu
+    },
+    {
+      id: '5g-implementation',
+      name: '5G Network Implementation',
+      description: '5G network design, deployment, and optimization for enterprise environments',
+      price: '$5,500/month',
+      marketPrice: '$10000-40000/month',
+      features: [
+        '5G network architecture design',
+        'Small cell deployment',
+        'Network slicing implementation',
+        'Edge computing integration',
+        'IoT device connectivity',
+        'Performance optimization',
+        'Security implementation',
+        'Monitoring and management'
+      ],
+      benefits: [
+        'Ultra-fast connectivity',
+        'Low latency applications',
+        'Massive IoT connectivity',
+        'Enhanced mobile experiences'
+      ],
+      category: '5G Technology',
+      popular: false,
+      icon: Wifi
+    },
+    {
+      id: 'ar-vr-solutions',
+      name: 'AR/VR Development',
+      description: 'Augmented and Virtual Reality solutions for training, visualization, and immersive experiences',
+      price: '$6,000/project',
+      marketPrice: '$12000-50000/project',
+      features: [
+        'AR/VR application development',
+        '3D content creation',
+        'Immersive training solutions',
+        'Virtual collaboration platforms',
+        'Mixed reality experiences',
+        'Cross-platform compatibility',
+        'Performance optimization',
+        'User experience design'
+      ],
+      benefits: [
+        'Immersive user experiences',
+        'Enhanced training effectiveness',
+        'Remote collaboration',
+        'Innovative customer engagement'
+      ],
+      category: 'AR/VR',
+      popular: false,
+      icon: Monitor
+    },
+    {
+      id: 'edge-computing',
+      name: 'Edge Computing Solutions',
+      description: 'Edge computing infrastructure for real-time processing and reduced latency',
+      price: '$2,200/month',
+      marketPrice: '$4000-15000/month',
+      features: [
+        'Edge server deployment',
+        'Real-time data processing',
+        'Low-latency applications',
+        'Offline capability',
+        'Edge AI deployment',
+        'Distributed computing',
+        'Bandwidth optimization',
+        'Edge security implementation'
+      ],
+      benefits: [
+        'Reduced latency',
+        'Improved performance',
+        'Offline operation',
+        'Cost-effective processing'
+      ],
+      category: 'Edge Computing',
+      popular: false,
+      icon: Server
+    },
+    {
+      id: 'microservices-architecture',
+      name: 'Microservices Architecture',
+      description: 'Microservices design and implementation for scalable, maintainable applications',
+      price: '$3,200/month',
+      marketPrice: '$6000-20000/month',
+      features: [
+        'Microservices design and planning',
+        'Service decomposition',
+        'API gateway implementation',
+        'Service mesh deployment',
+        'Container orchestration',
+        'Distributed tracing',
+        'Service discovery',
+        'Monitoring and observability'
+      ],
+      benefits: [
+        'Scalable architecture',
+        'Independent service deployment',
+        'Technology diversity',
+        'Improved maintainability'
+      ],
+      category: 'Architecture',
+      popular: true,
+      icon: Settings
+    },
+    {
+      id: 'data-lake-solutions',
+      name: 'Data Lake & Data Warehouse',
+      description: 'Modern data lake and warehouse solutions for big data analytics and insights',
+      price: '$2,600/month',
+      marketPrice: '$5000-18000/month',
+      features: [
+        'Data lake architecture design',
+        'Data warehouse implementation',
+        'ETL/ELT pipeline development',
+        'Data governance and security',
+        'Real-time data processing',
+        'Data quality management',
+        'Advanced analytics integration',
+        'Scalable storage solutions'
+      ],
+      benefits: [
+        'Centralized data management',
+        'Advanced analytics capabilities',
+        'Scalable data processing',
+        'Data-driven insights'
+      ],
+      category: 'Data Management',
+      popular: false,
+      icon: Database
+    },
+    {
+      id: 'zero-trust-security',
+      name: 'Zero Trust Security Architecture',
+      description: 'Zero trust security implementation for comprehensive network and data protection',
+      price: '$2,800/month',
+      marketPrice: '$5000-20000/month',
+      features: [
+        'Zero trust network design',
+        'Identity and access management',
+        'Multi-factor authentication',
+        'Device trust verification',
+        'Network segmentation',
+        'Continuous monitoring',
+        'Threat detection and response',
+        'Compliance automation'
+      ],
+      benefits: [
+        'Enhanced security posture',
+        'Reduced attack surface',
+        'Comprehensive protection',
+        'Compliance assurance'
+      ],
+      category: 'Security',
+      popular: true,
+      icon: Shield
+    },
+    {
+      id: 'hybrid-cloud-solutions',
+      name: 'Hybrid Cloud Solutions',
+      description: 'Hybrid cloud architecture combining on-premises and cloud infrastructure',
+      price: '$3,800/month',
+      marketPrice: '$7000-25000/month',
+      features: [
+        'Hybrid cloud architecture design',
+        'Cloud migration strategies',
+        'Multi-cloud management',
+        'Data synchronization',
+        'Workload optimization',
+        'Cost management',
+        'Security and compliance',
+        'Disaster recovery planning'
+      ],
+      benefits: [
+        'Flexible infrastructure',
+        'Cost optimization',
+        'Improved performance',
+        'Risk mitigation'
+      ],
+      category: 'Cloud',
+      popular: false,
+      icon: Cloud
+    },
+    {
+      id: 'api-gateway-management',
+      name: 'API Gateway & Management',
+      description: 'Comprehensive API gateway solutions for secure, scalable API management',
+      price: '$1,600/month',
+      marketPrice: '$3000-10000/month',
+      features: [
+        'API gateway implementation',
+        'API security and authentication',
+        'Rate limiting and throttling',
+        'API monitoring and analytics',
+        'Developer portal creation',
+        'API versioning and lifecycle',
+        'Microservices integration',
+        'Third-party API management'
+      ],
+      benefits: [
+        'Centralized API management',
+        'Enhanced security',
+        'Better developer experience',
+        'Improved API performance'
+      ],
+      category: 'API Management',
+      popular: false,
+      icon: Code
+    },
+    {
+      id: 'container-orchestration',
+      name: 'Container Orchestration',
+      description: 'Kubernetes and container orchestration for scalable application deployment',
+      price: '$2,400/month',
+      marketPrice: '$4500-15000/month',
+      features: [
+        'Kubernetes cluster setup',
+        'Container orchestration',
+        'Service mesh implementation',
+        'Auto-scaling configuration',
+        'Load balancing and routing',
+        'Storage management',
+        'Monitoring and logging',
+        'Security hardening'
+      ],
+      benefits: [
+        'Scalable container deployment',
+        'Automated management',
+        'Resource optimization',
+        'High availability'
+      ],
+      category: 'DevOps',
+      popular: true,
+      icon: Settings
+    },
+    {
+      id: 'observability-platform',
+      name: 'Observability Platform',
+      description: 'Comprehensive observability solution with monitoring, logging, and tracing',
+      price: '$1,800/month',
+      marketPrice: '$3500-12000/month',
+      features: [
+        'Application performance monitoring',
+        'Infrastructure monitoring',
+        'Log aggregation and analysis',
+        'Distributed tracing',
+        'Alerting and incident management',
+        'Custom dashboards',
+        'Machine learning insights',
+        'Integration with DevOps tools'
+      ],
+      benefits: [
+        'Proactive issue detection',
+        'Faster troubleshooting',
+        'Improved system reliability',
+        'Data-driven insights'
+      ],
+      category: 'Monitoring',
+      popular: false,
+      icon: BarChart
+    },
+    {
+      id: 'serverless-architecture',
+      name: 'Serverless Architecture',
+      description: 'Serverless application development and deployment for cost-effective scaling',
+      price: '$1,200/month',
+      marketPrice: '$2500-8000/month',
+      features: [
+        'Serverless application design',
+        'Function-as-a-Service deployment',
+        'Event-driven architecture',
+        'Auto-scaling configuration',
+        'Cost optimization',
+        'Security implementation',
+        'Monitoring and debugging',
+        'Integration with cloud services'
+      ],
+      benefits: [
+        'Cost-effective scaling',
+        'Reduced operational overhead',
+        'Faster development cycles',
+        'Automatic scaling'
+      ],
+      category: 'Serverless',
+      popular: true,
+      icon: Zap
+    },
+    {
+      id: 'data-privacy-compliance',
+      name: 'Data Privacy & Compliance',
+      description: 'GDPR, CCPA, and other data privacy compliance solutions and implementation',
+      price: '$2,000/month',
+      marketPrice: '$4000-15000/month',
+      features: [
+        'Privacy impact assessments',
+        'Data mapping and classification',
+        'Consent management systems',
+        'Data subject rights automation',
+        'Privacy by design implementation',
+        'Compliance monitoring',
+        'Audit trail management',
+        'Staff training and awareness'
+      ],
+      benefits: [
+        'Regulatory compliance',
+        'Reduced legal risks',
+        'Enhanced data protection',
+        'Customer trust and confidence'
+      ],
+      category: 'Compliance',
+      popular: false,
+      icon: Shield
+    },
+    {
+      id: 'digital-transformation',
+      name: 'Digital Transformation',
+      description: 'Comprehensive digital transformation strategy and implementation services',
+      price: '$5,000/month',
+      marketPrice: '$10000-50000/month',
+      features: [
+        'Digital strategy development',
+        'Process digitization',
+        'Legacy system modernization',
+        'Cloud migration',
+        'Automation implementation',
+        'Change management',
+        'Training and adoption',
+        'Performance measurement'
+      ],
+      benefits: [
+        'Improved operational efficiency',
+        'Enhanced customer experience',
+        'Competitive advantage',
+        'Future-ready organization'
+      ],
+      category: 'Digital Transformation',
+      popular: true,
+      icon: TrendingUp
+    },
+    {
+      id: 'it-consulting-enterprise',
+      name: 'Enterprise IT Consulting',
+      description: 'Strategic IT consulting for large enterprises and complex technology environments',
+      price: '$300/hour',
+      marketPrice: '$500-1200/hour',
+      features: [
+        'IT strategy and roadmap development',
+        'Technology architecture review',
+        'Vendor evaluation and selection',
+        'Digital transformation planning',
+        'Risk assessment and mitigation',
+        'Cost optimization analysis',
+        'Technology trend analysis',
+        'Executive advisory services'
+      ],
+      benefits: [
+        'Strategic technology guidance',
+        'Cost optimization',
+        'Risk mitigation',
+        'Competitive advantage'
+      ],
+      category: 'Consulting',
+      popular: false,
+      icon: Users
+    },
+    {
+      id: 'it-outsourcing',
+      name: 'IT Outsourcing Services',
+      description: 'Complete IT outsourcing solutions including staff augmentation and managed services',
+      price: '$2,500/month',
+      marketPrice: '$5000-20000/month',
+      features: [
+        'Dedicated development teams',
+        'Staff augmentation services',
+        'Project-based outsourcing',
+        '24/7 technical support',
+        'Quality assurance services',
+        'Knowledge transfer',
+        'Flexible engagement models',
+        'Scalable resources'
+      ],
+      benefits: [
+        'Access to specialized expertise',
+        'Reduced operational costs',
+        'Faster project delivery',
+        'Focus on core business'
+      ],
+      category: 'Outsourcing',
+      popular: true,
+      icon: Users
+    },
+    {
+      id: 'it-training',
+      name: 'IT Training & Certification',
+      description: 'Comprehensive IT training programs and certification preparation services',
+      price: '$500/person',
+      marketPrice: '$1000-3000/person',
+      features: [
+        'Custom training programs',
+        'Technology-specific courses',
+        'Certification preparation',
+        'Hands-on workshops',
+        'Online and in-person training',
+        'Assessment and testing',
+        'Continuing education',
+        'Corporate training packages'
+      ],
+      benefits: [
+        'Enhanced team skills',
+        'Improved productivity',
+        'Technology adoption',
+        'Competitive advantage'
+      ],
+      category: 'Training',
+      popular: false,
+      icon: Users
     }
   ];
 
@@ -483,7 +1003,22 @@ const ItServicesPage: React.FC = () => {
     { id: 'Cloud Security', name: 'Cloud Security', count: services.filter(s => s.category === 'Cloud Security').length },
     { id: 'Data Analytics', name: 'Data Analytics', count: services.filter(s => s.category === 'Data Analytics').length },
     { id: 'Disaster Recovery', name: 'Disaster Recovery', count: services.filter(s => s.category === 'Disaster Recovery').length },
-    { id: 'Compliance', name: 'Compliance', count: services.filter(s => s.category === 'Compliance').length }
+    { id: 'Compliance', name: 'Compliance', count: services.filter(s => s.category === 'Compliance').length },
+    { id: 'IoT', name: 'IoT', count: services.filter(s => s.category === 'IoT').length },
+    { id: 'Blockchain', name: 'Blockchain', count: services.filter(s => s.category === 'Blockchain').length },
+    { id: 'AI Infrastructure', name: 'AI Infrastructure', count: services.filter(s => s.category === 'AI Infrastructure').length },
+    { id: 'Quantum Computing', name: 'Quantum Computing', count: services.filter(s => s.category === 'Quantum Computing').length },
+    { id: '5G Technology', name: '5G Technology', count: services.filter(s => s.category === '5G Technology').length },
+    { id: 'AR/VR', name: 'AR/VR', count: services.filter(s => s.category === 'AR/VR').length },
+    { id: 'Edge Computing', name: 'Edge Computing', count: services.filter(s => s.category === 'Edge Computing').length },
+    { id: 'Architecture', name: 'Architecture', count: services.filter(s => s.category === 'Architecture').length },
+    { id: 'Data Management', name: 'Data Management', count: services.filter(s => s.category === 'Data Management').length },
+    { id: 'API Management', name: 'API Management', count: services.filter(s => s.category === 'API Management').length },
+    { id: 'Monitoring', name: 'Monitoring', count: services.filter(s => s.category === 'Monitoring').length },
+    { id: 'Serverless', name: 'Serverless', count: services.filter(s => s.category === 'Serverless').length },
+    { id: 'Digital Transformation', name: 'Digital Transformation', count: services.filter(s => s.category === 'Digital Transformation').length },
+    { id: 'Outsourcing', name: 'Outsourcing', count: services.filter(s => s.category === 'Outsourcing').length },
+    { id: 'Training', name: 'Training', count: services.filter(s => s.category === 'Training').length }
   ];
 
   const filteredServices = services.filter(service => 

@@ -3,9 +3,12 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, Globe } from 'lucide-react';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, Globe, Search, Filter } from 'lucide-react';
 
 const MicroSaasPage: React.FC = () => {
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchTerm, setSearchTerm] = useState('');
+
   const products = [
     {
       id: 'analytics-pro',
@@ -552,6 +555,526 @@ const MicroSaasPage: React.FC = () => {
       category: 'Collaboration',
       popular: true,
       users: 'Up to 25 users'
+    },
+    {
+      id: 'ai-document-processor',
+      name: 'Zion Document AI',
+      description: 'Intelligent document processing with OCR, data extraction, and automated workflows',
+      price: '$79/month',
+      marketPrice: '$150-400/month',
+      features: [
+        'Advanced OCR with 99.9% accuracy',
+        'AI-powered data extraction from any document type',
+        'Automated document classification and routing',
+        'Smart contract analysis and clause extraction',
+        'Multi-language document processing',
+        'Integration with 200+ business applications',
+        'Automated compliance checking',
+        'Custom document templates and workflows'
+      ],
+      benefits: [
+        'Reduce document processing time by 90%',
+        'Eliminate manual data entry',
+        'Improve accuracy and consistency',
+        'Automated compliance monitoring'
+      ],
+      category: 'Document Processing',
+      popular: true,
+      users: 'Up to 30 users'
+    },
+    {
+      id: 'ai-voice-assistant',
+      name: 'Zion Voice Assistant',
+      description: 'Enterprise-grade voice AI assistant for meetings, calls, and voice commands',
+      price: '$129/month',
+      marketPrice: '$250-600/month',
+      features: [
+        'Natural language voice commands',
+        'Meeting transcription and summarization',
+        'Voice-to-action automation',
+        'Multi-language voice recognition',
+        'Custom voice training for industry terms',
+        'Integration with CRM and business tools',
+        'Voice analytics and insights',
+        'Mobile and desktop voice apps'
+      ],
+      benefits: [
+        'Increase meeting productivity by 40%',
+        'Automated note-taking and follow-ups',
+        'Hands-free business operations',
+        'Better meeting outcomes'
+      ],
+      category: 'Voice AI',
+      popular: false,
+      users: 'Up to 20 users'
+    },
+    {
+      id: 'ai-scheduling-assistant',
+      name: 'Zion Smart Scheduler',
+      description: 'AI-powered scheduling and calendar management with intelligent optimization',
+      price: '$59/month',
+      marketPrice: '$120-300/month',
+      features: [
+        'AI-powered meeting optimization',
+        'Smart conflict resolution',
+        'Time zone intelligence',
+        'Resource booking and management',
+        'Automated follow-up scheduling',
+        'Integration with all major calendar apps',
+        'Meeting preparation and agenda generation',
+        'Travel time and location optimization'
+      ],
+      benefits: [
+        'Save 5+ hours per week on scheduling',
+        'Eliminate double-bookings',
+        'Optimize meeting times for all participants',
+        'Automated meeting preparation'
+      ],
+      category: 'Productivity',
+      popular: true,
+      users: 'Up to 15 users'
+    },
+    {
+      id: 'ai-customer-insights',
+      name: 'Zion Customer Insights Pro',
+      description: 'Advanced customer behavior analysis and predictive insights platform',
+      price: '$199/month',
+      marketPrice: '$400-1200/month',
+      features: [
+        'Real-time customer behavior tracking',
+        'Predictive churn analysis',
+        'Customer lifetime value prediction',
+        'Sentiment analysis across all channels',
+        'Personalized recommendation engine',
+        'Customer journey mapping and optimization',
+        'Advanced segmentation and targeting',
+        'ROI tracking and attribution modeling'
+      ],
+      benefits: [
+        'Increase customer retention by 35%',
+        'Boost customer lifetime value by 50%',
+        'Predict and prevent churn',
+        'Data-driven customer strategies'
+      ],
+      category: 'Customer Analytics',
+      popular: true,
+      users: 'Up to 40 users'
+    },
+    {
+      id: 'ai-inventory-optimizer',
+      name: 'Zion Inventory Optimizer',
+      description: 'AI-powered inventory management with demand forecasting and automated reordering',
+      price: '$149/month',
+      marketPrice: '$300-800/month',
+      features: [
+        'AI demand forecasting with 95% accuracy',
+        'Automated reorder point calculations',
+        'Multi-location inventory synchronization',
+        'Supplier performance analytics',
+        'Cost optimization algorithms',
+        'Integration with e-commerce platforms',
+        'Barcode scanning and mobile management',
+        'Advanced reporting and analytics dashboard'
+      ],
+      benefits: [
+        'Reduce inventory costs by 40%',
+        'Prevent stockouts and overstock',
+        'Optimize supplier relationships',
+        'Automated inventory management'
+      ],
+      category: 'Inventory Management',
+      popular: false,
+      users: 'Up to 25 users'
+    },
+    {
+      id: 'ai-social-media-manager',
+      name: 'Zion Social Media AI',
+      description: 'Comprehensive social media management with AI content creation and optimization',
+      price: '$89/month',
+      marketPrice: '$180-500/month',
+      features: [
+        'AI-powered content creation for all platforms',
+        'Optimal posting time recommendations',
+        'Hashtag research and optimization',
+        'Social listening and trend analysis',
+        'Automated engagement and responses',
+        'Performance analytics and ROI tracking',
+        'Multi-account management',
+        'Influencer identification and outreach'
+      ],
+      benefits: [
+        'Increase social engagement by 300%',
+        'Save 80% content creation time',
+        'Better brand visibility',
+        'Automated social media management'
+      ],
+      category: 'Social Media',
+      popular: true,
+      users: 'Up to 10 users'
+    },
+    {
+      id: 'ai-accounting-assistant',
+      name: 'Zion Accounting AI',
+      description: 'Intelligent accounting and bookkeeping with automated categorization and reporting',
+      price: '$119/month',
+      marketPrice: '$250-600/month',
+      features: [
+        'AI-powered expense categorization',
+        'Automated invoice processing and matching',
+        'Real-time financial reporting',
+        'Tax preparation and compliance assistance',
+        'Bank reconciliation automation',
+        'Integration with accounting software',
+        'Financial forecasting and budgeting',
+        'Audit trail and compliance tracking'
+      ],
+      benefits: [
+        'Reduce accounting time by 70%',
+        'Eliminate manual data entry',
+        'Improve financial accuracy',
+        'Automated compliance reporting'
+      ],
+      category: 'Accounting',
+      popular: true,
+      users: 'Up to 20 users'
+    },
+    {
+      id: 'ai-recruitment-suite',
+      name: 'Zion Recruitment AI',
+      description: 'End-to-end AI recruitment platform with intelligent candidate matching and screening',
+      price: '$179/month',
+      marketPrice: '$350-1000/month',
+      features: [
+        'AI-powered resume screening and ranking',
+        'Intelligent candidate-job matching',
+        'Automated interview scheduling',
+        'Video interview analysis and scoring',
+        'Background check automation',
+        'Diversity and inclusion analytics',
+        'Integration with ATS systems',
+        'Recruitment analytics and reporting'
+      ],
+      benefits: [
+        'Reduce time-to-hire by 60%',
+        'Improve candidate quality by 45%',
+        'Eliminate bias in hiring',
+        'Streamlined recruitment process'
+      ],
+      category: 'Recruitment',
+      popular: false,
+      users: 'Up to 35 users'
+    },
+    {
+      id: 'ai-customer-support-pro',
+      name: 'Zion Support AI Pro',
+      description: 'Advanced AI customer support with multi-channel automation and human handoff',
+      price: '$159/month',
+      marketPrice: '$300-800/month',
+      features: [
+        'Multi-channel support (chat, email, phone, social)',
+        'AI-powered ticket routing and prioritization',
+        'Automated response generation',
+        'Sentiment analysis and escalation',
+        'Knowledge base integration',
+        'Live agent handoff with context',
+        'Performance analytics and insights',
+        'Custom AI training for your business'
+      ],
+      benefits: [
+        'Reduce support costs by 65%',
+        'Improve response times by 80%',
+        'Increase customer satisfaction',
+        '24/7 automated support'
+      ],
+      category: 'Customer Support',
+      popular: true,
+      users: 'Up to 30 users'
+    },
+    {
+      id: 'ai-marketing-automation',
+      name: 'Zion Marketing AI',
+      description: 'Comprehensive marketing automation with AI-powered personalization and optimization',
+      price: '$139/month',
+      marketPrice: '$280-700/month',
+      features: [
+        'AI-powered campaign optimization',
+        'Advanced customer segmentation',
+        'Automated email and SMS campaigns',
+        'Personalized content recommendations',
+        'A/B testing and optimization',
+        'Lead scoring and qualification',
+        'Integration with 500+ marketing tools',
+        'Advanced analytics and ROI tracking'
+      ],
+      benefits: [
+        'Increase conversion rates by 50%',
+        'Reduce marketing costs by 40%',
+        'Automated personalization',
+        'Better lead quality and nurturing'
+      ],
+      category: 'Marketing Automation',
+      popular: true,
+      users: 'Up to 25 users'
+    },
+    {
+      id: 'ai-business-intelligence',
+      name: 'Zion BI Pro',
+      description: 'Advanced business intelligence platform with AI-powered insights and forecasting',
+      price: '$229/month',
+      marketPrice: '$500-1500/month',
+      features: [
+        'AI-powered data visualization',
+        'Predictive analytics and forecasting',
+        'Custom dashboard builder',
+        'Real-time data processing',
+        'Advanced reporting and analytics',
+        'Integration with 200+ data sources',
+        'Natural language query interface',
+        'Automated insight generation'
+      ],
+      benefits: [
+        'Make data-driven decisions faster',
+        'Identify trends and opportunities',
+        'Automated reporting and insights',
+        'Better business performance'
+      ],
+      category: 'Business Intelligence',
+      popular: false,
+      users: 'Up to 50 users'
+    },
+    {
+      id: 'ai-workflow-automation-pro',
+      name: 'Zion Workflow Pro',
+      description: 'Advanced workflow automation with AI decision-making and process optimization',
+      price: '$189/month',
+      marketPrice: '$400-1200/month',
+      features: [
+        'Visual workflow builder with 1000+ integrations',
+        'AI-powered process optimization',
+        'Intelligent decision trees and logic',
+        'Automated error handling and retries',
+        'Real-time monitoring and analytics',
+        'Custom triggers and webhooks',
+        'Team collaboration and approval workflows',
+        'Enterprise security and compliance'
+      ],
+      benefits: [
+        'Reduce manual work by 90%',
+        'Improve process efficiency',
+        'Eliminate human errors',
+        'Scalable automation solutions'
+      ],
+      category: 'Workflow Automation',
+      popular: true,
+      users: 'Up to 40 users'
+    },
+    {
+      id: 'ai-data-analytics-suite',
+      name: 'Zion Data Analytics Suite',
+      description: 'Comprehensive data analytics platform with AI-powered insights and visualization',
+      price: '$169/month',
+      marketPrice: '$350-1000/month',
+      features: [
+        'AI-powered data analysis and insights',
+        'Advanced data visualization tools',
+        'Real-time data processing',
+        'Predictive modeling and forecasting',
+        'Custom report generation',
+        'Integration with major databases',
+        'Data quality monitoring and cleansing',
+        'Collaborative analytics workspace'
+      ],
+      benefits: [
+        'Unlock insights from your data',
+        'Make better business decisions',
+        'Automated data analysis',
+        'Real-time business intelligence'
+      ],
+      category: 'Data Analytics',
+      popular: false,
+      users: 'Up to 30 users'
+    },
+    {
+      id: 'ai-crm-advanced',
+      name: 'Zion CRM Advanced',
+      description: 'Next-generation CRM with AI-powered sales automation and customer insights',
+      price: '$199/month',
+      marketPrice: '$400-1200/month',
+      features: [
+        'AI-powered lead scoring and qualification',
+        'Automated sales pipeline management',
+        'Predictive sales forecasting',
+        'Customer behavior analysis',
+        'Automated follow-up sequences',
+        'Integration with 500+ business tools',
+        'Advanced reporting and dashboards',
+        'Mobile app for sales teams'
+      ],
+      benefits: [
+        'Increase sales by 45%',
+        'Improve lead conversion rates',
+        'Automated sales processes',
+        'Better customer relationships'
+      ],
+      category: 'CRM',
+      popular: true,
+      users: 'Up to 35 users'
+    },
+    {
+      id: 'ai-project-management-pro',
+      name: 'Zion Project Pro',
+      description: 'AI-powered project management with intelligent resource allocation and risk prediction',
+      price: '$149/month',
+      marketPrice: '$300-800/month',
+      features: [
+        'AI-powered project planning and optimization',
+        'Intelligent resource allocation',
+        'Risk prediction and mitigation',
+        'Automated task assignment',
+        'Real-time progress tracking',
+        'Integration with development tools',
+        'Custom reporting and analytics',
+        'Team collaboration features'
+      ],
+      benefits: [
+        'Improve project success rates by 60%',
+        'Optimize resource utilization',
+        'Predict and prevent project risks',
+        'Better team collaboration'
+      ],
+      category: 'Project Management',
+      popular: true,
+      users: 'Up to 30 users'
+    },
+    {
+      id: 'ai-email-marketing-advanced',
+      name: 'Zion Email Marketing Advanced',
+      description: 'Advanced email marketing platform with AI personalization and automation',
+      price: '$99/month',
+      marketPrice: '$200-600/month',
+      features: [
+        'AI-powered email personalization',
+        'Advanced segmentation and targeting',
+        'Automated drip campaigns',
+        'A/B testing and optimization',
+        'Email template builder',
+        'Deliverability optimization',
+        'Advanced analytics and reporting',
+        'Integration with e-commerce platforms'
+      ],
+      benefits: [
+        'Increase email open rates by 60%',
+        'Improve click-through rates by 40%',
+        'Automated email campaigns',
+        'Better email deliverability'
+      ],
+      category: 'Email Marketing',
+      popular: true,
+      users: 'Up to 25 users'
+    },
+    {
+      id: 'ai-content-management',
+      name: 'Zion Content Management AI',
+      description: 'AI-powered content management system with automated creation and optimization',
+      price: '$119/month',
+      marketPrice: '$250-600/month',
+      features: [
+        'AI-powered content creation',
+        'SEO optimization and keyword research',
+        'Content calendar and scheduling',
+        'Multi-platform publishing',
+        'Content performance analytics',
+        'Team collaboration tools',
+        'Brand voice consistency',
+        'Content approval workflows'
+      ],
+      benefits: [
+        'Increase content production by 300%',
+        'Improve SEO performance',
+        'Consistent brand messaging',
+        'Streamlined content workflow'
+      ],
+      category: 'Content Management',
+      popular: false,
+      users: 'Up to 20 users'
+    },
+    {
+      id: 'ai-fraud-detection-suite',
+      name: 'Zion Fraud Detection Suite',
+      description: 'Advanced AI fraud detection and prevention system for e-commerce and financial services',
+      price: '$299/month',
+      marketPrice: '$600-2000/month',
+      features: [
+        'Real-time fraud detection algorithms',
+        'Behavioral analysis and pattern recognition',
+        'Machine learning model training',
+        'Multi-channel fraud monitoring',
+        'Automated risk scoring',
+        'Integration with payment processors',
+        'Compliance reporting and auditing',
+        'Custom fraud rules and alerts'
+      ],
+      benefits: [
+        'Reduce fraud losses by 85%',
+        'Real-time fraud prevention',
+        'Lower false positive rates',
+        'Compliance and audit ready'
+      ],
+      category: 'Fraud Detection',
+      popular: false,
+      users: 'Up to 50 users'
+    },
+    {
+      id: 'ai-customer-feedback-pro',
+      name: 'Zion Feedback Pro',
+      description: 'Advanced customer feedback collection and analysis with AI sentiment tracking',
+      price: '$79/month',
+      marketPrice: '$160-400/month',
+      features: [
+        'AI-powered sentiment analysis',
+        'Multi-channel feedback collection',
+        'Automated survey generation',
+        'Real-time feedback monitoring',
+        'Customer satisfaction scoring',
+        'Integration with support systems',
+        'Advanced analytics and reporting',
+        'Custom feedback forms and widgets'
+      ],
+      benefits: [
+        'Improve customer satisfaction by 40%',
+        'Real-time feedback insights',
+        'Automated feedback analysis',
+        'Better customer understanding'
+      ],
+      category: 'Customer Feedback',
+      popular: true,
+      users: 'Up to 25 users'
+    },
+    {
+      id: 'ai-api-management-pro',
+      name: 'Zion API Management Pro',
+      description: 'Comprehensive API management platform with AI-powered monitoring and optimization',
+      price: '$179/month',
+      marketPrice: '$350-1000/month',
+      features: [
+        'API performance monitoring and analytics',
+        'Automated API testing and validation',
+        'Rate limiting and throttling management',
+        'API documentation generation',
+        'Developer portal and key management',
+        'Integration with popular API gateways',
+        'Advanced security and authentication',
+        'Custom API analytics and reporting'
+      ],
+      benefits: [
+        'Improve API reliability by 95%',
+        'Automated API testing',
+        'Better developer experience',
+        'Enhanced API security'
+      ],
+      category: 'API Management',
+      popular: false,
+      users: 'Up to 30 users'
     }
   ];
 
@@ -576,8 +1099,29 @@ const MicroSaasPage: React.FC = () => {
     { id: 'Data Management', name: 'Data Management', count: products.filter(p => p.category === 'Data Management').length },
     { id: 'Monitoring', name: 'Monitoring', count: products.filter(p => p.category === 'Monitoring').length },
     { id: 'Compliance', name: 'Compliance', count: products.filter(p => p.category === 'Compliance').length },
-    { id: 'Collaboration', name: 'Collaboration', count: products.filter(p => p.category === 'Collaboration').length }
+    { id: 'Collaboration', name: 'Collaboration', count: products.filter(p => p.category === 'Collaboration').length },
+    { id: 'Document Processing', name: 'Document Processing', count: products.filter(p => p.category === 'Document Processing').length },
+    { id: 'Voice AI', name: 'Voice AI', count: products.filter(p => p.category === 'Voice AI').length },
+    { id: 'Productivity', name: 'Productivity', count: products.filter(p => p.category === 'Productivity').length },
+    { id: 'Customer Analytics', name: 'Customer Analytics', count: products.filter(p => p.category === 'Customer Analytics').length },
+    { id: 'Inventory Management', name: 'Inventory Management', count: products.filter(p => p.category === 'Inventory Management').length },
+    { id: 'Accounting', name: 'Accounting', count: products.filter(p => p.category === 'Accounting').length },
+    { id: 'Recruitment', name: 'Recruitment', count: products.filter(p => p.category === 'Recruitment').length },
+    { id: 'Customer Support', name: 'Customer Support', count: products.filter(p => p.category === 'Customer Support').length },
+    { id: 'Marketing Automation', name: 'Marketing Automation', count: products.filter(p => p.category === 'Marketing Automation').length },
+    { id: 'Business Intelligence', name: 'Business Intelligence', count: products.filter(p => p.category === 'Business Intelligence').length },
+    { id: 'Workflow Automation', name: 'Workflow Automation', count: products.filter(p => p.category === 'Workflow Automation').length },
+    { id: 'Data Analytics', name: 'Data Analytics', count: products.filter(p => p.category === 'Data Analytics').length },
+    { id: 'Fraud Detection', name: 'Fraud Detection', count: products.filter(p => p.category === 'Fraud Detection').length },
+    { id: 'Customer Feedback', name: 'Customer Feedback', count: products.filter(p => p.category === 'Customer Feedback').length }
   ];
+
+  const filteredProducts = products.filter(product => {
+    const matchesSearch = product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         product.description.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesCategory = selectedCategory === 'all' || product.category === selectedCategory;
+    return matchesSearch && matchesCategory;
+  });
 
   return (
     <>
@@ -602,9 +1146,39 @@ const MicroSaasPage: React.FC = () => {
               </p>
             </div>
 
+            {/* Search and Filter */}
+            <div className="mb-12">
+              <div className="flex flex-col md:flex-row gap-4 mb-8">
+                <div className="flex-1 relative">
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                  <input
+                    type="text"
+                    placeholder="Search micro SaaS solutions..."
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                  />
+                </div>
+                <div className="flex items-center space-x-2">
+                  <Filter className="text-gray-400 w-5 h-5" />
+                  <select
+                    value={selectedCategory}
+                    onChange={(e) => setSelectedCategory(e.target.value)}
+                    className="px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                  >
+                    {categories.map(category => (
+                      <option key={category.id} value={category.id}>
+                        {category.name} ({category.count})
+                      </option>
+                    ))}
+                  </select>
+                </div>
+              </div>
+            </div>
+
             {/* Products Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-              {products.map((product) => (
+              {filteredProducts.map((product) => (
                 <div key={product.id} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="flex items-center justify-between mb-4">
                     <h3 className="text-xl font-bold text-white">{product.name}</h3>
