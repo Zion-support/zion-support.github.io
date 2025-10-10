@@ -5,14 +5,11 @@ import { HelmetProvider } from 'react-helmet-async';
 import './src/styles/futuristic.css';
 import Navigation from './app/components/Navigation';
 import Footer from './app/components/Footer';
+import HomePage from './app/page';
 import { PageLoader } from './src/components/EnhancedLoadingStates';
 import EnhancedErrorBoundary from './src/components/EnhancedErrorBoundary';
 import SEOHead from './src/components/EnhancedSEOHead';
 import SkipLink from './src/components/SkipLink';
-import UnifiedContentPromotion from './src/components/UnifiedContentPromotion';
-import InteractiveAIROICalculator from './src/components/InteractiveAIROICalculator';
-import ContentShowcase from './src/components/ContentShowcase';
-import InteractiveContentShowcase2026 from './src/components/InteractiveContentShowcase2026';
 import PerformanceOptimizer from './src/components/PerformanceOptimizer';
 import AccessibilityEnhancer from './src/components/AccessibilityEnhancer';
 import { usePerformanceMonitor } from './src/hooks/usePerformanceMonitor';
@@ -104,14 +101,7 @@ const App: React.FC = memo(() => {
                   <main id="main-content" className="w-full">
                     <Suspense fallback={<PageLoader message="Loading Zion Tech Group..." />}>
                     <Routes>
-                      <Route path="/" element={
-                        <div className="w-full">
-                          <UnifiedContentPromotion />
-                          <InteractiveAIROICalculator />
-                          <ContentShowcase />
-                          <InteractiveContentShowcase2026 />
-                        </div>
-                      } />
+                      <Route path="/" element={<HomePage />} />
                       <Route path="/about" element={<AboutPage />} />
                       <Route path="/contact" element={<ContactPage />} />
                       <Route path="/pricing" element={<PricingPage />} />
