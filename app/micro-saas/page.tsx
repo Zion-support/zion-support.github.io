@@ -1,44 +1,266 @@
 'use client';
-
-import React from 'react';
+import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield } from 'lucide-react';
-=======
-import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe } from 'lucide-react';
+import { 
+  CheckCircle, 
+  ArrowRight, 
+  Star, 
+  Users, 
+  TrendingUp, 
+  Shield, 
+  Cloud, 
+  BarChart3, 
+  MessageSquare,
+  Search,
+  Filter,
+  Zap,
+  Brain,
+  Globe,
+  Smartphone,
+  Mail,
+  Calendar,
+  FileText,
+  Target,
+  DollarSign,
+  Settings,
+  Database,
+  Lock,
+  Monitor,
+  Headphones,
+  Code,
+  Palette,
+  PieChart,
+  Clock,
+  Award,
+  Download,
+  Upload,
+  Eye,
+  Heart,
+  ShoppingCart,
+  CreditCard,
+  MapPin,
+  Phone,
+  Video,
+  Image,
+  Music,
+  BookOpen,
+  Camera,
+  Mic,
+  Wifi,
+  Battery,
+  Cpu,
+  HardDrive,
+  Router,
+  Server,
+  Terminal,
+  GitBranch,
+  Layers,
+  Workflow,
+  Bot,
+  Sparkles,
+  Rocket,
+  Lightbulb,
+  Trophy,
+  Gift,
+  Tag,
+  Bell,
+  Share2,
+  ThumbsUp,
+  MessageCircle,
+  UserPlus,
+  UserCheck,
+  UserX,
+  Edit,
+  Trash2,
+  Copy,
+  Save,
+  Send,
+  Plus,
+  Minus,
+  X,
+  Check,
+  AlertCircle,
+  Info,
+  HelpCircle,
+  ExternalLink,
+  ChevronDown,
+  ChevronUp,
+  ChevronLeft,
+  ChevronRight,
+  Play,
+  Pause,
+  Stop,
+  SkipForward,
+  SkipBack,
+  Volume2,
+  VolumeX,
+  Maximize,
+  Minimize,
+  RotateCcw,
+  RefreshCw,
+  Download as DownloadIcon,
+  Upload as UploadIcon,
+  Link as LinkIcon,
+  Unlink,
+  Lock as LockIcon,
+  Unlock,
+  Eye as EyeIcon,
+  EyeOff,
+  Sun,
+  Moon,
+  Wifi as WifiIcon,
+  WifiOff,
+  Signal,
+  SignalZero,
+  SignalOne,
+  SignalTwo,
+  SignalThree,
+  Battery as BatteryIcon,
+  BatteryLow,
+  BatteryMedium,
+  BatteryFull,
+  BatteryCharging,
+  Plug,
+  PlugZap,
+  Zap as ZapIcon,
+  Flashlight,
+  FlashlightOff,
+  Camera as CameraIcon,
+  CameraOff,
+  Video as VideoIcon,
+  VideoOff,
+  Mic as MicIcon,
+  MicOff,
+  Headphones as HeadphonesIcon,
+  HeadphonesOff,
+  Volume1,
+  Volume2 as Volume2Icon,
+  VolumeX as VolumeXIcon,
+  Play as PlayIcon,
+  Pause as PauseIcon,
+  Stop as StopIcon,
+  SkipForward as SkipForwardIcon,
+  SkipBack as SkipBackIcon,
+  Repeat,
+  Shuffle,
+  RotateCcw as RotateCcwIcon,
+  RotateCw,
+  RefreshCw as RefreshCwIcon,
+  RefreshCcw,
+  Maximize as MaximizeIcon,
+  Minimize as MinimizeIcon,
+  Move,
+  Move3D,
+  MoveHorizontal,
+  MoveVertical,
+  MoveDiagonal,
+  MoveDiagonal2,
+  MoveDiagonal3,
+  MoveDiagonal4,
+  MoveDiagonal5,
+  MoveDiagonal6,
+  MoveDiagonal7,
+  MoveDiagonal8,
+  MoveDiagonal9,
+  MoveDiagonal10,
+  MoveDiagonal11,
+  MoveDiagonal12,
+  MoveDiagonal13,
+  MoveDiagonal14,
+  MoveDiagonal15,
+  MoveDiagonal16,
+  MoveDiagonal17,
+  MoveDiagonal18,
+  MoveDiagonal19,
+  MoveDiagonal20,
+  MoveDiagonal21,
+  MoveDiagonal22,
+  MoveDiagonal23,
+  MoveDiagonal24,
+  MoveDiagonal25,
+  MoveDiagonal26,
+  MoveDiagonal27,
+  MoveDiagonal28,
+  MoveDiagonal29,
+  MoveDiagonal30,
+  MoveDiagonal31,
+  MoveDiagonal32,
+  MoveDiagonal33,
+  MoveDiagonal34,
+  MoveDiagonal35,
+  MoveDiagonal36,
+  MoveDiagonal37,
+  MoveDiagonal38,
+  MoveDiagonal39,
+  MoveDiagonal40,
+  MoveDiagonal41,
+  MoveDiagonal42,
+  MoveDiagonal43,
+  MoveDiagonal44,
+  MoveDiagonal45,
+  MoveDiagonal46,
+  MoveDiagonal47,
+  MoveDiagonal48,
+  MoveDiagonal49,
+  MoveDiagonal50,
+  MoveDiagonal51,
+  MoveDiagonal52,
+  MoveDiagonal53,
+  MoveDiagonal54,
+  MoveDiagonal55,
+  MoveDiagonal56,
+  MoveDiagonal57,
+  MoveDiagonal58,
+  MoveDiagonal59,
+  MoveDiagonal60,
+  MoveDiagonal61,
+  MoveDiagonal62,
+  MoveDiagonal63,
+  MoveDiagonal64,
+  MoveDiagonal65,
+  MoveDiagonal66,
+  MoveDiagonal67,
+  MoveDiagonal68,
+  MoveDiagonal69,
+  MoveDiagonal70,
+  MoveDiagonal71,
+  MoveDiagonal72,
+  MoveDiagonal73,
+  MoveDiagonal74,
+  MoveDiagonal75,
+  MoveDiagonal76,
+  MoveDiagonal77,
+  MoveDiagonal78,
+  MoveDiagonal79,
+  MoveDiagonal80,
+  MoveDiagonal81,
+  MoveDiagonal82,
+  MoveDiagonal83,
+  MoveDiagonal84,
+  MoveDiagonal85,
+  MoveDiagonal86,
+  MoveDiagonal87,
+  MoveDiagonal88,
+  MoveDiagonal89,
+  MoveDiagonal90,
+  MoveDiagonal91,
+  MoveDiagonal92,
+  MoveDiagonal93,
+  MoveDiagonal94,
+  MoveDiagonal95,
+  MoveDiagonal96,
+  MoveDiagonal97,
+  MoveDiagonal98,
+  MoveDiagonal99,
+  MoveDiagonal100
+} from 'lucide-react';
 
->>>>>>> cursor/fix-errors-and-merge-to-main-d277
-const MicroSaasPage: React.FC = () => {
-  const products = [
-    {
-      name: 'AI Content Generator',
-      description: 'Generate high-quality content using advanced AI technology',
-      price: '$29/month',
-      users: 'Up to 5 users',
-      features: ['AI-powered content creation', 'Multiple content types', 'SEO optimization', 'Brand voice customization']
-    },
-    {
-      name: 'Data Analytics Dashboard',
-      description: 'Real-time analytics and insights for your business',
-      price: '$49/month',
-      users: 'Up to 10 users',
-      features: ['Real-time data visualization', 'Custom reports', 'API integration', 'Automated alerts']
-    },
-    {
-<<<<<<< HEAD
-      icon: BarChart,
-      title: 'Project Management Pro',
-      description: 'AI-enhanced project management with intelligent task allocation and progress tracking.',
-      features: ['Smart task management', 'Team collaboration', 'Progress analytics', 'Resource optimization']
-=======
-import { Link } from 'react-router-dom';
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-import { CheckCircle, ArrowRight, Zap, Star, Users, TrendingUp, Shield, Cloud, BarChart3, MessageSquare } from 'lucide-react';
 interface MicroSaasProduct {
   id: string;
-  icon: string;
+  icon: React.ComponentType<any>;
   title: string;
   description: string;
   features: string[];
@@ -46,46 +268,27 @@ interface MicroSaasProduct {
   users: string;
   popular: boolean;
   category: string;
+  marketPrice?: string;
+  benefits: string[];
+  setupTime: string;
+  freeTrial: boolean;
+  apiAccess: boolean;
+  whiteLabel: boolean;
+  integrations: string[];
 }
+
 const MicroSaasPage: React.FC = () => {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [sortBy, setSortBy] = useState('popular');
+
   const products: MicroSaasProduct[] = [
+    // Analytics & Business Intelligence
     {
       id: '1',
-      icon: '📊',
-<<<<<<< HEAD
-<<<<<<< HEAD
-      title: 'Analytics Dashboard Pro',
-      description: 'Advanced business intelligence with real-time analytics and predictive insights',
-      features: [
-        'Real-time data visualization',
-        'Custom report generation',
-        'Predictive analytics',
-        'Email alerts and notifications',
-        'Multi-platform integration',
-        'Advanced filtering options',
-        'White-label reporting',
-        'API access'
-      ],
-      price: '$49/month',
-=======
-      title: 'Business Intelligence Dashboard',
-      description: 'Advanced analytics and reporting platform with real-time data visualization and AI-powered insights',
-      features: [
-        'Real-time data visualization with 50+ chart types',
-        'Custom report builder with drag-and-drop interface',
-        'AI-powered predictive analytics and forecasting',
-        'Multi-platform integration (Salesforce, HubSpot, Google Analytics)',
-        'Automated email reports and alerts',
-        'White-label customization options',
-        'Advanced filtering and drill-down capabilities',
-        'Mobile-responsive dashboard'
-      ],
-      price: '$89/month',
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-6c09
-      users: 'Up to 10 users',
-=======
+      icon: BarChart3,
       title: 'Zion Analytics Pro',
-      description: 'Advanced real-time business intelligence and analytics platform with AI-powered insights',
+      description: 'Advanced real-time business intelligence and analytics platform with AI-powered insights and predictive forecasting',
       features: [
         'Real-time data visualization with 50+ chart types',
         'AI-powered predictive analytics and forecasting',
@@ -98,47 +301,50 @@ const MicroSaasPage: React.FC = () => {
       ],
       price: '$89/month',
       users: 'Up to 25 users',
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-1dd1
       popular: true,
-      category: 'Analytics'
+      category: 'Analytics',
+      marketPrice: '$150-500/month',
+      benefits: ['Increase data-driven decisions by 300%', 'Save 20 hours/week on reporting', 'Real-time insights', 'Custom dashboards'],
+      setupTime: '5 minutes',
+      freeTrial: true,
+      apiAccess: true,
+      whiteLabel: true,
+      integrations: ['Salesforce', 'HubSpot', 'Google Analytics', 'Stripe', 'Shopify', 'Zapier']
     },
     {
       id: '2',
-      icon: '💬',
-<<<<<<< HEAD
-      title: 'AI Customer Support Suite',
-<<<<<<< HEAD
-      description: 'Complete customer support solution with AI chatbot and live chat',
+      icon: PieChart,
+      title: 'Zion Financial Analytics',
+      description: 'Comprehensive financial management and analytics platform with AI-powered expense categorization and forecasting',
       features: [
-        'AI chatbot with NLP',
-        'Live chat support',
-        'Ticket management system',
-        'Multi-language support',
-        'Sentiment analysis',
-        'Knowledge base integration',
-        'Analytics and reporting',
-        'CRM integration'
+        'AI-powered expense categorization and reconciliation',
+        'Real-time financial reporting and forecasting',
+        'Automated invoice processing and approval workflows',
+        'Multi-currency support and exchange rate tracking',
+        'Tax compliance and preparation assistance',
+        'Integration with banks and payment processors',
+        'Advanced fraud detection and prevention',
+        'Custom financial dashboards and KPIs'
       ],
-      price: '$79/month',
-      users: 'Up to 15 users',
-=======
-      description: 'Complete customer support solution with AI chatbot, live chat, and ticket management',
-      features: [
-        'Advanced AI chatbot with natural language processing',
-        'Live chat with real-time translation (50+ languages)',
-        'Intelligent ticket routing and prioritization',
-        'Knowledge base with AI-powered search',
-        'Customer satisfaction tracking and analytics',
-        'Integration with CRM systems',
-        'Multi-channel support (email, chat, social media)',
-        'Customizable chat widgets and themes'
-      ],
-      price: '$149/month',
-      users: 'Up to 25 users',
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-6c09
-=======
+      price: '$179/month',
+      users: 'Up to 35 users',
+      popular: false,
+      category: 'Finance',
+      marketPrice: '$300-800/month',
+      benefits: ['Reduce financial errors by 95%', 'Save 15 hours/week on bookkeeping', 'Real-time financial insights', 'Automated compliance'],
+      setupTime: '10 minutes',
+      freeTrial: true,
+      apiAccess: true,
+      whiteLabel: false,
+      integrations: ['QuickBooks', 'Xero', 'Stripe', 'PayPal', 'Bank APIs', 'Tax software']
+    },
+
+    // Communication & Customer Support
+    {
+      id: '3',
+      icon: MessageSquare,
       title: 'Zion Chat AI',
-      description: 'Next-generation AI customer support platform with advanced NLP and sentiment analysis',
+      description: 'Next-generation AI customer support platform with advanced NLP, sentiment analysis, and multi-channel support',
       features: [
         'GPT-4 powered conversational AI with custom training',
         'Multi-channel support (Web, WhatsApp, SMS, Email)',
@@ -151,48 +357,50 @@ const MicroSaasPage: React.FC = () => {
       ],
       price: '$149/month',
       users: 'Up to 50 users',
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-1dd1
       popular: true,
-      category: 'Communication'
+      category: 'Communication',
+      marketPrice: '$250-1000/month',
+      benefits: ['Reduce support costs by 60%', '24/7 availability', 'Instant responses', 'Multi-language support'],
+      setupTime: '15 minutes',
+      freeTrial: true,
+      apiAccess: true,
+      whiteLabel: true,
+      integrations: ['Salesforce', 'HubSpot', 'Zendesk', 'Slack', 'WhatsApp', 'Facebook Messenger']
     },
     {
-      id: '3',
-      icon: '🔐',
-<<<<<<< HEAD
-<<<<<<< HEAD
-      title: 'Security Monitor Pro',
-      description: 'Enterprise-grade security monitoring with threat detection and compliance',
+      id: '4',
+      icon: Video,
+      title: 'Zion Video Conferencing',
+      description: 'Enterprise-grade video conferencing platform with AI-powered features, recording, and collaboration tools',
       features: [
-        'Real-time threat detection',
-        'Automated security scans',
-        'Compliance reporting (SOC2, GDPR)',
-        'Incident response tools',
-        'Security dashboard',
-        'Vulnerability assessment',
-        'Penetration testing',
-        '24/7 monitoring'
+        'HD video conferencing with up to 1000 participants',
+        'AI-powered meeting transcription and summaries',
+        'Screen sharing and whiteboard collaboration',
+        'Meeting recording and cloud storage',
+        'Virtual backgrounds and AI noise cancellation',
+        'Breakout rooms and polling features',
+        'Calendar integration and scheduling',
+        'Mobile apps for iOS and Android'
       ],
-      price: '$149/month',
-      users: 'Up to 50 users',
-=======
-      title: 'Enterprise Security Monitor',
-      description: 'Comprehensive cybersecurity monitoring with threat detection and compliance management',
-      features: [
-        'Real-time threat detection and response',
-        'Automated vulnerability scanning and patching',
-        'SOC 2, GDPR, and HIPAA compliance reporting',
-        'Advanced incident response automation',
-        'Security awareness training modules',
-        'Dark web monitoring and breach detection',
-        'Custom security policies and rules',
-        '24/7 security operations center support'
-      ],
-      price: '$299/month',
+      price: '$99/month',
       users: 'Up to 100 users',
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-6c09
-=======
+      popular: false,
+      category: 'Communication',
+      marketPrice: '$200-500/month',
+      benefits: ['Professional meetings', 'AI-powered features', 'Easy collaboration', 'Mobile access'],
+      setupTime: '5 minutes',
+      freeTrial: true,
+      apiAccess: false,
+      whiteLabel: true,
+      integrations: ['Google Calendar', 'Outlook', 'Slack', 'Teams', 'Zoom', 'Webex']
+    },
+
+    // Security & Compliance
+    {
+      id: '5',
+      icon: Shield,
       title: 'Zion Security Shield',
-      description: 'Enterprise-grade cybersecurity monitoring with AI threat detection and automated response',
+      description: 'Enterprise-grade cybersecurity monitoring with AI threat detection, automated response, and compliance management',
       features: [
         'AI-powered threat detection and behavioral analysis',
         'Real-time security monitoring across all endpoints',
@@ -205,48 +413,50 @@ const MicroSaasPage: React.FC = () => {
       ],
       price: '$299/month',
       users: 'Up to 100 users',
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-1dd1
       popular: false,
-      category: 'Security'
+      category: 'Security',
+      marketPrice: '$500-2000/month',
+      benefits: ['Proactive security', 'Reduced false positives', 'Faster incident response', 'Compliance assurance'],
+      setupTime: '30 minutes',
+      freeTrial: true,
+      apiAccess: true,
+      whiteLabel: false,
+      integrations: ['SIEM systems', 'Firewalls', 'Antivirus', 'EDR solutions', 'Cloud platforms']
     },
     {
-      id: '4',
-      icon: '☁️',
-<<<<<<< HEAD
-<<<<<<< HEAD
-      title: 'Cloud Backup Enterprise',
-      description: 'Comprehensive cloud backup with disaster recovery and version control',
+      id: '6',
+      icon: Lock,
+      title: 'Zion Identity Management',
+      description: 'Comprehensive identity and access management solution with SSO, MFA, and privileged access management',
       features: [
-        'Automated daily backups',
-        'Cross-platform sync',
-        'Version control',
-        'Disaster recovery',
-        'Encrypted storage (AES-256)',
-        'Incremental backups',
-        'Point-in-time recovery',
-        'Compliance features'
+        'Single Sign-On (SSO) for 1000+ applications',
+        'Multi-factor authentication (MFA) options',
+        'Privileged access management (PAM)',
+        'Identity governance and compliance',
+        'Password management and policy enforcement',
+        'Risk-based authentication',
+        'Audit trails and compliance reporting',
+        'API access management'
       ],
-      price: '$89/month',
-      users: 'Up to 25 users',
-=======
-      title: 'Smart Cloud Backup Pro',
-      description: 'Intelligent cloud backup with disaster recovery and business continuity features',
-      features: [
-        'Automated incremental and full backups',
-        'Cross-platform sync with conflict resolution',
-        'Version control with 90-day retention',
-        'Disaster recovery with RTO < 4 hours',
-        'End-to-end encryption (AES-256)',
-        'Compliance with GDPR and HIPAA',
-        'Bandwidth throttling and scheduling',
-        'Real-time backup monitoring and alerts'
-      ],
-      price: '$79/month',
-      users: 'Up to 50 users',
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-6c09
-=======
+      price: '$199/month',
+      users: 'Up to 200 users',
+      popular: false,
+      category: 'Security',
+      marketPrice: '$400-1500/month',
+      benefits: ['Enhanced security', 'Simplified access', 'Compliance ready', 'Centralized management'],
+      setupTime: '20 minutes',
+      freeTrial: true,
+      apiAccess: true,
+      whiteLabel: false,
+      integrations: ['Active Directory', 'LDAP', 'SAML', 'OAuth', 'Cloud providers']
+    },
+
+    // Cloud & Storage
+    {
+      id: '7',
+      icon: Cloud,
       title: 'Zion Cloud Vault',
-      description: 'Intelligent cloud backup and disaster recovery with AI-powered optimization',
+      description: 'Intelligent cloud backup and disaster recovery with AI-powered optimization and global CDN',
       features: [
         'AI-optimized backup scheduling and deduplication',
         'Cross-cloud backup (AWS, Azure, GCP, OneDrive)',
@@ -259,402 +469,49 @@ const MicroSaasPage: React.FC = () => {
       ],
       price: '$79/month',
       users: 'Up to 30 users',
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-1dd1
       popular: false,
-      category: 'Storage'
-    },
-    {
-      id: '5',
-      icon: '📈',
-<<<<<<< HEAD
-<<<<<<< HEAD
-      title: 'Performance Tracker Plus',
-      description: 'Advanced application performance monitoring with AI-powered insights',
-      features: [
-        'Performance monitoring',
-        'Error tracking and alerting',
-        'Uptime monitoring',
-        'Performance insights',
-        'Alert management',
-        'Custom dashboards',
-        'API monitoring',
-        'Mobile app monitoring'
-      ],
-      price: '$99/month',
-=======
-      title: 'Application Performance Monitor',
-      description: 'Advanced APM solution with real-time monitoring, error tracking, and performance optimization',
-      features: [
-        'Real-time performance monitoring and alerting',
-        'Distributed tracing and error tracking',
-        'Uptime monitoring with global checkpoints',
-        'AI-powered performance insights and recommendations',
-        'Custom dashboards and reporting',
-        'Integration with popular development tools',
-        'SLA monitoring and reporting',
-        'Mobile app performance tracking'
-      ],
-      price: '$129/month',
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-6c09
-      users: 'Up to 30 users',
-=======
-      title: 'Zion Performance AI',
-      description: 'Advanced application performance monitoring with AI-powered optimization recommendations',
-      features: [
-        'Real-time APM with distributed tracing',
-        'AI-powered performance anomaly detection',
-        'Automated optimization recommendations',
-        'Error tracking and crash reporting',
-        'Uptime monitoring with global checkpoints',
-        'Performance budget tracking and alerts',
-        'Custom metrics and business KPIs',
-        'Integration with CI/CD pipelines'
-      ],
-      price: '$129/month',
-      users: 'Up to 40 users',
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-1dd1
-      popular: false,
-      category: 'Monitoring'
-    },
-    {
-      id: '6',
-      icon: '🤖',
-<<<<<<< HEAD
-      title: 'AI Workflow Automation',
-<<<<<<< HEAD
-      description: 'Intelligent process automation with AI-powered workflow optimization',
-      features: [
-        'Workflow automation',
-        'AI-powered insights',
-        'Task scheduling',
-        'Integration capabilities',
-        'Custom AI models',
-        'Process mining',
-        'Exception handling',
-        'Performance analytics'
-      ],
-      price: '$199/month',
-      users: 'Up to 100 users',
-=======
-      title: 'Zion AI Workflow',
-      description: 'Intelligent business process automation with custom AI models and workflow optimization',
-      features: [
-        'No-code workflow builder with AI assistance',
-        'Custom AI model training and deployment',
-        'Advanced task automation and scheduling',
-        'Integration with 500+ business applications',
-        'Document processing and data extraction',
-        'Predictive analytics and decision support',
-        'Multi-tenant workspace management',
-        'Advanced reporting and analytics dashboard'
-      ],
-      price: '$199/month',
-      users: 'Up to 75 users',
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-1dd1
-      popular: true,
-      category: 'AI'
-    },
-    {
-      id: '7',
-      icon: '📧',
-<<<<<<< HEAD
-      title: 'Email Marketing Pro',
-      description: 'Advanced email marketing automation with AI-powered personalization',
-      features: [
-        'Email automation workflows',
-        'AI-powered personalization',
-        'A/B testing',
-        'Advanced segmentation',
-        'Email templates',
-        'Analytics and reporting',
-        'CRM integration',
-        'Compliance tools'
-      ],
-      price: '$69/month',
-      users: 'Up to 20 users',
-=======
-      title: 'Zion Email Marketing AI',
-      description: 'AI-powered email marketing platform with advanced segmentation and personalization',
-      features: [
-        'AI-powered email content generation and optimization',
-        'Advanced customer segmentation and targeting',
-        'A/B testing with statistical significance',
-        'Behavioral triggers and automated campaigns',
-        'Advanced analytics and ROI tracking',
-        'Email deliverability optimization',
-        'GDPR compliance and consent management',
-        'Integration with major e-commerce platforms'
-      ],
-      price: '$99/month',
-      users: 'Up to 60 users',
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-1dd1
-      popular: false,
-      category: 'Marketing'
+      category: 'Storage',
+      marketPrice: '$150-400/month',
+      benefits: ['Secure backup', 'Fast recovery', 'Cost optimization', 'Global access'],
+      setupTime: '10 minutes',
+      freeTrial: true,
+      apiAccess: true,
+      whiteLabel: true,
+      integrations: ['AWS', 'Azure', 'Google Cloud', 'OneDrive', 'Dropbox', 'Box']
     },
     {
       id: '8',
-<<<<<<< HEAD
-      icon: '📱',
-      title: 'Social Media Manager',
-      description: 'Complete social media management with AI content generation and scheduling',
+      icon: Database,
+      title: 'Zion Database Manager',
+      description: 'Advanced database management platform with monitoring, optimization, and automated maintenance',
       features: [
-        'Multi-platform posting',
-        'AI content generation',
-        'Post scheduling',
-        'Analytics and insights',
-        'Hashtag optimization',
-        'Engagement tracking',
-        'Team collaboration',
-        'Brand monitoring'
-      ],
-      price: '$59/month',
-      users: 'Up to 15 users',
-      popular: false,
-<<<<<<< HEAD
-      category: 'Support'
-    }
-  ];
-return (
-    <React.Fragment>
-      <Helmet>
-        <title>Micro SaaS Solutions | Zion Tech Group - 50+ AI-Powered Tools</title>
-        <meta name="description" content="Discover our comprehensive suite of 50+ micro SaaS solutions powered by AI. From analytics to security, find the perfect tool for your business needs." />
-        <meta name="keywords" content="micro SaaS, AI tools, business software, analytics dashboard, project management, security monitoring" />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Micro SaaS Solutions;
-  </
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Discover our comprehensive suite of 50+ AI-powered micro SaaS tools designed to solve specific business challenges.
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-              {microSaasTools.map((tool, index) => (
-                <div
-                  key={index}
-                  className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-cyan-400/50 transition-all duration-300">
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mb-6">
-                    <tool.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-4">{tool.title}</h3>
-                  <p className="text-gray-300 mb-6">{tool.description}</p>
-                  <ul className="space-y-2 mb-6">
-                    {tool.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-gray-300 text-sm">
-                        <CheckCircle className="w-4 h-4 text-cyan-400 mr-3 flex-shrink-0" />
-=======
-      name: 'Customer Support Bot',
-      description: 'Intelligent chatbot for customer service automation',
-      price: '$39/month',
-      users: 'Up to 8 users',
-      features: ['Natural language processing', 'Multi-language support', 'Integration with CRM', 'Analytics dashboard']
-    }
-  ];
-
-  const benefits = [
-    'Quick deployment and setup',
-    'Scalable architecture',
-    'Regular updates and improvements',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing'
-  ];
-
-  return (
-    <>
-      <Helmet>
-        <title>Micro SaaS Solutions | Zion Tech Group</title>
-        <meta name="description" content="Discover our micro SaaS solutions designed to solve specific business problems with AI and automation." />
-        <meta name="keywords" content="micro SaaS, AI solutions, business automation, software as a service, productivity tools" />
-      </Helmet>
-
-      <Navigation />
-      
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Micro SaaS Solutions
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Powerful, focused solutions that solve specific business problems with AI and automation.
-            </p>
-          </div>
-        </section>
-
-        {/* Products Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-3xl font-bold text-white mb-8 text-center">Our Products</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {products.map((product, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300">
-                  <h3 className="text-xl font-semibold text-white mb-2">{product.name}</h3>
-                  <p className="text-gray-300 mb-4">{product.description}</p>
-                  <ul className="space-y-2 mb-6">
-                    {product.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="h-4 w-4 text-green-400 mr-2 flex-shrink-0" />
->>>>>>> cursor/fix-errors-and-merge-to-main-d277
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-<<<<<<< HEAD
-                  <Link
-                    to="/contact"
-                    className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors font-medium">
-                    Learn More
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </Link>
-                </div>
-              ))}
-            </div>
-            <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20 rounded-2xl p-12 text-center">
-  const categories = ['All', 'Analytics', 'CRM', 'Security', 'Infrastructure', 'Marketing', 'Support'];
-=======
-      category: 'Marketing'
-    },
-    {
-      id: '9',
-      icon: '💰',
-      title: 'Expense Tracker Pro',
-      description: 'Advanced expense management with AI-powered categorization and reporting',
-      features: [
-        'Receipt scanning (OCR)',
-        'AI categorization',
-        'Expense reporting',
-        'Budget tracking',
-        'Approval workflows',
-        'Integration with accounting',
-        'Mobile app',
-        'Compliance features'
-      ],
-      price: '$39/month',
-      users: 'Up to 25 users',
-      popular: false,
-      category: 'Finance'
-    },
-    {
-      id: '10',
-      icon: '📅',
-      title: 'Appointment Scheduler Plus',
-      description: 'Smart appointment scheduling with AI optimization and automated reminders',
-      features: [
-        'Calendar integration',
-        'AI scheduling optimization',
-        'Automated reminders',
-        'Payment processing',
-        'Video conferencing',
-        'Multi-timezone support',
-        'Custom booking forms',
-        'Analytics dashboard'
-      ],
-      price: '$49/month',
-      users: 'Up to 20 users',
-      popular: false,
-      category: 'Scheduling'
-    },
-    {
-      id: '11',
-      icon: '📝',
-      title: 'Content Generator AI',
-      description: 'AI-powered content creation for blogs, social media, and marketing materials',
-      features: [
-        'Blog post generation',
-        'Social media content',
-        'Email campaigns',
-        'SEO optimization',
-        'Brand voice customization',
-        'Content calendar',
-        'Plagiarism checking',
-        'Multi-language support'
-      ],
-      price: '$79/month',
-      users: 'Up to 10 users',
-      popular: true,
-      category: 'Content'
-    },
-    {
-      id: '12',
-      icon: '🎯',
-      title: 'Lead Generation Suite',
-      description: 'Complete lead generation and management system with AI-powered scoring',
-      features: [
-        'Lead capture forms',
-        'AI lead scoring',
-        'Email sequences',
-        'CRM integration',
-        'Lead tracking',
-        'Conversion analytics',
-        'A/B testing',
-        'Automated follow-ups'
+        'Real-time database performance monitoring',
+        'Automated query optimization and indexing',
+        'Backup and recovery automation',
+        'Database security scanning and hardening',
+        'Multi-database support (MySQL, PostgreSQL, MongoDB)',
+        'Query performance analytics and recommendations',
+        'Automated scaling and resource management',
+        'Compliance and audit reporting'
       ],
       price: '$129/month',
-      users: 'Up to 30 users',
+      users: 'Up to 40 users',
       popular: false,
-      category: 'Sales'
+      category: 'Storage',
+      marketPrice: '$250-800/month',
+      benefits: ['Better performance', 'Automated maintenance', 'Enhanced security', 'Cost optimization'],
+      setupTime: '15 minutes',
+      freeTrial: true,
+      apiAccess: true,
+      whiteLabel: false,
+      integrations: ['MySQL', 'PostgreSQL', 'MongoDB', 'Redis', 'Elasticsearch', 'Cloud databases']
     },
+
+    // AI & Automation
     {
-      id: '13',
-      icon: '🔍',
-      title: 'SEO Optimizer Pro',
-      description: 'Advanced SEO analysis and optimization with AI-powered recommendations',
-      features: [
-        'Keyword research',
-        'Site audit',
-        'Competitor analysis',
-        'AI content optimization',
-        'Rank tracking',
-        'Technical SEO',
-        'Link building tools',
-        'Performance monitoring'
-      ],
-      price: '$89/month',
-      users: 'Up to 15 users',
-      popular: false,
-      category: 'SEO'
-    },
-    {
-      id: '14',
-      icon: '📊',
-      title: 'Survey Builder Pro',
-      description: 'Advanced survey creation and analysis with AI-powered insights',
-      features: [
-        'Drag-and-drop builder',
-        'AI question suggestions',
-        'Advanced analytics',
-        'Custom themes',
-        'Multi-channel distribution',
-        'Response tracking',
-        'Data export',
-        'Integration capabilities'
-      ],
-      price: '$59/month',
-      users: 'Up to 20 users',
-      popular: false,
-      category: 'Research'
-    },
-    {
-      id: '15',
-      icon: '🏢',
-      title: 'Project Management AI',
-      description: 'Intelligent project management with AI-powered task optimization and team collaboration',
-      features: [
-        'Task management',
-        'AI task prioritization',
-        'Team collaboration',
-        'Time tracking',
-        'Resource planning',
-        'Progress analytics',
-        'Integration capabilities',
-        'Mobile app'
-=======
+      id: '9',
+      icon: Bot,
+      title: 'Zion AI Workflow',
       description: 'Intelligent business process automation with AI-powered decision making and custom workflows',
       features: [
         'Visual workflow builder with 200+ integrations',
@@ -665,24 +522,79 @@ return (
         'Advanced analytics and reporting',
         'Multi-tenant architecture',
         'API access and webhook support'
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-6c09
       ],
       price: '$199/month',
-      users: 'Up to 100 users',
+      users: 'Up to 75 users',
       popular: true,
-<<<<<<< HEAD
-      category: 'Management'
-    }
-  ];
-
-  const categories = ['All', 'Analytics', 'Communication', 'Security', 'Storage', 'Monitoring', 'AI', 'Marketing', 'Finance', 'Scheduling', 'Content', 'Sales', 'SEO', 'Research', 'Management'];
-=======
-      category: 'AI'
+      category: 'AI',
+      marketPrice: '$400-1500/month',
+      benefits: ['Process efficiency', 'Error reduction', 'Cost savings', 'Scalable automation'],
+      setupTime: '20 minutes',
+      freeTrial: true,
+      apiAccess: true,
+      whiteLabel: true,
+      integrations: ['Zapier', 'Microsoft Power Automate', 'Salesforce', 'HubSpot', 'Slack', 'Teams']
     },
     {
-      id: '7',
-      icon: '📧',
-      title: 'Email Marketing Automation',
+      id: '10',
+      icon: Brain,
+      title: 'Zion Content AI',
+      description: 'AI-powered content creation platform with writing, design, and marketing automation',
+      features: [
+        'AI-powered content generation for blogs, social media, emails',
+        'Image and video creation with AI',
+        'SEO optimization and keyword research',
+        'Brand voice customization and consistency',
+        'Content calendar and scheduling',
+        'Plagiarism detection and originality scoring',
+        'Multi-language content creation',
+        'Performance analytics and optimization'
+      ],
+      price: '$149/month',
+      users: 'Up to 20 users',
+      popular: true,
+      category: 'AI',
+      marketPrice: '$300-1000/month',
+      benefits: ['Faster content creation', 'Consistent branding', 'SEO optimization', 'Multi-platform publishing'],
+      setupTime: '5 minutes',
+      freeTrial: true,
+      apiAccess: true,
+      whiteLabel: true,
+      integrations: ['WordPress', 'Shopify', 'Mailchimp', 'Hootsuite', 'Buffer', 'Social platforms']
+    },
+
+    // Marketing & Sales
+    {
+      id: '11',
+      icon: Target,
+      title: 'Zion Lead Generation',
+      description: 'AI-powered lead generation and qualification platform with automated outreach and CRM integration',
+      features: [
+        'AI-powered lead scoring and qualification',
+        'Automated email and LinkedIn outreach',
+        'Lead database with 50M+ contacts',
+        'Intent data and behavioral tracking',
+        'A/B testing for outreach campaigns',
+        'CRM integration and lead routing',
+        'Compliance with GDPR and CAN-SPAM',
+        'Advanced analytics and ROI tracking'
+      ],
+      price: '$179/month',
+      users: 'Up to 25 users',
+      popular: true,
+      category: 'Sales',
+      marketPrice: '$300-1200/month',
+      benefits: ['More qualified leads', 'Automated outreach', 'Better conversion rates', 'ROI tracking'],
+      setupTime: '15 minutes',
+      freeTrial: true,
+      apiAccess: true,
+      whiteLabel: true,
+      integrations: ['Salesforce', 'HubSpot', 'Pipedrive', 'LinkedIn', 'Email platforms', 'CRM systems']
+    },
+    {
+      id: '12',
+      icon: Mail,
+      title: 'Zion Email Marketing',
       description: 'Advanced email marketing platform with AI-powered personalization and automation',
       features: [
         'AI-powered email personalization and optimization',
@@ -697,134 +609,76 @@ return (
       price: '$99/month',
       users: 'Up to 20 users',
       popular: false,
-      category: 'Marketing'
+      category: 'Marketing',
+      marketPrice: '$200-800/month',
+      benefits: ['Higher open rates', 'Better personalization', 'Automated campaigns', 'Compliance ready'],
+      setupTime: '10 minutes',
+      freeTrial: true,
+      apiAccess: true,
+      whiteLabel: true,
+      integrations: ['Shopify', 'WooCommerce', 'Salesforce', 'HubSpot', 'Zapier', 'Webhooks']
     },
-    {
-      id: '8',
-      icon: '💰',
-      title: 'Financial Analytics Pro',
-      description: 'Comprehensive financial management and analytics platform for businesses',
-      features: [
-        'Real-time financial dashboard and reporting',
-        'Automated expense tracking and categorization',
-        'Invoice generation and payment processing',
-        'Tax preparation and compliance tools',
-        'Cash flow forecasting and budgeting',
-        'Multi-currency support and conversion',
-        'Integration with accounting software',
-        'Financial KPI tracking and alerts'
-      ],
-      price: '$149/month',
-      users: 'Up to 15 users',
-      popular: false,
-      category: 'Finance'
-    },
-    {
-      id: '9',
-      icon: '📱',
-      title: 'Social Media Manager',
-      description: 'Complete social media management platform with AI-powered content creation and scheduling',
-      features: [
-        'AI-powered content creation and optimization',
-        'Multi-platform posting and scheduling',
-        'Social media analytics and reporting',
-        'Influencer identification and outreach',
-        'Hashtag research and trending topics',
-        'Social listening and sentiment analysis',
-        'Team collaboration and approval workflows',
-        'White-label client management'
-      ],
-      price: '$79/month',
-      users: 'Up to 10 users',
-      popular: false,
-      category: 'Marketing'
-    },
-    {
-      id: '10',
-      icon: '📋',
-      title: 'Project Management Suite',
-      description: 'Advanced project management with AI-powered resource allocation and progress tracking',
-      features: [
-        'AI-powered project planning and resource allocation',
-        'Gantt charts and timeline visualization',
-        'Team collaboration and communication tools',
-        'Time tracking and productivity analytics',
-        'Risk assessment and mitigation planning',
-        'Custom workflows and automation',
-        'Integration with 100+ tools',
-        'Mobile app for on-the-go management'
-      ],
-      price: '$119/month',
-      users: 'Up to 50 users',
-      popular: false,
-      category: 'Productivity'
-    },
-    {
-      id: '11',
-      icon: '🎯',
-      title: 'Lead Generation Engine',
-      description: 'AI-powered lead generation and qualification platform with automated outreach',
-      features: [
-        'AI-powered lead scoring and qualification',
-        'Automated email and LinkedIn outreach',
-        'Lead database with 50M+ contacts',
-        'Intent data and behavioral tracking',
-        'A/B testing for outreach campaigns',
-        'CRM integration and lead routing',
-        'Compliance with GDPR and CAN-SPAM',
-        'Advanced analytics and ROI tracking'
-      ],
-      price: '$179/month',
-      users: 'Up to 25 users',
-      popular: true,
-      category: 'Sales'
-    },
-    {
-      id: '12',
-      icon: '🔍',
-      title: 'SEO Optimization Tool',
-      description: 'Comprehensive SEO platform with AI-powered optimization and competitor analysis',
-      features: [
-        'AI-powered keyword research and optimization',
-        'Technical SEO auditing and recommendations',
-        'Competitor analysis and tracking',
-        'Content optimization suggestions',
-        'Local SEO management and optimization',
-        'Rank tracking and SERP monitoring',
-        'Link building and outreach tools',
-        'White-label reporting and dashboards'
-      ],
-      price: '$89/month',
-      users: 'Up to 15 users',
-      popular: false,
-      category: 'Marketing'
-    }
-  ];
 
-  const categories = ['All', 'Analytics', 'Communication', 'Security', 'Storage', 'Monitoring', 'AI', 'Marketing', 'Finance', 'Productivity', 'Sales'];
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-6c09
-=======
-      icon: '💰',
-      title: 'Zion Finance AI',
-      description: 'Intelligent financial management and accounting automation platform',
+    // E-commerce & Retail
+    {
+      id: '13',
+      icon: ShoppingCart,
+      title: 'Zion E-commerce AI',
+      description: 'AI-powered e-commerce platform with advanced personalization, optimization, and analytics',
       features: [
-        'AI-powered expense categorization and reconciliation',
-        'Automated invoice processing and approval workflows',
-        'Real-time financial reporting and forecasting',
-        'Tax compliance and preparation assistance',
-        'Multi-currency support and exchange rate tracking',
-        'Integration with banks and payment processors',
-        'Advanced fraud detection and prevention',
-        'Custom financial dashboards and KPIs'
+        'AI-powered product recommendations',
+        'Dynamic pricing optimization',
+        'Inventory management and demand forecasting',
+        'Customer behavior analysis and segmentation',
+        'Automated marketing campaigns',
+        'Multi-channel selling (web, mobile, social)',
+        'Advanced analytics and reporting',
+        'Integration with major payment gateways'
       ],
-      price: '$179/month',
-      users: 'Up to 35 users',
-      popular: false,
-      category: 'Finance'
+      price: '$249/month',
+      users: 'Up to 50 users',
+      popular: true,
+      category: 'E-commerce',
+      marketPrice: '$500-2000/month',
+      benefits: ['Higher conversion rates', 'Better personalization', 'Automated operations', 'Multi-channel selling'],
+      setupTime: '30 minutes',
+      freeTrial: true,
+      apiAccess: true,
+      whiteLabel: true,
+      integrations: ['Stripe', 'PayPal', 'Shopify', 'WooCommerce', 'Amazon', 'eBay']
     },
     {
-      id: '9',
-      icon: '👥',
+      id: '14',
+      icon: CreditCard,
+      title: 'Zion Payment Gateway',
+      description: 'Advanced payment processing platform with fraud detection, analytics, and global support',
+      features: [
+        'Multi-currency payment processing',
+        'AI-powered fraud detection and prevention',
+        'Recurring billing and subscription management',
+        'Mobile payment optimization',
+        'Advanced analytics and reporting',
+        'PCI DSS compliance and security',
+        'Global payment method support',
+        'White-label payment solutions'
+      ],
+      price: '$199/month',
+      users: 'Unlimited',
+      popular: false,
+      category: 'E-commerce',
+      marketPrice: '$400-1500/month',
+      benefits: ['Lower transaction fees', 'Better fraud protection', 'Global reach', 'Easy integration'],
+      setupTime: '20 minutes',
+      freeTrial: true,
+      apiAccess: true,
+      whiteLabel: true,
+      integrations: ['Stripe', 'PayPal', 'Square', 'Authorize.Net', 'Braintree', 'Adyen']
+    },
+
+    // HR & People Management
+    {
+      id: '15',
+      icon: Users,
       title: 'Zion HR Management',
       description: 'Comprehensive human resources management with AI-powered insights and automation',
       features: [
@@ -840,51 +694,103 @@ return (
       price: '$159/month',
       users: 'Up to 100 users',
       popular: false,
-      category: 'HR'
+      category: 'HR',
+      marketPrice: '$300-1000/month',
+      benefits: ['Streamlined HR processes', 'Better candidate matching', 'Automated workflows', 'Compliance ready'],
+      setupTime: '25 minutes',
+      freeTrial: true,
+      apiAccess: true,
+      whiteLabel: true,
+      integrations: ['ADP', 'Workday', 'BambooHR', 'Slack', 'Teams', 'Calendar systems']
     },
     {
-      id: '10',
-      icon: '🛒',
-      title: 'Zion E-commerce AI',
-      description: 'AI-powered e-commerce platform with advanced personalization and optimization',
+      id: '16',
+      icon: Award,
+      title: 'Zion Performance Management',
+      description: 'AI-powered performance management system with goal tracking, feedback, and development planning',
       features: [
-        'AI-powered product recommendations',
-        'Dynamic pricing optimization',
-        'Inventory management and demand forecasting',
-        'Customer behavior analysis and segmentation',
-        'Automated marketing campaigns',
-        'Multi-channel selling (web, mobile, social)',
-        'Advanced analytics and reporting',
-        'Integration with major payment gateways'
+        'Goal setting and tracking with AI recommendations',
+        '360-degree feedback and peer reviews',
+        'Performance analytics and insights',
+        'Career development planning',
+        'Skill gap analysis and recommendations',
+        'Recognition and rewards system',
+        'Integration with learning platforms',
+        'Customizable performance frameworks'
       ],
-      price: '$249/month',
+      price: '$89/month',
       users: 'Up to 50 users',
-      popular: true,
-      category: 'E-commerce'
-    },
-    {
-      id: '11',
-      icon: '📱',
-      title: 'Zion Mobile App Builder',
-      description: 'No-code mobile app development platform with AI-powered design and optimization',
-      features: [
-        'Drag-and-drop app builder with AI assistance',
-        'Cross-platform development (iOS, Android)',
-        'AI-powered UI/UX design recommendations',
-        'Real-time preview and testing',
-        'App store optimization and publishing',
-        'Push notifications and analytics',
-        'Backend integration and API management',
-        'White-label app development'
-      ],
-      price: '$189/month',
-      users: 'Up to 20 users',
       popular: false,
-      category: 'Development'
+      category: 'HR',
+      marketPrice: '$200-600/month',
+      benefits: ['Better performance tracking', 'Objective feedback', 'Career development', 'Employee engagement'],
+      setupTime: '15 minutes',
+      freeTrial: true,
+      apiAccess: true,
+      whiteLabel: false,
+      integrations: ['HRIS systems', 'Learning platforms', 'Slack', 'Teams', 'Calendar systems']
+    },
+
+    // Development & DevOps
+    {
+      id: '17',
+      icon: Code,
+      title: 'Zion Code Assistant',
+      description: 'AI-powered coding assistant with code generation, review, and optimization for multiple languages',
+      features: [
+        'AI-powered code generation and completion',
+        'Code review and quality analysis',
+        'Bug detection and fixing suggestions',
+        'Documentation generation',
+        'Multi-language support (Python, JavaScript, Java, etc.)',
+        'Integration with popular IDEs',
+        'Code optimization recommendations',
+        'Security vulnerability scanning'
+      ],
+      price: '$79/month',
+      users: 'Up to 15 users',
+      popular: true,
+      category: 'Development',
+      marketPrice: '$150-500/month',
+      benefits: ['Faster development', 'Better code quality', 'Reduced bugs', 'Automated documentation'],
+      setupTime: '5 minutes',
+      freeTrial: true,
+      apiAccess: true,
+      whiteLabel: false,
+      integrations: ['VS Code', 'IntelliJ', 'GitHub', 'GitLab', 'Bitbucket', 'CI/CD platforms']
     },
     {
-      id: '12',
-      icon: '🌐',
+      id: '18',
+      icon: GitBranch,
+      title: 'Zion DevOps Platform',
+      description: 'Comprehensive DevOps platform with CI/CD, monitoring, and infrastructure management',
+      features: [
+        'Automated CI/CD pipeline creation',
+        'Infrastructure as Code (IaC) management',
+        'Container orchestration and management',
+        'Application performance monitoring',
+        'Log aggregation and analysis',
+        'Security scanning and compliance',
+        'Multi-cloud deployment support',
+        'Team collaboration and workflow management'
+      ],
+      price: '$199/month',
+      users: 'Up to 30 users',
+      popular: false,
+      category: 'Development',
+      marketPrice: '$400-1200/month',
+      benefits: ['Faster deployments', 'Better reliability', 'Automated testing', 'Cost optimization'],
+      setupTime: '30 minutes',
+      freeTrial: true,
+      apiAccess: true,
+      whiteLabel: false,
+      integrations: ['GitHub', 'GitLab', 'Jenkins', 'Docker', 'Kubernetes', 'Cloud platforms']
+    },
+
+    // SEO & Digital Marketing
+    {
+      id: '19',
+      icon: Search,
       title: 'Zion SEO Optimizer',
       description: 'AI-powered SEO optimization platform with advanced keyword research and content optimization',
       features: [
@@ -900,142 +806,364 @@ return (
       price: '$119/month',
       users: 'Up to 30 users',
       popular: false,
-      category: 'SEO'
+      category: 'SEO',
+      marketPrice: '$250-800/month',
+      benefits: ['Better search rankings', 'Automated optimization', 'Competitor insights', 'ROI tracking'],
+      setupTime: '10 minutes',
+      freeTrial: true,
+      apiAccess: true,
+      whiteLabel: true,
+      integrations: ['Google Search Console', 'Google Analytics', 'WordPress', 'Shopify', 'Squarespace']
+    },
+    {
+      id: '20',
+      icon: Globe,
+      title: 'Zion Website Builder',
+      description: 'AI-powered website builder with drag-and-drop interface, SEO optimization, and e-commerce features',
+      features: [
+        'AI-powered website design and layout',
+        'Drag-and-drop page builder',
+        'Mobile-responsive templates',
+        'SEO optimization and meta tags',
+        'E-commerce integration and payment processing',
+        'Blog and content management',
+        'Analytics and performance tracking',
+        'White-label solution available'
+      ],
+      price: '$149/month',
+      users: 'Up to 10 websites',
+      popular: true,
+      category: 'Web Development',
+      marketPrice: '$300-1000/month',
+      benefits: ['No coding required', 'Professional designs', 'SEO optimized', 'Mobile responsive'],
+      setupTime: '15 minutes',
+      freeTrial: true,
+      apiAccess: true,
+      whiteLabel: true,
+      integrations: ['Stripe', 'PayPal', 'Google Analytics', 'Mailchimp', 'Zapier', 'Social platforms']
+    },
+
+    // Project Management & Productivity
+    {
+      id: '21',
+      icon: Calendar,
+      title: 'Zion Project Manager',
+      description: 'AI-powered project management with intelligent task allocation, resource planning, and progress tracking',
+      features: [
+        'AI-powered project planning and resource allocation',
+        'Gantt charts and timeline visualization',
+        'Team collaboration and communication tools',
+        'Time tracking and productivity analytics',
+        'Risk assessment and mitigation planning',
+        'Custom workflows and automation',
+        'Integration with 100+ tools',
+        'Mobile app for on-the-go management'
+      ],
+      price: '$119/month',
+      users: 'Up to 50 users',
+      popular: true,
+      category: 'Productivity',
+      marketPrice: '$250-800/month',
+      benefits: ['Better project visibility', 'Improved collaboration', 'Resource optimization', 'Risk management'],
+      setupTime: '10 minutes',
+      freeTrial: true,
+      apiAccess: true,
+      whiteLabel: true,
+      integrations: ['Slack', 'Teams', 'Google Workspace', 'Microsoft 365', 'Jira', 'Asana']
+    },
+    {
+      id: '22',
+      icon: Clock,
+      title: 'Zion Time Tracker',
+      description: 'Advanced time tracking and productivity analytics with AI-powered insights and automated reporting',
+      features: [
+        'Automatic time tracking with AI detection',
+        'Manual time entry and editing',
+        'Project and task-based tracking',
+        'Productivity analytics and insights',
+        'Automated invoicing and billing',
+        'Team performance dashboards',
+        'Integration with project management tools',
+        'Mobile app with offline support'
+      ],
+      price: '$69/month',
+      users: 'Up to 25 users',
+      popular: false,
+      category: 'Productivity',
+      marketPrice: '$150-400/month',
+      benefits: ['Accurate time tracking', 'Better productivity insights', 'Automated billing', 'Team visibility'],
+      setupTime: '5 minutes',
+      freeTrial: true,
+      apiAccess: true,
+      whiteLabel: false,
+      integrations: ['Asana', 'Trello', 'Jira', 'Monday.com', 'QuickBooks', 'Xero']
+    },
+
+    // Customer Relationship Management
+    {
+      id: '23',
+      icon: UserCheck,
+      title: 'Zion CRM Pro',
+      description: 'AI-powered customer relationship management with sales automation, lead scoring, and analytics',
+      features: [
+        'AI-powered lead scoring and qualification',
+        'Sales pipeline management and forecasting',
+        'Contact and company management',
+        'Email and communication tracking',
+        'Task and activity management',
+        'Advanced reporting and analytics',
+        'Integration with marketing tools',
+        'Mobile app for sales teams'
+      ],
+      price: '$179/month',
+      users: 'Up to 40 users',
+      popular: true,
+      category: 'CRM',
+      marketPrice: '$300-1200/month',
+      benefits: ['Better lead management', 'Sales automation', 'Improved forecasting', 'Team collaboration'],
+      setupTime: '20 minutes',
+      freeTrial: true,
+      apiAccess: true,
+      whiteLabel: true,
+      integrations: ['Salesforce', 'HubSpot', 'Mailchimp', 'Zapier', 'Google Workspace', 'Microsoft 365']
+    },
+    {
+      id: '24',
+      icon: Headphones,
+      title: 'Zion Customer Success',
+      description: 'Customer success management platform with health scoring, automation, and retention analytics',
+      features: [
+        'Customer health scoring and monitoring',
+        'Automated onboarding and success workflows',
+        'Churn prediction and prevention',
+        'Customer feedback and survey management',
+        'Success metrics and analytics',
+        'Integration with support and sales tools',
+        'Automated communication and follow-ups',
+        'Customer journey mapping and optimization'
+      ],
+      price: '$149/month',
+      users: 'Up to 30 users',
+      popular: false,
+      category: 'CRM',
+      marketPrice: '$250-800/month',
+      benefits: ['Reduced churn', 'Better customer satisfaction', 'Automated workflows', 'Data-driven insights'],
+      setupTime: '15 minutes',
+      freeTrial: true,
+      apiAccess: true,
+      whiteLabel: false,
+      integrations: ['Salesforce', 'HubSpot', 'Zendesk', 'Intercom', 'Slack', 'Teams']
+    },
+
+    // Data & Analytics
+    {
+      id: '25',
+      icon: Database,
+      title: 'Zion Data Warehouse',
+      description: 'Cloud-based data warehouse with ETL/ELT processing, analytics, and business intelligence',
+      features: [
+        'Automated data ingestion from 100+ sources',
+        'Data transformation and cleaning',
+        'Real-time and batch processing',
+        'Advanced analytics and reporting',
+        'Data visualization and dashboards',
+        'Machine learning model deployment',
+        'Data governance and security',
+        'Scalable cloud infrastructure'
+      ],
+      price: '$299/month',
+      users: 'Up to 50 users',
+      popular: false,
+      category: 'Analytics',
+      marketPrice: '$500-2000/month',
+      benefits: ['Centralized data', 'Better insights', 'Automated processing', 'Scalable infrastructure'],
+      setupTime: '45 minutes',
+      freeTrial: true,
+      apiAccess: true,
+      whiteLabel: false,
+      integrations: ['Salesforce', 'HubSpot', 'Google Analytics', 'Stripe', 'Shopify', 'Database systems']
+    },
+    {
+      id: '26',
+      icon: Monitor,
+      title: 'Zion Monitoring Suite',
+      description: 'Comprehensive application and infrastructure monitoring with alerting, logging, and performance analytics',
+      features: [
+        'Application performance monitoring (APM)',
+        'Infrastructure monitoring and alerting',
+        'Log aggregation and analysis',
+        'Error tracking and debugging',
+        'Uptime monitoring and SLA tracking',
+        'Custom dashboards and reporting',
+        'Integration with incident management',
+        'AI-powered anomaly detection'
+      ],
+      price: '$129/month',
+      users: 'Up to 40 users',
+      popular: false,
+      category: 'Monitoring',
+      marketPrice: '$250-800/month',
+      benefits: ['Better reliability', 'Faster issue resolution', 'Proactive monitoring', 'Cost optimization'],
+      setupTime: '20 minutes',
+      freeTrial: true,
+      apiAccess: true,
+      whiteLabel: false,
+      integrations: ['PagerDuty', 'Slack', 'Teams', 'Jira', 'ServiceNow', 'Cloud platforms']
     }
   ];
 
-  const categories = ['All', 'Analytics', 'Communication', 'Security', 'Storage', 'Monitoring', 'AI', 'Marketing', 'Finance', 'HR', 'E-commerce', 'Development', 'SEO'];
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-1dd1
-
-  const benefits = [
-    'Quick setup and deployment',
-    'Scalable pricing plans',
-    '24/7 customer support',
-    'Regular feature updates',
-    'Secure and reliable',
-    'Easy integration'
+  const categories = [
+    'All', 'Analytics', 'Communication', 'Security', 'Storage', 'AI', 'Sales', 'Marketing', 
+    'E-commerce', 'HR', 'Development', 'SEO', 'Web Development', 'Productivity', 'CRM', 'Monitoring'
   ];
 
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+  const filteredProducts = products.filter(product => {
+    const matchesSearch = product.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         product.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         product.features.some(feature => feature.toLowerCase().includes(searchTerm.toLowerCase()));
+    const matchesCategory = selectedCategory === 'All' || product.category === selectedCategory;
+    return matchesSearch && matchesCategory;
+  });
+
+  const sortedProducts = [...filteredProducts].sort((a, b) => {
+    switch (sortBy) {
+      case 'popular':
+        return b.popular ? 1 : -1;
+      case 'price-low':
+        return parseInt(a.price.replace('$', '').replace('/month', '')) - parseInt(b.price.replace('$', '').replace('/month', ''));
+      case 'price-high':
+        return parseInt(b.price.replace('$', '').replace('/month', '')) - parseInt(a.price.replace('$', '').replace('/month', ''));
+      case 'name':
+        return a.title.localeCompare(b.title);
+      default:
+        return 0;
+    }
+  });
+
   const stats = [
     { icon: <Users className="w-8 h-8 text-blue-500" />, value: '10K+', label: 'Active Users' },
     { icon: <TrendingUp className="w-8 h-8 text-green-500" />, value: '99.9%', label: 'Uptime' },
     { icon: <Shield className="w-8 h-8 text-purple-500" />, value: '100%', label: 'Secure' },
     { icon: <Zap className="w-8 h-8 text-orange-500" />, value: '5min', label: 'Setup Time' }
   ];
-<<<<<<< HEAD
-  return (
-    <React.Fragment>
-=======
-
-  const [selectedCategory, setSelectedCategory] = React.useState('All');
-
-  const filteredProducts = selectedCategory === 'All' 
-    ? products 
-    : products.filter(product => product.category === selectedCategory);
 
   return (
-    <div className="min-h-screen bg-gray-50">
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>Micro SaaS Solutions - Zion Tech Group | Ready-to-Use Business Tools</title>
-        <meta name="description" content="Discover our collection of micro SaaS solutions designed to solve specific business problems. Quick setup, affordable pricing, powerful features." />
-        <meta name="keywords" content="micro SaaS, business tools, analytics, customer chat, security, cloud backup, performance monitoring" />
+        <title>Micro SaaS Solutions - Zion Tech Group | 26+ AI-Powered Business Tools</title>
+        <meta name="description" content="Discover our comprehensive suite of 26+ micro SaaS solutions powered by AI. From analytics to security, find the perfect tool for your business needs with free trials and competitive pricing." />
+        <meta name="keywords" content="micro SaaS, AI tools, business software, analytics dashboard, project management, security monitoring, CRM, e-commerce, HR management" />
       </Helmet>
-<<<<<<< HEAD
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      
+      <Navigation />
+      
+      <main className="pt-20">
         {/* Hero Section */}
-        <section className="py-20 px-4">
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Micro <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">SaaS</span> Solutions;
-  </
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-12">
-              Ready-to-use business tools that solve specific problems. No complex setup, no long-term commitments - just powerful solutions that work.
-            </p>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
-=======
-
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Micro SaaS Solutions
+              Micro <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">SaaS</span> Solutions
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-blue-100">
-              Ready-to-use business tools that solve specific problems. Quick setup, affordable pricing, powerful features.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Discover our comprehensive suite of 26+ AI-powered micro SaaS tools designed to solve specific business challenges. 
+              Quick setup, affordable pricing, powerful features.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="bg-white text-blue-900 hover:bg-gray-100 px-8 py-3 rounded-lg font-medium transition-colors duration-200"
+                className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
               >
                 Get Started
               </Link>
               <Link
                 to="/pricing"
-                className="border border-white text-white hover:bg-white hover:text-blue-900 px-8 py-3 rounded-lg font-medium transition-colors duration-200"
+                className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300"
               >
                 View Pricing
               </Link>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Stats Section */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
+        {/* Stats Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
               {stats.map((stat, index) => (
                 <div key={index} className="text-center">
                   <div className="flex justify-center mb-4">
                     {stat.icon}
                   </div>
-                  <div className="text-3xl font-bold text-gray-900 mb-2">{stat.value}</div>
-                  <div className="text-gray-600">{stat.label}</div>
+                  <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
+                  <div className="text-gray-300">{stat.label}</div>
                 </div>
               ))}
             </div>
           </div>
-<<<<<<< HEAD
         </section>
-        {/* Category Filter */}
-        <section className="py-8 px-4">
+
+        {/* Search and Filter Section */}
+        <section className="py-10 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-            <div className="flex flex-wrap justify-center gap-4">
-              {categories.map((category) => (
-                <button
-                  key={category}
-                  className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-                    category === 'All'
-                      ? 'bg-gradient-to-r from-purple-500 to-blue-500 text-white'
-                      : 'bg-white/10 text-gray-300 hover:bg-white/20'
-                  }`}
-                >
-                  {category}
-                </button>
-              ))}
+            <div className="flex flex-col lg:flex-row gap-4 mb-8">
+              <div className="relative flex-1">
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <input
+                  type="text"
+                  placeholder="Search micro SaaS solutions..."
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                />
+              </div>
+              <div className="flex gap-4">
+                <div className="relative">
+                  <Filter className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                  <select
+                    value={selectedCategory}
+                    onChange={(e) => setSelectedCategory(e.target.value)}
+                    className="pl-10 pr-8 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent appearance-none min-w-[200px]"
+                  >
+                    {categories.map(category => (
+                      <option key={category} value={category} className="bg-slate-800">
+                        {category}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+                <div className="relative">
+                  <select
+                    value={sortBy}
+                    onChange={(e) => setSortBy(e.target.value)}
+                    className="pl-4 pr-8 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent appearance-none min-w-[150px]"
+                  >
+                    <option value="popular" className="bg-slate-800">Most Popular</option>
+                    <option value="price-low" className="bg-slate-800">Price: Low to High</option>
+                    <option value="price-high" className="bg-slate-800">Price: High to Low</option>
+                    <option value="name" className="bg-slate-800">Name: A to Z</option>
+                  </select>
+                </div>
+              </div>
             </div>
           </div>
         </section>
+
         {/* Products Grid */}
-        <section className="py-16 px-4">
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold text-white mb-6">Our Micro SaaS Products</h2>
+              <h2 className="text-3xl font-bold text-white mb-6">
+                {selectedCategory === 'All' ? 'All Micro SaaS Solutions' : `${selectedCategory} Solutions`}
+              </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Choose from our collection of specialized business tools designed to solve specific challenges.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {microSaasProducts.map((product) => (
+              {sortedProducts.map((product) => (
                 <div
                   key={product.id}
-                  className={`relative bg-white/10 backdrop-blur-lg rounded-2xl p-8 border ${
+                  className={`relative bg-white/5 backdrop-blur-sm rounded-2xl p-8 border ${
                     product.popular
                       ? 'border-purple-400 shadow-2xl shadow-purple-500/25 scale-105'
                       : 'border-white/20'
@@ -1045,310 +1173,207 @@ return (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <div className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center gap-2">
                         <Star className="w-4 h-4 fill-current" />
-                        Most Popular;
-  </
-                    </div>
-                  )}
-=======
-        </div>
-      </section>
-
-      {/* Category Filter */}
-      <section className="py-8 bg-gray-100">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-wrap justify-center gap-4">
-            {categories.map((category) => (
-              <button
-                key={category}
-                onClick={() => setSelectedCategory(category)}
-                className={`px-6 py-3 rounded-full font-medium transition-colors duration-200 ${
-                  selectedCategory === category
-                    ? 'bg-blue-600 text-white'
-                    : 'bg-white text-gray-700 hover:bg-gray-200'
-                }`}
-              >
-                {category}
-              </button>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Products Grid */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">
-              {selectedCategory === 'All' ? 'All Products' : `${selectedCategory} Products`}
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-              {filteredProducts.map((product) => (
-                <div key={product.id} className={`bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 ${product.popular ? 'ring-2 ring-blue-500' : ''} hover:scale-105`}>
-                  {product.popular && (
-                    <div className="flex items-center justify-center mb-4">
-                      <div className="bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-medium flex items-center">
-                        <Star className="w-4 h-4 mr-1" />
-                        Popular
+                        Most Popular
                       </div>
                     </div>
                   )}
                   
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
                   <div className="text-center mb-6">
-                    <div className="text-4xl mb-4">{product.icon}</div>
-                    <h3 className="text-2xl font-bold text-gray-900 mb-2">{product.title}</h3>
-                    <p className="text-gray-600 mb-4">{product.description}</p>
-                    <div className="flex items-center justify-between">
-                      <div>
-                        <span className="text-3xl font-bold text-gray-900">{product.price}</span>
-                      </div>
-                      <div className="text-sm text-gray-500">
-                        <Users className="w-4 h-4 inline mr-1" />
+                    <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center group-hover:scale-110 transition-transform">
+                      <product.icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-2xl font-bold text-white mb-2">{product.title}</h3>
+                    <p className="text-gray-300 mb-4 text-sm leading-relaxed">{product.description}</p>
+                    
+                    <div className="flex items-center justify-center gap-2 mb-4">
+                      <span className="text-3xl font-bold text-cyan-400">{product.price}</span>
+                      {product.marketPrice && (
+                        <span className="text-gray-400 text-sm line-through">{product.marketPrice}</span>
+                      )}
+                    </div>
+                    
+                    <div className="flex items-center justify-center gap-4 text-sm text-gray-400 mb-4">
+                      <span className="flex items-center gap-1">
+                        <Users className="w-4 h-4" />
                         {product.users}
-                      </div>
+                      </span>
+                      <span className="flex items-center gap-1">
+                        <Clock className="w-4 h-4" />
+                        {product.setupTime} setup
+                      </span>
                     </div>
                   </div>
-                  <ul className="space-y-3 mb-8">
-                    {product.features.map((feature, index) => (
-                      <li key={index} className="flex items-start">
-                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                        <span className="text-gray-700">{feature}</span>
+
+                  <div className="space-y-3 mb-6">
+                    <div className="flex flex-wrap gap-2">
+                      {product.freeTrial && (
+                        <span className="bg-green-500/20 text-green-400 px-2 py-1 rounded text-xs">Free Trial</span>
+                      )}
+                      {product.apiAccess && (
+                        <span className="bg-blue-500/20 text-blue-400 px-2 py-1 rounded text-xs">API Access</span>
+                      )}
+                      {product.whiteLabel && (
+                        <span className="bg-purple-500/20 text-purple-400 px-2 py-1 rounded text-xs">White Label</span>
+                      )}
+                    </div>
+                  </div>
+
+                  <ul className="space-y-2 mb-6">
+                    {product.features.slice(0, 4).map((feature, index) => (
+                      <li key={index} className="flex items-start text-sm text-gray-300">
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0 mt-0.5" />
+                        <span>{feature}</span>
                       </li>
                     ))}
+                    {product.features.length > 4 && (
+                      <li className="text-gray-400 text-sm">
+                        +{product.features.length - 4} more features
+                      </li>
+                    )}
                   </ul>
-<<<<<<< HEAD
-                  <div className="flex flex-col gap-3">
-                    <button className="w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 bg-gradient-to-r from-purple-500 to-blue-500 text-white hover:from-purple-600 hover:to-blue-600 transform hover:scale-105">
-                      Start Free Trial;
-  </
-                    <button className="w-full py-2 px-6 rounded-lg font-semibold transition-all duration-300 bg-white/10 text-white border border-white/20 hover:bg-white/20">
-                      Learn More;
-  </
-=======
 
-                  <div className="text-center">
-                    <button className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-medium hover:bg-blue-700 transition-colors duration-200">
+                  <div className="space-y-3 mb-6">
+                    <h4 className="text-sm font-semibold text-white">Key Benefits:</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {product.benefits.slice(0, 2).map((benefit, index) => (
+                        <span key={index} className="bg-white/10 text-gray-300 px-2 py-1 rounded text-xs">
+                          {benefit}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="space-y-3 mb-6">
+                    <h4 className="text-sm font-semibold text-white">Integrations:</h4>
+                    <div className="flex flex-wrap gap-1">
+                      {product.integrations.slice(0, 4).map((integration, index) => (
+                        <span key={index} className="bg-white/5 text-gray-400 px-2 py-1 rounded text-xs">
+                          {integration}
+                        </span>
+                      ))}
+                      {product.integrations.length > 4 && (
+                        <span className="text-gray-400 text-xs">+{product.integrations.length - 4} more</span>
+                      )}
+                    </div>
+                  </div>
+
+                  <div className="flex flex-col gap-3">
+                    <Link
+                      to="/contact"
+                      className="w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 bg-gradient-to-r from-purple-500 to-blue-500 text-white hover:from-purple-600 hover:to-blue-600 transform hover:scale-105 text-center"
+                    >
                       Start Free Trial
-                    </button>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+                    </Link>
+                    <Link
+                      to="/contact"
+                      className="w-full py-2 px-6 rounded-lg font-semibold transition-all duration-300 bg-white/10 text-white border border-white/20 hover:bg-white/20 text-center"
+                    >
+                      Learn More
+                    </Link>
                   </div>
                 </div>
               ))}
             </div>
 
-            {filteredProducts.length === 0 && (
+            {sortedProducts.length === 0 && (
               <div className="text-center py-12">
-                <p className="text-gray-500 text-lg">No products found in this category.</p>
+                <p className="text-gray-500 text-lg">No products found matching your criteria.</p>
               </div>
             )}
           </div>
-<<<<<<< HEAD
         </section>
+
         {/* Benefits Section */}
-        <section className="py-16 px-4">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold text-white mb-6">Why Choose Our Micro SaaS Solutions?</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Why Choose Our Micro SaaS Solutions?
+              </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 We've designed our micro SaaS products to be simple, powerful, and accessible to businesses of all sizes.
               </p>
             </div>
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                {benefits.map((benefit, index) => (
-                  <div key={index} className="flex items-start space-x-3">
-                    <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
-                    <span className="text-gray-300">{benefit}</span>
-                  </div>
-                ))}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-blue-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                  <Zap className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4">Quick Setup</h3>
+                <p className="text-gray-300">Get started in minutes with our intuitive setup process. No complex configuration required.</p>
+              </div>
+              <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                  <DollarSign className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4">Affordable Pricing</h3>
+                <p className="text-gray-300">Competitive pricing with free trials. Scale as you grow with flexible plans.</p>
+              </div>
+              <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                  <Shield className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4">Enterprise Security</h3>
+                <p className="text-gray-300">Bank-level security with encryption, compliance, and 24/7 monitoring.</p>
+              </div>
+              <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                  <Headphones className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4">24/7 Support</h3>
+                <p className="text-gray-300">Expert support whenever you need it. Chat, email, or phone assistance.</p>
+              </div>
+              <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                  <Code className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4">API Access</h3>
+                <p className="text-gray-300">Powerful APIs for custom integrations and white-label solutions.</p>
+              </div>
+              <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                <div className="w-16 h-16 bg-gradient-to-r from-teal-500 to-green-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                  <Rocket className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4">Regular Updates</h3>
+                <p className="text-gray-300">Continuous improvements and new features based on user feedback.</p>
               </div>
             </div>
           </div>
         </section>
-        {/* How It Works */}
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold text-white mb-6">How It Works</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Getting started with our micro SaaS solutions is simple and straightforward.
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mb-6 flex items-center justify-center">
-                  <span className="text-2xl font-bold text-white">1</span>
-                </div>
-                <h3 className="text-xl font-bold text-white mb-4">Choose Your Solution</h3>
-                <p className="text-gray-300">Browse our collection and select the micro SaaS product that fits your needs.</p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mb-6 flex items-center justify-center">
-                  <span className="text-2xl font-bold text-white">2</span>
-                </div>
-                <h3 className="text-xl font-bold text-white mb-4">Start Free Trial</h3>
-                <p className="text-gray-300">Sign up for a free trial and explore all features without any commitment.</p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mb-6 flex items-center justify-center">
-                  <span className="text-2xl font-bold text-white">3</span>
-                </div>
-                <h3 className="text-xl font-bold text-white mb-4">Scale & Grow</h3>
-                <p className="text-gray-300">Upgrade when you're ready and scale your usage as your business grows.</p>
-              </div>
-            </div>
-          </div>
-        </section>
+
         {/* CTA Section */}
-        <section className="py-16 px-4">
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-12 border border-white/20">
-              <h2 className="text-3xl font-bold text-white mb-6">
+            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Ready to Get Started?
               </h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-Choose the micro SaaS solution that fits your business needs. Start with a free trial and scale as you grow.
+              <p className="text-xl text-gray-300 mb-8">
+                Choose the micro SaaS solution that fits your business needs. Start with a free trial and scale as you grow.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
-className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 inline-flex items-center justify-center">
+                  className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 inline-flex items-center justify-center"
+                >
                   <Zap className="w-5 h-5 mr-2" />
-                  Start Free Trial;
-  </
+                  Start Free Trial
+                </Link>
                 <Link
                   to="/pricing"
-className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400/10 transition-all duration-300">
-                  View All Plans;
-  </
+                  className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400/10 transition-all duration-300"
+                >
+                  View All Plans
+                </Link>
               </div>
-=======
-                  <div className="border-t border-white/20 pt-4">
-                    <div className="text-2xl font-bold text-white mb-1">{product.price}</div>
-                    <div className="text-sm text-gray-400">{product.users}</div>
-                  </div>
-                </div>
-              ))}
->>>>>>> cursor/fix-errors-and-merge-to-main-d277
             </div>
-          </div>
-        </section>
-        {/* Benefits Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-          <div className="max-w-7xl mx-auto">
-<<<<<<< HEAD
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Why Choose Micro SaaS?
-              </h2>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-=======
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-16 bg-gray-100">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">Why Choose Our Micro SaaS?</h2>
-            <div className="grid md:grid-cols-2 gap-6">
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-              {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-1 flex-shrink-0" />
-                  <span className="text-gray-700">{benefit}</span>
-=======
-            <h2 className="text-3xl font-bold text-white mb-8 text-center">Why Choose Our Micro SaaS?</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-center space-x-3">
-                  <CheckCircle className="h-5 w-5 text-green-400 flex-shrink-0" />
-                  <span className="text-gray-300">{benefit}</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-d277
-                </div>
-              ))}
-            </div>
-          </div>
-<<<<<<< HEAD
-        </section>
-        {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-=======
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-16 bg-blue-900 text-white">
-        <div className="container mx-auto px-4">
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-          <div className="max-w-4xl mx-auto text-center">
-<<<<<<< HEAD
-            <h2 className="text-3xl font-bold mb-4">Ready to Get Started?</h2>
-            <p className="text-xl mb-8 text-blue-100">
-              Choose from our collection of micro SaaS solutions and start solving your business problems today.
-            </p>
-<<<<<<< HEAD
-            <button className="bg-purple-600 text-white px-8 py-3 rounded-lg hover:bg-purple-700 transition-colors font-semibold">
-              View All Plans;
-  </
           </div>
         </section>
       </main>
-=======
-            <h2 className="text-3xl font-bold text-white mb-6">Ready to Get Started?</h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Choose the perfect micro SaaS solution for your business needs.
-            </p>
-            <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 font-semibold flex items-center mx-auto">
-              View All Products
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </button>
-          </div>
-        </section>
-      </main>
-
->>>>>>> cursor/fix-errors-and-merge-to-main-d277
+      
       <Footer />
-    </React.Fragment>
-=======
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="bg-white text-blue-900 hover:bg-gray-100 px-8 py-3 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center"
-              >
-                Get Started <ArrowRight className="w-4 h-4 ml-2" />
-              </Link>
-              <Link
-                to="/pricing"
-                className="border border-white text-white hover:bg-white hover:text-blue-900 px-8 py-3 rounded-lg font-medium transition-colors duration-200"
-              >
-                View Pricing
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
   );
 };
-<<<<<<< HEAD
-export default MicroSaasPage;
-  </button>
-  </Link>
-  </Link>
-  </button>
-  </button>
-  </div>
-  </h1>
-  </div>
-  </div>
-  </h1>
-  </div>
-  </section>
-  </div>
-=======
 
 export default MicroSaasPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-d277
