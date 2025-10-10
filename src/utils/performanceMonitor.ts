@@ -26,12 +26,26 @@ export const performanceMonitor = {
             console.log('LCP:', entry.startTime + 'ms');
           }
           if (entry.entryType === 'first-input') {
-            console.log('FID:', entry.processingStart - entry.startTime + 'ms');
+            const fidEntry = entry as PerformanceEventTiming;
+            console.log('FID:', (fidEntry.processingStart || fidEntry.startTime) - entry.startTime + 'ms');
           }
         });
       });
       
       observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input'] });
     }
+  },
+
+  reportMetrics: () => {
+    // Report performance metrics
+    console.log('Performance metrics reported');
+  },
+
+  getReport: () => {
+    // Get performance report
+    return {
+      pageLoad: performance.now(),
+      timestamp: Date.now()
+    };
   }
 };

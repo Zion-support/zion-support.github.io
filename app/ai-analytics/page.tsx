@@ -16,7 +16,7 @@ const AIAnalyticsPage: React.FC = React.memo((props) => {
       icon: BarChart,
       title: 'Real-Time Dashboards',
       description: 'Monitor your business metrics in real-time with customizable, interactive dashboards.',
-      benefits: ['Live data updates', 'Custom widgets', 'Interactive charts', 'Mobile responsive']}
+      benefits: ['Live data updates', 'Custom widgets', 'Interactive charts', 'Mobile responsive']
     },
     {
       icon: Target,

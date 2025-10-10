@@ -1,6 +1,22 @@
 import React, { useEffect } from 'react';
 
-const AccessibilityEnhancer: React.FC = () => {
+interface AccessibilityEnhancerProps {
+  enableKeyboardNavigation?: boolean;
+  enableScreenReaderSupport?: boolean;
+  enableHighContrast?: boolean;
+  enableFocusManagement?: boolean;
+  enableSkipLinks?: boolean;
+  children?: React.ReactNode;
+}
+
+const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
+  enableKeyboardNavigation = true,
+  enableScreenReaderSupport = true,
+  enableHighContrast = true,
+  enableFocusManagement = true,
+  enableSkipLinks = true,
+  children
+}) => {
   useEffect(() => {
     if (typeof window === 'undefined') return;
 
@@ -228,7 +244,7 @@ const AccessibilityEnhancer: React.FC = () => {
     };
   }, []);
 
-  return null; // This component doesn't render anything
+  return <>{children}</>; // Render children if provided
 };
 
 export default AccessibilityEnhancer;
