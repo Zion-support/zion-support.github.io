@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import './app/styles/futuristic.css';
 import './app/styles/futuristic-enhanced.css';
-import Navigation from './app/components/Navigation';
+import Navigation from './app/components/EnhancedNavigation';
 import Footer from './app/components/Footer';
 import HomePage from './app/page';
 import { PageLoader } from './app/components/LoadingStates';
@@ -30,6 +30,16 @@ const PricingPage = React.lazy(() => import('./app/pricing/page'));
 const BlogPage = React.lazy(() => import('./app/blog/page'));
 const CaseStudiesPage = React.lazy(() => import('./app/case-studies/page'));
 const CareersPage = React.lazy(() => import('./app/careers/page'));
+
+// Micro SaaS Services
+const ZionAISchedulerPro = React.lazy(() => import('./app/zion-ai-scheduler-pro/page'));
+const ZionAIContentOptimizer = React.lazy(() => import('./app/zion-ai-content-optimizer/page'));
+const ZionAIEmailAutomation = React.lazy(() => import('./app/zion-ai-email-automation/page'));
+const ZionAISocialMediaManager = React.lazy(() => import('./app/zion-ai-social-media-manager/page'));
+
+// IT Services
+const CloudInfrastructureAdvanced = React.lazy(() => import('./app/it-services/cloud-infrastructure-advanced/page'));
+const CybersecurityAdvanced = React.lazy(() => import('./app/it-services/cybersecurity-advanced/page'));
 
 // Performance monitoring hook
 const AppWithPerformanceMonitoring: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -67,6 +77,16 @@ const App: React.FC = () => {
                             <Route path="/blog" element={<BlogPage />} />
                             <Route path="/case-studies" element={<CaseStudiesPage />} />
                             <Route path="/careers" element={<CareersPage />} />
+                            
+                            {/* Micro SaaS Services */}
+                            <Route path="/zion-ai-scheduler-pro" element={<ZionAISchedulerPro />} />
+                            <Route path="/zion-ai-content-optimizer" element={<ZionAIContentOptimizer />} />
+                            <Route path="/zion-ai-email-automation" element={<ZionAIEmailAutomation />} />
+                            <Route path="/zion-ai-social-media-manager" element={<ZionAISocialMediaManager />} />
+                            
+                            {/* IT Services */}
+                            <Route path="/it-services/cloud-infrastructure-advanced" element={<CloudInfrastructureAdvanced />} />
+                            <Route path="/it-services/cybersecurity-advanced" element={<CybersecurityAdvanced />} />
                           </Routes>
                         </Suspense>
                       </main>
