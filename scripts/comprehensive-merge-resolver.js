@@ -27,7 +27,6 @@ function resolveMergeConflicts(filePath) {
     const content = fs.readFileSync(filePath, 'utf8');
     
     // Check if file has merge conflicts;
-    if (content.includes('<<<<<<<') || content.includes('') || content.includes('>>>>>>>')) {
       console.log(`🔧 Resolving merge conflicts in ${filePath}...`);
       
       // Advanced conflict resolution strategy;

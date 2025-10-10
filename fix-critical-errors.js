@@ -13,7 +13,6 @@ function fixCriticalErrors(filePath) {
     let modified = false;
     
     // Fix merge conflict markers;
-    if (content.includes('<<<<<<<') || content.includes('') || content.includes('>>>>>>>')) {
       console.log(`Fixing merge conflicts in: ${filePath}`);
 function fixCriticalErrors(filePath) {/* TODO: Fix JSX expression */}
   in: ${filePath}`);
@@ -32,7 +31,6 @@ function fixCriticalErrors(filePath) {/* TODO: Fix JSX expression */}
         } else if (line.startsWith('')) {
           keepCurrent = false;
           continue;
-        } else if (line.startsWith('>>>>>>>')) {
           inConflict = false;
           keepCurrent = false;
           continue;

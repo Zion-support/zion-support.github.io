@@ -9,7 +9,6 @@ function resolveConflicts(filePath) {
     const content = readFileSync(filePath, 'utf8');
     
     // Check if file has conflict markers;
-    if (!content.includes('') && !content.includes('') && !content.includes('>>>>>>>')) {
       return false; // No conflicts;
     }
 
@@ -33,7 +32,6 @@ function resolveConflicts(filePath) {
         continue;
       }
       
-      if (line.includes('>>>>>>>')) {
         continue;
       }
       

@@ -3,6 +3,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import { Zap } from 'lucide-react';
 
 const MicroSaasPage: React.FC = () => {
   const microSaasProducts = [
@@ -53,6 +54,53 @@ const MicroSaasPage: React.FC = () => {
   return (
     <>
       <Helmet>
+        <title>Micro SaaS Solutions - Zion Tech Group | AI-Powered Business Tools</title>
+        <meta name="description" content="Discover our micro SaaS solutions designed for small to medium businesses. AI-powered tools for analytics, CRM, security, and more." />
+        <meta name="keywords" content="micro SaaS, business tools, AI analytics, CRM, security monitoring, small business software" />
+      </Helmet>
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              Micro SaaS
+              <span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                Solutions
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Powerful, affordable AI-powered tools designed specifically for small to medium businesses.
+            </p>
+          </div>
+        </section>
+
+        {/* Products Grid */}
+        <section className="py-16 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {microSaasProducts.map((product, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300">
+                  <div className="text-4xl mb-4">{product.icon}</div>
+                  <h3 className="text-xl font-semibold text-white mb-2">{product.title}</h3>
+                  <p className="text-gray-300 mb-4">{product.description}</p>
+                  <ul className="space-y-2 mb-6">
+                    {product.features.map((feature, idx) => (
+                      <li key={idx} className="text-gray-300 flex items-center">
+                        <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></span>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="flex justify-between items-center">
+                    <span className="text-2xl font-bold text-cyan-400">{product.price}</span>
+                    <span className="text-gray-400 text-sm">{product.users}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
         {/* CTA Section */}
         <section className="py-20 px-4">
