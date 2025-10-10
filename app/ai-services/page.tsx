@@ -987,7 +987,6 @@ const AiServicesPage: React.FC = () => {
       icon: Mic
     },
     {
-<<<<<<< HEAD
       id: 'ai-content-generation',
       name: 'AI Content Generation Pro',
       description: 'Advanced content generation platform with multi-format support and brand consistency',
@@ -1012,25 +1011,15 @@ const AiServicesPage: React.FC = () => {
       category: 'Content Generation',
       popular: true,
       icon: FileText
-=======
-      title: 'AI-Powered Parenting Assistant',
-      description: 'Intelligent parenting support with child development monitoring and activity recommendations.',
-      icon: '👶',
-      price: 'Starting at $1,500/month',
-      features: ['Development monitoring', 'Activity recommendations', 'Safety alerts', 'Progress tracking', 'Expert guidance'],
-      benefits: ['Support child development', 'Improve parenting confidence', 'Ensure child safety'],
-      marketPrice: '$2,500-6,000/month',
-      category: 'Family AI',
-      technologies: ['Child Development Models', 'Safety Monitoring', 'Custom Family Models', 'Mobile Apps', 'Expert Systems']
     },
     {
-      title: 'AI-Powered Elderly Care',
+      id: 'ai-elderly-care',
+      name: 'AI-Powered Elderly Care',
       description: 'Intelligent elderly care monitoring with health tracking and safety assistance.',
-      icon: '👴',
       price: 'Starting at $2,500/month',
+      marketPrice: '$4,000-10,000/month',
       features: ['Health monitoring', 'Safety assistance', 'Medication reminders', 'Emergency alerts', 'Family communication'],
       benefits: ['Improve elderly care', 'Ensure safety', 'Reduce care costs'],
-      marketPrice: '$4,000-10,000/month',
       category: 'Elderly Care AI',
       technologies: ['Health Monitoring', 'Safety Systems', 'Custom Care Models', 'IoT Integration', 'Mobile Apps']
     },
@@ -1143,9 +1132,8 @@ const AiServicesPage: React.FC = () => {
       marketPrice: '$15,000-40,000/month',
       category: 'Smart City AI',
       technologies: ['City Data Integration', 'Citizen Services', 'Custom City Models', 'IoT Networks', 'Analytics Platforms'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a8d8
-    }
+        contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+      }
   ]
 
   const categories = [
