@@ -1,13 +1,19 @@
 'use client';
-import React from 'react';
-'use client';
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Phone, Mail, MessageCircle, Clock, CheckCircle, Search } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import { Phone, Mail, MessageCircle, Clock, CheckCircle, Search, ChevronDown } from 'lucide-react';
 
 const SupportPage: React.FC = () => {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+
+  const categories = [
+    { id: 'all', name: 'All Topics' },
+    { id: 'general', name: 'General' },
+    { id: 'technical', name: 'Technical' },
+    { id: 'billing', name: 'Billing' },
+    { id: 'implementation', name: 'Implementation' }
+  ];
 
   const faqs = [
     {
@@ -27,11 +33,28 @@ const SupportPage: React.FC = () => {
     },
     {
       question: 'Do you offer training for our team?',
-      answer: 'Yes, we provide comprehensive training programs to ensure your team can effectively use and maintain the AI solutions.'
+      answer: 'Yes, we provide comprehensive training programs to ensure your team can effectively use and maintain the AI solutions.',
+      category: 'general'
     },
     {
       question: 'What if we need custom modifications?',
-      answer: 'Our team can develop custom features and modifications to meet your specific business requirements.'
+      answer: 'Our team can develop custom features and modifications to meet your specific business requirements.',
+      category: 'technical'
+    },
+    {
+      question: 'How do I access my account dashboard?',
+      answer: 'You can access your dashboard by logging in with your credentials at our client portal. If you need help, contact our support team.',
+      category: 'technical'
+    },
+    {
+      question: 'What are your pricing options?',
+      answer: 'We offer flexible pricing plans based on your needs. Contact our sales team for a customized quote.',
+      category: 'billing'
+    },
+    {
+      question: 'Do you provide data migration services?',
+      answer: 'Yes, we offer comprehensive data migration services to help you transition from your current systems to our solutions.',
+      category: 'implementation'
     }
   ];
 
@@ -48,15 +71,23 @@ const SupportPage: React.FC = () => {
       title: 'Email Support',
       description: 'Get detailed responses to your questions',
       contact: 'support@ziontechgroup.com',
-      hours: '24/7'
+      availability: '24/7'
     },
     {
       icon: MessageCircle,
       title: 'Live Chat',
+      description: 'Chat with our support team in real-time',
       contact: 'Available on website',
       availability: '24/7'
     }
   ];
+
+  const filteredFaqs = faqs.filter(faq => {
+    const matchesSearch = faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         faq.answer.toLowerCase().includes(searchQuery.toLowerCase());
+    const matchesCategory = selectedCategory === 'all' || faq.category === selectedCategory;
+    return matchesSearch && matchesCategory;
+  });
 
   return (
     <>
@@ -65,8 +96,6 @@ const SupportPage: React.FC = () => {
         <meta name="description" content="Get technical support and help for your AI and IT solutions. 24/7 support, documentation, and expert assistance from Zion Tech Group." />
         <meta name="keywords" content="technical support, AI support, IT help, customer service, documentation, troubleshooting" />
       </Helmet>
-      
-      <Navigation />
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
@@ -125,6 +154,8 @@ const SupportPage: React.FC = () => {
           </div>
         </section>
 
+        {/* Contact Channels */}
+        <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -136,7 +167,7 @@ const SupportPage: React.FC = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {supportChannels.map((channel, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300">
+                <div key={index} className="cyber-card hologram-card p-6 text-center hover:scale-105 transition-all duration-300">
                   <div className="w-16 h-16 bg-cyan-500 rounded-lg flex items-center justify-center mx-auto mb-4">
                     <channel.icon className="w-8 h-8 text-white" />
                   </div>
@@ -158,12 +189,24 @@ const SupportPage: React.FC = () => {
               <p className="text-xl text-gray-300">Find answers to common questions</p>
             </div>
             <div className="space-y-6">
-              {faqs.map((faq, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
+              {filteredFaqs.map((faq, index) => (
+                <div key={index} className="cyber-card hologram-card p-6">
                   <h3 className="text-lg font-semibold text-white mb-3">{faq.question}</h3>
                   <p className="text-gray-300">{faq.answer}</p>
                 </div>
               ))}
+              
+              {filteredFaqs.length === 0 && (
+                <div className="text-center py-12">
+                  <div className="cyber-card hologram-card p-8 max-w-md mx-auto">
+                    <Search className="w-16 h-16 text-gray-400 mx-auto mb-4" />
+                    <h3 className="text-xl font-semibold text-white mb-2">No Results Found</h3>
+                    <p className="text-gray-400">
+                      Try adjusting your search terms or category filter.
+                    </p>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </section>
@@ -171,7 +214,7 @@ const SupportPage: React.FC = () => {
         {/* Support Hours */}
         <section className="py-16 px-4">
           <div className="max-w-4xl mx-auto">
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8">
+            <div className="cyber-card hologram-card p-8">
               <div className="text-center mb-8">
                 <h2 className="text-3xl font-bold text-white mb-4">Support Hours</h2>
                 <p className="text-xl text-gray-300">We're here when you need us</p>
@@ -191,9 +234,51 @@ const SupportPage: React.FC = () => {
             </div>
           </div>
         </section>
+
+        {/* Documentation Section */}
+        <section className="py-16 px-4 bg-gray-900/50">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-white mb-4">Documentation & Resources</h2>
+              <p className="text-gray-300">Access our comprehensive guides and resources</p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="cyber-card hologram-card p-6 text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <CheckCircle className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">Quick Start Guide</h3>
+                <p className="text-gray-300 mb-4">Get up and running with our solutions in minutes</p>
+                <a href="#" className="text-cyan-400 hover:text-cyan-300 font-medium">
+                  Read Guide →
+                </a>
+              </div>
+              
+              <div className="cyber-card hologram-card p-6 text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <Clock className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">API Documentation</h3>
+                <p className="text-gray-300 mb-4">Complete API reference and integration guides</p>
+                <a href="#" className="text-cyan-400 hover:text-cyan-300 font-medium">
+                  View Docs →
+                </a>
+              </div>
+              
+              <div className="cyber-card hologram-card p-6 text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-500 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <MessageCircle className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">Video Tutorials</h3>
+                <p className="text-gray-300 mb-4">Step-by-step video guides for all features</p>
+                <a href="#" className="text-cyan-400 hover:text-cyan-300 font-medium">
+                  Watch Videos →
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
-      
-      <Footer />
     </>
   );
 };

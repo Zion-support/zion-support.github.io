@@ -1,6 +1,4 @@
 'use client';
-import React from 'react';
-'use client';
 import React, { useState, useEffect } from 'react';
 import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, TrendingUp, Users, Award, Clock } from 'lucide-react';
 
@@ -50,40 +48,6 @@ const ContentStatistics: React.FC = () => {
     }
   ];
 
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
-    },
-    {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
-    },
-    {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
-    }
-  ];
-
-  const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ];
-
   useEffect(() => {
     const duration = 2000; // 2 seconds
     const steps = 60;
@@ -113,6 +77,49 @@ const ContentStatistics: React.FC = () => {
   }, []);
 
   return (
+    <div className="py-16 px-4">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl font-bold text-white mb-4 neon-text">Our Impact in Numbers</h2>
+          <p className="text-xl text-gray-300">Proven results that speak for themselves</p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {statistics.map((stat, index) => (
+            <div key={index} className="cyber-card hologram-card p-8 text-center hover:scale-105 transition-all duration-300">
+              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                {React.createElement(stat.icon, { className: "w-8 h-8 text-white" })}
+              </div>
+              <div className={`text-4xl font-bold mb-2 ${stat.color}`}>
+                {stat.value}{stat.suffix}
+              </div>
+              <div className="text-gray-300 font-semibold">{stat.label}</div>
+            </div>
+          ))}
+        </div>
+
+        {/* Additional Stats */}
+        <div className="mt-16">
+          <div className="cyber-card hologram-card p-8">
+            <div className="text-center mb-8">
+              <h3 className="text-2xl font-bold text-white mb-4">Key Achievements</h3>
+              <p className="text-gray-300">Milestones that define our success</p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="text-center">
+                <div className="text-3xl font-bold text-cyan-400 mb-2">$50M+</div>
+                <div className="text-gray-300">Cost Savings Delivered</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-green-400 mb-2">300%</div>
+                <div className="text-gray-300">Average ROI</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-purple-400 mb-2">99.9%</div>
+                <div className="text-gray-300">Uptime Guarantee</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
