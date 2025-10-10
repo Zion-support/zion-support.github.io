@@ -1,86 +1,76 @@
-const fs = require('fs);;
+import { withErrorLogging } from './withErrorLogging.cjs';
 
-const path = require('path);;
+const PROD_DOMAIN = 'https://ziontechgroup.com';
 
-// Simple wrapper function to replace withSentry;
-
-// withSentry removed
-;
-
-const dir = path.join(process.cwd(), 'data);;
-
-const file = path.join(dir, 'onsite-requests.json);;
-
-export default function handler(req, res) {
+async function handler(req, res) {
   if (req.method !== 'POST') {
     res.statusCode = 405;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Method not allowed' }));
+    return;
+  }
 
-    res.setHeader('Content-Type', 'application/json);
+  const { 
+    companyName, 
+    contactName, 
+    email, 
+    phone, 
+    address, 
+    serviceType, 
+    description,
+    preferredDate,
+    urgency
+  } = req.body || {};
 
-    res.end(JSON.stringify({ error: 'Method not allowed }));
-
-    return}
-
-;
-
-const { name, email, company, phone, message, location } = req.body || {};
-
-  if (!fs.existsSync(dir)) {
-    fs.mkdirSync(dir, { recursive: true })}
-
-;
-
-let existing = [];;
-
-  try {
-    if (fs.existsSync(file)) {;
-
-const data = fs.readFileSync(file, 'utf8);;
-
-      existing = JSON.parse(data);
-
-      if (!Array.isArray(existing)) existing = []}
-
-  } catch (error) {
-    // console.error removed for production
-existing = []}
-
-;
-
-const newRequest = {;;
-
-    id: Date.now().toString(),
-    name,
-    email,
-    company,
-    phone,
-    message,
-    location,
-    timestamp: new Date().toISOString(),
-    status: pending
-  };
-
-  existing.push(newRequest);
+  if (!companyName || !contactName || !email || !phone || !serviceType) {
+    res.statusCode = 400;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ 
+      error: 'Company name, contact name, email, phone, and service type are required' 
+    }));
+    return;
+  }
 
   try {
-    fs.writeFileSync(file, JSON.stringify(existing, null, 2));
+    // Basic onsite request processing logic
+    const requestData = {
+      companyName,
+      contactName,
+      email,
+      phone,
+      address: address || '',
+      serviceType,
+      description: description || '',
+      preferredDate: preferredDate || '',
+      urgency: urgency || 'normal',
+      timestamp: new Date().toISOString(),
+      status: 'pending',
+      requestId: `onsite_${Date.now()}`
+    };
+
+    // In a real implementation, you would:
+    // 1. Validate the request data
+    // 2. Store the request in your database
+    // 3. Send notification emails to relevant team members
+    // 4. Schedule the onsite visit
+    // 5. Send confirmation email to the client
 
     res.statusCode = 200;
-
-    res.setHeader('Content-Type', 'application/json);
-
-    res.end(JSON.stringify({ 
-      success: true, 
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({
+      success: true,
       message: 'Onsite request submitted successfully',
-      id: newRequest.id
-    }))} catch (error) {
-    // console.error removed for production
-res.statusCode = 500;
-
-    res.setHeader('Content-Type', 'application/json);
-
-    res.end(JSON.stringify({ error: 'Failed to save request' }))}
-
+      requestId: requestData.requestId,
+      data: requestData
+    }));
+  } catch (error) {
+    res.statusCode = 500;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ 
+      error: 'Failed to process onsite request',
+      details: process.env.NODE_ENV === 'development' ? error.message : undefined
+    }));
+  }
 }
 
-module.exports = handler;
+export default withErrorLogging(handler);

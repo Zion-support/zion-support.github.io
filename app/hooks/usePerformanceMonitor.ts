@@ -1,195 +1,207 @@
-import { useEffect, useCallback } from react;
+import { useEffect, useCallback } from 'react';
 
-export const usePerformanceMonitor = () => {;;;
-
-  const measurePerformance = useCallback(() => {;;;
-
-<<<<<<< HEAD
+export const usePerformanceMonitor = () => {
+  const measurePerformance = useCallback(() => {
     // Measure page load time
-    if (typeof window !== 'undefined' && 'performance in window) {
-      const navigation = performance.getEntriesByType(navigation)[0] as PerformanceNavigationTiming;;
-
-      if (navigation) {
-        const loadTime = navigation.loadEventEnd - navigation.loadEventStart;;
-
-        const domContentLoaded = navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart;;
-
-        // Track performance metrics
-        if (typeof window !== 'undefined && window.gtag) {
-          window.gtag('event', 'performance_metric, {
-            event_category: 'Performance,
-            event_label: 'Page Load Time,
-=======
-export const usePerformanceMonitor = () => {}
-  const measurePerformance = useCallback(() => {}
-    // Measure page load time
-    if (typeof window !== 'undefined' && 'performance' in window) {}
+    if (typeof window !== 'undefined' && 'performance' in window) {
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       
-      if (navigation) {}
+      if (navigation) {
         const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
         const domContentLoaded = navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart;
         
         // Track performance metrics
-        if (typeof window !== 'undefined' && window.gtag) {}
-          window.gtag('event', 'performance_metric', {}
+        if (typeof window !== 'undefined' && window.gtag) {
+          window.gtag('event', 'performance_metric', {
             event_category: 'Performance',
             event_label: 'Page Load Time',
->>>>>>> cursor/fix-errors-and-merge-to-main-d054
             value: Math.round(loadTime)
           });
-
-        }
-
-      }
-
-    }
-
-  }, []);
-
-<<<<<<< HEAD
-  const measureResourceTiming = useCallback(() => {;;
-
-    if (typeof window !== 'undefined' && 'performance in window) {
-      const resources = performance.getEntriesByType(resource);;
-
-      resources.forEach((resource: PerformanceResourceTiming) => {
-        const loadTime = resource.responseEnd - resource.startTime;;
-
-        // Track slow resources
-        if (loadTime > 1000) {
-          if (typeof window !== 'undefined && window.gtag) {
-            window.gtag('event', 'slow_resource, {
-              event_category: 'Performance,
-=======
-  const measureResourceTiming = useCallback(() => {}
-    if (typeof window !== 'undefined' && 'performance' in window) {}
-      const resources = performance.getEntriesByType('resource');
-      
-      resources.forEach((resource: PerformanceResourceTiming) => {}
-        const loadTime = resource.responseEnd - resource.startTime;
-        
-        // Track slow resources
-        if (loadTime > 1000) {}
-          if (typeof window !== 'undefined' && window.gtag) {}
-            window.gtag('event', 'slow_resource', {}
-              event_category: 'Performance',
->>>>>>> cursor/fix-errors-and-merge-to-main-d054
-              event_label: resource.name,
-              value: Math.round(loadTime)
-            });
-
-          }
-
-        }
-
-      });
-
-    }
-
-  }, []);
-
-<<<<<<< HEAD
-  const measureMemoryUsage = useCallback(() => {;;
-
-    if (typeof window !== 'undefined' && 'performance in window && (performance as any).memory) {
-      const memory = (performance as any).memory;;
-
-      const memoryUsage = {;;
-
-=======
-  const measureMemoryUsage = useCallback(() => {}
-    if (typeof window !== 'undefined' && 'performance' in window && (performance as any).memory) {}
-      const memory = (performance as any).memory;
-      const memoryUsage = {}
->>>>>>> cursor/fix-errors-and-merge-to-main-d054
-        used: Math.round(memory.usedJSHeapSize / 1024 / 1024),
-        total: Math.round(memory.totalJSHeapSize / 1024 / 1024),
-        limit: Math.round(memory.jsHeapSizeLimit / 1024 / 1024)
-      };
-<<<<<<< HEAD
-
-      if (memoryUsage.used > memoryUsage.limit * 0.8) {
-        if (typeof window !== 'undefined && window.gtag) {
-          window.gtag('event', 'high_memory_usage, {
-            event_category: 'Performance,
-            event_label: 'Memory Usage,
-=======
-      
-      if (memoryUsage.used > memoryUsage.limit * 0.8) {}
-        if (typeof window !== 'undefined' && window.gtag) {}
-          window.gtag('event', 'high_memory_usage', {}
+          
+          window.gtag('event', 'performance_metric', {
             event_category: 'Performance',
-            event_label: 'Memory Usage',
->>>>>>> cursor/fix-errors-and-merge-to-main-d054
-            value: memoryUsage.used
+            event_label: 'DOM Content Loaded',
+            value: Math.round(domContentLoaded)
           });
-
         }
-
       }
-
     }
-
   }, []);
 
-<<<<<<< HEAD
-  useEffect(() => {
-    const handleLoad = () => {;;
+  const measureWebVitals = useCallback(() => {
+    if (typeof window === 'undefined') return;
 
-=======
-  useEffect(() => {}
-    const handleLoad = () => {}
->>>>>>> cursor/fix-errors-and-merge-to-main-d054
-      measurePerformance();
+    // First Contentful Paint
+    const fcpObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      entries.forEach((entry) => {
+        if (entry.entryType === 'paint' && entry.name === 'first-contentful-paint') {
+          const fcp = entry.startTime;
+          
+          if (window.gtag) {
+            window.gtag('event', 'performance_metric', {
+              event_category: 'Web Vitals',
+              event_label: 'First Contentful Paint',
+              value: Math.round(fcp)
+            });
+          }
+        }
+      });
+    });
 
-      measureResourceTiming();
+    fcpObserver.observe({ entryTypes: ['paint'] });
 
-      measureMemoryUsage();
+    // Largest Contentful Paint
+    const lcpObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      const lastEntry = entries[entries.length - 1];
+      
+      if (lastEntry) {
+        const lcp = lastEntry.startTime;
+        
+        if (window.gtag) {
+          window.gtag('event', 'performance_metric', {
+            event_category: 'Web Vitals',
+            event_label: 'Largest Contentful Paint',
+            value: Math.round(lcp)
+          });
+        }
+      }
+    });
 
-    };
+    lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
 
-<<<<<<< HEAD
-    if (document.readyState === 'complete) {
-=======
-    if (document.readyState === 'complete') {}
->>>>>>> cursor/fix-errors-and-merge-to-main-d054
-      handleLoad();
+    // First Input Delay
+    const fidObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      entries.forEach((entry) => {
+        const fid = entry.processingStart - entry.startTime;
+        
+        if (window.gtag) {
+          window.gtag('event', 'performance_metric', {
+            event_category: 'Web Vitals',
+            event_label: 'First Input Delay',
+            value: Math.round(fid)
+          });
+        }
+      });
+    });
 
-    } else {
-<<<<<<< HEAD
-      window.addEventListener(load, handleLoad);
+    fidObserver.observe({ entryTypes: ['first-input'] });
 
-=======
-      window.addEventListener('load', handleLoad);}
->>>>>>> cursor/fix-errors-and-merge-to-main-d054
-    }
+    // Cumulative Layout Shift
+    let clsValue = 0;
+    const clsObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      entries.forEach((entry: any) => {
+        if (!entry.hadRecentInput) {
+          clsValue += entry.value;
+        }
+      });
+      
+      if (window.gtag) {
+        window.gtag('event', 'performance_metric', {
+          event_category: 'Web Vitals',
+          event_label: 'Cumulative Layout Shift',
+          value: Math.round(clsValue * 1000) // Convert to millis
+        });
+      }
+    });
 
-    // Set up periodic monitoring
-    const performanceInterval = setInterval(measureResourceTiming, 30000);;
+    clsObserver.observe({ entryTypes: ['layout-shift'] });
 
-    const memoryInterval = setInterval(measureMemoryUsage, 60000);;
-
-<<<<<<< HEAD
+    // Cleanup observers
     return () => {
-      window.removeEventListener(load, handleLoad);
-
-=======
-    return () => {}
-      window.removeEventListener('load', handleLoad);
->>>>>>> cursor/fix-errors-and-merge-to-main-d054
-      clearInterval(performanceInterval);
-
-      clearInterval(memoryInterval);
-
+      fcpObserver.disconnect();
+      lcpObserver.disconnect();
+      fidObserver.disconnect();
+      clsObserver.disconnect();
     };
+  }, []);
 
-  }, [measurePerformance, measureResourceTiming, measureMemoryUsage]);
+  const measureResourceTiming = useCallback(() => {
+    if (typeof window === 'undefined') return;
 
-  return {}
+    const resourceObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      entries.forEach((entry) => {
+        if (entry.entryType === 'resource') {
+          const resource = entry as PerformanceResourceTiming;
+          const loadTime = resource.responseEnd - resource.requestStart;
+          
+          // Only track slow resources (> 1 second)
+          if (loadTime > 1000) {
+            if (window.gtag) {
+              window.gtag('event', 'performance_metric', {
+                event_category: 'Resource Timing',
+                event_label: resource.name,
+                value: Math.round(loadTime)
+              });
+            }
+          }
+        }
+      });
+    });
+
+    resourceObserver.observe({ entryTypes: ['resource'] });
+
+    return () => {
+      resourceObserver.disconnect();
+    };
+  }, []);
+
+  const measureUserTiming = useCallback(() => {
+    if (typeof window === 'undefined') return;
+
+    const userTimingObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      entries.forEach((entry) => {
+        if (entry.entryType === 'measure') {
+          const measure = entry as PerformanceMeasure;
+          
+          if (window.gtag) {
+            window.gtag('event', 'performance_metric', {
+              event_category: 'User Timing',
+              event_label: measure.name,
+              value: Math.round(measure.duration)
+            });
+          }
+        }
+      });
+    });
+
+    userTimingObserver.observe({ entryTypes: ['measure'] });
+
+    return () => {
+      userTimingObserver.disconnect();
+    };
+  }, []);
+
+  useEffect(() => {
+    // Measure performance on component mount
+    measurePerformance();
+    
+    // Set up web vitals monitoring
+    const cleanupWebVitals = measureWebVitals();
+    
+    // Set up resource timing monitoring
+    const cleanupResourceTiming = measureResourceTiming();
+    
+    // Set up user timing monitoring
+    const cleanupUserTiming = measureUserTiming();
+
+    // Cleanup on unmount
+    return () => {
+      if (cleanupWebVitals) cleanupWebVitals();
+      if (cleanupResourceTiming) cleanupResourceTiming();
+      if (cleanupUserTiming) cleanupUserTiming();
+    };
+  }, [measurePerformance, measureWebVitals, measureResourceTiming, measureUserTiming]);
+
+  return {
     measurePerformance,
+    measureWebVitals,
     measureResourceTiming,
-    measureMemoryUsage
+    measureUserTiming
   };
-
 };
