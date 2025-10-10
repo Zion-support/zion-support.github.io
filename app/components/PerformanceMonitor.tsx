@@ -1,108 +1,187 @@
-'use client';
-import { useEffect } from 'react';
-import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
+import React, { useEffect } from 'react';
 
 interface PerformanceMonitorProps {
-  enableReporting?: boolean;
-  enableConsoleLogging?: boolean;
+  enableWebVitals?: boolean;
+  enableResourceTiming?: boolean;
+  enableMemoryMonitoring?: boolean;
+  enableNetworkMonitoring?: boolean;
+  enableUserTiming?: boolean;
+  enableLongTaskMonitoring?: boolean;
+  enableLayoutShiftMonitoring?: boolean;
+  enableAnalytics?: boolean;
+  enableErrorReporting?: boolean;
+  performanceBudget?: {
+    lcp?: number;
+    fid?: number;
+    cls?: number;
+    fcp?: number;
+    ttfb?: number;
+  };
 }
 
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
-  enableReporting = true,
-  enableConsoleLogging = false
+  enableWebVitals = true,
+  enableResourceTiming = true,
+  enableMemoryMonitoring = true,
+  enableNetworkMonitoring = true,
+  enableUserTiming = true,
+  enableLongTaskMonitoring = true,
+  enableLayoutShiftMonitoring = true,
+  enableAnalytics = true,
+  enableErrorReporting = true,
+  performanceBudget = {
+    lcp: 2500,
+    fid: 100,
+    cls: 0.1,
+    fcp: 1800,
+    ttfb: 600
+  }
 }) => {
   useEffect(() => {
-    if (!enableReporting) return;
+    if (typeof window === 'undefined') return;
 
-    const reportMetric = (metric: any) => {
-      if (enableConsoleLogging) {
-        console.log('Performance Metric:', metric);
-      }
-
-      // Send to analytics
-      if (typeof window !== 'undefined' && 'gtag' in window) {
-        (window as any).gtag('event', 'web_vitals', {
-          event_category: 'Performance',
-          event_label: metric.name,
-          value: Math.round(metric.value),
-          non_interaction: true,
-        });
-      }
-
-      // Send to custom analytics endpoint
-      if (typeof window !== 'undefined' && navigator.sendBeacon) {
-        const data = JSON.stringify({
-          name: metric.name,
-          value: metric.value,
-          delta: metric.delta,
-          id: metric.id,
-          navigationType: metric.navigationType,
-          timestamp: Date.now(),
-          url: window.location.href,
-          userAgent: navigator.userAgent,
+    // Web Vitals monitoring
+    if (enableWebVitals) {
+      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
+        getCLS((metric) => {
+          if (enableAnalytics && 'gtag' in window) {
+            (window as any).gtag('event', 'web_vitals', {
+              event_category: 'Performance',
+              event_label: 'CLS',
+              value: Math.round(metric.value * 1000)
+            });
+          }
         });
 
-        navigator.sendBeacon('/api/analytics/performance', data);
-      }
-    };
+        getFID((metric) => {
+          if (enableAnalytics && 'gtag' in window) {
+            (window as any).gtag('event', 'web_vitals', {
+              event_category: 'Performance',
+              event_label: 'FID',
+              value: Math.round(metric.value)
+            });
+          }
+        });
 
-    // Measure Core Web Vitals
-    getCLS(reportMetric);
-    getFID(reportMetric);
-    getFCP(reportMetric);
-    getLCP(reportMetric);
-    getTTFB(reportMetric);
+        getFCP((metric) => {
+          if (enableAnalytics && 'gtag' in window) {
+            (window as any).gtag('event', 'web_vitals', {
+              event_category: 'Performance',
+              event_label: 'FCP',
+              value: Math.round(metric.value)
+            });
+          }
+        });
 
-    // Additional performance monitoring
-    const measurePageLoad = () => {
-      if (typeof window !== 'undefined' && window.performance) {
-        const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        
-        if (navigation) {
-          const metrics = {
-            name: 'page_load_time',
-            value: navigation.loadEventEnd - navigation.fetchStart,
-            delta: navigation.loadEventEnd - navigation.fetchStart,
-            id: 'page-load',
-            navigationType: navigation.type,
-          };
-          
-          reportMetric(metrics);
-        }
-      }
-    };
+        getLCP((metric) => {
+          if (enableAnalytics && 'gtag' in window) {
+            (window as any).gtag('event', 'web_vitals', {
+              event_category: 'Performance',
+              event_label: 'LCP',
+              value: Math.round(metric.value)
+            });
+          }
+        });
 
-    // Measure when page is fully loaded
-    if (document.readyState === 'complete') {
-      measurePageLoad();
-    } else {
-      window.addEventListener('load', measurePageLoad);
+        getTTFB((metric) => {
+          if (enableAnalytics && 'gtag' in window) {
+            (window as any).gtag('event', 'web_vitals', {
+              event_category: 'Performance',
+              event_label: 'TTFB',
+              value: Math.round(metric.value)
+            });
+          }
+        });
+      });
     }
 
-    // Monitor memory usage (if available)
-    const measureMemory = () => {
-      if (typeof window !== 'undefined' && 'memory' in performance) {
+    // Resource timing monitoring
+    if (enableResourceTiming) {
+      const observer = new PerformanceObserver((list) => {
+        list.getEntries().forEach((entry) => {
+          if (enableAnalytics && 'gtag' in window) {
+            (window as any).gtag('event', 'resource_timing', {
+              event_category: 'Performance',
+              event_label: entry.name,
+              value: Math.round(entry.duration)
+            });
+          }
+        });
+      });
+      observer.observe({ entryTypes: ['resource'] });
+    }
+
+    // Memory monitoring
+    if (enableMemoryMonitoring && 'memory' in performance) {
+      const checkMemory = () => {
         const memory = (performance as any).memory;
-        const memoryMetrics = {
-          name: 'memory_usage',
-          value: memory.usedJSHeapSize / 1024 / 1024, // Convert to MB
-          delta: memory.usedJSHeapSize / 1024 / 1024,
-          id: 'memory-usage',
-          navigationType: 'navigate',
-        };
-        
-        reportMetric(memoryMetrics);
-      }
-    };
+        if (memory && enableAnalytics && 'gtag' in window) {
+          (window as any).gtag('event', 'memory_usage', {
+            event_category: 'Performance',
+            event_label: 'Memory',
+            value: Math.round(memory.usedJSHeapSize / 1024 / 1024) // MB
+          });
+        }
+      };
+      
+      setInterval(checkMemory, 30000); // Check every 30 seconds
+    }
 
-    // Measure memory usage periodically
-    const memoryInterval = setInterval(measureMemory, 30000); // Every 30 seconds
+    // Long task monitoring
+    if (enableLongTaskMonitoring) {
+      const observer = new PerformanceObserver((list) => {
+        list.getEntries().forEach((entry) => {
+          if (enableAnalytics && 'gtag' in window) {
+            (window as any).gtag('event', 'long_task', {
+              event_category: 'Performance',
+              event_label: 'Long Task',
+              value: Math.round(entry.duration)
+            });
+          }
+        });
+      });
+      observer.observe({ entryTypes: ['longtask'] });
+    }
 
-    return () => {
-      window.removeEventListener('load', measurePageLoad);
-      clearInterval(memoryInterval);
-    };
-  }, [enableReporting, enableConsoleLogging]);
+    // Layout shift monitoring
+    if (enableLayoutShiftMonitoring) {
+      const observer = new PerformanceObserver((list) => {
+        list.getEntries().forEach((entry) => {
+          if (enableAnalytics && 'gtag' in window) {
+            (window as any).gtag('event', 'layout_shift', {
+              event_category: 'Performance',
+              event_label: 'Layout Shift',
+              value: Math.round(entry.value * 1000)
+            });
+          }
+        });
+      });
+      observer.observe({ entryTypes: ['layout-shift'] });
+    }
+
+    // Error reporting
+    if (enableErrorReporting) {
+      window.addEventListener('error', (event) => {
+        if (enableAnalytics && 'gtag' in window) {
+          (window as any).gtag('event', 'javascript_error', {
+            event_category: 'Error',
+            event_label: event.message,
+            value: 1
+          });
+        }
+      });
+
+      window.addEventListener('unhandledrejection', (event) => {
+        if (enableAnalytics && 'gtag' in window) {
+          (window as any).gtag('event', 'unhandled_promise_rejection', {
+            event_category: 'Error',
+            event_label: event.reason?.toString() || 'Unknown',
+            value: 1
+          });
+        }
+      });
+    }
+  }, []);
 
   return null;
 };
