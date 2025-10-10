@@ -1,5 +1,5 @@
 import React, { useState, useEffect, memo } from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
 
 const Navigation: React.FC = memo(() => {
@@ -194,10 +194,10 @@ const Navigation: React.FC = memo(() => {
 
           {/* Desktop Menu */}
           <div className="hidden lg:flex space-x-8">
-            <Link to="/" className="text-white hover:text-cyan-400 transition-colors font-medium">
+            <Link href="/" className="text-white hover:text-cyan-400 transition-colors font-medium">
               Home
             </Link>
-            <Link to="/about" className="text-white hover:text-cyan-400 transition-colors font-medium">              
+            <Link href="/about" className="text-white hover:text-cyan-400 transition-colors font-medium">              
               About
             </Link>
 
@@ -229,7 +229,7 @@ const Navigation: React.FC = memo(() => {
                             {category.services.slice(0, 6).map((service, serviceIndex) => (
                               <Link
                                 key={serviceIndex}
-                                to={service.path}
+                                href={service.path}
                                 className="block px-3 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-cyan-400 rounded-lg transition-colors"
                                 onClick={closeAllMenus}
                               >
@@ -241,7 +241,7 @@ const Navigation: React.FC = memo(() => {
                             ))}
                             {category.services.length > 6 && (
                               <Link
-                                to={`/${category.title.toLowerCase().replace(' ', '-')}`}
+                                href={`/${category.title.toLowerCase().replace(' ', '-')}`}
                                 className="block px-3 py-2 text-sm text-purple-600 hover:bg-purple-50 rounded-lg transition-colors font-medium"
                                 onClick={closeAllMenus}
                               >
@@ -254,7 +254,7 @@ const Navigation: React.FC = memo(() => {
                     </div>
                     <div className="border-t border-gray-700 mt-6 pt-4 px-6">
                       <Link
-                        to="/services"
+                        href="/services"
                         className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all"
                         onClick={closeAllMenus}
                       >
@@ -267,7 +267,7 @@ const Navigation: React.FC = memo(() => {
             </div>
 
             <Link 
-              to="/case-studies" 
+              href="/case-studies" 
               className="font-medium transition-colors hover:text-cyan-400 text-white"
               onClick={closeAllMenus}
             >
@@ -275,7 +275,7 @@ const Navigation: React.FC = memo(() => {
             </Link>
 
             <Link
-              to="/blog"
+              href="/blog"
               className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
               onClick={closeAllMenus}
             >
@@ -283,7 +283,7 @@ const Navigation: React.FC = memo(() => {
             </Link>
 
             <Link
-              to="/contact"
+              href="/contact"
               className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
               onClick={closeAllMenus}
             >
@@ -292,7 +292,7 @@ const Navigation: React.FC = memo(() => {
 
             {/* CTA Button */}
             <Link
-              to="/contact"
+              href="/contact"
               className="cyber-button inline-flex items-center"
               onClick={closeAllMenus}
             >
@@ -318,14 +318,14 @@ const Navigation: React.FC = memo(() => {
           <div className="lg:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 bg-gray-900/95 backdrop-blur-sm rounded-lg mt-2">
               <Link
-                to="/"
+                href="/"
                 className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
                 onClick={closeAllMenus}
               >
                 Home
               </Link>
               <Link
-                to="/about"
+                href="/about"
                 className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
                 onClick={closeAllMenus}
               >
@@ -353,14 +353,14 @@ const Navigation: React.FC = memo(() => {
                           {category.services.slice(0, 3).map((service, serviceIndex) => (
                             <Link
                               key={serviceIndex}
-                              to={service.path}
+                              href={service.path}
                               className="block text-xs text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-1"
                             >
                               {typeof service.icon === 'string' ? service.icon : <service.icon className="w-3 h-3 inline mr-1" />} {service.name}
                             </Link>
                           ))}
                           <Link
-                            to="/services"
+                            href="/services"
                             className="block text-xs text-cyan-400 hover:text-cyan-300 transition-colors duration-300 py-1 font-medium"
                           >
                             View All →
@@ -373,7 +373,7 @@ const Navigation: React.FC = memo(() => {
               </div>
 
               <Link
-                to="/case-studies"
+                href="/case-studies"
                 className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
                 onClick={closeAllMenus}
               >
@@ -381,7 +381,7 @@ const Navigation: React.FC = memo(() => {
               </Link>
 
               <Link
-                to="/blog"
+                href="/blog"
                 className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
                 onClick={closeAllMenus}
               >
@@ -389,7 +389,7 @@ const Navigation: React.FC = memo(() => {
               </Link>
 
               <Link
-                to="/contact"
+                href="/contact"
                 className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
                 onClick={closeAllMenus}
               >

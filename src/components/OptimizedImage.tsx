@@ -1,26 +1,37 @@
 import React from 'react';
 
 interface OptimizedImageProps {
+  src: string;
+  alt: string;
+  width?: number;
+  height?: number;
   className?: string;
-  children?: React.ReactNode;
+  priority?: boolean;
 }
 
-export default function OptimizedImage({ 
-  className = '', 
-  children 
-}: OptimizedImageProps) {
+const OptimizedImage: React.FC<OptimizedImageProps> = ({
+  src,
+  alt,
+  width,
+  height,
+  className = '',
+  priority = false
+}) => {
   return (
-    <div className={`optimizedimage ${className}`}>
-      {children || (
-        <div className="p-4">
-          <h3 className="text-lg font-semibold mb-2">
-            Optimized Image
-          </h3>
-          <p className="text-gray-600">
-            Component content will be added here.
-          </p>
-        </div>
-      )}
-    </div>
+    <img
+      src={src}
+      alt={alt}
+      width={width}
+      height={height}
+      className={`${className}`}
+      loading={priority ? 'eager' : 'lazy'}
+      decoding="async"
+      style={{
+        width: width ? `${width}px` : 'auto',
+        height: height ? `${height}px` : 'auto'
+      }}
+    />
   );
-}
+};
+
+export default OptimizedImage;
