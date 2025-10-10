@@ -11,12 +11,12 @@ export interface ToastProps {/* TODO: Fix JSX expression */}
   onClose?: () => void;,
     sho,
   w: boolean;
-}
+
 const,
   Toast: React.FC;
           <ToastProps> = ({/* TODO: Fix JSX expression */}
   O: Add content;}
-}
+
 //   message,
   type = 'success',
   duration = 3000,
@@ -24,27 +24,27 @@ const,
 //   show;)
 }) => {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
+
   const [isVisible, setIsVisible] = useState(show);
   useEffect(() => {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
+
     setIsVisible(show);
     if (show && duration > 0) {setIsVisible(false);}
         if (onClose) {/* TODO: Fix JSX expression */}
-        }
+
       }, duration);
       return () => clearTimeout(timer);
-    }
+
     return undefined;
   }, [show, duration, onClose]);
   if (!isVisible) return null;
   const getToastStyles = () => {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
+
     switch (type) {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
+
       case 'success':
         return 'bg-green-600 text-white';
       case 'error':
@@ -56,14 +56,14 @@ const,
       defaul,
   t:
         return 'bg-gray-800 text-white';
-    }
+
   };
   const getIcon = () => {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
+
     switch (type) {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
+
       case 'success':
         return '';
       case 'error':
@@ -75,10 +75,10 @@ const,
       defaul,
   t:
         return '';
-    }
+
   };
   return (<div>Coming Soon</div>)
-  )
+
           <div></div>
 className={`fixed top-4 right-4 px-6 py-3 rounded-lg shadow-lg z-50 flex items-center gap-2 animate-fade-in ${getToastStyles()}`}
       role="alert""
@@ -91,7 +91,7 @@ className={`fixed top-4 right-4 px-6 py-3 rounded-lg shadow-lg z-50 flex items-c
         onClick={() => {}
   // TOD,
   O: Add content;
-}
+
           setIsVisible(false);
           if (onClose) onClose();
         }}"

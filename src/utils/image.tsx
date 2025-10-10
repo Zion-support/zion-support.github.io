@@ -1,7 +1,7 @@
 'use client';
 import React, { useState, useCallback } from 'react';
-const Image: React.FC = () => {
-interface ImageProps {
+const Image: React.FC = () => {}
+interface ImageProps {}
   src: string;
   alt: string;
   width?: number;
@@ -16,8 +16,8 @@ interface ImageProps {
   style?: React.CSSProperties;
   onLoad?: () => void;
   onError?: () => void;
-}
-export const Image: React.FC<ImageProps> = ({
+
+export const Image: React.FC<ImageProps> = ({}
   src,
   alt,
   width,
@@ -33,20 +33,20 @@ export const Image: React.FC<ImageProps> = ({
   onLoad,
   onError,
   ...props
-}) => {
+}) => {}
   const [, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
-  const _handleLoad = useCallback(() => {
+  const _handleLoad = useCallback(() => {}
     setIsLoaded(true);
     if (onLoad) onLoad();
   }, [onLoad]);
-  const handleError = useCallback(() => {
+  const handleError = useCallback(() => {}
     setHasError(true);
     if (onError) onError();
   }, [onError]);
-  const imageStyle: React.CSSProperties = {
+  const imageStyle: React.CSSProperties = {}
     ...style,
-    ...(fill && {
+    ...(fill && {}
       position: 'absolute',
       top: 0,
       left: 0,
@@ -55,8 +55,8 @@ export const Image: React.FC<ImageProps> = ({
       objectFit:     ,
 $4})
   };
-  if (hasError) {
-    return (
+  if (hasError) {}
+    return ()
       <div
         className={`bg-gray-200 flex items-center justify-center ${className}`}
         style={imageStyle}
@@ -65,8 +65,8 @@ $4})
         <span className="text-gray-500 text-sm">Failed to load image</span>
       </div>
     );
-  }
-  return (
+
+  return ()
     <img
       src={src}
       alt={alt}
@@ -104,10 +104,10 @@ const,
   style?: React.CSSProperties;
   onLoad?: () => void;
   onError?: () => void;
-}
+
 export const Image: React.FC;
           <ImageProps> = ({// TODO: Add content;}
-}
+
 //   src,
 //   alt,
 //   width,
@@ -124,25 +124,25 @@ quality = 75,
 //   onError,
 //   ...props;
 }) => {// TODO: Add content;}
-}
+
   const [, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
   const _handleLoad = useCallback(() => {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
+
     setIsLoaded(true);
     if (onLoad) onLoad();
   }, [onLoad]);
   const handleError = useCallback(() => {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
+
     setHasError(true);
     if (onError) onError();
   }, [onError]);
   const,
   imageStyle: React.CSSProperties = {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
+
 //     ...style,
     ...(fill && {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -157,10 +157,10 @@ quality = 75,
   };
   if (hasError) {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
-    return (
+
+    return ()
           <div>Coming Soon</div>
-  )
+
           <div></div>
 className={`bg-gray-200 flex items-center justify-center ${className}`}
         style={imageStyle}
@@ -168,10 +168,10 @@ className={`bg-gray-200 flex items-center justify-center ${className}`}
 // >
           <span className="text-gray-500 text-sm">Failed to load image</span>
       </div>
-    )
-  }
+
+
   return (<div>Coming Soon</div>)
-  )
+
           <img></img>
       src={src}
       alt={alt}
@@ -185,8 +185,8 @@ className={`bg-gray-200 flex items-center justify-center ${className}`}
       onError={handleError}
       {...props}
 //     />
-  )
-}
+
+
 export default Image;"`
   </ImageProps>
   </ImageProps>

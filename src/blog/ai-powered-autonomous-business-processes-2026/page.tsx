@@ -4,7 +4,7 @@ import { ArrowLeft } from 'lucide-react';
 // Metadata removed for Vite compatibility;
 export default function AutonomousBusinessProcessesBlog() {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
+
   return (<div className="min-h-screen bg-gray-50"><div className="max-w-4xl mx-auto px-4 py-8"><div className="bg-white rounded-lg shadow-lg p-8"><div className="mb-6"><Link href="/blog" className="text-indigo-600,"
   hover:text-indigo-700 flex items-center mb-4"><ArrowLeft className="w-4 h-4 mr-2" /></ArrowLeft>
               Back to Blog;"
@@ -30,7 +30,7 @@ export default function AutonomousBusinessProcessesBlog() {/* TODO: Fix JSX expr
   Hub:</strong> Real-time system health and performance</li></ul><h2 className="text-2xl font-bold text-gray-900 mb-6">🚀 Implementation Strategy</h2><p className="text-gray-700 mb-6"></p>
               The path to autonomous operations requires a systematic approach across multiple business,
   functions:"
-            </p><h3 className="text-xl font-semibold text-gray-800 mb-4">Phase,")
+            </p><h3 className="text-xl font-semibold text-gray-800 mb-4">Phase,")</h3>
   1: Foundation (Months 1-6)</h3><ul className="list-disc list-inside text-gray-700 mb-4 space-y-2"><li>• Deploy AI decision engines for core business processes</li><li>• Implement automated workflow orchestration</li><li>• Establish real-time monitoring and alerting</li><li>• Train AI models on historical business data</li></ul><h2 className="text-2xl font-bold text-gray-900 mb-6">💰 ROI & Impact</h2><p className="text-gray-700 mb-6"></p>
               Autonomous business processes deliver measurable value across multiple,
   dimensions:"

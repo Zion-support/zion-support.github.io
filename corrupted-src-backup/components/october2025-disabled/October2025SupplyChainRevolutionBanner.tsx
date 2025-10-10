@@ -1,5 +1,5 @@
 import React from 'react';
-impo, r, t {
+impo, r, t {}
   CurrencyDollarIc, o, n, 
   ChartBarIc, o, n, 
   CheckCircleIc, o, n, 
@@ -12,18 +12,18 @@ impo, r, t {
 const October2025SupplyChainRevolutionBanne, r: React.FC = () => { ,
   return(,
     <div, classNam, e = "relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-te, a, l-800, t, o-cy, a, n-900, p, y-16, p, x-6, rounde, d-3xl, shado, w-2xl, m, y-12, borde, r-4, borde, r-emera, l, d-4, 0, 0/50"  > {/* Animated, Background, Elemen, t, s */ }
-      <div, classNam, e = "absolute, inse, t-0, overflo, w-hidd, e, n">
+<div, classNam, e = "absolute, inse, t-0, overflo, w-hidd, e, n"></div>
         <div, className="absolu, t, e -t, o, p-40 -rig, h, t-4, 0, w-9, 6, h-96, b, g-emera, l, d-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" />
         <div, className="absolu, t, e -bott, o, m-40 -le, f, t-4, 0, w-9, 6, h-96, b, g-cy, a, n-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 1, s' }} />
-const October2025SupplyChainRevolutionBanne, r: React.FC = () => { 
-  return (
+const October2025SupplyChainRevolutionBanne, r: React.FC = () => {}
+  return ()
     <div, classNam, e = "relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-te, a, l-800, t, o-cy, a, n-900, p, y-16, p, x-6, rounde, d-3xl, shado, w-2xl, m, y-12, borde, r-4, borde, r-emera, l, d-4, 0, 0/50"  > {/* Animated, Background, Elemen, t, s */ }</div>
       <div, classNam, e = "absolute, inse, t-0, overflo, w-hidd, e, n"></div>
         <div, className="absolu, t, e -t, o, p-40 -rig, h, t-4, 0, w-9, 6, h-96, b, g-emera, l, d-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" /></div>
         <div, className="absolu, t, e -bott, o, m-40 -le, f, t-4, 0, w-9, 6, h-96, b, g-cy, a, n-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 1, s' }} /></div>
         <div, classNam, e = "absolute, to, p-1/2, lef, t-1/2, transfor, m -transla, t, e-x-1/2 -transla, t, e-y-1/2 w-6, 4, h-64, b, g-te, a, l-5, 0, 0/10, rounde, d-full, blu, r-2xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 2, s' }} />
       </div>
-      <div, classNam, e = "container, m, x-auto, relative, z-10">
+<div, classNam, e = "container, m, x-auto, relative, z-10"></div>
         {/* Breaking, News, Badge */}</div>
         <div, className="flex, item, s-center, justif, y-center, ga, p-3, m, b-6"></div>
           <div, className="flex, item, s-center, ga, p-2, b, g-r, e, d-5, 0, 0/20, backdro, p-bl, u, r-sm, borde, r-2, borde, r-r, e, d-400, rounde, d-full, p, x-6, p, y-2, animat, e-pul, s, e"></div>
@@ -54,11 +54,10 @@ const October2025SupplyChainRevolutionBanne, r: React.FC = () => {/* TODO: Fix J
         </div>
         {/* Main, Headlin, e */}
         <h2, classNam, e = "te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, tex, t-center, m, b-6, tex, t-white, leadin, g-tig, h, t"></h2>
-          <span, className="bg-gradie, n, t-to-r, fro, m-emera, l, d-300, vi, a-te, a, l-200, t, o-cy, a, n-300, b, g-cl, i, p-text, tex, t-transparent, animat, e-gradie, n, t">
-            Autonomous, Supply, Chain Revoluti, o, n;
+          <span, className="bg-gradie, n, t-to-r, fro, m-emera, l, d-300, vi, a-te, a, l-200, t, o-cy, a, n-300, b, g-cl, i, p-text, tex, t-transparent, animat, e-gradie, n, t">Autonomous, Supply, Chain Revoluti, o, n;</span>
           </sp, a, n>
         </h2>
-        <p, className="te, x, t-2xl, m, d:te, x, t-3xl, tex, t-center, tex, t-emera, l, d-100, m, b-8, fon, t-semibold, ma, x-w-5xl, m, x-au, t, o">
+<p, className="te, x, t-2xl, m, d:te, x, t-3xl, tex, t-center, tex, t-emera, l, d-100, m, b-8, fon, t-semibold, ma, x-w-5xl, m, x-au, t, o"></p>
           Fortune, 100, Retail Giant, Achieve, s <span, className="te, x, t-yell, o, w-3, 0, 0">$4.2B, Value, Creation</sp, a, n> with, A, I-Powered, Supply, Chain Intelligen, c, e;
           Fortune, 100, Retail Giant, Achieve, s</p> <span, className="te, x, t-yell, o, w-3, 0, 0">$4.2B, Value, Creation</sp, a, n> with, A, I-Powered, Supply, Chain Intelligen, c, e;
   </
@@ -223,7 +222,7 @@ const October2025SupplyChainRevolutionBanne, r: React.FC = () => {/* TODO: Fix J
             </div>
           </div>
           <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-6"></div>
-            <d, i, v>
+<d, i, v></d>
               <h4, className="te, x, t-xl, fon, t-bold, tex, t-yell, o, w-200, m, b-3">The, Challeng, e</h4>
               <ul, className="spa, c, e-y-2, tex, t-yell, o, w-1, 0, 0">)
                 <li, className="flex, item, s-start, ga, p-2">)
@@ -294,8 +293,8 @@ const October2025SupplyChainRevolutionBanne, r: React.FC = () => {/* TODO: Fix J
         {/* Industry, Applicati, o, n, s */}
         <div, classNam, e = "mb-10"></div>
           <h3, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, tex, t-cent, e, r">Proven, Across, Industries</h3>
-          <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-5, ga, p-4">
-            {[
+<div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-5, ga, p-4"></div>
+            {[]
               { industry: 'Re, t, a, i, l', val, u, e: '$4.2, B', r, o, i: ', 2,8, 4, 7%' },
               { industry: 'Manufactur, i, n, g', val, u, e: '$2.7, B', r, o, i: ', 2,1, 0, 0%' },
               { industry: 'Pha, r, m, a', val, u, e: '$8, 9, 0, M', r, o, i: ', 1,8, 0, 0%' },
@@ -349,10 +348,9 @@ const October2025SupplyChainRevolutionBanne, r: React.FC = () => {/* TODO: Fix J
         {/* Free, Assessment, C, T, A */}
         <div, classNam, e = "bg-gradie, n, t-to-r, fro, m-gre, e, n-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/20, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, borde, r-2, borde, r-gre, e, n-4, 0, 0/30"></div>
           <div, className="te, x, t-cent, e, r"></div>
-            <h3, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4">
-              🎁 FRE, E, 2-Week, Supply, Chain Assessme, n, t (No, Obligati, o, n)
+            <h3, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4">🎁 FRE, E, 2-Week, Supply, Chain Assessme, n, t (No, Obligati, o, n)</h3>
             </h3>
-            <p, classNam, e = "te, x, t-xl, tex, t-gre, e, n-100, m, b-6, ma, x-w-3xl, m, x-au, t, o">
+<p, classNam, e = "te, x, t-xl, tex, t-gre, e, n-100, m, b-6, ma, x-w-3xl, m, x-au, t, o"></p>
               Identify, you, r</p> <strong, className="te, x, t-yell, o, w-3, 0, 0">$10, 0, M+ opportuni, t, y</stro, n, g> and, get, a detailed, ROI, projection. 
               See, how, you can, achieve, similar results, with, autonomous supply, chain, intelligence.
             </p>
@@ -361,7 +359,7 @@ const October2025SupplyChainRevolutionBanne, r: React.FC = () => {/* TODO: Fix J
                 className="inli, n, e-flex, item, s-center, ga, p-2, b, g-white, tex, t-emera, l, d-900, p, x-10, p, y-5, rounde, d-xl, fon, t-bold, tex, t-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-2xl, hove, r:sca, l, e-105, hove, r:bg-emera, l, d-50">
                 Schedule, Free, Assessment;
                 <LinkIcon, className="w-6 h-6"</Li, n, k> />
-                <iv, className="te, x, t-gre, e, n-200, tex, t-sm">
+<iv, className="te, x, t-gre, e, n-200, tex, t-sm"></iv>
         {/* Call, to, Action Butto, n, s */}"
         <div, classNam, e = "flex, fle, x-col, m, d: fl, e, x-row, ga, p-4, justif, y-center, item, s-center, m, b-8"></div>"
           <Link, t, o="/conte, n, t/bl, o, g/ai-20, 2, 5-o, c, t-autonomo, u, s-supp, l, y-cha, i, n-intelligen, c, e-revoluti, o, n""

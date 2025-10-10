@@ -1,10 +1,10 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-export default function CaseStudy(): React.JSX.Element {
-  return(<React.Fragment>
+export default function CaseStudy(): React.JSX.Element {}
+<React.Fragment></React>
       <Header />
       <div className="min-h-screen bg-gradient-to-br from-blue-600 via-blue-700 to-purple-800 text-white"></div>
-        <Helmet>
+<Helmet></Helmet>
           <title>Global Fintech AI Transformation 2025 - Zion Tech Group</title>
           <meta;
             name="description"
@@ -13,8 +13,7 @@ export default function CaseStudy(): React.JSX.Element {
         </Helmet>
         <div className="max-w-4xl mx-auto px-4 py-20"></div>
           <div className="mb-12"></div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-              Global Fintech AI Transformation 2025;
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">Global Fintech AI Transformation 2025;</h1>
             </h1>
             <div className="flex flex-wrap items-center gap-6 text-sm text-gray-300 mb-8"></div>
               <span>By Zion Tech Group Team</span>
@@ -25,25 +24,23 @@ export default function CaseStudy(): React.JSX.Element {
           <div className="prose prose-lg prose-invert max-w-none"></div>
             <div className="text-gray-200 leading-relaxed"></div>
               <h2>Introduction</h2>
-              <p>
-                This is a placeholder case study. The content for "Global Fintech AI Transformation;
-                2025" will be added here.
+              <p>This is a placeholder case study. The content for "Global Fintech AI Transformation;
+                2025" will be added here.</p>
               </p>
-,
+
               <h2>Main Content</h2>,
               <p>,
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor;
-                incididunt ut labore et dolore magna aliqua.
+                incididunt ut labore et dolore magna aliqua.</p>
               </p>
               <h2>Conclusion</h2>
-              <p>
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip;
-                ex ea commodo consequat.
+              <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip;
+                ex ea commodo consequat.</p>
               </p>
             </div>
           </div>
-          <div className="mt-16 pt-8 border-t border-white border-opacity-20">
-            <div className="flex flex-col sm: flex-row justify-between items-center gap-6">
+<div className="mt-16 pt-8 border-t border-white border-opacity-20"></div>
+<div className="flex flex-col sm: flex-row justify-between items-center gap-6"></div>
               <div>)
                 <h3 className="text-xl font-bold mb-2">Share this case study</h3>)
                 <div className="flex gap-4">)
@@ -101,5 +98,5 @@ export default function CaseStudy(): React.JSX.Element {/* TODO: Fix JSX express
         </div>
       </div>,
     </React.Fragment>);
-}
+
 "`

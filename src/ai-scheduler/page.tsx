@@ -2,9 +2,9 @@
 import React from 'react';
 import {Calendar, Users, Zap, Brain, Shield, CheckCircle, Star, Phone, Target} from 'lucide-react';
 import { Link } from 'react-router-dom';
-const AISchedulerPage: React.FC = () => {
-  const features = [
-    {
+const AISchedulerPage: React.FC = () => {}
+  const features = []
+    {}
       icon: Calendar,
       title: 'Smart Scheduling',
       description: 'AI-powered scheduling that automatically finds the best meeting times based on availability, preferences, and time zones.',
@@ -32,12 +32,12 @@ iconicon: Shield,
       benefit:     ,
 $4}
   ];
-  const pricingPlans = [
+  const pricingPlans = []
       name: 'Personal',
       price: '$19',
       period: '/month',
       description: 'Perfect for individuals',
-      features: [
+      features: []
         'Unlimited personal meetings',
         'Basic AI scheduling',
         'Calendar integration',
@@ -69,7 +69,7 @@ $4}
         'White-label options',
         'SSO integration',
         'Custom workflows'
-  const integrations = [
+  const integrations = []
     { name: 'Google Calendar', icon: '📅', description: 'Seamless Google integration' },
     { name: 'Outlook', icon: '📧', description: 'Microsoft Office 365' },
     { name: 'Zoom', icon: '🎥', description: 'Video conferencing' },
@@ -78,7 +78,7 @@ $4}
     { name: 'Calendly', icon: '⏰', description: 'Scheduling platform' },
     { name: 'Salesforce', icon: '💼', description: 'CRM integration' },
     { name: 'HubSpot', icon: '🎯', description: 'Marketing automation' }
-  const testimonials = [
+  const testimonials = []
       name: 'Jennifer Lee',
       company: 'TechStart',
       role: 'Operations Manager',
@@ -92,25 +92,22 @@ $4}
       company: 'Digital Agency',
       role: 'Project Manager',
       content: 'Client meetings are now perfectly coordinated. Our client satisfaction scores improved by 35%.',
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+  return ()
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       {/* Hero Section */}
-      <section className="container mx-auto px-4 py-16 pt-24">
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full mb-6">
+<section className="container mx-auto px-4 py-16 pt-24"></section>
+<div className="text-center mb-16"></div>
+<div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full mb-6"></div>
             <Calendar className="w-10 h-10 text-white" />
           </div>
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            AI Scheduler;
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">AI Scheduler;</h1>
   </
-          <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium">
-            Intelligent Meeting & Event Scheduling;
+          <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium">Intelligent Meeting & Event Scheduling;</p>
   </
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            Never miss another meeting with our AI-powered scheduling assistant. Automatically find 
+          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">Never miss another meeting with our AI-powered scheduling assistant. Automatically find 
             the best meeting times, coordinate complex team schedules, and optimize your calendar 
-            for maximum productivity.
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            for maximum productivity.</p>
+<div className="flex flex-col sm:flex-row gap-4 justify-center items-center"></div>
             <a
               href="tel:+13024640950"
               className="bg-gradient-to-r from-cyan-400 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-purple-600 transition-all duration-300 flex items-center">
@@ -123,8 +120,8 @@ $4}
               Start Free Trial;
   </
         {/* Key Benefits */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
-          <div className="text-center">
+<div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16"></div>
+<div className="text-center"></div>
             <div className="text-4xl font-bold text-cyan-400 mb-2">5+</div>
             <div className="text-white font-semibold mb-2">Hours Saved</div>
             <div className="text-gray-300 text-sm">Per week on scheduling tasks</div>
@@ -138,13 +135,12 @@ $4}
             <div className="text-white font-semibold mb-2">Conflict-Free</div>
             <div className="text-gray-300 text-sm">Scheduling guaranteed</div>
         {/* Features Section */}
-        <section className="mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
-            Smart Scheduling Features;
+<section className="mb-16"></section>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">Smart Scheduling Features;</h2>
   </
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300">
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+            {features.map((feature, index) => ()
+<div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300"></div>
                 <feature.icon className="w-12 h-12 text-cyan-400 mb-4" />
                 <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300 mb-4 leading-relaxed">{feature.description}</p>
@@ -153,67 +149,64 @@ $4}
         </section>
         {/* Integrations Section */}
             Works with Your Favorite Tools
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {integrations.map((integration, index) => (
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 text-center hover:border-cyan-400/40 transition-all duration-300">
+<div className="grid grid-cols-2 md:grid-cols-4 gap-6"></div>
+            {integrations.map((integration, index) => ()
+<div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 text-center hover:border-cyan-400/40 transition-all duration-300"></div>
                 <div className="text-4xl mb-3">{integration.icon}</div>
                 <h3 className="text-lg font-bold text-white mb-2">{integration.name}</h3>
                 <p className="text-gray-300 text-sm">{integration.description}</p>
         {/* Pricing Section */}
             Simple, Transparent Pricing
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricingPlans.map((plan, index) => (
-              <div key={index} className={`bg-slate-800/50 backdrop-blur-sm rounded-lg p-8 border-2 transition-all duration-300 ${
+<div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto"></div>
+            {pricingPlans.map((plan, index) => ()
+              <div key={index} className={`bg-slate-800/50 backdrop-blur-sm rounded-lg p-8 border-2 transition-all duration-300 ${}
                 plan.popular 
                   ? 'border-cyan-400 scale-105' 
                   : 'border-slate-700 hover:border-cyan-500/50'
               }`}>
-                {plan.popular && (
-                  <div className="bg-cyan-400 text-slate-900 px-4 py-2 rounded-full text-sm font-semibold text-center mb-4">
+                {plan.popular && ()
+<div className="bg-cyan-400 text-slate-900 px-4 py-2 rounded-full text-sm font-semibold text-center mb-4"></div>
                     Most Popular
                 )}
                 <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                 <p className="text-gray-300 mb-6">{plan.description}</p>
-                <div className="mb-6">
+<div className="mb-6"></div>
                   <span className="text-4xl font-bold text-white">{plan.price}</span>
                   <span className="text-gray-300">{plan.period}</span>
-                <ul className="space-y-3 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-300">
+<ul className="space-y-3 mb-8"></ul>
+                  {plan.features.map((feature, featureIndex) => ()
+<li key={featureIndex} className="flex items-center text-gray-300"></li>
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                       {feature}
                     </li>
                 </ul>
-                <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${}
                     ? 'bg-gradient-to-r from-cyan-400 to-purple-500 text-white hover:from-cyan-500 hover:to-purple-600'
                     : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white'
                   Get Started;
   </
         {/* Testimonials */}
             What Our Users Say
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
-                <div className="flex items-center mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">{testimonials.map((testimonial, index) => (</button>
+<div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20"></div>
+<div className="flex items-center mb-4"></div>
+                  {[...Array(testimonial.rating)].map((_, i) => ()
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                 <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
-                <div>
+<div></div>
                   <div className="font-semibold text-white">{testimonial.name}</div>
                   <div className="text-cyan-400 text-sm">{testimonial.role}</div>
                   <div className="text-gray-400 text-sm">{testimonial.company}</div>
         {/* CTA Section */}
-        <section className="text-center bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-lg p-12 border border-cyan-500/20">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Master Your Schedule?
-          <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-            Join thousands of professionals using AI Scheduler to eliminate scheduling headaches 
+<section className="text-center bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-lg p-12 border border-cyan-500/20"></section>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Master Your Schedule?</h2>
+          <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">Join thousands of professionals using AI Scheduler to eliminate scheduling headaches 
             and maximize productivity.
   );
 };
 export default AISchedulerPage;
 import { ArrowRight, CheckCircle, Calendar, Clock, Users, Zap, Brain, Target, Shield, Globe, Phone, Mail } from 'lucide-react';
-export default AISchedulerPage;
+export default AISchedulerPage;</p>
   </p>
   </h2>
   </section>

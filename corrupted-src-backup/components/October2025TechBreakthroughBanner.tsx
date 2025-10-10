@@ -1,9 +1,9 @@
-const, October2025TechBreakthroughBanne, r = () => {
+const, October2025TechBreakthroughBanne, r = () => {}
   return(<div, className="relative, b, g-gradie, n, t-to-br, fro, m-cy, a, n-900, vi, a-bl, u, e-900, t, o-indi, g, o-900, overflo, w-hidd, e, n">)
       {/* Animated, Backgroun, d */};)
       <div, className="absolute, inse, t-0, opacit, y-20">)
-  return (
-    <div, className="relative, b, g-gradie, n, t-to-br, fro, m-cy, a, n-900, vi, a-bl, u, e-900, t, o-indi, g, o-900, overflo, w-hidd, e, n">
+  return ()
+<div, className="relative, b, g-gradie, n, t-to-br, fro, m-cy, a, n-900, vi, a-bl, u, e-900, t, o-indi, g, o-900, overflo, w-hidd, e, n"></div>
       {/* Animated, Backgroun, d */};</div>
       <div, className="absolute, inse, t-0, opacit, y-20"></div>
         <div, className="absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle, at, 50% 50%,rg, b, a(1, 2, 0,2, 1, 9,2, 5, 5,0.3),transparent, 5, 0%)]"></d, i, v>
@@ -11,16 +11,16 @@ const, October2025TechBreakthroughBanne, r = () => {
         <div, className="absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle, at, 20% 80%,rg, b, a(99,1, 0, 2,2, 4, 1,0.3),transparent, 5, 0%)]"></d, i, v>
       </d, i, v>
       {/* Animated, Gri, d */}
-      <div, className="absolute, inse, t-0, b, g-[line, a, r-gradie, n, t(rg, b, a(2, 5, 5,2, 5, 5,2, 5, 5,0.03)_1, p, x,transparent_1, p, x),line, a, r-gradie, n, t(90d, e, g,rg, b, a(2, 5, 5,2, 5, 5,2, 5, 5,0.03)_1, p, x,transparent_1, p, x)] bg-[si, z, e: 64px_64, p, x] [ma, s, k-im, a, g;
+      <div, className="absolute, inse, t-0, b, g-[line, a, r-gradie, n, t(rg, b, a(2, 5, 5,2, 5, 5,2, 5, 5,0.03)_1, p, x,transparent_1, p, x),line, a, r-gradie, n, t(90d, e, g,rg, b, a(2, 5, 5,2, 5, 5,2, 5, 5,0.03)_1, p, x,transparent_1, p, x)] bg-[si, z, e: 64px_64, p, x] [ma, s, k-im, a, g;"
   e:radi, a, l-gradie, n, t(ellipse_, 8, 0%_, 5, 0%_at_, 5, 0%_, 5, 0%,#0, 0, 0,transpare, n, t)]"></d, i, v>"
-      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
+      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;"
   g:px-8, p, y-12">"
         {/* Breaking, News, Badge */}</div>
         <div, className="flex, item, s-center, justif, y-center, ga, p-3, m, b-8"></div>
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-6, p, y-2, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-cy, a, n-500, t, o-bl, u, e-500, tex, t-white, fon, t-bold, tex, t-sm, animat, e-pulse, shado, w-lg, shado, w-cy, a, n-5, 0, 0/50"></div>
             <Sparkles, className="w-5 h-5  />
-            <sp, a, n>BREAKTHROUGH, OCTOBER, 1, 20, 2, 5</sp, a, n>
-            <Sparkles, className="w-5 h-5  />
+            <sp, a, n>BREAKTHROUGH, OCTOBER, 1, 20, 2, 5</sp, a, n>"
+            <Sparkles, className="w-5 h-5  />"
     <div, className="relative, b, g-gradie, n, t-to-br, fro, m-cy, a, n-900, vi, a-bl, u, e-900, t, o-indi, g, o-900, overflo, w-hidd, e, n">";
       {/* Animated, Backgroun, d */};</div>
       <div, className="absolute, inse, t-0, opacit, y-20">";</div>
@@ -29,9 +29,9 @@ const, October2025TechBreakthroughBanne, r = () => {
         <div, className="absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle, at, 20% 80%,rg, b, a(99,1, 0, 2,2, 4, 1,0.3),transparent, 5, 0%)]"></d, i, v>";
       </d, i, v>
       {/* Animated, Gri, d */}
-      <div, className="absolute, inse, t-0, b, g-[line, a, r-gradie, n, t(rg, b, a(2, 5, 5,2, 5, 5,2, 5, 5,0.03)_1, p, x,transparent_1, p, x),line, a, r-gradie, n, t(90d, e, g,rg, b, a(2, 5, 5,2, 5, 5,2, 5, 5,0.03)_1, p, x,transparent_1, p, x)] bg-[si, z, e: 64px_64, p, x] [ma, s, k-im, a, g;
+      <div, className="absolute, inse, t-0, b, g-[line, a, r-gradie, n, t(rg, b, a(2, 5, 5,2, 5, 5,2, 5, 5,0.03)_1, p, x,transparent_1, p, x),line, a, r-gradie, n, t(90d, e, g,rg, b, a(2, 5, 5,2, 5, 5,2, 5, 5,0.03)_1, p, x,transparent_1, p, x)] bg-[si, z, e: 64px_64, p, x] [ma, s, k-im, a, g;"
   e:radi, a, l-gradie, n, t(ellipse_, 8, 0%_, 5, 0%_at_, 5, 0%_, 5, 0%,#0, 0, 0,transpare, n, t)]"></d, i, v>";
-      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
+      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;"
   g:px-8, p, y-12">";
         {/* Breaking, News, Badge */}</div>
         <div, className="flex, item, s-center, justif, y-center, ga, p-3, m, b-8">";</div>
@@ -51,7 +51,7 @@ const, October2025TechBreakthroughBanne, r = () => {/* TODO: Fix JSX expression 
         {/* Breaking, News, Badge */}"
         <div, className="flex, item, s-center, justif, y-center, ga, p-3, m, b-8"></div>"
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-6, p, y-2, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-cy, a, n-500, t, o-bl, u, e-500, tex, t-white, fon, t-bold, tex, t-sm, animat, e-pulse, shado, w-lg, shado, w-cy, a, n-5, 0, 0/50"></div>"
-            <Sparkles, className="w-5 h-5  /></Sparkles>
+            <Sparkles, className="w-5 h-5  /></Sparkles>"
             <sp, a, n>BREAKTHROUGH, OCTOBER, 1, 20, 2, 5</sp, a, n>"
             <Sparkles, className="w-5 h-5  /></Sparkles>"
     <div, className="relative, b, g-gradie, n, t-to-br, fro, m-cy, a, n-900, vi, a-bl, u, e-900, t, o-indi, g, o-900, overflo, w-hidd, e, n">";
@@ -75,73 +75,72 @@ const, October2025TechBreakthroughBanne, r = () => {/* TODO: Fix JSX expression 
           </d, i, v>
         </d, i, v>
         {/* Main, Headlin, e */}
-        <div, className="te, x, t-center, m, b-10">
-          <h2, className="te, x, t-4xl, m, d: te, x, t-5x, l, l;
+<div, className="te, x, t-center, m, b-10"></div>
+          <h2, className="te, x, t-4xl, m, d: te, x, t-5x, l, l;"
         <div, className="te, x, t-center, m, b-10"></div>
-          <h2, className="te, x, t-4xl, m, d: te, x, t-5x, l, l
-  g:te, x, t-6xl, fon, t-bold, tex, t-white, m, b-4, leadin, g-tig, h, t">"
-            🚀</h2> <span, className="bg-gradie, n, t-to-r, fro, m-cy, a, n-300, vi, a-bl, u, e-300, t, o-indi, g, o-300, b, g-cl, i, p-text, tex, t-transpare, n, t">
-              3, Revolutionary, Enterprise Technologi, e, s;
+          <h2, className="te, x, t-4xl, m, d: te, x, t-5x, l, l"
+  g:te, x, t-6xl, fon, t-bold, tex, t-white, m, b-4, leadin, g-tig, h, t">"</h2>
+            🚀</h2> <span, className="bg-gradie, n, t-to-r, fro, m-cy, a, n-300, vi, a-bl, u, e-300, t, o-indi, g, o-300, b, g-cl, i, p-text, tex, t-transpare, n, t">3, Revolutionary, Enterprise Technologi, e, s;</span>
             </sp, a, n> 🚀
           </h2>
           <p, className="te, x, t-xl, m, d: te, x, t-2xl, tex, t-cy, a, n-100, fon, t-medi, u, m">"</p>
         <div, className="te, x, t-center, m, b-10">";</div>
-          <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, l, g:te, x, t-6xl, fon, t-bold, tex, t-white, m, b-4, leadin, g-tig, h, t">";
+          <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, l, g:te, x, t-6xl, fon, t-bold, tex, t-white, m, b-4, leadin, g-tig, h, t">";</h2>
             🚀</h2> <span, className="bg-gradie, n, t-to-r, fro, m-cy, a, n-300, vi, a-bl, u, e-300, t, o-indi, g, o-300, b, g-cl, i, p-text, tex, t-transpare, n, t">";
-              3, Revolutionary, Enterprise Technologi, e, s;
+              3, Revolutionary, Enterprise Technologi, e, s;</span>
             </sp, a, n> 🚀
           </h2>
-          <p, className="te, x, t-x, l, m;
+          <p, className="te, x, t-x, l, m;"
         {/* Main, Headlin, e */}"
         <div, className="te, x, t-center, m, b-10"></div>"
           <h2, className="te, x, t-4xl, m, d: te, x, t-5x, l, l,"
-  g:te, x, t-6xl, fon, t-bold, tex, t-white, m, b-4, leadin, g-tig, h, t">""
+  g:te, x, t-6xl, fon, t-bold, tex, t-white, m, b-4, leadin, g-tig, h, t">""</h2>
             🚀 <span, className="bg-gradie, n, t-to-r, fro, m-cy, a, n-300, vi, a-bl, u, e-300, t, o-indi, g, o-300, b, g-cl, i, p-text, tex, t-transpare, n, t"></span>
               3, Revolutionary, Enterprise Technologi, e, s;
             </sp, a, n> 🚀
           </h2>"
-          <p, className="te, x, t-xl, m, d: te, x, t-2xl, tex, t-cy, a, n-100, fon, t-medi, u, m">""
+          <p, className="te, x, t-xl, m, d: te, x, t-2xl, tex, t-cy, a, n-100, fon, t-medi, u, m">""</p>
         <div, className="te, x, t-center, m, b-10">";"
-          <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, l, g:te, x, t-6xl, fon, t-bold, tex, t-white, m, b-4, leadin, g-tig, h, t">";"
+          <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, l, g:te, x, t-6xl, fon, t-bold, tex, t-white, m, b-4, leadin, g-tig, h, t">";"</h2>
             🚀 <span, className="bg-gradie, n, t-to-r, fro, m-cy, a, n-300, vi, a-bl, u, e-300, t, o-indi, g, o-300, b, g-cl, i, p-text, tex, t-transpare, n, t">";
-              3, Revolutionary, Enterprise Technologi, e, s;
+              3, Revolutionary, Enterprise Technologi, e, s;</span>
             </sp, a, n> 🚀
           </h2>"
           <p, className="te, x, t-x, l, m,"
   d: te, x, t-2xl, tex, t-cy, a, n-100, fon, t-medi, u, m">";
-            ⚡ Quant, u, m-Safe, Cryptograph, y • Autonomous, Risk, Management • AI-Powered, Digital, Twins;
+            ⚡ Quant, u, m-Safe, Cryptograph, y • Autonomous, Risk, Management • AI-Powered, Digital, Twins;</p>
           </p>
         </d, i, v>
         {/* Key, Metrics, Grid */}
         <div, className="grid, m, d: gr, i, d-co, l, s-4, ga, p-4, m, b-10">"
-          <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-cy, a, n-4, 0, 0/30, hove, r: bord, e, r-cy, a, n-4, 0, 0/60, transitio, n-all, duratio, n-300, hov, e;
+          <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-cy, a, n-4, 0, 0/30, hove, r: bord, e, r-cy, a, n-4, 0, 0/60, transitio, n-all, duratio, n-300, hov, e;"
   r:sca, l, e-1, 0, 5">"
         <div, className="grid, m, d: gr, i, d-co, l, s-4, ga, p-4, m, b-10">"</div>
-          <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-cy, a, n-4, 0, 0/30, hove, r: bord, e, r-cy, a, n-4, 0, 0/60, transitio, n-all, duratio, n-300, hov, e
+          <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-cy, a, n-4, 0, 0/30, hove, r: bord, e, r-cy, a, n-4, 0, 0/60, transitio, n-all, duratio, n-300, hov, e"
   r:sca, l, e-1, 0, 5">"</div>
             <div, className="te, x, t-cy, a, n-300, tex, t-4xl, fon, t-bold, m, b-2">99.97%</d, i, v>
             <div, className="te, x, t-white, tex, t-sm, fon, t-medi, u, m">Quantum, Attack, Protection</d, i, v>
             <div, className="te, x, t-cy, a, n-200, tex, t-xs, m, t-1">Futu, r, e-Proof, Securit, y</d, i, v>
           </d, i, v>
-          <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-bl, u, e-4, 0, 0/30, hove, r: bord, e, r-bl, u, e-4, 0, 0/60, transitio, n-all, duratio, n-300, hov, e;
+          <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-bl, u, e-4, 0, 0/30, hove, r: bord, e, r-bl, u, e-4, 0, 0/60, transitio, n-all, duratio, n-300, hov, e;"
   r:sca, l, e-1, 0, 5">"
-          <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-bl, u, e-4, 0, 0/30, hove, r: bord, e, r-bl, u, e-4, 0, 0/60, transitio, n-all, duratio, n-300, hov, e
+          <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-bl, u, e-4, 0, 0/30, hove, r: bord, e, r-bl, u, e-4, 0, 0/60, transitio, n-all, duratio, n-300, hov, e"
   r:sca, l, e-1, 0, 5">"</div>
             <div, className="te, x, t-bl, u, e-300, tex, t-4xl, fon, t-bold, m, b-2">98.9%</d, i, v>
             <div, className="te, x, t-white, tex, t-sm, fon, t-medi, u, m">Risk, Prediction, Accuracy</d, i, v>
             <div, className="te, x, t-bl, u, e-200, tex, t-xs, m, t-1">90+ Days, Early, Warning</d, i, v>
           </d, i, v>
-          <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-indi, g, o-4, 0, 0/30, hove, r: bord, e, r-indi, g, o-4, 0, 0/60, transitio, n-all, duratio, n-300, hov, e;
+          <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-indi, g, o-4, 0, 0/30, hove, r: bord, e, r-indi, g, o-4, 0, 0/60, transitio, n-all, duratio, n-300, hov, e;"
   r:sca, l, e-1, 0, 5">"
-          <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-indi, g, o-4, 0, 0/30, hove, r: bord, e, r-indi, g, o-4, 0, 0/60, transitio, n-all, duratio, n-300, hov, e
+          <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-indi, g, o-4, 0, 0/30, hove, r: bord, e, r-indi, g, o-4, 0, 0/60, transitio, n-all, duratio, n-300, hov, e"
   r:sca, l, e-1, 0, 5">"</div>
             <div, className="te, x, t-indi, g, o-300, tex, t-4xl, fon, t-bold, m, b-2">99.4%</d, i, v>
             <div, className="te, x, t-white, tex, t-sm, fon, t-medi, u, m">Digital, Twin, Accuracy</d, i, v>
             <div, className="te, x, t-indi, g, o-200, tex, t-xs, m, t-1">Re, a, l-World, Fidelit, y</d, i, v>
           </d, i, v>
-          <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-purp, l, e-4, 0, 0/30, hove, r: bord, e, r-purp, l, e-4, 0, 0/60, transitio, n-all, duratio, n-300, hov, e;
+          <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-purp, l, e-4, 0, 0/30, hove, r: bord, e, r-purp, l, e-4, 0, 0/60, transitio, n-all, duratio, n-300, hov, e;"
   r:sca, l, e-1, 0, 5">"
-          <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-purp, l, e-4, 0, 0/30, hove, r: bord, e, r-purp, l, e-4, 0, 0/60, transitio, n-all, duratio, n-300, hov, e
+          <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-purp, l, e-4, 0, 0/30, hove, r: bord, e, r-purp, l, e-4, 0, 0/60, transitio, n-all, duratio, n-300, hov, e"
   r:sca, l, e-1, 0, 5">"</div>
             <div, className="te, x, t-purp, l, e-300, tex, t-4xl, fon, t-bold, m, b-2">$15, 1, B</d, i, v>
             <div, className="te, x, t-white, tex, t-sm, fon, t-medi, u, m">Combined, Annual, Value</d, i, v>
@@ -162,9 +161,9 @@ const, October2025TechBreakthroughBanne, r = () => {/* TODO: Fix JSX expression 
             <div, className="te, x, t-white, tex, t-sm, fon, t-medi, u, m">Digital, Twin, Accuracy</d, i, v>";
             <div, className="te, x, t-indi, g, o-200, tex, t-xs, m, t-1">Re, a, l-World, Fidelit, y</d, i, v>";
           </d, i, v>
-          <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-purp, l, e-4, 0, 0/30, hove, r: bord, e, r-purp, l, e-4, 0, 0/60, transitio, n-all, duratio, n-300, hov, e;
+          <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-purp, l, e-4, 0, 0/30, hove, r: bord, e, r-purp, l, e-4, 0, 0/60, transitio, n-all, duratio, n-300, hov, e;"
   r:sca, l, e-1, 0, 5">";
-          <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-purp, l, e-4, 0, 0/30, hove, r: bord, e, r-purp, l, e-4, 0, 0/60, transitio, n-all, duratio, n-300, hov, e
+          <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-purp, l, e-4, 0, 0/30, hove, r: bord, e, r-purp, l, e-4, 0, 0/60, transitio, n-all, duratio, n-300, hov, e"
   r:sca, l, e-1, 0, 5">";</div>
             <div, className="te, x, t-purp, l, e-300, tex, t-4xl, fon, t-bold, m, b-2">$15, 1, B</d, i, v>";
             <div, className="te, x, t-white, tex, t-sm, fon, t-medi, u, m">Combined, Annual, Value</d, i, v>";
@@ -219,16 +218,16 @@ const, October2025TechBreakthroughBanne, r = () => {/* TODO: Fix JSX expression 
         {/* Featured, Content, Cards */}"
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-10">"
           {/* Quant, u, m-Safe, Cryptograph, y */}
-          <div, className="group, b, g-gradie, n, t-to-br, fro, m-cy, a, n-9, 0, 0/80, t, o-cy, a, n-9, 5, 0/80, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-cy, a, n-4, 0, 0/30, hove, r: bord, e, r-cy, a, n-400, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hove, r:shad, o, w-cy, a, n-5, 0, 0/30, hov, e;
+          <div, className="group, b, g-gradie, n, t-to-br, fro, m-cy, a, n-9, 0, 0/80, t, o-cy, a, n-9, 5, 0/80, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-cy, a, n-4, 0, 0/30, hove, r: bord, e, r-cy, a, n-400, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hove, r:shad, o, w-cy, a, n-5, 0, 0/30, hov, e;"
   r:sca, l, e-1, 0, 5">"
-            <div, className="flex, item, s-center, ga, p-3, m, b-4">
+<div, className="flex, item, s-center, ga, p-3, m, b-4"></div>
               <div, className="p-3, rounde, d-xl, b, g-cy, a, n-5, 0, 0/20, grou, p-hov, e, r: bg-cy, a, n-5, 0, 0/30, transitio, n-colo, r, s">"
           {/* Quant, u, m-Safe, Cryptograph, y */}</div>
-          <div, className="group, b, g-gradie, n, t-to-br, fro, m-cy, a, n-9, 0, 0/80, t, o-cy, a, n-9, 5, 0/80, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-cy, a, n-4, 0, 0/30, hove, r: bord, e, r-cy, a, n-400, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hove, r:shad, o, w-cy, a, n-5, 0, 0/30, hov, e
+          <div, className="group, b, g-gradie, n, t-to-br, fro, m-cy, a, n-9, 0, 0/80, t, o-cy, a, n-9, 5, 0/80, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-cy, a, n-4, 0, 0/30, hove, r: bord, e, r-cy, a, n-400, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hove, r:shad, o, w-cy, a, n-5, 0, 0/30, hov, e"
   r:sca, l, e-1, 0, 5">"</div>
             <div, className="flex, item, s-center, ga, p-3, m, b-4"></div>
               <div, className="p-3, rounde, d-xl, b, g-cy, a, n-5, 0, 0/20, grou, p-hov, e, r: bg-cy, a, n-5, 0, 0/30, transitio, n-colo, r, s">"</div>
-                <Lock, className="w-8 h-8, tex, t-cy, a, n-3, 0, 0  />
+                <Lock, className="w-8 h-8, tex, t-cy, a, n-3, 0, 0  />"
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-10">";
           {/* Quant, u, m-Safe, Cryptograph, y */}</div>
           <div, className="group, b, g-gradie, n, t-to-br, fro, m-cy, a, n-9, 0, 0/80, t, o-cy, a, n-9, 5, 0/80, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-cy, a, n-4, 0, 0/30, hove, r: bord, e, r-cy, a, n-400, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hove, r:shad, o, w-cy, a, n-5, 0, 0/30, hove, r:sca, l, e-1, 0, 5">";</div>
@@ -241,27 +240,27 @@ const, October2025TechBreakthroughBanne, r = () => {/* TODO: Fix JSX expression 
                 <div, className="te, x, t-sm, tex, t-cy, a, n-100, fon, t-medi, u, m">NI, S, T-Approv, e, d • Producti, o, n-Rea, d, y</d, i, v>";
               </d, i, v>
             </d, i, v>
-            <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e;
+            <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e;"
   r: te, x, t-cy, a, n-300, transitio, n-colo, r, s">"
-              Quant, u, m-Safe, Cryptography, Revolution;
+              Quant, u, m-Safe, Cryptography, Revolution;</h3>
             </h3>
             <div, className="spa, c, e-y-2, m, b-4"></div>
               <div, className="flex, item, s-center, ga, p-2, tex, t-cy, a, n-100, tex, t-sm"></div>
                 <Shield, className="w-4 h-4, tex, t-cy, a, n-4, 0, 0  />
                 <sp, a, n>99.97% Quantum, Attack, Protection</sp, a, n>
-              </d, i, v>
+              </d, i, v>"
               <div, className="flex, item, s-center, ga, p-2, tex, t-cy, a, n-100, tex, t-sm"></div>
                 <Zap, className="w-4 h-4, tex, t-cy, a, n-4, 0, 0  />
                 <sp, a, n>67% Cost, Reduction, vs Lega, c, y</sp, a, n>
-              </d, i, v>
+              </d, i, v>"
               <div, className="flex, item, s-center, ga, p-2, tex, t-cy, a, n-100, tex, t-sm"></div>
                 <Target, className="w-4 h-4, tex, t-cy, a, n-4, 0, 0  />
                 <sp, a, n>$78.3B, Digital, Assets Protect, e, d</sp, a, n>
-              </d, i, v>
+              </d, i, v>"
               <div, className="flex, item, s-center, ga, p-2, tex, t-cy, a, n-100, tex, t-sm"></div>
-                <Award, className="w-4 h-4, tex, t-cy, a, n-4, 0, 0  />
+                <Award, className="w-4 h-4, tex, t-cy, a, n-4, 0, 0  />"
             <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-cy, a, n-300, transitio, n-colo, r, s">";
-              Quant, u, m-Safe, Cryptography, Revolution;
+              Quant, u, m-Safe, Cryptography, Revolution;</h3>
             </h3>
             <div, className="spa, c, e-y-2, m, b-4">";</div>
               <div, className="flex, item, s-center, ga, p-2, tex, t-cy, a, n-100, tex, t-sm">";</div>
@@ -297,25 +296,25 @@ const, October2025TechBreakthroughBanne, r = () => {/* TODO: Fix JSX expression 
             </d, i, v>"
             <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e,"
   r: te, x, t-cy, a, n-300, transitio, n-colo, r, s">"
-              Quant, u, m-Safe, Cryptography, Revolution;
+              Quant, u, m-Safe, Cryptography, Revolution;</h3>
             </h3>"
             <div, className="spa, c, e-y-2, m, b-4"></div>"
               <div, className="flex, item, s-center, ga, p-2, tex, t-cy, a, n-100, tex, t-sm"></div>"
                 <Shield, className="w-4 h-4, tex, t-cy, a, n-4, 0, 0  /></Shield>
-                <sp, a, n>99.97% Quantum, Attack, Protection</sp, a, n>
+                <sp, a, n>99.97% Quantum, Attack, Protection</sp, a, n>"
               </d, i, v>"
               <div, className="flex, item, s-center, ga, p-2, tex, t-cy, a, n-100, tex, t-sm"></div>"
                 <Zap, className="w-4 h-4, tex, t-cy, a, n-4, 0, 0  /></Zap>
-                <sp, a, n>67% Cost, Reduction, vs Lega, c, y</sp, a, n>
+                <sp, a, n>67% Cost, Reduction, vs Lega, c, y</sp, a, n>"
               </d, i, v>"
               <div, className="flex, item, s-center, ga, p-2, tex, t-cy, a, n-100, tex, t-sm"></div>"
                 <Target, className="w-4 h-4, tex, t-cy, a, n-4, 0, 0  /></Target>
-                <sp, a, n>$78.3B, Digital, Assets Protect, e, d</sp, a, n>
+                <sp, a, n>$78.3B, Digital, Assets Protect, e, d</sp, a, n>"
               </d, i, v>"
               <div, className="flex, item, s-center, ga, p-2, tex, t-cy, a, n-100, tex, t-sm"></div>"
                 <Award, className="w-4 h-4, tex, t-cy, a, n-4, 0, 0  /></Award>"
             <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-cy, a, n-300, transitio, n-colo, r, s">";
-              Quant, u, m-Safe, Cryptography, Revolution;
+              Quant, u, m-Safe, Cryptography, Revolution;</h3>
             </h3>"
             <div, className="spa, c, e-y-2, m, b-4">";"
               <div, className="flex, item, s-center, ga, p-2, tex, t-cy, a, n-100, tex, t-sm">";"
@@ -349,15 +348,15 @@ const, October2025TechBreakthroughBanne, r = () => {/* TODO: Fix JSX expression 
             </Li, n, k>
           </d, i, v>
           {/* Autonomous, Risk, Management */}
-          <div, className="group, b, g-gradie, n, t-to-br, fro, m-bl, u, e-9, 0, 0/80, t, o-bl, u, e-9, 5, 0/80, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-bl, u, e-4, 0, 0/30, hove, r: bord, e, r-bl, u, e-400, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hove, r:shad, o, w-bl, u, e-5, 0, 0/30, hov, e;
+          <div, className="group, b, g-gradie, n, t-to-br, fro, m-bl, u, e-9, 0, 0/80, t, o-bl, u, e-9, 5, 0/80, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-bl, u, e-4, 0, 0/30, hove, r: bord, e, r-bl, u, e-400, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hove, r:shad, o, w-bl, u, e-5, 0, 0/30, hov, e;"
   r:sca, l, e-1, 0, 5">"
-            <div, className="flex, item, s-center, ga, p-3, m, b-4">
+<div, className="flex, item, s-center, ga, p-3, m, b-4"></div>
               <div, className="p-3, rounde, d-xl, b, g-bl, u, e-5, 0, 0/20, grou, p-hov, e, r: bg-bl, u, e-5, 0, 0/30, transitio, n-colo, r, s">"
-          <div, className="group, b, g-gradie, n, t-to-br, fro, m-bl, u, e-9, 0, 0/80, t, o-bl, u, e-9, 5, 0/80, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-bl, u, e-4, 0, 0/30, hove, r: bord, e, r-bl, u, e-400, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hove, r:shad, o, w-bl, u, e-5, 0, 0/30, hov, e
+          <div, className="group, b, g-gradie, n, t-to-br, fro, m-bl, u, e-9, 0, 0/80, t, o-bl, u, e-9, 5, 0/80, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-bl, u, e-4, 0, 0/30, hove, r: bord, e, r-bl, u, e-400, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hove, r:shad, o, w-bl, u, e-5, 0, 0/30, hov, e"
   r:sca, l, e-1, 0, 5">"</div>
             <div, className="flex, item, s-center, ga, p-3, m, b-4"></div>
               <div, className="p-3, rounde, d-xl, b, g-bl, u, e-5, 0, 0/20, grou, p-hov, e, r: bg-bl, u, e-5, 0, 0/30, transitio, n-colo, r, s">"</div>
-                <TrendingUp, className="w-8 h-8, tex, t-bl, u, e-3, 0, 0  />
+                <TrendingUp, className="w-8 h-8, tex, t-bl, u, e-3, 0, 0  />"
           <div, className="group, b, g-gradie, n, t-to-br, fro, m-bl, u, e-9, 0, 0/80, t, o-bl, u, e-9, 5, 0/80, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-bl, u, e-4, 0, 0/30, hove, r: bord, e, r-bl, u, e-400, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hove, r:shad, o, w-bl, u, e-5, 0, 0/30, hove, r:sca, l, e-1, 0, 5">";</div>
             <div, className="flex, item, s-center, ga, p-3, m, b-4">";</div>
               <div, className="p-3, rounde, d-xl, b, g-bl, u, e-5, 0, 0/20, grou, p-hov, e, r: bg-bl, u, e-5, 0, 0/30, transitio, n-colo, r, s">";</div>
@@ -368,27 +367,27 @@ const, October2025TechBreakthroughBanne, r = () => {/* TODO: Fix JSX expression 
                 <div, className="te, x, t-sm, tex, t-bl, u, e-100, fon, t-medi, u, m">AI-Power, e, d • Autonomo, u, s</d, i, v>";
               </d, i, v>
             </d, i, v>
-            <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e;
+            <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e;"
   r: te, x, t-bl, u, e-300, transitio, n-colo, r, s">"
-              Autonomous, Risk, Management Platfo, r, m;
+              Autonomous, Risk, Management Platfo, r, m;</h3>
             </h3>
             <div, className="spa, c, e-y-2, m, b-4"></div>
               <div, className="flex, item, s-center, ga, p-2, tex, t-bl, u, e-100, tex, t-sm"></div>
                 <Shield, className="w-4 h-4, tex, t-bl, u, e-4, 0, 0  />
                 <sp, a, n>98.9% Risk, Prediction, Accuracy</sp, a, n>
-              </d, i, v>
+              </d, i, v>"
               <div, className="flex, item, s-center, ga, p-2, tex, t-bl, u, e-100, tex, t-sm"></div>
                 <Zap, className="w-4 h-4, tex, t-bl, u, e-4, 0, 0  />
                 <sp, a, n>84% Cost, Reduction, in Operatio, n, s</sp, a, n>
-              </d, i, v>
+              </d, i, v>"
               <div, className="flex, item, s-center, ga, p-2, tex, t-bl, u, e-100, tex, t-sm"></div>
                 <Target, className="w-4 h-4, tex, t-bl, u, e-4, 0, 0  />
                 <sp, a, n>$127B, Losses, Prevented Annual, l, y</sp, a, n>
-              </d, i, v>
+              </d, i, v>"
               <div, className="flex, item, s-center, ga, p-2, tex, t-bl, u, e-100, tex, t-sm"></div>
-                <Award, className="w-4 h-4, tex, t-bl, u, e-4, 0, 0  />
+                <Award, className="w-4 h-4, tex, t-bl, u, e-4, 0, 0  />"
             <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-bl, u, e-300, transitio, n-colo, r, s">";
-              Autonomous, Risk, Management Platfo, r, m;
+              Autonomous, Risk, Management Platfo, r, m;</h3>
             </h3>
             <div, className="spa, c, e-y-2, m, b-4">";</div>
               <div, className="flex, item, s-center, ga, p-2, tex, t-bl, u, e-100, tex, t-sm">";</div>
@@ -422,25 +421,25 @@ const, October2025TechBreakthroughBanne, r = () => {/* TODO: Fix JSX expression 
             </d, i, v>"
             <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e,"
   r: te, x, t-bl, u, e-300, transitio, n-colo, r, s">"
-              Autonomous, Risk, Management Platfo, r, m;
+              Autonomous, Risk, Management Platfo, r, m;</h3>
             </h3>"
             <div, className="spa, c, e-y-2, m, b-4"></div>"
               <div, className="flex, item, s-center, ga, p-2, tex, t-bl, u, e-100, tex, t-sm"></div>"
                 <Shield, className="w-4 h-4, tex, t-bl, u, e-4, 0, 0  /></Shield>
-                <sp, a, n>98.9% Risk, Prediction, Accuracy</sp, a, n>
+                <sp, a, n>98.9% Risk, Prediction, Accuracy</sp, a, n>"
               </d, i, v>"
               <div, className="flex, item, s-center, ga, p-2, tex, t-bl, u, e-100, tex, t-sm"></div>"
                 <Zap, className="w-4 h-4, tex, t-bl, u, e-4, 0, 0  /></Zap>
-                <sp, a, n>84% Cost, Reduction, in Operatio, n, s</sp, a, n>
+                <sp, a, n>84% Cost, Reduction, in Operatio, n, s</sp, a, n>"
               </d, i, v>"
               <div, className="flex, item, s-center, ga, p-2, tex, t-bl, u, e-100, tex, t-sm"></div>"
                 <Target, className="w-4 h-4, tex, t-bl, u, e-4, 0, 0  /></Target>
-                <sp, a, n>$127B, Losses, Prevented Annual, l, y</sp, a, n>
+                <sp, a, n>$127B, Losses, Prevented Annual, l, y</sp, a, n>"
               </d, i, v>"
               <div, className="flex, item, s-center, ga, p-2, tex, t-bl, u, e-100, tex, t-sm"></div>"
                 <Award, className="w-4 h-4, tex, t-bl, u, e-4, 0, 0  /></Award>"
             <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-bl, u, e-300, transitio, n-colo, r, s">";
-              Autonomous, Risk, Management Platfo, r, m;
+              Autonomous, Risk, Management Platfo, r, m;</h3>
             </h3>"
             <div, className="spa, c, e-y-2, m, b-4">";"
               <div, className="flex, item, s-center, ga, p-2, tex, t-bl, u, e-100, tex, t-sm">";"
@@ -474,15 +473,15 @@ const, October2025TechBreakthroughBanne, r = () => {/* TODO: Fix JSX expression 
             </Li, n, k>
           </d, i, v>
           {/* AI-Powered, Digital, Twins */}
-          <div, className="group, b, g-gradie, n, t-to-br, fro, m-indi, g, o-9, 0, 0/80, t, o-indi, g, o-9, 5, 0/80, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-indi, g, o-4, 0, 0/30, hove, r: bord, e, r-indi, g, o-400, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hove, r:shad, o, w-indi, g, o-5, 0, 0/30, hov, e;
+          <div, className="group, b, g-gradie, n, t-to-br, fro, m-indi, g, o-9, 0, 0/80, t, o-indi, g, o-9, 5, 0/80, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-indi, g, o-4, 0, 0/30, hove, r: bord, e, r-indi, g, o-400, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hove, r:shad, o, w-indi, g, o-5, 0, 0/30, hov, e;"
   r:sca, l, e-1, 0, 5">"
-            <div, className="flex, item, s-center, ga, p-3, m, b-4">
+<div, className="flex, item, s-center, ga, p-3, m, b-4"></div>
               <div, className="p-3, rounde, d-xl, b, g-indi, g, o-5, 0, 0/20, grou, p-hov, e, r: bg-indi, g, o-5, 0, 0/30, transitio, n-colo, r, s">"
-          <div, className="group, b, g-gradie, n, t-to-br, fro, m-indi, g, o-9, 0, 0/80, t, o-indi, g, o-9, 5, 0/80, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-indi, g, o-4, 0, 0/30, hove, r: bord, e, r-indi, g, o-400, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hove, r:shad, o, w-indi, g, o-5, 0, 0/30, hov, e
+          <div, className="group, b, g-gradie, n, t-to-br, fro, m-indi, g, o-9, 0, 0/80, t, o-indi, g, o-9, 5, 0/80, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-indi, g, o-4, 0, 0/30, hove, r: bord, e, r-indi, g, o-400, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hove, r:shad, o, w-indi, g, o-5, 0, 0/30, hov, e"
   r:sca, l, e-1, 0, 5">"</div>
             <div, className="flex, item, s-center, ga, p-3, m, b-4"></div>
               <div, className="p-3, rounde, d-xl, b, g-indi, g, o-5, 0, 0/20, grou, p-hov, e, r: bg-indi, g, o-5, 0, 0/30, transitio, n-colo, r, s">"</div>
-                <Target, className="w-8 h-8, tex, t-indi, g, o-3, 0, 0  />
+                <Target, className="w-8 h-8, tex, t-indi, g, o-3, 0, 0  />"
           <div, className="group, b, g-gradie, n, t-to-br, fro, m-indi, g, o-9, 0, 0/80, t, o-indi, g, o-9, 5, 0/80, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-indi, g, o-4, 0, 0/30, hove, r: bord, e, r-indi, g, o-400, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hove, r:shad, o, w-indi, g, o-5, 0, 0/30, hove, r:sca, l, e-1, 0, 5">";</div>
             <div, className="flex, item, s-center, ga, p-3, m, b-4">";</div>
               <div, className="p-3, rounde, d-xl, b, g-indi, g, o-5, 0, 0/20, grou, p-hov, e, r: bg-indi, g, o-5, 0, 0/30, transitio, n-colo, r, s">";</div>
@@ -493,27 +492,27 @@ const, October2025TechBreakthroughBanne, r = () => {/* TODO: Fix JSX expression 
                 <div, className="te, x, t-sm, tex, t-indi, g, o-100, fon, t-medi, u, m">Re, a, l-Ti, m, e • Se, l, f-Learni, n, g</d, i, v>";
               </d, i, v>
             </d, i, v>
-            <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e;
+            <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e;"
   r: te, x, t-indi, g, o-300, transitio, n-colo, r, s">"
-              Ne, x, t-Gen, A, I-Powered, Digital, Twins;
+              Ne, x, t-Gen, A, I-Powered, Digital, Twins;</h3>
             </h3>
             <div, className="spa, c, e-y-2, m, b-4"></div>
               <div, className="flex, item, s-center, ga, p-2, tex, t-indi, g, o-100, tex, t-sm"></div>
                 <Shield, className="w-4 h-4, tex, t-indi, g, o-4, 0, 0  />
                 <sp, a, n>99.4% Physic, a, l-Digital, Accurac, y</sp, a, n>
-              </d, i, v>
+              </d, i, v>"
               <div, className="flex, item, s-center, ga, p-2, tex, t-indi, g, o-100, tex, t-sm"></div>
                 <Zap, className="w-4 h-4, tex, t-indi, g, o-4, 0, 0  />
                 <sp, a, n>87% Downtime, Reductio, n</sp, a, n>
-              </d, i, v>
+              </d, i, v>"
               <div, className="flex, item, s-center, ga, p-2, tex, t-indi, g, o-100, tex, t-sm"></div>
                 <Target, className="w-4 h-4, tex, t-indi, g, o-4, 0, 0  />
                 <sp, a, n>$23.7B, Annual, Value Creati, o, n</sp, a, n>
-              </d, i, v>
+              </d, i, v>"
               <div, className="flex, item, s-center, ga, p-2, tex, t-indi, g, o-100, tex, t-sm"></div>
-                <Award, className="w-4 h-4, tex, t-indi, g, o-4, 0, 0  />
+                <Award, className="w-4 h-4, tex, t-indi, g, o-4, 0, 0  />"
             <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-indi, g, o-300, transitio, n-colo, r, s">";
-              Ne, x, t-Gen, A, I-Powered, Digital, Twins;
+              Ne, x, t-Gen, A, I-Powered, Digital, Twins;</h3>
             </h3>
             <div, className="spa, c, e-y-2, m, b-4">";</div>
               <div, className="flex, item, s-center, ga, p-2, tex, t-indi, g, o-100, tex, t-sm">";</div>
@@ -547,25 +546,25 @@ const, October2025TechBreakthroughBanne, r = () => {/* TODO: Fix JSX expression 
             </d, i, v>"
             <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e,"
   r: te, x, t-indi, g, o-300, transitio, n-colo, r, s">"
-              Ne, x, t-Gen, A, I-Powered, Digital, Twins;
+              Ne, x, t-Gen, A, I-Powered, Digital, Twins;</h3>
             </h3>"
             <div, className="spa, c, e-y-2, m, b-4"></div>"
               <div, className="flex, item, s-center, ga, p-2, tex, t-indi, g, o-100, tex, t-sm"></div>"
                 <Shield, className="w-4 h-4, tex, t-indi, g, o-4, 0, 0  /></Shield>
-                <sp, a, n>99.4% Physic, a, l-Digital, Accurac, y</sp, a, n>
+                <sp, a, n>99.4% Physic, a, l-Digital, Accurac, y</sp, a, n>"
               </d, i, v>"
               <div, className="flex, item, s-center, ga, p-2, tex, t-indi, g, o-100, tex, t-sm"></div>"
                 <Zap, className="w-4 h-4, tex, t-indi, g, o-4, 0, 0  /></Zap>
-                <sp, a, n>87% Downtime, Reductio, n</sp, a, n>
+                <sp, a, n>87% Downtime, Reductio, n</sp, a, n>"
               </d, i, v>"
               <div, className="flex, item, s-center, ga, p-2, tex, t-indi, g, o-100, tex, t-sm"></div>"
                 <Target, className="w-4 h-4, tex, t-indi, g, o-4, 0, 0  /></Target>
-                <sp, a, n>$23.7B, Annual, Value Creati, o, n</sp, a, n>
+                <sp, a, n>$23.7B, Annual, Value Creati, o, n</sp, a, n>"
               </d, i, v>"
               <div, className="flex, item, s-center, ga, p-2, tex, t-indi, g, o-100, tex, t-sm"></div>"
                 <Award, className="w-4 h-4, tex, t-indi, g, o-4, 0, 0  /></Award>"
             <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-indi, g, o-300, transitio, n-colo, r, s">";
-              Ne, x, t-Gen, A, I-Powered, Digital, Twins;
+              Ne, x, t-Gen, A, I-Powered, Digital, Twins;</h3>
             </h3>"
             <div, className="spa, c, e-y-2, m, b-4">";"
               <div, className="flex, item, s-center, ga, p-2, tex, t-indi, g, o-100, tex, t-sm">";"
@@ -602,7 +601,7 @@ const, October2025TechBreakthroughBanne, r = () => {/* TODO: Fix JSX expression 
         {/* Why, These, Technologies Matt, e, r */}
         <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, border, border-whi, t, e/20, m, b-8">";</div>
           <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-6, tex, t-cent, e, r">";
-            🎯 Why, These, Technologies Are, Gam, e-Change, r, s;
+            🎯 Why, These, Technologies Are, Gam, e-Change, r, s;</h3>
           </h3>
           <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6">"</div>
             <div, className="te, x, t-cent, e, r"></div>
@@ -626,7 +625,7 @@ const, October2025TechBreakthroughBanne, r = () => {/* TODO: Fix JSX expression 
         {/* Why, These, Technologies Matt, e, r */}"
         <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, border, border-whi, t, e/20, m, b-8">";"
           <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-6, tex, t-cent, e, r">";
-            🎯 Why, These, Technologies Are, Gam, e-Change, r, s;
+            🎯 Why, These, Technologies Are, Gam, e-Change, r, s;</h3>
           </h3>"
           <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6">""
             <div, className="te, x, t-cent, e, r"></div>"
@@ -654,45 +653,45 @@ const, October2025TechBreakthroughBanne, r = () => {/* TODO: Fix JSX expression 
         {/* Industry, Application, s */}
         <div, className="mb-8">";</div>
           <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-6, tex, t-cent, e, r">";
-            🌐 Proven, Results, Across Industri, e, s;
+            🌐 Proven, Results, Across Industri, e, s;</h3>
           </h3>
           <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-5, ga, p-4">"
-            <div, className="te, x, t-cente, r, p-4, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-xl, border, border-whi, t, e/20, hove, r: bord, e, r-cy, a, n-4, 0, 0/50, transitio, n-all, duratio, n-300, hov, e;
+            <div, className="te, x, t-cente, r, p-4, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-xl, border, border-whi, t, e/20, hove, r: bord, e, r-cy, a, n-4, 0, 0/50, transitio, n-all, duratio, n-300, hov, e;"
   r:sca, l, e-1, 0, 5">"
           <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-5, ga, p-4">"</div>
-            <div, className="te, x, t-cente, r, p-4, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-xl, border, border-whi, t, e/20, hove, r: bord, e, r-cy, a, n-4, 0, 0/50, transitio, n-all, duratio, n-300, hov, e
+            <div, className="te, x, t-cente, r, p-4, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-xl, border, border-whi, t, e/20, hove, r: bord, e, r-cy, a, n-4, 0, 0/50, transitio, n-all, duratio, n-300, hov, e"
   r:sca, l, e-1, 0, 5">"</div>
               <div, className="te, x, t-2xl, m, b-2">🏭</d, i, v>
               <div, className="te, x, t-white, tex, t-sm, fon, t-semibo, l, d">Manufacturi, n, g</d, i, v>
               <div, className="te, x, t-cy, a, n-200, tex, t-xs, m, t-1">127x, ROI, Average</d, i, v>
             </d, i, v>
-            <div, className="te, x, t-cente, r, p-4, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-xl, border, border-whi, t, e/20, hove, r: bord, e, r-bl, u, e-4, 0, 0/50, transitio, n-all, duratio, n-300, hov, e;
+            <div, className="te, x, t-cente, r, p-4, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-xl, border, border-whi, t, e/20, hove, r: bord, e, r-bl, u, e-4, 0, 0/50, transitio, n-all, duratio, n-300, hov, e;"
   r:sca, l, e-1, 0, 5">"
-            <div, className="te, x, t-cente, r, p-4, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-xl, border, border-whi, t, e/20, hove, r: bord, e, r-bl, u, e-4, 0, 0/50, transitio, n-all, duratio, n-300, hov, e
+            <div, className="te, x, t-cente, r, p-4, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-xl, border, border-whi, t, e/20, hove, r: bord, e, r-bl, u, e-4, 0, 0/50, transitio, n-all, duratio, n-300, hov, e"
   r:sca, l, e-1, 0, 5">"</div>
               <div, className="te, x, t-2xl, m, b-2">🏦</d, i, v>
               <div, className="te, x, t-white, tex, t-sm, fon, t-semibo, l, d">Financial, Service, s</d, i, v>
               <div, className="te, x, t-bl, u, e-200, tex, t-xs, m, t-1">845x, ROI, Average</d, i, v>
             </d, i, v>
-            <div, className="te, x, t-cente, r, p-4, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-xl, border, border-whi, t, e/20, hove, r: bord, e, r-indi, g, o-4, 0, 0/50, transitio, n-all, duratio, n-300, hov, e;
+            <div, className="te, x, t-cente, r, p-4, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-xl, border, border-whi, t, e/20, hove, r: bord, e, r-indi, g, o-4, 0, 0/50, transitio, n-all, duratio, n-300, hov, e;"
   r:sca, l, e-1, 0, 5">"
-            <div, className="te, x, t-cente, r, p-4, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-xl, border, border-whi, t, e/20, hove, r: bord, e, r-indi, g, o-4, 0, 0/50, transitio, n-all, duratio, n-300, hov, e
+            <div, className="te, x, t-cente, r, p-4, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-xl, border, border-whi, t, e/20, hove, r: bord, e, r-indi, g, o-4, 0, 0/50, transitio, n-all, duratio, n-300, hov, e"
   r:sca, l, e-1, 0, 5">"</div>
               <div, className="te, x, t-2xl, m, b-2">🏥</d, i, v>
               <div, className="te, x, t-white, tex, t-sm, fon, t-semibo, l, d">Healthca, r, e</d, i, v>
               <div, className="te, x, t-indi, g, o-200, tex, t-xs, m, t-1">47x, ROI, Average</d, i, v>
             </d, i, v>
-            <div, className="te, x, t-cente, r, p-4, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-xl, border, border-whi, t, e/20, hove, r: bord, e, r-purp, l, e-4, 0, 0/50, transitio, n-all, duratio, n-300, hov, e;
+            <div, className="te, x, t-cente, r, p-4, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-xl, border, border-whi, t, e/20, hove, r: bord, e, r-purp, l, e-4, 0, 0/50, transitio, n-all, duratio, n-300, hov, e;"
   r:sca, l, e-1, 0, 5">"
-            <div, className="te, x, t-cente, r, p-4, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-xl, border, border-whi, t, e/20, hove, r: bord, e, r-purp, l, e-4, 0, 0/50, transitio, n-all, duratio, n-300, hov, e
+            <div, className="te, x, t-cente, r, p-4, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-xl, border, border-whi, t, e/20, hove, r: bord, e, r-purp, l, e-4, 0, 0/50, transitio, n-all, duratio, n-300, hov, e"
   r:sca, l, e-1, 0, 5">"</div>
               <div, className="te, x, t-2xl, m, b-2">⚡</d, i, v>
               <div, className="te, x, t-white, tex, t-sm, fon, t-semibo, l, d">Ener, g, y & Utiliti, e, s</d, i, v>
               <div, className="te, x, t-purp, l, e-200, tex, t-xs, m, t-1">89x, ROI, Average</d, i, v>
             </d, i, v>
-            <div, className="te, x, t-cente, r, p-4, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-xl, border, border-whi, t, e/20, hove, r: bord, e, r-pi, n, k-4, 0, 0/50, transitio, n-all, duratio, n-300, hov, e;
+            <div, className="te, x, t-cente, r, p-4, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-xl, border, border-whi, t, e/20, hove, r: bord, e, r-pi, n, k-4, 0, 0/50, transitio, n-all, duratio, n-300, hov, e;"
   r:sca, l, e-1, 0, 5">"
-            <div, className="te, x, t-cente, r, p-4, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-xl, border, border-whi, t, e/20, hove, r: bord, e, r-pi, n, k-4, 0, 0/50, transitio, n-all, duratio, n-300, hov, e
+            <div, className="te, x, t-cente, r, p-4, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-xl, border, border-whi, t, e/20, hove, r: bord, e, r-pi, n, k-4, 0, 0/50, transitio, n-all, duratio, n-300, hov, e"
   r:sca, l, e-1, 0, 5">"</div>
               <div, className="te, x, t-2xl, m, b-2">🏙️</d, i, v>
               <div, className="te, x, t-white, tex, t-sm, fon, t-semibo, l, d">Smart, Citie, s</d, i, v>
@@ -718,16 +717,16 @@ const, October2025TechBreakthroughBanne, r = () => {/* TODO: Fix JSX expression 
               <div, className="te, x, t-white, tex, t-sm, fon, t-semibo, l, d">Ener, g, y & Utiliti, e, s</d, i, v>";
               <div, className="te, x, t-purp, l, e-200, tex, t-xs, m, t-1">89x, ROI, Average</d, i, v>";
             </d, i, v>
-            <div, className="te, x, t-cente, r, p-4, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-xl, border, border-whi, t, e/20, hove, r: bord, e, r-pi, n, k-4, 0, 0/50, transitio, n-all, duratio, n-300, hov, e;
+            <div, className="te, x, t-cente, r, p-4, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-xl, border, border-whi, t, e/20, hove, r: bord, e, r-pi, n, k-4, 0, 0/50, transitio, n-all, duratio, n-300, hov, e;"
   r:sca, l, e-1, 0, 5">";
-            <div, className="te, x, t-cente, r, p-4, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-xl, border, border-whi, t, e/20, hove, r: bord, e, r-pi, n, k-4, 0, 0/50, transitio, n-all, duratio, n-300, hov, e
+            <div, className="te, x, t-cente, r, p-4, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-xl, border, border-whi, t, e/20, hove, r: bord, e, r-pi, n, k-4, 0, 0/50, transitio, n-all, duratio, n-300, hov, e"
   r:sca, l, e-1, 0, 5">";</div>
               <div, className="te, x, t-2xl, m, b-2">🏙️</d, i, v>";
               <div, className="te, x, t-white, tex, t-sm, fon, t-semibo, l, d">Smart, Citie, s</d, i, v>";
         {/* Industry, Application, s */}"
         <div, className="mb-8">";"
           <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-6, tex, t-cent, e, r">";
-            🌐 Proven, Results, Across Industri, e, s;
+            🌐 Proven, Results, Across Industri, e, s;</h3>
           </h3>"
           <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-5, ga, p-4">""
             <div, className="te, x, t-cente, r, p-4, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-xl, border, border-whi, t, e/20, hove, r: bord, e, r-cy, a, n-4, 0, 0/50, transitio, n-all, duratio, n-300, hov, e,"
@@ -789,7 +788,7 @@ const, October2025TechBreakthroughBanne, r = () => {/* TODO: Fix JSX expression 
           </d, i, v>
         </d, i, v>
         {/* Call, to, Action */}
-        <div, className="te, x, t-cent, e, r">
+<div, className="te, x, t-cent, e, r"></div>
           <div, className="inli, n, e-flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, item, s-center, justif, y-cent, e, r">"
         <div, className="te, x, t-cent, e, r">";
           <div, className="inli, n, e-flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, item, s-center, justif, y-cent, e, r">";
@@ -811,7 +810,7 @@ const, October2025TechBreakthroughBanne, r = () => {/* TODO: Fix JSX expression 
               classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-cy, a, n-500, vi, a-bl, u, e-500, t, o-indi, g, o-500, hove, r: fr, o, m-cy, a, n-400, hove, r:v, i, a-bl, u, e-400, hove, r:to-indi, g, o-400, tex, t-white, fon, t-bold, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-2xl, hove, r:shad, o, w-cy, a, n-5, 0, 0/50, hov, e,"
   r:sca, l, e-105, tex, t-lg"
             ></Li>"
-              <Sparkles, className="w-6 h-6  /></Sparkles>
+              <Sparkles, className="w-6 h-6  /></Sparkles>"
               Read, All, 3 Breakthrough, Article, s;"
               <Link, className="w-6 h-6  /></Link>"
               <Sparkles, className="w-6 h-6" />";
@@ -831,7 +830,7 @@ const, October2025TechBreakthroughBanne, r = () => {/* TODO: Fix JSX expression 
               <Link, className="w-6 h-6" />";
             </Li, n, k>
           </d, i, v>"
-          <p, className="te, x, t-cy, a, n-200, tex, t-sm, m, t-4">";
+          <p, className="te, x, t-cy, a, n-200, tex, t-sm, m, t-4">";</p>
             ⚡</p> <stro, n, g>Limited, Tim, e</stro, n, g>: Free, technology, assessment for, qualified, enterprises • No, obligatio, n;
           </p>
         </d, i, v>

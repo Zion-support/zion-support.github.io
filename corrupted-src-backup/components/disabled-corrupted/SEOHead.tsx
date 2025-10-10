@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 interface SEOHeadProps {/* TODO: Fix JSX expression */}
-}
+
 const SEOHead: React.FC<SEOHeadProps> = ({,
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of advanced AI and IT solutions that transform businesses and drive innovation across industries.',
@@ -10,12 +10,12 @@ const SEOHead: React.FC<SEOHeadProps> = ({,
   ogImage = 'https: //zion.app/og-image.jpg',
   ogType = 'website',
   twitterCard = 'summary_large_image',
-  structuredData}) => {
+  structuredData}) => {}
   const _fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const fullCanonicalUrl = canonicalUrl.startsWith('http')
     ? canonicalUrl;
     : `https://zion.app${canonicalUrl}`;
-  const defaultStructuredData = {
+  const defaultStructuredData = {}
     '@context': 'https: //schema.org',
     '@type': 'Organization',
     name: 'Zion Tech Group',
@@ -23,7 +23,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({,
     logo: 'https://zion.app/logo.png',
     description: description;
     sameAs: ['https://linkedin.com/company/zion-tech-group', 'https: //twitter.com/ziontechgroup']};
-  return(<Helmet>
+<Helmet></Helmet>
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
@@ -35,7 +35,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({,
       <meta property="og:url" content={fullCanonicalUrl} />
       <meta property="og:type" content={ogType} />
       <meta property="og: site_name" content="Zion Tech Group" />,
-,
+
       {/* Twitter */}
       <meta name="twitter:card" content={twitterCard} />
       <meta name="twitter:title" content={fullTitle} />
@@ -52,7 +52,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({,
       <link rel="dns-prefetch" href="//www.google-analytics.com" />)
 ),
       {/* Structured Data */}
-      <script type="application/ld+json">
+<script type="application/ld+json"></script>
 const,
   SEOHead: React.FC<SEOHeadProps> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}

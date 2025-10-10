@@ -4,9 +4,9 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { Eye, Camera, Video, Target, Shield, CheckCircle, ArrowRight, Settings } from 'lucide-react';
 import { Target, Shield, Eye,  Camera,  Target,  Shield,  Settings } from 'lucide-react';
-const AIComputerVisionPage: React.FC = () => {
+const AIComputerVisionPage: React.FC = () => {}
   const features = [];
-  return (
+  return ()
     {// TODO: Add content;}
 };
   ico,
@@ -34,9 +34,9 @@ const AIComputerVisionPage: React.FC = () => {
   n: 'Secure and accurate facial recognition technology',
       benefit,
   s: ['Identity verification', 'Access control', 'Privacy protection']
-    }
+
   ];
-  const applications = [
+  const applications = []
       titl,
   e: 'Security & Surveillance',
       descriptio,
@@ -53,7 +53,7 @@ const AIComputerVisionPage: React.FC = () => {
   n: Settings,
       useCase,
   s: ['Defect detection', 'Quality assurance', 'Process monitoring']
-  const pricing = [
+  const pricing = []
       nam,
   e: 'Starter',
       pric,
@@ -61,7 +61,7 @@ const AIComputerVisionPage: React.FC = () => {
       descriptio,
   n: 'Perfect for small projects',
       feature,
-  s: [
+  s: []
   // TOD,
   O: Add items];
 //         'Up to 1,000 images/month',
@@ -70,22 +70,19 @@ const AIComputerVisionPage: React.FC = () => {
 //         'Standard API'
 //       ],
       popular: false,
-const PagePage: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+const PagePage: React.FC = () => {}
+  return ()
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">
-// AI Computer Vision;
+<main className="container mx-auto px-4 py-16 pt-24"></main>
+<section className="text-center mb-16"></section>
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">// AI Computer Vision;</h1>
           </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium neon-pulse">
-// Advanced Visual Intelligence Solutions;
+          <p className="text-xl text-cyan-400 mb-8 font-medium neon-pulse">// Advanced Visual Intelligence Solutions;</p>
           </p>
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-Transform your business with cutting-edge computer vision technology. From object detection to facial recognition,
-            our AI-powered visual intelligence solutions help you see and understand the world like never before.
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">Transform your business with cutting-edge computer vision technology. From object detection to facial recognition,
+            our AI-powered visual intelligence solutions help you see and understand the world like never before.</p>
+<div className="flex flex-col sm:flex-row gap-4 justify-center items-center"></div>
             <a
               href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
 // >
@@ -102,7 +99,7 @@ Transform your business with cutting-edge computer vision technology. From objec
   md:text-4xl font-bold text-white mb-12 text-center neon-text"></h2>
 // Core Capabilities;
           </h2>"
-          <div className="grid grid-cols-1,
+          <div className="grid grid-cols-1,"
   md:grid-cols-2,"
   lg:grid-cols-4 gap-8"></div>
             {features.map((feature, index) => ()}"
@@ -168,7 +165,7 @@ Most Popular;
                   className={`block w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${}
   // TOD,
   O: Add content;
-}
+
 //                     plan.popular;
 //                       ? 'cyber-button'
                       : 'border-2 border-cyan-400 text-cyan-400,

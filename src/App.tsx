@@ -131,21 +131,21 @@ const BlogAIInnovationLabsProductDevelopment2025Page = lazy(() => import('./blog
 const BlogAIPoweredAutonomousBusinessProcesses2026Page = lazy(() => import('./blog/ai-powered-autonomous-business-processes-2026/page'));
 const BlogAITrends2026FutureEnterpriseTransformationPage = lazy(() => import('./blog/ai-trends-2026-future-enterprise-transformation/page'));
 // Main loading component
-const MainLoadingSpinner = () => (
-  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+const MainLoadingSpinner = () => ()
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center"></div>
     <LoadingSpinner size="xl" text="Loading Zion Tech Group..." />
   </div>
 );
-const App: React.FC = () => {
+const App: React.FC = () => {}
   // Initialize performance monitoring
-  React.useEffect(() => {
+  React.useEffect(() => {}
     performanceMonitor.reportMetrics();
   }, []);
-  return (
-    <ErrorBoundary>
-      <Router>
+  return ()
+<ErrorBoundary></ErrorBoundary>
+<Router></Router>
         <Suspense fallback={<MainLoadingSpinner />}>
-          <Routes>
+<Routes></Routes>
             {/* Main Pages */}
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />

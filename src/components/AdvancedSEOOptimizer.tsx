@@ -2,13 +2,13 @@
 import React, { useEffect, useCallback, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
 interface SEOData {/* TODO: Fix JSX expression */}
-}
+
 interface AdvancedSEOOptimizerProps {/* TODO: Fix JSX expression */}
-}
+
 const,
   AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
-    }
+
     const baseStructuredData = {/* TODO: Fix JSX expression */}
       },
       addres,
@@ -17,27 +17,27 @@ const,
       ...seoData.structuredData};
     if (seoData.author) {/* TODO: Fix JSX expression */}
       };
-    }
+
     if (seoData.publishedTime) {/* TODO: Fix JSX expression */}
-    }
+
     if (seoData.modifiedTime) {/* TODO: Fix JSX expression */}
-    }
+
     if (seoData.section) {/* TODO: Fix JSX expression */}
-    }
+
     if (seoData.tags && seoData.tags.length > 0) {/* TODO: Fix JSX expression */}
-    }
+
     return baseStructuredData;
   }, [seoData, enableStructuredData]);
   const generateBreadcrumbStructuredData = useCallback(() => {/* TODO: Fix JSX expression */}
-    }
+
     return {/* TODO: Fix JSX expression */}
       }))
     };
   }, [seoData, enableStructuredData]);
   const generateFAQStructuredData = useCallback(() => {/* TODO: Fix JSX expression */}
-    }
+
     return {/* TODO: Fix JSX expression */}
-        }
+
       }))
     };
   }, [seoData, enableStructuredData]);
@@ -73,15 +73,15 @@ const,
     return metaTags;
   }, [seoData]);
   const generateBreadcrumbStructuredData = useCallback(() => {/* TODO: Fix JSX expression */}
-    }
+
     return {/* TODO: Fix JSX expression */}
       }))
     };
   }, [seoData.breadcrumbs]);
   const generateFAQStructuredData = useCallback(() => {/* TODO: Fix JSX expression */}
-    }
+
     return {/* TODO: Fix JSX expression */}
-        }
+
       }))
     };
   }, [seoData.faqs]);
@@ -90,18 +90,18 @@ const,
   const twitterCardData = generateTwitterCardData();
   const metaTags = generateMetaTags();
   useEffect(() => {/* TODO: Fix JSX expression */}
-      }
+
       metaDescription.setAttribute('content', seoData.description);
       // Update canonical URL;
       let canonicalLink = document.querySelector('link[rel="canonical"]');
       if (!canonicalLink) {/* TODO: Fix JSX expression */}
-      }
+
       canonicalLink.setAttribute('href', seoData.canonicalUrl);
-    }
+
   }, [seoData]);
   const addStructuredData = (dat)
   a: Record<string, unknown>) => {/* TODO: Fix JSX expression */}
-    }
+
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(data);
@@ -109,13 +109,13 @@ const,
     structuredDataRef.current = script;
   };
   useEffect(() => {/* TODO: Fix JSX expression */}
-    }
+
   }, [structuredData]);
   useEffect(() => {/* TODO: Fix JSX expression */}
           });
-        }
-      }
-    }
+
+
+
   }, []);
   return (<Helmet></Helmet>
       {/* Basic Meta Tags */}

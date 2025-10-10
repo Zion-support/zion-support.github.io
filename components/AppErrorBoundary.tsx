@@ -1,14 +1,14 @@
 import React, { Component, type ErrorInfo, type ReactNode } from 'react';
-interface ErrorFallbackProps {
+interface ErrorFallbackProps {}
   error: Error;
   resetError: () => void;
-}
-function ErrorFallback({ error, resetError }: ErrorFallbackProps) {
-  return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50">
-      <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
-        <div className="flex items-center mb-4">
-          <div className="flex-shrink-0">
+
+function ErrorFallback({ error, resetError }: ErrorFallbackProps) {}
+  return ()
+<div className="min-h-screen flex items-center justify-center bg-gray-50"></div>
+<div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6"></div>
+<div className="flex items-center mb-4"></div>
+<div className="flex-shrink-0"></div>
             <svg
               className="h-8 w-8 text-red-600"
               fill="none"
@@ -23,61 +23,60 @@ function ErrorFallback({ error, resetError }: ErrorFallbackProps) {
               />
             </svg>
           </div>
-          <div className="ml-3">
+<div className="ml-3"></div>
             <h3 className="text-lg font-medium text-gray-900">Something went wrong</h3>
           </div>
         </div>
-        <div className="mb-4">
+<div className="mb-4"></div>
           <p className="text-sm text-gray-600 mb-2">An unexpected error occurred:</p>
-          <pre className="text-xs bg-gray-100 p-2 rounded overflow-auto max-h-32 text-gray-800">
-            {error.message}
+          <pre className="text-xs bg-gray-100 p-2 rounded overflow-auto max-h-32 text-gray-800">{error.message}</p>
           </pre>
         </div>
-        <div className="flex space-x-3">
+<div className="flex space-x-3"></div>
           <button
             onClick={resetError}
             className="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
             Try again</span>
           <button
-            onClick={() => window?.location.reload()}
-            className="bg-gray-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500">
+            onClick={() =>window?.location.reload()}
+            className="bg-gray-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500"></button>
             Reload page</span>
         </div>
       </div>
     </div>
   );
-}
-interface AppErrorBoundaryProps {
+
+interface AppErrorBoundaryProps {}
   children: ReactNode;
-}
-interface AppErrorBoundaryState {
+
+interface AppErrorBoundaryState {}
   hasError: boolean;
   error: Error | undefined;
-}
-export class AppErrorBoundary extends Component<AppErrorBoundaryProps, AppErrorBoundaryState> {
-  constructor(props: AppErrorBoundaryProps) {
+
+export class AppErrorBoundary extends Component<AppErrorBoundaryProps, AppErrorBoundaryState> {}
+  constructor(props: AppErrorBoundaryProps) {}
     super(props);
     this.state = { hasError: false, error: undefined };
-  }
-  static getDerivedStateFromError(error: Error): AppErrorBoundaryState {
+
+  static getDerivedStateFromError(error: Error): AppErrorBoundaryState {}
     return { hasError: true, error };
-  }
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    if (process.env['NODE_ENV'] === 'development') {
+
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {}
+    if (process.env['NODE_ENV'] === 'development') {}
       console.error('Error caught by boundary:', error, errorInfo);
-    }
+
     // Here you could send error to monitoring service
-  }
-  resetError = () => {
+
+  resetError = () => {}
     this.setState({ hasError: false, error: undefined });
   };
-  render() {
-    if (this.state.hasError && this.state.error) {
+  render() {}
+    if (this.state.hasError && this.state.error) {}
       return <ErrorFallback error={this.state.error} resetError={this.resetError} />;
-    }
+
     return this.props.children;
-  }
-}
+
+
   </button>
   </button>
   </path>

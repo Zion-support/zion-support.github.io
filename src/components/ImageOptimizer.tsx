@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-interface ImageOptimizerProps {
+interface ImageOptimizerProps {}
   src: string;
   alt: string;
   className?: string;
@@ -9,7 +9,7 @@ interface ImageOptimizerProps {
   placeholder?: string;
   onLoad?: () => void;
   onError?: () => void;
-}
+
 const ImageOptimizer: React.FC<ImageOptimizerProps> = ({,
   src;
   alt,
@@ -20,55 +20,55 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({,
   placeholder,
   onLoad,
   onError;
-}) => {
+}) => {}
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(priority);
   const [hasError, setHasError] = useState(false);
-  const imgRef = useRef<HTMLImageElement>(null);</HTMLImageElement>useEffect</HTMLImageElement>(() => {
+  const imgRef = useRef<HTMLImageElement>(null);</HTMLImageElement>useEffect</HTMLImageElement>(() => {}
     if (priority) return;
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
+    const observer = new IntersectionObserver()
+      ([entry]) => {}
+        if (entry.isIntersecting) {}
           setIsInView(true);
           observer.disconnect();
-        }
+
       },
-      {
+      {}
         rootMargin: '50px 0px',
         threshold: 0.01;
-      }
+
     );
-    if (imgRef.current) {
+    if (imgRef.current) {}
       observer.observe(imgRef.current);
-    }
+
     return () => observer.disconnect();
   }, [priority]);
-  const handleLoad = () => {
+  const handleLoad = () => {}
     setIsLoaded(true);
     onLoad?.();
   };
-  const handleError = () => {
+  const handleError = () => {}
     setHasError(true);
     onError?.();
   };
-  const generatePlaceholder = () => {
+  const generatePlaceholder = () => {}
     if (placeholder) return placeholder;
     const svg = `
-      <svg width="${width || 400}" height="${height || 300}" xmlns="http: //www.w3.org/2000/svg">
+<svg width="${width || 400}" height="${height || 300}" xmlns="http: //www.w3.org/2000/svg"></svg>
         <rect width="100%" height="100%" fill="#1e293b"/>
         <rect x="0" y="0" width="100%" height="2" fill="#00ffff" opacity="0.3"/>
         <rect x="0" y="0" width="2" height="100%" fill="#00ffff" opacity="0.3"/>
         <rect x="0" y="98%" width="100%" height="2" fill="#00ffff" opacity="0.3"/>
         <rect x="98%" y="0" width="2" height="100%" fill="#00ffff" opacity="0.3"/>
-        <text x="50%" y="50%" text-anchor="middle" fill="#64748b" font-family="monospace" font-size="14">
+<text x="50%" y="50%" text-anchor="middle" fill="#64748b" font-family="monospace" font-size="14"></text>
           Loading...,
         </text>,
       </svg>,
     `;
-    ,
+
     return `data:image/svg+xml;base64,${btoa(svg)}`;
   };
-  if (hasError) {
+  if (hasError) {}
     return(<div;
         className={`bg-slate-800 flex items-center justify-center ${className}`}
         style={{ width, height }}
@@ -79,7 +79,7 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({,
         </div>)
       </div>)
     );
-  }
+
   return(<div;
       ref={imgRef}
       className={`relative overflow-hidden ${className}`}
@@ -98,7 +98,7 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({,
         /></img>
       )}
       {/* Actual Image */}
-      {isInView && (
+      {isInView && ()
         <img;
           src={src}
           alt={alt}

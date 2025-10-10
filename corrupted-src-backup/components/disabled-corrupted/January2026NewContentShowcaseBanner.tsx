@@ -27,7 +27,7 @@ const January2026NewContentShowcaseBanne, r: React.FC = () => {/* TODO: Fix JSX 
       <div, className="absolute, inse, t-0, opacit, y-10"></div>
         <div, className="absolute, inse, t-0, b, g-gradie, n, t-to-br, fro, m-whi, t, e/5, t, o-transpare, n, t" />
       </div>
-      <div, className="relativ, e, z-10">
+<div, className="relativ, e, z-10"></div>
         {/* Head, e, r */}</div>
     ></moti>
       {/* Background, Patter, n */}"
@@ -65,7 +65,7 @@ const January2026NewContentShowcaseBanne, r: React.FC = () => {/* TODO: Fix JSX 
           </moti, o, n.p>
         </div>
         {/* Features, Gri, d */}
-        <div, classNam, e = "grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-5, ga, p-6, m, b-8">
+<div, classNam, e = "grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-5, ga, p-6, m, b-8"></div>
           { featur, e, s.m, a, p((fea, t, u, r, e, ind, e, x) = > (</div>
             transiti, o, n = {/* TODO: Fix JSX expression */}
   n: 0., 6 }}"

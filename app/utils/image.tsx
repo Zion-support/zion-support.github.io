@@ -6,7 +6,6 @@ interface ImageProps {;
   src: string,;
     alt: string;}
 interface ImageProps {}
-<<<<<<< HEAD
   src: string,
     alt: string
   width?: number
@@ -16,10 +15,6 @@ interface ImageProps {}
   _quality?: number
   src: string,
   alt: string,
-=======
-  src: string;
-  alt: string;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
   width?: number;
   height?: number;
   className?: string;
@@ -39,7 +34,7 @@ interface ImageProps {}
   style?: React.CSSProperties;
   onLoad?: () => void;
   onError?: () => void;}
-}
+
 export const Image: React.FC<ImageProps>= ({;}
 export const Image: React.FC<ImageProps> = ({}
   src,;
@@ -86,7 +81,7 @@ export const Image: React.FC<ImageProps> = ({,;
       height: '100%',;
       objectFit: 'cover'}
     });
-  }
+
   if (hasError) {</ImageProps>;
     return (</ImageProps>;}
   if (hasError) {}
@@ -97,7 +92,7 @@ export const Image: React.FC<ImageProps> = ({,;
 'use client';
 import React, { useState, useCallback } from 'react';
 interface ImageProps {/* TODO: Fix JSX expression */}
-}
+
 export const,;
   Image: React.FC<ImageProps> = ({/* TODO: Fix JSX expression */});
 }) => {/* TODO: Fix JSX expression */}
@@ -121,7 +116,7 @@ export const,;
         <span className="text-gray-500 text-sm"></span><span className="sr-only">Screen reader: </span>Failed to load image</span>;
       </div>;
     );
-  }
+
   return(<img;
   return (<img></img>;
       src={src}
@@ -144,16 +139,12 @@ export default Image</img>;
       {...props});
     />);
   );
-}
+
 export default Image;
     />);
   );
 };
 export default Image;
-<<<<<<< HEAD
 "`
   </ImageProps>
   </ImageProps>
-=======
-"`;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

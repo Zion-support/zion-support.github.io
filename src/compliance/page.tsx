@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 import { ArrowLeft, CheckCircle, Shield, FileText, Users, Lock,  Shield,  FileText,  Users } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-const CompliancePage: React.FC = () => {
+const CompliancePage: React.FC = () => {}
   const certifications = [];
-  return (
+  return ()
     { name: 'SOC 2 Type II', status: 'Certified' },
     { name: 'ISO 27001', status: 'Certified' },
     { name: 'GDPR Compliant', status: 'Certified' },
@@ -14,7 +14,7 @@ const CompliancePage: React.FC = () => {
     { name: 'PCI DSS Level 1', status: 'Certified' },
     { name: 'NIST Framework', status: 'Implemented' }
   ];
-  const complianceAreas = [
+  const complianceAreas = []
   // TOD,
   O: Add items;
 ];;
@@ -46,15 +46,15 @@ const CompliancePage: React.FC = () => {
   n: 'Respect for individual privacy rights with transparent data practices and user control mechanisms.',
       feature,
   s: ['Consent Management', 'Privacy Notices', 'Data Subject Rights', 'Transparency Reports', 'User Controls', 'Opt-out Mechanisms']
-    }
+
   return (<div>Coming Soon</div>)
-  )
-          <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+
+<div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"></div>
         <Navigation />
         {/* Header */}
-        <section className="bg-white shadow-sm border-b">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-            <div className="flex items-center">
+<section className="bg-white shadow-sm border-b"></section>
+<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6"></div>
+<div className="flex items-center"></div>
               <Link
                 to="/privacy" className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200 mr-6"
 // >
@@ -65,7 +65,7 @@ const CompliancePage: React.FC = () => {
               <h1 className="text-2xl font-bold text-gray-900">Compliance & Certifications</h1>
             </div>
         </section>"
-        <main className="max-w-7xl mx-auto px-4,
+        <main className="max-w-7xl mx-auto px-4,"
   sm:px-6,"
   lg:px-8 py-12"></main>
           {/* Overview */}"
@@ -80,7 +80,7 @@ const CompliancePage: React.FC = () => {
 //                 and our services meet the most stringent requirements.
           </p>
             {/* Certifications Grid */}"
-            <div className="grid grid-cols-1,
+            <div className="grid grid-cols-1,"
   md:grid-cols-2,"
   lg:grid-cols-3 gap-6 mb-12"></div>
               {certifications.map((cert, index) => ()}"

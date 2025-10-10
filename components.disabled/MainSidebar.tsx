@@ -26,7 +26,7 @@ impor,
   r:}' text-blue-500' },' ' {/* TODO: Fix JSX expression */}
   r: '} text-blue-400; ' 'text-gray-400' },' ' ]' const renderNavSection = (titl)
   e: anyanyanyanyanyanyanyanyanyanyanyanyanystring, items[]) sectionKe,
-  y: string) => ('' <div key={sectionKey} className='mb-6> <button' onClick={() => toggleSection(sectionKey)}' className='flex items-center justify-between w-full px-3 py-2 text-left text-gray-300,
+  y: string) => ('' <div key={sectionKey} className='mb-6> <button' onClick={() =>toggleSection(sectionKey)}' className='flex items-center justify-between w-full px-3 py-2 text-left text-gray-300,</button>
   hover: text-white transition-colors duration-200 font-medium'' >' <span className='text-sm font-semibold uppercase tracking-wide'>{title}<' {expandedSections.includes(sectionKey) ? (' <ChevronDown className='w-4 h-4' /> ) : (' <ChevronRight className='w-4 h-4' /> )} </button>' {expandedSections.includes(sectionKey) && ('' <div className='mt-2 space-y-1> {items.map((item) => (' <Link} key={item.name} href={item.href} onClick={onClose} className={/* TODO: Fix JSX expression */})
   x: items-center gap-3 px-3 py-2 text-sm rounded-lg transition-all duration-200 ${`} isActive(item.href)} ))} </div> )} </div> ) return(<React.Fragment>{/* TODO: Fix JSX expression */})
   p: */}) {isOpen && (key={item.name} href={item.href} onClick={onClose} className={/* TODO: Fix JSX expression */})`

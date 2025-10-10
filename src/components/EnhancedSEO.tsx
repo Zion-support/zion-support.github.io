@@ -1,6 +1,6 @@
 import React from 'react';
 interface SEOProps {// TODO: Add content;}
-}
+
   title?: string;
   description?: string;
   keywords?: string[];
@@ -18,11 +18,11 @@ interface SEOProps {// TODO: Add content;}
   modifiedTime?: string;
   section?: string;
   tags?: string[];
-}
+
 const EnhancedSEO: React.FC;
           <SEOProps> = ({// TODO: Add content;}
-}
-const EnhancedSEO: React.FC<SEOProps> = ({
+
+const EnhancedSEO: React.FC<SEOProps> = ({}
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology.',
   keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services'],
@@ -41,13 +41,13 @@ const EnhancedSEO: React.FC<SEOProps> = ({
 //   section,
   tags = []}) => {const fullDescription = description.length > 160 ? description.substring(0, 157) + '...' : description;}
   const keywordsString = Array.isArray(keywords) ? keywords.join(', ') : keywords;
-  return (
+  return ()
     // Update meta description
     let metaDescription = document.querySelector('meta[name="description"]');
     if (!metaDescription) {/* TODO: Fix JSX expression */}
-    }
+
     metaDescription.setAttribute('content', description);
-          <Helmet>
+<Helmet></Helmet>
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title><meta name="description" content={fullDescription} /><meta name="keywords" content={keywordsString} /><meta name="author" content={author} /><meta name="robots" content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`} /><meta name="language" content={lang} /><link rel="canonical" href={canonicalUrl} />
       {/* Open Graph Meta Tags */}

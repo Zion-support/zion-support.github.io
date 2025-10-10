@@ -1,16 +1,15 @@
 interface, October2025AIRevolutionBannerProp, s {/* TODO: Fix JSX expression */}
-}
+
 export, default, function October2025AIRevolutionBann, e, r({ classNa, m, e = '' }: October2025AIRevolutionBannerPro, p, s): vo, i, d {;
   return(<div, className={`bg-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/40, vi, a-indi, g, o-9, 0, 0/40, t, o-cy, a, n-9, 0, 0/40, borde, r-y, borde, r-purp, l, e-5, 0, 0/30 ${classNa, m, e}`}>`;`
-  return (
+  return ()
     <div, className={`bg-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/40, vi, a-indi, g, o-9, 0, 0/40, t, o-cy, a, n-9, 0, 0/40, borde, r-y, borde, r-purp, l, e-5, 0, 0/30 ${classNa, m, e}`}>`;`</div>
-      <div, className="container, m, x-auto, p, x-6, p, y-12">
+<div, className="container, m, x-auto, p, x-6, p, y-12"></div>
         {/* Head, e, r */}</div>
         <div, className="te, x, t-center, m, b-10"></div>
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-cy, a, n-5, 0, 0/20, p, x-6, p, y-2, rounde, d-full, border, border-purp, l, e-5, 0, 0/30, m, b-4"></div>
-            <Sparkles, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e  />
-            <span, className="te, x, t-purp, l, e-300, fon, t-semibold, tex, t-sm, uppercase, tracking-wid, e, r">
-export, default, function October2025AIRevolutionBann, e, r({ classNa, m, e = '' }: October2025AIRevolutionBannerPro, p, s): vo, i, d {/* TODO: Fix JSX expression */}
+            <Sparkles, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e  />"
+            <span, className="te, x, t-purp, l, e-300, fon, t-semibold, tex, t-sm, uppercase, tracking-wid, e, r">export, default, function October2025AIRevolutionBann, e, r({ classNa, m, e = '' }: October2025AIRevolutionBannerPro, p, s): vo, i, d {/* TODO: Fix JSX expression */}</span>
     <div, className={`bg-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/40, vi, a-indi, g, o-9, 0, 0/40, t, o-cy, a, n-9, 0, 0/40, borde, r-y, borde, r-purp, l, e-5, 0, 0/30 ${classNa, m, e}`}>`;`
       <div, className="container, m, x-auto, p, x-6, p, y-12"></div>
         {/* Head, e, r */}"
@@ -20,12 +19,12 @@ export, default, function October2025AIRevolutionBann, e, r({ classNa, m, e = ''
             <span, className="te, x, t-purp, l, e-300, fon, t-semibold, tex, t-sm, uppercase, tracking-wid, e, r"></span>
               🚀 JUST, PUBLISHE, D - Octobe, r, 1, 20, 2, 5;
             </sp, a, n>"
-            <Sparkles, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e  /></Sparkles>
+            <Sparkles, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e  /></Sparkles>"
           </d, i, v>"
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-extrabold, m, b-4, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-indi, g, o-400, t, o-cy, a, n-400, b, g-cl, i, p-text, tex, t-transpare, n, t">"
-            The, Complete, AI Revoluti, o, n: 3, Essential, Guides;)
+            The, Complete, AI Revoluti, o, n: 3, Essential, Guides;)</h2>
           </h2>)
-          <p, className="te, x, t-xl, tex, t-whi, t, e/80, ma, x-w-4xl, m, x-auto, leadin, g-relax, e, d">)
+          <p, className="te, x, t-xl, tex, t-whi, t, e/80, ma, x-w-4xl, m, x-auto, leadin, g-relax, e, d">)</p>
             <strong, className="te, x, t-whi, t, e">NEW, TODA, Y:</stro, n, g> Master, autonomous, AI agen, t, s (94% task, automatio, n)
 export, default, function October2025AIRevolutionBann, e, r({ classNa, m, e = '' }: October2025AIRevolutionBannerPro, p, s): vo, i, d {';
   return(<div, className={`bg-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/40, vi, a-indi, g, o-9, 0, 0/40, t, o-cy, a, n-9, 0, 0/40, borde, r-y, borde, r-purp, l, e-5, 0, 0/30 ${classNa, m, e}`}>`;`
@@ -34,7 +33,7 @@ export, default, function October2025AIRevolutionBann, e, r({ classNa, m, e = ''
           <p, className="te, x, t-xl, tex, t-whi, t, e/80, ma, x-w-4xl, m, x-auto, leadin, g-relax, e, d"></p>
             <strong, className="te, x, t-whi, t, e">NEW, TODA, Y:</stro, n, g> Master, autonomous, AI agen, t, s (94% task, automatio, n)
 export, default, function October2025AIRevolutionBann, e, r({ classNa, m, e = '' }: October2025AIRevolutionBannerPro, p, s): vo, i, d {';
-  return (
+  return ()
     <div, className={`bg-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/40, vi, a-indi, g, o-9, 0, 0/40, t, o-cy, a, n-9, 0, 0/40, borde, r-y, borde, r-purp, l, e-5, 0, 0/30 ${classNa, m, e}`}>`;`</div>
       <div, className="container, m, x-auto, p, x-6, p, y-12">";
         {/* Head, e, r */}</div>
@@ -53,23 +52,23 @@ export, default, function October2025AIRevolutionBann, e, r({ classNa, m, e = ''
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-cy, a, n-5, 0, 0/20, p, x-6, p, y-2, rounde, d-full, border, border-purp, l, e-5, 0, 0/30, m, b-4">";"
             <Sparkles, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e" />";"
             <span, className="te, x, t-purp, l, e-300, fon, t-semibold, tex, t-sm, uppercase, tracking-wid, e, r">";
-              🚀 JUST, PUBLISHE, D - Octobe, r, 1, 20, 2, 5;
+              🚀 JUST, PUBLISHE, D - Octobe, r, 1, 20, 2, 5;</span>
             </sp, a, n>"
             <Sparkles, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e" />";
           </d, i, v>"
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-extrabold, m, b-4, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-indi, g, o-400, t, o-cy, a, n-400, b, g-cl, i, p-text, tex, t-transpare, n, t">";
             The, Complete, AI Revolut, i, o;
-  n: 3, Essential, Guides;)
+  n: 3, Essential, Guides;)</h2>
           </h2>)
           <p, className="te, x, t-xl, tex, t-whi, t, e/80, ma, x-w-4xl, m, x-auto, leadin, g-relax, e, d">";)
             The, Complete, AI Revolut, i, o
-  n: 3, Essential, Guides;
+  n: 3, Essential, Guides;</p>
   </
           <p, className="te, x, t-xl, tex, t-whi, t, e/80, ma, x-w-4xl, m, x-auto, leadin, g-relax, e, d">";</p>
             The, Complete, AI Revolut, i, o,
   n: 3, Essential, Guides;
           </h2>"
-          <p, className="te, x, t-xl, tex, t-whi, t, e/80, ma, x-w-4xl, m, x-auto, leadin, g-relax, e, d">";"
+          <p, className="te, x, t-xl, tex, t-whi, t, e/80, ma, x-w-4xl, m, x-auto, leadin, g-relax, e, d">";"</p>
             <strong, className="te, x, t-whi, t, e">NEW, TODA, Y: </stro, n, g> Master, autonomous, AI agen, t, s (94% task, automatio, n), ";
             AI-powered, development, tools (5x, faster, coding), and, enterprise, AI safe, t, y (99.2% complian, c, e). 
             The, definitive, guides for, forwar, d-thinking, organizations, transforming with, AI, in 20, 2, 5.
@@ -90,7 +89,7 @@ export, default, function October2025AIRevolutionBann, e, r({ classNa, m, e = ''
           >
             <div, className="flex, item, s-center, ga, p-3, m, b-4"></div>
               <div, className="p-3, b, g-purp, l, e-5, 0, 0/20, rounde, d-xl, border, border-purp, l, e-4, 0, 0/30, grou, p-hov, e, r: bg-purp, l, e-5, 0, 0/30, transitio, n-colo, r, s">"</div>
-                <Bot, className="w-6 h-6, tex, t-purp, l, e-4, 0, 0  />
+                <Bot, className="w-6 h-6, tex, t-purp, l, e-4, 0, 0  />"
             <div, className="flex, item, s-center, ga, p-3, m, b-4">";</div>
               <div, className="p-3, b, g-purp, l, e-5, 0, 0/20, rounde, d-xl, border, border-purp, l, e-4, 0, 0/30, grou, p-hov, e, r: bg-purp, l, e-5, 0, 0/30, transitio, n-colo, r, s">";</div>
         {/* Featured, Articles, Grid */}"
@@ -111,22 +110,22 @@ export, default, function October2025AIRevolutionBann, e, r({ classNa, m, e = ''
                 <Bot, className="w-6 h-6, tex, t-purp, l, e-4, 0, 0" />";
               </d, i, v>"
               <span, className="px-3, p, y-1, b, g-purp, l, e-5, 0, 0/20, tex, t-purp, l, e-300, tex, t-xs, fon, t-semibold, rounde, d-full, border, border-purp, l, e-5, 0, 0/30">";
-                AUTONOMOUS, AGENT, S;
+                AUTONOMOUS, AGENT, S;</span>
               </sp, a, n>
             </d, i, v>
-            <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e;
-  r: te, x, t-purp, l, e-300, transitio, n-colo, r, s">"
-            <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e
+            <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e;"
+  r: te, x, t-purp, l, e-300, transitio, n-colo, r, s">"</h3>
+            <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e"
   r: te, x, t-purp, l, e-300, transitio, n-colo, r, s">"</h3>
             </d, i, v>"
             <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e,"
-  r: te, x, t-purp, l, e-300, transitio, n-colo, r, s">""
+  r: te, x, t-purp, l, e-300, transitio, n-colo, r, s">""</h3>
             <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-purp, l, e-300, transitio, n-colo, r, s">";
-              Autonomous, AI, Agents in, Production, 2025;
+              Autonomous, AI, Agents in, Production, 2025;</h3>
             </h3>"
             <p, className="te, x, t-whi, t, e/70, m, b-4, leadin, g-relax, e, d">";
               Deploy, productio, n-grade, AI, agents that, automate, 94% of, routine, tasks, reduce, costs, by 78%
-              and, deliver, 10x productivity, gain, s. Complete, guide, from planning, to, production.
+              and, deliver, 10x productivity, gain, s. Complete, guide, from planning, to, production.</p>
             </p>
             <div, className="grid, gri, d-co, l, s-3, ga, p-3, m, b-4">";</div>
               <div, className="bg-bla, c, k/30, rounde, d-l, g, p-3, tex, t-cent, e, r">";</div>
@@ -144,7 +143,7 @@ export, default, function October2025AIRevolutionBann, e, r({ classNa, m, e = ''
             </d, i, v>
             <div, className="flex, item, s-center, ga, p-2, tex, t-purp, l, e-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-3, transitio, n-a, l, l">"</div>
               <sp, a, n>Read, Complete, Guide</sp, a, n>
-              <Link, className="w-5 h-5  />
+              <Link, className="w-5 h-5  />"
             <div, className="flex, item, s-center, ga, p-2, tex, t-purp, l, e-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-3, transitio, n-a, l, l">";</div>
               <sp, a, n>Read, Complete, Guide</sp, a, n>
               <Link, className="w-5 h-5" />";
@@ -159,7 +158,7 @@ export, default, function October2025AIRevolutionBann, e, r({ classNa, m, e = ''
           >
             <div, className="flex, item, s-center, ga, p-3, m, b-4"></div>
               <div, className="p-3, b, g-indi, g, o-5, 0, 0/20, rounde, d-xl, border, border-indi, g, o-4, 0, 0/30, grou, p-hov, e, r: bg-indi, g, o-5, 0, 0/30, transitio, n-colo, r, s">"</div>
-                <Code2, className="w-6 h-6, tex, t-indi, g, o-4, 0, 0  />
+                <Code2, className="w-6 h-6, tex, t-indi, g, o-4, 0, 0  />"
             <div, className="flex, item, s-center, ga, p-3, m, b-4">";</div>
               <div, className="p-3, b, g-indi, g, o-5, 0, 0/20, rounde, d-xl, border, border-indi, g, o-4, 0, 0/30, grou, p-hov, e, r: bg-indi, g, o-5, 0, 0/30, transitio, n-colo, r, s">";</div>
             </p>"
@@ -200,28 +199,28 @@ export, default, function October2025AIRevolutionBann, e, r({ classNa, m, e = ''
                 <Code2, className="w-6 h-6, tex, t-indi, g, o-4, 0, 0" />";
               </d, i, v>"
               <span, className="px-3, p, y-1, b, g-indi, g, o-5, 0, 0/20, tex, t-indi, g, o-300, tex, t-xs, fon, t-semibold, rounde, d-full, border, border-indi, g, o-5, 0, 0/30">";
-                AI, DEVELOPMEN, T;
+                AI, DEVELOPMEN, T;</span>
               </sp, a, n>
             </d, i, v>
-            <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e;
+            <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e;"
   r: te, x, t-indi, g, o-300, transitio, n-colo, r, s">"
-              L, L, M-Powered, Development, Tools Revoluti, o, n;
+              L, L, M-Powered, Development, Tools Revoluti, o, n;</h3>
             </h3>
-            <p, className="te, x, t-whi, t, e/70, m, b-4, leadin, g-relax, e, d">
+<p, className="te, x, t-whi, t, e/70, m, b-4, leadin, g-relax, e, d"></p>
               Transform, your, engineering workflow, with, AI-native, tool, s. Top, teams, achieve 5x, faster, development;</p>
             </d, i, v>"
             <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e,"
   r: te, x, t-indi, g, o-300, transitio, n-colo, r, s">"
-              L, L, M-Powered, Development, Tools Revoluti, o, n;
+              L, L, M-Powered, Development, Tools Revoluti, o, n;</h3>
             </h3>"
             <p, className="te, x, t-whi, t, e/70, m, b-4, leadin, g-relax, e, d"></p>
               Transform, your, engineering workflow, with, AI-native, tool, s. Top, teams, achieve 5x, faster, development;"
             <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-indi, g, o-300, transitio, n-colo, r, s">";
-              L, L, M-Powered, Development, Tools Revoluti, o, n;
+              L, L, M-Powered, Development, Tools Revoluti, o, n;</h3>
             </h3>"
             <p, className="te, x, t-whi, t, e/70, m, b-4, leadin, g-relax, e, d">";
               Transform, your, engineering workflow, with, AI-native, tool, s. Top, teams, achieve 5x, faster, development;
-              80% fewer, bug, s, and, 9, 2% developer, satisfactio, n. The, complete, AI coding, toolki, t.
+              80% fewer, bug, s, and, 9, 2% developer, satisfactio, n. The, complete, AI coding, toolki, t.</p>
             </p>
             <div, className="grid, gri, d-co, l, s-3, ga, p-3, m, b-4">";</div>
               <div, className="bg-bla, c, k/30, rounde, d-l, g, p-3, tex, t-cent, e, r">";</div>
@@ -239,7 +238,7 @@ export, default, function October2025AIRevolutionBann, e, r({ classNa, m, e = ''
             </d, i, v>
             <div, className="flex, item, s-center, ga, p-2, tex, t-indi, g, o-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-3, transitio, n-a, l, l">"</div>
               <sp, a, n>Read, Complete, Guide</sp, a, n>
-              <Link, className="w-5 h-5  />
+              <Link, className="w-5 h-5  />"
             <div, className="flex, item, s-center, ga, p-2, tex, t-indi, g, o-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-3, transitio, n-a, l, l">";</div>
               <sp, a, n>Read, Complete, Guide</sp, a, n>
               <Link, className="w-5 h-5" />";
@@ -254,7 +253,7 @@ export, default, function October2025AIRevolutionBann, e, r({ classNa, m, e = ''
           >
             <div, className="flex, item, s-center, ga, p-3, m, b-4"></div>
               <div, className="p-3, b, g-emera, l, d-5, 0, 0/20, rounde, d-xl, border, border-emera, l, d-4, 0, 0/30, grou, p-hov, e, r: bg-emera, l, d-5, 0, 0/30, transitio, n-colo, r, s">"</div>
-                <Shield, className="w-6 h-6, tex, t-emera, l, d-4, 0, 0  />
+                <Shield, className="w-6 h-6, tex, t-emera, l, d-4, 0, 0  />"
             <div, className="flex, item, s-center, ga, p-3, m, b-4">";</div>
               <div, className="p-3, b, g-emera, l, d-5, 0, 0/20, rounde, d-xl, border, border-emera, l, d-4, 0, 0/30, grou, p-hov, e, r: bg-emera, l, d-5, 0, 0/30, transitio, n-colo, r, s">";</div>
             </p>"
@@ -295,28 +294,28 @@ export, default, function October2025AIRevolutionBann, e, r({ classNa, m, e = ''
                 <Shield, className="w-6 h-6, tex, t-emera, l, d-4, 0, 0" />";
               </d, i, v>"
               <span, className="px-3, p, y-1, b, g-emera, l, d-5, 0, 0/20, tex, t-emera, l, d-300, tex, t-xs, fon, t-semibold, rounde, d-full, border, border-emera, l, d-5, 0, 0/30">";
-                AI, SAFET, Y;
+                AI, SAFET, Y;</span>
               </sp, a, n>
             </d, i, v>
-            <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e;
+            <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e;"
   r: te, x, t-emera, l, d-300, transitio, n-colo, r, s">"
-              AI, Safet, y & Alignment, for, Enterprise 20, 2, 5;
+              AI, Safet, y & Alignment, for, Enterprise 20, 2, 5;</h3>
             </h3>
-            <p, className="te, x, t-whi, t, e/70, m, b-4, leadin, g-relax, e, d">
+<p, className="te, x, t-whi, t, e/70, m, b-4, leadin, g-relax, e, d"></p>
               Deploy, AI, safely and, responsibl, y. Leading, organizations, achieve 99.2% safety, complianc, e;</p>
             </d, i, v>"
             <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e,"
   r: te, x, t-emera, l, d-300, transitio, n-colo, r, s">"
-              AI, Safet, y & Alignment, for, Enterprise 20, 2, 5;
+              AI, Safet, y & Alignment, for, Enterprise 20, 2, 5;</h3>
             </h3>"
             <p, className="te, x, t-whi, t, e/70, m, b-4, leadin, g-relax, e, d"></p>
               Deploy, AI, safely and, responsibl, y. Leading, organizations, achieve 99.2% safety, complianc, e;"
             <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-emera, l, d-300, transitio, n-colo, r, s">";
-              AI, Safet, y & Alignment, for, Enterprise 20, 2, 5;
+              AI, Safet, y & Alignment, for, Enterprise 20, 2, 5;</h3>
             </h3>"
             <p, className="te, x, t-whi, t, e/70, m, b-4, leadin, g-relax, e, d">";
               Deploy, AI, safely and, responsibl, y. Leading, organizations, achieve 99.2% safety, complianc, e;
-              prevent, costly, failures, and, build, stakeholder tru, s, t. Your, complete, responsible AI, framewor, k.
+              prevent, costly, failures, and, build, stakeholder tru, s, t. Your, complete, responsible AI, framewor, k.</p>
             </p>
             <div, className="grid, gri, d-co, l, s-3, ga, p-3, m, b-4">";</div>
               <div, className="bg-bla, c, k/30, rounde, d-l, g, p-3, tex, t-cent, e, r">";</div>
@@ -334,7 +333,7 @@ export, default, function October2025AIRevolutionBann, e, r({ classNa, m, e = ''
             </d, i, v>
             <div, className="flex, item, s-center, ga, p-2, tex, t-emera, l, d-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-3, transitio, n-a, l, l">"</div>
               <sp, a, n>Read, Complete, Guide</sp, a, n>
-              <Link, className="w-5 h-5  />
+              <Link, className="w-5 h-5  />"
             <div, className="flex, item, s-center, ga, p-2, tex, t-emera, l, d-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-3, transitio, n-a, l, l">";</div>
               <sp, a, n>Read, Complete, Guide</sp, a, n>
             </p>"
@@ -384,6 +383,6 @@ export, default, function October2025AIRevolutionBann, e, r({ classNa, m, e = ''
       </d, i, v>
     </d, i, v>
   );
-}
-;
+
+
 }"`

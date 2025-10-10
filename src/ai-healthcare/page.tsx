@@ -3,21 +3,18 @@ import React from 'react';
 import { Heart, ArrowRight } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-export default function AIHealthcarePage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <div className="container mx-auto px-4 py-20">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
-            AI Healthcare;
+export default function AIHealthcarePage() {}
+  return ()
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+<div className="container mx-auto px-4 py-20"></div>
+<div className="max-w-4xl mx-auto text-center"></div>
+          <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">AI Healthcare;</h1>
   </
-          <p className="text-xl text-gray-300 mb-8">
-            Cutting-edge AI solutions for medical imaging, drug discovery, and personalized medicine.
+          <p className="text-xl text-gray-300 mb-8">Cutting-edge AI solutions for medical imaging, drug discovery, and personalized medicine.</p>
           </p>
-          <div className="bg-slate-800/50 rounded-lg p-8">
+<div className="bg-slate-800/50 rounded-lg p-8"></div>
             <h2 className="text-2xl font-bold text-white mb-4">AI Healthcare Solutions</h2>
-            <p className="text-gray-300 mb-6">
-              Transform healthcare with AI-powered diagnostics, treatment recommendations, and patient care.
+            <p className="text-gray-300 mb-6">Transform healthcare with AI-powered diagnostics, treatment recommendations, and patient care.</p>
             </p>
             <a
               href="/contact"
@@ -30,6 +27,6 @@ export default function AIHealthcarePage() {
       </div>
     </div>
   );
-}
+
   </a>
   </h1>

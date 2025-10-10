@@ -1,6 +1,6 @@
 import React from 'react';
 interface AdvertisingBannerProps {/* TODO: Fix JSX expression */}
-}
+
 const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({,
   title;
   description,
@@ -8,10 +8,10 @@ const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({,
   ctaUrl,
   imageUrl,
   backgroundColor = '#3 b82 f6',
-  textColor = '#ffffff'}) => {
+  textColor = '#ffffff'}) => {}
   return(<div;
       className="advertising-banner"
-      style={{
+      style={{}
         backgroundColor,
         color: textColor;
         padding: '2rem'
@@ -22,15 +22,15 @@ const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({,
         gap: '2rem'}
       }}
     >
-      {imageUrl && (
-        <div className="banner-image">
+      {imageUrl && ()
+<div className="banner-image"></div>
           <img;
       {imageUrl && (</div>
         <div className="banner-image"></div>
           <img
             src={imageUrl}
             alt={title}
-            style={{
+            style={{}
               width: '200px',
               height: 'auto')}
               borderRadius: '0.25rem')}
@@ -52,7 +52,7 @@ const,
         <p style={{ margin: '0 0 1.5rem 0', fontSize: '1rem', opacity: 0.9 }}>{description}</p>
         <a;
           href={ctaUrl}
-          style={{
+          style={{}
             display: 'inline-block',
             padding: '0.75 rem 1.5 rem',
             backgroundColor: 'rgba(255, 255, 255, 0.2)',

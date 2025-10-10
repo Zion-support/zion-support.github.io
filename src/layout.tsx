@@ -4,11 +4,11 @@ import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import Analytics from './components/Analytics';
-export default function RootLayout({
-  children}: {
+export default function RootLayout({}
+  children}: {}
   children: React.ReactNode;
-}) {
-  const structuredData = {
+}) {}
+  const structuredData = {}
     '@context': 'https://schema.org',
     '@type': 'TechCompany',
     name: 'Zion Tech Group',
@@ -18,7 +18,7 @@ export default function RootLayout({
     foundingDate: '2020',
     numberOfEmployees: '50-100',
     industry: 'Technology',
-    services: [
+    services: []
       'AI Solutions',
       'Quantum Computing',
       'Autonomous Systems',
@@ -27,59 +27,59 @@ export default function RootLayout({
       'Automation',
       'Business Intelligence'
     ],
-    contactPoint: {
+    contactPoint: {}
       '@type': 'ContactPoint',
       telephone: '+1-302-464-0950',
       contactType: 'Customer Service',
       areaServed: 'US',
       availableLanguage: 'en'},
-    sameAs: [
+    sameAs: []
       'https://twitter.com/ziontechgroup',
       'https://linkedin.com/company/ziontechgroup',
-    address: {
+    address: {}
       '@type': 'PostalAddress',
       streetAddress: '364 E Main St STE 1008',
       addressLocality: 'Middletown',
       addressRegion: 'DE',
       postalCode: '19709',
       addressCountry: 'US',
-    offers: [
-      {
-  const address = {
+    offers: []
+      {}
+  const address = {}
     '@type': 'PostalAddress',
     streetAddress: '364 E Main St STE 1008',
     addressLocality: 'Middletown',
     addressRegion: 'DE',
     postalCode: '19709',
     addressCountry: 'US',
-    offers: [
+    offers: []
   // TODO: Add items]
       {// TODO: Add content;}
-}
+
         '@type': 'Offer',
         category: 'AI Solutions',
         description: 'Enterprise AI solutions, digital transformation, and cloud services',
         price: '1500',
         priceCurrency: 'USD',
-        priceSpecification: {
+        priceSpecification: {}
           '@type': 'PriceSpecification',
           billingIncrement:         ,
 $4}
         category: 'Digital Transformation',
         description: 'Process automation, legacy system modernization, and workflow optimization',
         price: '2500',
-    serviceArea: {
+    serviceArea: {}
       '@type': 'GeoCircle',
-      geoMidpoint: {
+      geoMidpoint: {}
         '@type': 'GeoCoordinates',
         latitude: '39.8283',
         longitude:       ,
 geoRadiusgeoRadius: '1000000'
-    hasOfferCatalog: {
+    hasOfferCatalog: {}
       '@type': 'OfferCatalog',
       name: 'AI Technology Services',
-      itemListElement: [
-          itemOffered: {
+      itemListElement: []
+          itemOffered: {}
             '@type': 'Service',
             name: 'AI Enterprise Transformation',
             description:             ,
@@ -89,9 +89,9 @@ name$5: 'Cloud Infrastructure',
             description:       ,
 $4]
   };
-  return (
-    <html lang='en'>
-      <head>
+  return ()
+<html lang='en'></html>
+<head></head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
         {/* Primary meta tags */}
@@ -160,8 +160,8 @@ $4]
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
       </head>
-      <body className='antialiased'>
-        <ErrorBoundary>
+<body className='antialiased'></body>
+<ErrorBoundary></ErrorBoundary>
           <PerformanceMonitor />
           <Analytics />
           {children}
@@ -171,15 +171,15 @@ $4]
   );
 export default RootLayout;
         priceSpecification: {// TODO: Add content;}
-}
+
           '@type': 'PriceSpecification',
           billingIncrement: 'P1M'
         };
   itemOffered: {// TODO: Add content;}
-}
+
             '@type': 'Service',
             name: 'AI Enterprise Transformation',
             description: 'Comprehensive AI implementation strategies for enterprise organizations'
 export default SrcPage;
-}
+
   </script>

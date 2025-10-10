@@ -1,7 +1,7 @@
 'use client';
 import { Helmet } from 'react-helmet-async';
 export default function AICustomerServicePage() {/* TODO: Fix JSX expression */}
-}
+
   return (<div><Helmet></Helmet>
         <title>AI Customer Service Solutions - Zion Tech Group</title>
         <meta name="description" content="Revolutionary AI-powered customer service solutions with 24/7 support, multilingual capabilities, and 95% customer satisfaction rates. Starting at $299/month." /></meta>"
@@ -29,7 +29,7 @@ export default function AICustomerServicePage() {/* TODO: Fix JSX expression */}
           {/* Features Grid */}"
           <section className="mb-16"></section>"
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Key Features</h2>"
-            <div className="grid grid-cols-1,
+            <div className="grid grid-cols-1,"
   md:grid-cols-2,"
   lg:grid-cols-3 gap-8"></div>"
               <div className="cyber-card p-6 energy-pulse"></div>"
@@ -175,7 +175,7 @@ export default function AICustomerServicePage() {/* TODO: Fix JSX expression */}
                 📞 Cal)
   l: (302) 464-0950;
               </a>"
-              <a href="/contact" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold,
+              <a href="/contact" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold,"
   hover:bg-white,"
   hover:text-indigo-600 transition-all duration-300"></a>
                 Get Free Demo;

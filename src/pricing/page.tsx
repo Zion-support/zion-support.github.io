@@ -3,16 +3,16 @@ import { Link } from 'react-router-dom';
 import { CheckCircle, X, Zap, Brain, Cloud, ArrowRight, Star, Users, Shield, Clock } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-const PricingPage: React.FC = () => {
-  const plans = [
-    {
+const PricingPage: React.FC = () => {}
+  const plans = []
+    {}
       name: 'Starter',
       description: 'Perfect for small businesses getting started with AI',
       price: '$2,500',
       period: '/month',
       icon: Zap,
       color: 'blue',
-      features: [
+      features: []
         'AI Strategy Consultation',
         'Basic Machine Learning Models',
         'Monthly Analytics Reports',
@@ -20,7 +20,7 @@ const PricingPage: React.FC = () => {
         'Up to 5 Users',
         'Basic Integration Support'
       ],
-      limitations: [
+      limitations: []
         'Limited Custom Models',
         'Standard Support Hours',
         'Basic Analytics'
@@ -28,14 +28,14 @@ const PricingPage: React.FC = () => {
       cta: 'Get Started',
       popular: false
     },
-    {
+    {}
       name: 'Professional',
       description: 'Ideal for growing companies with advanced AI needs',
       price: '$7,500',
       period: '/month',
       icon: Brain,
       color: 'cyan',
-      features: [
+      features: []
         'Everything in Starter',
         'Custom AI Model Development',
         'Advanced Analytics & Insights',
@@ -50,14 +50,14 @@ const PricingPage: React.FC = () => {
       cta: 'Start Free Trial',
       popular: true
     },
-    {
+    {}
       name: 'Enterprise',
       description: 'Complete AI transformation for large organizations',
       price: 'Custom',
       period: '',
       icon: Cloud,
       color: 'purple',
-      features: [
+      features: []
         'Everything in Professional',
         'Dedicated AI Team',
         'Custom AI Architecture',
@@ -72,64 +72,64 @@ const PricingPage: React.FC = () => {
       limitations: [],
       cta: 'Contact Sales',
       popular: false
-    }
+
   ];
-  const addOns = [
-    {
+  const addOns = []
+    {}
       name: 'Additional AI Models',
       description: 'Extra custom AI models beyond your plan limits',
       price: '$500',
       period: '/model/month'
     },
-    {
+    {}
       name: 'Priority Support',
       description: '24/7 priority support with dedicated account manager',
       price: '$1,000',
       period: '/month'
     },
-    {
+    {}
       name: 'Custom Integrations',
       description: 'Bespoke integrations with your existing systems',
       price: '$2,000',
       period: '/integration'
     },
-    {
+    {}
       name: 'Training & Workshops',
       description: 'On-site or virtual training for your team',
       price: '$5,000',
       period: '/day'
-    }
+
   ];
-  const faqs = [
-    {
+  const faqs = []
+    {}
       question: 'Can I change my plan at any time?',
       answer: 'Yes, you can upgrade or downgrade your plan at any time. Changes take effect at the beginning of your next billing cycle.'
     },
-    {
+    {}
       question: 'Is there a free trial available?',
       answer: 'Yes, we offer a 14-day free trial for our Professional plan. No credit card required to start.'
     },
-    {
+    {}
       question: 'What happens if I exceed my plan limits?',
       answer: 'We\'ll notify you when you\'re approaching your limits and help you upgrade or purchase additional capacity.'
     },
-    {
+    {}
       question: 'Do you offer custom pricing for large organizations?',
       answer: 'Yes, we offer custom pricing and enterprise solutions for organizations with specific needs. Contact our sales team for more information.'
     },
-    {
+    {}
       question: 'What support is included?',
       answer: 'All plans include email support. Professional and Enterprise plans include priority support with faster response times.'
     },
-    {
+    {}
       question: 'Can I cancel anytime?',
       answer: 'Yes, you can cancel your subscription at any time. There are no long-term contracts or cancellation fees.'
-    }
+
   ];
-  const getColorClasses = (color: string) => {
-    switch (color) {
+  const getColorClasses = (color: string) => {}
+    switch (color) {}
       case 'blue':
-        return {
+        return {}
           bg: 'bg-blue-500',
           text: 'text-blue-500',
           border: 'border-blue-500',
@@ -137,7 +137,7 @@ const PricingPage: React.FC = () => {
           textLight: 'text-blue-600'
         };
       case 'cyan':
-        return {
+        return {}
           bg: 'bg-cyan-500',
           text: 'text-cyan-500',
           border: 'border-cyan-500',
@@ -145,7 +145,7 @@ const PricingPage: React.FC = () => {
           textLight: 'text-cyan-600'
         };
       case 'purple':
-        return {
+        return {}
           bg: 'bg-purple-500',
           text: 'text-purple-500',
           border: 'border-purple-500',
@@ -153,76 +153,75 @@ const PricingPage: React.FC = () => {
           textLight: 'text-purple-600'
         };
       default:
-        return {
+        return {}
           bg: 'bg-gray-500',
           text: 'text-gray-500',
           border: 'border-gray-500',
           light: 'bg-gray-50',
           textLight: 'text-gray-600'
         };
-    }
+
   };
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+  return ()
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Navigation />
       {/* Hero Section */}
-      <section className="relative py-20 px-4">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+<section className="relative py-20 px-4"></section>
+<div className="max-w-7xl mx-auto text-center"></div>
+<h1 className="text-5xl md:text-6xl font-bold text-white mb-6"></h1>
             Simple <span className="text-cyan-400">Pricing</span>
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Choose the perfect plan for your business. All plans include our core AI and IT solutions with transparent pricing.
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Choose the perfect plan for your business. All plans include our core AI and IT solutions with transparent pricing.</p>
           </p>
         </div>
       </section>
       {/* Pricing Plans */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {plans.map((plan, index) => {
+<section className="py-20 bg-white"></section>
+<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
+<div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
+            {plans.map((plan, index) => {}
               const colors = getColorClasses(plan.color);
-              return (
+              return ()
                 <div
                   key={index}
-                  className={`relative bg-white rounded-2xl shadow-lg border-2 ${
+                  className={`relative bg-white rounded-2xl shadow-lg border-2 ${}
                     plan.popular ? colors.border : 'border-gray-200'
                   } overflow-hidden`}
                 >
-                  {plan.popular && (
-                    <div className={`absolute top-0 left-0 right-0 ${colors.bg} text-white text-center py-2 text-sm font-semibold`}>
+                  {plan.popular && ()
+<div className={`absolute top-0 left-0 right-0 ${colors.bg} text-white text-center py-2 text-sm font-semibold`}></div>
                       Most Popular;
   </
                   )}
-                  <div className={`p-8 ${plan.popular ? 'pt-12' : ''}`}>
-                    <div className="text-center mb-8">
-                      <div className={`w-16 h-16 ${colors.light} rounded-full flex items-center justify-center mx-auto mb-4`}>
+<div className={`p-8 ${plan.popular ? 'pt-12' : ''}`}></div>
+<div className="text-center mb-8"></div>
+<div className={`w-16 h-16 ${colors.light} rounded-full flex items-center justify-center mx-auto mb-4`}></div>
                         <plan.icon className={`w-8 h-8 ${colors.textLight}`} />
                       </div>
                       <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
                       <p className="text-gray-600 mb-4">{plan.description}</p>
-                      <div className="flex items-baseline justify-center">
+<div className="flex items-baseline justify-center"></div>
                         <span className="text-4xl font-bold text-gray-900">{plan.price}</span>
                         <span className="text-gray-600 ml-1">{plan.period}</span>
                       </div>
                     </div>
-                    <div className="mb-8">
+<div className="mb-8"></div>
                       <h4 className="font-semibold text-gray-900 mb-4">What's included:</h4>
-                      <ul className="space-y-3">
-                        {plan.features.map((feature, featureIndex) => (
-                          <li key={featureIndex} className="flex items-start">
+<ul className="space-y-3"></ul>
+                        {plan.features.map((feature, featureIndex) => ()
+<li key={featureIndex} className="flex items-start"></li>
                             <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
                             <span className="text-gray-600">{feature}</span>
                           </li>
                         ))}
                       </ul>
                     </div>
-                    {plan.limitations.length > 0 && (
-                      <div className="mb-8">
+                    {plan.limitations.length > 0 && ()
+<div className="mb-8"></div>
                         <h4 className="font-semibold text-gray-900 mb-4">Limitations:</h4>
-                        <ul className="space-y-3">
-                          {plan.limitations.map((limitation, limitationIndex) => (
-                            <li key={limitationIndex} className="flex items-start">
+<ul className="space-y-3"></ul>
+                          {plan.limitations.map((limitation, limitationIndex) => ()
+<li key={limitationIndex} className="flex items-start"></li>
                               <X className="w-5 h-5 text-red-500 mr-3 mt-0.5 flex-shrink-0" />
                               <span className="text-gray-600">{limitation}</span>
                             </li>
@@ -232,7 +231,7 @@ const PricingPage: React.FC = () => {
                     )}
                     <Link
                       to="/contact"
-                      className={`w-full ${
+                      className={`w-full ${}
                         plan.popular
                           ? `${colors.bg} hover:opacity-90 text-white`
                           : `${colors.border} ${colors.text} hover:${colors.bg} hover:text-white`
@@ -248,22 +247,20 @@ const PricingPage: React.FC = () => {
         </div>
       </section>
       {/* Add-ons */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Add-on Services;
+<section className="py-20 bg-gray-50"></section>
+<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
+<div className="text-center mb-16"></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Add-on Services;</h2>
   </
-            <p className="text-xl text-gray-600">
-              Enhance your plan with additional services and features;
+            <p className="text-xl text-gray-600">Enhance your plan with additional services and features;</p>
   </
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {addOns.map((addOn, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
+            {addOns.map((addOn, index) => ()
+<div key={index} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow"></div>
                 <h3 className="text-lg font-bold text-gray-900 mb-2">{addOn.name}</h3>
                 <p className="text-gray-600 mb-4 text-sm">{addOn.description}</p>
-                <div className="flex items-baseline justify-between">
+<div className="flex items-baseline justify-between"></div>
                   <span className="text-2xl font-bold text-cyan-600">{addOn.price}</span>
                   <span className="text-gray-600 text-sm">{addOn.period}</span>
                 </div>
@@ -273,19 +270,17 @@ const PricingPage: React.FC = () => {
         </div>
       </section>
       {/* FAQ Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Frequently Asked Questions;
+<section className="py-20 bg-white"></section>
+<div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8"></div>
+<div className="text-center mb-16"></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Frequently Asked Questions;</h2>
   </
-            <p className="text-xl text-gray-600">
-              Everything you need to know about our pricing and plans;
+            <p className="text-xl text-gray-600">Everything you need to know about our pricing and plans;</p>
   </
           </div>
-          <div className="space-y-8">
-            {faqs.map((faq, index) => (
-              <div key={index} className="bg-gray-50 rounded-xl p-6">
+<div className="space-y-8"></div>
+            {faqs.map((faq, index) => ()
+<div key={index} className="bg-gray-50 rounded-xl p-6"></div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">{faq.question}</h3>
                 <p className="text-gray-600">{faq.answer}</p>
               </div>
@@ -294,15 +289,13 @@ const PricingPage: React.FC = () => {
         </div>
       </section>
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-cyan-600 to-blue-600">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Ready to Get Started?
+<section className="py-20 bg-gradient-to-r from-cyan-600 to-blue-600"></section>
+<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"></div>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
           </h2>
-          <p className="text-xl text-cyan-100 mb-8 max-w-3xl mx-auto">
-            Choose your plan and start transforming your business with AI and IT solutions today.
+          <p className="text-xl text-cyan-100 mb-8 max-w-3xl mx-auto">Choose your plan and start transforming your business with AI and IT solutions today.</p>
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+<div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <Link
               to="/contact"
               className="bg-white text-cyan-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300">

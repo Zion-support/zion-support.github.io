@@ -1,95 +1,147 @@
 'use client';
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { ChevronDown, ChevronUp } from 'lucide-react';
+import { ChevronDown, ChevronUp, Search } from 'lucide-react';
+
+interface FAQ {
+  id: number;
+  question: string;
+  answer: string;
+  category: string;
+}
+
 const FAQPage: React.FC = () => {
-  const [openItems, setOpenItems] = useState<number[]>([]);
-  const toggleItem = (index: number) => {
-    setOpenItems(prev => 
-      prev.includes(index) 
-        ? prev.filter(item => item !== index)
-        : [...prev, index]
-    );
-  };
-  const faqs = [
+  const [openFAQ, setOpenFAQ] = useState<number | null>(null);
+  const [searchTerm, setSearchTerm] = useState('');
+
+  const faqs: FAQ[] = [
     {
-      question: "What AI services do you offer?",
-      answer: "We offer comprehensive AI services including marketing automation, customer support, data analytics, content generation, healthcare solutions, financial services, e-commerce solutions, cybersecurity, mobile apps, sales automation, workflow automation, and data visualization."
+      id: 1,
+      question: 'What services do you offer?',
+      answer: 'We offer comprehensive AI solutions, cloud services, cybersecurity, custom development, data analytics, and IT consulting. Our services are designed to help businesses transform digitally and achieve their goals.',
+      category: 'Services'
     },
     {
-      question: "How can AI benefit my business?",
-      answer: "AI can automate repetitive tasks, provide data-driven insights, improve customer experience, enhance security, optimize operations, and drive innovation. Our solutions typically deliver 300% ROI within the first year."
+      id: 2,
+      question: 'How much do your services cost?',
+      answer: 'Our pricing varies based on the specific services and scope of work. We offer flexible pricing plans starting from $2,999/month for our Starter plan. Contact us for a customized quote based on your needs.',
+      category: 'Pricing'
     },
     {
-      question: "Do you provide IT infrastructure services?",
-      answer: "Yes, we offer complete IT infrastructure services including cloud migration, DevOps, database management, cybersecurity, managed IT services, and IT consulting to modernize your technology stack."
+      id: 3,
+      question: 'Do you work with small businesses?',
+      answer: 'Yes! We work with businesses of all sizes, from startups to large enterprises. Our solutions are scalable and can be tailored to meet the specific needs and budget of small businesses.',
+      category: 'Business Size'
     },
     {
-      question: "What is your pricing model?",
-      answer: "We offer flexible pricing models including subscription-based plans starting at $99/month for small businesses, custom enterprise solutions, and project-based pricing. Contact us for a personalized quote."
+      id: 4,
+      question: 'How long does a typical project take?',
+      answer: 'Project timelines vary depending on complexity. Simple AI integrations can take 2-4 weeks, while comprehensive digital transformation projects may take 3-6 months. We provide detailed timelines during our consultation.',
+      category: 'Timeline'
     },
     {
-      question: "Do you offer 24/7 support?",
-      answer: "Yes, we provide 24/7 technical support for all our services. Our support team is available via phone, email, and live chat to ensure your systems run smoothly around the clock."
+      id: 5,
+      question: 'What technologies do you use?',
+      answer: 'We use cutting-edge technologies including machine learning frameworks (TensorFlow, PyTorch), cloud platforms (AWS, Azure, GCP), modern programming languages (Python, JavaScript, TypeScript), and various AI/ML tools and libraries.',
+      category: 'Technology'
     },
     {
-      question: "How long does implementation take?",
-      answer: "Implementation timelines vary based on project complexity. Simple AI solutions can be deployed in 2-4 weeks, while comprehensive digital transformation projects may take 3-6 months. We provide detailed timelines during consultation."
-    },
-    {
-      question: "Do you work with small businesses?",
-      answer: "Absolutely! We work with businesses of all sizes, from startups to enterprise organizations. Our micro SAAS solutions are specifically designed for small businesses looking to leverage AI technology."
-    },
-    {
-      question: "What industries do you serve?",
-      answer: "We serve a wide range of industries including healthcare, finance, e-commerce, manufacturing, education, real estate, legal, and more. Our solutions are tailored to meet industry-specific requirements and compliance standards."
+      id: 6,
+      question: 'Do you provide ongoing support?',
+      answer: 'Yes! We provide 24/7 technical support, regular system monitoring, proactive maintenance, and dedicated account management. Our support team ensures your solutions continue to perform optimally.',
+      category: 'Support'
     }
   ];
+
+  const filteredFAQs = faqs.filter(faq =>
+    faq.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    faq.answer.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    faq.category.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   return (
-    <React.Fragment>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>FAQ - Zion Tech Group | Frequently Asked Questions</title>
-        <meta name="description" content="Find answers to frequently asked questions about our AI and IT services, pricing, implementation, and support." />
-        <meta name="keywords" content="FAQ, frequently asked questions, AI services, IT services, support, pricing" />
+        <meta name="description" content="Find answers to frequently asked questions about our AI and IT solutions, services, and support." />
+        <meta name="keywords" content="FAQ, frequently asked questions, AI solutions, IT services, support" />
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto text-center">
+      
+      <div className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Frequently Asked <span className="text-cyan-400">Questions</span>
+              Frequently Asked Questions
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Find answers to common questions about our AI and IT services, pricing, and implementation.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Find answers to common questions about our AI and IT solutions, 
+              services, and support options.
             </p>
           </div>
-        </section>
-        <section className="py-16 px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="space-y-4">
-              {faqs.map((faq, index) => (
-                <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg border border-cyan-500/20">
-                  <button
-                    onClick={() => toggleItem(index)}
-                    className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-slate-700/30 transition-colors">
-                    <h3 className="text-lg font-semibold text-white pr-4">{faq.question}</h3>
-                    {openItems.includes(index) ? (
-                      <ChevronUp className="w-5 h-5 text-cyan-400 flex-shrink-0" />
-                    ) : (
-                      <ChevronDown className="w-5 h-5 text-cyan-400 flex-shrink-0" />
-                    )}
-                  </button>
-                  {openItems.includes(index) && (
-                    <div className="px-6 pb-4">
-                      <p className="text-gray-300 leading-relaxed">{faq.answer}</p>
-                    </div>
+
+          {/* Search */}
+          <div className="relative mb-8">
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+            <input
+              type="text"
+              placeholder="Search FAQs..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+            />
+          </div>
+
+          {/* FAQ Items */}
+          <div className="space-y-4">
+            {filteredFAQs.map((faq) => (
+              <div key={faq.id} className="bg-white/10 backdrop-blur-sm rounded-lg">
+                <button
+                  onClick={() => setOpenFAQ(openFAQ === faq.id ? null : faq.id)}
+                  className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-white/20 transition-colors"
+                >
+                  <div>
+                    <span className="bg-cyan-500/20 text-cyan-400 px-2 py-1 rounded text-sm mr-3">
+                      {faq.category}
+                    </span>
+                    <span className="text-white font-semibold">{faq.question}</span>
+                  </div>
+                  {openFAQ === faq.id ? (
+                    <ChevronUp className="w-5 h-5 text-cyan-400" />
+                  ) : (
+                    <ChevronDown className="w-5 h-5 text-cyan-400" />
                   )}
-                </div>
-              ))}
+                </button>
+                {openFAQ === faq.id && (
+                  <div className="px-6 pb-4">
+                    <p className="text-gray-300">{faq.answer}</p>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+
+          {/* Contact Section */}
+          <div className="text-center mt-16">
+            <h2 className="text-3xl font-bold text-white mb-6">
+              Still Have Questions?
+            </h2>
+            <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+              Can't find the answer you're looking for? Our team is here to help. 
+              Contact us and we'll get back to you within 24 hours.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                Contact Us
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-slate-900 transition-all duration-300">
+                Schedule Call
+              </button>
             </div>
           </div>
-        </section>
+        </div>
       </div>
-    </React.Fragment>
+    </div>
   );
 };
+
 export default FAQPage;

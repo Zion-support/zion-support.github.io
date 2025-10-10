@@ -21,23 +21,21 @@ interface ServicePageProps {/* TODO: Fix JSX expression */}
   }>;
   benefit,
   s: string[];
-}
+
 const,
   ServicePage: React.FC<ServicePageProps> = ({ title, description, services, benefits }) => {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+
+  return ()
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Service Template;
+<main className="container mx-auto px-4 py-16 pt-24"></main>
+<section className="text-center mb-16"></section>
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">Service Template;</h1>
   </
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Blog Post;
+          <p className="text-xl text-cyan-400 mb-8 font-medium">Blog Post;</p>
   </
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+<div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <Link
               to="/contact" className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg"
 // >
@@ -54,7 +52,7 @@ const,
         </section>
         {/* Services Grid */}"
         <section className="container mx-auto px-4 py-16"></section>"
-          <div className="grid grid-cols-1,
+          <div className="grid grid-cols-1,"
   md:grid-cols-2,"
   lg:grid-cols-2 gap-8"></div>
             {services.map((service, index) => ()}"
@@ -75,10 +73,9 @@ const,
                 <div className="text-2xl font-bold text-cyan-400 mb-4">{service.price}</div>
                   className="cyber-button w-full text-center inline-block" Get Started;
         {/* Benefits Section */}
-          <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
-            Why Choose Our {title}?
+          <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">Why Choose Our {title}?</h2>
           </h2>"
-          <div className="grid grid-cols-1,
+          <div className="grid grid-cols-1,"
   md:grid-cols-2,"
   lg:grid-cols-4 gap-8"></div>
             {benefits.map((benefit, index) => ()}"

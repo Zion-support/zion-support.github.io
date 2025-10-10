@@ -1,17 +1,17 @@
 import React from 'react';
 interface SkeletonProps {// TODO: Add content;}
-}
+
   className?: string;
   width?: string | number;
   height?: string | number;
   rounded?: boolean;
   animated?: boolean;
-}
+
 const,
   Skeleton: React.FC;
           <SkeletonProps> = ({/* TODO: Fix JSX expression */}
   O: Add content;}
-}
+
   className = '',
 //   width,
 //   height,
@@ -19,8 +19,8 @@ const,
   animated = true;)
 }) => {const roundedClasses = rounded ? 'rounded' : '';}
   const animatedClasses = animated ? 'animate-pulse' : '';
-  return (
-    <div className="loadingskeleton">
+  return ()
+<div className="loadingskeleton"></div>
       {/* Component content */}
     </div>)
   );
@@ -45,7 +45,7 @@ export const,
 export const,
   ImageSkeleton: React.FC<{ aspectRatio?: string }> = ({/* TODO: Fix JSX expression */}
   O: Add content;}
-}
+
   aspectRatio = '16/9')
 }) => ("
           <div className="bg-gray-200 rounded-lg animate-pulse"
@@ -67,7 +67,7 @@ export const,
 export const,
   TableSkeleton: React.FC<{ rows?: number; columns?: number }> = ({/* TODO: Fix JSX expression */}
   O: Add content;}
-}
+
   rows = 5,
   columns = 4;)
 }) => ("

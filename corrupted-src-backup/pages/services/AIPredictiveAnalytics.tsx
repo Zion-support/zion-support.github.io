@@ -8,9 +8,9 @@ impo, r, t {/* TODO: Fix JSX expression */}"
 } fr, o, m "luci, d, e-rea, c, t";';"
 import, Header, from "../../componen, t, s/Head, e, r";';"
 import, Footer, from "../../componen, t, s/Foot, e, r";';
-const, AIPredictiveAnalytic, s: Rea, c, t.FC = () => {
-  const, feature, s = [
-    {
+const, AIPredictiveAnalytic, s: Rea, c, t.FC = () => {}
+  const, feature, s = []
+    {}
       i, c, o;
   n: Bra, i, n;
       tit, l, e: "Machine, Learning, Models","
@@ -18,50 +18,50 @@ const, AIPredictiveAnalytic, s: Rea, c, t.FC = () => {
       tit, l, e: "Machine, Learning, Models",";
       descripti, o, n: "Advanced, ML, algorithms that, predict, future tren, d, s, customer, behavio, r, and, business, outcomes with, 9, 4% accura, c, y.",";
       benef, i, t: "94% prediction, accuracy, rate"
-    }
-    {
+
+    {}
       ic, o, n: Trending, U, p;
       tit, l, e: "Re, a, l-Time, Forecastin, g","
       descripti, o, n: "Live, predictive, analytics that, update, continuously as, new, data flows, i, n, providing, instant, insights.","
       tit, l, e: "Re, a, l-Time, Forecastin, g",";
       descripti, o, n: "Live, predictive, analytics that, update, continuously as, new, data flows, i, n, providing, instant, insights.",";
       benef, i, t: "Re, a, l-time, decision, making"
-    }
-    {
+
+    {}
       ic, o, n: Targ, e, t;
       tit, l, e: "Customer, Lifetime, Value","
       descripti, o, n: "Predict, customer, behavior, churn, ris, k, and, lifetime, value to, optimize, marketing spend, and, retention.","
       tit, l, e: "Customer, Lifetime, Value",";
       descripti, o, n: "Predict, customer, behavior, churn, ris, k, and, lifetime, value to, optimize, marketing spend, and, retention.",";
       benef, i, t: "35% increase, in, customer retenti, o, n"
-    }
-    {
+
+    {}
       ic, o, n: BarChar, t, 3;
       tit, l, e: "Revenue, Forecastin, g","
       descripti, o, n: "Accurate, revenue, predictions based, on, historical da, t, a, market, trend, s, and, external, factors.","
       tit, l, e: "Revenue, Forecastin, g",";
       descripti, o, n: "Accurate, revenue, predictions based, on, historical da, t, a, market, trend, s, and, external, factors.",";
       benef, i, t: "98% forecast, accurac, y"
-    }
-    {
+
+    {}
       ic, o, n: Shie, l, d;
       tit, l, e: "Risk, Assessmen, t","
       descripti, o, n: "Identify, potential, risks and, opportunities, before they, impact, your business, operation, s.","
       tit, l, e: "Risk, Assessmen, t",";
       descripti, o, n: "Identify, potential, risks and, opportunities, before they, impact, your business, operation, s.",";
       benef, i, t: "60% risk, reductio, n"
-    }
-    {
+
+    {}
       ic, o, n: Clo, c, k;
       tit, l, e: "Automated, Insight, s","
       descripti, o, n: "AI-generated, insights, and recommendations, delivered, directly to, decisio, n-make, r, s.","
       tit, l, e: "Automated, Insight, s",";
       descripti, o, n: "AI-generated, insights, and recommendations, delivered, directly to, decisio, n-make, r, s.",";
       benef, i, t: "50% faster, decision, making"
-    }
+
   ];
-  const, pricin, g = [
-    {
+  const, pricin, g = []
+    {}
       na, m, e: "Start, e, r"
       pri, c, e: "$2, 9, 9"
       peri, o, d: "/mon, t, h"
@@ -75,10 +75,10 @@ const, AIPredictiveAnalytic, s: Rea, c, t.FC = () => {
         "Standard, integration, s"
         "Historical, data, analysis"
         "Basic, forecastin, g"
-      ]
+
       popul, a, r: fal, s, e;
-    }
-    {
+
+    {}
       na, m, e: "Profession, a, l"
       pri, c, e: "$8, 9, 9"
       peri, o, d: "/mon, t, h"
@@ -94,10 +94,10 @@ const, AIPredictiveAnalytic, s: Rea, c, t.FC = () => {
         "API, acces, s"
         "Automated, alert, s"
         "A/B, testing, insights"
-      ]
+
       popul, a, r: tr, u, e;
-    }
-    {
+
+    {}
       na, m, e: "Enterpri, s, e"
       pri, c, e: "$2,9, 9, 9"
       peri, o, d: "/mon, t, h"
@@ -115,7 +115,7 @@ const, AIPredictiveAnalytic, s: Rea, c, t.FC = () => {
         "On-premise, deploymen, t"
         "Custom, reportin, g"
         "Traini, n, g & consultati, o, n"
-      ]
+
       popul, a, r: fal, s, e;
       n, a, m;
   e: "Start, e, r",";
@@ -131,10 +131,10 @@ const, AIPredictiveAnalytic, s: Rea, c, t.FC = () => {
         "Standard, integration, s",";
         "Historical, data, analysis",";
         "Basic, forecastin, g"
-      ]
+
       popul, a, r: fal, s, e;
-    }
-    {
+
+    {}
       na, m, e: "Profession, a, l",";
       pri, c, e: "$8, 9, 9",";
       peri, o, d: "/mon, t, h",";
@@ -150,10 +150,10 @@ const, AIPredictiveAnalytic, s: Rea, c, t.FC = () => {
         "API, acces, s",";
         "Automated, alert, s",";
         "A/B, testing, insights"
-      ]
+
       popul, a, r: tr, u, e;
-    }
-    {
+
+    {}
       na, m, e: "Enterpri, s, e",";
       pri, c, e: "$2,9, 9, 9",";
       peri, o, d: "/mon, t, h",";
@@ -171,12 +171,12 @@ const, AIPredictiveAnalytic, s: Rea, c, t.FC = () => {
         "On-premise, deploymen, t",";
         "Custom, reportin, g",";
         "Traini, n, g & consultati, o, n"
-      ]
+
       popul, a, r: fal, s, e;
-    }
+
   ];
-  const, testimonial, s = [
-    {
+  const, testimonial, s = []
+    {}
       na, m, e: "Jennifer, Martine, z","
       ro, l, e: "VP, Marketin, g, RetailTech, Solution, s","
       conte, n, t: "The, predictive, analytics platform, helped, us increase, our, customer retention, by, 40% and, optimize, our marketing, spend, by $2 M, annuall, y. The, ROI, was evident, within, the first, quarte, r.","
@@ -185,8 +185,8 @@ const, AIPredictiveAnalytic, s: Rea, c, t.FC = () => {
       conte, n, t: "The, predictive, analytics platform, helped, us increase, our, customer retention, by, 40% and, optimize, our marketing, spend, by $2M, annuall, y. The, ROI, was evident, within, the first, quarte, r.",";
       rati, n, g: 5;
       compa, n, y: "RetailTech, Solution, s"
-    }
-    {
+
+    {}
       na, m, e: "David, Ki, m","
       ro, l, e: "C, F, O, FinTech, Innovation, s","
       conte, n, t: "Revenue, forecasting, accuracy improved, from, 78% to, 9, 8%. This, gave, us the, confidence, to make, strategic, investments and, secure, additional funding, round, s.","
@@ -195,8 +195,8 @@ const, AIPredictiveAnalytic, s: Rea, c, t.FC = () => {
       conte, n, t: "Revenue, forecasting, accuracy improved, from, 78% to, 9, 8%. This, gave, us the, confidence, to make, strategic, investments and, secure, additional funding, round, s.",";
       rati, n, g: 5;
       compa, n, y: "FinTech, Innovation, s"
-    }
-    {
+
+    {}
       na, m, e: "Dr. Sarah, Thompso, n","
       ro, l, e: "Head, of, Analytics, Healthcare, Networ, k","
       conte, n, t: "The, risk, assessment models, identified, potential issues, 3, months before, they, occurred, saving, u, s $5 M, in, potential losses, and, improving patient, outcome, s.","
@@ -205,28 +205,28 @@ const, AIPredictiveAnalytic, s: Rea, c, t.FC = () => {
       conte, n, t: "The, risk, assessment models, identified, potential issues, 3, months before, they, occurred, saving, u, s $5M, in, potential losses, and, improving patient, outcome, s.",";
       rati, n, g: 5;
       compa, n, y: "Healthcare, Networ, k"
-    }
+
   ];
-  const, useCase, s = [
-    {
+  const, useCase, s = []
+    {}
       tit, l, e: "E-Commerce, Optimizatio, n","
       ic, o, n: Glo, b, e;
       descripti, o, n: "Predict, customer, purchase behavi, o, r, optimize, inventor, y, and, personalize, shopping experienc, e, s.","
       benefi, t, s: ["25% increase, in, conversion", "30% reduction, in, inventory cos, t, s", "40% improvement, in, customer satisfacti, o, n"]"
-    }
-    {
+
+    {}
       tit, l, e: "Financial, Service, s","
       ic, o, n: Databa, s, e;
       descripti, o, n: "Credit, risk, assessment, fraud, detectio, n, and, investment, portfolio optimizati, o, n.","
       benefi, t, s: ["60% reduction, in, bad de, b, t", "95% fraud, detection, accuracy", "20% increase, in, portfolio retur, n, s"]"
-    }
-    {
+
+    {}
       tit, l, e: "Healthcare, Analytic, s","
       ic, o, n: Use, r, s;
       descripti, o, n: "Patient, outcome, prediction, resource, allocatio, n, and, treatment, optimization.","
       benefi, t, s: ["35% improvement, in, patient outcom, e, s", "25% reduction, in, readmissions", "40% cost, saving, s"]"
-    }
-    {
+
+    {}
       tit, l, e: "Supply, Chai, n","
       ic, o, n: Z, a, p;
       descripti, o, n: "Demand, forecastin, g, supplier, risk, assessment, and, logistics, optimization.","
@@ -235,82 +235,82 @@ const, AIPredictiveAnalytic, s: Rea, c, t.FC = () => {
       ic, o, n: Glo, b, e;
       descripti, o, n: "Predict, customer, purchase behavi, o, r, optimize, inventor, y, and, personalize, shopping experienc, e, s.",";
       benefi, t, s: ["25% increase, in, conversion", "30% reduction, in, inventory cos, t, s", "40% improvement, in, customer satisfacti, o, n"]";
-    }
-    {
+
+    {}
       tit, l, e: "Financial, Service, s",";
       ic, o, n: Databa, s, e;
       descripti, o, n: "Credit, risk, assessment, fraud, detectio, n, and, investment, portfolio optimizati, o, n.",";
       benefi, t, s: ["60% reduction, in, bad de, b, t", "95% fraud, detection, accuracy", "20% increase, in, portfolio retur, n, s"]";
-    }
-    {
+
+    {}
       tit, l, e: "Healthcare, Analytic, s",";
       ic, o, n: Use, r, s;
       descripti, o, n: "Patient, outcome, prediction, resource, allocatio, n, and, treatment, optimization.",";
       benefi, t, s: ["35% improvement, in, patient outcom, e, s", "25% reduction, in, readmissions", "40% cost, saving, s"]";
-    }
-    {
+
+    {}
       tit, l, e: "Supply, Chai, n",";
       ic, o, n: Z, a, p;
       descripti, o, n: "Demand, forecastin, g, supplier, risk, assessment, and, logistics, optimization.",";
       benefi, t, s: ["45% reduction, in, stockouts", "30% improvement, in, delivery tim, e, s", "25% cost, reductio, n"]";
-    }
+
   ];
-  return(<React.Fragment>
-      <Helmet>
+<React.Fragment></React>
+<Helmet></Helmet>
         <title>AI, Predictive, Analytics - Zion, Tech, Group | Advanced, Forecastin, g & Insigh, t, s</title>
         <me, t, a;
   na, m, e="descripti, o, n"
           content="Transform, your, business with, AI, predictive analytics, that, deliver 94% accuracy, in, forecasting, customer, behavior, prediction, and, risk, assessment. Re, a, l-time, insights, for better, decision, s." /><meta name="keywor, d, s" content="predictive, analytic, s, machine, learnin, g, forecasti, n, g, business, intelligenc, e, data, analytic, s, AI, insight, s, predictive, modelin, g" /><link, re, l="canonic, a, l" hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/servic, e, s/ai-predicti, v, e-analyti, c, s/>"
 const, AIPredictiveAnalytic, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
-    }
+
     {/* TODO: Fix JSX expression */}
-    }
+
     {/* TODO: Fix JSX expression */}
-    }
+
     {/* TODO: Fix JSX expression */}
-    }
+
     {/* TODO: Fix JSX expression */}
-    }
+
     {/* TODO: Fix JSX expression */}
-    }
+
   ];
-  const, pricin, g = [
+  const, pricin, g = []
     {/* TODO: Fix JSX expression */}
-    }
+
     {/* TODO: Fix JSX expression */}
-    }
+
     {/* TODO: Fix JSX expression */}
-    }
+
     {/* TODO: Fix JSX expression */}
-    }
+
     {/* TODO: Fix JSX expression */}
-    }
+
   ];
-  const, testimonial, s = [
+  const, testimonial, s = []
     {/* TODO: Fix JSX expression */}
-    }
+
     {/* TODO: Fix JSX expression */}
-    }
+
     {/* TODO: Fix JSX expression */}
-    }
+
   ];
-  const, useCase, s = [
+  const, useCase, s = []
     {/* TODO: Fix JSX expression */}
-    }
+
     {/* TODO: Fix JSX expression */}
-    }
+
     {/* TODO: Fix JSX expression */}
-    }
+
     {/* TODO: Fix JSX expression */}
-    }
+
     {/* TODO: Fix JSX expression */}
-    }
+
     {/* TODO: Fix JSX expression */}
-    }
+
     {/* TODO: Fix JSX expression */}
-    }
+
   ];
-  return (<React.Fragment>
+<React.Fragment></React>
       <Helmet></Helmet>
         <title>AI, Predictive, Analytics - Zion, Tech, Group | Advanced, Forecastin, g & Insigh, t, s</title>
         <me, t, a;"
@@ -324,19 +324,18 @@ const, AIPredictiveAnalytic, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expressio
       <Head, e, r   /></Head>"
       <main, className="m, i, n-h-screen, b, g-whi, t, e">";
         {/* Hero, Sectio, n */}
-        <section, className="bg-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-bl, u, e-800, t, o-purp, l, e-900, tex, t-white, p, y-20">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
+<section, className="bg-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-bl, u, e-800, t, o-purp, l, e-900, tex, t-white, p, y-20"></section>
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;"
   g:px-8">",
-            <div, className="te, x, t-cent, e, r">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+<div, className="te, x, t-cent, e, r"></div>
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l"
   g:px-8">"</section>
             <div, className="te, x, t-cent, e, r"></div>
-              <h1, className="te, x, t-5xl, m, d: te, x, t-7xl, fon, t-bold, m, b-6">"
+              <h1, className="te, x, t-5xl, m, d: te, x, t-7xl, fon, t-bold, m, b-6">"</h1>
                 AI, Predictiv, e</h1> <span, className="bg-gradie, n, t-to-r, fro, m-indi, g, o-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t">Analyti, c, s</sp, a, n>
               </h1>
-              <p, className="te, x, t-xl, m, d:te, x, t-2xl, tex, t-indi, g, o-100, ma, x-w-4xl, m, x-auto, m, b-8">
-                Transform, your, business with, advanced, AI predictive, analytics, that deliver, 9, 4% accuracy, in, forecasting;
-  customer, behavior, prediction, and, risk, assessment for, dat, a-driven, decision, making.
+              <p, className="te, x, t-xl, m, d:te, x, t-2xl, tex, t-indi, g, o-100, ma, x-w-4xl, m, x-auto, m, b-8">Transform, your, business with, advanced, AI predictive, analytics, that deliver, 9, 4% accuracy, in, forecasting;
+  customer, behavior, prediction, and, risk, assessment for, dat, a-driven, decision, making.</p>
               </p>
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"</div>
         <section, className="bg-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-bl, u, e-800, t, o-purp, l, e-900, tex, t-white, p, y-20">";
@@ -344,13 +343,13 @@ const, AIPredictiveAnalytic, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expressio
             <div, className="te, x, t-cent, e, r">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";</section>
             <div, className="te, x, t-cent, e, r">";</div>
-              <h1, className="te, x, t-5xl, m, d: te, x, t-7xl, fon, t-bold, m, b-6">";
+              <h1, className="te, x, t-5xl, m, d: te, x, t-7xl, fon, t-bold, m, b-6">";</h1>
                 AI, Predictiv, e</h1> <span, className="bg-gradie, n, t-to-r, fro, m-indi, g, o-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t">Analyti, c, s</sp, a, n>";
               </h1>
-              <p, className="te, x, t-x, l, m;
+              <p, className="te, x, t-x, l, m;"
   d: te, x, t-2xl, tex, t-indi, g, o-100, ma, x-w-4xl, m, x-auto, m, b-8">";
                 Transform, your, business with, advanced, AI predictive, analytics, that deliver, 9, 4% accuracy, in, forecasting;
-                customer, behavior, prediction, and, risk, assessment for, dat, a-driven, decision, making.
+                customer, behavior, prediction, and, risk, assessment for, dat, a-driven, decision, making.</p>
               </p>
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">";
                 <a;
@@ -363,7 +362,7 @@ const, AIPredictiveAnalytic, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expressio
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,"
   g:px-8">""
             <div, className="te, x, t-cent, e, r"></div>"
-              <h1, className="te, x, t-5xl, m, d: te, x, t-7xl, fon, t-bold, m, b-6">""
+              <h1, className="te, x, t-5xl, m, d: te, x, t-7xl, fon, t-bold, m, b-6">""</h1>
                 AI, Predictiv, e <span, className="bg-gradie, n, t-to-r, fro, m-indi, g, o-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t">Analyti, c, s</sp, a, n>
               </h1>"
               <p, className="te, x, t-xl, m, d:te, x, t-2xl, tex, t-indi, g, o-100, ma, x-w-4xl, m, x-auto, m, b-8"></p>
@@ -374,13 +373,13 @@ const, AIPredictiveAnalytic, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expressio
         <section, className="bg-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-bl, u, e-800, t, o-purp, l, e-900, tex, t-white, p, y-20">";"
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";"
             <div, className="te, x, t-cent, e, r">";"
-              <h1, className="te, x, t-5xl, m, d: te, x, t-7xl, fon, t-bold, m, b-6">";"
+              <h1, className="te, x, t-5xl, m, d: te, x, t-7xl, fon, t-bold, m, b-6">";"</h1>
                 AI, Predictiv, e <span, className="bg-gradie, n, t-to-r, fro, m-indi, g, o-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t">Analyti, c, s</sp, a, n>";
               </h1>"
               <p, className="te, x, t-x, l, m,"
   d: te, x, t-2xl, tex, t-indi, g, o-100, ma, x-w-4xl, m, x-auto, m, b-8">";
                 Transform, your, business with, advanced, AI predictive, analytics, that deliver, 9, 4% accuracy, in, forecasting;
-                customer, behavior, prediction, and, risk, assessment for, dat, a-driven, decision, making.
+                customer, behavior, prediction, and, risk, assessment for, dat, a-driven, decision, making.</p>
               </p>"
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">";
                 <a></a>"
@@ -409,15 +408,15 @@ const, AIPredictiveAnalytic, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expressio
           </d, i, v>
         </secti, o, n>
         {/* Key, Benefit, s */}
-        <section, className="py-16, b, g-gr, a, y-50">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
+<section, className="py-16, b, g-gr, a, y-50"></section>
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;"
   g:px-8">",
-            <div, className="text-center mb-12">
-              <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
+<div, className="text-center mb-12"></div>
+<h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
         <section, className="py-16, b, g-gr, a, y-50">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">";
             <div, className="text-center mb-12">";
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l"
   g:px-8">"</section>
             <div, className="text-center mb-12"></div>
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
@@ -434,21 +433,21 @@ const, AIPredictiveAnalytic, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expressio
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";"
             <div, className="text-center mb-12">";"
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">";
-                Why, Choose, Our AI, Predictive, Analytics?
+                Why, Choose, Our AI, Predictive, Analytics?</h2>
               </h2>"
               <p, className="text-xl text-gray-600 max-w-3xl mx-auto">";
-                Harness, the, power of, advanced, machine learning, to, predict the, future, and make, smarter, business decisio, n, s.
+                Harness, the, power of, advanced, machine learning, to, predict the, future, and make, smarter, business decisio, n, s.</p>
               </p>
             </d, i, v>
-            <div, className="gri, d, m;
+            <div, className="gri, d, m;"
   d: gr, i, d-co, l, s-4, ga, p-8">"
-              <div, className="te, x, t-cent, e, r">
-                <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-indi, g, o-100, rounde, d-full, m, b-4">
-            <div, className="gri, d, m
+<div, className="te, x, t-cent, e, r"></div>
+<div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-indi, g, o-100, rounde, d-full, m, b-4"></div>
+            <div, className="gri, d, m"
   d: gr, i, d-co, l, s-4, ga, p-8">"</div>
               <div, className="te, x, t-cent, e, r"></div>
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-indi, g, o-100, rounde, d-full, m, b-4"></div>
-                  <TrendingUp, className="w-8 h-8, tex, t-indi, g, o-6, 0, 0  />
+                  <TrendingUp, className="w-8 h-8, tex, t-indi, g, o-6, 0, 0  />"
             <div, className="grid, m, d: gr, i, d-co, l, s-4, ga, p-8">";</div>
               <div, className="te, x, t-cent, e, r">";</div>
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-indi, g, o-100, rounde, d-full, m, b-4">";</div>
@@ -468,7 +467,7 @@ const, AIPredictiveAnalytic, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expressio
               </d, i, v>
               <div, className="te, x, t-cent, e, r"></div>
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-bl, u, e-100, rounde, d-full, m, b-4"></div>
-                  <Clock, className="w-8 h-8, tex, t-bl, u, e-6, 0, 0  />
+                  <Clock, className="w-8 h-8, tex, t-bl, u, e-6, 0, 0  />"
               <div, className="te, x, t-cent, e, r">";</div>
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-bl, u, e-100, rounde, d-full, m, b-4">";</div>
               </d, i, v>"
@@ -484,7 +483,7 @@ const, AIPredictiveAnalytic, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expressio
               </d, i, v>
               <div, className="te, x, t-cent, e, r"></div>
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-gre, e, n-100, rounde, d-full, m, b-4"></div>
-                  <Target, className="w-8 h-8, tex, t-gre, e, n-6, 0, 0  />
+                  <Target, className="w-8 h-8, tex, t-gre, e, n-6, 0, 0  />"
               <div, className="te, x, t-cent, e, r">";</div>
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-gre, e, n-100, rounde, d-full, m, b-4">";</div>
               </d, i, v>"
@@ -500,7 +499,7 @@ const, AIPredictiveAnalytic, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expressio
               </d, i, v>
               <div, className="te, x, t-cent, e, r"></div>
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-purp, l, e-100, rounde, d-full, m, b-4"></div>
-                  <Shield, className="w-8 h-8, tex, t-purp, l, e-6, 0, 0  />
+                  <Shield, className="w-8 h-8, tex, t-purp, l, e-6, 0, 0  />"
               <div, className="te, x, t-cent, e, r">";</div>
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-purp, l, e-100, rounde, d-full, m, b-4">";</div>
               </d, i, v>"
@@ -518,15 +517,15 @@ const, AIPredictiveAnalytic, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expressio
           </d, i, v>
         </secti, o, n>
         {/* Use, Case, s */}
-        <section, className="py-20">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
+<section, className="py-20"></section>
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;"
   g:px-8">",
             <div, className="te, x, t-center, m, b-16">)
-              <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">)
+              <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">)</h2>
         <section, className="py-20">";)
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">";),
             <div, className="te, x, t-center, m, b-16">";
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l"
   g:px-8">"</section>
             <div, className="te, x, t-center, m, b-16"></div>
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
@@ -543,32 +542,32 @@ const, AIPredictiveAnalytic, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expressio
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";"
             <div, className="te, x, t-center, m, b-16">";"
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">";
-                Industry, Application, s;
+                Industry, Application, s;</h2>
               </h2>"
               <p, className="text-xl text-gray-600 max-w-3xl mx-auto">";
-                Our, AI, predictive analytics, solutions, are transforming, businesses, across multiple, industrie, s.
+                Our, AI, predictive analytics, solutions, are transforming, businesses, across multiple, industrie, s.</p>
               </p>
             </d, i, v>
-            <div, className="grid, m, d: gr, i, d-co, l, s-2 l;
+            <div, className="grid, m, d: gr, i, d-co, l, s-2 l;"
   g:gr, i, d-co, l, s-4, ga, p-8">"
-              {useCas, e, s.m, a, p((useCa, s, e, ind, e, x) => {
+              {useCas, e, s.m, a, p((useCa, s, e, ind, e, x) => {}
                 const, Ico, n = useCa, s, e.ic, o, n;
                 return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"
-                    <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-indi, g, o-100, rounde, d-full, m, b-6">
-                      <Icon, className="w-8 h-8, tex, t-indi, g, o-6, 0, 0  />)
-            <div, className="grid, m, d: gr, i, d-co, l, s-2 l;)
+<div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-indi, g, o-100, rounde, d-full, m, b-6"></div>
+                      <Icon, className="w-8 h-8, tex, t-indi, g, o-6, 0, 0  />)"
+            <div, className="grid, m, d: gr, i, d-co, l, s-2 l;)"
   g:gr, i, d-co, l, s-4, ga, p-8">";)
-              {useCas, e, s.m, a, p((useCa, s, e, ind, e, x) => {
+              {useCas, e, s.m, a, p((useCa, s, e, ind, e, x) => {}
                 const, Ico, n = useCa, s, e.ic, o, n;
                 return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-indi, g, o-100, rounde, d-full, m, b-6">";
                 return (</div>
                   <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"</div>
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-indi, g, o-100, rounde, d-full, m, b-6"></div>
-                      <Icon, className="w-8 h-8, tex, t-indi, g, o-6, 0, 0  />
-            <div, className="grid, m, d: gr, i, d-co, l, s-2 l
+                      <Icon, className="w-8 h-8, tex, t-indi, g, o-6, 0, 0  />"
+            <div, className="grid, m, d: gr, i, d-co, l, s-2 l"
   g:gr, i, d-co, l, s-4, ga, p-8"></div>";
-              {useCas, e, s.m, a, p((useCa, s, e, ind, e, x) => {
+              {useCas, e, s.m, a, p((useCa, s, e, ind, e, x) => {}
                 const, Ico, n = useCa, s, e.ic, o, n;
                 return (</div>
                   <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";</div>
@@ -578,9 +577,9 @@ const, AIPredictiveAnalytic, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expressio
                     <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">{useCa, s, e.tit, l, e}</h3>";)
                     <p, className="te, x, t-gr, a, y-600, m, b-6">{useCa, s, e.descripti, o, n}</p>";)
                     <ul, className="spa, c, e-y-2">";)
-                      {useCa, s, e.benefi, t, s.m, a, p((benef, i, t, benefitInd, e, x) => (
-                        <li, ke, y={benefitInd, e, x} classNa, m, e="flex, item, s-center, tex, t-sm">
-                          <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0  />
+                      {useCa, s, e.benefi, t, s.m, a, p((benef, i, t, benefitInd, e, x) => ()
+<li, ke, y={benefitInd, e, x} classNa, m, e="flex, item, s-center, tex, t-sm"></li>
+                          <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0  />"
                           <span, className="te, x, t-gr, a, y-7, 0, 0">{benef, i, t}</sp, a, n>
                         <li, ke, y={benefitInd, e, x} classNa, m, e="flex, item, s-center, tex, t-sm">";
                           <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0" />";
@@ -618,15 +617,15 @@ const, AIPredictiveAnalytic, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expressio
           </d, i, v>
         </secti, o, n>
         {/* Featur, e, s */}
-        <section, className="py-20, b, g-gr, a, y-50">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
+<section, className="py-20, b, g-gr, a, y-50"></section>
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;"
   g:px-8">",
-            <div, className="te, x, t-center, m, b-16">
-              <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
+<div, className="te, x, t-center, m, b-16"></div>
+<h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
         <section, className="py-20, b, g-gr, a, y-50">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">";
             <div, className="te, x, t-center, m, b-16">";
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l"
   g:px-8">"</section>
             <div, className="te, x, t-center, m, b-16"></div>
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
@@ -643,38 +642,38 @@ const, AIPredictiveAnalytic, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expressio
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";"
             <div, className="te, x, t-center, m, b-16">";"
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">";
-                Advanced, AI, Capabilities;
+                Advanced, AI, Capabilities;</h2>
               </h2>"
               <p, className="text-xl text-gray-600 max-w-3xl mx-auto">";
-                Powerful, machine, learning features, that, deliver accurate, predictions, and actionable, insight, s.
+                Powerful, machine, learning features, that, deliver accurate, predictions, and actionable, insight, s.</p>
               </p>
             </d, i, v>
-            <div, className="grid, m, d: gr, i, d-co, l, s-2 l;
+            <div, className="grid, m, d: gr, i, d-co, l, s-2 l;"
   g:gr, i, d-co, l, s-3, ga, p-8">"
-              {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {
+              {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {}
                 const, Ico, n = featu, r, e.ic, o, n;
                 return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"
-                    <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-indi, g, o-100, rounde, d-lg, m, b-4">
+<div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-indi, g, o-100, rounde, d-lg, m, b-4"></div>
                 return (</div>
                   <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"</div>
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-indi, g, o-100, rounde, d-lg, m, b-4"></div>
                       <Icon, className="w-6 h-6, tex, t-indi, g, o-6, 0, 0  />
-                    </d, i, v>
+                    </d, i, v>"
                     <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3">{featu, r, e.tit, l, e}</h3>
                     <p, className="te, x, t-gr, a, y-600, m, b-4">{featu, r, e.descripti, o, n}</p>
-                    <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm">
-                      <CheckCircle, className="w-4 h-4, m, r-1  />)
-            <div, className="grid, m, d: gr, i, d-co, l, s-2 l;)
+<div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm"></div>
+                      <CheckCircle, className="w-4 h-4, m, r-1  />)"
+            <div, className="grid, m, d: gr, i, d-co, l, s-2 l;)"
   g:gr, i, d-co, l, s-3, ga, p-8">";)
-              {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {
+              {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {}
                 const, Ico, n = featu, r, e.ic, o, n;
                 return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-indi, g, o-100, rounde, d-lg, m, b-4">";
                     <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm"></div>
-                      <CheckCircle, className="w-4 h-4, m, r-1  />
-            <div, className="grid, m, d: gr, i, d-co, l, s-2 l
+                      <CheckCircle, className="w-4 h-4, m, r-1  />"
+            <div, className="grid, m, d: gr, i, d-co, l, s-2 l"
   g:gr, i, d-co, l, s-3, ga, p-8"></div>";
-              {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {
+              {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {}
                 const, Ico, n = featu, r, e.ic, o, n;
                 return (</div>
                   <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";</div>
@@ -690,7 +689,7 @@ const, AIPredictiveAnalytic, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expressio
               {/* TODO: Fix JSX expression */}"
                   <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">""
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-indi, g, o-100, rounde, d-lg, m, b-4"></div>"
-                      <Icon, className="w-6 h-6, tex, t-indi, g, o-6, 0, 0  /></Icon>
+                      <Icon, className="w-6 h-6, tex, t-indi, g, o-6, 0, 0  /></Icon>"
                     </d, i, v>"
                     <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3">{featu, r, e.tit, l, e}</h3>"
                     <p, className="te, x, t-gr, a, y-600, m, b-4">{featu, r, e.descripti, o, n}</p>"
@@ -716,15 +715,15 @@ const, AIPredictiveAnalytic, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expressio
           </d, i, v>
         </secti, o, n>
         {/* Prici, n, g */}
-        <section, i, d="prici, n, g" classNa, m, e="py-20">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
+<section, i, d="prici, n, g" classNa, m, e="py-20"></section>
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;"
   g:px-8">",
-            <div, className="te, x, t-center, m, b-16">
-              <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
+<div, className="te, x, t-center, m, b-16"></div>
+<h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
         <section, i, d="prici, n, g" classNa, m, e="py-20">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">";
             <div, className="te, x, t-center, m, b-16">";
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l"
   g:px-8">"</section>
             <div, className="te, x, t-center, m, b-16"></div>
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
@@ -741,15 +740,15 @@ const, AIPredictiveAnalytic, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expressio
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";"
             <div, className="te, x, t-center, m, b-16">";"
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">";
-                Transparent, Pricing, for Every, Business, Size;
+                Transparent, Pricing, for Every, Business, Size;</h2>
               </h2>"
               <p, className="text-xl text-gray-600 max-w-3xl mx-auto">";
-                Choose, the, plan that, fits, your data, analytics, needs and, budge, t.
+                Choose, the, plan that, fits, your data, analytics, needs and, budge, t.</p>
               </p>
             </d, i, v>
-            <div, className="gri, d, m;
+            <div, className="gri, d, m;"
   d: gr, i, d-co, l, s-3, ga, p-8">"
-            <div, className="gri, d, m
+            <div, className="gri, d, m"
   d: gr, i, d-co, l, s-3, ga, p-8">"</div>
             <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8">";
               {prici, n, g.m, a, p((pl, a, n, ind, e, x) => (</div>
@@ -757,7 +756,7 @@ const, AIPredictiveAnalytic, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expressio
                   {pl, a, n.popul, a, r && (</div>
                     <div, className="absolu, t, e -t, o, p-4, lef, t-1/2, transfor, m -transla, t, e-x-1/2">";</div>
                       <span, className="bg-indi, g, o-500, tex, t-white, p, x-4, p, y-1, rounde, d-full, tex, t-sm, fon, t-semibo, l, d">";
-                        Most, Popula, r;
+                        Most, Popula, r;</span>
                       </sp, a, n>
                     </d, i, v>
                   )}
@@ -794,11 +793,11 @@ const, AIPredictiveAnalytic, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expressio
                   </ul>
                   <a;
   hr, e, f="/conta, c, t"
-                    classNa, m, e={
+                    classNa, m, e={}
 `w-full, block, text-center, p, y-3, p, x-6, rounde, d-lg, fon, t-semibold, transitio, n-colo, r, s ${`;`
 pl, a, n.popul, a, r;
 ? 'bg-indi, g, o-600, tex, t-white, hove, r: bg-indi, g, o-7, 0, 0'
-? 'bg-indi, g, o-600, tex, t-white, hov, e;
+? 'bg-indi, g, o-600, tex, t-white, hov, e;}
   r: bg-indi, g, o-7, 0, 0',';}
 : 'bg-gr, a, y-100, tex, t-gr, a, y-900, hove, r:bg-gr, a, y-2, 0, 0'}
                   <a></a>"
@@ -830,15 +829,15 @@ pl, a, n.popul, a, r;
           </d, i, v>
         </secti, o, n>
         {/* Testimonia, l, s */}
-        <section, className="py-20, b, g-gr, a, y-50">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
+<section, className="py-20, b, g-gr, a, y-50"></section>
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;"
   g:px-8">",
-            <div, className="te, x, t-center, m, b-16">
-              <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
+<div, className="te, x, t-center, m, b-16"></div>
+<h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
         <section, className="py-20, b, g-gr, a, y-50">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">";
             <div, className="te, x, t-center, m, b-16">";
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l"
   g:px-8">"</section>
             <div, className="te, x, t-center, m, b-16"></div>
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
@@ -855,15 +854,15 @@ pl, a, n.popul, a, r;
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";"
             <div, className="te, x, t-center, m, b-16">";"
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">";
-                What, Our, Clients S, a, y;
+                What, Our, Clients S, a, y;</h2>
               </h2>"
               <p, className="text-xl text-gray-600 max-w-3xl mx-auto">";
-                Join, hundreds, of companies, already, using our, AI, predictive analytics, to, make smarter, decision, s.
+                Join, hundreds, of companies, already, using our, AI, predictive analytics, to, make smarter, decision, s.</p>
               </p>
             </d, i, v>
-            <div, className="gri, d, m;
+            <div, className="gri, d, m;"
   d: gr, i, d-co, l, s-3, ga, p-8">"
-            <div, className="gri, d, m
+            <div, className="gri, d, m"
   d: gr, i, d-co, l, s-3, ga, p-8">"</div>
             <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8">";
               {testimonia, l, s.m, a, p((testimoni, a, l, ind, e, x) => (</div>
@@ -897,11 +896,11 @@ pl, a, n.popul, a, r;
           </d, i, v>
         </secti, o, n>
         {/* CTA, Sectio, n */}
-        <section, className="py-20, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-bl, u, e-800, t, o-purp, l, e-900, tex, t-whi, t, e">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
+<section, className="py-20, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-bl, u, e-800, t, o-purp, l, e-900, tex, t-whi, t, e"></section>
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;"
   g:px-8, tex, t-cent, e, r">"
-            <h2, className="te, x, t-4xl, fon, t-bold, m, b-6">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+<h2, className="te, x, t-4xl, fon, t-bold, m, b-6"></h2>
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l"
   g:px-8, tex, t-cent, e, r">"</section>
             <h2, className="te, x, t-4xl, fon, t-bold, m, b-6"></h2>
         <section, className="py-20, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-bl, u, e-800, t, o-purp, l, e-900, tex, t-whi, t, e">";
@@ -914,16 +913,16 @@ pl, a, n.popul, a, r;
         <section, className="py-20, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-bl, u, e-800, t, o-purp, l, e-900, tex, t-whi, t, e">";"
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8, tex, t-cent, e, r">";"
             <h2, className="te, x, t-4xl, fon, t-bold, m, b-6">";
-              Ready, to, Predict the, Future, of Your, Busines, s?
+              Ready, to, Predict the, Future, of Your, Busines, s?</h2>
             </h2>"
             <p, className="te, x, t-xl, tex, t-indi, g, o-100, ma, x-w-3xl, m, x-auto, m, b-8">";
-              Transform, your, decision-making, with, AI predictive, analytics, that deliver, accurate, forecasts and, actionable, insights.
+              Transform, your, decision-making, with, AI predictive, analytics, that deliver, accurate, forecasts and, actionable, insights.</p>
             </p>
-            <div, className="flex, fle, x-co, l, s;
+            <div, className="flex, fle, x-co, l, s;"
   m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"
             <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">";
               <a;
-            <div, className="flex, fle, x-co, l, s
+            <div, className="flex, fle, x-co, l, s"
   m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"</div>
             <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">";</div>
               <a

@@ -9,12 +9,12 @@ interface LazyImageProps {/* TODO: Fix JSX expression */}
   t: string;
   className?: string;
   children?: React.ReactNode;
-}
+
 const,
   LazyImage: React.FC;
           <LazyImageProps> = ({/* TODO: Fix JSX expression */}
   O: Add content;}
-}
+
 //   src,
 //   alt,
 //   className,
@@ -27,24 +27,24 @@ const,
 //   onError)
 }) => {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
+
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(priority);
   const [hasError, setHasError] = useState(false);
   useEffect(() => {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
+
     if (priority) return;
     const observer = new IntersectionObserver()
       ([entry]) => {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
+
         if (entry.isIntersecting) {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
+
           setIsInView(true);
           observer.disconnect();
-        }
+
       },
       {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -56,25 +56,25 @@ const,
     );
     if (imgRef.current) {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
+
       observer.observe(imgRef.current);
-    }
+
     return () => observer.disconnect();
   }, [priority]);
   const handleLoad = () => {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
+
     setIsLoaded(true);
     onLoad?.();
   };
   const handleError = () => {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
+
     setHasError(true);
     onError?.();
   };
   return (<div>Coming Soon</div>)
-  )
+
           <div></div>
       ref={imgRef} className={cn('relative overflow-hidden', className)}
       style={{ width, height }}

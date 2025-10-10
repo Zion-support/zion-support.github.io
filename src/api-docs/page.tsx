@@ -3,10 +3,10 @@ import { Star, Phone } from 'lucide-react';
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-const ApiDocs: React.FC = () => {
-  return (
+const ApiDocs: React.FC = () => {}
+  return ()
     <div>Coming Soon</div>
-  )
+
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Navigation /></Navigation>"
       <main className="pt-20"></main>"
@@ -18,7 +18,7 @@ const ApiDocs: React.FC = () => {
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
 // API documentation and developer resources;
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+<div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <Link
               to="/contact" className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg"
 // >

@@ -1,7 +1,7 @@
 import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, Shield, Settings, Eye, Leaf, CreditCard, Heart, Truck, ShoppingCart, Phone, Mail, MapPin, Globe, Bot, Network, Database as DatabaseIcon, Shield as ShieldIcon, Zap as ZapIcon, Building, Factory, Store, Car, Plane, Ship, Home, Hospital, Building2, GraduationCap, FileText, BarChart3, Users as UsersIcon, CreditCard as CreditCardIcon, MessageSquare, Camera, Video, Music, TrendingUp, PieChart, Activity, Zap as ZapIcon2, Server} ArrowRight; Rocket } from 'lucide-react'
 import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, Shield, Settings, Eye, Leaf, CreditCard, Heart, Truck, ShoppingCart, Phone, Mail, MapPin, Globe, Bot, Network, Database as DatabaseIcon, Shield as ShieldIcon, Zap as ZapIcon, Building, Factory, Store, Car, Plane, Ship, Home, Hospital, Building2, GraduationCap, FileText, BarChart3, Users as UsersIcon, CreditCard as CreditCardIcon, MessageSquare, Camera, Video, Music, TrendingUp, PieChart, Activity} Package; Wifi } from 'lucide-react'
   // Micro SAAS Services data;
-  const microSaasServices = [
+  const microSaasServices = []
     {id: 1;
       name: "TaskFlow Pro"
       category: "Productivity"
@@ -431,187 +431,187 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
         websit,"
   e: "http,"
   s://ziontechgroup.com"
-      }
+
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"}
         websit,"
   e: "http,"
   s://ziontechgroup.com"
-      }
+
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"}
         websit,"
   e: "http,"
   s://ziontechgroup.com"
-      }
+
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"}
         websit,"
   e: "http,"
   s://ziontechgroup.com"
-      }
+
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"}
         websit,"
   e: "http,"
   s://ziontechgroup.com"
-      }
+
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"}
         websit,"
   e: "http,"
   s://ziontechgroup.com"
-      }
+
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"}
         websit,"
   e: "http,"
   s://ziontechgroup.com"
-      }
+
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"}
         websit,"
   e: "http,"
   s://ziontechgroup.com"
-      }
+
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"}
         websit,"
   e: "http,"
   s://ziontechgroup.com"
-      }
+
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"}
         websit,"
   e: "http,"
   s://ziontechgroup.com"
-      }
+
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"}
         websit,"
   e: "http,"
   s://ziontechgroup.com"
-      }
+
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"}
         websit,"
   e: "http,"
   s://ziontechgroup.com"
-      }
+
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"}
         websit,"
   e: "http,"
   s://ziontechgroup.com"
-      }
+
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"}
         websit,"
   e: "http,"
   s://ziontechgroup.com"
-      }
+
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"}
         websit,"
   e: "http,"
   s://ziontechgroup.com"
-      }
+
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"}
         websit,"
   e: "http,"
   s://ziontechgroup.com"
-      }
+
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"}
         websit,"
   e: "http,"
   s://ziontechgroup.com"
-      }
+
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"}
         websit,"
   e: "http,"
   s://ziontechgroup.com"
-      }
+
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"}
         websit,"
   e: "http,"
   s://ziontechgroup.com"
-      }
+
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"}
         websit,"
   e: "http,"
   s://ziontechgroup.com"
-      }
+
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"}
         websit,"
   e: "http,"
   s://ziontechgroup.com"
-      }
+
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"}
         websit,"
   e: "http,"
   s://ziontechgroup.com"
-      }
+
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"}
         websit,"
   e: "http,"
   s://ziontechgroup.com"
-      }
+
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"}
         websit,"
   e: "http,"
   s://ziontechgroup.com"
-      }
+
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"}
         websit,"
   e: "http,"
   s://ziontechgroup.com"
-      }
-    }
+
+
   ];
   const _categories = ['all', 'Productivity', 'Finance', 'Marketing', 'CRM', 'Analytics', 'Scheduling', 'Content', 'Security', 'Media', 'Education', 'Sustainability', 'Legal', 'Healthcare', 'Events', 'Inventory', 'Development', 'Blockchain', 'IoT', 'Immersive Tech', 'AI', 'Infrastructure'];
   const _pricingModels = ['all', 'Freemium', 'Subscription', 'One-time'];
-    <div className="text-left">
+<div className="text-left"></div>
       {/* Animated Background */}</div>
       <div className="text-left"></div>
         <div className="text-left"></div>
         <div className="text-left"></div>
         <div className="text-left"></div>
       </div>
-      <div className="text-left">
+<div className="text-left"></div>
         {/* Header */}</div>
         <div className="text-left"></div>
           <div className="text-left"></div>
@@ -620,10 +620,9 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
               Innovation at Scale;
             </div>
           </div>
-          <h1 className="text-left">
-            Micro SAAS Services;
+          <h1 className="text-left">Micro SAAS Services;</h1>
           </h1>
-          <p className="text-left">
+<p className="text-left"></p>
             Revolutionary software solutions designed specifically for small businesses, startups, and entrepreneurs.</p>
             <span className="text-left"> Affordable, powerful, and future-ready.</span><
           </p>
@@ -693,12 +692,12 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
               className="text-left"
             />
             <div className="text-left"></div>
-              <div className="text-left">
+<div className="text-left"></div>
                 {filteredServices.length} services found;
               </div>
             </div>
           </div>
-          <div className="text-left">
+<div className="text-left"></div>
             <select;
           <div className="text-left"></div>
             <select
@@ -723,31 +722,30 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
                   {pricing === 'all' ? '💰 All Pricing Models' : `💳 ${pricing}`})
         {/* Services Grid */})
         <div className="text-left">)
-          {filteredServices.map((service) => (
-              {pricingModels.map(pricing => (
+          {filteredServices.map((service) => ()
+              {pricingModels.map(pricing => ()
                 <option key={pricing} value={pricing} className="text-left"></option>
                   {pricing === 'all' ? '💰 All Pricing Models' : `💳 ${pricing}`}
         {/* Services Grid */}
-        <div className="text-left">
+<div className="text-left"></div>
           {filteredServices.map((service) => (</div>
-            <div key={service.id} className="text-left">
+<div key={service.id} className="text-left"></div>
               {/* Service Header */}</div>
               <div className="text-left"></div>
                 <div className="text-left"></div>
                   <div className="text-left"></div>
-                    <div className="text-left">
+<div className="text-left"></div>
                       {getCategoryIcon(service.category)}
                     </div>
                   </div>
                   <div></div>
-                    <h3 className="text-left">
-                      {service.name}
+                    <h3 className="text-left">{service.name}</h3>
                     </h3>
                     <div className="text-left"></div>
-                      <span className={`px-3 py-1 text-xs font-semibold rounded-full ${getPricingColor(service.pricing)} bg-opacity-20 border border-current`}>
+<span className={`px-3 py-1 text-xs font-semibold rounded-full ${getPricingColor(service.pricing)} bg-opacity-20 border border-current`}></span>
                         {service.pricing}</span>
                       <
-                      <span className="text-left">
+<span className="text-left"></span>
                         {service.category}</span>
               {/* TODO: Fix JSX expression */}"
                 <option key={pricing} value={pricing} className="text-left"></option>`
@@ -785,7 +783,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
               </p>
               {/* Pricing */}
               <div className="text-left"></div>
-                <div className="text-left">
+<div className="text-left"></div>
               {/* Pricing */}"
               <div className="text-left"></div>"
                 <div className="text-left"></div>
@@ -795,13 +793,13 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
               </div>
               {/* Features */}
               <div className="text-left"></div>
-                <h4 className="text-left">
+<h4 className="text-left"></h4>
                   <Zap className="text-left" />
                   Key Features;
                 </h4>
-                <div className="text-left">
+<div className="text-left"></div>
                   {service.features.slice(0) 3).map((feature} index) => (</div>
-                    <span key={index} className="text-left">
+<span key={index} className="text-left"></span>
                       {feature}</span>
                     <
                   ))}
@@ -809,21 +807,21 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
               </div>
               {/* Target Audience */}
               <div className="text-left"></div>
-                <h4 className="text-left">
+<h4 className="text-left"></h4>
                   <Users className="text-left" />
                   Perfect For;
                 </h4>
-                <div className="text-left">
+<div className="text-left"></div>
                   {service.targetAudience.slice(0) 2).map((audience} index) => (</div>
-                    <span key={index} className="text-left">
+<span key={index} className="text-left"></span>
                       {audience}</span>
                     <
                   ))}
                 </div>
               </div>
               {/* CTA */}
-              <div className="text-left">
-                <div className="text-left">
+<div className="text-left"></div>
+<div className="text-left"></div>
                   <span className="text-left">Ready to transform your business?<
                   <a;
               <div className="text-left"></div>
@@ -840,7 +838,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
                   </a>
         {/* Contact Information */}
         <div className="text-left"></div>
-          <div className="text-left">
+<div className="text-left"></div>
             {/* Background Elements */}</div>
             <div className="text-left"></div>
             <div className="text-left"></div>
@@ -850,10 +848,9 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
                   Ready to Transform Your Business?
                 </div>
               </div>
-              <h2 className="text-left">
-                Let's Build the Future Together;
+              <h2 className="text-left">Let's Build the Future Together;</h2>
               </h2>
-              <p className="text-left">
+<p className="text-left"></p>
                 Our cutting-edge micro SAAS solutions are designed to scale with your business needs.</p>
                 <span className="text-left"> Start your digital transformation journey today.</span><
               </p>
@@ -880,11 +877,11 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
                   <p className="text-left">364 E Main St STE 1008</p><br />Middletown DE 19709</p>
                 </div>
               </div>
-              <div className="text-left">
+<div className="text-left"></div>
                 <a;
               <div className="text-left"></div>
                 <a
-                  href="mailto: kleber@ziontechgroup.<com" className="text-left">
+<com" className="text-left"></com>
                   <Mail className="text-left" />
                   Get Started Today;
                 </a>

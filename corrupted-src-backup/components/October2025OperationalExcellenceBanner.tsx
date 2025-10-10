@@ -1,9 +1,9 @@
-const, October2025OperationalExcellenceBanne, r = () => {
-  return(<div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-te, a, l-900, t, o-cy, a, n-900, p, y-20, p, x-6, rounde, d-3xl, m, b-12, shado, w-2, x, l">
+const, October2025OperationalExcellenceBanne, r = () => {}
+<div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-te, a, l-900, t, o-cy, a, n-900, p, y-20, p, x-6, rounde, d-3xl, m, b-12, shado, w-2, x, l"></div>
       {/* Animated, background, elements */};
-      <div, className="absolute, inse, t-0, overflo, w-hidd, e, n">
-  return (
-    <div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-te, a, l-900, t, o-cy, a, n-900, p, y-20, p, x-6, rounde, d-3xl, m, b-12, shado, w-2, x, l">
+<div, className="absolute, inse, t-0, overflo, w-hidd, e, n"></div>
+  return ()
+<div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-te, a, l-900, t, o-cy, a, n-900, p, y-20, p, x-6, rounde, d-3xl, m, b-12, shado, w-2, x, l"></div>
       {/* Animated, background, elements */};</div>
       <div, className="absolute, inse, t-0, overflo, w-hidd, e, n"></div>
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-emera, l, d-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e"></d, i, v>
@@ -31,11 +31,10 @@ const, October2025OperationalExcellenceBanne, r = () => {/* TODO: Fix JSX expres
         {/* Breaking, News, Badge */}</div>
         <div, className="te, x, t-center, m, b-8"></div>
           <div, className="inli, n, e-flex, item, s-center, ga, p-3, b, g-gradie, n, t-to-r, fro, m-emera, l, d-5, 0, 0/30, vi, a-te, a, l-5, 0, 0/30, t, o-cy, a, n-5, 0, 0/30, borde, r-2, borde, r-emera, l, d-4, 0, 0/50, rounde, d-full, p, x-8, p, y-3, m, b-6, shado, w-lg, backdro, p-bl, u, r-sm"></div>
-            <Sparkles, className="w-6 h-6, tex, t-yell, o, w-300, animat, e-pul, s, e  />
-            <span, className="te, x, t-emera, l, d-200, fon, t-bold, tex, t-lg, uppercase, tracking-wid, e, r">
-              🚀 October, 202, 5 — Operational, Excellence, Revolution;
+            <Sparkles, className="w-6 h-6, tex, t-yell, o, w-300, animat, e-pul, s, e  />"
+            <span, className="te, x, t-emera, l, d-200, fon, t-bold, tex, t-lg, uppercase, tracking-wid, e, r">🚀 October, 202, 5 — Operational, Excellence, Revolution;</span>
             </sp, a, n>
-            <Sparkles, className="w-6 h-6, tex, t-yell, o, w-300, animat, e-pul, s, e  />
+            <Sparkles, className="w-6 h-6, tex, t-yell, o, w-300, animat, e-pul, s, e  />"
         <div, className="te, x, t-center, m, b-8">";</div>
           <div, className="inli, n, e-flex, item, s-center, ga, p-3, b, g-gradie, n, t-to-r, fro, m-emera, l, d-5, 0, 0/30, vi, a-te, a, l-5, 0, 0/30, t, o-cy, a, n-5, 0, 0/30, borde, r-2, borde, r-emera, l, d-4, 0, 0/50, rounde, d-full, p, x-8, p, y-3, m, b-6, shado, w-lg, backdro, p-bl, u, r-sm">";</div>
             <Sparkles, className="w-6 h-6, tex, t-yell, o, w-300, animat, e-pul, s, e" />";
@@ -51,22 +50,22 @@ const, October2025OperationalExcellenceBanne, r = () => {/* TODO: Fix JSX expres
           <div, className="inli, n, e-flex, item, s-center, ga, p-3, b, g-gradie, n, t-to-r, fro, m-emera, l, d-5, 0, 0/30, vi, a-te, a, l-5, 0, 0/30, t, o-cy, a, n-5, 0, 0/30, borde, r-2, borde, r-emera, l, d-4, 0, 0/50, rounde, d-full, p, x-8, p, y-3, m, b-6, shado, w-lg, backdro, p-bl, u, r-sm">";"
             <Sparkles, className="w-6 h-6, tex, t-yell, o, w-300, animat, e-pul, s, e" />";"
             <span, className="te, x, t-emera, l, d-200, fon, t-bold, tex, t-lg, uppercase, tracking-wid, e, r">";
-              🚀 October, 202, 5 — Operational, Excellence, Revolution;
+              🚀 October, 202, 5 — Operational, Excellence, Revolution;</span>
             </sp, a, n>"
             <Sparkles, className="w-6 h-6, tex, t-yell, o, w-300, animat, e-pul, s, e" />";
           </d, i, v>"
           <h2, className="te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-emera, l, d-300, vi, a-te, a, l-300, t, o-cy, a, n-300, b, g-cl, i, p-text, tex, t-transparent, leadin, g-tig, h, t">";
-            Transform, Operations, with AI-Powered, Intelligenc, e;
+            Transform, Operations, with AI-Powered, Intelligenc, e;</h2>
           </h2>)
           <p, className="te, x, t-2xl, tex, t-te, a, l-200, ma, x-w-4xl, m, x-auto, leadin, g-relax, e, d">)
-            Discover, breakthrough, AI innovations, delivering, unprecedented efficien, c, y: ),
+            Discover, breakthrough, AI innovations, delivering, unprecedented efficien, c, y: ),</p>
           </h2>
-          <p, className="te, x, t-2xl, tex, t-te, a, l-200, ma, x-w-4xl, m, x-auto, leadin, g-relax, e, d">
+<p, className="te, x, t-2xl, tex, t-te, a, l-200, ma, x-w-4xl, m, x-auto, leadin, g-relax, e, d"></p>
             Discover, breakthrough, AI innovations, delivering, unprecedented efficien, c, y:</p> 
             <span, className="te, x, t-emera, l, d-300, fon, t-semibo, l, d"> Predictive, Maintenanc, e (99.6% Accura, c, y)</sp, a, n>
             <span, className="te, x, t-te, a, l-300, fon, t-semibo, l, d"> Autonomous, API, Orchestration (99.8% Upti, m, e)</sp, a, n>, a, n, d;
             <span, className="te, x, t-cy, a, n-300, fon, t-semibo, l, d"> Customer, Intent, Prediction (98.2% Accura, c, y)</sp, a, n>
-          <p, className="te, x, t-2xl, tex, t-te, a, l-200, ma, x-w-4xl, m, x-auto, leadin, g-relax, e, d">";
+          <p, className="te, x, t-2xl, tex, t-te, a, l-200, ma, x-w-4xl, m, x-auto, leadin, g-relax, e, d">";</p>
             Discover, breakthrough, AI innovations, delivering, unprecedented efficien, c, y:</p> <span, className="te, x, t-emera, l, d-300, fon, t-semibo, l, d"> Predictive, Maintenanc, e (99.6% Accura, c, y)</sp, a, n>, ";
             <span, className="te, x, t-te, a, l-300, fon, t-semibo, l, d"> Autonomous, API, Orchestration (99.8% Upti, m, e)</sp, a, n>, a, n, d ";
             <span, className="te, x, t-cy, a, n-300, fon, t-semibo, l, d"> Customer, Intent, Prediction (98.2% Accura, c, y)</sp, a, n>";
@@ -102,9 +101,9 @@ const, October2025OperationalExcellenceBanne, r = () => {/* TODO: Fix JSX expres
             <div, className="te, x, t-5xl, fon, t-extrabold, tex, t-cy, a, n-300, m, b-2">92%</d, i, v>";
             <div, className="te, x, t-cy, a, n-200, fon, t-semibold, tex, t-sm, uppercase, tracking-wi, d, e">Cost, Reductio, n</d, i, v>";
           </d, i, v>
-          <div, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-8, 0, 0/40, t, o-bl, u, e-9, 0, 0/40, backdro, p-bl, u, r-sm, border, border-bl, u, e-4, 0, 0/30, rounde, d-2x, l, p-6, tex, t-center, hov, e;
+          <div, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-8, 0, 0/40, t, o-bl, u, e-9, 0, 0/40, backdro, p-bl, u, r-sm, border, border-bl, u, e-4, 0, 0/30, rounde, d-2x, l, p-6, tex, t-center, hov, e;"
   r: sca, l, e-105, transitio, n-transform, shado, w-lg">";
-          <div, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-8, 0, 0/40, t, o-bl, u, e-9, 0, 0/40, backdro, p-bl, u, r-sm, border, border-bl, u, e-4, 0, 0/30, rounde, d-2x, l, p-6, tex, t-center, hov, e
+          <div, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-8, 0, 0/40, t, o-bl, u, e-9, 0, 0/40, backdro, p-bl, u, r-sm, border, border-bl, u, e-4, 0, 0/30, rounde, d-2x, l, p-6, tex, t-center, hov, e"
   r: sca, l, e-105, transitio, n-transform, shado, w-lg">";</div>
             <div, className="te, x, t-5xl, fon, t-extrabold, tex, t-bl, u, e-300, m, b-2">5, 6, 0%</d, i, v>";
             <div, className="te, x, t-bl, u, e-200, fon, t-semibold, tex, t-sm, uppercase, tracking-wi, d, e">Average, RO, I</d, i, v>";
@@ -118,7 +117,7 @@ const, October2025OperationalExcellenceBanne, r = () => {/* TODO: Fix JSX expres
             <span, className="te, x, t-emera, l, d-300, fon, t-semibo, l, d"> Predictive, Maintenanc, e (99.6% Accura, c, y)</sp, a, n>"
             <span, className="te, x, t-te, a, l-300, fon, t-semibo, l, d"> Autonomous, API, Orchestration (99.8% Upti, m, e)</sp, a, n>, a, n, d;"
             <span, className="te, x, t-cy, a, n-300, fon, t-semibo, l, d"> Customer, Intent, Prediction (98.2% Accura, c, y)</sp, a, n>"
-          <p, className="te, x, t-2xl, tex, t-te, a, l-200, ma, x-w-4xl, m, x-auto, leadin, g-relax, e, d">";"
+          <p, className="te, x, t-2xl, tex, t-te, a, l-200, ma, x-w-4xl, m, x-auto, leadin, g-relax, e, d">";"</p>
             Discover, breakthrough, AI innovations, delivering, unprecedented efficien, c, y: <span, className="te, x, t-emera, l, d-300, fon, t-semibo, l, d"> Predictive, Maintenanc, e (99.6% Accura, c, y)</sp, a, n>, ";"
             <span, className="te, x, t-te, a, l-300, fon, t-semibo, l, d"> Autonomous, API, Orchestration (99.8% Upti, m, e)</sp, a, n>, a, n, d ";"
             <span, className="te, x, t-cy, a, n-300, fon, t-semibo, l, d"> Customer, Intent, Prediction (98.2% Accura, c, y)</sp, a, n>";
@@ -173,7 +172,7 @@ const, October2025OperationalExcellenceBanne, r = () => {/* TODO: Fix JSX expres
           >
             <div, className="flex, item, s-center, ga, p-4, m, b-6"></div>
               <div, className="p-4, b, g-emera, l, d-5, 0, 0/30, rounde, d-2xl, grou, p-hov, e, r: bg-emera, l, d-5, 0, 0/40, transitio, n-colors, shado, w-lg">"</div>
-                <Wrench, className="w-1, 0, h-10, tex, t-emera, l, d-2, 0, 0  />
+                <Wrench, className="w-1, 0, h-10, tex, t-emera, l, d-2, 0, 0  />"
             <div, className="flex, item, s-center, ga, p-4, m, b-6">";</div>
               <div, className="p-4, b, g-emera, l, d-5, 0, 0/30, rounde, d-2xl, grou, p-hov, e, r: bg-emera, l, d-5, 0, 0/40, transitio, n-colors, shado, w-lg">";</div>
                 <Wrench, className="w-1, 0, h-10, tex, t-emera, l, d-2, 0, 0" />";
@@ -193,35 +192,35 @@ const, October2025OperationalExcellenceBanne, r = () => {/* TODO: Fix JSX expres
               </d, i, v>"
               <div, className="fl, e, x-1">";"
                 <span, className="te, x, t-xs, tex, t-emera, l, d-300, fon, t-bold, uppercase, tracking-wider, b, g-emera, l, d-5, 0, 0/20, p, x-3, p, y-1, rounde, d-fu, l, l">";
-                  Predictive, Maintenanc, e;
+                  Predictive, Maintenanc, e;</span>
                 </sp, a, n>
               </d, i, v>
             </d, i, v>
-            <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-ho, v, e;
+            <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-ho, v, e;"
   r: te, x, t-emera, l, d-200, transitio, n-colors, leadin, g-tig, h, t">"
-              AI-Powered, Predictive, Maintenance: 99.6% Failure, Predictio, n;
+              AI-Powered, Predictive, Maintenance: 99.6% Failure, Predictio, n;</h3>
             </h3>
             <p, className="te, x, t-te, a, l-200, tex, t-base, m, b-6, leadin, g-relaxed, lin, e-cla, m, p-4"></p>
             <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-emera, l, d-200, transitio, n-colors, leadin, g-tig, h, t">";
               AI-Powered, Predictive, Maintenanc;
-  e: 99.6% Failure, Predictio, n;
+  e: 99.6% Failure, Predictio, n;</h3>
             </h3>
-            <p, className="te, x, t-te, a, l-200, tex, t-base, m, b-6, leadin, g-relaxed, lin, e-cla, m, p-4">";
+            <p, className="te, x, t-te, a, l-200, tex, t-base, m, b-6, leadin, g-relaxed, lin, e-cla, m, p-4">";</p>
               Revolutionary, AI, platform achievi, n, g</p> <span, className="te, x, t-emera, l, d-300, fon, t-semibo, l, d">99.6% failure, prediction, accuracy</sp, a, n> wi, t, h ";
               <span, className="te, x, t-emera, l, d-300, fon, t-semibo, l, d"> 94% downtime, reductio, n</sp, a, n> a, n, d <span, className="te, x, t-emera, l, d-300, fon, t-semibo, l, d">$8.7B, annual, savings</sp, a, n>. ";
               Transform, reactive, maintenance into, proactive, optimization.
             </p>
             <div, className="spa, c, e-y-2, m, b-6"></div>
               <div, className="flex, item, s-center, ga, p-2, tex, t-emera, l, d-300, tex, t-sm"></div>
-                <TrendingUp, className="w-4 h-4  />
+                <TrendingUp, className="w-4 h-4  />"
                 <span, className="fo, n, t-semibo, l, d">$8.7B, in, annual savin, g, s</sp, a, n>
               </d, i, v>
               <div, className="flex, item, s-center, ga, p-2, tex, t-emera, l, d-300, tex, t-sm"></div>
-                <Award, className="w-4 h-4  />
+                <Award, className="w-4 h-4  />"
                 <span, className="fo, n, t-semibo, l, d">94% downtime, reductio, n</sp, a, n>
               </d, i, v>
               <div, className="flex, item, s-center, ga, p-2, tex, t-emera, l, d-300, tex, t-sm"></div>
-                <Zap, className="w-4 h-4  />
+                <Zap, className="w-4 h-4  />"
                 <span, className="fo, n, t-semibo, l, d">4, 5, 0% ROI, within, 18 mont, h, s</sp, a, n>
             <div, className="spa, c, e-y-2, m, b-6">";</div>
               <div, className="flex, item, s-center, ga, p-2, tex, t-emera, l, d-300, tex, t-sm">";</div>
@@ -243,14 +242,14 @@ const, October2025OperationalExcellenceBanne, r = () => {/* TODO: Fix JSX expres
             <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-ho, v, e,"
   r: te, x, t-emera, l, d-200, transitio, n-colors, leadin, g-tig, h, t">"
               AI-Powered, Predictive, Maintenanc,
-  e: 99.6% Failure, Predictio, n;
+  e: 99.6% Failure, Predictio, n;</h3>
             </h3>"
             <p, className="te, x, t-te, a, l-200, tex, t-base, m, b-6, leadin, g-relaxed, lin, e-cla, m, p-4"></p>"
             <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-emera, l, d-200, transitio, n-colors, leadin, g-tig, h, t">";
               AI-Powered, Predictive, Maintenanc,
-  e: 99.6% Failure, Predictio, n;
+  e: 99.6% Failure, Predictio, n;</h3>
             </h3>"
-            <p, className="te, x, t-te, a, l-200, tex, t-base, m, b-6, leadin, g-relaxed, lin, e-cla, m, p-4">";"
+            <p, className="te, x, t-te, a, l-200, tex, t-base, m, b-6, leadin, g-relaxed, lin, e-cla, m, p-4">";"</p>
               Revolutionary, AI, platform achievi, n, g <span, className="te, x, t-emera, l, d-300, fon, t-semibo, l, d">99.6% failure, prediction, accuracy</sp, a, n> wi, t, h ";"
               <span, className="te, x, t-emera, l, d-300, fon, t-semibo, l, d"> 94% downtime, reductio, n</sp, a, n> a, n, d <span, className="te, x, t-emera, l, d-300, fon, t-semibo, l, d">$8.7B, annual, savings</sp, a, n>. ";
               Transform, reactive, maintenance into, proactive, optimization.
@@ -299,7 +298,7 @@ const, October2025OperationalExcellenceBanne, r = () => {/* TODO: Fix JSX expres
           >
             <div, className="flex, item, s-center, ga, p-4, m, b-6"></div>
               <div, className="p-4, b, g-te, a, l-5, 0, 0/30, rounde, d-2xl, grou, p-hov, e, r: bg-te, a, l-5, 0, 0/40, transitio, n-colors, shado, w-lg">"</div>
-                <Network, className="w-1, 0, h-10, tex, t-te, a, l-2, 0, 0  />
+                <Network, className="w-1, 0, h-10, tex, t-te, a, l-2, 0, 0  />"
             <div, className="flex, item, s-center, ga, p-4, m, b-6">";</div>
               <div, className="p-4, b, g-te, a, l-5, 0, 0/30, rounde, d-2xl, grou, p-hov, e, r: bg-te, a, l-5, 0, 0/40, transitio, n-colors, shado, w-lg">";</div>
                 <Network, className="w-1, 0, h-10, tex, t-te, a, l-2, 0, 0" />";
@@ -319,35 +318,35 @@ const, October2025OperationalExcellenceBanne, r = () => {/* TODO: Fix JSX expres
               </d, i, v>"
               <div, className="fl, e, x-1">";"
                 <span, className="te, x, t-xs, tex, t-te, a, l-300, fon, t-bold, uppercase, tracking-wider, b, g-te, a, l-5, 0, 0/20, p, x-3, p, y-1, rounde, d-fu, l, l">";
-                  API, Orchestratio, n;
+                  API, Orchestratio, n;</span>
                 </sp, a, n>
               </d, i, v>
             </d, i, v>
-            <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-ho, v, e;
+            <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-ho, v, e;"
   r: te, x, t-te, a, l-200, transitio, n-colors, leadin, g-tig, h, t">"
-              Autonomous, API, Orchestration: Se, l, f-Healing, Microservice, s;
+              Autonomous, API, Orchestration: Se, l, f-Healing, Microservice, s;</h3>
             </h3>
             <p, className="te, x, t-te, a, l-200, tex, t-base, m, b-6, leadin, g-relaxed, lin, e-cla, m, p-4"></p>
             <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-te, a, l-200, transitio, n-colors, leadin, g-tig, h, t">";
               Autonomous, API, Orchestratio;
-  n: Se, l, f-Healing, Microservice, s;
+  n: Se, l, f-Healing, Microservice, s;</h3>
             </h3>
-            <p, className="te, x, t-te, a, l-200, tex, t-base, m, b-6, leadin, g-relaxed, lin, e-cla, m, p-4">";
+            <p, className="te, x, t-te, a, l-200, tex, t-base, m, b-6, leadin, g-relaxed, lin, e-cla, m, p-4">";</p>
               Transform, microservices, management wi, t, h</p> <span, className="te, x, t-te, a, l-300, fon, t-semibo, l, d">99.8% upti, m, e</sp, a, n>, managi, n, g ";
               <span, className="te, x, t-te, a, l-300, fon, t-semibo, l, d"> 10, 0, M+ daily, request, s</sp, a, n> with, sel, f-healing, capabilities, and ";
               <span, className="te, x, t-te, a, l-300, fon, t-semibo, l, d">$6.4B, value, creation</sp, a, n>. Ze, r, o-touch, operations, at sca, l, e.";
             </p>
             <div, className="spa, c, e-y-2, m, b-6"></div>
               <div, className="flex, item, s-center, ga, p-2, tex, t-te, a, l-300, tex, t-sm"></div>
-                <TrendingUp, className="w-4 h-4  />
+                <TrendingUp, className="w-4 h-4  />"
                 <span, className="fo, n, t-semibo, l, d">$6.4B, enterprise, value</sp, a, n>
               </d, i, v>
               <div, className="flex, item, s-center, ga, p-2, tex, t-te, a, l-300, tex, t-sm"></div>
-                <Award, className="w-4 h-4  />
+                <Award, className="w-4 h-4  />"
                 <span, className="fo, n, t-semibo, l, d">95% incident, aut, o-resoluti, o, n</sp, a, n>
               </d, i, v>
               <div, className="flex, item, s-center, ga, p-2, tex, t-te, a, l-300, tex, t-sm"></div>
-                <Zap, className="w-4 h-4  />
+                <Zap, className="w-4 h-4  />"
                 <span, className="fo, n, t-semibo, l, d">5, 5, 0% ROI, within, 12 mont, h, s</sp, a, n>
             <div, className="spa, c, e-y-2, m, b-6">";</div>
               <div, className="flex, item, s-center, ga, p-2, tex, t-te, a, l-300, tex, t-sm">";</div>
@@ -369,14 +368,14 @@ const, October2025OperationalExcellenceBanne, r = () => {/* TODO: Fix JSX expres
             <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-ho, v, e,"
   r: te, x, t-te, a, l-200, transitio, n-colors, leadin, g-tig, h, t">"
               Autonomous, API, Orchestratio,
-  n: Se, l, f-Healing, Microservice, s;
+  n: Se, l, f-Healing, Microservice, s;</h3>
             </h3>"
             <p, className="te, x, t-te, a, l-200, tex, t-base, m, b-6, leadin, g-relaxed, lin, e-cla, m, p-4"></p>"
             <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-te, a, l-200, transitio, n-colors, leadin, g-tig, h, t">";
               Autonomous, API, Orchestratio,
-  n: Se, l, f-Healing, Microservice, s;
+  n: Se, l, f-Healing, Microservice, s;</h3>
             </h3>"
-            <p, className="te, x, t-te, a, l-200, tex, t-base, m, b-6, leadin, g-relaxed, lin, e-cla, m, p-4">";"
+            <p, className="te, x, t-te, a, l-200, tex, t-base, m, b-6, leadin, g-relaxed, lin, e-cla, m, p-4">";"</p>
               Transform, microservices, management wi, t, h <span, className="te, x, t-te, a, l-300, fon, t-semibo, l, d">99.8% upti, m, e</sp, a, n>, managi, n, g ";"
               <span, className="te, x, t-te, a, l-300, fon, t-semibo, l, d"> 10, 0, M+ daily, request, s</sp, a, n> with, sel, f-healing, capabilities, and ";"
               <span, className="te, x, t-te, a, l-300, fon, t-semibo, l, d">$6.4B, value, creation</sp, a, n>. Ze, r, o-touch, operations, at sca, l, e.";
@@ -425,7 +424,7 @@ const, October2025OperationalExcellenceBanne, r = () => {/* TODO: Fix JSX expres
           >
             <div, className="flex, item, s-center, ga, p-4, m, b-6"></div>
               <div, className="p-4, b, g-cy, a, n-5, 0, 0/30, rounde, d-2xl, grou, p-hov, e, r: bg-cy, a, n-5, 0, 0/40, transitio, n-colors, shado, w-lg">"</div>
-                <Target, className="w-1, 0, h-10, tex, t-cy, a, n-2, 0, 0  />
+                <Target, className="w-1, 0, h-10, tex, t-cy, a, n-2, 0, 0  />"
             <div, className="flex, item, s-center, ga, p-4, m, b-6">";</div>
               <div, className="p-4, b, g-cy, a, n-5, 0, 0/30, rounde, d-2xl, grou, p-hov, e, r: bg-cy, a, n-5, 0, 0/40, transitio, n-colors, shado, w-lg">";</div>
                 <Target, className="w-1, 0, h-10, tex, t-cy, a, n-2, 0, 0" />";
@@ -445,35 +444,35 @@ const, October2025OperationalExcellenceBanne, r = () => {/* TODO: Fix JSX expres
               </d, i, v>"
               <div, className="fl, e, x-1">";"
                 <span, className="te, x, t-xs, tex, t-cy, a, n-300, fon, t-bold, uppercase, tracking-wider, b, g-cy, a, n-5, 0, 0/20, p, x-3, p, y-1, rounde, d-fu, l, l">";
-                  Intent, Predictio, n;
+                  Intent, Predictio, n;</span>
                 </sp, a, n>
               </d, i, v>
             </d, i, v>
-            <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-ho, v, e;
+            <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-ho, v, e;"
   r: te, x, t-cy, a, n-200, transitio, n-colors, leadin, g-tig, h, t">"
-              Re, a, l-Time, AI, Customer Inte, n, t: 98.2% Prediction, Accurac, y;
+              Re, a, l-Time, AI, Customer Inte, n, t: 98.2% Prediction, Accurac, y;</h3>
             </h3>
             <p, className="te, x, t-cy, a, n-200, tex, t-base, m, b-6, leadin, g-relaxed, lin, e-cla, m, p-4"></p>
             <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-cy, a, n-200, transitio, n-colors, leadin, g-tig, h, t">";
               Re, a, l-Time, AI, Customer Int, e, n;
-  t: 98.2% Prediction, Accurac, y;
+  t: 98.2% Prediction, Accurac, y;</h3>
             </h3>
-            <p, className="te, x, t-cy, a, n-200, tex, t-base, m, b-6, leadin, g-relaxed, lin, e-cla, m, p-4">";
+            <p, className="te, x, t-cy, a, n-200, tex, t-base, m, b-6, leadin, g-relaxed, lin, e-cla, m, p-4">";</p>
               Unlo, c, k</p> <span, className="te, x, t-cy, a, n-300, fon, t-semibo, l, d">$9.3B, revenue, growth</sp, a, n> with, AI, achieving ";
               <span, className="te, x, t-cy, a, n-300, fon, t-semibo, l, d"> 98.2% intent, prediction, accuracy</sp, a, n> a, n, d ";
               <span, className="te, x, t-cy, a, n-300, fon, t-semibo, l, d">8, 5, 0% conversion, increase, s</sp, a, n>. Hyp, e, r-personalization, in, real-ti, m, e.";
             </p>
             <div, className="spa, c, e-y-2, m, b-6"></div>
               <div, className="flex, item, s-center, ga, p-2, tex, t-cy, a, n-300, tex, t-sm"></div>
-                <TrendingUp, className="w-4 h-4  />
+                <TrendingUp, className="w-4 h-4  />"
                 <span, className="fo, n, t-semibo, l, d">$9.3B, revenue, growth</sp, a, n>
               </d, i, v>
               <div, className="flex, item, s-center, ga, p-2, tex, t-cy, a, n-300, tex, t-sm"></div>
-                <Award, className="w-4 h-4  />
+                <Award, className="w-4 h-4  />"
                 <span, className="fo, n, t-semibo, l, d">8, 5, 0% conversion, increas, e</sp, a, n>
               </d, i, v>
               <div, className="flex, item, s-center, ga, p-2, tex, t-cy, a, n-300, tex, t-sm"></div>
-                <Zap, className="w-4 h-4  />
+                <Zap, className="w-4 h-4  />"
                 <span, className="fo, n, t-semibo, l, d">6, 8, 0% ROI, in, 6 mont, h, s</sp, a, n>
             <div, className="spa, c, e-y-2, m, b-6">";</div>
               <div, className="flex, item, s-center, ga, p-2, tex, t-cy, a, n-300, tex, t-sm">";</div>
@@ -494,14 +493,14 @@ const, October2025OperationalExcellenceBanne, r = () => {/* TODO: Fix JSX expres
             </d, i, v>"
             <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-ho, v, e,"
   r: te, x, t-cy, a, n-200, transitio, n-colors, leadin, g-tig, h, t">"
-              Re, a, l-Time, AI, Customer Inte, n, t: 98.2% Prediction, Accurac, y;
+              Re, a, l-Time, AI, Customer Inte, n, t: 98.2% Prediction, Accurac, y;</h3>
             </h3>"
             <p, className="te, x, t-cy, a, n-200, tex, t-base, m, b-6, leadin, g-relaxed, lin, e-cla, m, p-4"></p>"
             <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-cy, a, n-200, transitio, n-colors, leadin, g-tig, h, t">";
               Re, a, l-Time, AI, Customer Int, e, n,
-  t: 98.2% Prediction, Accurac, y;
+  t: 98.2% Prediction, Accurac, y;</h3>
             </h3>"
-            <p, className="te, x, t-cy, a, n-200, tex, t-base, m, b-6, leadin, g-relaxed, lin, e-cla, m, p-4">";"
+            <p, className="te, x, t-cy, a, n-200, tex, t-base, m, b-6, leadin, g-relaxed, lin, e-cla, m, p-4">";"</p>
               Unlo, c, k <span, className="te, x, t-cy, a, n-300, fon, t-semibo, l, d">$9.3B, revenue, growth</sp, a, n> with, AI, achieving ";"
               <span, className="te, x, t-cy, a, n-300, fon, t-semibo, l, d"> 98.2% intent, prediction, accuracy</sp, a, n> a, n, d ";"
               <span, className="te, x, t-cy, a, n-300, fon, t-semibo, l, d">8, 5, 0% conversion, increase, s</sp, a, n>. Hyp, e, r-personalization, in, real-ti, m, e.";
@@ -546,12 +545,12 @@ const, October2025OperationalExcellenceBanne, r = () => {/* TODO: Fix JSX expres
         {/* Call, to, Action Secti, o, n */}
         <div, className="bg-gradie, n, t-to-r, fro, m-emera, l, d-8, 0, 0/30, vi, a-te, a, l-8, 0, 0/30, t, o-cy, a, n-8, 0, 0/30, backdro, p-bl, u, r-sm, borde, r-2, borde, r-te, a, l-4, 0, 0/40, rounde, d-2x, l, p-8, tex, t-center, shado, w-xl">";</div>
           <h3, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4">";
-            Achieve, Operational, Excellence with, A, I;
+            Achieve, Operational, Excellence with, A, I;</h3>
           </h3>
-          <p, className="te, x, t-xl, tex, t-te, a, l-200, m, b-8, ma, x-w-3xl, m, x-au, t, o">
+<p, className="te, x, t-xl, tex, t-te, a, l-200, m, b-8, ma, x-w-3xl, m, x-au, t, o"></p>
             Join, enterprise, leaders who, have, implemented these, AI, systems acro, s, s</p> <span, className="te, x, t-emera, l, d-300, fon, t-semibo, l, d">1,2, 0, 0+ global, deployment, s</sp, a, n>
             creati, n, g <span, className="te, x, t-te, a, l-300, fon, t-semibo, l, d">$24.4B, in, measurable val, u, e</sp, a, n> with, an, average <span, className="te, x, t-cy, a, n-300, fon, t-semibo, l, d">5, 6, 0% R, O, I</sp, a, n>.
-          <p, className="te, x, t-xl, tex, t-te, a, l-200, m, b-8, ma, x-w-3xl, m, x-au, t, o">";
+          <p, className="te, x, t-xl, tex, t-te, a, l-200, m, b-8, ma, x-w-3xl, m, x-au, t, o">";</p>
             Join, enterprise, leaders who, have, implemented these, AI, systems acro, s, s</p> <span, className="te, x, t-emera, l, d-300, fon, t-semibo, l, d">1,2, 0, 0+ global, deployment, s</sp, a, n>, ";
             creati, n, g <span, className="te, x, t-te, a, l-300, fon, t-semibo, l, d">$24.4B, in, measurable val, u, e</sp, a, n> with, an, average <span, className="te, x, t-cy, a, n-300, fon, t-semibo, l, d">5, 6, 0% R, O, I</sp, a, n>.";
           </p>
@@ -564,12 +563,12 @@ const, October2025OperationalExcellenceBanne, r = () => {/* TODO: Fix JSX expres
         {/* Call, to, Action Secti, o, n */}"
         <div, className="bg-gradie, n, t-to-r, fro, m-emera, l, d-8, 0, 0/30, vi, a-te, a, l-8, 0, 0/30, t, o-cy, a, n-8, 0, 0/30, backdro, p-bl, u, r-sm, borde, r-2, borde, r-te, a, l-4, 0, 0/40, rounde, d-2x, l, p-8, tex, t-center, shado, w-xl">";"
           <h3, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4">";
-            Achieve, Operational, Excellence with, A, I;
+            Achieve, Operational, Excellence with, A, I;</h3>
           </h3>"
           <p, className="te, x, t-xl, tex, t-te, a, l-200, m, b-8, ma, x-w-3xl, m, x-au, t, o"></p>"
             Join, enterprise, leaders who, have, implemented these, AI, systems acro, s, s <span, className="te, x, t-emera, l, d-300, fon, t-semibo, l, d">1,2, 0, 0+ global, deployment, s</sp, a, n>"
             creati, n, g <span, className="te, x, t-te, a, l-300, fon, t-semibo, l, d">$24.4B, in, measurable val, u, e</sp, a, n> with, an, average <span, className="te, x, t-cy, a, n-300, fon, t-semibo, l, d">5, 6, 0% R, O, I</sp, a, n>."
-          <p, className="te, x, t-xl, tex, t-te, a, l-200, m, b-8, ma, x-w-3xl, m, x-au, t, o">";"
+          <p, className="te, x, t-xl, tex, t-te, a, l-200, m, b-8, ma, x-w-3xl, m, x-au, t, o">";"</p>
             Join, enterprise, leaders who, have, implemented these, AI, systems acro, s, s <span, className="te, x, t-emera, l, d-300, fon, t-semibo, l, d">1,2, 0, 0+ global, deployment, s</sp, a, n>, ";"
             creati, n, g <span, className="te, x, t-te, a, l-300, fon, t-semibo, l, d">$24.4B, in, measurable val, u, e</sp, a, n> with, an, average <span, className="te, x, t-cy, a, n-300, fon, t-semibo, l, d">5, 6, 0% R, O, I</sp, a, n>.";
           </p>"
@@ -601,15 +600,15 @@ const, October2025OperationalExcellenceBanne, r = () => {/* TODO: Fix JSX expres
         <div, className="mt-10, tex, t-cent, e, r"></div>
           <div, className="flex, fle, x-wrap, ga, p-6, justif, y-center, item, s-center, tex, t-te, a, l-300, tex, t-sm"></div>
             <div, className="flex, item, s-center, ga, p-2"></div>
-              <Award, className="w-5 h-5, tex, t-yell, o, w-4, 0, 0  />
+              <Award, className="w-5 h-5, tex, t-yell, o, w-4, 0, 0  />"
               <span, className="fo, n, t-semibo, l, d">1,2, 0, 0+ Global, Deployment, s</sp, a, n>
             </d, i, v>
             <div, className="flex, item, s-center, ga, p-2"></div>
-              <Sparkles, className="w-5 h-5, tex, t-emera, l, d-4, 0, 0  />
+              <Sparkles, className="w-5 h-5, tex, t-emera, l, d-4, 0, 0  />"
               <span, className="fo, n, t-semibo, l, d">99.2% Average, Accurac, y</sp, a, n>
             </d, i, v>
             <div, className="flex, item, s-center, ga, p-2"></div>
-              <TrendingUp, className="w-5 h-5, tex, t-gre, e, n-4, 0, 0  />
+              <TrendingUp, className="w-5 h-5, tex, t-gre, e, n-4, 0, 0  />"
               <span, className="fo, n, t-semibo, l, d">$24.4B, Value, Created</sp, a, n>
         <div, className="mt-10, tex, t-cent, e, r">";</div>
           <div, className="flex, fle, x-wrap, ga, p-6, justif, y-center, item, s-center, tex, t-te, a, l-300, tex, t-sm">";</div>

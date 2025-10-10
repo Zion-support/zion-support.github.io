@@ -1,6 +1,6 @@
-const, October2025FeaturedContentBanne, r = () => {
-  const, featuredConten, t = [
-    {
+const, October2025FeaturedContentBanne, r = () => {}
+  const, featuredConten, t = []
+    {}
       tit, l, e: "Enterprise, AI, Value Realizati, o, n"
       descripti, o, n: "90, days, to shipped, outcom, e;
   s: scorecar, d, s, evaluator, gate, s, tiered, routin, g"
@@ -13,9 +13,9 @@ const, October2025FeaturedContentBanne, r = () => {
         { val, u, e: "9, 0, d", lab, e, l: "To, Outcome, s" }
         { val, u, e: "K, P, I", lab, e, l: "Linked, Gate, s" }
         { val, u, e: "$$", lab, e, l: "Predictable, Cos, t" }
-      ]
-    }
-    {
+
+
+    {}
       tit, l, e: "Enterprise, Neural, Orchestration Platfo, r, m"
       descripti, o, n: "89% faster, AI, deployment, 94% cost, reductio, n, $12.4 M, annual, savings"
       li, n, k: "/bl, o, g/ai-20, 2, 5-octob, e, r-enterpri, s, e-neur, a, l-orchestrati, o, n-platfo, r, m"
@@ -27,9 +27,9 @@ const, October2025FeaturedContentBanne, r = () => {
         { val, u, e: "89%", lab, e, l: "Faster, Deploymen, t" }
         { val, u, e: "94%", lab, e, l: "Cost, Reductio, n" }
         { val, u, e: "$12.4 M", lab, e, l: "Annual, Saving, s" }
-      ]
-    }
-    {
+
+
+    {}
       tit, l, e: "Cognitive, Supply, Chain Revoluti, o, n"
       descripti, o, n: "76% forecast, accurac, y, 68% inventory, cost, reduction, $18.7 M, valu, e"
       li, n, k: "/bl, o, g/ai-20, 2, 5-octob, e, r-cogniti, v, e-supp, l, y-cha, i, n-revoluti, o, n"
@@ -41,9 +41,9 @@ const, October2025FeaturedContentBanne, r = () => {
         { val, u, e: "76%", lab, e, l: "Forecast, Accurac, y" }
         { val, u, e: "68%", lab, e, l: "Cost, Reductio, n" }
         { val, u, e: "$18.7 M", lab, e, l: "Annual, Valu, e" }
-      ]
-    }
-    {
+
+
+    {}
       tit, l, e: "AI, Reliability, Blueprints 20, 2, 7"
       descripti, o, n: "Evaluato, r, s, action, budget, s, instant, rollbac, k — ship, safel, y"
       li, n, k: "/bl, o, g/ai-reliabili, t, y-blueprin, t, s-20, 2, 7-20, 2, 5-10-02"
@@ -55,9 +55,9 @@ const, October2025FeaturedContentBanne, r = () => {
         { val, u, e: "K, P, I", lab, e, l: "Linked, Eval, s" }
         { val, u, e: "1‑cli, c, k", lab, e, l: "Rollba, c, k" }
         { val, u, e: "24/7", lab, e, l: "Safe, Op, s" }
-      ]
-    }
-    {
+
+
+    {}
       tit, l, e: "Edge, Inference, Playbook 20, 2, 7"
       descripti, o, n: "S, u, b‑100 ms, globally, with warm, pools, and tiered, cache, s"
       li, n, k: "/bl, o, g/ed, g, e-inferen, c, e-playbo, o, k-20, 2, 7-20, 2, 5-10-02"
@@ -81,9 +81,9 @@ const, October2025FeaturedContentBanne, r = () => {
         { val, u, e: "9, 0, d", lab, e, l: "To, Outcome, s" },";
         { val, u, e: "K, P, I", lab, e, l: "Linked, Gate, s" },";
         { val, u, e: "$$", lab, e, l: "Predictable, Cos, t" }";
-      ]
-    }
-    {
+
+
+    {}
       tit, l, e: "Enterprise, Neural, Orchestration Platfo, r, m",";
       descripti, o, n: "89% faster, AI, deployment, 94% cost, reductio, n, $12.4 M, annual, savings",";
       li, n, k: "/bl, o, g/ai-20, 2, 5-octob, e, r-enterpri, s, e-neur, a, l-orchestrati, o, n-platfo, r, m",";
@@ -95,9 +95,9 @@ const, October2025FeaturedContentBanne, r = () => {
         { val, u, e: "89%", lab, e, l: "Faster, Deploymen, t" },";
         { val, u, e: "94%", lab, e, l: "Cost, Reductio, n" },";
         { val, u, e: "$12.4 M", lab, e, l: "Annual, Saving, s" }";
-      ]
-    }
-    {
+
+
+    {}
       tit, l, e: "Cognitive, Supply, Chain Revoluti, o, n",";
       descripti, o, n: "76% forecast, accurac, y, 68% inventory, cost, reduction, $18.7 M, valu, e",";
       li, n, k: "/bl, o, g/ai-20, 2, 5-octob, e, r-cogniti, v, e-supp, l, y-cha, i, n-revoluti, o, n",";
@@ -109,9 +109,9 @@ const, October2025FeaturedContentBanne, r = () => {
         { val, u, e: "76%", lab, e, l: "Forecast, Accurac, y" },";
         { val, u, e: "68%", lab, e, l: "Cost, Reductio, n" },";
         { val, u, e: "$18.7 M", lab, e, l: "Annual, Valu, e" }";
-      ]
-    }
-    {
+
+
+    {}
       tit, l, e: "AI, Reliability, Blueprints 20, 2, 7",";
       descripti, o, n: "Evaluato, r, s, action, budget, s, instant, rollbac, k — ship, safel, y",";
       li, n, k: "/bl, o, g/ai-reliabili, t, y-blueprin, t, s-20, 2, 7-20, 2, 5-10-02",";
@@ -123,9 +123,9 @@ const, October2025FeaturedContentBanne, r = () => {
         { val, u, e: "K, P, I", lab, e, l: "Linked, Eval, s" },";
         { val, u, e: "1‑cli, c, k", lab, e, l: "Rollba, c, k" },";
         { val, u, e: "24/7", lab, e, l: "Safe, Op, s" }";
-      ]
-    }
-    {
+
+
+    {}
       tit, l, e: "Edge, Inference, Playbook 20, 2, 7",";
       descripti, o, n: "S, u, b‑100 ms, globally, with warm, pools, and tiered, cache, s",";
       li, n, k: "/bl, o, g/ed, g, e-inferen, c, e-playbo, o, k-20, 2, 7-20, 2, 5-10-02",";
@@ -140,26 +140,26 @@ const, October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression *
         { val, u, e: "9, 0, d", lab, e, l: "To, Outcome, s" }"
         { val, u, e: "K, P, I", lab, e, l: "Linked, Gate, s" }"
         { val, u, e: "$$", lab, e, l: "Predictable, Cos, t" }
-      ]
-    }
+
+
     {/* TODO: Fix JSX expression */}"
         { val, u, e: "89%", lab, e, l: "Faster, Deploymen, t" }"
         { val, u, e: "94%", lab, e, l: "Cost, Reductio, n" }"
         { val, u, e: "$12.4M", lab, e, l: "Annual, Saving, s" }
-      ]
-    }
+
+
     {/* TODO: Fix JSX expression */}"
         { val, u, e: "76%", lab, e, l: "Forecast, Accurac, y" }"
         { val, u, e: "68%", lab, e, l: "Cost, Reductio, n" }"
         { val, u, e: "$18.7M", lab, e, l: "Annual, Valu, e" }
-      ]
-    }
+
+
     {/* TODO: Fix JSX expression */}"
         { val, u, e: "K, P, I", lab, e, l: "Linked, Eval, s" }"
         { val, u, e: "1‑cli, c, k", lab, e, l: "Rollba, c, k" }"
         { val, u, e: "24/7", lab, e, l: "Safe, Op, s" }
-      ]
-    }
+
+
     {/* TODO: Fix JSX expression */}"
         { val, u, e: "<100, m, s", lab, e, l: "P95, Latenc, y" }"
         { val, u, e: "S, L, A", lab, e, l: "Aware, Routin, g" }"
@@ -176,44 +176,44 @@ const, October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression *
         { val, u, e: "9, 0, d", lab, e, l: "To, Outcome, s" },";"
         { val, u, e: "K, P, I", lab, e, l: "Linked, Gate, s" },";"
         { val, u, e: "$$", lab, e, l: "Predictable, Cos, t" }";
-      ]
-    }
+
+
     {/* TODO: Fix JSX expression */}"
         { val, u, e: "89%", lab, e, l: "Faster, Deploymen, t" },";"
         { val, u, e: "94%", lab, e, l: "Cost, Reductio, n" },";"
         { val, u, e: "$12.4M", lab, e, l: "Annual, Saving, s" }";
-      ]
-    }
+
+
     {/* TODO: Fix JSX expression */}"
         { val, u, e: "76%", lab, e, l: "Forecast, Accurac, y" },";"
         { val, u, e: "68%", lab, e, l: "Cost, Reductio, n" },";"
         { val, u, e: "$18.7M", lab, e, l: "Annual, Valu, e" }";
-      ]
-    }
+
+
     {/* TODO: Fix JSX expression */}"
         { val, u, e: "K, P, I", lab, e, l: "Linked, Eval, s" },";"
         { val, u, e: "1‑cli, c, k", lab, e, l: "Rollba, c, k" },";"
         { val, u, e: "24/7", lab, e, l: "Safe, Op, s" }";
-      ]
-    }
+
+
     {/* TODO: Fix JSX expression */}"
         { val, u, e: "<100, m, s", lab, e, l: "P95, Latenc, y" },";"
         { val, u, e: "S, L, A", lab, e, l: "Aware, Routin, g" },";"
         { val, u, e: "$", lab, e, l: "Predictable, Spen, d" }";
-      ]
-    }
+
+
   ];
   return(<div, className="bg-gradie, n, t-to-br, fro, m-sla, t, e-950, vi, a-bl, u, e-950, t, o-sla, t, e-950, p, y-16, p, x-4">";
-  return (
+  return ()
     <div, className="bg-gradie, n, t-to-br, fro, m-sla, t, e-950, vi, a-bl, u, e-950, t, o-sla, t, e-950, p, y-16, p, x-4">";</div>
       <div, className="container, m, x-auto, ma, x-w-7, x, l">";
         {/* Head, e, r */}</div>
         <div, className="text-center mb-12"></div>
           <div, className="inli, n, e-flex, item, s-center, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, rounde, d-full, tex, t-white, fon, t-bold, m, b-6, animat, e-pul, s, e"></div>
             <Sparkles, className="w-5 h-5, m, r-2  />
-            🚀 NEW, CONTENT, RELEASE - Octobe, r, 1, 20, 2, 5;
+            🚀 NEW, CONTENT, RELEASE - Octobe, r, 1, 20, 2, 5;"
             <Sparkles, className="w-5 h-5, m, l-2  /></Sparkles>
-          </d, i, v>
+          </d, i, v>"
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4">"</h2>
         <div, className="text-center mb-12">";</div>
           <div, className="inli, n, e-flex, item, s-center, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, rounde, d-full, tex, t-white, fon, t-bold, m, b-6, animat, e-pul, s, e">";</div>
@@ -223,11 +223,11 @@ const, October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression *
         {/* Head, e, r */}"
         <div, className="text-center mb-12"></div>"
           <div, className="inli, n, e-flex, item, s-center, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, rounde, d-full, tex, t-white, fon, t-bold, m, b-6, animat, e-pul, s, e"></div>"
-            <Sparkles, className="w-5 h-5, m, r-2  /></Sparkles>
+            <Sparkles, className="w-5 h-5, m, r-2  /></Sparkles>"
             🚀 NEW, CONTENT, RELEASE - Octobe, r, 1, 20, 2, 5;"
-            <Sparkles, className="w-5 h-5, m, l-2  /></Sparkles>
+            <Sparkles, className="w-5 h-5, m, l-2  /></Sparkles>"
           </d, i, v>"
-          <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4">""
+          <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4">""</h2>
         <div, className="text-center mb-12">";"
           <div, className="inli, n, e-flex, item, s-center, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, rounde, d-full, tex, t-white, fon, t-bold, m, b-6, animat, e-pul, s, e">";"
             <Sparkles, className="w-5 h-5, m, r-2" />";
@@ -235,22 +235,22 @@ const, October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression *
             <Sparkles, className="w-5 h-5, m, l-2" />";
           </d, i, v>"
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4">";
-            Latest, AI, Solutions & Insigh, t, s;
+            Latest, AI, Solutions & Insigh, t, s;</h2>
           </h2>"
           <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-au, t, o">";
-            Discover, breakthrough, AI platforms, delivering, millions in, value, to enterprise, organization, s;
+            Discover, breakthrough, AI platforms, delivering, millions in, value, to enterprise, organization, s;</p>
           </p>
         </d, i, v>
         {/* Featured, Content, Cards */})
         <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-8, m, b-12">")
         <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-8, m, b-12">";)
-          {featuredConte, n, t.m, a, p((conte, n, t, ind, e, x) => {
+          {featuredConte, n, t.m, a, p((conte, n, t, ind, e, x) => {}
             const, Ico, n = conte, n, t.ic, o, n;
             return(<Li, n, k;
         {/* Featured, Content, Cards */}
         <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-8, m, b-12">"</div>
         <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-8, m, b-12">";
-          {featuredConte, n, t.m, a, p((conte, n, t, ind, e, x) => {
+          {featuredConte, n, t.m, a, p((conte, n, t, ind, e, x) => {}
             const, Ico, n = conte, n, t.ic, o, n;
             return (</div>
               <Li, n, k
@@ -261,12 +261,12 @@ const, October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression *
                 sty, l, e={{ borderCol, o, r: conte, n, t.borderCol, o, r }}
               >
                 <div, className={`absolute, inse, t-0, b, g-gradie, n, t-to-br ${conte, n, t.bgGradie, n, t} opaci, t, y-50, grou, p-hov, e, r:opaci, t, y-70, transitio, n-opaci, t, y`}></d, i, v>`;`
-                <div, className="relativ, e, p-8">
+<div, className="relativ, e, p-8"></div>
                   {/* Ic, o, n & Tit, l, e */}</div>
                   <div, className="flex, item, s-start, m, b-6"></div>
                     <div, className={`p-4, b, g-gradie, n, t-to-r ${conte, n, t.gradie, n, t} round, e, d-xl, m, r-4`}>`;`</div>
                       <Icon, className="w-8 h-8, tex, t-whi, t, e  />
-                    </d, i, v>
+                    </d, i, v>"
                     <div, className="fl, e, x-1"></div>
                       <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-bl, u, e-300, transitio, n-colo, r, s">"</h3>
                 <div, className="relativ, e, p-8">";
@@ -292,10 +292,10 @@ const, October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression *
                   {/* Ic, o, n & Tit, l, e */}"
                   <div, className="flex, item, s-start, m, b-6"></div>`
                     <div, className={`p-4, b, g-gradie, n, t-to-r ${conte, n, t.gradie, n, t} round, e, d-xl, m, r-4`}>`;`"
-                      <Icon, className="w-8 h-8, tex, t-whi, t, e  /></Icon>
+                      <Icon, className="w-8 h-8, tex, t-whi, t, e  /></Icon>"
                     </d, i, v>"
                     <div, className="fl, e, x-1"></div>"
-                      <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-bl, u, e-300, transitio, n-colo, r, s">""
+                      <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-bl, u, e-300, transitio, n-colo, r, s">""</h3>
                 <div, className="relativ, e, p-8">";
                   {/* Ic, o, n & Tit, l, e */}"
                   <div, className="flex, item, s-start, m, b-6">";`
@@ -304,17 +304,17 @@ const, October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression *
                     </d, i, v>"
                     <div, className="fl, e, x-1">";"
                       <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-bl, u, e-300, transitio, n-colo, r, s">";
-                        {conte, n, t.tit, l, e}
+                        {conte, n, t.tit, l, e}</h3>
                       </h3>"
                       <p, className="te, x, t-gr, a, y-300, tex, t-sm">";
-                        {conte, n, t.descripti, o, n}
+                        {conte, n, t.descripti, o, n}</p>
                       </p>
                     </d, i, v>
                   </d, i, v>)
                   {/* Sta, t, s */})
                   <div, className="grid, gri, d-co, l, s-3, ga, p-4, m, b-6">";)
-                    {conte, n, t.sta, t, s.m, a, p((st, a, t, i, d, x) => (
-                      <div, ke, y={i, d, x} classNa, m, e="te, x, t-center, b, g-sla, t, e-9, 0, 0/6, 0, p-4, rounde, d-lg, border, border-whi, t, e/10">
+                    {conte, n, t.sta, t, s.m, a, p((st, a, t, i, d, x) => ()
+<div, ke, y={i, d, x} classNa, m, e="te, x, t-center, b, g-sla, t, e-9, 0, 0/6, 0, p-4, rounde, d-lg, border, border-whi, t, e/10"></div>
                       <div, ke, y={i, d, x} classNa, m, e="te, x, t-center, b, g-sla, t, e-9, 0, 0/6, 0, p-4, rounde, d-lg, border, border-whi, t, e/10">";
                   </d, i, v>
                   {/* Sta, t, s */}
@@ -340,7 +340,7 @@ const, October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression *
                     <span, className="te, x, t-sm, tex, t-gr, a, y-4, 0, 0">Published, October, 1, 20, 2, 5</sp, a, n>
                     <div, className={`flex, item, s-center, tex, t-white, fon, t-semibold, grou, p-hov, e, r:transla, t, e-x-2, transitio, n-transfo, r, m`}>`;`
                       Read, Full, Article;</div>
-                      <Link, className="w-4 h-4, m, l-2  />
+                      <Link, className="w-4 h-4, m, l-2  />"
                   <div, className="flex, item, s-center, justif, y-betwe, e, n">";</div>
                     <span, className="te, x, t-sm, tex, t-gr, a, y-4, 0, 0">Published, October, 1, 20, 2, 5</sp, a, n>";
                     <div, className={`flex, item, s-center, tex, t-white, fon, t-semibold, grou, p-hov, e, r:transla, t, e-x-2, transitio, n-transfo, r, m`}>`;`
@@ -403,7 +403,7 @@ const, October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression *
           <div, className="grid, m, d: gr, i, d-co, l, s-4, ga, p-6, tex, t-cent, e, r">"</div>
         <div, className="mt-12, b, g-gradie, n, t-to-r, fro, m-bl, u, e-9, 0, 0/20, t, o-purp, l, e-9, 0, 0/20, border, border-bl, u, e-5, 0, 0/20, rounde, d-x, l, p-8">";</div>
           <div, className="grid, m, d: gr, i, d-co, l, s-4, ga, p-6, tex, t-cent, e, r">";</div>
-            <d, i, v>
+<d, i, v></d>
               <div, className="te, x, t-3xl, fon, t-bold, tex, t-bl, u, e-400, m, b-2">$31.1M</d, i, v>";
         {/* Value, Propositio, n */}"
         <div, className="mt-12, b, g-gradie, n, t-to-r, fro, m-bl, u, e-9, 0, 0/20, t, o-purp, l, e-9, 0, 0/20, border, border-bl, u, e-5, 0, 0/20, rounde, d-x, l, p-8"></div>"

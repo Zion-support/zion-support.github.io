@@ -13,7 +13,7 @@ export const seoUtils = {/* content */}
     "url": "https: //zion.app",
     "logo": "https: //zion.app/logo.png",
     "description": "Advanced AI and IT Solutions",
-    "sameAs": [
+    "sameAs": []
       "https: //linkedin.com/company/zion-tech"]}),
   // Generate breadcrumb structured data;
   generateBreadcrumbSchema: (items: Array<{name: string, url: string}>) => ({/* content */}
@@ -36,7 +36,7 @@ export const seoUtils = {/* content */}
       "acceptedAnswer": {/* content */}
         "@type": "Answer")
         "text": faq.answer;
-      }
+
     }))
   }),
   // Generate article structured data;
@@ -152,7 +152,7 @@ export const sitemapUtils = {/* content */}
   generateRobotsTxt: (sitemapUrl: string = 'https://zion.app/sitemap.xml') => {/* content */}
     return `User-agent: *,
 Allow: /,
-,
+
 Sitemap: ${sitemapUrl}`;
   // Generate sitemap entries,
   generateSitemapEntry: (ur)
@@ -177,7 +177,7 @@ Allo,
   w: /
 Sitema,`
   p: ${sitemapUrl}`;
-  }
+
 };
 // URL optimization utilities;
 export const urlUtils = {/* content */}
@@ -211,7 +211,7 @@ export const urlUtils = {/* content */}
   l: string = 'http)
   s://zion.app') => {/* content */}`
     return `${baseUrl}${path}`;
-  }
+
 };
 // Content optimization utilities;
 export const contentOptimization = {/* content */}
@@ -251,14 +251,14 @@ export const contentOptimization = {/* content */}
   e: string = 'Zion Tech Group', separato)
   r: string = ' | '): string => {/* content */}`
     return pageTitle ? `${pageTitle}${separator}${siteName}` : siteName;
-  }
+
 };
 // Performance SEO utilities;
 export const performanceSEO = {/* content */}
   // Preload critical resources;
   // Preload critical resources,
   preloadCriticalResources: () => {/* content */}
-    const criticalResources = [
+    const criticalResources = []
       {/* TODO: Fix JSX expression */}
   e: 'font/woff2' },
       {/* TODO: Fix JSX expression */}
@@ -302,7 +302,7 @@ export const performanceSEO = {/* content */}
       loadin,
   g: 'lazy' as const;
     };
-  }
+
 };
 // Analytics and tracking utilities;
 export const analyticsUtils = {/* content */}
@@ -324,7 +324,7 @@ export const analyticsUtils = {/* content */}
         page_locatio,
   n: url;)
       });
-    }
+
   },
   // Track custom events;
   trackEvent: (eventName: string, parameters?: Record<string, unknown>) => {/* content */}
@@ -334,7 +334,7 @@ export const analyticsUtils = {/* content */}
     if (typeof window !== 'undefined' && (window as Window & { gtag?: Function }).gtag) {/* content */}
       (window as Window & {/* TODO: Fix JSX expression */})
   g: Function }).gtag('event', eventName, parameters);
-    }
+
   },
   // Track conversion events;
   trackConversion: (conversionId: string, value?: number) => {/* content */}
@@ -353,8 +353,8 @@ export const analyticsUtils = {/* content */}
         valu,
   e: value;)
       });
-    }
-  }
+
+
 };
 // Core Web Vitals tracking;
 export const coreWebVitals = {/* content */}
@@ -392,7 +392,7 @@ export const coreWebVitals = {/* content */}
       onLCP(trackMetric);
       onTTFB(trackMetric);
     });
-  }
+
 };
 // SEO component for React;
 export const SEOComponent = ({/* content */}
@@ -421,7 +421,7 @@ export const SEOComponent = ({/* content */}
 //   const fullTitle = title ? `${title} | ${siteName}` : siteName;`
 //   const fullUrl = url ? `${siteUrl}${url}` : siteUrl;`
 //   const fullImage = image ? `${siteUrl}${image}` : defaultImage;
-  return(<div> </div><Helmet>
+<Helmet></Helmet>
       <title>{fullTitle}</title>
       <meta name="description" content={description} /></meta>
       <meta name="keywords" content={keywords} /></meta>
@@ -488,6 +488,6 @@ export const initializeSEO = () => {/* content */}
       meta.name = 'viewport';
       meta.content = 'width=device-width, initial-scale=1.0';
       document.head.appendChild(meta);
-    }
-  }
+
+
 };"`

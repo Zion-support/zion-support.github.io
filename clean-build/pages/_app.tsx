@@ -1,7 +1,7 @@
 import '../styles/globals.css';
-export default function App({ Component, pageProps }: AppProps) {
-  return(<React.Fragment>
-      <Head>
+export default function App({ Component, pageProps }: AppProps) {}
+<React.Fragment></React>
+<Head></Head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#1e40af" />
@@ -15,4 +15,3 @@ export default function App({ Component, pageProps }: AppProps) {/* TODO: Fix JS
       <Component {...pageProps} /></Component>
     </React.Fragment>
   );
-}

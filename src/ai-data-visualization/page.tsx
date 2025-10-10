@@ -4,7 +4,7 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression */}
-}
+
   return (<div><Helmet></Helmet>
         <title>AI Data Visualization Solutions - Zion Tech Group</title>
         <meta name="description" content="Intelligent AI-powered data visualization with automated insights, interactive dashboards, and predictive analytics. Starting at $149/month." /></meta>"
@@ -32,7 +32,7 @@ export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
           {/* Features Grid */}"
           <section className="mb-16"></section>"
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">AI-Powered Features</h2>"
-            <div className="grid grid-cols-1,
+            <div className="grid grid-cols-1,"
   md:grid-cols-2,"
   lg:grid-cols-3 gap-8"></div>"
               <div className="cyber-card p-6 energy-pulse"></div>"
@@ -134,7 +134,7 @@ export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
           {/* Use Cases Section */}"
           <section className="mb-16"></section>"
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Perfect For</h2>"
-            <div className="grid grid-cols-1,
+            <div className="grid grid-cols-1,"
   md:grid-cols-2,"
   lg:grid-cols-4 gap-8"></div>"
               <div className="cyber-card p-6 text-center"></div>"
@@ -175,7 +175,7 @@ export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
                 📞 Cal)
   l: (302) 464-0950;
               </a>"
-              <a href="/contact" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold,
+              <a href="/contact" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold,"
   hover:bg-white,"
   hover:text-indigo-600 transition-all duration-300"></a>
                 Get Free Demo;

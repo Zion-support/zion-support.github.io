@@ -1,11 +1,11 @@
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
-export default function EdgeRateLimiterBlueprint20, 2, 6(): Rea, c, t.J, S, X.Eleme, n, t {
-  return(<div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e'>
-export default function EdgeRateLimiterBlueprint20, 2, 6(): Rea, c, t.J, S, X.Eleme, n, t { 
-  return (
+export default function EdgeRateLimiterBlueprint20, 2, 6(): Rea, c, t.J, S, X.Eleme, n, t {}
+<div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e'></div>
+export default function EdgeRateLimiterBlueprint20, 2, 6(): Rea, c, t.J, S, X.Eleme, n, t {}
+  return ()
     <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e'></div>
-      <Helm, e, t>
-        <title>
+<Helm, e, t></Helm>
+<title></title>
           Edge, Rate, Limiter 20, 2, 6: Globally, Consist, e, n, t, S, u, b‑10ms, Budget, s;
         </title>
         <meta, nam, e = 'description'
@@ -16,14 +16,11 @@ export default function EdgeRateLimiterBlueprint20, 2, 6(): Rea, c, t.J, S, X.El
         />),
       </Helm, e, t>
       <div, className='container, m, x-auto, p, x-6, p, y-16'></div>
-        <h1, className='te, x, t-4xl, m, d:te, x, t-5xl, fon, t-bold, m, b-4'>
-          Edge, Rate, Limiter 20, 2, 6;
+        <h1, className='te, x, t-4xl, m, d:te, x, t-5xl, fon, t-bold, m, b-4'>Edge, Rate, Limiter 20, 2, 6;</h1>
         </h1>
-        <p, className='te, x, t-zi, o, n-sla, t, e-light, m, b-8'>
-          Globally, Consist, e, n, t, S, u, b‑10ms, Budget, s;
+        <p, className='te, x, t-zi, o, n-sla, t, e-light, m, b-8'>Globally, Consist, e, n, t, S, u, b‑10ms, Budget, s;</p>
         </p>
-        <div, classNam, e = 'prose, pros, e-invert, ma, x-w-3, x, l'>
-}
+<div, classNam, e = 'prose, pros, e-invert, ma, x-w-3, x, l'></div>
+
 }</div>
 export default function EdgeRateLimiterBlueprint20, 2, 6(): Rea, c, t.J, S, X.Eleme, n, t {/* TODO: Fix JSX expression */}
-}

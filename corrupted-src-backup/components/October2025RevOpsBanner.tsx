@@ -1,23 +1,23 @@
-const, October2025RevOpsBanne, r = () => {
-  return(<div, className="relative, b, g-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-te, a, l-900, t, o-cy, a, n-900, borde, r-y, borde, r-emera, l, d-5, 0, 0/30, overflo, w-hidd, e, n">
+const, October2025RevOpsBanne, r = () => {}
+<div, className="relative, b, g-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-te, a, l-900, t, o-cy, a, n-900, borde, r-y, borde, r-emera, l, d-5, 0, 0/30, overflo, w-hidd, e, n"></div>
       {/* Animated, background, elements */};
-      <div, className="absolute, inse, t-0, opacit, y-10">
+<div, className="absolute, inse, t-0, opacit, y-10"></div>
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-emera, l, d-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e  />
-  return (
-    <div, className="relative, b, g-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-te, a, l-900, t, o-cy, a, n-900, borde, r-y, borde, r-emera, l, d-5, 0, 0/30, overflo, w-hidd, e, n">
+  return ("
+<div, className="relative, b, g-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-te, a, l-900, t, o-cy, a, n-900, borde, r-y, borde, r-emera, l, d-5, 0, 0/30, overflo, w-hidd, e, n"></div>
       {/* Animated, background, elements */};</div>
       <div, className="absolute, inse, t-0, opacit, y-10"></div>
-        <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-emera, l, d-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e  /></div>
+        <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-emera, l, d-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e  /></div>"
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-te, a, l-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }} />;
       </d, i, v>
-      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
+      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;"
   g:px-8, p, y-8">"
         {/* Breaking, News, Badge */}</div>
         <div, className="flex, justif, y-center, m, b-4"></div>
           <div, className="inli, n, e-flex, item, s-center, p, x-4, p, y-2, b, g-gradie, n, t-to-r, fro, m-emera, l, d-500, t, o-te, a, l-500, rounde, d-full, tex, t-white, fon, t-bold, tex, t-sm, shado, w-lg, animat, e-boun, c, e"></div>
             <Sparkles, className="w-4 h-4, m, r-2  />
-            JUST, PUBLISHE, D - OCTOBE, R, 1, 20, 2, 5;
-            <Sparkles, className="w-4 h-4, m, l-2  />
+            JUST, PUBLISHE, D - OCTOBE, R, 1, 20, 2, 5;"
+            <Sparkles, className="w-4 h-4, m, l-2  />"
     <div, className="relative, b, g-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-te, a, l-900, t, o-cy, a, n-900, borde, r-y, borde, r-emera, l, d-5, 0, 0/30, overflo, w-hidd, e, n">";
       {/* Animated, background, elements */};
       <div, className="absolute, inse, t-0, opacit, y-10">";
@@ -25,12 +25,12 @@ const, October2025RevOpsBanne, r = () => {
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-te, a, l-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }} />';)
       </d, i, v>)
       <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;),
-      {/* Animated, background, elements */};</div>
+      {/* Animated, background, elements */};</div>"
       <div, className="absolute, inse, t-0, opacit, y-10">";</div>
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-emera, l, d-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" />";</div>
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-te, a, l-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }} />';
       </d, i, v>
-      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l"
   g:px-8, p, y-8">";
         {/* Breaking, News, Badge */}</div>
         <div, className="flex, justif, y-center, m, b-4">";</div>
@@ -46,7 +46,7 @@ const, October2025RevOpsBanne, r = () => {/* TODO: Fix JSX expression */}
         {/* Breaking, News, Badge */}"
         <div, className="flex, justif, y-center, m, b-4"></div>"
           <div, className="inli, n, e-flex, item, s-center, p, x-4, p, y-2, b, g-gradie, n, t-to-r, fro, m-emera, l, d-500, t, o-te, a, l-500, rounde, d-full, tex, t-white, fon, t-bold, tex, t-sm, shado, w-lg, animat, e-boun, c, e"></div>"
-            <Sparkles, className="w-4 h-4, m, r-2  /></Sparkles>
+            <Sparkles, className="w-4 h-4, m, r-2  /></Sparkles>"
             JUST, PUBLISHE, D - OCTOBE, R, 1, 20, 2, 5;"
             <Sparkles, className="w-4 h-4, m, l-2  /></Sparkles>"
     <div, className="relative, b, g-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-te, a, l-900, t, o-cy, a, n-900, borde, r-y, borde, r-emera, l, d-5, 0, 0/30, overflo, w-hidd, e, n">";
@@ -70,24 +70,24 @@ const, October2025RevOpsBanne, r = () => {/* TODO: Fix JSX expression */}
         {/* Main, Headlin, e */}"
         <div, className="te, x, t-center, m, b-6"></div>"
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-black, tex, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-emera, l, d-300, vi, a-te, a, l-300, t, o-cy, a, n-300, m, b-3">"
-            🚀 Autonomous, Revenue, Operations Revoluti, o, n;
+            🚀 Autonomous, Revenue, Operations Revoluti, o, n;</h2>
           </h2>"
           <p, className="te, x, t-2xl, m, d: te, x, t-3xl, fon, t-bold, tex, t-emera, l, d-100, m, b-4">"
-            Transform, Your, Revenue Engine, with, AI-Powered, Intelligenc, e;
+            Transform, Your, Revenue Engine, with, AI-Powered, Intelligenc, e;</p>
           </p>
-          <p, className="te, x, t-lg, tex, t-emera, l, d-200, ma, x-w-4xl, m, x-au, t, o">
+<p, className="te, x, t-lg, tex, t-emera, l, d-200, ma, x-w-4xl, m, x-au, t, o"></p>
             Discover, how, leading enterprises, are, achieving</p> <span, className="fo, n, t-bold, tex, t-whi, t, e">1, 2, 7% R, O, I</sp, a, n>
             <span, className="fo, n, t-bold, tex, t-whi, t, e"> 89% forecast, accurac, y</sp, a, n>, a, n, d;
             <span, className="fo, n, t-bold, tex, t-whi, t, e"> 3.2x, pipeline, velocity</sp, a, n> through, autonomous, revenue operatio, n, s;
         <div, className="te, x, t-center, m, b-6">";</div>
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-black, tex, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-emera, l, d-300, vi, a-te, a, l-300, t, o-cy, a, n-300, m, b-3">";
-            🚀 Autonomous, Revenue, Operations Revoluti, o, n;
+            🚀 Autonomous, Revenue, Operations Revoluti, o, n;</h2>
           </h2>
-          <p, className="te, x, t-2x, l, m;
+          <p, className="te, x, t-2x, l, m;"
   d: te, x, t-3xl, fon, t-bold, tex, t-emera, l, d-100, m, b-4">";
-            Transform, Your, Revenue Engine, with, AI-Powered, Intelligenc, e;
+            Transform, Your, Revenue Engine, with, AI-Powered, Intelligenc, e;</p>
           </p>
-          <p, className="te, x, t-lg, tex, t-emera, l, d-200, ma, x-w-4xl, m, x-au, t, o">";
+          <p, className="te, x, t-lg, tex, t-emera, l, d-200, ma, x-w-4xl, m, x-au, t, o">";</p>
             Discover, how, leading enterprises, are, achieving</p> <span, className="fo, n, t-bold, tex, t-whi, t, e">1, 2, 7% R, O, I</sp, a, n>, ";
             <span, className="fo, n, t-bold, tex, t-whi, t, e"> 89% forecast, accurac, y</sp, a, n>, a, n, d ";
             <span, className="fo, n, t-bold, tex, t-whi, t, e"> 3.2x, pipeline, velocity</sp, a, n> through, autonomous, revenue operatio, n, s";
@@ -95,36 +95,36 @@ const, October2025RevOpsBanne, r = () => {/* TODO: Fix JSX expression */}
         </d, i, v>
         {/* Key, Metrics, Grid */}
         <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-4, m, b-8">"
-          <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-4, tex, t-center, border, border-emera, l, d-4, 0, 0/30, hove, r: bord, e, r-emera, l, d-4, 0, 0/60, transitio, n-all, hov, e;
+          <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-4, tex, t-center, border, border-emera, l, d-4, 0, 0/30, hove, r: bord, e, r-emera, l, d-4, 0, 0/60, transitio, n-all, hov, e;"
   r:sca, l, e-1, 0, 5">"
         <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-4, m, b-8">"</div>
-          <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-4, tex, t-center, border, border-emera, l, d-4, 0, 0/30, hove, r: bord, e, r-emera, l, d-4, 0, 0/60, transitio, n-all, hov, e
+          <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-4, tex, t-center, border, border-emera, l, d-4, 0, 0/30, hove, r: bord, e, r-emera, l, d-4, 0, 0/60, transitio, n-all, hov, e"
   r:sca, l, e-1, 0, 5">"</div>
-            <DollarSign, className="w-8 h-8, tex, t-emera, l, d-300, m, x-auto, m, b-2  />
+            <DollarSign, className="w-8 h-8, tex, t-emera, l, d-300, m, x-auto, m, b-2  />"
             <div, className="te, x, t-3xl, fon, t-black, tex, t-white, m, b-1">1, 2, 7%</d, i, v>
             <div, className="te, x, t-sm, tex, t-emera, l, d-2, 0, 0">Average, RO, I</d, i, v>
           </d, i, v>
-          <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-4, tex, t-center, border, border-te, a, l-4, 0, 0/30, hove, r: bord, e, r-te, a, l-4, 0, 0/60, transitio, n-all, hov, e;
+          <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-4, tex, t-center, border, border-te, a, l-4, 0, 0/30, hove, r: bord, e, r-te, a, l-4, 0, 0/60, transitio, n-all, hov, e;"
   r:sca, l, e-1, 0, 5">"
-          <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-4, tex, t-center, border, border-te, a, l-4, 0, 0/30, hove, r: bord, e, r-te, a, l-4, 0, 0/60, transitio, n-all, hov, e
+          <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-4, tex, t-center, border, border-te, a, l-4, 0, 0/30, hove, r: bord, e, r-te, a, l-4, 0, 0/60, transitio, n-all, hov, e"
   r:sca, l, e-1, 0, 5">"</div>
-            <Target, className="w-8 h-8, tex, t-te, a, l-300, m, x-auto, m, b-2  />
+            <Target, className="w-8 h-8, tex, t-te, a, l-300, m, x-auto, m, b-2  />"
             <div, className="te, x, t-3xl, fon, t-black, tex, t-white, m, b-1">89%</d, i, v>
             <div, className="te, x, t-sm, tex, t-te, a, l-2, 0, 0">Forecast, Accurac, y</d, i, v>
           </d, i, v>
-          <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-4, tex, t-center, border, border-cy, a, n-4, 0, 0/30, hove, r: bord, e, r-cy, a, n-4, 0, 0/60, transitio, n-all, hov, e;
+          <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-4, tex, t-center, border, border-cy, a, n-4, 0, 0/30, hove, r: bord, e, r-cy, a, n-4, 0, 0/60, transitio, n-all, hov, e;"
   r:sca, l, e-1, 0, 5">"
-          <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-4, tex, t-center, border, border-cy, a, n-4, 0, 0/30, hove, r: bord, e, r-cy, a, n-4, 0, 0/60, transitio, n-all, hov, e
+          <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-4, tex, t-center, border, border-cy, a, n-4, 0, 0/30, hove, r: bord, e, r-cy, a, n-4, 0, 0/60, transitio, n-all, hov, e"
   r:sca, l, e-1, 0, 5">"</div>
-            <TrendingUp, className="w-8 h-8, tex, t-cy, a, n-300, m, x-auto, m, b-2  />
+            <TrendingUp, className="w-8 h-8, tex, t-cy, a, n-300, m, x-auto, m, b-2  />"
             <div, className="te, x, t-3xl, fon, t-black, tex, t-white, m, b-1">3.2x</d, i, v>
             <div, className="te, x, t-sm, tex, t-cy, a, n-2, 0, 0">Pipeline, Velocit, y</d, i, v>
           </d, i, v>
-          <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-4, tex, t-center, border, border-emera, l, d-4, 0, 0/30, hove, r: bord, e, r-emera, l, d-4, 0, 0/60, transitio, n-all, hov, e;
+          <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-4, tex, t-center, border, border-emera, l, d-4, 0, 0/30, hove, r: bord, e, r-emera, l, d-4, 0, 0/60, transitio, n-all, hov, e;"
   r:sca, l, e-1, 0, 5">"
-          <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-4, tex, t-center, border, border-emera, l, d-4, 0, 0/30, hove, r: bord, e, r-emera, l, d-4, 0, 0/60, transitio, n-all, hov, e
+          <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-4, tex, t-center, border, border-emera, l, d-4, 0, 0/30, hove, r: bord, e, r-emera, l, d-4, 0, 0/60, transitio, n-all, hov, e"
   r:sca, l, e-1, 0, 5">"</div>
-            <DollarSign, className="w-8 h-8, tex, t-emera, l, d-300, m, x-auto, m, b-2  />
+            <DollarSign, className="w-8 h-8, tex, t-emera, l, d-300, m, x-auto, m, b-2  />"
             <div, className="te, x, t-3xl, fon, t-black, tex, t-white, m, b-1">$12, 7, M</d, i, v>
             <div, className="te, x, t-sm, tex, t-emera, l, d-2, 0, 0">Revenue, Impac, t</d, i, v>
         <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-4, m, b-8">";</div>
@@ -143,9 +143,9 @@ const, October2025RevOpsBanne, r = () => {/* TODO: Fix JSX expression */}
             <div, className="te, x, t-3xl, fon, t-black, tex, t-white, m, b-1">3.2x</d, i, v>";
             <div, className="te, x, t-sm, tex, t-cy, a, n-2, 0, 0">Pipeline, Velocit, y</d, i, v>";
           </d, i, v>
-          <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-4, tex, t-center, border, border-emera, l, d-4, 0, 0/30, hove, r: bord, e, r-emera, l, d-4, 0, 0/60, transitio, n-all, hov, e;
+          <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-4, tex, t-center, border, border-emera, l, d-4, 0, 0/30, hove, r: bord, e, r-emera, l, d-4, 0, 0/60, transitio, n-all, hov, e;"
   r:sca, l, e-1, 0, 5">";
-          <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-4, tex, t-center, border, border-emera, l, d-4, 0, 0/30, hove, r: bord, e, r-emera, l, d-4, 0, 0/60, transitio, n-all, hov, e
+          <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-4, tex, t-center, border, border-emera, l, d-4, 0, 0/30, hove, r: bord, e, r-emera, l, d-4, 0, 0/60, transitio, n-all, hov, e"
   r:sca, l, e-1, 0, 5">";</div>
             <DollarSign, className="w-8 h-8, tex, t-emera, l, d-300, m, x-auto, m, b-2" />";
             <div, className="te, x, t-3xl, fon, t-black, tex, t-white, m, b-1">$12, 7, M</d, i, v>";
@@ -160,11 +160,10 @@ const, October2025RevOpsBanne, r = () => {/* TODO: Fix JSX expression */}
               <div, className="te, x, t-emera, l, d-300, fon, t-bold, m, b-2, flex, items-cent, e, r"></div>
                 <Sparkles, className="w-4 h-4, m, r-2  />
                 NEW, COMPREHENSIVE, GUIDE;
-              </d, i, v>
-              <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2">
-                Autonomous, RevOps, Revolution: Complete, Implementation, Guide;
+              </d, i, v>"
+              <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2">Autonomous, RevOps, Revolution: Complete, Implementation, Guide;</h3>
               </h3>
-              <p, className="te, x, t-emera, l, d-100, tex, t-sm, m, b-4">
+<p, className="te, x, t-emera, l, d-100, tex, t-sm, m, b-4"></p>
                 Master, autonomous, revenue operations, with, AI-powered, forecastin, g, intelligent, pipeline, management;</p>
         <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-md, rounde, d-x, l, p-6, border, border-emera, l, d-4, 0, 0/30, m, b-6">";</div>
           <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6">";
@@ -178,13 +177,13 @@ const, October2025RevOpsBanne, r = () => {/* TODO: Fix JSX expression */}
             <span, className="fo, n, t-bold, tex, t-whi, t, e"> 3.2x, pipeline, velocity</sp, a, n> through, autonomous, revenue operatio, n, s;"
         <div, className="te, x, t-center, m, b-6">";"
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-black, tex, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-emera, l, d-300, vi, a-te, a, l-300, t, o-cy, a, n-300, m, b-3">";
-            🚀 Autonomous, Revenue, Operations Revoluti, o, n;
+            🚀 Autonomous, Revenue, Operations Revoluti, o, n;</h2>
           </h2>"
           <p, className="te, x, t-2x, l, m,"
   d: te, x, t-3xl, fon, t-bold, tex, t-emera, l, d-100, m, b-4">";
-            Transform, Your, Revenue Engine, with, AI-Powered, Intelligenc, e;
+            Transform, Your, Revenue Engine, with, AI-Powered, Intelligenc, e;</p>
           </p>"
-          <p, className="te, x, t-lg, tex, t-emera, l, d-200, ma, x-w-4xl, m, x-au, t, o">";"
+          <p, className="te, x, t-lg, tex, t-emera, l, d-200, ma, x-w-4xl, m, x-au, t, o">";"</p>
             Discover, how, leading enterprises, are, achieving <span, className="fo, n, t-bold, tex, t-whi, t, e">1, 2, 7% R, O, I</sp, a, n>, ";"
             <span, className="fo, n, t-bold, tex, t-whi, t, e"> 89% forecast, accurac, y</sp, a, n>, a, n, d ";"
             <span, className="fo, n, t-bold, tex, t-whi, t, e"> 3.2x, pipeline, velocity</sp, a, n> through, autonomous, revenue operatio, n, s";
@@ -245,7 +244,7 @@ const, October2025RevOpsBanne, r = () => {/* TODO: Fix JSX expression */}
             <div, className="bg-gradie, n, t-to-br, fro, m-emera, l, d-8, 0, 0/50, t, o-te, a, l-8, 0, 0/50, rounde, d-l, g, p-5, border, border-emera, l, d-4, 0, 0/40"></div>"
               <div, className="te, x, t-emera, l, d-300, fon, t-bold, m, b-2, flex, items-cent, e, r"></div>"
                 <Sparkles, className="w-4 h-4, m, r-2  /></Sparkles>
-                NEW, COMPREHENSIVE, GUIDE;
+                NEW, COMPREHENSIVE, GUIDE;"
               </d, i, v>"
               <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2"></h3>
                 Autonomous, RevOps, Revolutio,
@@ -262,14 +261,14 @@ const, October2025RevOpsBanne, r = () => {/* TODO: Fix JSX expression */}
                 NEW, COMPREHENSIVE, GUIDE;
               </d, i, v>"
               <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2">";
-                Autonomous, RevOps, Revolution: Complete, Implementation, Guide;
+                Autonomous, RevOps, Revolution: Complete, Implementation, Guide;</h3>
               </h3>
                 Autonomous, RevOps, Revolutio,
   n: Complete, Implementation, Guide;
               </h3>"
               <p, className="te, x, t-emera, l, d-100, tex, t-sm, m, b-4">";
                 Master, autonomous, revenue operations, with, AI-powered, forecastin, g, intelligent, pipeline, management;
-                and, automated, deal accelerati, o, n. Learn, proven, strategies delivering, 12, 7% ROI, and, 89% forecast, accurac, y.
+                and, automated, deal accelerati, o, n. Learn, proven, strategies delivering, 12, 7% ROI, and, 89% forecast, accurac, y.</p>
               </p>
               <Li, n, k;
   to="/bl, o, g/ai-20, 2, 5-o, c, t-01-autonomo, u, s-reven, u, e-operatio, n, s-revoluti, o, n"
@@ -289,11 +288,10 @@ const, October2025RevOpsBanne, r = () => {/* TODO: Fix JSX expression */}
               <div, className="te, x, t-bl, u, e-300, fon, t-bold, m, b-2, flex, items-cent, e, r"></div>
                 <Sparkles, className="w-4 h-4, m, r-2  />
                 NEW, CASE, STUDY;
-              </d, i, v>
-              <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2">
-                Fortune, 500, SaaS: $127M, Revenue, Gain in, 12, Months;
+              </d, i, v>"
+              <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2">Fortune, 500, SaaS: $127M, Revenue, Gain in, 12, Months;</h3>
               </h3>
-              <p, className="te, x, t-bl, u, e-100, tex, t-sm, m, b-4">
+<p, className="te, x, t-bl, u, e-100, tex, t-sm, m, b-4"></p>
                 Re, a, l-world, transformatio, n: Ho, w, a $2.8B, enterprise, SaaS company, achieve, d $127M, incremental, revenue;</p>
             <div, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-8, 0, 0/50, t, o-indi, g, o-8, 0, 0/50, rounde, d-l, g, p-5, border, border-bl, u, e-4, 0, 0/40">";</div>
               <div, className="te, x, t-bl, u, e-300, fon, t-bold, m, b-2, flex, items-cent, e, r">";</div>
@@ -301,7 +299,7 @@ const, October2025RevOpsBanne, r = () => {/* TODO: Fix JSX expression */}
             <div, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-8, 0, 0/50, t, o-indi, g, o-8, 0, 0/50, rounde, d-l, g, p-5, border, border-bl, u, e-4, 0, 0/40"></div>"
               <div, className="te, x, t-bl, u, e-300, fon, t-bold, m, b-2, flex, items-cent, e, r"></div>"
                 <Sparkles, className="w-4 h-4, m, r-2  /></Sparkles>
-                NEW, CASE, STUDY;
+                NEW, CASE, STUDY;"
               </d, i, v>"
               <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2"></h3>
                 Fortune, 500, Saa,
@@ -316,14 +314,14 @@ const, October2025RevOpsBanne, r = () => {/* TODO: Fix JSX expression */}
               </d, i, v>"
               <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2">";
                 Fortune, 500, Saa;
-  S: $127M, Revenue, Gain in, 12, Months;
+  S: $127M, Revenue, Gain in, 12, Months;</h3>
               </h3>
                 Fortune, 500, Saa,
   S: $127M, Revenue, Gain in, 12, Months;
               </h3>"
               <p, className="te, x, t-bl, u, e-100, tex, t-sm, m, b-4">";
                 Re, a, l-world, transformatio, n: Ho, w, a $2.8B, enterprise, SaaS company, achieve, d $127M, incremental, revenue;
-                89% forecast, accurac, y, an, d, 3.2x, pipeline, velocity through, autonomous, revenue operatio, n, s.
+                89% forecast, accurac, y, an, d, 3.2x, pipeline, velocity through, autonomous, revenue operatio, n, s.</p>
               </p>
               <Li, n, k;
   to="/ca, s, e-studi, e, s/ai-20, 2, 5-o, c, t-01-glob, a, l-sa, a, s-autonomo, u, s-revo, p, s-1, 2, 7-milli, o, n-succe, s, s"
@@ -342,17 +340,16 @@ const, October2025RevOpsBanne, r = () => {/* TODO: Fix JSX expression */}
         </d, i, v>
         {/* Key, Highlight, s */}
         <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-md, rounde, d-x, l, p-6, border, border-emera, l, d-4, 0, 0/30, m, b-6"></div>
-          <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, tex, t-cent, e, r">
-            What, Yo, u'll, Discover, in These, New, Resources;
+          <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, tex, t-cent, e, r">What, Yo, u'll, Discover, in These, New, Resources;</h3>
           </h3>
           <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-4, tex, t-emera, l, d-1, 0, 0">"</div>
             <div, className="flex, item, s-sta, r, t"></div>
               <div, className="bg-emera, l, d-500, rounde, d-ful, l, p-1, m, r-3, m, t-1"></div>
-                <svg, className="w-4 h-4, tex, t-whi, t, e" fi, l, l="currentCol, o, r" viewB, o, x="0, 0, 20 20">
+<svg, className="w-4 h-4, tex, t-whi, t, e" fi, l, l="currentCol, o, r" viewB, o, x="0, 0, 20 20"></svg>
                   <path, fillRul, e="eveno, d, d" d="M, 1, 6.70, 7, 5.293a1, 1, 0 01, 0, 1.41, 4, l-8, 8a1, 1 0, 0, 1-1.414, 0, l-4-4a1, 1, 0 0, 1, 1.4, 1, 4-1.414L8, 1, 2.586, l, 7.2, 9, 3-7.293a1, 1, 0 0, 1, 1.414, 0, z" clipRu, l, e="eveno, d, d  /></p>
         <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-md, rounde, d-x, l, p-6, border, border-emera, l, d-4, 0, 0/30, m, b-6">";</div>
           <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, tex, t-cent, e, r">";
-            What, Yo, u'll, Discover, in These, New, Resources';
+            What, Yo, u'll, Discover, in These, New, Resources';</h3>
           </h3>
           <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-4, tex, t-emera, l, d-1, 0, 0">";</div>
             <div, className="flex, item, s-sta, r, t">";</div>
@@ -370,13 +367,13 @@ const, October2025RevOpsBanne, r = () => {/* TODO: Fix JSX expression */}
                   <path, fillRul, e="eveno, d, d" d="M, 1, 6.70, 7, 5.293a1, 1, 0 01, 0, 1.41, 4, l-8, 8a1, 1 0, 0, 1-1.414, 0, l-4-4a1, 1, 0 0, 1, 1.4, 1, 4-1.414L8, 1, 2.586, l, 7.2, 9, 3-7.293a1, 1, 0 0, 1, 1.414, 0, z" clipRu, l, e="eveno, d, d  /></path>"
         <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-md, rounde, d-x, l, p-6, border, border-emera, l, d-4, 0, 0/30, m, b-6">";"
           <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, tex, t-cent, e, r">";
-            What, Yo, u'll, Discover, in These, New, Resources';
+            What, Yo, u'll, Discover, in These, New, Resources';</h3>
           </h3>"
           <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-4, tex, t-emera, l, d-1, 0, 0">";"
             <div, className="flex, item, s-sta, r, t">";"
               <div, className="bg-emera, l, d-500, rounde, d-ful, l, p-1, m, r-3, m, t-1">";"
                 <svg, className="w-4 h-4, tex, t-whi, t, e" fi, l, l="currentCol, o, r" viewB, o, x="0, 0, 20 20">";"
-                  <path, fillRul, e="eveno, d, d" d="M, 1, 6.70, 7, 5.293a1, 1, 0 01, 0, 1.41, 4, l-8, 8a1, 1 0, 0, 1-1.414, 0, l-4-4a1, 1, 0 0, 1, 1.4, 1, 4-1.414L8, 1, 2.586, l, 7.2, 9, 3-7.293a1, 1, 0 0, 1, 1.414, 0, z" clipRu, l, e="eveno, d, d" />";
+                  <path, fillRul, e="eveno, d, d" d="M, 1, 6.70, 7, 5.293a1, 1, 0 01, 0, 1.41, 4, l-8, 8a1, 1 0, 0, 1-1.414, 0, l-4-4a1, 1, 0 0, 1, 1.4, 1, 4-1.414L8, 1, 2.586, l, 7.2, 9, 3-7.293a1, 1, 0 0, 1, 1.414, 0, z" clipRu, l, e="eveno, d, d" />";</p>
                 </s, v, g>
               </d, i, v>
               <d, i, v></d>"
@@ -386,7 +383,7 @@ const, October2025RevOpsBanne, r = () => {/* TODO: Fix JSX expression */}
             </d, i, v>
             <div, className="flex, item, s-sta, r, t"></div>
               <div, className="bg-emera, l, d-500, rounde, d-ful, l, p-1, m, r-3, m, t-1"></div>
-                <svg, className="w-4 h-4, tex, t-whi, t, e" fi, l, l="currentCol, o, r" viewB, o, x="0, 0, 20 20">
+<svg, className="w-4 h-4, tex, t-whi, t, e" fi, l, l="currentCol, o, r" viewB, o, x="0, 0, 20 20"></svg>
                   <path, fillRul, e="eveno, d, d" d="M, 1, 6.70, 7, 5.293a1, 1, 0 01, 0, 1.41, 4, l-8, 8a1, 1 0, 0, 1-1.414, 0, l-4-4a1, 1, 0 0, 1, 1.4, 1, 4-1.414L8, 1, 2.586, l, 7.2, 9, 3-7.293a1, 1, 0 0, 1, 1.414, 0, z" clipRu, l, e="eveno, d, d  /></p>
             <div, className="flex, item, s-sta, r, t">";</div>
               <div, className="bg-emera, l, d-500, rounde, d-ful, l, p-1, m, r-3, m, t-1">";</div>
@@ -399,7 +396,7 @@ const, October2025RevOpsBanne, r = () => {/* TODO: Fix JSX expression */}
             <div, className="flex, item, s-sta, r, t">";"
               <div, className="bg-emera, l, d-500, rounde, d-ful, l, p-1, m, r-3, m, t-1">";"
                 <svg, className="w-4 h-4, tex, t-whi, t, e" fi, l, l="currentCol, o, r" viewB, o, x="0, 0, 20 20">";"
-                  <path, fillRul, e="eveno, d, d" d="M, 1, 6.70, 7, 5.293a1, 1, 0 01, 0, 1.41, 4, l-8, 8a1, 1 0, 0, 1-1.414, 0, l-4-4a1, 1, 0 0, 1, 1.4, 1, 4-1.414L8, 1, 2.586, l, 7.2, 9, 3-7.293a1, 1, 0 0, 1, 1.414, 0, z" clipRu, l, e="eveno, d, d" />";
+                  <path, fillRul, e="eveno, d, d" d="M, 1, 6.70, 7, 5.293a1, 1, 0 01, 0, 1.41, 4, l-8, 8a1, 1 0, 0, 1-1.414, 0, l-4-4a1, 1, 0 0, 1, 1.4, 1, 4-1.414L8, 1, 2.586, l, 7.2, 9, 3-7.293a1, 1, 0 0, 1, 1.414, 0, z" clipRu, l, e="eveno, d, d" />";</p>
                 </s, v, g>
               </d, i, v>
               <d, i, v></d>"
@@ -409,7 +406,7 @@ const, October2025RevOpsBanne, r = () => {/* TODO: Fix JSX expression */}
             </d, i, v>
             <div, className="flex, item, s-sta, r, t"></div>
               <div, className="bg-emera, l, d-500, rounde, d-ful, l, p-1, m, r-3, m, t-1"></div>
-                <svg, className="w-4 h-4, tex, t-whi, t, e" fi, l, l="currentCol, o, r" viewB, o, x="0, 0, 20 20">
+<svg, className="w-4 h-4, tex, t-whi, t, e" fi, l, l="currentCol, o, r" viewB, o, x="0, 0, 20 20"></svg>
                   <path, fillRul, e="eveno, d, d" d="M, 1, 6.70, 7, 5.293a1, 1, 0 01, 0, 1.41, 4, l-8, 8a1, 1 0, 0, 1-1.414, 0, l-4-4a1, 1, 0 0, 1, 1.4, 1, 4-1.414L8, 1, 2.586, l, 7.2, 9, 3-7.293a1, 1, 0 0, 1, 1.414, 0, z" clipRu, l, e="eveno, d, d  /></p>
             <div, className="flex, item, s-sta, r, t">";</div>
               <div, className="bg-emera, l, d-500, rounde, d-ful, l, p-1, m, r-3, m, t-1">";</div>
@@ -422,7 +419,7 @@ const, October2025RevOpsBanne, r = () => {/* TODO: Fix JSX expression */}
             <div, className="flex, item, s-sta, r, t">";"
               <div, className="bg-emera, l, d-500, rounde, d-ful, l, p-1, m, r-3, m, t-1">";"
                 <svg, className="w-4 h-4, tex, t-whi, t, e" fi, l, l="currentCol, o, r" viewB, o, x="0, 0, 20 20">";"
-                  <path, fillRul, e="eveno, d, d" d="M, 1, 6.70, 7, 5.293a1, 1, 0 01, 0, 1.41, 4, l-8, 8a1, 1 0, 0, 1-1.414, 0, l-4-4a1, 1, 0 0, 1, 1.4, 1, 4-1.414L8, 1, 2.586, l, 7.2, 9, 3-7.293a1, 1, 0 0, 1, 1.414, 0, z" clipRu, l, e="eveno, d, d" />";
+                  <path, fillRul, e="eveno, d, d" d="M, 1, 6.70, 7, 5.293a1, 1, 0 01, 0, 1.41, 4, l-8, 8a1, 1 0, 0, 1-1.414, 0, l-4-4a1, 1, 0 0, 1, 1.4, 1, 4-1.414L8, 1, 2.586, l, 7.2, 9, 3-7.293a1, 1, 0 0, 1, 1.414, 0, z" clipRu, l, e="eveno, d, d" />";</p>
                 </s, v, g>
               </d, i, v>
               <d, i, v></d>"
@@ -432,7 +429,7 @@ const, October2025RevOpsBanne, r = () => {/* TODO: Fix JSX expression */}
             </d, i, v>
             <div, className="flex, item, s-sta, r, t"></div>
               <div, className="bg-emera, l, d-500, rounde, d-ful, l, p-1, m, r-3, m, t-1"></div>
-                <svg, className="w-4 h-4, tex, t-whi, t, e" fi, l, l="currentCol, o, r" viewB, o, x="0, 0, 20 20">
+<svg, className="w-4 h-4, tex, t-whi, t, e" fi, l, l="currentCol, o, r" viewB, o, x="0, 0, 20 20"></svg>
                   <path, fillRul, e="eveno, d, d" d="M, 1, 6.70, 7, 5.293a1, 1, 0 01, 0, 1.41, 4, l-8, 8a1, 1 0, 0, 1-1.414, 0, l-4-4a1, 1, 0 0, 1, 1.4, 1, 4-1.414L8, 1, 2.586, l, 7.2, 9, 3-7.293a1, 1, 0 0, 1, 1.414, 0, z" clipRu, l, e="eveno, d, d  /></p>
             <div, className="flex, item, s-sta, r, t">";</div>
               <div, className="bg-emera, l, d-500, rounde, d-ful, l, p-1, m, r-3, m, t-1">";</div>
@@ -445,7 +442,7 @@ const, October2025RevOpsBanne, r = () => {/* TODO: Fix JSX expression */}
             <div, className="flex, item, s-sta, r, t">";"
               <div, className="bg-emera, l, d-500, rounde, d-ful, l, p-1, m, r-3, m, t-1">";"
                 <svg, className="w-4 h-4, tex, t-whi, t, e" fi, l, l="currentCol, o, r" viewB, o, x="0, 0, 20 20">";"
-                  <path, fillRul, e="eveno, d, d" d="M, 1, 6.70, 7, 5.293a1, 1, 0 01, 0, 1.41, 4, l-8, 8a1, 1 0, 0, 1-1.414, 0, l-4-4a1, 1, 0 0, 1, 1.4, 1, 4-1.414L8, 1, 2.586, l, 7.2, 9, 3-7.293a1, 1, 0 0, 1, 1.414, 0, z" clipRu, l, e="eveno, d, d" />";
+                  <path, fillRul, e="eveno, d, d" d="M, 1, 6.70, 7, 5.293a1, 1, 0 01, 0, 1.41, 4, l-8, 8a1, 1 0, 0, 1-1.414, 0, l-4-4a1, 1, 0 0, 1, 1.4, 1, 4-1.414L8, 1, 2.586, l, 7.2, 9, 3-7.293a1, 1, 0 0, 1, 1.414, 0, z" clipRu, l, e="eveno, d, d" />";</p>
                 </s, v, g>
               </d, i, v>
               <d, i, v></d>"
@@ -455,7 +452,7 @@ const, October2025RevOpsBanne, r = () => {/* TODO: Fix JSX expression */}
             </d, i, v>
             <div, className="flex, item, s-sta, r, t"></div>
               <div, className="bg-emera, l, d-500, rounde, d-ful, l, p-1, m, r-3, m, t-1"></div>
-                <svg, className="w-4 h-4, tex, t-whi, t, e" fi, l, l="currentCol, o, r" viewB, o, x="0, 0, 20 20">
+<svg, className="w-4 h-4, tex, t-whi, t, e" fi, l, l="currentCol, o, r" viewB, o, x="0, 0, 20 20"></svg>
                   <path, fillRul, e="eveno, d, d" d="M, 1, 6.70, 7, 5.293a1, 1, 0 01, 0, 1.41, 4, l-8, 8a1, 1 0, 0, 1-1.414, 0, l-4-4a1, 1, 0 0, 1, 1.4, 1, 4-1.414L8, 1, 2.586, l, 7.2, 9, 3-7.293a1, 1, 0 0, 1, 1.414, 0, z" clipRu, l, e="eveno, d, d  /></p>
             <div, className="flex, item, s-sta, r, t">";</div>
               <div, className="bg-emera, l, d-500, rounde, d-ful, l, p-1, m, r-3, m, t-1">";</div>
@@ -468,7 +465,7 @@ const, October2025RevOpsBanne, r = () => {/* TODO: Fix JSX expression */}
             <div, className="flex, item, s-sta, r, t">";"
               <div, className="bg-emera, l, d-500, rounde, d-ful, l, p-1, m, r-3, m, t-1">";"
                 <svg, className="w-4 h-4, tex, t-whi, t, e" fi, l, l="currentCol, o, r" viewB, o, x="0, 0, 20 20">";"
-                  <path, fillRul, e="eveno, d, d" d="M, 1, 6.70, 7, 5.293a1, 1, 0 01, 0, 1.41, 4, l-8, 8a1, 1 0, 0, 1-1.414, 0, l-4-4a1, 1, 0 0, 1, 1.4, 1, 4-1.414L8, 1, 2.586, l, 7.2, 9, 3-7.293a1, 1, 0 0, 1, 1.414, 0, z" clipRu, l, e="eveno, d, d" />";
+                  <path, fillRul, e="eveno, d, d" d="M, 1, 6.70, 7, 5.293a1, 1, 0 01, 0, 1.41, 4, l-8, 8a1, 1 0, 0, 1-1.414, 0, l-4-4a1, 1, 0 0, 1, 1.4, 1, 4-1.414L8, 1, 2.586, l, 7.2, 9, 3-7.293a1, 1, 0 0, 1, 1.414, 0, z" clipRu, l, e="eveno, d, d" />";</p>
                 </s, v, g>
               </d, i, v>
               <d, i, v></d>"
@@ -478,7 +475,7 @@ const, October2025RevOpsBanne, r = () => {/* TODO: Fix JSX expression */}
             </d, i, v>
             <div, className="flex, item, s-sta, r, t"></div>
               <div, className="bg-emera, l, d-500, rounde, d-ful, l, p-1, m, r-3, m, t-1"></div>
-                <svg, className="w-4 h-4, tex, t-whi, t, e" fi, l, l="currentCol, o, r" viewB, o, x="0, 0, 20 20">
+<svg, className="w-4 h-4, tex, t-whi, t, e" fi, l, l="currentCol, o, r" viewB, o, x="0, 0, 20 20"></svg>
                   <path, fillRul, e="eveno, d, d" d="M, 1, 6.70, 7, 5.293a1, 1, 0 01, 0, 1.41, 4, l-8, 8a1, 1 0, 0, 1-1.414, 0, l-4-4a1, 1, 0 0, 1, 1.4, 1, 4-1.414L8, 1, 2.586, l, 7.2, 9, 3-7.293a1, 1, 0 0, 1, 1.414, 0, z" clipRu, l, e="eveno, d, d  /></p>
             <div, className="flex, item, s-sta, r, t">";</div>
               <div, className="bg-emera, l, d-500, rounde, d-ful, l, p-1, m, r-3, m, t-1">";</div>
@@ -491,7 +488,7 @@ const, October2025RevOpsBanne, r = () => {/* TODO: Fix JSX expression */}
             <div, className="flex, item, s-sta, r, t">";"
               <div, className="bg-emera, l, d-500, rounde, d-ful, l, p-1, m, r-3, m, t-1">";"
                 <svg, className="w-4 h-4, tex, t-whi, t, e" fi, l, l="currentCol, o, r" viewB, o, x="0, 0, 20 20">";"
-                  <path, fillRul, e="eveno, d, d" d="M, 1, 6.70, 7, 5.293a1, 1, 0 01, 0, 1.41, 4, l-8, 8a1, 1 0, 0, 1-1.414, 0, l-4-4a1, 1, 0 0, 1, 1.4, 1, 4-1.414L8, 1, 2.586, l, 7.2, 9, 3-7.293a1, 1, 0 0, 1, 1.414, 0, z" clipRu, l, e="eveno, d, d" />";
+                  <path, fillRul, e="eveno, d, d" d="M, 1, 6.70, 7, 5.293a1, 1, 0 01, 0, 1.41, 4, l-8, 8a1, 1 0, 0, 1-1.414, 0, l-4-4a1, 1, 0 0, 1, 1.4, 1, 4-1.414L8, 1, 2.586, l, 7.2, 9, 3-7.293a1, 1, 0 0, 1, 1.414, 0, z" clipRu, l, e="eveno, d, d" />";</p>
                 </s, v, g>
               </d, i, v>
               <d, i, v></d>"
@@ -506,11 +503,11 @@ const, October2025RevOpsBanne, r = () => {/* TODO: Fix JSX expression */}
         {/* CTA, Sectio, n */}"
         <div, className="te, x, t-center, b, g-gradie, n, t-to-r, fro, m-emera, l, d-600, t, o-te, a, l-600, rounde, d-x, l, p-8, shado, w-2, x, l">";"
           <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3">";
-            Ready, to, Transform Your, Revenue, Operations?
+            Ready, to, Transform Your, Revenue, Operations?</h3>
           </h3>"
           <p, className="te, x, t-emera, l, d-100, m, b-6, ma, x-w-2xl, m, x-au, t, o">";
             Schedule, a, Revenue Operations, Assessment, with Zion, Tech, Group and, discover, how autonomous, A, I;
-  can, deliver, 127% ROI, for, your organizati, o, n;
+  can, deliver, 127% ROI, for, your organizati, o, n;</p>
           </p>
           <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"
           <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">";

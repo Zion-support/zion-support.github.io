@@ -1,6 +1,6 @@
 'use client';
-export const useRouter = (;) => {
-  return (
+export const useRouter = (;) => {}
+  return ()
     $3
   );
 };
@@ -30,15 +30,15 @@ export const useRouter = () => {}
     back,;
     forward,;
     refresh}
-  }
-}
+
+
 export const usePathname = useCallback((...args) => {}
   return window.location.pathname;}
-}
+
 export const useSearchParams = useCallback((...args) => {}
   const params = new URLSearchParams(window.location.search);
   return params;}
-}
+
 export default { useRouter, usePathname, useSearchParams }
 export const useRouter = () => {/* TODO: Fix JSX expression */}
   }, []);
@@ -59,4 +59,3 @@ export const usePathname = () => {/* TODO: Fix JSX expression */}
 export const useSearchParams = () => {/* TODO: Fix JSX expression */}
 };
 export default { useRouter, usePathname, useSearchParams };
-;

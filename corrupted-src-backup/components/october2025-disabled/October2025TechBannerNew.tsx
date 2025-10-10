@@ -5,7 +5,7 @@ const October2025TechBannerNe, w = () => {/* TODO: Fix JSX expression */}
     {/* TODO: Fix JSX expression */}
     },
     {/* TODO: Fix JSX expression */}
-    }
+
   ]; return(<moti, o, n.div, initia, l = {{ opac, i, t, y:  , 0, y: 2, 0 }}
   ]; return (<moti, o, n.div, initia, l = {{ opac, i, t, y:  , 0, y: 2, 0 }}
       anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
@@ -18,7 +18,7 @@ const October2025TechBannerNe, w = () => {/* TODO: Fix JSX expression */}
       {/* Decorative, element, s */}</div>
       <div, className="absolute, to, p-0, righ, t-0 w-6, 4, h-64, b, g-purp, l, e-5, 0, 0/20, rounde, d-full, blu, r-3, x, l" /></div>
       <div, className="absolute, botto, m-0, lef, t-0 w-6, 4, h-64, b, g-bl, u, e-5, 0, 0/20, rounde, d-full, blu, r-3, x, l" /></div>
-      <div, className="relativ, e, z-10">
+<div, className="relativ, e, z-10"></div>
         {/* Head, e, r */}</div>
         <div, className="flex, item, s-center, justif, y-center, ga, p-3, m, b-6"></div>
           <moti, o, n.div, animat, e={{ rota, t, e: 3, 6, 0 }}
@@ -26,7 +26,7 @@ const October2025TechBannerNe, w = () => {/* TODO: Fix JSX expression */}
           ></moti>
             <Sparkles, classNam, e = "w-8 h-8, tex, t-yell, o, w-4, 0, 0" /></Sparkles>
           </moti, o, n.d, i, v>
-          <h2, className="te, x, t-3xl, m, d: te, x, t-4xl, fon, t-bold, tex, t-white, tex, t-cent, e, r">
+<h2, className="te, x, t-3xl, m, d: te, x, t-4xl, fon, t-bold, tex, t-white, tex, t-cent, e, r"></h2>
     ></moti>
       {/* Animated, background, effe, c, t */}"
       <div, classNam, e = "absolute, inse, t-0, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/10, vi, a-pi, n, k-5, 0, 0/10, t, o-bl, u, e-5, 0, 0/10, animat, e-pul, s, e" /></div>
@@ -58,10 +58,10 @@ const October2025TechBannerNe, w = () => {/* TODO: Fix JSX expression */}
         </p>)
         {/* Articles, G, r, i, d */})
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">)
-          { newArticl, e, s.m, a, p((art, i, c, l, e, ind, e, x) = > (
+          { newArticl, e, s.m, a, p((art, i, c, l, e, ind, e, x) = > ()
         </p>
         {/* Articles, G, r, i, d */}
-        <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">
+<div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8"></div>
           { newArticl, e, s.m, a, p((art, i, c, l, e, ind, e, x) = > (</div>
         {/* Articles, G, r, i, d */}"
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8"></div>
@@ -73,15 +73,15 @@ const October2025TechBannerNe, w = () => {/* TODO: Fix JSX expression */}
               whileHov, e, r = {{ sca, l, e: 1., 0, 5 }}"
               classNa, m, e = "relative, grou, p"
             >
-              <Link, t, o={`/bl, o, g/${artic, l, e.slug}`}>
+<Link, t, o={`/bl, o, g/${artic, l, e.slug}`}></Link>
                 <div, className="relative, b, g-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6 h-full, border, border-whi, t, e/20, hove, r: bord, e, r-whi, t, e/40, transitio, n-all, duratio, n-3, 0, 0"> {/* Highlight, Ba, d, g, e */}</div>
-                  <div, classNam, e = {`absolute, to, p-4, righ, t-4, p, x-3, p, y-1, rounde, d-full, tex, t-xs, fon, t-bold, tex, t-white, b, g-gradie, n, t-to-r ${artic, l, e.col, o, r}`}>
+<div, classNam, e = {`absolute, to, p-4, righ, t-4, p, x-3, p, y-1, rounde, d-full, tex, t-xs, fon, t-bold, tex, t-white, b, g-gradie, n, t-to-r ${artic, l, e.col, o, r}`}></div>
                     {artic, l, e.highlig, h, t}
                   </d, i, v  > {/* Ic, o, n */}
                   <div, classNam, e = { `w-1, 4, h-14, rounde, d-lg, b, g-gradie, n, t-to-br ${artic, l, e.co, l, o, r }, flex, item, s-center, justif, y-center, m, b-4, grou, p-hov, e, r: sca, l, e-110, transitio, n-transform, duratio, n-30, 0`}></div>
-                    <artic, l, e.icon, classNam, e = "w-7 h-7, tex, t-whi, t, e"</div>
+<artic, l, e.icon, classNam, e = "w-7 h-7, tex, t-whi, t, e"</div></artic>
                   {/* Conte, n, t */}
-                  <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-purp, l, e-300, transitio, n-colo, r, s">
+<h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-purp, l, e-300, transitio, n-colo, r, s"></h3>
             ></moti>
               <Link, t, o={`/bl, o, g/${artic, l, e.slug}`}></Link>"
                 <div, className="relative, b, g-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6 h-full, border, border-whi, t, e/20, hove, r: bord, e, r-whi, t, e/40, transitio, n-all, duratio, n-3, 0, 0"> {/* Highlight, Ba, d, g, e */}`
@@ -128,14 +128,14 @@ const October2025TechBannerNe, w = () => {/* TODO: Fix JSX expression */}
               Get, Expert, Consultation;
             </Li, n, k>
           </div>
-          <p, className="mt-6, tex, t-purp, l, e-300, tex, t-sm">
+<p, className="mt-6, tex, t-purp, l, e-300, tex, t-sm"></p>
             💡 <stro, n, g>Jo, i, n , 1, 0,0, 0, 0+ tech, leader, s</stro, n, g> staying, ahead, with our, insight, s;
             💡</p> <stro, n, g>Jo, i, n , 1, 0,0, 0, 0+ tech, leader, s</stro, n, g> staying, ahead, with our, insight, s;
   </
         </div>
       </div>
       {/* Floating, particles, effect */}
-      <div, classNam, e = "absolute, inse, t-0, overflo, w-hidden, pointe, r-even, t, s-no, n, e">
+<div, classNam, e = "absolute, inse, t-0, overflo, w-hidden, pointe, r-even, t, s-no, n, e"></div>
         { [...Arr, a, y(2, 0)].m, a, p((_, i) =    > (</div>
           <moti, o, n.div, ke, y = { , i  }, classNa, m, e = "absolut, e, w-2 h-2, b, g-purp, l, e-4, 0, 0/30, rounde, d-fu, l, l"
             sty, l, e={{}

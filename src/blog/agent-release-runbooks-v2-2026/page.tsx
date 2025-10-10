@@ -2,17 +2,16 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-const AgentReleaseRunbooksV22026Page: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+const AgentReleaseRunbooksV22026Page: React.FC = () => {}
+  return ()
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Page;
+<main className="container mx-auto px-4 py-16 pt-24"></main>
+<section className="text-center mb-16"></section>
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">Page;</h1>
   </
 <p className='text-lg md:text-xl text-white/80 max-w-3xl'>Ship autonomous agents with budgeted actions, KPI;
-            canaries, approvals and one‑click rollback.
+            canaries, approvals and one‑click rollback.</p>
           </p>
           <div></div>
             <div></div>
@@ -32,7 +31,7 @@ const AgentReleaseRunbooksV22026Page: React.FC = () => {
 <p>Operational safety hinges on three,
   primitives: hard;
             budgets, lightweight approvals and KPI-linked canaries that trigger;
-            automatic rollback when thresholds are breached.
+            automatic rollback when thresholds are breached.</p>
           </p>
           <h3>Runbook Outline</h3>
           <ol></ol>
@@ -80,6 +79,6 @@ const AgentReleaseRunbooksV22026Page: React.FC = () => {
         </div>
       </section>)
     </main>)
-}
+
 export default AgentReleaseRunbooksV22026Page;
   </h1>

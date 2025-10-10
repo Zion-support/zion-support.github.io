@@ -17,6 +17,6 @@ interface DashboardData {/* TODO: Fix JSX expression */}
   securit,
   y: {/* TODO: Fix JSX expression */}
   };
-}
+
 export default AdvancedDashboard;
 }"

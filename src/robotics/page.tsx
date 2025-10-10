@@ -3,21 +3,18 @@ import React from 'react';
 import { Bot, ArrowRight } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-export default function RoboticsPage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <div className="container mx-auto px-4 py-20">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
-            Robotics;
+export default function RoboticsPage() {}
+  return ()
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+<div className="container mx-auto px-4 py-20"></div>
+<div className="max-w-4xl mx-auto text-center"></div>
+          <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">Robotics;</h1>
   </
-          <p className="text-xl text-gray-300 mb-8">
-            Intelligent robotics solutions for automation and advanced manufacturing.
+          <p className="text-xl text-gray-300 mb-8">Intelligent robotics solutions for automation and advanced manufacturing.</p>
           </p>
-          <div className="bg-slate-800/50 rounded-lg p-8">
+<div className="bg-slate-800/50 rounded-lg p-8"></div>
             <h2 className="text-2xl font-bold text-white mb-4">Coming Soon</h2>
-            <p className="text-gray-300 mb-6">
-              We're developing intelligent robotics solutions. Contact us to learn more.
+            <p className="text-gray-300 mb-6">We're developing intelligent robotics solutions. Contact us to learn more.</p>
             </p>
             <a
               href="/contact"
@@ -30,6 +27,6 @@ export default function RoboticsPage() {
       </div>
     </div>
   );
-}
+
   </a>
   </h1>

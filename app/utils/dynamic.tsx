@@ -5,7 +5,7 @@ interface DynamicOptions {;
 interface DynamicOptions {}
   loading?: () => React.ReactElement;
   ssr?: boolean;}
-}
+
 export function dynamic<T extends ComponentType<unknown>>(</T></<<<T>importFunc</T>: () => Promise<{ default: T }>,;
   options: DynamicOptions = {}
 ): ComponentType<unknown>{;
@@ -19,7 +19,7 @@ export function dynamic<T extends ComponentType<unknown>>(</T></<<<T>importFunc<
 'use client';
 import React, { lazy, Suspense, ComponentType } from 'react';
 interface DynamicOptions {/* TODO: Fix JSX expression */}
-}
+
 export function dynamic<T extends ComponentType<unknown>>(importFun);
   c: () => Promise<{/* TODO: Fix JSX expression */}
   t: T }>,;
@@ -30,7 +30,7 @@ export function dynamic<T extends ComponentType<unknown>>(importFun);
       <LazyComponent {...props} /></LazyComponent>;
     </Suspense>;
   );
-}
+
 export default dynamic;
   </unknown>
   </T>

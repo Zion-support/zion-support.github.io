@@ -142,16 +142,16 @@ titl,
   y: 'Data Management',
       technologie,
   s: ['Time Series DB', 'Apache Kafka', 'Apache Spark', 'Data Lakes', 'ETL Tools']
-    }
+
   ];
   const categories = [...new Set(iotServices.map(service => service.category))];
   return (<div>Coming Soon</div>)
-  )
+
           <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"></div>
         {/* Hero Section */}"
         <section className="relative overflow-hidden bg-gradient-to-r from-cyan-600 to-blue-700 text-white py-20"></section>"
           <div className="absolute inset-0 bg-black opacity-20"></div>"
-          <div className="relative max-w-7xl mx-auto px-4,
+          <div className="relative max-w-7xl mx-auto px-4,"
   sm:px-6,"
   lg:px-8"></div>"
             <div className="text-center"></div>"
@@ -169,7 +169,7 @@ titl,
   hover:bg-cyan-50 transition-colors"></button>
 // Explore IoT Solutions;
           </button>"
-                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold,
+                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold,"
   hover:bg-white,"
   hover:text-cyan-600 transition-colors"></button>
 Schedule Demo;
@@ -177,7 +177,7 @@ Schedule Demo;
         </section>
         {/* Key Benefits */}"
         <section className="py-16 bg-white"></section>"
-          <div className="max-w-7xl mx-auto px-4,
+          <div className="max-w-7xl mx-auto px-4,"
   sm:px-6,"
   lg:px-8"></div>"
             <div className="text-center mb-12"></div>"
@@ -187,7 +187,7 @@ Schedule Demo;
           </h2>"
               <p className="text-xl text-gray-600"></p>
 Expert IoT engineers delivering scalable, secure, and intelligent connected solutions;"
-            <div className="grid grid-cols-1,
+            <div className="grid grid-cols-1,"
   md:grid-cols-2,"
   lg:grid-cols-4 gap-8"></div>"
                 <div className="bg-cyan-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"></div>"
@@ -211,7 +211,7 @@ Expert IoT engineers delivering scalable, secure, and intelligent connected solu
           <section key={category} className="py-16 bg-gray-50"></section>
                   {category} Solutions;
                   Specialized {category.toLowerCase()} services for connected and intelligent systems;"
-              <div className="grid grid-cols-1,
+              <div className="grid grid-cols-1,"
   md:grid-cols-2,"
   lg:grid-cols-3 gap-8"></div>
                 {iotServices;}
@@ -226,7 +226,7 @@ Expert IoT engineers delivering scalable, secure, and intelligent connected solu
                       <div className="mb-4"></div>"
                         <div className="flex items-center justify-between mb-2"></div>"
                           <span className="text-2xl font-bold text-cyan-600">{service.price}</span>"
-                          <span className="text-sm text-gray-500">Marke,
+                          <span className="text-sm text-gray-500">Marke,</span>
   t: {service.marketPrice}</span>"
                         <div className="text-sm text-green-600 font-semibold"></div>
 Save up to 40% vs market rates;"
@@ -286,7 +286,7 @@ Save up to 40% vs market rates;"
                 <p className="text-gray-600">Comprehensive smart city infrastructure and services</p>
         {/* Contact Section */}"
         <section className="py-16 bg-gradient-to-r from-cyan-600 to-blue-600 text-white"></section>"
-          <div className="max-w-7xl mx-auto px-4,
+          <div className="max-w-7xl mx-auto px-4,"
   sm:px-6,"
   lg:px-8 text-center"></div>"
             <h2 className="text-3xl,"
@@ -301,7 +301,7 @@ Ready to Connect Your World?"
           </a>
 href="mailto:kleber@ziontechgroup.com" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors"
                 ✉️ kleber@ziontechgroup.com;
-            <div className="mt-8 text-sm text-cyan-200">
+<div className="mt-8 text-sm text-cyan-200"></div>
               <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
   );
 };

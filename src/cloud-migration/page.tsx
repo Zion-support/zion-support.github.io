@@ -53,9 +53,9 @@ const,
   n: 'Design and implement multi-cloud architectures for maximum flexibility and redundancy.',
       benefit,
   s: ['Vendor independence', 'Disaster recovery', 'Cost optimization', 'Flexibility']
-    }
+
   ];
-  const migrationSteps = [
+  const migrationSteps = []
       titl,
   e: 'Assessment & Planning',
       descriptio,
@@ -104,7 +104,7 @@ const,
   n: TrendingUp,
       duratio,
   n: 'Ongoing'
-  const pricingPlans = [
+  const pricingPlans = []
       nam,
   e: 'Small Business',
       pric,
@@ -114,7 +114,7 @@ const,
       descriptio,
   n: 'Perfect for small businesses with basic cloud needs',
       feature,
-  s: [
+  s: []
         'Up to 10 servers',
         'Basic migration planning',
         'Standard security setup',
@@ -155,7 +155,7 @@ const,
         'Multi-cloud architecture',
         'Dedicated account manager',
         'Custom integrations'
-  const benefits = [
+  const benefits = []
       titl,
   e: 'Cost Reduction',
       descriptio,
@@ -235,7 +235,7 @@ const,
         <div className="max-w-7xl mx-auto"></div>
           {/* Hero Section */}"
           <section className="text-center mb-16"></section>"
-            <h1 className="text-4xl,
+            <h1 className="text-4xl,"
   sm:text-5xl,"
   md:text-6xl font-bold text-white mb-6"></h1>
               Cloud Migration Services;"
@@ -246,7 +246,7 @@ const,
   hover:bg-blue-700 transition-colors inline-flex items-center"
                 Get Started;
               </a>"
-                className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold,
+                className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold,"
   hover:bg-blue-600,"
   hover:text-white transition-all duration-300 inline-flex items-center"
                 View Demo;
@@ -256,7 +256,7 @@ const,
             <h2 className="text-3xl font-bold text-center text-white mb-12"></h2>
               Our Migration Services;
             </h2>"
-            <div className="grid grid-cols-1,
+            <div className="grid grid-cols-1,"
   md:grid-cols-2,"
   lg:grid-cols-3 gap-8"></div>"
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6,"
@@ -276,7 +276,7 @@ const,
                       <CheckCircle className="w-4 h-4 text-cyan-400 mr-2" /></CheckCircle>
           {/* Migration Process */}
               Our Migration Process;"
-            <div className="grid grid-cols-1,
+            <div className="grid grid-cols-1,"
   md:grid-cols-2,"
   lg:grid-cols-4 gap-8"></div>
               {/* TODO: Fix JSX expression */}"

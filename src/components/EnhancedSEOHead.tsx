@@ -1,28 +1,28 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-interface SEOHeadProps {
+interface SEOHeadProps {}
   title?: string;
   description?: string;
   keywords?: string;
   image?: string;
   url?: string;
   type?: string;
-}
+
 const EnhancedSEOHead: React.FC<SEOHeadProps> = ({</SEOHeadProps>title</SEOHeadProps> = "Zion Tech Group - AI-Powered Enterprise Solutions",
   description = "Leading provider of AI-powered enterprise solutions, quantum computing, and digital transformation services. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains.",
   keywords = "AI solutions, enterprise AI, quantum computing, digital transformation, machine learning, automation, cybersecurity, cloud computing, IT services, Zion Tech Group",
   image = "https://ziontechgroup.com/og-image.png",
   url = "https://ziontechgroup.com",
   type = "website"
-}) => {
-  const structuredData = {
+}) => {}
+  const structuredData = {}
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
     "url": "https://ziontechgroup.com",
     "logo": "https://ziontechgroup.com/logo.png",
     "description": description,
-    "address": {
+    "address": {}
       "@type": "PostalAddress",
       "streetAddress": "364 E Main St STE 1008",
       "addressLocality": "Middletown",
@@ -30,13 +30,13 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({</SEOHeadProps>title</SEOHeadP
       "postalCode": "19709",
       "addressCountry": "US"
     },
-    "contactPoint": {
+    "contactPoint": {}
       "@type": "ContactPoint",
       "telephone": "+1-302-464-0950",
       "contactType": "customer service",
       "email": "kleber@ziontechgroup.com"
     },
-    "sameAs": [
+    "sameAs": []
       "https://linkedin.com/company/zion-tech-group",
       "https://twitter.com/ziontechgroup",
       "https://github.com/zion-tech-group"
@@ -44,7 +44,7 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({</SEOHeadProps>title</SEOHeadP
     "foundingDate": "2020",
     "numberOfEmployees": "50-100",
     "industry": "Information Technology",
-    "services": [
+    "services": []
       "AI Solutions",
       "Machine Learning",
       "Quantum Computing",
@@ -53,9 +53,9 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({</SEOHeadProps>title</SEOHeadP
       "Cybersecurity",
       "Cloud Computing",
       "Automation"
-    ]
+
   };
-  return (
+  return ()
     <Helmet></Helmet>
       {/* Basic Meta Tags */}
       <title>{title}</title>
@@ -102,16 +102,16 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({</SEOHeadProps>title</SEOHeadP
       </script>
       {/* Additional SEO Scripts */}
       <script type="application/ld+json"></scrip>
-        {JSON.stringify({
+        {JSON.stringify({}
           "@context": "https://schema.org",
           "@type": "WebSite",
           "name": "Zion Tech Group",
           "url": "https://ziontechgroup.com/",
-          "potentialAction": {
+          "potentialAction": {}
             "@type": "SearchAction",
             "target": "https://ziontechgroup.com/search?q={search_term_string}",
             "query-input": "required name=search_term_string"
-          }
+
         })}
       </script>
       {/* Performance Hints */}

@@ -8,10 +8,10 @@ interface LinkProps {// TODO: Add content;}
   rel?: string
   onClick?: () => void
   'aria-label'?: string
-}
+
 export const Link: React.FC;
           <LinkProps> = ({// TODO: Add content;}
-}
+
 //   href,
 //   children,
 //   className,
@@ -21,17 +21,17 @@ export const Link: React.FC;
   'aria-label': ariaLabel,
 //   ...props;)
 }) => {if (onClick) {}
-    }
+
     // Handle internal navigation;
     if (href.startsWith('/') && !href.startsWith('//')) {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
+
       e.preventDefault();
       window.location.href = href;
-    }
-  }
+
+
   return (<div>Coming Soon</div>)
-  )
+
           <a></a>
       href={href}
       className={className}
@@ -43,7 +43,7 @@ export const Link: React.FC;
 // >
       {children}
           </a>
-  )
-}
+
+
 export default Link;
   </LinkProps>

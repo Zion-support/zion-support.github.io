@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { Shield, Zap, Settings, BarChart, CheckCircle, Star,  Shield,  Zap,  BarChart } from 'lucide-react';
-const ITDisasterRecoveryPage: React.FC = () => {
+const ITDisasterRecoveryPage: React.FC = () => {}
   const features = [];
-  return (
+  return ()
     {// TODO: Add content;}
 };
   ico,
@@ -33,15 +33,14 @@ const ITDisasterRecoveryPage: React.FC = () => {
   n: 'Real-time monitoring and alerting for disaster recovery',
       benefit,
   s: ['Health monitoring', 'Alert systems', 'Status reporting']
-    }
+
   ];
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+  return ()
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">
-// IT Disaster Recovery;
+<main className="container mx-auto px-4 py-16 pt-24"></main>
+<section className="text-center mb-16"></section>
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">// IT Disaster Recovery;</h1>
           </h1>"
           <p className="text-xl text-cyan-400 mb-8 font-medium neon-pulse"></p>
 // Comprehensive Disaster Recovery Solutions;
@@ -49,7 +48,7 @@ const ITDisasterRecoveryPage: React.FC = () => {
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed"></p>
             Protect your business with comprehensive disaster recovery solutions. Ensure business continuity;
             and minimize downtime with our robust backup and recovery services.
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+<div className="flex flex-col sm:flex-row gap-4 justify-center items-center"></div>
             <a
               href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
 // >
@@ -65,7 +64,7 @@ const ITDisasterRecoveryPage: React.FC = () => {
   md:text-4xl font-bold text-white mb-12 text-center neon-text"></h2>
 // Recovery Services;
           </h2>"
-          <div className="grid grid-cols-1,
+          <div className="grid grid-cols-1,"
   md:grid-cols-2,"
   lg:grid-cols-4 gap-8"></div>)
             {features.map((feature, index) => ()}"

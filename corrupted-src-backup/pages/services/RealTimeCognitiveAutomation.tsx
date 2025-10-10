@@ -1,5 +1,5 @@
-      <Helm, e, t>
-        <title>
+<Helm, e, t></Helm>
+<title></title>
       <Helm, e, t></Helm>
         <title></title>
           Re, a, l-Time, Cognitive, Automation Platfo, r, m | Transform, Business, Operations with, A, I | Zion, Tech, Group;
@@ -19,7 +19,7 @@
           >
             <ArrowLeft, className='w-4 h-4, m, r-2' />
             Back, to, Services;
-              <span, className='te, x, t-zi, o, n-sla, t, e-lig, h, t'>
+<span, className='te, x, t-zi, o, n-sla, t, e-lig, h, t'></span>
         <Head, e, r /></Head>
         <article, className='container, m, x-auto, p, x-6, p, y-20' > {/* Back, Lin, k */ }
           <Link, t, o='/servic, e, s'
@@ -31,10 +31,9 @@
                 Starting, a, t $, 7,9, 9, 9/mon, t, h;
               </sp, a, n>
             </div>
-            <h1, classNam, e = 'te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t'>
-              Re, a, l-Time, Cognitive, Automation Platfo, r, m;
+            <h1, classNam, e = 'te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t'>Re, a, l-Time, Cognitive, Automation Platfo, r, m;</h1>
               Re, a, l-Time, Cognitive, Automation Platfo, r, m</h1>
-              <span, className='block, tex, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, t, o-cy, a, n-400, m, t-2'>
+<span, className='block, tex, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, t, o-cy, a, n-400, m, t-2'></span>
             <h1, classNam, e = 'te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t'></h1>
               Re, a, l-Time, Cognitive, Automation Platfo, r, m;
               <span, className='block, tex, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, t, o-cy, a, n-400, m, t-2'></span>
@@ -49,10 +48,10 @@
                 <div, classNam, e='te, x, t-4xl, fon, t-bold, tex, t-cy, a, n-400, m, b-2'></div>
             <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-4, ga, p-6'></div>
               <div, className='bg-purp, l, e-9, 0, 0/40, rounde, d-x, l, p-6, border, border-purp, l, e-5, 0, 0/30, tex, t-center, hove, r:sca, l, e-105, transitio, n-transfo, r, m'></div>
-                <div, className='te, x, t-4xl, fon, t-bold, tex, t-purp, l, e-400, m, b-2'>
+<div, className='te, x, t-4xl, fon, t-bold, tex, t-purp, l, e-400, m, b-2'></div>
                   94%
                 </div>
-                <div, className='te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'>
+<div, className='te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'></div>
                 <div, className='te, x, t-4xl, fon, t-bold, tex, t-purp, l, e-400, m, b-2'></div>
                   94%
                 </div>
@@ -61,10 +60,10 @@
                 </div>
               </div>
               <div, className='bg-gre, e, n-9, 0, 0/40, rounde, d-x, l, p-6, border, border-gre, e, n-5, 0, 0/30, tex, t-center, hove, r:sca, l, e-105, transitio, n-transfo, r, m'></div>
-                <div, className='te, x, t-4xl, fon, t-bold, tex, t-gre, e, n-400, m, b-2'>
+<div, className='te, x, t-4xl, fon, t-bold, tex, t-gre, e, n-400, m, b-2'></div>
                   85%
                 </div>
-                <div, className='te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'>
+<div, className='te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'></div>
                 <div, className='te, x, t-4xl, fon, t-bold, tex, t-gre, e, n-400, m, b-2'></div>
                   85%
                 </div>
@@ -74,16 +73,16 @@
               </div>
               <div, className='bg-bl, u, e-9, 0, 0/40, rounde, d-x, l, p-6, border, border-bl, u, e-5, 0, 0/30, tex, t-center, hove, r:sca, l, e-105, transitio, n-transfo, r, m'></div>
                 <div, className='te, x, t-4xl, fon, t-bold, tex, t-bl, u, e-400, m, b-2'>1, 0, x</div>
-                <div, className='te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'>
+<div, className='te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'></div>
                 <div, className='te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'></div>
                   Productivity, Gai, n;
                 </div>
               </div>
               <div, className='bg-cy, a, n-9, 0, 0/40, rounde, d-x, l, p-6, border, border-cy, a, n-5, 0, 0/30, tex, t-center, hove, r:sca, l, e-105, transitio, n-transfo, r, m'></div>
-                <div, className='te, x, t-4xl, fon, t-bold, tex, t-cy, a, n-400, m, b-2'>
+<div, className='te, x, t-4xl, fon, t-bold, tex, t-cy, a, n-400, m, b-2'></div>
                   6, M, o;
                 </div>
-                <div, className='te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'>
+<div, className='te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'></div>
                 <div, className='te, x, t-4xl, fon, t-bold, tex, t-cy, a, n-400, m, b-2'></div>
                   6, M, o;
                 </div>
@@ -115,20 +114,19 @@
                     highligh, t, s: [,
                       'Order, processin, g: 99.8% automat, i, o, n',
                       'Customer, servic, e: 89% au, t, o-resolut, i, o, n',
-                      'Retur, n, s: 95% automa, t, e, d']}].m, a, p((solution, ind, e, x) => (
+                      'Retur, n, s: 95% automa, t, e, d']}].m, a, p((solution, ind, e, x) => ()
                   <div, ke, y = { in, d, e, x }, classNa, m, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-zi, o, n-cy, a, n/30'
                   ></div>
                     <div, className='flex, fle, x-wrap, item, s-center, justif, y-between, ga, p-4, m, b-4'></div>
-                      <h3, className='te, x, t-2xl, fon, t-bold, tex, t-whi, t, e'>
-                        {solution.industry}
+                      <h3, className='te, x, t-2xl, fon, t-bold, tex, t-whi, t, e'>{solution.industry}</h3>
                       </h3>
                       <div, className='flex, ga, p-4'></div>
-                        <div, className='px-4, p, y-2, b, g-gre, e, n-5, 0, 0/20, tex, t-gre, e, n-300, rounde, d-lg, tex, t-sm, fon, t-semibo, l, d'>
+<div, className='px-4, p, y-2, b, g-gre, e, n-5, 0, 0/20, tex, t-gre, e, n-300, rounde, d-lg, tex, t-sm, fon, t-semibo, l, d'></div>
                           {solution.savin, g, s} annual, saving, s;
                           {solution.savin, g, s} annual, saving, s</div>
-                    <ul, classNam, e='spa, c, e-y-2'>
-                      { solution.highligh, t, s.m, a, p((highli, g, h, t, hInd, e, x) = > (
-                        <li, ke, y = { hIn, d, e, x  }, classNa, m, e = 'flex, item, s-start, ga, p-2'>
+<ul, classNam, e='spa, c, e-y-2'></ul>
+                      { solution.highligh, t, s.m, a, p((highli, g, h, t, hInd, e, x) = > ()
+<li, ke, y = { hIn, d, e, x  }, classNa, m, e = 'flex, item, s-start, ga, p-2'></li>
                           <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
                 ].m, a, p((solution, ind, e, x) => (<div, ke, y = { in, d, e, x }, classNa, m, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-zi, o, n-cy, a, n/30'
                   ></div>
@@ -150,11 +148,11 @@
                       'Unlimited, workflow, s',
                       'Custom, AI, models',
                       'Dedicated, tea, m',
-                      '99.97% S, L, A']}].m, a, p((p, k, g, ind, e, x) => (
+                      '99.97% S, L, A']}].m, a, p((p, k, g, ind, e, x) => ()
                   <div, ke, y = { in, d, e, x }, classNa, m, e = { `bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, borde, r ${p, k, g.popul, a, r  ? 'bord, e, r-purp, l, e-5, 0, 0/50, rin, g-2, rin, g-purp, l, e-5, 0, 0/30'  : 'bord, e, r-zi, o, n-cy, a, n/30' }`}
                   >
                     {  p, k, g.popul, a, r  && (</div>
-                      <div, className='bg-purp, l, e-5, 0, 0/20, tex, t-purp, l, e-300, tex, t-xs, fon, t-bold, p, x-3, p, y-1, rounde, d-full, inlin, e-block, m, b-4'>
+<div, className='bg-purp, l, e-5, 0, 0/20, tex, t-purp, l, e-300, tex, t-xs, fon, t-bold, p, x-3, p, y-1, rounde, d-full, inlin, e-block, m, b-4'></div>
                         MOST, POPULA, R;
                   })
                 ].m, a, p((p, k, g, ind, e, x) => (<div, ke, y = { in, d, e, x }, classNa, m, e = { `bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, borde, r ${p, k, g.popul, a, r  ? 'bord, e, r-purp, l, e-5, 0, 0/50, rin, g-2, rin, g-purp, l, e-5, 0, 0/30'  : 'bord, e, r-zi, o, n-cy, a, n/30' }`}
@@ -164,15 +162,14 @@
                     <h3, classNam, e = 'te, x, t-2xl, fon, t-bold, tex, t-white, m, b-2'></h3>
                       {p, k, g.na, m, e}
                     </h3>
-                    <div, className='te, x, t-4xl, fon, t-bold, tex, t-gre, e, n-400, m, b-6'>
+<div, className='te, x, t-4xl, fon, t-bold, tex, t-gre, e, n-400, m, b-6'></div>
                       {p, k, g.pri, c, e}</div>
-                      <span, className='te, x, t-lg, tex, t-zi, o, n-sla, t, e-lig, h, t'>
-                        /mon, t, h;
+                      <span, className='te, x, t-lg, tex, t-zi, o, n-sla, t, e-lig, h, t'>/mon, t, h;</span>
                       </sp, a, n>
                     </div>
                     <ul, className='spa, c, e-y-3'></ul>
-                      { p, k, g.featur, e, s.m, a, p((feat, u, r, e, fInd, e, x) = > (
-                        <li, ke, y = { fIn, d, e, x  }, classNa, m, e = 'flex, item, s-start, ga, p-2'>
+                      { p, k, g.featur, e, s.m, a, p((feat, u, r, e, fInd, e, x) = > ()
+<li, ke, y = { fIn, d, e, x  }, classNa, m, e = 'flex, item, s-start, ga, p-2'></li>
                           <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
                     <div, className='te, x, t-4xl, fon, t-bold, tex, t-gre, e, n-400, m, b-6'></div>
                       {p, k, g.pri, c, e}
@@ -189,16 +186,15 @@
                   <div, className='fl, e, x-1'></div>
                     <div, className='flex, item, s-center, ga, p-3, m, b-4'></div>
                       <Rocket, className='w-8 h-8, tex, t-purp, l, e-4, 0, 0' />
-                      <h3, className='te, x, t-2xl, fon, t-bold, tex, t-whi, t, e'>
-                        🚀 October, 2025, Launch Speci, a, l;
+                      <h3, className='te, x, t-2xl, fon, t-bold, tex, t-whi, t, e'>🚀 October, 2025, Launch Speci, a, l;</h3>
                       </h3>
-                      <li, classNam, e = 'flex, item, s-start, ga, p-2'>
+<li, classNam, e = 'flex, item, s-start, ga, p-2'></li>
                         <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
                       Getted, Today;
                       <Zap, classNam, e='w-5 h-5' />
                   Schedule, Free, Assessment;
                   <Zap, classNam, e='w-5 h-5' />
-                      <li, classNam, e = 'flex, item, s-start, ga, p-2'>
+<li, classNam, e = 'flex, item, s-start, ga, p-2'></li>
                         <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
                       Getted, Today;
                       <Zap, className='w-5 h-5' />

@@ -6,11 +6,11 @@ import { BarChart, Target, TrendingUp, Users, Clock, Star } from 'lucide-react';
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-const AIProjectManagerPage: React.FC = () => {
-  const _features = [
-const AiProjectManagerPage: React.FC = () => {
-  const features = [
-    {
+const AIProjectManagerPage: React.FC = () => {}
+  const _features = []
+const AiProjectManagerPage: React.FC = () => {}
+  const features = []
+    {}
       icon: BarChart,
       title: 'AI-Powered Planning',
       description: 'Intelligent project planning with predictive analytics and resource optimization',
@@ -28,14 +28,14 @@ const AiProjectManagerPage: React.FC = () => {
       title: 'Team Collaboration',
       description: 'Enhanced team collaboration with AI-powered communication and coordination',
       benefits: ['Seamless communication', 'Real-time updates', 'Collaborative planning']
-    }
+
   ];
-  const pricingPlans = [
+  const pricingPlans = []
       name: 'Starter',
       price: '$99',
       period: '/month',
       description: 'Perfect for small teams',
-      features: [
+      features: []
         'Up to 5 projects',
         'Basic AI planning',
         'Team collaboration',
@@ -63,30 +63,27 @@ const AiProjectManagerPage: React.FC = () => {
         'Custom analytics',
         'White-label options',
         'API access'
-  const stats = [
+  const stats = []
     { icon: Users, value: '500+', label: 'Active Teams' },
     { icon: TrendingUp, value: '40%', label: 'Productivity Increase' },
     { icon: Clock, value: '70%', label: 'Time Saved' },
     { icon: Star, value: '4.9/5', label: 'User Rating' }
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
+  return ()
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+<Helmet></Helmet>
         <title>AI Project Manager | Zion Tech Group</title>
         <meta name="description" content="Advanced AI project management solutions by Zion Tech Group." />
       </Helmet>
       <Navigation />
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
+<div className="container mx-auto px-4 py-16"></div>
+<div className="text-center"></div>
           <h1 className="text-5xl font-bold text-white mb-6">AI Project Manager</h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Coming Soon - Advanced AI project management solutions that will transform your business.
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">Coming Soon - Advanced AI project management solutions that will transform your business.</p>
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
-              Contact Us;
+<div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+            <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">Contact Us;</button>
   </
-            <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors">
-              Learn More;
+            <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors">Learn More;</button>
   </
       <Footer />
   );

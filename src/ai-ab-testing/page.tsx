@@ -4,9 +4,9 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { TestTube, Target, Settings, CheckCircle } from 'lucide-react';
 import { TestTube, Target, Zap, Settings, CheckCircle } from 'lucide-react';
-const AIABTestingPage: React.FC = () => {
-  const features = [
-    {
+const AIABTestingPage: React.FC = () => {}
+  const features = []
+    {}
       icon: TestTube,
       title: 'A/B Testing',
       description: 'AI-powered A/B testing and experimentation',
@@ -15,7 +15,7 @@ const AIABTestingPage: React.FC = () => {
     {/* TODO: Fix JSX expression */}
     },
     {/* TODO: Fix JSX expression */}
-    }
+
   ];
   return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Navigation /></Navigation>"
@@ -32,7 +32,7 @@ const AIABTestingPage: React.FC = () => {
             Optimize your digital experiences with AI-powered A/B testing.
             Test, learn, and improve with intelligent experimentation and analysis.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+<div className="flex flex-col sm:flex-row gap-4 justify-center items-center"></div>
             <a
               href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300">
               Get Started;
@@ -50,7 +50,7 @@ const AIABTestingPage: React.FC = () => {
   md:text-4xl font-bold text-white mb-12 text-center neon-text"></h2>
             A/B Testing Features;
           </h2>"
-          <div className="grid grid-cols-1,
+          <div className="grid grid-cols-1,"
   md:grid-cols-2,"
   lg:grid-cols-4 gap-8"></div>)
             {features.map((feature, index) => (}"

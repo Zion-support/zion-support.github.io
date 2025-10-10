@@ -2,16 +2,16 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react';
 interface Props {/* TODO: Fix JSX expression */}
-}
+
 interface State {/* TODO: Fix JSX expression */}
-}
+
 class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression */}
   r: false };
-  }
+
   static getDerivedStateFromError(erro)
   r: Error): State {/* TODO: Fix JSX expression */}
   r: true, error };
-  }
+
   componentDidCatch(erro,
   r: Error, errorInf)
   o: ErrorInfo) {/* TODO: Fix JSX expression */}
@@ -22,15 +22,15 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
     // You can also log to external services here;
     if (typeof window !== 'undefined' && 'gtag' in window) {/* TODO: Fix JSX expression */}
       });
-    }
-  }
+
+
   handleRetry = () => {/* TODO: Fix JSX expression */}
   o: undefined });
   };
   handleReload = () => {/* TODO: Fix JSX expression */}
   };
   render() {/* TODO: Fix JSX expression */}
-      }
+
       return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4"></div>"
           <div className="max-w-md w-full bg-white/10 backdrop-blur-lg rounded-lg p-8 text-center border border-white/20"></div>"
             <div className="mb-6"></div>"
@@ -79,7 +79,7 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
               <a></a>"
                 href="mailt,"
   o:support@ziontechgroup.com?subject=Error Report""
-                className="w-full border border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold,
+                className="w-full border border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold,"
   hover:bg-cyan-400,"
   hover:text-slate-900 transition-colors flex items-center justify-center gap-2"
               >"
@@ -89,7 +89,7 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
             </div>
 "
             <div className="mt-6 text-sm text-gray-400"></div>
-              <p>If this problem persists, please contact our support,
+              <p>If this problem persists, please contact our support,</p>
   team:</p>"
               <p className="mt-1"></p>"
                 <a href="mailt,"
@@ -109,8 +109,8 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
           </div>
         </div>
       );
-    }
+
     return this.props.children;
-  }
-}
+
+
 export default ErrorBoundary;"

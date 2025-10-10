@@ -3,21 +3,18 @@ import React from 'react';
 import { DollarSign, ArrowRight } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-export default function AIFintechPage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <div className="container mx-auto px-4 py-20">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
-            AI Fintech;
+export default function AIFintechPage() {}
+  return ()
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+<div className="container mx-auto px-4 py-20"></div>
+<div className="max-w-4xl mx-auto text-center"></div>
+          <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">AI Fintech;</h1>
   </
-          <p className="text-xl text-gray-300 mb-8">
-            Revolutionary AI-powered financial services including trading, fraud detection, and risk management.
+          <p className="text-xl text-gray-300 mb-8">Revolutionary AI-powered financial services including trading, fraud detection, and risk management.</p>
           </p>
-          <div className="bg-slate-800/50 rounded-lg p-8">
+<div className="bg-slate-800/50 rounded-lg p-8"></div>
             <h2 className="text-2xl font-bold text-white mb-4">AI Financial Solutions</h2>
-            <p className="text-gray-300 mb-6">
-              Enhance your financial services with AI-driven insights, automated trading, and fraud prevention.
+            <p className="text-gray-300 mb-6">Enhance your financial services with AI-driven insights, automated trading, and fraud prevention.</p>
             </p>
             <a
               href="/contact"
@@ -30,6 +27,6 @@ export default function AIFintechPage() {
       </div>
     </div>
   );
-}
+
   </a>
   </h1>

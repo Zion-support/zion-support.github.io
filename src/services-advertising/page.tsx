@@ -2,13 +2,13 @@ import { Link } from 'react-router-dom';
 import { ArrowLeft, ArrowRight, Target, CheckCircle, Star } from 'lucide-react';
 export default function ServicesAdvertisingPage() {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
+
   return (<div>Coming Soon</div>)
-  )
+
           <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"></div>
       {/* Header */}"
       <header className="bg-white shadow-sm border-b"></header>"
-        <div className="max-w-7xl mx-auto px-4,
+        <div className="max-w-7xl mx-auto px-4,"
   sm:px-6,"
   lg:px-8 py-4"></div>"
           <Link href="/" className="inline-flex items-center text-blue-600,"
@@ -16,13 +16,13 @@ export default function ServicesAdvertisingPage() {/* TODO: Fix JSX expression *
             <ArrowLeft className="w-4 h-4 mr-2" /></ArrowLeft>
 // Back to Home;
 import React from 'react';
-export default function ServicesAdvertisingPage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+export default function ServicesAdvertisingPage() {}
+  return ()
+<div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"></div>
       {/* Header */}
-      <header className="bg-white shadow-sm border-b">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <Link href="/" className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200">
+<header className="bg-white shadow-sm border-b"></header>
+<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4"></div>
+<Link href="/" className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200"></Link>
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Home;
   </
@@ -31,7 +31,7 @@ export default function ServicesAdvertisingPage() {
       {/* Hero Section */}"
       <section className="relative overflow-hidden bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white py-20"></section>"
         <div className="absolute inset-0 bg-black opacity-20"></div>"
-        <div className="relative max-w-7xl mx-auto px-4,
+        <div className="relative max-w-7xl mx-auto px-4,"
   sm:px-6,"
   lg:px-8"></div>"
           <div className="text-center"></div>"
@@ -50,7 +50,7 @@ AI-Powered Advertising Solutions;"
 // Transform your advertising campaigns with our breakthrough AI technology. Achieve 95% targeting accuracy,
 //               60% cost reduction, and 300% ROI with intelligent automation and predictive analytics. Our proven;
               methodology has helped 500+ businesses increase their advertising effectiveness while reducing costs.
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+<div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <Link
                 href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200 inline-flex items-center"
 // >
@@ -61,7 +61,7 @@ href="#services" className="border-2 border-white text-white hover:bg-white hove
       </section>
       {/* Key Metrics */}"
       <section className="py-16 bg-white"></section>"
-        <div className="max-w-7xl mx-auto px-4,
+        <div className="max-w-7xl mx-auto px-4,"
   sm:px-6,"
   lg:px-8"></div>"
           <div className="text-center mb-12"></div>"
@@ -71,7 +71,7 @@ href="#services" className="border-2 border-white text-white hover:bg-white hove
           </h2>"
             <p className="text-xl text-gray-600"></p>
 Our AI-powered advertising delivers measurable business impact;"
-          <div className="grid grid-cols-1,
+          <div className="grid grid-cols-1,"
   md:grid-cols-2,"
   lg:grid-cols-4 gap-8"></div>"
               <div className="text-4xl font-bold text-blue-600 mb-2">300%</div>"
@@ -86,7 +86,7 @@ Our AI-powered advertising delivers measurable business impact;"
       <section id="services" className="py-16 bg-gray-50"></section>
 AI Advertising Solutions;
               Comprehensive AI-powered advertising services for maximum impact;"
-          <div className="grid grid-cols-1,
+          <div className="grid grid-cols-1,"
   md:grid-cols-2,"
   lg:grid-cols-3 gap-8"></div>"
             <div className="bg-white rounded-lg shadow-lg p-6,"
@@ -207,18 +207,16 @@ Transparent Pricing;
                   <span>White-label options</span>
                 Contact Sales;
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-Ready to Transform Your Advertising?
-          <p className="text-xl mb-8 text-blue-100">
-            Get a free AI advertising assessment and discover how we can boost your ROI by 300%
+<section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white"></section>
+<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"></div>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Transform Your Advertising?</h2>
+          <p className="text-xl mb-8 text-blue-100">Get a free AI advertising assessment and discover how we can boost your ROI by 300%
               className="bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-colors duration-200 inline-flex items-center" Get Free Assessment;
               href="/case-studies" className="border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
               View Success Stories;
   );
 };
-export default ServicesAdvertisingPage;
+export default ServicesAdvertisingPage;</p>
   </p>
   </h2>
   </div>

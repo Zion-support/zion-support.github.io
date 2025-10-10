@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { ArrowRight, Star, Zap, CheckCircle } from 'lucide-react';
 interface FuturisticServiceCardProps {/* TODO: Fix JSX expression */}
-}
+
 const,
   FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
@@ -21,7 +21,7 @@ const,
     },
     orang,
   e: {/* TODO: Fix JSX expression */}
-    }
+
   };
   const currentColor = colorClasses[color];
   return (<div></div>

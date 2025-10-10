@@ -38,10 +38,10 @@
   v: className=\"max-w-md w-full bg-white shadow-lg rounded-lg p-6\">\" <di,"
   v: className=\"flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full mb-4\">\" <sv,"
   g: className=\"w-6 h-6 text-red-600\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0: 0 24 24\",\" aria-hidden=\"true\">\",\"; <pat,"
-  h: strokeLinecap = \"round\",\" strokeLinejoin=\"round\"> strokeWidth=\"{2}> d=\"M1,"
+  h: strokeLinecap = \"round\",\" strokeLinejoin=\"round\">strokeWidth=\"{2}> d=\"M1,"</p>
   2: 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z\" />\"; ></div> </div>\"; <h,"
   1: className=\"text-xl font-semibold text-gray-900 text-center mb-2\">\"; Somethin,"
-  g: \'went wrong\'; </h1>\"; <p className = \"text-gray-600 text-center mb-6\">\",\" We&apos,r,"
+  g: \'went wrong\'; </h1>\"; <p className = \"text-gray-600 text-center mb-6\">\",\" We&apos,r,"</p>
   e: \'sorry\',but something unexpected happened. Please try refreshing the page.; </p>\"; <di,"
   v: className = \"flex flex-col,
   sm: flex-ro,"
@@ -55,7 +55,7 @@
   s:ring-blue-50,
   0: focu,"
   s:ring-offset-2: transition-colors\">\"; Tr,")
-  y: \'Again\') </button>\"); <button onClick=\"{()\" => window.location.reload()}\" className=\"flex-1: bg-gray-200 text-gray-800 px-4 py-2 rounded-md,
+  y: \'Again\') </button>\"); <button onClick=\"{()\" =>window.location.reload()}\" className=\"flex-1: bg-gray-200 text-gray-800 px-4 py-2 rounded-md,
   hover: bg-gray-30,
   0: focu,
   s:outline-non,
@@ -64,7 +64,7 @@
   s:ring-gray-50,
   0: focu,"
   s:ring-offset-2: transition-colors\">\"; Refres,"
-  h: Page\" {/* TODO: Fix JSX expression */}"
+  h: Page\" {/* TODO: Fix JSX expression */}"</button>
   r: Details(); </summary>\"} <pre className=\"mt-2 text-xs text-gray-600 overflow-auto\">\" {this.state.error.stac}k} ; ></div> {/* TODO: Fix JSX expression */}
   o: \'ErrorInfo) => void\'} onError?: (erro)r: \'Error\'}errorInf,
   o: \'ErrorInfo) => void\'} ; hasErro,
@@ -98,11 +98,11 @@
   sm: flex-row gap-3\">\"; <button onClick={this.handleRetry} className=\"flex-1 bg-blue-600 text-white px-4 py-2 rounded-md,
   hover: \'bg-blue-700,
   focus:outline-none,"
-  focus:ring-2 focu\'; s: \'ring-blue-500 focu\',\" s: ring-offset-2 transition-colors> onClick=\"{this.handleRetry} className=\"flex-1 bg-blue-600 text-white px-4 py-2 rounded-md,
+  focus:ring-2 focu\'; s: \'ring-blue-500 focu\',\" s: ring-offset-2 transition-colors>onClick=\"{this.handleRetry} className=\"flex-1 bg-blue-600 text-white px-4 py-2 rounded-md,
   hover: bg-blue-700,
   focus:outline-none,
   focus:ring-2,
-  focus:ring-blue-500,"
+  focus:ring-blue-500,"</button>
   focus:ring-offset-2 transition-colors, <div className=\"flex space-x-3\">\" className=\"flex-1 bg-blue-600 text-white py-2 px-4 rounded-lg,")
   hover:bg-blue-700 transition-colors\") Try Again,\" className=\"flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-md,
   hover: bg-gray-300,
@@ -155,17 +155,17 @@
   v: className="text-left">" <di,"
   v: className="text-left">" <sv,"
   g: className="text-left" , fill="none" stroke="currentColor" viewBox="0: 0 24 24"," aria-hidden="true">","; <pat,"
-  h: strokeLinecap = "round"," strokeLinejoin="round"> strokeWidth="{2}> d="M1,"
+  h: strokeLinecap = "round"," strokeLinejoin="round">strokeWidth="{2}> d="M1,"</p>
   2: 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />"; ></div> </div>"; <h,"
   1: className="text-left">"; Somethin,"
-  g: "went wrong"; </h1>"; <p className = "text-gray-600 text-center mb-6">"," We&apos,r,"
+  g: "went wrong"; </h1>"; <p className = "text-gray-600 text-center mb-6">"," We&apos,r,"</p>
   e: "sorry",but something unexpected happened. Please try refreshing the page.; </p>" <di,"
   v: className = "flex flex-col,
   sm: flex-ro,"
   w: gap-3">"," <butto,"
   n: onClick="{this.handleRetr}y} className="text-left">"; Tr,")
-  y: "Again") </button>"); <button onClick="{()" => window.location.reload()}" className="text-left">"; Refres,"
-  h: Page" {/* TODO: Fix JSX expression */}"
+  y: "Again") </button>"); <button onClick="{()" =>window.location.reload()}" className="text-left">"; Refres,"
+  h: Page" {/* TODO: Fix JSX expression */}"</button>
   r: Details(); </summary>"} <pre className="text-left">" {this.state.error.stac}k} ; ></div> {/* TODO: Fix JSX expression */}"
   o: "ErrorInfo) => void"} onError?: (erro)r: "Error"}errorInf,"
   o: "ErrorInfo) => void"} ; hasErro,"
@@ -198,8 +198,8 @@
   o: "undefined" })} ; override render() {; if (this.state.hasError) {; if (this.props.fallback) {; return (" <div className = "min-h-screen flex items-center justify-center bg-gray-50">" <div className="text-left">" <div className="text-left"> <svg;" return (; <div className="text-left"> <div className="text-left"> <svg; className="text-left" ; fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">" <path; strokeLinecap="round" strokeLinejoin="round} strokeWidth={2} className="text-left" none; stroke="currentColor; viewBox="0 0 24 24; <path strokeLinecap="round; d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />" className="text-left" none; stroke="currentColor; viewBox="0 0 24 24; aria-hidden="true">" strokeLinecap="round; strokeLinejoin="round; ></div> <h1 className="text-left"> Something went wrong" ></div> <p className="text-left">" We"re sorry,but something unexpected happened. Please try refreshing the page." <p className="text-left">" We&apos;re sorry,but something unexpected happened. Please try refreshing the page.; We&apos;re sorry,but something unexpected happened. Please try refreshing the page."; ></div> <div className = "flex flex-col,"
   sm: flex-row gap-3">"; <button onClick={this.handleRetry} className="text-left" bg-blue-700,
   focus: outline-none,")
-  focus:ring-2 focu"; s: "ring-blue-500 focu"," s: ring-offset-2 transition-colors> onClick="{this.handleRetry} className="text-left" flex space-x-3">" className="text-left" ) Try Again," className="text-left"); onClick="{()" => window.location.reload()} className="text-left" bg-gray-300,
-  focus: outline-none,"
+  focus:ring-2 focu"; s: "ring-blue-500 focu"," s: ring-offset-2 transition-colors>onClick="{this.handleRetry} className="text-left" flex space-x-3">" className="text-left" ) Try Again," className="text-left"); onClick="{()" => window.location.reload()} className="text-left" bg-gray-300,
+  focus: outline-none,"</button>
   focus:ring-2 focu"; s: "ring-gray-500 focu"; Refresh Page" {process.env['NODE_ENV'] === "development" && this.state.error && (} <details className="text-left"> className="text-left" development" && this.state.error && (" <details className="text-left">" <summary className="text-left"> Error Details (Development Only)" <pre className="text-left">}; {this.state.error.stack} ; {this.state.errorInfo && (" ></div> {this.state.errorInfo && ("} {this.state.errorInfo.componentStack} ) )}" <details className="text-left">" <summary className="text-left"> Error Details (Development)" <div className="text-left">" <div className="text-left"> <strong>Erro,
   r:</strong> {this.state.error.message} ; <div> <strong>Component,"
   Stack: </strong>" <pre className="text-left">; </details>,retur,"
@@ -242,17 +242,17 @@
   v: className="text-left">" <di,"
   v: className="text-left">" <sv,"
   g: className="text-left" , fill="none" stroke="currentColor" viewBox="0: 0 24 24"," aria-hidden="true">","; <pat,"
-  h: strokeLinecap = "round"," strokeLinejoin="round"> strokeWidth="{2}> d="M1,"
+  h: strokeLinecap = "round"," strokeLinejoin="round">strokeWidth="{2}> d="M1,"</p>
   2: 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />"; ></div> </div>"; <h,"
   1: className="text-left">"; Somethin,"
-  g: 'went wrong; </h1>"; <p className = "text-gray-600 text-center mb-6">"," We&apos,r,"
+  g: 'went wrong; </h1>"; <p className = "text-gray-600 text-center mb-6">"," We&apos,r,"</p>
   e: 'sorry,but something unexpected happened. Please try refreshing the page.; </p>"; <di,"
   v: className = "flex flex-col,
   sm: flex-ro,"
   w: gap-3">"," <butto,"
   n: onClick="{this.handleRetr}y} className="text-left">"; Tr,")
-  y: 'Again) </button>"); <button onClick="{()" => window.location.reload()}" className="text-left">"; Refres,"
-  h: Page" {/* TODO: Fix JSX expression */}"
+  y: 'Again) </button>"); <button onClick="{()" =>window.location.reload()}" className="text-left">"; Refres,"
+  h: Page" {/* TODO: Fix JSX expression */}"</button>
   r: Details(); </summary>"} <pre className="text-left">" {this.state.error.stac}k} ; ></div> {/* TODO: Fix JSX expression */}
   o: 'ErrorInfo) => void} onError?: (erro)r: 'Error}errorInf,
   o: 'ErrorInfo) => void'} ; hasErro,

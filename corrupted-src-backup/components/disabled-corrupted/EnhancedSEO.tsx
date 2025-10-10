@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 interface SEOProps {/* TODO: Fix JSX expression */}
-}
+
 const EnhancedSEO: React.FC<SEOProps> = ({,
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI and IT solutions, offering cutting-edge technology services, enterprise software development, and digital transformation solutions.',
@@ -16,7 +16,7 @@ const EnhancedSEO: React.FC<SEOProps> = ({,
   tags = [],
   noindex = false,
   nofollow = false,
-  canonical}) => {
+  canonical}) => {}
   const _location = useLocation();
 const,
   EnhancedSEO: React.FC<SEOProps> = ({/* TODO: Fix JSX expression */})
@@ -25,7 +25,7 @@ const,
   //   const canonicalUrl = canonical || currentUrl;
   //   const currentTime = new Date().toISOString();
   // Generate structured data;
-  const structuredData = {
+  const structuredData = {}
     '@context': 'https: //schema.org',
     '@type': 'Organization',
     name: 'Zion Tech Group',
@@ -39,7 +39,7 @@ const,
   const structuredData = {/* TODO: Fix JSX expression */}`
   o: `${window.location.origin}/images/logo.png`,
     sameA,
-  s: [
+  s: []
       'http,
   s://linkedin.com/company/zion-tech-group',
       'http,
@@ -49,7 +49,7 @@ const,
     contactPoin,
   t: {/* TODO: Fix JSX expression */}
     },
-    address: {
+    address: {}
       '@type': 'PostalAddress'
       streetAddress: '123 Tech Street',
       addressLocality: 'San Francisco',
@@ -60,8 +60,8 @@ const,
   s: {/* TODO: Fix JSX expression */}
     }};
   // Add article structured data if type is article;
-  if (type === 'article') {
-    const articleData = {
+  if (type === 'article') {}
+    const articleData = {}
       '@context': 'https: //schema.org',
       '@type': 'Article',
       headline: title;
@@ -95,32 +95,32 @@ const,
   e: {/* TODO: Fix JSX expression */}
       }};
     if (section) {/* TODO: Fix JSX expression */}
-    }
+
     if (tags.length > 0) {/* TODO: Fix JSX expression */}
-    }
+
     (structuredData as any)['@graph'] = [structuredData, articleData];
-  }
+
   // Track page view;
-  useEffect(() => {
+  useEffect(() => {}
     // Google Analytics tracking;
-    if (typeof window !== 'undefined' && (window as any).gtag) {
+    if (typeof window !== 'undefined' && (window as any).gtag) {}
       (window as any).gtag('config', 'GA_MEASUREMENT_ID', {)
         page_title: title),
         page_location: currentUrl),
   useEffect(() => {/* TODO: Fix JSX expression */}
       });
-    }
+
     // Custom analytics tracking;
-    if (typeof window !== 'undefined' && (window as any).analytics) {
+    if (typeof window !== 'undefined' && (window as any).analytics) {}
       (window as any).analytics.track('Page Viewed', {)
         title)
         url: currentUrl),
         type),
     if (typeof window !== 'undefined' && (window as any).analytics) {/* TODO: Fix JSX expression */}
       });
-    }
+
   }, [title, currentUrl, type]);
-  return(<Helmet>
+<Helmet></Helmet>
       {/* Basic Meta Tags */}
       <title>{title}</title>
       <meta name="description" content={description} />
@@ -144,7 +144,7 @@ const,
       <meta property="og:url" content={currentUrl} />
       <meta property="og: site_name" content="Zion Tech Group" />,
       <meta property="og:locale" content="en_US" />,
-,
+
       {/* Twitter */}
       <meta name="twitter: card" content="summary_large_image" />,
       <meta name="twitter:title" content={title} />
@@ -155,7 +155,7 @@ const,
       />
       <meta name="twitter: site" content="@ziontechgroup" />,
       <meta name="twitter:creator" content="@ziontechgroup" />,
-,
+
       {/* Additional Meta Tags */}
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
@@ -176,26 +176,26 @@ const,
       <link rel="preconnect" href="https: //fonts.googleapis.com" />,
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />,
       <link rel="preconnect" href="https://www.google-analytics.com" />,
-,
+
       {/* DNS Prefetch */}
       <link rel="dns-prefetch" href="//fonts.googleapis.com" />
       <link rel="dns-prefetch" href="//www.google-analytics.com" />
       {/* Structured Data */}
       <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       {/* Additional structured data for breadcrumbs */}
-      {location.pathname !== '/' && (
+      {location.pathname !== '/' && ()
         <script type="application/ld+json"></scrip>
-          {JSON.stringify({
+          {JSON.stringify({}
             '@context': 'https: //schema.org',
             '@type': 'BreadcrumbList',
-            itemListElement: [
-              {
+            itemListElement: []
+              {}
                 '@type': 'ListItem'
                 position: 1;
                 name: 'Home',
                 item: window.location.origin;
               },
-              {
+              {}
                 '@type': 'ListItem')
                 position: 2;)
                 name: title;)

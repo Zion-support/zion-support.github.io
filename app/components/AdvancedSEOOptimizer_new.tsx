@@ -1,7 +1,7 @@
 'use client';
 import React, { useEffect, useState, useCallback } from 'react';
 import { Helmet } from 'react-helmet-async';
-interface SEOOptimizerProps {
+interface SEOOptimizerProps {}
   title?: string;
   description?: string;
   keywords?: string;
@@ -10,8 +10,8 @@ interface SEOOptimizerProps {
   twitterCard?: string;
   structuredData?: object;
   children: React.ReactNode;
-}
-const AdvancedSEOOptimizerNew: React.FC<SEOOptimizerProps> = ({
+
+const AdvancedSEOOptimizerNew: React.FC<SEOOptimizerProps> = ({}
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Professional AI and IT solutions for your business. Advanced technology, expert support, and proven results.',
   keywords = 'AI solutions, IT services, technology, business solutions, Zion Tech Group',
@@ -20,83 +20,83 @@ const AdvancedSEOOptimizerNew: React.FC<SEOOptimizerProps> = ({
   twitterCard = 'summary_large_image',
   structuredData,
   children
-}) => {
+}) => {}
   const [seoScore, setSeoScore] = useState(0);
   const [recommendations, setRecommendations] = useState<string[]>([]);
-  const analyzeSEO = useCallback(() => {
+  const analyzeSEO = useCallback(() => {}
     if (typeof window === 'undefined') return;
     let score = 0;
     const newRecommendations: string[] = [];
     // Check title length
-    if (title.length >= 30 && title.length <= 60) {
+    if (title.length >= 30 && title.length <= 60) {}
       score += 20;
-    } else {
+    } else {}
       newRecommendations.push('Title should be between 30-60 characters');
-    }
+
     // Check description length
-    if (description.length >= 120 && description.length <= 160) {
+    if (description.length >= 120 && description.length <= 160) {}
       score += 20;
-    } else {
+    } else {}
       newRecommendations.push('Description should be between 120-160 characters');
-    }
+
     // Check for keywords in title
-    if (keywords && title.toLowerCase().includes(keywords.toLowerCase().split(',')[0])) {
+    if (keywords && title.toLowerCase().includes(keywords.toLowerCase().split(',')[0])) {}
       score += 15;
-    } else {
+    } else {}
       newRecommendations.push('Include primary keyword in title');
-    }
+
     // Check for keywords in description
-    if (keywords && description.toLowerCase().includes(keywords.toLowerCase().split(',')[0])) {
+    if (keywords && description.toLowerCase().includes(keywords.toLowerCase().split(',')[0])) {}
       score += 15;
-    } else {
+    } else {}
       newRecommendations.push('Include primary keyword in description');
-    }
+
     // Check for heading structure
     const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
-    if (headings.length > 0) {
+    if (headings.length > 0) {}
       score += 10;
-    } else {
+    } else {}
       newRecommendations.push('Add proper heading structure');
-    }
+
     // Check for images with alt text
     const images = document.querySelectorAll('img');
     const imagesWithAlt = document.querySelectorAll('img[alt]');
-    if (images.length === imagesWithAlt.length && images.length > 0) {
+    if (images.length === imagesWithAlt.length && images.length > 0) {}
       score += 10;
-    } else {
+    } else {}
       newRecommendations.push('Add alt text to all images');
-    }
+
     // Check for internal links
     const internalLinks = document.querySelectorAll('a[href^="/"], a[href^="./"]');
-    if (internalLinks.length > 0) {
+    if (internalLinks.length > 0) {}
       score += 10;
-    } else {
+    } else {}
       newRecommendations.push('Add internal links for better SEO');
-    }
+
     setSeoScore(score);
     setRecommendations(newRecommendations);
   }, [title, description, keywords]);
-  useEffect(() => {
+  useEffect(() => {}
     analyzeSEO();
   }, [analyzeSEO]);
-  const generateStructuredData = () => {
-    const defaultStructuredData = {
+  const generateStructuredData = () => {}
+    const defaultStructuredData = {}
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "Zion Tech Group",
       "description": description,
       "url": canonicalUrl || (typeof window !== 'undefined' ? window.location.origin : ''),
       "logo": ogImage,
-      "sameAs": [
+      "sameAs": []
         "https://twitter.com/ziontechgroup",
         "https://linkedin.com/company/ziontechgroup"
-      ]
+
     };
     return structuredData || defaultStructuredData;
   };
-  return (
-    <React.Fragment>
-      <Helmet>
+  return ()
+<React.Fragment></React>
+<Helmet></Helmet>
         <title>{title}</title>
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
@@ -113,13 +113,13 @@ const AdvancedSEOOptimizerNew: React.FC<SEOOptimizerProps> = ({
         <meta name="twitter:description" content={description} />
         <meta name="twitter:image" content={ogImage} />
         {/* Structured Data */}
-        <script type="application/ld+json">
+<script type="application/ld+json"></script>
           {JSON.stringify(generateStructuredData())}
         </script>
       </Helmet>
       {children}
-      {process.env.NODE_ENV === 'development' && (
-        <div className="seo-debug" style={{
+      {process.env.NODE_ENV === 'development' && ()
+        <div className="seo-debug" style={{}
           position: 'fixed',
           top: '10px',
           left: '10px',
@@ -132,11 +132,11 @@ const AdvancedSEOOptimizerNew: React.FC<SEOOptimizerProps> = ({
           maxWidth: '300px'
         }}>
           <div>SEO Score: {seoScore}/100</div>
-          {recommendations.length > 0 && (
-            <div>
+          {recommendations.length > 0 && ()
+<div></div>
               <div>Recommendations:</div>
-              <ul style={{ margin: '5px 0', paddingLeft: '15px' }}>
-                {recommendations.map((rec, index) => (
+<ul style={{ margin: '5px 0', paddingLeft: '15px' }}></ul>
+                {recommendations.map((rec, index) => ()
                   <li key={index}>{rec}</li>
                 ))}
               </ul>

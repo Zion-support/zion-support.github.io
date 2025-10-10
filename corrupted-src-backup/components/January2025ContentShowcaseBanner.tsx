@@ -1,19 +1,18 @@
 import, React, from 'rea, c, t';
 impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
-const, January2025ContentShowcaseBanne, r: Rea, c, t.FC = () => { 
+const, January2025ContentShowcaseBanne, r: Rea, c, t.FC = () => {}
   retu, r, n(<div, classNam, e = 'relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-9, 0, 0' > {' ' }
-          <h2, classNam, e='te, x, t-4xl, m, d:te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t'>
+<h2, classNam, e='te, x, t-4xl, m, d:te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t'></h2>
             <span, classNam, e='bg-gradie, n, t-to-r, fro, m-pi, n, k-400, vi, a-purp, l, e-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t'>)
-              Complete, AI, Knowledge H, u, b;)
+              Complete, AI, Knowledge H, u, b;)</span>
           <p, classNam, e='te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, m, b-12'>)
             Access, the, most comprehensive, collection, of AI, insig, h, t, s)
-  retu, r, n (
+  retu, r, n (</p>
     <div, classNam, e = 'relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-9, 0, 0' > {' ' }</div>
           <h2, classNam, e='te, x, t-4xl, m, d:te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t'></h2>
-            <span, classNam, e='bg-gradie, n, t-to-r, fro, m-pi, n, k-400, vi, a-purp, l, e-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t'>
+<span, classNam, e='bg-gradie, n, t-to-r, fro, m-pi, n, k-400, vi, a-purp, l, e-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t'></span>
               Complete, AI, Knowledge H, u, b</span>
-          <p, classNam, e='te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, m, b-12'>
-const, January2025ContentShowcaseBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
+          <p, classNam, e='te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, m, b-12'>const, January2025ContentShowcaseBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}</p>
     <div, classNam, e = 'relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-9, 0, 0' > {' ' }
           <h2, classNam, e='te, x, t-4xl, m, d:te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t'></h2>
             <span, classNam, e='bg-gradie, n, t-to-r, fro, m-pi, n, k-400, vi, a-purp, l, e-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t'></span>
@@ -25,7 +24,7 @@ const, January2025ContentShowcaseBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JS
           </p>
         </d, i, v>
         {/* Content, Categorie, s */}
-        <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-3, ga, p-8, m, b-16'>
+<div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-3, ga, p-8, m, b-16'></div>
           {/* Breakthrough, Technolog, i, e, s */}</div>
         <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-3, ga, p-8, m, b-16'></div>
           {/* Breakthrough, Technolog, i, e, s */}
@@ -35,9 +34,8 @@ const, January2025ContentShowcaseBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JS
               <div, classNam, e='flex, item, s-center, ga, p-4, m, b-6'></div>
                 <div, classNam, e='p-3, b, g-pi, n, k-5, 0, 0/20, rounde, d-xl'></div>
                   <Zap, classNam, e='w-8 h-8, tex, t-pi, n, k-4, 0, 0' />
-              <p, classNam, e='te, x, t-gr, a, y-300, m, b-6, leadin, g-relax, e, d'>
-                Explore, the, latest AI, breakthroughs, including quant, u, m-neural, fus, i, o, n, synthetic, consciousnes, s, and, neuromorphic, computing.
-                Explore, All, Technologies;
+              <p, classNam, e='te, x, t-gr, a, y-300, m, b-6, leadin, g-relax, e, d'>Explore, the, latest AI, breakthroughs, including quant, u, m-neural, fus, i, o, n, synthetic, consciousnes, s, and, neuromorphic, computing.
+                Explore, All, Technologies;</p>
                 Explore, All, Technologies</p>
                 <Link, classNam, e='w-4 h-4' />
                   <Zap, classNam, e='w-8 h-8, tex, t-pi, n, k-4, 0, 0' /></Zap>
@@ -74,7 +72,7 @@ const, January2025ContentShowcaseBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JS
                 <Link, classNam, e='w-4 h-4' />
         {/* Statis, t, i, c, s */}
         <div, classNam, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-3x, l, p-12, border, border-whi, t, e/20, m, b-16'></div>
-          <h3, classNam, e='te, x, t-3xl, fon, t-bold, tex, t-white, tex, t-center, m, b-12'>
+<h3, classNam, e='te, x, t-3xl, fon, t-bold, tex, t-white, tex, t-center, m, b-12'></h3>
                   <BookOpen, classNam, e='w-8 h-8, tex, t-bl, u, e-4, 0, 0' /></BookOpen>
                 Read, All, Articles;
                 <Link, classNam, e='w-4 h-4' /></Link>
@@ -129,4 +127,3 @@ const, January2025ContentShowcaseBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JS
               Explore, Complete, Library;
               <Users, classNam, e='w-5 h-5' /></Users>
               Join, AI, Community;
-}

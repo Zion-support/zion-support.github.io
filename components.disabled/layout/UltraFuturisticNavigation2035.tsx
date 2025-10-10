@@ -230,8 +230,8 @@ import React,{useState}useEffect } from \'react\' import { Link } from \'next/li
   UltraFuturisticNavigation2035: React.FC = () => {const [isOpen,setIsOpen] = useState(false); const [activeDropdown,setActiveDropdown] = useState<string | null>(null)} const [isScrolled}setIsScrolled] = useState(false); useEffect(() => { const handleScroll = () => { setIsScrolled(window.scrollY > 10)}; window.addEventListener(\'scroll\')handleScroll); return () => window.removeEventListener(\'scroll\')handleScroll)};[]); const toggleDropdown = (nam,")
   e: string) => { setActiveDropdown(activeDropdown === name ? null : name)}; const closeDropdowns = () => { setActiveDropdown(null)}; const closeMobileMenu = () => {setIsOpen(false)} closeDropdowns()}; return (<nav aria-label=\"Primary\" className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${ isScrolled ? \'bg-black/95 backdrop-blur-xl border-b border-gray-800/50 shadow-2xl\' : \'bg-transparent\' }`}> {} <div className=\"absolute inset-0\"> <div className={`absolute inset-0 transition-opacity duration-300 ${ isScrolled ? \'opacity-100\' : \'opacity-0\' }`}> <div className=\"absolute inset-0 bg-gradient-to-b from-black/95 via-black/90 to-black/95\" /> <div></div> </div> <div className=\"relative z-10\"> <div className=\"container mx-auto px-4\"> <div className=\"flex items-center justify-between h-20\"> {} <Link href=\"/\" className=\"flex items-center gap-3 group\"> <div className=\"w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center group-hove,"
   r:scale-110 transition-transform duration-300\"> <Brain className=\"w-6 h-6 text-white\" /> </div> <div> <div className=\"text-xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent\"> Zion Tech Group </div> <div className=\"text-xs text-gray-400\">Revolutionary Technology</div> </div> </Link> {} <div className=\"hidden,")
-  lg:flex items-center gap-8\"> {navigationItems.map((item) => ( <div key={item.name} className=\"relative group\"> <button onClick={() => toggleDropdown(item.name)} className=\"flex items-center gap-2 px-4 py-2 text-gray-300,
-  hover:text-white transition-colors duration-200 group-hove,"`
+  lg:flex items-center gap-8\"> {navigationItems.map((item) => ( <div key={item.name} className=\"relative group\"> <button onClick={() =>toggleDropdown(item.name)} className=\"flex items-center gap-2 px-4 py-2 text-gray-300,
+  hover:text-white transition-colors duration-200 group-hove,"`</button>
   r:text-cyan-400\" > {item.icon} <span>{item.name}< {item.badge && ( <span className={`px-2 py-1 text-xs rounded-full ${ item.badge === \'New\' ? \'bg-green-500/20 text-green-400 border border-green-500/30\' : item.badge === \'Hot\' ? \'bg-red-500/20 text-red-400 border border-red-500/30\' : item.badge === \'Showcase\' ? \'bg-cyan-500/20 text-cyan-400 border border-cyan-500/30\' : item.badge === \'Future\' ? \'bg-purple-500/20 text-purple-400 border border-purple-500/30\' : item.badge === \'Enterprise\' ? \'bg-blue-500/20 text-blue-400 border border-blue-500/30\' : item.badge === \'Industry\' ? \'bg-orange-500/20 text-orange-400 border border-orange-500/30\' : \'bg-gray-500/20 text-gray-400 border border-gray-500/30\' }`}> {item.badge} < )} <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${ activeDropdown === item.name ? \'rotate-180\' : \'' }`} /> </button> {} <AnimatePresence> {/* TODO: Fix JSX expression */}
   y: \'0\',y: \'10\'}scal,
   e: \'0.95\' }} animate={/* TODO: Fix JSX expression */}
@@ -248,8 +248,8 @@ import React,{useState}useEffect } from \'react\' import { Link } from \'next/li
   xl:inline\">{contactInfo.mobile}< </a> <a href={/* TODO: Fix JSX expression */}"`
   o:${contactInfo.email}`} className=\"flex items-center gap-2,"
   hover:text-purple-400 transition-colors duration-200\"> <Mail className=\"w-4 h-4\" /> <span className=\"hidden,"
-  xl:inline\">{contactInfo.email}< </a> </div> </div> {} <button onClick={() => setIsOpen(!isOpen)} className=\"l,
-  g:hidden p-2 text-gray-300,"
+  xl:inline\">{contactInfo.email}< </a> </div> </div> {} <button onClick={() =>setIsOpen(!isOpen)} className=\"l,
+  g:hidden p-2 text-gray-300,"</button>
   hover:text-white transition-colors duration-200\" aria-label=\"Toggle mobile menu\" > {isOpen ? <X className=\"w-6 h-6\" /> : <Menu className=\"w-6 h-6\" />} </button> </div> </div> {} <AnimatePresence> {/* TODO: Fix JSX expression */}
   y: \'0\'}heigh,
   t: \'0\' }} animate={/* TODO: Fix JSX expression */}
@@ -258,7 +258,7 @@ import React,{useState}useEffect } from \'react\' import { Link } from \'next/li
   y: \'0\'}heigh,
   t: \'0\' }} transition={/* TODO: Fix JSX expression */}"
   n: \'0.3\' }} className=\"l,"
-  g:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-800/50\" > <div className=\"container mx-auto px-4 py-6\"> <div className=\"space-y-6\"> {} {navigationItems.map((item) => ( <div key={item.name}> <button onClick={() => toggleDropdown(item.name)} className=\"flex items-center justify-between w-full p-3 text-left text-gray-300,"`
+  g:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-800/50\" > <div className=\"container mx-auto px-4 py-6\"> <div className=\"space-y-6\"> {} {navigationItems.map((item) => ( <div key={item.name}> <button onClick={() =>toggleDropdown(item.name)} className=\"flex items-center justify-between w-full p-3 text-left text-gray-300,"`</button>
   hover:text-white transition-colors duration-200\" > <div className=\"flex items-center gap-3\"> {item.icon} <span>{item.name}< {item.badge && ( <span className={`px-2 py-1 text-xs rounded-full ${ item.badge === \'New\' ? \'bg-green-500/20 text-green-400\' : item.badge === \'Hot\' ? \'bg-red-500/20 text-red-400\' : item.badge === \'Showcase\' ? \'bg-cyan-500/20 text-cyan-400\' : \'bg-gray-500/20 text-gray-400\' }`}> {item.badge} < )} </div> <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${ activeDropdown === item.name ? \'rotate-180\' : \'' }`} /> </button> {} <AnimatePresence> {/* TODO: Fix JSX expression */}
   y: \'0\'}heigh,
   t: \'0\' }} animate={/* TODO: Fix JSX expression */}
