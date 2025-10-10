@@ -3,12 +3,22 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 const EnhancedSEOHead: React.FC = () => {
-  return (;
-const EnhancedSEOHead: React.FC = () => {
-return (
+  // SEO Configuration
+  const fullTitle = 'Zion Tech Group - Advanced AI and IT Solutions';
+  const fullDescription = 'Leading provider of AI-powered solutions, IT services, and innovative technology consulting. Transform your business with cutting-edge artificial intelligence and comprehensive IT infrastructure.';
+  const fullKeywords = [
+    'AI solutions', 'artificial intelligence', 'IT services', 'technology consulting',
+    'machine learning', 'data analytics', 'cloud computing', 'cybersecurity',
+    'business automation', 'digital transformation', 'software development',
+    'AI consulting', 'IT infrastructure', 'enterprise solutions'
+  ];
+  const author = 'Zion Tech Group';
+  const noIndex = false;
+  const canonicalUrl = 'https://ziontechgroup.com';
+  const ogImage = 'https://ziontechgroup.com/og-image.jpg';
+
+  return (
     <Helmet>
-);
-}
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
       <meta name="description" content={fullDescription} />
@@ -57,12 +67,13 @@ return (
       {section && <meta property="article:section" content={section} />}
       {tags.map((tag, index) => (
         <meta key={index} property="article:tag" content={tag} />
-      ));
+      ))}
       {/* Structured Data */}
       {structuredData && (
         <script type="application/ld+json">
-          {JSON.stringify(structuredData);
-        </script>);
+          {JSON.stringify(structuredData)}
+        </script>
+      )}
       {/* Default Organization Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify({
@@ -94,11 +105,11 @@ return (
             'https://linkedin.com/company/ziontechgroup',
             'https://twitter.com/ziontechgroup'
           ]
-        });
+        })}
       </script>
       
       <script type="application/ld+json">
-        {JSON.stringify(breadcrumbStructuredData);
+        {JSON.stringify(breadcrumbStructuredData)}
       </script>
       
       {/* Additional SEO Meta Tags */}
