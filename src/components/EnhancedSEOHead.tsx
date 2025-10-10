@@ -128,12 +128,11 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
         })}
       </script>
       
-<<<<<<< HEAD
       {/* Performance Hints */}
       <link rel="dns-prefetch" href="//fonts.googleapis.com" />
       <link rel="dns-prefetch" href="//fonts.gstatic.com" />
       <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
-=======
+      
       {/* Performance Optimizations */}
       <meta name="mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />

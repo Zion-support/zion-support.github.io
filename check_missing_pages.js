@@ -1,83 +1,70 @@
-#!/usr/bin/env node
+const fs = require('fs');
 
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
+// Read the Footer component
+const footerContent = fs.readFileSync('app/components/Footer.tsx', 'utf8');
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-// Routes defined in App.tsx
-const definedRoutes = [
-  '/', '/about', '/contact', '/services', '/blog', '/case-studies',
-  '/ai-analytics-dashboard', '/ai-chatbot-builder', '/ai-content-generation', '/ai-crm',
-  '/ai-customer-support', '/ai-cybersecurity', '/ai-data-analytics', '/ai-data-visualization',
-  '/ai-document-processing', '/ai-ecommerce-solutions', '/ai-email-assistant', '/ai-fintech',
-  '/ai-healthcare', '/ai-lead-generation', '/ai-marketing', '/ai-mobile-app-development',
-  '/ai-sales-automation', '/ai-scheduler', '/ai-services', '/ai-workflow-automation',
-  '/ai-writing-assistant', '/ai-project-manager', '/ai-social-media-manager', '/ai-email-marketing',
-  '/ai-customer-support-bot', '/ai-seo-optimizer', '/ai-financial-analyzer', '/ai-video-generation',
-  '/ai-voice-cloning', '/ai-music-composition', '/ai-fashion-design', '/ai-fitness-coach',
-  '/ai-3d-generation', '/machine-learning', '/nlp', '/computer-vision', '/ai-automation',
-  '/quantum-ai', '/database-services', '/network-infrastructure', '/it-support',
-  '/web-development', '/ai-fraud-detection', '/ai-content-writer', '/ai-code-generation',
-  '/ai-business-intelligence', '/it-consulting', '/cloud-migration', '/team', '/careers',
-  '/analytics-tools', '/api-docs', '/api', '/autonomous-systems', '/blockchain',
-  '/blockchain-web3', '/business-apps', '/business-intelligence', '/cloud-services',
-  '/compliance', '/consultation', '/cookies', '/cybersecurity', '/database', '/demo',
-  '/developer-tools', '/devops', '/docs', '/enterprise', '/expense-tracker', '/gdpr',
-  '/iot-edge-computing', '/iot-edge', '/it-infrastructure', '/it-services', '/marketing-tools',
-  '/micro-saas', '/networking', '/news', '/offline', '/pricing', '/privacy', '/productivity',
-  '/quantum-computing', '/robotics', '/security', '/services-advertising', '/sitemap',
-  '/smart-analytics', '/status', '/support', '/system-status', '/task-manager-pro', '/terms'
-];
-
-// Get existing pages from src directory
-function getExistingPages() {
-  const srcDir = '/workspace/src';
-  const pages = [];
-  
-  function scanDirectory(dir, basePath = '') {
-    const items = fs.readdirSync(dir);
-    
-    for (const item of items) {
-      const fullPath = path.join(dir, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory()) {
-        const pagePath = path.join(fullPath, 'page.tsx');
-        if (fs.existsSync(pagePath)) {
-          const route = basePath + '/' + item;
-          pages.push(route);
-        }
-        scanDirectory(fullPath, basePath + '/' + item);
-      }
+// Extract all href values from the Footer
+const footerLinks = [];
+const hrefMatches = footerContent.match(/href:\s*'([^']+)'/g);
+if (hrefMatches) {
+  hrefMatches.forEach(match => {
+    const href = match.match(/href:\s*'([^']+)'/)[1];
+    if (href.startsWith('/')) {
+      footerLinks.push(href.substring(1)); // Remove leading slash
     }
-  }
-  
-  scanDirectory(srcDir);
-  return pages;
+  });
 }
 
-const existingPages = getExistingPages();
-console.log('Existing pages:', existingPages.length);
-console.log('Defined routes:', definedRoutes.length);
+// Read the Navigation component
+const navContent = fs.readFileSync('app/components/Navigation.tsx', 'utf8');
+
+// Extract all path values from the Navigation
+const navLinks = [];
+const pathMatches = navContent.match(/path:\s*'([^']+)'/g);
+if (pathMatches) {
+  pathMatches.forEach(match => {
+    const path = match.match(/path:\s*'([^']+)'/)[1];
+    if (path.startsWith('/')) {
+      navLinks.push(path.substring(1)); // Remove leading slash
+    }
+  });
+}
+
+// Get all existing pages
+const existingPages = [];
+const { execSync } = require('child_process');
+try {
+  const result = execSync('find app -name "page.tsx" | sed "s|app/||" | sed "s|/page.tsx||"', { encoding: 'utf8' });
+  existingPages.push(...result.trim().split('\n').filter(Boolean));
+} catch (error) {
+  console.error('Error getting existing pages:', error.message);
+}
+
+// Combine all links
+const allLinks = [...new Set([...footerLinks, ...navLinks])].sort();
+const existingPagesSet = new Set(existingPages);
 
 // Find missing pages
-const missingPages = definedRoutes.filter(route => {
-  if (route === '/') return false; // Home page is handled differently
-  const pagePath = route.substring(1); // Remove leading slash
-  return !existingPages.includes('/' + pagePath);
-});
+const missingPages = allLinks.filter(link => !existingPagesSet.has(link));
 
-console.log('\nMissing pages:');
-missingPages.forEach(page => console.log('  -', page));
+console.log('=== MISSING PAGES ANALYSIS ===');
+console.log(`Total links found: ${allLinks.length}`);
+console.log(`Existing pages: ${existingPages.length}`);
+console.log(`Missing pages: ${missingPages.length}`);
 
-// Find pages that exist but aren't in routes
-const extraPages = existingPages.filter(page => {
-  if (page === '/page.tsx') return false; // Skip the main page.tsx
-  return !definedRoutes.includes(page);
-});
+if (missingPages.length > 0) {
+  console.log('\n=== MISSING PAGES ===');
+  missingPages.forEach(page => console.log(`- ${page}`));
+} else {
+  console.log('\n✅ All navigation and footer links have corresponding pages!');
+}
 
-console.log('\nPages that exist but aren\'t in routes:');
-extraPages.forEach(page => console.log('  -', page));
+// Check for pages that exist but aren't linked
+const unlinkedPages = existingPages.filter(page => !allLinks.includes(page));
+console.log(`\n=== UNLINKED PAGES (${unlinkedPages.length}) ===`);
+if (unlinkedPages.length > 0) {
+  unlinkedPages.slice(0, 20).forEach(page => console.log(`- ${page}`));
+  if (unlinkedPages.length > 20) {
+    console.log(`... and ${unlinkedPages.length - 20} more`);
+  }
+}
