@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# Function to create a clean analytics tools page
-fix_analytics_tools() {
-    cat > app/analytics-tools/page.tsx << 'ANALYTICS_EOF'
+# Function to create a clean blockchain integration services page
+fix_blockchain_integration_services() {
+    cat > app/blockchain-integration-services/page.tsx << 'BLOCKCHAIN_EOF'
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -10,80 +10,80 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 
-const AnalyticsToolsPage: React.FC = () => {
+const BlockchainIntegrationServicesPage: React.FC = () => {
   const features = [
     {
-      icon: BarChart,
-      title: 'Advanced Analytics Dashboard',
-      description: 'Comprehensive analytics dashboard with real-time data visualization and insights.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+      icon: Brain,
+      title: 'AI-Powered Blockchain Integration',
+      description: 'Advanced AI algorithms that optimize blockchain integration and smart contract deployment.',
+      benefits: ['Smart contract optimization', 'Automated testing', 'Security auditing', 'Performance monitoring']
     },
     {
-      icon: Brain,
-      title: 'AI-Powered Insights',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+      icon: BarChart,
+      title: 'Blockchain Analytics',
+      description: 'Comprehensive analytics for blockchain transactions and network performance.',
+      benefits: ['Transaction monitoring', 'Network analytics', 'Performance metrics', 'Security insights']
     },
     {
       icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+      title: 'Precision Integration',
+      description: 'Seamless integration of blockchain technology into existing systems.',
+      benefits: ['API integration', 'Data migration', 'System compatibility', 'Custom solutions']
     },
     {
       icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+      title: 'Performance Optimization',
+      description: 'Optimize blockchain performance for maximum efficiency and scalability.',
+      benefits: ['Gas optimization', 'Transaction speed', 'Scalability solutions', 'Cost reduction']
     },
     {
       icon: Shield,
-      title: 'Data Security',
-      description: 'Enterprise-grade security to protect your sensitive business data.',
-      benefits: ['End-to-end encryption', 'Access controls', 'Audit trails', 'Compliance support']
+      title: 'Security & Compliance',
+      description: 'Enterprise-grade security for blockchain implementations and compliance.',
+      benefits: ['Security auditing', 'Compliance support', 'Risk assessment', 'Data protection']
     },
     {
       icon: Zap,
-      title: 'Fast Processing',
-      description: 'Process large datasets in seconds with our optimized analytics engine.',
-      benefits: ['High-speed processing', 'Scalable infrastructure', 'Real-time analysis', 'Batch processing']
+      title: 'Fast Deployment',
+      description: 'Rapid deployment of blockchain solutions with minimal disruption.',
+      benefits: ['Quick setup', 'Minimal downtime', 'Automated deployment', 'Expert support']
     }
   ];
 
   const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology'
+    'Increase blockchain efficiency by up to 60%',
+    'Reduce integration costs by 40% with automation',
+    'Improve security with AI-powered auditing',
+    'Scale blockchain solutions without proportional complexity',
+    'Gain competitive advantage with advanced blockchain technology'
   ];
 
   return (
     <>
       <Helmet>
-        <title>Analytics Tools - Zion Tech Group</title>
-        <meta name="description" content="Advanced analytics tools for modern businesses. Get real-time insights, data visualization, and AI-powered recommendations." />
-        <meta name="keywords" content="analytics tools, business intelligence, data visualization, AI insights, performance metrics, Zion Tech Group" />
+        <title>Blockchain Integration Services - Zion Tech Group</title>
+        <meta name="description" content="Professional blockchain integration services. Seamlessly integrate blockchain technology into your existing systems with our expert solutions." />
+        <meta name="keywords" content="blockchain integration, smart contracts, blockchain development, cryptocurrency, DeFi, Zion Tech Group" />
       </Helmet>
       
       <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-orange-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(251,146,60,0.3)_0%,transparent_50%)] animate-pulse" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
           <div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Analytics Tools
+              Blockchain Integration Services
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Advanced analytics tools for modern businesses. Get real-time insights, data visualization, and AI-powered recommendations.
+              Professional blockchain integration services. Seamlessly integrate blockchain technology into your existing systems with our expert solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-indigo-500 to-blue-600 hover:from-indigo-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+              <button className="bg-gradient-to-r from-orange-500 to-blue-600 hover:from-orange-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
                 Get Started
               </button>
-              <button className="border border-indigo-400 text-indigo-400 hover:bg-indigo-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+              <button className="border border-orange-400 text-orange-400 hover:bg-orange-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
                 View Demo
               </button>
             </div>
@@ -98,14 +98,14 @@ const AnalyticsToolsPage: React.FC = () => {
                 Key Features
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Advanced analytics technology that drives business success
+                Advanced blockchain integration technology that drives business success
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-indigo-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                  <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
@@ -131,10 +131,10 @@ const AnalyticsToolsPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Why Choose Our Solution?
+                Why Choose Our Services?
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Proven results that drive business growth and efficiency
+                Proven results that drive business growth and blockchain adoption
               </p>
             </div>
 
@@ -159,13 +159,13 @@ const AnalyticsToolsPage: React.FC = () => {
                 Ready to Get Started?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Contact our experts to discuss your analytics requirements and get started today.
+                Contact our experts to discuss your blockchain integration requirements and get started today.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-indigo-500 to-blue-600 hover:from-indigo-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                <button className="bg-gradient-to-r from-orange-500 to-blue-600 hover:from-orange-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
                   Contact Us
                 </button>
-                <button className="border border-indigo-400 text-indigo-400 hover:bg-indigo-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                <button className="border border-orange-400 text-orange-400 hover:bg-orange-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
                   Learn More
                 </button>
               </div>
@@ -178,14 +178,14 @@ const AnalyticsToolsPage: React.FC = () => {
   );
 };
 
-export default AnalyticsToolsPage;
-ANALYTICS_EOF
-    echo "Fixed analytics-tools/page.tsx"
+export default BlockchainIntegrationServicesPage;
+BLOCKCHAIN_EOF
+    echo "Fixed blockchain-integration-services/page.tsx"
 }
 
-# Function to create a clean API docs page
-fix_api_docs() {
-    cat > app/api-docs/page.tsx << 'API_DOCS_EOF'
+# Function to create a clean blockchain page
+fix_blockchain() {
+    cat > app/blockchain/page.tsx << 'BLOCKCHAIN_MAIN_EOF'
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -193,81 +193,81 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 
-const ApiDocsPage: React.FC = () => {
+const BlockchainPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
-      title: 'Comprehensive API Documentation',
-      description: 'Complete API documentation with examples, code snippets, and interactive testing.',
-      benefits: ['Interactive docs', 'Code examples', 'SDK support', 'Testing tools']
+      title: 'AI-Powered Blockchain Solutions',
+      description: 'Advanced AI algorithms that enhance blockchain performance and security.',
+      benefits: ['Smart contract optimization', 'Automated auditing', 'Predictive analytics', 'Performance monitoring']
     },
     {
       icon: BarChart,
-      title: 'API Analytics',
-      description: 'Track API usage, performance metrics, and developer engagement.',
-      benefits: ['Usage analytics', 'Performance metrics', 'Developer insights', 'Error tracking']
+      title: 'Blockchain Analytics',
+      description: 'Comprehensive analytics for blockchain networks and transactions.',
+      benefits: ['Transaction monitoring', 'Network analytics', 'Performance metrics', 'Security insights']
     },
     {
       icon: Target,
-      title: 'Developer Experience',
-      description: 'Optimized developer experience with clear documentation and tools.',
-      benefits: ['Clear examples', 'Quick start guides', 'Interactive testing', 'SDK libraries']
+      title: 'Precision Development',
+      description: 'Custom blockchain solutions tailored to your specific business needs.',
+      benefits: ['Custom smart contracts', 'DApp development', 'Token creation', 'Integration services']
     },
     {
       icon: TrendingUp,
-      title: 'API Management',
-      description: 'Manage your APIs with versioning, rate limiting, and monitoring.',
-      benefits: ['Version control', 'Rate limiting', 'Monitoring', 'Security controls']
+      title: 'Performance Optimization',
+      description: 'Optimize blockchain performance for maximum efficiency and scalability.',
+      benefits: ['Gas optimization', 'Transaction speed', 'Scalability solutions', 'Cost reduction']
     },
     {
       icon: Shield,
-      title: 'Security & Authentication',
-      description: 'Secure your APIs with comprehensive authentication and authorization.',
-      benefits: ['API keys', 'OAuth support', 'Rate limiting', 'Security monitoring']
+      title: 'Security & Compliance',
+      description: 'Enterprise-grade security for blockchain implementations.',
+      benefits: ['Security auditing', 'Compliance support', 'Risk assessment', 'Data protection']
     },
     {
       icon: Zap,
-      title: 'Fast Integration',
-      description: 'Get up and running quickly with our comprehensive documentation and tools.',
-      benefits: ['Quick setup', 'Code generation', 'Testing tools', 'Support resources']
+      title: 'Fast Deployment',
+      description: 'Rapid deployment of blockchain solutions with minimal disruption.',
+      benefits: ['Quick setup', 'Minimal downtime', 'Automated deployment', 'Expert support']
     }
   ];
 
   const benefits = [
-    'Reduce integration time by up to 70%',
-    'Improve developer satisfaction with clear docs',
-    'Increase API adoption with better UX',
-    'Scale API usage with proper documentation',
-    'Gain competitive advantage with developer-friendly APIs'
+    'Increase blockchain efficiency by up to 70%',
+    'Reduce development costs by 50% with AI tools',
+    'Improve security with automated auditing',
+    'Scale blockchain solutions without proportional complexity',
+    'Gain competitive advantage with cutting-edge technology'
   ];
 
   return (
     <>
       <Helmet>
-        <title>API Documentation - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive API documentation and developer resources. Get started quickly with our APIs and developer tools." />
-        <meta name="keywords" content="API documentation, developer tools, API integration, SDK, developer resources, Zion Tech Group" />
+        <title>Blockchain Solutions - Zion Tech Group</title>
+        <meta name="description" content="Advanced blockchain solutions and development services. Build secure, scalable blockchain applications with our expert team." />
+        <meta name="keywords" content="blockchain development, smart contracts, DeFi, cryptocurrency, blockchain consulting, Zion Tech Group" />
       </Helmet>
       
       <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-yellow-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(234,179,8,0.3)_0%,transparent_50%)] animate-pulse" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
           <div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              API Documentation
+              Blockchain Solutions
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Comprehensive API documentation and developer resources. Get started quickly with our APIs and developer tools.
+              Advanced blockchain solutions and development services. Build secure, scalable blockchain applications with our expert team.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-slate-600 to-blue-600 hover:from-slate-700 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+              <button className="bg-gradient-to-r from-yellow-500 to-blue-600 hover:from-yellow-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
                 Get Started
               </button>
-              <button className="border border-slate-400 text-slate-400 hover:bg-slate-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                View Docs
+              <button className="border border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                View Demo
               </button>
             </div>
           </div>
@@ -281,14 +281,14 @@ const ApiDocsPage: React.FC = () => {
                 Key Features
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Comprehensive API documentation and developer tools
+                Advanced blockchain technology that drives innovation and business success
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-slate-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                  <div className="w-16 h-16 bg-gradient-to-br from-yellow-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
@@ -314,10 +314,10 @@ const ApiDocsPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Why Choose Our API Docs?
+                Why Choose Our Solutions?
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Proven results that drive developer success and API adoption
+                Proven results that drive business growth and blockchain adoption
               </p>
             </div>
 
@@ -342,13 +342,13 @@ const ApiDocsPage: React.FC = () => {
                 Ready to Get Started?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Contact our experts to discuss your API documentation requirements and get started today.
+                Contact our experts to discuss your blockchain requirements and get started today.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-slate-600 to-blue-600 hover:from-slate-700 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                <button className="bg-gradient-to-r from-yellow-500 to-blue-600 hover:from-yellow-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
                   Contact Us
                 </button>
-                <button className="border border-slate-400 text-slate-400 hover:bg-slate-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                <button className="border border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
                   Learn More
                 </button>
               </div>
@@ -361,14 +361,14 @@ const ApiDocsPage: React.FC = () => {
   );
 };
 
-export default ApiDocsPage;
-API_DOCS_EOF
-    echo "Fixed api-docs/page.tsx"
+export default BlockchainPage;
+BLOCKCHAIN_MAIN_EOF
+    echo "Fixed blockchain/page.tsx"
 }
 
 # Run the fixes
-echo "Fixing syntax errors in problematic files..."
-fix_analytics_tools
-fix_api_docs
+echo "Fixing critical blockchain-related errors..."
+fix_blockchain_integration_services
+fix_blockchain
 
-echo "All syntax errors fixed!"
+echo "Critical blockchain errors fixed!"

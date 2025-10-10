@@ -1,6 +1,4 @@
 'use client';
-import React from 'react';
-'use client';
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, CheckCircle, ArrowRight, Zap, Shield, Brain, Globe } from 'lucide-react';
 
@@ -59,6 +57,62 @@ const ContentCarousel: React.FC = () => {
   }, []);
 
   return (
+    <div className="relative bg-gradient-to-r from-slate-900 to-blue-900 text-white py-16 px-4">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            Discover Our Solutions
+          </h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Explore our comprehensive suite of AI-powered solutions designed to transform your business.
+          </p>
+        </div>
+
+        <div className="relative">
+          {/* Carousel Container */}
+          <div className="overflow-hidden rounded-2xl">
+            <div 
+              className="flex transition-transform duration-500 ease-in-out"
+              style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+            >
+              {slides.map((slide, index) => (
+                <div key={index} className="w-full flex-shrink-0">
+                  <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-12">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                      <div>
+                        <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6">
+                          <slide.icon className="w-10 h-10 text-white" />
+                        </div>
+                        <h3 className="text-3xl font-bold mb-4">{slide.title}</h3>
+                        <p className="text-xl text-gray-300 mb-6">{slide.description}</p>
+                        <div className="space-y-3">
+                          {slide.features.map((feature, idx) => (
+                            <div key={idx} className="flex items-center">
+                              <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                              <span className="text-gray-300">{feature}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                      <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
+                        <h4 className="text-2xl font-bold mb-6">Why Choose Our Solutions?</h4>
+                        <div className="space-y-3">
+                          {benefits.map((benefit, idx) => (
+                            <div key={idx} className="flex items-center">
+                              <CheckCircle className="w-4 h-4 text-blue-400 mr-3 flex-shrink-0" />
+                              <span className="text-gray-300 text-sm">{benefit}</span>
+                            </div>
+                          ))}
+                        </div>
+                        <button className="mt-6 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 flex items-center">
+                          <ArrowRight className="w-5 h-5 mr-2" />
+                          Learn More
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
 
@@ -76,14 +130,14 @@ const ContentCarousel: React.FC = () => {
             <ChevronRight className="w-6 h-6" />
           </button>
 
-          {/* Dots Indicator */}
-          <div className="flex justify-center mt-6 space-x-2">
+          {/* Slide Indicators */}
+          <div className="flex justify-center mt-8 space-x-2">
             {slides.map((_, index) => (
               <button
                 key={index}
                 onClick={() => setCurrentSlide(index)}
                 className={`w-3 h-3 rounded-full transition-colors duration-200 ${
-                  index === currentSlide ? 'bg-cyan-400' : 'bg-white/30'
+                  index === currentSlide ? 'bg-white' : 'bg-white/30'
                 }`}
               />
             ))}
