@@ -1,8 +1,7 @@
-'use client';
+'use client'
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Cloud, Server, Database, Lock } from 'lucide-react';
-
 const CloudServicesPage: React.FC = () => {
   const services = [
     {
@@ -29,8 +28,7 @@ const CloudServicesPage: React.FC = () => {
       description: 'Comprehensive security solutions to protect your cloud infrastructure and data.',
       features: ['Identity management', 'Data encryption', 'Compliance auditing', 'Threat detection']
     }
-  ];
-
+  ]
   const benefits = [
     'Reduced infrastructure costs by up to 40%',
     'Improved scalability and flexibility',
@@ -40,8 +38,7 @@ const CloudServicesPage: React.FC = () => {
     'Disaster recovery and backup solutions',
     'Global availability and performance',
     'Expert cloud architecture guidance'
-  ];
-
+  ]
   const pricing = [
     {
       name: 'Starter',
@@ -85,8 +82,7 @@ const CloudServicesPage: React.FC = () => {
         'Custom development'
       ]
     }
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -100,7 +96,6 @@ const CloudServicesPage: React.FC = () => {
         <meta name="twitter:title" content="Cloud Services - Zion Tech Group" />
         <meta name="twitter:description" content="Expert cloud solutions and migration services" />
       </Helmet>
-
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -128,7 +123,6 @@ const CloudServicesPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Services Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -140,7 +134,6 @@ const CloudServicesPage: React.FC = () => {
               Comprehensive cloud solutions designed to accelerate your digital transformation.
             </p>
           </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {services.map((service, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300">
@@ -164,7 +157,6 @@ const CloudServicesPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -176,7 +168,6 @@ const CloudServicesPage: React.FC = () => {
               Experience the benefits of working with cloud experts who understand your business needs.
             </p>
           </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
               <div key={index} className="text-center">
@@ -189,7 +180,6 @@ const CloudServicesPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -201,7 +191,6 @@ const CloudServicesPage: React.FC = () => {
               Choose the plan that best fits your business needs and budget.
             </p>
           </div>
-
           <div className="grid md:grid-cols-3 gap-8">
             {pricing.map((plan, index) => (
               <div key={index} className={`bg-white/10 backdrop-blur-sm rounded-xl p-8 relative ${plan.popular ? 'ring-2 ring-purple-500' : ''}`}>
@@ -240,7 +229,6 @@ const CloudServicesPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -263,7 +251,6 @@ const CloudServicesPage: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
-
-export default CloudServicesPage;
+  )
+}
+export default CloudServicesPage

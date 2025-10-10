@@ -1,10 +1,9 @@
-'use client';
+'use client'
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, PenTool, Zap, Users, BarChart3 } from 'lucide-react';
-
 const AIContentWriterPage: React.FC = () => {
   const features = [
     {
@@ -22,8 +21,7 @@ const AIContentWriterPage: React.FC = () => {
       description: 'Create content in various formats including blogs, social media, emails, and marketing copy.',
       benefits: ['Blog posts', 'Social media', 'Email campaigns', 'Marketing copy']
     }
-  ];
-
+  ]
   const benefits = [
     '10x faster content creation',
     'Improved SEO performance',
@@ -31,15 +29,13 @@ const AIContentWriterPage: React.FC = () => {
     'Multi-language support',
     'Content analytics',
     'Team collaboration'
-  ];
-
+  ]
   const stats = [
     { icon: <PenTool className="w-8 h-8 text-blue-500" />, value: '10K+', label: 'Articles Created' },
     { icon: <Zap className="w-8 h-8 text-green-500" />, value: '90%', label: 'Time Saved' },
     { icon: <Users className="w-8 h-8 text-purple-500" />, value: '500+', label: 'Happy Users' },
     { icon: <BarChart3 className="w-8 h-8 text-orange-500" />, value: '300%', label: 'Engagement Boost' }
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <Helmet>
@@ -47,13 +43,11 @@ const AIContentWriterPage: React.FC = () => {
         <meta name="description" content="Advanced AI-powered content writing tool by Zion Tech Group. Generate high-quality, SEO-optimized content at scale." />
         <meta name="keywords" content="AI content writer, content generation, SEO writing, content marketing, AI writing tool, Zion Tech Group" />
       </Helmet>
-      
       <Navigation />
-
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' } />
         <div className="relative max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
             AI Content Writer
@@ -71,7 +65,6 @@ const AIContentWriterPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Stats Section */}
       <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
@@ -88,7 +81,6 @@ const AIContentWriterPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -100,7 +92,6 @@ const AIContentWriterPage: React.FC = () => {
               Everything you need to create compelling content
             </p>
           </div>
-          
           <div className="grid md:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8">
@@ -119,7 +110,6 @@ const AIContentWriterPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -129,7 +119,6 @@ const AIContentWriterPage: React.FC = () => {
               Experience the benefits of AI-powered content creation
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((benefit, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center">
@@ -142,7 +131,6 @@ const AIContentWriterPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
@@ -164,10 +152,8 @@ const AIContentWriterPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       <Footer />
     </div>
-  );
-};
-
-export default AIContentWriterPage;
+  )
+}
+export default AIContentWriterPage

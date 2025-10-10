@@ -1,10 +1,9 @@
-'use client';
+'use client'
 import React, { useState, useCallback } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
 const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -13,28 +12,23 @@ const ContactPage: React.FC = () => {
     phone: '',
     service: '',
     message: ''
-  });
-
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-
+  })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
   const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
+    const { name, value } = e.target
     setFormData(prev => ({
       ...prev,
       [name]: value
-    }));
-  }, []);
-
+    }))
+  }, [])
   const handleSubmit = useCallback(async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setSubmitStatus('idle');
-
+    e.preventDefault()
+    setIsSubmitting(true)
+    setSubmitStatus('idle')
     try {
       // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      
+      await new Promise(resolve => setTimeout(resolve, 2000))
       // Reset form
       setFormData({
         name: '',
@@ -43,16 +37,14 @@ const ContactPage: React.FC = () => {
         phone: '',
         service: '',
         message: ''
-      });
-      
-      setSubmitStatus('success');
+      })
+      setSubmitStatus('success')
     } catch (error) {
-      setSubmitStatus('error');
+      setSubmitStatus('error')
     } finally {
       setIsSubmitting(false);
     }
   }, []);
-
   const services = [
     'AI Solutions',
     'IT Consulting',
@@ -61,8 +53,7 @@ const ContactPage: React.FC = () => {
     'Custom Development',
     'Data Analytics',
     'Other'
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -70,9 +61,7 @@ const ContactPage: React.FC = () => {
         <meta name="description" content="Get in touch with Zion Tech Group for AI and IT solutions. Contact our experts for consultation and support." />
         <meta name="keywords" content="contact, AI solutions, IT consulting, support, consultation" />
       </Helmet>
-      
       <Navigation />
-      
       <main className="pt-20">
         {/* Hero Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -86,7 +75,6 @@ const ContactPage: React.FC = () => {
             </p>
           </div>
         </section>
-
         {/* Contact Form and Info */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -94,20 +82,17 @@ const ContactPage: React.FC = () => {
               {/* Contact Form */}
               <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
                 <h2 className="text-2xl font-bold text-white mb-6">Send us a Message</h2>
-                
                 {submitStatus === 'success' && (
                   <div className="mb-6 p-4 bg-green-500/20 border border-green-500/50 rounded-lg flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
                     <span className="text-green-400">Message sent successfully!</span>
                   </div>
                 )}
-
                 {submitStatus === 'error' && (
                   <div className="mb-6 p-4 bg-red-500/20 border border-red-500/50 rounded-lg">
                     <span className="text-red-400">Failed to send message. Please try again.</span>
                   </div>
                 )}
-
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
@@ -141,7 +126,6 @@ const ContactPage: React.FC = () => {
                       />
                     </div>
                   </div>
-
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
                       <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
@@ -172,7 +156,6 @@ const ContactPage: React.FC = () => {
                       />
                     </div>
                   </div>
-
                   <div>
                     <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
                       Service Interest
@@ -192,7 +175,6 @@ const ContactPage: React.FC = () => {
                       ))}
                     </select>
                   </div>
-
                   <div>
                     <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
                       Message *
@@ -208,7 +190,6 @@ const ContactPage: React.FC = () => {
                       placeholder="Tell us about your project..."
                     />
                   </div>
-
                   <button
                     type="submit"
                     disabled={isSubmitting}
@@ -228,7 +209,6 @@ const ContactPage: React.FC = () => {
                   </button>
                 </form>
               </div>
-
               {/* Contact Information */}
               <div className="space-y-8">
                 <div>
@@ -244,7 +224,6 @@ const ContactPage: React.FC = () => {
                         <p className="text-sm text-gray-400">Mon-Fri 9AM-6PM PST</p>
                       </div>
                     </div>
-
                     <div className="flex items-start space-x-4">
                       <div className="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
                         <Mail className="w-6 h-6 text-green-400" />
@@ -255,7 +234,6 @@ const ContactPage: React.FC = () => {
                         <p className="text-sm text-gray-400">We'll respond within 24 hours</p>
                       </div>
                     </div>
-
                     <div className="flex items-start space-x-4">
                       <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
                         <MapPin className="w-6 h-6 text-purple-400" />
@@ -266,7 +244,6 @@ const ContactPage: React.FC = () => {
                         <p className="text-gray-300">San Francisco, CA 94105</p>
                       </div>
                     </div>
-
                     <div className="flex items-start space-x-4">
                       <div className="w-12 h-12 bg-orange-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
                         <Clock className="w-6 h-6 text-orange-400" />
@@ -280,7 +257,6 @@ const ContactPage: React.FC = () => {
                     </div>
                   </div>
                 </div>
-
                 <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
                   <h3 className="text-lg font-semibold text-white mb-4">Why Choose Us?</h3>
                   <ul className="space-y-3 text-gray-300">
@@ -307,10 +283,8 @@ const ContactPage: React.FC = () => {
           </div>
         </section>
       </main>
-      
       <Footer />
     </div>
-  );
-};
-
-export default ContactPage;
+  )
+}
+export default ContactPage

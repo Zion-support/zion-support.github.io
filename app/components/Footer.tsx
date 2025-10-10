@@ -1,11 +1,9 @@
-'use client';
+'use client'
 import React, { memo } from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Clock, Zap, Brain, Cloud, Code, Users } from 'lucide-react';
-
 const Footer: React.FC = memo(() => {
-  const currentYear = new Date().getFullYear();
-  
+  const currentYear = new Date().getFullYear()
   const aiServices = [
     { name: 'AI Solutions', url: '/ai-services', description: 'Comprehensive AI solutions' },
     { name: 'AI Marketing Automation', url: '/ai-marketing', description: 'AI-powered marketing automation' },
@@ -17,8 +15,7 @@ const Footer: React.FC = memo(() => {
     { name: 'AI E-commerce Solutions', url: '/ai-ecommerce-solutions', description: 'E-commerce AI solutions' },
     { name: 'AI Cybersecurity', url: '/ai-cybersecurity', description: 'AI security solutions' },
     { name: 'AI Mobile Apps', url: '/ai-mobile-app-development', description: 'Mobile AI applications' }
-  ];
-
+  ]
   const itServices = [
     { name: 'Cloud Services', url: '/cloud-services', description: 'Cloud solutions' },
     { name: 'Cloud Migration', url: '/cloud-migration', description: 'Seamless migration' },
@@ -28,8 +25,7 @@ const Footer: React.FC = memo(() => {
     { name: 'Database Services', url: '/database-services', description: 'Database management' },
     { name: 'Network Solutions', url: '/network-solutions', description: 'Network infrastructure' },
     { name: 'IT Support', url: '/it-support', description: 'Technical support' }
-  ];
-
+  ]
   const microSaasServices = [
     { name: 'Analytics Dashboard', url: '/micro-saas/analytics-dashboard', description: 'Business analytics' },
     { name: 'Content Generator', url: '/micro-saas/content-generator', description: 'AI content creation' },
@@ -37,8 +33,7 @@ const Footer: React.FC = memo(() => {
     { name: 'Social Manager', url: '/micro-saas/social-manager', description: 'Social media management' },
     { name: 'Expense Tracker', url: '/micro-saas/expense-tracker', description: 'Financial tracking' },
     { name: 'Appointment Scheduler', url: '/micro-saas/appointment-scheduler', description: 'Scheduling system' }
-  ];
-
+  ]
   return (
     <footer className="bg-slate-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -70,7 +65,6 @@ const Footer: React.FC = memo(() => {
               <span>San Francisco, CA</span>
             </div>
           </div>
-
           {/* AI Services */}
           <div>
             <h3 className="text-lg font-semibold mb-4">AI Services</h3>
@@ -87,7 +81,6 @@ const Footer: React.FC = memo(() => {
               ))}
             </ul>
           </div>
-
           {/* IT Services */}
           <div>
             <h3 className="text-lg font-semibold mb-4">IT Services</h3>
@@ -104,7 +97,6 @@ const Footer: React.FC = memo(() => {
               ))}
             </ul>
           </div>
-
           {/* Micro SaaS */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Micro SaaS</h3>
@@ -122,7 +114,6 @@ const Footer: React.FC = memo(() => {
             </ul>
           </div>
         </div>
-
         {/* Bottom Section */}
         <div className="border-t border-gray-700 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
@@ -144,9 +135,7 @@ const Footer: React.FC = memo(() => {
         </div>
       </div>
     </footer>
-  );
-});
-
-Footer.displayName = 'Footer';
-
-export default Footer;
+  )
+})
+Footer.displayName = 'Footer'
+export default Footer

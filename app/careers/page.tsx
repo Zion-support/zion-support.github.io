@@ -1,24 +1,21 @@
-'use client';
-
+'use client'
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { Star, Users, Heart, Award, MapPin, Clock, Briefcase, CheckCircle, ArrowRight, GraduationCap, Zap } from 'lucide-react';
-
+import { Star, Users, Heart, Award, MapPin, Clock, Briefcase, CheckCircle, ArrowRight, GraduationCap, Zap } from 'lucide-react'
 interface JobPosition {
-  id: string;
-  title: string;
-  department: string;
-  location: string;
-  type: string;
-  experience: string;
-  description: string;
-  requirements: string[];
-  benefits: string[];
-  posted: string;
-  featured: boolean;
+  id: string
+  title: string
+  department: string
+  location: string
+  type: string
+  experience: string
+  description: string
+  requirements: string[]
+  benefits: string[]
+  posted: string
+  featured: boolean
 }
-
 const CareersPage: React.FC = () => {
   const openPositions: JobPosition[] = [
     {
@@ -117,8 +114,7 @@ const CareersPage: React.FC = () => {
       posted: '1 week ago',
       featured: false
     }
-  ];
-
+  ]
   const companyValues = [
     {
       icon: <Star className="w-8 h-8 text-blue-600" />,
@@ -140,8 +136,7 @@ const CareersPage: React.FC = () => {
       title: 'Innovation',
       description: 'We embrace innovation and continuously push the boundaries of what\'s possible with technology.'
     }
-  ];
-
+  ]
   const benefits = [
     'Competitive salary and equity participation',
     'Comprehensive health, dental, and vision insurance',
@@ -153,8 +148,7 @@ const CareersPage: React.FC = () => {
     'Team building events and company retreats',
     'Mentorship and career growth opportunities',
     'Wellness programs and gym memberships'
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-gray-50">
       <Helmet>
@@ -162,7 +156,6 @@ const CareersPage: React.FC = () => {
         <meta name="description" content="Join Zion Tech Group and be part of a team that's shaping the future of technology. Explore career opportunities in AI, cloud computing, and cybersecurity." />
         <meta name="keywords" content="tech careers, AI jobs, cloud computing jobs, cybersecurity careers, remote work" />
       </Helmet>
-
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">
         <div className="container mx-auto px-4">
@@ -190,7 +183,6 @@ const CareersPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Company Values */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
@@ -210,7 +202,6 @@ const CareersPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Benefits */}
       <section className="py-16 bg-gray-100">
         <div className="container mx-auto px-4">
@@ -227,13 +218,11 @@ const CareersPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Open Positions */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">Open Positions</h2>
-            
             {openPositions.length === 0 ? (
               <div className="text-center py-12">
                 <p className="text-gray-500 text-lg">No open positions at the moment. Check back soon!</p>
@@ -248,7 +237,6 @@ const CareersPage: React.FC = () => {
                         Featured
                       </div>
                     )}
-                    
                     <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-6">
                       <div className="flex-1">
                         <h3 className="text-2xl font-bold text-gray-900 mb-2">{position.title}</h3>
@@ -276,7 +264,6 @@ const CareersPage: React.FC = () => {
                         <span className="text-sm text-gray-500">Posted {position.posted}</span>
                       </div>
                     </div>
-
                     <div className="grid md:grid-cols-2 gap-8 mb-6">
                       <div>
                         <h4 className="text-lg font-semibold text-gray-900 mb-3">Requirements</h4>
@@ -301,7 +288,6 @@ const CareersPage: React.FC = () => {
                         </ul>
                       </div>
                     </div>
-
                     <div className="flex flex-col sm:flex-row gap-4">
                       <button className="flex-1 sm:flex-none bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center">
                         Apply Now <ArrowRight className="w-4 h-4 ml-2" />
@@ -317,7 +303,6 @@ const CareersPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-16 bg-blue-900 text-white">
         <div className="container mx-auto px-4">
@@ -338,7 +323,6 @@ const CareersPage: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
-
-export default CareersPage;
+  )
+}
+export default CareersPage

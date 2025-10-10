@@ -1,29 +1,25 @@
-'use client';
-
+'use client'
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { Search, Calendar, User, Clock, ArrowRight, Tag } from 'lucide-react';
-
+import { Search, Calendar, User, Clock, ArrowRight, Tag } from 'lucide-react'
 interface BlogPost {
-  id: string;
-  title: string;
-  excerpt: string;
-  content: string;
-  author: string;
-  date: string;
-  readTime: string;
-  category: string;
-  tags: string[];
-  image: string;
-  featured: boolean;
+  id: string
+  title: string
+  excerpt: string
+  content: string
+  author: string
+  date: string
+  readTime: string
+  category: string
+  tags: string[]
+  image: string
+  featured: boolean
 }
-
 const BlogPage: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [filteredPosts, setFilteredPosts] = useState<BlogPost[]>([]);
-
+  const [searchTerm, setSearchTerm] = useState('')
+  const [selectedCategory, setSelectedCategory] = useState('all')
+  const [filteredPosts, setFilteredPosts] = useState<BlogPost[]>([])
   // Sample blog posts data
   const blogPosts: BlogPost[] = [
     {
@@ -104,31 +100,24 @@ const BlogPage: React.FC = () => {
       image: '/images/blog/scalable-web.jpg',
       featured: false
     }
-  ];
-
-  const categories = ['all', 'AI & Machine Learning', 'Cloud Computing', 'Cybersecurity', 'Digital Transformation', 'Technology', 'Development'];
-
+  ]
+  const categories = ['all', 'AI & Machine Learning', 'Cloud Computing', 'Cybersecurity', 'Digital Transformation', 'Technology', 'Development']
   useEffect(() => {
-    let filtered = blogPosts;
-
+    let filtered = blogPosts
     if (searchTerm) {
       filtered = filtered.filter(post =>
         post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
         post.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||
         post.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
-      );
+      )
     }
-
     if (selectedCategory !== 'all') {
-      filtered = filtered.filter(post => post.category === selectedCategory);
+      filtered = filtered.filter(post => post.category === selectedCategory)
     }
-
-    setFilteredPosts(filtered);
-  }, [searchTerm, selectedCategory]);
-
-  const featuredPosts = blogPosts.filter(post => post.featured);
-  const recentPosts = blogPosts.slice(0, 3);
-
+    setFilteredPosts(filtered)
+  }, [searchTerm, selectedCategory])
+  const featuredPosts = blogPosts.filter(post => post.featured)
+  const recentPosts = blogPosts.slice(0, 3)
   return (
     <div className="min-h-screen bg-gray-50">
       <Helmet>
@@ -136,7 +125,6 @@ const BlogPage: React.FC = () => {
         <meta name="description" content="Stay updated with the latest technology trends, AI insights, and industry best practices from Zion Tech Group's expert team." />
         <meta name="keywords" content="technology blog, AI insights, cloud computing, cybersecurity, digital transformation" />
       </Helmet>
-
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">
         <div className="container mx-auto px-4">
@@ -147,7 +135,6 @@ const BlogPage: React.FC = () => {
             <p className="text-xl md:text-2xl mb-8 text-blue-100">
               Stay ahead with expert insights on AI, cloud computing, cybersecurity, and digital transformation
             </p>
-            
             {/* Search Bar */}
             <div className="max-w-2xl mx-auto">
               <div className="relative">
@@ -164,7 +151,6 @@ const BlogPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Featured Posts */}
       {featuredPosts.length > 0 && (
         <section className="py-16 bg-white">
@@ -208,7 +194,6 @@ const BlogPage: React.FC = () => {
           </div>
         </section>
       )}
-
       {/* Category Filter */}
       <section className="py-8 bg-gray-100">
         <div className="container mx-auto px-4">
@@ -229,7 +214,6 @@ const BlogPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Blog Posts Grid */}
       <section className="py-16">
         <div className="container mx-auto px-4">
@@ -237,7 +221,6 @@ const BlogPage: React.FC = () => {
             <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">
               {selectedCategory === 'all' ? 'All Articles' : `${selectedCategory} Articles`}
             </h2>
-            
             {filteredPosts.length === 0 ? (
               <div className="text-center py-12">
                 <p className="text-gray-500 text-lg">No articles found matching your criteria.</p>
@@ -286,7 +269,6 @@ const BlogPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Newsletter Signup */}
       <section className="py-16 bg-blue-900 text-white">
         <div className="container mx-auto px-4">
@@ -309,7 +291,6 @@ const BlogPage: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
-
-export default BlogPage;
+  )
+}
+export default BlogPage

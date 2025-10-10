@@ -1,23 +1,20 @@
-'use client';
-
+'use client'
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight, ExternalLink, CheckCircle, TrendingUp, Users, Award, Building2, Shield, Zap } from 'lucide-react';
-
+import { ArrowRight, ExternalLink, CheckCircle, TrendingUp, Users, Award, Building2, Shield, Zap } from 'lucide-react'
 interface CaseStudy {
-  id: string;
-  title: string;
-  client: string;
-  industry: string;
-  challenge: string;
-  solution: string;
-  results: string[];
-  image: string;
-  duration: string;
-  team: string;
+  id: string
+  title: string
+  client: string
+  industry: string
+  challenge: string
+  solution: string
+  results: string[]
+  image: string
+  duration: string
+  team: string
 }
-
 const CaseStudiesPage: React.FC = () => {
   const caseStudies: CaseStudy[] = [
     {
@@ -122,22 +119,18 @@ const CaseStudiesPage: React.FC = () => {
       duration: '5 months',
       team: '7 specialists'
     }
-  ];
-
-  const industries = ['All', 'Technology', 'Financial Services', 'Healthcare', 'Manufacturing', 'Retail', 'Logistics'];
-  const [selectedIndustry, setSelectedIndustry] = React.useState('All');
-
+  ]
+  const industries = ['All', 'Technology', 'Financial Services', 'Healthcare', 'Manufacturing', 'Retail', 'Logistics']
+  const [selectedIndustry, setSelectedIndustry] = React.useState('All')
   const filteredCaseStudies = selectedIndustry === 'All' 
     ? caseStudies 
-    : caseStudies.filter(study => study.industry === selectedIndustry);
-
+    : caseStudies.filter(study => study.industry === selectedIndustry)
   const stats = [
     { icon: <Building2 className="w-8 h-8 text-blue-600" />, value: '150+', label: 'Projects Completed' },
     { icon: <Users className="w-8 h-8 text-green-600" />, value: '98%', label: 'Client Satisfaction' },
     { icon: <TrendingUp className="w-8 h-8 text-purple-600" />, value: '40%', label: 'Average Cost Reduction' },
     { icon: <Shield className="w-8 h-8 text-red-600" />, value: '99.9%', label: 'Uptime Achieved' }
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-gray-50">
       <Helmet>
@@ -145,7 +138,6 @@ const CaseStudiesPage: React.FC = () => {
         <meta name="description" content="Explore our successful technology implementations and digital transformation projects across various industries." />
         <meta name="keywords" content="case studies, success stories, technology implementation, digital transformation, AI solutions" />
       </Helmet>
-
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">
         <div className="container mx-auto px-4">
@@ -159,7 +151,6 @@ const CaseStudiesPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Stats Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
@@ -178,7 +169,6 @@ const CaseStudiesPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Industry Filter */}
       <section className="py-8 bg-gray-100">
         <div className="container mx-auto px-4">
@@ -199,7 +189,6 @@ const CaseStudiesPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Case Studies Grid */}
       <section className="py-16">
         <div className="container mx-auto px-4">
@@ -207,7 +196,6 @@ const CaseStudiesPage: React.FC = () => {
             <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">
               {selectedIndustry === 'All' ? 'All Case Studies' : `${selectedIndustry} Case Studies`}
             </h2>
-            
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {filteredCaseStudies.map((study) => (
                 <div key={study.id} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
@@ -217,7 +205,6 @@ const CaseStudiesPage: React.FC = () => {
                       <p className="text-blue-100 text-sm">{study.client}</p>
                     </div>
                   </div>
-                  
                   <div className="p-6">
                     <div className="flex items-center justify-between mb-4">
                       <span className="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">
@@ -228,10 +215,8 @@ const CaseStudiesPage: React.FC = () => {
                         <span>{study.duration}</span>
                       </div>
                     </div>
-
                     <h3 className="text-xl font-bold text-gray-900 mb-3">{study.title}</h3>
                     <p className="text-gray-600 mb-4 line-clamp-3">{study.challenge}</p>
-
                     <div className="space-y-3 mb-6">
                       <div>
                         <h4 className="font-semibold text-gray-900 mb-2">Key Results:</h4>
@@ -245,7 +230,6 @@ const CaseStudiesPage: React.FC = () => {
                         </ul>
                       </div>
                     </div>
-
                     <div className="flex items-center justify-between">
                       <div className="flex items-center text-sm text-gray-500">
                         <Users className="w-4 h-4 mr-1" />
@@ -262,7 +246,6 @@ const CaseStudiesPage: React.FC = () => {
                 </div>
               ))}
             </div>
-
             {filteredCaseStudies.length === 0 && (
               <div className="text-center py-12">
                 <p className="text-gray-500 text-lg">No case studies found for the selected industry.</p>
@@ -271,7 +254,6 @@ const CaseStudiesPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-16 bg-blue-900 text-white">
         <div className="container mx-auto px-4">
@@ -298,7 +280,6 @@ const CaseStudiesPage: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
-
-export default CaseStudiesPage;
+  )
+}
+export default CaseStudiesPage

@@ -1,8 +1,6 @@
-'use client';
-
+'use client'
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 const EnhancedSEOHead: React.FC = () => {
   return (
     <Helmet>
@@ -13,10 +11,8 @@ const EnhancedSEOHead: React.FC = () => {
       <meta name="author" content="Zion Tech Group" />
       <meta name="robots" content="index, follow" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      
       {/* Canonical URL */}
       <link rel="canonical" href="https://ziontechgroup.com" />
-      
       {/* Open Graph Meta Tags */}
       <meta property="og:title" content="Zion Tech Group - Advanced AI and IT Solutions" />
       <meta property="og:description" content="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services." />
@@ -27,7 +23,6 @@ const EnhancedSEOHead: React.FC = () => {
       <meta property="og:image:height" content="630" />
       <meta property="og:site_name" content="Zion Tech Group" />
       <meta property="og:locale" content="en_US" />
-      
       {/* Twitter Card Meta Tags */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content="Zion Tech Group - Advanced AI and IT Solutions" />
@@ -35,24 +30,20 @@ const EnhancedSEOHead: React.FC = () => {
       <meta name="twitter:image" content="https://ziontechgroup.com/images/og-image.jpg" />
       <meta name="twitter:site" content="@ziontechgroup" />
       <meta name="twitter:creator" content="@ziontechgroup" />
-      
       {/* Additional SEO Meta Tags */}
       <meta name="theme-color" content="#00ffff" />
       <meta name="msapplication-TileColor" content="#00ffff" />
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-      
       {/* Favicon */}
       <link rel="icon" type="image/x-icon" href="/favicon.ico" />
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
       <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
       <link rel="manifest" href="/site.webmanifest" />
-      
       {/* Preconnect to external domains */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      
       {/* Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify({
@@ -95,7 +86,6 @@ const EnhancedSEOHead: React.FC = () => {
         })}
       </script>
     </Helmet>
-  );
-};
-
-export default EnhancedSEOHead;
+  )
+}
+export default EnhancedSEOHead

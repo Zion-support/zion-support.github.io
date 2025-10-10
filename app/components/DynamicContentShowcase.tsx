@@ -1,28 +1,23 @@
-'use client';
-
+'use client'
 import React, { useState, useEffect } from 'react';
-import { CheckCircle, ArrowRight, Star, Quote, ChevronLeft, ChevronRight, Zap, Shield, Brain, Globe, Users, TrendingUp } from 'lucide-react';
-
+import { CheckCircle, ArrowRight, Star, Quote, ChevronLeft, ChevronRight, Zap, Shield, Brain, Globe, Users, TrendingUp } from 'lucide-react'
 interface Testimonial {
-  id: number;
-  name: string;
-  company: string;
-  role: string;
-  content: string;
-  rating: number;
-  avatar: string;
+  id: number
+  name: string
+  company: string
+  role: string
+  content: string
+  rating: number
+  avatar: string
 }
-
 interface Feature {
-  icon: React.ComponentType<any>;
-  title: string;
-  description: string;
-  benefits: string[];
+  icon: React.ComponentType<any>
+  title: string
+  description: string
+  benefits: string[]
 }
-
 const DynamicContentShowcase: React.FC = () => {
-  const [currentTestimonial, setCurrentTestimonial] = useState(0);
-
+  const [currentTestimonial, setCurrentTestimonial] = useState(0)
   const testimonials: Testimonial[] = [
     {
       id: 1,
@@ -51,8 +46,7 @@ const DynamicContentShowcase: React.FC = () => {
       rating: 5,
       avatar: '/images/avatars/emily.jpg'
     }
-  ];
-
+  ]
   const features: Feature[] = [
     {
       icon: Brain,
@@ -78,8 +72,7 @@ const DynamicContentShowcase: React.FC = () => {
       description: 'Worldwide deployment and support for international businesses',
       benefits: ['Multi-Region Support', 'Local Compliance', 'Global CDN', 'International Support']
     }
-  ];
-
+  ]
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -89,28 +82,23 @@ const DynamicContentShowcase: React.FC = () => {
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-  ];
-
+  ]
   const stats = [
     { icon: Users, value: '10,000+', label: 'Happy Customers' },
     { icon: TrendingUp, value: '99.9%', label: 'Uptime' },
     { icon: Star, value: '4.9/5', label: 'Rating' },
     { icon: Zap, value: '24/7', label: 'Support' }
-  ];
-
+  ]
   const nextTestimonial = () => {
-    setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
-  };
-
+    setCurrentTestimonial((prev) => (prev + 1) % testimonials.length)
+  }
   const prevTestimonial = () => {
-    setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-  };
-
+    setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length)
+  }
   useEffect(() => {
-    const timer = setInterval(nextTestimonial, 5000);
-    return () => clearInterval(timer);
-  }, []);
-
+    const timer = setInterval(nextTestimonial, 5000)
+    return () => clearInterval(timer)
+  }, [])
   return (
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
@@ -134,7 +122,6 @@ const DynamicContentShowcase: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Stats Section */}
       <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
@@ -151,7 +138,6 @@ const DynamicContentShowcase: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -163,7 +149,6 @@ const DynamicContentShowcase: React.FC = () => {
               Comprehensive AI and IT solutions designed to transform your business operations.
             </p>
           </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 hover:bg-white/10 transition-all duration-300">
@@ -185,7 +170,6 @@ const DynamicContentShowcase: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Testimonials Section */}
       <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
@@ -195,7 +179,6 @@ const DynamicContentShowcase: React.FC = () => {
               Don't just take our word for it. Here's what our satisfied customers have to say about their experience.
             </p>
           </div>
-
           <div className="relative">
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-12 border border-white/20">
               <div className="text-center">
@@ -222,7 +205,6 @@ const DynamicContentShowcase: React.FC = () => {
                 </div>
               </div>
             </div>
-
             {/* Navigation Buttons */}
             <button
               onClick={prevTestimonial}
@@ -237,7 +219,6 @@ const DynamicContentShowcase: React.FC = () => {
               <ChevronRight className="w-6 h-6" />
             </button>
           </div>
-
           {/* Testimonial Indicators */}
           <div className="flex justify-center mt-8 space-x-2">
             {testimonials.map((_, index) => (
@@ -252,7 +233,6 @@ const DynamicContentShowcase: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -264,7 +244,6 @@ const DynamicContentShowcase: React.FC = () => {
               Discover the advantages that make our solutions the preferred choice for businesses worldwide.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-center gap-3 bg-white/5 backdrop-blur-lg rounded-lg p-4 border border-white/10">
@@ -275,7 +254,6 @@ const DynamicContentShowcase: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
@@ -299,7 +277,6 @@ const DynamicContentShowcase: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
-
-export default DynamicContentShowcase;
+  )
+}
+export default DynamicContentShowcase

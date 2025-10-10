@@ -1,20 +1,16 @@
-'use client';
-
+'use client'
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Phone, Mail, MessageCircle, Clock, CheckCircle, Search, HelpCircle, BookOpen, Users, Zap } from 'lucide-react';
-
+import { Phone, Mail, MessageCircle, Clock, CheckCircle, Search, HelpCircle, BookOpen, Users, Zap } from 'lucide-react'
 interface FAQ {
-  question: string;
-  answer: string;
-  category: string;
+  question: string
+  answer: string
+  category: string
 }
-
 const SupportPage: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null);
-
+  const [searchTerm, setSearchTerm] = useState('')
+  const [selectedCategory, setSelectedCategory] = useState('all')
+  const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null)
   const faqs: FAQ[] = [
     {
       question: 'How do I get started with your AI solutions?',
@@ -46,17 +42,14 @@ const SupportPage: React.FC = () => {
       answer: 'We implement automated daily backups with 30-day retention, plus real-time replication across multiple data centers. All backups are encrypted and tested regularly to ensure data integrity.',
       category: 'Data Management'
     }
-  ];
-
-  const categories = ['all', 'Getting Started', 'Support', 'Security', 'Integration', 'Service Level', 'Data Management'];
-
+  ]
+  const categories = ['all', 'Getting Started', 'Support', 'Security', 'Integration', 'Service Level', 'Data Management']
   const filteredFAQs = faqs.filter(faq => {
     const matchesSearch = faq.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         faq.answer.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesCategory = selectedCategory === 'all' || faq.category === selectedCategory;
-    return matchesSearch && matchesCategory;
-  });
-
+                         faq.answer.toLowerCase().includes(searchTerm.toLowerCase())
+    const matchesCategory = selectedCategory === 'all' || faq.category === selectedCategory
+    return matchesSearch && matchesCategory
+  })
   const supportChannels = [
     {
       icon: <Phone className="w-8 h-8 text-blue-500" />,
@@ -79,8 +72,7 @@ const SupportPage: React.FC = () => {
       contact: 'Available on website',
       availability: 'Business hours'
     }
-  ];
-
+  ]
   const resources = [
     {
       icon: <BookOpen className="w-6 h-6 text-blue-500" />,
@@ -100,8 +92,7 @@ const SupportPage: React.FC = () => {
       description: 'Connect with other users and experts',
       link: '/community'
     }
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-gray-50">
       <Helmet>
@@ -109,7 +100,6 @@ const SupportPage: React.FC = () => {
         <meta name="description" content="Get help and support for Zion Tech Group's AI and IT solutions. Find answers, contact support, and access resources." />
         <meta name="keywords" content="support, help, FAQ, contact, documentation, Zion Tech Group" />
       </Helmet>
-
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">
         <div className="container mx-auto px-4">
@@ -120,7 +110,6 @@ const SupportPage: React.FC = () => {
             <p className="text-xl md:text-2xl mb-8 text-blue-100">
               Find answers, get support, and access resources to make the most of our solutions
             </p>
-            
             {/* Search Bar */}
             <div className="max-w-2xl mx-auto">
               <div className="relative">
@@ -137,7 +126,6 @@ const SupportPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Support Channels */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
@@ -159,13 +147,11 @@ const SupportPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* FAQ Section */}
       <section className="py-16 bg-gray-100">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">Frequently Asked Questions</h2>
-            
             {/* Category Filter */}
             <div className="flex flex-wrap justify-center gap-4 mb-8">
               {categories.map((category) => (
@@ -182,7 +168,6 @@ const SupportPage: React.FC = () => {
                 </button>
               ))}
             </div>
-
             {/* FAQ List */}
             <div className="space-y-4">
               {filteredFAQs.length === 0 ? (
@@ -220,7 +205,6 @@ const SupportPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Resources Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
@@ -246,7 +230,6 @@ const SupportPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-16 bg-blue-900 text-white">
         <div className="container mx-auto px-4">
@@ -267,7 +250,6 @@ const SupportPage: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
-
-export default SupportPage;
+  )
+}
+export default SupportPage

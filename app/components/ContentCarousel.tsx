@@ -1,22 +1,18 @@
-'use client';
-
+'use client'
 import React, { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight, CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, TrendingUp } from 'lucide-react';
-
+import { ChevronLeft, ChevronRight, CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, TrendingUp } from 'lucide-react'
 interface Slide {
-  icon: React.ComponentType<any>;
-  title: string;
-  description: string;
-  features: string[];
+  icon: React.ComponentType<any>
+  title: string
+  description: string
+  features: string[]
   stats?: {
-    value: string;
-    label: string;
-  }[];
+    value: string
+    label: string
+  }[]
 }
-
 const ContentCarousel: React.FC = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-
+  const [currentSlide, setCurrentSlide] = useState(0)
   const slides: Slide[] = [
     {
       icon: Brain,
@@ -62,23 +58,18 @@ const ContentCarousel: React.FC = () => {
         { value: '24/7', label: 'Global Support' }
       ]
     }
-  ];
-
+  ]
   const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % slides.length);
-  };
-
+    setCurrentSlide((prev) => (prev + 1) % slides.length)
+  }
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
-  };
-
+    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)
+  }
   useEffect(() => {
-    const timer = setInterval(nextSlide, 5000);
-    return () => clearInterval(timer);
-  }, []);
-
-  const currentSlideData = slides[currentSlide];
-
+    const timer = setInterval(nextSlide, 5000)
+    return () => clearInterval(timer)
+  }, [])
+  const currentSlideData = slides[currentSlide]
   return (
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
       <div className="max-w-7xl mx-auto">
@@ -91,7 +82,6 @@ const ContentCarousel: React.FC = () => {
             Explore our comprehensive suite of AI and IT solutions designed to transform your business.
           </p>
         </div>
-
         {/* Carousel */}
         <div className="relative">
           <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-8 md:p-12 overflow-hidden">
@@ -110,7 +100,6 @@ const ContentCarousel: React.FC = () => {
                 </div>
               </div>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {currentSlideData.features.map((feature, index) => (
                 <div key={index} className="flex items-center gap-3">
@@ -119,7 +108,6 @@ const ContentCarousel: React.FC = () => {
                 </div>
               ))}
             </div>
-
             {/* Stats */}
             {currentSlideData.stats && (
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 pt-8 border-t border-slate-700">
@@ -132,7 +120,6 @@ const ContentCarousel: React.FC = () => {
               </div>
             )}
           </div>
-
           {/* Navigation Buttons */}
           <button
             onClick={prevSlide}
@@ -147,7 +134,6 @@ const ContentCarousel: React.FC = () => {
             <ChevronRight className="w-6 h-6" />
           </button>
         </div>
-
         {/* Slide Indicators */}
         <div className="flex justify-center mt-8 space-x-2">
           {slides.map((_, index) => (
@@ -160,7 +146,6 @@ const ContentCarousel: React.FC = () => {
             />
           ))}
         </div>
-
         {/* CTA Section */}
         <div className="text-center mt-16">
           <h3 className="text-2xl font-bold text-white mb-4">Ready to Get Started?</h3>
@@ -180,7 +165,6 @@ const ContentCarousel: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
-
-export default ContentCarousel;
+  )
+}
+export default ContentCarousel

@@ -1,10 +1,9 @@
-'use client';
+'use client'
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
-
 const GlobalErrorPage: React.FC = () => {
   const features = [
     {
@@ -31,8 +30,7 @@ const GlobalErrorPage: React.FC = () => {
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-  ];
-
+  ]
   return (
     <>
       <Helmet>
@@ -40,9 +38,7 @@ const GlobalErrorPage: React.FC = () => {
         <meta name="description" content="Global error page." />
         <meta name="keywords" content="global error, AI solutions, IT services, business transformation" />
       </Helmet>
-      
       <Navigation />
-      
       <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         {/* Hero Section */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -65,7 +61,6 @@ const GlobalErrorPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -77,7 +72,6 @@ const GlobalErrorPage: React.FC = () => {
                 Discover how our solutions can help transform your business.
               </p>
             </div>
-            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
@@ -99,7 +93,6 @@ const GlobalErrorPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-blue-600">
           <div className="max-w-4xl mx-auto text-center">
@@ -115,10 +108,8 @@ const GlobalErrorPage: React.FC = () => {
           </div>
         </section>
       </main>
-      
       <Footer />
     </>
-  );
-};
-
-export default GlobalErrorPage;
+  )
+}
+export default GlobalErrorPage

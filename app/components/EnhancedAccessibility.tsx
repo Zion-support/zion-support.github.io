@@ -9,17 +9,14 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
       if (main && !main.getAttribute('role')) {
         main.setAttribute('role', 'main');
       }
-
       const nav = document.querySelector('nav');
       if (nav && !nav.getAttribute('role')) {
         nav.setAttribute('role', 'navigation');
       }
-
       const footer = document.querySelector('footer');
       if (footer && !footer.getAttribute('role')) {
         footer.setAttribute('role', 'contentinfo');
       }
-
       const header = document.querySelector('header');
       if (header && !header.getAttribute('role')) {
         header.setAttribute('role', 'banner');
@@ -28,21 +25,17 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
 
     // Add focus management
     const addFocusManagement = () => {
-      const focusableElements = document.querySelectorAll(
-        'a[href], button, input, textarea, select, [tabindex]:not([tabindex="-1"])'
-      );
-
-      focusableElements.forEach((element) => {
-        element.addEventListener('focus', (e) => {
-          const target = e.target as HTMLElement;
-          target.style.outline = '2px solid #06b6d4';
-          target.style.outlineOffset = '2px';
+      const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+      const focusableContent = document.querySelectorAll(focusableElements);
+      
+      focusableContent.forEach(element => {
+        element.addEventListener('focus', () => {
+          element.style.outline = '2px solid #3b82f6';
+          element.style.outlineOffset = '2px';
         });
-
-        element.addEventListener('blur', (e) => {
-          const target = e.target as HTMLElement;
-          target.style.outline = '';
-          target.style.outlineOffset = '';
+        element.addEventListener('blur', () => {
+          element.style.outline = '';
+          element.style.outlineOffset = '';
         });
       });
     };
@@ -54,7 +47,6 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
           document.body.classList.add('keyboard-navigation');
         }
       });
-
       document.addEventListener('mousedown', () => {
         document.body.classList.remove('keyboard-navigation');
       });
@@ -69,7 +61,6 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
         announcement.className = 'sr-only';
         announcement.textContent = message;
         document.body.appendChild(announcement);
-
         setTimeout(() => {
           document.body.removeChild(announcement);
         }, 1000);
@@ -86,12 +77,10 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
           }
         });
       });
-
       observer.observe(document.body, {
         childList: true,
         subtree: true
       });
-
       return () => observer.disconnect();
     };
 
@@ -100,7 +89,7 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
     addFocusManagement();
     addKeyboardNavigation();
     const cleanup = addScreenReaderSupport();
-
+    
     return () => {
       if (cleanup) cleanup();
     };

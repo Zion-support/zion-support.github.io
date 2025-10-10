@@ -1,5 +1,4 @@
 'use client';
-
 import { useEffect } from 'react';
 
 export const usePerformanceMonitor = () => {
@@ -9,36 +8,32 @@ export const usePerformanceMonitor = () => {
     // Monitor page load performance
     const handleLoad = () => {
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      
       if (navigation) {
         const metrics = {
           domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
           loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
           totalLoadTime: navigation.loadEventEnd - navigation.fetchStart,
         };
-
         console.log('Performance Metrics:', metrics);
-
+        
         // Send to analytics if available
         if ('gtag' in window) {
           const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, any>) => void }).gtag;
           gtag('event', 'page_performance', {
             event_category: 'performance',
-            dom_content_loaded: Math.round(metrics.domContentLoaded),
-            load_complete: Math.round(metrics.loadComplete),
-            total_load_time: Math.round(metrics.totalLoadTime),
+            event_label: 'page_load',
+            value: Math.round(metrics.totalLoadTime),
           });
         }
       }
     };
 
-    // Monitor resource loading
+    // Monitor resource timing
     const handleResourceTiming = () => {
       const resources = performance.getEntriesByType('resource');
       const slowResources = resources.filter(resource => resource.duration > 1000);
-      
       if (slowResources.length > 0) {
-        console.warn('Slow loading resources:', slowResources);
+        console.warn('Slow resources detected:', slowResources);
       }
     };
 
@@ -46,19 +41,15 @@ export const usePerformanceMonitor = () => {
     const handleMemoryUsage = () => {
       if ('memory' in performance) {
         const memory = (performance as any).memory;
-        const memoryUsage = {
-          used: Math.round(memory.usedJSHeapSize / 1024 / 1024),
-          total: Math.round(memory.totalJSHeapSize / 1024 / 1024),
-          limit: Math.round(memory.jsHeapSizeLimit / 1024 / 1024),
-        };
-
-        if (memoryUsage.used > memoryUsage.limit * 0.8) {
-          console.warn('High memory usage detected:', memoryUsage);
-        }
+        console.log('Memory usage:', {
+          used: Math.round(memory.usedJSHeapSize / 1024 / 1024) + ' MB',
+          total: Math.round(memory.totalJSHeapSize / 1024 / 1024) + ' MB',
+          limit: Math.round(memory.jsHeapSizeLimit / 1024 / 1024) + ' MB',
+        });
       }
     };
 
-    // Set up monitoring
+    // Add event listeners
     if (document.readyState === 'complete') {
       handleLoad();
     } else {

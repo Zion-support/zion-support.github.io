@@ -1,10 +1,9 @@
-'use client';
+'use client'
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Settings, Zap, Shield, Users, BarChart3 } from 'lucide-react';
-
 const AIApiManagerPage: React.FC = () => {
   const features = [
     {
@@ -22,8 +21,7 @@ const AIApiManagerPage: React.FC = () => {
       description: 'Enterprise-grade security with automated compliance monitoring and threat detection.',
       benefits: ['Threat detection', 'Compliance monitoring', 'Security scanning', 'Access control']
     }
-  ];
-
+  ]
   const benefits = [
     'Centralized API management',
     'Real-time performance monitoring',
@@ -31,15 +29,13 @@ const AIApiManagerPage: React.FC = () => {
     'Comprehensive analytics',
     'Easy integration',
     '24/7 support'
-  ];
-
+  ]
   const stats = [
     { icon: <Settings className="w-8 h-8 text-blue-500" />, value: '500+', label: 'APIs Managed' },
     { icon: <Zap className="w-8 h-8 text-green-500" />, value: '99.9%', label: 'Uptime' },
     { icon: <Shield className="w-8 h-8 text-purple-500" />, value: '100%', label: 'Security' },
     { icon: <BarChart3 className="w-8 h-8 text-orange-500" />, value: '60%', label: 'Efficiency Gain' }
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <Helmet>
@@ -47,13 +43,11 @@ const AIApiManagerPage: React.FC = () => {
         <meta name="description" content="Comprehensive AI-powered API management platform by Zion Tech Group. Centralized control, analytics, and security for all your APIs." />
         <meta name="keywords" content="API manager, API platform, API analytics, API security, centralized management, Zion Tech Group" />
       </Helmet>
-      
       <Navigation />
-
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' } />
         <div className="relative max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
             AI API Manager
@@ -71,7 +65,6 @@ const AIApiManagerPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Stats Section */}
       <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
@@ -88,7 +81,6 @@ const AIApiManagerPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -100,7 +92,6 @@ const AIApiManagerPage: React.FC = () => {
               Everything you need to manage your APIs effectively
             </p>
           </div>
-          
           <div className="grid md:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8">
@@ -119,7 +110,6 @@ const AIApiManagerPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -129,7 +119,6 @@ const AIApiManagerPage: React.FC = () => {
               Experience the benefits of our comprehensive API management solution
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((benefit, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center">
@@ -142,7 +131,6 @@ const AIApiManagerPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
@@ -164,10 +152,8 @@ const AIApiManagerPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       <Footer />
     </div>
-  );
-};
-
-export default AIApiManagerPage;
+  )
+}
+export default AIApiManagerPage

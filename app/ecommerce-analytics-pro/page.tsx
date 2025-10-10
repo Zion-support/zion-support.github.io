@@ -1,8 +1,7 @@
-'use client';
+'use client'
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { BarChart, TrendingUp, Users, ShoppingCart, DollarSign, Target, CheckCircle, ArrowRight } from 'lucide-react';
-
 const EcommerceAnalyticsProPage: React.FC = () => {
   const features = [
     {
@@ -35,8 +34,7 @@ const EcommerceAnalyticsProPage: React.FC = () => {
       title: 'Conversion Tracking',
       description: 'Monitor and optimize conversion funnels to increase sales and reduce cart abandonment.'
     }
-  ];
-
+  ]
   return (
     <>
       <Helmet>
@@ -44,7 +42,6 @@ const EcommerceAnalyticsProPage: React.FC = () => {
         <meta name="description" content="Transform your e-commerce business with AI-powered analytics. Track sales, optimize inventory, and maximize revenue with our comprehensive analytics platform." />
         <meta name="keywords" content="e-commerce analytics, sales tracking, inventory optimization, revenue analytics, customer insights, e-commerce intelligence" />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -56,7 +53,6 @@ const EcommerceAnalyticsProPage: React.FC = () => {
                 Transform your e-commerce business with AI-powered analytics that drive growth, optimize operations, and maximize revenue.
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div
@@ -75,7 +71,6 @@ const EcommerceAnalyticsProPage: React.FC = () => {
         </section>
       </div>
     </>
-  );
-};
-
-export default EcommerceAnalyticsProPage;
+  )
+}
+export default EcommerceAnalyticsProPage

@@ -1,8 +1,7 @@
-'use client';
+'use client'
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Shield, FileText, Users, Lock, BarChart, CheckCircle, ArrowRight, Zap, Brain } from 'lucide-react';
-
 const MedicalRecordsManagerPage: React.FC = () => {
   const features = [
     {
@@ -35,8 +34,7 @@ const MedicalRecordsManagerPage: React.FC = () => {
       title: 'Advanced Security',
       description: 'End-to-end encryption, secure backups, and multi-factor authentication to protect sensitive medical data.'
     }
-  ];
-
+  ]
   return (
     <>
       <Helmet>
@@ -44,7 +42,6 @@ const MedicalRecordsManagerPage: React.FC = () => {
         <meta name="description" content="Secure, HIPAA-compliant medical records management system with AI-powered insights. Streamline healthcare data management and improve patient care." />
         <meta name="keywords" content="medical records management, HIPAA compliance, healthcare data, patient records, medical software, healthcare analytics" />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -56,7 +53,6 @@ const MedicalRecordsManagerPage: React.FC = () => {
                 Secure, HIPAA-compliant medical records management system with AI-powered insights to streamline healthcare data management and improve patient care.
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div
@@ -75,7 +71,6 @@ const MedicalRecordsManagerPage: React.FC = () => {
         </section>
       </div>
     </>
-  );
-};
-
-export default MedicalRecordsManagerPage;
+  )
+}
+export default MedicalRecordsManagerPage

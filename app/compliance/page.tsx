@@ -1,8 +1,7 @@
-'use client';
+'use client'
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, FileCheck, Lock, Award } from 'lucide-react';
-
 const CompliancePage: React.FC = () => {
   const features = [
     {
@@ -25,8 +24,7 @@ const CompliancePage: React.FC = () => {
       title: 'Audit Readiness',
       description: 'Stay audit-ready with continuous compliance monitoring and reporting'
     }
-  ];
-
+  ]
   const benefits = [
     'Advanced compliance technology integration',
     'Real-time compliance monitoring',
@@ -36,8 +34,7 @@ const CompliancePage: React.FC = () => {
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -45,7 +42,6 @@ const CompliancePage: React.FC = () => {
         <meta name="description" content="Professional Compliance services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="compliance, regulatory compliance, IT services, Zion Tech Group, compliance management" />
       </Helmet>
-
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-white mb-6">
@@ -59,7 +55,6 @@ const CompliancePage: React.FC = () => {
             Our compliance solutions deliver unmatched performance, security, and scalability.
           </p>
         </div>
-
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {features.map((feature, index) => (
             <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center hover:bg-white/20 transition-all duration-300">
@@ -69,7 +64,6 @@ const CompliancePage: React.FC = () => {
             </div>
           ))}
         </div>
-
         <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-8">
             Why Choose Our Compliance Solutions?
@@ -83,7 +77,6 @@ const CompliancePage: React.FC = () => {
             ))}
           </div>
         </div>
-
         <div className="text-center">
           <h2 className="text-3xl font-bold text-white mb-6">
             Ready to Get Started?
@@ -104,7 +97,6 @@ const CompliancePage: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
-
-export default CompliancePage;
+  )
+}
+export default CompliancePage

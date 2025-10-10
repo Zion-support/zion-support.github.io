@@ -1,4 +1,4 @@
-'use client';
+'use client'
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import {
@@ -17,11 +17,9 @@ import {
 } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
 const ServicesPage: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-
+  const [searchTerm, setSearchTerm] = useState('')
+  const [selectedCategory, setSelectedCategory] = useState('all')
   const services = [
     {
       id: 1,
@@ -77,17 +75,14 @@ const ServicesPage: React.FC = () => {
       features: ['Database Design', 'Performance Optimization', 'Data Migration', 'Backup & Recovery'],
       price: 'Starting at $1,000/month'
     }
-  ];
-
-  const categories = ['all', 'AI', 'Cloud', 'Security', 'Analytics', 'Development', 'Database'];
-
+  ]
+  const categories = ['all', 'AI', 'Cloud', 'Security', 'Analytics', 'Development', 'Database']
   const filteredServices = services.filter(service => {
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    return matchesSearch && matchesCategory;
-  });
-
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase())
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory
+    return matchesSearch && matchesCategory
+  })
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -95,9 +90,7 @@ const ServicesPage: React.FC = () => {
         <meta name="description" content="Comprehensive AI and IT services including AI solutions, cloud services, cybersecurity, data analytics, and more." />
         <meta name="keywords" content="services, AI solutions, cloud services, cybersecurity, data analytics, mobile development, database services" />
       </Helmet>
-      
       <Navigation />
-      
       <main className="pt-20">
         {/* Hero Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -111,7 +104,6 @@ const ServicesPage: React.FC = () => {
             </p>
           </div>
         </section>
-
         {/* Search and Filter Section */}
         <section className="py-10 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -143,7 +135,6 @@ const ServicesPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Services Grid */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -175,7 +166,6 @@ const ServicesPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -198,10 +188,8 @@ const ServicesPage: React.FC = () => {
           </div>
         </section>
       </main>
-      
       <Footer />
     </div>
-  );
-};
-
-export default ServicesPage;
+  )
+}
+export default ServicesPage

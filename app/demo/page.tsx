@@ -1,8 +1,7 @@
-'use client';
+'use client'
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Play, ArrowRight, CheckCircle } from 'lucide-react';
-
 const DemoPage: React.FC = () => {
   const demos = [
     {
@@ -23,8 +22,7 @@ const DemoPage: React.FC = () => {
       duration: '4 min',
       features: ['Blog posts', 'Social media content', 'Product descriptions']
     }
-  ];
-
+  ]
   return (
     <>
       <Helmet>
@@ -32,7 +30,6 @@ const DemoPage: React.FC = () => {
         <meta name="description" content="Experience our AI and IT solutions through interactive demos. See how our technology can transform your business." />
         <meta name="keywords" content="demo, AI demo, technology demo, interactive demo, AI solutions demo" />
       </Helmet>
-      
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
@@ -44,7 +41,6 @@ const DemoPage: React.FC = () => {
             </p>
           </div>
         </section>
-
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -73,7 +69,6 @@ const DemoPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         <section className="py-16 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-8 border border-cyan-500/20">
@@ -93,7 +88,6 @@ const DemoPage: React.FC = () => {
         </section>
       </div>
     </>
-  );
-};
-
-export default DemoPage;
+  )
+}
+export default DemoPage

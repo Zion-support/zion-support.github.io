@@ -1,8 +1,7 @@
-'use client';
+'use client'
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Users, Search, Brain, Target, CheckCircle, ArrowRight, Zap, Shield, BarChart } from 'lucide-react';
-
 const AIRecruitmentAssistantPage: React.FC = () => {
   const features = [
     {
@@ -35,8 +34,7 @@ const AIRecruitmentAssistantPage: React.FC = () => {
       title: 'Automated Screening',
       description: 'AI-powered initial screening questions and assessments to filter candidates effectively.'
     }
-  ];
-
+  ]
   return (
     <>
       <Helmet>
@@ -44,7 +42,6 @@ const AIRecruitmentAssistantPage: React.FC = () => {
         <meta name="description" content="Streamline your hiring process with AI-powered recruitment tools. Find, screen, and hire the best candidates faster with our intelligent recruitment assistant." />
         <meta name="keywords" content="AI recruitment, hiring automation, candidate matching, resume screening, recruitment analytics, HR technology" />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -56,7 +53,6 @@ const AIRecruitmentAssistantPage: React.FC = () => {
                 Transform your hiring process with AI-powered recruitment tools that find, screen, and hire the best candidates faster and more efficiently.
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div
@@ -75,7 +71,6 @@ const AIRecruitmentAssistantPage: React.FC = () => {
         </section>
       </div>
     </>
-  );
-};
-
-export default AIRecruitmentAssistantPage;
+  )
+}
+export default AIRecruitmentAssistantPage

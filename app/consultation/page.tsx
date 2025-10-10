@@ -1,20 +1,17 @@
-'use client';
-
+'use client'
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { Calendar, Clock, Users, CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Target, Award } from 'lucide-react';
-
+import { Calendar, Clock, Users, CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Target, Award } from 'lucide-react'
 interface ConsultationType {
-  id: string;
-  name: string;
-  description: string;
-  duration: string;
-  price: string;
-  features: string[];
-  popular: boolean;
+  id: string
+  name: string
+  description: string
+  duration: string
+  price: string
+  features: string[]
+  popular: boolean
 }
-
 const ConsultationPage: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -25,8 +22,7 @@ const ConsultationPage: React.FC = () => {
     message: '',
     preferredTime: '',
     urgency: 'medium'
-  });
-
+  })
   const consultationTypes: ConsultationType[] = [
     {
       id: 'strategy',
@@ -73,8 +69,7 @@ const ConsultationPage: React.FC = () => {
       ],
       popular: false
     }
-  ];
-
+  ]
   const services = [
     {
       icon: Zap,
@@ -96,23 +91,20 @@ const ConsultationPage: React.FC = () => {
       title: 'Cybersecurity',
       description: 'Protect your business with comprehensive security solutions and compliance'
     }
-  ];
-
+  ]
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
+    const { name, value } = e.target
     setFormData(prev => ({
       ...prev,
       [name]: value
-    }));
-  };
-
+    }))
+  }
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+    e.preventDefault()
     // In a real app, this would submit the form data
-    console.log('Form submitted:', formData);
-    alert('Thank you for your interest! We will contact you within 24 hours.');
-  };
-
+    console.log('Form submitted:', formData)
+    alert('Thank you for your interest! We will contact you within 24 hours.')
+  }
   return (
     <div className="min-h-screen bg-gray-50">
       <Helmet>
@@ -120,7 +112,6 @@ const ConsultationPage: React.FC = () => {
         <meta name="description" content="Get a free consultation with our technology experts. Discuss your AI, cloud, and digital transformation needs with Zion Tech Group." />
         <meta name="keywords" content="free consultation, technology consulting, AI consultation, cloud consulting, digital transformation" />
       </Helmet>
-
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">
         <div className="container mx-auto px-4">
@@ -142,7 +133,6 @@ const ConsultationPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Services Section */}
       <section id="services" className="py-16 bg-white">
         <div className="container mx-auto px-4">
@@ -162,7 +152,6 @@ const ConsultationPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Consultation Types */}
       <section className="py-16 bg-gray-100">
         <div className="container mx-auto px-4">
@@ -205,7 +194,6 @@ const ConsultationPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Contact Form */}
       <section id="consultation-form" className="py-16 bg-white">
         <div className="container mx-auto px-4">
@@ -242,7 +230,6 @@ const ConsultationPage: React.FC = () => {
                   />
                 </div>
               </div>
-
               <div className="grid md:grid-cols-2 gap-6 mb-6">
                 <div>
                   <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
@@ -271,7 +258,6 @@ const ConsultationPage: React.FC = () => {
                   />
                 </div>
               </div>
-
               <div className="grid md:grid-cols-2 gap-6 mb-6">
                 <div>
                   <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
@@ -309,7 +295,6 @@ const ConsultationPage: React.FC = () => {
                   </select>
                 </div>
               </div>
-
               <div className="mb-6">
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
                   Tell us about your project
@@ -324,7 +309,6 @@ const ConsultationPage: React.FC = () => {
                   placeholder="Describe your current challenges, goals, and what you hope to achieve..."
                 />
               </div>
-
               <div className="text-center">
                 <button
                   type="submit"
@@ -337,7 +321,6 @@ const ConsultationPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Contact Info */}
       <section className="py-16 bg-gray-100">
         <div className="container mx-auto px-4">
@@ -364,7 +347,6 @@ const ConsultationPage: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
-
-export default ConsultationPage;
+  )
+}
+export default ConsultationPage

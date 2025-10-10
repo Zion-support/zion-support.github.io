@@ -1,42 +1,34 @@
-'use client';
+'use client'
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
-
-const Navigation: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false);
-  const [aiServicesOpen, setAiServicesOpen] = useState(false);
-  const [itServicesOpen, setItServicesOpen] = useState(false);
-  const [microSaasOpen, setMicroSaasOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-
+const Navigation: React.FC = () => {const [isOpen, setIsOpen] = useState(false)
+  const [servicesOpen, setServicesOpen] = useState(false)
+  const [aiServicesOpen, setAiServicesOpen] = useState(false)
+  const [itServicesOpen, setItServicesOpen] = useState(false)
+  const [microSaasOpen, setMicroSaasOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 1024) {
-        setIsOpen(false);
+        setIsOpen(false)
       }
-    };
-
+    }
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-
-    window.addEventListener('resize', handleResize);
-    window.addEventListener('scroll', handleScroll);
-
+      setIsScrolled(window.scrollY > 50)
+    }
+    window.addEventListener('resize', handleResize)
+    window.addEventListener('scroll', handleScroll)
     return () => {
-      window.removeEventListener('resize', handleResize);
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
-  const toggleMenu = () => setIsOpen(!isOpen);
-  const toggleServices = () => setServicesOpen(!servicesOpen);
-  const toggleAiServices = () => setAiServicesOpen(!aiServicesOpen);
-  const toggleItServices = () => setItServicesOpen(!itServicesOpen);
-  const toggleMicroSaas = () => setMicroSaasOpen(!microSaasOpen);
-
+      window.removeEventListener('resize', handleResize)
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
+  const toggleMenu = () => setIsOpen(!isOpen)
+  const toggleServices = () => setServicesOpen(!servicesOpen)
+  const toggleAiServices = () => setAiServicesOpen(!aiServicesOpen)
+  const toggleItServices = () => setItServicesOpen(!itServicesOpen)
+  const toggleMicroSaas = () => setMicroSaasOpen(!microSaasOpen)
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
@@ -52,14 +44,12 @@ const Navigation: React.FC = () => {
               <span className="text-xl font-bold text-white">Zion Tech Group</span>
             </Link>
           </div>
-
           {/* Desktop Navigation */}
           <div className="hidden lg:block">
             <div className="ml-10 flex items-baseline space-x-8">
               <Link href="/" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
                 Home
               </Link>
-              
               {/* Services Dropdown */}
               <div className="relative">
                 <button
@@ -69,7 +59,6 @@ const Navigation: React.FC = () => {
                   Services
                   <ChevronDown className="ml-1 h-4 w-4" />
                 </button>
-                
                 {servicesOpen && (
                   <div className="absolute left-0 mt-2 w-48 bg-slate-800 rounded-md shadow-lg py-1 z-50">
                     <Link href="/ai-services" className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700">
@@ -84,7 +73,6 @@ const Navigation: React.FC = () => {
                   </div>
                 )}
               </div>
-
               <Link href="/about" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
                 About
               </Link>
@@ -93,7 +81,6 @@ const Navigation: React.FC = () => {
               </Link>
             </div>
           </div>
-
           {/* Mobile menu button */}
           <div className="lg:hidden">
             <button
@@ -104,7 +91,6 @@ const Navigation: React.FC = () => {
             </button>
           </div>
         </div>
-
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="lg:hidden">
@@ -123,7 +109,6 @@ const Navigation: React.FC = () => {
         )}
       </div>
     </nav>
-  );
-};
-
-export default Navigation;
+  )
+}
+export default Navigation

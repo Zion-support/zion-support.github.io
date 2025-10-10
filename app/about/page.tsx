@@ -1,4 +1,4 @@
-'use client';
+'use client'
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import {
@@ -26,15 +26,13 @@ import {
 } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
 const AboutPage: React.FC = () => {
   const stats = [
     { number: '500+', label: 'Projects Completed' },
     { number: '99.9%', label: 'Client Satisfaction' },
     { number: '24/7', label: 'Support Available' },
     { number: '50+', label: 'Expert Team Members' }
-  ];
-
+  ]
   const values = [
     {
       icon: Brain,
@@ -56,8 +54,7 @@ const AboutPage: React.FC = () => {
       title: 'Excellence',
       description: 'We strive for excellence in every project, delivering high-quality solutions that exceed expectations.'
     }
-  ];
-
+  ]
   const team = [
     {
       name: 'Sarah Johnson',
@@ -83,8 +80,7 @@ const AboutPage: React.FC = () => {
       image: '/team/david.jpg',
       bio: 'Full-stack developer with 10+ years experience'
     }
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -92,9 +88,7 @@ const AboutPage: React.FC = () => {
         <meta name="description" content="Learn about Zion Tech Group, a leading provider of AI and IT solutions. Our mission, values, and expert team." />
         <meta name="keywords" content="about, company, team, AI solutions, IT consulting, mission, values" />
       </Helmet>
-      
       <Navigation />
-      
       <main className="pt-20">
         {/* Hero Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -108,7 +102,6 @@ const AboutPage: React.FC = () => {
             </p>
           </div>
         </section>
-
         {/* Stats Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -122,7 +115,6 @@ const AboutPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Mission Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -166,7 +158,6 @@ const AboutPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Values Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -178,7 +169,6 @@ const AboutPage: React.FC = () => {
                 The principles that guide everything we do
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {values.map((value, index) => (
                 <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/20 text-center">
@@ -192,7 +182,6 @@ const AboutPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Team Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -204,7 +193,6 @@ const AboutPage: React.FC = () => {
                 The experts behind our success
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {team.map((member, index) => (
                 <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/20 text-center">
@@ -219,7 +207,6 @@ const AboutPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -242,10 +229,8 @@ const AboutPage: React.FC = () => {
           </div>
         </section>
       </main>
-      
       <Footer />
     </div>
-  );
-};
-
-export default AboutPage;
+  )
+}
+export default AboutPage

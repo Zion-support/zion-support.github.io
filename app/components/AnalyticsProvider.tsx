@@ -1,5 +1,4 @@
 'use client';
-
 import React, { createContext, useContext, useEffect, ReactNode } from 'react';
 
 interface AnalyticsContextType {
@@ -26,7 +25,6 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
     // Initialize Google Analytics if available
     if (typeof window !== 'undefined' && 'gtag' in window) {
       const gtag = (window as { gtag: (command: string, targetId: string, config?: any) => void }).gtag;
-      
       // Configure Google Analytics
       gtag('config', 'GA_MEASUREMENT_ID', {
         page_title: document.title,
@@ -36,40 +34,25 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
   }, []);
 
   const trackEvent = (eventName: string, parameters: Record<string, any> = {}) => {
-    if (typeof window === 'undefined') return;
-
-    // Google Analytics
-    if ('gtag' in window) {
+    if (typeof window !== 'undefined' && 'gtag' in window) {
       const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, any>) => void }).gtag;
       gtag('event', eventName, {
-        event_category: parameters.category || 'engagement',
-        event_label: parameters.label,
-        value: parameters.value,
+        event_category: parameters.category || 'general',
+        event_label: parameters.label || '',
+        value: parameters.value || 0,
         ...parameters,
       });
-    }
-
-    // Console logging for development
-    if (process.env.NODE_ENV === 'development') {
-      console.log('Analytics Event:', eventName, parameters);
     }
   };
 
   const trackPageView = (pageName: string, pagePath: string) => {
-    if (typeof window === 'undefined') return;
-
-    // Google Analytics
-    if ('gtag' in window) {
-      const gtag = (window as { gtag: (command: string, targetId: string, config: any) => void }).gtag;
-      gtag('config', 'GA_MEASUREMENT_ID', {
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, any>) => void }).gtag;
+      gtag('event', 'page_view', {
         page_title: pageName,
         page_location: window.location.origin + pagePath,
+        page_path: pagePath,
       });
-    }
-
-    // Console logging for development
-    if (process.env.NODE_ENV === 'development') {
-      console.log('Page View:', pageName, pagePath);
     }
   };
 
@@ -84,3 +67,5 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
     </AnalyticsContext.Provider>
   );
 };
+
+export default AnalyticsProvider;

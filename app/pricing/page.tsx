@@ -1,10 +1,8 @@
-'use client';
-
+'use client'
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { CheckCircle, Star, ArrowRight, Zap } from 'lucide-react';
-
 const PricingPage: React.FC = () => {
   const plans = [
     {
@@ -54,8 +52,7 @@ const PricingPage: React.FC = () => {
       ],
       popular: false
     }
-  ];
-
+  ]
   return (
     <>
       <Helmet>
@@ -67,7 +64,6 @@ const PricingPage: React.FC = () => {
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/pricing" />
       </Helmet>
-      
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="py-20 px-4">
@@ -82,7 +78,6 @@ const PricingPage: React.FC = () => {
             </p>
           </div>
         </section>
-
         {/* Pricing Plans */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -102,7 +97,6 @@ const PricingPage: React.FC = () => {
                       </div>
                     </div>
                   )}
-                  
                   <div className="text-center mb-8">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                     <div className="flex items-baseline justify-center mb-4">
@@ -111,7 +105,6 @@ const PricingPage: React.FC = () => {
                     </div>
                     <p className="text-gray-300">{plan.description}</p>
                   </div>
-
                   <ul className="space-y-4 mb-8">
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-start">
@@ -120,7 +113,6 @@ const PricingPage: React.FC = () => {
                       </li>
                     ))}
                   </ul>
-
                   <div className="text-center">
                     {plan.name === 'Enterprise' ? (
                       <Link
@@ -145,7 +137,6 @@ const PricingPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* FAQ Section */}
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto">
@@ -180,7 +171,6 @@ const PricingPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -211,7 +201,6 @@ const PricingPage: React.FC = () => {
         </section>
       </div>
     </>
-  );
-};
-
-export default PricingPage;
+  )
+}
+export default PricingPage

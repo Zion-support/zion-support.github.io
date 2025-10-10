@@ -1,38 +1,33 @@
-'use client';
+'use client'
 import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import SEOOptimizer from './components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-import { Phone, Mail, MapPin, Clock, ArrowRight, Star, CheckCircle, Zap, Shield, Brain, Cloud, Code, BarChart, Users, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
-
+import { Phone, Mail, MapPin, Clock, ArrowRight, Star, CheckCircle, Zap, Shield, Brain, Cloud, Code, BarChart, Users, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText } from 'lucide-react'
 // Dynamically import heavy components for better performance
-const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
-const ContentCarousel = lazy(() => import('./components/ContentCarousel'));
-const DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase'));
-const ContentStatistics = lazy(() => import('./components/ContentStatistics'));
-const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'));
-
+const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'))
+const ContentCarousel = lazy(() => import('./components/ContentCarousel'))
+const DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase'))
+const ContentStatistics = lazy(() => import('./components/ContentStatistics'))
+const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'))
 // Preload critical components
 const preloadComponents = () => {
   if (typeof window !== 'undefined') {
     // Preload critical components after initial render
     setTimeout(() => {
-      import('./components/ContentPromotionBanner');
-      import('./components/ContentCarousel');
-    }, 100);
+      import('./components/ContentPromotionBanner')
+      import('./components/ContentCarousel')
+    }, 100)
   }
-};
-
+}
 const HomePage: React.FC = memo(() => {
-  const [isLoaded, setIsLoaded] = useState(false);
-
+  const [isLoaded, setIsLoaded] = useState(false)
   useEffect(() => {
-    preloadComponents();
-    setIsLoaded(true);
-  }, []);
-
+    preloadComponents()
+    setIsLoaded(true)
+  }, [])
   const features = [
     {
       icon: Brain,
@@ -70,23 +65,19 @@ const HomePage: React.FC = memo(() => {
       description: 'Expert guidance to help you make the right technology decisions.',
       benefits: ['Technology Strategy', 'Digital Transformation', 'Process Optimization', 'Training']
     }
-  ];
-
+  ]
   const stats = [
     { number: '500+', label: 'Projects Completed' },
     { number: '99.9%', label: 'Uptime Guarantee' },
     { number: '24/7', label: 'Support Available' },
     { number: '50+', label: 'Expert Team Members' }
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <PerformanceOptimizer />
       <SEOOptimizer />
       <AccessibilityEnhancer />
-      
       <Navigation />
-      
       <main>
         {/* Hero Section */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
@@ -112,7 +103,6 @@ const HomePage: React.FC = memo(() => {
             </div>
           </div>
         </section>
-
         {/* Stats Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -126,7 +116,6 @@ const HomePage: React.FC = memo(() => {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -138,7 +127,6 @@ const HomePage: React.FC = memo(() => {
                 Comprehensive solutions designed to meet your business needs
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
@@ -160,7 +148,6 @@ const HomePage: React.FC = memo(() => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -183,12 +170,9 @@ const HomePage: React.FC = memo(() => {
           </div>
         </section>
       </main>
-      
       <Footer />
     </div>
-  );
-});
-
-HomePage.displayName = 'HomePage';
-
-export default HomePage;
+  )
+})
+HomePage.displayName = 'HomePage'
+export default HomePage

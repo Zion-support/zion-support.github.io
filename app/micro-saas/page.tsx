@@ -1,22 +1,19 @@
-'use client';
-
+'use client'
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { CheckCircle, ArrowRight, Zap, Star, Users, TrendingUp, Shield, Cloud, BarChart3, MessageSquare } from 'lucide-react';
-
+import { CheckCircle, ArrowRight, Zap, Star, Users, TrendingUp, Shield, Cloud, BarChart3, MessageSquare } from 'lucide-react'
 interface MicroSaasProduct {
-  id: string;
-  icon: string;
-  title: string;
-  description: string;
-  features: string[];
-  price: string;
-  users: string;
-  popular: boolean;
-  category: string;
+  id: string
+  icon: string
+  title: string
+  description: string
+  features: string[]
+  price: string
+  users: string
+  popular: boolean
+  category: string
 }
-
 const MicroSaasPage: React.FC = () => {
   const products: MicroSaasProduct[] = [
     {
@@ -121,10 +118,8 @@ const MicroSaasPage: React.FC = () => {
       popular: true,
       category: 'AI'
     }
-  ];
-
-  const categories = ['All', 'Analytics', 'Communication', 'Security', 'Storage', 'Monitoring', 'AI'];
-
+  ]
+  const categories = ['All', 'Analytics', 'Communication', 'Security', 'Storage', 'Monitoring', 'AI']
   const benefits = [
     'Quick setup and deployment',
     'Scalable pricing plans',
@@ -132,21 +127,17 @@ const MicroSaasPage: React.FC = () => {
     'Regular feature updates',
     'Secure and reliable',
     'Easy integration'
-  ];
-
+  ]
   const stats = [
     { icon: <Users className="w-8 h-8 text-blue-500" />, value: '10K+', label: 'Active Users' },
     { icon: <TrendingUp className="w-8 h-8 text-green-500" />, value: '99.9%', label: 'Uptime' },
     { icon: <Shield className="w-8 h-8 text-purple-500" />, value: '100%', label: 'Secure' },
     { icon: <Zap className="w-8 h-8 text-orange-500" />, value: '5min', label: 'Setup Time' }
-  ];
-
-  const [selectedCategory, setSelectedCategory] = React.useState('All');
-
+  ]
+  const [selectedCategory, setSelectedCategory] = React.useState('All')
   const filteredProducts = selectedCategory === 'All' 
     ? products 
-    : products.filter(product => product.category === selectedCategory);
-
+    : products.filter(product => product.category === selectedCategory)
   return (
     <div className="min-h-screen bg-gray-50">
       <Helmet>
@@ -154,7 +145,6 @@ const MicroSaasPage: React.FC = () => {
         <meta name="description" content="Discover our collection of micro SaaS solutions designed to solve specific business problems. Quick setup, affordable pricing, powerful features." />
         <meta name="keywords" content="micro SaaS, business tools, analytics, customer chat, security, cloud backup, performance monitoring" />
       </Helmet>
-
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">
         <div className="container mx-auto px-4">
@@ -182,7 +172,6 @@ const MicroSaasPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Stats Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
@@ -201,7 +190,6 @@ const MicroSaasPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Category Filter */}
       <section className="py-8 bg-gray-100">
         <div className="container mx-auto px-4">
@@ -222,7 +210,6 @@ const MicroSaasPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Products Grid */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
@@ -241,7 +228,6 @@ const MicroSaasPage: React.FC = () => {
                       </div>
                     </div>
                   )}
-                  
                   <div className="text-center mb-6">
                     <div className="text-4xl mb-4">{product.icon}</div>
                     <h3 className="text-2xl font-bold text-gray-900 mb-2">{product.title}</h3>
@@ -256,7 +242,6 @@ const MicroSaasPage: React.FC = () => {
                       </div>
                     </div>
                   </div>
-
                   <ul className="space-y-3 mb-8">
                     {product.features.map((feature, index) => (
                       <li key={index} className="flex items-start">
@@ -265,7 +250,6 @@ const MicroSaasPage: React.FC = () => {
                       </li>
                     ))}
                   </ul>
-
                   <div className="text-center">
                     <button className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-medium hover:bg-blue-700 transition-colors duration-200">
                       Start Free Trial
@@ -274,7 +258,6 @@ const MicroSaasPage: React.FC = () => {
                 </div>
               ))}
             </div>
-
             {filteredProducts.length === 0 && (
               <div className="text-center py-12">
                 <p className="text-gray-500 text-lg">No products found in this category.</p>
@@ -283,7 +266,6 @@ const MicroSaasPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-16 bg-gray-100">
         <div className="container mx-auto px-4">
@@ -300,7 +282,6 @@ const MicroSaasPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-16 bg-blue-900 text-white">
         <div className="container mx-auto px-4">
@@ -327,7 +308,6 @@ const MicroSaasPage: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
-
-export default MicroSaasPage;
+  )
+}
+export default MicroSaasPage

@@ -1,19 +1,16 @@
-'use client';
+'use client'
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { ChevronDown, ChevronUp } from 'lucide-react';
-
 const FAQPage: React.FC = () => {
-  const [openItems, setOpenItems] = useState<number[]>([]);
-
+  const [openItems, setOpenItems] = useState<number[]>([])
   const toggleItem = (index: number) => {
     setOpenItems(prev => 
       prev.includes(index) 
         ? prev.filter(item => item !== index)
         : [...prev, index]
-    );
-  };
-
+    )
+  }
   const faqs = [
     {
       question: "What AI services do you offer?",
@@ -47,8 +44,7 @@ const FAQPage: React.FC = () => {
       question: "What industries do you serve?",
       answer: "We serve a wide range of industries including healthcare, finance, e-commerce, manufacturing, education, real estate, legal, and more. Our solutions are tailored to meet industry-specific requirements and compliance standards."
     }
-  ];
-
+  ]
   return (
     <>
       <Helmet>
@@ -56,7 +52,6 @@ const FAQPage: React.FC = () => {
         <meta name="description" content="Find answers to frequently asked questions about our AI and IT services, pricing, implementation, and support." />
         <meta name="keywords" content="FAQ, frequently asked questions, AI services, IT services, support, pricing" />
       </Helmet>
-      
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
@@ -68,7 +63,6 @@ const FAQPage: React.FC = () => {
             </p>
           </div>
         </section>
-
         <section className="py-16 px-4">
           <div className="max-w-4xl mx-auto">
             <div className="space-y-4">
@@ -97,7 +91,6 @@ const FAQPage: React.FC = () => {
         </section>
       </div>
     </>
-  );
-};
-
-export default FAQPage;
+  )
+}
+export default FAQPage

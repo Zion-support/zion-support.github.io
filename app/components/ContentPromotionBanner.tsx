@@ -1,8 +1,6 @@
-'use client';
-
+'use client'
 import React from 'react';
 import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, TrendingUp } from 'lucide-react';
-
 const ContentPromotionBanner: React.FC = () => {
   const features = [
     {
@@ -25,8 +23,7 @@ const ContentPromotionBanner: React.FC = () => {
       title: 'Global Reach',
       description: 'Worldwide deployment with local support and compliance'
     }
-  ];
-
+  ]
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -36,8 +33,7 @@ const ContentPromotionBanner: React.FC = () => {
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-  ];
-
+  ]
   const stats = [
     {
       icon: Users,
@@ -57,8 +53,7 @@ const ContentPromotionBanner: React.FC = () => {
       label: 'Rating',
       description: 'Highly rated by clients'
     }
-  ];
-
+  ]
   return (
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
       <div className="max-w-7xl mx-auto">
@@ -70,7 +65,6 @@ const ContentPromotionBanner: React.FC = () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
             Join thousands of businesses that have revolutionized their operations with our cutting-edge AI and IT solutions.
           </p>
-          
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
               <Zap className="w-5 h-5" />
@@ -82,7 +76,6 @@ const ContentPromotionBanner: React.FC = () => {
             </button>
           </div>
         </div>
-
         {/* Features Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {features.map((feature, index) => (
@@ -95,7 +88,6 @@ const ContentPromotionBanner: React.FC = () => {
             </div>
           ))}
         </div>
-
         {/* Stats Section */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           {stats.map((stat, index) => (
@@ -109,7 +101,6 @@ const ContentPromotionBanner: React.FC = () => {
             </div>
           ))}
         </div>
-
         {/* Benefits Section */}
         <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-8">Why Choose Our Solutions?</h2>
@@ -122,7 +113,6 @@ const ContentPromotionBanner: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* CTA Section */}
         <div className="text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Ready to Get Started?</h2>
@@ -141,7 +131,6 @@ const ContentPromotionBanner: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
-
-export default ContentPromotionBanner;
+  )
+}
+export default ContentPromotionBanner
