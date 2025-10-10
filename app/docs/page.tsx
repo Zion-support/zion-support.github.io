@@ -14,7 +14,7 @@ const DocsPage: React.FC = () => {
     { id: 'it-services', name: 'IT Services', icon: Cloud },
     { id: 'api', name: 'API Reference', icon: Code },
     { id: 'security', name: 'Security', icon: Shield }
-  ];
+  ]
 
   const documentation = [
     {
@@ -107,14 +107,14 @@ const DocsPage: React.FC = () => {
         'Support Resources'
       ]
     }
-  ];
+  ]
 
   const quickLinks = [
     { title: 'API Reference', url: '/api', icon: Code },
     { title: 'Tutorials', url: '/tutorials', icon: BookOpen },
     { title: 'Community', url: '/community', icon: Users },
     { title: 'Support', url: '/support', icon: Shield }
-  ];
+  ]
 
   const filteredDocs = selectedCategory === 'all' 
     ? documentation 
@@ -348,6 +348,6 @@ const DocsPage: React.FC = () => {
       </div>
     </>
   );
-};
+}
 
 export default DocsPage;

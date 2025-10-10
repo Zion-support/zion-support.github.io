@@ -6,9 +6,9 @@ const PagePage: React.FC = () => {
   const features = [
     {}
     }
-  ];
+  ]
 const benefits = [
-    'Advanced AI technology integration',;
+    'Advanced AI technology integration',
     'Real-time processing and analytics',;
     'Enterprise-grade security and compliance',;
     'Scalable and flexible solutions',;
@@ -16,7 +16,7 @@ const benefits = [
     'Easy integration with existing systems',;
     'Cost-effective pricing plans',;
     'Proven track record of success';
-  ];
+  ]
 return (
           </div>
         </div>

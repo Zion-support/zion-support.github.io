@@ -24,7 +24,7 @@ icon: Shield,
       title: 'Global Deployment',
       description: 'Worldwide cloud infrastructure deployment and support'
     }
-  ];
+  ]
   const benefits = [
 'Advanced cloud technology integration',
     'Real-time monitoring and analytics',
@@ -34,7 +34,7 @@ icon: Shield,
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-  ];
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>

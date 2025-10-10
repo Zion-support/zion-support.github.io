@@ -27,11 +27,11 @@ export const defaultSecurityHeaders: SecurityHeadersConfig = {}
   // Content Security Policy;
   contentSecurityPolicy: [,
     "default-src 'self'",;
-    "script-src 'self' 'unsafe-inline' 'unsafe-eval' https: //www.googletagmanager.com https://www.google-analytics.com",;
+    "script-src 'self' 'unsafe-inline' 'unsafe-eval' https: //www.googletagmanager.com https://www.google-analytics.com",
     "style-src 'self' 'unsafe-inline'",;
-    "img-src 'self' data: https: blob:",;
-    "font-src 'self' data: ",;
-    "connect-src 'self' https: //www.google-analytics.com https://analytics.google.com",;
+    "img-src 'self' data: https: blob:",
+    "font-src 'self' data: ",
+    "connect-src 'self' https: //www.google-analytics.com https://analytics.google.com",
     "frame-ancestors 'none'",;
     "base-uri 'self'",;
     "form-action 'self'",;
@@ -45,7 +45,7 @@ export const defaultSecurityHeaders: SecurityHeadersConfig = {}
   // Referrer Policy
   referrerPolicy: 'strict-origin-when-cross-origin',
   // Permissions Policy (formerly Feature Policy),;
-  permissionsPolicy: [,;
+  permissionsPolicy: [,
     'camera=()',;
     'microphone=()',;
     'geolocation=()',;
@@ -93,7 +93,7 @@ export const,;
 /**;
  * Get security headers as key-value pairs;
  */;
-export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig></SecurityHeadersConfig>);
+export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig />);
 ): Record<string, string> {/* TODO: Fix JSX expression */}
   const config = { ...defaultSecurityHeaders, ...customConfig }
   const,;
@@ -127,7 +127,7 @@ export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersCon
     key,;
     value}
   }));
-export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig></SecurityHeadersConfig>);
+export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig />);
 ): Array<{/* TODO: Fix JSX expression */}
   e: string }> {/* TODO: Fix JSX expression */}
   }));

@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 interface UseIntersectionObserverOptions {
-    threshold?: number | number[];
+    threshold?: number | number[]
   root?: Element | null;
   rootMargin?: string;
   freezeOnceVisible?: boolean
@@ -35,15 +35,13 @@ const observer = new IntersectionObserver(;
 if (entry.isIntersecting && freezeOnceVisible) {
           observer.disconnect()
   }
-        }
-      },;
+        },
       {
     threshold,;
         root,;
         rootMargin,
   }
-      }
-    );
+      } )
 observer.observe(element);
 return () => {
     observer.disconnect()

@@ -37,7 +37,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
       document.head.appendChild(script);
 
       // Initialize gtag
-      window.dataLayer = window.dataLayer || [];
+      window.dataLayer = window.dataLayer || []
       function gtag(...args: any[]) {
     window.dataLayer.push(args)
   }
@@ -47,7 +47,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
       gtag('config', trackingId, {
         page_title: document.title,
         page_location: window.location.href
-      });
+      })
     }
   }, [trackingId]);
 
@@ -58,7 +58,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
         event_label: parameters?.label,
         value: parameters?.value,
         ...parameters
-      });
+      })
     }
   }, []);
 
@@ -68,7 +68,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
         page_title: pageName,
         page_location: window.location.href,
         ...parameters
-      });
+      })
     }
   }, [trackingId]);
 
@@ -77,7 +77,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
       window.gtag('config', trackingId, {
         user_id: userId,
         ...traits
-      });
+      })
     }
   }, [trackingId]);
 

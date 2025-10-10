@@ -38,7 +38,7 @@ const HomePage: React.FC = () => {
       gtag('event', 'phone_click', {
         event_category: 'engagement',
         event_label: 'main_phone_number'
-      });
+      })
     }
   }, []);
 
@@ -79,7 +79,7 @@ const HomePage: React.FC = () => {
       description: 'Expert guidance to help you navigate digital transformation and technology adoption.',
       benefits: ['Strategy Planning', 'Technology Assessment', 'Implementation Support', 'Training']
     }
-  ];
+  ]
 
   const services = [
     {
@@ -103,7 +103,7 @@ const HomePage: React.FC = () => {
       href: '/micro-saas',
       features: ['Custom SaaS', 'API Integration', 'Scalable Solutions', 'Maintenance']
     }
-  ];
+  ]
 
   return (
     <React.Fragment>
@@ -280,14 +280,14 @@ const HomePage: React.FC = memo(() => {
       description: 'Expert guidance to help you make the right technology decisions.',
       benefits: ['Technology Strategy', 'Digital Transformation', 'Process Optimization', 'Training']
     }
-  ];
+  ]
 
   const stats = [
     { number: '500+', label: 'Projects Completed' },
     { number: '99.9%', label: 'Uptime Guarantee' },
     { number: '24/7', label: 'Support Available' },
     { number: '50+', label: 'Expert Team Members' }
-  ];
+  ]
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

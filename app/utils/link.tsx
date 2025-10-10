@@ -1,7 +1,7 @@
 
 
 interface LinkProps {
-    href: string,;
+    href: string,
     children: React.ReactNode
   }
 interface LinkProps {}
@@ -17,7 +17,7 @@ interface LinkProps {}
 export const Link: React.FC<LinkProps>= ({}
 export const Link: React.FC<LinkProps> = ({}
   href,;
-  href: string,;
+  href: string,
   children: React.ReactNode;
   className?: string;
   target?: string;
@@ -26,7 +26,7 @@ export const Link: React.FC<LinkProps> = ({}
   'aria-label'?: string,}
 }
 export const Link: React.FC<LinkProps> = ({
-    ,;
+    ,
   href;
   children,;
   className,;
@@ -57,14 +57,14 @@ import React from 'react';
 interface LinkProps {/* TODO: Fix JSX expression */}
 }
 export const,;
-  Link: React.FC<LinkProps> = ({/* TODO: Fix JSX expression */});
+  Link: React.FC<LinkProps> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
     }
     // Handle internal navigation;
     if (href.startsWith('/') && !href.startsWith('//')) {/* TODO: Fix JSX expression */}
     }
   }
-  return (<a></a>
+  return (<a />
       href={href}
       className={className}
       target={target}
@@ -74,10 +74,10 @@ export const,;
       {...props}
     >{children}</a>
     </a>
-      aria-label={ariaLabel});
-      {...props});
+      aria-label={ariaLabel})
+      {...props})
     >);
-      {children});
+      {children})
     </a>);
   );
 }

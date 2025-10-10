@@ -11,7 +11,7 @@ const PerformanceDashboard: React.FC = () => {
     renderTime: 0,
     memoryUsage: 0,
     fps: 0,
-  });
+  })
   const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
     const updateMetrics = () => {

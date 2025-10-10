@@ -25,7 +25,7 @@ const DemoPage: React.FC = () => {
       duration: '4 min',
       features: ['Blog posts', 'Social media content', 'Product descriptions']
     }
-  ];
+  ]
 
   return (
     <>
@@ -107,6 +107,6 @@ const DemoPage: React.FC = () => {
       <Footer />
     </>
   );
-};
+}
 
 export default DemoPage;

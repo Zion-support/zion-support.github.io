@@ -112,7 +112,7 @@ const SpecializedServicesPage: React.FC = () => {
       title: 'Global Scalability',
       description: 'Scale your operations worldwide with our robust infrastructure'
     }
-  ];
+  ]
 
   const benefits = [
     'Increase efficiency by up to 50%',
@@ -121,7 +121,7 @@ const SpecializedServicesPage: React.FC = () => {
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with cutting-edge technology',
     'Ensure 99.9% uptime and reliability'
-  ];
+  ]
 
   return (
     <>

@@ -1009,7 +1009,7 @@ const ItServicesPage: React.FC = () => {
       popular: true,
       icon: Shield
     }
-  ];
+  ]
 
   const categories = [
     { id: 'all', name: 'All Services', count: services.length },
@@ -1045,7 +1045,7 @@ const ItServicesPage: React.FC = () => {
     { id: 'Security Automation', name: 'Security Automation', count: services.filter(s => s.category === 'Security Automation').length },
     { id: 'Data Visualization', name: 'Data Visualization', count: services.filter(s => s.category === 'Data Visualization').length },
     { id: 'Automation', name: 'Automation', count: services.filter(s => s.category === 'Automation').length }
-  ];
+  ]
 
   const filteredServices = services.filter(service => 
     selectedCategory === 'all' || service.category === selectedCategory
@@ -1186,6 +1186,6 @@ const ItServicesPage: React.FC = () => {
       <Footer />
     </>
   );
-};
+}
 
 export default ItServicesPage;

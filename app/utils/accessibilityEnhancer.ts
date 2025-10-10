@@ -5,9 +5,9 @@
 
 <<<<<<< HEAD
 export class AccessibilityEnhancer {
-  private focusableElements: HTMLElement[] = [];
-  private skipLinks: HTMLElement[] = [];
-  private landmarks: HTMLElement[] = [];
+  private focusableElements: HTMLElement[] = []
+  private skipLinks: HTMLElement[] = []
+  private landmarks: HTMLElement[] = []
   private isInitialized = false;
 
   constructor() {
@@ -57,11 +57,11 @@ export class AccessibilityEnhancer {
       'textarea:not([disabled])',
       '[tabindex]:not([tabindex="-1"])',
       '[contenteditable="true"]'
-    ];
+    ]
     
     this.focusableElements = Array.from(
       document.querySelectorAll(selectors.join(', '))
-    ) as HTMLElement[];
+    ) as HTMLElement[]
   }
 
   /**
@@ -99,7 +99,7 @@ export class AccessibilityEnhancer {
       } else if (['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes(event.key)) {
         this.handleArrowKeys(event);
       }
-    });
+    })
   }
 
   /**
@@ -159,14 +159,14 @@ const AccessibilityEnhancerPage: React.FC = () => {
     modals.forEach(modal => {
       const closeButton = modal.querySelector('[aria-label*="close"], [aria-label*="Close"]') as HTMLElement;
       closeButton?.click();
-    });
+    })
     
     // Close any open menus
     const menus = document.querySelectorAll('[role="menu"][aria-expanded="true"]');
     menus.forEach(menu => {
       const trigger = document.querySelector(`[aria-controls="${menu.id}"]`) as HTMLElement;
       trigger?.click();
-    });
+    })
   }
 
   /**
@@ -189,7 +189,7 @@ const AccessibilityEnhancerPage: React.FC = () => {
     const activeElement = document.activeElement as HTMLElement;
     const menuItems = Array.from(
       activeElement.closest('[role="menu"]')?.querySelectorAll('[role="menuitem"]') || []
-    ) as HTMLElement[];
+    ) as HTMLElement[]
     
     const currentIndex = menuItems.indexOf(activeElement);
     
@@ -247,7 +247,7 @@ const AccessibilityEnhancerPage: React.FC = () => {
       if (!nav.getAttribute('aria-label') && !nav.getAttribute('aria-labelledby')) {
         nav.setAttribute('aria-label', `Navigation ${index + 1}`);
       }
-    });
+    })
     
     // Setup banner landmark
     const header = document.querySelector('header');
@@ -274,7 +274,7 @@ const AccessibilityEnhancerPage: React.FC = () => {
         const iconName = icon.getAttribute('data-icon') || 'button';
         button.setAttribute('aria-label', iconName);
       }
-    });
+    })
     
     // Add ARIA labels to form inputs
     const inputs = document.querySelectorAll('input:not([aria-label]):not([aria-labelledby])');
@@ -286,7 +286,7 @@ const AccessibilityEnhancerPage: React.FC = () => {
           label.id = `label-${input.id}`;
         }
       }
-    });
+    })
   }
 
   /**
@@ -302,7 +302,7 @@ const AccessibilityEnhancerPage: React.FC = () => {
       } else {
         document.body.classList.remove('high-contrast');
       }
-    };
+    }
     
     mediaQuery.addEventListener('change', handleContrastChange);
     handleContrastChange(mediaQuery);
@@ -356,7 +356,7 @@ const AccessibilityEnhancerPage: React.FC = () => {
    * Get current focusable elements
    */
   public getFocusableElements(): HTMLElement[] {
-    return [...this.focusableElements];
+    return [...this.focusableElements]
   }
 
   /**
@@ -378,9 +378,9 @@ const AccessibilityEnhancerPage: React.FC = () => {
    */
   public destroy(): void {
     this.isInitialized = false;
-    this.focusableElements = [];
-    this.skipLinks = [];
-    this.landmarks = [];
+    this.focusableElements = []
+    this.skipLinks = []
+    this.landmarks = []
   }
 <<<<<<< HEAD
 }
@@ -394,26 +394,26 @@ export const accessibilityEnhancer = new AccessibilityEnhancer();
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-  ];
+  ]
 >>>>>>> cursor/fix-errors-and-merge-to-main-00a6
 
 // Export utility functions
 export const announceToScreenReader = (message: string) => {
   accessibilityEnhancer.announce(message);
-};
+}
 
 <<<<<<< HEAD
 export const updateFocusableElements = () => {
   accessibilityEnhancer.updateFocusableElements();
-};
+}
 
 export const focusFirstElement = () => {
   accessibilityEnhancer.focusFirst();
-};
+}
 
 export const focusLastElement = () => {
   accessibilityEnhancer.focusLast();
-};
+}
 =======
 export default AccessibilityEnhancerPage;
 >>>>>>> cursor/fix-errors-and-merge-to-main-00a6

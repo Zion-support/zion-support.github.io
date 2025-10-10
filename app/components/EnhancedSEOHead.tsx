@@ -5,7 +5,7 @@ import { Helmet } from 'react-helmet-async';
 interface SEOHeadProps {
   title: string;
   description: string;
-  keywords?: string[];
+  keywords?: string[]
   canonicalUrl?: string;
   structuredData?: any;
   ogImage?: string;
@@ -58,6 +58,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       )}
     </Helmet>
   );
-};
+}
 
 export default SEOHead;

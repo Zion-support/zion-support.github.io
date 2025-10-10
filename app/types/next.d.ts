@@ -24,7 +24,7 @@ const NextPage: React.FC = () => {
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
     }
-  ];
+  ]
 
   const benefits = [
     'Advanced AI technology integration',
@@ -35,7 +35,7 @@ const NextPage: React.FC = () => {
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-  ];
+  ]
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -45,20 +45,20 @@ const NextPage: React.FC = () => {
         <meta name="keywords" content="next.d, AI solutions, IT services, Zion Tech Group, next.d" />
       </Helmet>
   description?: string;
-  keywords?: string[];
-  authors?: Array<{ name: string; url?: string }> | string[];
+  keywords?: string[]
+  authors?: Array<{ name: string; url?: string }> | string[]
   creator?: string;
   publisher?: string;
   formatDetection?: {
     email?: boolean;
     address?: boolean;
     telephone?: boolean;
-  };
+  }
   metadataBase?: URL;
   alternates?: {
     canonical?: string;
     languages?: Record<string, string>;
-  };
+  }
   openGraph?: {
     title?: string;
     description?: string;
@@ -72,17 +72,17 @@ const NextPage: React.FC = () => {
     }>;
     locale?: string;
     type?: string;
-    authors?: Array<{ name: string; url?: string }> | string[];
+    authors?: Array<{ name: string; url?: string }> | string[]
     publishedTime?: string;
-  };
+  }
   twitter?: {
     card?: 'summary' | 'summary_large_image' | 'app' | 'player';
     site?: string;
     creator?: string;
     title?: string;
     description?: string;
-    images?: string[];
-  };
+    images?: string[]
+  }
   robots?: {
     index?: boolean;
     follow?: boolean;
@@ -92,14 +92,14 @@ const NextPage: React.FC = () => {
       'max-video-preview'?: number;
       'max-image-preview'?: 'none' | 'standard' | 'large';
       'max-snippet'?: number;
-    };
-  };
+    }
+  }
   verification?: {
     google?: string;
     yandex?: string;
     yahoo?: string;
     other?: Record<string, string>;
-  };
+  }
 }
 
 export interface MetadataRoute {
@@ -118,8 +118,8 @@ export interface MetadataRouteSitemap extends MetadataRoute {
 
 // Custom Next.js types
 export interface NextPageProps {
-  params: { [key: string]: string };
-  searchParams: { [key: string]: string | string[] | undefined };
+  params: { [key: string]: string }
+  searchParams: { [key: string]: string | string[] | undefined }
 }
 
       {/* Hero Section */}
@@ -224,7 +224,7 @@ export interface NextPageProps {
       </section>
     </div>
   );
-};
+}
 
 export default NextPage;
 
@@ -236,21 +236,21 @@ export interface ClientComponentProps {
 
 // Route handlers
 export interface RouteHandler {
-  GET?: (req: Request) => Promise<Response>;
-  POST?: (req: Request) => Promise<Response>;
-  PUT?: (req: Request) => Promise<Response>;
-  DELETE?: (req: Request) => Promise<Response>;
-  PATCH?: (req: Request) => Promise<Response>;
+  GET?: (req: Request) => Promise<Response>
+  POST?: (req: Request) => Promise<Response>
+  PUT?: (req: Request) => Promise<Response>
+  DELETE?: (req: Request) => Promise<Response>
+  PATCH?: (req: Request) => Promise<Response>
 }
 
 // Dynamic route types
 export interface DynamicRoute {
-  params: { [key: string]: string };
+  params: { [key: string]: string }
 }
 
 // Static generation types
 export interface StaticProps {
-  props: { [key: string]: any };
+  props: { [key: string]: any }
   revalidate?: number;
   notFound?: boolean;
 }
@@ -258,7 +258,7 @@ export interface StaticProps {
 // ISR types
 export interface ISRConfig {
   revalidate: number;
-  tags?: string[];
+  tags?: string[]
 }
 
 // Edge runtime types
@@ -278,9 +278,9 @@ declare module 'next' {
       id: string;
       email: string;
       name?: string;
-    };
+    }
   }
 }
 
-export {};
+export {}
 >>>>>>> cursor/fix-errors-and-merge-to-main-00a6

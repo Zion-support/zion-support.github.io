@@ -11,7 +11,7 @@ const CommunityPage: React.FC = () => {
     { icon: MessageCircle, value: '50+', label: 'Discussions Daily' },
     { icon: Calendar, value: '12', label: 'Events Monthly' },
     { icon: Star, value: '4.9', label: 'Average Rating' }
-  ];
+  ]
 
   const events = [
     {
@@ -38,7 +38,7 @@ const CommunityPage: React.FC = () => {
       attendees: 200,
       description: 'Expert panel on scaling SaaS businesses'
     }
-  ];
+  ]
 
   const forums = [
     {
@@ -65,7 +65,7 @@ const CommunityPage: React.FC = () => {
       posts: 2100,
       members: 3000
     }
-  ];
+  ]
 
   const benefits = [
     {
@@ -88,7 +88,7 @@ const CommunityPage: React.FC = () => {
       title: 'Recognition',
       description: 'Showcase your projects and get community recognition'
     }
-  ];
+  ]
 
   return (
     <>
@@ -396,6 +396,6 @@ const CommunityPage: React.FC = () => {
       </div>
     </>
   );
-};
+}
 
 export default CommunityPage;

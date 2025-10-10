@@ -10,7 +10,7 @@ const FAQPage: React.FC = () => {
         ? prev.filter(item => item !== index)
         : [...prev, index]
     );
-  };
+  }
   const faqs = [
     {
       question: "What AI services do you offer?",
@@ -44,7 +44,7 @@ const FAQPage: React.FC = () => {
       question: "What industries do you serve?",
       answer: "We serve a wide range of industries including healthcare, finance, e-commerce, manufacturing, education, real estate, legal, and more. Our solutions are tailored to meet industry-specific requirements and compliance standards."
     }
-  ];
+  ]
   return (
     <React.Fragment>
       <Helmet>
@@ -91,5 +91,5 @@ const FAQPage: React.FC = () => {
       </div>
     </React.Fragment>
   );
-};
+}
 export default FAQPage;

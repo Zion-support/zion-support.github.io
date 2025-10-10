@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import { Map, ArrowRight, ExternalLink, Calendar, Users, Code, Shield, Cloud, Brain, Zap } from 'lucide-react';
 
 const SitemapPage: React.FC = () => {
-  const lastUpdated = new Date().toISOString().split('T')[0];
+  const lastUpdated = new Date().toISOString().split('T')[0]
   
   const pageCategories = [
     {
@@ -104,7 +104,7 @@ const SitemapPage: React.FC = () => {
         { name: 'Sitemap', url: '/sitemap', description: 'Complete site map' }
       ]
     }
-  ];
+  ]
 
   const totalPages = pageCategories.reduce((total, category) => total + category.pages.length, 0);
 
@@ -253,6 +253,6 @@ const SitemapPage: React.FC = () => {
       </div>
     </>
   );
-};
+}
 
 export default SitemapPage;

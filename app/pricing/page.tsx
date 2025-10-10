@@ -54,7 +54,7 @@ const PricingPage: React.FC = () => {
       ],
       popular: false
     }
-  ];
+  ]
 
   return (
     <>
@@ -134,6 +134,6 @@ const PricingPage: React.FC = () => {
       </div>
     </>
   );
-};
+}
 
 export default PricingPage;

@@ -15,7 +15,7 @@ export const usePerformanceMonitor = () => {
           console.log('Page load time:', loadTime);
         }
       }
-    };
+    }
 
     // Run monitoring after page load
     if (document.readyState === 'complete') {
@@ -26,6 +26,6 @@ export const usePerformanceMonitor = () => {
 
     return () => {
       window.removeEventListener('load', monitorWebVitals);
-    };
+    }
   }, []);
-};
+}

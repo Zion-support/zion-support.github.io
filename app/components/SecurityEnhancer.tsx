@@ -31,14 +31,14 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ children }) => {
       document.addEventListener('contextmenu', (e) => {
     e.preventDefault()
   }
-      });
+      })
 // Disable F12 and other dev tools shortcuts;
       document.addEventListener('keydown', (e) => {
     if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) {
           e.preventDefault()
   }
         }
-      });
+      })
     }
 enhanceSecurity();
   }, []);

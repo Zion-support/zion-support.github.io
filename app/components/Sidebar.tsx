@@ -55,7 +55,7 @@ const toggleSection = (;
   }
 const navigationSections = [
     {
-    title: 'Main',;
+    title: 'Main',
       items: [
   }
         { name: 'Home', path: '/', icon: Home },;
@@ -64,11 +64,11 @@ const navigationSections = [
         { name: 'Contact', path: '/contact', icon: Phone },;
         { name: 'Blog', path: '/blog', icon: BarChart },;
         { name: 'Case Studies', path: '/case-studies', icon: BarChart },;
-      ];
+      ]
     },;
     {
-    title: 'AI Services',;
-      key: 'ai-services',;
+    title: 'AI Services',
+      key: 'ai-services',
       items: [
   }
         { name: 'AI Services Overview', path: '/ai-services', icon: Brain },;
@@ -84,11 +84,11 @@ const navigationSections = [
         { name: 'Process Automation', path: '/ai-services/process-automation', icon: Settings },;
         { name: 'Quality Assurance', path: '/ai-services/quality-assurance', icon: Shield },;
         { name: 'Energy Management', path: '/ai-services/energy-management', icon: Settings },;
-      ];
+      ]
     },;
     {
-    title: 'Micro SaaS',;
-      key: 'micro-saas',;
+    title: 'Micro SaaS',
+      key: 'micro-saas',
       items: [
   }
         { name: 'Micro SaaS Overview', path: '/micro-saas', icon: Settings },;
@@ -104,11 +104,11 @@ const navigationSections = [
         { name: 'Chat Analytics', path: '/micro-saas/chat-analytics', icon: BarChart },;
         { name: 'Expense Tracker', path: '/micro-saas/expense-tracker', icon: BarChart },;
         { name: 'Content Generator', path: '/micro-saas/content-generator', icon: Settings },;
-      ];
+      ]
     },;
     {
-    title: 'IT Services',;
-      key: 'it-services',;
+    title: 'IT Services',
+      key: 'it-services',
       items: [
   }
         { name: 'IT Services Overview', path: '/it-services', icon: Code },;
@@ -120,38 +120,38 @@ const navigationSections = [
         { name: 'Cybersecurity', path: '/cybersecurity', icon: Shield },;
         { name: 'Database Management', path: '/database-management', icon: Settings },;
         { name: 'Managed IT', path: '/managed-it', icon: Settings },;
-      ];
+      ]
     },;
     {
-    title: 'Company',;
+    title: 'Company',
       items: [
   }
         { name: 'Team', path: '/team', icon: Users },;
         { name: 'Careers', path: '/careers', icon: Users },;
         { name: 'Consultation', path: '/consultation', icon: Phone },;
         { name: 'Pricing', path: '/pricing', icon: BarChart },;
-      ];
+      ]
     },;
     {
-    title: 'Resources',;
+    title: 'Resources',
       items: [
   }
         { name: 'Documentation', path: '/docs', icon: Settings },;
         { name: 'API Docs', path: '/api-docs', icon: Code },;
         { name: 'Support', path: '/support', icon: Users },;
         { name: 'Status', path: '/status', icon: Settings },;
-      ];
+      ]
     }
-  ];
+  ]
 const contactInfo = {
-    phone: '(302) 464-0950',;
-    email: 'kleber@ziontechgroup.com',;
+    phone: '(302) 464-0950',
+    email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown, DE 19709',;
     hours: 'Mon-Fri 9AM-6PM EST'
   }
   }
 return (
-    <></>
+    <>
 
       {/* Mobile Menu Button */}
       <button;
@@ -181,7 +181,7 @@ return (
               <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-lg flex items-center justify-center"></div>
                 <Brain>
               </div>
-              <div></div>
+              <div />
                 <h2 className="text-xl font-bold text-white cyber-text">Zion Tech Group</h2>
                 <p className="text-xs text-cyan-400">AI & IT Solutions</p>
               </div>

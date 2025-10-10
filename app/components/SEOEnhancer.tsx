@@ -25,7 +25,7 @@ const SEOEnhancer: React.FC = () => {
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
     }
-  ];
+  ]
 
   const benefits = [
     'Advanced AI technology integration',
@@ -36,7 +36,7 @@ const SEOEnhancer: React.FC = () => {
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-  ];
+  ]
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -142,7 +142,7 @@ const SEOEnhancer: React.FC = () => {
       </section>
     </div>
   );
-};
+}
 
 export default SEOEnhancer;
 

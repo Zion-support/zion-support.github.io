@@ -55,7 +55,7 @@ const CookiesPage: React.FC = () => {
       ],
       required: false
     }
-  ];
+  ]
 
   const purposes = [
     {
@@ -78,7 +78,7 @@ const CookiesPage: React.FC = () => {
       description: 'Deliver relevant content and advertisements',
       icon: Eye
     }
-  ];
+  ]
 
   return (
     <>
@@ -379,6 +379,6 @@ const CookiesPage: React.FC = () => {
       </div>
     </>
   );
-};
+}
 
 export default CookiesPage;

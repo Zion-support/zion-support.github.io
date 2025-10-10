@@ -10,7 +10,7 @@ private initializeMetrics(): void {
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       this.metrics.loadTime = navigation.loadEventEnd - navigation.loadEventStart
   }
-    });
+    })
 // Measure Core Web Vitals;
     this.measureCoreWebVitals();
   }
@@ -19,7 +19,7 @@ private measureCoreWebVitals(): void {
     this.observePaint('first-contentful-paint', (entry) => {
       this.metrics.firstContentfulPaint = entry.startTime
   }
-    });
+    })
 // Largest Contentful Paint;
     this.observeLCP();
 // First Input Delay;
@@ -37,8 +37,8 @@ try {
   }
           }
         }
-      });
-      observer.observe({ entryTypes: ['paint'] });
+      })
+      observer.observe({ entryTypes: ['paint'] })
       this.observers.push(observer);
     } catch (error) {
     console.warn('PerformanceObserver not supported:', error)
@@ -50,11 +50,11 @@ private observeLCP(): void {
 try {
       const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        const lastEntry = entries[entries.length - 1];
+        const lastEntry = entries[entries.length - 1]
         this.metrics.largestContentfulPaint = lastEntry.startTime
   }
-      });
-      observer.observe({ entryTypes: ['largest-contentful-paint'] });
+      })
+      observer.observe({ entryTypes: ['largest-contentful-paint'] })
       this.observers.push(observer);
     } catch (error) {
     console.warn('LCP observer not supported:', error)
@@ -69,8 +69,8 @@ try {
           this.metrics.firstInputDelay = entry.processingStart - entry.startTime
   }
         }
-      });
-      observer.observe({ entryTypes: ['first-input'] });
+      })
+      observer.observe({ entryTypes: ['first-input'] })
       this.observers.push(observer);
     } catch (error) {
     console.warn('FID observer not supported:', error)
@@ -89,8 +89,8 @@ try {
           }
         }
         this.metrics.cumulativeLayoutShift = clsValue;
-      });
-      observer.observe({ entryTypes: ['layout-shift'] });
+      })
+      observer.observe({ entryTypes: ['layout-shift'] })
       this.observers.push(observer);
     } catch (error) {
     console.warn('CLS observer not supported:', error)
@@ -138,7 +138,7 @@ public cleanup(): void {
 export const performanceMonitor = new PerformanceMonitor();
 // Utility functions;
 export const measureFunction = <T extends (...args: any[]) => any>(,
-  fn: T,;
+  fn: T,
   name?: string;
 ): T => {
   return ((...args: Parameters<T>) => {
@@ -152,7 +152,7 @@ return result;
   }) as T;
 }
 export const debounce = <T extends (...args: any[]) => any>(,
-  func: T,;
+  func: T,
   wait: number
 ): T => {
     let timeout: NodeJS.Timeout
@@ -163,7 +163,7 @@ return ((...args: Parameters<T>) => {
   }) as T;
 }
 export const throttle = <T extends (...args: any[]) => any>(,
-  func: T,;
+  func: T,
   limit: number;
 ): T => {
     let inThrottle: boolean
@@ -192,7 +192,7 @@ export const preloadImage = (src: string): Promise<void> => {
     img.onerror = reject;
     img.src = src
   }
-  });
+  })
 }
 export const preloadImages = (srcs: string[]): Promise<void[]> => {
     return Promise.all(srcs.map(preloadImage))

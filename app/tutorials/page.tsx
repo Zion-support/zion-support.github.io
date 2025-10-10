@@ -13,7 +13,7 @@ const TutorialsPage: React.FC = () => {
     { id: 'saas', name: 'Micro SaaS', icon: Zap },
     { id: 'security', name: 'Security', icon: Shield },
     { id: 'integration', name: 'Integration', icon: Code }
-  ];
+  ]
 
   const tutorials = [
     {
@@ -154,7 +154,7 @@ const TutorialsPage: React.FC = () => {
         ]
       }
     }
-  ];
+  ]
 
   const filteredTutorials = selectedCategory === 'all' 
     ? tutorials 
@@ -543,6 +543,6 @@ const TutorialsPage: React.FC = () => {
       </div>
     </>
   );
-};
+}
 
 export default TutorialsPage;

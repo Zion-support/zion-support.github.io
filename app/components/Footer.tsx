@@ -39,7 +39,7 @@ const Footer: React.FC = memo(() => {
     { name: 'AI Automated Reporting', url: '/ai-automated-reporting', description: 'Smart reporting' },
     { name: 'AI Voice Assistant Platform', url: '/ai-voice-assistant', description: 'Enterprise voice AI' },
     { name: 'AI Content Generation Pro', url: '/ai-content-generation-pro', description: 'Advanced content creation' }
-  ];
+  ]
 
   const itServices = [
     { name: 'Cloud Infrastructure', url: '/cloud-infrastructure', description: 'AWS, Azure, GCP' },
@@ -74,7 +74,7 @@ const Footer: React.FC = memo(() => {
     { name: 'Data Visualization & BI', url: '/data-visualization', description: 'Advanced dashboards' },
     { name: 'Workflow Automation', url: '/workflow-automation', description: 'Process automation' },
     { name: 'Cloud-Native Security', url: '/cloud-native-security', description: 'Container security' }
-  ];
+  ]
 
   const microSaasServices = [
     { name: 'Zion Analytics Pro', url: '/zion-analytics-pro', description: 'Business intelligence' },
@@ -109,7 +109,7 @@ const Footer: React.FC = memo(() => {
     { name: 'Zion AI Customer Service Pro', url: '/zion-ai-customer-service-pro', description: 'Advanced customer service' },
     { name: 'Zion AI Marketing Automation', url: '/zion-ai-marketing-automation', description: 'Marketing AI' },
     { name: 'Zion AI Document AI', url: '/zion-ai-document-ai', description: 'Document processing' }
-  ];
+  ]
 
   const companyLinks = [
     { name: 'About Us', url: '/about' },
@@ -120,7 +120,7 @@ const Footer: React.FC = memo(() => {
     { name: 'Partners', url: '/partners' },
     { name: 'Support', url: '/support' },
     { name: 'Status', url: '/status' }
-  ];
+  ]
 
   const resourcesLinks = [
     { name: 'Pricing', url: '/pricing' },
@@ -131,7 +131,7 @@ const Footer: React.FC = memo(() => {
     { name: 'Community', url: '/community' },
     { name: 'Demo', url: '/demo' },
     { name: 'Compliance', url: '/compliance' }
-  ];
+  ]
 
   const enterpriseLinks = [
     { name: 'Enterprise Solutions', url: '/enterprise' },
@@ -140,7 +140,7 @@ const Footer: React.FC = memo(() => {
     { name: 'Edge Computing', url: '/edge-computing' },
     { name: 'Consultation', url: '/consultation' },
     { name: 'Custom Development', url: '/custom-software' }
-  ];
+  ]
 
   return (
     <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden">
@@ -426,7 +426,7 @@ const Footer: React.FC = memo(() => {
       </div>
     </footer>
   );
-});
+})
 
 Footer.displayName = 'Footer';
 

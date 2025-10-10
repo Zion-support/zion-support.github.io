@@ -13,7 +13,7 @@ const ContactPage: React.FC = () => {
     phone: '',
     service: '',
     message: ''
-  });
+  })
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
@@ -41,7 +41,7 @@ const ContactPage: React.FC = () => {
         phone: '',
         service: '',
         message: ''
-      });
+      })
     } catch (error) {
       setSubmitStatus('error');
     } finally {
@@ -276,6 +276,6 @@ const ContactPage: React.FC = () => {
       <Footer />
     </>
   );
-};
+}
 
 export default ContactPage;

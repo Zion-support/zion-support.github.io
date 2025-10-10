@@ -26,32 +26,29 @@ import {
 const SecurityMonitoringPage: React.FC = () => {
     const features = [
     {
-      icon: Eye,;
-      title: '24/7 Real-time Monitoring',;
+      icon: Eye,
+      title: '24/7 Real-time Monitoring',
       description: 'Continuous surveillance of your entire IT infrastructure with instant threat detection and response.'
-  }
-    },;
+  },
     {
-    icon: AlertTriangle,;
-      title: 'Advanced Threat Detection',;
+    icon: AlertTriangle,
+      title: 'Advanced Threat Detection',
       description: 'AI-powered analysis to identify sophisticated cyber threats before they impact your business.'
-  }
-    },;
+  },
     {
-    icon: BarChart,;
-      title: 'Comprehensive Analytics',;
+    icon: BarChart,
+      title: 'Comprehensive Analytics',
       description: 'Detailed security reports and insights to help you understand and improve your security posture.'
-  }
-    },;
+  },
     {
-    icon: Zap,;
-      title: 'Instant Response',;
+    icon: Zap,
+      title: 'Instant Response',
       description: 'Automated incident response and immediate notification systems to minimize security breaches.'
   }
     }
-  ];
+  ]
 const benefits = [
-    '24/7 continuous security monitoring',;
+    '24/7 continuous security monitoring',
     'AI-powered threat detection and analysis',;
     'Real-time alerts and notifications',;
     'Comprehensive security reporting',;
@@ -59,9 +56,9 @@ const benefits = [
     'Compliance monitoring and reporting',;
     'Expert security team support',;
     'Customizable monitoring rules';
-  ];
+  ]
 return (
-    <></>
+    <>
       <Helmet>
         <title>Security Monitoring Services - Zion Tech Group | 24/7 Cybersecurity</title>
         <meta>

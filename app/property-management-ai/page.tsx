@@ -10,7 +10,7 @@ const PropertyManagementAIPage: React.FC = () => {
     { icon: BarChart, title: 'Financial Analytics', description: 'Advanced financial reporting and property performance analytics.' },
     { icon: Shield, title: 'Maintenance Tracking', description: 'Predictive maintenance and automated work order management.' },
     { icon: Zap, title: 'Automation', description: 'Automated rent collection, lease renewals, and property operations.' }
-  ];
+  ]
   return (
     <React.Fragment>
       <Helmet>
@@ -41,5 +41,5 @@ const PropertyManagementAIPage: React.FC = () => {
       </div>
     </React.Fragment>
   );
-};
+}
 export default PropertyManagementAIPage;

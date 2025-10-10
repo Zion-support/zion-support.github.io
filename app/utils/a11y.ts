@@ -12,7 +12,7 @@ export function generateId(prefix = 'a11y'): string {}
  * Announce message to screen readers;
  */;
 export function announceToScreenReader(;
-  message: string,;
+  message: string,
   priority: 'polite' | 'assertive' = 'polite'
 ): void {
     const announcement = document.createElement('div'),
@@ -75,8 +75,8 @@ export function isKeyboardAccessible(element: HTMLElement): boolean {
  * Add keyboard navigation support to custom interactive elements;
  */;
 export function makeKeyboardAccessible(;
-  element: HTMLElement,;
-  onClick: (e: Event) => void,;
+  element: HTMLElement,
+  onClick: (e: Event) => void,
   options: {
     role?: string,
     tabindex?: number
@@ -109,12 +109,12 @@ return () => {
  */;
 export function getContrastRatio(color1: string, color2: string): number {
     const getLuminance = (color: string): number => {
-    const rgb = color.match(/\d+/g)?.map(Number) || [0, 0, 0];
+    const rgb = color.match(/\d+/g)?.map(Number) || [0, 0, 0]
     const [r, g, b] = rgb.map(c => {
       c = c / 255;
       return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4)
   }
-    });
+    })
     return 0.2126 * r + 0.7152 * g + 0.0722 * b;
   }
 const lum1 = getLuminance(color1);
@@ -127,9 +127,9 @@ return (brightest + 0.05) / (darkest + 0.05);
  * Check if contrast ratio meets WCAG standards;
  */;
 export function meetsContrastRequirements(;
-  color1: string,;
-  color2: string,;
-  level: 'AA' | 'AAA' = 'AA',;
+  color1: string,
+  color2: string,
+  level: 'AA' | 'AAA' = 'AA',
   fontSize: 'normal' | 'large' = 'normal',
 ): boolean {
     const ratio = getContrastRatio(color1, color2);
@@ -156,11 +156,11 @@ export function createSkipLink(targetId: string, text = 'Skip to main content'):
 skipLink.addEventListener('focus', () => {
     skipLink.style.top = '0'
   }
-  });
+  })
 skipLink.addEventListener('blur', () => {
     skipLink.style.top = '-40px'
   }
-  });
+  })
 return skipLink;
 }
 /**;
@@ -182,15 +182,15 @@ export function prefersDarkMode(): boolean {
  */;
 export function getAriaInvalid(hasError: boolean): Record<string, string> {
   return {}
-    ...(hasError && { 'aria-describedby': generateId('error') });
+    ...(hasError && { 'aria-describedby': generateId('error') })
   }
 }
 /**;
  * Create accessible tooltip;
  */;
 export function createAccessibleTooltip(;
-  trigger: HTMLElement,;
-  content: string,;
+  trigger: HTMLElement,
+  content: string,
   placement: 'top' | 'bottom' | 'left' | 'right' = 'top';
 ): () => void {
     const tooltip = document.createElement('div')

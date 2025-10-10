@@ -76,39 +76,38 @@ export function unflattenObject(ob,;
  * Pick specific keys from an object;
  */;
 export function pick<T extends Record<string, unknown>, K extends keyof T>(ob,;
-  j: T,;
+  j: T,
   key,;
   s: K[]),
 ): Pick<T, K> {/* TODO: Fix JSX expression */}
   const result = {} as Pick<T>
   keys.forEach(key => {/* TODO: Fix JSX expression */}
-    });
-  });
+    })
+  })
   return result;
 }
 /**;
  * Omit specific keys from an object;
  */;
 export function omit<T extends Record<string, unknown>, K extends keyof T>(ob,;
-  j: T,;
+  j: T,
   key,;
   s: K[]),
 ): Omit<T, K> {/* TODO: Fix JSX expression */}
   const result = { ...obj }
-  keys.forEach(key => {/* TODO: Fix JSX expression */});
-  });
+  keys.forEach(key => {/* TODO: Fix JSX expression */})
+  })
   return result as Omit<T>
 }
 /**;
  * Group array items by a key;
  */;
 export function groupBy<T>(arra,;
-  y: T[],;
+  y: T[],
   ke,;
   y: keyof T | ((ite)
   m: T) => string | number),
-): Record<string, T[]> {/* TODO: Fix JSX expression */}
-    },;
+): Record<string, T[]> {/* TODO: Fix JSX expression */},
     {} as Record<string, T[]></string>
   );
 }
@@ -120,19 +119,19 @@ export function unique<T>(arra);
   }
   const seen = new Set();
   return array.filter(item => {/* TODO: Fix JSX expression */}
-    });
+    })
     seen.add(value);
     return true;
-  });
+  })
 }
 /**;
  * Sort array by multiple keys;
  */;
 export function sortBy<T>(arra,;
-  y: T[],;
+  y: T[],
   key,;
   s: Array<keyof T | ((ite),
-  m: T) => unknown)>,;
+  m: T) => unknown)>,
   order,;
   s: Array<'asc' | 'desc'> = [],
 ): T[] {/* TODO: Fix JSX expression */}
@@ -150,7 +149,7 @@ export function sortBy<T>(arra,;
       if (aComp > bComp) return order === 'asc' ? 1 : -1;
     }
     return 0;
-  });
+  })
 }
 /**;
  * Chunk array into smaller arrays;
@@ -193,7 +192,7 @@ export function formatCurrency(amoun);
  * Format date;
  */;
 export function formatDate(dat,;
-  e: Date | string | number,;
+  e: Date | string | number,
   option,;
   s: Intl.DateTimeFormatOptions = {},;
   locale = 'en-US');

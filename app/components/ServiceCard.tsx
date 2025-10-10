@@ -4,7 +4,7 @@ import { ArrowRight, CheckCircle } from 'lucide-react';
 interface ServiceCardProps {
     title: string;
   description: string;
-  features: string[];
+  features: string[]
   price?: string
   popular?: boolean
   onSelect?: () => void,

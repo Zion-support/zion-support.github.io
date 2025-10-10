@@ -5,7 +5,7 @@ import { Helmet } from 'react-helmet-async';
 interface SEOOptimizerProps {
   title: string;
   description: string;
-  keywords?: string[];
+  keywords?: string[]
   canonicalUrl?: string;
   structuredData?: object;
 }
@@ -46,6 +46,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       )}
     </Helmet>
   );
-};
+}
 
 export default SEOOptimizer;

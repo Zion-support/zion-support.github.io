@@ -27,32 +27,29 @@ import {
 const DataAnalyticsPage: React.FC = () => {
     const features = [
     {
-      icon: BarChart,;
-      title: 'Advanced Data Visualization',;
+      icon: BarChart,
+      title: 'Advanced Data Visualization',
       description: 'Transform complex data into clear, actionable insights with interactive dashboards and reports.'
-  }
-    },;
+  },
     {
-    icon: Brain,;
-      title: 'AI-Powered Analytics',;
+    icon: Brain,
+      title: 'AI-Powered Analytics',
       description: 'Leverage machine learning and artificial intelligence to uncover hidden patterns and trends.'
-  }
-    },;
+  },
     {
-    icon: Database,;
-      title: 'Data Integration',;
+    icon: Database,
+      title: 'Data Integration',
       description: 'Connect and analyze data from multiple sources to get a complete picture of your business.'
-  }
-    },;
+  },
     {
-    icon: TrendingUp,;
-      title: 'Predictive Analytics',;
+    icon: TrendingUp,
+      title: 'Predictive Analytics',
       description: 'Forecast future trends and make data-driven decisions with predictive modeling.'
   }
     }
-  ];
+  ]
 const benefits = [
-    'Make data-driven business decisions',;
+    'Make data-driven business decisions',
     'Identify new opportunities and trends',;
     'Improve operational efficiency',;
     'Reduce costs through optimization',;
@@ -60,9 +57,9 @@ const benefits = [
     'Comply with data regulations',;
     'Real-time insights and reporting',;
     'Custom analytics solutions';
-  ];
+  ]
 return (
-    <></>
+    <>
       <Helmet>
         <title>Data Analytics Services - Zion Tech Group | Business Intelligence</title>
         <meta>

@@ -24,7 +24,7 @@ const BlockchainIntegrationServicesPage: React.FC = () => {
       title: 'Multi-Chain Support',
       description: 'Support for multiple blockchain networks and protocols'
     }
-  ];
+  ]
   const benefits = [
     'Advanced blockchain technology integration',
     'Real-time transaction processing',
@@ -34,7 +34,7 @@ const BlockchainIntegrationServicesPage: React.FC = () => {
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-  ];
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>

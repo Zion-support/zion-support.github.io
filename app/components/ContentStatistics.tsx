@@ -8,14 +8,14 @@ const ContentStatistics: React.FC = () => {
     projects: 0,
     satisfaction: 0,
     years: 0
-  });
+  })
 
   const targetCounters = {
     clients: 500,
     projects: 1000,
     satisfaction: 99,
     years: 10
-  };
+  }
 
   const statistics = [
     {
@@ -46,7 +46,7 @@ const ContentStatistics: React.FC = () => {
       suffix: '+',
       color: 'text-yellow-400'
     }
-  ];
+  ]
 
   const achievements = [
     {
@@ -69,31 +69,31 @@ const ContentStatistics: React.FC = () => {
       title: 'Performance',
       description: '99.9% uptime and lightning-fast response'
     }
-  ];
+  ]
 
   useEffect(() => {
     const timers = Object.keys(targetCounters).map(key => {
-      const target = targetCounters[key as keyof typeof targetCounters];
+      const target = targetCounters[key as keyof typeof targetCounters]
       const duration = 2000; // 2 seconds
       const increment = target / (duration / 16); // 60fps
       
       return setInterval(() => {
         setCounters(prev => {
-          const current = prev[key as keyof typeof prev];
+          const current = prev[key as keyof typeof prev]
           if (current < target) {
             return {
               ...prev,
               [key]: Math.min(current + increment, target)
-            };
+            }
           }
           return prev;
-        });
+        })
       }, 16);
-    });
+    })
 
     return () => {
       timers.forEach(timer => clearInterval(timer));
-    };
+    }
   }, []);
 
   return (
@@ -140,6 +140,6 @@ const ContentStatistics: React.FC = () => {
       </div>
     </div>
   );
-};
+}
 
 export default ContentStatistics;

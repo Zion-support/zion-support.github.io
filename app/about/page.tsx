@@ -220,6 +220,6 @@ const AboutPage: React.FC = () => {
       <Footer />
     </>
   );
-};
+}
 
 export default AboutPage;

@@ -31,7 +31,7 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
     fontSize: 'medium',
     screenReader: false,
     keyboardNavigation: false
-  });
+  })
 
   const analytics = useAnalytics();
 
@@ -51,13 +51,13 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
       ...settings,
       reducedMotion: prefersReducedMotion,
       highContrast: prefersHighContrast
-    });
+    })
 
     // Track accessibility usage
     analytics?.track('accessibility_initialized', {
       reduced_motion: prefersReducedMotion,
       high_contrast: prefersHighContrast
-    });
+    })
   }, []);
 
   const applyAccessibilitySettings = (newSettings: AccessibilitySettings) => {
@@ -135,7 +135,7 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
       if (target && target.classList) {
         target.classList.add('focus-visible');
       }
-    };
+    }
 
     const handleFocusOut = (event: FocusEvent) => {
       const target = event.target as HTMLElement;
@@ -144,7 +144,7 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
       if (target && target.classList) {
         target.classList.remove('focus-visible');
       }
-    };
+    }
 
     document.addEventListener('focusin', handleFocusIn);
     document.addEventListener('focusout', handleFocusOut);
@@ -169,7 +169,7 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
     setTimeout(() => {
       document.body.removeChild(announcement);
     }, 1000);
-  };
+  }
 
   // Expose accessibility functions to window for global access
   useEffect(() => {

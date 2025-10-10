@@ -44,7 +44,7 @@ const PartnersPage: React.FC = () => {
       description: 'Partner for IT service management and workflow automation',
       category: 'IT Management'
     }
-  ];
+  ]
 
   const benefits = [
     {
@@ -67,9 +67,9 @@ const PartnersPage: React.FC = () => {
       description: 'Leverage partner pricing and volume discounts for your projects',
       icon: CheckCircle
     }
-  ];
+  ]
 
-  const categories = ['All', 'Cloud & AI', 'Hardware & AI', 'Business Software', 'IT Management'];
+  const categories = ['All', 'Cloud & AI', 'Hardware & AI', 'Business Software', 'IT Management']
 
   return (
     <>
@@ -160,6 +160,6 @@ const PartnersPage: React.FC = () => {
       <Footer />
     </>
   );
-};
+}
 
 export default PartnersPage;

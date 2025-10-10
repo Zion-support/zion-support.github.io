@@ -5,7 +5,7 @@ const MicroSaaSPage: React.FC = () => {
     const serviceName = 'appointment-scheduler';
   const title = serviceName.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')
 return (
-    <></>,
+    <>,
       <Helmet>
   }
         <title>{title} | Zion Tech Group - Micro SaaS Solutions</title>

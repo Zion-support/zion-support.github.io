@@ -80,11 +80,11 @@ const ITConsultingPage: React.FC = () => {
 const itServices = [
     // IT Infrastructure Services;
     {
-      id: 'it-infrastructure-design',;
-      name: 'IT Infrastructure Design & Implementation',;
+      id: 'it-infrastructure-design',
+      name: 'IT Infrastructure Design & Implementation',
       description: 'Complete IT infrastructure design, deployment, and optimization for modern businesses',;
-      category: 'infrastructure',;
-      icon: Server,;
+      category: 'infrastructure',
+      icon: Server,
       price: 'Starting at $5,000',;
       features: [,
         'Network architecture design',;
@@ -104,20 +104,19 @@ const itServices = [
         'Future-proof technology stack';
       ],;
       targetAudience: 'Small to large businesses, Startups, Enterprises',;
-      setupTime: '2-8 weeks',;
-      freeConsultation: 'Yes',;
-      support: '24/7 technical support',;
+      setupTime: '2-8 weeks',
+      freeConsultation: 'Yes',
+      support: '24/7 technical support',
       certifications: ['Cisco', 'Microsoft', 'VMware', 'AWS', 'Azure'],;
-      link: 'https://ziontechgroup.com/it-infrastructure-design',;
+      link: 'https://ziontechgroup.com/it-infrastructure-design',
       caseStudy: 'Manufacturing company reduced IT downtime by 95% with our infrastructure design'
-  }
-    },;
+  },
     {
-    id: 'cloud-migration-services',;
-      name: 'Cloud Migration & Optimization',;
-      description: 'Seamless migration to cloud platforms with optimization for cost and performance',;
-      category: 'cloud',;
-      icon: Cloud,;
+    id: 'cloud-migration-services',
+      name: 'Cloud Migration & Optimization',
+      description: 'Seamless migration to cloud platforms with optimization for cost and performance',
+      category: 'cloud',
+      icon: Cloud,
       price: 'Starting at $3,000',;
       features: [,
         'Cloud readiness assessment',;
@@ -136,21 +135,20 @@ const itServices = [
         'Better disaster recovery capabilities',;
         'Access to latest technologies';
       ],;
-      targetAudience: 'Businesses looking to modernize IT infrastructure',;
-      setupTime: '1-6 weeks',;
-      freeConsultation: 'Yes',;
-      support: 'Migration specialist and ongoing support',;
+      targetAudience: 'Businesses looking to modernize IT infrastructure',
+      setupTime: '1-6 weeks',
+      freeConsultation: 'Yes',
+      support: 'Migration specialist and ongoing support',
       certifications: ['AWS', 'Azure', 'Google Cloud', 'VMware'],;
-      link: 'https://ziontechgroup.com/cloud-migration-services',;
+      link: 'https://ziontechgroup.com/cloud-migration-services',
       caseStudy: 'Retail chain saved $2M annually by migrating to cloud infrastructure'
-  }
-    },;
+  },
     {
-    id: 'cybersecurity-services',;
-      name: 'Cybersecurity Solutions',;
+    id: 'cybersecurity-services',
+      name: 'Cybersecurity Solutions',
       description: 'Comprehensive security assessment, implementation, and ongoing protection',;
-      category: 'security',;
-      icon: Shield,;
+      category: 'security',
+      icon: Shield,
       price: 'Starting at $2,500',;
       features: [,
         'Security risk assessment',;
@@ -169,21 +167,20 @@ const itServices = [
         'Improve incident response time',;
         'Maintain customer trust';
       ],;
-      targetAudience: 'All businesses handling sensitive data',;
-      setupTime: '1-4 weeks',;
-      freeConsultation: 'Yes',;
-      support: 'Security specialist and 24/7 monitoring',;
+      targetAudience: 'All businesses handling sensitive data',
+      setupTime: '1-4 weeks',
+      freeConsultation: 'Yes',
+      support: 'Security specialist and 24/7 monitoring',
       certifications: ['CISSP', 'CISM', 'CEH', 'CompTIA Security+'],;
-      link: 'https://ziontechgroup.com/cybersecurity-services',;
+      link: 'https://ziontechgroup.com/cybersecurity-services',
       caseStudy: 'Healthcare provider achieved 100% compliance with HIPAA regulations'
-  }
-    },;
+  },
     {
-    id: 'network-design-optimization',;
-      name: 'Network Design & Optimization',;
-      description: 'High-performance network infrastructure design and optimization for reliability',;
-      category: 'networking',;
-      icon: Network,;
+    id: 'network-design-optimization',
+      name: 'Network Design & Optimization',
+      description: 'High-performance network infrastructure design and optimization for reliability',
+      category: 'networking',
+      icon: Network,
       price: 'Starting at $2,000',;
       features: [,
         'Network architecture design',;
@@ -202,21 +199,20 @@ const itServices = [
         'Enhance user experience',;
         'Future-proof network design';
       ],;
-      targetAudience: 'Businesses with complex networking needs',;
-      setupTime: '1-3 weeks',;
-      freeConsultation: 'Yes',;
-      support: 'Network specialist and ongoing optimization',;
+      targetAudience: 'Businesses with complex networking needs',
+      setupTime: '1-3 weeks',
+      freeConsultation: 'Yes',
+      support: 'Network specialist and ongoing optimization',
       certifications: ['CCNA', 'CCNP', 'JNCIA', 'CompTIA Network+'],;
-      link: 'https://ziontechgroup.com/network-design-optimization',;
+      link: 'https://ziontechgroup.com/network-design-optimization',
       caseStudy: 'Law firm improved network speed by 300% and eliminated connectivity issues'
-  }
-    },;
+  },
     {
-    id: 'database-management',;
-      name: 'Database Management & Optimization',;
+    id: 'database-management',
+      name: 'Database Management & Optimization',
       description: 'Database design, implementation, optimization, and ongoing management',;
-      category: 'database',;
-      icon: Database,;
+      category: 'database',
+      icon: Database,
       price: 'Starting at $1,500',;
       features: [,
         'Database design and architecture',;
@@ -235,22 +231,21 @@ const itServices = [
         'Optimize storage usage',;
         'Minimize downtime';
       ],;
-      targetAudience: 'Businesses with critical data requirements',;
-      setupTime: '1-2 weeks',;
-      freeConsultation: 'Yes',;
-      support: 'Database specialist and 24/7 monitoring',;
+      targetAudience: 'Businesses with critical data requirements',
+      setupTime: '1-2 weeks',
+      freeConsultation: 'Yes',
+      support: 'Database specialist and 24/7 monitoring',
       certifications: ['Oracle', 'Microsoft SQL Server', 'MySQL', 'PostgreSQL'],;
-      link: 'https://ziontechgroup.com/database-management',;
+      link: 'https://ziontechgroup.com/database-management',
       caseStudy: 'E-commerce platform improved query performance by 400% and reduced costs by 60%'
-  }
-    },;
+  },
     {
-    id: 'it-support-services',;
-      name: 'Managed IT Support Services',;
-      description: 'Comprehensive IT support and management for ongoing operations',;
-      category: 'support',;
-      icon: Headphones,;
-      price: 'Starting at $99/user/month',;
+    id: 'it-support-services',
+      name: 'Managed IT Support Services',
+      description: 'Comprehensive IT support and management for ongoing operations',
+      category: 'support',
+      icon: Headphones,
+      price: 'Starting at $99/user/month',
       features: [,
         '24/7 technical support',;
         'Remote monitoring and management',;
@@ -268,21 +263,20 @@ const itServices = [
         'Proactive issue resolution',;
         'Focus on core business activities';
       ],;
-      targetAudience: 'Small to medium businesses without dedicated IT staff',;
-      setupTime: '1 week',;
-      freeConsultation: 'Yes',;
-      support: 'Dedicated support team',;
+      targetAudience: 'Small to medium businesses without dedicated IT staff',
+      setupTime: '1 week',
+      freeConsultation: 'Yes',
+      support: 'Dedicated support team',
       certifications: ['Microsoft', 'CompTIA', 'Cisco', 'VMware'],;
-      link: 'https://ziontechgroup.com/it-support-services',;
+      link: 'https://ziontechgroup.com/it-support-services',
       caseStudy: 'Marketing agency reduced IT issues by 90% and improved employee productivity'
-  }
-    },;
+  },
     {
-    id: 'software-development',;
-      name: 'Custom Software Development',;
-      description: 'Tailored software solutions built to meet specific business requirements',;
-      category: 'development',;
-      icon: Code,;
+    id: 'software-development',
+      name: 'Custom Software Development',
+      description: 'Tailored software solutions built to meet specific business requirements',
+      category: 'development',
+      icon: Code,
       price: 'Starting at $5,000',;
       features: [,
         'Requirements analysis',;
@@ -301,22 +295,21 @@ const itServices = [
         'Reduce manual work',;
         'Scale with business growth';
       ],;
-      targetAudience: 'Businesses needing custom software solutions',;
-      setupTime: '4-16 weeks',;
-      freeConsultation: 'Yes',;
-      support: 'Development team and ongoing maintenance',;
+      targetAudience: 'Businesses needing custom software solutions',
+      setupTime: '4-16 weeks',
+      freeConsultation: 'Yes',
+      support: 'Development team and ongoing maintenance',
       technologies: ['React', 'Node.js', 'Python', 'Java', 'C#', 'PHP', 'Mobile'],;
-      link: 'https://ziontechgroup.com/software-development',;
+      link: 'https://ziontechgroup.com/software-development',
       caseStudy: 'Logistics company automated 80% of manual processes with custom software'
-  }
-    },;
+  },
     {
-    id: 'it-consulting',;
-      name: 'Strategic IT Consulting',;
-      description: 'Technology strategy and roadmap development for digital transformation',;
-      category: 'consulting',;
-      icon: Briefcase,;
-      price: 'Starting at $200/hour',;
+    id: 'it-consulting',
+      name: 'Strategic IT Consulting',
+      description: 'Technology strategy and roadmap development for digital transformation',
+      category: 'consulting',
+      icon: Briefcase,
+      price: 'Starting at $200/hour',
       features: [,
         'IT strategy development',;
         'Technology roadmap planning',;
@@ -334,21 +327,20 @@ const itServices = [
         'Accelerate digital transformation',;
         'Improve ROI on technology';
       ],;
-      targetAudience: 'Businesses planning technology initiatives',;
-      setupTime: '1-4 weeks',;
-      freeConsultation: 'Yes',;
-      support: 'Senior consultant and ongoing guidance',;
+      targetAudience: 'Businesses planning technology initiatives',
+      setupTime: '1-4 weeks',
+      freeConsultation: 'Yes',
+      support: 'Senior consultant and ongoing guidance',
       certifications: ['PMP', 'ITIL', 'COBIT', 'TOGAF'],;
-      link: 'https://ziontechgroup.com/it-consulting',;
+      link: 'https://ziontechgroup.com/it-consulting',
       caseStudy: 'Manufacturing company achieved 40% cost reduction through strategic IT planning'
-  }
-    },;
+  },
     {
-    id: 'disaster-recovery',;
-      name: 'Disaster Recovery & Business Continuity',;
-      description: 'Comprehensive disaster recovery planning and implementation',;
-      category: 'recovery',;
-      icon: RefreshCw,;
+    id: 'disaster-recovery',
+      name: 'Disaster Recovery & Business Continuity',
+      description: 'Comprehensive disaster recovery planning and implementation',
+      category: 'recovery',
+      icon: RefreshCw,
       price: 'Starting at $3,500',;
       features: [,
         'Business impact analysis',;
@@ -367,21 +359,20 @@ const itServices = [
         'Maintain customer service',;
         'Comply with regulations';
       ],;
-      targetAudience: 'Businesses requiring high availability',;
-      setupTime: '2-6 weeks',;
-      freeConsultation: 'Yes',;
-      support: 'Recovery specialist and ongoing testing',;
+      targetAudience: 'Businesses requiring high availability',
+      setupTime: '2-6 weeks',
+      freeConsultation: 'Yes',
+      support: 'Recovery specialist and ongoing testing',
       certifications: ['CBCP', 'DRII', 'ITIL', 'ISO 22301'],;
-      link: 'https://ziontechgroup.com/disaster-recovery',;
+      link: 'https://ziontechgroup.com/disaster-recovery',
       caseStudy: 'Financial services firm achieved 99.9% uptime with our disaster recovery solution'
-  }
-    },;
+  },
     {
-    id: 'compliance-auditing',;
-      name: 'IT Compliance & Auditing',;
-      description: 'Compliance assessment and implementation for various industry standards',;
-      category: 'compliance',;
-      icon: CheckSquare,;
+    id: 'compliance-auditing',
+      name: 'IT Compliance & Auditing',
+      description: 'Compliance assessment and implementation for various industry standards',
+      category: 'compliance',
+      icon: CheckSquare,
       price: 'Starting at $2,000',;
       features: [,
         'Compliance gap analysis',;
@@ -401,15 +392,15 @@ const itServices = [
         'Build customer trust';
       ],;
       targetAudience: 'Healthcare, Finance, Government, Education sectors',;
-      setupTime: '2-8 weeks',;
-      freeConsultation: 'Yes',;
-      support: 'Compliance specialist and ongoing monitoring',;
+      setupTime: '2-8 weeks',
+      freeConsultation: 'Yes',
+      support: 'Compliance specialist and ongoing monitoring',
       standards: ['HIPAA', 'SOX', 'PCI-DSS', 'GDPR', 'ISO 27001', 'NIST'],;
-      link: 'https://ziontechgroup.com/compliance-auditing',;
+      link: 'https://ziontechgroup.com/compliance-auditing',
       caseStudy: 'Healthcare provider achieved 100% HIPAA compliance and passed all audits'
   }
     }
-  ];
+  ]
 const categories = [
     { id: 'all', name: 'All IT Services', icon: Grid3X3 },;
     { id: 'infrastructure', name: 'Infrastructure', icon: Server },;
@@ -422,25 +413,25 @@ const categories = [
     { id: 'consulting', name: 'Consulting', icon: Briefcase },;
     { id: 'recovery', name: 'Disaster Recovery', icon: RefreshCw },;
     { id: 'compliance', name: 'Compliance', icon: CheckSquare }
-  ];
+  ]
 const filteredServices = itServices.filter(service => {
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.description.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch
   }
-  });
+  })
 return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       {/* Hero Section */}</div>
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8 cyber-grid"></section>
+      <section className="relative py-20 px-4 sm: px-6 lg:px-8 cyber-grid"></section>
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20" aria-hidden="true"></div>
         <div className="relative z-10 max-w-7xl mx-auto text-center"></div>
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight cyber-text neon-pulse"></h1>
             Professional <span className="holographic-text">IT Services</span>
           </h1>
           <p>
-            Comprehensive IT solutions designed to optimize your technology infrastructure,;
+            Comprehensive IT solutions designed to optimize your technology infrastructure,
             enhance security, and drive business growth. Expert consulting and implementation.;
           </p>
           <div className="flex flex-col sm: flex-row gap-4 justify-center mb-12"></div>
@@ -539,7 +530,7 @@ return (
                 <h3 className="text-xl font-bold text-white mb-3 neon-glow">{service.name}</h3>
                 <p className="text-gray-300 mb-4 text-sm leading-relaxed">{service.description}</p>
                 <div className="space-y-3 mb-6"></div>
-                  <div></div>
+                  <div />
                     <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h4>
                     <ul>
                       {
@@ -552,7 +543,7 @@ return (
                       ))}
                     </ul>
                   </div>
-                  <div></div>
+                  <div />
                     <h4 className="text-sm font-semibold text-cyan-400 mb-2">Benefits:</h4>
                     <ul>
                       {

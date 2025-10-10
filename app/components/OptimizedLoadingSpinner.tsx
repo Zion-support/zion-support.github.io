@@ -21,36 +21,36 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(,
   }) => {
     const sizeClasses = useMemo(;
       () => ({
-        xs: 'h-3 w-3',;
-        sm: 'h-4 w-4',;
-        md: 'h-8 w-8',;
-        lg: 'h-12 w-12',;
+        xs: 'h-3 w-3',
+        sm: 'h-4 w-4',
+        md: 'h-8 w-8',
+        lg: 'h-12 w-12',
         xl: 'h-16 w-16',
   }
       }),;
-      [];
+      []
     );
 const textSizeClasses = useMemo(;
       () => ({
-    xs: 'text-xs',;
-        sm: 'text-sm',;
-        md: 'text-base',;
-        lg: 'text-lg',;
+    xs: 'text-xs',
+        sm: 'text-sm',
+        md: 'text-base',
+        lg: 'text-lg',
         xl: 'text-xl',
   }
       }),;
-      [];
+      []
     );
 const colorClasses = useMemo(;
       () => ({
-    blue: 'border-blue-600 bg-blue-600',;
-        gray: 'border-gray-600 bg-gray-600',;
-        green: 'border-green-600 bg-green-600',;
-        red: 'border-red-600 bg-red-600',;
+    blue: 'border-blue-600 bg-blue-600',
+        gray: 'border-gray-600 bg-gray-600',
+        green: 'border-green-600 bg-green-600',
+        red: 'border-red-600 bg-red-600',
         purple: 'border-purple-600 bg-purple-600',
   }
       }),;
-      [];
+      []
     );
 const renderSpinner = useMemo(() => {
     switch (variant) {
@@ -137,7 +137,6 @@ return (</div>
           )}
         </div>
     );
-  }
-);
+  } )
 OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner';
 export default OptimizedLoadingSpinner;

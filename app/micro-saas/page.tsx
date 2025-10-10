@@ -36,7 +36,7 @@ const MicroSaasPage: React.FC = () => {
       price: '$19/month',
       icon: Clock
     }
-  ];
+  ]
 
   const features = [
     {
@@ -59,7 +59,7 @@ const MicroSaasPage: React.FC = () => {
       description: 'Enterprise-grade security and compliance built-in from day one.',
       icon: Shield
     }
-  ];
+  ]
 
   return (
     <>
@@ -147,6 +147,6 @@ const MicroSaasPage: React.FC = () => {
       <Footer />
     </>
   );
-};
+}
 
 export default MicroSaasPage;

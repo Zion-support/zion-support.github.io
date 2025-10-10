@@ -24,7 +24,7 @@ icon: Shield,
       title: 'Global Compliance',
       description: 'Worldwide compliance with security standards and regulations'
     }
-  ];
+  ]
   const benefits = [
 'Advanced cloud security technology',
     'Real-time threat monitoring and detection',
@@ -34,7 +34,7 @@ icon: Shield,
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-  ];
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>

@@ -22,12 +22,12 @@ interface FormStatus {
     phone: '',
     service: '',
     message: ''
-  });
+  })
 
   const [status, setStatus] = useState<FormStatus>({
     type: 'idle',
     message: ''
-  });
+  })
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -35,11 +35,11 @@ interface FormStatus {
       ...prev,
       [name]: value
     }));
-  };
+  }
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setStatus({ type: 'loading', message: 'Sending message...' });
+    setStatus({ type: 'loading', message: 'Sending message...' })
 
     try {
       // Simulate API call
@@ -48,7 +48,7 @@ interface FormStatus {
       setStatus({
         type: 'success',
         message: 'Thank you! Your message has been sent successfully. We\'ll get back to you within 24 hours.'
-      });
+      })
 
       // Reset form
       setFormData({
@@ -58,14 +58,14 @@ interface FormStatus {
         phone: '',
         service: '',
         message: ''
-      });
+      })
     } catch (error) {
       setStatus({
         type: 'error',
         message: 'Sorry, there was an error sending your message. Please try again.'
-      });
+      })
     }
-  };
+  }
 
   const services = [
     'AI Solutions',
@@ -76,7 +76,7 @@ interface FormStatus {
     'Cybersecurity',
     'IT Consulting',
     'Other'
-  ];
+  ]
 
   return (
     <div className="max-w-2xl mx-auto p-6">
@@ -218,6 +218,6 @@ interface FormStatus {
         </div>
     </div>
   );
-};
+}
 
 export default ContactForm;

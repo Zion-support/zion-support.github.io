@@ -28,32 +28,29 @@ import {
 const CloudInfrastructureManagerPage: React.FC = () => {
     const features = [
     {
-      icon: Cloud,;
-      title: 'Multi-Cloud Management',;
+      icon: Cloud,
+      title: 'Multi-Cloud Management',
       description: 'Manage and monitor your infrastructure across AWS, Azure, Google Cloud, and other platforms from a single dashboard.'
-  }
-    },;
+  },
     {
-    icon: Settings,;
-      title: 'Automated Scaling',;
+    icon: Settings,
+      title: 'Automated Scaling',
       description: 'Intelligent auto-scaling based on demand to optimize costs and performance automatically.'
-  }
-    },;
+  },
     {
-    icon: BarChart,;
-      title: 'Cost Optimization',;
+    icon: BarChart,
+      title: 'Cost Optimization',
       description: 'Advanced analytics and recommendations to reduce cloud costs while maintaining performance.'
-  }
-    },;
+  },
     {
-    icon: Zap,;
-      title: 'DevOps Integration',;
+    icon: Zap,
+      title: 'DevOps Integration',
       description: 'Seamless integration with CI/CD pipelines and DevOps tools for streamlined operations.'
   }
     }
-  ];
+  ]
 const benefits = [
-    'Centralized cloud infrastructure management',;
+    'Centralized cloud infrastructure management',
     'Automated scaling and optimization',;
     'Cost reduction and optimization',;
     'Enhanced security and compliance',;
@@ -61,9 +58,9 @@ const benefits = [
     'Easy deployment and configuration',;
     'Multi-cloud support',;
     'Expert technical support';
-  ];
+  ]
 return (
-    <></>
+    <>
       <Helmet>
         <title>Cloud Infrastructure Manager - Zion Tech Group | Cloud Management Platform</title>
         <meta>

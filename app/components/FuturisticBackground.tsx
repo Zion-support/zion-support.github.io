@@ -14,7 +14,7 @@ const FuturisticBackground: React.FC = () => {
     const resizeCanvas = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
-    };
+    }
 
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
@@ -28,9 +28,9 @@ const FuturisticBackground: React.FC = () => {
       size: number;
       opacity: number;
       color: string;
-    }> = [];
+    }> = []
 
-    const colors = ['#00ffff', '#8b5cf6', '#ec4899', '#10b981', '#3b82f6'];
+    const colors = ['#00ffff', '#8b5cf6', '#ec4899', '#10b981', '#3b82f6']
 
     // Create particles
     for (let i = 0; i < 50; i++) {
@@ -42,7 +42,7 @@ const FuturisticBackground: React.FC = () => {
         size: Math.random() * 3 + 1,
         opacity: Math.random() * 0.5 + 0.2,
         color: colors[Math.floor(Math.random() * colors.length)]
-      });
+      })
     }
 
     const animate = () => {
@@ -83,8 +83,8 @@ const FuturisticBackground: React.FC = () => {
               ctx.stroke();
             }
           }
-        });
-      });
+        })
+      })
 
       // Draw cyber grid
       ctx.globalAlpha = 0.1;
@@ -107,13 +107,13 @@ const FuturisticBackground: React.FC = () => {
 
       ctx.globalAlpha = 1;
       requestAnimationFrame(animate);
-    };
+    }
 
     animate();
 
     return () => {
       window.removeEventListener('resize', resizeCanvas);
-    };
+    }
   }, []);
 
   return (
@@ -123,6 +123,6 @@ const FuturisticBackground: React.FC = () => {
       style={{ background: 'transparent' }}
     />
   );
-};
+}
 
 export default FuturisticBackground;

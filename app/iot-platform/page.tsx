@@ -6,15 +6,14 @@ import Footer from '../components/Footer';
 import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } from 'lucide-react';
 },;
     {
-    icon: Clock,;
-      title: '24/7 Monitoring',;
-      description: 'Continuous monitoring of IoT devices and systems with intelligent alerting.',;
+    icon: Clock,
+      title: '24/7 Monitoring',
+      description: 'Continuous monitoring of IoT devices and systems with intelligent alerting.',
       benefits: ['Continuous monitoring', 'Smart alerts', 'Predictive maintenance']
-  }
-    },;
+  },
     {}
     }
-  ];
+  ]
 return (
             <p>
               Our IoT platform provides everything you need to build, deploy, and scale;

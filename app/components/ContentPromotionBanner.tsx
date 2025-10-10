@@ -25,13 +25,13 @@ const ContentPromotionBanner: React.FC = () => {
       description: '24/7 support from our team of AI and IT specialists.',
       icon: Users
     }
-  ];
+  ]
 
   const benefits = [
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-  ];
+  ]
 
   return (
     <div className="bg-gradient-to-r from-purple-600 to-blue-600 text-white py-16 px-4">
@@ -85,6 +85,6 @@ const ContentPromotionBanner: React.FC = () => {
       </div>
     </div>
   );
-};
+}
 
 export default ContentPromotionBanner;

@@ -29,7 +29,7 @@ const ConsultationPage: React.FC = () => {
       price: 'Starting at $3,500',
       duration: '2-3 weeks'
     }
-  ];
+  ]
 
   const process = [
     {
@@ -56,7 +56,7 @@ const ConsultationPage: React.FC = () => {
       description: 'We provide ongoing support to ensure successful implementation.',
       icon: ArrowRight
     }
-  ];
+  ]
 
   return (
     <>
@@ -148,6 +148,6 @@ const ConsultationPage: React.FC = () => {
       <Footer />
     </>
   );
-};
+}
 
 export default ConsultationPage;

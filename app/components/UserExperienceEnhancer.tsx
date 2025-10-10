@@ -7,7 +7,7 @@ interface UserExperienceEnhancerProps {
   }
 }
 const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({ children }) => {}
-  const [loadingStates, setLoadingStates] = useState<Record<string, boolean>>({});
+  const [loadingStates, setLoadingStates] = useState<Record<string, boolean>>({})
 useEffect(() => {
     // UX enhancement logic;
     const enhanceUX = (;
@@ -26,8 +26,8 @@ useEffect(() => {
           setTimeout(() => {}
             setLoadingStates(prev => ({ ...prev, [index]: false }));
           }, 1000);
-        });
-      });
+        })
+      })
 // Add focus indicators;
 
       const style = document.createElement('style');

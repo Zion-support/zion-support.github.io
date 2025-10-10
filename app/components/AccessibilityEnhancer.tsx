@@ -34,9 +34,9 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
           const openDropdowns = document.querySelectorAll('[aria-expanded="true"]');
           openDropdowns.forEach(dropdown => {
             (dropdown as HTMLElement).setAttribute('aria-expanded', 'false');
-          });
+          })
         }
-      };
+      }
 
       document.addEventListener('keydown', handleKeyDown);
       return () => document.removeEventListener('keydown', handleKeyDown);
@@ -65,13 +65,13 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
               e.preventDefault();
             }
           }
-        };
+        }
 
         container.addEventListener('keydown', handleTabKey);
         firstFocusableElement?.focus();
 
         return () => container.removeEventListener('keydown', handleTabKey);
-      };
+      }
 
       // Apply focus trap to modals and dropdowns
       const modals = document.querySelectorAll('[role="dialog"], [aria-modal="true"]');
@@ -94,7 +94,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         if (liveRegion) {
           liveRegion.textContent = message;
         }
-      };
+      }
 
       // Listen for route changes (if using React Router)
       const originalPushState = history.pushState;
@@ -103,18 +103,18 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       history.pushState = function(...args) {
         originalPushState.apply(history, args);
         announcePageChange('Page changed');
-      };
+      }
 
       history.replaceState = function(...args) {
         originalReplaceState.apply(history, args);
         announcePageChange('Page updated');
-      };
+      }
 
       return () => {
         document.body.removeChild(liveRegion);
         history.pushState = originalPushState;
         history.replaceState = originalReplaceState;
-      };
+      }
     }
 
     // High contrast mode support
@@ -127,7 +127,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         } else {
           document.documentElement.classList.remove('high-contrast');
         }
-      };
+      }
 
       prefersHighContrast.addEventListener('change', updateHighContrast);
       updateHighContrast(prefersHighContrast);
@@ -137,6 +137,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   }, [enableKeyboardNavigation, enableScreenReaderSupport, enableHighContrast, enableFocusManagement]);
 
   return <React.Fragment>{children}</React.Fragment>;
-};
+}
 
 export default AccessibilityEnhancer;

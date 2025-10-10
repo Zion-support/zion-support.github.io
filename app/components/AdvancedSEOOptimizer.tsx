@@ -30,7 +30,7 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
     if (typeof window === 'undefined') return;
 
     let score = 0;
-    const newRecommendations: string[] = [];
+    const newRecommendations: string[] = []
 
     // Check title length
     if (title.length >= 30 && title.length <= 60) {
@@ -105,19 +105,19 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
         "https://twitter.com/ziontechgroup",
         "https://linkedin.com/company/ziontechgroup"
       ]
-    };
+    }
 
     return structuredData || defaultStructuredData;
-  };
+  }
 
   const _trackPageView = (config: SEOData) => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as unknown as { gtag: (command: string, targetId: string, config: Record<string, unknown>) => void }).gtag('config', 'GA_MEASUREMENT_ID', {
         page_title: config.title,
         page_location: config.canonicalUrl,
-      });
+      })
     }
-  };
+  }
 
   const _trackPerformanceMetrics = () => {
     if (typeof window !== 'undefined' && 'performance' in window) {
@@ -128,11 +128,11 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
             event_category: 'Performance',
             event_label: 'Page Load',
             value: Math.round(_perfData.loadEventEnd - _perfData.fetchStart),
-          });
+          })
         }
-      });
+      })
     }
-  };
+  }
   return (
     <>
       <Helmet>
@@ -235,6 +235,6 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
     {children}
   </>
   );
-};
+}
 
 export default AdvancedSEOOptimizer;

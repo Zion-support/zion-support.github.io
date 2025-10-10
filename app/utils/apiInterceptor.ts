@@ -9,29 +9,29 @@ interface InterceptorConfig {
   }
 }
 class APIInterceptor {
-    private requestInterceptors: Array<(config: any) => any> = [];
+    private requestInterceptors: Array<(config: any) => any> = []
   private responseInterceptors: Array<(response: any) => any> = []
   private errorInterceptors: Array<(error: any) => any> = []
 // Add request interceptor,
-  addRequestInterceptor(interceptor: (config: any) => any): void {,;
+  addRequestInterceptor(interceptor: (config: any) => any): void {,
     this.requestInterceptors.push(interceptor)
   }
   }
 // Add response interceptor;
   addResponseInterceptor(interceptor: (response: any) => any): void {
-    ,;
+    ,
     this.responseInterceptors.push(interceptor)
   }
   }
 // Add error interceptor;
   addErrorInterceptor(interceptor: (error: any) => any): void {
-    ,;
+    ,
     this.errorInterceptors.push(interceptor)
   }
   }
 // Remove request interceptor;
   removeRequestInterceptor(interceptor: (config: any) => any): void {
-    ,;
+    ,
     const index = this.requestInterceptors.indexOf(interceptor);
     if (index > -1) {,;
       this.requestInterceptors.splice(index, 1)
@@ -40,7 +40,7 @@ class APIInterceptor {
   }
 // Remove response interceptor;
   removeResponseInterceptor(interceptor: (response: any) => any): void {
-    ,;
+    ,
     const index = this.responseInterceptors.indexOf(interceptor);
     if (index > -1) {,;
       this.responseInterceptors.splice(index, 1)
@@ -49,7 +49,7 @@ class APIInterceptor {
   }
 // Remove error interceptor;
   removeErrorInterceptor(interceptor: (error: any) => any): void {
-    ,;
+    ,
     const index = this.errorInterceptors.indexOf(interceptor);
     if (index > -1) {,;
       this.errorInterceptors.splice(index, 1)
@@ -58,7 +58,7 @@ class APIInterceptor {
   }
 // Apply request interceptors;
   applyRequestInterceptors(config: any): any {
-    ,;
+    ,
     return this.requestInterceptors.reduce((acc, interceptor) => {
       try {
         return interceptor(acc)
@@ -71,7 +71,7 @@ class APIInterceptor {
   }
 // Apply response interceptors;
   applyResponseInterceptors(response: any): any {
-    ,;
+    ,
     return this.responseInterceptors.reduce((acc, interceptor) => {
       try {
         return interceptor(acc)
@@ -84,7 +84,7 @@ class APIInterceptor {
   }
 // Apply error interceptors;
   applyErrorInterceptors(error: any): any {
-    ,;
+    ,
     return this.errorInterceptors.reduce((acc, interceptor) => {
       try {
         return interceptor(acc)
@@ -97,15 +97,15 @@ class APIInterceptor {
   }
 // Clear all interceptors;
   clearAll(): void {
-    this.requestInterceptors = [];
-    this.responseInterceptors = [];
+    this.requestInterceptors = []
+    this.responseInterceptors = []
     this.errorInterceptors = []
   }
   }
 // Get interceptor counts;
   getInterceptorCounts(): {
-    request: number,;
-    response: number,;
+    request: number,
+    response: number,
     error: number,
   }
   } {
@@ -210,65 +210,64 @@ export class APIInterceptor {/* TODO: Fix JSX expression */}
    * GET request;
    */;
   async get<T = unknown>(ur,;
-  l: string,;
+  l: string,
     confi,;
-  g: Partial<RequestConfig> = {});
+  g: Partial<RequestConfig> = {})
   ): Promise<APIResponse<T>> {/* TODO: Fix JSX expression */}
-  d: 'GET' });
+  d: 'GET' })
   }
   /**;
    * POST request;
    */;
   async post<T = unknown>(ur,;
-  l: string,;
+  l: string,
     body?: unknown,;
     confi,;
-  g: Partial<RequestConfig> = {});
+  g: Partial<RequestConfig> = {})
   ): Promise<APIResponse<T>> {/* TODO: Fix JSX expression */}
-  d: 'POST', body });
+  d: 'POST', body })
   }
   /**;
    * PUT request;
    */;
   async put<T = unknown>(ur,;
-  l: string,;
+  l: string,
     body?: unknown,;
     confi,;
-  g: Partial<RequestConfig> = {});
+  g: Partial<RequestConfig> = {})
   ): Promise<APIResponse<T>> {/* TODO: Fix JSX expression */}
-  d: 'PUT', body });
+  d: 'PUT', body })
   }
   /**;
    * DELETE request;
    */;
   async delete<T = unknown>(ur,;
-  l: string,;
+  l: string,
     confi,;
-  g: Partial<RequestConfig> = {});
+  g: Partial<RequestConfig> = {})
   ): Promise<APIResponse<T>> {/* TODO: Fix JSX expression */}
-  d: 'DELETE' });
+  d: 'DELETE' })
   }
   /**;
    * PATCH request;
    */;
   async patch<T = unknown>(ur,;
-  l: string,;
+  l: string,
     body?: unknown,;
     confi,;
-  g: Partial<RequestConfig> = {});
+  g: Partial<RequestConfig> = {})
   ): Promise<APIResponse<T>> {/* TODO: Fix JSX expression */}
-  d: 'PATCH', body });
+  d: 'PATCH', body })
   }
   /**;
    * Prepare request configuration;
    */;
   private prepareRequest(confi);
-  g: RequestConfig): RequestConfig {/* TODO: Fix JSX expression */}
-      },;
+  g: RequestConfig): RequestConfig {/* TODO: Fix JSX expression */},
       timeou,;
-  t: config.timeout || this.config.timeout,;
+  t: config.timeout || this.config.timeout,
       retryAttempt,;
-  s: config.retryAttempts ?? this.config.retryAttempts,;
+  s: config.retryAttempts ?? this.config.retryAttempts,
       cach,;
   e: config.cache ?? this.config.enableCaching,
     }
@@ -280,7 +279,7 @@ export class APIInterceptor {/* TODO: Fix JSX expression */}
   g: RequestConfig): string {/* TODO: Fix JSX expression */}`;
     let url = config.url.startsWith('http') ? config.url : `${this.config.baseURL}${config.url}`;
     if (config.params) {/* TODO: Fix JSX expression */}
-      });`;
+      })`;
       url += `?${params.toString()}`;
     }
     return url;
@@ -291,7 +290,7 @@ export class APIInterceptor {/* TODO: Fix JSX expression */}
   private buildHeaders(confi);
   g: RequestConfig): Headers {/* TODO: Fix JSX expression */}
     Object.entries(config.headers || {}).forEach(([key, value]) => {/* TODO: Fix JSX expression */}
-    });
+    })
     return headers;
   }
   /**;
@@ -331,7 +330,7 @@ export class APIInterceptor {/* TODO: Fix JSX expression */}
   private setInCache(ke,;
   y: string, respons);
   e: APIResponse): void {/* TODO: Fix JSX expression */}
-    });
+    })
   }
   /**;
    * Clear cache;

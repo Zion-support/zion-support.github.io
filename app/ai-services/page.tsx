@@ -1012,7 +1012,7 @@ const AiServicesPage: React.FC = () => {
       popular: true,
       icon: FileText
     }
-  ];
+  ]
 
   const categories = [
     { id: 'all', name: 'All Services', count: services.length },
@@ -1043,7 +1043,7 @@ const AiServicesPage: React.FC = () => {
     { id: 'Knowledge Management', name: 'Knowledge Management', count: services.filter(s => s.category === 'Knowledge Management').length },
     { id: 'Reporting & Analytics', name: 'Reporting & Analytics', count: services.filter(s => s.category === 'Reporting & Analytics').length },
     { id: 'Content Generation', name: 'Content Generation', count: services.filter(s => s.category === 'Content Generation').length }
-  ];
+  ]
 
   const filteredServices = services.filter(service => 
     selectedCategory === 'all' || service.category === selectedCategory
@@ -1184,6 +1184,6 @@ const AiServicesPage: React.FC = () => {
       <Footer />
     </>
   );
-};
+}
 
 export default AiServicesPage;

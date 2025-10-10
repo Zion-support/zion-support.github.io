@@ -24,7 +24,7 @@ icon: Shield,
       title: 'Multi-Cloud Support',
       description: 'Support for migration to AWS, Azure, GCP, and other cloud platforms'
     }
-  ];
+  ]
   const benefits = [
 'Advanced cloud migration technology',
     'Real-time migration monitoring',
@@ -34,7 +34,7 @@ icon: Shield,
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-  ];
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>

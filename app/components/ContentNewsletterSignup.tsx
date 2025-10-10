@@ -26,7 +26,7 @@ const ContentNewsletterSignup: React.FC = () => {
       setIsSubmitting(false);
       setIsLoading(false);
     }
-  };
+  }
 
   if (isSubscribed) {
     return (
@@ -104,6 +104,6 @@ const ContentNewsletterSignup: React.FC = () => {
       </div>
     </div>
   );
-};
+}
 
 export default ContentNewsletterSignup;

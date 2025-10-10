@@ -33,7 +33,7 @@ const CareersPage: React.FC = () => {
       description: 'Extract insights from complex datasets to drive business decisions.',
       requirements: ['Python, R, SQL', '3+ years data science experience', 'Statistical analysis skills']
     }
-  ];
+  ]
 
   const benefits = [
     'Competitive salary and equity',
@@ -43,7 +43,7 @@ const CareersPage: React.FC = () => {
     'Top-tier equipment and tools',
     'Team building events',
     'Career growth opportunities'
-  ];
+  ]
 
   const values = [
     {
@@ -66,7 +66,7 @@ const CareersPage: React.FC = () => {
       title: 'Excellence',
       description: 'We strive for the highest quality in everything we do'
     }
-  ];
+  ]
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -130,31 +130,7 @@ const CareersPage: React.FC = () => {
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </button>
               </div>
-<<<<<<< HEAD
             ))}
-=======
-                      <ul className="space-y-1">
-                        {position.requirements.map((req, reqIndex) => (
-                          <li key={reqIndex} className="text-gray-300 text-sm flex items-center">
-                            <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
-                            {req}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  )}
-
-                  <Link
-                    to="/contact"
-                    className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold group"
-                  >
-                    Apply Now
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                  </Link>
-                </div>
-              ))}
-            </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-00a6
           </div>
         </div>
       </section>
@@ -200,6 +176,6 @@ const CareersPage: React.FC = () => {
       </section>
     </div>
   );
-};
+}
 
 export default CareersPage;

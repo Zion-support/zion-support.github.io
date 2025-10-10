@@ -10,7 +10,7 @@ const SupplyChainOptimizerPage: React.FC = () => {
     { icon: Shield, title: 'Risk Management', description: 'Comprehensive risk assessment and mitigation strategies.' },
     { icon: CheckCircle, title: 'Quality Control', description: 'Automated quality control and compliance monitoring.' },
     { icon: Target, title: 'Performance Analytics', description: 'Real-time performance tracking and optimization recommendations.' }
-  ];
+  ]
   return (
     <React.Fragment>
       <Helmet>
@@ -41,5 +41,5 @@ const SupplyChainOptimizerPage: React.FC = () => {
       </div>
     </React.Fragment>
   );
-};
+}
 export default SupplyChainOptimizerPage;

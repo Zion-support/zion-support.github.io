@@ -15,18 +15,18 @@ interface State {
 class EnhancedErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
-    this.state = { hasError: false };
+    this.state = { hasError: false }
   }
 
   static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
+    return { hasError: true, error }
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
       errorInfo
-    });
+    })
 
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
@@ -39,7 +39,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       gtag('event', 'exception', {
         description: error.message,
         fatal: false
-      });
+      })
     }
   }
 

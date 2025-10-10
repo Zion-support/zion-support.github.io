@@ -81,7 +81,7 @@ element.addEventListener('keydown', (e) => {
       element.click()
   }
     }
-  });
+  })
 }
 export const createSkipLink = (targetId: string, text: string = 'Skip to main content'): HTMLElement => {
     const skipLink = document.createElement('a')
@@ -100,7 +100,7 @@ const [r, g, b] = rgb.map(Number).map(c => {
       c = c / 255;
       return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4)
   }
-    });
+    })
 return 0.2126 * r + 0.7152 * g + 0.0722 * b;
   }
 const l1 = getLuminance(foreground);
@@ -117,25 +117,25 @@ export const addFocusIndicators = (): void => {
   }
     }
 .sr-only {
-    position: absolute,;
-      width: 1px,;
-      height: 1px,;
-      padding: 0,;
+    position: absolute,
+      width: 1px,
+      height: 1px,
+      padding: 0,
       margin: -1px,
-      overflow: hidden,;
+      overflow: hidden,
       clip: rect(0, 0, 0, 0);
-      white-space: nowrap,;
+      white-space: nowrap,
       border: 0,
   }
     }
-.focus\\:not-sr-only:focus {
-    position: static,;
-      width: auto,;
-      height: auto,;
+.focus\\:not-sr-only: focus {
+    position: static,
+      width: auto,
+      height: auto,
       padding: 0.5rem 1rem,
-      margin: 0,;
-      overflow: visible,;
-      clip: auto,;
+      margin: 0,
+      overflow: visible,
+      clip: auto,
       white-space: normal,
   }
     }
@@ -157,5 +157,5 @@ export const initializeAccessibility = (): void => {
   interactiveElements.forEach((element) => {
     enhanceKeyboardNavigation(element as HTMLElement)
   }
-  });
+  })
 }

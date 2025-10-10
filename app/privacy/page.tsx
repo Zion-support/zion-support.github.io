@@ -37,7 +37,7 @@ const PrivacyPage: React.FC = () => {
         'System configuration information'
       ]
     }
-  ];
+  ]
 
   const purposes = [
     {
@@ -60,7 +60,7 @@ const PrivacyPage: React.FC = () => {
       description: 'To analyze usage patterns and improve our services',
       icon: Eye
     }
-  ];
+  ]
 
   const rights = [
     {
@@ -93,13 +93,13 @@ const PrivacyPage: React.FC = () => {
       description: 'Object to certain types of processing',
       icon: Shield
     }
-  ];
+  ]
 
   const contactInfo = {
     email: 'privacy@ziontechgroup.com',
     phone: '+1 (302) 464-0950',
     address: '364 E Main St STE 1008, Middletown, DE 19709'
-  };
+  }
 
   return (
     <>
@@ -375,6 +375,6 @@ const PrivacyPage: React.FC = () => {
       </div>
     </>
   );
-};
+}
 
 export default PrivacyPage;

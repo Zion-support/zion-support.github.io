@@ -26,7 +26,7 @@ const AIApiManagementPage: React.FC = () => {
       benefits: ['Auto-generated docs', 'Interactive examples', 'Version management', 'Developer portal']
 
     }
-  ];
+  ]
   const benefits = [
 
     'Reduced API downtime by 95%',
@@ -35,7 +35,7 @@ const AIApiManagementPage: React.FC = () => {
     'Real-time performance monitoring',
     'Intelligent load balancing',
     'Cost optimization insights'
-  ];
+  ]
 
   const stats = [
     { icon: <Zap className="w-8 h-8 text-blue-500" />, value: '99.9%', label: 'Uptime' },
@@ -43,7 +43,7 @@ const AIApiManagementPage: React.FC = () => {
     { icon: <Users className="w-8 h-8 text-purple-500" />, value: '10K+', label: 'APIs Managed' },
     { icon: <BarChart3 className="w-8 h-8 text-orange-500" />, value: '50%', label: 'Cost Reduction' }
 
-  ];
+  ]
   return (
 
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">

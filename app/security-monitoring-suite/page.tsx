@@ -28,32 +28,29 @@ import {
 const SecurityMonitoringSuitePage: React.FC = () => {
     const features = [
     {
-      icon: Monitor,;
-      title: 'Real-time Dashboard',;
+      icon: Monitor,
+      title: 'Real-time Dashboard',
       description: 'Comprehensive security monitoring dashboard with live threat detection and incident tracking.'
-  }
-    },;
+  },
     {
-    icon: AlertTriangle,;
-      title: 'Advanced Alerts',;
+    icon: AlertTriangle,
+      title: 'Advanced Alerts',
       description: 'Intelligent alerting system that notifies you of security threats and anomalies instantly.'
-  }
-    },;
+  },
     {
-    icon: BarChart,;
-      title: 'Security Analytics',;
+    icon: BarChart,
+      title: 'Security Analytics',
       description: 'Detailed security reports and analytics to help you understand and improve your security posture.'
-  }
-    },;
+  },
     {
-    icon: Zap,;
-      title: 'Automated Response',;
+    icon: Zap,
+      title: 'Automated Response',
       description: 'Automated incident response and threat mitigation to protect your systems 24/7.'
   }
     }
-  ];
+  ]
 const benefits = [
-    '24/7 security monitoring and protection',;
+    '24/7 security monitoring and protection',
     'Real-time threat detection and alerts',;
     'Comprehensive security analytics',;
     'Automated incident response',;
@@ -61,9 +58,9 @@ const benefits = [
     'Easy-to-use dashboard interface',;
     'Scalable for any business size',;
     'Expert security team support';
-  ];
+  ]
 return (
-    <></>
+    <>
       <Helmet>
         <title>Security Monitoring Suite - Zion Tech Group | Cybersecurity Platform</title>
         <meta>

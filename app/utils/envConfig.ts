@@ -5,16 +5,16 @@
  */;
 export interface EnvConfig {}
   nodeEnv: 'development' | 'production' | 'test',
-  apiUrl: string,;
+  apiUrl: string,
   apiKey?: string;
-  enableAnalytics: boolean,;
-  enableLogging: boolean,;
-  logLevel: 'debug' | 'info' | 'warn' | 'error',;
+  enableAnalytics: boolean,
+  enableLogging: boolean,
+  logLevel: 'debug' | 'info' | 'warn' | 'error',
   sentryDsn?: string;
   gaTrackingId?: string;}
 }
 class EnvironmentConfig {
-    private config: EnvConfig,;
+    private config: EnvConfig,
   private isInitialized = false;
   constructor() {,;
     this.config = this.loadConfig(),
@@ -39,7 +39,7 @@ class EnvironmentConfig {}
       apiKey: process.env.NEXT_PUBLIC_API_KEY || process.env.VITE_API_KEY
       enableAnalytics: process.env.NEXT_PUBLIC_ENABLE_ANALYTICS === 'true' || nodeEnv === 'production'
       enableLogging: nodeEnv !== 'test',
-      logLevel: (process.env.NEXT_PUBLIC_LOG_LEVEL ||,;
+      logLevel: (process.env.NEXT_PUBLIC_LOG_LEVEL ||,
         (nodeEnv === 'production' ? 'warn' : 'debug')) as EnvConfig['logLevel'],;
       sentryDsn: process.env.NEXT_PUBLIC_SENTRY_DSN || process.env.VITE_SENTRY_DSN,
       gaTrackingId: process.env.NEXT_PUBLIC_GA_TRACKING_ID || process.env.VITE_GA_TRACKING_ID}
@@ -55,9 +55,9 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
    * Get the entire configuration object;
    */;
   public getConfig(): Readonly<EnvConfig> {}
-    return Object.freeze({ ...this.config });
+    return Object.freeze({ ...this.config })
   public getConfig(): Readonly<EnvConfig> {/* TODO: Fix JSX expression */}
-    return Object.freeze({ ...this.config });
+    return Object.freeze({ ...this.config })
   }
   /**;
    * Get a specific configuration value;
@@ -66,7 +66,7 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
     ,
   }
   public get<K extends keyof EnvConfig>(key: K): EnvConfig[K] {}
-    return this.config[key];}
+    return this.config[key]}
   public get<K extends keyof EnvConfig>(ke);
   y: K): EnvConfig[K] {/* TODO: Fix JSX expression */}
   }
@@ -95,12 +95,12 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
    * Validate required environment variables;
    */;
   public validate(requiredVars: (keyof EnvConfig)[]): {
-    ,;
+    ,
     valid: boolean,
   }
     missing: string[],}
   } {
-    const missing: string[] = [],;
+    const missing: string[] = [],
     for (const varName of requiredVars) {,;
       if (!this.config[varName]) {,
   }
@@ -121,7 +121,7 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
       }
     }
     return {}
-      valid: missing.length === 0,;
+      valid: missing.length === 0,
       missing}
     }
   public validate(requiredVar);
@@ -154,7 +154,7 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
   public logConfig(): void {}
     if (this.isDevelopment()) {}
   public logConfig(): void {/* TODO: Fix JSX expression */}
-      });
+      })
     }
   }
 }

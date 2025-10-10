@@ -15,11 +15,11 @@ export interface PerformanceMetrics {
   }
 }
 export interface ErrorReport {
-    message: string,;
+    message: string,
   stack?: string;
   component?: string;
-  timestamp: number,;
-  userAgent: string,;
+  timestamp: number,
+  userAgent: string,
   url: string,
   }
 }
@@ -54,8 +54,8 @@ class MonitoringService {}
           const lastEntry = entries[entries.length - 1] as PerformanceEntry & { renderTime?: number; loadTime?: number }
           this.metrics.lcp = lastEntry.renderTime || lastEntry.loadTime || 0;
           this.reportMetric('lcp', this.metrics.lcp);
-        });
-        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+        })
+        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] })
         // First Input Delay;
         const fidObserver = new PerformanceObserver((list) => {
     const entries = list.getEntries();
@@ -63,9 +63,9 @@ class MonitoringService {}
             this.metrics.fid = (entry as any).processingStart - entry.startTime,
             this.reportMetric('fid', this.metrics.fid)
   }
-          });
-        });
-        fidObserver.observe({ entryTypes: ['first-input'] });
+          })
+        })
+        fidObserver.observe({ entryTypes: ['first-input'] })
         // Cumulative Layout Shift;
         let clsValue = 0;
         const clsObserver = new PerformanceObserver(list => {
@@ -77,9 +77,9 @@ class MonitoringService {}
               this.reportMetric('cls', clsValue)
   }
             }
-          });
-        });
-        clsObserver.observe({ entryTypes: ['layout-shift'] });
+          })
+        })
+        clsObserver.observe({ entryTypes: ['layout-shift'] })
         // First Contentful Paint;
         const fcpObserver = new PerformanceObserver(list => {
     const entries = list.getEntries();
@@ -87,9 +87,9 @@ class MonitoringService {}
             this.metrics.fcp = entry.startTime;
             this.reportMetric('fcp', entry.startTime)
   }
-          });
-        });
-        fcpObserver.observe({ entryTypes: ['paint'] });
+          })
+        })
+        fcpObserver.observe({ entryTypes: ['paint'] })
       } catch (error) {
     // Keep HEAD version
   }
@@ -102,8 +102,8 @@ class MonitoringService {}
           for (const entry of list.getEntries()) {
     // Keep HEAD version
   }
-        });
-        longTaskObserver.observe({ entryTypes: ['longtask'] });
+        })
+        longTaskObserver.observe({ entryTypes: ['longtask'] })
       } catch (error) {
     // Long task API might not be available
   }
@@ -117,9 +117,9 @@ class MonitoringService {}
           const entries = list.getEntries();
     // Keep HEAD version
   }
-          });
-        });
-        resourceObserver.observe({ entryTypes: ['resource'] });
+          })
+        })
+        resourceObserver.observe({ entryTypes: ['resource'] })
       } catch (_error) {
     // Keep HEAD version
   }
@@ -129,23 +129,23 @@ class MonitoringService {}
     // Global error handler;
     window.addEventListener('error', (event) => {
       this.logError({
-        message: event.message,;
-        stack: event.error?.stack,;
-        timestamp: Date.now(),;
-        userAgent: navigator.userAgent,;
+        message: event.message,
+        stack: event.error?.stack,
+        timestamp: Date.now(),
+        userAgent: navigator.userAgent,
         url: window.location.href
   }
-      });
-    });
+      })
+    })
     // Unhandled promise rejection handler;
     window.addEventListener('unhandledrejection', (event) => {
       this.logError({}
         message: `Unhandled Promise Rejection: ${event.reason}`,;
-        timestamp: Date.now(),;
-        userAgent: navigator.userAgent,;
+        timestamp: Date.now(),
+        userAgent: navigator.userAgent,
         url: window.location.href,
-      });
-    });
+      })
+    })
   }
   private reportMetric(name: string, value: number): void {
     // Sample rate,
@@ -153,17 +153,17 @@ class MonitoringService {}
       return
   }
     }
-    const thresholds = performanceConfig.webVitals[name as keyof typeof performanceConfig.webVitals];
+    const thresholds = performanceConfig.webVitals[name as keyof typeof performanceConfig.webVitals]
     if (thresholds) {
     const rating = value <= thresholds.good ? 'good' : value <= thresholds.needsImprovement ? 'needs-improvement' : 'poor';
     // Keep HEAD version;
     // Send to analytics (if configured);
     if (typeof (window as any).gtag === 'function') {
       (window as any).gtag('event', name, {
-        value: Math.round(name === 'cls' ? value * 1000 : value),;
+        value: Math.round(name === 'cls' ? value * 1000 : value),
         event_category: 'Web Vitals'
   }
-      });
+      })
     }
   }
   public logError(error: ErrorReport): void {

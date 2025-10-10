@@ -24,7 +24,7 @@ const preloadComponents = () => {
       import('./components/ContentCarousel');
     }, 100);
   }
-};
+}
 
 // Loading skeleton component
 const ServiceCardSkeleton: React.FC = memo(() => (
@@ -55,7 +55,7 @@ const HomePage: React.FC = () => {
       gtag('event', 'phone_click', {
         event_category: 'engagement',
         event_label: 'main_phone_number'
-      });
+      })
     }
   }, []);
 
@@ -399,7 +399,7 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       category: 'Energy Tech',
       popular: false
     }
-  ];
+  ]
 
   // Real IT Services with actual capabilities and pricing
   const itServices = [
@@ -762,7 +762,7 @@ description: 'Custom API development, third-party integrations, and microservice
       category: 'Cloud Security',
       popular: false
     }
-  ];
+  ]
 
   // Real Micro SaaS Services with actual capabilities and pricing
   const microSaasServices = [
@@ -1438,14 +1438,14 @@ description: 'Custom API development, third-party integrations, and microservice
       popular: true,
       users: 'Up to 5 users'
     }
-  ];
+  ]
 
   const stats = [
     { icon: <Users className="w-8 h-8 text-blue-500" />, value: '500+', label: 'Projects Delivered' },
     { icon: <TrendingUp className="w-8 h-8 text-green-500" />, value: '99.9%', label: 'Uptime Guarantee' },
     { icon: <Shield className="w-8 h-8 text-purple-500" />, value: '24/7', label: 'Support Available' },
     { icon: <Zap className="w-8 h-8 text-orange-500" />, value: '5★', label: 'Client Rating' }
-  ];
+  ]
 
   return (
     <React.Fragment>
@@ -1832,6 +1832,6 @@ className={`text-center mb-16 transition-all duration-1000 cyber-scan-line holog
       </div>
     </React.Fragment>
   );
-};
+}
 
 export default HomePage;
