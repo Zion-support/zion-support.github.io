@@ -87,7 +87,7 @@ const benefits = [
 }{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </div>
-            ));
+            ))
 =======
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
@@ -173,7 +173,7 @@ const benefits = [
                 </ul>
               </div>
 <<<<<<< HEAD
-            ));
+            ))
 =======
               <div className="relative">
                 <div className="bg-gradient-to-br from-cyan-500/20 to-purple-600/20 rounded-2xl p-8 backdrop-blur-sm border border-white/10">

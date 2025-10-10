@@ -144,7 +144,7 @@ const benefits = [
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </div>
-            ));
+            ))
 =======
               ))}
             </div>
@@ -171,7 +171,7 @@ const benefits = [
                 </ul>
               </div>
 <<<<<<< HEAD
-            ));
+            ))
 =======
               <div className="relative">
                 <div className="bg-gradient-to-br from-cyan-500/20 to-purple-600/20 rounded-2xl p-8 backdrop-blur-sm border border-white/10">

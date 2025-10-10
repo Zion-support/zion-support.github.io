@@ -529,7 +529,7 @@ const _recommendations = getPerformanceRecommendations();
             <ul className='text-xs text-red-600'></ul>
               {_recommendations.map((rec, index) => (
                 <li key={index}></l>• {rec}</li>
-              ));
+              ))
             </ul>
 <<<<<<< HEAD
           </div>

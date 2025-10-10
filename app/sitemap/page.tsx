@@ -58,7 +58,7 @@ const SitemapPage: React.FC = () => {const pages = [
                   {page.path}
                 </p>
               </div>
-            ));
+            ))
           </div>
         </div>
 

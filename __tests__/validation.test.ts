@@ -59,26 +59,28 @@ describe('Password Validation', () => {
     expect(validatePassword('alllowercase123!').isValid).toBe(false);
     expect(validatePassword('ALLUPPERCASE123!').isValid).toBe(false);
     expect(validatePassword('NoNumbers!').isValid).toBe(false);
-    expect(validatePassword('NoSpecialChar123').isValid).toBe(false)});
+    expect(validatePassword('NoSpecialChar123').isValid).toBe(false);
+  });
 
-  test('rejects passwords that are too long', () => {;
-const longPassword = 'A'.repeat(129) + 'a1!';
-    expect(validatePassword(longPassword).isValid).toBe(false)})});
+  test('rejects passwords that are too long', () => {
+    const longPassword = 'A'.repeat(129) + 'a1!';
+    expect(validatePassword(longPassword).isValid).toBe(false);
+  });
+});
 
 describe('HTML Sanitization', () => {
-return (
-
   test('sanitizes HTML special characters', () => {
-    expect(sanitizeHTML('<script>alert("xss")</script>
-);
-}')).toBe(
+    expect(sanitizeHTML('<script>alert("xss")</script>')).toBe(
       '&lt;script&gt;alert(&quot;xss&quot;)&lt;&#x2F;script&gt;'
-    )});
+    );
+  });
 
   test('handles empty and non-string inputs', () => {
     expect(sanitizeHTML('')).toBe('');
     expect(sanitizeHTML(null as unknown as string)).toBe('');
-    expect(sanitizeHTML(undefined as unknown as string)).toBe('')})});
+    expect(sanitizeHTML(undefined as unknown as string)).toBe('');
+  });
+});
 
 describe('Date Validation', () => {
   test('validates correct date formats', () => {

@@ -223,10 +223,10 @@ const filteredEndpoints = apiEndpoints.map(category => ({
                         </pre>
                       </div>
                     </div>
-                  ));
+                  ))
                 </div>
               </div>
-            ));
+            ))
           </div>
         </div>
       </section>

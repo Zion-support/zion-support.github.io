@@ -112,7 +112,7 @@ const metrics = [
                   <h3 className="text-xl font-semibold text-white mb-3"></h>{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
                 </div>
-              ));
+              ))
             </div>
           </div>
         </section>
@@ -135,7 +135,7 @@ const metrics = [
                   <div className="text-3xl font-bold text-white mb-2"></di>{metric.value}</div>
                   <div className="text-gray-300"></di>{metric.label}</div>
                 </div>
-              ));
+              ))
             </div>
           </div>
         </section>
@@ -156,7 +156,7 @@ const metrics = [
                     <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0 mt-1" />
                     <span className="text-gray-300 text-lg"></spa>{benefit}</span>
                   </div>
-                ));
+                ))
               </div>
               <div>
                 <h3 className="text-2xl font-bold text-white mb-4"></h>Success Stories</h3>

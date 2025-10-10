@@ -122,7 +122,7 @@ const name = segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' 
               )}
 >>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
             </li>
-          ));
+          ))
         </ol>
       </div>
     </nav>)

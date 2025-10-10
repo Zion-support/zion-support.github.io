@@ -499,7 +499,7 @@ const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase
                   <option key={category.id} value={category.id}></option>
                     {category.name}
                   </option>
-                ));
+                ))
               </select>
             </div>
           </div>
@@ -518,7 +518,7 @@ const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase
               >
                 {category.name}
               </button>
-            ));
+            ))
           </div>
         </div>
       </section>
@@ -551,7 +551,7 @@ const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase
                           <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
                           <span>{feature}</span>
                         </li>
-                      ));
+                      ))
                     </ul>
                   </div>
                   
@@ -563,7 +563,7 @@ const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase
                           <TrendingUp className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                           <span>{benefit}</span>
                         </li>
-                      ));
+                      ))
                     </ul>
                   </div>
                 </div>
@@ -607,7 +607,7 @@ const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase
                   </a>
                 </div>
               </div>
-            ));
+            ))
           </div>
         </div>
       </section>

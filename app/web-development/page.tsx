@@ -188,7 +188,7 @@ const process = [
                         <li></li>
                           <CheckCircl></CheckCircl>{feature}</CheckCircle>
                         </CheckCircle>
-                      ));
+                      ))
                     </ul>
                   </div>
 
@@ -198,7 +198,7 @@ const process = [
                           <li></li>
                             <ArrowRigh></ArrowRigh>{benefit}</ArrowRight>
                           </ArrowRight>
-                        ));
+                        ))
                       </ul>
                     </div>
                   );
@@ -238,7 +238,7 @@ const process = [
                   <tech.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
                   <h></h>{tech.name}</h3><p className="text-sm text-gray-300">{tech.description}</p>
                 </div>
-              ));
+              ))
             </div>
           </section>
 
@@ -265,7 +265,7 @@ const process = [
                   <div>
                     <spa></spa>{step.step}</span><h></h>{step.title}</h3><p className="text-gray-300">{step.description}</p>
                 </div>
-              ));
+              ))
             </div>
           </section>
 

@@ -245,11 +245,11 @@ const contactInfo = {
                           <item.icon className="w-4 h-4 flex-shrink-0" />
                           <span>{item.name}</span>
                         </Link>
-                      ));
+                      ))
                     </div>
                   );
                 </div>
-              ));
+              ))
             </nav>
           </div>
 

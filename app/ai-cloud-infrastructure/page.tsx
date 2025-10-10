@@ -142,7 +142,7 @@ const benefits = [
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                           {benefit}
                         </li>
-                      ));
+                      ))
                     </ul>);
 =======
                   <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
@@ -157,7 +157,7 @@ const benefits = [
                   </ul>
 >>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
                 </div>
-              ));
+              ))
             </div>
           </div>
         </section>
@@ -267,11 +267,11 @@ const benefits = [
                       <span className="text-gray-300">{benefit}</span>
 >>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
                     </li>
-                  ));
+                  ))
                 </ul>
               </div>
 <<<<<<< HEAD
-            ));
+            ))
           </div>
         </div>
       </section>
@@ -341,7 +341,7 @@ const benefits = [
                 </div>
                 <h3 className="text-lg font-semibold text-white">{benefit}</h3>
               </div>
-            ));
+            ))
 =======
 
         {/* CTA Section */}

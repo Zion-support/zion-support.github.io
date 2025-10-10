@@ -145,7 +145,7 @@ const stats = [
                 <div className="text-3xl font-bold text-white mb-2"></di>{stat.number}</div>
                 <div className="text-gray-300 text-sm"></di>{stat.label}</div>
               </div>
-            ));
+            ))
           </div>
         </div>
       </section>
@@ -173,10 +173,10 @@ const stats = [
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                       {benefit}
                     </li>
-                  ));
+                  ))
                 </ul>
               </div>
-            ));
+            ))
           </div>
         </div>
       </section>
@@ -190,10 +190,10 @@ const stats = [
           </div>
           
                     </li>
-                  ));
+                  ))
                 </ul>
               </div>
-            ));
+            ))
           </div>
         </div>
       </section>

@@ -200,7 +200,7 @@ const overallStatus = services.every(service => service.status === 'operational'
                   </div>
                 </div>
               </div>
-            ));
+            ))
           </div>
         </div>
       </section>
@@ -241,7 +241,7 @@ const overallStatus = services.every(service => service.status === 'operational'
                   <span className="text-white text-sm">{incident.affectedServices.join(', ')}</span>
                 </div>
               </div>
-            ));
+            ))
           </div>
         </div>
       </section>

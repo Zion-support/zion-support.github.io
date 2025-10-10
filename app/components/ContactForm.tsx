@@ -166,7 +166,7 @@ const services = [
                 <option key={service} value={service}>
                   {service}
                 </option>
-              ));
+              ))
             </select>
           </div>
 

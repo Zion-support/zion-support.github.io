@@ -128,10 +128,10 @@ const rights = [
                     <ul className="text-sm text-gray-600 space-y-1"></ul>
                       {type.examples.map((example, idx) => (
                         <li key={idx}></l>• {example}</li>
-                      ));
+                      ))
                     </ul>
                   </div>
-                ));
+                ))
               </div>
             </section>
 
@@ -149,7 +149,7 @@ const rights = [
                       <p className="text-gray-700">{purpose.description}</p>
                     </div>
                   </div>
-                ));
+                ))
               </div>
             </section>
 
@@ -187,7 +187,7 @@ const rights = [
                     </div>
                     <p className="text-gray-700">{right.description}</p>
                   </div>
-                ));
+                ))
               </div>
             </section>
 

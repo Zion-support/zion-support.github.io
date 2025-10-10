@@ -863,7 +863,7 @@ const currentServices = filteredServices.slice(startIndex, endIndex);
                         <option key={category} value={category} className="bg-gray-800">
                           {category}
                         </option>
-                      ));
+                      ))
                     </select>
                   </div>
                 </div>
@@ -882,7 +882,7 @@ const currentServices = filteredServices.slice(startIndex, endIndex);
                   >
                     {category}
                   </button>
-                ));
+                ))
               </div>
             </div>
           </div>
@@ -931,7 +931,7 @@ const currentServices = filteredServices.slice(startIndex, endIndex);
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                           {feature}
                         </li>
-                      ));
+                      ))
                       {service.features.length > 4 && (
                         <li className="text-gray-400 text-sm">
                           +{service.features.length - 4} more features
@@ -954,7 +954,7 @@ const currentServices = filteredServices.slice(startIndex, endIndex);
                     </button>
                   </div>
                 </div>
-              ));
+              ))
             </div>
             
             {/* Pagination */}
@@ -981,7 +981,7 @@ const currentServices = filteredServices.slice(startIndex, endIndex);
                     >
                       {page}
                     </button>
-                  ));
+                  ))
                 </div>
                 
                 <button

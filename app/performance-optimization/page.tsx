@@ -31,7 +31,7 @@ const benefits = [
       </section>
 
               </div>
-            ));
+            ))
           </div>
         </div>
       </section>
@@ -39,7 +39,7 @@ const benefits = [
           </div>
 
               </div>
-            ));
+            ))
           </div>
         </div>
       </section>

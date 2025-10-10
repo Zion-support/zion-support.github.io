@@ -4,8 +4,9 @@ import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
-;
-const AiAnalyticsPage: React.FC = () => {const features = [
+
+const AiAnalyticsPage: React.FC = () => {
+  const features = [
     {
       icon: Brain,
       title: 'AI-Powered Intelligence',
@@ -14,11 +15,9 @@ const AiAnalyticsPage: React.FC = () => {const features = [
     },
     {
       icon: BarChart,
-<<<<<<< HEAD
-=======
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+      title: 'Real-Time Dashboards',
+      description: 'Monitor your business metrics in real-time with customizable, interactive dashboards.',
+      benefits: ['Live data updates', 'Custom widgets', 'Interactive charts', 'Mobile responsive']
     },
     {
       icon: Target,
@@ -34,10 +33,9 @@ const AiAnalyticsPage: React.FC = () => {const features = [
     },
     {
       icon: Globe,
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-      title: 'Real-Time Dashboards',
-      description: 'Monitor your business metrics in real-time with customizable, interactive dashboards.',
-      benefits: ['Live data updates', 'Custom widgets', 'Interactive charts', 'Mobile responsive']
+      title: 'Global Analytics',
+      description: 'Comprehensive analytics across all your business channels and markets.',
+      benefits: ['Multi-channel tracking', 'Global insights', 'Market comparison', 'Regional analysis']
     },
     {
       icon: Shield,
@@ -46,25 +44,6 @@ const AiAnalyticsPage: React.FC = () => {const features = [
       benefits: ['End-to-end encryption', 'Access controls', 'Audit trails', 'Compliance support']
     }
   ];
-<<<<<<< HEAD
-;
-const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology'
-  ];
-
-    <>
-      <Helmet>
-        <title>Ai Analytics - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI-powered ai analytics solution for modern businesses." />
-        <meta name="keywords" content="AI ai analytics, artificial intelligence, ai analytics, AI solutions, intelligent automation" />;
-const useCases = [
-        <meta name="keywords" content="AI ai analytics, artificial intelligence, ai analytics, AI solutions, intelligent automation" />  const useCases = [;
-const useCases = [
-=======
 
   const benefits = [
     'Transform raw data into actionable insights',
@@ -76,7 +55,6 @@ const useCases = [
   ];
 
   const useCases = [
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     {
       title: 'Business Intelligence',
       description: 'Transform raw data into actionable business insights',
@@ -100,82 +78,65 @@ const useCases = [
   ];
 
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>AI Analytics - Zion Tech Group</title>
-        <meta name="description" content="Transform your data into actionable insights with our AI-powered analytics platform. Get real-time dashboards, predictive analytics, and automated reporting." />
-        <meta name="keywords" content="AI analytics, artificial intelligence, data analytics, business intelligence, predictive analytics, data visualization" />
+        <meta name="description" content="Advanced AI-powered analytics solution for modern businesses." />
+        <meta name="keywords" content="AI analytics, artificial intelligence, data analytics, AI solutions, intelligent automation" />
       </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <Navigation />
-        
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-                AI-Powered Analytics
+            <div className="text-center">
+              <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+                AI-Powered
+                <span className="text-blue-600"> Analytics</span>
               </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
                 Transform your data into actionable insights with our advanced AI analytics platform. 
-                Get real-time dashboards, predictive analytics, and automated reporting.
+                Make smarter decisions, optimize performance, and drive growth with intelligent automation.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="/contact"
-                  className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2"
-                >
-                  <span>Get Started</span>
-                  <ArrowRight className="w-5 h-5" />
-                </a>
-                <a
-                  href="#features"
-                  className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300 flex items-center justify-center space-x-2"
-                >
-                  <span>Learn More</span>
-                  <ArrowRight className="w-5 h-5" />
-                </a>
+                <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                  Get Started
+                </button>
+                <button className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
+                  Learn More
+                </button>
               </div>
             </div>
           </div>
         </section>
 
         {/* Features Section */}
-        <section id="features" className="py-20">
-          <div className="container mx-auto px-4">
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Powerful AI Analytics Features</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our comprehensive analytics platform provides everything you need to make data-driven decisions.
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Powerful Analytics Features
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Our AI analytics platform provides everything you need to unlock the full potential of your data.
               </p>
             </div>
+            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="bg-slate-800/50 rounded-xl p-8 backdrop-blur-sm border border-white/10 hover:border-cyan-500/50 transition-all duration-300">
-                  <div className="bg-cyan-500/20 rounded-full w-12 h-12 flex items-center justify-center mb-6">
-                    <feature.icon className="w-6 h-6 text-cyan-400" />
+                <div key={index} className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+                  <div className="flex items-center mb-4">
+                    <feature.icon className="h-8 w-8 text-blue-600 mr-3" />
+                    <h3 className="text-xl font-semibold text-gray-900">{feature.title}</h3>
                   </div>
-<<<<<<< HEAD
-                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  {feature.benefits && (
-                    <ul className="space-y-2">
-                      {feature.benefits.map((benefit, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-gray-400">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                          {benefit}
-                        </li>
-                      ));
-                    </ul>);
-=======
-                  <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
-                  <p className="text-gray-300 mb-6">{feature.description}</p>
+                  <p className="text-gray-600 mb-4">{feature.description}</p>
                   <ul className="space-y-2">
                     {feature.benefits.map((benefit, benefitIndex) => (
-                      <li key={benefitIndex} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                        <span className="text-sm">{benefit}</span>
+                      <li key={benefitIndex} className="flex items-center text-sm text-gray-600">
+                        <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+                        {benefit}
                       </li>
                     ))}
                   </ul>
@@ -186,119 +147,78 @@ const useCases = [
         </section>
 
         {/* Use Cases Section */}
-        <section className="py-20 bg-slate-800/50">
-          <div className="container mx-auto px-4">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+          <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Use Cases</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Discover how our AI analytics platform can transform your business across different industries.
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Real-World Applications
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                See how our AI analytics platform can transform your business across different industries and use cases.
               </p>
             </div>
+            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {useCases.map((useCase, index) => (
-                <div key={index} className="bg-slate-800/50 rounded-xl p-6 backdrop-blur-sm border border-white/10 text-center">
-                  <div className="bg-purple-500/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                    <useCase.icon className="w-8 h-8 text-purple-400" />
+                <div key={index} className="text-center">
+                  <div className="bg-blue-100 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                    <useCase.icon className="h-8 w-8 text-blue-600" />
                   </div>
-                  <h3 className="text-lg font-semibold text-white mb-3">{useCase.title}</h3>
-                  <p className="text-gray-300 text-sm">{useCase.description}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">{useCase.title}</h3>
+                  <p className="text-gray-600">{useCase.description}</p>
                 </div>
-              ));
+              ))}
             </div>
           </div>
         </section>
 
         {/* Benefits Section */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <h2 className="text-4xl font-bold text-white mb-6">Why Choose Our AI Analytics?</h2>
-                <p className="text-lg text-gray-300 mb-8">
-                  Our AI-powered analytics platform is designed to help you make smarter decisions, 
-                  optimize processes, and drive growth through intelligent data analysis.
-                </p>
-                <ul className="space-y-4">
-                  {benefits.map((benefit, index) => (
-                    <li key={index} className="flex items-start">
-                      <CheckCircle className="w-6 h-6 text-green-400 mr-4 flex-shrink-0 mt-1" />
-                      <span className="text-gray-300">{benefit}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="relative">
-                <div className="bg-gradient-to-br from-cyan-500/20 to-purple-600/20 rounded-2xl p-8 backdrop-blur-sm border border-white/10">
-                  <div className="text-center">
-                    <div className="bg-cyan-500/20 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
-                      <BarChart className="w-10 h-10 text-cyan-400" />
-                    </div>
-                    <h3 className="text-2xl font-bold text-white mb-4">Real-Time Insights</h3>
-                    <p className="text-gray-300 mb-6">
-                      Get instant access to your most important metrics and KPIs with our real-time analytics dashboard.
-                    </p>
-                    <div className="grid grid-cols-2 gap-4 text-center">
-                      <div>
-                        <div className="text-3xl font-bold text-cyan-400">99.9%</div>
-                        <div className="text-gray-300 text-sm">Uptime</div>
-                      </div>
-                      <div>
-                        <div className="text-3xl font-bold text-purple-400">50ms</div>
-                        <div className="text-gray-300 text-sm">Response Time</div>
-                      </div>
-                    </div>
-                  </div>
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Why Choose Our AI Analytics?
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Experience the power of AI-driven analytics and transform your business operations.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="flex items-start">
+                  <CheckCircle className="h-6 w-6 text-green-500 mr-3 mt-1 flex-shrink-0" />
+                  <p className="text-gray-700">{benefit}</p>
                 </div>
-<<<<<<< HEAD
-              ));
-=======
-              </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
+              ))}
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-slate-800/50">
-          <div className="container mx-auto px-4 text-center">
-            <div className="bg-gradient-to-r from-cyan-500/10 to-purple-600/10 rounded-2xl p-12 backdrop-blur-sm border border-white/10">
-              <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Data?</h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Start making smarter decisions with our AI-powered analytics platform. 
-                Get started today and see the difference intelligent data analysis can make.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="/contact"
-                  className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2"
-                >
-                  <span>Get Started Now</span>
-                  <ArrowRight className="w-5 h-5" />
-                </a>
-                <a
-                  href="/pricing"
-                  className="border border-white/20 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300 flex items-center justify-center space-x-2"
-                >
-                  <span>View Pricing</span>
-                  <ArrowRight className="w-5 h-5" />
-                </a>
-              </div>
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-blue-600">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Data?
+            </h2>
+            <p className="text-xl text-blue-100 mb-8">
+              Start your journey with AI-powered analytics today and unlock the full potential of your business data.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                Get Started Now
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                Schedule Demo
+              </button>
             </div>
           </div>
         </section>
-
-        <Footer />
-      </div>
+      </main>
+      
+      <Footer />
     </>
   );
-<<<<<<< HEAD
-}
-export default AiAnalyticsPage;
-    </React.Fragment>)
-export default AiAnalyticsPage;
-=======
 };
 
 export default AiAnalyticsPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1

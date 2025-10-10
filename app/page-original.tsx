@@ -38,7 +38,7 @@ const ServiceCardSkeleton: React.FC = memo(() => (
     <div>
     <div>
   </div>
-));
+))
 ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
 const HomePage: React.FC = memo(() => {;
 const [isLoaded, setIsLoaded] = useState(false);

@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const { glob } = require('glob');
 
-async function fixRemainingErrors() {
+async function fixSyntaxErrors() {
   try {
     const files = await glob('app/**/*.tsx', { cwd: __dirname });
     
@@ -12,19 +12,19 @@ async function fixRemainingErrors() {
         let content = fs.readFileSync(filePath, 'utf8');
         let modified = false;
 
-        // Fix missing closing braces in map functions with benefits
+        // Fix common patterns
         const patterns = [
-          // Fix missing closing brace for conditional rendering
+          // Fix extra semicolons and parentheses in map functions
           {
-            pattern: /(\s+)(<ul[^>]*>[\s\S]*?<\/ul>)\s*$/gm,
-            replacement: '$1$2\n$1  )}'
-          },
-          // Fix missing closing braces in map functions - properly escaped
-          {
-            pattern: /(\s+)(<\/div>\s*\)\);\s*$/gm,
-            replacement: '$1$2\n$1  )}'
+            pattern: /(\s+)\)\);\s*$/gm,
+            replacement: '$1))'
           },
           // Fix missing closing braces before export
+          {
+            pattern: /(\s+)\)\s*export\s+default/gm,
+            replacement: '$1);\n};\n\nexport default'
+          },
+          // Fix missing closing braces in React.Fragment
           {
             pattern: /(\s+)\)\s*export\s+default/gm,
             replacement: '$1);\n};\n\nexport default'
@@ -48,10 +48,10 @@ async function fixRemainingErrors() {
       }
     });
 
-    console.log('Remaining error fixing completed');
+    console.log('Syntax fixing completed');
   } catch (error) {
     console.error('Error:', error.message);
   }
 }
 
-fixRemainingErrors();
+fixSyntaxErrors();

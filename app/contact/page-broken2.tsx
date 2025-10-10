@@ -272,7 +272,7 @@ const contactInfo = [
                         <option key={service} value={service}></option>
                           {service}
                         </option>
-                      ));
+                      ))
                     </select>
                   </div>
                 </div>

@@ -126,7 +126,7 @@ const PagePage: React.FC = () => {
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                           {benefit}
                         </li>
-                      ));
+                      ))
                     </ul>);
 =======
                   <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
@@ -141,7 +141,7 @@ const PagePage: React.FC = () => {
                   </ul>
 >>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
                 </div>
-              ));
+              ))
             </div>
           </div>
         </section>

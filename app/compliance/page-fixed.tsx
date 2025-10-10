@@ -90,10 +90,10 @@ const PageFixedPage: React.FC = () => {const features = [
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                           {benefit}
                         </li>
-                      ));
+                      ))
                     </ul>);
                 </div>
-              ));
+              ))
             </div>
           </div>
         </section>

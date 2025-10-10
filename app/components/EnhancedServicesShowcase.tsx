@@ -70,7 +70,7 @@ const EnhancedServicesShowcase: React.FC = () => {const services = [
                     <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                     {feature}
                   </li>
-                ));
+                ))
               </ul>
               
               <a
@@ -80,7 +80,7 @@ const EnhancedServicesShowcase: React.FC = () => {const services = [
                 Learn More <ArrowRight className="w-4 h-4 ml-2" />
               </a>
             </div>
-          ));
+          ))
         </div>
 
         <div className="text-center mt-12"></div>

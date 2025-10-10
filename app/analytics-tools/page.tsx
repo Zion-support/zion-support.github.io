@@ -111,7 +111,7 @@ const benefits = [
                 </a>
               </div>
 <<<<<<< HEAD
-            ));
+            ))
 =======
             </div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
@@ -168,7 +168,7 @@ const benefits = [
                 </ul>
               </div>
 <<<<<<< HEAD
-            ));
+            ))
 =======
               <div className="relative">
                 <div className="bg-gradient-to-br from-cyan-500/20 to-purple-600/20 rounded-2xl p-8 backdrop-blur-sm border border-white/10">

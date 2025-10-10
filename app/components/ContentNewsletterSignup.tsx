@@ -143,7 +143,7 @@ const handleSubmit = async (e: React.FormEvent) => {
                   </div>
                   <span className="text-blue-100"></spa>{feature.text}</span>
                 </div>
-              ));
+              ))
             </div>
           </div>
 

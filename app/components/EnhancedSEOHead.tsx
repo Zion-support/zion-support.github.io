@@ -235,7 +235,7 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
       {tags.map((tag, index) => (
         <meta key={index} property="article:tag" content={tag} />
 <<<<<<< HEAD
-      ));
+      ))
 =======
       ))}
       
