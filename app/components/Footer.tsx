@@ -234,48 +234,93 @@ const Footer: React.FC = memo(() => {
           <div>
             <h3 className="text-lg font-semibold mb-4 text-cyan-400">Company</h3>
             <ul className="space-y-2">
-              {companyLinks.map((link, index) => (
-                <li key={index}>
-                  <Link 
-                    to={link.url} 
-                    className="text-gray-300 hover:text-cyan-400 text-sm transition-colors"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
+              <li>
+                <Link to="/about" className="text-gray-300 hover:text-cyan-400 text-sm transition-colors">
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link to="/careers" className="text-gray-300 hover:text-cyan-400 text-sm transition-colors">
+                  Careers
+                </Link>
+              </li>
+              <li>
+                <Link to="/case-studies" className="text-gray-300 hover:text-cyan-400 text-sm transition-colors">
+                  Case Studies
+                </Link>
+              </li>
+              <li>
+                <Link to="/blog" className="text-gray-300 hover:text-cyan-400 text-sm transition-colors">
+                  Blog
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" className="text-gray-300 hover:text-cyan-400 text-sm transition-colors">
+                  Contact
+                </Link>
+              </li>
             </ul>
           </div>
 
           <div>
             <h3 className="text-lg font-semibold mb-4 text-cyan-400">Resources</h3>
             <ul className="space-y-2">
-              {resourcesLinks.map((link, index) => (
-                <li key={index}>
-                  <Link 
-                    to={link.url} 
-                    className="text-gray-300 hover:text-cyan-400 text-sm transition-colors"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
+              <li>
+                <Link to="/tutorials" className="text-gray-300 hover:text-cyan-400 text-sm transition-colors">
+                  Tutorials
+                </Link>
+              </li>
+              <li>
+                <Link to="/documentation" className="text-gray-300 hover:text-cyan-400 text-sm transition-colors">
+                  Documentation
+                </Link>
+              </li>
+              <li>
+                <Link to="/api-docs" className="text-gray-300 hover:text-cyan-400 text-sm transition-colors">
+                  API Documentation
+                </Link>
+              </li>
+              <li>
+                <Link to="/support" className="text-gray-300 hover:text-cyan-400 text-sm transition-colors">
+                  Support Center
+                </Link>
+              </li>
+              <li>
+                <Link to="/status" className="text-gray-300 hover:text-cyan-400 text-sm transition-colors">
+                  System Status
+                </Link>
+              </li>
             </ul>
           </div>
 
           <div>
             <h3 className="text-lg font-semibold mb-4 text-cyan-400">Enterprise</h3>
             <ul className="space-y-2">
-              {enterpriseLinks.map((link, index) => (
-                <li key={index}>
-                  <Link 
-                    to={link.url} 
-                    className="text-gray-300 hover:text-cyan-400 text-sm transition-colors"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
+              <li>
+                <Link to="/enterprise-solutions" className="text-gray-300 hover:text-cyan-400 text-sm transition-colors">
+                  Enterprise Solutions
+                </Link>
+              </li>
+              <li>
+                <Link to="/custom-development" className="text-gray-300 hover:text-cyan-400 text-sm transition-colors">
+                  Custom Development
+                </Link>
+              </li>
+              <li>
+                <Link to="/consulting" className="text-gray-300 hover:text-cyan-400 text-sm transition-colors">
+                  Consulting Services
+                </Link>
+              </li>
+              <li>
+                <Link to="/partnerships" className="text-gray-300 hover:text-cyan-400 text-sm transition-colors">
+                  Partnerships
+                </Link>
+              </li>
+              <li>
+                <Link to="/security" className="text-gray-300 hover:text-cyan-400 text-sm transition-colors">
+                  Security & Compliance
+                </Link>
+              </li>
             </ul>
           </div>
 
