@@ -217,6 +217,15 @@ const Navigation: React.FC = () => {
     { name: 'Contact', path: '/contact', icon: Phone }
   ];
 
+  const quickLinks = [
+    { name: 'AI Project Manager', path: '/ai-project-manager', icon: BarChart },
+    { name: 'AI Social Media Manager', path: '/ai-social-media-manager', icon: Users },
+    { name: 'AI Email Marketing', path: '/ai-email-marketing', icon: Mail },
+    { name: 'AI Customer Support Bot', path: '/ai-customer-support-bot', icon: Bot },
+    { name: 'AI Financial Advisor', path: '/ai-financial-advisor', icon: DollarSign },
+    { name: 'AI Workflow Automation', path: '/ai-workflow-automation', icon: Settings }
+  ];
+
   return (
     <>
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -291,6 +300,22 @@ const Navigation: React.FC = () => {
                       ))}
                     </div>
                     <div className="border-t border-cyan-400/20 mt-6 pt-4 px-6">
+                      <div className="mb-4">
+                        <h4 className="text-white font-semibold mb-3 text-sm">Quick Links</h4>
+                        <div className="grid grid-cols-2 gap-2">
+                          {quickLinks.map((link, index) => (
+                            <Link
+                              key={index}
+                              to={link.path}
+                              className="flex items-center space-x-2 px-3 py-2 text-sm text-gray-300 hover:bg-cyan-400/20 hover:text-cyan-400 rounded-lg transition-colors"
+                              onClick={closeAllMenus}
+                            >
+                              <link.icon className="w-4 h-4" />
+                              <span>{link.name}</span>
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
                       <Link
                         to="/services"
                         className="block w-full text-center bg-gradient-to-r from-cyan-600 to-purple-600 text-white py-2 px-4 rounded-lg font-medium hover:from-cyan-700 hover:to-purple-700 transition-all"
@@ -435,6 +460,24 @@ const Navigation: React.FC = () => {
                       ))}
                     </div>
                   )}
+                </div>
+                
+                {/* Mobile Quick Links */}
+                <div className="mt-6">
+                  <h4 className="text-cyan-400 font-semibold mb-3 text-sm">Quick Links</h4>
+                  <div className="grid grid-cols-1 gap-2">
+                    {quickLinks.map((link, index) => (
+                      <Link
+                        key={index}
+                        to={link.path}
+                        className="flex items-center space-x-2 px-3 py-2 text-sm text-gray-300 hover:bg-cyan-400/20 hover:text-cyan-400 rounded-lg transition-colors"
+                        onClick={closeAllMenus}
+                      >
+                        <link.icon className="w-4 h-4" />
+                        <span>{link.name}</span>
+                      </Link>
+                    ))}
+                  </div>
                 </div>
                 
                 {/* Mobile CTA */}
