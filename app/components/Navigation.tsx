@@ -78,14 +78,18 @@ const Navigation: React.FC = () => {
   ];
 
   const microSaasServices = [
-    { name: 'Project Management', href: '/micro-saas-project-management', icon: CheckSquare, description: 'Streamlined project tracking' },
-    { name: 'Customer Support', href: '/micro-saas-customer-support', icon: MessageCircle, description: 'Efficient support systems' },
-    { name: 'Analytics Dashboard', href: '/micro-saas-analytics', icon: BarChart, description: 'Business intelligence' },
-    { name: 'Content Management', href: '/micro-saas-cms', icon: FileText, description: 'Content organization' },
-    { name: 'Team Collaboration', href: '/micro-saas-collaboration', icon: Users, description: 'Team productivity tools' },
-    { name: 'Financial Tracking', href: '/micro-saas-finance', icon: DollarSign, description: 'Financial management' },
-    { name: 'Inventory Management', href: '/micro-saas-inventory', icon: Box, description: 'Stock and asset tracking' },
-    { name: 'Performance Monitoring', href: '/micro-saas-monitoring', icon: Monitor, description: 'System performance tracking' }
+    { name: 'Analytics Pro', href: '/micro-saas', icon: BarChart, description: 'Real-time business intelligence' },
+    { name: 'Chat AI', href: '/micro-saas', icon: MessageCircle, description: 'AI customer support' },
+    { name: 'Security Shield', href: '/micro-saas', icon: Shield, description: 'Cybersecurity monitoring' },
+    { name: 'Cloud Vault', href: '/micro-saas', icon: Cloud, description: 'Intelligent backup' },
+    { name: 'Performance AI', href: '/micro-saas', icon: Monitor, description: 'App performance monitoring' },
+    { name: 'AI Workflow', href: '/micro-saas', icon: Zap, description: 'Process automation' },
+    { name: 'Email Marketing AI', href: '/micro-saas', icon: Mail, description: 'AI email campaigns' },
+    { name: 'Finance AI', href: '/micro-saas', icon: DollarSign, description: 'Financial management' },
+    { name: 'Document AI', href: '/micro-saas', icon: FileText, description: 'Document processing' },
+    { name: 'Lead Gen Pro', href: '/micro-saas', icon: Target, description: 'AI lead generation' },
+    { name: 'App Builder', href: '/micro-saas', icon: Smartphone, description: 'No-code app development' },
+    { name: 'SEO Optimizer', href: '/micro-saas', icon: Search, description: 'AI SEO analysis' }
   ];
 
   return (
@@ -330,7 +334,7 @@ const Navigation: React.FC = () => {
               <div className="pt-4 border-t border-gray-600">
                 <div className="flex items-center space-x-2 text-gray-400 mb-2">
                   <Phone className="w-4 h-4" />
-                  <span className="text-sm">+1 (302) 464-0950</span>
+                  <span className="text-sm">+1 302 464 0950</span>
                 </div>
                 <div className="flex items-center space-x-2 text-gray-400 mb-2">
                   <Mail className="w-4 h-4" />

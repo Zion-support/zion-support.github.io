@@ -163,10 +163,154 @@ const MicroSaasPage: React.FC = () => {
       users: 'Up to 20 users',
       popular: false,
       category: 'Finance'
+    },
+    {
+      id: '9',
+      icon: '📝',
+      title: 'Zion Document AI',
+      description: 'Intelligent document processing and management with OCR and AI-powered insights',
+      features: [
+        'Advanced OCR and text extraction',
+        'AI-powered document classification',
+        'Automated data extraction',
+        'Document workflow automation',
+        'Version control and collaboration',
+        'Integration with 50+ file formats'
+      ],
+      price: '$119/month',
+      users: 'Up to 35 users',
+      popular: false,
+      category: 'Productivity'
+    },
+    {
+      id: '10',
+      icon: '🎯',
+      title: 'Zion Lead Gen Pro',
+      description: 'AI-powered lead generation and qualification platform with automated outreach',
+      features: [
+        'AI-powered lead scoring',
+        'Automated prospect research',
+        'Multi-channel outreach campaigns',
+        'CRM integration',
+        'Lead nurturing sequences',
+        'Performance analytics and ROI tracking'
+      ],
+      price: '$159/month',
+      users: 'Up to 45 users',
+      popular: true,
+      category: 'Sales'
+    },
+    {
+      id: '11',
+      icon: '📱',
+      title: 'Zion App Builder',
+      description: 'No-code mobile app development platform with AI-powered design suggestions',
+      features: [
+        'Drag-and-drop app builder',
+        'AI-powered design recommendations',
+        'Cross-platform deployment',
+        'Real-time preview and testing',
+        'App store publishing assistance',
+        'Analytics and user behavior tracking'
+      ],
+      price: '$199/month',
+      users: 'Up to 10 users',
+      popular: false,
+      category: 'Development'
+    },
+    {
+      id: '12',
+      icon: '🔍',
+      title: 'Zion SEO Optimizer',
+      description: 'AI-powered SEO analysis and optimization platform with automated recommendations',
+      features: [
+        'AI-powered keyword research',
+        'On-page SEO analysis',
+        'Competitor analysis',
+        'Content optimization suggestions',
+        'Technical SEO auditing',
+        'Ranking tracking and reporting'
+      ],
+      price: '$89/month',
+      users: 'Up to 15 websites',
+      popular: false,
+      category: 'Marketing'
+    },
+    {
+      id: '13',
+      icon: '📊',
+      title: 'Zion Social Media AI',
+      description: 'AI-powered social media management with automated posting and engagement',
+      features: [
+        'AI-powered content creation',
+        'Automated posting across platforms',
+        'Sentiment analysis and monitoring',
+        'Hashtag optimization',
+        'Engagement analytics',
+        'Influencer identification and outreach'
+      ],
+      price: '$129/month',
+      users: 'Up to 20 social accounts',
+      popular: false,
+      category: 'Marketing'
+    },
+    {
+      id: '14',
+      icon: '🏥',
+      title: 'Zion Health Monitor',
+      description: 'AI-powered health and wellness tracking with personalized insights and recommendations',
+      features: [
+        'Health data integration',
+        'AI-powered health insights',
+        'Personalized wellness recommendations',
+        'Symptom tracking and analysis',
+        'Medication reminders',
+        'Healthcare provider integration'
+      ],
+      price: '$79/month',
+      users: 'Up to 50 users',
+      popular: false,
+      category: 'Health'
+    },
+    {
+      id: '15',
+      icon: '🎓',
+      title: 'Zion Learning AI',
+      description: 'AI-powered learning management system with personalized education paths',
+      features: [
+        'AI-powered course recommendations',
+        'Personalized learning paths',
+        'Progress tracking and analytics',
+        'Automated assessments',
+        'Content creation tools',
+        'Multi-language support'
+      ],
+      price: '$149/month',
+      users: 'Up to 100 students',
+      popular: false,
+      category: 'Education'
+    },
+    {
+      id: '16',
+      icon: '🏠',
+      title: 'Zion Property AI',
+      description: 'AI-powered real estate management and investment analysis platform',
+      features: [
+        'Property valuation analysis',
+        'Market trend predictions',
+        'Investment opportunity scoring',
+        'Tenant screening and management',
+        'Maintenance scheduling',
+        'Financial performance tracking'
+      ],
+      price: '$199/month',
+      users: 'Up to 25 properties',
+      popular: false,
+      category: 'Real Estate'
     }
   ];
 
-  const categories = ['All', 'Analytics', 'Communication', 'Security', 'Storage', 'Monitoring', 'AI', 'Marketing', 'Finance'];
+  const categories = ['All', 'Analytics', 'Communication', 'Security', 'Storage', 'Monitoring', 'AI', 'Marketing', 'Finance', 'Productivity', 'Sales', 'Development', 'Health', 'Education', 'Real Estate'];
 
   const filteredProducts = selectedCategory === 'All' 
     ? products 

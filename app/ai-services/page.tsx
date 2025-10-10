@@ -102,10 +102,82 @@ const AIServicesPage: React.FC = () => {
       category: 'Mobile',
       price: 'Starting at $5,999/project',
       features: ['Mobile app AI', 'Offline processing', 'Real-time inference', 'Cross-platform support', 'Performance optimization', 'User personalization']
+    },
+    {
+      id: 9,
+      title: 'AI Drug Discovery',
+      description: 'Accelerated pharmaceutical research using AI for drug design and discovery',
+      icon: Heart,
+      category: 'Healthcare',
+      price: 'Starting at $15,000/month',
+      features: ['Molecular modeling', 'Drug-target interaction prediction', 'Clinical trial optimization', 'Side effect prediction', 'Patent analysis', 'Regulatory compliance']
+    },
+    {
+      id: 10,
+      title: 'AI Financial Trading',
+      description: 'Algorithmic trading systems powered by AI for optimal investment strategies',
+      icon: TrendingUp,
+      category: 'Finance',
+      price: 'Starting at $8,999/month',
+      features: ['Market analysis', 'Risk assessment', 'Portfolio optimization', 'Real-time trading', 'Sentiment analysis', 'Compliance monitoring']
+    },
+    {
+      id: 11,
+      title: 'AI Climate Solutions',
+      description: 'Environmental monitoring and climate change prediction using AI',
+      icon: Globe,
+      category: 'Environment',
+      price: 'Starting at $6,999/month',
+      features: ['Climate modeling', 'Carbon footprint analysis', 'Renewable energy optimization', 'Environmental monitoring', 'Sustainability reporting', 'Policy recommendations']
+    },
+    {
+      id: 12,
+      title: 'AI Supply Chain Optimization',
+      description: 'Intelligent supply chain management with predictive analytics and automation',
+      icon: Settings,
+      category: 'Logistics',
+      price: 'Starting at $5,499/month',
+      features: ['Demand forecasting', 'Inventory optimization', 'Route planning', 'Supplier risk assessment', 'Cost optimization', 'Real-time tracking']
+    },
+    {
+      id: 13,
+      title: 'AI Agricultural Intelligence',
+      description: 'Smart farming solutions with AI-powered crop monitoring and optimization',
+      icon: Target,
+      category: 'Agriculture',
+      price: 'Starting at $3,999/month',
+      features: ['Crop health monitoring', 'Yield prediction', 'Pest detection', 'Irrigation optimization', 'Weather analysis', 'Resource management']
+    },
+    {
+      id: 14,
+      title: 'AI Energy Grid Management',
+      description: 'Intelligent energy distribution and consumption optimization using AI',
+      icon: Zap,
+      category: 'Energy',
+      price: 'Starting at $7,999/month',
+      features: ['Load balancing', 'Energy forecasting', 'Grid optimization', 'Renewable integration', 'Fault detection', 'Cost optimization']
+    },
+    {
+      id: 15,
+      title: 'AI 3D Generation',
+      description: 'AI-powered 3D model creation and rendering for various industries',
+      icon: Box,
+      category: '3D Technology',
+      price: 'Starting at $4,999/month',
+      features: ['3D model generation', 'Texture synthesis', 'Animation creation', 'Virtual reality content', 'Architectural visualization', 'Product prototyping']
+    },
+    {
+      id: 16,
+      title: 'AI Blockchain Analytics',
+      description: 'Advanced blockchain data analysis and cryptocurrency intelligence',
+      icon: Database,
+      category: 'Blockchain',
+      price: 'Starting at $5,999/month',
+      features: ['Transaction analysis', 'Fraud detection', 'Market prediction', 'Smart contract auditing', 'Compliance monitoring', 'Risk assessment']
     }
   ];
 
-  const categories = ['all', 'Customer Service', 'Content', 'Analytics', 'Computer Vision', 'Voice AI', 'Automation', 'Security', 'Mobile'];
+  const categories = ['all', 'Customer Service', 'Content', 'Analytics', 'Computer Vision', 'Voice AI', 'Automation', 'Security', 'Mobile', 'Healthcare', 'Finance', 'Environment', 'Logistics', 'Agriculture', 'Energy', '3D Technology', 'Blockchain'];
 
   const filteredServices = aiServices.filter(service => {
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||

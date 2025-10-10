@@ -92,10 +92,82 @@ const ItServicesPage: React.FC = () => {
       category: 'Development',
       price: 'Starting at $6,000/project',
       features: ['Custom web applications', 'E-commerce solutions', 'API development', 'Responsive design', 'Performance optimization', 'SEO optimization']
+    },
+    {
+      id: 9,
+      title: 'API Development & Management',
+      description: 'RESTful and GraphQL API development with comprehensive management and monitoring',
+      icon: Code,
+      category: 'API',
+      price: 'Starting at $3,500/month',
+      features: ['API design & development', 'API gateway setup', 'Rate limiting & throttling', 'Documentation generation', 'Performance monitoring', 'Security implementation']
+    },
+    {
+      id: 10,
+      title: 'Data Engineering & Analytics',
+      description: 'Big data processing, ETL pipelines, and advanced analytics infrastructure',
+      icon: BarChart,
+      category: 'Data',
+      price: 'Starting at $4,500/month',
+      features: ['Data pipeline development', 'ETL/ELT processes', 'Data warehousing', 'Real-time analytics', 'Data quality management', 'Business intelligence']
+    },
+    {
+      id: 11,
+      title: 'Network Infrastructure',
+      description: 'Enterprise network design, implementation, and management solutions',
+      icon: Globe,
+      category: 'Network',
+      price: 'Starting at $2,800/month',
+      features: ['Network architecture design', 'VPN setup & management', 'Load balancing', 'Network security', 'Performance optimization', '24/7 monitoring']
+    },
+    {
+      id: 12,
+      title: 'IT Support & Helpdesk',
+      description: 'Comprehensive IT support services with multi-tier helpdesk solutions',
+      icon: Users,
+      category: 'Support',
+      price: 'Starting at $1,200/month',
+      features: ['Multi-tier support', 'Remote assistance', 'Hardware & software support', 'User training', 'Incident management', 'Knowledge base management']
+    },
+    {
+      id: 13,
+      title: 'System Integration',
+      description: 'Seamless integration of disparate systems and applications',
+      icon: Settings,
+      category: 'Integration',
+      price: 'Starting at $3,200/month',
+      features: ['Legacy system integration', 'API integration', 'Data synchronization', 'Workflow automation', 'Custom connectors', 'Testing & validation']
+    },
+    {
+      id: 14,
+      title: 'IT Compliance & Governance',
+      description: 'Compliance management and IT governance frameworks implementation',
+      icon: Shield,
+      category: 'Compliance',
+      price: 'Starting at $2,500/month',
+      features: ['Compliance auditing', 'Policy development', 'Risk assessment', 'Regulatory reporting', 'Training programs', 'Continuous monitoring']
+    },
+    {
+      id: 15,
+      title: 'Disaster Recovery & Backup',
+      description: 'Comprehensive backup and disaster recovery solutions for business continuity',
+      icon: Cloud,
+      category: 'Recovery',
+      price: 'Starting at $1,800/month',
+      features: ['Backup strategy design', 'Disaster recovery planning', 'Data replication', 'Recovery testing', 'Business continuity', '24/7 monitoring']
+    },
+    {
+      id: 16,
+      title: 'IT Training & Education',
+      description: 'Comprehensive IT training programs for teams and individuals',
+      icon: Users,
+      category: 'Training',
+      price: 'Starting at $800/month',
+      features: ['Custom training programs', 'Certification preparation', 'Hands-on workshops', 'Online learning platforms', 'Skill assessments', 'Progress tracking']
     }
   ];
 
-  const categories = ['all', 'Cloud', 'DevOps', 'Database', 'Security', 'Managed', 'Consulting', 'Development'];
+  const categories = ['all', 'Cloud', 'DevOps', 'Database', 'Security', 'Managed', 'Consulting', 'Development', 'API', 'Data', 'Network', 'Support', 'Integration', 'Compliance', 'Recovery', 'Training'];
 
   const filteredServices = itServices.filter(service => {
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
