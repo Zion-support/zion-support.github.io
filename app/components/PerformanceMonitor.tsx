@@ -10,45 +10,79 @@ const PerformanceMonitor: React.FC = memo(() => {
   });
 
   useEffect(() => {
-    // Simulate performance monitoring
-    const interval = setInterval(() => {
-      setMetrics({
-        loadTime: Math.random() * 100 + 50, // 50-150ms
-        memoryUsage: Math.random() * 20 + 10, // 10-30%
-        cpuUsage: Math.random() * 15 + 5, // 5-20%
-        networkLatency: Math.random() * 50 + 10 // 10-60ms
-      });
-    }, 2000);
-
-    return () => clearInterval(interval);
+    // Only run in production
+    if (process.env.NODE_ENV !== 'production') return;
+    const measurePerformance = () => {
+      // Measure First Contentful Paint
+      if ('PerformanceObserver' in window) {
+        const observer = new PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+            if (entry.entryType === 'paint' && entry.name === 'first-contentful-paint') {
+              setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
+            }
+          }
+        });
+        observer.observe({ entryTypes: ['paint'] });
+      }
+      // Measure Largest Contentful Paint
+      if ('PerformanceObserver' in window) {
+        const lcpObserver = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          const lastEntry = entries[entries.length - 1];
+          setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
+        });
+        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+      }
+      // Measure First Input Delay
+      if ('PerformanceObserver' in window) {
+        const fidObserver = new PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+            if (entry.entryType === 'first-input') {
+              setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }));
+            }
+          }
+        });
+        fidObserver.observe({ entryTypes: ['first-input'] });
+      }
+      // Measure Cumulative Layout Shift
+      if ('PerformanceObserver' in window) {
+        let clsValue = 0;
+        const clsObserver = new PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+            if (!(entry as any).hadRecentInput) {
+              clsValue += (entry as any).value;
+            }
+          }
+          setMetrics(prev => ({ ...prev, cls: clsValue }));
+        });
+        clsObserver.observe({ entryTypes: ['layout-shift'] });
+      }
+      // Measure Time to First Byte
+      const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      if (navigationEntry) {
+        setMetrics(prev => ({ 
+          ...prev, 
+          ttfb: navigationEntry.responseStart - navigationEntry.requestStart 
+        }));
+      }
+    };
+    // Measure after page load
+    if (document.readyState === 'complete') {
+      measurePerformance();
+    } else {
+      window.addEventListener('load', measurePerformance);
+    }
   }, []);
-
   return (
-    <div className="fixed bottom-4 right-4 z-50">
-      <div className="quantum-card p-4 space-y-3 min-w-[200px]">
-        <div className="flex items-center space-x-2 mb-3">
-          <Activity className="w-4 h-4 text-cyan-400" />
-          <span className="text-white font-semibold text-sm">Performance</span>
-        </div>
-        
-        <div className="space-y-2 text-xs">
-          <div className="flex justify-between items-center">
-            <span className="text-gray-400">Load Time</span>
-            <span className="text-cyan-400 font-mono">{metrics.loadTime.toFixed(0)}ms</span>
-          </div>
-          <div className="flex justify-between items-center">
-            <span className="text-gray-400">Memory</span>
-            <span className="text-green-400 font-mono">{metrics.memoryUsage.toFixed(1)}%</span>
-          </div>
-          <div className="flex justify-between items-center">
-            <span className="text-gray-400">CPU</span>
-            <span className="text-yellow-400 font-mono">{metrics.cpuUsage.toFixed(1)}%</span>
-          </div>
-          <div className="flex justify-between items-center">
-            <span className="text-gray-400">Latency</span>
-            <span className="text-purple-400 font-mono">{metrics.networkLatency.toFixed(0)}ms</span>
-          </div>
-        </div>
+    <div className="performance-monitor">
+      <h3>Performance Metrics</h3>
+      <div className="metrics">
+        <div>LCP: {metrics.lcp || 'N/A'}</div>
+        <div>FID: {metrics.fid || 'N/A'}</div>
+        <div>CLS: {metrics.cls || 'N/A'}</div>
+        <div>FCP: {metrics.fcp || 'N/A'}</div>
+        <div>TTFB: {metrics.ttfb || 'N/A'}</div>
+        <div>Memory: N/A</div>
       </div>
     </div>
   );
