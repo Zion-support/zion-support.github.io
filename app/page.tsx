@@ -1,6 +1,4 @@
 'use client';
-import React from 'react';
-'use client';
 import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
@@ -145,7 +143,8 @@ const HomePage: React.FC = () => {
             </p>
             <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
               Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services.
-              Transform your business with our cutting-edge technology and achieve unprecedented growth.
+              Transform your business with our cutting-edge technology and achieve unprecedented growth. We serve Fortune 500 companies,
+              startups, and enterprises worldwide with proven results and 24/7 expert support.
             </p>
             
             {/* Key Benefits */}
@@ -183,11 +182,27 @@ const HomePage: React.FC = () => {
                 📞 Call: (302) 464-0950
               </a>
               <a 
+                href="mailto:kleber@ziontechgroup.com"
+                className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+              >
+                📧 Email Us
+              </a>
+              <a 
                 href="/contact"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
               >
                 Get Free Consultation
               </a>
+            </div>
+            
+            {/* Contact Info */}
+            <div className="mt-8 text-center">
+              <p className="text-gray-300 text-sm mb-2">
+                📍 364 E Main St STE 1008, Middletown, DE 19709
+              </p>
+              <p className="text-gray-300 text-sm">
+                ⏰ Mon-Fri: 9AM-6PM EST | 24/7 Emergency Support Available
+              </p>
             </div>
           </div>
         </section>

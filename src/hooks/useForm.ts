@@ -147,22 +147,16 @@ const allTouched = Object.keys(values).reduce((acc, key) => {/* TODO: Fix JSX ex
       }, {} as Record;
           <keyof T, boolean>);
       setTouched(allTouched);
-const isValid = validateAllFields();
-      if (!isValid) {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
+      const isValid = validateAllFields();
+      if (!isValid) {
         return;
+      }
       setIsSubmitting(true);
-      try {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
+      try {
         await onSubmit(values);
-      } catch (error) {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-      } finally {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
+      } catch (error) {
+        console.error('Form submission error:', error);
+      } finally {
         setIsSubmitting(false);
 [values, validateAllFields]
   // Set field value programmatically;

@@ -32,6 +32,126 @@ const ServicesPage: React.FC = () => {
     },
     {
       icon: Brain,
+      title: 'AI Voice Assistant Platform',
+      description: 'Build custom voice assistants with natural language understanding, multi-language support, and enterprise integration.',
+      features: ['Voice Recognition', 'Natural Language Processing', 'Multi-language Support', 'Enterprise Integration', 'Custom Wake Words'],
+      price: 'Starting at $299/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Predictive Maintenance',
+      description: 'Prevent equipment failures with AI-powered predictive maintenance and real-time monitoring systems.',
+      features: ['Failure Prediction', 'Real-time Monitoring', 'Maintenance Scheduling', 'Cost Optimization', 'IoT Integration'],
+      price: 'Starting at $599/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Supply Chain Optimization',
+      description: 'Optimize supply chain operations with AI-driven demand forecasting, inventory management, and logistics planning.',
+      features: ['Demand Forecasting', 'Inventory Optimization', 'Route Planning', 'Supplier Management', 'Risk Assessment'],
+      price: 'Starting at $899/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Quality Control System',
+      description: 'Automated quality inspection using computer vision and machine learning for manufacturing and production lines.',
+      features: ['Computer Vision', 'Defect Detection', 'Real-time Inspection', 'Quality Reports', 'Integration APIs'],
+      price: 'Starting at $1,199/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Energy Management',
+      description: 'Optimize energy consumption with AI-powered smart grid management and renewable energy integration.',
+      features: ['Energy Optimization', 'Smart Grid Management', 'Renewable Integration', 'Cost Analysis', 'Carbon Footprint'],
+      price: 'Starting at $799/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Legal Document Analysis',
+      description: 'Automated legal document review, contract analysis, and compliance monitoring with AI technology.',
+      features: ['Document Review', 'Contract Analysis', 'Compliance Monitoring', 'Risk Assessment', 'Legal Research'],
+      price: 'Starting at $1,299/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Real Estate Analytics',
+      description: 'Property valuation, market analysis, and investment recommendations powered by artificial intelligence.',
+      features: ['Property Valuation', 'Market Analysis', 'Investment Insights', 'Trend Prediction', 'Portfolio Management'],
+      price: 'Starting at $499/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Human Resources Assistant',
+      description: 'Streamline HR processes with AI-powered recruitment, employee analytics, and performance management.',
+      features: ['Resume Screening', 'Candidate Matching', 'Performance Analytics', 'Employee Engagement', 'Retention Analysis'],
+      price: 'Starting at $399/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Insurance Risk Assessment',
+      description: 'Advanced risk evaluation and fraud detection for insurance companies using machine learning algorithms.',
+      features: ['Risk Evaluation', 'Fraud Detection', 'Claims Processing', 'Underwriting Support', 'Compliance Monitoring'],
+      price: 'Starting at $1,499/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Educational Platform',
+      description: 'Personalized learning experiences with AI-powered content adaptation and student performance analytics.',
+      features: ['Personalized Learning', 'Content Adaptation', 'Performance Analytics', 'Learning Paths', 'Progress Tracking'],
+      price: 'Starting at $299/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Transportation Optimization',
+      description: 'Optimize transportation routes, fleet management, and logistics with AI-powered decision making.',
+      features: ['Route Optimization', 'Fleet Management', 'Demand Prediction', 'Fuel Optimization', 'Driver Scheduling'],
+      price: 'Starting at $699/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Environmental Monitoring',
+      description: 'Monitor environmental conditions and predict climate impacts using AI and IoT sensor data.',
+      features: ['Environmental Sensing', 'Climate Prediction', 'Pollution Monitoring', 'Data Analysis', 'Alert Systems'],
+      price: 'Starting at $599/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Retail Personalization',
+      description: 'Create personalized shopping experiences with AI-driven product recommendations and customer insights.',
+      features: ['Product Recommendations', 'Customer Segmentation', 'Price Optimization', 'Inventory Management', 'Customer Analytics'],
+      price: 'Starting at $799/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Sports Analytics',
+      description: 'Advanced sports performance analysis, injury prediction, and team optimization using AI technology.',
+      features: ['Performance Analysis', 'Injury Prediction', 'Team Optimization', 'Player Scouting', 'Game Strategy'],
+      price: 'Starting at $999/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Mental Health Assistant',
+      description: 'AI-powered mental health monitoring, mood tracking, and therapeutic support applications.',
+      features: ['Mood Tracking', 'Stress Analysis', 'Therapeutic Support', 'Crisis Detection', 'Wellness Recommendations'],
+      price: 'Starting at $199/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
       title: 'AI Marketing Automation',
       description: 'Revolutionary AI-powered marketing automation with personalized campaigns and intelligent optimization.',
       features: ['Campaign Automation', 'Personalization', 'A/B Testing', 'ROI Optimization', 'Multi-channel'],
@@ -330,6 +450,379 @@ const ServicesPage: React.FC = () => {
       features: ['Technology Assessment', 'Strategic Planning', 'Cost Optimization', 'Digital Transformation', 'Training'],
       price: 'Starting at $299/hour',
       category: 'IT Services'
+    },
+    {
+      icon: Cloud,
+      title: 'Cloud Infrastructure Management',
+      description: 'Comprehensive cloud infrastructure management with 99.9% uptime guarantee and 24/7 monitoring.',
+      features: ['99.9% Uptime SLA', '24/7 Monitoring', 'Auto-scaling', 'Cost Optimization', 'Security Management'],
+      price: 'Starting at $1,299/month',
+      category: 'IT Services'
+    },
+    {
+      icon: Shield,
+      title: 'Network Security Solutions',
+      description: 'Advanced network security with firewall management, intrusion detection, and threat prevention.',
+      features: ['Firewall Management', 'Intrusion Detection', 'Threat Prevention', 'VPN Solutions', 'Network Monitoring'],
+      price: 'Starting at $599/month',
+      category: 'IT Services'
+    },
+    {
+      icon: Database,
+      title: 'Data Backup & Recovery',
+      description: 'Comprehensive data backup and disaster recovery solutions with automated backups and instant recovery.',
+      features: ['Automated Backups', 'Instant Recovery', 'Disaster Recovery', 'Data Encryption', 'Compliance'],
+      price: 'Starting at $199/month',
+      category: 'IT Services'
+    },
+    {
+      icon: Settings,
+      title: 'IT Asset Management',
+      description: 'Complete IT asset lifecycle management with inventory tracking, maintenance scheduling, and cost optimization.',
+      features: ['Asset Tracking', 'Maintenance Scheduling', 'Cost Optimization', 'License Management', 'Depreciation Tracking'],
+      price: 'Starting at $149/month',
+      category: 'IT Services'
+    },
+    {
+      icon: Globe,
+      title: 'Website Hosting & Maintenance',
+      description: 'Reliable website hosting with SSL certificates, CDN, and regular maintenance for optimal performance.',
+      features: ['99.9% Uptime', 'SSL Certificates', 'CDN Integration', 'Regular Updates', 'Performance Monitoring'],
+      price: 'Starting at $49/month',
+      category: 'IT Services'
+    },
+    {
+      icon: Smartphone,
+      title: 'Mobile Device Management',
+      description: 'Enterprise mobile device management with security policies, app management, and remote control.',
+      features: ['Device Security', 'App Management', 'Remote Control', 'Policy Enforcement', 'Data Protection'],
+      price: 'Starting at $99/month',
+      category: 'IT Services'
+    },
+    {
+      icon: Shield,
+      title: 'Compliance & Audit Services',
+      description: 'Ensure regulatory compliance with automated monitoring, audit trails, and compliance reporting.',
+      features: ['Regulatory Compliance', 'Audit Trails', 'Compliance Reporting', 'Risk Assessment', 'Documentation'],
+      price: 'Starting at $399/month',
+      category: 'IT Services'
+    },
+    {
+      icon: BarChart3,
+      title: 'IT Performance Monitoring',
+      description: 'Real-time IT performance monitoring with alerting, reporting, and optimization recommendations.',
+      features: ['Real-time Monitoring', 'Performance Alerts', 'Optimization Recommendations', 'Capacity Planning', 'Trend Analysis'],
+      price: 'Starting at $299/month',
+      category: 'IT Services'
+    },
+    {
+      icon: Users,
+      title: 'IT Training & Support',
+      description: 'Comprehensive IT training programs and ongoing support for your team and end users.',
+      features: ['Custom Training Programs', 'End-user Support', 'Technical Documentation', 'Video Tutorials', 'Certification'],
+      price: 'Starting at $199/month',
+      category: 'IT Services'
+    },
+    {
+      icon: Settings,
+      title: 'IT Project Management',
+      description: 'Professional IT project management with planning, execution, and delivery of technology initiatives.',
+      features: ['Project Planning', 'Resource Management', 'Timeline Tracking', 'Risk Management', 'Quality Assurance'],
+      price: 'Starting at $399/month',
+      category: 'IT Services'
+    },
+    {
+      icon: Shield,
+      title: 'Vulnerability Assessment',
+      description: 'Comprehensive security vulnerability assessment with penetration testing and remediation guidance.',
+      features: ['Vulnerability Scanning', 'Penetration Testing', 'Remediation Guidance', 'Security Reports', 'Follow-up Testing'],
+      price: 'Starting at $1,999/assessment',
+      category: 'IT Services'
+    },
+    {
+      icon: Cloud,
+      title: 'Hybrid Cloud Solutions',
+      description: 'Seamless hybrid cloud solutions combining on-premises and cloud infrastructure for optimal performance.',
+      features: ['Hybrid Architecture', 'Data Synchronization', 'Workload Migration', 'Cost Optimization', 'Security Integration'],
+      price: 'Starting at $1,599/month',
+      category: 'IT Services'
+    },
+    {
+      icon: Database,
+      title: 'Data Migration Services',
+      description: 'Secure and efficient data migration between systems with zero downtime and data integrity.',
+      features: ['Zero Downtime', 'Data Integrity', 'Migration Planning', 'Testing & Validation', 'Rollback Capability'],
+      price: 'Starting at $2,999/project',
+      category: 'IT Services'
+    },
+    {
+      icon: Globe,
+      title: 'API Development & Integration',
+      description: 'Custom API development and integration services for seamless data exchange between systems.',
+      features: ['Custom API Development', 'System Integration', 'API Documentation', 'Testing & Validation', 'Performance Optimization'],
+      price: 'Starting at $799/month',
+      category: 'IT Services'
+    },
+    {
+      icon: Settings,
+      title: 'IT Governance & Strategy',
+      description: 'Strategic IT governance and technology roadmap development for long-term business success.',
+      features: ['IT Strategy Development', 'Technology Roadmaps', 'Governance Frameworks', 'Risk Management', 'Performance Metrics'],
+      price: 'Starting at $499/month',
+      category: 'IT Services'
+    },
+
+    // Micro SAAS Services
+    {
+      icon: Smartphone,
+      title: 'AI-Powered CRM',
+      description: 'Intelligent customer relationship management with AI insights, automated follow-ups, and predictive analytics.',
+      features: ['AI Lead Scoring', 'Automated Follow-ups', 'Predictive Analytics', 'Contact Management', 'Sales Pipeline'],
+      price: '$149/month',
+      category: 'Micro SAAS',
+      popular: true
+    },
+    {
+      icon: BarChart3,
+      title: 'AI Analytics Dashboard',
+      description: 'Real-time business intelligence with AI-powered insights, custom dashboards, and automated reporting.',
+      features: ['Real-time Analytics', 'Custom Dashboards', 'Automated Reports', 'Data Visualization', 'Predictive Insights'],
+      price: '$199/month',
+      category: 'Micro SAAS',
+      popular: true
+    },
+    {
+      icon: Code,
+      title: 'AI Content Studio',
+      description: 'Complete content creation suite with AI writing, image generation, video editing, and social media automation.',
+      features: ['AI Writing', 'Image Generation', 'Video Editing', 'Social Media Automation', 'SEO Optimization'],
+      price: '$299/month',
+      category: 'Micro SAAS',
+      popular: true
+    },
+    {
+      icon: Users,
+      title: 'AI Chatbot Builder',
+      description: 'Create intelligent chatbots for customer support, sales, and lead generation with no coding required.',
+      features: ['No-code Builder', 'Multi-language Support', 'Integration APIs', 'Analytics Dashboard', 'Custom Training'],
+      price: '$99/month',
+      category: 'Micro SAAS'
+    },
+    {
+      icon: Mail,
+      title: 'AI Email Marketing',
+      description: 'Automated email campaigns with AI optimization, personalization, and advanced analytics for maximum ROI.',
+      features: ['AI Optimization', 'Personalization', 'A/B Testing', 'Advanced Analytics', 'Automation Workflows'],
+      price: '$179/month',
+      category: 'Micro SAAS'
+    },
+    {
+      icon: Smartphone,
+      title: 'AI Mobile App Builder',
+      description: 'Build native mobile apps with AI assistance, drag-and-drop interface, and instant deployment.',
+      features: ['Drag-and-drop Builder', 'AI Code Generation', 'Instant Deployment', 'Cross-platform', 'App Store Publishing'],
+      price: '$399/month',
+      category: 'Micro SAAS'
+    },
+    {
+      icon: Search,
+      title: 'AI SEO Optimizer',
+      description: 'Automated SEO analysis, keyword research, content optimization, and ranking tracking with AI insights.',
+      features: ['Keyword Research', 'Content Optimization', 'Ranking Tracking', 'Competitor Analysis', 'Technical SEO'],
+      price: '$129/month',
+      category: 'Micro SAAS'
+    },
+    {
+      icon: BarChart3,
+      title: 'AI Invoice Generator',
+      description: 'Automated invoice creation, payment tracking, and financial reporting with AI-powered insights.',
+      features: ['Automated Invoicing', 'Payment Tracking', 'Financial Reports', 'Tax Calculations', 'Client Portal'],
+      price: '$79/month',
+      category: 'Micro SAAS'
+    },
+    {
+      icon: Code,
+      title: 'AI Writing Assistant',
+      description: 'Advanced AI writing tool for blogs, emails, reports, and content creation with 50+ templates.',
+      features: ['50+ Templates', 'Multi-language Support', 'Plagiarism Check', 'SEO Optimization', 'Tone Adjustment'],
+      price: '$29/month',
+      category: 'Micro SAAS'
+    },
+    {
+      icon: BarChart3,
+      title: 'Smart Analytics',
+      description: 'Real-time business analytics with AI insights, automated reports, and predictive forecasting.',
+      features: ['Real-time Analytics', 'Predictive Forecasting', 'Automated Reports', 'Custom Metrics', 'Data Integration'],
+      price: '$49/month',
+      category: 'Micro SAAS'
+    },
+    {
+      icon: Calendar,
+      title: 'AI Scheduler',
+      description: 'Intelligent scheduling with calendar optimization, meeting coordination, and time management.',
+      features: ['Calendar Optimization', 'Meeting Coordination', 'Time Management', 'Auto-scheduling', 'Integration APIs'],
+      price: '$19/month',
+      category: 'Micro SAAS'
+    },
+    {
+      icon: BarChart3,
+      title: 'Expense Tracker',
+      description: 'AI-powered expense management with receipt scanning, categorization, and budget insights.',
+      features: ['Receipt Scanning', 'Auto-categorization', 'Budget Insights', 'Tax Preparation', 'Multi-currency'],
+      price: '$15/month',
+      category: 'Micro SAAS'
+    },
+    {
+      icon: CheckSquare,
+      title: 'Task Manager Pro',
+      description: 'Advanced task management with AI prioritization, team collaboration, and progress tracking.',
+      features: ['AI Prioritization', 'Team Collaboration', 'Progress Tracking', 'Time Tracking', 'Project Templates'],
+      price: '$39/month',
+      category: 'Micro SAAS'
+    },
+    {
+      icon: Users,
+      title: 'CRM Lite',
+      description: 'Lightweight CRM with AI lead scoring, contact management, and sales pipeline automation.',
+      features: ['AI Lead Scoring', 'Contact Management', 'Sales Pipeline', 'Email Integration', 'Mobile App'],
+      price: '$59/month',
+      category: 'Micro SAAS'
+    },
+    {
+      icon: Mail,
+      title: 'Email Optimizer',
+      description: 'AI-powered email optimization with subject line suggestions, send time optimization, and A/B testing.',
+      features: ['Subject Line AI', 'Send Time Optimization', 'A/B Testing', 'Open Rate Tracking', 'Spam Analysis'],
+      price: '$25/month',
+      category: 'Micro SAAS'
+    },
+    {
+      icon: Globe,
+      title: 'Social Media Manager',
+      description: 'AI-driven social media management with content creation, scheduling, and performance analytics.',
+      features: ['Content Creation', 'Auto-scheduling', 'Performance Analytics', 'Multi-platform', 'Engagement Tracking'],
+      price: '$45/month',
+      category: 'Micro SAAS'
+    },
+    {
+      icon: Code,
+      title: 'AI Design Studio',
+      description: 'Create stunning graphics, logos, and marketing materials with AI-powered design tools.',
+      features: ['AI Design Tools', 'Logo Generation', 'Marketing Materials', 'Brand Kit', 'Template Library'],
+      price: '$35/month',
+      category: 'Micro SAAS'
+    },
+    {
+      icon: Globe,
+      title: 'Landing Page Builder',
+      description: 'Build high-converting landing pages with AI optimization and A/B testing capabilities.',
+      features: ['Drag-and-drop Builder', 'AI Optimization', 'A/B Testing', 'Conversion Tracking', 'Mobile Responsive'],
+      price: '$29/month',
+      category: 'Micro SAAS'
+    },
+    {
+      icon: Search,
+      title: 'SEO Optimizer',
+      description: 'AI-powered SEO analysis and optimization with keyword research and content suggestions.',
+      features: ['SEO Analysis', 'Keyword Research', 'Content Suggestions', 'Ranking Tracking', 'Technical Audits'],
+      price: '$49/month',
+      category: 'Micro SAAS'
+    },
+    {
+      icon: BarChart3,
+      title: 'Ad Campaign Manager',
+      description: 'Automated ad campaign management with AI optimization across Google, Facebook, and LinkedIn.',
+      features: ['Multi-platform Ads', 'AI Optimization', 'Budget Management', 'Performance Tracking', 'Auto-bidding'],
+      price: '$79/month',
+      category: 'Micro SAAS'
+    },
+    {
+      icon: Code,
+      title: 'Code Assistant',
+      description: 'AI-powered code completion, debugging, and optimization for multiple programming languages.',
+      features: ['Code Completion', 'Debugging Help', 'Code Optimization', 'Multi-language Support', 'Documentation'],
+      price: '$39/month',
+      category: 'Micro SAAS'
+    },
+    {
+      icon: Settings,
+      title: 'API Builder',
+      description: 'Create and manage APIs with AI assistance, documentation generation, and testing tools.',
+      features: ['API Creation', 'Documentation Generation', 'Testing Tools', 'Version Control', 'Rate Limiting'],
+      price: '$59/month',
+      category: 'Micro SAAS'
+    },
+    {
+      icon: Shield,
+      title: 'Bug Tracker Pro',
+      description: 'Advanced bug tracking with AI-powered issue detection, prioritization, and resolution suggestions.',
+      features: ['AI Issue Detection', 'Priority Scoring', 'Resolution Suggestions', 'Team Collaboration', 'Integration APIs'],
+      price: '$25/month',
+      category: 'Micro SAAS'
+    },
+    {
+      icon: FileText,
+      title: 'Doc Generator',
+      description: 'Automatically generate technical documentation, API docs, and user guides from code.',
+      features: ['Auto Documentation', 'API Docs', 'User Guides', 'Code Comments', 'Multiple Formats'],
+      price: '$19/month',
+      category: 'Micro SAAS'
+    },
+    {
+      icon: Users,
+      title: 'AI Recruitment Assistant',
+      description: 'Streamline hiring with AI-powered resume screening, candidate matching, and interview scheduling.',
+      features: ['Resume Screening', 'Candidate Matching', 'Interview Scheduling', 'Skills Assessment', 'Background Checks'],
+      price: '$199/month',
+      category: 'Micro SAAS'
+    },
+    {
+      icon: Shield,
+      title: 'Medical Records Manager',
+      description: 'HIPAA-compliant medical records management with AI-powered data extraction and analysis.',
+      features: ['HIPAA Compliance', 'Data Extraction', 'Medical Analysis', 'Patient Portal', 'Integration APIs'],
+      price: '$299/month',
+      category: 'Micro SAAS'
+    },
+    {
+      icon: BarChart3,
+      title: 'AI Accounting Assistant',
+      description: 'Automated accounting with AI-powered bookkeeping, tax preparation, and financial reporting.',
+      features: ['Automated Bookkeeping', 'Tax Preparation', 'Financial Reports', 'Expense Tracking', 'Compliance'],
+      price: '$149/month',
+      category: 'Micro SAAS'
+    },
+    {
+      icon: BarChart3,
+      title: 'Property Management AI',
+      description: 'AI-powered property management with tenant screening, maintenance scheduling, and rent optimization.',
+      features: ['Tenant Screening', 'Maintenance Scheduling', 'Rent Optimization', 'Property Analytics', 'Tenant Portal'],
+      price: '$179/month',
+      category: 'Micro SAAS'
+    },
+    {
+      icon: Shield,
+      title: 'Legal Document Manager',
+      description: 'AI-powered legal document management with contract analysis, compliance tracking, and risk assessment.',
+      features: ['Contract Analysis', 'Compliance Tracking', 'Risk Assessment', 'Document Templates', 'Legal Research'],
+      price: '$249/month',
+      category: 'Micro SAAS'
+    },
+    {
+      icon: Users,
+      title: 'Online Learning Platform',
+      description: 'AI-powered educational platform with personalized learning paths and progress tracking.',
+      features: ['Personalized Learning', 'Progress Tracking', 'Course Creation', 'Assessment Tools', 'Certification'],
+      price: '$99/month',
+      category: 'Micro SAAS'
+    },
+    {
+      icon: BarChart3,
+      title: 'Supply Chain Optimizer',
+      description: 'AI-powered supply chain optimization with demand forecasting and inventory management.',
+      features: ['Demand Forecasting', 'Inventory Management', 'Supplier Analytics', 'Risk Assessment', 'Cost Optimization'],
+      price: '$399/month',
+      category: 'Micro SAAS'
     }
   ];
 
@@ -343,11 +836,14 @@ const ServicesPage: React.FC = () => {
     'Database Services',
     'Automation',
     'Web Development',
-    'IT Services'
+    'IT Services',
+    'Micro SAAS'
   ];
 
   const [selectedCategory, setSelectedCategory] = React.useState('All');
   const [searchTerm, setSearchTerm] = React.useState('');
+  const [currentPage, setCurrentPage] = React.useState(1);
+  const servicesPerPage = 12;
 
   const filteredServices = services.filter(service => {
     const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory;
@@ -355,6 +851,16 @@ const ServicesPage: React.FC = () => {
                          service.description.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch;
   });
+
+  const totalPages = Math.ceil(filteredServices.length / servicesPerPage);
+  const startIndex = (currentPage - 1) * servicesPerPage;
+  const endIndex = startIndex + servicesPerPage;
+  const currentServices = filteredServices.slice(startIndex, endIndex);
+
+  // Reset to first page when filters change
+  React.useEffect(() => {
+    setCurrentPage(1);
+  }, [selectedCategory, searchTerm]);
 
   return (
     <>
@@ -449,8 +955,13 @@ const ServicesPage: React.FC = () => {
             </div>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+<<<<<<< HEAD
               {filteredServices.map((service, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 group relative cyber-card hologram-card energy-pulse">
+=======
+              {currentServices.map((service, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 group relative">
+>>>>>>> origin/main
                   {service.popular && (
                     <div className="absolute -top-3 left-6 bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-3 py-1 rounded-full text-sm font-medium neon-glow">
                       Popular
@@ -512,6 +1023,43 @@ const ServicesPage: React.FC = () => {
                 </div>
               ))}
             </div>
+            
+            {/* Pagination */}
+            {totalPages > 1 && (
+              <div className="flex justify-center items-center mt-12 space-x-2">
+                <button
+                  onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
+                  disabled={currentPage === 1}
+                  className="px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white hover:bg-white/20 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300"
+                >
+                  Previous
+                </button>
+                
+                <div className="flex space-x-2">
+                  {Array.from({ length: totalPages }, (_, i) => i + 1).map(page => (
+                    <button
+                      key={page}
+                      onClick={() => setCurrentPage(page)}
+                      className={`px-4 py-2 rounded-lg transition-all duration-300 ${
+                        currentPage === page
+                          ? 'bg-cyan-500 text-white'
+                          : 'bg-white/10 text-white hover:bg-white/20'
+                      }`}
+                    >
+                      {page}
+                    </button>
+                  ))}
+                </div>
+                
+                <button
+                  onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
+                  disabled={currentPage === totalPages}
+                  className="px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white hover:bg-white/20 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300"
+                >
+                  Next
+                </button>
+              </div>
+            )}
           </div>
         </section>
 
