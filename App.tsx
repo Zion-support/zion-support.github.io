@@ -137,6 +137,8 @@ export default function App() {
         telephone: '+1-302-464-0950',
         contactType: 'customer service',
         email: 'kleber@ziontechgroup.com',
+        availableLanguage: 'English',
+        areaServed: 'US',
       },
       address: {
         '@type': 'PostalAddress',
@@ -147,15 +149,32 @@ export default function App() {
         addressCountry: 'US',
       },
       sameAs: ['https://linkedin.com/company/zion-tech-group', 'https://twitter.com/ziontechgroup'],
-      offers: {
-        '@type': 'Offer',
-        name: 'AI Enterprise Transformation Services',
-        description:
-          'Transform your enterprise with AI-powered solutions achieving 300% ROI, 70% cost reduction, and 90% efficiency gains',
-        price: '50000',
-        priceCurrency: 'USD',
-        availability: 'https://schema.org/InStock',
-      },
+      offers: [
+        {
+          '@type': 'Offer',
+          name: 'AI Enterprise Transformation Services',
+          description: 'Transform your enterprise with AI-powered solutions achieving 300% ROI, 70% cost reduction, and 90% efficiency gains',
+          price: '50000',
+          priceCurrency: 'USD',
+          availability: 'https://schema.org/InStock',
+        },
+        {
+          '@type': 'Offer',
+          name: 'Micro SAAS Solutions',
+          description: 'AI-powered micro SAAS applications starting from $19/month with 14-day free trials',
+          price: '19',
+          priceCurrency: 'USD',
+          availability: 'https://schema.org/InStock',
+        },
+        {
+          '@type': 'Offer',
+          name: 'IT Services & Support',
+          description: 'Comprehensive IT services including cloud migration, cybersecurity, and 24/7 support',
+          price: '2000',
+          priceCurrency: 'USD',
+          availability: 'https://schema.org/InStock',
+        }
+      ],
     }),
     []
   );

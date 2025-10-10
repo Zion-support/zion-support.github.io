@@ -7,118 +7,290 @@ export default function ITServicesPage() {
 
   const itServices = [
     {
-      category: 'Infrastructure & Cloud',
+      category: 'Cloud Infrastructure & Migration',
       icon: Cloud,
       color: 'text-blue-400',
       bgColor: 'bg-blue-500/10',
       services: [
         {
-          name: 'Cloud Migration & Setup',
-          description: 'Seamless migration to cloud platforms with zero downtime',
-          features: ['AWS/Azure/GCP Migration', 'Hybrid Cloud Solutions', 'Cost Optimization', 'Security Implementation'],
-          pricing: 'Starting at $10,000',
-          timeline: '2-8 weeks'
+          name: 'Enterprise Cloud Migration',
+          description: 'Comprehensive cloud migration with zero downtime and maximum security',
+          features: ['Multi-Cloud Strategy', 'Zero-Downtime Migration', 'Cost Optimization', 'Security Hardening', 'Performance Tuning'],
+          pricing: 'Starting at $25,000',
+          timeline: '4-12 weeks',
+          popular: true,
+          icon: '☁️',
+          benefits: ['99.9% uptime guarantee', '50% cost reduction', 'Enhanced security']
         },
         {
-          name: 'IT Infrastructure Design',
-          description: 'Scalable and secure infrastructure architecture',
-          features: ['Network Design', 'Server Configuration', 'Load Balancing', 'Disaster Recovery'],
-          pricing: 'Starting at $15,000',
-          timeline: '3-6 weeks'
+          name: 'Hybrid Cloud Solutions',
+          description: 'Seamless integration between on-premises and cloud environments',
+          features: ['Hybrid Architecture Design', 'Data Synchronization', 'Security Integration', 'Performance Optimization', 'Disaster Recovery'],
+          pricing: 'Starting at $18,500',
+          timeline: '6-10 weeks',
+          popular: true,
+          icon: '🔗',
+          benefits: ['Flexible deployment', 'Cost optimization', 'Seamless integration']
         },
         {
-          name: 'Database Management',
-          description: 'Optimized database performance and management',
-          features: ['Performance Tuning', 'Backup & Recovery', 'Security Hardening', 'Monitoring'],
+          name: 'Cloud Cost Optimization',
+          description: 'Intelligent cloud cost management and resource optimization',
+          features: ['Cost Analysis', 'Resource Right-sizing', 'Automated Scaling', 'Reserved Instance Planning', 'Cost Alerts'],
           pricing: 'Starting at $5,000/month',
-          timeline: 'Ongoing'
+          timeline: '2-4 weeks',
+          popular: false,
+          icon: '💰',
+          benefits: ['30% cost savings', 'Automated optimization', 'Real-time monitoring']
+        },
+        {
+          name: 'Cloud Security & Compliance',
+          description: 'Comprehensive cloud security with compliance management',
+          features: ['Security Assessment', 'Compliance Monitoring', 'Threat Detection', 'Data Encryption', 'Access Management'],
+          pricing: 'Starting at $12,000/month',
+          timeline: '3-6 weeks',
+          popular: false,
+          icon: '🔒',
+          benefits: ['Enterprise-grade security', 'Compliance assurance', '24/7 monitoring']
         }
       ]
     },
     {
-      category: 'Security & Compliance',
+      category: 'Cybersecurity & Risk Management',
       icon: Shield,
       color: 'text-red-400',
       bgColor: 'bg-red-500/10',
       services: [
         {
-          name: 'Cybersecurity Suite',
-          description: 'Comprehensive security solutions for enterprise protection',
-          features: ['Threat Detection', 'Vulnerability Assessment', 'Security Monitoring', 'Incident Response'],
-          pricing: 'Starting at $8,000/month',
-          timeline: '2-4 weeks'
+          name: 'Advanced Threat Protection',
+          description: 'Next-generation cybersecurity with AI-powered threat detection and response',
+          features: ['AI Threat Detection', 'Behavioral Analysis', 'Automated Response', 'Threat Hunting', 'Incident Forensics'],
+          pricing: 'Starting at $15,000/month',
+          timeline: '2-6 weeks',
+          popular: true,
+          icon: '🛡️',
+          benefits: ['99.9% threat detection', 'Real-time response', 'AI-powered protection']
         },
         {
-          name: 'Compliance Management',
-          description: 'Ensure compliance with industry standards and regulations',
-          features: ['GDPR Compliance', 'HIPAA Compliance', 'SOX Compliance', 'Audit Support'],
-          pricing: 'Starting at $12,000',
-          timeline: '4-8 weeks'
+          name: 'Zero Trust Security Architecture',
+          description: 'Comprehensive zero trust implementation with continuous verification',
+          features: ['Identity Verification', 'Device Trust', 'Network Segmentation', 'Data Protection', 'Continuous Monitoring'],
+          pricing: 'Starting at $22,000',
+          timeline: '8-16 weeks',
+          popular: true,
+          icon: '🔐',
+          benefits: ['Enhanced security posture', 'Reduced attack surface', 'Continuous verification']
         },
         {
-          name: 'Security Training',
-          description: 'Employee security awareness and training programs',
-          features: ['Phishing Simulation', 'Security Workshops', 'Policy Development', 'Assessment'],
-          pricing: 'Starting at $3,000',
-          timeline: '1-2 weeks'
+          name: 'Compliance & Governance',
+          description: 'Comprehensive compliance management for industry standards and regulations',
+          features: ['GDPR Compliance', 'HIPAA Compliance', 'SOX Compliance', 'ISO 27001', 'Audit Support'],
+          pricing: 'Starting at $18,000',
+          timeline: '6-12 weeks',
+          popular: false,
+          icon: '📋',
+          benefits: ['Full compliance', 'Audit readiness', 'Risk mitigation']
+        },
+        {
+          name: 'Security Awareness Training',
+          description: 'Comprehensive security training and phishing simulation programs',
+          features: ['Phishing Simulation', 'Security Workshops', 'Policy Development', 'Risk Assessment', 'Compliance Training'],
+          pricing: 'Starting at $8,500',
+          timeline: '2-4 weeks',
+          popular: false,
+          icon: '🎓',
+          benefits: ['Reduced human error', 'Security culture', 'Compliance awareness']
         }
       ]
     },
     {
-      category: 'Support & Maintenance',
+      category: 'IT Support & Managed Services',
       icon: Settings,
       color: 'text-green-400',
       bgColor: 'bg-green-500/10',
       services: [
         {
-          name: '24/7 IT Support',
-          description: 'Round-the-clock technical support and monitoring',
-          features: ['Help Desk Support', 'Remote Monitoring', 'Proactive Maintenance', 'Emergency Response'],
-          pricing: 'Starting at $2,000/month',
-          timeline: 'Immediate'
+          name: '24/7 Enterprise IT Support',
+          description: 'Round-the-clock technical support with proactive monitoring and maintenance',
+          features: ['24/7 Help Desk', 'Proactive Monitoring', 'Remote Support', 'Emergency Response', 'SLA Guarantees'],
+          pricing: 'Starting at $5,500/month',
+          timeline: 'Immediate',
+          popular: true,
+          icon: '🆘',
+          benefits: ['99.9% uptime', '15-minute response time', 'Proactive maintenance']
         },
         {
-          name: 'System Administration',
-          description: 'Complete system administration and management',
-          features: ['User Management', 'System Updates', 'Performance Monitoring', 'Backup Management'],
-          pricing: 'Starting at $4,000/month',
-          timeline: 'Ongoing'
+          name: 'IT Infrastructure Management',
+          description: 'Complete infrastructure management with optimization and monitoring',
+          features: ['Server Management', 'Network Monitoring', 'Performance Optimization', 'Capacity Planning', 'Backup Management'],
+          pricing: 'Starting at $8,500/month',
+          timeline: 'Ongoing',
+          popular: true,
+          icon: '⚙️',
+          benefits: ['Optimized performance', 'Reduced downtime', 'Cost efficiency']
         },
         {
-          name: 'IT Consulting',
-          description: 'Strategic IT planning and technology consulting',
-          features: ['Technology Assessment', 'Strategic Planning', 'Vendor Management', 'Budget Planning'],
-          pricing: 'Starting at $200/hour',
-          timeline: 'As needed'
+          name: 'Strategic IT Consulting',
+          description: 'Expert IT consulting for technology strategy and digital transformation',
+          features: ['Technology Assessment', 'Strategic Planning', 'Vendor Management', 'Budget Optimization', 'Digital Transformation'],
+          pricing: 'Starting at $350/hour',
+          timeline: 'As needed',
+          popular: false,
+          icon: '💡',
+          benefits: ['Strategic guidance', 'Cost optimization', 'Technology roadmap']
+        },
+        {
+          name: 'IT Training & Certification',
+          description: 'Comprehensive IT training programs for staff development and certification',
+          features: ['Technical Training', 'Certification Programs', 'Skill Assessment', 'Custom Curriculum', 'Ongoing Support'],
+          pricing: 'Starting at $12,000',
+          timeline: '4-8 weeks',
+          popular: false,
+          icon: '🎯',
+          benefits: ['Enhanced skills', 'Certification', 'Improved productivity']
         }
       ]
     },
     {
-      category: 'Development & Integration',
+      category: 'Software Development & Integration',
       icon: Code,
       color: 'text-purple-400',
       bgColor: 'bg-purple-500/10',
       services: [
         {
           name: 'Custom Software Development',
-          description: 'Tailored software solutions for your business needs',
-          features: ['Web Applications', 'Mobile Apps', 'API Development', 'Integration Services'],
+          description: 'Tailored software solutions built with modern technologies and best practices',
+          features: ['Web Applications', 'Mobile Apps', 'Desktop Software', 'API Development', 'Microservices Architecture'],
+          pricing: 'Starting at $35,000',
+          timeline: '8-16 weeks',
+          popular: true,
+          icon: '💻',
+          benefits: ['Custom solutions', 'Modern technology', 'Scalable architecture']
+        },
+        {
+          name: 'System Integration & Modernization',
+          description: 'Seamless integration of disparate systems with legacy modernization',
+          features: ['API Integration', 'Data Migration', 'Legacy Modernization', 'Workflow Automation', 'Real-time Sync'],
+          pricing: 'Starting at $28,000',
+          timeline: '6-12 weeks',
+          popular: true,
+          icon: '🔧',
+          benefits: ['Unified systems', 'Improved efficiency', 'Modern architecture']
+        },
+        {
+          name: 'DevOps & CI/CD Implementation',
+          description: 'Complete DevOps transformation with automated testing and deployment',
+          features: ['CI/CD Pipelines', 'Automated Testing', 'Infrastructure as Code', 'Monitoring & Alerting', 'Performance Optimization'],
+          pricing: 'Starting at $22,000',
+          timeline: '4-8 weeks',
+          popular: false,
+          icon: '🚀',
+          benefits: ['Faster deployments', 'Reduced errors', 'Improved quality']
+        },
+        {
+          name: 'API Development & Management',
+          description: 'Comprehensive API development with management and monitoring capabilities',
+          features: ['RESTful APIs', 'GraphQL APIs', 'API Gateway', 'Rate Limiting', 'Analytics & Monitoring'],
+          pricing: 'Starting at $18,000',
+          timeline: '4-8 weeks',
+          popular: false,
+          icon: '🔌',
+          benefits: ['Scalable APIs', 'Secure access', 'Performance monitoring']
+        }
+      ]
+    },
+    {
+      category: 'Data Management & Analytics',
+      icon: Database,
+      color: 'text-cyan-400',
+      bgColor: 'bg-cyan-500/10',
+      services: [
+        {
+          name: 'Database Design & Optimization',
+          description: 'High-performance database solutions with optimization and monitoring',
+          features: ['Database Design', 'Performance Tuning', 'Query Optimization', 'Backup & Recovery', 'Security Hardening'],
           pricing: 'Starting at $15,000',
-          timeline: '6-12 weeks'
+          timeline: '4-8 weeks',
+          popular: true,
+          icon: '🗄️',
+          benefits: ['Optimized performance', 'Data security', 'Reliable backup']
         },
         {
-          name: 'System Integration',
-          description: 'Connect and integrate disparate systems',
-          features: ['API Integration', 'Data Migration', 'Workflow Automation', 'Legacy System Modernization'],
-          pricing: 'Starting at $8,000',
-          timeline: '3-8 weeks'
+          name: 'Data Analytics & Business Intelligence',
+          description: 'Advanced data analytics with visualization and business intelligence',
+          features: ['Data Warehousing', 'ETL Processes', 'Data Visualization', 'Business Intelligence', 'Predictive Analytics'],
+          pricing: 'Starting at $25,000',
+          timeline: '8-16 weeks',
+          popular: true,
+          icon: '📊',
+          benefits: ['Data-driven insights', 'Visual analytics', 'Predictive capabilities']
         },
         {
-          name: 'DevOps & CI/CD',
-          description: 'Streamline development and deployment processes',
-          features: ['Automated Testing', 'Continuous Integration', 'Deployment Automation', 'Monitoring'],
-          pricing: 'Starting at $6,000',
-          timeline: '2-6 weeks'
+          name: 'Data Migration & Integration',
+          description: 'Seamless data migration with integration and transformation services',
+          features: ['Data Migration', 'Data Transformation', 'Data Quality', 'Integration Services', 'Data Governance'],
+          pricing: 'Starting at $20,000',
+          timeline: '6-12 weeks',
+          popular: false,
+          icon: '🔄',
+          benefits: ['Zero data loss', 'Quality assurance', 'Seamless integration']
+        },
+        {
+          name: 'Big Data Solutions',
+          description: 'Scalable big data solutions with real-time processing and analytics',
+          features: ['Hadoop/Spark', 'Real-time Processing', 'Data Lakes', 'Machine Learning', 'Stream Analytics'],
+          pricing: 'Starting at $45,000',
+          timeline: '12-20 weeks',
+          popular: false,
+          icon: '📈',
+          benefits: ['Scalable processing', 'Real-time insights', 'Advanced analytics']
+        }
+      ]
+    },
+    {
+      category: 'Network & Infrastructure',
+      icon: Wifi,
+      color: 'text-orange-400',
+      bgColor: 'bg-orange-500/10',
+      services: [
+        {
+          name: 'Network Design & Implementation',
+          description: 'Comprehensive network solutions with security and performance optimization',
+          features: ['Network Architecture', 'Security Implementation', 'Performance Optimization', 'Monitoring', 'Disaster Recovery'],
+          pricing: 'Starting at $30,000',
+          timeline: '6-12 weeks',
+          popular: true,
+          icon: '🌐',
+          benefits: ['Reliable connectivity', 'Enhanced security', 'Optimized performance']
+        },
+        {
+          name: 'Wireless Network Solutions',
+          description: 'Advanced wireless networking with security and coverage optimization',
+          features: ['WiFi 6/6E', 'Security Implementation', 'Coverage Optimization', 'Performance Monitoring', 'Guest Networks'],
+          pricing: 'Starting at $18,000',
+          timeline: '3-6 weeks',
+          popular: true,
+          icon: '📶',
+          benefits: ['High-speed connectivity', 'Secure access', 'Optimized coverage']
+        },
+        {
+          name: 'Network Security & Monitoring',
+          description: 'Comprehensive network security with real-time monitoring and threat detection',
+          features: ['Firewall Management', 'Intrusion Detection', 'Network Monitoring', 'Threat Response', 'Security Audits'],
+          pricing: 'Starting at $12,000/month',
+          timeline: '2-4 weeks',
+          popular: false,
+          icon: '🔍',
+          benefits: ['Enhanced security', 'Real-time monitoring', 'Threat protection']
+        },
+        {
+          name: 'SD-WAN Implementation',
+          description: 'Software-defined wide area networking for improved performance and security',
+          features: ['SD-WAN Deployment', 'Performance Optimization', 'Security Integration', 'Cloud Connectivity', 'Monitoring'],
+          pricing: 'Starting at $25,000',
+          timeline: '4-8 weeks',
+          popular: false,
+          icon: '🔗',
+          benefits: ['Improved performance', 'Cost optimization', 'Enhanced security']
         }
       ]
     }
@@ -310,10 +482,18 @@ export default function ITServicesPage() {
                   <category.icon className={`w-8 h-8 ${category.color}`} />
                   <h3 className="text-2xl font-bold text-white">{category.category}</h3>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
                   {category.services.map((service, serviceIndex) => (
-                    <div key={serviceIndex} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-700/50 transition-all duration-300">
-                      <h4 className="text-xl font-bold text-white mb-3">{service.name}</h4>
+                    <div key={serviceIndex} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-700/50 transition-all duration-300 relative">
+                      {service.popular && (
+                        <div className="absolute -top-2 -right-2 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full">
+                          POPULAR
+                        </div>
+                      )}
+                      <div className="flex items-center space-x-3 mb-4">
+                        <span className="text-3xl">{service.icon}</span>
+                        <h4 className="text-xl font-bold text-white">{service.name}</h4>
+                      </div>
                       <p className="text-gray-300 mb-4">{service.description}</p>
                       <div className="space-y-3 mb-6">
                         <h5 className="text-sm font-semibold text-cyan-400">Key Features:</h5>
@@ -326,7 +506,7 @@ export default function ITServicesPage() {
                           ))}
                         </ul>
                       </div>
-                      <div className="space-y-2">
+                      <div className="space-y-2 mb-4">
                         <div className="flex justify-between items-center">
                           <span className="text-sm text-gray-400">Pricing:</span>
                           <span className="text-sm font-medium text-white">{service.pricing}</span>
@@ -336,8 +516,19 @@ export default function ITServicesPage() {
                           <span className="text-sm font-medium text-cyan-400">{service.timeline}</span>
                         </div>
                       </div>
+                      <div className="space-y-2 mb-4">
+                        <h5 className="text-sm font-semibold text-cyan-400">Key Benefits:</h5>
+                        <ul className="space-y-1">
+                          {service.benefits.map((benefit, benefitIndex) => (
+                            <li key={benefitIndex} className="flex items-center space-x-2 text-sm text-gray-300">
+                              <Star className="w-3 h-3 text-yellow-400 flex-shrink-0" />
+                              <span>{benefit}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
                       <button className="w-full mt-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-2 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-purple-700 transition-all">
-                        Learn More
+                        Get Started
                       </button>
                     </div>
                   ))}
