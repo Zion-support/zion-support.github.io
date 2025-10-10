@@ -1,5 +1,5 @@
-// Service Worker for Zion Tech Group
-const CACHE_NAME = 'zion-tech-v1';
+
+const CACHE_NAME = 'zion-tech-group-v1';
 const urlsToCache = [
   '/',
   '/static/js/bundle.js',

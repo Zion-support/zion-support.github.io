@@ -1,9 +1,6 @@
 /* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&family=Exo+2:wght@100;200;300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 
-/* Import performance optimizations */
-@import './styles/performance.css';
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -23,15 +20,12 @@
   --bg-darker: #050505;
   --bg-slate: #0f172a;
   --bg-purple: #581c87;
-  
   --text-primary: #ffffff;
   --text-secondary: #e2e8f0;
   --text-muted: #94a3b8;
-  
   --border-cyan: rgba(0, 255, 255, 0.3);
   --border-purple: rgba(139, 92, 246, 0.3);
   --border-pink: rgba(236, 72, 153, 0.3);
-  
   --shadow-neon: 0 0 20px rgba(0, 255, 255, 0.5);
   --shadow-purple: 0 0 20px rgba(139, 92, 246, 0.5);
   --shadow-pink: 0 0 20px rgba(236, 72, 153, 0.5);
@@ -66,7 +60,6 @@ body {
   50% {
     text-shadow: 
       0 0 2px var(--primary-cyan),
-      0 0 5px var(--primary-cyan),
       0 0 8px var(--primary-cyan),
       0 0 12px var(--primary-cyan);
   }
@@ -77,13 +70,15 @@ body {
     box-shadow: 
       0 0 5px var(--primary-purple),
       0 0 10px var(--primary-purple),
-      0 0 15px var(--primary-purple);
+      0 0 15px var(--primary-purple),
+      0 0 20px var(--primary-purple),
+      0 0 30px var(--primary-purple);
   }
   50% {
     box-shadow: 
-      0 0 10px var(--primary-purple),
-      0 0 20px var(--primary-purple),
-      0 0 30px var(--primary-purple);
+      0 0 2px var(--primary-purple),
+      0 0 8px var(--primary-purple),
+      0 0 12px var(--primary-purple);
   }
 }
 
@@ -115,55 +110,55 @@ body {
 }
 
 @keyframes slide-in-left {
-  from {
+  0% {
     opacity: 0;
     transform: translateX(-50px);
   }
-  to {
+  100% {
     opacity: 1;
     transform: translateX(0);
   }
 }
 
 @keyframes slide-in-right {
-  from {
+  0% {
     opacity: 0;
     transform: translateX(50px);
   }
-  to {
+  100% {
     opacity: 1;
     transform: translateX(0);
   }
 }
 
 @keyframes slide-in-up {
-  from {
+  0% {
     opacity: 0;
     transform: translateY(50px);
   }
-  to {
+  100% {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
 @keyframes fade-in {
-  from {
+  0% {
     opacity: 0;
   }
-  to {
+  100% {
     opacity: 1;
   }
 }
 
 @keyframes scale-in {
-  from {
-    opacity: 0;
+  0% {
     transform: scale(0.8);
+    opacity: 0;
   }
-  to {
-    opacity: 1;
+  100% {
     transform: scale(1);
+    opacity: 1;
   }
 }
 
@@ -179,10 +174,34 @@ body {
 @keyframes matrix-rain {
   0% {
     transform: translateY(-100vh);
-    opacity: 1;
   }
   100% {
     transform: translateY(100vh);
+  }
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes particle-float {
+  0% {
+    transform: translateY(100vh) translateX(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) translateX(100px);
     opacity: 0;
   }
 }
@@ -272,10 +291,6 @@ body {
 .matrix-rain::before {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
   background: 
     repeating-linear-gradient(
       90deg,
@@ -366,27 +381,10 @@ body {
   animation: gradient-shift 3s ease infinite;
 }
 
-@keyframes gradient-shift {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
 /* Particle System */
 .particles {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: -1;
+  position: relative;
+  overflow: hidden;
 }
 
 .particle {
@@ -396,23 +394,6 @@ body {
   background: var(--primary-cyan);
   border-radius: 50%;
   animation: particle-float 6s linear infinite;
-}
-
-@keyframes particle-float {
-  0% {
-    transform: translateY(100vh) translateX(0);
-    opacity: 0;
-  }
-  10% {
-    opacity: 1;
-  }
-  90% {
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(-100vh) translateX(100px);
-    opacity: 0;
-  }
 }
 
 /* Responsive Design */
@@ -436,7 +417,7 @@ body {
     font-size: 1.5rem;
   }
   
-  .cyber-card {
+  .futuristic-btn {
     padding: 15px;
   }
 }
@@ -458,7 +439,6 @@ body {
   
   .neon-text {
     text-shadow: 
-      0 0 10px var(--primary-cyan),
       0 0 20px var(--primary-cyan),
       0 0 30px var(--primary-cyan);
   }
@@ -475,14 +455,13 @@ body {
 
 /* Print Styles */
 @media print {
-  .cyber-card {
+  body {
     background: white;
     color: black;
-    border: 1px solid black;
   }
   
-  .neon-text {
-    color: black;
+  .cyber-card {
+    border: 1px solid black;
     text-shadow: none;
   }
 }
@@ -506,12 +485,7 @@ body {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255, 255, 255, 0.2),
-    transparent
-  );
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
   animation: shimmer 1.5s infinite;
 }
 

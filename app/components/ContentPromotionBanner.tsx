@@ -1,7 +1,5 @@
 'use client';
 import React, { lazy } from 'react';
-import { Sparkles, ArrowRight, Star } from 'lucide-react';
-
 const ContentPromotionBanner: React.FC = React.memo((props) => {
   return (
     <div className="bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 text-white py-4 relative overflow-hidden">}

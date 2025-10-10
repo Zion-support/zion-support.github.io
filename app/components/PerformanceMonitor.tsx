@@ -1,7 +1,4 @@
 'use client';
-import { useEffect } from 'react';
-import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
-
 interface PerformanceMonitorProps {
   enableReporting?: boolean;
   enableConsoleLogging?: boolean;
