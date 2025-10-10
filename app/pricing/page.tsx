@@ -96,8 +96,8 @@ const PricingPage: React.FC = () => {
                   <p className="text-gray-300 mb-6">{plan.description}</p>
                   
                   <div className="mb-6">
-                    <span className="text-4xl font-bold text-white">${plan.price}</span>
-                    <span className="text-gray-400 ml-2">/month</span>
+                    <span className="text-4xl font-bold text-white">{plan.price}</span>
+                    <span className="text-gray-400 ml-2">{plan.period}</span>
                   </div>
 
                   <ul className="space-y-3 mb-8">
@@ -125,9 +125,12 @@ const PricingPage: React.FC = () => {
               <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
                 We offer tailored AI and IT solutions for enterprise clients. Contact us for a personalized quote.
               </p>
-              <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300">
+              <Link 
+                to="/contact" 
+                className="inline-block px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300"
+              >
                 Contact Sales
-              </button>
+              </Link>
             </div>
           </div>
         </section>

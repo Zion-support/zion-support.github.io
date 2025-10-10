@@ -102,7 +102,7 @@ const DynamicContentShowcase: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-center">
-                <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />
+                <CheckCircle className="h-5 w-5 text-cyan-400 mr-3 flex-shrink-0" />
                 <span className="text-gray-300">{benefit}</span>
               </div>
             ))}

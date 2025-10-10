@@ -91,10 +91,13 @@ const CaseStudiesPage: React.FC = () => {
                     </ul>
                   </div>
                   
-                  <button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
+                  <Link
+                    to={`/case-studies/${index}`}
+                    className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
+                  >
                     Read Full Case Study
                     <ArrowRight className="w-4 h-4 ml-2" />
-                  </button>
+                  </Link>
                 </div>
               </div>
             ))}
