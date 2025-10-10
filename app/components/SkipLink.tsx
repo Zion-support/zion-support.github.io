@@ -1,8 +1,9 @@
 import React from 'react';
 import {Link } from 'react-router-dom';
 
-interface SkipLinkProps {to: string;,
-    children: React.ReactNode;
+interface SkipLinkProps {
+  to: string;
+  children: React.ReactNode;
 }
 
 const SkipLink: React.FC<SkipLinkProps> = ({to, children }) => {return (

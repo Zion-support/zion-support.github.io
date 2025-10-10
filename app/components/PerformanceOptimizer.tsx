@@ -45,17 +45,19 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({enableImageO
 };
 
 export default PerformanceOptimizer;
-interface PerformanceMetrics {lcp: number;,
-    fid: number;,
-    cls: number;,
-    fcp: number;,
-    ttfb: number;
+interface PerformanceMetrics {
+  lcp: number;
+  fid: number;
+  cls: number;
+  fcp: number;
+  ttfb: number;
 }
 
-interface OptimizationStatus {preloaded: number;,
-    codeSplit: boolean;,
-    serviceWorker: boolean;,
-    optimized: boolean;
+interface OptimizationStatus {
+  preloaded: number;
+  codeSplit: boolean;
+  serviceWorker: boolean;
+  optimized: boolean;
 }
 
 export const PerformanceOptimizer: React.FC = () => {,
