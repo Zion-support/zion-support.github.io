@@ -11,7 +11,7 @@ const AccessibilityEnhancer: React.FC = () => {
       const firstFocusableElement = focusableContent[0] as HTMLElement;
       const lastFocusableElement = focusableContent[focusableContent.length - 1] as HTMLElement;
 
-      element.addEventListener('keydown' (e) => {
+      element.addEventListener('keydown', (e) => {
         if (e.key === 'Tab') {
           if (e.shiftKey) {
             if (document.activeElement === firstFocusableElement) {
