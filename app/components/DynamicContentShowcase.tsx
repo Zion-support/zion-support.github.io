@@ -90,6 +90,7 @@ const DynamicContentShowcase: React.FC = () => {
               <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg mb-4">
                 <feature.icon className="h-6 w-6 text-white" />
               </div>
+<<<<<<< HEAD
               <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
               <p className="text-gray-300">{feature.description}</p>
             </div>
@@ -130,6 +131,12 @@ const DynamicContentShowcase: React.FC = () => {
           </div>
         </div>
       </div>
+=======
+            ))}
+          </div>
+        </div>
+      </section>
+>>>>>>> cursor/website-audit-and-update-with-deployment-758b
     </div>
   );
 };

@@ -97,6 +97,7 @@ const ContentStatistics: React.FC = () => {
   }, []);
 
   return (
+<<<<<<< HEAD
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
@@ -134,6 +135,25 @@ const ContentStatistics: React.FC = () => {
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">{achievement.title}</h3>
               <p className="text-gray-300 text-sm">{achievement.description}</p>
+=======
+    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold text-white mb-6">Our Impact in Numbers</h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            See how we've helped businesses transform with our AI and IT solutions
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {stats.map((stat, index) => (
+            <div key={index} className="text-center">
+              <div className="text-4xl md:text-5xl font-bold text-cyan-400 mb-2">
+                {stat.value}
+              </div>
+              <div className="text-white font-semibold mb-2">{stat.label}</div>
+              <div className="text-gray-300 text-sm">{stat.description}</div>
+>>>>>>> cursor/website-audit-and-update-with-deployment-758b
             </div>
           ))}
         </div>

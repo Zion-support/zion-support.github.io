@@ -113,6 +113,7 @@ const CareersPage: React.FC = () => {
                     <span>{position.type}</span>
                   </div>
                 </div>
+<<<<<<< HEAD
                 <p className="text-gray-300 mb-4">{position.description}</p>
                 <div className="mb-4">
                   <h4 className="text-sm font-semibold text-white mb-2">Requirements:</h4>
@@ -131,6 +132,10 @@ const CareersPage: React.FC = () => {
                 </button>
               </div>
             ))}
+=======
+              ))}
+            </div>
+>>>>>>> cursor/website-audit-and-update-with-deployment-758b
           </div>
         </div>
       </section>
