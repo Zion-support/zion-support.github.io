@@ -33,38 +33,29 @@ const ServiceCardSkeleton: React.FC = memo(() => (
   </div>
 ));
 ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
-const HomePage: React.FC = () => {const [isLoaded, setIsLoaded] = useState(false);
-const [isVisible, setIsVisible] = useState(false);
+const HomePage: React.FC = () => {
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
   
   useEffect(() => {
     setIsLoaded(true);
-    // Trigger visibility animation;
-const timer = setTimeout(() => setIsVisible(true), 100);
+    // Trigger visibility animation
+    const timer = setTimeout(() => setIsVisible(true), 100);
     // Preload components
     preloadComponents();
     return () => clearTimeout(timer);
   }, []);
-<<<<<<< HEAD
   
-  // Analytics tracking for phone clicks - optimized;
-const handlePhoneClick = useCallback(() => {
-    if ($1) { const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag;
-=======
   // Analytics tracking for phone clicks - optimized
   const handlePhoneClick = useCallback(() => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
       const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag;
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
       gtag('event', 'phone_click', {
         event_category: 'engagement',
         event_label: 'main_phone_number'
       });
     }
-<<<<<<< HEAD
   }, []);
-=======
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   return (
     <React.Fragment>
       <SEOOptimizer
@@ -95,7 +86,7 @@ const handlePhoneClick = useCallback(() => {
             telephone: '+1-302-464-0950',
             contactType: 'Customer Service',
             areaServed: 'US',
-            availableLanguage: 'en']
+            availableLanguage: 'en'
     },
           address: {
             '@type': 'PostalAddress',
@@ -103,12 +94,8 @@ const handlePhoneClick = useCallback(() => {
             addressLocality: 'Middletown',
             addressRegion: 'DE',
             postalCode: '19709',
-<<<<<<< HEAD
-            addressCountry: 'US';);
-=======
-            addressCountry: 'US']
+            addressCountry: 'US'
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
         }}
       />
       <PerformanceOptimizer
@@ -1431,10 +1418,6 @@ const handlePhoneClick = useCallback(() => {
       <Footer />
     </div>
     </>
-<<<<<<< HEAD
-  );)
-=======
   )]
     };
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export default HomePage;
