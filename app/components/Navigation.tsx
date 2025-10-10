@@ -10,7 +10,7 @@ const Navigation: React.FC = () => {}
   const [itServicesOpen, setItServicesOpen] = useState(false)
   const [microSaasOpen, setMicroSaasOpen] = useState(false)
   // Handle scroll effect
-  useEffect(() => {}
+  useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50)
     }
@@ -18,7 +18,7 @@ const Navigation: React.FC = () => {}
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
   // Close mobile menu when clicking outside
-  useEffect(() => {}
+  useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (isOpen && !(event.target as Element).closest('.mobile-menu')) {
         setIsOpen(false)
@@ -31,35 +31,35 @@ const Navigation: React.FC = () => {}
     setIsOpen(!isOpen)
   }, [isOpen]);
 
-  const toggleServices = useCallback(() => {}
+  const toggleServices = useCallback(() => {
     setServicesOpen(!servicesOpen);
     setAiServicesOpen(false)
     setItServicesOpen(false)
     setMicroSaasOpen(false)
   }, [servicesOpen]);
 
-  const toggleAiServices = useCallback(() => {}
+  const toggleAiServices = useCallback(() => {
     setAiServicesOpen(!aiServicesOpen);
     setServicesOpen(false)
     setItServicesOpen(false)
     setMicroSaasOpen(false)
   }, [aiServicesOpen]);
 
-  const toggleItServices = useCallback(() => {}
+  const toggleItServices = useCallback(() => {
     setItServicesOpen(!itServicesOpen);
     setServicesOpen(false)
     setAiServicesOpen(false)
     setMicroSaasOpen(false)
   }, [itServicesOpen]);
 
-  const toggleMicroSaas = useCallback(() => {}
+  const toggleMicroSaas = useCallback(() => {
     setMicroSaasOpen(!microSaasOpen);
     setServicesOpen(false)
     setAiServicesOpen(false)
     setItServicesOpen(false)
   }, [microSaasOpen]);
 
-  const closeAllMenus = useCallback(() => {}
+  const closeAllMenus = useCallback(() => {
     setIsOpen(false);
     setServicesOpen(false);
     setAiServicesOpen(false)
@@ -230,14 +230,14 @@ const Navigation: React.FC = () => {}
                 <span>AI Services</span>
                 <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${aiServicesOpen ? 'rotate-180' : ''}`} />
               </button>
-              {aiServicesOpen && (}
+              {aiServicesOpen && (
                 <div className="absolute top-full left-0 mt-3 w-[500px] bg-slate-900/98 backdrop-blur-xl rounded-2xl shadow-2xl border border-cyan-500/30 p-6 cyber-card-enhanced holographic-card-enhanced">
                   <div className="mb-4">
                     <h3 className="text-lg font-bold text-cyan-400 neon-text-enhanced">AI Services</h3>
                     <p className="text-sm text-gray-400">Advanced artificial intelligence solutions</p>
                   </div>
-                  <div className="grid grid-cols-1 gap-3 max-h-96 overflow-y-auto custom-scrollbar" />
-                    {aiServices.map((service) => (}
+                  <div className="grid grid-cols-1 gap-3 max-h-96 overflow-y-auto custom-scrollbar">
+                    {aiServices.map((service) => (
                       <Link
                         key={service.name}
                         to={service.href}
