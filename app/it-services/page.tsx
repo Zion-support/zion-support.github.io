@@ -1008,6 +1008,371 @@ const ItServicesPage: React.FC = () => {
       category: 'Cloud Security',
       popular: true,
       icon: Shield
+    },
+    // NEW IT SERVICES
+    {
+      id: '5g-implementation',
+      name: '5G Network Implementation',
+      description: 'Complete 5G network deployment and optimization services for next-generation connectivity',
+      price: '$15,000/month',
+      marketPrice: '$30000-100000/month',
+      features: [
+        '5G network architecture design',
+        'Small cell deployment',
+        'Network slicing implementation',
+        'Edge computing integration',
+        'IoT device connectivity',
+        'Performance optimization',
+        'Coverage analysis and planning',
+        'Integration with existing networks',
+        '5G security implementation',
+        'Real-time network monitoring'
+      ],
+      benefits: [
+        'Ultra-fast connectivity',
+        'Low latency communications',
+        'Massive IoT support',
+        'Future-proof infrastructure'
+      ],
+      category: '5G & Connectivity',
+      popular: true,
+      icon: Wifi
+    },
+    {
+      id: 'quantum-computing-infrastructure',
+      name: 'Quantum Computing Infrastructure',
+      description: 'Quantum computing setup and integration services for advanced computational needs',
+      price: '$25,000/month',
+      marketPrice: '$50000-200000/month',
+      features: [
+        'Quantum hardware setup',
+        'Quantum software integration',
+        'Quantum algorithm development',
+        'Quantum error correction',
+        'Hybrid classical-quantum systems',
+        'Quantum security implementation',
+        'Research collaboration tools',
+        'Quantum network setup',
+        'Advanced quantum analytics',
+        '24/7 quantum support'
+      ],
+      benefits: [
+        'Exponential computational power',
+        'Advanced problem solving',
+        'Cutting-edge technology',
+        'Research acceleration'
+      ],
+      category: 'Quantum Computing',
+      popular: false,
+      icon: Cpu
+    },
+    {
+      id: 'ar-vr-development',
+      name: 'AR/VR Development Services',
+      description: 'Immersive augmented and virtual reality application development and deployment',
+      price: '$8,500/month',
+      marketPrice: '$15000-50000/month',
+      features: [
+        'AR/VR application development',
+        '3D content creation',
+        'Spatial computing integration',
+        'Cross-platform compatibility',
+        'Gesture recognition systems',
+        'Haptic feedback integration',
+        'Cloud-based rendering',
+        'Multi-user experiences',
+        'Performance optimization',
+        'App store deployment'
+      ],
+      benefits: [
+        'Immersive user experiences',
+        'Enhanced engagement',
+        'Innovative interfaces',
+        'Competitive advantage'
+      ],
+      category: 'AR/VR',
+      popular: true,
+      icon: Monitor
+    },
+    {
+      id: 'ai-infrastructure-setup',
+      name: 'AI Infrastructure Setup',
+      description: 'Complete AI infrastructure deployment including GPU clusters and ML pipelines',
+      price: '$12,000/month',
+      marketPrice: '$25000-80000/month',
+      features: [
+        'GPU cluster setup and optimization',
+        'ML pipeline development',
+        'Data lake architecture',
+        'Model training infrastructure',
+        'Inference server deployment',
+        'MLOps implementation',
+        'Auto-scaling AI workloads',
+        'Model versioning and management',
+        'AI security implementation',
+        'Performance monitoring'
+      ],
+      benefits: [
+        'Scalable AI infrastructure',
+        'Faster model training',
+        'Automated ML workflows',
+        'Production-ready AI systems'
+      ],
+      category: 'AI Infrastructure',
+      popular: true,
+      icon: Brain
+    },
+    {
+      id: 'blockchain-infrastructure',
+      name: 'Blockchain Infrastructure Services',
+      description: 'Complete blockchain network setup and smart contract development services',
+      price: '$9,500/month',
+      marketPrice: '$20000-60000/month',
+      features: [
+        'Blockchain network deployment',
+        'Smart contract development',
+        'DeFi protocol integration',
+        'NFT marketplace development',
+        'Cryptocurrency integration',
+        'Blockchain security auditing',
+        'Cross-chain compatibility',
+        'Node management and monitoring',
+        'Consensus mechanism optimization',
+        'Blockchain analytics'
+      ],
+      benefits: [
+        'Decentralized applications',
+        'Enhanced security',
+        'Transparent transactions',
+        'Future-proof technology'
+      ],
+      category: 'Blockchain',
+      popular: false,
+      icon: Link
+    },
+    {
+      id: 'edge-computing-deployment',
+      name: 'Edge Computing Deployment',
+      description: 'Edge computing infrastructure setup for real-time processing and low-latency applications',
+      price: '$7,500/month',
+      marketPrice: '$15000-45000/month',
+      features: [
+        'Edge server deployment',
+        'Edge application development',
+        'Real-time data processing',
+        'IoT device integration',
+        'Edge AI model deployment',
+        'Content delivery optimization',
+        'Edge security implementation',
+        'Bandwidth optimization',
+        'Offline capability setup',
+        'Edge monitoring and management'
+      ],
+      benefits: [
+        'Ultra-low latency',
+        'Real-time processing',
+        'Reduced bandwidth costs',
+        'Enhanced user experience'
+      ],
+      category: 'Edge Computing',
+      popular: true,
+      icon: Server
+    },
+    {
+      id: 'quantum-safe-cryptography',
+      name: 'Quantum-Safe Cryptography',
+      description: 'Implementation of post-quantum cryptographic solutions for future security',
+      price: '$6,500/month',
+      marketPrice: '$12000-35000/month',
+      features: [
+        'Post-quantum algorithm implementation',
+        'Quantum-safe key management',
+        'Cryptographic migration planning',
+        'Hybrid classical-quantum security',
+        'Compliance with quantum standards',
+        'Security assessment and testing',
+        'Integration with existing systems',
+        'Quantum threat monitoring',
+        'Future-proof security planning',
+        'Advanced cryptographic analytics'
+      ],
+      benefits: [
+        'Future-proof security',
+        'Quantum-resistant encryption',
+        'Enhanced data protection',
+        'Compliance with standards'
+      ],
+      category: 'Quantum Security',
+      popular: false,
+      icon: Shield
+    },
+    {
+      id: 'digital-twin-platform',
+      name: 'Digital Twin Platform',
+      description: 'Digital twin development and management for physical asset simulation and optimization',
+      price: '$11,000/month',
+      marketPrice: '$22000-70000/month',
+      features: [
+        '3D asset modeling and simulation',
+        'Real-time data integration',
+        'Predictive maintenance modeling',
+        'IoT sensor integration',
+        'Machine learning integration',
+        'Virtual reality visualization',
+        'Performance optimization',
+        'Scenario planning and testing',
+        'Collaborative platform development',
+        'Advanced analytics and reporting'
+      ],
+      benefits: [
+        'Optimize asset performance',
+        'Predictive maintenance',
+        'Reduced operational costs',
+        'Enhanced decision making'
+      ],
+      category: 'Digital Twin',
+      popular: true,
+      icon: Monitor
+    },
+    {
+      id: 'neuromorphic-computing',
+      name: 'Neuromorphic Computing Setup',
+      description: 'Brain-inspired computing infrastructure for advanced AI and machine learning applications',
+      price: '$18,000/month',
+      marketPrice: '$35000-120000/month',
+      features: [
+        'Neuromorphic hardware setup',
+        'Spiking neural network development',
+        'Event-driven processing systems',
+        'Low-power AI implementation',
+        'Real-time learning algorithms',
+        'Sensory data processing',
+        'Adaptive system development',
+        'Research collaboration tools',
+        'Performance optimization',
+        'Advanced neuromorphic analytics'
+      ],
+      benefits: [
+        'Ultra-low power consumption',
+        'Real-time learning',
+        'Advanced pattern recognition',
+        'Next-generation AI capabilities'
+      ],
+      category: 'Neuromorphic Computing',
+      popular: false,
+      icon: Brain
+    },
+    {
+      id: 'space-technology-integration',
+      name: 'Space Technology Integration',
+      description: 'Space-based technology integration including satellite communications and space data processing',
+      price: '$20,000/month',
+      marketPrice: '$40000-150000/month',
+      features: [
+        'Satellite communication setup',
+        'Space data processing systems',
+        'Ground station integration',
+        'Orbital mechanics calculations',
+        'Space weather monitoring',
+        'Satellite constellation management',
+        'Space-based IoT integration',
+        'Earth observation data processing',
+        'Space mission planning tools',
+        'Advanced space analytics'
+      ],
+      benefits: [
+        'Global connectivity',
+        'Space-based insights',
+        'Advanced communications',
+        'Cutting-edge technology'
+      ],
+      category: 'Space Technology',
+      popular: false,
+      icon: Rocket
+    },
+    {
+      id: 'biometric-security-systems',
+      name: 'Biometric Security Systems',
+      description: 'Advanced biometric authentication and security systems implementation',
+      price: '$4,500/month',
+      marketPrice: '$8000-25000/month',
+      features: [
+        'Multi-modal biometric systems',
+        'Facial recognition technology',
+        'Fingerprint and iris scanning',
+        'Voice biometric authentication',
+        'Behavioral biometric analysis',
+        'Anti-spoofing technology',
+        'Privacy-preserving biometrics',
+        'Integration with access control',
+        'Real-time authentication',
+        'Advanced security analytics'
+      ],
+      benefits: [
+        'Enhanced security',
+        'Convenient authentication',
+        'Fraud prevention',
+        'Privacy protection'
+      ],
+      category: 'Biometric Security',
+      popular: true,
+      icon: Shield
+    },
+    {
+      id: 'holographic-display-systems',
+      name: 'Holographic Display Systems',
+      description: 'Holographic display technology implementation for immersive visual experiences',
+      price: '$13,500/month',
+      marketPrice: '$25000-80000/month',
+      features: [
+        'Holographic display setup',
+        '3D content creation tools',
+        'Spatial computing integration',
+        'Gesture recognition systems',
+        'Multi-user holographic experiences',
+        'Real-time rendering optimization',
+        'Holographic data visualization',
+        'Integration with AR/VR systems',
+        'Custom holographic applications',
+        'Advanced display analytics'
+      ],
+      benefits: [
+        'Immersive visual experiences',
+        'Enhanced collaboration',
+        '3D data visualization',
+        'Next-generation interfaces'
+      ],
+      category: 'Holographic Technology',
+      popular: false,
+      icon: Monitor
+    },
+    {
+      id: 'autonomous-vehicle-infrastructure',
+      name: 'Autonomous Vehicle Infrastructure',
+      description: 'Infrastructure setup for autonomous vehicles including V2X communications and smart city integration',
+      price: '$16,000/month',
+      marketPrice: '$30000-100000/month',
+      features: [
+        'V2X communication systems',
+        'Smart traffic management',
+        'Autonomous vehicle testing grounds',
+        'Real-time traffic optimization',
+        'Vehicle-to-infrastructure communication',
+        'Edge computing for vehicles',
+        'Safety monitoring systems',
+        'Integration with smart city systems',
+        'Autonomous fleet management',
+        'Advanced mobility analytics'
+      ],
+      benefits: [
+        'Safer transportation',
+        'Reduced traffic congestion',
+        'Improved mobility',
+        'Smart city integration'
+      ],
+      category: 'Autonomous Vehicles',
+      popular: true,
+      icon: Cpu
     }
   ];
 
@@ -1044,7 +1409,20 @@ const ItServicesPage: React.FC = () => {
     { id: 'Cloud Optimization', name: 'Cloud Optimization', count: services.filter(s => s.category === 'Cloud Optimization').length },
     { id: 'Security Automation', name: 'Security Automation', count: services.filter(s => s.category === 'Security Automation').length },
     { id: 'Data Visualization', name: 'Data Visualization', count: services.filter(s => s.category === 'Data Visualization').length },
-    { id: 'Automation', name: 'Automation', count: services.filter(s => s.category === 'Automation').length }
+    { id: 'Automation', name: 'Automation', count: services.filter(s => s.category === 'Automation').length },
+    // NEW IT CATEGORIES
+    { id: '5G & Connectivity', name: '5G & Connectivity', count: services.filter(s => s.category === '5G & Connectivity').length },
+    { id: 'Quantum Computing', name: 'Quantum Computing', count: services.filter(s => s.category === 'Quantum Computing').length },
+    { id: 'AR/VR', name: 'AR/VR', count: services.filter(s => s.category === 'AR/VR').length },
+    { id: 'AI Infrastructure', name: 'AI Infrastructure', count: services.filter(s => s.category === 'AI Infrastructure').length },
+    { id: 'Edge Computing', name: 'Edge Computing', count: services.filter(s => s.category === 'Edge Computing').length },
+    { id: 'Quantum Security', name: 'Quantum Security', count: services.filter(s => s.category === 'Quantum Security').length },
+    { id: 'Digital Twin', name: 'Digital Twin', count: services.filter(s => s.category === 'Digital Twin').length },
+    { id: 'Neuromorphic Computing', name: 'Neuromorphic Computing', count: services.filter(s => s.category === 'Neuromorphic Computing').length },
+    { id: 'Space Technology', name: 'Space Technology', count: services.filter(s => s.category === 'Space Technology').length },
+    { id: 'Biometric Security', name: 'Biometric Security', count: services.filter(s => s.category === 'Biometric Security').length },
+    { id: 'Holographic Technology', name: 'Holographic Technology', count: services.filter(s => s.category === 'Holographic Technology').length },
+    { id: 'Autonomous Vehicles', name: 'Autonomous Vehicles', count: services.filter(s => s.category === 'Autonomous Vehicles').length }
   ];
 
   const filteredServices = services.filter(service => 
