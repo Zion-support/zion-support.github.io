@@ -22,7 +22,6 @@ import React, { useState, useEffect } from 'react';
       title: 'Cybersecurity Solutions',
       description: 'Protect your business with comprehensive AI-powered security solutions.',
       icon: Shield,
-<<<<<<< HEAD
       title: 'Enterprise Security',
       description: 'Bank-level security with end-to-end encryption and compliance standards'
     },
@@ -63,8 +62,6 @@ import React, { useState, useEffect } from 'react';
       role: 'VP Engineering',
       content: 'Outstanding security features and seamless integration. Perfect for our needs.',
       rating: 5
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-bc7b
     }
   ]
 

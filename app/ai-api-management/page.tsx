@@ -20,16 +20,12 @@ const AIApiManagementPage: React.FC = () => {
       benefits: ['Adaptive rate limiting', 'Abuse prevention', 'Performance optimization', 'Dynamic scaling']
     },
     {
-<<<<<<< HEAD
-
       title: 'Automated Documentation',
       description: 'Generate and maintain comprehensive API documentation automatically with AI-powered analysis.',
       benefits: ['Auto-generated docs', 'Interactive examples', 'Version management', 'Developer portal']
-
-    },
+    }
   ];
   const benefits = [
-
     'Reduced API downtime by 95%',
     '50% faster API response times',
     'Automated security scanning',
@@ -42,15 +38,7 @@ const AIApiManagementPage: React.FC = () => {
     { icon: <Shield className="w-8 h-8 text-green-500" />, value: '100%', label: 'Security' },
     { icon: <Users className="w-8 h-8 text-purple-500" />, value: '10K+', label: 'APIs Managed' },
     { icon: <BarChart3 className="w-8 h-8 text-orange-500" />, value: '50%', label: 'Cost Reduction' }
-
-  ]
-=======
-    }
   ];
-  const benefits = [
-
-  ];
->>>>>>> cursor/analyze-improve-and-deploy-application-bc7b
   return (
 
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">

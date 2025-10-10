@@ -98,7 +98,6 @@ return (
                         <li>
                           <CheckCircle>
 
-=======
 import React, { useState, useEffect } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -416,7 +415,6 @@ const AIChatbotBuilder: React.FC = () => {
 }
 export default AiChatbotBuilderPage;
 
-=======
                   </div>
                 </div>
               </div>

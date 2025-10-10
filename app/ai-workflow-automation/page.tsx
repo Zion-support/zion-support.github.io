@@ -98,7 +98,6 @@ return (
                         <li>
                           <CheckCircle>
 
-=======
 import React, { useState, useEffect } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -312,7 +311,6 @@ const AIWorkflowAutomation: React.FC = () => {
                 <button>
                   Learn More
                 </button>
-=======
                   </div>
                 ))}
               </div>
