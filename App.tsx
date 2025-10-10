@@ -79,6 +79,13 @@ const DemoPage = React.lazy(() => import('./app/demo/page'));
 const ConsultationPage = React.lazy(() => import('./app/consultation/page'));
 const ServicesPage = React.lazy(() => import('./app/services/page'));
 
+// New Micro SAAS Services
+const AIQuantumFinancialOracle = React.lazy(() => import('./app/ai-quantum-financial-oracle/page'));
+const AINeuralMemoryAssistant = React.lazy(() => import('./app/ai-neural-memory-assistant/page'));
+const AIHolographicWorkspace = React.lazy(() => import('./app/ai-holographic-workspace/page'));
+const AISmartCalendar = React.lazy(() => import('./app/ai-smart-calendar/page'));
+const AIVideoGenerator = React.lazy(() => import('./app/ai-video-generator/page'));
+
 // Performance monitoring hook
 const AppWithPerformanceMonitoring: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   usePerformanceMonitor();
@@ -122,6 +129,13 @@ const App: React.FC = memo(() => {
                       <Route path="/demo" element={<DemoPage />} />
                       <Route path="/consultation" element={<ConsultationPage />} />
                       <Route path="/services" element={<ServicesPage />} />
+                      
+                      {/* New Micro SAAS Services */}
+                      <Route path="/ai-quantum-financial-oracle" element={<AIQuantumFinancialOracle />} />
+                      <Route path="/ai-neural-memory-assistant" element={<AINeuralMemoryAssistant />} />
+                      <Route path="/ai-holographic-workspace" element={<AIHolographicWorkspace />} />
+                      <Route path="/ai-smart-calendar" element={<AISmartCalendar />} />
+                      <Route path="/ai-video-generator" element={<AIVideoGenerator />} />
                     </Routes>
                   </Suspense>
                   </main>

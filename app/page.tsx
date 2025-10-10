@@ -1,20 +1,71 @@
 'use client';
 
 import React from 'react';
-import { ArrowRight, Star, CheckCircle, Phone, Mail, MapPin, Brain, Zap, Target, BarChart, Shield, Users, Globe, Clock, Award, Rocket, TrendingUp, Building, Activity, Settings, Database, Heart, Home } from 'lucide-react';
+import { ArrowRight, Star, CheckCircle, Phone, Mail, MapPin, Brain, Zap, Target, BarChart, Shield, Users, Globe, Clock, Award, Rocket, TrendingUp, Building, Activity, Settings, Database, Heart, Home, Video } from 'lucide-react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 
 // Service data
 const microSAASServices = [
   {
+    name: "AI Quantum Financial Oracle",
+    description: "Revolutionary quantum-powered financial predictions with 94% accuracy and real-time risk analysis",
+    price: "$299/mo",
+    features: ["Quantum Predictions", "Risk Analysis", "Multi-Asset Optimization", "Sentiment Analysis"],
+    category: "Finance",
+    popular: true,
+    icon: BarChart,
+    link: "/ai-quantum-financial-oracle"
+  },
+  {
+    name: "AI Neural Memory Assistant",
+    description: "The first AI with true persistent memory that learns and adapts to your unique needs over time",
+    price: "$149/mo",
+    features: ["Persistent Memory", "Cognitive Enhancement", "Contextual Understanding", "Predictive Assistance"],
+    category: "AI Assistant",
+    popular: true,
+    icon: Brain,
+    link: "/ai-neural-memory-assistant"
+  },
+  {
+    name: "AI Holographic Workspace",
+    description: "Immersive 3D workspace with holographic displays and spatial computing capabilities",
+    price: "$199/mo",
+    features: ["3D Interface", "Spatial Visualization", "Collaborative Workspace", "Gesture Control"],
+    category: "Productivity",
+    popular: true,
+    icon: Target,
+    link: "/ai-holographic-workspace"
+  },
+  {
+    name: "AI Smart Calendar",
+    description: "Intelligent scheduling with AI-powered time optimization and conflict prevention",
+    price: "$79/mo",
+    features: ["Smart Scheduling", "Time Blocking", "Meeting Optimization", "Predictive Scheduling"],
+    category: "Productivity",
+    popular: true,
+    icon: Clock,
+    link: "/ai-smart-calendar"
+  },
+  {
+    name: "AI Video Generator",
+    description: "Create stunning professional videos from text prompts with AI-powered generation and editing",
+    price: "$99/mo",
+    features: ["Text-to-Video", "Smart Editing", "Voice Synthesis", "Scene Generation"],
+    category: "Content",
+    popular: true,
+    icon: Video,
+    link: "/ai-video-generator"
+  },
+  {
     name: "AI Project Manager Pro",
     description: "Intelligent project management with predictive analytics and automated resource allocation",
     price: "$99/mo",
     features: ["Smart Scheduling", "Risk Prediction", "Team Optimization", "Progress Tracking"],
     category: "Productivity",
-    popular: true,
-    icon: BarChart
+    popular: false,
+    icon: BarChart,
+    link: "/ai-project-manager"
   },
   {
     name: "AI Analytics Dashboard",
@@ -22,8 +73,9 @@ const microSAASServices = [
     price: "$149/mo",
     features: ["Real-time Analytics", "Predictive Insights", "Custom Reports", "Data Visualization"],
     category: "Analytics",
-    popular: true,
-    icon: Target
+    popular: false,
+    icon: Target,
+    link: "/ai-analytics-dashboard"
   },
   {
     name: "AI Customer Support Bot",
@@ -32,16 +84,8 @@ const microSAASServices = [
     features: ["24/7 Support", "Multi-language", "Sentiment Analysis", "Escalation Management"],
     category: "Support",
     popular: false,
-    icon: Users
-  },
-  {
-    name: "AI Content Generator",
-    description: "Create high-quality content automatically with AI-powered writing and editing tools",
-    price: "$79/mo",
-    features: ["Content Creation", "SEO Optimization", "Multi-format", "Brand Voice"],
-    category: "Content",
-    popular: true,
-    icon: Zap
+    icon: Users,
+    link: "/ai-customer-support-bot"
   }
 ];
 
@@ -244,9 +288,12 @@ const HomePage: React.FC = () => {
                     
                     <div className="text-center">
                       <div className="text-2xl font-bold text-cyan-400 mb-2">{service.price}</div>
-                      <button className="text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors">
+                      <a 
+                        href={service.link}
+                        className="text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors"
+                      >
                         Learn More →
-                      </button>
+                      </a>
                     </div>
                   </div>
                 </div>
