@@ -4,6 +4,9 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-bba0
 import { ArrowRight, ExternalLink, CheckCircle, TrendingUp, Users, Award } from 'lucide-react';
 
 interface CaseStudy {
@@ -16,14 +19,17 @@ interface CaseStudy {
   results: string[];
   image: string;
   duration: string;
-  team: string;
+  team: string});
 }
+<<<<<<< HEAD
 =======
 import { ArrowRight, ExternalLink, Building2, Users, TrendingUp, Shield, Zap } from 'lucide-react';
 >>>>>>> cursor/analyze-improve-and-deploy-application-a851
 =======
 import { ArrowRight, Users, Award, TrendingUp, CheckCircle } from 'lucide-react';
 >>>>>>> cursor/fix-errors-and-merge-to-main-550e
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-bba0
 
 const CaseStudiesPage: React.FC = () => {
   const caseStudies = [
@@ -33,7 +39,6 @@ const CaseStudiesPage: React.FC = () => {
       title: 'AI-Powered Customer Service Transformation',
       client: 'TechCorp Solutions',
       industry: 'Technology',
-<<<<<<< HEAD
       challenge: 'High customer service costs and long response times affecting customer satisfaction.',
       solution: 'Implemented AI-powered chatbots and automated ticket routing system with natural language processing.',
 =======
@@ -52,6 +57,7 @@ const CaseStudiesPage: React.FC = () => {
 <<<<<<< HEAD
       image: '/images/case-studies/ai-customer-service.jpg',
       duration: '3 months',
+<<<<<<< HEAD
       team: '8 specialists'
 =======
       image: '/images/case-studies/ai-customer-service.jpg',
@@ -69,6 +75,10 @@ const CaseStudiesPage: React.FC = () => {
       image: '/images/case-studies/ecommerce-ai.jpg'
 >>>>>>> cursor/fix-errors-and-merge-to-main-550e
     },
+=======
+      team: '8 specialists'});;)
+},
+>>>>>>> cursor/fix-errors-and-merge-to-main-bba0
     {
       id: 2,
       title: 'Cloud Migration for Financial Services',
@@ -76,6 +86,9 @@ const CaseStudiesPage: React.FC = () => {
       industry: 'Financial Services',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-bba0
       challenge: 'Legacy on-premises infrastructure limiting scalability and increasing maintenance costs.',
       solution: 'Complete cloud migration to AWS with microservices architecture and automated scaling.',
 =======
@@ -90,26 +103,13 @@ const CaseStudiesPage: React.FC = () => {
 <<<<<<< HEAD
       image: '/images/case-studies/cloud-migration.jpg',
       duration: '6 months',
-      team: '12 specialists'
-=======
-      image: '/images/case-studies/cloud-migration.jpg',
-      challenge: 'Legacy systems causing performance issues and security concerns',
-      solution: 'Complete cloud migration with enhanced security protocols',
-      results: [
-        '99.9% uptime achieved',
-        '50% faster processing',
-        'Zero security incidents'
-      ],
-      duration: '6 months',
-      team: '8 specialists'
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
-    },
+      team: '12 specialists'});;)
+},
     {
       id: '3',
       title: 'Cybersecurity Enhancement for Healthcare',
       client: 'MediCare Plus',
       industry: 'Healthcare',
-<<<<<<< HEAD
       challenge: 'Increasing cyber threats and need for HIPAA compliance in patient data protection.',
       solution: 'Comprehensive security audit and implementation of zero-trust architecture with advanced threat detection.',
       results: [
@@ -120,8 +120,8 @@ const CaseStudiesPage: React.FC = () => {
       ],
       image: '/images/case-studies/cybersecurity-healthcare.jpg',
       duration: '4 months',
-      team: '10 specialists'
-    },
+      team: '10 specialists'});;)
+},
     {
       id: '4',
       title: 'Machine Learning for Predictive Analytics',
@@ -137,8 +137,8 @@ const CaseStudiesPage: React.FC = () => {
       ],
       image: '/images/case-studies/ml-predictive-analytics.jpg',
       duration: '5 months',
-      team: '6 specialists'
-    },
+      team: '6 specialists'});;)
+},
     {
       id: '5',
       title: 'Digital Transformation for Manufacturing',
@@ -154,8 +154,8 @@ const CaseStudiesPage: React.FC = () => {
       ],
       image: '/images/case-studies/digital-transformation.jpg',
       duration: '8 months',
-      team: '15 specialists'
-    },
+      team: '15 specialists'});;)
+},
     {
       id: '6',
       title: 'Blockchain Integration for Supply Chain',
@@ -179,6 +179,7 @@ const CaseStudiesPage: React.FC = () => {
 <<<<<<< HEAD
       image: '/images/case-studies/blockchain-supply-chain.jpg',
       duration: '7 months',
+<<<<<<< HEAD
       team: '11 specialists'
 =======
       image: '/images/case-studies/cybersecurity-healthcare.jpg',
@@ -244,26 +245,23 @@ const CaseStudiesPage: React.FC = () => {
       image: '/images/case-studies/blockchain-logistics.jpg'
 >>>>>>> cursor/fix-errors-and-merge-to-main-550e
     }
+=======
+      team: '11 specialists'});;)
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-bba0
   ];
 
   const stats = [
-<<<<<<< HEAD
     { label: 'Projects Completed', value: '150+', icon: CheckCircle },
     { label: 'Client Satisfaction', value: '98%', icon: TrendingUp },
     { label: 'Team Members', value: '50+', icon: Users },
     { label: 'Industry Awards', value: '25+', icon: Award }
-=======
-    { icon: Building2, label: 'Projects Completed', value: '150+' },
-    { icon: Users, label: 'Happy Clients', value: '200+' },
-    { icon: TrendingUp, label: 'Success Rate', value: '98%' },
-    { icon: Shield, label: 'Security Score', value: '100%' }
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
   ];
 
   return (
     <>
-      <Helmet>
-        <title>Case Studies | Zion Tech Group | Success Stories & Client Results</title>
+      <Helmet></Helmet>
+        <titl></titl>Case Studies | Zion Tech Group | Success Stories & Client Results</title>
         <meta name="description" content="Explore our successful case studies and see how Zion Tech Group has helped businesses transform with AI and IT solutions. Real results from real clients." />
         <meta name="keywords" content="case studies, success stories, AI solutions, IT services, business transformation, client results" />
         <meta property="og:title" content="Case Studies - Zion Tech Group" />
@@ -272,17 +270,25 @@ const CaseStudiesPage: React.FC = () => {
         <meta property="og:url" content="https://ziontechgroup.com/case-studies" />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div></div>
         {/* Hero Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
 <<<<<<< HEAD
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Success <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Stories</span>
+=======
+        <section></section>
+          <div></div>
+            <h1></h1>
+              Success <spa></spa>Stories</span>
+>>>>>>> cursor/fix-errors-and-merge-to-main-bba0
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-12">
+            <p></p>
               Discover how we've helped businesses across industries transform their operations with cutting-edge AI and IT solutions.
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
         <section className="relative py-20 px-4">
@@ -301,6 +307,8 @@ const CaseStudiesPage: React.FC = () => {
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Discover how we've helped businesses across industries transform their operations with cutting-edge AI and IT solutions.
 >>>>>>> cursor/analyze-improve-and-deploy-application-a851
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-bba0
             </p>
 =======
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -318,6 +326,7 @@ const CaseStudiesPage: React.FC = () => {
               </p>
 >>>>>>> cursor/fix-errors-and-merge-to-main-8a15
 
+<<<<<<< HEAD
               {/* Stats */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
                 {stats.map((stat, index) => (
@@ -336,12 +345,17 @@ const CaseStudiesPage: React.FC = () => {
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+=======
+            {/* Stats */}
+            <div></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-bba0
               {stats.map((stat, index) => (
-                <div key={index} className="text-center">
-                  <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mb-4">
+                <div></div>
+                  <div></div>
                     <stat.icon className="w-8 h-8 text-white" />
 >>>>>>> cursor/fix-errors-and-merge-to-main-550e
                   </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
                   <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
                   <div className="text-gray-400">{stat.label}</div>
@@ -351,12 +365,18 @@ const CaseStudiesPage: React.FC = () => {
                 ))}
               </div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-8a15
+=======
+                  <di></di>{stat.value}</div>
+                  <di></di>{stat.label}</div>
+                </div>
+              ));
+>>>>>>> cursor/fix-errors-and-merge-to-main-bba0
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Case Studies Grid */}
+<<<<<<< HEAD
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-3xl font-bold text-white mb-12 text-center">Featured Case Studies</h2>
@@ -422,127 +442,89 @@ const CaseStudiesPage: React.FC = () => {
 =======
                   </Link>
 >>>>>>> cursor/fix-errors-and-merge-to-main-550e
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-<<<<<<< HEAD
-        {/* CTA Section */}
-        <section className="py-16 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-12 border border-white/20">
-              <h2 className="text-3xl font-bold text-white mb-6">
-                Ready to Write Your Success Story?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Let's discuss how we can help transform your business with our AI and IT solutions.
 =======
-        {/* Case Studies Grid */}
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-3xl font-bold text-white text-center mb-12">
-              Featured Case Studies
-            </h2>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <section></section>
+          <div></div>
+            <div></div>
               {caseStudies.map((study) => (
-                <div key={study.id} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl overflow-hidden hover:border-cyan-400/50 transition-all duration-300 group">
-                  <div className="aspect-video bg-gradient-to-br from-cyan-400/20 to-purple-400/20 flex items-center justify-center">
-                    <div className="text-6xl opacity-50">📊</div>
+                <div></div>
+                  <div></div>
+                    <div></div>
+                    <div></div>
+                      <div></div>
+                        <spa></spa>{study.industry}</span>
+                        <spa></spa>{study.duration}</span>
+                      </div>
+                    </div>
                   </div>
                   
-                  <div className="p-6">
-                    <div className="flex items-center gap-2 mb-3">
-                      <span className="text-cyan-400 text-sm font-medium">{study.industry}</span>
-                      <span className="text-gray-400">•</span>
-                      <span className="text-gray-400 text-sm">{study.duration}</span>
-                    </div>
-                    
-                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
+                  <div></div>
+                    <h3></h3>
                       {study.title}
                     </h3>
                     
-                    <p className="text-gray-300 mb-4">
-                      <strong>Client:</strong> {study.client}
-                    </p>
-                    
-                    <div className="space-y-2 mb-4">
-                      <p className="text-sm text-gray-400">
-                        <strong>Challenge:</strong> {study.challenge}
-                      </p>
-                      <p className="text-sm text-gray-400">
-                        <strong>Solution:</strong> {study.solution}
-                      </p>
+                    <div></div>
+                      <h></h>Client: {study.client}</h4>
+                      <p className="text-gray-300 text-sm mb-4">{study.team}</p>
                     </div>
-                    
-                    <div className="mb-4">
-                      <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Results:</h4>
-                      <ul className="space-y-1">
+
+                    <div></div>
+                      <h></h>Challenge</h4>
+                      <p className="text-gray-300 text-sm mb-4">{study.challenge}</p>
+                    </div>
+
+                    <div></div>
+                      <h></h>Solution</h4>
+                      <p className="text-gray-300 text-sm mb-4">{study.solution}</p>
+                    </div>
+
+                    <div></div>
+                      <h></h>Results</h4>
+                      <ul></ul>
                         {study.results.map((result, index) => (
-                          <li key={index} className="text-sm text-gray-300 flex items-center gap-2">
-                            <Zap className="w-3 h-3 text-cyan-400" />
+                          <li></li>
+                            <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
                             {result}
                           </li>
-                        ))}
+                        ));
                       </ul>
                     </div>
-                    
-                    <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
-                      <span>Team: {study.team}</span>
+
+                    <div></div>
+                      <Link></Link>
+                        Read Full Case Study
+                        <ArrowRight className="w-4 h-4" />
+                      </Link>
+                      <button></button>
+                        <ExternalLink className="w-4 h-4" />
+                        Share
+                      </button>
                     </div>
-                    
-                    <button className="w-full bg-gradient-to-r from-cyan-400 to-purple-400 text-slate-900 font-semibold py-2 px-4 rounded-lg hover:from-cyan-300 hover:to-purple-300 transition-all duration-200 flex items-center justify-center gap-2">
-                      View Details
-                      <ArrowRight className="w-4 h-4" />
-                    </button>
                   </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-bba0
                 </div>
-              ))}
+              ));
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-slate-800/30 backdrop-blur-sm border border-slate-700 rounded-2xl p-8 md:p-12">
-              <h2 className="text-3xl font-bold text-white mb-4">
+        <section></section>
+          <div></div>
+            <div></div>
+              <h2></h2>
                 Ready to Write Your Success Story?
               </h2>
-              <p className="text-gray-300 text-lg mb-8">
-                Let us help you achieve similar results with our proven AI and IT solutions. 
-                Contact us today for a free consultation.
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
+              <p></p>
+                Let's discuss how we can help transform your business with our AI and IT solutions.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  to="/contact"
-<<<<<<< HEAD
-                  className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
-                >
+              <div></div>
+                <Link></Link>
                   Start Your Project
                   <ArrowRight className="w-5 h-5" />
                 </Link>
-                <Link
-                  to="/services"
-                  className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300"
-                >
+                <Link></Link>
                   Explore Our Services
-=======
-                  className="bg-gradient-to-r from-cyan-400 to-purple-400 text-slate-900 font-semibold py-3 px-8 rounded-lg hover:from-cyan-300 hover:to-purple-300 transition-all duration-200 flex items-center justify-center gap-2"
-                >
-                  Start Your Project
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-                <Link
-                  to="/services"
-                  className="border border-cyan-400 text-cyan-400 font-semibold py-3 px-8 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-200 flex items-center justify-center gap-2"
-                >
-                  Explore Services
-                  <ExternalLink className="w-4 h-4" />
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
                 </Link>
               </div>
             </div>
@@ -550,7 +532,7 @@ const CaseStudiesPage: React.FC = () => {
         </section>
       </div>
     </>
-  );
+  ));)
 };
 
 export default CaseStudiesPage;

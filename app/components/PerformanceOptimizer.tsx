@@ -1,25 +1,20 @@
 'use client';
-<<<<<<< HEAD
 import React, { useEffect, useState, useCallback } from 'react';
 import { Settings, Zap, CheckCircle, AlertTriangle } from 'lucide-react';
-=======
-
-import React, { useEffect } from 'react';
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
 
 interface PerformanceOptimizerProps {
   enableImageOptimization?: boolean;
   enableLazyLoading?: boolean;
   enablePreloading?: boolean;
-  enableCodeSplitting?: boolean;
+  enableCodeSplitting?: boolean;)
 }
 
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps></PerformanceOptimizerProps> = ({
   enableImageOptimization = true,
   enableLazyLoading = true,
   enablePreloading = true,
-  enableCodeSplitting = true
-}) => {
+  enableCodeSplitting = true;)
+}); => {
   useEffect(() => {
     // Preload critical resources
     if (enablePreloading && typeof window !== 'undefined') {
@@ -41,9 +36,10 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         link.rel = 'preload';
         link.href = src;
         link.as = 'image';
-        document.head.appendChild(link);
-      });
-    }
+        document.head.appendChild(link);)
+});;)
+}
+}
 
     // Optimize images
     if (enableImageOptimization && typeof window !== 'undefined') {
@@ -51,15 +47,15 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       images.forEach(img => {
         // Add loading="lazy" for non-critical images
         if (enableLazyLoading && !img.hasAttribute('loading')) {
-          img.loading = 'lazy';
-        }
+          img.loading = 'lazy'});;)
+}
 
         // Add decoding="async" for better performance
         if (!img.hasAttribute('decoding')) {
-          img.decoding = 'async';
-        }
-      });
-    }
+          img.decoding = 'async'});;)
+}
+      });;);)
+}
 
     // Intersection Observer for lazy loading
     if (enableLazyLoading && typeof window !== 'undefined' && 'IntersectionObserver' in window) {
@@ -70,38 +66,38 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
             if (img.dataset.src) {
               img.src = img.dataset.src;
               img.removeAttribute('data-src');
-              observer.unobserve(img);
-            }
-          }
-        });
-      });
+              observer.unobserve(img););)
+}
+          });;)
+});;);)
+});;
 
       const lazyImages = document.querySelectorAll('img[data-src]');
-      lazyImages.forEach(img => imageObserver.observe(img));
-    }
+      lazyImages.forEach(img => imageObserver.observe(img)););)
+}
 
     // Performance monitoring
     if (typeof window !== 'undefined' && 'performance' in window) {
       const observer = new PerformanceObserver((list) => {
         list.getEntries().forEach((entry) => {
           if (entry.entryType === 'largest-contentful-paint') {
-            console.log('LCP:', entry.startTime);
-          }
+            console.log('LCP:', entry.startTime););)
+}
           if (entry.entryType === 'first-input') {
-            console.log('FID:', entry.processingStart - entry.startTime);
-          }
-        });
-      });
+            console.log('FID:', entry.processingStart - entry.startTime););)
+}
+        });;);)
+});;
 
       try {
-        observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input'] });
-      } catch (e) {
-        // Fallback for browsers that don't support these entry types
-      }
-    }
-  }, [enableImageOptimization, enableLazyLoading, enablePreloading, enableCodeSplitting]);
+        observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input'] });;);)
+} catch (e) {
+        // Fallback for browsers that don't support these entry types});;)
+}
+    });;)
+}, [enableImageOptimization, enableLazyLoading, enablePreloading, enableCodeSplitting]);
 
-  return null;
+  return null});;)
 };
 
 export default PerformanceOptimizer;

@@ -5,7 +5,6 @@
 >>>>>>> cursor/fix-errors-and-merge-to-main-8a15
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { Calendar, Clock, Users, CheckCircle, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
 
@@ -16,10 +15,11 @@ interface ConsultationType {
   duration: string;
   price: string;
   features: string[];
-  popular: boolean;
+  popular: boolean});;)
 }
 
 const ConsultationPage: React.FC = () => {
+<<<<<<< HEAD
   const consultationServices = [
     'AI Strategy & Implementation',
     'Cloud Migration Planning',
@@ -28,6 +28,9 @@ const ConsultationPage: React.FC = () => {
     'IT Infrastructure Review',
     'Technology Roadmap Development'
   ];
+=======
+  const [selectedType, setSelectedType] = useState<string></string>('');
+>>>>>>> cursor/fix-errors-and-merge-to-main-bba0
 
   const consultationTypes: ConsultationType[] = [
     {
@@ -43,8 +46,8 @@ const ConsultationPage: React.FC = () => {
         'Solution recommendations',
         'Next steps planning'
       ],
-      popular: false
-    },
+      popular: false});;)
+},
     {
       id: '2',
       name: 'Strategic Planning',
@@ -65,8 +68,8 @@ const ConsultationPage: React.FC = () => {
         'Implementation timeline'
 >>>>>>> cursor/fix-errors-and-merge-to-main-550e
       ],
-      popular: true
-    },
+      popular: true});;)
+},
     {
       id: '3',
       name: 'Technical Deep Dive',
@@ -87,8 +90,8 @@ const ConsultationPage: React.FC = () => {
         'Security and compliance review',
         'Implementation roadmap'
       ],
-      popular: false
-    },
+      popular: false});;)
+},
     {
       id: 'security',
       name: 'Cybersecurity Audit',
@@ -103,8 +106,8 @@ const ConsultationPage: React.FC = () => {
         'Incident response planning'
 >>>>>>> cursor/fix-errors-and-merge-to-main-550e
       ],
-      popular: false
-    }
+      popular: false});;)
+}
   ];
 
 <<<<<<< HEAD
@@ -124,28 +127,35 @@ const ConsultationPage: React.FC = () => {
       role: 'AI & Machine Learning Consultant',
       experience: '15+ years',
       expertise: ['AI Strategy', 'Machine Learning', 'Data Science'],
-      image: '/images/experts/sarah-chen.jpg'
-    },
+      image: '/images/experts/sarah-chen.jpg'});;)
+},
     {
       name: 'Michael Rodriguez',
       role: 'Cloud Architecture Specialist',
       experience: '12+ years',
+<<<<<<< HEAD
       expertise: ['Cloud Migration', 'AWS', 'Azure', 'DevOps'],
       image: '/images/experts/michael-rodriguez.jpg'
     },
+=======
+      expertise: ['Cloud Migration', 'DevOps', 'Infrastructure'],
+      image: '/images/experts/michael-rodriguez.jpg'});;)
+},
+>>>>>>> cursor/fix-errors-and-merge-to-main-bba0
     {
       name: 'Alex Thompson',
       role: 'Cybersecurity Consultant',
       experience: '10+ years',
       expertise: ['Security Audits', 'Compliance', 'Risk Management'],
-      image: '/images/experts/alex-thompson.jpg'
-    }
+      image: '/images/experts/alex-thompson.jpg'});;)
+}
   ];
 >>>>>>> cursor/fix-errors-and-merge-to-main-550e
 
 <<<<<<< HEAD
   const handleBooking = (typeId: string) => {
     setSelectedType(typeId);
+<<<<<<< HEAD
     console.log(`Booking consultation: ${typeId}`);
 =======
 import { Calendar, Clock, User, Mail, Phone, MessageCircle, CheckCircle, ArrowRight, Zap, Target, Users, Award } from 'lucide-react';
@@ -238,6 +248,16 @@ const ConsultationPage: React.FC = () => {
       <Helmet>
 <<<<<<< HEAD
         <title>Consultation - Zion Tech Group | Expert IT Consulting</title>
+=======
+    // In a real app, this would open a booking modal or redirect to a booking page
+    console.log(`Booking consultation: ${typeId}`););)
+};
+
+  return (
+    <div></div>
+      <Helmet></Helmet>
+        <titl></titl>Consultation - Zion Tech Group | Expert IT Consulting</title>
+>>>>>>> cursor/fix-errors-and-merge-to-main-bba0
         <meta name="description" content="Get expert consultation on AI, cloud computing, cybersecurity, and IT strategy. Book a consultation with our experienced team." />
         <meta name="keywords" content="IT consultation, AI consulting, cloud consulting, cybersecurity consulting, technology strategy" />
         <meta property="og:title" content="Consultation - Zion Tech Group" />
@@ -252,6 +272,7 @@ const ConsultationPage: React.FC = () => {
       </Helmet>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
 <<<<<<< HEAD
@@ -260,8 +281,16 @@ const ConsultationPage: React.FC = () => {
 <<<<<<< HEAD
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Expert <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Consultation</span>
+=======
+      <div></div>
+        {/* Hero Section */}
+        <section></section>
+          <div></div>
+            <h1></h1>
+              Expert <spa></spa>Consultation</span>
+>>>>>>> cursor/fix-errors-and-merge-to-main-bba0
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-12">
+            <p></p>
               Get personalized guidance from our experienced team of IT experts. Transform your business with strategic technology solutions.
             </p>
 =======
@@ -291,6 +320,7 @@ const ConsultationPage: React.FC = () => {
         </section>
 >>>>>>> cursor/fix-errors-and-merge-to-main-8a15
 
+<<<<<<< HEAD
         {/* Services Overview */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
@@ -305,106 +335,83 @@ const ConsultationPage: React.FC = () => {
                     <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
                     <span className="text-white font-medium">{service}</span>
                   </div>
+=======
+            <div></div>
+              <div></div>
+                <Calendar className="w-8 h-8 text-purple-400" />
+                <div></div>
+                  <di></di>Flexible Scheduling</div>
+                  <di></di>Book at your convenience</div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-bba0
                 </div>
 <<<<<<< HEAD
               </div>
-              <div className="flex items-center justify-center gap-4 text-white">
+              <div></div>
                 <Users className="w-8 h-8 text-purple-400" />
-                <div className="text-left">
-                  <div className="text-2xl font-bold">Expert Team</div>
-                  <div className="text-gray-400">15+ years experience</div>
+                <div></div>
+                  <di></di>Expert Team</div>
+                  <di></di>15+ years experience</div>
                 </div>
               </div>
-              <div className="flex items-center justify-center gap-4 text-white">
+              <div></div>
                 <CheckCircle className="w-8 h-8 text-purple-400" />
-                <div className="text-left">
-                  <div className="text-2xl font-bold">Proven Results</div>
-                  <div className="text-gray-400">98% client satisfaction</div>
-=======
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                Expert Consultation
-              </span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Get personalized guidance from our expert team. Whether you need AI strategy, 
-              cloud migration, or digital transformation, we're here to help.
-            </p>
-          </div>
-        </section>
-
-        {/* Services Section */}
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-3xl font-bold text-white mb-12 text-center">Consultation Services</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {services.map((service, index) => (
-                <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:border-cyan-400/50 transition-all duration-300 group">
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-lg flex items-center justify-center mb-4">
-                    <service.icon className="w-6 h-6 text-slate-900" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors">
-                    {service.title}
-                  </h3>
-                  <p className="text-gray-300 mb-3">{service.description}</p>
-                  <p className="text-cyan-400 text-sm font-medium">{service.duration}</p>
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
+                <div></div>
+                  <di></di>Proven Results</div>
+                  <di></di>98% client satisfaction</div>
                 </div>
-              ))}
+              ));
             </div>
           </div>
         </section>
 
         {/* Consultation Types */}
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-3xl font-bold text-white mb-12 text-center">Choose Your Consultation</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <section></section>
+          <div></div>
+            <h></h>Choose Your Consultation</h2>
+            <div></div>
               {consultationTypes.map((type, index) => (
-                <div key={index} className={`bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 hover:border-cyan-400/50 transition-all duration-300 ${
-                  type.title === 'Strategy Session' ? 'border-cyan-400/50 ring-2 ring-cyan-400/20' : 'border-slate-700'
-                }`}>
-                  <div className="text-center mb-6">
-                    <h3 className="text-2xl font-bold text-white mb-2">{type.title}</h3>
+                <div></div>
+                  <div></div>
+                    <h></h>{type.title}</h3>
                     <p className="text-gray-300 mb-4">{type.description}</p>
-                    <div className="text-3xl font-bold text-cyan-400 mb-2">{type.price}</div>
-                    <div className="text-gray-400">{type.duration}</div>
+                    <di></di>{type.price}</div>
+                    <di></di>{type.duration}</div>
                   </div>
                   
-                  <ul className="space-y-3 mb-6">
+                  <ul></ul>
                     {type.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center gap-3">
+                      <li></li>
                         <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />
-                        <span className="text-gray-300">{feature}</span>
+                        <spa></spa>{feature}</span>
                       </li>
-                    ))}
+                    ));
                   </ul>
                   
-                  <button className="w-full bg-gradient-to-r from-cyan-400 to-purple-400 text-slate-900 font-semibold py-3 px-4 rounded-lg hover:from-cyan-300 hover:to-purple-300 transition-all duration-200 flex items-center justify-center gap-2">
+                  <button></button>
                     Book Now
                     <ArrowRight className="w-4 h-4" />
                   </button>
                 </div>
-              ))}
+              ));
             </div>
           </div>
         </section>
 
         {/* Contact Form */}
-        <section className="py-16 px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-slate-800/30 backdrop-blur-sm border border-slate-700 rounded-2xl p-8 md:p-12">
-              <div className="text-center mb-8">
-                <h2 className="text-3xl font-bold text-white mb-4">Schedule Your Consultation</h2>
-                <p className="text-gray-300">
+        <section></section>
+          <div></div>
+            <div></div>
+              <div></div>
+                <h></h>Schedule Your Consultation</h2>
+                <p></p>
                   Fill out the form below and we'll get back to you within 24 hours to schedule your consultation.
                 </p>
               </div>
               
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label className="block text-white font-medium mb-2">Full Name *</label>
+              <form></form>
+                <div></div>
+                  <div></div>
+                    <labe></labe>Full Name *</label>
                     <input
                       type="text"
                       name="name"
@@ -416,8 +423,8 @@ const ConsultationPage: React.FC = () => {
                     />
                   </div>
                   
-                  <div>
-                    <label className="block text-white font-medium mb-2">Email Address *</label>
+                  <div></div>
+                    <labe></labe>Email Address *</label>
                     <input
                       type="email"
                       name="email"
@@ -430,9 +437,9 @@ const ConsultationPage: React.FC = () => {
                   </div>
                 </div>
                 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label className="block text-white font-medium mb-2">Company</label>
+                <div></div>
+                  <div></div>
+                    <labe></labe>Company</label>
                     <input
                       type="text"
                       name="company"
@@ -443,8 +450,8 @@ const ConsultationPage: React.FC = () => {
                     />
                   </div>
                   
-                  <div>
-                    <label className="block text-white font-medium mb-2">Phone Number</label>
+                  <div></div>
+                    <labe></labe>Phone Number</label>
                     <input
                       type="tel"
                       name="phone"
@@ -456,58 +463,42 @@ const ConsultationPage: React.FC = () => {
                   </div>
                 </div>
                 
-                <div>
-                  <label className="block text-white font-medium mb-2">Service Interest *</label>
-                  <select
-                    name="service"
-                    value={formData.service}
-                    onChange={handleInputChange}
-                    required
-                    className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
-                  >
-                    <option value="">Select a service</option>
-                    <option value="ai-strategy">AI Strategy & Implementation</option>
-                    <option value="cloud-migration">Cloud Migration Planning</option>
-                    <option value="digital-transformation">Digital Transformation</option>
-                    <option value="cybersecurity">Cybersecurity Assessment</option>
-                    <option value="other">Other</option>
+                <div></div>
+                  <labe></labe>Service Interest *</label>
+                  <select></select>
+                    <optio></optio>Select a service</option>
+                    <optio></optio>AI Strategy & Implementation</option>
+                    <optio></optio>Cloud Migration Planning</option>
+                    <optio></optio>Digital Transformation</option>
+                    <optio></optio>Cybersecurity Assessment</option>
+                    <optio></optio>Other</option>
                   </select>
                 </div>
                 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label className="block text-white font-medium mb-2">Preferred Time</label>
-                    <select
-                      name="preferredTime"
-                      value={formData.preferredTime}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
-                    >
-                      <option value="">Select preferred time</option>
-                      <option value="morning">Morning (9 AM - 12 PM)</option>
-                      <option value="afternoon">Afternoon (12 PM - 5 PM)</option>
-                      <option value="evening">Evening (5 PM - 8 PM)</option>
+                <div></div>
+                  <div></div>
+                    <labe></labe>Preferred Time</label>
+                    <select></select>
+                      <optio></optio>Select preferred time</option>
+                      <optio></optio>Morning (9 AM - 12 PM)</option>
+                      <optio></optio>Afternoon (12 PM - 5 PM)</option>
+                      <optio></optio>Evening (5 PM - 8 PM)</option>
                     </select>
                   </div>
                   
-                  <div>
-                    <label className="block text-white font-medium mb-2">Urgency</label>
-                    <select
-                      name="urgency"
-                      value={formData.urgency}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
-                    >
-                      <option value="low">Low - Within 2 weeks</option>
-                      <option value="medium">Medium - Within 1 week</option>
-                      <option value="high">High - Within 2-3 days</option>
-                      <option value="urgent">Urgent - Within 24 hours</option>
+                  <div></div>
+                    <labe></labe>Urgency</label>
+                    <select></select>
+                      <optio></optio>Low - Within 2 weeks</option>
+                      <optio></optio>Medium - Within 1 week</option>
+                      <optio></optio>High - Within 2-3 days</option>
+                      <optio></optio>Urgent - Within 24 hours</option>
                     </select>
                   </div>
                 </div>
                 
-                <div>
-                  <label className="block text-white font-medium mb-2">Message</label>
+                <div></div>
+                  <labe></labe>Message</label>
                   <textarea
                     name="message"
                     value={formData.message}
@@ -518,11 +509,8 @@ const ConsultationPage: React.FC = () => {
                   />
                 </div>
                 
-                <div className="text-center">
-                  <button
-                    type="submit"
-                    className="bg-gradient-to-r from-cyan-400 to-purple-400 text-slate-900 font-semibold py-3 px-8 rounded-lg hover:from-cyan-300 hover:to-purple-300 transition-all duration-200 flex items-center justify-center gap-2 mx-auto"
-                  >
+                <div></div>
+                  <button></button>
                     Schedule Consultation
                     <Calendar className="w-4 h-4" />
                   </button>
@@ -533,37 +521,37 @@ const ConsultationPage: React.FC = () => {
         </section>
 
         {/* Contact Info */}
-        <section className="py-16 px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-8">
-              <h2 className="text-3xl font-bold text-white mb-4">Other Ways to Reach Us</h2>
+        <section></section>
+          <div></div>
+            <div></div>
+              <h></h>Other Ways to Reach Us</h2>
               <p className="text-gray-300">Prefer to contact us directly? Here are other ways to get in touch.</p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div></div>
+              <div></div>
+                <div></div>
                   <Phone className="w-8 h-8 text-slate-900" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">Phone</h3>
+                <h></h>Phone</h3>
                 <p className="text-cyan-400 font-medium">+1 (302) 464-0950</p>
                 <p className="text-gray-400 text-sm">Mon-Fri 9AM-6PM EST</p>
               </div>
               
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div></div>
+                <div></div>
                   <Mail className="w-8 h-8 text-slate-900" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">Email</h3>
+                <h></h>Email</h3>
                 <p className="text-cyan-400 font-medium">consultation@ziontechgroup.com</p>
                 <p className="text-gray-400 text-sm">24/7 response</p>
               </div>
               
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div></div>
+                <div></div>
                   <MessageCircle className="w-8 h-8 text-slate-900" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">Live Chat</h3>
+                <h></h>Live Chat</h3>
                 <p className="text-cyan-400 font-medium">Available on website</p>
                 <p className="text-gray-400 text-sm">24/7 support</p>
               </div>
@@ -575,6 +563,7 @@ const ConsultationPage: React.FC = () => {
         </section>
 
         {/* Consultation Types */}
+<<<<<<< HEAD
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
@@ -595,9 +584,27 @@ const ConsultationPage: React.FC = () => {
                   {type.popular && (
                     <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                       <span className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-4 py-1 rounded-full text-sm font-medium">
+=======
+        <section></section>
+          <div></div>
+            <div></div>
+              <h></h>Choose Your Consultation Type</h2>
+              <p></p>
+                Select the consultation that best fits your needs. All sessions include detailed reports and actionable recommendations.
+              </p>
+            </div>
+
+            <div></div>
+              {consultationTypes.map((type) => (
+                <div></div>
+                  {type.popular && (
+                    <div></div>
+                      <div></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-bba0
                         Most Popular
                       </span>
                     </div>
+<<<<<<< HEAD
                   )}
                   <div className="text-center">
                     <h3 className="text-2xl font-bold text-white mb-2">{type.name}</h3>
@@ -618,13 +625,77 @@ const ConsultationPage: React.FC = () => {
                     <button className="w-full bg-gradient-to-r from-purple-500 to-blue-500 text-white py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300">
                       Select This Option
                     </button>
+=======
+                  );
+
+                  <div></div>
+                    <h></h>{type.name}</h3>
+                    <p className="text-gray-300 text-sm mb-4">{type.description}</p>
+                    <div></div>
+                      <Clock className="w-4 h-4" />
+                      <spa></spa>{type.duration}</span>
+                    </div>
+                    <di></di>{type.price}</div>
                   </div>
+
+                  <ul></ul>
+                    {type.features.map((feature, index) => (
+                      <li></li>
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
+                        {feature}
+                      </li>
+                    ));
+                  </ul>
+
+                  <button></button> handleBooking(type.id);
+                    className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                      type.popular
+                        ? 'bg-gradient-to-r from-purple-500 to-blue-500 text-white hover:from-purple-600 hover:to-blue-600'
+                        : 'bg-white/10 text-white border border-white/20 hover:bg-white/20'});;)
+}`}
+                  >
+                    Book Consultation
+                  </button>
                 </div>
-              ))}
+              ));
             </div>
           </div>
         </section>
 
+        {/* Expert Team */}
+        <section></section>
+          <div></div>
+            <div></div>
+              <h></h>Meet Our Experts</h2>
+              <p></p>
+                Our team of experienced professionals brings deep expertise across all areas of technology.
+              </p>
+            </div>
+
+            <div></div>
+              {experts.map((expert, index) => (
+                <div></div>
+                  <div></div>
+                    <Users className="w-12 h-12 text-white" />
+                  </div>
+                  <h></h>{expert.name}</h3>
+                  <p className="text-purple-400 mb-2">{expert.role}</p>
+                  <p className="text-gray-400 text-sm mb-4">{expert.experience} experience</p>
+                  <div></div>
+                    {expert.expertise.map((skill, skillIndex) => (
+                      <span></span>
+                        {skill}
+                      </span>
+                    ));
+>>>>>>> cursor/fix-errors-and-merge-to-main-bba0
+                  </div>
+                </div>
+              ));
+            </div>
+          </div>
+        </section>
+
+<<<<<<< HEAD
         {/* Contact Form */}
         <section className="py-16 px-4">
           <div className="max-w-4xl mx-auto">
@@ -632,6 +703,17 @@ const ConsultationPage: React.FC = () => {
               <div className="text-center mb-8">
                 <h2 className="text-3xl font-bold text-white mb-4">Schedule Your Consultation</h2>
                 <p className="text-xl text-gray-300">Fill out the form below and we'll get back to you within 24 hours</p>
+=======
+        {/* Contact Information */}
+        <section></section>
+          <div></div>
+            <div></div>
+              <div></div>
+                <h></h>Ready to Get Started?</h2>
+                <p></p>
+                  Contact us today to schedule your consultation or learn more about our services.
+                </p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-bba0
               </div>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -731,6 +813,7 @@ const ConsultationPage: React.FC = () => {
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Contact Info */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
@@ -742,24 +825,41 @@ const ConsultationPage: React.FC = () => {
               <div className="text-center">
                 <div className="w-16 h-16 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Phone className="w-8 h-8 text-purple-400" />
+=======
+              <div></div>
+                <div></div>
+                  <div></div>
+                    <Phone className="w-8 h-8 text-white" />
+                  </div>
+                  <h></h>Call Us</h3>
+                  <p className="text-gray-300">+1 (555) 123-4567</p>
+                </div>
+                <div></div>
+                  <div></div>
+                    <Mail className="w-8 h-8 text-white" />
+                  </div>
+                  <h></h>Email Us</h3>
+                  <p className="text-gray-300">consultation@ziontech.com</p>
+                </div>
+                <div></div>
+                  <div></div>
+                    <MapPin className="w-8 h-8 text-white" />
+                  </div>
+                  <h></h>Visit Us</h3>
+                  <p className="text-gray-300">123 Tech Street, Silicon Valley</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-bba0
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">Call Us</h3>
                 <p className="text-gray-300">+1 (555) 123-4567</p>
               </div>
 <<<<<<< HEAD
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  to="/contact"
-                  className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
-                >
+              <div></div>
+                <Link></Link>
                   Schedule Consultation
                   <ArrowRight className="w-5 h-5" />
                 </Link>
-                <Link
-                  to="/services"
-                  className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300"
-                >
+                <Link></Link>
                   View All Services
                 </Link>
               </div>
@@ -793,19 +893,27 @@ const ConsultationPage: React.FC = () => {
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Consultation Types */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
 <<<<<<< HEAD
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-white mb-4">Consultation Services</h2>
+=======
+      {/* Services Section */}
+      <section></section>
+        <div></div>
+          <div></div>
+            <h></h>Consultation Services</h2>
+>>>>>>> cursor/fix-errors-and-merge-to-main-bba0
             <p className="text-xl text-gray-300">Comprehensive technology consulting tailored to your business needs</p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div></div>
             {consultationServices.map((service, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300">
-                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
+              <div></div>
+                <div></div>
                   <CheckCircle className="h-6 w-6 text-white" />
 =======
               <div className="text-center">
@@ -813,6 +921,7 @@ const ConsultationPage: React.FC = () => {
                   <Mail className="w-8 h-8 text-purple-400" />
 >>>>>>> cursor/fix-errors-and-merge-to-main-8a15
                 </div>
+<<<<<<< HEAD
                 <h3 className="text-xl font-bold text-white mb-2">Email Us</h3>
                 <p className="text-gray-300">consultation@ziontechgroup.com</p>
               </div>
@@ -881,12 +990,17 @@ const ConsultationPage: React.FC = () => {
                 >
                   Book Consultation
                 </button>
+=======
+                <h></h>{service}</h3>
+                <p className="text-gray-300">Expert guidance and strategic planning for your technology initiatives.</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-bba0
               </div>
-            ))}
+            ));
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Expert Team */}
       <section className="py-16 px-4 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -909,11 +1023,46 @@ const ConsultationPage: React.FC = () => {
                 </div>
               </div>
             ))}
+=======
+      {/* Process Section */}
+      <section></section>
+        <div></div>
+          <div></div>
+            <h></h>Our Process</h2>
+            <p className="text-xl text-gray-300">How we deliver exceptional consultation services</p>
+          </div>
+          
+          <div></div>
+            <div></div>
+              <div></div>
+                <spa></spa>1</span>
+              </div>
+              <h></h>Discovery</h3>
+              <p className="text-gray-300">We analyze your current technology landscape and business objectives.</p>
+            </div>
+            
+            <div></div>
+              <div></div>
+                <spa></spa>2</span>
+              </div>
+              <h></h>Strategy</h3>
+              <p className="text-gray-300">We develop a customized roadmap aligned with your goals.</p>
+            </div>
+            
+            <div></div>
+              <div></div>
+                <spa></spa>3</span>
+              </div>
+              <h></h>Implementation</h3>
+              <p className="text-gray-300">We guide you through execution and provide ongoing support.</p>
+            </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-bba0
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
+<<<<<<< HEAD
       <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-6">Ready to Get Started?</h2>
@@ -922,10 +1071,22 @@ const ConsultationPage: React.FC = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 flex items-center justify-center">
+=======
+      <section></section>
+        <div></div>
+          <h2></h2>
+            Ready to Transform Your Business?
+          </h2>
+          <p></p>
+            Schedule a consultation with our experts and discover how technology can drive your success.
+          </p>
+          <div></div>
+            <button></button>
+>>>>>>> cursor/fix-errors-and-merge-to-main-bba0
               <Calendar className="mr-2 h-5 w-5" />
               Schedule Now
             </button>
-            <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300 flex items-center justify-center">
+            <button></button>
               <Mail className="mr-2 h-5 w-5" />
               Contact Us
             </button>
@@ -933,8 +1094,12 @@ const ConsultationPage: React.FC = () => {
         </div>
       </section>
     </div>
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-550e
   );
+=======
+  ););)
+>>>>>>> cursor/fix-errors-and-merge-to-main-bba0
 };
 
 export default ConsultationPage;

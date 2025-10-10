@@ -73,7 +73,10 @@ const PagePage: React.FC = () => {
 
   return (
     <>
+<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-bba0
       <Helmet>
 <<<<<<< HEAD
 =======
@@ -86,7 +89,8 @@ const PagePage: React.FC = () => {
         <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group" />
       </Helmet>
       
-      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+        <Navigation />
 
 <<<<<<< HEAD
 =======
@@ -295,9 +299,13 @@ const PagePage: React.FC = () => {
             </div>
           </div>
         </section>
+        <Footer />
       </div>
+<<<<<<< HEAD
       <Footer />
       </div>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-bba0
     </>
   );
 };

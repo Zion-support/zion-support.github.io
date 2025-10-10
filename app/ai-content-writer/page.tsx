@@ -107,14 +107,18 @@ const AIContentWriterPage: React.FC = () => {
 
   return (
     <>
+<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-bba0
       <Helmet>
         <title>AI Content Writer | Zion Tech Group</title>
         <meta name="description" content="Professional AI content writer solutions by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="ai content writer, AI solutions, IT services, Zion Tech Group" />
       </Helmet>
       
-      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+        <Navigation />
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
@@ -298,9 +302,13 @@ const AIContentWriterPage: React.FC = () => {
             </div>
           </div>
         </section>
+        <Footer />
       </div>
+<<<<<<< HEAD
       <Footer />
       </div>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-bba0
     </>
   );
 };
