@@ -1,6 +1,5 @@
 /* Futuristic CSS Styles for Zion Tech Group */
 
-<<<<<<< HEAD
 /* Import accessibility styles */
 @import './accessibility.css';
 
@@ -115,10 +114,10 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-=======
+}
+
 /* Cyber Grid Background */
 .cyber-grid {
->>>>>>> cursor/analyze-improve-and-deploy-application-3800
   background-image: 
     linear-gradient(rgba(6, 182, 212, 0.1) 1px, transparent 1px),
     linear-gradient(90deg, rgba(6, 182, 212, 0.1) 1px, transparent 1px);
@@ -370,7 +369,6 @@ body {
   }
 }
 
-<<<<<<< HEAD
 /* Advanced Cyber Effects */
 .cyber-matrix {
   position: relative;
@@ -562,7 +560,10 @@ body {
   .quantum-particle,
   .neural-network-advanced::before,
   .cyber-grid-advanced::before {
-=======
+    animation: none;
+  }
+}
+
 /* High Contrast Mode */
 @media (prefers-contrast: high) {
   .cyber-card {
@@ -576,14 +577,184 @@ body {
   }
 }
 
+/* Advanced Cyber Effects */
+.cyber-matrix {
+  position: relative;
+  background: var(--bg-card);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.cyber-matrix::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    linear-gradient(90deg, transparent 50%, rgba(0, 255, 255, 0.1) 50%),
+    linear-gradient(0deg, transparent 50%, rgba(0, 255, 255, 0.1) 50%);
+  background-size: 20px 20px;
+  animation: matrixScan 3s linear infinite;
+}
+
+@keyframes matrixScan {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(20px, 20px); }
+}
+
+/* Holographic Card Advanced */
+.holographic-card-advanced {
+  position: relative;
+  background: linear-gradient(135deg, 
+    rgba(0, 255, 255, 0.1) 0%, 
+    rgba(139, 92, 246, 0.1) 25%,
+    rgba(236, 72, 153, 0.1) 50%,
+    rgba(16, 185, 129, 0.1) 75%,
+    rgba(0, 255, 255, 0.1) 100%
+  );
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  overflow: hidden;
+  animation: holographicShift 4s ease-in-out infinite;
+}
+
+.holographic-card-advanced::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(
+    from 0deg,
+    transparent,
+    rgba(0, 255, 255, 0.1),
+    transparent,
+    rgba(139, 92, 246, 0.1),
+    transparent,
+    rgba(236, 72, 153, 0.1),
+    transparent
+  );
+  animation: holographicRotate 6s linear infinite;
+  z-index: -1;
+}
+
+@keyframes holographicRotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Energy Pulse Effect */
+.energy-pulse {
+  position: relative;
+  overflow: hidden;
+}
+
+.energy-pulse::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: radial-gradient(circle, rgba(6, 182, 212, 0.4) 0%, transparent 70%);
+  transform: translate(-50%, -50%);
+  animation: energyPulse 3s ease-in-out infinite;
+}
+
+@keyframes energyPulse {
+  0% { 
+    width: 0; 
+    height: 0; 
+    opacity: 0.8; 
+  }
+  50% { 
+    width: 200px; 
+    height: 200px; 
+    opacity: 0.4; 
+  }
+  100% { 
+    width: 0; 
+    height: 0; 
+    opacity: 0; 
+  }
+}
+
+/* Cyber Scan Line */
+.cyber-scan-line {
+  position: relative;
+  overflow: hidden;
+}
+
+.cyber-scan-line::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(6, 182, 212, 0.8), transparent);
+  animation: scanLine 2s linear infinite;
+}
+
+@keyframes scanLine {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+/* Holographic Text */
+.holographic-text {
+  background: linear-gradient(45deg, #00ffff, #8b5cf6, #ec4899, #10b981);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: holographicText 3s ease-in-out infinite;
+}
+
+@keyframes holographicText {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* Cyber Glow */
+.cyber-glow {
+  box-shadow: 
+    0 0 20px rgba(6, 182, 212, 0.3),
+    0 0 40px rgba(6, 182, 212, 0.2),
+    0 0 60px rgba(6, 182, 212, 0.1);
+  animation: cyberGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes cyberGlow {
+  0% { 
+    box-shadow: 
+      0 0 20px rgba(6, 182, 212, 0.3),
+      0 0 40px rgba(6, 182, 212, 0.2),
+      0 0 60px rgba(6, 182, 212, 0.1);
+  }
+  100% { 
+    box-shadow: 
+      0 0 30px rgba(6, 182, 212, 0.5),
+      0 0 60px rgba(6, 182, 212, 0.3),
+      0 0 90px rgba(6, 182, 212, 0.2);
+  }
+}
+
 /* Reduced Motion */
 @media (prefers-reduced-motion: reduce) {
   .neural-network-bg::before,
   .matrix-rain::after,
   .cyber-card::before,
   .hologram-card::before,
-  .quantum-pulse::after {
->>>>>>> cursor/analyze-improve-and-deploy-application-3800
+  .quantum-pulse::after,
+  .cyber-matrix::before,
+  .holographic-card-advanced::before,
+  .energy-pulse::before,
+  .cyber-scan-line::after {
     animation: none;
   }
   
