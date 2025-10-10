@@ -1,29 +1,54 @@
-'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+import { CheckCircle, Target, Brain, Users, ArrowRight, Shield, Zap, BarChart3 } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
-const PagePage: React.FC = () => {
+const AIMarketingPage: React.FC = () => {
   const features = [
     {
+      title: 'Campaign Optimization',
+      description: 'AI-powered campaign optimization for better performance and ROI.',
+      icon: Target,
+      benefits: [
+        'Performance optimization',
+        'ROI improvement',
+        'A/B testing',
+        'Budget allocation'
+      ]
+    },
+    {
+      title: 'Customer Segmentation',
+      description: 'Intelligent customer segmentation and targeting for personalized marketing.',
       icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
+      benefits: [
+        'Customer analysis',
+        'Segmentation algorithms',
+        'Personalization',
+        'Behavior prediction'
+      ]
     },
     {
+      title: 'Content Generation',
+      description: 'AI-powered content generation for marketing materials and campaigns.',
       icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
+      benefits: [
+        'Content creation',
+        'Copywriting',
+        'Visual content',
+        'Multimedia generation'
+      ]
     },
     {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
-    },
-    {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
+      title: 'Analytics & Insights',
+      description: 'Advanced analytics and insights for marketing performance and optimization.',
+      icon: BarChart3,
+      benefits: [
+        'Performance tracking',
+        'Conversion analysis',
+        'Customer insights',
+        'Optimization recommendations'
+      ]
     }
   ];
 
@@ -38,98 +63,161 @@ const PagePage: React.FC = () => {
     'Proven track record of success'
   ];
 
+  const useCases = [
+    {
+      title: 'Digital Marketing',
+      description: 'Comprehensive AI solutions for digital marketing and online advertising.',
+      icon: Target
+    },
+    {
+      title: 'Email Marketing',
+      description: 'AI-powered email marketing with personalized content and automation.',
+      icon: Users
+    },
+    {
+      title: 'Social Media',
+      description: 'Advanced social media marketing with AI-powered content and targeting.',
+      icon: Brain
+    }
+  ];
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <>
       <Helmet>
-        <title>Page | Zion Tech Group</title>
-        <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" />
+        <title>AI Marketing - Zion Tech Group</title>
+        <meta name="description" content="AI-powered marketing solutions that optimize campaigns, personalize content, and improve ROI. Advanced AI technology for better marketing performance." />
+        <meta name="keywords" content="AI marketing, marketing automation, campaign optimization, customer segmentation, content generation" />
       </Helmet>
 
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-pink-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(236,72,153,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              AI
+              <span className="block bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
+                Marketing
+              </span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our advanced page solutions. 
-              Powered by cutting-edge AI technology and industry expertise.
-            </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Our Page?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our page solutions deliver unmatched performance, security, and scalability.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
-                  <feature.icon className="h-6 w-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Benefits
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the power of our page solutions for your business.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-start space-x-3">
-                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
-                <p className="text-gray-300 text-lg">{benefit}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-purple-100 mb-8">
-              Contact our experts to discuss your page needs and get a customized solution.
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Transform your marketing with AI-powered solutions. Campaign optimization, customer segmentation, 
+              and content generation for better performance and ROI.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
-                <Phone className="mr-2 h-5 w-5" />
-                Call Now
+              <button className="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-pink-600 hover:to-purple-700 transition-all duration-300">
+                Get Started
               </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
-                <Mail className="mr-2 h-5 w-5" />
-                Email Us
+              <button className="border border-pink-400 text-pink-300 px-8 py-4 rounded-lg font-semibold hover:bg-pink-500 hover:text-white transition-all duration-300">
+                View Demo
               </button>
             </div>
           </div>
-        </div>
-      </section>
-    </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Marketing Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Our AI-powered marketing solutions provide comprehensive tools for campaign management.
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700 hover:border-pink-500 transition-all duration-300">
+                  <div className="text-4xl mb-4">{feature.icon}</div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  <ul className="space-y-2">
+                    {feature.benefits.map((benefit, benefitIndex) => (
+                      <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
+                        <CheckCircle className="w-4 h-4 text-pink-400 mr-2 flex-shrink-0" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Use Cases Section */}
+        <section className="py-20 px-4 bg-gradient-to-r from-pink-900/20 to-purple-900/20">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Marketing Use Cases
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Perfect for marketing teams that need to optimize campaigns and improve performance.
+              </p>
+            </div>
+            <div className="grid md:grid-cols-3 gap-8">
+              {useCases.map((useCase, index) => (
+                <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700 hover:border-pink-500 transition-all duration-300 text-center">
+                  <div className="text-4xl mb-4 mx-auto">{useCase.icon}</div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
+                  <p className="text-gray-300">{useCase.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Why Choose Our Marketing Solutions?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Experience the power of AI-powered marketing that transforms performance.
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="flex items-center space-x-3 p-4 bg-white/5 rounded-lg">
+                  <CheckCircle className="w-6 h-6 text-pink-400 flex-shrink-0" />
+                  <p className="text-white font-medium">{benefit}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Ready to Transform Marketing?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Join leading marketing teams who trust our AI Marketing solutions.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                  Start Marketing
+                </button>
+                <button className="border border-pink-400 text-pink-400 hover:bg-pink-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                  Contact Sales
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <Footer />
+    </>
   );
 };
 
-export default PagePage;
+export default AIMarketingPage;

@@ -1,10 +1,11 @@
-'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, Star, ArrowRight, FileText, Image, Video, Music, Globe, Zap, Brain, Target, Users, Phone, Mail, MapPin } from 'lucide-react';
 
+const AIContentGenerationPage: React.FC = () => {
+  const features = [
     {
       icon: FileText,
       title: 'AI Blog Content Generator',
@@ -32,80 +33,128 @@ import { CheckCircle, Star, ArrowRight, FileText, Image, Video, Music, Globe, Za
     {
       icon: Globe,
       title: 'Multi-Platform Content',
-      description: 'Create content optimized for different platforms and channels with AI assistance.',
-      benefits: ['Platform optimization', 'Channel-specific content', 'Cross-platform consistency', 'Automated distribution']
+      description: 'Create content optimized for different platforms and social media channels.',
+      benefits: ['Platform optimization', 'Social media content', 'Cross-platform consistency', 'Audience targeting']
     },
     {
       icon: Brain,
-      title: 'Content Intelligence',
-      description: 'AI-powered content analysis and optimization for better performance and engagement.',
-      benefits: ['Performance analysis', 'Engagement prediction', 'Content optimization', 'Trend analysis']
+      title: 'Smart Content Strategy',
+      description: 'AI-powered content strategy and planning with data-driven insights and recommendations.',
+      benefits: ['Content strategy', 'Data insights', 'Performance tracking', 'ROI optimization']
     }
   ];
 
   const benefits = [
-    'Increase content production by 10x',
-    'Improve SEO rankings by 150%',
-    'Save 40+ hours per week',
-    'Increase organic traffic by 200%',
-    'Enable consistent brand voice',
-    'Automate content workflows',
-    'Scale content across channels',
-    'Enhance content quality'
+    'Increase content production by 500%',
+    'Reduce content creation costs by 70%',
+    'Improve content quality and consistency',
+    'Scale content across multiple platforms',
+    'Automate content calendar management',
+    'Enhance SEO performance',
+    'Boost engagement rates',
+    'Accelerate time-to-market'
   ];
 
   const useCases = [
     {
-      title: 'Blog Content',
-      description: 'Generate high-quality blog posts and articles with AI assistance',
-      icon: '📝'
+      title: 'Marketing Teams',
+      description: 'Scale content production for marketing campaigns and brand awareness.',
+      icon: Target
     },
     {
-      title: 'Social Media',
-      description: 'Create engaging social media posts and campaigns across platforms',
-      icon: '📱'
+      title: 'Content Creators',
+      description: 'Enhance creativity and productivity for individual content creators.',
+      icon: Users
     },
     {
-      title: 'Marketing Materials',
-      description: 'Generate marketing copy, ads, and promotional content',
-      icon: '📢'
-    },
-    {
-      title: 'E-commerce Content',
-      description: 'Create product descriptions, reviews, and e-commerce content',
-      icon: '🛒'
-    },
-    {
-      title: 'Educational Content',
-      description: 'Generate educational materials, courses, and training content',
-      icon: '📚'
-    },
-    {
-      title: 'Technical Documentation',
-      description: 'Create technical documentation and user guides with AI',
-      icon: '📋'
+      title: 'E-commerce',
+      description: 'Generate product descriptions, reviews, and marketing content at scale.',
+      icon: Globe
     }
   ];
 
   return (
+    <>
+      <Helmet>
+        <title>AI Content Generation - Zion Tech Group</title>
+        <meta name="description" content="AI-powered content generation for blogs, videos, images, and more. Create high-quality content at scale with intelligent automation." />
+        <meta name="keywords" content="AI content generation, content creation, blog writing, video production, image generation, content automation" />
+      </Helmet>
+
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-pink-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(236,72,153,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              AI Content
+              <span className="block bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
+                Generation
+              </span>
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Create high-quality content at scale with AI-powered generation tools. 
+              From blogs to videos, images to audio - generate engaging content that resonates with your audience.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-pink-600 hover:to-purple-700 transition-all duration-300">
+                Get Started
+              </button>
+              <button className="border border-pink-400 text-pink-300 px-8 py-4 rounded-lg font-semibold hover:bg-pink-500 hover:text-white transition-all duration-300">
+                View Demo
+              </button>
+            </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Content Generation Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Our AI-powered content generation tools provide comprehensive solutions for all content types.
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700 hover:border-pink-500 transition-all duration-300">
+                  <div className="text-4xl mb-4">{feature.icon}</div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  <ul className="space-y-2">
+                    {feature.benefits.map((benefit, benefitIndex) => (
+                      <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
+                        <CheckCircle className="w-4 h-4 text-pink-400 mr-2 flex-shrink-0" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 
         {/* Use Cases Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <section className="py-20 px-4 bg-gradient-to-r from-pink-900/20 to-purple-900/20">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Applications & Use Cases
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Content Use Cases
               </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                From blogs to social media, our AI Content Generation serves diverse content needs
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Perfect for teams and individuals who need to create content at scale.
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-3 gap-8">
               {useCases.map((useCase, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 text-center">
-                  <div className="text-4xl mb-4">{useCase.icon}</div>
+                <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700 hover:border-pink-500 transition-all duration-300 text-center">
+                  <div className="text-4xl mb-4 mx-auto">{useCase.icon}</div>
                   <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
                   <p className="text-gray-300">{useCase.description}</p>
                 </div>
@@ -115,22 +164,20 @@ import { CheckCircle, Star, ArrowRight, FileText, Image, Video, Music, Globe, Za
         </section>
 
         {/* Benefits Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Why Choose Our AI Content Generation?
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Why Choose Our Content Generation?
               </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Experience the future of content creation with our revolutionary AI technology
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Experience the power of AI-powered content generation that transforms your workflow.
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {benefits.map((benefit, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
-                  <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-lg mb-4">
-                    <CheckCircle className="w-6 h-6 text-white" />
-                  </div>
+                <div key={index} className="flex items-center space-x-3 p-4 bg-white/5 rounded-lg">
+                  <CheckCircle className="w-6 h-6 text-pink-400 flex-shrink-0" />
                   <p className="text-white font-medium">{benefit}</p>
                 </div>
               ))}
@@ -139,29 +186,27 @@ import { CheckCircle, Star, ArrowRight, FileText, Image, Video, Music, Globe, Za
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-gradient-to-r from-emerald-500 to-teal-500 rounded-2xl p-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Ready to Transform Your Content?
+            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Ready to Generate Content?
               </h2>
-              <p className="text-xl text-emerald-100 mb-8">
-                Join thousands of creators who are already using our AI Content Generation solutions
+              <p className="text-xl text-gray-300 mb-8">
+                Join thousands of creators who are already using our AI Content Generation tools.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-white text-emerald-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
-                  Get Started Now
-                  <ArrowRight className="ml-2 w-5 h-5" />
+                <button className="bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                  Start Creating
                 </button>
-                <button className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-emerald-600 transition-all duration-300">
-                  Schedule Demo
+                <button className="border border-pink-400 text-pink-400 hover:bg-pink-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                  Contact Sales
                 </button>
               </div>
             </div>
           </div>
         </section>
-      </main>
-
+      </div>
       <Footer />
     </>
   );

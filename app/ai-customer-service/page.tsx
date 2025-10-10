@@ -173,6 +173,8 @@ const AICustomerServicePage: React.FC = () => {
                 </button>
               </div>
             </div>
+          </div>
+        </section>
       </main>
 
       <Footer />

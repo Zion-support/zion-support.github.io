@@ -1,29 +1,54 @@
-'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+import { CheckCircle, Smartphone, Brain, Target, ArrowRight, Shield, Users, Zap } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
-const PagePage: React.FC = () => {
+const AIMobileAppDevelopmentPage: React.FC = () => {
   const features = [
     {
+      title: 'Cross-Platform Development',
+      description: 'AI-powered cross-platform mobile app development for iOS and Android.',
+      icon: Smartphone,
+      benefits: [
+        'Single codebase',
+        'Native performance',
+        'Platform optimization',
+        'Rapid deployment'
+      ]
+    },
+    {
+      title: 'AI Integration',
+      description: 'Intelligent AI integration for mobile apps with advanced capabilities.',
       icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
+      benefits: [
+        'AI features',
+        'Machine learning',
+        'Natural language processing',
+        'Computer vision'
+      ]
     },
     {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
+      title: 'Performance Optimization',
+      description: 'Advanced performance optimization for mobile applications.',
+      icon: Target,
+      benefits: [
+        'Speed optimization',
+        'Memory management',
+        'Battery efficiency',
+        'Network optimization'
+      ]
     },
     {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
-    },
-    {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
+      title: 'User Experience',
+      description: 'AI-powered user experience design and optimization.',
+      icon: Users,
+      benefits: [
+        'UX design',
+        'User testing',
+        'Accessibility',
+        'Personalization'
+      ]
     }
   ];
 
@@ -38,59 +63,161 @@ const PagePage: React.FC = () => {
     'Proven track record of success'
   ];
 
+  const useCases = [
+    {
+      title: 'Business Apps',
+      description: 'Comprehensive mobile app development for business and enterprise solutions.',
+      icon: Smartphone
+    },
+    {
+      title: 'Consumer Apps',
+      description: 'AI-powered consumer mobile apps with advanced features.',
+      icon: Target
+    },
+    {
+      title: 'E-commerce Apps',
+      description: 'Advanced mobile commerce apps with AI-powered features.',
+      icon: Brain
+    }
+  ];
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <>
       <Helmet>
-        <title>Page | Zion Tech Group</title>
-        <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" />
+        <title>AI Mobile App Development - Zion Tech Group</title>
+        <meta name="description" content="AI-powered mobile app development solutions that create cross-platform apps with intelligent features. Advanced AI technology for better mobile experiences." />
+        <meta name="keywords" content="AI mobile app development, cross-platform development, mobile AI, app development, mobile optimization" />
       </Helmet>
 
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(99,102,241,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              AI Mobile App
+              <span className="block bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+                Development
+              </span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our advanced page solutions. 
-              Powered by cutting-edge AI technology and industry expertise.
-            </p>
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our page solutions deliver unmatched performance, security, and scalability.
-            </p>
-          </div>
-
-          </div>
-        </div>
-      </section>
-
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the power of our page solutions for your business.
-            </p>
-          </div>
-
-          </div>
-        </div>
-      </section>
-
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-purple-100 mb-8">
-              Contact our experts to discuss your page needs and get a customized solution.
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Build intelligent mobile apps with AI-powered development solutions. Cross-platform development, 
+              AI integration, and performance optimization for better mobile experiences.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
-                <Phone className="mr-2 h-5 w-5" />
-                Call Now
+              <button className="bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-indigo-600 hover:to-purple-700 transition-all duration-300">
+                Get Started
               </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
-                <Mail className="mr-2 h-5 w-5" />
-                Email Us
+              <button className="border border-indigo-400 text-indigo-300 px-8 py-4 rounded-lg font-semibold hover:bg-indigo-500 hover:text-white transition-all duration-300">
+                View Demo
               </button>
             </div>
           </div>
-        </div>
-      </section>
-    </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Mobile App Development Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Our AI-powered mobile app development provides comprehensive tools for app creation.
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700 hover:border-indigo-500 transition-all duration-300">
+                  <div className="text-4xl mb-4">{feature.icon}</div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  <ul className="space-y-2">
+                    {feature.benefits.map((benefit, benefitIndex) => (
+                      <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
+                        <CheckCircle className="w-4 h-4 text-indigo-400 mr-2 flex-shrink-0" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Use Cases Section */}
+        <section className="py-20 px-4 bg-gradient-to-r from-indigo-900/20 to-purple-900/20">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Mobile App Development Use Cases
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Perfect for businesses and developers that need to create mobile applications.
+              </p>
+            </div>
+            <div className="grid md:grid-cols-3 gap-8">
+              {useCases.map((useCase, index) => (
+                <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700 hover:border-indigo-500 transition-all duration-300 text-center">
+                  <div className="text-4xl mb-4 mx-auto">{useCase.icon}</div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
+                  <p className="text-gray-300">{useCase.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Why Choose Our Mobile App Development?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Experience the power of AI-powered mobile app development that transforms experiences.
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="flex items-center space-x-3 p-4 bg-white/5 rounded-lg">
+                  <CheckCircle className="w-6 h-6 text-indigo-400 flex-shrink-0" />
+                  <p className="text-white font-medium">{benefit}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Ready to Build Mobile Apps?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Join leading businesses who trust our AI Mobile App Development solutions.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                  Start Building
+                </button>
+                <button className="border border-indigo-400 text-indigo-400 hover:bg-indigo-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                  Contact Sales
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <Footer />
+    </>
   );
 };
 
-export default PagePage;
+export default AIMobileAppDevelopmentPage;

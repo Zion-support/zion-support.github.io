@@ -138,6 +138,11 @@ const PagePage: React.FC = () => {
               </button>
             </div>
           </div>
+        </section>
+      </main>
+
+      <Footer />
+    </>
   );
 };
 

@@ -113,6 +113,7 @@ const AIAnalyticsPage: React.FC = () => {
               </button>
             </div>
           </div>
+        </section>
 
         {/* Features Section */}
         <section className="py-20 px-4">

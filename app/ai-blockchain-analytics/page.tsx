@@ -102,6 +102,24 @@ const AIBlockchainAnalyticsPage: React.FC = () => {
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              AI Blockchain
+              <span className="block bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent">
+                Analytics
+              </span>
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Unlock the power of blockchain data with our AI-powered analytics platform. 
+              Get insights, detect patterns, and make informed decisions.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-emerald-500 to-teal-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-emerald-600 hover:to-teal-700 transition-all duration-300">
+                Get Started
+              </button>
+              <button className="border border-emerald-400 text-emerald-300 px-8 py-4 rounded-lg font-semibold hover:bg-emerald-500 hover:text-white transition-all duration-300">
+                View Demo
+              </button>
             </div>
           </div>
         </section>
@@ -210,6 +228,8 @@ const AIBlockchainAnalyticsPage: React.FC = () => {
         </section>
       </main>
 
+      <Footer />
+    </>
   );
 };
 

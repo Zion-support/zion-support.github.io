@@ -1,16 +1,57 @@
-'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+import { CheckCircle, Heart, Brain, Target, ArrowRight, Shield, Users, Stethoscope } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
-const PagePage: React.FC = () => {
+const AIHealthcarePage: React.FC = () => {
   const features = [
     {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
+      title: 'Medical Diagnosis',
+      description: 'AI-powered medical diagnosis with advanced algorithms and machine learning.',
+      icon: Stethoscope,
+      benefits: [
+        'Disease detection',
+        'Symptom analysis',
+        'Treatment recommendations',
+        'Risk assessment'
+      ]
     },
     {
+      title: 'Patient Monitoring',
+      description: 'Intelligent patient monitoring with real-time health tracking and alerts.',
+      icon: Heart,
+      benefits: [
+        'Vital signs monitoring',
+        'Health tracking',
+        'Alert systems',
+        'Remote care'
+      ]
+    },
+    {
+      title: 'Drug Discovery',
+      description: 'AI-powered drug discovery and development for better treatments.',
+      icon: Brain,
+      benefits: [
+        'Molecular analysis',
+        'Drug design',
+        'Clinical trials',
+        'Safety assessment'
+      ]
+    },
+    {
+      title: 'Healthcare Analytics',
+      description: 'Advanced analytics for healthcare operations and patient outcomes.',
+      icon: Target,
+      benefits: [
+        'Performance metrics',
+        'Outcome analysis',
+        'Cost optimization',
+        'Quality improvement'
+      ]
+    }
+  ];
+
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -22,23 +63,161 @@ const PagePage: React.FC = () => {
     'Proven track record of success'
   ];
 
+  const useCases = [
+    {
+      title: 'Hospitals',
+      description: 'Comprehensive AI solutions for hospital operations and patient care.',
+      icon: Heart
+    },
+    {
+      title: 'Clinics',
+      description: 'AI-powered tools for clinics and outpatient care facilities.',
+      icon: Stethoscope
+    },
+    {
+      title: 'Research Institutions',
+      description: 'Advanced AI tools for medical research and drug development.',
+      icon: Brain
+    }
+  ];
+
+  return (
+    <>
+      <Helmet>
+        <title>AI Healthcare - Zion Tech Group</title>
+        <meta name="description" content="AI-powered healthcare solutions that improve patient care, enable medical diagnosis, and accelerate drug discovery. Advanced AI technology for better healthcare outcomes." />
+        <meta name="keywords" content="AI healthcare, medical AI, healthcare technology, medical diagnosis, patient monitoring, drug discovery" />
+      </Helmet>
+
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(239,68,68,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              AI
+              <span className="block bg-gradient-to-r from-red-400 via-pink-400 to-purple-400 bg-clip-text text-transparent">
+                Healthcare
+              </span>
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Transform healthcare with AI-powered solutions. Medical diagnosis, patient monitoring, 
+              and drug discovery with advanced artificial intelligence technology for better outcomes.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-red-500 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-600 hover:to-pink-700 transition-all duration-300">
+                Get Started
+              </button>
+              <button className="border border-red-400 text-red-300 px-8 py-4 rounded-lg font-semibold hover:bg-red-500 hover:text-white transition-all duration-300">
+                View Demo
+              </button>
+            </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Healthcare Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Our AI-powered healthcare solutions provide comprehensive tools for medical care.
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700 hover:border-red-500 transition-all duration-300">
+                  <div className="text-4xl mb-4">{feature.icon}</div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  <ul className="space-y-2">
+                    {feature.benefits.map((benefit, benefitIndex) => (
+                      <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
+                        <CheckCircle className="w-4 h-4 text-red-400 mr-2 flex-shrink-0" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-              </div>
-            ))}
+        {/* Use Cases Section */}
+        <section className="py-20 px-4 bg-gradient-to-r from-red-900/20 to-pink-900/20">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Healthcare Use Cases
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Perfect for healthcare institutions that need to improve patient care and outcomes.
+              </p>
+            </div>
+            <div className="grid md:grid-cols-3 gap-8">
+              {useCases.map((useCase, index) => (
+                <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700 hover:border-red-500 transition-all duration-300 text-center">
+                  <div className="text-4xl mb-4 mx-auto">{useCase.icon}</div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
+                  <p className="text-gray-300">{useCase.description}</p>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-    </div>
+        {/* Benefits Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Why Choose Our Healthcare Solutions?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Experience the power of AI-powered healthcare that transforms patient care.
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="flex items-center space-x-3 p-4 bg-white/5 rounded-lg">
+                  <CheckCircle className="w-6 h-6 text-red-400 flex-shrink-0" />
+                  <p className="text-white font-medium">{benefit}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Ready to Transform Healthcare?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Join leading healthcare institutions who trust our AI Healthcare solutions.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-gradient-to-r from-red-500 to-pink-600 hover:from-red-600 hover:to-pink-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                  Start Healing
+                </button>
+                <button className="border border-red-400 text-red-400 hover:bg-red-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                  Contact Sales
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <Footer />
+    </>
   );
 };
 
-export default PagePage;
+export default AIHealthcarePage;
