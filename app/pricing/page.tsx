@@ -117,11 +117,11 @@ const PricingPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Transparent Pricing;
-  </
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Choose the perfect plan for your business needs. All plans include our core AI and IT services.
-              </p>
+                  Transparent Pricing
+                </h1>
+                <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                  Choose the perfect plan for your business needs. All plans include our core AI and IT services.
+                </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
@@ -133,9 +133,9 @@ const PricingPage: React.FC = () => {
                 >
                   {plan.popular && (
                     <div className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white text-sm font-semibold py-2 px-4 rounded-full text-center mb-6">
-                      Most Popular;
-  </
-                  )}
+                        Most Popular
+                      </div>
+                    )}
                   <h3 className="text-2xl font-bold text-white mb-4">{plan.name}</h3>
                   <p className="text-gray-300 mb-6">{plan.description}</p>
                   <div className="mb-6">
