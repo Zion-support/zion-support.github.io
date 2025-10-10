@@ -199,7 +199,6 @@ const DynamicContentShowcase: React.FC = () => {
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Testimonials Section */}
       <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
@@ -317,30 +316,6 @@ const DynamicContentShowcase: React.FC = () => {
               <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-200">
                 Schedule Demo
               </button>
-=======
-      {/* Benefits Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Key Benefits
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Discover the advantages that make our solutions the preferred choice for businesses worldwide.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-center gap-3 bg-white/5 backdrop-blur-lg rounded-lg p-4 border border-white/10">
-                <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />
-                <span className="text-gray-300">{benefit}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Testimonials Section */}
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto">
@@ -369,7 +344,6 @@ const DynamicContentShowcase: React.FC = () => {
               <div className="text-gray-300">
                 {testimonials[currentIndex].role}, {testimonials[currentIndex].company}
               </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
             </div>
           </div>
         </div>
