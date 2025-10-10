@@ -15,7 +15,13 @@ const Footer: React.FC = memo(() => {
         { name: 'AI Automation', href: '/ai-automation' },
         { name: 'AI Healthcare', href: '/ai-healthcare' },
         { name: 'AI Fintech', href: '/ai-fintech' },
-        { name: 'AI Content Generation', href: '/ai-content-generation' }
+        { name: 'AI Content Generation', href: '/ai-content-generation' },
+        { name: 'AI Sentiment Analyzer', href: '/ai-sentiment-analyzer' },
+        { name: 'AI Video Generator', href: '/ai-video-generator' },
+        { name: 'AI Code Assistant', href: '/ai-code-assistant' },
+        { name: 'AI Social Media Scheduler', href: '/ai-social-media-scheduler' },
+        { name: 'AI Cybersecurity Monitor', href: '/ai-cybersecurity-monitor' },
+        { name: 'AI Expense Tracker', href: '/ai-expense-tracker' }
       ]
     },
     {

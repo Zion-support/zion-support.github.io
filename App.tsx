@@ -25,6 +25,7 @@ const SupportPage = React.lazy(() => import('./app/support/page'));
 const StatusPage = React.lazy(() => import('./app/status/page'));
 const DemoPage = React.lazy(() => import('./app/demo/page'));
 const ConsultationPage = React.lazy(() => import('./app/consultation/page'));
+const ServicesPage = React.lazy(() => import('./app/services/page'));
 
 // Error Boundary Component
 interface ErrorBoundaryState {
@@ -140,6 +141,7 @@ const App: React.FC = memo(() => {
                   <Route path="/status" element={<StatusPage />} />
                   <Route path="/demo" element={<DemoPage />} />
                   <Route path="/consultation" element={<ConsultationPage />} />
+                  <Route path="/services" element={<ServicesPage />} />
                 </Routes>
               </Suspense>
             </main>

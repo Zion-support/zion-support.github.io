@@ -1,9 +1,9 @@
 'use client';
 import React, { useState, useCallback, memo } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Receipt, Zap, Target, Users, Globe, Shield, Clock, DollarSign, CheckCircle, ArrowRight, Brain, BarChart, PieChart, TrendingUp } from 'lucide-react';
+import { Code, Zap, Target, Users, Globe, Shield, Clock, DollarSign, CheckCircle, ArrowRight, Brain, Terminal, GitBranch, Bug, FileText, Sparkles } from 'lucide-react';
 
-const AIExpenseTracker: React.FC = memo(() => {
+const AICodeAssistant: React.FC = memo(() => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   React.useEffect(() => {
@@ -12,76 +12,76 @@ const AIExpenseTracker: React.FC = memo(() => {
 
   const features = [
     {
-      icon: Receipt,
-      title: 'Smart Receipt Scanning',
-      description: 'Automatically extract data from receipts using AI-powered OCR technology with 99% accuracy',
+      icon: Code,
+      title: 'Intelligent Code Generation',
+      description: 'Generate clean, efficient code from natural language descriptions with AI-powered suggestions',
       color: 'text-purple-400'
     },
     {
-      icon: Brain,
-      title: 'AI Categorization',
-      description: 'Intelligently categorize expenses and learn from your spending patterns over time',
+      icon: Bug,
+      title: 'Smart Debugging',
+      description: 'Automatically detect and fix bugs, suggest optimizations, and improve code quality',
       color: 'text-blue-400'
     },
     {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Get detailed insights into your spending habits with beautiful charts and reports',
+      icon: Terminal,
+      title: 'Multi-Language Support',
+      description: 'Support for 50+ programming languages including Python, JavaScript, Java, C++, and more',
       color: 'text-green-400'
     },
     {
-      icon: Target,
-      title: 'Budget Management',
-      description: 'Set budgets, track progress, and get alerts when approaching limits',
+      icon: GitBranch,
+      title: 'Version Control Integration',
+      description: 'Seamlessly integrate with Git, GitHub, and other version control systems',
       color: 'text-orange-400'
     }
   ];
 
   const pricingPlans = [
     {
-      name: 'Personal',
-      price: '$9',
+      name: 'Developer',
+      price: '$29',
       period: '/month',
-      description: 'Perfect for individuals',
+      description: 'Perfect for individual developers',
       features: [
-        'Unlimited receipts',
-        'Basic categorization',
-        'Monthly reports',
+        'Up to 1,000 code generations/month',
+        'Basic debugging assistance',
+        '10 programming languages',
         'Email support',
-        'Mobile app',
-        '1 user account'
+        'VS Code extension',
+        'API access'
       ],
       popular: false
     },
     {
-      name: 'Business',
-      price: '$29',
+      name: 'Team',
+      price: '$99',
       period: '/month',
-      description: 'Ideal for small businesses',
+      description: 'Ideal for development teams',
       features: [
-        'Unlimited receipts',
-        'AI categorization',
-        'Advanced analytics',
+        'Up to 10,000 code generations/month',
+        'Advanced debugging & optimization',
+        '50+ programming languages',
         'Priority support',
-        'Team collaboration',
-        'Custom categories',
-        '5 user accounts'
+        'Team collaboration features',
+        'Custom integrations',
+        'Code review assistance'
       ],
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$99',
+      price: '$299',
       period: '/month',
       description: 'For large organizations',
       features: [
-        'Unlimited everything',
-        'Advanced AI features',
-        'Custom integrations',
-        '24/7 support',
+        'Unlimited code generations',
+        'AI-powered code review',
+        'All programming languages',
+        '24/7 dedicated support',
         'White-label solution',
-        'API access',
-        'Unlimited users'
+        'Advanced security features',
+        'Custom AI models'
       ],
       popular: false
     }
@@ -89,65 +89,63 @@ const AIExpenseTracker: React.FC = memo(() => {
 
   const useCases = [
     {
-      title: 'Personal Finance',
-      description: 'Track personal expenses and build better financial habits',
-      icon: Receipt,
-      result: '30% savings'
+      title: 'Code Generation',
+      description: 'Generate boilerplate code, functions, and complete modules from descriptions',
+      icon: Code,
+      result: '90% faster'
     },
     {
-      title: 'Business Expenses',
-      description: 'Manage business expenses and improve cash flow visibility',
-      icon: BarChart,
-      result: '50% faster'
+      title: 'Bug Fixing',
+      description: 'Automatically detect and fix common bugs and security vulnerabilities',
+      icon: Bug,
+      result: '95% accuracy'
     },
     {
-      title: 'Tax Preparation',
-      description: 'Organize receipts and expenses for easy tax filing',
-      icon: Target,
-      result: '90% easier'
+      title: 'Code Review',
+      description: 'AI-powered code review with suggestions for improvements and best practices',
+      icon: FileText,
+      result: '80% quality'
     },
     {
-      title: 'Team Management',
-      description: 'Track team expenses and enforce spending policies',
-      icon: Users,
-      result: '100% control'
+      title: 'Documentation',
+      description: 'Generate comprehensive documentation and comments for your code',
+      icon: FileText,
+      result: '100% coverage'
     }
   ];
 
-  const benefits = [
-    { metric: '99%', label: 'OCR Accuracy', color: 'text-green-400' },
-    { metric: '5 min', label: 'Setup Time', color: 'text-blue-400' },
-    { metric: '30%', label: 'Time Saved', color: 'text-purple-400' },
-    { metric: '24/7', label: 'Available', color: 'text-orange-400' }
+  const supportedLanguages = [
+    'Python', 'JavaScript', 'TypeScript', 'Java', 'C++', 'C#', 'Go', 'Rust', 'PHP', 'Ruby',
+    'Swift', 'Kotlin', 'Scala', 'R', 'MATLAB', 'Perl', 'Haskell', 'Clojure', 'Elixir', 'Dart'
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>AI Expense Tracker - Smart Financial Management | Zion Tech Group</title>
-        <meta name="description" content="Track expenses effortlessly with AI-powered receipt scanning and categorization. Save time and money with intelligent expense management." />
-        <meta name="keywords" content="expense tracker, receipt scanning, financial management, AI categorization, budget tracking" />
-        <meta property="og:title" content="AI Expense Tracker - Smart Financial Management" />
-        <meta property="og:description" content="Track expenses effortlessly with AI-powered receipt scanning and categorization." />
+        <title>AI Code Assistant - Intelligent Programming Assistant | Zion Tech Group</title>
+        <meta name="description" content="Boost your coding productivity with our AI-powered code assistant. Generate code, debug issues, and improve code quality with intelligent suggestions." />
+        <meta name="keywords" content="AI code assistant, code generation, programming assistant, debugging, code review, developer tools" />
+        <meta property="og:title" content="AI Code Assistant - Intelligent Programming Assistant" />
+        <meta property="og:description" content="Boost your coding productivity with our AI-powered code assistant." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/ai-expense-tracker" />
+        <meta property="og:url" content="https://ziontechgroup.com/ai-code-assistant" />
       </Helmet>
 
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <section className="text-center mb-16">
           <div className="inline-flex items-center space-x-2 bg-purple-600/20 text-purple-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
-            <Receipt className="w-4 h-4" />
-            <span>AI-Powered Finance</span>
+            <Code className="w-4 h-4" />
+            <span>AI-Powered Development</span>
           </div>
           
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            AI Expense Tracker
+            AI Code Assistant
           </h1>
           
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Transform your expense management with AI-powered receipt scanning and intelligent categorization. 
-            Save time, reduce errors, and gain valuable insights into your spending habits.
+            Supercharge your development workflow with our intelligent AI code assistant. 
+            Generate code, debug issues, and improve code quality with advanced AI technology.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -162,27 +160,40 @@ const AIExpenseTracker: React.FC = memo(() => {
               href="/contact"
               className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300"
             >
-              Start Tracking
+              Start Coding Smarter
             </a>
           </div>
         </section>
 
-        {/* Benefits */}
+        {/* Key Benefits */}
         <section className="mb-16">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="bg-slate-800/50 p-6 rounded-lg border border-purple-500/20">
-                <div className={`text-3xl font-bold ${benefit.color} mb-2`}>{benefit.metric}</div>
-                <div className="text-white font-semibold mb-2">{benefit.label}</div>
-                <div className="text-gray-400 text-sm">Industry-leading performance</div>
-              </div>
-            ))}
+            <div className="bg-slate-800/50 p-6 rounded-lg border border-purple-500/20">
+              <div className="text-3xl font-bold text-purple-400 mb-2">90%</div>
+              <div className="text-white font-semibold mb-2">Faster Development</div>
+              <div className="text-gray-400 text-sm">Generate code 90% faster than traditional methods</div>
+            </div>
+            <div className="bg-slate-800/50 p-6 rounded-lg border border-blue-500/20">
+              <div className="text-3xl font-bold text-blue-400 mb-2">50+</div>
+              <div className="text-white font-semibold mb-2">Languages</div>
+              <div className="text-gray-400 text-sm">Support for 50+ programming languages</div>
+            </div>
+            <div className="bg-slate-800/50 p-6 rounded-lg border border-green-500/20">
+              <div className="text-3xl font-bold text-green-400 mb-2">95%</div>
+              <div className="text-white font-semibold mb-2">Bug Detection</div>
+              <div className="text-gray-400 text-sm">Automatically detect and fix 95% of common bugs</div>
+            </div>
+            <div className="bg-slate-800/50 p-6 rounded-lg border border-orange-500/20">
+              <div className="text-3xl font-bold text-orange-400 mb-2">24/7</div>
+              <div className="text-white font-semibold mb-2">Available</div>
+              <div className="text-gray-400 text-sm">AI assistant available around the clock</div>
+            </div>
           </div>
         </section>
 
         {/* Features */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Smart Features</h2>
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Powerful Features</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-slate-800/30 p-6 rounded-lg border border-gray-700 hover:border-purple-500/50 transition-all duration-300">
@@ -217,9 +228,21 @@ const AIExpenseTracker: React.FC = memo(() => {
           </div>
         </section>
 
+        {/* Supported Languages */}
+        <section className="mb-16">
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Supported Programming Languages</h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
+            {supportedLanguages.map((language, index) => (
+              <div key={index} className="bg-slate-800/50 p-4 rounded-lg border border-gray-700 hover:border-purple-500/50 transition-all duration-300 text-center">
+                <div className="text-white font-medium">{language}</div>
+              </div>
+            ))}
+          </div>
+        </section>
+
         {/* Pricing */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Simple Pricing</h2>
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Simple, Transparent Pricing</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`relative bg-slate-800/50 p-8 rounded-lg border ${plan.popular ? 'border-purple-500 ring-2 ring-purple-500/20' : 'border-gray-700'} hover:border-purple-500/50 transition-all duration-300`}>
@@ -263,9 +286,9 @@ const AIExpenseTracker: React.FC = memo(() => {
 
         {/* CTA Section */}
         <section className="text-center bg-gradient-to-r from-purple-600/20 to-blue-600/20 p-12 rounded-lg border border-purple-500/30">
-          <h2 className="text-3xl font-bold text-white mb-4">Ready to Simplify Your Finances?</h2>
+          <h2 className="text-3xl font-bold text-white mb-4">Ready to Code Smarter?</h2>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Join 10,000+ users already saving time and money with our AI Expense Tracker.
+            Join 2,000+ developers already using our AI Code Assistant to boost their productivity.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
@@ -289,6 +312,6 @@ const AIExpenseTracker: React.FC = memo(() => {
   );
 });
 
-AIExpenseTracker.displayName = 'AIExpenseTracker';
+AICodeAssistant.displayName = 'AICodeAssistant';
 
-export default AIExpenseTracker;
+export default AICodeAssistant;
