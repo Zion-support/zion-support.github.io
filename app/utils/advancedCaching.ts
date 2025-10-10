@@ -3,215 +3,269 @@
  * Advanced Caching Utility
  * Provides intelligent caching with TTL, LRU eviction, and storage options
  */
+
 export interface CacheOptions {
   ttl?: number; // Time to live in milliseconds
   storage?: 'memory' | 'localStorage' | 'sessionStorage'
-  maxSize?: number; // Maximum number of entries}
+  maxSize?: number; // Maximum number of entries
 }
+
 export interface CacheEntry<T> {
   value: T
   expiry: number
   hits: number
-  lastAccessed: number;}
+  lastAccessed: number
 }
+
 class AdvancedCache<T = unknown> {
   private cache: Map<string, CacheEntry<T>> = new Map()
   private accessOrder: string[] = []
   private options: Required<CacheOptions>
-  private storageKey = 'advanced-cache';}
+  private storageKey = 'advanced-cache'
+
   constructor(options: CacheOptions = {}) {
     this.options = {
       ttl: options.ttl || 5 * 60 * 1000, // Default 5 minutes
       storage: options.storage || 'memory',
-      maxSize: options.maxSize || 100}
+      maxSize: options.maxSize || 100
     }
+    
     // Load from persistent storage if needed
     if (this.options.storage !== 'memory') {
-      this.loadFromStorage();}
+      this.loadFromStorage()
     }
+    
     // Setup periodic cleanup
     this.setupCleanup()
   }
+
   private setupCleanup(): void {
     if (typeof window !== 'undefined') {
-      // Clean expired entries every minute
+      // Clean up expired entries every minute
       setInterval(() => {
-        this.cleanExpired();}
-      }, 60 * 1000)
+        this.cleanup()
+      }, 60000)
     }
   }
+
   private loadFromStorage(): void {
-    if (typeof window === 'undefined') return
     try {
       const storage = this.getStorage()
-      const data = storage?.getItem(this.storageKey)
+      const data = storage.getItem(this.storageKey)
       if (data) {
         const parsed = JSON.parse(data)
-        this.cache = new Map(Object.entries(parsed.cache))
-        this.accessOrder = parsed.accessOrder || [];}
+        this.cache = new Map(parsed.cache || [])
+        this.accessOrder = parsed.accessOrder || []
       }
-    } catch (error) {}
-      }
+    } catch (error) {
+      console.warn('Failed to load cache from storage:', error)
+    }
   }
+
   private saveToStorage(): void {
-    if (typeof window === 'undefined' || this.options.storage === 'memory') return
     try {
       const storage = this.getStorage()
       const data = {
-        cache: Object.fromEntries(this.cache.entries()),
-        accessOrder: this.accessOrder}
+        cache: Array.from(this.cache.entries()),
+        accessOrder: this.accessOrder
       }
-      storage?.setItem(this.storageKey, JSON.stringify(data))
-    } catch (error) {}
+      storage.setItem(this.storageKey, JSON.stringify(data))
+    } catch (error) {
+      console.warn('Failed to save cache to storage:', error)
+    }
+  }
+
+  private getStorage(): Storage {
+    switch (this.options.storage) {
+      case 'localStorage':
+        return localStorage
+      case 'sessionStorage':
+        return sessionStorage
+      default:
+        throw new Error('Invalid storage type')
+    }
+  }
+
+  private cleanup(): void {
+    const now = Date.now()
+    const expiredKeys: string[] = []
+    
+    for (const [key, entry] of this.cache.entries()) {
+      if (entry.expiry < now) {
+        expiredKeys.push(key)
       }
-  }
-  private getStorage(): Storage | null {
-    if (typeof window === 'undefined') return null
-    if (this.options.storage === 'localStorage') {
-      return window.localStorage;}
-    } else if (this.options.storage === 'sessionStorage') {
-      return window.sessionStorage;}
     }
-    return null
-  }
-  public set(key: string, value: T, ttl?: number): void {
-    const expiry = Date.now() + (ttl || this.options.ttl)
-    // Check if we need to evict
-    if (this.cache.size >= this.options.maxSize && !this.cache.has(key)) {
-      this.evictLRU();}
+    
+    expiredKeys.forEach(key => {
+      this.cache.delete(key)
+      const index = this.accessOrder.indexOf(key)
+      if (index > -1) {
+        this.accessOrder.splice(index, 1)
+      }
+    })
+    
+    // Evict least recently used entries if over max size
+    while (this.cache.size > this.options.maxSize) {
+      const oldestKey = this.accessOrder.shift()
+      if (oldestKey) {
+        this.cache.delete(oldestKey)
+      }
     }
+    
+    if (this.options.storage !== 'memory') {
+      this.saveToStorage()
+    }
+  }
+
+  set(key: string, value: T, ttl?: number): void {
+    const now = Date.now()
+    const expiry = now + (ttl || this.options.ttl)
+    
+    // Remove from access order if exists
+    const existingIndex = this.accessOrder.indexOf(key)
+    if (existingIndex > -1) {
+      this.accessOrder.splice(existingIndex, 1)
+    }
+    
+    // Add to end of access order
+    this.accessOrder.push(key)
+    
     this.cache.set(key, {
       value,
       expiry,
       hits: 0,
-      lastAccessed: Date.now()}
+      lastAccessed: now
     })
-    // Update access order
-    this.updateAccessOrder(key)
-    // Save to storage if needed
+    
+    // Cleanup if needed
+    if (this.cache.size > this.options.maxSize) {
+      this.cleanup()
+    }
+    
     if (this.options.storage !== 'memory') {
-      this.saveToStorage();}
+      this.saveToStorage()
     }
   }
-  public get(key: string): T | null {
+
+  get(key: string): T | undefined {
     const entry = this.cache.get(key)
     if (!entry) {
-      return null;}
+      return undefined
     }
-    // Check if expired
-    if (Date.now() > entry.expiry) {
+    
+    const now = Date.now()
+    if (entry.expiry < now) {
       this.cache.delete(key)
-      this.removeFromAccessOrder(key)
-      return null;}
+      const index = this.accessOrder.indexOf(key)
+      if (index > -1) {
+        this.accessOrder.splice(index, 1)
+      }
+      return undefined
     }
-    // Update stats
+    
+    // Update access info
     entry.hits++
-    entry.lastAccessed = Date.now()
-    this.updateAccessOrder(key)
-    return entry.value
-  }
-  public has(key: string): boolean {
-    const entry = this.cache.get(key)
-    if (!entry) return false
-    // Check if expired
-    if (Date.now() > entry.expiry) {
-      this.cache.delete(key)
-      this.removeFromAccessOrder(key)
-      return false;}
-    }
-    return true
-  }
-  public delete(key: string): boolean {
-    this.removeFromAccessOrder(key)
-    return this.cache.delete(key);}
-  }
-  public clear(): void {
-    this.cache.clear()
-    this.accessOrder = []
-    if (this.options.storage !== 'memory') {
-      const storage = this.getStorage()
-      storage?.removeItem(this.storageKey);}
-    }
-  }
-  private updateAccessOrder(key: string): void {
-    // Remove if exists
-    this.removeFromAccessOrder(key)
-    // Add to end (most recently used)
-    this.accessOrder.push(key);}
-  }
-  private removeFromAccessOrder(key: string): void {
+    entry.lastAccessed = now
+    
+    // Move to end of access order
     const index = this.accessOrder.indexOf(key)
     if (index > -1) {
-      this.accessOrder.splice(index, 1);}
+      this.accessOrder.splice(index, 1)
     }
+    this.accessOrder.push(key)
+    
+    return entry.value
   }
-  private evictLRU(): void {
-    // Remove least recently used (first in array)
-    if (this.accessOrder.length > 0) {
-      const lruKey = this.accessOrder[0]
-      this.delete(lruKey);}
-    }
+
+  has(key: string): boolean {
+    return this.get(key) !== undefined
   }
-  private cleanExpired(): void {
-    const now = Date.now()
-    const keysToDelete: string[] = []
-    this.cache.forEach((entry, key) => {
-      if (now > entry.expiry) {
-        keysToDelete.push(key);}
+
+  delete(key: string): boolean {
+    const deleted = this.cache.delete(key)
+    if (deleted) {
+      const index = this.accessOrder.indexOf(key)
+      if (index > -1) {
+        this.accessOrder.splice(index, 1)
       }
-    })
-    keysToDelete.forEach(key => this.delete(key))
-    if (keysToDelete.length > 0 && this.options.storage !== 'memory') {
-      this.saveToStorage();}
+      
+      if (this.options.storage !== 'memory') {
+        this.saveToStorage()
+      }
+    }
+    return deleted
+  }
+
+  clear(): void {
+    this.cache.clear()
+    this.accessOrder = []
+    
+    if (this.options.storage !== 'memory') {
+      this.saveToStorage()
     }
   }
-  public getStats(): {
+
+  size(): number {
+    return this.cache.size
+  }
+
+  keys(): string[] {
+    return Array.from(this.cache.keys())
+  }
+
+  values(): T[] {
+    return Array.from(this.cache.values()).map(entry => entry.value)
+  }
+
+  entries(): [string, T][] {
+    return Array.from(this.cache.entries()).map(([key, entry]) => [key, entry.value])
+  }
+
+  getStats(): {
     size: number
     maxSize: number
     hitRate: number
-    entries: Array<{
-      key: string
-      hits: number
-      age: number;}
-    }>
-  } {}
-    const entries: Array<{ key: string; hits: number; age: number }> = []
-    let totalHits = 0
+    oldestEntry: number
+    newestEntry: number
+  } {
     const now = Date.now()
-    this.cache.forEach((entry, key) => {
+    let totalHits = 0
+    let oldestTime = now
+    let newestTime = 0
+    
+    for (const entry of this.cache.values()) {
       totalHits += entry.hits
-      entries.push({
-        key,
-        hits: entry.hits,
-        age: now - entry.lastAccessed}
-      })
-    })
+      if (entry.lastAccessed < oldestTime) {
+        oldestTime = entry.lastAccessed
+      }
+      if (entry.lastAccessed > newestTime) {
+        newestTime = entry.lastAccessed
+      }
+    }
+    
+    const hitRate = this.cache.size > 0 ? totalHits / this.cache.size : 0
+    
     return {
       size: this.cache.size,
       maxSize: this.options.maxSize,
-      hitRate: totalHits / Math.max(this.cache.size, 1),
-      entries: entries.sort((a, b) => b.hits - a.hits)}
+      hitRate,
+      oldestEntry: oldestTime,
+      newestEntry: newestTime
     }
   }
-  // Utility method for async operations with caching
-  public async getOrFetch<R extends T>(
-    key: string,
-    fetcher: () => Promise<R>,
-    ttl?: number
-  ): Promise<R> {
-    const cached = this.get(key)
-    if (cached !== null) {
-      return cached as unknown as R;}
-    }
-    const value = await fetcher()
-    this.set(key, value, ttl)
-    return value
-  }
 }
-// Export factory function
-export function createCache<T = unknown>(options?: CacheOptions): AdvancedCache<T> {
-  return new AdvancedCache<T>(options);}
-}
-// Export default cache instance
-export const defaultCache = new AdvancedCache()
+
+// Create singleton instances for different use cases
+export const memoryCache = new AdvancedCache({ storage: 'memory' })
+export const localStorageCache = new AdvancedCache({ 
+  storage: 'localStorage',
+  ttl: 30 * 60 * 1000, // 30 minutes
+  maxSize: 50
+})
+export const sessionStorageCache = new AdvancedCache({ 
+  storage: 'sessionStorage',
+  ttl: 60 * 60 * 1000, // 1 hour
+  maxSize: 100
+})
+
 export default AdvancedCache

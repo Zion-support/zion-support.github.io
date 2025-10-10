@@ -180,12 +180,9 @@ const Navigation: React.FC = () => {
     }
   ];
 
-<<<<<<< HEAD
   const toggleServices = () => {
     setServicesOpen(!servicesOpen);
   };
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-5faf
 
 
   return (
