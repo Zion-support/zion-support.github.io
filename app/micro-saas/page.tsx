@@ -2989,6 +2989,7 @@ export default MicroSAASPage;orage', 'Multi-device Sync', 'Team Sharing', '2FA I
                 </div>
               </div>
 
+<<<<<<< HEAD
               <a
                 href={service.link || '#'}
                 className="w-full neon-button-enhanced py-3 px-6 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center"
@@ -2997,6 +2998,14 @@ export default MicroSAASPage;orage', 'Multi-device Sync', 'Team Sharing', '2FA I
               >
                 Get Started
                 <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 ml-2" />
+=======
+              <a 
+                href={service.href || '/contact'} 
+                className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
+              >
+                Get Started
+                <ArrowRight className="w-4 h-4 ml-2" />
+>>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-8798
               </a>
             </div>
           ))}

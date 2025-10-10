@@ -94,6 +94,7 @@ const ServicesPage = React.lazy(() => import('./app/services/page'));
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-aedf
 =======
@@ -205,6 +206,13 @@ const IoTPlatformPage = React.lazy(() => import('./app/iot-platform/page'));
 const FiveGImplementationPage = React.lazy(() => import('./app/5g-implementation/page'));
 =======
 >>>>>>> origin/cursor/website-audit-and-update-with-deployment-63f8
+=======
+const AIQuantumFinancialOraclePage = React.lazy(() => import('./app/ai-quantum-financial-oracle/page'));
+const AIClimateSolutionsProPage = React.lazy(() => import('./app/ai-climate-solutions-pro/page'));
+const AIDrugDiscoveryProPage = React.lazy(() => import('./app/ai-drug-discovery-pro/page'));
+const QuantumCloudInfrastructurePage = React.lazy(() => import('./app/quantum-cloud-infrastructure/page'));
+const AINeuralMemoryAssistantPage = React.lazy(() => import('./app/ai-neural-memory-assistant/page'));
+>>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-8798
 
 // Performance monitoring hook
 const AppWithPerformanceMonitoring: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -278,6 +286,7 @@ const App: React.FC = memo(() => {
                       <Route path="/consultation" element={<ConsultationPage />} />
 <<<<<<< HEAD
                       <Route path="/services" element={<ServicesPage />} />
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -393,6 +402,13 @@ const App: React.FC = memo(() => {
 >>>>>>> origin/cursor/website-audit-and-update-with-deployment-db70
 =======
 >>>>>>> origin/cursor/website-audit-and-update-with-deployment-63f8
+=======
+                      <Route path="/ai-quantum-financial-oracle" element={<AIQuantumFinancialOraclePage />} />
+                      <Route path="/ai-climate-solutions-pro" element={<AIClimateSolutionsProPage />} />
+                      <Route path="/ai-drug-discovery-pro" element={<AIDrugDiscoveryProPage />} />
+                      <Route path="/quantum-cloud-infrastructure" element={<QuantumCloudInfrastructurePage />} />
+                      <Route path="/ai-neural-memory-assistant" element={<AINeuralMemoryAssistantPage />} />
+>>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-8798
                     </Routes>
                   </Suspense>
                   </main>

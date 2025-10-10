@@ -10,6 +10,7 @@ const Footer: React.FC = memo(() => {
       title: 'AI Services',
       icon: Brain,
       services: [
+<<<<<<< HEAD
         { name: 'AI Workflow Automation', href: '/ai-workflow-automation' },
         { name: 'AI Customer Support', href: '/ai-customer-support' },
         { name: 'AI Data Analytics', href: '/ai-data-analytics' },
@@ -20,12 +21,23 @@ const Footer: React.FC = memo(() => {
         { name: 'AI Climate Solutions Pro', href: '/ai-climate-solutions-pro' },
         { name: 'AI Space Technology Pro', href: '/ai-space-technology-pro' },
         { name: 'AI Quantum Security Suite', href: '/ai-quantum-security-suite' }
+=======
+        { name: 'AI Quantum Financial Oracle', href: '/ai-quantum-financial-oracle' },
+        { name: 'AI Climate Solutions Pro', href: '/ai-climate-solutions-pro' },
+        { name: 'AI Drug Discovery Pro', href: '/ai-drug-discovery-pro' },
+        { name: 'AI Neural Memory Assistant', href: '/ai-neural-memory-assistant' },
+        { name: 'AI Workflow Automation', href: '/ai-workflow-automation' },
+        { name: 'AI Customer Support Suite', href: '/ai-customer-support' },
+        { name: 'AI Data Analytics Platform', href: '/ai-data-analytics' },
+        { name: 'AI Content Generation Studio', href: '/ai-content-generation' }
+>>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-8798
       ]
     },
     {
       title: 'IT Services',
       icon: Cloud,
       services: [
+<<<<<<< HEAD
         { name: 'Cloud Migration & Setup', href: '/cloud-migration' },
         { name: 'Enterprise Cybersecurity', href: '/cybersecurity' },
         { name: 'IT Infrastructure Design', href: '/it-infrastructure' },
@@ -53,6 +65,16 @@ const Footer: React.FC = memo(() => {
         { name: 'AI API Management', href: '/ai-api-management' },
         { name: 'Smart Contract Security', href: '/smart-contract-security-audit' },
         { name: 'AI-Powered DevOps Platform', href: '/ai-powered-devops-platform' }
+=======
+        { name: 'Quantum Cloud Infrastructure', href: '/quantum-cloud-infrastructure' },
+        { name: 'Cloud Migration & Setup', href: '/cloud-migration' },
+        { name: 'Enterprise Cybersecurity Suite', href: '/cybersecurity' },
+        { name: 'IT Infrastructure Design', href: '/it-infrastructure' },
+        { name: '24/7 IT Support & Monitoring', href: '/it-support' },
+        { name: 'Custom Software Development', href: '/custom-development' },
+        { name: 'DevOps & CI/CD Implementation', href: '/devops-cicd' },
+        { name: 'Database Management & Optimization', href: '/database-management' }
+>>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-8798
       ]
     },
     {

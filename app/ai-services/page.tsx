@@ -61,6 +61,7 @@ const AIServicesPage: React.FC = () => {
       users: '2,800+',
       color: 'from-purple-500 to-pink-600',
       pricing: 'Starting at $299/mo',
+      link: 'https://ziontechgroup.com/ai-analytics-platform',
       capabilities: [
         '300% increase in conversion rates',
         'Automated campaign optimization',
@@ -802,6 +803,7 @@ const AIServicesPage: React.FC = () => {
       users: '3,200+',
       color: 'from-blue-500 to-cyan-600',
       pricing: 'Starting at $199/mo',
+      link: 'https://ziontechgroup.com/ai-workflow-automation',
       capabilities: [
         '80% reduction in manual tasks',
         '99.9% workflow reliability',
@@ -830,6 +832,7 @@ const AIServicesPage: React.FC = () => {
       users: '1,500+',
       color: 'from-red-500 to-orange-600',
       pricing: 'Starting at $399/mo',
+      link: 'https://ziontechgroup.com/ai-cybersecurity',
       capabilities: [
         '99.9% threat detection accuracy',
         'Real-time security monitoring',
@@ -858,6 +861,7 @@ const AIServicesPage: React.FC = () => {
       users: '1,800+',
       color: 'from-green-500 to-emerald-600',
       pricing: 'Starting at $149/mo',
+      link: 'https://ziontechgroup.com/ai-document-processing',
       capabilities: [
         '95% accuracy in data extraction',
         '50% faster processing times',
@@ -886,6 +890,7 @@ const AIServicesPage: React.FC = () => {
       users: '2,100+',
       color: 'from-cyan-500 to-blue-600',
       pricing: 'Starting at $249/mo',
+      link: 'https://ziontechgroup.com/ai-customer-experience',
       capabilities: [
         '40% increase in customer satisfaction',
         '60% improvement in engagement',
@@ -914,6 +919,7 @@ const AIServicesPage: React.FC = () => {
       users: '3,500+',
       color: 'from-indigo-500 to-purple-600',
       pricing: 'Starting at $179/mo',
+      link: 'https://ziontechgroup.com/ai-content-generation',
       capabilities: [
         '10x faster content creation',
         'SEO-optimized content',
@@ -942,6 +948,7 @@ const AIServicesPage: React.FC = () => {
       users: '900+',
       color: 'from-orange-500 to-red-600',
       pricing: 'Starting at $499/mo',
+      link: 'https://ziontechgroup.com/ai-predictive-maintenance',
       capabilities: [
         '30% reduction in downtime',
         '25% cost savings',
@@ -970,6 +977,7 @@ const AIServicesPage: React.FC = () => {
       users: '1,200+',
       color: 'from-emerald-500 to-green-600',
       pricing: 'Starting at $349/mo',
+      link: 'https://ziontechgroup.com/ai-financial-intelligence',
       capabilities: [
         '95% accuracy in predictions',
         'Real-time risk monitoring',
@@ -998,6 +1006,7 @@ const AIServicesPage: React.FC = () => {
       users: '600+',
       color: 'from-teal-500 to-cyan-600',
       pricing: 'Starting at $599/mo',
+      link: 'https://ziontechgroup.com/ai-healthcare',
       capabilities: [
         '98% diagnostic accuracy',
         'Faster diagnosis times',
@@ -1026,6 +1035,7 @@ const AIServicesPage: React.FC = () => {
       users: '800+',
       color: 'from-amber-500 to-orange-600',
       pricing: 'Starting at $399/mo',
+      link: 'https://ziontechgroup.com/ai-supply-chain',
       capabilities: [
         '20% cost reduction',
         '30% inventory optimization',
@@ -3221,6 +3231,7 @@ const AIServicesPage: React.FC = () => {
               </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
               <button className="w-full neon-button-enhanced py-3 px-6 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center">
                 Get Started
                 <ArrowRight className="w-4 h-4 ml-2" />
@@ -3248,6 +3259,15 @@ const AIServicesPage: React.FC = () => {
                 )}
               </div>
 >>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-aeba
+=======
+              <a 
+                href={service.link || '/contact'} 
+                className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
+              >
+                Get Started
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </a>
+>>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-8798
             </div>
           ))}
         </div>
