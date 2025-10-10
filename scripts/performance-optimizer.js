@@ -5,6 +5,8 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+<<<<<<< HEAD
+=======
 const optimizeHTML = (filePath) => {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
@@ -130,3 +132,4 @@ const main = () => {
 };
 
 main();
+>>>>>>> origin/main

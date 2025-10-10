@@ -1,9 +1,72 @@
 'use client';
 
 import React from 'react';
+<<<<<<< HEAD
+import { Helmet } from 'react-helmet-async';
+import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Star, Zap, Shield, Clock, Users, Award, ArrowRight } from 'lucide-react';
+
+const AIVoiceCloningPage: React.FC = () => {
+  const features = [
+    'High-fidelity voice synthesis with 99.9% accuracy',
+    'Real-time voice cloning in under 30 seconds',
+    'Multi-language support (50+ languages)',
+    'Emotion and tone control capabilities',
+    'Custom voice training with minimal samples',
+    'API integration for seamless deployment',
+    'Voice aging and gender transformation',
+    'Batch processing for multiple voices',
+    'Privacy-compliant voice data handling',
+    'Real-time voice conversion'
+  ];
+
+  const benefits = [
+    'Create personalized voice assistants for your brand',
+    'Improve accessibility with custom voice options',
+    'Reduce voice actor costs by 90%',
+    'Enable 24/7 multilingual customer support',
+    'Enhance user experience with familiar voices',
+    'Scale voice content production instantly',
+    'Maintain brand consistency across all touchpoints',
+    'Enable voice personalization for users'
+  ];
+
+  const useCases = [
+    {
+      title: 'Customer Service',
+      description: 'Deploy AI agents with your brand voice for consistent customer interactions',
+      icon: '🎧'
+    },
+    {
+      title: 'Content Creation',
+      description: 'Generate voiceovers for videos, podcasts, and presentations',
+      icon: '🎬'
+    },
+    {
+      title: 'Accessibility',
+      description: 'Create custom voices for visually impaired users',
+      icon: '♿'
+    },
+    {
+      title: 'Education',
+      description: 'Develop personalized learning experiences with familiar voices',
+      icon: '📚'
+    },
+    {
+      title: 'Entertainment',
+      description: 'Create unique character voices for games and media',
+      icon: '🎮'
+    },
+    {
+      title: 'Marketing',
+      description: 'Produce consistent brand voice across all marketing materials',
+      icon: '📢'
+    }
+import { CheckCircle, Star, Phone, Mail, MapPin, Mic, Volume2, Languages, Zap, Shield, Clock } from 'lucide-react';
+=======
 import { ArrowRight, Star, CheckCircle, Phone, Mail, MapPin, Mic, Volume2, Download, Play, Pause, Settings, Users, Zap, Shield, Globe } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
 import ErrorBoundary from '../components/ErrorBoundary';
+>>>>>>> origin/main
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -381,4 +444,8 @@ const AIVoiceCloningPage: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD
 export default AIVoiceCloningPage;
+=======
+export default AIVoiceCloningPage;
+>>>>>>> origin/main

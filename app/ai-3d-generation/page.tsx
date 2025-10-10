@@ -1,7 +1,13 @@
 'use client';
+<<<<<<< HEAD
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Star, Zap, Shield, Clock, Users, Award, ArrowRight, Cube, Palette, Camera } from 'lucide-react';
+=======
 import React, { lazy } from 'react';
 import { Helmet } from 'react-helmet-async'
 import { CheckCircle, TrendingUp, Phone, Mail, MapPin } from 'lucide-react';
+>>>>>>> origin/main
 
 const AI3DGenerationPage: React.FC = () => {,
   const features = [,
@@ -63,7 +69,46 @@ const AI3DGenerationPage: React.FC = () => {,
       icon: '🏭',
       examples: ['Product prototypes', 'Assembly instructions', 'Quality control models', 'Packaging designs']
     }
+<<<<<<< HEAD
+import { CheckCircle, Star, Phone, Mail, Cube, Zap, Shield, Clock, Palette, Camera, Layers } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+
+const AI3DGenerationPage: React.FC = () => {
+  const features = [
+    'AI-powered 3D model creation',
+    'Texture synthesis and mapping',
+    'Animation generation',
+    'LOD optimization',
+    'VR/AR integration',
+    'Real-time rendering',
+    'Custom model training',
+    'Batch processing'
+  ];
+
+  const benefits = [
+    'Accelerate 3D content creation by 80%',
+    'Reduce production costs by 60%',
+    'Improve visual quality and consistency',
+    'Enable rapid prototyping',
+    'Support multiple file formats',
+    'Integrate with popular 3D software'
+  ];
+
+  const useCases = [
+    'Game development',
+    'Architectural visualization',
+    'Product design',
+    'Virtual reality experiences',
+    'Augmented reality apps',
+    '3D printing',
+    'Marketing materials',
+    'Educational content'
+  ];
+
+=======
   ]
+>>>>>>> origin/main
   const pricing = [
     {
       name: 'Creator',
@@ -536,4 +581,8 @@ const AI3DGenerationPage: React.FC = () => {,
   );
 };
 
+<<<<<<< HEAD
 export default AI3DGenerationPage;
+=======
+export default AI3DGenerationPage;
+>>>>>>> origin/main
