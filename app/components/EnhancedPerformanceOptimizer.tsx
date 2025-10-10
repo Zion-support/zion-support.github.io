@@ -39,7 +39,8 @@ const EnhancedPerformanceOptimizerPage: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>EnhancedPerformanceOptimizer | Zion Tech Group</title>
         <meta name="description" content="Professional EnhancedPerformanceOptimizer services by Zion Tech Group. Advanced AI and IT solutions for your business." />
@@ -120,6 +121,7 @@ const EnhancedPerformanceOptimizerPage: React.FC = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

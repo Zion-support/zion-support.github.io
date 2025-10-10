@@ -91,7 +91,8 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
   }
 
   return (
-    <div className="bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 py-16 px-4">
+    <>
+      <div className="bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 py-16 px-4">
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
@@ -159,6 +160,7 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
         </div>
       </div>
     </div>
+    </>
   );
 };
 

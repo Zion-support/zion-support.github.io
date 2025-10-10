@@ -111,7 +111,8 @@ const EdgeComputingPage: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+    <>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <Helmet>
         <title>Edge Computing Solutions | Zion Tech Group</title>
         <meta name="description" content="Professional edge computing solutions by Zion Tech Group. Ultra-low latency, real-time processing, and global edge infrastructure." />
@@ -266,6 +267,7 @@ const EdgeComputingPage: React.FC = () => {
 
       <Footer />
     </div>
+    </>
   );
 };
 

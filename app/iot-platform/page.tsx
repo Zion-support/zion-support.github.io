@@ -1,102 +1,86 @@
 'use client';
+
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } from 'lucide-react';
+import { CheckCircle, ArrowRight, Star, Users, Clock, Shield, Zap } from 'lucide-react';
 
-    },
-    {
-      icon: Clock,
-      title: '24/7 Monitoring',
-      description: 'Continuous monitoring of IoT devices and systems with intelligent alerting.',
-      benefits: ['Continuous monitoring', 'Smart alerts', 'Predictive maintenance']
-    },
-    {
-    }
-  ];
-
+const IotPlatformPage: React.FC = () => {
   return (
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our IoT platform provides everything you need to build, deploy, and scale 
-              Internet of Things solutions for any industry or use case.
-            </p>
-          </div>
-                  ))}
-                </ul>
-</div>
-            ))}
-          </div>
-        </div>
-      </section>
+    <>
+      <Helmet>
+        <title>Iot Platform - Zion Tech Group</title>
+        <meta name="description" content="Professional iot platform services by Zion Tech Group. Expert solutions for your business needs." />
+        <meta name="keywords" content="iot platform, technology, solutions, business, professional" />
+      </Helmet>
 
-      {/* Use Cases Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              IoT Use Cases
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our IoT platform supports a wide range of industries and applications, 
-              from smart manufacturing to connected cities.
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Iot Platform
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-12">
+              Professional iot platform solutions designed to help your business succeed and grow.
             </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 flex items-center justify-center">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </button>
+              <button className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {useCases.map((useCase, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300">
-                <div className="text-4xl mb-4">{useCase.icon}</div>
-                <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
-                <p className="text-gray-300">{useCase.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Benefits Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Why Choose Our IoT Platform?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the benefits of a comprehensive IoT platform designed for scale, 
-              security, and performance.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-green-400 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <CheckCircle className="w-8 h-8 text-white" />
+        <section className="py-16 px-4">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-3xl font-bold text-white mb-12 text-center">Key Features</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-purple-400 transition-all duration-300">
+                <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-lg flex items-center justify-center mb-4">
+                  <CheckCircle className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-lg font-semibold text-white">{benefit}</h3>
+                <h3 className="text-xl font-bold text-white mb-3">Advanced Technology</h3>
+                <p className="text-gray-300">Cutting-edge solutions powered by the latest technology</p>
               </div>
-            ))}
+              <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-purple-400 transition-all duration-300">
+                <div className="w-12 h-12 bg-gradient-to-r from-purple-400 to-pink-400 rounded-lg flex items-center justify-center mb-4">
+                  <Shield className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3">Secure & Reliable</h3>
+                <p className="text-gray-300">Enterprise-grade security and reliability</p>
+              </div>
+              <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-purple-400 transition-all duration-300">
+                <div className="w-12 h-12 bg-gradient-to-r from-green-400 to-teal-400 rounded-lg flex items-center justify-center mb-4">
+                  <Zap className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3">Fast & Efficient</h3>
+                <p className="text-gray-300">Optimized for speed and performance</p>
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* CTA Section */}
-          <p className="text-xl text-gray-300 mb-8">
-            Start building your IoT platform today. Get started with a free consultation 
-            and discover how we can help you succeed.
-          </p>
-            </button>
-            <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-              Schedule Demo
-            </button>
+        <section className="py-16 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-12 border border-white/20">
+              <h2 className="text-3xl font-bold text-white mb-6">
+                Ready to Get Started?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Contact us today to learn more about our iot platform solutions.
+              </p>
+              <button className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300">
+                Contact Us
+              </button>
+            </div>
           </div>
-        </div>
-      </section>
-
-      <Footer />
-</div>
+        </section>
+      </div>
+    </>
   );
 };
 
-export default PagePage;
+export default IotPlatformPage;

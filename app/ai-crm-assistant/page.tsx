@@ -34,7 +34,8 @@ const AICrmAssistantPage: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+    <>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <Helmet>
         <title>AI CRM Assistant | Zion Tech Group</title>
         <meta name="description" content="Professional AI CRM assistant solutions by Zion Tech Group. Advanced AI and IT solutions for your business." />
@@ -145,6 +146,7 @@ const AICrmAssistantPage: React.FC = () => {
 
       <Footer />
     </div>
+    </>
   );
 };
 

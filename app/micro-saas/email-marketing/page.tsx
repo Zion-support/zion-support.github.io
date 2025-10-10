@@ -1,50 +1,80 @@
+'use client';
+
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Mail, ArrowRight } from 'lucide-react';
+import { CheckCircle, ArrowRight, Star, Users, Clock, Shield, Zap } from 'lucide-react';
 
-const EmailMarketingSuitePage: React.FC = () => {
+const MicroSaasemailMarketingPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Email Marketing Suite | Zion Tech Group - AI Email Campaigns</title>
-        <meta name="description" content="AI-powered email marketing automation. Create, send, and optimize email campaigns with intelligent automation." />
-        <link rel="canonical" href="https://ziontechgroup.com/micro-saas/email-marketing" />
+        <title>Micro Saasemail Marketing - Zion Tech Group</title>
+        <meta name="description" content="Professional micro saasemail marketing services by Zion Tech Group. Expert solutions for your business needs." />
+        <meta name="keywords" content="micro saasemail marketing, technology, solutions, business, professional" />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-        <section className="pt-24 pb-16 px-4">
-          <div className="max-w-7xl mx-auto text-center"></div>
-            <div className="inline-flex items-center space-x-2 bg-green-500/20 text-green-400 px-4 py-2 rounded-full text-sm font-medium mb-6"></div>
-              <Mail className="w-4 h-4" />
-              <span>Email Marketing Suite</span>
-            </div>
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text">
-              AI Email </h1>
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-green-400"> Campaigns</span>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Micro Saasemail Marketing
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              AI-powered email marketing automation. Create, send, and optimize email campaigns 
-              with intelligent automation and personalization.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-12">
+              Professional micro saasemail marketing solutions designed to help your business succeed and grow.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-              <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all flex items-center justify-center space-x-2">
-                <span>Get Started</span>
-                <ArrowRight className="w-5 h-5" />
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 flex items-center justify-center">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
               </button>
-              <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400/10 transition-all">
-                View Demo
+              <button className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
+                Learn More
               </button>
             </div>
           </div>
         </section>
 
         <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center mb-16"></div>
-              <h2 className="text-4xl font-bold text-white mb-4">Coming Soon</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                We're developing powerful email marketing solutions. Stay tuned for updates!
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-3xl font-bold text-white mb-12 text-center">Key Features</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-purple-400 transition-all duration-300">
+                <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-lg flex items-center justify-center mb-4">
+                  <CheckCircle className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3">Advanced Technology</h3>
+                <p className="text-gray-300">Cutting-edge solutions powered by the latest technology</p>
+              </div>
+              <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-purple-400 transition-all duration-300">
+                <div className="w-12 h-12 bg-gradient-to-r from-purple-400 to-pink-400 rounded-lg flex items-center justify-center mb-4">
+                  <Shield className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3">Secure & Reliable</h3>
+                <p className="text-gray-300">Enterprise-grade security and reliability</p>
+              </div>
+              <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-purple-400 transition-all duration-300">
+                <div className="w-12 h-12 bg-gradient-to-r from-green-400 to-teal-400 rounded-lg flex items-center justify-center mb-4">
+                  <Zap className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3">Fast & Efficient</h3>
+                <p className="text-gray-300">Optimized for speed and performance</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-16 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-12 border border-white/20">
+              <h2 className="text-3xl font-bold text-white mb-6">
+                Ready to Get Started?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Contact us today to learn more about our micro saasemail marketing solutions.
               </p>
+              <button className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300">
+                Contact Us
+              </button>
             </div>
           </div>
         </section>
@@ -53,4 +83,4 @@ const EmailMarketingSuitePage: React.FC = () => {
   );
 };
 
-export default EmailMarketingSuitePage;
+export default MicroSaasemailMarketingPage;

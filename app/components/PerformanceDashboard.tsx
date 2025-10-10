@@ -84,7 +84,8 @@ const PerformanceDashboard: React.FC = () => {
   }
 
   return (
-    <div className="fixed bottom-4 right-4 bg-white border border-gray-300 rounded-lg shadow-lg p-4 w-80 max-h-96 overflow-y-auto">
+    <>
+      <div className="fixed bottom-4 right-4 bg-white border border-gray-300 rounded-lg shadow-lg p-4 w-80 max-h-96 overflow-y-auto">
       <div className="flex justify-between items-center mb-4">
         <h3 className="text-lg font-semibold text-gray-800">Performance Dashboard</h3>
         <button
@@ -127,6 +128,7 @@ const PerformanceDashboard: React.FC = () => {
             Last updated: {new Date().toLocaleTimeString()}</div>
         </div>
     </div>
+    </>
   );
 };
 
