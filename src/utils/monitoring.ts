@@ -40,7 +40,7 @@ class MonitoringService {
 
   constructor() {
     if (typeof window !== 'undefined') {
-      this.initializeMonitoring()
+      this.initializeMonitoring(),
     }
   }
 
@@ -95,8 +95,7 @@ class MonitoringService {
         });
         fcpObserver.observe({ entryTypes: ['paint'] });
       } catch (error) {
-        // console.error('Error setting up performance observers:', error);
-      }
+        // }
     }
   }
 
@@ -136,8 +135,7 @@ class MonitoringService {
         });
         resourceObserver.observe({ entryTypes: ['resource'] });
       } catch (_error) {
-        // console.error('Error monitoring resources:', _error);
-      }
+        // }
     }
   }
 
@@ -148,7 +146,7 @@ class MonitoringService {
         stack: event.error?.stack,
         timestamp: Date.now(),
         userAgent: navigator.userAgent,
-        url: window.location.href
+        url: window.location.href,
       })
     })
 
@@ -158,14 +156,14 @@ class MonitoringService {
         message: `Unhandled Promise Rejection: ${event.reason}`,
         timestamp: Date.now(),
         userAgent: navigator.userAgent,
-        url: window.location.href
+        url: window.location.href,
       })
     })
   }
 
   private reportMetric(name: string, value: number): void {
     if (Math.random() > performanceConfig.monitoring.sampleRate) {
-      return
+      return,
     }
     const thresholds = performanceConfig.webVitals[name as keyof typeof performanceConfig.webVitals]
     if (thresholds) {
@@ -183,7 +181,7 @@ class MonitoringService {
   public logError(error: ErrorReport): void {
     this.errors.push(error)
     if (this.errors.length > 50) {
-      this.errors = this.errors.slice(-50)
+      this.errors = this.errors.slice(-50),
     }
   }
 

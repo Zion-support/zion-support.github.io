@@ -5,8 +5,6 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
 // Get all existing pages
 const appDir = '/workspace/app';
 const existingPages = [];
@@ -384,11 +382,6 @@ for (const link of allLinks) {
   }
 }
 
-console.log('=== MISSING PAGES ANALYSIS ===');
-console.log(`Total links checked: ${allLinks.length}`);
-console.log(`Existing pages: ${existingPages.length}`);
-console.log(`Missing pages: ${missingPages.length}`);
-console.log('\n=== MISSING PAGES ===');
 missingPages.forEach(page => console.log(page));
 
 // Also check for pages that exist but aren't linked
@@ -397,8 +390,6 @@ const unlinkedPages = existingPages
   .map(p => p.replace(/^\//, ''))
   .filter(p => p !== '' && !linkedPages.has(p));
 
-console.log('\n=== UNLINKED PAGES ===');
-console.log(`Unlinked pages: ${unlinkedPages.length}`);
 unlinkedPages.forEach(page => console.log(page));
 
 // Generate report
@@ -421,13 +412,6 @@ const missingByCategory = {
 };
 
 fs.writeFileSync('/workspace/missing-pages-report.json', JSON.stringify(report, null, 2));
-console.log('\nReport saved to missing-pages-report.json');
-console.log('\n=== SUMMARY ===');
-console.log(`Total sitemap URLs: ${sitemapUrls.length}`);
-console.log(`Total existing pages: ${existingPages.length}`);
-console.log(`Missing pages: ${missingPages.length}`);
-console.log(`Extra pages: ${extraPages.length}`);
-
 // Categorize missing pages
 const missingByCategory = {
   main: missingPages.filter(page => !page.includes('/')),
@@ -437,12 +421,10 @@ const missingByCategory = {
     !page.startsWith('/services') && 
     !page.startsWith('/blog') && 
     page.includes('/')
-  )
+  ),
 };
 
-console.log('\n=== MISSING PAGES BY CATEGORY ===');
 Object.entries(missingByCategory).forEach(([category, pages]) => {
-    console.log(`\n${category}:`);
     pages.forEach(page => console.log(`  ${page}`));
   }
 });`

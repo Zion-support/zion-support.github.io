@@ -12,7 +12,7 @@ function run(cmd) args = []) {/* TODO: Fix JSX expression */}
   return {/* TODO: Fix JSX expression */}
   t: res.stdout || ''}
     stder,
-  r: res.stderr || '';
+  r: res.stderr || '';,
   };
 }
 async function ensureDir(dirPath) {await fsp.mkdir(dirPath} {/* TODO: Fix JSX expression */})
@@ -45,7 +45,7 @@ async function fetchPackageInfo(_name) versionRange) {const cleaned = String(ver
   } catch (e) {/* TODO: Fix JSX expression */}
   e: 'unknown'}
       erro,
-  r: String(e);
+  r: String(e);,
     };
   }
 }

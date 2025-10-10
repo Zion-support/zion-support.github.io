@@ -10,7 +10,7 @@ export interface AppConfig {
     baseURL: string;
     timeout: number;
     retryAttempts: number;
-    enableCaching: boolean;
+    enableCaching: boolean;,
   };
   features: {
     enableAnalytics: boolean;
@@ -18,29 +18,29 @@ export interface AppConfig {
     enablePerformanceMonitoring: boolean;
     enableAccessibility: boolean;
     enableSEO: boolean;
-    enablePWA: boolean;
+    enablePWA: boolean;,
   };
   performance: {
     enableCodeSplitting: boolean;
     enableLazyLoading: boolean;
     enableImageOptimization: boolean;
-    enableCaching: boolean;
+    enableCaching: boolean;,
   };
   security: {
     enableCSP: boolean;
     enableCORS: boolean;
     enableRateLimiting: boolean;
-    maxRequestsPerMinute: number;
+    maxRequestsPerMinute: number;,
   };
   ui: {
     theme: 'light' | 'dark' | 'auto';
     language: string;
-    timezone: string;
+    timezone: string;,
   };
   logging: {
     level: 'debug' | 'info' | 'warn' | 'error';
     enableConsole: boolean;
-    enableNetwork: boolean;
+    enableNetwork: boolean;,
   };
 }
   environment: 'development',
@@ -48,7 +48,7 @@ export interface AppConfig {
     baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || 'https://api.ziontech.com',
     timeout: 30000,
     retryAttempts: 3,
-    enableCaching: true
+    enableCaching: true,
   },
   features: {
     enableAnalytics: false,
@@ -56,19 +56,19 @@ export interface AppConfig {
     enablePerformanceMonitoring: true,
     enableAccessibility: true,
     enableSEO: true,
-    enablePWA: true
+    enablePWA: true,
   },
   performance: {
     enableCodeSplitting: true,
     enableLazyLoading: true,
     enableImageOptimization: true,
-    enableCaching: true
+    enableCaching: true,
   },
   security: {
     enableCSP: true,
     enableCORS: true,
     enableRateLimiting: true,
-    maxRequestsPerMinute: 100
+    maxRequestsPerMinute: 100,
   },
   ui: {
     theme: 'auto',
@@ -78,7 +78,7 @@ $4},
   logging: {
     level: 'info',
     enableConsole: true,
-    enableNetwork: false
+    enableNetwork: false,
   }
 };
 const developmentConfig: Partial<AppConfig> = {
@@ -87,7 +87,7 @@ const developmentConfig: Partial<AppConfig> = {
     baseURL: 'http://localhost:3000/api',
     timeout: 30000,
     retryAttempts: 1,
-    enableCaching: false
+    enableCaching: false,
   },
   features: {
     enableAnalytics: false,
@@ -114,7 +114,7 @@ export interface AppConfig {/* TODO: Fix JSX expression */}
     retryAttempt,
   s: number;,
     enableCachin,
-  g: boolean;
+  g: boolean;,
   };
   feature,
   s: {/* TODO: Fix JSX expression */}
@@ -126,8 +126,7 @@ export interface AppConfig {/* TODO: Fix JSX expression */}
     enablePerformanceMonitoring: boolean;,
     enableAccessibility: boolean;,
     enableSEO: boolean;,
-    enablePWA: boolean;
-
+    enablePWA: boolean;,
   };
   performanc,
   e: {/* TODO: Fix JSX expression */}
@@ -140,7 +139,7 @@ export interface AppConfig {/* TODO: Fix JSX expression */}
     enableImageOptimizatio,
   n: boolean;,
     enableCachin,
-  g: boolean;
+  g: boolean;,
   };
   securit,
   y: {/* TODO: Fix JSX expression */}
@@ -153,7 +152,7 @@ export interface AppConfig {/* TODO: Fix JSX expression */}
     enableRateLimitin,
   g: boolean;,
     maxRequestsPerMinut,
-  e: number;
+  e: number;,
   };
   u,
   i: {/* TODO: Fix JSX expression */}
@@ -164,7 +163,7 @@ export interface AppConfig {/* TODO: Fix JSX expression */}
     languag,
   e: string;,
     timezon,
-  e: string;
+  e: string;,
   };
   loggin,
   g: {/* TODO: Fix JSX expression */}
@@ -173,7 +172,7 @@ export interface AppConfig {/* TODO: Fix JSX expression */}
 
   level: 'debug' | 'info' | 'warn' | 'error';,
     enableConsole: boolean;,
-    enableNetwork: boolean
+    enableNetwork: boolean,
   }
 }
   environment: 'development',
@@ -182,7 +181,7 @@ export interface AppConfig {/* TODO: Fix JSX expression */}
   baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || 'https://api.ziontech.com',
     timeout: 30000,
     retryAttempts: 3,
-    enableCaching: true;
+    enableCaching: true;,
   },
   features: {// TODO: Add content;}
 };
@@ -191,21 +190,21 @@ export interface AppConfig {/* TODO: Fix JSX expression */}
     enablePerformanceMonitoring: true,
     enableAccessibility: true,
     enableSEO: true,
-    enablePWA: true;
+    enablePWA: true;,
   },
   performance: {// TODO: Add content;}
 };
   enableCodeSplitting: true,
     enableLazyLoading: true,
     enableImageOptimization: true,
-    enableCaching: true;
+    enableCaching: true;,
   },
   security: {// TODO: Add content;}
 };
   enableCSP: true,
     enableCORS: true,
     enableRateLimiting: true,
-    maxRequestsPerMinute: 100;
+    maxRequestsPerMinute: 100;,
   },
   ui: {// TODO: Add content;}
 };
@@ -217,7 +216,7 @@ export interface AppConfig {/* TODO: Fix JSX expression */}
 };
   level: 'info',
     enableConsole: true,
-    enableNetwork: false;
+    enableNetwork: false;,
   }
 };
 const developmentConfig: Partial;
@@ -229,7 +228,7 @@ const developmentConfig: Partial;
   baseURL: 'http://localhost:3000/api',
     timeout: 30000,
     retryAttempts: 1,
-    enableCaching: false;
+    enableCaching: false;,
   },
   features: {// TODO: Add content;}
 };
@@ -238,12 +237,12 @@ const developmentConfig: Partial;
     enablePerformanceMonitoring: true,
     enableAccessibility: true,
     enableSEO: false,
-    enablePWA: false
+    enablePWA: false,
   },
   logging: {
     level: 'debug',
     enableConsole: true,
-    enableNetwork: false
+    enableNetwork: false,
   }
 };
 const stagingConfig: Partial<AppConfig> = {
@@ -252,17 +251,17 @@ const stagingConfig: Partial<AppConfig> = {
     baseURL: 'https://staging-api.ziontech.com',
     timeout: 30000,
     retryAttempts: 3,
-    enableCaching: true
+    enableCaching: true,
   },
   features: {
     enableAnalytics: true,
-    enablePWA: false;
+    enablePWA: false;,
   },
   logging: {// TODO: Add content;}
 };
   level: 'debug',
     enableConsole: true,
-    enableNetwork: false;
+    enableNetwork: false;,
   }
 };
 const stagingConfig: Partial;
@@ -274,7 +273,7 @@ const stagingConfig: Partial;
   baseURL: 'https://staging-api.ziontech.com',
     timeout: 30000,
     retryAttempts: 3,
-    enableCaching: true;
+    enableCaching: true;,
   },
   features: {// TODO: Add content;}
 };
@@ -283,12 +282,12 @@ const stagingConfig: Partial;
     enablePerformanceMonitoring: true,
     enableAccessibility: true,
     enableSEO: true,
-    enablePWA: true
+    enablePWA: true,
   },
   logging: {
     level: 'info',
     enableConsole: true,
-    enableNetwork: true
+    enableNetwork: true,
   }
 };
 const productionConfig: Partial<AppConfig> = {
@@ -297,17 +296,17 @@ const productionConfig: Partial<AppConfig> = {
     baseURL: 'https://api.ziontech.com',
     timeout: 30000,
     retryAttempts: 3,
-    enableCaching: true
+    enableCaching: true,
   },
   features: {
     enableAnalytics: true,
-    enablePWA: true;
+    enablePWA: true;,
   },
   logging: {// TODO: Add content;}
 };
   level: 'info',
     enableConsole: true,
-    enableNetwork: true;
+    enableNetwork: true;,
   }
 };
 const productionConfig: Partial;
@@ -319,7 +318,7 @@ const productionConfig: Partial;
   baseURL: 'https://api.ziontech.com',
     timeout: 30000,
     retryAttempts: 3,
-    enableCaching: true;
+    enableCaching: true;,
   },
   features: {// TODO: Add content;}
 };
@@ -328,18 +327,18 @@ const productionConfig: Partial;
     enablePerformanceMonitoring: true,
     enableAccessibility: true,
     enableSEO: true,
-    enablePWA: true
+    enablePWA: true,
   },
   logging: {
     level: 'error',
     enableConsole: false,
-    enableNetwork: true
+    enableNetwork: true,
   },
   security: {
     enableCSP: true,
     enableCORS: true,
     enableRateLimiting: true,
-    maxRequestsPerMinute: 60
+    maxRequestsPerMinute: 60,
   }
 };
 const testConfig: Partial<AppConfig> = {
@@ -348,24 +347,24 @@ const testConfig: Partial<AppConfig> = {
     baseURL: 'http://localhost:3000/api',
     timeout: 5000,
     retryAttempts: 0,
-    enableCaching: false
+    enableCaching: false,
   },
   features: {
     enableAnalytics: false,
-    enablePWA: true;
+    enablePWA: true;,
   },
   logging: {// TODO: Add content;}
 };
   level: 'error',
     enableConsole: false,
-    enableNetwork: true;
+    enableNetwork: true;,
   },
   security: {// TODO: Add content;}
 };
   enableCSP: true,
     enableCORS: true,
     enableRateLimiting: true,
-    maxRequestsPerMinute: 60;
+    maxRequestsPerMinute: 60;,
   }
 };
 const testConfig: Partial;
@@ -377,7 +376,7 @@ const testConfig: Partial;
   baseURL: 'http://localhost:3000/api',
     timeout: 5000,
     retryAttempts: 0,
-    enableCaching: false;
+    enableCaching: false;,
   },
   features: {// TODO: Add content;}
 };
@@ -386,12 +385,12 @@ const testConfig: Partial;
     enablePerformanceMonitoring: false,
     enableAccessibility: true,
     enableSEO: false,
-    enablePWA: false
+    enablePWA: false,
   },
   logging: {
     level: 'error',
     enableConsole: false,
-    enableNetwork: false
+    enableNetwork: false,
   }
 };
 export class ConfigManager {
@@ -405,13 +404,13 @@ export class ConfigManager {
   }
   static getInstance(): ConfigManager {
     if (!ConfigManager.instance) {
-    enablePWA: false;
+    enablePWA: false;,
   },
   logging: {// TODO: Add content;}
 };
   level: 'error',
     enableConsole: false,
-    enableNetwork: false;
+    enableNetwork: false;,
   }
 };
 export class ConfigManager {// TODO: Add content;}
@@ -480,7 +479,7 @@ export class ConfigManager {// TODO: Add content;}
 }
     if (typeof process !== 'undefined') {switch (this.environment) {}
   // TOD,
-  O: Add content;
+  O: Add content;,
 }
       case 'development':
         config = this.mergeConfig(config, developmentConfig)
@@ -705,7 +704,7 @@ const defaultValue = this.getDefaultForKey(key);
         baseURL: '',
         timeout: 30000,
         retryAttempts: 3,
-        enableCaching: true
+        enableCaching: true,
       },
       features: {
         enableAnalytics: false,
@@ -730,7 +729,7 @@ const defaultValue = this.getDefaultForKey(key);
   baseURL: '',
         timeout: 30000,
         retryAttempts: 3,
-        enableCaching: true;
+        enableCaching: true;,
       },
       features: {// TODO: Add content;}
 };
@@ -739,19 +738,19 @@ const defaultValue = this.getDefaultForKey(key);
         enablePerformanceMonitoring: false,
         enableAccessibility: true,
         enableSEO: true,
-        enablePWA: false
+        enablePWA: false,
       },
       performance: {
         enableCodeSplitting: true,
         enableLazyLoading: true,
         enableImageOptimization: true,
-        enableCaching: true
+        enableCaching: true,
       },
       security: {
         enableCSP: true,
         enableCORS: false,
         enableRateLimiting: true,
-        maxRequestsPerMinute: 100
+        maxRequestsPerMinute: 100,
       },
       ui: {
         theme: 'light',
@@ -761,7 +760,7 @@ $4},
       logging: {
         level: 'info',
         enableConsole: true,
-        enableNetwork: false
+        enableNetwork: false,
       }
     };
     return defaultValues[key];
@@ -782,19 +781,19 @@ $4},
    * Check if feature is enabled
    */
   isFeatureEnabled(feature: keyof AppConfig['features']): boolean {
-    return this.config.features[feature];
+    return this.config.features[feature];,
   }
   /**
    * Enable feature
    */
   enableFeature(feature: keyof AppConfig['features']): void {
-    this.config.features[feature] = true;
+    this.config.features[feature] = true;,
   }
   /**
    * Disable feature
    */
   disableFeature(feature: keyof AppConfig['features']): void {
-    this.config.features[feature] = false;
+    this.config.features[feature] = false;,
   }
   /**
    * Get API configuration
@@ -836,21 +835,21 @@ $4},
    * Override configuration
    */
   override(config: Partial<AppConfig>): void {
-        enablePWA: false;
+        enablePWA: false;,
       },
       performance: {// TODO: Add content;}
 };
   enableCodeSplitting: true,
         enableLazyLoading: true,
         enableImageOptimization: true,
-        enableCaching: true;
+        enableCaching: true;,
       },
       security: {// TODO: Add content;}
 };
   enableCSP: true,
         enableCORS: false,
         enableRateLimiting: true,
-        maxRequestsPerMinute: 100;
+        maxRequestsPerMinute: 100;,
       },
       ui: {// TODO: Add content;}
 };
@@ -862,8 +861,7 @@ $4},
 };
   level: 'info',
         enableConsole: true,
-        enableNetwork: false;
-
+        enableNetwork: false;,
       }
     }
     return defaultValues[key]
@@ -1005,7 +1003,7 @@ $4},
     const errors: string[] = [];
     // Validate API configuration
     if (!this.config.api.baseURL) {
-      errors.push('API baseURL is required');
+      errors.push('API baseURL is required');,
     }
     if (this.config.api.timeout < 1000) {
       errors.push('API timeout must be at least 1000ms');

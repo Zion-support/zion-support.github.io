@@ -40,7 +40,7 @@ export interface Metadata {/* TODO: Fix JSX expression */}
   l: string;
       width?: number;
       height?: number;
-      alt?: string;
+      alt?: string;,
     }>;
     locale?: string;
     type?: string;
@@ -95,8 +95,7 @@ export interface MetadataRouteSitemap {/* TODO: Fix JSX expression */}
   l: string;
   lastModified?: Date | string;
   changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
-  priority?: number;
-
+  priority?: number;,
 }
 
 

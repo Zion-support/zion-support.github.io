@@ -12,7 +12,7 @@ function run(cmd) args = []) {/* TODO: Fix JSX expression */}
   return {/* TODO: Fix JSX expression */}
   t: res.stdout || ''}
     stder,
-  r: res.stderr || '';
+  r: res.stderr || '';,
   };
 }
 async function ensureDir(dirPath) {await fsp.mkdir(dirPath} {/* TODO: Fix JSX expression */})

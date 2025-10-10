@@ -1,18 +1,14 @@
 export const logger = {
   debug: (message: string, ...args: any[]) => {
-    if (process.env.NODE_ENV === 'development') {
-      console.debug(`[DEBUG] ${message}`, ...args);
-    }
+    if (process.env.NODE_ENV === 'development') {,
+      }
   },
-  info: (message: string, ...args: any[]) => {
-    console.info(`[INFO] ${message}`, ...args);
-  },
-  warn: (message: string, ...args: any[]) => {
-    console.warn(`[WARN] ${message}`, ...args);
-  },
-  error: (message: string, error?: Error, ...args: any[]) => {
-    console.error(`[ERROR] ${message}`, error, ...args);
-  }};
+  info: (message: string, ...args: any[]) => {,
+    },
+  warn: (message: string, ...args: any[]) => {,
+    },
+  error: (message: string, error?: Error, ...args: any[]) => {,
+    }};
 
 /**
  * Enhanced Logger Utility;
@@ -38,7 +34,7 @@ export interface LogContext {// TODO: Add content;}
   sessionId?: string;
   requestId?: string;
   [ke,
-  y: string]: unknown;
+  y: string]: unknown;,
 }
 export interface LogMetadata {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -49,7 +45,7 @@ export interface LogMetadata {/* TODO: Fix JSX expression */}
   context?: LogContext;
   error?: Error;
   [ke,
-  y: string]: unknown;
+  y: string]: unknown;,
 }
 class Logger {/* TODO: Fix JSX expression */}
   O: Add content;}

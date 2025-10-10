@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+import Navigation from '../components/Navigation';
 
 const AIWritingAssistantPage: React.FC = () => {
   return (
@@ -12,7 +13,7 @@ const AIWritingAssistantPage: React.FC = () => {
         </a>
       </div>
     </div>
-  );
+  );,
 };
 
 import { Helmet } from 'react-helmet-async';

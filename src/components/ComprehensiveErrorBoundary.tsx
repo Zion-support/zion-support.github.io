@@ -8,7 +8,7 @@
   o: ErrorInfo) => void;
   enableErrorReporting?: boolean;
   maxRetries?: number;
-  showRetryButton?: boolean;
+  showRetryButton?: boolean;,
 }
 
 interface State {/* TODO: Fix JSX expression */}
@@ -22,7 +22,7 @@ interface State {/* TODO: Fix JSX expression */}
     retryCoun,
   t: number;,
     isRetryin,
-  g: boolean;
+  g: boolean;,
 }
 class ComprehensiveErrorBoundary extends Component;
           <Props, State> {/* TODO: Fix JSX expression */}
@@ -66,7 +66,7 @@ class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
       retryCoun,
   t: 0,
       isRetryin,
-  g: false;
+  g: false;,
     };
   }
   componentDidCatch(erro,
@@ -111,7 +111,7 @@ class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
       ur,
   l: window.location.href,
       retryCoun,
-  t: this.state.retryCount;
+  t: this.state.retryCount;,
     };
     // Send to error reporting service;
     if (typeof window !== 'undefined' && 'gtag' in window) {/* TODO: Fix JSX expression */}
@@ -131,7 +131,7 @@ class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
   error_i,
   d: this.state.errorId,
           retry_coun,
-  t: this.state.retryCount;
+  t: this.state.retryCount;,
         })
       });
     }
@@ -164,7 +164,7 @@ class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
         retryCoun,
   t: prevState.retryCount + 1,
         isRetryin,
-  g: false;)
+  g: false;),
       }));
     }
   };

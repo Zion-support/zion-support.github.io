@@ -12,7 +12,7 @@ export interface EnvConfig {// TODO: Add content;}
   V: 'development' | 'production' | 'test';
   NEXT_PUBLIC_API_URL?: string;
   NEXT_PUBLIC_GA_ID?: string;
-  NEXT_PUBLIC_SITE_URL?: string;
+  NEXT_PUBLIC_SITE_URL?: string;,
 }
 class EnvValidator {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -41,7 +41,7 @@ class EnvValidator {/* TODO: Fix JSX expression */}
       error,
   s: this.errors,
       warning,
-  s: this.warnings;
+  s: this.warnings;,
     };
   }
   /**
@@ -49,7 +49,7 @@ class EnvValidator {/* TODO: Fix JSX expression */}
    */
   getConfig(): EnvConfig {if (!validation.isValid) {}
   // TOD,
-  O: Add content;
+  O: Add content;,
 }
       throw new Error()
         `Environment validation,`

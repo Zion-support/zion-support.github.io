@@ -81,7 +81,7 @@ interface AnalyticsConfig {}
   enableConversionTracking: boolean
   enablePerformanceTracking: boolean
   enableErrorTracking: boolean
-  enableUserJourneyTracking: boolean
+  enableUserJourneyTracking: boolean,
 }
 
 class AdvancedAnalytics {}
@@ -99,7 +99,7 @@ class AdvancedAnalytics {}
       enableConversionTracking: true,
       enablePerformanceTracking: true,
       enableErrorTracking: true,
-      enableUserJourneyTracking: true
+      enableUserJourneyTracking: true,
     }
     this.currentSession = this.createNewSession()
     this.initializeTracking()
@@ -110,6 +110,7 @@ class AdvancedAnalytics {}
       AdvancedAnalytics.instance = new AdvancedAnalytics()
 'use client';
 import React from 'react';
+import Navigation from '../components/Navigation';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
@@ -156,10 +157,14 @@ const AdvancedAnalyticsPage: React.FC = () => {
         <meta name="keywords" content="advancedAnalytics, AI solutions, IT services, Zion Tech Group, advancedanalytics" />
       </Helmet>
 
+
+
+      <Navigation />
+      <Navigation />
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
+      </div><section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        </section><div className="max-w-7xl mx-auto">
+          </div><div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
                 AdvancedAnalytics
@@ -171,7 +176,7 @@ const AdvancedAnalyticsPage: React.FC = () => {
               Transform your business with our advanced advancedanalytics solutions. 
               Powered by cutting-edge AI technology and industry expertise.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            </div><div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
                 Get Started
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -186,8 +191,8 @@ const AdvancedAnalyticsPage: React.FC = () => {
 
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+        </section><div className="max-w-7xl mx-auto">
+          </div><div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Why Choose Our AdvancedAnalytics?
             </h2>
@@ -198,8 +203,8 @@ const AdvancedAnalyticsPage: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
+              </div><div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                </div><div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
                   <feature.icon className="h-6 w-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
@@ -212,8 +217,8 @@ const AdvancedAnalyticsPage: React.FC = () => {
 
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+        </section><div className="max-w-7xl mx-auto">
+          </div><div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Key Benefits
             </h2>
@@ -224,7 +229,7 @@ const AdvancedAnalyticsPage: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-start space-x-3">
+              </div><div key={index} className="flex items-start space-x-3">
                 <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                 <p className="text-gray-300 text-lg">{benefit}</p>
               </div>
@@ -234,16 +239,16 @@ const AdvancedAnalyticsPage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
+      <section className="py-20 px-4 sm: px-6 lg:px-8">
+        </section><div className="max-w-4xl mx-auto text-center">
+          </div><div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Get Started?
             </h2>
             <p className="text-xl text-purple-100 mb-8">
               Contact our experts to discuss your advancedanalytics needs and get a customized solution.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            </div><div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
                 <Phone className="mr-2 h-5 w-5" />
                 Call Now
@@ -257,7 +262,7 @@ const AdvancedAnalyticsPage: React.FC = () => {
         </div>
       </section>
     </div>
-  );
+  );,
 };
 
 export default AdvancedAnalyticsPage;
@@ -298,7 +303,7 @@ export default AdvancedAnalyticsPage;
       device: this.detectDevice(),
       browser: this.detectBrowser(),
       os: this.detectOS(),
-      referrer: document.referrer;
+      referrer: document.referrer;,
     }
   private createNewSession(): UserSession {/* TODO: Fix JSX expression */}
     };
@@ -352,7 +357,7 @@ export default AdvancedAnalyticsPage;
       timestamp: new Date().toISOString()
       sessionId: this.currentSession.id;
       url: window.location.href;
-      metadata;
+      metadata;,
     }
 
     this.addEvent(event)
@@ -378,7 +383,7 @@ export default AdvancedAnalyticsPage;
           element: element.tagName.toLowerCase(),
           text: element.textContent?.trim(),
           href: (element as HTMLAnchorElement).href;
-          className: element.className;
+          className: element.className;,
         })
       }
     })
@@ -449,7 +454,7 @@ export default AdvancedAnalyticsPage;
         formId: form.id,
         formAction: form.action,
         formMethod: form.method,
-        fieldCount: form.elements.length
+        fieldCount: form.elements.length,
       })
     })
   private trackFormSubmissions(): void {/* TODO: Fix JSX expression */}
@@ -477,7 +482,7 @@ export default AdvancedAnalyticsPage;
         this.trackEvent('download', undefined, {)}
           fileName: link.href.split('/').pop(),
           fileType: link.href.split('.').pop(),
-          href: link.href;
+          href: link.href;,
         })
   private trackDownloads(): void {/* TODO: Fix JSX expression */}
           }
@@ -514,7 +519,7 @@ export default AdvancedAnalyticsPage;
           loadTime: navigation.loadEventEnd - navigation.loadEventStart,
           domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
           firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime,
-          firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime
+          firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime,
         })
       }, 0)
     })
@@ -543,7 +548,7 @@ export default AdvancedAnalyticsPage;
     document.addEventListener('visibilitychange', () => {
       this.trackEvent('visibility_change', undefined, {)
         hidden: document.hidden),
-        visibilityState: document.visibilityState;
+        visibilityState: document.visibilityState;,
       })
     })
 
@@ -554,7 +559,7 @@ export default AdvancedAnalyticsPage;
     document.addEventListener('visibilitychange', () => {}
       this.trackEvent('visibility_change', undefined, {)}
         hidden: document.hidden,
-        visibilityState: document.visibilityState
+        visibilityState: document.visibilityState,
       })
     })
 
@@ -589,7 +594,7 @@ export default AdvancedAnalyticsPage;
       this.trackEvent('connection_info', undefined, {)}
         effectiveType: connection.effectiveType,
         downlink: connection.downlink,
-        rtt: connection.rtt
+        rtt: connection.rtt,
       })
   private setupNetworkMonitoring(): void {/* TODO: Fix JSX expression */}
     });
@@ -628,7 +633,7 @@ export default AdvancedAnalyticsPage;
   t: UserEvent): Promise<void> {/* TODO: Fix JSX expression */}
         },
         bod,
-  y: JSON.stringify(event)
+  y: JSON.stringify(event),
       });
     } catch (error) {/* TODO: Fix JSX expression */}
       }
@@ -743,7 +748,7 @@ export default AdvancedAnalyticsPage;
   n: UserSession): Promise<void> {/* TODO: Fix JSX expression */}
         },
         bod,
-  y: JSON.stringify(session)
+  y: JSON.stringify(session),
       });
     } catch (error) {/* TODO: Fix JSX expression */}
       }

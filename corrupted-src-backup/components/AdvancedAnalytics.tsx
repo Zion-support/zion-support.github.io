@@ -20,7 +20,7 @@ const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({,
       loadTime: 0;)
       firstContentfulPaint: 0;)
       largestContentfulPaint: 0;)
-      cumulativeLayoutShift: 0;)
+      cumulativeLayoutShift: 0;),
     })
     conversions: 0;
     performance: 0),

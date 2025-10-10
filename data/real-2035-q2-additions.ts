@@ -96,7 +96,7 @@
     launchDate: '2025-08-20'
     customers: 48;
     rating: 4.7;
-    reviews: 12;
+    reviews: 12;,
   }
     competitors: ['Superhuman AI', 'Front AI', 'Gmail add - ons'],
     market_size: '$10B+ email productivity'
@@ -109,7 +109,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 48;
     rating: 4 && 4.7;
-    reviews: 12;
+    reviews: 12;,
   },
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-300',
@@ -306,7 +306,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 22;
     rating: 4 && 4.6;
-    reviews: 9;
+    reviews: 9;,
   },
     id: 'niche - productivity - planner',
     name: 'Niche Productivity Planner',
@@ -415,7 +415,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 18;
     rating: 4 && 4.5;
-    reviews: 7;
+    reviews: 7;,
   },
       'QR tickets + check-in',
       'Email/SMS reminders',
@@ -525,7 +525,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 31;
     rating: 4 && 4.7;
-    reviews: 11;
+    reviews: 11;,
   },
     id: 'affiliate - tracking - suite',
     name: 'Affiliate Tracking Suite',
@@ -631,7 +631,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 12;
     rating: 4 && 4.5;
-    reviews: 5;
+    reviews: 5;,
   },
     id: 'smb - analytics - lite',
     name: 'SMB Analytics Lite',
@@ -737,7 +737,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 40;
     rating: 4 && 4.6;
-    reviews: 8;
+    reviews: 8;,
   },
       'Email-to-ticket',
     id: 'it - helpdesk - portal',
@@ -845,7 +845,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 16;
     rating: 4 && 4.7;
-    reviews: 6;
+    reviews: 6;,
   },
       'Self-serve returns portal',
     id: 'ecommerce - returns - manager'
@@ -953,7 +953,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 14;
     rating: 4 && 4.6;
-    reviews: 5;
+    reviews: 5;,
   },
     id: 'automated - email - followups'
     name: 'Automated Email Followups',
@@ -1158,7 +1158,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 20;
     rating: 4 && 4.6;
-    reviews: 6;
+    reviews: 6;,
   },
       'On-page audits',
     id: 'ai - seo - content - optimizer'
@@ -1266,7 +1266,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 33;
     rating: 4 && 4.7;
-    reviews: 10;
+    reviews: 10;,
   },
     id: 'social - scheduler - ai',
     name: 'Social Scheduler AI',
@@ -1372,7 +1372,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 26;
     rating: 4 && 4.5;
-    reviews: 7;
+    reviews: 7;,
   },
     id: 'lead - enrichment - api',
     name: 'Lead Enrichment API',
@@ -1478,7 +1478,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 9;
     rating: 4 && 4.4;
-    reviews: 4;
+    reviews: 4;,
   },
     id: 'consent - management - cmp',
     name: 'Consent Management CMP',
@@ -1584,7 +1584,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 37;
     rating: 4 && 4.7;
-    reviews: 10;
+    reviews: 10;,
   },
     id: 'cookie - scanner - pro'
     name: 'Cookie Scanner Pro',
@@ -1690,7 +1690,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 19;
     rating: 4 && 4.5;
-    reviews: 5;
+    reviews: 5;,
   },
     id: 'statuspage - sla - tracker'
     name: 'StatusPage SLA Tracker',
@@ -1796,7 +1796,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 11;
     rating: 4 && 4.4;
-    reviews: 3;
+    reviews: 3;,
   },
     id: 'agentic - lead - qualifier'
     name: 'Agentic Lead Qualifier',
@@ -1893,7 +1893,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 23;
     rating: 4 && 4.6;
-    reviews: 7;
+    reviews: 7;,
   },
     id: 'gdpr - dsar - portal - lite',
     name: 'GDPR DSAR Portal Lite',
@@ -1969,7 +1969,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 10;
     rating: 4 && 4.5;
-    reviews: 4;
+    reviews: 4;,
   },
     period: '/month',
     description: unknown;
@@ -2040,7 +2040,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 23;
     rating: 4 && 4.6;
-    reviews: 7;
+    reviews: 7;,
   },
     id: 'gdpr - dsar - portal - lite',
     name: 'GDPR DSAR Portal Lite',
@@ -2146,7 +2146,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 10;
     rating: 4 && 4.5;
-    reviews: 4;
+    reviews: 4;,
   },
     id: 'feature-flag-auditor'
     name: 'Feature Flag Auditor',
@@ -2337,7 +2337,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 8;
     rating: 4 && 4.4;
-    reviews: 3;
+    reviews: 3;,
   },
     id: 'postgres - index - advisor - pro'
     name: 'Postgres Index Advisor Pro',
@@ -2553,7 +2553,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 13;
     rating: 4 && 4.6;
-    reviews: 5;
+    reviews: 5;,
   },
     id: 'api-breaking-change-watcher'
     name: 'API Breaking Change Watcher',
@@ -2580,7 +2580,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 12;
     rating: 4 && 4.5;
-    reviews: 3;
+    reviews: 3;,
   },
     id: 'postgres-index-advisor-pro'
     name: 'Postgres Index Advisor Pro',
@@ -2820,7 +2820,7 @@
     launchDate: '2025-08-20'
     customers: 17;
     rating: 4.5;
-    reviews: 4;
+    reviews: 4;,
   }
     id: 'pii-discovery-scanner'
     name: 'PII Discovery Scanner',
@@ -3011,7 +3011,7 @@
     launchDate: '2025-08-20'
     customers: 8;
     rating: 4.4;
-    reviews: 3;
+    reviews: 3;,
   },
     id: 'postgres - index - advisor - pro'
     name: 'Postgres Index Advisor Pro',
@@ -3117,7 +3117,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 15;
     rating: 4 && 4.6;
-    reviews: 5;
+    reviews: 5;,
   },
     id: 's3 - lifecycle - optimizer'
     name: 'S3 Lifecycle Optimizer',
@@ -3223,7 +3223,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 17;
     rating: 4 && 4.5;
-    reviews: 4;
+    reviews: 4;,
   },
     id: 'pii - discovery - scanner'
     name: 'PII Discovery Scanner',
@@ -3329,7 +3329,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 13;
     rating: 4 && 4.6;
-    reviews: 5;
+    reviews: 5;,
   },
     id: 'api-breaking-change-watcher'
     name: 'API Breaking Change Watcher',
@@ -3543,7 +3543,7 @@
     launchDate: '2025-08-20'
     customers: 12;
     rating: 4.5;
-    reviews: 3;
+    reviews: 3;,
   }
     id: 'feature - flag - auditor'
     name: 'Feature Flag Auditor',
@@ -3649,7 +3649,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 8;
     rating: 4 && 4.4;
-    reviews: 3;
+    reviews: 3;,
   },
     id: 'postgres - index - advisor - pro'
     name: 'Postgres Index Advisor Pro',
@@ -3755,7 +3755,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 15;
     rating: 4 && 4.6;
-    reviews: 5;
+    reviews: 5;,
   },
     id: 's3 - lifecycle - optimizer'
     name: 'S3 Lifecycle Optimizer',
@@ -3861,7 +3861,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 17;
     rating: 4 && 4.5;
-    reviews: 4;
+    reviews: 4;,
   },
     id: 'pii - discovery - scanner'
     name: 'PII Discovery Scanner',
@@ -3967,7 +3967,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 13;
     rating: 4 && 4.6;
-    reviews: 5;
+    reviews: 5;,
   },
     id: 'api-breaking-change-watcher'
     name: 'API Breaking Change Watcher',
@@ -4096,7 +4096,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 12;
     rating: 4 && 4.5;
-    reviews: 3;
+    reviews: 3;,
   },
     id: 'synthetic - journey - monitor'
     name: 'Synthetic Journey Monitor',
@@ -4202,7 +4202,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 21;
     rating: 4 && 4.5;
-    reviews: 6;
+    reviews: 6;,
   },
     id: 'iam - permission - analyzer',
     name: 'IAM Permission Analyzer',
@@ -4310,7 +4310,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 9;
     rating: 4 && 4.6;
-    reviews: 3;
+    reviews: 3;,
   },
     id: 'warehouse - cost - optimizer'
     name: 'Data Warehouse Cost Optimizer',
@@ -4416,7 +4416,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 7;
     rating: 4 && 4.5;
-    reviews: 3;
+    reviews: 3;,
   },
     id: 'email - warmup - monitor'
     name: 'Email Warmup & Reputation Monitor',
@@ -4522,7 +4522,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 16;
     rating: 4 && 4.5;
-    reviews: 4;
+    reviews: 4;,
   },
     id: 'ai - meeting - to - ticket'
     name: 'AI MeetingtoTicket Copilot',
@@ -4628,7 +4628,7 @@
     launch_date: '2025 - 08 - 20'
     customers: 24;
     rating: 4 && 4.6;
-    reviews: 6;
+    reviews: 6;,
   }];
 const contact =
 	mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
@@ -4738,7 +4738,7 @@ export const,
 		launchDate: '2025-08-20'
 		customers: 48;
 		rating: 4 && 4.7;
-		reviews: 12;
+		reviews: 12;,
 	}
 		id: 'mobile-survey-studio',
 		name: 'Mobile Survey Studio',
@@ -4774,7 +4774,7 @@ export const,
 		launchDate: '2025-08-20'
 		customers: 22;
 		rating: 4 && 4.6;
-		reviews: 9;
+		reviews: 9;,
 	}
 		id: 'niche-productivity-planner',
 		name: 'Niche Productivity Planner',
@@ -4810,7 +4810,7 @@ export const,
 		launchDate: '2025-08-20'
 		customers: 18;
 		rating: 4 && 4.5;
-		reviews: 7;
+		reviews: 7;,
 	}
 		id: 'event-management-dashboard',
 		name: 'Event Management Dashboard',
@@ -4846,7 +4846,7 @@ export const,
 		launchDate: '2025-08-20'
 		customers: 31;
 		rating: 4 && 4.7;
-		reviews: 11;
+		reviews: 11;,
 	}
 		id: 'affiliate-tracking-suite',
 		name: 'Affiliate Tracking Suite',
@@ -4880,7 +4880,7 @@ export const,
 		launchDate: '2025-08-20'
 		customers: 12;
 		rating: 4 && 4.5;
-		reviews: 5;
+		reviews: 5;,
 	}
 		id: 'smb-analytics-lite',
 		name: 'SMB Analytics Lite',
@@ -4914,7 +4914,7 @@ export const,
 		launchDate: '2025-08-20'
 		customers: 40;
 		rating: 4 && 4.6;
-		reviews: 8;
+		reviews: 8;,
 	}
 		id: 'it-helpdesk-portal',
 		name: 'IT Helpdesk Portal',
@@ -4948,7 +4948,7 @@ export const,
 		launchDate: '2025-08-20'
 		customers: 16;
 		rating: 4 && 4.7;
-		reviews: 6;
+		reviews: 6;,
 	}
 		id: 'ecommerce-returns-manager',
 		name: 'Ecommerce Returns Manager',
@@ -4982,7 +4982,7 @@ export const,
 		launchDate: '2025-08-20'
 		customers: 14;
 		rating: 4 && 4.6;
-		reviews: 5;
+		reviews: 5;,
 	}
 		id: 'automated-email-followups'
 		name: 'Automated Email Followups'
@@ -5016,7 +5016,7 @@ export const,
 		launchDate: '2025-08-20'
 		customers: 28;
 		rating: 4 && 4.5;
-		reviews: 8;
+		reviews: 8;,
 	}
 		id: 'podcast-transcription-service',
 		name: 'Podcast Transcription Service',
@@ -5050,7 +5050,7 @@ export const,
 		launchDate: '2025-08-20'
 		customers: 20;
 		rating: 4 && 4.6;
-		reviews: 6;
+		reviews: 6;,
 	}
 		id: 'ai-seo-content-optimizer',
 		name: 'AI SEO Content Optimizer',
@@ -5084,7 +5084,7 @@ export const,
 		launchDate: '2025-08-20'
 		customers: 33;
 		rating: 4 && 4.7;
-		reviews: 10;
+		reviews: 10;,
 	}
 		id: 'social-scheduler-ai',
 		name: 'Social Scheduler AI',
@@ -5118,7 +5118,7 @@ export const,
 		launchDate: '2025-08-20'
 		customers: 26;
 		rating: 4 && 4.5;
-		reviews: 7;
+		reviews: 7;,
 	}
 		id: 'lead-enrichment-api',
 		name: 'Lead Enrichment API',
@@ -5152,7 +5152,7 @@ export const,
 		launchDate: '2025-08-20'
 		customers: 9;
 		rating: 4 && 4.4;
-		reviews: 4;
+		reviews: 4;,
 	}
 		id: 'consent-management-cmp',
 		name: 'Consent Management CMP',
@@ -5186,7 +5186,7 @@ export const,
 		launchDate: '2025-08-20'
 		customers: 37;
 		rating: 4 && 4.7;
-		reviews: 10;
+		reviews: 10;,
 	}
 		id: 'cookie-scanner-pro',
 		name: 'Cookie Scanner Pro',
@@ -5220,7 +5220,7 @@ export const,
 		launchDate: '2025-08-20'
 		customers: 19;
 		rating: 4 && 4.5;
-		reviews: 5;
+		reviews: 5;,
 	}
 		id: 'statuspage-sla-tracker',
 		name: 'StatusPage SLA Tracker',
@@ -5254,7 +5254,7 @@ export const,
 		launchDate: '2025-08-20'
 		customers: 11;
 		rating: 4 && 4.4;
-		reviews: 3;
+		reviews: 3;,
 	}
 		id: 'agentic-lead-qualifier',
 		name: 'Agentic Lead Qualifier',
@@ -5288,7 +5288,7 @@ export const,
 		launchDate: '2025-08-20'
 		customers: 23;
 		rating: 4 && 4.6;
-		reviews: 7;
+		reviews: 7;,
 	}
 		id: 'gdpr-dsar-portal-lite',
 		name: 'GDPR DSAR Portal Lite',
@@ -5322,7 +5322,7 @@ export const,
 		launchDate: '2025-08-20'
 		customers: 10;
 		rating: 4 && 4.5;
-		reviews: 4;
+		reviews: 4;,
 	}
 		id: 'feature-flag-auditor',
 		name: 'Feature Flag Auditor',
@@ -5356,7 +5356,7 @@ export const,
 		launchDate: '2025-08-20'
 		customers: 8;
 		rating: 4 && 4.4;
-		reviews: 3;
+		reviews: 3;,
 	}
 		id: 'postgres-index-advisor-pro',
 		name: 'Postgres Index Advisor Pro',
@@ -5390,7 +5390,7 @@ export const,
 		launchDate: '2025-08-20'
 		customers: 15;
 		rating: 4 && 4.6;
-		reviews: 5;
+		reviews: 5;,
 	}
 		id: 's3-lifecycle-optimizer'
 		name: 'S3 Lifecycle Optimizer'
@@ -5424,7 +5424,7 @@ export const,
 		launchDate: '2025-08-20'
 		customers: 17;
 		rating: 4 && 4.5;
-		reviews: 4;
+		reviews: 4;,
 	}
 		id: 'pii-discovery-scanner',
 		name: 'PII Discovery Scanner',
@@ -5458,7 +5458,7 @@ export const,
 		launchDate: '2025-08-20'
 		customers: 13;
 		rating: 4 && 4.6;
-		reviews: 5;
+		reviews: 5;,
 	}
 		id: 'api-breaking-change-watcher',
 		name: 'API Breaking Change Watcher',
@@ -5492,7 +5492,7 @@ export const,
 		launchDate: '2025-08-20'
 		customers: 12;
 		rating: 4 && 4.5;
-		reviews: 3;
+		reviews: 3;,
 	}
 		id: 'synthetic-journey-monitor',
 		name: 'Synthetic Journey Monitor',
@@ -5526,7 +5526,7 @@ export const,
 		launchDate: '2025-08-20'
 		customers: 21;
 		rating: 4 && 4.5;
-		reviews: 6;
+		reviews: 6;,
 	}
 		id: 'iam-permission-analyzer'
 		name: 'IAM Permission Analyzer'
@@ -5560,7 +5560,7 @@ export const,
 		launchDate: '2025-08-20'
 		customers: 9;
 		rating: 4 && 4.6;
-		reviews: 3;
+		reviews: 3;,
 	}
 		id: 'warehouse-cost-optimizer'
 		name: 'Data Warehouse Cost Optimizer'
@@ -5594,7 +5594,7 @@ export const,
 		launchDate: '2025-08-20'
 		customers: 7;
 		rating: 4 && 4.5;
-		reviews: 3;
+		reviews: 3;,
 	}
 		id: 'email-warmup-monitor'
 		name: 'Email Warmup & Reputation Monitor'
@@ -5628,7 +5628,7 @@ export const,
 		launchDate: '2025-08-20'
 		customers: 16;
 		rating: 4 && 4.5;
-		reviews: 4;
+		reviews: 4;,
 	}
 		id: 'ai-meeting-to-ticket',
 		name: 'AI MeetingtoTicket Copilot',
@@ -5662,7 +5662,7 @@ export const,
 		launchDate: '2025-08-20'
 		customers: 24;
 		rating: 4 && 4.6;
-		reviews: 6;
+		reviews: 6;,
 	}
 ];
   id: 'ai - email - responder',
@@ -5699,7 +5699,7 @@ export const,
   launch_date: '2025 - 08 - 20'
   customers: 48;
   rating: 4.7;
-  reviews: 12;
+  reviews: 12;,
 }
   id: 'mobile - survey - studio',
   name: 'Mobile Survey Studio',
@@ -5735,7 +5735,7 @@ export const,
   launch_date: '2025 - 08 - 20'
   customers: 22;
   rating: 4.6;
-  reviews: 9;
+  reviews: 9;,
 }
   id: 'niche - productivity - planner',
   name: 'Niche Productivity Planner',
@@ -5771,7 +5771,7 @@ export const,
   launch_date: '2025 - 08 - 20'
   customers: 18;
   rating: 4.5;
-  reviews: 7;
+  reviews: 7;,
 }
   id: 'event - management - dashboard',
   name: 'Event Management Dashboard',
@@ -5807,7 +5807,7 @@ export const,
   launch_date: '2025 - 08 - 20'
   customers: 31;
   rating: 4.7;
-  reviews: 11;
+  reviews: 11;,
 }
   id: 'affiliate - tracking - suite',
   name: 'Affiliate Tracking Suite',
@@ -5841,7 +5841,7 @@ export const,
   launch_date: '2025 - 08 - 20'
   customers: 12;
   rating: 4.5;
-  reviews: 5;
+  reviews: 5;,
 }
   id: 'smb - analytics - lite',
   name: 'SMB Analytics Lite',
@@ -5875,7 +5875,7 @@ export const,
   launch_date: '2025 - 08 - 20'
   customers: 40;
   rating: 4.6;
-  reviews: 8;
+  reviews: 8;,
 }
   id: 'it - helpdesk - portal',
   name: 'IT Helpdesk Portal',
@@ -5909,7 +5909,7 @@ export const,
   launch_date: '2025 - 08 - 20'
   customers: 16;
   rating: 4.7;
-  reviews: 6;
+  reviews: 6;,
 }
   id: 'ecommerce - returns - manager',
   name: 'Ecommerce Returns Manager',
@@ -5943,7 +5943,7 @@ export const,
   launch_date: '2025 - 08 - 20'
   customers: 14;
   rating: 4.6;
-  reviews: 5;
+  reviews: 5;,
 }
   id: 'automated - email - followups'
   name: 'Automated Email Followups'
@@ -5977,7 +5977,7 @@ export const,
   launch_date: '2025 - 08 - 20'
   customers: 28;
   rating: 4.5;
-  reviews: 8;
+  reviews: 8;,
 }
   id: 'podcast - transcription - service',
   name: 'Podcast Transcription Service',
@@ -6011,7 +6011,7 @@ export const,
   launch_date: '2025 - 08 - 20'
   customers: 20;
   rating: 4.6;
-  reviews: 6;
+  reviews: 6;,
 }
   id: 'ai - seo - content - optimizer',
   name: 'AI SEO Content Optimizer',
@@ -6045,7 +6045,7 @@ export const,
   launch_date: '2025 - 08 - 20'
   customers: 33;
   rating: 4.7;
-  reviews: 10;
+  reviews: 10;,
 }
   id: 'social - scheduler - ai',
   name: 'Social Scheduler AI',
@@ -6079,7 +6079,7 @@ export const,
   launch_date: '2025 - 08 - 20'
   customers: 26;
   rating: 4.5;
-  reviews: 7;
+  reviews: 7;,
 }
   id: 'lead - enrichment - api',
   name: 'Lead Enrichment API',
@@ -6113,7 +6113,7 @@ export const,
   launch_date: '2025 - 08 - 20'
   customers: 9;
   rating: 4.4;
-  reviews: 4;
+  reviews: 4;,
 }
   id: 'consent - management - cmp',
   name: 'Consent Management CMP',
@@ -6147,7 +6147,7 @@ export const,
   launch_date: '2025 - 08 - 20'
   customers: 37;
   rating: 4.7;
-  reviews: 10;
+  reviews: 10;,
 }
   id: 'cookie - scanner - pro',
   name: 'Cookie Scanner Pro',
@@ -6181,7 +6181,7 @@ export const,
   launch_date: '2025 - 08 - 20'
   customers: 19;
   rating: 4.5;
-  reviews: 5;
+  reviews: 5;,
 }
   id: 'statuspage - sla - tracker',
   name: 'StatusPage SLA Tracker',
@@ -6215,7 +6215,7 @@ export const,
   launch_date: '2025 - 08 - 20'
   customers: 11;
   rating: 4.4;
-  reviews: 3;
+  reviews: 3;,
 }
   id: 'agentic - lead - qualifier',
   name: 'Agentic Lead Qualifier',
@@ -6249,7 +6249,7 @@ export const,
   launch_date: '2025 - 08 - 20'
   customers: 23;
   rating: 4.6;
-  reviews: 7;
+  reviews: 7;,
 }
   id: 'gdpr - dsar - portal - lite',
   name: 'GDPR DSAR Portal Lite',
@@ -6283,7 +6283,7 @@ export const,
   launch_date: '2025 - 08 - 20'
   customers: 10;
   rating: 4.5;
-  reviews: 4;
+  reviews: 4;,
 }
   id: 'feature - flag - auditor',
   name: 'Feature Flag Auditor',
@@ -6317,7 +6317,7 @@ export const,
   launch_date: '2025 - 08 - 20'
   customers: 8;
   rating: 4.4;
-  reviews: 3;
+  reviews: 3;,
 }
   id: 'postgres - index - advisor - pro',
   name: 'Postgres Index Advisor Pro',
@@ -6351,7 +6351,7 @@ export const,
   launch_date: '2025 - 08 - 20'
   customers: 15;
   rating: 4.6;
-  reviews: 5;
+  reviews: 5;,
 }
   id: 's3 - lifecycle - optimizer'
   name: 'S3 Lifecycle Optimizer'
@@ -6385,7 +6385,7 @@ export const,
   launch_date: '2025 - 08 - 20'
   customers: 17;
   rating: 4.5;
-  reviews: 4;
+  reviews: 4;,
 }
   id: 'pii - discovery - scanner',
   name: 'PII Discovery Scanner',
@@ -6419,7 +6419,7 @@ export const,
   launch_date: '2025 - 08 - 20'
   customers: 13;
   rating: 4.6;
-  reviews: 5;
+  reviews: 5;,
 }
   id: 'api - breaking - change - watcher',
   name: 'API Breaking Change Watcher',
@@ -6453,7 +6453,7 @@ export const,
   launch_date: '2025 - 08 - 20'
   customers: 12;
   rating: 4.5;
-  reviews: 3;
+  reviews: 3;,
 }
   id: 'synthetic - journey - monitor',
   name: 'Synthetic Journey Monitor',
@@ -6487,7 +6487,7 @@ export const,
   launch_date: '2025 - 08 - 20'
   customers: 21;
   rating: 4.5;
-  reviews: 6;
+  reviews: 6;,
 }
   id: 'iam - permission - analyzer'
   name: 'IAM Permission Analyzer'
@@ -6521,7 +6521,7 @@ export const,
   launch_date: '2025 - 08 - 20'
   customers: 9;
   rating: 4.6;
-  reviews: 3;
+  reviews: 3;,
 }
   id: 'warehouse - cost - optimizer'
   name: 'Data Warehouse Cost Optimizer'
@@ -6555,7 +6555,7 @@ export const,
   launch_date: '2025 - 08 - 20'
   customers: 7;
   rating: 4.5;
-  reviews: 3;
+  reviews: 3;,
 }
   id: 'email - warmup - monitor'
   name: 'Email Warmup & Reputation Monitor'
@@ -6589,7 +6589,7 @@ export const,
   launch_date: '2025 - 08 - 20'
   customers: 16;
   rating: 4.5;
-  reviews: 4;
+  reviews: 4;,
 }
   id: 'ai - meeting - to - ticket',
   name: 'AI MeetingtoTicket Copilot',
@@ -6623,7 +6623,7 @@ export const,
   launch_date: '2025 - 08 - 20'
   customers: 24;
   rating: 4.6;
-  reviews: 6;
+  reviews: 6;,
 }
 		rating: 4.6;
 		reviews: 6;

@@ -360,7 +360,7 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
         overflow: hidden;
         clip: rect(0, 0, 0, 0);
         white-space: nowrap;
-        border: 0;
+        border: 0;,
       }
   private setupScreenReaderSupport(): void {/* TODO: Fix JSX expression */}
       }`

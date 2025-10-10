@@ -126,7 +126,7 @@ const report = {
     lintCheck: lintCheck.success;
     testCheck: testCheck.success;
     buildCheck: buildCheck.success;
-    allPassed: typeCheck.success && lintCheck.success && testCheck.success && buildCheck.success;
+    allPassed: typeCheck.success && lintCheck.success && testCheck.success && buildCheck.success;,
   },
   results: results;
   status: mergedCount > 0 ? 'success' : 'no-changes',

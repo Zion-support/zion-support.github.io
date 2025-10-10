@@ -2,7 +2,7 @@ import React, { Component, type ErrorInfo, type ReactNode } from 'react';
 
 interface ErrorFallbackProps {
   error: Error;
-  resetError: () => void;
+  resetError: () => void;,
 }
 
 function ErrorFallback({ error, resetError }: ErrorFallbackProps) {
@@ -44,23 +44,23 @@ function ErrorFallback({ error, resetError }: ErrorFallbackProps) {
           </button>
           <button
             onClick={() => window?.location.reload()}
-            className="bg-gray-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500"
+            className="bg-gray-600 text-white px-4 py-2 rounded-md text-sm font-medium hover: bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500"
           >
             Reload page
           </button>
         </div>
       </div>
     </div>
-  );
+  );,
 }
 
 interface AppErrorBoundaryProps {
-  children: ReactNode;
+  children: ReactNode;,
 }
 
 interface AppErrorBoundaryState {
   hasError: boolean;
-  error: Error | undefined;
+  error: Error | undefined;,
 }
 
 export class AppErrorBoundary extends Component<AppErrorBoundaryProps, AppErrorBoundaryState> {
@@ -74,9 +74,8 @@ export class AppErrorBoundary extends Component<AppErrorBoundaryProps, AppErrorB
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    if (process.env['NODE_ENV'] === 'development') {
-      console.error('Error caught by boundary:', error, errorInfo);
-    }
+    if (process.env['NODE_ENV'] === 'development') {,
+      }
     // Here you could send error to monitoring service
   }
 

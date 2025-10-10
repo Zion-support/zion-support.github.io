@@ -261,7 +261,7 @@ export const,
     // @ts-expect-error augment common shape for UI components that expect contactInfo;
     contactInfo: contact;
     // @ts - expect - error augment common shape for UI components that expect contact_info;,
-    contact_info: contact;
+    contact_info: contact;,
   }
     id: 'digital - product - commerce - stack',
     name: 'Digital Product Commerce Stack',
@@ -290,7 +290,7 @@ export const,
     rating: 4 && 4.8;
     reviews: 18;
     // @ts - expect - error augment common shape for UI components that expect contact_info;,
-    contact_info: contact;
+    contact_info: contact;,
   }
     id: 'wordpress - internal - linking - automation',
     name: 'WordPress Internal Linking Automation',
@@ -327,7 +327,7 @@ export const,
     // @ts-expect-error augment common shape for UI components that expect contactInfo;
     contactInfo: contact;
     // @ts - expect - error augment common shape for UI components that expect contact_info;,
-    contact_info: contact;
+    contact_info: contact;,
   }
     name: 'Ecommerce Reviews & UGC Activation',
     tagline: 'Deploy reviews and UGC workflows that increase trust and conversion',
@@ -644,7 +644,7 @@ export const,
     description: 'We implement and operate a revenue analytics stack that surfaces churn drivers, LTV/CAC ratios, cohort trends, and pricing experiment outcomes. Includes instrumentation templates and weekly executive reports.',
     features: [;
     // @ts-expect-error augment common shape for UI components that expect contactInfo;
-    contactInfo: contact;
+    contactInfo: contact;,
   }
     targetAudience: 'SaaS startups, PLG companies, finance and growth teams'
     trialDays: 14;
@@ -661,7 +661,7 @@ export const,
     rating: 4.9;
     reviews: 31;
     // @ts-expect-error augment common shape for UI components that expect contactInfo;,
-    contactInfo: contact;
+    contactInfo: contact;,
   }
     id: 'digital-product-commerce-stack',
     name: 'Digital Product Commerce Stack',
@@ -764,7 +764,7 @@ export const,
     rating: 4.8;
     reviews: 18;
     // @ts-expect-error augment common shape for UI components that expect contactInfo;,
-    contactInfo: contact;
+    contactInfo: contact;,
   }
     id: 'wordpress-internal-linking-automation'
     name: 'WordPress Internal Linking Automation',
@@ -852,7 +852,7 @@ export const,
     rating: 4.7;
     reviews: 22;
     // @ts-expect-error augment common shape for UI components that expect contactInfo;,
-    contactInfo: contact;
+    contactInfo: contact;,
   }
     id: 'reviews-ugc-activation'
     name: 'Ecommerce Reviews & UGC Activation',
@@ -942,7 +942,7 @@ export const,
     rating: 4.8;
     reviews: 12;
     // @ts-expect-error augment common shape for UI components that expect contactInfo;,
-    contactInfo: contact;
+    contactInfo: contact;,
   }];    contactInfo: contact;
     ico,
   n: '';
@@ -993,7 +993,7 @@ export const,
     textColor: 'text-emerald-300'
     link: 'https://ziontechgroup.com/services/subscription-analytics-revenue-optimization',
     marketPosition: 'Comparable to ProfitWell/ChartMogul with added hands-on growth engineering.',
-    contactInfo: contact;
+    contactInfo: contact;,
   },
     marketPosition: 'Comparable to ProfitWell/ChartMogul with added hands-on growth engineering.',
     targetAudience: 'SaaS startups, PLG companies, finance and growth teams',
@@ -1201,7 +1201,7 @@ export const,
     textColor: 'text-emerald-300'
     link: 'https://ziontechgroup.com/services/subscription-analytics-revenue-optimization',
     marketPosition: 'Comparable to ProfitWell/ChartMogul with added hands-on growth engineering.',
-    contactInfo: contact;
+    contactInfo: contact;,
   },
     marketPosition: 'Comparable to ProfitWell/ChartMogul with added hands-on growth engineering.',
     targetAudience: 'SaaS startups, PLG companies, finance and growth teams',
@@ -1595,7 +1595,7 @@ export const,
     reviews: 12;
     // @ts-expect-error augment common shape for UI components that expect contactInfo;
     contactInfo: contact;
-    contactInfo: contact;
+    contactInfo: contact;,
   }];    contactInfo: contact;
     contactInfo: contact;
     ico,

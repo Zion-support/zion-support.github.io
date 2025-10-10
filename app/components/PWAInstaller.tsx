@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+import Navigation from '../components/Navigation';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
@@ -25,6 +26,10 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
         <meta name="keywords" content="PWAInstaller, AI solutions, IT services, Zion Tech Group, pwainstaller" />
       </Helmet>
 
+
+
+      <Navigation />
+      <Navigation />
         </div>
       </section>
 

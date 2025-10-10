@@ -8,7 +8,7 @@ export interface ValidationResult {// TODO: Add content;}
 };
   isVali,
   d: boolean;
-  error?: string;
+  error?: string;,
 }
 // Email validation;
 export function validateEmail(emai)

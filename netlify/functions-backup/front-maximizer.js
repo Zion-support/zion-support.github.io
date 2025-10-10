@@ -23,7 +23,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   n: new Date().toISOString()}
         }})};
     return result;
-//   } catch (error) {// console.error('Error in front-maximizer: ') error;
+//   } catch (error) {// console.error('Error in front-maximizer: ') error;,
       }
     return {
       statusCode: 500;
@@ -47,7 +47,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   }
 };
         timestamp: new Date().toISOString(),' function: 'front-maximizer',' source: event.source || 'unknown', maximization: {' status: 'active', optimizations: 0;
-        lastOptimization: new Date().toISOString() } }) }; return result; } catch (error) {' // console.error('Error in front-maximizer: ') error;
+        lastOptimization: new Date().toISOString() } }) }; return result; } catch (error) {' // console.error('Error in front-maximizer: ') error;,
       } return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'front-maximizer' }) }; } };'
         timestam,
   p: new Date().toISOString(),' functio,

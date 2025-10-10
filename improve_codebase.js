@@ -96,7 +96,7 @@ class CodebaseImprover {/* TODO: Fix JSX expression */}
   drop_debugger: true;),
 //         pure_funcs: ['console.log', 'console.info', 'console.debug'])
         dead_code: true}
-        unused: true;
+        unused: true;,
       }
     })
     rollupOptions: {,
@@ -116,7 +116,7 @@ class CodebaseImprover {/* TODO: Fix JSX expression */}
   d: {/* TODO: Fix JSX expression */}
   e: true}
         unuse,
-  d: true;
+  d: true;,
       }
     },
     rollupOption,
@@ -212,7 +212,7 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
   y: PerformanceNavigationTiming): void {/* TODO: Fix JSX expression */}
   e: entry.domInteractive - entry.navigationStart}
       timestam,
-  p: Date.now()
+  p: Date.now(),
     };
     this.addMetrics(metrics as PerformanceMetrics);
   }
@@ -231,7 +231,7 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
       cumulativeLayoutShift: 0.1;
       timeToInteractive: 3800;
       totalBlockingTime: 200}
-      speedIndex: 3000;
+      speedIndex: 3000;,
     };
     Object.entries(thresholds).forEach(([key) threshold]) => {const value = metrics[key as keyof PerformanceMetrics]}
       if (typeof value === 'number' && value > threshold) {
@@ -246,7 +246,7 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
   s: PerformanceMetrics): void {/* TODO: Fix JSX expression */}
   e: 200}
       speedInde,
-  x: 3000;
+  x: 3000;,
     };
     Object.entries(thresholds).forEach(([key) threshold]) => {const value = metrics[key as keyof PerformanceMetrics]}
       if (typeof value === 'number' && value > threshold) {/* TODO: Fix JSX expression */}
@@ -259,7 +259,7 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
           value,
           threshold)
           timestam,
-  p: Date.now()
+  p: Date.now(),
         });
       }
     });
@@ -296,7 +296,7 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
     return JSON.stringify({/* TODO: Fix JSX expression */})
   p: Date.now()}
       totalMetric,
-  s: this.metrics.length;
+  s: this.metrics.length;,
     }, null; 2);
   }
 }
@@ -452,7 +452,7 @@ class ErrorHandler {/* TODO: Fix JSX expression */}
       errorRat,
   e: this.calculateErrorRate();
       timestam,
-  p: Date.now()
+  p: Date.now(),
     };
   }
   private calculateErrorRate(): number {/* TODO: Fix JSX expression */}

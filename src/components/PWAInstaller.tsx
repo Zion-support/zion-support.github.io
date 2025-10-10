@@ -14,14 +14,14 @@ const PWAInstaller: React.FC = () => {
     // Check if app is already installed
     if (window.matchMedia('(display-mode: standalone)').matches) {
       setIsInstalled(true);
-      return;
+      return;,
     }
 
     // Listen for the beforeinstallprompt event
     const handleBeforeInstallPrompt = (e: Event) => {
       e.preventDefault();
       setDeferredPrompt(e as BeforeInstallPromptEvent);
-      setShowInstallButton(true);
+      setShowInstallButton(true);,
     };
 
     // Listen for the appinstalled event
@@ -48,16 +48,13 @@ const PWAInstaller: React.FC = () => {
       const { outcome } = await deferredPrompt.userChoice;
       
       if (outcome === 'accepted') {
-        console.log('User accepted the install prompt');
-      } else {
-        console.log('User dismissed the install prompt');
-      }
+        } else {
+        }
       
       setDeferredPrompt(null);
       setShowInstallButton(false);
     } catch (error) {
-      console.error('Error installing PWA:', error);
-    }
+      }
   };
 
   if (isInstalled || !showInstallButton) {
@@ -98,13 +95,13 @@ const PWAInstaller: React.FC = () => {
         
         <button
           onClick={() => setShowInstallButton(false)}
-          className="flex-shrink-0 text-white/70 hover:text-white transition-colors duration-200"
+          className="flex-shrink-0 text-white/70 hover: text-white transition-colors duration-200"
         >
           ×
         </button>
       </div>
     </div>
-  );
+  );,
 };
 
 export default PWAInstaller;

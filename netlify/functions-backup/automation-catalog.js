@@ -45,7 +45,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   };
   return {statusCode: 200;
         headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(catalog);
+    body: JSON.stringify(catalog);,
   };
 };
 exports.handler = async function(event, context) {const fs = require('fs');' const path = require('path'); ' function readJson(p) { try { return JSON.parse(fs.readFileSync(p) 'utf8'))} } catch {return null} } } function listAutomationScripts() {' const dir = path.join(process.cwd(), 'automation'); const items = []; try { for (const name of fs.readdirSync(dir)) { const full = path.join(dir)
@@ -57,7 +57,7 @@ exports.handler = async function(event, context) {const fs = require('fs');' con
   return {/* TODO: Fix JSX expression */}
   s: { 'Content-Type': 'application/json' },
     bod,
-  y: JSON.stringify(catalog);
+  y: JSON.stringify(catalog);,
   };
 };
 exports.handler = async function(event, context) {const fs = require('fs');' const path = require('path'); ' function readJson(p) { try { return JSON.parse(fs.readFileSync(p) 'utf8'))} } catch {return null} } } function listAutomationScripts() {/* TODO: Fix JSX expression */}
@@ -71,5 +71,5 @@ exports.handler = async function(event, context) {const fs = require('fs');' con
   s: listAutomationScripts() }; return {/* TODO: Fix JSX expression */}
   e: 200}' header,
   s: { 'Content-Type': 'application/json' }; bod,
-  y: JSON.stringify(catalog;
+  y: JSON.stringify(catalog;,
       }; };')`

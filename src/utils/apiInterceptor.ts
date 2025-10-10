@@ -48,7 +48,7 @@ export interface APIConfig {// TODO: Add content;}
     response?: (respons)
   e: Response) => Response | Promise<Response>;
     error?: (erro)
-  r: Error) => Error | Promise<Error>;
+  r: Error) => Error | Promise<Error>;,
   };
 }
 export interface RequestConfig {/* TODO: Fix JSX expression */}
@@ -74,7 +74,7 @@ export interface APIResponse<T = unknown> {/* TODO: Fix JSX expression */}
     status: number;,
     statusText: string;,
     headers: Headers;,
-    config: RequestConfig
+    config: RequestConfig,
 }
 export interface CacheEntry {// TODO: Add content;}
 };
@@ -84,7 +84,7 @@ export interface CacheEntry {// TODO: Add content;}
   timestam,
   p: number;,
     expiresA,
-  t: number;
+  t: number;,
 }
 
 export class APIInterceptor {// TODO: Add content;}
@@ -193,7 +193,7 @@ const requestPromise = this.executeRequest;
         bod,
   y: finalConfig.body ? JSON.stringify(finalConfig.body) : undefined,
         signa,
-  l: this.createAbortSignal(finalConfig.timeout || this.config.timeout)
+  l: this.createAbortSignal(finalConfig.timeout || this.config.timeout),
       };
       const response = await fetch(url, fetchOptions);
       const duration = performance.now() - startTime;
@@ -223,8 +223,7 @@ const data = await this.parseResponse;
         status: finalResponse.status,
         statusText: finalResponse.statusText,
         headers: finalResponse.headers,
-        config: finalConfig;
-
+        config: finalConfig;,
       };
     } catch (error) {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -359,8 +358,7 @@ const data = await this.parseResponse;
 
       timeout: config.timeout || this.config.timeout,
       retryAttempts: config.retryAttempts ?? this.config.retryAttempts,
-      cache: config.cache ?? this.config.enableCaching;
-
+      cache: config.cache ?? this.config.enableCaching;,
     };
   }
   /**
@@ -476,7 +474,7 @@ const data = await this.parseResponse;
       timestam)
   p: Date.now(),
       expiresA,
-  t: Date.now() + this.config.cacheTimeout;
+  t: Date.now() + this.config.cacheTimeout;,
     });
   }
   /**

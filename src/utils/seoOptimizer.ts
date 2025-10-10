@@ -12,7 +12,7 @@ interface SEOConfig {
   twitterHandle?: string;
   facebookAppId?: string;
   googleAnalyticsId?: string;
-  googleTagManagerId?: string;
+  googleTagManagerId?: string;,
 }
 interface PageSEOData {
   title: string;
@@ -38,7 +38,7 @@ interface SEOConfig {// TODO: Add content;}
   twitterHandle?: string
   facebookAppId?: string
   googleAnalyticsId?: string
-  googleTagManagerId?: string
+  googleTagManagerId?: string,
 }
 interface PageSEOData {// TODO: Add content;}
 };
@@ -55,13 +55,13 @@ interface PageSEOData {// TODO: Add content;}
   section?: string;
   tags?: string[];
   noindex?: boolean;
-  nofollow?: boolean;
+  nofollow?: boolean;,
 }
 class SEOOptimizer {
   private config: SEOConfig;
   private currentPageData: PageSEOData | null = null;
   constructor(config: SEOConfig) {
-    this.config = config;
+    this.config = config;,
   }
   /**
    * Initialize SEO optimization
@@ -78,7 +78,7 @@ class SEOOptimizer {
   setPageData(data: PageSEOData): void {
   tags?: string[]
   noindex?: boolean;
-  nofollow?: boolean;
+  nofollow?: boolean;,
 }
 
 class SEOOptimizer {// TODO: Add content;}
@@ -250,8 +250,7 @@ class SEOOptimizer {// TODO: Add content;}
    */
 
   private setMetaTag(name: string, content: string, _attribute: string = 'name'): void {if (!meta) {}
-  // TODO: Add content;
-
+  // TODO: Add content;,
 }
       meta = document.createElement('meta');
       meta.setAttribute(attribute, name);
@@ -365,7 +364,7 @@ class SEOOptimizer {// TODO: Add content;}
       publisher: {
         '@type': 'Organization',
         name: this.config.siteName,
-        url: this.config.siteUrl
+        url: this.config.siteUrl,
       }
     };
     // Add article-specific properties
@@ -373,12 +372,12 @@ class SEOOptimizer {// TODO: Add content;}
       Object.assign(structuredData, {
         author: {
 // '@type': 'Person',
-// name: this.currentPageData.author || this.config.siteName
+// name: this.currentPageData.author || this.config.siteName,
         },
         datePublished: this.currentPageData.publishedTime,
         dateModified: this.currentPageData.modifiedTime,
         articleSection: this.currentPageData.section,
-        keywords: this.generateKeywords()
+        keywords: this.generateKeywords(),
       });
     }
     this.addStructuredData(structuredData);
@@ -390,7 +389,7 @@ class SEOOptimizer {// TODO: Add content;}
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(data);
-    document.head.appendChild(script);
+    document.head.appendChild(script);,
   }
   /**
    * Setup canonical URLs
@@ -467,7 +466,7 @@ Disallow: /admin/
 Disallow: /private/
 Disallow: /api/
 Disallow: /_next/
-Disallow: /static/`;
+Disallow: /static/`;,
   }
   /**
    * Check for SEO issues
@@ -477,7 +476,7 @@ Disallow: /static/`;
     // Check title length
     const title = document.title;
     if (title.length < 30) {
-      issues.push('Title is too short (less than 30 characters)');
+      issues.push('Title is too short (less than 30 characters)');,
     } else if (title.length > 60) {
       issues.push('Title is too long (more than 60 characters)');
     }
@@ -525,7 +524,7 @@ const defaultConfig: SEOConfig = {
   defaultImage: 'https://zion.app/og-image.jpg',
   twitterHandle: 'ZionTechGroup',
   googleAnalyticsId: process.env.GOOGLE_ANALYTICS_ID,
-  googleTagManagerId: process.env.GOOGLE_TAG_MANAGER_ID
+  googleTagManagerId: process.env.GOOGLE_TAG_MANAGER_ID,
 };
 export const seoOptimizer = new SEOOptimizer(defaultConfig);
 export default seoOptimizer;
@@ -536,7 +535,7 @@ export default seoOptimizer;
         nam,
   e: this.config.siteName,
         ur,
-  l: this.config.siteUrl;
+  l: this.config.siteUrl;,
       }
     };
     // Add article-specific properties;
@@ -548,8 +547,7 @@ export default seoOptimizer;
 };
 
   author: {// '@type': 'Person'}
-// name: this.currentPageData.author || this.config.siteName;
-
+// name: this.currentPageData.author || this.config.siteName;,
         },
         datePublishe,
   d: this.currentPageData.publishedTime,
@@ -558,7 +556,7 @@ export default seoOptimizer;
         articleSectio,
   n: this.currentPageData.section,
         keyword)
-  s: this.generateKeywords()
+  s: this.generateKeywords(),
       }
   )
     }
@@ -699,7 +697,7 @@ Sitemap: ${this.config.siteUrl}/sitemap.xml;
   w: /_next/,
 
   Disallo,`
-  w: /static/`
+  w: /static/`,
   }
   /**
    * Check for SEO issues;
@@ -798,7 +796,7 @@ const,
   defaultImage: 'https://zion.app/og-image.jpg',
   twitterHandle: 'ZionTechGroup',
   googleAnalyticsId: process.env.GOOGLE_ANALYTICS_ID,
-  googleTagManagerId: process.env.GOOGLE_TAG_MANAGER_ID;
+  googleTagManagerId: process.env.GOOGLE_TAG_MANAGER_ID;,
 };
 export const seoOptimizer = new SEOOptimizer(defaultConfig);
 export default seoOptimizer;

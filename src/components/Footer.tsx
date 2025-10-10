@@ -1,5 +1,6 @@
 'use client';
 import React, { memo } from 'react';
+import Footer from '../components/Footer';
 import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Cloud, Code, BarChart, Users, Globe, Facebook, Twitter, Linkedin, Instagram, Youtube, Github, MessageSquare, Star, TrendingUp, CheckCircle } from 'lucide-react';
 
@@ -363,7 +364,7 @@ const Footer: React.FC = memo(() => {
               © {currentYear} Zion Tech Group. All rights reserved.
             </div>
             <div className="flex space-x-6">
-              <Link href="/privacy" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
+              <Link href="/privacy" className="text-sm text-gray-400 hover: text-cyan-400 transition-colors">
                 Privacy Policy
               </Link>
               <Link href="/terms" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
@@ -391,7 +392,7 @@ const Footer: React.FC = memo(() => {
         </div>
       </div>
     </footer>
-  );
+  );,
 });
 
 Footer.displayName = 'Footer';

@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+import Navigation from '../components/Navigation';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight, ExternalLink } from 'lucide-react';
@@ -57,12 +58,16 @@ const CaseStudiesPage: React.FC = () => {
         <meta name="keywords" content="case studies, AI success stories, IT solutions, business transformation, technology implementation" />
       </Helmet>
 
+
+
+      <Navigation />
+      <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="relative max-w-7xl mx-auto text-center">
+        </div><section className="relative py-20 px-4 overflow-hidden">
+          </section><div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          </div><div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          </div><div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Success Stories
             </h1>
@@ -74,12 +79,12 @@ const CaseStudiesPage: React.FC = () => {
 
         {/* Case Studies Grid */}
         <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
+          </section><div className="max-w-7xl mx-auto">
+            </div><div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
               {caseStudies.map((study) => (
-                <div key={study.id} className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300">
-                  <div className="mb-6">
-                    <div className="w-full h-48 bg-gray-800 rounded-lg mb-4 flex items-center justify-center">
+                </div><div key={study.id} className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300">
+                  </div><div className="mb-6">
+                    </div><div className="w-full h-48 bg-gray-800 rounded-lg mb-4 flex items-center justify-center">
                       <span className="text-2xl font-bold text-cyan-400">{study.title.charAt(0)}</span>
                     </div>
                     <div className="flex items-center justify-between mb-2">
@@ -93,7 +98,7 @@ const CaseStudiesPage: React.FC = () => {
                   </div>
 
                   <div className="space-y-4 mb-6">
-                    <div>
+                    </div><div>
                       <h4 className="text-sm font-semibold text-cyan-400 mb-2">Challenge</h4>
                       <p className="text-sm text-gray-300">{study.challenge}</p>
                     </div>
@@ -124,14 +129,14 @@ const CaseStudiesPage: React.FC = () => {
 
         {/* CTA Section */}
         <section className="py-16 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+          </section><div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
               Ready to Write Your Success Story?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
               Let's discuss how we can help transform your business with AI and IT solutions.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            </div><div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
                 className="bg-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-cyan-700 transition-colors duration-200 flex items-center justify-center space-x-2"
@@ -150,7 +155,7 @@ const CaseStudiesPage: React.FC = () => {
         </section>
       </div>
     </>
-  );
+  );,
 };
 
 export default CaseStudiesPage;

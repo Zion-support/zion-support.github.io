@@ -12,7 +12,7 @@ const DemoPage: React.FC = () => {
 
           Contact Us;
         </a></div></div>)
-  );
+  );,
 };
 export default DemoPage;
 

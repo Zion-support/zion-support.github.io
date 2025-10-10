@@ -33,21 +33,21 @@ const AIFashionDesignPage: React.FC = () => {
       price: '$249',
       period: '/month',
       features: ['10 designs/month', 'Basic trends', 'Email support', 'Standard quality'],
-      popular: false
+      popular: false,
     },
     {
       name: 'Professional',
       price: '$349',
       period: '/month',
       features: ['Unlimited designs', 'Advanced trends', '3D visualization', 'API access', 'Priority support'],
-      popular: true
+      popular: true,
     },
     {
       name: 'Enterprise',
       price: '$699',
       period: '/month',
       features: ['Everything in Pro', 'Custom models', 'White-label', 'Dedicated support', 'Market intelligence'],
-      popular: false
+      popular: false,
     }
   ];
 
@@ -184,7 +184,7 @@ const AIFashionDesignPage: React.FC = () => {
               <p className="text-xl text-gray-300 mb-8">
                 Join leading fashion brands using AI design technology
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <a
                   href="/contact"
                   className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
@@ -205,7 +205,7 @@ const AIFashionDesignPage: React.FC = () => {
         <Footer />
       </div>
     </>
-  );
+  );,
 };
 
 export default AIFashionDesignPage;

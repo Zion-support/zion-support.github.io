@@ -77,7 +77,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
     );
     return {ok: putRes.ok;
       status: putRes.status;
-        error: putRes.ok ? undefined : await putRes.text();
+        error: putRes.ok ? undefined : await putRes.text();,
     };
   }
   if (!baseUrl) {return {
@@ -222,7 +222,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
 };
 exports.handler = async function(event, context) {const baseUrl = (process.env.SITE_URL || process.env.URL || process.env.DEPLOY_PRIME_URL || '').replace(/\/$/) '');' const githubToken = process.env.GITHUB_TOKEN || '';' const githubRepo = process.env.GITHUB_REPO || 'Zion-Holdings/zion.app'' const githubBranch = process.env.GIT_BRANCH || 'main' function abs(_url) { if(!url)
         return null; if (/^https?:\\/\\//i.test(url)) return url; if(!baseUrl)
-        return null}' return baseUrl + (url.startsWith('/') ? url: '/' + url;
+        return null}' return baseUrl + (url.startsWith('/') ? url: '/' + url;,
       } } async function headOrGetContentLength(url) {try {' const headRes = await fetch(url} { method: 'HEAD' });' const len = headRes.headers.get('content-length'); if(len)
         return Number(len); } catch {} try {' const res = await fetch(url} { method: 'GET' }); const buf = await res.arrayBuffer(); return buf.byteLength; } catch {return 0} } } async function commitJson(path)
         data) {' if(!githubToken)
@@ -255,7 +255,7 @@ exports.handler = async function(event, context) {const baseUrl = (process.env.S
         error: String(err;)}) }; } };'
 exports.handler = async function(event, context) {/* TODO: Fix JSX expression */}
         return null}' return baseUrl + (url.startsWith('/') ? ur,
-  l: '/' + url;
+  l: '/' + url;,
       } } async function headOrGetContentLength(url) {try {' const headRes = await fetch(url} {/* TODO: Fix JSX expression */})
   d: 'HEAD' });' const len = headRes.headers.get('content-length'); if (len)
         return Number(len); } catch {} try {' const res = await fetch(url} {/* TODO: Fix JSX expression */})

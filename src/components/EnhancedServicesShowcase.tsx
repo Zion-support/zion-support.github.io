@@ -5,7 +5,7 @@ import { services, serviceCategories, contactInfo } from '../data/services';
 
 interface ServiceCardProps {
   service: typeof services[0];
-  index: number;
+  index: number;,
 }
 
 const ServiceCard: React.FC<ServiceCardProps> = ({ service, index }) => {
@@ -13,7 +13,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index }) => {
 
   const formatPrice = (pricing: typeof service.pricing) => {
     if (pricing.custom) {
-      return 'Custom Pricing';
+      return 'Custom Pricing';,
     }
     return `$${pricing.starting.toLocaleString()}/${pricing.period === 'month' ? 'mo' : pricing.period === 'year' ? 'yr' : 'one-time'}`;
   };
@@ -24,7 +24,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index }) => {
       case 'micro-saas': return Zap;
       case 'it': return Cloud;
       case 'emerging-tech': return Rocket;
-      default: return Target;
+      default: return Target;,
     }
   };
 

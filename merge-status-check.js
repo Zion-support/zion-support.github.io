@@ -22,7 +22,7 @@ const { execSync } = require('child_process');
 //   // console.log('Current)
   Branch: ') branch || 'Unknown');
 //   // console.log('Remote)
-  s: ') remotes ? remotes.split('\n')[0] : 'None');
+  s: ') remotes ? remotes.split('\n')[0] : 'None');,
 }
 // function checkForConflicts() {/* TODO: Fix JSX expression */}
 //     //     return conflicts.split('\n').filter(f => f.trim())}

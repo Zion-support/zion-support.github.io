@@ -100,6 +100,8 @@ const QuantumAIHybrid202, 5 = () => {
         <link rel="canonical", href=" " />
       </Helmet>
 
+
+      <Navigation />
         <div>
             <Link to="/", className="text-white hover: text-cyan-400 transition-colors">← Back to Home</Link>,
   </div>,
@@ -615,7 +617,7 @@ const QuantumAIHybrid202, 5 = () => {/* TODO: Fix JSX expression */}
   sm:flex-row gap-4 justify-center"></div>"
                     to="/contact""
   className="bg-purple-500 text-white px-8 py-4 rounded-lg font-semibold,"
-  hover:bg-purple-600 transition-colors inline-flex items-center justify-center gap-2""
+  hover: bg-purple-600 transition-colors inline-flex items-center justify-center gap-2""
                     >""
                       Explore Quantum-AI Solutions""
                       <Link className="w-5 h-5 " /></Link>"
@@ -623,7 +625,7 @@ const QuantumAIHybrid202, 5 = () => {/* TODO: Fix JSX expression */}
                     </Link>"
                     <Link to="/services/quantum-computing-consulting"></Link>"
   className= " />
-  );
+  );,
 };
 
 export default QuantumAIHybrid2025;

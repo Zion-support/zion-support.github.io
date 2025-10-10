@@ -132,8 +132,7 @@ $4}
         return talent;
       case 'equipment':
         return equipment;
-      default:
-        return [];
+      default: return [];,
   };
 
   const filteredItems = getCurrentItems().filter(item =>
@@ -311,7 +310,7 @@ icon$5: Award,
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
               Browse our marketplace to discover the tools, talent, and equipment you need 
               to transform your business with cutting-edge technology.
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
               <a
                 href="/contact"
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
@@ -330,7 +329,7 @@ icon$5: Award,
   return (
     <div>Coming Soon</div>
 
-  );
+  );,
 };
   const [activeCategory, setActiveCategory] = useState('products');
   const [searchTerm, setSearchTerm] = useState('');

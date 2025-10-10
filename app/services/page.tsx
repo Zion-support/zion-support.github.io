@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+import Navigation from '../components/Navigation';
 import { Helmet } from 'react-helmet-async';
 import { 
   Brain, 
@@ -26,7 +27,7 @@ const ServicesPage: React.FC = () => {
       features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics', 'AI Consulting'],
       price: 'Starting at $1,500/month',
       category: 'AI Services',
-      popular: true
+      popular: true,
     },
     {
       icon: Brain,
@@ -93,7 +94,7 @@ const ServicesPage: React.FC = () => {
       features: ['Cloud Migration', 'Infrastructure as Code', 'Auto-scaling', 'Disaster Recovery', 'Multi-cloud'],
       price: 'Starting at $1,299/month',
       category: 'Cloud Services',
-      popular: true
+      popular: true,
     },
     {
       icon: Cloud,
@@ -128,7 +129,7 @@ const ServicesPage: React.FC = () => {
       features: ['Security Audits', 'Penetration Testing', 'Incident Response', 'Compliance', 'Threat Intelligence'],
       price: 'Starting at $799/month',
       category: 'Cybersecurity',
-      popular: true
+      popular: true,
     },
     {
       icon: Shield,
@@ -163,7 +164,7 @@ const ServicesPage: React.FC = () => {
       features: ['Business Intelligence', 'Real-time Analytics', 'Data Visualization', 'Reporting', 'Predictive Modeling'],
       price: 'Starting at $599/month',
       category: 'Data Analytics',
-      popular: true
+      popular: true,
     },
     {
       icon: BarChart3,
@@ -190,7 +191,7 @@ const ServicesPage: React.FC = () => {
       features: ['Native Apps', 'Cross-platform', 'UI/UX Design', 'App Store Optimization', 'Push Notifications'],
       price: 'Starting at $1,999/month',
       category: 'Mobile Development',
-      popular: true
+      popular: true,
     },
     {
       icon: Smartphone,
@@ -209,7 +210,7 @@ const ServicesPage: React.FC = () => {
       features: ['Database Design', 'Performance Tuning', 'Backup & Recovery', 'Migration', 'Monitoring'],
       price: 'Starting at $399/month',
       category: 'Database Services',
-      popular: true
+      popular: true,
     },
     {
       icon: Database,
@@ -228,7 +229,7 @@ const ServicesPage: React.FC = () => {
       features: ['Workflow Automation', 'RPA Implementation', 'Integration', 'Monitoring', 'Optimization'],
       price: 'Starting at $599/month',
       category: 'Automation',
-      popular: true
+      popular: true,
     },
     {
       icon: Zap,
@@ -247,7 +248,7 @@ const ServicesPage: React.FC = () => {
       features: ['React/Next.js', 'Full-stack Development', 'API Development', 'Performance Optimization', 'SEO'],
       price: 'Starting at $1,299/month',
       category: 'Web Development',
-      popular: true
+      popular: true,
     },
     {
       icon: Globe,
@@ -316,12 +317,16 @@ const ServicesPage: React.FC = () => {
         <meta name="keywords" content="AI services, IT services, cloud services, data analytics, cybersecurity, Zion Tech Group" />
       </Helmet>
 
+
+
+      <Navigation />
+      <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="relative max-w-7xl mx-auto text-center">
+        </div><section className="relative py-20 px-4 overflow-hidden">
+          </section><div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          </div><div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          </div><div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Our Services
             </h1>
@@ -333,11 +338,11 @@ const ServicesPage: React.FC = () => {
 
         {/* Search and Filter Section */}
         <section className="py-8 px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-              <div className="flex flex-col md:flex-row gap-4 mb-6">
-                <div className="flex-1">
-                  <div className="relative">
+          </section><div className="max-w-6xl mx-auto">
+            </div><div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+              </div><div className="flex flex-col md:flex-row gap-4 mb-6">
+                </div><div className="flex-1">
+                  </div><div className="relative">
                     <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                     <input
                       type="text"
@@ -349,7 +354,7 @@ const ServicesPage: React.FC = () => {
                   </div>
                 </div>
                 <div className="md:w-64">
-                  <div className="relative">
+                  </div><div className="relative">
                     <Filter className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                     <select
                       value={selectedCategory}
@@ -387,8 +392,8 @@ const ServicesPage: React.FC = () => {
 
         {/* Services Grid */}
         <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="flex justify-between items-center mb-8">
+          </section><div className="max-w-7xl mx-auto">
+            </div><div className="flex justify-between items-center mb-8">
               <h2 className="text-3xl font-bold text-white">
                 {selectedCategory === 'All' ? 'All Services' : `${selectedCategory}`}
               </h2>
@@ -399,15 +404,15 @@ const ServicesPage: React.FC = () => {
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {filteredServices.map((service, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 group relative">
+                </div><div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 group relative">
                   {service.popular && (
-                    <div className="absolute -top-3 left-6 bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                    </div><div className="absolute -top-3 left-6 bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-3 py-1 rounded-full text-sm font-medium">
                       Popular
                     </div>
                   )}
                   
                   <div className="flex items-start mb-6">
-                    <div className="bg-cyan-500/20 p-3 rounded-lg mr-4 group-hover:bg-cyan-500/30 transition-colors flex-shrink-0">
+                    </div><div className="bg-cyan-500/20 p-3 rounded-lg mr-4 group-hover:bg-cyan-500/30 transition-colors flex-shrink-0">
                       <service.icon className="w-8 h-8 text-cyan-400" />
                     </div>
                     <div className="flex-1">
@@ -440,7 +445,7 @@ const ServicesPage: React.FC = () => {
                   </div>
                   
                   <div className="mb-6">
-                    <div className="text-2xl font-bold text-cyan-400 mb-2">{service.price}</div>
+                    </div><div className="text-2xl font-bold text-cyan-400 mb-2">{service.price}</div>
                     <div className="text-sm text-gray-300">Contact for custom pricing</div>
                   </div>
                   
@@ -461,14 +466,14 @@ const ServicesPage: React.FC = () => {
 
         {/* CTA Section */}
         <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+          </section><div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
               Ready to Get Started?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
               Let's discuss your project and find the perfect solution for your business needs.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            </div><div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
                 Get Free Consultation
               </button>
@@ -480,7 +485,7 @@ const ServicesPage: React.FC = () => {
         </section>
       </div>
     </>
-  );
+  );,
 };
 
 export default ServicesPage;

@@ -62,7 +62,7 @@ const,
         return renderDots();
       case 'pulse':
         return renderPulse();
-      default: return renderSpinner();
+      default: return renderSpinner();,
     }
   };
 

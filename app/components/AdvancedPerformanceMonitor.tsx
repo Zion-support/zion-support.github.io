@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+import Navigation from '../components/Navigation';
 import React, { useEffect, useState, useCallback } from 'react';
 
 
@@ -9,12 +10,12 @@ interface PerformanceMetrics {
   fid: number | null;
   cls: number | null;
   ttfb: number | null;
-  memory: number | null;
+  memory: number | null;,
 }
 
 interface PerformanceMonitorProps {
   onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
-  enableRealTimeMonitoring?: boolean;
+  enableRealTimeMonitoring?: boolean;,
 }
 
 const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
@@ -52,8 +53,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         observers.push(lcpObserver);
       } catch (error) {
         // eslint-disable-next-line no-console
-        console.warn('LCP observer not supported:', error);
-      }
+        }
     }
 
     // Measure First Input Delay (FID)
@@ -79,8 +79,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         observers.push(fidObserver);
       } catch (error) {
         // eslint-disable-next-line no-console
-        console.warn('FID observer not supported:', error);
-      }
+        }
     }
 
     // Measure Cumulative Layout Shift (CLS)
@@ -107,8 +106,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         observers.push(clsObserver);
       } catch (error) {
         // eslint-disable-next-line no-console
-        console.warn('CLS observer not supported:', error);
-      }
+        }
     }
 
     // Measure Time to First Byte (TTFB)
@@ -132,8 +130,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       }));
     } catch (error) {
       // eslint-disable-next-line no-console
-      console.warn('Performance measurement failed:', error);
-    }
+      }
 
     // Cleanup observers
     return () => {
@@ -142,8 +139,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           observer.disconnect();
         } catch (error) {
           // eslint-disable-next-line no-console
-          console.warn('Error disconnecting observer:', error);
-        }
+          }
       });
     };
   }, []);
@@ -244,7 +240,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     if (metrics.fcp && metrics.fcp > 1800) {
       recommendations.push(
         'First Contentful Paint is slow. Consider optimizing critical rendering path.'
-      );
+      );,
     }
 
     if (metrics.lcp && metrics.lcp > 2500) {

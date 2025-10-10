@@ -1048,12 +1048,12 @@ const AIAgentOrchestrationEnterprise202, 5 = () => {/* TODO: Fix JSX expression 
                 </p>"
                 to="/contact""
   className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg,"
-  hover:bg-gray-100 transition-colors""
+  hover: bg-gray-100 transition-colors""
                 >""
                   Schedule Architecture Review""
                   <ArrowLeft className="w-5 h-5 ml-2 rotate-180 "></ArrowLeft>"
                   <ArrowLeft className="w-5 h-5 ml-2 rotate-180" /></ArrowLeft>
-  );
+  );,
 };
 
 export default AIAgentOrchestrationEnterprise2025;;

@@ -230,7 +230,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
       logData.error = {
         name: error.name;
         message: error.message;
-        stack: error.stack;
+        stack: error.stack;,
       }
    * @example;`
    * ```typescript;
@@ -270,7 +270,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
       logData.error = {
         name: error.name;
         message: error.message;
-        stack: error.stack;
+        stack: error.stack;,
       }
   public fatal(messag,
   e: string,
@@ -372,7 +372,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
       stack,
       userId: this.getUserId(),
       sessionId: this.getSessionId(),
-      environment: this.config.environment;
+      environment: this.config.environment;,
     }
     // Store log entry;
     this.logs.push(logEntry)
@@ -435,7 +435,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
         level: levelName,
         message: entry.message;
         source: entry.source;
-        data: entry.data;
+        data: entry.data;,
       }
       switch (entry.level) {
         case LogLevel.DEBUG: if (this.isDevelopment()) {,

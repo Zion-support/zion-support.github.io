@@ -84,7 +84,7 @@ $4];
     questions: category.questions.filter(q => 
       q.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
       q.answer.toLowerCase().includes(searchTerm.toLowerCase())
-    )
+    ),
   })).filter(category => category.questions.length > 0);
 
   return (
@@ -178,7 +178,7 @@ const FAQPage: React.FC = () => {
   return (
     <div>Coming Soon</div>
 
-  );
+  );,
 };
   const [searchTerm, setSearchTerm] = useState('');
   const [openItems, setOpenItems] = useState<number[]>([]);
@@ -321,7 +321,7 @@ const toggleItem = (inde)
   s: category.questions.filter(q =>)
 //       q.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
 //       q.answer.toLowerCase().includes(searchTerm.toLowerCase())
-//     )
+//     ),
   })).filter(category => category.questions.length > 0);
   return (<div>Coming Soon</div>)
   )
@@ -383,7 +383,7 @@ type="text" placeholder="Search FAQs..."
                 <div className="space-y-4"></div>
                   {category.questions.map((item, itemIndex) => {}
   // TOD,
-  O: Add content;
+  O: Add content;,
 }
                     const globalIndex = categoryIndex * 100 + itemIndex;
                     const isOpen = openItems.includes(globalIndex);

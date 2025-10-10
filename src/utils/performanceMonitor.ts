@@ -25,9 +25,9 @@ class PerformanceMonitor {
   init(): void {
     if (this.isInitialized || typeof window === 'undefined') return;
     
-    this.isInitialized = true;
-    this.setupWebVitals();
-    this.setupCustomMetrics();
+      this.isInitialized = true;
+      this.setupWebVitals();
+      this.setupCustomMetrics();
   }
 
   private setupWebVitals(): void {
@@ -50,14 +50,13 @@ class PerformanceMonitor {
         const entries = list.getEntries();
         const entry = entries[entries.length - 1];
         if (entry) {
-          (this._metrics as any)[metric] = entry.startTime;
+            (this._metrics as any)[metric] = entry.startTime;
         }
       });
       observer.observe({ entryTypes: ['paint'] });
       this.observers.push(observer);
     } catch (error) {
-      console.warn(`Failed to observe ${name}:`, error);
-    }
+      }
   }
 
   private observeLCP(): void {
@@ -72,8 +71,7 @@ class PerformanceMonitor {
       observer.observe({ entryTypes: ['largest-contentful-paint'] });
       this.observers.push(observer);
     } catch (error) {
-      console.warn('Failed to observe LCP:', error);
-    }
+      }
   }
 
   private observeFID(): void {
@@ -87,8 +85,7 @@ class PerformanceMonitor {
       observer.observe({ entryTypes: ['first-input'] });
       this.observers.push(observer);
     } catch (error) {
-      console.warn('Failed to observe FID:', error);
-    }
+      }
   }
 
   private observeCLS(): void {
@@ -98,7 +95,7 @@ class PerformanceMonitor {
         const entries = list.getEntries();
         entries.forEach((entry: any) => {
           if (!entry.hadRecentInput) {
-            clsValue += entry.value;
+              clsValue += entry.value;
           }
         });
         this._metrics.cls = clsValue;
@@ -106,8 +103,7 @@ class PerformanceMonitor {
       observer.observe({ entryTypes: ['layout-shift'] });
       this.observers.push(observer);
     } catch (error) {
-      console.warn('Failed to observe CLS:', error);
-    }
+      }
   }
 
   private setupCustomMetrics(): void {
@@ -123,7 +119,7 @@ class PerformanceMonitor {
   }
 
   addCustomMetric(name: string, value: number): void {
-    this._metrics.customMetrics[name] = value;
+      this._metrics.customMetrics[name] = value;
   }
 
   getMetrics(): PerformanceMetrics {
@@ -133,8 +129,6 @@ class PerformanceMonitor {
   reportMetrics(): void {
     if (typeof window === 'undefined') return;
     
-    console.log('Performance Metrics:', this._metrics);
-    
     // Send to analytics service
     if (typeof gtag !== 'undefined') {
       gtag('event', 'performance_metrics', {
@@ -143,7 +137,7 @@ class PerformanceMonitor {
         value: Math.round(this._metrics.lcp || 0),
         custom_parameter_1: this._metrics.fcp,
         custom_parameter_2: this._metrics.cls,
-        custom_parameter_3: this._metrics.fid
+        custom_parameter_3: this._metrics.fid,
       });
     }
   }

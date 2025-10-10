@@ -54,7 +54,7 @@ const Status: React.FC = () => {
       <Footer /></Footer>
 
     </div>
-  );
+  );,
 };
 
 

@@ -23,13 +23,12 @@ async function handler(req, res) {
       amount: Math.round(amount * 100), // Convert to cents
       currency,
       status: 'requires_payment_method',
-      created: Math.floor(Date.now() / 1000)
+      created: Math.floor(Date.now() / 1000),
     };
 
     res.statusCode = 200;
     res.json({ paymentIntent });
   } catch (err) {
-    console.error("Error:", err);
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Failed to create payment intent' }));

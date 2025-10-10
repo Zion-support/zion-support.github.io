@@ -781,12 +781,12 @@ $4}
                   onClick={() => setActiveTab(area.id)}
                   className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${}
   // TOD,
-  O: Add content;
+  O: Add content;,
 }
                     activeTab === area.id;`
                       ? `${area.bgColor} ${area.color} border-2 border-current`
                       : 'bg-slate-800/50 text-gray-300,
-  hover:bg-slate-700/50 border-2 border-transparent'`
+  hover: bg-slate-700/50 border-2 border-transparent'`,
                   }`}
 //                 >
                   
@@ -881,7 +881,7 @@ $4}
                       <div className="text-sm text-gray-400 mb-1">Status</div>`
                       <div className={`text-sm font-medium ${}
   // TOD,
-  O: Add content;
+  O: Add content;,
 }
                         project.status === 'Completed' ? 'text-green-400' :
                         project.status === 'In Progress' ? 'text-blue-400' : 'text-yellow-400'`
@@ -975,7 +975,7 @@ $4}
                         <span>{pub.year}</span>`
                         <span className={`px-2 py-1 rounded text-xs ${}
   // TOD,
-  O: Add content;
+  O: Add content;,
 }
                           pub.impact === 'High' ? 'bg-green-500/20 text-green-400' : 'bg-blue-500/20 text-blue-400'`
                         }`}></span>
@@ -1078,7 +1078,7 @@ $4}
           
 
           </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
               <a
                 href="/contact" className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
 
@@ -1138,7 +1138,7 @@ $4}
     </>
 
     </div>
-  );
+  );,
 };
 
 

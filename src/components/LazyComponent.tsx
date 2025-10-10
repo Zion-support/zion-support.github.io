@@ -2,7 +2,7 @@ import React, { Suspense, lazy, ComponentType } from 'react';
 
 interface LazyComponentProps {
   fallback?: React.ReactNode;
-  children: React.ReactNode;
+  children: React.ReactNode;,
 }
 
 export default function LazyComponent({
@@ -63,7 +63,7 @@ interface LazyComponentProps {/* TODO: Fix JSX expression */}
   fallback?: ReactNode;
   delay?: number;
   threshold?: number;
-  rootMargin?: string;
+  rootMargin?: string;,
 }
 // Higher-order component for lazy loading;
 export const _withLazyLoading = {};

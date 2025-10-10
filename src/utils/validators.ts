@@ -2,7 +2,7 @@
 
 export interface ValidationResult {
   isValid: boolean;
-  error?: string;
+  error?: string;,
 }
 
 // URL Validation
@@ -10,7 +10,7 @@ export const isValidUrl = (url: string): boolean => {
   if (!url || typeof url !== 'string') return false;
   try {
     const urlObj = new URL(url);
-    return urlObj.protocol === 'http:' || urlObj.protocol === 'https:';
+    return urlObj.protocol === 'http:' || urlObj.protocol === 'https:';,
   } catch {
     return false;
   }
@@ -194,7 +194,7 @@ export const validateComposite = (
   for (const validator of validators) {
     const result = validator(value);
     if (!result.isValid) {
-      return result;
+      return result;,
     }
   }
   

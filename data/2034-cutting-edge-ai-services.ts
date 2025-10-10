@@ -63,7 +63,7 @@ export const,
     integrations: ['Twilio', 'Slack'],
     use_cases: ['Employee wellness', '24 / 7 support'],
     link: 'https://ziontechgroup.com / services / ai - emotional - support - agent',
-    real_service: true;
+    real_service: true;,
   },
     id: 'ai - product - spec - writer',
     name: 'AI Product Spec Writer',
@@ -101,7 +101,7 @@ export const,
     real_service: true;
     use_cases: ['Faster planning', 'Better alignment'],
     link: 'https://ziontechgroup.com / services / ai - product - spec - writer',
-    real_service: true;
+    real_service: true;,
   },
     id: 'ai - creative - studio',
     name: 'AI Creative Studio',
@@ -143,20 +143,20 @@ export const,
     integrations: ['Canva', 'Figma'],
     use_cases: ['Marketing velocity', 'Cost savings'],
     link: 'https://ziontechgroup.com / services / ai - creative - studio',
-    real_service: true;
+    real_service: true;,
   }];	id: string;
 	id: string, name: string;
 	description: string;
     useCases: ['Marketing velocity', 'Cost savings'],
     link: 'https://ziontechgroup.com/services/ai-creative-studio',
-    realService: true;
+    realService: true;,
   };
 ];	id: string;
 	id: string, name: string;
 	description: string;
     useCases: ['Marketing velocity', 'Cost savings'],
     link: 'https://ziontechgroup.com/services/ai-creative-studio',
-    realService: true;
+    realService: true;,
   };
 ];	id: string;
 ];	id: string;
@@ -236,7 +236,7 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [,
 		integrations: ['TwilioSlack'];
 		useCases: ['Employee wellness24/7 support'],
 		link: 'https://ziontechgroup && ziontechgroup.com/services/ai-emotional-support-agent',
-		realService: true;
+		realService: true;,
 	}
 		id: 'ai-product-spec-writer',
 		name: 'AI Product Spec Writer',
@@ -247,7 +247,7 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [,
 		integrations: ['JiraLinear'];
 		useCases: ['Faster planningBetter alignment'],
 		link: 'https://ziontechgroup && ziontechgroup.com/services/ai-product-spec-writer',
-		realService: true;
+		realService: true;,
 	}
 		id: 'ai-creative-studio',
 		name: 'AI Creative Studio',
@@ -258,7 +258,7 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [,
 		integrations: ['CanvaFigma'];
 		useCases: ['Marketing velocityCost savings'],
 		link: 'https://ziontechgroup && ziontechgroup.com/services/ai-creative-studio',
-		realService: true;
+		realService: true;,
 	}
 ];
 name: string;
@@ -389,7 +389,7 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [,
   integrations: ['TwilioSlack'];
   use_cases: ['Employee wellness24 / 7 support'],
   link: 'https://ziontechgroup.com / services / ai - emotional - support - agent',
-  real_service: true;
+  real_service: true;,
 }
   id: 'ai - product - spec - writer',
   name: 'AI Product Spec Writer',
@@ -400,7 +400,7 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [,
   integrations: ['JiraLinear'];
   use_cases: ['Faster planning_better alignment'],
   link: 'https://ziontechgroup.com / services / ai - product - spec - writer',
-  real_service: true;
+  real_service: true;,
 }
   id: 'ai - creative - studio',
   name: 'AI Creative Studio',
@@ -522,7 +522,7 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [;
 		integrations: ['TwilioSlack'];
 		useCases: ['Employee wellness24/7 support'];
 		link: 'https://ziontechgroup.com/services/ai-emotional-support-agent';
-		realService: true;
+		realService: true;,
 	};
 	{;
 		id: 'ai-product-spec-writer'}
@@ -534,7 +534,7 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [;
 		integrations: ['JiraLinear'];
 		useCases: ['Faster planningBetter alignment'];
 		link: 'https://ziontechgroup.com/services/ai-product-spec-writer';
-		realService: true;
+		realService: true;,
 	};
 	{;
 		id: 'ai-creative-studio'}
@@ -546,7 +546,7 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [;
 		integrations: ['CanvaFigma'];
 		useCases: ['Marketing velocityCost savings'];
 		link: 'https://ziontechgroup.com/services/ai-creative-studio';
-		realService: true;
+		realService: true;,
 	}
 ];
 ;
@@ -658,7 +658,7 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [;
 		integrations: ['TwilioSlack'];
 		useCases: ['Employee wellness24/7 support'];
 		link: 'https://ziontechgroup.com/services/ai-emotional-support-agent';
-		realService: true;
+		realService: true;,
 	};
 	{;
 		id: 'ai-product-spec-writer'}
@@ -670,7 +670,7 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [;
 		integrations: ['JiraLinear'];
 		useCases: ['Faster planningBetter alignment'];
 		link: 'https://ziontechgroup.com/services/ai-product-spec-writer';
-		realService: true;
+		realService: true;,
 	};
 	{;
 		id: 'ai-creative-studio'}
@@ -682,7 +682,7 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [;
 		integrations: ['CanvaFigma'];
 		useCases: ['Marketing velocityCost savings'];
 		link: 'https://ziontechgroup.com/services/ai-creative-studio';
-		realService: true;
+		realService: true;,
 	}
 ];
 export type CuttingEdgeAIService =
@@ -810,7 +810,7 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [,
 		features: ['CBT-guided promptsMood trackingCrisis escalationHIPAA-friendly modes'];
 		integrations: ['TwilioSlack'];
 		useCases: ['Employee wellness24/7 support'];
-		realService: true;
+		realService: true;,
 	}
 		id: 'ai-product-spec-writer',
 		name: 'AI Product Spec Writer',
@@ -820,7 +820,7 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [,
 		features: ['PRD templatesStory generationAcceptance criteriaAnalytics alignment'];
 		integrations: ['JiraLinear'];
 		useCases: ['Faster planningBetter alignment'];
-		realService: true;
+		realService: true;,
 	}
 		id: 'ai-creative-studio',
 		name: 'AI Creative Studio',
@@ -830,7 +830,7 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [,
 		features: ['Brand kitImage & video genReview & approvalsRights management'];
 		integrations: ['CanvaFigma'];
 		useCases: ['Marketing velocityCost savings'];
-		realService: true;
+		realService: true;,
 	}
 ];
 name: string;
@@ -952,7 +952,7 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [,
   integrations: ['TwilioSlack'];
   use_cases: ['Employee wellness24 / 7 support'],
   link: 'https://ziontechgroup.com / services / ai - emotional - support - agent',
-  real_service: true;
+  real_service: true;,
 }
   id: 'ai - product - spec - writer',
   name: 'AI Product Spec Writer',
@@ -963,7 +963,7 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [,
   integrations: ['JiraLinear'];
   use_cases: ['Faster planning_better alignment'],
   link: 'https://ziontechgroup.com / services / ai - product - spec - writer',
-  real_service: true;
+  real_service: true;,
 }
   id: 'ai - creative - studio',
   name: 'AI Creative Studio',

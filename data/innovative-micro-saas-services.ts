@@ -57,7 +57,7 @@
     launch_date: '2024 - 12 - 01'
     customers: 15;
     rating: 4 && 4.9;
-    reviews: 8;
+    reviews: 8;,
   },
   // Space Technology Services;
     id: 'space - technology - platform',
@@ -295,7 +295,7 @@
     launch_date: '2024 - 11 - 15'
     customers: 8;
     rating: 4 && 4.8;
-    reviews: 12;
+    reviews: 12;,
   },
   // Biotech AI Services;
     id: 'biotech - ai - platform',
@@ -445,7 +445,7 @@
     launch_date: '2024 - 10 - 01'
     customers: 25;
     rating: 4 && 4.7;
-    reviews: 18;
+    reviews: 18;,
   },
   // Quantum Financial Trading;
     id: 'quantum - financial - trading',
@@ -601,7 +601,7 @@
     launch_date: '2024 - 09 - 01'
     customers: 12;
     rating: 4 && 4.9;
-    reviews: 15;
+    reviews: 15;,
   },
       'Quantum-resistant encryption',
   // Quantum Cybersecurity;
@@ -755,7 +755,7 @@
     launch_date: '2024 - 08 - 15'
     customers: 45;
     rating: 4 && 4.8;
-    reviews: 32;
+    reviews: 32;,
   },
   // Quantum Internet Security;
     id: 'quantum - internet - security - platform',
@@ -1057,7 +1057,7 @@
     launch_date: '2024 - 06 - 15'
     customers: 65;
     rating: 4 && 4.6;
-    reviews: 48;
+    reviews: 48;,
   },
   // Quantum Logistics;
     id: 'quantum - logistics - platform',
@@ -1357,7 +1357,7 @@
     launch_date: '2024 - 04 - 15'
     customers: 52;
     rating: 4 && 4.8;
-    reviews: 41;
+    reviews: 41;,
   },
   // Quantum Robotics;
     id: 'quantum - robotics - platform',
@@ -1509,7 +1509,7 @@
     launch_date: '2024 - 03 - 01'
     customers: 18;
     rating: 4 && 4.9;
-    reviews: 14;
+    reviews: 14;,
   },
       'AI-powered production planning',
   // Autonomous Manufacturing;
@@ -1672,7 +1672,7 @@
     launch_date: '2024 - 02 - 15'
     customers: 22;
     rating: 4 && 4.7;
-    reviews: 19;
+    reviews: 19;,
   },
   // Autonomous Vehicle AI;
     id: 'autonomous - vehicle - ai - platform',
@@ -1837,12 +1837,12 @@
   contactInfo: unknown;
     mobile: string, email: string;
     address: string;
-    website: string;
+    website: string;,
     },
     realImplementation: boolean, implementationDetails: string;
   launchDate: string, customers: number;
   rating: number;
-  reviews: number;
+  reviews: number;,
 }
 export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [,
   // Quantum Computing & AI Services;
@@ -1875,7 +1875,7 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [,
     launchDate: '2024-11-15'
     customers: 8;
     rating: 4.8;
-    reviews: 12;
+    reviews: 12;,
   }
   // Biotech AI Services;
     id: 'biotech-ai-platform',
@@ -2140,7 +2140,7 @@ export const,
     launchDate: '2024-10-01'
     customers: 25;
     rating: 4.7;
-    reviews: 18;
+    reviews: 18;,
   }
   // Quantum Financial Trading;
     id: 'quantum-financial-trading',
@@ -2284,7 +2284,7 @@ export const,
     launchDate: '2024-09-01'
     customers: 12;
     rating: 4.9;
-    reviews: 15;
+    reviews: 15;,
   }
   // Quantum Cybersecurity;
     id: 'quantum-cybersecurity-suite',
@@ -2422,7 +2422,7 @@ export const,
     launchDate: '2024-08-15'
     customers: 45;
     rating: 4.8;
-    reviews: 32;
+    reviews: 32;,
   }
   // Quantum Internet Security;
     id: 'quantum-internet-security-platform',
@@ -2551,7 +2551,7 @@ export const,
     launchDate: '2024-07-01'
     customers: 28;
     rating: 4.7;
-    reviews: 22;
+    reviews: 22;,
   }
   // Quantum IoT Platform;
     id: 'quantum-iot-platform'
@@ -2695,7 +2695,7 @@ export const,
     launchDate: '2024-06-15'
     customers: 65;
     rating: 4.6;
-    reviews: 48;
+    reviews: 48;,
   }
   // Quantum Logistics;
     id: 'quantum-logistics-platform',
@@ -2834,7 +2834,7 @@ export const,
     launchDate: '2024-05-01'
     customers: 38;
     rating: 4.7;
-    reviews: 29;
+    reviews: 29;,
   }
   // Quantum Metaverse;
     id: 'quantum-metaverse-platform',
@@ -2969,7 +2969,7 @@ export const,
     launchDate: '2024-04-15'
     customers: 52;
     rating: 4.8;
-    reviews: 41;
+    reviews: 41;,
   }
   // Quantum Robotics;
     id: 'quantum-robotics-platform',
@@ -3114,7 +3114,7 @@ export const,
     launchDate: '2024-03-01'
     customers: 18;
     rating: 4.9;
-    reviews: 14;
+    reviews: 14;,
   }
   // Autonomous Manufacturing;
     id: 'autonomous-manufacturing-platform',
@@ -3259,7 +3259,7 @@ export const,
     launchDate: '2024-02-15'
     customers: 22;
     rating: 4.7;
-    reviews: 19;
+    reviews: 19;,
   }
   // Autonomous Vehicle AI;
     id: 'autonomous-vehicle-ai-platform',
@@ -3393,7 +3393,7 @@ export const,
     launchDate: '2024-01-01'
     customers: 8;
     rating: 4.9;
-    reviews: 6;
+    reviews: 6;,
   }];      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -3448,7 +3448,7 @@ export const,
     ratin,
   g: 4.9,
     review,
-  s: 6;
+  s: 6;,
   }];      mobil,
   e: '+1 302 464 0950'
       emai,
@@ -3478,13 +3478,13 @@ export const newInnovativeServices = [
     launchDate: '2024-08-01'
     customers: 12;
     rating: 4.9;
-    reviews: 6;
+    reviews: 6;,
   }
       'Complete space mission control platform with AI integration and real-time operations',
     launchDate: '2024-08-01'
     customers: 12;
     rating: 4.9;
-    reviews: 6;
+    reviews: 6;,
   };
 ];      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -3546,7 +3546,7 @@ export interface InnovativeMicroSaasService {/* TODO: Fix JSX expression */}
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number;
+  reviews: number;,
 }
 ;
 // New Innovative Micro - SaaS Services;
@@ -3916,7 +3916,7 @@ export const,
     launch_date: '2024 - 10 - 01'
     customers: 35;
     rating: 4 && 4.7;
-    reviews: 18;
+    reviews: 18;,
   },
     id: 'quantum - financial - trading - platform',
     name: 'Quantum Financial Trading Platform',
@@ -4059,7 +4059,7 @@ export const,
     launch_date: '2024 - 09 - 15'
     customers: 28;
     rating: 4 && 4.8;
-    reviews: 15;
+    reviews: 15;,
   },
     id: 'space - technology - mission - control',
     name: 'Space Technology Mission Control',
@@ -4202,13 +4202,13 @@ export const,
     launch_date: '2024 - 08 - 01'
     customers: 12;
     rating: 4 && 4.9;
-    reviews: 6;
+    reviews: 6;,
   }];      mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup && ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
     customers: 12;
     rating: 4 && 4.9;
-    reviews: 6;
+    reviews: 6;,
   }
 ];
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -4217,7 +4217,7 @@ export const,
     implementationDetails: 'Advanced quantum neural interface system with real-time processing, secure encryption, and comprehensive analytics',
     launchDate: '2024-12-01', customers: 15;
     rating: 4.9;
-    reviews: 8;
+    reviews: 8;,
   };
     id: 'quantum-internet-security-platform', name: 'Quantum Internet Security Platform',
     tagline: 'Unhackable quantum-secured internet infrastructure',
@@ -4244,7 +4244,7 @@ export const,
     realImplementation: true, implementationDetails: 'Complete quantum internet security platform with real-time monitoring and enterprise integration',
     launchDate: '2024-11-15', customers: 25;
     rating: 4.8;
-    reviews: 12;
+    reviews: 12;,
   };
     id: 'ai-powered-autonomous-manufacturing', name: 'AI-Powered Autonomous Manufacturing',
     tagline: 'Fully autonomous manufacturing with AI optimization',
@@ -4272,7 +4272,7 @@ export const,
     realImplementation: true, implementationDetails: 'Complete autonomous manufacturing platform with AI integration and real-time optimization',
     launchDate: '2024-10-01', customers: 35;
     rating: 4.7;
-    reviews: 18;
+    reviews: 18;,
   };
     id: 'quantum-financial-trading-platform', name: 'Quantum Financial Trading Platform',
     tagline: 'Quantum AI-powered financial trading with predictive analytics',
@@ -4300,7 +4300,7 @@ export const,
     realImplementation: true, implementationDetails: 'Advanced quantum AI trading platform with real-time market analysis and automated strategies',
     launchDate: '2024-09-15', customers: 28;
     rating: 4.8;
-    reviews: 15;
+    reviews: 15;,
   };
     id: 'space-technology-mission-control', name: 'Space Technology Mission Control',
     tagline: 'Complete space mission management and satellite operations',
@@ -4328,10 +4328,10 @@ export const,
     realImplementation: true, implementationDetails: 'Complete space mission control platform with AI integration and real-time operations',
     launchDate: '2024-08-01', customers: 12;
     rating: 4.9;
-    reviews: 6;
+    reviews: 6;,
   }
 ];
-    website: string;
+    website: string;,
   }
       'Direct neural interface with quantum AI for unprecedented cognitive enhancement',
     price: '$2, 999',
@@ -4742,7 +4742,7 @@ export const,
     launch_date: '2024 - 12 - 01'
     customers: 15;
     rating: 4 && 4.9;
-    reviews: 8;
+    reviews: 8;,
   },
     id: 'quantum-ai-brain-computer-interface',
     name: 'Quantum AI Brain-Computer Interface',
@@ -4863,7 +4863,7 @@ export const,
     launchDate: '2024-12-01'
     customers: 15;
     rating: 4.9;
-    reviews: 8;
+    reviews: 8;,
   }
   // Space Technology Services;
     id: 'space-technology-platform',
@@ -5002,7 +5002,7 @@ export const,
     launch_date: '2024 - 11 - 15'
     customers: 8;
     rating: 4 && 4.8;
-    reviews: 12;
+    reviews: 12;,
   },
   // Biotech AI Services;
     id: 'biotech-ai-platform',
@@ -5143,7 +5143,7 @@ export const,
     launch_date: '2024 - 10 - 01'
     customers: 25;
     rating: 4 && 4.7;
-    reviews: 18;
+    reviews: 18;,
   },
   // Quantum Financial Trading;
     id: 'quantum-financial-trading',
@@ -5291,7 +5291,7 @@ export const,
     launch_date: '2024 - 09 - 01'
     customers: 12;
     rating: 4 && 4.9;
-    reviews: 15;
+    reviews: 15;,
   },
   // Quantum Cybersecurity;
     id: 'quantum-cybersecurity-suite',
@@ -5432,7 +5432,7 @@ export const,
     launch_date: '2024 - 08 - 15'
     customers: 45;
     rating: 4 && 4.8;
-    reviews: 32;
+    reviews: 32;,
   },
   // Quantum Internet Security;
     id: 'quantum-internet-security-platform',
@@ -5567,7 +5567,7 @@ export const,
     launch_date: '2024 - 07 - 01'
     customers: 28;
     rating: 4 && 4.7;
-    reviews: 22;
+    reviews: 22;,
   },
   // Quantum IoT Platform;
     id: 'quantum-iot-platform'
@@ -5715,7 +5715,7 @@ export const,
     launch_date: '2024 - 06 - 15'
     customers: 65;
     rating: 4 && 4.6;
-    reviews: 48;
+    reviews: 48;,
   },
   // Quantum Logistics;
     id: 'quantum-logistics-platform',
@@ -5827,7 +5827,7 @@ export const,
     launch_date: '2024 - 05 - 01'
     customers: 38;
     rating: 4 && 4.7;
-    reviews: 29;
+    reviews: 29;,
   },
   // Quantum Metaverse;
     id: 'quantum-metaverse-platform',
@@ -5966,7 +5966,7 @@ export const,
     launch_date: '2024 - 04 - 15'
     customers: 52;
     rating: 4 && 4.8;
-    reviews: 41;
+    reviews: 41;,
   },
   // Quantum Robotics;
     id: 'quantum-robotics-platform',
@@ -6101,7 +6101,7 @@ export const,
     launch_date: '2024 - 03 - 01'
     customers: 18;
     rating: 4 && 4.9;
-    reviews: 14;
+    reviews: 14;,
   },
   // Autonomous Manufacturing;
     id: 'autonomous-manufacturing-platform',
@@ -6248,7 +6248,7 @@ export const,
     launch_date: '2024 - 02 - 15'
     customers: 22;
     rating: 4 && 4.7;
-    reviews: 19;
+    reviews: 19;,
   },
   // Autonomous Vehicle AI;
     id: 'autonomous-vehicle-ai-platform',
@@ -6383,7 +6383,7 @@ export const,
     launch_date: '2024 - 01 - 01'
     customers: 8;
     rating: 4 && 4.9;
-    reviews: 6;
+    reviews: 6;,
 }
 export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [,
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -6393,7 +6393,7 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [,
     launchDate: '2024-01-01'
     customers: 8;
     rating: 4 && 4.9;
-    reviews: 6;
+    reviews: 6;,
   }
 ];
 // New Innovative Micro-SaaS Services;
@@ -6964,7 +6964,7 @@ export interface InnovativeMicroSaasService {/* TODO: Fix JSX expression */}
     launch_date: '2024 - 08 - 01'
     customers: 12;
     rating: 4 && 4.9;
-    reviews: 6;
+    reviews: 6;,
   }];      mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup && ziontechgroup.com'
     realImplementation: true;
@@ -6975,7 +6975,7 @@ export interface InnovativeMicroSaasService {/* TODO: Fix JSX expression */}
     implementation_details: 'Complete space mission control platform with AI integration and real - time operations'
     launch_date: '2024 - 08 - 01',
     customers: 12;
-    reviews: 6;
+    reviews: 6;,
   }
 ];
     id: 'quantum-ai-brain-computer-interface', name: 'Quantum AI Brain-Computer Interface',
@@ -7004,7 +7004,7 @@ export interface InnovativeMicroSaasService {/* TODO: Fix JSX expression */}
     implementationDetails: 'Advanced quantum neural interface system with real-time processing, secure encryption, and comprehensive analytics',
     launchDate: '2024-12-01', customers: 15;
     rating: 4.9;
-    reviews: 8;
+    reviews: 8;,
   };
     id: 'quantum-internet-security-platform', name: 'Quantum Internet Security Platform',
     tagline: 'Unhackable quantum-secured internet infrastructure',
@@ -7031,7 +7031,7 @@ export interface InnovativeMicroSaasService {/* TODO: Fix JSX expression */}
     realImplementation: true, implementationDetails: 'Complete quantum internet security platform with real-time monitoring and enterprise integration',
     launchDate: '2024-11-15', customers: 25;
     rating: 4.8;
-    reviews: 12;
+    reviews: 12;,
   };
     id: 'ai-powered-autonomous-manufacturing', name: 'AI-Powered Autonomous Manufacturing',
     tagline: 'Fully autonomous manufacturing with AI optimization',
@@ -7059,7 +7059,7 @@ export interface InnovativeMicroSaasService {/* TODO: Fix JSX expression */}
     realImplementation: true, implementationDetails: 'Complete autonomous manufacturing platform with AI integration and real-time optimization',
     launchDate: '2024-10-01', customers: 35;
     rating: 4.7;
-    reviews: 18;
+    reviews: 18;,
   };
     id: 'quantum-financial-trading-platform', name: 'Quantum Financial Trading Platform',
     tagline: 'Quantum AI-powered financial trading with predictive analytics',
@@ -7087,7 +7087,7 @@ export interface InnovativeMicroSaasService {/* TODO: Fix JSX expression */}
     realImplementation: true, implementationDetails: 'Advanced quantum AI trading platform with real-time market analysis and automated strategies',
     launchDate: '2024-09-15', customers: 28;
     rating: 4.8;
-    reviews: 15;
+    reviews: 15;,
   };
     id: 'space-technology-mission-control', name: 'Space Technology Mission Control',
     tagline: 'Complete space mission management and satellite operations',

@@ -29,7 +29,7 @@
     mobile: string;
     email: string;
     address: string;
-    website: string;
+    website: string;,
   }
 export interface InnovativeBusinessSolution {id: string, name: string;
   tagline: string, price: string;
@@ -52,7 +52,7 @@ export interface InnovativeBusinessSolution {id: string, name: string;
     realImplementation: boolean, implementationDetails: string;
   launchDate: string, customers: number;
   rating: number;
-  reviews: number;
+  reviews: number;,
 }
 export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [,
   // AI Business Intelligence Suite;
@@ -255,7 +255,7 @@ export const,
     launchDate: '2025-02-15'
     customers: 89;
     rating: 4.7;
-    reviews: 62;
+    reviews: 62;,
   }
   // AI Sales Intelligence Platform;
     id: 'ai-sales-intelligence-platform-v2',
@@ -380,7 +380,7 @@ export const,
     launchDate: '2025-03-01'
     customers: 67;
     rating: 4.9;
-    reviews: 45;
+    reviews: 45;,
   }
   // AI Customer Service Platform;
     id: 'ai-customer-service-platform',
@@ -528,7 +528,7 @@ export const,
     launchDate: '2025-03-15'
     customers: 54;
     rating: 4.7;
-    reviews: 38;
+    reviews: 38;,
   }
   // AI HR Management Platform;
     id: 'ai-hr-management-platform',
@@ -676,7 +676,7 @@ export const,
     launchDate: '2025-04-01'
     customers: 42;
     rating: 4.8;
-    reviews: 29;
+    reviews: 29;,
   }
   // AI Financial Analytics Platform;
     id: 'ai-financial-analytics-platform',
@@ -824,7 +824,7 @@ export const,
     launchDate: '2025-04-15'
     customers: 28;
     rating: 4.9;
-    reviews: 19;
+    reviews: 19;,
   }
   // AI Project Management Platform;
     id: 'ai-project-management-platform',
@@ -972,7 +972,7 @@ export const,
     launchDate: '2025-05-01'
     customers: 38;
     rating: 4.7;
-    reviews: 26;
+    reviews: 26;,
   }];      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1051,7 +1051,7 @@ export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */}
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number;
+  reviews: number;,
 }
 ;
     realImplementation: true;
@@ -1060,7 +1060,7 @@ export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */}
     launchDate: '2025-02-15'
     customers: 89;
     rating: 4.7;
-    reviews: 62;
+    reviews: 62;,
   }
   // AI Sales Intelligence Platform;
     id: 'ai-sales-intelligence-platform-v2',

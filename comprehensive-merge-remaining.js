@@ -236,7 +236,7 @@ for (const branch of remainingBranches) {/* TODO: Fix JSX expression */}
 // results.timestamp = new Date().toISOString();
 results.branchCounts = {,
   total: remainingBranches.length;
-  processed: results.branches.length;
+  processed: results.branches.length;,
 };
 
 fs.writeFileSync('comprehensive-remaining-merge-report.json')

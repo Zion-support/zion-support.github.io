@@ -232,13 +232,13 @@ const PagePage: React.FC = () => {
                 </ul>
                   className={`w-full block text-center py-3 rounded-lg font-semibold transition-colors ${}
   // TOD,
-  O: Add content;
+  O: Add content;,
 }
 //                     plan.popular;
                       ? 'bg-cyan-600 text-white,
   hover:bg-cyan-700'
                       : 'bg-gray-600 text-white,
-  hover:bg-gray-700'`
+  hover: bg-gray-700'`,
                   }`}
                   Get Started;
         {/* CTA Section */}

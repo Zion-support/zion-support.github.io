@@ -57,7 +57,7 @@ export class SecurityManager {// TODO: Add content;}
     try {/* TODO: Fix JSX expression */}
   s:'].includes(parsed.protocol)) {}
   // TOD,
-  O: Add content;
+  O: Add content;,
 }
         throw new Error('Invalid protocol');
       }

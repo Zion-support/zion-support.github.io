@@ -67,6 +67,8 @@ $4}
         <meta name="description" content="AI-powered developer tools and productivity suites. Code generation, API testing, database management, and DevOps automation tools." />
         <meta name="keywords" content="developer tools, AI code generation, API testing, database management, DevOps automation, code review" />
       </Helmet>
+
+      <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
         
@@ -102,7 +104,7 @@ $4}
 
             {/* Contact Info */}
             <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-6 mb-12">
-              <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8">
+              <div className="flex flex-col md: flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8">
                 <div className="flex items-center space-x-2">
                   <Phone className="w-5 h-5" />
                   <span className="text-white font-medium">+1 302 464 0950</span>
@@ -115,7 +117,7 @@ $4}
                   <MapPin className="w-5 h-5" />
     <div>Coming Soon</div>
 
-  );
+  );,
 };
   const _devTools = [
   // TOD,
@@ -448,7 +450,7 @@ $4}
           
 
           </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <a
                 href="tel:+13024640950" className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
 // >
@@ -467,7 +469,7 @@ $4}
       <Footer /></Footer>
 
     </div>
-  );
+  );,
 };
 
 

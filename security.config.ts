@@ -20,7 +20,7 @@ export const securityConfig = {
       'frame-ancestors': ["'none'"],
       'base-uri': ["'self'"],
       'form-action': ["'self'"]},
-    reportOnly: false;
+    reportOnly: false;,
   },
 
   // Security Headers;
@@ -44,7 +44,7 @@ export const securityConfig = {
     windowMs: 15 * 60 * 1000, // 15 minutes;
     maxRequests: 100;
     skipSuccessfulRequests: false;
-    skipFailedRequests: false;
+    skipFailedRequests: false;,
   },
 
   // CORS configuration;
@@ -64,7 +64,7 @@ export const securityConfig = {
     passwordMinLength: 12;
     requireSpecialChars: true;
     requireNumbers: true;
-    requireUppercase: true;
+    requireUppercase: true;,
   },
 
   // Data sanitization;

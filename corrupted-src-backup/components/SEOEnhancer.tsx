@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import Navigation from '../components/Navigation';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOEnhancerProps {/* TODO: Fix JSX expression */}
@@ -119,6 +120,8 @@ const,
         {/* Structured Data */}
   return (<>
       <Helmet></Helmet>
+
+      <Navigation />
         {/* Basic Meta Tags */}
         <title>{title}</title>
         <meta name="description" content={description} /></meta>")

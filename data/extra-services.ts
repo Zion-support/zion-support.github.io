@@ -12,10 +12,10 @@ export interface ExtraService {id: string;
     mobile: string}
     email: string}
 }
-    address: string;
+    address: string;,
   }
 export const extraServices: ExtraService[] = [;
-    address: string;
+    address: string;,
   }
 ;
 export const extra_services: ExtraService[] = [
@@ -83,7 +83,7 @@ export const,
   contactInfo: unknown;
     mobile: string;
     email: string;
-    address: string;
+    address: string;,
   };
 }
 }

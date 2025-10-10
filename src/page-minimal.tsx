@@ -1,6 +1,7 @@
 
 
 import React from 'react';
+import Footer from '../components/Footer';
 import { Link } from 'react-router-dom';
 import { Phone, CheckCircle, Star, ArrowRight } from 'lucide-react';
 
@@ -127,7 +128,7 @@ Ready to Transform Your Business?
             <p className="text-gray-400 mb-6">
               Advanced AI and IT Solutions for Enterprise Transformation;
             <div className="flex justify-center space-x-6">
-              <Link href="/services" className="text-gray-400 hover:text-white">Services</Link>
+              <Link href="/services" className="text-gray-400 hover: text-white">Services</Link>
               <Link href="/about" className="text-gray-400 hover:text-white">About</Link>
               <Link href="/contact" className="text-gray-400 hover:text-white">Contact</Link>
               <Link href="/privacy" className="text-gray-400 hover:text-white">Privacy</Link>
@@ -135,8 +136,7 @@ Ready to Transform Your Business?
               <p className="text-gray-400 text-sm">
 © 2026 Zion Tech Group. All rights reserved.
       </footer>
-  );
-
+  );,
 }
 
 

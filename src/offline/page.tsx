@@ -57,7 +57,7 @@ const,
           </button>
 onClick={handleGoHome}"
             className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-white/10,"
-  hover:bg-white/20 text-white rounded-lg transition-colors duration-200 font-medium border border-white/20""
+  hover: bg-white/20 text-white rounded-lg transition-colors duration-200 font-medium border border-white/20""
             <Home className="w-4 h-4" /></Home>
             Go Home;"
         <div className="mt-6 text-sm text-gray-400"></div>"
@@ -69,7 +69,7 @@ onClick={handleGoHome}"
           <p className="text-xs text-gray-400"></p>
             Some content may be available offline thanks to our service worker.
             Try refreshing the page once you're back online.
-  );
+  );,
 };
 
 

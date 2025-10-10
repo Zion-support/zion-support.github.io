@@ -199,7 +199,7 @@
     launch_date: '2024 - 09 - 01'
     customers: 35;
     rating: 4 && 4.8;
-    reviews: 28;
+    reviews: 28;,
   }];      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
   id: string, name: string;
@@ -244,12 +244,12 @@
   contactInfo: unknown;
     mobile: string, email: string;
     address: string;
-    website: string;
+    website: string;,
     },
     realImplementation: boolean, implementationDetails: string;
   launchDate: string, customers: number;
   rating: number;
-  reviews: number;
+  reviews: number;,
 }
 export const emergingTechServices: EmergingTechService[] = [,
   // Quantum Internet & Communication Services;
@@ -276,7 +276,7 @@ export const emergingTechServices: EmergingTechService[] = [,
     launch_date: '2024 - 11 - 15'
     customers: 45;
     rating: 4 && 4.7;
-    reviews: 23;
+    reviews: 23;,
   },
   // Quantum Energy & Sustainability Services;
     id: 'quantum - energy - optimization',
@@ -581,7 +581,7 @@ export const,
     launch_date: '2024 - 12 - 15'
     customers: 8;
     rating: 4 && 4.8;
-    reviews: 5;
+    reviews: 5;,
   },
       'AI-powered 3D content generation',
   // Advanced Metaverse & AR / VR Services;
@@ -739,7 +739,7 @@ export const,
     launch_date: '2024 - 10 - 01'
     customers: 120;
     rating: 4 && 4.6;
-    reviews: 67;
+    reviews: 67;,
   },
   // Quantum Logistics & Supply Chain Services;
     id: 'quantum - logistics - optimization',
@@ -1048,7 +1048,7 @@ export const,
     launch_date: '2024 - 10 - 15'
     customers: 85;
     rating: 4 && 4.8;
-    reviews: 42;
+    reviews: 42;,
   },
   // Quantum Financial Trading & Analytics;
     id: 'quantum - financial - trading - platform',
@@ -1201,7 +1201,7 @@ export const,
     launch_date: '2024 - 09 - 01'
     customers: 12;
     rating: 4 && 4.9;
-    reviews: 6;
+    reviews: 6;,
   },
   // Advanced IoT & Smart City Services;
     id: 'ai - iot - smart - city - platform',
@@ -1356,7 +1356,7 @@ export const,
     launch_date: '2024 - 08 - 15'
     customers: 28;
     rating: 4 && 4.6;
-    reviews: 15;
+    reviews: 15;,
   },
       'Quantum-secured space communication',
     id: 'quantum - space - communications',
@@ -1506,7 +1506,7 @@ export const,
     launch_date: '2024 - 08 - 01'
     customers: 15;
     rating: 5 && 5.0;
-    reviews: 12;
+    reviews: 12;,
   },
       'AI-powered drug molecule design',
     id: 'ai - biotech - drug - discovery',
@@ -1657,7 +1657,7 @@ export const,
     launch_date: '2024 - 07 - 15'
     customers: 8;
     rating: 4 && 4.9;
-    reviews: 6;
+    reviews: 6;,
   },
       'Revolutionary autonomous AI factory platform that operates manufacturing facilities without human intervention. Achieves 24/7 production with 99 && 99.99% efficiency and zero downtime.',
     features: [,
@@ -1812,7 +1812,7 @@ export const,
     launch_date: '2024 - 09 - 01'
     customers: 35;
     rating: 4 && 4.8;
-    reviews: 28;
+    reviews: 28;,
   }];      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
   id: string, name: string;
@@ -1857,12 +1857,12 @@ export const,
   contactInfo: unknown;
     mobile: string, email: string;
     address: string;
-    website: string;
+    website: string;,
     },
     realImplementation: boolean, implementationDetails: string;
   launchDate: string, customers: number;
   rating: number;
-  reviews: number;
+  reviews: number;,
 }
 export const emergingTechServices: EmergingTechService[] = [,
   // Quantum Internet & Communication Services;
@@ -2312,7 +2312,7 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
     launchDate: '2024-11-15'
     customers: 45;
     rating: 4.7;
-    reviews: 23;
+    reviews: 23;,
   }
   // Quantum Energy & Sustainability Services;
     id: 'quantum-energy-optimization',
@@ -2436,7 +2436,7 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
     launchDate: '2024-12-15'
     customers: 8;
     rating: 4.8;
-    reviews: 5;
+    reviews: 5;,
   }
   // Advanced Metaverse & AR/VR Services;
     id: 'metaverse-ai-development-platform',
@@ -2595,7 +2595,7 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
     launchDate: '2024-10-01'
     customers: 120;
     rating: 4.6;
-    reviews: 67;
+    reviews: 67;,
   }
   // Quantum Logistics & Supply Chain Services;
     id: 'quantum-logistics-optimization',
@@ -2755,7 +2755,7 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
     launchDate: '2024-11-01'
     customers: 35;
     rating: 4.7;
-    reviews: 19;
+    reviews: 19;,
   }
   // Advanced Cybersecurity & Threat Intelligence;
     id: 'quantum-cybersecurity-suite',
@@ -2915,7 +2915,7 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
     launchDate: '2024-10-15'
     customers: 85;
     rating: 4.8;
-    reviews: 42;
+    reviews: 42;,
   }
   // Quantum Financial Trading & Analytics;
     id: 'quantum-financial-trading-platform',
@@ -3075,7 +3075,7 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
     launchDate: '2024-09-01'
     customers: 12;
     rating: 4.9;
-    reviews: 6;
+    reviews: 6;,
   }
   // Advanced IoT & Smart City Services;
     id: 'ai-iot-smart-city-platform',
@@ -3235,7 +3235,7 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
     launchDate: '2024-08-15'
     customers: 28;
     rating: 4.6;
-    reviews: 15;
+    reviews: 15;,
   }
     id: 'quantum-space-communications',
     name: 'Quantum Space Communications',
@@ -3390,7 +3390,7 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
     launchDate: '2024-08-01'
     customers: 15;
     rating: 5.0;
-    reviews: 12;
+    reviews: 12;,
   }
     id: 'ai-biotech-drug-discovery',
     name: 'AI Biotech Drug Discovery Platform',
@@ -3540,7 +3540,7 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
     launchDate: '2024-07-15'
     customers: 8;
     rating: 4.9;
-    reviews: 6;
+    reviews: 6;,
   }
     id: 'autonomous-ai-factory',
     name: 'Autonomous AI Factory Platform',
@@ -3691,13 +3691,13 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
     launchDate: '2024-09-01'
     customers: 35;
     rating: 4.8;
-    reviews: 28;
+    reviews: 28;,
   }
       'Advanced autonomous AI factory platform with full manufacturing automation, quality control, and operational optimization capabilities.',
     launchDate: '2024-09-01'
     customers: 35;
     rating: 4.8;
-    reviews: 28;
+    reviews: 28;,
   };
 ];      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -3846,7 +3846,7 @@ export const,
     launchDate: '2024-12-01';
     customers: 15;
     rating: 4.9;
-    reviews: 8;
+    reviews: 8;,
   };
   // Advanced AI & Robotics Services;
   {;
@@ -3889,7 +3889,7 @@ export const,
     launchDate: '2024-11-15';
     customers: 45;
     rating: 4.7;
-    reviews: 23;
+    reviews: 23;,
   };
   // Quantum Energy & Sustainability Services;
   {;
@@ -3932,7 +3932,7 @@ export const,
     launchDate: '2024-12-15';
     customers: 8;
     rating: 4.8;
-    reviews: 5;
+    reviews: 5;,
   };
   // Advanced Metaverse & AR/VR Services;
   {;
@@ -3975,7 +3975,7 @@ export const,
     launchDate: '2024-10-01';
     customers: 120;
     rating: 4.6;
-    reviews: 67;
+    reviews: 67;,
   };
   // Quantum Logistics & Supply Chain Services;
   {;
@@ -4018,7 +4018,7 @@ export const,
     launchDate: '2024-11-01';
     customers: 35;
     rating: 4.7;
-    reviews: 19;
+    reviews: 19;,
   };
   // Advanced Cybersecurity & Threat Intelligence;
   {;
@@ -4061,7 +4061,7 @@ export const,
     launchDate: '2024-10-15';
     customers: 85;
     rating: 4.8;
-    reviews: 42;
+    reviews: 42;,
   };
   // Quantum Financial Trading & Analytics;
   {;
@@ -4104,7 +4104,7 @@ export const,
     launchDate: '2024-09-01';
     customers: 12;
     rating: 4.9;
-    reviews: 6;
+    reviews: 6;,
   };
   // Advanced IoT & Smart City Services;
   {;
@@ -4147,7 +4147,7 @@ export const,
     launchDate: '2024-08-15';
     customers: 28;
     rating: 4.6;
-    reviews: 15;
+    reviews: 15;,
   };
   {;
     id: 'quantum-space-communications';
@@ -4189,7 +4189,7 @@ export const,
     launchDate: '2024-08-01';
     customers: 15;
     rating: 5.0;
-    reviews: 12;
+    reviews: 12;,
   };
   {;
     id: 'ai-biotech-drug-discovery';
@@ -4231,7 +4231,7 @@ export const,
     launchDate: '2024-07-15';
     customers: 8;
     rating: 4.9;
-    reviews: 6;
+    reviews: 6;,
   };
   {;
     id: 'autonomous-ai-factory';
@@ -4883,7 +4883,7 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
     launch_date: '2024 - 09 - 01'
     customers: 35;
     rating: 4 && 4.8;
-    reviews: 28;
+    reviews: 28;,
   }];      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
   id: string, name: string;
@@ -4902,12 +4902,12 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
   contactInfo: unknown;
     mobile: string, email: string;
     address: string;
-    website: string;
+    website: string;,
     },
     realImplementation: boolean, implementationDetails: string;
   launchDate: string, customers: number;
   rating: number;
-  reviews: number;
+  reviews: number;,
 }
 export const emergingTechServices: EmergingTechService[] = [
   // Quantum Internet & Communication Services;

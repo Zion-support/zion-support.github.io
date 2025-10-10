@@ -15,7 +15,7 @@ interface SEOConfig {title: string;}
   language?: string;
   author?: string;
   publisher?: string;
-  lastModified?: string;
+  lastModified?: string;,
 }
 
 class SEOEnhancer {/* TODO: Fix JSX expression */}

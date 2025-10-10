@@ -5,7 +5,7 @@ interface AnimatedCounterProps {
   duration?: number;
   prefix?: string;
   suffix?: string;
-  className?: string;
+  className?: string;,
 }
 
 const AnimatedCounter: React.FC<AnimatedCounterProps> = ({</AnimatedCounterProps>end</AnimatedCounterProps>,

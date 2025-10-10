@@ -116,7 +116,7 @@ beforeAll(() => {
       (args[0].includes('Warning: ReactDOM.render') ||
         args[0].includes('Not implemented: HTMLFormElement.prototype.submit'))
     ) {
-      return;
+      return;,
     }
     originalError.call(console, ...args);
   });

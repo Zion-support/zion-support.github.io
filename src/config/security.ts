@@ -43,7 +43,7 @@ export const _securityHeaders = {// TODO: Add content;}
 // objectSr,"
   c: ["'none'"],
 // upgradeInsecureRequest,
-  s: true;
+  s: true;,
     }
   },
   // Security Headers,

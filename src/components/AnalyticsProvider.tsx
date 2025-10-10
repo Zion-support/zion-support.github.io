@@ -10,7 +10,7 @@ const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefin
 
 interface AnalyticsProviderProps {
   children: ReactNode;
-  trackingId?: string;
+  trackingId?: string;,
 }
 
 export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ 
@@ -29,7 +29,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
       // Initialize gtag
       window.dataLayer = window.dataLayer || [];
       function gtag(...args: any[]) {
-        window.dataLayer.push(args);
+        window.dataLayer.push(args);,
       }
       window.gtag = gtag;
 
@@ -47,8 +47,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
     
     // Also log in development
     if (process.env.NODE_ENV === 'development') {
-      console.log('Analytics Event:', event, properties);
-    }
+      }
   };
 
   const page = (name: string, properties?: Record<string, any>) => {
@@ -61,8 +60,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
     
     // Also log in development
     if (process.env.NODE_ENV === 'development') {
-      console.log('Analytics Page:', name, properties);
-    }
+      }
   };
 
   const identify = (userId: string, traits?: Record<string, any>) => {
@@ -74,8 +72,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
     
     // Also log in development
     if (process.env.NODE_ENV === 'development') {
-      console.log('Analytics Identify:', userId, traits);
-    }
+      }
   };
 
   const value: AnalyticsContextType = {
@@ -102,6 +99,6 @@ export const useAnalytics = (): AnalyticsContextType => {
 declare global {
   interface Window {
     dataLayer: any[];
-    gtag: (...args: any[]) => void;
+    gtag: (...args: any[]) => void;,
   }
 }

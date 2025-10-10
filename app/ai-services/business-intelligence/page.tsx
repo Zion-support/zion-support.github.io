@@ -1,4 +1,5 @@
 import React from 'react';
+import Navigation from '../components/Navigation';
 import { Helmet } from 'react-helmet-async';
 import { Brain, BarChart, TrendingUp, Target, Users, Zap, ArrowRight, CheckCircle, Star, Award } from 'lucide-react';
 
@@ -77,10 +78,14 @@ const AIBusinessIntelligencePage: React.FC = () => {
         <link rel="canonical" href="https://ziontechgroup.com/ai-services/business-intelligence" />
       </Helmet>
 
+
+
+      <Navigation />
+      <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}</div>
         <section className="pt-24 pb-16 px-4">
-          <div className="max-w-7xl mx-auto"></div>
+          </section><div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
               <div className="inline-flex items-center space-x-2 bg-purple-500/20 text-purple-400 px-4 py-2 rounded-full text-sm font-medium mb-6"></div>
                 <Brain className="w-4 h-4" />
@@ -109,7 +114,7 @@ const AIBusinessIntelligencePage: React.FC = () => {
 
         {/* Features Section */}
         <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto"></div>
+          </section><div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Powerful AI Features</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -132,7 +137,7 @@ const AIBusinessIntelligencePage: React.FC = () => {
 
         {/* Benefits Section */}
         <section className="py-16 px-4 bg-slate-800/30">
-          <div className="max-w-7xl mx-auto"></div>
+          </section><div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our AI BI Solution</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -165,7 +170,7 @@ const AIBusinessIntelligencePage: React.FC = () => {
 
         {/* Use Cases Section */}
         <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto"></div>
+          </section><div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Real-World Applications</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -189,7 +194,7 @@ const AIBusinessIntelligencePage: React.FC = () => {
 
         {/* CTA Section */}
         <section className="py-16 px-4">
-          <div className="max-w-4xl mx-auto text-center"></div>
+          </section><div className="max-w-4xl mx-auto text-center"></div>
             <div className="bg-gradient-to-r from-purple-600/20 to-cyan-600/20 rounded-2xl p-12 border border-purple-500/30"></div>
               <h2 className="text-4xl font-bold text-white mb-6">
                 Ready to Transform Your Business Intelligence?
@@ -198,7 +203,7 @@ const AIBusinessIntelligencePage: React.FC = () => {
                 Join hundreds of companies already using our AI business intelligence solutions 
                 to make smarter, data-driven decisions.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+              <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
                 <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all flex items-center justify-center space-x-2">
                   <span>Start Free Trial</span>
                   <ArrowRight className="w-5 h-5" />
@@ -212,7 +217,7 @@ const AIBusinessIntelligencePage: React.FC = () => {
         </section>
       </div>
     </>
-  );
+  );,
 };
 
 export default AIBusinessIntelligencePage;

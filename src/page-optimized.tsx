@@ -1,6 +1,7 @@
 
 'use client';
 import React, { lazy } from 'react';
+import Footer from '../components/Footer';
 import SEOOptimizer from './components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PerformanceMonitor from './components/PerformanceMonitor';
@@ -20,7 +21,7 @@ const ContentPromotion = lazy(() =>
 const ContentShowcase = lazy(() =>
   import('./components/UltimateBusinessIntelligenceShowcase2025').catch(() => ({// TODO: Add content;}
 };
-  default: EmptyComponent;
+  default: EmptyComponent;,
   }))
 export default function OptimizedHomePage() {// TODO: Add content;}
 }
@@ -69,7 +70,7 @@ export default function OptimizedHomePage() {// TODO: Add content;}
           
           
           </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <a
                   href="/contact" className="inline-flex items-center px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold text-lg"
 // >
@@ -82,8 +83,7 @@ View Success Stories;
       </main>
       <Footer />
     </div>
-  );
-
+  );,
 }
 
 

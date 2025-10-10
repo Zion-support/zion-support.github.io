@@ -12,7 +12,7 @@ const PageTemplate: React.FC<{
   benefits: string[];
   price: string;
   category: string;
-  keywords: string[];
+  keywords: string[];,
 }> = ({ title, description, icon: Icon, features, benefits, price, category, keywords }) => {
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">)
       <SEOOptimizer;)

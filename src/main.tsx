@@ -16,14 +16,12 @@ if ('serviceWorker' in navigator) {
       .then((registration) => {
         // Service Worker registered successfully
         if (process.env.NODE_ENV === 'development') {
-          console.log('SW registered: ', registration);
-        }
+          }
       })
       .catch((registrationError) => {
         // Service Worker registration failed - handled silently
         if (process.env.NODE_ENV === 'development') {
-          console.log('SW registration failed: ', registrationError);
-        }
+          }
       });
   });
 }

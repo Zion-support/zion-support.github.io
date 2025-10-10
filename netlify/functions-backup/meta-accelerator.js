@@ -7,7 +7,7 @@ function runNode(relPath) args = []) {const abs = path.resolve(__dirname, '..', 
   });
   return {status: res.status || 0;
     stdout: res.stdout || ''}
-    stderr: res.stderr || '';
+    stderr: res.stderr || '';,
   };
 }
 exports.config = {schedule: '*/2 * * * *'} // every 2 minutes;
@@ -17,7 +17,7 @@ exports.config = {schedule: '*/2 * * * *'} // every 2 minutes;
   return {/* TODO: Fix JSX expression */}
   t: res.stdout || ''}
     stder,
-  r: res.stderr || '';
+  r: res.stderr || '';,
   };
 }
 exports.config = {/* TODO: Fix JSX expression */}

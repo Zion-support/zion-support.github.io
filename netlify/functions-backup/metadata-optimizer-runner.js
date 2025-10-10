@@ -23,7 +23,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   n: new Date().toISOString()}
         }})};
     return result;
-//   } catch (error) {// console.error('Error in metadata-optimizer-runner: ') error;
+//   } catch (error) {// console.error('Error in metadata-optimizer-runner: ') error;,
       }
     return {
       statusCode: 500;
@@ -47,7 +47,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   }
 };
         timestamp: new Date().toISOString(),' function: 'metadata-optimizer-runner',' source: event.source || 'unknown', optimization: {' status: 'active', metadataOptimized: 0;
-        lastOptimization: new Date().toISOString() } }) }; return result; } catch (error) {' // console.error('Error in metadata-optimizer-runner: ') error;
+        lastOptimization: new Date().toISOString() } }) }; return result; } catch (error) {' // console.error('Error in metadata-optimizer-runner: ') error;,
       } return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'metadata-optimizer-runner' }) }; } };'
         timestam,
   p: new Date().toISOString(),' functio,

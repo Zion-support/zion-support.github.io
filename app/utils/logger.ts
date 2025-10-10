@@ -17,7 +17,7 @@ export interface LogContext {
   sessionId?: string;
   component?: string;
   action?: string;
-  [key: string]: unknown;
+  [key: string]: unknown;,
 }
 
 class Logger {

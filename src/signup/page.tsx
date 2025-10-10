@@ -19,7 +19,7 @@ const SignupPage: React.FC = () => {
     password: '',
     confirmPassword: '',
     agreeToTerms: false,
-    subscribeNewsletter: false
+    subscribeNewsletter: false,
   });
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
@@ -38,7 +38,7 @@ const SignupPage: React.FC = () => {
     
     if (formData.password !== formData.confirmPassword) {
       alert('Passwords do not match');
-      return;
+      return;,
     }
     
     if (!formData.agreeToTerms) {
@@ -101,7 +101,7 @@ $4];
     agreeToTerm,
   s: false,
     subscribeNewslette,
-  r: false;)
+  r: false;),
   });
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);

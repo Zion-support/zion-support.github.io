@@ -501,7 +501,7 @@ export interface BlockchainWeb3Service {/* TODO: Fix JSX expression */}
     launch_date: '2024 - 02 - 10'
     customers: 950;
     rating: 4 && 4.8;
-    reviews: 680;
+    reviews: 680;,
   },
       'Innovative Web3 social platform. Competes with traditional platforms like Facebook (free), Twitter (free), and Instagram (free). Our advantage: True decentralization and content ownership.',
     competitors: ['Facebook, Twitter, Instagram, TikTok, LinkedIn, YouTube'],
@@ -711,7 +711,7 @@ export interface BlockchainWeb3Service {/* TODO: Fix JSX expression */}
     launch_date: '2024 - 01 - 01'
     customers: 25000;
     rating: 4 && 4.6;
-    reviews: 18000;
+    reviews: 18000;,
   },
   id: string, name: string;
   tagline: string, description: string;
@@ -720,7 +720,7 @@ export interface BlockchainWeb3Service {/* TODO: Fix JSX expression */}
     monthly: number, yearly: number;
     currency: string, trialDays: number;
     setupTime: string;
-    enterprise: string;
+    enterprise: string;,
     },
     features: string[], benefits: string[],
   targetAudience: string[], marketPosition: string;
@@ -732,7 +732,7 @@ export interface BlockchainWeb3Service {/* TODO: Fix JSX expression */}
   icon: string, color: string;
   popular: boolean, launchDate: string;
   customers: number, rating: number;
-  reviews: number;
+  reviews: number;,
 }
 ];      'Social networking_content creation and sharing_community building_brand marketing_influencer monetization_decentralized governance'
     ];
@@ -889,7 +889,7 @@ export interface BlockchainWeb3Service {;
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number;
+  reviews: number;,
 }
 ;
 export const blockchainWeb3 Services2025: BlockchainWeb3 Service[] = [;
@@ -933,7 +933,7 @@ export const blockchainWeb3 Services2025: BlockchainWeb3 Service[] = [;
     launchDate: '2024-02-20';
     customers: 1200;
     rating: 4.8;
-    reviews: 850;
+    reviews: 850;,
   };
   {;
     id: 'ai-powered-defi-yield-optimizer';
@@ -975,7 +975,7 @@ export const blockchainWeb3 Services2025: BlockchainWeb3 Service[] = [;
     launchDate: '2024-01-15';
     customers: 8500;
     rating: 4.9;
-    reviews: 6200;
+    reviews: 6200;,
   };
   {;
     id: 'nft-marketplace-intelligence-platform';
@@ -1017,7 +1017,7 @@ export const blockchainWeb3 Services2025: BlockchainWeb3 Service[] = [;
     launchDate: '2024-03-01';
     customers: 3200;
     rating: 4.7;
-    reviews: 2100;
+    reviews: 2100;,
   };
   {;
     id: 'blockchain-supply-chain-traceability';
@@ -1059,7 +1059,7 @@ export const blockchainWeb3 Services2025: BlockchainWeb3 Service[] = [;
     launchDate: '2024-02-10';
     customers: 950;
     rating: 4.8;
-    reviews: 680;
+    reviews: 680;,
   };
   {;
     id: 'web3-social-media-platform';
@@ -1101,7 +1101,7 @@ export const blockchainWeb3 Services2025: BlockchainWeb3 Service[] = [;
     launchDate: '2024-01-01';
     customers: 25000;
     rating: 4.6;
-    reviews: 18000;
+    reviews: 18000;,
   }
 ];
     rating: 4.6;

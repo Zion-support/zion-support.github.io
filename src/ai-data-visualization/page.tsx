@@ -7,6 +7,8 @@ import Footer from '../components/Footer';
 export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression */}
 }
   return (<div><Helmet></Helmet>
+
+      <Navigation />
         <title>AI Data Visualization Solutions - Zion Tech Group</title>
         <meta name="description" content="Intelligent AI-powered data visualization with automated insights, interactive dashboards, and predictive analytics. Starting at $149/month." /></meta>"
         <meta name="keywords" content="AI data visualization, business intelligence, interactive dashboards, data analytics, predictive insights" /></meta>"
@@ -182,7 +184,7 @@ export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
               </a>"
               <a href="/contact" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold,
   hover:bg-white,"
-  hover:text-indigo-600 transition-all duration-300"></a>
+  hover: text-indigo-600 transition-all duration-300"></a>
                 Get Free Demo;
               </a>
             </div>
@@ -192,5 +194,5 @@ export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
         <Footer /></Footer>
       </div>
     </div>
-  );
+  );,
 }"

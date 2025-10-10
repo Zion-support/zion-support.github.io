@@ -1,10 +1,11 @@
 import { useState, useEffect, useCallback } from 'react';
+import Navigation from '../components/Navigation';
 
 interface PerformanceMetrics {
   loadTime: number;
   renderTime: number;
   memoryUsage: number;
-  networkLatency: number;
+  networkLatency: number;,
 }
 
 export const usePerformance = () => {
@@ -18,8 +19,7 @@ export const usePerformance = () => {
     if ('requestIdleCallback' in window) {
       requestIdleCallback(() => {
         // Run optimization tasks during idle time
-        console.log('Running performance optimizations...');
-      });
+        });
     }
   }, []);
 
@@ -57,7 +57,7 @@ interface PerformanceMetrics {/* TODO: Fix JSX expression */}
     firstContentfulPaint: number;,
     largestContentfulPaint: number;,
     cumulativeLayoutShift: number;,
-    firstInputDelay: number
+    firstInputDelay: number,
 }
 export const _usePerformance = () => {// TODO: Add content;}
 

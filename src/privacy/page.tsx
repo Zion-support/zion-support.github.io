@@ -36,32 +36,32 @@ export default function PrivacyPage() {
     {
       title: 'Right to Access',
       description: 'Request a copy of your personal data',
-      icon: Eye
+      icon: Eye,
     },
     {
       title: 'Right to Rectification',
       description: 'Correct inaccurate or incomplete data',
-      icon: FileText
+      icon: FileText,
     },
     {
       title: 'Right to Erasure',
       description: 'Request deletion of your personal data',
-      icon: Database
+      icon: Database,
     },
     {
       title: 'Right to Portability',
       description: 'Receive your data in a structured format',
-      icon: ArrowRight
+      icon: ArrowRight,
     },
     {
       title: 'Right to Object',
       description: 'Object to processing of your data',
-      icon: AlertTriangle
+      icon: AlertTriangle,
     },
     {
       title: 'Right to Restrict',
       description: 'Limit how we process your data',
-      icon: Lock
+      icon: Lock,
     }
   ];
 
@@ -275,7 +275,7 @@ export default function PrivacyPage() {
             </div>
             <a
               href="/contact"
-              className="bg-cyan-500 text-white px-8 py-3 rounded-lg font-bold hover:bg-cyan-600 transition-colors inline-flex items-center"
+              className="bg-cyan-500 text-white px-8 py-3 rounded-lg font-bold hover: bg-cyan-600 transition-colors inline-flex items-center"
             >
               <Mail className="w-5 h-5 mr-2" />
               Contact Us
@@ -284,5 +284,5 @@ export default function PrivacyPage() {
         </div>
       </section>
     </div>
-  );
+  );,
 }

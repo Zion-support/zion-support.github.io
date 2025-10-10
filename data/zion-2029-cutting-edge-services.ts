@@ -31,7 +31,7 @@ export type ZionCuttingEdgeService2029 =
     mobile: string;
     email: string;
     address: string;
-    website: string;
+    website: string;,
   };
   realImplementation: boolean;
   implementationDetails: string;
@@ -44,7 +44,7 @@ export type ZionCuttingEdgeService2029 =
     professional: number;
     enterprise: number;
     currency: string;
-    period: string;
+    period: string;,
   };
 }
 export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [
@@ -1717,7 +1717,7 @@ export const getServicesByCategory = (category: string) =>;
 ];
 export const getServicesByCategory = (categor)
   y: string) =>;
-  return zionCuttingEdgeServices2029.filter(service => service.category === category);
+  return zionCuttingEdgeServices2029.filter(service => service.category === category);,
 };
 export const getPopularServices = () =>
   return zionCuttingEdgeServices2029.filter(service => service.popular);
@@ -1734,14 +1734,14 @@ export const getServicesByPriceRange = (minPric)
   e: number) =>;
   return zionCuttingEdgeServices2029.filter(service =>
 //     const starterPrice = service.pricing.starter;)
-    return starterPrice >= minPrice && starterPrice <= maxPrice)
+    return starterPrice >= minPrice && starterPrice <= maxPrice),
   });
 };
 export const getServicesByTechnology = (technolog)
   y: string) =>;
   return zionCuttingEdgeServices2029.filter(service =>)
     service.technology.some(tech => tech.toLowerCase().includes(technology.toLowerCase()))
-  );
+  );,
 };
 export type ZionCuttingEdgeService2029 = i,
   d: string; nam,

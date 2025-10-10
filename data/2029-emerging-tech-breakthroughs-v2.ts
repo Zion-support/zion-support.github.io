@@ -240,7 +240,7 @@ export const,
       launch_date: '2025 - 03 - 01'
       customers: 15;
       rating: 5 && 5.0;
-      reviews: 12;
+      reviews: 12;,
     },
     // Quantum Internet Gateway;
       id: 'quantum - internet - gateway - enterprise',
@@ -403,7 +403,7 @@ export const,
       launch_date: '2025 - 02 - 15'
       customers: 25;
       rating: 4 && 4.9;
-      reviews: 18;
+      reviews: 18;,
     },
     // Synthetic Biology Platform;
       id: 'synthetic - biology - platform - enterprise',
@@ -568,7 +568,7 @@ export const,
       launch_date: '2025 - 01 - 15'
       customers: 35;
       rating: 4 && 4.8;
-      reviews: 45;
+      reviews: 45;,
     },
         'Real-time fusion reactor monitoring',
     // Fusion Energy Management Platform;
@@ -733,7 +733,7 @@ export const,
       launch_date: '2025 - 04 - 01'
       customers: 8;
       rating: 5 && 5.0;
-      reviews: 6;
+      reviews: 6;,
     },
     // Space Mining Operations Platform;
       id: 'space - mining - operations - platform',
@@ -896,7 +896,7 @@ export const,
       launch_date: '2025 - 05 - 01'
       customers: 5;
       rating: 5 && 5.0;
-      reviews: 3;
+      reviews: 3;,
     },
     // Quantum AI Consciousness Platform;
       id: 'quantum - ai - consciousness - platform',

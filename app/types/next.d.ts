@@ -75,7 +75,7 @@ declare module 'next' {
     user?: {
       id: string;
       email: string;
-      name?: string;
+      name?: string;,
     };
   }
 }
@@ -99,12 +99,12 @@ export interface NextLayoutProps {
 
 // API route types
 export interface ApiRouteHandler {
-  (req: NextRequest): Promise<NextResponse>;
+  (req: NextRequest): Promise<NextResponse>;,
 }
 
 // Middleware types
 export interface MiddlewareConfig {
-  matcher: string[];
+  matcher: string[];,
 }
 
 // Image optimization types
@@ -116,7 +116,7 @@ export interface ImageProps {
   priority?: boolean;
   quality?: number;
   placeholder?: 'blur' | 'empty';
-  blurDataURL?: string;
+  blurDataURL?: string;,
 }
 
 // Metadata types
@@ -155,7 +155,7 @@ export interface RouteHandler {
   POST?: (req: NextRequest) => Promise<NextResponse>;
   PUT?: (req: NextRequest) => Promise<NextResponse>;
   DELETE?: (req: NextRequest) => Promise<NextResponse>;
-  PATCH?: (req: NextRequest) => Promise<NextResponse>;
+  PATCH?: (req: NextRequest) => Promise<NextResponse>;,
 }
 
 // Dynamic route types
@@ -173,17 +173,17 @@ export interface StaticProps {
 // ISR types
 export interface ISRConfig {
   revalidate: number;
-  tags?: string[];
+  tags?: string[];,
 }
 
 // Edge runtime types
 export interface EdgeRuntime {
-  runtime: 'edge';
+  runtime: 'edge';,
 }
 
 // Node.js runtime types
 export interface NodeRuntime {
-  runtime: 'nodejs';
+  runtime: 'nodejs';,
 }
 
 export {};

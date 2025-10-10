@@ -390,7 +390,7 @@ export function getMemoryUsage(): {// TODO: Add content;}
     tota,
   l: number;,
     limi,
-  t: number;
+  t: number;,
 } | null {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -407,7 +407,7 @@ export function getMemoryUsage(): {// TODO: Add content;}
       tota,
   l: memory.totalJSHeapSize,
       limi,
-  t: memory.jsHeapSizeLimit;
+  t: memory.jsHeapSizeLimit;,
     };
   }
   return null;

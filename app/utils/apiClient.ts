@@ -89,7 +89,7 @@ class APIClient {}
         data,
         status: response.status,
         statusText: response.statusText,
-        headers: Object.fromEntries(response.headers.entries())
+        headers: Object.fromEntries(response.headers.entries()),
       };
 
       // Cache successful GET requests
@@ -119,7 +119,7 @@ class ApiClient {/* TODO: Fix JSX expression */}
   g: ApiClientConfig = {}) {/* TODO: Fix JSX expression */}
       },
       cacheOption,
-  s: config.cacheOptions;
+  s: config.cacheOptions;,
     };
   }
   /**
@@ -206,7 +206,7 @@ class ApiClient {/* TODO: Fix JSX expression */}
     while (attempt < retries) {/* TODO: Fix JSX expression */}
           },
           signa,
-  l: controller.signal;
+  l: controller.signal;,
         });
         clearTimeout(timeoutId);
         this.abortControllers.delete(cacheKey);

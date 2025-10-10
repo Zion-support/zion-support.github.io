@@ -533,7 +533,7 @@ export interface Service {
     starting: number,
     currency: string,
     period: 'month' | 'year' | 'one-time';
-    custom?: boolean;
+    custom?: boolean;,
   };
   benefits: string[];
   useCases: string[];
@@ -1210,7 +1210,7 @@ export const services: Service[] = [
       starting: 5000,
       currency: 'USD',
       period: 'month',
-      custom: true
+      custom: true,
     },
     benefits: [
       'Exponential computational power',
@@ -1257,7 +1257,7 @@ export const services: Service[] = [
       starting: 2999,
       currency: 'USD',
       period: 'month',
-      custom: true
+      custom: true,
     },
     benefits: [
       'Decentralized solutions',

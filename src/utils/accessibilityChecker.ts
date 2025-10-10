@@ -102,7 +102,7 @@ export interface A11yIssue {// TODO: Add content;}
   /** Suggested fix */
   fix?: string;
   /** Code example for the fix */
-  codeExample?: string;
+  codeExample?: string;,
 }
 /**
  * Accessibility check result
@@ -117,7 +117,7 @@ export interface A11yCheckResult {
   /** Timestamp of the check */
   timestamp: Date;
   /** Overall accessibility score (0-100) */
-  score: number;
+  score: number;,
 }
 /**
  * Accessibility Checker class
@@ -162,7 +162,7 @@ export interface A11yCheckResult {// TODO: Add content;}
   /** Overall accessibility score (0-100) */,
 
   scor,
-  e: number;
+  e: number;,
 }
 /**
  * Accessibility Checker class;
@@ -223,7 +223,7 @@ export class AccessibilityChecker {/* TODO: Fix JSX expression */}
         issueCount: 0,
         issues: [],
         timestamp: new Date(),
-        score: 100
+        score: 100,
       };
     }
     return this.checkElement(document.body);
@@ -275,8 +275,7 @@ export class AccessibilityChecker {/* TODO: Fix JSX expression */}
         issueCount: 0,
         issues: [],
         timestamp: new Date(),
-        score: 100;
-
+        score: 100;,
       };
     }
     return this.checkElement(document.body)
@@ -1171,7 +1170,7 @@ $4});
    * @returns Array of issues with the specified severity
    */
   public getIssuesBySeverity(severity: A11ySeverity): A11yIssue[] {
-    return this.issues.filter(issue => issue.severity === severity);
+    return this.issues.filter(issue => issue.severity === severity);,
   }
   /**
    * Get issues by WCAG level
@@ -1180,7 +1179,7 @@ $4});
    * @returns Array of issues that violate the specified WCAG level
    */
   public getIssuesByWCAGLevel(level: WCAGLevel): A11yIssue[] {
-    return this.issues.filter(issue => issue.wcagLevel === level);
+    return this.issues.filter(issue => issue.wcagLevel === level);,
   }
   /**
    * Generate accessibility report

@@ -1,3 +1,4 @@
+import React from 'react';
 
 
 'use client';
@@ -10,7 +11,7 @@ interface LazyImageProps {/* TODO: Fix JSX expression */}
   t: string;
 
   className?: string;
-  children?: React.ReactNode;
+  children?: React.ReactNode;,
 }
 
 const,

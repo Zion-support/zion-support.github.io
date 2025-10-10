@@ -7,7 +7,7 @@ interface PerformanceMetrics {lcp: number;}
   cls: number;
   fcp: number;
   ttfb: number;
-  tbt: number;
+  tbt: number;,
 }
 
 interface OptimizationConfig {enableImageOptimization: boolean;}
@@ -17,7 +17,7 @@ interface OptimizationConfig {enableImageOptimization: boolean;}
   enableServiceWorker: boolean;
   enableResourceHints: boolean;
   enableCompression: boolean;
-  enableCaching: boolean;
+  enableCaching: boolean;,
 }
 
 class PerformanceEnhancer {private config: OptimizationConfig;}
@@ -43,7 +43,7 @@ class PerformanceEnhancer {private config: OptimizationConfig;}
         
 
         observer.observe({ entryTypes: ['measure', 'navigation'] });
-      } catch (error) {console.warn('PerformanceObserver not supported:', error);}
+      } catch (error) {}
 
       }
     }

@@ -26,7 +26,7 @@ interface EnvConfig {
 
   // Build Configuration;
   BUILD_ID?: string;
-  VERSION?: string;
+  VERSION?: string;,
 }
 
 class EnvironmentConfig {

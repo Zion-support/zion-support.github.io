@@ -337,7 +337,7 @@ Disallo,`
       name: 'About Zion Tech Group',
       description: 'Learn about Zion Tech Group, a leading AI and IT solutions company.',
       url: `${this.seoConfig.siteUrl}/about`,
-      mainEntity: this.seoConfig.structuredData.organization;
+      mainEntity: this.seoConfig.structuredData.organization;,
     };
   }
 
@@ -359,7 +359,7 @@ Disallo,`
       name: 'Contact Zion Tech Group',
       description: 'Get in touch with our team for AI and IT solutions',
       url: `${this.seoConfig.siteUrl}/contact`,
-      mainEntity: this.seoConfig.structuredData.organization;
+      mainEntity: this.seoConfig.structuredData.organization;,
     };
   }
 
@@ -370,7 +370,7 @@ Disallo,`
       name: 'Zion Tech Group Blog',
       description: 'Latest insights on AI, technology, and IT solutions',
       url: `${this.seoConfig.siteUrl}/blog`,
-      publisher: this.seoConfig.structuredData.organization;
+      publisher: this.seoConfig.structuredData.organization;,
     };
   }
 

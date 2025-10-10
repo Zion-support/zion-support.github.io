@@ -17,6 +17,7 @@ const AiProjectManagerPage: React.FC = () => {
       title: 'AI-Powered Planning',
       description: 'Intelligent project planning with predictive analytics and resource optimization',
       benefits: ['40% faster planning', '85% accuracy in timelines', 'Smart resource allocation']
+    }
     },
       icon: Target,
       title: 'Smart Task Management',
@@ -80,6 +81,8 @@ const AiProjectManagerPage: React.FC = () => {
         <meta name="description" content="Advanced AI project management solutions by Zion Tech Group." />
       </Helmet>
       
+
+      <Navigation />
       <Navigation />
       
       <div className="container mx-auto px-4 py-16">
@@ -88,7 +91,7 @@ const AiProjectManagerPage: React.FC = () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
             Coming Soon - Advanced AI project management solutions that will transform your business.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
               Contact Us
             </button>
@@ -97,7 +100,7 @@ const AiProjectManagerPage: React.FC = () => {
           </div>
       
       <Footer />
-  );
+  );,
 };
 
 

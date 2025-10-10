@@ -135,7 +135,7 @@ export default function ServicesSection() {
             <p className="text-gray-300 mb-8 text-lg">
               Let's discuss how our AI and IT solutions can drive your success.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <a
                 href="#contact"
                 className="cyber-button px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
@@ -153,5 +153,5 @@ export default function ServicesSection() {
         </div>
       </div>
     </section>
-  );
+  );,
 }

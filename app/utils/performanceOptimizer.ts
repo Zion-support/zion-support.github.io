@@ -101,7 +101,7 @@ export const getDeviceInfo = () => {}
   return {
     isMobile: width < 768;
     isTablet: width >= 768 && width < 1024;
-    isDesktop: width >= 1024;
+    isDesktop: width >= 1024;,
   };
   private observers: PerformanceObserver[] = [];
   private isMonitoring: boolean = false;
@@ -187,8 +187,7 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   private measureLoadTime(): void {/* TODO: Fix JSX expression */}
       }
     } catch (error) {
-      console.warn('Failed to measure load time:', error);
-    }
+      }
   }
   /**
    * Measure render time using PerformanceObserver;

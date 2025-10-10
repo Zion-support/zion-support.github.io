@@ -14,6 +14,7 @@ const AICustomerSupportBotPage: React.FC = () => {
       title: '24/7 AI Support',
       description: 'Round-the-clock customer support with intelligent AI chatbot capabilities',
       benefits: ['90% response time reduction', 'Instant responses', 'Always available']
+    }
     },
       icon: MessageSquare,
       title: 'Natural Language Processing',
@@ -77,6 +78,8 @@ const AICustomerSupportBotPage: React.FC = () => {
         <meta name="description" content="Enhance customer experience with our AI-powered support bot. 24/7 assistance, natural language processing, and seamless human handoff." />
       </Helmet>
       
+
+      <Navigation />
       <Navigation />
       
       <div className="container mx-auto px-4 py-16">
@@ -126,7 +129,7 @@ const AICustomerSupportBotPage: React.FC = () => {
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       {feature}
-                <button className="w-full bg-cyan-500 text-white py-3 rounded-lg hover:bg-cyan-600 transition-colors">
+                <button className="w-full bg-cyan-500 text-white py-3 rounded-lg hover: bg-cyan-600 transition-colors">
                   Get Started
                 </button>
 
@@ -141,7 +144,7 @@ const AICustomerSupportBotPage: React.FC = () => {
               View Case Studies
       
       <Footer />
-  );
+  );,
 };
 
 

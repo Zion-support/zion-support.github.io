@@ -23,7 +23,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   a: new Date().toISOString()}
         }})};
     return result;
-//   } catch (error) {// console.error('Error in revenue-ideas-lab: ') error;
+//   } catch (error) {// console.error('Error in revenue-ideas-lab: ') error;,
       }
     return {
       statusCode: 500;
@@ -47,7 +47,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   }
 };
         timestamp: new Date().toISOString(),' function: 'revenue-ideas-lab',' source: event.source || 'unknown', lab: {' status: 'active', ideas: 0;
-        lastIdea: new Date().toISOString() } }) }; return result; } catch (error) {' // console.error('Error in revenue-ideas-lab: ') error;
+        lastIdea: new Date().toISOString() } }) }; return result; } catch (error) {' // console.error('Error in revenue-ideas-lab: ') error;,
       } return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'revenue-ideas-lab' }) }; } };'
         timestam,
   p: new Date().toISOString(),' functio,

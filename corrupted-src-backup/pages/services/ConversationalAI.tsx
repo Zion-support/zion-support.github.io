@@ -1,4 +1,6 @@
-import { Helmet } from "react-helmet-async";"
+import { Helmet } from "react-helmet-async";
+import Footer from '../components/Footer';
+import Navigation from '../components/Navigation';"
 impo, r, t { Vid, e, o } fr, o, m "luci, d, e-rea, c, t";"
 import, Header, from "../../componen, t, s/Head, e, r";"
 import, Footer, from "../../componen, t, s/Foot, e, r";
@@ -368,6 +370,8 @@ const, ConversationalA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
   ];
   return (<>
       <Helmet></Helmet>
+
+      <Navigation />
         <title>Conversational, A, I - Zion, Tech, Group | Advanced, Mult, i-Modal, AI, Conversations</title>
         <me, t, a;"
   na, m, e="descripti, o, n""

@@ -31,7 +31,7 @@ export type ZionEmergingTechService2029 =
     mobile: string;
     email: string;
     address: string;
-    website: string;
+    website: string;,
   };
   realImplementation: boolean;
   implementationDetails: string;
@@ -44,7 +44,7 @@ export type ZionEmergingTechService2029 =
     professional: number;
     enterprise: number;
     currency: string;
-    period: string;
+    period: string;,
   };
 }
 export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [
@@ -1717,7 +1717,7 @@ export const getServicesByCategory = (category: string) =>;
 ];
 export const getServicesByCategory = (categor)
   y: string) =>;
-  return zionEmergingTechServices2029.filter(service => service.category === category);
+  return zionEmergingTechServices2029.filter(service => service.category === category);,
 };
 export const getPopularServices = () =>
   return zionEmergingTechServices2029.filter(service => service.popular);
@@ -1734,14 +1734,14 @@ export const getServicesByPriceRange = (minPric)
   e: number) =>;
   return zionEmergingTechServices2029.filter(service =>
 //     const starterPrice = service.pricing.starter;)
-    return starterPrice >= minPrice && starterPrice <= maxPrice)
+    return starterPrice >= minPrice && starterPrice <= maxPrice),
   });
 };
 export const getServicesByTechnology = (technolog)
   y: string) =>;
   return zionEmergingTechServices2029.filter(service =>)
     service.technology.some(tech => tech.toLowerCase().includes(technology.toLowerCase()))
-  );
+  );,
 };
 export type ZionEmergingTechService2029 = i,
   d: string; nam,

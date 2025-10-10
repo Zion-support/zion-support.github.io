@@ -40,8 +40,7 @@ $4});
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Here you would typically send the form data to your backend
-    // console.log('Form submitted:', formData);
-    setIsSubmitted(true);
+    // setIsSubmitted(true);
     // Reset form after 3 seconds
     setTimeout(() => {
       setIsSubmitted(false);
@@ -201,7 +200,7 @@ export default ContactPage;
           <div className="mt-8">
             <a
               href="/"
-              className="bg-cyan-500 text-white px-6 py-3 rounded-lg font-bold hover:bg-cyan-600 transition-colors inline-flex items-center"
+              className="bg-cyan-500 text-white px-6 py-3 rounded-lg font-bold hover: bg-cyan-600 transition-colors inline-flex items-center"
             >
               <ArrowRight className="w-5 h-5 mr-2" />
               Back to Home
@@ -209,7 +208,7 @@ export default ContactPage;
           </div>
         </div>
       </div>
-    );
+    );,
   }
 
   return (

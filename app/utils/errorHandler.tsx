@@ -70,7 +70,7 @@ export interface ErrorHandlerConfig {}
   enableConsoleLogging: boolean,
   enableNetworkLogging: boolean,
   reportEndpoint?: string;
-  logLevel: 'debug' | 'info' | 'warn' | 'error';
+  logLevel: 'debug' | 'info' | 'warn' | 'error';,
 }
 // Default configuration
 export const defaultErrorHandlerConfig: ErrorHandlerConfig = {,
@@ -494,7 +494,7 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
           timestamp: error.timestamp.toISOString(),
         body: JSON.stringify({)}
           ...error,
-          timestamp: error.timestamp.toISOString()
+          timestamp: error.timestamp.toISOString(),
         })
 
     } catch (err) {}
@@ -555,7 +555,7 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
   r: AppError) {/* TODO: Fix JSX expression */}
         },
         bod,
-  y: JSON.stringify(error)
+  y: JSON.stringify(error),
       });
     } catch (err) {/* TODO: Fix JSX expression */}
       }

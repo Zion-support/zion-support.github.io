@@ -108,7 +108,7 @@ export const,
       ></div>
         <span className="text-gray-500 text-sm"></span><span className="sr-only">Screen reader: </span>Failed to load image</span>
       </div>
-    )
+    ),
   }
   return(<img;
   return (<img></img>

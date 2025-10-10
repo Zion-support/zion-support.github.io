@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+import Navigation from '../components/Navigation';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
@@ -46,6 +47,10 @@ const PagePage: React.FC = () => {
         <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" />
       </Helmet>
 
+
+
+      <Navigation />
+      <Navigation />
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
           </div>
@@ -72,12 +77,12 @@ const PagePage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm: px-6 lg:px-8">
           </div>
         </div>
       </section>
     </div>
-  );
+  );,
 };
 
 export default PagePage;

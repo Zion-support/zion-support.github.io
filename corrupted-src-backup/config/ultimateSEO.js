@@ -10,7 +10,7 @@ module.exports = {
       site_name: 'Zion Tech Group'
       image: '/images/og-image.jpg',
       imageWidth: 1200;
-      imageHeight: 630;
+      imageHeight: 630;,
     },
     twitterCards: {,
       card: 'summary_large_image',
@@ -48,7 +48,7 @@ module.exports = {
     services: true;
     faq: true;
     reviews: true;
-    events: true;
+    events: true;,
   },
   sitemapOptimization: {
     dynamic: true;
@@ -99,7 +99,7 @@ module.exports = {/* TODO: Fix JSX expression */}
     },
     lastmod: true;
     images: true;
-    videos: true;
+    videos: true;,
   },
   coreWebVitals: {,
     lcp: {,

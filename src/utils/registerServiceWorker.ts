@@ -4,7 +4,7 @@
 export interface ServiceWorkerConfig {
   onSuccess?: (registration: ServiceWorkerRegistration) => void;
   onUpdate?: (registration: ServiceWorkerRegistration) => void;
-  onError?: (error: Error) => void;
+  onError?: (error: Error) => void;,
 }
 /**
  * Register service worker with lifecycle callbacks
@@ -26,8 +26,7 @@ export interface ServiceWorkerConfig {// TODO: Add content;}
 }
   onSuccess?: (registration: ServiceWorkerRegistration) => void;
   onUpdate?: (registration: ServiceWorkerRegistration) => void;
-  onError?: (error: Error) => void;
-
+  onError?: (error: Error) => void;,
 }
 /**
  * Register service worker with lifecycle callbacks;
@@ -101,7 +100,7 @@ $4});
   O: Add content;}
 };
   scop,
-  e: '/')
+  e: '/'),
     });
     // Handle updates;
     registration.addEventListener('updatefound', () => {/* TODO: Fix JSX expression */}
@@ -139,8 +138,7 @@ $4});
     });
     return registration;
   } catch (error) {
-    // // console.error('[SW] Registration failed:', error);
-    if (config.onError && error instanceof Error) {} catch (error) {/* TODO: Fix JSX expression */}
+    // // if (config.onError && error instanceof Error) {} catch (error) {/* TODO: Fix JSX expression */}
   failed:', error);}
     if (config.onError && error instanceof Error) {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -161,8 +159,7 @@ export async function unregisterServiceWorker(): Promise<boolean> {
     const result = await registration.unregister();
     return result;
   } catch (error) {
-    // // console.error('[SW] Unregistration failed:', error);
- * Unregister service worker;
+    // // * Unregister service worker;
  */
 export async function unregisterServiceWorker(): Promise;
           <boolean> {/* TODO: Fix JSX expression */}
@@ -195,8 +192,7 @@ export async function checkForUpdates(): Promise<void> {
     const registration = await navigator.serviceWorker.ready;
     await registration.update();
     } catch (error) {
-    // // console.error('[SW] Update check failed:', error);
-  }
+    // // }
 }
 /**
  * Skip waiting and activate new service worker
@@ -222,13 +218,13 @@ export function clearCaches(): void {
 export async function getServiceWorkerStatus(): Promise<{
   supported: boolean;
   registered: boolean;
-  active: boolean;
+  active: boolean;,
 }> {
   if (!('serviceWorker' in navigator)) {
     return {
       supported: false,
       registered: false,
-      active: false
+      active: false,
     };
   }
   try {
@@ -236,13 +232,13 @@ export async function getServiceWorkerStatus(): Promise<{
     return {
       supported: true,
       registered: !!registration,
-      active: !!registration?.active
+      active: !!registration?.active,
     };
   } catch {
     return {
       supported: true,
       registered: false,
-      active: false
+      active: false,
     };
   }
 }
@@ -263,7 +259,7 @@ export async function checkForUpdates(): Promise;
     const registration = await navigator.serviceWorker.ready;
     await registration.update();
 
-    } catch (error) {// // console.error('[SW] Update check failed:', error);}
+    } catch (error) {// // }
 
   }
 }
@@ -319,7 +315,7 @@ export async function getServiceWorkerStatus(): Promise;
     registere,
   d: boolean;,
     activ,
-  e: boolean;
+  e: boolean;,
 }> {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -334,7 +330,7 @@ export async function getServiceWorkerStatus(): Promise;
       registere,
   d: false,
       activ,
-  e: false;
+  e: false;,
     };
   }
   try {/* TODO: Fix JSX expression */}
@@ -349,7 +345,7 @@ export async function getServiceWorkerStatus(): Promise;
       registere,
   d: !!registration,
       activ,
-  e: !!registration?.active;
+  e: !!registration?.active;,
     };
   } catch {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -362,7 +358,7 @@ export async function getServiceWorkerStatus(): Promise;
       registere,
   d: false,
       activ,
-  e: false;
+  e: false;,
     };
   }
 }

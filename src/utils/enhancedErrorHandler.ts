@@ -32,7 +32,7 @@ interface ErrorReport {
   metadata: Record<string, unknown>;
   resolved: boolean;
   resolvedAt?: string;
-  resolvedBy?: string;
+  resolvedBy?: string;,
 }
 interface ErrorHandlerConfig {
   enableConsoleLogging: boolean;
@@ -44,7 +44,7 @@ interface ErrorHandlerConfig {
   maxErrorsPerMinute: number;
   errorRetentionDays: number;
   remoteEndpoint?: string;
-  apiKey?: string;
+  apiKey?: string;,
 }
 class EnhancedErrorHandler {
   private config: ErrorHandlerConfig;
@@ -95,7 +95,7 @@ class EnhancedErrorHandler {
         filename: event.filename,
         lineno: event.lineno,
         colno: event.colno,
-        error: event.error
+        error: event.error,
       });
     });
   }
@@ -108,7 +108,7 @@ class EnhancedErrorHandler {
         type: 'promise',
         message: event.reason?.message || String(event.reason),
         stack: event.reason?.stack,
-        reason: event.reason
+        reason: event.reason,
       });
     });
   }
@@ -127,7 +127,7 @@ class EnhancedErrorHandler {
             type: 'resource',
             message: `Failed to load resource: ${target?.src || target?.href}`,
             element: event.target?.constructor.name,
-            src: target?.src || target?.href
+            src: target?.src || target?.href,
           });
         }
       },
@@ -149,7 +149,7 @@ class EnhancedErrorHandler {
             message: `Network request failed: ${response.status} ${response.statusText}`,
             url: args[0] as string,
             status: response.status,
-            statusText: response.statusText
+            statusText: response.statusText,
           });
         }
         return response;
@@ -158,7 +158,7 @@ class EnhancedErrorHandler {
           type: 'network',
           message: `Network request failed: ${error}`,
           url: args[0] as string,
-          error: error instanceof Error ? error : new Error(String(error))
+          error: error instanceof Error ? error : new Error(String(error)),
         });
         throw error;
       }
@@ -229,7 +229,7 @@ $4});
 // status?: number;
 // statusText?: string;
 // duration?: number;
-// category?: string;
+// category?: string;,
   }): void {
     // Rate limiting
     if (!this.checkRateLimit()) {
@@ -256,7 +256,7 @@ $4});
 // status?: number;
 // statusText?: string;
 // duration?: number;
-// category?: string;
+// category?: string;,
   }): ErrorReport {
     const context = this.getErrorContext();
     const severity = this.determineSeverity(errorData);
@@ -280,9 +280,9 @@ $4});
         url: errorData.url,
         status: errorData.status,
         statusText: errorData.statusText,
-        duration: errorData.duration
+        duration: errorData.duration,
       },
-      resolved: false
+      resolved: false,
     };
   }
   /**
@@ -295,7 +295,7 @@ $4});
     this.updateErrorCounts(errorReport);
     // Console logging
     if (this.config.enableConsoleLogging) {
-      this.logError(errorReport);
+      this.logError(errorReport);,
     }
     // Remote reporting
     if (this.config.enableRemoteReporting) {
@@ -319,7 +319,7 @@ $4});
       userAgent: navigator.userAgent,
       timestamp: new Date().toISOString(),
       sessionId: this.getSessionId(),
-      userId: this.getUserId()
+      userId: this.getUserId(),
     };
   }
   /**
@@ -329,7 +329,7 @@ $4});
     type: ErrorReport['type'];
     message: string;
     status?: number;
-    element?: string;
+    element?: string;,
   }): ErrorReport['severity'] {
     if (
       errorData.type === 'network' &&
@@ -357,7 +357,7 @@ $4});
    */
   private categorizeError(errorData: {
     type: ErrorReport['type'];
-    message: string;
+    message: string;,
   }): ErrorReport['category'] {
     if (errorData.type === 'network') {
       return 'network';
@@ -385,11 +385,11 @@ $4});
   private generateTags(errorData: {
     filename?: string;
     type: ErrorReport['type'];
-    duration?: number;
+    duration?: number;,
   }): string[] {
     const tags: string[] = [];
     if (errorData.filename) {
-      tags.push('client-side');
+      tags.push('client-side');,
     }
     if (errorData.type === 'network') {
       tags.push('network');
@@ -459,15 +459,8 @@ $4});
   private logError(errorReport: ErrorReport): void {
     const emoji = this.getSeverityEmoji(errorReport.severity);
     console.group(`${emoji} Error Report: ${errorReport.id}`);
-    // // console.error('Message:', errorReport.message);
-    // // console.error('Type:', errorReport.type);
-    // // console.error('Severity:', errorReport.severity);
-    // // console.error('Category:', errorReport.category);
-    // // console.error('Context:', errorReport.context);
-    // // console.error('Metadata:', errorReport.metadata);
-    if (errorReport.stack) {
-      // // console.error('Stack:', errorReport.stack);
-    }
+    // // // // // // // // // // // // if (errorReport.stack) {
+      // // }
     console.groupEnd();
   }
   /**
@@ -484,7 +477,7 @@ $4});
       case 'low':
         return '🟢';
       default:
-        return '❓';
+        return '❓';,
     }
   }
   /**
@@ -499,7 +492,7 @@ $4});
           'Content-Type': 'application/json',
           Authorization: `Bearer ${this.config.apiKey}`
         },
-        body: JSON.stringify(errorReport)
+        body: JSON.stringify(errorReport),
       });
     } catch (error) {}
   }
@@ -507,7 +500,7 @@ $4});
    * Aggregate error data
    */
   private aggregateError(errorReport: ErrorReport): void {
-    // This could be expanded to include more sophisticated aggregation
+    // This could be expanded to include more sophisticated aggregation,
     }
   /**
    * Assess performance impact
@@ -562,7 +555,7 @@ $4});
     errorsByType: Record<string, number>;
     errorsByCategory: Record<string, number>;
     errorsBySeverity: Record<string, number>;
-    recentErrors: ErrorReport[];
+    recentErrors: ErrorReport[];,
   } {
     const errorsByType: Record<string, number> = {};
     const errorsByCategory: Record<string, number> = {};
@@ -599,7 +592,7 @@ $4});
         errors: this.errors,
         statistics: this.getErrorStatistics(),
         config: this.config,
-        timestamp: new Date().toISOString()
+        timestamp: new Date().toISOString(),
       },
       null,
       2
@@ -679,7 +672,7 @@ interface ErrorReport {/* TODO: Fix JSX expression */}
   resolve,
   d: boolean;
   resolvedAt?: string;
-  resolvedBy?: string;
+  resolvedBy?: string;,
 }
 interface ErrorHandlerConfig {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -694,7 +687,7 @@ interface ErrorHandlerConfig {/* TODO: Fix JSX expression */}
     maxErrorsPerMinute: number;,
     errorRetentionDays: number
   remoteEndpoint?: string
-  apiKey?: string
+  apiKey?: string,
 }
 class EnhancedErrorHandler {// TODO: Add content;}
 
@@ -776,8 +769,7 @@ class EnhancedErrorHandler {// TODO: Add content;}
         filename: event.filename,
         lineno: event.lineno,
         colno: event.colno,
-        error: event.error;
-
+        error: event.error;,
       });
     });
   }
@@ -801,7 +793,7 @@ class EnhancedErrorHandler {// TODO: Add content;}
         stac,
   k: event.reason?.stack,
         reaso,
-  n: event.reason;
+  n: event.reason;,
       });
     });
   }
@@ -831,7 +823,7 @@ class EnhancedErrorHandler {// TODO: Add content;}
             elemen,
   t: event.target?.constructor.name,
             sr,
-  c: target?.src || target?.href;)
+  c: target?.src || target?.href;),
           });
         }
       },
@@ -866,8 +858,7 @@ const originalFetch = window.fetch;
             message: `Network request failed: ${response.status} ${response.statusText}`,
             url: args[0] as string,
             status: response.status,
-            statusText: response.statusText;
-
+            statusText: response.statusText;,
           });
         }
         return response;
@@ -881,8 +872,7 @@ const originalFetch = window.fetch;
   type: 'network',
           message: `Network request failed: ${error}`,
           url: args[0] as string,
-          error: error instanceof Error ? error : new Error(String(error))
-
+          error: error instanceof Error ? error : new Error(String(error)),
         }
   )
         throw error;
@@ -972,7 +962,7 @@ const originalFetch = window.fetch;
    */
 
   private handleError(errorData: {if (!sessionId) {}
-  // TODO: Add content;
+  // TODO: Add content;,
 }
 
       sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
@@ -1038,13 +1028,7 @@ const originalFetch = window.fetch;
 }
     const emoji = this.getSeverityEmoji(errorReport.severity);
     console.group(`${emoji} Error Report: ${errorReport.id}`);
-    // // console.error('Message:', errorReport.message);
-    // // console.error('Type:', errorReport.type);
-    // // console.error('Severity:', errorReport.severity);
-    // // console.error('Category:', errorReport.category);
-    // // console.error('Context:', errorReport.context);
-    // // console.error('Metadata:', errorReport.metadata);
-    if (errorReport.stack) {// // console.error('Stack:', errorReport.stack);}
+    // // // // // // // // // // // // if (errorReport.stack) {// // }
 
     }
     console.groupEnd()
@@ -1098,8 +1082,7 @@ const originalFetch = window.fetch;
   n: `Bearer ${this.config.apiKey}`
         },
 
-        body: JSON.stringify(errorReport)
-
+        body: JSON.stringify(errorReport),
       });
     } catch (error) {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -1210,7 +1193,7 @@ const originalFetch = window.fetch;
     errorsBySeverit,
   y: Record<string, number>;
     recentError,
-  s: ErrorReport[];
+  s: ErrorReport[];,
   } {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -1265,8 +1248,7 @@ const originalFetch = window.fetch;
   errors: this.errors,
         statistics: this.getErrorStatistics(),
         config: this.config,
-        timestamp: new Date().toISOString()
-
+        timestamp: new Date().toISOString(),
       },
 //       null,
 //       2)

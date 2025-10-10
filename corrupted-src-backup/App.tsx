@@ -97,12 +97,12 @@ class ErrorBoundary extends React.Component<
   render() {/* TODO: Fix JSX expression */}
   r: false })}"
                 className="bg-blue-600 text-white px-4 py-2 rounded,"
-  hover:bg-blue-700"
+  hover: bg-blue-700"
               >
                 Try again;
               </button>
             </div>
-          </div>));
+          </div>));,
     }
 
     return this.props.children;

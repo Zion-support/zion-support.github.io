@@ -3,8 +3,6 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
 // Read the current App.tsx;
 const appContent = fs.readFileSync('/workspace/src/App.tsx', 'utf8');
 
@@ -49,5 +47,3 @@ const newAppContent = beforeRoutes + '\n            {/* Missing Pages */}\n' + r
 // Write the updated App.tsx;
 fs.writeFileSync('/workspace/src/App.tsx', newAppContent);
 
-console.log(`✅ Added ${missingPages.length} missing routes to App.tsx`);
-console.log('All navigation links should now work properly!');

@@ -1,4 +1,5 @@
 import React from 'react';
+import Navigation from '../components/Navigation';
 import { Helmet } from 'react-helmet-async';
 import {CheckCircle, Star, TrendingUp, Brain, Target, Phone, Mail, MapPin} from 'lucide-react';
 const MicroSAASPage: React.FC = () => {
@@ -16,7 +17,7 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['GitHub Actions', 'SonarQube', 'ESLint', 'Custom AI Models', 'OpenAI Codex'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
       link: 'https://ziontechgroup.com/ai-code-review',
-      popular: true
+      popular: true,
     },
     {
       title: 'AI Test Generation Suite',
@@ -3405,6 +3406,8 @@ $4}
         <meta name="description" content="50+ AI-powered micro SAAS applications for modern businesses. Affordable, powerful tools for developers, marketers, and entrepreneurs. Starting at $49/month." />
         <meta name="keywords" content="micro saas, ai tools, business applications, developer tools, marketing automation, productivity apps" />
       </Helmet>
+
+      <Navigation />
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto text-center">
@@ -3417,7 +3420,7 @@ import { CheckCircle, Star, TrendingUp, Brain, Target, Phone, Mail, MapPin } fro
 const MicroSAASPage: React.FC = () => {
   return (
     <div>Coming Soon</div>
-  );
+  );,
 };
   const _microSAASServices = [
   // TOD,
@@ -3452,7 +3455,7 @@ const MicroSAASPage: React.FC = () => {
   k: 'http,
   s://ziontechgroup.com/ai-code-review',
       popula,
-  r: true;
+  r: true;,
     },
     {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -10574,7 +10577,7 @@ const categories = [
           <p className="text-xl text-purple-100 mb-8"></p>
 // Get started with our micro SAAS solutions today and see the difference AI can make.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <a
               href="tel:+13024640950" className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
 // >
@@ -10589,6 +10592,6 @@ const categories = [
         </div>
       </section>
     </div>
-  );
+  );,
 };
 export default MicroSAASPage;"`

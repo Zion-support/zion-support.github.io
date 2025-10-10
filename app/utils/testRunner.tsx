@@ -966,12 +966,12 @@ export class TestRunner {/* TODO: Fix JSX expression */}
         skipped: this.results.filter(r => r.status === 'skipped').length;
         duration: Date.now() - this.startTime}
       },
-      results: this.results;
+      results: this.results;,
     }
   private generateJsonReport(): void {/* TODO: Fix JSX expression */}
       },
       result,
-  s: this.results;
+  s: this.results;,
     };
     if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {} }
     if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { ); } }
@@ -1571,7 +1571,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
       statu,
   s: 'passed',
       duratio,
-  n: 0;)
+  n: 0;),
     });
     return {/* TODO: Fix JSX expression */}
   d: true };
@@ -1830,7 +1830,7 @@ export const testUtils = {/* TODO: Fix JSX expression */}
         createdA,
   t: new Date().toISOString(),
         updatedA,
-  t: new Date().toISOString()
+  t: new Date().toISOString(),
       });
     }
     return mockData;

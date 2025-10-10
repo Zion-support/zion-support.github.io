@@ -38,6 +38,8 @@ const CognitiveAutomationEnterpriseRevolution: () => {
         <meta name="description"
   content: "Discover how cognitive automation is transforming enterprises in 2025. 92% efficiency gains, $3.2M average savings, and 10x productivity increases through intelligent AI systems.", /><meta name: "keywords;
   content: "cognitive automation, enterprise AI, intelligent automation, business process automation, AI transformation, digital workforce", /></Helmet>
+
+      <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark"></div>
         <Header />
         <article className="container mx-auto px-6 py-20">

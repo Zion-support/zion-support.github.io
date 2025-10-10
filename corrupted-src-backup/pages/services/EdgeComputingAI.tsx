@@ -1,4 +1,6 @@
-import { Helmet } from "react-helmet-async";"
+import { Helmet } from "react-helmet-async";
+import Footer from '../components/Footer';
+import Navigation from '../components/Navigation';"
 impo, r, t { Clo, u, d } fr, o, m "luci, d, e-rea, c, t";"
 import, Header, from "../../componen, t, s/Head, e, r";"
 import, Footer, from "../../componen, t, s/Foot, e, r";
@@ -334,6 +336,8 @@ const, EdgeComputingA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
           content="Deploy, AI, at the, edge, for re, a, l-time, processing, with s, u, b-10ms, response, times. Edge, computing, solutions for, Io, T, industrial, automatio, n, smart, citie, s, and, healthcare, applications." /><meta name="keywor, d, s" content="edge, computin, g, edge, A, I, I, o, T, re, a, l-time, processin, g, edge, analytic, s, distributed, computin, g, edge, deploymen, t, low, latency, AI" /><link, re, l="canonic, a, l" hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/servic, e, s/ed, g, e-computi, n, g-ai/>"
   return (<>
       <Helmet></Helmet>
+
+      <Navigation />
         <title>Edge, Computing, AI - Zion, Tech, Group | Re, a, l-Time, Edge, Intelligence</title>
         <me, t, a;"
   na, m, e="descripti, o, n""

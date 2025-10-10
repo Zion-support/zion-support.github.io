@@ -28,6 +28,8 @@ const EnterpriseAITransformationSuccessStrategie, s = () => {
   content: "Master enterprise AI transformation with proven strategies achieving 10x ROI and 40% cost reductions. Comprehensive playbook from Fortune 500 companies in 2025.", /><meta ,>
   name: "keywords;
   content: "AI transformation, enterprise AI, digital transformation, AI strategy, business innovation, AI implementation", /></Helmet>
+
+      <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark"></div>
         <Header />
         <article className="container mx-auto px-6 py-20">
@@ -684,7 +686,7 @@ const EnterpriseAITransformationSuccessStrategie, s = () => {/* TODO: Fix JSX ex
                   to="/contact""
   className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-bold rounded-lg,
   hover:from-purple-600,"
-  hover:to-cyan-600 transition-all""
+  hover: to-cyan-600 transition-all""
                   >""
                     Schedule AI Assessment""
                     <Rocket className="w-5 h-5 "></Rocket>"
@@ -692,7 +694,7 @@ const EnterpriseAITransformationSuccessStrategie, s = () => {/* TODO: Fix JSX ex
                   </Link>"
                   <Link to="/services"></Link>"
   className= " />
-  );
+  );,
 };
 
 export default EnterpriseAITransformationSuccessStrategies;;

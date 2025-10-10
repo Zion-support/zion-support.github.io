@@ -23,7 +23,7 @@ export interface CloudDevOpsService {/* TODO: Fix JSX expression */}
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number;
+  reviews: number;,
 }
 export const advancedCloudDevOpsServices2025: CloudDevOpsService[] = [,
     id: 'multi-cloud-orchestration-platform',
@@ -176,7 +176,7 @@ export const,
     launchDate: '2024-12-01'
     customers: 110;
     rating: 4.8;
-    reviews: 167;
+    reviews: 167;,
   },
     id: 'intelligent-devops-automation-suite',
     name: 'Intelligent DevOps Automation Suite',
@@ -307,7 +307,7 @@ export const,
     launchDate: '2024-12-01'
     customers: 95;
     rating: 4.7;
-    reviews: 145;
+    reviews: 145;,
   },
     id: 'enterprise-kubernetes-management-platform',
     name: 'Enterprise Kubernetes Management Platform',
@@ -438,7 +438,7 @@ export const,
     launchDate: '2024-11-15'
     customers: 75;
     rating: 4.8;
-    reviews: 112;
+    reviews: 112;,
   },
     id: 'intelligent-infrastructure-monitoring',
     name: 'Intelligent Infrastructure Monitoring',
@@ -569,7 +569,7 @@ export const,
     launchDate: '2024-12-01'
     customers: 160;
     rating: 4.8;
-    reviews: 234;
+    reviews: 234;,
   },
     id: 'cloud-security-posture-management',
     name: 'Cloud Security Posture Management',

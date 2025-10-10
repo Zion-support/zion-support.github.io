@@ -90,6 +90,8 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
         <meta name="keywor, d, s" content="suppo, r, t, he, l, p, technical, assistanc, e, customer, servic, e, documentati, o, n"  />
         <link, re, l="canonic, a, l" hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/suppo, r, t"  />
       </Helmet>
+
+      <Navigation />
       <div, className="m, i, n-h-screen, b, g-gr, a, y-50">)
         {/* Hero, Sectio, n */})
         <section, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, tex, t-white, p, y-20">)

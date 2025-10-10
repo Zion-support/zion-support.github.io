@@ -1,4 +1,5 @@
 import React from 'react';
+import Navigation from '../components/Navigation';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOProps {/* TODO: Fix JSX expression */}
@@ -51,6 +52,8 @@ const,
   r:image" content={image} /></meta>"
       <link rel="canonical" href={url} /></link>
     </Helmet>
+
+      <Navigation />
   );
 };
 

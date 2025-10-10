@@ -70,7 +70,7 @@ function buildGraph(root)
         id;
       }
     nodes.push({ id)
-        path: id;
+        path: id;,
       });
   }
   for (const f of files) {const fromId = path.relative(root)
@@ -154,14 +154,14 @@ exports.handler = async function handler() {/* TODO: Fix JSX expression */}
         null,
         2));
     try {execSync('git config user.name "zion-bot" && git config user.email "bot@zion.app"')
-        { stdio: 'inherit'} shell: true;
+        { stdio: 'inherit'} shell: true;,
       })
       );
       execSync('git add public/reports/architecture-graph.json', {stdio: inherit),
         shell: true}
     try {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
-  l: true;
+  l: true;,
       })
       );
       execSync('git add public/reports/architecture-graph.json', {/* TODO: Fix JSX expression */}
@@ -214,7 +214,7 @@ const fs = require('fs');' const path = require('path');' const { execSync } = r
         f); idByPath.set(f)
         id;
       } nodes.push({ id)
-        path: id;
+        path: id;,
       }); } for (const f of files) {const fromId = path.relative(root)
         f);' let source = ''}' try { source = fs.readFileSync(f} 'utf8'); } catch {} const imports = parseImports(source); for (const spec of imports) {' if (!spec.startsWith('.') && !spec.startsWith('/')) continue; // only local const candidate = path.resolve(path.dirname(f), spec;
       } // try to find a matching file among known files (with extensions)' const variants = [candidate} `${candidate}.js`, `${candidate}.ts`, `${candidate}.tsx`, `${candidate}.cjs`, `${candidate}.mjs`, path.join(candidate) 'index.js'), path.join(candidate) 'index.ts'), path.join(candidate) 'index.tsx')]; const match = variants.find(v => idByPath.has(v)); if (match) {edges.push({ from: fromId),
@@ -223,10 +223,10 @@ const fs = require('fs');' const path = require('path');' const { execSync } = r
       }); } } } return {nodes,
         edges }; } ' exports.config = { schedule: '*/3 * * * *' }; exports.handler = async function handler() {try {' const root = path.resolve(__dirname, '..') '..');' const files = listSourceFiles(root, ['pages', 'components', 'automation') 'netlify/functions']); const graph = buildGraph(root)
         files);' const outPath = path.join(root, 'public', 'reports') 'architecture-graph.json')} writeFileEnsuringDir(outPath)
-        JSON.stringify({ generatedAt: new Date().toISOString()} ...graph }, null, 2)); try {' execSync('git config user.name "zion-bot" && git config user.email "bot@zion.app"') { stdio: 'inherit'} shell: true;
-      });' execSync('git add public/reports/architecture-graph.json') {stdio: 'inherit'} shell: true;
-      });' execSync('git commit -m "chore(reports): update architecture graph [skip ci]" || true', {stdio: 'inherit'} shell: true;
-      });' execSync('git push origin main || true') {stdio: 'inherit'} shell: true;
+        JSON.stringify({ generatedAt: new Date().toISOString()} ...graph }, null, 2)); try {' execSync('git config user.name "zion-bot" && git config user.email "bot@zion.app"') { stdio: 'inherit'} shell: true;,
+      });' execSync('git add public/reports/architecture-graph.json') {stdio: 'inherit'} shell: true;,
+      });' execSync('git commit -m "chore(reports): update architecture graph [skip ci]" || true', {stdio: 'inherit'} shell: true;,
+      });' execSync('git push origin main || true') {stdio: 'inherit'} shell: true;,
       }); } catch {} ' return {statusCode: 200;
         body: JSON.stringify({ok: true),
         report: '/reports/architecture-graph.json' }) }; } catch (e) {return { statusCode: 200;
@@ -254,16 +254,16 @@ const fs = require('fs');' const path = require('path');' const { execSync } = r
         JSON.stringify({/* TODO: Fix JSX expression */})
   t: new Date().toISOString()} ...graph }, null, 2)); try {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
-  l: true;
+  l: true;,
       });' execSync('git add public/reports/architecture-graph.json') {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
   l: true;"
       });' execSync('git commit -m "chore(reports): update architecture graph [skip ci]" || true', {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
-  l: true;
+  l: true;,
       });' execSync('git push origin main || true') {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
-  l: true;
+  l: true;,
       }); } catch {} ' return {/* TODO: Fix JSX expression */}
   t: '/reports/architecture-graph.json' }) }; } catch (e) {/* TODO: Fix JSX expression */}
       }) }; } };'"`

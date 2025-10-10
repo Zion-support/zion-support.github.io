@@ -29,7 +29,7 @@
     mobile: string;
     email: string;
     address: string;
-    website: string;
+    website: string;,
   }
   real_implementation: boolean;
   implementation_details: string;
@@ -262,7 +262,7 @@ export interface SpecializedEmergingTechService {/* TODO: Fix JSX expression */}
   reviews: number;
   benefits: string[];
   capabilities: string[];
-  marketAdvantage: string;
+  marketAdvantage: string;,
 }
 ;
     marketSize: '$2.1B neuromorphic computing market', growthRate: '450% annual growth',

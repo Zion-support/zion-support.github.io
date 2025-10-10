@@ -187,7 +187,7 @@ class AdvancedCachingSystem {/* TODO: Fix JSX expression */}
       misses: 0;
       sets: 0;
       deletes: 0;
-      evictions: 0;
+      evictions: 0;,
     };
   }
 

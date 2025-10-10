@@ -241,7 +241,7 @@ const, October2025CuttingEdgeContentBanne, r = () => {/* TODO: Fix JSX expressio
           animati, o, n: blob, 7s, infinite;
         }
         .animati, o, n-del, a, y-20, 0, 0 {
-          animati, o, n-del, a, y: 2 s;
+          animati, o, n-del, a, y: 2 s;,
         }
         .animati, o, n-del, a, y-40, 0, 0 {
           animati, o, n-del, a, y: 4s;

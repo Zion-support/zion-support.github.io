@@ -128,7 +128,7 @@ class AutomationRunner {/* TODO: Fix JSX expression */}
       return {/* TODO: Fix JSX expression */}
   r: error.message}
         outpu,
-  t: error.stdout || error.stderr;
+  t: error.stdout || error.stderr;,
       };
     }
   }
@@ -322,7 +322,7 @@ class AutomationRunner {/* TODO: Fix JSX expression */}
       return {/* TODO: Fix JSX expression */}
   r: error.message}
         outpu,
-  t: error.stdout || error.stderr;
+  t: error.stdout || error.stderr;,
       };
     }
   }
@@ -558,7 +558,7 @@ class AutomationRunner {/* TODO: Fix JSX expression */}
       return {/* TODO: Fix JSX expression */}
   r: error.message}
         outpu,
-  t: error.stdout || error.stderr;
+  t: error.stdout || error.stderr;,
       };
     }
   }
@@ -766,7 +766,7 @@ class AutomationRunner {/* TODO: Fix JSX expression */}
       return {/* TODO: Fix JSX expression */}
   r: error.message}
         outpu,
-  t: error.stdout || error.stderr;
+  t: error.stdout || error.stderr;,
       };
     }
   }
@@ -974,7 +974,7 @@ class AutomationRunner {/* TODO: Fix JSX expression */}
       return {/* TODO: Fix JSX expression */}
   r: error.message}
         outpu,
-  t: error.stdout || error.stderr;
+  t: error.stdout || error.stderr;,
       };
     }
   }

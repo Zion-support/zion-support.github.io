@@ -92,7 +92,7 @@ async function mergePR(prNumber, title) {/* TODO: Fix JSX expression */}
     const mergeData = JSON.stringify({/* TODO: Fix JSX expression */}`
   e: `Merge PR #${prNumber}: ${title}`,
       merge_metho,
-  d: 'merge')
+  d: 'merge'),
     });
 `
     const response = await makeGitHubRequest(`/repos/${REPO_OWNER}/${REPO_NAME}/pulls/${prNumber}/merge`,

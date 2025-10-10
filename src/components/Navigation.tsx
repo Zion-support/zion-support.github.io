@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Navigation from '../components/Navigation';
 import { Link } from 'react-router-dom';
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
 

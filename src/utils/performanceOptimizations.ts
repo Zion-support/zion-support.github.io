@@ -178,7 +178,7 @@ export const usePerformanceMonitoring = () => {/* TODO: Fix JSX expression */}
 //         fcp,
 //         lcp,
         ttf,
-  b: navigation?.responseStart - navigation?.requestStart;)
+  b: navigation?.responseStart - navigation?.requestStart;),
       });
     };
     // Monitor performance after page load;
@@ -246,7 +246,7 @@ export const useMemoryMonitoring = () => {/* TODO: Fix JSX expression */}
           totalJSHeapSiz,
   e: memory.totalJSHeapSize,
           jsHeapSizeLimi,
-  t: memory.jsHeapSizeLimit;)
+  t: memory.jsHeapSizeLimit;),
         });
       }
     };

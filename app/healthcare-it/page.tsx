@@ -16,30 +16,40 @@ import SEOOptimizer from '../components/SEOOptimizer';
       title: 'Patient Data Security',
       description: 'Bank-level security for patient data with encryption, access controls, and monitoring.',
       benefits: ['Data encryption', 'Access controls', 'Security monitoring']
+    }
+    }
     },
     {
       icon: Clock,
       title: '24/7 System Monitoring',
       description: 'Continuous monitoring of healthcare systems with real-time alerts and notifications.',
       benefits: ['Always-on monitoring', 'Instant alerts', 'System health']
+    }
+    }
     },
     {
       icon: Users,
       title: 'Interoperability',
       description: 'Seamless integration with EHR systems, medical devices, and healthcare applications.',
       benefits: ['EHR integration', 'Device connectivity', 'Data exchange']
+    }
+    }
     },
     {
       icon: Shield,
       title: 'Cybersecurity',
       description: 'Advanced cybersecurity measures designed specifically for healthcare environments.',
       benefits: ['Threat detection', 'Incident response', 'Security training']
+    }
+    }
     },
     {
       icon: BarChart,
       title: 'Healthcare Analytics',
       description: 'Comprehensive analytics and reporting for healthcare operations and patient outcomes.',
       benefits: ['Patient insights', 'Operational metrics', 'Outcome tracking']
+    }
+    }
     }
   ];
 
@@ -54,10 +64,10 @@ import SEOOptimizer from '../components/SEOOptimizer';
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(239,68,68,0.3)_0%,transparent_50%)] animate-pulse" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-        <div className="relative max-w-7xl mx-auto text-center">
+      </div><section className="relative py-20 px-4 overflow-hidden">
+        </section><div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(239,68,68,0.3)_0%,transparent_50%)] animate-pulse" />
+        </div><div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+        </div><div className="relative max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
             Healthcare
             <span className="block bg-gradient-to-r from-red-400 via-pink-400 to-purple-400 bg-clip-text text-transparent">
@@ -84,10 +94,10 @@ import SEOOptimizer from '../components/SEOOptimizer';
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          </section><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {services.map((service, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300">
-                <div className="text-4xl mb-4">{service.icon}</div>
+              </div><div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300">
+                </div><div className="text-4xl mb-4">{service.icon}</div>
                 <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
                 <p className="text-gray-300">{service.description}</p>
               </div>
@@ -98,8 +108,8 @@ import SEOOptimizer from '../components/SEOOptimizer';
 
       {/* Benefits Section */}
       <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+        </section><div className="max-w-7xl mx-auto">
+          </div><div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Why Choose Our Healthcare IT Solutions?
             </h2>
@@ -110,8 +120,8 @@ import SEOOptimizer from '../components/SEOOptimizer';
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((benefit, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-green-400 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+              </div><div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center">
+                </div><div className="w-16 h-16 bg-gradient-to-r from-green-400 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center">
                   <CheckCircle className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-lg font-semibold text-white">{benefit}</h3>
@@ -125,7 +135,7 @@ import SEOOptimizer from '../components/SEOOptimizer';
       {/* CTA Section */}
 <section className="py-20 px-4">
             </button>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-red-600 transition-colors">
+            <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover: bg-white hover:text-red-600 transition-colors">
               View Case Studies
             </button>
           </div>
@@ -135,5 +145,5 @@ import SEOOptimizer from '../components/SEOOptimizer';
       <Footer />
 </div>
 
-  );
+  );,
 }

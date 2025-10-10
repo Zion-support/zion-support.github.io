@@ -33,7 +33,6 @@ export default function handler(req, res) {
       if (!Array.isArray(existing)) existing = [];
     }
   } catch (error) {
-    console.error('Error reading existing subscribers:', error);
     existing = [];
   }
 
@@ -64,10 +63,9 @@ export default function handler(req, res) {
     res.end(JSON.stringify({ 
       success: true, 
       message: 'Successfully subscribed to newsletter',
-      id: newSubscriber.id
+      id: newSubscriber.id,
     }));
   } catch (error) {
-    console.error('Error saving subscriber:', error);
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Failed to save subscription' }));

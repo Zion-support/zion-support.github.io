@@ -47,6 +47,8 @@ $4}
         <meta name="description" content="Advanced AI services solutions by Zion Tech Group." />
       </Helmet>
       
+
+      <Navigation />
       <Navigation />
       
       <div className="container mx-auto px-4 py-16">
@@ -55,7 +57,7 @@ $4}
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
             Coming Soon - Advanced AI services solutions that will transform your business.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
               Contact Us
             </button>
@@ -64,7 +66,7 @@ $4}
           </div>
       
       <Footer />
-  );
+  );,
 };
 
 
@@ -106,7 +108,7 @@ export default function AIServicesPage() {
       },
       icon: Zap,
       color: 'from-cyan-500 to-blue-600',
-      popular: true
+      popular: true,
     },
     {
       id: 'ai-analytics',
@@ -127,7 +129,7 @@ export default function AIServicesPage() {
       },
       icon: BarChart,
       color: 'from-purple-500 to-pink-600',
-      popular: false
+      popular: false,
     },
     {
       id: 'ai-customer-support',
@@ -148,7 +150,7 @@ export default function AIServicesPage() {
       },
       icon: MessageSquare,
       color: 'from-green-500 to-emerald-600',
-      popular: true
+      popular: true,
     },
     {
       id: 'ai-content-generation',
@@ -169,7 +171,7 @@ export default function AIServicesPage() {
       },
       icon: Code,
       color: 'from-orange-500 to-red-600',
-      popular: false
+      popular: false,
     },
     {
       id: 'ai-cybersecurity',
@@ -190,7 +192,7 @@ export default function AIServicesPage() {
       },
       icon: Shield,
       color: 'from-red-500 to-pink-600',
-      popular: true
+      popular: true,
     },
     {
       id: 'ai-ml-platform',
@@ -211,7 +213,7 @@ export default function AIServicesPage() {
       },
       icon: Cpu,
       color: 'from-indigo-500 to-purple-600',
-      popular: false
+      popular: false,
     }
   ];
 
@@ -364,7 +366,7 @@ export default function AIServicesPage() {
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-cyan-600/20 to-purple-600/20">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl lg: text-5xl font-bold text-white mb-6">
               Ready to Transform Your Business with AI?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -390,5 +392,5 @@ export default function AIServicesPage() {
         </section>
       </div>
     </>
-  );
+  );,
 }

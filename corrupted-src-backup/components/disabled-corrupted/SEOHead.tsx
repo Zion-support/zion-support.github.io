@@ -1,4 +1,5 @@
 import React from 'react';
+import Navigation from '../components/Navigation';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOHeadProps {/* TODO: Fix JSX expression */}
@@ -70,6 +71,8 @@ const,
   };
 
   return (<Helmet></Helmet>
+
+      <Navigation />
       <title>{fullTitle}</title>
       <meta name="description" content={description} /></meta>"
       <meta name="keywords" content={keywords} /></meta>"

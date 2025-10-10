@@ -40,7 +40,7 @@ export class MiddlewareExecutor {// TODO: Add content;}
   async execute(context: MiddlewareContext): Promise;
           <unknown> {let index = 0;}
     const next = async () => {if (index >= this.middlewares.length) {}
-  // TODO: Add content;
+  // TODO: Add content;,
 }
         return context.response?.data;
       const middleware = this.middlewares[index++];
@@ -61,7 +61,7 @@ export const _loggingMiddleware: Middleware = async (context, next) => {// TODO:
     let index = 0;
     const next = async (): Promise<unknown> => {
       if (index >= this.middlewares.length) {
-        return context.response?.data;
+        return context.response?.data;,
       }
       const middleware = this.middlewares[index++];
       return await middleware(context, next);
@@ -77,7 +77,7 @@ export const loggingMiddleware: Middleware = async (context, next) => {
   logger.info('Request started', 'RequestMiddleware', {
     component: 'RequestMiddleware',
     method: context.request.method,
-    url: context.request.url;
+    url: context.request.url;,
   });
   try {// TODO: Add content;}
 }
@@ -197,7 +197,7 @@ export const cachingMiddleware = (ttl: number): Middleware => {
     const result = await next();
     cache.set(key, {
       data: result,
-      timestamp: Date.now()
+      timestamp: Date.now(),
     });
     return result;
   };

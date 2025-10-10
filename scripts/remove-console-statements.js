@@ -71,17 +71,14 @@ function removeConsoleStatements(filePath) {/* TODO: Fix JSX expression */}
     
     return modified;
   } catch (error) {/* TODO: Fix JSX expression */}`
-    // console.error(`Error processing ${filePath}:`, error.message);
-    return false;
+    // return false;
   }
 }
 
 // Main function;
 async function main() {/* TODO: Fix JSX expression */}
 }
-  // console.log('🧹 Removing console statements from production code...\n');
-  
-  // Get all TypeScript and JavaScript files in the app directory;
+  // // Get all TypeScript and JavaScript files in the app directory;
   const patterns = [
     'app/**/*.{ts,tsx,js,jsx}',
     '!app/**/*.test.{ts,tsx,js,jsx}',
@@ -103,19 +100,15 @@ async function main() {/* TODO: Fix JSX expression */}
 
     if (fileRemovedCount > 0) {
       fs.writeFileSync(filePath, newContent, 'utf8');
-      console.log(`✅ ${filePath}: Removed ${fileRemovedCount} console statements`);
       removedStatements += fileRemovedCount;
     }
 
     processedFiles++;
   } catch (error) {
-    console.error(`❌ Error processing ${filePath}:`, error.message);
-  }
+    }
 }
 
 async function main() {
-  console.log('🚀 Starting console statement removal...\n');
-
   // Get all files to process;
   const allFiles = [];
   for (const pattern of filePatterns) {
@@ -129,16 +122,10 @@ async function main() {
   const uniqueFiles = [...new Set(allFiles)];
   totalFiles = uniqueFiles.length;
 
-  console.log(`📁 Found ${totalFiles} files to process\n`);
-
   // Process each file;
   uniqueFiles.forEach(processFile);
 
-  console.log(`\n🎉 Console statement removal completed!`);
-  console.log(`📊 Statistics: `);
-  console.log(`   - Files processed: ${processedFiles}/${totalFiles}`);
-  console.log(`   - Console statements removed: ${removedStatements}`);
-}
+  }
 
 if (import.meta.url === `file://${process.argv[1]}`) {
   main();

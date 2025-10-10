@@ -1,5 +1,6 @@
 'use client';
 import React, { useEffect, useState, useCallback } from 'react';
+import Navigation from '../components/Navigation';
 
 interface AdvancedAccessibilityEnhancerProps {/* TODO: Fix JSX expression */}
 }

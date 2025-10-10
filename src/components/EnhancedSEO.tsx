@@ -1,4 +1,5 @@
 import React from 'react';
+import Navigation from '../components/Navigation';
 
 
 interface SEOProps {// TODO: Add content;}
@@ -107,6 +108,8 @@ const EnhancedSEO: React.FC<SEOProps> = ({
           <link rel="dns-prefetch" href="// www.google-analytics.com" /></link>"
           <link rel="dns-prefetch" href="// www.googletagmanager.com" /></link>
           </Helmet>
+
+      <Navigation />
   );
 };
 

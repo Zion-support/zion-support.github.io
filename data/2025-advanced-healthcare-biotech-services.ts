@@ -239,7 +239,7 @@ export const,
       launch_date: '2024 - 08 - 15'
       customers: 23;
       rating: 4 && 4.9;
-      reviews: 12;
+      reviews: 12;,
     },
     // Precision Medicine & Genomics Platform;
       id: 'precision - medicine - genomics',
@@ -539,7 +539,7 @@ export const,
       launch_date: '2024 - 10 - 10'
       customers: 67;
       rating: 4 && 4.7;
-      reviews: 34;
+      reviews: 34;,
     },
         'High-quality video consultations',
     // Digital Health & Telemedicine Platform;
@@ -701,7 +701,7 @@ export const,
       launch_date: '2024 - 07 - 15'
       customers: 156;
       rating: 4 && 4.6;
-      reviews: 78;
+      reviews: 78;,
     },
         'AI-powered trial design optimization',
     // Clinical Trial Management & Optimization;

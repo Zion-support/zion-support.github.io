@@ -169,7 +169,7 @@ const DocsPage: React.FC = () => {
       case 'Beginner': return 'text-green-400 bg-green-500/20';
       case 'Intermediate': return 'text-yellow-400 bg-yellow-500/20';
       case 'Advanced': return 'text-red-400 bg-red-500/20';
-      default: return 'text-gray-400 bg-gray-500/20';
+      default: return 'text-gray-400 bg-gray-500/20';,
     }
   };
 
@@ -315,7 +315,7 @@ const DocsPage: React.FC = () => {
               <p className="text-xl text-gray-300 mb-8">
                 Start building with our AI services today
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
                   className="cyber-button px-8 py-4 text-lg font-semibold inline-flex items-center justify-center"
@@ -338,7 +338,7 @@ const DocsPage: React.FC = () => {
         <Footer />
       </div>
     </>
-  );
+  );,
 };
 
 export default DocsPage;

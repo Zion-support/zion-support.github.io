@@ -4,6 +4,7 @@
  * Advanced performance optimization tools for the application;
  */
 import React from 'react';
+import Navigation from '../components/Navigation';
 // Debounce function for performance optimization;
 export const debounce = <T extends (...args: unknown[]) => unknown>(
   func: T,
@@ -196,9 +197,7 @@ export const usePerformanceMonitor = (componentName: string) => {}
       fn();,
       const duration = performance.now() - start;
         if (entry.duration > 50) { // Tasks longer than 50ms
-          console.warn(`Long task detected: ${entry.duration}ms`);
-
-        }
+          }
       });
     });
     observer.observe({/* TODO: Fix JSX expression */})
@@ -396,7 +395,7 @@ export const getMemoryUsage = () => {
     used: memory.usedJSHeapSize;
     total: memory.totalJSHeapSize;
     limit: memory.jsHeapSizeLimit;
-    percentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100;
+    percentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100;,
   };
 };
 // Performance metrics collection;
@@ -408,7 +407,7 @@ export const collectPerformanceMetrics = () => {
     navigation: {
 // domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart;
 // loadComplete: navigation.loadEventEnd - navigation.loadEventStart;
-// totalTime: navigation.loadEventEnd - navigation.fetchStart;
+// totalTime: navigation.loadEventEnd - navigation.fetchStart;,
     },
     paint: {,
       firstPaint: paint.find((entry) => entry.name === 'first-paint')?.startTime || 0;
@@ -423,7 +422,7 @@ export const getMemoryUsage = () => {}
     used: memory.usedJSHeapSize,
     total: memory.totalJSHeapSize,
     limit: memory.jsHeapSizeLimit,
-    percentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100
+    percentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100,
   };
 };
 // Performance metrics collection
@@ -435,11 +434,11 @@ export const collectPerformanceMetrics = () => {}
     navigation: {}
 // domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
 // loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
-// totalTime: navigation.loadEventEnd - navigation.fetchStart
+// totalTime: navigation.loadEventEnd - navigation.fetchStart,
     },
     paint: {}
       firstPaint: paint.find((entry) => entry.name === 'first-paint')?.startTime || 0,
-      firstContentfulPaint: paint.find((entry) => entry.name === 'first-contentful-paint')?.startTime || 0
+      firstContentfulPaint: paint.find((entry) => entry.name === 'first-contentful-paint')?.startTime || 0,
     },
     memory: getMemoryUsage()};
 };
@@ -475,7 +474,7 @@ export const collectPerformanceMetrics = () => {/* TODO: Fix JSX expression */}
   t: {/* TODO: Fix JSX expression */}
     },
     memor,
-  y: getMemoryUsage()
+  y: getMemoryUsage(),
   };
 };
 // Initialize performance enhancements;

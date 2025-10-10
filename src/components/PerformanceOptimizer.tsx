@@ -24,7 +24,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     preloaded: 0,
     codeSplit: false,
     resourceHints: 0,
-    serviceWorker: false
+    serviceWorker: false,
   });
 
   useEffect(() => {
@@ -91,7 +91,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         });
       }, {
         rootMargin: '50px 0px',
-        threshold: 0.1
+        threshold: 0.1,
       });
       
       const lazyImages = document.querySelectorAll('img[data-src]');

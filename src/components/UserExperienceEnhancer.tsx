@@ -1,3 +1,4 @@
+import React from 'react';
 'use client';
 
 interface UserExperienceEnhancerProps {
@@ -37,7 +38,7 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
       const style = document.createElement('style');
       style.textContent = `
         html {
-          scroll-behavior: smooth;
+          scroll-behavior: smooth;,
         }
         
         @media (prefers-reduced-motion: reduce) {
@@ -105,9 +106,7 @@ const,
   useEffect(() => {
     if (enableErrorBoundaries) {
       const handleError = (event: ErrorEvent) => {
-        // console.error('Global error caught:', event.error);
-        
-        // Send error to analytics if available
+        // // Send error to analytics if available
         if (typeof window !== 'undefined' && 'gtag' in window) {
           (window as any).gtag('event', 'exception', {
             description: event.error?.message || 'Unknown error',
@@ -119,9 +118,7 @@ const,
       };
 
       const handleUnhandledRejection = (event: PromiseRejectionEvent) => {
-        // console.error('Unhandled promise rejection:', event.reason);
-        
-        if (typeof window !== 'undefined' && 'gtag' in window) {
+        // if (typeof window !== 'undefined' && 'gtag' in window) {
           (window as any).gtag('event', 'exception', {
             description: event.reason?.message || 'Unhandled promise rejection',
             fatal: false
@@ -182,21 +179,21 @@ $4});
             if ('gtag' in window) {
               (window as any).gtag('event', 'scroll', {
                 event_category: 'engagement',
-                value: 25
+                value: 25,
               });
             }
           } else if (maxScrollDepth >= 50 && maxScrollDepth < 75) {
             if ('gtag' in window) {
               (window as any).gtag('event', 'scroll', {
                 event_category: 'engagement',
-                value: 50
+                value: 50,
               });
             }
           } else if (maxScrollDepth >= 75 && maxScrollDepth < 90) {
             if ('gtag' in window) {
               (window as any).gtag('event', 'scroll', {
                 event_category: 'engagement',
-                value: 75
+                value: 75,
               });
             }
           } else if (maxScrollDepth >= 90) {

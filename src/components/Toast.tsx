@@ -1,3 +1,4 @@
+import React from 'react';
 
 
 'use client';
@@ -11,7 +12,7 @@ export interface ToastProps {/* TODO: Fix JSX expression */}
   duration?: number;
   onClose?: () => void;,
     sho,
-  w: boolean;
+  w: boolean;,
 }
 const,
   Toast: React.FC;
@@ -55,8 +56,7 @@ const,
       case 'info':
         return 'bg-blue-600 text-white';
       defaul,
-  t:
-        return 'bg-gray-800 text-white';
+  t: return 'bg-gray-800 text-white';,
     }
   };
   const getIcon = () => {/* TODO: Fix JSX expression */}
@@ -74,8 +74,7 @@ const,
       case 'info':
         return '';
       defaul,
-  t:
-        return '';
+  t: return '';,
     }
   };
   return (<div>Coming Soon</div>)
@@ -100,13 +99,13 @@ className={`fixed top-4 right-4 px-6 py-3 rounded-lg shadow-lg z-50 flex items-c
       <button></button>
         onClick={() => {}
   // TOD,
-  O: Add content;
+  O: Add content;,
 }
           setIsVisible(false);
           if (onClose) onClose();
         }}"
         className="ml-4,"
-  hover:opacity-80 transition-opacity""
+  hover: opacity-80 transition-opacity""
         aria-label="Close notification"
 //       >
 //
@@ -121,7 +120,7 @@ className={`fixed top-4 right-4 px-6 py-3 rounded-lg shadow-lg z-50 flex items-c
           
           </button>
     </div>
-  );
+  );,
 };
 
 export default Toast;"`

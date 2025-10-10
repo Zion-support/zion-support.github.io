@@ -65,8 +65,7 @@ class ErrorLogger {/* TODO: Fix JSX expression */}
 
       userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined,
       url: typeof window !== 'undefined' ? window.location.href : undefined,
-      stackTrace: error?.stack;
-
+      stackTrace: error?.stack;,
     };
     // Add to internal log;
     this.logs.push(entry);
@@ -162,7 +161,7 @@ class ErrorLogger {/* TODO: Fix JSX expression */}
 
   message: entry.error.message,
                 name: entry.error.name,
-                stack: entry.error.stack;
+                stack: entry.error.stack;,
               }
             : undefined;
 
@@ -173,9 +172,7 @@ class ErrorLogger {/* TODO: Fix JSX expression */}
 }
       // Silently fail to avoid infinite loop;
 
-      // // console.error('Failed to send error to external service:', error);
-
-    }
+      // // }
   }
   /**
    * Get recent logs;

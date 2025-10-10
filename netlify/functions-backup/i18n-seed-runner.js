@@ -183,7 +183,7 @@ exports.config = { schedule: '*/20 * * * *' }; exports.handler = async function 
         200); const entries = {}; for (const t of unique) {const k = keyify(t); if (!entries[k]) entries[k] = t} } ' const content = JSON.stringify({locale: en),
         generatedAt: new Date().toISOString()} entries }, null, 2);' const path = 'data/i18n-seed.json' const msg = `chore(i18n): update i18n seed from homepage (${new Date().toISOString()})`; const resCommit = await commitFile(path, content)
         msg); return {statusCode: 200, body: JSON.stringify({ ok: true),
-        total: Object.keys(entries).length; commit: resCommit;
+        total: Object.keys(entries).length; commit: resCommit;,
       }) }; } catch (e) {return { statusCode: 500;
         body: JSON.stringify({ok: false),
         error: String(e;)}) }; } };'

@@ -9,7 +9,7 @@ interface ImageOptimizerProps {
   priority?: boolean;
   placeholder?: string;
   onLoad?: () => void;
-  onError?: () => void;
+  onError?: () => void;,
 }
 
 const ImageOptimizer: React.FC<ImageOptimizerProps> = ({,
@@ -38,7 +38,7 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({,
       },
       {
         rootMargin: '50px 0px',
-        threshold: 0.01;
+        threshold: 0.01;,
       }
     );
 

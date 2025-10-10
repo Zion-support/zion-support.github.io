@@ -56,7 +56,7 @@ constructor(baseUrl: string, options: ServiceOptions = {}) {this.baseUrl = baseU
     const entry = this.cache.get(key);
     if (!entry) return false;
     const age = Date.now() - entry.timestamp;
-    return age < (this.options.cacheDuration || 300000);
+    return age < (this.options.cacheDuration || 300000);,
   }
   /**
    * Get data from cache
@@ -80,7 +80,7 @@ constructor(baseUrl: string, options: ServiceOptions = {}) {this.baseUrl = baseU
     if (!this.options.cache) return;
     this.cache.set(key, {
       data,
-      timestamp: Date.now()
+      timestamp: Date.now(),
     });
   }
   /**
@@ -106,7 +106,7 @@ constructor(baseUrl: string, options: ServiceOptions = {}) {this.baseUrl = baseU
       logger.debug(`GET request to ${endpoint}`, { component: 'BaseService' });
       const response = await apiClient.get<T>(`${this.baseUrl}${endpoint}`, {
         timeout: this.options.timeout,
-        retries: this.options.retries
+        retries: this.options.retries,
       });
       if (useCache) {
         this.setInCache(cacheKey, response.data);
@@ -128,7 +128,7 @@ constructor(baseUrl: string, options: ServiceOptions = {}) {this.baseUrl = baseU
       logger.debug(`POST request to ${endpoint}`, { component: 'BaseService' });
       const response = await apiClient.post<T>(`${this.baseUrl}${endpoint}`, data, {
         timeout: this.options.timeout,
-        retries: this.options.retries
+        retries: this.options.retries,
       });
       return response.data;
     } catch (error) {
@@ -147,7 +147,7 @@ constructor(baseUrl: string, options: ServiceOptions = {}) {this.baseUrl = baseU
       logger.debug(`PUT request to ${endpoint}`, { component: 'BaseService' });
       const response = await apiClient.put<T>(`${this.baseUrl}${endpoint}`, data, {
         timeout: this.options.timeout,
-        retries: this.options.retries
+        retries: this.options.retries,
       });
       return response.data;
     } catch (error) {
@@ -166,7 +166,7 @@ constructor(baseUrl: string, options: ServiceOptions = {}) {this.baseUrl = baseU
       logger.debug(`PATCH request to ${endpoint}`, { component: 'BaseService' });
       const response = await apiClient.patch<T>(`${this.baseUrl}${endpoint}`, data, {
         timeout: this.options.timeout,
-        retries: this.options.retries
+        retries: this.options.retries,
       });
       return response.data;
     } catch (error) {
@@ -185,7 +185,7 @@ constructor(baseUrl: string, options: ServiceOptions = {}) {this.baseUrl = baseU
       logger.debug(`DELETE request to ${endpoint}`, { component: 'BaseService' });
       const response = await apiClient.delete<T>(`${this.baseUrl}${endpoint}`, {
         timeout: this.options.timeout,
-        retries: this.options.retries
+        retries: this.options.retries,
       });
       return response.data;
     } catch (error) {

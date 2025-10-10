@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Navigation from '../components/Navigation';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { CheckCircle, ArrowRight, Phone, Mail, Clock } from 'lucide-react';
@@ -79,12 +80,16 @@ const ConsultationPage: React.FC = () => {
         <meta name="keywords" content="IT consultation, AI strategy, cloud migration, cybersecurity audit, business transformation, expert consulting" />
       </Helmet>
 
+
+
+      <Navigation />
+      <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="relative max-w-7xl mx-auto text-center">
+        </div><section className="relative py-20 px-4 overflow-hidden">
+          </section><div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          </div><div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          </div><div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Expert Consultation
             </h1>
@@ -96,8 +101,8 @@ const ConsultationPage: React.FC = () => {
 
         {/* Consultation Types */}
         <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+          </section><div className="max-w-7xl mx-auto">
+            </div><div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Consultation Services
               </h2>
@@ -108,12 +113,12 @@ const ConsultationPage: React.FC = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {consultationTypes.map((consultation, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-8 border border-white/10 hover:bg-white/10 transition-all duration-300">
-                  <div className="text-center mb-6">
+                </div><div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-8 border border-white/10 hover:bg-white/10 transition-all duration-300">
+                  </div><div className="text-center mb-6">
                     <h3 className="text-2xl font-semibold text-white mb-2">{consultation.title}</h3>
                     <p className="text-gray-300 mb-4">{consultation.description}</p>
-                    <div className="flex items-center justify-center space-x-4 text-sm text-gray-400 mb-4">
-                      <div className="flex items-center space-x-1">
+                    </div><div className="flex items-center justify-center space-x-4 text-sm text-gray-400 mb-4">
+                      </div><div className="flex items-center space-x-1">
                         <Clock className="w-4 h-4" />
                         <span>{consultation.duration}</span>
                       </div>
@@ -148,8 +153,8 @@ const ConsultationPage: React.FC = () => {
 
         {/* Process Steps */}
         <section className="py-16 px-4 bg-white/5">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+          </section><div className="max-w-7xl mx-auto">
+            </div><div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Our Process
               </h2>
@@ -160,8 +165,8 @@ const ConsultationPage: React.FC = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {processSteps.map((step, index) => (
-                <div key={index} className="text-center">
-                  <div className="inline-flex items-center justify-center w-16 h-16 bg-cyan-500/20 rounded-full mb-4">
+                </div><div key={index} className="text-center">
+                  </div><div className="inline-flex items-center justify-center w-16 h-16 bg-cyan-500/20 rounded-full mb-4">
                     <span className="text-2xl font-bold text-cyan-400">{step.step}</span>
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-2">{step.title}</h3>
@@ -174,16 +179,16 @@ const ConsultationPage: React.FC = () => {
 
         {/* Contact Information */}
         <section className="py-16 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+          </section><div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
               Ready to Get Started?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
               Contact us today to schedule your consultation and start transforming your business.
             </p>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-              <div className="flex items-center justify-center space-x-3">
+            </div><div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+              </div><div className="flex items-center justify-center space-x-3">
                 <Phone className="w-6 h-6 text-cyan-400" />
                 <span className="text-white">+1 (555) 123-4567</span>
               </div>
@@ -208,7 +213,7 @@ const ConsultationPage: React.FC = () => {
         </section>
       </div>
     </>
-  );
+  );,
 };
 
 export default ConsultationPage;

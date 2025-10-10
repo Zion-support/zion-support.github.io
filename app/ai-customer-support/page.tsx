@@ -15,24 +15,32 @@ import { MessageCircle, Bot, Zap, Shield, BarChart, Clock, Users, CheckCircle, S
       title: 'Omnichannel Communication',
       description: 'Seamless integration across email, chat, phone, and social media platforms.',
       benefits: ['Unified experience', 'Context preservation', 'Cross-platform sync', 'Multi-channel support']
+    }
+    }
     },
     {
       icon: Zap,
       title: 'Intelligent Automation',
       description: 'Automated ticket routing, priority assignment, and resolution suggestions based on AI analysis.',
       benefits: ['Faster resolution', 'Reduced workload', 'Smart prioritization', 'Process automation']
+    }
+    }
     },
     {
       icon: Shield,
       title: 'Advanced Security',
       description: 'Enterprise-grade security with data encryption and compliance with industry standards.',
       benefits: ['Data protection', 'Compliance ready', 'Secure communication', 'Privacy protection']
+    }
+    }
     },
     {
       icon: BarChart,
       title: 'Analytics & Insights',
       description: 'Real-time analytics and performance metrics to optimize customer support operations.',
       benefits: ['Performance tracking', 'Data-driven insights', 'Continuous improvement', 'ROI measurement']
+    }
+    }
     },
     {
       icon: Users,
@@ -65,6 +73,10 @@ import { MessageCircle, Bot, Zap, Shield, BarChart, Clock, Users, CheckCircle, S
         <meta name="keywords" content="AI customer support, customer service automation, omnichannel support, AI chatbots, customer experience, support AI" />
       </Helmet>
 
+
+
+      <Navigation />
+      <Navigation />
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Transform your customer support with our AI Customer Support solutions. Intelligent automation, 

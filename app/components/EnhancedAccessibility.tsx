@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+import Navigation from '../components/Navigation';
 import React, { useState, useEffect } from 'react';
 
 interface AccessibilitySettings {
@@ -7,7 +8,7 @@ interface AccessibilitySettings {
   highContrast: boolean;
   reducedMotion: boolean;
   screenReader: boolean;
-  keyboardNavigation: boolean;
+  keyboardNavigation: boolean;,
 }
 
 const EnhancedAccessibility: React.FC = () => {
@@ -17,7 +18,7 @@ const EnhancedAccessibility: React.FC = () => {
     highContrast: false,
     reducedMotion: false,
     screenReader: false,
-    keyboardNavigation: false
+    keyboardNavigation: false,
   });
 
   useEffect(() => {
@@ -28,8 +29,7 @@ const EnhancedAccessibility: React.FC = () => {
         const parsed = JSON.parse(savedSettings);
         setSettings(prev => ({ ...prev, ...parsed }));
       } catch (error) {
-        console.error('Error loading accessibility settings:', error);
-      }
+        }
     }
   }, [settings]);
 
@@ -41,7 +41,7 @@ const EnhancedAccessibility: React.FC = () => {
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === 'Escape') {
-      setIsVisible(false);
+      setIsVisible(false);,
     }
   };
 
@@ -66,12 +66,12 @@ const EnhancedAccessibility: React.FC = () => {
           className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
           onClick={() => setIsVisible(false)}
         >
-          <div
+          </div><div
             className="bg-white rounded-lg p-6 max-w-md w-full mx-4"
             onClick={(e) => e.stopPropagation()}
             onKeyDown={handleKeyDown}
           >
-            <div className="flex justify-between items-center mb-4">
+            </div><div className="flex justify-between items-center mb-4">
               <h2 className="text-xl font-semibold">Accessibility Settings</h2>
               <button
                 onClick={() => setIsVisible(false)}
@@ -85,11 +85,11 @@ const EnhancedAccessibility: React.FC = () => {
             </div>
 
             <div className="space-y-6">
-              <div>
+              </div><div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
                   Font Size
                 </label>
-                <div className="flex space-x-2">
+                </div><div className="flex space-x-2">
                   {(['small', 'medium', 'large'] as const).map((size) => (
                     <button
                       key={size}
@@ -163,7 +163,7 @@ const EnhancedAccessibility: React.FC = () => {
                     highContrast: false,
                     reducedMotion: false,
                     screenReader: false,
-                    keyboardNavigation: false
+                    keyboardNavigation: false,
                   });
                   localStorage.removeItem('accessibility-settings');
                 }}

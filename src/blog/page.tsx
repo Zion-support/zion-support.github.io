@@ -13,7 +13,7 @@ interface BlogPost {
   featured: boolean;
   stats?: {
     views: number;
-    engagement: number;
+    engagement: number;,
   };
 }
 export default function BlogPage() {
@@ -220,7 +220,7 @@ export default function BlogPage() {
             </p>
             <Link
               to="/"
-              className="inline-block bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
+              className="inline-block bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover: bg-indigo-700 transition-colors"
             >
               Subscribe to Newsletter
             </Link>
@@ -228,5 +228,5 @@ export default function BlogPage() {
         </div>
       </div>
     </div>
-  );
+  );,
 }

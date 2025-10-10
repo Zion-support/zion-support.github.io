@@ -92,6 +92,8 @@ import Footer from '../components/Footer';
         <meta name="description" content="Advanced AI email marketing solutions by Zion Tech Group." />
       </Helmet>
       
+
+      <Navigation />
       <Navigation />
       
       <div className="container mx-auto px-4 py-16">
@@ -100,7 +102,7 @@ import Footer from '../components/Footer';
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
             Coming Soon - Advanced AI email marketing solutions that will transform your business.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
               Contact Us
             </button>
@@ -109,7 +111,7 @@ import Footer from '../components/Footer';
           </div>
       
       <Footer />
-  );
+  );,
 };
 
 

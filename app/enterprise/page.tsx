@@ -12,36 +12,48 @@ const EnterprisePage: React.FC = () => {
       title: 'Enterprise Security',
       description: 'Comprehensive security solutions designed for large-scale enterprise environments.',
       benefits: ['Advanced threat protection', 'Compliance management', 'Data encryption', 'Access control']
+    }
+    }
     },
     {
       icon: Cloud,
       title: 'Cloud Infrastructure',
       description: 'Scalable cloud solutions that grow with your business needs.',
       benefits: ['Auto-scaling', 'High availability', 'Disaster recovery', 'Cost optimization']
+    }
+    }
     },
     {
       icon: Brain,
       title: 'AI Integration',
       description: 'Enterprise-grade AI solutions for automation and intelligent decision making.',
       benefits: ['Machine learning', 'Predictive analytics', 'Process automation', 'Intelligent insights']
+    }
+    }
     },
     {
       icon: Database,
       title: 'Data Management',
       description: 'Advanced data management and analytics for enterprise-scale operations.',
       benefits: ['Big data processing', 'Real-time analytics', 'Data governance', 'Business intelligence']
+    }
+    }
     },
     {
       icon: Users,
       title: 'User Management',
       description: 'Comprehensive user and access management for large organizations.',
       benefits: ['Single sign-on', 'Role-based access', 'User provisioning', 'Audit trails']
+    }
+    }
     },
     {
       icon: Settings,
       title: 'System Integration',
       description: 'Seamless integration with existing enterprise systems and workflows.',
       benefits: ['API integration', 'Legacy system support', 'Workflow automation', 'Data synchronization']
+    }
+    }
     }
   ];
 
@@ -101,7 +113,7 @@ const EnterprisePage: React.FC = () => {
       
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" /></div>
+        </section><div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" /></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div>
         <div className="relative max-w-7xl mx-auto text-center"></div>
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
@@ -128,11 +140,11 @@ const EnterprisePage: React.FC = () => {
 
       {/* Stats Section */}
       <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        </section><div className="max-w-7xl mx-auto">
+          </div><div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="flex justify-center mb-4">
+              </div><div key={index} className="text-center">
+                </div><div className="flex justify-center mb-4">
                   <stat.icon className="w-12 h-12 text-purple-400" />
                 </div>
                 <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
@@ -145,7 +157,7 @@ const EnterprisePage: React.FC = () => {
 
       {/* Features Section */}
       <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto"></div>
+        </section><div className="max-w-7xl mx-auto"></div>
           <div className="text-center mb-16"></div>
             <h2 className="text-4xl font-bold text-white mb-4">
               Enterprise-Grade Features
@@ -202,14 +214,14 @@ const EnterprisePage: React.FC = () => {
 
       {/* CTA Section */}
       <section className="py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center"></div>
+        </section><div className="max-w-4xl mx-auto text-center"></div>
           <h2 className="text-4xl font-bold text-white mb-6">
             Ready to Transform Your Enterprise?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
             Join hundreds of enterprise clients who trust our solutions for their mission-critical operations.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+          <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
             <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
               Contact Enterprise Sales
               <ArrowRight className="inline-block ml-2 w-5 h-5" />
@@ -223,7 +235,7 @@ const EnterprisePage: React.FC = () => {
 
       <Footer />
     </div>
-  );
+  );,
 };
 
 export default EnterprisePage;

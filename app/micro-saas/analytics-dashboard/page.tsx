@@ -1,4 +1,5 @@
 import React from 'react';
+import Navigation from '../components/Navigation';
 import { Helmet } from 'react-helmet-async';
 import { BarChart, TrendingUp, Users, DollarSign, Zap, Target, ArrowRight, CheckCircle, Star, Award, Clock, Shield } from 'lucide-react';
 
@@ -61,10 +62,14 @@ const AIAnalyticsDashboardPage: React.FC = () => {
         <link rel="canonical" href="https://ziontechgroup.com/micro-saas/analytics-dashboard" />
       </Helmet>
 
+
+
+      <Navigation />
+      <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}</div>
         <section className="pt-24 pb-16 px-4">
-          <div className="max-w-7xl mx-auto"></div>
+          </section><div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
               <div className="inline-flex items-center space-x-2 bg-green-500/20 text-green-400 px-4 py-2 rounded-full text-sm font-medium mb-6"></div>
                 <BarChart className="w-4 h-4" />
@@ -93,7 +98,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
 
         {/* Features Section */}
         <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto"></div>
+          </section><div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Powerful Analytics Features</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -116,7 +121,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
 
         {/* Metrics Section */}
         <section className="py-16 px-4 bg-slate-800/30">
-          <div className="max-w-7xl mx-auto"></div>
+          </section><div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Platform Performance</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -139,7 +144,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
 
         {/* Benefits Section */}
         <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto"></div>
+          </section><div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Dashboard</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -178,7 +183,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
 
         {/* CTA Section */}
         <section className="py-16 px-4">
-          <div className="max-w-4xl mx-auto text-center"></div>
+          </section><div className="max-w-4xl mx-auto text-center"></div>
             <div className="bg-gradient-to-r from-green-600/20 to-cyan-600/20 rounded-2xl p-12 border border-green-500/30"></div>
               <h2 className="text-4xl font-bold text-white mb-6">
                 Ready to Transform Your Analytics?
@@ -187,7 +192,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
                 Join thousands of businesses already using our AI analytics dashboard 
                 to make smarter, data-driven decisions.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+              <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
                 <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all flex items-center justify-center space-x-2">
                   <span>Start Free Trial</span>
                   <ArrowRight className="w-5 h-5" />
@@ -201,7 +206,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
         </section>
       </div>
     </>
-  );
+  );,
 };
 
 export default AIAnalyticsDashboardPage;

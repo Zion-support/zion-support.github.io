@@ -33,21 +33,21 @@ const AIVideoGenerationPage: React.FC = () => {
       price: '$199',
       period: '/month',
       features: ['10 videos/month', 'HD quality', 'Basic templates', 'Email support'],
-      popular: false
+      popular: false,
     },
     {
       name: 'Professional',
       price: '$399',
       period: '/month',
       features: ['Unlimited videos', '4K quality', 'Premium templates', 'Voice cloning', 'Priority support'],
-      popular: true
+      popular: true,
     },
     {
       name: 'Enterprise',
       price: '$799',
       period: '/month',
       features: ['Everything in Pro', 'Custom templates', 'API access', 'Dedicated support', 'White-label'],
-      popular: false
+      popular: false,
     }
   ];
 
@@ -184,7 +184,7 @@ const AIVideoGenerationPage: React.FC = () => {
               <p className="text-xl text-gray-300 mb-8">
                 Join thousands of businesses creating professional videos with AI
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <a
                   href="/contact"
                   className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
@@ -205,7 +205,7 @@ const AIVideoGenerationPage: React.FC = () => {
         <Footer />
       </div>
     </>
-  );
+  );,
 };
 
 export default AIVideoGenerationPage;

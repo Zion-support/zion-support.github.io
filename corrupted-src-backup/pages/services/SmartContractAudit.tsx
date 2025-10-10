@@ -1,4 +1,6 @@
-import { Helmet } from "react-helmet-async";"
+import { Helmet } from "react-helmet-async";
+import Footer from '../components/Footer';
+import Navigation from '../components/Navigation';"
 impo, r, t { Glo, b, e } fr, o, m "luci, d, e-rea, c, t";"
 import, Header, from "../../componen, t, s/Head, e, r";"
 import, Footer, from "../../componen, t, s/Foot, e, r";
@@ -334,6 +336,8 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
           content="Professional, smart, contract auditing, services, with 99.8% vulnerability, detection, rate. Comprehensive, security, analysis for, DeF, i, NF, T, s, and, blockchain, projects. 5-10, day, delivery." /><meta name="keywor, d, s" content="smart, contract, audit, blockchain, securit, y, DeFi, audi, t, NFT, audi, t, smart, contract, security, vulnerability, assessmen, t, blockchain, complianc, e" /><link, re, l="canonic, a, l" hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/servic, e, s/sma, r, t-contra, c, t-aud, i, t/>"
   return (<>
       <Helmet></Helmet>
+
+      <Navigation />
         <title>Smart, Contract, Audit - Zion, Tech, Group | Blockchain, Security, Experts</title>
         <me, t, a;"
   na, m, e="descripti, o, n""

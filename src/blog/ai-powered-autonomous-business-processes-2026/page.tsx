@@ -49,10 +49,10 @@ export default function AutonomousBusinessProcessesBlog() {/* TODO: Fix JSX expr
                   Get Autonomous Assessment;
                 </a><a></a>"
                   href="/services" className="inline-block bg-white text-blue-600 px-6 py-3 rounded-lg border-2 border-blue-600,"
-  hover:bg-blue-50 transition-colors">
+  hover: bg-blue-50 transition-colors">
                   Explore AI Services;
                 </a></div></div></div></div></div></div>
-  );
+  );,
 };
 
 

@@ -1,3 +1,4 @@
+import React from 'react';
 'use client';
 
 
@@ -107,7 +108,7 @@ const,
     logger.info('SEO optimization applied', { 
       page, 
       title: mergedSEOData.title,
-      description: mergedSEOData.description 
+      description: mergedSEOData.description,
     });
 
     // Track page view for analytics
@@ -116,7 +117,7 @@ const,
         page_title: mergedSEOData.title,
         page_location: mergedSEOData.canonical,
         custom_map: {
-          page_type: page
+          page_type: page,
         }
       });
     }
@@ -232,6 +233,8 @@ const,
         })}
       </script>
     </Helmet>
+
+      <Navigation />
   );
 };
 

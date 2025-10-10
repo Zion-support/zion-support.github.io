@@ -8,7 +8,7 @@ interface AnalyticsData {
   conversionRate: number;
   topPages: Array<{,
     path: string;
-    views: number;
+    views: number;,
   }>;
   trafficSources: Array<{,
     source: string;

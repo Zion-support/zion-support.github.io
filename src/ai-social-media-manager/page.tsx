@@ -1,4 +1,5 @@
 import React from 'react';
+import Navigation from '../components/Navigation';
 import {Share2, TrendingUp, Users, Calendar, BarChart, CheckCircle, ArrowRight, Star, MessageSquare} from 'lucide-react';
 
 import React from 'react';
@@ -187,12 +188,12 @@ $4}
       {/* CTA Section */}
       <section className="py-16 px-4 bg-gradient-to-r from-pink-500/10 to-purple-500/10">
         <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+          <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
             Ready to Get Started?
           <p className="text-xl text-gray-300 mb-8">
             Join thousands of brands already using AI Social Media Manager to grow their presence
               Contact Sales
-  );
+  );,
 };
 
 'use client';

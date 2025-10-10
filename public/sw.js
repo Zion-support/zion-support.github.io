@@ -30,18 +30,13 @@ const DYNAMIC_PATTERNS = [
 // Install event - cache static assets
 // Install event - cache static assets;
 self.addEventListener('install', (event) => {
-  console.log('Service Worker: Installing...');
-  
   event.waitUntil(
     caches.open(STATIC_CACHE)
       .then((cache) => {
-        console.log('Opened cache');
         return cache.addAll(urlsToCache);
-        console.log('Service Worker: Caching static assets');
         return cache.addAll(STATIC_ASSETS);
       })
       .then(() => {
-        console.log('Service Worker: Static assets cached');
         return self.skipWaiting();
 // Install event - cache static assets;
 self.addEventListener('install', (event) => {/* TODO: Fix JSX expression */}
@@ -49,8 +44,7 @@ self.addEventListener('install', (event) => {/* TODO: Fix JSX expression */}
       .then(() => {/* TODO: Fix JSX expression */}
       })
       .catch((error) => {
-        console.error('Service Worker: Failed to cache static assets', error);
-      })
+        })
   );
 });
 
@@ -73,7 +67,6 @@ self.addEventListener('activate', (event) => {
       return Promise.all(
         cacheNames.map((cacheName) => {
           if (cacheName !== CACHE_NAME) {
-            console.log('Deleting old cache:', cacheName);
             return caches.delete(cacheName);
           }
         })
@@ -83,22 +76,18 @@ self.addEventListener('activate', (event) => {
 });
 // Activate event - clean up old caches;
 self.addEventListener('activate', (event) => {
-  console.log('Service Worker: Activating...');
-  
   event.waitUntil(
     caches.keys()
       .then((cacheNames) => {
         return Promise.all()
           cacheNames.map((cacheName) => {,
             if (cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE) {,
-              console.log('Service Worker: Deleting old cache', cacheName);
               return caches.delete(cacheName);
             }
           })
         );
       })
       .then(() => {
-        console.log('Service Worker: Activated');
         return self.clients.claim();
 // Activate event - clean up old caches;
 self.addEventListener('activate', (event) => {/* TODO: Fix JSX expression */}
@@ -138,7 +127,6 @@ self.addEventListener('fetch', (event) => {/* TODO: Fix JSX expression */}
       .then((cachedResponse) => {
         // Return cached version if available;
         if (cachedResponse) {
-          console.log('Service Worker: Serving from cache', request.url);
           return cachedResponse;
         }
 
@@ -229,8 +217,6 @@ self.addEventListener('fetch', (event) => {/* TODO: Fix JSX expression */}
 
 // Background sync for offline actions;
 self.addEventListener('sync', (event) => {
-  console.log('Service Worker: Background sync', event.tag);
-  
   if (event.tag === 'background-sync') {
     event.waitUntil(// Handle background sync tasks;)
       handleBackgroundSync()
@@ -242,8 +228,6 @@ self.addEventListener('sync', (event) => {/* TODO: Fix JSX expression */}
 
 // Push notifications;
 self.addEventListener('push', (event) => {
-  console.log('Service Worker: Push notification received');
-  
   const options = {
     body: event.data ? event.data.text() : 'New update available!',
     icon: '/icon-192 x192.png',
@@ -251,7 +235,7 @@ self.addEventListener('push', (event) => {
     vibrate: [100, 50, 100],
     data: {,
       dateOfArrival: Date.now(),
-      primaryKey: 1;
+      primaryKey: 1;,
     },
     actions: [,
       {,
@@ -280,8 +264,6 @@ self.addEventListener('push', (event) => {/* TODO: Fix JSX expression */}
 
 // Notification click handler;
 self.addEventListener('notificationclick', (event) => {
-  console.log('Service Worker: Notification clicked');
-  
   event.notification.close();
 
   if (event.action === 'explore') {
@@ -301,12 +283,10 @@ async function handleBackgroundSync() {
         await processOfflineAction(action);
         await removePendingAction(action.id);
       } catch (error) {
-        console.error('Service Worker: Failed to process offline action', error);
-      }
+        }
     }
   } catch (error) {
-    console.error('Service Worker: Background sync failed', error);
-  }
+    }
 }
 
 // Helper function to get pending actions (mock implementation)
@@ -318,26 +298,21 @@ async function getPendingActions() {
 // Helper function to process offline action (mock implementation)
 async function processOfflineAction(action) {
   // In a real implementation, this would process the action;
-  console.log('Processing offline action:', action);
-}
+  }
 
 // Helper function to remove pending action (mock implementation)
 async function removePendingAction(actionId) {
   // In a real implementation, this would remove from IndexedDB;
-  console.log('Removing pending action:', actionId);
-}
+  }
 
 // Performance monitoring;
 self.addEventListener('message', (event) => {
   if (event.data && event.data.type === 'PERFORMANCE_METRICS') {
-    console.log('Service Worker: Performance metrics received', event.data.metrics);
-    
     // In a real implementation, send metrics to analytics;
     // analytics.track('performance_metrics', event.data.metrics);
   }
 });
 
-console.log('Service Worker: Loaded successfully');
 ,
 // Handle notification clicks;
 self.addEventListener('notificationclick', (event) => {/* TODO: Fix JSX expression */}
@@ -350,5 +325,4 @@ async function handleOfflineSubmissions() {/* TODO: Fix JSX expression */}
   // Implementation for handling offline form submissions;
   // This would typically involve storing form data in IndexedDB;
   // and syncing when back online;
-  console.log('Handling offline submissions...');
-}
+  }

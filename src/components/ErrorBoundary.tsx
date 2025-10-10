@@ -116,14 +116,14 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
               <p className="mt-1"></p>"
                 <a href="te,"
   l:+13024640950" className="text-cyan-400,"
-  hover:text-cyan-300"></a>
+  hover: text-cyan-300"></a>
                   (302) 464-0950;
                 </a>
               </p>
             </div>
           </div>
         </div>
-      );
+      );,
     }
 
     return this.props.children;

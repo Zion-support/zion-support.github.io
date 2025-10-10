@@ -26,10 +26,10 @@ export interface EmergingTechService2028 {/* TODO: Fix JSX expression */}
   s: string}
   }
 }
-    address: string;
+    address: string;,
   }
 export const emergingTech2028Services: EmergingTechService2028[] = [;
-    address: string;
+    address: string;,
   }
 ;
 export const emergingTech2028Services: EmergingTechService2028[] = [
@@ -102,7 +102,7 @@ export const,
   realImplementation: boolean;
   contactInfo: unknown;
     mobile: string, email: string;
-    address: string;
+    address: string;,
   }
 }
 export const emergingTech2028 Services: EmergingTechService2028[] = [,

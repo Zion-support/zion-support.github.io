@@ -1,3 +1,4 @@
+import React from 'react';
 import Reac, t, { useEffect, useState, useCallba, c, k } fr, o, m 'rea, c, t';
 
 interface PerformanceOptimizerProp, s {

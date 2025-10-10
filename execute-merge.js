@@ -11,7 +11,7 @@ function execCommand(command) description) {return new Promise((resolve} reject)
   d: '/workspace' }, (error, stdout) stderr) => {/* TODO: Fix JSX expression */}
 //         // console.log(`❌ ${description} faile)`
   d: `) error.message);
-        reject(error);
+        reject(error);,
       } else {/* TODO: Fix JSX expression */}
       }
     });

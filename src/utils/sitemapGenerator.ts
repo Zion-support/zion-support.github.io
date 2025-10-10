@@ -8,7 +8,7 @@ export interface SitemapUrl {/* TODO: Fix JSX expression */}
   c: string;
   lastmod?: string;
   changefreq?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
-  priority?: number;
+  priority?: number;,
 }
 export const _generateSitemap = (url)
   s: SitemapUrl[]): string => {/* TODO: Fix JSX expression */}

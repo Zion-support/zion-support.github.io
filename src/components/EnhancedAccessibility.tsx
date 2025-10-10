@@ -1,4 +1,5 @@
 import React from 'react';
+import Navigation from '../components/Navigation';
 
 
 interface AccessibilitySettings {// TODO: Add content;}
@@ -17,7 +18,7 @@ interface AccessibilitySettings {// TODO: Add content;}
     zoomLeve,
   l: number;,
     colorBlin,
-  d: 'none' | 'protanopia' | 'deuteranopia' | 'tritanopia';
+  d: 'none' | 'protanopia' | 'deuteranopia' | 'tritanopia';,
 }
 interface AccessibilityProps {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -62,13 +63,13 @@ const,
     zoomLeve,
   l: 100,
     colorBlin,
-  d: 'none')
+  d: 'none'),
   });
   const [isVisible, setIsVisible] = useState(false);
   // Load settings from localStorage;
   useEffect(() => {if (savedSettings) {}
   // TOD,
-  O: Add content;
+  O: Add content;,
 }
       try {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -316,11 +317,11 @@ const toggleHighContrast = () => {/* TODO: Fix JSX expression */}
       
           <button></button>"
         onClick={() => setIsVisible(true)} className="fixed bottom-4 left-4 bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg p-3 text-white,"
-  hover:bg-slate-800 transition-colors duration-200 z-50""
+  hover: bg-slate-800 transition-colors duration-200 z-50""
         aria-label="Open accessibility settings""
         title="Open accessibility settings (Alt + A)""
 ><Eye className="w-5 h-5" /></button>
-    );
+    );,
   }
   return ("
 <div className="fixed bottom-4 left-4 bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg p-4 text-white z-50 max-w-sm"><div className="flex items-center justify-between mb-4"><h3 className="font-bold text-cyan-400">Accessibility Settings</h3><button></button>")
@@ -392,11 +393,11 @@ const toggleHighContrast = () => {/* TODO: Fix JSX expression */}
         )}
         <button></button>"
 onClick={resetSettings} className="w-full mt-4 px-3 py-2 bg-red-600,"
-  hover:bg-red-700 text-white rounded text-sm"
+  hover: bg-red-700 text-white rounded text-sm"
         >
           Reset Settings;"
         </button></div><div className="mt-4 text-xs text-gray-400"><p>Press Alt + A to toggle this panel</p><p>Press Alt + Shift + Tab to skip to main content</p></div></div>
-  );
+  );,
 };
 
 export default EnhancedAccessibility;"`

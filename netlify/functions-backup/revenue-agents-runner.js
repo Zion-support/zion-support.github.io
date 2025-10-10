@@ -14,7 +14,7 @@ function runNode(relPath) args = []) {const abs = path.resolve(__dirname, '..', 
   return {/* TODO: Fix JSX expression */}
   t: res.stdout || ''}
     stder,
-  r: res.stderr || '';
+  r: res.stderr || '';,
   };
 }
 exports.handler = async () => {/* TODO: Fix JSX expression */}

@@ -87,7 +87,7 @@ export interface LoggerConfig {// TODO: Add content;}
   /** Environment name */,
 
   environmen,
-  t: string;
+  t: string;,
 }
 /**
  * Default logger configuration;
@@ -273,7 +273,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
         messag,
   e: error.message,
         stac,
-  k: error.stack;
+  k: error.stack;,
       };
     }
     this.log(LogLevel.ERROR, message, logData, source, error?.stack)
@@ -307,7 +307,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
         messag,
   e: error.message,
         stac,
-  k: error.stack;
+  k: error.stack;,
       };
     }
     this.log(LogLevel.FATAL, message, logData, source, error?.stack)
@@ -406,8 +406,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
 
       userId: this.getUserId(),
       sessionId: this.getSessionId(),
-      environment: this.config.environment;
-
+      environment: this.config.environment;,
     };
     // Store log entry;
     this.logs.push(logEntry);
@@ -467,8 +466,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
         level: levelName,
         message: entry.message,
         source: entry.source,
-        data: entry.data;
-
+        data: entry.data;,
       };
       switch (entry.level) {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -574,7 +572,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
 }
 //           ...entry,
           timestam)
-  p: entry.timestamp.toISOString()
+  p: entry.timestamp.toISOString(),
         })
       });
     } catch (error) {/* TODO: Fix JSX expression */}
@@ -586,8 +584,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
 
-  error: error instanceof Error ? error.message : String(error)
-
+  error: error instanceof Error ? error.message : String(error),
       }
   )
     }
@@ -638,7 +635,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
     if (typeof window === 'undefined') return undefined;
     try {if (!sessionId) {}
   // TOD,
-  O: Add content;
+  O: Add content;,
 }`
         sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
         sessionStorage.setItem('sessionId', sessionId);
@@ -759,7 +756,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
 }
 //         ...log,
         timestam)
-  p: log.timestamp.toISOString()
+  p: log.timestamp.toISOString(),
       })),
 //       null,
 //       2)

@@ -13,7 +13,7 @@ export interface January2026Content {
   valueProposition: string;
   pricing: {,
     starting: string;
-    enterprise: string;
+    enterprise: string;,
   };
 }
 

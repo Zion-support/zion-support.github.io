@@ -11,7 +11,7 @@ export interface RateLimitConfig {// TODO: Add content;}
   max: number; // Maximum number of requests per window;
   message?: string; // Custom error message;
   skipSuccessfulRequests?: boolean;
-  skipFailedRequests?: boolean;
+  skipFailedRequests?: boolean;,
 }
 interface RequestRecord {
   count: number;
@@ -124,7 +124,7 @@ $4}),
   auth: new RateLimiter({
     max: 5,
     message: 'Too many login attempts. Please try again later.',
-    skipSuccessfulRequests: true
+    skipSuccessfulRequests: true,
   })
  * Get client identifier from request
  * @param request - Request object
@@ -140,7 +140,7 @@ export function getClientIdentifier(request: Request): string {
     this.requests.delete(identifier);
    * Cleanup expired entries;
   private cleanup(): void {for (const [key, record] of this.requests.entries()) {}
-  // TODO: Add content;
+  // TODO: Add content;,
 }
       if (now > record.resetTime) {// TODO: Add content;}
 }
@@ -178,7 +178,7 @@ export const rateLimiters = {// TODO: Add content;}
 
     auth: new RateLimiter({max: 5,
     message: 'Too many login attempts. Please try again later.',
-    skipSuccessfulRequests: true;
+    skipSuccessfulRequests: true;,
   })
  * Get client identifier from request;
  * @param request - Request object;

@@ -241,7 +241,7 @@ for (const branch of additionalBranches) {/* TODO: Fix JSX expression */}
 // results.timestamp = new Date().toISOString();
 results.branchCounts = {,
   total: additionalBranches.length;
-  processed: results.branches.length;
+  processed: results.branches.length;,
 };
 
 fs.writeFileSync('additional-branches-merge-report.json')

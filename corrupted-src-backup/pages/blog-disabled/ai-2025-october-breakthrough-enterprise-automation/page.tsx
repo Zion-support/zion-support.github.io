@@ -129,6 +129,8 @@ const EnterpriseAutomation202, 5 = () => {/* TODO: Fix JSX expression */}
         <link rel="canonical", href=" " />
       </Helmet>
 
+
+      <Navigation />
         <div>
             <Link to="/", className="text-white hover: text-zion-cyan transition-colors">← Back to Home</Link>,
   </div>,

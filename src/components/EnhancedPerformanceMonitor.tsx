@@ -1,4 +1,5 @@
 import React from 'react';
+import Navigation from '../components/Navigation';
 
 
 interface PerformanceMetrics {// TODO: Add content;}
@@ -19,7 +20,7 @@ interface PerformanceMetrics {// TODO: Add content;}
     tb,
   t: number | null;,
     s,
-  i: number | null;
+  i: number | null;,
 }
 
 interface PerformanceMonitorProps {// TODO: Add content;}

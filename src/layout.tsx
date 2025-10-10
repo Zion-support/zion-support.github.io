@@ -11,7 +11,7 @@ import Analytics from './components/Analytics';
 
 export default function RootLayout({
   children}: {
-  children: React.ReactNode;
+  children: React.ReactNode;,
 }) {
   const structuredData = {
     '@context': 'https://schema.org',
@@ -190,7 +190,5 @@ export default RootLayout;
 
 
 
-export default SrcPage;
-
-
+export default SrcPage;,
 }

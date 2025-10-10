@@ -33,13 +33,13 @@ export interface RequestConfig extends Omit<RequestInit, 'cache'> {/* TODO: Fix 
   cacheOptions?: CacheOptions;
   retries?: number;
   timeout?: number;
-  skipCache?: boolean;
+  skipCache?: boolean;,
 }
 export interface ApiResponse<T = unknown> {
   data: T;
   status: number;
   statusText: string;
-  headers: Headers;
+  headers: Headers;,
 }
 export class ApiError extends Error {
   constructor(
@@ -55,7 +55,7 @@ export interface ApiResponse;
   data: T;,
     status: number;,
     statusText: string;,
-    headers: Headers
+    headers: Headers,
 }
 export class ApiError extends Error {// TODO: Add content;}
 
@@ -75,7 +75,7 @@ export class ApiError extends Error {// TODO: Add content;}
 class ApiClient {
   private config: Required<Omit<ApiClientConfig, 'cacheOptions' | 'baseURL'>> & {
     baseURL: string;
-    cacheOptions?: CacheOptions;
+    cacheOptions?: CacheOptions;,
   };
   private abortControllers: Map<string, AbortController> = new Map();
   constructor(_config: ApiClientConfig = {}) {
@@ -87,7 +87,7 @@ class ApiClient {
       headers: config.headers || {
         'Content-Type': 'application/json'
       },
-      cacheOptions: config.cacheOptions
+      cacheOptions: config.cacheOptions,
     };
   }
   /**
@@ -115,7 +115,7 @@ $4});
       ...config,
       url,
       method: 'POST',
-      body: JSON.stringify(data)
+      body: JSON.stringify(data),
     });
   }
   /**
@@ -130,7 +130,7 @@ $4});
       ...config,
       url,
       method: 'PUT',
-      body: JSON.stringify(data)
+      body: JSON.stringify(data),
     });
   }
   /**
@@ -158,7 +158,7 @@ $4});
       ...config,
       url,
       method: 'PATCH',
-      body: JSON.stringify(data)
+      body: JSON.stringify(data),
     });
   }
   /**
@@ -184,7 +184,7 @@ $4});
           data: cached,
           status: 200,
           statusText: 'OK (cached)',
-          headers: new Headers()
+          headers: new Headers(),
         };
       }
     }
@@ -204,7 +204,7 @@ $4});
             ...this.config.headers,
             ...headers
           },
-          signal: controller.signal
+          signal: controller.signal,
         });
         clearTimeout(timeoutId);
         this.abortControllers.delete(cacheKey);
@@ -218,7 +218,7 @@ $4});
         const contentType = response.headers.get('content-type');
         let data: T;
         if (contentType?.includes('application/json')) {
-          data = await response.json();
+          data = await response.json();,
         } else {
           data = (await response.text()) as T;
         }
@@ -230,7 +230,7 @@ $4});
           data,
           status: response.status,
           statusText: response.statusText,
-          headers: response.headers
+          headers: response.headers,
         };
       } catch (error) {
         lastError = error as Error;
@@ -267,7 +267,7 @@ class ApiClient {/* TODO: Fix JSX expression */}
 };
   baseUR,
   L: string;
-    cacheOptions?: CacheOptions;
+    cacheOptions?: CacheOptions;,
   };
   private,
   abortControllers: Map;
@@ -290,7 +290,7 @@ class ApiClient {/* TODO: Fix JSX expression */}
         'Content-Type': 'application/json'
       },
       cacheOption,
-  s: config.cacheOptions;
+  s: config.cacheOptions;,
     };
   }
   /**
@@ -342,7 +342,7 @@ class ApiClient {/* TODO: Fix JSX expression */}
       metho,
   d: 'POST',
       bod)
-  y: JSON.stringify(data)
+  y: JSON.stringify(data),
     }
   )
   }
@@ -370,7 +370,7 @@ class ApiClient {/* TODO: Fix JSX expression */}
       metho,
   d: 'PUT',
       bod)
-  y: JSON.stringify(data)
+  y: JSON.stringify(data),
     }
   )
   }
@@ -423,7 +423,7 @@ class ApiClient {/* TODO: Fix JSX expression */}
       metho,
   d: 'PATCH',
       bod)
-  y: JSON.stringify(data)
+  y: JSON.stringify(data),
     }
   )
   }
@@ -465,8 +465,7 @@ class ApiClient {/* TODO: Fix JSX expression */}
   data: cached,
           status: 200,
           statusText: 'OK (cached)',
-          headers: new Headers()
-
+          headers: new Headers(),
         }
       }
     }
@@ -500,8 +499,7 @@ const controller = new AbortController();
 //             ...headers;
           },
 
-          signal: controller.signal;
-
+          signal: controller.signal;,
         });
         clearTimeout(timeoutId);
         this.abortControllers.delete(cacheKey);
@@ -543,7 +541,7 @@ const controller = new AbortController();
           statusTex,
   t: response.statusText,
           header,
-  s: response.headers;
+  s: response.headers;,
         };
       } catch (error) {/* TODO: Fix JSX expression */}
   O: Add content;}

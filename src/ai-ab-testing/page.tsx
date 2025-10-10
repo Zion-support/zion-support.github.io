@@ -1,3 +1,4 @@
+import React from 'react';
 
 
 
@@ -15,7 +16,7 @@ const AIABTestingPage: React.FC = () => {
       title: 'A/B Testing',
       description: 'AI-powered A/B testing and experimentation',
       benefits: ['Test automation', 'Statistical analysis', 'Result interpretation']
-
+    }
     },
     {/* TODO: Fix JSX expression */}
     },

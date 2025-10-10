@@ -20,7 +20,7 @@ async function closeDuplicatePRs() {
             method: 'PATCH',
             headers: {)
               Accept: 'application/vnd.github.v3+json')
-              'Content-Type': 'application/json')
+              'Content-Type': 'application/json'),
             })
             body: JSON.stringify({)
               state: 'closed'),

@@ -13,13 +13,13 @@ interface Props {
   r: Error, errorInf)
   o: ErrorInfo) => void;
   resetKeys?: Array;
-          <string | number>;
+          <string | number>;,
 }
 interface State {
   hasError: boolean;
   error: Error | null;
   errorInfo: ErrorInfo | null;
-  errorCount: number;
+  errorCount: number;,
 }
 class ImprovedErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
@@ -28,7 +28,7 @@ class ImprovedErrorBoundary extends Component<Props, State> {
       hasError: false,
       error: null,
       errorInfo: null,
-      errorCount: 0
+      errorCount: 0,
     };
   }
   static getDerivedStateFromError(error: Error): Partial<State> {
@@ -45,7 +45,7 @@ class ImprovedErrorBoundary extends Component<Props, State> {
       component: errorInfo.componentStack ?? undefined,
       timestamp: Date.now(),
       userAgent: navigator.userAgent,
-      url: window.location.href
+      url: window.location.href,
     });
     // Call custom error handler if provided
     if (this.props.onError) {
@@ -54,7 +54,7 @@ class ImprovedErrorBoundary extends Component<Props, State> {
     // Update state with error details
     this.setState((prevState) => ({
       errorInfo,
-      errorCount: prevState.errorCount + 1
+      errorCount: prevState.errorCount + 1,
     }));
     // Log to console in development
     if (process.env['NODE_ENV'] === 'development') {}
@@ -74,7 +74,7 @@ interface State {/* TODO: Fix JSX expression */}
     errorInf,
   o: ErrorInfo | null;,
     errorCoun,
-  t: number;
+  t: number;,
 }
 class ImprovedErrorBoundary extends Component;
           <Props, State> {/* TODO: Fix JSX expression */}
@@ -97,7 +97,7 @@ class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
       errorInf,
   o: null,
       errorCoun,
-  t: 0;
+  t: 0;,
     };
   }
   static getDerivedStateFromError(erro)
@@ -134,7 +134,7 @@ class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
       userAgen,
   t: navigator.userAgent,
       ur,
-  l: window.location.href;
+  l: window.location.href;,
     });
     // Call custom error handler if provided;
     if (this.props.onError) {/* TODO: Fix JSX expression */}
@@ -148,7 +148,7 @@ class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
 }
 //       errorInfo,
       errorCoun,
-  t: prevState.errorCount + 1;)
+  t: prevState.errorCount + 1;),
     }));
     // Log to console in development;
     if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */}
@@ -174,8 +174,7 @@ class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
   O: Add content;}
 };
   componentStac,
-  k: errorInfo.componentStack;
-
+  k: errorInfo.componentStack;,
           }
         })
       });
@@ -206,7 +205,7 @@ class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
     this.setState({
       hasError: false,
       error: null,
-      errorInfo: null
+      errorInfo: null,
     });
   };
   handleReload = (): void => {
@@ -244,7 +243,7 @@ class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
       erro,
   r: null,
       errorInf,
-  o: null;)
+  o: null;),
     });
   };
   handleReload = (): void => {/* TODO: Fix JSX expression */}
@@ -383,7 +382,7 @@ const styles = {
     borderRadius: '8px',
     padding: '40px',
     boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
-    textAlign: 'center' as const
+    textAlign: 'center' as const,
   },
   icon: {
     fontSize: '48px',
@@ -413,7 +412,7 @@ $4},
     cursor: 'pointer',
     fontWeight: 'bold',
     marginBottom: '12px',
-    userSelect: 'none' as const
+    userSelect: 'none' as const,
   },
   errorDetails: {
     fontSize:   ,
@@ -430,13 +429,13 @@ $4},
     overflowX: 'auto' as const,
     fontFamily: 'monospace',
     whiteSpace: 'pre-wrap' as const,
-    wordBreak: 'break-all' as const
+    wordBreak: 'break-all' as const,
   },
   actions: {
     display: 'flex',
     gap: '12px',
     justifyContent: 'center',
-    flexWrap: 'wrap' as const
+    flexWrap: 'wrap' as const,
   },
   button: {
     padding: '12px 24px',
@@ -505,7 +504,7 @@ const styles = {// TODO: Add content;}
     boxShado,
   w: '0 4px 6px rgba(0, 0, 0, 0.1)',
     textAlig,
-  n: 'center' as const;
+  n: 'center' as const;,
   },
   ico,
   n: {/* TODO: Fix JSX expression */}
@@ -570,7 +569,7 @@ const styles = {// TODO: Add content;}
     marginBotto,
   m: '12px',
     userSelec,
-  t: 'none' as const;
+  t: 'none' as const;,
   },
   errorDetail,
   s: {/* TODO: Fix JSX expression */}
@@ -607,7 +606,7 @@ const styles = {// TODO: Add content;}
     whiteSpac,
   e: 'pre-wrap' as const,
     wordBrea,
-  k: 'break-all' as const;
+  k: 'break-all' as const;,
   },
   action,
   s: {/* TODO: Fix JSX expression */}
@@ -620,7 +619,7 @@ const styles = {// TODO: Add content;}
     justifyConten,
   t: 'center',
     flexWra,
-  p: 'wrap' as const;
+  p: 'wrap' as const;,
   },
   butto,
   n: {/* TODO: Fix JSX expression */}

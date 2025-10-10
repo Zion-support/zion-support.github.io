@@ -1,4 +1,5 @@
 import React, { ReactNode } from 'react';
+import Navigation from '../components/Navigation';
 
 import { Helmet } from 'react-helmet-async';
 
@@ -17,6 +18,8 @@ const,
 
   return (<>
       <Helmet></Helmet>
+
+      <Navigation />
         {/* Basic Meta Tags */}
         <title>{title}</title>
         <meta name="description" content={description} /></meta>")

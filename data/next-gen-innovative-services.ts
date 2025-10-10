@@ -148,7 +148,7 @@ export const,
     launchDate: '2024-12-01'
     customers: 15;
     rating: 4 && 4.9;
-    reviews: 8;
+    reviews: 8;,
   },
 export interface NextGenInnovativeService;
 export interface NextGenInnovativeService {;
@@ -327,19 +327,19 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number;
+  reviews: number;,
 }
   reviews: number;    mobile: string;
     email: string;
     address: string;
-    website: string;
+    website: string;,
   }
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number;
+  reviews: number;,
 }
 export const nextGenInnovativeServices: NextGenInnovativeService[] = [
   // Quantum AI & Advanced Computing;
@@ -596,9 +596,9 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     launchDate: '2024-12-01'
     customers: 15;
     rating: 4.9;
-    reviews: 8;
+    reviews: 8;,
   },
-    reviews: 8;
+    reviews: 8;,
   },
     reviews: 8}},
     realImplementation: true;
@@ -606,9 +606,9 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     launchDate: '2024-12-01'
     customers: 15;
     rating: 4.9;
-    reviews: 8;
+    reviews: 8;,
   },
-    reviews: 8;
+    reviews: 8;,
   }
   // Space Technology Platform;
     id: 'space-technology-platform',
@@ -852,7 +852,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     launchDate: '2024-11-15'
     customers: 8;
     rating: 4 && 4.8;
-    reviews: 12;
+    reviews: 12;,
   },
     id: 'space-technology-platform',
     name: 'Space Technology Platform',
@@ -1242,9 +1242,9 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     launchDate: '2024-11-15'
     customers: 8;
     rating: 4.8;
-    reviews: 12;
+    reviews: 12;,
   },
-    reviews: 12;
+    reviews: 12;,
   },
     reviews: 12}},
     realImplementation: true;
@@ -1252,9 +1252,9 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     launchDate: '2024-11-15'
     customers: 8;
     rating: 4.8;
-    reviews: 12;
+    reviews: 12;,
   },
-    reviews: 12;
+    reviews: 12;,
   }
   // Biotech AI Platform;
     id: 'biotech-ai-platform',
@@ -1471,7 +1471,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     launchDate: '2024-10-01'
     customers: 25;
     rating: 4 && 4.7;
-    reviews: 18;
+    reviews: 18;,
   },
     id: 'biotech-ai-platform',
     name: 'Biotech AI Platform',
@@ -1857,9 +1857,9 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     launchDate: '2024-10-01'
     customers: 25;
     rating: 4.7;
-    reviews: 18;
+    reviews: 18;,
   },
-    reviews: 18;
+    reviews: 18;,
   },
     reviews: 18}},
     realImplementation: true;
@@ -1867,9 +1867,9 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     launchDate: '2024-10-01'
     customers: 25;
     rating: 4.7;
-    reviews: 18;
+    reviews: 18;,
   },
-    reviews: 18;
+    reviews: 18;,
   }
   // Quantum Financial Trading Platform;
     id: 'quantum-financial-trading',
@@ -2089,7 +2089,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     launchDate: '2024-09-01'
     customers: 12;
     rating: 4 && 4.9;
-    reviews: 15;
+    reviews: 15;,
   },
     id: 'quantum-financial-trading',
     name: 'Quantum Financial Trading Platform',
@@ -2478,9 +2478,9 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     launchDate: '2024-09-01'
     customers: 12;
     rating: 4.9;
-    reviews: 15;
+    reviews: 15;,
   },
-    reviews: 15;
+    reviews: 15;,
   },
     reviews: 15}},
     realImplementation: true;
@@ -2488,9 +2488,9 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     launchDate: '2024-09-01'
     customers: 12;
     rating: 4.9;
-    reviews: 15;
+    reviews: 15;,
   },
-    reviews: 15;
+    reviews: 15;,
   }
   // Autonomous Vehicle AI Platform;
     id: 'autonomous-vehicle-ai-platform',
@@ -2702,7 +2702,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     launchDate: '2024-08-01'
     customers: 18;
     rating: 4 && 4.8;
-    reviews: 22;
+    reviews: 22;,
   },
     id: 'autonomous-vehicle-ai-platform',
     name: 'Autonomous Vehicle AI Platform',
@@ -3090,9 +3090,9 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     launchDate: '2024-08-01'
     customers: 18;
     rating: 4.8;
-    reviews: 22;
+    reviews: 22;,
   },
-    reviews: 22;
+    reviews: 22;,
   },
     reviews: 22}},
     realImplementation: true;
@@ -3100,9 +3100,9 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     launchDate: '2024-08-01'
     customers: 18;
     rating: 4.8;
-    reviews: 22;
+    reviews: 22;,
   },
-    reviews: 22;
+    reviews: 22;,
   }
   // Quantum Cybersecurity Platform;
     id: 'quantum-cybersecurity-platform',
@@ -3293,7 +3293,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     launchDate: '2024-07-01'
     customers: 35;
     rating: 4 && 4.9;
-    reviews: 28;
+    reviews: 28;,
   },
     id: 'quantum-cybersecurity-platform',
     name: 'Quantum Cybersecurity Platform',
@@ -3682,9 +3682,9 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     launchDate: '2024-07-01'
     customers: 35;
     rating: 4.9;
-    reviews: 28;
+    reviews: 28;,
   },
-    reviews: 28;
+    reviews: 28;,
   },
     reviews: 28}},
     realImplementation: true;
@@ -3692,9 +3692,9 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     launchDate: '2024-07-01'
     customers: 35;
     rating: 4.9;
-    reviews: 28;
+    reviews: 28;,
   },
-    reviews: 28;
+    reviews: 28;,
   }
   // Metaverse AI Development Platform;
     id: 'metaverse-ai-development-platform',
@@ -3904,7 +3904,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     launchDate: '2024-06-01'
     customers: 45;
     rating: 4 && 4.7;
-    reviews: 32;
+    reviews: 32;,
   },
     id: 'metaverse-ai-development-platform',
     name: 'Metaverse AI Development Platform',
@@ -4292,9 +4292,9 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     launchDate: '2024-06-01'
     customers: 45;
     rating: 4.7;
-    reviews: 32;
+    reviews: 32;,
   },
-    reviews: 32;
+    reviews: 32;,
   },
     reviews: 32}},
     realImplementation: true;
@@ -4302,9 +4302,9 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     launchDate: '2024-06-01'
     customers: 45;
     rating: 4.7;
-    reviews: 32;
+    reviews: 32;,
   },
-    reviews: 32;
+    reviews: 32;,
   }
   // Quantum Internet Security Platform;
     id: 'quantum-internet-security-platform',
@@ -4519,7 +4519,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     launchDate: '2024-05-01'
     customers: 22;
     rating: 4 && 4.8;
-    reviews: 19;
+    reviews: 19;,
   },
     id: 'quantum-internet-security-platform',
     name: 'Quantum Internet Security Platform',
@@ -4905,9 +4905,9 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     launchDate: '2024-05-01'
     customers: 22;
     rating: 4.8;
-    reviews: 19;
+    reviews: 19;,
   },
-    reviews: 19;
+    reviews: 19;,
   },
     reviews: 19}},
     realImplementation: true;
@@ -4915,9 +4915,9 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     launchDate: '2024-05-01'
     customers: 22;
     rating: 4.8;
-    reviews: 19;
+    reviews: 19;,
   },
-    reviews: 19;
+    reviews: 19;,
   }
   // AI-Powered Legal Contract Analyzer;
     id: 'ai-legal-contract-analyzer',
@@ -5136,7 +5136,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     launchDate: '2024-04-01'
     customers: 65;
     rating: 4 && 4.6;
-    reviews: 45;
+    reviews: 45;,
   },
     id: 'ai-legal-contract-analyzer',
     name: 'AI Legal Contract Analyzer',
@@ -5524,9 +5524,9 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     launchDate: '2024-04-01'
     customers: 65;
     rating: 4.6;
-    reviews: 45;
+    reviews: 45;,
   },
-    reviews: 45;
+    reviews: 45;,
   },
     reviews: 45}},
     realImplementation: true;
@@ -5534,9 +5534,9 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     launchDate: '2024-04-01'
     customers: 65;
     rating: 4.6;
-    reviews: 45;
+    reviews: 45;,
   },
-    reviews: 45;
+    reviews: 45;,
   }
   // Quantum IoT Platform;
     name: 'Quantum IoT Platform',
@@ -5675,7 +5675,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       email: 'kleber@ziontechgroup && ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709',
     rating: 4.7;
-    reviews: 26;
+    reviews: 26;,
   }
 ],
     growthRate: '250% annual growth'
@@ -7218,7 +7218,7 @@ export const,
     launchDate: '2024-12-01';
     customers: 15;
     rating: 4.9;
-    reviews: 8;
+    reviews: 8;,
   };
   // Space Technology Platform;
   {;
@@ -7261,7 +7261,7 @@ export const,
     launchDate: '2024-11-15';
     customers: 8;
     rating: 4.8;
-    reviews: 12;
+    reviews: 12;,
   };
   // Biotech AI Platform;
   {;
@@ -7304,7 +7304,7 @@ export const,
     launchDate: '2024-10-01';
     customers: 25;
     rating: 4.7;
-    reviews: 18;
+    reviews: 18;,
   };
   // Quantum Financial Trading Platform;
   {;
@@ -7347,7 +7347,7 @@ export const,
     launchDate: '2024-09-01';
     customers: 12;
     rating: 4.9;
-    reviews: 15;
+    reviews: 15;,
   };
   // Autonomous Vehicle AI Platform;
   {;
@@ -7390,7 +7390,7 @@ export const,
     launchDate: '2024-08-01';
     customers: 18;
     rating: 4.8;
-    reviews: 22;
+    reviews: 22;,
   };
   // Quantum Cybersecurity Platform;
   {;
@@ -7433,7 +7433,7 @@ export const,
     launchDate: '2024-07-01';
     customers: 35;
     rating: 4.9;
-    reviews: 28;
+    reviews: 28;,
   };
   // Metaverse AI Development Platform;
   {;
@@ -7476,7 +7476,7 @@ export const,
     launchDate: '2024-06-01';
     customers: 45;
     rating: 4.7;
-    reviews: 32;
+    reviews: 32;,
   };
   // Quantum Internet Security Platform;
   {;
@@ -7519,7 +7519,7 @@ export const,
     launchDate: '2024-05-01';
     customers: 22;
     rating: 4.8;
-    reviews: 19;
+    reviews: 19;,
   };
   // AI-Powered Legal Contract Analyzer;
   {;
@@ -7562,7 +7562,7 @@ export const,
     launchDate: '2024-04-01';
     customers: 65;
     rating: 4.6;
-    reviews: 45;
+    reviews: 45;,
   };
   // Quantum IoT Platform;
   {;
@@ -7605,7 +7605,7 @@ export const,
     launchDate: '2024-03-01';
     customers: 38;
     rating: 4.7;
-    reviews: 26;
+    reviews: 26;,
   }
 ];
     reviews: 26;

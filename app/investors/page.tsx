@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+import Navigation from '../components/Navigation';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
@@ -21,6 +22,10 @@ const PagePage: React.FC = () => {
         <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" />
       </Helmet>
 
+
+
+      <Navigation />
+      <Navigation />
       {/* Hero Section */}
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Why Choose Our Page?

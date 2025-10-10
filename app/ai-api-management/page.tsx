@@ -12,36 +12,48 @@ const AIAPIManagementPage: React.FC = () => {
       title: 'API Security',
       description: 'Advanced security measures to protect your APIs from threats and unauthorized access.',
       benefits: ['Authentication & authorization', 'Rate limiting', 'API key management', 'Threat detection']
+    }
+    }
     },
     {
       icon: Zap,
       title: 'Performance Optimization',
       description: 'Optimize API performance with caching, load balancing, and intelligent routing.',
       benefits: ['Response caching', 'Load balancing', 'Auto-scaling', 'Performance monitoring']
+    }
+    }
     },
     {
       icon: Settings,
       title: 'API Gateway',
       description: 'Centralized API gateway for managing, monitoring, and securing all your APIs.',
       benefits: ['Centralized management', 'Traffic routing', 'Request/response transformation', 'API versioning']
+    }
+    }
     },
     {
       icon: Lock,
       title: 'Access Control',
       description: 'Granular access control and permission management for API endpoints.',
       benefits: ['Role-based access', 'Permission management', 'API key rotation', 'Audit logging']
+    }
+    }
     },
     {
       icon: Globe,
       title: 'Global Distribution',
       description: 'Distribute your APIs globally with edge computing and CDN integration.',
       benefits: ['Edge computing', 'CDN integration', 'Global load balancing', 'Low latency']
+    }
+    }
     },
     {
       icon: Activity,
       title: 'Real-time Monitoring',
       description: 'Monitor API performance, usage, and health in real-time with detailed analytics.',
       benefits: ['Real-time metrics', 'Usage analytics', 'Health monitoring', 'Alert system']
+    }
+    }
     }
   ];
 
@@ -98,11 +110,15 @@ const AIAPIManagementPage: React.FC = () => {
       </Helmet>
 
 
+
+      <Navigation />
+      <Navigation />
+      <Navigation />
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-orange-900 to-slate-900">
         {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-orange-500 to-red-500 rounded-full mb-8">
+        </main><section className="relative py-20 px-4 sm:px-6 lg:px-8">
+          </section><div className="max-w-7xl mx-auto text-center">
+            </div><div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-orange-500 to-red-500 rounded-full mb-8">
               <Code className="w-10 h-10 text-white" />
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -124,6 +140,108 @@ const AIAPIManagementPage: React.FC = () => {
           </div>
         </section>
 
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          </section><div className="max-w-7xl mx-auto">
+            </div><div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Advanced API Management Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Comprehensive tools for managing, securing, and optimizing your API infrastructure
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                </div><div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                  </div><div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  {feature.benefits && (
+                    <ul className="space-y-2">
+                      {feature.benefits.map((benefit, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-400">
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-20 px-4">
+          </section><div className="max-w-7xl mx-auto">
+            </div><div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Why Choose Our AI API Management?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Proven results that improve API performance and security
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {benefits.map((benefit, index) => (
+                </div><div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group text-center">
+                  </div><div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform mx-auto">
+                    <CheckCircle className="w-8 h-8 text-white" />
+                  </div>
+                  <p className="text-lg text-white font-medium">{benefit}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Use Cases Section */}
+        <section className="py-20 px-4">
+          </section><div className="max-w-7xl mx-auto">
+            </div><div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Use Cases
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Perfect for modern applications and enterprise systems
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {useCases.map((useCase, index) => (
+                </div><div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group text-center">
+                  </div><div className="text-4xl mb-4">{useCase.icon}</div>
+                  <h3 className="text-xl font-bold text-white mb-4">{useCase.title}</h3>
+                  <p className="text-gray-300">{useCase.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          </section><div className="max-w-4xl mx-auto text-center">
+            </div><div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
+              <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
+                Ready to Optimize Your APIs?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Start managing your APIs more efficiently with our AI-powered solution today.
+              </p>
+              </div><div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                  Start Free Trial
+                </button>
+                <button className="border border-orange-400 text-orange-400 hover:bg-orange-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                  Contact Sales
+                </button>
               </div>
             </div>
           </div>
@@ -132,7 +250,7 @@ const AIAPIManagementPage: React.FC = () => {
 
       <Footer />
     </>
-  );
+  );,
 };
 
 export default AIAPIManagementPage;

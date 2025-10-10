@@ -105,8 +105,7 @@ export function getErrorBoundaryConfig(): ErrorBoundaryConfig {// TODO: Add cont
 };
   default: DefaultErrorFallback,
       network: NetworkErrorFallback,
-      notFound: NotFoundFallback;
-
+      notFound: NotFoundFallback;,
     }
   }
 }
@@ -173,14 +172,14 @@ className="w-6 h-6 text-red-600""
           <button></button>
             onClick={() => (window.location.href = '/')}"
             className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg,"
-  hover:bg-gray-300 transition-colors"
+  hover: bg-gray-300 transition-colors"
 // >
 //             Go Home;
           </button>
         </div>
       </div>
     </div>
-  )
+  ),
 }
 /**
  * Network error fallback component;
@@ -233,14 +232,14 @@ className="w-6 h-6 text-yellow-600""
           <button></button>
             onClick={resetError}"
             className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg,"
-  hover:bg-blue-700 transition-colors"
+  hover: bg-blue-700 transition-colors"
 // >
             Retry Connection;
           </button>
         </div>
       </div>
     </div>
-  )
+  ),
 }
 /**
  * Not found error fallback component;
@@ -279,14 +278,14 @@ function NotFoundFallback(): JSX.Element {// TODO: Add content;}
           <button></button>
             onClick={() => window.history.back()}"
             className="bg-gray-200 text-gray-800 px-6 py-2 rounded-lg,"
-  hover:bg-gray-300 transition-colors"
+  hover: bg-gray-300 transition-colors"
 // >
 //             Go Back;
           </button>
         </div>
       </div>
     </div>
-  )
+  ),
 }
 /**
  * Get error type from error object;

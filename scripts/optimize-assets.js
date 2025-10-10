@@ -4,9 +4,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 
 // const __filename = fileURLToPath(import.meta.url);
-// const __dirname = path.dirname(__filename);
-
-// // Optimize CSS;
+// // // Optimize CSS;
 function optimizeCSS() {
 //   const cssPath = path.join(process.cwd(), '.next/static/css');
   if (fs.existsSync(cssPath)) {

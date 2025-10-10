@@ -1,4 +1,6 @@
-import { Helmet } from "react-helmet-async";"
+import { Helmet } from "react-helmet-async";
+import Footer from '../components/Footer';
+import Navigation from '../components/Navigation';"
 impo, r, t { Glo, b, e } fr, o, m "luci, d, e-rea, c, t";"
 import, Header, from "../../componen, t, s/Head, e, r";"
 import, Footer, from "../../componen, t, s/Foot, e, r";
@@ -81,6 +83,8 @@ const, AIVirtualAssistan, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
   ];
   return (<>
       <Helmet></Helmet>
+
+      <Navigation />
         <title>AI, Virtual, Assistant - Zion, Tech, Group | 24/7, Intelligent, Customer Suppo, r, t</title>
         <me, t, a;"
   na, m, e="descripti, o, n""

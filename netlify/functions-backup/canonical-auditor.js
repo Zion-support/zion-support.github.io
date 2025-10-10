@@ -24,7 +24,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   t: new Date().toISOString()}
         }})};
     return result;
-//   } catch (error) {// console.error('Error in canonical-auditor: ') error;
+//   } catch (error) {// console.error('Error in canonical-auditor: ') error;,
       }
     return {
       statusCode: 500;
@@ -48,7 +48,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   }
 };
         timestamp: new Date().toISOString(),' function: 'canonical-auditor',' source: event.source || 'unknown', auditing: {' status: 'active', pagesAudited: 0, issuesFound: 0;
-        lastAudit: new Date().toISOString() } }) }; return result; } catch (error) {' // console.error('Error in canonical-auditor: ') error;
+        lastAudit: new Date().toISOString() } }) }; return result; } catch (error) {' // console.error('Error in canonical-auditor: ') error;,
       } return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'canonical-auditor' }) }; } };'
         timestam,
   p: new Date().toISOString(),' functio,

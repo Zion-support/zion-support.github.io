@@ -4,6 +4,7 @@
  */
 
 import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
 
 // Meta tags utilities;
 export const seoUtils = {/* content */}
@@ -52,7 +53,7 @@ export const seoUtils = {/* content */}
     datePublished: string;
     dateModified: string;
     image?: string;
-    url: string;
+    url: string;,
   }) => ({/* content */}
     "@context": "https: //schema.org",
     "@type": "Article",
@@ -77,8 +78,8 @@ export const seoUtils = {/* content */}
     "description": "Advanced AI and IT Solutions","
     "sameAs": ["
       "http,"
-  s://linkedin.com/company/zion-tech"
-    ])
+  s: //linkedin.com/company/zion-tech"
+    ]),
   }),
 
   // Generate breadcrumb structured data,
@@ -128,7 +129,7 @@ export const seoUtils = {/* content */}
   d: string;
     image?: string;
     ur,
-  l: string;)
+  l: string;),
   }) => ({/* content */}"
     "@context": "http,"
   s://schema.org","
@@ -315,7 +316,7 @@ export const performanceSEO = {/* content */}
     width?: number;
     height?: number;
     loadin,
-  g: 'lazy';
+  g: 'lazy';,
   } => {/* content */}
     return {/* content */}
       sr,`
@@ -325,7 +326,7 @@ export const performanceSEO = {/* content */}
       height,
       loading: 'lazy' as const;
       loadin,
-  g: 'lazy' as const;
+  g: 'lazy' as const;,
     };
   }
 };
@@ -348,7 +349,7 @@ export const analyticsUtils = {/* content */}
         page_titl,
   e: title,
         page_locatio,
-  n: url;)
+  n: url;),
       });
     }
   },
@@ -379,7 +380,7 @@ export const analyticsUtils = {/* content */}
         send_t,
   o: conversionId,
         valu,
-  e: value;)
+  e: value;),
       });
     }
   }
@@ -412,7 +413,7 @@ export const coreWebVitals = {/* content */}
         metric_i,
   d: metric.id,
         metric_delt,
-  a: metric.delta;
+  a: metric.delta;,
       });
     };
 
@@ -473,6 +474,8 @@ export const SEOComponent = ({/* content */}
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={fullImage} />
   return (<div> </div><Helmet></Helmet>
+
+      <Navigation />
       <title>{fullTitle}</title>"
       <meta name="description" content={description} /></meta>"
       <meta name="keywords" content={keywords} /></meta>"

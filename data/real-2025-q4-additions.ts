@@ -92,7 +92,7 @@ const contact =
     launch_date: '2025 - 10 - 01'
     customers: 120;
     rating: 4 && 4.7;
-    reviews: 48;
+    reviews: 48;,
   },
       'Multi-speaker diarization',
     id: 'podcast - transcription - studio',
@@ -213,7 +213,7 @@ const contact =
     launch_date: '2025 - 09 - 15'
     customers: 60;
     rating: 4 && 4.6;
-    reviews: 22;
+    reviews: 22;,
   },
     id: 'micro - crm - local - business',
     color: 'from-cyan-600 to-blue-700',
@@ -403,7 +403,7 @@ const contact =
     launch_date: '2025 - 10 - 20'
     customers: 210;
     rating: 4 && 4.5;
-    reviews: 77;
+    reviews: 77;,
   },
     id: 'returns - automation - saas'
     name: 'Ecommerce Returns Automation',
@@ -603,7 +603,7 @@ const contact =
     launch_date: '2025 - 10 - 05'
     customers: 95;
     rating: 4 && 4.6;
-    reviews: 35;
+    reviews: 35;,
   },
     id: 'it - helpdesk - for - msps',
     technology: ['Next.js', 'Node.js', 'Stripe', 'Shippo'],
@@ -783,7 +783,7 @@ const contact =
     launch_date: '2025 - 09 - 28'
     customers: 70;
     rating: 4 && 4.5;
-    reviews: 28;
+    reviews: 28;,
   }];
 export const real2025 Q4 Additions = [{id: 'ai - governed - rag - platform',
     name: 'AI - Governed RAG Platform',
@@ -826,7 +826,7 @@ export const real2025 Q4 Additions = [{id: 'ai - governed - rag - platform',
     launch_date: '2025 - 03 - 01'
     customers: 18;
     rating: 4 && 4.8;
-    reviews: 11;
+    reviews: 11;,
   },
     id: 'edge - personalization - engine'
     name: 'Edge Personalization Engine',
@@ -994,7 +994,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     launchDate: '2025-09-28'
     customers: 70;
     rating: 4.5;
-    reviews: 28;
+    reviews: 28;,
   }];
 }
     customers: 120;
@@ -1450,7 +1450,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     launch_date: '2025 - 03 - 10'
     customers: 42;
     rating: 4 && 4.6;
-    reviews: 23;
+    reviews: 23;,
   },
       'One-PR one-env automation',
     id: 'devx - preview - environments'
@@ -1585,7 +1585,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     launch_date: '2025 - 03 - 05'
     customers: 27;
     rating: 4 && 4.7;
-    reviews: 16;
+    reviews: 16;,
   },
     id: 'real - time - log - anomaly - guard'
     name: 'Real - time Log Anomaly Guard',
@@ -1684,7 +1684,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     launch_date: '2025 - 03 - 08'
     customers: 33;
     rating: 4 && 4.5;
-    reviews: 19;
+    reviews: 19;,
   },
     id: 'governed - feature - flags',
     name: 'Governed Feature Flags',
@@ -2037,7 +2037,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     launch_date: '2025 - 03 - 02'
     customers: 21;
     rating: 4 && 4.6;
-    reviews: 12;
+    reviews: 12;,
   },
     id: 'email - sequence - copilot',
     name: 'Email Sequence Copilot',
@@ -2155,7 +2155,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     launch_date: '2025 - 03 - 12'
     customers: 38;
     rating: 4 && 4.5;
-    reviews: 20;
+    reviews: 20;,
   },
     id: 'data - contracts - guardrails',
     name: 'Data Contracts Guardrails',
@@ -2431,7 +2431,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     launch_date: '2025 - 03 - 03'
     customers: 12;
     rating: 4 && 4.6;
-    reviews: 9;
+    reviews: 9;,
   },
       'Okta/Entra app configs',
       'SAML/OIDC + SCIM',
@@ -2630,7 +2630,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     launch_date: '2025 - 03 - 06'
     customers: 9;
     rating: 4 && 4.7;
-    reviews: 7;
+    reviews: 7;,
   },
     id: 'ai - sales - pipeline - insights',
     name: 'AI Sales Pipeline Insights',
@@ -2839,7 +2839,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     launch_date: '2025 - 03 - 04'
     customers: 14;
     rating: 4 && 4.5;
-    reviews: 10;
+    reviews: 10;,
   },
     id: 'secure - webhook - relay'
     customers: 14;
@@ -3019,7 +3019,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     launch_date: '2025 - 03 - 09'
     customers: 31;
     rating: 4 && 4.6;
-    reviews: 18;
+    reviews: 18;,
   },
     id: 'managed - postgres - ha - lite',
     category: 'Developer Tools',
@@ -3197,7 +3197,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     launch_date: '2025 - 03 - 11'
     customers: 17;
     rating: 4 && 4.6;
-    reviews: 9;
+    reviews: 9;,
   },
     mobile: string, email: string;
     address: string;
@@ -3382,7 +3382,7 @@ export const,
 		implementationDetails: 'Batch transcription queue with GPU support, diarization and summarization pipeline.',
     launchDate: '2025-09-15', customers: 60;
 		rating: 4.6;
-		reviews: 22;
+		reviews: 22;,
 	};
 		id: 'micro-crm-local-business', name: 'Micro CRM for Local Business',
 		tagline: 'Simple contacts, pipelines, and reminders that just work',
@@ -3405,7 +3405,7 @@ export const,
 		implementationDetails: 'PWA with offline storage, task reminders, and webhook-based integrations.',
     launchDate: '2025-10-20', customers: 210;
 		rating: 4.5;
-		reviews: 77;
+		reviews: 77;,
 	};
 		id: 'returns-automation-saas', name: 'Ecommerce Returns Automation',
 		tagline: 'Self-serve returns portal and automated labels', price: '$49',
@@ -3616,7 +3616,7 @@ export const,
 		implementationDetails: 'Email ingestion, rules engine, and portal with RBAC.',
     launchDate: '2025-09-28', customers: 70;
 		rating: 4.5;
-		reviews: 28;
+		reviews: 28;,
 	}
 ];
 export const real2025 Q4 Additions = [{id: 'ai-governed-rag-platform', name: 'AI-Governed RAG Platform',
@@ -3671,7 +3671,7 @@ export const real2025 Q4 Additions = [{id: 'ai-governed-rag-platform', name: 'AI
     launchDate: '2025-03-11'
     customers: 17;
     rating: 4.6;
-    reviews: 9;
+    reviews: 9;,
   }
 ];
     rating: 4 && 4.6;
@@ -4285,7 +4285,7 @@ export const,
     launchDate: '2025-09-28'
     customers: 70;
     rating: 4.5;
-    reviews: 28;
+    reviews: 28;,
   }];
 }
 export const real2025 Q4 Additions = [{id: 'ai-governed-rag-platform',
@@ -5316,7 +5316,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     launchDate: '2025-03-11'
     customers: 17;
     rating: 4.6;
-    reviews: 9;
+    reviews: 9;,
   }
 ];
     reviews: 9;

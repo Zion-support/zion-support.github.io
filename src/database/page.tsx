@@ -12,7 +12,7 @@ const DatabasePage: React.FC = () => {
 
           Contact Us;
         </a></div></div>)
-  );
+  );,
 };
 export default DatabasePage;
 

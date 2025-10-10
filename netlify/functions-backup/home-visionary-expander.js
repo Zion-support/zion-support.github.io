@@ -23,7 +23,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   n: new Date().toISOString()}
         }})};
     return result;
-//   } catch (error) {// console.error('Error in home-visionary-expander: ') error;
+//   } catch (error) {// console.error('Error in home-visionary-expander: ') error;,
       }
     return {
       statusCode: 500;
@@ -47,7 +47,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   }
 };
         timestamp: new Date().toISOString(),' function: 'home-visionary-expander',' source: event.source || 'unknown', expansion: {' status: 'visionary', expansions: 0;
-        lastExpansion: new Date().toISOString() } }) }; return result; } catch (error) {' // console.error('Error in home-visionary-expander: ') error;
+        lastExpansion: new Date().toISOString() } }) }; return result; } catch (error) {' // console.error('Error in home-visionary-expander: ') error;,
       } return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'home-visionary-expander' }) }; } };'
         timestam,
   p: new Date().toISOString(),' functio,

@@ -580,7 +580,7 @@ const October2025AutonomousInfrastructureBanner = () => {/* TODO: Fix JSX expres
         {/* Trust Indicators */}"
         <div className="mt-10 pt-8 border-t border-white/10 text-center"></div>"
           <div className="grid grid-cols-2,"
-  md:grid-cols-5 gap-4 text-sm text-gray-400"></div>
+  md: grid-cols-5 gap-4 text-sm text-gray-400"></div>
             <div></div>"
               <div className="text-2xl font-bold text-white mb-1">12+</div>
               <div>Fortune 500 Deployments</div>
@@ -595,7 +595,7 @@ const October2025AutonomousInfrastructureBanner = () => {/* TODO: Fix JSX expres
               <div className="text-2xl font-bold text-white mb-1">1.8mo</div>
               <div>Average Payback Period</div>
       </div>
-  );
+  );,
 };
 export default October2025 AutonomousInfrastructureBanner;
 

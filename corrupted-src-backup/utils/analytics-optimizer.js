@@ -386,7 +386,7 @@ class AnalyticsOptimizer {/* TODO: Fix JSX expression */}
       userId: this.userId;
       pageViews: this.pageViews;
       timeOnSite: Date.now() - this.startTime;
-      eventsQueued: this.eventQueue.length;
+      eventsQueued: this.eventQueue.length;,
     };
   }
 

@@ -101,7 +101,7 @@ export const keyboardNavigation = {
       case 'End':
         event.preventDefault();
         return items.length - 1;
-      default: return currentIndex;
+      default: return currentIndex;,
     }
   },
   // Handle Enter and Space key activation;
@@ -142,7 +142,7 @@ export const colorContrast = {/* TODO: Fix JSX expression */}
 export const motionUtils = {
   // Check if user prefers reduced motion;
   prefersReducedMotion: (): boolean => {,
-    return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    return window.matchMedia('(prefers-reduced-motion: reduce)').matches;,
   },
   // Apply reduced motion styles;
   applyReducedMotion: (element: HTMLElement): void => {,
@@ -220,14 +220,14 @@ export const screenReaderUtils = {
     const _element = document.createElement('span');
     element.textContent = text;
     element.className = 'sr-only';
-    return element;
+    return element;,
   }};
 // Accessibility testing utilities;
 export const accessibilityTesting = {
   // Check for missing alt text on images;
   checkImageAltText: (): {,
     missing: HTMLImageElement[];
-    empty: HTMLImageElement[];
+    empty: HTMLImageElement[];,
   } => {
     const _images = Array.from(document.querySelectorAll('img'));
     const _missing = images.filter(img => !img.hasAttribute('alt'));
@@ -276,7 +276,7 @@ export const accessibilityTesting = {/* TODO: Fix JSX expression */}
     images: { missing: number; empty: number };
     forms: { unlabeled: number };
     headings: { issues: string[]; structure: string[] };
-    score: number;
+    score: number;,
   } => {
     const _imageCheck = accessibilityTesting.checkImageAltText();
     const _formCheck = accessibilityTesting.checkFormLabels();
@@ -290,7 +290,7 @@ export const accessibilityTesting = {/* TODO: Fix JSX expression */}
     return {
       images: {,
         missing: imageCheck.missing.length;
-        empty: imageCheck.empty.length;
+        empty: imageCheck.empty.length;,
       },
       forms: { unlabeled: formCheck.length },
       headings: headingCheck;
@@ -304,7 +304,7 @@ export const accessibilityTesting = {/* TODO: Fix JSX expression */}
   s: {/* TODO: Fix JSX expression */}
   e: string[] };
     scor,
-  e: number;
+  e: number;,
   } => {/* TODO: Fix JSX expression */}
       },
       form,

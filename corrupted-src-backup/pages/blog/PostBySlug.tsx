@@ -109,7 +109,7 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
           </a>)
         </div>)
       </div>)
-    );
+    );,
   }
 
   return(<div className="min-h-screen bg-gray-50">

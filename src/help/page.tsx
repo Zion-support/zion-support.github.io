@@ -269,7 +269,7 @@ questionquestion: 'Is there a free trial available?',
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
               Can't find what you're looking for? Our support team is here to help you 
               with any questions or issues you might have.
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
               <a
                 href="/contact"
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
@@ -289,7 +289,7 @@ questionquestion: 'Is there a free trial available?',
   return (
     <div>Coming Soon</div>
 
-  );
+  );,
 };
   const [searchTerm, setSearchTerm] = useState('');
   const [activeCategory, setActiveCategory] = useState('getting-started');

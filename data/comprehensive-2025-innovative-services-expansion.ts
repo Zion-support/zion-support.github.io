@@ -29,7 +29,7 @@
     mobile: string;
     email: string;
     address: string;
-    website: string;
+    website: string;,
   }
   real_implementation: boolean;
   implementation_details: string;
@@ -40,7 +40,7 @@
   benefits: string[];
   marketAdvantage: string;
   capabilities: string[],
-  market_advantage: string;
+  market_advantage: string;,
 }
 const contact =
   mobile: '+1 302 464 0950',
@@ -585,7 +585,7 @@ export interface ComprehensiveInnovativeService {;
   reviews: number;
   benefits: string[];
   capabilities: string[];
-  marketAdvantage: string;
+  marketAdvantage: string;,
 }
 ;
 // const contact = {;

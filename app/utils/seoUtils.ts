@@ -18,14 +18,14 @@ export interface SEOConfig {
   publishedTime?: string;
   modifiedTime?: string;
   section?: string;
-  tags?: string[];
+  tags?: string[];,
 }
 
 export class SEOManager {
   private config: SEOConfig;
 
   constructor(config: SEOConfig) {
-    this.config = config;
+    this.config = config;,
   }
 
   public updateConfig(newConfig: Partial<SEOConfig>): void {
@@ -170,7 +170,7 @@ export class SEOManager {
     const meta = document.createElement('meta');
     meta.name = name;
     meta.content = content;
-    document.head.appendChild(meta);
+    document.head.appendChild(meta);,
   }
 }
 
@@ -204,7 +204,7 @@ export const generateKeywords = (content: string, maxKeywords: number = 10): str
 export const isValidUrl = (url: string): boolean => {
   try {
     new URL(url);
-    return true;
+    return true;,
   } catch {
     return false;
   }
@@ -212,7 +212,7 @@ export const isValidUrl = (url: string): boolean => {
 
 export const getCanonicalUrl = (path: string, baseUrl: string = ''): string => {
   if (isValidUrl(path)) {
-    return path;
+    return path;,
   }
   
   const base = baseUrl || (typeof window !== 'undefined' ? window.location.origin : '');
@@ -232,5 +232,5 @@ export const addStructuredData = (data: any): void => {
   const script = document.createElement('script');
   script.type = 'application/ld+json';
   script.textContent = createStructuredData(data);
-  document.head.appendChild(script);
+  document.head.appendChild(script);,
 };

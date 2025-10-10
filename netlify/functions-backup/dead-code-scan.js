@@ -30,8 +30,8 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
 exports.config = {// Run daily at 03: 30;
   schedule: '30 3 * * *'}
 };
-exports.handler = async function() { const { execSync } = require('child_process'); try {' execSync('node automation/dead-code-scanner.cjs || true') { stdio: 'inherit'} shell: true;
-      });' execSync('git config user.name "zion-bot" && git config user.email "bot@zion.app" && git add -A && (git commit -m "chore(cleanup): dead code scan results [ci skip]" || true) && (git push origin main || true)', {stdio: 'inherit'} shell: true;
+exports.handler = async function() { const { execSync } = require('child_process'); try {' execSync('node automation/dead-code-scanner.cjs || true') { stdio: 'inherit'} shell: true;,
+      });' execSync('git config user.name "zion-bot" && git config user.email "bot@zion.app" && git add -A && (git commit -m "chore(cleanup): dead code scan results [ci skip]" || true) && (git push origin main || true)', {stdio: 'inherit'} shell: true;,
       });' return {statusCode: 200;
         body: JSON.stringify({ok: true),
         task: 'dead-code-scan' }) }; } catch (e) {return { statusCode: 200;
@@ -45,7 +45,7 @@ exports.handler = async function() { const { execSync } = require('child_process
   l: true;"
       });' execSync('git config user.name "zion-bot" && git config user.email "bot@zion.app" && git add -A && (git commit -m "chore(cleanup): dead code scan results [ci skip]" || true) && (git push origin main || true)', {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
-  l: true;
+  l: true;,
       });' return {/* TODO: Fix JSX expression */}
   k: 'dead-code-scan' }) }; } catch (e) {/* TODO: Fix JSX expression */}
       }) }; } }; exports.config = {/* TODO: Fix JSX expression */}

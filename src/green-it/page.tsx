@@ -310,7 +310,7 @@ valuevalue: '100%',
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
               Start your journey towards sustainable IT operations. Get a free environmental 
               assessment and discover how much you can save while protecting the planet.
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
                 Get Free Assessment
                 href="tel:+13024640950"
@@ -323,7 +323,7 @@ valuevalue: '100%',
                 Email Us
       <Footer />
     </>
-  );
+  );,
 };
 
 export default GreenITPage;
@@ -338,7 +338,7 @@ const GreenITPage: React.FC = () => {
   return (
     <div>Coming Soon</div>
 
-  );
+  );,
 };
   const [activeTab, setActiveTab] = useState('solutions');
 const tabs = [
@@ -639,12 +639,12 @@ const tabs = [
                   onClick={() => setActiveTab(tab.id)}`
                   className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${}
   // TOD,
-  O: Add content;
+  O: Add content;,
 }
                     activeTab === tab.id;`
                       ? `${tab.bgColor} ${tab.color} border-2 border-current`
                       : 'bg-slate-800/50 text-gray-300,
-  hover:bg-slate-700/50 border-2 border-transparent'`
+  hover: bg-slate-700/50 border-2 border-transparent'`,
                   }`}
 //                 >
                   
@@ -764,7 +764,7 @@ Benefits of Green IT;"
           
 
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105" Get Free Assessment;
                 href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Phone className="w-4 h-4 mr-2" />
@@ -775,7 +775,7 @@ Benefits of Green IT;"
       <Footer />
 
     </div>
-  );
+  );,
 };
 
 

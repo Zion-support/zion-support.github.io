@@ -23,7 +23,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   t: new Date().toISOString()}
         }})};
     return result;
-//   } catch (error) {// console.error('Error in frontpage-enhancer: ') error;
+//   } catch (error) {// console.error('Error in frontpage-enhancer: ') error;,
       }
     return {
       statusCode: 500;
@@ -47,7 +47,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   }
 };
         timestamp: new Date().toISOString(),' function: 'frontpage-enhancer',' source: event.source || 'unknown', enhancement: {' status: 'active', enhancements: 0;
-        lastEnhancement: new Date().toISOString() } }) }; return result; } catch (error) {' // console.error('Error in frontpage-enhancer: ') error;
+        lastEnhancement: new Date().toISOString() } }) }; return result; } catch (error) {' // console.error('Error in frontpage-enhancer: ') error;,
       } return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'frontpage-enhancer' }) }; } };'
         timestam,
   p: new Date().toISOString(),' functio,

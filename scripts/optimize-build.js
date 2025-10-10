@@ -7,39 +7,31 @@ import { glob } from 'glob';
 function optimizeImages() {
 function optimizeImages() {/* TODO: Fix JSX expression */}
 }
-  // console.log('🖼️  Optimizing images...');
-  // This would typically use sharp or imagemin;
+  // // This would typically use sharp or imagemin;
   // For now, we'll just log the process;
-  // console.log('✓ Image optimization completed');
-}
+  // }
 
 // Function to optimize CSS;
 function optimizeCSS() {
 function optimizeCSS() {/* TODO: Fix JSX expression */}
 }
-  // console.log('🎨 Optimizing CSS...');
-  // This would typically use postcss and purgecss;
+  // // This would typically use postcss and purgecss;
   // For now, we'll just log the process;
-  // console.log('✓ CSS optimization completed');
-}
+  // }
 
 // Function to optimize JavaScript bundles;
 function optimizeJS() {
 function optimizeJS() {/* TODO: Fix JSX expression */}
 }
-  // console.log('📦 Optimizing JavaScript bundles...');
-  // This would typically use webpack-bundle-analyzer or similar;
+  // // This would typically use webpack-bundle-analyzer or similar;
   // For now, we'll just log the process;
-  // console.log('✓ JavaScript optimization completed');
-}
+  // }
 
 // Function to generate sitemap;
 function generateSitemap() {
 function generateSitemap() {/* TODO: Fix JSX expression */}
 }
-  // console.log('🗺️  Generating sitemap...');
-  
-  const pages = [
+  // const pages = [
     {/* TODO: Fix JSX expression */}
   q: 'daily' },
     {/* TODO: Fix JSX expression */}
@@ -72,15 +64,13 @@ ${/* TODO: Fix JSX expression */}
 </urlset>`;
 
   fs.writeFileSync('public/sitemap.xml', sitemap);
-  // console.log('✓ Sitemap generated');
-}
+  // }
 
 // Function to generate robots.txt;
 function generateRobots() {
 function generateRobots() {/* TODO: Fix JSX expression */}
 }
-  // console.log('🤖 Generating robots.txt...');
-  `
+  // `
   const robots = `User-agen,
   t: *
 Allo,
@@ -98,16 +88,13 @@ Crawl-dela,`
   y: 1`;
 
   fs.writeFileSync('public/robots.txt', robots);
-  // console.log('✓ Robots.txt generated');
-}
+  // }
 
 // Function to check for performance issues;
 async function checkPerformance() {
 async function checkPerformance() {/* TODO: Fix JSX expression */}
 }
-  // console.log('⚡ Checking for performance issues...');
-  
-  const issues = [];
+  // const issues = [];
   
   // Check for large files;
   const files = await glob('app/**/*.{ts,tsx,js,jsx}');
@@ -119,8 +106,7 @@ async function checkPerformance() {/* TODO: Fix JSX expression */}
   }
   
   if (issues.length > 0) {
-    // console.log('⚠️  Performance issues found: ');
-  for (const file of files) {/* TODO: Fix JSX expression */}`
+    // for (const file of files) {/* TODO: Fix JSX expression */}`
   detected: ${file} (${Math.round(stats.size / 1024)}KB)`);
     }
   }
@@ -133,17 +119,13 @@ async function checkPerformance() {/* TODO: Fix JSX expression */}
 
 // Main optimization function;
 async function optimize() {
-  // console.log('🚀 Starting build optimization...\n');
-  
-  try {
+  // try {
     // Create public directory if it doesn't exist;
     if (!fs.existsSync('public')) {
       fs.mkdirSync('public');
 async function optimize() {/* TODO: Fix JSX expression */}
 }
-  // console.log('🚀 Starting build optimization...\n');
-  
-  try {/* TODO: Fix JSX expression */}
+  // try {/* TODO: Fix JSX expression */}
     }
     
     await checkPerformance();
@@ -153,18 +135,10 @@ async function optimize() {/* TODO: Fix JSX expression */}
     generateSitemap();
     generateRobots();
     
-    // console.log('\n✅ Build optimization completed successfully!');
-    // console.log('\n📊 Optimization Summary: ');
-    // console.log('\n📊 Optimization)
+    // // // console.log('\n📊 Optimization)
   Summary:');
-    // console.log('   - Images optimized');
-    // console.log('   - CSS optimized');
-    // console.log('   - JavaScript bundles optimized');
-    // console.log('   - Sitemap generated');
-    // console.log('   - Robots.txt generated');
-    } catch (error) {
-    // console.error('❌ Optimization failed:', error.message);
-    process.exit(1);
+    // // // // // } catch (error) {
+    // process.exit(1);
     
   } catch (error) {/* TODO: Fix JSX expression */}
   }

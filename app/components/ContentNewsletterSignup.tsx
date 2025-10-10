@@ -16,16 +16,16 @@ const ContentNewsletterSignup: React.FC = () => {
     setTimeout(() => {
       setIsSubscribed(true);
       setIsLoading(false);
-      setEmail('');
+      setEmail('');,
     }, 1000);
   };
 
   if (isSubscribed) {
     return (
       <div className="py-16 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-white/5 backdrop-blur-lg rounded-xl p-8 border border-white/10">
-            <div className="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+        </div><div className="max-w-4xl mx-auto text-center">
+          </div><div className="bg-white/5 backdrop-blur-lg rounded-xl p-8 border border-white/10">
+            </div><div className="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
               <CheckCircle className="w-8 h-8 text-green-400" />
             </div>
             <h2 className="text-3xl font-bold text-white mb-4">
@@ -36,21 +36,21 @@ const ContentNewsletterSignup: React.FC = () => {
             </p>
             <button
               onClick={() => setIsSubscribed(false)}
-              className="text-cyan-400 hover:text-cyan-300 font-medium"
+              className="text-cyan-400 hover: text-cyan-300 font-medium"
             >
               Subscribe Another Email
             </button>
           </div>
         </div>
       </div>
-    );
+    );,
   }
 
   return (
     <div className="py-16 px-4">
-      <div className="max-w-4xl mx-auto text-center">
-        <div className="bg-white/5 backdrop-blur-lg rounded-xl p-8 border border-white/10">
-          <div className="w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+      </div><div className="max-w-4xl mx-auto text-center">
+        </div><div className="bg-white/5 backdrop-blur-lg rounded-xl p-8 border border-white/10">
+          </div><div className="w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
             <Mail className="w-8 h-8 text-cyan-400" />
           </div>
           <h2 className="text-3xl font-bold text-white mb-4">

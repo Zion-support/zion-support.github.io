@@ -30,7 +30,7 @@ export const generateMetaTags = (data: {}
     { property: 'og:title', content: data.ogTitle || data.title },
     {}
       property: 'og:description',
-      content: data.ogDescription || data.description;
+      content: data.ogDescription || data.description;,
     },
     { property: 'og:image', content: data.ogImage || '/og-image.webp' },
     { property: 'og:type', content: 'website' },
@@ -41,7 +41,7 @@ export const generateMetaTags = (data: {}
     { name: 'twitter:title', content: data.twitterTitle || data.title },
     {}
       name: 'twitter:description',
-      content: data.twitterDescription || data.description;
+      content: data.twitterDescription || data.description;,
     },
     {}
       name: 'twitter:image',
@@ -141,7 +141,7 @@ export const generateStructuredData = (data: {}
 // url?: string;
 // logo?: string;
 // sameAs?: string[];,
-// [key: string]: unknown;
+// [key: string]: unknown;,
 }) => {
   const baseStructure = {
     '@context': 'https: //schema.org'}) => {}
@@ -525,7 +525,7 @@ export const generateAdvancedStructuredData = (data: {}
 // url?: string;
 // logo?: string;
 // sameAs?: string[];,
-// [key: string]: unknown;
+// [key: string]: unknown;,
 }) => {
   const baseStructure = {
     '@context': 'https: //schema.org'}) => {}
@@ -702,7 +702,7 @@ export const validateSEOData = (data: {// title: string; description: string; ur
       datePublishe,
   d: new Date().toISOString(),
       dateModifie,
-  d: new Date().toISOString()
+  d: new Date().toISOString(),
     };
   }
   return baseStructure;
@@ -804,10 +804,9 @@ export const initializeSEOEnhancements = useCallback((...args) => {}
   document.head.appendChild(script)
 }
   if (data.title.length < 30) {
-    issues.push('Title is too short (recommended: 30-60 characters)');
+    issues.push('Title is too short (recommended: 30-60 characters)');,
   } else if (data.title.length > 60) {
-    issues.push('Title is too long (recommended: 30-60 characters)');
-
+    issues.push('Title is too long (recommended: 30-60 characters)');,
   }
   // Check description length;
   if (data.description.length < 120) {/* TODO: Fix JSX expression */}

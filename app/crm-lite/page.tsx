@@ -5,7 +5,7 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
 
 const PagePage: React.FC = () => {
   const features = [
-    {
+    {,
     }
   ];
 

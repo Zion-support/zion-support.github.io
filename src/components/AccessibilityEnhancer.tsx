@@ -1,14 +1,14 @@
 import React, { useEffect } from 'react';
 
 interface AccessibilityEnhancerProps {
-  children: React.ReactNode;
+  children: React.ReactNode;,
 }
 
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {</AccessibilityEnhancerProps>useEffect</AccessibilityEnhancerProps>(() => {
     // Add keyboard navigation support
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Tab') {
-        document.body.classList.add('keyboard-navigation');
+        document.body.classList.add('keyboard-navigation');,
       }
     };
 
@@ -22,7 +22,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       style.textContent = `
         .keyboard-navigation *:focus {
           outline: 2 px solid #06 b6 d4 !important;
-          outline-offset: 2 px !important;
+          outline-offset: 2 px !important;,
         }
       `;
       document.head.appendChild(style);
@@ -97,7 +97,7 @@ interface AccessibilitySettings {
   highContrast: boolean;
   reducedMotion: boolean;
   fontSize: 'small' | 'medium' | 'large';
-  focusVisible: boolean;
+  focusVisible: boolean;,
 }
 
 const AccessibilityEnhancer: React.FC = () => {

@@ -23,7 +23,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   l: new Date().toISOString()}
         }})};
     return result;
-//   } catch (error) {// console.error('Error in netlify-auto-healer-runner: ') error;
+//   } catch (error) {// console.error('Error in netlify-auto-healer-runner: ') error;,
       }
     return {
       statusCode: 500;
@@ -47,7 +47,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   }
 };
         timestamp: new Date().toISOString(),' function: 'netlify-auto-healer-runner',' source: event.source || 'unknown', healing: {' status: 'active', issuesHealed: 0;
-        lastHeal: new Date().toISOString() } }) }; return result; } catch (error) {' // console.error('Error in netlify-auto-healer-runner: ') error;
+        lastHeal: new Date().toISOString() } }) }; return result; } catch (error) {' // console.error('Error in netlify-auto-healer-runner: ') error;,
       } return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'netlify-auto-healer-runner' }) }; } }; '
         timestam,
   p: new Date().toISOString(),' functio,

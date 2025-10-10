@@ -1,3 +1,4 @@
+import React from 'react';
 
 
 
@@ -175,13 +176,13 @@ Most Popular;
                       {feature}`
                   className={`block w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${}
   // TOD,
-  O: Add content;
+  O: Add content;,
 }
 //                     plan.popular;
 //                       ? 'cyber-button'
                       : 'border-2 border-cyan-400 text-cyan-400,
   hover:bg-cyan-400,
-  hover:text-slate-900'`
+  hover: text-slate-900'`,
                   }`}
         {/* CTA Section */}
         
@@ -202,7 +203,7 @@ Ready to See the Future?"
               Transform your business with AI-powered computer vision solutions that see, understand, and act.
 
                 Start Your Vision Journey;
-                href="/demo" className="flex items-center gap-2 border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300"
+                href="/demo" className="flex items-center gap-2 border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover: bg-purple-400 hover:text-slate-900 transition-all duration-300"
                 <Camera className="w-5 h-5" />
 
                 Request Demo;
@@ -210,7 +211,7 @@ Ready to See the Future?"
       <Footer /></Footer>
 
     </div>
-  );
+  );,
 };
 
 

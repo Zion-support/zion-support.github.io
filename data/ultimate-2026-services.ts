@@ -114,7 +114,7 @@ export const,
   realImplementation: boolean;
   contactInfo: unknown;
     mobile: string, email: string;
-    address: string;
+    address: string;,
   }
 }
 export const ultimate2026 Services: Ultimate2026 Service[] = [,

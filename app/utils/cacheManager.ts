@@ -56,14 +56,14 @@ export class CacheManager<T = unknown> {}
     misses: 0,
     hitRate: 0,
     count: 0,
-    entries: 0
+    entries: 0,
   };
   private config: Required<CacheConfig>;
 
   constructor(config: CacheConfig = {}) {}
     this.config = {}
       storage: config.storage || CacheStorage.Memory,
-      defaultTTL: config.defaultTTL || 5 * 60 * 1000 // 5 minutes
+      defaultTTL: config.defaultTTL || 5 * 60 * 1000 // 5 minutes,
     };
   }
 
@@ -77,7 +77,7 @@ export class CacheManager<T = unknown> {}
     const entry: CacheEntry<T> = {}
       value,
       timestamp: Date.now(),
-      ttl: ttl || this.config.defaultTTL;
+      ttl: ttl || this.config.defaultTTL;,
     };
 
     this.cache.set(key, entry);

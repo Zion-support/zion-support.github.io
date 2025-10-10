@@ -362,7 +362,7 @@ const PagePage: React.FC = () => {
               Join our partner ecosystem and unlock new opportunities for growth, innovation, and success.
 
               Let's build the future together.
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
               <a
                 href="/contact" className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
 
@@ -389,7 +389,7 @@ const PagePage: React.FC = () => {
       <Footer />
 
     </div>
-  );
+  );,
 };
 
 

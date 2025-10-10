@@ -1,3 +1,4 @@
+import React from 'react';
 'use client';
 
 
@@ -159,7 +160,7 @@ const,
     // Check for HTTPS
     if (location.protocol !== 'https:') {
       warnings.push('Site is not served over HTTPS');
-      setIsSecure(false);
+      setIsSecure(false);,
     }
 
     // Check for security headers (if available)

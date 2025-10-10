@@ -318,7 +318,7 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
 //         const encoded = this.encodeHTML(value);
         originalInnerHTML.set.call(this, encoded);
       },
-      get: originalInnerHTML.get;
+      get: originalInnerHTML.get;,
     });
   }
 
@@ -457,7 +457,7 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
       data,
       timestamp: new Date().toISOString(),
       url: window.location.href;
-      userAgent: navigator.userAgent;
+      userAgent: navigator.userAgent;,
     };
 
     // Send to security monitoring service;

@@ -5,7 +5,7 @@ import { AlertTriangle, RefreshCw, Home, Phone } from 'lucide-react';
 interface ErrorBoundaryState {
   hasError: boolean;
   error: Error | null;
-  errorInfo: any;
+    errorInfo: any;
 }
 
 interface ErrorBoundaryProps {
@@ -18,7 +18,7 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
     this.state = {
       hasError: false,
       error: null,
-      errorInfo: null
+      errorInfo: null,
     };
   }
 
@@ -26,7 +26,7 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
     return {
       hasError: true,
       error,
-      errorInfo: null
+      errorInfo: null,
     };
   }
 
@@ -38,8 +38,7 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
 
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('ErrorBoundary caught an error:', error, errorInfo);
-    }
+      }
 
     // You can also log the error to an error reporting service here
     // Example: logErrorToService(error, errorInfo);
@@ -57,8 +56,8 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
     if (this.state.hasError) {
       return (
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
-          <div className="max-w-md w-full bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 text-center">
-            <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
+          </div><div className="max-w-md w-full bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 text-center">
+            </div><div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
               <AlertTriangle className="w-8 h-8 text-red-400" />
             </div>
             
@@ -95,7 +94,7 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
               
               <button
                 onClick={this.handleGoHome}
-                className="flex items-center justify-center px-6 py-3 bg-gray-600 hover:bg-gray-700 text-white font-semibold rounded-lg transition-colors"
+                className="flex items-center justify-center px-6 py-3 bg-gray-600 hover: bg-gray-700 text-white font-semibold rounded-lg transition-colors"
               >
                 <Home className="w-4 h-4 mr-2" />
                 Go Home
@@ -116,7 +115,7 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
             </div>
           </div>
         </div>
-      );
+      );,
     }
 
     return this.props.children;

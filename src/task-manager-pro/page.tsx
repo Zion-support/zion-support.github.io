@@ -360,12 +360,12 @@ Works with Your Tools;"
             {pricingPlans.map((plan, index) => ()}
           <div key={index} className={`bg-slate-800/50 backdrop-blur-sm rounded-lg p-8 border-2 transition-all duration-300 ${}
   // TOD,
-  O: Add content;
+  O: Add content;,
 }
 //                 plan.popular;
 //                   ? 'border-cyan-400 scale-105'
                   : 'border-slate-700,
-  hover:border-cyan-500/50'`
+  hover: border-cyan-500/50'`,
               }`}></div>
                 {plan.popular && ()}"
           <div className="bg-cyan-400 text-slate-900 px-4 py-2 rounded-full text-sm font-semibold text-center mb-4"></div>

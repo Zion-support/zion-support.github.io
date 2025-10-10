@@ -552,7 +552,7 @@ export default function MicroSaasPage() {
 
       {/* CTA Section */}
       <section className="py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
           <div className="bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2xl p-12 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Transform Your Business?
@@ -581,5 +581,5 @@ export default function MicroSaasPage() {
 
       <Footer />
     </div>
-  );
+  );,
 }

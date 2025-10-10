@@ -1,4 +1,6 @@
-import { Helmet } from "react-helmet-async";"
+import { Helmet } from "react-helmet-async";
+import Footer from '../components/Footer';
+import Navigation from '../components/Navigation';"
 impo, r, t { Z, a, p } fr, o, m "luci, d, e-rea, c, t";"
 import, Header, from "../../componen, t, s/Head, e, r";"
 import, Footer, from "../../componen, t, s/Foot, e, r";
@@ -312,6 +314,8 @@ const, AIPredictiveAnalytic, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expressio
   ];
   return (<>
       <Helmet></Helmet>
+
+      <Navigation />
         <title>AI, Predictive, Analytics - Zion, Tech, Group | Advanced, Forecastin, g & Insigh, t, s</title>
         <me, t, a;"
   na, m, e="descripti, o, n""

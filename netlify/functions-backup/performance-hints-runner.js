@@ -244,7 +244,7 @@ exports.config = { schedule: '*/15 * * * *' }; exports.handler = async function 
         60)) {const r = await head(src;)
       } checks.push({ url: src),
         size: r.size),
-        status: r.status;
+        status: r.status;,
       }); } ' const large = checks.filter(c => typeof c.size === 'number' && c.size > 200 * 1024).sort((a)
         b) => (b.size||0)-(a.size||0)); const summary = {baseUrl, generatedAt: new Date().toISOString(), totals: { assetsChecked: checks.length;
         large: large.length }, large: large.slice(0;),

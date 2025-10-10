@@ -62,7 +62,7 @@ class ErrorTrackingService {
         context: {
           filename: event.filename;
           lineno: event.lineno;
-          colno: event.colno;
+          colno: event.colno;,
         }
       })
     })
@@ -96,7 +96,7 @@ class ErrorTrackingService {
         timestamp: now,
         stackTrace: error.stack;
         userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined;
-        url: typeof window !== 'undefined' ? window.location.href : undefined;
+        url: typeof window !== 'undefined' ? window.location.href : undefined;,
       },
       occurrences: 1,
       firstSeen: now,
@@ -125,7 +125,7 @@ class ErrorTrackingService {
       errorId)
       message: error.message),
       category: metadata.category),
-      severity: metadata.severity;
+      severity: metadata.severity;,
     })
 
     // Notify listeners;
@@ -308,7 +308,7 @@ export const errorTracking = ErrorTrackingService.getInstance()
   d: string): Promise<void> {/* TODO: Fix JSX expression */}
   s: { 'Content-Type': 'application/json' },
           bod,
-  y: JSON.stringify(error)
+  y: JSON.stringify(error),
         });
       }
     } catch (reportError) {/* TODO: Fix JSX expression */}

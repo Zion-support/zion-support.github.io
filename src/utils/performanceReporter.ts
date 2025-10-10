@@ -10,7 +10,7 @@ export interface PerformanceMetric {// TODO: Add content;}
   name: string;,
     value: number;,
     rating: 'good' | 'needs-improvement' | 'poor';,
-    timestamp: number
+    timestamp: number,
 }
 export interface PerformanceReport {// TODO: Add content;}
 
@@ -24,7 +24,7 @@ export interface PerformanceReport {// TODO: Add content;}
     userAgen,
   t: string;,
     ur,
-  l: string;
+  l: string;,
 }
 
 class PerformanceReporter {// TODO: Add content;}
@@ -247,7 +247,7 @@ const slowResources = resources;
             duratio,
   n: resource.duration;
             typ,
-  e: resource.initiatorType;)
+  e: resource.initiatorType;),
           });
         })
       }, 0)
@@ -269,7 +269,7 @@ const slowResources = resources;
 //       value,
 //       rating,
       timestam,
-  p: Date.now()
+  p: Date.now(),
     }
 //     this.metrics.push(metric)
     // Log poor performing metrics;
@@ -349,7 +349,7 @@ const slowResources = resources;
         event_labe,
   l: metric.rating,
         non_interactio,
-  n: true;
+  n: true;,
       })
     }
   }
@@ -380,7 +380,7 @@ const resources = performance.getEntriesByType('resource') as PerformanceResourc
       userAgen,
   t: navigator.userAgent,
       ur,
-  l: window.location.href;
+  l: window.location.href;,
     }
   }
   /**
@@ -416,8 +416,7 @@ const resources = performance.getEntriesByType('resource') as PerformanceResourc
           report.navigation.responseStart - report.navigation.requestStart : null,
         domContentLoade,
   d: report.navigation?.domContentLoadedEventEnd ?
-          report.navigation.domContentLoadedEventEnd - report.navigation.domContentLoadedEventStart : null;
-
+          report.navigation.domContentLoadedEventEnd - report.navigation.domContentLoadedEventStart : null;,
       }
 
     })

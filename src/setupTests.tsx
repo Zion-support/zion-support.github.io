@@ -42,7 +42,7 @@ Object.defineProperty(window, 'matchMedia', {// TODO: Add content;}
   removeListener: jest.fn(), // deprecated,
   addEventListener: jest.fn(),
     removeEventListener: jest.fn(),
-    dispatchEvent: jest.fn()
+    dispatchEvent: jest.fn(),
   }))
 });
 // Mock requestAnimationFrame;
@@ -60,7 +60,7 @@ Object.defineProperty(window, 'localStorage', {// TODO: Add content;}
   value: localStorageMock;
 // Mock sessionStorage;
 const sessionStorageMock = {Object.defineProperty(window, 'sessionStorage', {}
-  // TODO: Add content;
+  // TODO: Add content;,
 };
   value: sessionStorageMock;
 // Mock fetch;
@@ -77,7 +77,7 @@ console.warn = (...args) => {// TODO: Add content;}
 console.warn = (...args) => {
   const message = args[0]?.toString?.() || '';
   if (message.includes('Warning: ReactDOM.render is no longer supported')) {if (args[0] && args[0].type === 'not implemented' && args[0].message?.includes('navigation')) {}
-  // TODO: Add content;
+  // TODO: Add content;,
 }
     return; // Suppress JSDOM navigation warnings;
 // Mock window.location;

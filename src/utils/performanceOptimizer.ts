@@ -31,7 +31,7 @@ interface PerformanceMetrics {// TODO: Add content;}
   cls?: number
   fmp?: number
   ttfb?: number
-  memory?: number
+  memory?: number,
 }
 interface OptimizationConfig {// TODO: Add content;}
 };
@@ -39,7 +39,7 @@ interface OptimizationConfig {// TODO: Add content;}
     enableCodeSplitting: boolean;,
     enableImageOptimization: boolean;,
     enableCaching: boolean;,
-    enableCompression: boolean
+    enableCompression: boolean,
 }
 interface PerformanceConfig extends OptimizationConfig {}
 class PerformanceOptimizer {// TODO: Add content;}
@@ -55,8 +55,7 @@ class PerformanceOptimizer {// TODO: Add content;}
     memoryUsage: 0,
     bundleSize: 0,
     cacheHitRate: 0,
-    lazyLoading: false;
-
+    lazyLoading: false;,
   };
   private,
   config: OptimizationConfig = {/* TODO: Fix JSX expression */}
@@ -67,8 +66,7 @@ class PerformanceOptimizer {// TODO: Add content;}
     enableCodeSplitting: true,
     enableImageOptimization: true,
     enableCaching: true,
-    enableCompression: true;
-
+    enableCompression: true;,
   };
   private,
   observers: PerformanceObserver[] = [];
@@ -347,7 +345,7 @@ class PerformanceOptimizer {// TODO: Add content;}
     totalJSHeapSiz,
   e: number;,
     jsHeapSizeLimi,
-  t: number;)
+  t: number;),
       };)
     }).memory;
     if (memory) {/* TODO: Fix JSX expression */}
@@ -407,8 +405,7 @@ class PerformanceOptimizer {// TODO: Add content;}
     canvas.width = 1;
     canvas.height = 1;
 
-    return canvas.toDataURL('image/webp').indexOf('data:image/webp') === 0;
-
+    return canvas.toDataURL('image/webp').indexOf('data: image/webp') === 0;,
   }
   /**
    * Setup lazy loading for better performance;
@@ -618,8 +615,7 @@ class PerformanceOptimizer {// TODO: Add content;}
       lcp: this.metrics.lcp || 0,
       fid: this.metrics.fid || 0,
       cls: this.metrics.cls || 0,
-      fmp: this.metrics.fmp || 0;
-
+      fmp: this.metrics.fmp || 0;,
     };
   }
   /**

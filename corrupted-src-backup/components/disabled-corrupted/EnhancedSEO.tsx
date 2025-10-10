@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import Navigation from '../components/Navigation';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOProps {/* TODO: Fix JSX expression */}
@@ -73,7 +74,7 @@ const,
       image: image;
       author: {,
         '@type': 'Organization',
-        name: author;
+        name: author;,
       },
       publisher: {,
         '@type': 'Organization',
@@ -204,7 +205,7 @@ const,
                 '@type': 'ListItem'
                 position: 1;
                 name: 'Home',
-                item: window.location.origin;
+                item: window.location.origin;,
               },
               {
                 '@type': 'ListItem')
@@ -213,6 +214,8 @@ const,
                 item: currentUrl;)})
             ])
   return (<Helmet></Helmet>
+
+      <Navigation />
       {/* Basic Meta Tags */}
       <title>{title}</title>
       <meta name="description" content={description} /></meta>"

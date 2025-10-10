@@ -205,7 +205,7 @@ export const,
       launch_date: '2025 - 01 - 26'
       customers: 156;
       rating: 4 && 4.8;
-      reviews: 98;
+      reviews: 98;,
     },
       id: 'quantum - logistics - optimization - platform',
       name: 'Quantum Logistics Optimization Platform',
@@ -339,7 +339,7 @@ export const,
       launch_date: '2025 - 02 - 02'
       customers: 34;
       rating: 4 && 4.9;
-      reviews: 23;
+      reviews: 23;,
     },
         'Real-time tracking',
       id: 'iot - fleet - management - platform'
@@ -471,7 +471,7 @@ export const,
       launch_date: '2025 - 02 - 07'
       customers: 234;
       rating: 4 && 4.7;
-      reviews: 145;
+      reviews: 145;,
     },
         'End-to-end traceability',
       id: 'blockchain - supply - chain - transparency'
@@ -734,7 +734,7 @@ export const,
         'Production-ready AI warehouse platform with comprehensive automation and optimization capabilities.',
       launchDate: '2025-02-18',      customers: 178;
       rating: 4 && 4.8;
-      reviews: 112;
+      reviews: 112;,
     };
   ];    features: [,
 export interface AdvancedLogisticsSupplyChainSolution2025 {id: string, name: string;
@@ -758,7 +758,7 @@ export interface AdvancedLogisticsSupplyChainSolution2025 {id: string, name: str
     realImplementation: boolean, implementationDetails: string;
   launchDate: string, customers: number;
   rating: number;
-  reviews: number;
+  reviews: number;,
 }
 export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyChainSolution2025[] = [,
     id: 'ai-powered-supply-chain-optimization', name: 'AI-Powered Supply Chain Optimization',
@@ -1408,7 +1408,7 @@ export interface AdvancedLogisticsSupplyChainSolution2025 {/* TODO: Fix JSX expr
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number;
+  reviews: number;,
 }
 ;
 export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyChainSolution2025[] = [;
@@ -1452,7 +1452,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     launchDate: '2025-01-26';
     customers: 156;
     rating: 4.8;
-    reviews: 98;
+    reviews: 98;,
   };
   {;
     id: 'quantum-logistics-optimization-platform';
@@ -1494,7 +1494,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     launchDate: '2025-02-02';
     customers: 34;
     rating: 4.9;
-    reviews: 23;
+    reviews: 23;,
   };
   {;
     id: 'iot-fleet-management-platform';
@@ -1536,7 +1536,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     launchDate: '2025-02-07';
     customers: 234;
     rating: 4.7;
-    reviews: 145;
+    reviews: 145;,
   };
   {;
     id: 'blockchain-supply-chain-transparency';
@@ -1578,7 +1578,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     launchDate: '2025-02-12';
     customers: 89;
     rating: 4.6;
-    reviews: 56;
+    reviews: 56;,
   };
   {;
     id: 'ai-powered-warehouse-automation';

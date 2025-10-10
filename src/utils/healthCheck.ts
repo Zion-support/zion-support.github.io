@@ -19,7 +19,7 @@ export interface HealthStatus {
   status: 'healthy' | 'degraded' | 'unhealthy';
   timestamp: number;
   uptime: number;
-  checks: HealthCheck[];
+  checks: HealthCheck[];,
 }
 export interface HealthCheck {
   name: string;
@@ -36,7 +36,7 @@ class HealthCheckService {
   private cachedStatus?: HealthStatus
   private cacheTimeout: number = 5000; // 5 seconds
   constructor() {
-    this.registerDefaultChecks()
+    this.registerDefaultChecks(),
   }
   /**
    * Register default health checks
@@ -65,7 +65,7 @@ class HealthCheckService {
    * Unregister a health check
    */
   unregister(name: string): void {
-    this.checks.delete(name)
+    this.checks.delete(name),
   }
   /**
    * Run all health checks
@@ -379,7 +379,7 @@ $4};
         const metrics = performanceMonitor.getMetrics()
         const value = metrics[metric as keyof typeof metrics]
         if (value === undefined) {
-          missingMetrics.push(metric)
+          missingMetrics.push(metric),
         } else {
           const thresholds = coreWebVitals[metric as keyof typeof coreWebVitals]
           if (value <= thresholds.good) {
@@ -542,7 +542,7 @@ let status: 'pass' | 'warn' | 'fail' = 'pass'
 };
 
   metrics: report.metrics,
-          summary: report.summary;
+          summary: report.summary;,
         }
       }
     } catch (error) {// TODO: Add content;}
@@ -576,7 +576,7 @@ let status: 'pass' | 'warn' | 'fail' = 'pass'
     const missingAPIs: string[] = []
     requiredAPIs.forEach((api) => {
       if (typeof window !== 'undefined' && !(api in window)) {
-        missingAPIs.push(api)
+        missingAPIs.push(api),
       }
     })
     if (missingAPIs.length > 0) {

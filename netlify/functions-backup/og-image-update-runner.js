@@ -23,7 +23,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   e: new Date().toISOString()}
         }})};
     return result;
-//   } catch (error) {// console.error('Error in og-image-update-runner: ') error;
+//   } catch (error) {// console.error('Error in og-image-update-runner: ') error;,
       }
     return {
       statusCode: 500;
@@ -47,7 +47,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   }
 };
         timestamp: new Date().toISOString(),' function: 'og-image-update-runner',' source: event.source || 'unknown', update: {' status: 'active', imagesUpdated: 0;
-        lastUpdate: new Date().toISOString() } }) }; return result; } catch (error) {' // console.error('Error in og-image-update-runner: ') error;
+        lastUpdate: new Date().toISOString() } }) }; return result; } catch (error) {' // console.error('Error in og-image-update-runner: ') error;,
       } return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'og-image-update-runner' }) }; } };'
         timestam,
   p: new Date().toISOString(),' functio,

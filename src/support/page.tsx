@@ -276,7 +276,7 @@ const SupportPage: React.FC = () => {
               <p className="text-xl text-gray-300 mb-8">
                 Our expert team is ready to assist you with any questions or issues
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <a
                   href="tel:+13024640950"
                   className="cyber-button px-8 py-4 text-lg font-semibold inline-flex items-center justify-center"
@@ -299,7 +299,7 @@ const SupportPage: React.FC = () => {
         <Footer />
       </div>
     </>
-  );
+  );,
 };
 
 export default SupportPage;

@@ -5,7 +5,7 @@ import { ChevronRight, Home } from 'lucide-react';
 interface BreadcrumbItem {
   name: string;
   href: string;
-  current?: boolean;
+  current?: boolean;,
 }
 
 const Breadcrumb: React.FC = () => {
@@ -31,7 +31,7 @@ const Breadcrumb: React.FC = () => {
       breadcrumbs.push({)
         name)
         href: currentPath),
-        current: isLast;
+        current: isLast;,
       });
     });
 

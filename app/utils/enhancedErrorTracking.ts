@@ -90,7 +90,7 @@ class EnhancedErrorTracker {}
       },
       timestamp: new Date().toISOString(),
       userAgent: navigator.userAgent;
-      url: window.location.href;
+      url: window.location.href;,
     }
     this.errors.push(trackedError)
     // Keep only the most recent errors;
@@ -195,7 +195,7 @@ class EnhancedErrorTracker {/* TODO: Fix JSX expression */}
       userAgen,
   t: navigator.userAgent,
       ur,
-  l: window.location.href;
+  l: window.location.href;,
     };
     this.errors.push(trackedError);
     // Keep only the most recent errors;

@@ -1,4 +1,5 @@
 import { Facebook, Github, Linkedin, Mail, MapPin, Phone, Twitter } from 'lucide-react';
+import Footer from '../components/Footer';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -145,7 +146,7 @@ const EnhancedFooter: React.FC = () => {
             <p className="text-gray-300 text-sm">
               &copy; {currentYear} Zion Tech Group. All rights reserved.
             </p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
+            <div className="flex space-x-6 mt-4 md: mt-0">
               <Link to="/legal/privacy">
                 <span className="text-gray-400 hover:text-white text-sm transition-colors">
                   Privacy Policy
@@ -166,7 +167,7 @@ const EnhancedFooter: React.FC = () => {
         </div>
       </div>
     </footer>
-  );
+  );,
 };
 
 export default EnhancedFooter;

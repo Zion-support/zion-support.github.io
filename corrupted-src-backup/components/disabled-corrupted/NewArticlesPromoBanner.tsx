@@ -1,3 +1,4 @@
+import React from 'react';
 import Reac, t, { useState, useEffect } fr, o, m 'rea, c, t';
 impo, r, t { newArticles20, 2, 5 } fr, o, m '../conte, n, t/n, e, w-articl, e, s-20, 2, 5';
 interface NewArticlesPromoBannerProp, s {

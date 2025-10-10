@@ -58,7 +58,7 @@ const nextConfig = {
               return (
                 module.size() > 160000 &&
                 /node_modules[/\\]/.test(module.identifier())
-              );
+              );,
             },
             name(module) {
               const _hash = crypto.createHash('sha1');

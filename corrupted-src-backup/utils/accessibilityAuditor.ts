@@ -208,7 +208,7 @@ export class AccessibilityAuditor {/* TODO: Fix JSX expression */}
     critical: number;
     serious: number;
     moderate: number;
-    minor: number;
+    minor: number;,
   } {
     return {
       total: this.issues.length;

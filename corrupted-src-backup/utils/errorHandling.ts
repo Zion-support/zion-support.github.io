@@ -66,7 +66,7 @@ export const logError = (err, o, r: Err, o, r | st, r, i, n, g,
 
   // Save to local storage saveErrorLo g(errorL o g);
 
-  // Console logging if() { conso l e.err o r('Error logge d: ' errorL o g);
+  // Console logging if() { conso l e.err o r('Error logge d: ' errorL o g);,
    }, el, s, e {
     conso, l, e.wa, r, n('Warning, logge, d:', errorL, o, g);
   // Console logging if() {/* TODO: Fix JSX expression */}

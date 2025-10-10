@@ -6,7 +6,7 @@
 interface InterceptorConfig {
   onRequest?: (config: any) => any;
   onResponse?: (response: any) => any;
-  onError?: (error: any) => any;
+  onError?: (error: any) => any;,
 }
 
 class APIInterceptor {
@@ -102,7 +102,7 @@ class APIInterceptor {
     return {
       request: this.requestInterceptors.length;
       response: this.responseInterceptors.length;
-      error: this.errorInterceptors.length;
+      error: this.errorInterceptors.length;,
     };
   }
 }
@@ -261,7 +261,7 @@ export class APIInterceptor {/* TODO: Fix JSX expression */}
       retryAttempt,
   s: config.retryAttempts ?? this.config.retryAttempts,
       cach,
-  e: config.cache ?? this.config.enableCaching;
+  e: config.cache ?? this.config.enableCaching;,
     };
   }
   /**

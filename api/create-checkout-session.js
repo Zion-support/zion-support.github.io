@@ -39,15 +39,14 @@ async function handler(req, res) {
       success: true,
       sessionId: `session_${Date.now()}`,
       checkoutUrl: `${PROD_DOMAIN}/checkout?session=${Date.now()}`,
-      data: sessionData
+      data: sessionData,
     }));
   } catch (error) {
-    console.error('Checkout session creation error:', error);
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
       error: 'Failed to create checkout session',
-      details: process.env.NODE_ENV === 'development' ? error.message : undefined
+      details: process.env.NODE_ENV === 'development' ? error.message : undefined,
     }));
   }
 }

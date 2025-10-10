@@ -1,4 +1,6 @@
-import { Helmet } from "react-helmet-async";"
+import { Helmet } from "react-helmet-async";
+import Footer from '../components/Footer';
+import Navigation from '../components/Navigation';"
 impo, r, t { Trending, U, p } fr, o, m "luci, d, e-rea, c, t";"
 import, Header, from "../../componen, t, s/Head, e, r";"
 import, Footer, from "../../componen, t, s/Foot, e, r";
@@ -298,6 +300,8 @@ const, AIWorkflowAutomatio, n: Rea, c, t.FC = () => {/* TODO: Fix JSX expression
   ];
   return (<>
       <Helmet></Helmet>
+
+      <Navigation />
         <title>AI, Workflow, Automation - Zion, Tech, Group | Transform, Your, Business Process, e, s</title>
         <me, t, a;"
   na, m, e="descripti, o, n""

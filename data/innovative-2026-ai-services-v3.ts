@@ -75,7 +75,7 @@ export interface Innovative2026AiServiceV3 {/* TODO: Fix JSX expression */}
   realImplementation: boolean;
   contactInfo: unknown;
     mobile: string, email: string;
-    address: string;
+    address: string;,
   }
 }
 export const innovative2026 AIServicesV3: Innovative2026 AiServiceV3[] = [,

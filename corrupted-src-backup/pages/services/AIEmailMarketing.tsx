@@ -1,4 +1,6 @@
-import { Helmet } from "react-helmet-async";"
+import { Helmet } from "react-helmet-async";
+import Footer from '../components/Footer';
+import Navigation from '../components/Navigation';"
 impo, r, t { Trending, U, p } fr, o, m "luci, d, e-rea, c, t";"
 import, Header, from "../../componen, t, s/Head, e, r";"
 import, Footer, from "../../componen, t, s/Foot, e, r";
@@ -334,6 +336,8 @@ const, AIEmailMarketin, g: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
           content="Transform, your, email marketing, with, AI-powered, personalizatio, n, automati, o, n, and, analytic, s. 3, 0, 0% increase, in, open rat, e, s, 85% improvement, in, CTR, and, 25, 0% ROI, improvemen, t." /><meta name="keywor, d, s" content="AI, email, marketing, email, automatio, n, personalized, email, s, email, analytic, s, marketing, automatio, n, email, campaign, s, AI, content, generation" /><link, re, l="canonic, a, l" hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/servic, e, s/ai-ema, i, l-marketi, n, g/>"
   return (<>
       <Helmet></Helmet>
+
+      <Navigation />
         <title>AI, Email, Marketing - Zion, Tech, Group | Intelligent, Email, Automation</title>
         <me, t, a;"
   na, m, e="descripti, o, n""

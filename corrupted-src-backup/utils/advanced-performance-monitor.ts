@@ -56,7 +56,7 @@ class AdvancedPerformanceMonitor {/* TODO: Fix JSX expression */}
     averageLCP: number;
     averageCLS: number;
     averageFID: number;
-    performanceScore: number;
+    performanceScore: number;,
   } {
     if (this.data.length === 0) {
       return {

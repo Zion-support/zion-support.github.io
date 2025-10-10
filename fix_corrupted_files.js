@@ -3,8 +3,7 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 // const __filename = fileURLToPath(import.meta.url);
-// const __dirname = path.dirname(__filename);
-//Function to fix corrupted text by removing erroneous commas;
+// //Function to fix corrupted text by removing erroneous commas;
 function fixCorruptedText(text) {
   //Pattern to match commas that are incorrectly placed in the middle of words;
   //This looks for commas that are followed by a space and then a lowercase letter;

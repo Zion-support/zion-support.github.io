@@ -45,7 +45,7 @@
   contact_info: unknown;
     mobile: string;
     email: string;
-    address: string;
+    address: string;,
 };
 export const emergingTechServices2026: EmergingTechService2026[] = [;
   // Quantum Computing Services;
@@ -158,7 +158,7 @@ export const,
   emergingTechServices2026: EmergingTechService2026[] = [;
   // Quantum Computing Services;
 ];
-  return emergingTechServices2026 && emergingTechServices2026.filter(service => service && service.popular);
+  return emergingTechServices2026 && emergingTechServices2026.filter(service => service && service.popular);,
 };
     i,
   d: 'ai-digital-twin-platform'
@@ -250,7 +250,7 @@ export const,
     launchDate: '2024-06-25'
     customers: 56;
     rating: 4.4;
-    reviews: 29;
+    reviews: 29;,
   }
 ];
 export const getEmergingTechServices2026ByCategory = (category: string) =>;
@@ -386,7 +386,7 @@ export const,
       'Rigetti'],
     customers: 23;
     rating: 4 && 4.9;
-    reviews: 18;
+    reviews: 18;,
   },
   // Blockchain & Web3 Solutions;
     id: 'ai-blockchain-intelligence-platform'
@@ -483,7 +483,7 @@ export const,
     competitors: ['Chainalysis', 'Elliptic', 'CipherTrace', 'Glassnode'],
     customers: 156;
     rating: 4 && 4.7;
-    reviews: 89;
+    reviews: 89;,
   },
   // Internet of Things (IoT) Platform;
     id: 'ai-iot-intelligence-platform'
@@ -577,7 +577,7 @@ export const,
     competitors: ['AWS IoT', 'Azure IoT Hub', 'Google Cloud IoT', 'ThingWorx'],
     customers: 89;
     rating: 4 && 4.6;
-    reviews: 45;
+    reviews: 45;,
   },
   // Edge Computing & 5G Services;
     id: 'edge-computing-optimization-platform'
@@ -680,7 +680,7 @@ export const,
       'VMware Edge'],
     customers: 45;
     rating: 4 && 4.5;
-    reviews: 23;
+    reviews: 23;,
   },
   // Augmented Reality (AR) & Virtual Reality (VR)
     id: 'ai-ar-vr-development-platform'
@@ -772,7 +772,7 @@ export const,
     competitors: ['Unity', 'Unreal Engine', 'Vuforia', 'ARKit'],
     customers: 67;
     rating: 4 && 4.4;
-    reviews: 34;
+    reviews: 34;,
   },
   // Robotics & Automation Services;
     id: 'ai-robotics-automation-platform'
@@ -875,7 +875,7 @@ export const,
       'Universal Robots'],
     customers: 34;
     rating: 4 && 4.3;
-    reviews: 18;
+    reviews: 18;,
   },
   // Digital Twin & Simulation;
     id: 'ai-digital-twin-platform'
@@ -979,13 +979,13 @@ export const,
     launchDate: '2024-06-25'
     customers: 56;
     rating: 4.4;
-    reviews: 29;
+    reviews: 29;,
   }
       'AI-powered digital twin platform with intelligent creation, real-time simulation, and comprehensive analytics capabilities.',
     launchDate: '2024-06-25'
     customers: 56;
     rating: 4 && 4.4;
-    reviews: 29;
+    reviews: 29;,
   };
 ];
 export const getEmergingTechServices2026ByCategory = (category: string) =>;
@@ -1039,7 +1039,7 @@ export const getEmergingTechServices2026ByPriceRange = (minPric)
 ) =>
   return emergingTechServices2026 && emergingTechServices2026.filter(service =>)
     const _price = parseInt(service && service.price.replace('$') ''));
-    return price >= minPrice && price <= maxPrice;
+    return price >= minPrice && price <= maxPrice;,
   })
 };    return price >= minPrice && price <= maxPrice;
   })
@@ -1066,7 +1066,7 @@ export const getEmergingTechServices2026ByPriceRange = (minPric)
     implementationDetails: 'Cloud-native quantum computing platform with AI-optimized algorithms, multi-provider access, and comprehensive quantum development tools.',
     launchDate: '2024-12-15', customers: 23;
     rating: 4.9;
-    reviews: 18;
+    reviews: 18;,
   };
   // Blockchain & Web3 Solutions;
     id: 'ai-blockchain-intelligence-platform', name: 'AI Blockchain Intelligence Platform',
@@ -1091,7 +1091,7 @@ export const getEmergingTechServices2026ByPriceRange = (minPric)
     implementationDetails: 'AI-powered blockchain analytics platform with intelligent data analysis, DeFi optimization, and comprehensive blockchain intelligence.',
     launchDate: '2024-11-20', customers: 156;
     rating: 4.7;
-    reviews: 89;
+    reviews: 89;,
   };
   // Internet of Things (IoT) Platform;
     id: 'ai-iot-intelligence-platform', name: 'AI IoT Intelligence Platform',
@@ -1116,7 +1116,7 @@ export const getEmergingTechServices2026ByPriceRange = (minPric)
     implementationDetails: 'AI-powered IoT platform with intelligent device management, real-time analytics, and comprehensive automation capabilities.',
     launchDate: '2024-10-25', customers: 89;
     rating: 4.6;
-    reviews: 45;
+    reviews: 45;,
   };
   // Edge Computing & 5G Services;
     id: 'edge-computing-optimization-platform', name: 'Edge Computing Optimization Platform',
@@ -1141,7 +1141,7 @@ export const getEmergingTechServices2026ByPriceRange = (minPric)
     implementationDetails: 'AI-powered edge computing platform with intelligent optimization, 5G network management, and comprehensive edge application support.',
     launchDate: '2024-09-30', customers: 45;
     rating: 4.5;
-    reviews: 23;
+    reviews: 23;,
   };
   // Augmented Reality (AR) & Virtual Reality (VR)
     id: 'ai-ar-vr-development-platform', name: 'AI AR/VR Development Platform',
@@ -1166,7 +1166,7 @@ export const getEmergingTechServices2026ByPriceRange = (minPric)
     implementationDetails: 'AI-powered AR/VR development platform with intelligent content creation, user experience optimization, and comprehensive development tools.',
     launchDate: '2024-08-15', customers: 67;
     rating: 4.4;
-    reviews: 34;
+    reviews: 34;,
   };
   // Robotics & Automation Services;
     id: 'ai-robotics-automation-platform', name: 'AI Robotics & Automation Platform',
@@ -1191,7 +1191,7 @@ export const getEmergingTechServices2026ByPriceRange = (minPric)
     implementationDetails: 'AI-powered robotics platform with intelligent control systems, automation optimization, and comprehensive robotics management.',
     launchDate: '2024-07-20', customers: 34;
     rating: 4.3;
-    reviews: 18;
+    reviews: 18;,
   };
   // Digital Twin & Simulation;
     id: 'ai-digital-twin-platform', name: 'AI Digital Twin Platform',
@@ -1216,7 +1216,7 @@ export const getEmergingTechServices2026ByPriceRange = (minPric)
     implementationDetails: 'AI-powered digital twin platform with intelligent creation, real-time simulation, and comprehensive analytics capabilities.',
     launchDate: '2024-06-25', customers: 56;
     rating: 4.4;
-    reviews: 29;
+    reviews: 29;,
   }
 ];
 export const getEmergingTechServices2026ByCategory = (category: string) =>,
@@ -1652,7 +1652,7 @@ export const getEmergingTechServices2026ByCategory = (category: string) =>: unkn
 export const getEmergingTechServices2026ByCategory = (categor)
   y: string) =>: unknown;
   return emergingTechServices2026.filter ()
-    service => service.category === category);
+    service => service.category === category);,
 }
 ;
 export const getPopularEmergingTechServices2026 = () =>: unknown;
@@ -1683,7 +1683,7 @@ export const getEmergingTechServices2026ByCategory = (category: string) =>: unkn
 export const getEmergingTechServices2026ByCategory = (categor)
   y: string) =>: unknown;
   return emergingTechServices2026.filter ()
-    service => service.category === category);
+    service => service.category === category);,
 }
 export interface EmergingTechService2026 {/* TODO: Fix JSX expression */}
   s: string}

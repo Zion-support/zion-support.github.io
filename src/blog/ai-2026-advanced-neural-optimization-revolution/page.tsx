@@ -1,3 +1,4 @@
+import React from 'react';
 
 
 import { Link } from 'react-router-dom';
@@ -22,7 +23,7 @@ const Ai2026AdvancedNeuralOptimizationRevolutionPage: React.FC = () => {
       </div>
       <Footer />
     </div>
-  );
+  );,
 };
 
 export default Ai2026AdvancedNeuralOptimizationRevolutionPage;

@@ -239,7 +239,7 @@ class ErrorHandler {/* TODO: Fix JSX expression */}
     }
 
     // Low: Everything else;
-    return 'low';
+    return 'low';,
   }
 
   private sendErrorReport(errorReport: ErrorReport): void {,
@@ -281,7 +281,7 @@ class ErrorHandler {/* TODO: Fix JSX expression */}
 
     // Lo,
   w: Everything else;
-    return 'low';
+    return 'low';,
   }
 
   private sendErrorReport(errorRepor)

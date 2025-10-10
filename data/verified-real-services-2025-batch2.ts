@@ -13,10 +13,10 @@ export interface VerifiedRealService2025Batch2 {id: string;
     email: string}
     address: string}
   };
-    address: string;
+    address: string;,
   }
 export const verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [;
-    address: string;
+    address: string;,
   }
 ;
 export const verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [
@@ -94,7 +94,7 @@ export const,
   realImplementation: boolean;
   contactInfo: unknown;
     mobile: string, email: string;
-    address: string;
+    address: string;,
   }
 }
 export const verifiedRealServices2025 Batch2: VerifiedRealService2025 Batch2[] = [,

@@ -12,24 +12,28 @@ const AISEOOptimizerPage: React.FC = () => {
       title: 'SEO Analysis',
       description: 'Comprehensive SEO analysis and optimization',
       benefits: ['Keyword research', 'On-page optimization', 'Technical SEO']
+    }
     },
     {
       icon: Target,
       title: 'Content Optimization',
       description: 'AI-powered content optimization for search engines',
       benefits: ['Content scoring', 'Keyword density', 'Readability']
+    }
     },
     {
       icon: Zap,
       title: 'Automated Optimization',
       description: 'Automated SEO improvements and monitoring',
       benefits: ['Auto-optimization', 'Performance monitoring', 'Alert system']
+    }
     },
     {
       icon: Settings,
       title: 'Ranking Tracking',
       description: 'Track and monitor search engine rankings',
       benefits: ['Rank tracking', 'Competitor analysis', 'Performance reports']
+    }
     }
   ];
 

@@ -681,12 +681,12 @@ $4}
                   onClick={() => setActiveTab(category.id)}
                   className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${}
   // TOD,
-  O: Add content;
+  O: Add content;,
 }
                     activeTab === category.id;`
                       ? `${category.bgColor} ${category.color} border-2 border-current`
                       : 'bg-slate-800/50 text-gray-300,
-  hover:bg-slate-700/50 border-2 border-transparent'`
+  hover: bg-slate-700/50 border-2 border-transparent'`,
                   }`}
 //                 >
                   
@@ -889,7 +889,7 @@ $4}
           
 
           </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
               <a
                 href="/contact" className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
 
@@ -949,7 +949,7 @@ $4}
     </>
 
     </div>
-  );
+  );,
 };
 
 

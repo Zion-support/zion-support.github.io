@@ -12,7 +12,7 @@ interface UXConfig {
   enableOfflineSupport: boolean;
   enablePushNotifications: boolean;
   enableDarkMode: boolean;
-  enableAnimations: boolean;
+  enableAnimations: boolean;,
 }
 interface UXMetrics {
   pageLoadTime: number;
@@ -20,7 +20,7 @@ interface UXMetrics {
   bounceRate: number;
   userSatisfaction: number;
   accessibilityScore: number;
-  performanceScore: number;
+  performanceScore: number;,
 }
 class UserExperienceEnhancer {
   private config: UXConfig;
@@ -35,7 +35,7 @@ class UserExperienceEnhancer {
       bounceRate: 0,
       userSatisfaction: 0,
       accessibilityScore: 0,
-      performanceScore: 0
+      performanceScore: 0,
     };
     this.init();
   }
@@ -138,7 +138,7 @@ $4});
     
     const spinner = button.querySelector('.spinner');
     if (spinner) {
-      spinner.remove();
+      spinner.remove();,
     }
     
     this.loadingStates.set(button.id || 'button', false);
@@ -146,7 +146,7 @@ $4});
   private showFormLoadingState(form: HTMLFormElement): void {
     const submitButton = form.querySelector('button[type="submit"]') as HTMLButtonElement;
     if (submitButton) {
-      this.showLoadingState(submitButton);
+      this.showLoadingState(submitButton);,
     }
     
     // Disable all form inputs
@@ -184,8 +184,6 @@ $4});
     this.setupReactErrorBoundary();
   }
   private handleError(error: Error, type: string): void {
-    console.error(`${type}:`, error);
-    
     // Store error
     this.errorBoundaries.set(type, error);
     
@@ -214,7 +212,7 @@ $4});
     
     // Auto-remove after 5 seconds
     setTimeout(() => {
-      errorDiv.remove();
+      errorDiv.remove();,
     }, 5000);
   }
   private setupAnalytics(): void {
@@ -237,7 +235,7 @@ $4});
       title: document.title,
       timestamp: Date.now(),
       userAgent: navigator.userAgent,
-      referrer: document.referrer
+      referrer: document.referrer,
     };
     
     this.sendAnalytics('page_view', pageData);
@@ -252,7 +250,7 @@ $4});
         id: target.id,
         className: target.className,
         text: target.textContent?.substring(0, 100),
-        timestamp: Date.now()
+        timestamp: Date.now(),
       };
       
       this.sendAnalytics('user_interaction', interactionData);
@@ -264,7 +262,7 @@ $4});
         type: 'form_submit',
         formId: form.id,
         formAction: form.action,
-        timestamp: Date.now()
+        timestamp: Date.now(),
       };
       
       this.sendAnalytics('form_submit', formData);
@@ -289,7 +287,7 @@ $4});
           domContentLoaded: perfData.domContentLoadedEventEnd - perfData.navigationStart,
           firstPaint: performance.getEntriesByName('first-paint')[0]?.startTime || 0,
           firstContentfulPaint: performance.getEntriesByName('first-contentful-paint')[0]?.startTime || 0,
-          timestamp: Date.now()
+          timestamp: Date.now(),
         };
         
         this.metrics.pageLoadTime = metrics.pageLoadTime;
@@ -320,8 +318,6 @@ $4});
   }
   private sendAnalytics(event: string, data: any): void {
     // In a real application, this would send data to your analytics service
-    console.log('Analytics:', event, data);
-    
     // Example: Send to Google Analytics
     if (typeof gtag !== 'undefined') {
       gtag('event', event, data);
@@ -334,7 +330,7 @@ $4});
       type: type,
       url: window.location.href,
       timestamp: Date.now(),
-      userAgent: navigator.userAgent
+      userAgent: navigator.userAgent,
     };
     
     this.sendAnalytics('error', errorData);
@@ -389,11 +385,9 @@ $4});
       window.addEventListener('load', () => {
         navigator.serviceWorker.register('/sw.js')
           .then((registration) => {
-            console.log('SW registered: ', registration);
-          })
+            })
           .catch((registrationError) => {
-            console.log('SW registration failed: ', registrationError);
-          });
+            });
       });
     }
   }
@@ -416,9 +410,8 @@ $4});
     installButton.addEventListener('click', () => {
       deferredPrompt.prompt();
       deferredPrompt.userChoice.then((choiceResult: any) => {
-        if (choiceResult.outcome === 'accepted') {
-          console.log('User accepted the install prompt');
-        }
+        if (choiceResult.outcome === 'accepted') {,
+          }
         deferredPrompt = null;
         installButton.remove();
       });
@@ -445,7 +438,7 @@ $4});
         offlineDiv.id = 'offline-indicator';
         offlineDiv.className = 'fixed top-0 left-0 right-0 bg-yellow-500 text-black p-2 text-center z-50';
         offlineDiv.textContent = 'You are offline. Some features may not be available.';
-        document.body.appendChild(offlineDiv);
+        document.body.appendChild(offlineDiv);,
       }
     } else {
       if (indicator) {
@@ -469,13 +462,11 @@ $4});
   private subscribeToPush(registration: ServiceWorkerRegistration): void {
     registration.pushManager.subscribe({
       userVisibleOnly: true,
-      applicationServerKey: 'your-vapid-public-key' // Replace with actual VAPID key
+      applicationServerKey: 'your-vapid-public-key' // Replace with actual VAPID key,
     }).then((subscription) => {
-      console.log('Push subscription:', subscription);
       // Send subscription to server
     }).catch((error) => {
-      console.log('Push subscription failed:', error);
-    });
+      });
   }
   private setupDarkMode(): void {
     if (!this.config.enableDarkMode) return;
@@ -483,7 +474,7 @@ $4});
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
     
     if (prefersDark.matches) {
-      document.documentElement.classList.add('dark');
+      document.documentElement.classList.add('dark');,
     }
     
     // Listen for changes
@@ -580,7 +571,7 @@ $4});
     if (duration < 500) return 80;
     if (duration < 1000) return 60;
     if (duration < 2000) return 40;
-    return 20;
+    return 20;,
   }
   private calculateAccessibilityScore(): number {
     // Simplified accessibility score calculation
@@ -638,7 +629,7 @@ interface UXConfig {enableSmoothScrolling: boolean;}
   enableOfflineSupport: boolean;
   enablePushNotifications: boolean;
   enableDarkMode: boolean;
-  enableAnimations: boolean;
+  enableAnimations: boolean;,
 }
 
 interface UXMetrics {pageLoadTime: number;}
@@ -646,7 +637,7 @@ interface UXMetrics {pageLoadTime: number;}
   bounceRate: number;
   userSatisfaction: number;
   accessibilityScore: number;
-  performanceScore: number;
+  performanceScore: number;,
 }
 
 class UserExperienceEnhancer {private config: UXConfig;}
@@ -686,8 +677,7 @@ class UserExperienceEnhancer {private config: UXConfig;}
 
   private setupLoadingStates(): void {if (typeof document !== 'undefined' && this.config.enableLoadingStates) {}
       // Add loading state management;
-      console.log('Loading states enabled');
-    }
+      }
   }
 
   public getMetrics(): UXMetrics {return this.metrics;}

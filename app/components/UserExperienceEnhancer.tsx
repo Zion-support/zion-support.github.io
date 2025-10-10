@@ -4,7 +4,7 @@ import React from 'react';
 import React, { useEffect, useState } from 'react';
 
 interface UserExperienceEnhancerProps {
-  children: React.ReactNode;
+  children: React.ReactNode;,
 }
 
 const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({ children }) => {

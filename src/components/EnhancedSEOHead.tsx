@@ -1,4 +1,5 @@
 import React from 'react';
+import Navigation from '../components/Navigation';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOHeadProps {
@@ -60,6 +61,8 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({</SEOHeadProps>title</SEOHeadP
 
   return (
     <Helmet></Helmet>
+
+      <Navigation />
       {/* Basic Meta Tags */}
       <title>{title}</title>
       <meta name="description" content={description} /></meta>
@@ -195,7 +198,7 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({</SEOHeadProps>title</SEOHeadP
       <meta name="theme-color" content="#00 ffff" media="(prefers-color-scheme: light)" /></meta>
       <meta name="theme-color" content="#0 f172 a" media="(prefers-color-scheme: dark)" /></meta>
     </Helmet>
-  );
+  );,
 };
 
 export default EnhancedSEOHead;

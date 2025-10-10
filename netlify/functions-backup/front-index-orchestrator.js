@@ -23,7 +23,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   n: new Date().toISOString()}
         }})};
     return result;
-//   } catch (error) {// console.error('Error in front-index-orchestrator: ') error;
+//   } catch (error) {// console.error('Error in front-index-orchestrator: ') error;,
       }
     return {
       statusCode: 500;
@@ -47,7 +47,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   }
 };
         timestamp: new Date().toISOString(),' function: 'front-index-orchestrator',' source: event.source || 'unknown', orchestration: {' status: 'active', indexes: 0;
-        lastOrchestration: new Date().toISOString() } }) }; return result; } catch (error) {' // console.error('Error in front-index-orchestrator: ') error;
+        lastOrchestration: new Date().toISOString() } }) }; return result; } catch (error) {' // console.error('Error in front-index-orchestrator: ') error;,
       } return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'front-index-orchestrator' }) }; } };'
         timestam,
   p: new Date().toISOString(),' functio,

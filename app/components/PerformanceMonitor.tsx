@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+import Navigation from '../components/Navigation';
 'use client';
 
 
@@ -30,15 +31,10 @@ const PerformanceMonitor: React.FC = () => {
             loadTime: Math.round(loadTime),
             memoryUsage,
             connectionSpeed,
-            renderTime: Math.round(domContentLoaded)
+            renderTime: Math.round(domContentLoaded),
           });
           
-          console.log('Page Load Performance:', {
-            loadTime,
-            domContentLoaded,
-            totalTime: navigation.loadEventEnd - navigation.fetchStart
-          });
-        }
+          }
       }
     };
 
@@ -53,7 +49,7 @@ const PerformanceMonitor: React.FC = () => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.ctrlKey && e.shiftKey && e.key === 'P') {
         e.preventDefault();
-        setIsVisible(prev => !prev);
+        setIsVisible(prev => !prev);,
       }
     };
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import Navigation from '../components/Navigation';
 import { Helmet } from 'react-helmet-async';
 
 export default function BlogPost(): React.JSX.Element {
@@ -13,6 +14,8 @@ export default function BlogPost(): React.JSX.Element {
           /></meta>
         </Helmet>
 
+
+      <Navigation />
         <div className="max-w-4xl mx-auto px-4 py-20">
           <div className="mb-12">
             <h1 className="text-4xl md: text-5xl font-bold mb-6 leading-tight">

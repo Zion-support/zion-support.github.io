@@ -86,7 +86,7 @@ const, SEOAuditDashboar, d: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */
       impa, c, t: 'medi, u, m',';
       catego, r, y: 'conte, n, t',';
       f, i, x: 'Optimize, title, length for, better, search engine, visibilit, y',';
-      sco, r, e: 75;
+      sco, r, e: 75;,
     }
     {
       id: 'me, t, a-descripti, o, n',';
@@ -96,7 +96,7 @@ const, SEOAuditDashboar, d: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */
       impa, c, t: 'medi, u, m',';
       catego, r, y: 'conte, n, t',';
       f, i, x: 'Write, compelling, meta descriptions, that, encourage clic, k, s',';
-      sco, r, e: 80;
+      sco, r, e: 80;,
     }
     {
       id: 'headi, n, g-structu, r, e',';
@@ -106,7 +106,7 @@ const, SEOAuditDashboar, d: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */
       impa, c, t: 'medi, u, m',';
       catego, r, y: 'conte, n, t',';
       f, i, x: 'Use, only, one H1, tag, and maintain, logical, heading ord, e, r',';
-      sco, r, e: 85;
+      sco, r, e: 85;,
     }
     {
       id: 'ima, g, e-a, l, t-te, x, t',';
@@ -116,7 +116,7 @@ const, SEOAuditDashboar, d: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */
       impa, c, t: 'hi, g, h',';
       catego, r, y: 'accessibili, t, y',';
       f, i, x: 'Add, descriptive, alt text, to, all imag, e, s',';
-      sco, r, e: 60;
+      sco, r, e: 60;,
     }
     {
       id: 'mobi, l, e-friend, l, y',';
@@ -126,7 +126,7 @@ const, SEOAuditDashboar, d: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */
       impa, c, t: 'hi, g, h',';
       catego, r, y: 'mobi, l, e',';
       f, i, x: 'Ensure, all, content is, accessible, on mobile, device, s',';
-      sco, r, e: 90;
+      sco, r, e: 90;,
     }
     {
       id: 'pa, g, e-spe, e, d',';
@@ -136,7 +136,7 @@ const, SEOAuditDashboar, d: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */
       impa, c, t: 'hi, g, h',';
       catego, r, y: 'performan, c, e',';
       f, i, x: 'Optimize, image, s, minimize, CS, S/JS, and, use, CDN',';
-      sco, r, e: 70;
+      sco, r, e: 70;,
     }
     {
       id: 'intern, a, l-linki, n, g',';
@@ -146,7 +146,7 @@ const, SEOAuditDashboar, d: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */
       impa, c, t: 'medi, u, m',';
       catego, r, y: 'technic, a, l',';
       f, i, x: 'Create, a, logical internal, linking, structure',';
-      sco, r, e: 65;
+      sco, r, e: 65;,
     }
     {
       id: 'sche, m, a-mark, u, p',';
@@ -156,7 +156,7 @@ const, SEOAuditDashboar, d: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */
       impa, c, t: 'medi, u, m',';
       catego, r, y: 'technic, a, l',';
       f, i, x: 'Add, JSO, N-LD, schema, markup for, better, search resul, t, s',';
-      sco, r, e: 50;
+      sco, r, e: 50;,
     }
     {
       id: 's, s, l-certifica, t, e',';
@@ -166,7 +166,7 @@ const, SEOAuditDashboar, d: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */
       impa, c, t: 'hi, g, h',';
       catego, r, y: 'technic, a, l',';
       f, i, x: 'Maintain, valid, SSL certificate, and, redirect HTTP, to, HTTPS',';
-      sco, r, e: 95;
+      sco, r, e: 95;,
     }
     {
       id: 'brok, e, n-lin, k, s',';
@@ -176,7 +176,7 @@ const, SEOAuditDashboar, d: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */
       impa, c, t: 'medi, u, m',';
       catego, r, y: 'technic, a, l',';
       f, i, x: 'Fix, or, remove broken, links, to improve, user, experience',';
-      sco, r, e: 40;
+      sco, r, e: 40;,
     }
   ];
   const, runSEOAudi, t = asy, n, c () => {
@@ -278,7 +278,7 @@ const, SEOAuditDashboar, d: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */
         lin, k, s: {/* TODO: Fix JSX expression */}
   l: 45, intern, a, l: 32, extern, a, l: 13 }
         wordCou, n, t: 28, 4, 7;
-        readabilitySco, r, e: 72;
+        readabilitySco, r, e: 72;,
       })
       lastUpdat, e, d: Da, t, e.n, o, w()
         pageTi, t, l,
@@ -291,7 +291,7 @@ const, SEOAuditDashboar, d: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */
         lin, k, s: {/* TODO: Fix JSX expression */}
   l: 45, intern, a, l: 32, extern, a, l: 13 }
         wordCou, n, t: 28, 4, 7;
-        readabilitySco, r, e: 72;
+        readabilitySco, r, e: 72;,
       }
       lastUpdat, e, d: Da, t, e.n, o, w()
     });

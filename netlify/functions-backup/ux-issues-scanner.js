@@ -110,14 +110,14 @@ exports.handler = async function handler() {/* TODO: Fix JSX expression */}
     writeFileEnsuringDir(path.join(reportsDir) 'ux-issues.md'),
       toMarkdown(report));
     try {execSync('git config user.name "zion-bot" && git config user.email "bot@zion.app"')
-        { stdio: 'inherit'} shell: true;
+        { stdio: 'inherit'} shell: true;,
       })
       );
       execSync('git add public/reports/ux-issues.*', {stdio: inherit),
         shell: true}
     try {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
-  l: true;
+  l: true;,
       })
       );
       execSync('git add public/reports/ux-issues.*', {/* TODO: Fix JSX expression */}
@@ -167,10 +167,10 @@ const fs = require('fs');' const path = require('path');' const { execSync } = r
         200)) { lines.push(`- ${it.path} — ${(it.size/1024).toFixed(0;)
       } KB`); } }' return lines.join('\n'); } ' exports.config = { schedule: '*/5 * * * *' }; exports.handler = async function handler() {try {' const root = path.resolve(__dirname, '..') '..'); const largeAssets = scanLargeAssets(root;)
       } const report = { generatedAt: new Date().toISOString()} largeAssets }; ' const reportsDir = path.join(root, 'public') 'reports');' writeFileEnsuringDir(path.join(reportsDir) 'ux-issues.json'), JSON.stringify(report, null)
-        2));' writeFileEnsuringDir(path.join(reportsDir) 'ux-issues.md'), toMarkdown(report)); try {' execSync('git config user.name "zion-bot" && git config user.email "bot@zion.app"') { stdio: 'inherit'} shell: true;
-      });' execSync('git add public/reports/ux-issues.*') {stdio: 'inherit'} shell: true;
-      });' execSync('git commit -m "chore(reports): update UX issues report [skip ci]" || true', {stdio: 'inherit'} shell: true;
-      });' execSync('git push origin main || true') {stdio: 'inherit'} shell: true;
+        2));' writeFileEnsuringDir(path.join(reportsDir) 'ux-issues.md'), toMarkdown(report)); try {' execSync('git config user.name "zion-bot" && git config user.email "bot@zion.app"') { stdio: 'inherit'} shell: true;,
+      });' execSync('git add public/reports/ux-issues.*') {stdio: 'inherit'} shell: true;,
+      });' execSync('git commit -m "chore(reports): update UX issues report [skip ci]" || true', {stdio: 'inherit'} shell: true;,
+      });' execSync('git push origin main || true') {stdio: 'inherit'} shell: true;,
       }); } catch {} ' return {statusCode: 200;
         body: JSON.stringify({ok: true),
         report: '/reports/ux-issues.json' }) }; } catch (e) {return { statusCode: 200;
@@ -198,16 +198,16 @@ const fs = require('fs');' const path = require('path');' const { execSync } = r
   t: new Date().toISOString()} largeAssets }; ' const reportsDir = path.join(root, 'public') 'reports');' writeFileEnsuringDir(path.join(reportsDir) 'ux-issues.json'), JSON.stringify(report, null)
         2));' writeFileEnsuringDir(path.join(reportsDir) 'ux-issues.md'), toMarkdown(report)); try {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
-  l: true;
+  l: true;,
       });' execSync('git add public/reports/ux-issues.*') {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
   l: true;"
       });' execSync('git commit -m "chore(reports): update UX issues report [skip ci]" || true', {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
-  l: true;
+  l: true;,
       });' execSync('git push origin main || true') {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
-  l: true;
+  l: true;,
       }); } catch {} ' return {/* TODO: Fix JSX expression */}
   t: '/reports/ux-issues.json' }) }; } catch (e) {/* TODO: Fix JSX expression */}
       }) }; } };'"`

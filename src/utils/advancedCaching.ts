@@ -20,8 +20,7 @@ export interface CacheEntry;
   value: T;,
     expiry: number;,
     hits: number;,
-    lastAccessed: number
-
+    lastAccessed: number,
 }
 class AdvancedCache;
           <T = unknown> {/* TODO: Fix JSX expression */}
@@ -47,7 +46,7 @@ class AdvancedCache;
   storag,
   e: options.storage || 'memory',
       maxSiz,
-  e: options.maxSize || 100;
+  e: options.maxSize || 100;,
     };
     // Load from persistent storage if needed;
     if (this.options.storage !== 'memory') {/* TODO: Fix JSX expression */}
@@ -103,7 +102,7 @@ class AdvancedCache;
   cach,
   e: Object.fromEntries(this.cache.entries()),
         accessOrde,
-  r: this.accessOrder;
+  r: this.accessOrder;,
       };
       storage?.setItem(this.storageKey, JSON.stringify(data));
     } catch (error) {/* TODO: Fix JSX expression */}
@@ -144,8 +143,7 @@ class AdvancedCache;
 //       expiry,
 
       hits: 0,
-      lastAccessed: Date.now()
-
+      lastAccessed: Date.now(),
     });
     // Update access order;
     this.updateAccessOrder(key);
@@ -287,7 +285,7 @@ class AdvancedCache;
     hit,
   s: number;,
     ag,
-  e: number;
+  e: number;,
     }>;
   } {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -308,7 +306,7 @@ class AdvancedCache;
         hit,
   s: entry.hits,
         ag,
-  e: now - entry.lastAccessed;)
+  e: now - entry.lastAccessed;),
       });
     });
     return {/* TODO: Fix JSX expression */}

@@ -141,7 +141,7 @@ const HomePage: React.FC = memo(() => {
       </Suspense>
       <main id="main-content" className="container mx-auto px-4 py-16 pt-24" role="main">
         {/* Hero Section */}
-        <section
+        </main><section
           className={`text-center mb-16 transition-all duration-1000 cyber-scan-line ${
             isLoaded && isVisible 
               ? 'opacity-100 translate-y-0' 
@@ -149,7 +149,7 @@ const HomePage: React.FC = memo(() => {
           }`}
           aria-labelledby="hero-heading"
         >
-          <div className="max-w-6xl mx-auto"></div>
+          </section><div className="max-w-6xl mx-auto"></div>
             <h1 
               id="hero-heading" 
               className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 neon-text cyber-text holographic-text glitch"
@@ -217,7 +217,7 @@ const HomePage: React.FC = memo(() => {
             Comprehensive AI and IT solutions designed to transform your business operations
           </p>
           {/* Primary Services Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-12"></div>
+          </section><div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-12"></div>
             <Suspense fallback={<ServiceCardSkeleton />}>
               <article className="quantum-card p-4 sm:p-6 energy-pulse">
                 <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line">🤖</div>
@@ -1065,7 +1065,7 @@ const HomePage: React.FC = memo(() => {
             Affordable, powerful AI-driven tools for modern businesses. 50+ ready-to-use applications.
           </p>
           {/* Productivity Tools */}
-          <div className="mb-12"></div>
+          </section><div className="mb-12"></div>
             <h3 className="text-xl sm:text-2xl font-bold text-white mb-6 text-center neon-text">
               Productivity & Business Tools
             </h3>
@@ -1316,7 +1316,7 @@ const HomePage: React.FC = memo(() => {
 
         {/* Contact Section */}
         <section className="mb-16" aria-labelledby="contact-heading">
-          <div className="max-w-6xl mx-auto"></div>
+          </section><div className="max-w-6xl mx-auto"></div>
             <h2 id="contact-heading" className="text-3xl sm:text-4xl font-bold text-white mb-8 text-center neon-text">
               Ready to Transform Your Business?
             </h2>

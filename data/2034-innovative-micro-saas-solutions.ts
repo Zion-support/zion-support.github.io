@@ -112,7 +112,7 @@ export const,
     integrations: ['Google Business Profile', 'Yelp'],
     use_cases: ['Local ranking', 'Reputation management'],
     link: 'https://ziontechgroup.com / services / local - seo - reviews - booster',
-    real_service: true;
+    real_service: true;,
   }},
     id: 'smart - invoice - reconciliation',
     name: 'Smart Invoice Reconciliation',
@@ -147,7 +147,7 @@ export const,
     integrations: ['QuickBooks', 'Xero', 'Stripe'],
     use_cases: ['Accounting automation', 'Finance ops'],
     link: 'https://ziontechgroup.com / services / smart - invoice - reconciliation',
-    real_service: true;
+    real_service: true;,
   },
       'Summarize resumes, score against job descriptions, and auto-generate interview question sets.',
       'Summarize resumes, score against job descriptions, and auto-generate interview question sets.'
@@ -157,7 +157,7 @@ export const,
     integrations: ['Greenhouse', 'Lever']
     useCases: ['Faster hiring', 'Bias reduction']
     link: 'https://ziontechgroup.com/services/candidate-screening-copilot',
-    realService: true;
+    realService: true;,
   }
       'Summarize resumes, score against job descriptions, and auto-generate interview question sets.',
     id: 'candidate - screening - copilot',
@@ -170,7 +170,7 @@ export const,
     integrations: ['Greenhouse', 'Lever'],
     use_cases: ['Faster hiring', 'Bias reduction'],
     link: 'https://ziontechgroup.com / services / candidate - screening - copilot',
-    real_service: true;
+    real_service: true;,
   }];	id: string;
 	id: string, name: string;
 	description: string, tagline?: string,
@@ -178,7 +178,7 @@ export const,
 	description: string, tagline?: string,
     useCases: ['Faster hiring', 'Bias reduction'],
     link: 'https://ziontechgroup.com/services/candidate-screening-copilot',
-    realService: true;
+    realService: true;,
   };
 ];	id: string;
 	id: string, name: string;
@@ -224,7 +224,7 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [,
 		integrations: ['Google Business ProfileYelp'];
 		useCases: ['Local rankingReputation management'],
 		link: 'https://ziontechgroup && ziontechgroup.com/services/local-seo-reviews-booster',
-		realService: true;
+		realService: true;,
 	}
 		id: 'smart-invoice-reconciliation',
 		name: 'Smart Invoice Reconciliation',
@@ -235,7 +235,7 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [,
 		integrations: ['QuickBooksXeroStripe'];
 		useCases: ['Accounting automationFinance ops'],
 		link: 'https://ziontechgroup && ziontechgroup.com/services/smart-invoice-reconciliation',
-		realService: true;
+		realService: true;,
 	}
 		id: 'candidate-screening-copilot',
 		name: 'Candidate Screening Copilot',
@@ -500,7 +500,7 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [,
   integrations: ['Google Business ProfileYelp'];
   use_cases: ['Local ranking_reputation management'],
   link: 'https://ziontechgroup.com / services / local - seo - reviews - booster',
-  real_service: true;
+  real_service: true;,
 }
   id: 'smart - invoice - reconciliation',
   name: 'Smart Invoice Reconciliation',
@@ -511,7 +511,7 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [,
   integrations: ['QuickBooksXeroStripe'];
   use_cases: ['Accounting automation_finance ops'],
   link: 'https://ziontechgroup.com / services / smart - invoice - reconciliation',
-  real_service: true;
+  real_service: true;,
 }
   id: 'candidate - screening - copilot',
   name: 'Candidate Screening Copilot',
@@ -678,7 +678,7 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [;
 		integrations: ['Google Business ProfileYelp'];
 		useCases: ['Local rankingReputation management'];
 		link: 'https://ziontechgroup.com/services/local-seo-reviews-booster';
-		realService: true;
+		realService: true;,
 	};
 	{;
 		id: 'smart-invoice-reconciliation'}
@@ -690,7 +690,7 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [;
 		integrations: ['QuickBooksXeroStripe'];
 		useCases: ['Accounting automationFinance ops'];
 		link: 'https://ziontechgroup.com/services/smart-invoice-reconciliation';
-		realService: true;
+		realService: true;,
 	};
 	{;
 		id: 'candidate-screening-copilot'}
@@ -702,7 +702,7 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [;
 		integrations: ['GreenhouseLever'];
 		useCases: ['Faster hiringBias reduction'];
 		link: 'https://ziontechgroup.com/services/candidate-screening-copilot';
-		realService: true;
+		realService: true;,
 	}
 ];
 ;
@@ -857,7 +857,7 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [;
 		integrations: ['Google Business ProfileYelp'];
 		useCases: ['Local rankingReputation management'];
 		link: 'https://ziontechgroup.com/services/local-seo-reviews-booster';
-		realService: true;
+		realService: true;,
 	};
 	{;
 		id: 'smart-invoice-reconciliation'}
@@ -869,7 +869,7 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [;
 		integrations: ['QuickBooksXeroStripe'];
 		useCases: ['Accounting automationFinance ops'];
 		link: 'https://ziontechgroup.com/services/smart-invoice-reconciliation';
-		realService: true;
+		realService: true;,
 	};
 	{;
 		id: 'candidate-screening-copilot'}
@@ -881,7 +881,7 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [;
 		integrations: ['GreenhouseLever'];
 		useCases: ['Faster hiringBias reduction'];
 		link: 'https://ziontechgroup.com/services/candidate-screening-copilot';
-		realService: true;
+		realService: true;,
 	}
 ];
 export type InnovativeMicroSaas =
@@ -1060,7 +1060,7 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [,
 		features: ['Smart review routingNPS & CSATChurn alertsMulti-location dashboards'];
 		integrations: ['Google Business ProfileYelp'];
 		useCases: ['Local rankingReputation management'];
-		realService: true;
+		realService: true;,
 	}
 		id: 'smart-invoice-reconciliation',
 		name: 'Smart Invoice Reconciliation',
@@ -1070,7 +1070,7 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [,
 		features: ['OCR ingestionMatching heuristicsDiscrepancy alertsExport to ERP'];
 		integrations: ['QuickBooksXeroStripe'];
 		useCases: ['Accounting automationFinance ops'];
-		realService: true;
+		realService: true;,
 	}
 		id: 'candidate-screening-copilot',
 		name: 'Candidate Screening Copilot',
@@ -1080,7 +1080,7 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [,
 		features: ['Resume parsingJD matchingQuestion setsATS sync'];
 		integrations: ['GreenhouseLever'];
 		useCases: ['Faster hiringBias reduction'];
-		realService: true;
+		realService: true;,
 	}
 ];
 name: string;
@@ -1245,7 +1245,7 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [,
   integrations: ['Google Business ProfileYelp'];
   use_cases: ['Local ranking_reputation management'],
   link: 'https://ziontechgroup.com / services / local - seo - reviews - booster',
-  real_service: true;
+  real_service: true;,
 }
   id: 'smart - invoice - reconciliation',
   name: 'Smart Invoice Reconciliation',
@@ -1256,7 +1256,7 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [,
   integrations: ['QuickBooksXeroStripe'];
   use_cases: ['Accounting automation_finance ops'],
   link: 'https://ziontechgroup.com / services / smart - invoice - reconciliation',
-  real_service: true;
+  real_service: true;,
 }
   id: 'candidate - screening - copilot',
   name: 'Candidate Screening Copilot',

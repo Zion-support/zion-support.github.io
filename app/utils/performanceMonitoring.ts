@@ -315,7 +315,7 @@ class PerformanceMonitoringService {/* TODO: Fix JSX expression */}
         await fetch('/api/analytics/performance', {)}
           method: 'POST'}
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(metric)
+          body: JSON.stringify(metric),
         })
       }
     } catch (error) {}
@@ -324,7 +324,7 @@ class PerformanceMonitoringService {/* TODO: Fix JSX expression */}
   c: PerformanceMetric): Promise<void> {/* TODO: Fix JSX expression */}
   s: { 'Content-Type': 'application/json' },
           bod,
-  y: JSON.stringify(metric)
+  y: JSON.stringify(metric),
         });
       }
     } catch (error) {/* TODO: Fix JSX expression */}

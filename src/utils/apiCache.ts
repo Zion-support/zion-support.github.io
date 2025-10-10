@@ -21,7 +21,7 @@ interface ApiCacheConfig {// TODO: Add content;}
 }
 interface PendingRequest<T> {
   promise: Promise<T>;
-  timestamp: number;
+  timestamp: number;,
 }
 /**
  * API Cache Manager with request deduplication
@@ -40,7 +40,7 @@ $4});
       ttl: config.ttl || 5 * 60 * 1000,
       maxRetries: config.maxRetries || 3,
       retryDelay: config.retryDelay || 1000,
-      deduplicate: config.deduplicate ?? true
+      deduplicate: config.deduplicate ?? true,
     };
     // Auto-cleanup every 5 minutes
     setInterval(() => {
@@ -53,7 +53,7 @@ interface PendingRequest;
 
           <T>;,
     timestam,
-  p: number;
+  p: number;,
 }
 /**
  * API Cache Manager with request deduplication;
@@ -81,7 +81,7 @@ export class ApiCache {// TODO: Add content;}
       defaultTT,
   L: config.ttl || 5 * 60 * 1000, // 5 minutes,
   storag,
-  e: 'memory')
+  e: 'memory'),
     });
     this.config = {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -93,7 +93,7 @@ export class ApiCache {// TODO: Add content;}
       retryDela,
   y: config.retryDelay || 1000,
       deduplicat,
-  e: config.deduplicate ?? true;
+  e: config.deduplicate ?? true;,
     };
     // Auto-cleanup every 5 minutes;
     setInterval(() => {/* TODO: Fix JSX expression */}
@@ -135,7 +135,7 @@ export class ApiCache {// TODO: Add content;}
     if (mergedConfig.deduplicate) {
       this.pendingRequests.set(cacheKey, {
         promise: requestPromise,
-        timestamp: Date.now()
+        timestamp: Date.now(),
       });
     }
     try {
@@ -195,7 +195,7 @@ const requestPromise = this.fetchWithRetry;
 };
 
   promise: requestPromise,
-        timestamp: Date.now()
+        timestamp: Date.now(),
       }
   )
     }
@@ -322,7 +322,7 @@ const requestPromise = this.fetchWithRetry;
    * Invalidate cache entries matching a pattern
    */
   invalidate(pattern: string | RegExp): number {
-    return this.cache.invalidate(pattern);
+    return this.cache.invalidate(pattern);,
   }
   /**
    * Clear entire cache
@@ -352,7 +352,7 @@ const requestPromise = this.fetchWithRetry;
   getStats() {
     return {
       ...this.cache.stats(),
-      pendingRequests: this.pendingRequests.size
+      pendingRequests: this.pendingRequests.size,
     };
   }
   /**
@@ -402,7 +402,7 @@ const requestPromise = this.fetchWithRetry;
 }
 //       ...this.cache.stats(),
       pendingRequest,
-  s: this.pendingRequests.size;
+  s: this.pendingRequests.size;,
     };
   }
   /**
@@ -479,7 +479,7 @@ export const defaultApiCache = new ApiCache({
   ttl: 5 * 60 * 1000, // 5 minutes
   maxRetries: 3,
   retryDelay: 1000,
-  deduplicate: true
+  deduplicate: true,
 });
 /**
  * Cached fetch helper
@@ -509,7 +509,7 @@ export function createCachedApi(baseUrl: string, defaultOptions: RequestInit = {
           ...(defaultOptions.headers || {}),
           ...(options?.headers || {})
         },
-        body: JSON.stringify(body)
+        body: JSON.stringify(body),
       }),
     put: <T>(path: string, body: unknown, options?: RequestInit) =>
       cache.fetch<T>(`${baseUrl}${path}`, {
@@ -521,7 +521,7 @@ export function createCachedApi(baseUrl: string, defaultOptions: RequestInit = {
           ...(defaultOptions.headers || {}),
           ...(options?.headers || {})
         },
-        body: JSON.stringify(body)
+        body: JSON.stringify(body),
       }),
     delete: <T>(path: string, options?: RequestInit) =>
       cache.fetch<T>(`${baseUrl}${path}`, { ...defaultOptions, ...options, method: 'DELETE' }),
@@ -546,7 +546,7 @@ export const defaultApiCache = new ApiCache({// TODO: Add content;}
   retryDela,
   y: 1000,
   deduplicat,
-  e: true;)
+  e: true;),
 });
 /**
  * Cached fetch helper;
@@ -610,7 +610,7 @@ export function createCachedApi(baseUrl: string, defaultOptions: RequestInit = {
   )
         },
         bod,
-  y: JSON.stringify(body)
+  y: JSON.stringify(body),
       }),
     pu,
   t: 
@@ -643,7 +643,7 @@ export function createCachedApi(baseUrl: string, defaultOptions: RequestInit = {
   )
         },
         bod,
-  y: JSON.stringify(body)
+  y: JSON.stringify(body),
       }),
     delet,
   e: 

@@ -20,18 +20,24 @@ const AICodeAssistantPage: React.FC = () => {
       title: 'Intelligent Code Generation',
       description: 'Generate clean, efficient code from natural language descriptions with AI-powered suggestions.',
       benefits: ['Natural language to code', 'Code completion', 'Smart suggestions', 'Multi-language support']
+    }
+    }
     },
     {
       icon: Bug,
       title: 'Smart Debugging',
       description: 'Automatically detect and fix bugs, suggest optimizations, and improve code quality.',
       benefits: ['Bug detection', 'Auto-fix suggestions', 'Code optimization', 'Quality analysis']
+    }
+    }
     },
     {
       icon: Terminal,
       title: 'Multi-Language Support',
       description: 'Support for 50+ programming languages including Python, JavaScript, Java, C++, and more.',
       benefits: ['50+ languages', 'Syntax highlighting', 'Language-specific features', 'Cross-platform support']
+    }
+    }
     },
     {
     }

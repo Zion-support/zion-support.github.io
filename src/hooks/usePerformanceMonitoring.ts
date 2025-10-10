@@ -183,8 +183,7 @@ const resourceObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expre
 //             navigation.domContentLoadedEventStart,
           loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
           domInteractive: navigation.domInteractive - navigation.fetchStart,
-          totalLoadTime: navigation.loadEventEnd - navigation.fetchStart;
-
+          totalLoadTime: navigation.loadEventEnd - navigation.fetchStart;,
         };
         Object.entries(metrics).forEach(([key, value]) => {/* TODO: Fix JSX expression */}
   O: Add content;}

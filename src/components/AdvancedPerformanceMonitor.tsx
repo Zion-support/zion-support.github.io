@@ -1,3 +1,4 @@
+import React from 'react';
 
 
 'use client';
@@ -15,7 +16,7 @@ interface PerformanceMetrics {/* TODO: Fix JSX expression */}
     ttf,
   b: number | null;,
     memor,
-  y: number | null;
+  y: number | null;,
 }
 
 interface PerformanceMonitorProps {// TODO: Add content;}
@@ -44,8 +45,7 @@ const AdvancedPerformanceMonitor: React.FC;
     fid: null,
     cls: null,
     ttfb: null,
-    memory: null;
-
+    memory: null;,
   });
     if (typeof window === 'undefined' || !('performance' in window)) return;
     if (typeof PerformanceObserver === 'undefined') return;
@@ -103,7 +103,7 @@ const AdvancedPerformanceMonitor: React.FC;
 }
 //                 ...prev,
                 fi,
-  d: _fidEntry.processingStart - _fidEntry.startTime;)
+  d: _fidEntry.processingStart - _fidEntry.startTime;),
               }));
             }
           });
@@ -122,7 +122,7 @@ const AdvancedPerformanceMonitor: React.FC;
 }
       try {const clsObserver = new PerformanceObserver(list => {}
   // TOD,
-  O: Add content;
+  O: Add content;,
 })
           const entries = list.getEntries();
           _entries.forEach(entry => {/* TODO: Fix JSX expression */}

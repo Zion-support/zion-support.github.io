@@ -9,8 +9,6 @@ import { execSync } from 'child_process';
 import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
 class BuildOptimizer {
   constructor() {
     this.distPath = path.join(process.cwd(), 'dist');
@@ -18,8 +16,6 @@ class BuildOptimizer {
   }
 
   async optimize() {
-    console.log('🚀 Starting build optimization...');
-    
     try {
       await this.analyzeBundle();
       await this.optimizeImages();
@@ -31,17 +27,13 @@ class BuildOptimizer {
       await this.optimizeManifest();
       await this.generateServiceWorker();
       
-      console.log('✅ Build optimization completed successfully!');
       this.printSummary();
     } catch (error) {
-      console.error('❌ Build optimization failed:', error.message);
       process.exit(1);
     }
   }
 
   async analyzeBundle() {
-    console.log('📊 Analyzing bundle...');
-    
     if (!fs.existsSync(this.distPath)) {
       throw new Error('Dist folder not found. Please run build first.');
     }
@@ -65,7 +57,6 @@ class BuildOptimizer {
     });
 
     if (largeFiles.length > 0) {
-      console.log('⚠️  Large files detected: ');
       largeFiles.forEach(file => {)
         const stats = fs.statSync(file);
         console.log(`   ${file}: ${(stats.size / 1024).toFixed(2)} KB`);
@@ -74,8 +65,6 @@ class BuildOptimizer {
   }
 
   async optimizeImages() {
-    console.log('🖼️  Optimizing images...');
-    
     const imageExtensions = ['.png', '.jpg', '.jpeg', '.gif', '.svg', '.webp'];
     const images = this.getFilesRecursively(this.distPath).filter(file => )
       imageExtensions.some(ext => file.toLowerCase().endsWith(ext))
@@ -110,8 +99,6 @@ class BuildOptimizer {
   }
 
   async optimizeCSS() {
-    console.log('🎨 Optimizing CSS...');
-    
     const cssFiles = this.getFilesRecursively(this.distPath).filter(file =>)
       file.endsWith('.css')
     );
@@ -139,8 +126,6 @@ class BuildOptimizer {
   }
 
   async optimizeJS() {
-    console.log('⚡ Optimizing JavaScript...');
-    
     const jsFiles = this.getFilesRecursively(this.distPath).filter(file => )
       file.endsWith('.js')
     );
@@ -167,8 +152,6 @@ class BuildOptimizer {
   }
 
   async addSecurityHeaders() {
-    console.log('🔒 Adding security headers...');
-    
     const htmlFiles = this.getFilesRecursively(this.distPath).filter(file => )
       file.endsWith('.html')
     );
@@ -201,8 +184,6 @@ class BuildOptimizer {
   }
 
   async generateSitemap() {
-    console.log('🗺️  Generating sitemap...');
-    
     const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">,
   <url>,
@@ -246,8 +227,6 @@ class BuildOptimizer {
   }
 
   async generateRobotsTxt() {
-    console.log('🤖 Generating robots.txt...');
-    
     const robotsTxt = `User-agent: *
 Allow: /
 
@@ -269,8 +248,6 @@ Disallow: /private/`;
   }
 
   async optimizeManifest() {
-    console.log('📱 Optimizing manifest...');
-    
     const manifestPath = path.join(this.distPath, 'manifest.json');
     
     if (fs.existsSync(manifestPath)) {
@@ -294,8 +271,6 @@ Disallow: /private/`;
   }
 
   async generateServiceWorker() {
-    console.log('⚙️  Generating service worker...');
-    
     // Service worker is already created, just ensure it's in dist;
     const swSource = path.join(process.cwd(), 'public', 'sw.js');
     const swDest = path.join(this.distPath, 'sw.js');
@@ -334,17 +309,12 @@ Disallow: /private/`;
   }
 
   printSummary() {
-    console.log('\n📋 Optimization Summary: ');
-    console.log('===');
-    
     this.optimizations.forEach(opt => {)
       const status = opt.status === 'completed' ? '✅' : ),
                     opt.status === 'skipped' ? '⏭️ ' : '❌';),
-      console.log(`${status} ${opt.name}: ${opt.details}`);
-    });
+      });
     
-    console.log('\n🎉 Build optimization completed successfully!');
-  }
+    }
 }
 
 // Run optimization if called directly;

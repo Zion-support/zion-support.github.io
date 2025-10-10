@@ -254,7 +254,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
       Object.assign(structuredData, {
         author: {)
 // '@type': 'Person')
-// name: this.currentPageData.author || this.config.siteName;)
+// name: this.currentPageData.author || this.config.siteName;),
         })
         datePublished: this.currentPageData.publishedTime;
         dateModified: this.currentPageData.modifiedTime),
@@ -265,12 +265,12 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
       Object.assign(structuredData, {)}
         author: {}
 // '@type': 'Person',
-// name: this.currentPageData.author || this.config.siteName
+// name: this.currentPageData.author || this.config.siteName,
         },
         datePublished: this.currentPageData.publishedTime,
         dateModified: this.currentPageData.modifiedTime,
         articleSection: this.currentPageData.section,
-        keywords: this.generateKeywords()
+        keywords: this.generateKeywords(),
       })
   private updateStructuredData(): void {/* TODO: Fix JSX expression */}
       }
@@ -285,7 +285,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
         articleSectio,
   n: this.currentPageData.section,
         keyword,
-  s: this.generateKeywords()
+  s: this.generateKeywords(),
       });
     }
     this.addStructuredData(structuredData)
@@ -429,7 +429,7 @@ Disallo,
 Disallo,
   w: /_next/
 Disallo,`
-  w: /static/`;
+  w: /static/`;,
   }
   /**
    * Check for SEO issues;

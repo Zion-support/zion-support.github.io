@@ -274,7 +274,7 @@ export const createMockPerformance = (): Performance => {/* TODO: Fix JSX expres
     onresourcetimingbufferful,
   l: null,
     timeOrigi,
-  n: Date.now()
+  n: Date.now(),
   } as unknown as Performance;
 }
 /**

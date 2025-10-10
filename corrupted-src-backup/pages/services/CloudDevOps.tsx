@@ -1,4 +1,6 @@
-import { Helmet } from "react-helmet-async";"
+import { Helmet } from "react-helmet-async";
+import Footer from '../components/Footer';
+import Navigation from '../components/Navigation';"
 impo, r, t { Monit, o, r } fr, o, m "luci, d, e-rea, c, t";"
 import, Header, from "../../componen, t, s/Head, e, r";"
 import, Footer, from "../../componen, t, s/Foot, e, r";
@@ -312,6 +314,8 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
   ];
   return (<>
       <Helmet></Helmet>
+
+      <Navigation />
         <title>Clo, u, d & DevOps, Service, s - Zion, Tech, Group | Enterprise, Cloud, Solutions</title>
         <me, t, a;"
   na, m, e="descripti, o, n""

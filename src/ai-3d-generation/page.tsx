@@ -33,21 +33,21 @@ const AI3DGenerationPage: React.FC = () => {
       price: '$299',
       period: '/month',
       features: ['5 models/month', 'Basic textures', 'Standard quality', 'Email support'],
-      popular: false
+      popular: false,
     },
     {
       name: 'Professional',
       price: '$499',
       period: '/month',
       features: ['Unlimited models', 'Premium textures', '4K rendering', 'API access', 'Priority support'],
-      popular: true
+      popular: true,
     },
     {
       name: 'Enterprise',
       price: '$999',
       period: '/month',
       features: ['Everything in Pro', 'Custom models', 'White-label', 'Dedicated support', 'Commercial license'],
-      popular: false
+      popular: false,
     }
   ];
 
@@ -184,7 +184,7 @@ const AI3DGenerationPage: React.FC = () => {
               <p className="text-xl text-gray-300 mb-8">
                 Join leading companies using AI 3D generation technology
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <a
                   href="/contact"
                   className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
@@ -205,7 +205,7 @@ const AI3DGenerationPage: React.FC = () => {
         <Footer />
       </div>
     </>
-  );
+  );,
 };
 
 export default AI3DGenerationPage;

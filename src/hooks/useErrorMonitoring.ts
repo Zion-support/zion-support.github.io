@@ -12,7 +12,7 @@ declare global {/* TODO: Fix JSX expression */}
 }
     __REACT_ERROR_HANDLER__?: (erro,
   r: Error, errorInf)
-  o: unknown) => void;
+  o: unknown) => void;,
   }
 }
 export const _useErrorMonitoring = () => {/* TODO: Fix JSX expression */}

@@ -1,5 +1,6 @@
 import {ArrowLeft, Cpu, Zap, CheckCircle, TrendingUp, Globe} Network; Server } from "lucide-react"
 import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
 const DistributedAITrainingScale2026 = () =>
   return(<div>
   return (<div></div>
@@ -27,6 +28,8 @@ const DistributedAITrainingScale2026 = () =>
   return (<div></div>
       <div></div>
       <Helmet></Helmet>
+
+      <Navigation />
         <title>Distributed AI Training at Scale,
   2026: 1000+ GPU Clusters | Zion Tech Group</title>
         <meta></meta>"

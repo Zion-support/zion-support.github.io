@@ -24,7 +24,7 @@ export interface UserProperties {/* TODO: Fix JSX expression */}
   sessionId?: string;
   userType?: string;
   [ke,
-  y: string]: unknown;
+  y: string]: unknown;,
 }
 class EnhancedAnalytics {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -110,8 +110,7 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
 };
 
   timestamp: new Date().toISOString(),
-        userAgent: navigator.userAgent;
-
+        userAgent: navigator.userAgent;,
       }
     }
   )
@@ -222,8 +221,7 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
 };
 
   pageTitle: pageTitle || document.title,
-        referrer: document.referrer;
-
+        referrer: document.referrer;,
       }
     })
   )
@@ -393,7 +391,7 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
     sessionI,
   d: string;,
     userPropertie,
-  s: UserProperties;
+  s: UserProperties;,
   } {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -404,8 +402,7 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
   queueSize: this.queue.length,
       offlineQueueSize: this.offlineQueue.length,
       sessionId: this.sessionId,
-      userProperties: this.getUserProperties()
-
+      userProperties: this.getUserProperties(),
     }
   }
 }

@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import Navigation from '../components/Navigation';
 
 interface PerformanceMetrics {
   loadTime: number;
   renderTime: number;
   memoryUsage: number;
-  fps: number;
+  fps: number;,
 }
 
 const PerformanceDashboard: React.FC = () => {

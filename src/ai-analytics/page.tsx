@@ -13,24 +13,28 @@ const AIAnalyticsPage: React.FC = () => {
       title: 'Real-time Analytics',
       description: 'Live data visualization and insights',
       benefits: ['Live dashboards', 'Real-time metrics', 'Instant insights']
+    }
     },
     {
       icon: Target,
       title: 'Predictive Analytics',
       description: 'AI-powered predictions and forecasting',
       benefits: ['Trend prediction', 'Forecasting', 'Risk analysis']
+    }
     },
     {
       icon: Zap,
       title: 'Automated Reporting',
       description: 'Intelligent report generation and distribution',
       benefits: ['Auto reports', 'Custom dashboards', 'Scheduled delivery']
+    }
     },
     {
       icon: Settings,
       title: 'Custom Metrics',
       description: 'Customizable metrics and KPIs',
       benefits: ['Custom KPIs', 'Flexible metrics', 'Personalized views']
+    }
     }
   ];
 

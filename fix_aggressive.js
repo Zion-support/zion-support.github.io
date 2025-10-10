@@ -1,12 +1,11 @@
+import React from 'react';
 #!/usr/bin/env node;
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
 // const __filename = fileURLToPath(import.meta.url);
-// const __dirname = path.dirname(__filename);
-
-//Function to aggressively fix corrupted syntax;
+// //Function to aggressively fix corrupted syntax;
 function fixCorruptedSyntax(text) {
 
   //Fix import statements that got completely corrupted;

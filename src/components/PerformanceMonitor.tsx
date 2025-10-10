@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
+import Navigation from '../components/Navigation';
 
 interface PerformanceMetrics {
   lcp: number | null;
   fid: number | null;
   cls: number | null;
   fcp: number | null;
-  ttfb: number | null;
+  ttfb: number | null;,
 }
 
 const PerformanceMonitor: React.FC = () => {
@@ -35,7 +36,7 @@ const PerformanceMonitor: React.FC = () => {
         entries.forEach((entry: any) => {
           setMetrics(prev => ({ 
             ...prev, 
-            fid: entry.processingStart - entry.startTime 
+            fid: entry.processingStart - entry.startTime,
           }));
         });
       });
@@ -70,7 +71,7 @@ const PerformanceMonitor: React.FC = () => {
       if (navigationEntry) {
         setMetrics(prev => ({ 
           ...prev, 
-          ttfb: navigationEntry.responseStart - navigationEntry.requestStart 
+          ttfb: navigationEntry.responseStart - navigationEntry.requestStart,
         }));
       }
 

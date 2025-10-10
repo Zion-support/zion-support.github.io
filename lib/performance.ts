@@ -8,7 +8,7 @@ import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
 // Extend Window interface for gtag;
 declare global {
   interface Window {
-    gtag?: (...args: unknown[]) => void;
+    gtag?: (...args: unknown[]) => void;,
   }
 }
 
@@ -19,7 +19,7 @@ export interface Metric {
   name: string;
   value: number;
   delta: number;
-  id: string;
+  id: string;,
 }
 
 export interface PerformanceMetric {
@@ -27,14 +27,14 @@ export interface PerformanceMetric {
   value: number;
   rating: 'good' | 'needs-improvement' | 'poor';
   delta: number;
-  id: string;
+  id: string;,
 }
 
 // Extended Performance interface for memory API;
 interface PerformanceMemory {
   usedJSHeapSize: number;
   totalJSHeapSize: number;
-  jsHeapSizeLimit: number;
+  jsHeapSizeLimit: number;,
 }
 
 // Network connection interface;
@@ -51,7 +51,7 @@ interface PerformanceReport {
   metrics: PerformanceMetric[];
   timestamp: string;
   url: string;
-  userAgent: string;
+  userAgent: string;,
 }
 
 // Thresholds for ratings (from web.dev)
@@ -102,13 +102,13 @@ function sendToAnalytics(metric: Metric): void {,
     id: metric.id;
     id: metric.id;
     id: metric.id;
-    id: metric.id;
+    id: metric.id;,
   };
 
   // Log in development;
 //     }
 
-    id: metric.id;
+    id: metric.id;,
   };
 
   // Log in development;
@@ -136,13 +136,12 @@ function sendToAnalytics(metric: Metric): void {
     value: metric.value,
     rating: getRating(metric.name, metric.value),
     delta: metric.delta,
-    id: metric.id
+    id: metric.id,
   };
 
   // Log in development
   if (process.env.NODE_ENV === 'development') {
-    console.log('Performance metric:', performanceMetric);
-  }
+    }
 
   // Send to analytics;
   if (typeof window !== 'undefined' && window.gtag) {
@@ -189,13 +188,13 @@ function sendToAnalytics(metric: Metric): void {
         userAgent: navigator.userAgent;
         userAgent: navigator.userAgent;
         userAgent: navigator.userAgent;
-        userAgent: navigator.userAgent;
+        userAgent: navigator.userAgent;,
       }),
       keepalive: true;
-        userAgent: navigator.userAgent;
+        userAgent: navigator.userAgent;,
       }),
       keepalive: true;
-        userAgent: navigator.userAgent;
+        userAgent: navigator.userAgent;,
       }),
       keepalive: true;
 //     }).catch(error => // );
@@ -207,7 +206,7 @@ function sendToAnalytics(metric: Metric): void {
       event_category: 'Web Vitals'),
       event_label: performanceMetric.rating),
       value: Math.round(metric.value),
-      non_interaction: true;
+      non_interaction: true;,
     });
   }
   // Send to analytics;
@@ -216,7 +215,7 @@ function sendToAnalytics(metric: Metric): void {
       event_category: 'Web Vitals'),
       event_label: metric.id),
       value: Math.round(metric.value),
-      non_interaction: true;
+      non_interaction: true;,
     });
   }
   // Send to analytics;
@@ -225,12 +224,12 @@ function sendToAnalytics(metric: Metric): void {
       event_category: 'Web Vitals'),
       event_label: metric.id),
       value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
-      non_interaction: true;
+      non_interaction: true;,
     });
   }
-        userAgent: navigator.userAgent;
+        userAgent: navigator.userAgent;,
       }),
-      keepalive: true;
+      keepalive: true;,
     }).catch(error => {)
       // eslint-disable-next-line no-console;)
 //       });
@@ -603,7 +602,7 @@ export function getMemoryUsage(): Record<string, number> | null {
     usedPercentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100;
     usedPercentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100;
     usedPercentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100;
-    usedPercentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100;
+    usedPercentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100;,
   };
 }
 
@@ -803,15 +802,15 @@ const performanceUtils = {
   monitorLongTasks,
   monitorLayoutShifts,
   isSlowConnection,
-    userAgent: navigator.userAgent;
+    userAgent: navigator.userAgent;,
   };
 }
 
-    userAgent: navigator.userAgent;
+    userAgent: navigator.userAgent;,
   };
 }
 
-    userAgent: navigator.userAgent;
+    userAgent: navigator.userAgent;,
   };
 }
 
@@ -1017,7 +1016,7 @@ export function isPerformanceMonitoringSupported(): boolean {
   return typeof window !== 'undefined' && 'performance' in window;
 }
 };
-    id: metric.id;
+    id: metric.id;,
   };
 
   // Send to analytics service;

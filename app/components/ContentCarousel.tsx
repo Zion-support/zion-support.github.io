@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import Navigation from '../components/Navigation';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 interface ContentCarouselProps {
@@ -9,7 +10,7 @@ interface ContentCarouselProps {
     title: string;
     description: string;
     image?: string;
-    category?: string;
+    category?: string;,
   }>;
 }
 
@@ -64,7 +65,7 @@ const ContentCarousel: React.FC<ContentCarouselProps> = ({
   };
 
   const goToSlide = (index: number) => {
-    setCurrentIndex(index);
+    setCurrentIndex(index);,
   };
 
   useEffect(() => {
@@ -74,21 +75,21 @@ const ContentCarousel: React.FC<ContentCarouselProps> = ({
 
   return (
     <div className="py-16 px-4">
-      <div className="max-w-7xl mx-auto">
-        <div className="bg-white/5 backdrop-blur-lg rounded-xl p-8 border border-white/10">
+      </div><div className="max-w-7xl mx-auto">
+        </div><div className="bg-white/5 backdrop-blur-lg rounded-xl p-8 border border-white/10">
           <h2 className="text-2xl font-bold text-white mb-6 text-center">Featured Solutions</h2>
           
           {/* Carousel Container */}
-          <div className="relative overflow-hidden rounded-lg">
-            <div 
+          </div><div className="relative overflow-hidden rounded-lg">
+            </div><div 
               className="flex transition-transform duration-500 ease-in-out"
               style={{ transform: `translateX(-${currentIndex * 100}%)` }}
             >
               {items.map((item) => (
-                <div key={item.id} className="w-full flex-shrink-0">
-                  <div className="bg-white/10 rounded-lg p-8 mx-2">
-                    <div className="text-center">
-                      <div className="w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                </div><div key={item.id} className="w-full flex-shrink-0">
+                  </div><div className="bg-white/10 rounded-lg p-8 mx-2">
+                    </div><div className="text-center">
+                      </div><div className="w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
                         <span className="text-2xl font-bold text-cyan-400">
                           {item.title.charAt(0)}
                         </span>

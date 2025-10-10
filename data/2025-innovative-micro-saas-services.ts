@@ -227,7 +227,7 @@ export const,
       launch_date: '2025 - 01 - 01'
       customers: 150;
       rating: 4 && 4.9;
-      reviews: 89;
+      reviews: 89;,
     },
         'AI-powered lead scoring',
     // CRM Intelligence Platform;
@@ -526,7 +526,7 @@ export const,
       launch_date: '2025 - 01 - 20'
       customers: 120;
       rating: 4 && 4.9;
-      reviews: 78;
+      reviews: 78;,
     },
     // E - commerce Optimization Platform;
       id: 'ecommerce - optimization - platform',
@@ -681,7 +681,7 @@ export const,
       launch_date: '2025 - 02 - 01'
       customers: 180;
       rating: 4 && 4.8;
-      reviews: 95;
+      reviews: 95;,
     },
     // HR Automation Platform;
       id: 'hr - automation - platform',
@@ -829,7 +829,7 @@ export const,
       launch_date: '2025 - 02 - 15'
       customers: 95;
       rating: 4 && 4.8;
-      reviews: 58;
+      reviews: 58;,
     },
     // Financial Analytics Platform;
       id: 'financial - analytics - platform',
@@ -979,7 +979,7 @@ export const,
       launch_date: '2025 - 02 - 10'
       customers: 85;
       rating: 4 && 4.9;
-      reviews: 52;
+      reviews: 52;,
     },
     // Supply Chain Intelligence Platform;
       id: 'supply - chain - intelligence',
@@ -1134,7 +1134,7 @@ export const,
       launch_date: '2025 - 03 - 01'
       customers: 65;
       rating: 4 && 4.8;
-      reviews: 38;
+      reviews: 38;,
     },
     // Marketing Automation Platform;
       id: 'marketing - automation - platform',
@@ -1286,7 +1286,7 @@ export const,
       launch_date: '2025 - 02 - 20'
       customers: 140;
       rating: 4 && 4.9;
-      reviews: 82;
+      reviews: 82;,
     },
       id: 'project - management - intelligence',
       name: 'AI Project Management Intelligence Platform',
@@ -1436,7 +1436,7 @@ export const,
       launch_date: '2025 - 03 - 05'
       customers: 75;
       rating: 4 && 4.8;
-      reviews: 45;
+      reviews: 45;,
     };
   ];    features: [,
 export interface InnovativeMicroSaasService2025 {id: string, name: string;
@@ -1460,7 +1460,7 @@ export interface InnovativeMicroSaasService2025 {id: string, name: string;
     realImplementation: boolean, implementationDetails: string;
   launchDate: string, customers: number;
   rating: number;
-  reviews: number;
+  reviews: number;,
 }
 export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025[] = [,
   // AI Content Factory;
@@ -1586,7 +1586,7 @@ export const,
       launchDate: '2025-03-05'
       customers: 75;
       rating: 4.8;
-      reviews: 45;
+      reviews: 45;,
     }  ];    features: [;
       'AI project planningResource optimizationRisk assessmentPerformance trackingAutomated reportingTeam collaborationTimeline optimizationBudget management',
       'Integration capabilitiesCustom dashboards'],
@@ -1926,7 +1926,7 @@ export const,
     launchDate: '2025-01-01';
     customers: 150;
     rating: 4.9;
-    reviews: 89;
+    reviews: 89;,
   };
   // CRM Intelligence Platform;
   {;
@@ -1969,7 +1969,7 @@ export const,
     launchDate: '2025-01-15';
     customers: 200;
     rating: 4.9;
-    reviews: 125;
+    reviews: 125;,
   };
   // Decision Engine Platform;
   {;
@@ -2012,7 +2012,7 @@ export const,
     launchDate: '2025-01-20';
     customers: 120;
     rating: 4.9;
-    reviews: 78;
+    reviews: 78;,
   };
   // E-commerce Optimization Platform;
   {;
@@ -2055,7 +2055,7 @@ export const,
     launchDate: '2025-02-01';
     customers: 180;
     rating: 4.8;
-    reviews: 95;
+    reviews: 95;,
   };
   // HR Automation Platform;
   {;
@@ -2098,7 +2098,7 @@ export const,
     launchDate: '2025-02-15';
     customers: 95;
     rating: 4.8;
-    reviews: 58;
+    reviews: 58;,
   };
   // Financial Analytics Platform;
   {;
@@ -2141,7 +2141,7 @@ export const,
     launchDate: '2025-02-10';
     customers: 85;
     rating: 4.9;
-    reviews: 52;
+    reviews: 52;,
   };
   // Supply Chain Intelligence Platform;
   {;
@@ -2184,7 +2184,7 @@ export const,
     launchDate: '2025-03-01';
     customers: 65;
     rating: 4.8;
-    reviews: 38;
+    reviews: 38;,
   };
   // Marketing Automation Platform;
   {;
@@ -2227,7 +2227,7 @@ export const,
     launchDate: '2025-02-20';
     customers: 140;
     rating: 4.9;
-    reviews: 82;
+    reviews: 82;,
   };
   // Project Management Intelligence Platform;
   {;
@@ -2583,7 +2583,7 @@ export const,
     launchDate: '2025-01-01';
     customers: 150;
     rating: 4.9;
-    reviews: 89;
+    reviews: 89;,
   };
   // CRM Intelligence Platform;
   {;
@@ -2626,7 +2626,7 @@ export const,
     launchDate: '2025-01-15';
     customers: 200;
     rating: 4.9;
-    reviews: 125;
+    reviews: 125;,
   };
   // Decision Engine Platform;
   {;
@@ -2669,7 +2669,7 @@ export const,
     launchDate: '2025-01-20';
     customers: 120;
     rating: 4.9;
-    reviews: 78;
+    reviews: 78;,
   };
   // E-commerce Optimization Platform;
   {;
@@ -2712,7 +2712,7 @@ export const,
     launchDate: '2025-02-01';
     customers: 180;
     rating: 4.8;
-    reviews: 95;
+    reviews: 95;,
   };
   // HR Automation Platform;
   {;
@@ -2755,7 +2755,7 @@ export const,
     launchDate: '2025-02-15';
     customers: 95;
     rating: 4.8;
-    reviews: 58;
+    reviews: 58;,
   };
   // Financial Analytics Platform;
   {;
@@ -2798,7 +2798,7 @@ export const,
     launchDate: '2025-02-10';
     customers: 85;
     rating: 4.9;
-    reviews: 52;
+    reviews: 52;,
   };
   // Supply Chain Intelligence Platform;
   {;
@@ -2841,7 +2841,7 @@ export const,
     launchDate: '2025-03-01';
     customers: 65;
     rating: 4.8;
-    reviews: 38;
+    reviews: 38;,
   };
   // Marketing Automation Platform;
   {;
@@ -2884,7 +2884,7 @@ export const,
     launchDate: '2025-02-20';
     customers: 140;
     rating: 4.9;
-    reviews: 82;
+    reviews: 82;,
   };
   // Project Management Intelligence Platform;
   {;

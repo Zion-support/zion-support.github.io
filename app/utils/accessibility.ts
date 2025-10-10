@@ -10,14 +10,14 @@ export interface AccessibilityOptions {
 export interface AccessibilityAuditResult {
   score: number;
   issues: AccessibilityIssue[];
-  recommendations: string[];
+  recommendations: string[];,
 }
 
 export interface AccessibilityIssue {
   type: 'error' | 'warning' | 'info';
   message: string;
   element?: HTMLElement;
-  fix?: string;
+  fix?: string;,
 }
 
 /**
@@ -94,7 +94,7 @@ function setupHighContrastMode(): void {
   const prefersHighContrast = window.matchMedia('(prefers-contrast: high)');
   
   if (prefersHighContrast.matches) {
-    document.body.classList.add('high-contrast');
+    document.body.classList.add('high-contrast');,
   }
   
   prefersHighContrast.addEventListener('change', (e) => {
@@ -113,7 +113,7 @@ function setupReducedMotion(): void {
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   
   if (prefersReducedMotion.matches) {
-    document.body.classList.add('reduced-motion');
+    document.body.classList.add('reduced-motion');,
   }
   
   prefersReducedMotion.addEventListener('change', (e) => {
@@ -135,7 +135,7 @@ function handleTabNavigation(event: KeyboardEvent): void {
   if (event.shiftKey) {
     // Shift + Tab - move backwards
     if (currentIndex > 0) {
-      focusableElements[currentIndex - 1].focus();
+      focusableElements[currentIndex - 1].focus();,
     } else {
       focusableElements[focusableElements.length - 1].focus();
     }

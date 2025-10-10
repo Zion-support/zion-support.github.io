@@ -27,7 +27,7 @@ const PricingPage: React.FC = () => {
         'Basic Analytics'
       ],
       cta: 'Get Started',
-      popular: false
+      popular: false,
     },
     {
       name: 'Professional',
@@ -49,7 +49,7 @@ const PricingPage: React.FC = () => {
       ],
       limitations: [],
       cta: 'Start Free Trial',
-      popular: true
+      popular: true,
     },
     {
       name: 'Enterprise',
@@ -72,7 +72,7 @@ const PricingPage: React.FC = () => {
       ],
       limitations: [],
       cta: 'Contact Sales',
-      popular: false
+      popular: false,
     }
   ];
 
@@ -246,7 +246,7 @@ const PricingPage: React.FC = () => {
                       className={`w-full ${
                         plan.popular
                           ? `${colors.bg} hover:opacity-90 text-white`
-                          : `${colors.border} ${colors.text} hover:${colors.bg} hover:text-white`
+                          : `${colors.border} ${colors.text} hover:${colors.bg} hover: text-white`,
                       } border-2 px-6 py-3 rounded-lg font-semibold transition-all duration-300 text-center block`}
                     >
                       {plan.cta}
@@ -309,7 +309,7 @@ const PricingPage: React.FC = () => {
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-cyan-600 to-blue-600">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Ready to Get Started?
           </h2>
@@ -335,7 +335,7 @@ const PricingPage: React.FC = () => {
 
       <Footer />
     </div>
-  );
+  );,
 };
 
 export default PricingPage;

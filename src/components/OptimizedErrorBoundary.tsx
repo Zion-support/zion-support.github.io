@@ -4,13 +4,13 @@ interface OptimizedErrorBoundaryProps {
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
   resetOnPropsChange?: boolean;
-  resetKeys?: Array<string | number>;
+  resetKeys?: Array<string | number>;,
 }
 interface State {
   hasError: boolean;
   error: Error | null;
   errorInfo: ErrorInfo | null;
-  errorId: string;
+  errorId: string;,
 }
 class OptimizedErrorBoundary extends Component<
   OptimizedErrorBoundaryProps,
@@ -91,7 +91,7 @@ $4};
         fatal: false,
         custom_map: {
           error_id: this.state.errorId,
-          component_stack: errorInfo.componentStack
+          component_stack: errorInfo.componentStack,
         }
       });
     }
@@ -133,7 +133,7 @@ interface ErrorFallbackProps {
   error: Error | null;
   errorInfo: ErrorInfo | null;
   errorId: string;
-  onRetry: () => void;
+  onRetry: () => void;,
 }
 const ErrorFallback = memo<ErrorFallbackProps>(
   ({ error, errorInfo, errorId, onRetry }) => (

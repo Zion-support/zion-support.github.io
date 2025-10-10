@@ -13,7 +13,7 @@ const __collectPerformanceMetrics = () => {
   const paint = window.performance.getEntriesByType('paint');
   return {
     loadTime: navigation.loadEventEnd - navigation.navigationStart,
-    firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0
+    firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
   };
 // Helper functions
 const calculatePerformanceScore = () => {
@@ -56,7 +56,7 @@ interface SystemMetrics {
       message: string;
       type: string;
       severity: string;
-      timestamp: string;
+      timestamp: string;,
     }>;
   memory: {
     used: number;
@@ -91,7 +91,7 @@ const __collectPerformanceMetrics = () => {/* TODO: Fix JSX expression */}
   loadTim,
   e: navigation.loadEventEnd - navigation.navigationStart,
     firstContentfulPain,
-  t: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0;
+  t: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0;,
   };
 // Helper functions;
 const calculatePerformanceScore = () => {/* TODO: Fix JSX expression */}
@@ -167,7 +167,7 @@ interface SystemMetrics {/* TODO: Fix JSX expression */}
     severit,
   y: string;,
     timestam,
-  p: string;
+  p: string;,
     }>;
   memor,
   y: {/* TODO: Fix JSX expression */}
@@ -236,12 +236,12 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
             message: error.message,
             type: error.type,
             severity: error.severity,
-            timestamp: error.context.timestamp
+            timestamp: error.context.timestamp,
           }))
         memory: memoryInfo,
         network: networkInfo
       setMetrics(newMetrics);
-      setLastUpdate(new Date());
+      setLastUpdate(new Date());,
     } catch (error) {}, []);
   // Initialize monitoring
   useEffect(() => {
@@ -504,14 +504,14 @@ const updateMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
             severit,
   y: error.severity,
             timestam,
-  p: error.context.timestamp;)
+  p: error.context.timestamp;),
           }));
   memor,
   y: memoryInfo,
         networ,
   k: networkInfo;
       setMetrics(newMetrics);
-      setLastUpdate(new Date());
+      setLastUpdate(new Date());,
     } catch (error) {if (!isMonitoring) return;}
     const interval = setInterval(updateMetrics, refreshInterval);
     return () => clearInterval(interval);
@@ -606,7 +606,7 @@ const updateMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
                 <div></div>`
 className={`h-2 rounded-full ${}
   // TOD,
-  O: Add content;
+  O: Add content;,
 }
                     metrics.memory.percentage > 80 ? 'bg-red-500' :
                     metrics.memory.percentage > 60 ? 'bg-yellow-500' : 'bg-green-500'`

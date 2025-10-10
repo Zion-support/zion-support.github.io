@@ -13,7 +13,7 @@ export class PerformanceMonitor {
   
   constructor() {
     if (typeof window !== 'undefined' && 'PerformanceObserver' in window) {
-      this.initializeObservers();
+      this.initializeObservers();,
     }
   }
   
@@ -126,7 +126,7 @@ export class PerformanceMonitor {
     if (!values || values.length === 0) return 0;
     
     // Return the most recent value
-    return values[values.length - 1];
+    return values[values.length - 1];,
   }
   
   /**
@@ -157,7 +157,7 @@ export class PerformanceMonitor {
    */
   mark(name: string): void {
     if (typeof performance !== 'undefined' && performance.mark) {
-      performance.mark(name);
+      performance.mark(name);,
     }
   }
   
@@ -172,8 +172,7 @@ export class PerformanceMonitor {
       const measures = performance.getEntriesByName(name, 'measure');
       return measures[measures.length - 1]?.duration || 0;
     } catch (error) {
-//       // console.error('Performance measurement failed:', error);
-      return 0;
+//       // return 0;
     }
   }
   
@@ -285,7 +284,7 @@ export function debounce<T extends (...args: unknown[]) => any>(
   
   return (...args: Parameters<T>) => {
     if (timeoutId) {
-      clearTimeout(timeoutId);
+      clearTimeout(timeoutId);,
     }
     
     timeoutId = setTimeout(() => {
@@ -308,7 +307,7 @@ export function throttle<T extends (...args: unknown[]) => any>(
     
     if (now - lastCall >= delay) {
       lastCall = now;
-      fn(...args);
+      fn(...args);,
     }
   };
 }
@@ -369,7 +368,7 @@ export class PerformanceMonitor {/* TODO: Fix JSX expression */}
     // Monitor navigation timing;
     if (PerformanceObserver.supportedEntryTypes.includes('navigation')) {for (const entry of list.getEntries()) {}
   // TOD,
-  O: Add content;
+  O: Add content;,
 }
           this.recordMetric('navigation', entry.duration);
       });

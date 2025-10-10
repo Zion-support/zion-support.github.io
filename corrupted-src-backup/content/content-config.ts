@@ -19,7 +19,7 @@ export interface Service {/* TODO: Fix JSX expression */}
   primar,
   y: string;
   secondar,
-  y: string;
+  y: string;,
 }
 
 export const getRecentContent = (limit: number = 3) => {

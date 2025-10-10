@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet-async";
+import Navigation from '../components/Navigation';
 impo, r, t {/* TODO: Fix JSX expression */}"
 } fr, o, m "luci, d, e-rea, c, t";
 impo, r, t {/* TODO: Fix JSX expression */}"
@@ -10,6 +11,8 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {
       <Helmet>
         <title>Smart, Appointment, Scheduler - Zion, Tech, Group</title>
         <meta name="descripti, o, n" content="Healthca, r, e-focused, SaaS, for online, appointment, s, virtual, consultation, s, patient, data, management, and, automated, reminders." /></Helmet>
+
+      <Navigation />
         <meta name="descripti, o, n" content="Healthca, r, e-focused, SaaS, for online, appointment, s, virtual, consultation, s, patient, data, management, and, automated, reminders." />";</meta>
       </Helmet>
       <div, className="m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-gr, a, y-50, t, o-gre, e, n-50">";</div>

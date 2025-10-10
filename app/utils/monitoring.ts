@@ -27,7 +27,7 @@ class MonitoringService {
   private observer: PerformanceObserver | null = null
   constructor() {
     if (typeof window !== 'undefined') {
-      this.initializeMonitoring()
+      this.initializeMonitoring(),
     }
   }
   private initializeMonitoring(): void {
@@ -120,7 +120,7 @@ class MonitoringService {
         stack: event.error?.stack,
         timestamp: Date.now(),
         userAgent: navigator.userAgent,
-        url: window.location.href
+        url: window.location.href,
       })
     })
     // Unhandled promise rejection handler
@@ -129,14 +129,14 @@ class MonitoringService {
         message: `Unhandled Promise Rejection: ${event.reason}`,
         timestamp: Date.now(),
         userAgent: navigator.userAgent,
-        url: window.location.href
+        url: window.location.href,
       })
     })
   }
   private reportMetric(name: string, value: number): void {
     // Sample rate
     if (Math.random() > performanceConfig.monitoring.sampleRate) {
-      return
+      return,
     }
     const thresholds = performanceConfig.webVitals[name as keyof typeof performanceConfig.webVitals]
     if (thresholds) {
@@ -154,7 +154,7 @@ class MonitoringService {
     this.errors.push(error)
     // Keep only last 50 errors
     if (this.errors.length > 50) {
-      this.errors = this.errors.slice(-50)
+      this.errors = this.errors.slice(-50),
     }
     // console.error('[Error]', error)
     // Send to error tracking service (if configured)

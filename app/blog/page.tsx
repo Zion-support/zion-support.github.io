@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+import Navigation from '../components/Navigation';
 'use client';
 
 import React, { useState } from 'react';
@@ -64,11 +65,15 @@ const BlogPage: React.FC = () => {
         <meta name="keywords" content="AI blog, technology insights, business transformation, Zion Tech Group" />
       </Helmet>
 
+
+
+      <Navigation />
+      <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+        </div><section className="pt-20 pb-16 px-4">
+          </section><div className="max-w-7xl mx-auto">
+            </div><div className="text-center mb-16">
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
                 Our Blog
               </h1>
@@ -79,8 +84,8 @@ const BlogPage: React.FC = () => {
 
             {/* Search and Filter */}
             <div className="max-w-4xl mx-auto mb-16">
-              <div className="flex flex-col md:flex-row gap-4">
-                <div className="flex-1 relative">
+              </div><div className="flex flex-col md:flex-row gap-4">
+                </div><div className="flex-1 relative">
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                   <input
                     type="text"
@@ -108,12 +113,12 @@ const BlogPage: React.FC = () => {
         </section>
 
         <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          </section><div className="max-w-7xl mx-auto">
+            </div><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {searchResults.map((post) => (
                 <article key={post.id} className="cyber-card p-6">
-                  <div className="mb-4">
-                    <div className="w-full h-48 bg-gray-800 rounded-lg mb-4 flex items-center justify-center">
+                  </div><div className="mb-4">
+                    </div><div className="w-full h-48 bg-gray-800 rounded-lg mb-4 flex items-center justify-center">
                       <span className="text-2xl font-bold text-cyan-400">{post.title.charAt(0)}</span>
                     </div>
                     <span className="inline-block bg-cyan-500/20 text-cyan-400 text-xs px-2 py-1 rounded-full mb-3">
@@ -125,8 +130,8 @@ const BlogPage: React.FC = () => {
                   <p className="text-gray-300 mb-4">{post.excerpt}</p>
                   
                   <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
-                    <div className="flex items-center space-x-4">
-                      <div className="flex items-center space-x-1">
+                    </div><div className="flex items-center space-x-4">
+                      </div><div className="flex items-center space-x-1">
                         <User className="w-4 h-4" />
                         <span>{post.author}</span>
                       </div>

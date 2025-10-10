@@ -19,7 +19,7 @@ const ApiDocs: React.FC = () => {
       <main className="pt-20"></main>"
         <section className="container mx-auto px-4 py-16 text-center"></section>"
           <h1 className="text-4xl,"
-  md:text-6xl font-bold text-white mb-6 neon-text"></h1>
+  md: text-6xl font-bold text-white mb-6 neon-text"></h1>
 // Api Docs;
           </h1>"
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
@@ -57,7 +57,7 @@ const ApiDocs: React.FC = () => {
       <Footer /></Footer>
 
     </div>
-  );
+  );,
 };
 
 

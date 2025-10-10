@@ -1,3 +1,4 @@
+import React from 'react';
 
 
 'use client';
@@ -28,7 +29,7 @@ interface MicroSAASCardProps {/* TODO: Fix JSX expression */}
     contactInf,
   o: string;
     link?: string;
-    popular?: boolean;
+    popular?: boolean;,
   };
 }
 

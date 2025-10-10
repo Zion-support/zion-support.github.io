@@ -164,7 +164,7 @@ export class AdvancedDataVisualization {/* TODO: Fix JSX expression */}
     pointCount: number;
     xRange: { min: number; max: number };
     yRange: { min: number; max: number };
-    averageY: number;
+    averageY: number;,
   } | null {
     const _chart = this.charts.get(id);
     if (!chart) return null;
@@ -190,7 +190,7 @@ export class AdvancedDataVisualization {/* TODO: Fix JSX expression */}
   e: {/* TODO: Fix JSX expression */}
   x: number };
     average,
-  Y: number;
+  Y: number;,
   } | null {/* TODO: Fix JSX expression */}
       },
       yRang,

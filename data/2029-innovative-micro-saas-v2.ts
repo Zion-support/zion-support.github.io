@@ -16,7 +16,7 @@
   contactInfo: unknown;
     mobile: string;
     email: string;
-    address: string;
+    address: string;,
   }
   category: string;
   technology: string[];

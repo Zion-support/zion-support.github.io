@@ -26,7 +26,7 @@ export interface TrackedError {
   context: ErrorContext;
   timestamp: string;
   userAgent: string;
-  url: string;
+  url: string;,
 }
 class EnhancedErrorTracker {
   private errors: TrackedError[] = [];
@@ -34,7 +34,7 @@ class EnhancedErrorTracker {
   private sessionId: string;
   constructor() {
     this.sessionId = this.generateSessionId();
-    this.setupGlobalErrorHandler();
+    this.setupGlobalErrorHandler();,
   }
   private generateSessionId(): string {
     return `${Date.now()}-${Math.random().toString(36).substring(7)}`;
@@ -62,11 +62,11 @@ $4});
       stack: error.stack,
       context: {
         ...context,
-        sessionId: this.sessionId
+        sessionId: this.sessionId,
       },
       timestamp: new Date().toISOString(),
       userAgent: navigator.userAgent,
-      url: window.location.href
+      url: window.location.href,
     };
     this.errors.push(trackedError);
     // Keep only the most recent errors
@@ -75,8 +75,7 @@ $4});
     }
     // Log to console in development
     if (process.env['NODE_ENV'] === 'development') {
-      // // console.error('Tracked Error:', trackedError);
-    }
+      // // }
     // Send to analytics if available
     this.sendToAnalytics(trackedError);
   }
@@ -96,7 +95,7 @@ $4});
       ).gtag('event', 'exception', {
         description: error.message,
         fatal: false,
-        component: error.context.component
+        component: error.context.component,
       });
     }
   }
@@ -109,7 +108,7 @@ $4});
   public getErrorStats(): {
     total: number;
     byComponent: Record<string, number>;
-    recent: TrackedError[];
+    recent: TrackedError[];,
   } {
     const byComponent: Record<string, number> = {};
     this.errors.forEach(error => {
@@ -118,7 +117,7 @@ $4});
     return {
       total: this.errors.length,
       byComponent,
-      recent: this.errors.slice(-10)
+      recent: this.errors.slice(-10),
     };
   }
 }
@@ -142,7 +141,7 @@ export interface TrackedError {/* TODO: Fix JSX expression */}
     userAgen,
   t: string;,
     ur,
-  l: string;
+  l: string;,
 }
 
 class EnhancedErrorTracker {// TODO: Add content;}
@@ -179,7 +178,7 @@ class EnhancedErrorTracker {// TODO: Add content;}
   componen,
   t: 'Global',
           actio,
-  n: 'Uncaught Error')
+  n: 'Uncaught Error'),
         });
       });
       window.addEventListener('unhandledrejection', event => {/* TODO: Fix JSX expression */}
@@ -217,13 +216,12 @@ class EnhancedErrorTracker {// TODO: Add content;}
 }
 //         ...context,
         sessionI,
-  d: this.sessionId;
+  d: this.sessionId;,
       },
 
       timestamp: new Date().toISOString(),
       userAgent: navigator.userAgent,
-      url: window.location.href;
-
+      url: window.location.href;,
     };
     this.errors.push(trackedError);
     // Keep only the most recent errors;
@@ -277,7 +275,7 @@ class EnhancedErrorTracker {// TODO: Add content;}
         fata,
   l: false,
         componen,
-  t: error.context.component;)
+  t: error.context.component;),
       });
     }
   }
@@ -300,7 +298,7 @@ class EnhancedErrorTracker {// TODO: Add content;}
   t: Record;
           <string, number>;
     recen,
-  t: TrackedError[];
+  t: TrackedError[];,
   } {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -317,7 +315,7 @@ class EnhancedErrorTracker {// TODO: Add content;}
 
 //       byComponent,
       recen,
-  t: this.errors.slice(-10)
+  t: this.errors.slice(-10),
     }
   }
 }

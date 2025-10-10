@@ -12,30 +12,40 @@ const AIAnalyticsPage: React.FC = () => {
       title: 'AI-Powered Insights',
       description: 'Get intelligent insights and recommendations powered by advanced machine learning algorithms.',
       benefits: ['Predictive analytics', 'Anomaly detection', 'Trend analysis', 'Smart recommendations']
+    }
+    }
     },
     {
       icon: BarChart,
       title: 'Real-Time Dashboards',
       description: 'Monitor your business metrics in real-time with customizable, interactive dashboards.',
       benefits: ['Live data updates', 'Custom widgets', 'Interactive charts', 'Mobile responsive']
+    }
+    }
     },
     {
       icon: TrendingUp,
       title: 'Performance Optimization',
       description: 'Optimize your business performance with AI-driven recommendations and insights.',
       benefits: ['Performance tracking', 'Optimization suggestions', 'ROI analysis', 'Growth strategies']
+    }
+    }
     },
     {
       icon: Zap,
       title: 'Fast Processing',
       description: 'Process large datasets in seconds with our optimized AI analytics engine.',
       benefits: ['High-speed processing', 'Scalable infrastructure', 'Real-time analysis', 'Batch processing']
+    }
+    }
     },
     {
       icon: Eye,
       title: 'Visual Analytics',
       description: 'Transform complex data into intuitive visualizations and interactive charts.',
       benefits: ['Interactive charts', 'Custom visualizations', 'Data storytelling', 'Export capabilities']
+    }
+    }
     }
   ];
 
@@ -87,37 +97,43 @@ const AIAnalyticsPage: React.FC = () => {
         <meta name="description" content="Transform your data into actionable insights with our AI-powered analytics platform. Get real-time dashboards, predictive analytics, and automated reporting." />
       </Helmet>
 
+
+
+      <Navigation />
+      <Navigation />
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="relative max-w-7xl mx-auto text-center">
+        </div><section className="relative py-20 px-4 overflow-hidden">
+          </section><div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          </div><div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          </div><div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
               AI Analytics
               <span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
                 Platform
               </span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Transform your data into actionable insights with our AI-powered analytics platform. 
               Get real-time dashboards, predictive analytics, and automated reporting.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25">
-                Start Free Trial
+            </div><div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 flex items-center justify-center">
+                Get Started
+                <ArrowRight className="ml-2 w-5 h-5" />
               </button>
-              <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+              <button className="border border-purple-400 text-purple-300 px-8 py-4 rounded-lg font-semibold hover:bg-purple-500 hover:text-white transition-all duration-300">
                 View Demo
               </button>
             </div>
           </div>
+        </section>
 
         {/* Features Section */}
         <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+          </section><div className="max-w-7xl mx-auto">
+            </div><div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Powerful Analytics Features
               </h2>
@@ -128,8 +144,8 @@ const AIAnalyticsPage: React.FC = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                </div><div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                  </div><div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
@@ -152,8 +168,8 @@ const AIAnalyticsPage: React.FC = () => {
 
         {/* Benefits Section */}
         <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+          </section><div className="max-w-7xl mx-auto">
+            </div><div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Why Choose Our AI Analytics?
               </h2>
@@ -164,8 +180,8 @@ const AIAnalyticsPage: React.FC = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                </div><div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                  </div><div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                     <CheckCircle className="w-8 h-8 text-white" />
                   </div>
                   <p className="text-lg text-white font-medium">{benefit}</p>
@@ -177,8 +193,8 @@ const AIAnalyticsPage: React.FC = () => {
 
         {/* Use Cases Section */}
         <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+          </section><div className="max-w-7xl mx-auto">
+            </div><div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Use Cases
               </h2>
@@ -189,8 +205,8 @@ const AIAnalyticsPage: React.FC = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {useCases.map((useCase, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group text-center">
-                  <div className="text-4xl mb-4">{useCase.icon}</div>
+                </div><div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group text-center">
+                  </div><div className="text-4xl mb-4">{useCase.icon}</div>
                   <h3 className="text-xl font-bold text-white mb-4">{useCase.title}</h3>
                   <p className="text-gray-300">{useCase.description}</p>
                 </div>
@@ -201,15 +217,15 @@ const AIAnalyticsPage: React.FC = () => {
 
         {/* CTA Section */}
         <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          </section><div className="max-w-4xl mx-auto text-center">
+            </div><div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
+              <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
                 Ready to Transform Your Data?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
                 Start making data-driven decisions with our AI analytics platform today.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              </div><div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
                   Start Free Trial
                 </button>
@@ -223,7 +239,7 @@ const AIAnalyticsPage: React.FC = () => {
       </div>
       <Footer />
     </>
-  );
+  );,
 };
 
 export default AIAnalyticsPage;

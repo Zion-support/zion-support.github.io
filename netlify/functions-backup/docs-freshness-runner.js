@@ -20,7 +20,7 @@ function runNode(relPath)
   return {/* TODO: Fix JSX expression */}
   t: res.stdout || ''}
     stder,
-  r: res.stderr || '';
+  r: res.stderr || '';,
   };
 }
 function listFilesRecursive(rootDir) {/* TODO: Fix JSX expression */}

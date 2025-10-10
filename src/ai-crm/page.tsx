@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+import Navigation from '../components/Navigation';
 
 const AICRMPage: React.FC = () => {
   return (
@@ -12,7 +13,7 @@ const AICRMPage: React.FC = () => {
         </a>
       </div>
     </div>
-  );
+  );,
 };
 
 export default AICRMPage;

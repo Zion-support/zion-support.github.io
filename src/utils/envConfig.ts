@@ -18,7 +18,7 @@ export interface EnvConfig {// TODO: Add content;}
     logLeve,
   l: 'debug' | 'info' | 'warn' | 'error'
   sentryDsn?: string;
-  gaTrackingId?: string;
+  gaTrackingId?: string;,
 }
 
 class EnvironmentConfig {// TODO: Add content;}
@@ -55,8 +55,7 @@ class EnvironmentConfig {// TODO: Add content;}
         (nodeEnv === 'production' ? 'warn' : 'debug')) as EnvConfig['logLevel'],
 
       sentryDsn: process.env.NEXT_PUBLIC_SENTRY_DSN || process.env.VITE_SENTRY_DSN,
-      gaTrackingId: process.env.NEXT_PUBLIC_GA_TRACKING_ID || process.env.VITE_GA_TRACKING_ID;
-
+      gaTrackingId: process.env.NEXT_PUBLIC_GA_TRACKING_ID || process.env.VITE_GA_TRACKING_ID;,
     };
   }
   /**
@@ -115,7 +114,7 @@ class EnvironmentConfig {// TODO: Add content;}
   vali,
   d: boolean;,
     missin,
-  g: string[];
+  g: string[];,
   } {/* TODO: Fix JSX expression */}
   O: Add content;}
 }

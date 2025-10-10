@@ -1,4 +1,6 @@
-import { Helmet } from "react-helmet-async";"
+import { Helmet } from "react-helmet-async";
+import Footer from '../components/Footer';
+import Navigation from '../components/Navigation';"
 impo, r, t { Coi, n, s } fr, o, m "luci, d, e-rea, c, t";"
 import, Header, from "../../componen, t, s/Head, e, r";"
 import, Footer, from "../../componen, t, s/Foot, e, r";
@@ -354,6 +356,8 @@ const, BlockchainWeb, 3: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
           content="Expert, blockchain, and Web3, services, including DeFi, protocol, s, NFT, marketplace, s, DAO, governanc, e, and, smart, contract developme, n, t. Enterpri, s, e-grade, security, and mul, t, i-chain, integratio, n." /><meta name="keywor, d, s" content="blockchain, developmen, t, Web3, service, s, DeFi, protocol, s, NFT, marketplac, e, DAO, governanc, e, smart, contract, s, cryptocurrency, developmen, t" /><link, re, l="canonic, a, l" hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/servic, e, s/blockcha, i, n-we, b, 3/>"
   return (<>
       <Helmet></Helmet>
+
+      <Navigation />
         <title>Blockcha, i, n & Web3, Service, s - Zion, Tech, Group | De, F, i, N, F, T, DAO, Solution, s</title>
         <me, t, a;"
   na, m, e="descripti, o, n""

@@ -9,7 +9,7 @@ interface PerformanceMetrics {/* TODO: Fix JSX expression */}
     firstContentfulPaint: number;,
     largestContentfulPaint: number;,
     cumulativeLayoutShift: number;,
-    firstInputDelay: number
+    firstInputDelay: number,
 }
 export const _usePerformanceOptimization = () => {// TODO: Add content;}
 
@@ -42,8 +42,7 @@ export const _usePerformanceOptimization = () => {// TODO: Add content;}
 
       largestContentfulPaint: 0,
       cumulativeLayoutShift: 0,
-      firstInputDelay: 0;
-
+      firstInputDelay: 0;,
     };
     // Measure LCP;
 const lcpObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
@@ -80,7 +79,7 @@ const lcpObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression
 // Measure FID;
     const fidObserver = new PerformanceObserver(list => {const fidEntry = entry as PerformanceEntry & {}
   // TOD,
-  O: Add content;
+  O: Add content;,
 }
           processingStart?: number;
         metrics.firstInputDelay =)

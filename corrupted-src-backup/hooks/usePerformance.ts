@@ -106,7 +106,7 @@ export const usePageLoadPerformance = () => {
             loadComplete: navigation.loadEventEnd - navigation.loadEventStart;
             firstByte: navigation.responseStart - navigation.requestStart;
             domInteractive: navigation.domInteractive - navigation.navigationStart;
-            totalLoadTime: navigation.loadEventEnd - navigation.navigationStart;
+            totalLoadTime: navigation.loadEventEnd - navigation.navigationStart;,
           };
 
           // Track each metric;

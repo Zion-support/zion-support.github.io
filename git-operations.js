@@ -16,7 +16,7 @@ const { execSync } = require('child_process');
     } catch (error) {/* TODO: Fix JSX expression */}
 //       // console.log(`⚠️ ${description} faile)`
   d: `) error.message);
-      return null;
+      return null;,
     }
   }
   //Step 1: Check current status;

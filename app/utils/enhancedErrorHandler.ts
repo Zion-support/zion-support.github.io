@@ -211,7 +211,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
             type: 'resource'}
             message: `Failed to load resource: ${target?.src || target?.href}`,
             element: event.target?.constructor.name,
-            src: target?.src || target?.href
+            src: target?.src || target?.href,
           })
         }
       },
@@ -224,7 +224,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
             elemen,
   t: event.target?.constructor.name,
             sr,
-  c: target?.src || target?.href;)
+  c: target?.src || target?.href;),
           });
         }
       },
@@ -246,7 +246,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
             message: `Network request failed: ${response.status} ${response.statusText}`)
             url: args[0] as string),
             status: response.status),
-            statusText: response.statusText;
+            statusText: response.statusText;,
           })
         }
         return response;
@@ -268,7 +268,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
             message: `Network request failed: ${response.status} ${response.statusText}`,
             url: args[0] as string,
             status: response.status,
-            statusText: response.statusText
+            statusText: response.statusText,
           })
         }
         return response
@@ -277,7 +277,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
           type: 'network',`}
           message: `Network request failed: ${error}`,
           url: args[0] as string,
-          error: error instanceof Error ? error : new Error(String(error))
+          error: error instanceof Error ? error : new Error(String(error)),
         })
   private setupNetworkErrorHandler(): void {/* TODO: Fix JSX expression */}`
   failed: ${response.status} ${response.statusText}`,
@@ -286,7 +286,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
             statu,
   s: response.status,
             statusTex,
-  t: response.statusText;
+  t: response.statusText;,
           });
         }
         return response;
@@ -295,7 +295,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
           ur,
   l: args[0] as string,
           erro,
-  r: error instanceof Error ? error : new Error(String(error))
+  r: error instanceof Error ? error : new Error(String(error)),
         });
         throw error;
       }
@@ -827,7 +827,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
   n: `Bearer ${this.config.apiKey}`
         },
         bod,
-  y: JSON.stringify(errorReport)
+  y: JSON.stringify(errorReport),
       });
     } catch (error) {/* TODO: Fix JSX expression */}
       }

@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+import Navigation from '../components/Navigation';
 'use client';
 
 import React, { useState, useCallback } from 'react';
@@ -109,10 +110,14 @@ phone: '',
         <meta name="keywords" content="contact us, Zion Tech Group, AI consultation, IT support, get in touch" />
       </Helmet>
 
+
+
+      <Navigation />
+      <Navigation />
 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
-        <div className="container mx-auto px-4">
+        </div><div className="container mx-auto px-4">
           {/* Header */}
-          <div className="text-center mb-16">
+          </div><div className="text-center mb-16">
             <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6">
               Get in
               <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
@@ -129,11 +134,11 @@ phone: '',
 
 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
-            <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
+            </div><div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
               <h2 className="text-3xl font-bold text-white mb-6">Send us a Message</h2>
               
               {submitStatus === 'success' && (
-                <div className="mb-6 p-4 bg-green-500/20 border border-green-500/50 rounded-lg flex items-center gap-3">
+                </div><div className="mb-6 p-4 bg-green-500/20 border border-green-500/50 rounded-lg flex items-center gap-3">
                   <CheckCircle className="w-5 h-5 text-green-400" />
                   <span className="text-green-400">Message sent successfully! We'll get back to you soon.</span>
                 </div>
@@ -147,11 +152,11 @@ phone: '',
 
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
+                  </div><div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
                       Full Name *
                     </label>
-                    <div className="relative">
+                    </div><div className="relative">
                       <User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
                       <input
                         type="text"
@@ -169,7 +174,7 @@ phone: '',
                     <label className="block text-sm font-medium text-gray-300 mb-2">
                       Email Address *
                     </label>
-                    <div className="relative">
+                    </div><div className="relative">
                       <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
                       <input
                         type="email"
@@ -185,11 +190,11 @@ phone: '',
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
+                  </div><div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
                       Company
                     </label>
-                    <div className="relative">
+                    </div><div className="relative">
                       <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
                       <input
                         type="text"
@@ -206,7 +211,7 @@ phone: '',
                     <label className="block text-sm font-medium text-gray-300 mb-2">
                       Phone Number
                     </label>
-                    <div className="relative">
+                    </div><div className="relative">
                       <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
                       <input
                         type="tel"
@@ -224,7 +229,7 @@ phone: '',
                   <label className="block text-sm font-medium text-gray-300 mb-2">
                     Service Interest
                   </label>
-                  <div className="relative">
+                  </div><div className="relative">
                     <Globe className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
                     <select
                       name="service"
@@ -246,7 +251,7 @@ phone: '',
                   <label className="block text-sm font-medium text-gray-300 mb-2">
                     Message *
                   </label>
-                  <div className="relative">
+                  </div><div className="relative">
                     <MessageCircle className="absolute left-3 top-3 w-5 h-5 text-gray-400" />
                     <textarea
                       name="message"
@@ -282,7 +287,7 @@ phone: '',
 
             {/* Contact Information */}
             <div className="space-y-8">
-              <div>
+              </div><div>
                 <h2 className="text-3xl font-bold text-white mb-6">Contact Information</h2>
                 <p className="text-lg text-gray-300 mb-8">
                   We're here to help! Reach out to us through any of these channels 
@@ -293,7 +298,7 @@ phone: '',
 
               {/* Contact Information */}
               <div className="space-y-8">
-                <div>
+                </div><div>
                   <h2 className="text-3xl font-bold text-white mb-6">Get in Touch</h2>
                   <p className="text-gray-300 mb-8">
                     We're here to help you transform your business with cutting-edge AI and technology solutions.
@@ -301,8 +306,8 @@ phone: '',
                 </div>
 
                 <div className="space-y-6">
-                  <div className="flex items-center">
-                    <div className="w-12 h-12 bg-cyan-500 rounded-lg flex items-center justify-center mr-4">
+                  </div><div className="flex items-center">
+                    </div><div className="w-12 h-12 bg-cyan-500 rounded-lg flex items-center justify-center mr-4">
                       <Phone className="w-6 h-6 text-white" />
                     </div>
                     <div>
@@ -320,7 +325,7 @@ phone: '',
                   </div>
 
                   <div className="flex items-center">
-                    <div className="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center mr-4">
+                    </div><div className="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center mr-4">
                       <Mail className="w-6 h-6 text-white" />
                     </div>
                     <div>
@@ -330,7 +335,7 @@ phone: '',
                   </div>
 
                   <div className="flex items-center">
-                    <div className="w-12 h-12 bg-pink-500 rounded-lg flex items-center justify-center mr-4">
+                    </div><div className="w-12 h-12 bg-pink-500 rounded-lg flex items-center justify-center mr-4">
                       <MapPin className="w-6 h-6 text-white" />
                     </div>
                     <div>
@@ -340,7 +345,7 @@ phone: '',
                   </div>
 
                   <div className="flex items-center">
-                    <div className="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center mr-4">
+                    </div><div className="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center mr-4">
                       <Clock className="w-6 h-6 text-white" />
                     </div>
                     <div>
@@ -356,7 +361,7 @@ phone: '',
       </div>
 </div>
 
-  );
+  );,
 };
 
 export default ContactPage;

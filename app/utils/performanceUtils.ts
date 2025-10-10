@@ -5,7 +5,7 @@ export interface PerformanceMetrics {
   firstContentfulPaint: number;
   largestContentfulPaint: number;
   firstInputDelay: number;
-  cumulativeLayoutShift: number;
+  cumulativeLayoutShift: number;,
 }
 
 export class PerformanceMonitor {
@@ -20,7 +20,7 @@ export class PerformanceMonitor {
   private observers: PerformanceObserver[] = [];
 
   constructor() {
-    this.initializeMetrics();
+    this.initializeMetrics();,
   }
 
   private initializeMetrics(): void {
@@ -59,15 +59,14 @@ export class PerformanceMonitor {
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.name === type) {
-            callback(entry);
+            callback(entry);,
           }
         }
       });
       observer.observe({ entryTypes: ['paint'] });
       this.observers.push(observer);
     } catch (error) {
-      console.warn('PerformanceObserver not supported:', error);
-    }
+      }
   }
 
   private observeLCP(): void {
@@ -82,8 +81,7 @@ export class PerformanceMonitor {
       observer.observe({ entryTypes: ['largest-contentful-paint'] });
       this.observers.push(observer);
     } catch (error) {
-      console.warn('LCP observer not supported:', error);
-    }
+      }
   }
 
   private observeFID(): void {
@@ -98,8 +96,7 @@ export class PerformanceMonitor {
       observer.observe({ entryTypes: ['first-input'] });
       this.observers.push(observer);
     } catch (error) {
-      console.warn('FID observer not supported:', error);
-    }
+      }
   }
 
   private observeCLS(): void {
@@ -118,8 +115,7 @@ export class PerformanceMonitor {
       observer.observe({ entryTypes: ['layout-shift'] });
       this.observers.push(observer);
     } catch (error) {
-      console.warn('CLS observer not supported:', error);
-    }
+      }
   }
 
   public getMetrics(): PerformanceMetrics {
@@ -173,9 +169,8 @@ export const measureFunction = <T extends (...args: any[]) => any>(
     const result = fn(...args);
     const end = performance.now();
     
-    if (name) {
-      console.log(`${name} took ${end - start} milliseconds`);
-    }
+    if (name) {,
+      }
     
     return result;
   }) as T;
@@ -210,7 +205,7 @@ export const throttle = <T extends (...args: any[]) => any>(
 
 export const lazyLoad = (callback: () => void): void => {
   if ('requestIdleCallback' in window) {
-    requestIdleCallback(callback);
+    requestIdleCallback(callback);,
   } else {
     setTimeout(callback, 1);
   }
@@ -226,5 +221,5 @@ export const preloadImage = (src: string): Promise<void> => {
 };
 
 export const preloadImages = (srcs: string[]): Promise<void[]> => {
-  return Promise.all(srcs.map(preloadImage));
+  return Promise.all(srcs.map(preloadImage));,
 };

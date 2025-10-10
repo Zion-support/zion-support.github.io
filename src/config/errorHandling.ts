@@ -41,7 +41,7 @@ export interface ErrorConfig {
   sampleRate: number;
   maxStackTraceLength: number;
   ignoreErrors: RegExp[];
-  severityThreshold: ErrorSeverity;
+  severityThreshold: ErrorSeverity;,
 }
 export const _errorHandlingConfig: ErrorConfig = {
 
@@ -53,7 +53,7 @@ export interface ErrorConfig {// TODO: Add content;}
     sampleRate: number;,
     maxStackTraceLength: number;,
     ignoreErrors: RegExp[];,
-    severityThreshold: ErrorSeverity
+    severityThreshold: ErrorSeverity,
 }
 export const _errorHandlingConfig: ErrorConfig = {// TODO: Add content;}
 };
@@ -66,7 +66,7 @@ export const _errorHandlingConfig: ErrorConfig = {// TODO: Add content;}
     /ResizeObserver loop/i,
     /Non-Error promise rejection captured/i,
     /Loading chunk \d+ failed/i],
-  severityThreshold: ErrorSeverity.LOW
+  severityThreshold: ErrorSeverity.LOW,
 };
 export const _errorMessages = {
   network: {
@@ -102,8 +102,7 @@ export class AppError extends Error {
 //     /Loading chunk \d+ failed/i,
 //   ],
 
-  severityThreshold: ErrorSeverity.LOW;
-
+  severityThreshold: ErrorSeverity.LOW;,
 };
   offlin,
   e: 'You are currently offline. Please check your internet connection.',
@@ -175,8 +174,7 @@ export class AppError extends Error {/* TODO: Fix JSX expression */}
 export class AppError extends Error {// TODO: Add content;}
 }
 export class AppError extends Error {
-    // TODO: Add content
-
+    // TODO: Add content,
   }
 //   constructor()
   messag,

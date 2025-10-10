@@ -117,10 +117,10 @@ exports.handler = async function() {const fs = require('fs');' const path = requ
       } const out = [' '# Autonomous Roadmap (Auto-Generated)\n',' ''} `Generated: ${new Date().toISOString()}`,' '',' '## Near-Term Focus', ...todoItems.map(i => `- ${i}`),' '',' '## Recent Autonomous Changes', ...changes.map(c => `- ${c}`),' '',' '## Notes',' '- This file is synthesized from TODO_REPORT.md and CHANGELOG_AI.md by the roadmap-auto-generator.',' '- Edits will be overwritten by the next run.'' ].join('\n'); ' const outPath = path.join(rootDir, 'docs') 'ROADMAP_AUTO.md');' fs.writeFileSync(outPath, out) 'utf8'); try {' execSync('git config user.name "zion-bot"') { cwd: rootDir;
         stdio: 'inherit' });' execSync('git config user.email "bot@zion.app"') {cwd: rootDir;
         stdio: 'inherit' });' execSync(`git add ${JSON.stringify(path.relative(rootDir)
-        outPath))}`, {cwd: rootDir, stdio: 'inherit'} shell: true;
-      });' execSync('git commit -m "docs(roadmap): refresh ROADMAP_AUTO.md [ci skip]" || true', {cwd: rootDir, stdio: 'inherit'} shell: true;
+        outPath))}`, {cwd: rootDir, stdio: 'inherit'} shell: true;,
+      });' execSync('git commit -m "docs(roadmap): refresh ROADMAP_AUTO.md [ci skip]" || true', {cwd: rootDir, stdio: 'inherit'} shell: true;,
       });' execSync('git push origin main || true', {cwd: rootDir),
-        stdio: 'inherit'} shell: true;
+        stdio: 'inherit'} shell: true;,
       }); } catch {} ' return {statusCode: 200;
         body: JSON.stringify({ok: true),
         path: 'docs/ROADMAP_AUTO.md' }) }; } catch (e) {return { statusCode: 200;
@@ -139,10 +139,10 @@ exports.handler = async function() {const fs = require('fs');' const path = requ
   l: true;"
       });' execSync('git commit -m "docs(roadmap): refresh ROADMAP_AUTO.md [ci skip]" || true', {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
-  l: true;
+  l: true;,
       });' execSync('git push origin main || true', {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
-  l: true;)
+  l: true;),
       }); } catch {} ' return {/* TODO: Fix JSX expression */}
   h: 'docs/ROADMAP_AUTO.md' }) }; } catch (e) {/* TODO: Fix JSX expression */}
       }) }; } };'"`

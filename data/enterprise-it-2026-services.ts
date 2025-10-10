@@ -75,7 +75,7 @@ export interface EnterpriseIt2026Service {/* TODO: Fix JSX expression */}
   realImplementation: boolean;
   contactInfo: unknown;
     mobile: string, email: string;
-    address: string;
+    address: string;,
   }
 }
 export const enterpriseIT2026 Services: EnterpriseIt2026 Service[] = [,

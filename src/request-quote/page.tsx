@@ -162,7 +162,7 @@ $4}
                   </div>
                 </div>
               </div>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <a
                   href="/contact"
                   className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
@@ -183,7 +183,7 @@ $4}
         </div>
         <Footer />
       </>
-    );
+    );,
   }
 
   return (
@@ -433,7 +433,7 @@ $4}
                 </p>
                 <div className="space-y-3">
                   <a
-                    href="tel:+13024640950"
+                    href="tel: +13024640950"
                     className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
                   >
                     <Phone className="w-4 h-4 mr-2" />
@@ -456,7 +456,7 @@ $4}
                 </div>
     <div>Coming Soon</div>
 
-  );
+  );,
 };
   const [formData, setFormData] = useState({/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -480,7 +480,7 @@ $4}
     descriptio,
   n: '',
     requirement,
-  s: '')
+  s: ''),
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -698,7 +698,7 @@ $4}
                 </div>
 
               </div>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <a
                   href="/contact" className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
 
@@ -741,7 +741,7 @@ $4}
     </>
         <Footer /></Footer>
       </>
-    );
+    );,
   }
   return (<div>Coming Soon</div>)
   )

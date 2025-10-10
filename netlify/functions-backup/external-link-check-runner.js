@@ -24,7 +24,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   k: new Date().toISOString()}
         }})};
     return result;
-//   } catch (error) {// console.error('Error in external-link-check-runner: ') error;
+//   } catch (error) {// console.error('Error in external-link-check-runner: ') error;,
       }
     return {
       statusCode: 500;
@@ -48,7 +48,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   }
 };
         timestamp: new Date().toISOString(),' function: 'external-link-check-runner',' source: event.source || 'unknown', checking: {' status: 'active', linksChecked: 0, brokenLinks: 0;
-        lastCheck: new Date().toISOString() } }) }; return result; } catch (error) {' // console.error('Error in external-link-check-runner: ') error;
+        lastCheck: new Date().toISOString() } }) }; return result; } catch (error) {' // console.error('Error in external-link-check-runner: ') error;,
       } return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'external-link-check-runner' }) }; } };'
         timestam,
   p: new Date().toISOString(),' functio,

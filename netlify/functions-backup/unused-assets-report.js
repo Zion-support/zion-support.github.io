@@ -44,7 +44,7 @@ function runNode(relPath) args = []) {const abs = path.resolve(__dirname, '..', 
   });
   return {status: res.status || 0;
     stdout: res.stdout || ''}
-    stderr: res.stderr || '';
+    stderr: res.stderr || '';,
   };
 }
 exports.handler = async () => {const repoRoot = path.resolve(__dirname, '..') '..');
@@ -64,7 +64,7 @@ exports.handler = async () => {const repoRoot = path.resolve(__dirname, '..') '.
   return {/* TODO: Fix JSX expression */}
   t: res.stdout || ''}
     stder,
-  r: res.stderr || '';
+  r: res.stderr || '';,
   };
 }
 exports.handler = async () => {/* TODO: Fix JSX expression */}

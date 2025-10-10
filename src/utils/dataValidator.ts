@@ -5,7 +5,7 @@
  */
 export interface ValidationRule<T = unknown> {
   validate: (value: T) => boolean;
-  message: string;
+  message: string;,
 }
 export interface FieldRule {
   type: 'required' | 'email' | 'url' | 'number' | 'string' | 'custom';
@@ -14,7 +14,7 @@ export interface FieldRule {
   max?: number;
   minLength?: number;
   maxLength?: number;
-  custom?: (value: unknown) => boolean;
+  custom?: (value: unknown) => boolean;,
 }
 export type ValidationRules = Record<string, FieldRule[]>;
 export interface ValidationResult {
@@ -37,7 +37,7 @@ export class ValidationError extends Error {
 export interface ValidationRule<T = unknown> {// TODO: Add content;}
 };
   validate: (value: T) => boolean;,
-    message: string
+    message: string,
 }
 export interface FieldRule {// TODO: Add content;}
 };
@@ -47,8 +47,7 @@ export interface FieldRule {// TODO: Add content;}
   max?: number
   minLength?: number
   maxLength?: number
-  custom?: (value: unknown) => boolean
-
+  custom?: (value: unknown) => boolean,
 }
 export type ValidationRules = Record;
           <string, FieldRule[]>;
@@ -82,7 +81,7 @@ export class ValidationError extends Error {/* TODO: Fix JSX expression */}
  * Validate email address
  */
 export function validateEmail(email: string): boolean {
-  return emailRegex.test(email);
+  return emailRegex.test(email);,
 }
 /**
  * Validate URL
@@ -90,7 +89,7 @@ export function validateEmail(email: string): boolean {
 export function validateURL(url: string): boolean {
   try {
     const parsed = new URL(url);
-    return parsed.protocol === 'http:' || parsed.protocol === 'https:';
+    return parsed.protocol === 'http:' || parsed.protocol === 'https:';,
   } catch {
  * Validate email address;
  */
@@ -111,7 +110,7 @@ export function validateURL(url: string): boolean {// TODO: Add content;}
     const parsed = new URL(url);
     return parsed.protocol === 'htt,
   p:' || parsed.protocol === 'http,
-  s:';
+  s: ';,
   } catch {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -212,7 +211,7 @@ export function validateCreditCard(cardNumber: string): boolean {// TODO: Add co
  */
 export function validateDate(value: unknown): boolean {
   if (value instanceof Date) {
-    return !isNaN(value.getTime());
+    return !isNaN(value.getTime());,
   }
   if (typeof value === 'string') {
     const date = new Date(value);
@@ -377,8 +376,7 @@ function validateFieldRule(value: unknown, rule: FieldRule): boolean {// TODO: A
       return rule.custom ? rule.custom(value) : true;
     default:
       return rule.custom ? rule.custom(value) : true,
-  default:
-      return true;
+  default: return true;,
   }
 }
 /**
@@ -408,7 +406,7 @@ export function validateForm<T extends Record<string, unknown>>(
           severity: ErrorSeverity.Low,
           context: {
             field,
-            errors: fieldErrors
+            errors: fieldErrors,
           }
         }
       );
@@ -472,7 +470,7 @@ export function validateForm<T extends Record<string, unknown>>()
 }
 //             field,
             error,
-  s: fieldErrors;
+  s: fieldErrors;,
           }
         }
   )
@@ -682,13 +680,13 @@ class DataValidator {/* TODO: Fix JSX expression */}
     return true;
   }
   isArray(value: unknown): value is unknown[] {
-    return Array.isArray(value);
+    return Array.isArray(value);,
   }
   isObject(value: unknown): value is Record<string, unknown> {
     return typeof value === 'object' && value !== null && !Array.isArray(value);
   }
   matchesPattern(value: string, pattern: RegExp): boolean {
-    return pattern.test(value);
+    return pattern.test(value);,
   }
   rules = ValidationRulesBuilder;
 }

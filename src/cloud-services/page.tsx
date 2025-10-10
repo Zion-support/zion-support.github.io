@@ -1,3 +1,4 @@
+import React from 'react';
 
 
 
@@ -9,7 +10,7 @@ const CloudServicesPage: React.FC = () => {
   return (
     <div>Coming Soon</div>
 
-  );
+  );,
 };
   const _services = [
   // TOD,
@@ -169,7 +170,7 @@ const CloudServicesPage: React.FC = () => {
           
 
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <a
               href="tel:+13024640950" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all"
 // >
@@ -187,7 +188,7 @@ const CloudServicesPage: React.FC = () => {
       <Footer /></Footer>
 
     </div>
-  );
+  );,
 };
 
 

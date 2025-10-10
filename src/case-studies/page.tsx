@@ -1,4 +1,5 @@
 import React from 'react';
+import Navigation from '../components/Navigation';
 import { Helmet } from 'react-helmet-async';
 import { ArrowLeft, TrendingUp, CheckCircle } from 'lucide-react';
 const CaseStudiesPage: React.FC = () => {
@@ -74,6 +75,8 @@ const CaseStudiesPage: React.FC = () => {
         <title>Case Studies - Zion Tech Group</title>
         <meta name="description" content="Explore our successful AI implementation case studies. See how we've helped companies achieve 300%+ ROI with our AI solutions." />
       </Helmet>
+
+      <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         {/* Header */}
         <header className="bg-white shadow-sm border-b">
@@ -193,7 +196,7 @@ const CaseStudiesPage: React.FC = () => {
         </section>
         {/* CTA Section */}
         <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Ready to Create Your Success Story?
             </h2>
@@ -219,6 +222,6 @@ const CaseStudiesPage: React.FC = () => {
         </section>
       </div>
     </>
-  );
+  );,
 };
 export default CaseStudiesPage;

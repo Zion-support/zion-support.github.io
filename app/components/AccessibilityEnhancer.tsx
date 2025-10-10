@@ -9,7 +9,7 @@ const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ childr
     // Add keyboard navigation support
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Tab') {
-        document.body.classList.add('keyboard-navigation');
+        document.body.classList.add('keyboard-navigation');,
       }
     };
 
@@ -23,7 +23,7 @@ const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ childr
       style.textContent = `
         .keyboard-navigation *:focus {
           outline: 2px solid #06b6d4 !important;
-          outline-offset: 2px !important;
+          outline-offset: 2px !important;,
         }
       `;
       document.head.appendChild(style);

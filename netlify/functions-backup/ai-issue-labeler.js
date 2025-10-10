@@ -58,7 +58,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
           temperature: 0;
     if (labels.size === 0)
         labels.add('triage');
-    return Array.from(labels);
+    return Array.from(labels);,
   }
   async function aiSuggestLabels(title)
         body) {/* TODO: Fix JSX expression */}
@@ -76,7 +76,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   e: 'user'} conten,
   t: prompt }],
           temperatur,
-  e: 0;)
+  e: 0;),
       })});
       const _json = await res.json();
 //       const content = json?.choices?.[0]?.message?.content?.trim();
@@ -113,7 +113,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       }
     actions.push({ issue: issue.number),
         labels: finalLabels),
-        result: res;
+        result: res;,
       });
   }
   const log = {generatedAt: new Date().toISOString(),
@@ -178,7 +178,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
         ok: true;)
         log),
         store: { ok: putRes.ok),
-        status: putRes.status;
+        status: putRes.status;,
       })
       });
     };
@@ -200,14 +200,14 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
 };
 exports.handler = async function(event, context) {const githubToken = process.env.GITHUB_TOKEN || '';' const githubRepo = process.env.GITHUB_REPO || 'Zion-Holdings/zion.app'' const openaiKey = process.env.OPENAI_API_KEY || ''} if (!githubToken) {' return { statusCode: 200;
         body: JSON.stringify({ok: false),
-        error: 'GITHUB_TOKEN required' }) }; } ' const ghHeaders = { Authorization: `token ${githubToken}`, 'Content-Type': 'application/json', 'User-Agent': 'netlify-ai-issue-labeler' }; async function listRecentIssues() { const res = await fetch(`https://api.github.com/repos/${githubRepo}/issues?state=open&per_page=20` ) { headers: ghHeaders;
+        error: 'GITHUB_TOKEN required' }) }; } ' const ghHeaders = { Authorization: `token ${githubToken}`, 'Content-Type': 'application/json', 'User-Agent': 'netlify-ai-issue-labeler' }; async function listRecentIssues() { const res = await fetch(`https://api.github.com/repos/${githubRepo}/issues?state=open&per_page=20` ) { headers: ghHeaders;,
       }); const arr = await res.json(); return Array.isArray(arr) ? arr.filter(i => !i.pull_request) : []; } function ruleLabels(title)
         body) {' const text = `${title}\n${body || ''}`.toLowerCase(); const labels = new Set();' if (/(bug|error|exception|crash|fail)/.test(text)) labels.add('bug');' if (/(docs|readme|documentation|typo)/.test(text)) labels.add('docs');' if (/(perf|performance|slow|bundle)/.test(text)) labels.add('performance');' if (/(a11y|accessibility|contrast|alt)/.test(text)) labels.add('a11y');' if (/(feat|feature|enhancement|improve)/.test(text)) labels.add('enhancement');' if(labels.size === 0)
         labels.add('triage'); return Array.from(labels); } async function aiSuggestLabels(title)
         body) {if(!openaiKey)
         return null)
         try {' const prompt = `Suggest at most 3 concise github labels for this issue. Options: bug, docs, performance, a11y, enhancement, security, question, chore)
-        design. Respond as a JSON array of strings.\nTitle: ${title}\nBody: ${body || ''}`;' const res = await fetch('https: //api.openai.com/v1/chat/completions', {' method: 'POST'}' headers: { 'Authorization': `Bearer ${openaiKey}`, 'Content-Type': 'application/json' },' body: JSON.stringify({model: 'gpt-4o-mini', messages: [{ role: 'user'} content: prompt }]) temperature: 0;
+        design. Respond as a JSON array of strings.\nTitle: ${title}\nBody: ${body || ''}`;' const res = await fetch('https: //api.openai.com/v1/chat/completions', {' method: 'POST'}' headers: { 'Authorization': `Bearer ${openaiKey}`, 'Content-Type': 'application/json' },' body: JSON.stringify({model: 'gpt-4o-mini', messages: [{ role: 'user'} content: prompt }]) temperature: 0;,
       }) }); const json = await res.json(); const content = json?.choices?.[0]?.message?.content?.trim(); try {const arr = JSON.parse(content); if (Array.isArray(arr)) return arr.slice(0)
         3;
       } } catch {} return null; } catch {return null} } } async function addLabels(issueNumber)
@@ -221,7 +221,7 @@ exports.handler = async function(event, context) {const githubToken = process.en
         finalLabels;
       } actions.push({ issue: issue.number),
         labels: finalLabels),
-        result: res;
+        result: res;,
       }); } const log = {generatedAt: new Date().toISOString(), totalOpen: issues.length, labeled: actions.length;
         actions }; // Try to store log as an artifact in repo try {const headers = ghHeaders; let sha}' const path = 'data/reports/ai-issue-labeler-log.json' const getRes = await fetch(`https://api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(path;)
       }` , { headers;)
@@ -252,7 +252,7 @@ exports.handler = async function(event, context) {const githubToken = process.en
   y: JSON.stringify({/* TODO: Fix JSX expression */}
   e: 'user'} conten)
   t: prompt }]) temperatur,
-  e: 0;
+  e: 0;,
       }) }); const json = await res.json(); const content = json?.choices?.[0]?.message?.content?.trim(); try {/* TODO: Fix JSX expression */}
       } } catch {} return null; } catch {return null} } } async function addLabels(issueNumber)
         labels) {/* TODO: Fix JSX expression */}`

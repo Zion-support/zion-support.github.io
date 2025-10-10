@@ -688,12 +688,12 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
   contactInfo: unknown;
     mobile: string, email: string;
     address: string;
-    website: string;
+    website: string;,
     },
     realImplementation: boolean, implementationDetails: string;
   launchDate: string, customers: number;
   rating: number;
-  reviews: number;
+  reviews: number;,
 }
 export const comprehensiveITServices: ComprehensiveITService[] = [,
   // Enterprise IT Infrastructure Services;
@@ -725,7 +725,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [,
     launch_date: '2024 - 01 - 15'
     customers: 32;
     rating: 4 && 4.8;
-    reviews: 24;
+    reviews: 24;,
   },
   // Data Center Management Services;
     id: 'data - center - management',
@@ -1152,7 +1152,7 @@ export const,
     launch_date: '2024 - 02 - 15'
     customers: 28;
     rating: 4 && 4.6;
-    reviews: 19;
+    reviews: 19;,
   },
   // IT Project Management Services;
     id: 'it - project - management',
@@ -1298,7 +1298,7 @@ export const,
     launch_date: '2024 - 01 - 10'
     customers: 45;
     rating: 4 && 4.7;
-    reviews: 32;
+    reviews: 32;,
   },
   // IT Training & Certification Services;
     id: 'it - training - certification',
@@ -1455,7 +1455,7 @@ export const,
     launch_date: '2024 - 01 - 05'
     customers: 120;
     rating: 4 && 4.8;
-    reviews: 89;
+    reviews: 89;,
   },
     id: 'quantum - cloud - infrastructure',
     name: 'Quantum Cloud Infrastructure',
@@ -1607,7 +1607,7 @@ export const,
     launch_date: '2024 - 11 - 15'
     customers: 45;
     rating: 4 && 4.9;
-    reviews: 32;
+    reviews: 32;,
   },
       'AI-powered deployment optimization',
     id: 'ai - powered - devops - automation',
@@ -1757,7 +1757,7 @@ export const,
     launch_date: '2024 - 10 - 01'
     customers: 320;
     rating: 4 && 4.8;
-    reviews: 245;
+    reviews: 245;,
   },
     id: 'quantum - cybersecurity - suite',
     name: 'Quantum Cybersecurity Suite',
@@ -1911,7 +1911,7 @@ export const,
     launch_date: '2024 - 09 - 15'
     customers: 180;
     rating: 4 && 4.9;
-    reviews: 156;
+    reviews: 156;,
   }];      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
   id: string, name: string;
@@ -1956,12 +1956,12 @@ export const,
   contactInfo: unknown;
     mobile: string, email: string;
     address: string;
-    website: string;
+    website: string;,
     },
     realImplementation: boolean, implementationDetails: string;
   launchDate: string, customers: number;
   rating: number;
-  reviews: number;
+  reviews: number;,
 }
 export const comprehensiveITServices: ComprehensiveITService[] = [,
   // Enterprise IT Infrastructure Services;
@@ -2412,7 +2412,7 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
     launchDate: '2024-02-01'
     customers: 18;
     rating: 4.7;
-    reviews: 12;
+    reviews: 12;,
   }
   // Cybersecurity Operations Center;
     id: 'cybersecurity-operations-center',
@@ -2542,7 +2542,7 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
     launchDate: '2024-01-15'
     customers: 32;
     rating: 4.8;
-    reviews: 24;
+    reviews: 24;,
   }
   // Data Center Management Services;
     id: 'data-center-management',
@@ -2698,7 +2698,7 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
     launchDate: '2024-01-20'
     customers: 15;
     rating: 4.7;
-    reviews: 11;
+    reviews: 11;,
   }
   // Network Security & SD-WAN Services;
     id: 'network-security-sdwan',
@@ -2856,7 +2856,7 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
     launchDate: '2024-02-15'
     customers: 28;
     rating: 4.6;
-    reviews: 19;
+    reviews: 19;,
   }
   // IT Project Management Services;
     id: 'it-project-management',
@@ -3006,7 +3006,7 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
     launchDate: '2024-01-10'
     customers: 45;
     rating: 4.7;
-    reviews: 32;
+    reviews: 32;,
   }
   // IT Training & Certification Services;
     id: 'it-training-certification',
@@ -3157,7 +3157,7 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
     launchDate: '2024-01-05'
     customers: 120;
     rating: 4.8;
-    reviews: 89;
+    reviews: 89;,
   }
     id: 'quantum-cloud-infrastructure',
     name: 'Quantum Cloud Infrastructure',
@@ -3307,7 +3307,7 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
     launchDate: '2024-11-15'
     customers: 45;
     rating: 4.9;
-    reviews: 32;
+    reviews: 32;,
   }
     id: 'ai-powered-devops-automation',
     name: 'AI-Powered DevOps Automation',
@@ -3459,7 +3459,7 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
     launchDate: '2024-10-01'
     customers: 320;
     rating: 4.8;
-    reviews: 245;
+    reviews: 245;,
   }
     id: 'quantum-cybersecurity-suite',
     name: 'Quantum Cybersecurity Suite',
@@ -3614,13 +3614,13 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
     launchDate: '2024-09-15'
     customers: 180;
     rating: 4.9;
-    reviews: 156;
+    reviews: 156;,
   }
       'Advanced quantum cybersecurity platform with quantum encryption, AI threat detection, and comprehensive security features.',
     launchDate: '2024-09-15'
     customers: 180;
     rating: 4.9;
-    reviews: 156;
+    reviews: 156;,
   };
 ];      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -3771,7 +3771,7 @@ export const,
     launchDate: '2024-01-01';
     customers: 25;
     rating: 4.8;
-    reviews: 18;
+    reviews: 18;,
   };
   // Cloud Migration & Optimization Services;
   {;
@@ -3814,7 +3814,7 @@ export const,
     launchDate: '2024-02-01';
     customers: 18;
     rating: 4.7;
-    reviews: 12;
+    reviews: 12;,
   };
   // Cybersecurity Operations Center;
   {;
@@ -3857,7 +3857,7 @@ export const,
     launchDate: '2024-01-15';
     customers: 32;
     rating: 4.8;
-    reviews: 24;
+    reviews: 24;,
   };
   // Data Center Management Services;
   {;
@@ -3900,7 +3900,7 @@ export const,
     launchDate: '2024-01-20';
     customers: 15;
     rating: 4.7;
-    reviews: 11;
+    reviews: 11;,
   };
   // Network Security & SD-WAN Services;
   {;
@@ -3943,7 +3943,7 @@ export const,
     launchDate: '2024-02-15';
     customers: 28;
     rating: 4.6;
-    reviews: 19;
+    reviews: 19;,
   };
   // IT Project Management Services;
   {;
@@ -3986,7 +3986,7 @@ export const,
     launchDate: '2024-01-10';
     customers: 45;
     rating: 4.7;
-    reviews: 32;
+    reviews: 32;,
   };
   // IT Training & Certification Services;
   {;
@@ -4029,7 +4029,7 @@ export const,
     launchDate: '2024-01-05';
     customers: 120;
     rating: 4.8;
-    reviews: 89;
+    reviews: 89;,
   };
   {;
     id: 'quantum-cloud-infrastructure';
@@ -4071,7 +4071,7 @@ export const,
     launchDate: '2024-11-15';
     customers: 45;
     rating: 4.9;
-    reviews: 32;
+    reviews: 32;,
   };
   {;
     id: 'ai-powered-devops-automation';
@@ -4113,7 +4113,7 @@ export const,
     launchDate: '2024-10-01';
     customers: 320;
     rating: 4.8;
-    reviews: 245;
+    reviews: 245;,
   };
   {;
     id: 'quantum-cybersecurity-suite';
@@ -4509,7 +4509,7 @@ export const,
     launch_date: '2024 - 01 - 01'
     customers: 25;
     rating: 4 && 4.8;
-    reviews: 18;
+    reviews: 18;,
   },
     id: 'enterprise-it-infrastructure',
     name: 'Enterprise IT Infrastructure Management',
@@ -4631,7 +4631,7 @@ export const,
     launchDate: '2024-01-01'
     customers: 25;
     rating: 4.8;
-    reviews: 18;
+    reviews: 18;,
   }
   // Cloud Migration & Optimization Services;
     id: 'cloud-migration-optimization',
@@ -4774,7 +4774,7 @@ export const,
     launch_date: '2024 - 02 - 01'
     customers: 18;
     rating: 4 && 4.7;
-    reviews: 12;
+    reviews: 12;,
   },
   // Cybersecurity Operations Center;
     id: 'cybersecurity-operations-center',
@@ -5044,7 +5044,7 @@ export const,
     launch_date: '2024 - 01 - 20'
     customers: 15;
     rating: 4 && 4.7;
-    reviews: 11;
+    reviews: 11;,
   },
   // Network Security & SD-WAN Services;
     id: 'network-security-sdwan',
@@ -5188,7 +5188,7 @@ export const,
     launch_date: '2024 - 02 - 15'
     customers: 28;
     rating: 4 && 4.6;
-    reviews: 19;
+    reviews: 19;,
   },
   // IT Project Management Services;
     id: 'it-project-management',
@@ -5328,7 +5328,7 @@ export const,
     launch_date: '2024 - 01 - 10'
     customers: 45;
     rating: 4 && 4.7;
-    reviews: 32;
+    reviews: 32;,
   },
   // IT Training & Certification Services;
     id: 'it-training-certification',
@@ -5836,7 +5836,7 @@ export const,
     launch_date: '2024 - 09 - 15'
     customers: 180;
     rating: 4 && 4.9;
-    reviews: 156;
+    reviews: 156;,
   }];      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
   id: string, name: string;
@@ -5855,12 +5855,12 @@ export const,
   contactInfo: unknown;
     mobile: string, email: string;
     address: string;
-    website: string;
+    website: string;,
     },
     realImplementation: boolean, implementationDetails: string;
   launchDate: string, customers: number;
   rating: number;
-  reviews: number;
+  reviews: number;,
 }
 export const comprehensiveITServices: ComprehensiveITService[] = [,
       address: '364 E Main St STE 1008 Middletown DE 19709',

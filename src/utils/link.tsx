@@ -1,3 +1,4 @@
+import React from 'react';
 
 interface LinkProps {// TODO: Add content;}
 };
@@ -7,7 +8,7 @@ interface LinkProps {// TODO: Add content;}
   target?: string
   rel?: string
   onClick?: () => void
-  'aria-label'?: string
+  'aria-label'?: string,
 }
 export const Link: React.FC;
           <LinkProps> = ({// TODO: Add content;}

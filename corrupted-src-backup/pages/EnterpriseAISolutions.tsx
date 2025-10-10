@@ -1,4 +1,5 @@
 import React from 'react';
+import Navigation from '../components/Navigation';
 
 export default function EnterpriseAISolutions(): React.JSX.Element {
   const solutions = [
@@ -34,6 +35,8 @@ export default function EnterpriseAISolutions(): React.JSX.Element {/* TODO: Fix
         /></meta>
       </Helmet>
 
+
+      <Navigation />
       <div className="container mx-auto px-4 py-16"></div>
         <div className="text-center mb-16"></div>
           <h1 className="text-4xl font-bold text-gray-900 mb-4">Enterprise AI Solutions</h1>

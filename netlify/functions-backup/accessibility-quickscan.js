@@ -47,7 +47,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
     );
     return {ok: putRes.ok;
       status: putRes.status;
-        error: putRes.ok ? undefined : await putRes.text();
+        error: putRes.ok ? undefined : await putRes.text();,
     };
   }
   if(!baseUrl)

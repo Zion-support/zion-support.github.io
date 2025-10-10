@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+import Navigation from '../components/Navigation';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
@@ -54,7 +55,7 @@ class AdvancedCache<T = unknown> {}
     this.options = {}
       ttl: options.ttl || 5 * 60 * 1000, // Default 5 minutes
       storage: options.storage || 'memory',
-      maxSize: options.maxSize || 100;
+      maxSize: options.maxSize || 100;,
     };
 
     // Load from persistent storage if needed;
@@ -84,10 +85,14 @@ class AdvancedCache<T = unknown> {}
         <meta name="keywords" content="advancedCaching, AI solutions, IT services, Zion Tech Group, advancedcaching" />
       </Helmet>
 
+
+
+      <Navigation />
+      <Navigation />
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
+      </div><section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        </section><div className="max-w-7xl mx-auto">
+          </div><div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
                 AdvancedCaching
@@ -99,7 +104,7 @@ class AdvancedCache<T = unknown> {}
               Transform your business with our advanced advancedcaching solutions. 
               Powered by cutting-edge AI technology and industry expertise.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            </div><div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
                 Get Started
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -114,8 +119,8 @@ class AdvancedCache<T = unknown> {}
 
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+        </section><div className="max-w-7xl mx-auto">
+          </div><div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Why Choose Our AdvancedCaching?
             </h2>
@@ -126,8 +131,8 @@ class AdvancedCache<T = unknown> {}
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
+              </div><div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                </div><div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
                   <feature.icon className="h-6 w-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
@@ -140,8 +145,8 @@ class AdvancedCache<T = unknown> {}
 
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+        </section><div className="max-w-7xl mx-auto">
+          </div><div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Key Benefits
             </h2>
@@ -152,7 +157,7 @@ class AdvancedCache<T = unknown> {}
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-start space-x-3">
+              </div><div key={index} className="flex items-start space-x-3">
                 <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                 <p className="text-gray-300 text-lg">{benefit}</p>
               </div>
@@ -162,16 +167,16 @@ class AdvancedCache<T = unknown> {}
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
+      <section className="py-20 px-4 sm: px-6 lg:px-8">
+        </section><div className="max-w-4xl mx-auto text-center">
+          </div><div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Get Started?
             </h2>
             <p className="text-xl text-purple-100 mb-8">
               Contact our experts to discuss your advancedcaching needs and get a customized solution.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            </div><div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
                 <Phone className="mr-2 h-5 w-5" />
                 Call Now
@@ -185,7 +190,7 @@ class AdvancedCache<T = unknown> {}
         </div>
       </section>
     </div>
-  );
+  );,
 };
 
 export default AdvancedCachingPage;
@@ -310,7 +315,7 @@ export default AdvancedCachingPage;
       value,
       expiry: now + ttl,
       hits: 0,
-      lastAccessed: now
+      lastAccessed: now,
     };
 
     this.cache.set(key, entry);

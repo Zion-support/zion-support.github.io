@@ -75,7 +75,7 @@ export const mockFetch = ()
         jso,
   n: async () => response,
         tex,
-  t: async () => JSON.stringify(response)
+  t: async () => JSON.stringify(response),
       } as Response)
     ) as typeof fetch;
   }
@@ -156,8 +156,7 @@ export const mockWindow = (overrides: Partial;)
 //         ...overrides;
       },
 
-      writable: true;
-
+      writable: true;,
     });
   }
 }
@@ -197,8 +196,7 @@ export const createMockPerformance = (): Performance => {// TODO: Add content;}
     },
 
 measure: (name: string, startMark?: string, endMark?: string) => {entries.push({}
-  // TODO: Add content;
-
+  // TODO: Add content;,
 }
 //         name,
         entryTyp,
@@ -242,7 +240,7 @@ measure: (name: string, startMark?: string, endMark?: string) => {entries.push({
     onresourcetimingbufferful,
   l: null,
     timeOrigi,
-  n: Date.now()
+  n: Date.now(),
   } as unknown as Performance;
 }
 /**
@@ -421,7 +419,7 @@ export interface Deferred;
   e: (valu)
   e: T) => void;,
     rejec,
-  t: (reason?: unknown) => void;
+  t: (reason?: unknown) => void;,
 }
 
 export const createDeferred = <T>(): Deferred<T> => {// TODO: Add content;}

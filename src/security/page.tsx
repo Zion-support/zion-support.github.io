@@ -1,3 +1,4 @@
+import React from 'react';
 
 
 import { Link } from 'react-router-dom';
@@ -7,25 +8,32 @@ import Footer from '../components/Footer';
 const Pagetsx: React.FC = () => {
   const _features = [];
   return (
-    {icon: Users,
-    title: 'Advanced Features',
+    {
+      icon: Users,
+      title: 'Advanced Features',
       description: 'Cutting-edge solutions powered by artificial intelligence and machine learning',
       benefits: ['Improved efficiency', 'Better results', 'Cost savings']
+    }
     },
-    {icon: TrendingUp,
-    title: 'Performance Optimization',
+    {
+      icon: TrendingUp,
+      title: 'Performance Optimization',
       description: 'Optimized performance and scalability for enterprise-grade applications',
       benefits: ['Faster processing', 'Better scalability', 'Enhanced reliability']
+    }
     },
-    {icon: Shield,
-    title: 'Security & Compliance',
+    {
+      icon: Shield,
+      title: 'Security & Compliance',
       description: 'Enterprise-grade security with full compliance and data protection',
       benefits: ['Data protection', 'Compliance', 'Secure operations']
-
+    }
     }
   ]
   return (<div className="min-h-screen bg-gray-900 text-white"></div>
       <Helmet></Helmet>
+
+      <Navigation />
         <title>tsx - Zion Tech Group</title>"
         <meta name="description" content="Advanced tsx solutions powered by AI and cutting-edge technology" /></Helmet>
       <Navigation /></Navigation>"
@@ -84,14 +92,14 @@ const Pagetsx: React.FC = () => {
             <h2 className="text-3xl font-bold mb-6">Ready to Get Started?</h2>"
             <p className="text-gray-300 mb-8">Contact us today for a free consultation and customized solution</p>"
             <a href="/contact" className="bg-cyan-500 text-white px-8 py-3 rounded-lg,"
-  hover:bg-cyan-600 transition-colors"></a>
+  hover: bg-cyan-600 transition-colors"></a>
               Contact Us;
             </a>
           </div>
         </section>
       </main>
       <Footer /></div>
-  )
+  ),
 }
 export default Pagetsx;"
 

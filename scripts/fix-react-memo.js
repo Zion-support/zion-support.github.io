@@ -1,3 +1,4 @@
+import React from 'react';
 #!/usr/bin/env node;
 import fs from 'fs';
 import { glob } from 'glob';
@@ -39,7 +40,7 @@ function fixReactMemo(content) {
   const pattern1 = /const\s+(\w+):\s*React\.FC\s*=\s*React\.memo\(\(\)\s*=>\s*\{/g;
   if (pattern1.test(newContent)) {,
     newContent = newContent.replace(pattern1, 'const $1: React.FC = () => {');
-    fixed = true;
+    fixed = true;,
   }
 
   // Pattern 2: const Component = React.memo(() => {,
@@ -53,7 +54,7 @@ function fixReactMemo(content) {
   const pattern3 = /const\s+(\w+):\s*React\.FC\s*=\s*React\.memo\(\([^)]*\)\s*=>\s*\{/g;,
   if (pattern3.test(newContent)) {,
     newContent = newContent.replace(pattern3, 'const $1: React.FC = () => {');
-    fixed = true;
+    fixed = true;,
   }
 
   // Pattern 4: const Component = React.memo((props) => {,
@@ -88,19 +89,15 @@ function processFile(filePath) {
     
     if (result.fixed) {
       fs.writeFileSync(filePath, result.content, 'utf8');
-      console.log(`✅ ${filePath}: Fixed React.memo syntax`);
       fixedFiles++;
     }
 
     processedFiles++;
   } catch (error) {
-    console.error(`❌ Error processing ${filePath}:`, error.message);
-  }
+    }
 }
 
 async function main() {
-  console.log('🚀 Starting React.memo syntax fixes...\n');
-
   // Get all files to process;
   const allFiles = [];
   for (const pattern of filePatterns) {
@@ -114,16 +111,10 @@ async function main() {
   const uniqueFiles = [...new Set(allFiles)];
   totalFiles = uniqueFiles.length;
 
-  console.log(`📁 Found ${totalFiles} files to process\n`);
-
   // Process each file;
   uniqueFiles.forEach(processFile);
 
-  console.log(`\n🎉 React.memo syntax fixes completed!`);
-  console.log(`📊 Statistics: `);
-  console.log(`   - Files processed: ${processedFiles}/${totalFiles}`);
-  console.log(`   - Files fixed: ${fixedFiles}`);
-}
+  }
 
 if (import.meta.url === `file://${process.argv[1]}`) {
   main();

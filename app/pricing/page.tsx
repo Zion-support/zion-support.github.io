@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Navigation from '../components/Navigation';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { CheckCircle, Star, ArrowRight, Zap } from 'lucide-react';
@@ -19,7 +20,7 @@ const PricingPage: React.FC = () => {
         'Monthly Reports',
         'Basic Analytics Dashboard'
       ],
-      popular: false
+      popular: false,
     },
     {
       name: 'Professional',
@@ -35,7 +36,7 @@ const PricingPage: React.FC = () => {
         'API Access',
         'Training Sessions'
       ],
-      popular: true
+      popular: true,
     },
     {
       name: 'Enterprise',
@@ -52,7 +53,7 @@ const PricingPage: React.FC = () => {
         'On-site Training',
         'SLA Guarantee'
       ],
-      popular: false
+      popular: false,
     }
   ];
 
@@ -64,11 +65,15 @@ const PricingPage: React.FC = () => {
         <meta name="keywords" content="AI pricing, IT services pricing, cloud solutions cost, enterprise AI pricing, custom development pricing" />
       </Helmet>
 
+
+
+      <Navigation />
+      <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="relative max-w-7xl mx-auto text-center">
+        </div><section className="relative py-20 px-4 overflow-hidden">
+          </section><div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          </div><div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          </div><div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Transparent Pricing
             </h1>
@@ -79,29 +84,29 @@ const PricingPage: React.FC = () => {
         </section>
 
         <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
+          </section><div className="max-w-7xl mx-auto">
             <h2 className="text-3xl font-bold text-white mb-4 text-center">Enterprise Solutions</h2>
             <p className="text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto">
               Comprehensive AI and IT solutions for businesses of all sizes
             </p>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            </div><div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
               {plans.map((plan, index) => (
-                <div
+                </div><div
                   key={index}
                   className={`bg-white/5 backdrop-blur-lg rounded-xl p-8 border border-white/10 hover:bg-white/10 transition-all duration-300 relative ${
                     plan.popular ? 'ring-2 ring-cyan-500' : ''
                   }`}
                 >
                   {plan.popular && (
-                    <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-4 py-1 rounded-full text-sm font-medium">
+                    </div><div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-4 py-1 rounded-full text-sm font-medium">
                       Most Popular
                     </div>
                   )}
                   
                   <div className="text-center mb-8">
                     <h3 className="text-2xl font-bold text-white mb-4">{plan.name}</h3>
-                    <div className="mb-4">
+                    </div><div className="mb-4">
                       <span className="text-4xl font-bold text-cyan-400">{plan.price}</span>
                       <span className="text-gray-300">{plan.period}</span>
                     </div>

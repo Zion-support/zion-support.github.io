@@ -37,8 +37,7 @@ try {
   const result = execSync('find app -name "page.tsx" | sed "s|app/||" | sed "s|/page.tsx||"', { encoding: 'utf8' });
   existingPages.push(...result.trim().split('\n').filter(Boolean));
 } catch (error) {
-  console.error('Error getting existing pages:', error.message);
-}
+  }
 
 // Combine all links;
 const allLinks = [...new Set([...footerLinks, ...navLinks])].sort();
@@ -47,17 +46,10 @@ const existingPagesSet = new Set(existingPages);
 // Find missing pages;
 const missingPages = allLinks.filter(link => !existingPagesSet.has(link));
 
-console.log('=== MISSING PAGES ANALYSIS ===');
-console.log(`Total links found: ${allLinks.length}`);
-console.log(`Existing pages: ${existingPages.length}`);
-console.log(`Missing pages: ${missingPages.length}`);
-
 if (missingPages.length > 0) {
-  console.log('\n=== MISSING PAGES ===');
   missingPages.forEach(page => console.log(`- ${page}`));
 } else {
-  console.log('\n✅ All navigation and footer links have corresponding pages!');
-}
+  }
 
 // Check for pages that exist but aren't linked;
 const unlinkedPages = existingPages.filter(page => !allLinks.includes(page));
@@ -65,6 +57,5 @@ console.log(`\n=== UNLINKED PAGES (${unlinkedPages.length}) ===`);
 if (unlinkedPages.length > 0) {
   unlinkedPages.slice(0, 20).forEach(page => console.log(`- ${page}`));
   if (unlinkedPages.length > 20) {
-    console.log(`... and ${unlinkedPages.length - 20} more`);
-  }
+    }
 }

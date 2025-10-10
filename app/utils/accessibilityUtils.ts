@@ -24,7 +24,7 @@ export const announceToScreenReader = (message: string): void => {
 
 export const focusElement = (element: HTMLElement | null): void => {
   if (element) {
-    element.focus();
+    element.focus();,
   }
 };
 
@@ -41,7 +41,7 @@ export const trapFocus = (container: HTMLElement): (() => void) => {
       if (e.shiftKey) {
         if (document.activeElement === firstElement) {
           lastElement.focus();
-          e.preventDefault();
+          e.preventDefault();,
         }
       } else {
         if (document.activeElement === lastElement) {
@@ -64,7 +64,7 @@ export const validateAriaAttributes = (element: HTMLElement): string[] => {
   
   // Check for required ARIA attributes
   if (element.getAttribute('role') === 'button' && !element.getAttribute('aria-label') && !element.textContent?.trim()) {
-    errors.push('Button with role="button" must have aria-label or accessible text');
+    errors.push('Button with role="button" must have aria-label or accessible text');,
   }
   
   if (element.getAttribute('aria-expanded') !== null && !element.getAttribute('aria-controls')) {
@@ -94,9 +94,9 @@ export const createSkipLink = (targetId: string, text: string = 'Skip to main co
   const skipLink = document.createElement('a');
   skipLink.href = `#${targetId}`;
   skipLink.textContent = text;
-  skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
+  skipLink.className = 'sr-only focus: not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
   
-  return skipLink;
+  return skipLink;,
 };
 
 export const checkColorContrast = (foreground: string, background: string): boolean => {

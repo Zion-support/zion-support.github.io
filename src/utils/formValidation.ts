@@ -8,7 +8,7 @@
 export interface ValidationRule<T = unknown> {// TODO: Add content;}
 };
   validate: (value: T) => boolean;,
-    message: string
+    message: string,
 }
 export interface ValidationResult {// TODO: Add content;}
 };
@@ -17,8 +17,7 @@ export interface ValidationResult {// TODO: Add content;}
 }
 export interface FieldValidation {// TODO: Add content;}
 }
-  [fieldName: string]: ValidationRule[];
-
+  [fieldName: string]: ValidationRule[];,
 }
 /**
  * Common validation rules;

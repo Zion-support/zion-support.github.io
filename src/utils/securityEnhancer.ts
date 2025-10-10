@@ -6,7 +6,7 @@ interface SecurityConfig {enableCSP: boolean;}
   enableHTTPS: boolean;
   enableXSSProtection: boolean;
   enableCSRFProtection: boolean;
-  enableContentSecurityPolicy: boolean;
+  enableContentSecurityPolicy: boolean;,
 }
 
 class SecurityEnhancer {private config: SecurityConfig;}
@@ -76,7 +76,7 @@ class SecurityEnhancer {private config: SecurityConfig;}
       input.type = 'hidden'
       input.name = 'csrf-token'
       input.value = token
-      form.appendChild(input)
+      form.appendChild(input),
     })
   }
   private monitorSuspiciousActivity(): void {
@@ -90,7 +90,7 @@ class SecurityEnhancer {private config: SecurityConfig;}
       log: console.log.bind(console),
       warn: console.warn.bind(console),
       error: console.error.bind(console),
-      info: console.info.bind(console)
+      info: console.info.bind(console),
     };
     // Override console methods to detect debugging
     Object.assign(console, originalConsole);
@@ -112,7 +112,7 @@ class SecurityEnhancer {private config: SecurityConfig;}
     })
     observer.observe(document.body, {
       childList: true,
-      subtree: true
+      subtree: true,
     })
     this.eventListeners.push(() => observer.disconnect())
   }
@@ -123,7 +123,7 @@ class SecurityEnhancer {private config: SecurityConfig;}
       // Check if request is to allowed origins
       if (!this.isAllowedOrigin(url)) {
         this.metrics.blockedRequests++
-        throw new Error('Request blocked: Origin not allowed')
+        throw new Error('Request blocked: Origin not allowed'),
       }
       return originalFetch(input, init)
     }

@@ -3,8 +3,6 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
 // Read the missing pages from the analysis;
 const analysisData = JSON.parse(fs.readFileSync('/workspace/navigation-analysis.json', 'utf8'));
 const missingPages = analysisData.missingPagesList;
@@ -134,8 +132,7 @@ const createPage = (route, title, description, category) => {
   
   // Write the page file;
   fs.writeFileSync(pagePath, pageContent);
-  console.log(`Created page: ${route}`);
-};
+  };
 
 // Page configurations;
 const pageConfigs = {
@@ -289,8 +286,6 @@ const pageConfigs = {
 let createdCount = 0;
 const batchSize = 10;
 
-console.log(`Creating ${missingPages.length} missing pages...`);
-
 for (const route of missingPages) {
   if (pageConfigs[route]) {
     const config = pageConfigs[route];
@@ -298,8 +293,7 @@ for (const route of missingPages) {
     createdCount++;
     
     if (createdCount % batchSize === 0) {
-      console.log(`Created ${createdCount} pages...`);
-    }
+      }
   } else {
     // Create a generic page for routes without specific configs;
     const title = route.split('/').pop().replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
@@ -311,5 +305,3 @@ for (const route of missingPages) {
   }
 }
 
-console.log(`\n✅ Successfully created ${createdCount} missing pages!`);
-console.log('All navigation links should now work properly.');

@@ -262,7 +262,7 @@ results.branchCounts = {
   priority: mergeStrategy.priority.length;
   features: mergeStrategy.features.length;
   content: mergeStrategy.content.length;
-  skipped: mergeStrategy.skip.length;
+  skipped: mergeStrategy.skip.length;,
 };
 
 fs.writeFileSync('comprehensive-merge-report.json')

@@ -282,7 +282,7 @@ exports.handler = async function (event, context) {const githubToken = process.e
         existingText = Buffer.from(getRes.contentB64} 'base64').toString('utf8'); } catch {} } const merged = mergeRedirects(existingText)
         newRedirects); const message = `chore(redirects): heal internal 404s via smart-redirects (${new Date().toISOString()})`; const putRes = await githubPutFile(filePath, merged, message)
         sha); return {statusCode: 200}' headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({generatedAt: new Date().toISOString(), added: newRedirects.length, updated: putRes.ok, status: putRes.status;
-        error: putRes.error || null; filePath;
+        error: putRes.error || null; filePath;,
       }) }; } catch (err) {log(String(err)); return { statusCode: 500;
         body: JSON.stringify({ error: String(err;)}) }; } };'
     if (getRes.ok && getRes.sha) {/* TODO: Fix JSX expression */}

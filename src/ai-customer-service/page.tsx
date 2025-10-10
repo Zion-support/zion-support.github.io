@@ -1,9 +1,13 @@
 'use client';
 import { Helmet } from 'react-helmet-async';
+import Footer from '../components/Footer';
+import Navigation from '../components/Navigation';
 
 export default function AICustomerServicePage() {/* TODO: Fix JSX expression */}
 }
   return (<div><Helmet></Helmet>
+
+      <Navigation />
         <title>AI Customer Service Solutions - Zion Tech Group</title>
         <meta name="description" content="Revolutionary AI-powered customer service solutions with 24/7 support, multilingual capabilities, and 95% customer satisfaction rates. Starting at $299/month." /></meta>"
         <meta name="keywords" content="AI customer service, chatbot, virtual assistant, customer support automation, multilingual support" /></meta>"
@@ -182,7 +186,7 @@ export default function AICustomerServicePage() {/* TODO: Fix JSX expression */}
               </a>"
               <a href="/contact" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold,
   hover:bg-white,"
-  hover:text-indigo-600 transition-all duration-300"></a>
+  hover: text-indigo-600 transition-all duration-300"></a>
                 Get Free Demo;
               </a>
             </div>
@@ -192,5 +196,5 @@ export default function AICustomerServicePage() {/* TODO: Fix JSX expression */}
         <Footer /></Footer>
       </div>
     </div>
-  );
+  );,
 }"

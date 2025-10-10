@@ -13,24 +13,28 @@ const AIAutomationPage: React.FC = () => {
       title: 'Process Automation',
       description: 'Intelligent automation of complex business processes with decision-making capabilities',
       benefits: ['80% process efficiency', 'Zero human error', '24/7 operation']
+    }
     },
     {
       icon: Zap,
       title: 'Workflow Optimization',
       description: 'AI-powered workflow analysis and optimization for maximum productivity',
       benefits: ['60% time savings', 'Smart routing', 'Dynamic optimization']
+    }
     },
     {
       icon: Shield,
       title: 'Decision Trees',
       description: 'Advanced decision-making algorithms for complex business scenarios',
       benefits: ['Consistent decisions', 'Risk mitigation', 'Compliance assurance']
+    }
     },
     {
       icon: Clock,
       title: 'Exception Handling',
       description: 'Intelligent handling of exceptions and edge cases in automated processes',
       benefits: ['Smart escalation', 'Context awareness', 'Learning capabilities']
+    }
     }
   ];
 
@@ -47,7 +51,7 @@ const AIAutomationPage: React.FC = () => {
         'Standard integrations',
         'Basic analytics'
       ],
-      popular: false
+      popular: false,
     },
     {
       name: 'Professional',
@@ -62,7 +66,7 @@ const AIAutomationPage: React.FC = () => {
         'Advanced analytics',
         'Workflow optimization'
       ],
-      popular: true
+      popular: true,
     },
     {
       name: 'Enterprise',
@@ -78,7 +82,7 @@ const AIAutomationPage: React.FC = () => {
         'API access',
         'Dedicated support'
       ],
-      popular: false
+      popular: false,
     }
   ];
 
@@ -94,7 +98,7 @@ export default function AIAutomationPage() {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="container mx-auto px-4 py-20">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
+          <h1 className="text-4xl lg: text-6xl font-bold text-white mb-6">
             AI Automation
           </h1>
           <p className="text-xl text-gray-300 mb-8">
@@ -116,5 +120,5 @@ export default function AIAutomationPage() {
         </div>
       </div>
     </div>
-  );
+  );,
 }

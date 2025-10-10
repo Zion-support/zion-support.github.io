@@ -134,19 +134,19 @@ export interface NextGenerationAIService {}
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number;
+  reviews: number;,
 }
   reviews: number;    mobile: string;
     email: string;
     address: string;
-    website: string;
+    website: string;,
   }
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number;
+  reviews: number;,
 }
 export const nextGenerationAIServices: NextGenerationAIService[] = [
   // Advanced AI Agents & Autonomous Systems;
@@ -246,7 +246,7 @@ export const,
     launchDate: '2024-12-01'
     customers: 150;
     rating: 4.9;
-    reviews: 89;
+    reviews: 89;,
   },
   // Quantum AI Computing Platform;
     id: 'quantum-ai-computing-platform',
@@ -374,7 +374,7 @@ export const,
     launchDate: '2024-11-15'
     customers: 75;
     rating: 4.8;
-    reviews: 45;
+    reviews: 45;,
   },
   // Neural Interface Development Platform;
     id: 'neural-interface-development-platform',
@@ -501,7 +501,7 @@ export const,
     launchDate: '2024-10-01'
     customers: 120;
     rating: 4.7;
-    reviews: 67;
+    reviews: 67;,
   },
   // AI-Powered Space Exploration Platform;
     id: 'ai-space-exploration-platform',
@@ -628,7 +628,7 @@ export const,
     launchDate: '2024-09-15'
     customers: 45;
     rating: 4.9;
-    reviews: 28;
+    reviews: 28;,
   },
   // Biotech AI Drug Discovery Platform;
     id: 'biotech-ai-drug-discovery',
@@ -755,7 +755,7 @@ export const,
     launchDate: '2024-08-01'
     customers: 85;
     rating: 4.8;
-    reviews: 52;
+    reviews: 52;,
   },
   // Quantum Financial Trading Platform;
     id: 'quantum-financial-trading-platform',
@@ -882,7 +882,7 @@ export const,
     launchDate: '2024-07-15'
     customers: 95;
     rating: 4.7;
-    reviews: 58;
+    reviews: 58;,
   },
   // AI-Powered Metaverse Development Platform;
     id: 'ai-metaverse-development-platform',
@@ -1009,7 +1009,7 @@ export const,
     launchDate: '2024-06-01'
     customers: 180;
     rating: 4.6;
-    reviews: 95;
+    reviews: 95;,
   },
   // Autonomous Vehicle AI Platform;
     id: 'autonomous-vehicle-ai-platform',
@@ -1136,7 +1136,7 @@ export const,
     launchDate: '2024-05-15'
     customers: 65;
     rating: 4.8;
-    reviews: 42;
+    reviews: 42;,
   },
   // Quantum Internet Security Platform;
     id: 'quantum-internet-security-platform',
@@ -1263,7 +1263,7 @@ export const,
     launchDate: '2024-04-01'
     customers: 55;
     rating: 4.9;
-    reviews: 33;
+    reviews: 33;,
   },
   // AI-Powered Manufacturing Platform;
     id: 'ai-manufacturing-platform',

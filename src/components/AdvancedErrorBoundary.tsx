@@ -5,12 +5,12 @@ interface ErrorBoundaryState {
   hasError: boolean;
   error: Error | null;
   errorInfo: ErrorInfo | null;
-  errorId: string | null;
+  errorId: string | null;,
 }
 
 interface ErrorBoundaryProps {
   children: ReactNode;
-  fallback?: ReactNode;
+  fallback?: ReactNode;,
 }
 
 interface ErrorReport {
@@ -23,7 +23,7 @@ interface ErrorReport {
   errorBoundary: string;
   errorTimestamp: string;
   errorUserAgent: string | null;
-  errorUrl: string | null;
+  errorUrl: string | null;,
 }
 
 class AdvancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
@@ -33,7 +33,7 @@ class AdvancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
       hasError: false,
       error: null,
       errorInfo: null,
-      errorId: null
+      errorId: null,
     };
   }
 
@@ -54,8 +54,7 @@ class AdvancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
 
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by boundary:', error, errorInfo);
-    }
+      }
 
     // Send error report in production
     if (process.env.NODE_ENV === 'production') {
@@ -75,7 +74,7 @@ class AdvancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
         errorBoundary: 'AdvancedErrorBoundary',
         errorTimestamp: new Date().toISOString(),
         errorUserAgent: typeof window !== 'undefined' ? window.navigator.userAgent : null,
-        errorUrl: typeof window !== 'undefined' ? window.location.href : null
+        errorUrl: typeof window !== 'undefined' ? window.location.href : null,
       };
 
       // Send to error reporting service
@@ -87,8 +86,7 @@ class AdvancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
         body: JSON.stringify(errorReport),
       });
     } catch (reportError) {
-      console.error('Failed to report error:', reportError);
-    }
+      }
   };
 
   private handleRetry = () => {
@@ -96,7 +94,7 @@ class AdvancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
       hasError: false,
       error: null,
       errorInfo: null,
-      errorId: null
+      errorId: null,
     });
   };
 

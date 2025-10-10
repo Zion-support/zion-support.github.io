@@ -1,8 +1,6 @@
 #!/usr/bin/env node;
 import { execSync } from 'child_process';
 
-console.log('🔄 Merging latest enhancement branches...');
-
 try {
   // List of recent branches to check and potentially merge;
   const branchesToCheck = [
@@ -23,30 +21,22 @@ try {
 
   for (const branch of branchesToCheck) {
     try {
-      console.log(`\n🔍 Checking branch: ${branch}`);
-      
       // Check if branch has unique commits;
       const uniqueCommits = execSync(`git log --oneline main..${branch}`, { encoding: 'utf8' });
       
       if (!uniqueCommits.trim()) {
-        console.log(`⏭️  Branch ${branch} has no unique commits, skipping...`);
         skippedCount++;
         continue;
       }
 
-      console.log(`📝 Unique commits in ${branch}:`);
       console.log(uniqueCommits.split('\n').slice(0, 3).join('\n'));
 
       // Try to merge the branch;
-      console.log(`🔄 Attempting to merge ${branch}...`);
       execSync(`git merge ${branch} --no-ff -m "feat: Merge enhancements from ${branch}"`, { stdio: 'inherit' });
       
-      console.log(`✅ Successfully merged ${branch}`);
       mergedCount++;
 
     } catch (error) {
-      console.log(`⚠️  Could not merge ${branch}: ${error.message}`);
-      
       // Try to abort the merge if it failed;
       try {
         execSync('git merge --abort', { stdio: 'pipe' });
@@ -56,17 +46,9 @@ try {
     }
   }
 
-  console.log(`\n📊 Merge Summary: `);
-  console.log(`✅ Successfully merged: ${mergedCount} branches`);
-  console.log(`⏭️  Skipped: ${skippedCount} branches`);
-
   // Push all changes;
-  console.log('\n📤 Pushing all changes to origin/main...');
   execSync('git push origin main', { stdio: 'inherit' });
 
-  console.log('🎉 All merges completed successfully!');
-
-} catch (error) {
-  console.error('❌ Error during merge process:', error.message);
+  } catch (error) {
   process.exit(1);
 }

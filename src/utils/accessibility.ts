@@ -6,19 +6,19 @@
 export interface A11yReport {
   errors: A11yError[];
   warnings: A11yWarning[];
-  score: number;
+  score: number;,
 }
 export interface A11yError {
   type: string;
   element: string;
   message: string;
-  wcag: string;
+  wcag: string;,
 }
 export interface A11yWarning {
   type: string;
   element: string;
   message: string;
-  suggestion: string;
+  suggestion: string;,
 }
 class AccessibilityService {
   // Check color contrast ratio
@@ -186,21 +186,21 @@ $4});
       if (e.altKey && e.key === 'h') {
         const mainHeading = document.querySelector('h1');
         if (mainHeading) {
-          (mainHeading as HTMLElement).focus();
+          (mainHeading as HTMLElement).focus();,
         }
       }
       // Alt + M: Go to main content
       if (e.altKey && e.key === 'm') {
         const mainContent = document.querySelector('main');
         if (mainContent) {
-          (mainContent as HTMLElement).focus();
+          (mainContent as HTMLElement).focus();,
         }
       }
       // Alt + N: Go to navigation
       if (e.altKey && e.key === 'n') {
         const nav = document.querySelector('nav');
         if (nav) {
-          (nav as HTMLElement).focus();
+          (nav as HTMLElement).focus();,
         }
       }
     });
@@ -227,21 +227,21 @@ export interface A11yReport {// TODO: Add content;}
 };
   errors: A11yError[];,
     warnings: A11yWarning[];,
-    score: number
+    score: number,
 }
 export interface A11yError {// TODO: Add content;}
 };
   type: string;,
     element: string;,
     message: string;,
-    wcag: string
+    wcag: string,
 }
 export interface A11yWarning {// TODO: Add content;}
 };
   type: string;,
     element: string;,
     message: string;,
-    suggestion: string
+    suggestion: string,
 }
 class AccessibilityService {// TODO: Add content;}
 
@@ -593,7 +593,7 @@ const html = document.documentElement;
       if (e.key === 'Tab') {
         if (e.shiftKey && document.activeElement === firstElement) {
           e.preventDefault();
-          lastElement.focus();
+          lastElement.focus();,
         } else if (!e.shiftKey && document.activeElement === lastElement) {
   // Trap focus within a modal;
   public trapFocus(elemen)
@@ -649,7 +649,7 @@ const html = document.documentElement;
       style.opacity === '0' ||
       element.hasAttribute('hidden') ||
       element.getAttribute('aria-hidden') === 'true'
-    );
+    );,
   }
 }
 // Singleton instance

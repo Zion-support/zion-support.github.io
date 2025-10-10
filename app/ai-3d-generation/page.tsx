@@ -12,36 +12,48 @@ const AI3DGenerationPage: React.FC = () => {
       title: 'AI-Powered 3D Modeling',
       description: 'Generate complex 3D models from text descriptions using advanced AI algorithms.',
       benefits: ['Text-to-3D conversion', 'Real-time generation', 'High-quality output', 'Multiple formats']
+    }
+    }
     },
     {
       icon: Zap,
       title: 'Lightning Fast Processing',
       description: 'Create 3D models in seconds instead of hours with our optimized AI processing.',
       benefits: ['Sub-second generation', 'Batch processing', 'GPU acceleration', 'Cloud scaling']
+    }
+    }
     },
     {
       icon: Eye,
       title: 'Photorealistic Quality',
       description: 'Generate stunning, photorealistic 3D models with advanced neural rendering.',
       benefits: ['High-resolution output', 'Realistic materials', 'Advanced lighting', 'Detail preservation']
+    }
+    }
     },
     {
       icon: Palette,
       title: 'Style Transfer',
       description: 'Apply any artistic style to your 3D models with AI-powered style transfer.',
       benefits: ['Multiple art styles', 'Custom style training', 'Real-time preview', 'Batch application']
+    }
+    }
     },
     {
       icon: Download,
       title: 'Universal Export',
       description: 'Export your 3D models in all major formats for any platform or engine.',
       benefits: ['OBJ, FBX, GLTF', 'Game engine ready', 'VR/AR compatible', 'Web optimized']
+    }
+    }
     },
     {
       icon: Sparkles,
       title: 'Smart Optimization',
       description: 'Automatically optimize models for performance without losing visual quality.',
       benefits: ['LOD generation', 'Texture compression', 'Polygon reduction', 'Performance tuning']
+    }
+    }
     }
   ];
 
@@ -86,13 +98,17 @@ const AI3DGenerationPage: React.FC = () => {
         <meta name="keywords" content="AI 3D generation, 3D modeling, artificial intelligence, text-to-3D, Zion Tech Group" />
       </Helmet>
 
+
+
+      <Navigation />
+      <Navigation />
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-        <div className="relative max-w-7xl mx-auto text-center">
+      </div><section className="relative py-20 px-4 overflow-hidden">
+        </section><div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+        </div><div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+        </div><div className="relative max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
             AI 3D
             <span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
@@ -103,7 +119,7 @@ const AI3DGenerationPage: React.FC = () => {
             Transform your ideas into stunning 3D models with our revolutionary AI technology. 
             Simply describe what you want, and watch as our AI brings it to life in seconds.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          </div><div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25">
               Start Creating
               <ArrowRight className="inline-block ml-2 w-5 h-5" />
@@ -117,8 +133,8 @@ const AI3DGenerationPage: React.FC = () => {
 
       {/* Features Section */}
       <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+        </section><div className="max-w-7xl mx-auto">
+          </div><div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Powerful 3D Generation Features
             </h2>
@@ -126,7 +142,7 @@ const AI3DGenerationPage: React.FC = () => {
               Our AI-powered 3D generation technology combines cutting-edge machine learning 
               with intuitive design tools to create professional-quality 3D models.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            </div><div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 flex items-center justify-center">
                 Start Creating
                 <ArrowRight className="ml-2 w-5 h-5" />
@@ -139,8 +155,8 @@ const AI3DGenerationPage: React.FC = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-purple-400/50 transition-all duration-300 group">
-                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+              </div><div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-purple-400/50 transition-all duration-300 group">
+                </div><div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
@@ -161,8 +177,8 @@ const AI3DGenerationPage: React.FC = () => {
 
       {/* Applications Section */}
       <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+        </section><div className="max-w-7xl mx-auto">
+          </div><div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">Applications</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Perfect for a wide range of industries and applications
@@ -171,8 +187,8 @@ const AI3DGenerationPage: React.FC = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {useCases.map((useCase, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group text-center">
-                <div className="text-4xl mb-4">{useCase.icon}</div>
+              </div><div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group text-center">
+                </div><div className="text-4xl mb-4">{useCase.icon}</div>
                 <h3 className="text-xl font-bold text-white mb-4">{useCase.title}</h3>
                 <p className="text-gray-300">{useCase.description}</p>
               </div>
@@ -183,9 +199,9 @@ const AI3DGenerationPage: React.FC = () => {
 
       {/* Benefits Section */}
       <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
+        </section><div className="max-w-7xl mx-auto">
+          </div><div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            </div><div>
               <h2 className="text-4xl font-bold text-white mb-6">Why Choose AI 3D Generation?</h2>
               <p className="text-xl text-gray-300 mb-8">
                 Traditional 3D modeling is time-consuming and expensive. Our AI technology revolutionizes 
@@ -194,8 +210,8 @@ const AI3DGenerationPage: React.FC = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                  <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg mb-4">
+                </div><div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                  </div><div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg mb-4">
                     <feature.icon className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
@@ -217,7 +233,7 @@ const AI3DGenerationPage: React.FC = () => {
 
       {/* CTA Section */}
       <section className="py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center">
+        </section><div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
             Ready to Generate 3D Models with AI?
           </h2>
@@ -225,7 +241,7 @@ const AI3DGenerationPage: React.FC = () => {
             Start creating stunning 3D models from text descriptions today. 
             No 3D modeling experience required.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          </div><div className="flex flex-col sm: flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
               Start Generating
               <ArrowRight className="inline-block ml-2 w-5 h-5" />
@@ -239,7 +255,7 @@ const AI3DGenerationPage: React.FC = () => {
 
       <Footer />
     </div>
-  );
+  );,
 };
 
 export default AI3DGenerationPage;

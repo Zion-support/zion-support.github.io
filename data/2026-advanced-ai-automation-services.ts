@@ -54,7 +54,7 @@ export interface AdvancedAIAutomationService {id: string;
     implementationDetails: 'Enterprise SaaS with advanced ML models, real-time processing, and predictive algorithms.',
     launchDate: '2026-02-01', customers: 234;
     rating: 4.9;
-    reviews: 312;
+    reviews: 312;,
   };
     id: 'ai-autonomous-customer-success', name: 'AI Autonomous Customer Success',
     tagline: 'Automatically increase customer retention and satisfaction with AI-driven insights', price: '$699',
@@ -80,7 +80,7 @@ export interface AdvancedAIAutomationService {id: string;
     implementationDetails: 'Multi-tenant SaaS with AI customer intelligence, automated workflows, and retention engine.',
     launchDate: '2026-01-20', customers: 167;
     rating: 4.7;
-    reviews: 203;
+    reviews: 203;,
   };
     id: 'ai-autonomous-marketing-orchestrator', name: 'AI Autonomous Marketing Orchestrator',
     tagline: 'Coordinate all marketing channels autonomously for maximum ROI and engagement',
@@ -413,7 +413,7 @@ export const getAIAutomationServicesByTechnology = (technology: string): AIAutom
 export const getAIAutomationServicesByCategory = (categor)
   y: string) =>;
   if (category === 'All') return advancedAIAutomationServices;
-  return advancedAIAutomationServices.filter(service => service.category === category);
+  return advancedAIAutomationServices.filter(service => service.category === category);,
 };
 export const getPopularAIAutomationServices = (limi)
   t: number = 6): AIAutomationService[] =>,
@@ -426,7 +426,7 @@ export const getAIAutomationServicesByTechnology = (technolog)
   return advancedAIAutomationServices.filter(service =>
     service.technology.some(tech =>)
       tech.toLowerCase().includes(technology.toLowerCase())
-  </div>));
+  </div>));,
 };
 export const getAIAutomationServicesByPriceRange = (minPrice: number) maxPrice: number): AIAutomationService[] =>,
   return advancedAIAutomationServices.filter(service =>)

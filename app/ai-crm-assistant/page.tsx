@@ -12,36 +12,48 @@ const AICRMAssistantPage: React.FC = () => {
       title: 'Customer Management',
       description: 'AI-powered customer relationship management with intelligent insights and automation.',
       benefits: ['Customer profiling', 'Behavior analysis', 'Predictive insights', 'Automated follow-ups']
+    }
+    }
     },
     {
       icon: Target,
       title: 'Lead Scoring',
       description: 'Intelligent lead scoring and qualification using AI algorithms and machine learning.',
       benefits: ['Lead prioritization', 'Scoring algorithms', 'Qualification automation', 'Conversion prediction']
+    }
+    }
     },
     {
       icon: Brain,
       title: 'Sales Intelligence',
       description: 'AI-powered sales insights and recommendations for better decision making.',
       benefits: ['Sales forecasting', 'Opportunity analysis', 'Performance insights', 'Recommendation engine']
+    }
+    }
     },
     {
       icon: Zap,
       title: 'Automation',
       description: 'Automate repetitive tasks and workflows to improve efficiency and productivity.',
       benefits: ['Workflow automation', 'Task automation', 'Process optimization', 'Time savings']
+    }
+    }
     },
     {
       icon: BarChart,
       title: 'Analytics & Reporting',
       description: 'Comprehensive analytics and reporting for better business insights and decision making.',
       benefits: ['Real-time analytics', 'Custom reports', 'Performance tracking', 'Data visualization']
+    }
+    }
     },
     {
       icon: Shield,
       title: 'Data Security',
       description: 'Enterprise-grade security and compliance for customer data protection.',
       benefits: ['Data encryption', 'Access control', 'Compliance management', 'Audit trails']
+    }
+    }
     }
   ];
 
@@ -98,11 +110,15 @@ const AICRMAssistantPage: React.FC = () => {
       </Helmet>
 
 
+
+
+      <Navigation />
+      <Navigation />
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
         {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full mb-8">
+        </main><section className="relative py-20 px-4 sm:px-6 lg:px-8">
+          </section><div className="max-w-7xl mx-auto text-center">
+            </div><div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full mb-8">
               <Users className="w-10 h-10 text-white" />
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -112,7 +128,7 @@ const AICRMAssistantPage: React.FC = () => {
               Transform your customer relationship management with our AI CRM Assistant. Intelligent automation, 
               lead scoring, and sales insights for better business growth.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 flex items-center justify-center">
                 Get Started
                 <ArrowRight className="ml-2 w-5 h-5" />
@@ -132,7 +148,7 @@ const AICRMAssistantPage: React.FC = () => {
 
       <Footer />
     </>
-  );
+  );,
 };
 
 export default AICRMAssistantPage;

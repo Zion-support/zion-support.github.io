@@ -3,13 +3,13 @@ import React, { Component, ErrorInfo, ReactNode } from 'react';
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
+  onError?: (error: Error, errorInfo: ErrorInfo) => void;,
 }
 
 interface State {
   hasError: boolean;
   error?: Error;
-  errorInfo?: ErrorInfo;
+  errorInfo?: ErrorInfo;,
 }
 
 class GlobalErrorBoundary extends Component<Props, State> {
@@ -27,8 +27,7 @@ class GlobalErrorBoundary extends Component<Props, State> {
     
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by boundary:', error, errorInfo);
-    }
+      }
 
     // Call onError callback if provided
     if (this.props.onError) {
@@ -81,7 +80,7 @@ class GlobalErrorBoundary extends Component<Props, State> {
               
               <button
                 onClick={() => this.setState({ hasError: false, error: undefined, errorInfo: undefined })}
-                className="w-full bg-purple-600 hover:bg-purple-700 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200"
+                className="w-full bg-purple-600 hover: bg-purple-700 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200"
               >
                 Try Again
               </button>
@@ -95,7 +94,7 @@ class GlobalErrorBoundary extends Component<Props, State> {
             </div>
           </div>
         </div>
-      );
+      );,
     }
 
     return this.props.children;

@@ -123,14 +123,14 @@ function DefaultErrorFallback({ error, resetError }: { error: Error; resetError:
           </button>
           <button
             onClick={() => (window.location.href = '/')}
-            className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-300 transition-colors"
+            className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg hover: bg-gray-300 transition-colors"
           >
             Go Home
           </button>
         </div>
       </div>
     </div>
-  );
+  );,
 }
 
 /**
@@ -162,14 +162,14 @@ function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => 
         <div className="mt-6"></div>
           <button
             onClick={resetError}
-            className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+            className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover: bg-blue-700 transition-colors"
           >
             Retry Connection
           </button>
         </div>
       </div>
     </div>
-  );
+  );,
 }
 
 /**
@@ -193,14 +193,14 @@ function NotFoundFallback(): JSX.Element {
           </button>
           <button
             onClick={() => window.history.back()}
-            className="bg-gray-200 text-gray-800 px-6 py-2 rounded-lg hover:bg-gray-300 transition-colors"
+            className="bg-gray-200 text-gray-800 px-6 py-2 rounded-lg hover: bg-gray-300 transition-colors"
           >
             Go Back
           </button>
         </div>
       </div>
     </div>
-  );
+  );,
 }
 
 /**
@@ -208,7 +208,7 @@ function NotFoundFallback(): JSX.Element {
  */
 export function getErrorType(error: Error): keyof typeof DEFAULT_ERROR_MESSAGES {
   if (error.message.includes('Network') || error.message.includes('fetch')) {
-    return 'network';
+    return 'network';,
   }
   if (error.message.includes('404') || error.message.includes('not found')) {
     return 'notFound';

@@ -146,7 +146,7 @@ const MainLoadingSpinner = () => (
 const App: React.FC = () => {
   // Initialize performance monitoring
   React.useEffect(() => {
-    performanceMonitor.reportMetrics();
+    performanceMonitor.reportMetrics();,
   }, []);
 
   return (

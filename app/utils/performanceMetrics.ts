@@ -597,7 +597,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
   generateReport(): PerformanceReport {/* TODO: Fix JSX expression */}
       },
       timestam,
-  p: new Date()
+  p: new Date(),
     };
   }
   /**

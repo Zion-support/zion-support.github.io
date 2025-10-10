@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+import Navigation from '../components/Navigation';
 import React, { memo, useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { 
@@ -40,7 +41,7 @@ const Sidebar: React.FC = () => {
   const toggleSection = (section: string) => {
     const newExpanded = new Set(expandedSections);
     if (newExpanded.has(section)) {
-      newExpanded.delete(section);
+      newExpanded.delete(section);,
     } else {
       newExpanded.add(section);
     }
@@ -166,7 +167,7 @@ const Sidebar: React.FC = () => {
           {/* Header */}</div>
           <div className="flex items-center justify-between p-6 border-b border-slate-700/50">
             <Link to="/" className="flex items-center space-x-3" onClick={() => setIsOpen(false)}>
-              <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-lg flex items-center justify-center">
+              </div><div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-lg flex items-center justify-center">
                 <Brain className="w-6 h-6 text-white" />
               </div>
               <div></div>
@@ -187,7 +188,7 @@ const Sidebar: React.FC = () => {
           <div className="flex-1 overflow-y-auto py-6">
             <nav className="space-y-2 px-4">
               {navigationSections.map((section, sectionIndex) => (
-                <div key={sectionIndex} className="space-y-1">
+                </div><div key={sectionIndex} className="space-y-1">
                   <button
                     onClick={() => section.key && toggleSection(section.key)}
                     className="flex items-center justify-between w-full px-3 py-2 text-sm font-semibold text-cyan-400 hover:text-cyan-300 transition-colors"
@@ -201,7 +202,7 @@ const Sidebar: React.FC = () => {
                   </button>
                   
                   {(!section.key || expandedSections.has(section.key)) && (
-                    <div className="ml-4 space-y-1">
+                    </div><div className="ml-4 space-y-1">
                       {section.items.map((item, itemIndex) => (</div>
                         <Link
                           key={itemIndex}
@@ -227,8 +228,8 @@ const Sidebar: React.FC = () => {
           {/* Contact Info */}
           <div className="border-t border-slate-700/50 p-6">
             <h3 className="text-sm font-semibold text-cyan-400 mb-4">Contact Information</h3>
-            <div className="space-y-3 text-sm text-gray-300">
-              <div className="flex items-center space-x-3">
+            </div><div className="space-y-3 text-sm text-gray-300">
+              </div><div className="flex items-center space-x-3">
                 <Phone className="w-4 h-4 text-cyan-400 flex-shrink-0" />
                 <span>{contactInfo.phone}</span>
               </div>

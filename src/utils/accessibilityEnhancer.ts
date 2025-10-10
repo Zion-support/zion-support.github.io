@@ -6,7 +6,7 @@ interface AccessibilityConfig {enableKeyboardNavigation: boolean;}
   enableScreenReaderSupport: boolean;
   enableHighContrast: boolean;
   enableFocusIndicators: boolean;
-  enableAriaLabels: boolean;
+  enableAriaLabels: boolean;,
 }
 
 class AccessibilityEnhancer {private config: AccessibilityConfig;}
@@ -29,8 +29,7 @@ class AccessibilityEnhancer {private config: AccessibilityConfig;}
       // Add keyboard navigation support;)
       document.addEventListener('keydown', (event) => {if (event.key === 'Tab') {}
           // Handle tab navigation;
-          console.log('Tab navigation detected');
-        }
+          }
       }
   )
     }
@@ -42,7 +41,7 @@ class AccessibilityEnhancer {private config: AccessibilityConfig;}
       style.textContent = `
 
         *:focus {outline: 2px solid #0066cc;}
-          outline-offset: 2px;
+          outline-offset: 2px;,
         }
 
       `

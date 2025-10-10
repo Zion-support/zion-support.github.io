@@ -1,8 +1,6 @@
 #!/usr/bin/env node;
 import { readFileSync, writeFileSync } from 'fs';
 
-console.log('🔧 Resolving merge conflicts in app/page.tsx...');
-
 try {
   // Read the file;
   const content = readFileSync('/workspace/app/page.tsx', 'utf8');
@@ -36,8 +34,6 @@ try {
   // Write the resolved content;
   writeFileSync('/workspace/app/page.tsx', resolvedLines.join('\n'));
   
-  console.log('✅ Merge conflicts resolved successfully!');
-  
   // Also clean up duplicate imports;
   const finalContent = readFileSync('/workspace/app/page.tsx', 'utf8');
   const importLines = finalContent.split('\n').filter(line => line.startsWith('import'));
@@ -49,9 +45,6 @@ try {
   
   writeFileSync('/workspace/app/page.tsx', cleanedContent);
   
-  console.log('✅ Duplicate imports cleaned up!');
-  
-} catch (error) {
-  console.error('❌ Error resolving conflicts:', error.message);
+  } catch (error) {
   process.exit(1);
 }

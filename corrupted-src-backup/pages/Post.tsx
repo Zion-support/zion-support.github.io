@@ -1,4 +1,5 @@
 import React from 'react';
+import Navigation from '../components/Navigation';
 import { Helmet } from 'react-helmet-async';
 
 export default function Post(): React.JSX.Element {/* TODO: Fix JSX expression */}
@@ -12,6 +13,8 @@ export default function Post(): React.JSX.Element {/* TODO: Fix JSX expression *
         <meta name="description" content="Read our latest blog post." />
       </Helmet>
 
+
+      <Navigation />
       <div className="container mx-auto px-4 py-16"></div>
         <div className="max-w-4xl mx-auto"></div>
           <h1 className="text-4xl font-bold text-gray-900 mb-6">Blog Post</h1>

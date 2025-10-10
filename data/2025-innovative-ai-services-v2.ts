@@ -947,7 +947,7 @@
     monthly: number, yearly: number;
     currency: string, trialDays: number;
     setupTime: string;
-    enterprise: number;
+    enterprise: number;,
     },
     features: string[], benefits: string[],
   targetAudience: string[], marketPosition: string;
@@ -960,7 +960,7 @@
   popular: boolean, launchDate: string;
   customers: number, rating: number;
   reviews: number, marketSize: string;
-  growthRate: string;
+  growthRate: string;,
 }
 ];      'AI bias detection_ethical compliance_governance automation_risk assessment_audit preparation_policy enforcement'
     ];
@@ -1563,7 +1563,7 @@ export interface InnovativeAIService {/* TODO: Fix JSX expression */}
   rating: number;
   reviews: number;
   marketSize: string;
-  growthRate: string;
+  growthRate: string;,
 }
 ;
 export const innovativeAIServicesV2: InnovativeAIService[] = [;

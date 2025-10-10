@@ -19,6 +19,7 @@ const AIMLPlatformPage: React.FC = () => {
       title: 'Complete ML Platform',
       description: 'End-to-end machine learning platform with model development, training, and deployment',
       benefits: ['Rapid model development', 'Automated training', 'Seamless deployment']
+    }
     },
       icon: TrendingUp,
       title: 'Advanced Analytics',
@@ -136,6 +137,8 @@ const AIMLPlatformPage: React.FC = () => {
         <meta name="description" content="Advanced AI ML platform solutions by Zion Tech Group." />
       </Helmet>
       
+
+      <Navigation />
       <Navigation />
       
       <div className="container mx-auto px-4 py-16">
@@ -168,14 +171,14 @@ const AIMLPlatformPage: React.FC = () => {
           </button>"
             <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg,
   hover:bg-cyan-400,"
-  hover:text-slate-900 transition-colors"></button>
+  hover: text-slate-900 transition-colors"></button>
 Learn More;
           </div>
 
       <Footer />
     </div>
 
-  );
+  );,
 };
 
 

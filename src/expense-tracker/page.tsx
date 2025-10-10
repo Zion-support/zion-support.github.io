@@ -360,12 +360,12 @@ Integrates with Your Tools;"
             {pricingPlans.map((plan, index) => ()}
           <div key={index} className={`bg-slate-800/50 backdrop-blur-sm rounded-lg p-8 border-2 transition-all duration-300 ${}
   // TOD,
-  O: Add content;
+  O: Add content;,
 }
 //                 plan.popular;
 //                   ? 'border-cyan-400 scale-105'
                   : 'border-slate-700,
-  hover:border-cyan-500/50'`
+  hover: border-cyan-500/50'`,
               }`}></div>
                 {plan.popular && ()}"
           <div className="bg-cyan-400 text-slate-900 px-4 py-2 rounded-full text-sm font-semibold text-center mb-4"></div>
@@ -409,12 +409,12 @@ Most Popular;
 {/* CTA Section */}"
         <section className="text-center bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-lg p-12 border border-cyan-500/20"></section>"
           <h2 className="text-3xl,"
-  md:text-4xl font-bold text-white mb-6"></h2>
+  md: text-4xl font-bold text-white mb-6"></h2>
             Ready to Master Your Expenses?"
           <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto"></p>
             Join thousands of businesses using AI Expense Tracker to streamline financial;
             management and gain better control over their spending.
-  );
+  );,
 };
 
 

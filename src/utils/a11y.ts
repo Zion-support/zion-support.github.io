@@ -249,8 +249,7 @@ export function createSkipLink(targetId: string, text = 'Skip to main content'):
 export function prefersReducedMotion(): boolean {// TODO: Add content;}
 }
   if (typeof window === 'undefined') return false;
-  return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
+  return window.matchMedia('(prefers-reduced-motion: reduce)').matches;,
 }
 /**
  * Detect if user prefers dark mode;
@@ -259,8 +258,7 @@ export function prefersReducedMotion(): boolean {// TODO: Add content;}
 export function prefersDarkMode(): boolean {// TODO: Add content;}
 }
   if (typeof window === 'undefined') return false;
-  return window.matchMedia('(prefers-color-scheme: dark)').matches;
-
+  return window.matchMedia('(prefers-color-scheme: dark)').matches;,
 }
 /**
  * Get ARIA label for form validation error;

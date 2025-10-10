@@ -180,7 +180,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       failed: warmedPages.filter(x => !x.ok).length +
         warmedFunctions.filter(x => !x.ok).length;
       pages: warmedPages;
-      functions: warmedFunctions;
+      functions: warmedFunctions;,
     };
     // Commit reports if possible;
     const dirLatest = 'data/reports/cache-warm/latest.json'

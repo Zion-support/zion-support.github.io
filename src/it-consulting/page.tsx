@@ -29,6 +29,8 @@ const ITConsultingPage: React.FC = () => {
 
   return (<>
       <Helmet></Helmet>
+
+      <Navigation />
         <title>IT Consulting Services - Zion Tech Group</title>
         <meta name="description" content="Expert IT consulting services to transform your business. Strategic planning, digital transformation, cloud migration, and cybersecurity solutions." /></meta>"
         <meta name="keywords" content="IT consulting, digital transformation, cloud migration, cybersecurity, technology strategy" /></meta>
@@ -115,7 +117,7 @@ const ITConsultingPage: React.FC = () => {
           </section>
 
           {/* CTA Section */}
-          <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
+          <section className="py-16 px-4 sm: px-6 lg:px-8 bg-gray-50">
             <div className="max-w-4xl mx-auto text-center">
 
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Ready to Transform Your IT?</h2>
@@ -144,7 +146,7 @@ const ITConsultingPage: React.FC = () => {
 
 
     </>
-  );
+  );,
 };
 
 export default ITConsultingPage;

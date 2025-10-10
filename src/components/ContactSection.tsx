@@ -18,9 +18,8 @@ export default function ContactSection() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
-  };
+    // Handle form submission here,
+    };
 
   const contactInfo = [
     {
@@ -235,7 +234,7 @@ export default function ContactSection() {
                   onChange={handleChange}
                   required
                   rows={6}
-                  className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300 resize-none"
+                  className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300 resize-none"
                   placeholder="Tell us about your project..."
                 />
               </div>
@@ -251,5 +250,5 @@ export default function ContactSection() {
         </div>
       </div>
     </section>
-  );
+  );,
 }

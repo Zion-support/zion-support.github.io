@@ -1,5 +1,6 @@
 'use client';
 import React, { useEffect, useCallback, useRef } from 'react';
+import Navigation from '../components/Navigation';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOData {/* TODO: Fix JSX expression */}
@@ -150,6 +151,8 @@ const,
   }, []);
 
   return (<Helmet></Helmet>
+
+      <Navigation />
       {/* Basic Meta Tags */}
       <title>{seoData.title}</title>
       {/* TODO: Fix JSX expression */}

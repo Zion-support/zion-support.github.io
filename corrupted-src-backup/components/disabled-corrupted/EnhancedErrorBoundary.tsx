@@ -16,7 +16,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       hasError: false;
       error: null;
       errorInfo: null;
-      errorId: null;
+      errorId: null;,
     };
   }
 
@@ -68,7 +68,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
       timestamp: new Date().toISOString()
       userAgent: navigator.userAgent;
       url: window.location.href;
-      retryCount: this.retryCount;
+      retryCount: this.retryCount;,
     };
 
     // Send to error reporting service;
@@ -130,7 +130,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
       stack: this.state.error?.stack;
       componentStack: this.state.errorInfo?.componentStack;
       timestamp: new Date().toISOString(),
-      url: window.location.href;
+      url: window.location.href;,
     };
 
     // Create a mailto link with error details;

@@ -33,7 +33,7 @@ export interface CacheEntry;
 
   value: T;,
     timestamp: number;,
-    ttl: number
+    ttl: number,
 }
 export interface CacheStats {// TODO: Add content;}
 };
@@ -41,7 +41,7 @@ export interface CacheStats {// TODO: Add content;}
     misses: number;,
     hitRate: number;,
     count: number;,
-    entries: number
+    entries: number,
 }
 export class CacheManager {// TODO: Add content;}
 
@@ -510,8 +510,7 @@ export class CacheManager {// TODO: Add content;}
       misses: this.stats.misses,
       hitRate: total > 0 ? this.stats.hits / total : 0,
       count: this.memoryCache.size,
-      entries: this.memoryCache.size;
-
+      entries: this.memoryCache.size;,
     };
   }
   /**
@@ -526,7 +525,7 @@ export class CacheManager {// TODO: Add content;}
     localStorageSiz,
   e: number;,
     sessionStorageSiz,
-  e: number;
+  e: number;,
   } {/* TODO: Fix JSX expression */}
   O: Add content;}
 }

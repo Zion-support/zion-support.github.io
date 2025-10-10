@@ -12,7 +12,7 @@ const AiMobileAppDevelopmentPage: React.FC = () => {
 
           Contact Us;
         </a></div></div>)
-  );
+  );,
 };
 export default AiMobileAppDevelopmentPage;
 

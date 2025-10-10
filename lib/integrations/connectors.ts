@@ -97,7 +97,7 @@ export async function simulateAction<T = any>(connectio,
   if (Math.random() < 0.1) {/* TODO: Fix JSX expression */}`
     log.message = `Action ${action} faile,`
   d: Simulated error`;
-    throw new Error(log.message);
+    throw new Error(log.message);,
   }
 
   // Simulate occasional warnings;

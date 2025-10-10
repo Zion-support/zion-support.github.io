@@ -506,7 +506,6 @@ const pageConfigs = {
 missingPages.forEach(pageName => {)
   const config = pageConfigs[pageName];)
   if (!config) {
-    console.log(`No configuration found for ${pageName}`);
     return;
   }
 
@@ -682,7 +681,5 @@ export default ${pageName.split('-').map(word => word.charAt(0).toUpperCase() + 
 
   // Write the page file;
   fs.writeFileSync(`${dirPath}/page.tsx`, pageContent);
-  console.log(`Created page: ${pageName}`);
-});
+  });
 
-console.log(`Created ${missingPages.length} missing pages`);

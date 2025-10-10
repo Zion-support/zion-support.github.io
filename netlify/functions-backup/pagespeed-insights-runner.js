@@ -24,7 +24,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   s: new Date().toISOString()}
         }})};
     return result;
-//   } catch (error) {// console.error('Error in pagespeed-insights-runner: ') error;
+//   } catch (error) {// console.error('Error in pagespeed-insights-runner: ') error;,
       }
     return {
       statusCode: 500;
@@ -48,7 +48,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   }
 };
         timestamp: new Date().toISOString(),' function: 'pagespeed-insights-runner',' source: event.source || 'unknown', insights: {' status: 'active', pagesAnalyzed: 0, averageScore: 0;
-        lastAnalysis: new Date().toISOString() } }) }; return result; } catch (error) {' // console.error('Error in pagespeed-insights-runner: ') error;
+        lastAnalysis: new Date().toISOString() } }) }; return result; } catch (error) {' // console.error('Error in pagespeed-insights-runner: ') error;,
       } return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'pagespeed-insights-runner' }) }; } };'
         timestam,
   p: new Date().toISOString(),' functio,

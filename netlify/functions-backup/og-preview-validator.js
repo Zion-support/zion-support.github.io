@@ -47,7 +47,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
     );
     return {ok: putRes.ok;
       status: putRes.status;
-        error: putRes.ok ? undefined : await putRes.text();
+        error: putRes.ok ? undefined : await putRes.text();,
     };
   }
   if(!baseUrl)
@@ -134,7 +134,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
     if (imageStatus && !imageStatus.ok,
         issues.push({/* TODO: Fix JSX expression */}
   g:image.unreachable'} detai,
-  l: imageStatus;)
+  l: imageStatus;),
       });
     const report = {/* TODO: Fix JSX expression */}
       issues}
@@ -215,7 +215,7 @@ exports.handler = async function(event, context) {const baseUrl = (process.env.S
   g:image.missing' });' if (imageStatus && !imageStatus.ok,
         issues.push({/* TODO: Fix JSX expression */}
   g:image.unreachable'} detai,
-  l: imageStatus;)
+  l: imageStatus;),
       }); const report = {/* TODO: Fix JSX expression */}
         issues }; ' const commit = await commitJson('data/reports/og-preview.json') report); return {/* TODO: Fix JSX expression */}
       }) }; } catch (e) {/* TODO: Fix JSX expression */}

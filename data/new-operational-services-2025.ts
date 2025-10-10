@@ -75,7 +75,7 @@ export interface NewOperationalService2025 {/* TODO: Fix JSX expression */}
   realImplementation: boolean;
   contactInfo: unknown;
     mobile: string, email: string;
-    address: string;
+    address: string;,
   }
 }
 export const newOperationalServices2025: NewOperationalService2025[] = [,

@@ -27,7 +27,7 @@
   contactInfo: unknown;
     mobile: string;
     email: string;
-    address: string;
+    address: string;,
   }
 }
 export const realMicroSaasServices: RealMicroSaasService[] = [
@@ -1250,7 +1250,7 @@ export const,
     launchDate: '2024-03-05'
     customers: 1100;
     rating: 4.6;
-    reviews: 134;
+    reviews: 134;,
   },
     id: 'ai-email-responder-pro',
     name: 'AI Email Responder Pro',
@@ -1360,7 +1360,7 @@ export const,
     launchDate: '2025-02-01'
     customers: 180;
     rating: 4.7;
-    reviews: 46;
+    reviews: 46;,
   },
     id: 'mobile-conversational-surveys',
     name: 'Mobile Conversational Surveys',
@@ -1447,7 +1447,7 @@ export const,
     launchDate: '2024-12-10'
     customers: 95;
     rating: 4.6;
-    reviews: 22;
+    reviews: 22;,
   },
     id: 'niche-productivity-planner',
     name: 'Niche Productivity Planner',
@@ -1546,7 +1546,7 @@ export const,
     launchDate: '2025-01-20'
     customers: 60;
     rating: 4.5;
-    reviews: 14;
+    reviews: 14;,
   },
     id: 'event-management-dashboard',
     name: 'Event Management Dashboard',
@@ -1647,7 +1647,7 @@ export const,
     launchDate: '2024-11-18'
     customers: 70;
     rating: 4.6;
-    reviews: 18;
+    reviews: 18;,
   },
     id: 'affiliate-tracking-suite',
     name: 'Affiliate Tracking Suite',
@@ -1748,7 +1748,7 @@ export const,
     launchDate: '2024-10-12'
     customers: 55;
     rating: 4.4;
-    reviews: 12;
+    reviews: 12;,
   },
     id: 'smb-website-analytics',
     name: 'SMB Website Analytics',
@@ -1849,7 +1849,7 @@ export const,
     launchDate: '2025-02-05'
     customers: 140;
     rating: 4.7;
-    reviews: 28;
+    reviews: 28;,
   },
     id: 'it-helpdesk-lite',
     name: 'IT Helpdesk Lite',
@@ -1950,7 +1950,7 @@ export const,
     launchDate: '2024-09-22'
     customers: 120;
     rating: 4.5;
-    reviews: 31;
+    reviews: 31;,
   },
     id: 'ecommerce-return-manager',
     name: 'Ecommerce Return Manager',
@@ -2051,7 +2051,7 @@ export const,
     launchDate: '2024-08-30'
     customers: 75;
     rating: 4.4;
-    reviews: 19;
+    reviews: 19;,
   },
     id: 'auto-email-followups'
     name: 'Automated Email Followups'
@@ -2152,7 +2152,7 @@ export const,
     launchDate: '2025-01-25'
     customers: 90;
     rating: 4.5;
-    reviews: 17;
+    reviews: 17;,
   },
     id: 'podcast-transcription-studio',
     name: 'Podcast Transcription Studio',
@@ -2253,7 +2253,7 @@ export const,
     launchDate: '2024-12-02'
     customers: 210;
     rating: 4.7;
-    reviews: 52;
+    reviews: 52;,
   },
     id: 'ai-knowledge-graph-studio',
     name: 'AI Knowledge Graph Studio',
@@ -2354,7 +2354,7 @@ export const,
     launchDate: '2025-02-08'
     customers: 35;
     rating: 4.8;
-    reviews: 11;
+    reviews: 11;,
   },
     id: 'llm-guarded-api-gateway',
     name: 'LLM Guarded API Gateway',
@@ -2459,7 +2459,7 @@ export const,
     launchDate: '2025-02-08'
     customers: 42;
     rating: 4.8;
-    reviews: 13;
+    reviews: 13;,
   },
     id: 'serverless-lakehouse-starter',
     name: 'Serverless Lakehouse Starter',
@@ -2554,7 +2554,7 @@ export const,
     launchDate: '2025-02-08'
     customers: 24;
     rating: 4.6;
-    reviews: 7;
+    reviews: 7;,
   },
     id: 'data-contracts-hub',
     name: 'Data Contracts Hub',
@@ -2655,7 +2655,7 @@ export const,
     launchDate: '2025-02-08'
     customers: 19;
     rating: 4.6;
-    reviews: 6;
+    reviews: 6;,
   }];
     id: 'ai-legal-document-generator'
     name: 'AI Legal Document Generator',
@@ -3948,7 +3948,7 @@ export const,
     launchDate: '2024-03-05'
     customers: 1100;
     rating: 4.6;
-    reviews: 134;
+    reviews: 134;,
   }
     id: 'ai-email-responder-pro',
     name: 'AI Email Responder Pro',
@@ -3995,7 +3995,7 @@ export const,
     launchDate: '2025-02-01'
     customers: 180;
     rating: 4.7;
-    reviews: 46;
+    reviews: 46;,
   }
     id: 'mobile-conversational-surveys',
     name: 'Mobile Conversational Surveys',
@@ -4172,7 +4172,7 @@ export const,
     launchDate: '2024-12-10'
     customers: 95;
     rating: 4.6;
-    reviews: 22;
+    reviews: 22;,
   }
     id: 'niche-productivity-planner',
     name: 'Niche Productivity Planner',
@@ -4209,7 +4209,7 @@ export const,
     launchDate: '2025-01-20'
     customers: 60;
     rating: 4.5;
-    reviews: 14;
+    reviews: 14;,
   }
     id: 'event-management-dashboard',
     name: 'Event Management Dashboard',
@@ -4245,7 +4245,7 @@ export const,
     launchDate: '2024-11-18'
     customers: 70;
     rating: 4.6;
-    reviews: 18;
+    reviews: 18;,
   }
     id: 'affiliate-tracking-suite',
     name: 'Affiliate Tracking Suite',
@@ -4281,7 +4281,7 @@ export const,
     launchDate: '2024-10-12'
     customers: 55;
     rating: 4.4;
-    reviews: 12;
+    reviews: 12;,
   }
     id: 'smb-website-analytics',
     name: 'SMB Website Analytics',
@@ -4318,7 +4318,7 @@ export const,
     launchDate: '2025-02-05'
     customers: 140;
     rating: 4.7;
-    reviews: 28;
+    reviews: 28;,
   }
     id: 'it-helpdesk-lite',
     name: 'IT Helpdesk Lite',
@@ -4354,7 +4354,7 @@ export const,
     launchDate: '2024-09-22'
     customers: 120;
     rating: 4.5;
-    reviews: 31;
+    reviews: 31;,
   }
     id: 'ecommerce-return-manager',
     name: 'Ecommerce Return Manager',
@@ -4392,7 +4392,7 @@ export const,
     launchDate: '2024-08-30'
     customers: 75;
     rating: 4.4;
-    reviews: 19;
+    reviews: 19;,
   }
     id: 'auto-email-followups'
     name: 'Automated Email Followups'
@@ -4428,7 +4428,7 @@ export const,
     launchDate: '2025-01-25'
     customers: 90;
     rating: 4.5;
-    reviews: 17;
+    reviews: 17;,
   }
     id: 'podcast-transcription-studio',
     name: 'Podcast Transcription Studio',
@@ -4464,7 +4464,7 @@ export const,
     launchDate: '2024-12-02'
     customers: 210;
     rating: 4.7;
-    reviews: 52;
+    reviews: 52;,
   }
     id: 'ai-knowledge-graph-studio',
     name: 'AI Knowledge Graph Studio',
@@ -4501,7 +4501,7 @@ export const,
     launchDate: '2025-02-08'
     customers: 35;
     rating: 4.8;
-    reviews: 11;
+    reviews: 11;,
   }
     id: 'llm-guarded-api-gateway',
     name: 'LLM Guarded API Gateway',
@@ -4537,7 +4537,7 @@ export const,
     launchDate: '2025-02-08'
     customers: 42;
     rating: 4.8;
-    reviews: 13;
+    reviews: 13;,
   }
     id: 'serverless-lakehouse-starter',
     name: 'Serverless Lakehouse Starter',
@@ -4574,7 +4574,7 @@ export const,
     launchDate: '2025-02-08'
     customers: 24;
     rating: 4.6;
-    reviews: 7;
+    reviews: 7;,
   }
     id: 'data-contracts-hub',
     name: 'Data Contracts Hub',
@@ -4610,7 +4610,7 @@ export const,
     launchDate: '2025-02-08'
     customers: 19;
     rating: 4.6;
-    reviews: 6;
+    reviews: 6;,
   }];
 // Helper functions;
 export const getServicesByCategory = (category: string) =>}];
@@ -4643,7 +4643,7 @@ export const getServicesByCategory = (category: string) =>: unknown;
     launch_date: '2025 - 02 - 08'
     customers: 19;
     rating: 4 && 4.6;
-    reviews: 6;
+    reviews: 6;,
   }
 ];
 // Helper functions;
@@ -5655,14 +5655,14 @@ popular: false;
 launch_date: '2024 - 12 - 10'
 customers: 95;
 rating: 4 && 4.6;
-reviews: 22;
+reviews: 22;,
 };
 marketPosition: 'Alternative to Notion templates + Asana. Faster to start with curated flows.'
 competitors: ['AsanaClickUpNotion'];
 techStack: ['Next && Next.jsPrismaPostgreSQL'];
 realImplementation: true;
 implementationDetails: 'Template JSON schemas, rules engine, import/export.'
-reviews: 22;
+reviews: 22;,
 }
 market_position: 'Alternative to Notion templates + Asana. Faster to start with curated flows.'
 competitors: ['AsanaClickUpNotion'];
@@ -6468,7 +6468,7 @@ export const,
     launchDate: '2025-02-01';
     customers: 180;
     rating: 4.7;
-    reviews: 46;
+    reviews: 46;,
   };
   {;
     id: 'mobile-conversational-surveys';
@@ -6497,7 +6497,7 @@ export const,
     launchDate: '2024-12-10';
     customers: 95;
     rating: 4.6;
-    reviews: 22;
+    reviews: 22;,
   };
   {;
     id: 'niche-productivity-planner';
@@ -6526,7 +6526,7 @@ export const,
     launchDate: '2025-01-20';
     customers: 60;
     rating: 4.5;
-    reviews: 14;
+    reviews: 14;,
   };
   {;
     id: 'event-management-dashboard';
@@ -6555,7 +6555,7 @@ export const,
     launchDate: '2024-11-18';
     customers: 70;
     rating: 4.6;
-    reviews: 18;
+    reviews: 18;,
   };
   {;
     id: 'affiliate-tracking-suite';
@@ -6584,7 +6584,7 @@ export const,
     launchDate: '2024-10-12';
     customers: 55;
     rating: 4.4;
-    reviews: 12;
+    reviews: 12;,
   };
   {;
     id: 'smb-website-analytics';
@@ -6613,7 +6613,7 @@ export const,
     launchDate: '2025-02-05';
     customers: 140;
     rating: 4.7;
-    reviews: 28;
+    reviews: 28;,
   };
   {;
     id: 'it-helpdesk-lite';
@@ -6642,7 +6642,7 @@ export const,
     launchDate: '2024-09-22';
     customers: 120;
     rating: 4.5;
-    reviews: 31;
+    reviews: 31;,
   };
   {;
     id: 'ecommerce-return-manager';
@@ -6671,7 +6671,7 @@ export const,
     launchDate: '2024-08-30';
     customers: 75;
     rating: 4.4;
-    reviews: 19;
+    reviews: 19;,
   };
   {;
     id: 'auto-email-followups';
@@ -6700,7 +6700,7 @@ export const,
     launchDate: '2025-01-25';
     customers: 90;
     rating: 4.5;
-    reviews: 17;
+    reviews: 17;,
   };
   {;
     id: 'podcast-transcription-studio';
@@ -6729,7 +6729,7 @@ export const,
     launchDate: '2024-12-02';
     customers: 210;
     rating: 4.7;
-    reviews: 52;
+    reviews: 52;,
   };
   {;
     id: 'ai-knowledge-graph-studio';
@@ -6758,7 +6758,7 @@ export const,
     launchDate: '2025-02-08';
     customers: 35;
     rating: 4.8;
-    reviews: 11;
+    reviews: 11;,
   };
   {;
     id: 'llm-guarded-api-gateway';
@@ -6787,7 +6787,7 @@ export const,
     launchDate: '2025-02-08';
     customers: 42;
     rating: 4.8;
-    reviews: 13;
+    reviews: 13;,
   };
   {;
     id: 'serverless-lakehouse-starter';
@@ -6816,7 +6816,7 @@ export const,
     launchDate: '2025-02-08';
     customers: 24;
     rating: 4.6;
-    reviews: 7;
+    reviews: 7;,
   };
   {;
     id: 'data-contracts-hub';
@@ -7551,7 +7551,7 @@ export const serviceCategories = [
   'Metaverse & Virtual RealityWeb3 & DeFiIoT & Edge ComputingAutonomous Vehicles & RoboticsClimate & EnvironmentalBiotechnology & HealthcareFinancial TechnologyEducation Technology';
   'Enterprise IT'
 ];
-    website: string;
+    website: string;,
   }
     name: 'AI Legal Document Generator',
     tagline: 'Generate legally compliant documents in seconds with AI',
@@ -8507,7 +8507,7 @@ export const serviceCategories = [
     launch_date: '2024 - 03 - 05'
     customers: 1100;
     rating: 4 && 4.6;
-    reviews: 134;
+    reviews: 134;,
   },
     id: 'ai - email - responder - pro',
     name: 'AI Email Responder Pro',
@@ -8603,7 +8603,7 @@ export const serviceCategories = [
     launch_date: '2025 - 02 - 01'
     customers: 180;
     rating: 4 && 4.7;
-    reviews: 46;
+    reviews: 46;,
   },
     id: 'mobile - conversational - surveys',
     name: 'Mobile Conversational Surveys',
@@ -8692,7 +8692,7 @@ export const serviceCategories = [
     launch_date: '2024 - 12 - 10'
     customers: 95;
     rating: 4 && 4.6;
-    reviews: 22;
+    reviews: 22;,
   },
     id: 'niche - productivity - planner',
     name: 'Niche Productivity Planner',
@@ -8775,7 +8775,7 @@ export const serviceCategories = [
     launch_date: '2025 - 01 - 20'
     customers: 60;
     rating: 4 && 4.5;
-    reviews: 14;
+    reviews: 14;,
   },
     id: 'event - management - dashboard',
     name: 'Event Management Dashboard',
@@ -8867,7 +8867,7 @@ export const serviceCategories = [
     launch_date: '2024 - 11 - 18'
     customers: 70;
     rating: 4 && 4.6;
-    reviews: 18;
+    reviews: 18;,
   },
     id: 'affiliate - tracking - suite',
     name: 'Affiliate Tracking Suite',
@@ -8959,7 +8959,7 @@ export const serviceCategories = [
     launch_date: '2024 - 10 - 12'
     customers: 55;
     rating: 4 && 4.4;
-    reviews: 12;
+    reviews: 12;,
   },
     id: 'smb - website - analytics',
     name: 'SMB Website Analytics',
@@ -9051,7 +9051,7 @@ export const serviceCategories = [
     launch_date: '2025 - 02 - 05'
     customers: 140;
     rating: 4 && 4.7;
-    reviews: 28;
+    reviews: 28;,
   },
     id: 'it - helpdesk - lite',
     name: 'IT Helpdesk Lite',
@@ -9142,7 +9142,7 @@ export const serviceCategories = [
     launch_date: '2024 - 09 - 22'
     customers: 120;
     rating: 4 && 4.5;
-    reviews: 31;
+    reviews: 31;,
   },
     id: 'ecommerce - return - manager',
     name: 'Ecommerce Return Manager',
@@ -9237,7 +9237,7 @@ export const serviceCategories = [
     launch_date: '2024 - 08 - 30'
     customers: 75;
     rating: 4 && 4.4;
-    reviews: 19;
+    reviews: 19;,
   },
     id: 'auto - email - followups',
     name: 'Automated Email Followups',
@@ -9319,7 +9319,7 @@ export const serviceCategories = [
     launch_date: '2025 - 01 - 25'
     customers: 90;
     rating: 4 && 4.5;
-    reviews: 17;
+    reviews: 17;,
   },
     id: 'podcast - transcription - studio',
     name: 'Podcast Transcription Studio',
@@ -9403,7 +9403,7 @@ export const serviceCategories = [
     launch_date: '2024 - 12 - 02'
     customers: 210;
     rating: 4 && 4.7;
-    reviews: 52;
+    reviews: 52;,
   },
     id: 'ai - knowledge - graph - studio',
     name: 'AI Knowledge Graph Studio',
@@ -9487,7 +9487,7 @@ export const serviceCategories = [
     launch_date: '2025 - 02 - 08'
     customers: 35;
     rating: 4 && 4.8;
-    reviews: 11;
+    reviews: 11;,
   },
     id: 'llm - guarded - api - gateway',
     name: 'LLM Guarded API Gateway',
@@ -9588,7 +9588,7 @@ export const serviceCategories = [
     launch_date: '2025 - 02 - 08'
     customers: 42;
     rating: 4 && 4.8;
-    reviews: 13;
+    reviews: 13;,
   },
     id: 'serverless - lakehouse - starter',
     name: 'Serverless Lakehouse Starter',
@@ -9675,7 +9675,7 @@ export const serviceCategories = [
     launch_date: '2025 - 02 - 08'
     customers: 24;
     rating: 4 && 4.6;
-    reviews: 7;
+    reviews: 7;,
   },
     id: 'data - contracts - hub',
     name: 'Data Contracts Hub',
@@ -9791,7 +9791,7 @@ export const serviceCategories = [
   contactInfo: unknown;
     mobile: string, email: string;
     address: string;
-    website: string;
+    website: string;,
   }
 }
 export const realMicroSaasServices: RealMicroSaasService[] = [
@@ -11133,7 +11133,7 @@ export const,
     launchDate: '2024-03-05'
     customers: 1100;
     rating: 4.6;
-    reviews: 134;
+    reviews: 134;,
   }
     id: 'ai-email-responder-pro',
     name: 'AI Email Responder Pro',
@@ -11180,7 +11180,7 @@ export const,
     launchDate: '2025-02-01'
     customers: 180;
     rating: 4.7;
-    reviews: 46;
+    reviews: 46;,
   }
     id: 'mobile-conversational-surveys',
     name: 'Mobile Conversational Surveys',
@@ -11357,7 +11357,7 @@ export const,
     launchDate: '2024-12-10'
     customers: 95;
     rating: 4.6;
-    reviews: 22;
+    reviews: 22;,
   }
     id: 'niche-productivity-planner',
     name: 'Niche Productivity Planner',
@@ -11394,7 +11394,7 @@ export const,
     launchDate: '2025-01-20'
     customers: 60;
     rating: 4.5;
-    reviews: 14;
+    reviews: 14;,
   }
     id: 'event-management-dashboard',
     name: 'Event Management Dashboard',
@@ -11430,7 +11430,7 @@ export const,
     launchDate: '2024-11-18'
     customers: 70;
     rating: 4.6;
-    reviews: 18;
+    reviews: 18;,
   }
     id: 'affiliate-tracking-suite',
     name: 'Affiliate Tracking Suite',
@@ -11466,7 +11466,7 @@ export const,
     launchDate: '2024-10-12'
     customers: 55;
     rating: 4.4;
-    reviews: 12;
+    reviews: 12;,
   }
     id: 'smb-website-analytics',
     name: 'SMB Website Analytics',
@@ -11503,7 +11503,7 @@ export const,
     launchDate: '2025-02-05'
     customers: 140;
     rating: 4.7;
-    reviews: 28;
+    reviews: 28;,
   }
     id: 'it-helpdesk-lite',
     name: 'IT Helpdesk Lite',
@@ -11539,7 +11539,7 @@ export const,
     launchDate: '2024-09-22'
     customers: 120;
     rating: 4.5;
-    reviews: 31;
+    reviews: 31;,
   }
     id: 'ecommerce-return-manager',
     name: 'Ecommerce Return Manager',
@@ -11577,7 +11577,7 @@ export const,
     launchDate: '2024-08-30'
     customers: 75;
     rating: 4.4;
-    reviews: 19;
+    reviews: 19;,
   }
     id: 'auto-email-followups'
     name: 'Automated Email Followups'
@@ -11613,7 +11613,7 @@ export const,
     launchDate: '2025-01-25'
     customers: 90;
     rating: 4.5;
-    reviews: 17;
+    reviews: 17;,
   }
     id: 'podcast-transcription-studio',
     name: 'Podcast Transcription Studio',
@@ -11649,7 +11649,7 @@ export const,
     launchDate: '2024-12-02'
     customers: 210;
     rating: 4.7;
-    reviews: 52;
+    reviews: 52;,
   }
     id: 'ai-knowledge-graph-studio',
     name: 'AI Knowledge Graph Studio',
@@ -11686,7 +11686,7 @@ export const,
     launchDate: '2025-02-08'
     customers: 35;
     rating: 4.8;
-    reviews: 11;
+    reviews: 11;,
   }
     id: 'llm-guarded-api-gateway',
     name: 'LLM Guarded API Gateway',
@@ -11722,7 +11722,7 @@ export const,
     launchDate: '2025-02-08'
     customers: 42;
     rating: 4.8;
-    reviews: 13;
+    reviews: 13;,
   }
     id: 'serverless-lakehouse-starter',
     name: 'Serverless Lakehouse Starter',
@@ -11759,7 +11759,7 @@ export const,
     launchDate: '2025-02-08'
     customers: 24;
     rating: 4.6;
-    reviews: 7;
+    reviews: 7;,
   }
     id: 'data-contracts-hub',
     name: 'Data Contracts Hub',
@@ -11795,7 +11795,7 @@ export const,
     launchDate: '2025-02-08'
     customers: 19;
     rating: 4.6;
-    reviews: 6;
+    reviews: 6;,
   }];
 // Helper functions;
 export const getServicesByCategory = (category: string) =>;
@@ -11809,7 +11809,7 @@ export const getServicesByCategory = (category: string) =>;
     popular: false;
     launch_date: '2025 - 02 - 08',
     customers: 19;
-    reviews: 6;
+    reviews: 6;,
   }
 ];
 // Helper functions;
@@ -12784,7 +12784,7 @@ competitors: ['AsanaClickUpNotion'];
 techStack: ['Next && Next.jsPrismaPostgreSQL'];
 realImplementation: true;
 implementationDetails: 'Template JSON schemas, rules engine, import/export.'
-reviews: 22;
+reviews: 22;,
 }
 market_position: 'Alternative to Notion templates + Asana. Faster to start with curated flows.'
 competitors: ['AsanaClickUpNotion'];
@@ -13509,7 +13509,7 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     launchDate: '2025-02-01';
     customers: 180;
     rating: 4.7;
-    reviews: 46;
+    reviews: 46;,
   };
   {;
     id: 'mobile-conversational-surveys';
@@ -13538,7 +13538,7 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     launchDate: '2024-12-10';
     customers: 95;
     rating: 4.6;
-    reviews: 22;
+    reviews: 22;,
   };
   {;
     id: 'niche-productivity-planner';
@@ -13567,7 +13567,7 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     launchDate: '2025-01-20';
     customers: 60;
     rating: 4.5;
-    reviews: 14;
+    reviews: 14;,
   };
   {;
     id: 'event-management-dashboard';
@@ -13596,7 +13596,7 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     launchDate: '2024-11-18';
     customers: 70;
     rating: 4.6;
-    reviews: 18;
+    reviews: 18;,
   };
   {;
     id: 'affiliate-tracking-suite';
@@ -13625,7 +13625,7 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     launchDate: '2024-10-12';
     customers: 55;
     rating: 4.4;
-    reviews: 12;
+    reviews: 12;,
   };
   {;
     id: 'smb-website-analytics';
@@ -13654,7 +13654,7 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     launchDate: '2025-02-05';
     customers: 140;
     rating: 4.7;
-    reviews: 28;
+    reviews: 28;,
   };
   {;
     id: 'it-helpdesk-lite';
@@ -13683,7 +13683,7 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     launchDate: '2024-09-22';
     customers: 120;
     rating: 4.5;
-    reviews: 31;
+    reviews: 31;,
   };
   {;
     id: 'ecommerce-return-manager';
@@ -13712,7 +13712,7 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     launchDate: '2024-08-30';
     customers: 75;
     rating: 4.4;
-    reviews: 19;
+    reviews: 19;,
   };
   {;
     id: 'auto-email-followups';
@@ -13741,7 +13741,7 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     launchDate: '2025-01-25';
     customers: 90;
     rating: 4.5;
-    reviews: 17;
+    reviews: 17;,
   };
   {;
     id: 'podcast-transcription-studio';
@@ -13770,7 +13770,7 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     launchDate: '2024-12-02';
     customers: 210;
     rating: 4.7;
-    reviews: 52;
+    reviews: 52;,
   };
   {;
     id: 'ai-knowledge-graph-studio';
@@ -13799,7 +13799,7 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     launchDate: '2025-02-08';
     customers: 35;
     rating: 4.8;
-    reviews: 11;
+    reviews: 11;,
   };
   {;
     id: 'llm-guarded-api-gateway';
@@ -13828,7 +13828,7 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     launchDate: '2025-02-08';
     customers: 42;
     rating: 4.8;
-    reviews: 13;
+    reviews: 13;,
   };
   {;
     id: 'serverless-lakehouse-starter';
@@ -13857,7 +13857,7 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     launchDate: '2025-02-08';
     customers: 24;
     rating: 4.6;
-    reviews: 7;
+    reviews: 7;,
   };
   {;
     id: 'data-contracts-hub';
@@ -15162,7 +15162,7 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     launchDate: '2025-02-01';
     customers: 180;
     rating: 4.7;
-    reviews: 46;
+    reviews: 46;,
   };
   {;
     id: 'mobile-conversational-surveys';
@@ -15191,7 +15191,7 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     launchDate: '2024-12-10';
     customers: 95;
     rating: 4.6;
-    reviews: 22;
+    reviews: 22;,
   };
   {;
     id: 'niche-productivity-planner';
@@ -15220,7 +15220,7 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     launchDate: '2025-01-20';
     customers: 60;
     rating: 4.5;
-    reviews: 14;
+    reviews: 14;,
   };
   {;
     id: 'event-management-dashboard';
@@ -15249,7 +15249,7 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     launchDate: '2024-11-18';
     customers: 70;
     rating: 4.6;
-    reviews: 18;
+    reviews: 18;,
   };
   {;
     id: 'affiliate-tracking-suite';
@@ -15278,7 +15278,7 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     launchDate: '2024-10-12';
     customers: 55;
     rating: 4.4;
-    reviews: 12;
+    reviews: 12;,
   };
   {;
     id: 'smb-website-analytics';
@@ -15307,7 +15307,7 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     launchDate: '2025-02-05';
     customers: 140;
     rating: 4.7;
-    reviews: 28;
+    reviews: 28;,
   };
   {;
     id: 'it-helpdesk-lite';
@@ -15336,7 +15336,7 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     launchDate: '2024-09-22';
     customers: 120;
     rating: 4.5;
-    reviews: 31;
+    reviews: 31;,
   };
   {;
     id: 'ecommerce-return-manager';
@@ -15365,7 +15365,7 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     launchDate: '2024-08-30';
     customers: 75;
     rating: 4.4;
-    reviews: 19;
+    reviews: 19;,
   };
   {;
     id: 'auto-email-followups';
@@ -15394,7 +15394,7 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     launchDate: '2025-01-25';
     customers: 90;
     rating: 4.5;
-    reviews: 17;
+    reviews: 17;,
   };
   {;
     id: 'podcast-transcription-studio';
@@ -15423,7 +15423,7 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     launchDate: '2024-12-02';
     customers: 210;
     rating: 4.7;
-    reviews: 52;
+    reviews: 52;,
   };
   {;
     id: 'ai-knowledge-graph-studio';
@@ -15452,7 +15452,7 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     launchDate: '2025-02-08';
     customers: 35;
     rating: 4.8;
-    reviews: 11;
+    reviews: 11;,
   };
   {;
     id: 'llm-guarded-api-gateway';
@@ -15481,7 +15481,7 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     launchDate: '2025-02-08';
     customers: 42;
     rating: 4.8;
-    reviews: 13;
+    reviews: 13;,
   };
   {;
     id: 'serverless-lakehouse-starter';
@@ -15510,7 +15510,7 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     launchDate: '2025-02-08';
     customers: 24;
     rating: 4.6;
-    reviews: 7;
+    reviews: 7;,
   };
   {;
     id: 'data-contracts-hub';

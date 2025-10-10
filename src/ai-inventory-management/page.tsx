@@ -1,9 +1,13 @@
 'use client';
 import { Helmet } from 'react-helmet-async';
+import Footer from '../components/Footer';
+import Navigation from '../components/Navigation';
 
 export default function AIInventoryManagementPage() {/* TODO: Fix JSX expression */}
 }
   return (<div><Helmet></Helmet>
+
+      <Navigation />
         <title>AI Inventory Management Solutions - Zion Tech Group</title>
         <meta name="description" content="Intelligent AI-powered inventory management with predictive analytics, automated reordering, and real-time optimization. Starting at $149/month." /></meta>"
         <meta name="keywords" content="AI inventory management, inventory optimization, supply chain management, predictive analytics, automated reordering" /></meta>"
@@ -211,7 +215,7 @@ export default function AIInventoryManagementPage() {/* TODO: Fix JSX expression
               </a>"
               <a href="/contact" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold,
   hover:bg-white,"
-  hover:text-indigo-600 transition-all duration-300"></a>
+  hover: text-indigo-600 transition-all duration-300"></a>
                 Get Free Demo;
               </a>
             </div>
@@ -221,5 +225,5 @@ export default function AIInventoryManagementPage() {/* TODO: Fix JSX expression
         <Footer /></Footer>
       </div>
     </div>
-  );
+  );,
 }"

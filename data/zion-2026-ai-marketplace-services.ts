@@ -7,7 +7,7 @@ export type Zion2026AIMarketplaceService =
     monthly: number;
     yearly: number;
     enterprise: number;
-    currency: string;
+    currency: string;,
   };
   features: string[];
   benefits: string[];
@@ -21,7 +21,7 @@ export type Zion2026AIMarketplaceService =
     phone: string;
     email: string;
     website: string;
-    address: string;
+    address: string;,
   };
 }
 export const zion2026 AIMarketplaceServices: Zion2026 AIMarketplaceService[] = [,

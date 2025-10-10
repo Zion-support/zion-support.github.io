@@ -1154,7 +1154,7 @@ export interface MarketValidatedService {id: 'vector - search - starter'
   s: 14,
     setupTim,
   e: '2 hours'
-    contactInfo;
+    contactInfo;,
   }
 ];import { ServiceVariant } from '../types/service-variants';
 export interface MarketValidatedService {/* TODO: Fix JSX expression */}

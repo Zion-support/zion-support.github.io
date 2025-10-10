@@ -18,8 +18,7 @@ const logger = {/* TODO: Fix JSX expression */}
     if (process.env.NODE_ENV === 'development') {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-      console.debug(`[${context}] ${message}`, data);
-    }
+      }
   },
   inf,
   o: (messag,
@@ -27,24 +26,21 @@ const logger = {/* TODO: Fix JSX expression */}
   t: string, data?: any) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }`
-    console.info(`[${context}] ${message}`, data);
-  },
+    },
   war,
   n: (messag,
   e: string, contex)
   t: string, data?: any) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }`
-    console.warn(`[${context}] ${message}`, data);
-  },
+    },
   erro,
   r: (messag,
   e: string, contex)
   t: string, data?: any) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }`
-    console.error(`[${context}] ${message}`, data);
-  }
+    }
 };
 export interface PerformanceMetric {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -53,7 +49,7 @@ export interface PerformanceMetric {/* TODO: Fix JSX expression */}
   name: string;,
     value: number;,
     rating: 'good' | 'needs-improvement' | 'poor';,
-    timestamp: number
+    timestamp: number,
 }
 export interface WebVitals {// TODO: Add content;}
 
@@ -72,7 +68,7 @@ export interface CustomMetric {/* TODO: Fix JSX expression */}
   name: string;,
     value: number;,
     unit: 'ms' | 'bytes' | 'count' | 'percentage';,
-    timestamp: number
+    timestamp: number,
 }
 class PerformanceMonitoringService {// TODO: Add content;}
 
@@ -217,8 +213,7 @@ const navObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
 //       value,
 //       rating,
 
-      timestamp: Date.now()
-
+      timestamp: Date.now(),
     };
     this.webVitals[name] = metric;`
     logger.info(`Web)`
@@ -270,8 +265,7 @@ const navObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
 //       value,
 //       unit,
 
-      timestamp: Date.now()
-
+      timestamp: Date.now(),
     };
     this.customMetrics.push(metric);
     // Maintain max metrics limit;
@@ -305,7 +299,7 @@ const navObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
 
   method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(metric)
+          body: JSON.stringify(metric),
         }
   )
       }
@@ -352,8 +346,7 @@ const navObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
         case 'needs-improvement': return 50;
         case 'poor': return 0;
 
-        default: return 0;
-
+        default: return 0;,
       }
     }
   )
@@ -373,7 +366,7 @@ const navObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
     customMetric,
   s: CustomMetric[];,
     recommendation,
-  s: string[];
+  s: string[];,
   } {/* TODO: Fix JSX expression */}
   O: Add content;}
 }

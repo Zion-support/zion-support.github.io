@@ -230,7 +230,7 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
   t: ErrorReport): Promise<void> {/* TODO: Fix JSX expression */}
         },
         bod,
-  y: JSON.stringify(report)
+  y: JSON.stringify(report),
       });
     } catch (error) {/* TODO: Fix JSX expression */}
       }

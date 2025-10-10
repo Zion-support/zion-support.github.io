@@ -77,7 +77,7 @@ export default function NotFound() {
           ))}
         </div>
         {/* Action Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <div className="flex flex-col sm: flex-row gap-4 justify-center">
           <Link
             to="/"
             className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300"
@@ -95,5 +95,5 @@ export default function NotFound() {
         </div>
       </div>
     </div>
-  );
+  );,
 }

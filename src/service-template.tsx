@@ -21,11 +21,10 @@ interface ServicePageProps {/* TODO: Fix JSX expression */}
   s: Array<{/* TODO: Fix JSX expression */}
   s: string[];}
     pric,
-  e: string;
-
+  e: string;,
   }>;
   benefit,
-  s: string[];
+  s: string[];,
 }
 
 const,

@@ -18,12 +18,12 @@ export interface ErrorReporterConfig {
   enableRemoteLogging: boolean;
   remoteEndpoint?: string;
   maxErrorsInMemory: number;
-  captureContext: boolean;
+  captureContext: boolean;,
 }
   enableConsoleLogging: process.env['NODE_ENV'] === 'development',
   enableRemoteLogging: process.env['NODE_ENV'] === 'production',
   maxErrorsInMemory: 50,
-  captureContext: true
+  captureContext: true,
 };
 /**
  * ErrorReporter class for comprehensive error handling
@@ -76,14 +76,13 @@ export interface ErrorReporterConfig {/* TODO: Fix JSX expression */}
     maxErrorsInMemor,
   y: number;,
     captureContex,
-  t: boolean;
+  t: boolean;,
 }
 
   enableConsoleLogging: process.env['NODE_ENV'] === 'development',
   enableRemoteLogging: process.env['NODE_ENV'] === 'production',
   maxErrorsInMemory: 50,
-  captureContext: true;
-
+  captureContext: true;,
 };
 /**
  * ErrorReporter class for comprehensive error handling;
@@ -156,7 +155,7 @@ export class ErrorReporter {// TODO: Add content;}
       userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown',
       url: typeof window !== 'undefined' ? window.location.href : 'unknown',
       severity,
-      context: this.config.captureContext ? context : undefined
+      context: this.config.captureContext ? context : undefined,
     };
     // Track error frequency
     this.errorCount.set(errorKey, (this.errorCount.get(errorKey) || 0) + 1);
@@ -172,8 +171,7 @@ export class ErrorReporter {// TODO: Add content;}
     // Remote logging
     if (this.config.enableRemoteLogging && this.config.remoteEndpoint) {
 //       severity,
-      context: this.config.captureContext ? context : undefined;
-
+      context: this.config.captureContext ? context : undefined;,
     };
     // Track error frequency;
     this.errorCount.set(errorKey, (this.errorCount.get(errorKey) || 0) + 1);
@@ -237,7 +235,7 @@ $4};
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify(report)
+        body: JSON.stringify(report),
       });
     } catch (error) {
       // Silently fail to avoid infinite loop
@@ -324,7 +322,7 @@ $4};
           'Content-Type': 'application/json'
         },
         bod)
-  y: JSON.stringify(report)
+  y: JSON.stringify(report),
       });
     } catch (error) {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -356,7 +354,7 @@ $4};
     return {
       totalErrors: this.errorQueue.length,
       uniqueErrors: this.errorCount.size,
-      errorsByType: Object.fromEntries(this.errorCount)
+      errorsByType: Object.fromEntries(this.errorCount),
     };
   }
   /**
@@ -394,8 +392,7 @@ $4};
 
   totalErrors: this.errorQueue.length,
       uniqueErrors: this.errorCount.size,
-      errorsByType: Object.fromEntries(this.errorCount)
-
+      errorsByType: Object.fromEntries(this.errorCount),
     }
   }
   /**
@@ -416,7 +413,7 @@ $4};
       {
         timestamp: new Date().toISOString(),
         stats: this.getErrorStats(),
-        errors: this.errorQueue
+        errors: this.errorQueue,
       },
       null,
       2
@@ -444,7 +441,7 @@ export const captureComponentError = (
   const report = ErrorReporter.getInstance();
   report.reportError(error, 'high', {
     componentName,
-    componentStack: errorInfo.componentStack
+    componentStack: errorInfo.componentStack,
   });
 };
 export default ErrorReporter;
@@ -461,8 +458,7 @@ export default ErrorReporter;
 
   timestamp: new Date().toISOString(),
         stats: this.getErrorStats(),
-        errors: this.errorQueue;
-
+        errors: this.errorQueue;,
       },
 //       null,
 //       2)
@@ -497,7 +493,7 @@ export const captureComponentError = ()
 }
 //     componentName,
     componentStac,
-  k: errorInfo.componentStack;)
+  k: errorInfo.componentStack;),
   });
 };
 export default ErrorReporter;

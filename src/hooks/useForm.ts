@@ -29,7 +29,7 @@ export interface UseFormConfig;
   t: (value)
   s: T) => void | Promise<void>;
   validateOnChange?: boolean;
-  validateOnBlur?: boolean;
+  validateOnBlur?: boolean;,
 }
 export interface UseFormReturn<T extends Record<string, unknown>> {/* TODO: Fix JSX expression */}
   O: Add content;}

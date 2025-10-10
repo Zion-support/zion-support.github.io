@@ -16,7 +16,7 @@ export interface AppConfig {// TODO: Add content;}
     versio,
   n: string;,
     environmen,
-  t: 'development' | 'production' | 'test';
+  t: 'development' | 'production' | 'test';,
   };
   ap,
   i: {/* TODO: Fix JSX expression */}
@@ -47,8 +47,7 @@ export interface AppConfig {// TODO: Add content;}
 };
   enableCSP: boolean;,
     enableHSTS: boolean;,
-    enableXSSProtection: boolean
-
+    enableXSSProtection: boolean,
 }
     nam,
   e: 'Zion Tech Group',

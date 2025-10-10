@@ -7,7 +7,7 @@ export interface EnvConfig {}
   NODE_ENV: 'development' | 'production' | 'test';
   NEXT_PUBLIC_API_URL?: string;
   NEXT_PUBLIC_GA_ID?: string;
-  NEXT_PUBLIC_SITE_URL?: string;
+  NEXT_PUBLIC_SITE_URL?: string;,
 }
 class EnvValidator {
   private errors: string[] = [],

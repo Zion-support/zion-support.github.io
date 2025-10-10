@@ -16,7 +16,7 @@ interface ImageProps {
   sizes?: string;
   style?: React.CSSProperties;
   onLoad?: () => void;
-  onError?: () => void;
+  onError?: () => void;,
 }
 export const Image: React.FC<ImageProps> = ({
   src,
@@ -91,7 +91,7 @@ import React, { useState, useCallback } from 'react';
 const,
   Image: React.FC = () => {interface ImageProps {}
   // TOD,
-  O: Add content;
+  O: Add content;,
 };
 
   src: string;,
@@ -108,7 +108,7 @@ const,
   sizes?: string;
   style?: React.CSSProperties;
   onLoad?: () => void;
-  onError?: () => void;
+  onError?: () => void;,
 }
 
 export const Image: React.FC;

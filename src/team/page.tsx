@@ -73,22 +73,22 @@ const TeamPage: React.FC = () => {
     {
       title: 'Innovation',
       description: 'We constantly push the boundaries of what\'s possible with AI and technology.',
-      icon: Brain
+      icon: Brain,
     },
     {
       title: 'Excellence',
       description: 'We strive for the highest quality in everything we do, from code to customer service.',
-      icon: Award
+      icon: Award,
     },
     {
       title: 'Collaboration',
       description: 'We believe in the power of teamwork and diverse perspectives to solve complex problems.',
-      icon: Users
+      icon: Users,
     },
     {
       title: 'Security',
       description: 'We prioritize the security and privacy of our clients\' data and systems.',
-      icon: Shield
+      icon: Shield,
     }
   ];
 
@@ -210,7 +210,7 @@ const TeamPage: React.FC = () => {
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-cyan-600 to-blue-600">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Join Our Team
           </h2>
@@ -236,7 +236,7 @@ const TeamPage: React.FC = () => {
 
       <Footer />
     </div>
-  );
+  );,
 };
 
 export default TeamPage;

@@ -1,8 +1,34 @@
 'use client';
 import React from 'react';
+import Navigation from '../components/Navigation';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
+const AdvancedAccessibilityEnhancer: React.FC = () => {
+  const features = [
+    {
+      icon: Shield,
+      title: 'AI-Powered Accessibility',
+      description: 'Advanced AI technology that automatically enhances website accessibility for all users.',
+      benefits: ['WCAG 2.1 AA compliance', 'Screen reader optimization', 'Keyboard navigation', 'Color contrast enhancement']
+    },
+    {
+      icon: Brain,
+      title: 'Intelligent Analysis',
+      description: 'Comprehensive analysis of your website to identify and fix accessibility issues.',
+      benefits: ['Automated scanning', 'Issue detection', 'Priority ranking', 'Fix recommendations']
+    },
+    {
+      icon: Zap,
+      title: 'Real-Time Enhancement',
+      description: 'Live accessibility improvements that work instantly without code changes.',
+      benefits: ['Instant fixes', 'No downtime', 'Continuous monitoring', 'Automatic updates']
+    },
+    {
+      icon: Globe,
+      title: 'Multi-Language Support',
+      description: 'Accessibility enhancements that work across multiple languages and regions.',
+      benefits: ['Global compatibility', 'Language detection', 'Cultural adaptation', 'Regional compliance']
     }
   ];
 
@@ -17,116 +43,185 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
     'Proven track record of success'
   ];
 
+  const useCases = [
+    {
+      title: 'Government Websites',
+      description: 'Ensure compliance with accessibility standards for public sector websites',
+      icon: '🏛️'
+    },
+    {
+      title: 'E-commerce Platforms',
+      description: 'Make online shopping accessible to all customers',
+      icon: '🛒'
+    },
+    {
+      title: 'Educational Platforms',
+      description: 'Provide equal access to educational content for all students',
+      icon: '🎓'
+    },
+    {
+      title: 'Healthcare Websites',
+      description: 'Ensure critical health information is accessible to everyone',
+      icon: '🏥'
+    },
+    {
+      title: 'Financial Services',
+      description: 'Make banking and financial services accessible to all users',
+      icon: '🏦'
+    },
+    {
+      title: 'Corporate Websites',
+      description: 'Enhance accessibility for corporate and business websites',
+      icon: '🏢'
+    }
+  ];
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <>
       <Helmet>
-        <title>AdvancedAccessibilityEnhancer | Zion Tech Group</title>
-        <meta name="description" content="Professional AdvancedAccessibilityEnhancer services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="AdvancedAccessibilityEnhancer, AI solutions, IT services, Zion Tech Group, advancedaccessibilityenhancer" />
+        <title>Advanced Accessibility Enhancer - Zion Tech Group</title>
+        <meta name="description" content="Transform your website's accessibility with our AI-powered Advanced Accessibility Enhancer. Ensure WCAG compliance and improve user experience for all visitors." />
+        <meta name="keywords" content="accessibility enhancer, WCAG compliance, AI accessibility, website accessibility, screen reader, disability access" />
       </Helmet>
 
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                AdvancedAccessibilityEnhancer
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(34,197,94,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              Advanced Accessibility
+              <span className="block bg-gradient-to-r from-green-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                Enhancer
               </span>
-              <br />
-              <span className="text-white">Solutions</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our advanced advancedaccessibilityenhancer solutions. 
-              Powered by cutting-edge AI technology and industry expertise.
+              Transform your website's accessibility with our AI-powered solution. 
+              Ensure WCAG compliance and improve user experience for all visitors.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
+              <button className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-600 hover:to-blue-600 transition-all duration-300 flex items-center justify-center">
                 Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="ml-2 w-5 h-5" />
               </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-                Learn More
+              <button className="border border-green-400 text-green-300 px-8 py-4 rounded-lg font-semibold hover:bg-green-500 hover:text-white transition-all duration-300">
+                View Demo
               </button>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Our AdvancedAccessibilityEnhancer?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our advancedaccessibilityenhancer solutions deliver unmatched performance, security, and scalability.
-            </p>
-          </div>
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Advanced Accessibility Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Comprehensive tools to make your website accessible to everyone
+              </p>
+            </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
-                  <feature.icon className="h-6 w-6 text-white" />
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  {feature.benefits && (
+                    <ul className="space-y-2">
+                      {feature.benefits.map((benefit, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-400">
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Benefits
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the power of our advancedaccessibilityenhancer solutions for your business.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-start space-x-3">
-                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
-                <p className="text-gray-300 text-lg">{benefit}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-purple-100 mb-8">
-              Contact our experts to discuss your advancedaccessibilityenhancer needs and get a customized solution.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
-                <Phone className="mr-2 h-5 w-5" />
-                Call Now
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
-                <Mail className="mr-2 h-5 w-5" />
-                Email Us
-              </button>
+              ))}
             </div>
           </div>
-        </div>
-      </section>
-    </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Why Choose Our Accessibility Enhancer?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Proven results that improve accessibility and user experience
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group text-center">
+                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform mx-auto">
+                    <CheckCircle className="w-8 h-8 text-white" />
+                  </div>
+                  <p className="text-lg text-white font-medium">{benefit}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Use Cases Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Use Cases
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Perfect for websites that need to be accessible to all users
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {useCases.map((useCase, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group text-center">
+                  <div className="text-4xl mb-4">{useCase.icon}</div>
+                  <h3 className="text-xl font-bold text-white mb-4">{useCase.title}</h3>
+                  <p className="text-gray-300">{useCase.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Ready to Enhance Accessibility?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Start making your website accessible to everyone with our AI-powered solution today.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                  Start Free Trial
+                </button>
+                <button className="border border-green-400 text-green-400 hover:bg-green-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                  Contact Sales
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </>
   );
 };
 
-export default AdvancedAccessibilityEnhancerPage;
+export default AdvancedAccessibilityEnhancer;

@@ -26,10 +26,10 @@ export interface InnovativeMicroSaas2029 {/* TODO: Fix JSX expression */}
   s: string}
   }
 }
-    address: string;
+    address: string;,
   }
 export const innovativeMicroSaasServices2029: InnovativeMicroSaas2029[] = [;
-    address: string;
+    address: string;,
   }
 ;
 export const innovativeMicroSaasServices2029: InnovativeMicroSaas2029[] = [
@@ -102,7 +102,7 @@ export const,
   realImplementation: boolean;
   contactInfo: unknown;
     mobile: string, email: string;
-    address: string;
+    address: string;,
   }
 }
 export const innovativeMicroSaasServices2029: InnovativeMicroSaas2029[] = [,

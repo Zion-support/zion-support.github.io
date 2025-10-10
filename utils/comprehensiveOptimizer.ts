@@ -16,7 +16,7 @@ export interface OptimizationConfig {/* TODO: Fix JSX expression */}
   accessibilityLeve,
   l: 'AA' | 'AAA';
   seoLeve,
-  l: 'basic' | 'advanced';
+  l: 'basic' | 'advanced';,
 }
 
 /**
@@ -30,14 +30,14 @@ export const DEFAULT_OPTIMIZATION_CONFIG: OptimizationConfig = {
     enableColorContrast: true;
     enableScreenReader: true;
     enableFormAccessibility: true;
-    enableMotionAccessibility: true;
+    enableMotionAccessibility: true;,
   },
   performance: {
     enableMemoryMonitoring: true;
     enablePerformanceMetrics: true;
     enableLazyLoading: true;
     enablePreloading: true;
-    enableScrollOptimization: true;
+    enableScrollOptimization: true;,
   },
   seo: {
     enableMetaTags: true;

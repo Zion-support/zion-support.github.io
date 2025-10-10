@@ -251,7 +251,7 @@ const SitemapPage: React.FC = () => {
               <p className="text-xl text-gray-300 mb-8">
                 Contact our team for personalized assistance and recommendations
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
                   className="cyber-button px-8 py-4 text-lg font-semibold"
@@ -272,7 +272,7 @@ const SitemapPage: React.FC = () => {
         <Footer />
       </div>
     </>
-  );
+  );,
 };
 
 export default SitemapPage;

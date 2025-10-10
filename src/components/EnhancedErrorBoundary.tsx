@@ -19,8 +19,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
   r: Error): State {/* TODO: Fix JSX expression */}`
   d: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
       retryCoun,
-  t: 0;
-
+  t: 0;,
     };
   }
 

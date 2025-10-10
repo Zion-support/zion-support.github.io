@@ -1,9 +1,13 @@
 'use client';
 import { Helmet } from 'react-helmet-async';
+import Footer from '../components/Footer';
+import Navigation from '../components/Navigation';
 
 export default function AIProjectManagementPage() {/* TODO: Fix JSX expression */}
 }
   return (<div><Helmet></Helmet>
+
+      <Navigation />
         <title>AI Project Management Solutions - Zion Tech Group</title>
         <meta name="description" content="Intelligent AI-powered project management with predictive analytics, resource optimization, and automated task allocation. Starting at $199/month." /></meta>"
         <meta name="keywords" content="AI project management, project automation, resource optimization, predictive analytics, task management" /></meta>"
@@ -179,7 +183,7 @@ export default function AIProjectManagementPage() {/* TODO: Fix JSX expression *
               </a>"
               <a href="/contact" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold,
   hover:bg-white,"
-  hover:text-indigo-600 transition-all duration-300"></a>
+  hover: text-indigo-600 transition-all duration-300"></a>
                 Get Free Trial;
               </a>
             </div>
@@ -189,5 +193,5 @@ export default function AIProjectManagementPage() {/* TODO: Fix JSX expression *
         <Footer /></Footer>
       </div>
     </div>
-  );
+  );,
 }"

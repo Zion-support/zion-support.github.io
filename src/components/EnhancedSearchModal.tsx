@@ -9,12 +9,12 @@ interface SearchResult {
   category: string;
   type: 'page' | 'service' | 'blog' | 'documentation';
   popularity?: number;
-  lastModified?: string;
+  lastModified?: string;,
 }
 
 interface SearchModalProps {
   isOpen: boolean;
-  onClose: () => void;
+  onClose: () => void;,
 }
 
 const mockSearchResults: SearchResult[] = [
@@ -99,7 +99,7 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
       if (!isOpen) return;
 
       if (e.key === 'Escape') {
-        onClose();
+        onClose();,
       } else if (e.key === 'ArrowDown') {
         e.preventDefault();
         setSelectedIndex(prev => 
@@ -122,7 +122,7 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
     if (!searchQuery.trim()) {
       setResults([]);
       setShowSuggestions(true);
-      return;
+      return;,
     }
 
     setIsSearching(true);
@@ -151,17 +151,17 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {</HTMLInputElement>const</HTMLInputElement> value = e.target.value;
     setQuery(value);
-    searchResults(value);
+    searchResults(value);,
   };
 
   const handleResultClick = (result: SearchResult) => {
     window.location.href = result.url;
-    onClose();
+    onClose();,
   };
 
   const handleSuggestionClick = (suggestion: string) => {
     setQuery(suggestion);
-    searchResults(suggestion);
+    searchResults(suggestion);,
   };
 
   const getCategoryIcon = (category: string) => {
@@ -177,7 +177,7 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
       case 'Documentation':
         return '📚';
       default:
-        return '🔍';
+        return '🔍';,
     }
   };
 
@@ -192,7 +192,7 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
       case 'documentation':
         return 'text-green-400';
       default:
-        return 'text-gray-400';
+        return 'text-gray-400';,
     }
   };
 

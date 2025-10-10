@@ -46,7 +46,7 @@ export function trapFocus(element: HTMLElement): () => void {
       if (e.shiftKey) {
         if (document.activeElement === firstFocusable) {
           lastFocusable?.focus();
-          e.preventDefault();
+          e.preventDefault();,
         }
       } else {
         if (document.activeElement === lastFocusable) {
@@ -70,7 +70,7 @@ export function trapFocus(element: HTMLElement): () => void {
  */
 export function isKeyboardAccessible(element: HTMLElement): boolean {
   const tabIndex = element.getAttribute('tabindex');
-  return tabIndex !== null && tabIndex !== '-1';
+  return tabIndex !== null && tabIndex !== '-1';,
 }
 
 /**
@@ -81,7 +81,7 @@ export function makeKeyboardAccessible(
   onClick: (e: Event) => void,
   options: {
     role?: string;
-    tabindex?: number;
+    tabindex?: number;,
   } = {}
 ): () => void {
   const { role = 'button', tabindex = 0 } = options;
@@ -92,7 +92,7 @@ export function makeKeyboardAccessible(
   const handleKeyDown = (e: KeyboardEvent) => {
     if (e.key === 'Enter' || e.key === ' ') {
       e.preventDefault();
-      onClick(e);
+      onClick(e);,
     }
   };
 
@@ -171,14 +171,14 @@ export function createSkipLink(targetId: string, text = 'Skip to main content'):
  * Detect if user prefers reduced motion
  */
 export function prefersReducedMotion(): boolean {
-  return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  return window.matchMedia('(prefers-reduced-motion: reduce)').matches;,
 }
 
 /**
  * Detect if user prefers dark mode
  */
 export function prefersDarkMode(): boolean {
-  return window.matchMedia('(prefers-color-scheme: dark)').matches;
+  return window.matchMedia('(prefers-color-scheme: dark)').matches;,
 }
 
 /**
@@ -262,7 +262,7 @@ export class FocusManager {
   private previousActiveElement: HTMLElement | null = null;
 
   saveFocus(): void {
-    this.previousActiveElement = document.activeElement as HTMLElement;
+    this.previousActiveElement = document.activeElement as HTMLElement;,
   }
 
   restoreFocus(): void {

@@ -7,7 +7,7 @@ export interface AppConfig {
   app: {
     name: string,
     version: string,
-    environment: 'development' | 'production' | 'test';
+    environment: 'development' | 'production' | 'test';,
   };
   api: {
     baseUrl: string,
@@ -85,7 +85,7 @@ export function getConfig<T = unknown>(keyPath: string): T {let value: unknown =
  * Check if a feature is enabled
  */
 export function isFeatureEnabled(feature: keyof AppConfig['features']): boolean {
-  return config.features[feature];
+  return config.features[feature];,
 }
 
 /**

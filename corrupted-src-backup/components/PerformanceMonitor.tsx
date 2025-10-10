@@ -136,7 +136,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({,
     maxBundleSize: 500, // 500KB;
     maxImageSize: 100, // 100KB;
     maxFirstLoad: 3000, // 3 seconds;
-    maxInteractive: 2000 // 2 seconds;
+    maxInteractive: 2000 // 2 seconds;,
   },
   onMetricsUpdate,
   onBudgetViolation;

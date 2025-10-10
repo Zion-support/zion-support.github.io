@@ -1,3 +1,4 @@
+import React from 'react';
 
 
 
@@ -93,11 +94,11 @@ className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 round
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Get started with our productivity tools and transform how you work</p>
             >Get Started Today</a>"
               href="te,"
-  l:+13024640950"
+  l: +13024640950"
             >Call (302) 464-0950</a>
       </main>
       <Footer /></Footer>
-</div>);
+</div>);,
 }
 export default ProductivityPage;
 

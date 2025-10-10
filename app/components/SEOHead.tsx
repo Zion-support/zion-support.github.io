@@ -1,4 +1,5 @@
 import React from 'react';
+import Navigation from '../components/Navigation';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOHeadProps {
@@ -91,6 +92,10 @@ const SEOHead: React.FC<SEOHeadProps> = ({
         {JSON.stringify(structuredData || defaultStructuredData)}
       </script>
     </Helmet>
+
+
+      <Navigation />
+      <Navigation />
   );
 };
 

@@ -1,3 +1,4 @@
+import React from 'react';
 'use client';
 interface ModernLoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg' | 'xl';

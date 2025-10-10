@@ -8,8 +8,7 @@ export const reportError = (error: Error, context?: Record<string, any>) => {
   
   // Also log to console in development
   if (process.env.NODE_ENV === 'development') {
-    console.error('Error reported:', error, context);
-  }
+    }
 };
 
 export const initErrorReporting = () => {
@@ -72,7 +71,7 @@ export interface ErrorMetadata {// TODO: Add content;}
   p: number;
   stackTrace?: string;
   userAgent?: string;
-  url?: string;
+  url?: string;,
 }
 export interface TrackedError {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -83,7 +82,7 @@ export interface TrackedError {/* TODO: Fix JSX expression */}
     metadata: ErrorMetadata;,
     occurrences: number;,
     firstSeen: number;,
-    lastSeen: number
+    lastSeen: number,
 }
 class ErrorTrackingService {// TODO: Add content;}
 
@@ -138,8 +137,7 @@ class ErrorTrackingService {// TODO: Add content;}
 
   filename: event.filename,
           lineno: event.lineno,
-          colno: event.colno;
-
+          colno: event.colno;,
         }
       });
     });
@@ -174,8 +172,7 @@ class ErrorTrackingService {// TODO: Add content;}
       timestamp,
       stackTrace: error.stack,
       userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined,
-      url: typeof window !== 'undefined' ? window.location.href : undefined;
-
+      url: typeof window !== 'undefined' ? window.location.href : undefined;,
     };
     const existingError = this.errors.get(errorId);
     if (existingError) {/* TODO: Fix JSX expression */}
@@ -199,8 +196,7 @@ const,
         metadata: fullMetadata,
         occurrences: 1,
         firstSeen: timestamp,
-        lastSeen: timestamp;
-
+        lastSeen: timestamp;,
       };
       this.errors.set(errorId, trackedError);
       // Notify listeners;
@@ -310,7 +306,7 @@ const,
 
   method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(error)
+          body: JSON.stringify(error),
         }
   )
       }
@@ -362,7 +358,7 @@ const,
     bySeverit,
   y: Record<ErrorSeverity, number>;
     topError,
-  s: TrackedError[];
+  s: TrackedError[];,
   } {/* TODO: Fix JSX expression */}
   O: Add content;}
 }

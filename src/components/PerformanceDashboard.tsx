@@ -1,3 +1,4 @@
+import React from 'react';
 
 
 'use client';
@@ -11,7 +12,7 @@ interface PerformanceMetrics {/* TODO: Fix JSX expression */}
     memoryUsag,
   e: number;,
     fp,
-  s: number;
+  s: number;,
 }
 interface PerformanceMetrics {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -21,8 +22,7 @@ interface PerformanceMetrics {/* TODO: Fix JSX expression */}
     renderTime: number;,
     memoryUsage: number;,
     fps: number;
-  [key: string]: number;
-
+  [key: string]: number;,
 }
 
 const,

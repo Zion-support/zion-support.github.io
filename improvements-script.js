@@ -232,10 +232,10 @@ fs.writeFileSync(reportPath)
         filesProcessed: files.length;
         filesImproved,
         totalImprovements: config.improvements.length;
-        errors: config.errors.length;
+        errors: config.errors.length;,
       },
       improvements: config.improvements;
-      errors: config.errors;
+      errors: config.errors;,
     },
     null,
     2;

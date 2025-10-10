@@ -20,36 +20,48 @@ const AICloudInfrastructurePage: React.FC = () => {
       title: 'AI-Powered Cloud Management',
       description: 'Intelligent cloud resource optimization and automated scaling based on demand patterns.',
       benefits: ['Auto-scaling', 'Cost optimization', 'Performance monitoring', 'Resource allocation']
+    }
+    }
     },
     {
       icon: Server,
       title: 'Hybrid Cloud Solutions',
       description: 'Seamless integration between on-premises and cloud infrastructure with AI-driven optimization.',
       benefits: ['Hybrid architecture', 'Data migration', 'Workload balancing', 'Unified management']
+    }
+    }
     },
     {
       icon: Database,
       title: 'Smart Data Management',
       description: 'AI-powered data storage, backup, and recovery solutions with predictive analytics.',
       benefits: ['Automated backups', 'Data analytics', 'Disaster recovery', 'Storage optimization']
+    }
+    }
     },
     {
       icon: Shield,
       title: 'Enterprise Security',
       description: 'Advanced security monitoring and compliance management for cloud infrastructure.',
       benefits: ['Security monitoring', 'Compliance management', 'Threat detection', 'Access control']
+    }
+    }
     },
     {
       icon: Zap,
       title: 'Performance Optimization',
       description: 'AI-driven performance tuning and optimization for maximum efficiency and speed.',
       benefits: ['Performance tuning', 'Load balancing', 'Caching strategies', 'Speed optimization']
+    }
+    }
     },
     {
       icon: Globe,
       title: 'Global Distribution',
       description: 'Worldwide cloud infrastructure with intelligent content delivery and edge computing.',
       benefits: ['Global CDN', 'Edge computing', 'Low latency', 'High availability']
+    }
+    }
     }
   ];
 
