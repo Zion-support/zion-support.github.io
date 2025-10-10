@@ -1,36 +1,32 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 import { 
-  Globe, 
-  Palette, 
-  Code, 
-  Smartphone, 
+  FileText, 
+  Scan, 
+  Upload, 
+  Download, 
   Search, 
-  Zap, 
   Settings, 
   Shield, 
+  Zap, 
   CheckCircle, 
   Star, 
   ArrowRight, 
   Users, 
   Clock, 
+  Database,
   MessageSquare,
   Phone,
   Mail,
   MapPin,
-  Monitor,
-  Tablet,
-  Smartphone as Mobile,
   Eye,
-  Download,
-  Upload,
-  Share
+  FileImage,
+  Archive
 } from 'lucide-react';
 
-const AIWebsiteBuilderPage: React.FC = () => {
+const AIDocumentScannerPage: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
-  const [isBuilding, setIsBuilding] = useState(false);
-  const [selectedTemplate, setSelectedTemplate] = useState('business');
+  const [isScanning, setIsScanning] = useState(false);
 
   useEffect(() => {
     setIsLoaded(true);
@@ -38,142 +34,123 @@ const AIWebsiteBuilderPage: React.FC = () => {
 
   const features = [
     {
-      icon: Palette,
-      title: 'AI Design Suggestions',
-      description: 'Intelligent design recommendations based on your industry and brand',
-      benefits: ['Color palette generation', 'Layout optimization', 'Typography suggestions', 'Brand consistency']
-    },
-    {
-      icon: Code,
-      title: 'Drag & Drop Builder',
-      description: 'Intuitive visual editor with real-time preview and instant updates',
-      benefits: ['Visual editing', 'Real-time preview', 'Component library', 'Custom elements']
-    },
-    {
-      icon: Search,
-      title: 'Auto SEO Optimization',
-      description: 'Automatic SEO optimization with meta tags, sitemaps, and performance tuning',
-      benefits: ['Meta tag generation', 'Sitemap creation', 'Performance optimization', 'Schema markup']
-    },
-    {
-      icon: Smartphone,
-      title: 'Responsive Design',
-      description: 'Mobile-first design that looks perfect on all devices and screen sizes',
-      benefits: ['Mobile optimization', 'Tablet compatibility', 'Desktop enhancement', 'Cross-browser support']
+      icon: Eye,
+      title: 'Advanced OCR Technology',
+      description: '99% accuracy OCR with support for 100+ languages and handwriting recognition',
+      benefits: ['Multi-language OCR', 'Handwriting recognition', 'Table extraction', 'Image enhancement']
     },
     {
       icon: Zap,
-      title: 'E-commerce Integration',
-      description: 'Built-in e-commerce features with payment processing and inventory management',
-      benefits: ['Payment gateways', 'Product management', 'Order tracking', 'Inventory sync']
+      title: 'Batch Processing',
+      description: 'Process 1000+ documents per hour with automated workflow management',
+      benefits: ['Bulk processing', 'Queue management', 'Progress tracking', 'Error handling']
+    },
+    {
+      icon: Search,
+      title: 'Smart Data Extraction',
+      description: 'Intelligent data extraction with AI-powered field recognition and validation',
+      benefits: ['Auto field detection', 'Data validation', 'Format recognition', 'Error correction']
+    },
+    {
+      icon: Database,
+      title: 'Cloud Storage Integration',
+      description: 'Seamless integration with major cloud storage providers and databases',
+      benefits: ['AWS S3 integration', 'Google Drive sync', 'Database export', 'API connectivity']
+    },
+    {
+      icon: Settings,
+      title: 'Custom Workflows',
+      description: 'Create automated document processing workflows tailored to your business needs',
+      benefits: ['Visual workflow builder', 'Custom rules', 'Conditional logic', 'Integration APIs']
     },
     {
       icon: Shield,
-      title: 'Security & Performance',
-      description: 'Enterprise-grade security with SSL certificates and CDN optimization',
-      benefits: ['SSL certificates', 'CDN delivery', 'Security scanning', 'Performance monitoring']
+      title: 'Enterprise Security',
+      description: 'Bank-grade security with encryption, access controls, and compliance features',
+      benefits: ['End-to-end encryption', 'Role-based access', 'Audit logs', 'GDPR compliance']
     }
   ];
 
-  const templates = [
+  const documentTypes = [
     {
-      name: 'Business',
-      category: 'Corporate',
-      description: 'Professional business website with modern design',
-      features: ['About page', 'Services', 'Contact form', 'Blog', 'Team section'],
-      price: 'Free',
-      popular: true
+      type: 'Invoices & Receipts',
+      icon: FileText,
+      description: 'Extract data from invoices, receipts, and financial documents',
+      accuracy: '99.2%',
+      processingTime: '2-5 seconds',
+      fields: ['Amount', 'Date', 'Vendor', 'Tax ID', 'Line items']
     },
     {
-      name: 'E-commerce',
-      category: 'Online Store',
-      description: 'Complete online store with shopping cart and checkout',
-      features: ['Product catalog', 'Shopping cart', 'Payment processing', 'Order management', 'Inventory'],
-      price: '$29',
-      popular: true
+      type: 'Forms & Applications',
+      icon: FileImage,
+      description: 'Process application forms, surveys, and structured documents',
+      accuracy: '98.8%',
+      processingTime: '3-7 seconds',
+      fields: ['Personal info', 'Checkboxes', 'Signatures', 'Dates', 'Numbers']
     },
     {
-      name: 'Portfolio',
-      category: 'Creative',
-      description: 'Stunning portfolio for creatives and professionals',
-      features: ['Gallery', 'Project showcase', 'Resume', 'Contact', 'Social links'],
-      price: 'Free',
-      popular: false
+      type: 'Legal Documents',
+      icon: Archive,
+      description: 'Extract data from contracts, agreements, and legal paperwork',
+      accuracy: '99.5%',
+      processingTime: '5-10 seconds',
+      fields: ['Parties', 'Terms', 'Dates', 'Signatures', 'Clauses']
     },
     {
-      name: 'Restaurant',
-      category: 'Food & Dining',
-      description: 'Beautiful restaurant website with menu and reservations',
-      features: ['Menu display', 'Online ordering', 'Reservations', 'Location', 'Reviews'],
-      price: '$19',
-      popular: false
-    },
-    {
-      name: 'SaaS',
-      category: 'Technology',
-      description: 'Modern SaaS landing page with features and pricing',
-      features: ['Hero section', 'Features', 'Pricing', 'Testimonials', 'CTA'],
-      price: '$39',
-      popular: true
-    },
-    {
-      name: 'Nonprofit',
-      category: 'Charity',
-      description: 'Engaging nonprofit website with donation features',
-      features: ['Mission statement', 'Donation form', 'Events', 'Volunteer signup', 'Impact stories'],
-      price: 'Free',
-      popular: false
+      type: 'Medical Records',
+      icon: FileText,
+      description: 'Process medical forms, prescriptions, and healthcare documents',
+      accuracy: '99.1%',
+      processingTime: '4-8 seconds',
+      fields: ['Patient info', 'Diagnosis', 'Medications', 'Dates', 'Provider']
     }
   ];
 
   const pricing = [
     {
       name: 'Starter',
-      price: '$199',
+      price: '$79',
       period: '/month',
-      description: 'Perfect for personal websites and small businesses',
+      description: 'Perfect for small businesses and individuals',
       features: [
-        'Up to 5 websites',
-        '10GB storage',
-        'Custom domain',
-        'SSL certificate',
+        'Up to 1,000 documents/month',
+        'Basic OCR processing',
+        '5 document types',
         'Email support',
-        'Basic templates',
-        'Mobile optimization'
+        'Cloud storage (10GB)',
+        'Standard processing speed'
       ],
       popular: false
     },
     {
       name: 'Professional',
-      price: '$399',
+      price: '$199',
       period: '/month',
-      description: 'Ideal for growing businesses and agencies',
+      description: 'Ideal for growing businesses and teams',
       features: [
-        'Up to 25 websites',
-        '50GB storage',
-        'Custom domains',
-        'SSL certificates',
+        'Up to 10,000 documents/month',
+        'Advanced OCR + AI extraction',
+        'Unlimited document types',
         'Priority support',
-        'Premium templates',
-        'E-commerce features',
-        'Analytics dashboard',
-        'Team collaboration'
+        'Cloud storage (100GB)',
+        'Fast processing speed',
+        'Custom workflows',
+        'API access'
       ],
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$799',
+      price: '$499',
       period: '/month',
-      description: 'For large organizations with complex needs',
+      description: 'For large organizations with high-volume needs',
       features: [
-        'Unlimited websites',
-        'Unlimited storage',
-        'Custom domains',
-        'SSL certificates',
+        'Unlimited documents',
+        'Premium OCR + AI extraction',
+        'All document types',
         '24/7 dedicated support',
-        'All templates',
-        'Advanced e-commerce',
+        'Unlimited cloud storage',
+        'Ultra-fast processing',
         'Custom integrations',
         'White-label options',
         'SLA guarantees'
@@ -183,21 +160,21 @@ const AIWebsiteBuilderPage: React.FC = () => {
   ];
 
   const stats = [
-    { number: '5,200+', label: 'Active Users' },
-    { number: '50+', label: 'Templates' },
-    { number: '99.9%', label: 'Uptime' },
-    { number: '24/7', label: 'Support' }
+    { number: '99%', label: 'OCR Accuracy' },
+    { number: '1000+', label: 'Docs/Hour Processing' },
+    { number: '100+', label: 'Languages Supported' },
+    { number: '50+', label: 'Document Types' }
   ];
 
   const integrations = [
-    { name: 'Google Analytics', icon: '📊' },
-    { name: 'Facebook Pixel', icon: '📘' },
-    { name: 'Mailchimp', icon: '📧' },
-    { name: 'Stripe', icon: '💳' },
-    { name: 'PayPal', icon: '💰' },
-    { name: 'Zapier', icon: '🔗' },
+    { name: 'AWS S3', icon: '☁️' },
+    { name: 'Google Drive', icon: '📁' },
+    { name: 'Dropbox', icon: '📦' },
+    { name: 'Salesforce', icon: '⚡' },
     { name: 'HubSpot', icon: '🎯' },
-    { name: 'Salesforce', icon: '⚡' }
+    { name: 'Zapier', icon: '🔗' },
+    { name: 'Microsoft 365', icon: '📊' },
+    { name: 'Slack', icon: '💬' }
   ];
 
   if (!isLoaded) {
@@ -216,32 +193,32 @@ const AIWebsiteBuilderPage: React.FC = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">
-              AI Website Builder Pro
+              AI Document Scanner Pro
             </h1>
             <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed neon-glow-cyan">
-              Build professional websites in minutes with AI-powered design suggestions, 
-              drag-and-drop editor, and automatic SEO optimization. No coding required.
+              Intelligent document scanning with 99% OCR accuracy, automated data extraction, 
+              and smart organization. Transform your document workflow with AI-powered processing.
             </p>
             
             {/* Interactive Demo */}
             <div className="bg-slate-800/50 rounded-2xl p-8 mb-8 max-w-2xl mx-auto">
               <div className="flex items-center justify-center space-x-4 mb-6">
                 <button
-                  onClick={() => setIsBuilding(!isBuilding)}
+                  onClick={() => setIsScanning(!isScanning)}
                   className={`w-16 h-16 rounded-full flex items-center justify-center transition-all duration-300 ${
-                    isBuilding 
+                    isScanning 
                       ? 'bg-green-500 hover:bg-green-600 animate-pulse' 
                       : 'bg-cyan-500 hover:bg-cyan-600'
                   }`}
                 >
-                  {isBuilding ? <CheckCircle className="w-8 h-8 text-white" /> : <Globe className="w-8 h-8 text-white" />}
+                  {isScanning ? <CheckCircle className="w-8 h-8 text-white" /> : <Scan className="w-8 h-8 text-white" />}
                 </button>
                 <div className="text-center">
                   <div className="text-2xl font-bold text-white mb-1">
-                    {isBuilding ? 'Building Website...' : 'Ready to Build'}
+                    {isScanning ? 'Processing...' : 'Ready to Scan'}
                   </div>
                   <div className="text-sm text-gray-300">
-                    {isBuilding ? 'AI is generating your website' : 'Choose a template to start'}
+                    {isScanning ? 'Extracting data from document' : 'Upload your document to start'}
                   </div>
                 </div>
               </div>
@@ -254,22 +231,18 @@ const AIWebsiteBuilderPage: React.FC = () => {
                   <Download className="w-4 h-4 inline mr-2" />
                   Download
                 </button>
-                <button className="px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors">
-                  <Share className="w-4 h-4 inline mr-2" />
-                  Publish
-                </button>
               </div>
             </div>
 
             <div className="flex flex-wrap justify-center gap-4">
               <div className="holographic px-6 py-3 rounded-lg">
-                <span className="text-cyan-400 font-semibold">Build in Minutes</span>
+                <span className="text-cyan-400 font-semibold">99% OCR Accuracy</span>
               </div>
               <div className="holographic px-6 py-3 rounded-lg">
-                <span className="text-purple-400 font-semibold">Auto SEO</span>
+                <span className="text-purple-400 font-semibold">1000+ Docs/Hour</span>
               </div>
               <div className="holographic px-6 py-3 rounded-lg">
-                <span className="text-pink-400 font-semibold">Mobile-First</span>
+                <span className="text-pink-400 font-semibold">100+ Languages</span>
               </div>
             </div>
           </div>
@@ -295,10 +268,10 @@ const AIWebsiteBuilderPage: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Powerful Website Building Features
+              Advanced Document Processing Features
             </h2>
             <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              Everything you need to create professional websites with AI-powered assistance
+              Powerful AI-driven document processing with industry-leading accuracy and speed
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -323,48 +296,37 @@ const AIWebsiteBuilderPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Templates Section */}
+      {/* Document Types Section */}
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Professional Templates
+              Supported Document Types
             </h2>
             <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              Choose from 50+ professionally designed templates for every industry
+              Process any document type with specialized AI models for maximum accuracy
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {templates.map((template, index) => (
-              <div
-                key={index}
-                className={`futuristic-card hover-lift p-6 cursor-pointer transition-all ${
-                  selectedTemplate === template.name.toLowerCase() ? 'ring-2 ring-purple-500' : ''
-                }`}
-                onClick={() => setSelectedTemplate(template.name.toLowerCase())}
-              >
-                {template.popular && (
-                  <div className="absolute -top-2 -right-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full">
-                    Popular
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {documentTypes.map((docType, index) => (
+              <div key={index} className="futuristic-card hover-lift p-6">
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mr-4">
+                    <docType.icon className="w-6 h-6 text-white" />
                   </div>
-                )}
-                <div className="mb-4">
-                  <div className="w-full h-32 bg-gradient-to-br from-slate-700 to-slate-800 rounded-lg mb-4 flex items-center justify-center">
-                    <Globe className="w-12 h-12 text-gray-400" />
+                  <div>
+                    <h3 className="text-xl font-bold text-white">{docType.type}</h3>
+                    <div className="text-cyan-400 font-semibold">{docType.accuracy} accuracy</div>
                   </div>
-                  <div className="flex justify-between items-start mb-2">
-                    <h3 className="text-xl font-bold text-white">{template.name}</h3>
-                    <span className="text-cyan-400 font-bold">{template.price}</span>
-                  </div>
-                  <p className="text-gray-400 text-sm mb-2">{template.category}</p>
-                  <p className="text-gray-300 text-sm">{template.description}</p>
                 </div>
-                <div>
-                  <div className="text-sm text-gray-400 mb-2">Features:</div>
-                  <div className="flex flex-wrap gap-1">
-                    {template.features.map((feature, featureIndex) => (
-                      <span key={featureIndex} className="px-2 py-1 bg-slate-700 text-gray-300 text-xs rounded">
-                        {feature}
+                <p className="text-gray-300 mb-4">{docType.description}</p>
+                <div className="mb-4">
+                  <div className="text-sm text-gray-400 mb-2">Processing time: {docType.processingTime}</div>
+                  <div className="text-sm text-gray-400 mb-2">Extracted fields:</div>
+                  <div className="flex flex-wrap gap-2">
+                    {docType.fields.map((field, fieldIndex) => (
+                      <span key={fieldIndex} className="px-2 py-1 bg-slate-700 text-gray-300 text-xs rounded">
+                        {field}
                       </span>
                     ))}
                   </div>
@@ -375,49 +337,15 @@ const AIWebsiteBuilderPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Device Preview Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Responsive Design Preview
-            </h2>
-            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              See how your website looks on all devices with real-time preview
-            </p>
-          </div>
-          <div className="flex justify-center items-center space-x-8">
-            <div className="text-center">
-              <div className="w-16 h-20 bg-slate-700 rounded-lg mb-2 flex items-center justify-center">
-                <Mobile className="w-8 h-8 text-gray-400" />
-              </div>
-              <div className="text-sm text-gray-300">Mobile</div>
-            </div>
-            <div className="text-center">
-              <div className="w-20 h-16 bg-slate-700 rounded-lg mb-2 flex items-center justify-center">
-                <Tablet className="w-8 h-8 text-gray-400" />
-              </div>
-              <div className="text-sm text-gray-300">Tablet</div>
-            </div>
-            <div className="text-center">
-              <div className="w-24 h-16 bg-slate-700 rounded-lg mb-2 flex items-center justify-center">
-                <Monitor className="w-8 h-8 text-gray-400" />
-              </div>
-              <div className="text-sm text-gray-300">Desktop</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Integrations Section */}
-      <section className="py-20 bg-slate-800/30">
+      <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               Seamless Integrations
             </h2>
             <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              Connect with your favorite tools and services for a complete website solution
+              Connect with your favorite tools and platforms for a complete document workflow
             </p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6">
@@ -432,14 +360,14 @@ const AIWebsiteBuilderPage: React.FC = () => {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20">
+      <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               Simple, Transparent Pricing
             </h2>
             <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              Choose the plan that fits your website building needs. All plans include our core features.
+              Choose the plan that fits your document processing needs. All plans include our core features.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -486,10 +414,10 @@ const AIWebsiteBuilderPage: React.FC = () => {
       <section className="py-20 bg-gradient-to-r from-cyan-600 to-purple-700">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-            Ready to Build Your Dream Website?
+            Ready to Automate Your Document Processing?
           </h2>
           <p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">
-            Join 5,200+ businesses already using our AI Website Builder Pro. Start building today!
+            Join 2,100+ businesses already using our AI Document Scanner Pro. Start your free trial today!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <a
@@ -497,7 +425,7 @@ const AIWebsiteBuilderPage: React.FC = () => {
               className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors inline-flex items-center"
             >
               <MessageSquare className="w-5 h-5 mr-2" />
-              Start Building
+              Start Free Trial
             </a>
             <a
               href="tel:+13024640950"
@@ -516,4 +444,4 @@ const AIWebsiteBuilderPage: React.FC = () => {
   );
 };
 
-export default AIWebsiteBuilderPage;
+export default AIDocumentScannerPage;

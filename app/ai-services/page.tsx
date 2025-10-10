@@ -57,7 +57,10 @@ const AIServicesPage: React.FC = () => {
         'Automated campaign optimization',
         'Real-time performance tracking',
         'Predictive customer behavior'
-      ]
+      ],
+      link: 'https://ziontechgroup.com/ai-analytics',
+      trial: '14-day free trial',
+      setup: 'Quick setup in 5 minutes'
     },
     {
       id: 11,
@@ -85,7 +88,10 @@ const AIServicesPage: React.FC = () => {
         'Unbreakable encryption',
         'Quantum advantage in ML',
         'Scientific breakthrough potential'
-      ]
+      ],
+      link: 'https://ziontechgroup.com/ai-quantum-computing',
+      trial: '30-day free trial',
+      setup: 'Expert setup in 2-4 weeks'
     },
     {
       id: 12,
@@ -113,7 +119,10 @@ const AIServicesPage: React.FC = () => {
         'Context-aware responses',
         'Emotional intelligence',
         'Long-term memory retention'
-      ]
+      ],
+      link: 'https://ziontechgroup.com/ai-neural-memory-assistant',
+      trial: '14-day free trial',
+      setup: 'Quick setup in 10 minutes'
     },
     {
       id: 13,
@@ -593,6 +602,7 @@ const AIServicesPage: React.FC = () => {
     },
     {
       id: 11,
+<<<<<<< HEAD
       name: 'AI Quantum Financial Oracle',
       description: 'Revolutionary quantum-powered financial modeling and risk assessment for high-frequency trading and portfolio optimization',
       icon: Brain,
@@ -617,10 +627,37 @@ const AIServicesPage: React.FC = () => {
         '99.9% prediction accuracy',
         'Quantum advantage',
         'Real-time risk modeling'
+=======
+      name: 'AI Quantum Computing Platform',
+      description: 'Revolutionary quantum computing solutions with AI optimization for complex problem solving',
+      icon: Brain,
+      features: [
+        'Quantum Algorithm Optimization',
+        'Quantum Machine Learning',
+        'Quantum Simulation',
+        'Quantum Error Correction',
+        'Quantum Cryptography',
+        'Quantum Optimization',
+        'Quantum Neural Networks',
+        'Quantum Data Processing'
+      ],
+      category: 'Quantum Computing',
+      popular: true,
+      rating: 4.9,
+      users: '150+',
+      color: 'from-purple-500 to-indigo-600',
+      pricing: 'Starting at $15,000/mo',
+      capabilities: [
+        '1000x faster computation',
+        'Quantum advantage in optimization',
+        'Breakthrough problem solving',
+        'Next-gen cryptography'
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-32a7
       ]
     },
     {
       id: 12,
+<<<<<<< HEAD
       name: 'AI Climate Solutions Pro',
       description: 'Advanced climate modeling and environmental impact analysis with carbon footprint optimization and sustainability planning',
       icon: Globe,
@@ -645,10 +682,37 @@ const AIServicesPage: React.FC = () => {
         'Real-time environmental monitoring',
         'Sustainability optimization',
         'Climate risk assessment'
+=======
+      name: 'AI Autonomous Vehicle Systems',
+      description: 'Advanced autonomous vehicle technology with AI-powered navigation and safety systems',
+      icon: Car,
+      features: [
+        'Autonomous Navigation',
+        'Object Detection & Recognition',
+        'Path Planning',
+        'Collision Avoidance',
+        'Traffic Analysis',
+        'Predictive Maintenance',
+        'Fleet Management',
+        'Safety Monitoring'
+      ],
+      category: 'Autonomous Systems',
+      popular: true,
+      rating: 4.8,
+      users: '200+',
+      color: 'from-blue-500 to-cyan-600',
+      pricing: 'Starting at $8,500/mo',
+      capabilities: [
+        '99.9% safety record',
+        'Real-time decision making',
+        'Fleet optimization',
+        'Predictive maintenance'
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-32a7
       ]
     },
     {
       id: 13,
+<<<<<<< HEAD
       name: 'AI Space Technology Pro',
       description: 'Cutting-edge AI solutions for space exploration, satellite management, and space mission optimization',
       icon: Rocket,
@@ -673,10 +737,37 @@ const AIServicesPage: React.FC = () => {
         'Real-time space monitoring',
         'Advanced orbital calculations',
         'Space debris mitigation'
+=======
+      name: 'AI Space Exploration Platform',
+      description: 'AI-powered space exploration and satellite management with advanced mission planning',
+      icon: Rocket,
+      features: [
+        'Mission Planning',
+        'Satellite Operations',
+        'Space Weather Prediction',
+        'Orbital Mechanics',
+        'Astronomical Data Analysis',
+        'Space Debris Tracking',
+        'Communication Optimization',
+        'Resource Management'
+      ],
+      category: 'Space Technology',
+      popular: false,
+      rating: 4.9,
+      users: '80+',
+      color: 'from-indigo-500 to-purple-600',
+      pricing: 'Starting at $12,000/mo',
+      capabilities: [
+        'Mission success optimization',
+        'Real-time space monitoring',
+        'Advanced trajectory planning',
+        'Space resource optimization'
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-32a7
       ]
     },
     {
       id: 14,
+<<<<<<< HEAD
       name: 'AI Drug Discovery Pro',
       description: 'Revolutionary AI-powered drug discovery platform with molecular modeling, clinical trial optimization, and personalized medicine',
       icon: Stethoscope,
@@ -701,10 +792,37 @@ const AIServicesPage: React.FC = () => {
         '90% accuracy in predictions',
         'Personalized treatment plans',
         'Reduced clinical trial costs'
+=======
+      name: 'AI Climate Intelligence',
+      description: 'Advanced climate monitoring and prediction with AI-powered environmental analysis',
+      icon: Globe,
+      features: [
+        'Climate Modeling',
+        'Weather Prediction',
+        'Carbon Footprint Analysis',
+        'Environmental Monitoring',
+        'Disaster Prediction',
+        'Sustainability Planning',
+        'Emission Tracking',
+        'Green Energy Optimization'
+      ],
+      category: 'Environmental AI',
+      popular: true,
+      rating: 4.7,
+      users: '400+',
+      color: 'from-green-500 to-emerald-600',
+      pricing: 'Starting at $5,500/mo',
+      capabilities: [
+        '95% weather accuracy',
+        'Climate change mitigation',
+        'Environmental protection',
+        'Sustainable development'
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-32a7
       ]
     },
     {
       id: 15,
+<<<<<<< HEAD
       name: 'AI Neural Memory Assistant',
       description: 'Advanced AI system that mimics human memory patterns for enhanced learning, recall, and cognitive assistance',
       icon: Brain,
@@ -729,6 +847,32 @@ const AIServicesPage: React.FC = () => {
         '90% better retention rates',
         'Adaptive memory patterns',
         'Cognitive enhancement'
+=======
+      name: 'AI Drug Discovery Platform',
+      description: 'Revolutionary pharmaceutical research with AI-powered molecular analysis and drug development',
+      icon: Stethoscope,
+      features: [
+        'Molecular Modeling',
+        'Drug Interaction Analysis',
+        'Clinical Trial Optimization',
+        'Protein Folding Prediction',
+        'Toxicity Assessment',
+        'Patent Analysis',
+        'Biomarker Discovery',
+        'Personalized Medicine'
+      ],
+      category: 'Pharmaceutical AI',
+      popular: true,
+      rating: 4.9,
+      users: '300+',
+      color: 'from-teal-500 to-cyan-600',
+      pricing: 'Starting at $18,000/mo',
+      capabilities: [
+        '50% faster drug development',
+        '98% accuracy in predictions',
+        'Reduced clinical trial costs',
+        'Personalized treatment plans'
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-32a7
       ]
     },
     {
@@ -1154,10 +1298,14 @@ const AIServicesPage: React.FC = () => {
   ];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Processing', 'Customer Experience', 'Content Creation', 'Industrial AI', 'Financial AI', 'Healthcare AI', 'Supply Chain', 'Quantum Computing', 'Advanced AI', 'Immersive Technology', 'Climate Tech', 'Pharmaceutical AI', 'Fashion Tech', 'Creative AI', 'Energy Tech', 'Autonomous Systems', 'Blockchain AI'];
 =======
   const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Processing', 'Customer Experience', 'Content Creation', 'Industrial AI', 'Financial AI', 'Healthcare AI', 'Supply Chain', 'Quantum Computing', 'Advanced AI', 'Immersive Technology', 'Climate Tech', 'Pharmaceutical AI', 'Fashion Tech', 'Creative AI', 'Energy Tech', 'Autonomous Systems', 'Blockchain AI', 'Cognitive AI', 'AI Development', 'Quantum ML', 'Space Technology', 'Scientific AI', 'Data Visualization', 'Quantum Security', 'Neural Interface', 'Quantum Optimization', 'Immersive Learning', 'Quantum AI', 'Immersive Workspace'];
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-c63e
+=======
+  const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Processing', 'Customer Experience', 'Content Creation', 'Industrial AI', 'Financial AI', 'Healthcare AI', 'Supply Chain', 'Quantum Computing', 'Autonomous Systems', 'Space Technology', 'Environmental AI', 'Pharmaceutical AI'];
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-32a7
 
   if (!isLoaded) {
     return (
@@ -1267,10 +1415,34 @@ const AIServicesPage: React.FC = () => {
                 </ul>
               </div>
 
+<<<<<<< HEAD
               <button className="w-full neon-button-enhanced py-3 px-6 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center">
                 Get Started
                 <ArrowRight className="w-4 h-4 ml-2" />
               </button>
+=======
+              <div className="space-y-2">
+                <a
+                  href={service.link || 'https://ziontechgroup.com/contact'}
+                  className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Get Started
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </a>
+                {service.trial && (
+                  <div className="text-center text-sm text-cyan-400 font-medium">
+                    {service.trial}
+                  </div>
+                )}
+                {service.setup && (
+                  <div className="text-center text-xs text-gray-400">
+                    {service.setup}
+                  </div>
+                )}
+              </div>
+>>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-aeba
             </div>
           ))}
         </div>

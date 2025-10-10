@@ -235,6 +235,7 @@ export default function ITServicesPage() {
           popular: false
         },
         {
+<<<<<<< HEAD
           name: 'AI-Powered IT Operations',
           description: 'Intelligent IT operations with AI-driven automation, predictive maintenance, and self-healing systems',
           features: ['AI Automation', 'Predictive Maintenance', 'Self-healing Systems', 'Intelligent Alerting', 'Root Cause Analysis', 'Performance Optimization', 'Capacity Planning', 'Cost Optimization'],
@@ -425,6 +426,36 @@ export default function ITServicesPage() {
           timeline: '6-12 weeks',
           link: 'https://ziontechgroup.com/iot-platform',
           popular: true
+=======
+          name: 'AI-Powered Infrastructure Management',
+          description: 'Intelligent infrastructure management with AI-driven optimization and predictive maintenance',
+          features: ['AI Optimization', 'Predictive Maintenance', 'Automated Scaling', 'Performance Tuning', 'Cost Optimization'],
+          pricing: 'Starting at $5,500/month',
+          trial: 'Free AI assessment',
+          timeline: '2-4 weeks',
+          link: 'https://ziontechgroup.com/ai-infrastructure',
+          popular: true
+        },
+        {
+          name: 'Quantum-Safe Security Implementation',
+          description: 'Next-generation security solutions resistant to quantum computing threats',
+          features: ['Quantum Cryptography', 'Post-Quantum Algorithms', 'Future-Proof Security', 'Migration Planning', 'Compliance Assurance'],
+          pricing: 'Starting at $12,000',
+          trial: 'Free security audit',
+          timeline: '4-8 weeks',
+          link: 'https://ziontechgroup.com/quantum-security',
+          popular: false
+        },
+        {
+          name: 'Edge Computing Infrastructure',
+          description: 'Distributed computing infrastructure for IoT and real-time applications',
+          features: ['Edge Nodes', 'Real-time Processing', 'Low Latency', 'IoT Integration', 'Distributed Analytics'],
+          pricing: 'Starting at $8,000/month',
+          trial: 'Free edge assessment',
+          timeline: '3-6 weeks',
+          link: 'https://ziontechgroup.com/edge-computing',
+          popular: true
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-32a7
         }
       ]
     },

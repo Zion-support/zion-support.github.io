@@ -81,12 +81,19 @@ const StatusPage = React.lazy(() => import('./app/status/page'));
 const DemoPage = React.lazy(() => import('./app/demo/page'));
 const ConsultationPage = React.lazy(() => import('./app/consultation/page'));
 const ServicesPage = React.lazy(() => import('./app/services/page'));
+<<<<<<< HEAD
 const AIOpsPage = React.lazy(() => import('./app/ai-ops/page'));
 const HealthcareITPage = React.lazy(() => import('./app/healthcare-it/page'));
 const FinancialITPage = React.lazy(() => import('./app/financial-it/page'));
 const EdgeComputingPage = React.lazy(() => import('./app/edge-computing/page'));
 const FiveGImplementationPage = React.lazy(() => import('./app/5g-implementation/page'));
 const IoTPlatformPage = React.lazy(() => import('./app/iot-platform/page'));
+=======
+const AIVoiceAssistantPage = React.lazy(() => import('./app/ai-voice-assistant/page'));
+const AIDocumentScannerPage = React.lazy(() => import('./app/ai-document-scanner/page'));
+const AIMeetingTranscriberPage = React.lazy(() => import('./app/ai-meeting-transcriber/page'));
+const AIWebsiteBuilderPage = React.lazy(() => import('./app/ai-website-builder/page'));
+>>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-aeba
 
 // Performance monitoring hook
 const AppWithPerformanceMonitoring: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -138,12 +145,19 @@ const App: React.FC = memo(() => {
                       <Route path="/demo" element={<DemoPage />} />
                       <Route path="/consultation" element={<ConsultationPage />} />
                       <Route path="/services" element={<ServicesPage />} />
+<<<<<<< HEAD
                       <Route path="/ai-ops" element={<AIOpsPage />} />
                       <Route path="/healthcare-it" element={<HealthcareITPage />} />
                       <Route path="/financial-it" element={<FinancialITPage />} />
                       <Route path="/edge-computing" element={<EdgeComputingPage />} />
                       <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
                       <Route path="/iot-platform" element={<IoTPlatformPage />} />
+=======
+                      <Route path="/ai-voice-assistant" element={<AIVoiceAssistantPage />} />
+                      <Route path="/ai-document-scanner" element={<AIDocumentScannerPage />} />
+                      <Route path="/ai-meeting-transcriber" element={<AIMeetingTranscriberPage />} />
+                      <Route path="/ai-website-builder" element={<AIWebsiteBuilderPage />} />
+>>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-aeba
                     </Routes>
                   </Suspense>
                   </main>
