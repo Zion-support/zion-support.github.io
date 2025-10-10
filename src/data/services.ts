@@ -1,3 +1,39 @@
+import { 
+  BarChart, 
+  Zap, 
+  Target, 
+  Bot, 
+  Code, 
+  FileText, 
+  Users, 
+  MessageSquare, 
+  Database, 
+  Palette, 
+  ShoppingCart, 
+  Mail, 
+  DollarSign, 
+  Stethoscope, 
+  Briefcase, 
+  Shield, 
+  TrendingUp, 
+  Smartphone, 
+  BarChart3, 
+  Calendar, 
+  CheckCircle, 
+  Home, 
+  Cpu, 
+  Search, 
+  Truck, 
+  Video, 
+  Globe, 
+  Cloud, 
+  Settings, 
+  Link, 
+  Brain, 
+  Eye, 
+  ArrowRight 
+} from 'lucide-react';
+
 export interface Service {
   title: string;
   description: string;
