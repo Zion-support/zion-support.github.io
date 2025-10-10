@@ -113,8 +113,12 @@ import { CheckCircle, Star, ArrowRight, Zap, Shield, Clock, Users, TrendingUp, G
         'Automated campaign optimization',
         'Real-time performance tracking',
         'Predictive customer behavior'
+<<<<<<< HEAD
 =======
       category: 'AI Automation & Workflow',
+=======
+      ],
+>>>>>>> cursor/fix-errors-and-merge-to-main-a74d
       icon: Zap,
       color: 'text-yellow-400',
       bgColor: 'bg-yellow-500/10',
@@ -977,6 +981,7 @@ import { CheckCircle, Star, ArrowRight, Zap, Shield, Clock, Users, TrendingUp, G
                 <div className={`p-3 rounded-lg bg-gradient-to-r ${service.color} text-white`}>
                   {service.icon}
                 </div>
+<<<<<<< HEAD
                 <div className="flex items-center space-x-2">
                   {service.popular && (
                     <span className="px-2 py-1 bg-orange-500 text-white text-xs rounded-full flex items-center">
@@ -987,6 +992,38 @@ import { CheckCircle, Star, ArrowRight, Zap, Shield, Clock, Users, TrendingUp, G
                   <div className="flex items-center text-yellow-400">
                     <Star className="w-4 h-4 fill-current" />
                     <span className="ml-1 text-sm font-medium">{service.rating}</span>
+=======
+              )}
+              
+              <div className="p-8">
+                <div className={`inline-flex items-center justify-center w-16 h-16 rounded-xl ${service.bgColor} mb-6`}>
+                  <service.icon className={`h-8 w-8 ${service.color}`} />
+                </div>
+                
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                  {service.name}
+                </h3>
+                
+                <p className="text-gray-600 mb-6 leading-relaxed">
+                  {service.description}
+                </p>
+                
+                <div className="mb-6">
+                  <div className="flex items-center space-x-2">
+                    {service.popular && (
+                      <span className="px-2 py-1 bg-orange-500 text-white text-xs rounded-full flex items-center">
+                        <Star className="w-3 h-3 mr-1" />
+                        Popular
+                      </span>
+                    )}
+                    <div className="flex items-center text-yellow-400">
+                      <Star className="w-4 h-4 fill-current" />
+                      <span className="ml-1 text-sm font-medium">{service.rating}</span>
+                    </div>
+                  </div>
+                  <div className="text-3xl font-bold text-gray-900 mb-2">
+                    {service.price}
+>>>>>>> cursor/fix-errors-and-merge-to-main-a74d
                   </div>
                 </div>
               </div>

@@ -361,12 +361,6 @@ const addStructuredData = (data: unknown): void => {
   
   document.head.appendChild(script);
 };
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-0e35
-  ogImage: string;
-  twitterCard: string;
-  structuredData: Record<string, any>;
-}
 
 class SEOOptimizer {
   private config: Partial<SEOConfig> = {};
