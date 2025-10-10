@@ -74,6 +74,15 @@ const HomePage: React.FC = () => {
     website: 'https://ziontechgroup.com'
   };
 
+  const products = [
+    {
+      title: 'AI Smart Calendar Pro',
+      description: 'Intelligent calendar management with AI-powered scheduling, conflict resolution, and productivity optimization.',
+      icon: '📅',
+      price: '$29/month',
+      originalPrice: '$49/month',
+      features: ['Smart scheduling', 'Conflict resolution', 'Productivity analytics', 'Team coordination', 'Meeting optimization', 'Time blocking', 'Priority management', 'Integration support'],
+      benefits: ['40% time savings', 'Zero scheduling conflicts', 'Improved productivity', 'Better work-life balance'],
       link: '/ai-smart-calendar',
       popular: true,
       category: 'Productivity',
@@ -87,6 +96,15 @@ const HomePage: React.FC = () => {
       icon: '🎤',
       price: '$149/month',
       originalPrice: '$199/month',
+      features: ['Voice cloning', 'Text-to-speech', 'Voice customization', 'Multi-language support', 'High-quality output', 'Batch processing', 'API integration', 'Real-time synthesis'],
+      benefits: ['90% time savings', 'Professional quality', 'Cost effective', 'Scalable solution'],
+      link: '/ai-voice-cloning',
+      popular: true,
+      category: 'Content Creation',
+      rating: 4.9,
+      users: '2,500+',
+      freeTrial: '14 days'
+    },
     {
       title: 'AI Meeting Assistant Pro',
       description: 'Revolutionary meeting management with real-time transcription, action item extraction, and intelligent follow-ups. Used by Fortune 500 companies.',
@@ -932,7 +950,7 @@ const HomePage: React.FC = () => {
           </div>
         </section>
       </main>
-      
+    </div>
   );
 };
 
