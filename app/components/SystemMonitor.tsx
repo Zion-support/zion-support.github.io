@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
     }
   ];
-              </span>
+            </span>
               <br />
               <span className="text-white">Solutions</span>
             </h1>
@@ -19,11 +19,11 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
               </button>
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
                 Learn More;
-  </
+            </
             </div>
         </div>
     </div>
   );
 };
 export default SystemMonitorPage;
-  </button>
+            </button>

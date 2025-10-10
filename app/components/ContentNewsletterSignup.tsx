@@ -79,7 +79,7 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
             onClick={() => setIsSubscribed(false)}
             className="text-white underline hover:text-blue-200 transition-colors">
             Subscribe another email;
-  </
+            </
         </div>
       </div>
     );
@@ -112,7 +112,7 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-white mb-2">
                   Email Address;
-  </
+            </
                 <input
                   type="email"
                   value={email}
@@ -149,6 +149,6 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
   );
 };
 export default ContentNewsletterSignup;
-  </label>
+            </label>
   </button>
   </ContentNewsletterSignupProps>

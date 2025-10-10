@@ -109,12 +109,12 @@ export const,;
         {...props});
       >)</div>;
         <span className="text-gray-500 text-sm"><span className="sr-only">Screen reader: </span>Failed to load image</span>);
-      </div>);
+            </div>);
     ),;
         {...props}
       ></div>;
         <span className="text-gray-500 text-sm"></span><span className="sr-only">Screen reader: </span>Failed to load image</span>;
-      </div>;
+            </div>;
     );
   }
   return(<img;

@@ -36,7 +36,7 @@ const SitemapPage: React.FC = () => {
           </h1>
           <p className="text-xl text-gray-600">
             Navigate through all pages on our website;
-  </
+            </
         </div>
         <div className="bg-white rounded-lg shadow-lg p-8"></div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -48,14 +48,14 @@ const SitemapPage: React.FC = () => {
                     className="text-blue-600 hover:text-blue-700 transition-colors">
                     {page.title}
                   </a>;
-                </h3>;
+            </h3>;
                 <p className="text-sm text-gray-600 mb-2">;
                   {page.description}
                 </p>;
                 <p className="text-xs text-gray-500">;
                   {page.path}
                 </p>;
-              </div>;
+            </div>;
             ))}
           </div>
         </div>
@@ -71,12 +71,12 @@ const SitemapPage: React.FC = () => {
               href="/contact"
               className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center">
               Contact Us;
-  </
+            </
             <a 
               href="tel:+13024640950"
               className="border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors text-center">
               Call Us: (302) 464-0950;
-  </
+            </
           </div>
         </div>
       </div>
@@ -84,6 +84,6 @@ const SitemapPage: React.FC = () => {
   );
 };
 export default SitemapPage;
-  </a>
+            </a>
   </a>
   </p>

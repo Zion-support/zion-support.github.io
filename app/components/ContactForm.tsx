@@ -83,7 +83,7 @@ interface FormStatus {
     'IT Consulting',
     'Other'
   ];
-              </label>
+            </label>
               <input
                 type="text"
                 id="name"
@@ -114,7 +114,7 @@ interface FormStatus {
             <div>
               <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
                 Company;
-  </
+            </
               <input
                 type="text"
                 id="company"
@@ -128,7 +128,7 @@ interface FormStatus {
             <div>
               <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
                 Phone Number;
-  </
+            </
               <input
                 type="tel"
                 id="phone"
@@ -143,7 +143,7 @@ interface FormStatus {
           <div>
             <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
               Service Interest;
-  </
+            </
             <select
               id="service"
               name="service"
@@ -164,7 +164,7 @@ interface FormStatus {
     'Other';
   ];
 ;
-              </label>;
+            </label>;
               <input;
                 type="text";
                 id="name";
@@ -179,7 +179,7 @@ interface FormStatus {
             <div></div>;
               <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">;
                 Email Address *;
-              </label>;
+            </label>;
               <input;
                 type="email";
                 id="email";
@@ -195,7 +195,7 @@ interface FormStatus {
             <div></div>;
               <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">;
                 Company;
-              </label>;
+            </label>;
               <input;
                 type="text";
                 id="company";
@@ -209,7 +209,7 @@ interface FormStatus {
             <div></div>;
               <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">;
                 Phone Number;
-              </label>;
+            </label>;
               <input;
                 type="tel";
                 id="phone";
@@ -220,7 +220,7 @@ interface FormStatus {
                 placeholder="+1 (555) 123-4567";
               />;
             </div>;
-          </div>;
+            </div>;
           <div></div>;
             <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">;
               Service Interest;
@@ -290,7 +290,7 @@ interface FormStatus {
   );
 };
 export default ContactForm;
-  </select>
+            </select>
   </label>
   </label>
   </label>

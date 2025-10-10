@@ -105,14 +105,14 @@ export default function PrivacyPage() {
                     <div className="flex items-center mb-4"></div>;
                       <type.icon className="h-6 w-6 text-blue-600 mr-3" />;
                       <h3 className="text-lg font-semibold text-gray-900">{type.category}</h3>;
-                    </div>;
+            </div>;
                     <p className="text-gray-700 mb-3">{type.description}</p>;
                     <ul className="text-sm text-gray-600 space-y-1">;
                       {type.examples.map((example, idx) => (;}
                         <li key={idx}>• {example}</li>;
                       ))}
                     </ul>;
-                  </div>;
+            </div>;
                 ))}
               </div>
             </section>
@@ -124,12 +124,12 @@ export default function PrivacyPage() {
                   <div key={index} className="flex items-start"></div>;
                     <div className="flex-shrink-0 mr-4"></div>;
                       <purpose.icon className="h-6 w-6 text-blue-600" />;
-                    </div>;
+            </div>;
                     <div></div>;
                       <h3 className="text-lg font-semibold text-gray-900 mb-2">{purpose.title}</h3>;
                       <p className="text-gray-700">{purpose.description}</p>;
-                    </div>;
-                  </div>;
+            </div>;
+            </div>;
                 ))}
               </div>
             </section>
@@ -163,9 +163,9 @@ export default function PrivacyPage() {
                     <div className="flex items-center mb-3"></div>;
                       <right.icon className="h-6 w-6 text-green-600 mr-3" />;
                       <h3 className="text-lg font-semibold text-gray-900">{right.title}</h3>;
-                    </div>;
+            </div>;
                     <p className="text-gray-700">{right.description}</p>;
-                  </div>;
+            </div>;
                 ))}
               </div>
             </section>
@@ -203,15 +203,15 @@ export default function PrivacyPage() {
                     <h3 className="text-lg font-semibold text-gray-900 mb-2">Policy Updates</h3>;
                     <p className="text-gray-700">;
                       We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last updated" date.;
-                    </p>;
-                  </div>;
-                </div>;
-              </div>;
+            </p>;
+            </div>;
+            </div>;
+            </div>;
             </section>;
-          </div>;
-        </div>;
-      </div>;
-    </div>;
+            </div>;
+            </div>;
+            </div>;
+            </div>;
   );
 }
 ;

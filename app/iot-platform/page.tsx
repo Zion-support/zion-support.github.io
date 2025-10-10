@@ -22,7 +22,7 @@ import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } fr
           </div>
                   ))}
                 </ul>;
-</div>;
+            </div>;
             ))}
           </div>
         </div>
@@ -33,7 +33,7 @@ import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } fr
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               IoT Use Cases;
-  </
+            </
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our IoT platform supports a wide range of industries and applications, 
               from smart manufacturing to connected cities.
@@ -82,7 +82,7 @@ import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } fr
             </button>
             <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
               Schedule Demo;
-  </
+            </
           </div>
         </div>
       </section>
@@ -91,5 +91,5 @@ import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } fr
   );
 };
 export default PagePage;
-  </button>
+            </button>
   </h2>

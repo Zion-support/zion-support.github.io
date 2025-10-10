@@ -35,7 +35,7 @@ const DemoPage: React.FC = () => {
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               See Our <span className="text-cyan-400">Solutions</span> in Action;
-  </
+            </
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Experience our AI and IT solutions through interactive demos. See how our technology can transform your business.
             </p>
@@ -63,7 +63,7 @@ const DemoPage: React.FC = () => {
                   <button className="w-full bg-cyan-500 hover:bg-cyan-600 text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center">
                     <Play className="w-4 h-4 mr-2" />
                     Watch Demo;
-  </
+            </
                 </div>
               ))}
             </div>
@@ -90,5 +90,5 @@ const DemoPage: React.FC = () => {
   );
 };
 export default DemoPage;
-  </button>
+            </button>
   </h1>

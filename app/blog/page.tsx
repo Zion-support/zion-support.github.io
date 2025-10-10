@@ -177,7 +177,7 @@ const BlogPage: React.FC = () => {
             <div className="text-center mb-12">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 Tech Insights & Updates;
-  </
+            </
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Stay ahead with the latest trends, insights, and best practices in AI, cloud computing, and technology.
               </p>
@@ -251,7 +251,7 @@ const BlogPage: React.FC = () => {
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Tech Insights & News;
-  </
+            </
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Stay updated with the latest trends in AI, blockchain, cloud computing, and IT solutions.
         <title>Blog - Zion Tech Group | Technology Insights & Industry News</title>
@@ -321,7 +321,7 @@ const BlogPage: React.FC = () => {
                       {post.featured && (
                         <span className="px-2 py-1 bg-yellow-500/20 text-yellow-300 text-xs rounded-full">
                           Featured;
-  </
+            </
                       )}
                     </div>
                     <h2 className="text-xl font-bold text-white mb-3 group-hover:text-purple-300 transition-colors">
@@ -464,7 +464,7 @@ const BlogPage: React.FC = () => {
   );
 };
 export default BlogPage;
-  </span>
+            </span>
   </section>
   </h1>
   </section>

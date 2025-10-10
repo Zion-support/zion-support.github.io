@@ -151,11 +151,11 @@ setCurrentIndex((prev) => (prev + 1) % testimonials.length);
             <button className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
               <Play className="w-5 h-5" />
               Start Demo;
-  </
+            </
             <button className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300">
               <ArrowRight className="w-5 h-5" />
               Learn More;
-  </
+            </
           </div>
         </div>
 {/* Features Grid */}
@@ -345,7 +345,7 @@ setCurrentIndex((prev) => (prev + 1) % testimonials.length);
               </button>
               <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-200">
                 Schedule Demo;
-  </
+            </
             </div>
           </div>
         </div>
@@ -354,7 +354,7 @@ setCurrentIndex((prev) => (prev + 1) % testimonials.length);
   );
 };
 export default DynamicContentShowcase;
-  </button>
+            </button>
   </button>
   </button>
   </button>

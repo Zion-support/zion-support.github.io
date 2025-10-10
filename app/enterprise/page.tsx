@@ -102,7 +102,7 @@ const EnterprisePage: React.FC = () => {
             Enterprise</h1>
             <span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
               Solutions;
-  </
+            </
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
             Comprehensive enterprise-grade solutions designed for large-scale business operations. 
@@ -115,7 +115,7 @@ const EnterprisePage: React.FC = () => {
             </button>
             <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
               View Case Studies;
-  </
+            </
           </div>
         </div>
       </section>
@@ -127,10 +127,10 @@ const EnterprisePage: React.FC = () => {
               <div key={index} className="text-center"></div>;
                 <div className="flex justify-center mb-4"></div>;
                   <stat.icon className="w-12 h-12 text-purple-400" />;
-                </div>;
+            </div>;
                 <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>;
                 <div className="text-gray-300 text-sm">{stat.label}</div>;
-              </div>;
+            </div>;
             ))}
           </div>
         </div>
@@ -141,7 +141,7 @@ const EnterprisePage: React.FC = () => {
           <div className="text-center mb-16"></div>
             <h2 className="text-4xl font-bold text-white mb-4">
               Enterprise-Grade Features;
-  </
+            </
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Built for scale, security, and performance to meet the demands of large organizations.
             </p>
@@ -159,14 +159,14 @@ const EnterprisePage: React.FC = () => {
                     </li>;
                   ))}
                 </ul>;
-              </div>;
+            </div>;
             ))}
           </div>
         </div>
       </section>
             <h2 className="text-4xl font-bold text-white mb-4">
               Comprehensive Solutions;
-  </
+            </
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               End-to-end enterprise solutions that address every aspect of your business operations.
             </p>
@@ -174,7 +174,7 @@ const EnterprisePage: React.FC = () => {
                     </li>
                   ))}
                 </ul>;
-              </div>;
+            </div>;
             ))}
           </div>
         </div>
@@ -203,7 +203,7 @@ const EnterprisePage: React.FC = () => {
             </button>
             <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
               Learn More;
-  </
+            </
           </div>
         </div>
       </section>
@@ -212,7 +212,7 @@ const EnterprisePage: React.FC = () => {
   );
 };
 export default EnterprisePage;
-  </button>
+            </button>
   </h2>
   </h2>
   </span>

@@ -46,7 +46,7 @@ const BlockchainPage: React.FC = () => {
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-white mb-6">
             Blockchain Solutions;
-  </
+            </
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your business with cutting-edge blockchain technology and decentralized solutions. 
             Powered by advanced AI and industry expertise.
@@ -86,7 +86,7 @@ const BlockchainPage: React.FC = () => {
               </h2>
               <p className="text-xl text-gray-600">
                 Leading blockchain expertise with proven track record in DeFi, NFTs, and enterprise solutions;
-  </
+            </
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="text-center">
@@ -127,10 +127,10 @@ const BlockchainPage: React.FC = () => {
               <div className="text-center mb-12">
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                   {category} Services;
-  </
+            </
                 <p className="text-xl text-gray-600">
                   Professional {category.toLowerCase()} solutions powered by blockchain technology;
-  </
+            </
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {blockchainServices
@@ -147,7 +147,7 @@ const BlockchainPage: React.FC = () => {
                         </div>
                         <div className="text-sm text-green-600 font-semibold">
                           Save up to 50% vs market rates;
-  </
+            </
                       </div>
                       <div className="mb-4">
                         <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
@@ -183,7 +183,7 @@ const BlockchainPage: React.FC = () => {
                       </div>
                       <button className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
                         Get Blockchain Quote;
-  </
+            </
                     </div>
                   ))}
               </div>
@@ -196,10 +196,10 @@ const BlockchainPage: React.FC = () => {
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Our Blockchain Capabilities;
-  </
+            </
               <p className="text-xl text-gray-600">
                 Comprehensive blockchain technologies and methodologies for modern business applications;
-  </
+            </
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg">
@@ -243,18 +243,18 @@ const BlockchainPage: React.FC = () => {
             </h2>
             <p className="text-xl mb-8 text-blue-100">
               Contact our blockchain experts for a free consultation and custom blockchain strategy development;
-  </
+            </
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href="tel:+13024640950"
                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center">
                 📞 +1 302 464 0950;
-  </
+            </
               <a 
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
                 ✉️ kleber@ziontechgroup.com;
-  </
+            </
             </div>
             <div className="mt-8 text-sm text-blue-200">
               <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
@@ -266,7 +266,7 @@ const BlockchainPage: React.FC = () => {
   );
 };
 export default BlockchainPage;
-  </a>
+            </a>
   </a>
   </p>
   </p>

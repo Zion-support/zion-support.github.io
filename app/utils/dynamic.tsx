@@ -28,11 +28,11 @@ export function dynamic<T extends ComponentType<unknown>>(importFun);
 ): ComponentType<unknown> {/* TODO: Fix JSX expression */}
     <Suspense fallback={options.loading ? options.loading() : <div>Loading...</div>}>;
       <LazyComponent {...props} /></LazyComponent>;
-    </Suspense>;
+            </Suspense>;
   );
 }
 export default dynamic;
-  </unknown>
+            </unknown>
   </T>
   </Suspense>
   </unknown>

@@ -2,90 +2,88 @@
 
 import fs from 'fs';
 import path from 'path';
+import { glob } from 'glob';
 
-function fixJsxSyntax(filePath) {
+// Pattern to match malformed JSX closing tags
+const malformedTagPattern = /;\s*\n\s*<\//g;
+const incompleteTagPattern = /<\s*$/gm;
+
+function fixJSXFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
-    
-    // Fix stray > characters in JSX
-    const lines = content.split('\n');
-    const fixedLines = [];
-    
-    for (let i = 0; i < lines.length; i++) {
-      const line = lines[i];
+    let originalContent = content;
+    let changes = 0;
+
+    // Fix malformed closing tags (pattern: ;\n  </)
+    content = content.replace(malformedTagPattern, (match) => {
+      changes++;
+      return ';\n            </';
+    });
+
+    // Fix incomplete tags at end of lines
+    content = content.replace(incompleteTagPattern, (match, offset) => {
+      // Look ahead to see what the next line contains
+      const lines = content.split('\n');
+      const currentLineIndex = content.substring(0, offset).split('\n').length - 1;
+      const nextLine = lines[currentLineIndex + 1];
       
-      // Check if this is a stray > character on its own line
-      if (line.trim() === '>') {
-        // Check if the previous line ends with a JSX tag opening
-        if (i > 0 && lines[i-1].trim().endsWith('>')) {
-          // Skip this line (it's a stray >)
-          modified = true;
-          continue;
-        }
+      if (nextLine && nextLine.trim().startsWith('<')) {
+        changes++;
+        return match.trim() + nextLine.trim();
       }
-      
-      // Fix mismatched closing tags
-      if (line.includes('</div>') && line.includes('</p>')) {
-        // This looks like a malformed closing tag
-        const fixedLine = line.replace(/<\/div>.*<\/p>/, '</p>');
-        if (fixedLine !== line) {
-          fixedLines.push(fixedLine);
-          modified = true;
-          continue;
-        }
-      }
-      
-      // Fix incomplete JSX attributes
-      if (line.includes('className=') && line.includes('>') && !line.includes('</')) {
-        // Check if this line has a proper JSX structure
-        const openTags = (line.match(/</g) || []).length;
-        const closeTags = (line.match(/>/g) || []).length;
-        
-        if (openTags > closeTags) {
-          // This might be an incomplete JSX element
-          const fixedLine = line.replace(/(className="[^"]*")>\s*>\s*/, '$1>');
-          if (fixedLine !== line) {
-            fixedLines.push(fixedLine);
-            modified = true;
-            continue;
-          }
-        }
-      }
-      
-      fixedLines.push(line);
-    }
+      return match;
+    });
+
+    // Fix specific patterns we've seen
+    // Pattern: "Key Benefits;\n  </"
+    content = content.replace(/Key Benefits;\s*\n\s*<\//g, 'Key Benefits</h2>');
     
-    if (modified) {
-      fs.writeFileSync(filePath, fixedLines.join('\n'));
-      console.log(`Fixed JSX syntax in: ${filePath}`);
+    // Pattern: "Get Started;\n  </"
+    content = content.replace(/Get Started;\s*\n\s*<\//g, 'Get Started</button>');
+    
+    // Pattern: "View Demo;\n  </"
+    content = content.replace(/View Demo;\s*\n\s*<\//g, 'View Demo</button>');
+    
+    // Pattern: "Ai 3d Generation;\n  </"
+    content = content.replace(/Ai 3d Generation;\s*\n\s*<\//g, 'Ai 3d Generation</h1>');
+    
+    // Pattern: "Advanced AI-powered.*;\n  </"
+    content = content.replace(/Advanced AI-powered[^;]*;\s*\n\s*<\//g, (match) => {
+      const text = match.replace(/;\s*\n\s*<\//, '');
+      return text + '</p>';
+    });
+
+    // Fix any remaining malformed closing tags
+    content = content.replace(/;\s*\n\s*<\//g, ';\n            </');
+
+    if (content !== originalContent) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed ${filePath} (${changes} changes)`);
       return true;
     }
     
     return false;
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
 }
 
-// Fix specific files that have JSX syntax errors
-const filesToFix = [
-  '/workspace/app/components/Footer.tsx',
-  '/workspace/app/5g-implementation/page.tsx',
-  '/workspace/app/App.tsx',
-  '/workspace/app/about/page.tsx',
-  '/workspace/app/accessibility/page.tsx'
-];
+// Main function
+async function main() {
+  // Find all TypeScript/TSX files
+  const files = await glob('app/**/*.{ts,tsx}');
 
-let fixedCount = 0;
+  console.log(`Found ${files.length} files to check...`);
 
-for (const file of filesToFix) {
-  if (fs.existsSync(file)) {
-    if (fixJsxSyntax(file)) {
+  let fixedCount = 0;
+  files.forEach(file => {
+    if (fixJSXFile(file)) {
       fixedCount++;
     }
-  }
+  });
+
+  console.log(`Fixed ${fixedCount} files`);
 }
 
-console.log(`Fixed JSX syntax in ${fixedCount} files.`);
+main().catch(console.error);

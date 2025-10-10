@@ -81,8 +81,8 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <script type="application/ld+json">;
         {JSON.stringify(structuredData || defaultStructuredData)}
       </script>;
-    </Helmet>;
+            </Helmet>;
   );
 };
 export default SEOHead;
-  </SEOHeadProps>
+            </SEOHeadProps>

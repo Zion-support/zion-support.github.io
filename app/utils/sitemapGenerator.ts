@@ -53,7 +53,7 @@ export const generateSitemap = useCallback((...args) => {}
     <lastmod>${new Date().toISOString()}</lastmod>;
     <changefreq>weekly</changefreq>;
     <priority>${page === '' ? '1.0' : '0.8'}</priority>;
-  </url>`).join('')}
+            </url>`).join('')}
 </urlset>`;
   return sitemap;
 }

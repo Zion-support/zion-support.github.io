@@ -118,7 +118,7 @@ const PricingPage: React.FC = () => {
             <div className="text-center mb-16">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 Transparent Pricing;
-  </
+            </
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Choose the perfect plan for your business needs. All plans include our core AI and IT services.
               </p>
@@ -134,7 +134,7 @@ const PricingPage: React.FC = () => {
                   {plan.popular && (
                     <div className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white text-sm font-semibold py-2 px-4 rounded-full text-center mb-6">
                       Most Popular;
-  </
+            </
                   )}
                   <h3 className="text-2xl font-bold text-white mb-4">{plan.name}</h3>
                   <p className="text-gray-300 mb-6">{plan.description}</p>
@@ -167,7 +167,7 @@ const PricingPage: React.FC = () => {
               </p>
               <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300">
                 Contact Sales;
-  </
+            </
             </div>
           </div>
         </section>
@@ -197,7 +197,7 @@ const PricingPage: React.FC = () => {
                     <div className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-2 rounded-full text-sm font-semibold flex items-center gap-2">
                       <Star className="w-4 h-4 fill-current" />
                       Most Popular;
-  </
+            </
                   </div>
                 )}
                 <div className="text-center mb-8">
@@ -243,7 +243,7 @@ const PricingPage: React.FC = () => {
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105">
                 <Zap className="w-5 h-5" />
                 Get Custom Quote;
-  </
+            </
             </div>
           </div>
         </div>
@@ -252,7 +252,7 @@ const PricingPage: React.FC = () => {
   );
 };
 export default PricingPage;
-  </Link>
+            </Link>
   </div>
   </button>
   </h1>

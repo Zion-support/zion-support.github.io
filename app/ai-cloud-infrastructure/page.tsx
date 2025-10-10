@@ -46,17 +46,16 @@ const AiCloudInfrastructurePage: React.FC = () => {
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
                 AI Cloud Infrastructure;
-  </
+            </
               <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
                 Transform your business with intelligent solutions powered by cutting-edge AI technology.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-                  Get Started;
-  </
+                  Get Started</button>
                 <button className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors">
                   Learn More;
-  </
+            </
               </div>
             </div>
           </div>
@@ -67,7 +66,7 @@ const AiCloudInfrastructurePage: React.FC = () => {
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Powerful AI Features;
-  </
+            </
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Discover how our AI platform can revolutionize your business operations.
               </p>
@@ -104,7 +103,7 @@ const AiCloudInfrastructurePage: React.FC = () => {
             </p>
             <button className="bg-white text-blue-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold">
               Start Your Free Trial;
-  </
+            </
           </div>
 </section>
       </main>
@@ -113,7 +112,7 @@ const AiCloudInfrastructurePage: React.FC = () => {
   );
 };
 export default AiCloudInfrastructurePage;
-  </button>
+            </button>
   </h2>
   </button>
   </button>

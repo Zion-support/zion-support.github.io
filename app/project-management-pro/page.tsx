@@ -70,7 +70,7 @@ const ProjectManagementProPage: React.FC = () => {
             <div className="text-center mb-16">
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
                 Project Management Pro;
-  </
+            </
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Streamline your projects with our comprehensive management platform. 
                 Organize tasks, collaborate with teams, and deliver projects on time.
@@ -79,11 +79,11 @@ const ProjectManagementProPage: React.FC = () => {
                 <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
                   <CheckSquare className="mr-2 h-5 w-5" />
                   Start Free Trial;
-  </
+            </
                 <button className="border border-white/20 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300 flex items-center justify-center">
                   <Phone className="mr-2 h-5 w-5" />
                   Call (302) 464-0950;
-  </
+            </
               </div>
             </div>
           </div>
@@ -94,7 +94,7 @@ const ProjectManagementProPage: React.FC = () => {
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Platform Features;
-  </
+            </
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Our project management platform provides everything you need to succeed.
               </p>
@@ -117,8 +117,7 @@ const ProjectManagementProPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Key Benefits;
-  </
+                Key Benefits</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Transform your project management with our comprehensive platform.
               </p>
@@ -147,11 +146,11 @@ const ProjectManagementProPage: React.FC = () => {
                 <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
                   <Phone className="mr-2 h-5 w-5" />
                   Call (302) 464-0950;
-  </
+            </
                 <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
                   <Mail className="mr-2 h-5 w-5" />
                   Email Us;
-  </
+            </
               </div>
             </div>
           </div>
@@ -161,7 +160,7 @@ const ProjectManagementProPage: React.FC = () => {
   );
 };
 export default ProjectManagementProPage;
-  </button>
+            </button>
   </button>
   </h2>
   </h2>

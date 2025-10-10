@@ -83,9 +83,9 @@ export default function DocsPage() {
                 <div className="flex items-center gap-3 mb-4"></div>;
                   <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center"></div>;
                     <BookOpen className="w-5 h-5 text-white" />;
-                  </div>;
+            </div>;
                   <span className="text-purple-400 text-sm font-medium">{doc.category}</span>;
-                </div>;
+            </div>;
                 <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-purple-400 transition-colors">;
                   {doc.title}
                 </h3>;
@@ -129,13 +129,13 @@ export default function DocsPage() {
                             {doc.title}
                           </h4>;
                           <p className="text-gray-300 text-sm">{doc.description}</p>;
-                        </div>;
+            </div>;
                         <ChevronRight className="w-5 h-5 text-gray-400 group-hover:text-purple-400 transition-colors" />;
-                      </div>;
-                    </a>;
+            </div>;
+            </a>;
                   ))}
                 </div>;
-              </div>;
+            </div>;
             ))}
           </div>
         </div>
@@ -152,10 +152,10 @@ export default function DocsPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-white text-purple-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors">
               Contact Support;
-  </
+            </
             <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-purple-600 transition-colors">
               Join Community;
-  </
+            </
           </div>
         </div>
       </section>

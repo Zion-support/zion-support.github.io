@@ -528,12 +528,12 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
         <div>,</div>;
           <strong>${error.severity} Error</strong>;
           <p style="margin:5px 0 0 0;font-size:14px;">${error.message}</p>;
-        </div>;
+            </div>;
         <button onclick="this.parentElement.parentElement.remove()" style="background: none;border:none;color:white;font-size:18px;cursor:pointer;margin-left:10px;">×</button>;
       <div style="display:flex;justify-content:space-between;align-items:center;"></div>;
         <div></div>;
           <strong>${error.severity} Error<p style="margin:5px 0 0 0;font-size:14px;">${error.message}</p><button onclick="this.parentElement.parentElement.remove()" style="background:none;border:none;color:white;font-size:18px;cursor:pointer;margin-left:10px;">×</button>;
-      </div>;
+            </div>;
     `;
     document.body.appendChild(notification);
     // Auto-remove after 5 seconds for non-critical errors;
@@ -598,7 +598,7 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
           <p style="margi,;
   n: 5px 0 0 0; font-siz,";
   e: 14px;">${error.message}</p>;
-        </div>";
+            </div>";
         <button onclick="this.parentElement.parentElement.remove()" style=";
           backgroun,;
   d: none,;
@@ -613,7 +613,7 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
           margin-lef,;
   t: 10px;";
         ">×</button>;
-      </div>`;
+            </div>`;
     `;
     document.body.appendChild(notification);
     // Auto-remove after 5 seconds for non-critical errors;
@@ -973,7 +973,7 @@ export class ErrorBoundary extends React.Component<;
             >;
               Try again;
             </button>;
-          </div>;
+            </div>;
         );
       );
     }
@@ -1016,7 +1016,7 @@ export const useErrorHandler = () => {}
     clearResolvedErrors: () => errorHandler.clearResolvedErrors()};
 };
 export default ErrorHandler;</string>;
-</string>;
+            </string>;
 // React hook for error handling;
 export const useErrorHandler = () => {/* TODO: Fix JSX expression */}
     },;

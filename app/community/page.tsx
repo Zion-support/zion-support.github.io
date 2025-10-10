@@ -46,7 +46,7 @@ const CommunityPage: React.FC = () => {
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-white mb-6">
             Community;
-  </
+            </
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Join our vibrant community of developers, entrepreneurs, and tech enthusiasts. 
             Connect, learn, and grow together.
@@ -88,11 +88,11 @@ const CommunityPage: React.FC = () => {
             <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
               <Users className="mr-2 h-5 w-5" />
               Join Community;
-  </
+            </
             <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
               <MessageCircle className="mr-2 h-5 w-5" />
               Learn More;
-  </
+            </
           </div>
         </div>
       </div>
@@ -100,6 +100,6 @@ const CommunityPage: React.FC = () => {
   );
 };
 export default CommunityPage;
-  </button>
+            </button>
   </button>
   </h1>

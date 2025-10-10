@@ -79,8 +79,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
                   <ArrowRight className="w-5 h-5" />
                 </button>
                 <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400/10 transition-all">
-                  View Demo;
-  </
+                  View Demo</button>
               </div>
             </div>
           </div>
@@ -92,7 +91,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
               <h2 className="text-4xl font-bold text-white mb-4">Powerful Analytics Features</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Everything you need to make data-driven decisions with confidence;
-  </
+            </
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (</div>
@@ -114,7 +113,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
               <h2 className="text-4xl font-bold text-white mb-4">Platform Performance</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Built for scale and reliability;
-  </
+            </
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {metrics.map((metric, index) => (</div>
@@ -136,7 +135,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
               <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Dashboard</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Experience the difference with our AI-powered analytics platform;
-  </
+            </
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
               <div className="space-y-6">
@@ -185,7 +184,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
                 </button>
                 <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400/10 transition-all">
                   Schedule Demo;
-  </
+            </
               </div>
             </div>
           </div>
@@ -195,7 +194,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
   );
 };
 export default AIAnalyticsDashboardPage;
-  </button>
+            </button>
   </p>
   </p>
   </p>

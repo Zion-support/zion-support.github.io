@@ -54,7 +54,7 @@ export default function TermsPage() {
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
             Please read these terms carefully before using our services;
-  </
+            </
           <div className="flex items-center justify-center text-sm text-blue-200"></div>
             <Calendar className="h-4 w-4 mr-2" />
             Last updated: {lastUpdated}
@@ -78,9 +78,9 @@ export default function TermsPage() {
                       <p className="text-gray-700 leading-relaxed">;
                         {section.content}
                       </p>;
-                    </div>;
-                  </div>;
-                </div>;
+            </div>;
+            </div>;
+            </div>;
               ))}
             </div>
             <div className="mt-16 bg-gray-50 rounded-lg p-8"></div>

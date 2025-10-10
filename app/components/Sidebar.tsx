@@ -207,7 +207,7 @@ const Sidebar: React.FC = () => {
                         >;
                           <item.icon className="w-4 h-4 flex-shrink-0" />;
                           <span>{item.name}</span>;
-                        </Link>;
+            </Link>;
                       ))}
                     </div>;
                   )}
@@ -242,5 +242,5 @@ const Sidebar: React.FC = () => {
 };
 Sidebar.displayName = 'Sidebar';
 export default Sidebar;
-  </div>
+            </div>
   </string>

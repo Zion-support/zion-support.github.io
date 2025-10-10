@@ -48,7 +48,7 @@ const ServiceWorkerRegistrationPage: React.FC = () => {
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
                 ServiceWorkerRegistration;
-  </
+            </
               <br />
               <span className="text-white">Solutions</span>
             </h1>
@@ -63,7 +63,7 @@ const ServiceWorkerRegistrationPage: React.FC = () => {
               </button>
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
                 Learn More;
-  </
+            </
             </div>
           </div>
         </div>
@@ -97,8 +97,7 @@ const ServiceWorkerRegistrationPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Benefits;
-  </
+              Key Benefits</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the power of our serviceworkerregistration solutions for your business.
             </p>
@@ -127,11 +126,11 @@ const ServiceWorkerRegistrationPage: React.FC = () => {
               <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
                 <Phone className="mr-2 h-5 w-5" />
                 Call Now;
-  </
+            </
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
                 <Mail className="mr-2 h-5 w-5" />
                 Email Us;
-  </
+            </
             </div>
           </div>
         </div>
@@ -140,7 +139,7 @@ const ServiceWorkerRegistrationPage: React.FC = () => {
   );
 };
 export default ServiceWorkerRegistrationPage;
-  </button>
+            </button>
   </button>
   </h2>
   </button>

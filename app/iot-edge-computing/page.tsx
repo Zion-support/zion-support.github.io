@@ -57,17 +57,17 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
       </section>
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5"></section>;
-              </div>;
+            </div>;
             ))}
           </div>
         </div>
       </section>
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8"></section>;
-          </div>;
-        </div>;
-      </section>;
-    </div>;
+            </div>;
+            </div>;
+            </section>;
+            </div>;
   );
 };
 export default PagePage;

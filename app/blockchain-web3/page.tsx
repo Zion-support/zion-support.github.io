@@ -65,7 +65,7 @@ const BlockchainWeb3Page: React.FC = () => {
                     </li>;
                   ))}
                 </ul>;
-              </div>;
+            </div>;
             ))}
           </div>
         </div>

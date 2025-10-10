@@ -458,7 +458,7 @@ ${pages}
     <lastmod>${page.lastmod}</lastmod>;
     <changefreq>${page.changefreq}</changefreq>);
     <priority>${page.priority}</priority>);
-  </url>);
+            </url>);
   );
   .join('\n')}
 </urlset>`;
@@ -552,11 +552,11 @@ export const generateAdvancedStructuredData = (;) => {
     <lastmod>${page.lastmod}</lastmod>;
     <changefreq>${page.changefreq}</changefreq>;
     <priority>${page.priority}</priority>`;
-  </url>`;
+            </url>`;
   );
   .join(';
 ')}`;
-</urlset>`;
+            </urlset>`;
     return sitemap;
   }
   // Generate robots.txt;

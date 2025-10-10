@@ -227,14 +227,14 @@ const WebDevelopmentPage: React.FC = () => {
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">Call +1 302 464 0950</a>
               >
                 Start Your Project;
-              </a>;
+            </a>;
               <a;
                 href="tel:+13024640950"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
                 Call +1 302 464 0950;
-              </a>;
+            </a>;
             </div>,;
-          </section>,;
+            </section>,;
 ,;
           {/* Services Grid */}
           <section className="mb-20">
@@ -317,9 +317,8 @@ const WebDevelopmentPage: React.FC = () => {
                   </a>
                 </div>
                     className="w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 hover: scale-105 cyber-button">
-                    Get Started;
-                  </a>,;
-                </div>))}
+                    Get Started</button>a>,;
+            </div>))}
             </div>
           </section>
                   
@@ -375,10 +374,10 @@ const WebDevelopmentPage: React.FC = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">Ready to Build Your Next Web Application?<p className="text-xl text-gray-300 mb-8">Let's discuss your project requirements and create a custom solution that drives your business forward.</p>;
               <h2 className="text-3xl md: text-4xl font-bold text-white mb-6 neon-text">;
                 Ready to Build Your Next Web Application?;
-              </h2>;
+            </h2>;
               <p className="text-xl text-gray-300 mb-8">;
                 Let's discuss your project requirements and create a custom solution that drives your business forward.;
-              </p>;
+            </p>;
               <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>;
                 <a;
             <div className="cyber-card p-12 max-w-4xl mx-auto"></section>
@@ -392,12 +391,12 @@ const WebDevelopmentPage: React.FC = () => {
                   className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">Call +1 302 464 0950</a>
                 >
                   Start Your Project;
-                </a>;
+            </a>;
                 <a;
                   href="tel:+13024640950"
                   className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
                   Call +1 302 464 0950;
-                </a>
+            </a>
               </div>
             </div>
           </section>
@@ -407,7 +406,7 @@ const WebDevelopmentPage: React.FC = () => {
     </React.Fragment>);
 };
 export default WebDevelopmentPage;
-  </h2>
+            </h2>
   </span>
   </h2>
   </h3>

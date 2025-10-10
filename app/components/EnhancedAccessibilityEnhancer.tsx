@@ -49,7 +49,7 @@ const EnhancedAccessibilityEnhancerPage: React.FC = () => {
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
                 EnhancedAccessibilityEnhancer;
-  </
+            </
               <br />
               <span className="text-white">Solutions</span>
             </h1>
@@ -64,7 +64,7 @@ const EnhancedAccessibilityEnhancerPage: React.FC = () => {
               </button>
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
                 Learn More;
-  </
+            </
             </div>
           </div>
         </div>
@@ -98,8 +98,7 @@ const EnhancedAccessibilityEnhancerPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Benefits;
-  </
+              Key Benefits</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the power of our enhancedaccessibilityenhancer solutions for your business.
             </p>
@@ -116,7 +115,7 @@ const EnhancedAccessibilityEnhancerPage: React.FC = () => {
       </section>
 };
 export default EnhancedAccessibilityEnhancerPage;
-  </h2>
+            </h2>
   </button>
   </span>
   </div>

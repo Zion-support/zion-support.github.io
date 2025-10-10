@@ -41,4 +41,4 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({ childre
   return <React.Fragment>{children}</React.Fragment>;
 };
 export default UserExperienceEnhancer;
-  </UserExperienceEnhancerProps>
+            </UserExperienceEnhancerProps>

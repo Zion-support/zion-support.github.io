@@ -92,7 +92,7 @@ challenge: 'Legacy on-premises infrastructure limiting scalability and increasin
         <div className="relative max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Case Studies;
-  </
+            </
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Discover how we've helped businesses transform with cutting-edge AI and IT solutions.
           </p>
@@ -163,7 +163,7 @@ challenge: 'Legacy on-premises infrastructure limiting scalability and increasin
                     <button className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors">
                       <ExternalLink className="w-4 h-4" />
                       Share;
-  </
+            </
                   </div>
           </div>
         </div>
@@ -215,7 +215,7 @@ challenge: 'Legacy on-premises infrastructure limiting scalability and increasin
   );
 };
 export default CaseStudiesPage;
-  </button>
+            </button>
   </div>
   </div>
   </div>

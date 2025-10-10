@@ -36,9 +36,9 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
       </section>
       {/* CTA Section */}
           </div>;
-        </div>;
-      </section>;
-    </div>;
+            </div>;
+            </section>;
+            </div>;
   );
 };
 export default PagePage;

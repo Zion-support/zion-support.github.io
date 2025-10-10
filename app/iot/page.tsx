@@ -156,14 +156,14 @@ const IoTPage: React.FC = () => {
               </h1>
               <p className="text-xl md:text-2xl mb-8 text-green-100 max-w-3xl mx-auto">
                 Connect, monitor, and optimize your world with intelligent Internet of Things solutions;
-  </
+            </
               <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
                 <button className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors shadow-lg">
                   Explore IoT Solutions;
-  </
+            </
                 <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors">
                   Schedule IoT Consultation;
-  </
+            </
               </div>
             </div>
           </div>
@@ -177,7 +177,7 @@ const IoTPage: React.FC = () => {
               </h2>
               <p className="text-xl text-gray-600">
                 End-to-end IoT solutions with proven expertise in connectivity, security, and analytics;
-  </
+            </
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
               <div className="text-center"></div>
@@ -218,10 +218,10 @@ const IoTPage: React.FC = () => {
               <div className="text-center mb-12"></div>
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                   {category} Solutions;
-  </
+            </
                 <p className="text-xl text-gray-600">
                   Specialized {category.toLowerCase()} solutions powered by IoT technology;
-  </
+            </
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {iotServices
@@ -274,12 +274,12 @@ const IoTPage: React.FC = () => {
                       </div>
                       <button className="w-full bg-green-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-green-700 transition-colors">
                         Get IoT Quote;
-  </
+            </
                     </div>
                   ))}
               </div>;
             </div>;
-          </section>;
+            </section>;
         ))}
         {/* IoT Capabilities Showcase */}
         <section className="py-16 bg-white">
@@ -287,10 +287,10 @@ const IoTPage: React.FC = () => {
             <div className="text-center mb-12"></div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Our IoT Capabilities;
-  </
+            </
               <p className="text-xl text-gray-600">
                 Comprehensive IoT technologies and methodologies for connected solutions;
-  </
+            </
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
               <div className="text-center p-6 bg-gradient-to-br from-green-50 to-emerald-100 rounded-lg"></div>
@@ -334,18 +334,18 @@ const IoTPage: React.FC = () => {
             </h2>
             <p className="text-xl mb-8 text-green-100">
               Contact our IoT experts for a free consultation and custom IoT strategy development;
-  </
+            </
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <a 
                 href="tel:+13024640950"
                 className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors inline-flex items-center">
                 📞 +1 302 464 0950;
-  </
+            </
               <a 
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors">
                 ✉️ kleber@ziontechgroup.com;
-  </
+            </
             </div>
             <div className="mt-8 text-sm text-green-200"></div>
               <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
@@ -357,7 +357,7 @@ const IoTPage: React.FC = () => {
   );
 };
 export default IoTPage;
-  </a>
+            </a>
   </a>
   </p>
   </p>

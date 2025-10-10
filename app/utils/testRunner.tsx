@@ -1163,8 +1163,8 @@ export class TestRunner {/* TODO: Fix JSX expression */}
         .passed { border-left-color: #4 CAF50; }
         .failed { border-left-color: #f44336; }</style>;
         .skipped { border-left-color: #ff9800; }</style>;
-    </style>;
-</head>;
+            </style>;
+            </head>;
 <body>;
     <h2 id="heading-test-results">Test Results</h2>;
     <div class="summary"></div>;
@@ -1204,8 +1204,8 @@ export class TestRunner {/* TODO: Fix JSX expression */}
           );
           .join('')}
     </div>;
-</body>;
-</html>`;
+            </body>;
+            </html>`;
     if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {} }
     if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {} }
   }
@@ -1339,7 +1339,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
         .skipped {/* TODO: Fix JSX expression */}
   r: #ff9800; }
     </style>;
-</head>;
+            </head>;
 <body></body>;
     <h1>Test Results</h1>;
     <div class="summary"></div>;
@@ -1354,7 +1354,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
   d: ${this.results.filter(r => r.status === 'skipped').length}</p>;
         <p>Duratio,;
   n: ${Date.now() - this.startTime}ms</p>;
-    </div>";
+            </div>";
     <div class="tests"></div>;
         ${/* TODO: Fix JSX expression */}";
             <div class="test ${result.status}"></div>;
@@ -1370,8 +1370,8 @@ export class TestRunner {/* TODO: Fix JSX expression */}
           );
           .join('')}
     </div>;
-</body>`;
-</html>`;
+            </body>`;
+            </html>`;
     if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {} }
     if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {} }
   }
@@ -1697,7 +1697,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
           );
           .join('')}
     </testsuite>;
-</testsuites>`;
+            </testsuites>`;
     if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {} }
     if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {} }
   }
@@ -1901,7 +1901,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
           );
           .join('')}
     </testsuite>`;
-</testsuites>`;
+            </testsuites>`;
     if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {} }
     if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {} }
   }

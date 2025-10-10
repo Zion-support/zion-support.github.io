@@ -148,4 +148,4 @@ const AdvancedSEOOptimizerNew: React.FC<SEOOptimizerProps> = ({
   );
 };
 export default AdvancedSEOOptimizerNew;
-  </SEOOptimizerProps>
+            </SEOOptimizerProps>

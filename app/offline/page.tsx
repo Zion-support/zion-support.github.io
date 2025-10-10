@@ -15,7 +15,7 @@ import { Helmet } from 'react-helmet-async';
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
                 Page;
-  </
+            </
               <br />
               <span className="text-white">Solutions</span>
             </h1>
@@ -30,7 +30,7 @@ import { Helmet } from 'react-helmet-async';
               </button>
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
                 Learn More;
-  </
+            </
             </div>
           </div>
         </div>
@@ -39,5 +39,5 @@ import { Helmet } from 'react-helmet-async';
   );
 };
 export default PagePage;
-  </button>
+            </button>
   </span>

@@ -41,10 +41,10 @@ const EnhancedServicesShowcase: React.FC = () => {
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 cyber-text neon-pulse">
             Our Core Services;
-  </
+            </
           <p className="text-xl text-cyan-400 max-w-3xl mx-auto">
             Comprehensive AI and IT solutions designed to transform your business and drive innovation;
-  </
+            </
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service, index) => (</div>
@@ -84,5 +84,5 @@ const EnhancedServicesShowcase: React.FC = () => {
   );
 };
 export default EnhancedServicesShowcase;
-  </p>
+            </p>
   </h2>

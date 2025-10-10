@@ -90,7 +90,7 @@ const FinancialITPage: React.FC = () => {
             Financial Services
             <span className="block bg-gradient-to-r from-green-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
               IT Solutions;
-  </
+            </
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
             Specialized IT solutions for financial services with SOX compliance, security, and regulatory requirements.
@@ -103,7 +103,7 @@ const FinancialITPage: React.FC = () => {
             </button>
             <button className="border border-green-400 text-green-400 hover:bg-green-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
               Schedule Demo;
-  </
+            </
           </div>
         </div>
       </section>
@@ -114,7 +114,7 @@ const FinancialITPage: React.FC = () => {
             <h2 className="text-4xl font-bold text-white mb-4">Financial IT Solutions</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Comprehensive IT solutions designed specifically for financial services industry;
-  </
+            </
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
@@ -132,7 +132,7 @@ const FinancialITPage: React.FC = () => {
                     </li>;
                   ))}
                 </ul>;
-              </div>;
+            </div>;
             ))}
           </div>
         </div>
@@ -143,7 +143,7 @@ const FinancialITPage: React.FC = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Financial Services;
-  </
+            </
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Comprehensive IT solutions for all aspects of financial services and banking operations.
             </p>
@@ -188,14 +188,14 @@ const FinancialITPage: React.FC = () => {
           <h2 className="text-4xl font-bold text-white mb-6">Ready for Financial IT Excellence?</h2>
           <p className="text-xl text-gray-300 mb-8">
             Join leading financial institutions using our specialized IT solutions for compliance and security;
-  </
+            </
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
               Start Free Trial;
-  </
+            </
             <button className="border border-green-400 text-green-400 hover:bg-green-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
               Contact Sales;
-  </
+            </
           </div>
         </div>
       </section>
@@ -204,7 +204,7 @@ const FinancialITPage: React.FC = () => {
   );
 };
 export default FinancialITPage;
-  </button>
+            </button>
   </button>
   </p>
   </h2>

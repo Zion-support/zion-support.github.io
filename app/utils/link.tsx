@@ -77,12 +77,12 @@ export const,;
       aria-label={ariaLabel}
       {...props}
     >{children}</a>;
-    </a>;
+            </a>;
       aria-label={ariaLabel});
       {...props});
     >);
       {children});
-    </a>);
+            </a>);
   );
 }
 export default Link;
@@ -92,6 +92,6 @@ export default Link;
   );
 };
 export default Link;
-  </LinkProps>
+            </LinkProps>
   </LinkProps>
   </LinkProps>
