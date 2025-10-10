@@ -288,7 +288,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
               : 'N/A'}</div>
         </div>
         {_recommendations.length > 0 && (
-          <div className='mt-2'></div>
+          <div className='mt-2'>
             <h4 className='font-semibold text-xs text-red-600'>
               Recommendations:
             </h4>
@@ -297,6 +297,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
                 <li key={index}>• {rec}</li>
               ))}
             </ul>
+          </div>
           </div>
         )}
       </div>
