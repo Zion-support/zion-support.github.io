@@ -92,7 +92,8 @@ class MonitoringService {
         });
         fcpObserver.observe({ entryTypes: ['paint'] });
       } catch (error) {
-        // }
+        console.log('Performance metric recorded:', entry);
+      }
     }
   }
 
@@ -101,7 +102,8 @@ class MonitoringService {
       try {
         const longTaskObserver = new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
-            // }
+            console.log('Long task detected:', entry);
+          }
         })
         longTaskObserver.observe({ entryTypes: ['longtask'] })
       } catch (error) {
@@ -118,12 +120,14 @@ class MonitoringService {
           entries.forEach((entry: PerformanceEntry) => {
             const resourceEntry = entry as PerformanceResourceTiming;
             if (resourceEntry.duration > 1000) {
-              // }
+              console.log('Slow resource detected:', resourceEntry);
+            }
           });
         });
         resourceObserver.observe({ entryTypes: ['resource'] });
       } catch (_error) {
-        // }
+        console.warn('Resource monitoring failed:', _error);
+      }
     }
   }
 
@@ -158,7 +162,8 @@ class MonitoringService {
     const thresholds = performanceConfig.webVitals[name as keyof typeof performanceConfig.webVitals]
     if (thresholds) {
       const rating = value <= thresholds.good ? 'good' : value <= thresholds.needsImprovement ? 'needs-improvement' : 'poor'
-      // }
+      console.log('Performance metric reported:', { name, value });
+    }
     // Send to analytics (if configured)
     if (typeof (window as any).gtag === 'function') {
       (window as any).gtag('event', name, {

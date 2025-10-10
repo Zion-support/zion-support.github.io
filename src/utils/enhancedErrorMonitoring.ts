@@ -202,7 +202,8 @@ class EnhancedErrorMonitoring {
     }
     // Log to console in development
     if (process.env['NODE_ENV'] === 'development') {
-      // }
+      console.error('Error monitoring failed:', error);
+    }
   }
   /**
    * Find similar error in queue

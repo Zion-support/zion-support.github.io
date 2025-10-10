@@ -240,7 +240,8 @@ export class ErrorHandler {
         body: JSON.stringify(error)
       });
     } catch (err) {
-      // }
+      console.error('Failed to send error report:', err);
+    }
   }
   // Report error
   private async reportError(error: AppError) {
@@ -257,7 +258,8 @@ export class ErrorHandler {
         })
       });
     } catch (err) {
-      // }
+      console.error('Failed to report error:', err);
+    }
   }
   // Notify user
   private notifyUser(error: AppError) {
@@ -351,7 +353,8 @@ export class ErrorHandler {
       if (retryItem.retryCount < this.config.maxRetries) {
         this.scheduleRetry(retryItem.error);
       } else {
-        // }
+        console.warn('Unknown error type:', error);
+      }
     }
   }
   // Get all errors

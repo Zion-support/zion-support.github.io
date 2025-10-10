@@ -67,11 +67,14 @@ class ErrorLogger {
     };
     console.group(`%c[${entry.severity.toUpperCase()}] ${entry.message}`, styles[entry.severity]);
     if (entry.error) {
-      // }
+      console.log('Error details:', entry.details);
+    }
     if (entry.context) {
-      }
+      console.log('Error context:', entry.context);
+    }
     if (entry.stackTrace) {
-      }
+      console.log('Stack trace:', entry.stackTrace);
+    }
     console.groupEnd();
   }
   /**
@@ -102,7 +105,8 @@ class ErrorLogger {
       });
     } catch (error) {
       // Silently fail to avoid infinite loop
-      // }
+      console.error('Failed to send error to external service:', error);
+    }
   }
   /**
    * Get recent logs

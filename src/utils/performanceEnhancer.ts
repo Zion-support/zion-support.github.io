@@ -184,7 +184,8 @@ export const optimizeScrollPerformance = () => {
     const observer = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {
         if (process.env['NODE_ENV'] === 'development') {
-          // }
+          console.log('LCP entry:', entry);
+        }
       }
     });
     observer.observe({ entryTypes: ['largest-contentful-paint'] });
@@ -199,7 +200,8 @@ export const optimizeScrollPerformance = () => {
         const fidEntry = entry as FirstInputEntry;
         const fid = fidEntry.processingStart - entry.startTime;
         if (process.env['NODE_ENV'] === 'development') {
-          // }
+          console.log('FID entry:', fidEntry);
+        }
       }
     });
     observer.observe({ entryTypes: ['first-input'] });
@@ -259,5 +261,6 @@ export const initializePerformanceEnhancements = () => {
   // Collect performance metrics
   const metrics = collectPerformanceMetrics();
   if (metrics && (process.env['NODE_ENV'] === 'development' || import.meta.env.DEV)) {
-    // }
+    console.log('Performance metrics collected:', metrics);
+  }
 };

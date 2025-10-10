@@ -3,6 +3,13 @@
  * Enhanced Analytics Tracker
  * Provides comprehensive tracking for user interactions, performance metrics, and errors
  */
+
+// Extend Window interface to include gtag
+declare global {
+  interface Window {
+    gtag?: (command: string, action: string, parameters?: Record<string, unknown>) => void;
+  }
+}
 interface AnalyticsEvent {
   category: string;
   action: string;
@@ -52,7 +59,8 @@ class AnalyticsTracker {
       }
       // Also log to console in development
       if (process.env.NODE_ENV === 'development') {
-        }
+        console.log('Event tracked:', event);
+      }
     };
     if (this.isInitialized) {
       track();
@@ -74,7 +82,8 @@ class AnalyticsTracker {
         });
       }
       if (process.env.NODE_ENV === 'development') {
-        }
+        console.log('Page view tracked:', path);
+      }
     };
     if (this.isInitialized) {
       track();
@@ -97,7 +106,8 @@ class AnalyticsTracker {
         });
       }
       if (process.env.NODE_ENV === 'development') {
-        }
+        console.log('Performance tracked:', metrics);
+      }
     };
     if (this.isInitialized) {
       track();
@@ -119,7 +129,8 @@ class AnalyticsTracker {
         });
       }
       // Always log errors to console
-      // };
+      console.error('Error tracked:', error);
+    };
     if (this.isInitialized) {
       track();
     } else {
@@ -141,7 +152,8 @@ class AnalyticsTracker {
         });
       }
       if (process.env.NODE_ENV === 'development') {
-        }
+        console.log('Timing tracked:', { category, variable, value, label });
+      }
     };
     if (this.isInitialized) {
       track();
@@ -163,7 +175,8 @@ class AnalyticsTracker {
         });
       }
       if (process.env.NODE_ENV === 'development') {
-        }
+        console.log('Conversion tracked:', { conversionId, value });
+      }
     };
     if (this.isInitialized) {
       track();

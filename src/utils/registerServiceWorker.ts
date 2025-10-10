@@ -60,7 +60,7 @@ export async function registerServiceWorker(
     });
     return registration;
   } catch (error) {
-    // if (config.onError && error instanceof Error) {
+    if (config.onError && error instanceof Error) {
       config.onError(error);
     }
   }
