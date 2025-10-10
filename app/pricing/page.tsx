@@ -64,7 +64,6 @@ const PricingPage: React.FC = () => {
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/pricing" />
       </Helmet>
-<<<<<<< HEAD
 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -78,7 +77,6 @@ const PricingPage: React.FC = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
-=======
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
@@ -100,7 +98,6 @@ const PricingPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="grid md:grid-cols-3 gap-8">
               {plans.map((plan, index) => (
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
                 <div
                   key={index}
                   className={`relative bg-white/10 backdrop-blur-sm rounded-2xl p-8 ${
@@ -108,7 +105,6 @@ const PricingPage: React.FC = () => {
                   }`}
                 >
                   {plan.popular && (
-<<<<<<< HEAD
                     <div className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white text-sm font-semibold py-2 px-4 rounded-full text-center mb-6">
                       Most Popular;
   </
@@ -120,7 +116,6 @@ const PricingPage: React.FC = () => {
                     <span className="text-gray-400 ml-2">/month</span>
                   </div>
                   <ul className="space-y-3 mb-8">
-=======
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <div className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center">
                         <Star className="w-4 h-4 mr-1" />
@@ -139,7 +134,6 @@ const PricingPage: React.FC = () => {
                   </div>
 
                   <ul className="space-y-4 mb-8">
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-start">
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" />
@@ -147,7 +141,6 @@ const PricingPage: React.FC = () => {
                       </li>
                     ))}
                   </ul>
-<<<<<<< HEAD
                   <button className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular
                       ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white hover:from-cyan-600 hover:to-purple-600'
@@ -166,7 +159,6 @@ const PricingPage: React.FC = () => {
               <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300">
                 Contact Sales;
   </
-=======
 
                   <div className="text-center">
                     {plan.name === 'Enterprise' ? (
@@ -253,12 +245,10 @@ const PricingPage: React.FC = () => {
                   Free Consultation
                 </Link>
               </div>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
             </div>
           </div>
         </section>
       </div>
-<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center mb-16">
@@ -344,10 +334,8 @@ export default PricingPage;
   </button>
   </h1>
   </div>
-=======
     </>
   );
 };
 
 export default PricingPage;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

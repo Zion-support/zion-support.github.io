@@ -73,31 +73,24 @@ const Footer: React.FC = memo(() => {
 
           {/* AI Services */}
           <div>
-<<<<<<< HEAD
             <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
               <Brain className="w-5 h-5 mr-2" />
               AI Services;
   </
-=======
             <h3 className="text-lg font-semibold mb-4">AI Services</h3>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
             <ul className="space-y-2">
               {aiServices.slice(0, 6).map((service, index) => (
                 <li key={index}>
                   <Link 
-<<<<<<< HEAD
                     href={service.url}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
-=======
                     href={service.url} 
                     className="text-gray-300 hover:text-white text-sm transition-colors"
                   >
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
                     {service.name}
                   </Link>
                 </li>
               ))}
-<<<<<<< HEAD
               <li>
                 <Link 
                   href="/ai-services"
@@ -105,26 +98,20 @@ const Footer: React.FC = memo(() => {
                   View All AI Services →
                 </Link>
               </li>
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
             </ul>
           </div>
 
           {/* IT Services */}
           <div>
-<<<<<<< HEAD
             <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
               <Cloud className="w-5 h-5 mr-2" />
               IT Services;
   </
-=======
             <h3 className="text-lg font-semibold mb-4">IT Services</h3>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
             <ul className="space-y-2">
               {itServices.map((service, index) => (
                 <li key={index}>
                   <Link 
-<<<<<<< HEAD
                     href={service.url}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
                     {service.name}
@@ -177,11 +164,9 @@ const Footer: React.FC = memo(() => {
                   <Link 
                     href={service.url}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
-=======
                     href={service.url} 
                     className="text-gray-300 hover:text-white text-sm transition-colors"
                   >
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
                     {service.name}
                   </Link>
                 </li>
@@ -191,7 +176,6 @@ const Footer: React.FC = memo(() => {
 
           {/* Micro SaaS */}
           <div>
-<<<<<<< HEAD
             <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
               <Users className="w-5 h-5 mr-2" />
               Company;
@@ -203,7 +187,6 @@ const Footer: React.FC = memo(() => {
                     href={link.url}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
                     {link.name}
-=======
             <h3 className="text-lg font-semibold mb-4">Micro SaaS</h3>
             <ul className="space-y-2">
               {microSaasServices.map((service, index) => (
@@ -213,12 +196,10 @@ const Footer: React.FC = memo(() => {
                     className="text-gray-300 hover:text-white text-sm transition-colors"
                   >
                     {service.name}
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
                   </Link>
                 </li>
               ))}
             </ul>
-<<<<<<< HEAD
             <h3 className="text-lg font-semibold mb-4 text-cyan-400">Support</h3>
             <ul className="space-y-2 mb-6">
               {supportLinks.map((link, index) => (
@@ -256,8 +237,6 @@ const Footer: React.FC = memo(() => {
                 {contactInfo.emergency}
               </div>
             </div>
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
           </div>
         </div>
 
@@ -266,7 +245,6 @@ const Footer: React.FC = memo(() => {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
               © {currentYear} Zion Tech Group. All rights reserved.
-<<<<<<< HEAD
             </div>
             <div className="flex space-x-6">
               <a href="/privacy" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
@@ -278,7 +256,6 @@ const Footer: React.FC = memo(() => {
               <a href="/cookies" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
                 Cookie Policy;
   </
-=======
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <Link href="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">
@@ -290,7 +267,6 @@ const Footer: React.FC = memo(() => {
               <Link href="/cookies" className="text-gray-400 hover:text-white text-sm transition-colors">
                 Cookie Policy
               </Link>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
             </div>
           </div>
         </div>
@@ -300,7 +276,6 @@ const Footer: React.FC = memo(() => {
 });
 
 Footer.displayName = 'Footer';
-<<<<<<< HEAD
 export default Footer;
   </a>
   </a>
@@ -310,7 +285,5 @@ export default Footer;
   </h3>
   </h3>
   </h3>
-=======
 
 export default Footer;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

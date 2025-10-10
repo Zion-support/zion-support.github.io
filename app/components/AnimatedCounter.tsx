@@ -1,20 +1,16 @@
 'use client';
 import React from 'react';
 import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
 interface AnimatedCounterProps {
   end: number,
-=======
 ;
 interface AnimatedCounterProps {;
   end: number,;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
   duration?: number;
   prefix?: string;
   suffix?: string;
   className?: string;}
 }
-<<<<<<< HEAD
 const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
   end,
   duration = 2000,
@@ -46,7 +42,6 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
   }, [end, duration]);
   return (
     <span className={className}>
-=======
 ;
 const AnimatedCounter: React.FC<AnimatedCounterProps> = ({;
   end,;
@@ -90,15 +85,11 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({;
 ;
   return (;
     <span className={className}>;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
       {prefix}{count.toLocaleString()}{suffix}
     </span>;
   );
 };
-<<<<<<< HEAD
 export default AnimatedCounter;
   </AnimatedCounterProps>
-=======
 ;
 export default AnimatedCounter;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

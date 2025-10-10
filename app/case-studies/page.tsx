@@ -1,17 +1,14 @@
 'use client';
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight, ExternalLink, CheckCircle, TrendingUp, Users, Award } from 'lucide-react';
-=======
 
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight, ExternalLink, CheckCircle, TrendingUp, Users, Award, Building2, Shield, Zap } from 'lucide-react';
 
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
 interface CaseStudy {
   id: string;
   title: string;
@@ -24,18 +21,15 @@ interface CaseStudy {
   duration: string;
   team: string;
 }
-<<<<<<< HEAD
 const CaseStudiesPage: React.FC = () => {
   const caseStudies: CaseStudy[] = [
     {
 id: '1',
-=======
 
 const CaseStudiesPage: React.FC = () => {
   const caseStudies: CaseStudy[] = [
     {
       id: '1',
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
       title: 'AI-Powered Customer Service Transformation',
       client: 'TechCorp Solutions',
       industry: 'Technology',
@@ -56,13 +50,10 @@ const CaseStudiesPage: React.FC = () => {
       title: 'Cloud Migration & Infrastructure Modernization',
       client: 'Global Finance Inc.',
       industry: 'Financial Services',
-<<<<<<< HEAD
 challenge: 'Legacy on-premises infrastructure limiting scalability and increasing maintenance costs.',
       solution: 'Complete cloud migration to AWS with microservices architecture and automated scaling.',
-=======
       challenge: 'Legacy on-premise infrastructure causing scalability issues and high maintenance costs.',
       solution: 'Complete migration to AWS cloud with microservices architecture and automated CI/CD pipelines.',
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
       results: [
         '70% reduction in infrastructure costs',
         '99.9% uptime achieved',
@@ -89,10 +80,8 @@ challenge: 'Legacy on-premises infrastructure limiting scalability and increasin
       image: '/images/case-studies/cybersecurity.jpg',
       duration: '4 months',
       team: '6 specialists'
-<<<<<<< HEAD
     }
   ];
-=======
     },
     {
       id: '4',
@@ -154,7 +143,6 @@ challenge: 'Legacy on-premises infrastructure limiting scalability and increasin
     ? caseStudies 
     : caseStudies.filter(study => study.industry === selectedIndustry);
 
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
   const stats = [
     { icon: <Building2 className="w-8 h-8 text-blue-600" />, value: '150+', label: 'Projects Completed' },
     { icon: <Users className="w-8 h-8 text-green-600" />, value: '98%', label: 'Client Satisfaction' },
@@ -168,7 +156,6 @@ challenge: 'Legacy on-premises infrastructure limiting scalability and increasin
         <meta name="description" content="Explore our successful technology implementations and digital transformation projects across various industries." />
         <meta name="keywords" content="case studies, success stories, technology implementation, digital transformation, AI solutions" />
       </Helmet>
-<<<<<<< HEAD
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
@@ -248,7 +235,6 @@ challenge: 'Legacy on-premises infrastructure limiting scalability and increasin
                       Share;
   </
                   </div>
-=======
 
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">
@@ -276,12 +262,10 @@ challenge: 'Legacy on-premises infrastructure limiting scalability and increasin
                   </div>
                   <div className="text-3xl font-bold text-gray-900 mb-2">{stat.value}</div>
                   <div className="text-gray-600">{stat.label}</div>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
                 </div>
               ))}
             </div>
           </div>
-<<<<<<< HEAD
 </div>
       </section>
       <section className="py-20 px-4 bg-white/5">
@@ -305,7 +289,6 @@ challenge: 'Legacy on-premises infrastructure limiting scalability and increasin
               View Our Services
               <ExternalLink className="w-5 h-5 ml-2" />
             </Link>
-=======
         </div>
       </section>
 
@@ -424,7 +407,6 @@ challenge: 'Legacy on-premises infrastructure limiting scalability and increasin
                 Contact Us
               </Link>
             </div>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
           </div>
         </div>
       </section>

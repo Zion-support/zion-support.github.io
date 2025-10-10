@@ -54,7 +54,6 @@ const Navigation: React.FC = () => {
           </div>
 
           {/* Desktop Navigation */}
-<<<<<<< HEAD
           <div className="hidden lg:flex items-center space-x-8">
             <Link href="/" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
               Home;
@@ -86,7 +85,6 @@ const Navigation: React.FC = () => {
                         <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 ml-auto" />
                       </Link>
                     ))}
-=======
           <div className="hidden lg:block">
             <div className="ml-10 flex items-baseline space-x-8">
               <Link href="/" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
@@ -114,7 +112,6 @@ const Navigation: React.FC = () => {
                     <Link href="/micro-saas" className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700">
                       Micro SaaS
                     </Link>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
                   </div>
                 )}
               </div>
@@ -126,7 +123,6 @@ const Navigation: React.FC = () => {
                 Contact
               </Link>
             </div>
-<<<<<<< HEAD
             {/* IT Services Dropdown */}
             <div className="relative group">
               <button
@@ -252,11 +248,9 @@ const Navigation: React.FC = () => {
             </a>
           </div>
           {/* Mobile Menu Button */}
-=======
           </div>
 
           {/* Mobile menu button */}
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
           <div className="lg:hidden">
             <button
               onClick={toggleMenu}
@@ -269,7 +263,6 @@ const Navigation: React.FC = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-<<<<<<< HEAD
           <div className="lg:hidden mt-4 pb-4 border-t border-cyan-500/20">
             <div className="pt-4 space-y-4">
               <Link href="/" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
@@ -401,7 +394,6 @@ const Navigation: React.FC = () => {
                   <span className="text-sm">364 E Main St STE 1008, Middletown DE 19709</span>
                 </div>
               </div>
-=======
           <div className="lg:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800 rounded-lg mt-2">
               <Link href="/" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
@@ -413,7 +405,6 @@ const Navigation: React.FC = () => {
               <Link href="/contact" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
                 Contact
               </Link>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
             </div>
           </div>
         )}
@@ -421,7 +412,6 @@ const Navigation: React.FC = () => {
     </nav>
   );
 };
-<<<<<<< HEAD
 export default Navigation;
   </Link>
   </Link>
@@ -435,7 +425,5 @@ export default Navigation;
   </Link>
   </Link>
   </Link>
-=======
 
 export default Navigation;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

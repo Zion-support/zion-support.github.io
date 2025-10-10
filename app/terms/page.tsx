@@ -1,7 +1,6 @@
 'use client';
 import React from 'react';
 import { FileText, Scale, Shield, AlertTriangle, CheckCircle, ArrowRight, Globe, User, Mail, Phone, Calendar, Lock, Database, Server, Key } from 'lucide-react';
-<<<<<<< HEAD
 export default function TermsPage() {
   const lastUpdated = 'January 1, 2024';
   const sections = [
@@ -74,7 +73,6 @@ export default function TermsPage() {
                     </div>
                     <div></div>
                       <h2 className="text-2xl font-bold text-gray-900 mb-3">
-=======
 ;
 export default function TermsPage() {;
   const lastUpdated = 'January 1, 2024';
@@ -150,7 +148,6 @@ export default function TermsPage() {;
                     </div>;
                     <div></div>;
                       <h2 className="text-2xl font-bold text-gray-900 mb-3">;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
                         {index + 1}. {section.title}
                       </h2>;
                       <p className="text-gray-700 leading-relaxed">;
@@ -160,7 +157,6 @@ export default function TermsPage() {;
                   </div>;
                 </div>;
               ))}
-<<<<<<< HEAD
             </div>
             <div className="mt-16 bg-gray-50 rounded-lg p-8"></div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Contact Information</h3>
@@ -198,7 +194,6 @@ export default function TermsPage() {;
   );
 }
   </p>
-=======
             </div>;
             <div className="mt-16 bg-gray-50 rounded-lg p-8"></div>;
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Contact Information</h3>;
@@ -236,4 +231,3 @@ export default function TermsPage() {;
   );
 }
 ;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

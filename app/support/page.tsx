@@ -1,11 +1,8 @@
 'use client';
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import React from 'react';
-=======
 
 import React, { useState } from 'react';
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
 import { Helmet } from 'react-helmet-async';
 import { Phone, Mail, MessageCircle, Clock, CheckCircle, Search, HelpCircle, BookOpen, Users, Zap } from 'lucide-react';
 interface FAQ {
@@ -17,10 +14,7 @@ const SupportPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null);
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
   const faqs: FAQ[] = [
     {
       question: 'How do I get started with your AI solutions?',
@@ -38,7 +32,6 @@ const SupportPage: React.FC = () => {
       category: 'Security'
     },
     {
-<<<<<<< HEAD
       question: 'Do you offer training for our team?',
 answer: 'Yes, we provide comprehensive training programs to ensure your team can effectively use and maintain the AI solutions. Training includes hands-on workshops, documentation, and ongoing support.',
       category: 'training'
@@ -135,7 +128,6 @@ availability: 'Mon-Fri: 9AM-6PM EST'
     }
   ];
   const categories = ['all', 'general', 'support', 'implementation', 'training', 'security', 'integration', 'scaling', 'development'];
-=======
       question: 'Can I integrate with my existing systems?',
       answer: 'Yes! Our solutions are designed to integrate seamlessly with your existing systems through APIs, webhooks, and custom connectors. Our team will help you set up integrations during implementation.',
       category: 'Integration'
@@ -154,14 +146,12 @@ availability: 'Mon-Fri: 9AM-6PM EST'
 
   const categories = ['all', 'Getting Started', 'Support', 'Security', 'Integration', 'Service Level', 'Data Management'];
 
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
   const filteredFAQs = faqs.filter(faq => {
     const matchesSearch = faq.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          faq.answer.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesCategory = selectedCategory === 'all' || faq.category === selectedCategory;
     return matchesSearch && matchesCategory;
   });
-<<<<<<< HEAD
   const toggleFAQ = (index: number) => {
     setExpandedFAQ(expandedFAQ === index ? null : index);
   };
@@ -238,7 +228,6 @@ availability: 'Mon-Fri: 9AM-6PM EST'
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-=======
 
   const supportChannels = [
     {
@@ -327,13 +316,11 @@ availability: 'Mon-Fri: 9AM-6PM EST'
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">Get in Touch</h2>
             <div className="grid md:grid-cols-3 gap-8">
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
               {supportChannels.map((channel, index) => (
                 <div key={index} className="bg-gray-50 rounded-xl p-8 text-center hover:shadow-lg transition-shadow duration-300">
                   <div className="flex justify-center mb-4">
                     {channel.icon}
                   </div>
-<<<<<<< HEAD
         {/* Support Channels */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
@@ -471,7 +458,6 @@ availability: 'Mon-Fri: 9AM-6PM EST'
         </section>
       </div>
     </React.Fragment>
-=======
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">{channel.title}</h3>
                   <p className="text-gray-600 mb-4">{channel.description}</p>
                   <p className="text-blue-600 font-medium mb-2">{channel.contact}</p>
@@ -590,7 +576,6 @@ availability: 'Mon-Fri: 9AM-6PM EST'
         </div>
       </section>
     </div>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
   );
 };
 export default SupportPage;

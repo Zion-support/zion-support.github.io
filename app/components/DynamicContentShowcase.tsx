@@ -1,6 +1,5 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
 import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, Clock, Award, Play, Pause, ChevronLeft, ChevronRight } from 'lucide-react';
 interface Feature {
   icon: React.ComponentType<any>;
@@ -11,10 +10,8 @@ interface Feature {
     label: string;
   }[];
 }
-=======
 import { CheckCircle, ArrowRight, Star, Quote, ChevronLeft, ChevronRight, Zap, Shield, Brain, Globe, Users, TrendingUp } from 'lucide-react';
 
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
 interface Testimonial {
   id: number;
   name: string;
@@ -32,10 +29,8 @@ interface Feature {
   benefits: string[];
 }
 const DynamicContentShowcase: React.FC = () => {
-<<<<<<< HEAD
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(true);
-=======
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
 
   const testimonials: Testimonial[] = [
@@ -68,7 +63,6 @@ const DynamicContentShowcase: React.FC = () => {
     }
   ];
 
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
   const features: Feature[] = [
     {
       icon: Brain,
@@ -105,7 +99,6 @@ const DynamicContentShowcase: React.FC = () => {
     'Cost-effective pricing plans',
     'Proven track record of success'
   ];
-<<<<<<< HEAD
   const testimonials: Testimonial[] = [
     {
       name: 'Sarah Johnson',
@@ -143,7 +136,6 @@ setCurrentIndex((prev) => (prev + 1) % testimonials.length);
     }, 4000);
     return () => clearInterval(timer);
   }, [isPlaying, testimonials.length]);
-=======
 
   const stats = [
     { icon: Users, value: '10,000+', label: 'Happy Customers' },
@@ -152,26 +144,22 @@ setCurrentIndex((prev) => (prev + 1) % testimonials.length);
     { icon: Zap, value: '24/7', label: 'Support' }
   ];
 
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
   const nextTestimonial = () => {
     setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
   };
   const prevTestimonial = () => {
     setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length);
   };
-<<<<<<< HEAD
   const togglePlayPause = () => {
     setIsPlaying(!isPlaying);
   };
   const currentTestimonial = testimonials[currentIndex];
-=======
 
   useEffect(() => {
     const timer = setInterval(nextTestimonial, 5000);
     return () => clearInterval(timer);
   }, []);
 
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
   return (
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
@@ -184,25 +172,21 @@ setCurrentIndex((prev) => (prev + 1) % testimonials.length);
             Join thousands of businesses that have revolutionized their operations with our cutting-edge AI and IT solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<<<<<<< HEAD
             <button className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
               <Play className="w-5 h-5" />
               Start Demo;
   </
             <button className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300">
-=======
             <button className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2">
               <Zap className="w-5 h-5" />
               Get Started Today
             </button>
             <button className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-200 flex items-center justify-center gap-2">
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
               <ArrowRight className="w-5 h-5" />
               Learn More;
   </
           </div>
         </div>
-<<<<<<< HEAD
 {/* Features Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {features.map((feature, index) => (
@@ -233,7 +217,6 @@ setCurrentIndex((prev) => (prev + 1) % testimonials.length);
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10">
-=======
       </section>
 
       {/* Stats Section */}
@@ -242,7 +225,6 @@ setCurrentIndex((prev) => (prev + 1) % testimonials.length);
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
                 <div className="flex justify-center mb-4">
                   <stat.icon className="w-8 h-8 text-blue-400" />
                 </div>
@@ -252,12 +234,9 @@ setCurrentIndex((prev) => (prev + 1) % testimonials.length);
             ))}
           </div>
         </div>
-<<<<<<< HEAD
       </div>
-=======
       </section>
 
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
       {/* Features Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -269,18 +248,14 @@ setCurrentIndex((prev) => (prev + 1) % testimonials.length);
               Comprehensive AI and IT solutions designed to transform your business operations.
             </p>
           </div>
-<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-=======
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
             {features.map((feature, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 hover:bg-white/10 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl flex items-center justify-center mb-4">
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
-<<<<<<< HEAD
                 <h3 className="text-xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors">
                   {feature.title}
                 </h3>
@@ -295,7 +270,6 @@ setCurrentIndex((prev) => (prev + 1) % testimonials.length);
                     ))}
                   </div>
                 )}
-=======
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300 mb-4">{feature.description}</p>
                 <ul className="space-y-2">
@@ -306,7 +280,6 @@ setCurrentIndex((prev) => (prev + 1) % testimonials.length);
                     </li>
                   ))}
                 </ul>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
               </div>
             ))}
           </div>
@@ -333,12 +306,9 @@ setCurrentIndex((prev) => (prev + 1) % testimonials.length);
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                   ))}
                 </div>
-<<<<<<< HEAD
                 <blockquote className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
                   "{currentTestimonial.content}"
                 </blockquote>
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
                 <div className="flex items-center justify-center gap-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center">
                     <span className="text-white font-semibold text-lg">
@@ -353,7 +323,6 @@ setCurrentIndex((prev) => (prev + 1) % testimonials.length);
                 </div>
               </div>
             </div>
-<<<<<<< HEAD
             {/* Navigation Controls */}
             <div className="flex items-center justify-center gap-4 mt-8">
               <button
@@ -384,7 +353,6 @@ setCurrentIndex((prev) => (prev + 1) % testimonials.length);
                 />
               ))}
             </div>
-=======
 
             {/* Navigation Buttons */}
             <button
@@ -412,7 +380,6 @@ setCurrentIndex((prev) => (prev + 1) % testimonials.length);
                 }`}
               />
             ))}
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
           </div>
         </div>
       </section>
@@ -427,7 +394,6 @@ setCurrentIndex((prev) => (prev + 1) % testimonials.length);
               Discover the advantages that make our solutions the preferred choice for businesses worldwide.
             </p>
           </div>
-<<<<<<< HEAD
           <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {benefits.map((benefit, index) => (
@@ -437,7 +403,6 @@ setCurrentIndex((prev) => (prev + 1) % testimonials.length);
                 </div>
               ))}
             </div>
-=======
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {benefits.map((benefit, index) => (
@@ -446,7 +411,6 @@ setCurrentIndex((prev) => (prev + 1) % testimonials.length);
                 <span className="text-gray-300">{benefit}</span>
               </div>
             ))}
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
           </div>
         </div>
       </section>

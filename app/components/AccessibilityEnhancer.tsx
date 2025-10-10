@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useEffect } from 'react';
-<<<<<<< HEAD
 const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   useEffect(() => {
     // Add keyboard navigation support
@@ -34,7 +33,6 @@ const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ childr
     };
   }, []);
   return <React.Fragment>{children}</React.Fragment>;
-=======
 
 interface AccessibilityEnhancerProps {
   enableKeyboardNavigation?: boolean;
@@ -170,6 +168,5 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   }, [enableKeyboardNavigation, enableScreenReaderSupport, enableHighContrast, enableFocusManagement]);
 
   return null;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
 };
 export default AccessibilityEnhancer;

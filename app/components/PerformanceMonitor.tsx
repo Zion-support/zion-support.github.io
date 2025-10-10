@@ -1,8 +1,6 @@
 'use client';
-<<<<<<< HEAD
 import React from 'react';
 'use client';
-=======
 
 import React, { useEffect, useState } from 'react';
 
@@ -14,11 +12,9 @@ interface PerformanceMetrics {
   ttfb?: number;
 }
 
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
 const PerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({});
   const [isVisible, setIsVisible] = useState(false);
-<<<<<<< HEAD
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   useEffect(() => {
     // Initialize performance monitoring
@@ -63,7 +59,6 @@ const PerformanceMonitor: React.FC = () => {
       window.removeEventListener('keydown', handleKeyDown);
     };
   }, []);
-=======
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
@@ -197,7 +192,6 @@ const PerformanceMonitor: React.FC = () => {
       </div>
     </div>
   );
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
 };
 export default PerformanceMonitor;
   </PerformanceMetrics>

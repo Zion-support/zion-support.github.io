@@ -1,8 +1,5 @@
 'use client';
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, TrendingUp } from 'lucide-react';
 interface Slide {
@@ -75,7 +72,6 @@ const ContentCarousel: React.FC = () => {
   }, []);
   const currentSlideData = slides[currentSlide];
   return (
-<<<<<<< HEAD
     <div className="relative bg-gradient-to-r from-purple-600 to-blue-600 text-white py-16 px-4">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
@@ -113,8 +109,6 @@ const ContentCarousel: React.FC = () => {
                   </div>
                 </div>
               ))}
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
@@ -126,12 +120,9 @@ const ContentCarousel: React.FC = () => {
             Explore our comprehensive suite of AI and IT solutions designed to transform your business.
           </p>
         </div>
-<<<<<<< HEAD
         {/* Carousel Container */}
-=======
 
         {/* Carousel */}
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
         <div className="relative">
           <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-8 md:p-12 overflow-hidden">
             <div className="flex items-center justify-between mb-8">
@@ -139,7 +130,6 @@ const ContentCarousel: React.FC = () => {
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-xl flex items-center justify-center">
                   <currentSlideData.icon className="w-8 h-8 text-slate-900" />
                 </div>
-<<<<<<< HEAD
                 {/* Features */}
                 <div className="space-y-4">
                   <h4 className="text-lg font-semibold text-white mb-4">Key Features:</h4>
@@ -191,7 +181,6 @@ const ContentCarousel: React.FC = () => {
                   </div>
                 </div>
               </div>
-=======
                 <div>
                   <h3 className="text-2xl font-bold text-white mb-2">
                     {currentSlideData.title}
@@ -201,7 +190,6 @@ const ContentCarousel: React.FC = () => {
                   </p>
                 </div>
               </div>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -228,7 +216,6 @@ const ContentCarousel: React.FC = () => {
           {/* Navigation Buttons */}
           <button
             onClick={prevSlide}
-<<<<<<< HEAD
             className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20">
             <ChevronLeft className="h-6 w-6" />
           </button>
@@ -239,7 +226,6 @@ const ContentCarousel: React.FC = () => {
           </button>
         </div>
 {/* Slide Indicators */}
-=======
             className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20"
           >
             <ChevronLeft className="w-6 h-6" />
@@ -253,7 +239,6 @@ const ContentCarousel: React.FC = () => {
         </div>
 
         {/* Slide Indicators */}
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
         <div className="flex justify-center mt-8 space-x-2">
           {slides.map((_, index) => (
             <button
@@ -265,7 +250,6 @@ const ContentCarousel: React.FC = () => {
             />
           ))}
         </div>
-<<<<<<< HEAD
         {/* Additional Info */}
         <div className="mt-16 text-center">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
@@ -290,7 +274,6 @@ const ContentCarousel: React.FC = () => {
                 <div className="text-gray-400 text-sm">Uptime</div>
               </div>
             </div>
-=======
 
         {/* CTA Section */}
         <div className="text-center mt-16">
@@ -307,7 +290,6 @@ const ContentCarousel: React.FC = () => {
               <ArrowRight className="w-5 h-5" />
               Learn More
             </button>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
           </div>
         </div>
       </div>

@@ -2,9 +2,7 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
 import { Cloud, Shield, Settings, Database, Smartphone, Globe, Zap, ArrowRight } from 'lucide-react';
-=======
 import { 
   Cloud, 
   Shield, 
@@ -34,7 +32,6 @@ import {
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
 const ItServicesPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -274,25 +271,19 @@ const ItServicesPage: React.FC = () => {
     { icon: <Zap className="w-8 h-8 text-orange-500" />, value: '50%', label: 'Cost Reduction' }
   ];
   return (
-<<<<<<< HEAD
     <React.Fragment>
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
       <Helmet>
         <title>IT Services - Zion Tech Group | Comprehensive Information Technology Solutions</title>
         <meta name="description" content="Complete IT services including cloud solutions, cybersecurity, infrastructure management, DevOps, and more. Expert IT support and consulting for modern businesses." />
         <meta name="keywords" content="IT services, cloud solutions, cybersecurity, IT infrastructure, managed IT, IT consulting, DevOps, database management, web development" />
       </Helmet>
-<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-=======
       
       <Navigation />
       
       <main className="pt-20">
         {/* Hero Section */}
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -318,7 +309,6 @@ const ItServicesPage: React.FC = () => {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -335,7 +325,6 @@ const ItServicesPage: React.FC = () => {
                   <div className="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors">
                     <span className="text-sm font-medium">Learn More</span>
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-=======
 
         {/* Stats Section */}
         <section className="py-16 px-4">
@@ -345,7 +334,6 @@ const ItServicesPage: React.FC = () => {
                 <div key={index} className="text-center">
                   <div className="flex justify-center mb-4">
                     {stat.icon}
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
                   </div>
                   <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
                   <div className="text-gray-300">{stat.label}</div>
@@ -354,10 +342,8 @@ const ItServicesPage: React.FC = () => {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
       </div>
     </React.Fragment>
-=======
 
         {/* Search and Filter Section */}
         <section className="py-10 px-4 sm:px-6 lg:px-8">
@@ -517,7 +503,6 @@ const ItServicesPage: React.FC = () => {
       
       <Footer />
     </div>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
   );
 };
 export default ItServicesPage;

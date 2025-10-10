@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
 interface SkipLinkProps {
   to: string;
   children: React.ReactNode;
@@ -16,7 +15,6 @@ const SkipLink: React.FC<SkipLinkProps> = ({ to, children }) => {
 };
 export default SkipLink;
   </SkipLinkProps>
-=======
 
 const SkipLink: React.FC = () => {
   return (
@@ -30,4 +28,3 @@ const SkipLink: React.FC = () => {
 };
 
 export default SkipLink;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

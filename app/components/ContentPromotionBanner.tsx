@@ -55,11 +55,8 @@ const ContentPromotionBanner: React.FC = () => {
     }
   ];
   return (
-<<<<<<< HEAD
 <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
-=======
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
       <div className="max-w-7xl mx-auto">
         {/* Hero Section */}
         <div className="text-center mb-16">
@@ -80,7 +77,6 @@ const ContentPromotionBanner: React.FC = () => {
   </
           </div>
         </div>
-<<<<<<< HEAD
         {/* Stats Section */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           {stats.map((stat, index) => (
@@ -125,9 +121,7 @@ const ContentPromotionBanner: React.FC = () => {
   </
           </div>
         </div>
-=======
 
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
         {/* Features Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {features.map((feature, index) => (
@@ -140,7 +134,6 @@ const ContentPromotionBanner: React.FC = () => {
             </div>
           ))}
         </div>
-<<<<<<< HEAD
         {/* Benefits Section */}
         <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 mb-16">
           <div className="text-center mb-8">
@@ -150,7 +143,6 @@ const ContentPromotionBanner: React.FC = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-=======
 
         {/* Stats Section */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
@@ -170,7 +162,6 @@ const ContentPromotionBanner: React.FC = () => {
         <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-8">Why Choose Our Solutions?</h2>
           <div className="grid md:grid-cols-2 gap-4">
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-center gap-3">
                 <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
@@ -181,7 +172,6 @@ const ContentPromotionBanner: React.FC = () => {
         </div>
         {/* CTA Section */}
         <div className="text-center">
-<<<<<<< HEAD
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-12">
             <h2 className="text-3xl font-bold text-white mb-4">
               Ready to Transform Your Business?
@@ -198,7 +188,6 @@ const ContentPromotionBanner: React.FC = () => {
                 Schedule Demo;
   </
             </div>
-=======
           <h2 className="text-3xl font-bold text-white mb-4">Ready to Get Started?</h2>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Join thousands of satisfied customers and transform your business today.
@@ -211,7 +200,6 @@ const ContentPromotionBanner: React.FC = () => {
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-200">
               Schedule Demo
             </button>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
           </div>
         </div>
       </div>

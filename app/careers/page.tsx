@@ -3,12 +3,9 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
 import { Star, Users, Heart, Award, MapPin, Clock, Briefcase, CheckCircle, ArrowRight, Zap } from 'lucide-react';
-=======
 import { Star, Users, Heart, Award, MapPin, Clock, Briefcase, CheckCircle, ArrowRight, GraduationCap, Zap } from 'lucide-react';
 
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
 interface JobPosition {
   id: string;
   title: string;
@@ -22,10 +19,7 @@ interface JobPosition {
   posted: string;
   featured: boolean;
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
 const CareersPage: React.FC = () => {
   const openPositions: JobPosition[] = [
     {
@@ -35,11 +29,8 @@ const CareersPage: React.FC = () => {
       location: 'Remote',
       type: 'Full-time',
       experience: '5+ years',
-<<<<<<< HEAD
 description: 'Lead the development of cutting-edge AI solutions and machine learning models for enterprise clients.',
-=======
       description: 'Lead the development of cutting-edge AI solutions and machine learning models for enterprise clients.',
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
       requirements: [
         '5+ years experience in AI/ML development',
         'Expertise in Python, TensorFlow, PyTorch',
@@ -64,9 +55,7 @@ description: 'Lead the development of cutting-edge AI solutions and machine lear
       type: 'Full-time',
       experience: '7+ years',
       description: 'Design and implement scalable cloud infrastructure solutions for enterprise clients.',
-<<<<<<< HEAD
       requirements: ['AWS, Azure, GCP', '7+ years cloud experience', 'Architecture certifications']
-=======
       requirements: [
         '7+ years experience in cloud architecture',
         'Expertise in AWS, Azure, and GCP',
@@ -153,11 +142,9 @@ description: 'Lead the development of cutting-edge AI solutions and machine lear
       icon: <Award className="w-8 h-8 text-purple-600" />,
       title: 'Innovation',
       description: 'We embrace innovation and continuously push the boundaries of what\'s possible with technology.'
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
     }
   ];
   const benefits = [
-<<<<<<< HEAD
     'Competitive salary and equity',
     'Comprehensive health insurance',
     'Flexible work arrangements',
@@ -216,7 +203,6 @@ description: 'Lead the development of cutting-edge AI solutions and machine lear
       label: 'Glassdoor Rating',
       description: 'Highly rated workplace'
     }
-=======
     'Competitive salary and equity participation',
     'Comprehensive health, dental, and vision insurance',
     '401k with company matching',
@@ -227,7 +213,6 @@ description: 'Lead the development of cutting-edge AI solutions and machine lear
     'Team building events and company retreats',
     'Mentorship and career growth opportunities',
     'Wellness programs and gym memberships'
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
   ];
   return (
     <div className="min-h-screen bg-gray-50">
@@ -236,7 +221,6 @@ description: 'Lead the development of cutting-edge AI solutions and machine lear
         <meta name="description" content="Join Zion Tech Group and be part of a team that's shaping the future of technology. Explore career opportunities in AI, cloud computing, and cybersecurity." />
         <meta name="keywords" content="tech careers, AI jobs, cloud computing jobs, cybersecurity careers, remote work" />
       </Helmet>
-<<<<<<< HEAD
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
@@ -306,7 +290,6 @@ description: 'Lead the development of cutting-edge AI solutions and machine lear
                 <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-center hover:border-purple-400 transition-all duration-300">
                   <div className={`w-16 h-16 ${value.color} bg-white/10 rounded-full mx-auto mb-6 flex items-center justify-center`}>
                     <value.icon className="w-8 h-8" />
-=======
 
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">
@@ -346,7 +329,6 @@ description: 'Lead the development of cutting-edge AI solutions and machine lear
                 <div key={index} className="text-center">
                   <div className="flex justify-center mb-4">
                     {value.icon}
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
                   </div>
                   <h3 className="text-xl font-semibold mb-3 text-gray-900">{value.title}</h3>
                   <p className="text-gray-600">{value.description}</p>
@@ -354,7 +336,6 @@ description: 'Lead the development of cutting-edge AI solutions and machine lear
               ))}
             </div>
           </div>
-<<<<<<< HEAD
         </section>
         {/* Benefits */}
         <section className="py-16 px-4">
@@ -371,7 +352,6 @@ description: 'Lead the development of cutting-edge AI solutions and machine lear
                   <div key={index} className="flex items-center space-x-3">
                     <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                     <span className="text-gray-300">{benefit}</span>
-=======
         </div>
       </section>
 
@@ -474,13 +454,11 @@ description: 'Lead the development of cutting-edge AI solutions and machine lear
                         View Details
                       </button>
                     </div>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
                   </div>
                 ))}
               </div>
             )}
           </div>
-<<<<<<< HEAD
         </section>
         {/* Open Positions */}
         <section className="py-16 px-4">
@@ -614,7 +592,6 @@ description: 'Lead the development of cutting-edge AI solutions and machine lear
               Get in Touch
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
-=======
         </div>
       </section>
 
@@ -634,7 +611,6 @@ description: 'Lead the development of cutting-edge AI solutions and machine lear
                 Contact Us
               </button>
             </div>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
           </div>
         </div>
       </section>

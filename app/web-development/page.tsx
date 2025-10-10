@@ -49,7 +49,6 @@ const $1: React.FC = () => {;
       features: ['24/7 Support', 'Regular Updates', 'Bug Fixes', 'Performance Monitoring'],;}
       color: 'text-gray-400'}
   ];
-<<<<<<< HEAD
   const technologies = [
     { name: 'React/Next.js', icon: Code, description: 'Modern frontend frameworks' },
     { name: 'Node.js', icon: Database, description: 'Server-side JavaScript' },
@@ -85,7 +84,6 @@ const $1: React.FC = () => {;
     }
   ];
   return(<React.Fragment>
-=======
 ;
   const technologies = [;
     { name: 'React/Next.js', icon: Code, description: 'Modern frontend frameworks' },;
@@ -124,7 +122,6 @@ const $1: React.FC = () => {;
   ];
 ;
   return(<></>;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
       <SEOOptimizer;
         title="Web Development Services - Zion Tech Group";
         description="Professional web development services including frontend, backend, full-stack, and e-commerce solutions. Modern technologies and best practices.";
@@ -148,7 +145,6 @@ const $1: React.FC = () => {;
         enableHTTPSRedirect={true}
         enableXSSProtection={true}
         enableClickjackingProtection={true}
-<<<<<<< HEAD
       />
       <Analytics />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -160,7 +156,6 @@ const $1: React.FC = () => {;
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 neon-text">Web Development Services</h1><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Build modern, scalable, and high-performance web applications with our expert development team.</p>
               From frontend to backend, we deliver solutions that drive business growth.</p>
         <main className="container mx-auto px-4 py-16 pt-24">
-=======
       />;
       <Analytics />;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>;
@@ -172,7 +167,6 @@ const $1: React.FC = () => {;
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 neon-text">Web Development Services</h1><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Build modern, scalable, and high-performance web applications with our expert development team.</p>;
               From frontend to backend, we deliver solutions that drive business growth.</p>;
         <main className="container mx-auto px-4 py-16 pt-24"></main>;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
           {/* Hero Section */}
           <section className="text-center mb-16"></section>;
             <h1 className="text-4xl md: text-5xl lg:text-6xl font-bold text-white mb-6 neon-text">;
@@ -184,7 +178,6 @@ const $1: React.FC = () => {;
             </p>;
             <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>;
               <a;
-<<<<<<< HEAD
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></section>
               <a
                 href="/contact"
@@ -192,7 +185,6 @@ const $1: React.FC = () => {;
                 href="tel:+13024640950"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">Call +1 302 464 0950</a>
               >
-=======
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></section>;
               <a;
                 href="/contact";
@@ -202,25 +194,20 @@ const $1: React.FC = () => {;
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300";
               >Call +1 302 464 0950</a>;
               >;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
                 Start Your Project;
               </a>;
               <a;
-<<<<<<< HEAD
                 href="tel:+13024640950"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
-=======
                 href="tel:+13024640950";
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300";
               >;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
                 Call +1 302 464 0950;
               </a>;
             </div>,;
           </section>,;
 ,;
           {/* Services Grid */}
-<<<<<<< HEAD
           <section className="mb-20">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">Our Web Development Services<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{webServices.map((service, index) => (</div>
                 <div key={index} className="cyber-card p-8 hover:scale-105 transition-all duration-300"></div>
@@ -269,7 +256,6 @@ const $1: React.FC = () => {;
                           <li key={benefitIndex} className="flex items-center text-gray-300">
                             <ArrowRight className="w-4 h-4 text-cyan-400 mr-3 flex-shrink-0">{benefit}</ArrowRight>
                           </ArrowRight>
-=======
           <section className="mb-20"></section>;
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">Our Web Development Services<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{webServices.map((service, index) => (</div>;}
                 <div key={index} className="cyber-card p-8 hover:scale-105 transition-all duration-300"></div>;
@@ -318,19 +304,16 @@ const $1: React.FC = () => {;
                           <li key={benefitIndex} className="flex items-center text-gray-300">;
                             <ArrowRight className="w-4 h-4 text-cyan-400 mr-3 flex-shrink-0" >{benefit}</ArrowRight>;
                           </ArrowRight>;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
                         ))}
                       </ul>;
                     </div>;
                   )}
-<<<<<<< HEAD
                   <a;
                     href="/contact"
                     className="w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 hover:scale-105 cyber-button">Get Started</a>
                   </a>
                 </div>
                     className="w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 hover: scale-105 cyber-button">
-=======
 ;
                   <a;
                     href="/contact";
@@ -340,17 +323,13 @@ const $1: React.FC = () => {;
                 </div>;
                     className="w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 hover: scale-105 cyber-button";
                   >;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
                     Get Started;
                   </a>,;
                 </div>))}
-<<<<<<< HEAD
             </div>
           </section>
-=======
             </div>;
           </section>;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
           {/* Technologies */}
           <section className="mb-20"></section>;
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">Technologies We Use<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">{technologies.map((tech, index) => (</div>;}
@@ -373,13 +352,10 @@ const $1: React.FC = () => {;
                   <h3 className="text-lg font-semibold text-white mb-2">{tech.name}</h3><p className="text-sm text-gray-300">{tech.description}</p>;
                 </div>;
               ))}
-<<<<<<< HEAD
             </div>
           </section>
-=======
             </div>;
           </section>;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
           {/* Process */}
           <section className="mb-20"></section>;
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">Our Development Process<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{process.map((step, index) => (</div>;}
@@ -404,13 +380,10 @@ const $1: React.FC = () => {;
                     <span className="text-2xl font-bold text-white">{step.step}</span><h3 className="text-xl font-bold text-white mb-3 neon-text">{step.title}</h3><p className="text-gray-300">{step.description}</p>;
                 </div>;
               ))}
-<<<<<<< HEAD
             </div>
           </section>
-=======
             </div>;
           </section>;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
           {/* CTA Section */}
           <section className="text-center"></section>;
             <div className="cyber-card p-12 max-w-4xl mx-auto"></div>;
@@ -423,7 +396,6 @@ const $1: React.FC = () => {;
               </p>;
               <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>;
                 <a;
-<<<<<<< HEAD
             <div className="cyber-card p-12 max-w-4xl mx-auto"></section>
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">Ready to Build Your Next Web Application?</h2><p className="text-xl text-gray-300 mb-8">Let's discuss your project requirements and create a custom solution that drives your business forward.</p>
               </p>
@@ -434,7 +406,6 @@ const $1: React.FC = () => {;
                   href="tel:+13024640950"
                   className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">Call +1 302 464 0950</a>
                 >
-=======
             <div className="cyber-card p-12 max-w-4xl mx-auto"></section>;
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">Ready to Build Your Next Web Application?</h2><p className="text-xl text-gray-300 mb-8">Let's discuss your project requirements and create a custom solution that drives your business forward.</p>;
               </p>;
@@ -447,11 +418,9 @@ const $1: React.FC = () => {;
                   className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300";
                 >Call +1 302 464 0950</a>;
                 >;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
                   Start Your Project;
                 </a>;
                 <a;
-<<<<<<< HEAD
                   href="tel:+13024640950"
                   className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
                   Call +1 302 464 0950;
@@ -476,7 +445,6 @@ export default WebDevelopmentPage;
   </h4>
   </h3>
   </h2>
-=======
                   href="tel:+13024640950";
                   className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300";
                 >;
@@ -492,4 +460,3 @@ export default WebDevelopmentPage;
 };
 ;
 export default WebDevelopmentPage;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

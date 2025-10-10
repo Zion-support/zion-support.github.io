@@ -1,7 +1,6 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 const MainPage: React.FC = () => {
   const features = [
     {
@@ -146,7 +145,6 @@ export default MainPage;
   </h2>
   </button>
   </span>
-=======
 ;
 const MainPage: React.FC = () => {;
   const features = [;
@@ -290,4 +288,3 @@ const MainPage: React.FC = () => {;
 };
 ;
 export default MainPage;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

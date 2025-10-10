@@ -24,7 +24,6 @@ const preloadComponents = () => {
     }, 100);
   }
 };
-<<<<<<< HEAD
 // Loading skeleton component
 const ServiceCardSkeleton: React.FC = memo(() => (
   <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card">
@@ -1136,7 +1135,6 @@ const HomePage: React.FC = () => {
                     Send Message;
   </
                 </form>
-=======
 
 const HomePage: React.FC = memo(() => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -1291,7 +1289,6 @@ const HomePage: React.FC = memo(() => {
                 <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
                   Learn More
                 </button>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
               </div>
             </div>
           </div>
@@ -1300,7 +1297,6 @@ const HomePage: React.FC = memo(() => {
       
       <Footer />
     </div>
-<<<<<<< HEAD
     </React.Fragment>
   );
 };
@@ -1337,11 +1333,9 @@ export default HomePage;
   </AccessibilityEnhancer>
   </PerformanceOptimizer>
   </SEOOptimizer>
-=======
   );
 });
 
 HomePage.displayName = 'HomePage';
 
 export default HomePage;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

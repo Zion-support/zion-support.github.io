@@ -7,7 +7,6 @@ interface PerformanceOptimizerProps {
   enablePreloading?: boolean;
   enableCodeSplitting?: boolean;
 }
-<<<<<<< HEAD
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children, className = '' }) => {
   const [isOptimizing, setIsOptimizing] = useState(false);
   const [optimizations, setOptimizations] = useState<string[]>([]);
@@ -117,7 +116,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children, c
       </div>
     </React.Fragment>
   );
-=======
 
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   enableImageOptimization = true,
@@ -207,7 +205,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   }, [enableImageOptimization, enableLazyLoading, enablePreloading, enableCodeSplitting]);
 
   return null;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
 };
 export default PerformanceOptimizer;
   </h3>

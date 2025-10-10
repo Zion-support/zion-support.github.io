@@ -1,16 +1,13 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, ExternalLink } from 'lucide-react';
 import { CheckCircle, ExternalLink, Award, Users, Handshake, TrendingUp } from 'lucide-react';
-=======
 import { Link } from 'react-router-dom';
 import { CheckCircle, ExternalLink, ArrowRight, Building2, Handshake, Award, Users, Zap } from 'lucide-react';
 
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
 interface Partner {
   name: string;
   logo: string;
@@ -19,10 +16,7 @@ interface Partner {
   website?: string;
   tier: 'strategic' | 'preferred' | 'certified';
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
 const PartnersPage: React.FC = () => {
   const partners: Partner[] = [
     {
@@ -43,11 +37,9 @@ const PartnersPage: React.FC = () => {
     },
     {
       name: 'Google Cloud',
-<<<<<<< HEAD
 logo: '/api/placeholder/200/100',
       description: 'Advanced cloud computing and AI platform solutions',
       category: 'Cloud & AI'
-=======
       logo: '/images/partners/google-cloud.png',
       description: 'Certified partner for machine learning and data analytics',
       category: 'Cloud',
@@ -61,7 +53,6 @@ logo: '/api/placeholder/200/100',
       category: 'CRM',
       website: 'https://salesforce.com',
       tier: 'strategic'
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
     },
     {
       name: 'IBM',
@@ -83,7 +74,6 @@ logo: '/api/placeholder/200/100',
   const benefits = [
     'Access to cutting-edge technology',
     'Joint go-to-market opportunities',
-<<<<<<< HEAD
     'Technical support and training',
     'Co-innovation projects',
     'Global reach and scalability',
@@ -139,19 +129,14 @@ logo: '/api/placeholder/200/100',
     'Access to cutting-edge technology platforms',
     'Joint go-to-market strategies',
     'Co-marketing opportunities',
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
     'Technical training and certification',
     'Co-marketing and co-selling programs',
     'Dedicated partner success manager',
     'Priority support and resources'
   ];
-<<<<<<< HEAD
   const partnershipTiers = [
-=======
 
   const tiers = [
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
     {
       name: 'Strategic Partners',
       description: 'Our most important technology and business partners',
@@ -171,7 +156,6 @@ logo: '/api/placeholder/200/100',
       color: 'from-green-400 to-teal-500'
     }
   ];
-<<<<<<< HEAD
   const getTierInfo = (tier: string) => {
     return partnershipTiers.find(t => t.name.toLowerCase().includes(tier)) || partnershipTiers[2];
   };
@@ -256,7 +240,6 @@ logo: '/api/placeholder/200/100',
                   </div>
                   <h3 className={`text-2xl font-bold ${tier.color} mb-4`}>{tier.name}</h3>
                   <p className="text-gray-300">{tier.description}</p>
-=======
 
   const stats = [
     { icon: <Building2 className="w-8 h-8 text-blue-500" />, value: '50+', label: 'Partners' },
@@ -313,12 +296,10 @@ logo: '/api/placeholder/200/100',
                   </div>
                   <div className="text-3xl font-bold text-gray-900 mb-2">{stat.value}</div>
                   <div className="text-gray-600">{stat.label}</div>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
                 </div>
               ))}
             </div>
           </div>
-<<<<<<< HEAD
         </section>
 {/* Partners Grid */}
         <section className="py-16 px-4">
@@ -384,7 +365,6 @@ logo: '/api/placeholder/200/100',
                   <div key={index} className="flex items-center text-gray-300">
                     <div className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></div>
                     {benefit}
-=======
         </div>
       </section>
 
@@ -445,13 +425,11 @@ logo: '/api/placeholder/200/100',
                         Visit <ExternalLink className="w-4 h-4 ml-1" />
                       </a>
                     )}
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
                   </div>
                 </div>
               ))}
             </div>
           </div>
-<<<<<<< HEAD
         </section>
 {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -470,7 +448,6 @@ logo: '/api/placeholder/200/100',
       </main>
       <Footer />
     </React.Fragment>
-=======
         </div>
       </section>
 
@@ -517,7 +494,6 @@ logo: '/api/placeholder/200/100',
         </div>
       </section>
     </div>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
   );
 };
 export default PartnersPage;

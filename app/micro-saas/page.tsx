@@ -2,7 +2,6 @@
 
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield } from 'lucide-react';
@@ -25,9 +24,7 @@ const MicroSaasPage: React.FC = () => {
       title: 'Project Management Pro',
       description: 'AI-enhanced project management with intelligent task allocation and progress tracking.',
       features: ['Smart task management', 'Team collaboration', 'Progress analytics', 'Resource optimization']
-=======
 import { Link } from 'react-router-dom';
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
 import { CheckCircle, ArrowRight, Zap, Star, Users, TrendingUp, Shield, Cloud, BarChart3, MessageSquare } from 'lucide-react';
 interface MicroSaasProduct {
   id: string;
@@ -200,7 +197,6 @@ const MicroSaasPage: React.FC = () => {
       price: '$59/month',
       users: 'Up to 15 users',
       popular: false,
-<<<<<<< HEAD
       category: 'Support'
     }
   ];
@@ -251,7 +247,6 @@ return (
             </div>
             <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20 rounded-2xl p-12 text-center">
   const categories = ['All', 'Analytics', 'CRM', 'Security', 'Infrastructure', 'Marketing', 'Support'];
-=======
       category: 'Marketing'
     },
     {
@@ -407,17 +402,14 @@ return (
     'Easy integration'
   ];
 
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
   const stats = [
     { icon: <Users className="w-8 h-8 text-blue-500" />, value: '10K+', label: 'Active Users' },
     { icon: <TrendingUp className="w-8 h-8 text-green-500" />, value: '99.9%', label: 'Uptime' },
     { icon: <Shield className="w-8 h-8 text-purple-500" />, value: '100%', label: 'Secure' },
     { icon: <Zap className="w-8 h-8 text-orange-500" />, value: '5min', label: 'Setup Time' }
   ];
-<<<<<<< HEAD
   return (
     <React.Fragment>
-=======
 
   const [selectedCategory, setSelectedCategory] = React.useState('All');
 
@@ -427,13 +419,11 @@ return (
 
   return (
     <div className="min-h-screen bg-gray-50">
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
       <Helmet>
         <title>Micro SaaS Solutions - Zion Tech Group | Ready-to-Use Business Tools</title>
         <meta name="description" content="Discover our collection of micro SaaS solutions designed to solve specific business problems. Quick setup, affordable pricing, powerful features." />
         <meta name="keywords" content="micro SaaS, business tools, analytics, customer chat, security, cloud backup, performance monitoring" />
       </Helmet>
-<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="py-20 px-4">
@@ -445,7 +435,6 @@ return (
               Ready-to-use business tools that solve specific problems. No complex setup, no long-term commitments - just powerful solutions that work.
             </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
-=======
 
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">
@@ -480,7 +469,6 @@ return (
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
               {stats.map((stat, index) => (
                 <div key={index} className="text-center">
                   <div className="flex justify-center mb-4">
@@ -492,7 +480,6 @@ return (
               ))}
             </div>
           </div>
-<<<<<<< HEAD
         </section>
         {/* Category Filter */}
         <section className="py-8 px-4">
@@ -540,7 +527,6 @@ return (
   </
                     </div>
                   )}
-=======
         </div>
       </section>
 
@@ -584,7 +570,6 @@ return (
                     </div>
                   )}
                   
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
                   <div className="text-center mb-6">
                     <div className="text-4xl mb-4">{product.icon}</div>
                     <h3 className="text-2xl font-bold text-gray-900 mb-2">{product.title}</h3>
@@ -607,7 +592,6 @@ return (
                       </li>
                     ))}
                   </ul>
-<<<<<<< HEAD
                   <div className="flex flex-col gap-3">
                     <button className="w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 bg-gradient-to-r from-purple-500 to-blue-500 text-white hover:from-purple-600 hover:to-blue-600 transform hover:scale-105">
                       Start Free Trial;
@@ -615,13 +599,11 @@ return (
                     <button className="w-full py-2 px-6 rounded-lg font-semibold transition-all duration-300 bg-white/10 text-white border border-white/20 hover:bg-white/20">
                       Learn More;
   </
-=======
 
                   <div className="text-center">
                     <button className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-medium hover:bg-blue-700 transition-colors duration-200">
                       Start Free Trial
                     </button>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
                   </div>
                 </div>
               ))}
@@ -633,7 +615,6 @@ return (
               </div>
             )}
           </div>
-<<<<<<< HEAD
         </section>
         {/* Benefits Section */}
         <section className="py-16 px-4">
@@ -725,7 +706,6 @@ className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semi
               </h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-=======
         </div>
       </section>
 
@@ -735,7 +715,6 @@ className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semi
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">Why Choose Our Micro SaaS?</h2>
             <div className="grid md:grid-cols-2 gap-6">
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-start">
                   <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-1 flex-shrink-0" />
@@ -744,24 +723,20 @@ className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semi
               ))}
             </div>
           </div>
-<<<<<<< HEAD
         </section>
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
-=======
         </div>
       </section>
 
       {/* CTA Section */}
       <section className="py-16 bg-blue-900 text-white">
         <div className="container mx-auto px-4">
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-4">Ready to Get Started?</h2>
             <p className="text-xl mb-8 text-blue-100">
               Choose from our collection of micro SaaS solutions and start solving your business problems today.
             </p>
-<<<<<<< HEAD
             <button className="bg-purple-600 text-white px-8 py-3 rounded-lg hover:bg-purple-700 transition-colors font-semibold">
               View All Plans;
   </
@@ -770,7 +745,6 @@ className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semi
       </main>
       <Footer />
     </React.Fragment>
-=======
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
@@ -789,7 +763,6 @@ className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semi
         </div>
       </section>
     </div>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
   );
 };
 export default MicroSaasPage;

@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react';
-<<<<<<< HEAD
 interface FormData {
   name: string,
   email: string,
@@ -10,7 +9,6 @@ interface FormData {
   message: string,
 }
 interface FormStatus {
-=======
 ;
 interface FormData {;
   name: string,;
@@ -22,11 +20,9 @@ interface FormData {;
 }
 ;
 interface FormStatus {;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
   type: 'idle' | 'loading' | 'success' | 'error';
   message: string,;}
 }
-<<<<<<< HEAD
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
@@ -40,7 +36,6 @@ interface FormStatus {;
     message: ''
   });
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-=======
 ;
   const [formData, setFormData] = useState<FormData>({;
     name: '',;
@@ -57,14 +52,12 @@ interface FormStatus {;
   });
 ;
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;}
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
     const { name, value } = e.target;
     setFormData(prev => ({;
       ...prev,;
       [name]: value;}
     }));
   };
-<<<<<<< HEAD
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus({ type: 'loading', message: 'Sending message...' });
@@ -83,7 +76,6 @@ interface FormStatus {;
         phone: '',
         service: '',
         message: ''
-=======
 ;
   const handleSubmit = async (e: React.FormEvent) => {;
     e.preventDefault();}
@@ -106,7 +98,6 @@ interface FormStatus {;
         phone: '',;
         service: '',;
         message: '';}
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
       });
     } catch (error) {;
       setStatus({;
@@ -115,7 +106,6 @@ interface FormStatus {;
       });
     }
   };
-<<<<<<< HEAD
   const services = [
     'AI Solutions',
     'Web Development',
@@ -195,7 +185,6 @@ interface FormStatus {;
               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200">
               ) : (
                 <div className="h-5 w-5 border-2 border-blue-500 border-t-transparent rounded-full animate-spin" />
-=======
 ;
   const services = [;
     'AI Solutions',;
@@ -278,12 +267,10 @@ interface FormStatus {;
             >;
               ) : (;
                 <div className="h-5 w-5 border-2 border-blue-500 border-t-transparent rounded-full animate-spin" /></div>;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
               )}
               <span className="text-sm font-medium">{status.message}</span>;
             </div>;
           )}
-<<<<<<< HEAD
           <button
             type="submit"
             disabled={status.type === 'loading'}
@@ -343,7 +330,6 @@ export default ContactForm;
   </HTMLInputElement>
   </FormStatus>
   </FormData>
-=======
 ;
           <button;
             type="submit";
@@ -399,4 +385,3 @@ export default ContactForm;
 };
 ;
 export default ContactForm;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
