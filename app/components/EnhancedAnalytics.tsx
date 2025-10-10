@@ -48,8 +48,8 @@ const EnhancedAnalyticsPage: React.FC = () => {
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                EnhancedAnalytics;
-  </
+                Enhanced Analytics
+              </span>
               <br />
               <span className="text-white">Solutions</span>
             </h1>
@@ -63,8 +63,8 @@ const EnhancedAnalyticsPage: React.FC = () => {
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-                Learn More;
-  </
+                Learn More
+              </button>
             </div>
           </div>
         </div>
@@ -98,8 +98,8 @@ const EnhancedAnalyticsPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Benefits;
-  </
+              Key Benefits
+            </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the power of our enhancedanalytics solutions for your business.
             </p>
