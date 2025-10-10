@@ -3,7 +3,7 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-import { CheckCircle, Zap, Shield, Clock, Users, TrendingUp, Brain, BarChart, MessageSquare, Eye, Phone, Database, Cloud, Code, Settings, BarChart3 } from 'lucide-react';
+import { CheckCircle, Zap, Shield, Clock, Users, TrendingUp, Brain, BarChart, MessageSquare, Eye, Phone, Database, Cloud, Code, Settings, BarChart3, Lock, ShoppingCart } from 'lucide-react';
 
 const ServicesPage: React.FC = () => {
   const aiServices = [
