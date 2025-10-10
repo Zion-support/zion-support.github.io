@@ -1,5 +1,5 @@
 'use client';
-import React, {Component, ErrorInfo, ReactNode}from 'react';
+import React, { Component, ErrorInfo, ReactNode } from 'react';
 
 interface Props {
   children: ReactNode;
@@ -10,19 +10,23 @@ interface Props {
 interface State {
   hasError: boolean;
   error?: Error;
-  errorInfo?: ErrorInfo;}class EnhancedErrorBoundary extends Component<Props, State> {constructor(props: Props) {,
+  errorInfo?: ErrorInfo;
+}
+
+class EnhancedErrorBoundary extends Component<Props, State> {
+  constructor(props: Props) {
     super(props);
-this.state = { hasError: false };
+    this.state = { hasError: false };
   }
 
   static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error };
   }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {,
-    this.setState({)
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    this.setState({
       error,
-errorInfo
+      errorInfo
     });
 
     // Log error to analytics
@@ -31,7 +35,7 @@ errorInfo
       gtag('event', 'exception', {
         description: error.message,
         fatal: false,
-        error_boundary: true
+        error_type: error.name
       });
     }
 
@@ -46,74 +50,48 @@ errorInfo
     }
   }
 
-  handleRetry = () => {
-    this.setState({ hasError: false, error: undefined, errorInfo: undefined });
-  };
-
   render() {
     if (this.state.hasError) {
+      // Custom fallback UI
       if (this.props.fallback) {
         return this.props.fallback;
       }
 
+      // Default error UI
       return (
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
-          <div className="max-w-md w-full bg-white/10 backdrop-blur-lg rounded-lg p-8 text-center">
-            <div className="text-6xl mb-4">⚠️</div>
-            <h1 className="text-2xl font-bold text-white mb-4">
-              Oops! Something went wrong
-            </h1>
+          <div className="max-w-md w-full bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-red-500/20 text-center">
+            <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
+              <svg className="w-8 h-8 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
+              </svg>
+            </div>
+            <h2 className="text-2xl font-bold text-white mb-4">Something went wrong</h2>
             <p className="text-gray-300 mb-6">
-              We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
+              We're sorry, but something unexpected happened. Please try refreshing the page.
             </p>
-            
             <div className="space-y-4">
               <button
-                onClick={this.handleRetry}
-                className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200"
+                onClick={() => window.location.reload()}
+                className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white px-6 py-3 rounded-lg font-medium transition-all duration-200"
               >
-                Try Again
+                Refresh Page
               </button>
-              
-              <a
-                href="/"
-                className="block w-full bg-gray-600 hover:bg-gray-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200"
+              <button
+                onClick={() => window.history.back()}
+                className="w-full border border-gray-600 text-gray-300 hover:text-white hover:border-gray-500 px-6 py-3 rounded-lg font-medium transition-all duration-200"
               >
-                Go Home
-              </a>
-              
-              <a
-                href="/contact"
-                className="block w-full border border-gray-400 text-gray-300 hover:bg-gray-400 hover:text-gray-900 font-semibold py-3 px-6 rounded-lg transition-colors duration-200"
-              >
-                Report Issue
-              </a>
+                Go Back
+              </button>
             </div>
-
             {process.env.NODE_ENV === 'development' && this.state.error && (
               <details className="mt-6 text-left">
-                <summary className="cursor-pointer text-sm text-gray-400 hover:text-gray-300">
+                <summary className="text-sm text-gray-400 cursor-pointer hover:text-gray-300">
                   Error Details (Development)
                 </summary>
-                <div className="mt-2 p-4 bg-black/20 rounded text-xs font-mono text-red-300 overflow-auto max-h-40">
-                  <div className="mb-2">
-                    <strong>Error:</strong> {this.state.error.message}
-                  </div>
-                  <div className="mb-2">
-                    <strong>Stack:</strong>
-                    <pre className="whitespace-pre-wrap mt-1">
-                      {this.state.error.stack}
-                    </pre>
-                  </div>
-                  {this.state.errorInfo && (
-                    <div>
-                      <strong>Component Stack:</strong>
-                      <pre className="whitespace-pre-wrap mt-1">
-                        {this.state.errorInfo.componentStack}
-                      </pre>
-                    </div>
-                  )}
-                </div>
+                <pre className="mt-2 text-xs text-red-400 bg-slate-900/50 p-3 rounded overflow-auto">
+                  {this.state.error.stack}
+                </pre>
               </details>
             )}
           </div>
@@ -123,6 +101,6 @@ errorInfo
 
     return this.props.children;
   }
-};
+}
 
 export default EnhancedErrorBoundary;

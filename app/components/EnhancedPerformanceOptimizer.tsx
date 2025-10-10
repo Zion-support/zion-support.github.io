@@ -1,136 +1,136 @@
 'use client';
-import React, {useEffect, useCallback}from 'react';
+import React, { useEffect, useCallback } from 'react';
 
-interface PerformanceOptimizerProps {children: React.ReactNode;,}
+interface PerformanceOptimizerProps {
+  children: React.ReactNode;
   enableImageOptimization?: boolean;
   enableLazyLoading?: boolean;
   enablePreloading?: boolean;
-  enableCodeSplitting?: boolean;}const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({,
+  enableCodeSplitting?: boolean;
+}
+
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   children,
   enableImageOptimization = true,
   enableLazyLoading = true,
   enablePreloading = true,
-  enableCodeSplitting = true;}) => {// Image optimization;
+  enableCodeSplitting = true
+}) => {
+  // Image optimization
   useEffect(() => {
     if (!enableImageOptimization) return;
 
-    const optimizeImages = () => {;
-      const images = document.querySelectorAll('img[data-src]');
+    const optimizeImages = () => {
+      const images = document.querySelectorAll('img');
       images.forEach((img) => {
-        const image = img as HTMLImageElement;
-        if (image.dataset.src) {
-          image.src = image.dataset.src;
-          image.removeAttribute('data-src');}})
-    }
+        if (!img.loading) {
+          img.loading = 'lazy';
+        }
+        if (!img.decoding) {
+          img.decoding = 'async';
+        }
+      });
+    };
 
-    // Run optimization after component mount;
-    const timer = setTimeout(optimizeImages, 100);
-    return () => clearTimeout(timer);
+    optimizeImages();
   }, [enableImageOptimization]);
 
-  // Lazy loading;
-  useEffect(() => {if (!enableLazyLoading) return;
+  // Lazy loading
+  useEffect(() => {
+    if (!enableLazyLoading) return;
 
-    const observer = new IntersectionObserver()
+    const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {;
-            const target = entry.target as HTMLElement;
-            target.classList.add('loaded');}})
+          if (entry.isIntersecting) {
+            const element = entry.target as HTMLElement;
+            element.classList.add('animate-fade-in');
+            observer.unobserve(element);
+          }
+        });
       },
-      {threshold: 0.1 ,})
+      { threshold: 0.1 }
+    );
 
-    const lazyElements = document.querySelectorAll('[data-lazy]');
-    lazyElements.forEach((el) => observer.observe(el));
+    const elements = document.querySelectorAll('[data-lazy]');
+    elements.forEach((el) => observer.observe(el));
 
     return () => observer.disconnect();
   }, [enableLazyLoading]);
 
-  // Preloading;
-  useEffect(() => {if (!enablePreloading) return;
+  // Preloading critical resources
+  useEffect(() => {
+    if (!enablePreloading) return;
 
     const preloadCriticalResources = () => {
-      // Preload critical CSS;
+      // Preload critical CSS
       const criticalCSS = document.createElement('link');
       criticalCSS.rel = 'preload';
       criticalCSS.href = '/styles/critical.css';
       criticalCSS.as = 'style';
       document.head.appendChild(criticalCSS);
 
-      // Preload critical fonts;
+      // Preload critical fonts
       const criticalFont = document.createElement('link');
       criticalFont.rel = 'preload';
       criticalFont.href = '/fonts/inter-var.woff2';
       criticalFont.as = 'font';
       criticalFont.type = 'font/woff2';
       criticalFont.crossOrigin = 'anonymous';
-      document.head.appendChild(criticalFont);}preloadCriticalResources();
+      document.head.appendChild(criticalFont);
+    };
+
+    preloadCriticalResources();
   }, [enablePreloading]);
 
-  // Code splitting optimization;
-  useEffect(() => {if (!enableCodeSplitting) return;
+  // Code splitting optimization
+  useEffect(() => {
+    if (!enableCodeSplitting) return;
 
     const optimizeCodeSplitting = () => {
-      // Preload next likely routes;
+      // Preload next route
       const links = document.querySelectorAll('a[href^="/"]');
       links.forEach((link) => {
         link.addEventListener('mouseenter', () => {
           const href = link.getAttribute('href');
           if (href && !href.startsWith('#')) {
-            // Preload the route;
-            import(/* webpackChunkName: "route" */ `../app${href,)}/page.tsx`);
+            // Preload the route
+            // import(/* webpackChunkName: "route" */ `../pages${href}`);
           }
-        })
-      })
-    }
+        });
+      });
+    };
 
-    const timer = setTimeout(optimizeCodeSplitting, 1000);
-    return () => clearTimeout(timer);
+    optimizeCodeSplitting();
   }, [enableCodeSplitting]);
 
-<<<<<<< HEAD
-  // Performance monitoring;
-  useEffect(() => {const measurePerformance = () => {
-      if ('performance' in window) {
-=======
   // Performance monitoring
   useEffect(() => {
     const measurePerformance = () => {
-      if ('performance' in window) {;
->>>>>>> origin/main
-        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        const paint = performance.getEntriesByType('paint');
-        
-        const metrics = {
-          domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-          loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
-          firstPaint: paint.find(p => p.name === 'first-paint')?.startTime || 0,
-<<<<<<< HEAD
-          firstContentfulPaint: paint.find(p => p.name === 'first-contentful-paint')?.startTime || 0;,}// Send metrics to analytics;
-        if (typeof window !== 'undefined' && 'gtag' in window) {const gtag = (window as {gtag: (command: string, action: string, parameters: Record<string, unknown>) => void}}).gtag;
-          gtag('event', 'performance_metrics', {)
-=======
-          firstContentfulPaint: paint.find(p => p.name === 'first-contentful-paint')?.startTime || 0
-        }
+      if ('performance' in window) {
+        // Measure Core Web Vitals
+        const observer = new PerformanceObserver((list) => {
+          list.getEntries().forEach((entry) => {
+            if (entry.entryType === 'largest-contentful-paint') {
+              console.log('LCP:', entry.startTime);
+            }
+            if (entry.entryType === 'first-input') {
+              console.log('FID:', entry.processingStart - entry.startTime);
+            }
+            if (entry.entryType === 'layout-shift') {
+              console.log('CLS:', (entry as any).value);
+            }
+          });
+        });
 
-        // Send metrics to analytics
-        if (typeof window !== 'undefined' && 'gtag' in window) {;
-          const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag;
-          gtag('event', 'performance_metrics', {
->>>>>>> origin/main
-            event_category: 'performance',
-            event_label: 'page_load',
-            value: Math.round(metrics.domContentLoaded),})
-        }
+        observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
       }
-    }
+    };
 
-    // Measure performance after page load;
-    window.addEventListener('load', measurePerformance);
-    return () => window.removeEventListener('load', measurePerformance);
+    measurePerformance();
   }, []);
 
-  return <React.Fragment>{children</React.Fragment>}</React.Fragment>;
+  return <>{children}</>;
 };
 
 export default PerformanceOptimizer;
