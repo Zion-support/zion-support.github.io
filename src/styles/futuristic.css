@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* Futuristic CSS for Zion Tech Group */
 
 /* Custom CSS Variables */
@@ -96,13 +97,88 @@ body {
 
 @keyframes neon-pulse {
   from {
+=======
+/* Futuristic Design System */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Exo+2:wght@300;400;500;600;700;800&display=swap');
+
+/* CSS Variables for consistent theming */
+:root {
+  --neon-cyan: #00ffff;
+  --neon-purple: #8b5cf6;
+  --neon-pink: #ec4899;
+  --neon-green: #10b981;
+  --neon-orange: #f59e0b;
+  --neon-blue: #3b82f6;
+  --neon-red: #ef4444;
+  --neon-yellow: #eab308;
+  
+  --cyber-bg: #0a0a0a;
+  --cyber-surface: #1a1a1a;
+  --cyber-border: #333333;
+  --cyber-text: #ffffff;
+  --cyber-text-secondary: #a0a0a0;
+  
+  --glow-intensity: 0.8;
+  --animation-speed: 0.3s;
+}
+
+/* Base futuristic styles */
+.cyber-text {
+  font-family: 'Orbitron', monospace;
+  font-weight: 600;
+  text-shadow: 0 0 10px currentColor;
+}
+
+.neon-text {
+  color: var(--neon-cyan);
+  text-shadow: 
+    0 0 5px var(--neon-cyan),
+    0 0 10px var(--neon-cyan),
+    0 0 15px var(--neon-cyan),
+    0 0 20px var(--neon-cyan);
+  animation: neon-pulse 2s ease-in-out infinite alternate;
+}
+
+.neon-text-advanced {
+  background: linear-gradient(45deg, var(--neon-cyan), var(--neon-purple), var(--neon-pink));
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradient-shift 3s ease-in-out infinite;
+  text-shadow: none;
+}
+
+.neon-glow {
+  box-shadow: 
+    0 0 5px var(--neon-cyan),
+    0 0 10px var(--neon-cyan),
+    0 0 15px var(--neon-cyan),
+    inset 0 0 5px rgba(0, 255, 255, 0.1);
+}
+
+.cyber-glow {
+  box-shadow: 
+    0 0 10px rgba(0, 255, 255, 0.3),
+    0 0 20px rgba(0, 255, 255, 0.2),
+    0 0 30px rgba(0, 255, 255, 0.1);
+}
+
+/* Animations */
+@keyframes neon-pulse {
+  0% {
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5694
     text-shadow: 
       0 0 5px currentColor,
       0 0 10px currentColor,
       0 0 15px currentColor,
       0 0 20px currentColor;
   }
+<<<<<<< HEAD
   to {
+=======
+  100% {
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5694
     text-shadow: 
       0 0 2px currentColor,
       0 0 5px currentColor,
@@ -111,6 +187,7 @@ body {
   }
 }
 
+<<<<<<< HEAD
 /* Gradient Text */
 .gradient-text {
   background: linear-gradient(135deg, var(--primary-cyan), var(--primary-purple), var(--primary-pink));
@@ -128,10 +205,108 @@ body {
   border-radius: 12px;
   font-weight: 600;
   transition: all 0.3s ease;
+=======
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes cyber-scan {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes hologram-flicker {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+@keyframes matrix-rain {
+  0% {
+    transform: translateY(-100vh);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+@keyframes neural-pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+}
+
+@keyframes data-stream {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+/* Cyber Grid Background */
+.cyber-grid {
+  background-image: 
+    linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: grid-move 20s linear infinite;
+}
+
+@keyframes grid-move {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 50px 50px;
+  }
+}
+
+/* Neural Network Background */
+.neural-network-bg {
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5694
   position: relative;
   overflow: hidden;
 }
 
+<<<<<<< HEAD
 .btn-primary::before {
 =======
 /* Futuristic Design System - Zion Tech Group */
@@ -342,6 +517,8 @@ body {
   overflow: hidden;
 }
 
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5694
 .neural-network-bg::before {
   content: '';
   position: absolute;
@@ -349,6 +526,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
+<<<<<<< HEAD
   background-image: 
     radial-gradient(circle at 20% 80%, rgba(0, 255, 255, 0.1) 0%, transparent 50%),
     radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
@@ -384,6 +562,50 @@ body {
     0 0 20px var(--shadow-cyan),
     inset 0 0 20px rgba(0, 255, 255, 0.1);
   transition: all 0.3s ease;
+=======
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(0, 255, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(236, 72, 153, 0.1) 0%, transparent 50%);
+  animation: neural-pulse 4s ease-in-out infinite;
+}
+
+/* Cyber Cards */
+.cyber-card {
+  background: rgba(26, 26, 26, 0.8);
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+}
+
+.cyber-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.2), transparent);
+  animation: cyber-scan 3s ease-in-out infinite;
+}
+
+.hologram-card {
+  background: rgba(26, 26, 26, 0.6);
+  border: 1px solid rgba(0, 255, 255, 0.5);
+  backdrop-filter: blur(15px);
+  animation: hologram-flicker 2s ease-in-out infinite;
+}
+
+/* Cyber Buttons */
+.cyber-button {
+  background: linear-gradient(45deg, var(--neon-cyan), var(--neon-purple));
+  border: 2px solid var(--neon-cyan);
+  color: var(--cyber-text);
+  position: relative;
+  overflow: hidden;
+  transition: all var(--animation-speed) ease;
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5694
 }
 
 .cyber-card:hover {
@@ -416,7 +638,11 @@ body {
   left: -100%;
   width: 100%;
   height: 100%;
+<<<<<<< HEAD
   background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+=======
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5694
   transition: left 0.5s ease;
 }
 
@@ -425,6 +651,7 @@ body {
   left: 100%;
 }
 
+<<<<<<< HEAD
 .btn-primary:hover {
   transform: translateY(-2px);
   box-shadow: var(--shadow-glow);
@@ -944,12 +1171,33 @@ body {
   100% {
     background-position: 0% 50%;
   }
+=======
+.cyber-button:hover {
+  box-shadow: 
+    0 0 20px var(--neon-cyan),
+    0 0 40px var(--neon-cyan),
+    inset 0 0 20px rgba(0, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Cyber Border Glow */
+.cyber-border-glow {
+  border: 1px solid var(--neon-cyan);
+  box-shadow: 
+    0 0 10px var(--neon-cyan),
+    inset 0 0 10px rgba(0, 255, 255, 0.1);
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5694
 }
 
 /* Matrix Rain Enhanced */
 .matrix-rain {
-  position: relative;
-  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
 }
 
 .matrix-rain::before {
@@ -960,6 +1208,7 @@ body {
   width: 100%;
   height: 100%;
   background: 
+<<<<<<< HEAD
     linear-gradient(90deg, transparent 98%, rgba(0, 255, 255, 0.03) 100%),
     linear-gradient(0deg, transparent 98%, rgba(0, 255, 255, 0.03) 100%);
   background-size: 50px 50px;
@@ -993,10 +1242,25 @@ body {
 
 /* Quantum Field Enhanced */
 .quantum-field-enhanced {
+=======
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 255, 0, 0.03) 2px,
+      rgba(0, 255, 0, 0.03) 4px
+    );
+  animation: matrix-rain 20s linear infinite;
+}
+
+/* Data Stream Effect */
+.data-stream {
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5694
   position: relative;
   overflow: hidden;
 }
 
+<<<<<<< HEAD
 .quantum-field-enhanced::before {
   content: '';
   position: absolute;
@@ -1026,10 +1290,14 @@ body {
 }
 
 .quantum-field-enhanced::after {
+=======
+.data-stream::after {
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5694
   content: '';
   position: absolute;
   top: 0;
   left: 0;
+<<<<<<< HEAD
   width: 100%;
   height: 100%;
   background: 
@@ -1074,12 +1342,90 @@ body {
 }
 
 .cyber-grid-enhanced::before {
+=======
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent, var(--neon-cyan), transparent);
+  animation: data-stream 2s linear infinite;
+}
+
+/* Cyber Scan Effect */
+.cyber-scan-effect {
+  position: relative;
+  overflow: hidden;
+}
+
+.cyber-scan-effect::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--neon-cyan), transparent);
+  animation: cyber-scan 3s ease-in-out infinite;
+}
+
+/* Neon Text Variants */
+.neon-text-purple {
+  color: var(--neon-purple);
+  text-shadow: 
+    0 0 5px var(--neon-purple),
+    0 0 10px var(--neon-purple),
+    0 0 15px var(--neon-purple);
+}
+
+.neon-text-pink {
+  color: var(--neon-pink);
+  text-shadow: 
+    0 0 5px var(--neon-pink),
+    0 0 10px var(--neon-pink),
+    0 0 15px var(--neon-pink);
+}
+
+.neon-text-green {
+  color: var(--neon-green);
+  text-shadow: 
+    0 0 5px var(--neon-green),
+    0 0 10px var(--neon-green),
+    0 0 15px var(--neon-green);
+}
+
+/* Cyber Input Fields */
+.cyber-input {
+  background: rgba(26, 26, 26, 0.8);
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  color: var(--cyber-text);
+  backdrop-filter: blur(10px);
+  transition: all var(--animation-speed) ease;
+}
+
+.cyber-input:focus {
+  border-color: var(--neon-cyan);
+  box-shadow: 
+    0 0 10px var(--neon-cyan),
+    inset 0 0 10px rgba(0, 255, 255, 0.1);
+  outline: none;
+}
+
+/* Cyber Progress Bars */
+.cyber-progress {
+  background: rgba(26, 26, 26, 0.8);
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  height: 8px;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+.cyber-progress::before {
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5694
   content: '';
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
   height: 100%;
+<<<<<<< HEAD
   background: 
     radial-gradient(circle at 25% 25%, rgba(0, 255, 255, 0.1) 0%, transparent 50%),
     radial-gradient(circle at 75% 75%, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
@@ -1571,18 +1917,95 @@ body {
     --bg-slate: #0f0f0f;
     --text-white: #ffffff;
     --text-gray-300: #e5e5e5;
+=======
+  background: linear-gradient(90deg, var(--neon-cyan), var(--neon-purple));
+  animation: progress-glow 2s ease-in-out infinite;
+}
+
+@keyframes progress-glow {
+  0%, 100% {
+    box-shadow: 0 0 5px var(--neon-cyan);
+  }
+  50% {
+    box-shadow: 0 0 20px var(--neon-cyan);
   }
 }
 
-/* High Contrast Mode */
+/* Responsive Design */
+@media (max-width: 768px) {
+  .cyber-text {
+    font-size: 0.9em;
+  }
+  
+  .neon-text {
+    text-shadow: 
+      0 0 3px currentColor,
+      0 0 6px currentColor,
+      0 0 9px currentColor;
+  }
+  
+  .cyber-card {
+    backdrop-filter: blur(5px);
+  }
+}
+
+/* Dark mode enhancements */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --cyber-bg: #000000;
+    --cyber-surface: #111111;
+    --cyber-border: #222222;
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5694
+  }
+}
+
+/* High contrast mode */
 @media (prefers-contrast: high) {
   .neon-text {
+<<<<<<< HEAD
     color: var(--primary-cyan);
     text-shadow: 0 0 5px var(--primary-cyan);
   }
   
   .cyber-card {
     border: 2px solid var(--primary-cyan);
+=======
+    text-shadow: 
+      0 0 2px currentColor,
+      0 0 4px currentColor,
+      0 0 6px currentColor;
+  }
+  
+  .cyber-button {
+    border-width: 3px;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .neon-text,
+  .cyber-card::before,
+  .cyber-scan-effect::before,
+  .matrix-rain::before,
+  .data-stream::after {
+    animation: none;
+  }
+  
+  .cyber-button:hover {
+    transform: none;
+  }
+}
+
+/* Print styles */
+@media print {
+  .neon-text,
+  .cyber-glow,
+  .cyber-button {
+    color: #000000 !important;
+    text-shadow: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5694
   }
   
   .glow-button {

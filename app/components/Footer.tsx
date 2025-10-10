@@ -76,6 +76,7 @@ const Footer: React.FC = memo(() => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         { name: 'AI Workflow Automation', href: '/ai-workflow-automation' },
         { name: 'AI Customer Support', href: '/ai-customer-support' },
         { name: 'AI Data Analytics', href: '/ai-data-analytics' },
@@ -119,6 +120,16 @@ const Footer: React.FC = memo(() => {
         { name: 'AI Machine Learning Platform', href: '/ai-ml-platform' },
         { name: 'AI Quantum Computing', href: '/ai-quantum-computing' }
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-e939
+=======
+        { name: 'AI Business Intelligence Pro', href: '/ai-business-intelligence' },
+        { name: 'AI Content Generation Pro', href: '/ai-content-generation' },
+        { name: 'AI Customer Support Pro', href: '/ai-customer-support' },
+        { name: 'AI Sales Automation Pro', href: '/ai-sales-automation' },
+        { name: 'AI Cybersecurity Pro', href: '/ai-cybersecurity' },
+        { name: 'AI Healthcare Pro', href: '/ai-healthcare' },
+        { name: 'AI Fintech Pro', href: '/ai-fintech' },
+        { name: 'AI Manufacturing Pro', href: '/ai-manufacturing' }
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5694
       ]
     },
     {
@@ -127,6 +138,7 @@ const Footer: React.FC = memo(() => {
       color: 'text-blue-400',
       bgColor: 'bg-blue-500/10',
       services: [
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -194,6 +206,16 @@ const Footer: React.FC = memo(() => {
         { name: 'Disaster Recovery & Backup', href: '/disaster-recovery' },
         { name: 'IT Performance Monitoring', href: '/performance-monitoring' }
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-e939
+=======
+        { name: 'Cloud Infrastructure Pro', href: '/cloud-infrastructure' },
+        { name: 'Cybersecurity Pro', href: '/cybersecurity' },
+        { name: 'Network Management Pro', href: '/network-management' },
+        { name: 'Database Management Pro', href: '/database-management' },
+        { name: 'DevOps Pro', href: '/devops' },
+        { name: 'Hardware Support Pro', href: '/hardware-support' },
+        { name: 'IT Consulting Pro', href: '/it-consulting' },
+        { name: 'IT Training Pro', href: '/it-training' }
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5694
       ]
     },
     {
@@ -202,6 +224,7 @@ const Footer: React.FC = memo(() => {
       color: 'text-green-400',
       bgColor: 'bg-green-500/10',
       services: [
+<<<<<<< HEAD
 <<<<<<< HEAD
         { name: 'AI Smart Calendar Pro', href: '/ai-smart-calendar-pro' },
         { name: 'AI Project Manager Pro', href: '/ai-project-manager' },
@@ -244,6 +267,16 @@ const Footer: React.FC = memo(() => {
         { name: 'AI Infrastructure Monitoring Pro', href: '/ai-infrastructure-monitoring-pro' },
         { name: 'AI Drug Discovery Pro', href: '/ai-drug-discovery-pro' }
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3064
+=======
+        { name: 'AI Project Manager Pro', href: '/ai-project-manager-pro' },
+        { name: 'AI Social Media Manager Pro', href: '/ai-social-media-manager' },
+        { name: 'AI Analytics Dashboard Pro', href: '/ai-analytics-dashboard' },
+        { name: 'AI Email Marketing Suite Pro', href: '/ai-email-marketing-suite' },
+        { name: 'AI Customer Support Bot Pro', href: '/ai-customer-support-bot' },
+        { name: 'AI Lead Generation Engine Pro', href: '/ai-lead-generation-engine' },
+        { name: 'AI Content Studio Pro', href: '/ai-content-studio' },
+        { name: 'AI Video Generator Pro', href: '/ai-video-generator' }
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5694
       ]
     },
     {
@@ -390,10 +423,13 @@ const Footer: React.FC = memo(() => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 backdrop-blur-sm border-t border-cyan-400/30 relative overflow-hidden matrix-bg">
 =======
 =======
 >>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-d44d
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5694
     <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 backdrop-blur-sm border-t border-cyan-400/30 relative overflow-hidden">
 >>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-6164
       {/* Futuristic Background Effects */}
@@ -403,6 +439,7 @@ const Footer: React.FC = memo(() => {
 <<<<<<< HEAD
 <<<<<<< HEAD
       
+<<<<<<< HEAD
 <<<<<<< HEAD
       {/* Quantum Particles */}
       <div className="absolute top-10 left-10 w-2 h-2 bg-cyan-400 rounded-full quantum-particle" style={{ animationDelay: '0s' }}></div>
@@ -432,6 +469,9 @@ const Footer: React.FC = memo(() => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 =======
+=======
+      {/* Main Footer Content */}
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5694
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-e939
@@ -456,6 +496,7 @@ const Footer: React.FC = memo(() => {
               <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-cyan-400/25">
                 <Zap className="w-5 h-5 text-white" />
               </div>
+<<<<<<< HEAD
               <span className="text-white font-bold text-xl bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">Zion Tech Group</span>
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -475,6 +516,9 @@ const Footer: React.FC = memo(() => {
               <span className="text-white font-bold text-xl bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent cyber-text">Zion Tech Group</span>
 =======
 >>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-d44d
+=======
+              <span className="text-white font-bold text-xl neon-text-advanced cyber-text">Zion Tech Group</span>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5694
             </div>
             
             <p className="text-gray-300 mb-6 leading-relaxed">
@@ -778,6 +822,7 @@ const Footer: React.FC = memo(() => {
                 placeholder="Enter your email address"
                 className="flex-1 px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-300"
               />
+<<<<<<< HEAD
               <button className="neon-button hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25 inline-flex items-center">
 =======
                 placeholder="Enter your email"
@@ -786,6 +831,9 @@ const Footer: React.FC = memo(() => {
               <button className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25 inline-flex items-center glow-button">
                 <Rocket className="w-4 h-4 mr-2" />
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-e939
+=======
+              <button className="cyber-button inline-flex items-center px-6 py-3 rounded-lg font-medium transition-all duration-300">
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5694
                 Subscribe
                 <ArrowRight className="w-4 h-4 ml-2" />
               </button>

@@ -85,11 +85,16 @@ import {
   Sprout,
   Scale,
 <<<<<<< HEAD
+<<<<<<< HEAD
   Mic,
   FlaskConical
 =======
   DollarSign
 >>>>>>> origin/cursor/website-audit-and-update-with-deployment-f003
+=======
+  DollarSign,
+  Award
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5694
 } from 'lucide-react';
 
 const Navigation: React.FC = () => {
@@ -255,6 +260,7 @@ const Navigation: React.FC = () => {
     {
       title: 'AI Services',
       icon: Brain,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       color: 'text-purple-600',
@@ -449,6 +455,19 @@ const Navigation: React.FC = () => {
         { name: 'AI Machine Learning Platform', path: '/ai-ml-platform' },
         { name: 'AI Quantum Computing', path: '/ai-quantum-computing' }
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-e939
+=======
+      color: 'text-purple-400',
+      bgColor: 'bg-purple-500/10',
+      services: [
+        { name: 'AI Business Intelligence', path: '/ai-business-intelligence' },
+        { name: 'AI Content Generation', path: '/ai-content-generation' },
+        { name: 'AI Customer Support', path: '/ai-customer-support' },
+        { name: 'AI Sales Automation', path: '/ai-sales-automation' },
+        { name: 'AI Cybersecurity', path: '/ai-cybersecurity' },
+        { name: 'AI Healthcare', path: '/ai-healthcare' },
+        { name: 'AI Fintech', path: '/ai-fintech' },
+        { name: 'AI Manufacturing', path: '/ai-manufacturing' }
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5694
       ]
 =======
   const services = [
@@ -469,6 +488,7 @@ const Navigation: React.FC = () => {
       name: 'Micro SaaS',
       href: '/micro-saas',
       icon: Cloud,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -634,11 +654,25 @@ const Navigation: React.FC = () => {
         { name: 'Disaster Recovery & Backup', path: '/disaster-recovery' },
         { name: 'IT Performance Monitoring', path: '/performance-monitoring' }
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-e939
+=======
+      color: 'text-blue-400',
+      bgColor: 'bg-blue-500/10',
+      services: [
+        { name: 'Cloud Infrastructure', path: '/cloud-infrastructure' },
+        { name: 'Cybersecurity', path: '/cybersecurity' },
+        { name: 'Network Management', path: '/network-management' },
+        { name: 'Database Management', path: '/database-management' },
+        { name: 'DevOps', path: '/devops' },
+        { name: 'Hardware Support', path: '/hardware-support' },
+        { name: 'IT Consulting', path: '/it-consulting' },
+        { name: 'IT Training', path: '/it-training' }
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5694
       ]
     },
     {
       title: 'Micro SAAS Solutions',
       icon: Code,
+<<<<<<< HEAD
 <<<<<<< HEAD
       color: 'text-cyan-400',
       bgColor: 'bg-cyan-500/10',
@@ -1001,6 +1035,40 @@ const Navigation: React.FC = () => {
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg border-b border-cyan-400/20' : 'bg-transparent'
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-acb8
+=======
+      color: 'text-green-400',
+      bgColor: 'bg-green-500/10',
+      services: [
+        { name: 'AI Project Manager Pro', path: '/ai-project-manager-pro' },
+        { name: 'AI Social Media Manager', path: '/ai-social-media-manager' },
+        { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard' },
+        { name: 'AI Email Marketing Suite', path: '/ai-email-marketing-suite' },
+        { name: 'AI Customer Support Bot', path: '/ai-customer-support-bot' },
+        { name: 'AI Lead Generation Engine', path: '/ai-lead-generation-engine' },
+        { name: 'AI Content Studio', path: '/ai-content-studio' },
+        { name: 'AI Video Generator', path: '/ai-video-generator' }
+      ]
+    },
+    {
+      title: 'Specialized',
+      icon: Zap,
+      color: 'text-orange-400',
+      bgColor: 'bg-orange-500/10',
+      services: [
+        { name: 'Quantum Computing', path: '/quantum-computing' },
+        { name: 'Autonomous Systems', path: '/autonomous-systems' },
+        { name: 'Blockchain & Web3', path: '/blockchain-web3' },
+        { name: 'IoT & Edge Computing', path: '/iot-edge-computing' },
+        { name: 'Business Intelligence', path: '/business-intelligence' },
+        { name: 'Robotics Solutions', path: '/robotics' }
+      ]
+    }
+  ];
+
+  return (
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg cyber-border-glow' : 'bg-transparent'
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5694
     }`}>
 <<<<<<< HEAD
 >>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-aeba
@@ -1051,6 +1119,7 @@ const Navigation: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             <span className="text-white cyber-text font-bold">
 <<<<<<< HEAD
 =======
@@ -1073,6 +1142,9 @@ const Navigation: React.FC = () => {
 =======
             <span className="text-white bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent font-bold">
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-acb8
+=======
+            <span className="text-white neon-text-advanced cyber-text">
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5694
               Zion Tech Group
 <<<<<<< HEAD
 =======
@@ -1144,6 +1216,7 @@ const Navigation: React.FC = () => {
             >
               About
             </Link>
+<<<<<<< HEAD
             <Link 
               to="/services" 
 <<<<<<< HEAD
@@ -1187,6 +1260,8 @@ const Navigation: React.FC = () => {
               </Link>
             ))}
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-e939
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5694
 
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-cb01
@@ -1209,6 +1284,7 @@ const Navigation: React.FC = () => {
               
               {servicesOpen && (
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <div className="absolute top-full left-0 mt-2 w-80 bg-white/95 backdrop-blur-lg rounded-xl shadow-xl border border-white/20 p-6">
                   <div className="grid grid-cols-1 gap-4">
                     {services.map((service) => (
@@ -1222,10 +1298,33 @@ const Navigation: React.FC = () => {
                         <div>
                           <h3 className="font-semibold text-gray-900">{service.name}</h3>
                           <p className="text-sm text-gray-600">{service.description}</p>
+=======
+                <div className="absolute top-full left-0 mt-2 w-96 bg-slate-800/95 backdrop-blur-md rounded-xl shadow-2xl border border-cyan-400/30 py-6 z-50">
+                  <div className="grid grid-cols-2 gap-6 px-6">
+                    {serviceCategories.map((category, index) => (
+                      <div key={index} className="space-y-3">
+                        <div className="flex items-center space-x-2 mb-3">
+                          <div className={`w-8 h-8 ${category.bgColor} rounded-lg flex items-center justify-center`}>
+                            <category.icon className={`w-4 h-4 ${category.color}`} />
+                          </div>
+                          <h3 className="font-semibold text-white text-sm">{category.title}</h3>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5694
                         </div>
                       </Link>
                     ))}
                   </div>
+<<<<<<< HEAD
+=======
+                  <div className="border-t border-gray-700 mt-6 pt-4 px-6">
+                    <Link
+                      to="/services"
+                      className="block w-full text-center bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transition-all"
+                      onClick={closeAllMenus}
+                    >
+                      View All Services
+                    </Link>
+                  </div>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5694
                 </div>
               )}
             </div>
@@ -1368,6 +1467,7 @@ const Navigation: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
               className="neon-button hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25 inline-flex items-center"
 =======
               className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-bold py-2 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25 inline-flex items-center cyber-button neon-glow"
@@ -1381,6 +1481,9 @@ const Navigation: React.FC = () => {
 =======
               className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-bold py-2 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25 inline-flex items-center glow-button"
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-e939
+=======
+              className="cyber-button inline-flex items-center px-6 py-2 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5694
               onClick={closeAllMenus}
 =======
               className="bg-gradient-to-r from-cyan-400 to-blue-500 text-white px-6 py-2 rounded-lg font-semibold hover:from-cyan-500 hover:to-blue-600 transition-all duration-300"
@@ -1451,6 +1554,7 @@ const Navigation: React.FC = () => {
               >
                 About
               </Link>
+              
               <Link 
                 to="/services" 
                 className="block text-white hover:text-cyan-400 transition-colors duration-200 font-medium py-2 neon-glow cyber-scan-effect"
@@ -1511,9 +1615,15 @@ const Navigation: React.FC = () => {
                   onClick={() => setServicesOpen(!servicesOpen)}
                   className="flex items-center justify-between w-full text-white hover:text-cyan-400 transition-colors duration-200 font-medium py-2 px-3 rounded-lg hover:bg-cyan-400/10"
                 >
+<<<<<<< HEAD
                   <div className="flex items-center space-x-3">
                     <Settings className="w-5 h-5" />
                     <span>Services</span>
+=======
+                  <div className="flex items-center space-x-2">
+                    <Code className="w-4 h-4" />
+                    <span>All Services</span>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5694
                   </div>
                   <ChevronDown className={`w-4 h-4 transition-transform ${servicesOpen ? 'rotate-180' : ''}`} />
                 </button>
@@ -1521,11 +1631,16 @@ const Navigation: React.FC = () => {
                   <div className="ml-6 space-y-4 mt-4">
                     {serviceCategories.map((category, categoryIndex) => (
                       <div key={categoryIndex}>
+<<<<<<< HEAD
                         <div className="flex items-center space-x-2 mb-3">
                           <category.icon className={`w-4 h-4 ${category.color}`} />
                           <div className="text-gray-300 font-semibold text-sm">{category.title}</div>
                         </div>
                         <div className="ml-4 space-y-2">
+=======
+                        <div className="text-cyan-400 font-semibold text-sm mb-2">{category.title}</div>
+                        <div className="ml-4 space-y-1">
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5694
                           {category.services.slice(0, 4).map((service, serviceIndex) => (
                             <Link
                               key={serviceIndex}
@@ -1756,10 +1871,14 @@ const Navigation: React.FC = () => {
               <Link
                 to="/contact"
 <<<<<<< HEAD
+<<<<<<< HEAD
                 className="block bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-3 rounded-lg font-medium transition-colors text-center mt-4 cyber-button quantum-ripple"
 =======
                 className="block bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 text-center mt-4 glow-button"
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-e939
+=======
+                className="block cyber-button text-center mt-4"
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5694
                 onClick={closeAllMenus}
               >
                 <Rocket className="w-4 h-4 mr-2 inline" />
@@ -1832,6 +1951,7 @@ const Navigation: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default Navigation;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1849,3 +1969,6 @@ export default Navigation;
 >>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-d44d
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-acb8
+=======
+export default Navigation;
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5694
