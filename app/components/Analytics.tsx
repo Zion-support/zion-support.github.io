@@ -194,7 +194,6 @@ declare global {
 }
 
 export default Analytics;
-<<<<<<< HEAD
 
 // Analytics Provider for context
 export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -205,6 +204,3 @@ export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ chi
     </>
   );
 };
-=======
-export { Analytics as AnalyticsProvider };
->>>>>>> cursor/fix-errors-and-merge-to-main-c4b3

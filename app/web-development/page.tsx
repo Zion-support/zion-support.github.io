@@ -1,321 +1,180 @@
 'use client';
 import React from 'react';
-import { Code, Smartphone, Globe, Database, Shield, BarChart, Users, CheckCircle, ArrowRight, Cloud } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
-import PerformanceOptimizer from '../components/PerformanceOptimizer';
-import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
-import SecurityEnhancer from '../components/SecurityEnhancer';
-const WebDevelopmentPage: React.FC = () => {,
-  const webServices = [,
-    {,
-      title: 'Frontend Development',
-      description: 'Modern, responsive web applications with cutting-edge technologies',
-      icon: Code;
-      price: '$1,200/month',
-      features: ['React/Next.js', 'Vue.js/Angular', 'Responsive Design', 'PWA Development'],
-      benefits: ['50% faster load times', 'Mobile-first approach', 'SEO optimized'],
-      color: 'text-blue-400'},
-    {
-      title: 'Backend Development',
-      description: 'Scalable server-side solutions and API development',
-      icon: Database;
-      price: '$1,500/month',
-      features: ['Node.js/Python', 'RESTful APIs', 'Microservices', 'Database Design'],
-      benefits: ['99.9% uptime', 'Scalable architecture', 'Secure APIs'],
-      color: 'text-green-400'},
-    {
-      title: 'Full-Stack Development',
-      description: 'Complete web solutions from frontend to backend',
-      icon: Globe;
-      price: '$2,200/month',
-      features: ['End-to-end development', 'Cloud deployment', 'DevOps integration', 'Testing & QA'],
-      benefits: ['Unified solution', 'Faster development', 'Better performance'],
-      color: 'text-purple-400'},
-    {
-      title: 'E-commerce Development',
-      description: 'Custom e-commerce platforms and online stores',
-      icon: Smartphone;
-      price: '$1,800/month',
-      features: ['Custom platforms', 'Payment integration', 'Inventory management', 'Analytics'],
-      benefits: ['Higher conversion rates', 'Mobile optimized', 'Secure payments'],
-      color: 'text-orange-400'},
-    {
-      title: 'Maintenance & Support',
-      description: 'Ongoing maintenance and support for your web applications',
-      icon: Users;
-      price: '$500/month',
-      features: ['24/7 Support', 'Regular Updates', 'Bug Fixes', 'Performance Monitoring'],
-      color: 'text-gray-400'}
-  ];
+import { CheckCircle, Code, Smartphone, Globe, Zap, Shield, ArrowRight } from 'lucide-react';
 
-  const technologies = [
-    { name: 'React/Next.js', icon: Code, description: 'Modern frontend frameworks' },
-    { name: 'Node.js', icon: Database, description: 'Server-side JavaScript' },
-    { name: 'Python/Django', icon: Globe, description: 'Backend development' },
-    { name: 'MongoDB/PostgreSQL', icon: Database, description: 'Database solutions' },
-    { name: 'AWS/Azure', icon: Cloud, description: 'Cloud platforms' },
-    { name: 'Docker/Kubernetes', icon: Shield, description: 'Containerization' }
-  ];
-
-  const process = [
+const WebDevelopmentPage: React.FC = () => {
+  const features = [
     {
-      step: '01',
-      title: 'Discovery & Planning',
-      description: 'We analyze your requirements and create a detailed project plan',
-      icon: BarChart;
+      icon: Code,
+      title: 'Custom Web Development',
+      description: 'Tailored web applications built with modern technologies and best practices.',
+      benefits: ['Custom solutions', 'Modern frameworks', 'Scalable architecture']
     },
     {
-      step: '02',
-      title: 'Design & Prototyping',
-      description: 'Create wireframes and prototypes to visualize your solution',
-      icon: Code;
+      icon: Smartphone,
+      title: 'Responsive Design',
+      description: 'Mobile-first, responsive web design that works perfectly on all devices.',
+      benefits: ['Mobile optimization', 'Cross-browser compatibility', 'Touch-friendly UI']
     },
     {
-      step: '03',
-      title: 'Development',
-      description: 'Build your web application using modern technologies and best practices',
-      icon: Globe;
+      icon: Globe,
+      title: 'E-commerce Solutions',
+      description: 'Complete e-commerce platforms with payment processing and inventory management.',
+      benefits: ['Payment integration', 'Inventory management', 'Order processing']
     },
     {
-      step: '04',
-      title: 'Testing & Launch',
-      description: 'Thorough testing and deployment with ongoing support',
-      icon: Shield;
+      icon: Zap,
+      title: 'Performance Optimization',
+      description: 'High-performance web applications with fast loading times and smooth user experience.',
+      benefits: ['Fast loading', 'SEO optimization', 'Performance monitoring']
+    },
+    {
+      icon: Shield,
+      title: 'Security & Compliance',
+      description: 'Secure web applications with enterprise-grade security and compliance features.',
+      benefits: ['Data encryption', 'Security audits', 'Compliance ready']
+    },
+    {
+      icon: Code,
+      title: 'API Development',
+      description: 'RESTful APIs and microservices for seamless integration and scalability.',
+      benefits: ['REST APIs', 'Microservices', 'Third-party integration']
     }
   ];
 
-  return(<>
-      <SEOOptimizer;
-        title="Web Development Services - Zion Tech Group"
-        description="Professional web development services including frontend, backend, full-stack, and e-commerce solutions. Modern technologies and best practices."
-        keywords={['web development', 'frontend development', 'backend development', 'full-stack', 'e-commerce', 'React', 'Node.js']}
-        canonicalUrl="https: //ziontechgroup.com/web-development",
-      />,
-        <PerformanceOptimizer;
-          enableImageOptimization={true}
-          enableLazyLoading={true}
-          enableCodeSplitting={true}
-          enablePrefetching={true}
-        />
-      <AccessibilityEnhancer;
-        enableKeyboardNavigation={true}
-        enableScreenReaderSupport={true}
-        enableHighContrast={true}
-        enableFocusManagement={true}
-      />
-      <SecurityEnhancer;
-        enableCSP={true}
-        enableHTTPSRedirect={true}
-        enableXSSProtection={true}
-        enableClickjackingProtection={true}
-      />
-      <Analytics />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+  const benefits = [
+    'Increase conversion rates by 40%',
+    'Improve page load speed by 60%',
+    'Enhance user experience',
+    'Boost search engine rankings',
+    'Ensure mobile compatibility',
+    'Scale with your business'
+  ];
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-        <Navigation />
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>Web Development Services | Zion Tech Group</title>
+        <meta name="description" content="Professional web development services. Custom websites, e-commerce solutions, and web applications built with modern technologies." />
+        <meta name="keywords" content="web development, custom websites, e-commerce, responsive design, web applications, Zion Tech Group" />
+      </Helmet>
 
-        <main className="container mx-auto px-4 py-16 pt-24">{/* Hero Section */}</main>
-          <section className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 neon-text">Web Development Services</h1><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Build modern, scalable, and high-performance web applications with our expert development team.</p>
-              From frontend to backend, we deliver solutions that drive business growth.</p>
-        <main className="container mx-auto px-4 py-16 pt-24">
-          {/* Hero Section */}
-          <section className="text-center mb-16">
-            <h1 className="text-4xl md: text-5xl lg:text-6xl font-bold text-white mb-6 neon-text">
-              Web Development Services;
-            </h1>,
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">,
-              Build modern, scalable, and high-performance web applications with our expert development team.
-              From frontend to backend, we deliver solutions that drive business growth.
+      <Navigation />
+
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+                Web Development
+              </span>
+              <br />
+              <span className="text-white">Services</span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Create stunning, high-performance web applications that drive business growth. 
+              From simple websites to complex web platforms, we deliver exceptional results.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">
-              <a;
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></section>
-              <a
-                href="/contact"
-                className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
-              >Start Your Project<a
-                href="tel:+13024640950"
-                className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-              >Call +1 302 464 0950</a>
-              >
-                Start Your Project;
-              </a>
-              <a;
-                href="tel:+13024640950"
-                className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-              >
-                Call +1 302 464 0950;
-              </a>
-            </div>,
-          </section>,
-,
-          {/* Services Grid */}
-          <section className="mb-20">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">Our Web Development Services<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{webServices.map((service, index) => (</div>
-                <div key={index} className="cyber-card p-8 hover:scale-105 transition-all duration-300">
-                  <div className="flex items-center mb-6">
-                    <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mr-4">
-                      <service.icon className="w-8 h-8 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="text-2xl font-bold text-white mb-2 neon-text">{service.title}<div className={`font-semibold ${service.color}`}>{service.price}<p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
-            <h2 className="text-3xl md: text-4xl font-bold text-white mb-12 text-center neon-text">
-              Our Web Development Services;)
-            </h2>)
-)
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">),
-              {webServices.map((service, index) => (
-                <div key={index} className="cyber-card p-8 hover: scale-105 transition-all duration-300">
-                  <div className="flex items-center mb-6">,
-                    <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mr-4">,
-                      <service.icon className="w-8 h-8 text-white" />,
-                    </div>,
-                    <div>,
-                      <h3 className="text-2xl font-bold text-white mb-2 neon-text">{service.title}</h3>
-                      <div className={`font-semibold ${service.color}`}>{service.price}</div>
-                    </div>
-                  </div>
-
-                  <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">Our Web Development Services</h2><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{webServices.map((service, index) => (</section>
-                <div key={index} className="cyber-card p-8 hover:scale-105 transition-all duration-300"></div>
-                  <div className="flex items-center mb-6"></div>
-                    <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mr-4"></div>
-                      <service.icon className="w-8 h-8 text-white" />
-                    </div>
-                    <div></div>
-                      <h3 className="text-2xl font-bold text-white mb-2 neon-text">{service.title}</h3><div className={`font-semibold ${service.color}`}>{service.price}</div><p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
-
-                  <div className="mb-6"></div>
-                    <h4 className="text-lg font-semibold text-white mb-3">Features<ul className="space-y-2">{service.features.map((feature, featureIndex) => (</ul>
-                        <li key={featureIndex} className="flex items-center text-gray-300">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" >{feature}</CheckCircle>
-                        </CheckCircle>
-                      ))}
-                    </ul>
-                  </div>
-
-                  {service.benefits && (
-                    <div className="mb-6"></div>
-                      <h4 className="text-lg font-semibold text-white mb-3">Benefits<ul className="space-y-2">{service.benefits.map((benefit, benefitIndex) => (</ul>
-                          <li key={benefitIndex} className="flex items-center text-gray-300">
-                            <ArrowRight className="w-4 h-4 text-cyan-400 mr-3 flex-shrink-0" >{benefit}</ArrowRight>
-                          </ArrowRight>
-                        ))}
-                      </ul>
-                    </div>
-                  )}
-
-                  <a;
-                    href="/contact"
-                    className="w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 hover:scale-105 cyber-button"
-                  >Get Started</a>
-                  </a>
-                </div>
-                    className="w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 hover: scale-105 cyber-button"
-                  >
-                    Get Started;
-                  </a>,
-                </div>))}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </button>
+              <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                View Portfolio
+              </button>
             </div>
-          </section>
+          </div>
+        </div>
+      </section>
 
-          {/* Technologies */}
-          <section className="mb-20">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">Technologies We Use<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">{technologies.map((tech, index) => (</div>
-                <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
-                  <tech.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
-                  <h3 className="text-lg font-semibold text-white mb-2">{tech.name}<p className="text-sm text-gray-300">{tech.description}</p>
-            <h2 className="text-3xl md: text-4xl font-bold text-white mb-12 text-center neon-text">
-              Technologies We Use;
-            </h2>,
-,
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">,
-              {technologies.map((tech, index) => (
-                <div key={index} className="cyber-card p-6 text-center hover: scale-105 transition-all duration-300">,
-                  <tech.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />,
-                  <h3 className="text-lg font-semibold text-white mb-2">{tech.name}</h3>
-                  <p className="text-sm text-gray-300">{tech.description}</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">Technologies We Use</h2><div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">{technologies.map((tech, index) => (</section>
-                <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300"></div>
-                  <tech.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
-                  <h3 className="text-lg font-semibold text-white mb-2">{tech.name}</h3><p className="text-sm text-gray-300">{tech.description}</p>
+      {/* Features Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Web Development Capabilities
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our web development team creates modern, scalable, and secure web applications 
+              using the latest technologies and best practices.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                <div className="flex items-center mb-4">
+                  <feature.icon className="h-8 w-8 text-purple-400 mr-3" />
+                  <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
                 </div>
-              ))}
-            </div>
-          </section>
-
-          {/* Process */}
-          <section className="mb-20">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">Our Development Process<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{process.map((step, index) => (</div>
-                <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
-                  <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-2xl font-bold text-white">{step.step}<h3 className="text-xl font-bold text-white mb-3 neon-text">{step.title}<p className="text-gray-300">{step.description}</p>
-            <h2 className="text-3xl md: text-4xl font-bold text-white mb-12 text-center neon-text">
-              Our Development Process;
-            </h2>,
-,
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">,
-              {process.map((step, index) => (
-                <div key={index} className="cyber-card p-6 text-center hover: scale-105 transition-all duration-300">,
-                  <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">,
-                    <span className="text-2xl font-bold text-white">{step.step}</span>
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-3 neon-text">{step.title}</h3>
-                  <p className="text-gray-300">{step.description}</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">Our Development Process</h2><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{process.map((step, index) => (</section>
-                <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300"></div>
-                  <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4"></div>
-                    <span className="text-2xl font-bold text-white">{step.step}</span><h3 className="text-xl font-bold text-white mb-3 neon-text">{step.title}</h3><p className="text-gray-300">{step.description}</p>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          {/* CTA Section */}
-          <section className="text-center">
-            <div className="cyber-card p-12 max-w-4xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">Ready to Build Your Next Web Application?<p className="text-xl text-gray-300 mb-8">Let's discuss your project requirements and create a custom solution that drives your business forward.</p>
-              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6 neon-text">
-                Ready to Build Your Next Web Application?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Let's discuss your project requirements and create a custom solution that drives your business forward.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a;
-            <div className="cyber-card p-12 max-w-4xl mx-auto"></section>
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">Ready to Build Your Next Web Application?</h2><p className="text-xl text-gray-300 mb-8">Let's discuss your project requirements and create a custom solution that drives your business forward.</p>
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-                <a
-                  href="/contact"
-                  className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
-                >Start Your Project<a
-                  href="tel:+13024640950"
-                  className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-                >Call +1 302 464 0950</a>
-                >
-                  Start Your Project;
-                </a>
-                <a;
-                  href="tel:+13024640950"
-                  className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-                >
-                  Call +1 302 464 0950;
-                </a>
+                <p className="text-gray-300 mb-4">{feature.description}</p>
+                <ul className="space-y-2">
+                  {feature.benefits.map((benefit, benefitIndex) => (
+                    <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="h-4 w-4 text-green-400 mr-2 flex-shrink-0" />
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
               </div>
-            </div>
-          </section>
-        </main>
+            ))}
+          </div>
+        </div>
+      </section>
 
-        <Footer />
-      </div>,
-    </>);
+      {/* Benefits Section */}
+      <section className="py-20 px-4 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Why Choose Our Web Development Services?
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              We combine technical expertise with creative design to deliver 
+              web solutions that exceed expectations and drive business results.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="flex items-center bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
+                <CheckCircle className="h-6 w-6 text-green-400 mr-3 flex-shrink-0" />
+                <span className="text-white font-medium">{benefit}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Ready to Build Your Web Solution?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Let our web development experts help you create a stunning, 
+            high-performance website that drives business growth.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300">
+              Start Your Project
+            </button>
+            <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
+              Get Free Quote
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
+  );
 };
 
 export default WebDevelopmentPage;
