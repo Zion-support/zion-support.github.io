@@ -91,31 +91,35 @@ const ServicesPage: React.FC = () => {
       services: [
         {
           name: 'AI Analytics Platform',
-          description: 'Predictive analytics and real-time insights',
+          description: 'Advanced predictive analytics with real-time insights and machine learning capabilities',
           price: 'Starting at $299/mo',
-          features: ['Predictive Analytics', 'Real-time Processing', 'Custom Dashboards'],
-          popular: true
+          features: ['Predictive Analytics', 'Real-time Processing', 'Custom Dashboards', 'ML Model Training', 'Data Visualization'],
+          popular: true,
+          link: 'https://ziontechgroup.com/ai-analytics-dashboard'
         },
         {
           name: 'AI Workflow Automation',
-          description: 'Intelligent business process automation',
+          description: 'Intelligent business process automation with self-optimizing workflows and error recovery',
           price: 'Starting at $199/mo',
-          features: ['Visual Workflow Builder', 'Smart Triggers', 'Error Handling'],
-          popular: true
+          features: ['Visual Workflow Builder', 'Smart Triggers', 'Error Handling', 'Performance Optimization', 'Integration Hub'],
+          popular: true,
+          link: 'https://ziontechgroup.com/ai-workflow-automation'
         },
         {
           name: 'AI Cybersecurity Platform',
-          description: 'Next-gen security with AI threat detection',
+          description: 'Next-generation security with AI-powered threat detection and automated response',
           price: 'Starting at $399/mo',
-          features: ['Threat Detection', 'Anomaly Analysis', 'Automated Response'],
-          popular: true
+          features: ['Threat Detection', 'Anomaly Analysis', 'Automated Response', 'Zero Trust Architecture', 'Compliance Monitoring'],
+          popular: true,
+          link: 'https://ziontechgroup.com/ai-cybersecurity'
         },
         {
           name: 'AI Content Generation',
-          description: 'Advanced content creation with AI',
+          description: 'Advanced content creation with AI-powered writing, editing, and optimization',
           price: 'Starting at $179/mo',
-          features: ['Multi-format Creation', 'SEO Optimization', 'Brand Voice Training'],
-          popular: true
+          features: ['Multi-format Creation', 'SEO Optimization', 'Brand Voice Training', 'Plagiarism Detection', 'Performance Analytics'],
+          popular: true,
+          link: 'https://ziontechgroup.com/ai-content-generation'
         }
       ]
     },
@@ -128,31 +132,35 @@ const ServicesPage: React.FC = () => {
       services: [
         {
           name: 'Cloud Migration & Setup',
-          description: 'Seamless migration to AWS, Azure, or GCP',
+          description: 'Seamless migration to AWS, Azure, or GCP with zero downtime and cost optimization',
           price: 'Starting at $10,000',
-          features: ['Multi-cloud Strategy', 'Cost Optimization', 'Security Implementation'],
-          popular: true
+          features: ['Multi-cloud Strategy', 'Cost Optimization', 'Security Implementation', 'Disaster Recovery', 'Performance Tuning'],
+          popular: true,
+          link: 'https://ziontechgroup.com/cloud-migration'
         },
         {
           name: 'Enterprise Cybersecurity',
-          description: 'Comprehensive security solutions',
+          description: 'Comprehensive security solutions with advanced threat protection and compliance',
           price: 'Starting at $8,000/mo',
-          features: ['Threat Detection', 'Vulnerability Assessment', '24/7 Monitoring'],
-          popular: true
+          features: ['Threat Detection', 'Vulnerability Assessment', '24/7 Monitoring', 'Incident Response', 'Compliance Management'],
+          popular: true,
+          link: 'https://ziontechgroup.com/cybersecurity'
         },
         {
           name: '24/7 IT Support',
-          description: 'Round-the-clock technical support',
+          description: 'Round-the-clock technical support with AI-powered diagnostics',
           price: 'Starting at $2,000/mo',
-          features: ['Help Desk Support', 'Remote Monitoring', 'Proactive Maintenance'],
-          popular: true
+          features: ['Help Desk Support', 'Remote Monitoring', 'Proactive Maintenance', 'AI Diagnostics', 'Predictive Maintenance'],
+          popular: true,
+          link: 'https://ziontechgroup.com/it-support'
         },
         {
           name: 'Custom Software Development',
-          description: 'Tailored software solutions',
+          description: 'Tailored software solutions with modern architecture and AI integration',
           price: 'Starting at $15,000',
-          features: ['Web Applications', 'Mobile Apps', 'API Development'],
-          popular: true
+          features: ['Web Applications', 'Mobile Apps', 'API Development', 'AI Integration', 'Cloud Deployment'],
+          popular: true,
+          link: 'https://ziontechgroup.com/custom-development'
         }
       ]
     },
@@ -165,31 +173,35 @@ const ServicesPage: React.FC = () => {
       services: [
         {
           name: 'AI Project Manager Pro',
-          description: 'Intelligent project management with AI insights',
+          description: 'Intelligent project management with AI insights and predictive analytics',
           price: '$199/mo',
-          features: ['Smart Task Assignment', 'Progress Tracking', 'Resource Optimization'],
-          popular: true
+          features: ['Smart Task Assignment', 'Progress Tracking', 'Resource Optimization', 'Risk Prediction', 'Team Collaboration'],
+          popular: true,
+          link: 'https://ziontechgroup.com/ai-project-manager'
         },
         {
           name: 'AI Content Writer Pro',
-          description: 'Advanced AI content creation',
+          description: 'Advanced AI content creation with SEO optimization and brand voice training',
           price: '$129/mo',
-          features: ['SEO Optimization', 'Brand Voice', 'Multi-language Support'],
-          popular: true
+          features: ['SEO Optimization', 'Brand Voice', 'Multi-language Support', 'Plagiarism Detection', 'Performance Analytics'],
+          popular: true,
+          link: 'https://ziontechgroup.com/ai-content-writer'
         },
         {
           name: 'AI Financial Advisor Pro',
-          description: 'Personalized financial planning and advice',
+          description: 'Personalized financial planning and advice with real-time market analysis',
           price: '$299/mo',
-          features: ['Portfolio Analysis', 'Risk Assessment', 'Investment Recommendations'],
-          popular: true
+          features: ['Portfolio Analysis', 'Risk Assessment', 'Investment Recommendations', 'Tax Optimization', 'Retirement Planning'],
+          popular: true,
+          link: 'https://ziontechgroup.com/ai-financial-advisor'
         },
         {
           name: 'AI Code Assistant Pro',
-          description: 'Advanced AI coding assistant',
+          description: 'Advanced AI coding assistant with intelligent debugging and optimization',
           price: '$179/mo',
-          features: ['Code Generation', 'Debug Assistant', 'Code Review'],
-          popular: true
+          features: ['Code Generation', 'Debug Assistant', 'Code Review', 'Performance Optimization', 'Security Analysis'],
+          popular: true,
+          link: 'https://ziontechgroup.com/ai-code-assistant'
         }
       ]
     }
@@ -381,9 +393,12 @@ const ServicesPage: React.FC = () => {
                         </ul>
                       </div>
                       <div className="text-lg font-bold text-cyan-400 mb-4">{service.price}</div>
-                      <button className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-2 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-purple-700 transition-all">
+                      <a 
+                        href={service.link || '#'} 
+                        className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-2 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-purple-700 transition-all text-center block"
+                      >
                         Learn More
-                      </button>
+                      </a>
                     </div>
                   ))}
                 </div>
