@@ -1,5 +1,4 @@
 'use client';
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Calendar, User, ArrowRight, Clock, Tag } from 'lucide-react';

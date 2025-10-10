@@ -391,8 +391,6 @@ const CareersPage: React.FC = () => {
                 </div>
               ))}
             </div>
-<<<<<<< HEAD
-=======
           </div>
         </section>
 

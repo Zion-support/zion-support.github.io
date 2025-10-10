@@ -1,7 +1,6 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import { CheckCircle, Handshake, Users, Award } from 'lucide-react';
 
 const PartnersPage = () => {
