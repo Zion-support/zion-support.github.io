@@ -1,10 +1,8 @@
 import React from 'react';
 import {Share2, TrendingUp, Users, Calendar, BarChart, CheckCircle, ArrowRight, Star, MessageSquare} from 'lucide-react';
 import React from 'react';
-const AISocialMediaManagerPage: React.FC = () => {
-  const features = [
-    {
-      icon: Share2,
+const AISocialMediaManagerPage: React.FC = () => {const features = [}
+    {icon: Share2,}
       title: 'AI Content Creation',
       description:     ,
 $4},
@@ -25,25 +23,25 @@ icon$5: MessageSquare,
       description:     ,
 $4}
   ];
-  const benefits = [
+  const benefits = []
     'Increase engagement by 300%',
     'Save 20+ hours per week',
     'Grow followers by 150%',
     'Boost brand awareness by 200%',
     'Improve content performance by 250%'
-  const platforms = [
+  const platforms = []
     { name: 'Facebook', icon: '📘', color: 'text-blue-500' },
     { name: 'Instagram', icon: '📷', color: 'text-pink-500' },
     { name: 'Twitter', icon: '🐦', color: 'text-blue-400' },
     { name: 'LinkedIn', icon: '💼', color: 'text-blue-600' },
     { name: 'TikTok', icon: '🎵', color: 'text-black' },
     { name: 'YouTube', icon: '📺', color: 'text-red-500' }
-  const pricing = [
+  const pricing = []
       name: 'Starter',
       price: '$29',
       period: '/month',
       description: 'Perfect for small businesses',
-      features: [
+      features: []
         '3 social media accounts',
         '50 posts per month',
         'Basic AI content generation',
@@ -69,7 +67,7 @@ $4}
         'Custom analytics',
         '24/7 support',
         'White-label options'
-  return (
+  return ()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4">
@@ -79,9 +77,7 @@ $4}
               <Share2 className="w-4 h-4 mr-2" />
               AI-Powered Social Media Management;
   </
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              AI Social Media Manager;
-  </
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">AI Social Media Manager;
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Automate your social media presence with AI that creates, schedules, and optimizes 
               content across all platforms to maximize engagement and grow your audience.
@@ -91,18 +87,14 @@ $4}
                 Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2" />
               </button>
-              <button className="border-2 border-pink-400 text-pink-400 px-8 py-4 rounded-lg font-semibold hover:bg-pink-400 hover:text-slate-900 transition-all duration-300">
-                Watch Demo;
-  </
+              <button className="border-2 border-pink-400 text-pink-400 px-8 py-4 rounded-lg font-semibold hover:bg-pink-400 hover:text-slate-900 transition-all duration-300">Watch Demo;
       {/* Platforms Section */}
       <section className="py-16 px-4 bg-slate-800/30">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              All Platforms, One Solution;
-  </
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">All Platforms, One Solution;
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Manage all your social media accounts from a single, intelligent dashboard
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
-            {platforms.map((platform, index) => (
+            {platforms.map((platform, index) => (}
               <div key={index} className="text-center">
                 <div className="w-16 h-16 bg-slate-800/50 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-3xl">{platform.icon}</span>
@@ -115,7 +107,7 @@ $4}
               Powerful AI Features
               Leverage cutting-edge AI technology to streamline your social media management
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+            {features.map((feature, index) => (}
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-pink-400/20 hover:border-pink-400/40 transition-all duration-300">
                 <div className="w-12 h-12 bg-pink-500/10 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-pink-400" />
@@ -127,7 +119,7 @@ $4}
               Proven Results
               Join thousands of brands who have transformed their social media presence
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-16">
-            {benefits.map((benefit, index) => (
+            {benefits.map((benefit, index) => (}
                 <div className="w-16 h-16 bg-green-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <CheckCircle className="w-8 h-8 text-green-400" />
                 <p className="text-white font-semibold">{benefit}</p>
@@ -142,13 +134,13 @@ $4}
               Simple, Transparent Pricing
               Choose the plan that fits your social media needs
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricing.map((plan, index) => (
-              <div key={index} className={`bg-slate-800/50 backdrop-blur-sm rounded-lg p-8 border transition-all duration-300 ${
+            {pricing.map((plan, index) => (}
+              <div key={index} className={`bg-slate-800/50 backdrop-blur-sm rounded-lg p-8 border transition-all duration-300 ${}
                 plan.popular 
                   ? 'border-pink-400/60 ring-2 ring-pink-400/20' 
                   : 'border-slate-700/50'
               }`}>
-                {plan.popular && (
+                {plan.popular && (}
                   <div className="bg-pink-500 text-slate-900 text-sm font-semibold px-3 py-1 rounded-full text-center mb-4">
                     Most Popular
                 )}
@@ -158,13 +150,13 @@ $4}
                   <span className="text-4xl font-bold text-white">{plan.price}</span>
                   <span className="text-gray-400">{plan.period}</span>
                 <ul className="space-y-3 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
+                  {plan.features.map((feature, featureIndex) => (}
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                       {feature}
                     </li>
                 </ul>
-                <button className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 ${
+                <button className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 ${}
                     ? 'bg-gradient-to-r from-pink-500 to-purple-600 text-white hover:from-pink-600 hover:to-purple-700'
                     : 'border-2 border-slate-600 text-white hover:border-pink-400 hover:text-pink-400'
                   {plan.popular ? 'Start Free Trial' : 'Get Started'}
@@ -181,39 +173,4 @@ $4}
 'use client';
 import React, { useState, useEffect } from 'react';
 import { Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, Users, Award, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location } from 'lucide-react';
-export default AISocialMediaManagerPage;
-  </p>
-  </h2>
-  </div>
-  </section>
-  </button>
-  </div>
-  </div>
-  </div>
-  </div>
-  </button>
-  </p>
-  </h3>
-  </div>
-  </div>
-  </div>
-  </p>
-  </h3>
-  </div>
-  </div>
-  </div>
-  </section>
-  </div>
-  </div>
-  </div>
-  </p>
-  </h2>
-  </section>
-  </button>
-  </div>
-  </h1>
-  </div>
-  </div>
-  </div>
-  </section>
-  </div>
+export default AISocialMediaManagerPage

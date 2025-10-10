@@ -4,10 +4,9 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { Search, BookOpen, Code, Zap, Brain, Shield, Database, Cloud, Settings, BarChart, MessageSquare, Eye, Cpu, Target, Lock, BarChart3, FileText, Bot, Calculator, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, Calendar, Clock3, Compass, PieChart, TrendingDown, Activity, CheckCircle, ArrowRight, ExternalLink, Download, Play, Users, Award, Globe } from 'lucide-react';
-const DocsPage: React.FC = () => {
-  const [searchQuery, setSearchQuery] = useState('');
+const DocsPage: React.FC = () => {const [searchQuery, setSearchQuery] = useState('');}
   const [selectedCategory, setSelectedCategory] = useState('all');
-  const docCategories = [
+  const docCategories = []
     { id: 'all', name: 'All Documentation', icon: BookOpen, count: 45 },
     { id: 'getting-started', name: 'Getting Started', icon: Zap, count: 8 },
     { id: 'ai-services', name: 'AI Services', icon: Brain, count: 12 },
@@ -15,9 +14,8 @@ const DocsPage: React.FC = () => {
     { id: 'integration', name: 'Integration', icon: Settings, count: 6 },
     { id: 'troubleshooting', name: 'Troubleshooting', icon: Shield, count: 4 }
   ];
-  const documentation = [
-    {
-      id: 1,
+  const documentation = []
+    {id: 1,}
       title: 'Quick Start Guide',
       description: 'Get up and running with Zion Tech Group services in minutes',
       category: 'getting-started',
@@ -26,8 +24,7 @@ const DocsPage: React.FC = () => {
       icon: Zap,
       content: 'Learn how to set up your account, configure your first AI service, and start getting results immediately.'
     },
-    {
-      id: 2,
+    {id: 2,}
       title: 'AI Project Manager API',
       description: 'Complete API reference for AI Project Manager service',
       category: 'api',
@@ -36,8 +33,7 @@ const DocsPage: React.FC = () => {
       icon: Code,
       content: 'Detailed API documentation including endpoints, parameters, authentication, and code examples.'
     },
-    {
-      id: 3,
+    {id: 3,}
       title: 'Machine Learning Integration',
       description: 'Integrate our ML services with your existing applications',
       category: 'integration',
@@ -46,8 +42,7 @@ const DocsPage: React.FC = () => {
       icon: Brain,
       content: 'Step-by-step guide to integrating our machine learning capabilities into your business processes.'
     },
-    {
-      id: 4,
+    {id: 4,}
       title: 'AI Analytics Dashboard Setup',
       description: 'Configure and customize your analytics dashboard',
       category: 'ai-services',
@@ -56,8 +51,7 @@ const DocsPage: React.FC = () => {
       icon: BarChart,
       content: 'Learn how to set up dashboards, configure data sources, and create custom visualizations.'
     },
-    {
-      id: 5,
+    {id: 5,}
       title: 'Authentication & Security',
       description: 'Secure your API access and data transmission',
       category: 'api',
@@ -66,8 +60,7 @@ const DocsPage: React.FC = () => {
       icon: Shield,
       content: 'Best practices for API authentication, security headers, and data protection.'
     },
-    {
-      id: 6,
+    {id: 6,}
       title: 'Troubleshooting Common Issues',
       description: 'Solutions to frequently encountered problems',
       category: 'troubleshooting',
@@ -76,8 +69,7 @@ const DocsPage: React.FC = () => {
       icon: Settings,
       content: 'Common issues and their solutions, including error codes and debugging tips.'
     },
-    {
-      id: 7,
+    {id: 7,}
       title: 'AI Content Generation API',
       description: 'Generate high-quality content using our AI API',
       category: 'api',
@@ -86,8 +78,7 @@ const DocsPage: React.FC = () => {
       icon: FileText,
       content: 'Complete guide to using our content generation API for blogs, social media, and marketing materials.'
     },
-    {
-      id: 8,
+    {id: 8,}
       title: 'Webhook Configuration',
       description: 'Set up real-time notifications and data sync',
       category: 'integration',
@@ -96,8 +87,7 @@ const DocsPage: React.FC = () => {
       icon: MessageSquare,
       content: 'Configure webhooks to receive real-time updates and synchronize data across your systems.'
     },
-    {
-      id: 9,
+    {id: 9,}
       title: 'AI Customer Support Bot Setup',
       description: 'Deploy and configure your AI-powered support bot',
       category: 'ai-services',
@@ -106,8 +96,7 @@ const DocsPage: React.FC = () => {
       icon: Bot,
       content: 'Complete setup guide for deploying intelligent customer support bots on your website.'
     },
-    {
-      id: 10,
+    {id: 10,}
       title: 'Performance Optimization',
       description: 'Optimize your AI service performance and reduce costs',
       category: 'troubleshooting',
@@ -117,30 +106,26 @@ const DocsPage: React.FC = () => {
       content: 'Advanced techniques for optimizing API calls, reducing latency, and minimizing costs.'
     }
   ];
-  const quickLinks = [
-    {
-      title: 'API Reference',
+  const quickLinks = []
+    {title: 'API Reference',}
       description: 'Complete API documentation',
       icon: Code,
       link: '/api-docs',
       color: 'text-blue-400'
     },
-    {
-      title: 'SDK Downloads',
+    {title: 'SDK Downloads',}
       description: 'Client libraries and tools',
       icon: Download,
       link: '/downloads',
       color: 'text-green-400'
     },
-    {
-      title: 'Video Tutorials',
+    {title: 'Video Tutorials',}
       description: 'Step-by-step video guides',
       icon: Play,
       link: '/tutorials',
       color: 'text-purple-400'
     },
-    {
-      title: 'Community Forum',
+    {title: 'Community Forum',}
       description: 'Connect with other developers',
       icon: Users,
       link: '/community',
@@ -157,15 +142,14 @@ const DocsPage: React.FC = () => {
         doc.content.toLowerCase().includes(searchQuery.toLowerCase())
       )
     : filteredDocs;
-  const getDifficultyColor = (difficulty: string) => {
-    switch (difficulty) {
+  const getDifficultyColor = (difficulty: string) => {switch (difficulty) {}
       case 'Beginner': return 'text-green-400 bg-green-500/20';
       case 'Intermediate': return 'text-yellow-400 bg-yellow-500/20';
       case 'Advanced': return 'text-red-400 bg-red-500/20';
       default: return 'text-gray-400 bg-gray-500/20';
     }
   };
-  return (
+  return ()
     <React.Fragment>
       <SEOOptimizer
         title="Documentation - Zion Tech Group"
@@ -178,12 +162,8 @@ const DocsPage: React.FC = () => {
         <main className="container mx-auto px-4 py-16 pt-24">
           {/* Hero Section */}
           <section className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
-              Documentation;
-  </
-            <p className="text-xl text-cyan-400 mb-8">
-              Everything you need to build with AI;
-  </
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">Documentation;
+            <p className="text-xl text-cyan-400 mb-8">Everything you need to build with AI;
             <p className="text-lg text-gray-300 max-w-4xl mx-auto">
               Comprehensive guides, API references, and tutorials to help you 
               integrate and optimize our AI services for your business.
@@ -206,11 +186,9 @@ const DocsPage: React.FC = () => {
           </section>
           {/* Quick Links */}
           <section className="mb-16">
-            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-              Quick Links;
-  </
+            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Quick Links;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {quickLinks.map((link, index) => (
+              {quickLinks.map((link, index) => (}
                 <Link
                   key={index}
                   to={link.link}
@@ -226,15 +204,13 @@ const DocsPage: React.FC = () => {
           </section>
           {/* Categories */}
           <section className="mb-16">
-            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-              Browse by Category;
-  </
+            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Browse by Category;
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-8">
-              {docCategories.map((category) => (
+              {docCategories.map((category) => (}
                 <button
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
-                  className={`p-4 rounded-lg text-center transition-all duration-300 ${
+                  className={`p-4 rounded-lg text-center transition-all duration-300 ${}
                     selectedCategory === category.id
                       ? 'bg-cyan-500 text-slate-900'
                       : 'bg-slate-800 text-white hover:bg-slate-700'
@@ -249,11 +225,9 @@ const DocsPage: React.FC = () => {
           </section>
           {/* Documentation List */}
           <section className="mb-16">
-            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-              Documentation;
-  </
+            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Documentation;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {searchResults.map((doc) => (
+              {searchResults.map((doc) => (}
                 <div key={doc.id} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                   <div className="flex items-start mb-4">
                     <doc.icon className="w-8 h-8 text-cyan-400 mr-4 flex-shrink-0" />
@@ -296,9 +270,7 @@ const DocsPage: React.FC = () => {
               <h2 className="text-3xl font-bold text-white mb-6 neon-text">
                 Ready to Get Started?
               </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Start building with our AI services today;
-  </
+              <p className="text-xl text-gray-300 mb-8">Start building with our AI services today;
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
@@ -324,10 +296,4 @@ const DocsPage: React.FC = () => {
 export default DocsPage;
   </Link>
   </Link>
-  </p>
-  </h2>
-  </h2>
-  </h2>
-  </p>
-  </h1>
   </SEOOptimizer>

@@ -1,7 +1,6 @@
 impo, r, t { ArrowLe, f, t, DollarSi, g, n, Targ, e, t, Use, r, s, Z, a, p } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
-export default function RealtimePersonalizationEngine20, 2, 5() { 
-  return(:src/pages/blog/ai-2025-oct-realtime-personalization-engine/page.tsx;
+export default function RealtimePersonalizationEngine20, 2, 5() {return(:src/pages/blog/ai-2025-oct-realtime-personalization-engine/page.tsx;}
     <React.Fragment>
       <Helm, e, t>
         <title>
@@ -206,7 +205,6 @@ export default function RealtimePersonalizationEngine20, 2, 5() {
                   <span></span><strong>$234M+ Revenue: </strong> Average incremental revenue for enterprise deployments</span>,
                 </li>
               </ul>
-  </div>
             <section className="mb-12">
               <h2 className="text-3xl font-bold mb-6 text-rose-300">The Personalization Imperative</h2>
               <p className="text-gray-300 mb-4 leading-relaxed">
@@ -250,7 +248,6 @@ export default function RealtimePersonalizationEngine20, 2, 5() {
                   <li>Feature</li> computation pipelines with sub-100 ms latency</li>
                   <li>Real</li>-time user state synchronization across channels</li>
                 </ul>
-  </div>
               <div></div>
                 <h3 className="text-2xl font-bold mb-4 text-pink-300">2. Predictive Intent Modeling</h3>
                 <p className="text-gray-300 mb-4">"
@@ -264,7 +261,6 @@ export default function RealtimePersonalizationEngine20, 2, 5() {
                   <li>Intent</li> classification with 96% accuracy across 200+ categories</li>
                   <li>Next</li>-action prediction guides experience orchestration</li>
                 </ul>
-  </div>
               <div></div>
                 <h3 className="text-2xl font-bold mb-4 text-pink-300">3. Dynamic Content Optimization</h3>
                 <p className="text-gray-300 mb-4">"
@@ -276,7 +272,6 @@ export default function RealtimePersonalizationEngine20, 2, 5() {
                   <li>A</li>/B testing automation discovers winning variations automatically</li>
                   <li>Causal</li> inference ensures changes drive true lift, not correlation</li>
                 </ul>
-  </div>
               <div></div>
                 <h3 className="text-2xl font-bold mb-4 text-pink-300">4. Cross-Channel Orchestration</h3>
                 <p className="text-gray-300 mb-4">"
@@ -288,7 +283,6 @@ export default function RealtimePersonalizationEngine20, 2, 5() {
                   <li>Channel</li> attribution models optimize cross-channel strategies</li>
                   <li>Real</li>-time decisioning APIs enable personalization anywhere</li>
                 </ul>
-  </div>
             </section>
             <section className="mb-12">
               <h2 className="text-3xl font-bold mb-6 text-rose-300">Enterprise Success Stories</h2>"
@@ -312,8 +306,6 @@ export default function RealtimePersonalizationEngine20, 2, 5() {
                     <li >• 82% reduction in customer churn</li>
                     <li >• 23 x ROI in first 18 months</li>
                   </ul>
-  </div>
-  </div>
             </section>
             <section className="mb-12">
               <h2 className="text-3xl font-bold mb-6 text-rose-300">Advanced Personalization Capabilities</h2>
@@ -328,22 +320,18 @@ export default function RealtimePersonalizationEngine20, 2, 5() {
   Detect and respond to high-intent micro-moments—brief windows where users are receptive to specific messages. 
                     AI identifies these opportunities in real-time and delivers perfectly timed interventions that feel helpful, not intrusive.
                   </p>
-  </div>
                 <div></div>
                   <h3 className="text-xl font-bold mb-3 text-pink-300">Affinity-Based Recommendations</h3>
                   <p className="text-gray-300">"
   Graph neural networks model complex relationships between users, products, and content. Collaborative filtering;
                     combines with deep learning to surface non-obvious recommendations that surprise and delight.
                   </p>
-  </div>
                 <div></div>
                   <h3 className="text-xl font-bold mb-3 text-purple-300">Privacy-Preserving Personalization</h3>
                   <p className="text-gray-300">"
   Federated learning and differential privacy enable powerful personalization while protecting user data. 
                     GDPR and CCPA compliant by design, with transparent data usage and user control.
                   </p>
-  </div>
-  </div>
             </section>
             <section className="mb-12">
               <h2 className="text-3xl font-bold mb-6 text-rose-300">The Personalization Competitive Moat</h2>
@@ -389,11 +377,6 @@ export default function RealtimePersonalizationEngine20, 2, 5() {
                 <Target className="ml-2 h-5 w-5" />);
 export default function RealtimePersonalizationEngine20, 2, 5() {/* TODO: Fix JSX expression */}
 };
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
   </div>  </div>
 </article>
 </article>
@@ -441,16 +424,6 @@ export default function RealtimePersonalizationEngine20, 2, 5() {/* TODO: Fix JS
 </DollarSign>
   </Target>
   </Target>
-  </span>
-  </span>
-  </span>
-  </span>
-  </span>
-  </span>
-  </span>
   </Users>
-  </span>
-  </span>
   </Users>
-  </span>
   </Target>

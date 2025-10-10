@@ -2,8 +2,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Calculator, BarChart, FileText, Shield, Zap, CheckCircle } from 'lucide-react';
-const AIAccountingAssistantPage: React.FC = () => {
-  const features = [
+const AIAccountingAssistantPage: React.FC = () => {const features = [}
     { icon: Calculator, title: 'Automated Bookkeeping', description: 'AI-powered automated bookkeeping and transaction categorization.' },
     { icon: BarChart, title: 'Financial Analytics', description: 'Advanced financial reporting and analytics with AI insights.' },
     { icon: FileText, title: 'Tax Preparation', description: 'Automated tax preparation and compliance management.' },
@@ -11,7 +10,7 @@ const AIAccountingAssistantPage: React.FC = () => {
     { icon: Zap, title: 'Invoice Processing', description: 'Automated invoice processing and payment tracking.' },
     { icon: CheckCircle, title: 'Compliance', description: 'Ensure compliance with accounting standards and regulations.' }
   ];
-  return (
+  return ()
     <React.Fragment>
       <Helmet>
         <title>AI Accounting Assistant | Zion Tech Group - Intelligent Financial Management</title>
@@ -26,7 +25,7 @@ const AIAccountingAssistantPage: React.FC = () => {
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Streamline your accounting with AI-powered financial management tools.</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
+              {features.map((feature, index) => (}
                 <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-cyan-400/50 transition-all duration-300">
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mb-6">
                     <feature.icon className="w-8 h-8 text-white" />
@@ -42,4 +41,4 @@ const AIAccountingAssistantPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AIAccountingAssistantPage;
+export default AIAccountingAssistantPage

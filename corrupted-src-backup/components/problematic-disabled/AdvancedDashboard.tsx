@@ -4,11 +4,11 @@ import React, { useState, useEffect } from "react";
 // import EnhancedUXManager from '../utils/enhancedUXManager';
 interface DashboardData {/* TODO: Fix JSX expression */}
   };
-  performance: {,
+  performance: {,}
     loadTime: number;
     responseTime: number;
   };
-  security: {,
+  security: {,}
     threatsBlocked: number;
     vulnerabilities: number;
   performanc,

@@ -2,13 +2,12 @@ import { Link } from 'react-router-dom';
 import { ArrowLeft, Calendar, User, Clock, Tag } from 'lucide-react';
 export const metadata = {/* TODO: Fix JSX expression */}
 };
-export default function AI2026ImplementationRoadmap() {
-  return(<div className="min-h-screen bg-white">
+export default function AI2026ImplementationRoadmap() {return(<div className="min-h-screen bg-white">}
       {/* Header */}
       <header className="bg-white border-b border-gray-200">
         <div className="max-w-4xl mx-auto px-4 py-6">
           <Link;
-  return (
+  return ()
     <div className="min-h-screen bg-white">
       {/* Header */}</div>
       <header className="bg-white border-b border-gray-200">
@@ -48,7 +47,7 @@ export default function AI2026ImplementationRoadmap() {
             Master the art of AI implementation with our comprehensive 2026 roadmap. From strategy development to full-scale deployment, learn how to successfully transform your enterprise with AI technologies.
           </p>
           <div className="flex flex-wrap gap-2">
-            {['AI Implementation', 'Enterprise AI', 'Digital Transformation', 'AI Strategy', '2026 Roadmap'].map((tag) => (</div>
+            {['AI Implementation', 'Enterprise AI', 'Digital Transformation', 'AI Strategy', '2026 Roadmap'].map((tag) => (</div>}
               <span key={tag} className="inline-flex items-center px-3 py-1 rounded-full text-sm bg-blue-100 text-blue-800"></span>
                 <Tag className="w-3 h-3 mr-1" />
 export default function AI2026ImplementationRoadmap() {/* TODO: Fix JSX expression */}
@@ -611,29 +610,3 @@ export default function AI2026ImplementationRoadmap() {/* TODO: Fix JSX expressi
 };
 export default AI2026ImplementationRoadmap;
 "
-  </li>
-  </li>
-  </li>
-  </li>
-  </li>
-  </li>
-  </li>
-  </li>
-  </li>
-  </li>
-  </li>
-  </li>
-  </li>
-  </li>
-  </li>
-  </li>
-  </li>
-  </li>
-  </li>
-  </li>
-  </li>
-  </li>
-  </li>
-  </li>
-  </li>
-  </li>

@@ -1,8 +1,7 @@
 import React from 'react';
-const NewBlogContentShowcase202, 6: React.FC = () => { ,
-  const blogPost, s = [
-    {
-      id: 1;
+const NewBlogContentShowcase202, 6: React.FC = () => {,}
+  const blogPost, s = []
+    {id: 1;}
       title: 'The, Complete, Guide to, AI, Revolution 20, 2, 6: From, Concept, to Implementat, i, o, n',
       slug: 'comple, t, e-gui, d, e-ai-revoluti, o, n-2, 0, 2, 6',
       excerpt: 'Comprehensive, guide, covering all, aspects, of the, AI, revolution in, 202, 6. Learn, about, meta-cognitiv, e, A, I, quant, u, m-neural, network, s, and, autonomous, operations that, are, transforming enterprises, worldwid, e.',
@@ -29,7 +28,7 @@ const NewBlogContentShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expressio
      },
     {/* TODO: Fix JSX expression */}
      }
-  ]; const blogStat, s = [
+  ]; const blogStat, s = []
     {  val, u, e: '5, 0, 0+', lab, e, l: 'Published, Articl, e, s', ic, o, n: <Award, classNam, e = "w-6 , h-, 6" / >  },"
     {  val, u, e: '2, M+', lab, e, l: 'Monthly, Reade, r, s', ic, o, n: <Users, classNam, e = "w-6 , h-, 6" / >  },"
     {  val, u, e: '4., 8', lab, e, l: 'Average, Rati, n, g', ic, o, n: <Star, classNam, e = "w-6 , h-, 6" / >  },"
@@ -39,7 +38,7 @@ const NewBlogContentShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expressio
       <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-20">
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" />
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 2, s' }} />
-  ]; return (
+  ]; return ()
     <div, classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, relative, overflow-hidd, e, n">
       {/* Animated, background, effects */}</div>
       <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-20"></div>
@@ -88,12 +87,12 @@ const NewBlogContentShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expressio
           </p>)
           {/* Blog, Stat, s */})
           <div, classNam, e = "grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, ma, x-w-4xl, m, x-au, t, o">)
-            { blogSta, t, s.m, a, p((st, a, t, ind, e, x) = > (
+            {blogSta, t, s.m, a, p((st, a, t, ind, e, x) = > (}
               <div, ke, y = { in, d, e, x  }, classNa, m, e = "te, x, t-cent, e, r">
           </p>
           {/* Blog, Stat, s */}
           <div, classNam, e = "grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, ma, x-w-4xl, m, x-au, t, o">
-            { blogSta, t, s.m, a, p((st, a, t, ind, e, x) = > (</div>
+            {blogSta, t, s.m, a, p((st, a, t, ind, e, x) = > (</div>}
               <div, ke, y = { in, d, e, x  }, classNa, m, e = "te, x, t-cent, e, r"></div>
                 <div, className="te, x, t-bl, u, e-400, m, b-2, flex, justify-cent, e, r">
           {/* Blog, Stat, s */}"
@@ -115,7 +114,7 @@ const NewBlogContentShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expressio
         </div>
         {/* Featured, Blog, Posts */}
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-3, ga, p-8, m, b-16">
-          { blogPos, t, s.m, a, p((po, s, t, ind, e, x) = > (</div>
+          {blogPos, t, s.m, a, p((po, s, t, ind, e, x) = > (</div>}
             <div, ke, y = { po, s, t.i, d  }, classNa, m, e = "group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/10, hove, r: bord, e, r-bl, u, e-5, 0, 0/50, transitio, n-all, duratio, n-500, overflo, w-hidden, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-bl, u, e-5, 0, 0/20"
               sty, l, e = { { animationDel, a, y: `${ind, e, x * 1, 5, 0 }, ms` }}
              > {/* Card, glow, effect */}</div>
@@ -127,7 +126,7 @@ const NewBlogContentShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expressio
                     {po, s, t.ic, o, n}
                   </div>
                   <div, className="flex, fle, x-col, ga, p-2">
-                    {  po, s, t.trendi, n, g  && (</div>
+                    {po, s, t.trendi, n, g  && (</div>}
                       <div, className="flex, item, s-center, ga, p-1, p, x-3, p, y-1.5, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-oran, g, e-500, t, o-r, e, d-500, tex, t-white, tex, t-xs, fon, t-bold, shado, w-lg"></div>
                         <TrendingUp, className="w-3 h-3" />
                         <sp, a, n>TRENDI, N, G</sp, a, n>
@@ -174,7 +173,7 @@ const NewBlogContentShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expressio
                 {/* Ta, g, s */}
                 <div, className="mb-6"></div>
                   <div, className="flex, fle, x-wrap, ga, p-1">
-                    { po, s, t.tags.m, a, p((ta, g, i, d, x) = > (</div>
+                    {po, s, t.tags.m, a, p((ta, g, i, d, x) = > (</div>}
                       <span, ke, y = { id, x  }, classNa, m, e = "px-2, p, y-1, rounded, bg-whi, t, e/10, tex, t-gr, a, y-300, tex, t-xs">
                 {/* Ta, g, s */}"
                 <div, className="mb-6"></div>"

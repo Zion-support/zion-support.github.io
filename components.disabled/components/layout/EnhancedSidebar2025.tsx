@@ -114,5 +114,4 @@ import React {useState} useEffect } from 'react'' import { Link } from 'react-ro
   hover:bg-gray-50' }`} > {child.name} </Link> ))} </motion.div> )} </AnimatePresence> )} </div> ))} </motion.div> )} </AnimatePresence> </div> ))} </div> </div> {/* Footer */} <div className="text-left"> <div className="text-left"> <a href="http,"
   s://linkedin.com/company/ziontechgroup" target="_blank" rel="noopener <noreferrer" className="text-left"> <Globe className="text-left" /> </a> <a href="mailt,"
   o:info@ziontechgroup.<com" className="text-left"> <Mail className="text-left" /> </a> </div> <p className="text-left"> © 2025 Zion Tech Group. All rights reserved. </p> </div> </div> </motion.div> </React.Fragment> )}; export default EnhancedSidebar2025; '"`
-  </div>
   </EnhancedSidebar2025Props>

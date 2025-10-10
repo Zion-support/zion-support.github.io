@@ -2,10 +2,8 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import {CheckCircle, Star, TrendingUp, Brain, Target, BarChart, Phone, Mail, MapPin} from 'lucide-react';
 import React from 'react';
-const AnalyticsToolsPage: React.FC = () => {
-  const analyticsTools = [
-    {
-      title: 'AI Business Intelligence',
+const AnalyticsToolsPage: React.FC = () => {const analyticsTools = [}
+    {title: 'AI Business Intelligence',}
       price: '$399/month',
       description: 'Advanced business intelligence with AI-powered insights and predictive analytics.',
       features: ['Real-time dashboards', 'Predictive analytics', 'Custom reports', 'Data visualization', 'ROI tracking', 'Performance forecasting'],
@@ -44,7 +42,7 @@ titletitle: 'AI Financial Analytics',
       category:     ,
 $4}
   ];
-  const benefits = [
+  const benefits = []
       icon: TrendingUp,
       title: 'Data-Driven Decisions',
       description:       ,
@@ -57,13 +55,12 @@ icon$5: BarChart,
 icon$5: Brain,
       title: 'AI-Powered',
       description: 'Leverage advanced AI algorithms for deeper insights and automation'
-  return (
+  return ()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-const PagePage: React.FC = () => {
-  return (
+const PagePage: React.FC = () => {return (}
           <div>Coming Soon</div>
   )
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -75,9 +72,7 @@ const PagePage: React.FC = () => {
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
-            AI Analytics Tools;
-  </
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">AI Analytics Tools;
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your data into actionable insights with AI-powered analytics tools for business intelligence, marketing, and performance tracking.
       {/* Hero Section */}
@@ -88,9 +83,7 @@ const PagePage: React.FC = () => {
   md:text-6xl font-bold text-white mb-6"></h1>
 // AI Analytics Tools;
           </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon;
-  </
+          <p className="text-xl text-cyan-400 mb-8 font-medium">Coming Soon;
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
@@ -117,11 +110,9 @@ const PagePage: React.FC = () => {
       {/* Analytics Tools Grid */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
-            Our Analytics Tools;
-  </
+          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">Our Analytics Tools;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {analyticsTools.map((tool, index) => (
+            {analyticsTools.map((tool, index) => (}
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all duration-300">
                 <div className="text-center mb-6">
                   <div className="text-5xl mb-4">{tool.icon}</div>
@@ -132,7 +123,7 @@ const PagePage: React.FC = () => {
                 <div className="mb-6">
                   <h4 className="font-semibold text-white mb-3">Features:</h4>
                   <ul className="space-y-2">
-                    {tool.features.map((feature, featureIndex) => (
+                    {tool.features.map((feature, featureIndex) => (}
                       <li key={featureIndex} className="flex items-center text-sm text-gray-300">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                         {feature}
@@ -143,13 +134,11 @@ const PagePage: React.FC = () => {
                   <div className="text-2xl font-bold text-cyan-400 mb-4">{tool.price}</div>
                   <a
                     href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${tool.title}`}
-                    className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all inline-block">
-                    Get Started;
-  </
+                    className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all inline-block">Get Started;
       {/* Benefits Section */}
             Why Choose Our Analytics Tools?
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
+            {benefits.map((benefit, index) => (}
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center hover:bg-white/20 transition-all duration-300">
                 <benefit.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
                 <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
@@ -254,28 +243,4 @@ Call (302) 464-0950;
               Email Us;
   );
 };
-export default AnalyticsToolsPage;
-  </div>
-  </p>
-  </div>
-  </p>
-  </h2>
-  </div>
-  </section>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </p>
-  </p>
-  </div>
-  </div>
-  </div>
+export default AnalyticsToolsPage

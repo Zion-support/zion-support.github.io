@@ -4,8 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Search, Calendar, User, ArrowRight, Tag } from 'lucide-react';
 
-interface BlogPost {
-  id: string;
+interface BlogPost {id: string;}
   title: string;
   excerpt: string;
   content: string;
@@ -17,15 +16,13 @@ interface BlogPost {
   image?: string;
 }
 
-const BlogPage: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
+const BlogPage: React.FC = () => {const [searchTerm, setSearchTerm] = useState('');}
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [filteredPosts, setFilteredPosts] = useState<BlogPost[]>([]);
 
   // Sample blog posts data
-  const blogPosts: BlogPost[] = [
-    {
-      id: '1',
+  const blogPosts: BlogPost[] = []
+    {id: '1',}
       title: 'The Future of AI in Enterprise Solutions',
       excerpt: 'Exploring how artificial intelligence is transforming business operations and creating new opportunities for growth.',
       content: 'Full article content here...',
@@ -36,8 +33,7 @@ const BlogPage: React.FC = () => {
       featured: true,
       image: '/images/blog/ai-enterprise.jpg'
     },
-    {
-      id: '2',
+    {id: '2',}
       title: 'Cloud Security Best Practices for 2024',
       excerpt: 'Essential security measures every organization should implement to protect their cloud infrastructure.',
       content: 'Full article content here...',
@@ -48,8 +44,7 @@ const BlogPage: React.FC = () => {
       featured: false,
       image: '/images/blog/cloud-security.jpg'
     },
-    {
-      id: '3',
+    {id: '3',}
       title: 'Micro SaaS: The Future of Software Development',
       excerpt: 'How micro SaaS solutions are revolutionizing the software industry and creating new business opportunities.',
       content: 'Full article content here...',
@@ -60,8 +55,7 @@ const BlogPage: React.FC = () => {
       featured: true,
       image: '/images/blog/micro-saas.jpg'
     },
-    {
-      id: '4',
+    {id: '4',}
       title: 'Digital Transformation Strategies for Small Businesses',
       excerpt: 'Practical steps small businesses can take to embrace digital transformation and stay competitive.',
       content: 'Full article content here...',
@@ -76,24 +70,21 @@ const BlogPage: React.FC = () => {
 
   const categories = ['all', 'AI & Machine Learning', 'Cloud Computing', 'Cybersecurity', 'Digital Transformation', 'Development'];
 
-  useEffect(() => {
-    let filtered = blogPosts;
-    if (searchTerm) {
-      filtered = filtered.filter(post => 
+  useEffect(() => {let filtered = blogPosts;}
+    if (searchTerm) {filtered = filtered.filter(post =>}
         post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
         post.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||
         post.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
       );
     }
-    if (selectedCategory !== 'all') {
-      filtered = filtered.filter(post => post.category === selectedCategory);
+    if (selectedCategory !== 'all') {filtered = filtered.filter(post => post.category === selectedCategory);}
     }
     setFilteredPosts(filtered);
   }, [searchTerm, selectedCategory]);
 
   const featuredPosts = blogPosts.filter(post => post.featured);
 
-  return (
+  return ()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Blog - Zion Tech Group | Technology Insights & Industry News</title>
@@ -130,11 +121,11 @@ const BlogPage: React.FC = () => {
 
           {/* Category Filter */}
           <div className="flex flex-wrap justify-center gap-2 mb-8 mt-8">
-            {categories.map((category) => (
+            {categories.map((category) => (}
               <button
                 key={category}
                 onClick={() => setSelectedCategory(category)}
-                className={`px-6 py-3 rounded-full border transition-all duration-300 ${
+                className={`px-6 py-3 rounded-full border transition-all duration-300 ${}
                   selectedCategory === category
                     ? 'border-cyan-400 bg-cyan-400/10 text-cyan-400'
                     : 'border-cyan-400/30 text-cyan-400 hover:bg-cyan-400/10'
@@ -148,14 +139,14 @@ const BlogPage: React.FC = () => {
       </section>
 
       {/* Featured Posts */}
-      {featuredPosts.length > 0 && (
+      {featuredPosts.length > 0 && (}
         <section className="py-16 bg-slate-800/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl font-bold text-white mb-8 text-center">Featured Articles</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {featuredPosts.map((post) => (
+              {featuredPosts.map((post) => (}
                 <article key={post.id} className="bg-slate-800/50 rounded-lg overflow-hidden border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300">
-                  {post.image && (
+                  {post.image && (}
                     <div className="aspect-video bg-slate-700">
                       <img src={post.image} alt={post.title} className="w-full h-full object-cover" />
                     </div>
@@ -171,7 +162,7 @@ const BlogPage: React.FC = () => {
                     <h3 className="text-xl font-semibold text-white mb-3">{post.title}</h3>
                     <p className="text-gray-300 mb-4">{post.excerpt}</p>
                     <div className="flex flex-wrap gap-2 mb-4">
-                      {post.tags.map((tag) => (
+                      {post.tags.map((tag) => (}
                         <span key={tag} className="px-2 py-1 bg-cyan-500/10 text-cyan-400 text-xs rounded">
                           #{tag}
                         </span>
@@ -197,15 +188,15 @@ const BlogPage: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-white mb-8 text-center">All Articles</h2>
           
-          {filteredPosts.length === 0 ? (
+          {filteredPosts.length === 0 ? (}
             <div className="text-center py-12">
               <p className="text-gray-400 text-lg">No articles found matching your criteria.</p>
             </div>
-          ) : (
+          ) : ()
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredPosts.map((post) => (
+              {filteredPosts.map((post) => (}
                 <article key={post.id} className="bg-slate-800/50 rounded-lg overflow-hidden border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300">
-                  {post.image && (
+                  {post.image && (}
                     <div className="aspect-video bg-slate-700">
                       <img src={post.image} alt={post.title} className="w-full h-full object-cover" />
                     </div>
@@ -221,7 +212,7 @@ const BlogPage: React.FC = () => {
                     <h3 className="text-xl font-semibold text-white mb-3">{post.title}</h3>
                     <p className="text-gray-300 mb-4">{post.excerpt}</p>
                     <div className="flex flex-wrap gap-2 mb-4">
-                      {post.tags.map((tag) => (
+                      {post.tags.map((tag) => (}
                         <span key={tag} className="px-2 py-1 bg-cyan-500/10 text-cyan-400 text-xs rounded">
                           #{tag}
                         </span>
@@ -245,4 +236,4 @@ const BlogPage: React.FC = () => {
   );
 };
 
-export default BlogPage;
+export default BlogPage

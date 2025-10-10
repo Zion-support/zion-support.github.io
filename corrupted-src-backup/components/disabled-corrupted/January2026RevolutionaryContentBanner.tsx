@@ -1,8 +1,7 @@
 import React from 'react';
-const January2026RevolutionaryContentBanne, r: React.FC = () => {,
-  const revolutionaryConten, t = [
-    {
-      title: 'Ne, x, t-Generation, Enterprise, Automation: The, 2026, AI Revolu, t, i, o, n',
+const January2026RevolutionaryContentBanne, r: React.FC = () => {,}
+  const revolutionaryConten, t = []
+    {title: 'Ne, x, t-Generation, Enterprise, Automation: The, 2026, AI Revolu, t, i, o, n',}
       description: '98% Automation, Ra, t, e, 1000 x, Processing, Speed, $2.5 B, Cost, Savings',
       slug: 'ai-20, 2, 6-ne, x, t-generati, o, n-enterpri, s, e-automat, i, o, n',
       category: 'AI, Innovati, o, n',
@@ -61,11 +60,11 @@ const January2026RevolutionaryContentBanne, r: React.FC = () => {/* TODO: Fix JS
         </div>)
         {/* Content, Gri, d */})
         <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12'>)
-          { revolutionaryConte, n, t.m, a, p((con, t, e, n, t, ind, e, x) = > (
+          {revolutionaryConte, n, t.m, a, p((con, t, e, n, t, ind, e, x) = > (}
         </div>
         {/* Content, Gri, d */}
         <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12'>
-          { revolutionaryConte, n, t.m, a, p((con, t, e, n, t, ind, e, x) = > (</div>
+          {revolutionaryConte, n, t.m, a, p((con, t, e, n, t, ind, e, x) = > (</div>}
             <div, ke, y = { in, d, e, x  }, classNa, m, e = 'group, b, g-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-6, border, border-whi, t, e/10, hove, r: bord, e, r-bl, u, e-5, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:sca, l, e-1, 0, 5'
             >
               {/* Content, Hea, d, e, r */}</div>

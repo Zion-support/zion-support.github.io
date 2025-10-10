@@ -2,10 +2,10 @@ import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 interface SEOEnhancerProps {/* TODO: Fix JSX expression */}
 }
-const SEOEnhancer: React.FC<SEOEnhancerProps> = ({,
+const SEOEnhancer: React.FC<SEOEnhancerProps> = ({,}
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services. Discover cutting-edge technology solutions for modern businesses.',
-  keywords = [
+  keywords = []
     'AI',
     'artificial intelligence',
     'enterprise solutions',
@@ -19,16 +19,13 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({,
   ogType = 'website',
   twitterCard = 'summary_large_image',
   structuredData,
-  children}) => {
-  useEffect(() => {
+  children}) => {useEffect(() => {}
     // Add structured data to the page;
-    if (structuredData) {
-      const _script = document.createElement('script');
+    if (structuredData) {const _script = document.createElement('script');}
       script.type = 'application/ld+json';
       script.text = JSON.stringify(structuredData);
       document.head.appendChild(script);
-      return () => {
-        document.head.removeChild(script);
+      return () => {document.head.removeChild(script);}
 const,
   SEOEnhancer: React.FC<SEOEnhancerProps> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
@@ -36,15 +33,14 @@ const,
     }
   }, [structuredData]);
   // Default structured data for organization;
-  const defaultStructuredData = {
-    '@context': 'https: //schema.org',
+  const defaultStructuredData = {'@context': 'https: //schema.org',}
     '@type': 'Organization',
     name: 'Zion Tech Group',
     description: description;
     url: canonicalUrl || window.location.origin;
     logo: `${window.location.origin}/logo.png`,
     sameAs: ['https://linkedin.com/company/zion-tech-group', 'https: //twitter.com/ziontechgroup']
-    contactPoint: {,
+    contactPoint: {,}
       '@type': 'ContactPoint',
       telephone: '+1-555-0123',
       contactType: 'customer service',

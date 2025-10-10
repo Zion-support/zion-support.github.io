@@ -1,6 +1,5 @@
-export, default, function QuantumEdgeAIRevolutionPa, g, e(): vo, i, d {
-  return(<div, className="m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-sla, t, e-950, vi, a-bl, u, e-950, t, o-sla, t, e-9, 5, 0">";
-  return (
+export, default, function QuantumEdgeAIRevolutionPa, g, e(): vo, i, d {return(<div, className="m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-sla, t, e-950, vi, a-bl, u, e-950, t, o-sla, t, e-9, 5, 0">";}
+  return ()
     <div, className="m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-sla, t, e-950, vi, a-bl, u, e-950, t, o-sla, t, e-9, 5, 0">";</div>
       <article, className="container, m, x-auto, p, x-6, p, y-16, ma, x-w-4, x, l">";
         {/* Head, e, r */}

@@ -2,8 +2,7 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
-  Brain, 
+import {Brain,}
   MessageSquare, 
   Eye, 
   Zap, 
@@ -26,13 +25,11 @@ import {
   Settings 
 } from 'lucide-react';
 
-const AIServicesPage: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
+const AIServicesPage: React.FC = () => {const [searchTerm, setSearchTerm] = useState('');}
   const [selectedCategory, setSelectedCategory] = useState('all');
 
-  const aiServices = [
-    {
-      id: 1,
+  const aiServices = []
+    {id: 1,}
       title: 'AI-Powered Chatbots',
       description: 'Intelligent conversational AI that understands context and provides human-like responses',
       icon: MessageSquare,
@@ -40,8 +37,7 @@ const AIServicesPage: React.FC = () => {
       price: 'Starting at $2,999/month',
       features: ['Natural language processing', 'Multi-channel support', 'Sentiment analysis', '24/7 availability', 'Custom training', 'Analytics dashboard']
     },
-    {
-      id: 2,
+    {id: 2,}
       title: 'Content Generation AI',
       description: 'Automated content creation for blogs, social media, marketing materials, and more',
       icon: FileText,
@@ -49,8 +45,7 @@ const AIServicesPage: React.FC = () => {
       price: 'Starting at $1,999/month',
       features: ['Blog post generation', 'Social media content', 'Email campaigns', 'Product descriptions', 'SEO optimization', 'Brand voice consistency']
     },
-    {
-      id: 3,
+    {id: 3,}
       title: 'Predictive Analytics',
       description: 'Advanced data analysis and forecasting to drive business decisions',
       icon: BarChart,
@@ -58,8 +53,7 @@ const AIServicesPage: React.FC = () => {
       price: 'Starting at $4,999/month',
       features: ['Sales forecasting', 'Customer behavior analysis', 'Risk assessment', 'Market trends', 'Real-time insights', 'Custom dashboards']
     },
-    {
-      id: 4,
+    {id: 4,}
       title: 'Computer Vision',
       description: 'Image and video analysis for quality control, security, and automation',
       icon: Eye,
@@ -67,8 +61,7 @@ const AIServicesPage: React.FC = () => {
       price: 'Starting at $3,999/month',
       features: ['Object detection', 'Image classification', 'Quality inspection', 'Facial recognition', 'OCR processing', 'Real-time analysis']
     },
-    {
-      id: 5,
+    {id: 5,}
       title: 'Voice AI Solutions',
       description: 'Speech recognition and voice-enabled applications for enhanced user experience',
       icon: Mic,
@@ -76,8 +69,7 @@ const AIServicesPage: React.FC = () => {
       price: 'Starting at $2,499/month',
       features: ['Speech-to-text', 'Text-to-speech', 'Voice commands', 'Multi-language support', 'Noise cancellation', 'Custom voice models']
     },
-    {
-      id: 6,
+    {id: 6,}
       title: 'Process Automation',
       description: 'Intelligent automation of repetitive tasks and workflows',
       icon: Zap,
@@ -85,8 +77,7 @@ const AIServicesPage: React.FC = () => {
       price: 'Starting at $3,499/month',
       features: ['Workflow automation', 'Document processing', 'Data extraction', 'Email automation', 'Task scheduling', 'Error handling']
     },
-    {
-      id: 7,
+    {id: 7,}
       title: 'AI Security Solutions',
       description: 'Advanced threat detection and security monitoring using AI',
       icon: Shield,
@@ -94,8 +85,7 @@ const AIServicesPage: React.FC = () => {
       price: 'Starting at $4,499/month',
       features: ['Threat detection', 'Anomaly detection', 'Fraud prevention', 'Access control', 'Incident response', 'Compliance monitoring']
     },
-    {
-      id: 8,
+    {id: 8,}
       title: 'Mobile AI Integration',
       description: 'AI-powered mobile applications with intelligent features',
       icon: Box,
@@ -107,21 +97,20 @@ const AIServicesPage: React.FC = () => {
 
   const categories = ['all', 'Customer Service', 'Content', 'Analytics', 'Computer Vision', 'Voice AI', 'Automation', 'Security', 'Mobile'];
 
-  const filteredServices = aiServices.filter(service => {
-    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+  const filteredServices = aiServices.filter(service => {const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||}
                          service.description.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     return matchesSearch && matchesCategory;
   });
 
-  const stats = [
+  const stats = []
     { icon: <Users className="w-8 h-8 text-blue-500" />, value: '500+', label: 'AI Models Deployed' },
     { icon: <TrendingUp className="w-8 h-8 text-green-500" />, value: '95%', label: 'Accuracy Rate' },
     { icon: <Shield className="w-8 h-8 text-purple-500" />, value: '99.9%', label: 'Uptime' },
     { icon: <Zap className="w-8 h-8 text-orange-500" />, value: '60%', label: 'Cost Reduction' }
   ];
 
-  const benefits = [
+  const benefits = []
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
@@ -129,7 +118,7 @@ const AIServicesPage: React.FC = () => {
     'Gain competitive advantage with advanced technology'
   ];
 
-  return (
+  return ()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>AI Services - Zion Tech Group | Advanced Artificial Intelligence Solutions</title>
@@ -172,7 +161,7 @@ const AIServicesPage: React.FC = () => {
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
+            {stats.map((stat, index) => (}
               <div key={index} className="text-center">
                 <div className="flex justify-center mb-4">
                   {stat.icon}
@@ -207,7 +196,7 @@ const AIServicesPage: React.FC = () => {
                 onChange={(e) => setSelectedCategory(e.target.value)}
                 className="px-4 py-3 bg-slate-800/50 border border-cyan-500/30 rounded-lg text-white focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20"
               >
-                {categories.map((category) => (
+                {categories.map((category) => (}
                   <option key={category} value={category} className="capitalize">
                     {category === 'all' ? 'All Services' : category}
                   </option>
@@ -222,7 +211,7 @@ const AIServicesPage: React.FC = () => {
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredServices.map((service) => (
+            {filteredServices.map((service) => (}
               <div key={service.id} className="bg-slate-800/50 rounded-2xl p-8 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300 group">
                 <div className="flex items-center mb-6">
                   <div className="w-12 h-12 bg-cyan-500/10 rounded-lg flex items-center justify-center mr-4">
@@ -236,13 +225,13 @@ const AIServicesPage: React.FC = () => {
                 <div className="mb-6">
                   <h4 className="text-sm font-medium text-gray-400 mb-3">Key Features:</h4>
                   <ul className="space-y-2">
-                    {service.features.slice(0, 4).map((feature, index) => (
+                    {service.features.slice(0, 4).map((feature, index) => (}
                       <li key={index} className="flex items-center text-sm text-gray-300">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                         {feature}
                       </li>
                     ))}
-                    {service.features.length > 4 && (
+                    {service.features.length > 4 && (}
                       <li className="text-cyan-400 text-sm">+{service.features.length - 4} more features</li>
                     )}
                   </ul>
@@ -281,7 +270,7 @@ const AIServicesPage: React.FC = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit, index) => (
+            {benefits.map((benefit, index) => (}
               <div key={index} className="flex items-start space-x-3">
                 <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
                 <span className="text-gray-300">{benefit}</span>
@@ -324,4 +313,4 @@ const AIServicesPage: React.FC = () => {
   );
 };
 
-export default AIServicesPage;
+export default AIServicesPage

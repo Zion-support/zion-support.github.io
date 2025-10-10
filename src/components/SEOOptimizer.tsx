@@ -71,7 +71,7 @@ const,
       },
       'address': {/* TODO: Fix JSX expression */}
       },
-      'sameAs': [
+      'sameAs': []
         'http,
   s://twitter.com/ziontechgroup',
         'http,
@@ -88,25 +88,21 @@ const,
     }
   };
   const mergedSEOData = { ...defaultSEOData, ...seoData };
-  useEffect(() => {
-    // Log SEO optimization
-    logger.info('SEO optimization applied', { 
-      page, 
+  useEffect(() => {// Log SEO optimization}
+    logger.info('SEO optimization applied', {page,}
       title: mergedSEOData.title,
       description: mergedSEOData.description 
     });
     // Track page view for analytics
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as any).gtag('config', 'GA_MEASUREMENT_ID', {
+    if (typeof window !== 'undefined' && 'gtag' in window) {(window as any).gtag('config', 'GA_MEASUREMENT_ID', {}
         page_title: mergedSEOData.title,
         page_location: mergedSEOData.canonical,
-        custom_map: {
-          page_type: page
+        custom_map: {page_type: page}
         }
       });
     }
   }, [mergedSEOData, page]);
-  return (
+  return ()
     <Helmet>
       {/* Basic Meta Tags */}
       <title>{mergedSEOData.title}</title>
@@ -163,41 +159,33 @@ const,
       </script>
       {/* Additional structured data for services */}
       <script type="application/ld+json">
-        {JSON.stringify({
+        {JSON.stringify({}
           '@context': 'https://schema.org',
           '@type': 'Service',
           name: 'AI and IT Solutions',
-          provider: {
-            '@type': 'Organization',
+          provider: {'@type': 'Organization',}
             name: 'Zion Tech Group'
           },
           description: mergedSEOData.description,
           serviceType: 'Technology Services',
           areaServed: 'United States',
-          hasOfferCatalog: {
-            '@type': 'OfferCatalog',
+          hasOfferCatalog: {'@type': 'OfferCatalog',}
             name: 'AI and IT Services',
-            itemListElement: [
-              {
-                '@type': 'Offer',
-                itemOffered: {
-                  '@type': 'Service',
+            itemListElement: []
+              {'@type': 'Offer',}
+                itemOffered: {'@type': 'Service',}
                   name: 'AI Solutions',
                   description: 'Advanced artificial intelligence solutions'
                 }
               },
-              {
-                '@type': 'Offer',
-                itemOffered: {
-                  '@type': 'Service',
+              {'@type': 'Offer',}
+                itemOffered: {'@type': 'Service',}
                   name: 'Cybersecurity',
                   description: 'Comprehensive cybersecurity solutions'
                 }
               },
-              {
-                '@type': 'Offer',
-                itemOffered: {
-                  '@type': 'Service',
+              {'@type': 'Offer',}
+                itemOffered: {'@type': 'Service',}
                   name: 'Cloud Infrastructure',
                   description: 'Scalable cloud infrastructure solutions'
                 }

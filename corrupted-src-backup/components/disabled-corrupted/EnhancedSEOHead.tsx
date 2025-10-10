@@ -1,7 +1,6 @@
 import React from 'react';
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
-interface SEOHeadProp, s {
-  title?: string;
+interface SEOHeadProp, s {title?: string;}
   description?: string;
   keywor, d, s?: string | string[];
   canonic, a, l?: string;
@@ -10,15 +9,14 @@ interface SEOHeadProp, s {
   ty, p, e?: string;
   author ?  : string;
  }
-const EnhancedSEOHea, d: React.FC<SEOHeadPro, p, s> = ({</SEOHeadPro>title</SEOHeadPro> = 'Zion, Tech, Group - Revolutionary, AI, and IT, Soluti, o, n, s',
+const EnhancedSEOHea, d: React.FC<SEOHeadPro, p, s> = ({</SEOHeadPro>title</SEOHeadPro> = 'Zion, Tech, Group - Revolutionary, AI, and IT, Soluti, o, n, s',}
   description = "Transform, your, enterprise with, Zion, Tech Gro, u, p's, revolutionary, AI solution, s.",
   keywor, d, s = 'AI, solutio, n, s, enterprise, A, I, artificial, intelligenc, e, machine, learnin, g, automati, o, n',
   canonic, a, l,
   u, r, l = 'htt, p, s: //ziontechgro u p.c o m' ,
   image = 'htt, p, s: //ziontechgro u p.c o m/og-image.j p g' ,
   ty, p, e = 'webs, i, t, e',
-  author = 'Zion, Tech, Grou, p'}) => { 
-  const metaKeyword, s = Arr, a, y.isArr, a, y(keywo, r, d, s)  ? keywor, d, s.jo, i, n(', ') : keywor, d, s; const canonicalUr, l = canonic, a, l || u, r, l; const structuredDat, a = {
+  author = 'Zion, Tech, Grou, p'}) => {const metaKeyword, s = Arr, a, y.isArr, a, y(keywo, r, d, s)  ? keywor, d, s.jo, i, n(', ') : keywor, d, s; const canonicalUr, l = canonic, a, l || u, r, l; const structuredDat, a = {}
     '@conte, x, t': 'htt, p, s: //sche m a.o r g' ,
     '@ty, p, e': 'Organizati, o, n',
     na, m, e: 'Zion, Tech, Grou, p',
@@ -29,12 +27,12 @@ const EnhancedSEOHea, d: React.FC<SEOHeadPro, p, s> = ({</SEOHeadPro>title</SEOH
       'htt, p, s: //linked i n.c o m/company/zi o n-te c h-gr o u p' ,
       'htt, p, s: //twitt e r.c o m/ziontechgr o u p' ,
       'htt, p, s: //gith u b.c o m/ZionClo u d s' ],
-    contactPoi, n, t: {,
+    contactPoi, n, t: {,}
       '@ty, p, e': 'ContactPo, i, n, t',
       telepho, n, e: '+1-5, 5, 5-1, 2, 3-4, 5, 6, 7',
       contactTy, p, e: 'customer, servi, c, e',
       ema, i, l : 'in, f, o@ziontechgro, u, p.co, m'},
-    addre, s, s: {,
+    addre, s, s: {,}
       '@ty, p, e': 'PostalAddr, e, s, s',
       streetAddre, s, s: '123, Innovation, Driv, e',
       addressLocali, t, y: 'San, Francis, c, o',
@@ -56,7 +54,7 @@ const EnhancedSEOHea, d: React.FC<SEOHeadPro, p, s> = ({/* TODO: Fix JSX express
     numberOfEmploye, e, s: '50, 0+',
     industr,
   y: 'Artificial, Intelligen, c, e',
-    servic, e, s: [
+    servic, e, s: []
       'AI, Workflow, Automatio, n',
       'Enterprise, AI, Solutions',
       'AI, Data, Analytics',
@@ -146,4 +144,4 @@ const EnhancedSEOHea, d: React.FC<SEOHeadPro, p, s> = ({/* TODO: Fix JSX express
     </Helm, e, t>
   );
 };
-export default EnhancedSEOHead;
+export default EnhancedSEOHead

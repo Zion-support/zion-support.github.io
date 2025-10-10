@@ -10,7 +10,7 @@ const NewContentPromotionalBanner202, 6 = () => {/* TODO: Fix JSX expression */}
       <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-20">
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-viol, e, t-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" />
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 2, s' }} />
-  ]; return (
+  ]; return ()
     <div, classNam, e = "py-16, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-viol, e, t-900, t, o-purp, l, e-900, relative, overflow-hidd, e, n">
       {/* Animated, background, effects */}</div>
       <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-20"></div>
@@ -58,11 +58,11 @@ const NewContentPromotionalBanner202, 6 = () => {/* TODO: Fix JSX expression */}
         </div>)
         {/* Content, G, r, i, d */})
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12">)
-          { newConte, n, t.m, a, p((con, t, e, n, t, ind, e, x) = > (
+          {newConte, n, t.m, a, p((con, t, e, n, t, ind, e, x) = > (}
         </div>
         {/* Content, G, r, i, d */}
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12">
-          { newConte, n, t.m, a, p((con, t, e, n, t, ind, e, x) = > (</div>
+          {newConte, n, t.m, a, p((con, t, e, n, t, ind, e, x) = > (</div>}
             <div, ke, y = { in, d, e, x  }, classNa, m, e = "group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/10, hove, r: bord, e, r-viol, e, t-5, 0, 0/50, transitio, n-all, duratio, n-500, overflo, w-hidden, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-viol, e, t-5, 0, 0/20"
               sty, l, e = { { animationDel, a, y: `${ind, e, x * 2, 0, 0 }, ms` }}
              > {/* Card, glow, effect */}</div>
@@ -140,12 +140,12 @@ const NewContentPromotionalBanner202, 6 = () => {/* TODO: Fix JSX expression */}
             </p>
           </div>
           <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-8"></div>
-            { [
+            {[}
               { val, u, e: '2., 5, M+', lab, e, l: 'Global, Reade, r, s', ic, o, n:</div> <Users, classNam, e = "w-8 , h-, 8" / > , col, o, r: 'te, x, t-viol, e, t-40, 0'  },
               {  val, u, e: '$15, B+', lab, e, l: 'Value, Creat, e, d', ic, o, n: <TrendingUp, classNam, e = "w-8 , h-, 8" / > , col, o, r: 'te, x, t-purp, l, e-40, 0'  },
               {  val, u, e: '99., 9%', lab, e, l: 'Content, Accura, c, y', ic, o, n: <Star, classNam, e = "w-8 , h-, 8" / > , col, o, r: 'te, x, t-bl, u, e-40, 0'  },
               {  val, u, e: '15, 0+', lab, e, l: 'Countries, Reach, e, d', ic, o, n: <Globe, classNam, e = "w-8 , h-, 8" / > , col, o, r: 'te, x, t-emera, l, d-40, 0'  }
-            ].m, a, p((st, a, t, ind, e, x) => (
+            ].m, a, p((st, a, t, ind, e, x) => ()
               <div, ke, y = { in, d, e, x }, classNa, m, e = "te, x, t-cent, e, r" ></div> <div, classNam, e = { `${st, a, t.co, l, o, r }, mb-2, flex, justify-cent, e, r`}>
         {/* Global, Impact, Stats */}"
         <div, classNam, e = "bg-gradie, n, t-to-r, fro, m-viol, e, t-5, 0, 0/10, t, o-purp, l, e-5, 0, 0/10, rounde, d-3x, l, p-8, border, border-viol, e, t-5, 0, 0/20, m, b-12"></div>"

@@ -3,8 +3,7 @@ import React, { useState, useCallback } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle, AlertCircle } from 'lucide-react';
 
-const ContactPage: React.FC = () => {
-  const [formData, setFormData] = useState({
+const ContactPage: React.FC = () => {const [formData, setFormData] = useState({}
     name: '',
     email: '',
     company: '',
@@ -15,26 +14,22 @@ const ContactPage: React.FC = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
-  const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {}
     const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
+    setFormData(prev => ({...prev,}
       [name]: value
     }));
   }, []);
 
-  const handleSubmit = useCallback(async (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleSubmit = useCallback(async (e: React.FormEvent) => {e.preventDefault();}
     setIsSubmitting(true);
     setSubmitStatus('idle');
 
-    try {
-      // Simulate API call
+    try {// Simulate API call}
       await new Promise(resolve => setTimeout(resolve, 2000));
       
       // Reset form
-      setFormData({
-        name: '',
+      setFormData({name: '',}
         email: '',
         company: '',
         phone: '',
@@ -43,14 +38,12 @@ const ContactPage: React.FC = () => {
       });
       
       setSubmitStatus('success');
-    } catch (error) {
-      setSubmitStatus('error');
-    } finally {
-      setIsSubmitting(false);
+    } catch (error) {setSubmitStatus('error');}
+    } finally {setIsSubmitting(false);}
     }
   }, []);
 
-  const services = [
+  const services = []
     'AI Solutions',
     'Cloud Computing',
     'Cybersecurity',
@@ -59,7 +52,7 @@ const ContactPage: React.FC = () => {
     'Other'
   ];
 
-  return (
+  return ()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Contact Us - Zion Tech Group | AI & IT Solutions</title>
@@ -90,14 +83,14 @@ const ContactPage: React.FC = () => {
             <div className="bg-slate-800/50 rounded-2xl p-8 border border-cyan-500/20">
               <h2 className="text-2xl font-bold text-white mb-6">Send us a message</h2>
               
-              {submitStatus === 'success' && (
+              {submitStatus === 'success' && (}
                 <div className="mb-6 p-4 bg-green-500/10 border border-green-500/20 rounded-lg flex items-center">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
                   <span className="text-green-400">Message sent successfully! We'll get back to you soon.</span>
                 </div>
               )}
               
-              {submitStatus === 'error' && (
+              {submitStatus === 'error' && (}
                 <div className="mb-6 p-4 bg-red-500/10 border border-red-500/20 rounded-lg flex items-center">
                   <AlertCircle className="w-5 h-5 text-red-400 mr-2" />
                   <span className="text-red-400">Failed to send message. Please try again.</span>
@@ -181,7 +174,7 @@ const ContactPage: React.FC = () => {
                     className="w-full px-4 py-3 bg-slate-700/50 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20"
                   >
                     <option value="">Select a service</option>
-                    {services.map((service) => (
+                    {services.map((service) => (}
                       <option key={service} value={service}>
                         {service}
                       </option>
@@ -210,12 +203,12 @@ const ContactPage: React.FC = () => {
                   disabled={isSubmitting}
                   className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 disabled:opacity-50 disabled:cursor-not-allowed text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2"
                 >
-                  {isSubmitting ? (
+                  {isSubmitting ? (}
                     <>
                       <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
                       <span>Sending...</span>
                     </>
-                  ) : (
+                  ) : ()
                     <>
                       <Send className="w-5 h-5" />
                       <span>Send Message</span>
@@ -308,4 +301,4 @@ const ContactPage: React.FC = () => {
   );
 };
 
-export default ContactPage;
+export default ContactPage

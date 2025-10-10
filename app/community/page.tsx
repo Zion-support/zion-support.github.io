@@ -2,30 +2,25 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Users, MessageCircle, Calendar } from 'lucide-react';
-const CommunityPage: React.FC = () => {
-  const features = [
-    {
-      icon: Users,
+const CommunityPage: React.FC = () => {const features = [}
+    {icon: Users,}
       title: 'Active Community',
       description: 'Join our vibrant community of developers, entrepreneurs, and tech enthusiasts'
     },
-    {
-      icon: MessageCircle,
+    {icon: MessageCircle,}
       title: 'Knowledge Sharing',
       description: 'Share knowledge, ask questions, and collaborate with like-minded professionals'
     },
-    {
-      icon: Calendar,
+    {icon: Calendar,}
       title: 'Events & Meetups',
       description: 'Participate in regular events, workshops, and networking opportunities'
     },
-    {
-      icon: Globe,
+    {icon: Globe,}
       title: 'Global Network',
       description: 'Connect with professionals from around the world'
     }
   ];
-  const benefits = [
+  const benefits = []
     'Access to exclusive community resources',
     'Networking opportunities with industry leaders',
     'Regular workshops and training sessions',
@@ -35,7 +30,7 @@ const CommunityPage: React.FC = () => {
     'Career development resources',
     'Proven track record of success'
   ];
-  return (
+  return ()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Community | Zion Tech Group</title>
@@ -44,9 +39,7 @@ const CommunityPage: React.FC = () => {
       </Helmet>
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            Community;
-  </
+          <h1 className="text-5xl font-bold text-white mb-6">Community;
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Join our vibrant community of developers, entrepreneurs, and tech enthusiasts. 
             Connect, learn, and grow together.
@@ -56,7 +49,7 @@ const CommunityPage: React.FC = () => {
           </p>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          {features.map((feature, index) => (
+          {features.map((feature, index) => (}
             <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center hover:bg-white/20 transition-all duration-300">
               <feature.icon className="h-12 w-12 text-purple-400 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
@@ -69,7 +62,7 @@ const CommunityPage: React.FC = () => {
             Why Join Our Community?
           </h2>
           <div className="grid md:grid-cols-2 gap-6">
-            {benefits.map((benefit, index) => (
+            {benefits.map((benefit, index) => (}
               <div key={index} className="flex items-center space-x-3">
                 <CheckCircle className="h-6 w-6 text-green-400 flex-shrink-0" />
                 <span className="text-gray-300">{benefit}</span>
@@ -99,7 +92,4 @@ const CommunityPage: React.FC = () => {
     </div>
   );
 };
-export default CommunityPage;
-  </button>
-  </button>
-  </h1>
+export default CommunityPage

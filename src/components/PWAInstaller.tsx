@@ -1,57 +1,44 @@
 import React, { useEffect, useState } from 'react';
-interface BeforeInstallPromptEvent extends Event {
-  prompt(): Promise<void>;
+interface BeforeInstallPromptEvent extends Event {prompt(): Promise<void>;}
   userChoice: Promise<{ outcome: 'accepted' | 'dismissed' }>;
 }
-const PWAInstaller: React.FC = () => {
-  const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null);
+const PWAInstaller: React.FC = () => {const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null);}
   const [showInstallButton, setShowInstallButton] = useState(false);
   const [isInstalled, setIsInstalled] = useState(false);
-  useEffect(() => {
-    // Check if app is already installed
-    if (window.matchMedia('(display-mode: standalone)').matches) {
-      setIsInstalled(true);
+  useEffect(() => {// Check if app is already installed}
+    if (window.matchMedia('(display-mode: standalone)').matches) {setIsInstalled(true);}
       return;
     }
     // Listen for the beforeinstallprompt event
-    const handleBeforeInstallPrompt = (e: Event) => {
-      e.preventDefault();
+    const handleBeforeInstallPrompt = (e: Event) => {e.preventDefault();}
       setDeferredPrompt(e as BeforeInstallPromptEvent);
       setShowInstallButton(true);
     };
     // Listen for the appinstalled event
-    const handleAppInstalled = () => {
-      setIsInstalled(true);
+    const handleAppInstalled = () => {setIsInstalled(true);}
       setShowInstallButton(false);
       setDeferredPrompt(null);
     };
     window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
     window.addEventListener('appinstalled', handleAppInstalled);
-    return () => {
-      window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
+    return () => {window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt);}
       window.removeEventListener('appinstalled', handleAppInstalled);
     };
   }, []);
-  const handleInstallClick = async () => {
-    if (!deferredPrompt) return;
-    try {
-      await deferredPrompt.prompt();
+  const handleInstallClick = async () => {if (!deferredPrompt) return;}
+    try {await deferredPrompt.prompt();}
       const { outcome } = await deferredPrompt.userChoice;
-      if (outcome === 'accepted') {
-        console.log('User accepted the install prompt');
-      } else {
-        console.log('User dismissed the install prompt');
+      if (outcome === 'accepted') {console.log('User accepted the install prompt');}
+      } else {console.log('User dismissed the install prompt');}
       }
       setDeferredPrompt(null);
       setShowInstallButton(false);
-    } catch (error) {
-      console.error('Error installing PWA:', error);
+    } catch (error) {console.error('Error installing PWA:', error);}
     }
   };
-  if (isInstalled || !showInstallButton) {
-    return null;
+  if (isInstalled || !showInstallButton) {return null;}
   }
-  return (
+  return ()
     <div className="fixed bottom-4 left-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white p-4 rounded-lg shadow-lg z-50 max-w-sm">
       <div className="flex items-start space-x-3">
         <div className="flex-shrink-0">
@@ -85,6 +72,5 @@ const PWAInstaller: React.FC = () => {
   );
 };
 export default PWAInstaller</button>
-  </button>
   </BeforeInstallPromptEvent>
   </void>

@@ -12,10 +12,8 @@ const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionB
 const ContentCarousel = lazy(() => import('./components/ContentCarousel'));
 
 // Performance optimization: Debounce scroll events
-const debounce = (func: Function, wait: number) => {
-  let timeout: NodeJS.Timeout;
-  return function executedFunction(...args: any[]) {
-    const later = () => {
+const debounce = (func: Function, wait: number) => {let timeout: NodeJS.Timeout;}
+  return function executedFunction(...args: any[]) {const later = () => {}
       clearTimeout(timeout);
       func(...args);
     };
@@ -25,70 +23,59 @@ const debounce = (func: Function, wait: number) => {
 };
 
 // Loading skeleton component
-const ServiceCardSkeleton: React.FC = memo(() => (
+const ServiceCardSkeleton: React.FC = memo(() => ()
   <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card">
     <div className="h-4 bg-gray-200 rounded w-3/4 mb-4"></div>
     <div className="h-3 bg-gray-200 rounded w-1/2 mb-2"></div>
     <div className="h-3 bg-gray-200 rounded w-2/3"></div>
-  </div>
 ));
 
-const HomePage: React.FC = () => {
-  const [isLoaded, setIsLoaded] = useState(false);
+const HomePage: React.FC = () => {const [isLoaded, setIsLoaded] = useState(false);}
   const [isVisible, setIsVisible] = useState(false);
 
-  useEffect(() => {
-    setIsLoaded(true);
+  useEffect(() => {setIsLoaded(true);}
     // Trigger visibility animation
     const timer = setTimeout(() => setIsVisible(true), 100);
     return () => clearTimeout(timer);
   }, []);
 
   // Analytics tracking for phone clicks - optimized
-  const handlePhoneClick = useCallback(() => {
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as any).gtag('event', 'click', {
-        event_category: 'Contact',
+  const handlePhoneClick = useCallback(() => {if (typeof window !== 'undefined' && 'gtag' in window) {}
+      (window as any).gtag('event', 'click', {event_category: 'Contact',}
         event_label: 'Phone Number',
         value: 1
       });
     }
   }, []);
 
-  const features = [
-    {
-      icon: Brain,
+  const features = []
+    {icon: Brain,}
       title: 'AI-Powered Solutions',
       description: 'Advanced artificial intelligence and machine learning solutions tailored to your business needs.'
     },
-    {
-      icon: Cloud,
+    {icon: Cloud,}
       title: 'Cloud Infrastructure',
       description: 'Scalable and secure cloud solutions for modern businesses.'
     },
-    {
-      icon: Shield,
+    {icon: Shield,}
       title: 'Cybersecurity',
       description: 'Comprehensive security solutions to protect your digital assets.'
     },
-    {
-      icon: Code,
+    {icon: Code,}
       title: 'Custom Development',
       description: 'Bespoke software solutions designed specifically for your requirements.'
     },
-    {
-      icon: BarChart,
+    {icon: BarChart,}
       title: 'Data Analytics',
       description: 'Transform your data into actionable insights with our analytics solutions.'
     },
-    {
-      icon: Users,
+    {icon: Users,}
       title: 'Team Collaboration',
       description: 'Enhance productivity with our collaboration and communication tools.'
     }
   ];
 
-  return (
+  return ()
     <React.Fragment>
       <SEOOptimizer
         title="Zion Tech Group - AI & IT Solutions"
@@ -188,7 +175,7 @@ const HomePage: React.FC = () => {
               </div>
               
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {features.map((feature, index) => (
+                {features.map((feature, index) => (}
                   <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300">
                     <div className="flex items-center mb-4">
                       <div className="w-12 h-12 bg-cyan-500/10 rounded-lg flex items-center justify-center mr-4">
@@ -242,4 +229,4 @@ const HomePage: React.FC = () => {
 
 HomePage.displayName = 'HomePage';
 
-export default HomePage;
+export default HomePage

@@ -1,8 +1,7 @@
-const, October2025NewPremiumContentBanne, r: Rea, c, t.FC = () => {
-  return(<div, className="relative, b, g-gradie, n, t-to-br, fro, m-purp, l, e-900, vi, a-bl, u, e-900, t, o-cy, a, n-900, p, y-16, overflo, w-hidd, e, n">";
+const, October2025NewPremiumContentBanne, r: Rea, c, t.FC = () => {return(<div, className="relative, b, g-gradie, n, t-to-br, fro, m-purp, l, e-900, vi, a-bl, u, e-900, t, o-cy, a, n-900, p, y-16, overflo, w-hidd, e, n">";}
       {/* Animated, Background, Elements */}
       <div, className="absolute, inse, t-0, opacit, y-20">
-  return (
+  return ()
     <div, className="relative, b, g-gradie, n, t-to-br, fro, m-purp, l, e-900, vi, a-bl, u, e-900, t, o-cy, a, n-900, p, y-16, overflo, w-hidd, e, n">";
       {/* Animated, Background, Elements */}</div>
       <div, className="absolute, inse, t-0, opacit, y-20"></div>
@@ -60,7 +59,7 @@ const, October2025NewPremiumContentBanne, r: Rea, c, t.FC = () => {/* TODO: Fix 
               <div, className="p-3, b, g-gradie, n, t-to-br, fro, m-cy, a, n-500, t, o-bl, u, e-600, rounde, d-xl, grou, p-hov, e, r: rota, t, e-12, transitio, n-transform, duratio, n-3, 0, 0">"
                 <Activity, className="w-8 h-8, tex, t-whi, t, e  />
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12">";
-          {/* Ca, r, d;
+          {/* Ca, r, d;}
   1: Autonomous, DevOp, s */}
           <div, className="group, b, g-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, borde, r-2, borde, r-cy, a, n-5, 0, 0/30, hove, r: bord, e, r-cy, a, n-400, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-cy, a, n-5, 0, 0/50">";
             <div, className="flex, item, s-center, ga, p-3, m, b-6">";
@@ -72,7 +71,7 @@ const, October2025NewPremiumContentBanne, r: Rea, c, t.FC = () => {/* TODO: Fix 
               <div, className="p-3, b, g-gradie, n, t-to-br, fro, m-cy, a, n-500, t, o-bl, u, e-600, rounde, d-xl, grou, p-hov, e, r: rota, t, e-12, transitio, n-transform, duratio, n-3, 0, 0">"</div>
                 <Activity, className="w-8 h-8, tex, t-whi, t, e  />
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12">";
-          {/* Ca, r, d 
+          {/* Ca, r, d}
   1: Autonomous, DevOp, s */}</div>
           <div, className="group, b, g-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, borde, r-2, borde, r-cy, a, n-5, 0, 0/30, hove, r: bord, e, r-cy, a, n-400, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-cy, a, n-5, 0, 0/50">";</div>
             <div, className="flex, item, s-center, ga, p-3, m, b-6">";</div>

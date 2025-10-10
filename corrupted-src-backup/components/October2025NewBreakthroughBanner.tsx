@@ -1,7 +1,5 @@
-const, October2025NewBreakthroughBanne, r = () => {
-  const, stat, s = octoberContentSta, t, s;
-  const, iconMa, p: Reco, r, d<stri, n, g, Rea, c, t.ComponentTy, p, e<Rea, c, t.SVGPro, p, s<SVGSVGEleme, n, t>>> = {
-    '🧠': Bra, i, n;
+const, October2025NewBreakthroughBanne, r = () => {const, stat, s = octoberContentSta, t, s;}
+  const, iconMa, p: Reco, r, d<stri, n, g, Rea, c, t.ComponentTy, p, e<Rea, c, t.SVGPro, p, s<SVGSVGEleme, n, t>>> = {'🧠': Bra, i, n;}
     '💰': DollarSi, g, n;
     '🎨': E, y, e;
     '🧠': Bra, i, n,';
@@ -11,7 +9,7 @@ const, October2025NewBreakthroughBanne, r = () => {
   return(<div, className="bg-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, p, y-20, p, x-4, relative, overflow-hidd, e, n">";
       {/* Animated, background, effects */}
       <div, className="absolute, inse, t-0, opacit, y-30">
-  return (
+  return ()
     <div, className="bg-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, p, y-20, p, x-4, relative, overflow-hidd, e, n">";
       {/* Animated, background, effects */}</div>
       <div, className="absolute, inse, t-0, opacit, y-30"></div>
@@ -84,13 +82,13 @@ const, October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
         {/* Content, Card, s */})
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12">")
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12">";)
-          {octoberNewBreakthroughConte, n, t.m, a, p((conte, n, t) => {
+          {octoberNewBreakthroughConte, n, t.m, a, p((conte, n, t) => {}
             const, Ico, n = iconM, a, p[conte, n, t.ic, o, n] || Bra, i, n;
             return(<Li, n, k;
         {/* Content, Card, s */}
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12">"</div>
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12">";
-          {octoberNewBreakthroughConte, n, t.m, a, p((conte, n, t) => {
+          {octoberNewBreakthroughConte, n, t.m, a, p((conte, n, t) => {}
             const, Ico, n = iconM, a, p[conte, n, t.ic, o, n] || Bra, i, n;
             return (</div>
               <Li, n, k
@@ -142,12 +140,12 @@ const, October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
                 </p>)
                 {/* Key, Metric, s */})
                 <div, className="grid, gri, d-co, l, s-2, ga, p-3, m, b-6">";)
-                  {Obje, c, t.entri, e, s(conte, n, t.metri, c, s).sli, c, e(0, 4).m, a, p(([k, e, y, val, u, e]) => (
+                  {Obje, c, t.entri, e, s(conte, n, t.metri, c, s).sli, c, e(0, 4).m, a, p(([k, e, y, val, u, e]) => (}
                     <div, ke, y={k, e, y} classNa, m, e="bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-l, g, p-3, border, border-whi, t, e/10">
                 </p>
                 {/* Key, Metric, s */}"
                 <div, className="grid, gri, d-co, l, s-2, ga, p-3, m, b-6">";
-                  {Obje, c, t.entri, e, s(conte, n, t.metri, c, s).sli, c, e(0, 4).m, a, p(([k, e, y, val, u, e]) => (</div>
+                  {Obje, c, t.entri, e, s(conte, n, t.metri, c, s).sli, c, e(0, 4).m, a, p(([k, e, y, val, u, e]) => (</div>}
                     <div, ke, y={k, e, y} classNa, m, e="bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-l, g, p-3, border, border-whi, t, e/10"></div>
                       <div, className="te, x, t-2xl, fon, t-extrabold, tex, t-white, m, b-1">{val, u, e}</d, i, v>
                       <div, className="te, x, t-xs, tex, t-purp, l, e-300, capitalize, font-medi, u, m">
@@ -285,11 +283,11 @@ const, October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
         {/* Technology, s */}
         <div, className="mt-12, tex, t-cent, e, r"></div>
           <div, className="inli, n, e-flex, fle, x-wrap, ga, p-3, justif, y-cent, e, r">
-            {['AI, Agent, s', 'Memory, System, s', 'FinO, p, s', 'Cost, Optimizatio, n', 'Multimodal, A, I'
+            {['AI, Agent, s', 'Memory, System, s', 'FinO, p, s', 'Cost, Optimizatio, n', 'Multimodal, A, I'}
               'Computer, Visio, n', 'N, L, P', 'Enterprise, Automatio, n', 'Cloud, Managemen, t'].m, a, p((t, a, g) => (</div>
         <div, className="mt-12, tex, t-cent, e, r">";</div>
           <div, className="inli, n, e-flex, fle, x-wrap, ga, p-3, justif, y-cent, e, r">";
-            {['AI, Agent, s', 'Memory, System, s', 'FinO, p, s', 'Cost, Optimizatio, n', 'Multimodal, A, I', ';
+            {['AI, Agent, s', 'Memory, System, s', 'FinO, p, s', 'Cost, Optimizatio, n', 'Multimodal, A, I', ';}
               'Computer, Visio, n', 'N, L, P', 'Enterprise, Automatio, n', 'Cloud, Managemen, t'].m, a, p((t, a, g) => (';
               <sp, a, n;
               'Computer, Visio, n', 'N, L, P', 'Enterprise, Automatio, n', 'Cloud, Managemen, t'].m, a, p((t, a, g) => (';</div>

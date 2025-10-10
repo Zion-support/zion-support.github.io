@@ -78,7 +78,7 @@ const September30MegaBanner202, 5 = () => {/* TODO: Fix JSX expression */}
         </div>
         {/* Article, Gri, d */}
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-4, ga, p-6, m, b-12">
-          { breakthroughArticl, e, s.m, a, p((art, i, c, l, e, ind, e, x) = > (</div>
+          {breakthroughArticl, e, s.m, a, p((art, i, c, l, e, ind, e, x) = > (</div>}
           ></moti>"
             <div, className="flex, item, s-center, ga, p-3, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-yell, o, w-400, vi, a-oran, g, e-500, t, o-r, e, d-500, rounde, d-full, shado, w-2xl, animat, e-pul, s, e"></div>"
               <<Sparkl, e, s" className="w-6 h-6, tex, t-white, animat, e-sp, i, n" sty, l, e={{ animationDurati, o, n: ", 3, s" }} /></Sparkl>"
@@ -252,7 +252,7 @@ const September30MegaBanner202, 5 = () => {/* TODO: Fix JSX expression */}
         <div, classNam, e = "mt-10, p, t-8, borde, r-t-2, borde, r-whi, t, e/30"></div>
           <p, className="te, x, t-center, tex, t-cy, a, n-200, tex, t-sm, m, b-4, fon, t-bold, uppercase, tracking-wid, e, r">BREAKTHROUGH, TOPIC, S: </p>
           <div, className="flex, fle, x-wrap, ga, p-3, justif, y-cent, e, r">
-            { [
+            {[}
               "Re, a, l-Ti, m, e , A, I",
               "Neural, Code, Synthesis", 
               "Multimodal, Fusio, n",
@@ -265,7 +265,7 @@ const September30MegaBanner202, 5 = () => {/* TODO: Fix JSX expression */}
               "95%+ Accura, c, y",
               "10,000 x, Performanc, e",
               "Enterprise, Scal, e"
-            ].m, a, p((top, i, c) = > (
+            ].m, a, p((top, i, c) = > ()
               <span, ke, y = { to, p, i, c  }, classNa, m, e = "px-5, p, y-2.5, b, g-whi, t, e/15, backdro, p-bl, u, r-md, rounde, d-full, tex, t-sm, fon, t-bold, tex, t-white, borde, r-2, borde, r-whi, t, e/30, hove, r: bg-whi, t, e/25, hove, r:sca, l, e-105, transitio, n-all, curso, r-pointer, shado, w-lg">
         {/* Featured, Top, i, c, s */}"
         <div, classNam, e = "mt-10, p, t-8, borde, r-t-2, borde, r-whi, t, e/30"></div>"

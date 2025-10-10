@@ -1,50 +1,41 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
-const Navigation: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
+const Navigation: React.FC = () => {const [isOpen, setIsOpen] = useState(false);}
   const [servicesOpen, setServicesOpen] = useState(false);
   const [aiServicesOpen, setAiServicesOpen] = useState(false);
   const [itServicesOpen, setItServicesOpen] = useState(false);
   const [microSaasOpen, setMicroSaasOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth >= 1024) {
-        setIsOpen(false);
+  useEffect(() => {const handleResize = () => {}
+      if (window.innerWidth >= 1024) {setIsOpen(false);}
       }
     };
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+    const handleScroll = () => {setIsScrolled(window.scrollY > 50);}
     };
     window.addEventListener('resize', handleResize);
     window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('resize', handleResize);
+    return () => {window.removeEventListener('resize', handleResize);}
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-  const closeAllMenus = () => {
-    setServicesOpen(false);
+  const closeAllMenus = () => {setServicesOpen(false);}
     setAiServicesOpen(false);
     setItServicesOpen(false);
     setMicroSaasOpen(false);
     setIsOpen(false);
   };
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-    if (isOpen) {
-      closeAllMenus();
+  const toggleMenu = () => {setIsOpen(!isOpen);}
+    if (isOpen) {closeAllMenus();}
     }
   };
-  const serviceCategories = [
-    {
-      title: 'Micro SAAS Solutions',
+  const serviceCategories = []
+    {title: 'Micro SAAS Solutions',}
       icon: Zap,
       color: 'text-cyan-400',
       bgColor: 'bg-cyan-500/10',
       hoverColor: 'hover:bg-cyan-500/20',
-      services: [
+      services: []
         { name: 'AI Project Manager', path: '/ai-project-manager', description: 'Intelligent project planning', icon: '📊', popular: true },
         { name: 'AI Social Media Manager', path: '/ai-social-media-manager', description: 'Automated social media management', icon: '📱', popular: true },
         { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard', description: 'AI-powered business intelligence', icon: '📈', popular: true },
@@ -55,13 +46,12 @@ const Navigation: React.FC = () => {
         { name: 'AI SEO Optimizer', path: '/ai-marketing', description: 'AI-driven SEO optimization', icon: '🎯', popular: false }
       ]
     },
-    {
-      title: 'AI Services',
+    {title: 'AI Services',}
       icon: Brain,
       color: 'text-purple-400',
       bgColor: 'bg-purple-500/10',
       hoverColor: 'hover:bg-purple-500/20',
-      services: [
+      services: []
         { name: 'AI Services', path: '/ai-services', description: 'Comprehensive AI solutions' },
         { name: 'AI Marketing', path: '/ai-marketing', description: 'AI-powered marketing automation' },
         { name: 'AI Automation', path: '/ai-automation', description: 'Intelligent process automation' },
@@ -86,13 +76,12 @@ const Navigation: React.FC = () => {
         { name: 'AI Edge Computing', path: '/ai-edge-computing', description: 'AI at the edge' }
       ]
     },
-    {
-      title: 'IT Services',
+    {title: 'IT Services',}
       icon: Cloud,
       color: 'text-blue-400',
       bgColor: 'bg-blue-500/10',
       hoverColor: 'hover:bg-blue-500/20',
-      services: [
+      services: []
         { name: 'IT Services', path: '/it-services', description: 'Comprehensive IT support' },
         { name: 'IT Infrastructure', path: '/it-infrastructure', description: 'Enterprise infrastructure' },
         { name: 'Cybersecurity', path: '/cybersecurity', description: 'Security solutions' },
@@ -111,13 +100,12 @@ const Navigation: React.FC = () => {
         { name: 'Global IT Support', path: '/global-it-support', description: 'Worldwide support' }
       ]
     },
-    {
-      title: 'Specialized Solutions',
+    {title: 'Specialized Solutions',}
       icon: Sparkles,
       color: 'text-pink-400',
       bgColor: 'bg-pink-500/10',
       hoverColor: 'hover:bg-pink-500/20',
-      services: [
+      services: []
         { name: 'AI-Powered CRM', path: '/ai-crm', description: 'Intelligent CRM with AI insights' },
         { name: 'AI Analytics Dashboard', path: '/ai-analytics', description: 'Real-time business intelligence' },
         { name: 'AI Content Studio', path: '/ai-content-studio', description: 'Complete content creation suite' },
@@ -143,13 +131,12 @@ const Navigation: React.FC = () => {
         { name: 'AI Predictive Analytics', path: '/ai-predictive-analytics', description: 'Future outcome predictions' }
       ]
     },
-    {
-      title: 'Specialized',
+    {title: 'Specialized',}
       icon: Zap,
       color: 'text-orange-600',
       bgColor: 'bg-orange-50',
       hoverColor: 'hover:bg-orange-100',
-      services: [
+      services: []
         { name: 'Quantum Computing', path: '/quantum-computing', description: 'Next-gen computing' },
         { name: 'Autonomous Systems', path: '/autonomous-systems', description: 'Self-managing systems' },
         { name: 'Blockchain & Web3', path: '/blockchain-web3', description: 'Decentralized solutions' },
@@ -165,8 +152,8 @@ const Navigation: React.FC = () => {
       ]
     }
   ];
-  return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+  return ()
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${}
       isScrolled 
         ? 'bg-slate-900/95 backdrop-blur-md border-b border-cyan-400/20' 
         : 'bg-transparent'
@@ -203,19 +190,19 @@ const Navigation: React.FC = () => {
                 <span>Services</span>
                 <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${servicesOpen ? 'rotate-180' : ''}`} />
               </button>
-              {servicesOpen && (
+              {servicesOpen && (}
                 <div className="absolute top-full left-0 mt-2 w-96 bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg shadow-2xl transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
                 <div className="p-6">
                   <h3 className="text-lg font-bold text-white mb-4 neon-text">Our Services</h3>
                   <div className="grid grid-cols-2 gap-4">
-                    {serviceCategories.map((category, index) => (
+                    {serviceCategories.map((category, index) => (}
                       <div key={index} className="space-y-2">
                         <div className="flex items-center space-x-2 mb-2">
                           <category.icon className={`w-4 h-4 ${category.color}`} />
                           <span className="text-sm font-semibold text-white">{category.title}</span>
                         </div>
                         <div className="space-y-2">
-                          {category.services.slice(0, 6).map((service, serviceIndex) => (
+                          {category.services.slice(0, 6).map((service, serviceIndex) => (}
                             <Link
                               key={serviceIndex}
                               href={service.path}
@@ -228,7 +215,7 @@ const Navigation: React.FC = () => {
                               </div>
                             </Link>
                           ))}
-                          {category.services.length > 6 && (
+                          {category.services.length > 6 && (}
                             <Link
                               href={`/${category.title.toLowerCase().replace(' ', '-')}`}
                               className="block px-3 py-2 text-sm text-purple-600 hover:bg-purple-50 rounded-lg transition-colors font-medium"
@@ -299,7 +286,7 @@ const Navigation: React.FC = () => {
           </div>
         </div>
         {/* Mobile menu */}
-        {isOpen && (
+        {isOpen && (}
           <div className="lg:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 bg-gray-900/95 backdrop-blur-sm rounded-lg mt-2">
               <Link
@@ -327,13 +314,13 @@ const Navigation: React.FC = () => {
                   </span>
                   <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${servicesOpen ? 'rotate-180' : ''}`} />
                 </button>
-                {servicesOpen && (
+                {servicesOpen && (}
                   <div className="mt-2 ml-4 space-y-2">
-                    {serviceCategories.map((category, categoryIndex) => (
+                    {serviceCategories.map((category, categoryIndex) => (}
                       <div key={categoryIndex}>
                         <div className="text-sm font-medium text-cyan-400 mb-2">{category.title}</div>
                         <div className="ml-4 space-y-1">
-                          {category.services.slice(0, 3).map((service, serviceIndex) => (
+                          {category.services.slice(0, 3).map((service, serviceIndex) => (}
                             <Link
                               key={serviceIndex}
                               href={service.path}
@@ -368,9 +355,7 @@ const Navigation: React.FC = () => {
             </a>
             <a
               href="/contact"
-              className="cyber-button px-4 py-2 text-sm font-medium">
-              Get Started;
-  </
+              className="cyber-button px-4 py-2 text-sm font-medium">Get Started;
           </div>
           {/* Mobile Menu Button */}
           <button
@@ -382,13 +367,13 @@ const Navigation: React.FC = () => {
           </button>
         </div>
         {/* Mobile Menu */}
-        {isOpen && (
+        {isOpen && (}
           <div className="lg:hidden bg-slate-900/95 backdrop-blur-md border-t border-cyan-400/20">
             <div className="px-4 py-6 space-y-6">
               {/* Main Navigation */}
               <div className="space-y-4">
                 <h3 className="text-lg font-semibold text-white mb-3 neon-text">Navigation</h3>
-                {mainNavItems.map((item) => (
+                {mainNavItems.map((item) => (}
                   <Link
                     key={item.name}
                     href={item.path}
@@ -415,8 +400,6 @@ const Navigation: React.FC = () => {
   );
 };
 export default Navigation;
-  </a>
-  </a>
   </Link>
   </Link>
   </Link>
@@ -426,4 +409,3 @@ export default Navigation;
   </Link>
   </Link>
   </Link>
-  </div>

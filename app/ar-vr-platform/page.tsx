@@ -2,30 +2,25 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-const ARVRPlatformPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
+const ARVRPlatformPage: React.FC = () => {const features = [}
+    {icon: Brain,}
       title: 'AI-Powered AR/VR',
       description: 'Advanced AI technology to create immersive augmented and virtual reality experiences'
     },
-    {
-      icon: Zap,
+    {icon: Zap,}
       title: 'Real-Time Rendering',
       description: 'Lightning-fast 3D rendering and real-time interaction for optimal user experience'
     },
-    {
-      icon: Shield,
+    {icon: Shield,}
       title: 'Enterprise Security',
       description: 'Bank-level security with encryption and compliance standards for your AR/VR data'
     },
-    {
-      icon: Globe,
+    {icon: Globe,}
       title: 'Cross-Platform Support',
       description: 'Deploy across multiple devices and platforms for maximum reach and accessibility'
     }
   ];
-  const benefits = [
+  const benefits = []
     'Advanced AR/VR technology integration',
     'Real-time 3D rendering and interaction',
     'Enterprise-grade security and compliance',
@@ -35,7 +30,7 @@ const ARVRPlatformPage: React.FC = () => {
     'Cost-effective pricing plans',
     'Proven track record of success'
   ];
-  return (
+  return ()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>AR/VR Platform | Zion Tech Group</title>
@@ -47,9 +42,7 @@ const ARVRPlatformPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                AR/VR Platform;
-  </
+              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">AR/VR Platform;
               <br />
               <span className="text-white">Solutions</span>
             </h1>
@@ -62,9 +55,7 @@ const ARVRPlatformPage: React.FC = () => {
                 Get Started
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-                Learn More;
-  </
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">Learn More;
             </div>
           </div>
         </div>
@@ -81,7 +72,7 @@ Our AR/VR solutions deliver unmatched performance, security, and scalability.
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
+            {features.map((feature, index) => (}
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center hover:bg-white/20 transition-all duration-300">
                 <feature.icon className="h-12 w-12 text-purple-400 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
@@ -95,15 +86,13 @@ Our AR/VR solutions deliver unmatched performance, security, and scalability.
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Benefits;
-  </
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Key Benefits;
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
 Experience the power of our AR/VR platform solutions for your business.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {benefits.map((benefit, index) => (
+            {benefits.map((benefit, index) => (}
               <div key={index} className="flex items-center space-x-3">
                 <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
                 <span className="text-gray-300">{benefit}</span>
@@ -138,9 +127,4 @@ Experience the power of our AR/VR platform solutions for your business.
     </div>
   );
 };
-export default ARVRPlatformPage;
-  </button>
-  </button>
-  </h2>
-  </button>
-  </span>
+export default ARVRPlatformPage

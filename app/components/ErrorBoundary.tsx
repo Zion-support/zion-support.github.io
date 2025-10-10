@@ -2,51 +2,42 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home, Phone } from 'lucide-react';
 
-interface Props {
-  children: ReactNode;
+interface Props {children: ReactNode;}
   fallback?: ReactNode;
 }
 
-interface State {
-  hasError: boolean;
+interface State {hasError: boolean;}
   error?: Error;
   errorInfo?: ErrorInfo;
 }
 
-class ErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
+class ErrorBoundary extends Component<Props, State> {constructor(props: Props) {}
     super(props);
     this.state = { hasError: false };
   }
 
-  static getDerivedStateFromError(error: Error): State {
+  static getDerivedStateFromError(error: Error): State {}
     return { hasError: true, error };
   }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    // Log error for monitoring in production
-    if (process.env.NODE_ENV === 'production') {
-      // In production, you would send this to an error reporting service
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {// Log error for monitoring in production}
+    if (process.env.NODE_ENV === 'production') {// In production, you would send this to an error reporting service}
       // Example: errorReportingService.captureException(error, { extra: errorInfo });
     }
     this.setState({ error, errorInfo });
   }
 
-  handleReload = () => {
-    window.location.reload();
+  handleReload = () => {window.location.reload();}
   };
 
-  handleGoHome = () => {
-    window.location.href = '/';
+  handleGoHome = () => {window.location.href = '/';}
   };
 
-  render() {
-    if (this.state.hasError) {
-      if (this.props.fallback) {
-        return this.props.fallback;
+  render() {if (this.state.hasError) {}
+      if (this.props.fallback) {return this.props.fallback;}
       }
 
-      return (
+      return ()
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-4">
           <div className="max-w-md w-full bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8 text-center">
             <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -61,7 +52,7 @@ class ErrorBoundary extends Component<Props, State> {
               We're sorry, but something unexpected happened. Please try refreshing the page or go back to the home page.
             </p>
 
-            {process.env.NODE_ENV === 'development' && this.state.error && (
+            {process.env.NODE_ENV === 'development' && this.state.error && (}
               <details className="mb-6 text-left">
                 <summary className="text-sm text-gray-400 cursor-pointer mb-2">
                   Error Details (Development)
@@ -110,4 +101,4 @@ class ErrorBoundary extends Component<Props, State> {
   }
 }
 
-export default ErrorBoundary;
+export default ErrorBoundary

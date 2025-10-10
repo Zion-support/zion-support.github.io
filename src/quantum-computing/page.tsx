@@ -3,8 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-const QuantumComputingPage: React.FC = () => {
-  return (
+const QuantumComputingPage: React.FC = () => {return (}
     <React.Fragment>
       <Helmet>
         <title>Quantum Computing Solutions - Zion Tech Group</title>
@@ -15,12 +14,8 @@ const QuantumComputingPage: React.FC = () => {
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center mb-16">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 neon-text">
-              Quantum Computing;
-  </
-            <p className="text-xl text-cyan-400 mb-8">
-              Next-generation computing power for complex problem solving;
-  </
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 neon-text">Quantum Computing;
+            <p className="text-xl text-cyan-400 mb-8">Next-generation computing power for complex problem solving;
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
             <div>
@@ -71,14 +66,10 @@ const QuantumComputingPage: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"
-                className="bg-gradient-to-r from-purple-500 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-cyan-700 transition-all duration-300">
-                Explore Quantum Solutions;
-  </
+                className="bg-gradient-to-r from-purple-500 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-cyan-700 transition-all duration-300">Explore Quantum Solutions;
               <a
                 href="/consultation"
-                className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300">
-                Schedule Consultation;
-  </
+                className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300">Schedule Consultation;
             </div>
           </div>
         </div>
@@ -87,12 +78,4 @@ const QuantumComputingPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default QuantumComputingPage;
-  </a>
-  </a>
-  </li>
-  </li>
-  </li>
-  </li>
-  </p>
-  </h1>
+export default QuantumComputingPage

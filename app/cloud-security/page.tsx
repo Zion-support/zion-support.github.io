@@ -2,30 +2,25 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Lock, Eye, ShieldCheck } from 'lucide-react';
-const CloudSecurityPage: React.FC = () => {
-  const features = [
-    {
-icon: Shield,
+const CloudSecurityPage: React.FC = () => {const features = [}
+    {icon: Shield,}
       title: 'Advanced Cloud Security',
       description: 'Comprehensive cloud security solutions with enterprise-grade protection'
     },
-    {
-      icon: Zap,
+    {icon: Zap,}
       title: 'Real-Time Monitoring',
       description: 'Continuous monitoring and threat detection for your cloud infrastructure'
     },
-    {
-      icon: Brain,
+    {icon: Brain,}
       title: 'AI-Powered Security',
       description: 'Intelligent security solutions powered by advanced AI technology'
     },
-    {
-      icon: Globe,
+    {icon: Globe,}
       title: 'Global Compliance',
       description: 'Worldwide compliance with security standards and regulations'
     }
   ];
-  const benefits = [
+  const benefits = []
 'Advanced cloud security technology',
     'Real-time threat monitoring and detection',
     'Enterprise-grade security and compliance',
@@ -35,7 +30,7 @@ icon: Shield,
     'Cost-effective pricing plans',
     'Proven track record of success'
   ];
-  return (
+  return ()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Cloud Security | Zion Tech Group</title>
@@ -44,9 +39,7 @@ icon: Shield,
       </Helmet>
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            Cloud Security;
-  </
+          <h1 className="text-5xl font-bold text-white mb-6">Cloud Security;
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your business with our advanced cloud security solutions. 
             Powered by cutting-edge AI technology and industry expertise.
@@ -65,7 +58,7 @@ icon: Shield,
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
+            {features.map((feature, index) => (}
               <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
                 <feature.icon className="w-12 h-12 text-purple-400 mb-4" />
                 <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
@@ -78,15 +71,13 @@ icon: Shield,
       <section className="py-16 px-4 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Benefits;
-  </
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Key Benefits;
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the power of our cloud security solutions for your business.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {benefits.map((benefit, index) => (
+            {benefits.map((benefit, index) => (}
               <div key={index} className="flex items-center space-x-3">
                 <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
                 <span className="text-gray-300">{benefit}</span>
@@ -137,12 +128,4 @@ icon: Shield,
     </div>
   );
 };
-export default CloudSecurityPage;
-  </button>
-  </button>
-  </button>
-  </button>
-  </section>
-  </h2>
-  </section>
-  </h1>
+export default CloudSecurityPage

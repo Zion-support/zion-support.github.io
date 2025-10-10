@@ -4,9 +4,8 @@ import { Link } from 'react-router-dom';
 import { ArrowLeft, CheckCircle, Shield, FileText, Users, Lock,  Shield,  FileText,  Users } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-const CompliancePage: React.FC = () => {
-  const certifications = [];
-  return (
+const CompliancePage: React.FC = () => {const certifications = [];}
+  return ()
     { name: 'SOC 2 Type II', status: 'Certified' },
     { name: 'ISO 27001', status: 'Certified' },
     { name: 'GDPR Compliant', status: 'Certified' },
@@ -14,7 +13,7 @@ const CompliancePage: React.FC = () => {
     { name: 'PCI DSS Level 1', status: 'Certified' },
     { name: 'NIST Framework', status: 'Implemented' }
   ];
-  const complianceAreas = [
+  const complianceAreas = []
   // TOD,
   O: Add items;
 ];;
@@ -127,6 +126,4 @@ Compliance Areas;"
         <Footer />
   );
 };
-export default CompliancePage;
-  </div>
-  </div>
+export default CompliancePage

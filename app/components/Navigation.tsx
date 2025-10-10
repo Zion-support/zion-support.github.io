@@ -3,30 +3,25 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server } from 'lucide-react';
 
-const Navigation: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
+const Navigation: React.FC = () => {const [isOpen, setIsOpen] = useState(false);}
   const [servicesOpen, setServicesOpen] = useState(false);
   const [aiServicesOpen, setAiServicesOpen] = useState(false);
   const [itServicesOpen, setItServicesOpen] = useState(false);
   const [microSaasOpen, setMicroSaasOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth >= 1024) {
-        setIsOpen(false);
+  useEffect(() => {const handleResize = () => {}
+      if (window.innerWidth >= 1024) {setIsOpen(false);}
       }
     };
 
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+    const handleScroll = () => {setIsScrolled(window.scrollY > 50);}
     };
 
     window.addEventListener('resize', handleResize);
     window.addEventListener('scroll', handleScroll);
 
-    return () => {
-      window.removeEventListener('resize', handleResize);
+    return () => {window.removeEventListener('resize', handleResize);}
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
@@ -37,8 +32,7 @@ const Navigation: React.FC = () => {
   const toggleItServices = () => setItServicesOpen(!itServicesOpen);
   const toggleMicroSaas = () => setMicroSaasOpen(!microSaasOpen);
 
-  const closeAllMenus = () => {
-    setServicesOpen(false);
+  const closeAllMenus = () => {setServicesOpen(false);}
     setAiServicesOpen(false);
     setItServicesOpen(false);
     setMicroSaasOpen(false);
@@ -46,7 +40,7 @@ const Navigation: React.FC = () => {
   };
 
   // Service data
-  const aiServices = [
+  const aiServices = []
     { name: 'AI Analytics', href: '/ai-analytics', icon: BarChart, description: 'Advanced data insights' },
     { name: 'AI Automation', href: '/ai-automation', icon: Zap, description: 'Streamline workflows' },
     { name: 'AI Chatbot', href: '/ai-chatbot-builder', icon: MessageCircle, description: 'Intelligent conversations' },
@@ -57,7 +51,7 @@ const Navigation: React.FC = () => {
     { name: 'AI Fintech', href: '/ai-fintech', icon: DollarSign, description: 'Financial technology' }
   ];
 
-  const itServices = [
+  const itServices = []
     { name: 'Cloud Infrastructure', href: '/ai-cloud-infrastructure', icon: Cloud, description: 'Scalable cloud solutions' },
     { name: 'API Management', href: '/ai-api-management', icon: Code, description: 'API development & management' },
     { name: 'Cybersecurity', href: '/ai-cybersecurity-suite', icon: Shield, description: 'Comprehensive security' },
@@ -70,7 +64,7 @@ const Navigation: React.FC = () => {
     { name: 'AI Edge Computing', href: '/ai-edge-computing', icon: Server, description: 'Distributed processing' }
   ];
 
-  const microSaasServices = [
+  const microSaasServices = []
     { name: 'Project Management', href: '/micro-saas-project-management', icon: CheckSquare, description: 'Streamlined project tracking' },
     { name: 'Customer Support', href: '/micro-saas-customer-support', icon: MessageCircle, description: 'Efficient support systems' },
     { name: 'Analytics Dashboard', href: '/micro-saas-analytics', icon: BarChart, description: 'Business intelligence' },
@@ -81,8 +75,8 @@ const Navigation: React.FC = () => {
     { name: 'Performance Monitoring', href: '/micro-saas-monitoring', icon: Monitor, description: 'System performance tracking' }
   ];
 
-  return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+  return ()
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${}
       isScrolled ? 'bg-slate-900/95 backdrop-blur-md border-b border-cyan-500/20' : 'bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -113,7 +107,7 @@ const Navigation: React.FC = () => {
                 <ChevronDown className="w-4 h-4 ml-1" />
               </button>
               
-              {servicesOpen && (
+              {servicesOpen && (}
                 <div className="absolute left-0 mt-2 w-64 bg-slate-800/95 backdrop-blur-md rounded-xl shadow-xl py-2 z-50 border border-white/10">
                   <Link to="/ai-services" className="block px-4 py-3 text-sm text-gray-300 hover:text-white hover:bg-slate-700/50 transition-colors">
                     <div className="flex items-center">
@@ -156,10 +150,10 @@ const Navigation: React.FC = () => {
                 <ChevronDown className="w-4 h-4 ml-1" />
               </button>
               
-              {aiServicesOpen && (
+              {aiServicesOpen && (}
                 <div className="absolute left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-md rounded-xl shadow-xl py-2 z-50 border border-white/10">
                   <div className="grid grid-cols-1 gap-1">
-                    {aiServices.map((service) => (
+                    {aiServices.map((service) => (}
                       <Link
                         key={service.name}
                         to={service.href}
@@ -190,10 +184,10 @@ const Navigation: React.FC = () => {
                 <ChevronDown className="w-4 h-4 ml-1" />
               </button>
               
-              {itServicesOpen && (
+              {itServicesOpen && (}
                 <div className="absolute left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-md rounded-xl shadow-xl py-2 z-50 border border-white/10">
                   <div className="grid grid-cols-1 gap-1">
-                    {itServices.map((service) => (
+                    {itServices.map((service) => (}
                       <Link
                         key={service.name}
                         to={service.href}
@@ -224,10 +218,10 @@ const Navigation: React.FC = () => {
                 <ChevronDown className="w-4 h-4 ml-1" />
               </button>
               
-              {microSaasOpen && (
+              {microSaasOpen && (}
                 <div className="absolute left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-md rounded-xl shadow-xl py-2 z-50 border border-white/10">
                   <div className="grid grid-cols-1 gap-1">
-                    {microSaasServices.map((service) => (
+                    {microSaasServices.map((service) => (}
                       <Link
                         key={service.name}
                         to={service.href}
@@ -274,7 +268,7 @@ const Navigation: React.FC = () => {
         </div>
 
         {/* Mobile Navigation */}
-        {isOpen && (
+        {isOpen && (}
           <div className="lg:hidden mt-4 pb-4 border-t border-cyan-500/20">
             <div className="pt-4 space-y-4">
               <Link to="/" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
@@ -291,7 +285,7 @@ const Navigation: React.FC = () => {
                   <ChevronDown className="w-4 h-4 ml-1" />
                 </button>
                 
-                {servicesOpen && (
+                {servicesOpen && (}
                   <div className="ml-4 mt-2 space-y-2">
                     <Link to="/ai-services" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300" onClick={closeAllMenus}>
                       AI Services
@@ -342,4 +336,4 @@ const Navigation: React.FC = () => {
   );
 };
 
-export default Navigation;
+export default Navigation

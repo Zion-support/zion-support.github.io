@@ -1,7 +1,6 @@
 import React from 'react';
 'use client';
-interface OptimizedLoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg';
+interface OptimizedLoadingSpinnerProps {size?: 'sm' | 'md' | 'lg';}
   color?: 'primary' | 'secondary' | 'white';
   className?: string;
 'use client';
@@ -66,18 +65,16 @@ className="opacity-75""
 );
 OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner';
 export default OptimizedLoadingSpinner;
-const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
-  ({ size = 'md', color = 'primary', className = '' }) => {
-      sm: 'w-4 h-4',
+const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo()
+  ({ size = 'md', color = 'primary', className = '' }) => {sm: 'w-4 h-4',}
       md: 'w-8 h-8',
       lg:     ,
 $4};
-    const colorClasses = {
-      primary: 'text-cyan-400',
+    const colorClasses = {primary: 'text-cyan-400',}
       secondary: 'text-purple-400',
       white:     ,
 $4};
-    return (
+    return ()
       <div
         className={`${sizeClasses[size]} ${colorClasses[color]} ${className}`}
         role="status"

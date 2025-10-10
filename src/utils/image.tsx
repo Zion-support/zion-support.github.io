@@ -1,7 +1,6 @@
 'use client';
 import React, { useState, useCallback } from 'react';
-const Image: React.FC = () => {
-interface ImageProps {
+const Image: React.FC = () => {interface ImageProps {}
   src: string;
   alt: string;
   width?: number;
@@ -17,8 +16,7 @@ interface ImageProps {
   onLoad?: () => void;
   onError?: () => void;
 }
-export const Image: React.FC<ImageProps> = ({
-  src,
+export const Image: React.FC<ImageProps> = ({src,}
   alt,
   width,
   height,
@@ -33,21 +31,16 @@ export const Image: React.FC<ImageProps> = ({
   onLoad,
   onError,
   ...props
-}) => {
-  const [, setIsLoaded] = useState(false);
+}) => {const [, setIsLoaded] = useState(false);}
   const [hasError, setHasError] = useState(false);
-  const _handleLoad = useCallback(() => {
-    setIsLoaded(true);
+  const _handleLoad = useCallback(() => {setIsLoaded(true);}
     if (onLoad) onLoad();
   }, [onLoad]);
-  const handleError = useCallback(() => {
-    setHasError(true);
+  const handleError = useCallback(() => {setHasError(true);}
     if (onError) onError();
   }, [onError]);
-  const imageStyle: React.CSSProperties = {
-    ...style,
-    ...(fill && {
-      position: 'absolute',
+  const imageStyle: React.CSSProperties = {...style,}
+    ...(fill && {position: 'absolute',}
       top: 0,
       left: 0,
       width: '100%',
@@ -55,8 +48,7 @@ export const Image: React.FC<ImageProps> = ({
       objectFit:     ,
 $4})
   };
-  if (hasError) {
-    return (
+  if (hasError) {return (}
       <div
         className={`bg-gray-200 flex items-center justify-center ${className}`}
         style={imageStyle}
@@ -66,7 +58,7 @@ $4})
       </div>
     );
   }
-  return (
+  return ()
     <img
       src={src}
       alt={alt}
@@ -158,7 +150,7 @@ quality = 75,
   if (hasError) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    return (
+    return ()
           <div>Coming Soon</div>
   )
           <div></div>

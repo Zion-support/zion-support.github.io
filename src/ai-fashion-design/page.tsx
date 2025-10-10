@@ -3,8 +3,7 @@ import { Palette, Camera, Download, Share, Star, CheckCircle, Zap, Clock, Users,
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-const AIFashionDesignPage: React.FC = () => {
-  const features = [
+const AIFashionDesignPage: React.FC = () => {const features = [}
     'Design Generation',
     'Trend Analysis',
     'Color Matching',
@@ -16,7 +15,7 @@ const AIFashionDesignPage: React.FC = () => {
     '3D Visualization',
     'Cost Estimation'
   ];
-  const benefits = [
+  const benefits = []
     'Faster design cycles',
     'Trend accuracy',
     'Cost reduction',
@@ -24,30 +23,27 @@ const AIFashionDesignPage: React.FC = () => {
     'Creative inspiration',
     'Competitive advantage'
   ];
-  const pricingPlans = [
-    {
-      name: 'Starter',
+  const pricingPlans = []
+    {name: 'Starter',}
       price: '$249',
       period: '/month',
       features: ['10 designs/month', 'Basic trends', 'Email support', 'Standard quality'],
       popular: false
     },
-    {
-      name: 'Professional',
+    {name: 'Professional',}
       price: '$349',
       period: '/month',
       features: ['Unlimited designs', 'Advanced trends', '3D visualization', 'API access', 'Priority support'],
       popular: true
     },
-    {
-      name: 'Enterprise',
+    {name: 'Enterprise',}
       price: '$699',
       period: '/month',
       features: ['Everything in Pro', 'Custom models', 'White-label', 'Dedicated support', 'Market intelligence'],
       popular: false
     }
   ];
-  return (
+  return ()
     <React.Fragment>
       <SEOOptimizer
         title="AI Fashion Designer - AI-Powered Fashion Design & Trend Analysis | Zion Tech Group"
@@ -88,7 +84,7 @@ const AIFashionDesignPage: React.FC = () => {
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
               AI Fashion Design Features</span>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {features.map((feature, index) => (
+              {features.map((feature, index) => (}
                 <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                   <div className="flex items-center mb-4">
                     <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
@@ -104,7 +100,7 @@ const AIFashionDesignPage: React.FC = () => {
               Why Choose AI Fashion Designer?
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
+              {benefits.map((benefit, index) => (}
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <Zap className="w-8 h-8 text-white" />
@@ -119,9 +115,9 @@ const AIFashionDesignPage: React.FC = () => {
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
               Simple, Transparent Pricing</span>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              {pricingPlans.map((plan, index) => (
+              {pricingPlans.map((plan, index) => (}
                 <div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>
-                  {plan.popular && (
+                  {plan.popular && (}
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <div className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-semibold">
                         Most Popular</span>
@@ -135,7 +131,7 @@ const AIFashionDesignPage: React.FC = () => {
                     </div>
                   </div>
                   <ul className="space-y-3 mb-8">
-                    {plan.features.map((feature, featureIndex) => (
+                    {plan.features.map((feature, featureIndex) => (}
                       <li key={featureIndex} className="flex items-center text-gray-300">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
                         {feature}
@@ -144,7 +140,7 @@ const AIFashionDesignPage: React.FC = () => {
                   </ul>
                   <a
                     href="/contact"
-                    className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
+                    className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${}
                       plan.popular
                         ? 'cyber-button'
                         : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
@@ -183,13 +179,4 @@ const AIFashionDesignPage: React.FC = () => {
   );
 };
 export default AIFashionDesignPage</a>
-  </p>
-  </a>
-  </h2>
-  </h2>
-  </a>
-  </a>
-  </p>
-  </h1>
-  </div>
   </SEOOptimizer>

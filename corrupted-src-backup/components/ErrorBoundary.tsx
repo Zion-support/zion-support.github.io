@@ -4,33 +4,30 @@ interface Props {/* TODO: Fix JSX expression */}
 }
 interface State {/* TODO: Fix JSX expression */}
 }
-class ErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {,
+class ErrorBoundary extends Component<Props, State> {constructor(props: Props) {,}
     super(props);
     this.state = { hasError: false };
   }
-  static getDerivedStateFromError(error: Error): State {,
-    return {,
+  static getDerivedStateFromError(error: Error): State {,}
+    return {,}
       hasError: true;
       error,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     };
   }
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {,
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {,}
 //     // Report error to analytics/monitoring service;
     this.reportError(error, errorInfo);
     // Call custom error handler if provided;
-    if (this.props.onError) {
-      this.props.onError(error, errorInfo);
+    if (this.props.onError) {this.props.onError(error, errorInfo);}
     }
   }
-  private reportError = (error: Error, errorInfo: ErrorInfo) => {,
+  private reportError = (error: Error, errorInfo: ErrorInfo) => {,}
     // Report to external service (e.g., Sentry, LogRocket, etc.)
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'exception', {)
+    if (typeof window !== 'undefined' && (window as any).gtag) {(window as any).gtag('event', 'exception', {)}
         description: error.message;)
         fatal: false)
-        custom_map: {,
+        custom_map: {,}
           error_id: this.state.errorId),
           component_stack: errorInfo.componentStack;
 class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression */}
@@ -58,9 +55,8 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
   };
   private handleGoHome = () => {/* TODO: Fix JSX expression */}
   };
-  render() {
-    if (this.state.hasError) {
-      return this.props.fallback || (
+  render() {if (this.state.hasError) {}
+      return this.props.fallback || ()
         <div className="min-h-screen flex items-center justify-center bg-gray-900"></div>
           <div className="text-center p-8 max-w-md"></div>
             <AlertTriangle className="w-16 h-16 text-red-500 mx-auto mb-4" />
@@ -69,7 +65,7 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
               We're sorry, but something unexpected happened. Our team has been notified.
             </p>
 :src/components/ErrorBoundary.tsx;
-            {this.state.errorId && (
+            {this.state.errorId && (}
               <p className="text-gray-400 mb-4 text-sm">
                 Error ID: {this.state.errorId}
               </p>

@@ -56,4 +56,4 @@ onClick={handleGoHome}"
             Try refreshing the page once you're back online.
   );
 };
-export default OfflinePage;
+export default OfflinePage

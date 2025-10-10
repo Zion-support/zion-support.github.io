@@ -87,8 +87,6 @@ import React,{useState}useEffect } from \"react\" ; ShoppingCart;} from \"lucide
   </Link>
   </Link>
   </Link>
-  </header>
   </Link>
-  </a>
   </Link>
   </string>

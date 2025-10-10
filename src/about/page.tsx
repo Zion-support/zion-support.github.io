@@ -5,47 +5,39 @@ import { Link } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { Users, Target, Brain, Shield } from 'lucide-react';
 import Footer from '../components/Footer';
-const AboutPage: React.FC = () => {
-  const team = [
-    {
-      name: 'Kleber Santos',
+const AboutPage: React.FC = () => {const team = [}
+    {name: 'Kleber Santos',}
       role: 'CEO & Founder',
       image: '/images/team/kleber.jpg',
       bio: 'Visionary leader with 15+ years in AI and technology innovation.'},
-    {
-      name: 'Sarah Johnson',
+    {name: 'Sarah Johnson',}
       role: 'CTO',
       image: '/images/team/sarah.jpg',
       bio: 'Technical expert specializing in machine learning and cloud architecture.'},
-    {
-      name: 'Michael Chen',
+    {name: 'Michael Chen',}
       role: 'Lead AI Engineer',
       image: '/images/team/michael.jpg',
       bio: 'AI researcher and developer with expertise in deep learning and NLP.'}];
-  const stats = [
+  const stats = []
     { number: '500+', label: 'Projects Completed' },
     { number: '50+', label: 'Happy Clients' },
     { number: '5+', label: 'Years Experience' },
     { number: '99%', label: 'Client Satisfaction' }
   ];
-  const values = [
-    {
-      icon: Brain,
+  const values = []
+    {icon: Brain,}
       title: 'Innovation',
       description: 'We constantly push the boundaries of what\'s possible with AI and technology.'},
-    {
-      icon: Shield,
+    {icon: Shield,}
       title: 'Security',
       description: 'Your data and systems are protected with enterprise-grade security measures.'},
-    {
-      icon: Target,
+    {icon: Target,}
       title: 'Results',
       description: 'We focus on delivering measurable business outcomes and ROI.'},
-    {
-      icon: Users,
+    {icon: Users,}
       title: 'Partnership',
       description: 'We work closely with our clients as strategic technology partners.'}];
-  return (
+  return ()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
@@ -54,103 +46,87 @@ const AboutPage: React.FC = () => {
             We are a leading technology company specializing in AI and IT solutions that transform businesses and drive innovation.
           </p>
 import { Users, CheckCircle, Star, Shield, Award, Target, Globe, Brain, Cloud, Code, BarChart, TrendingUp, Phone, Mail, MapPin, Clock, ArrowRight, Zap, Cpu, Database, Lock, Smartphone, Settings, Calendar, FileText, MessageSquare, Star as StarIcon, Award as AwardIcon, Shield as ShieldIcon, Users as UsersIcon } from 'lucide-react';
-export default function AboutPage() {
-  const teamMembers = [
-    {
-      name: 'Kleber Santos',
+export default function AboutPage() {const teamMembers = [}
+    {name: 'Kleber Santos',}
       role: 'CEO & Founder',
       image: '/images/team/kleber-santos.jpg',
       bio: 'Visionary leader with 15+ years in AI and enterprise solutions',
       expertise: ['AI Strategy', 'Enterprise Architecture', 'Digital Transformation']
     },
-    {
-      name: 'Dr. Sarah Chen',
+    {name: 'Dr. Sarah Chen',}
       role: 'Chief Technology Officer',
       image: '/images/team/sarah-chen.jpg',
       bio: 'AI research pioneer with expertise in machine learning and quantum computing',
       expertise: ['Machine Learning', 'Quantum Computing', 'Research & Development']
     },
-    {
-      name: 'Michael Rodriguez',
+    {name: 'Michael Rodriguez',}
       role: 'Head of Engineering',
       image: '/images/team/michael-rodriguez.jpg',
       bio: 'Full-stack architect specializing in scalable AI systems',
       expertise: ['System Architecture', 'Cloud Infrastructure', 'DevOps']
     },
-    {
-      name: 'Dr. Emily Watson',
+    {name: 'Dr. Emily Watson',}
       role: 'Head of AI Research',
       image: '/images/team/emily-watson.jpg',
       bio: 'Leading researcher in natural language processing and computer vision',
       expertise: ['NLP', 'Computer Vision', 'Deep Learning']
     }
   ];
-  const values = [
-    {
-      icon: Brain,
+  const values = []
+    {icon: Brain,}
       title: 'Innovation First',
       description: 'We push the boundaries of what\'s possible with AI and technology, constantly exploring new frontiers.'
     },
-    {
-      icon: Shield,
+    {icon: Shield,}
       title: 'Security & Trust',
       description: 'Enterprise-grade security and compliance are at the core of everything we build.'
     },
-    {
-      icon: Users,
+    {icon: Users,}
       title: 'Client Success',
       description: 'Your success is our success. We measure our achievements by your business outcomes.'
     },
-    {
-      icon: Globe,
+    {icon: Globe,}
       title: 'Global Impact',
       description: 'We believe technology should make the world better, more efficient, and more connected.'
     }
   ];
-  const achievements = [
+  const achievements = []
     { number: '500+', label: 'Successful Projects', icon: Target },
     { number: '100+', label: 'Enterprise Clients', icon: Users },
     { number: '300%', label: 'Average ROI', icon: TrendingUp },
     { number: '99.9%', label: 'Uptime Guarantee', icon: Shield }
   ];
-  const timeline = [
-    {
-      year: '2018',
+  const timeline = []
+    {year: '2018',}
       title: 'Company Founded',
       description: 'Zion Tech Group was established with a vision to democratize AI for enterprises.'
     },
-    {
-      year: '2019',
+    {year: '2019',}
       title: 'First AI Platform',
       description: 'Launched our flagship AI automation platform, serving 50+ clients.'
     },
-    {
-      year: '2020',
+    {year: '2020',}
       title: 'Quantum Computing Division',
       description: 'Established quantum computing research and development capabilities.'
     },
-    {
-      year: '2021',
+    {year: '2021',}
       title: 'Global Expansion',
       description: 'Expanded operations to serve clients across North America, Europe, and Asia.'
     },
-    {
-      year: '2022',
+    {year: '2022',}
       title: 'AI Ethics Initiative',
       description: 'Launched comprehensive AI ethics framework and responsible AI practices.'
     },
-    {
-      year: '2023',
+    {year: '2023',}
       title: 'Breakthrough Technologies',
       description: 'Introduced cutting-edge solutions in autonomous systems and edge computing.'
     },
-    {
-      year: '2024',
+    {year: '2024',}
       title: 'Industry Recognition',
       description: 'Awarded "AI Innovation Leader" by TechCrunch and "Best AI Solutions Provider" by Gartner.'
     }
   ];
-  return (
+  return ()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
       <section className="relative py-20 px-4">
@@ -164,9 +140,7 @@ export default function AboutPage() {
         </div>
         <div className='prose prose-lg max-w-none'>
           <div className='bg-white rounded-lg shadow-lg p-8 mb-8'>
-            <h2 className='text-2xl font-bold text-gray-900 mb-4'>
-              Our Mission;
-  </
+            <h2 className='text-2xl font-bold text-gray-900 mb-4'>Our Mission;
             <p className='text-gray-600 mb-4'>
               At Zion Tech Group, we are dedicated to transforming
               businesses through cutting-edge AI and IT solutions. Our
@@ -205,7 +179,7 @@ export default function AboutPage() {
         <section className="py-16 bg-white rounded-xl mb-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {stats.map((stat, index) => (
+              {stats.map((stat, index) => (}
                 <div key={index} className="text-center">
                   <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
                     {stat.number}
@@ -223,9 +197,7 @@ export default function AboutPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                  Our Mission;
-  </
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Our Mission;
                 <p className="text-lg text-gray-600 mb-6">
                   To democratize access to advanced AI technology and empower businesses of all sizes 
                   to achieve their full potential through innovative digital solutions.
@@ -255,15 +227,11 @@ export default function AboutPage() {
         <section className="py-20 bg-white rounded-xl mb-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Our Values;
-  </
-              <p className="text-xl text-gray-600">
-                The principles that guide everything we do;
-  </
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Values;
+              <p className="text-xl text-gray-600">The principles that guide everything we do;
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {values.map((value, index) => (
+              {values.map((value, index) => (}
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <value.icon className="w-8 h-8 text-white" />
@@ -283,15 +251,11 @@ export default function AboutPage() {
         <section className="py-20 bg-gray-50 rounded-xl mb-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Meet Our Team;
-  </
-              <p className="text-xl text-gray-600">
-                The experts behind our innovative solutions;
-  </
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Meet Our Team;
+              <p className="text-xl text-gray-600">The experts behind our innovative solutions;
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {team.map((member, index) => (
+              {team.map((member, index) => (}
                 <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden">
                   <div className="h-64 bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center">
                     <div className="w-32 h-32 bg-gray-300 rounded-full flex items-center justify-center">
@@ -342,7 +306,7 @@ export default function AboutPage() {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
+            {stats.map((stat, index) => (}
               <div key={index} className="text-center">
                 <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
                   {stat.number}
@@ -354,9 +318,7 @@ export default function AboutPage() {
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">
-              About Zion Tech Group;
-  </
+            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">About Zion Tech Group;
             <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">
               Leading the future of AI-powered enterprise solutions with cutting-edge technology, 
               innovative thinking, and unwavering commitment to client success.
@@ -383,9 +345,7 @@ export default function AboutPage() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-                Our Mission;
-  </
+              <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">Our Mission;
               <p className="text-lg text-gray-300 mb-6 leading-relaxed">
                 To democratize artificial intelligence and cutting-edge technology for enterprises worldwide, 
                 enabling them to achieve unprecedented levels of efficiency, innovation, and growth.
@@ -406,9 +366,7 @@ export default function AboutPage() {
               </div>
             </div>
             <div>
-              <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-                Our Vision;
-  </
+              <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">Our Vision;
               <p className="text-lg text-gray-300 mb-6 leading-relaxed">
                 To be the world's leading provider of AI and quantum computing solutions, 
                 creating a future where technology seamlessly integrates with human potential 
@@ -439,15 +397,11 @@ export default function AboutPage() {
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Our Values;
-  </
-            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              The principles that guide everything we do and shape our culture;
-  </
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Our Values;
+            <p className="text-lg text-gray-300 max-w-3xl mx-auto">The principles that guide everything we do and shape our culture;
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {values.map((value, index) => (
+            {values.map((value, index) => (}
               <div key={index} className="text-center group">
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                   <value.icon className="w-8 h-8 text-white" />
@@ -463,15 +417,11 @@ export default function AboutPage() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Meet Our Team;
-  </
-            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              World-class experts in AI, quantum computing, and enterprise technology;
-  </
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Meet Our Team;
+            <p className="text-lg text-gray-300 max-w-3xl mx-auto">World-class experts in AI, quantum computing, and enterprise technology;
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {teamMembers.map((member, index) => (
+            {teamMembers.map((member, index) => (}
               <div key={index} className="bg-slate-800/50 rounded-lg p-6 text-center group hover:bg-slate-700/50 transition-all duration-300">
                 <div className="w-24 h-24 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-full mx-auto mb-4 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   <span className="text-2xl font-bold text-white">
@@ -482,7 +432,7 @@ export default function AboutPage() {
                 <p className="text-cyan-400 font-medium mb-3">{member.role}</p>
                 <p className="text-gray-300 text-sm mb-4">{member.bio}</p>
                 <div className="flex flex-wrap justify-center gap-2">
-                  {member.expertise.map((skill, skillIndex) => (
+                  {member.expertise.map((skill, skillIndex) => (}
                     <span key={skillIndex} className="px-2 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded">
                       {skill}
                     </span>
@@ -497,15 +447,11 @@ export default function AboutPage() {
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Our Achievements;
-  </
-            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              Numbers that speak to our impact and success;
-  </
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Our Achievements;
+            <p className="text-lg text-gray-300 max-w-3xl mx-auto">Numbers that speak to our impact and success;
           </div>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-            {achievements.map((achievement, index) => (
+            {achievements.map((achievement, index) => (}
               <div key={index} className="text-center">
                 <div className="w-20 h-20 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <achievement.icon className="w-10 h-10 text-white" />
@@ -525,17 +471,13 @@ export default function AboutPage() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Our Journey;
-  </
-            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              Key milestones in our company's growth and innovation;
-  </
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Our Journey;
+            <p className="text-lg text-gray-300 max-w-3xl mx-auto">Key milestones in our company's growth and innovation;
           </div>
           <div className="max-w-4xl mx-auto">
             <div className="relative">
               <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-cyan-500 to-purple-600"></div>
-              {timeline.map((item, index) => (
+              {timeline.map((item, index) => (}
                 <div key={index} className={`relative flex items-center mb-12 ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
                   <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}>
                     <div className="bg-slate-800/50 p-6 rounded-lg">
@@ -580,32 +522,6 @@ export default function AboutPage() {
     </div>
   );
 }
-  </a>
-  </a>
-  </p>
-  </h2>
-  </p>
-  </h2>
-  </p>
-  </h2>
-  </p>
-  </h2>
-  </h2>
-  </h2>
-  </h1>
-  </div>
-  </div>
-  </section>
   </Link>
   </Link>
-  </p>
-  </h2>
-  </p>
-  </h2>
   </Link>
-  </h2>
-  </h2>
-  </section>
-  </div>
-  </div>
-  </div>

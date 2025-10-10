@@ -2,20 +2,19 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-const Pagetsx: React.FC = () => {
-  const _features = [];
-  return (
-    {icon: Users,
+const Pagetsx: React.FC = () => {const _features = [];}
+  return ()
+    {icon: Users,}
     title: 'Advanced Features',
       description: 'Cutting-edge solutions powered by artificial intelligence and machine learning',
       benefits: ['Improved efficiency', 'Better results', 'Cost savings']
     },
-    {icon: TrendingUp,
+    {icon: TrendingUp,}
     title: 'Performance Optimization',
       description: 'Optimized performance and scalability for enterprise-grade applications',
       benefits: ['Faster processing', 'Better scalability', 'Enhanced reliability']
     },
-    {icon: Shield,
+    {icon: Shield,}
     title: 'Security & Compliance',
       description: 'Enterprise-grade security with full compliance and data protection',
       benefits: ['Data protection', 'Compliance', 'Secure operations']
@@ -89,4 +88,4 @@ const Pagetsx: React.FC = () => {
   )
 }
 export default Pagetsx;"
-export default MarketingToolsPage;
+export default MarketingToolsPage

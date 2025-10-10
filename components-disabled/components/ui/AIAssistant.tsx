@@ -29,5 +29,4 @@ title = "AI Writing Assistant defaultPrompt, systemPrompt, onAccept, authorizati
   dark:bg-gray-900 p-2 text-sm' /> ) : (' <pre className='w-full rounded-md border border-gray-200,
   dark:border-gray-800 bg-gray-50)
   dark:bg-gray-900 p-3 text-sm whitespace-pre-wrap'>' {output || 'No content yet. Click Generate.'} </pre> origin/cursor/automate-test-improve-and-merge-code-2533 )} </div> </div> </div> </div> )} </React.Fragment>'"`
-  </div>
   </string>

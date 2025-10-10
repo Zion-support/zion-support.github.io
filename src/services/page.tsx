@@ -5,10 +5,8 @@ import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Brain, BarCha
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-const ServicesPage: React.FC = () => {
-  const aiServices = [
-    {
-      icon: Brain,
+const ServicesPage: React.FC = () => {const aiServices = [}
+    {icon: Brain,}
       title: 'AI Services',
       description: 'Comprehensive AI solutions for every business need',
       features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
@@ -16,8 +14,7 @@ const ServicesPage: React.FC = () => {
       popular: true,
       link: '/ai-services'
     },
-    {
-      icon: Zap,
+    {icon: Zap,}
       title: 'AI Automation',
       description: 'Intelligent process automation and workflow optimization',
       features: ['Workflow Automation', 'Smart Scheduling', 'Process Optimization', 'Task Management'],
@@ -25,8 +22,7 @@ const ServicesPage: React.FC = () => {
       popular: false,
       link: '/ai-automation'
     },
-    {
-      icon: BarChart,
+    {icon: BarChart,}
       title: 'AI Data Analytics',
       description: 'Transform data into actionable insights with AI',
       features: ['Predictive Analytics', 'Data Visualization', 'Business Intelligence', 'Real-time Insights'],
@@ -34,8 +30,7 @@ const ServicesPage: React.FC = () => {
       popular: false,
       link: '/ai-data-analytics'
     },
-    {
-      icon: MessageSquare,
+    {icon: MessageSquare,}
       title: 'AI Customer Support',
       description: '24/7 AI-powered customer service solutions',
       features: ['Chatbots', 'Voice Assistants', 'Ticket Management', 'Sentiment Analysis'],
@@ -43,8 +38,7 @@ const ServicesPage: React.FC = () => {
       popular: true,
       link: '/ai-customer-support'
     },
-    {
-      icon: Target,
+    {icon: Target,}
       title: 'AI Marketing',
       description: 'Revolutionary AI-powered marketing automation',
       features: ['Ad Optimization', 'Content Generation', 'Lead Scoring', 'Campaign Management'],
@@ -52,8 +46,7 @@ const ServicesPage: React.FC = () => {
       popular: true,
       link: '/ai-marketing'
     },
-    {
-      icon: Eye,
+    {icon: Eye,}
       title: 'AI Computer Vision',
       description: 'Advanced computer vision and image processing',
       features: ['Object Detection', 'Image Recognition', 'Quality Control', 'Facial Recognition'],
@@ -62,9 +55,8 @@ const ServicesPage: React.FC = () => {
       link: '/ai-computer-vision'
     }
   ];
-  const itServices = [
-    {
-      icon: Database,
+  const itServices = []
+    {icon: Database,}
       title: 'Database Management',
       description: 'Comprehensive database solutions and optimization',
       features: ['Database Design', 'Performance Tuning', 'Backup & Recovery', 'Monitoring'],
@@ -72,8 +64,7 @@ const ServicesPage: React.FC = () => {
       popular: false,
       link: '/database-management'
     },
-    {
-      icon: Lock,
+    {icon: Lock,}
       title: 'Cybersecurity',
       description: 'Comprehensive security solutions for your business',
       features: ['Security Audits', 'Penetration Testing', 'Compliance', 'Incident Response'],
@@ -81,8 +72,7 @@ const ServicesPage: React.FC = () => {
       popular: true,
       link: '/cybersecurity'
     },
-    {
-      icon: Cloud,
+    {icon: Cloud,}
       title: 'Cloud Services',
       description: 'Scalable cloud infrastructure and migration',
       features: ['Cloud Migration', 'Infrastructure Setup', 'Monitoring', 'Cost Optimization'],
@@ -90,8 +80,7 @@ const ServicesPage: React.FC = () => {
       popular: true,
       link: '/cloud-services'
     },
-    {
-      icon: Code,
+    {icon: Code,}
       title: 'DevOps & CI/CD',
       description: 'Automated development and deployment pipelines',
       features: ['CI/CD Setup', 'Container Orchestration', 'Monitoring', 'Security Scanning'],
@@ -99,8 +88,7 @@ const ServicesPage: React.FC = () => {
       popular: false,
       link: '/devops-cicd'
     },
-    {
-      icon: Settings,
+    {icon: Settings,}
       title: 'System Administration',
       description: 'Complete system management and maintenance',
       features: ['Server Management', 'Performance Tuning', 'Updates', 'Troubleshooting'],
@@ -108,8 +96,7 @@ const ServicesPage: React.FC = () => {
       popular: false,
       link: '/system-administration'
     },
-    {
-      icon: Globe,
+    {icon: Globe,}
       title: 'Network Solutions',
       description: 'Enterprise network infrastructure and security',
       features: ['Network Design', 'Security Implementation', 'Monitoring', 'Optimization'],
@@ -118,9 +105,8 @@ const ServicesPage: React.FC = () => {
       link: '/network-solutions'
     }
   ];
-  const microSaasServices = [
-    {
-      icon: BarChart3,
+  const microSaasServices = []
+    {icon: BarChart3,}
       title: 'AI Analytics Dashboard',
       description: 'Real-time business intelligence and analytics',
       features: ['Custom Dashboards', 'Real-time Data', 'Predictive Insights', 'Export Reports'],
@@ -128,8 +114,7 @@ const ServicesPage: React.FC = () => {
       popular: true,
       link: '/ai-analytics-dashboard'
     },
-    {
-      icon: ShoppingCart,
+    {icon: ShoppingCart,}
       title: 'AI E-commerce Assistant',
       description: 'Complete e-commerce automation and optimization',
       features: ['Inventory Management', 'Order Processing', 'Customer Service', 'Analytics'],
@@ -137,8 +122,7 @@ const ServicesPage: React.FC = () => {
       popular: true,
       link: '/ai-ecommerce-solutions'
     },
-    {
-      icon: Smartphone,
+    {icon: Smartphone,}
       title: 'AI Mobile App Builder',
       description: 'No-code mobile app development with AI',
       features: ['Drag & Drop Builder', 'AI Code Generation', 'App Store Publishing', 'Analytics'],
@@ -146,8 +130,7 @@ const ServicesPage: React.FC = () => {
       popular: false,
       link: '/ai-mobile-app-development'
     },
-    {
-      icon: FileText,
+    {icon: FileText,}
       title: 'AI Document Processor',
       description: 'Intelligent document processing and management',
       features: ['OCR Processing', 'Data Extraction', 'Document Classification', 'Workflow Automation'],
@@ -155,8 +138,7 @@ const ServicesPage: React.FC = () => {
       popular: true,
       link: '/ai-document-processing'
     },
-    {
-      icon: Bot,
+    {icon: Bot,}
       title: 'AI Chatbot Builder',
       description: 'Create intelligent chatbots for any platform',
       features: ['Visual Builder', 'Multi-platform', 'Analytics', 'Custom Training'],
@@ -164,8 +146,7 @@ const ServicesPage: React.FC = () => {
       popular: true,
       link: '/ai-chatbot-builder'
     },
-    {
-      icon: Music,
+    {icon: Music,}
       title: 'AI Content Creator',
       description: 'AI-powered content generation and optimization',
       features: ['Blog Writing', 'Social Media', 'Video Scripts', 'SEO Optimization'],
@@ -174,35 +155,31 @@ const ServicesPage: React.FC = () => {
       link: '/ai-content-generation'
     }
   ];
-  const benefits = [
-    {
-      icon: TrendingUp,
+  const benefits = []
+    {icon: TrendingUp,}
       title: 'Proven ROI',
       description: 'Average 300% return on investment for our clients'
     },
-    {
-      icon: Users,
+    {icon: Users,}
       title: 'Expert Team',
       description: '50+ certified professionals with 10+ years experience'
     },
-    {
-      icon: Clock,
+    {icon: Clock,}
       title: '24/7 Support',
       description: 'Round-the-clock support with guaranteed response times'
     },
-    {
-      icon: Shield,
+    {icon: Shield,}
       title: 'Fast Delivery',
       description: 'Quick implementation with minimal downtime'
     }
   ];
-  const stats = [
+  const stats = []
     { label: 'Projects Completed', value: '500+' },
     { label: 'Happy Clients', value: '200+' },
     { label: 'Uptime Guarantee', value: '99.9%' },
     { label: 'Support Available', value: '24/7' }
   ];
-  return (
+  return ()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEOOptimizer 
         title="AI & IT Services - Zion Tech Group"
@@ -214,12 +191,8 @@ const ServicesPage: React.FC = () => {
       <section className="pt-24 pb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Our Services;
-  </
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Comprehensive AI and IT solutions designed to transform your business operations and drive growth;
-  </
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">Our Services;
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Comprehensive AI and IT solutions designed to transform your business operations and drive growth;
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="tel:+13024640950"
@@ -240,7 +213,7 @@ const ServicesPage: React.FC = () => {
       <section className="py-16 bg-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
+            {stats.map((stat, index) => (}
               <div key={index} className="text-center">
                 <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">
                   {stat.value}
@@ -257,21 +230,15 @@ const ServicesPage: React.FC = () => {
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              AI Services;
-  </
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Advanced artificial intelligence solutions to automate, optimize, and transform your business;
-  </
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">AI Services;
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Advanced artificial intelligence solutions to automate, optimize, and transform your business;
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {aiServices.map((service, index) => (
+            {aiServices.map((service, index) => (}
               <div key={index} className={`bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 ${service.popular ? 'ring-2 ring-cyan-400' : ''}`}>
-                {service.popular && (
+                {service.popular && (}
                   <div className="flex items-center justify-center mb-4">
-                    <span className="bg-cyan-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                      Most Popular;
-  </
+                    <span className="bg-cyan-500 text-white px-3 py-1 rounded-full text-sm font-semibold">Most Popular;
                   </div>
                 )}
                 <div className="flex items-center mb-4">
@@ -280,7 +247,7 @@ const ServicesPage: React.FC = () => {
                 </div>
                 <p className="text-gray-300 mb-4">{service.description}</p>
                 <ul className="space-y-2 mb-6">
-                  {service.features.map((feature, featureIndex) => (
+                  {service.features.map((feature, featureIndex) => (}
                     <li key={featureIndex} className="flex items-center text-sm text-gray-300">
                       <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
                       {feature}
@@ -304,21 +271,15 @@ const ServicesPage: React.FC = () => {
       <section className="py-24 bg-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              IT Services;
-  </
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Robust IT infrastructure and support services to keep your business running smoothly;
-  </
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">IT Services;
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Robust IT infrastructure and support services to keep your business running smoothly;
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {itServices.map((service, index) => (
+            {itServices.map((service, index) => (}
               <div key={index} className={`bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 ${service.popular ? 'ring-2 ring-cyan-400' : ''}`}>
-                {service.popular && (
+                {service.popular && (}
                   <div className="flex items-center justify-center mb-4">
-                    <span className="bg-cyan-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                      Most Popular;
-  </
+                    <span className="bg-cyan-500 text-white px-3 py-1 rounded-full text-sm font-semibold">Most Popular;
                   </div>
                 )}
                 <div className="flex items-center mb-4">
@@ -327,7 +288,7 @@ const ServicesPage: React.FC = () => {
                 </div>
                 <p className="text-gray-300 mb-4">{service.description}</p>
                 <ul className="space-y-2 mb-6">
-                  {service.features.map((feature, featureIndex) => (
+                  {service.features.map((feature, featureIndex) => (}
                     <li key={featureIndex} className="flex items-center text-sm text-gray-300">
                       <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
                       {feature}
@@ -351,21 +312,17 @@ const ServicesPage: React.FC = () => {
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Micro SAAS Solutions;
-  </
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Micro SAAS Solutions;
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Affordable, powerful AI-driven tools for modern businesses. 50+ ready-to-use applications.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {microSaasServices.map((service, index) => (
+            {microSaasServices.map((service, index) => (}
               <div key={index} className={`bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 ${service.popular ? 'ring-2 ring-cyan-400' : ''}`}>
-                {service.popular && (
+                {service.popular && (}
                   <div className="flex items-center justify-center mb-4">
-                    <span className="bg-cyan-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                      Most Popular;
-  </
+                    <span className="bg-cyan-500 text-white px-3 py-1 rounded-full text-sm font-semibold">Most Popular;
                   </div>
                 )}
                 <div className="flex items-center mb-4">
@@ -374,7 +331,7 @@ const ServicesPage: React.FC = () => {
                 </div>
                 <p className="text-gray-300 mb-4">{service.description}</p>
                 <ul className="space-y-2 mb-6">
-                  {service.features.map((feature, featureIndex) => (
+                  {service.features.map((feature, featureIndex) => (}
                     <li key={featureIndex} className="flex items-center text-sm text-gray-300">
                       <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
                       {feature}
@@ -401,12 +358,10 @@ const ServicesPage: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Why Choose Zion Tech Group?
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We deliver exceptional results with proven expertise and cutting-edge technology;
-  </
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">We deliver exceptional results with proven expertise and cutting-edge technology;
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
+            {benefits.map((benefit, index) => (}
               <div key={index} className="text-center">
                 <div className="bg-cyan-500/10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                   <benefit.icon className="h-8 w-8 text-cyan-400" />
@@ -450,21 +405,8 @@ const ServicesPage: React.FC = () => {
 };
 export default ServicesPage;
   </Link>
-  </a>
-  </p>
   </Link>
-  </span>
-  </h2>
   </Link>
-  </span>
-  </p>
-  </h2>
   </Link>
-  </span>
-  </p>
-  </h2>
   </Link>
-  </a>
-  </p>
-  </h1>
   </SEOOptimizer>

@@ -7,4 +7,4 @@ import Footer from '../components/Footer';
   );
 };
 export default AiLeadGenerationPage;
-export default PagePage;
+export default PagePage

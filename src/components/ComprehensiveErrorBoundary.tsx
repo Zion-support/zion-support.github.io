@@ -27,8 +27,7 @@ class ComprehensiveErrorBoundary extends Component;
   private maxRetries: number;
   constructor(props: Props) {// TODO: Add content;}
 }
-class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
-  constructor(props: ErrorBoundaryProps) {
+class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {constructor(props: ErrorBoundaryProps) {}
     super(props);
     this.state = {// TODO: Add content;}
 };

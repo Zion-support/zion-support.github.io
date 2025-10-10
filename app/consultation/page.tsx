@@ -4,8 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Calendar, Clock, Users, CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Target, Award } from 'lucide-react';
 
-interface ConsultationType {
-  id: string;
+interface ConsultationType {id: string;}
   name: string;
   description: string;
   duration: string;
@@ -14,8 +13,7 @@ interface ConsultationType {
   popular: boolean;
 }
 
-const ConsultationPage: React.FC = () => {
-  const [formData, setFormData] = useState({
+const ConsultationPage: React.FC = () => {const [formData, setFormData] = useState({}
     name: '',
     email: '',
     company: '',
@@ -25,14 +23,13 @@ const ConsultationPage: React.FC = () => {
     urgency: 'medium'
   });
 
-  const consultationTypes: ConsultationType[] = [
-    {
-      id: 'strategy',
+  const consultationTypes: ConsultationType[] = []
+    {id: 'strategy',}
       name: 'AI Strategy Consultation',
       description: 'Comprehensive AI strategy development and implementation planning',
       duration: '2 hours',
       price: 'Free',
-      features: [
+      features: []
         'AI readiness assessment',
         'Technology roadmap development',
         'ROI analysis and projections',
@@ -41,13 +38,12 @@ const ConsultationPage: React.FC = () => {
       ],
       popular: true
     },
-    {
-      id: 'technical',
+    {id: 'technical',}
       name: 'Technical Deep Dive',
       description: 'Detailed technical analysis and solution architecture design',
       duration: '3 hours',
       price: '$500',
-      features: [
+      features: []
         'Technical architecture review',
         'Integration planning',
         'Security assessment',
@@ -56,13 +52,12 @@ const ConsultationPage: React.FC = () => {
       ],
       popular: false
     },
-    {
-      id: 'security',
+    {id: 'security',}
       name: 'Security & Compliance',
       description: 'Cybersecurity assessment and compliance strategy development',
       duration: '2 hours',
       price: 'Free',
-      features: [
+      features: []
         'Security vulnerability assessment',
         'Compliance gap analysis',
         'Security framework implementation',
@@ -73,39 +68,34 @@ const ConsultationPage: React.FC = () => {
     }
   ];
 
-  const services = [
-    {
-      icon: Zap,
+  const services = []
+    {icon: Zap,}
       title: 'AI & Machine Learning',
       description: 'Transform your business with intelligent automation and data-driven insights'
     },
-    {
-      icon: Target,
+    {icon: Target,}
       title: 'Cloud Solutions',
       description: 'Scale your infrastructure with secure, reliable cloud computing solutions'
     },
-    {
-      icon: Award,
+    {icon: Award,}
       title: 'Cybersecurity',
       description: 'Protect your business with comprehensive security solutions and compliance'
     }
   ];
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {}
     const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
+    setFormData(prev => ({...prev,}
       [name]: value
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleSubmit = (e: React.FormEvent) => {e.preventDefault();}
     // In a real app, this would submit the form data
     alert('Thank you for your interest! We will contact you within 24 hours.');
   };
 
-  return (
+  return ()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Free Consultation - Zion Tech Group | Expert Technology Consulting</title>
@@ -155,7 +145,7 @@ const ConsultationPage: React.FC = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {services.map((service, index) => (
+            {services.map((service, index) => (}
               <div key={index} className="bg-slate-800/50 rounded-2xl p-8 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300 text-center">
                 <div className="flex justify-center mb-6">
                   <div className="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center">
@@ -181,11 +171,11 @@ const ConsultationPage: React.FC = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {consultationTypes.map((type) => (
-              <div key={type.id} className={`relative bg-slate-800/50 rounded-2xl p-8 border transition-all duration-300 ${
+            {consultationTypes.map((type) => (}
+              <div key={type.id} className={`relative bg-slate-800/50 rounded-2xl p-8 border transition-all duration-300 ${}
                 type.popular ? 'border-cyan-500' : 'border-cyan-500/20 hover:border-cyan-500/40'
               }`}>
-                {type.popular && (
+                {type.popular && (}
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <div className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
@@ -206,7 +196,7 @@ const ConsultationPage: React.FC = () => {
                 </div>
                 
                 <ul className="space-y-3 mb-8">
-                  {type.features.map((feature, index) => (
+                  {type.features.map((feature, index) => (}
                     <li key={index} className="flex items-start">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" />
                       <span className="text-gray-300">{feature}</span>
@@ -395,4 +385,4 @@ const ConsultationPage: React.FC = () => {
   );
 };
 
-export default ConsultationPage;
+export default ConsultationPage

@@ -4,9 +4,8 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { Eye, Camera, Video, Target, Shield, CheckCircle, ArrowRight, Settings } from 'lucide-react';
 import { Target, Shield, Eye,  Camera,  Target,  Shield,  Settings } from 'lucide-react';
-const AIComputerVisionPage: React.FC = () => {
-  const features = [];
-  return (
+const AIComputerVisionPage: React.FC = () => {const features = [];}
+  return ()
     {// TODO: Add content;}
 };
   ico,
@@ -36,7 +35,7 @@ const AIComputerVisionPage: React.FC = () => {
   s: ['Identity verification', 'Access control', 'Privacy protection']
     }
   ];
-  const applications = [
+  const applications = []
       titl,
   e: 'Security & Surveillance',
       descriptio,
@@ -53,7 +52,7 @@ const AIComputerVisionPage: React.FC = () => {
   n: Settings,
       useCase,
   s: ['Defect detection', 'Quality assurance', 'Process monitoring']
-  const pricing = [
+  const pricing = []
       nam,
   e: 'Starter',
       pric,
@@ -61,7 +60,7 @@ const AIComputerVisionPage: React.FC = () => {
       descriptio,
   n: 'Perfect for small projects',
       feature,
-  s: [
+  s: []
   // TOD,
   O: Add items];
 //         'Up to 1,000 images/month',
@@ -70,8 +69,7 @@ const AIComputerVisionPage: React.FC = () => {
 //         'Standard API'
 //       ],
       popular: false,
-const PagePage: React.FC = () => {
-  return (
+const PagePage: React.FC = () => {return (}
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
@@ -193,5 +191,4 @@ Ready to See the Future?"
     </div>
   );
 };
-export default PagePage;
-  </p>
+export default PagePage

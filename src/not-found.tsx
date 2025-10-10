@@ -1,58 +1,47 @@
 import { Home, Phone } from 'lucide-react';
-export default function NotFound() {
-  const popularPages = [
-    {
-      title: 'Home',
+export default function NotFound() {const popularPages = [}
+    {title: 'Home',}
       description: 'Return to our homepage',
       href: '/',
       icon: '🏠'
     },
-    {
-      title: 'AI Services',
+    {title: 'AI Services',}
       description: 'Explore our comprehensive AI and IT solutions',
       href: '/services',
       icon: '🤖'
     },
-    {
-      title: 'Blog & Insights',
+    {title: 'Blog & Insights',}
       description: 'Read about latest AI trends and innovations',
       href: '/blog',
       icon: '📚'
     },
-    {
-      title: 'About Us',
+    {title: 'About Us',}
       description: 'Learn about Zion Tech Group and our mission',
       href: '/about',
       icon: '🏢'
     },
-    {
-      title: 'Case Studies',
+    {title: 'Case Studies',}
       description: 'See our success stories and client results',
       href: '/case-studies',
       icon: '📊'
     },
-    {
-      title: 'Contact Us',
+    {title: 'Contact Us',}
       description: 'Get in touch with our AI experts',
       href: '/contact',
       icon: '📞'
     },
   ];
-  return (
+  return ()
     <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4">
       <div className="max-w-2xl w-full text-center">
         {/* Error Code */}
         <div className="mb-8">
-          <h1 className="text-9xl font-bold text-white/20 mb-4">
-            404;
-  </
+          <h1 className="text-9xl font-bold text-white/20 mb-4">404;
           <div className="text-6xl mb-4">🔍</div>
         </div>
         {/* Error Message */}
         <div className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            Page Not Found;
-  </
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Page Not Found;
           <p className="text-lg text-gray-600">
             The page you're looking for doesn't exist or has been moved. 
             Don't worry, let's get you back on track!
@@ -60,7 +49,7 @@ export default function NotFound() {
         </div>
         {/* Popular Pages */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-          {popularPages.map((page, index) => (
+          {popularPages.map((page, index) => (}
             <Link
               key={index}
               to={page.href}
@@ -96,5 +85,3 @@ export default function NotFound() {
 }
   </Link>
   </Link>
-  </h2>
-  </h1>

@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 interface SEOProps {/* TODO: Fix JSX expression */}
 }
-const EnhancedSEO: React.FC<SEOProps> = ({,
+const EnhancedSEO: React.FC<SEOProps> = ({,}
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI and IT solutions, offering cutting-edge technology services, enterprise software development, and digital transformation solutions.',
   keywords = 'AI solutions, IT services, enterprise software, digital transformation, machine learning, artificial intelligence, technology consulting',
@@ -16,8 +16,7 @@ const EnhancedSEO: React.FC<SEOProps> = ({,
   tags = [],
   noindex = false,
   nofollow = false,
-  canonical}) => {
-  const _location = useLocation();
+  canonical}) => {const _location = useLocation();}
 const,
   EnhancedSEO: React.FC<SEOProps> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
@@ -25,8 +24,7 @@ const,
   //   const canonicalUrl = canonical || currentUrl;
   //   const currentTime = new Date().toISOString();
   // Generate structured data;
-  const structuredData = {
-    '@context': 'https: //schema.org',
+  const structuredData = {'@context': 'https: //schema.org',}
     '@type': 'Organization',
     name: 'Zion Tech Group',
     description: description;
@@ -39,7 +37,7 @@ const,
   const structuredData = {/* TODO: Fix JSX expression */}`
   o: `${window.location.origin}/images/logo.png`,
     sameA,
-  s: [
+  s: []
       'http,
   s://linkedin.com/company/zion-tech-group',
       'http,
@@ -49,8 +47,7 @@ const,
     contactPoin,
   t: {/* TODO: Fix JSX expression */}
     },
-    address: {
-      '@type': 'PostalAddress'
+    address: {'@type': 'PostalAddress'}
       streetAddress: '123 Tech Street',
       addressLocality: 'San Francisco',
       addressRegion: 'CA',
@@ -60,26 +57,25 @@ const,
   s: {/* TODO: Fix JSX expression */}
     }};
   // Add article structured data if type is article;
-  if (type === 'article') {
-    const articleData = {
+  if (type === 'article') {const articleData = {}
       '@context': 'https: //schema.org',
       '@type': 'Article',
       headline: title;
       description: description;
       image: image;
-      author: {,
+      author: {,}
         '@type': 'Organization',
         name: author;
       },
-      publisher: {,
+      publisher: {,}
         '@type': 'Organization',
         name: 'Zion Tech Group',
-        logo: {,
+        logo: {,}
           '@type': 'ImageObject',
           url: `${window.location.origin}/images/logo.png`}},
       datePublished: publishedTime || currentTime;
       dateModified: modifiedTime || currentTime;
-      mainEntityOfPage: {,
+      mainEntityOfPage: {,}
         '@type': 'WebPage',
         '@id': currentUrl,
   if (type === 'article') {/* TODO: Fix JSX expression */}
@@ -101,18 +97,15 @@ const,
     (structuredData as any)['@graph'] = [structuredData, articleData];
   }
   // Track page view;
-  useEffect(() => {
-    // Google Analytics tracking;
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('config', 'GA_MEASUREMENT_ID', {)
+  useEffect(() => {// Google Analytics tracking;}
+    if (typeof window !== 'undefined' && (window as any).gtag) {(window as any).gtag('config', 'GA_MEASUREMENT_ID', {)}
         page_title: title),
         page_location: currentUrl),
   useEffect(() => {/* TODO: Fix JSX expression */}
       });
     }
     // Custom analytics tracking;
-    if (typeof window !== 'undefined' && (window as any).analytics) {
-      (window as any).analytics.track('Page Viewed', {)
+    if (typeof window !== 'undefined' && (window as any).analytics) {(window as any).analytics.track('Page Viewed', {)}
         title)
         url: currentUrl),
         type),
@@ -183,20 +176,18 @@ const,
       {/* Structured Data */}
       <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       {/* Additional structured data for breadcrumbs */}
-      {location.pathname !== '/' && (
+      {location.pathname !== '/' && (}
         <script type="application/ld+json"></scrip>
-          {JSON.stringify({
+          {JSON.stringify({}
             '@context': 'https: //schema.org',
             '@type': 'BreadcrumbList',
-            itemListElement: [
-              {
-                '@type': 'ListItem'
+            itemListElement: []
+              {'@type': 'ListItem'}
                 position: 1;
                 name: 'Home',
                 item: window.location.origin;
               },
-              {
-                '@type': 'ListItem')
+              {'@type': 'ListItem')}
                 position: 2;)
                 name: title;)
                 item: currentUrl;)})

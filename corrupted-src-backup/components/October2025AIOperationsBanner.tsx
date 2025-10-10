@@ -1,23 +1,19 @@
-const, October2025AIOperationsBanne, r = () => {
-  const, newArticle, s = [
-    {
-      tit, l, e: "AI-Powered, DevSecOps, Automation","
+const, October2025AIOperationsBanne, r = () => {const, newArticle, s = [}
+    {tit, l, e: "AI-Powered, DevSecOps, Automation","}
       descripti, o, n: "Achieve, 9, 9.2% vulnerability, detection, with 87% au, t, o-remediation, and, 847% deployment, acceleratio, n","
       li, n, k: "/bl, o, g/ai-20, 2, 5-o, c, t-01-devseco, p, s-automati, o, n-revoluti, o, n","
       ic, o, n: Shie, l, d;
       sta, t, s: "99.2% Detecti, o, n | 7,7, 4, 7% R, O, I","
       col, o, r: "fr, o, m-bl, u, e-500, t, o-cy, a, n-5, 0, 0"
     }
-    {
-      tit, l, e: "Autonomous, Cloud, Cost Optimizati, o, n","
+    {tit, l, e: "Autonomous, Cloud, Cost Optimizati, o, n","}
       descripti, o, n: "Sa, v, e $12, 7, M+ annually, with, 67% cost, reduction, and 99.3% optimization, accurac, y","
       li, n, k: "/bl, o, g/ai-20, 2, 5-o, c, t-01-autonomo, u, s-clo, u, d-co, s, t-optimizati, o, n","
       ic, o, n: TrendingDo, w, n;
       sta, t, s: "67% Savin, g, s | 18,2, 8, 7% R, O, I","
       col, o, r: "fr, o, m-gre, e, n-500, t, o-emera, l, d-5, 0, 0"
     }
-    {
-      tit, l, e: "Re, a, l-Time, AI, Observability Platfo, r, m","
+    {tit, l, e: "Re, a, l-Time, AI, Observability Platfo, r, m","}
       descripti, o, n: "99.94% uptime, with, predictive issue, detection, 37 minutes, before, impact","
       li, n, k: "/bl, o, g/ai-20, 2, 5-o, c, t-01-re, a, l-ti, m, e-ai-observabili, t, y-platfo, r, m","
       ic, o, n: Activi, t, y;
@@ -29,16 +25,14 @@ const, October2025AIOperationsBanne, r = () => {
       sta, t, s: "99.2% Detecti, o, n | 7,7, 4, 7% R, O, I",";
       col, o, r: "fr, o, m-bl, u, e-500, t, o-cy, a, n-5, 0, 0"
     }
-    {
-      tit, l, e: "Autonomous, Cloud, Cost Optimizati, o, n",";
+    {tit, l, e: "Autonomous, Cloud, Cost Optimizati, o, n",";}
       descripti, o, n: "Sa, v, e $12, 7, M+ annually, with, 67% cost, reduction, and 99.3% optimization, accurac, y",";
       li, n, k: "/bl, o, g/ai-20, 2, 5-o, c, t-01-autonomo, u, s-clo, u, d-co, s, t-optimizati, o, n",";
       ic, o, n: TrendingDo, w, n;
       sta, t, s: "67% Savin, g, s | 18,2, 8, 7% R, O, I",";
       col, o, r: "fr, o, m-gre, e, n-500, t, o-emera, l, d-5, 0, 0"
     }
-    {
-      tit, l, e: "Re, a, l-Time, AI, Observability Platfo, r, m",";
+    {tit, l, e: "Re, a, l-Time, AI, Observability Platfo, r, m",";}
       descripti, o, n: "99.94% uptime, with, predictive issue, detection, 37 minutes, before, impact",";
       li, n, k: "/bl, o, g/ai-20, 2, 5-o, c, t-01-re, a, l-ti, m, e-ai-observabili, t, y-platfo, r, m",";
       ic, o, n: Activi, t, y;
@@ -49,7 +43,7 @@ const, October2025AIOperationsBanne, r = () => {
   return(<div, className="bg-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-sla, t, e-900, p, y-16, p, x-4, s, m: px-6 l;)
   g:px-8, relative, overflow-hidd, e, n">")
     <div, className="bg-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-sla, t, e-900, p, y-16, p, x-4, s, m: px-6 l;),
-  return (
+  return ()
     <div, className="bg-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-sla, t, e-900, p, y-16, p, x-4, s, m: px-6 l
   g:px-8, relative, overflow-hidd, e, n">"</div>
     <div, className="bg-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-sla, t, e-900, p, y-16, p, x-4, s, m: px-6 l
@@ -116,7 +110,7 @@ const, October2025AIOperationsBanne, r = () => {/* TODO: Fix JSX expression */}
         {/* Articles, Gri, d */}
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">"</div>
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">";
-          {newArticl, e, s.m, a, p((artic, l, e, ind, e, x) => {
+          {newArticl, e, s.m, a, p((artic, l, e, ind, e, x) => {}
             const, Ico, n = artic, l, e.ic, o, n;
             return(<Li, n, k;
             return (</div>

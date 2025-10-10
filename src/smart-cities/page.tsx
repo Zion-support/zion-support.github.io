@@ -3,9 +3,8 @@ import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { Building, Target, Zap, Settings, CheckCircle, Star,  Building,  Target,  Settings } from 'lucide-react';
-const SmartCitiesPage: React.FC = () => {
-  const features = [];
-  return (
+const SmartCitiesPage: React.FC = () => {const features = [];}
+  return ()
     {// TODO: Add content;}
 };
   ico,
@@ -35,7 +34,7 @@ const SmartCitiesPage: React.FC = () => {
   s: ['Mobile apps', 'Digital services', 'Citizen engagement']
     }
   ];
-  return (
+  return ()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
@@ -91,4 +90,4 @@ const SmartCitiesPage: React.FC = () => {
     </div>
   );
 };
-export default SmartCitiesPage;
+export default SmartCitiesPage

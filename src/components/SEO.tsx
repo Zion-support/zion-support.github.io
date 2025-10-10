@@ -31,7 +31,7 @@ export interface SEOProps {/* TODO: Fix JSX expression */}
   n:
 // 'Leading provider of AI-powered enterprise solutions and digital transformation services. Achieve 300% ROI with cutting-edge AI technology.',
   keyword,
-  s: [
+  s: []
   // TOD,
   O: Add items]
 //     'AI',

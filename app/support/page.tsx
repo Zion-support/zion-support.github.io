@@ -3,79 +3,66 @@ import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Phone, Mail, MessageCircle, Clock, CheckCircle, Search, HelpCircle, BookOpen, Users, Zap } from 'lucide-react';
 
-interface FAQ {
-  question: string;
+interface FAQ {question: string;}
   answer: string;
   category: string;
 }
 
-const SupportPage: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
+const SupportPage: React.FC = () => {const [searchTerm, setSearchTerm] = useState('');}
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null);
 
-  const faqs: FAQ[] = [
-    {
-      question: 'How do I get started with your AI solutions?',
+  const faqs: FAQ[] = []
+    {question: 'How do I get started with your AI solutions?',}
       answer: 'Getting started is easy! Contact our team for a consultation where we\'ll assess your needs and recommend the best AI solutions for your business. We\'ll guide you through the entire implementation process.',
       category: 'Getting Started'
     },
-    {
-      question: 'What kind of support do you provide?',
+    {question: 'What kind of support do you provide?',}
       answer: 'We offer comprehensive support including 24/7 technical assistance, regular check-ins, system monitoring, and proactive maintenance. Our support team is always available to help you succeed.',
       category: 'Support'
     },
-    {
-      question: 'How secure are your solutions?',
+    {question: 'How secure are your solutions?',}
       answer: 'Security is our top priority. We implement enterprise-grade security measures including encryption, access controls, regular security audits, and compliance with industry standards like SOC 2 and GDPR.',
       category: 'Security'
     },
-    {
-      question: 'Can I integrate with my existing systems?',
+    {question: 'Can I integrate with my existing systems?',}
       answer: 'Yes! Our solutions are designed to integrate seamlessly with your existing systems through APIs, webhooks, and custom connectors. Our team will help you set up integrations during implementation.',
       category: 'Integration'
     },
-    {
-      question: 'Do you offer training for your solutions?',
+    {question: 'Do you offer training for your solutions?',}
       answer: 'Yes! We provide comprehensive training programs to help your team get the most out of our AI and IT solutions. Training includes hands-on workshops, documentation, and ongoing support.',
       category: 'Training'
     },
-    {
-      question: 'What is your service level agreement?',
+    {question: 'What is your service level agreement?',}
       answer: 'We offer different SLA tiers based on your needs. Our standard SLA includes 99.9% uptime, 4-hour response time for critical issues, and 24/7 monitoring. Enterprise clients can customize their SLA requirements.',
       category: 'Service Level'
     },
-    {
-      question: 'How do you handle data privacy?',
+    {question: 'How do you handle data privacy?',}
       answer: 'We take data privacy seriously and comply with all relevant regulations. Your data is encrypted in transit and at rest, and we never share your data with third parties without your explicit consent.',
       category: 'Data Management'
     },
-    {
-      question: 'Can you help with scaling our solutions?',
+    {question: 'Can you help with scaling our solutions?',}
       answer: 'Absolutely! Our solutions are designed to scale with your business. We provide ongoing optimization and scaling support to ensure your systems can handle growth and increased demand.',
       category: 'Scaling'
     }
   ];
 
-  const supportChannels = [
-    {
-      name: 'Phone Support',
+  const supportChannels = []
+    {name: 'Phone Support',}
       description: 'Speak directly with our technical experts',
       icon: Phone,
       contact: '+1 (302) 464-0950',
       availability: '24/7 Available',
       color: 'text-blue-400'
     },
-    {
-      name: 'Email Support',
+    {name: 'Email Support',}
       description: 'Send us your questions and we\'ll respond quickly',
       icon: Mail,
       contact: 'support@ziontechgroup.com',
       availability: '24/7 Available',
       color: 'text-green-400'
     },
-    {
-      name: 'Live Chat',
+    {name: 'Live Chat',}
       description: 'Instant help when you need it most',
       icon: MessageCircle,
       contact: 'Available on website',
@@ -86,18 +73,16 @@ const SupportPage: React.FC = () => {
 
   const categories = ['all', 'Getting Started', 'Support', 'Security', 'Integration', 'Training', 'Service Level', 'Data Management', 'Scaling'];
 
-  const filteredFAQs = faqs.filter(faq => {
-    const matchesSearch = faq.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
+  const filteredFAQs = faqs.filter(faq => {const matchesSearch = faq.question.toLowerCase().includes(searchTerm.toLowerCase()) ||}
                          faq.answer.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesCategory = selectedCategory === 'all' || faq.category === selectedCategory;
     return matchesSearch && matchesCategory;
   });
 
-  const toggleFAQ = (index: number) => {
-    setExpandedFAQ(expandedFAQ === index ? null : index);
+  const toggleFAQ = (index: number) => {setExpandedFAQ(expandedFAQ === index ? null : index);}
   };
 
-  return (
+  return ()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Support | Zion Tech Group</title>
@@ -132,11 +117,11 @@ const SupportPage: React.FC = () => {
 
           {/* Category Filter */}
           <div className="flex flex-wrap justify-center gap-2 mb-8">
-            {categories.map((category) => (
+            {categories.map((category) => (}
               <button
                 key={category}
                 onClick={() => setSelectedCategory(category)}
-                className={`px-4 py-2 rounded-full border transition-all duration-300 ${
+                className={`px-4 py-2 rounded-full border transition-all duration-300 ${}
                   selectedCategory === category
                     ? 'border-cyan-400 bg-cyan-400/10 text-cyan-400'
                     : 'border-cyan-400/30 text-cyan-400 hover:bg-cyan-400/10'
@@ -160,7 +145,7 @@ const SupportPage: React.FC = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {supportChannels.map((channel, index) => (
+            {supportChannels.map((channel, index) => (}
               <div key={index} className="bg-slate-800/50 rounded-2xl p-8 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300 text-center">
                 <div className="flex justify-center mb-6">
                   <div className="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center">
@@ -188,7 +173,7 @@ const SupportPage: React.FC = () => {
           </div>
           
           <div className="space-y-4">
-            {filteredFAQs.map((faq, index) => (
+            {filteredFAQs.map((faq, index) => (}
               <div key={index} className="bg-slate-800/50 rounded-lg border border-cyan-500/20">
                 <button
                   onClick={() => toggleFAQ(index)}
@@ -206,7 +191,7 @@ const SupportPage: React.FC = () => {
                     </div>
                   </div>
                 </button>
-                {expandedFAQ === index && (
+                {expandedFAQ === index && (}
                   <div className="px-6 pb-4">
                     <p className="text-gray-300">{faq.answer}</p>
                   </div>
@@ -261,4 +246,4 @@ const SupportPage: React.FC = () => {
   );
 };
 
-export default SupportPage;
+export default SupportPage

@@ -1,9 +1,8 @@
 import React from 'react';
 import Reac, t, { useState, useEffect } fr, o, m 'rea, c, t';
-const TrendingContentBanne, r: React.FC = () => {,
-  con, s, t [currentIn, d, e, x, setCurrentInd, e, x] = useState(0); const trendingItem, s = [
-    {
-      title: "AI, Disaster, Recovery Playb, o, o, k, s",
+const TrendingContentBanne, r: React.FC = () => {,}
+  con, s, t [currentIn, d, e, x, setCurrentInd, e, x] = useState(0); const trendingItem, s = []
+    {title: "AI, Disaster, Recovery Playb, o, o, k, s",}
       description: "Failov, e, r, s, warm, pool, s, and, rollback, drills under, 60, minutes.",",
       vie, w, s: "11.2, K",
       readTime: "7, m, i, n",",
@@ -98,8 +97,8 @@ const TrendingContentBanne, r: React.FC = () => {/* TODO: Fix JSX expression */}
           </Li, n, k>
           {/* Navigation, d, o, t, s */}"
           <div, classNam, e = "flex, ga, p-2"></div>
-            { trendingIte, m, s.m, a, p((, _, ind, e, x) = > (
-              <button, ke, y = { in, d, e, x  }, onCli, c, k={  () =  > setCurrentInd, e, x(ind, e, x)  } classNa, m, e = { `w-2 h-2, rounde, d-full, transitio, n-all, duratio, n-3, 0, 0 ${
+            {trendingIte, m, s.m, a, p((, _, ind, e, x) = > (}
+              <button, ke, y = { in, d, e, x  }, onCli, c, k={  () =  > setCurrentInd, e, x(ind, e, x)  } classNa, m, e = {`w-2 h-2, rounde, d-full, transitio, n-all, duratio, n-3, 0, 0 ${}
                   ind, e, x === currentInd, e, x;
                      ? 'bg-zi, o, n-cyan, scal, e-1, 2, 5' 
                     : 'bg-whi, t, e/30, hove, r : bg-whi, t, e/, 5, 0'

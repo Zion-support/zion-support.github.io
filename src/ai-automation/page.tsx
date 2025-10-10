@@ -5,40 +5,34 @@ import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Users, TrendingUp, Clock, Shield, Zap, Settings, Phone } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-const AIAutomationPage: React.FC = () => {
-  const features = [
-    {
-      icon: Settings,
+const AIAutomationPage: React.FC = () => {const features = [}
+    {icon: Settings,}
       title: 'Process Automation',
       description: 'Intelligent automation of complex business processes with decision-making capabilities',
       benefits: ['80% process efficiency', 'Zero human error', '24/7 operation']
     },
-    {
-      icon: Zap,
+    {icon: Zap,}
       title: 'Workflow Optimization',
       description: 'AI-powered workflow analysis and optimization for maximum productivity',
       benefits: ['60% time savings', 'Smart routing', 'Dynamic optimization']
     },
-    {
-      icon: Shield,
+    {icon: Shield,}
       title: 'Decision Trees',
       description: 'Advanced decision-making algorithms for complex business scenarios',
       benefits: ['Consistent decisions', 'Risk mitigation', 'Compliance assurance']
     },
-    {
-      icon: Clock,
+    {icon: Clock,}
       title: 'Exception Handling',
       description: 'Intelligent handling of exceptions and edge cases in automated processes',
       benefits: ['Smart escalation', 'Context awareness', 'Learning capabilities']
     }
   ];
-  const pricingPlans = [
-    {
-      name: 'Starter',
+  const pricingPlans = []
+    {name: 'Starter',}
       price: '$1,400',
       period: '/month',
       description: 'Perfect for small businesses',
-      features: [
+      features: []
         'Up to 10 automated processes',
         'Basic AI decision making',
         'Email support',
@@ -47,12 +41,11 @@ const AIAutomationPage: React.FC = () => {
       ],
       popular: false
     },
-    {
-      name: 'Professional',
+    {name: 'Professional',}
       price: '$2,800',
       period: '/month',
       description: 'Ideal for growing companies',
-      features: [
+      features: []
         'Up to 50 automated processes',
         'Advanced AI decision making',
         'Priority support',
@@ -62,12 +55,11 @@ const AIAutomationPage: React.FC = () => {
       ],
       popular: true
     },
-    {
-      name: 'Enterprise',
+    {name: 'Enterprise',}
       price: '$5,600',
       period: '/month',
       description: 'For large organizations',
-      features: [
+      features: []
         'Unlimited processes',
         'Premium AI features',
         '24/7 support',
@@ -79,20 +71,17 @@ const AIAutomationPage: React.FC = () => {
       popular: false
     }
   ];
-  const stats = [
+  const stats = []
     { icon: Users, value: '200+', label: 'Automated Processes' },
     { icon: TrendingUp, value: '80%', label: 'Efficiency Increase' },
     { icon: Clock, value: '60%', label: 'Time Saved' },
     { icon: Star, value: '4.9/5', label: 'Client Rating' }
   ];
-export default function AIAutomationPage() {
-  return (
+export default function AIAutomationPage() {return (}
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="container mx-auto px-4 py-20">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
-            AI Automation;
-  </
+          <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">AI Automation;
           <p className="text-xl text-gray-300 mb-8">
             Intelligent process automation with AI-powered decision making and exception handling.
           </p>
@@ -113,5 +102,3 @@ export default function AIAutomationPage() {
     </div>
   );
 }
-  </a>
-  </h1>

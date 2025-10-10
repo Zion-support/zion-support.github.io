@@ -3,8 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useLocation } from 'react-router-dom';
 
-interface SEOHeadProps {
-  title?: string;
+interface SEOHeadProps {title?: string;}
   description?: string;
   keywords?: string;
   image?: string;
@@ -14,8 +13,7 @@ interface SEOHeadProps {
   structuredData?: object;
 }
 
-const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
-  title = "Zion Tech Group - AI & IT Solutions",
+const EnhancedSEOHead: React.FC<SEOHeadProps> = ({title = "Zion Tech Group - AI & IT Solutions",}
   description = "Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.",
   keywords = "AI solutions, IT services, cybersecurity, cloud computing, digital transformation, enterprise software, automation, machine learning",
   image = "/images/og-image.jpg",
@@ -23,52 +21,45 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
   type = 'website',
   siteName = 'Zion Tech Group',
   structuredData
-}) => {
-  const location = useLocation();
+}) => {const location = useLocation();}
   const currentUrl = url || `https://ziontechgroup.com${location.pathname}`;
   const fullImageUrl = image.startsWith('http') ? image : `https://ziontechgroup.com${image}`;
 
-  const defaultStructuredData = {
-    "@context": "https://schema.org",
+  const defaultStructuredData = {"@context": "https://schema.org",}
     "@type": "Organization",
     "name": "Zion Tech Group",
     "url": "https://ziontechgroup.com",
     "logo": "https://ziontechgroup.com/favicon.svg",
     "description": description,
     "foundingDate": "2020",
-    "address": {
-      "@type": "PostalAddress",
+    "address": {"@type": "PostalAddress",}
       "streetAddress": "364 E Main St STE 1008",
       "addressLocality": "Middletown",
       "addressRegion": "DE",
       "postalCode": "19709",
       "addressCountry": "US"
     },
-    "contactPoint": {
-      "@type": "ContactPoint",
+    "contactPoint": {"@type": "ContactPoint",}
       "telephone": "+1-302-464-0950",
       "contactType": "sales",
       "email": "kleber@ziontechgroup.com"
     },
-    "sameAs": [
+    "sameAs": []
       "https://www.linkedin.com/company/ziontechgroup",
       "https://twitter.com/ziontechgroup",
       "https://github.com/zion-tech-group"
     ]
   };
 
-  const websiteStructuredData = {
-    "@context": "https://schema.org",
+  const websiteStructuredData = {"@context": "https://schema.org",}
     "@type": "WebSite",
     "name": "Zion Tech Group",
     "url": "https://ziontechgroup.com",
     "description": description,
-    "publisher": {
-      "@type": "Organization",
+    "publisher": {"@type": "Organization",}
       "name": "Zion Tech Group"
     },
-    "potentialAction": {
-      "@type": "SearchAction",
+    "potentialAction": {"@type": "SearchAction",}
       "target": "https://ziontechgroup.com/search?q={search_term_string}",
       "query-input": "required name=search_term_string"
     }
@@ -76,7 +67,7 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
 
   const finalStructuredData = structuredData || defaultStructuredData;
 
-  return (
+  return ()
     <Helmet>
       {/* Basic Meta Tags */}
       <title>{title}</title>
@@ -138,4 +129,4 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
   );
 };
 
-export default EnhancedSEOHead;
+export default EnhancedSEOHead

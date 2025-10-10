@@ -4,8 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { CheckCircle, ExternalLink, Award, Users, Handshake, TrendingUp, Building2, Zap, ArrowRight } from 'lucide-react';
 
-interface Partner {
-  name: string;
+interface Partner {name: string;}
   logo: string;
   description: string;
   category: string;
@@ -13,50 +12,43 @@ interface Partner {
   tier: 'strategic' | 'preferred' | 'certified';
 }
 
-const PartnersPage: React.FC = () => {
-  const partners: Partner[] = [
-    {
-      name: 'Microsoft',
+const PartnersPage: React.FC = () => {const partners: Partner[] = [}
+    {name: 'Microsoft',}
       logo: '/images/partners/microsoft.png',
       description: 'Strategic cloud and AI partnership for enterprise solutions',
       category: 'Technology',
       website: 'https://microsoft.com',
       tier: 'strategic'
     },
-    {
-      name: 'Google Cloud',
+    {name: 'Google Cloud',}
       logo: '/images/partners/google-cloud.png',
       description: 'Certified partner for machine learning and data analytics',
       category: 'Cloud',
       website: 'https://cloud.google.com',
       tier: 'preferred'
     },
-    {
-      name: 'Salesforce',
+    {name: 'Salesforce',}
       logo: '/images/partners/salesforce.png',
       description: 'CRM and customer experience solutions',
       category: 'CRM',
       website: 'https://salesforce.com',
       tier: 'strategic'
     },
-    {
-      name: 'IBM',
+    {name: 'IBM',}
       logo: '/images/partners/ibm.png',
       description: 'Enterprise AI and data analytics solutions',
       category: 'Enterprise',
       website: 'https://ibm.com',
       tier: 'preferred'
     },
-    {
-      name: 'Oracle',
+    {name: 'Oracle',}
       logo: '/images/partners/oracle.png',
       description: 'Database and cloud infrastructure solutions',
       category: 'Database',
       website: 'https://oracle.com',
       tier: 'certified'
     },
-    {
-      name: 'Amazon Web Services',
+    {name: 'Amazon Web Services',}
       logo: '/images/partners/aws.png',
       description: 'Cloud infrastructure and AI services',
       category: 'Cloud',
@@ -65,7 +57,7 @@ const PartnersPage: React.FC = () => {
     }
   ];
 
-  const benefits = [
+  const benefits = []
     'Access to cutting-edge technology platforms',
     'Joint go-to-market strategies',
     'Co-marketing opportunities',
@@ -78,35 +70,32 @@ const PartnersPage: React.FC = () => {
     'Certified expertise and solutions'
   ];
 
-  const tiers = [
-    {
-      name: 'Strategic Partners',
+  const tiers = []
+    {name: 'Strategic Partners',}
       description: 'Our most important technology and business partners',
       icon: <Award className="w-8 h-8 text-yellow-500" />,
       color: 'from-yellow-400 to-orange-500'
     },
-    {
-      name: 'Preferred Partners',
+    {name: 'Preferred Partners',}
       description: 'Certified partners with proven track record',
       icon: <Users className="w-8 h-8 text-blue-500" />,
       color: 'from-blue-400 to-purple-500'
     },
-    {
-      name: 'Certified Partners',
+    {name: 'Certified Partners',}
       description: 'Authorized partners with specialized expertise',
       icon: <Handshake className="w-8 h-8 text-green-500" />,
       color: 'from-green-400 to-teal-500'
     }
   ];
 
-  const stats = [
+  const stats = []
     { icon: <Building2 className="w-8 h-8 text-blue-500" />, value: '50+', label: 'Partners' },
     { icon: <Users className="w-8 h-8 text-green-500" />, value: '100+', label: 'Certified Experts' },
     { icon: <TrendingUp className="w-8 h-8 text-purple-500" />, value: '200+', label: 'Joint Projects' },
     { icon: <Zap className="w-8 h-8 text-yellow-500" />, value: '24/7', label: 'Support' }
   ];
 
-  return (
+  return ()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Partners | Zion Tech Group</title>
@@ -133,7 +122,7 @@ const PartnersPage: React.FC = () => {
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
+            {stats.map((stat, index) => (}
               <div key={index} className="text-center">
                 <div className="flex justify-center mb-4">
                   {stat.icon}
@@ -157,7 +146,7 @@ const PartnersPage: React.FC = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {partners.map((partner, index) => (
+            {partners.map((partner, index) => (}
               <div key={index} className="bg-slate-800/50 rounded-2xl p-8 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300">
                 <div className="flex items-center mb-6">
                   <div className="w-16 h-16 bg-white/10 rounded-lg flex items-center justify-center mr-4">
@@ -165,7 +154,7 @@ const PartnersPage: React.FC = () => {
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold text-white">{partner.name}</h3>
-                    <span className={`text-sm px-3 py-1 rounded-full ${
+                    <span className={`text-sm px-3 py-1 rounded-full ${}
                       partner.tier === 'strategic' ? 'bg-yellow-500/20 text-yellow-400' :
                       partner.tier === 'preferred' ? 'bg-blue-500/20 text-blue-400' :
                       'bg-green-500/20 text-green-400'
@@ -178,7 +167,7 @@ const PartnersPage: React.FC = () => {
                 <p className="text-gray-300 mb-4">{partner.description}</p>
                 <p className="text-sm text-cyan-400 mb-6">{partner.category}</p>
                 
-                {partner.website && (
+                {partner.website && (}
                   <a
                     href={partner.website}
                     target="_blank"
@@ -206,7 +195,7 @@ const PartnersPage: React.FC = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {tiers.map((tier, index) => (
+            {tiers.map((tier, index) => (}
               <div key={index} className="bg-slate-800/50 rounded-2xl p-8 border border-cyan-500/20 text-center">
                 <div className="flex justify-center mb-6">
                   {tier.icon}
@@ -230,7 +219,7 @@ const PartnersPage: React.FC = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit, index) => (
+            {benefits.map((benefit, index) => (}
               <div key={index} className="flex items-start space-x-3">
                 <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
                 <span className="text-gray-300">{benefit}</span>
@@ -273,4 +262,4 @@ const PartnersPage: React.FC = () => {
   );
 };
 
-export default PartnersPage;
+export default PartnersPage

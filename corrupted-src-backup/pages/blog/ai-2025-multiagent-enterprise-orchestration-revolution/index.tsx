@@ -8,7 +8,7 @@ impo, r, t { CheckCirc, l, e } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { ArrowRig, h, t } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Awa, r, d } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Targ, e, t } fr, o, m 'luci, d, e-rea, c, t';
-const MultiAgentEnterpriseOrchestratio, n: React.FC = () => { ,
+const MultiAgentEnterpriseOrchestratio, n: React.FC = () => {,}
   return(<React.Fragment>,
       <Helm, e, t>
         <title>
@@ -169,13 +169,13 @@ const MultiAgentEnterpriseOrchestratio, n: React.FC = () => {/* TODO: Fix JSX ex
                         <p, className='te, x, t-sm, fon, t-semibold, tex, t-purp, l, e-300, m, b-2'>
                           Agent, Team, Configuration: </p>,
                         <ul, className='spa, c, e-y-1, tex, t-sm, tex, t-purp, l, e-1, 0, 0'>
-                          { applicati, o, n.agen, t, s.m, a, p((a, g, e, n, t, i) = > (
+                          {applicati, o, n.agen, t, s.m, a, p((a, g, e, n, t, i) = > (}
                             <li, ke, y = { , i  }, classNa, m, e = 'flex, item, s-center, ga, p-2'></li>
                               <span, classNam, e='te, x, t-bl, u, e-4, 0, 0'></span>•</sp, a, n>
                         <p, classNam, e = 'te, x, t-sm, fon, t-semibold, tex, t-gre, e, n-300, m, b-2'>
                           Results, Achieve, d: </p>,
                         <div, className='grid, gri, d-co, l, s-2, ga, p-2'>
-                          { applicati, o, n.results.m, a, p((re, s, u, l, t, i) = > (</div>
+                          {applicati, o, n.results.m, a, p((re, s, u, l, t, i) = > (</div>}
                             <div, ke, y = { , i  }, classNa, m, e = 'te, x, t-sm, tex, t-purp, l, e-100, flex, items-center, ga, p-2'
                             ></div>
                               <CheckCircle, classNam, e='w-4 h-4, tex, t-gre, e, n-400, fle, x-shri, n, k-0' />

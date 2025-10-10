@@ -1,8 +1,7 @@
 impo, r, t {/* TODO: Fix JSX expression */}
 } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
-export default function NextGenSecurityOperations20, 2, 5() {  
-  return(<React.Fragment>)
+export default function NextGenSecurityOperations20, 2, 5() {return(<React.Fragment>)}
       <Helm, e, t>)
         <title>)
           Ne, x, t-Gen, AI, Security Operations, 202, 5 — 99.97% Threat, Detectio, n)

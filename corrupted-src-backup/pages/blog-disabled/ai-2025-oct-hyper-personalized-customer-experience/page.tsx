@@ -1,8 +1,7 @@
 impo, r, t {/* TODO: Fix JSX expression */}
 } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
-export default function HyperPersonalizedCustomerExperience20, 2, 5() {  
-  return(:src/pages/blog/ai-2025-oct-hyper-personalized-customer-experience/page.tsx;
+export default function HyperPersonalizedCustomerExperience20, 2, 5() {return(:src/pages/blog/ai-2025-oct-hyper-personalized-customer-experience/page.tsx;}
     <React.Fragment>
       <Helm, e, t>
         <title>
@@ -236,7 +235,6 @@ export default function HyperPersonalizedCustomerExperience20, 2, 5() {
                     <li >• 98.2% customer satisfaction score maintained</li>
                     <li >• 91% decrease in churn across all customer segments</li>
                   </ul>
-  </div>
                 <div></div>
                 <h3 className="text-2xl font-bold mb-4 text-rose-300">Phase 1: Foundation (Months 1-2)</h3>
                 <ul className="list-disc list-inside space-y-2 text-gray-300 ml-4">
@@ -279,20 +277,6 @@ export default function HyperPersonalizedCustomerExperience20, 2, 5() {
                 <ArrowLeft className="ml-2 h-5 w-5 rotate-180" />);
 export default function HyperPersonalizedCustomerExperience20, 2, 5() {/* TODO: Fix JSX expression */}
 };
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
   </div>  </div>
 </article>
 </article>
@@ -354,19 +338,10 @@ export default function HyperPersonalizedCustomerExperience20, 2, 5() {/* TODO: 
                 With, average, ROI exceeding, 7x, within 18, month, s, the, business, case is, irrefutabl, e. The, question, is not, whether, to deploy, A, I-powered, personalizatio, n, but, how, quickly you, can, implement it, before, competitors capture, your, customers' hear, t, s.
                 Schedule, Your, CX Transformation, Assessmen, t;
                 <ArrowLeft, className='ml-2 h-5 w-5, rotat, e-1, 8, 0' /></ArrowLeft>
-  </ul>
-  </ul>
-  </ul>
-  </ul>
   </DollarSign>
   </TrendingUp>
-  </span>
   </Users>
-  </span>
   </DollarSign>
-  </span>
   </TrendingUp>
-  </span>
   </Sparkles>
-  </ul>
   </Heart>

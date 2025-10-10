@@ -3,14 +3,11 @@ import React from 'react';
 import { DollarSign, ArrowRight } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-export default function AIFintechPage() {
-  return (
+export default function AIFintechPage() {return (}
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="container mx-auto px-4 py-20">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
-            AI Fintech;
-  </
+          <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">AI Fintech;
           <p className="text-xl text-gray-300 mb-8">
             Revolutionary AI-powered financial services including trading, fraud detection, and risk management.
           </p>
@@ -31,5 +28,3 @@ export default function AIFintechPage() {
     </div>
   );
 }
-  </a>
-  </h1>

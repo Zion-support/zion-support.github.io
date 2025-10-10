@@ -1,6 +1,5 @@
 'use client';
-export const useRouter = (;) => {
-  return (
+export const useRouter = (;) => {return (}
     $3
   );
 };
@@ -59,4 +58,3 @@ export const usePathname = () => {/* TODO: Fix JSX expression */}
 export const useSearchParams = () => {/* TODO: Fix JSX expression */}
 };
 export default { useRouter, usePathname, useSearchParams };
-;

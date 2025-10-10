@@ -1,15 +1,14 @@
 import React from 'react';
 interface LoadingProps {/* TODO: Fix JSX expression */}
 }
-const EnhancedLoading: React.FC<LoadingProps> = ({,
+const EnhancedLoading: React.FC<LoadingProps> = ({,}
   message = 'Loading...',
   size = 'md',
-  variant = 'spinner'}) => {
-  const sizeClasses = {
+  variant = 'spinner'}) => {const sizeClasses = {}
     sm: 'w-4 h-4',
     md: 'w-8 h-8',
     lg: 'w-12 h-12'};
-  const renderSpinner = () => (
+  const renderSpinner = () => ()
     <div;
 const,
   EnhancedLoading: React.FC<LoadingProps> = ({/* TODO: Fix JSX expression */})
@@ -21,18 +20,18 @@ const,
   );
   const renderDots = () => (</div>
     <div className="flex space-x-1">
-      {[0, 1, 2].map(i => ()
+      {[0, 1, 2].map(i => ()}
         <div;)
           key={i})
           className={`bg-blue-600 rounded-full animate-pulse ${size === 'sm' ? 'w-2 h-2' : size === 'md' ? 'w-3 h-3' : 'w-4 h-4'}`})
           style={{})
             animationDelay: `${i * 0.2}s`)
             animationDuration: '1s'),
-      {[0, 1, 2].map(i => (</div>
+      {[0, 1, 2].map(i => (</div>}
         <div
           key={i}
           className={`bg-blue-600 rounded-full animate-pulse ${size === 'sm' ? 'w-2 h-2' : size === 'md' ? 'w-3 h-3' : 'w-4 h-4'}`}
-          style={{
+          style={{}
             animationDelay: `${i * 0.2}s`,
             animationDuration: '1s',
   const renderDots = () => (<div className="flex space-x-1"></div>
@@ -50,8 +49,7 @@ const,
 `
   const renderPulse = () => (<div className={`bg-blue-600 rounded-full animate-pulse ${sizeClasses[size]}`} /></div>)
   );
-  const renderLoader = () => {
-    switch (variant) {
+  const renderLoader = () => {switch (variant) {}
       case 'dots':
         return renderDots();
       case 'pulse':

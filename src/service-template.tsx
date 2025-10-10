@@ -26,17 +26,13 @@ const,
   ServicePage: React.FC<ServicePageProps> = ({ title, description, services, benefits }) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-  return (
+  return ()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Service Template;
-  </
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Blog Post;
-  </
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">Service Template;
+          <p className="text-xl text-cyan-400 mb-8 font-medium">Blog Post;
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact" className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg"
@@ -98,6 +94,4 @@ Ready to Transform Your Business?"
   );
 };
 export default ServicePage;
-  </p>
-  </h1>
   </ServicePageProps>

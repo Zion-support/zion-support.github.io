@@ -1,7 +1,6 @@
 'use client';
 import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
-import { 
-  Phone, 
+import {Phone,}
   Mail, 
   MapPin, 
   Clock, 
@@ -120,28 +119,23 @@ const DynamicContentShowcase = lazy(() => import('./components/DynamicContentSho
 const ContentStatistics = lazy(() => import('./components/ContentStatistics'));
 const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'));
 // Preload critical components
-const preloadComponents = () => {
-  if (typeof window !== 'undefined') {
-    setTimeout(() => {
-      import('./components/ContentPromotionBanner');
+const preloadComponents = () => {if (typeof window !== 'undefined') {}
+    setTimeout(() => {import('./components/ContentPromotionBanner');}
       import('./components/ContentCarousel');
     }, 100);
   }
 };
 // Loading skeleton component
-const ServiceCardSkeleton: React.FC = memo(() => (
+const ServiceCardSkeleton: React.FC = memo(() => ()
   <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card">
     <div className="h-8 bg-gray-200 rounded mb-4 w-3/4"></div>
     <div className="h-4 bg-gray-200 rounded mb-2"></div>
     <div className="h-4 bg-gray-200 rounded w-5/6"></div>
-  </div>
 ));
 ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
-const HomePage: React.FC = () => {
-  const [isLoaded, setIsLoaded] = useState(false);
+const HomePage: React.FC = () => {const [isLoaded, setIsLoaded] = useState(false);}
   const [isVisible, setIsVisible] = useState(false);
-  useEffect(() => {
-    setIsLoaded(true);
+  useEffect(() => {setIsLoaded(true);}
     const timer = setTimeout(() => setIsVisible(true), 100);
     preloadComponents();
     // Initialize performance optimizations
@@ -149,18 +143,15 @@ const HomePage: React.FC = () => {
     return () => clearTimeout(timer);
   }, []);
   // Analytics tracking for phone clicks - optimized
-  const handlePhoneClick = useCallback(() => {
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as any).gtag('event', 'phone_click', {
-        event_category: 'engagement',
+  const handlePhoneClick = useCallback(() => {if (typeof window !== 'undefined' && 'gtag' in window) {}
+      (window as any).gtag('event', 'phone_click', {event_category: 'engagement',}
         event_label: 'main_phone_number'
       });
     }
   }, []);
   // Enhanced Micro SAAS Services with real functionality and pricing
-  const microSAASServices = [
-    {
-      title: 'AI Project Manager Pro',
+  const microSAASServices = []
+    {title: 'AI Project Manager Pro',}
       description: 'Intelligent project planning with AI-powered resource optimization and timeline prediction',
       icon: '📊',
       price: '$199/month',
@@ -172,8 +163,7 @@ const HomePage: React.FC = () => {
       marketPrice: '$299',
       savings: '33%'
     },
-    {
-      title: 'AI Social Media Manager',
+    {title: 'AI Social Media Manager',}
       description: 'Automate your social media with AI-powered content creation and smart scheduling',
       icon: '📱',
       price: '$149/month',
@@ -185,8 +175,7 @@ const HomePage: React.FC = () => {
       marketPrice: '$249',
       savings: '40%'
     },
-    {
-      title: 'AI Analytics Dashboard',
+    {title: 'AI Analytics Dashboard',}
       description: 'Transform your data into actionable insights with AI-powered analytics',
       icon: '📈',
       price: '$299/month',
@@ -198,8 +187,7 @@ const HomePage: React.FC = () => {
       marketPrice: '$499',
       savings: '40%'
     },
-    {
-      title: 'AI Email Marketing Suite',
+    {title: 'AI Email Marketing Suite',}
       description: 'Transform your email marketing with AI-powered content generation and automation',
       icon: '📧',
       price: '$199/month',
@@ -211,8 +199,7 @@ const HomePage: React.FC = () => {
       marketPrice: '$349',
       savings: '43%'
     },
-    {
-      title: 'AI Customer Support Bot',
+    {title: 'AI Customer Support Bot',}
       description: 'Provide 24/7 intelligent customer support with AI-powered chatbot',
       icon: '🤖',
       price: '$249/month',
@@ -224,8 +211,7 @@ const HomePage: React.FC = () => {
       marketPrice: '$399',
       savings: '38%'
     },
-    {
-      title: 'AI Code Review Assistant',
+    {title: 'AI Code Review Assistant',}
       description: 'Advanced automated code analysis with AI-powered bug detection and optimization',
       icon: '🔍',
       price: '$179/month',
@@ -237,8 +223,7 @@ const HomePage: React.FC = () => {
       marketPrice: '$299',
       savings: '40%'
     },
-    {
-      title: 'AI Content Generator',
+    {title: 'AI Content Generator',}
       description: 'Create high-quality content for blogs, social media, and marketing with AI',
       icon: '✍️',
       price: '$129/month',
@@ -250,8 +235,7 @@ const HomePage: React.FC = () => {
       marketPrice: '$199',
       savings: '35%'
     },
-    {
-      title: 'AI Lead Generation System',
+    {title: 'AI Lead Generation System',}
       description: 'Automated lead generation and qualification with AI-powered targeting',
       icon: '🎯',
       price: '$349/month',
@@ -263,8 +247,7 @@ const HomePage: React.FC = () => {
       marketPrice: '$599',
       savings: '42%'
     },
-    {
-      title: 'AI Video Generator',
+    {title: 'AI Video Generator',}
       description: 'Create professional videos with AI-powered editing and generation',
       icon: '🎬',
       price: '$399/month',
@@ -276,8 +259,7 @@ const HomePage: React.FC = () => {
       marketPrice: '$699',
       savings: '43%'
     },
-    {
-      title: 'AI Voice Cloning Studio',
+    {title: 'AI Voice Cloning Studio',}
       description: 'Create realistic voice clones for content creation and personalization',
       icon: '🎤',
       price: '$299/month',
@@ -289,8 +271,7 @@ const HomePage: React.FC = () => {
       marketPrice: '$499',
       savings: '40%'
     },
-    {
-      title: 'AI Fashion Design Assistant',
+    {title: 'AI Fashion Design Assistant',}
       description: 'Design clothing and accessories with AI-powered fashion intelligence',
       icon: '👗',
       price: '$199/month',
@@ -302,8 +283,7 @@ const HomePage: React.FC = () => {
       marketPrice: '$349',
       savings: '43%'
     },
-    {
-      title: 'AI Music Composer',
+    {title: 'AI Music Composer',}
       description: 'Create original music and soundtracks with AI composition tools',
       icon: '🎵',
       price: '$149/month',
@@ -315,8 +295,7 @@ const HomePage: React.FC = () => {
       marketPrice: '$249',
       savings: '40%'
     },
-    {
-      title: 'AI Fitness Coach',
+    {title: 'AI Fitness Coach',}
       description: 'Personalized fitness training with AI-powered workout optimization',
       icon: '💪',
       price: '$99/month',
@@ -328,8 +307,7 @@ const HomePage: React.FC = () => {
       marketPrice: '$199',
       savings: '50%'
     },
-    {
-      title: 'AI Workflow Automation',
+    {title: 'AI Workflow Automation',}
       description: 'Automate complex business processes with intelligent workflow management',
       icon: '⚙️',
       price: '$249/month',
@@ -341,8 +319,7 @@ const HomePage: React.FC = () => {
       marketPrice: '$399',
       savings: '38%'
     },
-    {
-      title: 'AI Data Visualization',
+    {title: 'AI Data Visualization',}
       description: 'Transform complex data into stunning visual insights with AI',
       icon: '📊',
       price: '$179/month',
@@ -354,8 +331,7 @@ const HomePage: React.FC = () => {
       marketPrice: '$299',
       savings: '40%'
     },
-    {
-      title: 'AI Sales Automation',
+    {title: 'AI Sales Automation',}
       description: 'Boost sales performance with AI-powered automation and insights',
       icon: '💰',
       price: '$299/month',
@@ -369,9 +345,8 @@ const HomePage: React.FC = () => {
     }
   ];
   // Enhanced AI Services with real capabilities and market pricing
-  const aiServices = [
-    {
-      title: 'Machine Learning Solutions',
+  const aiServices = []
+    {title: 'Machine Learning Solutions',}
       description: 'Custom ML models for predictive analytics and decision-making with 99.9% accuracy',
       icon: Brain,
       price: '$2,500/month',
@@ -382,8 +357,7 @@ const HomePage: React.FC = () => {
       savings: '44%',
       contact: 'kleber@ziontechgroup.com'
     },
-    {
-      title: 'Natural Language Processing',
+    {title: 'Natural Language Processing',}
       description: 'Advanced NLP solutions for text analysis and language understanding with 95%+ accuracy',
       icon: MessageSquare,
       price: '$1,800/month',
@@ -394,8 +368,7 @@ const HomePage: React.FC = () => {
       savings: '44%',
       contact: 'kleber@ziontechgroup.com'
     },
-    {
-      title: 'Computer Vision',
+    {title: 'Computer Vision',}
       description: 'Image and video analysis solutions for object detection and recognition with 99%+ accuracy',
       icon: Eye,
       price: '$2,200/month',
@@ -406,8 +379,7 @@ const HomePage: React.FC = () => {
       savings: '42%',
       contact: 'kleber@ziontechgroup.com'
     },
-    {
-      title: 'AI Automation',
+    {title: 'AI Automation',}
       description: 'Intelligent process automation with decision-making capabilities and 90%+ efficiency gains',
       icon: Zap,
       price: '$1,900/month',
@@ -418,8 +390,7 @@ const HomePage: React.FC = () => {
       savings: '46%',
       contact: 'kleber@ziontechgroup.com'
     },
-    {
-      title: 'Quantum AI Computing',
+    {title: 'Quantum AI Computing',}
       description: 'Next-generation quantum algorithms for complex problem solving with exponential speedup',
       icon: Atom,
       price: '$5,000/month',
@@ -430,8 +401,7 @@ const HomePage: React.FC = () => {
       savings: '41%',
       contact: 'kleber@ziontechgroup.com'
     },
-    {
-      title: 'AI Cybersecurity',
+    {title: 'AI Cybersecurity',}
       description: 'AI-powered threat detection and prevention systems with 99.9% threat detection rate',
       icon: Shield,
       price: '$2,800/month',
@@ -442,8 +412,7 @@ const HomePage: React.FC = () => {
       savings: '38%',
       contact: 'kleber@ziontechgroup.com'
     },
-    {
-      title: 'AI Healthcare Solutions',
+    {title: 'AI Healthcare Solutions',}
       description: 'Medical AI for diagnosis, treatment planning, and patient care with FDA compliance',
       icon: Stethoscope,
       price: '$3,500/month',
@@ -454,8 +423,7 @@ const HomePage: React.FC = () => {
       savings: '42%',
       contact: 'kleber@ziontechgroup.com'
     },
-    {
-      title: 'AI Financial Services',
+    {title: 'AI Financial Services',}
       description: 'FinTech AI solutions for trading, risk management, and fraud detection',
       icon: CreditCard,
       price: '$2,200/month',
@@ -468,9 +436,8 @@ const HomePage: React.FC = () => {
     }
   ];
   // Enhanced IT Services with comprehensive capabilities
-  const itServices = [
-    {
-      title: 'Cloud Migration & Management',
+  const itServices = []
+    {title: 'Cloud Migration & Management',}
       description: 'Complete cloud transformation with AWS, Azure, and GCP expertise',
       icon: Cloud,
       price: '$1,500/month',
@@ -481,8 +448,7 @@ const HomePage: React.FC = () => {
       savings: '46%',
       contact: '+1 302 464 0950'
     },
-    {
-      title: 'Cybersecurity Solutions',
+    {title: 'Cybersecurity Solutions',}
       description: 'Comprehensive security services including threat detection, incident response, and compliance',
       icon: Shield,
       price: '$2,200/month',
@@ -493,8 +459,7 @@ const HomePage: React.FC = () => {
       savings: '42%',
       contact: '+1 302 464 0950'
     },
-    {
-      title: 'IT Infrastructure Management',
+    {title: 'IT Infrastructure Management',}
       description: 'Complete IT infrastructure setup, maintenance, and optimization services',
       icon: Server,
       price: '$1,800/month',
@@ -505,8 +470,7 @@ const HomePage: React.FC = () => {
       savings: '44%',
       contact: '+1 302 464 0950'
     },
-    {
-      title: 'DevOps & CI/CD',
+    {title: 'DevOps & CI/CD',}
       description: 'Modern DevOps practices with automated deployment and continuous integration',
       icon: Settings,
       price: '$1,600/month',
@@ -517,8 +481,7 @@ const HomePage: React.FC = () => {
       savings: '43%',
       contact: '+1 302 464 0950'
     },
-    {
-      title: 'Database Services',
+    {title: 'Database Services',}
       description: 'Database design, optimization, and management for all major database systems',
       icon: Database,
       price: '$1,200/month',
@@ -529,8 +492,7 @@ const HomePage: React.FC = () => {
       savings: '45%',
       contact: '+1 302 464 0950'
     },
-    {
-      title: 'Network Infrastructure',
+    {title: 'Network Infrastructure',}
       description: 'Complete network design, implementation, and management services',
       icon: Network,
       price: '$1,400/month',
@@ -541,8 +503,7 @@ const HomePage: React.FC = () => {
       savings: '44%',
       contact: '+1 302 464 0950'
     },
-    {
-      title: 'IT Consulting',
+    {title: 'IT Consulting',}
       description: 'Strategic IT consulting for digital transformation and technology optimization',
       icon: Briefcase,
       price: '$200/hour',
@@ -553,8 +514,7 @@ const HomePage: React.FC = () => {
       savings: '43%',
       contact: '+1 302 464 0950'
     },
-    {
-      title: 'IT Support & Maintenance',
+    {title: 'IT Support & Maintenance',}
       description: '24/7 IT support and maintenance services for all your technology needs',
       icon: Wrench,
       price: '$800/month',
@@ -567,9 +527,8 @@ const HomePage: React.FC = () => {
     }
   ];
   // Specialized Services
-  const specializedServices = [
-    {
-      title: 'AI-Powered Business Intelligence',
+  const specializedServices = []
+    {title: 'AI-Powered Business Intelligence',}
       description: 'Transform your data into actionable business insights with advanced AI analytics',
       icon: BarChart,
       price: '$2,500/month',
@@ -580,8 +539,7 @@ const HomePage: React.FC = () => {
       savings: '40%',
       contact: 'kleber@ziontechgroup.com'
     },
-    {
-      title: 'Blockchain & Web3 Solutions',
+    {title: 'Blockchain & Web3 Solutions',}
       description: 'Complete blockchain development and Web3 integration services',
       icon: Layers,
       price: '$3,000/month',
@@ -592,8 +550,7 @@ const HomePage: React.FC = () => {
       savings: '40%',
       contact: 'kleber@ziontechgroup.com'
     },
-    {
-      title: 'IoT & Edge Computing',
+    {title: 'IoT & Edge Computing',}
       description: 'Internet of Things solutions with edge computing for real-time processing',
       icon: Cpu,
       price: '$2,200/month',
@@ -604,8 +561,7 @@ const HomePage: React.FC = () => {
       savings: '42%',
       contact: 'kleber@ziontechgroup.com'
     },
-    {
-      title: 'Mobile App Development',
+    {title: 'Mobile App Development',}
       description: 'Native and cross-platform mobile app development with AI integration',
       icon: Smartphone,
       price: '$1,800/month',
@@ -616,8 +572,7 @@ const HomePage: React.FC = () => {
       savings: '44%',
       contact: '+1 302 464 0950'
     },
-    {
-      title: 'E-commerce Solutions',
+    {title: 'E-commerce Solutions',}
       description: 'Complete e-commerce platform development with AI-powered features',
       icon: ShoppingCart,
       price: '$2,000/month',
@@ -628,8 +583,7 @@ const HomePage: React.FC = () => {
       savings: '43%',
       contact: '+1 302 464 0950'
     },
-    {
-      title: 'API Development & Integration',
+    {title: 'API Development & Integration',}
       description: 'Custom API development and third-party integration services',
       icon: Code,
       price: '$1,500/month',
@@ -641,7 +595,7 @@ const HomePage: React.FC = () => {
       contact: '+1 302 464 0950'
     }
   ];
-  return (
+  return ()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Performance Optimizer */}
       <PerformanceOptimizer />
@@ -661,7 +615,7 @@ const HomePage: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 via-purple-500/20 to-pink-500/20 animate-pulse"></div>
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.05%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
         {/* Neon Grid Overlay */}
-        <div className="absolute inset-0" style={{
+        <div className="absolute inset-0" style={{}
           backgroundImage: `
             linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
             linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px)
@@ -670,24 +624,16 @@ const HomePage: React.FC = () => {
         }}></div>
         <div className="relative z-10 container mx-auto px-4 text-center">
           <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-pulse">
-              ZION TECH GROUP;
-  </
-            <p className="text-2xl md:text-3xl text-white mb-8 font-light">
-              AI-Powered Enterprise Solutions & Digital Transformation;
-  </
+            <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-pulse">ZION TECH GROUP;
+            <p className="text-2xl md:text-3xl text-white mb-8 font-light">AI-Powered Enterprise Solutions & Digital Transformation;
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
               <div className="flex items-center text-cyan-400 text-lg">
                 <Phone className="w-6 h-6 mr-2" />
-                <a href="tel:+13024640950" onClick={handlePhoneClick} className="hover:text-cyan-300 transition-colors">
-                  +1 302 464 0950;
-  </
+                <a href="tel:+13024640950" onClick={handlePhoneClick} className="hover:text-cyan-300 transition-colors">+1 302 464 0950;
               </div>
               <div className="flex items-center text-purple-400 text-lg">
                 <Mail className="w-6 h-6 mr-2" />
-                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-purple-300 transition-colors">
-                  kleber@ziontechgroup.com;
-  </
+                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-purple-300 transition-colors">kleber@ziontechgroup.com;
               </div>
               <div className="flex items-center text-pink-400 text-lg">
                 <MapPin className="w-6 h-6 mr-2" />
@@ -718,22 +664,18 @@ const HomePage: React.FC = () => {
       <section className="py-20 bg-gradient-to-b from-slate-900 to-slate-800">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-5xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-              Micro SAAS Services;
-  </
+            <h2 className="text-5xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Micro SAAS Services;
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Powerful, affordable AI-powered tools designed for modern businesses. 
               Start with our micro SAAS solutions and scale as you grow.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-            {microSAASServices.map((service, index) => (
+            {microSAASServices.map((service, index) => (}
               <div key={index} className="group relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-6 border border-cyan-400/20 hover:border-cyan-400/60 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20">
-                {service.popular && (
+                {service.popular && (}
                   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                    <div className="bg-gradient-to-r from-cyan-400 to-purple-400 text-slate-900 px-4 py-1 rounded-full text-sm font-bold shadow-lg">
-                      🔥 POPULAR;
-  </
+                    <div className="bg-gradient-to-r from-cyan-400 to-purple-400 text-slate-900 px-4 py-1 rounded-full text-sm font-bold shadow-lg">🔥 POPULAR;
                   </div>
                 )}
                 <div className="text-center mb-4">
@@ -762,7 +704,7 @@ const HomePage: React.FC = () => {
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-cyan-400 mb-3">Key Features:</h4>
                   <ul className="space-y-2">
-                    {service.features.slice(0, 4).map((feature, featureIndex) => (
+                    {service.features.slice(0, 4).map((feature, featureIndex) => (}
                       <li key={featureIndex} className="flex items-center text-sm text-gray-300">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                         {feature}
@@ -773,7 +715,7 @@ const HomePage: React.FC = () => {
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-purple-400 mb-3">Benefits:</h4>
                   <ul className="space-y-1">
-                    {service.benefits.slice(0, 3).map((benefit, benefitIndex) => (
+                    {service.benefits.slice(0, 3).map((benefit, benefitIndex) => (}
                       <li key={benefitIndex} className="text-sm text-gray-300">
                         ✓ {benefit}
                       </li>
@@ -797,16 +739,14 @@ const HomePage: React.FC = () => {
       <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-5xl font-bold text-white mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-              AI Services & Solutions;
-  </
+            <h2 className="text-5xl font-bold text-white mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">AI Services & Solutions;
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Cutting-edge artificial intelligence solutions tailored for enterprise needs. 
               Transform your business with our advanced AI capabilities.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {aiServices.map((service, index) => (
+            {aiServices.map((service, index) => (}
               <div key={index} className="group relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-purple-400/20 hover:border-purple-400/60 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20">
                 <div className="text-center mb-6">
                   <div className={`w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-purple-500/20 to-pink-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
@@ -834,7 +774,7 @@ const HomePage: React.FC = () => {
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-purple-400 mb-3">Features:</h4>
                   <ul className="space-y-2">
-                    {service.features.slice(0, 4).map((feature, featureIndex) => (
+                    {service.features.slice(0, 4).map((feature, featureIndex) => (}
                       <li key={featureIndex} className="flex items-center text-sm text-gray-300">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                         {feature}
@@ -845,7 +785,7 @@ const HomePage: React.FC = () => {
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-pink-400 mb-3">Benefits:</h4>
                   <ul className="space-y-1">
-                    {service.benefits.slice(0, 3).map((benefit, benefitIndex) => (
+                    {service.benefits.slice(0, 3).map((benefit, benefitIndex) => (}
                       <li key={benefitIndex} className="text-sm text-gray-300">
                         ✓ {benefit}
                       </li>
@@ -869,16 +809,14 @@ const HomePage: React.FC = () => {
       <section className="py-20 bg-gradient-to-b from-slate-900 to-slate-800">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-5xl font-bold text-white mb-6 bg-gradient-to-r from-green-400 to-cyan-400 bg-clip-text text-transparent">
-              IT Services & Solutions;
-  </
+            <h2 className="text-5xl font-bold text-white mb-6 bg-gradient-to-r from-green-400 to-cyan-400 bg-clip-text text-transparent">IT Services & Solutions;
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Comprehensive IT services to support your digital transformation journey. 
               From infrastructure to cybersecurity, we've got you covered.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {itServices.map((service, index) => (
+            {itServices.map((service, index) => (}
               <div key={index} className="group relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-green-400/20 hover:border-green-400/60 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-green-500/20">
                 <div className="text-center mb-6">
                   <div className={`w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-green-500/20 to-cyan-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
@@ -906,7 +844,7 @@ const HomePage: React.FC = () => {
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-green-400 mb-3">Features:</h4>
                   <ul className="space-y-2">
-                    {service.features.slice(0, 4).map((feature, featureIndex) => (
+                    {service.features.slice(0, 4).map((feature, featureIndex) => (}
                       <li key={featureIndex} className="flex items-center text-sm text-gray-300">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                         {feature}
@@ -917,7 +855,7 @@ const HomePage: React.FC = () => {
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-cyan-400 mb-3">Benefits:</h4>
                   <ul className="space-y-1">
-                    {service.benefits.slice(0, 3).map((benefit, benefitIndex) => (
+                    {service.benefits.slice(0, 3).map((benefit, benefitIndex) => (}
                       <li key={benefitIndex} className="text-sm text-gray-300">
                         ✓ {benefit}
                       </li>
@@ -941,16 +879,14 @@ const HomePage: React.FC = () => {
       <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-5xl font-bold text-white mb-6 bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">
-              Specialized Solutions;
-  </
+            <h2 className="text-5xl font-bold text-white mb-6 bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">Specialized Solutions;
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Advanced specialized solutions for complex business challenges. 
               Cutting-edge technology meets practical business needs.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {specializedServices.map((service, index) => (
+            {specializedServices.map((service, index) => (}
               <div key={index} className="group relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-orange-400/20 hover:border-orange-400/60 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-orange-500/20">
                 <div className="text-center mb-6">
                   <div className={`w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-orange-500/20 to-red-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
@@ -978,7 +914,7 @@ const HomePage: React.FC = () => {
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-orange-400 mb-3">Features:</h4>
                   <ul className="space-y-2">
-                    {service.features.slice(0, 4).map((feature, featureIndex) => (
+                    {service.features.slice(0, 4).map((feature, featureIndex) => (}
                       <li key={featureIndex} className="flex items-center text-sm text-gray-300">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                         {feature}
@@ -989,7 +925,7 @@ const HomePage: React.FC = () => {
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-red-400 mb-3">Benefits:</h4>
                   <ul className="space-y-1">
-                    {service.benefits.slice(0, 3).map((benefit, benefitIndex) => (
+                    {service.benefits.slice(0, 3).map((benefit, benefitIndex) => (}
                       <li key={benefitIndex} className="text-sm text-gray-300">
                         ✓ {benefit}
                       </li>
@@ -1025,17 +961,13 @@ const HomePage: React.FC = () => {
               <Phone className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
               <h3 className="text-xl font-bold text-white mb-2">Call Us</h3>
               <p className="text-gray-300 mb-4">Speak directly with our experts</p>
-              <a href="tel:+13024640950" onClick={handlePhoneClick} className="text-cyan-400 hover:text-cyan-300 text-lg font-semibold">
-                +1 302 464 0950;
-  </
+              <a href="tel:+13024640950" onClick={handlePhoneClick} className="text-cyan-400 hover:text-cyan-300 text-lg font-semibold">+1 302 464 0950;
             </div>
             <div className="text-center bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-purple-400/20 hover:border-purple-400/60 transition-all duration-300">
               <Mail className="w-12 h-12 text-purple-400 mx-auto mb-4" />
               <h3 className="text-xl font-bold text-white mb-2">Email Us</h3>
               <p className="text-gray-300 mb-4">Send us your requirements</p>
-              <a href="mailto:kleber@ziontechgroup.com" className="text-purple-400 hover:text-purple-300 text-lg font-semibold">
-                kleber@ziontechgroup.com;
-  </
+              <a href="mailto:kleber@ziontechgroup.com" className="text-purple-400 hover:text-purple-300 text-lg font-semibold">kleber@ziontechgroup.com;
             </div>
             <div className="text-center bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-pink-400/20 hover:border-pink-400/60 transition-all duration-300">
               <MapPin className="w-12 h-12 text-pink-400 mx-auto mb-4" />
@@ -1054,16 +986,4 @@ const HomePage: React.FC = () => {
     </div>
   );
 };
-export default HomePage;
-  </p>
-  </a>
-  </a>
-  </h2>
-  </h2>
-  </h2>
-  </h2>
-  </a>
-  </a>
-  </p>
-  </h1>
-  </div>
+export default HomePage

@@ -6,12 +6,12 @@ impo, r, t { Trending, U, p } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Targ, e, t } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Awa, r, d } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Sparkl, e, s } fr, o, m 'luci, d, e-rea, c, t';
-const October2025TechBreakthroughBanne, r = () => { 
+const October2025TechBreakthroughBanne, r = () => {}
   return(<div, classNam, e = 'relative, b, g-gradie, n, t-to-br, fro, m-cy, a, n-900, vi, a-bl, u, e-900, t, o-indi, g, o-900, overflo, w-hidd, e, n' > {/* Animated, Backgroun, d */ })
       <div, className='absolute, inse, t-0, opacit, y-20'>)
         <div, className='absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle, at, 50% 5, 0%,rg, b, a(1, 2, 0,2, 1, 9,2, 5, 5,0.3),transparent_, 5, 0%)]' />
         <div, classNam, e = 'absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle, at, 80% 2, 0%,rg, b, a(79,2, 0, 9,1, 9, 7,0.3),transparent_, 5, 0%)]' />
-  return (
+  return ()
     <div, classNam, e = 'relative, b, g-gradie, n, t-to-br, fro, m-cy, a, n-900, vi, a-bl, u, e-900, t, o-indi, g, o-900, overflo, w-hidd, e, n' > {/* Animated, Backgroun, d */ }</div>
       <div, className='absolute, inse, t-0, opacit, y-20'></div>
         <div, className='absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle, at, 50% 5, 0%,rg, b, a(1, 2, 0,2, 1, 9,2, 5, 5,0.3),transparent_, 5, 0%)]' /></div>
@@ -506,4 +506,4 @@ const October2025TechBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
     </di, v>
   );
 };
-export default October2025 TechBreakthroughBanner;
+export default October2025 TechBreakthroughBanner

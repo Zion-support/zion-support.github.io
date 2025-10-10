@@ -1,28 +1,24 @@
 import React, { useState, useEffect } from 'react';
-interface PerformanceMetrics {
-  loadTime: number;
+interface PerformanceMetrics {loadTime: number;}
   renderTime: number;
   memoryUsage: number;
   fps: number;
 }
-const PerformanceDashboard: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+const PerformanceDashboard: React.FC = () => {const [metrics, setMetrics] = useState<PerformanceMetrics>({}
     loadTime: 0,
     renderTime: 0,
     memoryUsage: 0,
     fps: 0,
   });
   const [isVisible, setIsVisible] = useState(false);
-  useEffect(() => {
-    const updateMetrics = () => {
-      const navigation = performance.getEntriesByType(
+  useEffect(() => {const updateMetrics = () => {}
+      const navigation = performance.getEntriesByType()
         'navigation'
       )[0] as PerformanceNavigationTiming;
       const loadTime = navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0;
       const memory = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory;
       const memoryUsage = memory ? memory.usedJSHeapSize / 1024 / 1024 : 0;
-      setMetrics(prev => ({
-        ...prev,
+      setMetrics(prev => ({...prev,}
         loadTime,
         memoryUsage,
       }));
@@ -34,10 +30,9 @@ const PerformanceDashboard: React.FC = () => {
     return () => clearInterval(interval);
   }, []);
   //Only show in development
-  if (process.env['NODE_ENV'] !== 'development') {
-    return null;
+  if (process.env['NODE_ENV'] !== 'development') {return null;}
   }
-  return (
+  return ()
     <div className="fixed bottom-4 right-4 z-50">
       <button
         onClick={() => setIsVisible(!isVisible)}
@@ -45,7 +40,7 @@ const PerformanceDashboard: React.FC = () => {
         aria-label="Toggle performance dashboard"
       >
         Perf</span>
-      {isVisible && (
+      {isVisible && (}
         <div className="absolute bottom-12 right-0 bg-white border border-gray-200 rounded-lg shadow-lg p-4 min-w-64">
           <h3 className="text-sm font-semibold text-gray-900 mb-3">Performance Metrics</h3>
           <div className="space-y-2 text-xs">

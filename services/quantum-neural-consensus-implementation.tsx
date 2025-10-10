@@ -1,17 +1,16 @@
-export const metadata: Metadata = {,
+export const metadata: Metadata = {,}
   title: 'Quantum Neural Consensus Implementation | Zion Tech Group',
   description: 'Professional Quantum Neural Consensus Implementation services from Zion Tech Group.',
   keywords: 'Quantum Neural Consensus Implementation, services, technology, enterprise',
-  openGraph: {,
+  openGraph: {,}
     title: 'Quantum Neural Consensus Implementation',
     description: 'Professional Quantum Neural Consensus Implementation services from Zion Tech Group.',
     type: 'website'}};
-export default function QuantumNeuralConsensusImplementation() {
-  return(<div className="min-h-screen bg-gray-50">
+export default function QuantumNeuralConsensusImplementation() {return(<div className="min-h-screen bg-gray-50">}
       <div className="max-w-4xl mx-auto px-4 py-8">
         <div className="bg-white rounded-lg shadow-lg p-8">
           <div className="text-center mb-8">
-  return (
+  return ()
     <div className="min-h-screen bg-gray-50"></div>
       <div className="max-w-4xl mx-auto px-4 py-8"></div>
         <div className="bg-white rounded-lg shadow-lg p-8"></div>

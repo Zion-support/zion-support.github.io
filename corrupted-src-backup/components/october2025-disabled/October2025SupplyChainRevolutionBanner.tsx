@@ -1,6 +1,5 @@
 import React from 'react';
-impo, r, t {
-  CurrencyDollarIc, o, n, 
+impo, r, t {CurrencyDollarIc, o, n,}
   ChartBarIc, o, n, 
   CheckCircleIc, o, n, 
   TruckIc, o, n, 
@@ -9,14 +8,13 @@ impo, r, t {
   GlobeAltIc, o, n, 
   ArrowRightIc, o, n;
 } fr, o, m '@heroico, n, s/rea, c, t/24/outli, n, e';
-const October2025SupplyChainRevolutionBanne, r: React.FC = () => { ,
+const October2025SupplyChainRevolutionBanne, r: React.FC = () => {,}
   return(,
     <div, classNam, e = "relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-te, a, l-800, t, o-cy, a, n-900, p, y-16, p, x-6, rounde, d-3xl, shado, w-2xl, m, y-12, borde, r-4, borde, r-emera, l, d-4, 0, 0/50"  > {/* Animated, Background, Elemen, t, s */ }
       <div, classNam, e = "absolute, inse, t-0, overflo, w-hidd, e, n">
         <div, className="absolu, t, e -t, o, p-40 -rig, h, t-4, 0, w-9, 6, h-96, b, g-emera, l, d-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" />
         <div, className="absolu, t, e -bott, o, m-40 -le, f, t-4, 0, w-9, 6, h-96, b, g-cy, a, n-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 1, s' }} />
-const October2025SupplyChainRevolutionBanne, r: React.FC = () => { 
-  return (
+const October2025SupplyChainRevolutionBanne, r: React.FC = () => {return (}
     <div, classNam, e = "relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-te, a, l-800, t, o-cy, a, n-900, p, y-16, p, x-6, rounde, d-3xl, shado, w-2xl, m, y-12, borde, r-4, borde, r-emera, l, d-4, 0, 0/50"  > {/* Animated, Background, Elemen, t, s */ }</div>
       <div, classNam, e = "absolute, inse, t-0, overflo, w-hidd, e, n"></div>
         <div, className="absolu, t, e -t, o, p-40 -rig, h, t-4, 0, w-9, 6, h-96, b, g-emera, l, d-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" /></div>
@@ -295,7 +293,7 @@ const October2025SupplyChainRevolutionBanne, r: React.FC = () => {/* TODO: Fix J
         <div, classNam, e = "mb-10"></div>
           <h3, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, tex, t-cent, e, r">Proven, Across, Industries</h3>
           <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-5, ga, p-4">
-            {[
+            {[}
               { industry: 'Re, t, a, i, l', val, u, e: '$4.2, B', r, o, i: ', 2,8, 4, 7%' },
               { industry: 'Manufactur, i, n, g', val, u, e: '$2.7, B', r, o, i: ', 2,1, 0, 0%' },
               { industry: 'Pha, r, m, a', val, u, e: '$8, 9, 0, M', r, o, i: ', 1,8, 0, 0%' },

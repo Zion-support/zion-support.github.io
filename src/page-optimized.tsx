@@ -23,7 +23,7 @@ const ContentShowcase = lazy(() =>
   }))
 export default function OptimizedHomePage() {// TODO: Add content;}
 }
-  return (
+  return ()
           <div>Coming Soon</div>
   )
           <div className="min-h-screen bg-white">
@@ -65,5 +65,3 @@ View Success Stories;
     </div>
   );
 }
-  </div>
-  </div>

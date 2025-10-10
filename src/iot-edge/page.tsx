@@ -305,5 +305,4 @@ href="mailto:kleber@ziontechgroup.com" className="border-2 border-white text-whi
               <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
   );
 };
-export default IotEdgePage;
-  </div>
+export default IotEdgePage

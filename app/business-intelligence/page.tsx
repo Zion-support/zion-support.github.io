@@ -2,30 +2,25 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, BarChart, Database, TrendingUp } from 'lucide-react';
-const BusinessIntelligencePage: React.FC = () => {
-  const features = [
-    {
-icon: Brain,
+const BusinessIntelligencePage: React.FC = () => {const features = [}
+    {icon: Brain,}
       title: 'AI-Powered Analytics',
       description: 'Advanced AI technology to transform your business intelligence and data analysis'
     },
-    {
-      icon: Zap,
+    {icon: Zap,}
       title: 'Real-Time Insights',
       description: 'Lightning-fast data processing and real-time business intelligence'
     },
-    {
-      icon: Shield,
+    {icon: Shield,}
       title: 'Enterprise Security',
       description: 'Bank-level security with encryption and compliance standards for your data'
     },
-    {
-      icon: Globe,
+    {icon: Globe,}
       title: 'Global Analytics',
       description: 'Worldwide business intelligence deployment and support'
     }
   ];
-  const benefits = [
+  const benefits = []
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -35,7 +30,7 @@ icon: Brain,
     'Cost-effective pricing plans',
     'Proven track record of success'
   ];
-  return (
+  return ()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Business Intelligence | Zion Tech Group</title>
@@ -44,9 +39,7 @@ icon: Brain,
       </Helmet>
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            Business Intelligence;
-  </
+          <h1 className="text-5xl font-bold text-white mb-6">Business Intelligence;
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your business with our advanced business intelligence solutions. 
             Powered by cutting-edge AI technology and industry expertise.
@@ -56,7 +49,7 @@ icon: Brain,
           </p>
         </div>
 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          {features.map((feature, index) => (
+          {features.map((feature, index) => (}
             <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center hover:bg-white/20 transition-all duration-300">
               <feature.icon className="h-12 w-12 text-purple-400 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
@@ -69,7 +62,7 @@ icon: Brain,
             Why Choose Our Business Intelligence Solutions?
           </h2>
           <div className="grid md:grid-cols-2 gap-6">
-            {benefits.map((benefit, index) => (
+            {benefits.map((benefit, index) => (}
               <div key={index} className="flex items-center space-x-3">
                 <CheckCircle className="h-6 w-6 text-green-400 flex-shrink-0" />
                 <span className="text-gray-300">{benefit}</span>
@@ -81,15 +74,13 @@ icon: Brain,
       <section className="py-16 px-4 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Benefits;
-  </
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Key Benefits;
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the power of our business intelligence solutions for your business.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {benefits.map((benefit, index) => (
+            {benefits.map((benefit, index) => (}
               <div key={index} className="flex items-center space-x-3">
                 <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
                 <span className="text-gray-300">{benefit}</span>
@@ -122,9 +113,4 @@ icon: Brain,
     </div>
   );
 };
-export default BusinessIntelligencePage;
-  </button>
-  </button>
-  </h2>
-  </h1>
-  </div>
+export default BusinessIntelligencePage

@@ -1,34 +1,31 @@
 'use client';
 import React, { useEffect, useState } from 'react';
 
-interface PerformanceMetrics {
-  lcp?: number;
+interface PerformanceMetrics {lcp?: number;}
   fid?: number;
   cls?: number;
   fcp?: number;
   ttfb?: number;
 }
 
-const PerformanceMonitor: React.FC = () => {
+const PerformanceMonitor: React.FC = () => {}
   const [metrics, setMetrics] = useState<PerformanceMetrics>({});
   const [isVisible, setIsVisible] = useState(false);
 
-  useEffect(() => {
-    if (typeof window === 'undefined') return;
-
+  useEffect(() => {if (typeof window === 'undefined') return;}
     // Only show in development or when performance monitoring is enabled
     const shouldMonitor = process.env.NODE_ENV === 'development' || 
                          localStorage.getItem('performance-monitoring') === 'true';
 
     if (!shouldMonitor) return;
 
-    const updateMetrics = (newMetrics: Partial<PerformanceMetrics>) => {
+    const updateMetrics = (newMetrics: Partial<PerformanceMetrics>) => {}
       setMetrics(prev => ({ ...prev, ...newMetrics }));
     };
 
     // Monitor Core Web Vitals
-    if ('web-vitals' in window) {
-      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
+    if ('web-vitals' in window) {}
+      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {}
         getCLS((metric) => updateMetrics({ cls: metric.value }));
         getFID((metric) => updateMetrics({ fid: metric.value }));
         getFCP((metric) => updateMetrics({ fcp: metric.value }));
@@ -38,27 +35,23 @@ const PerformanceMonitor: React.FC = () => {
     }
 
     // Monitor performance with Performance Observer
-    if ('PerformanceObserver' in window) {
-      const observer = new PerformanceObserver((list) => {
-        list.getEntries().forEach((entry) => {
-          if (entry.entryType === 'largest-contentful-paint') {
+    if ('PerformanceObserver' in window) {const observer = new PerformanceObserver((list) => {}
+        list.getEntries().forEach((entry) => {if (entry.entryType === 'largest-contentful-paint') {}
             updateMetrics({ lcp: entry.startTime });
           }
-          if (entry.entryType === 'first-input') {
+          if (entry.entryType === 'first-input') {}
             updateMetrics({ fid: entry.processingStart - entry.startTime });
           }
-          if (entry.entryType === 'paint') {
-            if (entry.name === 'first-contentful-paint') {
+          if (entry.entryType === 'paint') {if (entry.name === 'first-contentful-paint') {}
               updateMetrics({ fcp: entry.startTime });
             }
           }
         });
       });
 
-      try {
+      try {}
         observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'paint'] });
-      } catch (e) {
-        console.warn('Performance Observer not supported:', e);
+      } catch (e) {console.warn('Performance Observer not supported:', e);}
       }
 
       return () => observer.disconnect();
@@ -69,23 +62,20 @@ const PerformanceMonitor: React.FC = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  if (!isVisible || Object.keys(metrics).length === 0) {
-    return null;
+  if (!isVisible || Object.keys(metrics).length === 0) {return null;}
   }
 
-  const getScoreColor = (value: number, thresholds: { good: number; poor: number }) => {
-    if (value <= thresholds.good) return 'text-green-400';
+  const getScoreColor = (value: number, thresholds: { good: number; poor: number }) => {if (value <= thresholds.good) return 'text-green-400';}
     if (value <= thresholds.poor) return 'text-yellow-400';
     return 'text-red-400';
   };
 
-  const getScoreText = (value: number, thresholds: { good: number; poor: number }) => {
-    if (value <= thresholds.good) return 'Good';
+  const getScoreText = (value: number, thresholds: { good: number; poor: number }) => {if (value <= thresholds.good) return 'Good';}
     if (value <= thresholds.poor) return 'Needs Improvement';
     return 'Poor';
   };
 
-  return (
+  return ()
     <div className="fixed bottom-4 right-4 bg-slate-800/90 backdrop-blur-sm border border-slate-700 rounded-lg p-4 text-xs text-white z-50 max-w-xs">
       <div className="flex items-center justify-between mb-2">
         <h3 className="font-semibold text-cyan-400">Performance</h3>
@@ -98,7 +88,7 @@ const PerformanceMonitor: React.FC = () => {
       </div>
       
       <div className="space-y-1">
-        {metrics.lcp && (
+        {metrics.lcp && (}
           <div className="flex justify-between">
             <span>LCP:</span>
             <span className={getScoreColor(metrics.lcp, { good: 2500, poor: 4000 })}>
@@ -107,7 +97,7 @@ const PerformanceMonitor: React.FC = () => {
           </div>
         )}
         
-        {metrics.fid && (
+        {metrics.fid && (}
           <div className="flex justify-between">
             <span>FID:</span>
             <span className={getScoreColor(metrics.fid, { good: 100, poor: 300 })}>
@@ -116,7 +106,7 @@ const PerformanceMonitor: React.FC = () => {
           </div>
         )}
         
-        {metrics.cls && (
+        {metrics.cls && (}
           <div className="flex justify-between">
             <span>CLS:</span>
             <span className={getScoreColor(metrics.cls, { good: 0.1, poor: 0.25 })}>
@@ -125,7 +115,7 @@ const PerformanceMonitor: React.FC = () => {
           </div>
         )}
         
-        {metrics.fcp && (
+        {metrics.fcp && (}
           <div className="flex justify-between">
             <span>FCP:</span>
             <span className={getScoreColor(metrics.fcp, { good: 1800, poor: 3000 })}>
@@ -134,7 +124,7 @@ const PerformanceMonitor: React.FC = () => {
           </div>
         )}
         
-        {metrics.ttfb && (
+        {metrics.ttfb && (}
           <div className="flex justify-between">
             <span>TTFB:</span>
             <span className={getScoreColor(metrics.ttfb, { good: 800, poor: 1800 })}>
@@ -147,4 +137,4 @@ const PerformanceMonitor: React.FC = () => {
   );
 };
 
-export default PerformanceMonitor;
+export default PerformanceMonitor

@@ -3,9 +3,8 @@ import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { Mic, Target, Zap, Settings, CheckCircle, Star,  Mic,  Target,  Settings } from 'lucide-react';
-const AIVoiceAssistantPage: React.FC = () => {
-  const features = [];
-  return (
+const AIVoiceAssistantPage: React.FC = () => {const features = [];}
+  return ()
     {// TODO: Add content;}
 };
   ico,
@@ -35,7 +34,7 @@ const AIVoiceAssistantPage: React.FC = () => {
   s: ['API integration', 'Custom commands', 'Third-party apps']
     }
   ];
-  return (
+  return ()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
@@ -86,4 +85,4 @@ const AIVoiceAssistantPage: React.FC = () => {
     </div>
   );
 };
-export default AiVoiceAssistantPage;
+export default AiVoiceAssistantPage

@@ -4,8 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Star, Users, Heart, Award, MapPin, Clock, Briefcase, CheckCircle, ArrowRight, GraduationCap, Zap } from 'lucide-react';
 
-interface JobPosition {
-  id: string;
+interface JobPosition {id: string;}
   title: string;
   department: string;
   location: string;
@@ -17,17 +16,15 @@ interface JobPosition {
   featured: boolean;
 }
 
-const CareersPage: React.FC = () => {
-  const openPositions: JobPosition[] = [
-    {
-      id: '1',
+const CareersPage: React.FC = () => {const openPositions: JobPosition[] = [}
+    {id: '1',}
       title: 'Senior AI Engineer',
       department: 'Engineering',
       location: 'Remote',
       type: 'Full-time',
       experience: '5+ years',
       description: 'Lead the development of cutting-edge AI solutions and machine learning models for enterprise clients.',
-      requirements: [
+      requirements: []
         '5+ years experience in AI/ML development',
         'Expertise in Python, TensorFlow, PyTorch',
         'Experience with cloud platforms (AWS, Azure, GCP)',
@@ -37,15 +34,14 @@ const CareersPage: React.FC = () => {
       posted: '2 days ago',
       featured: true
     },
-    {
-      id: '2',
+    {id: '2',}
       title: 'Cloud Solutions Architect',
       department: 'Engineering',
       location: 'New York, NY',
       type: 'Full-time',
       experience: '7+ years',
       description: 'Design and implement scalable cloud infrastructure solutions for enterprise clients.',
-      requirements: [
+      requirements: []
         '7+ years experience in cloud architecture',
         'Expertise in AWS, Azure, and GCP',
         'Experience with microservices and containerization',
@@ -55,15 +51,14 @@ const CareersPage: React.FC = () => {
       posted: '1 week ago',
       featured: false
     },
-    {
-      id: '3',
+    {id: '3',}
       title: 'Cybersecurity Specialist',
       department: 'Security',
       location: 'Remote',
       type: 'Full-time',
       experience: '4+ years',
       description: 'Protect our clients\' digital assets and ensure compliance with security standards.',
-      requirements: [
+      requirements: []
         '4+ years experience in cybersecurity',
         'Knowledge of security frameworks (NIST, ISO 27001)',
         'Experience with penetration testing and vulnerability assessment',
@@ -73,15 +68,14 @@ const CareersPage: React.FC = () => {
       posted: '3 days ago',
       featured: true
     },
-    {
-      id: '4',
+    {id: '4',}
       title: 'Data Scientist',
       department: 'Analytics',
       location: 'San Francisco, CA',
       type: 'Full-time',
       experience: '3+ years',
       description: 'Extract insights from complex data sets to drive business decisions and improve client outcomes.',
-      requirements: [
+      requirements: []
         '3+ years experience in data science',
         'Proficiency in Python, R, SQL',
         'Experience with machine learning algorithms',
@@ -93,30 +87,26 @@ const CareersPage: React.FC = () => {
     }
   ];
 
-  const values = [
-    {
-      icon: <Users className="w-8 h-8 text-blue-600" />,
+  const values = []
+    {icon: <Users className="w-8 h-8 text-blue-600" />,}
       title: 'Collaboration',
       description: 'We believe in the power of teamwork and open communication to achieve great results.'
     },
-    {
-      icon: <Heart className="w-8 h-8 text-red-600" />,
+    {icon: <Heart className="w-8 h-8 text-red-600" />,}
       title: 'Passion',
       description: 'We\'re passionate about technology and its potential to solve real-world problems.'
     },
-    {
-      icon: <Award className="w-8 h-8 text-purple-600" />,
+    {icon: <Award className="w-8 h-8 text-purple-600" />,}
       title: 'Excellence',
       description: 'We strive for excellence in everything we do and continuously improve our processes.'
     },
-    {
-      icon: <Zap className="w-8 h-8 text-yellow-600" />,
+    {icon: <Zap className="w-8 h-8 text-yellow-600" />,}
       title: 'Innovation',
       description: 'We embrace innovation and continuously push the boundaries of what\'s possible with technology.'
     }
   ];
 
-  const benefits = [
+  const benefits = []
     'Competitive salary and equity participation',
     'Comprehensive health, dental, and vision insurance',
     '401k with company matching',
@@ -128,14 +118,14 @@ const CareersPage: React.FC = () => {
     'Wellness programs and gym memberships'
   ];
 
-  const stats = [
+  const stats = []
     { icon: <Users className="w-8 h-8 text-blue-600" />, value: '50+', label: 'Team Members' },
     { icon: <Award className="w-8 h-8 text-green-600" />, value: '98%', label: 'Employee Satisfaction' },
     { icon: <GraduationCap className="w-8 h-8 text-purple-600" />, value: '100%', label: 'Learning & Development' },
     { icon: <Star className="w-8 h-8 text-yellow-600" />, value: '4.8/5', label: 'Glassdoor Rating' }
   ];
 
-  return (
+  return ()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Careers | Zion Tech Group</title>
@@ -178,7 +168,7 @@ const CareersPage: React.FC = () => {
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
+            {stats.map((stat, index) => (}
               <div key={index} className="text-center">
                 <div className="flex justify-center mb-4">
                   {stat.icon}
@@ -202,7 +192,7 @@ const CareersPage: React.FC = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {values.map((value, index) => (
+            {values.map((value, index) => (}
               <div key={index} className="text-center">
                 <div className="flex justify-center mb-4">
                   {value.icon}
@@ -226,7 +216,7 @@ const CareersPage: React.FC = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit, index) => (
+            {benefits.map((benefit, index) => (}
               <div key={index} className="flex items-start space-x-3">
                 <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
                 <span className="text-gray-300">{benefit}</span>
@@ -247,7 +237,7 @@ const CareersPage: React.FC = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {openPositions.map((position) => (
+            {openPositions.map((position) => (}
               <div key={position.id} className="bg-slate-800/50 rounded-2xl p-8 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300">
                 <div className="flex items-start justify-between mb-4">
                   <div>
@@ -267,7 +257,7 @@ const CareersPage: React.FC = () => {
                       </span>
                     </div>
                   </div>
-                  {position.featured && (
+                  {position.featured && (}
                     <span className="bg-yellow-500/20 text-yellow-400 px-3 py-1 rounded-full text-sm font-medium">
                       Featured
                     </span>
@@ -279,13 +269,13 @@ const CareersPage: React.FC = () => {
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-white mb-2">Requirements:</h4>
                   <ul className="text-sm text-gray-300 space-y-1">
-                    {position.requirements.slice(0, 3).map((req, index) => (
+                    {position.requirements.slice(0, 3).map((req, index) => (}
                       <li key={index} className="flex items-start">
                         <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-2 mt-2 flex-shrink-0"></div>
                         {req}
                       </li>
                     ))}
-                    {position.requirements.length > 3 && (
+                    {position.requirements.length > 3 && (}
                       <li className="text-cyan-400 text-sm">+{position.requirements.length - 3} more requirements</li>
                     )}
                   </ul>
@@ -333,4 +323,4 @@ const CareersPage: React.FC = () => {
   );
 };
 
-export default CareersPage;
+export default CareersPage

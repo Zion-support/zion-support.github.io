@@ -4,10 +4,9 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { Phone, Mail, MessageSquare, Search, Clock, Users, Award, Zap, Brain, Shield, Code, BarChart, MessageSquare as Chat, Eye, Cpu, Target, Lock, BarChart3, FileText, Bot, Calculator, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calendar, Clock3, Compass, PieChart, TrendingDown, Activity, CheckCircle, ArrowRight, ExternalLink } from 'lucide-react';
-const SupportPage: React.FC = () => {
-  const [searchQuery, setSearchQuery] = useState('');
+const SupportPage: React.FC = () => {const [searchQuery, setSearchQuery] = useState('');}
   const [selectedCategory, setSelectedCategory] = useState('all');
-  const supportCategories = [
+  const supportCategories = []
     { id: 'all', name: 'All Topics', icon: Search, count: 45 },
     { id: 'getting-started', name: 'Getting Started', icon: Zap, count: 12 },
     { id: 'ai-services', name: 'AI Services', icon: Brain, count: 8 },
@@ -16,71 +15,61 @@ const SupportPage: React.FC = () => {
     { id: 'account', name: 'Account Management', icon: Users, count: 5 },
     { id: 'api', name: 'API & Integration', icon: BarChart, count: 4 }
   ];
-  const faqs = [
-    {
-      id: 1,
+  const faqs = []
+    {id: 1,}
       question: 'How do I get started with Zion Tech Group services?',
       answer: 'Getting started is easy! Contact our team at +1 302 464 0950 or email kleber@ziontechgroup.com for a free consultation. We\'ll assess your needs and recommend the best AI solutions for your business.',
       category: 'getting-started'
     },
-    {
-      id: 2,
+    {id: 2,}
       question: 'What AI services do you offer?',
       answer: 'We offer comprehensive AI services including Machine Learning, Natural Language Processing, Computer Vision, AI Automation, Quantum AI Computing, and AI Cybersecurity. We also provide Micro SAAS solutions for immediate deployment.',
       category: 'ai-services'
     },
-    {
-      id: 3,
+    {id: 3,}
       question: 'How much do your services cost?',
       answer: 'Our pricing starts at $299/month for the Starter plan. We offer flexible pricing based on your specific needs. Contact us for a custom quote tailored to your requirements.',
       category: 'billing'
     },
-    {
-      id: 4,
+    {id: 4,}
       question: 'Do you provide 24/7 technical support?',
       answer: 'Yes! We offer 24/7 technical support for all our clients. Our expert team is always available to help with any technical issues or questions you may have.',
       category: 'technical'
     },
-    {
-      id: 5,
+    {id: 5,}
       question: 'How do I integrate your AI services with my existing systems?',
       answer: 'Our team provides comprehensive integration support. We work with your existing infrastructure and provide APIs, SDKs, and custom integration solutions to ensure seamless implementation.',
       category: 'api'
     },
-    {
-      id: 6,
+    {id: 6,}
       question: 'What is your typical project timeline?',
       answer: 'Project timelines vary based on complexity. Simple AI implementations can take 2-4 weeks, while complex enterprise transformations may take 3-6 months. We provide detailed timelines during our consultation.',
       category: 'getting-started'
     }
   ];
-  const supportChannels = [
-    {
-      icon: Phone,
+  const supportChannels = []
+    {icon: Phone,}
       title: 'Phone Support',
       description: 'Speak directly with our AI experts',
       contact: '+1 302 464 0950',
       availability: '24/7 Available',
       color: 'text-green-400'
     },
-    {
-      icon: Mail,
+    {icon: Mail,}
       title: 'Email Support',
       description: 'Get detailed responses via email',
       contact: 'kleber@ziontechgroup.com',
       availability: 'Response within 2 hours',
       color: 'text-blue-400'
     },
-    {
-      icon: MessageSquare,
+    {icon: MessageSquare,}
       title: 'Live Chat',
       description: 'Instant support through our chat system',
       contact: 'Start Chat',
       availability: 'Mon-Fri 9AM-6PM EST',
       color: 'text-purple-400'
     },
-    {
-      icon: Calendar,
+    {icon: Calendar,}
       title: 'Schedule Call',
       description: 'Book a consultation with our team',
       contact: 'Book Now',
@@ -88,39 +77,33 @@ const SupportPage: React.FC = () => {
       color: 'text-cyan-400'
     }
   ];
-  const resources = [
-    {
-      title: 'Documentation',
+  const resources = []
+    {title: 'Documentation',}
       description: 'Comprehensive guides and API documentation',
       icon: FileText,
       link: '/docs'
     },
-    {
-      title: 'Video Tutorials',
+    {title: 'Video Tutorials',}
       description: 'Step-by-step video guides for all services',
       icon: Eye,
       link: '/tutorials'
     },
-    {
-      title: 'Case Studies',
+    {title: 'Case Studies',}
       description: 'Real-world examples and success stories',
       icon: BarChart,
       link: '/case-studies'
     },
-    {
-      title: 'API Reference',
+    {title: 'API Reference',}
       description: 'Complete API documentation and examples',
       icon: Code,
       link: '/api-docs'
     },
-    {
-      title: 'Best Practices',
+    {title: 'Best Practices',}
       description: 'Industry best practices and guidelines',
       icon: Award,
       link: '/best-practices'
     },
-    {
-      title: 'Community Forum',
+    {title: 'Community Forum',}
       description: 'Connect with other users and experts',
       icon: Users,
       link: '/community'
@@ -135,7 +118,7 @@ const SupportPage: React.FC = () => {
         faq.answer.toLowerCase().includes(searchQuery.toLowerCase())
       )
     : filteredFaqs;
-  return (
+  return ()
     <React.Fragment>
       <SEOOptimizer
         title="Support Center - Zion Tech Group"
@@ -148,12 +131,8 @@ const SupportPage: React.FC = () => {
         <main className="container mx-auto px-4 py-16 pt-24">
           {/* Hero Section */}
           <section className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
-              Support Center;
-  </
-            <p className="text-xl text-cyan-400 mb-8">
-              We're here to help you succeed with AI;
-  </
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">Support Center;
+            <p className="text-xl text-cyan-400 mb-8">We're here to help you succeed with AI;
             <p className="text-lg text-gray-300 max-w-4xl mx-auto">
               Get instant answers to your questions, access comprehensive resources, 
               and connect with our expert support team.
@@ -176,11 +155,9 @@ const SupportPage: React.FC = () => {
           </section>
           {/* Support Channels */}
           <section className="mb-16">
-            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-              Get Support;
-  </
+            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Get Support;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {supportChannels.map((channel, index) => (
+              {supportChannels.map((channel, index) => (}
                 <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
                   <channel.icon className={`w-12 h-12 mx-auto mb-4 ${channel.color}`} />
                   <h3 className="text-xl font-bold text-white mb-2">{channel.title}</h3>
@@ -193,15 +170,13 @@ const SupportPage: React.FC = () => {
           </section>
           {/* FAQ Categories */}
           <section className="mb-16">
-            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-              Browse by Category;
-  </
+            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Browse by Category;
             <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4 mb-8">
-              {supportCategories.map((category) => (
+              {supportCategories.map((category) => (}
                 <button
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
-                  className={`p-4 rounded-lg text-center transition-all duration-300 ${
+                  className={`p-4 rounded-lg text-center transition-all duration-300 ${}
                     selectedCategory === category.id
                       ? 'bg-cyan-500 text-slate-900'
                       : 'bg-slate-800 text-white hover:bg-slate-700'
@@ -216,11 +191,9 @@ const SupportPage: React.FC = () => {
           </section>
           {/* FAQ Section */}
           <section className="mb-16">
-            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-              Frequently Asked Questions;
-  </
+            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Frequently Asked Questions;
             <div className="max-w-4xl mx-auto space-y-4">
-              {searchResults.map((faq) => (
+              {searchResults.map((faq) => (}
                 <div key={faq.id} className="cyber-card p-6">
                   <h3 className="text-xl font-bold text-white mb-3">{faq.question}</h3>
                   <p className="text-gray-300 leading-relaxed">{faq.answer}</p>
@@ -230,11 +203,9 @@ const SupportPage: React.FC = () => {
           </section>
           {/* Resources Section */}
           <section className="mb-16">
-            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-              Helpful Resources;
-  </
+            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Helpful Resources;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {resources.map((resource, index) => (
+              {resources.map((resource, index) => (}
                 <Link
                   key={index}
                   to={resource.link}
@@ -257,9 +228,7 @@ const SupportPage: React.FC = () => {
               <h2 className="text-3xl font-bold text-white mb-6 neon-text">
                 Still Need Help?
               </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Our expert team is ready to assist you with any questions or issues;
-  </
+              <p className="text-xl text-gray-300 mb-8">Our expert team is ready to assist you with any questions or issues;
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="tel:+13024640950"
@@ -283,13 +252,4 @@ const SupportPage: React.FC = () => {
   );
 };
 export default SupportPage;
-  </a>
-  </a>
-  </p>
-  </h2>
-  </h2>
-  </h2>
-  </h2>
-  </p>
-  </h1>
   </SEOOptimizer>

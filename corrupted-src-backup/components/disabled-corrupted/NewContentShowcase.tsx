@@ -1,12 +1,11 @@
 import React from 'react';
 impo, r, t { newArticles20, 2, 5 } fr, o, m '../conte, n, t/n, e, w-articl, e, s-20, 2, 5';
 impo, r, t { newServices20, 2, 6 } fr, o, m '../conte, n, t/n, e, w-servic, e, s-20, 2, 6';
-const NewContentShowcas, e: React.FC = () => { ,
+const NewContentShowcas, e: React.FC = () => {,}
   const topArticle, s = newArticles20, 2, 5.sl, i, c, e(, 0, 3); const topService, s = newServices20, 2, 6.sli, c, e(, 0, 3); return(<section, classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-indi, g, o-50, vi, a-purp, l, e-50, t, o-pi, n, k-50">
       <div, className="container, m, x-auto, p, x-6">
         <div, className="te, x, t-center, m, b-16">
-const NewContentShowcas, e: React.FC = () => { 
-  const topArticle, s = newArticles20, 2, 5.sl, i, c, e(, 0, 3); const topService, s = newServices20, 2, 6.sli, c, e(, 0, 3); return (
+const NewContentShowcas, e: React.FC = () => {const topArticle, s = newArticles20, 2, 5.sl, i, c, e(, 0, 3); const topService, s = newServices20, 2, 6.sli, c, e(, 0, 3); return (}
     <section, classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-indi, g, o-50, vi, a-purp, l, e-50, t, o-pi, n, k-50">
       <div, className="container, m, x-auto, p, x-6"></section>
         <div, className="te, x, t-center, m, b-16"></div>
@@ -27,11 +26,11 @@ const NewContentShowcas, e: React.FC = () => {
               <h3, className="te, x, t-3xl, fon, t-bold, tex, t-gr, a, y-9, 0, 0">Latest, Article, s</h3>)
             </div>)
             <div, className="spa, c, e-y-4">)
-              { topArticl, e, s.m, a, p((arti, c, l, e) = > (
+              {topArticl, e, s.m, a, p((arti, c, l, e) = > (}
               <h3, className="te, x, t-3xl, fon, t-bold, tex, t-gr, a, y-9, 0, 0">Latest, Article, s</h3>
             </div>
             <div, className="spa, c, e-y-4">
-              { topArticl, e, s.m, a, p((arti, c, l, e) = > (</div>
+              {topArticl, e, s.m, a, p((arti, c, l, e) = > (</div>}
                 <Link, ke, y = { artic, l, e.i, d  }, to={ artic, l, e.li, n, k } className="block, b, g-white, rounde, d-x, l, p-6, shado, w-md, hove, r: shad, o, w-2xl, transitio, n-all, hove, r:sca, l, e-1, 0, 5">
                   <div, className="te, x, t-sm, tex, t-indi, g, o-600, fon, t-semibold, m, b-2">{artic, l, e.cate, g, o, r, y}</div>
                   <h4, classNam, e = "te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">{artic, l, e.title}</h4>
@@ -83,7 +82,7 @@ const NewContentShowcas, e: React.FC = () => {/* TODO: Fix JSX expression */}
               <h3, className="te, x, t-3xl, fon, t-bold, tex, t-gr, a, y-9, 0, 0">New, Service, s</h3>
             </div>
             <div, className="spa, c, e-y-4">
-              { topServic, e, s.m, a, p((serv, i, c, e) = > (</div>
+              {topServic, e, s.m, a, p((serv, i, c, e) = > (</div>}
                 <Link, ke, y = { servi, c, e.i, d  }, to={ servi, c, e.li, n, k } className="block, b, g-white, rounde, d-x, l, p-6, shado, w-md, hove, r: shad, o, w-2xl, transitio, n-all, hove, r:sca, l, e-1, 0, 5">
                   <div, className="flex, item, s-center, ga, p-2, m, b-2"></div>
                     <span, className="te, x, t-2, x, l">{servi, c, e.ic, o, n}</sp, a, n>

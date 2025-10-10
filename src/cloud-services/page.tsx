@@ -2,12 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-const CloudServicesPage: React.FC = () => {
-  return (
+const CloudServicesPage: React.FC = () => {return (}
     <div>Coming Soon</div>
   );
 };
-  const _services = [
+  const _services = []
   // TOD,
   O: Add items;
 ];;
@@ -60,7 +59,7 @@ const CloudServicesPage: React.FC = () => {
   s: ['Real-time Monitoring', 'Cost Analytics', 'Performance Metrics', 'Predictive Insights']
     }
   ];
-  const benefits = [
+  const benefits = []
   // TOD,
   O: Add items;
 ];;
@@ -80,9 +79,7 @@ const CloudServicesPage: React.FC = () => {
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
 // Cloud Services;
           </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon;
-  </
+          <p className="text-xl text-cyan-400 mb-8 font-medium">Coming Soon;
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="tel:+13024640950" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all"
@@ -161,4 +158,4 @@ const CloudServicesPage: React.FC = () => {
     </div>
   );
 };
-export default CloudServicesPage;
+export default CloudServicesPage

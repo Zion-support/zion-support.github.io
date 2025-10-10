@@ -4,12 +4,10 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-const HelpPage: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
+const HelpPage: React.FC = () => {const [searchTerm, setSearchTerm] = useState('');}
   const [activeCategory, setActiveCategory] = useState('getting-started');
-  const categories = [
-    {
-      id: 'getting-started',
+  const categories = []
+    {id: 'getting-started',}
       name: 'Getting Started',
       icon: BookOpen,
       color: 'text-blue-400',
@@ -32,8 +30,7 @@ idid: 'technical',
       bgColor:     ,
 $4}
   ];
-  const helpArticles = {
-    'getting-started': [
+  const helpArticles = {'getting-started': [}
         title: 'How to Get Started with AI Services',
         description: 'Complete guide to setting up your AI services and making the most of our platform',
         category: 'Getting Started',
@@ -50,7 +47,7 @@ titletitle: 'Setting Up Your First Dashboard',
         description: 'How to integrate our AI services with your current business systems',
         readTime: '7 min read',
         difficulty: 'Intermediate'],
-    'troubleshooting': [
+    'troubleshooting': []
         title: 'Common Login Issues and Solutions',
         description: 'Troubleshoot common authentication problems and access issues',
         category: 'Troubleshooting',
@@ -63,7 +60,7 @@ titletitle: 'API Connection Problems',
         difficulty: 'Advanced',
         title: 'Data Import/Export Issues',
         description: 'Fix problems with data migration and file uploads',
-    'billing': [
+    'billing': []
         title: 'Understanding Your Bill',
         description: 'Learn how to read and understand your monthly billing statement',
         category: 'Billing',
@@ -74,7 +71,7 @@ titletitle: 'Upgrading or Downgrading Plans',
         description: 'Manage your payment methods and billing information',
         title: 'Refund and Cancellation Policy',
         description: 'Understand our refund policy and how to cancel your subscription',
-    'technical': [
+    'technical': []
         title: 'API Documentation and Examples',
         description: 'Complete API reference with code examples and best practices',
         category: 'Technical',
@@ -89,7 +86,7 @@ titletitle: 'Security Best Practices',
         title: 'Monitoring and Logging',
         description: 'Set up monitoring and logging for your AI services and applications']
   };
-  const resources = [
+  const resources = []
       title: 'Video Tutorials',
       description: 'Step-by-step video guides for all our services',
       icon: Video,
@@ -104,7 +101,7 @@ titletitle: 'Download Center',
       description: 'SDKs, tools, and resources for developers',
       icon: Download,
       count: '25+ downloads'
-  const supportChannels = [
+  const supportChannels = []
       title: 'Live Chat',
       description: 'Get instant help from our support team',
       color: 'text-cyan-400',
@@ -123,7 +120,7 @@ titletitle: 'Community Forum',
       description: 'Connect with other users and share knowledge',
       icon: Users,
       responseTime: 'Community driven'
-  const faqs = [
+  const faqs = []
       question: 'How quickly can I get started with your AI services?',
       answer: 'Most of our AI services can be set up within 24-48 hours. We provide comprehensive onboarding support to ensure you\'re up and running quickly.'
       question: 'Do you offer training for our team?',
@@ -134,22 +131,19 @@ questionquestion: 'Can I integrate your services with my existing systems?',
       answer:       ,
 questionquestion: 'Is there a free trial available?',
       answer: 'Yes, we offer a 14-day free trial for most of our services. This allows you to test our platform and see how it fits your business needs before committing to a paid plan.'
-  const getCurrentArticles = () => {
-    return helpArticles[activeCategory as keyof typeof helpArticles] || [];
+  const getCurrentArticles = () => {return helpArticles[activeCategory as keyof typeof helpArticles] || [];}
   const filteredArticles = getCurrentArticles().filter(article =>
     article.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
     article.description.toLowerCase().includes(searchTerm.toLowerCase())
   );
-  return (
+  return ()
     <React.Fragment>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16 pt-24">
           {/* Header */}
           <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-              Help Center;
-  </
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">Help Center;
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Find answers, get support, and learn how to make the most of our AI and IT services. 
               We're here to help you succeed.
@@ -169,11 +163,11 @@ questionquestion: 'Is there a free trial available?',
           {/* Categories */}
           <div className="mb-12">
             <div className="flex flex-wrap justify-center gap-4 mb-8">
-              {categories.map((category) => (
+              {categories.map((category) => (}
                 <button
                   key={category.id}
                   onClick={() => setActiveCategory(category.id)}
-                  className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${
+                  className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${}
                     activeCategory === category.id
                       ? `${category.bgColor} ${category.color} border-2 border-current`
                       : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 border-2 border-transparent'
@@ -185,11 +179,9 @@ questionquestion: 'Is there a free trial available?',
               ))}
           {/* Articles */}
           <div className="mb-16">
-            <h2 className="text-2xl font-bold text-white mb-8">
-              {categories.find(cat => cat.id === activeCategory)?.name} Articles;
-  </
+            <h2 className="text-2xl font-bold text-white mb-8">{categories.find(cat => cat.id === activeCategory)?.name} Articles;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {filteredArticles.map((article, index) => (
+              {filteredArticles.map((article, index) => (}
                 <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300">
                   <div className="flex items-start mb-4">
                     <div className={`w-10 h-10 ${article.color.replace('text-', 'bg-').replace('-400', '-500/10')} rounded-lg flex items-center justify-center mr-3`}>
@@ -199,7 +191,7 @@ questionquestion: 'Is there a free trial available?',
                       <p className="text-gray-300 text-sm mb-3">{article.description}</p>
                   <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
                     <span>{article.readTime}</span>
-                    <span className={`px-2 py-1 rounded text-xs ${
+                    <span className={`px-2 py-1 rounded text-xs ${}
                       article.difficulty === 'Beginner' ? 'bg-green-500/20 text-green-400' :
                       article.difficulty === 'Intermediate' ? 'bg-yellow-500/20 text-yellow-400' :
                       'bg-red-500/20 text-red-400'
@@ -213,7 +205,7 @@ questionquestion: 'Is there a free trial available?',
             <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
               Additional Resources
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {resources.map((resource, index) => (
+              {resources.map((resource, index) => (}
                 <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300 text-center">
                   <div className={`w-16 h-16 ${resource.color.replace('text-', 'bg-').replace('-400', '-500/10')} rounded-full flex items-center justify-center mx-auto mb-4`}>
                     <resource.icon className={`w-8 h-8 ${resource.color}`} />
@@ -222,7 +214,7 @@ questionquestion: 'Is there a free trial available?',
                   <div className="text-cyan-400 text-sm font-medium">{resource.count}</div>
           {/* Support Channels */}
               Get Support
-              {supportChannels.map((channel, index) => (
+              {supportChannels.map((channel, index) => (}
                   <div className={`w-16 h-16 ${channel.color.replace('text-', 'bg-').replace('-400', '-500/10')} rounded-full flex items-center justify-center mx-auto mb-4`}>
                     <channel.icon className={`w-8 h-8 ${channel.color}`} />
                   <h3 className="text-lg font-semibold text-white mb-2">{channel.title}</h3>
@@ -236,7 +228,7 @@ questionquestion: 'Is there a free trial available?',
               Frequently Asked Questions
             <div className="max-w-4xl mx-auto">
               <div className="space-y-6">
-                {faqs.map((faq, index) => (
+                {faqs.map((faq, index) => (}
                   <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50">
                     <h3 className="text-lg font-semibold text-white mb-3">{faq.question}</h3>
                     <p className="text-gray-300">{faq.answer}</p>
@@ -251,9 +243,7 @@ questionquestion: 'Is there a free trial available?',
               <a
                 href="/contact"
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
-                <MessageSquare className="w-5 h-5 mr-2" />
-                Contact Support;
-  </
+                <MessageSquare className="w-5 h-5 mr-2" />Contact Support;
                 href="tel:+13024640950"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Phone className="w-4 h-4 mr-2" />
@@ -264,13 +254,13 @@ questionquestion: 'Is there a free trial available?',
                 Email Us
       <Footer />
     </React.Fragment>
-  return (
+  return ()
     <div>Coming Soon</div>
   );
 };
   const [searchTerm, setSearchTerm] = useState('');
   const [activeCategory, setActiveCategory] = useState('getting-started');
-const categories = [
+const categories = []
     {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
@@ -372,34 +362,4 @@ const categories = [
                 Email Us;
       <Footer /></Footer>
     </React.Fragment>
-export default HelpPage;
-  </div>
-  </p>
-  </h2>
-  </div>
-  </div>
-  </div>
-  </div>
-  </button>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </h2>
-  </button>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </h2>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </h1>
-  </div>
-  </div>
+export default HelpPage

@@ -2,28 +2,24 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Play, ArrowRight, CheckCircle } from 'lucide-react';
-const DemoPage: React.FC = () => {
-  const demos = [
-    {
-      title: 'AI Analytics Dashboard',
+const DemoPage: React.FC = () => {const demos = [}
+    {title: 'AI Analytics Dashboard',}
       description: 'See how our AI analytics can transform your business intelligence',
       duration: '5 min',
       features: ['Real-time data visualization', 'Predictive analytics', 'Custom reports']
     },
-    {
-      title: 'AI Customer Support Bot',
+    {title: 'AI Customer Support Bot',}
       description: 'Experience our intelligent customer support automation',
       duration: '3 min',
       features: ['Natural language processing', 'Multi-channel support', 'Sentiment analysis']
     },
-    {
-      title: 'AI Content Generation',
+    {title: 'AI Content Generation',}
       description: 'Watch our AI create high-quality content in seconds',
       duration: '4 min',
       features: ['Blog posts', 'Social media content', 'Product descriptions']
     }
   ];
-  return (
+  return ()
     <React.Fragment>
       <Helmet>
         <title>Demo - Zion Tech Group | See Our AI Solutions in Action</title>
@@ -44,7 +40,7 @@ const DemoPage: React.FC = () => {
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {demos.map((demo, index) => (
+              {demos.map((demo, index) => (}
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300">
                   <div className="flex items-center justify-center w-16 h-16 bg-cyan-500/20 rounded-lg mb-4">
                     <Play className="w-8 h-8 text-cyan-400" />
@@ -53,7 +49,7 @@ const DemoPage: React.FC = () => {
                   <p className="text-gray-300 mb-4">{demo.description}</p>
                   <div className="text-sm text-cyan-400 mb-4">Duration: {demo.duration}</div>
                   <ul className="space-y-2 mb-6">
-                    {demo.features.map((feature, featureIndex) => (
+                    {demo.features.map((feature, featureIndex) => (}
                       <li key={featureIndex} className="flex items-center text-sm text-gray-300">
                         <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
                         {feature}
@@ -90,4 +86,4 @@ const DemoPage: React.FC = () => {
   );
 };
 
-export default DemoPage;
+export default DemoPage

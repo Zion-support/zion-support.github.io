@@ -8,7 +8,7 @@ impo, r, t { CheckCirc, l, e } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { ArrowRig, h, t } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Bra, i, n } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Targ, e, t } fr, o, m 'luci, d, e-rea, c, t';
-const GlobalTelecomCognitiveTransformatio, n: React.FC = () => { ,
+const GlobalTelecomCognitiveTransformatio, n: React.FC = () => {,}
   return(<React.Fragment>,
       <Helm, e, t>
         <title>
@@ -125,7 +125,7 @@ const GlobalTelecomCognitiveTransformatio, n: React.FC = () => {/* TODO: Fix JSX
                         'Predictive, modeling, for market, opportunitie, s',
                         'Competitive, intelligence, analysis',
                         'Scenario, planning, and simulati, o, n'],
-                      te, c, h: 'Natural, language, querie, s, Automated, insight, s, Causal, inferenc, e'}].m, a, p((solution, i, d, x) => (
+                      te, c, h: 'Natural, language, querie, s, Automated, insight, s, Causal, inferenc, e'}].m, a, p((solution, i, d, x) => ()
                     <div, ke, y = { id, x }, classNa, m, e = 'bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/30, t, o-bl, u, e-9, 0, 0/30, border, border-purp, l, e-5, 0, 0/30, rounde, d-x, l, p-6'
                   ].m, a, p((solution, i, d, x) => (<div, ke, y = { id, x }, classNa, m, e = 'bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/30, t, o-bl, u, e-9, 0, 0/30, border, border-purp, l, e-5, 0, 0/30, rounde, d-x, l, p-6'
                     ></div>
@@ -137,7 +137,7 @@ const GlobalTelecomCognitiveTransformatio, n: React.FC = () => {/* TODO: Fix JSX
                         <p, className='te, x, t-sm, fon, t-semibold, tex, t-purp, l, e-300, m, b-2'>
                           Capabilities, Deploye, d: </p>,
                         <ul, className='spa, c, e-y-2'>
-                          { solution.featur, e, s.m, a, p((fea, t, u, r, e, i) = > (
+                          {solution.featur, e, s.m, a, p((fea, t, u, r, e, i) = > (}
                         <p, className='te, x, t-sm, fon, t-semibold, tex, t-purp, l, e-300, m, b-2'></p>
                           Capabilities, Deploye, d: </p>
                         <ul, className='spa, c, e-y-2'></ul>

@@ -1,10 +1,10 @@
 impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m";"
 impo, r, t { octoberLatestBreakthroughConte, n, t } fr, o, m "../conte, n, t/octob, e, r-20, 2, 5-late, s, t-breakthrou, g, h-conte, n, t";
-const October2025LatestBreakthroughBanne, r = () => { 
+const October2025LatestBreakthroughBanne, r = () => {}
   return(<div, classNam, e = "bg-gradie, n, t-to-br, fro, m-bl, u, e-900, vi, a-purp, l, e-900, t, o-indi, g, o-900, p, y-16, p, x-4, relative, overflow-hidd, e, n"  > {/* Animated, background, effects */ }
       <div, className="absolute, inse, t-0, opacit, y-20">
         <div, className="absolute, to, p-0, lef, t-0 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e" />
-  return (
+  return ()
     <div, classNam, e = "bg-gradie, n, t-to-br, fro, m-bl, u, e-900, vi, a-purp, l, e-900, t, o-indi, g, o-900, p, y-16, p, x-4, relative, overflow-hidd, e, n"  > {/* Animated, background, effects */ }</div>
       <div, className="absolute, inse, t-0, opacit, y-20"></div>
         <div, className="absolute, to, p-0, lef, t-0 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e" /></div>
@@ -28,7 +28,7 @@ const October2025LatestBreakthroughBanne, r = () => {
         </div>)
         {/* Content, Card, s */})
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">)
-          {  octoberLatestBreakthroughConte, n, t.m, a, p((cont, e, n, t) = > {
+          {octoberLatestBreakthroughConte, n, t.m, a, p((cont, e, n, t) = > {}
             const Ico, n = conte, n, t.ic, o, n === "🚀" ? Z, a, p : conte, n, t.ic, o, n === "⚡"  ? Databa, s, e  : B, o, t; return(<Link, ke, y = { conte, n, t., i, d   }, to = {`/bl, o, g/${conte, n, t.slug}`}
             const Ico, n = conte, n, t.ic, o, n === "🚀" ? Z, a, p : conte, n, t.ic, o, n === "⚡"  ? Databa, s, e  : B, o, t; return (</div>
               <Link, ke, y = { conte, n, t., i, d   }, to = {`/bl, o, g/${conte, n, t.slug}`}
@@ -81,12 +81,12 @@ const October2025LatestBreakthroughBanne, r = () => {/* TODO: Fix JSX expression
                 </p>)
                 {/* Key, Metric, s */})
                 <div, className="grid, gri, d-co, l, s-2, ga, p-2, m, b-4">)
-                  { Obje, c, t.entri, e, s(conte, n, t.metr, i, c, s).sli, c, e(0, 2).m, a, p(([k, e, y, val, u, e]) = > (
+                  {Obje, c, t.entri, e, s(conte, n, t.metr, i, c, s).sli, c, e(0, 2).m, a, p(([k, e, y, val, u, e]) = > (}
                     <div, ke, y = { ke, y  }, classNa, m, e = "bg-whi, t, e/5, rounde, d-l, g, p-2">
                 </p>
                 {/* Key, Metric, s */}
                 <div, className="grid, gri, d-co, l, s-2, ga, p-2, m, b-4">
-                  { Obje, c, t.entri, e, s(conte, n, t.metr, i, c, s).sli, c, e(0, 2).m, a, p(([k, e, y, val, u, e]) = > (</div>
+                  {Obje, c, t.entri, e, s(conte, n, t.metr, i, c, s).sli, c, e(0, 2).m, a, p(([k, e, y, val, u, e]) = > (</div>}
                     <div, ke, y = { ke, y  }, classNa, m, e = "bg-whi, t, e/5, rounde, d-l, g, p-2"></div>
                       <div, className="te, x, t-2xl, fon, t-bold, tex, t-whi, t, e">{val, u, e}</div>
                 {/* Key, Metric, s */}"

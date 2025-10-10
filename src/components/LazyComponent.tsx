@@ -1,21 +1,16 @@
 import React, { Suspense, lazy, ComponentType } from 'react';
-interface LazyComponentProps {
-  fallback?: React.ReactNode;
+interface LazyComponentProps {fallback?: React.ReactNode;}
   children: React.ReactNode;
 }
-export default function LazyComponent({
-  className = '',
+export default function LazyComponent({className = '',}
   children
-}: LazyComponentProps) {
-const DefaultFallback = () => (
+}: LazyComponentProps) {const DefaultFallback = () => (}
   <div className="flex items-center justify-center p-8"></div>
     <div className="cyber-loader"></div>
     <span className="ml-3 text-cyan-400">Loading...</span>
-  </div>
 );
-const LazyComponent: React.FC<LazyComponentProps> = ({</LazyComponentProps>fallback</LazyComponentProps> = <DefaultFallback />,</DefaultFallback>children</DefaultFallback> 
-}) => {
-  return (
+const LazyComponent: React.FC<LazyComponentProps> = ({</LazyComponentProps>fallback</LazyComponentProps> = <DefaultFallback />,</DefaultFallback>children</DefaultFallback>}
+}) => {return (}
     <Suspense fallback={fallback}></Suspens>
       {children}
     </Suspense>
@@ -23,8 +18,7 @@ const LazyComponent: React.FC<LazyComponentProps> = ({</LazyComponentProps>fallb
 };
 // Higher-order component for lazy loading
 export const withLazyLoading = <P extends object>(</P>Component</P>: ComponentType<P>,</P>fallback</P>?: React.ReactNode
-) => {
-  const LazyWrappedComponent = (props: P) => (
+) => {const LazyWrappedComponent = (props: P) => (}
     <LazyComponent fallback={fallback}></LazyComponent>
       <Component {...props} /></Component>
     </LazyComponent>
@@ -34,9 +28,8 @@ export const withLazyLoading = <P extends object>(</P>Component</P>: ComponentTy
 };
 // Utility function to create lazy components
 export const createLazyComponent = <P extends object>(</P>importFunc</P>: () => Promise<{ default: ComponentType<P> }>,</P>fallback</P>?: React.ReactNode
-) => {
-  const LazyComponent = lazy(importFunc);
-  return (props: P) => (
+) => {const LazyComponent = lazy(importFunc);}
+  return (props: P) => ()
     <LazyComponent fallback={fallback}></LazyComponent>
       <LazyComponent {...props} /></LazyComponen>
     </LazyComponent>
@@ -170,7 +163,7 @@ export const preloadCriticalResources = () => {/* TODO: Fix JSX expression */}
 }
   if (typeof window === 'undefined') return;
   // Preload critical fonts;
-const fontPreloads = [
+const fontPreloads = []
   // TOD,
   O: Add items;
 ];;
@@ -190,7 +183,7 @@ const fontPreloads = [
     document.head.appendChild(link);
   });
   // Preload critical images;
-const imagePreloads = [
+const imagePreloads = []
   // TOD,
   O: Add items;
 ];;

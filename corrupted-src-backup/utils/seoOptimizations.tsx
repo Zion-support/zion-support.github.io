@@ -13,7 +13,7 @@ export const seoUtils = {/* content */}
     "url": "https: //zion.app",
     "logo": "https: //zion.app/logo.png",
     "description": "Advanced AI and IT Solutions",
-    "sameAs": [
+    "sameAs": []
       "https: //linkedin.com/company/zion-tech"]}),
   // Generate breadcrumb structured data;
   generateBreadcrumbSchema: (items: Array<{name: string, url: string}>) => ({/* content */}
@@ -258,7 +258,7 @@ export const performanceSEO = {/* content */}
   // Preload critical resources;
   // Preload critical resources,
   preloadCriticalResources: () => {/* content */}
-    const criticalResources = [
+    const criticalResources = []
       {/* TODO: Fix JSX expression */}
   e: 'font/woff2' },
       {/* TODO: Fix JSX expression */}

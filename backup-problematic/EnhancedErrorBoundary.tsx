@@ -4,44 +4,38 @@ interface Props {/* TODO: Fix JSX expression */}
 }
 interface State {/* TODO: Fix JSX expression */}
 }
-class EnhancedErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {,
+class EnhancedErrorBoundary extends Component<Props, State> {constructor(props: Props) {,}
     super(props);
     this.state = { hasError: false };
   }
-  static getDerivedStateFromError(error: Error): State {,
+  static getDerivedStateFromError(error: Error): State {,}
     return { hasError: true, error };
   }
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {,
-    this.setState({)
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {,}
+    this.setState({)}
       error),
       errorInfo;
     });
     // Log error to console in development;
-    if (process.env.NODE_ENV === 'development') {
-      // console.error('Error caught by boundary:', error, errorInfo);
+    if (process.env.NODE_ENV === 'development') {// console.error('Error caught by boundary:', error, errorInfo);}
     }
     // Call custom error handler if provided;
-    if (this.props.onError) {
-      this.props.onError(error, errorInfo);
+    if (this.props.onError) {this.props.onError(error, errorInfo);}
     }
     // Enhanced error reporting;
-    if (this.props.enableErrorReporting) {
-      this.reportError(error, errorInfo);
+    if (this.props.enableErrorReporting) {this.reportError(error, errorInfo);}
     }
     // Log to console in development;
-    if (process.env.NODE_ENV === 'development') {
-      // eslint-disable-next-line no-console;
+    if (process.env.NODE_ENV === 'development') {// eslint-disable-next-line no-console;}
       console.group('🚨 Error Boundary Caught Error');
     // In production, you might want to send this to an error reporting service;
-    if (process.env.NODE_ENV === 'production') {
-      // Example: send to error reporting service;
+    if (process.env.NODE_ENV === 'production') {// Example: send to error reporting service;}
       // errorReportingService.captureException(error, { extra: errorInfo });
     }
   }
       return(<div className="min-h-screen flex items-center justify-center bg-gray-50">
           <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center">
-      return (
+      return ()
         <div className="min-h-screen flex items-center justify-center bg-gray-50"></div>
           <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center"></div>
             <div className="text-6xl mb-4">⚠️</div>
@@ -113,7 +107,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
                 Go Back;
               </button>
             </div>
-            {process.env.NODE_ENV === 'development' && this.state.error && (
+            {process.env.NODE_ENV === 'development' && this.state.error && (}
               <details className="mt-6 text-left">
                 <summary className="cursor-pointer text-sm text-gray-500">
                   Error Details (Development),

@@ -2,30 +2,25 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-const AnalyticsToolsPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
+const AnalyticsToolsPage: React.FC = () => {const features = [}
+    {icon: Brain,}
       title: 'AI-Powered Analytics',
       description: 'Advanced AI technology to transform your data analysis and business intelligence'
     },
-    {
-      icon: Zap,
+    {icon: Zap,}
       title: 'Real-Time Processing',
       description: 'Lightning-fast data processing and real-time analytics for optimal insights'
     },
-    {
-      icon: Shield,
+    {icon: Shield,}
       title: 'Enterprise Security',
       description: 'Bank-level security with encryption and compliance standards for your data'
     },
-    {
-      icon: Globe,
+    {icon: Globe,}
       title: 'Global Scalability',
       description: 'Worldwide deployment and support for international business analytics'
     }
   ];
-  const benefits = [
+  const benefits = []
     'Advanced AI-powered data analysis',
     'Real-time processing and insights',
     'Enterprise-grade security and compliance',
@@ -35,7 +30,7 @@ const AnalyticsToolsPage: React.FC = () => {
     'Cost-effective pricing plans',
     'Proven track record of success'
   ];
-  return (
+  return ()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Analytics Tools | Zion Tech Group</title>
@@ -44,9 +39,7 @@ const AnalyticsToolsPage: React.FC = () => {
       </Helmet>
 <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            Analytics Tools;
-  </
+          <h1 className="text-5xl font-bold text-white mb-6">Analytics Tools;
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your business with our advanced analytics tools. 
             Powered by cutting-edge AI technology and industry expertise.
@@ -65,7 +58,7 @@ const AnalyticsToolsPage: React.FC = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
+            {features.map((feature, index) => (}
               <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
                 <feature.icon className="w-12 h-12 text-purple-400 mb-4" />
                 <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
@@ -78,15 +71,13 @@ const AnalyticsToolsPage: React.FC = () => {
       <section className="py-16 px-4 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Benefits;
-  </
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Key Benefits;
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the power of our analytics tools for your business.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {benefits.map((benefit, index) => (
+            {benefits.map((benefit, index) => (}
               <div key={index} className="flex items-center space-x-3">
                 <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
                 <span className="text-gray-300">{benefit}</span>
@@ -137,12 +128,4 @@ const AnalyticsToolsPage: React.FC = () => {
     </div>
   );
 };
-export default AnalyticsToolsPage;
-  </button>
-  </button>
-  </button>
-  </button>
-  </section>
-  </h2>
-  </section>
-  </h1>
+export default AnalyticsToolsPage

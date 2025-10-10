@@ -55,7 +55,7 @@ const,
   s: ['Vendor independence', 'Disaster recovery', 'Cost optimization', 'Flexibility']
     }
   ];
-  const migrationSteps = [
+  const migrationSteps = []
       titl,
   e: 'Assessment & Planning',
       descriptio,
@@ -104,7 +104,7 @@ const,
   n: TrendingUp,
       duratio,
   n: 'Ongoing'
-  const pricingPlans = [
+  const pricingPlans = []
       nam,
   e: 'Small Business',
       pric,
@@ -114,7 +114,7 @@ const,
       descriptio,
   n: 'Perfect for small businesses with basic cloud needs',
       feature,
-  s: [
+  s: []
         'Up to 10 servers',
         'Basic migration planning',
         'Standard security setup',
@@ -155,7 +155,7 @@ const,
         'Multi-cloud architecture',
         'Dedicated account manager',
         'Custom integrations'
-  const benefits = [
+  const benefits = []
       titl,
   e: 'Cost Reduction',
       descriptio,

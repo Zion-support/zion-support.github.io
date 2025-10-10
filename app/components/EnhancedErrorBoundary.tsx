@@ -2,57 +2,49 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react';
 
-interface Props {
-  children: ReactNode;
+interface Props {children: ReactNode;}
   fallback?: ReactNode;
 }
 
-interface State {
-  hasError: boolean;
+interface State {hasError: boolean;}
   error?: Error;
   errorInfo?: ErrorInfo;
 }
 
-class EnhancedErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
+class EnhancedErrorBoundary extends Component<Props, State> {constructor(props: Props) {}
     super(props);
     this.state = { hasError: false };
   }
 
-  static getDerivedStateFromError(error: Error): State {
+  static getDerivedStateFromError(error: Error): State {}
     return { hasError: true, error };
   }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    this.setState({
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {this.setState({}
       error,
       errorInfo
     });
 
     // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by boundary:', error, errorInfo);
+    if (process.env.NODE_ENV === 'development') {console.error('Error caught by boundary:', error, errorInfo);}
     }
 
     // Log error to external service in production
-    if (process.env.NODE_ENV === 'production') {
-      // Here you would typically send the error to a logging service
+    if (process.env.NODE_ENV === 'production') {// Here you would typically send the error to a logging service}
       console.error('Error caught by boundary:', error, errorInfo);
     }
   }
 
-  handleRetry = () => {
+  handleRetry = () => {}
     this.setState({ hasError: false, error: undefined, errorInfo: undefined });
   };
 
-  handleGoHome = () => {
-    window.location.href = '/';
+  handleGoHome = () => {window.location.href = '/';}
   };
 
-  handleReportError = () => {
+  handleReportError = () => {}
     const { error, errorInfo } = this.state;
-    const errorReport = {
-      message: error?.message,
+    const errorReport = {message: error?.message,}
       stack: error?.stack,
       componentStack: errorInfo?.componentStack,
       timestamp: new Date().toISOString(),
@@ -67,13 +59,11 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     // e.g., send to Sentry, LogRocket, etc.
   };
 
-  render() {
-    if (this.state.hasError) {
-      if (this.props.fallback) {
-        return this.props.fallback;
+  render() {if (this.state.hasError) {}
+      if (this.props.fallback) {return this.props.fallback;}
       }
 
-      return (
+      return ()
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-4">
           <div className="max-w-md w-full bg-slate-800 rounded-lg shadow-xl p-8 text-center">
             <div className="mb-6">
@@ -112,14 +102,14 @@ class EnhancedErrorBoundary extends Component<Props, State> {
               </button>
             </div>
 
-            {process.env.NODE_ENV === 'development' && this.state.error && (
+            {process.env.NODE_ENV === 'development' && this.state.error && (}
               <details className="mt-6 text-left">
                 <summary className="text-sm text-gray-400 cursor-pointer hover:text-gray-300">
                   Error Details (Development)
                 </summary>
                 <div className="mt-2 p-4 bg-slate-900 rounded text-xs text-red-400 overflow-auto">
                   <pre>{this.state.error.stack}</pre>
-                  {this.state.errorInfo && (
+                  {this.state.errorInfo && (}
                     <pre className="mt-2 text-yellow-400">
                       {this.state.errorInfo.componentStack}
                     </pre>
@@ -136,4 +126,4 @@ class EnhancedErrorBoundary extends Component<Props, State> {
   }
 }
 
-export default EnhancedErrorBoundary;
+export default EnhancedErrorBoundary

@@ -3,17 +3,14 @@ import { Star, Phone } from 'lucide-react';
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-const Status: React.FC = () => {
-  return (
+const Status: React.FC = () => {return (}
     <div>Coming Soon</div>
   )
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       <main className="pt-20">
         <section className="container mx-auto px-4 py-16 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
-// Status;
-  </
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">// Status;
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
 // System status and service availability;
           </p>
@@ -37,5 +34,4 @@ const Status: React.FC = () => {
     </div>
   );
 };
-export default StatusPage;
-  </h1>
+export default StatusPage

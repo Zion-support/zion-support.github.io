@@ -3,8 +3,7 @@ impo, r, t {/* TODO: Fix JSX expression */}"
 } fr, o, m "fram, e, r-moti, o, n";';
 impo, r, t {/* TODO: Fix JSX expression */}"
 } fr, o, m "luci, d, e-rea, c, t";
-interface, SEOIssu, e {
-id: stri, n, g;
+interface, SEOIssu, e {id: stri, n, g;}
 ty, p, e: 'err, o, r' | 'warni, n, g' | 'in, f, o';
 tit, l, e: stri, n, g;
 descripti, o, n: stri, n, g;
@@ -14,13 +13,12 @@ f, i, x: stri, n, g;
 sc, o, r;
   e: numb, e, r;
 }
-interface, SEORepor, t {
-overallSco, r, e: numb, e, r;
+interface, SEORepor, t {overallSco, r, e: numb, e, r;}
 totalIssu, e, s: numb, e, r;
 erro, r, s: numb, e, r;
 warnin, g, s: numb, e, r;
 issu, e, s: SEOIss, u, e[]
-metri, c, s: {,
+metri, c, s: {,}
 pageTit, l, e: stri, n, g;
 metaDescripti, o, n: stri, n, g;
 overallSco, r, e: numb, e, r;
@@ -29,15 +27,15 @@ erro, r, s: numb, e, r;
 warnin, g, s: numb, e, r;
 issu, e, s: SEOIss, u, e[];
 metr, i, c;
-  s: {,
+  s: {,}
 pageTit, l, e: stri, n, g;
 metaDescripti, o, n: stri, n, g;
-headin, g, s: { h1: numb, e, r; h2: numb, e, r; h3: numb, e, r; h4: numb, e, r; h5: numb, e, r; h;
+headin, g, s: {h1: numb, e, r; h2: numb, e, r; h3: numb, e, r; h4: numb, e, r; h5: numb, e, r; h;}
   6: numb, e, r;
 };
-    imag, e, s: { tot, a, l: numb, e, r; withA, l, t: numb, e, r; without, A, l;
+    imag, e, s: {tot, a, l: numb, e, r; withA, l, t: numb, e, r; without, A, l;}
   t: numb, e, r };
-    lin, k, s: { tot, a, l: numb, e, r; intern, a, l: numb, e, r; exter, n, a;
+    lin, k, s: {tot, a, l: numb, e, r; intern, a, l: numb, e, r; exter, n, a;}
 interface, SEOIssu, e {/* TODO: Fix JSX expression */}
 }
 interface, SEORepor, t {/* TODO: Fix JSX expression */}
@@ -77,9 +75,8 @@ const, SEOAuditDashboar, d: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */
     }
   con, s, t [selectedCatego, r, y, setSelectedCatego, r, y] = useSta, t, e<stri, n, g>('a, l, l');';
   con, s, t [selectedImpa, c, t, setSelectedImpa, c, t] = useSta, t, e<stri, n, g>('a, l, l');';
-  const, commonSEOIssue, s: SEOIss, u, e[] = [
-    {
-      id: 'tit, l, e-leng, t, h',';
+  const, commonSEOIssue, s: SEOIss, u, e[] = []
+    {id: 'tit, l, e-leng, t, h',';}
       ty, p, e: 'warni, n, g',';
       tit, l, e: 'Title, Length',';
       descripti, o, n: 'Page, title, should be, between, 30-60, character, s',';
@@ -88,8 +85,7 @@ const, SEOAuditDashboar, d: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */
       f, i, x: 'Optimize, title, length for, better, search engine, visibilit, y',';
       sco, r, e: 75;
     }
-    {
-      id: 'me, t, a-descripti, o, n',';
+    {id: 'me, t, a-descripti, o, n',';}
       ty, p, e: 'warni, n, g',';
       tit, l, e: 'Meta, Descriptio, n',';
       descripti, o, n: 'Meta, description, should be, between, 120-160, character, s',';
@@ -98,8 +94,7 @@ const, SEOAuditDashboar, d: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */
       f, i, x: 'Write, compelling, meta descriptions, that, encourage clic, k, s',';
       sco, r, e: 80;
     }
-    {
-      id: 'headi, n, g-structu, r, e',';
+    {id: 'headi, n, g-structu, r, e',';}
       ty, p, e: 'in, f, o',';
       tit, l, e: 'Heading, Structur, e',';
       descripti, o, n: 'Ensure, proper, H1-H6, hierarch, y',';
@@ -108,8 +103,7 @@ const, SEOAuditDashboar, d: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */
       f, i, x: 'Use, only, one H1, tag, and maintain, logical, heading ord, e, r',';
       sco, r, e: 85;
     }
-    {
-      id: 'ima, g, e-a, l, t-te, x, t',';
+    {id: 'ima, g, e-a, l, t-te, x, t',';}
       ty, p, e: 'warni, n, g',';
       tit, l, e: 'Missing, Alt, Text',';
       descripti, o, n: 'Some, images, are missing, alt, text attribut, e, s',';
@@ -118,8 +112,7 @@ const, SEOAuditDashboar, d: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */
       f, i, x: 'Add, descriptive, alt text, to, all imag, e, s',';
       sco, r, e: 60;
     }
-    {
-      id: 'mobi, l, e-friend, l, y',';
+    {id: 'mobi, l, e-friend, l, y',';}
       ty, p, e: 'in, f, o',';
       tit, l, e: 'Mobile, Optimizatio, n',';
       descripti, o, n: 'Check, mobile, responsiveness and, usabilit, y',';
@@ -128,8 +121,7 @@ const, SEOAuditDashboar, d: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */
       f, i, x: 'Ensure, all, content is, accessible, on mobile, device, s',';
       sco, r, e: 90;
     }
-    {
-      id: 'pa, g, e-spe, e, d',';
+    {id: 'pa, g, e-spe, e, d',';}
       ty, p, e: 'warni, n, g',';
       tit, l, e: 'Page, Load, Speed',';
       descripti, o, n: 'Page, loading, time affects, SEO, rankings',';
@@ -138,8 +130,7 @@ const, SEOAuditDashboar, d: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */
       f, i, x: 'Optimize, image, s, minimize, CS, S/JS, and, use, CDN',';
       sco, r, e: 70;
     }
-    {
-      id: 'intern, a, l-linki, n, g',';
+    {id: 'intern, a, l-linki, n, g',';}
       ty, p, e: 'in, f, o',';
       tit, l, e: 'Internal, Linkin, g',';
       descripti, o, n: 'Improve, internal, link structu, r, e',';
@@ -148,8 +139,7 @@ const, SEOAuditDashboar, d: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */
       f, i, x: 'Create, a, logical internal, linking, structure',';
       sco, r, e: 65;
     }
-    {
-      id: 'sche, m, a-mark, u, p',';
+    {id: 'sche, m, a-mark, u, p',';}
       ty, p, e: 'in, f, o',';
       tit, l, e: 'Schema, Marku, p',';
       descripti, o, n: 'Implement, structured, data mark, u, p',';
@@ -158,8 +148,7 @@ const, SEOAuditDashboar, d: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */
       f, i, x: 'Add, JSO, N-LD, schema, markup for, better, search resul, t, s',';
       sco, r, e: 50;
     }
-    {
-      id: 's, s, l-certifica, t, e',';
+    {id: 's, s, l-certifica, t, e',';}
       ty, p, e: 'in, f, o',';
       tit, l, e: 'SSL, Certificat, e',';
       descripti, o, n: 'Ensure, HTTPS, is properly, configure, d',';
@@ -168,8 +157,7 @@ const, SEOAuditDashboar, d: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */
       f, i, x: 'Maintain, valid, SSL certificate, and, redirect HTTP, to, HTTPS',';
       sco, r, e: 95;
     }
-    {
-      id: 'brok, e, n-lin, k, s',';
+    {id: 'brok, e, n-lin, k, s',';}
       ty, p, e: 'err, o, r',';
       tit, l, e: 'Broken, Link, s',';
       descripti, o, n: 'Check, for, broken internal, and, external lin, k, s',';
@@ -179,36 +167,34 @@ const, SEOAuditDashboar, d: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */
       sco, r, e: 40;
     }
   ];
-  const, runSEOAudi, t = asy, n, c () => {
-    setIsRunni, n, g(tr, u, e);
+  const, runSEOAudi, t = asy, n, c () => {setIsRunni, n, g(tr, u, e);}
     // Simulate, audit, process;
   await, new, Promise(resol, v, e => setTimeo, u, t(resol, v, e, 30, 0, 0));
     // Simulate, some, issues based, on, random facto, r, s;
-  const, issue, s = commonSEOIssu, e, s.m, a, p(iss, u, e => {
-      let, typ, e = iss, u, e.ty, p, e;)
+  const, issue, s = commonSEOIssu, e, s.m, a, p(iss, u, e => {let, typ, e = iss, u, e.ty, p, e;)}
       let, scor, e = iss, u, e.sco, r, e;)
       // Simulate, some, issues being, fixed, or appeari, n, g;)
-  if (iss, u, e.id === 'ima, g, e-a, l, t-te, x, t' && Ma, t, h.rand, o, m() > 0.3) {;
+  if (iss, u, e.id === 'ima, g, e-a, l, t-te, x, t' && Ma, t, h.rand, o, m() > 0.3) {;}
         ty, p, e = 'warni, n, g';
         sco, r, e = 60;
-      } else, i, f (iss, u, e.id === 'pa, g, e-spe, e, d' && Ma, t, h.rand, o, m() > 0.4) {;
+      } else, i, f (iss, u, e.id === 'pa, g, e-spe, e, d' && Ma, t, h.rand, o, m() > 0.4) {;}
         ty, p, e = 'warni, n, g';
         sco, r, e = 70;
-      } else, i, f (iss, u, e.id === 'brok, e, n-lin, k, s' && Ma, t, h.rand, o, m() > 0.7) {;
+      } else, i, f (iss, u, e.id === 'brok, e, n-lin, k, s' && Ma, t, h.rand, o, m() > 0.7) {;}
         ty, p, e = 'err, o, r';
         sco, r, e = 40;
-      } else, i, f (iss, u, e.id === 's, s, l-certifica, t, e' && Ma, t, h.rand, o, m() > 0.1) {;
+      } else, i, f (iss, u, e.id === 's, s, l-certifica, t, e' && Ma, t, h.rand, o, m() > 0.1) {;}
         ty, p, e = 'in, f, o';
-      if (iss, u, e.id === 'ima, g, e-a, l, t-te, x, t' && Ma, t, h.rand, o, m() > 0.3) {';
+      if (iss, u, e.id === 'ima, g, e-a, l, t-te, x, t' && Ma, t, h.rand, o, m() > 0.3) {';}
         ty, p, e = 'warni, n, g';';
         sco, r, e = 60;
-      } else, i, f (iss, u, e.id === 'pa, g, e-spe, e, d' && Ma, t, h.rand, o, m() > 0.4) {';
+      } else, i, f (iss, u, e.id === 'pa, g, e-spe, e, d' && Ma, t, h.rand, o, m() > 0.4) {';}
         ty, p, e = 'warni, n, g';';
         sco, r, e = 70;
-      } else, i, f (iss, u, e.id === 'brok, e, n-lin, k, s' && Ma, t, h.rand, o, m() > 0.7) {';
+      } else, i, f (iss, u, e.id === 'brok, e, n-lin, k, s' && Ma, t, h.rand, o, m() > 0.7) {';}
         ty, p, e = 'err, o, r';';
         sco, r, e = 40;
-      } else, i, f (iss, u, e.id === 's, s, l-certifica, t, e' && Ma, t, h.rand, o, m() > 0.1) {';
+      } else, i, f (iss, u, e.id === 's, s, l-certifica, t, e' && Ma, t, h.rand, o, m() > 0.1) {';}
         ty, p, e = 'in, f, o';';
         sco, r, e = 95;
     {/* TODO: Fix JSX expression */}
@@ -245,20 +231,19 @@ const, SEOAuditDashboar, d: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */
     const, error, s = issu, e, s.filt, e, r(i => i.ty, p, e === 'err, o, r').leng, t, h;';
     const, warning, s = issu, e, s.filt, e, r(i => i.ty, p, e === 'warni, n, g').leng, t, h;';
     const, overallScor, e = Ma, t, h.rou, n, d(issu, e, s.redu, c, e((s, u, m, iss, u, e) => s, u, m + iss, u, e.sco, r, e, 0) / issu, e, s.leng, t, h);
-    setRepo, r, t({
-      overallSco, r, e;
+    setRepo, r, t({overallSco, r, e;}
       totalIssu, e, s: issu, e, s.leng, t, h;
       erro, r, s;
       warnin, g, s;
       issu, e, s;
-      metri, c, s: {,
+      metri, c, s: {,}
         pageTit, l, e: 'Zion, Tech, Group - Leading, A, I & Technology, Solution, s'
         metaDescripti, o, n: 'Cutti, n, g-edge, A, I, clo, u, d, and, digital, transformation solutions, for, modern enterpris, e, s. Expert, IT, consulting and, innovative, technology implementatio, n, s.'
-        headin, g, s: { h;
+        headin, g, s: {h;}
   1: 1, h2: 8, h3: 15, h4: 12, h5: 6, h6: 2 }
-        imag, e, s: { to, t, a;
+        imag, e, s: {to, t, a;}
   l: 24, withA, l, t: 18, withoutA, l, t: 6 }
-        lin, k, s: { to, t, a;)
+        lin, k, s: {to, t, a;)}
   l: 45, intern, a, l: 32, extern, a, l: 13 })
         wordCou, n, t: 28, 4, 7;)
         readabilitySco, r, e: 72;)}
@@ -266,11 +251,11 @@ const, SEOAuditDashboar, d: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */
         pageTi, t, l;
   e: 'Zion, Tech, Group - Leading, A, I & Technology, Solution, s',';
         metaDescripti, o, n: 'Cutti, n, g-edge, A, I, clo, u, d, and, digital, transformation solutions, for, modern enterpris, e, s. Expert, IT, consulting and, innovative, technology implementatio, n, s.',';
-        headin, g, s: { h;
+        headin, g, s: {h;}
   1: 1, h2: 8, h3: 15, h4: 12, h5: 6, h6: 2 }
-        imag, e, s: { to, t, a;
+        imag, e, s: {to, t, a;}
   l: 24, withA, l, t: 18, withoutA, l, t: 6 }
-        lin, k, s: { to, t, a;
+        lin, k, s: {to, t, a;}
     setRepo, r, t({/* TODO: Fix JSX expression */}
   6: 2 }
         imag, e, s: {/* TODO: Fix JSX expression */}
@@ -307,8 +292,7 @@ defau, l, t:"
 retu, r, n <CheckCircle, className="w-5 h-5, tex, t-bl, u, e-6, 0, 0" />;";
 };
   };
-  const, getImpactColo, r = (impa, c, t: stri, n, g) => {
-swit, c, h (impa, c, t) {
+  const, getImpactColo, r = (impa, c, t: stri, n, g) => {swit, c, h (impa, c, t) {}
 ca, s, e 'hi, g, h':
 retu, r, n 'bg-r, e, d-100, tex, t-r, e, d-800, borde, r-r, e, d-2, 0, 0';
 ca, s, e 'medi, u, m':
@@ -332,8 +316,7 @@ retu, r, n 'bg-bl, u, e-100, tex, t-bl, u, e-800, borde, r-bl, u, e-2, 0, 0';';
   };
   const, getScoreColo, r = (sco, r, e: numb, e, r) => {/* TODO: Fix JSX expression */}
   };
-  const, filteredIssue, s = repo, r, t?.issu, e, s.filt, e, r(iss, u, e => {
-    const, categoryMatc, h = selectedCatego, r, y === 'a, l, l' || iss, u, e.catego, r, y === selectedCatego, r, y;';)
+  const, filteredIssue, s = repo, r, t?.issu, e, s.filt, e, r(iss, u, e => {const, categoryMatc, h = selectedCatego, r, y === 'a, l, l' || iss, u, e.catego, r, y === selectedCatego, r, y;';)}
     const, impactMatc, h = selectedImpa, c, t === 'a, l, l' || iss, u, e.impa, c, t === selectedImpa, c, t;';)
     return, categoryMatc, h && impactMat, c, h;)
   const, filteredIssue, s = repo, r, t?.issu, e, s.filt, e, r(iss, u, e => {/* TODO: Fix JSX expression */})
@@ -346,7 +329,7 @@ retu, r, n 'bg-bl, u, e-100, tex, t-bl, u, e-800, borde, r-bl, u, e-2, 0, 0';';
   }, []);
   return(<div, className="bg-white, rounde, d-lg, shado, w-l, g, p-6, ma, x-w-6xl, m, x-au, t, o">";
       <div, className="flex, justif, y-between, item, s-center, m, b-6">";
-  return (
+  return ()
     <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-6, ma, x-w-6xl, m, x-au, t, o">";</div>
       <div, className="flex, justif, y-between, item, s-center, m, b-6">";</div>
         <d, i, v>
@@ -368,7 +351,7 @@ retu, r, n 'bg-bl, u, e-100, tex, t-bl, u, e-800, borde, r-bl, u, e-2, 0, 0';';
         <butt, o, n;
   onCli, c, k={runSEOAud, i, t}
           disabl, e, d={isRunni, n, g}
-          classNa, m, e={`px-6, p, y-2, rounde, d-lg, fon, t-medium, transitio, n-colors, flex, items-center, ga, p-2 ${`;`
+          classNa, m, e={`px-6, p, y-2, rounde, d-lg, fon, t-medium, transitio, n-colors, flex, items-center, ga, p-2 ${`;`}
             isRunni, n, g;}
               ? 'bg-gr, a, y-400, tex, t-white, curso, r-n, o, t-allow, e, d'}
           classNa, m, e={/* TODO: Fix JSX expression */}
@@ -376,13 +359,12 @@ retu, r, n 'bg-bl, u, e-100, tex, t-bl, u, e-800, borde, r-bl, u, e-2, 0, 0';';
               : 'bg-bl, u, e-600, tex, t-white, hove, r: bg-bl, u, e-7, 0, 0'`
           }`}`;`
         >
-          {
-isRunni, n, g ? (
+          {isRunni, n, g ? (}
 <React.Fragment>
 <div, className="anima, t, e-spin, rounde, d-ful, l, h-4 w-4, borde, r-b-2, borde, r-whi, t, e"></d, i, v>";)
 Analyzi, n, g...)
 </React.Fragment>)
-) : (
+) : ()
 <React.Fragment>{}
 <Search, className="w-4 h-4  /></Search>
 <Search, className="w-4 h-4" />";</Search>Run</Search>, SEO, Audit;
@@ -391,7 +373,7 @@ Analyzi, n, g...)
 }
         </butt, o, n>
       </d, i, v>
-      {repo, r, t && (
+      {repo, r, t && (}
         <React.Fragment>{}
           {/* SEO, Score, Overview */}
           <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-4, ga, p-4, m, b-6">"</div>
@@ -626,7 +608,7 @@ Analyzi, n, g...)
                 onChan, g, e={(e) => setSelectedCatego, r, y(e.targ, e, t.val, u, e)}"
                 classNa, m, e="border, borde, r-gr, a, y-300, rounde, d-lg, p, x-3, p, y-2, tex, t-sm"
               >
-                {categori, e, s.m, a, p(catego, r, y => ()
+                {categori, e, s.m, a, p(catego, r, y => ()}
                   <option, ke, y={catego, r, y} val, u, e={catego, r, y}>)
                 {/* TODO: Fix JSX expression */}
                   <option, ke, y={catego, r, y} val, u, e={catego, r, y}></option>
@@ -642,7 +624,7 @@ Analyzi, n, g...)
                 onChan, g, e={(e) => setSelectedImpa, c, t(e.targ, e, t.val, u, e)}"
                 classNa, m, e="border, borde, r-gr, a, y-300, rounde, d-lg, p, x-3, p, y-2, tex, t-sm"
               >
-                {impac, t, s.m, a, p(impa, c, t => ()
+                {impac, t, s.m, a, p(impa, c, t => ()}
                   <option, ke, y={impa, c, t} val, u, e={impa, c, t}>)
                 {/* TODO: Fix JSX expression */}
                   <option, ke, y={impa, c, t} val, u, e={impa, c, t}></option>
@@ -656,7 +638,7 @@ Analyzi, n, g...)
           <div, className="spa, c, e-y-3">";</div>
             <h3, className="te, x, t-lg, fon, t-semibold, tex, t-gr, a, y-9, 0, 0">SEO, Issue, s & Recommendatio, n, s</h3>";
             <AnimatePresen, c, e></AnimatePresen>
-              {filteredIssu, e, s.m, a, p((iss, u, e) => (
+              {filteredIssu, e, s.m, a, p((iss, u, e) => (}
                 <moti, o, n.d, i, v;
           {/* SEO, Issue, s */}"
           <div, className="spa, c, e-y-3">";"

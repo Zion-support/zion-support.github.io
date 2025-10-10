@@ -4,14 +4,12 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { CheckCircle, Star, ArrowRight, Phone, Mail } from 'lucide-react';
 
-const PricingPage: React.FC = () => {
-  const pricingPlans = [
-    {
-      name: 'Starter',
+const PricingPage: React.FC = () => {const pricingPlans = [}
+    {name: 'Starter',}
       price: '$2,999',
       period: '/month',
       description: 'Perfect for small businesses getting started with AI',
-      features: [
+      features: []
         'Basic AI consultation',
         'Up to 5 AI models',
         'Email support',
@@ -22,12 +20,11 @@ const PricingPage: React.FC = () => {
       popular: false,
       cta: 'Get Started'
     },
-    {
-      name: 'Professional',
+    {name: 'Professional',}
       price: '$7,999',
       period: '/month',
       description: 'Ideal for growing businesses with advanced AI needs',
-      features: [
+      features: []
         'Advanced AI consultation',
         'Up to 20 AI models',
         'Priority support',
@@ -40,12 +37,11 @@ const PricingPage: React.FC = () => {
       popular: true,
       cta: 'Get Started'
     },
-    {
-      name: 'Enterprise',
+    {name: 'Enterprise',}
       price: 'Custom',
       period: '',
       description: 'Tailored solutions for large organizations',
-      features: [
+      features: []
         'Unlimited AI consultation',
         'Unlimited AI models',
         '24/7 dedicated support',
@@ -62,7 +58,7 @@ const PricingPage: React.FC = () => {
     }
   ];
 
-  return (
+  return ()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Pricing - Zion Tech Group | AI & IT Solutions</title>
@@ -93,14 +89,14 @@ const PricingPage: React.FC = () => {
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
+            {pricingPlans.map((plan, index) => (}
               <div
                 key={index}
-                className={`relative bg-white/10 backdrop-blur-sm rounded-2xl p-8 ${
+                className={`relative bg-white/10 backdrop-blur-sm rounded-2xl p-8 ${}
                   plan.popular ? 'border-2 border-cyan-500' : 'border border-cyan-500/20'
                 }`}
               >
-                {plan.popular && (
+                {plan.popular && (}
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <div className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center">
                       <Star className="w-4 h-4 mr-1" />
@@ -119,7 +115,7 @@ const PricingPage: React.FC = () => {
                 </div>
 
                 <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
+                  {plan.features.map((feature, featureIndex) => (}
                     <li key={featureIndex} className="flex items-start">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" />
                       <span className="text-gray-300">{feature}</span>
@@ -128,7 +124,7 @@ const PricingPage: React.FC = () => {
                 </ul>
 
                 <div className="text-center">
-                  {plan.name === 'Enterprise' ? (
+                  {plan.name === 'Enterprise' ? (}
                     <Link
                       to="/contact"
                       className="w-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold py-3 px-6 rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center space-x-2"
@@ -136,10 +132,10 @@ const PricingPage: React.FC = () => {
                       <Phone className="w-5 h-5" />
                       <span>Contact Sales</span>
                     </Link>
-                  ) : (
+                  ) : ()
                     <Link
                       to="/contact"
-                      className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center space-x-2 ${
+                      className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center space-x-2 ${}
                         plan.popular
                           ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white hover:from-cyan-600 hover:to-purple-600'
                           : 'border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white'
@@ -210,4 +206,4 @@ const PricingPage: React.FC = () => {
   );
 };
 
-export default PricingPage;
+export default PricingPage

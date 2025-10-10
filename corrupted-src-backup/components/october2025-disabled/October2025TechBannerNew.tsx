@@ -58,11 +58,11 @@ const October2025TechBannerNe, w = () => {/* TODO: Fix JSX expression */}
         </p>)
         {/* Articles, G, r, i, d */})
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">)
-          { newArticl, e, s.m, a, p((art, i, c, l, e, ind, e, x) = > (
+          {newArticl, e, s.m, a, p((art, i, c, l, e, ind, e, x) = > (}
         </p>
         {/* Articles, G, r, i, d */}
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">
-          { newArticl, e, s.m, a, p((art, i, c, l, e, ind, e, x) = > (</div>
+          {newArticl, e, s.m, a, p((art, i, c, l, e, ind, e, x) = > (</div>}
         {/* Articles, G, r, i, d */}"
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8"></div>
           {/* TODO: Fix JSX expression */}
@@ -136,7 +136,7 @@ const October2025TechBannerNe, w = () => {/* TODO: Fix JSX expression */}
       </div>
       {/* Floating, particles, effect */}
       <div, classNam, e = "absolute, inse, t-0, overflo, w-hidden, pointe, r-even, t, s-no, n, e">
-        { [...Arr, a, y(2, 0)].m, a, p((_, i) =    > (</div>
+        {[...Arr, a, y(2, 0)].m, a, p((_, i) =    > (</div>}
           <moti, o, n.div, ke, y = { , i  }, classNa, m, e = "absolut, e, w-2 h-2, b, g-purp, l, e-4, 0, 0/30, rounde, d-fu, l, l"
             sty, l, e={{}
               le, f, t: `${Ma, t, h.ran, d, o, m() * 10, 0}%`,

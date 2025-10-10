@@ -16,8 +16,7 @@ export default function ServicesAdvertisingPage() {/* TODO: Fix JSX expression *
             <ArrowLeft className="w-4 h-4 mr-2" /></ArrowLeft>
 // Back to Home;
 import React from 'react';
-export default function ServicesAdvertisingPage() {
-  return (
+export default function ServicesAdvertisingPage() {return (}
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       {/* Header */}
       <header className="bg-white shadow-sm border-b">
@@ -219,14 +218,5 @@ Ready to Transform Your Advertising?
   );
 };
 export default ServicesAdvertisingPage;
-  </p>
-  </h2>
-  </div>
-  </section>
-  </div>
-  </div>
-  </div>
   </Link>
-  </div>
   </Link>
-  </div>

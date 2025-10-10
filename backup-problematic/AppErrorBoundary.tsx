@@ -1,13 +1,12 @@
 import React, { Component, type ErrorInfo, type ReactNode } from 'react';
 interface ErrorFallbackProps {/* TODO: Fix JSX expression */}
 }
-function ErrorFallback({ error, resetError }: ErrorFallbackProps) {
-  return(<div className="min-h-screen flex items-center justify-center bg-gray-50">
+function ErrorFallback({ error, resetError }: ErrorFallbackProps) {return(<div className="min-h-screen flex items-center justify-center bg-gray-50">}
       <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
         <div className="flex items-center mb-4">
           <div className="flex-shrink-0">
             <svg;
-  return (
+  return ()
     <div className="min-h-screen flex items-center justify-center bg-gray-50"></div>
       <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6"></div>
         <div className="flex items-center mb-4"></div>
@@ -95,16 +94,15 @@ interface AppErrorBoundaryProps {/* TODO: Fix JSX expression */}
 }
 interface AppErrorBoundaryState {/* TODO: Fix JSX expression */}
 }
-export class AppErrorBoundary extends Component<AppErrorBoundaryProps, AppErrorBoundaryState> {
-  constructor(props: AppErrorBoundaryProps) {,
+export class AppErrorBoundary extends Component<AppErrorBoundaryProps, AppErrorBoundaryState> {constructor(props: AppErrorBoundaryProps) {,}
     super(props);
     this.state = { hasError: false, error: undefined };
   }
-  static getDerivedStateFromError(error: Error): AppErrorBoundaryState {,
+  static getDerivedStateFromError(error: Error): AppErrorBoundaryState {,}
     return { hasError: true, error };
   }
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {,
-    if (process.env['NODE_ENV'] === 'development') {,
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {,}
+    if (process.env['NODE_ENV'] === 'development') {,}
       // console.error('Error caught by boundary:', error, errorInfo);
 export class AppErrorBoundary extends Component<AppErrorBoundaryProps, AppErrorBoundaryState> {/* TODO: Fix JSX expression */}
   r: undefined };

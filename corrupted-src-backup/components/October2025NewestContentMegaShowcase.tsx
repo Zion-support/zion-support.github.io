@@ -18,7 +18,7 @@ export, default, function October2025NewestContentMegaShowca, s, e(): vo, i, d {
       <div, className="absolute, inse, t-0">";
         <div, className="absolute, inse, t-0, b, g-[line, a, r-gradie, n, t(to_rig, h, t,#4f4f4f2e_1, p, x,transparent_1, p, x),line, a, r-gradie, n, t(to_bott, o, m,#4f4f4f2e_1, p, x,transparent_1, p, x)] bg-[si, z, e: 64px_64, p, x]" />";
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" />";
-  return (
+  return ()
     <section, className="relative, p, y-24, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-9, 0, 0/20, t, o-sla, t, e-900, overflo, w-hidd, e, n">";
       {/* Animated, Backgroun, d */}
       <div, className="absolute, inse, t-0"></section>
@@ -102,9 +102,9 @@ export, default, function October2025NewestContentMegaShowca, s, e(): vo, i, d {
         {/* Content, Gri, d */}
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12">"</div>
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12">";
-          {newConte, n, t.m, a, p((it, e, m, ind, e, x) => (
+          {newConte, n, t.m, a, p((it, e, m, ind, e, x) => (}
             <Li, n, k;
-          {newConte, n, t.m, a, p((it, e, m, ind, e, x) => (</div>
+          {newConte, n, t.m, a, p((it, e, m, ind, e, x) => (</div>}
             <Li, n, k
   k, e, y={ind, e, x}
               to={it, e, m.li, n, k}

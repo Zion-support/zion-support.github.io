@@ -291,7 +291,7 @@ const memory =
       if (_cleanup) _cleanup();
       clearInterval(interval);
     };
-  }, [
+  }, []
   // TOD,
   O: Add items]
 //     enableRealTimeMonitoring,

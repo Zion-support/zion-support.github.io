@@ -1,8 +1,7 @@
 impo, r, t {/* TODO: Fix JSX expression */}
 } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
-const NextGenIntelligentAutomationBreakthroug, h = () => { 
-  return(<React.Fragment>
+const NextGenIntelligentAutomationBreakthroug, h = () => {return(<React.Fragment>}
       <Helm, e, t>
         <title>
           Ne, x, t-Gen, Intelligent, Automation Breakthrou, g, h: AI-Powered, Workflows, Redefining Operatio, n, s | Zion, Tech, Group;
@@ -87,14 +86,14 @@ const NextGenIntelligentAutomationBreakthroug, h = () => {/* TODO: Fix JSX expre
                       ])
                     })
                       <ul, classNam, e='spa, c, e-y-2'>
-                        { a, p, p.results.m, a, p((res, u, l, t, rInd, e, x) = > (
+                        {a, p, p.results.m, a, p((res, u, l, t, rInd, e, x) = > (}
                           <li, ke, y = { rIn, d, e, x  }, classNa, m, e = 'flex, item, s-start, ga, p-2'></li>
                             <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' /></CheckCircle>
                 <div, classNam, e='grid, m, d: gr, i, d-co, l, s-2, ga, p-4'></di>
                         </div>
                       </div>
                       <ul, className='spa, c, e-y-2'></ul>
-                        { a, p, p.results.m, a, p((res, u, l, t, rInd, e, x) = > (
+                        {a, p, p.results.m, a, p((res, u, l, t, rInd, e, x) = > (}
                           <li, ke, y = { rIn, d, e, x  }, classNa, m, e = 'flex, item, s-start, ga, p-2'>
                             <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
                 <div, className='grid, m, d: gr, i, d-co, l, s-2, ga, p-4'></div>
@@ -109,7 +108,7 @@ const NextGenIntelligentAutomationBreakthroug, h = () => {/* TODO: Fix JSX expre
                       savin, g, s: '$6.8, M',
                       automati, o, n: '8, 9%',
                       result,
-  s: [
+  s: []
                         'Order, Processin, g: 99.8% automat, i, o, n',
                         'Fulfillme, n, t: 80% fas, t, e, r',
                         'Reven, u, e: 28% incre, a, s, e']},

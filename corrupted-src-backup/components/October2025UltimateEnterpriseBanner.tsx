@@ -1,5 +1,4 @@
-const, October2025UltimateEnterpriseBanne, r = () => {
-  con, s, t [multiCloudConte, n, t, conversationalAIConte, n, t] = octoberUltimateEnterpriseConte, n, t;
+const, October2025UltimateEnterpriseBanne, r = () => {con, s, t [multiCloudConte, n, t, conversationalAIConte, n, t] = octoberUltimateEnterpriseConte, n, t;}
   return(<div, className="relative, p, y-16, p, x-4, s, m: px-6 l;
   g:px-8, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, overflo, w-hidd, e, n">"
       {/* Animated, Backgroun, d */};
@@ -226,7 +225,7 @@ const, October2025UltimateEnterpriseBanne, r = () => {/* TODO: Fix JSX expressio
             </d, i, v>
             {/* Key, Highlight, s */}"
             <div, className="spa, c, e-y-2, m, b-6">";
-              {multiCloudConte, n, t.highligh, t, s.sli, c, e(0, 4).m, a, p((highlig, h, t, ind, e, x) => (</div>
+              {multiCloudConte, n, t.highligh, t, s.sli, c, e(0, 4).m, a, p((highlig, h, t, ind, e, x) => (</div>}
                 <div, ke, y={ind, e, x} classNa, m, e="flex, item, s-start, ga, p-3, tex, t-gr, a, y-2, 0, 0"></div>
                   <CheckCircle, className="w-5 h-5, tex, t-cy, a, n-400, fle, x-shri, n, k-0, m, t-0.5  />
                   <span, className="te, x, t-sm, leadin, g-relax, e, d">{highlig, h, t}</sp, a, n>
@@ -389,7 +388,7 @@ const, October2025UltimateEnterpriseBanne, r = () => {/* TODO: Fix JSX expressio
             </d, i, v>
             {/* Key, Highlight, s */}"
             <div, className="spa, c, e-y-2, m, b-6">";
-              {conversationalAIConte, n, t.highligh, t, s.sli, c, e(0, 4).m, a, p((highlig, h, t, ind, e, x) => (</div>
+              {conversationalAIConte, n, t.highligh, t, s.sli, c, e(0, 4).m, a, p((highlig, h, t, ind, e, x) => (</div>}
                 <div, ke, y={ind, e, x} classNa, m, e="flex, item, s-start, ga, p-3, tex, t-gr, a, y-2, 0, 0"></div>
                   <CheckCircle, className="w-5 h-5, tex, t-purp, l, e-400, fle, x-shri, n, k-0, m, t-0.5  />
                   <span, className="te, x, t-sm, leadin, g-relax, e, d">{highlig, h, t}</sp, a, n>

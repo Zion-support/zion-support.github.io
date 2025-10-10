@@ -4,8 +4,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-const SignupPage: React.FC = () => {
-  const [formData, setFormData] = useState({
+const SignupPage: React.FC = () => {const [formData, setFormData] = useState({}
     firstName: '',
     lastName: '',
     email: '',
@@ -19,30 +18,25 @@ const SignupPage: React.FC = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {}
     const { name, value, type, checked } = e.target;
-    setFormData(prev => ({
-      ...prev,
+    setFormData(prev => ({...prev,}
       [name]: type === 'checkbox' ? checked : value
     }));
   };
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (formData.password !== formData.confirmPassword) {
-      alert('Passwords do not match');
+  const handleSubmit = async (e: React.FormEvent) => {e.preventDefault();}
+    if (formData.password !== formData.confirmPassword) {alert('Passwords do not match');}
       return;
     }
-    if (!formData.agreeToTerms) {
-      alert('Please agree to the terms and conditions');
+    if (!formData.agreeToTerms) {alert('Please agree to the terms and conditions');}
     setIsLoading(true);
     // Simulate signup process
     await new Promise(resolve => setTimeout(resolve, 2000));
     setIsLoading(false);
     // Redirect to dashboard or home page
     window.location.href = '/';
-  const features = [
-    {
-      icon: Shield,
+  const features = []
+    {icon: Shield,}
       title: 'Enterprise Security',
       description:     ,
 $4},
@@ -53,14 +47,14 @@ icon$5: Globe,
       title: 'Global Support',
       description:   ,
 $4];
-  const benefits = [
+  const benefits = []
     'Free 14-day trial',
     'No setup fees',
     '24/7 expert support',
     'Custom integrations',
     'Scalable solutions',
     'Regular updates'
-  return (
+  return ()
     <React.Fragment>
     <div>Coming Soon</div>
   );
@@ -120,7 +114,7 @@ const handleInputChange = (e: React.ChangeEvent;)
     setIsLoading(false);
     // Redirect to dashboard or home page;
     window.location.href = '/';
-  const features = [
+  const features = []
   // TOD,
   O: Add items;
 ];;
@@ -137,8 +131,7 @@ const handleInputChange = (e: React.ChangeEvent;)
 icon: Award,
       title: 'Proven Results',
       description: '300% average ROI and 95% process automation for our clients',
-const PagePage: React.FC = () => {
-  return (
+const PagePage: React.FC = () => {return (}
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center py-12">
@@ -147,12 +140,8 @@ const PagePage: React.FC = () => {
             {/* Left Side - Signup Form */}
             <div className="bg-slate-800/50 rounded-2xl p-8 border border-gray-700/50">
               <div className="text-center mb-8">
-                <h1 className="text-3xl font-bold text-white mb-2 neon-text">
-                  Create Your Account;
-  </
-                <p className="text-gray-300">
-                  Join thousands of businesses transforming with AI and IT solutions;
-  </
+                <h1 className="text-3xl font-bold text-white mb-2 neon-text">Create Your Account;
+                <p className="text-gray-300">Join thousands of businesses transforming with AI and IT solutions;
               </div>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -283,9 +272,7 @@ Confirm Password;
                         Terms of Service;
   </{' '}
                       and{' '}
-                      <a href="/privacy" className="text-cyan-400 hover:text-cyan-300">
-                        Privacy Policy;
-  </
+                      <a href="/privacy" className="text-cyan-400 hover:text-cyan-300">Privacy Policy;
                     </span>
                       name="subscribeNewsletter"
                       checked={formData.subscribeNewsletter}
@@ -293,11 +280,11 @@ Confirm Password;
                   type="submit"
                   disabled={isLoading}
                   className="w-full cyber-button py-3 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
-                  {isLoading ? (
+                  {isLoading ? (}
                     <div className="flex items-center justify-center">
                       <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
                       Creating Account...
-                  ) : (
+                  ) : ()
                     'Create Account'
                   )}
               </form>
@@ -309,14 +296,12 @@ Confirm Password;
                     Sign in here
             {/* Right Side - Features and Benefits */}
             <div className="space-y-8">
-                <h2 className="text-3xl font-bold text-white mb-4 neon-text">
-                  Transform Your Business Today;
-  </
+                <h2 className="text-3xl font-bold text-white mb-4 neon-text">Transform Your Business Today;
                 <p className="text-xl text-gray-300 mb-8">
                   Join thousands of businesses already using our AI and IT solutions 
                   to achieve unprecedented growth and efficiency.
               <div className="space-y-6">
-                {features.map((feature, index) => (
+                {features.map((feature, index) => (}
                   <div key={index} className="flex items-start">
                     <div className="w-12 h-12 bg-cyan-500/10 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
                       <feature.icon className="w-6 h-6 text-cyan-400" />
@@ -328,7 +313,7 @@ Confirm Password;
                   What You Get:
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                  {benefits.map((benefit, index) => (
+                  {benefits.map((benefit, index) => (}
                     <div key={index} className="flex items-center text-sm text-gray-300">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                       {benefit}
@@ -404,32 +389,7 @@ Join thousands of businesses already using our AI and IT solutions;
     </div>
   );
 export default SignupPage;
-  </a>
-  </div>
-  </p>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </p>
-  </div>
-  </div>
-  </div>
-  </a>
   </label>
-  </div>
-  </div>
-  </div>
   </label>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
   </HTMLInputElement>
   </HTMLInputElement>

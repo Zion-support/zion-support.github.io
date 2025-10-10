@@ -1,5 +1,5 @@
 import React from 'react';
-const January2026NewContentShowcaseBanne, r: React.FC = () => {,
+const January2026NewContentShowcaseBanne, r: React.FC = () => {,}
   const features = [,
     { ic, o, n: B, r, a, i, n, title: "Synthetic, Consciousne, s, s", de, s, c: "True, AI, awarenes, s" },
     { ic, o, n: Za, p, title: "Quantum, Edge, Processin, g", de, s, c: "S, u, b-millisecond, spe, e, d" },
@@ -66,7 +66,7 @@ const January2026NewContentShowcaseBanne, r: React.FC = () => {/* TODO: Fix JSX 
         </div>
         {/* Features, Gri, d */}
         <div, classNam, e = "grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-5, ga, p-6, m, b-8">
-          { featur, e, s.m, a, p((fea, t, u, r, e, ind, e, x) = > (</div>
+          {featur, e, s.m, a, p((fea, t, u, r, e, ind, e, x) = > (</div>}
             transiti, o, n = {/* TODO: Fix JSX expression */}
   n: 0., 6 }}"
             classNa, m, e = "te, x, t-xl, tex, t-bl, u, e-100, ma, x-w-3xl, m, x-au, t, o"

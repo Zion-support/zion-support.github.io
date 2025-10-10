@@ -1,9 +1,8 @@
-export, default, function October2025LatestAIBreakthroughsBann, e, r(): vo, i, d {
-  return(<div, className="bg-gradie, n, t-to-r, fro, m-purp, l, e-900, vi, a-indi, g, o-900, t, o-ro, s, e-900, borde, r-y, borde, r-whi, t, e/10">
+export, default, function October2025LatestAIBreakthroughsBann, e, r(): vo, i, d {return(<div, className="bg-gradie, n, t-to-r, fro, m-purp, l, e-900, vi, a-indi, g, o-900, t, o-ro, s, e-900, borde, r-y, borde, r-whi, t, e/10">}
       <div, className="container, m, x-auto, p, x-4, p, y-12">
         <div, className="te, x, t-center, m, b-8">
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, b, g-yell, o, w-5, 0, 0/20, tex, t-yell, o, w-300, rounde, d-full, tex, t-sm, fon, t-bold, m, b-4, border, border-yell, o, w-5, 0, 0/30, animat, e-pul, s, e">
-  return (
+  return ()
     <div, className="bg-gradie, n, t-to-r, fro, m-purp, l, e-900, vi, a-indi, g, o-900, t, o-ro, s, e-900, borde, r-y, borde, r-whi, t, e/10"></div>
       <div, className="container, m, x-auto, p, x-4, p, y-12"></div>
         <div, className="te, x, t-center, m, b-8"></div>
@@ -238,4 +237,3 @@ export, default, function October2025LatestAIBreakthroughsBann, e, r(): vo, i, d
   );
 export, default, function October2025LatestAIBreakthroughsBann, e, r(): vo, i, d {/* TODO: Fix JSX expression */}
 }
-;

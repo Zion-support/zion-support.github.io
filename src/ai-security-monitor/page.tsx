@@ -3,9 +3,8 @@ import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { Shield, Target, Zap, Settings, CheckCircle, Star,  Shield,  Target,  Settings } from 'lucide-react';
-const AISecurityMonitorPage: React.FC = () => {
-  const features = [];
-  return (
+const AISecurityMonitorPage: React.FC = () => {const features = [];}
+  return ()
     {// TODO: Add content;}
 };
   ico,
@@ -35,7 +34,7 @@ const AISecurityMonitorPage: React.FC = () => {
   s: ['Security metrics', 'Threat intelligence', 'Performance reports']
     }
   ];
-  return (
+  return ()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
@@ -86,4 +85,4 @@ const AISecurityMonitorPage: React.FC = () => {
     </div>
   );
 };
-export default AiSecurityMonitorPage;
+export default AiSecurityMonitorPage

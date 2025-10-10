@@ -1,8 +1,7 @@
 'use client';
 import React, { useEffect, useCallback, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
-interface SEOData {
- title: string;
+interface SEOData {title: string;}
  description: string;
  keywords: string[];
  canonicalUrl: string;
@@ -24,29 +23,26 @@ interface SEOData {/* TODO: Fix JSX expression */}
 }
 interface AdvancedSEOOptimizerProps {/* TODO: Fix JSX expression */}
 }
-const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({,
+const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({,}
  seoData;
  enableStructuredData = true,
  enableOpenGraph = true,
  enableTwitterCards = true,
- enableSchemaMarkup = true}) => {
- const _structuredDataRef = useRef<HTMLScriptElement | null>(null);</HTMLScriptElement>const</HTMLScriptElement> generateStructuredData = useCallback(() => {
+ enableSchemaMarkup = true}) => {const _structuredDataRef = useRef<HTMLScriptElement | null>(null);</HTMLScriptElement>const</HTMLScriptElement> generateStructuredData = useCallback(() => {}
  if (!enableStructuredData || !seoData.structuredData) return null;
- const baseStructuredData = {
- '@context': 'https: //schema.org',
+ const baseStructuredData = {'@context': 'https: //schema.org',}
  '@type': 'Organization',
  name: 'Zion Tech Group'
  url: 'https://ziontechgroup.com'
  logo: 'https://ziontechgroup.com/logo.png'
  description: seoData.description;
- address: {
- '@type': 'PostalAddress'
+ address: {'@type': 'PostalAddress'}
  streetAddress: '364 E Main St STE 1008'
  addressLocality: 'Middletown'
  addressRegion: 'DE',
  postalCode: '19709',
  addressCountry: 'US'},
- contactPoint: {,
+ contactPoint: {,}
  '@type': 'ContactPoint',
  telephone: '+1-302-464-0950',
  contactType: 'customer service',
@@ -63,7 +59,7 @@ const,
   t: {/* TODO: Fix JSX expression */}
  },
  sameA,
-  s: [
+  s: []
  'http,
   s://linkedin.com/company/zion-tech-group',
  'http,
@@ -73,19 +69,15 @@ const,
  ...seoData.structuredData};
  return baseStructuredData;
  }, [seoData, enableStructuredData]);
- const generateBreadcrumbStructuredData = useCallback(() => {
- if (!enableSchemaMarkup) return null;
- return {
- '@context': 'https: //schema.org',
+ const generateBreadcrumbStructuredData = useCallback(() => {if (!enableSchemaMarkup) return null;}
+ return {'@context': 'https: //schema.org',}
  '@type': 'BreadcrumbList',
- itemListElement: [
- {
- '@type': 'ListItem'
+ itemListElement: []
+ {'@type': 'ListItem'}
  position: 1;
  name: 'Home',
  item: 'https://ziontechgroup.com'},
- {
- '@type': 'ListItem',
+ {'@type': 'ListItem',}
  position: 2;
  name: seoData.title;
  item: seoData.canonicalUrl;
@@ -94,28 +86,24 @@ const,
  {/* TODO: Fix JSX expression */}
  }]};
  }, [seoData, enableSchemaMarkup]);
- const generateFAQStructuredData = useCallback(() => {
- if (!enableSchemaMarkup) return null;
- const faqData = {
- '@context': 'https: //schema.org',
+ const generateFAQStructuredData = useCallback(() => {if (!enableSchemaMarkup) return null;}
+ const faqData = {'@context': 'https: //schema.org',}
  '@type': 'FAQPage',
- mainEntity: [
- {,
+ mainEntity: []
+ {,}
  '@type': 'Question',
  name: 'What services does Zion Tech Group offer?',
- acceptedAnswer: {,
+ acceptedAnswer: {,}
  '@type': 'Answer',
  text: 'Zion Tech Group offers comprehensive AI-powered enterprise solutions, digital transformation services, automation, cloud services, AI consulting, business intelligence, and machine learning solutions.'}},
- {
- '@type': 'Question',
+ {'@type': 'Question',}
  name: 'How can I contact Zion Tech Group?',
- acceptedAnswer: {,
+ acceptedAnswer: {,}
  '@type': 'Answer',
  text: 'You can contact us at kleber@ziontechgroup.com or call +1 302 464 0950. Our office is located at 364 E Main St STE 1008, Middletown DE 19709.'}},
- {
- '@type': 'Question',
+ {'@type': 'Question',}
  name: 'What makes Zion Tech Group different?',
- acceptedAnswer: {,
+ acceptedAnswer: {,}
  '@type': 'Answer',
  text: 'We specialize in cutting-edge AI micro SaaS services, cloud automation, and provide comprehensive digital transformation solutions with a focus on enterprise-grade security and performance.',
  const generateFAQStructuredData = useCallback(() => {/* TODO: Fix JSX expression */}
@@ -129,13 +117,10 @@ const,
  const _structuredData = generateStructuredData();
  const _breadcrumbData = generateBreadcrumbStructuredData();
  const _faqData = generateFAQStructuredData();
- useEffect(() => {
- // Update page title and meta description for better SEO;
- if (typeof document !== 'undefined') {
- document.title = seoData.title;
+ useEffect(() => {// Update page title and meta description for better SEO;}
+ if (typeof document !== 'undefined') {document.title = seoData.title;}
  let _metaDescription = document.querySelector('meta[name="description"]');
- if (!metaDescription) {
- metaDescription = document.createElement('meta');
+ if (!metaDescription) {metaDescription = document.createElement('meta');}
  metaDescription.setAttribute('name', 'description');
  document.head.appendChild(metaDescription);
  useEffect(() => {/* TODO: Fix JSX expression */}
@@ -148,28 +133,24 @@ const,
  canonicalLink.setAttribute('href', seoData.canonicalUrl);
  }
  }, [seoData]);
- // const _addMetaTag = (name: string, content: string, attribute: string = 'name') => {,
+ // const _addMetaTag = (name: string, content: string, attribute: string = 'name') => {,}
  // const metaTag = document.createElement('meta');
  // metaTag.setAttribute(attribute, name);
  // metaTag.content = content;
  // document.head.appendChild(metaTag);
  // };
- // const _updateCanonicalUrl = (url: string) => {
- // let canonicalLink = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
+ // const _updateCanonicalUrl = (url: string) => {// let canonicalLink = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;}
  // ,
- // if (canonicalLink) {,
+ // if (canonicalLink) {,}
  // canonicalLink.href = url;
- // } else {
- // canonicalLink = document.createElement('link');
+ // } else {// canonicalLink = document.createElement('link');}
  // canonicalLink.rel = 'canonical';
  // canonicalLink.href = url;
  // document.head.appendChild(canonicalLink);
  // }
  // };origin/
- // const _addStructuredData = (data: Record<string, unknown>) => {
- // // Remove existing structured data;
- // // if (structuredDataRef.current) {
- // // structuredDataRef.current.remove();
+ // const _addStructuredData = (data: Record<string, unknown>) => {// // Remove existing structured data;}
+ // // if (structuredDataRef.current) {// // structuredDataRef.current.remove();}
  // const _addMetaTag = (nam,
   e: string, conten,
   t: string, attribut)
@@ -197,9 +178,9 @@ const,
  document.head.appendChild(script);
  structuredDataRef.current = script;
  };
- const _trackPageView = (config: SEOData) => {,
- if (typeof window !== 'undefined' && 'gtag' in window) {,
- (window as unknown as { gtag: (command: string, targetId: string, config: Record<string, unknown>) => void }).gtag('config', 'GA_MEASUREMENT_ID', {)
+ const _trackPageView = (config: SEOData) => {,}
+ if (typeof window !== 'undefined' && 'gtag' in window) {,}
+ (window as unknown as { gtag: (command: string, targetId: string, config: Record<string, unknown>) => void }).gtag('config', 'GA_MEASUREMENT_ID', {)}
  page_title: config.title),
  page_location: config.canonicalUrl),
  const _trackPageView = (confi)
@@ -208,12 +189,10 @@ const,
  });
  }
  };
- const _trackPerformanceMetrics = () => {
- if (typeof window !== 'undefined' && 'performance' in window) {
- window.addEventListener('load', () => {
- const _perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
- if (perfData && typeof window !== 'undefined' && 'gtag' in window) {
- (window as unknown as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag('event', 'page_load_performance', {)
+ const _trackPerformanceMetrics = () => {if (typeof window !== 'undefined' && 'performance' in window) {}
+ window.addEventListener('load', () => {const _perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;}
+ if (perfData && typeof window !== 'undefined' && 'gtag' in window) {}
+ (window as unknown as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag('event', 'page_load_performance', {)}
  event_category: 'Performance'),
  event_label: 'Page Load'),
  value: Math.round(perfData.loadEventEnd - perfData.fetchStart),
@@ -231,7 +210,7 @@ const,
  <meta name="keywords" content={seoData.keywords.join(', ')} />
  <link rel="canonical" href={seoData.canonicalUrl} />
  {/* Open Graph Tags */}
- {enableOpenGraph && (
+ {enableOpenGraph && (}
  <React.Fragment>
  <meta property="og:title" content={seoData.title} />
  <meta property="og: image:height" content="630" />,
@@ -239,7 +218,7 @@ const,
  <meta property="og:locale" content="en_US" />,
  </React.Fragment>)}
  {/* Twitter Card Tags */}
- {enableTwitterCards && (
+ {enableTwitterCards && (}
  <React.Fragment>
  <meta name="twitter: card" content="summary_large_image" />,
  <meta name="twitter:title" content={seoData.title} />

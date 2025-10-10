@@ -1,7 +1,6 @@
 impo, r, t { ArrowLe, f, t, Bra, i, n, Sear, c, h, Trending, U, p, Z, a, p } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
-export default function CognitiveSearchEnterprise20, 2, 5() { 
-  return(:src/pages/blog/ai-2025-oct-cognitive-search-enterprise/page.tsx;
+export default function CognitiveSearchEnterprise20, 2, 5() {return(:src/pages/blog/ai-2025-oct-cognitive-search-enterprise/page.tsx;}
     <React.Fragment>
       <Helm, e, t>
         <title>
@@ -203,7 +202,6 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
                   <span></span><strong>$124M+ Productivity: </strong> Employees save 8.5 hours weekly finding information</span>,
                 </li>
               </ul>
-  </section>
             <section className="mb-12">
               <h2 className="text-3xl font-bold mb-6 text-indigo-300">The Enterprise Knowledge Problem</h2>
               <p className="text-gray-300 mb-4 leading-relaxed">,
@@ -246,7 +244,6 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
                   <li>Multi</li>-lingual support across 95+ languages with cross-lingual retrieval</li>
                   <li>Query</li> expansion automatically includes related terms and concepts</li>
                 </ul>
-  </div>
               <div></div>
                 <h3 className="text-2xl font-bold mb-4 text-purple-300">2. Hybrid Retrieval System</h3>
                 <p className="text-gray-300 mb-4">"
@@ -258,7 +255,6 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
                   <li>Knowledge</li> graph enrichment surfaces implicit relationships</li>
                   <li>Temporal</li> relevance boosts recent and frequently accessed content</li>
                 </ul>
-  </div>
               <div></div>
                 <h3 className="text-2xl font-bold mb-4 text-purple-300">3. AI-Powered Answer Generation</h3>
                 <p className="text-gray-300 mb-4">"
@@ -270,7 +266,6 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
                   <li>Fact</li> verification cross-references claims against source material</li>
                   <li>Follow</li>-up question handling maintains conversational context</li>
                 </ul>
-  </div>
               <div></div>
                 <h3 className="text-2xl font-bold mb-4 text-purple-300">4. Continuous Learning Engine</h3>
                 <p className="text-gray-300 mb-4">"
@@ -282,7 +277,6 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
                   <li>Query</li> understanding learns from successful searches</li>
                   <li>Personalization</li> adapts results to role and expertise level</li>
                 </ul>
-  </div>
             </section>
             <section className="mb-12">
               <h2 className="text-3xl font-bold mb-6 text-indigo-300">Enterprise Deployment Success</h2>"
@@ -306,8 +300,6 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
                     <li >• $67 M saved from improved efficiency</li>
                     <li >• HIPAA-compliant with full audit trails</li>
                   </ul>
-  </div>
-  </div>
             </section>
             <section className="mb-12">
               <h2 className="text-3xl font-bold mb-6 text-indigo-300">Advanced Capabilities</h2>"
@@ -336,7 +328,6 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
   Search across text, images, videos, and audio with unified interfaces. Find charts in presentations;
                     quotes in recorded meetings, or technical diagrams in documentation with natural language queries.
                   </p>
-  </div>
                 <div></div>
                   <h3 className="text-xl font-bold mb-3 text-purple-300">Proactive Knowledge Delivery</h3>
                   <p className="text-gray-300">"
@@ -346,8 +337,6 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
   </div>Row</div>-level security ensures users only access information they're authorized to see. Complete audit trails '
                     track all searches and access for compliance. Sensitive data remains encrypted and on-premises if required.
                   </p>
-  </div>
-  </div>
             </section>
             <section className="mb-12">
               <h2 className="text-3xl font-bold mb-6 text-indigo-300">The Knowledge Competitive Advantage</h2>
@@ -394,12 +383,6 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
                 <Brain className="ml-2 h-5 w-5" />);
 export default function CognitiveSearchEnterprise20, 2, 5() {/* TODO: Fix JSX expression */}
 };
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
   </div>  </div>
 </article>
 </article>
@@ -449,10 +432,5 @@ export default function CognitiveSearchEnterprise20, 2, 5() {/* TODO: Fix JSX ex
 </TrendingUp>
   </Brain>
   </Brain>
-  </span>
-  </span>
-  </span>
-  </span>
-  </span>
   </Search>
   </Brain>

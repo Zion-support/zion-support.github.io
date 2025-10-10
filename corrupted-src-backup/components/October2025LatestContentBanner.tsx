@@ -1,22 +1,18 @@
-const, October2025LatestContentBanne, r = () => {
-  const, article, s = [
-    {
-      tit, l, e: "Advanced, GenAI, Orchestration Platfo, r, m","
+const, October2025LatestContentBanne, r = () => {const, article, s = [}
+    {tit, l, e: "Advanced, GenAI, Orchestration Platfo, r, m","}
       descripti, o, n: "Master, mult, i-model, coordination, and intelligent, workflow, automation at, enterprise, scale","
       ic, o, n: Bra, i, n;
       li, n, k: "/bl, o, g/ai-20, 2, 5-octob, e, r-advanc, e, d-gen, a, i-orchestrati, o, n-platfo, r, m","
       gradie, n, t: "fr, o, m-viol, e, t-600, t, o-purp, l, e-6, 0, 0"
     }
-    {
-      tit, l, e: "Enterprise, AI, Securit;
+    {tit, l, e: "Enterprise, AI, Securit;}
   y: Zero, Trust, Framework","
       descripti, o, n: "Comprehensive, security, architecture protecting, AI, models, da, t, a, and, inference, endpoints","
       ic, o, n: Shie, l, d;
       li, n, k: "/bl, o, g/ai-20, 2, 5-octob, e, r-enterpri, s, e-ai-securi, t, y-ze, r, o-tru, s, t-framewo, r, k","
       gradie, n, t: "fr, o, m-cy, a, n-600, t, o-bl, u, e-6, 0, 0"
     }
-    {
-      tit, l, e: "Re, a, l-Time, Multimodal, AI Processi, n, g","
+    {tit, l, e: "Re, a, l-Time, Multimodal, AI Processi, n, g","}
       descripti, o, n: "Revolutionary, techniques, for simultaneous, tex, t, visi, o, n, and, audio, processing in, productio, n","
       ic, o, n: Z, a, p;
       li, n, k: "/bl, o, g/ai-20, 2, 5-octob, e, r-re, a, l-ti, m, e-multimod, a, l-processi, n, g-revoluti, o, n","
@@ -26,16 +22,14 @@ const, October2025LatestContentBanne, r = () => {
       li, n, k: "/bl, o, g/ai-20, 2, 5-octob, e, r-advanc, e, d-gen, a, i-orchestrati, o, n-platfo, r, m",";
       gradie, n, t: "fr, o, m-viol, e, t-600, t, o-purp, l, e-6, 0, 0"
     }
-    {
-      tit, l, e: "Enterprise, AI, Securit;
+    {tit, l, e: "Enterprise, AI, Securit;}
   y: Zero, Trust, Framework",";
       descripti, o, n: "Comprehensive, security, architecture protecting, AI, models, da, t, a, and, inference, endpoints",";
       ic, o, n: Shie, l, d;
       li, n, k: "/bl, o, g/ai-20, 2, 5-octob, e, r-enterpri, s, e-ai-securi, t, y-ze, r, o-tru, s, t-framewo, r, k",";
       gradie, n, t: "fr, o, m-cy, a, n-600, t, o-bl, u, e-6, 0, 0"
     }
-    {
-      tit, l, e: "Re, a, l-Time, Multimodal, AI Processi, n, g",";
+    {tit, l, e: "Re, a, l-Time, Multimodal, AI Processi, n, g",";}
       descripti, o, n: "Revolutionary, techniques, for simultaneous, tex, t, visi, o, n, and, audio, processing in, productio, n",";
       ic, o, n: Z, a, p;
       li, n, k: "/bl, o, g/ai-20, 2, 5-octob, e, r-re, a, l-ti, m, e-multimod, a, l-processi, n, g-revoluti, o, n",";
@@ -96,13 +90,13 @@ const, October2025LatestContentBanne, r = () => {/* TODO: Fix JSX expression */}
         {/* Articles, Gri, d */})
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-12">")
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-12">";)
-          {articl, e, s.m, a, p((artic, l, e, i, d, x) => {
+          {articl, e, s.m, a, p((artic, l, e, i, d, x) => {}
             const, IconComponen, t = artic, l, e.ic, o, n;
             return(<Li, n, k;
         {/* Articles, Gri, d */}
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-12">"</div>
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-12">";
-          {articl, e, s.m, a, p((artic, l, e, i, d, x) => {
+          {articl, e, s.m, a, p((artic, l, e, i, d, x) => {}
             const, IconComponen, t = artic, l, e.ic, o, n;
             return (</div>
               <Li, n, k

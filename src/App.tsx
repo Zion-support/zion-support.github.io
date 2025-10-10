@@ -131,17 +131,14 @@ const BlogAIInnovationLabsProductDevelopment2025Page = lazy(() => import('./blog
 const BlogAIPoweredAutonomousBusinessProcesses2026Page = lazy(() => import('./blog/ai-powered-autonomous-business-processes-2026/page'));
 const BlogAITrends2026FutureEnterpriseTransformationPage = lazy(() => import('./blog/ai-trends-2026-future-enterprise-transformation/page'));
 // Main loading component
-const MainLoadingSpinner = () => (
+const MainLoadingSpinner = () => ()
   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
     <LoadingSpinner size="xl" text="Loading Zion Tech Group..." />
-  </div>
 );
-const App: React.FC = () => {
-  // Initialize performance monitoring
-  React.useEffect(() => {
-    performanceMonitor.reportMetrics();
+const App: React.FC = () => {// Initialize performance monitoring}
+  React.useEffect(() => {performanceMonitor.reportMetrics();}
   }, []);
-  return (
+  return ()
     <ErrorBoundary>
       <Router>
         <Suspense fallback={<MainLoadingSpinner />}>
@@ -280,4 +277,4 @@ const App: React.FC = () => {
     </ErrorBoundary>
   );
 };
-export default App;
+export default App

@@ -51,4 +51,4 @@ import performanceMonitor from './utils/performanceMonitor';
 import seoOptimizer from './utils/seoOptimizer';
 import accessibilityEnhancer from './utils/accessibilityEnhancer';
 // Styles;
-import './globals.css';
+import './globals.css'

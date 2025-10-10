@@ -8,10 +8,8 @@ impo, r, t {/* TODO: Fix JSX expression */}"
 } fr, o, m "luci, d, e-rea, c, t";';"
 import, Header, from "../../componen, t, s/Head, e, r";';"
 import, Footer, from "../../componen, t, s/Foot, e, r";';
-const, AIVirtualAssistan, t: Rea, c, t.FC = () => {
-  const, feature, s = [
-    {
-      i, c, o;
+const, AIVirtualAssistan, t: Rea, c, t.FC = () => {const, feature, s = [}
+    {i, c, o;}
   n: Bra, i, n;
       tit, l, e: "Natural, Language, Processing","
       descripti, o, n: "Advanced, NLP, capabilities that, understand, context, sentime, n, t, and, intent, with 95% accura, c, y.","
@@ -19,40 +17,35 @@ const, AIVirtualAssistan, t: Rea, c, t.FC = () => {
       descripti, o, n: "Advanced, NLP, capabilities that, understand, context, sentime, n, t, and, intent, with 95% accura, c, y.",";
       benef, i, t: "95% conversation, accuracy, rate"
     }
-    {
-      ic, o, n: MessageCirc, l, e;
+    {ic, o, n: MessageCirc, l, e;}
       tit, l, e: "Mul, t, i-Channel, Suppor, t","
       descripti, o, n: "Deploy, across, web, mobi, l, e, social, medi, a, and, voice, channels with, unified, conversation histo, r, y.","
       tit, l, e: "Mul, t, i-Channel, Suppor, t",";
       descripti, o, n: "Deploy, across, web, mobi, l, e, social, medi, a, and, voice, channels with, unified, conversation histo, r, y.",";
       benef, i, t: "Unified, customer, experience"
     }
-    {
-      ic, o, n: Languag, e, s;
+    {ic, o, n: Languag, e, s;}
       tit, l, e: "1, 2, 0+ Language, Suppor, t","
       descripti, o, n: "Re, a, l-time, translation, and multilingual, support, for global, customer, bases.","
       tit, l, e: "1, 2, 0+ Language, Suppor, t",";
       descripti, o, n: "Re, a, l-time, translation, and multilingual, support, for global, customer, bases.",";
       benef, i, t: "Global, reach, capability"
     }
-    {
-      ic, o, n: Shie, l, d;
+    {ic, o, n: Shie, l, d;}
       tit, l, e: "Enterprise, Securit, y","
       descripti, o, n: "Ba, n, k-grade, security, with e, n, d-to-end, encryptio, n, GDPR, complianc, e, and, data, privacy protecti, o, n.","
       tit, l, e: "Enterprise, Securit, y",";
       descripti, o, n: "Ba, n, k-grade, security, with e, n, d-to-end, encryptio, n, GDPR, complianc, e, and, data, privacy protecti, o, n.",";
       benef, i, t: "1, 0, 0% compliance, guarantee, d"
     }
-    {
-      ic, o, n: Clo, c, k;
+    {ic, o, n: Clo, c, k;}
       tit, l, e: "24/7, Availabilit, y","
       descripti, o, n: "Never, miss, a customer, inquiry, with rou, n, d-t, h, e-clock, intelligent, assistance.","
       tit, l, e: "24/7, Availabilit, y",";
       descripti, o, n: "Never, miss, a customer, inquiry, with rou, n, d-t, h, e-clock, intelligent, assistance.",";
       benef, i, t: "99.9% uptime, SL, A"
     }
-    {
-      ic, o, n: Use, r, s;
+    {ic, o, n: Use, r, s;}
       tit, l, e: "Human, Handof, f","
       descripti, o, n: "Seamless, escalation, to human, agents, when complex, issues, require personal, attentio, n.","
       tit, l, e: "Human, Handof, f",";
@@ -320,7 +313,7 @@ const, AIVirtualAssistan, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
             </d, i, v>
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l;
   g:gr, i, d-co, l, s-3, ga, p-8">"
-              {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {
+              {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {}
                 const, Ico, n = featu, r, e.ic, o, n;
                 return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-purp, l, e-100, rounde, d-lg, m, b-4">
@@ -335,7 +328,7 @@ const, AIVirtualAssistan, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
                       <CheckCircle, className="w-4 h-4, m, r-1  />)
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l;)
   g:gr, i, d-co, l, s-3, ga, p-8">";)
-              {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {
+              {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {}
                 const, Ico, n = featu, r, e.ic, o, n;
                 return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-purp, l, e-100, rounde, d-lg, m, b-4">";
@@ -343,7 +336,7 @@ const, AIVirtualAssistan, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
                       <CheckCircle, className="w-4 h-4, m, r-1  />
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l
   g:gr, i, d-co, l, s-3, ga, p-8"></div>";
-              {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {
+              {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {}
                 const, Ico, n = featu, r, e.ic, o, n;
                 return (</div>
                   <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";</div>

@@ -2,8 +2,7 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import {
-  Brain,
+import {Brain,}
   Cloud,
   Shield,
   Code,
@@ -30,14 +29,12 @@ import {
   Filter
 } from 'lucide-react';
 
-const ServicesPage: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
+const ServicesPage: React.FC = () => {const [searchTerm, setSearchTerm] = useState('');}
   const [selectedCategory, setSelectedCategory] = useState('all');
 
-  const services = [
+  const services = []
     // AI Services
-    {
-      id: 1,
+    {id: 1,}
       title: 'AI Solutions',
       description: 'Comprehensive artificial intelligence solutions including machine learning, natural language processing, and computer vision.',
       icon: Brain,
@@ -45,8 +42,7 @@ const ServicesPage: React.FC = () => {
       price: 'Starting at $2,999/month',
       features: ['Machine Learning Models', 'NLP Processing', 'Computer Vision', 'Predictive Analytics']
     },
-    {
-      id: 2,
+    {id: 2,}
       title: 'Cloud Computing',
       description: 'Scalable cloud infrastructure solutions for modern businesses with high availability and security.',
       icon: Cloud,
@@ -54,8 +50,7 @@ const ServicesPage: React.FC = () => {
       price: 'Starting at $1,999/month',
       features: ['AWS/Azure/GCP', 'Auto-scaling', 'Load Balancing', 'Disaster Recovery']
     },
-    {
-      id: 3,
+    {id: 3,}
       title: 'Cybersecurity',
       description: 'Advanced security solutions to protect your business from cyber threats and ensure compliance.',
       icon: Shield,
@@ -63,8 +58,7 @@ const ServicesPage: React.FC = () => {
       price: 'Starting at $3,999/month',
       features: ['Threat Detection', 'Vulnerability Assessment', 'Compliance', 'Incident Response']
     },
-    {
-      id: 4,
+    {id: 4,}
       title: 'Data Analytics',
       description: 'Transform your data into actionable insights with our advanced analytics and visualization tools.',
       icon: BarChart,
@@ -72,8 +66,7 @@ const ServicesPage: React.FC = () => {
       price: 'Starting at $2,499/month',
       features: ['Real-time Analytics', 'Data Visualization', 'Business Intelligence', 'Custom Dashboards']
     },
-    {
-      id: 5,
+    {id: 5,}
       title: 'Software Development',
       description: 'Custom software solutions tailored to your business needs with modern technologies and best practices.',
       icon: Code,
@@ -81,8 +74,7 @@ const ServicesPage: React.FC = () => {
       price: 'Starting at $4,999/month',
       features: ['Custom Applications', 'API Development', 'Mobile Apps', 'Web Development']
     },
-    {
-      id: 6,
+    {id: 6,}
       title: 'Database Services',
       description: 'Comprehensive database management and optimization services for improved performance and reliability.',
       icon: Database,
@@ -90,8 +82,7 @@ const ServicesPage: React.FC = () => {
       price: 'Starting at $1,499/month',
       features: ['Database Design', 'Performance Tuning', 'Backup & Recovery', 'Migration Services']
     },
-    {
-      id: 7,
+    {id: 7,}
       title: 'Mobile Development',
       description: 'Native and cross-platform mobile applications for iOS and Android with modern UI/UX design.',
       icon: Smartphone,
@@ -99,8 +90,7 @@ const ServicesPage: React.FC = () => {
       price: 'Starting at $3,499/month',
       features: ['iOS Development', 'Android Development', 'Cross-platform', 'App Store Optimization']
     },
-    {
-      id: 8,
+    {id: 8,}
       title: 'IT Consulting',
       description: 'Strategic IT consulting services to help you make informed technology decisions and optimize your infrastructure.',
       icon: Users,
@@ -108,8 +98,7 @@ const ServicesPage: React.FC = () => {
       price: 'Starting at $1,999/month',
       features: ['Technology Strategy', 'Architecture Review', 'Cost Optimization', 'Digital Transformation']
     },
-    {
-      id: 9,
+    {id: 9,}
       title: 'Automation Solutions',
       description: 'Streamline your business processes with intelligent automation solutions that reduce manual work.',
       icon: Zap,
@@ -121,14 +110,13 @@ const ServicesPage: React.FC = () => {
 
   const categories = ['all', 'AI', 'Cloud', 'Security', 'Analytics', 'Development', 'Database', 'Consulting'];
 
-  const filteredServices = services.filter(service => {
-    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+  const filteredServices = services.filter(service => {const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||}
                          service.description.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     return matchesSearch && matchesCategory;
   });
 
-  return (
+  return ()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Services - Zion Tech Group | AI & IT Solutions</title>
@@ -174,7 +162,7 @@ const ServicesPage: React.FC = () => {
                 onChange={(e) => setSelectedCategory(e.target.value)}
                 className="px-4 py-3 bg-slate-800/50 border border-cyan-500/30 rounded-lg text-white focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20"
               >
-                {categories.map((category) => (
+                {categories.map((category) => (}
                   <option key={category} value={category} className="capitalize">
                     {category === 'all' ? 'All Services' : category}
                   </option>
@@ -189,7 +177,7 @@ const ServicesPage: React.FC = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredServices.map((service) => (
+            {filteredServices.map((service) => (}
               <div key={service.id} className="bg-slate-800/50 rounded-2xl p-8 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300 group">
                 <div className="flex items-center mb-6">
                   <div className="w-12 h-12 bg-cyan-500/10 rounded-lg flex items-center justify-center mr-4">
@@ -203,7 +191,7 @@ const ServicesPage: React.FC = () => {
                 <div className="mb-6">
                   <h4 className="text-sm font-medium text-gray-400 mb-3">Key Features:</h4>
                   <ul className="space-y-2">
-                    {service.features.map((feature, index) => (
+                    {service.features.map((feature, index) => (}
                       <li key={index} className="flex items-center text-sm text-gray-300">
                         <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-3"></div>
                         {feature}
@@ -267,4 +255,4 @@ const ServicesPage: React.FC = () => {
   );
 };
 
-export default ServicesPage;
+export default ServicesPage

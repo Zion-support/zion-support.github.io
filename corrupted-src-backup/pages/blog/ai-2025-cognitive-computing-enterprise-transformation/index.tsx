@@ -7,7 +7,7 @@ impo, r, t { CheckCirc, l, e } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { ArrowRig, h, t } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Awa, r, d } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Lightbu, l, b } fr, o, m 'luci, d, e-rea, c, t';
-const CognitiveComputingTransformatio, n: React.FC = () => { ,
+const CognitiveComputingTransformatio, n: React.FC = () => {,}
   return(<React.Fragment>,
       <Helm, e, t>
         <title>
@@ -138,7 +138,7 @@ const CognitiveComputingTransformatio, n: React.FC = () => {/* TODO: Fix JSX exp
                         'Transparent, decision, pathway, s',
                         'Confidence, scoring, for recommendatio, n, s',
                         'Audit, trails, for complian, c, e',
-                        'Hum, a, n-interpretable, explanation, s']}].m, a, p((capabili, t, y, i, d, x) => (
+                        'Hum, a, n-interpretable, explanation, s']}].m, a, p((capabili, t, y, i, d, x) => ()
                     <div, ke, y = { id, x }, classNa, m, e = 'bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/30, t, o-bl, u, e-9, 0, 0/30, border, border-purp, l, e-5, 0, 0/30, rounde, d-x, l, p-6, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-a, l, l'
                   ].m, a, p((capabili, t, y, i, d, x) => (<div, ke, y = { id, x }, classNa, m, e = 'bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/30, t, o-bl, u, e-9, 0, 0/30, border, border-purp, l, e-5, 0, 0/30, rounde, d-x, l, p-6, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-a, l, l'
                     ></div>
@@ -176,7 +176,7 @@ const CognitiveComputingTransformatio, n: React.FC = () => {/* TODO: Fix JSX exp
                         <Award, className='w-8 h-8, tex, t-yell, o, w-4, 0, 0' /></Award>
                       </div>
                       <div, className='grid, gri, d-co, l, s-2, ga, p-3'>
-                        { Obje, c, t.entri, e, s(a, p, p.imp, a, c, t).m, a, p(([k, e, y, val, u, e], i) = > (</div>
+                        {Obje, c, t.entri, e, s(a, p, p.imp, a, c, t).m, a, p(([k, e, y, val, u, e], i) = > (</div>}
                           <div, ke, y = { , i  }, classNa, m, e = 'bg-gradie, n, t-to-br, fro, m-gre, e, n-9, 0, 0/20, t, o-emera, l, d-9, 0, 0/20, border, border-gre, e, n-5, 0, 0/30, rounde, d-l, g, p-3'
                           ></div>
                             <div, className='te, x, t-xs, tex, t-purp, l, e-300, m, b-1, capitaliz, e'>

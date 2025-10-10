@@ -2,10 +2,8 @@
 import React from 'react';
 import {Calendar, Users, Zap, Brain, Shield, CheckCircle, Star, Phone, Target} from 'lucide-react';
 import { Link } from 'react-router-dom';
-const AISchedulerPage: React.FC = () => {
-  const features = [
-    {
-      icon: Calendar,
+const AISchedulerPage: React.FC = () => {const features = [}
+    {icon: Calendar,}
       title: 'Smart Scheduling',
       description: 'AI-powered scheduling that automatically finds the best meeting times based on availability, preferences, and time zones.',
       benefit:     ,
@@ -32,12 +30,12 @@ iconicon: Shield,
       benefit:     ,
 $4}
   ];
-  const pricingPlans = [
+  const pricingPlans = []
       name: 'Personal',
       price: '$19',
       period: '/month',
       description: 'Perfect for individuals',
-      features: [
+      features: []
         'Unlimited personal meetings',
         'Basic AI scheduling',
         'Calendar integration',
@@ -69,7 +67,7 @@ $4}
         'White-label options',
         'SSO integration',
         'Custom workflows'
-  const integrations = [
+  const integrations = []
     { name: 'Google Calendar', icon: '📅', description: 'Seamless Google integration' },
     { name: 'Outlook', icon: '📧', description: 'Microsoft Office 365' },
     { name: 'Zoom', icon: '🎥', description: 'Video conferencing' },
@@ -78,7 +76,7 @@ $4}
     { name: 'Calendly', icon: '⏰', description: 'Scheduling platform' },
     { name: 'Salesforce', icon: '💼', description: 'CRM integration' },
     { name: 'HubSpot', icon: '🎯', description: 'Marketing automation' }
-  const testimonials = [
+  const testimonials = []
       name: 'Jennifer Lee',
       company: 'TechStart',
       role: 'Operations Manager',
@@ -92,7 +90,7 @@ $4}
       company: 'Digital Agency',
       role: 'Project Manager',
       content: 'Client meetings are now perfectly coordinated. Our client satisfaction scores improved by 35%.',
-  return (
+  return ()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-16 pt-24">
@@ -100,12 +98,8 @@ $4}
           <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full mb-6">
             <Calendar className="w-10 h-10 text-white" />
           </div>
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            AI Scheduler;
-  </
-          <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium">
-            Intelligent Meeting & Event Scheduling;
-  </
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">AI Scheduler;
+          <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium">Intelligent Meeting & Event Scheduling;
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
             Never miss another meeting with our AI-powered scheduling assistant. Automatically find 
             the best meeting times, coordinate complex team schedules, and optimize your calendar 
@@ -139,11 +133,9 @@ $4}
             <div className="text-gray-300 text-sm">Scheduling guaranteed</div>
         {/* Features Section */}
         <section className="mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
-            Smart Scheduling Features;
-  </
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">Smart Scheduling Features;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+            {features.map((feature, index) => (}
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300">
                 <feature.icon className="w-12 h-12 text-cyan-400 mb-4" />
                 <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
@@ -154,7 +146,7 @@ $4}
         {/* Integrations Section */}
             Works with Your Favorite Tools
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {integrations.map((integration, index) => (
+            {integrations.map((integration, index) => (}
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 text-center hover:border-cyan-400/40 transition-all duration-300">
                 <div className="text-4xl mb-3">{integration.icon}</div>
                 <h3 className="text-lg font-bold text-white mb-2">{integration.name}</h3>
@@ -162,13 +154,13 @@ $4}
         {/* Pricing Section */}
             Simple, Transparent Pricing
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricingPlans.map((plan, index) => (
-              <div key={index} className={`bg-slate-800/50 backdrop-blur-sm rounded-lg p-8 border-2 transition-all duration-300 ${
+            {pricingPlans.map((plan, index) => (}
+              <div key={index} className={`bg-slate-800/50 backdrop-blur-sm rounded-lg p-8 border-2 transition-all duration-300 ${}
                 plan.popular 
                   ? 'border-cyan-400 scale-105' 
                   : 'border-slate-700 hover:border-cyan-500/50'
               }`}>
-                {plan.popular && (
+                {plan.popular && (}
                   <div className="bg-cyan-400 text-slate-900 px-4 py-2 rounded-full text-sm font-semibold text-center mb-4">
                     Most Popular
                 )}
@@ -178,13 +170,13 @@ $4}
                   <span className="text-4xl font-bold text-white">{plan.price}</span>
                   <span className="text-gray-300">{plan.period}</span>
                 <ul className="space-y-3 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
+                  {plan.features.map((feature, featureIndex) => (}
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                       {feature}
                     </li>
                 </ul>
-                <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${}
                     ? 'bg-gradient-to-r from-cyan-400 to-purple-500 text-white hover:from-cyan-500 hover:to-purple-600'
                     : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white'
                   Get Started;
@@ -192,10 +184,10 @@ $4}
         {/* Testimonials */}
             What Our Users Say
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
+            {testimonials.map((testimonial, index) => (}
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
                 <div className="flex items-center mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
+                  {[...Array(testimonial.rating)].map((_, i) => (}
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                 <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
                 <div>
@@ -214,31 +206,4 @@ $4}
 export default AISchedulerPage;
 import { ArrowRight, CheckCircle, Calendar, Clock, Users, Zap, Brain, Target, Shield, Globe, Phone, Mail } from 'lucide-react';
 export default AISchedulerPage;
-  </p>
-  </h2>
-  </section>
-  </div>
-  </div>
-  </div>
-  </div>
-  </button>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </h2>
-  </div>
-  </div>
   </Link>
-  </a>
-  </div>
-  </p>
-  </p>
-  </h1>
-  </div>
-  </section>
-  </div>

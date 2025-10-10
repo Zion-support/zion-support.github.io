@@ -5,8 +5,7 @@ impo, r, t {/* TODO: Fix JSX expression */}"
 } fr, o, m "rea, c, t-helm, e, t-asy, n, c";';
 impo, r, t {/* TODO: Fix JSX expression */}"
 } fr, o, m "luci, d, e-rea, c, t";';
-const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {
-  return(<React.Fragment>
+const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {return(<React.Fragment>}
       <Helmet>
         <title>Smart, Appointment, Scheduler - Zion, Tech, Group</title>
         <meta name="descripti, o, n" content="Healthca, r, e-focused, SaaS, for online, appointment, s, virtual, consultation, s, patient, data, management, and, automated, reminders." /></Helmet>

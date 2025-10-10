@@ -8,10 +8,8 @@ impo, r, t {/* TODO: Fix JSX expression */}"
 } fr, o, m "luci, d, e-rea, c, t";';"
 import, Header, from "../../componen, t, s/Head, e, r";';"
 import, Footer, from "../../componen, t, s/Foot, e, r";';
-const, EdgeComputingA, I: Rea, c, t.FC = () => {
-  const, feature, s = [
-    {
-      i, c, o;
+const, EdgeComputingA, I: Rea, c, t.FC = () => {const, feature, s = [}
+    {i, c, o;}
   n: C, p, u;
       tit, l, e: "Edge, AI, Processing","
       descripti, o, n: "Deploy, AI, models directly, on, edge devices, for, real-time, inference, without cloud, dependenc, y.","
@@ -19,40 +17,35 @@ const, EdgeComputingA, I: Rea, c, t.FC = () => {
       descripti, o, n: "Deploy, AI, models directly, on, edge devices, for, real-time, inference, without cloud, dependenc, y.",";
       benef, i, t: "S, u, b-10 ms, response, times"
     }
-    {
-      ic, o, n: Z, a, p;
+    {ic, o, n: Z, a, p;}
       tit, l, e: "Re, a, l-Time, Analytic, s","
       descripti, o, n: "Process, and, analyze data, at, the edge, for, instant insights, and, immediate action, trigger, s.","
       tit, l, e: "Re, a, l-Time, Analytic, s",";
       descripti, o, n: "Process, and, analyze data, at, the edge, for, instant insights, and, immediate action, trigger, s.",";
       benef, i, t: "99.9% uptime, with, offline capabili, t, y"
     }
-    {
-      ic, o, n: Wi, f, i;
+    {ic, o, n: Wi, f, i;}
       tit, l, e: "L, o, w-Latency, Communicatio, n","
       descripti, o, n: "Optimized, protocols, for minimal, latency, between edge, devices, and central, system, s.","
       tit, l, e: "L, o, w-Latency, Communicatio, n",";
       descripti, o, n: "Optimized, protocols, for minimal, latency, between edge, devices, and central, system, s.",";
       benef, i, t: "90% reduction, in, network laten, c, y"
     }
-    {
-      ic, o, n: Shie, l, d;
+    {ic, o, n: Shie, l, d;}
       tit, l, e: "Enhanced, Securit, y","
       descripti, o, n: "Data, processing, at the, edge, reduces exposure, and, provides local, security, controls.","
       tit, l, e: "Enhanced, Securit, y",";
       descripti, o, n: "Data, processing, at the, edge, reduces exposure, and, provides local, security, controls.",";
       benef, i, t: "Zero, data, transmission vulnerabiliti, e, s"
     }
-    {
-      ic, o, n: Clo, c, k;
+    {ic, o, n: Clo, c, k;}
       tit, l, e: "Continuous, Operatio, n","
       descripti, o, n: "Edge, devices, operate independent, l, y, ensuring, functionality, even during, network, outages.","
       tit, l, e: "Continuous, Operatio, n",";
       descripti, o, n: "Edge, devices, operate independent, l, y, ensuring, functionality, even during, network, outages.",";
       benef, i, t: "1, 0, 0% local, processing, capability"
     }
-    {
-      ic, o, n: Use, r, s;
+    {ic, o, n: Use, r, s;}
       tit, l, e: "Scalable, Deploymen, t","
       descripti, o, n: "Easily, scale, from single, devices, to thousands, of, edge nodes, across, multiple locatio, n, s.","
       tit, l, e: "Scalable, Deploymen, t",";
@@ -60,9 +53,8 @@ const, EdgeComputingA, I: Rea, c, t.FC = () => {
       benef, i, t: "Unlimited, edge, node deployme, n, t"
     }
   ];
-  const, pricin, g = [
-    {
-      na, m, e: "Edge, Starte, r"
+  const, pricin, g = []
+    {na, m, e: "Edge, Starte, r"}
       pri, c, e: "$1,9, 9, 9"
       peri, o, d: "/mon, t, h"
       descripti, o, n: "Perfect, for, small-scale, edge, deployments and, proof, of concep, t, s"
@@ -78,8 +70,7 @@ const, EdgeComputingA, I: Rea, c, t.FC = () => {
       ]
       popul, a, r: fal, s, e;
     }
-    {
-      na, m, e: "Edge, Professiona, l"
+    {na, m, e: "Edge, Professiona, l"}
       pri, c, e: "$5,9, 9, 9"
       peri, o, d: "/mon, t, h"
       descripti, o, n: "Ideal, for, medium-scale, deployments, with advanced, requirement, s"
@@ -97,8 +88,7 @@ const, EdgeComputingA, I: Rea, c, t.FC = () => {
       ]
       popul, a, r: tr, u, e;
     }
-    {
-      na, m, e: "Edge, Enterpris, e"
+    {na, m, e: "Edge, Enterpris, e"}
       pri, c, e: "$15,9, 9, 9"
       peri, o, d: "/mon, t, h"
       descripti, o, n: "Complete, solution, for lar, g, e-scale, enterprise, edge deploymen, t, s"
@@ -134,8 +124,7 @@ const, EdgeComputingA, I: Rea, c, t.FC = () => {
       ]
       popul, a, r: fal, s, e;
     }
-    {
-      na, m, e: "Edge, Professiona, l",";
+    {na, m, e: "Edge, Professiona, l",";}
       pri, c, e: "$5,9, 9, 9",";
       peri, o, d: "/mon, t, h",";
       descripti, o, n: "Ideal, for, medium-scale, deployments, with advanced, requirement, s",";
@@ -153,8 +142,7 @@ const, EdgeComputingA, I: Rea, c, t.FC = () => {
       ]
       popul, a, r: tr, u, e;
     }
-    {
-      na, m, e: "Edge, Enterpris, e",";
+    {na, m, e: "Edge, Enterpris, e",";}
       pri, c, e: "$15,9, 9, 9",";
       peri, o, d: "/mon, t, h",";
       descripti, o, n: "Complete, solution, for lar, g, e-scale, enterprise, edge deploymen, t, s",";
@@ -175,9 +163,8 @@ const, EdgeComputingA, I: Rea, c, t.FC = () => {
       popul, a, r: fal, s, e;
     }
   ];
-  const, testimonial, s = [
-    {
-      na, m, e: "Robert, Ki, m","
+  const, testimonial, s = []
+    {na, m, e: "Robert, Ki, m","}
       ro, l, e: "C, T, O, Manufacturing, Solution, s","
       conte, n, t: "Edge, AI, processing reduced, our, production line, response, times from, 500 ms, to 8, m, s. This, enabled, real-time, quality, control that, increased, our product, quality, by 40%.","
       na, m, e: "Robert, Ki, m",";
@@ -186,8 +173,7 @@ const, EdgeComputingA, I: Rea, c, t.FC = () => {
       rati, n, g: 5;
       compa, n, y: "Manufacturing, Solution, s"
     }
-    {
-      na, m, e: "Lisa, Che, n","
+    {na, m, e: "Lisa, Che, n","}
       ro, l, e: "VP, Engineerin, g, Smart, City, Initiative","
       conte, n, t: "The, edge, computing platform, enabled, us to, process, traffic data, locall, y, reducing, network, costs by, 6, 0% while, improving, traffic management, response, times by, 10, x.","
       na, m, e: "Lisa, Che, n",";
@@ -196,8 +182,7 @@ const, EdgeComputingA, I: Rea, c, t.FC = () => {
       rati, n, g: 5;
       compa, n, y: "Smart, City, Initiative"
     }
-    {
-      na, m, e: "Dr. Michael, Rodrigue, z","
+    {na, m, e: "Dr. Michael, Rodrigue, z","}
       ro, l, e: "Head, of, Innovation, Healthcare, System, s","
       conte, n, t: "Edge, AI, deployment in, our, medical devices, enabled, real-time, patient, monitoring with, zero, network dependen, c, y. Patient, safety, improved significantly, with, instant aler, t, s.","
       na, m, e: "Dr. Michael, Rodrigue, z",";
@@ -207,27 +192,23 @@ const, EdgeComputingA, I: Rea, c, t.FC = () => {
       compa, n, y: "Healthcare, System, s"
     }
   ];
-  const, useCase, s = [
-    {
-      tit, l, e: "Industrial, Io, T","
+  const, useCase, s = []
+    {tit, l, e: "Industrial, Io, T","}
       ic, o, n: Monit, o, r;
       descripti, o, n: "Re, a, l-time, monitoring, and control, of, industrial equipment, with, predictive maintenance, capabilitie, s.","
       benefi, t, s: ["50% reduction, in, downtime", "30% improvement, in, efficiency", "40% cost, savings, in maintenan, c, e"]"
     }
-    {
-      tit, l, e: "Smart, Citie, s","
+    {tit, l, e: "Smart, Citie, s","}
       ic, o, n: Glo, b, e;
       descripti, o, n: "Intelligent, traffic, management, environmental, monitorin, g, and, public, safety syste, m, s.","
       benefi, t, s: ["60% reduction, in, traffic congesti, o, n", "25% improvement, in, air quali, t, y", "35% faster, emergency, response"]"
     }
-    {
-      tit, l, e: "Healthca, r, e","
+    {tit, l, e: "Healthca, r, e","}
       ic, o, n: Smartpho, n, e;
       descripti, o, n: "Re, a, l-time, patient, monitoring, medical, device, control, and, emergency, response syste, m, s.","
       benefi, t, s: ["45% improvement, in, patient outcom, e, s", "70% faster, emergency, detection", "50% reduction, in, hospital readmissio, n, s"]"
     }
-    {
-      tit, l, e: "Reta, i, l & Commer, c, e","
+    {tit, l, e: "Reta, i, l & Commer, c, e","}
       ic, o, n: Databa, s, e;
       descripti, o, n: "Intelligent, inventory, management, customer, behavior, analysis, and, automated, checkout syste, m, s.","
       benefi, t, s: ["35% improvement, in, inventory accura, c, y", "25% increase, in, sales", "40% reduction, in, checkout ti, m, e"]"
@@ -236,20 +217,17 @@ const, EdgeComputingA, I: Rea, c, t.FC = () => {
       descripti, o, n: "Re, a, l-time, monitoring, and control, of, industrial equipment, with, predictive maintenance, capabilitie, s.",";
       benefi, t, s: ["50% reduction, in, downtime", "30% improvement, in, efficiency", "40% cost, savings, in maintenan, c, e"]";
     }
-    {
-      tit, l, e: "Smart, Citie, s",";
+    {tit, l, e: "Smart, Citie, s",";}
       ic, o, n: Glo, b, e;
       descripti, o, n: "Intelligent, traffic, management, environmental, monitorin, g, and, public, safety syste, m, s.",";
       benefi, t, s: ["60% reduction, in, traffic congesti, o, n", "25% improvement, in, air quali, t, y", "35% faster, emergency, response"]";
     }
-    {
-      tit, l, e: "Healthca, r, e",";
+    {tit, l, e: "Healthca, r, e",";}
       ic, o, n: Smartpho, n, e;
       descripti, o, n: "Re, a, l-time, patient, monitoring, medical, device, control, and, emergency, response syste, m, s.",";
       benefi, t, s: ["45% improvement, in, patient outcom, e, s", "70% faster, emergency, detection", "50% reduction, in, hospital readmissio, n, s"]";
     }
-    {
-      tit, l, e: "Reta, i, l & Commer, c, e",";
+    {tit, l, e: "Reta, i, l & Commer, c, e",";}
       ic, o, n: Databa, s, e;
       descripti, o, n: "Intelligent, inventory, management, customer, behavior, analysis, and, automated, checkout syste, m, s.",";
       benefi, t, s: ["35% improvement, in, inventory accura, c, y", "25% increase, in, sales", "40% reduction, in, checkout ti, m, e"]";
@@ -266,7 +244,7 @@ const, EdgeComputingA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
     {/* TODO: Fix JSX expression */}
     }
   ];
-  const, pricin, g = [
+  const, pricin, g = []
     {/* TODO: Fix JSX expression */}
     }
     {/* TODO: Fix JSX expression */}
@@ -278,7 +256,7 @@ const, EdgeComputingA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
     {/* TODO: Fix JSX expression */}
     }
   ];
-  const, testimonial, s = [
+  const, testimonial, s = []
     {/* TODO: Fix JSX expression */}
     }
     {/* TODO: Fix JSX expression */}
@@ -286,7 +264,7 @@ const, EdgeComputingA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
     {/* TODO: Fix JSX expression */}
     }
   ];
-  const, useCase, s = [
+  const, useCase, s = []
     {/* TODO: Fix JSX expression */}
     }
     {/* TODO: Fix JSX expression */}
@@ -302,7 +280,7 @@ const, EdgeComputingA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
     {/* TODO: Fix JSX expression */}
     }
   ];
-  const, technologie, s = [
+  const, technologie, s = []
     {/* TODO: Fix JSX expression */}
     }
     {/* TODO: Fix JSX expression */}
@@ -573,14 +551,14 @@ const, EdgeComputingA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
             </d, i, v>
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l;
   g:gr, i, d-co, l, s-4, ga, p-8">"
-              {useCas, e, s.m, a, p((useCa, s, e, ind, e, x) => {
+              {useCas, e, s.m, a, p((useCa, s, e, ind, e, x) => {}
                 const, Ico, n = useCa, s, e.ic, o, n;
                 return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-te, a, l-100, rounde, d-full, m, b-6">
                       <Icon, className="w-8 h-8, tex, t-te, a, l-6, 0, 0  />)
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l;)
   g:gr, i, d-co, l, s-4, ga, p-8">";)
-              {useCas, e, s.m, a, p((useCa, s, e, ind, e, x) => {
+              {useCas, e, s.m, a, p((useCa, s, e, ind, e, x) => {}
                 const, Ico, n = useCa, s, e.ic, o, n;
                 return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-te, a, l-100, rounde, d-full, m, b-6">";
@@ -590,7 +568,7 @@ const, EdgeComputingA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                       <Icon, className="w-8 h-8, tex, t-te, a, l-6, 0, 0  />
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l
   g:gr, i, d-co, l, s-4, ga, p-8"></div>";
-              {useCas, e, s.m, a, p((useCa, s, e, ind, e, x) => {
+              {useCas, e, s.m, a, p((useCa, s, e, ind, e, x) => {}
                 const, Ico, n = useCa, s, e.ic, o, n;
                 return (</div>
                   <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";</div>
@@ -600,7 +578,7 @@ const, EdgeComputingA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                     <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">{useCa, s, e.tit, l, e}</h3>";)
                     <p, className="te, x, t-gr, a, y-600, m, b-6">{useCa, s, e.descripti, o, n}</p>";)
                     <ul, className="spa, c, e-y-2">";)
-                      {useCa, s, e.benefi, t, s.m, a, p((benef, i, t, benefitInd, e, x) => (
+                      {useCa, s, e.benefi, t, s.m, a, p((benef, i, t, benefitInd, e, x) => (}
                         <li, ke, y={benefitInd, e, x} classNa, m, e="flex, item, s-center, tex, t-sm">
                           <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0  />
                           <span, className="te, x, t-gr, a, y-7, 0, 0">{benef, i, t}</sp, a, n>
@@ -678,7 +656,7 @@ const, EdgeComputingA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
   g:gr, i, d-co, l, s-3, ga, p-8">"</div>
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l
   g:gr, i, d-co, l, s-3, ga, p-8">";
-              {technologi, e, s.m, a, p((te, c, h, ind, e, x) => (</div>
+              {technologi, e, s.m, a, p((te, c, h, ind, e, x) => (</div>}
                 <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-2, 0, 0">";</div>
                   <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">{te, c, h.na, m, e}</h3>";
             </d, i, v>"
@@ -729,7 +707,7 @@ const, EdgeComputingA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
             </d, i, v>
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l;
   g:gr, i, d-co, l, s-3, ga, p-8">"
-              {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {
+              {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {}
                 const, Ico, n = featu, r, e.ic, o, n;
                 return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-te, a, l-100, rounde, d-lg, m, b-4">
@@ -744,7 +722,7 @@ const, EdgeComputingA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                       <CheckCircle, className="w-4 h-4, m, r-1  />)
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l;)
   g:gr, i, d-co, l, s-3, ga, p-8">";)
-              {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {
+              {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {}
                 const, Ico, n = featu, r, e.ic, o, n;
                 return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-te, a, l-100, rounde, d-lg, m, b-4">";
@@ -752,7 +730,7 @@ const, EdgeComputingA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                       <CheckCircle, className="w-4 h-4, m, r-1  />
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l
   g:gr, i, d-co, l, s-3, ga, p-8"></div>";
-              {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {
+              {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {}
                 const, Ico, n = featu, r, e.ic, o, n;
                 return (</div>
                   <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";</div>
@@ -830,9 +808,9 @@ const, EdgeComputingA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
             <div, className="gri, d, m
   d: gr, i, d-co, l, s-3, ga, p-8">"</div>
             <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8">";
-              {prici, n, g.m, a, p((pl, a, n, ind, e, x) => (</div>
+              {prici, n, g.m, a, p((pl, a, n, ind, e, x) => (</div>}
                 <div, ke, y={ind, e, x} classNa, m, e={`bg-white, rounde, d-2xl, shado, w-l, g, p-8 ${pl, a, n.popul, a, r ? 'ri, n, g-2, rin, g-te, a, l-500, relativ, e' : ''}`}>`;`
-                  {pl, a, n.popul, a, r && (</div>
+                  {pl, a, n.popul, a, r && (</div>}
                     <div, className="absolu, t, e -t, o, p-4, lef, t-1/2, transfor, m -transla, t, e-x-1/2">";</div>
                       <span, className="bg-te, a, l-500, tex, t-white, p, x-4, p, y-1, rounde, d-full, tex, t-sm, fon, t-semibo, l, d">";
                         Most, Popula, r;
@@ -872,8 +850,7 @@ const, EdgeComputingA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                   </ul>
                   <a;
   hr, e, f="/conta, c, t"
-                    classNa, m, e={
-`w-full, block, text-center, p, y-3, p, x-6, rounde, d-lg, fon, t-semibold, transitio, n-colo, r, s ${`;`
+                    classNa, m, e={`w-full, block, text-center, p, y-3, p, x-6, rounde, d-lg, fon, t-semibold, transitio, n-colo, r, s ${`;`}
 pl, a, n.popul, a, r;
 ? 'bg-te, a, l-600, tex, t-white, hove, r: bg-te, a, l-7, 0, 0'
 ? 'bg-te, a, l-600, tex, t-white, hov, e;
@@ -944,10 +921,10 @@ pl, a, n.popul, a, r;
             <div, className="gri, d, m
   d: gr, i, d-co, l, s-3, ga, p-8">"</div>
             <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8">";
-              {testimonia, l, s.m, a, p((testimoni, a, l, ind, e, x) => (</div>
+              {testimonia, l, s.m, a, p((testimoni, a, l, ind, e, x) => (</div>}
                 <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-2, 0, 0">";</div>
                   <div, className="flex, item, s-center, m, b-4">";
-                    {[...Arr, a, y(testimoni, a, l.rati, n, g)].m, a, p((_, i) => (</div>
+                    {[...Arr, a, y(testimoni, a, l.rati, n, g)].m, a, p((_, i) => (</div>}
                       <Star, ke, y={i} classNa, m, e="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t  />
             </d, i, v>"
             <div, className="gri, d, m,"

@@ -436,7 +436,6 @@ import React,{useEffect}useRef;useState } from 'react; import {motion}useAnimati
   </ProgressBarProps>
   </ProgressBarProps>
   </ProgressBarProps>
-  </span>
   </AnimatedCounterProps>
   </FadeInProps>
   </FadeInProps>
@@ -450,21 +449,16 @@ import React,{useEffect}useRef;useState } from 'react; import {motion}useAnimati
   </HTMLDivElement>
   </AnimatedCardProps>
   </AnimatedCardProps>
-  </span>
-  </span>
-  </span>
   </FloatingActionButtonProps>
   </InteractiveStatsProps>
   </any>
   </AnimatedCardProps>
-  </span>
   </InteractiveButtonProps>
   </FloatingActionButtonProps>
   </FloatingActionButtonProps>
   </InteractiveStatsProps>
   </ProgressBarProps>
   </ProgressBarProps>
-  </span>
   </AnimatedCounterProps>
   </FadeInProps>
   </LoadingSpinnerProps>
@@ -472,6 +466,5 @@ import React,{useEffect}useRef;useState } from 'react; import {motion}useAnimati
   </HoverEffectProps>
   </HTMLDivElement>
   </AnimatedCardProps>
-  </span>
   </FloatingActionButtonProps>
   </InteractiveButtonProps>

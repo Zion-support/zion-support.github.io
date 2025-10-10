@@ -7,8 +7,7 @@ import { Link } from 'react-router-dom';
  * @component;
  * @description High-performance promotional banner with accessibility features;
  */
-const October2025CognitiveMeshLaunchBanner: React.FC = memo(() => {
-  return(<section;
+const October2025CognitiveMeshLaunchBanner: React.FC = memo(() => {return(<section;}
       className="relative bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 overflow-hidden",
       aria-label="Cognitive Mesh Platform Launch Announcement",
      > {/* Animated background elements - purely decorative */}
@@ -45,9 +44,7 @@ const,
           >
              aria-hidden="true" <span className="text-white font-bold text-lg">
               🚀 JUST LAUNCHED - OCTOBER 2025;
-             aria-hidden="true"</div> <span className="text-white font-bold text-lg">
-              🚀 JUST LAUNCHED - OCTOBER 2025;
-  </
+             aria-hidden="true"</div> <span className="text-white font-bold text-lg">🚀 JUST LAUNCHED - OCTOBER 2025;
              aria-hidden="true"</div>
           <h1 className="text-4xl md: text-5xl font-bold text-white mb-4 animate-slide-up">
             Cognitive Mesh Orchestration Platform;
@@ -160,4 +157,3 @@ const,
 });
 "
   </strong>
-  </span>

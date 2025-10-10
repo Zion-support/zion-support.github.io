@@ -26,4 +26,4 @@ root.render(<React.StrictMode></React>
     <App /></App>
   </React.StrictMode>)
 );
-reportWebVitals();
+reportWebVitals()

@@ -2,8 +2,7 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
-  Cloud, 
+import {Cloud,}
   Shield, 
   Settings, 
   Database, 
@@ -16,13 +15,11 @@ import {
   CheckCircle
 } from 'lucide-react';
 
-const ItServicesPage: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
+const ItServicesPage: React.FC = () => {const [searchTerm, setSearchTerm] = useState('');}
   const [selectedCategory, setSelectedCategory] = useState('all');
 
-  const itServices = [
-    {
-      id: 1,
+  const itServices = []
+    {id: 1,}
       title: 'Cloud Infrastructure & Migration',
       description: 'Complete cloud solutions including AWS, Azure, and GCP migration and management',
       icon: Cloud,
@@ -30,8 +27,7 @@ const ItServicesPage: React.FC = () => {
       price: 'Starting at $2,500/month',
       features: ['Cloud architecture design', 'Migration planning & execution', 'Cost optimization', 'Security compliance', '24/7 monitoring', 'Disaster recovery']
     },
-    {
-      id: 2,
+    {id: 2,}
       title: 'DevOps & CI/CD Pipeline',
       description: 'Automated development workflows and deployment pipelines for faster delivery',
       icon: Settings,
@@ -39,8 +35,7 @@ const ItServicesPage: React.FC = () => {
       price: 'Starting at $3,000/month',
       features: ['CI/CD pipeline setup', 'Container orchestration', 'Infrastructure as Code', 'Automated testing', 'Deployment automation', 'Performance monitoring']
     },
-    {
-      id: 3,
+    {id: 3,}
       title: 'Database Management',
       description: 'Comprehensive database services including design, optimization, and maintenance',
       icon: Database,
@@ -48,8 +43,7 @@ const ItServicesPage: React.FC = () => {
       price: 'Starting at $1,800/month',
       features: ['Database design & architecture', 'Performance optimization', 'Backup & recovery', 'Security hardening', 'Migration services', '24/7 support']
     },
-    {
-      id: 4,
+    {id: 4,}
       title: 'Cybersecurity Solutions',
       description: 'Advanced security solutions to protect your digital assets and ensure compliance',
       icon: Shield,
@@ -57,8 +51,7 @@ const ItServicesPage: React.FC = () => {
       price: 'Starting at $4,000/month',
       features: ['Security assessment', 'Threat detection', 'Vulnerability management', 'Compliance auditing', 'Incident response', 'Security training']
     },
-    {
-      id: 5,
+    {id: 5,}
       title: 'Managed IT Services',
       description: 'Complete IT management including helpdesk, monitoring, and maintenance',
       icon: Settings,
@@ -66,8 +59,7 @@ const ItServicesPage: React.FC = () => {
       price: 'Starting at $2,200/month',
       features: ['24/7 helpdesk support', 'Proactive monitoring', 'Patch management', 'Asset management', 'User training', 'Vendor management']
     },
-    {
-      id: 6,
+    {id: 6,}
       title: 'IT Strategy & Consulting',
       description: 'Strategic IT consulting to align technology with business objectives',
       icon: Globe,
@@ -75,8 +67,7 @@ const ItServicesPage: React.FC = () => {
       price: 'Starting at $1,500/month',
       features: ['Technology roadmap', 'Vendor evaluation', 'Cost analysis', 'Digital transformation', 'Change management', 'Training programs']
     },
-    {
-      id: 7,
+    {id: 7,}
       title: 'Mobile App Development',
       description: 'Native and cross-platform mobile applications for iOS and Android',
       icon: Smartphone,
@@ -84,8 +75,7 @@ const ItServicesPage: React.FC = () => {
       price: 'Starting at $8,000/project',
       features: ['Native iOS/Android apps', 'Cross-platform development', 'UI/UX design', 'API integration', 'App store deployment', 'Maintenance & updates']
     },
-    {
-      id: 8,
+    {id: 8,}
       title: 'Web Application Development',
       description: 'Custom web applications and e-commerce solutions built with modern technologies',
       icon: Globe,
@@ -97,21 +87,20 @@ const ItServicesPage: React.FC = () => {
 
   const categories = ['all', 'Cloud', 'DevOps', 'Database', 'Security', 'Managed', 'Consulting', 'Development'];
 
-  const filteredServices = itServices.filter(service => {
-    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+  const filteredServices = itServices.filter(service => {const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||}
                          service.description.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     return matchesSearch && matchesCategory;
   });
 
-  const stats = [
+  const stats = []
     { icon: <Users className="w-8 h-8 text-blue-500" />, value: '500+', label: 'Projects Completed' },
     { icon: <TrendingUp className="w-8 h-8 text-green-500" />, value: '99.9%', label: 'Uptime' },
     { icon: <Shield className="w-8 h-8 text-purple-500" />, value: '100%', label: 'Secure' },
     { icon: <Zap className="w-8 h-8 text-orange-500" />, value: '50%', label: 'Cost Reduction' }
   ];
 
-  return (
+  return ()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>IT Services - Zion Tech Group | Comprehensive Information Technology Solutions</title>
@@ -138,7 +127,7 @@ const ItServicesPage: React.FC = () => {
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
+            {stats.map((stat, index) => (}
               <div key={index} className="text-center">
                 <div className="flex justify-center mb-4">
                   {stat.icon}
@@ -177,7 +166,7 @@ const ItServicesPage: React.FC = () => {
                 onChange={(e) => setSelectedCategory(e.target.value)}
                 className="px-4 py-3 bg-slate-800/50 border border-cyan-500/30 rounded-lg text-white focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20"
               >
-                {categories.map((category) => (
+                {categories.map((category) => (}
                   <option key={category} value={category} className="capitalize">
                     {category === 'all' ? 'All Services' : category}
                   </option>
@@ -192,7 +181,7 @@ const ItServicesPage: React.FC = () => {
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredServices.map((service) => (
+            {filteredServices.map((service) => (}
               <div key={service.id} className="bg-slate-800/50 rounded-2xl p-8 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300 group">
                 <div className="flex items-center mb-6">
                   <div className="w-12 h-12 bg-cyan-500/10 rounded-lg flex items-center justify-center mr-4">
@@ -206,13 +195,13 @@ const ItServicesPage: React.FC = () => {
                 <div className="mb-6">
                   <h4 className="text-sm font-medium text-gray-400 mb-3">Key Features:</h4>
                   <ul className="space-y-2">
-                    {service.features.slice(0, 4).map((feature, index) => (
+                    {service.features.slice(0, 4).map((feature, index) => (}
                       <li key={index} className="flex items-center text-sm text-gray-300">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                         {feature}
                       </li>
                     ))}
-                    {service.features.length > 4 && (
+                    {service.features.length > 4 && (}
                       <li className="text-cyan-400 text-sm">+{service.features.length - 4} more features</li>
                     )}
                   </ul>
@@ -273,4 +262,4 @@ const ItServicesPage: React.FC = () => {
   );
 };
 
-export default ItServicesPage;
+export default ItServicesPage

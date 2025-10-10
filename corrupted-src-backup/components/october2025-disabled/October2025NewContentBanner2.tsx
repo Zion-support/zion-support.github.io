@@ -30,7 +30,7 @@ const October2025NewContentBanner, 2 = () => {/* TODO: Fix JSX expression */}
         </div>)
         {/* Articles, G, r, i, d */})
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-12">)
-          { newArticl, e, s.m, a, p((arti, c, l, e) = > {
+          {newArticl, e, s.m, a, p((arti, c, l, e) = > {}
             const Ico, n = artic, l, e.ic, o, n; return(<Link, ke, y = { artic, l, e.slug  }, to = {`/bl, o, g/${artic, l, e.slug}`}
             const Ico, n = artic, l, e.ic, o, n; return (</div>
               <Link, ke, y = { artic, l, e.slug  }, to = {`/bl, o, g/${artic, l, e.slug}`}

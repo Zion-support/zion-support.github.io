@@ -1,7 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-export default function BlogPost(): React.JSX.Element {
-  return(<React.Fragment>
+export default function BlogPost(): React.JSX.Element {return(<React.Fragment>}
       <Header />
       <div className="min-h-screen bg-gradient-to-br from-blue-600 via-blue-700 to-purple-800 text-white"></div>
         <Helmet>
@@ -17,9 +16,7 @@ export default function BlogPost(): React.JSX.Element {
               Genai 2025 Oct 01 E2e Eval Pipelines;
         <div className="max-w-4xl mx-auto px-4 py-20"></div>
           <div className="mb-12"></div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-              Genai 2025 Oct 01 E2e Eval Pipelines;
-  </
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">Genai 2025 Oct 01 E2e Eval Pipelines;
             <div className="flex flex-wrap items-center gap-6 text-sm text-gray-300 mb-8"></div>
               <span>By Zion Tech Group Team</span>
               <span>•</span>
@@ -109,5 +106,3 @@ export default function BlogPost(): React.JSX.Element {/* TODO: Fix JSX expressi
     </React.Fragment>);
 }
 "`
-  </h1>
-  </h1>

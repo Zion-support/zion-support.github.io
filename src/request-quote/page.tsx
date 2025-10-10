@@ -5,8 +5,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 'use client';
 import React, { useState } from 'react';
-const RequestQuotePage: React.FC = () => {
-  const [formData, setFormData] = useState({
+const RequestQuotePage: React.FC = () => {const [formData, setFormData] = useState({}
     name: '',
     email: '',
     company: '',
@@ -20,7 +19,7 @@ const RequestQuotePage: React.FC = () => {
 $4});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const _serviceTypes = [
+  const _serviceTypes = []
     'AI Services',
     'IT Infrastructure',
     'Cybersecurity',
@@ -31,13 +30,13 @@ $4});
     'Consulting Services',
     'Other'
   ];
-  const projectSizes = [
+  const projectSizes = []
     'Small (1-10 employees)',
     'Medium (11-100 employees)',
     'Large (101-1000 employees)',
     'Enterprise (1000+ employees)'
   ];
-  const timelines = [
+  const timelines = []
     'ASAP',
     '1-3 months',
     '3-6 months',
@@ -45,7 +44,7 @@ $4});
     '12+ months',
     'Flexible'
   ];
-  const budgetRanges = [
+  const budgetRanges = []
     'Under $10,000',
     '$10,000 - $50,000',
     '$50,000 - $100,000',
@@ -53,67 +52,56 @@ $4});
     '$500,000+',
     'To be discussed'
   ];
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {}
     const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
+    setFormData(prev => ({...prev,}
       [name]: value
     }));
   };
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleSubmit = async (e: React.FormEvent) => {e.preventDefault();}
     setIsSubmitting(true);
     // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 2000));
     setIsSubmitting(false);
     setIsSubmitted(true);
   };
-  const benefits = [
-    {
-      icon: Calculator,
+  const benefits = []
+    {icon: Calculator,}
       title: 'Free Quote',
       description:     ,
 $4},
-    {
-      icon: Clock,
+    {icon: Clock,}
       title: 'Quick Response',
       description:     ,
 $4},
-    {
-      icon: CheckCircle,
+    {icon: CheckCircle,}
       title: 'Transparent Pricing',
       description:     ,
 $4},
-    {
-      icon: Star,
+    {icon: Star,}
       title: 'Expert Consultation',
       description:     ,
 $4}
   ];
-  const whyChooseUs = [
-    {
-      icon: Users,
+  const whyChooseUs = []
+    {icon: Users,}
       title: '50+ Successful Projects',
       description:     ,
 $4},
-    {
-      icon: Award,
+    {icon: Award,}
       title: '300% Average ROI',
       description:     ,
 $4},
-    {
-      icon: Clock,
+    {icon: Clock,}
       title: '24/7 Support',
       description:     ,
 $4},
-    {
-      icon: Star,
+    {icon: Star,}
       title: '99.9% Uptime',
       description:     ,
 $4}
   ];
-  if (isSubmitted) {
-    return (
+  if (isSubmitted) {return (}
       <React.Fragment>
         <Navigation />
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -167,16 +155,14 @@ $4}
       </React.Fragment>
     );
   }
-  return (
+  return ()
     <React.Fragment>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16 pt-24">
           {/* Header */}
           <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-              Request a Quote;
-  </
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">Request a Quote;
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Get a detailed, no-obligation quote for your AI and IT project. 
               Our experts will provide you with a comprehensive proposal within 24 hours.
@@ -259,7 +245,7 @@ $4}
                       required
                       className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20">
                       <option value="">Select a service type</option>
-                      {serviceTypes.map((type, index) => (
+                      {serviceTypes.map((type, index) => (}
                         <option key={index} value={type}>{type}</option>
                       ))}
                     </select>
@@ -275,7 +261,7 @@ $4}
                         onChange={handleInputChange}
                         className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20">
                         <option value="">Select project size</option>
-                        {projectSizes.map((size, index) => (
+                        {projectSizes.map((size, index) => (}
                           <option key={index} value={size}>{size}</option>
                         ))}
                       </select>
@@ -290,7 +276,7 @@ $4}
                         onChange={handleInputChange}
                         className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20">
                         <option value="">Select timeline</option>
-                        {timelines.map((timeline, index) => (
+                        {timelines.map((timeline, index) => (}
                           <option key={index} value={timeline}>{timeline}</option>
                         ))}
                       </select>
@@ -306,7 +292,7 @@ $4}
                       onChange={handleInputChange}
                       className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20">
                       <option value="">Select budget range</option>
-                      {budgetRanges.map((range, index) => (
+                      {budgetRanges.map((range, index) => (}
                         <option key={index} value={range}>{range}</option>
                       ))}
                     </select>
@@ -342,12 +328,12 @@ $4}
                     type="submit"
                     disabled={isSubmitting}
                     className="w-full cyber-button py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed">
-                    {isSubmitting ? (
+                    {isSubmitting ? (}
                       <div className="flex items-center justify-center">
                         <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
                         Submitting...
                       </div>
-                    ) : (
+                    ) : ()
                       'Request Quote'
                     )}
                   </button>
@@ -360,7 +346,7 @@ $4}
               <div className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50">
                 <h3 className="text-xl font-bold text-white mb-6">Why Request a Quote?</h3>
                 <div className="space-y-4">
-                  {benefits.map((benefit, index) => (
+                  {benefits.map((benefit, index) => (}
                     <div key={index} className="flex items-start">
                       <div className="w-8 h-8 bg-cyan-500/20 rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
                         <benefit.icon className="w-4 h-4 text-cyan-400" />
@@ -377,7 +363,7 @@ $4}
               <div className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50">
                 <h3 className="text-xl font-bold text-white mb-6">Why Choose Us?</h3>
                 <div className="space-y-4">
-                  {whyChooseUs.map((item, index) => (
+                  {whyChooseUs.map((item, index) => (}
                     <div key={index} className="flex items-start">
                       <div className="w-8 h-8 bg-purple-500/20 rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
                         <item.icon className="w-4 h-4 text-purple-400" />
@@ -445,7 +431,7 @@ $4}
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const _serviceTypes = [
+  const _serviceTypes = []
   // TOD,
   O: Add items;
 ];;
@@ -459,7 +445,7 @@ $4}
 //     'Consulting Services',
 //     'Other'
   ];
-  const projectSizes = [
+  const projectSizes = []
   // TOD,
   O: Add items;
 ];;
@@ -468,7 +454,7 @@ $4}
 //     'Large (101-1000 employees)',
 //     'Enterprise (1000+ employees)'
   ];
-  const timelines = [
+  const timelines = []
   // TOD,
   O: Add items;
 ];;
@@ -479,7 +465,7 @@ $4}
 //     '12+ months',
 //     'Flexible'
   ];
-  const budgetRanges = [
+  const budgetRanges = []
   // TOD,
   O: Add items;
 ];;
@@ -512,7 +498,7 @@ $4}
     setIsSubmitting(false);
     setIsSubmitted(true);
   };
-  const benefits = [
+  const benefits = []
   // TOD,
   O: Add items;
 ];;
@@ -557,7 +543,7 @@ $4}
   n: 'Free consultation with our technology experts'
     }
   ];
-  const whyChooseUs = [
+  const whyChooseUs = []
   // TOD,
   O: Add items;
 ];;
@@ -677,9 +663,7 @@ $4}
   md:text-5xl font-bold text-white mb-6 neon-text"></h1>
 // Request a Quote;
           </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon;
-  </
+          <p className="text-xl text-cyan-400 mb-8 font-medium">Coming Soon;
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             {/* Quote Form */}
@@ -901,6 +885,4 @@ export default RequestQuotePage;
   </HTMLInputElement>
   </textarea>
   </textarea>
-  </a>
-  </a>
   </HTMLInputElement>

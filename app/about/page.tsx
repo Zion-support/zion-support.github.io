@@ -2,8 +2,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import {
-  Brain,
+import {Brain,}
   Cloud,
   Shield,
   Code,
@@ -19,38 +18,33 @@ import {
   MapPin
 } from 'lucide-react';
 
-const AboutPage: React.FC = () => {
-  const stats = [
+const AboutPage: React.FC = () => {const stats = [}
     { number: '500+', label: 'Projects Completed' },
     { number: '50+', label: 'Happy Clients' },
     { number: '24/7', label: 'Support' },
     { number: '99%', label: 'Success Rate' }
   ];
 
-  const values = [
-    {
-      icon: Brain,
+  const values = []
+    {icon: Brain,}
       title: 'Innovation',
       description: 'We constantly push the boundaries of what\'s possible with cutting-edge technology and creative solutions.'
     },
-    {
-      icon: Users,
+    {icon: Users,}
       title: 'Collaboration',
       description: 'We work closely with our clients to understand their unique needs and deliver tailored solutions.'
     },
-    {
-      icon: Shield,
+    {icon: Shield,}
       title: 'Security',
       description: 'We prioritize security and compliance in all our solutions to protect your business and data.'
     },
-    {
-      icon: Target,
+    {icon: Target,}
       title: 'Excellence',
       description: 'We are committed to delivering high-quality solutions that exceed expectations and drive results.'
     }
   ];
 
-  return (
+  return ()
     <React.Fragment>
       <Helmet>
         <title>About Us - Zion Tech Group | AI & IT Solutions</title>
@@ -90,7 +84,7 @@ const AboutPage: React.FC = () => {
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {stats.map((stat, index) => (
+              {stats.map((stat, index) => (}
                 <div key={index} className="text-center">
                   <div className="text-4xl font-bold text-cyan-400 mb-2">{stat.number}</div>
                   <div className="text-gray-300">{stat.label}</div>
@@ -137,7 +131,7 @@ const AboutPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <h2 className="text-3xl font-bold text-white text-center mb-12">Our Values</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {values.map((value, index) => (
+              {values.map((value, index) => (}
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
                     <value.icon className="w-8 h-8 text-cyan-400" />
@@ -218,4 +212,4 @@ const AboutPage: React.FC = () => {
   );
 };
 
-export default AboutPage;
+export default AboutPage

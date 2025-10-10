@@ -288,15 +288,11 @@
   Stack: </strong>" <pre className="text-left">; </details>,retur,"
   n: 'this.props.children'} ; return this.props.children} ; export default ErrorBoundary;" export default ErrorBoundary;"}}}}}}}})))))'"
   </pre>
-  </div>
-  </button>
   </pre>
   </pre>
   </details>
-  </button>
   </pre>
   </pre>
   </details>
   </details>
-  </button>
   </pre>

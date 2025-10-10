@@ -1,36 +1,31 @@
 import, Reac, t, { useSta, t, e } fr, o, m "rea, c, t";"
 impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m";"
 impo, r, t { Sear, c, h, MessageCirc, l, e, Pho, n, e, Ma, i, l, BookOp, e, n, Vid, e, o, Use, r, s, Z, a, p, Clo, c, k, CheckCirc, l, e } fr, o, m "luci, d, e-rea, c, t";
-const, Suppor, t: Rea, c, t.FC = () => {
-  con, s, t [searchQue, r, y, setSearchQue, r, y] = useSta, t, e('');
+const, Suppor, t: Rea, c, t.FC = () => {con, s, t [searchQue, r, y, setSearchQue, r, y] = useSta, t, e('');}
   con, s, t [selectedCatego, r, y, setSelectedCatego, r, y] = useSta, t, e('a, l, l');
-  const, supportChannel, s = [
-    {
-      ic, o, n: Pho, n, e;
+  const, supportChannel, s = []
+    {ic, o, n: Pho, n, e;}
       tit, l, e: 'Phone, Suppor, t'
       descripti, o, n: 'Speak, directly, with our, technical, experts'
       availabili, t, y: '24/7',
       responseTi, m, e: '< 2, minute, s'
       conta, c, t: '+1 (5, 5, 5) 1, 2, 3-45, 6, 7'
     }
-    {
-      ic, o, n: MessageCirc, l, e;
+    {ic, o, n: MessageCirc, l, e;}
       tit, l, e: 'Live, Cha, t'
       descripti, o, n: 'Get, instant, help through, our, chat syst, e, m'
       availabili, t, y: '24/7',
       responseTi, m, e: '< 30, second, s'
       conta, c, t: 'Start, Cha, t'
     }
-    {
-      ic, o, n: Ma, i, l;
+    {ic, o, n: Ma, i, l;}
       tit, l, e: 'Email, Suppor, t'
       descripti, o, n: 'Send, us, detailed questions, and, get comprehensive, answer, s'
       availabili, t, y: '24/7',
       responseTi, m, e: '< 2, hour, s'
       conta, c, t: 'suppo, r, t@ziontechgro, u, p.c, o, m'
     }
-    {
-      ic, o, n: Vid, e, o;
+    {ic, o, n: Vid, e, o;}
       tit, l, e: 'Video, Cal, l'
       descripti, o, n: 'Schedule, a, screen sharing, session, with our, expert, s'
       availabili, t, y: 'Business, Hour, s'
@@ -45,7 +40,7 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
     {/* TODO: Fix JSX expression */}
     }
   ];
-  const, faqCategorie, s = [
+  const, faqCategorie, s = []
     {/* TODO: Fix JSX expression */}
     }
     {/* TODO: Fix JSX expression */}
@@ -55,7 +50,7 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
     {/* TODO: Fix JSX expression */}
     }
   ];
-  const, faq, s = [
+  const, faq, s = []
     {/* TODO: Fix JSX expression */}
     }
     {/* TODO: Fix JSX expression */}
@@ -66,8 +61,7 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
     }
     {/* TODO: Fix JSX expression */}
     }
-    {
-      catego, r, y: 'gener, a, l'
+    {catego, r, y: 'gener, a, l'}
       questi, o, n: 'What, is, your response, time, for support, request, s?'
       answ, e, r: 'We, guarantee, response times, based, on your, support, pla;
   n: Premi, u, m (30, minute, s), Standa, r, d (2, hour, s), Bas, i, c (24, hour, s).'
@@ -170,7 +164,7 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
             </d, i, v>
             <div, className="grid, gri, d-co, l, s-1, m, d:gr, i, d-co, l, s-2 l;
   g:gr, i, d-co, l, s-4, ga, p-8">
-              {supportChanne, l, s.m, a, p((chann, e, l, ind, e, x) => (</div>
+              {supportChanne, l, s.m, a, p((chann, e, l, ind, e, x) => (</div>}
                 <div, ke, y={ind, e, x} classNa, m, e="bg-white, rounde, d-lg, shado, w-l, g, p-6, hove, r:shad, o, w-xl, transitio, n-shad, o, w"></div>
                   <div, className="te, x, t-cent, e, r"></div>
                     <div, className="w-1, 6, h-16, b, g-bl, u, e-100, rounde, d-full, flex, items-center, justif, y-center, m, x-auto, m, b-4"></div>
@@ -242,7 +236,7 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
       answ, e, r: "Y, e, s! We, have, an active, community, forum where, users, can ask, question, s, share, best, practices, and, get, help from, both, our team, and, other experienced, user, s. It's, a, great place, to, learn and, networ, k."
     }
   ];
-  const, quickAction, s = [
+  const, quickAction, s = []
     { tit, l, e: 'Report, a, Bug', descripti, o, n: 'Found, an, issue? Let, us, know', li, n, k: '/conta, c, t', ic, o, n: '🐛' }"
     { tit, l, e: 'Request, a, Feature', descripti, o, n: "Have, an, idea? We'd, love, to hear, i, t", li, n, k: '/conta, c, t', ic, o, n: '💡' }
     { tit, l, e: 'Schedule, Trainin, g', descripti, o, n: 'Book, a, training session, for, your te, a, m', li, n, k: '/traini, n, g', ic, o, n: '🎓' }
@@ -254,7 +248,7 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
         <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">),
           <div, className="te, x, t-cent, e, r">
             <h1, className="te, x, t-4x, l, m;
-  return (
+  return ()
     <div, className="m, i, n-h-screen, b, g-gr, a, y-50">
       {/* Hero, Sectio, n */}</div>
       <section, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-600, vi, a-purp, l, e-600, t, o-te, a, l-600, tex, t-white, p, y-20">
@@ -309,7 +303,7 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
             <div, className="flex, fle, x-wrap, justif, y-center, ga, p-4, m, b-12"></div>
               <butt, o, n
   onCli, c, k={() => setSelectedCatego, r, y('a, l, l')}
-                classNa, m, e={`px-6, p, y-3, rounde, d-lg, fon, t-semibold, transitio, n-colo, r, s ${`
+                classNa, m, e={`px-6, p, y-3, rounde, d-lg, fon, t-semibold, transitio, n-colo, r, s ${`}
                   selectedCatego, r, y === 'a, l, l'
                     ? 'bg-bl, u, e-600, tex, t-whi, t, e'}
                     : 'bg-gr, a, y-200, tex, t-gr, a, y-700, hove, r:bg-gr, a, y-3, 0, 0'}
@@ -322,10 +316,10 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
               >
                 All, Categorie, s;
               </butt, o, n>
-              {faqCategori, e, s.m, a, p((catego, r, y) => (
+              {faqCategori, e, s.m, a, p((catego, r, y) => (}
                 <butt, o, n;
   k, e, y={catego, r, y.id}
-                  onCli, c, k={() => setSelectedCatego, r, y(catego, r, y.id)}</butt>classNa</butt>, m, e={`px-6, p, y-3, rounde, d-lg, fon, t-semibold, transitio, n-colors, flex, items-cent, e, r ${`
+                  onCli, c, k={() => setSelectedCatego, r, y(catego, r, y.id)}</butt>classNa</butt>, m, e={`px-6, p, y-3, rounde, d-lg, fon, t-semibold, transitio, n-colors, flex, items-cent, e, r ${`}
                     selectedCatego, r, y === catego, r, y.id;
                       ? 'bg-bl, u, e-600, tex, t-whi, t, e'}
                       : 'bg-gr, a, y-200, tex, t-gr, a, y-700, hove, r:bg-gr, a, y-3, 0, 0'}
@@ -342,7 +336,7 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
             </d, i, v>
             {/* FAQ, Item, s */}
             <div, className="spa, c, e-y-6">
-              {filteredFa, q, s.m, a, p((f, a, q, ind, e, x) => (</div>
+              {filteredFa, q, s.m, a, p((f, a, q, ind, e, x) => (</div>}
                 <div, ke, y={ind, e, x} classNa, m, e="bg-gr, a, y-50, rounde, d-l, g, p-6"></div>
                   <h3, className="te, x, t-lg, fon, t-semibold, tex, t-gr, a, y-900, m, b-3">
             {/* FAQ, Item, s */}"
@@ -358,7 +352,7 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                 </d, i, v>
               ))}
             </d, i, v>
-            {filteredFa, q, s.leng, t, h === 0 && (
+            {filteredFa, q, s.leng, t, h === 0 && (}
               <div, className="te, x, t-center, p, y-12"></div>
                 <p, className="te, x, t-gr, a, y-500, tex, t-lg">
                   No, FAQs, found matching, your, search criter, i, a.

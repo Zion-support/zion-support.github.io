@@ -2,20 +2,16 @@
 import React, { useState, useEffect } from 'react';
 import { Phone, Mail, ExternalLink, Star, CheckCircle, ArrowRight, Zap, Brain, Cloud, Rocket, TrendingUp, Users, Award, Shield, Clock, DollarSign, Target, BarChart, Sparkles } from 'lucide-react';
 import { services, serviceCategories, contactInfo } from '../data/services';
-interface ServiceCardProps {
-  service: typeof services[0];
+interface ServiceCardProps {service: typeof services[0];}
   index: number;
 }
-const ServiceCard: React.FC<ServiceCardProps> = ({ service, index }) => {
-  const [isHovered, setIsHovered] = useState(false);
-  const formatPrice = (pricing: typeof service.pricing) => {
-    if (pricing.custom) {
+const ServiceCard: React.FC<ServiceCardProps> = ({ service, index }) => {const [isHovered, setIsHovered] = useState(false);}
+  const formatPrice = (pricing: typeof service.pricing) => {if (pricing.custom) {}
       return 'Custom Pricing';
     }
     return `$${pricing.starting.toLocaleString()}/${pricing.period === 'month' ? 'mo' : pricing.period === 'year' ? 'yr' : 'one-time'}`;
   };
-  const getCategoryIcon = (category: string) => {
-    switch (category) {
+  const getCategoryIcon = (category: string) => {switch (category) {}
       case 'ai': return Brain;
       case 'micro-saas': return Zap;
       case 'it': return Cloud;
@@ -24,14 +20,14 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index }) => {
     }
   };
   const CategoryIcon = getCategoryIcon(service.category);
-  return (
+  return ()
     <div
-      className={`quantum-card p-6 energy-pulse hover:scale-105 transition-all duration-500 ${
+      className={`quantum-card p-6 energy-pulse hover:scale-105 transition-all duration-500 ${}
         isHovered ? 'shadow-2xl' : 'shadow-lg'
       }`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      style={{
+      style={{}
         animationDelay: `${index * 100}ms`,
         background: isHovered 
           ? 'linear-gradient(135deg, rgba(0, 255, 255, 0.15), rgba(255, 0, 255, 0.15))'
@@ -55,13 +51,13 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index }) => {
           </div>
         </div>
         <div className="flex space-x-2">
-          {service.popular && (
+          {service.popular && (}
             <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs px-2 py-1 rounded-full font-bold flex items-center">
               <Star className="w-3 h-3 mr-1" />
               Popular;
   </
           )}
-          {service.new && (
+          {service.new && (}
             <span className="bg-gradient-to-r from-green-400 to-cyan-500 text-black text-xs px-2 py-1 rounded-full font-bold flex items-center">
               <Sparkles className="w-3 h-3 mr-1" />
               New;
@@ -80,16 +76,14 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index }) => {
           Key Features;
   </
         <ul className="space-y-1">
-          {service.features.slice(0, 3).map((feature, idx) => (
+          {service.features.slice(0, 3).map((feature, idx) => (}
             <li key={idx} className="text-xs text-gray-300 flex items-center">
               <div className="w-1 h-1 bg-cyan-400 rounded-full mr-2 flex-shrink-0" />
               {feature}
             </li>
           ))}
-          {service.features.length > 3 && (
-            <li className="text-xs text-cyan-400">
-              +{service.features.length - 3} more features;
-  </
+          {service.features.length > 3 && (}
+            <li className="text-xs text-cyan-400">+{service.features.length - 3} more features;
           )}
         </ul>
       </div>
@@ -100,7 +94,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index }) => {
           Key Benefits;
   </
         <div className="grid grid-cols-2 gap-2">
-          {service.benefits.slice(0, 2).map((benefit, idx) => (
+          {service.benefits.slice(0, 2).map((benefit, idx) => (}
             <div key={idx} className="text-xs text-gray-300 bg-slate-800/50 rounded px-2 py-1">
               {benefit}
             </div>
@@ -114,7 +108,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index }) => {
             <div className="text-lg font-bold text-white">
               {formatPrice(service.pricing)}
             </div>
-            {service.marketPrice && (
+            {service.marketPrice && (}
               <div className="text-xs text-gray-400">
                 Market: ${service.marketPrice.min}-${service.marketPrice.max}
               </div>
@@ -155,7 +149,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index }) => {
       <div className="mt-4 pt-4 border-t border-slate-700">
         <h4 className="text-xs font-semibold text-gray-400 mb-2">Perfect For:</h4>
         <div className="flex flex-wrap gap-1">
-          {service.useCases.slice(0, 2).map((useCase, idx) => (
+          {service.useCases.slice(0, 2).map((useCase, idx) => (}
             <span key={idx} className="text-xs bg-slate-700/50 text-gray-300 px-2 py-1 rounded">
               {useCase}
             </span>
@@ -165,29 +159,22 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index }) => {
     </div>
   );
 };
-const EnhancedServicesShowcase: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+const EnhancedServicesShowcase: React.FC = () => {const [selectedCategory, setSelectedCategory] = useState<string>('all');}
   const [filteredServices, setFilteredServices] = useState(services);
-  useEffect(() => {
-    if (selectedCategory === 'all') {
+  useEffect(() => {if (selectedCategory === 'all') {}
       setFilteredServices(services);
-    } else {
-      setFilteredServices(services.filter(service => service.category === selectedCategory));
+    } else {setFilteredServices(services.filter(service => service.category === selectedCategory));}
     }
   }, [selectedCategory]);
   const popularServices = services.filter(service => service.popular);
   const newServices = services.filter(service => service.new);
-  return (
+  return ()
     <section className="py-16 px-4">
       <div className="container mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 neon-text">
-            Our Services;
-  </
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Comprehensive AI, IT, and Micro SAAS solutions designed to transform your business operations;
-  </
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 neon-text">Our Services;
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Comprehensive AI, IT, and Micro SAAS solutions designed to transform your business operations;
           {/* Contact Info Banner */}
           <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-lg p-6 mb-8 cyber-card">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
@@ -218,20 +205,19 @@ const EnhancedServicesShowcase: React.FC = () => {
         {/* Category Filter */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           <button
-            onClick={() => setSelectedCategory('all')}
-            className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
+            onClick={() =>setSelectedCategory('all')}
+            className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${}
               selectedCategory === 'all'
                 ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white'
                 : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
             }`}
           >
             All Services;
-  </
-          {serviceCategories.map((category) => (
+          {serviceCategories.map((category) => (}
             <button
               key={category.id}
               onClick={() => setSelectedCategory(category.id)}
-              className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 flex items-center space-x-2 ${
+              className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 flex items-center space-x-2 ${}
                 selectedCategory === category.id
                   ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white'
                   : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
@@ -244,18 +230,16 @@ const EnhancedServicesShowcase: React.FC = () => {
         </div>
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {filteredServices.map((service, index) => (
+          {filteredServices.map((service, index) => (}
             <ServiceCard key={service.id} service={service} index={index} />
           ))}
         </div>
         {/* Popular Services Section */}
-        {selectedCategory === 'all' && (
+        {selectedCategory === 'all' && (}
           <div className="mb-12">
-            <h3 className="text-2xl font-bold text-white mb-6 text-center neon-text">
-              Most Popular Services;
-  </
+            <h3 className="text-2xl font-bold text-white mb-6 text-center neon-text">Most Popular Services;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {popularServices.map((service, index) => (
+              {popularServices.map((service, index) => (}
                 <div key={service.id} className="cyber-card p-4 hover:scale-105 transition-all duration-300">
                   <div className="text-3xl mb-3 text-center">{service.icon}</div>
                   <h4 className="text-lg font-semibold text-white mb-2 text-center">{service.name}</h4>
@@ -305,18 +289,5 @@ const EnhancedServicesShowcase: React.FC = () => {
   );
 };
 export default EnhancedServicesShowcase;
-  </a>
-  </h3>
-  </button>
-  </p>
-  </h2>
   </string>
-  </a>
-  </a>
-  </a>
-  </h4>
-  </li>
-  </h4>
-  </span>
-  </span>
   </ServiceCardProps>

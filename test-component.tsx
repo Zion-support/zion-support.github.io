@@ -1,12 +1,11 @@
-const TestComponent = () => {
-  return(<div>)
+const TestComponent = () => {return(<div>)}
       <h1>Test</h1>)
     </div>)
-  return (
+  return ()
     <div></div>
       <h1>Test</h1>
     </div>
   );
 const TestComponent = () => {/* TODO: Fix JSX expression */}
 };
-export default TestComponent;
+export default TestComponent

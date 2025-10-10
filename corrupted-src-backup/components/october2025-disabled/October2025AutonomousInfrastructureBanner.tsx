@@ -1,7 +1,6 @@
-const October2025AutonomousInfrastructureBanner = () => {
-  return(<div className="relative bg-gradient-to-br from-cyan-900/30 via-blue-900/30 to-purple-900/30 border-y border-cyan-500/40 overflow-hidden">
+const October2025AutonomousInfrastructureBanner = () => {return(<div className="relative bg-gradient-to-br from-cyan-900/30 via-blue-900/30 to-purple-900/30 border-y border-cyan-500/40 overflow-hidden">}
       <div className="absolute inset-0 opacity-10">
-  return (
+  return ()
     <div className="relative bg-gradient-to-br from-cyan-900/30 via-blue-900/30 to-purple-900/30 border-y border-cyan-500/40 overflow-hidden"></div>
       <div className="absolute inset-0 opacity-10"></div>
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
@@ -152,12 +151,8 @@ const October2025AutonomousInfrastructureBanner = () => {/* TODO: Fix JSX expres
           <div className="grid md: grid-cols-3 gap-6 mb-6">
             <div className="bg-black/20 rounded-lg p-4">
             <div></div>
-              <h3 className="text-2xl font-bold text-white mb-2">
-                Fortune 100 Financial Services: $410M Annual Value Creation;
-  </
-              <p className="text-gray-300">
-                $2.3 T assets under management • 24/7 trading operations • 8,500 microservices • 47 countries;
-  </
+              <h3 className="text-2xl font-bold text-white mb-2">Fortune 100 Financial Services: $410M Annual Value Creation;
+              <p className="text-gray-300">$2.3 T assets under management • 24/7 trading operations • 8,500 microservices • 47 countries;
             </div>
           <div className="grid md:grid-cols-3 gap-6 mb-6"></div>
             <div className="bg-black/20 rounded-lg p-4"></div>
@@ -273,9 +268,7 @@ const October2025AutonomousInfrastructureBanner = () => {/* TODO: Fix JSX expres
               <Link className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
             </div>
             <div className="font-bold text-lg mb-2">View $410M Success Story</div>
-            <div className="text-sm text-blue-100">
-              Fortune 100 case study: 99.994% uptime, 87% cost reduction, 47x ROI, 12-month journey;
-  </
+            <div className="text-sm text-blue-100">Fortune 100 case study: 99.994% uptime, 87% cost reduction, 47x ROI, 12-month journey;
           </Link>
           <Link;
             to="/services/autonomous-infrastructure-orchestration-services"
@@ -292,9 +285,7 @@ const October2025AutonomousInfrastructureBanner = () => {/* TODO: Fix JSX expres
               <Link className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
             </div>
             <div className="font-bold text-lg mb-2">Explore Services & Pricing</div>
-            <div className="text-sm text-purple-100">
-              Implementation packages, managed services, ROI projections, success guarantees;
-  </
+            <div className="text-sm text-purple-100">Implementation packages, managed services, ROI projections, success guarantees;
           </Link>
         </div>
         {/* Free Assessment CTA */}

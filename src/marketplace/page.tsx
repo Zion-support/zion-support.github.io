@@ -4,12 +4,10 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-const MarketplacePage: React.FC = () => {
-  const [activeCategory, setActiveCategory] = useState('products');
+const MarketplacePage: React.FC = () => {const [activeCategory, setActiveCategory] = useState('products');}
   const [searchTerm, setSearchTerm] = useState('');
-  const categories = [
-    {
-      id: 'products',
+  const categories = []
+    {id: 'products',}
       name: 'Products',
       icon: ShoppingCart,
       color: 'text-blue-400',
@@ -30,7 +28,7 @@ idid: 'equipment',
       description:     ,
 $4}
   ];
-  const products = [
+  const products = []
       id: 1,
       name: 'AI Project Manager Pro',
       description: 'Intelligent project management with AI-powered insights and automation',
@@ -71,7 +69,7 @@ $4}
       image: '🔒',
       features: ['Quantum Encryption', 'Threat Detection', 'Compliance', 'Real-time Monitoring'],
       vendor: 'QuantumSec',
-  const talent = [
+  const talent = []
       name: 'Dr. Sarah Chen',
       title: 'AI Research Scientist',
       expertise: ['Machine Learning', 'Deep Learning', 'Computer Vision'],
@@ -96,7 +94,7 @@ $4}
       rate: '$180/hour',
       image: '👩‍🔬',
       available: false
-  const equipment = [
+  const equipment = []
       name: 'AI Workstation Pro',
       description: 'High-performance workstation optimized for AI development and training',
       category: 'Hardware',
@@ -114,8 +112,7 @@ $4}
       image: '⚛️',
       features: ['100 qubits', '24/7 access', 'API integration', 'Expert support'],
       vendor: 'QuantumCloud',
-  const getCurrentItems = () => {
-    switch (activeCategory) {
+  const getCurrentItems = () => {switch (activeCategory) {}
       case 'products':
         return products;
       case 'talent':
@@ -129,7 +126,7 @@ $4}
     item.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
     item.description.toLowerCase().includes(searchTerm.toLowerCase())
   );
-  const stats = [
+  const stats = []
       value: '500+',
       label: 'Products Available',
       color:       ,
@@ -143,7 +140,7 @@ iconicon: Star,
       value: '4.8',
       label: 'Average Rating',
       color: 'text-yellow-400'
-  const benefits = [
+  const benefits = []
       icon: CheckCircle,
       title: 'Verified Vendors',
       description:       ,
@@ -156,16 +153,14 @@ icon$5: Clock,
 icon$5: Award,
       title: 'Quality Guarantee',
       description: '100% satisfaction guarantee on all purchases'
-  return (
+  return ()
     <React.Fragment>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16 pt-24">
           {/* Header */}
           <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-              Zion Tech Marketplace;
-  </
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">Zion Tech Marketplace;
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Discover, compare, and purchase AI and IT solutions from verified vendors. 
               Find the perfect tools, talent, and equipment for your business needs.
@@ -173,7 +168,7 @@ icon$5: Award,
           </div>
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
-            {stats.map((stat, index) => (
+            {stats.map((stat, index) => (}
               <div key={index} className="text-center">
                 <div className={`w-16 h-16 ${stat.color.replace('text-', 'bg-').replace('-400', '-500/10')} rounded-full flex items-center justify-center mx-auto mb-4`}>
                   <stat.icon className={`w-8 h-8 ${stat.color}`} />
@@ -198,11 +193,11 @@ icon$5: Award,
   </
             {/* Category Tabs */}
             <div className="flex flex-wrap justify-center gap-4">
-              {categories.map((category) => (
+              {categories.map((category) => (}
                 <button
                   key={category.id}
                   onClick={() => setActiveCategory(category.id)}
-                  className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${
+                  className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${}
                     activeCategory === category.id
                       ? `${category.bgColor} ${category.color} border-2 border-current`
                       : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 border-2 border-transparent'
@@ -216,14 +211,14 @@ icon$5: Award,
               {categories.find(cat => cat.id === activeCategory)?.name} ({filteredItems.length})
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {filteredItems.map((item) => (
+              {filteredItems.map((item) => (}
                 <div key={item.id} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300">
                   <div className="flex items-start mb-4">
                     <div className="text-4xl mr-4">{item.image}</div>
                     <div className="flex-1">
                       <div className="flex items-center justify-between mb-2">
                         <h3 className="text-lg font-semibold text-white">{item.name}</h3>
-                        {item.verified && (
+                        {item.verified && (}
                           <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center">
                             <CheckCircle className="w-3 h-3 text-white" />
                         )}
@@ -231,11 +226,11 @@ icon$5: Award,
                       <div className="flex items-center text-sm text-gray-400 mb-2">
                         <span className="mr-2">{item.category}</span>
                         {item.vendor && <span>• {item.vendor}</span>}
-                  {activeCategory === 'products' && (
+                  {activeCategory === 'products' && (}
                       <div className="mb-4">
                         <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h4>
                         <ul className="space-y-1">
-                          {item.features.map((feature, index) => (
+                          {item.features.map((feature, index) => (}
                             <li key={index} className="text-sm text-gray-300 flex items-start">
                               <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
                               {feature}
@@ -248,10 +243,10 @@ icon$5: Award,
                           <span className="text-sm text-gray-400 ml-1">({item.reviews} reviews)</span>
                         <div className="text-lg font-bold text-cyan-400">{item.price}</div>
                     </React.Fragment>
-                  {activeCategory === 'talent' && (
+                  {activeCategory === 'talent' && (}
                         <h4 className="text-sm font-semibold text-cyan-400 mb-2">Expertise:</h4>
                         <div className="flex flex-wrap gap-1">
-                          {item.expertise.map((skill, index) => (
+                          {item.expertise.map((skill, index) => (}
                             <span key={index} className="px-2 py-1 bg-slate-700 text-xs text-gray-300 rounded">
                               {skill}
                             </span>
@@ -259,11 +254,11 @@ icon$5: Award,
                         <div className="text-lg font-bold text-cyan-400">{item.rate}</div>
                       <div className="flex items-center justify-between text-sm">
                         <span className="text-gray-400">{item.experience} experience</span>
-                        <span className={`px-2 py-1 rounded text-xs ${
+                        <span className={`px-2 py-1 rounded text-xs ${}
                           item.available ? 'bg-green-500/20 text-green-400' : 'bg-red-500/20 text-red-400'
                         }`}>
                           {item.available ? 'Available' : 'Busy'}
-                  {activeCategory === 'equipment' && (
+                  {activeCategory === 'equipment' && (}
                         <h4 className="text-sm font-semibold text-cyan-400 mb-2">Specifications:</h4>
                         <span className="text-gray-400">{item.vendor}</span>
                           item.inStock ? 'bg-green-500/20 text-green-400' : 'bg-red-500/20 text-red-400'
@@ -275,7 +270,7 @@ icon$5: Award,
             <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
               Why Choose Our Marketplace?
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {benefits.map((benefit, index) => (
+              {benefits.map((benefit, index) => (}
                   <div className="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
                     <benefit.icon className="w-8 h-8 text-cyan-400" />
                   <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}</h3>
@@ -291,9 +286,7 @@ icon$5: Award,
               <a
                 href="/contact"
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
-                <ShoppingCart className="w-5 h-5 mr-2" />
-                Start Shopping;
-  </
+                <ShoppingCart className="w-5 h-5 mr-2" />Start Shopping;
                 href="tel:+13024640950"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Phone className="w-4 h-4 mr-2" />
@@ -303,13 +296,13 @@ icon$5: Award,
                 <Mail className="w-4 h-4 mr-2" />
                 Email Us
       <Footer />
-  return (
+  return ()
     <div>Coming Soon</div>
   );
 };
   const [activeCategory, setActiveCategory] = useState('products');
   const [searchTerm, setSearchTerm] = useState('');
-const categories = [
+const categories = []
     {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
@@ -418,38 +411,4 @@ const categories = [
                 <Mail className="w-4 h-4 mr-2" />
                 Email Us;
       <Footer /></Footer>
-export default MarketplacePage;
-  </div>
-  </p>
-  </h2>
-  </div>
-  </div>
-  </div>
-  </h2>
-  </button>
-  </span>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </button>
-  </div>
-  </button>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </h1>
-  </div>
-  </div>
+export default MarketplacePage

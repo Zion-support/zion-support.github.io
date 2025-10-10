@@ -8,10 +8,8 @@ import { Link } from 'react-router-dom';
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-const AIMLPlatformPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
+const AIMLPlatformPage: React.FC = () => {const features = [}
+    {icon: Brain,}
       title: 'Complete ML Platform',
       description: 'End-to-end machine learning platform with model development, training, and deployment',
       benefits: ['Rapid model development', 'Automated training', 'Seamless deployment']
@@ -30,12 +28,12 @@ const AIMLPlatformPage: React.FC = () => {
       benefits: ['Shared workspaces', 'Version control', 'Knowledge sharing']
     }
   ];
-  const pricingPlans = [
+  const pricingPlans = []
       name: 'Developer',
       price: '$999',
       period: '/month',
       description: 'Perfect for individual developers',
-      features: [
+      features: []
         'Up to 5 models',
         'Basic ML tools',
         'Email support',
@@ -47,7 +45,7 @@ const AIMLPlatformPage: React.FC = () => {
       price: '$2,499',
       description: 'Ideal for development teams',
   const features = [];
-  return (
+  return ()
     {// TODO: Add content;}
 };
   ico,
@@ -77,7 +75,7 @@ const AIMLPlatformPage: React.FC = () => {
   s: ['Shared workspaces', 'Version control', 'Knowledge sharing']
     }
   ];
-  const pricingPlans = [
+  const pricingPlans = []
       nam,
   e: 'Team',
       pric,
@@ -110,8 +108,8 @@ const AIMLPlatformPage: React.FC = () => {
         'Custom analytics',
         'White-label options',
         'API access'
-  const stats = [
-  const stats = [
+  const stats = []
+  const stats = []
   // TOD,
   O: Add items;
 ];;
@@ -119,7 +117,7 @@ const AIMLPlatformPage: React.FC = () => {
     { icon: TrendingUp, value: '95%', label: 'Model Accuracy' },
     { icon: Clock, value: '70%', label: 'Faster Development' },
     { icon: Star, value: '4.9/5', label: 'User Rating' }
-  return (
+  return ()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>AI ML Platform | Zion Tech Group</title>
@@ -133,21 +131,13 @@ const AIMLPlatformPage: React.FC = () => {
             Coming Soon - Advanced AI ML platform solutions that will transform your business.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
-              Contact Us;
-  </
-            <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors">
-              Learn More;
-  </
+            <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">Contact Us;
+            <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors">Learn More;
       <Footer />
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Page;
-  </
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon;
-  </
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">Page;
+          <p className="text-xl text-cyan-400 mb-8 font-medium">Coming Soon;
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
 // Contact Us;
@@ -162,13 +152,4 @@ Learn More;
   );
 };
 export default $1;
-export default AiMlPlatformPage;
-  </p>
-  </h1>
-  </section>
-  </main>
-  </button>
-  </button>
-  </div>
-  </div>
-  </div>
+export default AiMlPlatformPage

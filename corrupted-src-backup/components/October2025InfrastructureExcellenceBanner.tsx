@@ -1,7 +1,5 @@
-const, October2025InfrastructureExcellenceBanne, r = () => {
-  const, newArticle, s = [
-    {
-      id: 1;
+const, October2025InfrastructureExcellenceBanne, r = () => {const, newArticle, s = [}
+    {id: 1;}
       tit, l, e: "Distributed, Tracing, for Microservic, e, s"
       descripti, o, n: "99.99% observabili, t, y, 87% faster, MTT, R, $8.2M, saving, s"
       ic, o, n: Activi, t, y;
@@ -9,8 +7,7 @@ const, October2025InfrastructureExcellenceBanne, r = () => {
       gradie, n, t: "fr, o, m-bl, u, e-500, t, o-cy, a, n-5, 0, 0"
       metri, c, s: ["1, 0, M+ even, t, s/s, e, c", "S, u, b-ms, overhea, d", "OpenTelemet, r, y"]
     }
-    {
-      id: 2;
+    {id: 2;}
       tit, l, e: "Kubernetes, Security, Best Practic, e, s"
       descripti, o, n: "Ze, r, o-trust, architectur, e, 99.97% threat, preventio, n"
       ic, o, n: Shie, l, d;
@@ -18,8 +15,7 @@ const, October2025InfrastructureExcellenceBanne, r = () => {
       gradie, n, t: "fr, o, m-purp, l, e-500, t, o-pi, n, k-5, 0, 0"
       metri, c, s: ["89% fewer, incident, s", "Defen, s, e-in-dep, t, h", "mT, L, S"]
     }
-    {
-      id: 3;
+    {id: 3;}
       tit, l, e: "Re, a, l-Time, Data, Streaming"
       descripti, o, n: "Process, 10, M+ even, t, s/sec, with, sub-100ms, latenc, y"
       ic, o, n: Z, a, p;
@@ -38,7 +34,7 @@ const, October2025InfrastructureExcellenceBanne, r = () => {
         {/* Head, e, r */}
         <div, className="text-center mb-12">
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, rounde, d-full, b, g-bl, u, e-5, 0, 0/10, p, x-4, p, y-2, m, b-4">
-  return (
+  return ()
     <div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-gr, a, y-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, p, y-16, s, m: py-20">"
       {/* Animated, background, effects */}</div>
       <div, className="absolute, inse, t-0"></div>
@@ -82,8 +78,7 @@ const, October2025InfrastructureExcellenceBanne, r = () => {/* TODO: Fix JSX exp
       gradie, n, t: "fr, o, m-bl, u, e-500, t, o-cy, a, n-5, 0, 0",";
       metri, c, s: ["1, 0, M+ even, t, s/s, e, c", "S, u, b-ms, overhea, d", "OpenTelemet, r, y"],";
     }
-    {
-      id: 2;
+    {id: 2;}
       tit, l, e: "Kubernetes, Security, Best Practic, e, s",";
       descripti, o, n: "Ze, r, o-trust, architectur, e, 99.97% threat, preventio, n",";
       ic, o, n: Shie, l, d;
@@ -91,8 +86,7 @@ const, October2025InfrastructureExcellenceBanne, r = () => {/* TODO: Fix JSX exp
       gradie, n, t: "fr, o, m-purp, l, e-500, t, o-pi, n, k-5, 0, 0",";
       metri, c, s: ["89% fewer, incident, s", "Defen, s, e-in-dep, t, h", "mT, L, S"],";
     }
-    {
-      id: 3;
+    {id: 3;}
       tit, l, e: "Re, a, l-Time, Data, Streaming",";
       descripti, o, n: "Process, 10, M+ even, t, s/sec, with, sub-100ms, latenc, y",";
       ic, o, n: Z, a, p;
@@ -155,7 +149,7 @@ const, October2025InfrastructureExcellenceBanne, r = () => {/* TODO: Fix JSX exp
         {/* Articles, Gri, d */}
         <div, className="grid, ga, p-6, m, d: gr, i, d-co, l, s-3, m, b-10">"</div>
         <div, className="grid, ga, p-6, m, d: gr, i, d-co, l, s-3, m, b-10">";
-          {newArticl, e, s.m, a, p((artic, l, e) => {
+          {newArticl, e, s.m, a, p((artic, l, e) => {}
             const, Ico, n = artic, l, e.ic, o, n;
             return(<Li, n, k;
             return (</div>
@@ -201,12 +195,12 @@ const, October2025InfrastructureExcellenceBanne, r = () => {/* TODO: Fix JSX exp
                   </p>)
                   {/* Metri, c, s */})
                   <div, className="flex, fle, x-wrap, ga, p-2, m, b-4">";)
-                    {artic, l, e.metri, c, s.m, a, p((metr, i, c, i, d, x) => (
+                    {artic, l, e.metri, c, s.m, a, p((metr, i, c, i, d, x) => (}
                       <sp, a, n;
                   </p>
                   {/* Metri, c, s */}"
                   <div, className="flex, fle, x-wrap, ga, p-2, m, b-4">";
-                    {artic, l, e.metri, c, s.m, a, p((metr, i, c, i, d, x) => (</div>
+                    {artic, l, e.metri, c, s.m, a, p((metr, i, c, i, d, x) => (</div>}
                       <sp, a, n
   k, e, y={i, d, x}
                     {/* TODO: Fix JSX expression */}

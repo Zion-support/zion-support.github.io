@@ -4,8 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { CheckCircle, ArrowRight, Zap, Star, Users, TrendingUp, Shield, Cloud, BarChart3, MessageSquare } from 'lucide-react';
 
-interface MicroSaasProduct {
-  id: string;
+interface MicroSaasProduct {id: string;}
   icon: string;
   title: string;
   description: string;
@@ -16,16 +15,13 @@ interface MicroSaasProduct {
   category: string;
 }
 
-const MicroSaasPage: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState('All');
-
-  const products: MicroSaasProduct[] = [
-    {
-      id: '1',
+const MicroSaasPage: React.FC = () => {const [selectedCategory, setSelectedCategory] = useState('All');}
+  const products: MicroSaasProduct[] = []
+    {id: '1',}
       icon: '📊',
       title: 'Zion Analytics Pro',
       description: 'Advanced real-time business intelligence and analytics platform with AI-powered insights',
-      features: [
+      features: []
         'Real-time data visualization',
         'Custom dashboard builder',
         'AI-powered insights',
@@ -38,12 +34,11 @@ const MicroSaasPage: React.FC = () => {
       popular: true,
       category: 'Analytics'
     },
-    {
-      id: '2',
+    {id: '2',}
       icon: '💬',
       title: 'Zion Chat AI',
       description: 'Next-generation AI customer support platform with advanced NLP and sentiment analysis',
-      features: [
+      features: []
         'Advanced AI chatbot with natural language processing',
         'Multi-channel support (web, mobile, social)',
         'Sentiment analysis and mood tracking',
@@ -56,12 +51,11 @@ const MicroSaasPage: React.FC = () => {
       popular: true,
       category: 'Communication'
     },
-    {
-      id: '3',
+    {id: '3',}
       icon: '🔐',
       title: 'Zion Security Shield',
       description: 'Enterprise-grade cybersecurity monitoring with AI threat detection and automated response',
-      features: [
+      features: []
         'Real-time threat monitoring',
         'AI-powered threat detection',
         'Automated incident response',
@@ -74,12 +68,11 @@ const MicroSaasPage: React.FC = () => {
       popular: false,
       category: 'Security'
     },
-    {
-      id: '4',
+    {id: '4',}
       icon: '☁️',
       title: 'Zion Cloud Vault',
       description: 'Intelligent cloud backup and disaster recovery with AI-powered optimization',
-      features: [
+      features: []
         'Automated cloud backup',
         'Disaster recovery planning',
         'Version control and file history',
@@ -92,12 +85,11 @@ const MicroSaasPage: React.FC = () => {
       popular: false,
       category: 'Storage'
     },
-    {
-      id: '5',
+    {id: '5',}
       icon: '📈',
       title: 'Zion Performance AI',
       description: 'Advanced application performance monitoring with AI-powered optimization recommendations',
-      features: [
+      features: []
         'Real-time performance monitoring',
         'AI-powered optimization suggestions',
         'Error tracking and alerting',
@@ -110,12 +102,11 @@ const MicroSaasPage: React.FC = () => {
       popular: false,
       category: 'Monitoring'
     },
-    {
-      id: '6',
+    {id: '6',}
       icon: '🤖',
       title: 'Zion AI Workflow',
       description: 'Intelligent business process automation with custom AI models and workflow optimization',
-      features: [
+      features: []
         'Visual workflow builder',
         'AI-powered process optimization',
         'Custom automation rules',
@@ -128,12 +119,11 @@ const MicroSaasPage: React.FC = () => {
       popular: true,
       category: 'AI'
     },
-    {
-      id: '7',
+    {id: '7',}
       icon: '📧',
       title: 'Zion Email Marketing AI',
       description: 'AI-powered email marketing platform with advanced segmentation and personalization',
-      features: [
+      features: []
         'AI-powered content generation',
         'Advanced audience segmentation',
         'Automated campaign optimization',
@@ -146,12 +136,11 @@ const MicroSaasPage: React.FC = () => {
       popular: false,
       category: 'Marketing'
     },
-    {
-      id: '8',
+    {id: '8',}
       icon: '💰',
       title: 'Zion Finance AI',
       description: 'Intelligent financial management and accounting automation platform',
-      features: [
+      features: []
         'Automated bookkeeping',
         'AI-powered expense categorization',
         'Financial forecasting',
@@ -172,14 +161,14 @@ const MicroSaasPage: React.FC = () => {
     ? products 
     : products.filter(product => product.category === selectedCategory);
 
-  const stats = [
+  const stats = []
     { icon: <Users className="w-8 h-8 text-blue-500" />, value: '10K+', label: 'Active Users' },
     { icon: <TrendingUp className="w-8 h-8 text-green-500" />, value: '99.9%', label: 'Uptime' },
     { icon: <Shield className="w-8 h-8 text-purple-500" />, value: '100%', label: 'Secure' },
     { icon: <Zap className="w-8 h-8 text-orange-500" />, value: '5min', label: 'Setup Time' }
   ];
 
-  return (
+  return ()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Micro SaaS Solutions - Zion Tech Group | Ready-to-Use Business Tools</title>
@@ -202,7 +191,7 @@ const MicroSaasPage: React.FC = () => {
           
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
-            {stats.map((stat, index) => (
+            {stats.map((stat, index) => (}
               <div key={index} className="text-center">
                 <div className="flex justify-center mb-4">
                   {stat.icon}
@@ -219,11 +208,11 @@ const MicroSaasPage: React.FC = () => {
       <section className="py-8 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-wrap justify-center gap-4">
-            {categories.map((category) => (
+            {categories.map((category) => (}
               <button
                 key={category}
                 onClick={() => setSelectedCategory(category)}
-                className={`px-6 py-3 rounded-full border transition-all duration-300 ${
+                className={`px-6 py-3 rounded-full border transition-all duration-300 ${}
                   selectedCategory === category
                     ? 'border-cyan-400 bg-cyan-400/10 text-cyan-400'
                     : 'border-cyan-400/30 text-cyan-400 hover:bg-cyan-400/10'
@@ -240,11 +229,11 @@ const MicroSaasPage: React.FC = () => {
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredProducts.map((product) => (
-              <div key={product.id} className={`bg-slate-800/50 rounded-2xl p-8 border transition-all duration-300 ${
+            {filteredProducts.map((product) => (}
+              <div key={product.id} className={`bg-slate-800/50 rounded-2xl p-8 border transition-all duration-300 ${}
                 product.popular ? 'border-cyan-500' : 'border-cyan-500/20 hover:border-cyan-500/40'
               }`}>
-                {product.popular && (
+                {product.popular && (}
                   <div className="flex justify-center mb-4">
                     <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center">
                       <Star className="w-4 h-4 mr-1" />
@@ -264,7 +253,7 @@ const MicroSaasPage: React.FC = () => {
                 </div>
                 
                 <ul className="space-y-3 mb-8">
-                  {product.features.map((feature, index) => (
+                  {product.features.map((feature, index) => (}
                     <li key={index} className="flex items-start">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" />
                       <span className="text-gray-300">{feature}</span>
@@ -360,4 +349,4 @@ const MicroSaasPage: React.FC = () => {
   );
 };
 
-export default MicroSaasPage;
+export default MicroSaasPage

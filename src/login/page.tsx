@@ -5,23 +5,20 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 'use client';
 import React, { useState } from 'react';
-const LoginPage: React.FC = () => {
-  const [formData, setFormData] = useState({
+const LoginPage: React.FC = () => {const [formData, setFormData] = useState({}
     email: '',
     password: '',
     rememberMe: false
   });
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  const _handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const _handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {}
     const { name, value, type, checked } = e.target;
-    setFormData(prev => ({
-      ...prev,
+    setFormData(prev => ({...prev,}
       [name]: type === 'checkbox' ? checked : value
     }));
   };
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleSubmit = async (e: React.FormEvent) => {e.preventDefault();}
     setIsLoading(true);
     // Simulate login process
     await new Promise(resolve => setTimeout(resolve, 2000));
@@ -29,24 +26,21 @@ const LoginPage: React.FC = () => {
     // Redirect to dashboard or home page
     window.location.href = '/';
   };
-  const features = [
-    {
-      icon: Shield,
+  const features = []
+    {icon: Shield,}
       title: 'Secure Access',
       description:     ,
 $4},
-    {
-      icon: CheckCircle,
+    {icon: CheckCircle,}
       title: '24/7 Support',
       description:     ,
 $4},
-    {
-      icon: Phone,
+    {icon: Phone,}
       title: 'Mobile Ready',
       description:     ,
 $4}
   ];
-  return (
+  return ()
     <React.Fragment>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center py-12">
@@ -55,12 +49,8 @@ $4}
             {/* Left Side - Login Form */}
             <div className="bg-slate-800/50 rounded-2xl p-8 border border-gray-700/50">
               <div className="text-center mb-8">
-                <h1 className="text-3xl font-bold text-white mb-2 neon-text">
-                  Welcome Back;
-  </
-                <p className="text-gray-300">
-                  Sign in to your account to access your AI and IT services;
-  </
+                <h1 className="text-3xl font-bold text-white mb-2 neon-text">Welcome Back;
+                <p className="text-gray-300">Sign in to your account to access your AI and IT services;
               </div>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
@@ -117,7 +107,7 @@ $4}
     // Redirect to dashboard or home page;
     window.location.href = '/';
   };
-  const features = [
+  const features = []
   // TOD,
   O: Add items;
 ];;
@@ -230,12 +220,12 @@ className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg
                   type="submit"
                   disabled={isLoading}
                   className="w-full cyber-button py-3 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed">
-                  {isLoading ? (
+                  {isLoading ? (}
                     <div className="flex items-center justify-center">
                       <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
                       Signing In...
                     </div>
-                  ) : (
+                  ) : ()
                     'Sign In'
                   )}
                 </button>
@@ -245,15 +235,11 @@ className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg
                   Don't have an account?{' '}
                   <a
                     href="/signup"
-                    className="text-cyan-400 hover:text-cyan-300 font-medium transition-colors">
-                    Sign up here;
-  </
+                    className="text-cyan-400 hover:text-cyan-300 font-medium transition-colors">Sign up here;
                 </p>
               </div>
               <div className="mt-8 pt-6 border-t border-gray-700">
-                <p className="text-center text-sm text-gray-400 mb-4">
-                  Or continue with;
-  </
+                <p className="text-center text-sm text-gray-400 mb-4">Or continue with;
                 <div className="grid grid-cols-2 gap-3">
                   <button className="flex items-center justify-center px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white hover:bg-slate-600 transition-colors">
                     <svg className="w-5 h-5 mr-2" viewBox="0 0 24 24">
@@ -276,16 +262,14 @@ className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg
             {/* Right Side - Features */}
             <div className="space-y-8">
               <div>
-                <h2 className="text-3xl font-bold text-white mb-4 neon-text">
-                  Access Your AI & IT Services;
-  </
+                <h2 className="text-3xl font-bold text-white mb-4 neon-text">Access Your AI & IT Services;
                 <p className="text-xl text-gray-300 mb-8">
                   Sign in to manage your AI services, view analytics, and access all your 
                   enterprise solutions in one place.
                 </p>
               </div>
               <div className="space-y-6">
-                {features.map((feature, index) => (
+                {features.map((feature, index) => (}
                   <div key={index} className="flex items-start">
                     <div className="w-12 h-12 bg-cyan-500/10 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
                       <feature.icon className="w-6 h-6 text-cyan-400" />
@@ -442,11 +426,6 @@ type="submit" disabled={isLoading}
   );
 };
 export default LoginPage;
-  </a>
-  </button>
-  </button>
-  </button>
-  </a>
   </label>
   </HTMLInputElement>
   </HTMLInputElement>

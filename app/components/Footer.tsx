@@ -3,10 +3,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Clock, Brain, Cloud, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Github, Linkedin, Twitter } from 'lucide-react';
 
-const Footer: React.FC = () => {
-  const currentYear = new Date().getFullYear();
-  
-  const aiServices = [
+const Footer: React.FC = () => {const currentYear = new Date().getFullYear();}
+  const aiServices = []
     { name: 'AI Strategy & Consulting', url: '/ai-services', description: 'Strategic AI consulting' },
     { name: 'Machine Learning Solutions', url: '/ai-services', description: 'Custom ML models' },
     { name: 'Natural Language Processing', url: '/ai-services', description: 'NLP and chatbots' },
@@ -15,7 +13,7 @@ const Footer: React.FC = () => {
     { name: 'AI Automation', url: '/ai-services', description: 'Process automation' }
   ];
 
-  const itServices = [
+  const itServices = []
     { name: 'Cloud Infrastructure', url: '/it-services', description: 'Scalable cloud solutions' },
     { name: 'Cybersecurity', url: '/it-services', description: 'Security solutions' },
     { name: 'API Development', url: '/it-services', description: 'Custom API solutions' },
@@ -24,7 +22,7 @@ const Footer: React.FC = () => {
     { name: 'Managed IT Services', url: '/it-services', description: '24/7 IT support' }
   ];
 
-  const microSaasServices = [
+  const microSaasServices = []
     { name: 'Project Management', url: '/micro-saas', description: 'Streamlined project tracking' },
     { name: 'Customer Support', url: '/micro-saas', description: 'Efficient support systems' },
     { name: 'Analytics Dashboard', url: '/micro-saas', description: 'Business intelligence' },
@@ -33,7 +31,7 @@ const Footer: React.FC = () => {
     { name: 'Financial Tracking', url: '/micro-saas', description: 'Financial management' }
   ];
 
-  const resourcesLinks = [
+  const resourcesLinks = []
     { name: 'Blog', url: '/blog' },
     { name: 'Case Studies', url: '/case-studies' },
     { name: 'Documentation', url: '/docs' },
@@ -42,7 +40,7 @@ const Footer: React.FC = () => {
     { name: 'FAQ', url: '/faq' }
   ];
 
-  return (
+  return ()
     <footer className="bg-slate-900 border-t border-cyan-500/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -81,7 +79,7 @@ const Footer: React.FC = () => {
               AI Services
             </h3>
             <ul className="space-y-2">
-              {aiServices.map((service, index) => (
+              {aiServices.map((service, index) => (}
                 <li key={index}>
                   <Link 
                     to={service.url}
@@ -100,7 +98,7 @@ const Footer: React.FC = () => {
               IT Services
             </h3>
             <ul className="space-y-2">
-              {itServices.map((service, index) => (
+              {itServices.map((service, index) => (}
                 <li key={index}>
                   <Link 
                     to={service.url}
@@ -119,7 +117,7 @@ const Footer: React.FC = () => {
               Micro SaaS
             </h3>
             <ul className="space-y-2">
-              {microSaasServices.slice(0, 6).map((service, index) => (
+              {microSaasServices.slice(0, 6).map((service, index) => (}
                 <li key={index}>
                   <Link 
                     to={service.url}
@@ -159,4 +157,4 @@ const Footer: React.FC = () => {
   );
 };
 
-export default Footer;
+export default Footer

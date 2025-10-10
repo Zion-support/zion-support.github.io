@@ -6,10 +6,8 @@ import { Helmet } from 'react-helmet-async';
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-const AIServicesPage: React.FC = () => {
-  const services = [
-    {
-      title: 'AI Strategy & Consulting',
+const AIServicesPage: React.FC = () => {const services = [}
+    {title: 'AI Strategy & Consulting',}
       description: 'Comprehensive AI strategy development and implementation consulting',
       icon: Brain,
       features: ['AI Readiness Assessment', 'Strategic Planning', 'Implementation Roadmap', 'ROI Analysis'],
@@ -32,12 +30,12 @@ titletitle: 'AI Analytics & Insights',
       price:     ,
 $4}
   ];
-  const benefits = [
+  const benefits = []
     '300% Average ROI Increase',
     '95% Process Automation',
     '50% Cost Reduction',
     '99.9% Uptime Guarantee'
-  return (
+  return ()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>AI Services | Zion Tech Group</title>
@@ -51,12 +49,8 @@ $4}
             Coming Soon - Advanced AI services solutions that will transform your business.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
-              Contact Us;
-  </
-            <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors">
-              Learn More;
-  </
+            <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">Contact Us;
+            <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors">Learn More;
       <Footer />
   );
 };
@@ -64,23 +58,19 @@ export default $1;
 'use client';
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { 
-  Brain, Zap, Shield, TrendingUp, CheckCircle, ArrowRight, Star, 
+import {Brain, Zap, Shield, TrendingUp, CheckCircle, ArrowRight, Star,}
   Phone, Mail, MapPin, Clock, Users, Award, Target, BarChart,
   Cpu, Database, Globe, Lock, Sparkles, Code, Eye, MessageSquare
 } from 'lucide-react';
-export default function AIServicesPage() {
-  const [activeTab, setActiveTab] = useState('overview');
+export default function AIServicesPage() {const [activeTab, setActiveTab] = useState('overview');}
   const [isVisible, setIsVisible] = useState(false);
-  useEffect(() => {
-    setIsVisible(true);
+  useEffect(() => {setIsVisible(true);}
   }, []);
-  const aiServices = [
-    {
-      id: 'ai-automation',
+  const aiServices = []
+    {id: 'ai-automation',}
       title: 'AI Process Automation',
       description: 'Intelligent automation solutions that reduce manual work by 80% and increase efficiency by 300%',
-      features: [
+      features: []
         'Workflow automation with 99.9% accuracy',
         'Natural language processing integration',
         'Real-time decision making',
@@ -88,7 +78,7 @@ export default function AIServicesPage() {
         'API integration capabilities',
         'Performance monitoring & analytics'
       ],
-      pricing: {
+      pricing: {}
         starter: { price: '$2,500', period: '/month', features: ['Up to 10 workflows', 'Basic analytics', 'Email support'] },
         professional: { price: '$7,500', period: '/month', features: ['Unlimited workflows', 'Advanced analytics', 'Priority support', 'Custom integrations'] },
         enterprise: { price: '$15,000', period: '/month', features: ['Everything in Pro', 'Dedicated support', 'Custom development', 'SLA guarantee'] }
@@ -97,11 +87,10 @@ export default function AIServicesPage() {
       color: 'from-cyan-500 to-blue-600',
       popular: true
     },
-    {
-      id: 'ai-analytics',
+    {id: 'ai-analytics',}
       title: 'AI-Powered Business Intelligence',
       description: 'Advanced analytics platform that provides actionable insights and predictive analytics for data-driven decisions',
-      features: [
+      features: []
         'Real-time data processing',
         'Predictive analytics & forecasting',
         'Custom dashboard creation',
@@ -109,7 +98,7 @@ export default function AIServicesPage() {
         'Data visualization tools',
         'Automated reporting'
       ],
-      pricing: {
+      pricing: {}
         starter: { price: '$3,000', period: '/month', features: ['Up to 5 data sources', 'Basic dashboards', 'Standard reports'] },
         professional: { price: '$8,500', period: '/month', features: ['Unlimited data sources', 'Advanced dashboards', 'Custom models', 'API access'] },
         enterprise: { price: '$18,000', period: '/month', features: ['Everything in Pro', 'Real-time processing', 'Dedicated analyst', 'Custom integrations'] }
@@ -118,11 +107,10 @@ export default function AIServicesPage() {
       color: 'from-purple-500 to-pink-600',
       popular: false
     },
-    {
-      id: 'ai-customer-support',
+    {id: 'ai-customer-support',}
       title: 'AI Customer Support Platform',
       description: '24/7 intelligent customer support with multilingual capabilities and 95% resolution rate',
-      features: [
+      features: []
         'Natural language understanding',
         'Multi-channel support (chat, email, phone)',
         'Sentiment analysis',
@@ -130,7 +118,7 @@ export default function AIServicesPage() {
         'Human handoff capabilities',
         'Performance analytics'
       ],
-      pricing: {
+      pricing: {}
         starter: { price: '$1,500', period: '/month', features: ['Up to 1,000 conversations', 'Basic AI responses', 'Email support'] },
         professional: { price: '$4,500', period: '/month', features: ['Up to 10,000 conversations', 'Advanced AI', 'Multi-channel support', 'Analytics dashboard'] },
         enterprise: { price: '$12,000', period: '/month', features: ['Unlimited conversations', 'Custom AI training', 'Dedicated support', 'SLA guarantee'] }
@@ -139,11 +127,10 @@ export default function AIServicesPage() {
       color: 'from-green-500 to-emerald-600',
       popular: true
     },
-    {
-      id: 'ai-content-generation',
+    {id: 'ai-content-generation',}
       title: 'AI Content Generation Suite',
       description: 'Complete content creation platform with AI writing, image generation, and video production capabilities',
-      features: [
+      features: []
         'AI writing for all content types',
         'Image generation & editing',
         'Video creation & editing',
@@ -151,7 +138,7 @@ export default function AIServicesPage() {
         'Brand voice consistency',
         'Content scheduling & publishing'
       ],
-      pricing: {
+      pricing: {}
         starter: { price: '$2,000', period: '/month', features: ['Up to 100 pieces/month', 'Basic AI writing', 'Stock images'] },
         professional: { price: '$6,000', period: '/month', features: ['Up to 1,000 pieces/month', 'Advanced AI', 'Custom images', 'Video generation'] },
         enterprise: { price: '$15,000', period: '/month', features: ['Unlimited content', 'Custom AI models', 'Dedicated team', 'White-label solution'] }
@@ -160,11 +147,10 @@ export default function AIServicesPage() {
       color: 'from-orange-500 to-red-600',
       popular: false
     },
-    {
-      id: 'ai-cybersecurity',
+    {id: 'ai-cybersecurity',}
       title: 'AI Cybersecurity Solutions',
       description: 'Advanced threat detection and prevention system with 99.8% accuracy in identifying security threats',
-      features: [
+      features: []
         'Real-time threat detection',
         'Behavioral analysis',
         'Automated incident response',
@@ -172,7 +158,7 @@ export default function AIServicesPage() {
         'Compliance monitoring',
         'Security analytics dashboard'
       ],
-      pricing: {
+      pricing: {}
         starter: { price: '$4,000', period: '/month', features: ['Basic threat detection', 'Email security', 'Standard monitoring'] },
         professional: { price: '$10,000', period: '/month', features: ['Advanced threat detection', 'Network security', 'Compliance tools', '24/7 monitoring'] },
         enterprise: { price: '$25,000', period: '/month', features: ['Complete security suite', 'Custom solutions', 'Dedicated team', 'SLA guarantee'] }
@@ -181,11 +167,10 @@ export default function AIServicesPage() {
       color: 'from-red-500 to-pink-600',
       popular: true
     },
-    {
-      id: 'ai-ml-platform',
+    {id: 'ai-ml-platform',}
       title: 'AI/ML Development Platform',
       description: 'Complete machine learning platform for building, training, and deploying custom AI models',
-      features: [
+      features: []
         'No-code ML model builder',
         'Pre-trained model library',
         'Custom model training',
@@ -193,7 +178,7 @@ export default function AIServicesPage() {
         'A/B testing framework',
         'Performance monitoring'
       ],
-      pricing: {
+      pricing: {}
         starter: { price: '$3,500', period: '/month', features: ['Basic ML tools', 'Pre-trained models', 'Community support'] },
         professional: { price: '$9,000', period: '/month', features: ['Advanced ML tools', 'Custom training', 'Priority support', 'API access'] },
         enterprise: { price: '$20,000', period: '/month', features: ['Complete platform', 'Dedicated resources', 'Custom development', 'SLA guarantee'] }
@@ -203,13 +188,13 @@ export default function AIServicesPage() {
       popular: false
     }
   ];
-  const stats = [
+  const stats = []
     { icon: Users, value: '500+', label: 'AI Models Deployed', color: 'text-cyan-400' },
     { icon: TrendingUp, value: '300%', label: 'Average ROI', color: 'text-green-400' },
     { icon: Clock, value: '24/7', label: 'AI Monitoring', color: 'text-blue-400' },
     { icon: Award, value: '99.9%', label: 'Uptime Guarantee', color: 'text-purple-400' }
   ];
-  return (
+  return ()
     <React.Fragment>
       <Helmet>
         <title>AI Services - Zion Tech Group | Advanced AI Solutions & Pricing</title>
@@ -253,7 +238,7 @@ export default function AIServicesPage() {
         <section className="py-16 bg-gradient-to-r from-slate-800/50 to-slate-900/50">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-              {stats.map((stat, index) => (
+              {stats.map((stat, index) => (}
                 <div key={index} className="text-center">
                   <div className={`w-16 h-16 mx-auto mb-4 ${stat.color} bg-gradient-to-br from-cyan-500/20 to-purple-600/20 rounded-lg flex items-center justify-center`}>
                     <stat.icon className="w-8 h-8" />
@@ -277,16 +262,14 @@ export default function AIServicesPage() {
               </p>
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {aiServices.map((service, index) => (
+              {aiServices.map((service, index) => (}
                 <div key={service.id} className={`quantum-card p-8 ${service.popular ? 'energy-pulse' : ''}`}>
                   <div className="flex items-start justify-between mb-6">
                     <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-lg flex items-center justify-center mb-4`}>
                       <service.icon className="w-8 h-8 text-white" />
                     </div>
-                    {service.popular && (
-                      <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-sm font-bold">
-                        Most Popular;
-  </
+                    {service.popular && (}
+                      <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-sm font-bold">Most Popular;
                     )}
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
@@ -294,7 +277,7 @@ export default function AIServicesPage() {
                   <div className="mb-6">
                     <h4 className="text-lg font-semibold text-cyan-400 mb-3">Key Features:</h4>
                     <ul className="space-y-2">
-                      {service.features.map((feature, featureIndex) => (
+                      {service.features.map((feature, featureIndex) => (}
                         <li key={featureIndex} className="flex items-center text-gray-300">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
                           {feature}
@@ -305,7 +288,7 @@ export default function AIServicesPage() {
                   <div className="border-t border-gray-700 pt-6">
                     <h4 className="text-lg font-semibold text-cyan-400 mb-4">Pricing:</h4>
                     <div className="space-y-3">
-                      {Object.entries(service.pricing).map(([tier, details]) => (
+                      {Object.entries(service.pricing).map(([tier, details]) => (}
                         <div key={tier} className="flex justify-between items-center p-3 bg-slate-800/50 rounded-lg">
                           <div>
                             <div className="text-white font-semibold capitalize">{tier}</div>
@@ -321,14 +304,10 @@ export default function AIServicesPage() {
                   <div className="mt-6 flex gap-3">
                     <a
                       href="tel:+13024640950"
-                      className="flex-1 cyber-button text-center py-3">
-                      Get Started;
-  </
+                      className="flex-1 cyber-button text-center py-3">Get Started;
                     <a
                       href="mailto:kleber@ziontechgroup.com"
-                      className="flex-1 bg-slate-800 text-white py-3 px-4 rounded-lg hover:bg-slate-700 transition-colors text-center">
-                      Learn More;
-  </
+                      className="flex-1 bg-slate-800 text-white py-3 px-4 rounded-lg hover:bg-slate-700 transition-colors text-center">Learn More;
                   </div>
                 </div>
               ))}
@@ -364,16 +343,3 @@ export default function AIServicesPage() {
     </React.Fragment>
   );
 }
-  </a>
-  </a>
-  </a>
-  </a>
-  </a>
-  </a>
-  </div>
-  </button>
-  </button>
-  </div>
-  </div>
-  </div>
-  </div>

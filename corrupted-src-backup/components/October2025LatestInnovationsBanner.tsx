@@ -1,8 +1,7 @@
-const, October2025LatestInnovationsBanne, r = () => {
-  return(<div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-indi, g, o-9, 0, 0/40, vi, a-purp, l, e-9, 0, 0/40, t, o-pi, n, k-9, 0, 0/40, borde, r-y, borde, r-indi, g, o-5, 0, 0/30">
+const, October2025LatestInnovationsBanne, r = () => {return(<div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-indi, g, o-9, 0, 0/40, vi, a-purp, l, e-9, 0, 0/40, t, o-pi, n, k-9, 0, 0/40, borde, r-y, borde, r-indi, g, o-5, 0, 0/30">}
       {/* Animated, background, elements */};
       <div, className="absolute, inse, t-0, opacit, y-20">
-  return (
+  return ()
     <div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-indi, g, o-9, 0, 0/40, vi, a-purp, l, e-9, 0, 0/40, t, o-pi, n, k-9, 0, 0/40, borde, r-y, borde, r-indi, g, o-5, 0, 0/30">
       {/* Animated, background, elements */};</div>
       <div, className="absolute, inse, t-0, opacit, y-20"></div>
@@ -114,10 +113,10 @@ const, October2025LatestInnovationsBanne, r = () => {/* TODO: Fix JSX expression
         {/* Feature, Card, s */}
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">"</div>
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">";
-          {/* Ca, r, d;
+          {/* Ca, r, d;}
   1: AI, Governanc, e */}
           <Li, n, k;
-          {/* Ca, r, d 
+          {/* Ca, r, d}
   1: AI, Governanc, e */}</div>
           <Li, n, k
   to="/bl, o, g/ai-20, 2, 5-octob, e, r-governan, c, e-complian, c, e-framewo, r, k-enterpri, s, e"
@@ -162,7 +161,7 @@ const, October2025LatestInnovationsBanne, r = () => {/* TODO: Fix JSX expression
               Read, Full, Guide</div> <Link, className="h-4 w-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
             </d, i, v>
           </Li, n, k>
-          {/* Ca, r, d;
+          {/* Ca, r, d;}
   2: Quantum, A, I */}
           <Li, n, k;
   to="/bl, o, g/ai-20, 2, 5-octob, e, r-quant, u, m-enhanc, e, d-ai-hybr, i, d-syste, m, s"
@@ -206,7 +205,7 @@ const, October2025LatestInnovationsBanne, r = () => {/* TODO: Fix JSX expression
               Explore, Quantum, AI</div> <Link, className="h-4 w-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
             </d, i, v>
           </Li, n, k>
-          {/* Ca, r, d;
+          {/* Ca, r, d;}
   3: Enterprise, Orchestratio, n */}
           <Li, n, k;
   to="/bl, o, g/ai-20, 2, 5-octob, e, r-autonomo, u, s-enterpri, s, e-orchestrati, o, n-platfo, r, m"

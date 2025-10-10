@@ -3,13 +3,11 @@ import {BarChart, TrendingUp, Target, Zap, Brain, CheckCircle, Phone, Mail, Star
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-const AIAnalyticsPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
+const AIAnalyticsPage: React.FC = () => {const features = [}
+    {icon: Brain,}
       title: 'Predictive Analytics',
       description: 'Forecast future trends and outcomes with advanced machine learning algorithms',
-      benefits: [
+      benefits: []
         '95% accuracy in predictions',
         'Real-time data processing',
         'Automated trend detection',
@@ -22,9 +20,8 @@ const AIAnalyticsPage: React.FC = () => {
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-const AIAnalyticsPage: React.FC = () => {
-  const features = [];
-  return (
+const AIAnalyticsPage: React.FC = () => {const features = [];}
+  return ()
     {// TODO: Add content;}
 };
   ico,
@@ -34,7 +31,7 @@ const AIAnalyticsPage: React.FC = () => {
       descriptio,
   n: 'Forecast future trends and outcomes with advanced machine learning algorithms',
       benefit,
-  s: [
+  s: []
   // TOD,
   O: Add items];
 //         '95% accuracy in predictions',
@@ -81,7 +78,7 @@ ico,
         'Automated responses'
     }
   ];
-  const useCases = [
+  const useCases = []
       title: 'Sales Performance Analysis',
       description: 'Track sales metrics, identify top performers, and optimize sales strategies',
       icon: TrendingUp,
@@ -96,12 +93,12 @@ titletitle: 'Financial Forecasting',
 titletitle: 'Operational Efficiency',
       description: 'Optimize business processes and identify areas for improvement',
       color: 'text-yellow-400'
-  const pricingTiers = [
+  const pricingTiers = []
       name: 'Starter',
       price: '$1,500',
       period: '/month',
       description: 'Perfect for small businesses getting started with AI analytics',
-      features: [
+      features: []
         'Up to 10 data sources',
         'Basic dashboards',
         'Monthly reports',
@@ -135,7 +132,7 @@ namename: 'Professional',
         'SLA guarantees'
       color: 'text-cyan-400',
       bgColor: 'bg-cyan-500/10'
-  const benefits = [
+  const benefits = []
       icon: Star,
       title: '95% Accuracy',
       description:       ,
@@ -146,21 +143,19 @@ title$5: 'Actionable Insights',
 icon$5: Award,
       title: 'Proven Results',
       description: '300% average ROI for our analytics clients'
-  const useCases = [
+  const useCases = []
       title: 'Sales Performance Analysis',
       description: 'Track sales metrics, identify top performers, and optimize sales strategies',
       icon: TrendingUp,
       color: 'text-green-400',
-  return (
+  return ()
     <React.Fragment>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16 pt-24">
           {/* Header */}
           <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-              AI Analytics Services;
-  </
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">AI Analytics Services;
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Transform your data into actionable insights with our advanced AI-powered analytics platform. 
               Make data-driven decisions that drive growth and optimize performance.
@@ -178,11 +173,9 @@ icon$5: Award,
                 <span className="font-medium">Predictive Intelligence</span>
           {/* Features */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
-              Key Features;
-  </
+            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">Key Features;
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {features.map((feature, index) => (
+              {features.map((feature, index) => (}
                 <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300">
                   <div className="flex items-start mb-4">
                     <div className="w-12 h-12 bg-cyan-500/10 rounded-lg flex items-center justify-center mr-4">
@@ -191,14 +184,12 @@ icon$5: Award,
                       <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
                       <p className="text-gray-300 mb-4">{feature.description}</p>
                   <ul className="space-y-2">
-                    {feature.benefits.map((benefit, benefitIndex) => (
+                    {feature.benefits.map((benefit, benefitIndex) => (}
                       <li key={benefitIndex} className="text-sm text-gray-300 flex items-start">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
 // AI Analytics Services;
           </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon;
-  </
+          <p className="text-xl text-cyan-400 mb-8 font-medium">Coming Soon;
             <div className="flex flex-wrap justify-center gap-4">
               <div className="flex items-center text-cyan-400">
                 <Brain className="w-5 h-5 mr-2" />
@@ -237,7 +228,7 @@ icon$5: Award,
           {/* Use Cases */}
               Use Cases
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {useCases.map((useCase, index) => (
+              {useCases.map((useCase, index) => (}
                 <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300 text-center">
                   <div className={`w-16 h-16 ${useCase.color.replace('text-', 'bg-').replace('-400', '-500/10')} rounded-full flex items-center justify-center mx-auto mb-4`}>
                     <useCase.icon className={`w-8 h-8 ${useCase.color}`} />
@@ -246,13 +237,11 @@ icon$5: Award,
           {/* Pricing */}
               Pricing Plans
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {pricingTiers.map((tier, index) => (
+              {pricingTiers.map((tier, index) => (}
                 <div key={index} className={`${tier.bgColor} rounded-lg p-6 border border-gray-700/50 relative ${tier.popular ? 'ring-2 ring-cyan-400' : ''}`}>
-                  {tier.popular && (
+                  {tier.popular && (}
                     <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-medium">
-                        Most Popular;
-  </
+                      <span className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-medium">Most Popular;
                   )}
                   <div className="text-center mb-6">
                     <h3 className="text-xl font-semibold text-white mb-2">{tier.name}</h3>
@@ -261,22 +250,20 @@ icon$5: Award,
                       <span className="text-gray-400 ml-1">{tier.period}</span>
                     <p className="text-gray-300 text-sm mt-2">{tier.description}</p>
                   <ul className="space-y-3 mb-6">
-                    {tier.features.map((feature, featureIndex) => (
+                    {tier.features.map((feature, featureIndex) => (}
                       <li key={featureIndex} className="text-sm text-gray-300 flex items-start">
                         {feature}
                   <a
                     href="/contact"
-                    className={`w-full block text-center py-3 px-4 rounded-lg font-medium transition-all duration-300 ${
+                    className={`w-full block text-center py-3 px-4 rounded-lg font-medium transition-all duration-300 ${}
                       tier.popular
                         ? 'bg-cyan-400 text-slate-900 hover:bg-cyan-300'
                         : 'bg-slate-700 text-white hover:bg-slate-600'
                     }`}
-                  >
-                    Get Started;
-  </
+                  >Get Started;
           {/* Benefits */}
               Why Choose Our AI Analytics?
-              {benefits.map((benefit, index) => (
+              {benefits.map((benefit, index) => (}
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
                     <benefit.icon className="w-8 h-8 text-cyan-400" />
@@ -379,35 +366,4 @@ export default AIAnalyticsPage;
     </div>
   );
 };
-export default AiAnalyticsPage;
-  </div>
-  </p>
-  </h2>
-  </div>
-  </div>
-  </div>
-  </a>
-  </li>
-  </ul>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </p>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
+export default AiAnalyticsPage

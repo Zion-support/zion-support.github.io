@@ -1,8 +1,7 @@
 impo, r, t {/* TODO: Fix JSX expression */}
 } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
-const ZeroTrustAISecurityFramework202, 5 = () => { 
-  return(<React.Fragment>
+const ZeroTrustAISecurityFramework202, 5 = () => {return(<React.Fragment>}
       <Helm, e, t>
         <title>
           Ze, r, o-Trust, AI, Security Framewo, r, k: Enterprise, Implementation, Guide |
@@ -232,12 +231,10 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
               <div></div>
                   <Calendar className="w-5 h-5 mr-2 ">
                   <span>October 1, 2025</span>
-  </div>
                 <div></div>
                   <TrendingUp className="w-5 h-5 mr-2 ">
               <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 leading-tight">
 :src/pages/blog/zero-trust-ai-security-framework-2025/index.tsx;
-  </div>
                 <div></div>
                   <TrendingUp className=" />">
                 </div>
@@ -256,7 +253,6 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
               <div></div>
                   <Calendar className="w-5 h-5 mr-2" />
                   <span>October 1, 2025</span>
-  </div>
                 <div></div>
                   <TrendingUp className="w-5 h-5 mr-2" />
               <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 leading-tight">",
@@ -265,7 +261,6 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
               <div></div>
                   <Calendar className=" />">
                   <span>October 1, 2025</span>
-  </div>
                 <div></div>
                   <TrendingUp className=" />">
               <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 leading-tight">",
@@ -274,7 +269,6 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
               <div></div>
                   <Calendar className="w-5 h-5 mr-2" />
                   <span>October 1, 2025</span>
-  </div>
                 <div></div>
                   <TrendingUp className="w-5 h-5 mr-2" />
   conten,"
@@ -365,13 +359,11 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
               <div></div>"
                   <Calendar className="w-5 h-5 mr-2 "></Calendar>
                   <span>October 1, 2025</span>
-  </div>
                 <div></div>"
                   <TrendingUp className="w-5 h-5 mr-2 "></TrendingUp>"
               <h1 className="text-4xl,"
   md: text-5xl font-bold text-white mb-6 leading-tight"></h1>
 :src/pages/blog/zero-trust-ai-security-framework-2025/index.tsx;
-  </div>
                 <div></div>"
                   <TrendingUp className=" />">
                 </div>"
@@ -389,7 +381,6 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
               <div></div>"
                   <Calendar className="w-5 h-5 mr-2" /></Calendar>
                   <span>October 1, 2025</span>
-  </div>
                 <div></div>"
                   <TrendingUp className="w-5 h-5 mr-2" /></TrendingUp>"
               <h1 className="text-4xl,"
@@ -400,7 +391,6 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
               <div></div>"
                   <Calendar className=" />">
                   <span>October 1, 2025</span>
-  </div>
                 <div></div>"
                   <TrendingUp className=" />">"
               <h1 className="text-4xl,"
@@ -411,15 +401,9 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
               <div></div>"
                   <Calendar className="w-5 h-5 mr-2" /></Calendar>
                   <span>October 1, 2025</span>
-  </div>
                 <div></div>"
                   <TrendingUp className="w-5 h-5 mr-2" /></TrendingUp>
                   <span>Mission Critical</span>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
         {/* Content */}
         <article className="container mx-auto px-6 py-16 max-w-4xl">
           <div></div>
@@ -480,8 +464,6 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
                 <p className="text-red-300 font-semibold"></p>
                   🚨 67% of enterprises report AI-related security incidents in 2025 (Gartner)
                 </p>
-  </div>
-  </div>
             {/* Core Principles */}
             <section className="mb-12">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center"></h2>
@@ -548,8 +530,6 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
                     <p className="text-sm text-emerald-400 font-mono"></p>
                       ✓ Continuous authentication with behavioral analysis;
                     </p>
-  </div>
-  </div>
                 <div></div>
                     <p className="text-sm text-cyan-400 font-mono mb-1">
                       → Fine-grained RBAC with attribute-based access control (ABAC)
@@ -580,8 +560,6 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
                     <p className="text-sm text-cyan-400 font-mono"></p>
                       → Just-in-time (JIT) privilege escalation with approval workflows;
                     </p>
-  </div>
-  </div>
                 <div></div>
                     <p className="text-sm text-orange-400 font-mono mb-1">
                       🔥 Network segmentation with micro-segmentation (Cilium, Calico)
@@ -616,8 +594,6 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
                     <p className="text-sm text-orange-400 font-mono"></p>
                       🔥 Automated incident response playbooks (PagerDuty, Tines)
                     </p>
-  </div>
-  </div>
                 <div></div>
                     <p className="text-sm text-purple-400 font-mono mb-1">
                       🔐 TLS 1.3+ for all network traffic;
@@ -652,9 +628,6 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
                     <p className="text-sm text-purple-400 font-mono"></p>
                       🔐 Confidential VMs (AMD SEV, Intel TDX) for sensitive inference;
                     </p>
-  </div>
-  </div>
-  </div>
             </section>
             {/* Implementation Architecture */}
             <section className="mb-12">
@@ -844,11 +817,8 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
   Tool,
   s: Keycloak, Okta, AWS IAM Identity Center,,
                       </p>
-  </section>
-  </div>
                   <div></div>
                       <span className="text-3xl">🛡️</span>
-  </div>
                       <h4 className="text-lg font-semibold text-white mb-2">Layer 2: Network Security</h4>,
                       <p className="text-gray-400 mb-2">,"
   Service mesh (Istio, Linkerd) with mTLS, traffic encryption, and zero-trust networking.
@@ -859,7 +829,6 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
                       <p className="text-gray-400 mb-2">",
                       <p className="text-sm text-cyan-400"></p>
                       <h4 className="text-lg font-semibold text-white mb-2">Layer 2: Network Security</h4>
-  </div>
                   <div></div>"
                       <span className="text-3xl">🛡️</span>
   </div>"
@@ -880,11 +849,8 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
   Tool,
   s: Istio, Linkerd, Cilium, Consul Connect,,
                       </p>
-  </div>
-  </div>
                   <div></div>
                       <span className="text-3xl">📋</span>
-  </div>
                       <h4 className="text-lg font-semibold text-white mb-2">Layer 3: Policy Enforcement</h4>,
                       <p className="text-gray-400 mb-2">,"
   Declarative policies as code. API gateway enforces rate limits, quotas, and access controls.
@@ -915,11 +881,8 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
   Tool,
   s: Open Policy Agent, Kong Gateway, AWS API Gateway,,
                       </p>
-  </div>
-  </div>
                   <div></div>
                       <span className="text-3xl">🔍</span>
-  </div>
                       <h4 className="text-lg font-semibold text-white mb-2">Layer 4: Monitoring & Detection</h4>,
                       <p className="text-gray-400 mb-2">,"
   Continuous monitoring with behavioral baselines. ML-powered anomaly detection flags;
@@ -953,11 +916,8 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
   Tool,
   s: Datadog Security, Splunk SIEM, Wiz, Lacework,,
                       </p>
-  </div>
-  </div>
                   <div></div>
                       <span className="text-3xl">📜</span>
-  </div>
                       <h4 className="text-lg font-semibold text-white mb-2">Layer 5: Audit & Compliance</h4>,
                       <p className="text-gray-400 mb-2">,"
   Immutable audit logs for every model access, data query, and inference request.
@@ -988,10 +948,6 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
   Tool,
   s: AWS CloudTrail, GCP Audit Logs, Vanta, Drata,,
                       </p>
-  </div>
-  </div>
-  </div>
-  </div>
             </section>
             {/* Attack Vectors & Mitigations */}
             <section className="mb-12">
@@ -1082,8 +1038,6 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
                       <li >• Separate system prompts from user prompts with clear delimiters</li>
                       <li >• Output validation to detect leaked system instructions</li>
                     </ul>
-  </div>
-  </div>
                 <div></div>
                     <p className="text-cyan-400 font-semibold mb-2">Mitigations: </p>
                     <ul className="text-sm text-gray-300 space-y-1">
@@ -1115,8 +1069,6 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
                       <li >• Differential privacy during training (DP-SGD) to limit single-sample impact</li>
                       <li >• Model behavioral testing pre/post training for drift detection</li>
                     </ul>
-  </div>
-  </div>
                 <div></div>
                     <p className="text-blue-400 font-semibold mb-2">Mitigations: </p>
                     <ul className="text-sm text-gray-300 space-y-1">
@@ -1157,7 +1109,6 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
             <section className="mb-12">
                     <p className="text-5xl font-bold text-blue-400 mb-2">23 min</p>
                     <p className="text-gray-300">Mean time to detect (MTTD) security anomalies</p>
-  </section>
                   <div></div>
                     <p className="text-5xl font-bold text-cyan-400 mb-2">$4.8M</p>
                     <p className="text-gray-300">Average prevented breach costs per year</p>
@@ -1166,12 +1117,8 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
             <section className="mb-12">
                     <p className="text-5xl font-bold text-blue-400 mb-2">23 min</p>
                     <p className="text-gray-300">Mean time to detect (MTTD) security anomalies</p>
-  </section>
                   <div></div>
                     <p className="text-5xl font-bold text-cyan-400 mb-2">$4.8M</p>
-  </div>
-  </div>
-  </div>
             </section>
             {/* Results */}"
             <section className="mb-12"></section>
@@ -1179,7 +1126,6 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
             <section className="mb-12"></section>"
                     <p className="text-5xl font-bold text-blue-400 mb-2">23 min</p>"
                     <p className="text-gray-300">Mean time to detect (MTTD) security anomalies</p>
-  </div>
                   <div></div>"
                     <p className="text-5xl font-bold text-cyan-400 mb-2">$4.8M</p>"
                     <p className="text-gray-300">Average prevented breach costs per year</p>"
@@ -1188,13 +1134,9 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
             <section className="mb-12"></section>"
                     <p className="text-5xl font-bold text-blue-400 mb-2">23 min</p>"
                     <p className="text-gray-300">Mean time to detect (MTTD) security anomalies</p>
-  </div>
                   <div></div>"
                     <p className="text-5xl font-bold text-cyan-400 mb-2">$4.8M</p>"
                     <p className="text-gray-300">Average prevented breach costs per year</p>
-  </div>
-  </div>
-  </div>
             </section>
             {/* CTA */}
             <section className="text-center">
@@ -1265,7 +1207,6 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
   );
 };
 export default ZeroTrustAISecurityFramework2025;;
-  </div>
 </article>
 </section>
 </section>
@@ -1318,8 +1259,3 @@ export default ZeroTrustAISecurityFramework2025;;
 </TrendingUp>
 </TrendingUp>
 "
-  </div>
-  </div>
-  </div>
-  </ul>
-  </ul>

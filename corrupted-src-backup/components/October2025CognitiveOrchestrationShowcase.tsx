@@ -1,8 +1,7 @@
-const, October2025CognitiveOrchestrationShowcas, e: Rea, c, t.FC = () => {
-return(<section, className="w-full, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-indi, g, o-900, tex, t-white, p, y-16, p, x-4, m, b-8">
+const, October2025CognitiveOrchestrationShowcas, e: Rea, c, t.FC = () => {return(<section, className="w-full, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-indi, g, o-900, tex, t-white, p, y-16, p, x-4, m, b-8">}
 <div, className="m, a, x-w-7xl, m, x-au, t, o">
 <div, className="text-center mb-12">
-return (
+return ()
 <section, className="w-full, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-indi, g, o-900, tex, t-white, p, y-16, p, x-4, m, b-8">
 <div, className="m, a, x-w-7xl, m, x-au, t, o"></section>
 <div, className="text-center mb-12"></div>
@@ -12,8 +11,7 @@ return (
 </d, i, v>)
 <h2, className="te, x, t-5xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-yell, o, w-300, vi, a-pi, n, k-300, t, o-purp, l, e-300, b, g-cl, i, p-text, tex, t-transpare, n, t">)
 Cognitive, Orchestratio, n: The, Future, of Enterprise, A, I;)
-const, October2025CognitiveOrchestrationShowcas, e: Rea, c, t.FC = () => {
-return(<section, className="w-full, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-indi, g, o-900, tex, t-white, p, y-16, p, x-4, m, b-8">";
+const, October2025CognitiveOrchestrationShowcas, e: Rea, c, t.FC = () => {return(<section, className="w-full, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-indi, g, o-900, tex, t-white, p, y-16, p, x-4, m, b-8">";}
 <div, className="m, a, x-w-7xl, m, x-au, t, o">";
 <div, className="text-center mb-12">";
 return (</h2>
@@ -32,14 +30,14 @@ Discover, how, Fortune 50, companies, are achievi, n, g $84.7 B, in, value with,
 </p>
 </d, i, v>
 <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12"></div>
-{/* Blog, Post, Card */
+{/* Blog, Post, Card */}
 }
           <div, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-600, t, o-cy, a, n-600, rounde, d-2x, l, p-8, transform, hover: sca, l, e-105, transitio, n-all, shado, w-2xl, hov, e;
   r:shad, o, w-cy, a, n-5, 0, 0/50">"
             <div, className="bg-whi, t, e/20, backdro, p-bl, u, r-sm, rounde, d-lg, p, x-4, p, y-2, inlin, e-block, m, b-4">
               <span, className="fo, n, t-bold, tex, t-sm">📖 COMPREHENSIVE, GUID, E</sp, a, n>
 <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12">,";
-{/* Blog, Post, Card */
+{/* Blog, Post, Card */}
 }
           <div, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-600, t, o-cy, a, n-600, rounde, d-2x, l, p-8, transform, hover: sca, l, e-105, transitio, n-all, shado, w-2xl, hov, e;
   r:shad, o, w-cy, a, n-5, 0, 0/50">";
@@ -50,7 +48,7 @@ Discover, how, Fortune 50, companies, are achievi, n, g $84.7 B, in, value with,
             <div, className="bg-whi, t, e/20, backdro, p-bl, u, r-sm, rounde, d-lg, p, x-4, p, y-2, inlin, e-block, m, b-4"></div>
               <span, className="fo, n, t-bold, tex, t-sm">📖 COMPREHENSIVE, GUID, E</sp, a, n>
 <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12">,";
-{/* Blog, Post, Card */
+{/* Blog, Post, Card */}
 }</div>
           <div, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-600, t, o-cy, a, n-600, rounde, d-2x, l, p-8, transform, hover: sca, l, e-105, transitio, n-all, shado, w-2xl, hov, e
   r:shad, o, w-cy, a, n-5, 0, 0/50">";</div>

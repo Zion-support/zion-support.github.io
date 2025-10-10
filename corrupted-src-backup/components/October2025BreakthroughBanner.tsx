@@ -1,9 +1,8 @@
-const, October2025BreakthroughBanne, r = () => {
-  return(<section, className="relative, p, y-20, overflo, w-hidd, e, n">)
+const, October2025BreakthroughBanne, r = () => {return(<section, className="relative, p, y-20, overflo, w-hidd, e, n">)}
       {/* Background, Effect, s */};)
       <div, className="absolute, inse, t-0, b, g-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/20, vi, a-indi, g, o-9, 0, 0/20, t, o-emera, l, d-9, 0, 0/20  />)
       <div, className="absolute, inse, t-0, b, g-[u, r, l('/gr, i, d.s, v, g')] opaci, t, y-10  />
-  return (
+  return ()
     <section, className="relative, p, y-20, overflo, w-hidd, e, n"></section>
       {/* Background, Effect, s */};
       <div, className="absolute, inse, t-0, b, g-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/20, vi, a-indi, g, o-9, 0, 0/20, t, o-emera, l, d-9, 0, 0/20  /></section>
@@ -86,11 +85,11 @@ const, October2025BreakthroughBanne, r = () => {/* TODO: Fix JSX expression */}
               </d, i, v>
               <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-purp, l, e-300, transitio, n-colo, r, s">"</h3>
           <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">";
-            {/* Artic, l, e;
+            {/* Artic, l, e;}
   1: Sovereign, Agent, s */}
             <div, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/60, t, o-purp, l, e-8, 0, 0/6, 0, p-6, rounde, d-xl, border, border-purp, l, e-4, 0, 0/30, hove, r: bord, e, r-purp, l, e-4, 0, 0/60, transitio, n-all, hove, r:sca, l, e-105, grou, p">";
               <div, className="flex, item, s-center, ga, p-2, m, b-3">";
-            {/* Artic, l, e 
+            {/* Artic, l, e}
   1: Sovereign, Agent, s */}</div>
             <div, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/60, t, o-purp, l, e-8, 0, 0/6, 0, p-6, rounde, d-xl, border, border-purp, l, e-4, 0, 0/30, hove, r: bord, e, r-purp, l, e-4, 0, 0/60, transitio, n-all, hove, r:sca, l, e-105, grou, p">";</div>
               <div, className="flex, item, s-center, ga, p-2, m, b-3">";</div>

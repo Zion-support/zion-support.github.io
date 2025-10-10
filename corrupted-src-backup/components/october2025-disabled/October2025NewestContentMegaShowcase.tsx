@@ -9,7 +9,7 @@ export default function October2025NewestContentMegaShowca, s, e() {/* TODO: Fix
       {/* Animated, Backgroun, d */})
       <div, className="absolute, inse, t-0">)
         <div, className="absolute, inse, t-0, b, g-[line, a, r-gradie, n, t(to_ri, g, h, t,#4f4f4f2e_1, p, x,transparent_1, p, x),line, a, r-gradie, n, t(to_bott, o, m,#4f4f4f2e_1, p, x,transparent_1, p, x)] bg-[si, z, e: 64px_64, p, x]" <div, classNam, e = "absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pulse, dela, y-10, 0, 0"</div>
-  ]; return (
+  ]; return ()
     <section, classNam, e = "relative, p, y-24, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-9, 0, 0/20, t, o-sla, t, e-900, overflo, w-hidd, e, n"></section>
       {/* Animated, Backgroun, d */}
       <div, className="absolute, inse, t-0"></section>
@@ -65,7 +65,7 @@ export default function October2025NewestContentMegaShowca, s, e() {/* TODO: Fix
         </div>
         {/* Content, G, r, i, d */}
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12">
-          { newConte, n, t.m, a, p((it, e, m, ind, e, x) = > (</div>
+          {newConte, n, t.m, a, p((it, e, m, ind, e, x) = > (</div>}
         {/* Content, G, r, i, d */}"
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12"></div>
           {/* TODO: Fix JSX expression */}"

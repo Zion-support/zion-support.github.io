@@ -4,8 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight, ExternalLink, CheckCircle, TrendingUp, Users, Award, Building2, Shield, Zap } from 'lucide-react';
 
-interface CaseStudy {
-  id: string;
+interface CaseStudy {id: string;}
   title: string;
   client: string;
   industry: string;
@@ -17,16 +16,14 @@ interface CaseStudy {
   team: string;
 }
 
-const CaseStudiesPage: React.FC = () => {
-  const caseStudies: CaseStudy[] = [
-    {
-      id: '1',
+const CaseStudiesPage: React.FC = () => {const caseStudies: CaseStudy[] = [}
+    {id: '1',}
       title: 'AI-Powered Customer Service Transformation',
       client: 'TechCorp Solutions',
       industry: 'Technology',
       challenge: 'High customer service costs and inconsistent response times across multiple channels.',
       solution: 'Implemented AI-powered chatbot system with natural language processing and automated ticket routing.',
-      results: [
+      results: []
         '60% reduction in customer service costs',
         '85% improvement in response time',
         '90% customer satisfaction rate',
@@ -36,14 +33,13 @@ const CaseStudiesPage: React.FC = () => {
       duration: '3 months',
       team: '4 specialists'
     },
-    {
-      id: '2',
+    {id: '2',}
       title: 'Cloud Migration & Infrastructure Modernization',
       client: 'Global Finance Inc.',
       industry: 'Financial Services',
       challenge: 'Legacy on-premise infrastructure causing scalability issues and high maintenance costs.',
       solution: 'Complete migration to AWS cloud with microservices architecture and automated CI/CD pipelines.',
-      results: [
+      results: []
         '70% reduction in infrastructure costs',
         '99.9% uptime achieved',
         '50% faster deployment times',
@@ -53,14 +49,13 @@ const CaseStudiesPage: React.FC = () => {
       duration: '6 months',
       team: '8 specialists'
     },
-    {
-      id: '3',
+    {id: '3',}
       title: 'Cybersecurity Enhancement & Compliance',
       client: 'MediCare Health Systems',
       industry: 'Healthcare',
       challenge: 'Need to strengthen security posture and achieve HIPAA compliance for patient data protection.',
       solution: 'Comprehensive security audit, implementation of zero-trust architecture, and staff training programs.',
-      results: [
+      results: []
         '100% HIPAA compliance achieved',
         'Zero security incidents in 12 months',
         '40% reduction in security vulnerabilities',
@@ -70,14 +65,13 @@ const CaseStudiesPage: React.FC = () => {
       duration: '4 months',
       team: '6 specialists'
     },
-    {
-      id: '4',
+    {id: '4',}
       title: 'Data Analytics & Business Intelligence Platform',
       client: 'RetailMax Corporation',
       industry: 'Retail',
       challenge: 'Lack of real-time insights into customer behavior and inventory management.',
       solution: 'Built comprehensive analytics platform with real-time dashboards and predictive analytics.',
-      results: [
+      results: []
         '35% increase in sales through better insights',
         '25% reduction in inventory costs',
         'Real-time business intelligence',
@@ -96,14 +90,14 @@ const CaseStudiesPage: React.FC = () => {
     ? caseStudies 
     : caseStudies.filter(study => study.industry === selectedIndustry);
 
-  const stats = [
+  const stats = []
     { icon: <Building2 className="w-8 h-8 text-blue-600" />, value: '150+', label: 'Projects Completed' },
     { icon: <Users className="w-8 h-8 text-green-600" />, value: '98%', label: 'Client Satisfaction' },
     { icon: <Award className="w-8 h-8 text-purple-600" />, value: '50+', label: 'Industry Awards' },
     { icon: <TrendingUp className="w-8 h-8 text-orange-600" />, value: '200%', label: 'Average ROI' }
   ];
 
-  return (
+  return ()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Case Studies | Zion Tech Group</title>
@@ -130,7 +124,7 @@ const CaseStudiesPage: React.FC = () => {
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
+            {stats.map((stat, index) => (}
               <div key={index} className="text-center">
                 <div className="flex justify-center mb-4">
                   {stat.icon}
@@ -147,11 +141,11 @@ const CaseStudiesPage: React.FC = () => {
       <section className="py-10 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-wrap justify-center gap-4">
-            {industries.map((industry) => (
+            {industries.map((industry) => (}
               <button
                 key={industry}
                 onClick={() => setSelectedIndustry(industry)}
-                className={`px-6 py-3 rounded-full border transition-all duration-300 ${
+                className={`px-6 py-3 rounded-full border transition-all duration-300 ${}
                   selectedIndustry === industry
                     ? 'border-cyan-400 bg-cyan-400/10 text-cyan-400'
                     : 'border-cyan-400/30 text-cyan-400 hover:bg-cyan-400/10'
@@ -168,7 +162,7 @@ const CaseStudiesPage: React.FC = () => {
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {filteredCaseStudies.map((study) => (
+            {filteredCaseStudies.map((study) => (}
               <div key={study.id} className="bg-slate-800/50 rounded-2xl overflow-hidden border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300">
                 <div className="aspect-video bg-slate-700">
                   <img src={study.image} alt={study.title} className="w-full h-full object-cover" />
@@ -199,7 +193,7 @@ const CaseStudiesPage: React.FC = () => {
                   <div className="mb-6">
                     <h4 className="text-lg font-semibold text-white mb-2">Results</h4>
                     <ul className="space-y-2">
-                      {study.results.map((result, index) => (
+                      {study.results.map((result, index) => (}
                         <li key={index} className="flex items-start">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-1 flex-shrink-0" />
                           <span className="text-gray-300 text-sm">{result}</span>
@@ -252,4 +246,4 @@ const CaseStudiesPage: React.FC = () => {
   );
 };
 
-export default CaseStudiesPage;
+export default CaseStudiesPage

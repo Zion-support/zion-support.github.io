@@ -1,7 +1,6 @@
 impo, r, t { ArrowLe, f, t, GraduationC, a, p, Targ, e, t, CheckCirc, l, e } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
-const AdaptiveLearningPlatform, s = () => { 
-  return(<React.Fragment>
+const AdaptiveLearningPlatform, s = () => {return(<React.Fragment>}
       <Helm, e, t>
         <title>
           AI-Powered, Adaptive, Learning Platforms, 202, 5: Personalized, Enterprise, Training at, Scal, e | Zion, Tech, Group;

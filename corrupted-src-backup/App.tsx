@@ -9,16 +9,15 @@ import './index.css';
 // const Team = lazy(() => import('./pages/Team'));
 // const Privacy = lazy(() => import('./pages/Privacy'));
 // const Terms = lazy(() => import('./pages/Terms'));
-function App() {
-  useEffect(() => {
+function App() {useEffect(() => {}
     // Initialize basic optimizations;
     //     // Cleanup on unmount;
-    return () => {
+    return () => {}
       //       };
   }, []);
   return(<ErrorBoundary>
       <div>
-  return (
+  return ()
     <ErrorBoundary>
       <div></div>
         <Router>
@@ -64,17 +63,16 @@ class ErrorBoundary extends React.Component<
   static getDerivedStateFromError() {/* TODO: Fix JSX expression */}
   r: true };
   }
-  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {,
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {,}
     //     }
-  render() {
-    if (this.state.hasError) {
+  render() {if (this.state.hasError) {}
       return(this.props.fallback || ()
           <div className="min-h-screen flex items-center justify-center bg-gray-50">)
             <div className="text-center">)
               <h1 className="text-2xl font-bold text-gray-900 mb-4">Something went wrong</h1>)
               <button;)
-      return (
-        this.props.fallback || (
+      return ()
+        this.props.fallback || ()
           <div className="min-h-screen flex items-center justify-center bg-gray-50"></div>
             <div className="text-center"></div>
               <h1 className="text-2xl font-bold text-gray-900 mb-4">Something went wrong</h1>

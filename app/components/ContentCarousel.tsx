@@ -2,8 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, TrendingUp } from 'lucide-react';
 
-interface Slide {
-  id: number;
+interface Slide {id: number;}
   title: string;
   description: string;
   icon: React.ComponentType<{ className?: string }>;
@@ -11,16 +10,13 @@ interface Slide {
   stats: { value: string; label: string }[];
 }
 
-const ContentCarousel: React.FC = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  const slides: Slide[] = [
-    {
-      id: 1,
+const ContentCarousel: React.FC = () => {const [currentSlide, setCurrentSlide] = useState(0);}
+  const slides: Slide[] = []
+    {id: 1,}
       title: 'AI-Powered Solutions',
       description: 'Transform your business with cutting-edge artificial intelligence',
       icon: Brain,
-      features: [
+      features: []
         'Machine Learning Models',
         'Natural Language Processing',
         'Computer Vision',
@@ -28,18 +24,17 @@ const ContentCarousel: React.FC = () => {
         'Automated Decision Making',
         'Real-time Insights'
       ],
-      stats: [
+      stats: []
         { value: '95%', label: 'Accuracy' },
         { value: '50%', label: 'Cost Reduction' },
         { value: '24/7', label: 'Availability' }
       ]
     },
-    {
-      id: 2,
+    {id: 2,}
       title: 'Cloud Infrastructure',
       description: 'Scalable and secure cloud solutions for modern businesses',
       icon: Globe,
-      features: [
+      features: []
         'Auto-scaling Resources',
         'Global CDN',
         'Disaster Recovery',
@@ -47,18 +42,17 @@ const ContentCarousel: React.FC = () => {
         'Cost Optimization',
         '24/7 Monitoring'
       ],
-      stats: [
+      stats: []
         { value: '99.9%', label: 'Uptime' },
         { value: '40%', label: 'Faster Deploy' },
         { value: '60%', label: 'Cost Savings' }
       ]
     },
-    {
-      id: 3,
+    {id: 3,}
       title: 'Cybersecurity',
       description: 'Advanced security solutions to protect your digital assets',
       icon: Shield,
-      features: [
+      features: []
         'Threat Detection',
         'Vulnerability Assessment',
         'Incident Response',
@@ -66,18 +60,17 @@ const ContentCarousel: React.FC = () => {
         'Security Training',
         'Continuous Monitoring'
       ],
-      stats: [
+      stats: []
         { value: '100%', label: 'Secure' },
         { value: '0', label: 'Breaches' },
         { value: '24/7', label: 'Protection' }
       ]
     },
-    {
-      id: 4,
+    {id: 4,}
       title: 'Data Analytics',
       description: 'Turn your data into actionable insights and business intelligence',
       icon: TrendingUp,
-      features: [
+      features: []
         'Real-time Dashboards',
         'Predictive Modeling',
         'Custom Reports',
@@ -85,7 +78,7 @@ const ContentCarousel: React.FC = () => {
         'Business Intelligence',
         'Performance Metrics'
       ],
-      stats: [
+      stats: []
         { value: '85%', label: 'Better Decisions' },
         { value: '30%', label: 'Revenue Growth' },
         { value: '50%', label: 'Time Saved' }
@@ -93,25 +86,22 @@ const ContentCarousel: React.FC = () => {
     }
   ];
 
-  useEffect(() => {
-    const timer = setInterval(() => {
+  useEffect(() => {const timer = setInterval(() => {}
       setCurrentSlide((prev) => (prev + 1) % slides.length);
     }, 5000);
 
     return () => clearInterval(timer);
   }, [slides.length]);
 
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % slides.length);
+  const nextSlide = () => {setCurrentSlide((prev) => (prev + 1) % slides.length);}
   };
 
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+  const prevSlide = () => {setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);}
   };
 
   const currentSlideData = slides[currentSlide];
 
-  return (
+  return ()
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
@@ -142,7 +132,7 @@ const ContentCarousel: React.FC = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {currentSlideData.features.map((feature, index) => (
+              {currentSlideData.features.map((feature, index) => (}
                 <div key={index} className="flex items-center space-x-3">
                   <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />
                   <span className="text-gray-300">{feature}</span>
@@ -152,7 +142,7 @@ const ContentCarousel: React.FC = () => {
 
             {/* Stats */}
             <div className="grid grid-cols-3 gap-8 mt-12 pt-8 border-t border-slate-700">
-              {currentSlideData.stats.map((stat, index) => (
+              {currentSlideData.stats.map((stat, index) => (}
                 <div key={index} className="text-center">
                   <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.value}</div>
                   <div className="text-gray-400 text-sm">{stat.label}</div>
@@ -178,11 +168,11 @@ const ContentCarousel: React.FC = () => {
 
         {/* Slide Indicators */}
         <div className="flex justify-center mt-8 space-x-2">
-          {slides.map((_, index) => (
+          {slides.map((_, index) => (}
             <button
               key={index}
               onClick={() => setCurrentSlide(index)}
-              className={`w-3 h-3 rounded-full transition-colors duration-200 ${
+              className={`w-3 h-3 rounded-full transition-colors duration-200 ${}
                 index === currentSlide ? 'bg-cyan-400' : 'bg-white/30'
               }`}
             />
@@ -207,4 +197,4 @@ const ContentCarousel: React.FC = () => {
   );
 };
 
-export default ContentCarousel;
+export default ContentCarousel

@@ -4,15 +4,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-const PartnersPage: React.FC = () => {
-  const partnerTypes = [
-    {
-      title: 'Technology Partners',
+const PartnersPage: React.FC = () => {const partnerTypes = [}
+    {title: 'Technology Partners',}
       description: 'Leading technology companies that provide the foundation for our solutions',
       icon: Building,
       color: 'text-blue-400',
       bgColor: 'bg-blue-500/10',
-      partners: [
+      partners: []
         { name: 'Microsoft', description: 'Azure Cloud Services & AI Platform', logo: '🏢' },
         { name: 'Amazon Web Services', description: 'Cloud Infrastructure & AI Services', logo: '☁️' },
         { name: 'Google Cloud', description: 'AI/ML Platform & Analytics', logo: '🔍' },
@@ -45,7 +43,7 @@ const PartnersPage: React.FC = () => {
         { name: 'SAP', description: 'Enterprise Resource Planning', logo: '📋' }
     }
   ];
-  const benefits = [
+  const benefits = []
       icon: Globe,
       title: 'Global Reach',
       description:       ,
@@ -58,11 +56,11 @@ icon$5: Star,
 icon$5: CheckCircle,
       title: 'Quality Assurance',
       description: 'Rigorous partner certification and quality standards'
-  const partnershipTiers = [
+  const partnershipTiers = []
       name: 'Strategic Partners',
       level: 'Platinum',
       description: 'Long-term strategic relationships with joint go-to-market initiatives',
-      benefits: [
+      benefits: []
         'Joint marketing and sales initiatives',
         'Co-development of solutions',
         'Priority support and resources',
@@ -92,7 +90,7 @@ namename: 'Channel Partners',
       color: 'text-orange-400',
       bgColor: 'bg-orange-500/10'
   const partnerTypes = [];
-  return (
+  return ()
     {// TODO: Add content;}
 };
   titl,
@@ -106,7 +104,7 @@ namename: 'Channel Partners',
       bgColo,
   r: 'bg-blue-500/10',
       partner,
-  s: [
+  s: []
   // TOD,
   O: Add items];
         {/* TODO: Fix JSX expression */}
@@ -169,21 +167,18 @@ namename: 'Channel Partners',
   o: '📋' }
     }
   ];
-  const benefits = [
+  const benefits = []
 icon: Globe,
       title: 'Global Reach',
       description: 'Access to worldwide markets and customers through our partner network',
-const PagePage: React.FC = () => {
-  return (
+const PagePage: React.FC = () => {return (}
     <React.Fragment>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16 pt-24">
           {/* Header */}
           <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-              Our Partners;
-  </
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">Our Partners;
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               We work with industry-leading technology partners to deliver comprehensive solutions 
               that drive innovation and business success.
@@ -191,7 +186,7 @@ const PagePage: React.FC = () => {
           </div>
           {/* Partner Types */}
           <div className="mb-16">
-            {partnerTypes.map((type, index) => (
+            {partnerTypes.map((type, index) => (}
               <div key={index} className="mb-12">
                 <div className="flex items-center mb-8">
                   <div className={`w-12 h-12 ${type.bgColor} rounded-lg flex items-center justify-center mr-4`}>
@@ -200,7 +195,7 @@ const PagePage: React.FC = () => {
                     <h2 className="text-2xl font-bold text-white neon-text">{type.title}</h2>
                     <p className="text-gray-300">{type.description}</p>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {type.partners.map((partner, partnerIndex) => (
+                  {type.partners.map((partner, partnerIndex) => (}
                     <div key={partnerIndex} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300">
                       <div className="text-3xl mb-3">{partner.logo}</div>
                       <h3 className="text-lg font-semibold text-white mb-2">{partner.name}</h3>
@@ -211,7 +206,7 @@ const PagePage: React.FC = () => {
               Why Partner With Us?
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {benefits.map((benefit, index) => (
+              {benefits.map((benefit, index) => (}
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
                     <benefit.icon className="w-8 h-8 text-cyan-400" />
@@ -220,14 +215,14 @@ const PagePage: React.FC = () => {
           {/* Partnership Tiers */}
               Partnership Tiers
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {partnershipTiers.map((tier, index) => (
+              {partnershipTiers.map((tier, index) => (}
                 <div key={index} className={`${tier.bgColor} rounded-lg p-6 border border-gray-700/50`}>
                   <div className="text-center mb-6">
                     <div className={`text-2xl font-bold ${tier.color} mb-2`}>{tier.level}</div>
                     <h3 className="text-xl font-semibold text-white mb-2">{tier.name}</h3>
                     <p className="text-gray-300 text-sm">{tier.description}</p>
                   <ul className="space-y-3">
-                    {tier.benefits.map((benefit, benefitIndex) => (
+                    {tier.benefits.map((benefit, benefitIndex) => (}
                       <li key={benefitIndex} className="flex items-start">
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" />
                         <span className="text-gray-300 text-sm">{benefit}</span>
@@ -343,21 +338,4 @@ const PagePage: React.FC = () => {
     </div>
   );
 };
-export default PartnersPage;
-  </a>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
+export default PartnersPage

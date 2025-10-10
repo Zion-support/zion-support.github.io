@@ -4,28 +4,23 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { Workflow, Zap, Brain, BarChart, Clock, Shield, Users, CheckCircle, Phone, Mail, ArrowRight, Settings, Database, Globe } from 'lucide-react';
-const AIWorkflowAutomationPage: React.FC = () => {
-  const features = [
-    {
-      icon: Zap;
+const AIWorkflowAutomationPage: React.FC = () => {const features = [}
+    {icon: Zap;}
       title: 'Intelligent Process Automation',
       description: 'AI-powered automation that learns from your workflows and optimizes them continuously.',
       benefits: ['Process Learning', 'Automatic Optimization', 'Exception Handling', 'Performance Monitoring']
     },
-    {
-      icon: Settings;
+    {icon: Settings;}
       title: 'Workflow Designer',
       description: 'Visual workflow designer that allows you to create complex automation workflows without coding.',
       benefits: ['Drag & Drop Interface', 'Visual Logic Builder', 'Template Library', 'Testing Tools']
     },
-    {
-      icon: Clock;
+    {icon: Clock;}
       title: 'Real-time Monitoring',
       description: 'Monitor your automated workflows in real-time with detailed analytics and performance metrics.',
       benefits: ['Live Monitoring', 'Performance Metrics', 'Error Tracking', 'Alert System']
     },
-    {
-      icon: Users;
+    {icon: Users;}
       title: 'Team Collaboration',
       description: 'Collaborate with your team on workflow design and management with role-based access control.',
       benefits: ['Role-based Access', 'Team Collaboration', 'Version Control', 'Approval Workflows']
@@ -39,7 +34,7 @@ const,
     {/* TODO: Fix JSX expression */}
     }
   ];
-  const pricing = [
+  const pricing = []
     {/* TODO: Fix JSX expression */}
     },
     {/* TODO: Fix JSX expression */}
@@ -47,7 +42,7 @@ const,
     {/* TODO: Fix JSX expression */}
     }
   ];
-  const stats = [
+  const stats = []
     {/* TODO: Fix JSX expression */}
   l: 'Time Savings' },
     {/* TODO: Fix JSX expression */}
@@ -57,24 +52,20 @@ const,
     {/* TODO: Fix JSX expression */}
   l: 'Processing' }
   ];
-  const useCases = [
-    {
-      title: 'Customer Onboarding',
+  const useCases = []
+    {title: 'Customer Onboarding',}
       description: 'Automate the entire customer onboarding process from signup to first value delivery with personalized workflows.',
       icon: Users;
     },
-    {
-      title: 'Invoice Processing',
+    {title: 'Invoice Processing',}
       description: 'Automatically process invoices, validate data, route for approval, and update accounting systems.',
       icon: Database;
     },
-    {
-      title: 'Lead Management',
+    {title: 'Lead Management',}
       description: 'Automate lead scoring, assignment, follow-up sequences, and CRM updates based on lead behavior.',
       icon: Globe;
     },
-    {
-      title: 'Employee Onboarding',
+    {title: 'Employee Onboarding',}
       description: 'Streamline new hire processes with automated document collection, system access, and training assignments.',
       icon: Settings;
     }
@@ -168,7 +159,7 @@ const,
               </div>
               {/* Stats */}
               <div className="grid grid-cols-2 md: grid-cols-4 gap-8 mb-16">,
-                {stats.map((stat, index) => (
+                {stats.map((stat, index) => (}
                   <div key={index} className="cyber-card p-6 text-center">
                     <div className="text-3xl md: text-4xl font-bold text-cyan-400 mb-2 neon-text">,
                 <a></a>"
@@ -203,9 +194,8 @@ const,
     </React.Fragment>
   );
 };
-const AIWorkflowAutomationPage = () => {
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
-  return (
+const AIWorkflowAutomationPage = () => {return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">}
+  return ()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg"></div>
       <Navigation />
       <main className="pt-24 pb-16 px-4">
@@ -239,19 +229,19 @@ const AIWorkflowAutomationPage = () => {
             <h2 className="text-3xl md: text-4xl font-bold text-white text-center mb-12 neon-text">
               Key Features</h2>,
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">,
-              {features.map((feature, index) => (
+              {features.map((feature, index) => (}
                 <div key={index} className="cyber-card p-6 text-center hover: scale-105 transition-all duration-300">,
                   <feature.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />,
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
               Key Features</span>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (</section>
+              {features.map((feature, index) => (</section>}
                 <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300"></div>
                   <feature.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
                   <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
                   <ul className="space-y-2"></u></ul>
-                    {feature.benefits.map((benefit, benefitIndex) => (
+                    {feature.benefits.map((benefit, benefitIndex) => (}
                       <li key={benefitIndex} className="flex items-center text-sm text-gray-300"></l></li>
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" /></CheckCircl></CheckCircle>
                         {benefit}
@@ -267,13 +257,13 @@ const AIWorkflowAutomationPage = () => {
             <h2 className="text-3xl md: text-4xl font-bold text-white text-center mb-12 neon-text">
               Automate Any Business Process</h2>,
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">,
-              {useCases.map((useCase, index) => (
+              {useCases.map((useCase, index) => (}
                 <div key={index} className="cyber-card p-6 hover: scale-105 transition-all duration-300">,
                   <useCase.icon className="w-12 h-12 text-cyan-400 mb-4" />,
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
               Automate Any Business Process</span>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {useCases.map((useCase, index) => (</section>
+              {useCases.map((useCase, index) => (</section>}
                 <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300"></div>
                   <useCase.icon className="w-12 h-12 text-cyan-400 mb-4" />
                   <h3 className="text-xl font-bold text-white mb-3">{useCase.title}</h3>
@@ -287,13 +277,13 @@ const AIWorkflowAutomationPage = () => {
             <h2 className="text-3xl md: text-4xl font-bold text-white text-center mb-12 neon-text">
               Pricing Plans</h2>,
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">,
-              {pricing.map((plan, index) => (
+              {pricing.map((plan, index) => (}
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
               Pricing Plans</span>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {pricing.map((plan, index) => (</section>
+              {pricing.map((plan, index) => (</section>}
                 <div key={index} className={`cyber-card p-8 ${index === 1 ? 'ring-2 ring-cyan-400' : ''}`}>
-                  {index === 1 && (</div>
+                  {index === 1 && (</div>}
                     <div className="text-center mb-4"></div>
                       <span className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-semibold">
                         Most Popular</span>
@@ -303,7 +293,7 @@ const AIWorkflowAutomationPage = () => {
                   <p className="text-gray-300 mb-4">{plan.description}</p>
                   <div className="text-4 xl font-bold text-cyan-400 mb-6">{plan.price}</di></div>
                   <ul className="space-y-3 mb-8"></u></ul>
-                    {plan.features.map((feature, featureIndex) => (
+                    {plan.features.map((feature, featureIndex) => (}
                       <li key={featureIndex} className="flex items-center text-gray-300"></l></li>
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" /></CheckCircl></CheckCircle>
                         {feature}
@@ -343,10 +333,3 @@ const AIWorkflowAutomationPage = () => {
       </div>,
     </div>);
 }</h3>
-  </h2>
-  </h2>
-  </div>
-  </div>
-  </div>
-  </h1>
-  </main>

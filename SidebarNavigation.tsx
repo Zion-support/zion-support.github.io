@@ -1,21 +1,19 @@
 import { X, Home, User, Settings, HelpCircle } from 'lucide-react';
 import React from 'react';
 import { Link } from 'react-router-dom';
-interface SidebarNavigationProps {
-  isOpen: boolean;
+interface SidebarNavigationProps {isOpen: boolean;}
   onClose: () => void;
 }
-const SidebarNavigation: React.FC<SidebarNavigationProps> = ({ isOpen, onClose }) => {
-  const navigationItems = [
+const SidebarNavigation: React.FC<SidebarNavigationProps> = ({ isOpen, onClose }) => {const navigationItems = [}
     { name: 'Home', href: '/', icon: Home },
     { name: 'About', href: '/about', icon: User },
     { name: 'Services', href: '/services', icon: Settings },
     { name: 'Contact', href: '/contact', icon: HelpCircle },
   ];
-  return (
+  return ()
     <React.Fragment>
       {/* Overlay */}
-      {isOpen && (
+      {isOpen && (}
         <div
           className="fixed inset-0 bg-black bg-opacity-50 z-40"
           onClick={onClose}
@@ -23,7 +21,7 @@ const SidebarNavigation: React.FC<SidebarNavigationProps> = ({ isOpen, onClose }
       )}
       {/* Sidebar */}
       <div
-        className={`fixed top-0 left-0 h-full w-64 bg-slate-900 transform transition-transform duration-300 ease-in-out z-50 ${
+        className={`fixed top-0 left-0 h-full w-64 bg-slate-900 transform transition-transform duration-300 ease-in-out z-50 ${}
           isOpen ? 'translate-x-0' : '-translate-x-full'
         }`}
       >
@@ -36,7 +34,7 @@ const SidebarNavigation: React.FC<SidebarNavigationProps> = ({ isOpen, onClose }
           </button>
         </div>
         <nav className="mt-8">
-          {navigationItems.map((item) => (
+          {navigationItems.map((item) => (}
             <Link
               key={item.name}
               to={item.href}
@@ -53,4 +51,4 @@ const SidebarNavigation: React.FC<SidebarNavigationProps> = ({ isOpen, onClose }
   );
 };
 
-export default SidebarNavigation;
+export default SidebarNavigation

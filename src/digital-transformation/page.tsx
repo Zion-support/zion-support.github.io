@@ -3,9 +3,8 @@ import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { Target, Zap, Settings, BarChart, CheckCircle, Star,  Target,  Zap,  BarChart } from 'lucide-react';
-const DigitalTransformationPage: React.FC = () => {
-  const features = [];
-  return (
+const DigitalTransformationPage: React.FC = () => {const features = [];}
+  return ()
     {// TODO: Add content;}
 };
   ico,
@@ -35,7 +34,7 @@ const DigitalTransformationPage: React.FC = () => {
   s: ['Data analytics', 'Business intelligence', 'Performance metrics']
     }
   ];
-  return (
+  return ()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
@@ -91,4 +90,4 @@ const DigitalTransformationPage: React.FC = () => {
     </div>
   );
 };
-export default DigitalTransformationPage;
+export default DigitalTransformationPage

@@ -4,66 +4,55 @@ import { Search, Code, Key, Zap, ArrowRight, Copy, Check, Globe, Brain, Cloud, S
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-export default function APIDocsPage() {
-  const [copiedCode, setCopiedCode] = useState<string | null>(null);
+export default function APIDocsPage() {const [copiedCode, setCopiedCode] = useState<string | null>(null);}
   const [searchQuery, setSearchQuery] = useState('');
-  const copyToClipboard = (code: string, id: string) => {
-    navigator.clipboard.writeText(code);
+  const copyToClipboard = (code: string, id: string) => {navigator.clipboard.writeText(code);}
     setCopiedCode(id);
     setTimeout(() => setCopiedCode(null), 2000);
   };
-  const apiEndpoints = [
-    {
-      title: 'AI Services',
+  const apiEndpoints = []
+    {title: 'AI Services',}
       description: 'Artificial Intelligence and Machine Learning APIs',
       icon: Brain,
-      endpoints: [
-        {
-          name: 'Text Analysis',
+      endpoints: []
+        {name: 'Text Analysis',}
           method: 'POST',
           path: '/api/ai/text-analysis',
           description: 'Analyze text sentiment, entities, and key phrases',
           code: `curl -X POST "https://api.ziontechgroup.com/ai/text-analysis" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json" \\
-  -d '{
-    "text": "Your text to analyze",
+  -d '{"text": "Your text to analyze",}
     "features": ["sentiment", "entities", "key_phrases"]
   }'`
         },
-        {
-          name: 'Image Recognition',
+        {name: 'Image Recognition',}
           method: 'POST',
           path: '/api/ai/image-recognition',
           description: 'Identify objects, faces, and scenes in images',
           code: `curl -X POST "https://api.ziontechgroup.com/ai/image-recognition" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json" \\
-  -d '{
-    "image_url": "https://example.com/image.jpg",
+  -d '{"image_url": "https://example.com/image.jpg",}
     "features": ["objects", "faces", "text"]
   }'`
         }
       ]
     },
-    {
-      title: 'Cloud Services',
+    {title: 'Cloud Services',}
       description: 'Cloud infrastructure and deployment APIs',
       icon: Cloud,
-      endpoints: [
-        {
-          name: 'Deploy Application',
+      endpoints: []
+        {name: 'Deploy Application',}
           method: 'POST',
           path: '/api/cloud/deploy',
           description: 'Deploy applications to cloud infrastructure',
           code: `curl -X POST "https://api.ziontechgroup.com/cloud/deploy" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json" \\
-  -d '{
-    "app_name": "my-app",
+  -d '{"app_name": "my-app",}
     "environment": "production",
-    "config": {
-      "cpu": "2",
+    "config": {"cpu": "2",}
       "memory": "4GB",
       "instances": 3
     }
@@ -71,21 +60,18 @@ export default function APIDocsPage() {
         }
       ]
     },
-    {
-      title: 'Data Analytics',
+    {title: 'Data Analytics',}
       description: 'Data processing and analytics APIs',
       icon: Database,
-      endpoints: [
-        {
-          name: 'Process Data',
+      endpoints: []
+        {name: 'Process Data',}
           method: 'POST',
           path: '/api/analytics/process',
           description: 'Process and analyze large datasets',
           code: `curl -X POST "https://api.ziontechgroup.com/analytics/process" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json" \\
-  -d '{
-    "dataset_id": "dataset_123",
+  -d '{"dataset_id": "dataset_123",}
     "operations": ["aggregate", "filter", "transform"],
     "output_format": "json"
   }'`
@@ -93,15 +79,14 @@ export default function APIDocsPage() {
       ]
     }
   ];
-  const filteredEndpoints = apiEndpoints.map(category => ({
-    ...category,
+  const filteredEndpoints = apiEndpoints.map(category => ({...category,}
     endpoints: category.endpoints.filter(endpoint => 
       endpoint.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
       endpoint.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
       endpoint.path.toLowerCase().includes(searchQuery.toLowerCase())
     )
   })).filter(category => category.endpoints.length > 0);
-  return (
+  return ()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEOOptimizer 
         title="API Documentation - Zion Tech Group"
@@ -112,9 +97,7 @@ export default function APIDocsPage() {
       {/* Hero Section */}
 <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            API Documentation;
-  </
+          <h1 className="text-5xl font-bold text-white mb-6">API Documentation;
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Complete API documentation for Zion Tech Group's AI and IT solutions. 
             Explore endpoints, authentication, and integration guides.
@@ -174,7 +157,7 @@ export default function APIDocsPage() {
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">API Endpoints</h2>
           <div className="space-y-8">
-            {filteredEndpoints.map((category, categoryIndex) => (
+            {filteredEndpoints.map((category, categoryIndex) => (}
               <div key={categoryIndex} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
                 <div className="flex items-center gap-4 mb-8">
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center">
@@ -186,11 +169,11 @@ export default function APIDocsPage() {
                   </div>
                 </div>
                 <div className="space-y-6">
-                  {category.endpoints.map((endpoint, endpointIndex) => (
+                  {category.endpoints.map((endpoint, endpointIndex) => (}
                     <div key={endpointIndex} className="bg-white/5 rounded-xl p-6 border border-white/10">
                       <div className="flex items-center justify-between mb-4">
                         <div className="flex items-center gap-4">
-                          <span className={`px-3 py-1 rounded-full text-sm font-medium ${
+                          <span className={`px-3 py-1 rounded-full text-sm font-medium ${}
                             endpoint.method === 'POST' 
                               ? 'bg-green-500/20 text-green-400' 
                               : 'bg-blue-500/20 text-blue-400'
@@ -202,12 +185,12 @@ export default function APIDocsPage() {
                         <button
                           onClick={() => copyToClipboard(endpoint.code, `${categoryIndex}-${endpointIndex}`)}
                           className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors">
-                          {copiedCode === `${categoryIndex}-${endpointIndex}` ? (
+                          {copiedCode === `${categoryIndex}-${endpointIndex}` ? ()
                             <React.Fragment>
                               <Check className="w-4 h-4" />
                               Copied!
                             </React.Fragment>
-                          ) : (
+                          ) : ()
                             <React.Fragment>
                               <Copy className="w-4 h-4" />
                               Copy
@@ -239,12 +222,8 @@ export default function APIDocsPage() {
             Start building with our APIs today and create amazing applications.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-purple-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors">
-              Get API Key;
-  </
-            <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-purple-600 transition-colors">
-              View SDKs;
-  </
+            <button className="bg-white text-purple-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors">Get API Key;
+            <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-purple-600 transition-colors">View SDKs;
           </div>
         </div>
       </section>
@@ -252,10 +231,5 @@ export default function APIDocsPage() {
     </div>
   );
 }
-  </button>
-  </button>
-  </button>
-  </button>
-  </h1>
   </SEOOptimizer>
   </string>

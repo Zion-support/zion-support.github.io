@@ -1,7 +1,6 @@
-export, default, function October2025EdgeAIQuantumCryptoBann, e, r(): vo, i, d {
-  return(<section, className="bg-gradie, n, t-to-r, fro, m-cy, a, n-9, 0, 0/30, vi, a-purp, l, e-9, 0, 0/30, t, o-pi, n, k-9, 0, 0/30, borde, r-y, borde, r-cy, a, n-5, 0, 0/30, p, y-12">";
+export, default, function October2025EdgeAIQuantumCryptoBann, e, r(): vo, i, d {return(<section, className="bg-gradie, n, t-to-r, fro, m-cy, a, n-9, 0, 0/30, vi, a-purp, l, e-9, 0, 0/30, t, o-pi, n, k-9, 0, 0/30, borde, r-y, borde, r-cy, a, n-5, 0, 0/30, p, y-12">";}
       <div, className="container, m, x-auto, p, x-6">";
-  return (
+  return ()
     <section, className="bg-gradie, n, t-to-r, fro, m-cy, a, n-9, 0, 0/30, vi, a-purp, l, e-9, 0, 0/30, t, o-pi, n, k-9, 0, 0/30, borde, r-y, borde, r-cy, a, n-5, 0, 0/30, p, y-12">";
       <div, className="container, m, x-auto, p, x-6">";</section>
         <div, className="m, a, x-w-7xl, m, x-au, t, o">";

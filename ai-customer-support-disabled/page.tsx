@@ -4,28 +4,23 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { MessageCircle, Headphones, Bot, Zap, Shield, BarChart, Clock, Users, CheckCircle, Star, ArrowRight, Phone, Mail } from 'lucide-react';
-const AICustomerSupportPage: React.FC = () => {
-  const features = [
-    {
-      icon: MessageCircle;
+const AICustomerSupportPage: React.FC = () => {const features = [}
+    {icon: MessageCircle;}
       title: '24/7 AI Chat Support',
       description: 'Intelligent chatbots that provide instant responses to customer queries with natural language understanding.',
       benefits: ['Instant Response', 'Multi-language Support', 'Context Awareness', 'Escalation to Humans']
     },
-    {
-      icon: Users;
+    {icon: Users;}
       title: 'Smart Ticket Routing',
       description: 'AI-powered ticket classification and routing to the most appropriate support agent based on expertise and workload.',
       benefits: ['Intelligent Routing', 'Priority Classification', 'Load Balancing', 'Expert Matching']
     },
-    {
-      icon: Clock;
+    {icon: Clock;}
       title: 'Predictive Analytics',
       description: 'Predict customer issues before they occur and proactively reach out with solutions.',
       benefits: ['Issue Prediction', 'Proactive Support', 'Trend Analysis', 'Prevention Strategies']
     },
-    {
-      icon: Shield;
+    {icon: Shield;}
       title: 'Knowledge Base Integration',
       description: 'Seamlessly integrated knowledge base that provides accurate, up-to-date information to both AI and human agents.',
       benefits: ['Real-time Updates', 'Version Control', 'Search Optimization', 'Content Management']
@@ -39,7 +34,7 @@ const,
     {/* TODO: Fix JSX expression */}
     }
   ];
-  const pricing = [
+  const pricing = []
     {/* TODO: Fix JSX expression */}
     },
     {/* TODO: Fix JSX expression */}
@@ -47,7 +42,7 @@ const,
     {/* TODO: Fix JSX expression */}
     }
   ];
-  const stats = [
+  const stats = []
     {/* TODO: Fix JSX expression */}
   l: 'Customer Satisfaction' },
     {/* TODO: Fix JSX expression */}
@@ -136,7 +131,7 @@ const,
               </div>
               {/* Stats */}
               <div className="grid grid-cols-2 md: grid-cols-4 gap-8 mb-16">,
-                {stats.map((stat, index) => (
+                {stats.map((stat, index) => (}
                   <div key={index} className="cyber-card p-6 text-center">
                     <div className="text-3xl md: text-4xl font-bold text-cyan-400 mb-2 neon-text">,
                 <a></a>"
@@ -171,13 +166,12 @@ const,
     </React.Fragment>
   );
 };
-const AICustomerSupportPage2: React.FC = () => {
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">)
+const AICustomerSupportPage2: React.FC = () => {return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">)}
       <Navigation />)
       <main className="pt-24 pb-16 px-4">)
         <div className="max-w-7xl mx-auto">),
           {/* Hero Section */}
-  return (
+  return ()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg"></div>
       <Navigation />
       <main className="pt-24 pb-16 px-4">
@@ -213,20 +207,18 @@ const AICustomerSupportPage2: React.FC = () => {
               Key Features;
             </h2>,
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">,
-              {features.map((feature, index) => (
+              {features.map((feature, index) => (}
                 <div key={index} className="cyber-card p-6 text-center hover: scale-105 transition-all duration-300">,
                   <feature.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />,
-            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
-              Key Features;
-  </
+            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">Key Features;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (</section>
+              {features.map((feature, index) => (</section>}
                 <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300"></div>
                   <feature.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
                   <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
                   <ul className="space-y-2"></u></ul>
-                    {feature.benefits.map((benefit, benefitIndex) => (
+                    {feature.benefits.map((benefit, benefitIndex) => (}
                       <li key={benefitIndex} className="flex items-center text-sm text-gray-300"></l></li>
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" /></CheckCircl></CheckCircle>
                         {benefit}
@@ -243,20 +235,18 @@ const AICustomerSupportPage2: React.FC = () => {
               Pricing Plans;
             </h2>,
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">,
-              {pricingPlans.map((plan, index) => (
+              {pricingPlans.map((plan, index) => (}
                 <div;
-            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
-              Pricing Plans;
-  </
+            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">Pricing Plans;
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              {pricingPlans.map((plan, index) => (</section>
+              {pricingPlans.map((plan, index) => (</section>}
                 <div
                   key={index}
                   className={`cyber-card p-8 relative ${}
                     plan.popular ? 'ring-2 ring-cyan-400 scale-105' : ''}
                   }`}
                 >
-                  {plan.popular && (</div>
+                  {plan.popular && (</div>}
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
                       <span className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-bold">
                         Most Popular;
@@ -267,7 +257,7 @@ const AICustomerSupportPage2: React.FC = () => {
                   <p className="text-gray-300 mb-4">{plan.description}</p>
                   <div className="text-4 xl font-bold text-cyan-400 mb-6">{plan.price}</di></div>
                   <ul className="space-y-3 mb-8"></u></ul>
-                    {plan.features.map((feature, featureIndex) => (
+                    {plan.features.map((feature, featureIndex) => (}
                       <li key={featureIndex} className="flex items-center text-gray-300"></l></li>
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" /></CheckCircl></CheckCircle>
                         {feature}
@@ -317,9 +307,7 @@ const AICustomerSupportPage2: React.FC = () => {
         </main>
         <Footer /></Foote></Footer>
       </div>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 neon-text">
-              AI Customer Support;
-  </
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 neon-text">AI Customer Support;
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Transform your customer support with intelligent AI solutions that provide 24/7 assistance, 
             </p>
@@ -329,12 +317,4 @@ const AICustomerSupportPage2: React.FC = () => {
     </div>
   );
 };
-export default AICustomerSupportPage;
-  </h1>
-  </h2>
-  </h3>
-  </h2>
-  </h2>
-  </div>
-  </div>
-  </main>
+export default AICustomerSupportPage

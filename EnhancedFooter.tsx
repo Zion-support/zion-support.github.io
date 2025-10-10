@@ -25,6 +25,7 @@ const EnhancedFooter: React.FC = () => {
     { name: 'Privacy Policy', href: '/legal/privacy' },
     { name: 'Terms of Service', href: '/legal/terms' },
   ];
+  
   return (
     <footer className="bg-gray-900 text-white">
       <div className="container mx-auto px-4 py-12">
@@ -66,7 +67,7 @@ const EnhancedFooter: React.FC = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
-              {services.slice(0, 6).map(service => (
+              {services.slice(0, 6).map(service => (}
                 <li key={service.name}>
                   <Link to={service.href}>
                     <span className="text-gray-300 hover:text-white transition-colors">
@@ -80,7 +81,7 @@ const EnhancedFooter: React.FC = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Products</h3>
             <ul className="space-y-2">
-              {products.slice(0, 6).map(product => (
+              {products.slice(0, 6).map(product => (}
                 <li key={product.name}>
                   <Link to={product.href}>
                     <span className="text-gray-300 hover:text-white transition-colors">
@@ -94,7 +95,7 @@ const EnhancedFooter: React.FC = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              {quickLinks.map(item => (
+              {quickLinks.map(item => (}
                 <li key={item.name}>
                   <Link to={item.href}>
                     <span className="text-gray-300 hover:text-white transition-colors">
@@ -160,4 +161,4 @@ const EnhancedFooter: React.FC = () => {
   );
 };
 
-export default EnhancedFooter;
+export default EnhancedFooter

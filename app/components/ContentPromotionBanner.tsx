@@ -3,21 +3,20 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { CheckCircle, ArrowRight, Star, Users, TrendingUp, Shield } from 'lucide-react';
 
-const ContentPromotionBanner: React.FC = () => {
-  const stats = [
+const ContentPromotionBanner: React.FC = () => {const stats = [}
     { icon: <Users className="w-8 h-8 text-blue-500" />, value: '500+', label: 'Happy Clients' },
     { icon: <TrendingUp className="w-8 h-8 text-green-500" />, value: '99.9%', label: 'Uptime' },
     { icon: <Shield className="w-8 h-8 text-purple-500" />, value: '100%', label: 'Secure' }
   ];
 
-  const features = [
+  const features = []
     { title: 'AI-Powered Solutions', description: 'Cutting-edge artificial intelligence' },
     { title: '24/7 Support', description: 'Round-the-clock assistance' },
     { title: 'Scalable Infrastructure', description: 'Grows with your business' },
     { title: 'Expert Team', description: 'Industry-leading professionals' }
   ];
 
-  const benefits = [
+  const benefits = []
     'Increase efficiency by up to 50%',
     'Reduce operational costs by 30%',
     'Improve customer satisfaction',
@@ -26,7 +25,7 @@ const ContentPromotionBanner: React.FC = () => {
     'Future-proof your business'
   ];
 
-  return (
+  return ()
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
       <div className="max-w-7xl mx-auto">
         {/* Hero Section */}
@@ -44,7 +43,7 @@ const ContentPromotionBanner: React.FC = () => {
 
         {/* Stats Section */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-          {stats.map((stat, index) => (
+          {stats.map((stat, index) => (}
             <div key={index} className="text-center">
               <div className="flex justify-center mb-4">
                 {stat.icon}
@@ -57,7 +56,7 @@ const ContentPromotionBanner: React.FC = () => {
 
         {/* Features Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          {features.map((feature, index) => (
+          {features.map((feature, index) => (}
             <div key={index} className="text-center">
               <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
               <p className="text-gray-300">{feature.description}</p>
@@ -69,7 +68,7 @@ const ContentPromotionBanner: React.FC = () => {
         <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-8">Why Choose Our Solutions?</h2>
           <div className="grid md:grid-cols-2 gap-4">
-            {benefits.map((benefit, index) => (
+            {benefits.map((benefit, index) => (}
               <div key={index} className="flex items-center gap-3">
                 <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                 <span className="text-gray-300">{benefit}</span>
@@ -108,4 +107,4 @@ const ContentPromotionBanner: React.FC = () => {
   );
 };
 
-export default ContentPromotionBanner;
+export default ContentPromotionBanner

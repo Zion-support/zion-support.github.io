@@ -1,8 +1,7 @@
 impo, r, t {/* TODO: Fix JSX expression */}
 } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
-const GlobalFinTechAITransformatio, n = () => { 
-  return(<React.Fragment>
+const GlobalFinTechAITransformatio, n = () => {return(<React.Fragment>}
       <Helm, e, t>
         <title>
           Global, FinTech, AI Transformati, o, n: $127M, Annual, Value Creati, o, n | Zion, Tech, Group;
@@ -92,7 +91,7 @@ const GlobalFinTechAITransformatio, n = () => {/* TODO: Fix JSX expression */}
                       </h3>)
                     </div>)
                     <ul, className='spa, c, e-y-2'>)
-                      { initiati, v, e.results.m, a, p((res, u, l, t, rInd, e, x) = > (
+                      {initiati, v, e.results.m, a, p((res, u, l, t, rInd, e, x) = > (}
                         <li, ke, y = { rIn, d, e, x  }, classNa, m, e = 'flex, item, s-start, ga, p-2'>
                           <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
                       </h3>
@@ -109,7 +108,7 @@ const GlobalFinTechAITransformatio, n = () => {/* TODO: Fix JSX expression */}
                     foc, u, s: 'Advanced, featur, e, s, continuous, learnin, g, compliance, automatio, n, performance, optimizatio, n',
                     results: [,
                     result,
-  s: [
+  s: []
                       '$127M, annual, run r, a, t, e',
                       '15.2x, ROI, achieved',
                       'Indust, r, y-leading, capabilitie, s',
@@ -117,7 +116,7 @@ const GlobalFinTechAITransformatio, n = () => {/* TODO: Fix JSX expression */}
                       <h4, classNam, e = 'te, x, t-white, fon, t-semibold, m, b-2'>
                         Resul, t, s: </h4>,
                       <ul, className='grid, m, d:gr, i, d-co, l, s-2, ga, p-2'>
-                        { pha, s, e.results.m, a, p((re, s, u, l, t, rInd, e, x) = > (
+                        {pha, s, e.results.m, a, p((re, s, u, l, t, rInd, e, x) = > (}
                           <li, ke, y = { rIn, d, e, x  }, classNa, m, e = 'flex, item, s-start, ga, p-2'>
                             <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
                     <li, classNam, e='flex, justif, y-between, item, s-center, p, t-3, borde, r-t, borde, r-whi, t, e/20'>

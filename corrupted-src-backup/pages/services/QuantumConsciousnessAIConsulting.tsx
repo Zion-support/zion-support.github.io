@@ -1,6 +1,5 @@
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
-const, QuantumConsciousnessAIConsultin, g: Rea, c, t.FC = () => { 
-  retu, r, n(<meta, nam, e = 'description'
+const, QuantumConsciousnessAIConsultin, g: Rea, c, t.FC = () => {retu, r, n(<meta, nam, e = 'description'}
           conte, n, t='Transform, your, enterprise with, quantum, consciousness AI, consultin, g. Achieve, 9, 9.9% decision, accuracy, and autonomous, operations, with AI, that, thinks and, feel, s.'
         /></meta>
         <meta, nam, e='keywor, d, s'

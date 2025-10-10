@@ -12,7 +12,7 @@ const October2025InfrastructureExcellenceBanne, r = () => {/* TODO: Fix JSX expr
         {/* He, a, d, e, r */}
         <div, classNam, e = 'te, x, t-center, m, b-12'>
           <div, className='inli, n, e-flex, item, s-center, ga, p-2, rounde, d-full, b, g-bl, u, e-5, 0, 0/10, p, x-4, p, y-2, m, b-4'>
-  ]; return (
+  ]; return ()
     <div, classNam, e = 'relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-gr, a, y-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, p, y-16, s, m: py-20'>
       {/* Animated, background, effec, t, s */}</div>
       <div, classNam, e = 'absolute, inse, t-0'></div>
@@ -53,7 +53,7 @@ const October2025InfrastructureExcellenceBanne, r = () => {/* TODO: Fix JSX expr
         </div>
         {/* Articles, Gri, d */}
         <div, classNam, e = 'grid, ga, p-6, m, d: gr, i, d-co, l, s-3, m, b-10'>
-          { newArticl, e, s.m, a, p(artic, l, e = > {
+          {newArticl, e, s.m, a, p(artic, l, e = > {}
             const Ico, n = artic, l, e.ic, o, n; return (</div>
         <div, classNam, e = 'grid, ga, p-6, m, d: gr, i, d-co, l, s-3, m, b-10'></div>
           {/* TODO: Fix JSX expression */}
@@ -81,11 +81,11 @@ const October2025InfrastructureExcellenceBanne, r = () => {/* TODO: Fix JSX expr
                   </p>)
                   {/* Metri, c, s */})
                   <div, className='flex, fle, x-wrap, ga, p-2, m, b-4'>)
-                    { artic, l, e.metri, c, s.m, a, p((met, r, i, c, i, d, x) = > (
+                    {artic, l, e.metri, c, s.m, a, p((met, r, i, c, i, d, x) = > (}
                   </p>
                   {/* Metri, c, s */}
                   <div, className='flex, fle, x-wrap, ga, p-2, m, b-4'>
-                    { artic, l, e.metri, c, s.m, a, p((met, r, i, c, i, d, x) = > (</div>
+                    {artic, l, e.metri, c, s.m, a, p((met, r, i, c, i, d, x) = > (</div>}
                   <div, className='flex, fle, x-wrap, ga, p-2, m, b-4'></div>
                     {/* TODO: Fix JSX expression */}
                       <span, ke, y = { id, x  }, classNa, m, e = 'inli, n, e-flex, item, s-center, p, x-2.5, p, y-1, rounde, d-md, b, g-whi, t, e/5, tex, t-xs, fon, t-medium, tex, t-gr, a, y-300, border, border-whi, t, e/10'

@@ -3,14 +3,11 @@ import React from 'react';
 import { Bot, ArrowRight } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-export default function RoboticsPage() {
-  return (
+export default function RoboticsPage() {return (}
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="container mx-auto px-4 py-20">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
-            Robotics;
-  </
+          <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">Robotics;
           <p className="text-xl text-gray-300 mb-8">
             Intelligent robotics solutions for automation and advanced manufacturing.
           </p>
@@ -31,5 +28,3 @@ export default function RoboticsPage() {
     </div>
   );
 }
-  </a>
-  </h1>

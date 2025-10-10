@@ -1,5 +1,4 @@
-export default function About() {
-  return(<React.Fragment>
+export default function About() {return(<React.Fragment>}
       <Head>
         <title>About Us - Zion Tech Group</title>
         <meta;

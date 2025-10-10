@@ -3,9 +3,8 @@ import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { BarChart, Target, Zap, Settings, CheckCircle, Star,  BarChart,  Target,  Settings } from 'lucide-react';
-const AIPerformanceTrackerPage: React.FC = () => {
-  const features = [];
-  return (
+const AIPerformanceTrackerPage: React.FC = () => {const features = [];}
+  return ()
     {// TODO: Add content;}
 };
   ico,
@@ -35,7 +34,7 @@ const AIPerformanceTrackerPage: React.FC = () => {
   s: ['Custom metrics', 'Visualization', 'Reporting']
     }
   ];
-  return (
+  return ()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
@@ -91,4 +90,4 @@ const AIPerformanceTrackerPage: React.FC = () => {
     </div>
   );
 };
-export default AiPerformanceTrackerPage;
+export default AiPerformanceTrackerPage

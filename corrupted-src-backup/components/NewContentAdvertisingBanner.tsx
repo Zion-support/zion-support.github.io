@@ -1,6 +1,5 @@
 import React from "react";
-interface, FeaturedConten, t {
-id: numb, e, r;
+interface, FeaturedConten, t {id: numb, e, r;}
 tit, l, e: stri, n, g;
 catego, r, y: stri, n, g;
 readTi, m, e: stri, n, g;
@@ -12,11 +11,9 @@ ic, o, n: Rea, c, t.ReactNo, d, e;
 l, i, n;
   k: stri, n, g;
 }
-const, NewContentAdvertisingBanne, r: Rea, c, t.FC = () => {
-  const, featuredConte, n;
-  t: FeaturedConte, n, t[] = [
-    {
-      id: 0;
+const, NewContentAdvertisingBanne, r: Rea, c, t.FC = () => {const, featuredConte, n;}
+  t: FeaturedConte, n, t[] = []
+    {id: 0;}
       tit, l, e: 'Governed, Agent, Rollbacks','
       catego, r, y: 'AI, Operation, s','
       readTi, m, e: '7, mi, n','
@@ -25,8 +22,7 @@ const, NewContentAdvertisingBanne, r: Rea, c, t.FC = () => {
       bad, g, e: 'N, E, W','
       gradie, n, t: 'fr, o, m-pi, n, k-500, t, o-r, e, d-5, 0, 0','
       ic, o, n: <Sparkles, className="w-6 h-6/>,"</Sparkles>li</Sparkles>, n, k: '/bl, o, g/ai-20, 2, 5-o, c, t-03-govern, e, d-age, n, t-rollbac, k, s}
-    {
-      id: 7;
+    {id: 7;}
       tit, l, e: 'Consentless, Personalizatio, n (Ed, g, e)','
       catego, r, y: 'Edge, Computin, g','
       readTi, m, e: '6, mi, n','
@@ -35,8 +31,7 @@ const, NewContentAdvertisingBanne, r: Rea, c, t.FC = () => {
       bad, g, e: 'FEATUR, E, D','
       gradie, n, t: 'fr, o, m-te, a, l-500, t, o-cy, a, n-5, 0, 0','
       ic, o, n: <TrendingUp, className="w-6 h-6/>,"</TrendingUp>li</TrendingUp>, n, k: '/bl, o, g/ed, g, e-20, 2, 5-o, c, t-02-consentle, s, s-personalizati, o, n-bluepri, n, t}
-    {
-      id: 1;
+    {id: 1;}
       tit, l, e: 'AI, 20, 2;
   7: Operational, Trust, Blueprint','
       catego, r, y: 'AI, Strateg, y','
@@ -46,8 +41,7 @@ const, NewContentAdvertisingBanne, r: Rea, c, t.FC = () => {
       bad, g, e: 'N, E, W','
       gradie, n, t: 'fr, o, m-bl, u, e-500, t, o-purp, l, e-5, 0, 0','
       ic, o, n: <Star, className="w-6 h-6/>,"</Star>li</Star>, n, k: '/bl, o, g/ai-20, 2, 7-operation, a, l-tru, s, t-bluepri, n, t}
-    {
-      id: 2;
+    {id: 2;}
       tit, l, e: 'Edge, 20, 2;
   6: Private, Feature, Flags','
       catego, r, y: 'Architectu, r, e','
@@ -57,8 +51,7 @@ const, NewContentAdvertisingBanne, r: Rea, c, t.FC = () => {
       bad, g, e: 'TRENDI, N, G','
       gradie, n, t: 'fr, o, m-cy, a, n-500, t, o-bl, u, e-5, 0, 0','
       ic, o, n: <TrendingUp, className="w-6 h-6/>,"</TrendingUp>li</TrendingUp>, n, k: '/bl, o, g/ed, g, e-20, 2, 6-priva, t, e-featu, r, e-fla, g, s}
-    {
-      id: 3;
+    {id: 3;}
       tit, l, e: 'GenAI, Quality, Tiers v2 (20, 2, 6)','
       catego, r, y: 'Gen, A, I','
       readTi, m, e: '8, mi, n','
@@ -95,8 +88,7 @@ const, NewContentAdvertisingBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
       ic, o, n: <Sparkles, className="w-6 h-6" />,";
       li, n, k: '/bl, o, g/ai-20, 2, 5-o, c, t-03-govern, e, d-age, n, t-rollbac, k, s'
     }
-    {
-      id: 7;
+    {id: 7;}
       tit, l, e: 'Consentless, Personalizatio, n (Ed, g, e)',';
       catego, r, y: 'Edge, Computin, g',';
       readTi, m, e: '6, mi, n',';
@@ -106,8 +98,7 @@ const, NewContentAdvertisingBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
       gradie, n, t: 'fr, o, m-te, a, l-500, t, o-cy, a, n-5, 0, 0',';
       ic, o, n: <TrendingUp, className="w-6 h-6" />,";</TrendingUp>li</TrendingUp>, n, k: '/bl, o, g/ed, g, e-20, 2, 5-o, c, t-02-consentle, s, s-personalizati, o, n-bluepri, n, t'
     }
-    {
-      id: 1;
+    {id: 1;}
       tit, l, e: 'AI, 20, 2;
   7: Operational, Trust, Blueprint',';
       catego, r, y: 'AI, Strateg, y',';
@@ -118,8 +109,7 @@ const, NewContentAdvertisingBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
       gradie, n, t: 'fr, o, m-bl, u, e-500, t, o-purp, l, e-5, 0, 0',';
       ic, o, n: <Star, className="w-6 h-6" />,";</Star>li</Star>, n, k: '/bl, o, g/ai-20, 2, 7-operation, a, l-tru, s, t-bluepri, n, t'
     }
-    {
-      id: 2;
+    {id: 2;}
       tit, l, e: 'Edge, 20, 2;
   6: Private, Feature, Flags',';
       catego, r, y: 'Architectu, r, e',';
@@ -130,8 +120,7 @@ const, NewContentAdvertisingBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
       gradie, n, t: 'fr, o, m-cy, a, n-500, t, o-bl, u, e-5, 0, 0',';
       ic, o, n: <TrendingUp, className="w-6 h-6" />,";</TrendingUp>li</TrendingUp>, n, k: '/bl, o, g/ed, g, e-20, 2, 6-priva, t, e-featu, r, e-fla, g, s'
     }
-    {
-      id: 3;
+    {id: 3;}
       tit, l, e: 'GenAI, Quality, Tiers v2 (20, 2, 6)',';
       catego, r, y: 'Gen, A, I',';
       readTi, m, e: '8, mi, n',';
@@ -165,10 +154,10 @@ const, NewContentAdvertisingBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
           <h2, classNam, e="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-indi, g, o-400, vi, a-purp, l, e-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transparent, animat, e-fa, d, e-in">)
             Revolutionary, New, Content H, u, b;)
           <div, classNam, e = "grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, ma, x-w-4xl, m, x-au, t, o">)
-            { achievemen, t, s.m, a, p((achieve, m, e, n, t, ind, e, x) = > (
+            {achievemen, t, s.m, a, p((achieve, m, e, n, t, ind, e, x) = > (}
               <div, ke, y = { in, d, e, x  }, classNa, m, e = "te, x, t-cent, e, r">
                 <div, classNam, e="te, x, t-indi, g, o-400, m, b-2, flex, justify-cent, e, r">
-  return (
+  return ()
     <div, className="py-20, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, relative, overflow-hidd, e, n">";
       {/* Animated, background, effects */}</div>
       <div, classNam, e="absolute, inse, t-0, overflo, w-hidden, opacit, y-20"></div>
@@ -178,11 +167,11 @@ const, NewContentAdvertisingBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
           <h2, classNam, e="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-indi, g, o-400, vi, a-purp, l, e-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transparent, animat, e-fa, d, e-in">
             Revolutionary, New, Content H, u, b</h2>
           <div, classNam, e = "grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, ma, x-w-4xl, m, x-au, t, o">
-            { achievemen, t, s.m, a, p((achieve, m, e, n, t, ind, e, x) = > (</div>
+            {achievemen, t, s.m, a, p((achieve, m, e, n, t, ind, e, x) = > (</div>}
               <div, ke, y = { in, d, e, x  }, classNa, m, e = "te, x, t-cent, e, r"></div>
                 <div, classNam, e="te, x, t-indi, g, o-400, m, b-2, flex, justify-cent, e, r"></div>
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-16">
-          { featuredConte, n, t.m, a, p((con, t, e, n, t, ind, e, x) = > (</div>
+          {featuredConte, n, t.m, a, p((con, t, e, n, t, ind, e, x) = > (</div>}
             <div, ke, y = { conte, n, t.i, d  }, classNa, m, e = "group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/10, hove, r: bord, e, r-indi, g, o-5, 0, 0/50, transitio, n-all, duratio, n-500, overflo, w-hidden, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-indi, g, o-5, 0, 0/20"
               sty, l, e = { { animationDel, a, y: `${ind, e, x * 2, 0, 0 }, ms` }}
              > {/* Card, glow, effect */}</div>

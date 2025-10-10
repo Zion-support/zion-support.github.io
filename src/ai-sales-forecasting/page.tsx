@@ -3,9 +3,8 @@ import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { TrendingUp, Target, Zap, Settings, CheckCircle, Star,  TrendingUp,  Target,  Settings } from 'lucide-react';
-const AISalesForecastingPage: React.FC = () => {
-  const features = [];
-  return (
+const AISalesForecastingPage: React.FC = () => {const features = [];}
+  return ()
     {// TODO: Add content;}
 };
   ico,
@@ -35,7 +34,7 @@ const AISalesForecastingPage: React.FC = () => {
   s: ['Scenario modeling', 'Risk assessment', 'Strategy optimization']
     }
   ];
-  return (
+  return ()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
@@ -91,4 +90,4 @@ const AISalesForecastingPage: React.FC = () => {
     </div>
   );
 };
-export default AiSalesForecastingPage;
+export default AiSalesForecastingPage

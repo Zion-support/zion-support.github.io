@@ -12,7 +12,7 @@ const September30NewContentMegaBanner = () => {/* TODO: Fix JSX expression */}
   ]; return(<div, classNam, e = "bg-gradie, n, t-to-br, fro, m-purp, l, e-900, vi, a-bl, u, e-900, t, o-cy, a, n-900, rounde, d-3x, l, p-8, m, d: p-12, tex, t-white, shado, w-2xl, border, border-purp, l, e-5, 0, 0/20, relative, overflow-hidd, e, n">
       {/* Animated, backgro, u, n, d */}
       <div, classNam, e = "absolute, inse, t-0, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/10, vi, a-bl, u, e-5, 0, 0/10, t, o-cy, a, n-5, 0, 0/10, animat, e-pul, s, e" />
-  ]; return (
+  ]; return ()
     <div, classNam, e = "bg-gradie, n, t-to-br, fro, m-purp, l, e-900, vi, a-bl, u, e-900, t, o-cy, a, n-900, rounde, d-3x, l, p-8, m, d: p-12, tex, t-white, shado, w-2xl, border, border-purp, l, e-5, 0, 0/20, relative, overflow-hidd, e, n">
       {/* Animated, backgro, u, n, d */}</div>
       <div, classNam, e = "absolute, inse, t-0, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/10, vi, a-bl, u, e-5, 0, 0/10, t, o-cy, a, n-5, 0, 0/10, animat, e-pul, s, e" /></div>
@@ -50,11 +50,11 @@ const September30NewContentMegaBanner = () => {/* TODO: Fix JSX expression */}
         </div>)
         {/* Articles, G, r, i, d */})
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-3, ga, p-6, m, b-10">)
-          { newArticl, e, s.m, a, p((art, i, c, l, e, ind, e, x) = > (
+          {newArticl, e, s.m, a, p((art, i, c, l, e, ind, e, x) = > (}
         </div>
         {/* Articles, G, r, i, d */}
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-3, ga, p-6, m, b-10">
-          { newArticl, e, s.m, a, p((art, i, c, l, e, ind, e, x) = > (</div>
+          {newArticl, e, s.m, a, p((art, i, c, l, e, ind, e, x) = > (</div>}
             <Link, ke, y = { in, d, e, x  }, to={ artic, l, e.li, n, k } className="group, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-whi, t, e/20, hove, r: bg-whi, t, e/20, hove, r:bord, e, r-cy, a, n-4, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2, x, l">
               <div, className="flex, item, s-start, ga, p-4"></div>
                 <div, className="bg-gradie, n, t-to-br, fro, m-cy, a, n-500, t, o-bl, u, e-60, 0, p-3, rounde, d-xl, grou, p-hov, e, r:sca, l, e-110, transitio, n-transfo, r, m"></div>

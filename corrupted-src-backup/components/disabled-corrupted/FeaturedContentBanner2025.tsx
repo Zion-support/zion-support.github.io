@@ -8,7 +8,7 @@ export default function FeaturedContentBanner20, 2, 5() {/* TODO: Fix JSX expres
       <div, className="container, m, x-auto, p, x-6">
         <div, className="te, x, t-center, m, b-16">
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-6, p, y-3, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/20, t, o-purp, l, e-5, 0, 0/20, border, border-bl, u, e-5, 0, 0/30, m, b-6">
-  ]; return (
+  ]; return ()
     <section, classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-9, 0, 0/80, t, o-bl, u, e-9, 0, 0/80, backdro, p-bl, u, r-lg">
       <div, className="container, m, x-auto, p, x-6"></section>
         <div, className="te, x, t-center, m, b-16"></div>
@@ -38,10 +38,10 @@ export default function FeaturedContentBanner20, 2, 5() {/* TODO: Fix JSX expres
         </div>)
 )
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12">)
-          { featuredConte, n, t.m, a, p((con, t, e, n, t, ind, e, x) = > (
+          {featuredConte, n, t.m, a, p((con, t, e, n, t, ind, e, x) = > (}
         </div>
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12">
-          { featuredConte, n, t.m, a, p((con, t, e, n, t, ind, e, x) = > (</div>
+          {featuredConte, n, t.m, a, p((con, t, e, n, t, ind, e, x) = > (</div>}
             <a, ke, y = { in, d, e, x  }, hr, e, f={ conte, n, t.hr, e, f } className="group, b, g-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-whi, t, e/10, hove, r: bord, e, r-bl, u, e-5, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-bl, u, e-5, 0, 0/20">
               <div, className="flex, item, s-start, ga, p-4, m, b-6"></div>
                 <div, className="te, x, t-4xl, fle, x-shri, n, k-0, grou, p-hov, e, r:sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0">
