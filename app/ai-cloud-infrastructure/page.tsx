@@ -1,11 +1,10 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-<<<<<<< HEAD
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
 const AiCloudInfrastructurePage: React.FC = () => {
   const features = [
     {
@@ -32,8 +31,7 @@ const AiCloudInfrastructurePage: React.FC = () => {
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-  ];
-
+  ]
   return (
     <>
       <Helmet>
@@ -95,9 +93,8 @@ const AiCloudInfrastructurePage: React.FC = () => {
                       </li>
                     ))}
                   </ul>
-=======
-import { CheckCircle, ArrowRight } from 'lucide-react';
 
+import { CheckCircle, ArrowRight } from 'lucide-react'
 const PagePage: React.FC = () => {
   const features = [
     {
@@ -115,8 +112,7 @@ const PagePage: React.FC = () => {
       description: 'Description of feature 3',
       benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
     }
-  ];
-
+  ]
   const benefits = [
     'Benefit 1',
     'Benefit 2',
@@ -124,8 +120,7 @@ const PagePage: React.FC = () => {
     'Benefit 4',
     'Benefit 5',
     'Benefit 6'
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <Helmet>
@@ -209,7 +204,7 @@ const PagePage: React.FC = () => {
               <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center">
                   <CheckCircle className="w-8 h-8 text-white" />
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
+
                 </div>
               ))}
             </div>
@@ -229,22 +224,19 @@ const PagePage: React.FC = () => {
               Start Your Free Trial
             </button>
           </div>
-<<<<<<< HEAD
+
         </section>
       </main>
-      
-=======
+
         </div>
       </section>
 
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
       <Footer />
     </>
-  );
-};
+  )
+}
 
-<<<<<<< HEAD
-export default AiCloudInfrastructurePage;
-=======
-export default PagePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
+export default AiCloudInfrastructurePage
+
+export default PagePage
+

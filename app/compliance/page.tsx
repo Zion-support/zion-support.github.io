@@ -1,8 +1,7 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, FileCheck, Lock, Award } from 'lucide-react';
-
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, FileCheck, Lock, Award } from 'lucide-react'
 const CompliancePage: React.FC = () => {
   const features = [
     {
@@ -25,8 +24,7 @@ const CompliancePage: React.FC = () => {
       title: 'Audit Readiness',
       description: 'Stay audit-ready with continuous compliance monitoring and reporting'
     }
-  ];
-
+  ]
   const benefits = [
     'Advanced compliance technology integration',
     'Real-time compliance monitoring',
@@ -36,8 +34,7 @@ const CompliancePage: React.FC = () => {
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -104,7 +101,6 @@ const CompliancePage: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
-
-export default CompliancePage;
+  )
+}
+export default CompliancePage

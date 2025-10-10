@@ -1,8 +1,7 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Cloud, Server, Database, Lock } from 'lucide-react';
-
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Cloud, Server, Database, Lock } from 'lucide-react'
 const CloudServicesPage: React.FC = () => {
   const services = [
     {
@@ -29,8 +28,7 @@ const CloudServicesPage: React.FC = () => {
       description: 'Comprehensive security solutions to protect your cloud infrastructure and data.',
       features: ['Identity management', 'Data encryption', 'Compliance auditing', 'Threat detection']
     }
-  ];
-
+  ]
   const benefits = [
     'Reduced infrastructure costs by up to 40%',
     'Improved scalability and flexibility',
@@ -40,8 +38,7 @@ const CloudServicesPage: React.FC = () => {
     'Disaster recovery and backup solutions',
     'Global availability and performance',
     'Expert cloud architecture guidance'
-  ];
-
+  ]
   const pricing = [
     {
       name: 'Starter',
@@ -85,8 +82,7 @@ const CloudServicesPage: React.FC = () => {
         'Custom development'
       ]
     }
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -263,7 +259,6 @@ const CloudServicesPage: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
-
-export default CloudServicesPage;
+  )
+}
+export default CloudServicesPage

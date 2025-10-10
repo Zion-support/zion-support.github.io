@@ -1,11 +1,10 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-<<<<<<< HEAD
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
 const AiClimateSolutionsProPage: React.FC = () => {
   const features = [
     {
@@ -32,8 +31,7 @@ const AiClimateSolutionsProPage: React.FC = () => {
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-  ];
-
+  ]
   return (
     <>
       <Helmet>
@@ -119,13 +117,11 @@ const AiClimateSolutionsProPage: React.FC = () => {
       
       <Footer />
     </>
-  );
-};
+  )
+}
+export default AiClimateSolutionsProPage
 
-export default AiClimateSolutionsProPage;
-=======
-import { CheckCircle, ArrowRight } from 'lucide-react';
-
+import { CheckCircle, ArrowRight } from 'lucide-react'
 const PagePage: React.FC = () => {
   const features = [
     {
@@ -143,8 +139,7 @@ const PagePage: React.FC = () => {
       description: 'Description of feature 3',
       benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
     }
-  ];
-
+  ]
   const benefits = [
     'Benefit 1',
     'Benefit 2',
@@ -152,8 +147,7 @@ const PagePage: React.FC = () => {
     'Benefit 4',
     'Benefit 5',
     'Benefit 6'
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <Helmet>
@@ -265,8 +259,7 @@ const PagePage: React.FC = () => {
 
       <Footer />
     </div>
-  );
-};
+  )
+}
+export default PagePage
 
-export default PagePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce

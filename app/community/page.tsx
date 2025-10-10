@@ -1,8 +1,7 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Users, MessageCircle, Calendar } from 'lucide-react';
-
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Users, MessageCircle, Calendar } from 'lucide-react'
 const CommunityPage: React.FC = () => {
   const features = [
     {
@@ -25,8 +24,7 @@ const CommunityPage: React.FC = () => {
       title: 'Global Network',
       description: 'Connect with professionals from around the world'
     }
-  ];
-
+  ]
   const benefits = [
     'Access to exclusive community resources',
     'Networking opportunities with industry leaders',
@@ -36,8 +34,7 @@ const CommunityPage: React.FC = () => {
     'Collaboration opportunities',
     'Career development resources',
     'Proven track record of success'
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -104,7 +101,6 @@ const CommunityPage: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
-
-export default CommunityPage;
+  )
+}
+export default CommunityPage

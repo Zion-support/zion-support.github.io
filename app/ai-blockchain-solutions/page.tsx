@@ -1,11 +1,10 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-<<<<<<< HEAD
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
 const AiBlockchainSolutionsPage: React.FC = () => {
   const features = [
     {
@@ -32,8 +31,7 @@ const AiBlockchainSolutionsPage: React.FC = () => {
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-  ];
-
+  ]
   return (
     <>
       <Helmet>
@@ -109,9 +107,8 @@ const AiBlockchainSolutionsPage: React.FC = () => {
             </h2>
             <p className="text-xl text-blue-100 mb-8">
               Join thousands of businesses already using our AI platform.
-=======
-import { CheckCircle, ArrowRight } from 'lucide-react';
 
+import { CheckCircle, ArrowRight } from 'lucide-react'
 const PagePage: React.FC = () => {
   const features = [
     {
@@ -129,8 +126,7 @@ const PagePage: React.FC = () => {
       description: 'Description of feature 3',
       benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
     }
-  ];
-
+  ]
   const benefits = [
     'Benefit 1',
     'Benefit 2',
@@ -138,8 +134,7 @@ const PagePage: React.FC = () => {
     'Benefit 4',
     'Benefit 5',
     'Benefit 6'
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <Helmet>
@@ -183,24 +178,22 @@ const PagePage: React.FC = () => {
             <h2 className="text-4xl font-bold text-white mb-4">Page Features</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Advanced solutions designed for modern business needs
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
+
             </p>
             <button className="bg-white text-blue-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold">
               Start Your Free Trial
             </button>
           </div>
-<<<<<<< HEAD
+
         </section>
       </main>
       
       <Footer />
     </>
-  );
-};
+  )
+}
+export default AiBlockchainSolutionsPage
 
-export default AiBlockchainSolutionsPage;
-=======
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-blue-400/50 transition-all duration-300 group">
@@ -266,8 +259,7 @@ export default AiBlockchainSolutionsPage;
 
       <Footer />
     </div>
-  );
-};
+  )
+}
+export default PagePage
 
-export default PagePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce

@@ -1,8 +1,7 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
 const ARVRPlatformPage: React.FC = () => {
   const features = [
     {
@@ -25,8 +24,7 @@ const ARVRPlatformPage: React.FC = () => {
       title: 'Cross-Platform Support',
       description: 'Deploy across multiple devices and platforms for maximum reach and accessibility'
     }
-  ];
-
+  ]
   const benefits = [
     'Advanced AR/VR technology integration',
     'Real-time 3D rendering and interaction',
@@ -36,18 +34,17 @@ const ARVRPlatformPage: React.FC = () => {
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>AR/VR Platform | Zion Tech Group</title>
         <meta name="description" content="Professional AR/VR Platform services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-<<<<<<< HEAD
+
         <meta name="keywords" content="AR VR platform, AI solutions, IT services, Zion Tech Group, augmented reality, virtual reality" />
-=======
+
         <meta name="keywords" content="AR VR platform, virtual reality, augmented reality, AI solutions, IT services, Zion Tech Group" />
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
+
       </Helmet>
 
       {/* Hero Section */}
@@ -86,7 +83,7 @@ const ARVRPlatformPage: React.FC = () => {
               Why Choose Our AR/VR Platform?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-<<<<<<< HEAD
+
               Our AR/VR solutions deliver unmatched performance, security, and scalability.
             </p>
           </div>
@@ -95,7 +92,7 @@ const ARVRPlatformPage: React.FC = () => {
             {features.map((feature, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center hover:bg-white/20 transition-all duration-300">
                 <feature.icon className="h-12 w-12 text-purple-400 mx-auto mb-4" />
-=======
+
               Our AR/VR platform solutions deliver unmatched performance, security, and scalability.
             </p>
           </div>
@@ -104,7 +101,7 @@ const ARVRPlatformPage: React.FC = () => {
             {features.map((feature, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
                 <feature.icon className="w-12 h-12 text-purple-400 mb-4" />
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
+
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </div>
@@ -121,11 +118,11 @@ const ARVRPlatformPage: React.FC = () => {
               Key Benefits
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-<<<<<<< HEAD
+
               Experience the power of our AR/VR solutions for your business.
             </p>
           </div>
-=======
+
               Experience the power of our AR/VR platform solutions for your business.
             </p>
           </div>
@@ -138,7 +135,7 @@ const ARVRPlatformPage: React.FC = () => {
               </div>
             ))}
           </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
+
         </div>
       </section>
 
@@ -166,7 +163,6 @@ const ARVRPlatformPage: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
-
-export default ARVRPlatformPage;
+  )
+}
+export default ARVRPlatformPage

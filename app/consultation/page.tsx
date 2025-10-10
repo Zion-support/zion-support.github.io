@@ -1,18 +1,16 @@
-'use client';
-
-import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { Calendar, Clock, Users, CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Target, Award } from 'lucide-react';
-
+'use client'
+import React, { useState } from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Link } from 'react-router-dom'
+import { Calendar, Clock, Users, CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Target, Award } from 'lucide-react'
 interface ConsultationType {
-  id: string;
-  name: string;
-  description: string;
-  duration: string;
-  price: string;
-  features: string[];
-  popular: boolean;
+  id: string
+  name: string
+  description: string
+  duration: string
+  price: string
+  features: string[]
+  popular: boolean
 }
 
 const ConsultationPage: React.FC = () => {
@@ -25,8 +23,7 @@ const ConsultationPage: React.FC = () => {
     message: '',
     preferredTime: '',
     urgency: 'medium'
-  });
-
+  })
   const consultationTypes: ConsultationType[] = [
     {
       id: 'strategy',
@@ -73,8 +70,7 @@ const ConsultationPage: React.FC = () => {
       ],
       popular: false
     }
-  ];
-
+  ]
   const services = [
     {
       icon: Zap,
@@ -96,23 +92,20 @@ const ConsultationPage: React.FC = () => {
       title: 'Cybersecurity',
       description: 'Protect your business with comprehensive security solutions and compliance'
     }
-  ];
-
+  ]
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
+    const { name, value } = e.target
     setFormData(prev => ({
       ...prev,
       [name]: value
-    }));
-  };
-
+    }))
+  }
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+    e.preventDefault()
     // In a real app, this would submit the form data
-    console.log('Form submitted:', formData);
-    alert('Thank you for your interest! We will contact you within 24 hours.');
-  };
-
+    console.log('Form submitted:', formData)
+    alert('Thank you for your interest! We will contact you within 24 hours.')
+  }
   return (
     <div className="min-h-screen bg-gray-50">
       <Helmet>
@@ -364,7 +357,6 @@ const ConsultationPage: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
-
-export default ConsultationPage;
+  )
+}
+export default ConsultationPage

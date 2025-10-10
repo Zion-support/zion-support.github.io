@@ -1,8 +1,6 @@
-'use client';
-
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
 const EnhancedSEOHead: React.FC = () => {
   return (
     <Helmet>
@@ -95,7 +93,6 @@ const EnhancedSEOHead: React.FC = () => {
         })}
       </script>
     </Helmet>
-  );
-};
-
-export default EnhancedSEOHead;
+  )
+}
+export default EnhancedSEOHead

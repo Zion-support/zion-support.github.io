@@ -1,21 +1,19 @@
-'use client';
-
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight, ExternalLink, CheckCircle, TrendingUp, Users, Award, Building2, Shield, Zap } from 'lucide-react';
-
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Link } from 'react-router-dom'
+import { ArrowRight, ExternalLink, CheckCircle, TrendingUp, Users, Award, Building2, Shield, Zap } from 'lucide-react'
 interface CaseStudy {
-  id: string;
-  title: string;
-  client: string;
-  industry: string;
-  challenge: string;
-  solution: string;
-  results: string[];
-  image: string;
-  duration: string;
-  team: string;
+  id: string
+  title: string
+  client: string
+  industry: string
+  challenge: string
+  solution: string
+  results: string[]
+  image: string
+  duration: string
+  team: string
 }
 
 const CaseStudiesPage: React.FC = () => {
@@ -122,22 +120,18 @@ const CaseStudiesPage: React.FC = () => {
       duration: '5 months',
       team: '7 specialists'
     }
-  ];
-
-  const industries = ['All', 'Technology', 'Financial Services', 'Healthcare', 'Manufacturing', 'Retail', 'Logistics'];
-  const [selectedIndustry, setSelectedIndustry] = React.useState('All');
-
+  ]
+  const industries = ['All', 'Technology', 'Financial Services', 'Healthcare', 'Manufacturing', 'Retail', 'Logistics']
+  const [selectedIndustry, setSelectedIndustry] = React.useState('All')
   const filteredCaseStudies = selectedIndustry === 'All' 
     ? caseStudies 
-    : caseStudies.filter(study => study.industry === selectedIndustry);
-
+    : caseStudies.filter(study => study.industry === selectedIndustry)
   const stats = [
     { icon: <Building2 className="w-8 h-8 text-blue-600" />, value: '150+', label: 'Projects Completed' },
     { icon: <Users className="w-8 h-8 text-green-600" />, value: '98%', label: 'Client Satisfaction' },
     { icon: <TrendingUp className="w-8 h-8 text-purple-600" />, value: '40%', label: 'Average Cost Reduction' },
     { icon: <Shield className="w-8 h-8 text-red-600" />, value: '99.9%', label: 'Uptime Achieved' }
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-gray-50">
       <Helmet>
@@ -298,7 +292,6 @@ const CaseStudiesPage: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
-
-export default CaseStudiesPage;
+  )
+}
+export default CaseStudiesPage

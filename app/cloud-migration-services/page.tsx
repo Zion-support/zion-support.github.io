@@ -1,16 +1,15 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-=======
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Cloud, Server, Database } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
+
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Cloud, Server, Database } from 'lucide-react'
 
 const CloudMigrationServicesPage: React.FC = () => {
   const features = [
     {
-<<<<<<< HEAD
+
       icon: Shield,
       title: 'Secure Cloud Migration',
       description: 'Safe and secure migration of your applications and data to the cloud'
@@ -29,7 +28,7 @@ const CloudMigrationServicesPage: React.FC = () => {
       icon: Globe,
       title: 'Multi-Cloud Support',
       description: 'Support for migration to AWS, Azure, GCP, and other cloud platforms'
-=======
+
       icon: Cloud,
       title: 'Cloud Migration',
       description: 'Seamless migration to cloud platforms with minimal downtime'
@@ -48,34 +47,32 @@ const CloudMigrationServicesPage: React.FC = () => {
       icon: Shield,
       title: 'Security & Compliance',
       description: 'Enterprise-grade security and compliance standards'
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
-    }
-  ];
 
+    }
+  ]
   const benefits = [
-<<<<<<< HEAD
+
     'Advanced cloud migration technology',
     'Real-time migration monitoring',
     'Enterprise-grade security and compliance',
     'Scalable and flexible migration solutions',
-=======
+
     'Seamless cloud migration',
     'Minimal downtime during migration',
     'Cost-effective solutions',
     'High availability and reliability',
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
+
     '24/7 technical support',
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Cloud Migration Services | Zion Tech Group</title>
         <meta name="description" content="Professional Cloud Migration Services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-<<<<<<< HEAD
+
         <meta name="keywords" content="cloud migration, cloud services, IT services, Zion Tech Group, cloud computing" />
       </Helmet>
 
@@ -133,7 +130,7 @@ const CloudMigrationServicesPage: React.FC = () => {
               <Mail className="mr-2 h-5 w-5" />
               Email Us
             </button>
-=======
+
         <meta name="keywords" content="cloud migration, cloud services, migration services, AI solutions, IT services, Zion Tech Group" />
       </Helmet>
 
@@ -170,7 +167,7 @@ const CloudMigrationServicesPage: React.FC = () => {
                 <p className="text-gray-300">{feature.description}</p>
               </div>
             ))}
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
+
           </div>
         </div>
       </section>
@@ -220,7 +217,6 @@ const CloudMigrationServicesPage: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
-
-export default CloudMigrationServicesPage;
+  )
+}
+export default CloudMigrationServicesPage

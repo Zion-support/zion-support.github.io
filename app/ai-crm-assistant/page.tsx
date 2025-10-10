@@ -1,11 +1,10 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-<<<<<<< HEAD
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
 const AiCrmAssistantPage: React.FC = () => {
   const features = [
     {
@@ -32,11 +31,9 @@ const AiCrmAssistantPage: React.FC = () => {
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-  ];
+  ]
 
-=======
-import { CheckCircle, ArrowRight } from 'lucide-react';
-
+import { CheckCircle, ArrowRight } from 'lucide-react'
 const AICrmAssistantPage: React.FC = () => {
   const features = [
     {
@@ -54,8 +51,7 @@ const AICrmAssistantPage: React.FC = () => {
       description: 'Enhanced customer support with AI-powered assistance',
       benefits: ['Ticket management', 'Response automation', 'Customer satisfaction']
     }
-  ];
-
+  ]
   const benefits = [
     'Increase sales by 30%',
     'Improve customer satisfaction',
@@ -63,13 +59,12 @@ const AICrmAssistantPage: React.FC = () => {
     'Better lead qualification',
     'Automated follow-ups',
     'Enhanced customer insights'
-  ];
+  ]
 
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
   return (
     <>
       <Helmet>
-<<<<<<< HEAD
+
         <title>AI CRM Assistant - Zion Tech Group</title>
         <meta name="description" content="Intelligent CRM assistant powered by AI technology." />
         <meta name="keywords" content="AI CRM assistant, artificial intelligence, customer relationship management, AI solutions, intelligent CRM" />
@@ -142,7 +137,7 @@ const AICrmAssistantPage: React.FC = () => {
             </h2>
             <p className="text-xl text-blue-100 mb-8">
               Join thousands of businesses already using our AI platform.
-=======
+
         <title>AI CRM Assistant | Zion Tech Group</title>
         <meta name="description" content="Professional AI CRM assistant solutions by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="ai crm assistant, AI solutions, IT services, Zion Tech Group" />
@@ -184,18 +179,16 @@ const AICrmAssistantPage: React.FC = () => {
             <h2 className="text-4xl font-bold text-white mb-4">AI CRM Assistant Features</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Advanced solutions designed for modern business needs
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
+
             </p>
             <button className="bg-white text-blue-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold">
               Start Your Free Trial
             </button>
           </div>
-<<<<<<< HEAD
+
         </section>
       </main>
-      
-=======
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-blue-400/50 transition-all duration-300 group">
@@ -259,14 +252,12 @@ const AICrmAssistantPage: React.FC = () => {
         </div>
       </section>
 
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
       <Footer />
     </>
-  );
-};
+  )
+}
 
-<<<<<<< HEAD
-export default AiCrmAssistantPage;
-=======
-export default AICrmAssistantPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
+export default AiCrmAssistantPage
+
+export default AICrmAssistantPage
+

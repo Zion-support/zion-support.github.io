@@ -1,8 +1,7 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
 const BlockchainIntegrationServicesPage: React.FC = () => {
   const features = [
     {
@@ -25,8 +24,7 @@ const BlockchainIntegrationServicesPage: React.FC = () => {
       title: 'Multi-Chain Support',
       description: 'Support for multiple blockchain networks and protocols'
     }
-  ];
-
+  ]
   const benefits = [
     'Advanced blockchain technology integration',
     'Real-time transaction processing',
@@ -36,21 +34,20 @@ const BlockchainIntegrationServicesPage: React.FC = () => {
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Blockchain Integration Services | Zion Tech Group</title>
         <meta name="description" content="Professional Blockchain Integration Services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-<<<<<<< HEAD
+
         <meta name="keywords" content="blockchain integration, blockchain services, IT services, Zion Tech Group, smart contracts" />
       </Helmet>
 
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-white mb-6">
-=======
+
         <meta name="keywords" content="blockchain integration, blockchain services, AI solutions, IT services, Zion Tech Group" />
       </Helmet>
 
@@ -58,14 +55,14 @@ const BlockchainIntegrationServicesPage: React.FC = () => {
       <section className="relative py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
+
             Blockchain Integration Services
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your business with our advanced blockchain integration solutions. 
             Powered by cutting-edge AI technology and industry expertise.
           </p>
-<<<<<<< HEAD
+
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Our blockchain solutions deliver unmatched performance, security, and scalability.
           </p>
@@ -79,17 +76,15 @@ const BlockchainIntegrationServicesPage: React.FC = () => {
               <p className="text-gray-300">{feature.description}</p>
             </div>
           ))}
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
+
         </div>
 
-<<<<<<< HEAD
         <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-8">
             Why Choose Our Blockchain Integration Services?
           </h2>
           <div className="grid md:grid-cols-2 gap-6">
-=======
+
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -129,7 +124,7 @@ const BlockchainIntegrationServicesPage: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
+
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-center space-x-3">
                 <CheckCircle className="h-6 w-6 text-green-400 flex-shrink-0" />
@@ -139,7 +134,6 @@ const BlockchainIntegrationServicesPage: React.FC = () => {
           </div>
         </div>
 
-<<<<<<< HEAD
         <div className="text-center">
           <h2 className="text-3xl font-bold text-white mb-6">
             Ready to Get Started?
@@ -156,7 +150,7 @@ const BlockchainIntegrationServicesPage: React.FC = () => {
               <Mail className="mr-2 h-5 w-5" />
               Email Us
             </button>
-=======
+
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -177,12 +171,11 @@ const BlockchainIntegrationServicesPage: React.FC = () => {
                 Email Us
               </button>
             </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
+
           </div>
         </div>
       </div>
     </div>
-  );
-};
-
-export default BlockchainIntegrationServicesPage;
+  )
+}
+export default BlockchainIntegrationServicesPage

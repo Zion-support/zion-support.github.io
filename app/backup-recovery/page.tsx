@@ -1,12 +1,11 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Database, Clock, ShieldCheck } from 'lucide-react';
-
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Database, Clock, ShieldCheck } from 'lucide-react'
 const BackupRecoveryPage: React.FC = () => {
   const features = [
     {
-<<<<<<< HEAD
+
       icon: Shield,
       title: 'Secure Backup Solutions',
       description: 'Advanced encryption and secure storage for your critical business data'
@@ -25,7 +24,7 @@ const BackupRecoveryPage: React.FC = () => {
       icon: Globe,
       title: 'Global Redundancy',
       description: 'Worldwide backup storage with multiple redundancy layers'
-=======
+
       icon: Database,
       title: 'Automated Backups',
       description: 'Automated backup solutions with intelligent scheduling and monitoring'
@@ -44,39 +43,37 @@ const BackupRecoveryPage: React.FC = () => {
       icon: Globe,
       title: 'Cloud Integration',
       description: 'Seamless cloud backup and recovery across multiple platforms'
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
-    }
-  ];
 
+    }
+  ]
   const benefits = [
-<<<<<<< HEAD
+
     'Advanced data protection and encryption',
     'Real-time backup monitoring and alerts',
-=======
+
     'Automated backup scheduling',
     'Real-time data protection',
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
+
     'Enterprise-grade security and compliance',
     'Scalable and flexible backup solutions',
     '24/7 technical support',
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Backup & Recovery | Zion Tech Group</title>
         <meta name="description" content="Professional Backup & Recovery services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-<<<<<<< HEAD
+
         <meta name="keywords" content="backup recovery, data protection, IT services, Zion Tech Group, disaster recovery" />
       </Helmet>
 
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-white mb-6">
-=======
+
         <meta name="keywords" content="backup recovery, data protection, disaster recovery, AI solutions, IT services, Zion Tech Group" />
       </Helmet>
 
@@ -84,14 +81,14 @@ const BackupRecoveryPage: React.FC = () => {
       <section className="relative py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
+
             Backup & Recovery
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your business with our advanced backup and recovery solutions. 
             Powered by cutting-edge AI technology and industry expertise.
           </p>
-<<<<<<< HEAD
+
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Our backup solutions deliver unmatched performance, security, and scalability.
           </p>
@@ -118,7 +115,7 @@ const BackupRecoveryPage: React.FC = () => {
                 <span className="text-gray-300">{benefit}</span>
               </div>
             ))}
-=======
+
         </div>
       </section>
 
@@ -187,7 +184,7 @@ const BackupRecoveryPage: React.FC = () => {
               <Mail className="mr-2 h-5 w-5" />
               Email Us
             </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
+
           </div>
         </div>
 
@@ -211,7 +208,6 @@ const BackupRecoveryPage: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
-
-export default BackupRecoveryPage;
+  )
+}
+export default BackupRecoveryPage
