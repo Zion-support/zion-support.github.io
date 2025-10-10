@@ -30,6 +30,158 @@ const ServicesPage: React.FC = () => {
     },
     {
       icon: Brain,
+      title: 'AI Voice Assistant',
+      description: 'Intelligent voice assistants with natural language understanding, multi-language support, and custom voice training.',
+      features: ['Voice Recognition', 'Natural Language Processing', 'Multi-language Support', 'Custom Voice Training', 'API Integration'],
+      price: 'Starting at $299/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Video Analytics',
+      description: 'Advanced video analysis with object detection, facial recognition, and behavioral analytics for security and marketing.',
+      features: ['Object Detection', 'Facial Recognition', 'Behavioral Analytics', 'Real-time Processing', 'Custom Models'],
+      price: 'Starting at $599/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Predictive Maintenance',
+      description: 'Predictive maintenance solutions using IoT sensors and machine learning to prevent equipment failures.',
+      features: ['IoT Integration', 'Failure Prediction', 'Maintenance Scheduling', 'Cost Optimization', 'Real-time Alerts'],
+      price: 'Starting at $899/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Supply Chain Optimization',
+      description: 'Intelligent supply chain management with demand forecasting, inventory optimization, and logistics planning.',
+      features: ['Demand Forecasting', 'Inventory Optimization', 'Route Planning', 'Risk Assessment', 'Cost Reduction'],
+      price: 'Starting at $1,299/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Personalization Engine',
+      description: 'Advanced personalization platform that delivers tailored experiences across all customer touchpoints.',
+      features: ['Real-time Personalization', 'A/B Testing', 'Customer Segmentation', 'Content Optimization', 'ROI Tracking'],
+      price: 'Starting at $799/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Code Review Assistant',
+      description: 'Automated code review with security analysis, performance optimization, and best practice recommendations.',
+      features: ['Security Analysis', 'Performance Optimization', 'Code Quality Metrics', 'Best Practice Suggestions', 'Team Collaboration'],
+      price: 'Starting at $199/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Translation Services',
+      description: 'Real-time translation with context awareness, industry-specific terminology, and cultural adaptation.',
+      features: ['100+ Languages', 'Context Awareness', 'Industry Terminology', 'Cultural Adaptation', 'API Integration'],
+      price: 'Starting at $149/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Recommendation Engine',
+      description: 'Advanced recommendation systems for e-commerce, content, and services with real-time learning capabilities.',
+      features: ['Real-time Learning', 'Multi-channel Support', 'A/B Testing', 'Performance Analytics', 'Custom Algorithms'],
+      price: 'Starting at $399/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Sentiment Analysis',
+      description: 'Comprehensive sentiment analysis for social media, reviews, and customer feedback with actionable insights.',
+      features: ['Social Media Monitoring', 'Review Analysis', 'Emotion Detection', 'Trend Analysis', 'Custom Dashboards'],
+      price: 'Starting at $249/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Image Recognition',
+      description: 'Advanced image recognition and classification with custom model training and real-time processing.',
+      features: ['Custom Model Training', 'Real-time Processing', 'Batch Processing', 'API Integration', 'High Accuracy'],
+      price: 'Starting at $349/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Chatbot Platform',
+      description: 'Enterprise-grade chatbot platform with natural language understanding and multi-channel deployment.',
+      features: ['Natural Language Understanding', 'Multi-channel Deployment', 'Custom Training', 'Analytics Dashboard', 'Integration APIs'],
+      price: 'Starting at $199/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Fraud Detection',
+      description: 'Advanced fraud detection system with real-time monitoring and machine learning-based risk assessment.',
+      features: ['Real-time Monitoring', 'Risk Assessment', 'Pattern Recognition', 'Alert System', 'Compliance Reporting'],
+      price: 'Starting at $999/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Document Intelligence',
+      description: 'Intelligent document processing with OCR, data extraction, and automated workflow integration.',
+      features: ['OCR Technology', 'Data Extraction', 'Workflow Automation', 'Template Recognition', 'Batch Processing'],
+      price: 'Starting at $299/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Energy Management',
+      description: 'Smart energy management system with consumption optimization and renewable energy integration.',
+      features: ['Consumption Optimization', 'Renewable Integration', 'Cost Analysis', 'Predictive Modeling', 'Real-time Monitoring'],
+      price: 'Starting at $599/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Quality Assurance',
+      description: 'Automated quality assurance with defect detection, performance testing, and compliance monitoring.',
+      features: ['Defect Detection', 'Performance Testing', 'Compliance Monitoring', 'Automated Reporting', 'Integration Testing'],
+      price: 'Starting at $449/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Talent Acquisition',
+      description: 'Intelligent recruitment platform with candidate matching, interview scheduling, and bias detection.',
+      features: ['Candidate Matching', 'Interview Scheduling', 'Bias Detection', 'Skills Assessment', 'Onboarding Automation'],
+      price: 'Starting at $699/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Legal Document Analysis',
+      description: 'AI-powered legal document analysis with contract review, risk assessment, and compliance checking.',
+      features: ['Contract Review', 'Risk Assessment', 'Compliance Checking', 'Clause Analysis', 'Automated Summaries'],
+      price: 'Starting at $1,199/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Real Estate Analytics',
+      description: 'Comprehensive real estate analytics with market prediction, property valuation, and investment insights.',
+      features: ['Market Prediction', 'Property Valuation', 'Investment Analysis', 'Trend Analysis', 'Portfolio Management'],
+      price: 'Starting at $799/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Insurance Risk Assessment',
+      description: 'Advanced insurance risk assessment with predictive modeling and automated underwriting.',
+      features: ['Risk Modeling', 'Automated Underwriting', 'Claims Prediction', 'Fraud Detection', 'Policy Optimization'],
+      price: 'Starting at $1,499/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
       title: 'AI Marketing Automation',
       description: 'Revolutionary AI-powered marketing automation with personalized campaigns and intelligent optimization.',
       features: ['Campaign Automation', 'Personalization', 'A/B Testing', 'ROI Optimization', 'Multi-channel'],
@@ -282,6 +434,150 @@ const ServicesPage: React.FC = () => {
       features: ['Technology Assessment', 'Strategic Planning', 'Cost Optimization', 'Digital Transformation', 'Training'],
       price: 'Starting at $299/hour',
       category: 'IT Services'
+    },
+    {
+      icon: Cloud,
+      title: 'Hybrid Cloud Solutions',
+      description: 'Seamless integration of on-premises and cloud infrastructure with unified management.',
+      features: ['Hybrid Architecture', 'Unified Management', 'Data Synchronization', 'Cost Optimization', 'Security Compliance'],
+      price: 'Starting at $1,799/month',
+      category: 'IT Services'
+    },
+    {
+      icon: Shield,
+      title: 'Zero Trust Security',
+      description: 'Comprehensive zero trust security architecture with continuous verification and monitoring.',
+      features: ['Identity Verification', 'Device Trust', 'Network Segmentation', 'Continuous Monitoring', 'Threat Detection'],
+      price: 'Starting at $1,299/month',
+      category: 'IT Services'
+    },
+    {
+      icon: Database,
+      title: 'Data Center Services',
+      description: 'Complete data center solutions including colocation, managed hosting, and disaster recovery.',
+      features: ['Colocation Services', 'Managed Hosting', 'Disaster Recovery', '24/7 Monitoring', 'SLA Guarantee'],
+      price: 'Starting at $899/month',
+      category: 'IT Services'
+    },
+    {
+      icon: Globe,
+      title: 'Network Security',
+      description: 'Advanced network security solutions with firewall management and intrusion detection.',
+      features: ['Firewall Management', 'Intrusion Detection', 'VPN Solutions', 'Network Monitoring', 'Threat Prevention'],
+      price: 'Starting at $599/month',
+      category: 'IT Services'
+    },
+    {
+      icon: Smartphone,
+      title: 'Mobile Device Management',
+      description: 'Comprehensive mobile device management with security policies and app distribution.',
+      features: ['Device Enrollment', 'Security Policies', 'App Distribution', 'Remote Wipe', 'Compliance Reporting'],
+      price: 'Starting at $299/month',
+      category: 'IT Services'
+    },
+    {
+      icon: BarChart3,
+      title: 'IT Asset Management',
+      description: 'Complete IT asset lifecycle management with tracking, optimization, and compliance.',
+      features: ['Asset Tracking', 'Lifecycle Management', 'Cost Optimization', 'Compliance Reporting', 'Automated Discovery'],
+      price: 'Starting at $199/month',
+      category: 'IT Services'
+    },
+    {
+      icon: Zap,
+      title: 'IT Automation',
+      description: 'Intelligent IT automation for routine tasks, deployments, and system maintenance.',
+      features: ['Task Automation', 'Deployment Automation', 'System Maintenance', 'Monitoring Automation', 'Self-healing Systems'],
+      price: 'Starting at $799/month',
+      category: 'IT Services'
+    },
+    {
+      icon: Shield,
+      title: 'Compliance Management',
+      description: 'Comprehensive compliance management for GDPR, HIPAA, SOX, and other regulatory requirements.',
+      features: ['Regulatory Compliance', 'Audit Preparation', 'Risk Assessment', 'Documentation Management', 'Training Programs'],
+      price: 'Starting at $1,199/month',
+      category: 'IT Services'
+    },
+    {
+      icon: Cloud,
+      title: 'Multi-Cloud Management',
+      description: 'Unified management of multiple cloud providers with cost optimization and security.',
+      features: ['Multi-Cloud Orchestration', 'Cost Optimization', 'Security Management', 'Performance Monitoring', 'Migration Services'],
+      price: 'Starting at $1,499/month',
+      category: 'IT Services'
+    },
+    {
+      icon: Database,
+      title: 'Backup & Recovery',
+      description: 'Comprehensive backup and disaster recovery solutions with automated testing and monitoring.',
+      features: ['Automated Backups', 'Disaster Recovery', 'Testing & Validation', 'Monitoring & Alerts', 'Compliance Support'],
+      price: 'Starting at $399/month',
+      category: 'IT Services'
+    },
+    {
+      icon: Globe,
+      title: 'SD-WAN Solutions',
+      description: 'Software-defined wide area networking for improved performance and cost efficiency.',
+      features: ['Performance Optimization', 'Cost Reduction', 'Centralized Management', 'Security Integration', 'Cloud Connectivity'],
+      price: 'Starting at $699/month',
+      category: 'IT Services'
+    },
+    {
+      icon: BarChart3,
+      title: 'IT Performance Monitoring',
+      description: 'Comprehensive IT performance monitoring with predictive analytics and alerting.',
+      features: ['Real-time Monitoring', 'Predictive Analytics', 'Performance Optimization', 'Alert Management', 'Custom Dashboards'],
+      price: 'Starting at $499/month',
+      category: 'IT Services'
+    },
+    {
+      icon: Shield,
+      title: 'Endpoint Security',
+      description: 'Advanced endpoint security solutions with threat detection and response capabilities.',
+      features: ['Threat Detection', 'Response Automation', 'Behavioral Analysis', 'Device Control', 'Incident Response'],
+      price: 'Starting at $199/month',
+      category: 'IT Services'
+    },
+    {
+      icon: Cloud,
+      title: 'Cloud Cost Optimization',
+      description: 'Intelligent cloud cost optimization with automated rightsizing and resource management.',
+      features: ['Cost Analysis', 'Rightsizing Recommendations', 'Automated Optimization', 'Budget Management', 'Waste Detection'],
+      price: 'Starting at $299/month',
+      category: 'IT Services'
+    },
+    {
+      icon: Database,
+      title: 'Database Performance Tuning',
+      description: 'Expert database performance optimization with monitoring and automated tuning.',
+      features: ['Performance Analysis', 'Query Optimization', 'Index Management', 'Capacity Planning', 'Automated Tuning'],
+      price: 'Starting at $599/month',
+      category: 'IT Services'
+    },
+    {
+      icon: Globe,
+      title: 'API Management',
+      description: 'Comprehensive API management platform with security, monitoring, and developer tools.',
+      features: ['API Gateway', 'Security & Authentication', 'Rate Limiting', 'Monitoring & Analytics', 'Developer Portal'],
+      price: 'Starting at $399/month',
+      category: 'IT Services'
+    },
+    {
+      icon: Zap,
+      title: 'IT Service Desk',
+      description: 'Advanced IT service desk with AI-powered ticket routing and self-service capabilities.',
+      features: ['AI Ticket Routing', 'Self-Service Portal', 'Knowledge Base', 'SLA Management', 'Mobile App'],
+      price: 'Starting at $149/month',
+      category: 'IT Services'
+    },
+    {
+      icon: Shield,
+      title: 'Security Operations Center',
+      description: '24/7 security operations center with threat hunting and incident response capabilities.',
+      features: ['24/7 Monitoring', 'Threat Hunting', 'Incident Response', 'Forensic Analysis', 'Threat Intelligence'],
+      price: 'Starting at $2,999/month',
+      category: 'IT Services'
     }
   ];
 
@@ -295,7 +591,10 @@ const ServicesPage: React.FC = () => {
     'Database Services',
     'Automation',
     'Web Development',
-    'IT Services'
+    'IT Services',
+    'Emerging Technologies',
+    'Micro SAAS',
+    'Enterprise Solutions'
   ];
 
   const [selectedCategory, setSelectedCategory] = React.useState('All');

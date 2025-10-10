@@ -270,6 +270,7 @@ const Navigation: React.FC = () => {
             <a
               href="tel:+13024640950"
               className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
+              title="Call us at (302) 464-0950"
             >
               <Phone className="w-4 h-4" />
               <span className="text-sm">(302) 464-0950</span>
@@ -277,10 +278,15 @@ const Navigation: React.FC = () => {
             <a
               href="mailto:kleber@ziontechgroup.com"
               className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
+              title="Email us at kleber@ziontechgroup.com"
             >
               <Mail className="w-4 h-4" />
-              <span className="text-sm">Email</span>
+              <span className="text-sm">kleber@ziontechgroup.com</span>
             </a>
+            <div className="flex items-center space-x-2 text-gray-400">
+              <MapPin className="w-4 h-4" />
+              <span className="text-xs">Middletown, DE</span>
+            </div>
           </div>
           {/* Mobile Menu Button */}
           <div className="lg:hidden">
@@ -411,7 +417,7 @@ const Navigation: React.FC = () => {
                 Contact
               </Link>
               {/* Mobile Contact Info */}
-              <div className="pt-4 border-t border-cyan-500/20 space-y-2">
+              <div className="pt-4 border-t border-cyan-500/20 space-y-3">
                 <a
                   href="tel:+13024640950"
                   className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
@@ -426,9 +432,16 @@ const Navigation: React.FC = () => {
                   <Mail className="w-4 h-4" />
                   <span>kleber@ziontechgroup.com</span>
                 </a>
-                <div className="flex items-center space-x-2 text-gray-400">
-                  <MapPin className="w-4 h-4" />
-                  <span className="text-sm">364 E Main St STE 1008, Middletown DE 19709</span>
+                <div className="flex items-start space-x-2 text-gray-400">
+                  <MapPin className="w-4 h-4 mt-1 flex-shrink-0" />
+                  <div className="text-sm">
+                    <div>364 E Main St STE 1008</div>
+                    <div>Middletown, DE 19709</div>
+                  </div>
+                </div>
+                <div className="text-xs text-gray-500 mt-2">
+                  Business Hours: Mon-Fri 9AM-6PM EST<br />
+                  24/7 Emergency Support Available
                 </div>
               </div>
             </div>
