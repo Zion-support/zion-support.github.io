@@ -13,12 +13,6 @@ export default function handler(req, res) {
     // 2. Store in your database
     // 3. Send alerts to your team
 
-<<<<<<< HEAD
-    // console.error removed for production
-    console.log('Error report received:', {
-      error: req.body.error,
-      timestamp: new Date().toISOString()
-=======
     console.log('Error report received:', {
       error,
       stack,
@@ -26,7 +20,6 @@ export default function handler(req, res) {
       timestamp: timestamp || new Date().toISOString(),
       userAgent,
       url
->>>>>>> cursor/fix-errors-and-merge-to-main-92c8
     });
 
     // For now, just acknowledge receipt
@@ -37,17 +30,9 @@ export default function handler(req, res) {
       message: 'Error report received' 
     }));
   } catch (error) {
-<<<<<<< HEAD
-    // console.error removed for production
-=======
     console.error('Failed to process error report:', error);
->>>>>>> cursor/fix-errors-and-merge-to-main-92c8
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Failed to process error report' }));
   }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-92c8
