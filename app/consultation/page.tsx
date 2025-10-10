@@ -345,10 +345,6 @@ const ConsultationPage: React.FC = () => {
             </div>
           </div>
         </div>
-              </div>
-            </div>
-          </div>
-        </section>
       </main>
       
       <Footer />

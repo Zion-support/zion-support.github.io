@@ -100,6 +100,8 @@ const DemoPage: React.FC = () => {
       duration: '30 minutes',
       category: 'Micro SaaS'
     }
+  ];
+
   return (
     <>
       <Helmet>

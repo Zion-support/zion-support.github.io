@@ -6,15 +6,32 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const SitemapPage: React.FC = () => {
+  const sitemapSections = [
     {
       title: 'Main Pages',
       icon: Home,
       pages: [
+        { name: 'Home', url: '/', description: 'Zion Tech Group homepage' },
+        { name: 'About', url: '/about', description: 'Learn about our company' },
+        { name: 'Contact', url: '/contact', description: 'Get in touch with us' },
+        { name: 'Consultation', url: '/consultation', description: 'Schedule a free consultation' },
+        { name: 'Demo', url: '/demo', description: 'Request a product demo' },
+        { name: 'Support', url: '/support', description: 'Get technical support' },
+        { name: 'Tutorials', url: '/tutorials', description: 'Learn how to use our services' },
+        { name: 'Privacy Policy', url: '/privacy', description: 'Our privacy policy' },
+        { name: 'Terms of Service', url: '/terms', description: 'Terms and conditions' },
+        { name: 'Cookie Policy', url: '/cookies', description: 'Cookie usage information' }
+      ]
     },
     {
       title: 'AI Services',
       icon: Brain,
       pages: [
+        { name: 'AI Services Overview', url: '/ai-services', description: 'Comprehensive AI solutions' },
+        { name: 'AI Chat API', url: '/ai-chat-api', description: 'Intelligent conversational AI' },
+        { name: 'AI Analytics', url: '/ai-analytics', description: 'Advanced data analytics' },
+        { name: 'AI Automation', url: '/ai-automation', description: 'Intelligent process automation' }
+      ]
     },
     {
       title: 'IT Services',
@@ -24,7 +41,8 @@ const SitemapPage: React.FC = () => {
         { name: 'Cloud Infrastructure', url: '/cloud-infrastructure', description: 'AWS, Azure, and GCP solutions' },
         { name: 'Cybersecurity Solutions', url: '/cybersecurity-solutions', description: 'Comprehensive security services' },
         { name: 'Web Development', url: '/web-development', description: 'Modern web application development' },
-        { name: 'Mobile Development', url: '/mobile-development', description: 'iOS and Android app development' },
+        { name: 'Mobile Development', url: '/mobile-development', description: 'iOS and Android app development' }
+      ]
     },
     {
       title: 'Resources',
@@ -32,7 +50,10 @@ const SitemapPage: React.FC = () => {
       pages: [
         { name: 'Tutorials', url: '/tutorials', description: 'Step-by-step guides and tutorials' },
         { name: 'Documentation', url: '/docs', description: 'Technical documentation and APIs' },
-        { name: 'FAQ', url: '/faq', description: 'Frequently asked questions' },
+        { name: 'FAQ', url: '/faq', description: 'Frequently asked questions' }
+      ]
+    }
+  ];
 
   return (
     <>

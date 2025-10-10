@@ -44,7 +44,7 @@ const SupportPage: React.FC = () => {
       contact: 'Schedule Call',
       color: 'from-orange-500 to-red-600'
     }
-  );
+  ];
 
   return (
     <>
@@ -203,7 +203,11 @@ const SupportPage: React.FC = () => {
             </div>
           </div>
         </div>
-  );
+        </main>
+        
+        <Footer />
+      </>
+    );
 };
 
 export default SupportPage;
