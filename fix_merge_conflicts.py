@@ -1,7 +1,12 @@
 #!/usr/bin/env python3
 """
+<<<<<<< HEAD
 Script to automatically resolve merge conflicts by keeping the newer version (after =======)
+=======
+Script to fix merge conflicts in the codebase
+>>>>>>> cursor/analyze-improve-and-deploy-application-975f
 """
+
 import os
 import re
 import glob
@@ -16,6 +21,7 @@ def fix_merge_conflicts(file_path):
         if '<<<<<<< HEAD' not in content:
             return False
         
+<<<<<<< HEAD
         # Split by merge conflict markers
         parts = re.split(r'<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> .*?\n', content, flags=re.DOTALL)
         
@@ -33,8 +39,32 @@ def fix_merge_conflicts(file_path):
         # Write the fixed content back
         with open(file_path, 'w', encoding='utf-8') as f:
             f.write(new_content)
+=======
+        print(f"Fixing merge conflicts in: {file_path}")
         
-        print(f"Fixed merge conflicts in: {file_path}")
+        # Remove merge conflict markers and keep the HEAD version
+        lines = content.split('\n')
+        new_lines = []
+        skip_until_end = False
+        
+        for line in lines:
+            if line.strip() == '<<<<<<< HEAD':
+                skip_until_end = False
+                continue
+            elif line.strip() == '=======':
+                skip_until_end = True
+                continue
+            elif line.strip().startswith('>>>>>>>'):
+                skip_until_end = False
+                continue
+            elif not skip_until_end:
+                new_lines.append(line)
+        
+        # Write the cleaned content back
+        with open(file_path, 'w', encoding='utf-8') as f:
+            f.write('\n'.join(new_lines))
+>>>>>>> cursor/analyze-improve-and-deploy-application-975f
+        
         return True
         
     except Exception as e:
@@ -49,20 +79,32 @@ def main():
         'app/**/*.ts',
         'src/**/*.tsx',
         'src/**/*.ts',
+<<<<<<< HEAD
         '**/*.tsx',
         '**/*.ts'
     ]
     
     fixed_count = 0
+=======
+        'components/**/*.tsx',
+        'components/**/*.ts'
+    ]
+    
+    files_fixed = 0
+>>>>>>> cursor/analyze-improve-and-deploy-application-975f
     total_files = 0
     
     for pattern in patterns:
         for file_path in glob.glob(pattern, recursive=True):
             total_files += 1
             if fix_merge_conflicts(file_path):
-                fixed_count += 1
+                files_fixed += 1
     
+<<<<<<< HEAD
     print(f"\nFixed merge conflicts in {fixed_count} out of {total_files} files")
+=======
+    print(f"\nFixed merge conflicts in {files_fixed} out of {total_files} files")
+>>>>>>> cursor/analyze-improve-and-deploy-application-975f
 
 if __name__ == "__main__":
     main()
