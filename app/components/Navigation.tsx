@@ -241,6 +241,7 @@ const Navigation: React.FC = () => {
   ];
 
   const aiServices = [
+<<<<<<< HEAD
     { name: 'Machine Learning Solutions', href: '/machine-learning', icon: Brain, price: '$1,500/mo' },
     { name: 'AI Business Intelligence', href: '/ai-business-intelligence', icon: BarChart, price: '$1,300/mo' },
     { name: 'AI Supply Chain Optimization', href: '/ai-supply-chain', icon: Globe, price: '$1,800/mo' },
@@ -268,6 +269,34 @@ const Navigation: React.FC = () => {
     { name: 'AI CRM Solutions', href: '/ai-crm', icon: Users, price: '$1,200/mo' },
     { name: 'AI Email Assistant', href: '/ai-email-assistant', icon: Mail, price: '$800/mo' },
     { name: 'AI Scheduler Pro', href: '/ai-scheduler', icon: Calendar, price: '$900/mo' }
+=======
+    { name: 'Machine Learning Solutions', href: '/machine-learning', icon: Brain },
+    { name: 'AI Business Intelligence', href: '/ai-business-intelligence', icon: BarChart },
+    { name: 'AI Supply Chain Optimization', href: '/ai-supply-chain', icon: Globe },
+    { name: 'AI Quality Assurance', href: '/ai-quality-assurance', icon: Shield },
+    { name: 'AI Human Resources', href: '/ai-hr', icon: Users },
+    { name: 'AI Legal Assistant', href: '/ai-legal', icon: FileText },
+    { name: 'AI Real Estate Analytics', href: '/ai-real-estate', icon: Home },
+    { name: 'AI Manufacturing Intelligence', href: '/ai-manufacturing', icon: Factory },
+    { name: 'AI Transportation & Logistics', href: '/ai-transportation', icon: Truck },
+    { name: 'AI Education Platform', href: '/ai-education', icon: GraduationCap },
+    { name: 'AI Energy Management', href: '/ai-energy', icon: Zap },
+    { name: 'AI Insurance Analytics', href: '/ai-insurance', icon: Shield },
+    { name: 'Natural Language Processing', href: '/nlp', icon: MessageSquare },
+    { name: 'Computer Vision', href: '/computer-vision', icon: Eye },
+    { name: 'AI Automation', href: '/ai-automation', icon: Zap },
+    { name: 'Quantum AI Computing', href: '/ai-quantum-computing', icon: Cpu },
+    { name: 'AI Cybersecurity', href: '/ai-cybersecurity', icon: Shield },
+    { name: 'AI Healthcare Solutions', href: '/ai-healthcare', icon: Stethoscope },
+    { name: 'AI Fintech Solutions', href: '/ai-fintech', icon: CreditCard },
+    { name: 'AI Mobile App Development', href: '/ai-mobile-app-development', icon: Smartphone },
+    { name: 'AI CRM Solutions', href: '/ai-crm', icon: Users },
+    { name: 'AI Email Assistant', href: '/ai-email-assistant', icon: Mail },
+    { name: 'AI Scheduler Pro', href: '/ai-scheduler', icon: Calendar },
+    { name: 'AI Robotics', href: '/ai-robotics', icon: Settings },
+    { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions', icon: Lock },
+    { name: 'AI Autonomous Systems', href: '/ai-autonomous-systems', icon: Settings }
+>>>>>>> cursor/website-audit-and-update-with-deployment-868d
   ];
 
   const itServices = [
