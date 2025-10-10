@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Code, Smartphone, Globe, Database, Zap, Shield, BarChart, Users, Phone, Mail, CheckCircle, ArrowRight } from 'lucide-react';
+import { Code, Smartphone, Globe, Database, Zap, Shield, BarChart, Users, Phone, Mail, CheckCircle, ArrowRight, Cloud } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
@@ -101,12 +101,12 @@ const WebDevelopmentPage: React.FC = () => {
         keywords={['web development', 'frontend development', 'backend development', 'full-stack', 'e-commerce', 'React', 'Node.js']}
         canonicalUrl="https://ziontechgroup.com/web-development"
       />
-      <PerformanceOptimizer
-        enableImageOptimization={true}
-        enableLazyLoading={true}
-        enableCodeSplitting={true}
-        enablePreloading={true}
-      />
+        <PerformanceOptimizer 
+          enableImageOptimization={true}
+          enableLazyLoading={true}
+          enableCodeSplitting={true}
+          enablePrefetching={true}
+        />
       <AccessibilityEnhancer
         enableKeyboardNavigation={true}
         enableScreenReaderSupport={true}

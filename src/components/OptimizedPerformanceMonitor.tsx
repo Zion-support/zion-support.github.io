@@ -71,8 +71,8 @@ const OptimizedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     const fidObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach(entry => {
-        if (entry.processingStart && entry.startTime) {
-          const fid = entry.processingStart - entry.startTime;
+        if ('processingStart' in entry && entry.startTime) {
+          const fid = (entry as any).processingStart - entry.startTime;
           setMetrics(prev => ({ ...prev, fid }));
           logger.debug('FID measured', { fid });
         }
@@ -220,7 +220,7 @@ const OptimizedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       ttfb: 600  // 600ms
     };
 
-    const violations = [];
+    const violations: string[] = [];
     
     if (metrics.fcp && metrics.fcp > budget.fcp) {
       violations.push(`FCP: ${metrics.fcp}ms > ${budget.fcp}ms`);
