@@ -6,8 +6,7 @@ const PagePage: React.FC = () => {const features = [
       title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    },
-    {
+    },    {
       icon: BarChart,
       title: 'Advanced Analytics',
       description: 'Comprehensive analytics dashboard with real-time data visualization.',
@@ -37,9 +36,13 @@ const PagePage: React.FC = () => {const features = [
       description: 'Enterprise-grade security to protect your data and operations.',
       benefits: ['End-to-end encryption', 'Access controls', 'Audit trails', 'Compliance support']
     }
+
   ];
+
 ;
-const benefits = [
+
+const benefits = [;;
+
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -49,8 +52,8 @@ const benefits = [
     'Cost-effective pricing plans',
     'Proven track record of success'
   ];
-
   return (
+
     <>
       <Helmet>
         <title>Page - Zion Tech Group</title>
@@ -62,6 +65,7 @@ const benefits = [
         <Navigation />
         
         {/* Hero Section */}
+
         <section className="pt-20 pb-16 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -92,7 +96,6 @@ const benefits = [
         </div>
       </section>
     </div>)
-  );
-};
+  );};
 
 export default PagePage;

@@ -1,11 +1,19 @@
 'use client';
+
 import React from 'react';
+
 import { Helmet } from 'react-helmet-async';
+
 import Navigation from '../components/Navigation';
+
 import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
-;
-const AiAnalyticsPage: React.FC = () => {const features = [
+
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react;
+
+';
+
+const AiAnalyticsPage: React.FC = () => {const features = [;';
+
     {
       ico,
     n: Brain,
@@ -32,50 +40,37 @@ const AiAnalyticsPage: React.FC = () => {const features = [
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     },
     {
-      icon: Globe,
-      title: 'Real-Time Dashboards',
-      description: 'Monitor your business metrics in real-time with customizable, interactive dashboards.',
-      benefits: ['Live data updates', 'Custom widgets', 'Interactive charts', 'Mobile responsive']
-    },
-    {
-      icon: Shield,
-      title: 'Data Security',
-      description: 'Enterprise-grade security to protect your sensitive business data and analytics.',
-      benefits: ['End-to-end encryption', 'Access controls', 'Audit trails', 'Compliance support']
-    }
-  ];
-;
-const benefits = [
+      icon: Globe,;
+
+const benefits = [;;
+
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology'
+    Gain competitive advantage with advanced technology
   ];
 
   return (<title>Ai Analytics - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered ai analytics solution for modern businesses." />
         <meta name="keywords" content="AI ai analytics, artificial intelligence, ai analytics, AI solutions, intelligent automation" />
-    <>
-      <Helmet>
-        <title>Ai Analytics - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI-powered ai analytics solution for modern businesses." />
-        <meta name="keywords" content="AI ai analytics, artificial intelligence, ai analytics, AI solutions, intelligent automation" />;
-const useCases = [
-        <meta name="keywords" content="AI ai analytics, artificial intelligence, ai analytics, AI solutions, intelligent automation" />  const useCases = [;
-const useCases = [
+const useCases = [;;
 
-  const benefits = [
+        <meta name="keywords" content="AI ai analytics, artificial intelligence, ai analytics, AI solutions, intelligent automation" />  const useCases = [;;
+
+const useCases = [;;
+
+  const benefits = [;;
+
     'Transform raw data into actionable insights',
     'Make data-driven decisions with confidence',
     'Identify trends and opportunities early',
     'Optimize business processes and workflows',
     'Reduce costs through intelligent automation',
-    'Gain competitive advantage with advanced technology'
+    Gain competitive advantage with advanced technology
   ];
 
-  const useCases = [
-    {
+  const useCases = [    {
       title: 'Business Intelligence',
       description: 'Transform raw data into actionable business insights',
       icon: BarChart
@@ -95,9 +90,11 @@ const useCases = [
       description: 'Understand customer behavior and preferences',
       icon: Users
     }
+
   ];
 
   return (
+
     <React.Fragment>
       <Helmet>
         <title>AI Analytics - Zion Tech Group</title>
@@ -109,6 +106,7 @@ const useCases = [
         <Navigation />
         
         {/* Hero Section */}
+
         <section className="pt-20 pb-16 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -158,28 +156,28 @@ const useCases = [
     r:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
                 View Demo
               </button>
-            </div>
-          </div>
+            </div>          </div>
         </section>
 
         {/* Features Section */}
+
         <section id="features" className="py-20">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-6">Powerful AI Analytics Features</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our comprehensive analytics platform provides everything you need to make data-driven decisions.
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">                Our comprehensive analytics platform provides everything you need to make data-driven decisions.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
+
                 <div key={index} className="bg-slate-800/50 rounded-xl p-8 backdrop-blur-sm border border-white/10 hover:border-cyan-500/50 transition-all duration-300">
                   <div className="bg-cyan-500/20 rounded-full w-12 h-12 flex items-center justify-center mb-6">
                     <feature.icon className="w-6 h-6 text-cyan-400" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                  </div>                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
                   {feature.benefits && (
+
                     <ul className="space-y-2">
                       {feature.benefits.map((benefit, idx) => (<li key={idx} className="flex items-center text-sm text-gray-400">
                           
@@ -201,13 +199,14 @@ const useCases = [
                       ))}
                     </ul>
                   )}
-                </div>
-              ))}
+                </div>              ))}
+
             </div>
           </div>
         </section>
 
         {/* Use Cases Section */}
+
         <section className="py-20 bg-slate-800/50">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
@@ -218,6 +217,7 @@ const useCases = [
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {useCases.map((useCase, index) => (
+
                 <div key={index} className="bg-slate-800/50 rounded-xl p-6 backdrop-blur-sm border border-white/10 text-center">
                   <div className="bg-purple-500/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                     <useCase.icon className="w-8 h-8 text-purple-400" />
@@ -225,12 +225,12 @@ const useCases = [
                   <h3 className="text-lg font-semibold text-white mb-3">{useCase.title}</h3>
                   <p className="text-gray-300 text-sm">{useCase.description}</p>
                 </div>
-              ))
-            </div>
+              ))            </div>
           </div>
         </section>
 
         {/* Benefits Section */}
+
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -242,11 +242,13 @@ const useCases = [
                 </p>
                 <ul className="space-y-4">
                   {benefits.map((benefit, index) => (
+
                     <li key={index} className="flex items-start">
                       <CheckCircle className="w-6 h-6 text-green-400 mr-4 flex-shrink-0 mt-1" />
                       <span className="text-gray-300">{benefit}</span>
                     </li>
                   ))}
+
                 </ul>
               </div>
               <div className="relative">
@@ -272,8 +274,7 @@ const useCases = [
                   </div>
                 </div>
               ));
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
+        <section className="py-20 px-4">          <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
                 Why Choose Our Solution?
@@ -294,12 +295,12 @@ const useCases = [
                 </div>)
               ))}
               ))}
-            </div>
-            </div>
+            </div>            </div>
           </div>
         </section>
 
         {/* CTA Section */}
+
         <section className="py-20 bg-slate-800/50">
           <div className="container mx-auto px-4 text-center">
             <div className="bg-gradient-to-r from-cyan-500/10 to-purple-600/10 rounded-2xl p-12 backdrop-blur-sm border border-white/10">
@@ -323,17 +324,17 @@ const useCases = [
                   <span>View Pricing</span>
                   <ArrowRight className="w-5 h-5" />
                 </a>
-              </div>
-            </div>
+              </div>            </div>
           </div>
         </section>
 
         <Footer />
       </div>
     </>
-  );
-}
+  );}
+
 export default AiAnalyticsPage;
+
     </React.Fragment>)
     </>
   );

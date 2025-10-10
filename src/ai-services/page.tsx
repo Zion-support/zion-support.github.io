@@ -9,8 +9,7 @@ import Footer from '../components/Footer';
 ;
 const AIServicesPage: React.FC = () => {;
 const services = [
-    {
-      titl,
+    {      titl,
     e: 'AI Strategy & Consulting',
       description: 'Comprehensive AI strategy development and implementation consulting',
       icon: Brain,
@@ -33,13 +32,17 @@ titletitle: 'AI Analytics & Insights',
       features: ['Predictive Analytics', 'Real-time Insights', 'Custom Dashboards', 'Automated Reporting'],
       price:     ,
 $4}
+
   ];
+
 ;
-const benefits = [
+
+const benefits = [;;
+
     '300% Average ROI Increase',
     '95% Process Automation',
     '50% Cost Reduction',
-    '99.9% Uptime Guarantee'
+    99.9% Uptime Guarantee
 
   return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       
@@ -65,25 +68,30 @@ const benefits = [
   )};
 
 export default $1;
+
 'use client';
+
 import React, { useState, useEffect } from 'react';
+
 import { Helmet } from 'react-helmet-async';
+
 import { 
   Brain, Zap, Shield, TrendingUp, CheckCircle, ArrowRight, Star, 
   Phone, Mail, MapPin, Clock, Users, Award, Target, BarChart,
   Cpu, Database, Globe, Lock, Sparkles, Code, Eye, MessageSquare
-} from 'lucide-react';
+} from 'lucide-react;
 
-export default function AIServicesPage() {;
-const [activeTab, setActiveTab] = useState('overview');
+export default function AIServicesPage() {';
+
+const [activeTab, setActiveTab] = useState('overview);
+
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     setIsVisible(true)}, []);
 ;
 const aiServices = [
-    {
-      id: 'ai-automation',
+    {      id: 'ai-automation',
       title: 'AI Process Automation',
       description: 'Intelligent automation solutions that reduce manual work by 80% and increase efficiency by 300%',
       features: [
@@ -92,15 +100,15 @@ const aiServices = [
         'Real-time decision making',
         'Custom automation workflows',
         'API integration capabilities',
-        'Performance monitoring & analytics'
+        Performance monitoring & analytics
       ],
       pricing: {
         starter: { pric,
-    e: '$2,500', period: '
+    e: '$2,500, period: 
         professional: { pric,
-    e: '$7,500', period: '
+    e: '$7,500, period: 
         enterprise: { pric,
-    e: '$15,000', period: '
+    e: '$15,000, period: 
       },
       icon: Zap,
       color: 'from-cyan-500 to-blue-600',
@@ -116,15 +124,15 @@ const aiServices = [
         'Custom dashboard creation',
         'Machine learning models',
         'Data visualization tools',
-        'Automated reporting'
+        Automated reporting
       ],
       pricing: {
         starter: { pric,
-    e: '$3,000', period: '
+    e: '$3,000, period: 
         professional: { pric,
-    e: '$8,500', period: '
+    e: '$8,500, period: 
         enterprise: { pric,
-    e: '$18,000', period: '
+    e: '$18,000, period: 
       },
       icon: BarChart,
       color: 'from-purple-500 to-pink-600',
@@ -141,15 +149,15 @@ const aiServices = [
         'Sentiment analysis',
         'Knowledge base integration',
         'Human handoff capabilities',
-        'Performance analytics'
+        Performance analytics
       ],
       pricing: {
         starter: { pric,
-    e: '$1,500', period: '
+    e: '$1,500, period: 
         professional: { pric,
-    e: '$4,500', period: '
+    e: '$4,500, period: 
         enterprise: { pric,
-    e: '$12,000', period: '
+    e: '$12,000, period: 
       },
       icon: MessageSquare,
       color: 'from-green-500 to-emerald-600',
@@ -165,7 +173,7 @@ const aiServices = [
         'Video creation & editing',
         'SEO optimization',
         'Brand voice consistency',
-        'Content scheduling & publishing'
+        Content scheduling & publishing
       ],
       pricing: {
         starter: { pric,
@@ -173,7 +181,7 @@ const aiServices = [
         professional: { pric,
     e: '$6,000', period: '/month', features: ['Up to 1,000 pieces
         enterprise: { pric,
-    e: '$15,000', period: '
+    e: '$15,000, period: 
       },
       icon: Code,
       color: 'from-orange-500 to-red-600',
@@ -189,15 +197,15 @@ const aiServices = [
         'Automated incident response',
         'Vulnerability assessment',
         'Compliance monitoring',
-        'Security analytics dashboard'
+        Security analytics dashboard
       ],
       pricing: {
         starter: { pric,
-    e: '$4,000', period: '
+    e: '$4,000, period: 
         professional: { pric,
     e: '$10,000', period: '/month', features: ['Advanced threat detection', 'Network security', 'Compliance tools', '24
         enterprise: { pric,
-    e: '$25,000', period: '
+    e: '$25,000, period: 
       },
       icon: Shield,
       color: 'from-red-500 to-pink-600',
@@ -214,31 +222,37 @@ const aiServices = [
         'Custom model training',
         'Model deployment & scaling',
         'A
-        'Performance monitoring'
+        Performance monitoring
       ],
       pricing: {
         starter: { pric,
-    e: '$3,500', period: '
+    e: '$3,500, period: 
         professional: { pric,
-    e: '$9,000', period: '
+    e: '$9,000, period: 
         enterprise: { pric,
-    e: '$20,000', period: '
+    e: '$20,000, period: 
       },
       icon: Cpu,
       color: 'from-indigo-500 to-purple-600',
       popular: false
     }
+
   ];
+
 ;
-const stats = [
+
+const stats = [;;
+
     { icon: Users, value: '500+', label: 'AI Models Deployed', color: 'text-cyan-400' },
     { icon: TrendingUp, value: '300%', label: 'Average ROI', color: 'text-green-400' },
     { icon: Clock, value: '24
     { ico,
     n: Award, value: '99.9%', label: 'Uptime Guarantee', color: 'text-purple-400' }
+
   ];
 
   return (
+
     <React.Fragment>
       <Helmet>
         <title>AI Services - Zion Tech Group | Advanced AI Solutions & Pricing</title>
@@ -280,6 +294,7 @@ const stats = [
                   <div className="text-gray-300">{stat.label}<
                 <)
               ))}
+
             <
           <
         <
@@ -299,16 +314,19 @@ const stats = [
             <div className="grid grid-cols-1 l,
     g:grid-cols-2 gap-8">
               {aiServices.map((service), index) => (
+
                 <div key={service.id} className={`quantum-card p-8 ${service.popular ? 'energy-pulse' : ''}`}>
                   <div className="flex items-start justify-between mb-6">
                     <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-lg flex items-center justify-center mb-4`}>
                       <service.icon className="w-8 h-8 text-white" 
                     <
                     {service.popular && (
+
                       <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-sm font-bold">
                         Most Popular
                       <
                     )}
+
                   <
 
                   <h3 className="text-2xl font-bold text-white mb-4">{service.title}<
@@ -331,6 +349,7 @@ const stats = [
                           <
                         <)
                       ))}
+
                     <
                   <
 
@@ -351,6 +370,7 @@ const stats = [
                   <
                 <
               ))}
+
             <
           <
         <

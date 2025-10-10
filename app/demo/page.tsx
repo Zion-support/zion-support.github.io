@@ -1,15 +1,18 @@
 'use client';
+
 import React from 'react';
+
 import { Helmet } from 'react-helmet-async';
+
 import { Play, ArrowRight, CheckCircle, Star, Zap, Shield, BarChart, Users } from 'lucide-react';
+
 import Navigation from '../components
 import Footer from '../components
 ;
 const DemoPage: React.FC = () => {const demos = [
 
 const DemoPage: React.FC = () => {
-  const demos = [
-    {
+  const demos = [    {
       title: 'AI Analytics Dashboard',
       description: 'See how our AI analytics can transform your business intelligence',
       duration: '5 min',
@@ -23,22 +26,21 @@ const DemoPage: React.FC = () => {
         'Natural language understanding',
         'Multi-language support',
         '24
-        'Seamless handoff to humans'
+        Seamless handoff to humans
       ],
       icon: Users,
       duration: '3 min demo',
       category: 'AI Solutions'
-    },
-    {
+    },    {
       title: 'AI Content Generation',
       description: 'Watch our AI create high-quality content in seconds',
       duration: '4 min',
       features: ['Blog posts', 'Social media content', 'Product descriptions']
     }
+
   ];
 
-  const testimonials = [
-    {
+  const testimonials = [    {
       name: 'Sarah Johnson',
       company: 'TechCorp Inc.',
       role: 'CTO',
@@ -59,9 +61,10 @@ const DemoPage: React.FC = () => {
       quote: 'The cloud migration demo convinced us to move forward. The automation saved us months of work.',
       rating: 5
     }
+
   ];
 
-  const selectedDemoData = demos.find(demo => demo.id === selectedDemo);
+  const selectedDemoData = demos.find(demo => demo.id === selectedDemo);;
 
   return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       
@@ -75,7 +78,8 @@ const DemoPage: React.FC = () => {
       {/* Hero Section *
       <section className="relative py-20 px-4 overflow-hidden">)
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" 
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} 
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }}
+
         <div className="relative max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight">
             See It in
@@ -109,11 +113,13 @@ const DemoPage: React.FC = () => {
             {demos.map((demo) => (<button
                 key = { demo.id };)
                 onClick = { () => setSelectedDemo(demo.id) };
+
                 className={`p-6 rounded-xl border transition-all duration-300 text-left ${
                   selectedDemo === demo.id
                     ? 'border-purple-500 bg-purple-500
                     : 'border-white/10 bg-white/5 hover:bg-white
                 }`}
+
               >
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg mb-4 flex items-center justify-center">
                   <demo.icon className="w-6 h-6 text-white" 
@@ -126,6 +132,7 @@ const DemoPage: React.FC = () => {
                 <
               <
             ))}
+
           <
         <
       <
@@ -156,6 +163,7 @@ const DemoPage: React.FC = () => {
                           <span className="text-gray-300">{feature}<
                         <)
                       ))}
+
                     <
                   <
                   
@@ -190,6 +198,7 @@ const DemoPage: React.FC = () => {
             {testimonials.map((testimonial), index) => (<div key={index} className="bg-white/5 backdrop-blur-sm border border-white
                 <div className="flex items-center mb-4">)
                   {[...Array(testimonial.rating)].map((_, i) => (
+
                   "{testimonial.quote}"
                 <
                 <div>
@@ -198,6 +207,7 @@ const DemoPage: React.FC = () => {
                 <
               <
             ))}
+
           <
         <
       <
@@ -227,7 +237,6 @@ const DemoPage: React.FC = () => {
       <Footer 
     <
     </React.Fragment>)
-  );
-};
+  );};
 
 export default DemoPage;

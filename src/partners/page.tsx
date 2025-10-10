@@ -1,5 +1,7 @@
 import {Building, Handshake, Award, Users, Globe, Star, CheckCircle, Phone, Mail} from 'lucide-react';
+
 'use client';
+
 import React from 'react';
 
 import { Link } from 'react-router-dom';
@@ -9,8 +11,7 @@ import Footer from '../components/Footer';
 ;
 const PartnersPage: React.FC = () => {;
 const partnerTypes = [
-    {
-      titl,
+    {      titl,
     e: 'Technology Partners',
       description: 'Leading technology companies that provide the foundation for our solutions',
       icon: Building,
@@ -25,6 +26,7 @@ const partnerTypes = [
     e: 'IBM', description: 'Watson AI & Enterprise Solutions', logo: '🤖' },
         { name: 'NVIDIA', description: 'GPU Computing & AI Hardware', logo: '🎮' },
         { name: 'Intel', description: 'AI Processors & Edge Computing', logo: '💻' }
+
       ]
     },
       title: 'Solution Partners',
@@ -39,6 +41,7 @@ const partnerTypes = [
         { name: 'Tableau', description: 'Business Intelligence & Visualization', logo: '📈' },
         { name: 'Workday', description: 'HR & Financial Management', logo: '👥' },
         { name: 'Zendesk', description: 'Customer Support & Engagement', logo: '🎧' }
+
       title: 'Integration Partners',
       description: 'Partners that help us integrate with existing enterprise systems',
       icon: Award,
@@ -51,10 +54,15 @@ const partnerTypes = [
         { name: 'Red Hat', description: 'Open Source Solutions & Support', logo: '🎩' },
         { name: 'Oracle', description: 'Database & Enterprise Applications', logo: '🗄️' },
         { name: 'SAP', description: 'Enterprise Resource Planning', logo: '📋' }
+
     }
+
   ];
+
 ;
-const benefits = [
+
+const benefits = [;;
+
       icon: Globe,
       title: 'Global Reach',
       description:       ,
@@ -69,14 +77,13 @@ icon$5: CheckCircle,
       description: 'Rigorous partner certification and quality standards';
 const partnershipTiers = [
       name: 'Strategic Partners',
-      level: 'Platinum',
-      description: 'Long-term strategic relationships with joint go-to-market initiatives',
+      level: 'Platinum',      description: 'Long-term strategic relationships with joint go-to-market initiatives',
       benefits: [
         'Joint marketing and sales initiatives',
         'Co-development of solutions',
         'Priority support and resources',
         'Executive relationship management',
-        'Custom pricing and terms'
+        Custom pricing and terms
       ],
       color: 'text-yellow-400',
       bgColor:       ,
@@ -87,7 +94,7 @@ namename: 'Solution Partners',
         'Joint solution development',
         'Marketing support and co-marketing',
         'Training and certification',
-        'Preferred pricing'
+        Preferred pricing
       color: 'text-gray-400',
       bgColor:       ,
 namename: 'Channel Partners',
@@ -97,16 +104,15 @@ namename: 'Channel Partners',
         'Sales training and support',
         'Marketing materials and tools',
         'Lead sharing and referrals',
-        'Competitive margins'
+        Competitive margins
       color: 'text-orange-400',
       bgColor: 'bg-orange-500/10';
-const partnerTypes = [];
-  return (
+const partnerTypes = [];  return (
+
     {// TODO: Add content}
 
 };
-  titl,
-  e: 'Technology Partners',
+  titl,  e: 'Technology Partners',
       descriptio,
   n: 'Leading technology companies that provide the foundation for our solutions',
       ico,
@@ -119,6 +125,7 @@ const partnerTypes = [];
   s: [
   /
   O: Add items];
+
         {/* TODO: Fix JSX expression *
   ,
     o: '' },
@@ -137,6 +144,7 @@ const partnerTypes = [];
         {/* TODO: Fix JSX expression *
   ,
     o: '' }
+
 /
     },
       titl,
@@ -166,7 +174,8 @@ const partnerTypes = [];
     o: '👥' },
         {/* TODO: Fix JSX expression *
   ,
-    o: '🎧' };
+    o: '🎧 };
+
   titl,
   e: 'Integration Partners',
       descriptio,
@@ -195,26 +204,30 @@ const partnerTypes = [];
         {/* TODO: Fix JSX expression *
   ,
     o: '📋' }
+
     }
+
   ];
-  const benefits = [
+
+  const benefits = [;;
 
 icon: Globe,
       title: 'Global Reach',
       description: 'Access to worldwide markets and customers through our partner network',;
 const PagePage: React.FC = () => {
 return (
-
+const PagePage: React.FC = () => {
   return (
+
     <React.Fragment>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16 pt-24">
 );
+
 }
           {/* Header */}
-          <div className="text-center mb-16">
-            <h1 className="text-4xl m,
+          <div className="text-center mb-16">            <h1 className="text-4xl m,
     d:text-5xl font-bold text-white mb-6 neon-text">
               Our Partners
             <
@@ -229,7 +242,8 @@ return (
             {partnerTypes.map((type, index) => (<div key={index} className="mb-12">
                 <div className="flex items-center mb-8">
                   <div className={`w-12 h-12 ${type.bgColor} rounded-lg flex items-center justify-center mr-4`}>
-                    <type.icon className={`w-6 h-6 ${type.color}`} 
+                    <type.icon className={`w-6 h-6 ${type.color}`}
+
                   <div>
                     <h2 className="text-2xl font-bold text-white neon-text">{type.title}<
                     <p className="text-gray-300">{type.description}<
@@ -328,6 +342,7 @@ return (
                       <h3 className="text-lg font-semibold text-white mb-2">{partner.name}<
                       <p className="text-gray-300 text-sm">{partner.description}<
                   ))}
+
           {/* Partnership Benefits *
             <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text"><
 /
@@ -381,14 +396,15 @@ return (
                 href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
 <Phone className="w-4 h-4 mr-2" 
                 (302) 464-0950;
+
                 href="mailto:kleber@ziontechgroup.com" className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hove,
     r:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Mail className="w-4 h-4 mr-2" 
                 Email Us;
+
       <Footer 
 
     </div>
   )};
 
 export default PartnersPage;
-

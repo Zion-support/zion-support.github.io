@@ -1,28 +1,38 @@
 'use client';
 
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
+
+import { AlertTriangle, RefreshCw, Home } from 'lucide-react;
 
 interface Props {
   children: ReactNode;
+
   fallback?: ReactNode;
+
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
+
 }
 
 interface State {
   hasError: boolean;
+
   error: Error | null;
+
   errorInfo: ErrorInfo | null;
+
 }
 
 class ErrorBoundary extends Component<Props, State> {;
+
 constructor(props: Props) {
     super(props);
+
     this.state = {
       hasError: false,
       error: null,
       errorInfo: null
     };
+
   }
 
   static getDerivedStateFromError(error: Error): State {
@@ -30,7 +40,8 @@ constructor(props: Props) {
       hasError: true,
       error,
       errorInfo: null
-    };
+    }';
+
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
@@ -38,7 +49,6 @@ constructor(props: Props) {
       error,
       errorInfo
     })
-
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
       // console.error removed for production
@@ -47,18 +57,23 @@ constructor(props: Props) {
     // Log error to external service in production
     if (process.env.NODE_ENV === 'production') {
       this.logErrorToService(error, errorInfo);
+
     }
 
     // Call custom error handler if provided
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
+
     }
+
   }
 
   logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
     // In a real application, you would send this to an error reporting service
     // like Sentry, LogRocket, or Bugsnag;
-const errorData = {
+
+const errorData = {;;
+
       message: error.message,
       stack: error.stack,
       componentStack: errorInfo.componentStack,
@@ -68,12 +83,12 @@ const errorData = {
     };
 
     // Example: Send to analytics
-    if ($1) { const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag;
+    if ($1) { const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag;;
+
       gtag('event', 'exception', {
         description: error.message,
         fatal: false
-      })
-    }
+      })    }
 
     // console.error removed for production
 };
@@ -83,11 +98,11 @@ const errorData = {
       hasError: false,
       error: null,
       errorInfo: null
-    })
-  };
-  
+    })  };
+
   handleGoHome = () => {
-    window.location.href = '/';
+    window.location.href = '/;
+
   };
 
   render() {
@@ -95,10 +110,12 @@ const errorData = {
       // Custom fallback UI
       if (this.props.fallback) {
         return this.props.fallback;
+
       }
 
       // Default error UI
       return (
+
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-4">
           <div className="max-w-md w-full bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-center">
             <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -121,29 +138,38 @@ const errorData = {
                 <div className="bg-red-900/20 p-4 rounded-lg text-sm text-red-300 font-mono overflow-auto">
                   <div className="mb-2">
                     <strong>Error:</strong> {this.state.error.message}
+
                   </div>
                   {this.state.error.stack && (
+
                     <div className="mb-2">
                       <strong>Stack:</strong>
                       <pre className="whitespace-pre-wrap mt-1">
                         {this.state.error.stack}
+
                       </pre>
                     </div>
                   )}
+
                   {this.state.errorInfo && (
+
                     <div>
                       <strong>Component Stack:</strong>
                       <pre className="whitespace-pre-wrap mt-1">
                         {this.state.errorInfo.componentStack}
+
                       </pre>
                     </div>
                   )}
+
                 </div>
                 </details>
               )}
+
             <div className="flex flex-col sm:flex-row gap-4">
               <button
                 onClick={this.handleRetry}
+
                 className="flex items-center justify-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300"
               >
                 <RefreshCw className="w-4 h-4" />
@@ -152,6 +178,7 @@ const errorData = {
               
               <button
                 onClick={this.handleGoHome}
+
                 className="flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 border border-white/20"
               >
                 <Home className="w-4 h-4" />
@@ -173,9 +200,13 @@ const errorData = {
           </div>
         </div>
       );
+
     }
+
     return this.props.children;
+
   }
+
 }
 
 export default ErrorBoundary;

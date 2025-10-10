@@ -1,26 +1,44 @@
 
-'use client'
+use client
 /**
  * Comprehensive Monitoring Utility;
+
  * Real-time application monitoring, performance tracking, and error reporting;
+
  * Comprehensive Monitoring Utility;
+
  * Real-time application monitoring, performance tracking, and error reporting;
+
  */
 export interface PerformanceMetrics {/* TODO: Fix JSX expression */}
+
   O: Add content}
+
 }
+
   lcp?: number;
+
   fid?: number;
+
   cls?: number;
+
   fcp?: number;
+
   ttfb?: number;
+
   inp?: number}
+
 export interface ErrorReport {/* TODO: Fix JSX expression */}
+
   O: Add content}
+
 };
+
   messag,
   e: string;
+
   stack?: string;
+
   component?: string;,
     timestam,
   p: number;,
@@ -28,18 +46,24 @@ export interface ErrorReport {/* TODO: Fix JSX expression */}
   t: string;,
     ur,
   l: string;
+
 class MonitoringService {/* TODO: Fix JSX expression */}
+
   O: Add content}
+
 }
 
 class MonitoringService {
   private metrics: PerformanceMetrics = {}
+
   private errors: ErrorReport[] = []
   private observer: PerformanceObserver | null = null;
+
 constructor() {
     if (typeof window !== 'undefined') {
       this.initializeMonitoring()
     }
+
   }
 
   private initializeMonitoring(): void {
@@ -52,76 +76,114 @@ constructor() {
   private monitorWebVitals(): void {
     if ('PerformanceObserver' in window) {
       try {;
-const lcpObserver = new PerformanceObserver((list) => {;
-const entries = list.getEntries();
-const lastEntry = entries[entries.length - 1] as PerformanceEntry & { renderTime?: number; loadTime?: number }
+
+const lcpObserver = new PerformanceObserver((list) => {;;
+
+const entries = list.getEntries();;
+
+const lastEntry = entries[entries.length - 1] as PerformanceEntry & { renderTime?: number; loadTime?: number };;
+
           this.metrics.lcp = lastEntry.renderTime || lastEntry.loadTime || 0
           this.reportMetric('lcp', this.metrics.lcp)
         })
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] })
 
         // First Input Delay;
-const fidObserver = new PerformanceObserver((list) => {;
-const entries = list.getEntries();
+
+const fidObserver = new PerformanceObserver((list) => {;;
+
+const entries = list.getEntries();;
+
           entries.forEach((entry: PerformanceEntry) => {
             this.metrics.fid = (entry as any).processingStart - entry.startTime;
-            this.reportMetric('fid', this.metrics.fid)})});
-        fidObserver.observe({ entryTypes: ['first-input'] });
+
+            this.reportMetric('fid, this.metrics.fid)})});
+
+        fidObserver.observe({ entryTypes: ['first-input] });
+
 ;
-let clsValue = 0;
-        const clsObserver = new PerformanceObserver(list => {;
-const entries = list.getEntries();
+
+let clsValue = 0;;
+
+        const clsObserver = new PerformanceObserver(list => {;;
+
+const entries = list.getEntries();;
+
           entries.forEach((entry: PerformanceEntry) => {
             if (!(entry as any).hadRecentInput) {
               clsValue += (entry as any).value || 0;
+
               this.metrics.cls = clsValue;
+
               this.reportMetric('cls', clsValue)}
+
           })
         })
         clsObserver.observe({ entryTypes: ['layout-shift'] })
 
         // First Contentful Paint;
-const fcpObserver = new PerformanceObserver(list => {;
-const entries = list.getEntries();
+
+const fcpObserver = new PerformanceObserver(list => {;;
+
+const entries = list.getEntries();;
+
           entries.forEach(entry => {
             this.metrics.fcp = entry.startTime;
-            this.reportMetric('fcp', entry.startTime)})});
+
+            this.reportMetric('fcp, entry.startTime)})});
+
         fcpObserver.observe({ entryTypes: ['paint'] })} catch (error) {
         // // console.error removed for production
 }
+
     }
+
   }
 
   private monitorLongTasks(): void {
     if ('PerformanceObserver' in window && performanceConfig.monitoring.enableLongTaskDetection) {
       try {;
-const longTaskObserver = new PerformanceObserver((list) => {
+
+const longTaskObserver = new PerformanceObserver((list) => {;;
+
           for (const entry of list.getEntries()) {
             // // console.warn removed for production
 }
+
         })
         longTaskObserver.observe({ entryTypes: ['longtask'] })
       } catch (error) {
         // Long task API might not be available
       }
+
     }
+
   }
 
   private monitorResourceTiming(): void {
     if ('PerformanceObserver' in window) {
       try {;
-const resourceObserver = new PerformanceObserver((list) => {;
-const entries = list.getEntries();
+
+const resourceObserver = new PerformanceObserver((list) => {;;
+
+const entries = list.getEntries();;
+
           entries.forEach((entry: PerformanceEntry) => {;
-const resourceEntry = entry as PerformanceResourceTiming;
+
+const resourceEntry = entry as PerformanceResourceTiming;;
+
             if (resourceEntry.duration && resourceEntry.duration > 1000) {
               // // console.warn removed for production
 }
+
           })});
+
         resourceObserver.observe({ entryTypes: ['resource'] })} catch (_error) {
         // // console.error removed for production
 }
+
     }
+
   }
 
   private setupErrorHandling(): void {
@@ -150,17 +212,23 @@ const resourceEntry = entry as PerformanceResourceTiming;
     if (Math.random() > performanceConfig.monitoring.sampleRate) {
       return
     }
-    const thresholds = performanceConfig.webVitals[name as keyof typeof performanceConfig.webVitals]
+
+    const thresholds = performanceConfig.webVitals[name as keyof typeof performanceConfig.webVitals];;
+
     if (thresholds) {;
-const rating = value <= thresholds.good ? 'good' : value <= thresholds.needsImprovement ? 'needs-improvement' : 'poor'
+
+const rating = value <= thresholds.good ? 'good' : value <= thresholds.needsImprovement ? 'needs-improvement' : 'poor;;
+
     }
+
     // Send to analytics (if configured)
     if (typeof (window as any).gtag === 'function') {
       (window as any).gtag('event', name, {
         value: Math.round(name === 'cls' ? value * 1000 : value),
-        event_category: 'Web Vitals'
+        event_category: Web Vitals
       })
     }
+
   }
 
   public logError(error: ErrorReport): void {
@@ -168,10 +236,12 @@ const rating = value <= thresholds.good ? 'good' : value <= thresholds.needsImpr
     if (this.errors.length > 50) {
       this.errors = this.errors.slice(-50)
     }
+
   }
 
   public getMetrics(): PerformanceMetrics {
     return { ...this.metrics }
+
   }
 
   public getErrors(): ErrorReport[] {
@@ -183,8 +253,10 @@ const rating = value <= thresholds.good ? 'good' : value <= thresholds.needsImpr
   }
 
   public measureMemory(): void {
-    if ('memory' in performance && performanceConfig.monitoring.enableMemoryMonitoring) {;
-const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory
+    if ('memory in performance && performanceConfig.monitoring.enableMemoryMonitoring) {;
+
+const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;;
+
       if (memory) {
         // // console.log removed for production
 }MB`,
@@ -192,12 +264,16 @@ const memory = (performance as Performance & { memory?: { usedJSHeapSize: number
         //   limit: `${Math.round(memory.jsHeapSizeLimit / 1048576)}MB`
         // })
       }
+
     }
+
   }
 
   public measureNavigationTiming(): void {
-    if ('performance' in window && 'getEntriesByType' in performance) {;
-const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
+    if ('performance' in window && 'getEntriesByType in performance) {;
+
+const navigation = performance.getEntriesByType('navigation)[0] as PerformanceNavigationTiming;;
+
       if (navigation) {
         // // console.log removed for production
 }ms`,
@@ -209,11 +285,17 @@ const navigation = performance.getEntriesByType('navigation')[0] as PerformanceN
         //   'Load Complete': `${Math.round(navigation.loadEventEnd - navigation.fetchStart)}ms`
         // })
       }
+
     }
+
   }
+
 }
+
 ;
-const monitoring = new MonitoringService()
+
+const monitoring = new MonitoringService();;
+
 export default monitoring;`
 
 

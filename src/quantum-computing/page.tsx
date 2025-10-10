@@ -5,21 +5,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 ;
 const QuantumComputingPage: React.FC = () => {
-return (
-
-  return (
-    <React.Fragment>
-      <Helmet>
-        <title>Quantum Computing Solutions - Zion Tech Group</title>
-        <meta name="description" content="Next-generation quantum computing capabilities for complex problem solving and optimization. Harness the power of quantum mechanics for your business." />
-        <meta name="keywords" content="quantum computing, quantum algorithms, quantum optimization, quantum machine learning" />
-      </Helmet>
-      
-      <Navigation />
-      
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-16">
+return (          <div className="text-center mb-16">
             <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 neon-text">
               Quantum Computing
             <
@@ -98,6 +84,10 @@ return (
     </React.Fragment>
 );
 }
+  )};
+
+}
+
   )};
 
 export default QuantumComputingPage;

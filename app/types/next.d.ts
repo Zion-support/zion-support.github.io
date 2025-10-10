@@ -1,33 +1,39 @@
 'use client';
+
 import React from 'react';
+
 import { Helmet } from 'react-helmet-async';
+
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
 const Next.dPage: React.FC = () => {
-  const features = [
+  const features = [;';
+
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'});;)
+      description: 'Advanced AI technology to transform your business operations and improve efficiency'});)
 },
     {
       icon: Zap,
       title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'});;)
+      description: 'Lightning-fast processing and real-time analytics for optimal results'});)
 },
     {
       icon: Shield,
       title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'});;)
+      description: 'Bank-level security with encryption and compliance standards'});)
 },
     {
       icon: Globe,
       title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'});;)
+      description: 'Worldwide deployment and support for international businesses'});)
 }
+
   ];
 
-  const benefits = [
+  const benefits = [;;
+
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -35,97 +41,154 @@ const Next.dPage: React.FC = () => {
     '24/7 technical support',
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
-    'Proven track record of success'
+    Proven track record of success
   ];
 
   return (
+
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <title>Next.d | Zion Tech Group</title>
         <meta name="description" content="Professional Next.d services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="next.d, AI solutions, IT services, Zion Tech Group, next.d" />
       </Helmet>
-// Type definitions for Next.js compatibility in Vite
-export interface Metadata {
+// Type definitions for Next.js compatibility in Viteexport interface Metadata {
   title?: string;
+
   description?: string;
+
   keywords?: string[];
+
   authors?: Array<{ name: string; url?: string }> | string[];
+
   creator?: string;
+
   publisher?: string;
+
   formatDetection?: {
     email?: boolean;
+
     address?: boolean;
+
     telephone?: boolean;
+
   };
+
   metadataBase?: URL;
+
   alternates?: {
     canonical?: string;
+
     languages?: Record<string, string>;
+
   };
+
   openGraph?: {
     title?: string;
+
     description?: string;
+
     url?: string;
+
     siteName?: string;
+
     images?: Array<{
       url: string,
       width?: number;
+
       height?: number;
+
       alt?: string;
+
     }>;
+
     locale?: string;
+
     type?: string;
+
     authors?: Array<{ name: string; url?: string }> | string[];
+
     publishedTime?: string;
+
   };
+
   twitter?: {
-    card?: 'summary' | 'summary_large_image' | 'app' | 'player';
+    card?: 'summary' | 'summary_large_image' | 'app' | 'player;
+
     site?: string;
+
     creator?: string;
+
     title?: string;
+
     description?: string;
+
     images?: string[];
+
   };
+
   robots?: {
     index?: boolean;
+
     follow?: boolean;
+
     googleBot?: {
       index?: boolean;
+
       follow?: boolean;
-      'max-video-preview'?: number;
-      'max-image-preview'?: 'none' | 'standard' | 'large';
-      'max-snippet'?: number;
+
+      'max-video-preview?: number;
+
+      'max-image-preview'?: 'none' | 'standard' | 'large;
+
+      'max-snippet?: number;
+
     };
+
   };
+
   verification?: {
     google?: string;
+
     yandex?: string;
+
     yahoo?: string;
+
     other?: Record<string, string>;
+
   };
+
 }
 
 export interface MetadataRoute {
   url: string,
   lastModified?: string | Date;
-  changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
+
+  changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never;
+
   priority?: number;
+
 }
 
 export interface MetadataRouteSitemap extends MetadataRoute {
   url: string,
   lastModified?: string | Date;
-  changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
+
+  changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never;
+
   priority?: number;
+
 }
 
 // Custom Next.js types
 export interface NextPageProps {
   params: { [key: string]: string };
+
   searchParams: { [key: string]: string | string[] | undefined };
+
 }
 
       {/* Hero Section */}
+
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
@@ -154,6 +217,7 @@ export interface NextPageProps {
       </section>
 
       {/* Features Section */}
+
       <section></section>
         <div></div>
           <div></div>
@@ -167,10 +231,12 @@ export interface NextPageProps {
 // API route types
 export interface ApiRouteHandler {
   (req: Request): Promise<Response>;
+
 }
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
+
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
                 <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
                   <feature.icon className="h-6 w-6 text-white" />
@@ -179,11 +245,13 @@ export interface ApiRouteHandler {
                 <p className="text-gray-300">{feature.description}</p>
               </div>
             ))}
+
           </div>
         </div>
       </section>
 
       {/* Benefits Section */}
+
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -197,17 +265,18 @@ export interface ApiRouteHandler {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div></div>
-            {benefits.map((benefit, index) => (
-              <div></div>
+            {benefits.map((benefit, index) => (              <div></div>
                 <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                 <p className="text-gray-300 text-lg">{benefit}</p>
               </div>
             ));
+
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
+
       <section></section>
         <div></div>
           <div></div>
@@ -236,53 +305,71 @@ export interface ApiRouteHandler {
 };
 
 export default Next.dPage;
+
 // Server components types
 export interface ServerComponentProps {
   params: { [key: string]: string };
+
   searchParams: { [key: string]: string | string[] | undefined };
+
 }
 
 // Client components types
 export interface ClientComponentProps {
   children?: React.ReactNode;
+
   className?: string;
+
 }
 
 // Route handlers
 export interface RouteHandler {
   GET?: (req: Request) => Promise<Response>;
+
   POST?: (req: Request) => Promise<Response>;
+
   PUT?: (req: Request) => Promise<Response>;
+
   DELETE?: (req: Request) => Promise<Response>;
+
   PATCH?: (req: Request) => Promise<Response>;
+
 }
 
 // Dynamic route types
 export interface DynamicRoute {
   params: { [key: string]: string };
+
 }
 
 // Static generation types
 export interface StaticProps {
   props: { [key: string]: any };
+
   revalidate?: number;
+
   notFound?: boolean;
+
 }
 
 // ISR types
 export interface ISRConfig {
   revalidate: number;
+
   tags?: string[];
+
 }
 
 // Edge runtime types
 export interface EdgeRuntime {
-  runtime: 'edge';
+  runtime: 'edge;
+
 }
 
 // Node.js runtime types
 export interface NodeRuntime {
-  runtime: 'nodejs';
+  runtime: 'nodejs;
+
 }
 
 // Extend Next.js types
@@ -290,10 +377,15 @@ declare module 'next' {
   interface NextApiRequest {
     user?: {
       id: string;
+
       email: string;
+
       name?: string;
+
     };
+
   }
+
 }
 
 export {};

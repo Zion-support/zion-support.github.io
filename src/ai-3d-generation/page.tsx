@@ -6,8 +6,7 @@ import SEOOptimizer from '../components/SEOOptimizer';
 ;
 const AI3DGenerationPage: React.FC = () => {;
 const features = [
-    '3D Model Generation',
-    'Animation Creation',
+    '3D Model Generation',    'Animation Creation',
     'Texture Mapping',
     'Rendering',
     'VR
@@ -15,23 +14,29 @@ const features = [
     'AI Texturing',
     'Lighting Setup',
     'Material Library',
-    'Scene Composition'
+    Scene Composition
   ];
+
 ;
-const benefits = [
+
+const benefits = [;;
+
     'Professional 3D content',
     'Time savings',
     'No 3D skills needed',
     'High quality output',
     'Cost-effective',
-    'Scalable production'
+    Scalable production
   ];
+
 ;
-const pricingPlans = [
+
+const pricingPlans = [;;
+
     {
       name: 'Starter',
       price: '$299',
-      period: '
+      period: 
       features: ['5 models
       popula,
     r: false
@@ -39,7 +44,7 @@ const pricingPlans = [
     {
       name: 'Professional',
       price: '$499',
-      period: '
+      period: 
       feature,
     s: ['Unlimited models', 'Premium textures', '4K rendering', 'API access', 'Priority support'],
       popular: true
@@ -47,19 +52,22 @@ const pricingPlans = [
     {
       name: 'Enterprise',
       price: '$999',
-      period: '
+      period: 
       feature,
     s: ['Everything in Pro', 'Custom models', 'White-label', 'Dedicated support', 'Commercial license'],
       popular: false
     }
+
   ];
 
   return (
+
     <React.Fragment>
       <SEOOptimizer
         title="AI 3D Generation Studio - Create 3D Models & Animations with AI | Zion Tech Group"
         description="Create professional 3D models, animations, and virtual environments with AI 3D Generation Studio. No 3D skills needed, starting at $299/month."
         keywords={['AI 3D generation', '3D models', '3D animation', 'VR AR content', '3D automation', 'AI 3D']}
+
         canonicalUrl="https://ziontechgroup.com/ai-3d-generation"
       />
       
@@ -68,8 +76,7 @@ const pricingPlans = [
         
         <main className="container mx-auto px-4 py-16 pt-24">
           {/* Hero Section */}
-          <section className="text-center mb-16">
-            <div className="max-w-4xl mx-auto">
+          <section className="text-center mb-16">            <div className="max-w-4xl mx-auto">
               <div className="flex items-center justify-center mb-6">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mr-4">
                   
@@ -103,6 +110,7 @@ const pricingPlans = [
                   <
                 <)
               ))}
+
             <
           <
 
@@ -120,6 +128,7 @@ const pricingPlans = [
                   <h3 className="text-lg font-semibold text-white mb-2">{benefit}<
                 <)
               ))}
+
             <
           <
 
@@ -130,14 +139,17 @@ const pricingPlans = [
             <
             <div className="grid grid-cols-1 md: grid-cols-3 gap-8 max-w-6xl mx-auto">
               {pricingPlans.map((plan), index) => (
+
                 <div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>
                   {plan.popular && (
+
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1
                       <div className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-semibold">
                         Most Popular
                       <
                     <
                   )}
+
                   <div className="text-center mb-6">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}<
                     <div className="flex items-baseline justify-center">
@@ -152,6 +164,7 @@ const pricingPlans = [
                   <
                 <
               ))}
+
             <
           <
 

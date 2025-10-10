@@ -6,23 +6,23 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 ;
 const ContactPage: React.FC = () => {const [formData, setFormData] = useState({
-    name: '',
-    email: '',
+    name: '',    email: '',
     company: '',
     phone: '',
     service: '',
     message: '';)
-})
-const [isSubmitting, setIsSubmitting] = useState(false);
-const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement></HTMLInputElement>) => {
+})const [isSubmitting, setIsSubmitting] = useState(false);
+
+const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle);
+
+const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement></HTMLInputElement>) => {;;
+
     setFormData(prev => ({
       ...prev,
       [e.target.name]: e.target.value;)
 })))
 }, []);
-const handleSubmit = useCallback(async (e: React.FormEvent) => {
-    setFormData(prev => ({
+const handleSubmit = useCallback(async (e: React.FormEvent) => {    setFormData(prev => ({
       ...prev,
       [e.target.name]: e.target.value]
     });)]
@@ -30,13 +30,14 @@ const handleSubmit = useCallback(async (e: React.FormEvent) => {
 
   const handleSubmit = useCallback(async (e: React.FormEvent) => {
   const handleSubmit = useCallback (async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
+    e.preventDefault();    setIsSubmitting(true);
+
     try {
       /
       await new Promise(resolve => setTimeout(resolve, 1000));
-      setSubmitStatus('success');
+
+      setSubmitStatus('success);
+
       setFormData({
         name: '',
         email: '',
@@ -81,8 +82,8 @@ message: '']
           <
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
   }, []);
-
   return (
+
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Helmet></Helmet>
         <title>Contact Us - Zion Tech Group | Get in Touch</title>
@@ -93,6 +94,7 @@ message: '']
       <Navigation />
       
       {/* Hero Section */}
+
       <section className="relative py-20 px-4 overflow-hidden"></section>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
@@ -141,6 +143,7 @@ message: '']
                       id="name"
                       name="name"
                       value = { formData.name };
+
                       onChange = { handleChange };
 
                       className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus: ring-2 focus:ring-cyan-500 focu,
@@ -149,13 +152,13 @@ message: '']
                   <
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
-                      Email Address *
-                    <
+                      Email Address *                    <
                     <input
                       type="email"
                       id="email"
                       name="email"
                       value = { formData.email };
+
                       onChange = { handleChange };
 
                       className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus: ring-2 focus:ring-cyan-500 focus:border-transparent"
@@ -167,28 +170,30 @@ message: '']
     d:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
-                      Company Name
-                    <
+                      Company Name                    <
                     <input
                       type="text"
                       id="company"
                       name="company"
                       value = { formData.company };
+
                       onChange = { handleChange };
+
                       className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus: ring-2 focus:ring-cyan-500 focu,
     s:border-transparent"
                     
                   <
                   <div>
                     <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
-                      Phone Number
-                    <
+                      Phone Number                    <
                     <input
                       type="tel"
                       id="phone"
                       name="phone"
                       value = { formData.phone };
+
                       onChange = { handleChange };
+
                       className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus: ring-2 focus:ring-cyan-500 focu,
     s:border-transparent"
                     
@@ -203,7 +208,9 @@ message: '']
                     id="service"
                     name="service"
                     value = { formData.service };
+
                     onChange = { handleChange };
+
                     className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus: ring-2 focus:ring-cyan-500 focu,
     s:border-transparent"
                   >
@@ -215,40 +222,6 @@ message: '']
                     <option value="digital-transformation">Digital Transformation<
                   <
                 <
-
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2"></label>
-                    Message *
-                  <
-                  <textarea
-                    id="message"
-                    name="message"
-                    value = { formData.message };
-                    onChange = { handleChange };
-                    rows = { 5 };
-
-                    className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus: ring-2 focus:ring-cyan-500 focu,
-    s:border-transparent"
-                    placeholder="Tell us about your project..."
-                  
-                <
-
-                <button
-                  type="submit"
-                  disabled = { isSubmitting };
-                  className="w-full bg-gradient-to-r from-purple-500 to-blue-600 hover: from-purple-600 hover:to-blue-700 disabled:opacity-50 disable,
-    d:cursor-not-allowed text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 flex items-center justify-center"
-                >
-                  {isSubmitting ? (<>
-                      <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"><
-                      Sending...
-                    <)
-                  ) : (<>
-                      
-              <div>
-                <h2 className="text-3xl font-bold text-white mb-6">Get in touch<
-                <p className="text-gray-300 mb-8">
-                  We're here to help you succeed. Reach out to us through any of the channels below, 
                   and we'll get back to you within 24 hours.
                 <
               <
@@ -304,5 +277,4 @@ message: '']
     };
 };
 
-export default ContactPage;
-}
+export default ContactPage;}

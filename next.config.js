@@ -1,11 +1,17 @@
-import withBundleAnalyzer from '@next/bundle-analyzer';
-import crypto from 'crypto';
-;
-const bundleAnalyzer = withBundleAnalyzer({
-  enabled: process.env.ANALYZE === 'true'});
+import withBundleAnalyzer from '@next/bundle-analyzer;
 
-/** @type {import('next').NextConfig} */;
-const nextConfig = {
+import crypto from 'crypto;
+
+;
+
+const bundleAnalyzer = withBundleAnalyzer({;;
+
+  enabled: process.env.ANALYZE === 'true});
+
+/** @type {import('next).NextConfig} */;
+
+const nextConfig = {;;
+
   reactStrictMode: true,
   poweredByHeader: false,
   compress: true,
@@ -28,6 +34,7 @@ const nextConfig = {
     // Fix for "self is not defined" error by providing a polyfill
     if (isServer) {
       config.plugins.push(
+
         new webpack.DefinePlugin({
           'self': 'undefined'})
       )}
@@ -48,13 +55,17 @@ const nextConfig = {
             enforce: true},
           lib: {
             test(module) {
-              return (
+  return (
+
                 module.size() > 160000 &&
                 /node_modules[/\\]/.test(module.identifier())
               )},
             name(module) {;
-const _hash = crypto.createHash('sha1');
+
+const _hash = crypto.createHash('sha1);;
+
               _hash.update(module.identifier());
+
               return _hash.digest('hex').substring(0, 8)},
             priority: 30,
             minChunks: 1,
@@ -65,7 +76,8 @@ const _hash = crypto.createHash('sha1');
             priority: 20},
           shared: {
             name(module, chunks) {
-              return (
+  return (
+
                 'shared-' +
                 crypto
                   .createHash('sha1')
@@ -146,6 +158,6 @@ const _hash = crypto.createHash('sha1');
   // Compiler optimizations
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production' ? {
-      exclude: ['error', 'warn']} : false}};
+      exclude: ['error', 'warn]} : false}};
 
 export default bundleAnalyzer(nextConfig);

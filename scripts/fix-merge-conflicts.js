@@ -1,67 +1,96 @@
 #!/usr/bin/env node;
+
 import fs from 'fs';
+
 import path from 'path';
-import { fileURLToPath } from 'url';
+
+import { fileURLToPath } from 'url;
+
 ;
-const __filename = fileURLToPath(import.meta.url);
+
+const __filename = fileURLToPath(import.meta.url);';
+
 // __dirname removed
-// Find all TypeScript and JavaScript files;
-const findFiles = (dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) => {;
-let files = [];
-  const items = fs.readdirSync(dir);
-  
+// Find all TypeScript and JavaScript files';
+
+const findFiles = (dir, extensions = ['.ts', '.tsx', '.js', '.jsx]) => {;;
+
+let files = [];;
+
+  const items = fs.readdirSync(dir);;
+
   for (const item of items) {;
-const fullPath = path.join(dir, item);
-    const stat = fs.statSync(fullPath);
-    
+
+const fullPath = path.join(dir, item);;
+
+    const stat = fs.statSync(fullPath);;
+
     if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
       files = files.concat(findFiles(fullPath, extensions))} else if (extensions.some(ext => item.endsWith(ext))) {
       files.push(fullPath)}
+
   }
-  
+
   return files};
 
 // Fix merge conflicts;
-const fixMergeConflicts = (filePath) => {
+
+const fixMergeConflicts = (filePath) => {;;
+
   try {;
-let content = fs.readFileSync(filePath, 'utf8');
-    const originalContent = content;
-    
+
+let content = fs.readFileSync(filePath, 'utf8);;
+
+    const originalContent = content;;
+
     // Remove merge conflict markers and keep the HEAD version;
-    const mergeConflictRegex = /\n([\s\S]*?)\n([\s\S]*?)    content = content.replace(mergeConflictRegex, '$1');
-    
+
+    const mergeConflictRegex = /\n([\s\S]*?)\n([\s\S]*?)    content = content.replace(mergeConflictRegex, '$1);;
+
     // Remove any remaining merge conflict markers;
-    const conflictMarkers = /(||    content = content.replace(conflictMarkers, '');
-    
+
+    const conflictMarkers = /(||    content = content.replace(conflictMarkers, ');;
+
     // Clean up extra whitespace;
-    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
-    
+
+    content = content.replace(/\n\s*\n\s*\n/g, '\n\n);
+
     if (content !== originalContent) {
-      fs.writeFileSync(filePath, content, 'utf8');
+      fs.writeFileSync(filePath, content, 'utf8);
+
       // console.log removed for production
 return true}
-    
+
     return false} catch (error) {
     // console.error removed for production
 return false}
+
 };
 
 // Main execution;
-const srcDir = path.join(__dirname, '..', 'src');
-const appDir = path.join(__dirname, '..', 'app');
+
+const srcDir = path.join(__dirname, '..', 'src);;
+
+const appDir = path.join(__dirname, '..', 'app);;
 
 // console.log removed for production
 // Find all files;
-const srcFiles = findFiles(srcDir);
-const appFiles = findFiles(appDir);
-const allFiles = [...srcFiles, ...appFiles];
+
+const srcFiles = findFiles(srcDir);;
+
+const appFiles = findFiles(appDir);;
+
+const allFiles = [...srcFiles, ...appFiles];;
 
 // console.log removed for production
 ;
-let fixedCount = 0;
+
+let fixedCount = 0;;
+
 for (const file of allFiles) {
   if (fixMergeConflicts(file)) {
     fixedCount++}
+
 }
 
 // console.log removed for production

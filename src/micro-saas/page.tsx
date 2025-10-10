@@ -1,12 +1,19 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Brain, BarChart, MessageSquare, Eye, Phone, Lock, Database, Cloud, Code, Settings, BarChart3, ShoppingCart, Car, Target, Globe, Cpu, Smartphone, FileText, Bot, Music, Video, CreditCard, Train, Home, Heart, GraduationCap, Mail, Calendar, PieChart, Search, Filter, Download, Upload, Share, Edit, Trash2, Plus, Minus, Refresh, Play, Pause, Stop, Volume2, Camera, Image, File, Folder, Archive, Bookmark, Tag, Link as LinkIcon, ExternalLink, ArrowRight, ChevronRight, Award, Gift, Rocket, Lightbulb, Wrench, Hammer, Scissors, Paintbrush, Palette, Layers, Grid, List, Layout, Monitor, Laptop, Tablet, Smartphone as PhoneIcon, Headphones, Microphone, Speaker, Wifi, Bluetooth, Battery, Power, Zap as Lightning, Sun, Moon, CloudRain, Wind, Thermometer, Droplets, Snowflake, Cloud, CloudSnow, CloudLightning, CloudDrizzle, CloudFog, Eye as EyeIcon, EyeOff, Lock as LockIcon, Unlock, Key, Fingerprint, Shield as ShieldIcon, AlertTriangle, AlertCircle, Info, HelpCircle, X, Check, XCircle, CheckCircle2, PlusCircle, MinusCircle, XSquare, CheckSquare, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Heart as HeartIcon, ThumbsUp, ThumbsDown, Smile, Frown, Meh, Laugh, Angry, Surprised, Confused, Wink, Kiss, Tongue, Wink2, Kiss2, Tongue2, Wink3, Kiss3, Tongue3, Wink4, Kiss4, Tongue4, Wink5, Kiss5, Tongue5, Wink6, Kiss6, Tongue6, Wink7, Kiss7, Tongue7, Wink8, Kiss8, Tongue8, Wink9, Kiss9, Tongue9, Wink10, Kiss10, Tongue10 } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
 
-export default function MicroSaasPage() {;
-const microSaasServices = [
+import { Link } from 'react-router-dom';
+
+import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Brain, BarChart, MessageSquare, Eye, Phone, Lock, Database, Cloud, Code, Settings, BarChart3, ShoppingCart, Car, Target, Globe, Cpu, Smartphone, FileText, Bot, Music, Video, CreditCard, Train, Home, Heart, GraduationCap, Mail, Calendar, PieChart, Search, Filter, Download, Upload, Share, Edit, Trash2, Plus, Minus, Refresh, Play, Pause, Stop, Volume2, Camera, Image, File, Folder, Archive, Bookmark, Tag, Link as LinkIcon, ExternalLink, ArrowRight, ChevronRight, Award, Gift, Rocket, Lightbulb, Wrench, Hammer, Scissors, Paintbrush, Palette, Layers, Grid, List, Layout, Monitor, Laptop, Tablet, Smartphone as PhoneIcon, Headphones, Microphone, Speaker, Wifi, Bluetooth, Battery, Power, Zap as Lightning, Sun, Moon, CloudRain, Wind, Thermometer, Droplets, Snowflake, Cloud, CloudSnow, CloudLightning, CloudDrizzle, CloudFog, Eye as EyeIcon, EyeOff, Lock as LockIcon, Unlock, Key, Fingerprint, Shield as ShieldIcon, AlertTriangle, AlertCircle, Info, HelpCircle, X, Check, XCircle, CheckCircle2, PlusCircle, MinusCircle, XSquare, CheckSquare, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Heart as HeartIcon, ThumbsUp, ThumbsDown, Smile, Frown, Meh, Laugh, Angry, Surprised, Confused, Wink, Kiss, Tongue, Wink2, Kiss2, Tongue2, Wink3, Kiss3, Tongue3, Wink4, Kiss4, Tongue4, Wink5, Kiss5, Tongue5, Wink6, Kiss6, Tongue6, Wink7, Kiss7, Tongue7, Wink8, Kiss8, Tongue8, Wink9, Kiss9, Tongue9, Wink10, Kiss10, Tongue10 } from 'lucide-react';
+
+import Navigation from '../components/Navigation';
+
+import Footer from '../components/Footer';
+
+import SEOOptimizer from '../components/SEOOptimizer;
+
+export default function MicroSaasPage() {';
+
+const microSaasServices = [;';
+
     {
       icon: BarChart3,
       title: 'AI Analytics Dashboard',
@@ -238,9 +245,13 @@ const microSaasServices = [
       link: '/ai-time-tracker',
       benefits: ['Increase productivity by 25%', 'Better time management', 'Detailed insights']
     }
+
   ];
+
 ;
-const categories = [
+
+const categories = [;;
+
     { name: 'All', count: microSaasServices.length },
     { name: 'Analytics', count: microSaasServices.filter(s => s.category === 'Analytics').length },
     { name: 'E-commerce', count: microSaasServices.filter(s => s.category === 'E-commerce').length },
@@ -256,39 +267,49 @@ const categories = [
     { name: 'Inventory', count: microSaasServices.filter(s => s.category === 'Inventory').length },
     { name: 'Automation', count: microSaasServices.filter(s => s.category === 'Automation').length },
     { name: 'Content Creation', count: microSaasServices.filter(s => s.category === 'Content Creation').length }
+
   ];
+
 ;
-const benefits = [
+
+const benefits = [;;
+
     {
       icon: TrendingUp,
       title: 'Proven ROI',
-      description: 'Average 300% return on investment for our micro SAAS clients'
+      description: Average 300% return on investment for our micro SAAS clients
     },
     {
       icon: Users,
       title: 'Easy Setup',
-      description: 'Get started in minutes with our intuitive setup process'
+      description: Get started in minutes with our intuitive setup process
     },
     {
       icon: Clock,
       title: '24/7 Support',
-      description: 'Round-the-clock support with guaranteed response times'
+      description: Round-the-clock support with guaranteed response times
     },
     {
       icon: Shield,
       title: 'Secure & Reliable',
-      description: 'Enterprise-grade security with 99.9% uptime guarantee'
+      description: Enterprise-grade security with 99.9% uptime guarantee
     }
+
   ];
+
 ;
-const stats = [
+
+const stats = [;;
+
     { label: 'Active Users', value: '10,000+' },
     { label: 'Apps Available', value: '50+' },
     { label: 'Uptime Guarantee', value: '99.9%' },
     { label: 'Support Available', value: '24/7' }
+
   ];
 
   return (
+
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEOOptimizer 
         title="Micro SAAS Solutions - Zion Tech Group"
@@ -298,6 +319,7 @@ const stats = [
       <Navigation />
       
       {/* Hero Section */}
+
       <section className="pt-24 pb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
@@ -327,52 +349,65 @@ const stats = [
       </section>
 
       {/* Stats Section */}
+
       <section className="py-16 bg-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
+
               <div key={index} className="text-center">
                 <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">
                   {stat.value}
+
                 </div>
                 <div className="text-gray-300 text-sm md:text-base">
                   {stat.label}
+
                 </div>
               </div>
             ))}
+
           </div>
         </div>
       </section>
 
       {/* Category Filter */}
+
       <section className="py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center gap-2">
             {categories.map((category, index) => (
+
               <button
                 key={index}
+
                 className="bg-slate-800/50 hover:bg-cyan-500/20 text-gray-300 hover:text-white px-4 py-2 rounded-lg transition-colors duration-300"
               >
                 {category.name} ({category.count})
               </button>
             ))}
+
           </div>
         </div>
       </section>
 
       {/* Services Grid */}
+
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
             {microSaasServices.map((service, index) => (
+
               <div key={index} className={`bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 ${service.popular ? 'ring-2 ring-cyan-400' : ''}`}>
                 {service.popular && (
+
                   <div className="flex items-center justify-center mb-4">
                     <span className="bg-cyan-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
                 )}
+
                 <div className="flex items-center mb-4">
                   <service.icon className="h-8 w-8 text-purple-400 mr-3" />
                   <div>
@@ -383,24 +418,31 @@ const stats = [
                 <p className="text-gray-300 mb-4 text-sm">{service.description}</p>
                 <ul className="space-y-1 mb-4">
                   {service.features.slice(0, 3).map((feature, featureIndex) => (
+
                     <li key={featureIndex} className="flex items-center text-xs text-gray-300">
                       <CheckCircle className="h-3 w-3 text-green-500 mr-2" />
                       {feature}
+
                     </li>
                   ))}
+
                   {service.features.length > 3 && (
+
                     <li className="text-xs text-gray-400">
                       +{service.features.length - 3} more features
                     </li>
                   )}
+
                 </ul>
                 <div className="text-center">
                   <div className="text-xl font-bold text-purple-400 mb-2">{service.price}</div>
                   <div className="text-xs text-gray-400 mb-3">
                     {service.benefits[0]}
+
                   </div>
                   <Link
                     to={service.link}
+
                     className="bg-purple-500 hover:bg-purple-600 text-white px-4 py-2 rounded-lg font-semibold transition-colors inline-block text-sm"
                   >
                     Learn More
@@ -408,11 +450,13 @@ const stats = [
                 </div>
               </div>
             ))}
+
           </div>
         </div>
       </section>
 
       {/* Benefits Section */}
+
       <section className="py-24 bg-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -425,6 +469,7 @@ const stats = [
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
+
               <div key={index} className="text-center">
                 <div className="bg-purple-500/10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                   <benefit.icon className="h-8 w-8 text-purple-400" />
@@ -433,11 +478,13 @@ const stats = [
                 <p className="text-gray-300">{benefit.description}</p>
               </div>
             ))}
+
           </div>
         </div>
       </section>
 
       {/* Pricing Tiers */}
+
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -551,6 +598,7 @@ const stats = [
       </section>
 
       {/* CTA Section */}
+
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2xl p-12 text-center">

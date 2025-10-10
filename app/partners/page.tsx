@@ -18,14 +18,18 @@ const PartnersPage = () => {
       name: 'Amazon Web Services',
       logo: '/api/placeholder/200/100',
 import { CheckCircle, ExternalLink, Award, Users, Handshake, TrendingUp } from 'lucide-react';
-
 interface Partner {
   name: string;
+
   logo: string;
+
   description: string;
-  category: string;
-  website?: string;
-  tier: 'strategic' | 'preferred' | 'certified'});;)
+
+  category: string';
+
+  website?: string';
+
+  tier: 'strategic' | 'preferred' | 'certified'});)
 }
 
 const PartnersPage: React.FC = () => {
@@ -37,8 +41,7 @@ const PartnersPage: React.FC = () => {
       category: 'Cloud & AI',
       website: 'https://microsoft.com',
       tier: 'strategic'
-    },
-    {
+    },    {
       name: 'Amazon Web Services',
       logo: '/images/partners/aws.png',
       description: 'Leading cloud infrastructure and machine learning platform provider',
@@ -46,8 +49,7 @@ const PartnersPage: React.FC = () => {
       website: 'https://aws.amazon.com',
       tier: 'strategic'
     },
-      tier: 'strategic'});;)
-},
+      tier: 'strategic'});;)},
     {
       name: 'Google Cloud',
       logo: '/images/partners/google-cloud.png',
@@ -55,8 +57,7 @@ const PartnersPage: React.FC = () => {
       category: 'Cloud & AI',
       website: 'https://cloud.google.com',
       tier: 'strategic'
-    },
-    {
+    },    {
       name: 'IBM',
       logo: '/images/partners/ibm.png',
       description: 'Enterprise AI solutions and hybrid cloud platform',
@@ -68,10 +69,25 @@ const PartnersPage: React.FC = () => {
       name: 'Salesforce',
       logo: '/images/partners/salesforce.png',
       description: 'Customer relationship management and business automation',
-      description: 'Customer relationship management and business automation platform',
-      category: 'CRM & Automation',
+      description: 'Customer relationship management and business automation platform',      category: 'CRM & Automation',
       website: 'https://salesforce.com',
-      tier: 'preferred'});;)
+      tier: 'preferred'});)
+},
+    {
+      name: 'Oracle',
+      logo: '/images/partners/oracle.png',
+      description: 'Database solutions and enterprise applications',
+      category: 'Database & Enterprise',
+      website: 'https://oracle.com',
+      tier: 'preferred'});)
+},
+    {
+      name: 'ServiceNow',
+      logo: '/images/partners/servicenow.png',
+      description: 'IT service management and workflow automation',
+      category: 'IT Management',
+      website: 'https://servicenow.com',
+      tier: 'certified'});)
 },
     {
       name: 'Splunk',
@@ -80,19 +96,20 @@ const PartnersPage: React.FC = () => {
       category: 'Analytics & Security',
       website: 'https://splunk.com',
       tier: 'certified'
-    }
-  ];
+    }  ];
 
-  const benefits = [
+  const benefits = [;;
+
     'Access to cutting-edge technology platforms',
     'Joint go-to-market strategies',
     'Co-marketing opportunities',
     'Technical support and training',
     'Early access to new features',
-    'Dedicated partner success manager'
+    Dedicated partner success manager
   ];
 
-  const partnershipTiers = [
+  const partnershipTiers = [;;
+
     {
       name: 'Strategic',
       description: 'Deep integration and co-innovation',
@@ -115,13 +132,14 @@ const PartnersPage: React.FC = () => {
       icon: CheckCircle
     }
   ];
+  const getTierInfo = (tier: string) => {;;
 
-  const getTierInfo = (tier: string) => {
-    return partnershipTiers.find(t => t.name.toLowerCase().includes(tier)) || partnershipTiers[2]});;)
+    return partnershipTiers.find(t => t.name.toLowerCase().includes(tier)) || partnershipTiers[2]});)
 };
 
 const PagePage: React.FC = () => {
   return (
+
     <>
       <Helmet>
         <title>Partners - Zion Tech Group | Strategic Technology Partnerships</title>
@@ -263,19 +281,18 @@ const PagePage: React.FC = () => {
                   View Partnership Program
                 </button>
               </div>
-      nam,
-    e: 'Microsoft',
+      nam,    e: 'Microsoft',
       logo: '/api/placeholder/200
       descriptio,
     n: 'Strategic partnership for Azure cloud solutions and AI services',
-      category: 'Cloud & AI'
+      category: Cloud & AI
     },
     {
       name: 'Amazon Web Services',
       logo: '/api/placeholder/200
       descriptio,
     n: 'Leading cloud infrastructure and machine learning platform provider',
-      category: 'Cloud Computing'
+      category: Cloud Computing
     },
     {
       name: 'Google Cloud',
@@ -289,6 +306,7 @@ const PagePage: React.FC = () => {
   return (<div>
                 <)
               ))}
+
             <
 
             <div className="bg-white/5 backdrop-blur-lg rounded-xl p-8 border border-white
@@ -300,12 +318,25 @@ const PagePage: React.FC = () => {
                     <span className="text-gray-300">{benefit}<
                   <)
                 ))}
+
               <
             <
           <
         <
       <
     <
+        <title>Partners - Zion Tech Group | Strategic Technology Partnerships</title>
+        <meta name="description" content="Explore our strategic partnerships with leading technology companies. We work with Microsoft, AWS, Google Cloud, and more to deliver cutting-edge solutions." />
+        <meta name="keywords" content="technology partners, strategic partnerships, Microsoft, AWS, Google Cloud, IBM, enterprise solutions" />
+      </Helmet>
+
+      {/* Hero Section */}
+
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Strategic <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Partnerships</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business.
@@ -330,6 +361,7 @@ const PagePage: React.FC = () => {
         </section>
 
         {/* Features Section */}
+
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-3xl font-bold text-white mb-12 text-center">Why Choose Our Page Services?</h2>
@@ -360,6 +392,7 @@ const PagePage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
+
         <section className="py-16 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-slate-800/30 backdrop-blur-sm border border-slate-700 rounded-2xl p-8 md:p-12">
@@ -393,7 +426,6 @@ const PagePage: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
+  );};
 
 export default PagePage;

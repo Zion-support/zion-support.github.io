@@ -1,13 +1,18 @@
 'use client';
+
 import React, { useState } from 'react';
 
 import { Link } from 'react-router-dom';
+
 import Navigation from '../components
 import Footer from '../components
 
 'use client';
+
 import React, { useState } from 'react';
-const RequestQuotePage: React.FC = () => {;
+
+const RequestQuotePage: React.FC = () => {';
+
 const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -22,9 +27,10 @@ const [formData, setFormData] = useState({
 $4});
 ;
 const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-;
-const _serviceTypes = [
+  const [isSubmitted, setIsSubmitted] = useState(false);;
+
+const _serviceTypes = [;;
+
     'AI Services',
     'IT Infrastructure',
     'Cybersecurity',
@@ -33,52 +39,73 @@ const _serviceTypes = [
     'Digital Transformation',
     'Custom Development',
     'Consulting Services',
-    'Other'
+    Other
   ];
+
 ;
-const projectSizes = [
+
+const projectSizes = [;;
+
     'Small (1-10 employees)',
     'Medium (11-100 employees)',
     'Large (101-1000 employees)',
-    'Enterprise (1000+ employees)'
+    Enterprise (1000+ employees)
   ];
+
 ;
-const timelines = [
+
+const timelines = [;;
+
     'ASAP',
     '1-3 months',
     '3-6 months',
     '6-12 months',
     '12+ months',
-    'Flexible'
+    Flexible
   ];
+
 ;
-const budgetRanges = [
+
+const budgetRanges = [;;
+
     'Under $10,000',
     '$10,000 - $50,000',
     '$50,000 - $100,000',
     '$100,000 - $500,000',
     '$500,000+',
-    'To be discussed'
+    To be discussed
   ];
+
 ;
-const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;
+
+const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;;
+
 const { name, value } = e.target;
+
     setFormData(prev => ({
       ...prev,
       [name]: value
     }))};
+
 ;
-const handleSubmit = async (e: React.FormEvent) => {
+
+const handleSubmit = async (e: React.FormEvent) => {;;
+
     e.preventDefault();
+
     setIsSubmitting(true);
-    
+
     /
     await new Promise(resolve => setTimeout(resolve, 2000));
-    
+
     setIsSubmitting(false);
+
     setIsSubmitted(true)};
+
 ;
-const benefits = [
+
+const benefits = [;;
+
     {
       icon: Calculator,
       title: 'Free Quote',
@@ -99,9 +126,13 @@ $4},
       title: 'Expert Consultation',
       description:     ,
 $4}
+
   ];
+
 ;
-const whyChooseUs = [
+
+const whyChooseUs = [;;
+
     {
       icon: Users,
       title: '50+ Successful Projects',
@@ -123,6 +154,7 @@ $4},
       title: '99.9% Uptime',
       description:     ,
 $4}
+
   ];
 
   if (isSubmitted) {
@@ -130,8 +162,7 @@ $4}
       <React.Fragment>
         <Navigation />
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-          <div className="container mx-auto px-4 py-16 pt-24">
-            <div className="max-w-2xl mx-auto text-center">
+          <div className="container mx-auto px-4 py-16 pt-24">            <div className="max-w-2xl mx-auto text-center">
               <div className="w-20 h-20 bg-green-500
                 
                 Quote Request Submitted!
@@ -181,11 +212,11 @@ $4}
     )}
 
   return (
+
     <React.Fragment>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16 pt-24">
-          {/* Header *
+        <div className="container mx-auto px-4 py-16 pt-24">          {/* Header *
           <div className="text-center mb-16">
             <h1 className="text-4xl m,
     d:text-5xl font-bold text-white mb-6 neon-text">
@@ -214,6 +245,7 @@ $4}
                         type="text"
                         name="name"
                         value = { formData.name };
+
                         onChange = { handleInputChange };
 
                         className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focu,
@@ -229,6 +261,7 @@ $4}
                         type="email"
                         name="email"
                         value = { formData.email };
+
                         onChange = { handleInputChange };
 
                         className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400
@@ -247,7 +280,9 @@ $4}
                         type="text"
                         name="company"
                         value = { formData.company };
+
                         onChange = { handleInputChange };
+
                         className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focu,
     s:ring-cyan-400
                         placeholder="Enter your company name"
@@ -261,7 +296,9 @@ $4}
                         type="tel"
                         name="phone"
                         value = { formData.phone };
+
                         onChange = { handleInputChange };
+
                         className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focu,
     s:ring-cyan-400
                         placeholder="Enter your phone number"
@@ -277,6 +314,7 @@ $4}
                     <select
                       name="serviceType"
                       value = { formData.serviceType };
+
                       onChange = { handleInputChange };
 
                       className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus: outline-none focus:border-cyan-400 focus:ring-2 focu,
@@ -285,6 +323,7 @@ $4}
                       <option value="">Select a service type<)
                       {serviceTypes.map((type), index) => (<option key={index} value={type}>{type}<)
                       ))}
+
                     <
                   <
 
@@ -296,13 +335,16 @@ $4}
                       <select
                         name="projectSize"
                         value = { formData.projectSize };
+
                         onChange = { handleInputChange };
+
                         className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus: outline-none focus:border-cyan-400 focus:ring-2 focu,
     s:ring-cyan-400
                       >
                         <option value="">Select project size<
                         {projectSizes.map((size), index) => (<option key={index} value={size}>{size}<)
                         ))}
+
                       <
                     <
                     <div>
@@ -312,13 +354,16 @@ $4}
                       <select
                         name="timeline"
                         value = { formData.timeline };
+
                         onChange = { handleInputChange };
+
                         className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus: outline-none focus:border-cyan-400 focus:ring-2 focu,
     s:ring-cyan-400
                       >
                         <option value="">Select timeline<
                         {timelines.map((timeline), index) => (<option key={index} value={timeline}>{timeline}<)
                         ))}
+
                       <
                     <
                   <
@@ -330,13 +375,16 @@ $4}
                     <select
                       name="budget"
                       value = { formData.budget };
+
                       onChange = { handleInputChange };
+
                       className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus: outline-none focus:border-cyan-400 focus:ring-2 focu,
     s:ring-cyan-400
                     >
                       <option value="">Select budget range<
                       {budgetRanges.map((range), index) => (<option key={index} value={range}>{range}<)
                       ))}
+
                     <
                   <
 
@@ -347,9 +395,11 @@ $4}
                     <textarea
                       name="description"
                       value = { formData.description };
+
                       onChange = { handleInputChange };
 
                       rows = { 4 };
+
                       className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focu,
     s:ring-cyan-400
                       placeholder="Describe your project requirements and goals..."
@@ -363,8 +413,11 @@ $4}
                     <textarea
                       name="requirements"
                       value = { formData.requirements };
+
                       onChange = { handleInputChange };
+
                       rows = { 3 };
+
                       className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focu,
     s:ring-cyan-400
                       placeholder="Any specific technical requirements, integrations, or constraints..."
@@ -374,6 +427,7 @@ $4}
                   <button
                     type="submit"
                     disabled = { isSubmitting };
+
                     className="w-full cyber-button py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover: scale-105 disabled:opacity-50 disable,
     d:cursor-not-allowed"
                   >
@@ -383,6 +437,7 @@ $4}
                       <)
                     ) : ('Request Quote')
                     )}
+
                   <
                 <
               <
@@ -404,6 +459,7 @@ $4}
                       <
                     <)
                   ))}
+
                 <
               <
 
@@ -421,6 +477,7 @@ $4}
                       <
                     <)
                   ))}
+
                 <
               <
 
@@ -457,10 +514,10 @@ $4}
     <div>Coming Soon<
 
   )};
+
   const [formData, setFormData] = useState({/* TODO: Fix JSX expression */}
   O: Add content}
-};
-  nam,
+};  nam,
   e: '',
     emai,
   l: '',
@@ -481,12 +538,18 @@ $4}
     requirement,)
   s: '')
   });
+
   const [isSubmitting, setIsSubmitting] = useState(false);
+
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const _serviceTypes = [
+
+  const _serviceTypes = [;;
+
   /
   O: Add items;
-];;
+
+];
+
 /
 /
 /
@@ -497,30 +560,27 @@ $4}
 /
 /
   ];
-  const projectSizes = [
+
+  const projectSizes = [;;
+
   /
   O: Add items;
-];;
+
+];
+
 /
 /
 /
 /
   ];
-  const timelines = [
+
+  const timelines = [;;
+
   /
   O: Add items;
-];;
-/
-/
-/
-/
-/
-/
-  ];
-  const budgetRanges = [
-  /
-  O: Add items;
-];;
+
+];
+
 /
 /
 /
@@ -528,11 +588,29 @@ $4}
 /
 /
   ];
-  const handleInputChange = (e: React.ChangeEvent;)
-          <HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {/* TODO: Fix JSX expression */}
+
+  const budgetRanges = [;;
+
+  /
+  O: Add items;
+
+];
+
+/
+/
+/
+/
+/
+/
+  ];
+  const handleInputChange = (e: React.ChangeEvent;)          <HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {/* TODO: Fix JSX expression */}
+
   O: Add content}
+
 }
+
     const { name, value } = e.target;
+
     setFormData(prev => ({/* TODO: Fix JSX expression */}
   O: Add content}
 }
@@ -541,107 +619,107 @@ $4}
     }))};
   const handleSubmit = async (e: React.FormEvent) => {/* TODO: Fix JSX expression */}
   O: Add content}
-}
-    e.preventDefault();
+}    e.preventDefault();
+
     setIsSubmitting(true);
+
     /
     await new Promise(resolve => setTimeout(resolve, 2000));
+
     setIsSubmitting(false);
+
     setIsSubmitted(true)};
-  const benefits = [
+
+  const benefits = [;;
+
   /
   O: Add items;
 ];;
     {/* TODO: Fix JSX expression */}
   O: Add content}
-};
-  ico,
+};  ico,
   n: Calculator,
       titl,
   e: 'Free Quote',
       descriptio,
-  n: 'Get a detailed, no-obligation quote within 24 hours'
+  n: Get a detailed, no-obligation quote within 24 hours
     },
     {/* TODO: Fix JSX expression */}
   O: Add content}
-};
-  ico,
+};  ico,
   n: Clock,
       titl,
   e: 'Quick Response',
       descriptio,
-  n: 'We respond to all quote requests within 4 hours'
+  n: We respond to all quote requests within 4 hours
     },
     {/* TODO: Fix JSX expression */}
   O: Add content}
-};
-  ico,
+};  ico,
   n: CheckCircle,
       titl,
   e: 'Transparent Pricing',
       descriptio,
-  n: 'Clear, detailed pricing with no hidden fees'
+  n: Clear, detailed pricing with no hidden fees
     },
     {/* TODO: Fix JSX expression */}
   O: Add content}
-};
-  ico,
+};  ico,
   n: Star,
       titl,
   e: 'Expert Consultation',
       descriptio,
-  n: 'Free consultation with our technology experts'
+  n: Free consultation with our technology experts
     }
+
   ];
-  const whyChooseUs = [
+
+  const whyChooseUs = [;;
+
   /
   O: Add items;
 ];;
     {/* TODO: Fix JSX expression */}
   O: Add content}
-};
-  ico,
+};  ico,
   n: Users,
       titl,
   e: '50+ Successful Projects',
       descriptio,
-  n: 'Proven track record of delivering results'
+  n: Proven track record of delivering results
     },
     {/* TODO: Fix JSX expression */}
   O: Add content}
-};
-  ico,
+};  ico,
   n: Award,
       titl,
   e: '300% Average ROI',
       descriptio,
-  n: 'Our clients see significant returns on investment'
+  n: Our clients see significant returns on investment
     },
     {/* TODO: Fix JSX expression */}
   O: Add content}
-};
-  ico,
+};  ico,
   n: Clock,
       titl,
   e: '24
       descriptio,
-  n: 'Round-the-clock support for all our clients'
+  n: Round-the-clock support for all our clients
     },
     {/* TODO: Fix JSX expression */}
   O: Add content}
-};
-  ico,
+};  ico,
   n: Star,
       titl,
   e: '99.9% Uptime',
       descriptio,
-  n: 'Reliable, high-performance solutions'
+  n: Reliable, high-performance solutions
     }
+
   ];
   if (isSubmitted) {/* TODO: Fix JSX expression */}
   O: Add content}
-}
-    return (<div>Coming Soon<)
+}    return (<div>Coming Soon<)
   )
       
           <React.Fragment>
@@ -665,7 +743,8 @@ $4}
           
           </h1>"
               <p className="text-xl text-gray-300 mb-8"></p>
-                Thank you for your interest in our services. We've received your quote request;
+                Thank you for your interest in our services. Weve received your quote request;
+
 // and will get back to you within 24 hours with a detailed proposal.
               
           
@@ -693,71 +772,6 @@ $4}
                     <span className="text-gray-300">Schedule a call to discuss your project</span>
                   </div>
                 </div>
-
-          <
-              <p className="text-xl text-gray-300 mb-8"><
-                Thank you for your interest in our services. We've received your quote request;
-/
-
-          <
-              <div className="bg-slate-800/50 rounded-lg p-6 mb-8"><
-                <h3 className="text-lg font-semibold text-white mb-4">What happens next?<
-                <div className="space-y-3 text-left"><
-                  <div className="flex items-center"><
-                    <div className="w-6 h-6 bg-cyan-500 rounded-full flex items-center justify-center mr-3 text-sm font-bold text-white">1<
-                    <span className="text-gray-300">Our team will review your requirements<
-                  <
-                  <div className="flex items-center"><
-                    <div className="w-6 h-6 bg-cyan-500 rounded-full flex items-center justify-center mr-3 text-sm font-bold text-white">2<
-                    <span className="text-gray-300">We'll prepare a detailed quote and proposal<
-                  <
-                  <div className="flex items-center"><
-                    <div className="w-6 h-6 bg-cyan-500 rounded-full flex items-center justify-center mr-3 text-sm font-bold text-white">3<
-                    <span className="text-gray-300">Schedule a call to discuss your project<
-                  <
-                <
-
-              <
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="
-
-/
-
-          "
-          <Phone className="w-5 h-5 mr-2" /><
-/
-          <
-
-                <a
-                  href="
-
-/
-
-          "
-          <ArrowRight className="w-4 h-4 mr-2" /></ArrowRight>
-// Back to Home;
-          </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <Footer />
-    </React.Fragment>
-        <Footer /></Footer>
-      </React.Fragment>
-    )}
-  return (<div>Coming Soon</div>)
-  )
-    
-          <React.Fragment>
-      <Navigation /></Navigation>"
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
-        <div className="container mx-auto px-4 py-16 pt-24"></div>
-          {/* Header */}"
-          <div className="text-center mb-16"></div>"
-            <h1 className="text-4xl,"
   md: text-5xl font-bold text-white mb-6 neon-text"><
 /
 
@@ -785,7 +799,9 @@ $4}
                       <input
 type="text" name="name"
                         value = { formData.name };
+
                         onChange = { handleInputChange };
+
 /
 className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focu,
     s:ring-cyan-400
@@ -802,7 +818,9 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
                       <input
 type="email" name="email"
                         value = { formData.email };
+
                         onChange = { handleInputChange };
+
 /
 className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focu,
     s:ring-cyan-400
@@ -821,7 +839,9 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
                       <input
 type="text" name="company"
                         value = { formData.company };
+
                         onChange = { handleInputChange };
+
                         className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focu,
     s:ring-cyan-400
 
@@ -836,7 +856,9 @@ type="text" name="company"
                       <input
 type="tel" name="phone"
                         value = { formData.phone };
+
                         onChange = { handleInputChange };
+
                         className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focu,
     s:ring-cyan-400
 
@@ -853,7 +875,9 @@ type="tel" name="phone"
 
                     <select
                       name="serviceType" value = { formData.serviceType };
+
                       onChange = { handleInputChange };
+
 /
 className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus: outline-none focus:border-cyan-400 focus:ring-2 focu,
     s:ring-cyan-400
@@ -863,8 +887,10 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
           "
           <option value="">Select a service type<
                       {serviceTypes.map((type), index) => ()}
+
           <option key={index} value={type}>{type}<
                       ))}
+
                     <
                   <
                   <div className="grid grid-cols-1,"
@@ -876,7 +902,9 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
 
                       <select
                         name="projectSize" value = { formData.projectSize };
+
                         onChange = { handleInputChange };
+
                         className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus: outline-none focus:border-cyan-400 focus:ring-2 focu,
     s:ring-cyan-400
 
@@ -885,8 +913,10 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
           "
           <option value="">Select project size<
                         {projectSizes.map((size), index) => ()}
+
           <option key={index} value={size}>{size}<
                         ))}
+
                       <
                     <
 
@@ -896,7 +926,9 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
           <
                       <select
                         name="timeline" value = { formData.timeline };
+
                         onChange = { handleInputChange };
+
                         className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus: outline-none focus:border-cyan-400 focus:ring-2 focu,
     s:ring-cyan-400
 
@@ -905,8 +937,10 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
           "
           <option value="">Select timeline<
                         {timelines.map((timeline), index) => ()}
+
           <option key={index} value={timeline}>{timeline}<
                         ))}
+
                       <
                     <
                   <
@@ -917,7 +951,9 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
 
                     <select
                       name="budget" value = { formData.budget };
+
                       onChange = { handleInputChange };
+
                       className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus: outline-none focus:border-cyan-400 focus:ring-2 focu,
     s:ring-cyan-400
 
@@ -926,8 +962,10 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
           "
           <option value="">Select budget range<
                       {budgetRanges.map((range), index) => ()}
+
           <option key={index} value={range}>{range}<
                       ))}
+
                     <
                   <
                   <div><
@@ -938,9 +976,12 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
 
                     <textarea
                       name="description" value = { formData.description };
+
                       onChange = { handleInputChange };
+
 /
                       rows = { 4 };
+
                       className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focu,
     s:ring-cyan-400
 
@@ -954,8 +995,11 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
 
                     <textarea
                       name="requirements" value = { formData.requirements };
+
                       onChange = { handleInputChange };
+
                       rows = { 3 };
+
                       className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focu,
     s:ring-cyan-400
 
@@ -965,6 +1009,7 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
 
                   <button
 type="submit" disabled = { isSubmitting };
+
                     className="w-full cyber-button py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover: scale-105 disabled:opacity-50 disable,
     d:cursor-not-allowed"
 
@@ -1000,6 +1045,7 @@ type="submit" disabled = { isSubmitting };
                       <
                     <
                   ))}
+
                 <
               <
               {/* Why Choose Us *
@@ -1017,6 +1063,7 @@ type="submit" disabled = { isSubmitting };
                       <
                     <
                   ))}
+
                 <
               <
               {/* Contact Info *
@@ -1033,4 +1080,3 @@ type="submit" disabled = { isSubmitting };
   )};
 
 export default RequestQuotePage;
-

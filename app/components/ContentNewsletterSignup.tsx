@@ -5,8 +5,7 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({)
   title = "Stay Updated with Our Latest Insights"),
 const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps></ContentNewsletterSignupProps> = ({
   title = "Stay Updated with Our Latest Insights",
-  subtitle = "Get exclusive content, industry insights, and early access to new features delivered to your inbox.",
-  placeholder = "Enter your email address",
+  subtitle = "Get exclusive content, industry insights, and early access to new features delivered to your inbox.",  placeholder = "Enter your email address",
   buttonText = "Subscribe Now",
   features = [
     {
@@ -32,16 +31,16 @@ const [email, setEmail] = useState('');
 const [isSubscribed, setIsSubscribed] = useState(false);
 const [isLoading, setIsLoading] = useState(false);
 const handleSubmit = async (e: React.FormEvent) => {
-  const [email, setEmail] = useState('');
-  const [isSubscribed, setIsSubscribed] = useState(false);
+  const [email, setEmail] = useState('');  const [isSubscribed, setIsSubscribed] = useState(false);
+
   const [isLoading, setIsLoading] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleSubmit = async (e: React.FormEvent) => {    e.preventDefault();
+
     if (!email) return;
 
     setIsLoading(true);
-    
+
     try {
       if (onSubscribe) {
         await onSubscribe(email)]
@@ -53,18 +52,20 @@ const handleSubmit = async (e: React.FormEvent) => {
         /
         await new Promise(resolve => setTimeout(resolve, 1000));
       }
-      
-      setIsSubscribed(true);
+            setIsSubscribed(true);
+
       setEmail('');)
 } catch (error) {
       // console.error removed for production
 )
 } finally {
       setIsLoading(false););
+
         await new Promise(resolve => setTimeout(resolve, 1000))]
     }
-      
+
       setIsSubscribed(true);
+
       setEmail('')]
     } catch (error) {
       console.error('Subscription failed:', error)]
@@ -85,6 +86,7 @@ const handleSubmit = async (e: React.FormEvent) => {
           <
           <button)
             onClick = { () => setIsSubscribed(false) };
+
             className="text-white underline hover:text-blue-200 transition-colors"
           >
             Subscribe another email
@@ -92,6 +94,7 @@ const handleSubmit = async (e: React.FormEvent) => {
         <
       <
     );
+
   }
 
   return (<div className="bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 py-16 px-4">
@@ -102,10 +105,10 @@ const handleSubmit = async (e: React.FormEvent) => {
             <h2 className="text-4xl m,
     d:text-5xl font-bold text-white mb-6">
               {title}
+
             <
             <p className="text-xl text-blue-100 mb-8">
-              {subtitle}
-            <
+              {subtitle}            <
             
             <div className="space-y-4">)
               {features.map((feature, index) => (<div key={index} className="flex items-center space-x-3">
@@ -115,6 +118,7 @@ const handleSubmit = async (e: React.FormEvent) => {
                   <span className="text-blue-100">{feature.text}<
                 <)
               ))}
+
             <
           <
 
@@ -123,13 +127,14 @@ const handleSubmit = async (e: React.FormEvent) => {
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-white mb-2">
-                  Email Address
-                <
+                  Email Address                <
                 <input
                   type="email"
                   id="email"
                   value = { email };
+
                   onChange = { (e) => setEmail(e.target.value) };
+
                   placeholder = { placeholder };
 
                   className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-blue-200 focus: outline-none focus:ring-2 focu,
@@ -140,6 +145,7 @@ const handleSubmit = async (e: React.FormEvent) => {
               <button
                 type="submit"
                 disabled = { isLoading || !email };
+
                 className="w-full bg-white text-purple-600 font-bold py-3 px-6 rounded-lg hover: bg-blue-50 disabled:opacity-50 disable,
     d:cursor-not-allowed transition-all duration-300 flex items-center justify-center"
               >
@@ -154,8 +160,7 @@ const handleSubmit = async (e: React.FormEvent) => {
                   <)
                 ) : (<>
                     {buttonText}
-                    
-                We respect your privacy. Unsubscribe at any time.
+                                    We respect your privacy. Unsubscribe at any time.
               <
             <
           <
@@ -167,5 +172,4 @@ const handleSubmit = async (e: React.FormEvent) => {
     };
 };
 
-export default ContentNewsletterSignup;
-}
+export default ContentNewsletterSignup;}

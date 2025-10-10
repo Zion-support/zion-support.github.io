@@ -1,14 +1,25 @@
 'use client';
+
 import React from 'react';
+
 'use client';
+
 import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
+
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
+
 import Navigation from './components/Navigation';
+
 import Footer from './components/Footer';
+
 import PerformanceOptimizer from './components/PerformanceOptimizer';
+
 import SEOOptimizer from './components/SEOOptimizer';
+
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+
 import Analytics from './components/Analytics';
+
 import SecurityEnhancer from './components/SecurityEnhancer';
 // Dynamically import heavy components for better performance;
 const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
@@ -17,15 +28,17 @@ const DynamicContentShowcase = lazy(() => import('./components/DynamicContentSho
 const ContentStatistics = lazy(() => import('./components/ContentStatistics'));
 const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'));
 // Preload critical components;
-const preloadComponents = () => {
-  if (typeof window !== 'undefined') {
+const preloadComponents = () => {  if (typeof window !== 'undefined') {
     /
     setTimeout (() => {
       import('./components
       import('./components
     }, 100);
+
   }
+
 };
+
 /
 const ServiceCardSkeleton: React.FC = memo(() => (<div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card"><
     <div className="h-8 bg-gray-200 rounded mb-4 w-3/4"><
@@ -33,15 +46,17 @@ const ServiceCardSkeleton: React.FC = memo(() => (<div className="bg-white round
     <div className="h-4 bg-gray-200 rounded w-5/6"><
   <)
 ));
-ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
-const HomePage: React.FC = memo(() => {;
+ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';const HomePage: React.FC = memo(() => {;
+
 const [isLoaded, setIsLoaded] = useState(false);
+
 const [isVisible, setIsVisible] = useState(false);
   
   useEffect (() => {
-    setIsLoaded(true);
-    // Trigger visibility animation;
-const timer = setTimeout(() => setIsVisible(true), 100);
+    setIsLoaded(true);    // Trigger visibility animation;
+
+const timer = setTimeout(() => setIsVisible(true), 100);;
+
     // Preload components
     preloadComponents();
     return (<div>)
@@ -67,33 +82,40 @@ const timer = setTimeout(() => setIsVisible(true), 100);
       {/* Content Promotion Banner *
       <Suspense fallback={<div className="h-16 bg-gray-100 animate-pulse"><
         
-        {/* Hero Section *
-    return () => clearTimeout(timer);)
+        {/* Hero Section *    return () => clearTimeout(timer);)
 }, []);
+
   // Analytics tracking for phone clicks - optimized;
-const handlePhoneClick = useCallback(() => {
+
+const handlePhoneClick = useCallback(() => {;;
+
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as any).gtag('event', 'phone_click', {
         event_category: 'engagement',
         event_label: 'main_phone_number';)
-});;);
-    return () => clearTimeout(timer)]
+});;);    return () => clearTimeout(timer)]
     }, []);
+
   // Analytics tracking for phone clicks - optimized
-  const handlePhoneClick = useCallback(() => {
+  const handlePhoneClick = useCallback(() => {;;
+
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as any).gtag('event', 'phone_click', {
         event_category: 'engagement',
         event_label: 'main_phone_number']
     });]
     }
+
   }, []);
+
   return (
+
     <React.Fragment>
       <SEOOptimizer
         title="Zion Tech Group - Advanced AI and IT Solutions"
         description="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology."
         keywords={['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services']}
+
         canonicalUrl="https://ziontechgroup.com"
         structuredData={{
           '@context': 'https://schema.org',
@@ -111,7 +133,7 @@ const handlePhoneClick = useCallback(() => {
             'Digital Transformation',
             'Cloud Services',
             'Automation',
-            'Business Intelligence'
+            Business Intelligence
           ],
           contactPoint: {
             '@type': 'ContactPoint',
@@ -128,39 +150,61 @@ const handlePhoneClick = useCallback(() => {
             postalCode: '19709',
 addressCountry: 'US']
     }
+
         }}
+
       />
       <PerformanceOptimizer
         enableImageOptimization={true}
+
         enableLazyLoading={true}
+
         enablePreloading={true}
+
         enableCodeSplitting={true}
+
       />
       <AccessibilityEnhancer
         enableKeyboardNavigation={true}
+
         enableScreenReaderSupport={true}
+
         enableHighContrast={true}
+
         enableFocusManagement={true}
+
         enableSkipLinks={true}
+
         enableARIALabels={true}
+
       />
       <Analytics
         enableGoogleAnalytics={true}
+
         enablePerformanceMonitoring={true}
+
         enableErrorTracking={true}
+
         enableUserBehaviorTracking={true}
+
       />
       <SecurityEnhancer
         enableCSP={true}
+
         enableHTTPSRedirect={true}
+
         enableXSSProtection={true}
+
         enableClickjackingProtection={true}
+
         enableContentTypeSniffingProtection={true}
+
       />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain"></div>
         {/* Navigation */}</div>
         <Navigation />
         {/* Skip to main content for accessibility */}
+
         <a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50"
@@ -168,6 +212,7 @@ addressCountry: 'US']
           Skip to main content
         </a>
       {/* Content Promotion Banner */}
+
       <Suspense fallback={<div></Suspense>}>
         <ContentPromotionBanner />
       </Suspense>
@@ -179,12 +224,12 @@ addressCountry: 'US']
               ? 'opacity-100 translate-y-0' 
               : 'opacity-0 translate-y-8']
     }`}
+
           aria-labelledby="hero-heading"
         >
           <div className="max-w-6xl mx-auto"><
           <div>
-            <h1 
-              id="hero-heading" 
+            <h1               id="hero-heading" 
               className="text-5xl md: text-6xl lg:text-7xl font-bold text-white mb-6 neon-text cyber-text holographic-text glitch"
               data-text="Zion Tech Group"
             >
@@ -195,8 +240,7 @@ addressCountry: 'US']
             <
             <p className="text-base sm:text-lg m,
     d:text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-              Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services.
-              Transform your business with our cutting-edge technology and achieve unprecedented growth.
+              Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services.              Transform your business with our cutting-edge technology and achieve unprecedented growth.
             <
             
             {/* Key Benefits *
@@ -228,10 +272,10 @@ addressCountry: 'US']
             {/* CTA Buttons *
             <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center items-center"><
             <div>
-              <a
-                href="te,
+              <a                href="te,
     l:+13024640950"
                 onClick = { handlePhoneClick };
+
                 className="cyber-button w-full sm: w-auto text-center")
                 aria-label="Call us at (302) 464-0950"
             ></a>
@@ -912,8 +956,7 @@ addressCountry: 'US']
                 <div className="text-center"><
                   <div className="text-lg sm: text-2xl font-bold text-indigo-400 mb-2">Starting at $149/month<
                   <a href="
-                    Learn More →
-                  <
+                    Learn More →                  <
                 <
               <
 
@@ -927,8 +970,7 @@ addressCountry: 'US']
                 <div className="text-center"><
                   <div className="text-lg sm: text-2xl font-bold text-purple-400 mb-2">Starting at $399/month<
                   <a href="
-                    Learn More →
-                  <
+                    Learn More →                  <
                 <
               <
 
@@ -942,8 +984,7 @@ addressCountry: 'US']
                 <div className="text-center"><
                   <div className="text-lg sm: text-2xl font-bold text-rose-400 mb-2">Starting at $249/month<
                   <a href="
-                    Learn More →
-                  <
+                    Learn More →                  <
                 <
               <
 
@@ -957,8 +998,7 @@ addressCountry: 'US']
                 <div className="text-center"><
                   <div className="text-lg sm: text-2xl font-bold text-teal-400 mb-2">Starting at $179/month<
                   <a href="
-                    Learn More →
-                  <
+                    Learn More →                  <
                 <
               <
 
@@ -972,8 +1012,7 @@ addressCountry: 'US']
                 <div className="text-center"><
                   <div className="text-lg sm: text-2xl font-bold text-violet-400 mb-2">Starting at $299/month<
                   <a href="
-                    Learn More →
-                  <
+                    Learn More →                  <
                 <
               <
 
@@ -987,8 +1026,7 @@ addressCountry: 'US']
                 <div className="text-center"><
                   <div className="text-lg sm: text-2xl font-bold text-amber-400 mb-2">Starting at $129/month<
                   <a href="
-                    Learn More →
-                  <
+                    Learn More →                  <
                 <
               <
 
@@ -1397,8 +1435,7 @@ addressCountry: 'US']
               Ready to Transform Your Business?
             <
             <p className="text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto">
-              Get in touch with our experts to discuss your AI and IT needs. We're here to help you achieve unprecedented growth.
-            <
+              Get in touch with our experts to discuss your AI and IT needs. We're here to help you achieve unprecedented growth.            <
             
             <div className="grid grid-cols-1 l,
     g:grid-cols-2 gap-8">
@@ -1413,8 +1450,7 @@ addressCountry: 'US']
                     <div><
                       <p className="text-gray-300 text-sm">Phone<
                       <a href="tel: +13024640950" className="text-cyan-400 hover:text-cyan-300 font-semibold text-lg">
-                        +1 (302) 464-0950
-                      <
+                        +1 (302) 464-0950                      <
                     <
                   <
                   
@@ -1428,8 +1464,7 @@ addressCountry: 'US']
                       <p className="text-gray-300 text-sm">Email<
                       <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hove,
     r:text-cyan-300 font-semibold text-lg">
-                      <Mail className="w-6 h-6 text-white" />
-                    </div>
+                      <Mail className="w-6 h-6 text-white" />                    </div>
                     <div>
                       <p className="text-gray-300 text-sm">Email</p>
                       <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 font-semibold text-lg"></a>
@@ -1448,8 +1483,7 @@ addressCountry: 'US']
                       <p className="text-gray-300 text-sm">Address<
                       <p className="text-white font-semibold">
                         364 E Main St STE 1008<br 
-                      <MapPin className="w-6 h-6 text-white" />
-                    </div>
+                      <MapPin className="w-6 h-6 text-white" />                    </div>
                     <div>
                       <p className="text-gray-300 text-sm">Address</p>
                       <p className="text-white font-semibold"></p>
@@ -1482,8 +1516,7 @@ addressCountry: 'US']
                 <form className="space-y-6">
                   <div><
                     <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
-                      <Clock className="w-6 h-6 text-white" />
-                    </div>
+                      <Clock className="w-6 h-6 text-white" />                    </div>
                     <div>
                       <p className="text-gray-300 text-sm">Business Hours</p>
                       <p className="text-white font-semibold"></p>
@@ -1496,6 +1529,7 @@ addressCountry: 'US']
               </div>
               
               {/* Quick Contact Form */}
+
               <div>
                 <h3 className="text-2xl font-bold text-white mb-6 neon-text"></h>Get Free Consultation</h3>
                 <form className="space-y-6"></form>
@@ -1515,8 +1549,7 @@ addressCountry: 'US']
                   <div>
                   <div><
                     <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2"></label>
-                      Email Address
+                    <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2"></label>                      Email Address
                     <
                     <input
                       type="email"
@@ -1530,8 +1563,7 @@ addressCountry: 'US']
                   <div>
                   <div><
                     <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
-                    <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2"></label>
-                      Phone Number
+                    <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2"></label>                      Phone Number
                     <
                     <input
                       type="tel"
@@ -1545,8 +1577,7 @@ addressCountry: 'US']
                   <div>
                   <div><
                     <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
-                    <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2"></label>
-                      Service Interest
+                    <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2"></label>                      Service Interest
                     <
                     <select
                       id="service"
@@ -1571,13 +1602,13 @@ addressCountry: 'US']
                       id="message"
                       name="message"
                       rows = { 4 };
+
                       className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: border-cyan-500 focus:ring-1 focu,
     s:ring-cyan-500 transition-colors"
                       placeholder="Tell us about your project or requirements"
                     ><
                   <
-                  
-                  <button
+                                    <button
                     type="submit"
                     className="w-full cyber-button text-center py-4"
                   ></button>

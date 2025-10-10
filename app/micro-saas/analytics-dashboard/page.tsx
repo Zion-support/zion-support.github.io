@@ -1,8 +1,13 @@
 import React from 'react';
+
 import { Helmet } from 'react-helmet-async';
-import { BarChart, TrendingUp, Users, DollarSign, Zap, Target, ArrowRight, CheckCircle, Star, Award, Clock, Shield } from 'lucide-react';
-;
-const AIAnalyticsDashboardPage: React.FC = () => {const features = [
+
+import { BarChart, TrendingUp, Users, DollarSign, Zap, Target, ArrowRight, CheckCircle, Star, Award, Clock, Shield } from 'lucide-react;
+
+';
+
+const AIAnalyticsDashboardPage: React.FC = () => {const features = [;';
+
     {
       ico,
     n: BarChart,
@@ -34,18 +39,25 @@ const AIAnalyticsDashboardPage: React.FC = () => {const features = [
       title: 'Goal Tracking',
 description: 'Monitor KPIs and business objectives with automated alerts.']
     }
+
   ];
+
 ;
-const benefits = [
+
+const benefits = [;;
+
     'Real-time data visualization and reporting',
     'AI-powered predictive analytics',
     'Customizable dashboard widgets',
     'Automated report generation',
     'Multi-platform data integration',
-    'Mobile-responsive design'
+    Mobile-responsive design
   ];
+
 ;
-const metrics = [
+
+const metrics = [;;
+
     { label: 'Data Sources', value: '50+', icon: BarChart },
     { label: 'Update Frequency', value: 'Real-time', icon: Clock },
     { label: 'Accuracy Rate', value: '99.9%', icon: Shield },
@@ -99,6 +111,7 @@ const metrics = [
                   <p className="text-gray-300">{feature.description}<
                 <)
               ))}
+
             <
           <
         <
@@ -122,6 +135,7 @@ const metrics = [
                   <div className="text-gray-300">{metric.label}<
                 <)
               ))}
+
             <
           <
         <
@@ -143,6 +157,7 @@ const metrics = [
                     <span className="text-gray-300 text-lg">{benefit}<
                   <)
                 ))}
+
               <
               <div className="bg-gradient-to-br from-green-600/20 to-cyan-600/20 rounded-lg p-8 border border-green-500/30"><
                 <h3 className="text-2xl font-bold text-white mb-4">Success Stories<

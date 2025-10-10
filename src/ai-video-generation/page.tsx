@@ -6,8 +6,7 @@ import SEOOptimizer from '../components/SEOOptimizer';
 ;
 const AIVideoGenerationPage: React.FC = () => {;
 const features = [
-    'AI Video Creation',
-    'Auto-editing',
+    'AI Video Creation',    'Auto-editing',
     'Voice Synthesis',
     'Text-to-video',
     'Template Library',
@@ -15,23 +14,29 @@ const features = [
     'Multi-language Support',
     'HD
     'Real-time Preview',
-    'Collaboration Tools'
+    Collaboration Tools
   ];
+
 ;
-const benefits = [
+
+const benefits = [;;
+
     '90% time savings',
     'Professional quality',
     'Unlimited videos',
     'Multi-language support',
     'No technical skills needed',
-    'Cost-effective solution'
+    Cost-effective solution
   ];
+
 ;
-const pricingPlans = [
+
+const pricingPlans = [;;
+
     {
       name: 'Starter',
       price: '$199',
-      period: '
+      period: 
       features: ['10 videos
       popula,
     r: false
@@ -39,7 +44,7 @@ const pricingPlans = [
     {
       name: 'Professional',
       price: '$399',
-      period: '
+      period: 
       feature,
     s: ['Unlimited videos', '4K quality', 'Premium templates', 'Voice cloning', 'Priority support'],
       popular: true
@@ -47,19 +52,22 @@ const pricingPlans = [
     {
       name: 'Enterprise',
       price: '$799',
-      period: '
+      period: 
       feature,
     s: ['Everything in Pro', 'Custom templates', 'API access', 'Dedicated support', 'White-label'],
       popular: false
     }
+
   ];
 
   return (
+
     <React.Fragment>
       <SEOOptimizer
         title="AI Video Generator Pro - Create Professional Videos with AI | Zion Tech Group"
         description="Transform your content creation with AI Video Generator Pro. Create professional videos, animations, and presentations with AI-powered editing and voice synthesis. Starting at $199/month."
         keywords={['AI video generation', 'video creation', 'AI editing', 'voice synthesis', 'text to video', 'video automation']}
+
         canonicalUrl="https://ziontechgroup.com/ai-video-generation"
       />
       
@@ -68,8 +76,7 @@ const pricingPlans = [
         
         <main className="container mx-auto px-4 py-16 pt-24">
           {/* Hero Section */}
-          <section className="text-center mb-16">
-            <div className="max-w-4xl mx-auto">
+          <section className="text-center mb-16">            <div className="max-w-4xl mx-auto">
               <div className="flex items-center justify-center mb-6">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mr-4">
                   
@@ -103,6 +110,7 @@ const pricingPlans = [
                   <
                 <)
               ))}
+
             <
           <
 
@@ -120,6 +128,7 @@ const pricingPlans = [
                   <h3 className="text-lg font-semibold text-white mb-2">{benefit}<
                 <)
               ))}
+
             <
           <
 
@@ -130,14 +139,17 @@ const pricingPlans = [
             <
             <div className="grid grid-cols-1 md: grid-cols-3 gap-8 max-w-6xl mx-auto">
               {pricingPlans.map((plan), index) => (
+
                 <div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>
                   {plan.popular && (
+
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1
                       <div className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-semibold">
                         Most Popular
                       <
                     <
                   )}
+
                   <div className="text-center mb-6">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}<
                     <div className="flex items-baseline justify-center">
@@ -152,6 +164,7 @@ const pricingPlans = [
                   <
                 <
               ))}
+
             <
           <
 

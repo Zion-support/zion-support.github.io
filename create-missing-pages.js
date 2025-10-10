@@ -1,34 +1,52 @@
 import fs from 'fs';
+
 import path from 'path';
-import { fileURLToPath } from 'url';
+
+import { fileURLToPath } from 'url;
+
 ;
-const __filename = fileURLToPath(import.meta.url);
+
+const __filename = fileURLToPath(import.meta.url);';
+
 // __dirname removed
-// Read the missing pages from the analysis;
-const analysisData = JSON.parse(fs.readFileSync('/workspace/navigation-analysis.json', 'utf8'));
-const missingPages = analysisData.missingPagesList;
+// Read the missing pages from the analysis';
+
+const analysisData = JSON.parse(fs.readFileSync('/workspace/navigation-analysis.json', 'utf8));;
+
+const missingPages = analysisData.missingPagesList;;
 
 // Template for creating pages;
-const createPageTemplate = (route, title, description, category) => `'use client';
-import React from 'react';
-import { ArrowRight, CheckCircle, Star, Zap, Brain, Cloud, Shield, Code, BarChart, Users, Target, Globe, Settings, FileText, Phone, Mail, MapPin, Clock, Award, TrendingUp, Activity, Database, Cpu, Lock, MessageSquare, Eye, Sparkles, Palette, Camera, Music, Video, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, Truck, Smartphone, ChefHat, Rocket, Sprout, Scale } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
-import PerformanceOptimizer from '../components/PerformanceOptimizer';
-import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
-;
-const ${title.replace(/[^a-zA-Z0-9]/g, '')}Page = () => {
-return (
 
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+const createPageTemplate = (route, title, description, category) => `'use client';;
+
+import React from 'react';
+
+import { ArrowRight, CheckCircle, Star, Zap, Brain, Cloud, Shield, Code, BarChart, Users, Target, Globe, Settings, FileText, Phone, Mail, MapPin, Clock, Award, TrendingUp, Activity, Database, Cpu, Lock, MessageSquare, Eye, Sparkles, Palette, Camera, Music, Video, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, Truck, Smartphone, ChefHat, Rocket, Sprout, Scale } from 'lucide-react';
+
+import Navigation from '../components/Navigation';
+
+import Footer from '../components/Footer';
+
+import SEOOptimizer from '../components/SEOOptimizer';
+
+import PerformanceOptimizer from '../components/PerformanceOptimizer';
+
+import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
+
+';
+
+const ${title.replace(/[^a-zA-Z0-9]/g, '')}Page = () => {
+  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEOOptimizer;
+
         title="${title} - Zion Tech Group"
         description="${description}"
         keywords={['${category}', 'AI', 'Technology', 'Solutions', 'Enterprise']}
+
         canonicalUrl="https://ziontechgroup.com${route}"
       />
 );
+
 }</SEOOptimizer>
       <PerformanceOptimizer /></PerformanceOptimizer>
       <AccessibilityEnhancer enableKeyboardNavigation enableScreenReaderSupport enableHighContrast enableFocusManagement enableSkipLinks></AccessibilityEnhancer>
@@ -43,24 +61,29 @@ return (
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">,
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">,
             ${title}
+
           </h1>
           <p className="text-xl md: text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">,
             ${description}
+
           </p>
           
           <div className="flex flex-col sm: flex-row gap-4 justify-center items-center mb-16">
             <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center">
               Get Started Today;
+
               <ArrowRight className="w-5 h-5 ml-2" />
             </button>
             <button className="border-2 border-cyan-400 text-cyan-400 font-semibold py-4 px-8 rounded-xl hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
               Learn More;
+
             </button>
           </div>
         </div>,
       </section>,
 ,
       {/* Features Section */}
+
       <section className="py-20 px-4 sm: px-6 lg:px-8">,
         <div className="max-w-7xl mx-auto">,
           <div className="text-center mb-16">,
@@ -97,6 +120,7 @@ return (
       </section>
 
       {/* CTA Section */}
+
       <section className="py-16 bg-gradient-to-r from-cyan-500/10 to-purple-500/10">
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">,
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">,
@@ -109,9 +133,11 @@ return (
           <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
             <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
               Get Free Consultation;
+
             </button>
             <button className="border-2 border-cyan-400 text-cyan-400 font-semibold py-4 px-8 rounded-xl hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
               View Pricing;
+
             </button>
           </div>
         </div>
@@ -121,25 +147,35 @@ return (
     </div>)};
 
 export default ${title.replace(/[^a-zA-Z0-9]/g, '')}Page;
+
 `;
 
 // Function to create a page;
-const createPage = (route, title, description, category) => {;
-const pageContent = createPageTemplate(route, title, description, category);
-  const pagePath = path.join('/workspace/src', route, 'page.tsx');
-  
-  // Create directory if it doesn't exist;
-  const dir = path.dirname(pagePath);
+
+const createPage = (route, title, description, category) => {;;
+
+const pageContent = createPageTemplate(route, title, description, category);;
+
+  const pagePath = path.join('/workspace/src', route, 'page.tsx);;
+
+  // Create directory if it doesnt exist;
+
+  const dir = path.dirname(pagePath);;
+
   if (!fs.existsSync(dir)) {
     fs.mkdirSync(dir, { recursive: true })}
-  
+
   // Write the page file;
+
   fs.writeFileSync(pagePath, pageContent);
+
   // console.log removed for production
 };
 
 // Page configurations;
-const pageConfigs = {
+
+const pageConfigs = {;;
+
   '/ai-task-manager': { title: 'AI Task Manager Pro', description: 'Intelligent task management with AI-powered prioritization and productivity insights', category: 'Productivity' },
   '/ai-time-tracker': { title: 'AI Time Tracker Pro', description: 'Advanced time tracking with AI-powered productivity analysis and reporting', category: 'Productivity' },
   '/ai-meeting-assistant': { title: 'AI Meeting Assistant Pro', description: 'AI-powered meeting transcription, action items extraction, and follow-up automation', category: 'Productivity' },
@@ -284,30 +320,42 @@ const pageConfigs = {
   '/space-technology': { title: 'Space Technology', description: 'Space technology solutions and satellite systems', category: 'Space' },
   '/climate-tech': { title: 'Climate Technology', description: 'Climate technology solutions and sustainability', category: 'Climate' },
   '/biotech-it': { title: 'Biotech IT', description: 'Biotechnology IT solutions and systems', category: 'Biotech' }
+
 };
 
 // Create pages in batches;
-let createdCount = 0;
-const batchSize = 10;
+
+let createdCount = 0;;
+
+const batchSize = 10;;
 
 // console.log removed for production
 for (const route of missingPages) {
   if (pageConfigs[route]) {;
-const config = pageConfigs[route];
+
+const config = pageConfigs[route];;
+
     createPage(route, config.title, config.description, config.category);
+
     createdCount++;
-    
+
     if (createdCount % batchSize === 0) {
       // console.log removed for production
 }
+
   } else {
     // Create a generic page for routes without specific configs;
-    const title = route.split('/').pop().replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
-    const description = `Advanced ${title.toLowerCase()} solutions powered by AI and cutting-edge technology`;
-    const category = 'Technology';
-    
+
+    const title = route.split('/').pop().replace(/-/g, ' ).replace(/\b\w/g, l => l.toUpperCase());;
+
+    const description = `Advanced ${title.toLowerCase()} solutions powered by AI and cutting-edge technology`;;
+
+    const category = 'Technology;;
+
     createPage(route, title, description, category);
+
     createdCount++}
+
 }
 
 // console.log removed for production

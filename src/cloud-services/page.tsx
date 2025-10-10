@@ -1,27 +1,36 @@
 import React from 'react';
 
-
-
 import { Link } from 'react-router-dom';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-;
-const CloudServicesPage: React.FC = () => {
-return (
 
+import Navigation from '../components/Navigation';
+
+import Footer from '../components/Footer;
+
+;
+
+const CloudServicesPage: React.FC = () => {
   return (
+
     <div>Coming Soon</div>
 );
+
 }
 
   )};
-  const _services = [
+
+  const _services = [;;
+
   // TOD,
   O: Add items;
-];;
+
+]';
+
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
-};
+
+}';
+
   ico,
   n: Cloud,
       titl,
@@ -32,8 +41,11 @@ return (
   s: ['AWS Migration', 'Azure Migration', 'Google Cloud Migration', 'Zero Downtime']
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+
 };
+
   ico,
   n: Shield,
       titl,
@@ -44,8 +56,11 @@ return (
   s: ['Identity Management', 'Data Encryption', 'Compliance', 'Threat Detection']
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+
 };
+
   ico,
   n: Zap,
       titl,
@@ -56,8 +71,11 @@ return (
   s: ['Load Balancing', 'Resource Optimization', 'Cost Management', 'Performance Monitoring']
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+
 };
+
   ico,
   n: BarChart,
       titl,
@@ -67,18 +85,24 @@ return (
       feature,
   s: ['Real-time Monitoring', 'Cost Analytics', 'Performance Metrics', 'Predictive Insights']
     }
+
   ];
-  const benefits = [
+
+  const benefits = [;;
+
   // TOD,
   O: Add items;
-];;
+
+];
+
 //     '99.9% Uptime Guarantee',
 //     '24/7 Expert Support',
 //     'Cost Optimization',
 //     'Scalable Infrastructure',
 //     'Enhanced Security',
-//     'Global CDN'
+//     Global CDN
   ];
+
   return (<div>Coming Soon</div>)
   )
     
@@ -89,6 +113,7 @@ return (
         <section className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
 // Cloud Services;
+
           </h1>
           <p className="text-xl text-cyan-400 mb-8 font-medium">
             Coming Soon
@@ -98,12 +123,14 @@ return (
               href="tel:+13024640950" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all"
 // >
 //               Get Started Today;
+
           </a>
             <a
               href="/contact" className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all"
 
 // >
 //               Learn More;
+
           </a>
           </div>
         </section>
@@ -123,11 +150,14 @@ return (
           <li key={featureIndex} className="flex items-center text-sm text-gray-300"></li>"
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2" /></CheckCircle>
                       {feature}
+
                     </li>
                   ))}
+
                 </ul>
               </div>
             ))}
+
           </div>
         </section>
         {/* Benefits Section */}"
@@ -144,6 +174,7 @@ return (
                 <p className="text-white font-medium">{benefit}</p>
               </div>
             ))}
+
           </div>
         </section>
         {/* CTA Section */}"
@@ -178,12 +209,14 @@ return (
               href="tel:+13024640950" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all"
 // >
 //               Call (302) 464-0950;
+
           </a>
             <a
               href="/contact" className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all"
 
 // >
 //               Get Free Consultation;
+
           </a>
           </div>
         </section>
@@ -193,7 +226,4 @@ return (
     </div>
   )};
 
-
 export default CloudServicesPage;
-
-

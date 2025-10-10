@@ -7,8 +7,7 @@ export default function CaseStudy(): React.JSX.Element {
       <div className="min-h-screen bg-gradient-to-br from-blue-600 via-blue-700 to-purple-800 text-white"></div>
         <Helmet>
           <title>Fortune 100 Autonomous Operations Transformation 2025 - Zion Tech Group</title>
-          <meta;
-            name="description"
+          <meta;            name="description"
             content="Case study: Fortune 100 Autonomous Operations Transformation 2025 from Zion Tech Group"
           /><
         <

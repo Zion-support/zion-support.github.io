@@ -1,66 +1,92 @@
 import React, { useEffect, useState } from 'react';
 
 interface BeforeInstallPromptEvent extends Event {
-  prompt(): Promise<void>;
+  prompt(): Promise<void>';
+
   userChoice: Promise<{ outcome: 'accepted' | 'dismissed' }>}
+
 ;
+
 const PWAInstaller: React.FC = () => {
-return (
+  return (
+
 ;
+
 const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>
 );
+
 }(null);
+
   const [showInstallButton, setShowInstallButton] = useState(false);
+
   const [isInstalled, setIsInstalled] = useState(false);
 
   useEffect(() => {
     // Check if app is already installed
     if (window.matchMedia('(display-mode: standalone)').matches) {
       setIsInstalled(true);
+
       return}
 
     // Listen for the beforeinstallprompt event;
-const handleBeforeInstallPrompt = (e: Event) => {
+
+const handleBeforeInstallPrompt = (e: Event) => {;;
+
       e.preventDefault();
+
       setDeferredPrompt(e as BeforeInstallPromptEvent);
+
       setShowInstallButton(true)};
 
     // Listen for the appinstalled event;
-const handleAppInstalled = () => {
+
+const handleAppInstalled = () => {;;
+
       setIsInstalled(true);
+
       setShowInstallButton(false);
+
       setDeferredPrompt(null)};
 
-    window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
-    window.addEventListener('appinstalled', handleAppInstalled);
+    window.addEventListener('beforeinstallprompt, handleBeforeInstallPrompt);
+
+    window.addEventListener('appinstalled, handleAppInstalled);
 
     return () => {
-      window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
-      window.removeEventListener('appinstalled', handleAppInstalled)}}, []);
+      window.removeEventListener('beforeinstallprompt, handleBeforeInstallPrompt);
+
+      window.removeEventListener('appinstalled, handleAppInstalled)}}, []);
+
 ;
-const handleInstallClick = async () => {
+
+const handleInstallClick = async () => {;;
+
     if (!deferredPrompt) return;
 
     try {
       await deferredPrompt.prompt();
+
       const { outcome } = await deferredPrompt.userChoice;
-      
+
       if (outcome === 'accepted') {
         // console.log removed for production
 } else {
         // console.log removed for production
 }
-      
+
       setDeferredPrompt(null);
+
       setShowInstallButton(false)} catch (error) {
       // console.error removed for production
 }
+
   };
 
   if (isInstalled || !showInstallButton) {
     return null}
 
   return (
+
     <div className="fixed bottom-4 left-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white p-4 rounded-lg shadow-lg z-50 max-w-sm">
       <div className="flex items-start space-x-3">
         <div className="flex-shrink-0">
@@ -78,6 +104,7 @@ const handleInstallClick = async () => {
           <div className="flex space-x-2">
             <button
               onClick={handleInstallClick}
+
               className="bg-white text-purple-600 text-xs font-medium px-3 py-1.5 rounded hover:bg-white/90 transition-colors duration-200"
             >
               Install
@@ -85,6 +112,7 @@ const handleInstallClick = async () => {
             
             <button
               onClick={() => setShowInstallButton(false)}
+
               className="text-white/70 text-xs px-3 py-1.5 hover:text-white transition-colors duration-200"
             >
               Maybe later
@@ -94,6 +122,7 @@ const handleInstallClick = async () => {
         
         <button
           onClick={() => setShowInstallButton(false)}
+
           className="flex-shrink-0 text-white/70 hover:text-white transition-colors duration-200"
         >
           ×

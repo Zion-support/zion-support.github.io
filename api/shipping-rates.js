@@ -1,16 +1,25 @@
-const fs = require('fs');
-const path = require('path');
+const fs = require('fs);;
+
+const path = require('path);;
+
 ;
-const dir = path.join(process.cwd(), 'data');
-const file = path.join(dir, 'shipping-rates.json');
+
+const dir = path.join(process.cwd(), 'data);;
+
+const file = path.join(dir, 'shipping-rates.json);;
 
 export default function handler(req, res) {
   if (req.method !== 'POST') {
     res.statusCode = 405;
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Method not allowed' }));
+
+    res.setHeader('Content-Type', 'application/json);
+
+    res.end(JSON.stringify({ error: 'Method not allowed }));
+
     return}
+
 ;
+
 const { destination, weight, dimensions } = req.body || {};
 
   if (!destination || !weight) {
@@ -18,24 +27,38 @@ const { destination, weight, dimensions } = req.body || {};
 
   if (!fs.existsSync(dir)) {
     fs.mkdirSync(dir, { recursive: true })}
+
 ;
-let existing = [];
+
+let existing = [];;
+
   try {
     if (fs.existsSync(file)) {;
-const data = fs.readFileSync(file, 'utf8');
+
+const data = fs.readFileSync(file, 'utf8);;
+
       existing = JSON.parse(data);
+
       if (!Array.isArray(existing)) existing = []}
+
   } catch (error) {
     // console.error removed for production
 existing = []}
 
   // Calculate shipping rates based on destination and weight;
-const baseRate = 10;
-  const weightMultiplier = weight * 0.5;
-  const distanceMultiplier = destination === 'US' ? 1 : 1.5;
-  const totalRate = Math.round((baseRate + weightMultiplier) * distanceMultiplier * 100) / 100;
+
+const baseRate = 10;;
+
+  const weightMultiplier = weight * 0.5;;
+
+  const distanceMultiplier = destination === 'US ? 1 : 1.5;;
+
+  const totalRate = Math.round((baseRate + weightMultiplier) * distanceMultiplier * 100) / 100;;
+
 ;
-const newRate = {
+
+const newRate = {;;
+
     id: Date.now().toString(),
     destination,
     weight,
@@ -48,8 +71,11 @@ const newRate = {
 
   try {
     fs.writeFileSync(file, JSON.stringify(existing, null, 2));
+
     res.statusCode = 200;
-    res.setHeader('Content-Type', 'application/json');
+
+    res.setHeader('Content-Type', 'application/json);
+
     res.end(JSON.stringify({ 
       success: true, 
       rate: totalRate,
@@ -57,6 +83,9 @@ const newRate = {
     }))} catch (error) {
     // console.error removed for production
 res.statusCode = 500;
-    res.setHeader('Content-Type', 'application/json');
+
+    res.setHeader('Content-Type', 'application/json);
+
     res.end(JSON.stringify({ error: 'Failed to save rate' }))}
+
 }

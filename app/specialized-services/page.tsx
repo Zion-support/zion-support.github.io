@@ -1,12 +1,20 @@
 'use client';
+
 import React from 'react';
+
 import { Helmet } from 'react-helmet-async';
+
 import Navigation from '../components/Navigation';
+
 import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
+
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react;
+
 const PagePage: React.FC = () => {
-return (;
-const features = [
+return (';
+
+const features = [;';
+
     {
       icon: Brain,
       title: 'AI-Powered Intelligence',
@@ -43,18 +51,21 @@ const features = [
       description: 'Enterprise-grade security to protect your data and operations.',
       benefits: ['End-to-end encryption', 'Access controls', 'Audit trails', 'Compliance support']
     }
+
   ];
 
-  const benefits = [
+  const benefits = [;;
+
     'Transform your business with AI technology',
     'Make data-driven decisions with confidence',
     'Identify trends and opportunities early',
     'Optimize business processes and workflows',
     'Reduce costs through intelligent automation',
-    'Gain competitive advantage with advanced technology'
+    Gain competitive advantage with advanced technology
   ];
 
   return (
+
     <>
       <Helmet>
         <title>Page - Zion Tech Group</title>
@@ -66,6 +77,7 @@ const features = [
         <Navigation />
         
         {/* Hero Section */}
+
         <section className="pt-20 pb-16 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -96,9 +108,11 @@ const features = [
         </div>
       </section>
 );
+
 }
 
         {/* Features Section */}
+
         <section id="features" className="py-20">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
@@ -109,6 +123,7 @@ const features = [
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
+
                 <div key={index} className="bg-slate-800/50 rounded-xl p-8 backdrop-blur-sm border border-white/10 hover:border-cyan-500/50 transition-all duration-300">
                   <div className="bg-cyan-500/20 rounded-full w-12 h-12 flex items-center justify-center mb-6">
                     <feature.icon className="w-6 h-6 text-cyan-400" />
@@ -117,22 +132,26 @@ const features = [
                   <p className="text-gray-300 mb-6">{feature.description}</p>
                   <ul className="space-y-2">
                     {feature.benefits.map((benefit, benefitIndex) => (
+
                       <li key={benefitIndex} className="flex items-center text-gray-300">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
                         <span className="text-sm">{benefit}</span>
                       </li>
                     ))}
+
                   </ul>
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </div>
             ));
+
           </div>
         </div>
       </section>
 
       {/* Benefits Section */}
+
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -146,16 +165,19 @@ const features = [
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {benefits.map((benefit, index) => (
+
               <div key={index} className="flex items-start space-x-3">
                 <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                 <p className="text-gray-300 text-lg">{benefit}</p>
               </div>
             ));
+
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
+
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">

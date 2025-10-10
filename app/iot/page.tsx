@@ -1,8 +1,13 @@
 import React from 'react';
+
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, Wifi, Shield, Zap, Target, BarChart, Cpu, Sparkles } from 'lucide-react';
-;
-const IoTPage: React.FC = () => {const iotServices = [
+
+import { CheckCircle, Star, Wifi, Shield, Zap, Target, BarChart, Cpu, Sparkles } from 'lucide-react;
+
+';
+
+const IoTPage: React.FC = () => {const iotServices = [;';
+
     {
       titl,
     e: 'IoT Device Management Platform',
@@ -39,8 +44,7 @@ const IoTPage: React.FC = () => {const iotServices = [
     },
       technologies: ['OPC UA', 'Modbus', 'Ethernet
     },
-    {
-      title: 'Smart Agriculture Platform',
+    {      title: 'Smart Agriculture Platform',
       description: 'IoT-powered agricultural monitoring and optimization for crop management and livestock tracking.',
       icon: '🌾',
       price: 'Starting at $3,500
@@ -129,8 +133,7 @@ const IoTPage: React.FC = () => {const iotServices = [
     },
       technologies: ['PKI', 'TLS
     },
-    {
-      title: 'IoT Data Analytics Platform',
+    {      title: 'IoT Data Analytics Platform',
       description: 'Advanced analytics platform for IoT data processing, visualization, and insights generation.',
       icon: '📊',
       price: 'Starting at $4,500
@@ -140,11 +143,15 @@ const IoTPage: React.FC = () => {const iotServices = [
       category: 'Analytics',
 technologies: ['Apache Kafka', 'Apache Spark', 'InfluxDB', 'Grafana', 'Machine Learning']]
     }
+
   ];
+
 ;
-const categories = [...new Set(iotServices.map(service => service.category))];
+
+const categories = [...new Set(iotServices.map(service => service.category))];;
 
   return (
+
     <div>
         <title>IoT Services - Zion Tech Group<
         <meta name="description" content="Comprehensive IoT solutions including smart cities, industrial IoT, smart agriculture, and connected device management." 
@@ -170,8 +177,7 @@ const categories = [...new Set(iotServices.map(service => service.category))];
                   Explore IoT Solutions
                 <
                 <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors">
-                  Schedule IoT Consultation
-                <
+                  Schedule IoT Consultation                <
               <
             <
           <
@@ -224,8 +230,7 @@ const categories = [...new Set(iotServices.map(service => service.category))];
         <
 
         {/* Services by Category *
-        {categories.map(category => (
-          <section key={category)} className="py-16 bg-gray-50">
+        {categories.map(category => (          <section key={category)} className="py-16 bg-gray-50">
             <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"><
               <div className="text-center mb-12"><
                 <h2 className="text-3xl m,
@@ -262,8 +267,10 @@ const categories = [...new Set(iotServices.map(service => service.category))];
                           {service.features.map((feature), featureIndex) => (<li key={featureIndex} className="flex items-center text-sm text-gray-600">
                               <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" 
                               {feature}
+
                             <)
                           ))}
+
                         <
                       <
 
@@ -273,8 +280,10 @@ const categories = [...new Set(iotServices.map(service => service.category))];
                           {service.technologies.map((tech), techIndex) => (<
                             <span key={techIndex} className="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">
                               {tech}
+
                             <)
                           ))}
+
                         <
                       <
 
@@ -287,6 +296,7 @@ const categories = [...new Set(iotServices.map(service => service.category))];
                       <
                     <
                   ))}
+
               <
             <
           <
@@ -350,8 +360,7 @@ const categories = [...new Set(iotServices.map(service => service.category))];
             <
             <div className="flex flex-col sm:flex-row gap-4 justify-center"><
             <div>
-              <a 
-                href="tel:+13024640950"
+              <a                 href="tel:+13024640950"
                 className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors inline-flex items-center"
               ></a>
                 📞 +1 302 464 0950

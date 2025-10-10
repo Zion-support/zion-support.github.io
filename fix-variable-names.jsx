@@ -1,4 +1,5 @@
-// const fs = require(, fs'); const path = require(' 'path');function toCamelCase(str) {/* TODO: Fix JSX expression */}
+// const fs = require(, fs'); const path = require(' 'path);function toCamelCase(str) {/* TODO: Fix JSX expression */};;
+
   t: camelCaseName = toCamelCase(filename)} //Replac,
   e: the variable declaration} le,
   t: newContent = content.replace(' new RegExp(`const\\s+${filename.replace(/[.*+?^${ /* empty */ }()|[\]\\]/g,\\$&')}\\\\s*:\\\\s*NextPage\\\\s*=\\\\s*\\\\(\\\\)\\\\s*=>\\\\s*{`,g}' ')'}; `cons,

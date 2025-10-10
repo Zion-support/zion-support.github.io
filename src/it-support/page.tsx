@@ -1,11 +1,19 @@
 'use client';
+
 import React from 'react';
+
 import { ArrowRight, CheckCircle, Headphones, Clock, Shield, Zap, Brain, Target, Users, BarChart, Globe, Phone } from 'lucide-react';
+
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+
+import Footer from '../components/Footer;
+
 ;
-const ITSupportPage: React.FC = () => {;
-const features = [
+
+const ITSupportPage: React.FC = () => {';
+
+const features = [;';
+
     {
       icon: Headphones,
       title: '24/7 Support',
@@ -30,9 +38,11 @@ const features = [
       description: 'Regular maintenance and optimization services',
       benefits: ['Preventive maintenance', 'Performance tuning', 'Updates']
     }
+
   ];
 
   return (
+
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       
@@ -73,26 +83,33 @@ const features = [
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
+
               <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-4 text-center neon-text">
                   {feature.title}
+
                 </h3>
                 <p className="text-gray-300 mb-6 text-center text-sm leading-relaxed">
                   {feature.description}
+
                 </p>
                 <ul className="space-y-2">
                   {feature.benefits.map((benefit, benefitIndex) => (
+
                     <li key={benefitIndex} className="flex items-center text-xs text-gray-300">
                       <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
                       {benefit}
+
                     </li>
                   ))}
+
                 </ul>
               </div>
             ))}
+
           </div>
         </section>
       </main>

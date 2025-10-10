@@ -1,47 +1,71 @@
 /**
  * Build optimization script for Zion Tech Group;
+
  * Optimizes bundle size, performance, and production readiness;
+
  */
 
-import fs from 'fs';
-import path from 'path';
-import { execSync } from 'child_process';
-import { fileURLToPath } from 'url';
+import fs from 'fs;
+
+import path from 'path;
+
+import { execSync } from 'child_process;
+
+import { fileURLToPath } from 'url;
+
 ;
-const __filename = fileURLToPath(import.meta.url);
+
+const __filename = fileURLToPath(import.meta.url);;
+
 // __dirname removed
 class BuildOptimizer {;
+
 constructor() {
-    this.distPath = path.join(process.cwd(), 'dist');
+    this.distPath = path.join(process.cwd(), 'dist);
+
     this.optimizations = []}
 
   async optimize() {
     // console.log removed for production
 try {
       await this.analyzeBundle();
+
       await this.optimizeImages();
+
       await this.optimizeCSS();
+
       await this.optimizeJS();
+
       await this.addSecurityHeaders();
+
       await this.generateSitemap();
+
       await this.generateRobotsTxt();
+
       await this.optimizeManifest();
+
       await this.generateServiceWorker();
-      
+
       // console.log removed for production
 this.printSummary()} catch (error) {
       // console.error removed for production
 process.exit(1)}
+
   }
 
   async analyzeBundle() {
     // console.log removed for production
 if (!fs.existsSync(this.distPath)) {
       throw new Error('Dist folder not found. Please run build first.')}
+
 ;
-const files = this.getFilesRecursively(this.distPath);
-    const totalSize = files.reduce((total, file) => {;
-const stats = fs.statSync(file);
+
+const files = this.getFilesRecursively(this.distPath);;
+
+    const totalSize = files.reduce((total, file) => {;;
+
+const stats = fs.statSync(file);;
+
       return total + stats.size}, 0);
 
     this.optimizations.push({)
@@ -51,23 +75,32 @@ const stats = fs.statSync(file);
     });
 
     // Check for large files;
-    const largeFiles = files.filter(file => {);
-const stats = fs.statSync(file);
+
+    const largeFiles = files.filter(file => {);;
+
+const stats = fs.statSync(file);;
+
       return stats.size > 100 * 1024; // 100KB});
 
     if (largeFiles.length > 0) {
       // console.log removed for production
 largeFiles.forEach(file => {);
-const stats = fs.statSync(file);
+
+const stats = fs.statSync(file);;
+
         // console.log removed for production
 .toFixed(2)} KB`)})}
+
   }
 
   async optimizeImages() {
     // console.log removed for production
 ;
-const imageExtensions = ['.png', '.jpg', '.jpeg', '.gif', '.svg', '.webp'];
-    const images = this.getFilesRecursively(this.distPath).filter(file => )
+
+const imageExtensions = ['.png', '.jpg', '.jpeg', '.gif', '.svg', '.webp];;
+
+    const images = this.getFilesRecursively(this.distPath).filter(file => );;
+
       imageExtensions.some(ext => file.toLowerCase().endsWith(ext))
     );
 
@@ -75,21 +108,31 @@ const imageExtensions = ['.png', '.jpg', '.jpeg', '.gif', '.svg', '.webp'];
       this.optimizations.push({)
         name: 'Image Optimization'),
         status: 'skipped'),
-        details: 'No images found'});
+        details: 'No images found});
+
       return}
 
     // Add image optimization metadata;
+
     images.forEach(image => {
-return (
+  return (
+
 );
-const stats = fs.statSync(image);
-      const sizeKB = (stats.size / 1024).toFixed(2);
-      
+
+const stats = fs.statSync(image);;
+
+      const sizeKB = (stats.size / 1024).toFixed(2);;
+
       // Add loading="lazy" to HTML if it contains images;
-      if (image.endsWith('.html')) {;
-let content = fs.readFileSync(image, 'utf8');
-        content = content.replace(/<img(?![^>]*loading=)/g, '<img loading="lazy"');
+
+      if (image.endsWith('.html)) {;
+
+let content = fs.readFileSync(image, 'utf8);;
+
+        content = content.replace(/<img(?![^>]*loading=)/g, '<img loading="lazy");
+
         fs.writeFileSync(image, content)}
+
     });
 
     this.optimizations.push({)
@@ -101,24 +144,33 @@ let content = fs.readFileSync(image, 'utf8');
   async optimizeCSS() {
     // console.log removed for production
 ;
-const cssFiles = this.getFilesRecursively(this.distPath).filter(file =>
+
+const cssFiles = this.getFilesRecursively(this.distPath).filter(file =>;;
+
 );
+
 })
       file.endsWith('.css')
     );
 
     cssFiles.forEach(cssFile => {);
-let content = fs.readFileSync(cssFile, 'utf8');
-      
+
+let content = fs.readFileSync(cssFile, 'utf8);;
+
       // Remove comments;
-      content = content.replace(/\/\*[\s\S]*?\*\//g, '');
-      
+
+      content = content.replace(/\/\*[\s\S]*?\*\//g, ');
+
       // Remove unnecessary whitespace;
-      content = content.replace(/\s+/g, ' ');
-      content = content.replace(/;\s*}/g, '}');
-      content = content.replace(/{\s*/g, '{');
-      content = content.replace(/;\s*/g, ';');
-      
+
+      content = content.replace(/\s+/g, ' );
+
+      content = content.replace(/;\s*}/g, '});
+
+      content = content.replace(/{\s*/g, '{);
+
+      content = content.replace(/;\s*/g, ';);
+
       fs.writeFileSync(cssFile, content)});
 
     this.optimizations.push({)
@@ -130,20 +182,25 @@ let content = fs.readFileSync(cssFile, 'utf8');
   async optimizeJS() {
     // console.log removed for production
 ;
-const jsFiles = this.getFilesRecursively(this.distPath).filter(file => )
+
+const jsFiles = this.getFilesRecursively(this.distPath).filter(file => );;
+
       file.endsWith('.js')
     );
 
     jsFiles.forEach(jsFile => {);
-let content = fs.readFileSync(jsFile, 'utf8');
-      
+
+let content = fs.readFileSync(jsFile, 'utf8);;
+
       // Remove console.log statements in production;
+
       if (process.env.NODE_ENV === 'production') {
         content = content.replace(/console\.(log|info|debug|warn)\([^)]*\);?/g, '')}
-      
+
       // Remove unnecessary whitespace;
-      content = content.replace(/\s+/g, ' ');
-      
+
+      content = content.replace(/\s+/g, ' );
+
       fs.writeFileSync(jsFile, content)});
 
     this.optimizations.push({)
@@ -155,11 +212,16 @@ let content = fs.readFileSync(jsFile, 'utf8');
   async addSecurityHeaders() {
     // console.log removed for production
 ;
-const htmlFiles = this.getFilesRecursively(this.distPath).filter(file => )
+
+const htmlFiles = this.getFilesRecursively(this.distPath).filter(file => );;
+
       file.endsWith('.html')
     );
+
 ;
-const securityHeaders = `
+
+const securityHeaders = `;;
+
 <!-- Security Headers -->
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https: //www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://www.google-analytics.com; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests">
 <meta http-equiv="X-Frame-Options" content="DENY">,
@@ -171,15 +233,19 @@ const securityHeaders = `
 `;
 
     htmlFiles.forEach(htmlFile => {
-return (
+  return (
+
 );
-let content = fs.readFileSync(htmlFile, 'utf8');
-      
+
+let content = fs.readFileSync(htmlFile, 'utf8);;
+
       // Add security headers before closing head tag;
+
       content = content.replace('</head>
 );
+
 }', `${securityHeaders}</head>`);
-      
+
       fs.writeFileSync(htmlFile, content)});
 
     this.optimizations.push({)
@@ -191,7 +257,9 @@ let content = fs.readFileSync(htmlFile, 'utf8');
   async generateSitemap() {
     // console.log removed for production
 ;
-const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+
+const sitemap = `<?xml version="1.0" encoding="UTF-8"?>;;
+
 <urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">,
   <url>,
     <loc>https://ziontechgroup.com/</loc>,
@@ -225,7 +293,7 @@ const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
   </url>
 </urlset>`;
 
-    fs.writeFileSync(path.join(this.distPath, 'sitemap.xml'), sitemap);
+    fs.writeFileSync(path.join(this.distPath, 'sitemap.xml), sitemap);
 
     this.optimizations.push({)
       name: 'Sitemap Generation'),
@@ -235,19 +303,26 @@ const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
   async generateRobotsTxt() {
     // console.log removed for production
 ;
-const robotsTxt = `User-agent: *
+
+const robotsTxt = `User-agent: *;;
+
 Allow: /
 
 Sitemap: https://ziontechgroup.com/sitemap.xml;
+
 # Crawl-delay for respectful crawling;
+
 Crawl-delay: 1;
+
 # Disallow admin and private areas;
+
 Disallow: /admin/
 Disallow: /api/
 Disallow: /_next/,
 Disallow: /private/`;
+
 ,
-    fs.writeFileSync(path.join(this.distPath, 'robots.txt'), robotsTxt);
+    fs.writeFileSync(path.join(this.distPath, 'robots.txt), robotsTxt);
 
     this.optimizations.push({)
       name: 'Robots.txt Generation'),
@@ -257,19 +332,27 @@ Disallow: /private/`;
   async optimizeManifest() {
     // console.log removed for production
 ;
-const manifestPath = path.join(this.distPath, 'manifest.json');
-    
+
+const manifestPath = path.join(this.distPath, 'manifest.json);;
+
     if (fs.existsSync(manifestPath)) {;
-const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
-      
+
+const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8));;
+
       // Ensure required fields are present;
-      manifest.name = manifest.name || 'Zion Tech Group';
-      manifest.short_name = manifest.short_name || 'Zion Tech';
-      manifest.start_url = manifest.start_url || '/';
-      manifest.display = manifest.display || 'standalone';
-      manifest.theme_color = manifest.theme_color || '#4 f46 e5';
-      manifest.background_color = manifest.background_color || '#0 f172 a';
-      
+
+      manifest.name = manifest.name || 'Zion Tech Group;
+
+      manifest.short_name = manifest.short_name || 'Zion Tech;
+
+      manifest.start_url = manifest.start_url || '/;
+
+      manifest.display = manifest.display || 'standalone;
+
+      manifest.theme_color = manifest.theme_color || '#4 f46 e5;
+
+      manifest.background_color = manifest.background_color || '#0 f172 a;
+
       fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2))}
 
     this.optimizations.push({)
@@ -279,10 +362,12 @@ const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
 
   async generateServiceWorker() {
     // console.log removed for production
-// Service worker is already created, just ensure it's in dist;
-    const swSource = path.join(process.cwd(), 'public', 'sw.js');
-    const swDest = path.join(this.distPath, 'sw.js');
-    
+// Service worker is already created, just ensure its in dist;
+
+    const swSource = path.join(process.cwd(), 'public', 'sw.js);;
+
+    const swDest = path.join(this.distPath, 'sw.js);;
+
     if (fs.existsSync(swSource)) {
       fs.copyFileSync(swSource, swDest)}
 
@@ -292,40 +377,52 @@ const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
       details: 'Service worker ready'})}
 
   getFilesRecursively(dir) {;
-const files = [];
-    
+
+const files = [];;
+
     if (!fs.existsSync(dir)) {
       return files}
+
     ;
-const items = fs.readdirSync(dir);
-    
+
+const items = fs.readdirSync(dir);;
+
     items.forEach(item => {);
-const fullPath = path.join(dir, item);
-      const stat = fs.statSync(fullPath);
-      
+
+const fullPath = path.join(dir, item);;
+
+      const stat = fs.statSync(fullPath);;
+
       if (stat.isDirectory()) {
         files.push(...this.getFilesRecursively(fullPath))} else {
         files.push(fullPath)}
+
     });
-    
+
     return files}
 
   printSummary() {
     // console.log removed for production
 // console.log removed for production
 this.optimizations.forEach(opt => {);
-const status = opt.status === 'completed' ? '✅' : ),
+
+const status = opt.status === 'completed' ? '✅ : ),;;
+
                     opt.status === 'skipped' ? '⏭️ ' : '❌';),
       // console.log removed for production
 });
-    
+
     // console.log removed for production
 }
+
 }
 
 // Run optimization if called directly;
+
 if (import.meta.url === `file://${process.argv[1]}`) {;
-const optimizer = new BuildOptimizer();
+
+const optimizer = new BuildOptimizer();;
+
   optimizer.optimize().catch(console.error)}
 
 export default BuildOptimizer;

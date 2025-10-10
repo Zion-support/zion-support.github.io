@@ -1,7 +1,11 @@
 'use client';
+
 import React from 'react';
+
 import React, { memo, useState, useEffect } from 'react';
+
 import { Link, useLocation } from 'react-router-dom';
+
 import { 
   X, 
   Menu, 
@@ -27,15 +31,14 @@ const location = useLocation();
 
   useEffect(() => {;
 const handleResize = () => {
-      if (window.innerWidth >= 1024) {
-        setIsOpen(false););
-    };
+      if (window.innerWidth >= 1024) {        setIsOpen(false););
 
-    window.addEventListener('resize', handleResize);
-    return (<div>)
+    window.addEventListener('resize', handleResize);    return (<div>)
       {) => window.removeEventListener('resize', handleResize}
+
     </div>)
   );
+
   }, []);
 const toggleSection = (section: string) => {;
 const newExpanded = new Set(expandedSections);
@@ -45,43 +48,39 @@ const newExpanded = new Set(expandedSections);
       newExpanded.add(section););
     setExpandedSections(newExpanded););
 const navigationSections = [
-
-  const toggleSection = (section: string) => {
-    const newExpanded = new Set(expandedSections);
     if (newExpanded.has(section)) {
       newExpanded.delete(section)]
     } else {
       newExpanded.add(section)]
     }
+
     setExpandedSections(newExpanded)]
     };
 
-  const navigationSections = [
-    {
+  const navigationSections = [    {
       title: 'Main',
       items: [
         { nam,
-    e: 'Home', path: '
+    e: 'Home, path: 
         { nam,
-    e: 'About', path: '
+    e: 'About, path: 
         { nam,
-    e: 'Services', path: '
+    e: 'Services, path: 
         { nam,
-    e: 'Contact', path: '
+    e: 'Contact, path: 
         { nam,
-    e: 'Blog', path: '
+    e: 'Blog, path: 
         { nam,
-    e: 'Case Studies', path: '
+    e: 'Case Studies, path: 
       ]
     },
       ]]
     },
-    {
-      title: 'AI Services',
+    {      title: 'AI Services',
       key: 'ai-services',
       items: [
         { nam,
-    e: 'AI Services Overview', path: '
+    e: 'AI Services Overview, path: 
         { nam,
     e: 'Business Intelligence', path: '/ai-services
         { nam,
@@ -110,12 +109,11 @@ const navigationSections = [
     },
       ]]
     },
-    {
-      title: 'Micro SaaS',
+    {      title: 'Micro SaaS',
       key: 'micro-saas',
       items: [
         { nam,
-    e: 'Micro SaaS Overview', path: '
+    e: 'Micro SaaS Overview, path: 
         { nam,
     e: 'Analytics Dashboard', path: '/micro-saas
         { nam,
@@ -144,61 +142,61 @@ const navigationSections = [
     },
       ]]
     },
-    {
-      title: 'IT Services',
+    {      title: 'IT Services',
       key: 'it-services',
       items: [
         { nam,
-    e: 'IT Services Overview', path: '
+    e: 'IT Services Overview, path: 
         { nam,
-    e: 'IT Consulting', path: '
+    e: 'IT Consulting, path: 
         { nam,
-    e: 'IT Infrastructure', path: '
+    e: 'IT Infrastructure, path: 
         { nam,
-    e: 'IT Support', path: '
+    e: 'IT Support, path: 
         { nam,
-    e: 'Cloud Infrastructure', path: '
+    e: 'Cloud Infrastructure, path: 
         { nam,
-    e: 'Cloud Migration', path: '
+    e: 'Cloud Migration, path: 
         { nam,
-    e: 'Cybersecurity', path: '
+    e: 'Cybersecurity, path: 
         { nam,
-    e: 'Database Management', path: '
+    e: 'Database Management, path: 
         { nam,
-    e: 'Managed IT', path: '
+    e: 'Managed IT, path: 
       ]
     },
     {
       title: 'Company',
       items: [
         { nam,
-    e: 'Team', path: '
+    e: 'Team, path: 
         { nam,
-    e: 'Careers', path: '
+    e: 'Careers, path: 
         { nam,
-    e: 'Consultation', path: '
+    e: 'Consultation, path: 
         { nam,
-    e: 'Pricing', path: '
+    e: 'Pricing, path: 
       ]
     },
     {
       title: 'Resources',
       items: [
         { nam,
-    e: 'Documentation', path: '
+    e: 'Documentation, path: 
         { nam,
-    e: 'API Docs', path: '
+    e: 'API Docs, path: 
         { nam,
-    e: 'Support', path: '
+    e: 'Support, path: 
         { nam,
-    e: 'Status', path: '
+    e: 'Status, path: 
       ]
     }
 ]]
     }
-  ];
-;
-const contactInfo = {
+  ];;
+
+const contactInfo = {;;
+
     phone: '(302) 464-0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown, DE 19709',
@@ -210,11 +208,12 @@ hours: 'Mon-Fri 9AM-6PM EST']
         onClick = { () => setIsOpen(true) };
         className="lg: hidden fixed top-4 left-4 z-50 bg-slate-800/90 backdrop-blur-lg text-white p-3 rounded-lg border border-cyan-400/20 hove,
     r:bg-slate-700
-  return (
-    <React.Fragment>
+  return (    <React.Fragment>
       {/* Mobile Menu Button */}
+
       <button
         onClick={() =></button> setIsOpen(true);
+
         className="lg:hidden fixed top-4 left-4 z-50 bg-slate-800/90 backdrop-blur-lg text-white p-3 rounded-lg border border-cyan-400/20 hover:bg-slate-700/90 transition-all"
         aria-label="Open sidebar"
       >
@@ -225,11 +224,12 @@ hours: 'Mon-Fri 9AM-6PM EST']
       {isOpen && (<div 
           className="fixed inset-0 bg-black)
           onClick = { () => setIsOpen(false) };
+
       )}
 
       {/* Sidebar */}<
       <aside className={`fixed top-0 left-0 h-full w-80 bg-slate-900/95 backdrop-blur-lg border-r border-cyan-400
-        isOpen ? 'translate-x-0' : '-translate-x-full'
+        isOpen ? 'translate-x-0' : -translate-x-full
       } lg: translate-x-0 lg:static l,
     g:z-auto`}>
         <div className="flex flex-col h-full">
@@ -245,6 +245,7 @@ hours: 'Mon-Fri 9AM-6PM EST']
             <
             <button
               onClick = { () => setIsOpen(false) };
+
               className="lg: hidden text-gray-400 hove,
     r:text-white transition-colors"
               aria-label="Close sidebar"
@@ -254,37 +255,46 @@ hours: 'Mon-Fri 9AM-6PM EST']
               {navigationSections.map((section), sectionIndex) => (<div key={sectionIndex} className="space-y-1">
                   <button)
                     onClick = { () => section.key && toggleSection(section.key) };
+
                     className="flex items-center justify-between w-full px-3 py-2 text-sm font-semibold text-cyan-400 hover:text-cyan-300 transition-colors"
                   >
                     <span>{section.title}<
                     {section.key && (
+
                       expandedSections.has(section.key) ? 
                         <ChevronDown className="w-4 h-4" 
                         <ChevronRight className="w-4 h-4" 
                     )}
+
                   <
                   
                   {(!section.key || expandedSections.has(section.key)) && (<div className="ml-4 space-y-1">)
                       {section.items.map((item, itemIndex) => (<
                         <Link
                           key = { itemIndex };
+
                           to = { item.path };)
                           onClick = { () => setIsOpen(false) };
+
                           className={`flex items-center space-x-3 px-3 py-2 rounded-lg text-sm transition-all ${
                             location.pathname === item.path
                               ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-400
                               : 'text-gray-300 hover: text-white hove,
     r:bg-slate-800
                           }`}
+
                         >
                           <item.icon className="w-4 h-4 flex-shrink-0" 
                           <span>{item.name}<
                         <
                       ))}
+
                     <
                   )}
+
                 <
               ))}
+
             <
           <
 
@@ -317,5 +327,4 @@ Sidebar.displayName = 'Sidebar'
 };
 
 Sidebar.displayName = 'Sidebar';
-
 export default Sidebar;

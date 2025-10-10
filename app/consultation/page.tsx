@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+
 import { Helmet } from 'react-helmet-async';
 import { Calendar, Clock, Users, CheckCircle, ArrowRight, Phone, Mail, MapPin, Star } from 'lucide-react';
 import { ArrowRight, CheckCircle, Phone, Mail, MapPin } from 'lucide-react';
@@ -37,7 +38,6 @@ const ConsultationPage: React.FC = () => {
     'IT Infrastructure Review',
     'Technology Roadmap Development'
   ];
-
   const consultationTypes: ConsultationType[] = [
     {
       id: '1',
@@ -74,29 +74,7 @@ const ConsultationPage: React.FC = () => {
       description: 'Detailed technical analysis and architecture recommendations',
       duration: '4 hours',
       price: '$1,200',
-      features: [
-        'Business needs assessment',
-        'Technology audit',
-        'Solution recommendations',
-        'Next steps planning'
-      ],
-      popular: false});;)
-},
-    {
-      id: '2',
-      name: 'Strategic Planning',
-      description: 'Comprehensive technology strategy development for your organization',
-      duration: '2-4 hours',
-      price: '$500',
-      features: [
-        'Detailed technology roadmap',
-        'Risk assessment',
-        'Implementation timeline',
-        'Budget planning',
-        'ROI analysis'
-      ],
-      popular: true});;)
-},
+      features: [},
     {
       id: '3',
       name: 'Technical Deep Dive',
@@ -126,17 +104,16 @@ const ConsultationPage: React.FC = () => {
         'Competitive advantages'
       ]
       ],
-      popular: false});;)
-}
+      popular: false});;)}
+
   ];
 
-  const experts = [
-    {
+  const experts = [    {
       name: 'Dr. Sarah Chen',
       role: 'AI & Machine Learning Consultant',
       experience: '15+ years',
       expertise: ['AI Strategy', 'Machine Learning', 'Data Science'],
-      image: '/images/experts/sarah-chen.jpg'});;)
+      image: '/images/experts/sarah-chen.jpg'});)
 },
     {
       name: 'Michael Rodriguez',
@@ -145,12 +122,11 @@ const ConsultationPage: React.FC = () => {
       expertise: ['Cloud Migration', 'AWS', 'Azure', 'DevOps'],
       image: '/images/experts/michael-rodriguez.jpg'
     },
-    {
-      name: 'Alex Thompson',
+    {      name: 'Alex Thompson',
       role: 'Cybersecurity Consultant',
       experience: '10+ years',
       expertise: ['Security Audits', 'Compliance', 'Risk Management'],
-      image: '/images/experts/alex-thompson.jpg'});;)
+      image: '/images/experts/alex-thompson.jpg'});)
 }
   ];
 
@@ -160,22 +136,25 @@ const ConsultationPage: React.FC = () => {
     }
   ];
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {    const { name, value } = e.target;
+
     setFormData(prev => ({
       ...prev,
       [name]: value
     }));
+
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {;;
+
     e.preventDefault();
+
     // Handle form submission
     console.log('Form submitted:', formData);
   };
-
 const PagePage: React.FC = () => {
   return (
+
     <>
       <Helmet>
         <title>Consultation - Zion Tech Group | Expert AI & IT Consulting</title>
@@ -194,8 +173,7 @@ const PagePage: React.FC = () => {
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-        <section className="pt-24 pb-16 px-4">
-          <div className="max-w-7xl mx-auto text-center">
+        <section className="pt-24 pb-16 px-4">          <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
                 Page
@@ -230,8 +208,7 @@ const PagePage: React.FC = () => {
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold text-white mb-4">Choose Your Consultation Type</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Select the consultation that best fits your needs and budget
-              </p>
+                Select the consultation that best fits your needs and budget              </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="tel:+13024640950"
@@ -498,19 +475,21 @@ const PagePage: React.FC = () => {
                   364 E Main St STE 1008<br />
                   Middletown, DE 19709
                 </p>
-              </div>
-              </div>
+              </div>              </div>
             ));
+
           </div>
         </div>
       </section>
 
       {/* Expert Team */}
+
       <section className="py-16 px-4 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Meet Our Experts</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {experts.map((expert, index) => (
+
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center hover:bg-white/20 transition-all duration-300">
                 <div className="w-24 h-24 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center">
                   <span className="text-2xl font-bold text-white">{expert.name.split(' ').map(n => n[0]).join('')}</span>
@@ -520,10 +499,13 @@ const PagePage: React.FC = () => {
                 <p className="text-gray-400 text-sm mb-4">{expert.experience}</p>
                 <div className="flex flex-wrap justify-center gap-2">
                   {expert.expertise.map((skill, skillIndex) => (
+
                     <span key={skillIndex} className="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-xs">
                       {skill}
+
                     </span>
                   ))}
+
                 </div>
               </div>
             ))}
@@ -535,8 +517,7 @@ const PagePage: React.FC = () => {
   );
 };
 
-export default ConsultationPage;
-      <section className="py-16 px-4">
+export default ConsultationPage;      <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-6">Ready to Get Started?</h2>
           <p className="text-xl text-gray-300 mb-8">
@@ -544,8 +525,7 @@ export default ConsultationPage;
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 flex items-center justify-center">
-              <Calendar className="mr-2 h-5 w-5" />
-              Schedule Now
+              <Calendar className="mr-2 h-5 w-5" />              Schedule Now
             </button>
             <button></button>
               <Mail className="mr-2 h-5 w-5" />
@@ -555,7 +535,15 @@ export default ConsultationPage;
         </div>
       </section>
     </div>
+                <
+              <
+            <
+          <
+        <
+      <
+    <)
   );
+
 };
 
 export default PagePage;

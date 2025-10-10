@@ -1,27 +1,39 @@
 'use client';
+
 import React, { useState } from 'react';
+
 import { Helmet } from 'react-helmet-async';
-import { ChevronDown, ChevronUp } from 'lucide-react';
+
+import { ChevronDown, ChevronUp } from 'lucide-react;
+
 ;
+
 const FAQPage: React.FC = () => {
 return (;
+
 const [openItems, setOpenItems] = useState<number[]>
 );
+
 }([]);
+
 ;
-const toggleItem = (index: number) => {
+
+const toggleItem = (index: number) => {;;
+
     setOpenItems(prev => 
       prev.includes(index) 
         ? prev.filter(item => item !== index)
         : [...prev, index]);
-;
-const faqs = [
+
+';
+
+const faqs = [;';
+
     {
       questio,
     n: "What services does Zion Tech Group offer?",
       answer: "We offer comprehensive AI-powered solutions including enterprise AI, quantum computing, autonomous systems, digital transformation, cloud services, cybersecurity, and custom micro SaaS applications."
-    },
-    {
+    },    {
       question: "How can AI benefit my business?",
       answer: "AI can automate repetitive tasks, provide data-driven insights, improve customer experience, enhance security, optimize operations, and drive innovation. Our solutions typically deliver 300% ROI within the first year."
     },
@@ -44,11 +56,11 @@ const faqs = [
     {
       question: "What technologies do you use?",
       answer: "We use cutting-edge technologies including React, TypeScript, Python, TensorFlow, PyTorch, AWS, Azure, Docker, Kubernetes, and various AI
-    },
-    {
+    },    {
       question: "What industries do you serve?",
       answer: "We serve a wide range of industries including healthcare, finance, e-commerce, manufacturing, education, real estate, legal, and more. Our solutions are tailored to meet industry-specific requirements and compliance standards."
     }
+
   ];
 
   return (<div>
@@ -67,53 +79,6 @@ const faqs = [
               services, and how we can help transform your business.
             <
           <
-
-        <section className="py-16 px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="space-y-6">)
-              {faqs.map((faq, index) => (<div
-                  key = { index };
-                  className="bg-white/10 backdrop-blur-lg rounded-lg p-6 border border-white
-                >
-                  <h3 className="text-xl font-semibold text-white mb-3">
-                    {faq.question}
-                  <
-                  <p className="text-gray-300 leading-relaxed">
-                    {faq.answer}
-                  <
-                <)
-              ))}
-            <
-
-            <div className="mt-16 text-center">
-              <h2 className="text-3xl font-bold text-white mb-6">
-                Still have questions?
-              <
-              <p className="text-xl text-gray-300 mb-8">
-                Our team is here to help. Contact us for personalized assistance.
-              <
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">
-                <a
-                  href="
-                  className="bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-cyan-700 transition-colors"
-                >
-                  Contact Us
-                <
-                <a
-                  href="
-                  className="bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hove,
-    r:bg-purple-700 transition-colors"
-                >
-                  Free Consultation
-                <
-              <
-            <
-          <
-        <
-      <
-    <
-    </React.Fragment>)
-  );
 };
 
 export default FAQPage;

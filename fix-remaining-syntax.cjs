@@ -1,65 +1,81 @@
+#!/usr/bin/env node
+
 const fs = require('fs');
 const path = require('path');
-const glob = require('glob');
 
-// Find all files with syntax errors
-const files = glob.sync('app/**/*.{tsx,ts}', { cwd: __dirname });
-
-let fixedCount = 0;
-
-files.forEach(file => {
-  const filePath = path.join(__dirname, file);
-  let content = '';
+// Function to fix remaining syntax issues
+function fixRemainingSyntax(content) {
+  // Remove stray semicolons and quotes
+  content = content.replace(/^';$/gm, '');
+  content = content.replace(/^;$/gm, '');
   
+  // Fix unterminated string literals
+  content = content.replace(/['"]([^'"]*);$/gm, (match, p1) => {
+    if (match.includes('import') || match.includes('from')) {
+      return match.replace(/;$/, "';");
+    }
+    return match;
+  });
+  
+  // Fix malformed function declarations
+  content = content.replace(/const\s+(\w+)\s*=\s*\(\s*\)\s*=>\s*{\s*return\s*\(\s*$/gm, 'const $1 = () => {\n  return (\n');
+  
+  // Fix missing closing braces
+  content = content.replace(/\{\s*return\s*\(\s*$/gm, '{\n  return (\n');
+  
+  // Fix duplicate return statements
+  content = content.replace(/return\s*\(\s*\n\s*return\s*\(/g, 'return (');
+  
+  // Clean up extra newlines
+  content = content.replace(/\n\n\n+/g, '\n\n');
+  
+  return content;
+}
+
+// Function to fix specific file
+function fixFile(filePath) {
   try {
-    content = fs.readFileSync(filePath, 'utf8');
+    let content = fs.readFileSync(filePath, 'utf8');
+    const originalContent = content;
+    
+    content = fixRemainingSyntax(content);
+    
+    if (content !== originalContent) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed remaining syntax in: ${filePath}`);
+      return true;
+    }
+    
+    return false;
   } catch (error) {
-    console.log(`Could not read file: ${file}`);
-    return;
+    console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
   }
-  
-  let originalContent = content;
-  
-  // Fix common syntax errors
-  content = content
-    // Fix extra closing braces
-    .replace(/}\s*},\s*{/g, '},\n    {')
-    .replace(/}\s*},\s*$/g, '}\n  ]')
-    // Fix array syntax errors
-    .replace(/;\s*\)\s*}/g, ']\n    }')
-    .replace(/;\s*\)\s*,/g, '],')
-    .replace(/;\s*\)\s*$/g, ']')
-    // Fix object syntax errors
-    .replace(/;\s*\)\s*}/g, ']\n    }')
-    .replace(/;\s*\)\s*,/g, '],')
-    // Fix JSX syntax errors
-    .replace(/<title><\/titl>/g, '<title>')
-    .replace(/<span><\/spa>/g, '<span>')
-    .replace(/<h2><\/h>/g, '<h2>')
-    .replace(/<h3><\/h3>/g, '<h3>')
-    .replace(/<div><\/div>/g, '<div>')
-    // Fix function syntax errors
-    .replace(/}\s*}\s*},/g, '}\n  },\n')
-    .replace(/}\s*}\s*$/g, '}\n  }')
-    // Fix import syntax errors
-    .replace(/import\s*{\s*([^}]+)\s*;\s*\)\s*}/g, 'import { $1 }')
-    // Fix other common issues
-    .replace(/,\s*;\s*\)/g, ']')
-    .replace(/,\s*;\s*$/g, ']')
-    .replace(/;\s*\)\s*$/g, ']')
-    .replace(/;\s*\)\s*,/g, '],')
-    .replace(/;\s*\)\s*}/g, ']\n    }')
-    // Fix specific patterns
-    .replace(/}\s*},\s*{/g, '},\n    {')
-    .replace(/}\s*},\s*$/g, '}\n  ]')
-    .replace(/}\s*}\s*},/g, '}\n  },\n')
-    .replace(/}\s*}\s*$/g, '}\n  }');
-  
-  if (content !== originalContent) {
-    console.log(`Fixed syntax errors in: ${file}`);
-    fs.writeFileSync(filePath, content);
-    fixedCount++;
-  }
-});
+}
 
-console.log(`Fixed syntax errors in ${fixedCount} files`);
+// Main function
+function main() {
+  console.log('Fixing remaining syntax issues...');
+  
+  const filesToFix = [
+    'App_minimal.tsx', 
+    'App_test.tsx',
+    'EnhancedFooter.tsx',
+    'EnhancedHeader.tsx',
+    'SidebarNavigation.tsx'
+  ];
+  
+  let fixedCount = 0;
+  
+  filesToFix.forEach(filePath => {
+    if (fs.existsSync(filePath)) {
+      if (fixFile(filePath)) {
+        fixedCount++;
+      }
+    }
+  });
+  
+  console.log(`Fixed remaining syntax in ${fixedCount} files`);
+}
+
+main();

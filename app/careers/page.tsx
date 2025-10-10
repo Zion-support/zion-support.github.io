@@ -206,8 +206,7 @@ const CareersPage: React.FC = () => {
   const regularPositions = filteredPositions.filter(position => !position.featured);
       id: '1',
       title: 'Senior AI Engineer',
-      department: 'AI Solutions',
-      location: 'Remote',
+      department: 'AI Solutions',      location: 'Remote',
       type: 'Full-time',
       experience: '5+ years',
       description: 'Lead the development of cutting-edge AI solutions and machine learning models for enterprise clients.',
@@ -216,16 +215,17 @@ const CareersPage: React.FC = () => {
         'Expertise in Python, TensorFlow, PyTorch',
         'Experience with cloud platforms (AWS, Azure, GCP)',
         'Strong understanding of deep learning algorithms',
-        'Previous experience in production AI systems'
+        Previous experience in production AI systems
       ],
       benefits: [
         'Competitive salary: $120,000 - $180,000',
         'Equity participation',
         'Flexible remote work',
-        'Professional development budget'
+        Professional development budget
       ],
       posted: '2 days ago',
       featured: true});
+
 },
     {
       id: '2',
@@ -235,11 +235,13 @@ const CareersPage: React.FC = () => {
       type: 'Full-time',
       experience: '7+ years',
       description: 'Design and implement scalable cloud infrastructure solutions for enterprise clients.',
-      requirements: ['AWS, Azure, GCP', '7+ years cloud experience', 'Architecture certifications']});;)
+      requirements: ['AWS, Azure, GCP', '7+ years cloud experience', 'Architecture certifications']});)
 }
+
   ];
 
-  const benefits = [
+  const benefits = [;;
+
     'Competitive salary and equity',
     'Comprehensive health insurance',
     'Flexible work arrangements',
@@ -249,60 +251,65 @@ const CareersPage: React.FC = () => {
     'Career growth opportunities',
     '401k matching program',
     'Unlimited PTO',
-    'Mental health support'
+    Mental health support
   ];
 
-  const values = [
+  const values = [;;
+
     {
       icon: Lightbulb,
       title: 'Innovation',
       description: 'We push the boundaries of what\'s possible with technology',
-      color: 'text-yellow-400'});;)
+      color: 'text-yellow-400'});)
 },
     {
       icon: Users,
       title: 'Collaboration',
       description: 'We work together to achieve extraordinary results',
-      color: 'text-blue-400'});;)
+      color: 'text-blue-400'});)
 },
     {
       icon: Target,
       title: 'Excellence',
       description: 'We strive for the highest quality in everything we do',
-      color: 'text-green-400'});;)
+      color: 'text-green-400'});)
 },
     {
       icon: Heart,
       title: 'Integrity',
       description: 'We build trust through transparency and honesty',
-      color: 'text-red-400'});;)
+      color: 'text-red-400'});)
 }
+
   ];
 
-  const culture = [
+  const culture = [;;
+
     {
       stat: '98%',
       label: 'Employee Satisfaction',
-      description: 'Our team loves working here'});;)
+      description: 'Our team loves working here'});)
 },
     {
       stat: '50+',
       label: 'Team Members',
-      description: 'Growing team of experts'});;)
+      description: 'Growing team of experts'});)
 },
     {
       stat: '15+',
       label: 'Countries',
-      description: 'Global remote team'});;)
+      description: 'Global remote team'});)
 },
     {
       stat: '4.9/5',
       label: 'Glassdoor Rating',
-      description: 'Highly rated workplace'});;)
+      description: 'Highly rated workplace'});)
 }
+
   ];
 
   return (
+
     <>
       <Helmet>
         <title>Careers - Zion Tech Group | Join Our Team</title>
@@ -316,8 +323,7 @@ const CareersPage: React.FC = () => {
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-        <section className="pt-24 pb-16 px-4">
-          <div className="max-w-7xl mx-auto text-center">
+        <section className="pt-24 pb-16 px-4">          <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
                 Page
@@ -423,26 +429,12 @@ const CareersPage: React.FC = () => {
                       <ArrowRight className="w-4 h-4" />
                     </button>
                   </div>
-                ))}
-        {/* Features Section */}
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-3xl font-bold text-white mb-12 text-center">Why Choose Our Page Services?</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <CheckCircle className="w-8 h-8 text-white" />
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold text-white mb-6">Our Values</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                These core values guide everything we do and shape our company culture.
-              </p>
+                ))}              </p>
             </div>
 
             <div></div>
               {values.map((value, index) => (
+
                 <div></div>
                   <div></div>
                     <value.icon className="w-8 h-8" />
@@ -558,8 +550,7 @@ const CareersPage: React.FC = () => {
                 </div>
                 <h3 className="text-xl font-bold text-white mb-4">Comprehensive Benefits</h3>
                 <p className="text-gray-300">Enjoy competitive compensation, health benefits, flexible work arrangements, and professional development opportunities.</p>
-              </div>
-            </div>
+              </div>            </div>
           </div>
         </section>
 
@@ -579,15 +570,15 @@ const CareersPage: React.FC = () => {
                 </button>
                 <button className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors">
                   Learn About Our Culture
-                </button>
-                <div
+                </button>                <div
                   key={position.id}
+
                   className={`bg-white/10 backdrop-blur-lg rounded-2xl p-8 border ${
                     position.featured ? 'border-purple-400 shadow-2xl shadow-purple-500/25' : 'border-white/20'
                   } hover:border-purple-400 transition-all duration-300 group`}
-                >
-                <div></div>
+                >                <div></div>
                   {position.featured && (
+
                     <div></div>
                       <Star className="w-5 h-5 text-yellow-400 fill-current" />
                       <spa></spa>Featured Position</span>
@@ -602,36 +593,19 @@ const CareersPage: React.FC = () => {
                       <p className="text-cyan-400 font-medium">{position.department}</p>
                     </div>
                     <span className="px-3 py-1 bg-purple-500/20 text-purple-400 text-sm rounded-full">
-                    <span></span>
-                      {position.type}
+                    <span></span>                      {position.type}
+
                     <
                   <
 
                   <p className="text-gray-300 mb-6">{position.description}</p>
-
-                  <div className="flex items-center gap-4 mb-6 text-sm text-gray-400">
-                    <div className="flex items-center gap-1">
-                      <MapPin className="w-4 h-4" 
-                      <span>{position.location}<
-                    <
-                    <div className="flex items-center gap-1">
-                      <Clock className="w-4 h-4" />
-                      <spa></spa>{position.experience}</span>
-                    </div>
-                    <div></div>
-                      <Users className="w-4 h-4" />
-                      <spa></spa>Posted {position.posted}</span>
-                    </div>
-                  </div>
-
-                          {req}
-                        <)
-                      ))}
                       {position.requirements.length > 3 && (
+
                         <li className="text-sm text-gray-400">
                           +{position.requirements.length - 3} more requirements
                         </li>
                       )}
+
                     </ul>
                   </div>
 
@@ -646,47 +620,11 @@ const CareersPage: React.FC = () => {
                   </div>
                 </div>
               ))}
+
             </div>
                 </div>
               ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-16 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-slate-800/30 backdrop-blur-sm border border-slate-700 rounded-2xl p-8 md:p-12">
-              <h2 className="text-3xl font-bold text-white mb-4">
-                Ready to Get Started?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Contact our experts to discuss your Page needs and get a customized solution.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="tel:+13024640950"
-                  className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-purple-400 text-slate-900 px-8 py-4 rounded-lg font-semibold hover:from-cyan-300 hover:to-purple-300 transition-all duration-300"
-                >
-                  <Phone className="w-5 h-5" />
-                  Call Now
-                </a>
-                <a
-                  href="mailto:kleber@ziontechgroup.com"
-                  className="inline-flex items-center gap-2 bg-slate-700 text-white px-8 py-4 rounded-lg font-semibold border border-slate-600 hover:bg-slate-600 transition-all duration-300"
-                >
-                  <Mail className="w-5 h-5" />
-                  Email Us
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-    </>
-  );
-  );
-  ));)
+            </div>  ));)
 };
 
 export default CareersPage;

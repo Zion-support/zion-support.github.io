@@ -1,12 +1,18 @@
 import React from 'react';
+
 import { Link } from 'react-router-dom';
+
 import Navigation from '../components
 import Footer from '../components
 import SEOOptimizer from '../components
-import { Calendar, ArrowRight, TrendingUp, Users, Award, Globe, Zap, Brain, Shield, Code, BarChart, MessageSquare, Eye, Cpu, Target, Lock, BarChart3, FileText, Search, Bot, Calculator, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Clock3, Compass, PieChart, TrendingDown, Activity } from 'lucide-react';
+import { Calendar, ArrowRight, TrendingUp, Users, Award, Globe, Zap, Brain, Shield, Code, BarChart, MessageSquare, Eye, Cpu, Target, Lock, BarChart3, FileText, Search, Bot, Calculator, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Clock3, Compass, PieChart, TrendingDown, Activity } from 'lucide-react;
+
 ;
-const NewsPage: React.FC = () => {;
-const newsArticles = [
+
+const NewsPage: React.FC = () => {';
+
+const newsArticles = [;';
+
     {
       i,
     d: 1,
@@ -16,7 +22,7 @@ const newsArticles = [
       category: 'Product Launch',
       image: '📊',
       featured: true,
-      readTime: '5 min read'
+      readTime: 5 min read
     },
     {
       id: 2,
@@ -27,7 +33,7 @@ const newsArticles = [
       category: 'Success Story',
       image: '💰',
       featured: true,
-      readTime: '8 min read'
+      readTime: 8 min read
     },
     {
       id: 3,
@@ -38,7 +44,7 @@ const newsArticles = [
       category: 'Technology',
       image: '⚡',
       featured: false,
-      readTime: '6 min read'
+      readTime: 6 min read
     },
     {
       id: 4,
@@ -49,7 +55,7 @@ const newsArticles = [
       category: 'Innovation',
       image: '🤖',
       featured: false,
-      readTime: '7 min read'
+      readTime: 7 min read
     },
     {
       id: 5,
@@ -60,7 +66,7 @@ const newsArticles = [
       category: 'Security',
       image: '🔒',
       featured: false,
-      readTime: '4 min read'
+      readTime: 4 min read
     },
     {
       id: 6,
@@ -71,25 +77,34 @@ const newsArticles = [
       category: 'Product Launch',
       image: '🛠️',
       featured: false,
-      readTime: '5 min read'
+      readTime: 5 min read
     }
+
   ];
+
 ;
-const categories = ['All', 'Product Launch', 'Success Story', 'Technology', 'Innovation', 'Security'];
+
+const categories = ['All', 'Product Launch', 'Success Story', 'Technology', 'Innovation', 'Security];;
+
 ;
-const stats = [
+
+const stats = [;;
+
     { icon: Users, number: '100+', label: 'Happy Clients' },
     { icon: Award, number: '50+', label: 'Awards Won' },
     { icon: TrendingUp, number: '300%', label: 'Average ROI' },
     { icon: Globe, number: '25+', label: 'Countries Served' }
+
   ];
 
   return (
+
     <React.Fragment>
       <SEOOptimizer
         title="News & Updates - Zion Tech Group"
         description="Stay updated with the latest news, product launches, and success stories from Zion Tech Group. Discover our AI innovations and enterprise transformations."
         keywords={['AI news', 'technology updates', 'product launches', 'success stories', 'enterprise AI', 'innovation']}
+
         canonicalUrl="https://ziontechgroup.com/news"
       />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -97,8 +112,7 @@ const stats = [
         
         <main className="container mx-auto px-4 py-16 pt-24">
           {/* Hero Section */}
-          <section className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
+          <section className="text-center mb-16">            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
               News & Updates
             <
             <p className="text-xl text-cyan-400 mb-8">
@@ -119,6 +133,7 @@ const stats = [
                   <div className="text-gray-300">{stat.label}<
                 <)
               ))}
+
             <
           <
 
@@ -135,15 +150,18 @@ const stats = [
                       <div className="flex items-center gap-2 mb-2">
                         <span className="bg-cyan-500 text-slate-900 px-3 py-1 rounded-full text-sm font-semibold">
                           {article.category}
+
                         <
                         <span className="text-gray-400 text-sm">{article.readTime}<
                       <
                       <div className="flex items-center text-gray-400 text-sm">
                         
                     {article.title}
+
                   <
                   <p className="text-gray-300 mb-6 leading-relaxed">
                     {article.excerpt}
+
                   <
                   
                     Read More
@@ -160,15 +178,18 @@ const stats = [
                       <div className="flex items-center gap-2 mb-2">
                         <span className="bg-purple-500 text-white px-2 py-1 rounded text-xs font-semibold">
                           {article.category}
+
                         <
                         <span className="text-gray-400 text-xs">{article.readTime}<
                       <
                       <div className="flex items-center text-gray-400 text-xs">
                         
                     {article.title}
+
                   <
                   <p className="text-gray-300 text-sm mb-4 leading-relaxed">
                     {article.excerpt}
+
                   <
                   
                     Read More

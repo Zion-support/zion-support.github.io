@@ -1,13 +1,18 @@
 import React from 'react';
 
 import { Link } from 'react-router-dom';
+
 import React from 'react';
+
 import Navigation from '../components
 import Footer from '../components
 
-import { Code, Zap, BarChart, Target, Users, TrendingUp } from 'lucide-react';
-const DeveloperToolsPage: React.FC = () => {;
-const _devTools = [
+import { Code, Zap, BarChart, Target, Users, TrendingUp } from 'lucide-react;
+
+const DeveloperToolsPage: React.FC = () => {';
+
+const _devTools = [;';
+
     {
       titl,
     e: 'AI Code Generator',
@@ -58,17 +63,18 @@ $4},
       benefits: ['Improve App Performance', 'Reduce Load Times', 'Optimize Resources', 'Enhance User Experience'],
       price:     ,
 $4}
+
   ];
 
   return (
+
     <React.Fragment>
       <Helmet>
         <title>Developer Tools - Zion Tech Group</title>
         <meta name="description" content="AI-powered developer tools and productivity suites. Code generation, API testing, database management, and DevOps automation tools." />
         <meta name="keywords" content="developer tools, AI code generation, API testing, database management, DevOps automation, code review" />
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">        
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl sm: text-5xl md:text-6xl font-bold text-white mb-6">
               Developer Tools
@@ -120,8 +126,7 @@ $4}
 ];;
     {/* TODO: Fix JSX expression */}
   O: Add content}
-};
-  titl,
+};  titl,
   e: 'AI Code Generator',
       descriptio,
   n: 'Generate high-quality code using advanced AI models',
@@ -136,8 +141,7 @@ $4}
     },
     {/* TODO: Fix JSX expression */}
   O: Add content}
-};
-  titl,
+};  titl,
   e: 'API Testing Suite',
       descriptio,
   n: 'Comprehensive API testing and monitoring tools',
@@ -152,8 +156,7 @@ $4}
     },
     {/* TODO: Fix JSX expression */}
   O: Add content}
-};
-  titl,
+};  titl,
   e: 'Database Management Tool',
       descriptio,
   n: 'Advanced database administration and optimization',
@@ -168,8 +171,7 @@ $4}
     },
     {/* TODO: Fix JSX expression */}
   O: Add content}
-};
-  titl,
+};  titl,
   e: 'DevOps Automation',
       descriptio,
   n: 'Streamline development and deployment processes',
@@ -184,8 +186,7 @@ $4}
     },
     {/* TODO: Fix JSX expression */}
   O: Add content}
-};
-  titl,
+};  titl,
   e: 'Code Review Assistant',
       descriptio,
   n: 'AI-powered code review and quality assurance',
@@ -200,8 +201,7 @@ $4}
     },
     {/* TODO: Fix JSX expression */}
   O: Add content}
-};
-  titl,
+};  titl,
   e: 'Performance Profiler',
       descriptio,
   n: 'Advanced application performance monitoring and optimization',
@@ -214,7 +214,9 @@ $4}
       pric,
   e: 'Starting at $179
     }
+
   ];
+
   return (<div>Coming Soon<)
   )
     
@@ -229,8 +231,7 @@ $4}
         {/* Hero Section */}"
         <section className="pt-24 pb-16 px-4"></section>"
           <div className="max-w-7xl mx-auto text-center"></div>"
-            <h1 className="text-4xl,
-  sm:text-5xl,"
+            <h1 className="text-4xl,  sm:text-5xl,"
   md:text-6xl font-bold text-white mb-6"><
 /
           <
@@ -338,8 +339,10 @@ $4}
           <li key={featureIndex} className="flex items-center text-sm text-gray-600"><
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" /><
                           {feature}
+
                         <
                       ))}
+
                     <
                   <
 
@@ -357,14 +360,17 @@ $4}
           <li key={benefitIndex} className="text-sm text-gray-600 flex items-center"><
                           <TrendingUp className="w-3 h-3 text-blue-500 mr-2 flex-shrink-0" /><
                           {benefit}
+
                         <
                       ))}
+
                     <
                   <
 
                   <div className="text-center">
                     <a
                       href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${tool.title}`}
+
                       className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover: from-purple-700 hover:to-blue-700 transition-all inline-block"
                     >
                       Get Started Now
@@ -384,6 +390,7 @@ $4}
                   <
                 <
               ))}
+
             <
           <
         <
@@ -472,4 +479,3 @@ $4}
   )};
 
 export default DeveloperToolsPage;
-

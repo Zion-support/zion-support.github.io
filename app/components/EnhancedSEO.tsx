@@ -4,14 +4,13 @@ import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 ;
 const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
+    'Advanced AI technology integration',    'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
     'Scalable and flexible solutions',
     '24
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
-    'Proven track record of success'
+    Proven track record of success
   ];
 
   return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -73,7 +72,6 @@ const benefits = [
           </div>
         </div>
       </section>
-
       {/* Benefits Section *
       <section className="py-20 px-4 sm: px-6 lg:px-8 bg-white
         <div className="max-w-7xl mx-auto">
@@ -88,6 +86,7 @@ const benefits = [
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {benefits.map((benefit, index) => (
+
               <div key={index} className="flex items-start space-x-3">
                 <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                 <p className="text-gray-300 text-lg">{benefit}</p>
@@ -96,7 +95,6 @@ const benefits = [
           </div>
         </div>
       </section>
-
       {/* CTA Section *
       <section className="py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">

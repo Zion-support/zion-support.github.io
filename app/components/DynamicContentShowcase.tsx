@@ -1,30 +1,44 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, Clock, Award, Play, Pause, ChevronLeft, ChevronRight } from 'lucide-react';
+
+import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, Clock, Award, Play, Pause, ChevronLeft, ChevronRight } from 'lucide-react;
 
 interface Feature {
   icon: React.ComponentType<any>;
+
   title: string;
+
   description: string;
+
   stats?: {
     value: string;
+
     label: string;
+
   }[];
+
 }
 
 interface Testimonial {
   name: string;
+
   company: string;
+
   role: string;
+
   content: string;
+
   rating: number;
+
   avatar?: string;
+
 }
 
 const DynamicContentShowcase: React.FC = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isPlaying, setIsPlaying] = useState(true);
+  const [currentIndex, setCurrentIndex] = useState(0)';
+
+  const [isPlaying, setIsPlaying] = useState(true)';
 
   const features: Feature[] = [
     {
@@ -35,6 +49,7 @@ const DynamicContentShowcase: React.FC = () => {
         { value: '95%', label: 'Accuracy' },
         { value: '10x', label: 'Faster' },
         { value: '24/7', label: 'Learning' }
+
       ]
     },
     {
@@ -45,6 +60,7 @@ const DynamicContentShowcase: React.FC = () => {
         { value: '< 100ms', label: 'Response' },
         { value: '99.9%', label: 'Uptime' },
         { value: '10M+', label: 'Requests' }
+
       ]
     },
     {
@@ -55,6 +71,7 @@ const DynamicContentShowcase: React.FC = () => {
         { value: '256-bit', label: 'Encryption' },
         { value: 'SOC 2', label: 'Compliance' },
         { value: 'Zero', label: 'Breaches' }
+
       ]
     },
     {
@@ -65,11 +82,14 @@ const DynamicContentShowcase: React.FC = () => {
         { value: '50+', label: 'Countries' },
         { value: '15+', label: 'Languages' },
         { value: '24/7', label: 'Support' }
+
       ]
     }
+
   ];
 
-  const benefits = [
+  const benefits = [;;
+
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -77,7 +97,7 @@ const DynamicContentShowcase: React.FC = () => {
     '24/7 technical support',
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
-    'Proven track record of success'
+    Proven track record of success
   ];
 
   const testimonials: Testimonial[] = [
@@ -109,35 +129,47 @@ const DynamicContentShowcase: React.FC = () => {
       content: 'Seamless integration with our existing systems. The scalability and performance exceeded our expectations.',
       rating: 5
     }
+
   ];
 
   useEffect(() => {
     if (!isPlaying) return;
-    
-    const timer = setInterval(() => {
+
+    const timer = setInterval(() => {;;
+
       setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+
     }, 4000);
-    
+
     return () => clearInterval(timer);
+
   }, [isPlaying, testimonials.length]);
 
-  const nextTestimonial = () => {
+  const nextTestimonial = () => {;;
+
     setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+
   };
 
-  const prevTestimonial = () => {
+  const prevTestimonial = () => {;;
+
     setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+
   };
 
-  const togglePlayPause = () => {
+  const togglePlayPause = () => {;;
+
     setIsPlaying(!isPlaying);
+
   };
 
-  const currentTestimonial = testimonials[currentIndex];
+  const currentTestimonial = testimonials[currentIndex];;
 
   return (
+
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 min-h-screen">
       {/* Hero Section */}
+
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -161,6 +193,7 @@ const DynamicContentShowcase: React.FC = () => {
       </section>
 
       {/* Features Section */}
+
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -174,35 +207,41 @@ const DynamicContentShowcase: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
+
               <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-purple-400 transition-all duration-300 group">
                 <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mb-6">
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors">
                   {feature.title}
+
                 </h3>
                 <p className="text-gray-300 mb-6">{feature.description}</p>
                 
                 {feature.stats && (
+
                   <div className="grid grid-cols-3 gap-4">
                     {feature.stats.map((stat, statIndex) => (
+
                       <div key={statIndex} className="text-center">
                         <div className="text-lg font-bold text-white">{stat.value}</div>
                         <div className="text-gray-400 text-xs">{stat.label}</div>
                       </div>
                     ))}
+
                   </div>
                 )}
+
               </div>
             ))}
+
           </div>
         </div>
       </section>
 
       {/* Testimonials Section */}
       <section className="py-16 px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
+        <div className="max-w-6xl mx-auto">          <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-white mb-6">What Our Customers Say</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Don't just take our word for it. Here's what our satisfied customers have to say about their experience.
@@ -270,15 +309,13 @@ const DynamicContentShowcase: React.FC = () => {
                   }`}
                 />
               ))}
-            </div>
-          </div>
+            </div>          </div>
         </div>
       </section>
 
       {/* Benefits Section */}
       <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+        <div className="max-w-7xl mx-auto">          <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-white mb-6">Comprehensive Benefits</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our solutions provide a complete package of benefits designed to accelerate your business growth.
@@ -315,13 +352,13 @@ const DynamicContentShowcase: React.FC = () => {
               </button>
               <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-200">
                 Schedule Demo
-              </button>
-            </div>
+              </button>            </div>
           </div>
         </div>
       </section>
     </div>
   );
+
 };
 
 export default DynamicContentShowcase;

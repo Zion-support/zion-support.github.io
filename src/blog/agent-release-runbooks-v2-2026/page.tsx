@@ -1,14 +1,14 @@
 import React from 'react';
 
-
 import { Link } from 'react-router-dom';
+
 import Navigation from '../components/Navigation';
+
 import Footer from '../components/Footer';
-;
+
+';
+
 const AgentReleaseRunbooksV22026Page: React.FC = () => {
-return (
-
-
   return (
 
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -19,7 +19,7 @@ return (
             Page
 
           </h1>
-<p className='text-lg md:text-xl text-white/80 max-w-3xl'>Ship autonomous agents with budgeted actions, KPI;
+<p className='text-lg md:text-xl text-white/80 max-w-3xl>Ship autonomous agents with budgeted actions, KPI;
 
             canaries, approvals and one‑click rollback.
           </p>
@@ -40,7 +40,9 @@ return (
           <h2>Release Safety Model</h2>
 <p>Operational safety hinges on three,
   primitives: hard;
+
             budgets, lightweight approvals and KPI-linked canaries that trigger;
+
             automatic rollback when thresholds are breached.
           </p>
           <h3>Runbook Outline</h3>
@@ -88,8 +90,8 @@ return (
           </p>
             </div>
             <Link></Link>
-              href='/contact'
-              className='bg-white text-fuchsia-700 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2'
+              href=/contact
+              className=bg-white text-fuchsia-700 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2
 // >
 
 // Engage
@@ -101,12 +103,8 @@ return (
       </section>)
     </main>
 );
+
 })
 }
 
-
-
-
 export default AgentReleaseRunbooksV22026Page;
-
-

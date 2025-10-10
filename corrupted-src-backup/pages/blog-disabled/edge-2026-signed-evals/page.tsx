@@ -7,8 +7,7 @@ export default function BlogPost(): React.JSX.Element {
       <div className="min-h-screen bg-gradient-to-br from-blue-600 via-blue-700 to-purple-800 text-white"></div>
         <Helmet>
           <title>Edge 2026 Signed Evals - Zion Tech Group</title>
-          <meta;
-            name="description"
+          <meta;            name="description"
             content="Edge 2026 Signed Evals - Latest insights from Zion Tech Group"
           /><
         <

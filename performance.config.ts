@@ -3,7 +3,7 @@
  * Comprehensive performance monitoring and optimization settings;
  */
 
-export const performanceConfig = {
+export const performanceConfig = {;
   // Core Web Vitals thresholds;
   webVitals: {,
     lcp: {,
@@ -27,13 +27,13 @@ export const performanceConfig = {
 
   // Resource loading priorities;
   resourceHints: {,
-    preconnect: ['https://fonts.googleapis.com', 'https: //fonts.gstatic.com'],
-    dnsPrefetch: ['https://www.google-analytics.com', 'https: //www.googletagmanager.com']},
+    preconnect: ['https://fonts.googleapis.com', 'https: //fonts.gstatic.com'],'
+    dnsPrefetch: ['https://www.google-analytics.com', 'https: //www.googletagmanager.com']},'
 
   // Lazy loading configuration;
   lazyLoading: {,
-    imagePlaceholder: 'blur',
-    rootMargin: '50px',
+    imagePlaceholder: 'blur','
+    rootMargin: '50px','
     threshold: 0.01;
     enableNativeLazyLoading: true},
 
@@ -61,7 +61,7 @@ export const performanceConfig = {
     reportInterval: 30000, // 30 seconds;
     enableLongTaskDetection: true;
     enableMemoryMonitoring: true;
-export const performanceConfig = {/* TODO: Fix JSX expression */}
+export const performanceConfig = {/* TODO: Fix JSX expression */};
     },
     fi,
   d: {/* TODO: Fix JSX expression */}

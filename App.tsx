@@ -18,50 +18,47 @@ import EnhancedAccessibility from './app/components/EnhancedAccessibility';
 import { usePerformanceMonitor } from './app/hooks/usePerformanceMonitor';
 import AnalyticsProvider from './app/components/AnalyticsProvider';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
-import SecurityEnhancer from './app/components/SecurityEnhancer';
-
-// Lazy load pages
-const HomePage = React.lazy(() => import('./app/page'));
-
-// Lazy load pages for better performance;
-const App: React.FC = () => {
-  return (
-    <HelmetProvider>
-      <Router>
-        <div className="min-h-screen bg-gray-50">
-          <Suspense fallback={<div className="flex items-center justify-center min-h-screen">Loading...</div>}>
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-            </Routes>
-          </Suspense>
-        </div>
-      </Router>
-    </HelmetProvider>
-const AboutPage = React.lazy(() => import('./app/about/page'));
+import SecurityEnhancer from './app/components/SecurityEnhancer';const AboutPage = React.lazy(() => import('./app/about/page'));
 const ContactPage = React.lazy(() => import('./app/contact/page'));
-const ServicesPage = React.lazy(() => import('./app/services/page'));
-const PricingPage = React.lazy(() => import('./app/pricing/page'));
-const BlogPage = React.lazy(() => import('./app/blog/page'));
-const CaseStudiesPage = React.lazy(() => import('./app/case-studies/page'));
-const CareersPage = React.lazy(() => import('./app/careers/page'));
-const PartnersPage = React.lazy(() => import('./app/partners/page'));
-const SupportPage = React.lazy(() => import('./app/support/page'));
-const FAQPage = React.lazy(() => import('./app/faq/page'));
-const DemoPage = React.lazy(() => import('./app/demo/page'));
-const ConsultationPage = React.lazy(() => import('./app/consultation/page'));
-const MicroSaasPage = React.lazy(() => import('./app/micro-saas/page'));
-const AiServicesPage = React.lazy(() => import('./app/ai-services/page'));
-const ItServicesPage = React.lazy(() => import('./app/it-services/page'));
+
+const ServicesPage = React.lazy(() => import('./app/services/page'))
+
+const PricingPage = React.lazy(() => import('./app/pricing/page'))
+
+const BlogPage = React.lazy(() => import('./app/blog/page'))
+
+const CaseStudiesPage = React.lazy(() => import('./app/case-studies/page'))
+
+const CareersPage = React.lazy(() => import('./app/careers/page'))
+
+const PartnersPage = React.lazy(() => import('./app/partners/page'))
+
+const SupportPage = React.lazy(() => import('./app/support/page'))
+
+const FAQPage = React.lazy(() => import('./app/faq/page'))
+
+const DemoPage = React.lazy(() => import('./app/demo/page'))
+
+const ConsultationPage = React.lazy(() => import('./app/consultation/page'))
+
+const MicroSaasPage = React.lazy(() => import('./app/micro-saas/page'))
+
+const AiServicesPage = React.lazy(() => import('./app/ai-services/page'))
+
+const ItServicesPage = React.lazy(() => import('./app/it-services/page'))
 
 // Performance monitoring hook
 const AppWithPerformanceMonitoring: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   usePerformanceMonitor();
+
   return <React.Fragment>{children}</React.Fragment>;
+
 };
 
 // Main App Component
 const App: React.FC = () => {
   return (
+
     <ErrorBoundary>
       <HelmetProvider>
         <SEOHead />
@@ -111,6 +108,7 @@ const App: React.FC = () => {
       </HelmetProvider>
     </ErrorBoundary>
   );
+
 };
 
 export default App;

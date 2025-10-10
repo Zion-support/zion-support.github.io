@@ -1,10 +1,17 @@
 'use client';
+
 import React, { Suspense, lazy } from 'react';
+
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
 import { HelmetProvider } from 'react-helmet-async';
+
 import ErrorBoundary from './components/ErrorBoundary';
+
 import PerformanceMonitor from './components/PerformanceMonitor';
+
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+
 import LoadingSpinner from './components/LoadingSpinner';
 
 // Lazy load pages for better performance;
@@ -58,17 +65,20 @@ const ApiDocsPage = lazy(() => import('./api-docs/page'))
 const SupportPage = lazy(() => import('./support/page'))
 const StatusPage = lazy(() => import('./status/page'))
 const ConsultationPage = lazy(() => import('./consultation/page'))
-
 // Loading component;
-const AppLoadingSpinner = () => (
+
+const AppLoadingSpinner = () => (;;
+
   <LoadingSpinner 
     size="xl" 
     text="Loading Zion Tech Group..." 
     fullScreen 
   />
 );
+
 const App: React.FC = () => {
   return (
+
     <ErrorBoundary>
       <HelmetProvider>
         <BrowserRouter>
@@ -78,6 +88,7 @@ const App: React.FC = () => {
             <Suspense fallback={<AppLoadingSpinner />}>
               <Routes>
                 {/* Main Pages */}
+
                 <Route path="/" element={<HomePage />} />
                 <Route path="/about" element={<AboutPage />} />
                 <Route path="/contact" element={<ContactPage />} />
@@ -92,6 +103,7 @@ const App: React.FC = () => {
                 <Route path="/cookies" element={<CookiesPage />} />
 
                 {/* AI Services */}
+
                 <Route path="/ai-services" element={<AiServicesPage />} />
                 <Route path="/ai-marketing" element={<AiMarketingPage />} />
                 <Route path="/ai-automation" element={<AiAutomationPage />} />
@@ -106,6 +118,7 @@ const App: React.FC = () => {
                 <Route path="/ai-data-visualization" element={<AiDataVisualizationPage />} />
 
                 {/* IT Services */}
+
                 <Route path="/it-services" element={<ItServicesPage />} />
                 <Route path="/it-infrastructure" element={<ItInfrastructurePage />} />
                 <Route path="/it-support" element={<ItSupportPage />} />
@@ -113,6 +126,7 @@ const App: React.FC = () => {
                 <Route path="/cybersecurity" element={<CybersecurityPage />} />
 
                 {/* Emerging Technologies */}
+
                 <Route path="/blockchain" element={<BlockchainPage />} />
                 <Route path="/quantum-computing" element={<QuantumComputingPage />} />
                 <Route path="/iot-edge-computing" element={<IoTEdgeComputingPage />} />
@@ -120,9 +134,11 @@ const App: React.FC = () => {
                 <Route path="/autonomous-systems" element={<AutonomousSystemsPage />} />
 
                 {/* Micro SaaS */}
+
                 <Route path="/micro-saas" element={<MicroSaasPage />} />
 
                 {/* Support Pages */}
+
                 <Route path="/docs" element={<DocsPage />} />
                 <Route path="/api-docs" element={<ApiDocsPage />} />
                 <Route path="/support" element={<SupportPage />} />
@@ -135,5 +151,7 @@ const App: React.FC = () => {
       </HelmetProvider>
     </ErrorBoundary>
   );
+
 }
+
 export default App;

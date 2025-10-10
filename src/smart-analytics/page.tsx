@@ -1,11 +1,17 @@
 import React from 'react';
+
 import {BarChart, Target, Zap, Brain, Shield, CheckCircle, Star, Phone, Mail, MapPin, Users} from 'lucide-react';
+
 import { Link } from 'react-router-dom';
 
-import React from 'react';
+import React from 'react;
+
 ;
-const SmartAnalyticsPage: React.FC = () => {;
-const features = [
+
+const SmartAnalyticsPage: React.FC = () => {';
+
+const features = [;';
+
     {
       icon: BarChart,
       title: 'Real-time Dashboards',
@@ -33,9 +39,13 @@ iconicon: Shield,
       description: 'Bank-level security with data encryption, access controls, and compliance with industry standards.',
       benefit:     ,
 $4}
+
   ];
+
 ;
-const pricingPlans = [
+
+const pricingPlans = [;;
+
       name: 'Starter',
       price: '$299',
       period: '/month',
@@ -45,7 +55,7 @@ const pricingPlans = [
         'Basic dashboards',
         'Email support',
         'Standard reports',
-        '1 user account'
+        1 user account
       ],
       popular: false
       name: 'Professional',
@@ -57,7 +67,7 @@ const pricingPlans = [
         'Priority support',
         'Up to 10 user accounts',
         'API access',
-        'Advanced reporting'
+        Advanced reporting
       popular: true
       name: 'Enterprise',
       price: 'Custom',
@@ -69,12 +79,14 @@ const pricingPlans = [
         '24/7 phone support',
         'Unlimited users',
         'White-label options',
-        'SLA guarantee'
+        SLA guarantee
 
   return (
+
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
+
         <section className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
             Smart Analytics
@@ -98,12 +110,14 @@ const pricingPlans = [
         </section>
 
         {/* Features Section */}
+
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
             Powerful Analytics Features
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
+
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
                 <div className="flex items-center mb-4">
                   <feature.icon className="w-8 h-8 text-cyan-400 mr-3" />
@@ -113,20 +127,26 @@ const pricingPlans = [
             ))}
 
         {/* Pricing Section */}
+
             Simple, Transparent Pricing
           <div className="grid md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
+
               <div
                 key={index}
+
                 className={`bg-white/10 backdrop-blur-sm rounded-lg p-8 border ${
-                  plan.popular ? 'border-cyan-500' : 'border-gray-600'
+                  plan.popular ? 'border-cyan-500' : border-gray-600
                 } relative`}
+
                 {plan.popular && (
+
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-cyan-500 text-white px-4 py-1 rounded-full text-sm font-medium">
                       Most Popular
                     </span>
                 )}
+
                 <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                 <p className="text-gray-300 mb-4">{plan.description}</p>
                 <div className="mb-6">
@@ -134,30 +154,39 @@ const pricingPlans = [
                   <span className="text-gray-400">{plan.period}</span>
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIndex) => (
+
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                       {feature}
+
                     </li>
                 </ul>
                   className={`w-full block text-center py-3 rounded-lg font-semibold transition-colors ${
                     plan.popular
-                      ? 'bg-cyan-600 text-white hover:bg-cyan-700'
-                      : 'bg-gray-600 text-white hover:bg-gray-700'
+                      ? bg-cyan-600 text-white hover:bg-cyan-700
+                      : bg-gray-600 text-white hover:bg-gray-700
                   }`}
+
                   Get Started
 
         {/* CTA Section */}
+
         <section className="text-center bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl p-12">
 
 
 
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom;
+
 const SmartAnalyticsPage: React.FC = () => {;
-const features = [];
+
+const features = [];';
+
   return (
+
     {// TODO: Add content}
 
-};
+}';
+
   ico,
   n: BarChart,
       titl,
@@ -165,7 +194,7 @@ const features = [];
       descriptio,
   n: 'Monitor your business performance with live dashboards that update automatically and provide instant insights.',
       benefi,
-  t: 'Make decisions 10x faster'
+  t: Make decisions 10x faster
     },
 
       icon: Brain,
@@ -175,12 +204,14 @@ const features = [];
 
 
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-;
-const PagePage: React.FC = () => {
-return (
 
+import Footer from '../components/Footer';
+
+';
+
+const PagePage: React.FC = () => {
   return (
+
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
@@ -199,16 +230,20 @@ return (
       <Footer />
     </div>
 );
+
 }
 
       icon: Shield,
       title: 'Enterprise Security',
       description: 'Bank-level security with data encryption, access controls, and compliance with industry standards.',
-      benefit: '100% data protection'
+      benefit: 100% data protection
 
     }
+
   ];
-  const pricingPlans = [
+
+  const pricingPlans = [;;
+
       nam,
   e: 'Professional',
       pric,
@@ -216,9 +251,11 @@ return (
       descriptio,
   n: 'Advanced analytics for growing businesses',
                 {plan.popular && ()}
+
           <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>"
                     <span className="bg-cyan-500 text-white px-4 py-1 rounded-full text-sm font-medium"></span>
 // Most Popular;
+
           </span>
                 )}"
                 <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>"
@@ -231,40 +268,38 @@ return (
           <li key={featureIndex} className="flex items-center text-gray-300"></li>"
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" /></CheckCircle>
                       {feature}
+
                     </li>
                 </ul>
                   className={`w-full block text-center py-3 rounded-lg font-semibold transition-colors ${}
+
   // TOD,
   O: Add content}
+
 //                     plan.popular;
+
                       ? 'bg-cyan-600 text-white,
-  hover:bg-cyan-700'
+  hover:bg-cyan-700
                       : 'bg-gray-600 text-white,
   hover:bg-gray-700'`
                   }`}
-                  Get Started;
-        {/* CTA Section */}
-        
-          
-          
-          
-          
-          
-          
-          
 
-          
+                  Get Started;
+
+        {/* CTA Section */}
+
           <section className="text-center bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl p-12">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Transform Your Data?
           <p className="text-xl text-cyan-100 mb-8 max-w-2xl mx-auto">
             Join thousands of businesses that have revolutionized their decision-making with our smart analytics platform.
-              className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-              className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors"
+              className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors"
               Get Free Demo
 
               className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors" Get Free Demo;
+
         {/* Contact Info */}
+
         <section className="mt-16 text-center">
           <div className="bg-white/5 backdrop-blur-sm rounded-lg p-8 border border-cyan-500/20">
             <h3 className="text-2xl font-bold text-white mb-6">Get in Touch</h3>
@@ -278,15 +313,14 @@ return (
                   kleber@ziontechgroup.com
                 <MapPin className="w-5 h-5 mr-2 text-cyan-400" />
 +1 (302) 464-0950;
+
                 <Mail className="w-5 h-5 mr-2 text-cyan-400" />
                 <a href="mailto:kleber@ziontechgroup.com" className="hover:text-white transition-colors">
                   kleber@ziontechgroup.com;
+
                 <MapPin className="w-5 h-5 mr-2 text-cyan-400" />
 
                 <span>364 E Main St STE 1008, Middletown DE 19709</span>
   )};
 
-
 export default SmartAnalyticsPage;
-
-

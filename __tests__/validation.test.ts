@@ -1,5 +1,4 @@
 import { validateEmail, validatePassword, validateName, validatePhone, validateURL, validateMessage, validateCompanyName, validateForm } from '../app/utils/validation';
-
 describe('Validation Functions', () => {
   describe('Email Validation', () => {
     test('validates correct email formats', () => {

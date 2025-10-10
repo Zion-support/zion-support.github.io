@@ -1,5 +1,7 @@
 'use client';
+
 import React from 'react';
+
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components
 import Footer from '../components
@@ -11,9 +13,9 @@ const PagePage: React.FC = () => {const features = [
       description: 'Description of feature 1',
       benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
-
 const PagePage: React.FC = () => {
-  const features = [
+  const features = [;';
+
     {
       ico,
     n: Brain,
@@ -38,30 +40,7 @@ const PagePage: React.FC = () => {
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-import { CheckCircle, ArrowRight } from 'lucide-react';
-
-const PagePage: React.FC = () => {
-  const features = [
-    {
-      title: 'Feature 1',
-      description: 'Description of feature 1',
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
-    },
-    {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Scale your solutions globally with intelligent distribution.',
-      benefits: ['Global deployment', 'Edge computing', 'Load balancing', 'Geographic optimization']
-    },
-    {
-      title: 'Feature 3',
-      description: 'Description of feature 3',
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
-    }
-  ];
-const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
+import { CheckCircle, ArrowRight } from 'lucide-react';    'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
       icon: Shield,
@@ -69,18 +48,20 @@ const benefits = [
       description: 'Enterprise-grade security to protect your data and operations.',
       benefits: ['End-to-end encryption', 'Access controls', 'Audit trails', 'Compliance support']
     }
+
   ];
 
-  const benefits = [
+  const benefits = [;;
+
     'Transform your business with AI technology',
     'Make data-driven decisions with confidence',
     'Identify trends and opportunities early',
     'Optimize business processes and workflows',
     'Reduce costs through intelligent automation',
-    'Gain competitive advantage with advanced technology'
-  ];
+    'Gain competitive advantage with advanced technology'  ];
 
   return (
+
     <>
       <Helmet>
         <title>Page - Zion Tech Group</title>
@@ -92,6 +73,7 @@ const benefits = [
         <Navigation />
         
         {/* Hero Section */}
+
         <section className="pt-20 pb-16 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -122,6 +104,7 @@ const benefits = [
         </section>
 
         {/* Features Section */}
+
         <section id="features" className="py-20">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
@@ -130,24 +113,9 @@ const benefits = [
                 Our comprehensive platform provides everything you need to succeed.
               </p>
             </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 l,
-    g:grid-cols-4 gap-8">
-              {features.map((feature), index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover: bg-white
-                  <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hove,
-    r:scale-110 transition-transform">
-                    <feature.icon className="w-8 h-8 text-white" 
-                  <
-                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}<
-                  <p className="text-gray-300 mb-4">{feature.description}<
-                  {feature.benefits && (
-                    <ul className="space-y-2">
-                      {feature.benefits.map((benefit, idx) => (<li key={idx} className="flex items-center text-sm text-gray-400">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" 
-                          {benefit}
                         </li>
                       ));
+
                     </ul>);
 const benefits = [
                 <
@@ -156,16 +124,16 @@ const benefits = [
                 <ul className="space-y-2">
                   {feature.benefits.map((benefit, benefitIndex) => (<li key={benefitIndex} className="flex items-center text-sm text-gray-400">
                       
-    'Benefit 1',
-                  )}    'Benefit 1',
+    'Benefit 1',                  )}    'Benefit 1',
     'Benefit 2',
     'Benefit 3',
     'Benefit 4',
     'Benefit 5',
-    'Benefit 6'
+    Benefit 6
   ];
 
   return (
+
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <Helmet>
         <title>Page | Zion Tech Group</title>
@@ -176,6 +144,7 @@ const benefits = [
       <Navigation />
 
       {/* Hero Section */}
+
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
@@ -202,6 +171,7 @@ const benefits = [
       </section>
 
       {/* Features Section */}
+
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -213,6 +183,7 @@ const benefits = [
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
+
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-blue-400/50 transition-all duration-300 group">
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                   <CheckCircle className="w-6 h-6 text-white" />
@@ -221,14 +192,18 @@ const benefits = [
                 <p className="text-gray-300 mb-4">{feature.description}</p>
                 <ul className="space-y-2">
                   {feature.benefits.map((benefit, benefitIndex) => (
+
                     <li key={benefitIndex} className="flex items-center text-sm text-gray-400">
                       <CheckCircle className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
                       {benefit}
+
                     </li>
                   ));
+
                 </ul>
               </div>
             ));
+
           </div>
         </div>
       </section>
@@ -246,6 +221,7 @@ const benefits = [
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
+
                 <div key={index} className="bg-slate-800/50 rounded-xl p-8 backdrop-blur-sm border border-white/10 hover:border-cyan-500/50 transition-all duration-300">
                   <div className="bg-cyan-500/20 rounded-full w-12 h-12 flex items-center justify-center mb-6">
                     <feature.icon className="w-6 h-6 text-cyan-400" />
@@ -254,19 +230,23 @@ const benefits = [
                   <p className="text-gray-300 mb-6">{feature.description}</p>
                   <ul className="space-y-2">
                     {feature.benefits.map((benefit, benefitIndex) => (
+
                       <li key={benefitIndex} className="flex items-center text-gray-300">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
                         <span className="text-sm">{benefit}</span>
                       </li>
                     ))}
+
                   </ul>
                 </div>
               ));
+
             </div>
           </div>
         </section>
 
         {/* Benefits Section */}
+
         <section className="py-20 bg-slate-800/50">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -277,11 +257,13 @@ const benefits = [
                 </p>
                 <ul className="space-y-4">
                   {benefits.map((benefit, index) => (
+
                     <li key={index} className="flex items-start">
                       <CheckCircle className="w-6 h-6 text-green-400 mr-4 flex-shrink-0 mt-1" />
                       <span className="text-gray-300">{benefit}</span>
                     </li>
                   ))}
+
                 </ul>
               </div>
               <div className="relative">
@@ -349,13 +331,14 @@ const benefits = [
 };
 
 export default AiCodeAssistantPage;
-              </div>
-            </div>
+              </div>            </div>
           </div>
         </section>
       </div>
       {/* Benefits Section */}
+
       </div>      {/* Benefits Section */}
+
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -367,6 +350,7 @@ export default AiCodeAssistantPage;
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((benefit, index) => (
+
               <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center">
                   <CheckCircle className="w-8 h-8 text-white" />
@@ -374,10 +358,10 @@ export default AiCodeAssistantPage;
                 <h3 className="text-lg font-semibold text-white">{benefit}</h3>
               </div>
             ));
-          </div>
-        </section>
+          </div>        </section>
 
       {/* CTA Section */}
+
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
@@ -398,6 +382,7 @@ export default AiCodeAssistantPage;
       <Footer />
     </div>
   );
+
 };
 
     </div>)

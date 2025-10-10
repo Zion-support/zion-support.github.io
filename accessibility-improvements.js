@@ -6,31 +6,43 @@
 // <div id="email-help">Enter your email address</div>
 
 // 2. Implement focus management;
-const trapFocus = (element) => {;
-const focusableElements = element.querySelectorAll(
-    'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+
+const trapFocus = (element) => {;;
+
+const focusableElements = element.querySelectorAll(;;
+
+    'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1])
   );
-  const firstElement = focusableElements[0];
-  const lastElement = focusableElements[focusableElements.length - 1];
-  
+
+  const firstElement = focusableElements[0];;
+
+  const lastElement = focusableElements[focusableElements.length - 1];;
+
   element.addEventListener('keydown', (e) => {
     if (e.key === 'Tab') {
       if (e.shiftKey) {
         if (document.activeElement === firstElement) {
           lastElement.focus();
+
           e.preventDefault()}
+
       } else {
         if (document.activeElement === lastElement) {
           firstElement.focus();
+
           e.preventDefault()}
+
       }
+
     }
+
   })};
 
 // 3. Add live regions for dynamic content
 // Example JSX:
 // <div aria-live="polite" aria-atomic="true" className="sr-only">
 //   {announcement}
+
 // </div>
 
 // 4. Ensure proper heading hierarchy
@@ -77,7 +89,9 @@ const focusableElements = element.querySelectorAll(
 // Example CSS:
 // .focus-visible:focus {
 //   outline: 2px solid #0066cc;
+
 //   outline-offset: 2px;
+
 // }
 
 // 9. Keyboard navigation
@@ -90,6 +104,7 @@ const focusableElements = element.querySelectorAll(
 // Example JSX:
 // <div aria-live="assertive" aria-atomic="true">
 //   {errorMessage}
+
 // </div>
 
 export { trapFocus };

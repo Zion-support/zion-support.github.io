@@ -1,7 +1,11 @@
 'use client';
+
 import React from 'react';
+
 import { Helmet } from 'react-helmet-async';
+
 import Navigation from '../components/Navigation';
+
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 ;
@@ -14,8 +18,7 @@ const PagePage: React.FC = () => {
       icon: Brain,
       title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    },
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']    },
     {
       icon: BarChart,
       title: 'Advanced Analytics',
@@ -46,18 +49,19 @@ const PagePage: React.FC = () => {
       description: 'Enterprise-grade security to protect your data and operations.',
       benefits: ['End-to-end encryption', 'Access controls', 'Audit trails', 'Compliance support']
     }
+
   ];
 
-  const benefits = [
-    'Transform your business with AI technology',
+  const benefits = [    'Transform your business with AI technology',
     'Make data-driven decisions with confidence',
     'Identify trends and opportunities early',
     'Optimize business processes and workflows',
     'Reduce costs through intelligent automation',
-    'Gain competitive advantage with advanced technology'
+    Gain competitive advantage with advanced technology
   ];
 
   return (
+
     <React.Fragment>
       <Helmet>
         <title>Page - Zion Tech Group</title>
@@ -69,6 +73,7 @@ const PagePage: React.FC = () => {
         <Navigation />
         
         {/* Hero Section */}
+
         <section className="pt-20 pb-16 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -99,6 +104,7 @@ const PagePage: React.FC = () => {
         </section>
 
         {/* Features Section */}
+
         <section id="features" className="py-20">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
@@ -109,6 +115,7 @@ const PagePage: React.FC = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
+
                 <div key={index} className="bg-slate-800/50 rounded-xl p-8 backdrop-blur-sm border border-white/10 hover:border-cyan-500/50 transition-all duration-300">
                   <div className="bg-cyan-500/20 rounded-full w-12 h-12 flex items-center justify-center mb-6">
                     <feature.icon className="w-6 h-6 text-cyan-400" />
@@ -116,21 +123,25 @@ const PagePage: React.FC = () => {
                   <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
                   {feature.benefits && (
+
                     <ul className="space-y-2">
                       {feature.benefits.map((benefit, idx) => (
+
                         <li key={idx} className="flex items-center text-sm text-gray-400">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                           {benefit}
+
                         </li>
                       ));
                     </ul>);
-                </div>
-              ));
+                </div>              ));
+
             </div>
           </div>
         </section>
 
         {/* Benefits Section */}
+
         <section className="py-20 bg-slate-800/50">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -141,11 +152,13 @@ const PagePage: React.FC = () => {
                 </p>
                 <ul className="space-y-4">
                   {benefits.map((benefit, index) => (
+
                     <li key={index} className="flex items-start">
                       <CheckCircle className="w-6 h-6 text-green-400 mr-4 flex-shrink-0 mt-1" />
                       <span className="text-gray-300">{benefit}</span>
                     </li>
                   ))}
+
                 </ul>
               </div>
               <div className="relative">
@@ -176,6 +189,7 @@ const PagePage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
+
         <section className="py-20">
           <div className="container mx-auto px-4 text-center">
             <div className="bg-gradient-to-r from-cyan-500/10 to-purple-600/10 rounded-2xl p-12 backdrop-blur-sm border border-white/10">

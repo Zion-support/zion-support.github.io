@@ -6,8 +6,7 @@ import SEOOptimizer from '../components/SEOOptimizer';
 ;
 const AIFashionDesignPage: React.FC = () => {;
 const features = [
-    'Design Generation',
-    'Trend Analysis',
+    'Design Generation',    'Trend Analysis',
     'Color Matching',
     'Size Optimization',
     'Market Research',
@@ -15,23 +14,29 @@ const features = [
     'Fabric Suggestions',
     'Pattern Creation',
     '3D Visualization',
-    'Cost Estimation'
+    Cost Estimation
   ];
+
 ;
-const benefits = [
+
+const benefits = [;;
+
     'Faster design cycles',
     'Trend accuracy',
     'Cost reduction',
     'Market insights',
     'Creative inspiration',
-    'Competitive advantage'
+    Competitive advantage
   ];
+
 ;
-const pricingPlans = [
+
+const pricingPlans = [;;
+
     {
       name: 'Starter',
       price: '$249',
-      period: '
+      period: 
       features: ['10 designs
       popula,
     r: false
@@ -39,7 +44,7 @@ const pricingPlans = [
     {
       name: 'Professional',
       price: '$349',
-      period: '
+      period: 
       feature,
     s: ['Unlimited designs', 'Advanced trends', '3D visualization', 'API access', 'Priority support'],
       popular: true
@@ -47,19 +52,22 @@ const pricingPlans = [
     {
       name: 'Enterprise',
       price: '$699',
-      period: '
+      period: 
       feature,
     s: ['Everything in Pro', 'Custom models', 'White-label', 'Dedicated support', 'Market intelligence'],
       popular: false
     }
+
   ];
 
   return (
+
     <React.Fragment>
       <SEOOptimizer
         title="AI Fashion Designer - AI-Powered Fashion Design & Trend Analysis | Zion Tech Group"
         description="Revolutionize fashion design with AI Fashion Designer. Generate designs, analyze trends, and optimize collections with AI-powered fashion technology starting at $249/month."
         keywords={['AI fashion design', 'fashion trends', 'design generation', 'fashion AI', 'trend analysis', 'fashion technology']}
+
         canonicalUrl="https://ziontechgroup.com/ai-fashion-design"
       />
       
@@ -68,8 +76,7 @@ const pricingPlans = [
         
         <main className="container mx-auto px-4 py-16 pt-24">
           {/* Hero Section */}
-          <section className="text-center mb-16">
-            <div className="max-w-4xl mx-auto">
+          <section className="text-center mb-16">            <div className="max-w-4xl mx-auto">
               <div className="flex items-center justify-center mb-6">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mr-4">
                   
@@ -103,6 +110,7 @@ const pricingPlans = [
                   <
                 <)
               ))}
+
             <
           <
 
@@ -120,6 +128,7 @@ const pricingPlans = [
                   <h3 className="text-lg font-semibold text-white mb-2">{benefit}<
                 <)
               ))}
+
             <
           <
 
@@ -130,14 +139,17 @@ const pricingPlans = [
             <
             <div className="grid grid-cols-1 md: grid-cols-3 gap-8 max-w-6xl mx-auto">
               {pricingPlans.map((plan), index) => (
+
                 <div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>
                   {plan.popular && (
+
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1
                       <div className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-semibold">
                         Most Popular
                       <
                     <
                   )}
+
                   <div className="text-center mb-6">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}<
                     <div className="flex items-baseline justify-center">
@@ -152,6 +164,7 @@ const pricingPlans = [
                   <
                 <
               ))}
+
             <
           <
 

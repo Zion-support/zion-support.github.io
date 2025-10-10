@@ -1,10 +1,17 @@
 'use client';
+
 import React from 'react';
-import { Shield, Lock, Eye, Database, User, Mail, Phone, Calendar, CheckCircle, ArrowRight, Globe, Server, Key, FileText, AlertTriangle } from 'lucide-react'
-export default function PrivacyPage() {;
-const lastUpdated = 'January 1, 2024';
+
+import { Shield, Lock, Eye, Database, User, Mail, Phone, Calendar, CheckCircle, ArrowRight, Globe, Server, Key, FileText, AlertTriangle } from 'lucide-react';
+
+export default function PrivacyPage() {';
+
+const lastUpdated = 'January 1, 2024;;
+
   ;
-const dataTypes = [
+
+const dataTypes = [;;
+
     {
       category: 'Personal Information',
       icon: User,
@@ -23,9 +30,13 @@ const dataTypes = [
       description: 'IP address, browser type, operating system, cookies',
 examples: ['IP addresses', 'Browser fingerprints', 'Device identifiers', 'Cookies and tracking pixels']]
     }
+
   ];
+
 ;
-const purposes = [
+
+const purposes = [;;
+
     {
       title: 'Service Provision',
       icon: Globe,
@@ -46,9 +57,13 @@ const purposes = [
       icon: Shield,
 description: 'To protect against fraud and abuse']
     }
+
   ];
+
 ;
-const rights = [
+
+const rights = [;;
+
     {
       title: 'Access',
       description: 'Request access to your personal data',
@@ -69,9 +84,11 @@ const rights = [
       description: 'Receive your data in a structured format',
 icon: Database]
     }
+
   ];
 
   return (
+
     <div>
       <div>
         <div>
@@ -84,6 +101,7 @@ icon: Database]
           <div>
             <Calendar className="h-4 w-4 mr-2" />
             Last updated: {lastUpdated}
+
           </div>
         </div>
       </div>
@@ -103,6 +121,7 @@ icon: Database]
             </section>
 
             {/* Information We Collect */}
+
             <section></section>
               <h2 className="text-3xl font-bold text-gray-900 mb-6"></h>Information We Collect</h2>
               <div className="grid md:grid-cols-3 gap-6"></div>
@@ -115,15 +134,19 @@ icon: Database]
                     <p className="text-gray-700 mb-3">{type.description}</p>
                     <ul className="text-sm text-gray-600 space-y-1"></ul>
                       {type.examples.map((example, idx) => (
+
                         <li key={idx}></l>• {example}</li>
                       ));
+
                     </ul>
                   </div>
                 ));
+
               </div>
             </section>
 
             {/* How We Use Information */}
+
             <section></section>
               <h2 className="text-3xl font-bold text-gray-900 mb-6"></h>How We Use Your Information</h2>
               <div className="grid md:grid-cols-2 gap-6"></div>
@@ -138,10 +161,12 @@ icon: Database]
                     </div>
                   </div>
                 ));
+
               </div>
             </section>
 
             {/* Data Security */}
+
             <section></section>
               <h2 className="text-3xl font-bold text-gray-900 mb-6"></h>Data Security</h2>
               <div>
@@ -164,6 +189,7 @@ icon: Database]
             </section>
 
             {/* Your Rights */}
+
             <section></section>
               <h2 className="text-3xl font-bold text-gray-900 mb-6"></h>Your Rights</h2>
               <div className="grid md:grid-cols-2 gap-6"></div>
@@ -176,10 +202,12 @@ icon: Database]
                     <p className="text-gray-700">{right.description}</p>
                   </div>
                 ));
+
               </div>
             </section>
 
             {/* Contact Information */}
+
             <section className="bg-gray-50 rounded-lg p-8"></section>
               <h2 className="text-3xl font-bold text-gray-900 mb-6"></h>Contact Us</h2>
               <p className="text-gray-700 mb-6"></p>
@@ -206,6 +234,7 @@ icon: Database]
             </section>
 
             {/* Updates */}
+
             <section></section>
               <div>
                 <div>

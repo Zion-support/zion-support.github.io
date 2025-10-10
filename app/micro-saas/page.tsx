@@ -1,20 +1,30 @@
 'use client';
 
 import React from 'react';
+
 import { Helmet } from 'react-helmet-async';
+
 import { Link } from 'react-router-dom';
 import { CheckCircle, ArrowRight, Zap, Star, Users, TrendingUp, Shield, Cloud, BarChart3, MessageSquare } from 'lucide-react';
-
 interface MicroSaasProduct {
   id: string;
+
   icon: React.ComponentType<any>;
+
   title: string;
+
   description: string;
+
   features: string[];
+
   price: string;
+
   users: string;
-  popular: boolean;
-  category: string;
+
+  popular: boolean';
+
+  category: string';
+
 }
 
 const MicroSaasPage: React.FC = () => {
@@ -32,8 +42,7 @@ const MicroSaasPage: React.FC = () => {
     },
       category: 'Analytics'
     },
-      category: 'Analytics'});;)
-},
+      category: 'Analytics'});;)},
     {
       id: '2',
       icon: '👥',
@@ -47,8 +56,7 @@ const MicroSaasPage: React.FC = () => {
     },
       category: 'CRM'
     },
-      category: 'CRM'});;)
-},
+      category: 'CRM'});;)},
     {
       id: '3',
       icon: '🔒',
@@ -62,8 +70,7 @@ const MicroSaasPage: React.FC = () => {
     },
       category: 'Security'
     },
-      category: 'Security'});;)
-},
+      category: 'Security'});;)},
     {
       id: '4',
       icon: '☁️',
@@ -73,7 +80,7 @@ const MicroSaasPage: React.FC = () => {
       price: '$299/month',
       users: 'Unlimited users',
       popular: false,
-      category: 'Infrastructure'
+      category: Infrastructure
     },
     {
       id: '5',
@@ -84,7 +91,7 @@ const MicroSaasPage: React.FC = () => {
       price: '$79/month',
       users: 'Up to 25,000 contacts',
       popular: false,
-      category: 'Marketing'
+      category: Marketing
     },
     {
       id: '6',
@@ -103,47 +110,69 @@ const MicroSaasPage: React.FC = () => {
 }
   ];
 
-  const benefits = [
-    'No upfront costs or setup fees',
+  const benefits = [    'No upfront costs or setup fees',
     'Quick deployment in 24-48 hours',
     'Scalable solutions that grow with you',
     'Regular updates and new features',
     '24/7 technical support',
     'Easy integration with existing tools',
     'Free trial for all products',
-    'Cancel anytime, no long-term contracts'
+    Cancel anytime, no long-term contracts
   ];
 
-  const categories = ['All', 'Analytics', 'CRM', 'Security', 'Infrastructure', 'Marketing', 'Support'];
+  const categories = ['All', 'Analytics', 'CRM', 'Security', 'Infrastructure', 'Marketing', 'Support];;
 
-  const stats = [
+  const stats = [;;
+
     {
       icon: Users,
       value: '10,000+',
       label: 'Active Users',
-      description: 'Growing community of satisfied customers'
+      description: Growing community of satisfied customers
     },
     {
       icon: TrendingUp,
       value: '99.9%',
       label: 'Uptime',
-      description: 'Reliable service you can count on'
+      description: Reliable service you can count on
     },
     {
       icon: Star,
       value: '4.8/5',
       label: 'Rating',
-      description: 'Highly rated by our customers'
+      description: Highly rated by our customers
     },
     {
       icon: Zap,
       value: '24/7',
       label: 'Support',
-      description: 'Always here when you need us'
+      description: Always here when you need us
     }
+
+  ];
+
+  const features = [;;
+
+    {
+      icon: Zap,
+      title: 'Lightning Fast Setup',
+      description: Get up and running in minutes with our streamlined onboarding process
+    },
+    {
+      icon: Target,
+      title: 'Focused Solutions',
+      description: Each micro SaaS is designed to solve specific business challenges effectively
+    },
+    {
+      icon: Rocket,
+      title: 'Rapid Innovation',
+      description: Frequent updates and new features based on user feedback and market needs
+    }
+
   ];
 
   return (
+
     <>
       <Helmet>
         <title>Micro SaaS Solutions - Zion Tech Group | Ready-to-Use Business Tools</title>
@@ -153,6 +182,7 @@ const MicroSaasPage: React.FC = () => {
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
+
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -165,6 +195,7 @@ const MicroSaasPage: React.FC = () => {
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
               {stats.map((stat, index) => (
+
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full mx-auto mb-4 flex items-center justify-center">
                     <stat.icon className="w-8 h-8 text-slate-900" />
@@ -174,31 +205,39 @@ const MicroSaasPage: React.FC = () => {
                   <div className="text-gray-500 text-xs mt-1">{stat.description}</div>
                 </div>
               ))}
+
             </div>
           </div>
         </section>
 
         {/* Category Filter */}
+
         <section className="py-8 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="flex flex-wrap justify-center gap-4">
               {categories.map((category) => (
+
                 <button
                   key={category}
+
                   className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-                    category === 'All'
-                      ? 'bg-gradient-to-r from-cyan-400 to-purple-400 text-slate-900'
-                      : 'bg-white/10 text-gray-300 hover:bg-white/20'
+                    category === All
+                      ? bg-gradient-to-r from-cyan-400 to-purple-400 text-slate-900
+                      : bg-white/10 text-gray-300 hover:bg-white/20
                   }`}
+
                 >
                   {category}
+
                 </button>
               ))}
+
             </div>
           </div>
         </section>
 
         {/* Products Grid */}
+
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -210,17 +249,19 @@ const MicroSaasPage: React.FC = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {microSaasProducts.map((product) => (
+
                 <div
                   key={product.id}
+
                   className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-xl p-6 hover:border-cyan-400/50 transition-all duration-300 group ${
-                    product.popular ? 'border-cyan-400/50 ring-2 ring-cyan-400/20' : 'border-slate-700'
+                    product.popular ? 'border-cyan-400/50 ring-2 ring-cyan-400/20' : border-slate-700
                   }`}
+
                 >
                   {product.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <div className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center gap-2">
-                        <Star className="w-4 h-4 fill-current" />
-                        Most Popular
+                        <Star className="w-4 h-4 fill-current" />                        Most Popular
                       </div>
                     </div>
                   )}
@@ -229,6 +270,7 @@ const MicroSaasPage: React.FC = () => {
                     <div className="text-4xl mb-4">{product.icon}</div>
                     <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">
                       {product.title}
+
                     </h3>
                     <p className="text-gray-300 text-sm mb-4">{product.description}</p>
                     <div className="flex items-center justify-center gap-2 mb-4">
@@ -237,6 +279,7 @@ const MicroSaasPage: React.FC = () => {
                     </div>
                     <div className="inline-block px-3 py-1 bg-purple-500/20 text-purple-400 text-xs rounded-full">
                       {product.category}
+
                     </div>
                   </div>
 
@@ -244,9 +287,9 @@ const MicroSaasPage: React.FC = () => {
                     {product.features.map((feature, index) => (
                       <li key={index} className="flex items-center text-gray-300 text-sm">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                        {feature}
-                      </li>
+                        {feature}                      </li>
                     ))}
+
                   </ul>
 
                   <div className="flex flex-col gap-3">
@@ -256,14 +299,15 @@ const MicroSaasPage: React.FC = () => {
                     <button className="w-full py-2 px-6 rounded-lg font-semibold transition-all duration-300 bg-white/10 text-white border border-white/20 hover:bg-white/20">
                       Learn More
                     </button>
-                  </div>
-                </div>
+                  </div>                </div>
               ))}
+
             </div>
           </div>
         </section>
 
         {/* Benefits Section */}
+
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -277,16 +321,17 @@ const MicroSaasPage: React.FC = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {benefits.map((benefit, index) => (
                   <div key={index} className="flex items-start space-x-3">
-                    <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
-                    <span className="text-gray-300">{benefit}</span>
+                    <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />                    <span className="text-gray-300">{benefit}</span>
                   </div>
                 ))}
+
               </div>
             </div>
           </div>
         </section>
 
         {/* How It Works */}
+
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -328,8 +373,7 @@ const MicroSaasPage: React.FC = () => {
             <div className="bg-slate-800/30 backdrop-blur-sm border border-slate-700 rounded-2xl p-12">
               <h2 className="text-3xl font-bold text-white mb-6">
         <section className="py-16 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-12 border border-white/20">
+          <div className="max-w-4xl mx-auto text-center">            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-12 border border-white/20">
               <h2 className="text-3xl font-bold text-white mb-6">
         <section></section>
           <div></div>
@@ -339,8 +383,7 @@ const MicroSaasPage: React.FC = () => {
               </h2>
               <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Choose the micro SaaS solution that fits your business needs. 
-                Start with a free trial and scale as you grow.
+                Choose the micro SaaS solution that fits your business needs.                 Start with a free trial and scale as you grow.
               <
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
@@ -354,8 +397,7 @@ const MicroSaasPage: React.FC = () => {
                   to="/pricing"
                   className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300"
                 >
-                  View All Plans
-                <
+                  View All Plans                <
               <
             <
           <
@@ -363,6 +405,7 @@ const MicroSaasPage: React.FC = () => {
       <
     <)
   );
+
               <p></p>
                 Choose the micro SaaS solution that fits your business needs. 
                 Start with a free trial and scale as you grow.
@@ -389,5 +432,4 @@ const MicroSaasPage: React.FC = () => {
     </>
   );
 };
-
 export default MicroSaasPage;

@@ -1,10 +1,12 @@
 import React, { ReactNode } from 'react';
 
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async;
 
 interface SEOEnhancerProps {/* TODO: Fix JSX expression *
 }
+
 ;
+
 const,
   SEOEnhancer: React.FC<SEOEnhancerProps> = ({/* TOD,
     O: Fix JSX expression *)
@@ -14,12 +16,15 @@ const,
   s: {/* TOD,
     O: Fix JSX expression *
     }};
-;
-const finalStructuredData = structuredData || defaultStructuredData;
+
+';
+
+const finalStructuredData = structuredData || defaultStructuredData;';
 
   return (<React.Fragment>
       <Helmet></Helmet>
         {/* Basic Meta Tags */}
+
         <title>{title}</title>
         <meta name="description" content={description} /></meta>")
         <meta name="keywords" content={keywords.join(', ')} /></meta>"
@@ -53,4 +58,5 @@ const finalStructuredData = structuredData || defaultStructuredData;
   )};
 
 export default SEOEnhancer;
+
 "

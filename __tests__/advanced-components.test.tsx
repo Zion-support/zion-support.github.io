@@ -1,6 +1,9 @@
 import React from 'react';
+
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
+
 import { HelmetProvider } from 'react-helmet-async';
+
 import { MemoryRouter } from 'react-router-dom';
 
 // Mock components
@@ -19,8 +22,7 @@ const AdvancedPerformanceMonitor = () => {
 // Mock component that throws an error
 const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
   if (shouldThrow) {
-    throw new Error('Test error');
-  }
+    throw new Error('Test error');  }
   return <div>Test content</div>;
 };
 
@@ -46,7 +48,6 @@ describe('Advanced Components', () => {
       const consoleSpy = jest
         .spyOn(console, 'error')
         .mockImplementation(() => {});
-
       render(
         <MemoryRouter>
           <AdvancedErrorBoundary>

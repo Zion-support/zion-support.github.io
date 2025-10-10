@@ -1,44 +1,54 @@
 'use client';
+
 import React from 'react';
+
 import { FileText, Scale, Shield, AlertTriangle, CheckCircle, ArrowRight, Globe, User, Mail, Phone, Calendar, Lock, Database, Server, Key } from 'lucide-react';
 
-export default function TermsPage() {;
-const lastUpdated = 'January 1, 2024';
+export default function TermsPage() {';
+
+const lastUpdated = 'January 1, 2024;;
+
 ;
-const sections = [
+
+const sections = [;;
+
     {
       title: 'Acceptance of Terms',
       icon: CheckCircle,
-      content: 'By accessing and using our website and services, you accept and agree to be bound by the terms and provision of this agreement.'
+      content: By accessing and using our website and services, you accept and agree to be bound by the terms and provision of this agreement.
     },
     {
       title: 'Use License',
       icon: Key,
-      content: 'Permission is granted to temporarily download one copy of the materials on our website for personal, non-commercial transitory viewing only.'
+      content: Permission is granted to temporarily download one copy of the materials on our website for personal, non-commercial transitory viewing only.
     },
     {
       title: 'Service Availability',
       icon: Server,
-      content: 'We strive to maintain 99.9% uptime for our services, but we do not guarantee uninterrupted access and reserve the right to modify or discontinue services.'
+      content: We strive to maintain 99.9% uptime for our services, but we do not guarantee uninterrupted access and reserve the right to modify or discontinue services.
     },
     {
       title: 'User Responsibilities',
       icon: User,
-      content: 'Users are responsible for maintaining the confidentiality of their account information and for all activities that occur under their account.'
+      content: Users are responsible for maintaining the confidentiality of their account information and for all activities that occur under their account.
     },
     {
       title: 'Intellectual Property',
       icon: FileText,
-      content: 'All content, trademarks, and intellectual property on our website are owned by Zion Tech Group and protected by applicable copyright and trademark laws.'
+      content: All content, trademarks, and intellectual property on our website are owned by Zion Tech Group and protected by applicable copyright and trademark laws.
     },
     {
       title: 'Limitation of Liability',
       icon: Shield,
-      content: 'In no event shall Zion Tech Group be liable for any damages arising out of the use or inability to use our services.'
+      content: In no event shall Zion Tech Group be liable for any damages arising out of the use or inability to use our services.
     }
+
   ];
+
 ;
-const prohibitedUses = [
+
+const prohibitedUses = [;;
+
     'Violating any applicable laws or regulations',
     'Transmitting malicious code or harmful content',
     'Attempting to gain unauthorized access to our systems',
@@ -46,39 +56,45 @@ const prohibitedUses = [
     'Using our services for illegal or unauthorized purposes',
     'Impersonating another person or entity',
     'Collecting user information without consent',
-    'Engaging in any form of harassment or abuse'
+    Engaging in any form of harassment or abuse
   ];
+
 ;
-const serviceLevels = [
+
+const serviceLevels = [;;
+
     {
       service: 'AI Services',
       uptime: '99.9%',
       support: '24/7',
-      response: '1 hour'
+      response: 1 hour
     },
     {
       service: 'IT Infrastructure',
       uptime: '99.95%',
       support: '24/7',
-      response: '30 minutes'
+      response: 30 minutes
     },
     {
       service: 'Cloud Services',
       uptime: '99.9%',
       support: '24/7',
-      response: '1 hour'
+      response: 1 hour
     },
     {
       service: 'Support Services',
       uptime: 'N/A',
       support: 'Business Hours',
-      response: '4 hours'
+      response: 4 hours
     }
+
   ];
 
   return (
+
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
+
       <section className="relative py-20 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"></div>
         <div className="container mx-auto px-4 relative z-10">
@@ -108,12 +124,14 @@ const serviceLevels = [
       </section>
 
       {/* Last Updated */}
+
       <section className="py-8">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="bg-slate-800/50 rounded-lg p-6 text-center">
               <p className="text-gray-300">
                 <strong>Last Updated:</strong> {lastUpdated}
+
               </p>
               <p className="text-sm text-gray-400 mt-2">
                 These terms may be updated from time to time. Continued use of our services constitutes acceptance of any changes.
@@ -124,12 +142,14 @@ const serviceLevels = [
       </section>
 
       {/* Key Terms */}
+
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold text-white mb-12 text-center">Key Terms</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {sections.map((section, index) => (
+
                 <div key={index} className="bg-slate-800/50 rounded-lg p-6">
                   <div className="flex items-center space-x-3 mb-4">
                     <section.icon className="w-8 h-8 text-cyan-400" />
@@ -138,12 +158,14 @@ const serviceLevels = [
                   <p className="text-gray-300 text-sm">{section.content}</p>
                 </div>
               ))}
+
             </div>
           </div>
         </div>
       </section>
 
       {/* Prohibited Uses */}
+
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
@@ -153,17 +175,20 @@ const serviceLevels = [
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {prohibitedUses.map((use, index) => (
+
                 <div key={index} className="flex items-start space-x-3">
                   <AlertTriangle className="w-5 h-5 text-red-400 mt-1 flex-shrink-0" />
                   <span className="text-gray-300">{use}</span>
                 </div>
               ))}
+
             </div>
           </div>
         </div>
       </section>
 
       {/* Service Level Agreements */}
+
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
@@ -180,6 +205,7 @@ const serviceLevels = [
                 </thead>
                 <tbody>
                   {serviceLevels.map((level, index) => (
+
                     <tr key={index} className="border-t border-gray-700">
                       <td className="px-6 py-4 text-white font-medium">{level.service}</td>
                       <td className="px-6 py-4 text-cyan-400">{level.uptime}</td>
@@ -187,6 +213,7 @@ const serviceLevels = [
                       <td className="px-6 py-4 text-green-400">{level.response}</td>
                     </tr>
                   ))}
+
                 </tbody>
               </table>
             </div>
@@ -195,6 +222,7 @@ const serviceLevels = [
       </section>
 
       {/* Payment Terms */}
+
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
@@ -226,6 +254,7 @@ const serviceLevels = [
       </section>
 
       {/* Termination */}
+
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
@@ -258,6 +287,7 @@ const serviceLevels = [
       </section>
 
       {/* Governing Law */}
+
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -285,6 +315,7 @@ const serviceLevels = [
       </section>
 
       {/* Contact Information */}
+
       <section className="py-20 bg-gradient-to-r from-cyan-600/20 to-purple-600/20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">

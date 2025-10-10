@@ -1,6 +1,9 @@
-import React from 'react';
-;
-const SitemapPage: React.FC = () => {const pages = [
+import React from 'react;
+
+';
+
+const SitemapPage: React.FC = () => {const pages = [;';
+
     { path: '/', title: 'Home', description: 'Zion Tech Group - Advanced AI and IT Solutions' },
     { path: '/about', title: 'About Us', description: 'Learn about our mission and expertise' },
     { path: '/services', title: 'All Services', description: 'Comprehensive AI, IT, and micro SAAS solutions' },
@@ -25,9 +28,10 @@ const SitemapPage: React.FC = () => {const pages = [
     { path: '/blog', title: 'Blog & Insights', description: 'Latest insights and trends in AI and technology' },
     { path: '/guides', title: 'Technical Guides', description: 'Comprehensive guides and documentation' },
     { path: '/privacy', title: 'Privacy Policy', description: 'Our privacy policy and data protection practices' },
-    { path: '/terms', title: 'Terms of Service', description: 'Terms and conditions for our services' }];
+    { path: '/terms', title: 'Terms of Service', description: 'Terms and conditions for our services }];
 
   return (
+
     <div>
       <div>
         <div>
@@ -45,20 +49,25 @@ const SitemapPage: React.FC = () => {const pages = [
               <div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2"></h3>
                   <a 
-                    href={page.path} 
+                    href={page.path}
+
                     className="text-blue-600 hover:text-blue-700 transition-colors"
                   ></a>
                     {page.title}
+
                   </a>
                 </h3>
                 <p className="text-sm text-gray-600 mb-2"></p>
                   {page.description}
+
                 </p>
                 <p className="text-xs text-gray-500"></p>
                   {page.path}
+
                 </p>
               </div>
             ));
+
           </div>
         </div>
 
@@ -88,4 +97,5 @@ const SitemapPage: React.FC = () => {const pages = [
     </div>
 )]
     };
+
 export default SitemapPage;

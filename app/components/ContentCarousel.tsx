@@ -1,21 +1,29 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight, CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, TrendingUp } from 'lucide-react';
+
+import { ChevronLeft, ChevronRight, CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, TrendingUp } from 'lucide-react;
 
 interface Slide {
   icon: React.ComponentType<any>;
+
   title: string;
+
   description: string;
+
   features: string[];
+
   stats?: {
     value: string;
+
     label: string;
-  }[];
+
+  }[]';
+
 }
 
 const ContentCarousel: React.FC = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const [currentSlide, setCurrentSlide] = useState(0)';
 
   const slides: Slide[] = [
     {
@@ -27,6 +35,7 @@ const ContentCarousel: React.FC = () => {
         { value: '95%', label: 'Accuracy Rate' },
         { value: '10x', label: 'Faster Processing' },
         { value: '24/7', label: 'Automation' }
+
       ]
     },
     {
@@ -38,6 +47,7 @@ const ContentCarousel: React.FC = () => {
         { value: '99.9%', label: 'Uptime' },
         { value: '< 100ms', label: 'Response Time' },
         { value: '10M+', label: 'Requests/Day' }
+
       ]
     },
     {
@@ -49,6 +59,7 @@ const ContentCarousel: React.FC = () => {
         { value: '256-bit', label: 'Encryption' },
         { value: 'SOC 2', label: 'Compliance' },
         { value: 'Zero', label: 'Security Breaches' }
+
       ]
     },
     {
@@ -60,28 +71,35 @@ const ContentCarousel: React.FC = () => {
         { value: '50+', label: 'Countries' },
         { value: '15+', label: 'Languages' },
         { value: '24/7', label: 'Global Support' }
+
       ]
     }
+
   ];
 
-  const nextSlide = () => {
+  const nextSlide = () => {;;
+
     setCurrentSlide((prev) => (prev + 1) % slides.length);
+
   };
 
-  const prevSlide = () => {
+  const prevSlide = () => {;;
+
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+
   };
 
   useEffect(() => {
-    const timer = setInterval(nextSlide, 5000);
+    const timer = setInterval(nextSlide, 5000);;
+
     return () => clearInterval(timer);
+
   }, []);
 
-  const currentSlideData = slides[currentSlide];
+  const currentSlideData = slides[currentSlide];;
 
   return (
-    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
-      <div className="max-w-7xl mx-auto">
+    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">      <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -146,8 +164,7 @@ const ContentCarousel: React.FC = () => {
                   <button className="inline-flex items-center gap-2 bg-white/10 text-white px-6 py-3 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300">
                     <ArrowRight className="w-5 h-5" />
                     Learn More
-                  </button>
-                </div>
+                  </button>                </div>
               </div>
 
               {/* Visual Element */}
@@ -165,35 +182,43 @@ const ContentCarousel: React.FC = () => {
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
+              </div>            </div>
           </div>
 
           {/* Navigation Buttons */}
+
           <button
             onClick={prevSlide}
+
             className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20"
           >
             <ChevronLeft className="w-6 h-6" />
           </button>
           <button
             onClick={nextSlide}
+
             className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20"
           >
             <ChevronRight className="w-6 h-6" />
           </button>
 
           {/* Dots Indicator */}
+
           <div className="flex justify-center mt-8 space-x-2">
             {slides.map((_, index) => (
+
               <button
                 key={index}
+
                 onClick={() => setCurrentSlide(index)}
+
                 className={`w-3 h-3 rounded-full transition-colors duration-200 ${
-                  index === currentSlide ? 'bg-purple-400' : 'bg-white/30'
+                  index === currentSlide ? 'bg-purple-400' : bg-white/30
                 }`}
+
               />
             ))}
+
           </div>
         </div>
 
@@ -220,12 +245,12 @@ const ContentCarousel: React.FC = () => {
                 <div className="text-2xl font-bold">99.9%</div>
                 <div className="text-gray-400 text-sm">Uptime</div>
               </div>
-            </div>
-          </div>
+            </div>          </div>
         </div>
       </div>
     </div>
   );
+
 };
 
 export default ContentCarousel;

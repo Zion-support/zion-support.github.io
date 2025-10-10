@@ -1,12 +1,20 @@
 'use client';
+
 import React from 'react';
+
 import { Helmet } from 'react-helmet-async';
+
 import { Cloud, Shield, Zap, Target, TrendingUp, CheckCircle, ArrowRight, Star, Award, Globe, Server, Database, Users, Clock, Phone } from 'lucide-react';
+
 import Navigation from '../components/Navigation';
+
 import Footer from '../components/Footer';
-;
+
+';
+
 const,
   CloudMigrationPage: React.FC = () => {/* TODO: Fix JSX expression */}
+
     },
 
       ico,
@@ -57,9 +65,12 @@ const,
   s: ['Vendor independence', 'Disaster recovery', 'Cost optimization', 'Flexibility']
 
     }
+
   ];
+
 ;
-const migrationSteps = [
+
+const migrationSteps = [;;
 
       titl,
   e: 'Assessment & Planning',
@@ -74,7 +85,7 @@ const migrationSteps = [
       titl,
   e: 'Planning',
       descriptio,
-  n: 'Create detailed migration plan with timelines and rollback strategies'
+  n: Create detailed migration plan with timelines and rollback strategies
       titl,
   e: 'Optimization & Support',
       descriptio,
@@ -86,7 +97,7 @@ const migrationSteps = [
       descriptio,
   n: 'Comprehensive analysis of your current infrastructure and migration requirements.',
       duratio,
-  n: '1-2 weeks'
+  n: 1-2 weeks
       ste,
   p: '02',
       titl,
@@ -100,7 +111,7 @@ const migrationSteps = [
       descriptio,
   n: 'Execute the migration with minimal downtime and maximum data integrity.',
       duratio,
-  n: '2-4 weeks'
+  n: 2-4 weeks
       ste,
   p: '04',
       descriptio,
@@ -108,8 +119,10 @@ const migrationSteps = [
       ico,
   n: TrendingUp,
       duratio,
-  n: 'Ongoing';
-const pricingPlans = [
+  n: 'Ongoing;
+
+const pricingPlans = [;;
+
       nam,
   e: 'Small Business',
       pric,
@@ -126,7 +139,7 @@ const pricingPlans = [
 
         'Email support',
         '30-day warranty',
-        'Documentation'
+        Documentation
       ],
 
       popula,
@@ -143,7 +156,7 @@ const pricingPlans = [
         '90-day post-migration support',
         'Advanced monitoring',
         'Performance optimization',
-        'Cost optimization'
+        Cost optimization
       popula,
   r: true,
   name: 'Enterprise',
@@ -161,32 +174,34 @@ const pricingPlans = [
         'Full monitoring suite',
         'Multi-cloud architecture',
         'Dedicated account manager',
-        'Custom integrations';
-const benefits = [
+        'Custom integrations;
+
+const benefits = [;;
+
       titl,
   e: 'Cost Reduction',
       descriptio,
   n: 'Reduce infrastructure costs by up to 40% with cloud optimization.',
       percentag,
-  e: '40%'
+  e: 40%
       titl,
   e: 'Improved Performance',
       descriptio,
   n: 'Achieve 99.9% uptime with cloud infrastructure.',
       percentag,
-  e: '99.9%'
+  e: 99.9%
       titl,
   e: 'Enhanced Security',
       descriptio,
   n: 'Enterprise-grade security with automated updates and monitoring.',
       percentag,
-  e: '100%'
+  e: 100%
       titl,
   e: 'Scalability',
       descriptio,
   n: 'Scale resources up or down based on demand automatically.',
       percentag,
-  e: 'Unlimited'
+  e: Unlimited
 
   return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       {/* Header */}"
@@ -200,6 +215,7 @@ const benefits = [
               </div>"
               <h1 className="text-5xl font-bold text-white neon-text"></h1>
                 Cloud Migration;
+
               </h1>"
             <p className="text-xl text-gray-300 mb-8 leading-relaxed"></p>
               Seamlessly migrate your infrastructure to the cloud with our expert migration services. 
@@ -217,6 +233,7 @@ const benefits = [
                 href="/demo""
                 className="cyber-button-outline inline-flex items-center justify-center px-8 py-4 text-lg font-semibold"
                 Free Assessment;
+
       {/* Features Section */}"
       <div className="py-20 bg-slate-800/50"></div>"
         <div className="container mx-auto px-4"></div>"
@@ -250,20 +267,24 @@ const benefits = [
               Cloud Migration Services;"
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"></p>
               Seamlessly migrate your applications and data to the cloud with our expert migration services;
+
               <a></a>"
                 className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold,"
   hover:bg-blue-700 transition-colors inline-flex items-center"
                 Get Started;
+
               </a>"
                 className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold,
   hover:bg-blue-600,"
   hover:text-white transition-all duration-300 inline-flex items-center"
                 View Demo;
+
           </section>
 "
           <section className="mb-16"></section>"
             <h2 className="text-3xl font-bold text-center text-white mb-12"></h2>
               Our Migration Services;
+
             </h2>"
             <div className="grid grid-cols-1,
   md:grid-cols-2,"
@@ -278,6 +299,7 @@ const benefits = [
                       <li key={idx} className="flex items-center text-gray-300"></li>
 
                         {benefit}
+
                       </li>)
                     ))}
 
@@ -286,6 +308,7 @@ const benefits = [
                     <li key={idx} className="flex items-center text-sm text-gray-400"></li>"
                       <CheckCircle className="w-4 h-4 text-cyan-400 mr-2" /></CheckCircle>
           {/* Migration Process */}
+
               Our Migration Process;"
             <div className="grid grid-cols-1,
   md:grid-cols-2,"
@@ -361,7 +384,8 @@ const benefits = [
           <h2 className="text-4xl font-bold text-white mb-6"></h2>
             Accelerate Your Cloud Journey;"
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
-            Don't let outdated infrastructure hold your business back. Our cloud migration;
+            Dont let outdated infrastructure hold your business back. Our cloud migration;
+
             services will help you modernize, scale, and compete in the digital economy.
               Start Your Migration;"
       <section className="py-16 px-4"></section>"
@@ -381,8 +405,10 @@ const benefits = [
             <p className="text-xl text-gray-300">Choose the migration package that fits your needs</p>
 
             {/* TODO: Fix JSX expression */}
+
               <div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-cyan-500' : ''}`}></div>
                 {/* TODO: Fix JSX expression */}
+
                 )}"
                 <div className="text-center mb-6"></div>"
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>"
@@ -402,6 +428,7 @@ const benefits = [
             <button className="cyber-button px-8 py-4 text-lg"></button>"
             <button className="cyber-button-outline px-8 py-4 text-lg"></button>
               Contact Our Experts;
+
       <Footer /></Footer>"
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center"></div>"
       <div className="text-center"></div>"
@@ -412,7 +439,6 @@ const benefits = [
           Contact Us;
 
   )};
-
 
 export default CloudMigrationPage;
 

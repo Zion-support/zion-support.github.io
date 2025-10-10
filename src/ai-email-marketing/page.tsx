@@ -1,12 +1,20 @@
 'use client';
+
 import React from 'react';
+
 import { Mail, Target, Send, BarChart, Users, TrendingUp } from 'lucide-react';
-;
+
+';
+
 const AiEmailMarketingPage: React.FC = () => {
-import {Mail, Send, BarChart, Users, Target, CheckCircle, ArrowRight, Star, TrendingUp} from 'lucide-react';
+import {Mail, Send, BarChart, Users, Target, CheckCircle, ArrowRight, Star, TrendingUp} from 'lucide-react;
+
 ;
-const AIEmailMarketingPage: React.FC = () => {;
-const _features = [
+
+const AIEmailMarketingPage: React.FC = () => {';
+
+const _features = [;';
+
     {
       ico,
     n: Mail,
@@ -30,26 +38,35 @@ icon$5: TrendingUp,
       descriptio,
     n:     ,
 $4}
+
   ];
+
 ;
-const benefits = [
+
+const benefits = [;;
+
     'Increase open rates by 200%',
     'Boost click-through rates by 150%',
     'Reduce unsubscribe rates by 60%',
     'Improve conversion rates by 180%',
-    'Save 15+ hours per week';
-const emailTypes = [
+    'Save 15+ hours per week;
+
+const emailTypes = [;;
+
     { name: 'Welcome Series', icon: '👋', description: 'Onboard new subscribers' },
     { name: 'Newsletter', icon: '📰', description: 'Regular updates and content' },
     { name: 'Promotional', icon: '🎯', description: 'Sales and special offers' },
     { name: 'Transactional', icon: '📧', description: 'Order confirmations and receipts' },
     { name: 'Re-engagement', icon: '🔄', description: 'Win back inactive subscribers' },
     { name: 'Educational', icon: '📚', description: 'Value-driven content series' }
+
 ;
-const pricing = [
+
+const pricing = [;;
+
       name: 'Starter',
       price: '$29',
-      period: '
+      period: 
       descriptio,
     n: 'Perfect for small businesses',
       features: [
@@ -58,7 +75,7 @@ const pricing = [
         'Basic AI features',
         'Email templates',
         'Basic analytics',
-        'Email support'
+        Email support
       ],
       popular: false
       nam,
@@ -83,9 +100,10 @@ const pricing = [
         'White-label options',
         'Custom integrations',
         'Dedicated support',
-        'Advanced automation'
+        Advanced automation
 
 import { Helmet } from 'react-helmet-async';
+
 import Navigation from '../components
 import Footer from '../components
 
@@ -113,5 +131,7 @@ import Footer from '../components
   )};
 
 export default $1;
+
 import { Helmet } from 'react-helmet-async';
+
 import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, BarChart, Calendar, Target, ArrowRight, Phone, Mail, MapPin, Brain, Cpu, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Mail as EmailIcon, Send, BarChart3 } from 'lucide-react';

@@ -1,43 +1,68 @@
 
   i,
   d: string;
+
   nam,
   e: string;
+
   taglin,
   e: string;
+
   pric,
   e: string;
+
   perio,
   d: string;
+
   descriptio,
   n: string;
+
   feature,
   s: string[];
+
   categor,
   y: string;
+
   lin,
   k: string;
+
   variant?: ServiceVariant;
+
   rating?: number;
+
   customers?: number;
+
   trial_days?: number;
+
   setup_time?: string;
+
   contact_info: unknown;
+
     mobile: string;
+
     email: string;
+
     address: string;
+
     website?: string;,
   contact_inf,
   o: unknown;
+
     mobil,
   e: string;
+
     emai,
   l: string;
+
     addres,
   s: string;
+
     website?: string}
+
 ;
-const contact_info =
+
+const contact_info =;;
+
   mobil,
   e: '+1 302 464 0950',
   emai,
@@ -47,17 +72,23 @@ const contact_info =
   websit,
   e: 'http,
   s://ziontechgroup.com'}
+
 ;
+
 export const marketValidatedServices: MarketValidatedService[] = [;
+
   // AI and Assistants;
+
     id: 'ai - assistant - pro',
     name: 'AI Assistant Pro',
     tagline: 'Branded copilot with RAG, guardrails, and analytics',
     price: '$149',
     period: '/month',
     description: unknown;
+
 export const,
   marketValidatedServices: MarketValidatedService[] = [;
+
   // AI and Assistants,
     i,
   d: 'ai - assistant - pro',
@@ -84,23 +115,29 @@ category: 'AI & Assistants',
     variant: 'ai - futuristic',
     rating:
         rating: 4.8;
+
     customers: 1200;
+
     trial_days: 14;
+
     setup_time: '30 minutes',
     contact_info},
       'Eval datasets/versioning',
     id: 'ai - evals - observability',
     name: 'AI Evals & Observability',
     tagline: unknown;
+
       'Regression testing, safety checks, and live metrics for LLM features',
     price: '$99',
     period: '/month',
     description: unknown;
+
     categor,
   y: 'AI & Assistants',
     lin,
   k: 'http,
-  s://ziontechgroup.com / ai - assistant',;
+  s://ziontechgroup.com / ai - assistant,;
+
 varian,
   t: 'ai - futuristic',
     ratin,
@@ -138,8 +175,11 @@ category: 'AI & MLOps',
     variant: 'quantum - holographic',
     rating:
         rating: 4.7;
+
     customers: 600;
+
     trial_days: 14;
+
     setup_time: '1 hour',
     contact_info},
       'Hybrid vector+BM25 + reranker',
@@ -149,11 +189,13 @@ category: 'AI & MLOps',
     price: '$179',
     period: '/month',
     description: unknown;
+
     categor,
   y: 'AI & MLOps',
     lin,
   k: 'http,
-  s://ziontechgroup.com / ai - evals',;
+  s://ziontechgroup.com / ai - evals,;
+
 varian,
   t: 'quantum - holographic',
     ratin,
@@ -190,14 +232,18 @@ category: 'AI & Search',
     variant: 'quantum - matrix',
     rating:
         rating: 4.7;
+
     customers: 900;
+
     trial_days: 14;
+
     setup_time: '2 hours',
     categor,
   y: 'AI & Search',
     lin,
   k: 'http,
-  s://ziontechgroup.com / agentic - rag',;
+  s://ziontechgroup.com / agentic - rag,;
+
 varian,
   t: 'quantum - matrix',
     ratin,
@@ -211,12 +257,14 @@ varian,
     contact_info},
       'Auth/Z misconfig checks',
   // Security and APIs;
+
     id: 'api - security - scanner',
     name: 'API Security Scanner',
     tagline: 'OpenAPI / GraphQL scanning, auth / Z checks, dependency audit',
     price: '$59',
     period: '/month',
     description: unknown;
+
     i,
   d: 'api - security - scanner',
     nam,
@@ -241,8 +289,11 @@ category: 'Enterprise IT - Security',
     variant: 'cyberpunk',
     rating:
         rating: 4 && 4.6;
+
     customers: 750;
+
     trial_days: 14;
+
     setup_time: '20 minutes',
     contact_info},
       'OTel traces/metrics/logs',
@@ -252,11 +303,13 @@ category: 'Enterprise IT - Security',
     price: '$69',
     period: '/month',
     description: unknown;
+
     categor,
   y: 'Enterprise IT - Security',
     lin,
   k: 'http,
-  s://ziontechgroup.com / api - security - scanner',;
+  s://ziontechgroup.com / api - security - scanner,;
+
 varian,
   t: 'cyberpunk',
     ratin,
@@ -293,22 +346,28 @@ category: 'Enterprise IT - Observability',
     variant: 'holographic',
     rating:
         rating: 4 && 4.6;
+
     customers: 640;
+
     trial_days: 14;
+
     setup_time: '40 minutes',
     contact_info},
   // Cloud and Infra;
+
     id: 'cloud - cost - optimizer - pro',
     name: 'Cloud Cost Optimizer Pro',
     tagline: 'Rightsizing, lifecycle, anomaly detection, and k8 s bin - packing',
     price: '$99',
     period: '/month',
     description: unknown;
+
     categor,
   y: 'Enterprise IT - Observability',
     lin,
   k: 'http,
-  s://ziontechgroup.com / api - observability',;
+  s://ziontechgroup.com / api - observability,;
+
 varian,
   t: 'holographic',
     ratin,
@@ -321,6 +380,7 @@ varian,
   e: '40 minutes',
     contact_info},
   // Cloud and Infra;
+
     i,
   d: 'cloud - cost - optimizer - pro',
     nam,
@@ -345,8 +405,11 @@ category: 'Enterprise IT - FinOps',
     variant: 'quantum',
     rating:
         rating: 4 && 4.6;
+
     customers: 820;
+
     trial_days: 14;
+
     setup_time: '1 hour',
     contact_info},
     id: 'database - performance - monitor',
@@ -355,11 +418,13 @@ category: 'Enterprise IT - FinOps',
     price: '$79',
     period: '/month',
     description: unknown;
+
     categor,
   y: 'Enterprise IT - FinOps',
     lin,
   k: 'http,
-  s://ziontechgroup.com / cloud - cost - optimizer',;
+  s://ziontechgroup.com / cloud - cost - optimizer,;
+
 varian,
   t: 'quantum',
     ratin,
@@ -395,8 +460,11 @@ category: 'Enterprise IT - Data',
     variant: 'neural - quantum',
     rating:
         rating: 4.7;
+
     customers: 560;
+
     trial_days: 14;
+
     setup_time: '45 minutes',
     contact_info},
     id: 'managed - postgres - ha',
@@ -405,11 +473,13 @@ category: 'Enterprise IT - Data',
     price: '$499',
     period: '/month',
     description: unknown;
+
     categor,
   y: 'Enterprise IT - Data',
     lin,
   k: 'http,
-  s://ziontechgroup.com / database - performance - monitor',;
+  s://ziontechgroup.com / database - performance - monitor,;
+
 varian,
   t: 'neural - quantum',
     ratin,
@@ -445,22 +515,28 @@ category: 'Enterprise IT - Data',
     variant: 'holographic - advanced',
     rating:
         rating: 4.8;
+
     customers: 240;
+
     trial_days: 7;
+
     setup_time: '1 day',
     contact_info},
   // Reliability & Monitoring;
+
     id: 'uptime - slo - monitor',
     name: 'Uptime & SLO Monitor',
     tagline: 'Synthetic checks, error budgets, and incident automation',
     price: '$39',
     period: '/month',
     description: unknown;
+
     categor,
   y: 'Enterprise IT - Data',
     lin,
   k: 'http,
-  s://ziontechgroup.com / managed - postgres - ha',;
+  s://ziontechgroup.com / managed - postgres - ha,;
+
 varian,
   t: 'holographic - advanced',
     ratin,
@@ -473,6 +549,7 @@ varian,
   e: '1 day',
     contact_info},
   // Reliability & Monitoring;
+
     i,
   d: 'uptime - slo - monitor',
     nam,
@@ -497,8 +574,11 @@ category: 'Enterprise IT - SRE',
     variant: 'quantum - cyberpunk',
     rating:
         rating: 4.5;
+
     customers: 1100;
+
     trial_days: 14;
+
     setup_time: '25 minutes',
     contact_info},
     id: 'tls - certificate - monitor',
@@ -507,11 +587,13 @@ category: 'Enterprise IT - SRE',
     price: '$19',
     period: '/month',
     description: unknown;
+
     categor,
   y: 'Enterprise IT - SRE',
     lin,
   k: 'http,
-  s://ziontechgroup.com / uptime - slo - monitor',;
+  s://ziontechgroup.com / uptime - slo - monitor,;
+
 varian,
   t: 'quantum - cyberpunk',
     ratin,
@@ -547,8 +629,11 @@ category: 'Enterprise IT - Security',
     variant: 'default',
     rating:
         rating: 4 && 4.5;
+
     customers: 2200;
+
     trial_days: 14;
+
     setup_time: '10 minutes',
     contact_info},
     id: 'domain - dns - monitor',
@@ -557,11 +642,13 @@ category: 'Enterprise IT - Security',
     price: '$29',
     period: '/month',
     description: unknown;
+
     categor,
   y: 'Enterprise IT - Security',
     lin,
   k: 'http,
-  s://ziontechgroup.com / tls - certificate - monitor',;
+  s://ziontechgroup.com / tls - certificate - monitor,;
+
 varian,
   t: 'default',
     ratin,
@@ -597,14 +684,18 @@ category: 'Enterprise IT - Networking',
     variant: 'default',
     rating:
         rating: 4 && 4.4;
+
     customers: 980;
+
     trial_days: 14;
+
     setup_time: '15 minutes',
     categor,
   y: 'Enterprise IT - Networking',
     lin,
   k: 'http,
-  s://ziontechgroup.com / domain - dns - monitor',;
+  s://ziontechgroup.com / domain - dns - monitor,;
+
 varian,
   t: 'default',
     ratin,
@@ -619,12 +710,14 @@ varian,
       'HTML/Markdown to PDF',
       'Headers/footers',
   // Dev & Productivity;
+
     id: 'pdf - render - api',
     name: 'PDF Render API',
     tagline: 'High - fidelity serverless PDF rendering and watermarking',
     price: '$49',
     period: '/month',
     description: unknown;
+
     i,
   d: 'pdf - render - api',
     nam,
@@ -649,8 +742,11 @@ category: 'Micro SaaS',
     variant: 'holographic - matrix',
     rating:
         rating: 4.6;
+
     customers: 1300;
+
     trial_days: 7;
+
     setup_time: '10 minutes',
     contact_info},
     id: 'browser - performance - monitor',
@@ -659,11 +755,13 @@ category: 'Micro SaaS',
     price: '$39',
     period: '/month',
     description: unknown;
+
     categor,
   y: 'Micro SaaS',
     lin,
   k: 'http,
-  s://ziontechgroup.com / pdf - render - api',;
+  s://ziontechgroup.com / pdf - render - api,;
+
 varian,
   t: 'holographic - matrix',
     ratin,
@@ -699,8 +797,11 @@ category: 'Micro SaaS',
     variant: 'quantum - holographic',
     rating:
         rating: 4.5;
+
     customers: 760;
+
     trial_days: 14;
+
     setup_time: '20 minutes',
     contact_info},
     id: 'feature - flags - edge',
@@ -709,11 +810,13 @@ category: 'Micro SaaS',
     price: '$69',
     period: '/month',
     description: unknown;
+
     categor,
   y: 'Micro SaaS',
     lin,
   k: 'http,
-  s://ziontechgroup.com / browser - performance - monitor',;
+  s://ziontechgroup.com / browser - performance - monitor,;
+
 varian,
   t: 'quantum - holographic',
     ratin,
@@ -749,8 +852,11 @@ category: 'Micro SaaS',
     variant: 'quantum - holographic',
     rating:
         rating: 4.5;
+
     customers: 430;
+
     trial_days: 14;
+
     setup_time: '30 minutes',
     contact_info},
     id: 'serverless - cron - manager',
@@ -759,11 +865,13 @@ category: 'Micro SaaS',
     price: '$29',
     period: '/month',
     description: unknown;
+
     categor,
   y: 'Micro SaaS',
     lin,
   k: 'http,
-  s://ziontechgroup.com / feature - flags - edge',;
+  s://ziontechgroup.com / feature - flags - edge,;
+
 varian,
   t: 'quantum - holographic',
     ratin,
@@ -799,22 +907,28 @@ category: 'Micro SaaS',
     variant: 'default',
     rating:
         rating: 4 && 4.4;
+
     customers: 1150;
+
     trial_days: 14;
+
     setup_time: '15 minutes',
     contact_info},
   // Compliance & Risk;
+
     id: 'soc2 - evidence - automation',
     name: 'SOC 2 Evidence Automation',
     tagline: 'Collect and map controls with change tracking',
     price: '$149',
     period: '/month',
     description: unknown;
+
     categor,
   y: 'Micro SaaS',
     lin,
   k: 'http,
-  s://ziontechgroup.com / serverless - cron - manager',;
+  s://ziontechgroup.com / serverless - cron - manager,;
+
 varian,
   t: 'default',
     ratin,
@@ -827,6 +941,7 @@ varian,
   e: '15 minutes',
     contact_info},
   // Compliance & Risk;
+
     i,
   d: 'soc2 - evidence - automation',
     nam,
@@ -851,8 +966,11 @@ category: 'Enterprise IT - Compliance',
     variant: 'holographic - neural',
     rating:
         rating: 4.6;
+
     customers: 310;
+
     trial_days: 7;
+
     setup_time: '1 day',
     contact_info},
     id: 'vendor - risk - automation',
@@ -861,11 +979,13 @@ category: 'Enterprise IT - Compliance',
     price: '$99',
     period: '/month',
     description: unknown;
+
     categor,
   y: 'Enterprise IT - Compliance',
     lin,
   k: 'http,
-  s://ziontechgroup.com / soc2 - evidence - automation',;
+  s://ziontechgroup.com / soc2 - evidence - automation,;
+
 varian,
   t: 'holographic - neural',
     ratin,
@@ -901,22 +1021,28 @@ category: 'Enterprise IT - Compliance',
     variant: 'quantum - entanglement',
     rating:
         rating: 4.5;
+
     customers: 520;
+
     trial_days: 14;
+
     setup_time: '2 hours',
     contact_info},
   // Developer and Ops Utilities;
+
     id: 'webhook - relay - replay',
     name: 'Webhook Relay & Replay',
     tagline: 'Capture, inspect, and replay webhooks reliably',
     price: '$19',
     period: '/month',
     description: unknown;
+
     categor,
   y: 'Enterprise IT - Compliance',
     lin,
   k: 'http,
-  s://ziontechgroup.com / vendor - risk - automation',;
+  s://ziontechgroup.com / vendor - risk - automation,;
+
 varian,
   t: 'quantum - entanglement',
     ratin,
@@ -929,6 +1055,7 @@ varian,
   e: '2 hours',
     contact_info},
   // Developer and Ops Utilities;
+
     i,
   d: 'webhook - relay - replay',
     nam,
@@ -953,8 +1080,11 @@ category: 'Micro SaaS',
     variant: 'cyberpunk - holographic',
     rating:
         rating: 4.5;
+
     customers: 1650;
+
     trial_days: 14;
+
     setup_time: '10 minutes',
     contact_info},
     id: 'audit - log - vault',
@@ -963,11 +1093,13 @@ category: 'Micro SaaS',
     price: '$39',
     period: '/month',
     description: unknown;
+
     categor,
   y: 'Micro SaaS',
     lin,
   k: 'http,
-  s://ziontechgroup.com / webhook - relay - replay',;
+  s://ziontechgroup.com / webhook - relay - replay,;
+
 varian,
   t: 'cyberpunk - holographic',
     ratin,
@@ -1003,17 +1135,22 @@ category: 'Enterprise IT - Security',
     variant: 'quantum - neural',
     rating:
         rating: 4.5;
+
     customers: 420;
+
     trial_days: 14;
+
     setup_time: '30 minutes',
     contact_info},
   // AI Channels;
+
     id: 'ai - phone - agent',
     name: 'AI Phone Agent',
     tagline: 'Voice IVR and call handling with CRM handoff',
     price: '$129',
     period: '/month',
     description: unknown;
+
       'Handle inbound calls with a natural AI voice, route to agents, and sync transcripts with your CRM.',
     features: ['Natural TTS / ASR', 'Routing & handoff', 'CRM sync', 'Analytics'],
 category: 'AI & Assistants',
@@ -1021,14 +1158,18 @@ category: 'AI & Assistants',
     variant: 'quantum - holographic - advanced',
     rating:
         rating: 4.6;
+
     customers: 380;
+
     trial_days: 7;
+
     setup_time: '1 hour',
     categor,
   y: 'Enterprise IT - Security',
     lin,
   k: 'http,
-  s://ziontechgroup.com / audit - log - vault',;
+  s://ziontechgroup.com / audit - log - vault,;
+
 varian,
   t: 'quantum - neural',
     ratin,
@@ -1041,6 +1182,7 @@ varian,
   e: '30 minutes',
     contact_info},
   // AI Channels;
+
     i,
   d: 'ai - phone - agent',
     nam,
@@ -1060,7 +1202,8 @@ varian,
   y: 'AI & Assistants',
     lin,
   k: 'http,
-  s://ziontechgroup.com / ai - phone - agent',;
+  s://ziontechgroup.com / ai - phone - agent,;
+
 varian,
   t: 'quantum - holographic - advanced',
     ratin,
@@ -1073,7 +1216,9 @@ varian,
   e: '1 hour',
     contact_info},
   // Search and Knowledge;
+
   // Search and Knowledge;
+
       'Managed vector DB',
       'Ingestion pipelines',
       'Metadata filters',
@@ -1083,8 +1228,11 @@ category: 'AI & Search',
     variant: 'quantum',
     rating:
         rating: 4 && 4.6;
+
     customers: 410;
+
     trial_days: 14;
+
     setup_time: '2 hours',
     contact_info},
     id: 'vector-search-starter',
@@ -1097,7 +1245,8 @@ category: 'AI & Search',
   y: 'AI & Search',
     lin,
   k: 'http,
-  s://ziontechgroup.com / vector - search - starter',;
+  s://ziontechgroup.com / vector - search - starter,;
+
 varian,
   t: 'quantum',
     ratin,
@@ -1110,41 +1259,48 @@ varian,
   e: '2 hours',
     contact_info},
     i,
-  d: 'vector-search-starter'
+  d: vector-search-starter
     nam,
-  e: 'Vector Search Starter'
+  e: Vector Search Starter
     taglin,
-  e: 'Deploy a production-grade vector database and APIs'
+  e: Deploy a production-grade vector database and APIs
     pric,
-  e: '$89'
+  e: $89
     perio,
-  d: '/month'
+  d: /month
     descriptio,
   n:
-      'Spin up a managed vector index with ingestion pipelines, filters, and access controls to power semantic search.'
+      Spin up a managed vector index with ingestion pipelines, filters, and access controls to power semantic search.
     feature,
   s: [;
-      'Managed vector DB'
-      'Ingestion pipelines'
-      'Metadata filters'
-      'Access controls'
+
+      Managed vector DB
+      Ingestion pipelines
+      Metadata filters
+      Access controls
     ]
 category: 'AI & Search',
     link: 'https://ziontechgroup.com/vector-search-starter',
     variant: 'quantum',
     rating:
         rating: 4.6;
+
     customers: 410;
+
     trialDays: 14;
+
     setupTime: '2 hours',
     contactInfo}
-];import { ServiceVariant  } from "../types/service-variants"
+
+];import { ServiceVariant  } from "../types/service-variants";
+
 export interface MarketValidatedService {id: 'vector - search - starter',
     name: 'Vector Search Starter',
     tagline: 'Deploy a production - grade vector database and APIs',
     price: '$89',
     period: '/month',
     description: unknown;
+
       'Spin up a managed vector index with ingestion pipelines, filters, and access controls to power semantic search.',
     features: [,
       'WORM retention',
@@ -1154,32 +1310,44 @@ export interface MarketValidatedService {id: 'vector - search - starter',
     category: 'Enterprise IT - Security',
     customers:
         customers: 420;
+
     trial_days: 14;
+
     setup_time: '30 minutes',
     contact_info}
+
   },
     customers: 380;
+
     trial_days: 7;
+
     setup_time: '1 hour',
     categor,
-  y: 'AI & Search'
+  y: AI & Search
     lin,
   k: 'http,
-  s://ziontechgroup.com/vector-search-starter';
+  s://ziontechgroup.com/vector-search-starter;
+
 varian,
-  t: 'quantum'
+  t: quantum
     ratin,
   g: 4.6;
+
     customer,
   s: 410;
+
     trialDay,
   s: 14,
     setupTim,
-  e: '2 hours'
+  e: 2 hours
     contactInfo}
+
 ];import { ServiceVariant } from '../types/service-variants';
+
 export interface MarketValidatedService {/* TODO: Fix JSX expression */}
+
     contact_info}
+
   },
     customer,
   s: 380,
@@ -1197,47 +1365,78 @@ category: 'AI & Search',
     variant: 'quantum',
     rating:
         rating: 4 && 4.6;
+
     customers: 410;
+
     trial_days: 14;
+
     setup_time: '2 hours',
     contact_info},
 export interface MarketValidatedService;
+
 export interface MarketValidatedService {;
+
 export interface MarketValidatedService;
+
 export interface MarketValidatedService {}
+
     trialDays: 14;
+
     setupTime: '2 hours',
     contactInfo}
+
   };
-];import { ServiceVariant  } from "../types/service-variants"
+
+];import { ServiceVariant  } from "../types/service-variants";
+
 export interface MarketValidatedService {;
+
 	id: string;
+
 	name: string;
+
 	tagline: string;
+
 	price: string;
+
 	period: string;
+
   description: string;
+
 	features: string[];
+
 	category: string;
+
 	link: string;
+
 	variant?: ServiceVariant;
+
 	rating?: number;
+
 	customers?: number;
+
 	trialDays?: number;
+
 	setupTime?: string;
+
   mobile: '+1 302 464 0950',
 	email: 'kleber@ziontechgroup && ziontechgroup.com',
 	address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup && ziontechgroup.com',
 	contactInfo: unknown;
+
 		mobile: string;
+
 		email: string;
+
 		address: string}
+
     categor,
   y: 'AI & Search',
     lin,
   k: 'http,
-  s://ziontechgroup.com / vector - search - starter',;
+  s://ziontechgroup.com / vector - search - starter,;
+
 varian,
   t: 'quantum',
     ratin,
@@ -1250,22 +1449,34 @@ varian,
   e: '2 hours',
     contact_info},
 export interface MarketValidatedService;
+
 export interface MarketValidatedService {/* TODO: Fix JSX expression */}
+
 export interface MarketValidatedService {}
+
     trialDay,
   s: 14,
     setupTim,
   e: '2 hours',
     contactInfo}
+
   };
-];import { ServiceVariant } from '../types/service-variants';
+
+];import { ServiceVariant } from '../types/service-variants;
+
 export interface MarketValidatedService {/* TODO: Fix JSX expression */}
+
   s: string}
+
 		website?: string}
+
 	}}
+
 export const,
-  marketValidatedServices: MarketValidatedService[] = [;
-	// AI and Assistants;
+  marketValidatedServices: MarketValidatedService[] = [';
+
+	// AI and Assistants';
+
 	{,
 		id: "ai-assistant-pro",
 		name: "AI Assistant Pro",
@@ -1282,12 +1493,17 @@ category: 'AI & Assistants',
 		variant: 'ai-futuristic',
 		rating:
         rating: 4 && 4.8;
+
 		customers: 1200;
+
 		trialDays: 14;
+
 		setupTime: "30 minutes",
 		contactInfo}}
+
 },
 	{;
+
 		id: "ai-evals-observability",
 		name: "AI Evals & Observability",
 		tagline: "Regression testing, safety checks, and live metrics for LLM features",
@@ -1303,12 +1519,17 @@ category: 'AI & MLOps',
 		variant: 'quantum-holographic',
 		rating:
         rating: 4 && 4.7;
+
 		customers: 600;
+
 		trialDays: 14;
+
 		setupTime: "1 hour",
 		contactInfo}}
+
 },
 	{;
+
 		id: "agentic-rag-platform",
 		name: "Agentic RAG Platform",
 		tagline: "Production RAG with hybrid search, chunking, tools, and evals",
@@ -1324,13 +1545,19 @@ category: 'AI & Search',
 		variant: 'quantum-matrix',
 		rating:
         rating: 4 && 4.7;
+
 		customers: 900;
+
 		trialDays: 14;
+
 		setupTime: "2 hours",
 		contactInfo}}
+
 },
 	// Security and APIs;
+
 	{;
+
 		id: "api-security-scanner",
 		name: "API Security Scanner",
 		tagline: "OpenAPI/GraphQL scanning, auth/Z checks, dependency audit",
@@ -1343,12 +1570,17 @@ category: 'Enterprise IT - Security',
 		variant: 'cyberpunk',
 		rating:
         rating: 4 && 4.6;
+
 		customers: 750;
+
 		trialDays: 14;
+
 		setupTime: "20 minutes",
 		contactInfo}}
+
 },
 	{;
+
 		id: "api-observability",
 		name: "API Observability & SLA Guard",
 		tagline: "OTel tracing, SLOs, and error budgets for services",
@@ -1361,13 +1593,19 @@ category: 'Enterprise IT - Observability',
 		variant: 'holographic',
 		rating:
         rating: 4 && 4.6;
+
 		customers: 640;
+
 		trialDays: 14;
+
 		setupTime: "40 minutes",
 		contactInfo}}
+
 },
 	// Cloud and Infra;
+
 	{;
+
 		id: "cloud-cost-optimizer-pro",
 		name: "Cloud Cost Optimizer Pro",
 		tagline: "Rightsizing, lifecycle, anomaly detection, and k8 s bin-packing",
@@ -1380,12 +1618,17 @@ category: 'Enterprise IT - FinOps',
 		variant: 'quantum',
 		rating:
         rating: 4 && 4.6;
+
 		customers: 820;
+
 		trialDays: 14;
+
 		setupTime: "1 hour",
 		contactInfo}}
+
 },
 	{;
+
 		id: "database-performance-monitor",
 		name: "Database Performance Monitor",
 		tagline: "Slow query capture, AI index suggestions, capacity forecasting",
@@ -1398,12 +1641,17 @@ category: 'Enterprise IT - Data',
 		variant: 'neural-quantum',
 		rating:
         rating: 4 && 4.7;
+
 		customers: 560;
+
 		trialDays: 14;
+
 		setupTime: "45 minutes",
 		contactInfo}}
+
 },
 	{;
+
 		id: "managed-postgres-ha",
 		name: "Managed Postgres HA",
 		tagline: "Highly-available Postgres with backups, failover, and guardrails",
@@ -1416,13 +1664,19 @@ category: 'Enterprise IT - Data',
 		variant: 'holographic-advanced',
 		rating:
         rating: 4 && 4.8;
+
 		customers: 240;
+
 		trialDays: 7;
+
 		setupTime: "1 day",
 		contactInfo}}
+
 },
 	// Reliability & Monitoring;
+
 	{;
+
 		id: "uptime-slo-monitor",
 		name: "Uptime & SLO Monitor",
 		tagline: "Synthetic checks, error budgets, and incident automation",
@@ -1435,12 +1689,17 @@ category: 'Enterprise IT - SRE',
 		variant: 'quantum-cyberpunk',
 		rating:
         rating: 4 && 4.5;
+
 		customers: 1100;
+
 		trialDays: 14;
+
 		setupTime: "25 minutes",
 		contactInfo}}
+
 },
 	{;
+
 		id: "tls-certificate-monitor",
 		name: "TLS Certificate Monitor",
 		tagline: "Auto-renewal checks and expiry alerts across your fleet",
@@ -1453,12 +1712,17 @@ category: 'Enterprise IT - Security',
 		variant: 'default',
 		rating:
         rating: 4 && 4.5;
+
 		customers: 2200;
+
 		trialDays: 14;
+
 		setupTime: "10 minutes",
 		contactInfo}}
+
 },
 	{;
+
 		id: "domain-dns-monitor",
 		name: "Domain & DNS Monitor",
 		tagline: "Track DNS changes, TTLs, and misconfigurations",
@@ -1471,13 +1735,19 @@ category: 'Enterprise IT - Networking',
 		variant: 'default',
 		rating:
         rating: 4 && 4.4;
+
 		customers: 980;
+
 		trialDays: 14;
+
 		setupTime: "15 minutes",
 		contactInfo}}
+
 },
 	// Dev & Productivity;
+
 	{;
+
 		id: "pdf-render-api",
 		name: "PDF Render API",
 		tagline: "High-fidelity serverless PDF rendering and watermarking",
@@ -1490,12 +1760,17 @@ category: 'Micro SaaS',
 		variant: 'holographic-matrix',
 		rating:
         rating: 4 && 4.6;
+
 		customers: 1300;
+
 		trialDays: 7;
+
 		setupTime: "10 minutes",
 		contactInfo}}
+
 },
 	{;
+
 		id: "browser-performance-monitor",
 		name: "Browser Performance Monitor",
 		tagline: "RUM metrics, Core Web Vitals, and UX waterfall analysis",
@@ -1508,12 +1783,17 @@ category: 'Micro SaaS',
 		variant: 'quantum-holographic',
 		rating:
         rating: 4 && 4.5;
+
 		customers: 760;
+
 		trialDays: 14;
+
 		setupTime: "20 minutes",
 		contactInfo}}
+
 },
 	{;
+
 		id: "feature-flags-edge",
 		name: "Feature Flags at the Edge",
 		tagline: "Targeting, rollouts, and experiments at CDN edge",
@@ -1526,12 +1806,17 @@ category: 'Micro SaaS',
 		variant: 'quantum-holographic',
 		rating:
         rating: 4 && 4.5;
+
 		customers: 430;
+
 		trialDays: 14;
+
 		setupTime: "30 minutes",
 		contactInfo}}
+
 },
 	{;
+
 		id: "serverless-cron-manager",
 		name: "Serverless Cron Manager",
 		tagline: "Reliable scheduled jobs with retries and observability",
@@ -1544,13 +1829,19 @@ category: 'Micro SaaS',
 		variant: 'default',
 		rating:
         rating: 4 && 4.4;
+
 		customers: 1150;
+
 		trialDays: 14;
+
 		setupTime: "15 minutes",
 		contactInfo}}
+
 },
 	// Compliance & Risk;
+
 	{;
+
 		id: "soc2-evidence-automation",
 		name: "SOC 2 Evidence Automation",
 		tagline: "Collect and map controls with change tracking",
@@ -1563,12 +1854,17 @@ category: 'Enterprise IT - Compliance',
 		variant: 'holographic-neural',
 		rating:
         rating: 4 && 4.6;
+
 		customers: 310;
+
 		trialDays: 7;
+
 		setupTime: "1 day",
 		contactInfo}}
+
 },
 	{;
+
 		id: "vendor-risk-automation",
 		name: "Vendor Risk Automation",
 		tagline: "Automate VRM workflows, DDQs, and risk scoring",
@@ -1581,13 +1877,19 @@ category: 'Enterprise IT - Compliance',
 		variant: 'quantum-entanglement',
 		rating:
         rating: 4 && 4.5;
+
 		customers: 520;
+
 		trialDays: 14;
+
 		setupTime: "2 hours",
 		contactInfo}}
+
 },
 	// Developer and Ops Utilities;
+
 	{;
+
 		id: "webhook-relay-replay",
 		name: "Webhook Relay & Replay",
 		tagline: "Capture, inspect, and replay webhooks reliably",
@@ -1600,12 +1902,17 @@ category: 'Micro SaaS',
 		variant: 'cyberpunk-holographic',
 		rating:
         rating: 4 && 4.5;
+
 		customers: 1650;
+
 		trialDays: 14;
+
 		setupTime: "10 minutes",
 		contactInfo}}
+
 },
 	{;
+
 		id: "audit-log-vault",
 		name: "Audit Log Vault",
 		tagline: "Tamper-evident logs with retention and export",
@@ -1615,101 +1922,174 @@ category: 'Micro SaaS',
 		features["WORM retention", "Export APIs", "Fine-grained access", "Tamper evidence"],
 		category: "Enterprise IT - Security",
 		link: "https://ziontechgroup && ziontechgroup.com/audit-log-vault",;
+
 variant: "quantum-neural",
 		rating: 4 && 4.5;
+
 		customers: 420;
+
 		trialDays: 14}
-];import { ServiceVariant   } from '../types / service - variants'
+
+];import { ServiceVariant   } from '../types / service - variants;
+
 export interface MarketValidatedService {id: string;
+
 name: string;
+
 tagline: string;
+
 price: string;
+
 period: string;
+
 description: string;
+
 features: string[];
+
 category: string;
+
 link: string;
+
 variant?: ServiceVariant;
+
 rating?: number;
+
 customers?: number;
+
 trial_days?: number;
+
 setup_time?: string;
+
 contact_info: unknown;
+
   mobile: string;
+
   email: string}
-  address: string;
-const contact_info =
+
+  address: string';
+
+const contact_info =;';
+
   mobile: '+1 302 464 0950',
 email: 'kleber@ziontechgroup.com',
 address: "364 E Main St STE 1008 Middletown DE 19709",
 	{/* TODO: Fix JSX expression */}
+
 		contactInfo}}
+
 },
 	{/* TODO: Fix JSX expression */}
+
 		contactInfo}}
+
 },
 	{/* TODO: Fix JSX expression */}
+
 		contactInfo}}
+
 },
 	// Security and APIs;
+
 	{/* TODO: Fix JSX expression */}
+
 		contactInfo}}
+
 },
 	{/* TODO: Fix JSX expression */}
+
 		contactInfo}}
+
 },
 	// Cloud and Infra;
+
 	{/* TODO: Fix JSX expression */}
+
 		contactInfo}}
+
 },
 	{/* TODO: Fix JSX expression */}
+
 		contactInfo}}
+
 },
 	{/* TODO: Fix JSX expression */}
+
 		contactInfo}}
+
 },
 	// Reliability & Monitoring;
+
 	{/* TODO: Fix JSX expression */}
+
 		contactInfo}}
+
 },
 	{/* TODO: Fix JSX expression */}
+
 		contactInfo}}
+
 },
 	{/* TODO: Fix JSX expression */}
+
 		contactInfo}}
+
 },
 	// Dev & Productivity;
+
 	{/* TODO: Fix JSX expression */}
+
 		contactInfo}}
+
 },
 	{/* TODO: Fix JSX expression */}
+
 		contactInfo}}
+
 },
 	{/* TODO: Fix JSX expression */}
+
 		contactInfo}}
+
 },
 	{/* TODO: Fix JSX expression */}
+
 		contactInfo}}
+
 },
 	// Compliance & Risk;
+
 	{/* TODO: Fix JSX expression */}
+
 		contactInfo}}
+
 },
 	{/* TODO: Fix JSX expression */}
+
 		contactInfo}}
+
 },
 	// Developer and Ops Utilities;
+
 	{/* TODO: Fix JSX expression */}
+
 		contactInfo}}
+
 },
 	{/* TODO: Fix JSX expression */}
+
   s: 14}
-];import { ServiceVariant } from '../types / service - variants';
+
+];import { ServiceVariant } from '../types / service - variants;
+
 export interface MarketValidatedService {/* TODO: Fix JSX expression */}
+
   l: string}
+
   addres,
-  s: string,;
-const contact_info =
+  s: string,';
+
+const contact_info =;';
+
   mobil,
   e: "+1 302 464 0950",
 emai,"
@@ -1721,9 +2101,13 @@ addres,"
   e: 'http,',
   s:
         s://ziontechgroup.com"}
+
 }
+
 export const marketValidatedServices: MarketValidatedService[] = [;
+
 // AI and Assistants;
+
   id: "ai - assistant - pro",
   name: "AI Assistant Pro",
   tagline: "Branded copilot with RAG, guardrails, and analytics",
@@ -1739,12 +2123,17 @@ category: 'AI & Assistants',
   variant: 'ai - futuristic',
   rating:
         rating: 4.8;
+
   customers: 1200;
+
   trial_days: 14;
+
   setup_time: "30 minutes",
   contact_info;
+
 export const,
   marketValidatedServices: MarketValidatedService[] = [;
+
 // AI and Assistants,
   i,"
   d: "ai - assistant - pro",
@@ -1801,10 +2190,14 @@ category: 'AI & MLOps',
   variant: 'quantum - holographic',
   rating:
         rating: 4.7;
+
   customers: 600;
+
   trial_days: 14;
+
   setup_time: "1 hour",
   contact_info;
+
   categor,"
   y: "AI & MLOps",
   lin,"
@@ -1843,10 +2236,14 @@ category: 'AI & Search',
   variant: 'quantum - matrix',
   rating:
         rating: 4.7;
+
   customers: 900;
+
   trial_days: 14;
+
   setup_time: "2 hours",
   contact_info;
+
   categor,"
   y: "AI & Search",
   lin,"
@@ -1865,6 +2262,7 @@ k: 'http,',
   e: "2 hours",
   contact_info},
 // Security and APIs;
+
   i,"
   d: "api - security - scanner",
   nam,"
@@ -1883,10 +2281,14 @@ category: 'Enterprise IT - Security',
   variant: 'cyberpunk',
   rating:
         rating: 4.6;
+
   customers: 750;
+
   trial_days: 14;
+
   setup_time: "20 minutes",
   contact_info;
+
   categor,"
   y: "Enterprise IT - Security",
   lin,"
@@ -1922,10 +2324,14 @@ category: 'Enterprise IT - Observability',
   variant: 'holographic',
   rating:
         rating: 4.6;
+
   customers: 640;
+
   trial_days: 14;
+
   setup_time: "40 minutes",
   contact_info;
+
   categor,"
   y: "Enterprise IT - Observability",
   lin,"
@@ -1944,6 +2350,7 @@ k: 'http,',
   e: "40 minutes",
   contact_info},
 // Cloud and Infra;
+
   i,"
   d: "cloud - cost - optimizer - pro",
   nam,"
@@ -1962,10 +2369,14 @@ category: 'Enterprise IT - FinOps',
   variant: 'quantum',
   rating:
         rating: 4.6;
+
   customers: 820;
+
   trial_days: 14;
+
   setup_time: "1 hour",
   contact_info;
+
   categor,"
   y: "Enterprise IT - FinOps",
   lin,"
@@ -2001,10 +2412,14 @@ category: 'Enterprise IT - Data',
   variant: 'neural - quantum',
   rating:
         rating: 4.7;
+
   customers: 560;
+
   trial_days: 14;
+
   setup_time: "45 minutes",
   contact_info;
+
   categor,"
   y: "Enterprise IT - Data",
   lin,"
@@ -2040,10 +2455,14 @@ category: 'Enterprise IT - Data',
   variant: 'holographic - advanced',
   rating:
         rating: 4.8;
+
   customers: 240;
+
   trial_days: 7;
+
   setup_time: "1 day",
   contact_info;
+
   categor,"
   y: "Enterprise IT - Data",
   lin,"
@@ -2062,6 +2481,7 @@ k: 'http,',
   e: "1 day",
   contact_info},
 // Reliability & Monitoring;
+
   i,"
   d: "uptime - slo - monitor",
   nam,"
@@ -2080,10 +2500,14 @@ category: 'Enterprise IT - SRE',
   variant: 'quantum - cyberpunk',
   rating:
         rating: 4.5;
+
   customers: 1100;
+
   trial_days: 14;
+
   setup_time: "25 minutes",
   contact_info;
+
   categor,"
   y: "Enterprise IT - SRE",
   lin,"
@@ -2119,10 +2543,14 @@ category: 'Enterprise IT - Security',
   variant: 'default',
   rating:
         rating: 4.5;
+
   customers: 2200;
+
   trial_days: 14;
+
   setup_time: "10 minutes",
   contact_info;
+
   categor,"
   y: "Enterprise IT - Security",
   lin,"
@@ -2158,10 +2586,14 @@ category: 'Enterprise IT - Networking',
   variant: 'default',
   rating:
         rating: 4.4;
+
   customers: 980;
+
   trial_days: 14;
+
   setup_time: "15 minutes",
   contact_info;
+
   categor,"
   y: "Enterprise IT - Networking",
   lin,"
@@ -2180,6 +2612,7 @@ k: 'http,',
   e: "15 minutes",
   contact_info},
 // Dev & Productivity;
+
   i,"
   d: "pdf - render - api",
   nam,"
@@ -2198,10 +2631,14 @@ category: 'Micro SaaS',
   variant: 'holographic - matrix',
   rating:
         rating: 4.6;
+
   customers: 1300;
+
   trial_days: 7;
+
   setup_time: "10 minutes",
   contact_info;
+
   categor,"
   y: "Micro SaaS",
   lin,"
@@ -2237,10 +2674,14 @@ category: 'Micro SaaS',
   variant: 'quantum - holographic',
   rating:
         rating: 4.5;
+
   customers: 760;
+
   trial_days: 14;
+
   setup_time: "20 minutes",
   contact_info;
+
   categor,"
   y: "Micro SaaS",
   lin,"
@@ -2276,10 +2717,14 @@ category: 'Micro SaaS',
   variant: 'quantum - holographic',
   rating:
         rating: 4.5;
+
   customers: 430;
+
   trial_days: 14;
+
   setup_time: "30 minutes",
   contact_info;
+
   categor,"
   y: "Micro SaaS",
   lin,"
@@ -2315,10 +2760,14 @@ category: 'Micro SaaS',
   variant: 'default',
   rating:
         rating: 4.4;
+
   customers: 1150;
+
   trial_days: 14;
+
   setup_time: "15 minutes",
   contact_info;
+
   categor,"
   y: "Micro SaaS",
   lin,"
@@ -2337,6 +2786,7 @@ k: 'http,',
   e: "15 minutes",
   contact_info},
 // Compliance & Risk;
+
   i,"
   d: "soc2 - evidence - automation",
   nam,"
@@ -2355,10 +2805,14 @@ category: 'Enterprise IT - Compliance',
   variant: 'holographic - neural',
   rating:
         rating: 4.6;
+
   customers: 310;
+
   trial_days: 7;
+
   setup_time: "1 day",
   contact_info;
+
   categor,"
   y: "Enterprise IT - Compliance",
   lin,"
@@ -2394,10 +2848,14 @@ category: 'Enterprise IT - Compliance',
   variant: 'quantum - entanglement',
   rating:
         rating: 4.5;
+
   customers: 520;
+
   trial_days: 14;
+
   setup_time: "2 hours",
   contact_info;
+
   categor,"
   y: "Enterprise IT - Compliance",
   lin,"
@@ -2416,6 +2874,7 @@ k: 'http,',
   e: "2 hours",
   contact_info},
 // Developer and Ops Utilities;
+
   i,"
   d: "webhook - relay - replay",
   nam,"
@@ -2434,10 +2893,14 @@ category: 'Micro SaaS',
   variant: 'cyberpunk - holographic',
   rating:
         rating: 4.5;
+
   customers: 1650;
+
   trial_days: 14;
+
   setup_time: "10 minutes",
   contact_info;
+
   categor,"
   y: "Micro SaaS",
   lin,"
@@ -2473,10 +2936,14 @@ category: 'Enterprise IT - Security',
   variant: 'quantum - neural',
   rating:
         rating: 4.5;
+
   customers: 420;
+
   trial_days: 14;
+
   setup_time: "30 minutes",
   contact_info;
+
   categor,"
   y: "Enterprise IT - Security",
   lin,"
@@ -2495,6 +2962,7 @@ k: 'http,',
   e: "30 minutes",
   contact_info},
 // AI Channels;
+
   i,"
   d: "ai - phone - agent",
   nam,"
@@ -2513,10 +2981,14 @@ category: 'AI & Assistants',
   variant: 'quantum - holographic - advanced',
   rating:
         rating: 4.6;
+
   customers: 380;
+
   trial_days: 7;
+
   setup_time: "1 hour",
   contact_info;
+
   categor,"
   y: "AI & Assistants",
   lin,"
@@ -2535,6 +3007,7 @@ k: 'http,',
   e: "1 hour",
   contact_info},
 // Search and Knowledge;
+
   i,"
   d: "vector - search - starter",
   nam,"
@@ -2553,10 +3026,14 @@ category: 'AI & Search',
   variant: 'quantum',
   rating:
         rating: 4.6;
+
   customers: 410;
+
   trial_days: 14;
+
   setup_time: "2 hours",
   contact_info;
+
   categor,"
   y: "AI & Search",
   lin,"
@@ -2574,7 +3051,9 @@ k: 'http,',
   setup_tim,"
   e: "2 hours",
   contact_info}]}}
+
   // Search and Knowledge;
+
   id: 'vector - search - starter',
   name: 'Vector Search Starter',
   tagline: 'Deploy a production - grade vector database and APIs',
@@ -2582,51 +3061,67 @@ k: 'http,',
   period: '/month',
 description: 'Spin up a managed vector index with ingestion pipelines, filters, and access controls to power semantic search.',
   features:
-        features: ['Managed vector DBIngestion pipelines_metadata filters_access controls'];
+        features: ['Managed vector DBIngestion pipelines_metadata filters_access controls];
+
   category: 'AI & Search',
   link: 'https://ziontechgroup.com / vector - search - starter',
   variant: 'quantum',
   rating:
         rating: 4.6;
+
   customers: 410;
+
   trial_days: 14;
+
   setup_time: '2 hours',
   contact_info;
+
   i,
-  d: 'vector - search - starter'
+  d: vector - search - starter
   nam,
-  e: 'Vector Search Starter'
+  e: Vector Search Starter
   taglin,
-  e: 'Deploy a production - grade vector database and APIs'
+  e: Deploy a production - grade vector database and APIs
   pric,
-  e: '$89'
+  e: $89
   perio,
-  d: '/month'
+  d: /month
   descriptio,
-  n: 'Spin up a managed vector index with ingestion pipelines, filters, and access controls to power semantic search.'
+  n: Spin up a managed vector index with ingestion pipelines, filters, and access controls to power semantic search.
   feature,
-  s: ['Managed vector DBIngestion pipelines_metadata filters_access controls'];
+  s: ['Managed vector DBIngestion pipelines_metadata filters_access controls];
+
   categor,
-  y: 'AI & Search'
+  y: AI & Search
   lin,
   k: 'http,
-  s://ziontechgroup.com / vector - search - starter';
+  s://ziontechgroup.com / vector - search - starter;
+
 varian,
-  t: 'quantum'
+  t: quantum
   ratin,
   g: 4.6;
+
   customer,
   s: 410;
+
   trial_day,
   s: 14;
+
   setup_tim,
-  e: '2 hours'
+  e: 2 hours
   contact_info}];
+
 ;
+
 ;
+
 		contactInfo}
+
 ];
+
 }}
+
 i,
   d: string; nam,
   e: string; taglin,
@@ -2640,7 +3135,8 @@ i,
   o: mobil,
   e: string; emai,
   l: string; addres,
-  s: string; website?: string} ; const contact_info = mobil,
+  s: string; website?: string} ; const contact_info = mobil,;;
+
   e: '+1 302 464 0950',' emai,
   l: 'kleber@ziontechgroup && ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709', ' websit,
@@ -2995,6 +3491,7 @@ i,
   e: '2 hours', contact_info}, export interface MarketValidatedService export interface MarketValidatedService {; export interface MarketValidatedService export interface MarketValidatedService {} trialDay,
   s: 14,' setupTim,"
   e: '2 hours', contactInfo} }; ];import { ServiceVariant } from "../types/service-variants" export interface MarketValidatedService {/* TODO: Fix JSX expression */}
+
   s: string} website?: string} }} export const,
   marketValidatedServices: MarketValidatedService[] = [; // AI and Assistants; {/* TODO: Fix JSX expression */}"
   e: "30 minutes", contactInfo}} }, {/* TODO: Fix JSX expression */}"
@@ -3015,6 +3512,7 @@ i,
   e: "1 day", contactInfo}} }, {/* TODO: Fix JSX expression */}"
   e: "2 hours", contactInfo}} }, // Developer and Ops Utilities; {/* TODO: Fix JSX expression */}"
   e: "10 minutes", contactInfo}} }, {/* TODO: Fix JSX expression */}
+
   s: 14} ' ];import { ServiceVariant } from '../types / service - variants' export interface MarketValidatedService,
   id: string; nam,
   e: string; taglin,
@@ -3028,7 +3526,8 @@ i,
   o: mobil,
   e: string; emai,
   l: string; addres,
-  s: string, const contact_info = mobil,"
+  s: string, const contact_info = mobil,";;
+
   e: "+1 302 464 0950", emai,"
   l: "kleber@ziontechgroup.com", addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709",

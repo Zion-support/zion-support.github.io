@@ -1,6 +1,9 @@
 'use client';
+
 import React from 'react';
+
 import { Helmet } from 'react-helmet-async';
+
 import {
   BarChart,
   TrendingUp,
@@ -22,33 +25,40 @@ import {
   Eye,
   PieChart,
 
-} from 'lucide-react';
+} from 'lucide-react;
+
 ;
-const DataAnalyticsPage: React.FC = () => {const features = [
+
+const DataAnalyticsPage: React.FC = () => {const features = [;';
+
     {
       ico,
     n: BarChart,
       title: 'Advanced Data Visualization',
-      description: 'Transform complex data into clear, actionable insights with interactive dashboards and reports.'
+      description: Transform complex data into clear, actionable insights with interactive dashboards and reports.
     },
     {
       icon: Brain,
       title: 'AI-Powered Analytics',
-      description: 'Leverage machine learning and artificial intelligence to uncover hidden patterns and trends.'
+      description: Leverage machine learning and artificial intelligence to uncover hidden patterns and trends.
     },
     {
       icon: Database,
       title: 'Data Integration',
-      description: 'Connect and analyze data from multiple sources to get a complete picture of your business.'
+      description: Connect and analyze data from multiple sources to get a complete picture of your business.
     },
     {
       icon: TrendingUp,
       title: 'Predictive Analytics',
-      description: 'Forecast future trends and make data-driven decisions with predictive modeling.'
+      description: Forecast future trends and make data-driven decisions with predictive modeling.
     }
+
   ];
+
 ;
-const benefits = [
+
+const benefits = [;;
+
     'Make data-driven business decisions',
     'Identify new opportunities and trends',
     'Improve operational efficiency',
@@ -56,56 +66,17 @@ const benefits = [
     'Enhance customer experience',
     'Comply with data regulations',
     'Real-time insights and reporting',
-    'Custom analytics solutions'
+    Custom analytics solutions
   ];
 
   return (
+
     <React.Fragment>
       <Helmet>
         <title>Data Analytics Services - Zion Tech Group | Business Intelligence</title>
         <meta name="description" content="Professional data analytics services by Zion Tech Group. Advanced business intelligence, data visualization, and AI-powered insights for your business." />
         <meta name="keywords" content="data analytics, business intelligence, data visualization, AI analytics, Zion Tech Group" />
       </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section *
-        <section className="pt-20 pb-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">
-                Data Analytics Services
-              <
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Transform your data into actionable insights with our advanced analytics solutions. 
-                Make smarter decisions and drive business growth with AI-powered data analysis.
-              <
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
-                  
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Our Analytics Solutions
-              <
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                We provide comprehensive data analytics services to help you unlock the power of your data.
-              <
-            <
-
-            <div className="grid grid-cols-1 md:grid-cols-2 l,
-    g:grid-cols-4 gap-8">
-              {features.map((feature, index) => (<div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white
-                  <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
-                    <feature.icon className="h-6 w-6 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p>
-                </div>
-              ))
-            </div>
-          </div>
-        </section>
-
         {/* Benefits Section *
         <section className="py-20 px-4 sm: px-6 lg:px-8 bg-white
           <div className="max-w-7xl mx-auto">
@@ -120,6 +91,7 @@ const benefits = [
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {benefits.map((benefit, index) => (
+
                 <div key={index} className="flex items-start space-x-3">
                   <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                   <p className="text-gray-300 text-lg">{benefit}</p>
@@ -128,7 +100,6 @@ const benefits = [
             </div>
           </div>
         </section>
-
         {/* CTA Section *
         <section className="py-20 px-4 sm: px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">

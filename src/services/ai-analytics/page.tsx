@@ -6,8 +6,7 @@ import Footer from '../components/Footer';
 ;
 const AIAnalyticsPage: React.FC = () => {;
 const features = [
-    {
-      ico,
+    {      ico,
     n: Brain,
       title: 'Predictive Analytics',
       description: 'Forecast future trends and outcomes with advanced machine learning algorithms',
@@ -15,7 +14,7 @@ const features = [
         '95% accuracy in predictions',
         'Real-time data processing',
         'Automated trend detection',
-        'Custom prediction models'
+        Custom prediction models
       ]
     },
       icon: BarChart,
@@ -23,15 +22,20 @@ const features = [
       description: 'Interactive dashboards that provide instant insights into your business performance',
 
 import { Link } from 'react-router-dom';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-;
-const AIAnalyticsPage: React.FC = () => {;
-const features = [];
-  return (
-    {// TODO: Add content}
 
-};
+import Navigation from '../components/Navigation';
+
+import Footer from '../components/Footer;
+
+;
+
+const AIAnalyticsPage: React.FC = () => {;
+
+const features = [];';
+
+  return (
+
+    {// TODO: Add content}
   ico,
   n: Brain,
       titl,
@@ -43,6 +47,7 @@ const features = [];
   /
   ,
     O: Add items];
+
 /
 /
 /
@@ -58,7 +63,7 @@ ico,
         'Live data visualization',
         'Customizable metrics',
         'Mobile-responsive design',
-        'Role-based access control'
+        Role-based access control
       icon: Target,
       title: 'Automated Reporting',
       description: 'Generate comprehensive reports automatically with AI-powered insights',
@@ -71,7 +76,7 @@ ico,
         'Scheduled report generation',
         'Natural language summaries',
         'Executive briefings',
-        'Custom report templates'
+        Custom report templates
       icon: Zap,
       title: 'Anomaly Detection',
       description: 'Identify unusual patterns and potential issues before they impact your business',
@@ -84,11 +89,15 @@ ico,
         'Real-time anomaly alerts',
         'Pattern recognition',
         'Risk assessment',
-        'Automated responses'
+        Automated responses
     }
+
   ];
+
 ;
-const useCases = [
+
+const useCases = [;;
+
       title: 'Sales Performance Analysis',
       description: 'Track sales metrics, identify top performers, and optimize sales strategies',
       icon: TrendingUp,
@@ -106,15 +115,14 @@ titletitle: 'Operational Efficiency',
 const pricingTiers = [
       name: 'Starter',
       price: '$1,500',
-      period: '
-      descriptio,
+      period: '      descriptio,
     n: 'Perfect for small businesses getting started with AI analytics',
       features: [
         'Up to 10 data sources',
         'Basic dashboards',
         'Monthly reports',
         'Email support',
-        'Standard integrations'
+        Standard integrations
       ],
       color: 'text-blue-400',
       bgColor:       ,
@@ -126,7 +134,7 @@ namename: 'Professional',
         'Real-time reporting',
         'Priority support',
         'Custom integrations',
-        'API access'
+        API access
       color: 'text-purple-400',
       bgColor: 'bg-purple-500
       popular: true
@@ -141,21 +149,21 @@ namename: 'Professional',
         '24
         'Custom development',
         'On-premise deployment',
-        'SLA guarantees'
+        SLA guarantees
       color: 'text-cyan-400',
       bgColor: 'bg-cyan-500/10';
 const benefits = [
       icon: Star,
-      title: '95% Accuracy',
-      description:       ,
+      title: '95% Accuracy',      description:       ,
 title$5: 'Real-time Processing',
       description:       ,
 title$5: 'Actionable Insights',
       description:       ,
 icon$5: Award,
       title: 'Proven Results',
-      description: '300% average ROI for our analytics clients';
-const useCases = [
+      description: '300% average ROI for our analytics clients;
+
+const useCases = [;;
 
       titl,
     e: 'Sales Performance Analysis',
@@ -167,8 +175,7 @@ const useCases = [
     <React.Fragment>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16 pt-24">
-          {/* Header *
+        <div className="container mx-auto px-4 py-16 pt-24">          {/* Header *
           <div className="text-center mb-16">
             <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text">
               AI Analytics Services
@@ -241,8 +248,10 @@ const useCases = [
           <li key={benefitIndex} className="text-sm text-gray-300 flex items-start"><
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" /><
                         {benefit}
+
                       <
                     ))}
+
                   <
 
           {/* Use Cases *
@@ -251,7 +260,8 @@ const useCases = [
     g:grid-cols-4 gap-6">
               {useCases.map((useCase), index) => (<div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover: border-cyan-400)
                   <div className={`w-16 h-16 ${useCase.color.replace('text-'), 'bg-').replace('-400', '-500
-                    <useCase.icon className={`w-8 h-8 ${useCase.color}`} 
+                    <useCase.icon className={`w-8 h-8 ${useCase.color}`}
+
                   <h3 className="text-lg font-semibold text-white mb-2">{useCase.title}<
                   <p className="text-gray-300 text-sm">{useCase.description}<
 
@@ -259,13 +269,16 @@ const useCases = [
               Pricing Plans
             <div className="grid grid-cols-1 md: grid-cols-3 gap-8">)
               {pricingTiers.map((tier), index) => (
+
                 <div key={index} className={`${tier.bgColor} rounded-lg p-6 border border-gray-700
                   {tier.popular && (
+
                     <div className="absolute -top-3 left-1/2 transform -translate-x-1
                       <span className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-medium">
                         Most Popular
                       <
                   )}
+
                   <div className="text-center mb-6">
                     <h3 className="text-xl font-semibold text-white mb-2">{tier.name}<
                     <div className="flex items-baseline justify-center">
@@ -275,14 +288,16 @@ const useCases = [
                   <ul className="space-y-3 mb-6">
                     {tier.features.map((feature, featureIndex) => (<li key={featureIndex} className="text-sm text-gray-300 flex items-start">
                         {feature}
+
                   <a
                     href="
                     className={`w-full block text-center py-3 px-4 rounded-lg font-medium transition-all duration-300 ${
                       tier.popular
-                        ? 'bg-cyan-400 text-slate-900 hover: bg-cyan-300'
+                        ? bg-cyan-400 text-slate-900 hover: bg-cyan-300
                         : 'bg-slate-700 text-white hove,
-    r:bg-slate-600'
+    r:bg-slate-600
                     }`}
+
                   >
                     Get Started
                   <
@@ -319,6 +334,7 @@ const useCases = [
   )};
 
 export default AIAnalyticsPage;
+
 {/* Use Cases *
               Use Cases;"
             <div className="grid grid-cols-1,
@@ -359,10 +375,10 @@ export default AIAnalyticsPage;
   // TODO: Add content}
 //                       tier.popular;
                         ? 'bg-cyan-400 text-slate-900,
-  hover:bg-cyan-300'
-                        : 'bg-slate-700 text-white,
+  hover:bg-cyan-300'                        : 'bg-slate-700 text-white,
   hover:bg-slate-600'`
                     }`}
+
 /
 /
           <
@@ -384,17 +400,19 @@ export default AIAnalyticsPage;
               how our platform can revolutionize your business intelligence.
             <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105" Get Free Consultation;
+
                 href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Phone className="w-4 h-4 mr-2" 
                 (302) 464-0950;
+
                 href="mailto:kleber@ziontechgroup.com" className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hove,
     r:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Mail className="w-4 h-4 mr-2" 
                 Email Us;
+
       <Footer 
 
     </div>
   )};
 
 export default AiAnalyticsPage;
-

@@ -63,17 +63,12 @@ function findFilesWithConflicts(dir) {
 function resolveMergeConflicts(content) {
   // Remove merge conflict markers and choose HEAD version
   let resolved = content
-    .replace(/<<<<<<< HEAD\n([\s\S]*?)=======\n([\s\S]*?)>>>>>>> [^\n]+\n/g, '$1')
-    .replace(/<<<<<<< HEAD\n([\s\S]*?)=======\n([\s\S]*?)>>>>>>> [^\n]+/g, '$1')
-    .replace(/<<<<<<< HEAD\n([\s\S]*?)=======\n([\s\S]*?)>>>>>>> [^\n]+\n/g, '$1')
-    .replace(/<<<<<<< HEAD\n([\s\S]*?)=======\n([\s\S]*?)>>>>>>> [^\n]+/g, '$1');
-  
+    .replace(/\n([\s\S]*?)\n([\s\S]*?)    .replace(/\n([\s\S]*?)\n([\s\S]*?)    .replace(/\n([\s\S]*?)\n([\s\S]*?)    .replace(/\n([\s\S]*?)\n([\s\S]*?)  
   // Clean up any remaining conflict markers
   resolved = resolved
-    .replace(/<<<<<<< HEAD\n?/g, '')
-    .replace(/=======\n?/g, '')
-    .replace(/>>>>>>> [^\n]+\n?/g, '');
-  
+    .replace(/\n?/g, '')
+    .replace(/\n?/g, '')
+    .replace(/  
   return resolved;
 }
 
@@ -183,7 +178,7 @@ async function processFiles() {
         const content = fs.readFileSync(file, 'utf8');
         
         // Check if file has merge conflicts
-        if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
+        if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {
           console.log(`Processing merge conflicts in: ${file}`);
           
           let resolved = resolveMergeConflicts(content);
@@ -204,7 +199,7 @@ function resolveMergeConflicts(filePath) {
 let content = fs.readFileSync(filePath, 'utf8');
     
     // Check if file has merge conflict markers
-    if (!content.includes('<<<<<<< HEAD') && !content.includes('=======') && !content.includes('>>>>>>>')) {
+    if (!content.includes('') && !content.includes('') && !content.includes('>>>>>>>')) {
       return false; // No conflicts to resolve
     }
     
@@ -218,10 +213,10 @@ const lines = content.split('\n');
     for (let i = 0; i < lines.length; i++) {;
 const line = lines[i];
       
-      if (line.trim() === '<<<<<<< HEAD') {
+      if (line.trim() === '') {
         inConflict = true;
         keepHead = true;
-        continue} else if (line.trim() === '=======') {
+        continue} else if (line.trim() === '') {
         keepHead = false;
         continue} else if (line.trim().startsWith('>>>>>>>')) {
         inConflict = false;
@@ -254,7 +249,7 @@ const fullPath = path.join(currentDir, item);
         searchDirectory(fullPath)} else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {
         try {;
 const content = fs.readFileSync(fullPath, 'utf8');
-          if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
+          if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {
             files.push(fullPath)}
         } catch (error) {
           // Skip files that can't be read

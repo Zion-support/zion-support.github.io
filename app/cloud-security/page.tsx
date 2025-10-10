@@ -1,34 +1,39 @@
 'use client';
+
 import React from 'react';
+
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Lock, Eye, ShieldCheck } from 'lucide-react';
-;
-const CloudSecurityPage: React.FC = () => {const features = [
+
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Lock, Eye, ShieldCheck } from 'lucide-react;
+
+';
+
+const CloudSecurityPage: React.FC = () => {const features = [;';
+
     {
       ico,
     n: Brain,
       title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
+      description: Advanced AI technology to transform your business operations and improve efficiency
     },
     {
       icon: Zap,
       title: 'High Performance',
       description: 'Lightning-fast processing and real-time analytics for optimal results'
-    },
-    {
+    },    {
       icon: Shield,
       title: 'Security Monitoring',
-      description: '24/7 security monitoring and threat detection'
+      description: 24/7 security monitoring and threat detection
     },
     {
       icon: Eye,
       title: 'Access Control',
-      description: 'Advanced access control and identity management'
+      description: Advanced access control and identity management
     },
     {
       icon: ShieldCheck,
       title: 'Compliance',
-      description: 'Meet industry compliance standards and regulations'
+      description: Meet industry compliance standards and regulations
     }
   ];
 ;
@@ -38,14 +43,13 @@ const benefits = [
     'Enterprise-grade security and compliance',
     'Scalable and flexible solutions',
     '24
-    'Advanced security monitoring',
-    'Real-time threat detection',
+    'Advanced security monitoring',    'Real-time threat detection',
     'Enterprise-grade encryption',
     'Compliance with industry standards',
     '24/7 security support',
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
-    'Proven track record of success'
+    Proven track record of success
   ];
 
   return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

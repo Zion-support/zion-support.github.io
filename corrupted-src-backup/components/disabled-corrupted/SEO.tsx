@@ -1,9 +1,13 @@
 import React from 'react';
+
 import { Helmet } from 'react-helmet-async';
 
 interface SEOProps {/* TODO: Fix JSX expression */}
+
 }
-;
+
+';
+
 const SEO: React.FC<SEOProps> = ({,
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of advanced AI solutions, enterprise automation, and cutting-edge technology services. Transform your business with our innovative AI-powered solutions.',
@@ -11,11 +15,10 @@ const SEO: React.FC<SEOProps> = ({,
   image = '/og-image.jpg',
   url = 'https: //zion.app',
   type = 'website'}) => {
-return (
-
-  return(<Helmet>
+  return (<Helmet>
       <title>
 );
+
 }{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
@@ -29,9 +32,11 @@ return (
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
       <link rel="canonical" href={url} />;
+
 const,
   SEO: React.FC<SEOProps> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
+
       <title>{title}</title>
       <meta name="description" content={description} /></meta>"
       <meta name="keywords" content={keywords} /></meta>"
@@ -58,4 +63,5 @@ const,
   )};
 
 export default SEO;
+
 "

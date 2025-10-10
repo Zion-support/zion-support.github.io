@@ -1,10 +1,15 @@
 import React from 'react';
+
 import { Helmet } from 'react-helmet-async';
+
 import {CheckCircle, Star, TrendingUp, Brain, Target, BarChart, Phone, Mail, MapPin} from 'lucide-react';
 
-import React from 'react';
-const AnalyticsToolsPage: React.FC = () => {;
-const analyticsTools = [
+import React from 'react;
+
+const AnalyticsToolsPage: React.FC = () => {';
+
+const analyticsTools = [;';
+
     {
       titl,
     e: 'AI Business Intelligence',
@@ -51,8 +56,11 @@ titletitle: 'AI Financial Analytics',
       icon: '💳',
       category:     ,
 $4}
+
   ];
-  const benefits = [
+
+  const benefits = [;;
+
       icon: TrendingUp,
       title: 'Data-Driven Decisions',
       description:       ,
@@ -64,28 +72,21 @@ icon$5: BarChart,
       description:       ,
 icon$5: Brain,
       title: 'AI-Powered',
-      description: 'Leverage advanced AI algorithms for deeper insights and automation'
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      description: 'Leverage advanced AI algorithms for deeper insights and automation'  return (
 
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
 
 import { Link } from 'react-router-dom';
 
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-;
-const PagePage: React.FC = () => {
-return (
 
+import Footer from '../components/Footer';
+
+';
+
+const PagePage: React.FC = () => {
   return (
-    
-          
-          
-          
-          
-          
-          
-          
+
           <div>Coming Soon</div>
   )
     
@@ -96,10 +97,10 @@ return (
         <meta name="keywords" content="analytics tools, business intelligence, web analytics, marketing analytics, sales analytics, ai analytics" />
       </Helmet>
 );
+
 }
       {/* Hero Section */}
-      <section className="pt-24 pb-16 px-4">
-        <div className="max-w-7xl mx-auto text-center">
+      <section className="pt-24 pb-16 px-4">        <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl sm: text-5xl m,
     d:text-6xl font-bold text-white mb-6">
             AI Analytics Tools
@@ -158,6 +159,7 @@ return (
                   <p className="text-gray-300 text-sm mb-4">{tool.description}<
                   <div className="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full inline-block mb-4">
                     {tool.category}
+
                 <div className="mb-6">
                   <h4 className="font-semibold text-white mb-3">Features: <
                   <ul className="space-y-2">)
@@ -166,6 +168,7 @@ return (
                   <div className="text-2xl font-bold text-cyan-400 mb-4">{tool.price}<
                   <a
                     href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${tool.title}`}
+
                     className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover: from-cyan-600 hover:to-blue-700 transition-all inline-block"
                   >
                     Get Started
@@ -228,8 +231,10 @@ return (
           <li key={featureIndex} className="flex items-center text-sm text-gray-300"><
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" /><
                         {feature}
+
                       <
                     ))}
+
                   <
                 <div className="text-center"><
                   <div className="text-2xl font-bold text-cyan-400 mb-4">{tool.price}<
@@ -271,17 +276,19 @@ Why Choose Our Analytics Tools?"
     r:text-purple-600 transition-colors"
               Email Us
   )};
+
 Ready to Unlock Your Data?
           <p className="text-xl text-purple-100 mb-8">
             Get started with our AI analytics tools today and transform your data into actionable insights.
           <div className="flex flex-col sm: flex-row gap-4 justify-center">
               href="tel:+13024640950" className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
 Call (302) 464-0950;
+
               href="mailto:kleber@ziontechgroup.com" className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hove,
     r:text-purple-600 transition-colors"
 
               Email Us;
+
   )};
 
 export default AnalyticsToolsPage;
-

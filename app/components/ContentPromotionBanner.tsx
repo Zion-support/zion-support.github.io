@@ -1,33 +1,37 @@
 'use client';
 
 import React from 'react';
+
 import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, TrendingUp } from 'lucide-react';
 
 const ContentPromotionBanner: React.FC = () => {
-  const features = [
+  const features = [;';
+
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
+      description: Advanced AI technology to transform your business operations and improve efficiency
     },
     {
       icon: Zap,
       title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
+      description: Lightning-fast processing and real-time analytics for optimal results
     },
     {
       icon: Shield,
       title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
+      description: Bank-level security with encryption and compliance standards
     },
     {
       icon: Globe,
       title: 'Global Reach',
-      description: 'Worldwide deployment with local support and compliance'
+      description: Worldwide deployment with local support and compliance
     }
+
   ];
 
-  const benefits = [
+  const benefits = [;;
+
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -35,33 +39,34 @@ const ContentPromotionBanner: React.FC = () => {
     '24/7 technical support',
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
-    'Proven track record of success'
+    Proven track record of success
   ];
 
-  const stats = [
+  const stats = [;;
+
     {
       icon: Users,
       value: '10,000+',
       label: 'Happy Customers',
-      description: 'Businesses trust our solutions'
+      description: Businesses trust our solutions
     },
     {
       icon: TrendingUp,
       value: '99.9%',
       label: 'Uptime',
-      description: 'Reliable service guarantee'
+      description: Reliable service guarantee
     },
     {
       icon: Star,
       value: '4.9/5',
       label: 'Rating',
-      description: 'Highly rated by clients'
+      description: Highly rated by clients
     }
+
   ];
 
   return (
-    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
-      <div className="max-w-7xl mx-auto">
+    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">      <div className="max-w-7xl mx-auto">
         {/* Hero Section */}
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -123,9 +128,9 @@ const ContentPromotionBanner: React.FC = () => {
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-start space-x-3">
                 <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
-                <span className="text-gray-300">{benefit}</span>
-              </div>
+                <span className="text-gray-300">{benefit}</span>              </div>
             ))}
+
           </div>
         </div>
 
@@ -152,6 +157,7 @@ const ContentPromotionBanner: React.FC = () => {
       </div>
     </div>
   );
+
 };
 
 export default ContentPromotionBanner;

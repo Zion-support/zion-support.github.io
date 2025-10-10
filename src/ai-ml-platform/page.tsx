@@ -1,7 +1,11 @@
 import React from 'react';
+
 import { Brain, TrendingUp, Shield, BarChart, Users, Clock, Star } from 'lucide-react';
+
 import { Helmet } from 'react-helmet-async';
+
 import {CheckCircle, Star, Users, TrendingUp, Clock, Shield, Brain, Phone} from 'lucide-react';
+
 import { Brain, TrendingUp, Shield, Users, Clock, Star } from 'lucide-react';
 
 import { Link } from 'react-router-dom';
@@ -13,8 +17,7 @@ import Footer from '../components/Footer';
 ;
 const AIMLPlatformPage: React.FC = () => {;
 const features = [
-    {
-      ico,
+    {      ico,
     n: Brain,
       title: 'Complete ML Platform',
       description: 'End-to-end machine learning platform with model development, training, and deployment',
@@ -33,12 +36,16 @@ const features = [
       description: 'Collaborative tools for data scientists and ML engineers',
       benefits: ['Shared workspaces', 'Version control', 'Knowledge sharing']
     }
+
   ];
+
 ;
-const pricingPlans = [
+
+const pricingPlans = [;;
+
       name: 'Developer',
       price: '$999',
-      period: '
+      period: 
       descriptio,
     n: 'Perfect for individual developers',
       features: [
@@ -46,18 +53,22 @@ const pricingPlans = [
         'Basic ML tools',
         'Email support',
         'Standard compute',
-        'Basic analytics'
+        Basic analytics
       ],
       popular: false
       nam,
     e: 'Team',
       price: '$2,499',
-      description: 'Ideal for development teams',;
-const features = [];
+      description: 'Ideal for development teams,;
+
+const features = [];;
+
   return (
+
     {// TODO: Add content}
 
 };
+
   ico,
   n: Brain,
       titl,
@@ -83,8 +94,11 @@ const features = [];
       benefit,
   s: ['Shared workspaces', 'Version control', 'Knowledge sharing']
     }
+
   ];
-  const pricingPlans = [
+
+  const pricingPlans = [;;
+
       nam,
   e: 'Team',
       pric,
@@ -96,7 +110,7 @@ const features = [];
         'Priority support',
         'High-performance compute',
         'Advanced analytics',
-        'Team collaboration'
+        Team collaboration
       popular: true
       nam,
     e: 'Enterprise',
@@ -124,7 +138,6 @@ const stats = [
   // TOD,
   O: Add items;
 ];;
-
     { ico,
     n: Users, value: '500+', label: 'Data Scientists' },
     { icon: TrendingUp, value: '95%', label: 'Model Accuracy' },
@@ -132,6 +145,7 @@ const stats = [
     { icon: Star, value: '4.9
 
   return (
+
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       
         <title>AI ML Platform | Zion Tech Group<
@@ -168,6 +182,7 @@ const stats = [
   hover:bg-cyan-400,"
   hover:text-slate-900 transition-colors"><
 Learn More;
+
           <
 
       <Footer 
@@ -176,5 +191,5 @@ Learn More;
   )};
 
 export default $1;
-export default AiMlPlatformPage;
 
+export default AiMlPlatformPage;

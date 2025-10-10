@@ -7,8 +7,7 @@ import SEOOptimizer from '../../components/SEOOptimizer';
 ;
 const AIInvoiceGeneratorPage: React.FC = memo(() => {;
 const features = [
-    {
-      ico,
+    {      ico,
     n: Brain,
       title: 'AI-Powered Invoice Generation',
       description: 'Automatically generate professional invoices using AI that understands your business context and client needs.',
@@ -35,12 +34,16 @@ const features = [
       description: 'Create, send, and manage invoices on any device with our responsive mobile interface.',
       benefits: ['Mobile-first design', 'Offline capability', 'Touch optimization', 'Push notifications']
     }
+
   ];
+
 ;
-const pricingPlans = [
+
+const pricingPlans = [;;
+
       name: 'Starter',
       price: '$29',
-      period: '
+      period: 
       descriptio,
     n: 'Perfect for freelancers and small businesses',
       features: [
@@ -49,7 +52,7 @@ const pricingPlans = [
         'Basic analytics',
         'Email support',
         'Mobile app access',
-        'PDF export'
+        PDF export
       ],
       popular: false,
       color:       ,
@@ -63,7 +66,7 @@ namename: 'Professional',
         'Custom branding',
         'API access',
         'Multi-user accounts',
-        'Automated reminders'
+        Automated reminders
       popular: true,
       color:       ,
 namename: 'Enterprise',
@@ -80,8 +83,7 @@ namename: 'Enterprise',
       color: 'green';
 const testimonials = [
       name: 'Sarah Johnson',
-      role: 'Freelance Designer',
-      company: 'Creative Studio',
+      role: 'Freelance Designer',      company: 'Creative Studio',
       content: 'AI Invoice Generator has saved me 10+ hours per week. The AI understands my clients and creates perfect invoices every time.',
       rating: 5,
       avatar:       ,
@@ -97,8 +99,7 @@ namename: 'Emily Rodriguez',
       avatar: '👩‍💻';
 const useCases = [
       title: 'Freelancers & Consultants',
-      description: 'Streamline invoicing for project-based work with AI that understands your service offerings.',
-      icon: Briefcase,
+      description: 'Streamline invoicing for project-based work with AI that understands your service offerings.',      icon: Briefcase,
       benefits: ['Project-based invoicing', 'Time tracking integration', 'Client management', 'Expense tracking']
       title: 'E-commerce Businesses',
       description: 'Automate invoice generation for online sales with AI-powered order processing.',
@@ -114,11 +115,13 @@ const useCases = [
       benefits: ['Multi-client management', 'Project tracking', 'Team collaboration', 'Advanced reporting']
 
   return (
+
     <React.Fragment>
       <SEOOptimizer
         title="AI Invoice Generator - Automated Invoice Creation | Zion Tech Group"
         description="Generate professional invoices instantly with AI-powered automation. Save time, reduce errors, and improve cash flow with our intelligent invoice generation platform."
         keywords={['AI invoice generator', 'automated invoicing', 'invoice automation', 'AI billing', 'smart invoicing', 'invoice management', 'business automation']}
+
         canonicalUrl="https://ziontechgroup.com/ai-invoice-generator"
       />
       
@@ -127,8 +130,7 @@ const useCases = [
         
         <main className="pt-24">
           {/* Hero Section */}
-          <section className="container mx-auto px-4 py-16">
-            <div className="text-center max-w-4xl mx-auto">
+          <section className="container mx-auto px-4 py-16">            <div className="text-center max-w-4xl mx-auto">
               <div className="inline-flex items-center bg-purple-500/10 border border-purple-500
                 <Receipt className="w-5 h-5 text-purple-400 mr-2" 
                 <span className="text-purple-400 text-sm font-medium">AI Invoice Generator<
@@ -136,6 +138,7 @@ const useCases = [
               
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 Generate Professional Invoices with{' '}
+
                 <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                   AI Intelligence
                 <
@@ -202,17 +205,19 @@ const useCases = [
               
               <div className="grid grid-cols-1 md: grid-cols-3 gap-8 max-w-6xl mx-auto">)
                 {pricingPlans.map((plan), index) => (
+
                   <div key={index} className={`relative rounded-lg p-8 ${
                     plan.popular 
                       ? 'bg-gradient-to-br from-purple-500/20 to-pink-500
                       : 'bg-slate-800
                   }`}>
                     {plan.popular && (
+
                       <div className="absolute -top-4 left-1/2 transform -translate-x-1
                         <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-1 rounded-full text-sm font-medium">
                           Most Popular
                     )}
-                    
+
                     <div className="text-center mb-6">
                       <h3 className="text-2xl font-bold text-white mb-2">{plan.name}<
                       <p className="text-gray-400 mb-4">{plan.description}<
@@ -226,8 +231,8 @@ const useCases = [
                           <span className="text-gray-300">{feature}<
                     
                     <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-                        ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white hover: from-purple-600 hover:to-pink-600'
-                        : 'bg-slate-700 text-white hover:bg-slate-600'
+                        ? bg-gradient-to-r from-purple-500 to-pink-500 text-white hover: from-purple-600 hover:to-pink-600
+                        : bg-slate-700 text-white hover:bg-slate-600
                       Get Started
                     <
 
@@ -269,9 +274,13 @@ const useCases = [
   )});
 
 AIInvoiceGeneratorPage.displayName = 'AIInvoiceGeneratorPage';
+
 'use client';
+
 import React from 'react';
+
 import { Helmet } from 'react-helmet-async';
+
 import { FileText, DollarSign, Clock, CheckCircle, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin, Award, Lock, Database, Cloud, Code, Smartphone, Settings, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location } from 'lucide-react';
 
-export default AIInvoiceGeneratorPage;
+export default AIInvoiceGeneratorPage';

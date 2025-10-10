@@ -1,33 +1,39 @@
 import { Facebook, Github, Linkedin, Mail, MapPin, Phone, Twitter } from 'lucide-react';
+
 import React from 'react';
+
 import { Link } from 'react-router-dom';
-;
-const EnhancedFooter: React.FC = () => {;
-const currentYear = new Date().getFullYear();
-  ;
-const services = [
+
+const EnhancedFooter: React.FC = () => {
+  const currentYear = new Date().getFullYear();
+
+  const services = [
+
     { name: 'AI Solutions', href: '/services/ai' },
     { name: 'Cloud Architecture', href: '/services/cloud' },
     { name: 'Web Development', href: '/services/web' },
     { name: 'Mobile Apps', href: '/services/mobile' },
     { name: 'Data Analytics', href: '/services/analytics' },
-    { name: 'DevOps', href: '/services/devops' }];
-;
-const products = [
+    { name: 'DevOps', href: '/services/devops }];
+
+const products = [;
+
     { name: 'AI Platform', href: '/products/ai-platform' },
     { name: 'Cloud Suite', href: '/products/cloud-suite' },
     { name: 'Analytics Dashboard', href: '/products/analytics' },
-    { name: 'Mobile SDK', href: '/products/mobile-sdk' }];
-;
-const quickLinks = [
+    { name: 'Mobile SDK', href: '/products/mobile-sdk }];
+
+const quickLinks = [;
+
     { name: 'About Us', href: '/about' },
     { name: 'Contact', href: '/contact' },
     { name: 'Blog', href: '/blog' },
     { name: 'Careers', href: '/careers' },
     { name: 'Privacy Policy', href: '/legal/privacy' },
-    { name: 'Terms of Service', href: '/legal/terms' }];
+    { name: 'Terms of Service', href: '/legal/terms }];
 
   return (
+
     <footer className="bg-gray-900 text-white">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
@@ -73,42 +79,51 @@ const quickLinks = [
             <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
               {services.slice(0, 6).map(service => (
+
                 <li key={service.name}>
                   <Link to={service.href}>
                     <span className="text-gray-300 hover:text-white transition-colors">
                       {service.name}
+
                     </span>
                   </Link>
                 </li>
               ))}
+
             </ul>
           </div>
           <div>
             <h3 className="text-lg font-semibold mb-4">Products</h3>
             <ul className="space-y-2">
               {products.slice(0, 6).map(product => (
+
                 <li key={product.name}>
                   <Link to={product.href}>
                     <span className="text-gray-300 hover:text-white transition-colors">
                       {product.name}
+
                     </span>
                   </Link>
                 </li>
               ))}
+
             </ul>
           </div>
           <div>
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               {quickLinks.map(item => (
+
                 <li key={item.name}>
                   <Link to={item.href}>
                     <span className="text-gray-300 hover:text-white transition-colors">
                       {item.name}
+
                     </span>
                   </Link>
                 </li>
               ))}
+
             </ul>
           </div>
         </div>

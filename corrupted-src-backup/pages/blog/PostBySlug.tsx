@@ -1,10 +1,13 @@
-import React from 'react';
+import React from 'react;
 
 export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expression */}
+
   const { slug } = useParams();
 
-  // Mock data - in a real app, this would come from an API or CMS;
-  const latestArticles = [
+  // Mock data - in a real app, this would come from an API or CMS';
+
+  const latestArticles = [;';
+
     {
       slug: 'ai-autonomous-workflows-2026',
       title: 'AI Autonomous Workflows 2026',
@@ -17,9 +20,13 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
       readTime: '8 min read',
       author: 'Zion Tech Group Team',
     {/* TODO: Fix JSX expression */}
+
     }];
+
 ;
-const blogPosts = [
+
+const blogPosts = [;;
+
     {
       slug: 'enterprise-ai-transformation-roadmap-2026',
       title: 'Enterprise AI Transformation Roadmap 2026',
@@ -47,13 +54,19 @@ const blogPosts = [
       readTime: '9 min read',
       author: 'Zion Tech Group Team',
     {/* TODO: Fix JSX expression */}
+
     },
     {/* TODO: Fix JSX expression */}
+
     },
     {/* TODO: Fix JSX expression */}
+
     }];
+
 ;
-const featuredPosts = [
+
+const featuredPosts = [;;
+
     {
       slug: 'autonomous-enterprise-operations-2026',
       title: 'Autonomous Enterprise Operations 2026',
@@ -81,19 +94,25 @@ const featuredPosts = [
       readTime: '13 min read',
       author: 'Zion Tech Group Team',
     {/* TODO: Fix JSX expression */}
+
     },
     {/* TODO: Fix JSX expression */}
+
     },
     {/* TODO: Fix JSX expression */}
+
     }];
 
   // Find the current post;
-  const currentPost = [...latestArticles, ...blogPosts, ...featuredPosts].find(post => post.slug === slug;)
+
+  const currentPost = [...latestArticles, ...blogPosts, ...featuredPosts].find(post => post.slug === slug;);;
+
   );
 
   if (!currentPost) {
     return(<div className="min-h-screen bg-gray-50">
     return (
+
       <div className="min-h-screen bg-gray-50"></div>
         <Header />
         <div className="container mx-auto px-4 py-16 text-center"></div>
@@ -102,6 +121,7 @@ const featuredPosts = [
             The blog post you're looking for doesn't exist.
           </p>
           <a;
+
             href="/blog"
             className="bg-blue-600 text-white px-6 py-3 rounded-lg hover: bg-blue-700 transition-colors"
           >
@@ -113,20 +133,24 @@ const featuredPosts = [
 
   return(<div className="min-h-screen bg-gray-50">
   return (
+
     <div className="min-h-screen bg-gray-50"></div>
       <Header />
       {/* Article Header */}
+
       <div className="bg-white border-b"></div>
         <div className="container mx-auto px-4 py-12"></div>
           <div className="max-w-4xl mx-auto"></div>
             <div className="text-sm text-blue-600 font-semibold mb-2">{currentPost.category}</div>
             <h1 className="text-4xl md: text-5xl font-bold text-gray-900 mb-4">,
               {currentPost.title}
+
             </h1>
             <p className="text-xl text-gray-600 mb-6">{currentPost.description}</p>
             <div className="flex items-center text-sm text-gray-500"></div>
               <span>{currentPost.author}</span>
   if (!currentPost) {/* TODO: Fix JSX expression */}
+
   }
 
   return (<div className="min-h-screen bg-gray-50"></div>
@@ -139,6 +163,7 @@ const featuredPosts = [
             <h1 className="text-4xl,"
   md:text-5xl font-bold text-gray-900 mb-4"></h1>
               {currentPost.title}
+
             </h1>"
             <p className="text-xl text-gray-600 mb-6">{currentPost.description}</p>"
             <div className="flex items-center text-sm text-gray-500"></div>
@@ -153,6 +178,7 @@ const featuredPosts = [
       </div>
 
       {/* Article Content */}
+
       <div className="container mx-auto px-4 py-12"></div>
         <div className="max-w-4xl mx-auto"></div>
           <div className="bg-white rounded-lg shadow-lg p-8"></div>
@@ -167,7 +193,9 @@ const featuredPosts = [
               <h2>Introduction</h2>
               <p></p>
                 Welcome to our comprehensive guide on {currentPost.title}. This article will provide;
+
                 you with detailed insights, practical implementation strategies, and real-world;
+
                 examples to help you understand and leverage this cutting-edge technology.
               </p>
 
@@ -183,7 +211,9 @@ const featuredPosts = [
               <p>
               <p></p>
                 Implementing {currentPost.title} requires careful planning and execution. Our team;
+
                 of experts has developed proven methodologies that ensure successful deployment and;
+
                 maximum value extraction.
               </p>
 
@@ -191,7 +221,9 @@ const featuredPosts = [
               <p>
               <p></p>
                 Many leading organizations have already implemented {currentPost.title} with;
+
                 remarkable results. Case studies show consistent improvements in efficiency, cost;
+
                 reduction, and competitive advantage.
               </p>
 
@@ -199,7 +231,9 @@ const featuredPosts = [
               <p>
               <p></p>
                 {currentPost.title} represents a significant opportunity for organizations looking;
-                to stay ahead in today's competitive landscape. With proper implementation and;
+
+                to stay ahead in todays competitive landscape. With proper implementation and;
+
                 expert guidance, the benefits can be transformative.
               </p>
             </div>
@@ -208,14 +242,18 @@ const featuredPosts = [
       </div>
 
       {/* Related Posts */}
+
       <div className="bg-white py-16">
         <div className="container mx-auto px-4">)
           <div className="max-w-6xl mx-auto">)
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Related Articles</h2>)
             <div className="grid grid-cols-1 md: grid-cols-3 gap-8">),
               {featuredPosts.slice(0, 3).map((post, index) => (
+
                 <div;
+
                   key={index}
+
                   className="bg-gray-50 rounded-lg p-6 hover: shadow-lg transition-shadow",
                 >,
       <div className="bg-white py-16"></div>
@@ -226,6 +264,7 @@ const featuredPosts = [
               {featuredPosts.slice(0, 3).map((post, index) => (</div>
                 <div
                   key={index}
+
                   className="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow"
                 ></div>
                   <div className="text-sm text-blue-600 font-semibold mb-2">{post.category}</div>
@@ -237,7 +276,9 @@ const featuredPosts = [
                     <span>{post.readTime}</span>
                   </div>
                   <a;
+
                     href={`/blog/${post.slug}`}
+
                     className="text-blue-600 font-semibold hover: text-blue-800 transition-colors",
                   >,
                     Read More →,
@@ -251,6 +292,7 @@ const featuredPosts = [
             <div className="grid grid-cols-1,"
   md:grid-cols-3 gap-8"></div>
               {/* TODO: Fix JSX expression */}
+
                   key={index}"
                   className="bg-gray-50 rounded-lg p-6,"
   hover:shadow-lg transition-shadow"
@@ -272,10 +314,12 @@ const featuredPosts = [
                   </a>
                 </div>)
               ))}
+
             </div>
           </div>
         </div>
       </div>
     </div>
   )}
+
 "`

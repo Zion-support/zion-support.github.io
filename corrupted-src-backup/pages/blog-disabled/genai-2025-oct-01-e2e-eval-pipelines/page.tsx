@@ -7,8 +7,7 @@ export default function BlogPost(): React.JSX.Element {
       <div className="min-h-screen bg-gradient-to-br from-blue-600 via-blue-700 to-purple-800 text-white"></div>
         <Helmet>
           <title>Genai 2025 Oct 01 E2e Eval Pipelines - Zion Tech Group</title>
-          <meta;
-            name="description"
+          <meta;            name="description"
             content="Genai 2025 Oct 01 E2 e Eval Pipelines - Latest insights from Zion Tech Group"
           /><
         <

@@ -1,9 +1,13 @@
 'use client';
+
 import React from 'react';
+
 'use client';
 
 import React, { useState, useCallback } from 'react';
+
 import { Helmet } from 'react-helmet-async';
+
 import {
   Phone,
   Mail,
@@ -13,8 +17,7 @@ import {
   CheckCircle;)
 } from 'lucide-react';
 ;
-const ContactPage: React.FC = () => {const [formData, setFormData] = useState({
-    name: '',
+const ContactPage: React.FC = () => {const [formData, setFormData] = useState({    name: '',
     email: '',
     company: '',
 phone: '',
@@ -23,39 +26,45 @@ phone: '',
     timeline: '',
     message: '';)
 });
+
 const [isSubmitting, setIsSubmitting] = useState(false);
-const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement></HTMLInputElement>) => {;
+
+const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle);
+
+const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement></HTMLInputElement>) => {;;
+
 const { name, value } = e.target;
+
     setFormData(prev => ({
       ...prev,
       [name]: value;)
 }););)
 }, []);
-const handleSubmit = async (e: React.FormEvent) => {
-    message: '']
-    });;
+const handleSubmit = async (e: React.FormEvent) => {    message: '']
+    });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
-  const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement></HTMLInputElement>) => {
-    const { name, value } = e.target;
+  const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement></HTMLInputElement>) => {    const { name, value } = e.target;
+
     setFormData(prev => ({
       ...prev,
       [name]: value]
     });)]
     }, []);
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleSubmit = async (e: React.FormEvent) => {    e.preventDefault();
+
     setIsSubmitting(true);
-    setSubmitStatus('idle');
-    
+
+    setSubmitStatus('idle);
+
     try {
       /
       await new Promise(resolve => setTimeout(resolve, 1000));
-      setSubmitStatus('success');
+
+      setSubmitStatus('success);
+
       setFormData({
         name: '',
         email: '',
@@ -78,9 +87,10 @@ message: '']
     } finally {
       setIsSubmitting(false);
     }
-  };
-;
-const services = [
+  };;
+
+const services = [;;
+
     'AI Solutions',
     'Cloud Computing',
     'Mobile App Development',
@@ -89,10 +99,13 @@ const services = [
     'Cybersecurity',
     'DevOps',
     'Consulting',
-    'Other'
+    Other
   ];
+
 ;
-const contactInfo = [
+
+const contactInfo = [;;
+
     {
       icon: Phone,
       title: 'Phone',
@@ -116,11 +129,13 @@ const contactInfo = [
       title: 'Business Hours',
       details: 'Monday - Friday: 9:00 AM - 6:00 PM\nSaturday: 10:00 AM - ,
     4:00 PM',
-      description: 'Eastern Time'
+      description: Eastern Time
     }
+
   ];
 
   return (
+
     <div>
         <title>Contact Us - Zion Tech Group | Get in Touch<
         <meta name="description" content="Get in touch with Zion Tech Group for AI and IT solutions. Contact us for consultations, support, or to discuss your project needs." 
@@ -132,14 +147,12 @@ const contactInfo = [
           {/* Header *
           <div className="text-center mb-16">
             <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6">
-              Get in
-              <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent"></span>
+              Get in              <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent"></span>
                 {' '}Touch
               <
             <
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Ready to transform your business? Let's discuss your project and explore 
-              how our AI and IT solutions can help you achieve your goals.
+              Ready to transform your business? Let's discuss your project and explore               how our AI and IT solutions can help you achieve your goals.
             <
 
           <
@@ -194,37 +207,13 @@ const contactInfo = [
                       <option value="">Select a service<
                       {services.map((service) => (<option key={service} value={service}>
                           {service}
+
                         <)
                       ))}
+
                     <
                   <
                 <
-
-                <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2"></label>
-                    Message *
-                  <
-                  <div className="relative">
-                    
-                  {isSubmitting ? (<>
-                      <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"><
-                      <span>Sending...<
-                    <)
-                  ) : (<>
-                      <Send className="w-5 h-5" 
-                      <span>Send Message<
-                    <)
-                  )}
-                <
-              <
-            <
-
-            {/* Contact Information *
-            <div className="space-y-8">
-              <div>
-                <h2 className="text-3xl font-bold text-white mb-6">Contact Information<
-                <p className="text-lg text-gray-300 mb-8">
-                  We're here to help! Reach out to us through any of these channels 
                   and we'll get back to you as soon as possible.
                 <
 
@@ -235,8 +224,7 @@ const contactInfo = [
                 <div>
                   <h2 className="text-3xl font-bold text-white mb-6">Get in Touch<
                   <p className="text-gray-300 mb-8">
-                    We're here to help you transform your business with cutting-edge AI and technology solutions.
-                  <
+                    We're here to help you transform your business with cutting-edge AI and technology solutions.                  <
                 <
 
                 <div className="space-y-6">
@@ -245,13 +233,14 @@ const contactInfo = [
                       
 <h3 className="text-lg font-semibold text-white mb-1">
                         {info.title}
+
                       <
                       <p className="text-cyan-400 font-medium mb-1">
                         {info.details}
+
                       <
                       <p className="text-gray-300 text-sm">
-                        {info.description}
-                      <
+                        {info.description}                      <
 
                     <
                   <
@@ -289,5 +278,4 @@ const contactInfo = [
 <
 
 )]
-    };
-export default ContactPage;
+    };export default ContactPage;

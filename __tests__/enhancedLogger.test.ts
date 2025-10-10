@@ -8,6 +8,8 @@ describe('enhancedLogger', () => {
   it('should pass basic test', () => {
     expect(true).toBe(true)});
 
-  it('should handle basic functionality', () => {;
-const result = 1 + 1;
+  it('should handle basic functionality, () => {;
+
+const result = 1 + 1;;
+
     expect(result).toBe(2)})});

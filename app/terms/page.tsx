@@ -1,10 +1,17 @@
 'use client';
+
 import React from 'react';
-import { FileText, Scale, Shield, AlertTriangle, CheckCircle, ArrowRight, Globe, User, Mail, Phone, Calendar, Lock, Database, Server, Key } from 'lucide-react'
-export default function TermsPage() {;
-const lastUpdated = 'January 1, 2024';
+
+import { FileText, Scale, Shield, AlertTriangle, CheckCircle, ArrowRight, Globe, User, Mail, Phone, Calendar, Lock, Database, Server, Key } from 'lucide-react';
+
+export default function TermsPage() {';
+
+const lastUpdated = 'January 1, 2024;;
+
   ;
-const sections = [
+
+const sections = [;;
+
     {
       title: 'Acceptance of Terms',
       icon: CheckCircle,
@@ -45,9 +52,11 @@ const sections = [
       icon: Scale,
 content: 'These terms shall be governed by and construed in accordance with the laws of the United States.']
     }
+
   ];
 
   return (
+
     <div>
       <div>
         <div>
@@ -60,6 +69,7 @@ content: 'These terms shall be governed by and construed in accordance with the 
           <div>
             <Calendar className="h-4 w-4 mr-2" />
             Last updated: {lastUpdated}
+
           </div>
         </div>
       </div>
@@ -77,14 +87,17 @@ content: 'These terms shall be governed by and construed in accordance with the 
                     <div>
                       <h2 className="text-2xl font-bold text-gray-900 mb-3"></h2>
                         {index + 1}. {section.title}
+
                       </h2>
                       <p className="text-gray-700 leading-relaxed"></p>
                         {section.content}
+
                       </p>
                     </div>
                   </div>
                 </div>
               ));
+
             </div>
 
             <div>

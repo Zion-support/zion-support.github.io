@@ -6,8 +6,7 @@ import SEOOptimizer from '../components/SEOOptimizer';
 ;
 const AIFitnessCoachPage: React.FC = () => {;
 const features = [
-    'Personalized Plans',
-    'Progress Tracking',
+    'Personalized Plans',    'Progress Tracking',
     'Nutrition Analysis',
     'Workout Videos',
     'Health Monitoring',
@@ -15,23 +14,29 @@ const features = [
     'Real-time Feedback',
     'Exercise Library',
     'Meal Planning',
-    'Wearable Integration'
+    Wearable Integration
   ];
+
 ;
-const benefits = [
+
+const benefits = [;;
+
     'Better results',
     '24
     'Personalized approach',
     'Health insights',
     'Motivation support',
-    'Cost-effective'
+    Cost-effective
   ];
+
 ;
-const pricingPlans = [
+
+const pricingPlans = [;;
+
     {
       name: 'Basic',
       price: '$99',
-      period: '
+      period: 
       feature,
     s: ['Basic plans', 'Progress tracking', 'Email support', 'Mobile app'],
       popular: false
@@ -39,7 +44,7 @@ const pricingPlans = [
     {
       name: 'Premium',
       price: '$149',
-      period: '
+      period: 
       feature,
     s: ['Personalized plans', 'Nutrition analysis', 'Video workouts', 'Wearable sync', 'Priority support'],
       popular: true
@@ -47,19 +52,22 @@ const pricingPlans = [
     {
       name: 'Pro',
       price: '$249',
-      period: '
+      period: 
       feature,
     s: ['Everything in Premium', '1-on-1 coaching', 'Custom programs', 'Advanced analytics', 'Dedicated support'],
       popular: false
     }
+
   ];
 
   return (
+
     <React.Fragment>
       <SEOOptimizer
         title="AI Fitness Coach - Personalized Fitness & Nutrition Plans | Zion Tech Group"
         description="Get personalized fitness and nutrition plans powered by AI analysis. Track progress, get 24/7 guidance, and achieve your health goals starting at $99/month."
         keywords={['AI fitness coach', 'personalized fitness', 'nutrition plans', 'health tracking', 'AI health', 'fitness automation']}
+
         canonicalUrl="https://ziontechgroup.com/ai-fitness-coach"
       />
       
@@ -68,8 +76,7 @@ const pricingPlans = [
         
         <main className="container mx-auto px-4 py-16 pt-24">
           {/* Hero Section */}
-          <section className="text-center mb-16">
-            <div className="max-w-4xl mx-auto">
+          <section className="text-center mb-16">            <div className="max-w-4xl mx-auto">
               <div className="flex items-center justify-center mb-6">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mr-4">
                   
@@ -103,6 +110,7 @@ const pricingPlans = [
                   <
                 <)
               ))}
+
             <
           <
 
@@ -120,6 +128,7 @@ const pricingPlans = [
                   <h3 className="text-lg font-semibold text-white mb-2">{benefit}<
                 <)
               ))}
+
             <
           <
 
@@ -130,14 +139,17 @@ const pricingPlans = [
             <
             <div className="grid grid-cols-1 md: grid-cols-3 gap-8 max-w-6xl mx-auto">
               {pricingPlans.map((plan), index) => (
+
                 <div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>
                   {plan.popular && (
+
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1
                       <div className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-semibold">
                         Most Popular
                       <
                     <
                   )}
+
                   <div className="text-center mb-6">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}<
                     <div className="flex items-baseline justify-center">
@@ -152,6 +164,7 @@ const pricingPlans = [
                   <
                 <
               ))}
+
             <
           <
 
