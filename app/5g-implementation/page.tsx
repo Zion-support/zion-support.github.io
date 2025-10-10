@@ -8,26 +8,26 @@ const FiveGImplementationPage: React.FC = () => {
   const features = [
     {
       icon: Wifi,
-      title: '5 G Network Design',
-      description: 'Complete 5 G network design and implementation with optimal coverage and performance.',
+      title: '5G Network Design',
+      description: 'Complete 5G network design and implementation with optimal coverage and performance.',
       benefits: ['Network planning', 'Coverage optimization', 'Performance tuning']
     },
     {
       icon: Zap,
       title: 'Ultra-Low Latency',
-      description: 'Ultra-low latency 5 G networks for real-time applications and mission-critical operations.',
+      description: 'Ultra-low latency 5G networks for real-time applications and mission-critical operations.',
       benefits: ['< 1 ms latency', 'Real-time apps', 'Mission critical']
     },
     {
       icon: Clock,
       title: '24/7 Network Monitoring',
-      description: 'Continuous monitoring of 5 G network performance with real-time analytics and alerts.',
+      description: 'Continuous monitoring of 5G network performance with real-time analytics and alerts.',
       benefits: ['Network monitoring', 'Performance analytics', 'Proactive maintenance']
     },
     {
       icon: Users,
       title: 'Scalable Infrastructure',
-      description: 'Scalable 5 G infrastructure that grows with your business needs and user demands.',
+      description: 'Scalable 5G infrastructure that grows with your business needs and user demands.',
       benefits: ['Auto-scaling', 'Capacity planning', 'Future-proof design']
     },
     {
@@ -39,14 +39,14 @@ const FiveGImplementationPage: React.FC = () => {
     {
       icon: BarChart,
       title: 'Performance Analytics',
-      description: 'Advanced analytics and reporting for 5 G network performance and optimization.',
+      description: 'Advanced analytics and reporting for 5G network performance and optimization.',
       benefits: ['Performance insights', 'Usage analytics', 'Optimization recommendations']
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      <Navigation /></Navigatio>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Navigation />
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
@@ -58,15 +58,17 @@ const FiveGImplementationPage: React.FC = () => {
               Implementation
             </span>
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3 xl mx-auto leading-relaxed">
-            Complete 5 G network implementation services with ultra-low latency, high-speed connectivity,
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+            Complete 5G network implementation services with ultra-low latency, high-speed connectivity,
             and advanced features for modern applications and IoT ecosystems.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-            <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25"></button></<<<button>Get</button></<<button>Started</button> Today
-              <ArrowRight className="inline-block ml-2 w-5 h-5" /></ArrowRigh>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25">
+              Get Started Today
+              <ArrowRight className="inline-block ml-2 w-5 h-5" />
             </button>
-            <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300"></button></<<<butto>Schedule</butto></<<butto>Demo</butto>
+            <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+              Schedule Demo
             </button>
           </div>
         </div>
@@ -127,7 +129,7 @@ const FiveGImplementationPage: React.FC = () => {
         </div>
       </section>
 
-      <Footer /></Foote>
+      <Footer />
     </div>
   );
 };
