@@ -81,6 +81,51 @@ const DemoPage = React.lazy(() => import('./app/demo/page'));
 const ConsultationPage = React.lazy(() => import('./app/consultation/page'));
 const ServicesPage = React.lazy(() => import('./app/services/page'));
 const AIOpsPage = React.lazy(() => import('./app/ai-ops/page'));
+// AI Services Pages
+const AIProjectManagerPage = React.lazy(() => import('./app/ai-project-manager/page'));
+const AIQuantumComputingPage = React.lazy(() => import('./app/ai-quantum-computing/page'));
+const AIQuantumFinancialOraclePage = React.lazy(() => import('./app/ai-quantum-financial-oracle/page'));
+const AISmartCalendarPage = React.lazy(() => import('./app/ai-smart-calendar/page'));
+const AISocialMediaManagerPage = React.lazy(() => import('./app/ai-social-media-manager/page'));
+const AISpaceTechnologyProPage = React.lazy(() => import('./app/ai-space-technology-pro/page'));
+const AISupplyChainOptimizationProPage = React.lazy(() => import('./app/ai-supply-chain-optimization-pro/page'));
+const AIVideoGeneratorPage = React.lazy(() => import('./app/ai-video-generator/page'));
+const AIWorkflowAutomationPage = React.lazy(() => import('./app/ai-workflow-automation/page'));
+
+// New Micro SAAS Services
+const AIVoiceCloningStudioPage = React.lazy(() => import('./app/ai-voice-cloning-studio/page'));
+const AICodeSecurityAuditorPage = React.lazy(() => import('./app/ai-code-security-auditor/page'));
+const AIMentalHealthCompanionPage = React.lazy(() => import('./app/ai-mental-health-companion/page'));
+const AISmartHomeControllerPage = React.lazy(() => import('./app/ai-smart-home-controller/page'));
+const AIInvestmentOptimizerPage = React.lazy(() => import('./app/ai-investment-optimizer/page'));
+// IT Services Pages
+const CloudMigrationPage = React.lazy(() => import('./app/cloud-migration/page'));
+const CybersecurityPage = React.lazy(() => import('./app/cybersecurity/page'));
+const ITInfrastructurePage = React.lazy(() => import('./app/it-infrastructure/page'));
+const ITSupportPage = React.lazy(() => import('./app/it-support/page'));
+const CustomDevelopmentPage = React.lazy(() => import('./app/custom-development/page'));
+const DevOpsCICDPage = React.lazy(() => import('./app/devops-cicd/page'));
+const DatabaseManagementPage = React.lazy(() => import('./app/database-management/page'));
+const NetworkDesignPage = React.lazy(() => import('./app/network-design/page'));
+const BlockchainIntegrationServicesPage = React.lazy(() => import('./app/blockchain-integration-services/page'));
+const SmartContractSecurityAuditPage = React.lazy(() => import('./app/smart-contract-security-audit/page'));
+
+// Emerging Technologies Pages
+const AutonomousSystemsPage = React.lazy(() => import('./app/autonomous-systems/page'));
+const BlockchainWeb3Page = React.lazy(() => import('./app/blockchain-web3/page'));
+const IoTEdgeComputingPage = React.lazy(() => import('./app/iot-edge-computing/page'));
+const ARVRSolutionsPage = React.lazy(() => import('./app/ar-vr-solutions/page'));
+const SmartCitiesPage = React.lazy(() => import('./app/smart-cities/page'));
+const DigitalTransformationPage = React.lazy(() => import('./app/digital-transformation/page'));
+const InnovationLabsPage = React.lazy(() => import('./app/innovation-labs/page'));
+const BusinessIntelligencePage = React.lazy(() => import('./app/business-intelligence/page'));
+const RoboticsPage = React.lazy(() => import('./app/robotics/page'));
+
+// Additional Pages
+const HealthPage = React.lazy(() => import('./app/health/page'));
+const SecurityPage = React.lazy(() => import('./app/security/page'));
+const CompliancePage = React.lazy(() => import('./app/compliance/page'));
+const GDPRPage = React.lazy(() => import('./app/gdpr/page'));
 const HealthcareITPage = React.lazy(() => import('./app/healthcare-it/page'));
 const FinancialITPage = React.lazy(() => import('./app/financial-it/page'));
 const EdgeComputingPage = React.lazy(() => import('./app/edge-computing/page'));
@@ -110,7 +155,7 @@ const App: React.FC = memo(() => {
                   <main id="main-content" className="w-full">
                     <Suspense fallback={<PageLoader message="Loading Zion Tech Group..." />}>
                     <Routes>
-<Route path="/" element={<HomePage />} />
+                      <Route path="/" element={<HomePage />} />
                       <Route path="/about" element={<AboutPage />} />
                       <Route path="/contact" element={<ContactPage />} />
                       <Route path="/pricing" element={<PricingPage />} />
@@ -131,12 +176,17 @@ const App: React.FC = memo(() => {
                       <Route path="/demo" element={<DemoPage />} />
                       <Route path="/consultation" element={<ConsultationPage />} />
                       <Route path="/services" element={<ServicesPage />} />
-                      <Route path="/ai-ops" element={<AIOpsPage />} />
-                      <Route path="/healthcare-it" element={<HealthcareITPage />} />
-                      <Route path="/financial-it" element={<FinancialITPage />} />
+                      
+                      {/* Additional Pages */}
+                      <Route path="/health" element={<HealthPage />} />
+                      <Route path="/security" element={<SecurityPage />} />
+                      <Route path="/compliance" element={<CompliancePage />} />
+                      <Route path="/gdpr" element={<GDPRPage />} />
                       <Route path="/edge-computing" element={<EdgeComputingPage />} />
-                      <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
+                      <Route path="/financial-it" element={<FinancialITPage />} />
+                      <Route path="/healthcare-it" element={<HealthcareITPage />} />
                       <Route path="/iot-platform" element={<IoTPlatformPage />} />
+                      <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
                     </Routes>
                   </Suspense>
                   </main>
