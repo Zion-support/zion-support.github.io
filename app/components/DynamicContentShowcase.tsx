@@ -1,5 +1,6 @@
 'use client';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { CheckCircle, Brain, Shield, Globe } from 'lucide-react';
 
@@ -40,6 +41,10 @@ const DynamicContentShowcase: React.FC = () => {
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center mx-auto mb-4">
                 <feature.icon className="w-8 h-8 text-white" />
 =======
+=======
+import React from 'react';
+'use client';
+>>>>>>> cursor/fix-errors-and-merge-to-main-7ab3
 import React, { useState, useEffect } from 'react';
 import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, Clock, Award } from 'lucide-react';
 

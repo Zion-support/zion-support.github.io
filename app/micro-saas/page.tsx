@@ -455,6 +455,10 @@ const MicroSaasPage: React.FC = () => {
               </table>
             </div>
           </div>
+<<<<<<< HEAD
+=======
+        </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-7ab3
 
         {/* CTA Section */}
         <section className="py-20 px-4">
@@ -485,8 +489,11 @@ const MicroSaasPage: React.FC = () => {
             </div>
           </div>
         </section>
+<<<<<<< HEAD
         </div>
 >>>>>>> origin/main
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-7ab3
       </div>
     </>
   );

@@ -1,5 +1,6 @@
 'use client';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { CheckCircle, ArrowRight } from 'lucide-react';
 
@@ -25,6 +26,10 @@ const ContentNewsletterSignup: React.FC = () => {
         </div>
       </div>
 =======
+=======
+import React from 'react';
+'use client';
+>>>>>>> cursor/fix-errors-and-merge-to-main-7ab3
 import React, { useState } from 'react';
 import { CheckCircle, ArrowRight, Mail, Send, Star, Users, Award, Clock } from 'lucide-react';
 
