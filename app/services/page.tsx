@@ -22,12 +22,13 @@ import {
   Target
 } from 'lucide-react';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer'const ServicesPage: React.FC = () => {
+import Footer from '../components/Footer';
+
+const ServicesPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('')
   const [selectedCategory, setSelectedCategory] = useState('all')
   const services = [
     // AI Services
-=======
     {
       icon: Brain,
       title: 'AI Solutions',
@@ -35,9 +36,8 @@ import Footer from '../components/Footer'const ServicesPage: React.FC = () => {
       features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics', 'AI Consulting'],
       price: 'Starting at $1,500',
       category: 'AI Services',
-      popular: true
-    },
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+        popular: true
+      },
     {
       icon: Brain,
       title: 'AI-Powered Chatbots',
@@ -51,13 +51,13 @@ import Footer from '../components/Footer'const ServicesPage: React.FC = () => {
     {
       icon: BarChart3,
       title: 'AI Data Analytics',
-<<<<<<< HEAD
       description: 'Transform your data into actionable insights with our AI-powered analytics platform and predictive modeling.',
       category: 'ai',
       features: ['Predictive Analytics', 'Real-time Dashboards', 'Automated Reporting', 'Anomaly Detection', 'Custom Data Models'],
       price: 'Starting at $399/month',
       marketPrice: '$800-3000/month',
-      benefits: ['Data-driven insights', 'Predictive forecasting', 'Automated reporting', 'ROI optimization']    },
+      benefits: ['Data-driven insights', 'Predictive forecasting', 'Automated reporting', 'ROI optimization']
+    },
     {
       icon: Zap,
       title: 'AI Workflow Automation',

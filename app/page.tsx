@@ -1,10 +1,10 @@
-'use client'
+'use client';
 import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
-import PerformanceOptimizer from './components/EnhancedPerformanceOptimizer'
-import SEOOptimizer from './components/SEOOptimizer'
-import AccessibilityEnhancer from './components/AccessibilityEnhancer'
+import PerformanceOptimizer from './components/EnhancedPerformanceOptimizer';
+import SEOOptimizer from './components/SEOOptimizer';
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 // import { ServiceCardSkeleton, StatsSkeleton } from './components/EnhancedLoadingStates'
 import { Phone, Mail, MapPin, Clock, ArrowRight, Star, CheckCircle, Zap, Shield, Brain, Cloud, Code, BarChart, Users, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, DollarSign, Award, Rocket, Layers, Workflow, BarChart3, MessageSquare, Headphones, Monitor, HardDrive, Wifi, Printer, Router, Package, Heart, DollarSign as Dollar, Award as Trophy, Rocket as Launch, Layers as Stack, Workflow as Process, BarChart3 as Analytics, MessageSquare as Chat, Headphones as Support, Monitor as Screen, HardDrive as Storage, Wifi as Network, Printer as Print, Router as Gateway, Package as Box, Eye, Mic } from 'lucide-react';
 
@@ -13,7 +13,7 @@ const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionB
 const ContentCarousel = lazy(() => import('./components/ContentCarousel'));
 const DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase'));
 const ContentStatistics = lazy(() => import('./components/ContentStatistics'));
-const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'))
+const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'));
 // Preload critical components
 const preloadComponents = () => {
   if (typeof window !== 'undefined') {
@@ -24,12 +24,6 @@ const preloadComponents = () => {
     }, 100)
   }
 }
-// Dynamically import heavy components for better performance
-const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
-const ContentCarousel = lazy(() => import('./components/ContentCarousel'));
-const DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase'));
-const ContentStatistics = lazy(() => import('./components/ContentStatistics'));
-const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'));
 // Loading skeleton component
 const ServiceCardSkeleton: React.FC = memo(() => (
   <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card">
@@ -38,15 +32,17 @@ const ServiceCardSkeleton: React.FC = memo(() => (
     <div className="h-4 bg-gray-200 rounded w-5/6"></div>
   </div>
 ))
-ServiceCardSkeleton.displayName = 'ServiceCardSkeleton'
+ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
 const HomePage: React.FC = () => {
-  const [isLoaded, setIsLoaded] = useState(false)
-  const [isVisible, setIsVisible] = useState(false)  useEffect(() => {
-    preloadComponents()
-    setIsLoaded(true)
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+  
+  useEffect(() => {
+    preloadComponents();
+    setIsLoaded(true);
     // Trigger visibility animation
-    const timer = setTimeout(() => setIsVisible(true), 100)
-    return () => clearTimeout(timer)
+    const timer = setTimeout(() => setIsVisible(true), 100);
+    return () => clearTimeout(timer);
   }, [])
   // Analytics tracking for phone clicks - optimized
   const handlePhoneClick = useCallback(() => {
@@ -1813,12 +1809,13 @@ className={`text-center mb-16 transition-all duration-1000 cyber-scan-line holog
                   📧 Email Us
                 </a>
                 <a 
-                  href="/contact"                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300">
+                  href="/contact"
+                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300">
                   Get Free Consultation
                 </a>
               </div>
             </div>
-<<<<<<< HEAD          </section>
+          </section>
         </main>
         
         <Footer />
@@ -1827,63 +1824,4 @@ className={`text-center mb-16 transition-all duration-1000 cyber-scan-line holog
   )
 }
 
-export default HomePage
-=======
-          </section>
-          {/* Services Section */};
-          <section className="mb-16" aria-labelledby="services-heading">
-            <h2 id="services-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center">
-              Our Services
-            </h2>
-            <p className="text-base sm:text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
-              Comprehensive AI and IT solutions designed to transform your business operations
-            </p>
-            {/* Services Grid */};
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-12">
-              <Suspense fallback={<ServiceCardSkeleton />}>
-                <article className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
-                  <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🤖</div>
-                  <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4 text-center">AI Services</h3>
-                  <p className="text-gray-600 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
-                    Advanced artificial intelligence solutions including machine learning, natural language processing, and computer vision.
-                  </p>
-                </article>
-              </Suspense>
-              <Suspense fallback={<ServiceCardSkeleton />}>
-                <article className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
-                  <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">⚡</div>
-                  <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4 text-center">IT Solutions</h3>
-                  <p className="text-gray-600 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
-                    Complete IT infrastructure, cloud migration, cybersecurity, and digital transformation services.
-                  </p>
-                </article>
-              </Suspense>
-              <Suspense fallback={<ServiceCardSkeleton />}>
-                <article className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
-                  <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🔒</div>
-                  <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4 text-center">Cybersecurity</h3>
-                  <p className="text-gray-600 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
-                    Enterprise-grade security solutions to protect your data and infrastructure from threats.
-                  </p>
-                </article>
-              </Suspense>
-              <Suspense fallback={<ServiceCardSkeleton />}>
-                <article className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
-                  <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🌐</div>
-                  <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4 text-center">Cloud Services</h3>
-                  <p className="text-gray-600 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
-                    Scalable cloud infrastructure and migration services for modern business needs.
-                  </p>
-                </article>
-              </Suspense>
-            </div>
-          </section>
-        </main>
-        {/* Footer */}
-        <Footer />
-      </div>
-    </>
-  );
-};
 export default HomePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

@@ -1,20 +1,22 @@
-'use client'
-import React, { useEffect, useState } from 'react'
-import { useAnalytics } from './EnhancedAnalytics'interface AccessibilitySettings {
-    highContrast: boolean
-  reducedMotion: boolean
-  fontSize: 'small' | 'medium' | 'large'
-  screenReader: boolean,
-  keyboardNavigation: boolean
-  }
+'use client';
+import React, { useEffect, useState } from 'react';
+import { useAnalytics } from './EnhancedAnalytics';
+
+interface AccessibilitySettings {
+  highContrast: boolean;
+  reducedMotion: boolean;
+  fontSize: 'small' | 'medium' | 'large';
+  screenReader: boolean;
+  keyboardNavigation: boolean;
+}
 
 interface EnhancedAccessibilityProps {
-    children: React.ReactNode
-  enableKeyboardNavigation?: boolean
-  enableScreenReaderSupport?: boolean
-  enableHighContrast?: boolean,
-  enableFocusManagement?: boolean
-  }
+  children: React.ReactNode;
+  enableKeyboardNavigation?: boolean;
+  enableScreenReaderSupport?: boolean;
+  enableHighContrast?: boolean;
+  enableFocusManagement?: boolean;
+}
 
 const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
   children,
