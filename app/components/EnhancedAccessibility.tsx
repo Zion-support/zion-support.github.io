@@ -1,6 +1,7 @@
 'use client';
 <<<<<<< HEAD
 import React, { useEffect } from 'react';
+<<<<<<< HEAD
 =======
 import { useEffect, useState } from 'react';
 import { useAnalytics } from './EnhancedAnalytics';
@@ -13,6 +14,9 @@ interface AccessibilitySettings {
 }
 
 >>>>>>> cursor/analyze-improve-and-deploy-application-5431
+=======
+
+>>>>>>> cursor/analyze-improve-and-deploy-application-3800
 const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [settings, setSettings] = useState<AccessibilitySettings>({
     highContrast: false,
@@ -38,8 +42,8 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
       if (footer && !footer.getAttribute('role')) {
         footer.setAttribute('role', 'contentinfo');
       }
-<<<<<<< HEAD
     };
+
     // Add skip links
     const addSkipLinks = () => {
       const skipLink = document.createElement('a');
@@ -48,6 +52,7 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
       skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-cyan-600 text-white px-4 py-2 rounded-lg font-semibold z-50';
       document.body.insertBefore(skipLink, document.body.firstChild);
     };
+
     // Enhance focus management
     const enhanceFocusManagement = () => {
       // Add focus indicators
@@ -81,17 +86,39 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
       `;
       document.head.appendChild(style);
     };
+
+    // Add keyboard navigation support
+    const addKeyboardNavigation = () => {
+      const handleKeyDown = (event: KeyboardEvent) => {
+        // Skip to main content with Tab
+        if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {
+          const skipLink = document.querySelector('a[href="#main-content"]') as HTMLAnchorElement;
+          if (skipLink) {
+            skipLink.focus();
+            event.preventDefault();
+          }
+        }
+
+        // Close dropdowns with Escape
+        if (event.key === 'Escape') {
+          const openDropdowns = document.querySelectorAll('[aria-expanded="true"]');
+          openDropdowns.forEach(dropdown => {
+            (dropdown as HTMLElement).setAttribute('aria-expanded', 'false');
+          });
+        }
+      };
+
+      document.addEventListener('keydown', handleKeyDown);
+      return () => document.removeEventListener('keydown', handleKeyDown);
+    };
+
     // Initialize accessibility enhancements
     addLandmarks();
     addSkipLinks();
     enhanceFocusManagement();
-    // Cleanup function
-    return () => {
-      const skipLink = document.querySelector('a[href="#main-content"]');
-      if (skipLink) {
-        skipLink.remove();
-=======
+    const cleanup = addKeyboardNavigation();
 
+<<<<<<< HEAD
       const header = document.querySelector('header');
       if (header && !header.getAttribute('role')) {
         header.setAttribute('role', 'banner');
@@ -145,6 +172,11 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
     };
   }, []);
 <<<<<<< HEAD
+=======
+    return cleanup;
+  }, []);
+
+>>>>>>> cursor/analyze-improve-and-deploy-application-3800
   return <React.Fragment>{children}</React.Fragment>;
 =======
 
@@ -283,9 +315,5 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
   return <>{children}</>;
 >>>>>>> cursor/analyze-improve-and-deploy-application-5431
 };
-<<<<<<< HEAD
-export default EnhancedAccessibility;
-=======
 
 export default EnhancedAccessibility;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

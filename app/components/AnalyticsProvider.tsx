@@ -1,16 +1,13 @@
 'use client';
-<<<<<<< HEAD
-import React, { createContext, useContext, useEffect } from 'react';
-=======
-
 import React, { createContext, useContext, useEffect, ReactNode } from 'react';
 
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
 interface AnalyticsContextType {
   trackEvent: (eventName: string, parameters?: Record<string, any>) => void;
   trackPageView: (pageName: string, pagePath: string) => void;
 }
+
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
+
 export const useAnalytics = () => {
   const context = useContext(AnalyticsContext);
   if (!context) {
@@ -18,16 +15,12 @@ export const useAnalytics = () => {
   }
   return context;
 };
-<<<<<<< HEAD
-const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-=======
 
 interface AnalyticsProviderProps {
   children: ReactNode;
 }
 
 export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
   useEffect(() => {
     // Initialize Google Analytics if available
     if (typeof window !== 'undefined' && 'gtag' in window) {
@@ -40,18 +33,6 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
       });
     }
   }, []);
-<<<<<<< HEAD
-  const trackEvent = (eventName: string, parameters?: Record<string, any>) => {
-    if (typeof window !== 'undefined' && typeof gtag !== 'undefined') {
-      gtag('event', eventName, parameters);
-    }
-  };
-  const trackPageView = (pageName: string) => {
-    if (typeof window !== 'undefined' && typeof gtag !== 'undefined') {
-      gtag('event', 'page_view', {
-        page_title: pageName,
-        page_location: window.location.href,
-=======
 
   const trackEvent = (eventName: string, parameters: Record<string, any> = {}) => {
     if (typeof window === 'undefined') return;
@@ -64,7 +45,6 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
         event_label: parameters.label,
         value: parameters.value,
         ...parameters,
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
       });
     }
 
@@ -73,9 +53,6 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
       console.log('Analytics Event:', eventName, parameters);
     }
   };
-<<<<<<< HEAD
-  const value = {
-=======
 
   const trackPageView = (pageName: string, pagePath: string) => {
     if (typeof window === 'undefined') return;
@@ -96,19 +73,13 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
   };
 
   const value: AnalyticsContextType = {
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
     trackEvent,
     trackPageView,
   };
+
   return (
     <AnalyticsContext.Provider value={value}>
       {children}
     </AnalyticsContext.Provider>
   );
-<<<<<<< HEAD
 };
-export { AnalyticsProvider };
-  </AnalyticsContextType>
-=======
-};
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

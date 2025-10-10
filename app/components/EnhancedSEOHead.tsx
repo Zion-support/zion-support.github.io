@@ -2,7 +2,7 @@
 <<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
+
 interface SEOHeadProps {
   title: string;
   description: string;
@@ -22,6 +22,7 @@ interface SEOHeadProps {
   siteName?: string;
   structuredData?: object;
 }
+
 const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Achieve 300% ROI with our cutting-edge AI technology.',
@@ -83,8 +84,8 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
       "https://github.com/zion-tech-group"
     ]
   };
-=======
 
+<<<<<<< HEAD
 const EnhancedSEOHead: React.FC = () => {
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
 =======
@@ -132,6 +133,10 @@ const EnhancedSEOHead: React.FC = () => {
   };
 
 >>>>>>> cursor/analyze-improve-and-deploy-application-5431
+=======
+  const finalStructuredData = structuredData || defaultStructuredData;
+
+>>>>>>> cursor/analyze-improve-and-deploy-application-3800
   return (
     <Helmet>
       {/* Basic Meta Tags */}
@@ -142,6 +147,7 @@ const EnhancedSEOHead: React.FC = () => {
       <meta name="robots" content="index, follow" />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       <meta name="googlebot" content="index, follow" />
       <meta name="bingbot" content="index, follow" />
       {/* Canonical URL */}
@@ -149,47 +155,23 @@ const EnhancedSEOHead: React.FC = () => {
       {/* Open Graph / Facebook */}
       <meta property="og:type" content={type} />
       <meta property="og:url" content={url} />
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={image} />
 =======
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       
-      {/* Canonical URL */}
-      <link rel="canonical" href="https://ziontechgroup.com" />
-      
       {/* Open Graph Meta Tags */}
-      <meta property="og:title" content="Zion Tech Group - Advanced AI and IT Solutions" />
-      <meta property="og:description" content="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services." />
-      <meta property="og:type" content="website" />
-      <meta property="og:url" content="https://ziontechgroup.com" />
-      <meta property="og:image" content="https://ziontechgroup.com/images/og-image.jpg" />
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-      <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="630" />
-      <meta property="og:site_name" content="Zion Tech Group" />
-      <meta property="og:locale" content="en_US" />
-<<<<<<< HEAD
-      {/* Twitter */}
-=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-3800
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:image" content={image} />
+      <meta property="og:url" content={url} />
+      <meta property="og:type" content={type} />
+      <meta property="og:site_name" content={siteName} />
       
       {/* Twitter Card Meta Tags */}
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content="Zion Tech Group - Advanced AI and IT Solutions" />
-      <meta name="twitter:description" content="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services." />
-      <meta name="twitter:image" content="https://ziontechgroup.com/images/og-image.jpg" />
-      <meta name="twitter:site" content="@ziontechgroup" />
-<<<<<<< HEAD
-      {/* Additional SEO Meta Tags */}
-      <meta name="theme-color" content="#00ffff" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-      {/* Business Information */}
-      <meta name="contact" content="kleber@ziontechgroup.com" />
-      <meta name="phone" content="+1-302-464-0950" />
-      <meta name="address" content="364 E Main St STE 1008, Middletown, DE 19709" />
-=======
-      <meta name="twitter:creator" content="@ziontechgroup" />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={image} />
       
 =======
       <link rel="canonical" href={currentUrl} />
@@ -214,6 +196,7 @@ const EnhancedSEOHead: React.FC = () => {
 
 >>>>>>> cursor/analyze-improve-and-deploy-application-5431
       {/* Additional SEO Meta Tags */}
+<<<<<<< HEAD
       <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
       <meta name="theme-color" content="#0f172a" />
       <meta name="color-scheme" content="dark light" />
@@ -242,9 +225,29 @@ const EnhancedSEOHead: React.FC = () => {
       </script>
       <script type="application/ld+json">
         {JSON.stringify(websiteStructuredData)}
+=======
+      <meta name="theme-color" content="#0f172a" />
+      <meta name="msapplication-TileColor" content="#0f172a" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+      
+      {/* Canonical URL */}
+      <link rel="canonical" href={url} />
+      
+      {/* Favicon */}
+      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+      <link rel="manifest" href="/site.webmanifest" />
+      
+      {/* Structured Data */}
+      <script type="application/ld+json">
+        {JSON.stringify(finalStructuredData)}
+>>>>>>> cursor/analyze-improve-and-deploy-application-3800
       </script>
     </Helmet>
   );
 };
+
 export default EnhancedSEOHead;
-  </SEOHeadProps>

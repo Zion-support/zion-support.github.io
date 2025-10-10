@@ -1,7 +1,11 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server } from 'lucide-react';
+=======
+import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, MessageCircle, Heart, Monitor, Package } from 'lucide-react';
+>>>>>>> cursor/analyze-improve-and-deploy-application-3800
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -48,6 +52,7 @@ const Navigation: React.FC = () => {
   // Service data
   const aiServices = [
     { name: 'AI Analytics', href: '/ai-analytics', icon: BarChart, description: 'Advanced data insights' },
+<<<<<<< HEAD
     { name: 'AI Automation', href: '/ai-automation', icon: Zap, description: 'Streamline workflows' },
     { name: 'AI Chatbot', href: '/ai-chatbot-builder', icon: MessageCircle, description: 'Intelligent conversations' },
     { name: 'AI CRM', href: '/ai-crm', icon: Users, description: 'Customer relationship management' },
@@ -55,10 +60,20 @@ const Navigation: React.FC = () => {
     { name: 'AI Data Analytics', href: '/ai-data-analytics', icon: Database, description: 'Data-driven insights' },
     { name: 'AI Healthcare', href: '/ai-healthcare', icon: Heart, description: 'Medical AI solutions' },
     { name: 'AI Fintech', href: '/ai-fintech', icon: DollarSign, description: 'Financial technology' }
+=======
+    { name: 'AI Automation', href: '/ai-automation', icon: Zap, description: 'Process automation' },
+    { name: 'AI Chatbot', href: '/ai-chatbot-builder', icon: MessageCircle, description: 'Intelligent chatbots' },
+    { name: 'AI Content Generation', href: '/ai-content-generation', icon: FileText, description: 'Automated content creation' },
+    { name: 'AI Customer Support', href: '/ai-customer-support', icon: Users, description: '24/7 customer service' },
+    { name: 'AI Cybersecurity', href: '/ai-cybersecurity', icon: Shield, description: 'AI-powered security' },
+    { name: 'AI Data Analytics', href: '/ai-data-analytics', icon: Database, description: 'Data intelligence' },
+    { name: 'AI Healthcare', href: '/ai-healthcare', icon: Heart, description: 'Medical AI solutions' }
+>>>>>>> cursor/analyze-improve-and-deploy-application-3800
   ];
 
   const itServices = [
     { name: 'Cloud Infrastructure', href: '/ai-cloud-infrastructure', icon: Cloud, description: 'Scalable cloud solutions' },
+<<<<<<< HEAD
     { name: 'API Management', href: '/ai-api-management', icon: Code, description: 'API development & management' },
     { name: 'Cybersecurity', href: '/ai-cybersecurity-suite', icon: Shield, description: 'Comprehensive security' },
     { name: 'Data Management', href: '/ai-data-analytics', icon: Database, description: 'Data processing & storage' },
@@ -82,6 +97,29 @@ const Navigation: React.FC = () => {
     { name: 'AI Autonomous Systems', href: '/ai-autonomous-systems', icon: Cpu, description: 'Self-operating systems' },
     { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions', icon: LinkIcon, description: 'Decentralized AI' },
     { name: 'AI Edge Computing', href: '/ai-edge-computing', icon: Server, description: 'Distributed processing' }
+=======
+    { name: 'Cybersecurity', href: '/ai-cybersecurity-suite', icon: Shield, description: 'Comprehensive security' },
+    { name: 'API Management', href: '/ai-api-management', icon: Settings, description: 'API development & management' },
+    { name: 'Infrastructure Monitoring', href: '/ai-infrastructure-monitoring', icon: Monitor, description: 'System monitoring' },
+    { name: 'Edge Computing', href: '/ai-edge-computing', icon: Cpu, description: 'Edge AI solutions' },
+    { name: 'Content Delivery', href: '/ai-content-delivery-network', icon: Globe, description: 'Global CDN services' }
+  ];
+
+  const microSaasServices = [
+    { name: 'AI CRM Assistant', href: '/ai-crm-assistant', icon: Users, description: 'Customer relationship management' },
+    { name: 'AI Email Assistant', href: '/ai-email-assistant', icon: Mail, description: 'Smart email management' },
+    { name: 'AI Expense Tracker', href: '/ai-expense-tracker', icon: TrendingUp, description: 'Financial tracking' },
+    { name: 'AI Invoice Generator', href: '/ai-invoice-generator', icon: FileText, description: 'Automated invoicing' },
+    { name: 'AI Lead Generation', href: '/ai-lead-generation', icon: Target, description: 'Lead management' },
+    { name: 'AI Inventory Manager', href: '/ai-inventory-manager', icon: Package, description: 'Inventory optimization' }
+  ];
+
+  const emergingTech = [
+    { name: 'Quantum Computing', href: '/quantum-computing', icon: Cpu, description: 'Next-gen computing' },
+    { name: '5G Implementation', href: '/5g-implementation', icon: Smartphone, description: '5G network solutions' },
+    { name: 'Blockchain Solutions', href: '/ai-blockchain-solutions', icon: Lock, description: 'Blockchain integration' },
+    { name: 'Autonomous Systems', href: '/ai-autonomous-systems', icon: Settings, description: 'Self-managing systems' }
+>>>>>>> cursor/analyze-improve-and-deploy-application-3800
   ];
 
   return (
@@ -101,9 +139,12 @@ const Navigation: React.FC = () => {
           </div>
 
           {/* Desktop Navigation */}
-<<<<<<< HEAD
           <div className="hidden lg:flex items-center space-x-8">
+<<<<<<< HEAD
             <Link to="/" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+=======
+            <Link href="/" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+>>>>>>> cursor/analyze-improve-and-deploy-application-3800
               Home
             </Link>
             
@@ -134,6 +175,7 @@ const Navigation: React.FC = () => {
                         <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 ml-auto" />
                       </Link>
                     ))}
+<<<<<<< HEAD
                   </div>
                 </div>
               )}
@@ -246,6 +288,11 @@ const Navigation: React.FC = () => {
                 </a>
               </div>
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-1dd1
+=======
+                  </div>
+                </div>
+              )}
+>>>>>>> cursor/analyze-improve-and-deploy-application-3800
             </div>
 
             {/* IT Services Dropdown */}
@@ -344,6 +391,7 @@ const Navigation: React.FC = () => {
               )}
             </div>
 
+<<<<<<< HEAD
             <Link to="/about" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
               About
             </Link>
@@ -357,6 +405,21 @@ const Navigation: React.FC = () => {
               Blog
             </Link>
             <Link to="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+=======
+            <Link href="/about" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+              About
+            </Link>
+            <Link href="/services" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+              Services
+            </Link>
+            <Link href="/pricing" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+              Pricing
+            </Link>
+            <Link href="/blog" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+              Blog
+            </Link>
+            <Link href="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+>>>>>>> cursor/analyze-improve-and-deploy-application-3800
               Contact
             </Link>
           </div>
@@ -392,16 +455,22 @@ const Navigation: React.FC = () => {
         {isOpen && (
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           <div className="lg:hidden mt-4 pb-4 border-t border-cyan-500/20">
             <div className="pt-4 space-y-4">
               <Link to="/" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
+=======
+          <div className="lg:hidden mt-4 pb-4 border-t border-cyan-500/20">
+            <div className="pt-4 space-y-4">
+              <Link href="/" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
+>>>>>>> cursor/analyze-improve-and-deploy-application-3800
                 Home
               </Link>
               
               {/* Mobile AI Services */}
               <div>
                 <button
-                  onClick={() => setAiServicesOpen(!aiServicesOpen)}
+                  onClick={toggleAiServices}
                   className="flex items-center justify-between w-full text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
                   <span className="flex items-center space-x-2">
                     <Brain className="w-4 h-4" />
@@ -435,7 +504,7 @@ const Navigation: React.FC = () => {
               {/* Mobile IT Services */}
               <div>
                 <button
-                  onClick={() => setItServicesOpen(!itServicesOpen)}
+                  onClick={toggleItServices}
                   className="flex items-center justify-between w-full text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
                   <span className="flex items-center space-x-2">
                     <Cloud className="w-4 h-4" />
@@ -462,7 +531,7 @@ const Navigation: React.FC = () => {
               {/* Mobile Micro SAAS */}
               <div>
                 <button
-                  onClick={() => setMicroSaasOpen(!microSaasOpen)}
+                  onClick={toggleMicroSaas}
                   className="flex items-center justify-between w-full text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
                   <span className="flex items-center space-x-2">
                     <Cpu className="w-4 h-4" />
@@ -493,6 +562,7 @@ const Navigation: React.FC = () => {
                 )}
               </div>
 
+<<<<<<< HEAD
               <Link to="/about" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
                 About
               </Link>
@@ -535,6 +605,21 @@ const Navigation: React.FC = () => {
               </Link>
               <Link to="/contact" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-6c09
+=======
+              <Link href="/about" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
+                About
+              </Link>
+              <Link href="/services" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
+                Services
+              </Link>
+              <Link href="/pricing" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
+                Pricing
+              </Link>
+              <Link href="/blog" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
+                Blog
+              </Link>
+              <Link href="/contact" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
+>>>>>>> cursor/analyze-improve-and-deploy-application-3800
                 Contact
               </Link>
 
@@ -555,6 +640,7 @@ const Navigation: React.FC = () => {
                 <div className="flex items-center space-x-2 text-gray-400">
                   <MapPin className="w-4 h-4" />
                   <span className="text-sm">364 E Main St STE 1008, Middletown DE 19709</span>
+<<<<<<< HEAD
 =======
           <div className="lg:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800/95 backdrop-blur-md rounded-lg mt-2 border border-white/10">
@@ -595,6 +681,8 @@ const Navigation: React.FC = () => {
                   364 E Main St STE 1008<br />
                   Middletown DE 19709
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-1dd1
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-3800
                 </div>
               </div>
             </div>
