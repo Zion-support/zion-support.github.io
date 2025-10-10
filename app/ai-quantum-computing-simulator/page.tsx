@@ -14,28 +14,44 @@ const AIQuantumComputingSimulator: React.FC = () => {
     {
       icon: Cpu,
       title: 'Quantum Circuit Simulation',
+      
+      
       description: 'Advanced quantum circuit simulation with up to 50 qubits using state-of-the-art algorithms',
-      benefits: ['Up to 50 qubit simulation', 'Real-time circuit optimization', 'Multiple quantum gates support'];
+      
+      
+      benefits: ['Up to 50 qubit simulation', 'Real-time circuit optimization', 'Multiple quantum gates support'],
     },
     {
       icon: Brain,
       title: 'AI-Powered Optimization',
+      
+      
       description: 'Machine learning algorithms optimize quantum circuits for maximum efficiency and accuracy',
-      benefits: ['Automated circuit optimization', 'Error correction suggestions', 'Performance prediction']
+      
+      
+      benefits: ['Automated circuit optimization', 'Error correction suggestions', 'Performance prediction'],
     },
     {
       icon: BarChart,
       title: 'Quantum State Visualization',
+      
+      
       description: 'Interactive 3D visualization of quantum states, entanglement, and superposition effects',
-      benefits: ['3D quantum state visualization', 'Entanglement analysis', 'Superposition mapping']
+      
+      
+      benefits: ['3D quantum state visualization', 'Entanglement analysis', 'Superposition mapping'],
     },
     {
       icon: Shield,
       title: 'Quantum Error Correction',
+      
+      
       description: 'Advanced error correction algorithms to simulate realistic quantum computing conditions',
-      benefits: ['Noise modeling', 'Error correction codes', 'Fidelity analysis']
+      
+      
+      benefits: ['Noise modeling', 'Error correction codes', 'Fidelity analysis'],
     },
-  ];];];
+  ]]];
   const pricingPlans = [
     {
       name: 'Researcher',
@@ -92,29 +108,37 @@ const AIQuantumComputingSimulator: React.FC = () => {
   const useCases = [
     {
       title: 'Quantum Algorithm Development',
+      
+      
       description: 'Develop and test quantum algorithms for optimization, cryptography, and machine learning',
       icon: Brain,
       results: '50% faster algorithm development'
     },
     {
       title: 'Quantum Machine Learning',
+      
+      
       description: 'Simulate quantum machine learning models and quantum neural networks',
       icon: Target,
       results: 'Advanced quantum ML capabilities'
     },
     {
       title: 'Cryptography Research',
+      
+      
       description: 'Test quantum cryptographic protocols and post-quantum security',
       icon: Lock,
       results: 'Enhanced security analysis'
     },
     {
       title: 'Quantum Chemistry',
+      
+      
       description: 'Simulate molecular systems and quantum chemical reactions',
       icon: Zap,
       results: 'Accurate molecular modeling'
     }
-  ];];];
+  ]]];
   return (
     <>
       <Helmet>

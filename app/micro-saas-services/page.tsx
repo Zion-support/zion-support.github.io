@@ -46,6 +46,7 @@ export const microSaasServices: MicroSaasService[] = [
     ,
     id: 'ai-project-manager-pro',
     title: 'AI Project Manager Pro',
+      
     description: 'Revolutionary AI-powered project management platform that uses machine learning to predict project outcomes, optimize resource allocation, and prevent delays. Trusted by 15,000+ teams worldwide.',
     shortDescription: 'AI-powered project management with predictive analytics and smart resource optimization.',
     icon: '📊',
@@ -111,8 +112,7 @@ export const microSaasServices: MicroSaasService[] = [
     integrations: [,
       'Jira', 'Asana', 'Trello', 'Monday.com', 'Slack', 'Microsoft Teams',
       'GitHub', 'GitLab', 'Bitbucket', 'Figma', 'Adobe Creative Suite',
-      'Salesforce', 'HubSpot', 'Zapier', 'Webhook integrations';
-    ],
+      'Salesforce', 'HubSpot', 'Zapier', 'Webhook integrations'],
     apiAvailable: true,
     mobileApp: true,
     whiteLabel: true,
@@ -134,6 +134,7 @@ export const microSaasServices: MicroSaasService[] = [
   {
     id: 'ai-task-manager-pro',
     title: 'AI Task Manager Pro',
+      
     description: 'Intelligent task management system that uses AI to prioritize tasks, predict deadlines, and optimize your workflow. Features smart scheduling, habit tracking, and productivity insights.',
     shortDescription: 'Smart task management with AI prioritization and productivity optimization.',
     icon: '✅',
@@ -199,8 +200,7 @@ export const microSaasServices: MicroSaasService[] = [
     ],
     integrations: [,
       'Google Calendar', 'Outlook', 'Apple Calendar', 'Slack', 'Microsoft Teams',
-      'Notion', 'Evernote', 'Todoist', 'Any.do', 'TickTick', 'Zapier';
-    ],
+      'Notion', 'Evernote', 'Todoist', 'Any.do', 'TickTick', 'Zapier'],
     apiAvailable: true,
     mobileApp: true,
     whiteLabel: false,
@@ -224,6 +224,7 @@ export const microSaasServices: MicroSaasService[] = [
   {
     id: 'ai-content-writer-pro',
     title: 'AI Content Writer Pro',
+      
     description: 'Advanced AI content creation platform that generates high-quality, SEO-optimized content for blogs, social media, marketing materials, and more. Uses GPT-4 and custom models trained on your brand voice.',
     shortDescription: 'AI-powered content creation with brand voice training and SEO optimization.',
     icon: '✍️',
@@ -288,8 +289,7 @@ export const microSaasServices: MicroSaasService[] = [
     ],
     integrations: [,
       'WordPress', 'HubSpot', 'Mailchimp', 'Hootsuite', 'Buffer',
-      'Google Docs', 'Notion', 'Slack', 'Zapier', 'Webhook APIs';
-    ],
+      'Google Docs', 'Notion', 'Slack', 'Zapier', 'Webhook APIs'],
     apiAvailable: true,
     mobileApp: true,
     whiteLabel: true,
@@ -311,6 +311,7 @@ export const microSaasServices: MicroSaasService[] = [
   {
     id: 'ai-social-media-manager',
     title: 'AI Social Media Manager',
+      
     description: 'Comprehensive AI-powered social media management platform that creates, schedules, and optimizes content across all major platforms. Features advanced analytics, audience insights, and automated engagement.',
     shortDescription: 'AI-powered social media management with automated content creation and optimization.',
     icon: '📱',
@@ -377,8 +378,7 @@ export const microSaasServices: MicroSaasService[] = [
     integrations: [,
       'Facebook', 'Instagram', 'Twitter', 'LinkedIn', 'TikTok', 'YouTube',
       'Pinterest', 'Snapchat', 'Hootsuite', 'Buffer', 'Sprout Social',
-      'HubSpot', 'Salesforce', 'Zapier';
-    ],
+      'HubSpot', 'Salesforce', 'Zapier'],
     apiAvailable: true,
     mobileApp: true,
     whiteLabel: true,
@@ -402,6 +402,7 @@ export const microSaasServices: MicroSaasService[] = [
   {
     id: 'ai-crm-intelligence',
     title: 'AI CRM Intelligence',
+      
     description: 'Next-generation CRM powered by AI that predicts customer behavior, automates sales processes, and provides intelligent insights. Features lead scoring, automated follow-ups, and predictive analytics.',
     shortDescription: 'AI-powered CRM with predictive analytics and automated sales processes.',
     icon: '🤖',
@@ -467,8 +468,7 @@ export const microSaasServices: MicroSaasService[] = [
     integrations: [,
       'Salesforce', 'HubSpot', 'Pipedrive', 'Zoho CRM', 'Microsoft Dynamics',
       'Mailchimp', 'Constant Contact', 'Zapier', 'Webhook APIs',
-      'Google Workspace', 'Microsoft 365', 'Slack', 'Teams';
-    ],
+      'Google Workspace', 'Microsoft 365', 'Slack', 'Teams'],
     apiAvailable: true,
     mobileApp: true,
     whiteLabel: true,
@@ -490,6 +490,7 @@ export const microSaasServices: MicroSaasService[] = [
   {
     id: 'ai-financial-analyzer',
     title: 'AI Financial Analyzer',
+      
     description: 'Advanced AI-powered financial analysis platform that provides real-time insights, risk assessment, and investment recommendations. Features automated financial reporting, trend analysis, and predictive modeling.',
     shortDescription: 'AI-powered financial analysis with predictive modeling and risk assessment.',
     icon: '💰',
@@ -556,8 +557,7 @@ export const microSaasServices: MicroSaasService[] = [
     integrations: [,
       'Bloomberg', 'Reuters', 'Yahoo Finance', 'Alpha Vantage', 'Quandl',
       'QuickBooks', 'Xero', 'Sage', 'SAP', 'Oracle', 'Salesforce',
-      'Excel', 'Google Sheets', 'Tableau', 'Power BI';
-    ],
+      'Excel', 'Google Sheets', 'Tableau', 'Power BI'],
     apiAvailable: true,
     mobileApp: true,
     whiteLabel: true,
@@ -581,6 +581,7 @@ export const microSaasServices: MicroSaasService[] = [
   {
     id: 'ai-customer-support-bot',
     title: 'AI Customer Support Bot',
+      
     description: 'Intelligent customer support chatbot that provides 24/7 assistance with natural language understanding, sentiment analysis, and seamless human handoff. Reduces support costs by 70% while improving customer satisfaction.',
     shortDescription: 'AI-powered customer support chatbot with natural language understanding and sentiment analysis.',
     icon: '🎧',
@@ -594,8 +595,7 @@ export const microSaasServices: MicroSaasService[] = [
       'Knowledge base integration and learning',
       'Omnichannel support (web, mobile, social)',
       'Advanced analytics and reporting',
-      'Custom branding and white-label options';
-    ],
+      'Custom branding and white-label options'],
     benefits: [,
       '70% reduction in support costs',
       '85% improvement in response time',
@@ -642,8 +642,7 @@ export const microSaasServices: MicroSaasService[] = [
     integrations: [,
       'Zendesk', 'Freshdesk', 'Intercom', 'Help Scout', 'LiveChat',
       'Slack', 'Microsoft Teams', 'WhatsApp', 'Facebook Messenger',
-      'Salesforce', 'HubSpot', 'Zapier', 'Webhook APIs';
-    ],
+      'Salesforce', 'HubSpot', 'Zapier', 'Webhook APIs'],
     apiAvailable: true,
     mobileApp: true,
     whiteLabel: true,
@@ -667,6 +666,7 @@ export const microSaasServices: MicroSaasService[] = [
   {
     id: 'ai-code-review-assistant',
     title: 'AI Code Review Assistant',
+      
     description: 'Intelligent code review platform that uses AI to analyze code quality, detect bugs, suggest improvements, and ensure best practices. Integrates with popular development tools and provides detailed feedback.',
     shortDescription: 'AI-powered code review with automated bug detection and improvement suggestions.',
     icon: '🔍',
@@ -732,8 +732,7 @@ export const microSaasServices: MicroSaasService[] = [
     integrations: [,
       'GitHub', 'GitLab', 'Bitbucket', 'Azure DevOps', 'Jenkins',
       'VS Code', 'IntelliJ', 'Sublime Text', 'Atom', 'Vim',
-      'Slack', 'Microsoft Teams', 'Jira', 'Trello', 'Asana';
-    ],
+      'Slack', 'Microsoft Teams', 'Jira', 'Trello', 'Asana'],
     apiAvailable: true,
     mobileApp: false,
     whiteLabel: true,
@@ -757,6 +756,7 @@ export const microSaasServices: MicroSaasService[] = [
   {
     id: 'ai-healthcare-assistant',
     title: 'AI Healthcare Assistant',
+      
     description: 'Comprehensive AI-powered healthcare platform that provides symptom analysis, medication reminders, health monitoring, and telemedicine capabilities. HIPAA compliant with advanced privacy protection.',
     shortDescription: 'AI-powered healthcare platform with symptom analysis and telemedicine capabilities.',
     icon: '🏥',
@@ -822,8 +822,7 @@ export const microSaasServices: MicroSaasService[] = [
     integrations: [,
       'Epic', 'Cerner', 'Allscripts', 'NextGen', 'athenahealth',
       'Apple Health', 'Google Fit', 'Fitbit', 'Garmin', 'Samsung Health',
-      'Zoom', 'Microsoft Teams', 'WebRTC', 'Twilio';
-    ],
+      'Zoom', 'Microsoft Teams', 'WebRTC', 'Twilio'],
     apiAvailable: true,
     mobileApp: true,
     whiteLabel: true,
@@ -847,6 +846,7 @@ export const microSaasServices: MicroSaasService[] = [
   {
     id: 'ai-ecommerce-optimizer',
     title: 'AI E-commerce Optimizer',
+      
     description: 'Advanced AI platform for e-commerce optimization that provides personalized product recommendations, dynamic pricing, inventory management, and customer behavior analysis to maximize sales and revenue.',
     shortDescription: 'AI-powered e-commerce optimization with personalized recommendations and dynamic pricing.',
     icon: '🛒',
@@ -912,8 +912,7 @@ export const microSaasServices: MicroSaasService[] = [
     integrations: [,
       'Shopify', 'WooCommerce', 'Magento', 'BigCommerce', 'Amazon',
       'eBay', 'Etsy', 'Facebook Shop', 'Instagram Shopping',
-      'Google Shopping', 'PayPal', 'Stripe', 'Square';
-    ],
+      'Google Shopping', 'PayPal', 'Stripe', 'Square'],
     apiAvailable: true,
     mobileApp: true,
     whiteLabel: true,
@@ -937,6 +936,7 @@ export const microSaasServices: MicroSaasService[] = [
   {
     id: 'ai-education-platform',
     title: 'AI Education Platform',
+      
     description: 'Comprehensive AI-powered educational platform that provides personalized learning experiences, automated assessment, intelligent tutoring, and adaptive curriculum based on individual learning patterns.',
     shortDescription: 'AI-powered educational platform with personalized learning and intelligent tutoring.',
     icon: '🎓',
@@ -1002,8 +1002,7 @@ export const microSaasServices: MicroSaasService[] = [
     integrations: [,
       'Google Classroom', 'Microsoft Teams', 'Canvas', 'Blackboard', 'Moodle',
       'Zoom', 'WebEx', 'Slack', 'Discord', 'YouTube', 'Vimeo',
-      'Google Drive', 'OneDrive', 'Dropbox', 'Box';
-    ],
+      'Google Drive', 'OneDrive', 'Dropbox', 'Box'],
     apiAvailable: true,
     mobileApp: true,
     whiteLabel: true,
@@ -1041,9 +1040,8 @@ export const serviceCategories = [
 
   'Analytics',
 
-  'Automation';
-];
-// Pricing tiers for comparison;];];
+  'Automation'];
+// Pricing tiers for comparison]];
 export const pricingTiers = {
     starter: {,
     name: 'Starter',

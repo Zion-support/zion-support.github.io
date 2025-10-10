@@ -8,6 +8,7 @@ const ITConsultingPage: React.FC = () => {
   const consultingServices = [
     {
       title: 'Digital Transformation',
+      
       description: 'Comprehensive digital transformation strategies to modernize your business operations.',
       icon: Brain,
       features: ['Technology Assessment', 'Digital Strategy Planning', 'Process Optimization', 'Change Management'],
@@ -16,6 +17,7 @@ const ITConsultingPage: React.FC = () => {
     },
     {
       title: 'Cloud Migration',
+      
       description: 'Seamless migration to cloud platforms with minimal downtime and maximum security.',
       icon: Cloud,
       features: ['Cloud Architecture Design', 'Data Migration', 'Security Implementation', 'Performance Optimization'],

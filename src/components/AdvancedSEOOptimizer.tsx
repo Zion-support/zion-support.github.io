@@ -69,7 +69,8 @@ const,
       {/* TODO: Fix JSX expression */}
   t: '#3B82F6' },
       {/* TODO: Fix JSX expression */}
-  t: '/browserconfig.xml' }];
+  t: '/browserconfig.xml' }
+  ];
     return metaTags;
   }, [seoData]);
   const generateBreadcrumbStructuredData = useCallback(() => {/* TODO: Fix JSX expression */}

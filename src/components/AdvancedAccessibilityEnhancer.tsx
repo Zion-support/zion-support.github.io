@@ -110,7 +110,7 @@ const,
   t: 'Skip to navigation' },
       {/* TODO: Fix JSX expression */}
   t: 'Skip to footer' }
-    ];
+  ];
     const skipLinksContainer = document.createElement('div');
     skipLinksContainer.className = 'skip-links';
     skipLinksContainer.setAttribute('aria-label', 'Skip links');

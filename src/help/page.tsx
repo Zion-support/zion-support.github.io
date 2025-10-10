@@ -35,91 +35,115 @@ $4}
   const helpArticles = {
     'getting-started': [
         title: 'How to Get Started with AI Services',
+      
         description: 'Complete guide to setting up your AI services and making the most of our platform',
         category: 'Getting Started',
         readTime: '5 min read',
         difficulty: 'Beginner',
         color:         ,
 titletitle: 'Setting Up Your First Dashboard',
+      
         description: 'Step-by-step instructions for creating and customizing your analytics dashboard',
         readTime: '3 min read',
         title: 'Understanding AI Pricing Models',
+      
         description: 'Learn about our different pricing tiers and how to choose the right one for your needs',
         readTime: '4 min read',
         title: 'Integration with Existing Systems',
+      
         description: 'How to integrate our AI services with your current business systems',
         readTime: '7 min read',
         difficulty: 'Intermediate'],
     'troubleshooting': [
         title: 'Common Login Issues and Solutions',
+      
         description: 'Troubleshoot common authentication problems and access issues',
         category: 'Troubleshooting',
         color:         ,
 titletitle: 'API Connection Problems',
+      
         description: 'Resolve API connectivity issues and authentication errors',
         title: 'Performance Optimization',
+      
         description: 'Improve system performance and resolve slow response times',
         readTime: '6 min read',
         difficulty: 'Advanced',
         title: 'Data Import/Export Issues',
+      
         description: 'Fix problems with data migration and file uploads',
     'billing': [
         title: 'Understanding Your Bill',
+      
         description: 'Learn how to read and understand your monthly billing statement',
         category: 'Billing',
         color:         ,
 titletitle: 'Upgrading or Downgrading Plans',
+      
         description: 'How to change your subscription plan and what to expect',
         title: 'Payment Methods and Billing',
+      
         description: 'Manage your payment methods and billing information',
         title: 'Refund and Cancellation Policy',
+      
         description: 'Understand our refund policy and how to cancel your subscription',
     'technical': [
         title: 'API Documentation and Examples',
+      
         description: 'Complete API reference with code examples and best practices',
         category: 'Technical',
         readTime: '10 min read',
         color:         ,
 titletitle: 'Security Best Practices',
+      
         description: 'Implement security measures to protect your data and systems',
         readTime: '8 min read',
         title: 'Custom Integration Guide',
+      
         description: 'Build custom integrations with our platform using webhooks and APIs',
         readTime: '12 min read',
         title: 'Monitoring and Logging',
+      
         description: 'Set up monitoring and logging for your AI services and applications']
   }
   const resources = [
       title: 'Video Tutorials',
+      
       description: 'Step-by-step video guides for all our services',
       icon: Video,
       count:       ,
 titletitle: 'Documentation',
+      
       description: 'Comprehensive technical documentation and guides',
       count:       ,
 titletitle: 'API Reference',
+      
       description: 'Complete API documentation with examples',
       count:       ,
 titletitle: 'Download Center',
+      
       description: 'SDKs, tools, and resources for developers',
       icon: Download,
       count: '25+ downloads'
   const supportChannels = [
       title: 'Live Chat',
+      
       description: 'Get instant help from our support team',
       color: 'text-cyan-400',
       availability: '24/7',
       responseTime:       ,
 titletitle: 'Email Support',
+      
       description: 'Send us a detailed message and we\'ll respond quickly',
       icon: Mail,
       responseTime:       ,
 titletitle: 'Phone Support',
+      
       description: 'Speak directly with our technical experts',
       icon: Phone,
       availability: 'Mon-Fri 9AM-6PM EST',
       responseTime:       ,
 titletitle: 'Community Forum',
+      
       description: 'Connect with other users and share knowledge',
       icon: Users,
       responseTime: 'Community driven'

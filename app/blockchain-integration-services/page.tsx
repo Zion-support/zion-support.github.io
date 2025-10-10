@@ -7,24 +7,28 @@ const BlockchainIntegrationServicesPage: React.FC = () => {
     {
       icon: Shield,
       title: 'Secure Blockchain Integration',
+      
       description: 'Advanced blockchain technology integration with enterprise-grade security'
     },
     {
       icon: Zap,
       title: 'High Performance',
+      
       description: 'Lightning-fast blockchain transactions and smart contract execution'
     },
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
+      
       description: 'Intelligent blockchain solutions powered by advanced AI technology'
     },
     {
       icon: Globe,
       title: 'Multi-Chain Support',
+      
       description: 'Support for multiple blockchain networks and protocols'
     }
-  ];];];
+  ]]];
   const benefits = [
     'Advanced blockchain technology integration',
     'Real-time transaction processing',
@@ -33,8 +37,7 @@ const BlockchainIntegrationServicesPage: React.FC = () => {
     '24/7 technical support',
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
-    'Proven track record of success';
-  ];
+    'Proven track record of success'];
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>

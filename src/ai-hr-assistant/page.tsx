@@ -9,26 +9,34 @@ const AIHRAssistantPage: React.FC = () => {
     {
       icon: Users,
       title: 'HR Automation',
+      
       description: 'AI-powered HR process automation',
-      benefits: ['Recruitment automation', 'Employee onboarding', 'Performance management']
+      
+      benefits: ['Recruitment automation', 'Employee onboarding', 'Performance management'],
     },
     {
       icon: Target,
       title: 'Talent Management',
+      
       description: 'Intelligent talent acquisition and management',
-      benefits: ['Candidate screening', 'Skill matching', 'Career development']
+      
+      benefits: ['Candidate screening', 'Skill matching', 'Career development'],
     },
     {
       icon: Zap,
       title: 'Employee Engagement',
+      
       description: 'Automated employee engagement and satisfaction',
-      benefits: ['Engagement surveys', 'Feedback analysis', 'Retention strategies']
+      
+      benefits: ['Engagement surveys', 'Feedback analysis', 'Retention strategies'],
     },
     {
       icon: Settings,
       title: 'HR Analytics',
+      
       description: 'Comprehensive HR analytics and insights',
-      benefits: ['Workforce analytics', 'Performance metrics', 'Predictive insights']
+      
+      benefits: ['Workforce analytics', 'Performance metrics', 'Predictive insights'],
     }
   ];
   return (

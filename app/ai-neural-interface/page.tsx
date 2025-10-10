@@ -14,28 +14,44 @@ const AINeuralInterface: React.FC = () => {
     {
       icon: Brain,
       title: 'Neural Signal Processing',
+      
+      
       description: 'Advanced AI algorithms for real-time neural signal interpretation and processing',
-      benefits: ['Real-time signal processing', 'High accuracy interpretation', 'Low latency response'];
+      
+      
+      benefits: ['Real-time signal processing', 'High accuracy interpretation', 'Low latency response'],
     },
     {
       icon: Eye,
       title: 'Visual Cortex Interface',
+      
+      
       description: 'Direct interface with visual cortex for enhanced vision and augmented reality',
-      benefits: ['Enhanced visual processing', 'AR/VR integration', 'Visual pattern recognition']
+      
+      
+      benefits: ['Enhanced visual processing', 'AR/VR integration', 'Visual pattern recognition'],
     },
     {
       icon: Mic,
       title: 'Auditory Neural Interface',
+      
+      
       description: 'Neural interface for auditory processing and enhanced hearing capabilities',
-      benefits: ['Enhanced hearing', 'Noise filtering', 'Audio pattern recognition']
+      
+      
+      benefits: ['Enhanced hearing', 'Noise filtering', 'Audio pattern recognition'],
     },
     {
       icon: Target,
       title: 'Motor Control Interface',
+      
+      
       description: 'Precise motor control interface for prosthetics and assistive devices',
-      benefits: ['Precise motor control', 'Prosthetic integration', 'Assistive technology']
+      
+      
+      benefits: ['Precise motor control', 'Prosthetic integration', 'Assistive technology'],
     },
-  ];];];
+  ]]];
   const pricingPlans = [
     {
       name: 'Research',
@@ -92,29 +108,37 @@ const AINeuralInterface: React.FC = () => {
   const useCases = [
     {
       title: 'Medical Rehabilitation',
+      
+      
       description: 'Neural interfaces for stroke recovery and motor function restoration',
       icon: Brain,
       results: '85% improvement in motor function'
     },
     {
       title: 'Prosthetic Control',
+      
+      
       description: 'Advanced prosthetic control using neural signals for natural movement',
       icon: Target,
       results: 'Natural prosthetic control'
     },
     {
       title: 'Cognitive Enhancement',
+      
+      
       description: 'Neural interfaces for memory enhancement and cognitive augmentation',
       icon: Zap,
       results: '40% cognitive improvement'
     },
     {
       title: 'Communication Aid',
+      
+      
       description: 'Neural interfaces for communication assistance in locked-in syndrome',
       icon: MessageSquare,
       results: 'Restored communication ability'
     }
-  ];];];
+  ]]];
   return (
     <>
       <Helmet>

@@ -5,6 +5,7 @@ const IoTPage: React.FC = () => {
     const iotServices = [
     {
       title: 'IoT Device Management Platform',
+      
       description: 'Comprehensive IoT device management and monitoring platform for connected devices.',
       icon: '📱',
       price: 'Starting at $2,500/month',
@@ -16,6 +17,7 @@ const IoTPage: React.FC = () => {
   },
     {
     title: 'Smart City Solutions',
+      
       description: 'Comprehensive smart city infrastructure including traffic management, environmental monitoring, and citizen services.',
       icon: '🏙️',
       price: 'Starting at $15,000/month',
@@ -27,6 +29,7 @@ const IoTPage: React.FC = () => {
   },
     {
     title: 'Industrial IoT (IIoT)',
+      
       description: 'Industrial IoT solutions for manufacturing, energy, and logistics with predictive maintenance and optimization.',
       icon: '🏭',
       price: 'Starting at $8,000/month',
@@ -38,6 +41,7 @@ const IoTPage: React.FC = () => {
   },
     {
     title: 'Smart Agriculture Platform',
+      
       description: 'IoT-powered agricultural monitoring and optimization for crop management and livestock tracking.',
       icon: '🌾',
       price: 'Starting at $3,500/month',
@@ -49,6 +53,7 @@ const IoTPage: React.FC = () => {
   },
     {
     title: 'Smart Home Automation',
+      
       description: 'Complete smart home solutions with energy management, security, and comfort automation.',
       icon: '🏠',
       price: 'Starting at $1,500/month',
@@ -60,6 +65,7 @@ const IoTPage: React.FC = () => {
   },
     {
     title: 'Healthcare IoT Solutions',
+      
       description: 'Medical IoT devices and platforms for patient monitoring, telemedicine, and health analytics.',
       icon: '🏥',
       price: 'Starting at $5,000/month',
@@ -71,6 +77,7 @@ const IoTPage: React.FC = () => {
   },
     {
     title: 'Fleet Management IoT',
+      
       description: 'Comprehensive fleet tracking and management solutions for vehicles, drones, and logistics.',
       icon: '🚛',
       price: 'Starting at $2,000/month',
@@ -82,6 +89,7 @@ const IoTPage: React.FC = () => {
   },
     {
     title: 'Environmental Monitoring',
+      
       description: 'IoT-based environmental monitoring for air quality, water quality, and climate data collection.',
       icon: '🌍',
       price: 'Starting at $3,000/month',
@@ -93,6 +101,7 @@ const IoTPage: React.FC = () => {
   },
     {
     title: 'Retail IoT Solutions',
+      
       description: 'Smart retail solutions including inventory management, customer analytics, and automated checkout.',
       icon: '🛒',
       price: 'Starting at $4,000/month',
@@ -104,6 +113,7 @@ const IoTPage: React.FC = () => {
   },
     {
     title: 'Energy Management IoT',
+      
       description: 'Smart energy management solutions for buildings, grids, and renewable energy systems.',
       icon: '⚡',
       price: 'Starting at $3,500/month',
@@ -115,6 +125,7 @@ const IoTPage: React.FC = () => {
   },
     {
     title: 'IoT Security Solutions',
+      
       description: 'Comprehensive IoT security including device authentication, data encryption, and threat monitoring.',
       icon: '🔒',
       price: 'Starting at $2,800/month',
@@ -126,6 +137,7 @@ const IoTPage: React.FC = () => {
   },
     {
     title: 'IoT Data Analytics Platform',
+      
       description: 'Advanced analytics platform for IoT data processing, visualization, and insights generation.',
       icon: '📊',
       price: 'Starting at $4,500/month',
@@ -136,7 +148,7 @@ const IoTPage: React.FC = () => {
       technologies: ['Apache Kafka', 'Apache Spark', 'InfluxDB', 'Grafana', 'Machine Learning']
   }
     }
-  ];];
+  ]];
 const categories = [...new Set(iotServices.map(service => service.category))];
 return (
     <>

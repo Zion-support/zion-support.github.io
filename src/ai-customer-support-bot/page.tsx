@@ -11,21 +11,29 @@ const AICustomerSupportBotPage: React.FC = () => {
     {
       icon: Bot,
       title: '24/7 AI Support',
+      
       description: 'Round-the-clock customer support with intelligent AI chatbot capabilities',
-      benefits: ['90% response time reduction', 'Instant responses', 'Always available']
+      
+      benefits: ['90% response time reduction', 'Instant responses', 'Always available'],
     },
       icon: MessageSquare,
       title: 'Natural Language Processing',
+      
       description: 'Advanced NLP for understanding and responding to customer queries naturally',
+      
       benefits: ['Human-like conversations', 'Context awareness', 'Multi-language support']
       icon: Users,
       title: 'Human Handoff',
+      
       description: 'Seamless escalation to human agents when complex issues arise',
+      
       benefits: ['Smart escalation', 'Seamless transitions', 'Expert support']
       icon: BarChart,
       title: 'Analytics & Insights',
+      
       description: 'Comprehensive analytics to track performance and improve customer experience',
-      benefits: ['Real-time analytics', 'Performance tracking', 'Continuous improvement']
+      
+      benefits: ['Real-time analytics', 'Performance tracking', 'Continuous improvement'],
     }
   ];
   const pricingPlans = [

@@ -7,27 +7,33 @@ const AISchedulerPage: React.FC = () => {
     {
       icon: Calendar,
       title: 'Smart Scheduling',
+      
       description: 'AI-powered scheduling that automatically finds the best meeting times based on availability, preferences, and time zones.',
       benefit:     ,
 $4},
       icon: Users,
       title: 'Team Coordination',
+      
       description: 'Coordinate complex team schedules with intelligent conflict resolution and resource optimization.',
       benefit:       ,
 iconicon: Brain,
       title: 'Predictive Planning',
+      
       description: 'AI learns from your scheduling patterns to suggest optimal meeting times and prevent double-bookings.',
       benefit:       ,
 iconicon: Zap,
       title: 'Automated Reminders',
+      
       description: 'Smart reminder system that adapts to each participant\'s preferences and communication style.',
       benefit:       ,
 iconicon: Target,
       title: 'Meeting Optimization',
+      
       description: 'Analyze meeting effectiveness and suggest improvements for better productivity and outcomes.',
       benefit:       ,
 iconicon: Shield,
       title: 'Privacy & Security',
+      
       description: 'Enterprise-grade security with end-to-end encryption and compliance with data protection regulations.',
       benefit:     ,
 $4}

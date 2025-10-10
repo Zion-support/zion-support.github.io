@@ -33,25 +33,29 @@ const DataAnalyticsPage: React.FC = () => {
     {
       icon: BarChart,
       title: 'Advanced Data Visualization',
+      
       description: 'Transform complex data into clear, actionable insights with interactive dashboards and reports.'
   },
     {
-    icon: Brain,
+      icon: Brain,
       title: 'AI-Powered Analytics',
+      
       description: 'Leverage machine learning and artificial intelligence to uncover hidden patterns and trends.'
   },
     {
-    icon: Database,
+      icon: Database,
       title: 'Data Integration',
+      
       description: 'Connect and analyze data from multiple sources to get a complete picture of your business.'
   },
     {
-    icon: TrendingUp,
+      icon: TrendingUp,
       title: 'Predictive Analytics',
+      
       description: 'Forecast future trends and make data-driven decisions with predictive modeling.'
   }
     }
-  ];];];
+  ]]];
 const benefits = [
     'Make data-driven business decisions',
     'Identify new opportunities and trends',
@@ -64,8 +68,7 @@ const benefits = [
 
     'Real-time insights and reporting',
 
-    'Custom analytics solutions';
-  ];
+    'Custom analytics solutions'];
 return (
     <>
       <Helmet>

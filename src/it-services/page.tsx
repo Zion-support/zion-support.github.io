@@ -8,6 +8,7 @@ const ITServicesPage: React.FC = () => {
     // Infrastructure & Cloud Services
     {
       title: 'Data Center Services',
+      
       description: 'Complete data center solutions including colocation, managed hosting, and disaster recovery services.',
       icon: HardDrive,
       features: ['Colocation services', 'Managed hosting', 'Disaster recovery', 'Backup solutions', 'Monitoring', '24/7 support'],
@@ -20,6 +21,7 @@ const ITServicesPage: React.FC = () => {
     },
     {
       title: 'Cloud Infrastructure & Migration',
+      
       description: 'Complete cloud migration and infrastructure setup with AWS, Azure, and Google Cloud platforms.',
       icon: Cloud,
       features: ['Cloud migration', 'Infrastructure setup', 'Cost optimization', 'Security configuration', 'Monitoring', '24/7 support'],
@@ -33,6 +35,7 @@ const ITServicesPage: React.FC = () => {
     // Cybersecurity Services
     {
       title: 'Advanced Threat Protection',
+      
       description: 'Comprehensive cybersecurity solutions with AI-powered threat detection, prevention, and response capabilities.',
       icon: Shield,
       features: ['AI threat detection', 'Behavioral analysis', 'Incident response', 'Security monitoring', 'Vulnerability scanning', 'Penetration testing'],
@@ -45,6 +48,7 @@ const ITServicesPage: React.FC = () => {
     },
     {
       title: 'Identity & Access Management',
+      
       description: 'Secure identity management with multi-factor authentication, single sign-on, and privileged access management.',
       icon: Lock,
       features: ['SSO implementation', 'MFA setup', 'Privileged access management', 'Identity governance', 'Access reviews', 'Compliance reporting'],
@@ -57,6 +61,7 @@ const ITServicesPage: React.FC = () => {
     },
     {
       title: 'Security Compliance & Audit',
+      
       description: 'Comprehensive security compliance services for SOC 2, ISO 27001, HIPAA, and other regulatory requirements.',
       icon: FileText,
       features: ['Compliance assessment', 'Policy development', 'Audit preparation', 'Risk assessment', 'Training programs', 'Ongoing monitoring'],
@@ -69,6 +74,7 @@ const ITServicesPage: React.FC = () => {
     },
     {
       title: 'Security Operations Center (SOC)',
+      
       description: '24/7 security monitoring and incident response with dedicated security analysts and advanced threat hunting.',
       icon: Activity,
       features: ['24/7 monitoring', 'Threat hunting', 'Incident response', 'Security analytics', 'Threat intelligence', 'Forensic analysis'],
@@ -82,6 +88,7 @@ const ITServicesPage: React.FC = () => {
     // Database & Data Management
     {
       title: 'Database Administration & Optimization',
+      
       description: 'Expert database management with performance tuning, backup strategies, and high availability solutions.',
       icon: Database,
       features: ['Performance tuning', 'Backup & recovery', 'High availability', 'Data migration', 'Monitoring', 'Capacity planning'],
@@ -94,6 +101,7 @@ const ITServicesPage: React.FC = () => {
     },
     {
       title: 'Data Backup & Disaster Recovery',
+      
       description: 'Comprehensive backup and disaster recovery solutions with automated testing and rapid recovery capabilities.',
       icon: HardDrive,
       features: ['Automated backups', 'Disaster recovery planning', 'RTO/RPO optimization', 'Testing & validation', 'Cloud backup', 'Recovery automation'],
@@ -106,6 +114,7 @@ const ITServicesPage: React.FC = () => {
     },
     {
       title: 'Data Migration Services',
+      
       description: 'Seamless data migration with zero downtime, data validation, and comprehensive testing for all platforms.',
       icon: ArrowRight,
       features: ['Zero-downtime migration', 'Data validation', 'Schema conversion', 'Performance testing', 'Rollback planning', 'Post-migration support'],
@@ -119,6 +128,7 @@ const ITServicesPage: React.FC = () => {
     // DevOps & Development
     {
       title: 'DevOps & CI/CD Implementation',
+      
       description: 'Complete DevOps transformation with automated pipelines, infrastructure as code, and continuous monitoring.',
       icon: Code,
       features: ['CI/CD pipelines', 'Infrastructure as code', 'Container orchestration', 'Monitoring & logging', 'Security scanning', 'Automated testing'],
@@ -131,6 +141,7 @@ const ITServicesPage: React.FC = () => {
     },
     {
       title: 'Microservices Architecture',
+      
       description: 'Modern microservices architecture design and implementation with containerization and service mesh.',
       icon: Cog,
       features: ['Architecture design', 'Service decomposition', 'API gateway', 'Service mesh', 'Monitoring', 'Scaling strategies'],
@@ -143,6 +154,7 @@ const ITServicesPage: React.FC = () => {
     },
     {
       title: 'API Development & Management',
+      
       description: 'Comprehensive API development with design, implementation, security, and lifecycle management.',
       icon: Globe,
       features: ['API design', 'RESTful APIs', 'GraphQL', 'API security', 'Rate limiting', 'Documentation'],
@@ -156,6 +168,7 @@ const ITServicesPage: React.FC = () => {
     // IT Support & Management
     {
       title: 'Managed IT Services',
+      
       description: 'Comprehensive IT management including help desk, system administration, and proactive maintenance.',
       icon: Users,
       features: ['24/7 help desk', 'Remote support', 'System administration', 'Patch management', 'User training', 'Asset management'],
@@ -168,6 +181,7 @@ const ITServicesPage: React.FC = () => {
     },
     {
       title: 'IT Strategy & Consulting',
+      
       description: 'Strategic IT planning and consulting to align technology with business objectives and drive digital transformation.',
       icon: Target,
       features: ['IT strategy development', 'Technology assessment', 'Digital transformation', 'Vendor evaluation', 'Budget planning', 'Roadmap creation'],
@@ -180,6 +194,7 @@ const ITServicesPage: React.FC = () => {
     },
     {
       title: 'IT Asset Management',
+      
       description: 'Complete IT asset lifecycle management with tracking, optimization, and compliance reporting.',
       icon: Settings,
       features: ['Asset tracking', 'License management', 'Lifecycle planning', 'Cost optimization', 'Compliance reporting', 'Vendor management'],
@@ -193,6 +208,7 @@ const ITServicesPage: React.FC = () => {
     // Specialized Services
     {
       title: 'Microsoft 365 Migration & Management',
+      
       description: 'Complete Microsoft 365 migration with security configuration, user training, and ongoing management.',
       icon: Mail,
       features: ['Migration planning', 'Data migration', 'Security configuration', 'User training', 'Ongoing management', 'Compliance setup'],
@@ -205,6 +221,7 @@ const ITServicesPage: React.FC = () => {
     },
     {
       title: 'VoIP & Unified Communications',
+      
       description: 'Modern communication solutions with VoIP, video conferencing, and unified communications platforms.',
       icon: Phone,
       features: ['VoIP implementation', 'Video conferencing', 'Unified communications', 'Call center solutions', 'Integration services', 'Training'],
@@ -217,6 +234,7 @@ const ITServicesPage: React.FC = () => {
     },
     {
       title: 'IT Training & Certification',
+      
       description: 'Comprehensive IT training programs for staff development and certification preparation.',
       icon: Award,
       features: ['Technical training', 'Certification prep', 'Security awareness', 'Software training', 'Custom programs', 'Online learning'],
@@ -229,6 +247,7 @@ const ITServicesPage: React.FC = () => {
     },
     {
       title: 'IT Project Management',
+      
       description: 'Expert IT project management with planning, execution, and delivery of complex technology initiatives.',
       icon: Rocket,
       features: ['Project planning', 'Resource management', 'Risk assessment', 'Timeline management', 'Quality assurance', 'Stakeholder communication'],
@@ -257,6 +276,7 @@ const ITServicesPage: React.FC = () => {
     {
       icon: Cloud,
       title: 'Cloud Migration & Management',
+      
       description: 'Seamless migration to AWS, Azure, or GCP with 99.9% uptime guarantee.',
       features: ['AWS/Azure/GCP Migration', 'Cloud Architecture Design', 'Cost Optimization', '24/7 Monitoring'],
       price: 'Starting at $1,299/month',
@@ -265,6 +285,7 @@ const ITServicesPage: React.FC = () => {
     {
       icon: Shield,
       title: 'Cybersecurity Suite',
+      
       description: 'Comprehensive security solutions with threat detection and automated response.',
       features: ['Threat Detection', 'Vulnerability Assessment', 'Automated Response', 'Compliance Reporting'],
       price: 'Starting at $799/month',
@@ -273,6 +294,7 @@ const ITServicesPage: React.FC = () => {
     {
       icon: Settings,
       title: 'DevOps & CI/CD',
+      
       description: 'Streamline development workflows with automated testing, deployment, and monitoring.',
       features: ['Automated Testing', 'Continuous Deployment', 'Infrastructure as Code', 'Performance Monitoring'],
       price: 'Starting at $599/month',
@@ -281,6 +303,7 @@ const ITServicesPage: React.FC = () => {
     {
       icon: Database,
       title: 'Database Management',
+      
       description: 'Database design, optimization, migration, and management with AI-powered performance tuning.',
       features: ['Database Design', 'Performance Optimization', 'Data Migration', 'Backup & Recovery'],
       price: 'Starting at $399/month',
@@ -289,6 +312,7 @@ const ITServicesPage: React.FC = () => {
     {
       icon: Globe,
       title: 'Network Solutions',
+      
       description: 'Enterprise networking with high-speed connectivity and advanced security features.',
       features: ['Network Design', 'Security Implementation', 'Performance Optimization', '24/7 Support'],
       price: 'Starting at $699/month',
@@ -297,6 +321,7 @@ const ITServicesPage: React.FC = () => {
     {
       icon: Smartphone,
       title: 'Mobile App Development',
+      
       description: 'Native and cross-platform mobile applications with modern UI/UX design.',
       features: ['iOS & Android Apps', 'Cross-Platform Development', 'UI/UX Design', 'App Store Optimization'],
       price: 'Starting at $2,500/project',
@@ -307,36 +332,42 @@ const ITServicesPage: React.FC = () => {
     {
       icon: Users,
       title: 'IT Consulting',
+      
       description: 'Strategic IT planning and technology roadmap development.',
       price: '$200/hour'
     },
     {
       icon: Server,
       title: 'Server Management',
+      
       description: '24/7 server monitoring, maintenance, and optimization.',
       price: 'Starting at $299/month'
     },
     {
       icon: HardDrive,
       title: 'Data Backup & Recovery',
+      
       description: 'Automated backup solutions and disaster recovery planning.',
       price: 'Starting at $199/month'
     },
     {
       icon: Monitor,
       title: 'System Integration',
+      
       description: 'API development and system integration services.',
       price: 'Starting at $1,500/project'
     },
     {
       icon: Printer,
       title: 'Hardware Support',
+      
       description: 'Computer, printer, and network equipment support.',
       price: 'Starting at $99/month'
     },
     {
       icon: Router,
       title: 'Network Security',
+      
       description: 'Firewall configuration and network security implementation.',
       price: 'Starting at $399/month'
     }
@@ -345,21 +376,25 @@ const ITServicesPage: React.FC = () => {
     {
       icon: Star,
       title: 'Proven Expertise',
+      
       description: '10+ years of experience with 100+ successful projects'
     },
     {
       icon: Clock,
       title: '24/7 Support',
+      
       description: 'Round-the-clock technical support and monitoring'
     },
     {
       icon: ShieldCheck,
       title: 'Enterprise Security',
+      
       description: 'Bank-level security and compliance for all solutions'
     },
     {
       icon: Award,
       title: 'Certified Professionals',
+      
       description: 'Microsoft, AWS, and Google certified engineers'
     }
   ];

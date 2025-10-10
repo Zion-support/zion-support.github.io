@@ -7,27 +7,33 @@ const ExpenseTrackerPage: React.FC = () => {
     {
       icon: Receipt,
       title: 'Smart Receipt Scanning',
+      
       description: 'AI-powered receipt scanning that automatically extracts expense data, categorizes transactions, and creates detailed reports.',
       benefit:     ,
 $4},
       icon: TrendingUp,
       title: 'Real-time Analytics',
+      
       description: 'Get instant insights into your spending patterns with interactive charts, budget tracking, and financial forecasting.',
       benefit:       ,
 iconicon: Brain,
       title: 'AI Categorization',
+      
       description: 'Automatically categorize expenses using machine learning that learns from your spending patterns and preferences.',
       benefit:       ,
 iconicon: Zap,
       title: 'Automated Workflows',
+      
       description: 'Set up automated expense approval workflows, reimbursement processes, and compliance checks.',
       benefit:       ,
 iconicon: Target,
       title: 'Budget Management',
+      
       description: 'Create and track budgets with AI-powered alerts and recommendations for better financial control.',
       benefit:       ,
 iconicon: Shield,
       title: 'Compliance & Security',
+      
       description: 'Ensure compliance with tax regulations and company policies with automated checks and audit trails.',
       benefit:     ,
 $4}
@@ -226,6 +232,7 @@ const ExpenseTrackerPage: React.FC = () => {
     },
       icon: TrendingUp,
       title: 'Real-time Analytics',
+      
       description: 'Get instant insights into your spending patterns with interactive charts, budget tracking, and financial forecasting.',
       benefit: 'Reduce expenses by 25%',
 import Navigation from '../components/Navigation';

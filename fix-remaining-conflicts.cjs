@@ -1,94 +1,63 @@
-#!/usr/bin/env node
-
 const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
+const glob = require('glob');
 
-// Function to fix merge conflict markers in a file
-function fixMergeConflicts(filePath) {
+// Get all files that might have merge conflicts
+const files = glob.sync('src/**/*.{ts,tsx,js,jsx}');
+
+console.log(`Found ${files.length} files to check for merge conflicts`);
+
+files.forEach(file => {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
+    let content = fs.readFileSync(file, 'utf8');
+    let originalContent = content;
     
-    // Remove merge conflict markers and keep the HEAD version
-    content = content.replace(/\n/g, '');
-    content = content.replace(/
+    // Remove all merge conflict markers and keep the newer version (after =======)
+    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======\s*([\s\S]*?)>>>>>>> cursor\/website-audit-and-update-with-deployment-26c5/g, '$1');
     
-    // Remove any remaining merge conflict markers
-    content = content.replace(/<<<<<<< [^\n]+\n/g, '');
-    content = content.replace(/
+    // Clean up any remaining syntax issues
+    content = content.replace(/;\s*]/g, ']');
+    content = content.replace(/]\s*;\s*]/g, ']');
+    content = content.replace(/;\s*;\s*]/g, ']');
+    content = content.replace(/;\s*;\s*;\s*]/g, ']');
     
-    fs.writeFileSync(filePath, content);
-    console.log(`Fixed merge conflicts in: ${filePath}`);
-    return true;
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
-  }
-}
-
-// Function to find all TypeScript/JavaScript files
-function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
-  let files = [];
-  
-  try {
-    const items = fs.readdirSync(dir);
+    // Fix missing commas in object properties
+    content = content.replace(/(\w+):\s*'[^']+'\s*(\w+):/g, '$1: \'$2\',\n      $3:');
     
-    for (const item of items) {
-      const fullPath = path.join(dir, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-        files = files.concat(findFiles(fullPath, extensions));
-      } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
-        files.push(fullPath);
-      }
-    }
-  } catch (error) {
-    // Ignore permission errors
-  }
-  
-  return files;
-}
-
-// Main execution
-console.log('Fixing remaining merge conflict markers...');
-
-const srcDir = path.join(__dirname, 'src');
-const files = findFiles(srcDir);
-
-let fixedCount = 0;
-let errorCount = 0;
-
-for (const file of files) {
-  try {
-    const content = fs.readFileSync(file, 'utf8');
-    if (content.includes('<<<<<<<') || content.includes('=======') || content.includes('>>>>>>>')) {
-      if (fixMergeConflicts(file)) {
-        fixedCount++;
-      } else {
-        errorCount++;
-      }
+    // Fix missing commas after benefits arrays
+    content = content.replace(/benefits:\s*\[[^\]]+\];/g, (match) => match.replace(';', ''));
+    
+    // Fix missing commas after icon properties
+    content = content.replace(/{\s*icon:\s*(\w+),\s*title:/g, '{\n      icon: $1,\n      title:');
+    
+    // Fix missing commas after title properties
+    content = content.replace(/title:\s*'[^']+',\s*description:/g, (match) => match.replace(/,(\s*description:)/, ',\n      $1'));
+    
+    // Fix missing commas after description properties
+    content = content.replace(/description:\s*'[^']+',\s*benefits:/g, (match) => match.replace(/,(\s*benefits:)/, ',\n      $1'));
+    
+    // Fix missing commas after closing brackets
+    content = content.replace(/}\s*{\s*icon:/g, '},\n    {\n      icon:');
+    
+    // Fix missing commas in object properties
+    content = content.replace(/(\w+):\s*'[^']+'\s*(\w+):/g, '$1: \'$2\',\n      $3:');
+    
+    // Fix missing commas in features array
+    content = content.replace(/benefits:\s*\[[^\]]+\]\s*}/g, (match) => {
+      return match.replace(']', '],');
+    });
+    
+    // Fix missing commas after closing brackets in features array
+    content = content.replace(/}\s*];/g, '}\n  ];');
+    
+    if (content !== originalContent) {
+      fs.writeFileSync(file, content, 'utf8');
+      console.log(`Fixed: ${file}`);
+    } else {
+      console.log(`No changes needed: ${file}`);
     }
   } catch (error) {
     console.error(`Error processing ${file}:`, error.message);
-    errorCount++;
   }
-}
+});
 
-console.log(`\nFixed ${fixedCount} files with merge conflicts`);
-if (errorCount > 0) {
-  console.log(`Encountered errors in ${errorCount} files`);
-}
-
-// Also check for any remaining conflicts
-try {
-  const result = execSync('git status --porcelain', { encoding: 'utf8' });
-  if (result.trim()) {
-    console.log('\nRemaining uncommitted changes:');
-    console.log(result);
-  }
-} catch (error) {
-  console.log('Could not check git status');
-}
-
-console.log('\nDone!');
+console.log('All remaining merge conflicts fixed!');

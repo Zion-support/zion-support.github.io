@@ -146,15 +146,19 @@ iconicon: Star,
   const benefits = [
       icon: CheckCircle,
       title: 'Verified Vendors',
+      
       description:       ,
 icon$5: Shield,
       title: 'Secure Transactions',
+      
       description:       ,
 icon$5: Clock,
       title: '24/7 Support',
+      
       description:       ,
 icon$5: Award,
       title: 'Quality Guarantee',
+      
       description: '100% satisfaction guarantee on all purchases'
   return (
     <React.Fragment>

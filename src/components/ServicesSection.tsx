@@ -2,6 +2,7 @@ export default function ServicesSection() {
   const services = [
     {
       title: 'AI & Machine Learning',
+      
       description: 'Custom AI solutions including predictive analytics, natural language processing, and computer vision.',
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -12,6 +13,7 @@ export default function ServicesSection() {
     },
     {
       title: 'Cloud Solutions',
+      
       description: 'Scalable cloud infrastructure, migration services, and cloud-native application development.',
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -22,6 +24,7 @@ export default function ServicesSection() {
     },
     {
       title: 'Web Development',
+      
       description: 'Modern, responsive web applications using cutting-edge technologies and frameworks.',
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -32,6 +35,7 @@ export default function ServicesSection() {
     },
     {
       title: 'Data Analytics',
+      
       description: 'Transform your data into actionable insights with advanced analytics and visualization.',
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -42,6 +46,7 @@ export default function ServicesSection() {
     },
     {
       title: 'Cybersecurity',
+      
       description: 'Comprehensive security solutions to protect your digital assets and infrastructure.',
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -52,6 +57,7 @@ export default function ServicesSection() {
     },
     {
       title: 'Mobile Development',
+      
       description: 'Native and cross-platform mobile applications for iOS and Android platforms.',
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">

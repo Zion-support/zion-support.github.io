@@ -9,18 +9,21 @@ const CloudServicesPage: React.FC = () => {
     {
       icon: Cloud,
       title: 'Cloud Migration',
+      
       description: 'Seamlessly migrate your infrastructure to the cloud with zero downtime and maximum security.',
       features: ['AWS, Azure, GCP expertise', 'Zero-downtime migration', 'Cost optimization', 'Security compliance'];
     },
     {
       icon: Server,
       title: 'Cloud Infrastructure',
+      
       description: 'Design and deploy scalable, secure, and cost-effective cloud infrastructure solutions.',
       features: ['Auto-scaling', 'Load balancing', 'High availability', 'Disaster recovery']
     },
     {
       icon: Database,
       title: 'Database Solutions',
+      
       description: 'Managed database services with automated backups, monitoring, and optimization.',
       features: ['MySQL, PostgreSQL, MongoDB', 'Automated backups', 'Performance tuning', '24/7 monitoring']
     },
@@ -28,9 +31,8 @@ const CloudServicesPage: React.FC = () => {
       icon: Shield,
       title: 'Cloud Security',
     }
-  ];];];
-  const benefits = [;
-  ];
+  ]]];
+  const benefits = [];
   const pricing = [
     {
       name: 'Starter',
@@ -42,8 +44,7 @@ const CloudServicesPage: React.FC = () => {
         'Email support',
         'Monthly monitoring',
         'Standard security',
-        'Up to 5 users';
-      ];
+        'Up to 5 users'];
     },
     {
       name: 'Professional',
@@ -74,7 +75,7 @@ const CloudServicesPage: React.FC = () => {
         'Custom development'
       ]
     }
-  ];];
+  ]];
   return (
 
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

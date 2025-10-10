@@ -14,11 +14,12 @@ const DocsPage: React.FC = () => {
     { id: 'it-services', name: 'IT Services', icon: Cloud },
     { id: 'api', name: 'API Reference', icon: Code },
     { id: 'security', name: 'Security', icon: Shield }
-  ];];];
+  ]]];
   const documentation = [
     {
       id: 1,
       title: 'Getting Started Guide',
+      
       description: 'Complete guide to setting up and using our services',
       category: 'getting-started',
       difficulty: 'Beginner',
@@ -28,12 +29,12 @@ const DocsPage: React.FC = () => {
         'Account Setup',
         'First API Call',
         'Authentication',
-        'Basic Configuration';
-      ];
+        'Basic Configuration'];
     },
     {
       id: 2,
       title: 'AI Services Documentation',
+      
       description: 'Comprehensive guide to our AI-powered services',
       category: 'ai-services',
       difficulty: 'Intermediate',
@@ -49,6 +50,7 @@ const DocsPage: React.FC = () => {
     {
       id: 3,
       title: 'IT Services Guide',
+      
       description: 'Complete documentation for our IT infrastructure services',
       category: 'it-services',
       difficulty: 'Advanced',
@@ -64,6 +66,7 @@ const DocsPage: React.FC = () => {
     {
       id: 4,
       title: 'API Reference',
+      
       description: 'Complete API reference with examples and endpoints',
       category: 'api',
       difficulty: 'Intermediate',
@@ -79,6 +82,7 @@ const DocsPage: React.FC = () => {
     {
       id: 5,
       title: 'Security Best Practices',
+      
       description: 'Security guidelines and best practices for our services',
       category: 'security',
       difficulty: 'Intermediate',
@@ -94,6 +98,7 @@ const DocsPage: React.FC = () => {
     {
       id: 6,
       title: 'Troubleshooting Guide',
+      
       description: 'Common issues and their solutions',
       category: 'getting-started',
       difficulty: 'Beginner',
@@ -112,7 +117,7 @@ const DocsPage: React.FC = () => {
     { title: 'Tutorials', url: '/tutorials', icon: BookOpen },
     { title: 'Community', url: '/community', icon: Users },
     { title: 'Support', url: '/support', icon: Shield }
-  ];];];
+  ]]];
   const filteredDocs = selectedCategory === 'all' 
     ? documentation ;
     : documentation.filter(doc => doc.category === selectedCategory);

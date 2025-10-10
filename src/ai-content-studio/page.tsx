@@ -8,26 +8,34 @@ const AIContentStudioPage: React.FC = () => {
     {
       icon: FileText,
       title: 'Content Creation',
+      
       description: 'AI-powered content generation and optimization',
-      benefits: ['Auto content', 'SEO optimization', 'Multi-format support']
+      
+      benefits: ['Auto content', 'SEO optimization', 'Multi-format support'],
     },
     {
       icon: Target,
       title: 'Content Strategy',
+      
       description: 'Intelligent content planning and strategy',
-      benefits: ['Content planning', 'Audience targeting', 'Performance tracking']
+      
+      benefits: ['Content planning', 'Audience targeting', 'Performance tracking'],
     },
     {
       icon: Zap,
       title: 'Automated Publishing',
+      
       description: 'Automated content publishing and distribution',
-      benefits: ['Multi-platform publishing', 'Scheduling', 'Distribution']
+      
+      benefits: ['Multi-platform publishing', 'Scheduling', 'Distribution'],
     },
     {
       icon: Settings,
       title: 'Content Analytics',
+      
       description: 'Comprehensive content performance analytics',
-      benefits: ['Performance metrics', 'Engagement tracking', 'ROI analysis']
+      
+      benefits: ['Performance metrics', 'Engagement tracking', 'ROI analysis'],
     }
   ];
   return (

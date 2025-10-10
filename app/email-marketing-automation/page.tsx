@@ -32,25 +32,29 @@ const EmailMarketingAutomationPage: React.FC = () => {
     {
       icon: Mail,
       title: 'Automated Campaigns',
+      
       description: 'Create and manage sophisticated email marketing campaigns with AI-powered automation.'
   },
     {
-    icon: Target,
+      icon: Target,
       title: 'Advanced Segmentation',
+      
       description: 'Intelligent audience segmentation and personalization for maximum engagement and conversion.'
   },
     {
-    icon: BarChart,
+      icon: BarChart,
       title: 'Analytics & Insights',
+      
       description: 'Comprehensive analytics and reporting to track performance and optimize your campaigns.'
   },
     {
-    icon: Zap,
+      icon: Zap,
       title: 'Smart Triggers',
+      
       description: 'Behavior-based triggers and workflows to send the right message at the right time.'
   }
     }
-  ];];];
+  ]]];
 const benefits = [
     'Increase email engagement rates',
     'Automate repetitive marketing tasks',
@@ -63,8 +67,7 @@ const benefits = [
 
     'Generate more qualified leads',
 
-    'Save time and resources';
-  ];
+    'Save time and resources'];
 return (
     <>
       <Helmet>

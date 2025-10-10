@@ -58,6 +58,7 @@ const SupportPage: React.FC = () => {
     {
       icon: Phone,
       title: 'Phone Support',
+      
       description: 'Speak directly with our AI experts',
       contact: '+1 302 464 0950',
       availability: '24/7 Available',
@@ -66,6 +67,7 @@ const SupportPage: React.FC = () => {
     {
       icon: Mail,
       title: 'Email Support',
+      
       description: 'Get detailed responses via email',
       contact: 'kleber@ziontechgroup.com',
       availability: 'Response within 2 hours',
@@ -74,6 +76,7 @@ const SupportPage: React.FC = () => {
     {
       icon: MessageSquare,
       title: 'Live Chat',
+      
       description: 'Instant support through our chat system',
       contact: 'Start Chat',
       availability: 'Mon-Fri 9AM-6PM EST',
@@ -82,6 +85,7 @@ const SupportPage: React.FC = () => {
     {
       icon: Calendar,
       title: 'Schedule Call',
+      
       description: 'Book a consultation with our team',
       contact: 'Book Now',
       availability: 'Flexible scheduling',
@@ -91,36 +95,42 @@ const SupportPage: React.FC = () => {
   const resources = [
     {
       title: 'Documentation',
+      
       description: 'Comprehensive guides and API documentation',
       icon: FileText,
       link: '/docs'
     },
     {
       title: 'Video Tutorials',
+      
       description: 'Step-by-step video guides for all services',
       icon: Eye,
       link: '/tutorials'
     },
     {
       title: 'Case Studies',
+      
       description: 'Real-world examples and success stories',
       icon: BarChart,
       link: '/case-studies'
     },
     {
       title: 'API Reference',
+      
       description: 'Complete API documentation and examples',
       icon: Code,
       link: '/api-docs'
     },
     {
       title: 'Best Practices',
+      
       description: 'Industry best practices and guidelines',
       icon: Award,
       link: '/best-practices'
     },
     {
       title: 'Community Forum',
+      
       description: 'Connect with other users and experts',
       icon: Users,
       link: '/community'

@@ -10,22 +10,26 @@ const AIServicesPage: React.FC = () => {
   const services = [
     {
       title: 'AI Strategy & Consulting',
+      
       description: 'Comprehensive AI strategy development and implementation consulting',
       icon: Brain,
       features: ['AI Readiness Assessment', 'Strategic Planning', 'Implementation Roadmap', 'ROI Analysis'],
       price:     ,
 $4},
       title: 'Machine Learning Solutions',
+      
       description: 'Custom machine learning models and algorithms for your business needs',
       icon: Zap,
       features: ['Custom Model Development', 'Data Preprocessing', 'Model Training', 'Performance Optimization'],
       price:       ,
 titletitle: 'AI Security & Compliance',
+      
       description: 'Enterprise-grade AI security and compliance solutions',
       icon: Shield,
       features: ['AI Security Audit', 'Compliance Framework', 'Risk Assessment', 'Security Monitoring'],
       price:       ,
 titletitle: 'AI Analytics & Insights',
+      
       description: 'Advanced analytics and business intelligence powered by AI',
       icon: BarChart,
       features: ['Predictive Analytics', 'Real-time Insights', 'Custom Dashboards', 'Automated Reporting'],
@@ -79,6 +83,7 @@ export default function AIServicesPage() {
     {
       id: 'ai-automation',
       title: 'AI Process Automation',
+      
       description: 'Intelligent automation solutions that reduce manual work by 80% and increase efficiency by 300%',
       features: [
         'Workflow automation with 99.9% accuracy',
@@ -100,6 +105,7 @@ export default function AIServicesPage() {
     {
       id: 'ai-analytics',
       title: 'AI-Powered Business Intelligence',
+      
       description: 'Advanced analytics platform that provides actionable insights and predictive analytics for data-driven decisions',
       features: [
         'Real-time data processing',
@@ -121,6 +127,7 @@ export default function AIServicesPage() {
     {
       id: 'ai-customer-support',
       title: 'AI Customer Support Platform',
+      
       description: '24/7 intelligent customer support with multilingual capabilities and 95% resolution rate',
       features: [
         'Natural language understanding',
@@ -142,6 +149,7 @@ export default function AIServicesPage() {
     {
       id: 'ai-content-generation',
       title: 'AI Content Generation Suite',
+      
       description: 'Complete content creation platform with AI writing, image generation, and video production capabilities',
       features: [
         'AI writing for all content types',
@@ -163,6 +171,7 @@ export default function AIServicesPage() {
     {
       id: 'ai-cybersecurity',
       title: 'AI Cybersecurity Solutions',
+      
       description: 'Advanced threat detection and prevention system with 99.8% accuracy in identifying security threats',
       features: [
         'Real-time threat detection',
@@ -184,6 +193,7 @@ export default function AIServicesPage() {
     {
       id: 'ai-ml-platform',
       title: 'AI/ML Development Platform',
+      
       description: 'Complete machine learning platform for building, training, and deploying custom AI models',
       features: [
         'No-code ML model builder',

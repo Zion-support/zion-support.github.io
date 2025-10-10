@@ -7,16 +7,19 @@ const BusinessAppsPage: React.FC = () => {
     {
       icon: Smartphone,
       title: 'Mobile Apps',
+      
       description: 'Custom mobile applications for iOS and Android platforms'
     },
     {
       icon: Monitor,
       title: 'Web Applications',
+      
       description: 'Responsive web applications with modern UI/UX design'
     },
     {
       icon: Cloud,
       title: 'Cloud Integration',
+      
       description: 'Seamless cloud integration and deployment solutions'
     },
     {
@@ -26,25 +29,27 @@ const BusinessAppsPage: React.FC = () => {
     {
       icon: Zap,
       title: 'High Performance',
+      
       description: 'Lightning-fast processing and real-time analytics for optimal business results'
     },
     {
       icon: Shield,
       title: 'Enterprise Security',
+      
       description: 'Bank-level security with encryption and compliance standards for your business data'
     },
     {
       icon: Globe,
       title: 'Global Reach',
+      
       description: 'Worldwide deployment and support for international business applications'
     }
-  ];];];
+  ]]];
   const benefits = [
     '24/7 technical support',
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
-    'Proven track record of success';
-  ];
+    'Proven track record of success'];
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>

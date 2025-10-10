@@ -7,24 +7,28 @@ const ARVRPlatformPage: React.FC = () => {
     {
       icon: Brain,
       title: 'AI-Powered AR/VR',
+      
       description: 'Advanced AI technology to create immersive augmented and virtual reality experiences'
     },
     {
       icon: Zap,
       title: 'Real-Time Rendering',
+      
       description: 'Lightning-fast 3D rendering and real-time interaction for optimal user experience'
     },
     {
       icon: Shield,
       title: 'Enterprise Security',
+      
       description: 'Bank-level security with encryption and compliance standards for your AR/VR data'
     },
     {
       icon: Globe,
       title: 'Cross-Platform Support',
+      
       description: 'Deploy across multiple devices and platforms for maximum reach and accessibility'
     }
-  ];];];
+  ]]];
   const benefits = [
     'Advanced AR/VR technology integration',
     'Real-time 3D rendering and interaction',
@@ -33,8 +37,7 @@ const ARVRPlatformPage: React.FC = () => {
     '24/7 technical support',
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
-    'Proven track record of success';
-  ];
+    'Proven track record of success'];
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>

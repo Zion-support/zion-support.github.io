@@ -33,25 +33,29 @@ const ProcessAutomationPage: React.FC = () => {
     {
       icon: Zap,
       title: 'Workflow Automation',
+      
       description: 'Streamline your business processes with intelligent automation that reduces manual work and errors.'
   },
     {
-    icon: Bot,
+      icon: Bot,
       title: 'AI-Powered Automation',
+      
       description: 'Leverage artificial intelligence to create smart, adaptive automation solutions for complex processes.'
   },
     {
-    icon: Settings,
+      icon: Settings,
       title: 'Custom Integration',
+      
       description: 'Seamlessly integrate with your existing systems and tools for a unified automation experience.'
   },
     {
-    icon: BarChart,
+      icon: BarChart,
       title: 'Performance Monitoring',
+      
       description: 'Track and optimize your automated processes with real-time analytics and reporting.'
   }
     }
-  ];];];
+  ]]];
 const benefits = [
     'Reduce manual work and human errors',
     'Increase operational efficiency',
@@ -64,8 +68,7 @@ const benefits = [
 
     '24/7 automated operations',
 
-    'Custom automation solutions';
-  ];
+    'Custom automation solutions'];
 return (
     <>
       <Helmet>

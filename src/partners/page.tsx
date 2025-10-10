@@ -8,6 +8,7 @@ const PartnersPage: React.FC = () => {
   const partnerTypes = [
     {
       title: 'Technology Partners',
+      
       description: 'Leading technology companies that provide the foundation for our solutions',
       icon: Building,
       color: 'text-blue-400',
@@ -22,6 +23,7 @@ const PartnersPage: React.FC = () => {
       ]
     },
       title: 'Solution Partners',
+      
       description: 'Specialized solution providers that complement our offerings',
       icon: Handshake,
       color: 'text-green-400',
@@ -33,6 +35,7 @@ const PartnersPage: React.FC = () => {
         { name: 'Workday', description: 'HR & Financial Management', logo: '👥' },
         { name: 'Zendesk', description: 'Customer Support & Engagement', logo: '🎧' }
       title: 'Integration Partners',
+      
       description: 'Partners that help us integrate with existing enterprise systems',
       icon: Award,
       color: 'text-purple-400',
@@ -48,20 +51,25 @@ const PartnersPage: React.FC = () => {
   const benefits = [
       icon: Globe,
       title: 'Global Reach',
+      
       description:       ,
 icon$5: Users,
       title: 'Expertise Sharing',
+      
       description:       ,
 icon$5: Star,
       title: 'Innovation',
+      
       description:       ,
 icon$5: CheckCircle,
       title: 'Quality Assurance',
+      
       description: 'Rigorous partner certification and quality standards'
   const partnershipTiers = [
       name: 'Strategic Partners',
       level: 'Platinum',
       description: 'Long-term strategic relationships with joint go-to-market initiatives',
+      
       benefits: [
         'Joint marketing and sales initiatives',
         'Co-development of solutions',
@@ -174,6 +182,7 @@ namename: 'Channel Partners',
   const benefits = [
 icon: Globe,
       title: 'Global Reach',
+      
       description: 'Access to worldwide markets and customers through our partner network',
 const PagePage: React.FC = () => {
   return (

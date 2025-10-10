@@ -36,7 +36,7 @@ const,
   t: 'camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()' },
       {/* TODO: Fix JSX expression */}
   t: 'max-age=63072000; includeSubDomains, preload' }
-    ];
+  ];
     headers.forEach(header => {/* TODO: Fix JSX expression */})
     });
   }

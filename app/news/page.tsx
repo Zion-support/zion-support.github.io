@@ -7,25 +7,29 @@ const PagePage: React.FC = () => {
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
+      
       description: 'Advanced AI technology to transform your business operations and improve efficiency'
   },
     {
-    icon: Zap,
+      icon: Zap,
       title: 'High Performance',
+      
       description: 'Lightning-fast processing and real-time analytics for optimal results'
   },
     {
-    icon: Shield,
+      icon: Shield,
       title: 'Enterprise Security',
+      
       description: 'Bank-level security with encryption and compliance standards'
   },
     {
-    icon: Globe,
+      icon: Globe,
       title: 'Global Reach',
+      
       description: 'Worldwide deployment and support for international businesses'
   }
     }
-  ];];];
+  ]]];
 const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -38,8 +42,7 @@ const benefits = [
 
     'Cost-effective pricing plans',
 
-    'Proven track record of success';
-  ];
+    'Proven track record of success'];
 {/* Hero Section */}
       <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">

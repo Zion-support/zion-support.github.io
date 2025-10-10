@@ -9,233 +9,254 @@ export default function MicroSaasPage() {
     {
       icon: BarChart3,
       title: 'AI Analytics Dashboard',
+      
       description: 'Real-time business intelligence and analytics with AI-powered insights',
       features: ['Custom Dashboards', 'Real-time Data', 'Predictive Insights', 'Export Reports', 'Mobile App', 'API Access'],
       price: '$79/month',
       popular: true,
       category: 'Analytics',
       link: '/ai-analytics-dashboard',
-      benefits: ['Increase revenue by 25%', 'Save 10 hours/week', 'Real-time insights']
+      benefits: ['Increase revenue by 25%', 'Save 10 hours/week', 'Real-time insights'],
     },
     {
       icon: ShoppingCart,
       title: 'AI E-commerce Assistant',
+      
       description: 'Complete e-commerce automation and optimization platform',
       features: ['Inventory Management', 'Order Processing', 'Customer Service', 'Analytics', 'Payment Integration', 'Shipping Automation'],
       price: '$99/month',
       popular: true,
       category: 'E-commerce',
       link: '/ai-ecommerce-solutions',
-      benefits: ['Boost sales by 40%', 'Reduce manual work by 80%', '24/7 customer support']
+      benefits: ['Boost sales by 40%', 'Reduce manual work by 80%', '24/7 customer support'],
     },
     {
       icon: Smartphone,
       title: 'AI Mobile App Builder',
+      
       description: 'No-code mobile app development with AI-powered features',
       features: ['Drag & Drop Builder', 'AI Code Generation', 'App Store Publishing', 'Analytics', 'Push Notifications', 'Offline Support'],
       price: '$149/month',
       popular: false,
       category: 'Development',
       link: '/ai-mobile-app-development',
-      benefits: ['Build apps 10x faster', 'No coding required', 'Professional results']
+      benefits: ['Build apps 10x faster', 'No coding required', 'Professional results'],
     },
     {
       icon: FileText,
       title: 'AI Document Processor',
+      
       description: 'Intelligent document processing and management system',
       features: ['OCR Processing', 'Data Extraction', 'Document Classification', 'Workflow Automation', 'Cloud Storage', 'Version Control'],
       price: '$59/month',
       popular: true,
       category: 'Productivity',
       link: '/ai-document-processing',
-      benefits: ['Process 1000+ docs/hour', '99.9% accuracy', 'Save 15 hours/week']
+      benefits: ['Process 1000+ docs/hour', '99.9% accuracy', 'Save 15 hours/week'],
     },
     {
       icon: Bot,
       title: 'AI Chatbot Builder',
+      
       description: 'Create intelligent chatbots for any platform with advanced AI',
       features: ['Visual Builder', 'Multi-platform', 'Analytics', 'Custom Training', 'Voice Integration', 'Multi-language'],
       price: '$49/month',
       popular: true,
       category: 'Customer Service',
       link: '/ai-chatbot-builder',
-      benefits: ['Reduce support costs by 60%', '24/7 availability', 'Instant responses']
+      benefits: ['Reduce support costs by 60%', '24/7 availability', 'Instant responses'],
     },
     {
       icon: Music,
       title: 'AI Content Creator',
+      
       description: 'AI-powered content generation and optimization platform',
       features: ['Blog Writing', 'Social Media', 'Video Scripts', 'SEO Optimization', 'Image Generation', 'Video Creation'],
       price: '$39/month',
       popular: false,
       category: 'Marketing',
       link: '/ai-content-generation',
-      benefits: ['Create content 5x faster', 'SEO optimized', 'Multiple formats']
+      benefits: ['Create content 5x faster', 'SEO optimized', 'Multiple formats'],
     },
     {
       icon: Mail,
       title: 'AI Email Marketing',
+      
       description: 'Intelligent email marketing automation and optimization',
       features: ['Email Templates', 'A/B Testing', 'Segmentation', 'Analytics', 'Drip Campaigns', 'Personalization'],
       price: '$29/month',
       popular: true,
       category: 'Marketing',
       link: '/ai-email-marketing',
-      benefits: ['Increase open rates by 35%', 'Automate campaigns', 'Better targeting']
+      benefits: ['Increase open rates by 35%', 'Automate campaigns', 'Better targeting'],
     },
     {
       icon: Calendar,
       title: 'AI Scheduling Assistant',
+      
       description: 'Smart scheduling and appointment management system',
       features: ['Calendar Integration', 'Auto-scheduling', 'Time Zone Handling', 'Reminders', 'Rescheduling', 'Analytics'],
       price: '$19/month',
       popular: false,
       category: 'Productivity',
       link: '/ai-scheduling-assistant',
-      benefits: ['Reduce no-shows by 50%', 'Save 5 hours/week', 'Better time management']
+      benefits: ['Reduce no-shows by 50%', 'Save 5 hours/week', 'Better time management'],
     },
     {
       icon: PieChart,
       title: 'AI Financial Tracker',
+      
       description: 'Intelligent financial tracking and budgeting tool',
       features: ['Expense Tracking', 'Budget Planning', 'Investment Analysis', 'Tax Preparation', 'Reports', 'Alerts'],
       price: '$34/month',
       popular: true,
       category: 'Finance',
       link: '/ai-financial-tracker',
-      benefits: ['Save 20% on expenses', 'Better financial planning', 'Automated tracking']
+      benefits: ['Save 20% on expenses', 'Better financial planning', 'Automated tracking'],
     },
     {
       icon: Search,
       title: 'AI SEO Optimizer',
+      
       description: 'Advanced SEO optimization and keyword research tool',
       features: ['Keyword Research', 'Content Optimization', 'Rank Tracking', 'Competitor Analysis', 'Technical SEO', 'Reports'],
       price: '$44/month',
       popular: true,
       category: 'Marketing',
       link: '/ai-seo-optimizer',
-      benefits: ['Increase organic traffic by 200%', 'Better rankings', 'Competitive advantage']
+      benefits: ['Increase organic traffic by 200%', 'Better rankings', 'Competitive advantage'],
     },
     {
       icon: Filter,
       title: 'AI Lead Generator',
+      
       description: 'Intelligent lead generation and qualification system',
       features: ['Lead Scoring', 'Contact Discovery', 'Email Verification', 'CRM Integration', 'Follow-up Automation', 'Analytics'],
       price: '$69/month',
       popular: false,
       category: 'Sales',
       link: '/ai-lead-generator',
-      benefits: ['Generate 3x more leads', 'Higher quality prospects', 'Automated follow-up']
+      benefits: ['Generate 3x more leads', 'Higher quality prospects', 'Automated follow-up'],
     },
     {
       icon: Download,
       title: 'AI Data Backup',
+      
       description: 'Intelligent data backup and recovery solution',
       features: ['Automatic Backups', 'Version Control', 'Cloud Storage', 'Recovery Tools', 'Encryption', 'Monitoring'],
       price: '$24/month',
       popular: false,
       category: 'Security',
       link: '/ai-data-backup',
-      benefits: ['99.9% uptime', 'Secure storage', 'Easy recovery']
+      benefits: ['99.9% uptime', 'Secure storage', 'Easy recovery'],
     },
     {
       icon: Upload,
       title: 'AI File Manager',
+      
       description: 'Smart file organization and management system',
       features: ['Auto-organization', 'Search & Filter', 'Duplicate Detection', 'Cloud Sync', 'Sharing', 'Version Control'],
       price: '$14/month',
       popular: false,
       category: 'Productivity',
       link: '/ai-file-manager',
-      benefits: ['Organize files automatically', 'Find files instantly', 'Reduce clutter']
+      benefits: ['Organize files automatically', 'Find files instantly', 'Reduce clutter'],
     },
     {
       icon: Share,
       title: 'AI Social Media Manager',
+      
       description: 'Comprehensive social media management and automation',
       features: ['Post Scheduling', 'Content Creation', 'Analytics', 'Engagement Tracking', 'Hashtag Research', 'Competitor Analysis'],
       price: '$39/month',
       popular: true,
       category: 'Marketing',
       link: '/ai-social-media-manager',
-      benefits: ['Increase engagement by 150%', 'Save 8 hours/week', 'Better content strategy']
+      benefits: ['Increase engagement by 150%', 'Save 8 hours/week', 'Better content strategy'],
     },
     {
       icon: Edit,
       title: 'AI Writing Assistant',
+      
       description: 'Advanced AI-powered writing and editing tool',
       features: ['Grammar Check', 'Style Suggestions', 'Tone Analysis', 'Plagiarism Detection', 'Templates', 'Collaboration'],
       price: '$19/month',
       popular: true,
       category: 'Productivity',
       link: '/ai-writing-assistant',
-      benefits: ['Improve writing quality', 'Save 6 hours/week', 'Professional results']
+      benefits: ['Improve writing quality', 'Save 6 hours/week', 'Professional results'],
     },
     {
       icon: Trash2,
       title: 'AI Data Cleaner',
+      
       description: 'Intelligent data cleaning and validation system',
       features: ['Duplicate Removal', 'Data Validation', 'Format Standardization', 'Error Detection', 'Batch Processing', 'Quality Reports'],
       price: '$29/month',
       popular: false,
       category: 'Data Management',
       link: '/ai-data-cleaner',
-      benefits: ['Clean data 10x faster', '99.9% accuracy', 'Better data quality']
+      benefits: ['Clean data 10x faster', '99.9% accuracy', 'Better data quality'],
     },
     {
       icon: Plus,
       title: 'AI Project Manager',
+      
       description: 'Intelligent project management and team collaboration',
       features: ['Task Management', 'Team Collaboration', 'Progress Tracking', 'Resource Planning', 'Timeline Management', 'Reporting'],
       price: '$49/month',
       popular: true,
       category: 'Project Management',
       link: '/ai-project-manager',
-      benefits: ['Complete projects 30% faster', 'Better team coordination', 'Real-time insights']
+      benefits: ['Complete projects 30% faster', 'Better team coordination', 'Real-time insights'],
     },
     {
       icon: Minus,
       title: 'AI Inventory Manager',
+      
       description: 'Smart inventory management and optimization system',
       features: ['Stock Tracking', 'Reorder Alerts', 'Demand Forecasting', 'Supplier Management', 'Cost Analysis', 'Reports'],
       price: '$39/month',
       popular: false,
       category: 'Inventory',
       link: '/ai-inventory-manager',
-      benefits: ['Reduce stockouts by 80%', 'Optimize inventory levels', 'Save 20% on costs']
+      benefits: ['Reduce stockouts by 80%', 'Optimize inventory levels', 'Save 20% on costs'],
     },
     {
       icon: Refresh,
       title: 'AI Workflow Automator',
+      
       description: 'Intelligent workflow automation and process optimization',
       features: ['Process Mapping', 'Automation Rules', 'Integration Hub', 'Monitoring', 'Analytics', 'Custom Workflows'],
       price: '$59/month',
       popular: true,
       category: 'Automation',
       link: '/ai-workflow-automator',
-      benefits: ['Automate 80% of tasks', 'Reduce errors by 90%', 'Save 20 hours/week']
+      benefits: ['Automate 80% of tasks', 'Reduce errors by 90%', 'Save 20 hours/week'],
     },
     {
       icon: Play,
       title: 'AI Video Creator',
+      
       description: 'AI-powered video creation and editing platform',
       features: ['Auto-editing', 'Text-to-Video', 'Voice Synthesis', 'Music Integration', 'Templates', 'Export Options'],
       price: '$79/month',
       popular: false,
       category: 'Content Creation',
       link: '/ai-video-creator',
-      benefits: ['Create videos 5x faster', 'Professional quality', 'No editing skills needed']
+      benefits: ['Create videos 5x faster', 'Professional quality', 'No editing skills needed'],
     },
     {
       icon: Pause,
       title: 'AI Time Tracker',
+      
       description: 'Intelligent time tracking and productivity analysis',
       features: ['Automatic Tracking', 'Productivity Analysis', 'Time Reports', 'Goal Setting', 'Team Management', 'Integrations'],
       price: '$19/month',
       popular: true,
       category: 'Productivity',
       link: '/ai-time-tracker',
-      benefits: ['Increase productivity by 25%', 'Better time management', 'Detailed insights']
+      benefits: ['Increase productivity by 25%', 'Better time management', 'Detailed insights'],
     }
   ];
   const categories = [
@@ -259,21 +280,25 @@ export default function MicroSaasPage() {
     {
       icon: TrendingUp,
       title: 'Proven ROI',
+      
       description: 'Average 300% return on investment for our micro SAAS clients'
     },
     {
       icon: Users,
       title: 'Easy Setup',
+      
       description: 'Get started in minutes with our intuitive setup process'
     },
     {
       icon: Clock,
       title: '24/7 Support',
+      
       description: 'Round-the-clock support with guaranteed response times'
     },
     {
       icon: Shield,
       title: 'Secure & Reliable',
+      
       description: 'Enterprise-grade security with 99.9% uptime guarantee'
     }
   ];

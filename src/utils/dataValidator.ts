@@ -93,7 +93,8 @@ export function validateEmail(email: string): boolean {
 export function validateURL(url: string): boolean {
     try {
     const parsed = new URL(url),
-    return parsed.protocol === 'http:' || parsed.protocol === 'https:'
+    return parsed.protocol === 'http: 'https',
+      $3:'
   } catch {
     * Validate email address;
  */

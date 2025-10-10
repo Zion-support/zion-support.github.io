@@ -66,7 +66,7 @@ const services = [
       description: 'System monitoring and alerts'
   }
     }
-  ];];];
+  ]]];
 const incidents = [
     {
     id: 1,

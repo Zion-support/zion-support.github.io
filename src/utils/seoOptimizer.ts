@@ -473,7 +473,7 @@ $4});
         changefreq: 'daily',
         priority:       ,
 $4}
-    ];
+  ];
   }
   /**
    * Generate robots.txt content

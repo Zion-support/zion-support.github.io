@@ -72,21 +72,25 @@ $4});
     {
       icon: Calculator,
       title: 'Free Quote',
+      
       description:     ,
 $4},
     {
       icon: Clock,
       title: 'Quick Response',
+      
       description:     ,
 $4},
     {
       icon: CheckCircle,
       title: 'Transparent Pricing',
+      
       description:     ,
 $4},
     {
       icon: Star,
       title: 'Expert Consultation',
+      
       description:     ,
 $4}
   ];
@@ -94,21 +98,25 @@ $4}
     {
       icon: Users,
       title: '50+ Successful Projects',
+      
       description:     ,
 $4},
     {
       icon: Award,
       title: '300% Average ROI',
+      
       description:     ,
 $4},
     {
       icon: Clock,
       title: '24/7 Support',
+      
       description:     ,
 $4},
     {
       icon: Star,
       title: '99.9% Uptime',
+      
       description:     ,
 $4}
   ];

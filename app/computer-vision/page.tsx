@@ -1,6 +1,5 @@
 'use client';
-import React from 'react';
-  ]
+import React from 'react']
 const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -13,8 +12,7 @@ const benefits = [
 
     'Cost-effective pricing plans',
 
-    'Proven track record of success';
-  ];
+    'Proven track record of success'];
 </h1>
             <p>
               Transform your business with our advanced page solutions.;
@@ -69,5 +67,5 @@ const benefits = [
       </section>
     </div>
   ),
-};];];
+}]];
 export default PagePage;

@@ -1,65 +1,63 @@
 const fs = require('fs');
-const path = require('path');
+const glob = require('glob');
 
-// Function to recursively find all .tsx and .ts files
-function findFiles(dir, extensions = ['.tsx', '.ts']) {
-  let results = [];
-  const list = fs.readdirSync(dir);
-  
-  list.forEach(file => {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
-    
-    if (stat && stat.isDirectory()) {
-      results = results.concat(findFiles(filePath, extensions));
-    } else if (extensions.some(ext => file.endsWith(ext))) {
-      results.push(filePath);
-    }
-  });
-  
-  return results;
-}
+// Get all page files that might have merge conflicts
+const files = glob.sync('app/**/page.tsx');
 
-// Function to fix all merge conflicts and syntax issues
-function fixAllConflicts(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
-    
-    // Remove all merge conflict markers and origin/ references
-    if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>') || content.includes('origin/')) {
-      content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>>[^\n]*/g, '');
-      content = content.replace(/origin\/[a-zA-Z0-9-]+/g, '');
-      modified = true;
-    }
-    
-    // Fix any remaining syntax issues
-    if (content.includes('cursor/')) {
-      content = content.replace(/cursor\/[a-zA-Z0-9-]+/g, '');
-      modified = true;
-    }
-    
-    // Clean up any double spaces or empty lines
-    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
-    content = content.replace(/  +/g, ' ');
-    
-    if (modified) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed: ${filePath}`);
-    }
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-  }
-}
-
-// Main execution
-const appDir = path.join(__dirname, 'app');
-const files = findFiles(appDir);
-
-console.log(`Found ${files.length} files to check...`);
+console.log(`Found ${files.length} page files to check for merge conflicts`);
 
 files.forEach(file => {
-  fixAllConflicts(file);
+  try {
+    let content = fs.readFileSync(file, 'utf8');
+    let originalContent = content;
+    
+    // Remove all merge conflict markers and keep the newer version (after =======)
+    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======\s*([\s\S]*?)>>>>>>> cursor\/website-audit-and-update-with-deployment-26c5/g, '$1');
+    
+    // Clean up common syntax issues
+    content = content.replace(/;\s*]/g, ']');
+    content = content.replace(/]\s*;\s*]/g, ']');
+    content = content.replace(/;\s*;\s*]/g, ']');
+    content = content.replace(/;\s*;\s*;\s*]/g, ']');
+    
+    // Fix missing commas in object properties
+    content = content.replace(/(\w+):\s*'[^']+'\s*(\w+):/g, '$1: \'$2\',\n      $3:');
+    
+    // Fix missing commas after benefits arrays
+    content = content.replace(/benefits:\s*\[[^\]]+\];/g, (match) => match.replace(';', ''));
+    
+    // Fix missing commas after icon properties
+    content = content.replace(/{\s*icon:\s*(\w+),\s*title:/g, '{\n      icon: $1,\n      title:');
+    
+    // Fix missing commas after title properties
+    content = content.replace(/title:\s*'[^']+',\s*description:/g, (match) => match.replace(/,(\s*description:)/, ',\n      $1'));
+    
+    // Fix missing commas after description properties
+    content = content.replace(/description:\s*'[^']+',\s*benefits:/g, (match) => match.replace(/,(\s*benefits:)/, ',\n      $1'));
+    
+    // Fix missing commas after closing brackets
+    content = content.replace(/}\s*{\s*icon:/g, '},\n    {\n      icon:');
+    
+    // Fix missing commas in object properties
+    content = content.replace(/(\w+):\s*'[^']+'\s*(\w+):/g, '$1: \'$2\',\n      $3:');
+    
+    // Fix missing commas in features array
+    content = content.replace(/benefits:\s*\[[^\]]+\]\s*}/g, (match) => {
+      return match.replace(']', '],');
+    });
+    
+    // Fix missing commas after closing brackets in features array
+    content = content.replace(/}\s*];/g, '}\n  ];');
+    
+    if (content !== originalContent) {
+      fs.writeFileSync(file, content, 'utf8');
+      console.log(`Fixed: ${file}`);
+    } else {
+      console.log(`No changes needed: ${file}`);
+    }
+  } catch (error) {
+    console.error(`Error processing ${file}:`, error.message);
+  }
 });
 
-console.log('All conflicts fixes completed!');
+console.log('All merge conflicts and syntax errors fixed!');

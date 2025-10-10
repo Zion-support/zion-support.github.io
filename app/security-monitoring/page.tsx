@@ -32,25 +32,29 @@ const SecurityMonitoringPage: React.FC = () => {
     {
       icon: Eye,
       title: '24/7 Real-time Monitoring',
+      
       description: 'Continuous surveillance of your entire IT infrastructure with instant threat detection and response.'
   },
     {
-    icon: AlertTriangle,
+      icon: AlertTriangle,
       title: 'Advanced Threat Detection',
+      
       description: 'AI-powered analysis to identify sophisticated cyber threats before they impact your business.'
   },
     {
-    icon: BarChart,
+      icon: BarChart,
       title: 'Comprehensive Analytics',
+      
       description: 'Detailed security reports and insights to help you understand and improve your security posture.'
   },
     {
-    icon: Zap,
+      icon: Zap,
       title: 'Instant Response',
+      
       description: 'Automated incident response and immediate notification systems to minimize security breaches.'
   }
     }
-  ];];];
+  ]]];
 const benefits = [
     '24/7 continuous security monitoring',
     'AI-powered threat detection and analysis',
@@ -63,8 +67,7 @@ const benefits = [
 
     'Expert security team support',
 
-    'Customizable monitoring rules';
-  ];
+    'Customizable monitoring rules'];
 return (
     <>
       <Helmet>

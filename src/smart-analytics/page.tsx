@@ -7,27 +7,33 @@ const SmartAnalyticsPage: React.FC = () => {
     {
       icon: BarChart,
       title: 'Real-time Dashboards',
+      
       description: 'Monitor your business performance with live dashboards that update automatically and provide instant insights.',
       benefit:     ,
 $4},
       icon: Brain,
       title: 'AI-Powered Insights',
+      
       description: 'Get intelligent recommendations and predictions based on your data patterns and industry benchmarks.',
       benefit:       ,
 iconicon: Target,
       title: 'Custom Metrics',
+      
       description: 'Track exactly what matters to your business with customizable KPIs and automated reporting.',
       benefit:       ,
 iconicon: Zap,
       title: 'Automated Alerts',
+      
       description: 'Get instant notifications when important metrics change or when action is needed.',
       benefit:       ,
 iconicon: Users,
       title: 'Team Collaboration',
+      
       description: 'Share insights and reports with your team with role-based access and collaborative features.',
       benefit:       ,
 iconicon: Shield,
       title: 'Enterprise Security',
+      
       description: 'Bank-level security with data encryption, access controls, and compliance with industry standards.',
       benefit:     ,
 $4}
@@ -158,6 +164,7 @@ const SmartAnalyticsPage: React.FC = () => {
     },
       icon: Brain,
       title: 'AI-Powered Insights',
+      
       description: 'Get intelligent recommendations and predictions based on your data patterns and industry benchmarks.',
       benefit: 'Discover hidden opportunities',
 import Navigation from '../components/Navigation';
@@ -183,6 +190,7 @@ const PagePage: React.FC = () => {
     </div>
       icon: Shield,
       title: 'Enterprise Security',
+      
       description: 'Bank-level security with data encryption, access controls, and compliance with industry standards.',
       benefit: '100% data protection'
     }

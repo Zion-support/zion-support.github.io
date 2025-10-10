@@ -45,6 +45,7 @@ $4}
     ai: [
       {
         title: 'Consensus Intelligence Framework',
+      
         description: 'Developing a novel AI framework that enables multiple AI systems to reach consensus on complex decisions',
         status: 'In Progress',
         timeline: '2025-2026',
@@ -60,6 +61,7 @@ $4}
 $4},
       {
         title: 'Autonomous Business Intelligence',
+      
         description: 'Creating self-managing business intelligence systems that adapt and optimize without human intervention',
         status: 'Completed',
         timeline: '2024-2025',
@@ -75,6 +77,7 @@ $4},
 $4},
       {
         title: 'Neural Architecture Search for Enterprise',
+      
         description: 'Developing automated neural architecture search specifically optimized for enterprise applications',
         status: 'In Progress',
         timeline: '2025-2027',
@@ -92,6 +95,7 @@ $4}
     quantum: [
       {
         title: 'Quantum Machine Learning Algorithms',
+      
         description: 'Developing quantum algorithms for machine learning that leverage quantum advantage',
         status: 'In Progress',
         timeline: '2025-2028',
@@ -107,6 +111,7 @@ $4}
 $4},
       {
         title: 'Quantum Error Correction for Business Applications',
+      
         description: 'Researching practical quantum error correction methods for commercial quantum computing',
         status: 'Planning',
         timeline: '2026-2029',
@@ -124,6 +129,7 @@ $4}
     autonomous: [
       {
         title: 'Autonomous Enterprise Operations',
+      
         description: 'Developing fully autonomous systems for enterprise operations and decision-making',
         status: 'In Progress',
         timeline: '2025-2027',
@@ -139,6 +145,7 @@ $4}
 $4},
       {
         title: 'Multi-Agent Coordination Systems',
+      
         description: 'Researching coordination mechanisms for multiple autonomous agents in complex environments',
         status: 'Completed',
         timeline: '2023-2024',
@@ -156,6 +163,7 @@ $4}
     emerging: [
       {
         title: 'Neuromorphic Computing for AI',
+      
         description: 'Exploring brain-inspired computing architectures for more efficient AI processing',
         status: 'In Progress',
         timeline: '2025-2028',
@@ -171,6 +179,7 @@ $4}
 $4},
       {
         title: 'Edge AI for IoT Systems',
+      
         description: 'Developing ultra-efficient AI systems for edge computing and IoT applications',
         status: 'Completed',
         timeline: '2024-2025',
@@ -224,21 +233,25 @@ $4}
     {
       icon: Award,
       title: '50+ Research Papers',
+      
       description:     ,
 $4},
     {
       icon: Users,
       title: '100+ Researchers',
+      
       description:     ,
 $4},
     {
       icon: Target,
       title: '15+ Patents',
+      
       description:     ,
 $4},
     {
       icon: Globe,
       title: 'Global Collaborations',
+      
       description:     ,
 $4}
   ];

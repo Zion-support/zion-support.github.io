@@ -7,28 +7,36 @@ const BlockchainWeb3Page: React.FC = () => {
     {
       icon: Zap,
       title: 'Smart Contracts',
+      
       description: 'Automated, self-executing contracts with the terms directly written into code.',
-      benefits: ['Automated execution', 'Transparent transactions', 'Reduced costs', 'Enhanced security'];
+      
+      benefits: ['Automated execution', 'Transparent transactions', 'Reduced costs', 'Enhanced security'],
   },
     {
-    icon: Shield,
+      icon: Shield,
       title: 'Decentralized Security',
+      
       description: 'Enhanced security through decentralized architecture and cryptographic protection.',
-      benefits: ['Immutable records', 'Cryptographic security', 'Distributed consensus', 'Tamper-proof data']
+      
+      benefits: ['Immutable records', 'Cryptographic security', 'Distributed consensus', 'Tamper-proof data'],
   },
     {
-    icon: Brain,
+      icon: Brain,
       title: 'AI Integration',
+      
       description: 'AI-powered blockchain solutions for intelligent automation and optimization.',
-      benefits: ['Smart automation', 'Predictive analytics', 'Optimized transactions', 'Intelligent contracts']
+      
+      benefits: ['Smart automation', 'Predictive analytics', 'Optimized transactions', 'Intelligent contracts'],
   },
     {
-    icon: Globe,
+      icon: Globe,
       title: 'Global Access',
+      
       description: 'Access blockchain services from anywhere in the world with global connectivity.',
-      benefits: ['24/7 availability', 'Global reach', 'Cross-border transactions', 'Universal access']
+      
+      benefits: ['24/7 availability', 'Global reach', 'Cross-border transactions', 'Universal access'],
   },
-  ];];
+  ]];
 return (
     <>
       <Helmet>

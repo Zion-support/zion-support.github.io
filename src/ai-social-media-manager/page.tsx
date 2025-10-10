@@ -6,22 +6,28 @@ const AISocialMediaManagerPage: React.FC = () => {
     {
       icon: Share2,
       title: 'AI Content Creation',
+      
       description:     ,
 $4},
       icon: TrendingUp,
       title: 'Trend Analysis',
+      
       description:       ,
 icon$5: Users,
       title: 'Audience Insights',
+      
       description:       ,
 icon$5: Calendar,
       title: 'Smart Scheduling',
+      
       description:       ,
 icon$5: BarChart,
       title: 'Performance Analytics',
+      
       description:       ,
 icon$5: MessageSquare,
       title: 'Auto-Responses',
+      
       description:     ,
 $4}
   ];

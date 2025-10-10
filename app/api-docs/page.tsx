@@ -15,6 +15,7 @@ export default function APIDocsPage() {
   const apiEndpoints = [
     {
       title: 'AI Services',
+      
       description: 'Artificial Intelligence and Machine Learning APIs',
       icon: Brain,
       endpoints: [
@@ -48,6 +49,7 @@ export default function APIDocsPage() {
     },
     {
       title: 'Cloud Services',
+      
       description: 'Cloud infrastructure and deployment APIs',
       icon: Cloud,
       endpoints: [
@@ -73,6 +75,7 @@ export default function APIDocsPage() {
     },
     {
       title: 'Data Analytics',
+      
       description: 'Data processing and analytics APIs',
       icon: Database,
       endpoints: [
@@ -92,7 +95,7 @@ export default function APIDocsPage() {
         }
   ]
     }
-  ];];
+  ]];
   const filteredEndpoints = apiEndpoints.map(category => ({
     ...category,
     endpoints: category.endpoints.filter(endpoint => 

@@ -10,6 +10,7 @@ const ServicesPage: React.FC = () => {
     {
       icon: Brain,
       title: 'AI Services',
+      
       description: 'Comprehensive AI solutions for every business need',
       features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
       price: 'Starting at $1,500/month',
@@ -19,6 +20,7 @@ const ServicesPage: React.FC = () => {
     {
       icon: Zap,
       title: 'AI Automation',
+      
       description: 'Intelligent process automation and workflow optimization',
       features: ['Workflow Automation', 'Smart Scheduling', 'Process Optimization', 'Task Management'],
       price: 'Starting at $2,000/month',
@@ -28,6 +30,7 @@ const ServicesPage: React.FC = () => {
     {
       icon: BarChart,
       title: 'AI Data Analytics',
+      
       description: 'Transform data into actionable insights with AI',
       features: ['Predictive Analytics', 'Data Visualization', 'Business Intelligence', 'Real-time Insights'],
       price: 'Starting at $1,800/month',
@@ -37,6 +40,7 @@ const ServicesPage: React.FC = () => {
     {
       icon: MessageSquare,
       title: 'AI Customer Support',
+      
       description: '24/7 AI-powered customer service solutions',
       features: ['Chatbots', 'Voice Assistants', 'Ticket Management', 'Sentiment Analysis'],
       price: 'Starting at $299/month',
@@ -46,6 +50,7 @@ const ServicesPage: React.FC = () => {
     {
       icon: Target,
       title: 'AI Marketing',
+      
       description: 'Revolutionary AI-powered marketing automation',
       features: ['Ad Optimization', 'Content Generation', 'Lead Scoring', 'Campaign Management'],
       price: 'Starting at $199/month',
@@ -55,6 +60,7 @@ const ServicesPage: React.FC = () => {
     {
       icon: Eye,
       title: 'AI Computer Vision',
+      
       description: 'Advanced computer vision and image processing',
       features: ['Object Detection', 'Image Recognition', 'Quality Control', 'Facial Recognition'],
       price: 'Starting at $1,200/month',
@@ -66,6 +72,7 @@ const ServicesPage: React.FC = () => {
     {
       icon: Database,
       title: 'Database Management',
+      
       description: 'Comprehensive database solutions and optimization',
       features: ['Database Design', 'Performance Tuning', 'Backup & Recovery', 'Monitoring'],
       price: 'Starting at $1,000/month',
@@ -75,6 +82,7 @@ const ServicesPage: React.FC = () => {
     {
       icon: Lock,
       title: 'Cybersecurity',
+      
       description: 'Comprehensive security solutions for your business',
       features: ['Security Audits', 'Penetration Testing', 'Compliance', 'Incident Response'],
       price: 'Starting at $1,500/month',
@@ -84,6 +92,7 @@ const ServicesPage: React.FC = () => {
     {
       icon: Cloud,
       title: 'Cloud Services',
+      
       description: 'Scalable cloud infrastructure and migration',
       features: ['Cloud Migration', 'Infrastructure Setup', 'Monitoring', 'Cost Optimization'],
       price: 'Starting at $800/month',
@@ -93,6 +102,7 @@ const ServicesPage: React.FC = () => {
     {
       icon: Code,
       title: 'DevOps & CI/CD',
+      
       description: 'Automated development and deployment pipelines',
       features: ['CI/CD Setup', 'Container Orchestration', 'Monitoring', 'Security Scanning'],
       price: 'Starting at $1,200/month',
@@ -102,6 +112,7 @@ const ServicesPage: React.FC = () => {
     {
       icon: Settings,
       title: 'System Administration',
+      
       description: 'Complete system management and maintenance',
       features: ['Server Management', 'Performance Tuning', 'Updates', 'Troubleshooting'],
       price: 'Starting at $600/month',
@@ -111,6 +122,7 @@ const ServicesPage: React.FC = () => {
     {
       icon: Globe,
       title: 'Network Solutions',
+      
       description: 'Enterprise network infrastructure and security',
       features: ['Network Design', 'Security Implementation', 'Monitoring', 'Optimization'],
       price: 'Starting at $900/month',
@@ -122,6 +134,7 @@ const ServicesPage: React.FC = () => {
     {
       icon: BarChart3,
       title: 'AI Analytics Dashboard',
+      
       description: 'Real-time business intelligence and analytics',
       features: ['Custom Dashboards', 'Real-time Data', 'Predictive Insights', 'Export Reports'],
       price: '$79/month',
@@ -131,6 +144,7 @@ const ServicesPage: React.FC = () => {
     {
       icon: ShoppingCart,
       title: 'AI E-commerce Assistant',
+      
       description: 'Complete e-commerce automation and optimization',
       features: ['Inventory Management', 'Order Processing', 'Customer Service', 'Analytics'],
       price: '$99/month',
@@ -140,6 +154,7 @@ const ServicesPage: React.FC = () => {
     {
       icon: Smartphone,
       title: 'AI Mobile App Builder',
+      
       description: 'No-code mobile app development with AI',
       features: ['Drag & Drop Builder', 'AI Code Generation', 'App Store Publishing', 'Analytics'],
       price: '$149/month',
@@ -149,6 +164,7 @@ const ServicesPage: React.FC = () => {
     {
       icon: FileText,
       title: 'AI Document Processor',
+      
       description: 'Intelligent document processing and management',
       features: ['OCR Processing', 'Data Extraction', 'Document Classification', 'Workflow Automation'],
       price: '$59/month',
@@ -158,6 +174,7 @@ const ServicesPage: React.FC = () => {
     {
       icon: Bot,
       title: 'AI Chatbot Builder',
+      
       description: 'Create intelligent chatbots for any platform',
       features: ['Visual Builder', 'Multi-platform', 'Analytics', 'Custom Training'],
       price: '$49/month',
@@ -167,6 +184,7 @@ const ServicesPage: React.FC = () => {
     {
       icon: Music,
       title: 'AI Content Creator',
+      
       description: 'AI-powered content generation and optimization',
       features: ['Blog Writing', 'Social Media', 'Video Scripts', 'SEO Optimization'],
       price: '$39/month',
@@ -178,21 +196,25 @@ const ServicesPage: React.FC = () => {
     {
       icon: TrendingUp,
       title: 'Proven ROI',
+      
       description: 'Average 300% return on investment for our clients'
     },
     {
       icon: Users,
       title: 'Expert Team',
+      
       description: '50+ certified professionals with 10+ years experience'
     },
     {
       icon: Clock,
       title: '24/7 Support',
+      
       description: 'Round-the-clock support with guaranteed response times'
     },
     {
       icon: Shield,
       title: 'Fast Delivery',
+      
       description: 'Quick implementation with minimal downtime'
     }
   ];

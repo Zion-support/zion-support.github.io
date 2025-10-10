@@ -3,36 +3,42 @@ export default function NotFound() {
   const popularPages = [
     {
       title: 'Home',
+      
       description: 'Return to our homepage',
       href: '/',
       icon: '🏠'
     },
     {
       title: 'AI Services',
+      
       description: 'Explore our comprehensive AI and IT solutions',
       href: '/services',
       icon: '🤖'
     },
     {
       title: 'Blog & Insights',
+      
       description: 'Read about latest AI trends and innovations',
       href: '/blog',
       icon: '📚'
     },
     {
       title: 'About Us',
+      
       description: 'Learn about Zion Tech Group and our mission',
       href: '/about',
       icon: '🏢'
     },
     {
       title: 'Case Studies',
+      
       description: 'See our success stories and client results',
       href: '/case-studies',
       icon: '📊'
     },
     {
       title: 'Contact Us',
+      
       description: 'Get in touch with our AI experts',
       href: '/contact',
       icon: '📞'

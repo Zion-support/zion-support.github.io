@@ -6,16 +6,15 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const SupportPage: React.FC = () => {
-<<<<<<< HEAD
-=======
-  const [searchTerm, setSearchTerm] = useState('');
+const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
->>>>>>> cursor/website-audit-and-update-with-deployment-26c5
+
 
   const supportChannels = [
     {
       icon: Phone,
       title: 'Phone Support',
+      
       description: 'Speak directly with our technical experts',
       availability: '24/7 Emergency Support',
       responseTime: 'Immediate',
@@ -25,6 +24,7 @@ const SupportPage: React.FC = () => {
     {
       icon: Mail,
       title: 'Email Support',
+      
       description: 'Send us detailed questions and get comprehensive answers',
       availability: 'Mon-Fri: 9AM-6PM EST',
       responseTime: 'Within 24 hours',
@@ -34,6 +34,7 @@ const SupportPage: React.FC = () => {
     {
       icon: MessageSquare,
       title: 'Live Chat',
+      
       description: 'Get instant help through our live chat system',
       availability: 'Mon-Fri: 9AM-6PM EST',
       responseTime: 'Immediate',
@@ -43,18 +44,13 @@ const SupportPage: React.FC = () => {
     {
       icon: Video,
       title: 'Video Support',
+      
       description: 'Schedule a video call for complex technical issues',
       availability: 'By appointment',
       responseTime: 'Within 2 hours',
       contact: 'Schedule Call',
       color: 'from-orange-500 to-red-600'
     }
-<<<<<<< HEAD
-  ];];];
-  const filteredFaqs = faqs.filter(faq =>
-    faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    faq.answer.toLowerCase().includes(searchQuery.toLowerCase())
-=======
   ];
 
   const faqCategories = [
@@ -120,24 +116,28 @@ const SupportPage: React.FC = () => {
   const resources = [
     {
       title: 'Documentation',
+      
       description: 'Comprehensive guides and API documentation',
       icon: FileText,
       link: '/docs'
     },
     {
       title: 'Video Tutorials',
+      
       description: 'Step-by-step video guides for all our services',
       icon: Video,
       link: '/tutorials'
     },
     {
       title: 'Knowledge Base',
+      
       description: 'Searchable database of articles and solutions',
       icon: Search,
       link: '/knowledge-base'
     },
     {
       title: 'Status Page',
+      
       description: 'Real-time status of all our services',
       icon: CheckCircle,
       link: '/status'
@@ -153,7 +153,7 @@ const SupportPage: React.FC = () => {
       q.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
       q.answer.toLowerCase().includes(searchTerm.toLowerCase())
     )
->>>>>>> cursor/website-audit-and-update-with-deployment-26c5
+
   );
 
   return (
@@ -313,16 +313,11 @@ const SupportPage: React.FC = () => {
             </div>
           </div>
         </div>
-<<<<<<< HEAD
-      </section>
-    </div>
-
-=======
-      </main>
+</main>
       
       <Footer />
     </>
->>>>>>> cursor/website-audit-and-update-with-deployment-26c5
+
   );
 };
 

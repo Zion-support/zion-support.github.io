@@ -44,13 +44,16 @@ const SignupPage: React.FC = () => {
     {
       icon: Shield,
       title: 'Enterprise Security',
+      
       description:     ,
 $4},
       icon: Award,
       title: 'Proven Results',
+      
       description:       ,
 icon$5: Globe,
       title: 'Global Support',
+      
       description:   ,
 $4];
   const benefits = [
@@ -136,6 +139,7 @@ const handleInputChange = (e: React.ChangeEvent,)
     },
 icon: Award,
       title: 'Proven Results',
+      
       description: '300% average ROI and 95% process automation for our clients',
 const PagePage: React.FC = () => {
   return (

@@ -47,15 +47,19 @@ $4}
   const benefits = [
       icon: TrendingUp,
       title: 'Data-Driven Decisions',
+      
       description:       ,
 icon$5: Target,
       title: 'Predictive Insights',
+      
       description:       ,
 icon$5: BarChart,
       title: 'Real-Time Monitoring',
+      
       description:       ,
 icon$5: Brain,
       title: 'AI-Powered',
+      
       description: 'Leverage advanced AI algorithms for deeper insights and automation'
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

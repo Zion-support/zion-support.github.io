@@ -70,10 +70,7 @@ const TermsPage: React.FC = () => {
     },
     {
       title: 'Governing Law',
-<<<<<<< HEAD
-      icon: Scale,];];
-=======
-      content: 'These terms and conditions are governed by and construed in accordance with the laws of Delaware, United States, and you irrevocably submit to the exclusive jurisdiction of the courts in that state or location.'
+content: 'These terms and conditions are governed by and construed in accordance with the laws of Delaware, United States, and you irrevocably submit to the exclusive jurisdiction of the courts in that state or location.'
     },
     {
       title: 'Intellectual Property',
@@ -93,15 +90,12 @@ const TermsPage: React.FC = () => {
     }
   ];
 
->>>>>>> cursor/website-audit-and-update-with-deployment-26c5
+
   return (
     <>
       <Helmet>
         <title>Terms of Service - Zion Tech Group</title>
-<<<<<<< HEAD
-;
-=======
-        <meta name="description" content="Zion Tech Group's terms of service. Read our terms and conditions for using our website and services." />
+<meta name="description" content="Zion Tech Group's terms of service. Read our terms and conditions for using our website and services." />
       </Helmet>
       
       <Navigation />
@@ -254,4 +248,4 @@ const TermsPage: React.FC = () => {
 };
 
 export default TermsPage;
->>>>>>> cursor/website-audit-and-update-with-deployment-26c5
+

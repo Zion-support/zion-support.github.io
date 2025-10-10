@@ -100,7 +100,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         as: 'style',
         type: 'text/css'
       }
-    ];
+  ];
     criticalResources.forEach((resource) => {
     const link = document.createElement('link');
       link.rel = 'preload';
@@ -125,7 +125,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       { rel: 'dns-prefetch', href: 'https://www.google-analytics.com' },
       { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
       { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous' }
-    ];
+  ];
     hints.forEach((hint) => {
     const link = document.createElement('link');
       link.rel = hint.rel;

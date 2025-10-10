@@ -19,6 +19,7 @@ const DocsPage: React.FC = () => {
     {
       id: 1,
       title: 'Quick Start Guide',
+      
       description: 'Get up and running with Zion Tech Group services in minutes',
       category: 'getting-started',
       difficulty: 'Beginner',
@@ -29,6 +30,7 @@ const DocsPage: React.FC = () => {
     {
       id: 2,
       title: 'AI Project Manager API',
+      
       description: 'Complete API reference for AI Project Manager service',
       category: 'api',
       difficulty: 'Intermediate',
@@ -39,6 +41,7 @@ const DocsPage: React.FC = () => {
     {
       id: 3,
       title: 'Machine Learning Integration',
+      
       description: 'Integrate our ML services with your existing applications',
       category: 'integration',
       difficulty: 'Advanced',
@@ -49,6 +52,7 @@ const DocsPage: React.FC = () => {
     {
       id: 4,
       title: 'AI Analytics Dashboard Setup',
+      
       description: 'Configure and customize your analytics dashboard',
       category: 'ai-services',
       difficulty: 'Intermediate',
@@ -59,6 +63,7 @@ const DocsPage: React.FC = () => {
     {
       id: 5,
       title: 'Authentication & Security',
+      
       description: 'Secure your API access and data transmission',
       category: 'api',
       difficulty: 'Intermediate',
@@ -69,6 +74,7 @@ const DocsPage: React.FC = () => {
     {
       id: 6,
       title: 'Troubleshooting Common Issues',
+      
       description: 'Solutions to frequently encountered problems',
       category: 'troubleshooting',
       difficulty: 'Beginner',
@@ -79,6 +85,7 @@ const DocsPage: React.FC = () => {
     {
       id: 7,
       title: 'AI Content Generation API',
+      
       description: 'Generate high-quality content using our AI API',
       category: 'api',
       difficulty: 'Intermediate',
@@ -89,6 +96,7 @@ const DocsPage: React.FC = () => {
     {
       id: 8,
       title: 'Webhook Configuration',
+      
       description: 'Set up real-time notifications and data sync',
       category: 'integration',
       difficulty: 'Advanced',
@@ -99,6 +107,7 @@ const DocsPage: React.FC = () => {
     {
       id: 9,
       title: 'AI Customer Support Bot Setup',
+      
       description: 'Deploy and configure your AI-powered support bot',
       category: 'ai-services',
       difficulty: 'Intermediate',
@@ -109,6 +118,7 @@ const DocsPage: React.FC = () => {
     {
       id: 10,
       title: 'Performance Optimization',
+      
       description: 'Optimize your AI service performance and reduce costs',
       category: 'troubleshooting',
       difficulty: 'Advanced',
@@ -120,6 +130,7 @@ const DocsPage: React.FC = () => {
   const quickLinks = [
     {
       title: 'API Reference',
+      
       description: 'Complete API documentation',
       icon: Code,
       link: '/api-docs',
@@ -127,6 +138,7 @@ const DocsPage: React.FC = () => {
     },
     {
       title: 'SDK Downloads',
+      
       description: 'Client libraries and tools',
       icon: Download,
       link: '/downloads',
@@ -134,6 +146,7 @@ const DocsPage: React.FC = () => {
     },
     {
       title: 'Video Tutorials',
+      
       description: 'Step-by-step video guides',
       icon: Play,
       link: '/tutorials',
@@ -141,6 +154,7 @@ const DocsPage: React.FC = () => {
     },
     {
       title: 'Community Forum',
+      
       description: 'Connect with other developers',
       icon: Users,
       link: '/community',

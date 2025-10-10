@@ -45,6 +45,7 @@ $4}
     ai: [
       {
         title: 'AI-Powered Analytics',
+      
         description: 'Transform raw data into actionable insights with advanced AI analytics',
         features: ['Predictive Analytics', 'Real-time Insights', 'Automated Reporting', 'Custom Dashboards'],
         pricing: 'Starting at $1,500/month',
@@ -53,6 +54,7 @@ $4}
 $4},
       {
         title: 'AI Marketing Automation',
+      
         description: 'Revolutionize your marketing with AI-powered automation and personalization',
         features: ['Campaign Optimization', 'Customer Segmentation', 'Content Generation', 'Performance Tracking'],
         pricing: 'Starting at $199/month',
@@ -61,6 +63,7 @@ $4},
 $4},
       {
         title: 'AI Customer Support',
+      
         description: 'Enhance customer experience with intelligent AI-powered support systems',
         features: ['24/7 Chatbots', 'Sentiment Analysis', 'Automated Responses', 'Human Handoff'],
         pricing: 'Starting at $299/month',
@@ -69,6 +72,7 @@ $4},
 $4},
       {
         title: 'AI Process Automation',
+      
         description: 'Automate complex business processes with intelligent decision-making capabilities',
         features: ['Workflow Automation', 'Exception Handling', 'Process Optimization', 'Compliance Monitoring'],
         pricing: 'Starting at $399/month',
@@ -79,6 +83,7 @@ $4}
     it: [
       {
         title: 'Cloud Migration',
+      
         description: 'Seamlessly migrate your infrastructure to the cloud with zero downtime',
         features: ['AWS/Azure/GCP Migration', 'Data Migration', 'Application Modernization', '24/7 Support'],
         pricing: 'Starting at $1,299/month',
@@ -87,6 +92,7 @@ $4}
 $4},
       {
         title: 'IT Infrastructure Management',
+      
         description: 'Comprehensive IT infrastructure management and optimization services',
         features: ['Server Management', 'Network Monitoring', 'Performance Optimization', 'Disaster Recovery'],
         pricing: 'Starting at $799/month',
@@ -95,6 +101,7 @@ $4},
 $4},
       {
         title: 'DevOps & CI/CD',
+      
         description: 'Streamline development workflows with automated testing and deployment',
         features: ['Automated Testing', 'Continuous Deployment', 'Infrastructure as Code', 'Monitoring & Alerting'],
         pricing: 'Starting at $599/month',
@@ -103,6 +110,7 @@ $4},
 $4},
       {
         title: 'Database Management',
+      
         description: 'Optimize and manage your databases with AI-powered performance tuning',
         features: ['Database Optimization', 'Performance Monitoring', 'Backup & Recovery', 'Security Hardening'],
         pricing: 'Starting at $399/month',
@@ -113,6 +121,7 @@ $4}
     security: [
       {
         title: 'Cybersecurity Suite',
+      
         description: 'Comprehensive security solutions with threat detection and response',
         features: ['Threat Detection', 'Vulnerability Assessment', 'Incident Response', 'Compliance Management'],
         pricing: 'Starting at $799/month',
@@ -121,6 +130,7 @@ $4}
 $4},
       {
         title: 'AI Security Monitoring',
+      
         description: 'Real-time security monitoring with AI-powered threat detection',
         features: ['Real-time Monitoring', 'AI Threat Detection', 'Automated Response', 'Security Analytics'],
         pricing: 'Starting at $299/month',
@@ -129,6 +139,7 @@ $4},
 $4},
       {
         title: 'Compliance Management',
+      
         description: 'Ensure regulatory compliance with automated compliance monitoring',
         features: ['GDPR Compliance', 'HIPAA Compliance', 'SOX Compliance', 'Audit Support'],
         pricing: 'Starting at $499/month',
@@ -137,6 +148,7 @@ $4},
 $4},
       {
         title: 'Security Training',
+      
         description: 'Comprehensive security awareness training for your organization',
         features: ['Phishing Simulation', 'Security Awareness', 'Incident Response Training', 'Compliance Training'],
         pricing: 'Starting at $199/month',
@@ -147,6 +159,7 @@ $4}
     automation: [
       {
         title: 'Business Process Automation',
+      
         description: 'Automate complex business processes with intelligent workflow management',
         features: ['Workflow Design', 'Process Optimization', 'Exception Handling', 'Performance Analytics'],
         pricing: 'Starting at $399/month',
@@ -155,6 +168,7 @@ $4}
 $4},
       {
         title: 'IT Automation',
+      
         description: 'Automate IT operations and reduce manual tasks with intelligent automation',
         features: ['Server Automation', 'Network Automation', 'Backup Automation', 'Monitoring Automation'],
         pricing: 'Starting at $299/month',
@@ -163,6 +177,7 @@ $4},
 $4},
       {
         title: 'Marketing Automation',
+      
         description: 'Automate marketing campaigns and customer engagement processes',
         features: ['Email Automation', 'Social Media Automation', 'Lead Nurturing', 'Campaign Management'],
         pricing: 'Starting at $199/month',
@@ -171,6 +186,7 @@ $4},
 $4},
       {
         title: 'Data Automation',
+      
         description: 'Automate data processing, analysis, and reporting workflows',
         features: ['Data Collection', 'Data Processing', 'Report Generation', 'Data Quality Management'],
         pricing: 'Starting at $249/month',
@@ -183,21 +199,25 @@ $4}
     {
       icon: Star,
       title: 'Proven Results',
+      
       description:     ,
 $4},
     {
       icon: Shield,
       title: 'Enterprise Security',
+      
       description:     ,
 $4},
     {
       icon: Globe,
       title: 'Global Support',
+      
       description:     ,
 $4},
     {
       icon: Users,
       title: 'Expert Team',
+      
       description:     ,
 $4}
   ];

@@ -6,20 +6,29 @@ import Footer from '../components/Footer';
 const testPagetsx: React.FC = () => {
   const _features = [],
   return (
-    {icon: Users,
-    title: 'Advanced Features',
+    {
+      icon: Users,
+      title: 'Advanced Features',
+      
       description: 'Cutting-edge solutions powered by artificial intelligence and machine learning',
-      benefits: ['Improved efficiency', 'Better results', 'Cost savings']
+      
+      benefits: ['Improved efficiency', 'Better results', 'Cost savings'],
     },
-    {icon: TrendingUp,
-    title: 'Performance Optimization',
+    {
+      icon: TrendingUp,
+      title: 'Performance Optimization',
+      
       description: 'Optimized performance and scalability for enterprise-grade applications',
-      benefits: ['Faster processing', 'Better scalability', 'Enhanced reliability']
+      
+      benefits: ['Faster processing', 'Better scalability', 'Enhanced reliability'],
     },
-    {icon: Shield,
-    title: 'Security & Compliance',
+    {
+      icon: Shield,
+      title: 'Security & Compliance',
+      
       description: 'Enterprise-grade security with full compliance and data protection',
-      benefits: ['Data protection', 'Compliance', 'Secure operations']
+      
+      benefits: ['Data protection', 'Compliance', 'Secure operations'],
     }
   ]
   return (<div className="min-h-screen bg-gray-900 text-white"></div>

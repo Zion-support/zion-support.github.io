@@ -14,28 +14,44 @@ const AIClimatePredictionEngine: React.FC = () => {
     {
       icon: Globe,
       title: 'Global Climate Modeling',
+      
+      
       description: 'Advanced AI models for global climate prediction with high-resolution forecasting',
-      benefits: ['95% accuracy in predictions', 'Global coverage', 'Real-time updates'];
+      
+      
+      benefits: ['95% accuracy in predictions', 'Global coverage', 'Real-time updates'],
     },
     {
       icon: BarChart,
       title: 'Extreme Weather Prediction',
+      
+      
       description: 'AI-powered prediction of extreme weather events and natural disasters',
-      benefits: ['Early warning systems', 'Disaster preparedness', 'Risk assessment']
+      
+      
+      benefits: ['Early warning systems', 'Disaster preparedness', 'Risk assessment'],
     },
     {
       icon: Brain,
       title: 'Machine Learning Algorithms',
+      
+      
       description: 'Advanced ML algorithms trained on decades of climate data for accurate predictions',
-      benefits: ['Continuous learning', 'Pattern recognition', 'Predictive accuracy']
+      
+      
+      benefits: ['Continuous learning', 'Pattern recognition', 'Predictive accuracy'],
     },
     {
       icon: Shield,
       title: 'Climate Risk Assessment',
+      
+      
       description: 'Comprehensive climate risk assessment for businesses and governments',
-      benefits: ['Risk mitigation', 'Adaptation strategies', 'Policy recommendations']
+      
+      
+      benefits: ['Risk mitigation', 'Adaptation strategies', 'Policy recommendations'],
     },
-  ];];];
+  ]]];
   const pricingPlans = [
     {
       name: 'Basic',
@@ -92,29 +108,37 @@ const AIClimatePredictionEngine: React.FC = () => {
   const useCases = [
     {
       title: 'Agricultural Planning',
+      
+      
       description: 'Climate predictions for crop planning and agricultural optimization',
       icon: Globe,
       results: '25% increase in crop yields'
     },
     {
       title: 'Disaster Preparedness',
+      
+      
       description: 'Early warning systems for natural disasters and extreme weather events',
       icon: Shield,
       results: '60% reduction in disaster impact'
     },
     {
       title: 'Energy Management',
+      
+      
       description: 'Climate predictions for renewable energy planning and grid management',
       icon: Zap,
       results: '30% improvement in energy efficiency'
     },
     {
       title: 'Urban Planning',
+      
+      
       description: 'Climate data for sustainable urban development and infrastructure planning',
       icon: Target,
       results: 'Enhanced urban resilience'
     }
-  ];];];
+  ]]];
   return (
     <>
       <Helmet>

@@ -14,28 +14,44 @@ const AICyberDefenseMatrix: React.FC = () => {
     {
       icon: Shield,
       title: 'AI Threat Detection',
+      
+      
       description: 'Advanced AI algorithms for real-time threat detection and automated response',
-      benefits: ['99.9% threat detection rate', 'Real-time monitoring', 'Automated response'];
+      
+      
+      benefits: ['99.9% threat detection rate', 'Real-time monitoring', 'Automated response'],
     },
     {
       icon: Zap,
       title: 'Zero-Trust Architecture',
+      
+      
       description: 'Comprehensive zero-trust security framework with continuous verification',
-      benefits: ['Continuous verification', 'Identity-based access', 'Micro-segmentation']
+      
+      
+      benefits: ['Continuous verification', 'Identity-based access', 'Micro-segmentation'],
     },
     {
       icon: Eye,
       title: 'Behavioral Analytics',
+      
+      
       description: 'AI-powered behavioral analysis to detect anomalous activities and insider threats',
-      benefits: ['Anomaly detection', 'Insider threat prevention', 'User behavior analysis']
+      
+      
+      benefits: ['Anomaly detection', 'Insider threat prevention', 'User behavior analysis'],
     },
     {
       icon: Target,
       title: 'Automated Incident Response',
+      
+      
       description: 'Intelligent incident response with automated containment and remediation',
-      benefits: ['Automated containment', 'Rapid response', 'Minimal downtime']
+      
+      
+      benefits: ['Automated containment', 'Rapid response', 'Minimal downtime'],
     },
-  ];];];
+  ]]];
   const pricingPlans = [
     {
       name: 'Essential',
@@ -92,29 +108,37 @@ const AICyberDefenseMatrix: React.FC = () => {
   const useCases = [
     {
       title: 'Financial Services',
+      
+      
       description: 'Advanced cyber defense for banks and financial institutions',
       icon: DollarSign,
       results: '99.9% security uptime'
     },
     {
       title: 'Healthcare Protection',
+      
+      
       description: 'HIPAA-compliant cyber defense for healthcare organizations',
       icon: Shield,
       results: 'Zero data breaches'
     },
     {
       title: 'Government Security',
+      
+      
       description: 'National-level cyber defense for government agencies',
       icon: Globe,
       results: 'Enhanced national security'
     },
     {
       title: 'Critical Infrastructure',
+      
+      
       description: 'Industrial cyber defense for power grids and utilities',
       icon: Zap,
       results: '100% infrastructure protection'
     }
-  ];];];
+  ]]];
   return (
     <>
       <Helmet>

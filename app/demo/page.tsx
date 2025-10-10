@@ -54,6 +54,7 @@ const DemoPage: React.FC = () => {
     {
       id: 'ai-chatbot',
       title: 'AI Chatbot Demo',
+      
       description: 'Experience our advanced AI chatbot with natural language processing and sentiment analysis',
       icon: Brain,
       features: ['Natural conversations', 'Multi-language support', 'Sentiment analysis', 'CRM integration'],
@@ -63,21 +64,18 @@ const DemoPage: React.FC = () => {
     {
       id: 'ai-analytics',
       title: 'AI Analytics Dashboard',
-<<<<<<< HEAD
-      description: 'See how our AI analytics can transform your business intelligence',
-      duration: '5 min',
-      features: ['Real-time data visualization', 'Predictive analytics', 'Custom reports'];
-=======
-      description: 'See how our AI-powered analytics can transform your data into actionable insights',
+      
+description: 'See how our AI-powered analytics can transform your data into actionable insights',
       icon: BarChart,
       features: ['Real-time dashboards', 'Predictive analytics', 'Custom visualizations', 'Automated reporting'],
       duration: '20 minutes',
       category: 'AI Services'
->>>>>>> cursor/website-audit-and-update-with-deployment-26c5
+
     },
     {
       id: 'cloud-infrastructure',
       title: 'Cloud Infrastructure',
+      
       description: 'Explore our cloud solutions including AWS, Azure, and GCP with migration services',
       icon: Cloud,
       features: ['Multi-cloud strategy', 'Cost optimization', 'Security compliance', 'Auto-scaling'],
@@ -87,6 +85,7 @@ const DemoPage: React.FC = () => {
     {
       id: 'ai-automation',
       title: 'AI Workflow Automation',
+      
       description: 'Discover how AI can automate and optimize your business processes',
       icon: Zap,
       features: ['Process mining', 'Workflow optimization', 'Task automation', 'Exception handling'],
@@ -96,6 +95,7 @@ const DemoPage: React.FC = () => {
     {
       id: 'cybersecurity',
       title: 'Cybersecurity Solutions',
+      
       description: 'Learn about our comprehensive security services and threat detection',
       icon: Shield,
       features: ['Threat detection', 'Vulnerability assessment', 'Compliance management', '24/7 monitoring'],
@@ -105,15 +105,13 @@ const DemoPage: React.FC = () => {
     {
       id: 'micro-saas',
       title: 'Micro SaaS Tools',
+      
       description: 'Try our ready-to-use business tools with AI and automation capabilities',
       icon: Users,
       features: ['Ready-to-use tools', 'AI integration', 'Custom workflows', 'Scalable solutions'],
       duration: '30 minutes',
       category: 'Micro SaaS'
     }
-<<<<<<< HEAD
-  ];];
-=======
   ];
 
   const benefits = [
@@ -124,7 +122,7 @@ const DemoPage: React.FC = () => {
     'See ROI calculations for your business'
   ];
 
->>>>>>> cursor/website-audit-and-update-with-deployment-26c5
+
   return (
     <>
       <Helmet>

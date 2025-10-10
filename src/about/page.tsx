@@ -21,7 +21,8 @@ const AboutPage: React.FC = () => {
       name: 'Michael Chen',
       role: 'Lead AI Engineer',
       image: '/images/team/michael.jpg',
-      bio: 'AI researcher and developer with expertise in deep learning and NLP.'}];
+      bio: 'AI researcher and developer with expertise in deep learning and NLP.'}
+  ];
   const stats = [
     { number: '500+', label: 'Projects Completed' },
     { number: '50+', label: 'Happy Clients' },
@@ -32,19 +33,24 @@ const AboutPage: React.FC = () => {
     {
       icon: Brain,
       title: 'Innovation',
+      
       description: 'We constantly push the boundaries of what\'s possible with AI and technology.'},
     {
       icon: Shield,
       title: 'Security',
+      
       description: 'Your data and systems are protected with enterprise-grade security measures.'},
     {
       icon: Target,
       title: 'Results',
+      
       description: 'We focus on delivering measurable business outcomes and ROI.'},
     {
       icon: Users,
       title: 'Partnership',
-      description: 'We work closely with our clients as strategic technology partners.'}];
+      
+      description: 'We work closely with our clients as strategic technology partners.'}
+  ];
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="container mx-auto px-4 py-16">
@@ -89,21 +95,25 @@ export default function AboutPage() {
     {
       icon: Brain,
       title: 'Innovation First',
+      
       description: 'We push the boundaries of what\'s possible with AI and technology, constantly exploring new frontiers.'
     },
     {
       icon: Shield,
       title: 'Security & Trust',
+      
       description: 'Enterprise-grade security and compliance are at the core of everything we build.'
     },
     {
       icon: Users,
       title: 'Client Success',
+      
       description: 'Your success is our success. We measure our achievements by your business outcomes.'
     },
     {
       icon: Globe,
       title: 'Global Impact',
+      
       description: 'We believe technology should make the world better, more efficient, and more connected.'
     }
   ];
@@ -117,36 +127,43 @@ export default function AboutPage() {
     {
       year: '2018',
       title: 'Company Founded',
+      
       description: 'Zion Tech Group was established with a vision to democratize AI for enterprises.'
     },
     {
       year: '2019',
       title: 'First AI Platform',
+      
       description: 'Launched our flagship AI automation platform, serving 50+ clients.'
     },
     {
       year: '2020',
       title: 'Quantum Computing Division',
+      
       description: 'Established quantum computing research and development capabilities.'
     },
     {
       year: '2021',
       title: 'Global Expansion',
+      
       description: 'Expanded operations to serve clients across North America, Europe, and Asia.'
     },
     {
       year: '2022',
       title: 'AI Ethics Initiative',
+      
       description: 'Launched comprehensive AI ethics framework and responsible AI practices.'
     },
     {
       year: '2023',
       title: 'Breakthrough Technologies',
+      
       description: 'Introduced cutting-edge solutions in autonomous systems and edge computing.'
     },
     {
       year: '2024',
       title: 'Industry Recognition',
+      
       description: 'Awarded "AI Innovation Leader" by TechCrunch and "Best AI Solutions Provider" by Gartner.'
     }
   ];

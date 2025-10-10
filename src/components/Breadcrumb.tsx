@@ -12,7 +12,7 @@ const Breadcrumb: React.FC = () => {
     const pathSegments = location.pathname.split('/').filter(Boolean);
     const breadcrumbs: BreadcrumbItem[] = [,
       { name: 'Home', href: '/' }
-    ];
+  ];
     let currentPath = '';
     pathSegments.forEach((segment, index) => {
       currentPath += `/${segment}`;

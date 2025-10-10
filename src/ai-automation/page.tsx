@@ -10,26 +10,34 @@ const AIAutomationPage: React.FC = () => {
     {
       icon: Settings,
       title: 'Process Automation',
+      
       description: 'Intelligent automation of complex business processes with decision-making capabilities',
-      benefits: ['80% process efficiency', 'Zero human error', '24/7 operation']
+      
+      benefits: ['80% process efficiency', 'Zero human error', '24/7 operation'],
     },
     {
       icon: Zap,
       title: 'Workflow Optimization',
+      
       description: 'AI-powered workflow analysis and optimization for maximum productivity',
-      benefits: ['60% time savings', 'Smart routing', 'Dynamic optimization']
+      
+      benefits: ['60% time savings', 'Smart routing', 'Dynamic optimization'],
     },
     {
       icon: Shield,
       title: 'Decision Trees',
+      
       description: 'Advanced decision-making algorithms for complex business scenarios',
-      benefits: ['Consistent decisions', 'Risk mitigation', 'Compliance assurance']
+      
+      benefits: ['Consistent decisions', 'Risk mitigation', 'Compliance assurance'],
     },
     {
       icon: Clock,
       title: 'Exception Handling',
+      
       description: 'Intelligent handling of exceptions and edge cases in automated processes',
-      benefits: ['Smart escalation', 'Context awareness', 'Learning capabilities']
+      
+      benefits: ['Smart escalation', 'Context awareness', 'Learning capabilities'],
     }
   ];
   const pricingPlans = [

@@ -374,7 +374,7 @@ $4});
       { name: 'msapplication-TileColor', content: '#4f46e5' },
       { name: 'msapplication-config', content: '/browserconfig.xml' },
       { name: 'theme-color', content: '#4f46e5' }
-    ];
+  ];
     metaTags.forEach(tag => {
     const meta = document.createElement('meta');
       meta.setAttribute('name', tag.name);

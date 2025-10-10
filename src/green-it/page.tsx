@@ -27,6 +27,7 @@ $4}
   ];
   const greenSolutions = [
       title: 'Energy-Efficient Data Centers',
+      
       description: 'Design and implement energy-efficient data centers with renewable energy integration',
       icon: Zap,
       features: [
@@ -38,6 +39,7 @@ $4}
       impact: 'Reduce energy consumption by up to 40%',
       pricing:       ,
 titletitle: 'Cloud Carbon Footprint Reduction',
+      
       description: 'Optimize cloud infrastructure to minimize carbon emissions and environmental impact',
       icon: Cloud,
         'Carbon footprint monitoring',
@@ -47,6 +49,7 @@ titletitle: 'Cloud Carbon Footprint Reduction',
       impact: 'Reduce carbon footprint by up to 60%',
       pricing:       ,
 titletitle: 'Sustainable IT Asset Management',
+      
       description: 'Implement circular economy principles for IT equipment lifecycle management',
       icon: Recycle,
         'Equipment refurbishment',
@@ -56,6 +59,7 @@ titletitle: 'Sustainable IT Asset Management',
       impact: 'Extend equipment lifecycle by 50%',
       pricing:       ,
 titletitle: 'Green Software Development',
+      
       description: 'Develop energy-efficient software applications and optimize existing systems',
       icon: Code,
       color: 'text-purple-400',
@@ -66,6 +70,7 @@ titletitle: 'Green Software Development',
       impact: 'Reduce software energy consumption by 30%',
       pricing:       ,
 titletitle: 'Remote Work Infrastructure',
+      
       description: 'Enable sustainable remote work with optimized digital infrastructure',
       icon: Users,
       color: 'text-cyan-400',
@@ -76,6 +81,7 @@ titletitle: 'Remote Work Infrastructure',
       impact: 'Reduce commuting emissions by 80%',
       pricing:       ,
 titletitle: 'Environmental Monitoring',
+      
       description: 'Real-time monitoring and reporting of environmental impact metrics',
       icon: Globe,
       color: 'text-emerald-400',
@@ -88,6 +94,7 @@ titletitle: 'Environmental Monitoring',
   const benefits = [
       icon: TrendingUp,
       title: 'Cost Savings',
+      
       description: 'Reduce operational costs through energy efficiency and resource optimization',
       details: [
         'Up to 40% reduction in energy costs',
@@ -96,18 +103,21 @@ titletitle: 'Environmental Monitoring',
         'Reduced waste management costs'
       ]
       title: 'Environmental Impact',
+      
       description: 'Significantly reduce your organization\'s carbon footprint and environmental impact',
         '60% reduction in carbon emissions',
         '50% less electronic waste',
         '100% renewable energy options',
         'Carbon neutral operations'
       title: 'Compliance & Certification',
+      
       description: 'Meet environmental regulations and achieve sustainability certifications',
         'ISO 14001 environmental management',
         'LEED certification support',
         'Carbon Trust certification',
         'ESG reporting compliance'
       title: 'Brand Reputation',
+      
       description: 'Enhance your brand image and attract environmentally conscious customers',
         'Improved brand perception',
         'Customer loyalty increase',

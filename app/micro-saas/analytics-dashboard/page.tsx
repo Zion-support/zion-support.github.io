@@ -6,35 +6,41 @@ const AIAnalyticsDashboardPage: React.FC = () => {
     {
       icon: BarChart,
       title: 'Real-time Analytics',
+      
       description: 'Live data visualization with instant updates and interactive charts.'
   },
     {
-    icon: TrendingUp,
+      icon: TrendingUp,
       title: 'Predictive Insights',
+      
       description: 'AI-powered forecasting and trend analysis for better decision making.'
   },
     {
-    icon: Users,
+      icon: Users,
       title: 'User Behavior Tracking',
+      
       description: 'Comprehensive user analytics and engagement metrics tracking.'
   },
     {
-    icon: DollarSign,
+      icon: DollarSign,
       title: 'Revenue Analytics',
+      
       description: 'Detailed financial metrics and revenue optimization insights.'
   },
     {
-    icon: Zap,
+      icon: Zap,
       title: 'Custom Dashboards',
+      
       description: 'Build personalized dashboards tailored to your business needs.'
   },
     {
-    icon: Target,
+      icon: Target,
       title: 'Goal Tracking',
+      
       description: 'Monitor KPIs and business objectives with automated alerts.'
   }
     }
-  ];];];
+  ]]];
 const benefits = [
     'Real-time data visualization and reporting',
     'AI-powered predictive analytics',
@@ -45,14 +51,13 @@ const benefits = [
 
     'Multi-platform data integration',
 
-    'Mobile-responsive design';
-  ];
+    'Mobile-responsive design'];
 const metrics = [
     { label: 'Data Sources', value: '50+', icon: BarChart },
     { label: 'Update Frequency', value: 'Real-time', icon: Clock },
     { label: 'Accuracy Rate', value: '99.9%', icon: Shield },
     { label: 'User Satisfaction', value: '4.9/5', icon: Star }
-  ];];];
+  ]]];
 return (
     <>
       <Helmet>

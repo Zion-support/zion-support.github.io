@@ -34,25 +34,29 @@ const CloudInfrastructureManagerPage: React.FC = () => {
     {
       icon: Cloud,
       title: 'Multi-Cloud Management',
+      
       description: 'Manage and monitor your infrastructure across AWS, Azure, Google Cloud, and other platforms from a single dashboard.'
   },
     {
-    icon: Settings,
+      icon: Settings,
       title: 'Automated Scaling',
+      
       description: 'Intelligent auto-scaling based on demand to optimize costs and performance automatically.'
   },
     {
-    icon: BarChart,
+      icon: BarChart,
       title: 'Cost Optimization',
+      
       description: 'Advanced analytics and recommendations to reduce cloud costs while maintaining performance.'
   },
     {
-    icon: Zap,
+      icon: Zap,
       title: 'DevOps Integration',
+      
       description: 'Seamless integration with CI/CD pipelines and DevOps tools for streamlined operations.'
   }
     }
-  ];];];
+  ]]];
 const benefits = [
     'Centralized cloud infrastructure management',
     'Automated scaling and optimization',
@@ -65,8 +69,7 @@ const benefits = [
 
     'Multi-cloud support',
 
-    'Expert technical support';
-  ];
+    'Expert technical support'];
 return (
     <>
       <Helmet>

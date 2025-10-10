@@ -7,27 +7,33 @@ const TaskManagerProPage: React.FC = () => {
     {
       icon: CheckSquare,
       title: 'AI Task Prioritization',
+      
       description: 'Intelligent task prioritization that analyzes deadlines, dependencies, and importance to optimize your workflow.',
       benefit:     ,
 $4},
       icon: Users,
       title: 'Team Collaboration',
+      
       description: 'Seamless team collaboration with real-time updates, shared workspaces, and intelligent task assignment.',
       benefit:       ,
 iconicon: Brain,
       title: 'Smart Scheduling',
+      
       description: 'AI-powered scheduling that considers your work patterns, energy levels, and optimal focus times.',
       benefit:       ,
 iconicon: Zap,
       title: 'Automated Workflows',
+      
       description: 'Create custom automation rules that trigger actions based on task completion, deadlines, and team updates.',
       benefit:       ,
 iconicon: Target,
       title: 'Goal Tracking',
+      
       description: 'Set and track SMART goals with AI insights on progress, roadblocks, and optimization opportunities.',
       benefit:       ,
 iconicon: BarChart,
       title: 'Performance Analytics',
+      
       description: 'Comprehensive analytics on productivity patterns, team performance, and project success metrics.',
       benefit:     ,
 $4}
@@ -226,6 +232,7 @@ const TaskManagerProPage: React.FC = () => {
     },
       icon: Users,
       title: 'Team Collaboration',
+      
       description: 'Seamless team collaboration with real-time updates, shared workspaces, and intelligent task assignment.',
       benefit: 'Improve team efficiency by 60%',
 import Navigation from '../components/Navigation';

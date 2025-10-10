@@ -20,7 +20,7 @@ const CareersPage: React.FC = () => {
         'Experience with cloud platforms (AWS, Azure, GCP)',
         'Strong problem-solving and communication skills'
       ],
-      benefits: ['Competitive salary', 'Stock options', 'Health insurance', 'Flexible work hours', 'Professional development budget']
+      benefits: ['Competitive salary', 'Stock options', 'Health insurance', 'Flexible work hours', 'Professional development budget'],
     },
     {
       id: 'full-stack-developer',
@@ -37,7 +37,7 @@ const CareersPage: React.FC = () => {
         'Knowledge of cloud services and DevOps practices',
         'Strong attention to detail and code quality'
       ],
-      benefits: ['Competitive salary', 'Health insurance', '401k matching', 'Remote work options', 'Learning budget']
+      benefits: ['Competitive salary', 'Health insurance', '401k matching', 'Remote work options', 'Learning budget'],
     },
     {
       id: 'data-scientist',
@@ -54,7 +54,7 @@ const CareersPage: React.FC = () => {
         'Experience with big data tools (Spark, Hadoop)',
         'Strong analytical and communication skills'
       ],
-      benefits: ['Competitive salary', 'Stock options', 'Health insurance', 'Flexible schedule', 'Research opportunities']
+      benefits: ['Competitive salary', 'Stock options', 'Health insurance', 'Flexible schedule', 'Research opportunities'],
     },
     {
       id: 'cybersecurity-specialist',
@@ -71,7 +71,7 @@ const CareersPage: React.FC = () => {
         'Experience with SIEM, EDR, and security frameworks',
         'Knowledge of compliance standards (SOC 2, ISO 27001)'
       ],
-      benefits: ['Competitive salary', 'Health insurance', 'Security training budget', 'Certification support', 'Flexible work']
+      benefits: ['Competitive salary', 'Health insurance', 'Security training budget', 'Certification support', 'Flexible work'],
     },
     {
       id: 'product-manager',
@@ -88,7 +88,7 @@ const CareersPage: React.FC = () => {
         'Strong analytical and strategic thinking skills',
         'Excellent communication and leadership abilities'
       ],
-      benefits: ['Competitive salary', 'Stock options', 'Health insurance', 'Product conference budget', 'Leadership development']
+      benefits: ['Competitive salary', 'Stock options', 'Health insurance', 'Product conference budget', 'Leadership development'],
     },
     {
       id: 'sales-engineer',
@@ -105,28 +105,32 @@ const CareersPage: React.FC = () => {
         'Excellent presentation and communication skills',
         'Ability to travel to client sites (25% travel)'
       ],
-      benefits: ['Competitive salary + commission', 'Health insurance', 'Travel budget', 'Sales training', 'Performance bonuses']
+      benefits: ['Competitive salary + commission', 'Health insurance', 'Travel budget', 'Sales training', 'Performance bonuses'],
     }
   ];
   const benefits = [
     {
       icon: Heart,
       title: 'Health & Wellness',
+      
       description: 'Comprehensive health insurance, dental, vision, and mental health support'
     },
     {
       icon: Zap,
       title: 'Learning & Growth',
+      
       description: 'Professional development budget, conference attendance, and skill development programs'
     },
     {
       icon: Shield,
       title: 'Work-Life Balance',
+      
       description: 'Flexible work hours, remote work options, and unlimited PTO'
     },
     {
       icon: Star,
       title: 'Recognition',
+      
       description: 'Performance bonuses, stock options, and recognition programs'
     }
   ];

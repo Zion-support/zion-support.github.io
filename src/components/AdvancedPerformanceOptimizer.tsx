@@ -80,7 +80,7 @@ const,
   s://www.googletagmanager.com' },
       {/* TODO: Fix JSX expression */}
   s://www.google-analytics.com' }
-    ];
+  ];
     hints.forEach((hint) => {/* TODO: Fix JSX expression */}
       }
       document.head.appendChild(link);

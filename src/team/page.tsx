@@ -69,21 +69,25 @@ const TeamPage: React.FC = () => {
   const values = [
     {
       title: 'Innovation',
+      
       description: 'We constantly push the boundaries of what\'s possible with AI and technology.',
       icon: Brain
     },
     {
       title: 'Excellence',
+      
       description: 'We strive for the highest quality in everything we do, from code to customer service.',
       icon: Award
     },
     {
       title: 'Collaboration',
+      
       description: 'We believe in the power of teamwork and diverse perspectives to solve complex problems.',
       icon: Users
     },
     {
       title: 'Security',
+      
       description: 'We prioritize the security and privacy of our clients\' data and systems.',
       icon: Shield
     }

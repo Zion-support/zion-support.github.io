@@ -11,7 +11,7 @@ const CommunityPage: React.FC = () => {
     { icon: MessageCircle, value: '50+', label: 'Discussions Daily' },
     { icon: Calendar, value: '12', label: 'Events Monthly' },
     { icon: Star, value: '4.9', label: 'Average Rating' }
-  ];];];
+  ]]];
   const events = [
     {
       title: 'AI Development Workshop',
@@ -63,26 +63,30 @@ const CommunityPage: React.FC = () => {
       posts: 2100,
       members: 3000
     }
-  ];];];
+  ]]];
   const benefits = [
     {
       icon: Users,
       title: 'Network with Peers',
+      
       description: 'Connect with like-minded developers and entrepreneurs'
     },
     {
       icon: MessageCircle,
       title: 'Expert Support',
+      
       description: 'Get help from our team of experts and community members'
     },
     {
       icon: Calendar,
       title: 'Exclusive Events',
+      
       description: 'Access to workshops, webinars, and networking events'
     },
     {
       icon: Award,
       title: 'Recognition',
+      
       description: 'Showcase your projects and get community recognition'
     }
   ];

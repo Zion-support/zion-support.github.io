@@ -9,6 +9,7 @@ export default function AboutSection() {
   const values = [
     {
       title: 'Innovation First',
+      
       description: 'We stay at the forefront of technology, constantly exploring new AI and IT solutions.',
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -18,6 +19,7 @@ export default function AboutSection() {
     },
     {
       title: 'Client Success',
+      
       description: 'Your success is our mission. We build long-term partnerships based on trust and results.',
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -27,6 +29,7 @@ export default function AboutSection() {
     },
     {
       title: 'Quality Excellence',
+      
       description: 'We deliver exceptional quality in every project, ensuring robust and scalable solutions.',
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -8,6 +8,7 @@ const DeveloperToolsPage: React.FC = () => {
   const _devTools = [
     {
       title: 'AI Code Generator',
+      
       description: 'Generate high-quality code using advanced AI models',
       icon: Code,
       features: ['Multi-language Support', 'Code Completion', 'Bug Detection', 'Documentation Generation'],
@@ -16,6 +17,7 @@ const DeveloperToolsPage: React.FC = () => {
 $4},
     {
       title: 'API Testing Suite',
+      
       description: 'Comprehensive API testing and monitoring tools',
       icon: Zap,
       features: ['Automated Testing', 'Performance Monitoring', 'Load Testing', 'API Documentation'],
@@ -24,6 +26,7 @@ $4},
 $4},
     {
       title: 'Database Management Tool',
+      
       description: 'Advanced database administration and optimization',
       icon: BarChart,
       features: ['Query Optimization', 'Performance Monitoring', 'Backup Management', 'Schema Design'],
@@ -32,6 +35,7 @@ $4},
 $4},
     {
       title: 'DevOps Automation',
+      
       description: 'Streamline development and deployment processes',
       icon: Target,
       features: ['CI/CD Pipelines', 'Container Management', 'Monitoring', 'Deployment Automation'],
@@ -40,6 +44,7 @@ $4},
 $4},
     {
       title: 'Code Review Assistant',
+      
       description: 'AI-powered code review and quality assurance',
       icon: Users,
       features: ['Automated Reviews', 'Security Scanning', 'Code Standards', 'Team Collaboration'],
@@ -48,6 +53,7 @@ $4},
 $4},
     {
       title: 'Performance Profiler',
+      
       description: 'Advanced application performance monitoring and optimization',
       icon: TrendingUp,
       features: ['Real-time Monitoring', 'Performance Analysis', 'Bottleneck Detection', 'Optimization Suggestions'],

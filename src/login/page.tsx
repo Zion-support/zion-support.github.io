@@ -33,16 +33,19 @@ const LoginPage: React.FC = () => {
     {
       icon: Shield,
       title: 'Secure Access',
+      
       description:     ,
 $4},
     {
       icon: CheckCircle,
       title: '24/7 Support',
+      
       description:     ,
 $4},
     {
       icon: Phone,
       title: 'Mobile Ready',
+      
       description:     ,
 $4}
   ];

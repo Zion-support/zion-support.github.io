@@ -619,7 +619,8 @@ class PerformanceOptimizer {
       {/* TODO: Fix JSX expression */}
   n: 'anonymous' },
       {/* TODO: Fix JSX expression */}
-  s: 'style' }];
+  s: 'style' }
+  ];
     criticalResources.forEach(resource => {/* TODO: Fix JSX expression */}
   O: Add content,}
 })

@@ -34,25 +34,29 @@ const PenetrationTestingPage: React.FC = () => {
     {
       icon: Search,
       title: 'Comprehensive Vulnerability Assessment',
+      
       description: 'Thorough testing of your systems to identify security weaknesses and potential attack vectors.'
   },
     {
-    icon: Target,
+      icon: Target,
       title: 'Simulated Attack Scenarios',
+      
       description: 'Real-world attack simulations to test your defenses and response capabilities.'
   },
     {
-    icon: BarChart,
+      icon: BarChart,
       title: 'Detailed Security Reports',
+      
       description: 'Comprehensive reports with prioritized recommendations and remediation guidance.'
   },
     {
-    icon: Zap,
+      icon: Zap,
       title: 'Expert Security Analysis',
+      
       description: 'Professional security experts conduct thorough testing using industry-standard methodologies.'
   }
     }
-  ];];];
+  ]]];
 const benefits = [
     'Identify security vulnerabilities before attackers do',
     'Comply with industry regulations and standards',
@@ -65,8 +69,7 @@ const benefits = [
 
     'Expert analysis and reporting',
 
-    'Ongoing security improvement guidance';
-  ];
+    'Ongoing security improvement guidance'];
 return (
     <>
       <Helmet>

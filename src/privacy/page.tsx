@@ -32,31 +32,37 @@ export default function PrivacyPage() {
   const rights = [
     {
       title: 'Right to Access',
+      
       description: 'Request a copy of your personal data',
       icon: Eye
     },
     {
       title: 'Right to Rectification',
+      
       description: 'Correct inaccurate or incomplete data',
       icon: FileText
     },
     {
       title: 'Right to Erasure',
+      
       description: 'Request deletion of your personal data',
       icon: Database
     },
     {
       title: 'Right to Portability',
+      
       description: 'Receive your data in a structured format',
       icon: ArrowRight
     },
     {
       title: 'Right to Object',
+      
       description: 'Object to processing of your data',
       icon: AlertTriangle
     },
     {
       title: 'Right to Restrict',
+      
       description: 'Limit how we process your data',
       icon: Lock
     }

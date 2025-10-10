@@ -480,7 +480,7 @@ const itServices = [;
       caseStudy: 'Healthcare provider achieved 100% HIPAA compliance and passed all audits'
   }
     }
-  ];];];
+  ]]];
 const categories = [
     { id: 'all', name: 'All IT Services', icon: Grid3X3 },
     { id: 'infrastructure', name: 'Infrastructure', icon: Server },

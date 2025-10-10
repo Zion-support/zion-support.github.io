@@ -8,34 +8,45 @@ const AIContentWriterPage: React.FC = () => {
   const features = [
     {
       title: 'AI-Powered Writing',
+      
+      
       description: 'Generate high-quality content using advanced AI algorithms that understand context, tone, and audience.',
-      benefits: ['Context-aware writing', 'Multiple tones', 'Audience targeting', 'Quality optimization'];
+      
+      
+      benefits: ['Context-aware writing', 'Multiple tones', 'Audience targeting', 'Quality optimization'],
     },
     {
       title: 'Content Optimization',
+      
+      
       description: 'Automatically optimize content for SEO, readability, and engagement with intelligent suggestions.',
-      benefits: ['SEO optimization', 'Readability scoring', 'Engagement metrics', 'A/B testing']
+      
+      
+      benefits: ['SEO optimization', 'Readability scoring', 'Engagement metrics', 'A/B testing'],
     },
     {
       title: 'Multi-Format Support',
+      
+      
       description: 'Create content in various formats including blogs, social media, emails, and marketing copy.',
-      benefits: ['Blog posts', 'Social media', 'Email campaigns', 'Marketing copy']
+      
+      
+      benefits: ['Blog posts', 'Social media', 'Email campaigns', 'Marketing copy'],
     },
-  ];];];
+  ]]];
   const benefits = [
     '10x faster content creation',
     'Improved SEO performance',
     'Consistent brand voice',
     'Multi-language support',
     'Content analytics',
-    'Team collaboration';
-  ];
+    'Team collaboration'];
   const stats = [
     { icon: <PenTool className="w-8 h-8 text-blue-500" />, value: '10K+', label: 'Articles Created' },
     { icon: <Zap className="w-8 h-8 text-green-500" />, value: '90%', label: 'Time Saved' },
     { icon: <Users className="w-8 h-8 text-purple-500" />, value: '500+', label: 'Happy Users' },
     { icon: <BarChart3 className="w-8 h-8 text-orange-500" />, value: '300%', label: 'Engagement Boost' }
-  ];];];
+  ]]];
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <Helmet>

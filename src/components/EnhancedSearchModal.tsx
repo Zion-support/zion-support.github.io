@@ -18,6 +18,7 @@ const mockSearchResults: SearchResult[] = [
   {
     id: '1',
     title: 'AI Analytics Dashboard',
+      
     description: 'AI-powered business intelligence and analytics platform with real-time insights and predictive modeling.',
     url: '/ai-analytics-dashboard',
     category: 'Micro SAAS',
@@ -28,6 +29,7 @@ const mockSearchResults: SearchResult[] = [
   {
     id: '2',
     title: 'AI Workflow Automation',
+      
     description: 'Visual workflow builder with AI-powered process optimization and automation capabilities.',
     url: '/ai-workflow-automation',
     category: 'AI Services',
@@ -38,6 +40,7 @@ const mockSearchResults: SearchResult[] = [
   {
     id: '3',
     title: 'About Us',
+      
     description: 'Learn about Zion Tech Group, our mission, team, and commitment to AI innovation.',
     url: '/about',
     category: 'Company',
@@ -48,6 +51,7 @@ const mockSearchResults: SearchResult[] = [
   {
     id: '4',
     title: 'AI Customer Support',
+      
     description: 'Intelligent customer support solutions with natural language processing and automated responses.',
     url: '/ai-customer-support',
     category: 'AI Services',
@@ -58,6 +62,7 @@ const mockSearchResults: SearchResult[] = [
   {
     id: '5',
     title: 'API Documentation',
+      
     description: 'Comprehensive API documentation for integrating with our AI services and platforms.',
     url: '/api-docs',
     category: 'Documentation',
@@ -65,7 +70,7 @@ const mockSearchResults: SearchResult[] = [
     popularity: 80,
     lastModified: '2024-01-05'
   }
-];
+  ];
 const recentSearches = [
   'AI Analytics',
   'Workflow Automation',

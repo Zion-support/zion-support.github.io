@@ -10,7 +10,8 @@ export const isValidUrl = (url: string): boolean => {
   if (!url || typeof url !== 'string') return false;
   try {
     const urlObj = new URL(url);
-    return urlObj.protocol === 'http:' || urlObj.protocol === 'https:';
+    return urlObj.protocol === 'http: 'https',
+      $3:';
   } catch {
     return false;
   }

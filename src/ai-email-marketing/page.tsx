@@ -8,22 +8,28 @@ const AIEmailMarketingPage: React.FC = () => {
     {
       icon: Mail,
       title: 'AI Content Generation',
+      
       description:     ,
 $4},
       icon: Target,
       title: 'Smart Segmentation',
+      
       description:       ,
 icon$5: Send,
       title: 'Optimal Send Times',
+      
       description:       ,
 icon$5: BarChart,
       title: 'Predictive Analytics',
+      
       description:       ,
 icon$5: Users,
       title: 'Behavioral Triggers',
+      
       description:       ,
 icon$5: TrendingUp,
       title: 'A/B Testing',
+      
       description:     ,
 $4}
   ];
