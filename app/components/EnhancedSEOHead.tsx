@@ -1,6 +1,7 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
 import { useLocation } from 'react-router-dom';
 
 interface SEOHeadProps {
@@ -133,50 +134,61 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta name="keywords" content={keywords} />
 <<<<<<< HEAD
       <meta name="author" content="Zion Tech Group" />
+=======
+
+const SEOHead: React.FC = () => {
+  return (
+    <Helmet>
+      {/* Primary Meta Tags */}
+      <title>Zion Tech Group - AI & IT Solutions</title>
+      <meta name="title" content="Zion Tech Group - AI & IT Solutions" />
+      <meta name="description" content="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Achieve 300% ROI with our cutting-edge AI technology." />
+      <meta name="keywords" content="AI solutions, artificial intelligence, quantum computing, autonomous systems, digital transformation, enterprise AI, machine learning, automation, cloud services, IT consulting, AI marketing, AI automation, AI healthcare, AI fintech, micro SaaS" />
+>>>>>>> cursor/analyze-improve-and-deploy-application-6516
       <meta name="robots" content="index, follow" />
-      <meta name="googlebot" content="index, follow" />
-      <meta name="bingbot" content="index, follow" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="language" content="English" />
+      <meta name="author" content="Zion Tech Group" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
       
-      {/* Canonical URL */}
-      <link rel="canonical" href={currentUrl} />
-
       {/* Open Graph / Facebook */}
-      <meta property="og:type" content={type} />
-      <meta property="og:url" content={currentUrl} />
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={fullImageUrl} />
-      <meta property="og:site_name" content={siteName} />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://ziontechgroup.com" />
+      <meta property="og:title" content="Zion Tech Group - AI & IT Solutions" />
+      <meta property="og:description" content="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Achieve 300% ROI with our cutting-edge AI technology." />
+      <meta property="og:image" content="https://ziontechgroup.com/images/og-image.jpg" />
+      <meta property="og:site_name" content="Zion Tech Group" />
       <meta property="og:locale" content="en_US" />
-
-      {/* Twitter Card */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={title} />
-      <meta property="twitter:description" content={description} />
-      <meta property="twitter:image" content={fullImageUrl} />
+      
+      {/* Twitter */}
+      <meta property="twitter:card" content="summary_large_image" />
+      <meta property="twitter:url" content="https://ziontechgroup.com" />
+      <meta property="twitter:title" content="Zion Tech Group - AI & IT Solutions" />
+      <meta property="twitter:description" content="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Achieve 300% ROI with our cutting-edge AI technology." />
+      <meta property="twitter:image" content="https://ziontechgroup.com/images/og-image.jpg" />
       <meta property="twitter:site" content="@ziontechgroup" />
       <meta property="twitter:creator" content="@ziontechgroup" />
-
+      
       {/* Additional SEO Meta Tags */}
-      <meta name="theme-color" content="#0f172a" />
-      <meta name="msapplication-TileColor" content="#0f172a" />
+      <meta name="theme-color" content="#00ffff" />
+      <meta name="msapplication-TileColor" content="#00ffff" />
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
-      <meta name="format-detection" content="telephone=no,address=no,email=no" />
-      <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
       
-      {/* Favicon and Icons */}
-      <link rel="icon" href="/favicon.ico" />
-      <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-      <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+      {/* Canonical URL */}
+      <link rel="canonical" href="https://ziontechgroup.com" />
+      
+      {/* Favicon */}
+      <link rel="icon" type="image/png" href="/favicon.ico" />
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
       <link rel="manifest" href="/site.webmanifest" />
       
-      {/* Preconnect to external domains */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      {/* Preload critical resources */}
+      <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+      <link rel="preload" href="/images/hero-bg.webp" as="image" />
       
+<<<<<<< HEAD
       {/* Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify(finalStructuredData)}
@@ -202,12 +214,21 @@ const SEOHead: React.FC<SEOHeadProps> = ({
         {JSON.stringify(structuredData || defaultStructuredData)}
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
       </script>
+=======
+      {/* DNS prefetch for performance */}
+      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+>>>>>>> cursor/analyze-improve-and-deploy-application-6516
     </Helmet>
   );
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default EnhancedSEOHead;
 =======
 export default SEOHead;
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
+=======
+export default SEOHead;
+>>>>>>> cursor/analyze-improve-and-deploy-application-6516

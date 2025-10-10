@@ -1,31 +1,24 @@
 'use client';
-import React from 'react';
+import React, { useEffect } from 'react';
 
 interface StructuredDataProps {
-  type?: 'Organization' | 'WebSite' | 'WebPage' | 'Service' | 'LocalBusiness';
-  data?: Record<string, unknown>;
+  type: 'Organization' | 'WebSite' | 'WebPage' | 'Service' | 'LocalBusiness' | 'BreadcrumbList';
 }
 
-const StructuredData: React.FC<StructuredDataProps> = ({ 
-  type = 'Organization', 
-  data 
-}) => {
-  const getDefaultData = () => {
+const StructuredData: React.FC<StructuredDataProps> = ({ type }) => {
+  useEffect(() => {
+    let structuredData: any = {};
+
     switch (type) {
       case 'Organization':
-        return {
+        structuredData = {
           "@context": "https://schema.org",
           "@type": "Organization",
           "name": "Zion Tech Group",
-          "description": "Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.",
           "url": "https://ziontechgroup.com",
-          "logo": "https://ziontechgroup.com/logo.png",
-          "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+1-302-464-0950",
-            "contactType": "customer service",
-            "email": "kleber@ziontechgroup.com"
-          },
+          "logo": "https://ziontechgroup.com/images/logo.png",
+          "description": "Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.",
+          "foundingDate": "2020",
           "address": {
             "@type": "PostalAddress",
             "streetAddress": "364 E Main St STE 1008",
@@ -34,32 +27,33 @@ const StructuredData: React.FC<StructuredDataProps> = ({
             "postalCode": "19709",
             "addressCountry": "US"
           },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+1-302-464-0950",
+            "contactType": "customer service",
+            "email": "kleber@ziontechgroup.com"
+          },
           "sameAs": [
             "https://twitter.com/ziontechgroup",
             "https://linkedin.com/company/ziontechgroup"
           ],
-          "foundingDate": "2020",
-          "numberOfEmployees": "50+",
-          "areaServed": "Worldwide",
-          "serviceType": [
-            "AI Solutions",
-            "Quantum Computing",
-            "Autonomous Systems",
-            "Digital Transformation",
-            "Cloud Infrastructure",
-            "Cybersecurity",
-            "Data Analytics",
-            "IT Consulting"
-          ]
+          "offers": {
+            "@type": "AggregateOffer",
+            "offerCount": "50+",
+            "lowPrice": "500",
+            "highPrice": "50000",
+            "priceCurrency": "USD"
+          }
         };
-      
+        break;
+
       case 'WebSite':
-        return {
+        structuredData = {
           "@context": "https://schema.org",
           "@type": "WebSite",
           "name": "Zion Tech Group",
           "url": "https://ziontechgroup.com",
-          "description": "Advanced AI and IT solutions for modern businesses",
+          "description": "Advanced AI and IT Solutions Website",
           "publisher": {
             "@type": "Organization",
             "name": "Zion Tech Group"
@@ -70,14 +64,15 @@ const StructuredData: React.FC<StructuredDataProps> = ({
             "query-input": "required name=search_term_string"
           }
         };
-      
+        break;
+
       case 'WebPage':
-        return {
+        structuredData = {
           "@context": "https://schema.org",
           "@type": "WebPage",
-          "name": "Zion Tech Group - Advanced AI and IT Solutions",
-          "description": "Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.",
+          "name": "Zion Tech Group - AI & IT Solutions",
           "url": "https://ziontechgroup.com",
+          "description": "Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.",
           "isPartOf": {
             "@type": "WebSite",
             "name": "Zion Tech Group",
@@ -87,24 +82,18 @@ const StructuredData: React.FC<StructuredDataProps> = ({
             "@type": "Organization",
             "name": "Zion Tech Group"
           },
-          "breadcrumb": {
-            "@type": "BreadcrumbList",
-            "itemListElement": [
-              {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Home",
-                "item": "https://ziontechgroup.com"
-              }
-            ]
+          "mainEntity": {
+            "@type": "Organization",
+            "name": "Zion Tech Group"
           }
         };
-      
+        break;
+
       case 'Service':
-        return {
+        structuredData = {
           "@context": "https://schema.org",
           "@type": "Service",
-          "name": "AI and IT Solutions",
+          "name": "AI & IT Solutions",
           "description": "Comprehensive AI and IT solutions including machine learning, cloud infrastructure, cybersecurity, and digital transformation services.",
           "provider": {
             "@type": "Organization",
@@ -112,27 +101,22 @@ const StructuredData: React.FC<StructuredDataProps> = ({
             "url": "https://ziontechgroup.com"
           },
           "areaServed": "Worldwide",
-          "serviceType": [
-            "AI Solutions",
-            "Cloud Infrastructure",
-            "Cybersecurity",
-            "Data Analytics",
-            "IT Consulting",
-            "Custom Development"
-          ],
+          "serviceType": "Technology Services",
           "offers": {
             "@type": "Offer",
-            "description": "Professional AI and IT consulting services",
-            "availability": "https://schema.org/InStock"
+            "description": "AI and IT Solutions",
+            "priceRange": "$500 - $50,000",
+            "priceCurrency": "USD"
           }
         };
-      
+        break;
+
       case 'LocalBusiness':
-        return {
+        structuredData = {
           "@context": "https://schema.org",
           "@type": "LocalBusiness",
           "name": "Zion Tech Group",
-          "description": "Leading provider of AI-powered enterprise solutions and digital transformation services.",
+          "description": "Leading provider of AI-powered enterprise solutions and IT services.",
           "url": "https://ziontechgroup.com",
           "telephone": "+1-302-464-0950",
           "email": "kleber@ziontechgroup.com",
@@ -146,37 +130,54 @@ const StructuredData: React.FC<StructuredDataProps> = ({
           },
           "geo": {
             "@type": "GeoCoordinates",
-            "latitude": "39.4500",
-            "longitude": "-75.7167"
+            "latitude": "39.4496",
+            "longitude": "-75.7163"
           },
           "openingHours": "Mo-Fr 09:00-17:00",
-          "priceRange": "$$",
-          "serviceArea": {
-            "@type": "GeoCircle",
-            "geoMidpoint": {
-              "@type": "GeoCoordinates",
-              "latitude": "39.4500",
-              "longitude": "-75.7167"
-            },
-            "geoRadius": "100000"
-          }
+          "priceRange": "$$$"
         };
-      
+        break;
+
+      case 'BreadcrumbList':
+        structuredData = {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://ziontechgroup.com"
+            }
+          ]
+        };
+        break;
+
       default:
-        return {};
+        return;
     }
-  };
 
-  const structuredData = data || getDefaultData();
+    // Remove existing structured data of this type
+    const existingScripts = document.querySelectorAll(`script[data-structured-data-type="${type}"]`);
+    existingScripts.forEach(script => script.remove());
 
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{
-        __html: JSON.stringify(structuredData, null, 2)
-      }}
-    />
-  );
+    // Add new structured data
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.setAttribute('data-structured-data-type', type);
+    script.textContent = JSON.stringify(structuredData);
+    document.head.appendChild(script);
+
+    return () => {
+      // Cleanup on unmount
+      const scriptToRemove = document.querySelector(`script[data-structured-data-type="${type}"]`);
+      if (scriptToRemove) {
+        scriptToRemove.remove();
+      }
+    };
+  }, [type]);
+
+  return null;
 };
 
 export default StructuredData;

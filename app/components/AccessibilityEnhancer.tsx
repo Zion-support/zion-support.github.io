@@ -1,10 +1,10 @@
 'use client';
-import React, { useEffect } from 'react';
+import React, { useEffect, useCallback } from 'react';
 
 interface AccessibilityEnhancerProps {
   children: React.ReactNode;
   enableKeyboardNavigation?: boolean;
-  enableScreenReaderSupport?: boolean;
+  enableScreenReader?: boolean;
   enableHighContrast?: boolean;
   enableFocusManagement?: boolean;
 }
@@ -12,116 +12,64 @@ interface AccessibilityEnhancerProps {
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   children,
   enableKeyboardNavigation = true,
-  enableScreenReaderSupport = true,
+  enableScreenReader = true,
   enableHighContrast = true,
   enableFocusManagement = true
 }) => {
+  // Keyboard navigation enhancements
   useEffect(() => {
-    // Keyboard navigation enhancements
-    if (enableKeyboardNavigation && typeof window !== 'undefined') {
+    if (enableKeyboardNavigation) {
       const handleKeyDown = (event: KeyboardEvent) => {
         // Skip to main content
         if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {
-          const skipLink = document.querySelector('a[href="#main-content"]') as HTMLAnchorElement;
-          if (skipLink) {
-            skipLink.focus();
+          const mainContent = document.getElementById('main-content');
+          if (mainContent) {
+            mainContent.focus();
             event.preventDefault();
           }
         }
-
-        // Close dropdowns with Escape key
+        
+        // Escape key handling
         if (event.key === 'Escape') {
-          const openDropdowns = document.querySelectorAll('[aria-expanded="true"]');
-          openDropdowns.forEach(dropdown => {
-            (dropdown as HTMLElement).setAttribute('aria-expanded', 'false');
-          });
+          // Close any open modals or dropdowns
+          const activeElement = document.activeElement as HTMLElement;
+          if (activeElement && activeElement.blur) {
+            activeElement.blur();
+          }
         }
       };
 
       document.addEventListener('keydown', handleKeyDown);
       return () => document.removeEventListener('keydown', handleKeyDown);
     }
+  }, [enableKeyboardNavigation]);
 
-    // Focus management
-    if (enableFocusManagement && typeof window !== 'undefined') {
-      const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
-      
-      const trapFocus = (container: HTMLElement) => {
-        const focusableContent = container.querySelectorAll(focusableElements);
-        const firstFocusableElement = focusableContent[0] as HTMLElement;
-        const lastFocusableElement = focusableContent[focusableContent.length - 1] as HTMLElement;
-
-        const handleTabKey = (e: KeyboardEvent) => {
-          if (e.key !== 'Tab') return;
-
-          if (e.shiftKey) {
-            if (document.activeElement === firstFocusableElement) {
-              lastFocusableElement.focus();
-              e.preventDefault();
-            }
-          } else {
-            if (document.activeElement === lastFocusableElement) {
-              firstFocusableElement.focus();
-              e.preventDefault();
-            }
-          }
-        };
-
-        container.addEventListener('keydown', handleTabKey);
-        firstFocusableElement?.focus();
-
-        return () => container.removeEventListener('keydown', handleTabKey);
-      };
-
-      // Apply focus trap to modals and dropdowns
-      const modals = document.querySelectorAll('[role="dialog"], [aria-modal="true"]');
-      modals.forEach(modal => trapFocus(modal as HTMLElement));
-    }
-
-    // Screen reader support
-    if (enableScreenReaderSupport && typeof window !== 'undefined') {
-      // Add live region for dynamic content updates
+  // Screen reader enhancements
+  useEffect(() => {
+    if (enableScreenReader) {
+      // Add ARIA live region for announcements
       const liveRegion = document.createElement('div');
+      liveRegion.id = 'aria-live-region';
       liveRegion.setAttribute('aria-live', 'polite');
       liveRegion.setAttribute('aria-atomic', 'true');
       liveRegion.className = 'sr-only';
-      liveRegion.id = 'live-region';
       document.body.appendChild(liveRegion);
 
-      // Announce page changes
-      const announcePageChange = (message: string) => {
-        const liveRegion = document.getElementById('live-region');
-        if (liveRegion) {
-          liveRegion.textContent = message;
+      return () => {
+        const existingLiveRegion = document.getElementById('aria-live-region');
+        if (existingLiveRegion) {
+          existingLiveRegion.remove();
         }
       };
-
-      // Listen for route changes (if using React Router)
-      const originalPushState = history.pushState;
-      const originalReplaceState = history.replaceState;
-
-      history.pushState = function(...args) {
-        originalPushState.apply(history, args);
-        announcePageChange('Page changed');
-      };
-
-      history.replaceState = function(...args) {
-        originalReplaceState.apply(history, args);
-        announcePageChange('Page updated');
-      };
-
-      return () => {
-        document.body.removeChild(liveRegion);
-        history.pushState = originalPushState;
-        history.replaceState = originalReplaceState;
-      };
     }
+  }, [enableScreenReader]);
 
-    // High contrast mode support
-    if (enableHighContrast && typeof window !== 'undefined') {
-      const prefersHighContrast = window.matchMedia('(prefers-contrast: high)');
+  // High contrast mode detection
+  useEffect(() => {
+    if (enableHighContrast) {
+      const mediaQuery = window.matchMedia('(prefers-contrast: high)');
       
-      const updateHighContrast = (e: MediaQueryListEvent) => {
+      const handleContrastChange = (e: MediaQueryListEvent) => {
         if (e.matches) {
           document.documentElement.classList.add('high-contrast');
         } else {
@@ -129,18 +77,70 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         }
       };
 
-      prefersHighContrast.addEventListener('change', updateHighContrast);
-      updateHighContrast(prefersHighContrast);
+      // Set initial state
+      if (mediaQuery.matches) {
+        document.documentElement.classList.add('high-contrast');
+      }
 
-      return () => prefersHighContrast.removeEventListener('change', updateHighContrast);
+      mediaQuery.addEventListener('change', handleContrastChange);
+      return () => mediaQuery.removeEventListener('change', handleContrastChange);
     }
-  }, [enableKeyboardNavigation, enableScreenReaderSupport, enableHighContrast, enableFocusManagement]);
+  }, [enableHighContrast]);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   return <React.Fragment>{children}</React.Fragment>;
 =======
   return null;
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
+=======
+  // Focus management
+  useEffect(() => {
+    if (enableFocusManagement) {
+      // Store the last focused element before navigation
+      let lastFocusedElement: HTMLElement | null = null;
+
+      const handleFocusIn = (event: FocusEvent) => {
+        lastFocusedElement = event.target as HTMLElement;
+      };
+
+      const handleFocusOut = (event: FocusEvent) => {
+        // Ensure focus is visible
+        const target = event.target as HTMLElement;
+        if (target && target.style) {
+          target.style.outline = '2px solid #00ffff';
+          target.style.outlineOffset = '2px';
+        }
+      };
+
+      document.addEventListener('focusin', handleFocusIn);
+      document.addEventListener('focusout', handleFocusOut);
+
+      return () => {
+        document.removeEventListener('focusin', handleFocusIn);
+        document.removeEventListener('focusout', handleFocusOut);
+      };
+    }
+  }, [enableFocusManagement]);
+
+  // Announce page changes to screen readers
+  const announcePageChange = useCallback((message: string) => {
+    const liveRegion = document.getElementById('aria-live-region');
+    if (liveRegion) {
+      liveRegion.textContent = message;
+    }
+  }, []);
+
+  // Expose announcement function globally for use in other components
+  useEffect(() => {
+    (window as any).announcePageChange = announcePageChange;
+    return () => {
+      delete (window as any).announcePageChange;
+    };
+  }, [announcePageChange]);
+
+  return <>{children}</>;
+>>>>>>> cursor/analyze-improve-and-deploy-application-6516
 };
 
 export default AccessibilityEnhancer;

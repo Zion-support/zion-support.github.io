@@ -1,6 +1,6 @@
 'use client';
 import React, { useState, useEffect, useCallback, memo, lazy, Suspense } from 'react';
-import PerformanceOptimizer from './components/EnhancedPerformanceOptimizer';
+import PerformanceOptimizer from './components/PerformanceOptimizer';
 import SEOOptimizer from './components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import { ServiceCardSkeleton, StatsSkeleton } from './components/EnhancedLoadingStates';
@@ -27,14 +27,7 @@ const debounce = (func: Function, wait: number) => {
   };
 };
 
-// Loading skeleton component
-const ServiceCardSkeleton: React.FC = memo(() => (
-  <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card">
-    <div className="h-4 bg-gray-200 rounded w-3/4 mb-4"></div>
-    <div className="h-3 bg-gray-200 rounded w-1/2 mb-2"></div>
-    <div className="h-3 bg-gray-200 rounded w-2/3"></div>
-  </div>
-));
+// ServiceCardSkeleton is imported from EnhancedLoadingStates
 
 const HomePage: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
