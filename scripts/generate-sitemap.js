@@ -7,56 +7,33 @@ const __dirname = path.dirname(__filename);
 
 const baseUrl = 'https://ziontechgroup.com';
 const pages = [
-  // Main pages
-  { url: '/', priority: 1.0, changefreq: 'daily' },
-  { url: '/about', priority: 0.8, changefreq: 'monthly' },
-  { url: '/services', priority: 0.9, changefreq: 'weekly' },
-  { url: '/contact', priority: 0.8, changefreq: 'monthly' },
-  { url: '/pricing', priority: 0.8, changefreq: 'monthly' },
-  { url: '/case-studies', priority: 0.7, changefreq: 'monthly' },
-  { url: '/blog', priority: 0.6, changefreq: 'weekly' },
-  
-  // AI Services
-  { url: '/ai-analytics', priority: 0.8, changefreq: 'weekly' },
-  { url: '/ai-automation', priority: 0.8, changefreq: 'weekly' },
-  { url: '/ai-cybersecurity', priority: 0.8, changefreq: 'weekly' },
-  { url: '/ai-data-analytics', priority: 0.8, changefreq: 'weekly' },
-  { url: '/ai-content-generation', priority: 0.8, changefreq: 'weekly' },
-  { url: '/ai-healthcare', priority: 0.8, changefreq: 'weekly' },
-  { url: '/ai-fintech', priority: 0.8, changefreq: 'weekly' },
-  { url: '/ai-quantum-computing', priority: 0.8, changefreq: 'weekly' },
-  { url: '/ai-workflow-automation', priority: 0.8, changefreq: 'weekly' },
-  { url: '/ai-customer-support', priority: 0.8, changefreq: 'weekly' },
-  { url: '/ai-project-manager', priority: 0.8, changefreq: 'weekly' },
-  { url: '/ai-social-media-manager', priority: 0.8, changefreq: 'weekly' },
-  { url: '/ai-content-writer', priority: 0.8, changefreq: 'weekly' },
-  { url: '/ai-email-marketing', priority: 0.8, changefreq: 'weekly' },
-  { url: '/ai-crm', priority: 0.8, changefreq: 'weekly' },
-  { url: '/ai-financial-analyzer', priority: 0.8, changefreq: 'weekly' },
-  { url: '/ai-code-assistant', priority: 0.8, changefreq: 'weekly' },
-  { url: '/ai-cybersecurity-monitor', priority: 0.8, changefreq: 'weekly' },
-  { url: '/ai-password-manager', priority: 0.8, changefreq: 'weekly' },
-  { url: '/ai-3d-generation', priority: 0.8, changefreq: 'weekly' },
-  { url: '/ai-mobile-app-builder', priority: 0.8, changefreq: 'weekly' },
-  { url: '/ai-logo-designer', priority: 0.8, changefreq: 'weekly' },
-  { url: '/ai-quantum-financial-oracle', priority: 0.8, changefreq: 'weekly' },
-  { url: '/ai-neural-memory-assistant', priority: 0.8, changefreq: 'weekly' },
-  { url: '/ai-holographic-workspace', priority: 0.8, changefreq: 'weekly' },
-  { url: '/ai-climate-solutions-pro', priority: 0.8, changefreq: 'weekly' },
-  { url: '/ai-drug-discovery-pro', priority: 0.8, changefreq: 'weekly' },
-  { url: '/ai-fashion-design', priority: 0.8, changefreq: 'weekly' },
-  { url: '/ai-music-composition', priority: 0.8, changefreq: 'weekly' },
-  { url: '/ai-energy', priority: 0.8, changefreq: 'weekly' },
-  { url: '/ai-blockchain-solutions', priority: 0.8, changefreq: 'weekly' },
-  { url: '/ai-autonomous-systems', priority: 0.8, changefreq: 'weekly' },
-  
-  // Legal pages
-  { url: '/privacy', priority: 0.3, changefreq: 'yearly' },
-  { url: '/terms', priority: 0.3, changefreq: 'yearly' },
-  { url: '/cookies', priority: 0.3, changefreq: 'yearly' },
-  { url: '/gdpr', priority: 0.3, changefreq: 'yearly' },
-  { url: '/security', priority: 0.3, changefreq: 'yearly' },
-  { url: '/compliance', priority: 0.3, changefreq: 'yearly' }
+  { url: '', priority: '1.0', changefreq: 'daily' },
+  { url: '/about', priority: '0.8', changefreq: 'monthly' },
+  { url: '/contact', priority: '0.9', changefreq: 'monthly' },
+  { url: '/pricing', priority: '0.8', changefreq: 'weekly' },
+  { url: '/ai-services', priority: '0.9', changefreq: 'weekly' },
+  { url: '/it-services', priority: '0.9', changefreq: 'weekly' },
+  { url: '/micro-saas', priority: '0.9', changefreq: 'weekly' },
+  { url: '/case-studies', priority: '0.7', changefreq: 'monthly' },
+  { url: '/blog', priority: '0.6', changefreq: 'weekly' },
+  { url: '/team', priority: '0.6', changefreq: 'monthly' },
+  { url: '/careers', priority: '0.6', changefreq: 'weekly' },
+  { url: '/privacy', priority: '0.3', changefreq: 'yearly' },
+  { url: '/terms', priority: '0.3', changefreq: 'yearly' },
+  { url: '/cookies', priority: '0.3', changefreq: 'yearly' },
+  { url: '/docs', priority: '0.5', changefreq: 'monthly' },
+  { url: '/api-docs', priority: '0.5', changefreq: 'monthly' },
+  { url: '/support', priority: '0.7', changefreq: 'weekly' },
+  { url: '/status', priority: '0.6', changefreq: 'daily' },
+  { url: '/demo', priority: '0.8', changefreq: 'monthly' },
+  { url: '/consultation', priority: '0.8', changefreq: 'monthly' },
+  { url: '/services', priority: '0.8', changefreq: 'weekly' },
+  { url: '/ai-ops', priority: '0.7', changefreq: 'monthly' },
+  { url: '/healthcare-it', priority: '0.7', changefreq: 'monthly' },
+  { url: '/financial-it', priority: '0.7', changefreq: 'monthly' },
+  { url: '/edge-computing', priority: '0.7', changefreq: 'monthly' },
+  { url: '/5g-implementation', priority: '0.7', changefreq: 'monthly' },
+  { url: '/iot-platform', priority: '0.7', changefreq: 'monthly' }
 ];
 
 const generateSitemap = () => {
@@ -70,9 +47,7 @@ ${pages.map(page => `  <url>
   </url>`).join('\n')}
 </urlset>`;
 
-  const publicDir = path.join(__dirname, '..', 'public');
-  const sitemapPath = path.join(publicDir, 'sitemap.xml');
-  
+  const sitemapPath = path.join(__dirname, '..', 'public', 'sitemap.xml');
   fs.writeFileSync(sitemapPath, sitemap);
   console.log('Sitemap generated successfully at:', sitemapPath);
 };
