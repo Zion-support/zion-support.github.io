@@ -3,268 +3,101 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
-import { CheckCircle, ArrowRight } from 'lucide-react';
-;
-const PagePage: React.FC = () => {const features = [
-    {
-      title: 'Feature 1',
-      description: 'Description of feature 1',
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
-=======
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Code, Cloud, Lock, Monitor } from 'lucide-react';
 
 const AiApiManagementPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
-      title: 'AI-Powered API Intelligence',
-      description: 'Advanced AI algorithms that optimize API performance and provide intelligent insights.',
-      benefits: ['Smart API optimization', 'Predictive scaling', 'Automated insights', 'Real-time monitoring']
+      title: 'AI-Powered API Management',
+      description: 'Intelligent API management with AI-driven insights and automated optimization.',
+      benefits: ['Smart routing', 'Predictive scaling', 'Automated monitoring', 'Intelligent caching']
     },
     {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive API analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Performance metrics', 'Usage analytics']
-    },
-    {
-      icon: Target,
-      title: 'Precision Management',
-      description: 'Target specific API endpoints and optimize them with precision and accuracy.',
-      benefits: ['Endpoint optimization', 'Performance tuning', 'Strategic planning', 'Success metrics']
-    },
-    {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your API infrastructure for business growth with data-driven strategies.',
-      benefits: ['Scalability planning', 'Performance analysis', 'Cost optimization', 'ROI tracking']
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-    },
-    {
-      icon: Globe,
-      title: 'Global Distribution',
-      description: 'Distribute your APIs globally with intelligent routing and caching.',
-      benefits: ['Global CDN', 'Edge computing', 'Load balancing', 'Geographic optimization']
-    },
-    {
-<<<<<<< HEAD
-      title: 'Feature 3',
-      description: 'Description of feature 3',
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
-    }
-  ];
-const benefits = [;
-const benefits = [
-    'Benefit 1',
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology'    'Benefit 1',
-    'Benefit 2',
-    'Benefit 3',
-    'Benefit 4',
-    'Benefit 5',
-    'Benefit 6'
-=======
       icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Enterprise-grade security to protect your APIs and sensitive data.',
-      benefits: ['End-to-end encryption', 'Access controls', 'Audit trails', 'Compliance support']
+      title: 'Advanced Security',
+      description: 'Enterprise-grade security features to protect your APIs and data.',
+      benefits: ['OAuth 2.0', 'JWT tokens', 'Rate limiting', 'DDoS protection']
+    },
+    {
+      icon: Monitor,
+      title: 'Real-Time Monitoring',
+      description: 'Comprehensive monitoring and analytics for all your API endpoints.',
+      benefits: ['Live metrics', 'Performance tracking', 'Error monitoring', 'Usage analytics']
+    },
+    {
+      icon: Code,
+      title: 'Developer-Friendly',
+      description: 'Built for developers with comprehensive documentation and tools.',
+      benefits: ['OpenAPI specs', 'SDK generation', 'Interactive docs', 'Testing tools']
+    },
+    {
+      icon: Cloud,
+      title: 'Cloud-Native',
+      description: 'Fully managed cloud solution with automatic scaling and high availability.',
+      benefits: ['Auto-scaling', 'Global CDN', '99.9% uptime', 'Multi-region support']
+    },
+    {
+      icon: Settings,
+      title: 'Easy Configuration',
+      description: 'Simple configuration and management through intuitive dashboards.',
+      benefits: ['Visual config', 'Template library', 'Version control', 'Rollback support']
     }
   ];
 
   const benefits = [
-    'Streamline API development and management',
+    'Reduce API development time by 60%',
     'Improve API performance and reliability',
-    'Reduce development time and costs',
-    'Enhance developer experience',
-    'Scale APIs efficiently',
-    'Ensure security and compliance'
+    'Enhance security with advanced protection',
+    'Scale automatically with traffic demands',
+    'Gain insights with comprehensive analytics',
+    'Streamline developer onboarding'
   ];
 
   const useCases = [
     {
-      title: 'API Gateway Management',
-      description: 'Centralized management of all your APIs through a single gateway',
-      icon: Code
+      title: 'Microservices Management',
+      description: 'Orchestrate and manage complex microservices architectures',
+      icon: Database
     },
     {
-      title: 'Performance Monitoring',
-      description: 'Real-time monitoring and optimization of API performance',
+      title: 'Third-Party Integration',
+      description: 'Securely integrate with external APIs and services',
+      icon: Globe
+    },
+    {
+      title: 'Mobile API Gateway',
+      description: 'Optimize APIs for mobile applications and devices',
       icon: Monitor
     },
     {
-      title: 'Security Management',
-      description: 'Comprehensive security controls and threat protection',
-      icon: Shield
-    },
-    {
-      title: 'Cloud Integration',
-      description: 'Seamless integration with cloud platforms and services',
-      icon: Cloud
+      title: 'Legacy System Modernization',
+      description: 'Modernize legacy systems with API-first approach',
+      icon: Code
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   ];
 
   return (
-    <>
-<<<<<<< HEAD
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
-      <Helmet>
-        <title>Page | Zion Tech Group</title>
-        <meta name="description" content="Professional page solutions by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group" />
-=======
+    <React.Fragment>
       <Helmet>
         <title>AI API Management - Zion Tech Group</title>
-        <meta name="description" content="Transform your API management with our AI-powered platform. Get intelligent monitoring, optimization, and security for all your APIs." />
-        <meta name="keywords" content="API management, AI APIs, API gateway, API monitoring, API security, microservices, API optimization" />
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
+        <meta name="description" content="Advanced AI-powered API management platform for modern applications. Secure, scalable, and intelligent API gateway solution." />
+        <meta name="keywords" content="API management, AI-powered APIs, API gateway, microservices, API security, developer tools" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
-<<<<<<< HEAD
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-cyan-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Ai Api Management
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Advanced AI-powered ai api management solution for modern businesses.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                Get Started
-              </button>
-              <button className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                View Demo
-              </button>
-            </div>
-          </div>
-        </section>
-      {/* Hero Section */}
-        </section>      {/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-        <div className="relative max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            Page
-            <span className="block bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
-              Solutions
-            </span>
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Professional page solutions by Zion Tech Group. Advanced AI and IT solutions for your business.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25">
-              Get Started Today
-              <ArrowRight className="inline-block ml-2 w-5 h-5" />
-            </button>
-            <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-              View Demo
-            </button>
-          </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Page Features</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Advanced solutions designed for modern business needs
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-blue-400/50 transition-all duration-300 group">
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <CheckCircle className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300 mb-4">{feature.description}</p>
-                <ul className="space-y-2">
-                  {feature.benefits.map((benefit, benefitIndex) => (
-                    <li key={benefitIndex} className="flex items-center text-sm text-gray-400">
-                      <CheckCircle className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
-                      {benefit}
-                    </li>
-                  ));
-                </ul>
-              </div>
-            ));
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Page?</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the benefits of our proven solutions
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <CheckCircle className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-lg font-semibold text-white">{benefit}</h3>
-              </div>
-            ));
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Transform your business with our page solutions today
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-              Start Free Trial
-            </button>
-            <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-              Contact Sales
-            </button>
-          </div>
-        </div>
-      </section>
-
-        {/* Features Section */}
-        <section className="py-20 px-4">
-=======
         
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4">
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
                 AI-Powered API Management
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Transform your API management with our intelligent platform. Get real-time monitoring, 
-                optimization, and security for all your APIs in one place.
+                Secure, scale, and optimize your APIs with our intelligent management platform. 
+                Built for modern applications with AI-driven insights and automation.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
@@ -290,9 +123,9 @@ const benefits = [
         <section id="features" className="py-20">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Powerful API Management Features</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">Comprehensive API Management</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our comprehensive API management platform provides everything you need to build, deploy, and scale APIs.
+                Everything you need to build, deploy, and manage APIs at scale with AI-powered intelligence.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -301,19 +134,6 @@ const benefits = [
                   <div className="bg-cyan-500/20 rounded-full w-12 h-12 flex items-center justify-center mb-6">
                     <feature.icon className="w-6 h-6 text-cyan-400" />
                   </div>
-<<<<<<< HEAD
-                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  {feature.benefits && (
-                    <ul className="space-y-2">
-                      {feature.benefits.map((benefit, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-gray-400">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                          {benefit}
-                        </li>
-                      ));
-                    </ul>);
-=======
                   <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-300 mb-6">{feature.description}</p>
                   <ul className="space-y-2">
@@ -336,7 +156,7 @@ const benefits = [
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-6">Use Cases</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Discover how our AI API management platform can transform your development workflow.
+                Discover how our API management platform can transform your application architecture.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -347,9 +167,8 @@ const benefits = [
                   </div>
                   <h3 className="text-lg font-semibold text-white mb-3">{useCase.title}</h3>
                   <p className="text-gray-300 text-sm">{useCase.description}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
                 </div>
-              ));
+              ))}
             </div>
           </div>
         </section>
@@ -362,7 +181,7 @@ const benefits = [
                 <h2 className="text-4xl font-bold text-white mb-6">Why Choose Our API Management?</h2>
                 <p className="text-lg text-gray-300 mb-8">
                   Our AI-powered API management platform is designed to help you build, deploy, 
-                  and scale APIs efficiently while maintaining security and performance.
+                  and scale APIs with confidence and intelligence.
                 </p>
                 <ul className="space-y-4">
                   {benefits.map((benefit, index) => (
@@ -379,9 +198,9 @@ const benefits = [
                     <div className="bg-cyan-500/20 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
                       <Code className="w-10 h-10 text-cyan-400" />
                     </div>
-                    <h3 className="text-2xl font-bold text-white mb-4">Developer-First Design</h3>
+                    <h3 className="text-2xl font-bold text-white mb-4">Developer Experience</h3>
                     <p className="text-gray-300 mb-6">
-                      Built by developers for developers, with intuitive tools and comprehensive documentation.
+                      Built by developers for developers with comprehensive tools and documentation.
                     </p>
                     <div className="grid grid-cols-2 gap-4 text-center">
                       <div>
@@ -395,11 +214,7 @@ const benefits = [
                     </div>
                   </div>
                 </div>
-<<<<<<< HEAD
-              ));
-=======
               </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
             </div>
           </div>
         </section>
@@ -408,7 +223,7 @@ const benefits = [
         <section className="py-20 bg-slate-800/50">
           <div className="container mx-auto px-4 text-center">
             <div className="bg-gradient-to-r from-cyan-500/10 to-purple-600/10 rounded-2xl p-12 backdrop-blur-sm border border-white/10">
-              <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your API Management?</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your APIs?</h2>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Start building better APIs with our AI-powered management platform. 
                 Get started today and see the difference intelligent API management can make.
@@ -432,30 +247,11 @@ const benefits = [
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-        <Footer />
-      </div>
-      <Footer />
-      </div>
-    </>
-        
-        <Footer />
-      </div>
-    </div>
-  );
-};
-
-    </div>)
-export default PagePage;
-      </section>export default AiApiManagementPage
-export default PagePage;
-=======
 
         <Footer />
       </div>
-    </>
+    </React.Fragment>
   );
 };
 
 export default AiApiManagementPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
