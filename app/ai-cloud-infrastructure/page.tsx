@@ -1,348 +1,345 @@
 'use client';
-import React from 'react';
+import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Cloud, Shield, Zap, BarChart3, ArrowRight, Star, CheckSquare, Smartphone, Users, Target, Globe, Settings } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import { Link } from 'react-router-dom';
+import { CheckCircle, ArrowRight, Zap, Star, Users, TrendingUp, Shield, Cloud, Server, Database, Globe, Lock, Sparkles, Target, Award, Cpu, HardDrive, Wifi, Settings } from 'lucide-react';
 
 const AICloudInfrastructurePage: React.FC = () => {
+  const [selectedPlan, setSelectedPlan] = useState('pro');
+
   const features = [
     {
-      icon: Cloud,
-      title: 'Intelligent Auto-Scaling',
-      description: 'AI-powered auto-scaling that predicts traffic patterns and scales resources automatically',
-      benefits: ['Predictive scaling', 'Cost optimization', 'Zero downtime', 'Performance optimization']
+      icon: <Cloud className="w-6 h-6 text-cyan-400" />,
+      title: 'Intelligent Cloud Management',
+      description: 'AI-powered cloud optimization with automatic scaling and cost management'
     },
     {
-      icon: Shield,
+      icon: <Server className="w-6 h-6 text-blue-400" />,
+      title: 'Multi-Cloud Architecture',
+      description: 'Seamless integration across AWS, Azure, GCP with unified management'
+    },
+    {
+      icon: <Shield className="w-6 h-6 text-green-400" />,
       title: 'Advanced Security',
-      description: 'Comprehensive cloud security with AI-powered threat detection and automated response',
-      benefits: ['Real-time threat detection', 'Automated incident response', 'Compliance management', 'Data encryption']
+      description: 'Enterprise-grade security with AI threat detection and compliance monitoring'
     },
     {
-      icon: Zap,
-      title: 'Performance Optimization',
-      description: 'AI-driven performance monitoring and optimization for maximum efficiency and speed',
-      benefits: ['Real-time monitoring', 'Performance analytics', 'Bottleneck detection', 'Automated optimization']
+      icon: <Database className="w-6 h-6 text-purple-400" />,
+      title: 'Auto-Scaling Databases',
+      description: 'Intelligent database scaling based on demand with zero downtime'
     },
     {
-      icon: BarChart3,
-      title: 'Cost Management',
-      description: 'Intelligent cost optimization and resource management to reduce cloud spending',
-      benefits: ['Cost analysis', 'Resource optimization', 'Budget alerts', 'Usage forecasting']
-    }
-  ];
-
-  const cloudProviders = [
-    {
-      name: 'Amazon Web Services',
-      icon: '☁️',
-      features: ['EC2, S3, Lambda', 'RDS, DynamoDB', 'CloudFront, Route 53', 'SageMaker, Rekognition'],
-      pricing: 'Starting at $500/month'
+      icon: <Globe className="w-6 h-6 text-orange-400" />,
+      title: 'Global CDN',
+      description: 'Worldwide content delivery with AI-optimized routing and caching'
     },
     {
-      name: 'Microsoft Azure',
-      icon: '🔷',
-      features: ['Virtual Machines', 'Azure SQL Database', 'Azure Functions', 'Cognitive Services'],
-      pricing: 'Starting at $450/month'
-    },
-    {
-      name: 'Google Cloud Platform',
-      icon: '🔵',
-      features: ['Compute Engine', 'Cloud Storage', 'Cloud Functions', 'AI Platform'],
-      pricing: 'Starting at $400/month'
-    },
-    {
-      name: 'Multi-Cloud',
-      icon: '🌐',
-      features: ['Hybrid cloud solutions', 'Cross-platform management', 'Disaster recovery', 'Vendor independence'],
-      pricing: 'Starting at $800/month'
+      icon: <Settings className="w-6 h-6 text-pink-400" />,
+      title: 'DevOps Automation',
+      description: 'Complete CI/CD pipeline automation with AI-powered testing and deployment'
     }
   ];
 
   const pricingPlans = [
     {
-      name: 'Starter',
-      price: '$1,299',
+      name: 'Startup',
+      price: '$299',
       period: '/month',
-      description: 'Perfect for small to medium businesses',
+      description: 'Perfect for startups and small teams',
       features: [
         'Up to 10 servers',
-        'Basic monitoring',
-        'Email support',
+        'Basic cloud monitoring',
         'Standard security',
-        '99.9% uptime SLA'
+        'Email support',
+        '99.9% uptime SLA',
+        'Basic backup',
+        '5 team members'
       ],
       popular: false
     },
     {
       name: 'Professional',
-      price: '$2,999',
+      price: '$799',
       period: '/month',
-      description: 'Ideal for growing enterprises',
+      description: 'Ideal for growing businesses',
       features: [
-        'Up to 100 servers',
-        'Advanced AI features',
+        'Up to 50 servers',
+        'Advanced AI monitoring',
+        'Enhanced security suite',
         'Priority support',
-        'Enhanced security',
         '99.99% uptime SLA',
-        'API access'
+        'Automated backups',
+        '25 team members',
+        'Custom configurations'
       ],
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$7,999',
+      price: '$2,499',
       period: '/month',
-      description: 'For large organizations with complex needs',
+      description: 'For large organizations',
       features: [
         'Unlimited servers',
         'Custom AI models',
-        'Dedicated support',
-        'Advanced security',
+        'Enterprise security',
+        'Dedicated support manager',
         '99.999% uptime SLA',
+        'Disaster recovery',
+        'Unlimited team members',
         'White-label solution'
       ],
       popular: false
     }
   ];
 
-  const testimonials = [
-    {
-      name: 'Jennifer Martinez',
-      role: 'CTO',
-      company: 'TechStartup Inc',
-      content: 'Our cloud costs reduced by 40% while performance improved by 60%. The AI optimization is incredible.',
-      rating: 5
-    },
-    {
-      name: 'David Kim',
-      role: 'IT Director',
-      company: 'Global Enterprises',
-      content: 'We achieved 99.99% uptime and reduced security incidents by 90%. Outstanding service.',
-      rating: 5
-    },
-    {
-      name: 'Sarah Wilson',
-      role: 'Cloud Architect',
-      company: 'Digital Solutions',
-      content: 'The auto-scaling and cost optimization features saved us $50K monthly. Highly recommended.',
-      rating: 5
-    }
+  const stats = [
+    { icon: <Users className="w-8 h-8 text-blue-500" />, value: '500+', label: 'Active Clients' },
+    { icon: <Server className="w-8 h-8 text-green-500" />, value: '10K+', label: 'Servers Managed' },
+    { icon: <TrendingUp className="w-8 h-8 text-purple-500" />, value: '40%', label: 'Cost Reduction' },
+    { icon: <Award className="w-8 h-8 text-orange-500" />, value: '99.99%', label: 'Uptime SLA' }
+  ];
+
+  const services = [
+    'Cloud Migration',
+    'Infrastructure as Code',
+    'Container Orchestration',
+    'Microservices Architecture',
+    'API Gateway Management',
+    'Load Balancing',
+    'Auto-Scaling',
+    'Disaster Recovery',
+    'Backup & Restore',
+    'Performance Monitoring',
+    'Security Hardening',
+    'Compliance Management'
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>AI Cloud Infrastructure - Zion Tech Group</title>
-        <meta name="description" content="Intelligent cloud infrastructure with AI-powered auto-scaling, security, and optimization. Reduce costs by 40% and improve performance by 60%." />
-        <meta name="keywords" content="AI cloud infrastructure, cloud optimization, auto-scaling, cloud security, cloud management" />
+        <title>AI Cloud Infrastructure - Zion Tech Group | Intelligent Cloud Management</title>
+        <meta name="description" content="Advanced AI-powered cloud infrastructure with intelligent scaling, multi-cloud management, and enterprise security. Starting at $299/month." />
+        <meta name="keywords" content="AI cloud infrastructure, cloud management, multi-cloud, auto-scaling, cloud security, DevOps automation" />
       </Helmet>
-      
-      <Navigation />
-      
-      <main className="pt-20">
-        {/* Hero Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <div className="inline-flex items-center bg-blue-500/10 text-blue-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
-              <Cloud className="w-4 h-4 mr-2" />
-              AI-Powered Cloud Infrastructure
-            </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              AI Cloud Infrastructure
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Intelligent cloud infrastructure with AI-powered auto-scaling, security, and optimization. 
-              Reduce costs by 40% and improve performance by 60% with our advanced cloud management platform.
+
+      {/* Hero Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20 text-cyan-400 text-sm font-medium mb-8">
+            <Sparkles className="w-4 h-4 mr-2" />
+            Intelligent Cloud Management
+          </div>
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
+            AI Cloud
+            <span className="block bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+              Infrastructure
+            </span>
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
+            Transform your cloud infrastructure with AI-powered management, intelligent scaling, 
+            and automated optimization. Reduce costs by 40% while improving performance and reliability 
+            across AWS, Azure, and Google Cloud.
+          </p>
+          
+          {/* Stats */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto mb-12">
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className="flex justify-center mb-4">
+                  {stat.icon}
+                </div>
+                <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
+                <div className="text-gray-300">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold py-4 px-8 rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center space-x-2"
+            >
+              <span>Get Free Assessment</span>
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+            <button className="border border-cyan-500 text-cyan-400 font-semibold py-4 px-8 rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300 flex items-center justify-center space-x-2">
+              <span>View Demo</span>
+              <ArrowRight className="w-5 h-5" />
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold text-white mb-6">Comprehensive Cloud Services</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Complete cloud infrastructure solutions powered by AI intelligence.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <button className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                Start Free Trial
-                <ArrowRight className="w-5 h-5 ml-2 inline" />
-              </button>
-              <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300">
-                Watch Demo
-              </button>
-            </div>
-            <div className="text-sm text-gray-400">
-              ✓ 14-day free trial • ✓ No credit card required • ✓ Cancel anytime
-            </div>
           </div>
-        </section>
+          
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {services.map((service, index) => (
+              <div key={index} className="bg-slate-800/50 rounded-lg p-4 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300 text-center">
+                <span className="text-gray-300 font-medium">{service}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-        {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Advanced AI Features
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Leverage artificial intelligence to optimize your cloud infrastructure for maximum performance and cost efficiency.
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <feature.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
-                  <p className="text-gray-300 mb-6">{feature.description}</p>
-                  <ul className="space-y-2">
-                    {feature.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flex items-center text-sm text-gray-400">
-                        <CheckSquare className="w-4 h-4 text-green-400 mr-2" />
-                        {benefit}
-                      </li>
-                    ))}
-                  </ul>
+      {/* Features Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold text-white mb-6">Powerful Features</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Everything you need to manage and optimize your cloud infrastructure with AI.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-slate-800/50 rounded-xl p-8 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300">
+                <div className="w-12 h-12 bg-cyan-500/10 rounded-lg flex items-center justify-center mb-6">
+                  {feature.icon}
                 </div>
-              ))}
-            </div>
+                <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
+              </div>
+            ))}
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Cloud Providers Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Multi-Cloud Support
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Deploy and manage your infrastructure across all major cloud providers.
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {cloudProviders.map((provider, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="text-center mb-6">
-                    <div className="text-4xl mb-4">{provider.icon}</div>
-                    <h3 className="text-xl font-bold text-white mb-2">{provider.name}</h3>
-                    <div className="text-blue-400 font-semibold">{provider.pricing}</div>
-                  </div>
-                  <ul className="space-y-2">
-                    {provider.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center text-sm text-gray-400">
-                        <CheckSquare className="w-4 h-4 text-green-400 mr-2" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
+      {/* Pricing Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold text-white mb-6">Choose Your Plan</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Start with a free infrastructure assessment and migration plan.
+            </p>
           </div>
-        </section>
-
-        {/* Pricing Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Simple, Transparent Pricing
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the plan that fits your cloud infrastructure needs. All plans include our core AI features.
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {pricingPlans.map((plan, index) => (
-                <div key={index} className={`bg-white/5 backdrop-blur-sm rounded-2xl p-8 relative ${plan.popular ? 'ring-2 ring-blue-500' : ''}`}>
-                  {plan.popular && (
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-medium">
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {pricingPlans.map((plan, index) => (
+              <div key={index} className={`bg-slate-800/50 rounded-2xl p-8 border transition-all duration-300 ${
+                plan.popular ? 'border-cyan-500 scale-105' : 'border-cyan-500/20 hover:border-cyan-500/40'
+              }`}>
+                {plan.popular && (
+                  <div className="flex justify-center mb-4">
+                    <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center">
+                      <Star className="w-4 h-4 mr-1" />
                       Most Popular
-                    </div>
-                  )}
-                  <div className="text-center mb-8">
-                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                    <p className="text-gray-300 mb-4">{plan.description}</p>
-                    <div className="flex items-baseline justify-center">
-                      <span className="text-4xl font-bold text-white">{plan.price}</span>
-                      <span className="text-gray-400 ml-2">{plan.period}</span>
-                    </div>
+                    </span>
                   </div>
-                  <ul className="space-y-4 mb-8">
-                    {plan.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center text-gray-300">
-                        <CheckSquare className="w-5 h-5 text-green-400 mr-3" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-                    plan.popular 
-                      ? 'bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white transform hover:scale-105' 
-                      : 'border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white'
-                  }`}>
-                    {plan.name === 'Enterprise' ? 'Contact Sales' : 'Start Free Trial'}
-                  </button>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Testimonials Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                What Our Customers Say
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Join thousands of organizations who have transformed their cloud infrastructure with AI.
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {testimonials.map((testimonial, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8">
-                  <div className="flex items-center mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                    ))}
-                  </div>
-                  <p className="text-gray-300 mb-6 italic">"{testimonial.content}"</p>
-                  <div>
-                    <div className="font-semibold text-white">{testimonial.name}</div>
-                    <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
+                )}
+                
+                <div className="text-center mb-8">
+                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                  <p className="text-gray-300 mb-4">{plan.description}</p>
+                  <div className="flex items-baseline justify-center">
+                    <span className="text-4xl font-bold text-cyan-400">{plan.price}</span>
+                    <span className="text-gray-400 ml-1">{plan.period}</span>
                   </div>
                 </div>
-              ))}
-            </div>
+                
+                <ul className="space-y-4 mb-8">
+                  {plan.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" />
+                      <span className="text-gray-300">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                
+                <Link
+                  to="/contact"
+                  className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
+                    plan.popular
+                      ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white hover:from-cyan-600 hover:to-purple-600'
+                      : 'border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white'
+                  }`}
+                >
+                  Get Started
+                </Link>
+              </div>
+            ))}
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 backdrop-blur-sm rounded-3xl p-12 border border-blue-500/20">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Ready to Optimize Your Cloud Infrastructure?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Start your free trial today and experience the power of AI-driven cloud management.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                  Start Free Trial
-                  <ArrowRight className="w-5 h-5 ml-2 inline" />
-                </button>
-                <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300">
-                  Schedule Demo
-                </button>
+      {/* Benefits Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold text-white mb-6">Why Choose AI Cloud Infrastructure?</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Join hundreds of companies that have transformed their cloud operations with AI.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Zap className="w-8 h-8 text-cyan-400" />
               </div>
-              <div className="mt-6 text-sm text-gray-400">
-                Questions? Call us at <a href="tel:+13024640950" className="text-blue-400 hover:text-blue-300">(302) 464-0950</a> or email <a href="mailto:kleber@ziontechgroup.com" className="text-blue-400 hover:text-blue-300">kleber@ziontechgroup.com</a>
+              <h3 className="text-xl font-semibold text-white mb-4">Intelligent Automation</h3>
+              <p className="text-gray-300">Automate complex cloud operations with AI-powered decision making and optimization.</p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Target className="w-8 h-8 text-cyan-400" />
               </div>
+              <h3 className="text-xl font-semibold text-white mb-4">Cost Optimization</h3>
+              <p className="text-gray-300">Reduce cloud costs by up to 40% with intelligent resource allocation and scaling.</p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Shield className="w-8 h-8 text-cyan-400" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-4">Enterprise Security</h3>
+              <p className="text-gray-300">Bank-level security with AI threat detection and compliance monitoring.</p>
             </div>
           </div>
-        </section>
-      </main>
-      
-      <Footer />
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
+            <h2 className="text-3xl font-bold text-white mb-6">
+              Ready to Transform Your Cloud Infrastructure?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Get a free infrastructure assessment and discover how AI can optimize your cloud operations.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold py-4 px-8 rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center space-x-2"
+              >
+                <span>Get Free Assessment</span>
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+              <Link
+                to="/pricing"
+                className="border border-cyan-500 text-cyan-400 font-semibold py-4 px-8 rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300 flex items-center justify-center space-x-2"
+              >
+                <span>View All Plans</span>
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };

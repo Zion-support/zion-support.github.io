@@ -22,6 +22,60 @@ const MicroSaasPage: React.FC = () => {
   const products: MicroSaasProduct[] = [
     {
       id: '1',
+      icon: '🤖',
+      title: 'AI Customer Support Chatbot',
+      description: 'Revolutionary AI-powered customer support platform with advanced NLP and sentiment analysis',
+      features: [
+        'Advanced AI chatbot with 99.2% accuracy',
+        'Multi-channel support (web, mobile, social)',
+        'Sentiment analysis and mood tracking',
+        'Live agent handoff',
+        'Knowledge base management',
+        'Performance analytics'
+      ],
+      price: '$149/month',
+      users: 'Up to 50 users',
+      popular: true,
+      category: 'AI'
+    },
+    {
+      id: '2',
+      icon: '✍️',
+      title: 'AI Content Studio',
+      description: 'Complete content creation suite with AI writing, image generation, video editing, and social media automation',
+      features: [
+        'AI-powered content generation',
+        'Image and video creation',
+        'Multi-platform publishing',
+        'Brand voice training',
+        'Performance analytics',
+        'Team collaboration tools'
+      ],
+      price: '$299/month',
+      users: 'Up to 25 users',
+      popular: true,
+      category: 'AI'
+    },
+    {
+      id: '3',
+      icon: '💰',
+      title: 'AI Financial Analyzer',
+      description: 'Intelligent financial management and accounting automation platform with AI insights',
+      features: [
+        'Real-time financial analysis',
+        'Portfolio optimization',
+        'Risk assessment',
+        'Automated bookkeeping',
+        'Goal tracking',
+        'Fraud detection'
+      ],
+      price: '$199/month',
+      users: 'Up to 20 users',
+      popular: false,
+      category: 'AI'
+    },
+    {
+      id: '4',
       icon: '📊',
       title: 'Zion Analytics Pro',
       description: 'Advanced real-time business intelligence and analytics platform with AI-powered insights',
@@ -35,11 +89,11 @@ const MicroSaasPage: React.FC = () => {
       ],
       price: '$89/month',
       users: 'Up to 25 users',
-      popular: true,
+      popular: false,
       category: 'Analytics'
     },
     {
-      id: '2',
+      id: '5',
       icon: '💬',
       title: 'Zion Chat AI',
       description: 'Next-generation AI customer support platform with advanced NLP and sentiment analysis',
@@ -53,11 +107,11 @@ const MicroSaasPage: React.FC = () => {
       ],
       price: '$149/month',
       users: 'Up to 50 users',
-      popular: true,
+      popular: false,
       category: 'Communication'
     },
     {
-      id: '3',
+      id: '6',
       icon: '🔐',
       title: 'Zion Security Shield',
       description: 'Enterprise-grade cybersecurity monitoring with AI threat detection and automated response',
@@ -75,7 +129,7 @@ const MicroSaasPage: React.FC = () => {
       category: 'Security'
     },
     {
-      id: '4',
+      id: '7',
       icon: '☁️',
       title: 'Zion Cloud Vault',
       description: 'Intelligent cloud backup and disaster recovery with AI-powered optimization',
@@ -93,7 +147,7 @@ const MicroSaasPage: React.FC = () => {
       category: 'Storage'
     },
     {
-      id: '5',
+      id: '8',
       icon: '📈',
       title: 'Zion Performance AI',
       description: 'Advanced application performance monitoring with AI-powered optimization recommendations',
@@ -111,8 +165,8 @@ const MicroSaasPage: React.FC = () => {
       category: 'Monitoring'
     },
     {
-      id: '6',
-      icon: '🤖',
+      id: '9',
+      icon: '⚙️',
       title: 'Zion AI Workflow',
       description: 'Intelligent business process automation with custom AI models and workflow optimization',
       features: [
@@ -125,11 +179,11 @@ const MicroSaasPage: React.FC = () => {
       ],
       price: '$199/month',
       users: 'Up to 75 users',
-      popular: true,
+      popular: false,
       category: 'AI'
     },
     {
-      id: '7',
+      id: '10',
       icon: '📧',
       title: 'Zion Email Marketing AI',
       description: 'AI-powered email marketing platform with advanced segmentation and personalization',
@@ -145,28 +199,10 @@ const MicroSaasPage: React.FC = () => {
       users: 'Up to 60 users',
       popular: false,
       category: 'Marketing'
-    },
-    {
-      id: '8',
-      icon: '💰',
-      title: 'Zion Finance AI',
-      description: 'Intelligent financial management and accounting automation platform',
-      features: [
-        'Automated bookkeeping',
-        'AI-powered expense categorization',
-        'Financial forecasting',
-        'Invoice generation and tracking',
-        'Tax preparation assistance',
-        'Multi-currency support'
-      ],
-      price: '$179/month',
-      users: 'Up to 20 users',
-      popular: false,
-      category: 'Finance'
     }
   ];
 
-  const categories = ['All', 'Analytics', 'Communication', 'Security', 'Storage', 'Monitoring', 'AI', 'Marketing', 'Finance'];
+  const categories = ['All', 'AI', 'Analytics', 'Communication', 'Security', 'Storage', 'Monitoring', 'Marketing', 'Finance'];
 
   const filteredProducts = selectedCategory === 'All' 
     ? products 

@@ -65,9 +65,9 @@ const Navigation: React.FC = () => {
   ];
 
   const itServices = [
+    { name: 'AI Cybersecurity Suite', href: '/ai-cybersecurity-suite', icon: Shield, description: 'Advanced AI security solutions' },
     { name: 'Cloud Infrastructure', href: '/ai-cloud-infrastructure', icon: Cloud, description: 'Scalable cloud solutions' },
     { name: 'API Management', href: '/ai-api-management', icon: Code, description: 'API development & management' },
-    { name: 'Cybersecurity', href: '/ai-cybersecurity-suite', icon: Shield, description: 'Comprehensive security' },
     { name: 'Data Management', href: '/ai-data-analytics', icon: Database, description: 'Data processing & storage' },
     { name: 'Network Solutions', href: '/ai-network-solutions', icon: Globe, description: 'Advanced networking' },
     { name: 'Mobile Development', href: '/ai-mobile-development', icon: Smartphone, description: 'Mobile app solutions' },
@@ -78,12 +78,12 @@ const Navigation: React.FC = () => {
   ];
 
   const microSaasServices = [
+    { name: 'AI Customer Support Chatbot', href: '/ai-customer-support-chatbot', icon: MessageCircle, description: 'Intelligent customer service' },
+    { name: 'AI Content Studio', href: '/ai-content-studio', icon: FileText, description: 'Complete content creation suite' },
+    { name: 'AI Financial Analyzer', href: '/ai-financial-analyzer', icon: DollarSign, description: 'Intelligent financial management' },
     { name: 'Project Management', href: '/micro-saas-project-management', icon: CheckSquare, description: 'Streamlined project tracking' },
-    { name: 'Customer Support', href: '/micro-saas-customer-support', icon: MessageCircle, description: 'Efficient support systems' },
     { name: 'Analytics Dashboard', href: '/micro-saas-analytics', icon: BarChart, description: 'Business intelligence' },
-    { name: 'Content Management', href: '/micro-saas-cms', icon: FileText, description: 'Content organization' },
     { name: 'Team Collaboration', href: '/micro-saas-collaboration', icon: Users, description: 'Team productivity tools' },
-    { name: 'Financial Tracking', href: '/micro-saas-finance', icon: DollarSign, description: 'Financial management' },
     { name: 'Inventory Management', href: '/micro-saas-inventory', icon: Box, description: 'Stock and asset tracking' },
     { name: 'Performance Monitoring', href: '/micro-saas-monitoring', icon: Monitor, description: 'System performance tracking' }
   ];

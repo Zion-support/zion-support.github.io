@@ -44,6 +44,12 @@ const AIVoiceAssistantPlatformPage = React.lazy(() => import('./app/ai-voice-ass
 const AIPredictiveMaintenancePage = React.lazy(() => import('./app/ai-predictive-maintenance/page'));
 const AISupplyChainOptimizationPage = React.lazy(() => import('./app/ai-supply-chain-optimization/page'));
 const AICloudInfrastructurePage = React.lazy(() => import('./app/ai-cloud-infrastructure/page'));
+// New Micro SAAS Services
+const AICustomerSupportChatbotPage = React.lazy(() => import('./app/ai-customer-support-chatbot/page'));
+const AIContentStudioPage = React.lazy(() => import('./app/ai-content-studio/page'));
+const AIFinancialAnalyzerPage = React.lazy(() => import('./app/ai-financial-analyzer/page'));
+// New IT Services
+const AICybersecuritySuitePage = React.lazy(() => import('./app/ai-cybersecurity-suite/page'));
 // Performance monitoring hook
 const AppWithPerformanceMonitoring: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   usePerformanceMonitor();
@@ -95,6 +101,12 @@ const App: React.FC = () => {
                             <Route path="/ai-predictive-maintenance" element={<AIPredictiveMaintenancePage />} />
                             <Route path="/ai-supply-chain-optimization" element={<AISupplyChainOptimizationPage />} />
                             <Route path="/ai-cloud-infrastructure" element={<AICloudInfrastructurePage />} />
+                            {/* New Micro SAAS Routes */}
+                            <Route path="/ai-customer-support-chatbot" element={<AICustomerSupportChatbotPage />} />
+                            <Route path="/ai-content-studio" element={<AIContentStudioPage />} />
+                            <Route path="/ai-financial-analyzer" element={<AIFinancialAnalyzerPage />} />
+                            {/* New IT Services Routes */}
+                            <Route path="/ai-cybersecurity-suite" element={<AICybersecuritySuitePage />} />
                           </Routes>
                         </Suspense>
                       </main>

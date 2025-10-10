@@ -50,13 +50,11 @@ export const ContentSkeleton: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export const LoadingSpinner: React.FC = () => (
   <div className="flex items-center justify-center p-8">
     <div className="w-8 h-8 border-4 border-cyan-400 border-t-transparent rounded-full animate-spin"></div>
   </div>
 );
-=======
 export const StatsSkeleton: React.FC = () => {
   return (
     <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8 animate-pulse">
@@ -71,4 +69,3 @@ export const StatsSkeleton: React.FC = () => {
     </div>
   );
 };
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
