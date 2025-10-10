@@ -1,16 +1,9 @@
 'use client';
-<<<<<<< HEAD
-
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Brain, BarChart, TrendingUp, Target, Zap, Shield } from 'lucide-react';
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { Brain, BarChart, Target, TrendingUp, CheckCircle, ArrowRight, Zap, Eye, Shield } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-7ab3
 
 const AIAnalyticsPage: React.FC = () => {
   const features = [
