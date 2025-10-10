@@ -2,15 +2,6 @@
 import React from 'react';
 import {Helmet}}from 'react-helmet-async';
 
-<<<<<<< HEAD
-interface SEOHeadProps {title: string;,}
-  description: string;,
-  keywords?: string[]
-  canonicalUrl?: string;
-  structuredData?: any;
-  ogImage?: string;
-  twitterCard?: string;}const SEOHead: React.FC<SEOHeadProps> = ({,
-=======
 interface SEOHeadProps {
   title: string;
   description: string;
@@ -30,37 +21,13 @@ interface SEOHeadProps {
 }
 
 const SEOHead: React.FC<SEOHeadProps> = ({
->>>>>>> cursor/analyze-improve-and-deploy-application-e11d
   title,
   description,
   keywords = [],
   canonicalUrl,
   structuredData,
   ogImage = '/og-image.jpg',
-<<<<<<< HEAD
-  twitterCard = 'summary_large_image'}) => {const fullTitle = title.includes('Zion Tech Group') ? title : `${title}| Zion Tech Group`;
-  
-  return(<Helmet />)
-      {/* Basic Meta Tags */} <title>{fullTitle}</title>
-      <meta name="description" content={description}/>
-      <meta name="keywords" content={keywords.join(', ')}/>
-      <link rel="canonical" href={canonicalUrl}/>
-      
-      {/* Open Graph Tags */} <meta property="og: title" content={fullTitle,}/>
-      <meta property="og: description" content={description,}/>
-      <meta property="og: type" content="website" />,
-      <meta property="og: url" content={canonicalUrl,}/>
-      <meta property="og: image" content={ogImage,}/>
-      <meta property="og: site_name" content="Zion Tech Group" />,
-      
-      {/* Twitter Card Tags */} <meta name="twitter: card" content={twitterCard,}/>
-      <meta name="twitter: title" content={fullTitle,}/>
-      <meta name="twitter: description" content={description,}/>
-      <meta name="twitter: image" content={ogImage,}/>
-      
-      {/* Additional SEO Tags */} <meta name="robots" content="index, follow" />
-=======
-  twitterCard = 'summary_large_image',
+twitterCard = 'summary_large_image',
   noIndex = false,
   article
 }) => {
@@ -144,7 +111,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       
       {/* Additional SEO Tags */}
       <meta name="robots" content={noIndex ? "noindex, nofollow" : "index, follow"} />
->>>>>>> cursor/analyze-improve-and-deploy-application-e11d
       <meta name="author" content="Zion Tech Group" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta name="theme-color" content="#1e293b" />
@@ -172,17 +138,10 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       
-<<<<<<< HEAD
-      {/* Structured Data */}{structuredData && (
-        <script type="application/ld+json">
-          {JSON.stringify(structuredData)} </script>
-      )}
-=======
-      {/* Structured Data */}
+{/* Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify(mergedStructuredData)}
       </script>
->>>>>>> cursor/analyze-improve-and-deploy-application-e11d
     </Helmet>
   );
 };

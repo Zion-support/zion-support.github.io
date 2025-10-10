@@ -1,10 +1,5 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
-import {Helmet}}from 'react-helmet-async';
-import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe}}from 'lucide-react';
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-e11d
 
 interface SkeletonProps {
   className?: string;

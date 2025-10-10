@@ -54,33 +54,6 @@ const App: React.FC = () => {
           <AppWithPerformanceMonitoring>
             <AnalyticsProvider>
               <PerformanceOptimizer>
-<<<<<<< HEAD
-                <EnhancedAccessibility>
-                  <AccessibilityEnhancer>
-                    <PerformanceMonitor />
-                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain">
-                      <FuturisticBackground />
-                      <Navigation />
-                      <Breadcrumb />
-                      <main id="main-content" className="flex-1" tabIndex={-1}>
-                        <Suspense fallback={<PageLoader />}>
-                          <Routes>
-                            <Route path="/" element={<HomePage />} />
-                            <Route path="/about" element={<AboutPage />} />
-                            <Route path="/contact" element={<ContactPage />} />
-                            <Route path="/services" element={<ServicesPage />} />
-                            <Route path="/pricing" element={<PricingPage />} />
-                            <Route path="/blog" element={<BlogPage />} />
-                            <Route path="/case-studies" element={<CaseStudiesPage />} />
-                            <Route path="/careers" element={<CareersPage />} />
-                          </Routes>
-                        </Suspense>
-                      </main>
-                      <Footer />
-                    </div>
-                  </AccessibilityEnhancer>
-                </EnhancedAccessibility>
-=======
                 <AccessibilityEnhancer
                   enableKeyboardNavigation={true}
                   enableScreenReaderSupport={true}
@@ -125,7 +98,6 @@ const App: React.FC = () => {
                     <Footer />
                   </div>
                 </AccessibilityEnhancer>
->>>>>>> cursor/analyze-improve-and-deploy-application-e11d
               </PerformanceOptimizer>
             </AnalyticsProvider>
           </AppWithPerformanceMonitoring>

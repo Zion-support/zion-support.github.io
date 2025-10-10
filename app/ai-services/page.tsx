@@ -906,15 +906,10 @@ const AiServicesPage: React.FC = () => {,
       ],
       category: 'Voice AI',
       popular: true,
-<<<<<<< HEAD
-      icon: Mic;,},
-    {id: 'ai-content-generation',
-=======
-      icon: Mic
+icon: Mic
     },
     {
       id: 'ai-content-generation',
->>>>>>> cursor/analyze-improve-and-deploy-application-e11d
       name: 'AI Content Generation Pro',
       description: 'Advanced content generation platform with multi-format support and brand consistency',
       price: '$499/month',
@@ -937,13 +932,9 @@ const AiServicesPage: React.FC = () => {,
       ],
       category: 'Content Generation',
       popular: true,
-<<<<<<< HEAD
-      icon: FileText;,}]
-=======
-      icon: FileText
+icon: FileText
     }
   ]
->>>>>>> cursor/analyze-improve-and-deploy-application-e11d
 
   const categories = [
     {id: 'all', name: 'All Services', count: services.length ,},

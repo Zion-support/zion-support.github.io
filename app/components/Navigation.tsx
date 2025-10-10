@@ -1,9 +1,9 @@
 'use client';
-import React, {useState, useEffect, useCallback}from 'react';
-import {Link}}from 'react-router-dom';
-import {ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package, Mic, Workflow, Eye, Wifi, MessageSquare, CheckCircle, ShoppingCart}}from 'lucide-react';
+import React, { useState, useEffect, useCallback } from 'react';
+import { Link } from 'react-router-dom';
+import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package, Mic, Workflow, Eye, Wifi, MessageSquare, CheckCircle, ShoppingCart } from 'lucide-react';
 
-const Navigation: React.FC = () => {,
+const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
@@ -14,47 +14,64 @@ const Navigation: React.FC = () => {,
   // Handle scroll effect;
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);}window.addEventListener('scroll', handleScroll);
+        setIsScrolled(window.scrollY > 50);
+      };
+      window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Close mobile menu when clicking outside;
-  useEffect(() => {const handleClickOutside = (event: MouseEvent) => {,
+  // Close mobile menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
       if (isOpen && !(event.target as Element).closest('.mobile-menu')) {
-        setIsOpen(false);}}
+        setIsOpen(false);
+      }
+    };
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, [isOpen]);
 
-  const toggleMenu = useCallback(() => {setIsOpen(!isOpen);}, [isOpen]);
+  const toggleMenu = useCallback(() => {
+    setIsOpen(!isOpen);
+  }, [isOpen]);
 
-  const toggleServices = useCallback(() => {setServicesOpen(!servicesOpen);
+  const toggleServices = useCallback(() => {
+    setServicesOpen(!servicesOpen);
     setAiServicesOpen(false);
     setItServicesOpen(false);
-    setMicroSaasOpen(false);}, [servicesOpen]);
+    setMicroSaasOpen(false);
+  }, [servicesOpen]);
 
-  const toggleAiServices = useCallback(() => {setAiServicesOpen(!aiServicesOpen);
+  const toggleAiServices = useCallback(() => {
+    setAiServicesOpen(!aiServicesOpen);
     setServicesOpen(false);
     setItServicesOpen(false);
-    setMicroSaasOpen(false);}, [aiServicesOpen]);
+    setMicroSaasOpen(false);
+  }, [aiServicesOpen]);
 
-  const toggleItServices = useCallback(() => {setItServicesOpen(!itServicesOpen);
+  const toggleItServices = useCallback(() => {
+    setItServicesOpen(!itServicesOpen);
     setServicesOpen(false);
     setAiServicesOpen(false);
-    setMicroSaasOpen(false);}, [itServicesOpen]);
+    setMicroSaasOpen(false);
+  }, [itServicesOpen]);
 
-  const toggleMicroSaas = useCallback(() => {setMicroSaasOpen(!microSaasOpen);
-    setServicesOpen(false);
-    setAiServicesOpen(false);
-    setItServicesOpen(false);}, [microSaasOpen]);
-
-  const closeAllMenus = useCallback(() => {setIsOpen(false);
+  const toggleMicroSaas = useCallback(() => {
+    setMicroSaasOpen(!microSaasOpen);
     setServicesOpen(false);
     setAiServicesOpen(false);
     setItServicesOpen(false);
-    setMicroSaasOpen(false);}, []);
+  }, [microSaasOpen]);
 
-  // Service data;
+  const closeAllMenus = useCallback(() => {
+    setIsOpen(false);
+    setServicesOpen(false);
+    setAiServicesOpen(false);
+    setItServicesOpen(false);
+    setMicroSaasOpen(false);
+  }, []);
+
+  // Service data
   const aiServices = [
     {name: 'AI Analytics', href: '/ai-analytics', icon: BarChart, description: 'Advanced data insights' ,},
     {name: 'AI Automation', href: '/ai-automation', icon: Zap, description: 'Streamline workflows' ,},
@@ -131,45 +148,7 @@ const Navigation: React.FC = () => {,
     {name: 'Cloud-Native Security', href: '/cloud-native-security', icon: Shield, description: 'Container security' ,}]
 
   const microSaasServices = [
-<<<<<<< HEAD
-    {name: 'Zion Analytics Pro', href: '/zion-analytics-pro', icon: BarChart, description: 'Business intelligence platform' ,},
-    {name: 'Zion Chat AI', href: '/zion-chat-ai', icon: MessageCircle, description: 'AI customer support' ,},
-    {name: 'Zion Security Shield', href: '/zion-security-shield', icon: Shield, description: 'Cybersecurity monitoring' ,},
-    {name: 'Zion Cloud Vault', href: '/zion-cloud-vault', icon: Cloud, description: 'Cloud backup & recovery' ,},
-    {name: 'Zion Content Studio', href: '/zion-content-studio', icon: FileText, description: 'AI content creation' ,},
-    {name: 'Zion CRM Intelligence', href: '/zion-crm-intelligence', icon: Users, description: 'AI-enhanced CRM' ,},
-    {name: 'Zion Data Sync', href: '/zion-data-sync', icon: Database, description: 'Data integration platform' ,},
-    {name: 'Zion Lead Magnet', href: '/zion-lead-magnet', icon: Target, description: 'Lead generation platform' ,},
-    {name: 'Zion Project Master', href: '/zion-project-master', icon: Calendar, description: 'Project management AI' ,},
-    {name: 'Zion Email Automation', href: '/zion-email-automation', icon: Mail, description: 'Email marketing AI' ,},
-    {name: 'Zion Inventory Smart', href: '/zion-inventory-smart', icon: Package, description: 'Inventory management' ,},
-    {name: 'Zion Invoice Genius', href: '/zion-invoice-genius', icon: DollarSign, description: 'Invoice generation' ,},
-    {name: 'Zion Workflow Automation', href: '/zion-workflow-automation', icon: Settings, description: 'Process automation' ,},
-    {name: 'Zion Performance Monitor', href: '/zion-performance-monitor', icon: Monitor, description: 'Performance monitoring' ,},
-    {name: 'Zion Compliance Manager', href: '/zion-compliance-manager', icon: CheckSquare, description: 'Compliance management' ,},
-    {name: 'Zion Social Scheduler', href: '/zion-social-scheduler', icon: Globe, description: 'Social media management' ,},
-    {name: 'Zion AI Video Editor', href: '/zion-ai-video-editor', icon: Eye, description: 'AI video editing' ,},
-    {name: 'Zion AI Translator Pro', href: '/zion-ai-translator-pro', icon: Globe, description: 'Advanced translation' ,},
-    {name: 'Zion AI Code Reviewer', href: '/zion-ai-code-reviewer', icon: Code, description: 'Intelligent code review' ,},
-    {name: 'Zion Customer Insights Pro', href: '/zion-customer-insights', icon: Users, description: 'Customer analytics' ,},
-    {name: 'Zion AI Email Assistant', href: '/zion-ai-email-assistant', icon: Mail, description: 'Smart email management' ,},
-    {name: 'Zion AI Meeting Assistant', href: '/zion-ai-meeting-assistant', icon: Calendar, description: 'Meeting automation' ,},
-    {name: 'Zion AI SEO Optimizer', href: '/zion-ai-seo-optimizer', icon: Target, description: 'SEO optimization' ,},
-    {name: 'Zion AI Data Cleaner', href: '/zion-ai-data-cleaner', icon: Database, description: 'Data cleaning & validation' ,},
-    {name: 'Zion AI Contract Analyzer', href: '/zion-ai-contract-analyzer', icon: FileText, description: 'Contract analysis' ,},
-    {name: 'Zion AI Survey Builder', href: '/zion-ai-survey-builder', icon: CheckSquare, description: 'Intelligent surveys' ,},
-    {name: 'Zion AI Accounting Assistant', href: '/zion-ai-accounting-assistant', icon: DollarSign, description: 'AI accounting' ,},
-    {name: 'Zion AI Recruitment Pro', href: '/zion-ai-recruitment-pro', icon: Users, description: 'AI recruitment' ,},
-    {name: 'Zion AI Content Moderation', href: '/zion-ai-content-moderation', icon: Shield, description: 'Content moderation' ,},
-    {name: 'Zion AI Predictive Maintenance', href: '/zion-ai-predictive-maintenance', icon: Settings, description: 'Equipment maintenance' ,},
-    {name: 'Zion AI Energy Manager', href: '/zion-ai-energy-manager', icon: Zap, description: 'Energy optimization' ,},
-    {name: 'Zion AI Supply Chain Optimizer', href: '/zion-ai-supply-chain-optimizer', icon: Box, description: 'Supply chain AI' ,},
-    {name: 'Zion AI Fraud Detector', href: '/zion-ai-fraud-detector', icon: Shield, description: 'Fraud detection' ,},
-    {name: 'Zion AI Customer Service Pro', href: '/zion-ai-customer-service-pro', icon: MessageSquare, description: 'Advanced customer service' ,},
-    {name: 'Zion AI Marketing Automation', href: '/zion-ai-marketing-automation', icon: Target, description: 'Marketing AI' ,},
-    {name: 'Zion AI Document AI', href: '/zion-ai-document-ai', icon: FileText, description: 'Document processing' ,}];
-=======
-    { name: 'AI Analytics Dashboard', href: '/ai-analytics-dashboard', icon: BarChart, description: 'Real-time BI & Analytics' },
+{ name: 'AI Analytics Dashboard', href: '/ai-analytics-dashboard', icon: BarChart, description: 'Real-time BI & Analytics' },
     { name: 'AI Chatbot Builder', href: '/ai-chatbot-builder', icon: Brain, description: 'No-code Chatbot Platform' },
     { name: 'AI Email Marketing', href: '/ai-email-marketing', icon: Mail, description: 'Automated Email Campaigns' },
     { name: 'Social Media AI', href: '/social-media-ai', icon: Globe, description: 'AI Social Management' },
@@ -216,7 +195,6 @@ const Navigation: React.FC = () => {,
     { name: 'Zion AI Marketing Automation', href: '/zion-ai-marketing-automation', icon: Target, description: 'Marketing AI' },
     { name: 'Zion AI Document AI', href: '/zion-ai-document-ai', icon: FileText, description: 'Document processing' }
   ];
->>>>>>> cursor/analyze-improve-and-deploy-application-e11d
 
   const emergingTech = [
     {name: '5G Implementation', href: '/5g-implementation', icon: Zap, description: 'Next-gen connectivity' ,},
@@ -230,9 +208,11 @@ const Navigation: React.FC = () => {,
     {name: 'IoT Integration', href: '/iot-integration', icon: Wifi, description: 'Internet of Things' ,},
     {name: 'Machine Learning', href: '/machine-learning', icon: Brain, description: 'Advanced ML algorithms' ,}]
 
-  return(<nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${)
-      isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-2xl border-b border-cyan-500/20' : 'bg-transparent'}`}>
-      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,</div>
+    return (
+      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-2xl border-b border-cyan-500/20' : 'bg-transparent'
+      }`}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">{/* Logo */</div>} <div className="flex-shrink-0">
             <Link to="/" className="flex items-center space-x-3 group">
               <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 via-purple-600 to-pink-600 rounded-xl flex items-center justify-center group-hover: scale-110 transition-all duration-300 shadow-lg shadow-cyan-500/25">,</div>
