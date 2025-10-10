@@ -3,7 +3,6 @@
 'use client';
 interface MicroSAASCardProps {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
   servic,
   e: {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -34,8 +33,6 @@ interface MicroSAASCardProps {/* TODO: Fix JSX expression */}
 
 const MicroSAASCard: React.FC;
           <MicroSAASCardProps> = ({ service }) => {// TODO: Add content;}
-}
-
 const MicroSAASCard: React.FC<MicroSAASCardProps> = () => {
   return (
     
@@ -44,11 +41,12 @@ const MicroSAASCard: React.FC<MicroSAASCardProps> = () => {
           
           
           
-          
-          
-          <div>Coming Soon</div>
+          )
+          )
+          <div>Coming Soon</div>)
   )
     
+}
           <div className={`cyber-card p-6 hover:scale-105 transition-all duration-300 ${service.popular ? 'ring-2 ring-cyan-400' : ''}`}>
 
       {service.popular && ()}

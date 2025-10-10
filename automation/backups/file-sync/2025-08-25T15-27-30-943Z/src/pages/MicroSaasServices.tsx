@@ -2,29 +2,25 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
 import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, Shield, Settings, Eye, Leaf, CreditCard, Heart, Truck, ShoppingCart, Phone, Mail, MapPin, Globe, Bot, Network, Database as DatabaseIcon, Shield as ShieldIcon, Zap as ZapIcon, Building, Factory, Store, Car, Plane, Ship, Home, Hospital, Building2, GraduationCap, FileText, BarChart3, Users as UsersIcon, CreditCard as CreditCardIcon, MessageSquare, Camera, Video, Music, TrendingUp, PieChart, Activity} Package; Wifi } from 'lucide-react'
   // Micro SAAS Services data;
   const microSaasServices = [
-    {id: 1;
-      name: "TaskFlow Pro"
-      category: "Productivity"
-      pricing: "Freemium"
-      description: "Simple yet powerful task management and project collaboration tool for small teams"
-      price: 15;
-      pricingModel: "monthly",
-      userLimit: "Up to 10 users",
+    {id: name, "TaskFlow Pro"
+      category: pricing, "Freemium"
+      description: price, 15;
+      pricingModel: userLimit, "Up to 10 users"]
       features: ["Task management", "Team collaboration", "Time tracking", "Progress reports"],
       benefits: ["Increased productivity", "Better team coordination", "Project visibility", "Easy to use"],
       targetAudience: ["Small teams", "Startups", "Freelancers", "Small businesses"],
       tags: ["Task Management", "Productivity", "Collaboration", "Project Management"],
       contactInfo: {,
         phone: "+1 302 464 0950",
+
+}
+}
         email: "kleber@ziontechgroup.com"}
         website: "https://ziontechgroup.com"}
     },
-    {id: 16;
-      name: "AI CodeGen Pro"
-      category: "Development"
-      pricing: "Freemium"
-      description: "AI-powered code generation and development assistance for developers and teams"
-      price: 45;
+    {id: name, "AI CodeGen Pro"
+      category: pricing, "Freemium"
+      description: price, 45;
       pricingModel: "monthly",
       userLimit: "Up to 8 developers",
       features: ["AI code generation", "Code review", "Bug detection", "Documentation auto-generation"],
@@ -33,15 +29,15 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       tags: ["AI Development", "Code Generation", "Code Review", "Automation", "Productivity"],
       contactInfo: {,
         phone: "+1 302 464 0950",
+
+}
+}
         email: "kleber@ziontechgroup.com"}
         website: "https://ziontechgroup.com"}
     },
-    {id: 17;
-      name: "Quantum Analytics"
-      category: "Analytics"
-      pricing: "Freemium"
-      description: "Advanced predictive analytics and business intelligence using quantum computing principles"
-      price: 55;
+    {id: name, "Quantum Analytics"
+      category: pricing, "Freemium"
+      description: price, 55;
       pricingModel: "monthly",
       userLimit: "Up to 12 users",
       features: ["Predictive modeling", "Real-time analytics", "AI insights", "Custom dashboards"],
@@ -50,15 +46,15 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       tags: ["Quantum Analytics", "Predictive Modeling", "Business Intelligence", "AI", "Real-time"],
       contactInfo: {,
         phone: "+1 302 464 0950",
+
+}
+}
         email: "kleber@ziontechgroup.com"}
         website: "https://ziontechgroup.com"}
     },
-    {id: 18;
-      name: "Blockchain Business Suite"
-      category: "Blockchain"
-      pricing: "Freemium"
-      description: "Complete blockchain solution for business operations and smart contract management"
-      price: 65;
+    {id: name, "Blockchain Business Suite"
+      category: pricing, "Freemium"
+      description: price, 65;
       pricingModel: "monthly",
       userLimit: "Up to 20 users",
       features: ["Smart contracts", "Token management", "DeFi integration", "Blockchain analytics"],
@@ -67,15 +63,15 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       tags: ["Blockchain", "Smart Contracts", "DeFi", "Cryptocurrency", "Business Solutions"],
       contactInfo: {,
         phone: "+1 302 464 0950",
+
+}
+}
         email: "kleber@ziontechgroup.com"}
         website: "https://ziontechgroup.com"}
     },
-    {id: 19;
-      name: "IoT Enterprise Hub"
-      category: "IoT"
-      pricing: "Freemium"
-      description: "Comprehensive IoT platform for enterprise device management and data collection"
-      price: 75;
+    {id: name, "IoT Enterprise Hub"
+      category: pricing, "Freemium"
+      description: price, 75;
       pricingModel: "monthly",
       userLimit: "Up to 1000 devices",
       features: ["Device management", "Real-time monitoring", "Data analytics", "Automation rules"],
@@ -84,15 +80,15 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       tags: ["IoT", "Device Management", "Real-time Monitoring", "Automation", "Enterprise"],
       contactInfo: {,
         phone: "+1 302 464 0950",
+
+}
+}
         email: "kleber@ziontechgroup.com"}
         website: "https://ziontechgroup.com"}
     },
-    {id: 20;
-      name: "AR/VR Studio Pro"
-      category: "Immersive Tech"
-      pricing: "Freemium"
-      description: "Professional AR/VR development platform for immersive experiences and training"
-      price: 85;
+    {id: name, "AR/VR Studio Pro"
+      category: pricing, "Freemium"
+      description: price, 85;
       pricingModel: "monthly",
       userLimit: "Up to 15 developers",
       features: ["3 D modeling", "VR development", "AR integration", "Analytics dashboard"],
@@ -101,15 +97,15 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       tags: ["AR/VR", "3D Modeling", "Immersive Tech", "Training", "Development"],
       contactInfo: {,
         phone: "+1 302 464 0950",
+
+}
+}
         email: "kleber@ziontechgroup.com"}
         website: "https://ziontechgroup.com"}
     },
-    {id: 2;
-      name: "InvoiceGenius"
-      category: "Finance"
-      pricing: "Freemium"
-      description: "AI-powered invoice generation and financial management for small businesses"
-      price: 25;
+    {id: name, "InvoiceGenius"
+      category: pricing, "Freemium"
+      description: price, 25;
       pricingModel: "monthly",
       userLimit: "Unlimited users",
       features: ["AI invoice generation", "Expense tracking", "Financial reports", "Tax preparation"],
@@ -118,15 +114,15 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       tags: ["Invoicing", "Finance", "AI", "Tax Preparation", "Expense Tracking"],
       contactInfo: {,
         phone: "+1 302 464 0950",
+
+}
+}
         email: "kleber@ziontechgroup.com"}
         website: "https://ziontechgroup.com"}
     },
-    {id: 3;
-      name: "SocialSync Pro"
-      category: "Marketing"
-      pricing: "Freemium"
-      description: "Comprehensive social media management and analytics platform for businesses"
-      price: 30;
+    {id: name, "SocialSync Pro"
+      category: pricing, "Freemium"
+      description: price, 30;
       pricingModel: "monthly",
       userLimit: "Up to 5 users",
       features: ["Multi-platform posting", "Content scheduling", "Analytics dashboard", "Engagement tracking"],
@@ -135,15 +131,15 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       tags: ["Social Media", "Marketing", "Analytics", "Content Management", "Automation"],
       contactInfo: {,
         phone: "+1 302 464 0950",
+
+}
+}
         email: "kleber@ziontechgroup.com"}
         website: "https://ziontechgroup.com"}
     },
-    {id: 4;
-      name: "CustomerFlow CRM"
-      category: "CRM"
-      pricing: "Freemium"
-      description: "Lightweight customer relationship management system for growing businesses"
-      price: 20;
+    {id: name, "CustomerFlow CRM"
+      category: pricing, "Freemium"
+      description: price, 20;
       pricingModel: "monthly",
       userLimit: "Up to 15 users",
       features: ["Contact management", "Sales pipeline", "Email integration", "Reporting tools"],
@@ -152,15 +148,15 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       tags: ["CRM", "Sales", "Customer Management", "Pipeline", "Reporting"],
       contactInfo: {,
         phone: "+1 302 464 0950",
+
+}
+}
         email: "kleber@ziontechgroup.com"}
         website: "https://ziontechgroup.com"}
     },
-    {id: 5;
-      name: "DataViz Studio"
-      category: "Analytics"
-      pricing: "Freemium"
-      description: "Easy-to-use data visualization and analytics platform for business insights"
-      price: 35;
+    {id: name, "DataViz Studio"
+      category: pricing, "Freemium"
+      description: price, 35;
       pricingModel: "monthly",
       userLimit: "Up to 8 users",
       features: ["Interactive dashboards", "Data connectors", "Custom charts", "Real-time updates"],
@@ -169,15 +165,15 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       tags: ["Analytics", "Data Visualization", "Dashboards", "Business Intelligence", "Reporting"],
       contactInfo: {,
         phone: "+1 302 464 0950",
+
+}
+}
         email: "kleber@ziontechgroup.com"}
         website: "https://ziontechgroup.com"}
     },
-    {id: 6;
-      name: "ScheduleMaster"
-      category: "Scheduling"
-      pricing: "Freemium"
-      description: "Intelligent scheduling and appointment booking system for service businesses"
-      price: 18;
+    {id: name, "ScheduleMaster"
+      category: pricing, "Freemium"
+      description: price, 18;
       pricingModel: "monthly",
       userLimit: "Up to 12 users",
       features: ["Online booking", "Calendar integration", "Automated reminders", "Payment processing"],
@@ -186,15 +182,15 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       tags: ["Scheduling", "Appointments", "Booking", "Calendar", "Automation"],
       contactInfo: {,
         phone: "+1 302 464 0950",
+
+}
+}
         email: "kleber@ziontechgroup.com"}
         website: "https://ziontechgroup.com"}
     },
-    {id: 7;
-      name: "ContentCraft AI"
-      category: "Content"
-      pricing: "Freemium"
-      description: "AI-powered content creation and optimization tool for marketers and creators"
-      price: 40;
+    {id: name, "ContentCraft AI"
+      category: pricing, "Freemium"
+      description: price, 40;
       pricingModel: "monthly",
       userLimit: "Up to 6 users",
       features: ["AI content generation", "SEO optimization", "Content planning", "Performance analytics"],
@@ -203,15 +199,15 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       tags: ["Content Creation", "AI", "SEO", "Marketing", "Automation"],
       contactInfo: {,
         phone: "+1 302 464 0950",
+
+}
+}
         email: "kleber@ziontechgroup.com"}
         website: "https://ziontechgroup.com"}
     },
-    {id: 8;
-      name: "SecureVault"
-      category: "Security"
-      pricing: "Freemium"
-      description: "Enterprise-grade security and compliance management for small businesses"
-      price: 45;
+    {id: name, "SecureVault"
+      category: pricing, "Freemium"
+      description: price, 45;
       pricingModel: "monthly",
       userLimit: "Up to 20 users",
       features: ["Password management", "Access control", "Compliance monitoring", "Security audits"],
@@ -220,15 +216,15 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       tags: ["Security", "Compliance", "Password Management", "Access Control", "Risk Management"],
       contactInfo: {,
         phone: "+1 302 464 0950",
+
+}
+}
         email: "kleber@ziontechgroup.com"}
         website: "https://ziontechgroup.com"}
     },
-    {id: 9;
-      name: "MediaHub Pro"
-      category: "Media"
-      pricing: "Freemium"
-      description: "Digital asset management and media organization platform for creative teams"
-      price: 28;
+    {id: name, "MediaHub Pro"
+      category: pricing, "Freemium"
+      description: price, 28;
       pricingModel: "monthly",
       userLimit: "Up to 10 users",
       features: ["Asset organization", "Version control", "Collaboration tools", "Search & filtering"],
@@ -237,15 +233,15 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       tags: ["Media Management", "Digital Assets", "Collaboration", "Organization", "Creative Tools"],
       contactInfo: {,
         phone: "+1 302 464 0950",
+
+}
+}
         email: "kleber@ziontechgroup.com"}
         website: "https://ziontechgroup.com"}
     },
-    {id: 10;
-      name: "LearnFlow LMS"
-      category: "Education"
-      pricing: "Freemium"
-      description: "Learning management system for corporate training and online education"
-      price: 32;
+    {id: name, "LearnFlow LMS"
+      category: pricing, "Freemium"
+      description: price, 32;
       pricingModel: "monthly",
       userLimit: "Up to 100 learners",
       features: ["Course creation", "Progress tracking", "Assessment tools", "Mobile learning"],
@@ -254,15 +250,15 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       tags: ["LMS", "Education", "Training", "Online Learning", "Assessment"],
       contactInfo: {,
         phone: "+1 302 464 0950",
+
+}
+}
         email: "kleber@ziontechgroup.com"}
         website: "https://ziontechgroup.com"}
     },
-    {id: 11;
-      name: "EcoTrack Pro"
-      category: "Sustainability"
-      pricing: "Freemium"
-      description: "Sustainability tracking and environmental impact management for businesses"
-      price: 38;
+    {id: name, "EcoTrack Pro"
+      category: pricing, "Freemium"
+      description: price, 38;
       pricingModel: "monthly",
       userLimit: "Up to 25 users",
       features: ["Carbon footprint tracking", "Sustainability reporting", "Goal setting", "Progress monitoring"],
@@ -271,15 +267,15 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       tags: ["Sustainability", "Environmental Impact", "Carbon Tracking", "Reporting", "Compliance"],
       contactInfo: {,
         phone: "+1 302 464 0950",
+
+}
+}
         email: "kleber@ziontechgroup.com"}
         website: "https://ziontechgroup.com"}
     },
-    {id: 12;
-      name: "LegalAssist AI"
-      category: "Legal"
-      pricing: "Freemium"
-      description: "AI-powered legal document generation and contract management for small businesses"
-      price: 50;
+    {id: name, "LegalAssist AI"
+      category: pricing, "Freemium"
+      description: price, 50;
       pricingModel: "monthly",
       userLimit: "Up to 8 users",
       features: ["Document templates", "AI generation", "Contract management", "Legal compliance"],
@@ -288,15 +284,15 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       tags: ["Legal Tech", "AI", "Document Generation", "Contract Management", "Compliance"],
       contactInfo: {,
         phone: "+1 302 464 0950",
+
+}
+}
         email: "kleber@ziontechgroup.com"}
         website: "https://ziontechgroup.com"}
     },
-    {id: 13;
-      name: "HealthTrack Plus"
-      category: "Healthcare"
-      pricing: "Freemium"
-      description: "Health monitoring and wellness tracking platform for individuals and small clinics"
-      price: 22;
+    {id: name, "HealthTrack Plus"
+      category: pricing, "Freemium"
+      description: price, 22;
       pricingModel: "monthly",
       userLimit: "Up to 50 patients",
       features: ["Health monitoring", "Wellness tracking", "Patient portal", "Health reports"],
@@ -305,15 +301,15 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       tags: ["Healthcare", "Wellness", "Health Monitoring", "Patient Portal", "Preventive Care"],
       contactInfo: {,
         phone: "+1 302 464 0950",
+
+}
+}
         email: "kleber@ziontechgroup.com"}
         website: "https://ziontechgroup.com"}
     },
-    {id: 14;
-      name: "EventMaster Pro"
-      category: "Events"
-      pricing: "Freemium"
-      description: "Comprehensive event management and ticketing platform for event organizers"
-      price: 35;
+    {id: name, "EventMaster Pro"
+      category: pricing, "Freemium"
+      description: price, 35;
       pricingModel: "monthly",
       userLimit: "Up to 1000 attendees",
       features: ["Event planning", "Ticket sales", "Attendee management", "Analytics dashboard"],
@@ -322,15 +318,15 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       tags: ["Event Management", "Ticketing", "Planning", "Attendee Management", "Analytics"],
       contactInfo: {,
         phone: "+1 302 464 0950",
+
+}
+}
         email: "kleber@ziontechgroup.com"}
         website: "https://ziontechgroup.com"}
     },
-    {id: 15;
-      name: "InventorySmart"
-      category: "Inventory"
-      pricing: "Freemium"
-      description: "Intelligent inventory management and supply chain optimization for small businesses"
-      price: 25;
+    {id: name, "InventorySmart"
+      category: pricing, "Freemium"
+      description: price, 25;
       pricingModel: "monthly",
       userLimit: "Up to 15 users",
       features: ["Inventory tracking", "Demand forecasting", "Reorder alerts", "Analytics reports"],
@@ -339,15 +335,15 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       tags: ["Inventory Management", "Supply Chain", "Forecasting", "Analytics", "Optimization"],
       contactInfo: {,
         phone: "+1 302 464 0950",
+
+}
+}
         email: "kleber@ziontechgroup.com"}
         website: "https://ziontechgroup.com"}
     },
-    {id: 21;
-      name: "Cybersecurity Shield"
-      category: "Security"
-      pricing: "Freemium"
-      description: "Advanced cybersecurity platform with AI-powered threat detection and response"
-      price: 95;
+    {id: name, "Cybersecurity Shield"
+      category: pricing, "Freemium"
+      description: price, 95;
       pricingModel: "monthly",
       userLimit: "Up to 50 users",
       features: ["Threat detection", "AI monitoring", "Incident response", "Compliance reporting"],
@@ -356,15 +352,15 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       tags: ["Cybersecurity", "AI Security", "Threat Detection", "Compliance", "Enterprise"],
       contactInfo: {,
         phone: "+1 302 464 0950",
+
+}
+}
         email: "kleber@ziontechgroup.com"}
         website: "https://ziontechgroup.com"}
     },
-    {id: 22;
-      name: "GreenTech Monitor"
-      category: "Sustainability"
-      pricing: "Freemium"
-      description: "Environmental impact tracking and sustainability reporting for eco-conscious businesses"
-      price: 42;
+    {id: name, "GreenTech Monitor"
+      category: pricing, "Freemium"
+      description: price, 42;
       pricingModel: "monthly",
       userLimit: "Up to 30 users",
       features: ["Carbon tracking", "ESG reporting", "Sustainability goals", "Green certifications"],
@@ -373,15 +369,15 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       tags: ["Sustainability", "ESG", "Carbon Tracking", "Green Tech", "Compliance"],
       contactInfo: {,
         phone: "+1 302 464 0950",
+
+}
+}
         email: "kleber@ziontechgroup.com"}
         website: "https://ziontechgroup.com"}
     },
-    {id: 23;
-      name: "VoiceAI Assistant"
-      category: "AI"
-      pricing: "Freemium"
-      description: "Voice-powered AI assistant for business automation and customer interaction"
-      price: 38;
+    {id: name, "VoiceAI Assistant"
+      category: pricing, "Freemium"
+      description: price, 38;
       pricingModel: "monthly",
       userLimit: "Up to 25 users",
       features: ["Voice commands", "AI automation", "Multi-language", "Integration APIs"],
@@ -390,15 +386,15 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       tags: ["Voice AI", "Automation", "Accessibility", "Customer Service", "AI Assistant"],
       contactInfo: {,
         phone: "+1 302 464 0950",
+
+}
+}
         email: "kleber@ziontechgroup.com"}
         website: "https://ziontechgroup.com"}
     },
-    {id: 24;
-      name: "Quantum Finance Pro"
-      category: "Finance"
-      pricing: "Freemium"
-      description: "Quantum computing-powered financial modeling and risk assessment platform"
-      price: 120;
+    {id: name, "Quantum Finance Pro"
+      category: pricing, "Freemium"
+      description: price, 120;
       pricingModel: "monthly",
       userLimit: "Up to 10 users",
       features: ["Quantum modeling", "Risk assessment", "Portfolio optimization", "Real-time analysis"],
@@ -407,15 +403,15 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       tags: ["Quantum Finance", "Risk Assessment", "Portfolio Management", "Financial Modeling", "AI"],
       contactInfo: {,
         phone: "+1 302 464 0950",
+
+}
+}
         email: "kleber@ziontechgroup.com"}
         website: "https://ziontechgroup.com"}
     },
-    {id: 25;
-      name: "Edge Computing Hub"
-      category: "Infrastructure"
-      pricing: "Freemium"
-      description: "Edge computing platform for distributed applications and real-time processing"
-      price: 68;
+    {id: name, "Edge Computing Hub"
+      category: pricing, "Freemium"
+      description: price, 68;
       pricingModel: "monthly",
       userLimit: "Up to 100 nodes",
       features: ["Edge deployment", "Real-time processing", "Load balancing", "Monitoring tools"],
@@ -424,6 +420,9 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       tags: ["Edge Computing", "Real-time Processing", "IoT", "Performance", "Infrastructure"],
       contactInfo: {,
         phone: "+1 302 464 0950",
+
+}
+}
         email: "kleber@ziontechgroup.com"}
         website: "https://ziontechgroup.com",
     {/* TODO: Fix JSX expression */}
@@ -600,7 +599,6 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
   e: "http,"
   s://ziontechgroup.com"
       }
-    }
   ];
   const _categories = ['all', 'Productivity', 'Finance', 'Marketing', 'CRM', 'Analytics', 'Scheduling', 'Content', 'Security', 'Media', 'Education', 'Sustainability', 'Legal', 'Healthcare', 'Events', 'Inventory', 'Development', 'Blockchain', 'IoT', 'Immersive Tech', 'AI', 'Infrastructure'];
   const _pricingModels = ['all', 'Freemium', 'Subscription', 'One-time'];
@@ -644,8 +642,8 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
           <div className="text-left"></div>
             <Search className="text-left" />
             <input;
-              type="text"
-  const _pricingModels = ['all', 'Freemium', 'Subscription', 'One-time'];"
+              type="text";
+const _pricingModels = ['all', 'Freemium', 'Subscription', 'One-time'];"
     <div className="text-left"></div>
       {/* Animated Background */}"
       <div className="text-left"></div>"
@@ -728,9 +726,9 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
           {filteredServices.map((service) => (
               {pricingModels.map(pricing => (
                 <option key={pricing} value={pricing} className="text-left"></option>
-                  {pricing === 'all' ? '💰 All Pricing Models' : `💳 ${pricing}`}
-        {/* Services Grid */}
-        <div className="text-left">
+                  {pricing === 'all' ? '💰 All Pricing Models' : `💳 ${pricing}`},)
+      {/* Services Grid */})
+        <div className="text-left">)
           {filteredServices.map((service) => (</div>
             <div key={service.id} className="text-left">
               {/* Service Header */}</div>
@@ -753,8 +751,8 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
                         {service.category}</span>
               {/* TODO: Fix JSX expression */}"
                 <option key={pricing} value={pricing} className="text-left"></option>`
-                  {pricing === 'all' ? '💰 All Pricing Models' : `💳 ${pricing}`}
-        {/* Services Grid */}"
+                  {pricing === 'all' ? '💰 All Pricing Models' : `💳 ${pricing}`},
+      {/* Services Grid */}"
         <div className="text-left"></div>
           {/* TODO: Fix JSX expression */}"
             <div key={service.id} className="text-left"></div>

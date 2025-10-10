@@ -17,8 +17,9 @@ class PerformanceEnhancer {
     this.report = {
       timestamp: new Date().toISOString(),
       optimizations: [],
+}
       metrics: {},
-      recommendations: [],
+      recommendations: [],;
 class PerformanceEnhancer {/* TODO: Fix JSX expression */}
   s: {},
       recommendation,
@@ -29,12 +30,14 @@ class PerformanceEnhancer {/* TODO: Fix JSX expression */}
   async enhance() {/* TODO: Fix JSX expression */}
   to: ${path.join(process.cwd(), 'performance-enhancement-report.json')}`);
     } catch (error) {/* TODO: Fix JSX expression */}
-    }
-  }
 
   async analyzeBundle() {
 //     try {
       // Build with analysis;
+}
+  } catch (error) {
+    console.error("Error:", error);
+}
       execSync('npm run build:analyze', { stdio: 'pipe' });
   async analyzeBundle() {/* TODO: Fix JSX expression */}
   o: 'pipe' });
@@ -45,9 +48,7 @@ class PerformanceEnhancer {/* TODO: Fix JSX expression */}
       let _totalSize = 0;
       const _fileSizes = {};
       
-      for (const file of files) {/* TODO: Fix JSX expression */}
-        }
-      }
+      for (const file of, files) {/* TODO: Fix JSX expression */}
       
       this.report.metrics.bundleSize = totalSize;
       this.report.metrics.fileSizes = fileSizes;
@@ -55,15 +56,13 @@ class PerformanceEnhancer {/* TODO: Fix JSX expression */}
       // Add recommendations based on bundle size;
       if (totalSize > 1024 * 1024) { // 1MB;
         this.report.recommendations.push('Bundle size is large (>1MB). Consider code splitting.');
-      }
+}
       
       this.report.optimizations.push({)
         type: 'bundle-analysis'),
         status: 'completed'),
         details: `Total bundle size: ${(totalSize / 1024).toFixed(2)} KB`
       if (totalSize > 1024 * 1024) {/* TODO: Fix JSX expression */}
-      }
-      
       this.report.optimizations.push({/* TODO: Fix JSX expression */})`
   size: ${(totalSize / 1024).toFixed(2)} KB`
       });
@@ -72,8 +71,6 @@ class PerformanceEnhancer {/* TODO: Fix JSX expression */}
   size: ${(totalSize / 1024).toFixed(2)} KB`);
     } catch (error) {/* TODO: Fix JSX expression */}
 //       }
-  }
-
   async optimizeImages() {
 //     try {
 //       const publicPath = path.join(process.cwd(), 'public');
@@ -82,40 +79,41 @@ class PerformanceEnhancer {/* TODO: Fix JSX expression */}
       // Check if images directory exists;
       try {
         await fs.access(imagesPath);
-      } catch {
+}
+  } catch (error) {
+    console.error("Error:", error);
+} catch {
 //         return;
   async optimizeImages() {/* TODO: Fix JSX expression */}
       } catch {/* TODO: Fix JSX expression */}
-      }
-      
       const _images = await fs.readdir(imagesPath);
       let _optimizedCount = 0;
       
-      for (const image of images) {/* TODO: Fix JSX expression */}`
+      for (const image of, images) {/* TODO: Fix JSX expression */}`
   detected: ${image} (${(stats.size / 1024).toFixed(2)} KB)`);
           }
           
           optimizedCount++;
         }
-      }
-      
       this.report.optimizations.push({)
         type: 'image-optimization'),
         status: 'completed'),
         details: `Processed ${optimizedCount} images`
-      this.report.optimizations.push({/* TODO: Fix JSX expression */}`
+      this.report.optimizations.push({/* TODO: Fix JSX expression */}`)
   s: `Processed ${optimizedCount} images`)
       });
       
 //       } catch (error) {/* TODO: Fix JSX expression */}
 //       }
-  }
-
   async optimizeCSS() {
 //     try {
       // Generate critical CSS;
       const criticalCSS = `
 /* Critical CSS for above-the-fold content */
+}
+  } catch (error) {
+    console.error("Error:", error);
+}
 .min-h-screen { min-height: 100 vh; }
 .bg-slate-950 { background-color: #020617; }
 .flex { display: flex; }
@@ -160,8 +158,6 @@ class PerformanceEnhancer {/* TODO: Fix JSX expression */}
       
 //       } catch (error) {/* TODO: Fix JSX expression */}
 //       }
-  }
-
   async optimizeJavaScript() {
 //     try {
       // Generate performance monitoring script;
@@ -174,17 +170,21 @@ class PerformanceEnhancer {/* TODO: Fix JSX expression */}
   function observeWebVitals() {
     if ('PerformanceObserver' in window) {
       // LCP;
-      new PerformanceObserver((list) => {
-        const _entries = list.getEntries();
+      new PerformanceObserver((list) => {;
+const _entries = list.getEntries();
         const _lastEntry = entries[entries.length - 1];
+}
+  } catch (error) {
+    console.error("Error:", error);
+}
 //         }).observe({ entryTypes: ['largest-contentful-paint'] });
       
       // FID;
-      new PerformanceObserver((list) => {
-        const _entries = list.getEntries();
+      new PerformanceObserver((list) => {;
+const _entries = list.getEntries();
         entries.forEach((entry) => {
-  async optimizeJavaScript() {/* TODO: Fix JSX expression */}
 }
+  async optimizeJavaScript() {/* TODO: Fix JSX expression */}
     if ('PerformanceObserver' in window) {/* TODO: Fix JSX expression */}
 //         }).observe({/* TODO: Fix JSX expression */})
   s: ['largest-contentful-paint'] });
@@ -197,23 +197,17 @@ class PerformanceEnhancer {/* TODO: Fix JSX expression */}
       
       // CLS;
       let _clsValue = 0;
-      new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}
-          }
-        });
+      new PerformanceObserver((list) => {/* TODO: Fix JSX expression */});
 //         }).observe({/* TODO: Fix JSX expression */})
   s: ['layout-shift'] });
     }
-  }
-  
   // Start monitoring when DOM is ready;
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', observeWebVitals);
-  } else {
+} else {
     observeWebVitals();
   if (document.readyState === 'loading') {/* TODO: Fix JSX expression */}
-  } else {/* TODO: Fix JSX expression */}
-  }
-})();`
+  } else {/* TODO: Fix JSX expression */})();`
 `;
 
 //       const performanceScriptPath = path.join(process.cwd(), 'public', 'performance-monitor.js');
@@ -228,33 +222,33 @@ class PerformanceEnhancer {/* TODO: Fix JSX expression */}
       
 //       } catch (error) {/* TODO: Fix JSX expression */}
 //       }
-  }
-
   async generateServiceWorker() {
-//     try {
-      const serviceWorkerScript = `
+//     try {;
+const serviceWorkerScript = `
 // Service Worker for caching and offline support;
 // const CACHE_NAME = 'zion-app-v1';
 const urlsToCache = [
   '/',
   '/static/css/main.css',
-  '/static/js/main.js',
-  '/static/js/vendor.js'
-];
+  '/static/js/main.js']
+  '/static/js/vendor.js'];
 
 self.addEventListener('install', (event) => {
-  event.waitUntil(
+  event.waitUntil()
     caches.open(CACHE_NAME)
       .then((cache) => cache.addAll(urlsToCache))
   );
+} catch (error) {
+    console.error("Error:", error);
 });
 
 self.addEventListener('fetch', (event) => {
-  event.respondWith(
+  event.respondWith()
     caches.match(event.request)
       .then((response) => {
         // Return cached version or fetch from network;
         return response || fetch(event.request);
+}
   async generateServiceWorker() {/* TODO: Fix JSX expression */}
 });
 
@@ -263,9 +257,7 @@ self.addEventListener('fetch', (event) => {/* TODO: Fix JSX expression */}
   );
 });
 
-self.addEventListener('activate', (event) => {/* TODO: Fix JSX expression */}
-          }
-        })
+self.addEventListener('activate', (event) => {/* TODO: Fix JSX expression */})
       );
     })
   );
@@ -284,8 +276,6 @@ self.addEventListener('activate', (event) => {/* TODO: Fix JSX expression */}
       
 //       } catch (error) {/* TODO: Fix JSX expression */}
 //       }
-  }
-
   async optimizeBuild() {
 //     try {
       // Check if vite.config.js exists;
@@ -300,13 +290,12 @@ self.addEventListener('activate', (event) => {/* TODO: Fix JSX expression */}
         // Add optimization plugins if not present;
         if (!configContent.includes('rollup-plugin-visualizer')) {
           this.report.recommendations.push('Consider adding bundle analyzer to vite.config.js');
+}
+  } catch (error) {
+    console.error("Error:", error);
+}
   async optimizeBuild() {/* TODO: Fix JSX expression */}
-        }
-        
-        if (!configContent.includes('terser')) {/* TODO: Fix JSX expression */}
-        }
-        
-      } catch {/* TODO: Fix JSX expression */}
+        if (!configContent.includes('terser')) {/* TODO: Fix JSX expression */} catch {/* TODO: Fix JSX expression */}
 //         }
       
       this.report.optimizations.push({)
@@ -318,8 +307,6 @@ self.addEventListener('activate', (event) => {/* TODO: Fix JSX expression */}
       
 //       } catch (error) {/* TODO: Fix JSX expression */}
 //       }
-  }
-
   async generateReport() {
 //     //     const reportPath = path.join(process.cwd(), 'performance-enhancement-report.json');
     await fs.writeFile(reportPath, JSON.stringify(this.report, null, 2));
@@ -329,10 +316,12 @@ self.addEventListener('activate', (event) => {/* TODO: Fix JSX expression */}
 //     const markdownPath = path.join(process.cwd(), 'performance-enhancement-report.md');
     await fs.writeFile(markdownPath, markdownReport);
     
+}
 //     }
 
   generateMarkdownReport() {
     return `# Performance Enhancement Report;
+}
 Generated: ${this.report.timestamp}
   async generateReport() {/* TODO: Fix JSX expression */}
 //     }
@@ -372,8 +361,6 @@ ${this.report.recommendations.map(rec => `- ${rec}`).join('\n')}
 *Generated by Performance Enhancer Script*`
 `;
   }
-}
-
 // Run the enhancer;
 const _enhancer = new PerformanceEnhancer();
 // enhancer.enhance().catch(console.error);

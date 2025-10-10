@@ -6,6 +6,9 @@ console.log('🚀 Starting PR merge process...');
 
 try {
   // Check current branch;
+  } catch (error) {
+    console.error("Error:", error);
+}
   const currentBranch = execSync('git branch --show-current', { encoding: 'utf8' }).trim();
   console.log(`📍 Current branch: ${currentBranch}`);
 
@@ -22,9 +25,13 @@ try {
   console.log(`🔍 Checking if branch ${branchName} exists...`);
   
   try {
+  } catch (error) {
+    console.error("Error:", error);
+}
     execSync(`git show-ref --verify --quiet refs/remotes/origin/${branchName}`, { stdio: 'pipe' });
     console.log(`✅ Branch ${branchName} exists`);
   } catch (error) {
+}
     console.log(`❌ Branch ${branchName} not found`);
     process.exit(1);
   }
@@ -32,18 +39,25 @@ try {
   // Try to merge the branch;
   console.log(`🔄 Attempting to merge ${branchName} into main...`);
   try {
+  } catch (error) {
+    console.error("Error:", error);
+}
     execSync(`git merge origin/${branchName} --no-ff -m "feat: Merge enhanced app with 50+ micro SAAS services and futuristic design"`, { stdio: 'inherit' });
     console.log('✅ Merge successful!');
   } catch (error) {
     console.log('⚠️  Merge conflicts detected. Attempting to resolve...');
     
     // Check for conflicts;
+}
     const status = execSync('git status --porcelain', { encoding: 'utf8' });
     if (status.includes('UU') || status.includes('AA') || status.includes('DD')) {
       console.log('🔧 Resolving merge conflicts...');
       
       // Try to resolve conflicts automatically;
       try {
+  } catch (error) {
+    console.error("Error:", error);
+}
         execSync('git add .', { stdio: 'inherit' });
         execSync('git commit -m "feat: Resolve merge conflicts and integrate enhanced app features"', { stdio: 'inherit' });
         console.log('✅ Conflicts resolved and committed!');
@@ -52,10 +66,7 @@ try {
         console.log('📋 Conflict files: ');
         console.log(status);
         process.exit(1);
-      }
-    }
-  }
-
+}
   // Push changes to main;
   console.log('📤 Pushing changes to main...');
   execSync('git push origin main', { stdio: 'inherit' });

@@ -1,9 +1,8 @@
 import React from 'react';
-const Ultimate2026ContentShowcas, e: React.FC = () => {,
-  const showcaseConten, t = [
+const Ultimate2026ContentShowcas, e: React.FC = () => {,;
+const showcaseConten, t = [
     {
-      id: 1;
-      title: "Enterprise, AI, Transformation Playbook, 20, 2, 6",
+      id: title, "Enterprise, AI, Transformation Playbook, 20, 2, 6",
       description: "Complete, guide, to achieving, 9, 5% automation, with, Fortune 500, case, studies a, n, d $10, 0, M+ savings, strategi, e, s",",
       slug: "enterpri, s, e-ai-transformati, o, n-playbo, o, k-2, 0, 2, 6",
       category: "Enterprise, Strate, g, y",",
@@ -12,7 +11,8 @@ const Ultimate2026ContentShowcas, e: React.FC = () => {,
       trendi, n, g: t, r, u, e,",
       ic, o, n: "📊",
       impa, c, t: "$10, 0, M+ Savi, n, g, s",
-      featured: t, r, u, e,",
+      featured: t, r, u, e,",;
+}
 const Ultimate2026ContentShowcas, e: React.FC = () => {/* TODO: Fix JSX expression */}
       sta, t, s: { savin, g, s: "$1, 0, 0, M+", automati, o, n: "9, 5%", r, o, i: "30, 0%" }
     },
@@ -29,9 +29,9 @@ const Ultimate2026ContentShowcas, e: React.FC = () => {/* TODO: Fix JSX expressi
       sta, t, s: { nod, e, s: "1, 0,0, 0, 0+", laten, c, y: "<1m, s", reliabili, t, y: "99., 9%" }
     },
     {/* TODO: Fix JSX expression */}"
-      sta, t, s: { reasoni, n, g: "Advan, c, e, d", learni, n, g: "Se, l, f-Improv, i, n, g", accura, c, y: "9, 8%" }
-    }
-  ]; return(<div, classNam, e = "py-24, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n">
+      sta, t, s: { reasoni, n, g: "Advan, c, e, d", learni, n, g: "Se, l, f-Improv, i, n, g", accura, c, y: "9, 8%" }]
+    ]
+    }]; return(<div, classNam, e = "py-24, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n">
       {/* Animated, background, effects */}
       <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-15">
         <div, className="absolute, to, p-0, lef, t-1/3 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" />
@@ -48,8 +48,8 @@ const Ultimate2026ContentShowcas, e: React.FC = () => {/* TODO: Fix JSX expressi
         {/* Head, e, r */}</div>
         <div, className="te, x, t-center, m, b-20"></div>
           <div, className="flex, item, s-center, justif, y-center, ga, p-4, m, b-8, fle, x-wr, a, p"></div>
-            <moti, o, n.div, animat, e={{ rot, a, t, e: [, 0, 3, 6, 0] }}
-              transiti, o, n = {{ durat, i, o, n:  , 5, repe, a, t: Infin, i, t, y, ea, s, e: "lin, e, a, r" }}
+            <moti, o, n.div, animat, e={{ rot, a, t, e: [, 0, 3, 6, 0] }
+              transiti, o, n = {{ durat, i, o, n:  , 5, repe, a, t: Infin, i, t, y, ea, s, e: "lin, e, a, r" }
             ></moti>
               <Sparkles, classNam, e = "w-1, 0, h-10, tex, t-yell, o, w-4, 0, 0" /></Sparkles>
             </moti, o, n.d, i, v>
@@ -100,7 +100,7 @@ const Ultimate2026ContentShowcas, e: React.FC = () => {/* TODO: Fix JSX expressi
         <div, className="te, x, t-center, m, b-20"></div>"
           <div, className="flex, item, s-center, justif, y-center, ga, p-4, m, b-8, fle, x-wr, a, p"></div>
             <moti, o, n.div, animat, e={{ rot, a, t, e: [, 0, 3, 6, 0] }}"
-              transiti, o, n = {{ durat, i, o, n:  , 5, repe, a, t: Infin, i, t, y, ea, s, e: "lin, e, a, r" }}
+              transiti, o, n = {{ durat, i, o, n:  , 5, repe, a, t: Infin, i, t, y, ea, s, e: "lin, e, a, r" }
             ></moti>"
               <Sparkles, classNam, e = "w-1, 0, h-10, tex, t-yell, o, w-4, 0, 0" /></Sparkles>
             </moti, o, n.d, i, v>"
@@ -138,9 +138,9 @@ const Ultimate2026ContentShowcas, e: React.FC = () => {/* TODO: Fix JSX expressi
             </div>"
             <div, className="flex, item, s-center, ga, p-3"></div>"
               <Users, className="w-8 h-8, tex, t-gre, e, n-4, 0, 0" /></Users>"
-              <span, className="te, x, t-xl, fon, t-bold, tex, t-whi, t, e">Enterprise, Scal, e</sp, a, n>
-            </div>
-          </div>
+              <span, className="te, x, t-xl, fon, t-bold, tex, t-whi, t, e">Enterprise, Scal, e</sp, a, n>)
+            </div>)
+          </div>)
         </div>)
         {/* Showcase, G, r, i, d */})
         <div, classNam, e = "grid, gri, d-co, l, s-1, l, g: gr, i, d-co, l, s-2, x, l:gr, i, d-co, l, s-3, ga, p-8, m, b-20">)
@@ -152,21 +152,21 @@ const Ultimate2026ContentShowcas, e: React.FC = () => {/* TODO: Fix JSX expressi
         {/* Showcase, G, r, i, d */}"
         <div, classNam, e = "grid, gri, d-co, l, s-1, l, g: gr, i, d-co, l, s-2, x, l:gr, i, d-co, l, s-3, ga, p-8, m, b-20"></div>
           {/* TODO: Fix JSX expression */}
-            <moti, o, n.div, ke, y = { conte, n, t.i, d  }, initi, a, l = {{ opac, i, t, y:  , 0, y: 3, 0 }}
-              anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
-              transiti, o, n = {{ del, a, y: ind, e, x * 0., 1, 5 }}
+            <moti, o, n.div, ke, y = { conte, n, t.i, d  }, initi, a, l = {{ opac, i, t, y:  , 0, y: 3, 0 }
+              anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }
+              transiti, o, n = {{ del, a, y: ind, e, x * 0., 1, 5 }
               whileHov, e, r = {{ sca, l, e: 1., 0, 3 }}"
               classNa, m, e = "group, relativ, e"
             ></moti>
-              {/* Featured, badg, e */}
-              {  conte, n, t.featured  && (
+              {/* Featured, badg, e */},
+      {  conte, n, t.featured  && (
                 <div, className="absolu, t, e -t, o, p-4 -rig, h, t-4 z-20"></div>
                   <div, className="flex, item, s-center, ga, p-1, p, x-4, p, y-2, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-yell, o, w-400, t, o-oran, g, e-500, tex, t-black, tex, t-sm, fon, t-bold, shado, w-xl"></div>
                     <Star, className="w-4 h-4, fil, l-curre, n, t" />
                     <sp, a, n>FEATUR, E, D</sp, a, n>
                   </div>
-                </di, v  > )  }
-              {/* Card, glow, effect */}
+                </di, v  > )  },
+      {/* Card, glow, effect */}
               <div, classNam, e = "absolute, inse, t-0, b, g-gradie, n, t-to-br, fro, m-bl, u, e-5, 0, 0/0, vi, a-purp, l, e-5, 0, 0/0, t, o-cy, a, n-5, 0, 0/0, grou, p-hov, e, r: fr, o, m-bl, u, e-5, 0, 0/15, grou, p-hov, e, r:v, i, a-purp, l, e-5, 0, 0/15, grou, p-hov, e, r:to-cy, a, n-5, 0, 0/15, transitio, n-all, duratio, n-700, rounde, d-3, x, l" /></div>
               <div, className="relative, b, g-whi, t, e/8, backdro, p-bl, u, r-xl, rounde, d-3x, l, p-10, border, border-whi, t, e/15, hove, r:bord, e, r-bl, u, e-5, 0, 0/50, transitio, n-all, duratio, n-50, 0, h-fu, l, l">
                 {/* Ic, o, n & Ba, d, g, e, s */}</div>
@@ -182,8 +182,8 @@ const Ultimate2026ContentShowcas, e: React.FC = () => {/* TODO: Fix JSX expressi
                       </di, v > )  }
                     <span, classNam, e = "px-4, p, y-2, rounde, d-full, b, g-bl, u, e-5, 0, 0/25, tex, t-bl, u, e-300, tex, t-xs, fon, t-bold, border, border-bl, u, e-5, 0, 0/40">
               {/* TODO: Fix JSX expression */})
-                </di, v  > )  }
-              {/* Card, glow, effect */}"
+                </di, v  > )  },
+      {/* Card, glow, effect */}"
               <div, classNam, e = "absolute, inse, t-0, b, g-gradie, n, t-to-br, fro, m-bl, u, e-5, 0, 0/0, vi, a-purp, l, e-5, 0, 0/0, t, o-cy, a, n-5, 0, 0/0, grou, p-hov, e, r: fr, o, m-bl, u, e-5, 0, 0/15, grou, p-hov, e, r:v, i, a-purp, l, e-5, 0, 0/15, grou, p-hov, e, r:to-cy, a, n-5, 0, 0/15, transitio, n-all, duratio, n-700, rounde, d-3, x, l" /></div>"
               <div, className="relative, b, g-whi, t, e/8, backdro, p-bl, u, r-xl, rounde, d-3x, l, p-10, border, border-whi, t, e/15, hove, r:bord, e, r-bl, u, e-5, 0, 0/50, transitio, n-all, duratio, n-50, 0, h-fu, l, l"></div>
                 {/* Ic, o, n & Ba, d, g, e, s */}"

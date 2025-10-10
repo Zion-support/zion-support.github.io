@@ -5,8 +5,8 @@ import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { Calendar, ArrowRight, TrendingUp, Users, Award, Globe, Zap, Brain, Shield, Code, BarChart, MessageSquare, Eye, Cpu, Target, Lock, BarChart3, FileText, Search, Bot, Calculator, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Clock3, Compass, PieChart, TrendingDown, Activity } from 'lucide-react';
 
-const NewsPage: React.FC = () => {
-  const newsArticles = [
+const NewsPage: React.FC = () => {;
+const newsArticles = [
     {
       id: 1,
       title: 'Zion Tech Group Launches Revolutionary AI Analytics Dashboard',
@@ -16,6 +16,7 @@ const NewsPage: React.FC = () => {
       image: '📊',
       featured: true,
       readTime: '5 min read'
+}
     },
     {
       id: 2,
@@ -64,22 +65,20 @@ const NewsPage: React.FC = () => {
       date: '2025-01-15',
       category: 'Product Launch',
       image: '🛠️',
-      featured: false,
-      readTime: '5 min read'
-    }
-  ];
+      featured: false,]
+      readTime: '5 min read']
+    }];
 
   const categories = ['All', 'Product Launch', 'Success Story', 'Technology', 'Innovation', 'Security'];
 
   const stats = [
     { icon: Users, number: '100+', label: 'Happy Clients' },
     { icon: Award, number: '50+', label: 'Awards Won' },
-    { icon: TrendingUp, number: '300%', label: 'Average ROI' },
-    { icon: Globe, number: '25+', label: 'Countries Served' }
-  ];
+    { icon: TrendingUp, number: '300%', label: 'Average ROI' },]
+      { icon: Globe, number: '25+', label: 'Countries Served' }];
 
   return (
-    <>
+    <>\</>
       <SEOOptimizer
         title="News & Updates - Zion Tech Group"
         description="Stay updated with the latest news, product launches, and success stories from Zion Tech Group. Discover our AI innovations and enterprise transformations."
@@ -104,9 +103,9 @@ const NewsPage: React.FC = () => {
             </p>
           </section>
 
-          {/* Stats Section */}
-          <section className="mb-16">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          {/* Stats Section */})
+          <section className="mb-16">)
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">)
               {stats.map((stat, index) => (
                 <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
                   <stat.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
@@ -137,9 +136,9 @@ const NewsPage: React.FC = () => {
                       <div className="flex items-center text-gray-400 text-sm">
                         <Calendar className="w-4 h-4 mr-2" />
                         {new Date(article.date).toLocaleDateString('en-US', { 
-                          year: 'numeric', 
-                          month: 'long', 
-                          day: 'numeric' 
+                          year: 'numeric', )
+                          month: 'long', )
+                          day: 'numeric' )
                         })}
                       </div>
                     </div>
@@ -182,9 +181,9 @@ const NewsPage: React.FC = () => {
                       <div className="flex items-center text-gray-400 text-xs">
                         <Calendar className="w-3 h-3 mr-1" />
                         {new Date(article.date).toLocaleDateString('en-US', { 
-                          month: 'short', 
-                          day: 'numeric',
-                          year: 'numeric'
+                          month: 'short', )
+                          day: 'numeric',)
+                          year: 'numeric')
                         })}
                       </div>
                     </div>

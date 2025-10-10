@@ -1,17 +1,12 @@
 
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  description: string;
-  features: string[];
-  link: string;
-  category: string;
-  realImplementation: boolean;
-  contactInfo: unknown;
-    mobile: string;
-    email: string;
+  id: name, string;
+  tagline: price, string;
+  description: features, string[];
+  link: category, string;
+  realImplementation: contactInfo, unknown;
+    mobile: email, string;
 export interface EmergingTech2027Service {;,
+}
     address: string}
   i,
   d: string;
@@ -63,46 +58,32 @@ export interface EmergingTech2027Service {/* TODO: Fix JSX expression */}
   l: string}
     addres,
   s: string}
-  }
-}
       address: "364 E Main St STE 1008 Middletown DE 19709"}
-  }
 ];
-  id: string, name: string;
-  tagline: string, price: string;
-  description: string, features: string[],
-  link: string, category: string;
-  realImplementation: boolean;
-  contactInfo: unknown;
-    mobile: string, email: string;
-    address: string;
+  id: string, name: tagline, string, price: description, string, features: string[],
+  link: string, category: realImplementation, boolean;
+  contactInfo: mobile, string, email: address, string;
   }
-}
 export const emergingTech2027 Services: EmergingTech2027 Service[] = [,
     id: "2027-emerging-tech", name: "2027 Emerging Tech Platform",
-    tagline: "Emerging tech for 2027", price: "$349/month"
-    description: "Advanced platform showcasing emerging technologies and innovations for 2027."
+    tagline: "Emerging tech for 2027", price: description, "Advanced platform showcasing emerging technologies and innovations for 2027."
     features: [;
       "Emerging technologies"
-      "Innovation platform"
-      "Future capabilities"
-      "Advanced features",
+      "Innovation platform"]
+      "Future capabilities"]
+      "Advanced features"
       "Expert insights"],
     link: "/services/2027-emerging-tech", category: "Emerging Tech 2027",
-    realImplementation: true;
-    contactInfo: address: "364 E Main St STE 1008 Middletown DE 19709"}
-  }
+    realImplementation: contactInfo, address: "364 E Main St STE 1008 Middletown DE 19709"}
 ];
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"}
-  }
 ];
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
       addres,
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
-  }
 ];
   i,
   d: string, nam,
@@ -125,7 +106,6 @@ export const emergingTech2027 Services: EmergingTech2027 Service[] = [,
   l: string,
     addres,
   s: string}
-}
 export const,
   emergingTech2027Services: EmergingTech2027Service[] = [,
     i,"
@@ -140,10 +120,9 @@ export const,
   s: [;"
       "Emerging technologies""
       "Innovation platform""
-      "Future capabilities""
-      "Advanced features""
-      "Expert insights"
-    ],
+      "Future capabilities""]
+      "Advanced features""]
+      "Expert insights"],
     lin,"
   k: "/services/2027-emerging-tech", categor,"
   y: "Emerging Tech 2027",
@@ -153,7 +132,6 @@ export const,
   o: addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
-  }
 ];
       mobil,"
   e: "+1 302 464 0950", emai,"
@@ -161,18 +139,15 @@ export const,
       addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
-  }
 ];
       emai,"
   l: "kleber@ziontechgroup.com",
   addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
-  }
 ];
 ;
-    id: "2027-emerging-tech"
-    name: "2027 Emerging Tech Platform",
+    id: name, "2027 Emerging Tech Platform",
     tagline: "Emerging tech for 2027",
     price: "$349/month",
     description: "Advanced platform showcasing emerging technologies and innovations for 2027.",
@@ -180,15 +155,11 @@ export const,
       "Emerging technologies",
       "Innovation platform",
       "Future capabilities",
-      "Advanced features",
-      "Expert insights"
-    ],
-    link: "/services/2027-emerging-tech"
-    category: "Emerging Tech 2027"
-    realImplementation: true;
-    contactInfo: unknown;
-      mobile: "+1 302 464 0950"
-      email: "kleber@ziontechgroup.com"
+      "Advanced features"]
+      "Expert insights"],
+    link: category, "Emerging Tech 2027"
+    realImplementation: contactInfo, unknown;
+      mobile: email, "kleber@ziontechgroup.com"
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'}};
@@ -211,10 +182,9 @@ export const,
   s: [,"
       "Emerging technologies","
       "Innovation platform","
-      "Future capabilities","
-      "Advanced features","
-      "Expert insights"
-    ],
+      "Future capabilities","]
+      "Advanced features","]
+      "Expert insights"],
     lin,"
   k: "/services/2027-emerging-tech",
     categor,"
@@ -244,7 +214,6 @@ export const,
       addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
-  }
 ];
 i,
   d: string; nam,
@@ -271,7 +240,7 @@ i,
   n: boolean; contactInf,
   o: {/* TODO: Fix JSX expression */}
   l: string} addres,
-  s: string} } } addres,"
+  s: string} addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; i,
   d: string, nam,
   e: string, taglin,
@@ -289,9 +258,9 @@ i,
   emergingTech2027Services: EmergingTech2027Service[] = [ i,"
   d: "2027-emerging-tech", nam,"
   e: "2027 Emerging Tech Platform", taglin,"
-  e: "Emerging tech for 2027", pric,"
-  e: "$349/month", descriptio,"
-  n: "Advanced platform showcasing emerging technologies and innovations for 2027.", feature,"
+  e: "Emerging tech for 2027", pric,"]
+  e: "$349/month", descriptio,"]
+  n: "Advanced platform showcasing emerging technologies and innovations for 2027.", feature,"]
   s: [ "Emerging technologies" "Innovation platform" "Future capabilities" "Advanced features" "Expert insights" ], lin,"
   k: "/services/2027-emerging-tech", categor,"
   y: "Emerging Tech 2027", realImplementatio,

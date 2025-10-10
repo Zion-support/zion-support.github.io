@@ -4,7 +4,7 @@ impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
 
 export default function AutonomousSupplyChainRevolution20, 2, 5() {  
   return(:src/pages/blog/ai-2025-oct-autonomous-supply-chain-revolution/page.tsx;
-    <>
+    <>\</>
       <Helm, e, t>
         <title>
           Autonomous, AI, Supply Chain, Revolution, 2025 — 99.2% Forecast, Accurac, y,
@@ -30,8 +30,7 @@ export default function AutonomousSupplyChainRevolution20, 2, 5() {
   content=" />
         <link rel="canonical", href="https: //ziontechgroup.com/blog/ai-2025-oct-autonomous-supply-chain-revolution" />,
         <meta name="description",
-  content: "Transform supply chain operations with autonomous AI systems. Achieve 99.2% demand forecast accuracy, reduce operational costs by 78%, prevent $450M+ in disruptions, and unlock $1.8B+ in total value through intelligent automation.", /><meta name: "keywords;
-  content: "AI supply chain, autonomous logistics, demand forecasting, inventory optimization, supply chain AI, predictive analytics, logistics automation, supply chain management", /><link rel: "canonical", href="https: //ziontechgroup.com/blog/ai-2025-oct-autonomous-supply-chain-revolution/>",
+  content: "Transform supply chain operations with autonomous AI systems. Achieve 99.2% demand forecast accuracy, reduce operational costs by 78%, prevent $450M+ in disruptions, and unlock $1.8B+ in total value through intelligent automation.", /><meta name: content, "AI supply chain, autonomous logistics, demand forecasting, inventory optimization, supply chain AI, predictive analytics, logistics automation, supply chain management", /><link rel: "canonical", href="https: //ziontechgroup.com/blog/ai-2025-oct-autonomous-supply-chain-revolution/>",
   content: "AI supply chain, autonomous logistics, demand forecasting, inventory optimization, supply chain AI, predictive analytics, logistics automation, supply chain management;
         />
         <link rel: "canonical", href ="https: //ziontechgroup.com/blog/ai-2025-oct-autonomous-supply-chain-revolution" />,
@@ -140,9 +139,9 @@ export default function AutonomousSupplyChainRevolution20, 2, 5() {
                   <span><strong>78% Cost Reduction: </strong> Autonomous optimization eliminates waste and maximizes efficiency</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <DollarSign className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
-                  <span><strong>$1.8B+ Total Value: </strong> Average annual savings and revenue gains for enterprise deployments</span>
-                </li>
+                  <DollarSign className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />)
+                  <span><strong>$1.8B+ Total Value: </strong> Average annual savings and revenue gains for enterprise deployments</span>)
+                </li>)
                 <li className="flex items-start gap-3">)
                   <Globe className="h-6 w-6 text-blue-400 mt-1 flex-shrink-0" />)
           <div>)

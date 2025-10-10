@@ -5,13 +5,13 @@ import { CheckCircle, TrendingUp, Phone, Mail, MapPin, BarChart3, Brain, Target,
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const AIPredictiveAnalyticsPage: React.FC = () => {
-  const features = [
+const AIPredictiveAnalyticsPage: React.FC = () => {;
+const features = [
     {
       icon: TrendingUp,
-      title: 'Predictive Modeling',
-      description: 'AI-powered predictive modeling and forecasting',
+      title: description, 'AI-powered predictive modeling and forecasting']
       benefits: ['Trend prediction', 'Forecasting', 'Risk assessment']
+}
     },
     {
       icon: Target,
@@ -70,9 +70,9 @@ const AIPredictiveAnalyticsPage: React.FC = () => {
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
             Predictive Analytics Features
-          </h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          </h2>)
+          )
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">)
             {features.map((feature, index) => (
               <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 mx-auto">

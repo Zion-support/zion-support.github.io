@@ -9,8 +9,8 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 
-const MarketplacePage: React.FC = () => {
-  const [activeCategory, setActiveCategory] = useState('products');
+const MarketplacePage: React.FC = () => {;
+const [activeCategory, setActiveCategory] = useState('products');
   const [searchTerm, setSearchTerm] = useState('');
 
   const categories = [
@@ -21,6 +21,7 @@ const MarketplacePage: React.FC = () => {
       color: 'text-blue-400',
       bgColor: 'bg-blue-500/10',
       description:     ,
+}
 $4},
       id: 'talent',
       name: 'Talent',
@@ -33,9 +34,8 @@ idid: 'equipment',
       icon: Wrench,
       color: 'text-purple-400',
       bgColor: 'bg-purple-500/10',
-      description:     ,
-$4}
-  ];
+      description:     ]
+$4}];
 
   const products = [
       id: 1,
@@ -44,12 +44,10 @@ $4}
       category: 'AI Tools',
       price: '$49/month',
       rating: 4.9,
-      reviews: 127,
-      image: '📊',
+      reviews: image, '📊']
       features: ['AI Planning', 'Resource Optimization', 'Risk Assessment', 'Automated Reporting'],
       vendor: 'Zion Tech Group',
-      verified: true
-      id: 2,
+      verified: id, 2,
       name: 'Smart Analytics Dashboard',
       description: 'Real-time business intelligence with customizable dashboards and reports',
       category: 'Analytics',
@@ -77,19 +75,16 @@ $4}
       reviews: 45,
       image: '🔒',
       features: ['Quantum Encryption', 'Threat Detection', 'Compliance', 'Real-time Monitoring'],
-      vendor: 'QuantumSec',
-
-  const talent = [
-      name: 'Dr. Sarah Chen',
-      title: 'AI Research Scientist',
+      vendor: 'QuantumSec',;
+const talent = [
+      name: title, 'AI Research Scientist']
       expertise: ['Machine Learning', 'Deep Learning', 'Computer Vision'],
       experience: '8 years',
       projects: 45,
       rate: '$150/hour',
       image: '👩‍💼',
       verified: true,
-      available: true
-      name: 'Michael Rodriguez',
+      available: name, 'Michael Rodriguez',
       title: 'Cloud Architecture Expert',
       expertise: ['AWS', 'Azure', 'DevOps', 'Microservices'],
       experience: '12 years',
@@ -103,28 +98,24 @@ $4}
       projects: 89,
       rate: '$180/hour',
       image: '👩‍🔬',
-      available: false
-
-  const equipment = [
+      available: false;
+const equipment = [
       name: 'AI Workstation Pro',
       description: 'High-performance workstation optimized for AI development and training',
       category: 'Hardware',
       price: '$4,999',
-      reviews: 23,
-      image: '💻',
+      reviews: image, '💻']
       features: ['RTX 4090 GPU', '64GB RAM', '2TB NVMe SSD', 'AI-optimized cooling'],
       vendor: 'TechWorkstations',
-      inStock: true
-      name: 'Quantum Computing Access',
+      inStock: name, 'Quantum Computing Access',
       description: 'Cloud access to quantum computing resources for research and development',
       category: 'Cloud Services',
       price: '$500/month',
       reviews: 15,
       image: '⚛️',
       features: ['100 qubits', '24/7 access', 'API integration', 'Expert support'],
-      vendor: 'QuantumCloud',
-
-  const getCurrentItems = () => {
+      vendor: 'QuantumCloud',;
+const getCurrentItems = () => {
     switch (activeCategory) {
       case 'products':
         return products;
@@ -134,9 +125,10 @@ $4}
         return equipment;
       default:
         return [];
+}
   };
 
-  const filteredItems = getCurrentItems().filter(item =>
+  const filteredItems = getCurrentItems().filter(item =>)
     item.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
     item.description.toLowerCase().includes(searchTerm.toLowerCase())
   );
@@ -154,9 +146,8 @@ valuevalue: '100+',
 iconicon: Star,
       value: '4.8',
       label: 'Average Rating',
-      color: 'text-yellow-400'
-
-  const benefits = [
+      color: 'text-yellow-400';
+const benefits = [
       icon: CheckCircle,
       title: 'Verified Vendors',
       description:       ,
@@ -171,7 +162,7 @@ icon$5: Award,
       description: '100% satisfaction guarantee on all purchases'
 
   return (
-    <>
+    <>\</>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16 pt-24">
@@ -185,18 +176,17 @@ icon$5: Award,
               Find the perfect tools, talent, and equipment for your business needs.
             </p>
           </div>
-
-          {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
+)
+          {/* Stats */})
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">)
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
                 <div className={`w-16 h-16 ${stat.color.replace('text-', 'bg-').replace('-400', '-500/10')} rounded-full flex items-center justify-center mx-auto mb-4`}>
                   <stat.icon className={`w-8 h-8 ${stat.color}`} />
                 <div className={`text-3xl font-bold ${stat.color} mb-2`}>{stat.value}</div>
                 <div className="text-gray-300 text-sm">{stat.label}</div>
-            ))}
-
-          {/* Search and Filters */}
+            ))},
+      {/* Search and Filters */}
           <div className="mb-12">
             <div className="flex flex-col md:flex-row gap-4 mb-8">
               <div className="flex-1 relative">
@@ -248,9 +238,8 @@ icon$5: Award,
                       <p className="text-gray-300 text-sm mb-2">{item.description}</p>
                       <div className="flex items-center text-sm text-gray-400 mb-2">
                         <span className="mr-2">{item.category}</span>
-                        {item.vendor && <span>• {item.vendor}</span>}
-
-                  {activeCategory === 'products' && (
+                        {item.vendor && <span>• {item.vendor}</span>},
+      {activeCategory === 'products' && (
                       <div className="mb-4">
                         <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h4>
                         <ul className="space-y-1">
@@ -282,9 +271,8 @@ icon$5: Award,
                         <span className={`px-2 py-1 rounded text-xs ${
                           item.available ? 'bg-green-500/20 text-green-400' : 'bg-red-500/20 text-red-400'
                         }`}>
-                          {item.available ? 'Available' : 'Busy'}
-
-                  {activeCategory === 'equipment' && (
+                          {item.available ? 'Available' : 'Busy'},
+      {activeCategory === 'equipment' && (
                         <h4 className="text-sm font-semibold text-cyan-400 mb-2">Specifications:</h4>
                         <span className="text-gray-400">{item.vendor}</span>
                           item.inStock ? 'bg-green-500/20 text-green-400' : 'bg-red-500/20 text-red-400'
@@ -327,12 +315,12 @@ icon$5: Award,
                 <Mail className="w-4 h-4 mr-2" />
                 Email Us
       <Footer />
-  return (
-    <div>Coming Soon</div>
-
-  );
-};
-  const [activeCategory, setActiveCategory] = useState('products');
+  return ()
+    <div>Coming Soon</div>)
+)]
+  );]
+};];
+const [activeCategory, setActiveCategory] = useState('products');
   const [searchTerm, setSearchTerm] = useState('');
 const categories = [
     {/* TODO: Fix JSX expression */}
@@ -379,8 +367,8 @@ const categories = [
       review,
   s: 127,
       imag,
-  e: '',
-      feature,
+  e: ''
+      feature]
   s: ['AI Planning', 'Resource Optimization', 'Risk Assessment', 'Automated Reporting'],
       vendo,
   r: 'Zion Tech Group',
@@ -455,7 +443,7 @@ const categories = [
                 <Mail className="w-4 h-4 mr-2" />
 
                 Email Us;
-      <Footer /></Footer>
+      <Footer /></Footer>;
 export default MarketplacePage;
 
 

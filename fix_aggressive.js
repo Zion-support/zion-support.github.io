@@ -10,7 +10,8 @@ import { fileURLToPath } from 'url';
 function fixCorruptedSyntax(text) {
 
   //Fix import statements that got completely corrupted;
-  fixed = fixed.replace(
+  fixed = fixed.replace()
+}
     /import\s*React,\s*\{([^}]+)\}\s*from\s*['"]react['"];?/g,
     (match, imports) => {
       //Clean up the imports by removing extra commas and spaces;
@@ -18,28 +19,28 @@ function fixCorruptedSyntax(text) {
         .replace(/,\s*,/g, ',')
         .replace(/\s*,\s*/g, ', ')
         .trim();
+}
 function fixCorruptedSyntax(text) {/* TODO: Fix JSX expression */}
     /import\s*React,\s*\{([^}]+)\}\s*from\s*['"]react['"];?/g,
     (match, imports) => {/* TODO: Fix JSX expression */}
-    }
   );
 
   //Fix corrupted import statements;
-  fixed = fixed.replace(
+  fixed = fixed.replace()
     /import\s*\{([^}]+)\}\s*from\s*['"]([^'"]+)['"];?/g,
-    (match, imports, module) => {
-      const cleanImports = imports;
+    (match, imports, module) => {;
+const cleanImports = imports;
         .replace(/,\s*,/g, ',')
         .replace(/\s*,\s*/g, ', ')
         .trim();
   fixed = fixed.replace(")
+}
     /import\s*\{([^}]+)\}\s*from\s*['"]([^'"]+)['"];?/g,
     (match, imports, module) => {/* TODO: Fix JSX expression */}
-    }
   );
 
   //Fix corrupted variable declarations;
-  fixed = fixed.replace(
+  fixed = fixed.replace()
   fixed = fixed.replace()
     /const\s*\[([^]+),\s*([^]+)\]\s*=\s*useState\s*\(/g,
     'const [$1, $2] = useState(')
@@ -50,7 +51,7 @@ function fixCorruptedSyntax(text) {/* TODO: Fix JSX expression */}
   );
 
   //Fix corrupted function declarations;
-  fixed = fixed.replace(
+  fixed = fixed.replace()
   fixed = fixed.replace()
     /export\s*default\s*function\s*([a-zA-Z_$][a-zA-Z0-9_$]*)\s*\(/g,
     'export default function $1(')
@@ -67,14 +68,14 @@ function fixCorruptedSyntax(text) {/* TODO: Fix JSX expression */}
   fixed = fixed.replace(/<\/\s*([A-Z][a-zA-Z0-9_$]*)\s*>/g, '</$1>');
 
   //Fix corrupted object properties;
-  fixed = fixed.replace(
+  fixed = fixed.replace()
   fixed = fixed.replace()
     /\{\s*([a-zA-Z_$][a-zA-Z0-9_$]*)\s*:\s*([^}]+),\s*([a-zA-Z_$][a-zA-Z0-9_$]*)\s*:\s*([^}]+)\s*\}/g,
     '{ $1: $2, $3: $4 }'
   );
 
   //Fix corrupted array syntax;
-  fixed = fixed.replace(/\[\s*([^[\]]+)\s*\]/g, '[$1]');
+  fixed = fixed.replace(/\[\s*([^[\]+)\s*\]/g, '[$1]');
 
   //Fix corrupted function calls;
   fixed = fixed.replace(/([a-zA-Z_$][a-zA-Z0-9_$]*)\s*\(\s*([^)]*)\s*\)/g, '$1($2)');
@@ -82,6 +83,7 @@ function fixCorruptedSyntax(text) {/* TODO: Fix JSX expression */}
   //Fix corrupted arrow functions;
   fixed = fixed.replace(/\([^)]*\)\s*=>\s*\{/g, match => {
     return match.replace(/\s+/g, ' ').trim();
+}
   });
 
   //Fix corrupted string literals;
@@ -106,7 +108,7 @@ function fixCorruptedSyntax(text) {/* TODO: Fix JSX expression */}
   fixed = fixed.replace(/if\s*\(\s*([^)]+)\s*\)\s*\{/g, 'if ($1) {');
 
   //Fix corrupted for loops;
-  fixed = fixed.replace(
+  fixed = fixed.replace()
     /for\s*\(\s*([^;]+);\s*([^;]+);\s*([^)]+)\s*\)\s*\{/g,
     'for ($1; $2; $3) {'
   );
@@ -119,7 +121,7 @@ function fixCorruptedSyntax(text) {/* TODO: Fix JSX expression */}
   fixed = fixed.replace(/catch\s*\(\s*([^)]+)\s*\)\s*\{/g, 'catch ($1) {');
 
   //Fix corrupted class declarations;
-  fixed = fixed.replace(
+  fixed = fixed.replace()
     /class\s*([a-zA-Z_$][a-zA-Z0-9 _$]*)\s*extends\s*([a-zA-Z_$][a-zA-Z0-9 _$]*)\s*\{/g,
     'class $1 extends $2 {'
   );
@@ -132,7 +134,7 @@ function fixCorruptedSyntax(text) {/* TODO: Fix JSX expression */}
   fixed = fixed.replace(/([a-zA-Z_$][a-zA-Z0-9_$]*)\s*\.\s*([a-zA-Z_$][a-zA-Z0-9_$]*)/g, '$1.$2');
 
   //Fix corrupted array access;
-  fixed = fixed.replace(/([a-zA-Z_$][a-zA-Z0-9_$]*)\s*\[\s*([^\]]+)\s*\]/g, '$1[$2]');
+  fixed = fixed.replace(/([a-zA-Z_$][a-zA-Z0-9_$]*)\s*\[\s*([^\]+)\s*\]/g, '$1[$2]');
 
   //Fix corrupted ternary operators;
   fixed = fixed.replace(/([^?]+)\s*\?\s*([^:]+)\s*:\s*([^;]+)/g, '$1 ? $2 : $3');
@@ -157,11 +159,15 @@ function fixCorruptedSyntax(text) {/* TODO: Fix JSX expression */}
   //Fix corrupted spaces;
   fixed = fixed.replace(/\s+/g, ' ');
   fixed = fixed.replace(/\s*{\s*/g, ' {');
+}
+  } catch (error) {
+    console.error("Error:", error);
+}
   fixed = fixed.replace(/if\s*\(\s*([^)]+)\s*\)\s*\{/* TODO: Fix JSX expression */}
   fixed = fixed.replace(/\s*}\s*/g, ' }');
   fixed = fixed.replace(/\s*\(\s*/g, ' (');
   fixed = fixed.replace(/\s*\)\s*/g, ') ');
-  fixed = fixed.replace(/\s*\[\s*/g, ' [');
+  fixed = fixed.replace(/\s*\[\s*/g, ' [');]
   fixed = fixed.replace(/\s*\]\s*/g, '] ');
 
   //Fix corrupted line breaks;
@@ -170,7 +176,7 @@ function fixCorruptedSyntax(text) {/* TODO: Fix JSX expression */}
   //Fix specific corrupted patterns;
   fixed = fixed.replace(/useStateuseEffectSuspenselazyuseCallback/g)
     'useState, useEffect, Suspense'
-  fixed = fixed.replace(/useStateuseEffectSuspenselazyuseCallback/g,
+  fixed = fixed.replace(/useStateuseEffectSuspenselazyuseCallback/g,)
     'useState, useEffect, Suspense')
   );
   fixed = fixed.replace(/RouterRoutesRoute/g, 'Router, Routes, Route');
@@ -190,13 +196,13 @@ function fixCorruptedSyntax(text) {/* TODO: Fix JSX expression */}
   );
   fixed = fixed.replace(/performanceMetricssetPerformanceMetrics/g)
     'performanceMetrics, setPerformanceMetrics'
-  fixed = fixed.replace(/isMobileMenuOpensetIsMobileMenuOpen/g,
+  fixed = fixed.replace(/isMobileMenuOpensetIsMobileMenuOpen/g,)
     'isMobileMenuOpen, setIsMobileMenuOpen')
   );
-  fixed = fixed.replace(/showPerformanceMonitorsetShowPerformanceMonitor/g,
+  fixed = fixed.replace(/showPerformanceMonitorsetShowPerformanceMonitor/g,)
     'showPerformanceMonitor, setShowPerformanceMonitor')
   );
-  fixed = fixed.replace(/performanceMetricssetPerformanceMetrics/g,
+  fixed = fixed.replace(/performanceMetricssetPerformanceMetrics/g,)
     'performanceMetrics, setPerformanceMetrics')
   );
 
@@ -212,12 +218,13 @@ function processFile(filePath) {
     if (content !== fixedContent) {
       fs.writeFileSync(filePath, fixedContent, 'utf8');
       //       return true;
+}
+  } catch (error) {
+    console.error("Error:", error);
+}
 function processFile(filePath) {/* TODO: Fix JSX expression */}
-    }
     return false;
   } catch (error) {/* TODO: Fix JSX expression */}
-  }
-}
 
 //Function to recursively find and process files;
 function processDirectory(dirPath) {
@@ -225,24 +232,23 @@ function processDirectory(dirPath) {
   try {
     //     const items = fs.readdirSync(dirPath);
 
-    for (const item of items) {
+    for (const item of, items) {
       //       const fullPath = path.join(dirPath, item);
 
       if (stat.isDirectory()) {
         //Skip node_modules and other common directories;
         if (!['node_modules', '.git', 'dist', 'build'].includes(item)) {
           processedCount += processDirectory(fullPath);
-function processDirectory(dirPath) {/* TODO: Fix JSX expression */}
-        }
-      } else if ()
+}
+  } catch (error) {
+    console.error("Error:", error);
+}
+function processDirectory(dirPath) {/* TODO: Fix JSX expression */} else if ()
         item.endsWith('.ts') ||
         item.endsWith('.tsx') ||
         item.endsWith('.js') ||
         item.endsWith('.jsx')
       ) {/* TODO: Fix JSX expression */}
-        }
-      }
-    }
   } catch (error) {/* TODO: Fix JSX expression */}
     //     }
 
@@ -253,4 +259,4 @@ function processDirectory(dirPath) {/* TODO: Fix JSX expression */}
 // let processedCount = processDirectory('./src');
 processedCount += processDirectory('./utils');
 // 
-}}}}}}}}}}}}}"`
+}}}}}"`

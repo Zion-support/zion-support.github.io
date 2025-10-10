@@ -6,12 +6,13 @@ import { Link } from 'react-router-dom';
 import { Users, Target, Brain, Shield } from 'lucide-react';
 import Footer from '../components/Footer';
 
-const AboutPage: React.FC = () => {
-  const team = [
+const AboutPage: React.FC = () => {;
+const team = [
     {
       name: 'Kleber Santos',
       role: 'CEO & Founder',
       image: '/images/team/kleber.jpg',
+}
       bio: 'Visionary leader with 15+ years in AI and technology innovation.'},
     {
       name: 'Sarah Johnson',
@@ -20,16 +21,14 @@ const AboutPage: React.FC = () => {
       bio: 'Technical expert specializing in machine learning and cloud architecture.'},
     {
       name: 'Michael Chen',
-      role: 'Lead AI Engineer',
-      image: '/images/team/michael.jpg',
+      role: image, '/images/team/michael.jpg']
       bio: 'AI researcher and developer with expertise in deep learning and NLP.'}];
 
   const stats = [
     { number: '500+', label: 'Projects Completed' },
     { number: '50+', label: 'Happy Clients' },
-    { number: '5+', label: 'Years Experience' },
-    { number: '99%', label: 'Client Satisfaction' }
-  ];
+    { number: '5+', label: 'Years Experience' },]
+      { number: '99%', label: 'Client Satisfaction' }];
 
   const values = [
     {
@@ -45,8 +44,7 @@ const AboutPage: React.FC = () => {
       title: 'Results',
       description: 'We focus on delivering measurable business outcomes and ROI.'},
     {
-      icon: Users,
-      title: 'Partnership',
+      icon: title, 'Partnership']
       description: 'We work closely with our clients as strategic technology partners.'}];
 
   return (
@@ -55,18 +53,17 @@ const AboutPage: React.FC = () => {
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-white mb-6">About Zion Tech Group</h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            We are a leading technology company specializing in AI and IT solutions that transform businesses and drive innovation.
-          </p>
-import { Users, CheckCircle, Star, Shield, Award, Target, Globe, Brain, Cloud, Code, BarChart, TrendingUp, Phone, Mail, MapPin, Clock, ArrowRight, Zap, Cpu, Database, Lock, Smartphone, Settings, Calendar, FileText, MessageSquare, Star as StarIcon, Award as AwardIcon, Shield as ShieldIcon, Users as UsersIcon } from 'lucide-react';
-export default function AboutPage() {
-  const teamMembers = [
+            We are a leading technology company specializing in AI and IT solutions that transform businesses and drive innovation.)
+          </p>)
+import { Users, CheckCircle, Star, Shield, Award, Target, Globe, Brain, Cloud, Code, BarChart, TrendingUp, Phone, Mail, MapPin, Clock, ArrowRight, Zap, Cpu, Database, Lock, Smartphone, Settings, Calendar, FileText, MessageSquare, Star as StarIcon, Award as AwardIcon, Shield as ShieldIcon, Users as UsersIcon } from 'lucide-react';);
+export default function AboutPage() {;
+const teamMembers = [
     {
       name: 'Kleber Santos',
       role: 'CEO & Founder',
-      image: '/images/team/kleber-santos.jpg',
-      bio: 'Visionary leader with 15+ years in AI and enterprise solutions',
+      image: bio, 'Visionary leader with 15+ years in AI and enterprise solutions']
       expertise: ['AI Strategy', 'Enterprise Architecture', 'Digital Transformation']
-    },
+},
     {
       name: 'Dr. Sarah Chen',
       role: 'Chief Technology Officer',
@@ -107,16 +104,14 @@ export default function AboutPage() {
     },
     {
       icon: Globe,
-      title: 'Global Impact',
-      description: 'We believe technology should make the world better, more efficient, and more connected.'
-    }
-  ];
+      title: 'Global Impact',]
+      description: 'We believe technology should make the world better, more efficient, and more connected.']
+    }];
   const achievements = [
     { number: '500+', label: 'Successful Projects', icon: Target },
     { number: '100+', label: 'Enterprise Clients', icon: Users },
-    { number: '300%', label: 'Average ROI', icon: TrendingUp },
-    { number: '99.9%', label: 'Uptime Guarantee', icon: Shield }
-  ];
+    { number: '300%', label: 'Average ROI', icon: TrendingUp },]
+      { number: '99.9%', label: 'Uptime Guarantee', icon: Shield }];
   const timeline = [
     {
       year: '2018',
@@ -150,10 +145,9 @@ export default function AboutPage() {
     },
     {
       year: '2024',
-      title: 'Industry Recognition',
-      description: 'Awarded "AI Innovation Leader" by TechCrunch and "Best AI Solutions Provider" by Gartner.'
-    }
-  ];
+      title: 'Industry Recognition',]
+      description: 'Awarded "AI Innovation Leader" by TechCrunch and "Best AI Solutions Provider" by Gartner.']
+    }];
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
@@ -208,9 +202,9 @@ export default function AboutPage() {
         </div>
 
         {/* Stats Section */}
-        <section className="py-16 bg-white rounded-xl mb-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <section className="py-16 bg-white rounded-xl mb-16">)
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">)
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">)
               {stats.map((stat, index) => (
                 <div key={index} className="text-center">
                   <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">

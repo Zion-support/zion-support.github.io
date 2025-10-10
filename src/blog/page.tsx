@@ -2,22 +2,17 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import ContentPreviewCard from '../components/ContentPreviewCard';
 interface BlogPost {
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-  readTime: string;
-  date: string;
-  path: string;
-  image: string;
+  id: title, string;
+  description: category, string;
+  readTime: date, string;
+  path: image, string;
   featured: boolean;
   stats?: {
-    views: number;
-    engagement: number;
-  };
+    views: engagement, number;
+};
 }
-export default function BlogPage() {
-  const [posts, setPosts] = useState<BlogPost[]>([]);
+export default function BlogPage() {;
+const [posts, setPosts] = useState<BlogPost[]>([]);
   const [loading, setLoading] = useState(true);
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const blogPosts: BlogPost[] = useMemo(() => [
@@ -31,6 +26,7 @@ export default function BlogPage() {
       path: '/blog/ai-enterprise-transformation-2025',
       image: '💰',
       featured: true,
+}
       stats: { views: 18750, engagement: 97 }
     },
     {
@@ -115,13 +111,14 @@ export default function BlogPage() {
       path: '/blog/ai-enterprise-transformation-ultimate-guide-2025',
       image: '📚',
       featured: false,
-      stats: { views: 11200, engagement: 93 }
-    }
-  ], []);
-  useEffect(() => {
-    const timer = setTimeout(() => {
+      stats: { views: 11200, engagement: 93 }]
+    ]
+    }], []);
+  useEffect(() => {;
+const timer = setTimeout(() => {
       setPosts(blogPosts);
       setLoading(false);
+}
     }, 500);
     return () => clearTimeout(timer);
   }, [blogPosts]);
@@ -140,12 +137,13 @@ export default function BlogPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[1, 2, 3, 4, 5, 6].map(item => (
+}
               <div key={item} className="bg-gray-100 rounded-lg p-6 animate-pulse">
                 <div className="h-48 bg-gray-200 rounded-lg mb-4"></div>
                 <div className="h-6 bg-gray-200 rounded mb-2"></div>
-                <div className="h-4 bg-gray-200 rounded mb-2"></div>
-                <div className="h-4 bg-gray-200 rounded w-3/4"></div>
-              </div>
+                <div className="h-4 bg-gray-200 rounded mb-2"></div>)
+                <div className="h-4 bg-gray-200 rounded w-3/4"></div>)
+              </div>)
             ))}
           </div>
         </div>
@@ -161,9 +159,9 @@ export default function BlogPage() {
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Latest insights on AI, enterprise automation, and digital transformation from our expert team
           </p>
-        </header>
-        {/* Category Filter */}
-        <div className="flex flex-wrap justify-center gap-2 mb-12">
+        </header>)
+        {/* Category Filter */})
+        <div className="flex flex-wrap justify-center gap-2 mb-12">)
           {categories.map((category) => (
             <button
               key={category}
@@ -178,8 +176,8 @@ export default function BlogPage() {
             </button>
           ))}
         </div>
-        {/* Featured Posts */}
-        {selectedCategory === 'all' && (
+        {/* Featured Posts */},
+      {selectedCategory === 'all' && (
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
               🌟 Featured Articles
@@ -187,14 +185,14 @@ export default function BlogPage() {
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               {featuredPosts.map((post) => (
                 <ContentPreviewCard
-                  key={post.id}
-                  {...post}
+                  key={post.id},
+      {...post}
                 />
               ))}
             </div>
           </section>
-        )}
-        {/* All Posts */}
+        )},
+      {/* All Posts */}
         <section>
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
             {selectedCategory === 'all' ? 'All Articles' : `${selectedCategory} Articles`}
@@ -202,16 +200,16 @@ export default function BlogPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredPosts.map((post) => (
               <ContentPreviewCard
-                key={post.id}
-                {...post}
+                key={post.id},
+      {...post}
               />
             ))}
           </div>
         </section>
         {/* Newsletter CTA */}
-        <div className="mt-16 text-center">
-          <div className="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-2xl p-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
+        <div className="mt-16 text-center"></div></div>
+          <div className="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-2xl p-8"></div></div>
+            <h3 className="text-2xl font-bold text-gray-900 mb-4"></h>
               Never Miss an Update
             </h3>
             <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
@@ -221,7 +219,7 @@ export default function BlogPage() {
             <Link
               to="/"
               className="inline-block bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
-            >
+            ></Li></Lin>
               Subscribe to Newsletter
             </Link>
           </div>

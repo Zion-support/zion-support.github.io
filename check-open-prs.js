@@ -9,14 +9,17 @@ const options = {
   headers: {,
     Authorization: 'token ' + process.env.GITHUB_TOKEN;
     'User-Agent': 'Node.js',
+
+}
+}
     Accept: 'application/vnd.github.v3+json'}};
 
-// const req = https.get(options, res => {
+// const req = https.get(options, res => {)
 )
   res.on('data', chunk => {)
-    data += chunk;)
-const options = {/* TODO: Fix JSX expression */}
-  }};
+    data += chunk;);
+}
+const options = {/* TODO: Fix JSX expression */};
 
 // const req = https.get(options, res => {/* TODO: Fix JSX expression */})
   });
@@ -34,6 +37,7 @@ const options = {/* TODO: Fix JSX expression */}
 });
 
 req.on('error', error => {)
+}
 req.on('error', error => {/* TODO: Fix JSX expression */})
   //   });
 

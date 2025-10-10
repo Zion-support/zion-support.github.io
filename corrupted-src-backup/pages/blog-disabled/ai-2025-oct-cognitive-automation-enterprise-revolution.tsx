@@ -15,7 +15,7 @@ impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
 
 :src/pages/blog/ai-2025-oct-cognitive-automation-enterprise-revolution.tsx;
       <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-da, r, k'>
-        <Head, e, r />
+        <Head, e, r />;
 const CognitiveAutomationEnterpriseRevolution: () => {
   return(<div>),
       <Helmet>),
@@ -25,7 +25,7 @@ const CognitiveAutomationEnterpriseRevolution: () => {
   content="Discover how cognitive automation is transforming enterprises in 2025. 92% efficiency gains, $3.2M average savings, and 10x productivity increases through intelligent AI systems." /><meta name="keywords;
 :src/pages/blog/ai-2025-oct-cognitive-automation-enterprise-revolution.tsx
       <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-da, r, k'></div>
-        <Head, e, r />
+        <Head, e, r />;
 const CognitiveAutomationEnterpriseRevolution: () => {
   return (
     <div></div>
@@ -36,13 +36,13 @@ const CognitiveAutomationEnterpriseRevolution: () => {
   content="Discover how cognitive automation is transforming enterprises in 2025. 92% efficiency gains, $3.2M average savings, and 10x productivity increases through intelligent AI systems." /><meta name="keywords
   content: "cognitive automation, enterprise AI, intelligent automation, business process automation, AI transformation, digital workforce" />
         <meta name="description"
-  content: "Discover how cognitive automation is transforming enterprises in 2025. 92% efficiency gains, $3.2M average savings, and 10x productivity increases through intelligent AI systems.", /><meta name: "keywords;
-  content: "cognitive automation, enterprise AI, intelligent automation, business process automation, AI transformation, digital workforce", /></Helmet>
+  content: "Discover how cognitive automation is transforming enterprises in 2025. 92% efficiency gains, $3.2M average savings, and 10x productivity increases through intelligent AI systems.", /><meta name: content, "cognitive automation, enterprise AI, intelligent automation, business process automation, AI transformation, digital workforce", /></Helmet>
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark"></div>
         <Header />
         <article className="container mx-auto px-6 py-20">
         <article className="container mx-auto px-6 py-20">
-          {/* Back Link */};
+},
+      {/* Back Link */};
           <Link to="/blog">
   className="inline-flex items-center text-zion-cyan hover: text-zion-blue-light mb-8 transition-colors">
             <ArrowLeft className="w-4 h-4 mr-2 ">,
@@ -62,11 +62,11 @@ const CognitiveAutomationEnterpriseRevolution: () => {
           >
             <ArrowLeft, className='w-4 h-4, m, r-2' />
 :src/pages/blog/ai-2025-oct-cognitive-automation-enterprise-revolution.tsx;
-      <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-da, r, k'></div>
-        <Head, e, r /></Head>
-const,
-  CognitiveAutomationEnterpriseRevolution: () => {/* TODO: Fix JSX expression */}
-          {/* Back Link */};
+      <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-da, r, k'></div>)
+        <Head, e, r /></Head>)
+const,)
+  CognitiveAutomationEnterpriseRevolution: () => {/* TODO: Fix JSX expression */},
+      {/* Back Link */};
           <Link to="/blog"></Link>"
   className="inline-flex items-center text-zion-cyan,"
   hover:text-zion-blue-light mb-8 transition-colors">"
@@ -513,7 +513,7 @@ Real-world implementations across industries are delivering transformational res
                   <ul className="space-y-3">
                     <li className="flex items-start gap-2">
                       <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />
-                      <span></span><strong>94% reduction</strong> in loan processing time (from 3 weeks to 4 hours)</span>
+                      <span></span><strong>94% reduction</strong> in loan processing time (from 3 weeks to 4, hours)</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />
@@ -538,7 +538,7 @@ Real-world implementations across industries are delivering transformational res
                   <ul className="space-y-3">
                     <li className="flex items-start gap-2">
                       <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />
-                      <span></span><strong>94% reduction</strong> in loan processing time (from 3 weeks to 4 hours)</span>
+                      <span></span><strong>94% reduction</strong> in loan processing time (from 3 weeks to 4, hours)</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />
@@ -554,7 +554,7 @@ Real-world implementations across industries are delivering transformational res
                   <ul className="space-y-3">
                     <li className="flex items-start gap-2">
                       <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />
-                      <span></span><strong>94% reduction</strong> in loan processing time (from 3 weeks to 4 hours)</span>
+                      <span></span><strong>94% reduction</strong> in loan processing time (from 3 weeks to 4, hours)</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />
@@ -570,7 +570,7 @@ Real-world implementations across industries are delivering transformational res
                   <ul className="space-y-3">
                     <li className="flex items-start gap-2">
                       <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />
-                      <span></span><strong>94% reduction</strong> in loan processing time (from 3 weeks to 4 hours)</span>
+                      <span></span><strong>94% reduction</strong> in loan processing time (from 3 weeks to 4, hours)</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />
@@ -784,7 +784,7 @@ Real-world implementations across industries are delivering transformational,
                   <ul className="space-y-3"></ul>"
                     <li className="flex items-start gap-2"></li>"
                       <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" /></CheckCircle>
-                      <span><strong>94% reduction</strong> in loan processing time (from 3 weeks to 4 hours)</span>
+                      <span><strong>94% reduction</strong> in loan processing time (from 3 weeks to 4, hours)</span>
                     </li>"
                     <li className="flex items-start gap-2"></li>"
                       <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" /></CheckCircle>
@@ -810,7 +810,7 @@ Real-world implementations across industries are delivering transformational,
                   <ul className="space-y-3"></ul>"
                     <li className="flex items-start gap-2"></li>"
                       <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" /></CheckCircle>
-                      <span><strong>94% reduction</strong> in loan processing time (from 3 weeks to 4 hours)</span>
+                      <span><strong>94% reduction</strong> in loan processing time (from 3 weeks to 4, hours)</span>
                     </li>"
                     <li className="flex items-start gap-2"></li>"
                       <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" /></CheckCircle>
@@ -827,7 +827,7 @@ Real-world implementations across industries are delivering transformational,
                   <ul className="space-y-3"></ul>"
                     <li className="flex items-start gap-2"></li>"
                       <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" /></CheckCircle>
-                      <span><strong>94% reduction</strong> in loan processing time (from 3 weeks to 4 hours)</span>
+                      <span><strong>94% reduction</strong> in loan processing time (from 3 weeks to 4, hours)</span>
                     </li>"
                     <li className="flex items-start gap-2"></li>"
                       <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" /></CheckCircle>
@@ -844,7 +844,7 @@ Real-world implementations across industries are delivering transformational,
                   <ul className="space-y-3"></ul>"
                     <li className="flex items-start gap-2"></li>"
                       <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" /></CheckCircle>
-                      <span><strong>94% reduction</strong> in loan processing time (from 3 weeks to 4 hours)</span>
+                      <span><strong>94% reduction</strong> in loan processing time (from 3 weeks to 4, hours)</span>
                     </li>"
                     <li className="flex items-start gap-2"></li>"
                       <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" /></CheckCircle>
@@ -1294,12 +1294,12 @@ Real-world implementations across industries are delivering transformational,
                     Examp, l, e: "Generate, a, quarterly sales, report, for the, Northeast, region focusing, on, accounts that, grew, more than, 2, 0%" executed, instantly, with contextual, intelligenc, e.
                     <li, classNam, e='flex, item, s-start, ga, p-2'></li>
                       <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, m, t-1, fle, x-shri, n, k-0' /></CheckCircle>
-                      <sp, a, n></sp>
+                      <sp, a, n></div>
                         <stro, n, g>98.7% accura, c, y</stro, n, g> in, fraud, detection with, 7, 5% fewer, false, positives;
                       </sp, a, n>
                     <li, classNam, e='flex, item, s-start, ga, p-2'></li>
                       <CheckCircle, classNam, e='w-5 h-5, tex, t-bl, u, e-400, m, t-1, fle, x-shri, n, k-0' /></CheckCircle>
-                      <sp, a, n></sp>
+                      <sp, a, n></div>
                         <stro, n, g>$8.4M, reductio, n</stro, n, g> in, administrative, overhead annual, l, y;
                       </sp, a, n>
                     <li, classNam, e='flex, item, s-start, ga, p-2'></li>
@@ -1335,24 +1335,24 @@ Real-world implementations across industries are delivering transformational,
               <h2, classNam, e = 'te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6'>
                     <li, className='flex, item, s-start, ga, p-2'></li>
                       <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-400, m, t-1, fle, x-shri, n, k-0' /></CheckCircle>
-                      <sp, a, n></sp>
+                      <sp, a, n></div>
                         <stro, n, g>98.7% accura, c, y</stro, n, g> in, fraud, detection with, 7, 5% fewer, false, positives;
                       </sp, a, n>
                     <li, className='flex, item, s-start, ga, p-2'></li>
                       <CheckCircle, className='w-5 h-5, tex, t-bl, u, e-400, m, t-1, fle, x-shri, n, k-0' /></CheckCircle>
-                      <sp, a, n></sp>
+                      <sp, a, n></div>
                         <stro, n, g>$8.4M, reductio, n</stro, n, g> in, administrative, overhead annual, l, y;
                       </sp, a, n>
                     <li, className='flex, item, s-start, ga, p-2'></li>
                       <CheckCircle, className='w-5 h-5, tex, t-purp, l, e-400, m, t-1, fle, x-shri, n, k-0' /></CheckCircle>
-                      <sp, a, n></sp>
+                      <sp, a, n></div>
                         <stro, n, g>$15.7M, annual, savings</stro, n, g> from intelligent, resource allocati, o, n;
                       </sp, a, n>
                     <li, classNam, e='flex, item, s-start, ga, p-2'></li>
                       <CheckCircle, classNam, e='w-5 h-5, tex, t-cy, a, n-400, m, t-1, fle, x-shri, n, k-0' /></CheckCircle>
                     <li, className='flex, item, s-start, ga, p-2'></li>
                       <CheckCircle, className='w-5 h-5, tex, t-cy, a, n-400, m, t-1, fle, x-shri, n, k-0' /></CheckCircle>
-                      <sp, a, n></sp>
+                      <sp, a, n></div>
                         <stro, n, g>$9.2M, reductio, n</stro, n, g> in, inventory, carrying;
                         cos, t, s;
                       </sp, a, n>
@@ -1378,7 +1378,7 @@ Real-world implementations across industries are delivering transformational,
                         1;
                       </sp, a, n>
                     </div>
-                    <d, i, v></d>
+                    <d, i, v></div>
                       <h3, className='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3'></h3>
                         Discove, r, y & Assessme, n, t (Week, s, 1-, 3)
                       </h3>

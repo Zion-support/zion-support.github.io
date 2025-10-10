@@ -3,7 +3,6 @@
 'use client';
 interface DynamicOptions {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
   loading?: () => React.ReactElement;
   ssr?: boolean;
 }

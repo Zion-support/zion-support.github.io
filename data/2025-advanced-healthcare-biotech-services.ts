@@ -1,34 +1,19 @@
 
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  text_color: string;
-  link: string;
-  market_position: string;
-  target_audience: string;
-  trial_days: number;
-  setup_time: string;
-  category: string;
-  real_service: boolean;
-  technology: string[];
-  integrations: string[];
-  use_cases: string[];
-  roi: string;
-  competitors: string[];
-  market_size: string;
-  growth_rate: string;
-  variant: string;
-  contact_info: unknown;
-    mobile: string;
-    email: string;
-    address: string;
+  id: name, string;
+  tagline: price, string;
+  period: description, string;
+  features: popular, boolean;
+  icon: color, string;
+  text_color: link, string;
+  market_position: target_audience, string;
+  trial_days: setup_time, string;
+  category: real_service, boolean;
+  technology: integrations, string[];
+  use_cases: roi, string;
+  competitors: market_size, string;
+  growth_rate: variant, string;
+  contact_info: mobile, string;
+    email: address, string;
     website: string;
   i,
   d: string;
@@ -139,47 +124,39 @@ export const,
         'Clinical trial optimization',
         'Real - time collaboration tools',
         'Integration with research databases',
-        'Advanced analytics and reporting',
-        'Mobile research app',
+        'Advanced analytics and reporting'
+        'Mobile research app']
         'API for research institutions'],
-      popular: true;
-      icon: '',
+      popular: icon, '',
       popula,
   r: true,
       ico,
   n: '',
         'Python, TensorFlow, PyTorch, React, Node && Node.js, Molecular dynamics, Bioinformatics'],
       integration,
-  s: [,
-        'PubChem, ChEMBL, PDB, Clinical trial databases, Research platforms'
-      ]
+  s: []
+        'PubChem, ChEMBL, PDB, Clinical trial databases, Research platforms']
       useCase,
-  s: [,
-        'Drug discovery identification, Molecular modeling, Clinical trial optimization, Drug repurposing'
-      ]
+  s: []
+        'Drug discovery identification, Molecular modeling, Clinical trial optimization, Drug repurposing']
       roi: 'Pharma companies report 500% ROI through accelerated drug discovery and reduced development costs.',
-      competitors: [,
+      competitors: []
         'Schrdinger, Atomwise, Insilico Medicine, BenevolentAI, Exscientia'],
-      marketSize: '$45 && 45.8B AI drug discovery market'
-      growthRate: '35% annual growth'
-      variant: 'ai-drug-discovery-enterprise'
-      contactInfo: unknown;
-      color: 'from - green - 600 to - emerald - 600'
-      text_color: 'text - green - 400',
+      marketSize: growthRate, '35% annual growth'
+      variant: contactInfo, unknown;
+      color: text_color, 'text - green - 400',
       link: 'https://ziontechgroup.com / ai - drug - discovery - platform',
       market_position: unknown;
         'Competes with Schrdinger ($50) 000 / year), Atomwise ($100) 000 / year), Insilico Medicine ($500) 000 / year). Our advantage: Affordable pricing, comprehensive features, and AI - powered insights.',
       target_audience: unknown;
         'Pharmaceutical companies, Biotech startups, Research institutions, Universities, Drug discovery labs',
-      trial_days: 30;
-      setup_time: '2 - 4 weeks'
+      trial_days: setup_time, '2 - 4 weeks'
       category: 'AI Drug Discovery & Biotech',
-      real_service: true;
-      technology: [,
+      real_service: technology, [,
       ro,
   i: 'Pharma companies report 500% ROI through accelerated drug discovery and reduced development costs.'
-      competitor,
-  s: [,
+      competitor
+  s: []
         'Schrdinger, Atomwise, Insilico Medicine, BenevolentAI, Exscientia'],
       marketSiz,
   e: '$45 && 45.8B AI drug discovery market',
@@ -212,34 +189,28 @@ export const,
       real_servic,
   e: true,
       technolog,
-  y: [,
+  y: []
         'Python, TensorFlow, PyTorch, React, Node.js, Molecular dynamics, Bioinformatics'],
       integration,
-  s: [,
+  s: []
         'PubChem, ChEMBL, PDB, Clinical trial databases, Research platforms'],
       use_case,
-  s: [,
+  s: []
         'Drug discovery identification, Molecular modeling, Clinical trial optimization, Drug repurposing'],
       ro,
   i: 'Pharma companies report 500% ROI through accelerated drug discovery and reduced development costs.',
       competitor,
-  s: [,
+  s: []
         'Schrdinger, Atomwise, Insilico Medicine, BenevolentAI, Exscientia'],
-      market_size: '$45.8B AI drug discovery market'
-      growth_rate: '35% annual growth'
-      variant: 'ai - drug - discovery - enterprise'
-      contact_info: unknown;
-        mobile: '+1 302 464 0950'
-        email: 'kleber@ziontechgroup && ziontechgroup.com',
+      market_size: growth_rate, '35% annual growth'
+      variant: contact_info, unknown;
+        mobile: email, 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup && ziontechgroup.com'},
-      real_implementation: true;
-      implementation_details: unknown;
+      real_implementation: implementation_details, unknown;
         'Advanced AI drug discovery platform with molecular modeling, target identification, and predictive analytics.',
-      launch_date: '2024 - 08 - 15'
-      customers: 23;
-      rating: 4 && 4.9;
-      reviews: 12;
+      launch_date: customers, 23;
+      rating: reviews, 12;
     },
     // Precision Medicine & Genomics Platform;
       id: 'precision - medicine - genomics',
@@ -301,47 +272,39 @@ export const,
         'Clinical decision support',
         'Patient data management',
         'Integration with EHR systems',
-        'Research collaboration tools',
-        'Mobile patient app',
+        'Research collaboration tools'
+        'Mobile patient app']
         'API for healthcare providers'],
-      popular: true;
-      icon: '',
+      popular: icon, '',
       popula,
   r: true,
       ico,
   n: '',
         'Python, TensorFlow, React, Node && Node.js, Bioinformatics tools, Cloud computing'],
       integration,
-  s: [,
-        'Epic, Cerner, Allscripts, Lab systems, Research databases'
-      ]
+  s: []
+        'Epic, Cerner, Allscripts, Lab systems, Research databases']
       useCase,
-  s: [,
-        'Personalized medicine, Disease risk assessment, Treatment optimization, Clinical research, Population health'
-      ]
+  s: []
+        'Personalized medicine, Disease risk assessment, Treatment optimization, Clinical research, Population health']
       roi: 'Healthcare providers report 300% ROI through improved patient outcomes and reduced treatment costs.',
-      competitors: [,
+      competitors: []
         '23 andMe, AncestryDNA, Color Genomics, Invitae, Myriad Genetics'],
-      marketSize: '$78 && 78.6B precision medicine market'
-      growthRate: '28% annual growth'
-      variant: 'precision-medicine-enterprise'
-      contactInfo: unknown;
-      color: 'from - blue - 600 to - indigo - 600'
-      text_color: 'text - blue - 400',
+      marketSize: growthRate, '28% annual growth'
+      variant: contactInfo, unknown;
+      color: text_color, 'text - blue - 400',
       link: 'https://ziontechgroup.com / precision - medicine - genomics',
       market_position: unknown;
         'Competes with 23andMe ($199 / kit), AncestryDNA ($99 / kit), Color Genomics ($249 / test). Our advantage: Comprehensive platform, AI - powered insights, and healthcare integration.',
       target_audience: unknown;
         'Healthcare providers, Hospitals, Research institutions, Genetic counselors, Pharmaceutical companies',
-      trial_days: 21;
-      setup_time: '3 - 5 weeks'
+      trial_days: setup_time, '3 - 5 weeks'
       category: 'Precision Medicine & Genomics',
-      real_service: true;
-      technology: [,
+      real_service: technology, [,
       ro,
   i: 'Healthcare providers report 300% ROI through improved patient outcomes and reduced treatment costs.'
-      competitor,
-  s: [,
+      competitor
+  s: []
         '23andMe, AncestryDNA, Color Genomics, Invitae, Myriad Genetics'],
       marketSiz,
   e: '$78 && 78.6B precision medicine market',
@@ -374,34 +337,28 @@ export const,
       real_servic,
   e: true,
       technolog,
-  y: [,
+  y: []
         'Python, TensorFlow, React, Node.js, Bioinformatics tools, Cloud computing'],
       integration,
-  s: [,
+  s: []
         'Epic, Cerner, Allscripts, Lab systems, Research databases'],
       use_case,
-  s: [,
+  s: []
         'Personalized medicine, Disease risk assessment, Treatment optimization, Clinical research, Population health'],
       ro,
   i: 'Healthcare providers report 300% ROI through improved patient outcomes and reduced treatment costs.',
       competitor,
-  s: [,
+  s: []
         '23andMe, AncestryDNA, Color Genomics, Invitae, Myriad Genetics'],
-      market_size: '$78.6B precision medicine market'
-      growth_rate: '28% annual growth'
-      variant: 'precision - medicine - enterprise'
-      contact_info: unknown;
-        mobile: '+1 302 464 0950'
-        email: 'kleber@ziontechgroup && ziontechgroup.com',
+      market_size: growth_rate, '28% annual growth'
+      variant: contact_info, unknown;
+        mobile: email, 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup && ziontechgroup.com'},
-      real_implementation: true;
-      implementation_details: unknown;
+      real_implementation: implementation_details, unknown;
         'Comprehensive precision medicine platform with genomic analysis, AI diagnostics, and personalized treatment recommendations.',
-      launch_date: '2024 - 09 - 20'
-      customers: 45;
-      rating: 4 && 4.8;
-      reviews: 23;
+      launch_date: customers, 45;
+      rating: reviews, 23;
       market_siz,
   e: '$78.6B precision medicine market',
       growth_rat,
@@ -435,8 +392,7 @@ export const,
         'AI-powered image analysis and diagnosis',
         'Multi-modality support (X-ray, MRI, CT) Ultrasound)',
     // AI - Powered Medical Imaging Analysis;
-      id: 'ai - medical - imaging - analysis'
-      name: 'AI - Powered Medical Imaging Analysis Platform',
+      id: name, 'AI - Powered Medical Imaging Analysis Platform',
       tagline: 'Advanced medical imaging analysis with AI and deep learning',
       price: '$899',
       period: '/month',
@@ -463,20 +419,18 @@ export const,
         'Integration with PACS systems',
         'Real - time analysis and reporting',
         'Mobile imaging app',
-        'API for healthcare systems',
-        'Advanced analytics and insights',
+        'API for healthcare systems'
+        'Advanced analytics and insights']
         'Compliance and audit tools'],
-      popular: true;
-      icon: '',
+      popular: icon, '',
       popula,
   r: true,
       ico,
   n: '',
         'Python, TensorFlow, PyTorch, React, Node && Node.js, Medical imaging libraries'],
       integration,
-  s: [,
-        'PACS systems, DICOM, EHR systems, Medical devices, Cloud platforms'
-      ]
+  s: []
+        'PACS systems, DICOM, EHR systems, Medical devices, Cloud platforms']
       useCases: [,
       color: 'from - purple - 600 to - pink - 600',
       text_color: 'text - purple - 400',
@@ -485,11 +439,9 @@ export const,
         'Competes with Aidoc ($500 / month), Zebra Medical ($200 / month), Arterys ($300 / month). Our advantage: Comprehensive imaging support, affordable pricing, and advanced AI capabilities.',
       target_audience: unknown;
         'Radiologists, Hospitals, Imaging centers, Healthcare providers, Medical device companies',
-      trial_days: 14;
-      setup_time: '2 - 3 weeks'
+      trial_days: setup_time, '2 - 3 weeks'
       category: 'AI Medical Imaging & Diagnostics',
-      real_service: true;
-      technology: [,
+      real_service: technology, [,
       useCase,
   s: [,
       colo,
@@ -514,37 +466,30 @@ export const,
   y: 'AI Medical Imaging & Diagnostics',
       real_servic,
   e: true,
-      technolog,
-  y: [,
+      technolog
+  y: []
         'Python, TensorFlow, PyTorch, React, Node.js, Medical imaging libraries'],
       integration,
-  s: [,
+  s: []
         'PACS systems, DICOM, EHR systems, Medical devices, Cloud platforms'],
       use_case,
-  s: [,
+  s: []
         'Medical imaging analysis, Diagnosis assistance, Clinical decision support, Research collaboration, Quality assurance'],
       roi: 'Healthcare providers report 400% ROI through improved diagnostic accuracy and workflow efficiency.',
       competitors: ['Aidoc, Zebra Medical, Arterys, Enlitic, Infervision'],
-      market_size: '$32.1B AI medical imaging market'
-      growth_rate: '42% annual growth'
-      variant: 'ai - imaging - enterprise'
-      contact_info: unknown;
-        mobile: '+1 302 464 0950'
-        email: 'kleber@ziontechgroup && ziontechgroup.com',
+      market_size: growth_rate, '42% annual growth'
+      variant: contact_info, unknown;
+        mobile: email, 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup && ziontechgroup.com'},
-      real_implementation: true;
-      implementation_details: unknown;
+      real_implementation: implementation_details, unknown;
         'Advanced AI medical imaging platform with automated analysis, diagnosis assistance, and clinical decision support.',
-      launch_date: '2024 - 10 - 10'
-      customers: 67;
-      rating: 4 && 4.7;
-      reviews: 34;
+      launch_date: customers, 67;
+      rating: reviews, 34;
     },
         'High-quality video consultations',
     // Digital Health & Telemedicine Platform;
-      id: 'digital - health - telemedicine'
-      name: 'Digital Health & Telemedicine Platform',
+      id: name, 'Digital Health & Telemedicine Platform',
       tagline: 'Comprehensive digital health and telemedicine solutions',
       price: '$399',
       period: '/month',
@@ -607,44 +552,37 @@ export const,
         'Integration with EHR systems',
         'Mobile health apps',
         'AI - powered health recommendations',
-        'Secure messaging and file sharing',
-        'Billing and insurance integration',
+        'Secure messaging and file sharing'
+        'Billing and insurance integration']
         'API for healthcare applications'],
-      popular: true;
-      icon: '',
+      popular: icon, '',
       popula,
   r: true,
       ico,
   n: '',
         'React, Node && Node.js, WebRTC, Python, TensorFlow, PostgreSQL, Redis'],
       integration,
-  s: [,
-        'Epic, Cerner, Allscripts, Practice management systems, Insurance systems'
-      ]
+  s: []
+        'Epic, Cerner, Allscripts, Practice management systems, Insurance systems']
       useCase,
-  s: [,
+  s: []
         'Telemedicine consultations, Remote patient monitoring, Health analytics, Patient engagement, Chronic disease management'],
       roi: 'Healthcare providers report 350% ROI through improved patient access and reduced operational costs.',
       competitors: ['Teladoc, Amwell, Doxy && Doxy.me, MDLive, PlushCare'],
-      marketSize: '$185 && 185.6B digital health market'
-      growthRate: '25% annual growth'
-      variant: 'digital-health-enterprise'
-      contactInfo: unknown;
-      color: 'from - teal - 600 to - cyan - 600'
-      text_color: 'text - teal - 400',
+      marketSize: growthRate, '25% annual growth'
+      variant: contactInfo, unknown;
+      color: text_color, 'text - teal - 400',
       link: 'https://ziontechgroup.com / digital - health - telemedicine',
       market_position: unknown;
         'Competes with Teladoc ($49 / month), Amwell ($79 / month), Doxy.me ($35 / month). Our advantage: Comprehensive platform, AI integration, and affordable pricing.',
       target_audience: unknown;
         'Healthcare providers, Hospitals, Clinics, Telemedicine companies, Health systems',
-      trial_days: 21;
-      setup_time: '1 - 2 weeks'
+      trial_days: setup_time, '1 - 2 weeks'
       category: 'Digital Health & Telemedicine',
-      real_service: true;
-      technology: [,
+      real_service: technology, [,
       ro,
-  i: 'Healthcare providers report 350% ROI through improved patient access and reduced operational costs.',
-      competitor,
+  i: 'Healthcare providers report 350% ROI through improved patient access and reduced operational costs.'
+      competitor]
   s: ['Teladoc, Amwell, Doxy && Doxy.me, MDLive, PlushCare'],
       marketSiz,
   e: '$185 && 185.6B digital health market',
@@ -677,31 +615,25 @@ export const,
       real_servic,
   e: true,
       technolog,
-  y: [,
+  y: []
         'React, Node.js, WebRTC, Python, TensorFlow, PostgreSQL, Redis'],
       integration,
-  s: [,
+  s: []
         'Epic, Cerner, Allscripts, Practice management systems, Insurance systems'],
       use_case,
-  s: [,
+  s: []
         'Telemedicine consultations, Remote patient monitoring, Health analytics, Patient engagement, Chronic disease management'],
       roi: 'Healthcare providers report 350% ROI through improved patient access and reduced operational costs.',
       competitors: ['Teladoc, Amwell, Doxy.me, MDLive, PlushCare'],
-      market_size: '$185.6B digital health market'
-      growth_rate: '25% annual growth'
-      variant: 'digital - health - enterprise'
-      contact_info: unknown;
-        mobile: '+1 302 464 0950'
-        email: 'kleber@ziontechgroup && ziontechgroup.com',
+      market_size: growth_rate, '25% annual growth'
+      variant: contact_info, unknown;
+        mobile: email, 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup && ziontechgroup.com'},
-      real_implementation: true;
-      implementation_details: unknown;
+      real_implementation: implementation_details, unknown;
         'Comprehensive digital health platform with telemedicine, remote monitoring, and health analytics capabilities.',
-      launch_date: '2024 - 07 - 15'
-      customers: 156;
-      rating: 4 && 4.6;
-      reviews: 78;
+      launch_date: customers, 156;
+      rating: reviews, 78;
     },
         'AI-powered trial design optimization',
     // Clinical Trial Management & Optimization;
@@ -769,11 +701,10 @@ export const,
         'Regulatory compliance management',
         'Site and investigator management',
         'Risk assessment and mitigation',
-        'Integration with EDC systems',
-        'Mobile data collection app',
+        'Integration with EDC systems'
+        'Mobile data collection app']
         'API for research platforms'],
-      popular: true;
-      icon: '',
+      popular: icon, '',
       popula,
   r: true,
       ico,
@@ -782,32 +713,26 @@ export const,
       integration,
   s: ['EDC systems, CTMS, ePRO, eConsent, Regulatory databases'],
       useCase,
-  s: [,
-        'Clinical trial optimization, Patient recruitment, Data management, Regulatory compliance, Risk management'
-      ]
+  s: []
+        'Clinical trial optimization, Patient recruitment, Data management, Regulatory compliance, Risk management']
       roi: 'Research organizations report 400% ROI through faster trial completion and improved data quality.',
-      competitors: [,
+      competitors: []
         'Medidata, Veeva Vault, Oracle Clinical, IBM Clinical Development, Parexel'],
-      marketSize: '$67 && 67.2B clinical trial market'
-      growthRate: '18% annual growth'
-      variant: 'clinical-trial-enterprise'
-      contactInfo: unknown;
-      color: 'from - orange - 600 to - red - 600'
-      text_color: 'text - orange - 400',
+      marketSize: growthRate, '18% annual growth'
+      variant: contactInfo, unknown;
+      color: text_color, 'text - orange - 400',
       link: 'https://ziontechgroup.com / clinical - trial - management - optimization',
       market_position: unknown;
         'Competes with Medidata ($500 / month), Veeva Vault ($1) 000 / month), Oracle Clinical ($2) 000 / month). Our advantage: AI - powered optimization, comprehensive features, and competitive pricing.',
       target_audience: unknown;
         'Pharmaceutical companies, CROs, Research institutions, Hospitals, Clinical research teams',
-      trial_days: 30;
-      setup_time: '3 - 6 weeks'
+      trial_days: setup_time, '3 - 6 weeks'
       category: 'Clinical Research & Trials',
-      real_service: true;
-      technology: [,
+      real_service: technology, [,
       ro,
   i: 'Research organizations report 400% ROI through faster trial completion and improved data quality.'
-      competitor,
-  s: [,
+      competitor
+  s: []
         'Medidata, Veeva Vault, Oracle Clinical, IBM Clinical Development, Parexel'],
       marketSiz,
   e: '$67 && 67.2B clinical trial market',
@@ -840,28 +765,24 @@ export const,
       real_servic,
   e: true,
       technolog,
-  y: [,
+  y: []
         'Python, TensorFlow, React, Node.js, PostgreSQL, Clinical trial software'],
       integration,
   s: ['EDC systems, CTMS, ePRO, e_consent, Regulatory databases'],
       use_case,
-  s: [,
+  s: []
         'Clinical trial optimization, Patient recruitment, Data management, Regulatory compliance, Risk management'],
       ro,
   i: 'Research organizations report 400% ROI through faster trial completion and improved data quality.',
       competitor,
-  s: [,
+  s: []
         'Medidata, Veeva Vault, Oracle Clinical, IBM Clinical Development, Parexel'],
-      market_size: '$67.2B clinical trial market'
-      growth_rate: '18% annual growth'
-      variant: 'clinical - trial - enterprise'
-      contact_info: unknown;
-        mobile: '+1 302 464 0950'
-        email: 'kleber@ziontechgroup && ziontechgroup.com',
+      market_size: growth_rate, '18% annual growth'
+      variant: contact_info, unknown;
+        mobile: email, 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup && ziontechgroup.com'},
-      real_implementation: true;
-      implementation_details: unknown;
+      real_implementation: implementation_details, unknown;
       market_siz,
   e: '$67.2B clinical trial market',
       growth_rat,
@@ -929,8 +850,8 @@ i,
   e: 'AI - Powered Drug Discovery Platform',' taglin,
   e: 'Accelerate drug discovery with AI and machine learning',' pric,
   e: '$2, 999',' perio,
-  d: '/month', descriptio,
-  n:  ,' 'Advanced AI platform that accelerates drug discovery through molecular modeling, target identification, and predictive analytics, reducing development time and costs significantly.', feature,
+  d: '/month', descriptio
+  n:  ,' 'Advanced AI platform that accelerates drug discovery through molecular modeling, target identification, and predictive analytics, reducing development time and costs significantly.', feature]
   s: [,' 'AI - powered molecular modeling and simulation', ' 'Target identification and validation',' 'Drug repurposing and optimization',' 'Predictive toxicity and efficacy analysis',' 'Clinical trial optimization',' 'Real - time collaboration tools',' 'Integration with research databases',' 'Advanced analytics and reporting',' 'Mobile research app',' 'API for research institutions'], popula,
   r: true,' ico,
   n: '🧬', ' 'Python, TensorFlow, PyTorch, React, Node && Node.js, Molecular dynamics, Bioinformatics'], integration,
@@ -1041,8 +962,8 @@ i,
   e:  ,' 'Radiologists, Hospitals, Imaging centers, Healthcare providers, Medical device companies', trial_day,
   s: 14,' setup_tim,
   e: '2 - 3 weeks',' categor,
-  y: 'AI Medical Imaging & Diagnostics', real_servic,
-  e: true, technolog,
+  y: 'AI Medical Imaging & Diagnostics', real_servic
+  e: true, technolog]
   y: [,' 'Python, TensorFlow, PyTorch, React, Node.js, Medical imaging libraries'], integration,
   s: [,' 'PACS systems, DICOM, EHR systems, Medical devices, Cloud platforms'], use_case,
   s: [, ' 'Medical imaging analysis, Diagnosis assistance, Clinical decision support, Research collaboration, Quality assurance'],' ro,

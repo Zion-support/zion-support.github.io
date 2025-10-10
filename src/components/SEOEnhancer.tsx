@@ -3,22 +3,19 @@ import React, { ReactNode } from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOEnhancerProps {/* TODO: Fix JSX expression */}
-}
-
 const,
   SEOEnhancer: React.FC<SEOEnhancerProps> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
     },
     addres,
-  s: {/* TODO: Fix JSX expression */}
-    }};
+  s: {/* TODO: Fix JSX expression */};
 
   const finalStructuredData = structuredData || defaultStructuredData;
 
-  return (<>
-      <Helmet></Helmet>
-        {/* Basic Meta Tags */}
-        <title>{title}</title>
+  return (<>\</>
+      <Helmet></Helmet>)
+        {/* Basic Meta Tags */})
+        <title>{title}</title>)
         <meta name="description" content={description} /></meta>")
         <meta name="keywords" content={keywords.join(', ')} /></meta>"
         <meta name="author" content="Zion Tech Group" /></meta>"
@@ -30,9 +27,8 @@ const,
         <meta name="distribution" content="global" /></meta>"
         <meta name="rating" content="general" /></meta>
         {/* Canonical URL */}"
-        {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
-
-        {/* Open Graph Tags */}"
+        {canonicalUrl && <link rel="canonical" href={canonicalUrl} />},
+      {/* Open Graph Tags */}"
         <meta property="o,"
   g:type" content={ogType} /></meta>"
         <meta property="o,"

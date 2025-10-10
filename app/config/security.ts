@@ -1,20 +1,17 @@
 /**
  * Security Configuration
  * Defines security headers and policies for the application
- */
-
+ */;
 export const securityHeaders = {
   // Content Security Policy
-  contentSecurityPolicy: {
-    directives: {
+  contentSecurityPolicy: directives, {
       defaultSrc: ["'self'"],
       scriptSrc: [
         "'self'",
         "'unsafe-inline'",
         "'unsafe-eval'",
-        'https://www.googletagmanager.com',
-        'https://www.google-analytics.com',
-      ],
+        'https://www.googletagmanager.com']
+        'https://www.google-analytics.com'],
       styleSrc: ["'self'", "'unsafe-inline'", 'https://fonts.googleapis.com'],
       fontSrc: ["'self'", 'https://fonts.gstatic.com'],
       imgSrc: ["'self'", 'data:', 'https:', 'blob:'],
@@ -22,6 +19,8 @@ export const securityHeaders = {
       frameSrc: ["'self'"],
       objectSrc: ["'none'"],
       upgradeInsecureRequests: true,
+
+  }
     },
   },
 
@@ -34,12 +33,14 @@ export const securityHeaders = {
     'X-Content-Type-Options': 'nosniff',
     'Referrer-Policy': 'strict-origin-when-cross-origin',
     'Permissions-Policy': 'camera=(), microphone=(), geolocation=(), interest-cohort=()',
-  },
+
+}
+},
 };
 
 /**
  * Rate limiting configuration
- */
+ */;
 export const rateLimitConfig = {
   windowMs: 15 * 60 * 1000, // 15 minutes
   max: 100, // Limit each IP to 100 requests per windowMs
@@ -48,7 +49,7 @@ export const rateLimitConfig = {
 
 /**
  * CORS configuration
- */
+ */;
 export const corsConfig = {
   origin: process.env.ALLOWED_ORIGINS?.split(',') || ['http://localhost:3000'],
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
@@ -59,22 +60,23 @@ export const corsConfig = {
 
 /**
  * Session configuration
- */
+ */;
 export const sessionConfig = {
   secret: process.env.SESSION_SECRET || 'your-secret-key-change-in-production',
   resave: false,
   saveUninitialized: false,
-  cookie: {
-    secure: process.env['NODE_ENV'] === 'production',
+  cookie: secure, process.env['NODE_ENV'] === 'production',
     httpOnly: true,
     maxAge: 24 * 60 * 60 * 1000, // 24 hours
     sameSite: 'strict' as const,
+
+  }
   },
 };
 
 /**
  * Input validation patterns
- */
+ */;
 export const validationPatterns = {
   email: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
   phone: /^\+?[1-9]\d{1,14}$/,
@@ -85,7 +87,7 @@ export const validationPatterns = {
 
 /**
  * Sanitize user input
- */
+ */;
 export function sanitizeInput(input: string): string {
   return input
     .replace(/[<>]/g, '') // Remove < and >
@@ -96,29 +98,28 @@ export function sanitizeInput(input: string): string {
 
 /**
  * Validate email address
- */
+ */;
 export function validateEmail(email: string): boolean {
   return validationPatterns.email.test(email);
 }
 
 /**
  * Validate URL
- */
+ */;
 export function validateUrl(url: string): boolean {
   return validationPatterns.url.test(url);
 }
 
 /**
  * Generate secure token
- */
+ */;
 export function generateSecureToken(length: number = 32): string {if (typeof window !== 'undefined' && window.crypto) {
     window.crypto.getRandomValues(array);
-  } else {
+} else {
     // Fallback for non-browser environments
     for (let i = 0; i < length; i++) {
       array[i] = Math.floor(Math.random() * 256);
-    }
-  }
+}
   return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('');
 }
 

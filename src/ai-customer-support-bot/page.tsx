@@ -7,13 +7,13 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const AICustomerSupportBotPage: React.FC = () => {
-  const features = [
+const AICustomerSupportBotPage: React.FC = () => {;
+const features = [
     {
       icon: Bot,
-      title: '24/7 AI Support',
-      description: 'Round-the-clock customer support with intelligent AI chatbot capabilities',
+      title: description, 'Round-the-clock customer support with intelligent AI chatbot capabilities']
       benefits: ['90% response time reduction', 'Instant responses', 'Always available']
+}
     },
       icon: MessageSquare,
       title: 'Natural Language Processing',
@@ -39,11 +39,9 @@ const AICustomerSupportBotPage: React.FC = () => {
         'Up to 1,000 conversations/month',
         'Basic AI responses',
         'Email support',
-        'Basic analytics',
-        'Standard integrations'
-      ],
-      popular: false
-      name: 'Professional',
+        'Basic analytics']
+        'Standard integrations'],
+      popular: name, 'Professional',
       price: '$299',
       description: 'Ideal for growing companies',
         'Up to 10,000 conversations/month',
@@ -52,8 +50,7 @@ const AICustomerSupportBotPage: React.FC = () => {
         'Advanced analytics',
         'Custom integrations',
         'Multi-language support'
-      popular: true
-      name: 'Enterprise',
+      popular: name, 'Enterprise',
       price: '$599',
       description: 'For large organizations',
         'Unlimited conversations',
@@ -62,9 +59,8 @@ const AICustomerSupportBotPage: React.FC = () => {
         'Custom analytics',
         'White-label options',
         'API access',
-        'Custom training'
-
-  const stats = [
+        'Custom training';
+const stats = [
     { icon: Users, value: '1,000+', label: 'Happy Customers' },
     { icon: TrendingUp, value: '90%', label: 'Response Time Reduction' },
     { icon: Clock, value: '45%', label: 'Satisfaction Increase' },
@@ -86,9 +82,9 @@ const AICustomerSupportBotPage: React.FC = () => {
             Provide exceptional customer support 24/7 with our intelligent AI chatbot that understands 
             natural language and escalates complex issues to human agents seamlessly.
           </p>
-        </div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        </div>)
+)
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">)
           {stats.map((stat, index) => (
             <div key={index} className="text-center">
               <stat.icon className="h-12 w-12 text-cyan-400 mx-auto mb-4" />
@@ -150,5 +146,5 @@ export default $1;
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, BarChart, Calendar, Target, ArrowRight, Phone, Mail, MapPin, Brain, Cpu, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, MessageSquare, Headphones, Globe, Languages } from 'lucide-react';
-
-export default AICustomerSupportBotPage;
+]
+export default AICustomerSupportBotPage;]

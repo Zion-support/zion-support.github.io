@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 export default function BlogPost(): React.JSX.Element {
-  return(<>
+  return(<>\</>
       <Header />
       <div className="min-h-screen bg-gradient-to-br from-blue-600 via-blue-700 to-purple-800 text-white"></div>
         <Helmet>
@@ -52,9 +52,9 @@ export default function BlogPost(): React.JSX.Element {
               </p>
             </div>
           </div>
-
-          <div className="mt-16 pt-8 border-t border-white border-opacity-20">
-            <div className="flex flex-col sm: flex-row justify-between items-center gap-6">
+)
+          <div className="mt-16 pt-8 border-t border-white border-opacity-20">)
+            <div className="flex flex-col sm: flex-row justify-between items-center gap-6">)
               <div>)
                 <h3 className="text-xl font-bold mb-2">Share this article</h3>)
                 <div className="flex gap-4">)
@@ -76,7 +76,7 @@ export default function BlogPost(): React.JSX.Element {
                     href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(window.location.href)}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-white bg-opacity-20 hover: bg-opacity-30 px-4 py-2 rounded-lg transition-colors"
+                    className="bg-white bg-opacity-20 hover: bg-opacity-30 px-4 py-2 rounded-lg transition-colors";
 export default function BlogPost(): React.JSX.Element {/* TODO: Fix JSX expression */}
   s://twitter.com/intent/tweet?text=${encodeURIComponent('Ai 2025 Sept 30 Breaking Enterprise Ai Breakthroughs')}&url=${encodeURIComponent(window.location.href)}`}
                     target="_blank""

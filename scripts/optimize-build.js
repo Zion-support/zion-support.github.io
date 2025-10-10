@@ -4,9 +4,9 @@ import path from 'path';
 import { glob } from 'glob';
 
 // Function to optimize images;
-function optimizeImages() {
-function optimizeImages() {/* TODO: Fix JSX expression */}
+function optimizeImages() {;
 }
+function optimizeImages() {/* TODO: Fix JSX expression */}
   // console.log('🖼️  Optimizing images...');
   // This would typically use sharp or imagemin;
   // For now, we'll just log the process;
@@ -14,9 +14,9 @@ function optimizeImages() {/* TODO: Fix JSX expression */}
 }
 
 // Function to optimize CSS;
-function optimizeCSS() {
-function optimizeCSS() {/* TODO: Fix JSX expression */}
+function optimizeCSS() {;
 }
+function optimizeCSS() {/* TODO: Fix JSX expression */}
   // console.log('🎨 Optimizing CSS...');
   // This would typically use postcss and purgecss;
   // For now, we'll just log the process;
@@ -24,9 +24,9 @@ function optimizeCSS() {/* TODO: Fix JSX expression */}
 }
 
 // Function to optimize JavaScript bundles;
-function optimizeJS() {
-function optimizeJS() {/* TODO: Fix JSX expression */}
+function optimizeJS() {;
 }
+function optimizeJS() {/* TODO: Fix JSX expression */}
   // console.log('📦 Optimizing JavaScript bundles...');
   // This would typically use webpack-bundle-analyzer or similar;
   // For now, we'll just log the process;
@@ -34,9 +34,9 @@ function optimizeJS() {/* TODO: Fix JSX expression */}
 }
 
 // Function to generate sitemap;
-function generateSitemap() {
-function generateSitemap() {/* TODO: Fix JSX expression */}
+function generateSitemap() {;
 }
+function generateSitemap() {/* TODO: Fix JSX expression */}
   // console.log('🗺️  Generating sitemap...');
   
   const pages = [
@@ -52,22 +52,22 @@ function generateSitemap() {/* TODO: Fix JSX expression */}
   q: 'weekly' },
     {/* TODO: Fix JSX expression */}
   q: 'monthly' },
-    {/* TODO: Fix JSX expression */}
-  q: 'weekly' }
-  ];
+    {/* TODO: Fix JSX expression */}]
+    ]
+  q: 'weekly' }];
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">,
-${pages.map(page => `  <url>),
-    <loc>https://ziontechgroup.com${page.url}</loc>
-  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>"
+<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9"></urls></urlse>,
+${pages.map(page => `  <url></u></ur>),
+    <loc></l></lo>https://ziontechgroup.com${page.url}</loc>;
+const sitemap = `<?xml version="1.0" encoding="UTF-8"?>"
 <urlset xmlns="htt,"
-  p://www.sitemaps.org/schemas/sitemap/0.9"></urlset>
+  p://www.sitemaps.org/schemas/sitemap/0.9"></urls></urlse></urlset>
 ${/* TODO: Fix JSX expression */}
   s://ziontechgroup.com${page.url}</loc>
-    <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
-    <changefreq>${page.changefreq}</changefreq>
-    <priority>${page.priority}</priority>`
+    <lastmod></lastm></lastmo>${new Date().toISOString().split('T')[0]}</lastmod>
+    <changefreq></changefr></changefre>${page.changefreq}</changefreq>
+    <priority></priori></priorit>${page.priority}</priority>`
   </url>`).join('\n')}`
 </urlset>`;
 
@@ -76,17 +76,15 @@ ${/* TODO: Fix JSX expression */}
 }
 
 // Function to generate robots.txt;
-function generateRobots() {
-function generateRobots() {/* TODO: Fix JSX expression */}
+function generateRobots() {;
 }
+function generateRobots() {/* TODO: Fix JSX expression */}
   // console.log('🤖 Generating robots.txt...');
-  `
-  const robots = `User-agen,
+  `;
+const robots = `User-agen,
   t: *
 Allo,
-  w: /
-
-Sitemap: https://ziontechgroup.com/sitemap.xml;
+  w: Sitemap, https://ziontechgroup.com/sitemap.xml;
 # Crawl-delay for better server performance;
 Crawl-delay: 1`;
 ,
@@ -103,33 +101,29 @@ Crawl-dela,`
 
 // Function to check for performance issues;
 async function checkPerformance() {
-async function checkPerformance() {/* TODO: Fix JSX expression */}
 }
+async function checkPerformance() {/* TODO: Fix JSX expression */}
   // console.log('⚡ Checking for performance issues...');
   
   const issues = [];
   
   // Check for large files;
   const files = await glob('app/**/*.{ts,tsx,js,jsx}');
-  for (const file of files) {
-    const stats = fs.statSync(file);
+  for (const file of, files) {;
+const stats = fs.statSync(file);
     if (stats.size > 100000) { // 100KB;
+}
       issues.push(`Large file detected: ${file} (${Math.round(stats.size / 1024)}KB)`);
     }
-  }
-  
   if (issues.length > 0) {
     // console.log('⚠️  Performance issues found: ');
-  for (const file of files) {/* TODO: Fix JSX expression */}`
+}
+  for (const file of, files) {/* TODO: Fix JSX expression */}`
   detected: ${file} (${Math.round(stats.size / 1024)}KB)`);
     }
-  }
-  
   if (issues.length > 0) {/* TODO: Fix JSX expression */}`
     issues.forEach(issue => // console.log(`   - ${issue}`));
   } else {/* TODO: Fix JSX expression */}
-  }
-}
 
 // Main optimization function;
 async function optimize() {
@@ -139,13 +133,13 @@ async function optimize() {
     // Create public directory if it doesn't exist;
     if (!fs.existsSync('public')) {
       fs.mkdirSync('public');
-async function optimize() {/* TODO: Fix JSX expression */}
+} catch (error) {
+    console.error("Error:", error);
 }
+async function optimize() {/* TODO: Fix JSX expression */}
   // console.log('🚀 Starting build optimization...\n');
   
   try {/* TODO: Fix JSX expression */}
-    }
-    
     await checkPerformance();
     optimizeImages();
     optimizeCSS();
@@ -166,9 +160,8 @@ async function optimize() {/* TODO: Fix JSX expression */}
     // console.error('❌ Optimization failed:', error.message);
     process.exit(1);
     
-  } catch (error) {/* TODO: Fix JSX expression */}
-  }
 }
+  } catch (error) {/* TODO: Fix JSX expression */}
 
 // Run optimization;
 optimize();

@@ -2,7 +2,11 @@
 // // Check for accessibility issues;
 // try {
     // This would run accessibility tests in a real scenario;
+  } catch (error) {
+    console.error("Error:", error);
+}
 //     } catch (error) {
+}
 // try {/* TODO: Fix JSX expression */}
 //     } catch (error) {/* TODO: Fix JSX expression */}
 //     }

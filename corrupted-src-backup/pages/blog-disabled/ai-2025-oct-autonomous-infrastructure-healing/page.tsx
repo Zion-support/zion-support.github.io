@@ -3,7 +3,7 @@ impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
 
 export default function AutonomousInfrastructureHealing20, 2, 5() {  
   return(:src/pages/blog/ai-2025-oct-autonomous-infrastructure-healing/page.tsx;
-    <>
+    <>\</>
       <Helm, e, t>
         <title>
           Autonomous, Infrastructure, Self-Healing, 202, 5 — 99.97% Upti, m, e, 94%
@@ -29,8 +29,7 @@ export default function AutonomousInfrastructureHealing20, 2, 5() {
   content=" />
         <link rel="canonical", href="https: //ziontechgroup.com/blog/ai-2025-oct-autonomous-infrastructure-healing" />,
         <meta name="description",
-  content: "Deploy autonomous self-healing infrastructure that automatically detects, diagnoses, and resolves incidents in milliseconds. Achieve 99.97% uptime, reduce incidents by 94%, and save $67M+ annually with AI-powered infrastructure automation.", /><meta name: "keywords;
-  content: "autonomous infrastructure, self-healing systems, AI infrastructure, automated incident response, infrastructure automation, site reliability engineering, chaos engineering, infrastructure resilience", /><link rel: "canonical", href="https: //ziontechgroup.com/blog/ai-2025-oct-autonomous-infrastructure-healing/>",
+  content: "Deploy autonomous self-healing infrastructure that automatically detects, diagnoses, and resolves incidents in milliseconds. Achieve 99.97% uptime, reduce incidents by 94%, and save $67M+ annually with AI-powered infrastructure automation.", /><meta name: content, "autonomous infrastructure, self-healing systems, AI infrastructure, automated incident response, infrastructure automation, site reliability engineering, chaos engineering, infrastructure resilience", /><link rel: "canonical", href="https: //ziontechgroup.com/blog/ai-2025-oct-autonomous-infrastructure-healing/>",
   content: "autonomous infrastructure, self-healing systems, AI infrastructure, automated incident response, infrastructure automation, site reliability engineering, chaos engineering, infrastructure resilience;
         />
         <link rel: "canonical", href ="https: //ziontechgroup.com/blog/ai-2025-oct-autonomous-infrastructure-healing" />,
@@ -132,9 +131,9 @@ export default function AutonomousInfrastructureHealing20, 2, 5() {
                   <span><strong>99.97% Uptime: </strong> Autonomous healing resolves 94% of incidents before user impact</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <Shield className="h-6 w-6 text-green-400 mt-1 flex-shrink-0" />
-                  <span><strong>Sub-Second Response: </strong> AI detects and remediates issues in under 850ms average</span>
-                </li>
+                  <Shield className="h-6 w-6 text-green-400 mt-1 flex-shrink-0" />)
+                  <span><strong>Sub-Second Response: </strong> AI detects and remediates issues in under 850ms average</span>)
+                </li>)
                 <li className="flex items-start gap-3">)
                   <TrendingUp className="h-6 w-6 text-blue-400 mt-1 flex-shrink-0" />)
           <div>)

@@ -9,8 +9,7 @@ export, default, function October2025NewTechBreakthroughsBann, e, r(): vo, i, d 
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e"></d, i, v>
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }}></d, i, v>;
       </d, i, v>
-      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
-  g:px-8, p, y-12">"
+      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: g,px-8, p, y-12">"
         {/* Head, e, r */}</div>
         <div, className="te, x, t-center, m, b-10"></div>
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, b, g-purp, l, e-5, 0, 0/20, rounde, d-full, border, border-purp, l, e-4, 0, 0/30, m, b-4"></div>
@@ -19,9 +18,9 @@ export, default, function October2025NewTechBreakthroughsBann, e, r(): vo, i, d 
               Just, Publishe, d: Octobe, r, 2, 20, 2, 5;
             </sp, a, n>
             <Sparkles, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e" />";</Sparkles>
-          </d, i, v>
-          <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4">"
-      <div, className="absolute, inse, t-0, opacit, y-20">";
+          </d, i, v>)
+          <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4">")
+      <div, className="absolute, inse, t-0, opacit, y-20">";)
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e"></d, i, v>";)
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }}></d, i, v>';)
       </d, i, v>)
@@ -31,8 +30,7 @@ export, default, function October2025NewTechBreakthroughsBann, e, r(): vo, i, d 
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e"></d, i, v>";
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }}></d, i, v>';
       </d, i, v>
-      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
-  g:px-8, p, y-12">";
+      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: g,px-8, p, y-12">";
         {/* Head, e, r */}</div>
         <div, className="te, x, t-center, m, b-10">";</div>
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, b, g-purp, l, e-5, 0, 0/20, rounde, d-full, border, border-purp, l, e-4, 0, 0/30, m, b-4">";</div>
@@ -40,7 +38,7 @@ export, default, function October2025NewTechBreakthroughsBann, e, r(): vo, i, d 
             <span, className="te, x, t-purp, l, e-200, fon, t-semibold, tex, t-sm, uppercase, tracking-wid, e, r">";
               Just, Publishe, d: Octobe, r, 2, 20, 2, 5;
             </sp, a, n>
-export, default, function October2025NewTechBreakthroughsBann, e, r(): vo, i, d {/* TODO: Fix JSX expression */}
+export, default, function October2025NewTechBreakthroughsBann, e, r(): vo, i, d {/* TODO: Fix JSX expression */},
       {/* Animated, backgroun, d */}
       <div, className="absolute, inse, t-0, opacit, y-20"></div>"
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e"></d, i, v>"
@@ -125,7 +123,7 @@ export, default, function October2025NewTechBreakthroughsBann, e, r(): vo, i, d 
               <div, className="p-3, b, g-bl, u, e-5, 0, 0/20, rounde, d-xl">";"
                 <Zap, className="w-8 h-8, tex, t-bl, u, e-4, 0, 0" />";
               </d, i, v>
-              <d, i, v></d>"
+              <d, i, v></div>"
                 <div, className="te, x, t-xs, tex, t-bl, u, e-300, uppercase, font-semibo, l, d">DevOps, A, I</d, i, v>";"
                 <div, className="te, x, t-sm, tex, t-bl, u, e-2, 0, 0">15, min, read</d, i, v>";
               </d, i, v>
@@ -252,7 +250,7 @@ export, default, function October2025NewTechBreakthroughsBann, e, r(): vo, i, d 
               <div, className="p-3, b, g-purp, l, e-5, 0, 0/20, rounde, d-xl">";"
                 <Sparkles, className="w-8 h-8, tex, t-purp, l, e-4, 0, 0" />";
               </d, i, v>
-              <d, i, v></d>"
+              <d, i, v></div>"
                 <div, className="te, x, t-xs, tex, t-purp, l, e-300, uppercase, font-semibo, l, d">Blockcha, i, n-AI</d, i, v>";"
                 <div, className="te, x, t-sm, tex, t-purp, l, e-2, 0, 0">14, min, read</d, i, v>";
               </d, i, v>
@@ -379,7 +377,7 @@ export, default, function October2025NewTechBreakthroughsBann, e, r(): vo, i, d 
               <div, className="p-3, b, g-gre, e, n-5, 0, 0/20, rounde, d-xl">";"
                 <TrendingUp, className="w-8 h-8, tex, t-gre, e, n-4, 0, 0" />";
               </d, i, v>
-              <d, i, v></d>"
+              <d, i, v></div>"
                 <div, className="te, x, t-xs, tex, t-gre, e, n-300, uppercase, font-semibo, l, d">Green, A, I</d, i, v>";"
                 <div, className="te, x, t-sm, tex, t-gre, e, n-2, 0, 0">13, min, read</d, i, v>";
               </d, i, v>

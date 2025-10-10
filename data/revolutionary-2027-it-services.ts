@@ -1,17 +1,12 @@
 
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  description: string;
-  features: string[];
-  link: string;
-  category: string;
-  realImplementation: boolean;
-  contactInfo: unknown;
-    mobile: string;
-    email: string;
+  id: name, string;
+  tagline: price, string;
+  description: features, string[];
+  link: category, string;
+  realImplementation: contactInfo, unknown;
+    mobile: email, string;
 export interface Revolutionary2027ItService {;,
+}
     address: string}
   i,
   d: string;
@@ -63,46 +58,32 @@ export interface Revolutionary2027ItService {/* TODO: Fix JSX expression */}
   l: string}
     addres,
   s: string}
-  }
-}
       address: "364 E Main St STE 1008 Middletown DE 19709"}
-  }
 ];
-  id: string, name: string;
-  tagline: string, price: string;
-  description: string, features: string[],
-  link: string, category: string;
-  realImplementation: boolean;
-  contactInfo: unknown;
-    mobile: string, email: string;
-    address: string;
+  id: string, name: tagline, string, price: description, string, features: string[],
+  link: string, category: realImplementation, boolean;
+  contactInfo: mobile, string, email: address, string;
   }
-}
 export const revolutionary2027 ITServices: Revolutionary2027 ItService[] = [,
     id: "2027-revolutionary-it", name: "2027 Revolutionary IT Platform",
-    tagline: "Revolutionary IT for 2027", price: "$349/month"
-    description: "Revolutionary IT platform that transforms how businesses manage technology in 2027."
+    tagline: "Revolutionary IT for 2027", price: description, "Revolutionary IT platform that transforms how businesses manage technology in 2027."
     features: [;
       "Revolutionary IT"
-      "Transformative technology"
-      "Advanced capabilities"
-      "Innovation platform",
+      "Transformative technology"]
+      "Advanced capabilities"]
+      "Innovation platform"
       "Future-ready solutions"],
     link: "/services/2027-revolutionary-it", category: "Revolutionary 2027 IT",
-    realImplementation: true;
-    contactInfo: address: "364 E Main St STE 1008 Middletown DE 19709"}
-  }
+    realImplementation: contactInfo, address: "364 E Main St STE 1008 Middletown DE 19709"}
 ];
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"}
-  }
 ];
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
       addres,
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
-  }
 ];
   i,
   d: string, nam,
@@ -125,7 +106,6 @@ export const revolutionary2027 ITServices: Revolutionary2027 ItService[] = [,
   l: string,
     addres,
   s: string}
-}
 export const,
   revolutionary2027ITServices: Revolutionary2027ItService[] = [,
     i,"
@@ -140,10 +120,9 @@ export const,
   s: [;"
       "Revolutionary IT""
       "Transformative technology""
-      "Advanced capabilities""
-      "Innovation platform""
-      "Future-ready solutions"
-    ],
+      "Advanced capabilities""]
+      "Innovation platform""]
+      "Future-ready solutions"],
     lin,"
   k: "/services/2027-revolutionary-it", categor,"
   y: "Revolutionary 2027 IT",
@@ -153,7 +132,6 @@ export const,
   o: addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
-  }
 ];
       mobil,"
   e: "+1 302 464 0950", emai,"
@@ -161,18 +139,15 @@ export const,
       addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
-  }
 ];
       emai,"
   l: "kleber@ziontechgroup.com",
   addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
-  }
 ];
 ;
-    id: "2027-revolutionary-it"
-    name: "2027 Revolutionary IT Platform",
+    id: name, "2027 Revolutionary IT Platform",
     tagline: "Revolutionary IT for 2027",
     price: "$349/month",
     description: "Revolutionary IT platform that transforms how businesses manage technology in 2027.",
@@ -180,15 +155,11 @@ export const,
       "Revolutionary IT",
       "Transformative technology",
       "Advanced capabilities",
-      "Innovation platform",
-      "Future-ready solutions"
-    ],
-    link: "/services/2027-revolutionary-it"
-    category: "Revolutionary 2027 IT"
-    realImplementation: true;
-    contactInfo: unknown;
-      mobile: "+1 302 464 0950"
-      email: "kleber@ziontechgroup.com"
+      "Innovation platform"]
+      "Future-ready solutions"],
+    link: category, "Revolutionary 2027 IT"
+    realImplementation: contactInfo, unknown;
+      mobile: email, "kleber@ziontechgroup.com"
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'}};
@@ -211,10 +182,9 @@ export const,
   s: [,"
       "Revolutionary IT","
       "Transformative technology","
-      "Advanced capabilities","
-      "Innovation platform","
-      "Future-ready solutions"
-    ],
+      "Advanced capabilities","]
+      "Innovation platform","]
+      "Future-ready solutions"],
     lin,"
   k: "/services/2027-revolutionary-it",
     categor,"
@@ -244,7 +214,6 @@ export const,
       addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
-  }
 ];
 i,
   d: string; nam,
@@ -271,7 +240,7 @@ i,
   n: boolean; contactInf,
   o: {/* TODO: Fix JSX expression */}
   l: string} addres,
-  s: string} } } addres,"
+  s: string} addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; i,
   d: string, nam,
   e: string, taglin,
@@ -289,9 +258,9 @@ i,
   revolutionary2027ITServices: Revolutionary2027ItService[] = [ i,"
   d: "2027-revolutionary-it", nam,"
   e: "2027 Revolutionary IT Platform", taglin,"
-  e: "Revolutionary IT for 2027", pric,"
-  e: "$349/month", descriptio,"
-  n: "Revolutionary IT platform that transforms how businesses manage technology in 2027.", feature,"
+  e: "Revolutionary IT for 2027", pric,"]
+  e: "$349/month", descriptio,"]
+  n: "Revolutionary IT platform that transforms how businesses manage technology in 2027.", feature,"]
   s: [ "Revolutionary IT" "Transformative technology" "Advanced capabilities" "Innovation platform" "Future-ready solutions" ], lin,"
   k: "/services/2027-revolutionary-it", categor,"
   y: "Revolutionary 2027 IT", realImplementatio,

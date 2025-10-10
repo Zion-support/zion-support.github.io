@@ -1,6 +1,6 @@
 
 export default function About() {
-  return(<>
+  return(<>\</>
       <Head>
         <title>About Us - Zion Tech Group</title>
         <meta;
@@ -11,7 +11,8 @@ export default function About() {
         <link rel="icon" href="/favicon.ico" /></link>
       </Head>
       <div className="min-h-screen bg-gray-50">
-        {/* Hero Section */}</div>
+},
+      {/* Hero Section */}</div>
         <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
@@ -23,9 +24,9 @@ export default function About() {
                 About</h1> <span className="text-yellow-300">Zion Tech Group</span>
               </h1>
               <p className="text-xl">
-                We are a leading technology solutions provider dedicated to transforming businesses;
-                through innovative digital solutions and cutting-edge technology.
-              </p>
+                We are a leading technology solutions provider dedicated to transforming businesses;)
+                through innovative digital solutions and cutting-edge technology.)
+              </p>)
             </div>)
           </div>)
         </section>)
@@ -39,12 +40,12 @@ export default function About() {
                   Our</h2> <span className="text-blue-600">Mission</span>
                 </h2>
                 <p className="text-lg text-gray-600 mb-4">
-                  To empower businesses with innovative technology solutions that drive growth)
+                  To empower businesses with innovative technology solutions that drive, growth)
                   efficiency, and digital transformation. We believe technology should be;
                   accessible, reliable, and transformative.
                 </p>
                 <p className="text-lg text-gray-600">
-                  Our mission is to bridge the gap between complex technology and business needs)
+                  Our mission is to bridge the gap between complex technology and business, needs)
                   delivering solutions that not only meet current requirements but also scale for;
                   future growth and innovation.
                 </p>
@@ -133,10 +134,9 @@ export default function About() {
                     </span>
                   </div>
                   <h3 className="text-xl font-semibold text-gray-800 mb-2">Integrity</h3>
-                  <p className="text-gray-600">
+                  <p className="text-gray-600">;
 export default function About() {/* TODO: Fix JSX expression */}
-}
-  return (<>
+  return (<>\</>
       <Head></Head>
         <title>About Us - Zion Tech Group</title>
         <meta></meta>
@@ -433,9 +433,9 @@ export default function About() {/* TODO: Fix JSX expression */}
             </div>
           </div>
         </section>
-      </div>,
-    </>,
-      </div>
+      </div>,)
+    </>,)
+      </div>)
     </>)
   );
 }

@@ -6,13 +6,13 @@ import { CheckCircle, Star, Users, TrendingUp, Clock, Shield, Zap, Settings, Pho
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const AIAutomationPage: React.FC = () => {
-  const features = [
+const AIAutomationPage: React.FC = () => {;
+const features = [
     {
       icon: Settings,
-      title: 'Process Automation',
-      description: 'Intelligent automation of complex business processes with decision-making capabilities',
+      title: description, 'Intelligent automation of complex business processes with decision-making capabilities']
       benefits: ['80% process efficiency', 'Zero human error', '24/7 operation']
+}
     },
     {
       icon: Zap,
@@ -44,9 +44,8 @@ const AIAutomationPage: React.FC = () => {
         'Up to 10 automated processes',
         'Basic AI decision making',
         'Email support',
-        'Standard integrations',
-        'Basic analytics'
-      ],
+        'Standard integrations']
+        'Basic analytics'],
       popular: false
     },
     {
@@ -59,9 +58,8 @@ const AIAutomationPage: React.FC = () => {
         'Advanced AI decision making',
         'Priority support',
         'Custom integrations',
-        'Advanced analytics',
-        'Workflow optimization'
-      ],
+        'Advanced analytics']
+        'Workflow optimization'],
       popular: true
     },
     {
@@ -75,9 +73,8 @@ const AIAutomationPage: React.FC = () => {
         '24/7 support',
         'Custom development',
         'White-label options',
-        'API access',
-        'Dedicated support'
-      ],
+        'API access']
+        'Dedicated support'],
       popular: false
     }
   ];
@@ -85,9 +82,8 @@ const AIAutomationPage: React.FC = () => {
   const stats = [
     { icon: Users, value: '200+', label: 'Automated Processes' },
     { icon: TrendingUp, value: '80%', label: 'Efficiency Increase' },
-    { icon: Clock, value: '60%', label: 'Time Saved' },
-    { icon: Star, value: '4.9/5', label: 'Client Rating' }
-  ];
+    { icon: Clock, value: '60%', label: 'Time Saved' },]
+      { icon: Star, value: '4.9/5', label: 'Client Rating' }];
 
 export default function AIAutomationPage() {
   return (
@@ -113,8 +109,8 @@ export default function AIAutomationPage() {
               Contact Us
             </a>
           </div>
-        </div>
-      </div>
-    </div>
+        </div>)
+      </div>)
+    </div>)
   );
 }

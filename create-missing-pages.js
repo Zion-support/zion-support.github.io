@@ -22,6 +22,7 @@ import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
 const ${title.replace(/[^a-zA-Z0-9]/g, '')}Page = () => {
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEOOptimizer;
+}
         title="${title} - Zion Tech Group"
         description="${description}"
         keywords={['${category}', 'AI', 'Technology', 'Solutions', 'Enterprise']}
@@ -29,9 +30,9 @@ const ${title.replace(/[^a-zA-Z0-9]/g, '')}Page = () => {
       /></SEOOptimizer>
       <PerformanceOptimizer /></PerformanceOptimizer>
       <AccessibilityEnhancer enableKeyboardNavigation enableScreenReaderSupport enableHighContrast enableFocusManagement enableSkipLinks></AccessibilityEnhancer>
-        <div /></div>
-      </AccessibilityEnhancer>
-      
+        <div /></div>)
+      </AccessibilityEnhancer>)
+      )
       <Navigation />)
       {/* Hero Section */})
       <section className="relative py-20 overflow-hidden">)
@@ -122,13 +123,14 @@ export default ${title.replace(/[^a-zA-Z0-9]/g, '')}Page;
 `;
 
 // Function to create a page;
-const createPage = (route, title, description, category) => {
-  const pageContent = createPageTemplate(route, title, description, category);
+const createPage = (route, title, description, category) => {;
+const pageContent = createPageTemplate(route, title, description, category);
   const pagePath = path.join('/workspace/src', route, 'page.tsx');
   
   // Create directory if it doesn't exist;
   const dir = path.dirname(pagePath);
   if (!fs.existsSync(dir)) {
+}
     fs.mkdirSync(dir, { recursive: true });
   }
   
@@ -291,13 +293,14 @@ const batchSize = 10;
 
 console.log(`Creating ${missingPages.length} missing pages...`);
 
-for (const route of missingPages) {
-  if (pageConfigs[route]) {
-    const config = pageConfigs[route];
+for (const route of, missingPages) {
+  if (pageConfigs[route]) {;
+const config = pageConfigs[route];
     createPage(route, config.title, config.description, config.category);
     createdCount++;
     
     if (createdCount % batchSize === 0) {
+}
       console.log(`Created ${createdCount} pages...`);
     }
   } else {
@@ -309,7 +312,5 @@ for (const route of missingPages) {
     createPage(route, title, description, category);
     createdCount++;
   }
-}
-
 console.log(`\n✅ Successfully created ${createdCount} missing pages!`);
 console.log('All navigation links should now work properly.');

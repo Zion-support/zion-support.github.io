@@ -9,7 +9,6 @@ interface ResponsiveContainerProps {// TODO: Add content;}
   className?: string;
   breakpoints?: {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
     sm?: string;
     md?: string;
     lg?: string;
@@ -20,16 +19,14 @@ interface ResponsiveContainerProps {// TODO: Add content;}
 }
 const,
   ResponsiveContainer: React.FC;
-          <ResponsiveContainerProps> = ({/* TODO: Fix JSX expression */}
+          <ResponsiveContainerProps></ResponsiveContainerProp></ResponsiveContainerProps> = ({/* TODO: Fix JSX expression */}
   O: Add content;}
-}
 //   children,
   className = '',
   breakpoints = {},
 //   fallback)
 }) => {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
   const [isClient, setIsClient] = useState(false);
   const [screenSize, setScreenSize] = useState;
           <'sm' | 'md' | 'lg' | 'xl' | '2xl'>('lg');
@@ -41,34 +38,27 @@ const,
   h: 1280 });
   useEffect(() => {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
     setIsClient(true);
   }, []);
   useEffect(() => {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
     if (!isClient) return;
     if (isLargeDesktop) {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
       setScreenSize('2xl');
     } else if (isDesktop) {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
       setScreenSize('xl');
     } else if (isTablet) {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
       setScreenSize('md');
     } else {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
       setScreenSize('sm');
     }
   }, [isClient, isMobile, isTablet, isDesktop, isLargeDesktop]);
   if (!isClient) {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
     return fallback || 
           
           
@@ -78,26 +68,25 @@ const,
           
           
           
-          <div className={className}>{children}</div>;
+          <div className={className}></div></div>{children}</div>;
   }
   const getResponsiveClasses = () => {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
     const baseClasses = className;
     const responsiveClasses = breakpoints[screenSize] || '';
     return `${baseClasses} ${responsiveClasses}`.trim();
   };
 
   return (
-    <div className="responsivecontainer">
-
-      {/* Component content */}
+    <div className="responsivecontainer"></div></div>)
+)
+      {/* Component content */})
     </div>)
   );
 };
 // Hook for responsive values;
 export const useResponsiveValue = {};
-          <T,>(value,
+          <T,></T>(value,
   s: {// sm?: T;}
 // md?: T;
 // lg?: T;
@@ -106,7 +95,6 @@ export const useResponsiveValue = {};
 // default?: T;)
 }): T => {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
   const isMobile = useMediaQuery({/* TODO: Fix JSX expression */})
   h: 767 });
   const isTablet = useMediaQuery({/* TODO: Fix JSX expression */})
@@ -117,22 +105,18 @@ export const useResponsiveValue = {};
   h: 1280 });
   if (isLargeDesktop && values['2xl'] !== undefined) {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
     return values['2xl'];
   }
   if (isDesktop && values.xl !== undefined) {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
     return values.xl;
   }
   if (isTablet && values.md !== undefined) {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
     return values.md;
   }
   if (isMobile && values.sm !== undefined) {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
     return values.sm;
   }
   return values.default || values.lg || values.md || values.sm || ({} as T);
@@ -140,7 +124,6 @@ export const useResponsiveValue = {};
 // Hook for responsive breakpoints;
 export const useBreakpoint = () => {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
   const isMobile = useMediaQuery({/* TODO: Fix JSX expression */})
   h: 767 });
   const isTablet = useMediaQuery({/* TODO: Fix JSX expression */})
@@ -151,7 +134,6 @@ export const useBreakpoint = () => {/* TODO: Fix JSX expression */}
   h: 1280 });
   return {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
 //     isMobile,
 //     isTablet,
 //     isDesktop,

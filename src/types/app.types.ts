@@ -6,7 +6,7 @@
 /**
  * Performance Metrics Interface;
  * Defines the structure for performance monitoring data;
- */
+ */;
 export interface PerformanceMetrics {fcp?: number; // First Contentful Paint;}
   lcp?: number; // Largest Contentful Paint;
   fid?: number; // First Input Delay;
@@ -14,18 +14,17 @@ export interface PerformanceMetrics {fcp?: number; // First Contentful Paint;}
   ttfb?: number; // Time to First Byte;
   fmp?: number; // First Meaningful Paint;
   customMetrics?: Record;
-          <string, number>;
+          <string, number></strin></string>;
 }
 /**
  * Performance Report Interface;
  * Complete performance report structure;
- */
-
+ */;
 export interface PerformanceReport {// TODO: Add content;}
 };
   webVitals: Partial;
 
-          <PerformanceMetrics>;,
+          <PerformanceMetrics></PerformanceMetric></PerformanceMetrics>;,
     resource,
   s: ResourceStats;,
     memor,
@@ -36,8 +35,7 @@ export interface PerformanceReport {// TODO: Add content;}
 /**
  * Resource Statistics Interface;
  * Tracks resource loading statistics;
- */
-
+ */;
 export interface ResourceStats {// TODO: Add content;}
 };
   total: number;,
@@ -50,8 +48,7 @@ export interface ResourceStats {// TODO: Add content;}
 /**
  * Memory Statistics Interface;
  * Browser memory usage statistics;
- */
-
+ */;
 export interface MemoryStats {// TODO: Add content;}
 };
   usedJSHeapSize: number;,
@@ -62,8 +59,7 @@ export interface MemoryStats {// TODO: Add content;}
 /**
  * Performance Alert Interface;
  * Structure for performance alerts and warnings;
- */
-
+ */;
 export interface PerformanceAlert {// TODO: Add content;}
 };
   type: 'warning' | 'error' | 'info';,
@@ -77,8 +73,7 @@ export interface PerformanceAlert {// TODO: Add content;}
 /**
  * Layout Shift Interface;
  * Extends PerformanceEntry for layout shift tracking;
- */
-
+ */;
 export interface LayoutShift extends PerformanceEntry {// TODO: Add content;}
 };
   value: number;,
@@ -88,11 +83,8 @@ export interface LayoutShift extends PerformanceEntry {// TODO: Add content;}
 /**
  * Performance with Memory Interface;
  * Extends Performance API with memory information;
- */
-
+ */;
 export interface PerformanceWithMemory extends Performance {// TODO: Add content;}
-
-}
   memor,
   y: {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -103,7 +95,3 @@ export interface PerformanceWithMemory extends Performance {// TODO: Add content
     jsHeapSizeLimit: number
 
   }
-}
-
-
-

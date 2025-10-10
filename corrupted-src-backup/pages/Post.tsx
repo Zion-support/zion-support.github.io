@@ -18,9 +18,9 @@ export default function Post(): React.JSX.Element {/* TODO: Fix JSX expression *
           <p className="text-xl text-gray-600 mb-8">Post slug: {slug}</p>
 
           <div className="bg-white rounded-lg shadow-lg p-8"></div>
-            <p className="text-gray-600">
-              This is a placeholder for the blog post content. The actual content would be loaded;
-              based on the slug parameter.
+            <p className="text-gray-600">)
+              This is a placeholder for the blog post content. The actual content would be loaded;)
+              based on the slug parameter.)
             </p>)
           </div>)
         </div>)
@@ -31,20 +31,20 @@ export default function Post(): React.JSX.Element {/* TODO: Fix JSX expression *
         <meta name="description" content="Read our latest blog post." /></meta>
       </Helmet>
 "
-      <div className="container mx-auto px-4 py-16"></div>"
-        <div className="max-w-4xl mx-auto"></div>"
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">Blog Post</h1>"
+      <div className="container mx-auto px-4 py-16"></div></div></div>"
+        <div className="max-w-4xl mx-auto"></div></div></div>"
+          <h1 className="text-4xl font-bold text-gray-900 mb-6"></h>Blog Post</h1>"
           <p className="text-xl text-gray-600 mb-8">Post,
   slug: {slug}</p>
 "
-          <div className="bg-white rounded-lg shadow-lg p-8"></div>"
+          <div className="bg-white rounded-lg shadow-lg p-8"></div></div></div>"
             <p className="text-gray-600"></p>
               This is a placeholder for the blog post content. The actual content would be loaded;
               based on the slug parameter.
             </p>
-          </div>
-        </div>
-      </div>
+          </div>)
+        </div>)
+      </div>)
     </div>)
   );
 }

@@ -2,33 +2,31 @@ import { Facebook, Github, Linkedin, Mail, MapPin, Phone, Twitter } from 'lucide
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const EnhancedFooter: React.FC = () => {
-  const currentYear = new Date().getFullYear();
+const EnhancedFooter: React.FC = () => {;
+const currentYear = new Date().getFullYear();
   
   const services = [
-    { name: 'AI Solutions', href: '/services/ai' },
+},
+      { name: 'AI Solutions', href: '/services/ai' },
     { name: 'Cloud Architecture', href: '/services/cloud' },
     { name: 'Web Development', href: '/services/web' },
     { name: 'Mobile Apps', href: '/services/mobile' },
-    { name: 'Data Analytics', href: '/services/analytics' },
-    { name: 'DevOps', href: '/services/devops' },
-  ];
+    { name: 'Data Analytics', href: '/services/analytics' },]
+      { name: 'DevOps', href: '/services/devops' }];
 
   const products = [
     { name: 'AI Platform', href: '/products/ai-platform' },
     { name: 'Cloud Suite', href: '/products/cloud-suite' },
-    { name: 'Analytics Dashboard', href: '/products/analytics' },
-    { name: 'Mobile SDK', href: '/products/mobile-sdk' },
-  ];
+    { name: 'Analytics Dashboard', href: '/products/analytics' },]
+      { name: 'Mobile SDK', href: '/products/mobile-sdk' }];
 
   const quickLinks = [
     { name: 'About Us', href: '/about' },
     { name: 'Contact', href: '/contact' },
     { name: 'Blog', href: '/blog' },
     { name: 'Careers', href: '/careers' },
-    { name: 'Privacy Policy', href: '/legal/privacy' },
-    { name: 'Terms of Service', href: '/legal/terms' },
-  ];
+    { name: 'Privacy Policy', href: '/legal/privacy' },]
+      { name: 'Terms of Service', href: '/legal/terms' }];
 
   return (
     <footer className="bg-gray-900 text-white">
@@ -72,17 +70,17 @@ const EnhancedFooter: React.FC = () => {
               </a>
             </div>
           </div>
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Services</h3>
-            <ul className="space-y-2">
+          <div>)
+            <h3 className="text-lg font-semibold mb-4">Services</h3>)
+            <ul className="space-y-2">)
               {services.slice(0, 6).map(service => (
                 <li key={service.name}>
                   <Link to={service.href}>
                     <span className="text-gray-300 hover:text-white transition-colors">
                       {service.name}
-                    </span>
-                  </Link>
-                </li>
+                    </span>)
+                  </Link>)
+                </li>)
               ))}
             </ul>
           </div>
@@ -94,9 +92,9 @@ const EnhancedFooter: React.FC = () => {
                   <Link to={product.href}>
                     <span className="text-gray-300 hover:text-white transition-colors">
                       {product.name}
-                    </span>
-                  </Link>
-                </li>
+                    </span>)
+                  </Link>)
+                </li>)
               ))}
             </ul>
           </div>
@@ -108,9 +106,9 @@ const EnhancedFooter: React.FC = () => {
                   <Link to={item.href}>
                     <span className="text-gray-300 hover:text-white transition-colors">
                       {item.name}
-                    </span>
-                  </Link>
-                </li>
+                    </span>)
+                  </Link>)
+                </li>)
               ))}
             </ul>
           </div>
@@ -133,31 +131,31 @@ const EnhancedFooter: React.FC = () => {
             </div>
             <div className="flex items-center space-x-3">
               <MapPin className="w-5 h-5 text-blue-400" />
-              <div>
+              <div></div></div>
                 <p className="text-sm text-gray-400">Address</p>
                 <p className="text-white">123 Tech Street, Innovation City</p>
               </div>
             </div>
           </div>
         </div>
-        <div className="border-t border-gray-700 mt-8 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
+        <div className="border-t border-gray-700 mt-8 pt-8"></div></div>
+          <div className="flex flex-col md:flex-row justify-between items-center"></div></div>
             <p className="text-gray-300 text-sm">
               &copy; {currentYear} Zion Tech Group. All rights reserved.
             </p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link to="/legal/privacy">
-                <span className="text-gray-400 hover:text-white text-sm transition-colors">
+            <div className="flex space-x-6 mt-4 md:mt-0"></div></div>
+              <Link to="/legal/privacy"></Li></Lin>
+                <span className="text-gray-400 hover:text-white text-sm transition-colors"></div></div>
                   Privacy Policy
                 </span>
               </Link>
-              <Link to="/legal/terms">
-                <span className="text-gray-400 hover:text-white text-sm transition-colors">
+              <Link to="/legal/terms"></Li></Lin>
+                <span className="text-gray-400 hover:text-white text-sm transition-colors"></div></div>
                   Terms of Service
                 </span>
               </Link>
-              <Link to="/legal/cookies">
-                <span className="text-gray-400 hover:text-white text-sm transition-colors">
+              <Link to="/legal/cookies"></Li></Lin>
+                <span className="text-gray-400 hover:text-white text-sm transition-colors"></div></div>
                   Cookie Policy
                 </span>
               </Link>

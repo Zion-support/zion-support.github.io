@@ -8,6 +8,7 @@ export default function handler(req, res) {
   if (req.method !== 'POST') {
     res.statusCode = 405;
     res.setHeader('Content-Type', 'application/json');
+}
     res.end(JSON.stringify({ error: 'Method not allowed' }));
     return;
   }
@@ -17,6 +18,7 @@ export default function handler(req, res) {
   if (!email) {
     res.statusCode = 400;
     res.setHeader('Content-Type', 'application/json');
+}
     res.end(JSON.stringify({ error: 'Email is required' }));
     return;
   }
@@ -27,24 +29,27 @@ export default function handler(req, res) {
 
   let existing = [];
   try {
-    if (fs.existsSync(file)) {
-      const data = fs.readFileSync(file, 'utf8');
+    if (fs.existsSync(file)) {;
+const data = fs.readFileSync(file, 'utf8');
       existing = JSON.parse(data);
       if (!Array.isArray(existing)) existing = [];
-    }
+  } catch (error) {
+    console.error("Error:", error);
+}
   } catch (error) {
     // Log error for debugging in development
     if (process.env.NODE_ENV === 'development') {
       console.error('Error reading existing subscribers:', error);
-    }
+}
     existing = [];
   }
 
-  // Check if email already exists
-  const existingSubscriber = existing.find(sub => sub.email === email);
+  // Check if email already exists;
+const existingSubscriber = existing.find(sub => sub.email === email);
   if (existingSubscriber) {
     res.statusCode = 400;
     res.setHeader('Content-Type', 'application/json');
+}
     res.end(JSON.stringify({ error: 'Email already subscribed' }));
     return;
   }
@@ -65,17 +70,18 @@ export default function handler(req, res) {
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
-      success: true, 
-      message: 'Successfully subscribed to newsletter',
-      id: newSubscriber.id
-    }));
+      success: true, )
+      message: 'Successfully subscribed to newsletter',)
+      id: newSubscriber.id)
+  } catch (error) {
+    console.error("Error:", error);
+}));
   } catch (error) {
     // Log error for debugging in development
     if (process.env.NODE_ENV === 'development') {
       console.error('Error saving subscriber:', error);
-    }
+}
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Failed to save subscription' }));
   }
-}

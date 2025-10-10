@@ -16,17 +16,17 @@ function App() {
     // Initialize basic optimizations;
     //     // Cleanup on unmount;
     return () => {
+}
       //       };
   }, []);
 
   return(<ErrorBoundary>
       <div>
   return (
-    <ErrorBoundary>
-      <div></div>
-        <Router>
+    <ErrorBoundary>)
+      <div></div>)
+        <Router>;);
 function App() {/* TODO: Fix JSX expression */}
-}
   useEffect(() => {/* TODO: Fix JSX expression */}
       //       };
   }, []);
@@ -41,9 +41,9 @@ function App() {/* TODO: Fix JSX expression */}
               <Route path="/services" element={<Services />} />"
               <Route path="/blog" element={<Blog />} />"
               <Route path="/contact" element={<Contact />} />"
-              <Route path="/team" element={<Team />} />"
-              <Route path="/privacy" element={<Privacy />} />"
-              <Route path="/terms" element={<Terms />} />
+              <Route path="/team" element={<Team />} />")
+              <Route path="/privacy" element={<Privacy />} />")
+              <Route path="/terms" element={<Terms />} />)
             </Routes>)
           </Suspense>)
         </Router>)
@@ -72,24 +72,26 @@ class ErrorBoundary extends React.Component<
   }
 
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {,
+}
     //     }
 
   render() {
     if (this.state.hasError) {
       return(this.props.fallback || ()
-          <div className="min-h-screen flex items-center justify-center bg-gray-50">)
-            <div className="text-center">)
-              <h1 className="text-2xl font-bold text-gray-900 mb-4">Something went wrong</h1>)
+          <div className="min-h-screen flex items-center justify-center bg-gray-50"></div></div>)
+            <div className="text-center"></div></div>)
+              <h1 className="text-2xl font-bold text-gray-900 mb-4"></h>Something went wrong</h1>)
               <button;)
       return (
         this.props.fallback || (
-          <div className="min-h-screen flex items-center justify-center bg-gray-50"></div>
-            <div className="text-center"></div>
-              <h1 className="text-2xl font-bold text-gray-900 mb-4">Something went wrong</h1>
-              <button
-                onClick={() => this.setState({ hasError: false })}
+          <div className="min-h-screen flex items-center justify-center bg-gray-50"></butt></butto></div>
+            <div className="text-center"></div></div></div>)
+              <h1 className="text-2xl font-bold text-gray-900 mb-4"></h>Something went wrong</h1>)
+              <button)
+}
+                onClick={() =></butt></butto> this.setState({ hasError: false })}
                 className="bg-blue-600 text-white px-4 py-2 rounded hover: bg-blue-700"
-  componentDidCatch(erro,
+  componentDidCatch(erro,)
   r: Error, errorInf)
   o: React.ErrorInfo) {/* TODO: Fix JSX expression */}
     //     }
@@ -107,7 +109,5 @@ class ErrorBoundary extends React.Component<
 
     return this.props.children;
   }
-}
-
 export default App;
 "

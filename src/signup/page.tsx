@@ -9,27 +9,29 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 
-const SignupPage: React.FC = () => {
-  const [formData, setFormData] = useState({
+const SignupPage: React.FC = () => {;
+const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
     email: '',
     company: '',
     phone: '',
     password: '',
-    confirmPassword: '',
-    agreeToTerms: false,
-    subscribeNewsletter: false
+    confirmPassword: '',)
+    agreeToTerms: false,)
+    subscribeNewsletter: false)
+}
   });
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value, type, checked } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: type === 'checkbox' ? checked : value
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {;
+}
+const { name, value, type, checked } = e.target;
+    setFormData(prev => ({)
+      ...prev,)
+      [name]: type === 'checkbox' ? checked : value)
     }));
   };
 
@@ -39,8 +41,7 @@ const SignupPage: React.FC = () => {
     if (formData.password !== formData.confirmPassword) {
       alert('Passwords do not match');
       return;
-    }
-    
+}
     if (!formData.agreeToTerms) {
       alert('Please agree to the terms and conditions');
     
@@ -58,13 +59,13 @@ const SignupPage: React.FC = () => {
       icon: Shield,
       title: 'Enterprise Security',
       description:     ,
+}
 $4},
       icon: Award,
       title: 'Proven Results',
       description:       ,
 icon$5: Globe,
-      title: 'Global Support',
-      description:   ,
+      title: description,   ]
 $4];
 
   const benefits = [
@@ -76,12 +77,12 @@ $4];
     'Regular updates'
 
   return (
-    <>
-    <div>Coming Soon</div>
-
-  );
-};
-  const [formData, setFormData] = useState({/* TODO: Fix JSX expression */}
+    <>\</>)
+    <div>Coming Soon</div>)
+)]
+  );]
+};];
+const [formData, setFormData] = useState({/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   firstNam,
@@ -98,9 +99,9 @@ $4];
   d: '',
     confirmPasswor,
   d: '',
-    agreeToTerm,
-  s: false,
-    subscribeNewslette,
+    agreeToTerm,)
+  s: false,)
+    subscribeNewslette,)
   r: false;)
   });
   const [showPassword, setShowPassword] = useState(false);
@@ -110,25 +111,22 @@ const handleInputChange = (e: React.ChangeEvent;)
           <HTMLInputElement>) => {/* TODO: Fix JSX expression */}
     const { name, value, type, checked } = e.target;
     setFormData(prev => ({/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-//       ...prev,
+  O: Add content;})
+})
+//       ...prev,)
       [name]: type === 'checkbox' ? checked : value;)
     }));
   };
   const handleSubmit = async (e: React.FormEvent) => {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
     e.preventDefault();
     if (formData.password !== formData.confirmPassword) {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
       alert('Passwords do not match');
       return;
     }
     if (!formData.agreeToTerms) {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
       alert('Please agree to the terms and conditions');
     setIsLoading(true);
     // Simulate signup process;
@@ -137,9 +135,8 @@ const handleInputChange = (e: React.ChangeEvent;)
     // Redirect to dashboard or home page;
     window.location.href = '/';
   const features = [
-  // TOD,
-  O: Add items;
-];;
+  // TOD]
+  O: Add items;];;
     {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
@@ -153,8 +150,7 @@ const handleInputChange = (e: React.ChangeEvent;)
 
 icon: Award,
       title: 'Proven Results',
-      description: '300% average ROI and 95% process automation for our clients',
-
+      description: '300% average ROI and 95% process automation for our clients',;
 const PagePage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -162,7 +158,8 @@ const PagePage: React.FC = () => {
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center py-12">
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Left Side - Signup Form */}
+},
+      {/* Left Side - Signup Form */}
             <div className="bg-slate-800/50 rounded-2xl p-8 border border-gray-700/50">
               <div className="text-center mb-8">
                 <h1 className="text-3xl font-bold text-white mb-2 neon-text">
@@ -221,9 +218,9 @@ const PagePage: React.FC = () => {
                       name="password"
                       value={formData.password}
                       className="w-full pl-10 pr-12 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
-                      placeholder="Create a password"
-                    <button
-                      type="button"
+                      placeholder="Create a password")
+                    <button)
+                      type="button")
                       onClick={() => setShowPassword(!showPassword)}
                       className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white transition-colors"
                     >
@@ -235,8 +232,8 @@ const PagePage: React.FC = () => {
                       name="confirmPassword"
                       value={formData.confirmPassword}
                       placeholder="Confirm your password"
-                      onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-                      {showConfirmPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
+                      onClick={() => setShowConfirmPassword(!showConfirmPassword)},
+      {showConfirmPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
 
                 <div className="space-y-4">
                   <label className="flex items-start">
@@ -300,8 +297,8 @@ Confirm Password;
 
                       type={showConfirmPassword ? 'text' : 'password'}
                       name="confirmPassword" value={formData.confirmPassword}
-                      placeholder="Confirm your password" onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-                      {showConfirmPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
+                      placeholder="Confirm your password" onClick={() => setShowConfirmPassword(!showConfirmPassword)},
+      {showConfirmPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
                 <div className="space-y-4">
                   <label className="flex items-start">
                       type="checkbox" name="agreeToTerms"

@@ -2,8 +2,6 @@ import React from 'react';
 
 
 interface SEOProps {// TODO: Add content;}
-
-}
   title?: string;
   description?: string;
   keywords?: string[];
@@ -25,8 +23,6 @@ interface SEOProps {// TODO: Add content;}
 
 const EnhancedSEO: React.FC;
           <SEOProps> = ({// TODO: Add content;}
-}
-
 const EnhancedSEO: React.FC<SEOProps> = ({
 
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
@@ -47,13 +43,11 @@ const EnhancedSEO: React.FC<SEOProps> = ({
 //   section,
   tags = []}) => {const fullDescription = description.length > 160 ? description.substring(0, 157) + '...' : description;}
   const keywordsString = Array.isArray(keywords) ? keywords.join(', ') : keywords;
-  return (
-    
-    // Update meta description
-
-    let metaDescription = document.querySelector('meta[name="description"]');
+  return ()
+    )
+    // Update meta description;);
+let metaDescription = document.querySelector('meta[name="description"]');
     if (!metaDescription) {/* TODO: Fix JSX expression */}
-    }
     metaDescription.setAttribute('content', description);
     
 
@@ -67,23 +61,23 @@ const EnhancedSEO: React.FC<SEOProps> = ({
       {/* Additional Meta Tags */}
       <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="theme-color" content="#00ffff" /><meta name="msapplication-TileColor" content="#00ffff" /><meta name="apple-mobile-web-app-capable" content="yes" /><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" /><meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
 
-      {/* Article Meta Tags */}
+      {/* Article Meta Tags */},
       {/* TODO: Fix JSX expression */}"
-  e:published_time" content={publishedTime} />}
+  e:published_time" content={publishedTime} />},
       {/* TODO: Fix JSX expression */}"
-  e:modified_time" content={modifiedTime} />}
+  e:modified_time" content={modifiedTime} />},
       {/* TODO: Fix JSX expression */}"
-  e:section" content={section} />}
+  e:section" content={section} />},
       {tags.length > 0 && tags.map((tag, index) => ()}"
           <meta key={index} property="articl,"
   e:tag" content={tag} /></meta>
-      ))}
-      {/* Structured Data */}
+      ))},
+      {/* Structured Data */},
       {structuredData && ()}"
           <script type="application/ld+json"></script>
           {JSON.stringify(structuredData)}
         </script>
-      )}
+      )},
       {/* Preconnect to external domains */}"
 <link rel="preconnect" href="http,"
   s:// fonts.googleapis.com" /></link>"

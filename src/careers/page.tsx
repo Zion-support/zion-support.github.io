@@ -4,8 +4,8 @@ import { MapPin, Clock, Users, Briefcase, ArrowRight, CheckCircle, Star, Heart, 
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const CareersPage: React.FC = () => {
-  const openPositions = [
+const CareersPage: React.FC = () => {;
+const openPositions = [
     {
       id: 'senior-ai-engineer',
       title: 'Senior AI Engineer',
@@ -18,10 +18,10 @@ const CareersPage: React.FC = () => {
         'Master\'s degree in Computer Science, AI, or related field',
         '5+ years experience in machine learning and deep learning',
         'Proficiency in Python, TensorFlow, PyTorch',
-        'Experience with cloud platforms (AWS, Azure, GCP)',
-        'Strong problem-solving and communication skills'
-      ],
+        'Experience with cloud platforms (AWS, Azure, GCP)']
+        'Strong problem-solving and communication skills'],
       benefits: ['Competitive salary', 'Stock options', 'Health insurance', 'Flexible work hours', 'Professional development budget']
+}
     },
     {
       id: 'full-stack-developer',
@@ -35,9 +35,8 @@ const CareersPage: React.FC = () => {
         'Bachelor\'s degree in Computer Science or related field',
         '3+ years experience with React, Node.js, and TypeScript',
         'Experience with databases (PostgreSQL, MongoDB)',
-        'Knowledge of cloud services and DevOps practices',
-        'Strong attention to detail and code quality'
-      ],
+        'Knowledge of cloud services and DevOps practices']
+        'Strong attention to detail and code quality'],
       benefits: ['Competitive salary', 'Health insurance', '401k matching', 'Remote work options', 'Learning budget']
     },
     {
@@ -52,9 +51,8 @@ const CareersPage: React.FC = () => {
         'PhD or Master\'s degree in Data Science, Statistics, or related field',
         '4+ years experience in data analysis and machine learning',
         'Proficiency in Python, R, SQL, and statistical modeling',
-        'Experience with big data tools (Spark, Hadoop)',
-        'Strong analytical and communication skills'
-      ],
+        'Experience with big data tools (Spark, Hadoop)']
+        'Strong analytical and communication skills'],
       benefits: ['Competitive salary', 'Stock options', 'Health insurance', 'Flexible schedule', 'Research opportunities']
     },
     {
@@ -69,9 +67,8 @@ const CareersPage: React.FC = () => {
         'Bachelor\'s degree in Cybersecurity, Computer Science, or related field',
         '4+ years experience in cybersecurity and threat analysis',
         'Certifications: CISSP, CISM, or equivalent',
-        'Experience with SIEM, EDR, and security frameworks',
-        'Knowledge of compliance standards (SOC 2, ISO 27001)'
-      ],
+        'Experience with SIEM, EDR, and security frameworks']
+        'Knowledge of compliance standards (SOC 2, ISO 27001)'],
       benefits: ['Competitive salary', 'Health insurance', 'Security training budget', 'Certification support', 'Flexible work']
     },
     {
@@ -86,9 +83,8 @@ const CareersPage: React.FC = () => {
         'Bachelor\'s degree in Business, Engineering, or related field',
         '5+ years experience in product management',
         'Experience with AI/ML products and enterprise software',
-        'Strong analytical and strategic thinking skills',
-        'Excellent communication and leadership abilities'
-      ],
+        'Strong analytical and strategic thinking skills']
+        'Excellent communication and leadership abilities'],
       benefits: ['Competitive salary', 'Stock options', 'Health insurance', 'Product conference budget', 'Leadership development']
     },
     {
@@ -103,9 +99,8 @@ const CareersPage: React.FC = () => {
         'Bachelor\'s degree in Engineering, Computer Science, or related field',
         '3+ years experience in technical sales or sales engineering',
         'Strong technical background in AI/ML or IT solutions',
-        'Excellent presentation and communication skills',
-        'Ability to travel to client sites (25% travel)'
-      ],
+        'Excellent presentation and communication skills']
+        'Ability to travel to client sites (25% travel)'],
       benefits: ['Competitive salary + commission', 'Health insurance', 'Travel budget', 'Sales training', 'Performance bonuses']
     }
   ];
@@ -128,19 +123,17 @@ const CareersPage: React.FC = () => {
     },
     {
       icon: Star,
-      title: 'Recognition',
-      description: 'Performance bonuses, stock options, and recognition programs'
-    }
-  ];
+      title: 'Recognition',]
+      description: 'Performance bonuses, stock options, and recognition programs']
+    }];
 
   const culture = [
     'Innovation-driven environment where creativity is encouraged',
     'Collaborative team culture with diverse perspectives',
     'Opportunities to work on cutting-edge AI and technology projects',
     'Mentorship programs and career development support',
-    'Regular team events and company retreats',
-    'Open communication and transparent leadership'
-  ];
+    'Regular team events and company retreats']
+    'Open communication and transparent leadership'];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -181,9 +174,9 @@ const CareersPage: React.FC = () => {
             </h2>
             <p className="text-xl text-gray-600">
               We offer more than just a job - we offer a career and a community
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            </p>)
+          </div>)
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">)
             {benefits.map((benefit, index) => (
               <div key={index} className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">

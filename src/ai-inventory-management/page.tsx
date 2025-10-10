@@ -2,7 +2,6 @@
 import { Helmet } from 'react-helmet-async';
 
 export default function AIInventoryManagementPage() {/* TODO: Fix JSX expression */}
-}
   return (<div><Helmet></Helmet>
         <title>AI Inventory Management Solutions - Zion Tech Group</title>
         <meta name="description" content="Intelligent AI-powered inventory management with predictive analytics, automated reordering, and real-time optimization. Starting at $149/month." /></meta>"
@@ -203,9 +202,9 @@ export default function AIInventoryManagementPage() {/* TODO: Fix JSX expression
               Join 3,000+ businesses using our AI inventory management system to reduce costs and eliminate stockouts.
             </p>"
             <div className="flex flex-col,"
-  sm:flex-row gap-4 justify-center"></div>"
-              <a href="te,"
-  l:+13024640950" className="cyber-button"></a>
+  sm:flex-row gap-4 justify-center"></div>")
+              <a href="te,")
+  l:+13024640950" className="cyber-button"></a>)
                 📞 Cal)
   l: (302) 464-0950;
               </a>"

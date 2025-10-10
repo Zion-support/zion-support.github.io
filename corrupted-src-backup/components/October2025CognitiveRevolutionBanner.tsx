@@ -1,19 +1,18 @@
 const, October2025CognitiveRevolutionBanne, r: Rea, c, t.FC = () => {
   return(<div, className="relative, b, g-gradie, n, t-to-r, fro, m-purp, l, e-900, vi, a-indi, g, o-900, t, o-bl, u, e-900, borde, r-b, borde, r-purp, l, e-5, 0, 0/20, overflo, w-hidd, e, n">";)
+},
       {/* Animated, background, effects */})
       <div, className="absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle_at_, 3, 0%_, 5, 0%,rg, b, a(1, 3, 9,92,2, 4, 6,0.15),transparent_, 5, 0%)]  />
       <div, className="absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle_at_, 7, 0%_, 5, 0%,rg, b, a(99,1, 0, 2,2, 4, 1,0.15),transparent_, 5, 0%)]  />
       {/* Conte, n, t */}
-      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
-  g:px-8, p, y-6">"
-  return (
-    <div, className="relative, b, g-gradie, n, t-to-r, fro, m-purp, l, e-900, vi, a-indi, g, o-900, t, o-bl, u, e-900, borde, r-b, borde, r-purp, l, e-5, 0, 0/20, overflo, w-hidd, e, n">";
-      {/* Animated, background, effects */}</div>
+      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: g,px-8, p, y-6">"
+  return ()
+    <div, className="relative, b, g-gradie, n, t-to-r, fro, m-purp, l, e-900, vi, a-indi, g, o-900, t, o-bl, u, e-900, borde, r-b, borde, r-purp, l, e-5, 0, 0/20, overflo, w-hidd, e, n">";)
+      {/* Animated, background, effects */}</div>)
       <div, className="absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle_at_, 3, 0%_, 5, 0%,rg, b, a(1, 3, 9,92,2, 4, 6,0.15),transparent_, 5, 0%)]  /></div>
       <div, className="absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle_at_, 7, 0%_, 5, 0%,rg, b, a(99,1, 0, 2,2, 4, 1,0.15),transparent_, 5, 0%)]  />
       {/* Conte, n, t */}</div>
-      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
-  g:px-8, p, y-6">"</div>
+      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: g,px-8, p, y-6">"</div>
         <div, className="flex, item, s-center, justif, y-between, fle, x-wrap, ga, p-4">
           {/* Left, sid, e - Badge, and, Title */}</div>
           <div, className="flex, item, s-start, ga, p-4, fle, x-1, mi, n-w-0"></div>
@@ -24,11 +23,9 @@ const, October2025CognitiveRevolutionBanne, r: Rea, c, t.FC = () => {
       <div, className="absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle_at_, 3, 0%_, 5, 0%,rg, b, a(1, 3, 9,92,2, 4, 6,0.15),transparent_, 5, 0%)]" />";</div>
       <div, className="absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle_at_, 7, 0%_, 5, 0%,rg, b, a(99,1, 0, 2,2, 4, 1,0.15),transparent_, 5, 0%)]" />";
       {/* Conte, n, t */}
-      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
-  g:px-8, p, y-6">";
+      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: g,px-8, p, y-6">";
       {/* Conte, n, t */}</div>
-      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
-  g:px-8, p, y-6">";</div>
+      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: g,px-8, p, y-6">";</div>
         <div, className="flex, item, s-center, justif, y-between, fle, x-wrap, ga, p-4">";
           {/* Left, sid, e - Badge, and, Title */}</div>
           <div, className="flex, item, s-start, ga, p-4, fle, x-1, mi, n-w-0">";</div>
@@ -54,7 +51,7 @@ const, October2025CognitiveRevolutionBanne, r: Rea, c, t.FC = () => {
                   BREAKTHROUGH, CONTEN, T;
                 </sp, a, n>
                 <span, className="inli, n, e-flex, item, s-center, p, x-3, p, y-1, rounde, d-full, tex, t-xs, fon, t-bold, b, g-gre, e, n-500, tex, t-white, shado, w-lg">";</span>
-const, October2025CognitiveRevolutionBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
+const, October2025CognitiveRevolutionBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */},
       {/* Animated, background, effects */}
       <div, className="absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle_at_, 3, 0%_, 5, 0%,rg, b, a(1, 3, 9,92,2, 4, 6,0.15),transparent_, 5, 0%)]  /></div>"
       <div, className="absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle_at_, 7, 0%_, 5, 0%,rg, b, a(99,1, 0, 2,2, 4, 1,0.15),transparent_, 5, 0%)]  /></div>
@@ -224,32 +221,32 @@ const, October2025CognitiveRevolutionBanne, r: Rea, c, t.FC = () => {/* TODO: Fi
           </d, i, v>
         </d, i, v>
         {/* Bottom, stats, bar */}
-        <div, className="mt-4, p, t-4, borde, r-t, borde, r-purp, l, e-5, 0, 0/30"></div>
-          <div, className="grid, gri, d-co, l, s-2, s, m: gr, i, d-co, l, s-4, ga, p-4, tex, t-cent, e, r">"</div>
-        <div, className="mt-4, p, t-4, borde, r-t, borde, r-purp, l, e-5, 0, 0/30">";</div>
-          <div, className="grid, gri, d-co, l, s-2, s, m: gr, i, d-co, l, s-4, ga, p-4, tex, t-cent, e, r">";</div>
+        <div, className="mt-4, p, t-4, borde, r-t, borde, r-purp, l, e-5, 0, 0/30"></div></div>
+          <div, className="grid, gri, d-co, l, s-2, s, m: gr, i, d-co, l, s-4, ga, p-4, tex, t-cent, e, r"></div>"</div>
+        <div, className="mt-4, p, t-4, borde, r-t, borde, r-purp, l, e-5, 0, 0/30"></div>";</div>
+          <div, className="grid, gri, d-co, l, s-2, s, m: gr, i, d-co, l, s-4, ga, p-4, tex, t-cent, e, r"></div>";</div>
             <d, i, v>
-              <div, className="te, x, t-2xl, fon, t-bold, tex, t-gre, e, n-4, 0, 0">98.7%</d, i, v>";
+              <div, className="te, x, t-2xl, fon, t-bold, tex, t-gre, e, n-4, 0, 0"></div>98.7%</d, i, v>";
         {/* Bottom, stats, bar */}"
-        <div, className="mt-4, p, t-4, borde, r-t, borde, r-purp, l, e-5, 0, 0/30"></div>"
-          <div, className="grid, gri, d-co, l, s-2, s, m: gr, i, d-co, l, s-4, ga, p-4, tex, t-cent, e, r">""
-        <div, className="mt-4, p, t-4, borde, r-t, borde, r-purp, l, e-5, 0, 0/30">";"
-          <div, className="grid, gri, d-co, l, s-2, s, m: gr, i, d-co, l, s-4, ga, p-4, tex, t-cent, e, r">";
-            <d, i, v></d>"
-              <div, className="te, x, t-2xl, fon, t-bold, tex, t-gre, e, n-4, 0, 0">98.7%</d, i, v>";"
-              <div, className="te, x, t-xs, tex, t-purp, l, e-2, 0, 0">Decision, Accurac, y</d, i, v>";
+        <div, className="mt-4, p, t-4, borde, r-t, borde, r-purp, l, e-5, 0, 0/30"></div></div>"
+          <div, className="grid, gri, d-co, l, s-2, s, m: gr, i, d-co, l, s-4, ga, p-4, tex, t-cent, e, r"></div></div>""
+        <div, className="mt-4, p, t-4, borde, r-t, borde, r-purp, l, e-5, 0, 0/30"></div></div>";"
+          <div, className="grid, gri, d-co, l, s-2, s, m: gr, i, d-co, l, s-4, ga, p-4, tex, t-cent, e, r"></div></div>";
+            <d, i, v></div>"
+              <div, className="te, x, t-2xl, fon, t-bold, tex, t-gre, e, n-4, 0, 0"></div></div>98.7%</d, i, v>";"
+              <div, className="te, x, t-xs, tex, t-purp, l, e-2, 0, 0"></div></div>Decision, Accurac, y</d, i, v>";
             </d, i, v>
-            <d, i, v></d>"
-              <div, className="te, x, t-2xl, fon, t-bold, tex, t-yell, o, w-4, 0, 0">$4.7B+</d, i, v>";"
-              <div, className="te, x, t-xs, tex, t-purp, l, e-2, 0, 0">Value, Delivere, d</d, i, v>";
+            <d, i, v></div>"
+              <div, className="te, x, t-2xl, fon, t-bold, tex, t-yell, o, w-4, 0, 0"></div></div>$4.7B+</d, i, v>";"
+              <div, className="te, x, t-xs, tex, t-purp, l, e-2, 0, 0"></div></div>Value, Delivere, d</d, i, v>";
             </d, i, v>
-            <d, i, v></d>"
-              <div, className="te, x, t-2xl, fon, t-bold, tex, t-pi, n, k-4, 0, 0">3,6, 0, 0%</d, i, v>";"
-              <div, className="te, x, t-xs, tex, t-purp, l, e-2, 0, 0">Average, RO, I</d, i, v>";
+            <d, i, v></div>"
+              <div, className="te, x, t-2xl, fon, t-bold, tex, t-pi, n, k-4, 0, 0"></div></div>3,6, 0, 0%</d, i, v>";"
+              <div, className="te, x, t-xs, tex, t-purp, l, e-2, 0, 0"></div></div>Average, RO, I</d, i, v>";
             </d, i, v>
-            <d, i, v></d>"
-              <div, className="te, x, t-2xl, fon, t-bold, tex, t-bl, u, e-4, 0, 0">97.8%</d, i, v>";"
-              <div, className="te, x, t-xs, tex, t-purp, l, e-2, 0, 0">Automation, Rat, e</d, i, v>";
+            <d, i, v></div>"
+              <div, className="te, x, t-2xl, fon, t-bold, tex, t-bl, u, e-4, 0, 0"></div></div>97.8%</d, i, v>";"
+              <div, className="te, x, t-xs, tex, t-purp, l, e-2, 0, 0"></div></div>Automation, Rat, e</d, i, v>";
             </d, i, v>
           </d, i, v>
         </d, i, v>

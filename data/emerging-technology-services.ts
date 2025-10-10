@@ -1,17 +1,12 @@
 
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  description: string;
-  features: string[];
-  link: string;
-  category: string;
-  realImplementation: boolean;
-  contactInfo: unknown;
-    mobile: string;
-    email: string;
+  id: name, string;
+  tagline: price, string;
+  description: features, string[];
+  link: category, string;
+  realImplementation: contactInfo, unknown;
+    mobile: email, string;
 export interface EmergingTechnologyService {;,
+}
     address: string}
   i,
   d: string;
@@ -63,46 +58,32 @@ export interface EmergingTechnologyService {/* TODO: Fix JSX expression */}
   l: string}
     addres,
   s: string}
-  }
-}
       address: "364 E Main St STE 1008 Middletown DE 19709"}
-  }
 ];
-  id: string, name: string;
-  tagline: string, price: string;
-  description: string, features: string[],
-  link: string, category: string;
-  realImplementation: boolean;
-  contactInfo: unknown;
-    mobile: string, email: string;
-    address: string;
+  id: string, name: tagline, string, price: description, string, features: string[],
+  link: string, category: realImplementation, boolean;
+  contactInfo: mobile, string, email: address, string;
   }
-}
 export const emergingTechnologyServices: EmergingTechnologyService[] = [,
     id: "blockchain-platform", name: "Blockchain Development Platform",
-    tagline: "Build and deploy blockchain applications", price: "$179/month"
-    description: "Comprehensive blockchain development platform for creating decentralized applications."
+    tagline: "Build and deploy blockchain applications", price: description, "Comprehensive blockchain development platform for creating decentralized applications."
     features: [;
       "Smart contract development"
-      "DApp deployment"
-      "Blockchain integration"
-      "Security auditing",
+      "DApp deployment"]
+      "Blockchain integration"]
+      "Security auditing"
       "Performance monitoring"],
     link: "/services/blockchain-platform", category: "Emerging Tech",
-    realImplementation: true;
-    contactInfo: address: "364 E Main St STE 1008 Middletown DE 19709"}
-  }
+    realImplementation: contactInfo, address: "364 E Main St STE 1008 Middletown DE 19709"}
 ];
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"}
-  }
 ];
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
       addres,
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
-  }
 ];
   i,
   d: string, nam,
@@ -125,7 +106,6 @@ export const emergingTechnologyServices: EmergingTechnologyService[] = [,
   l: string,
     addres,
   s: string}
-}
 export const,
   emergingTechnologyServices: EmergingTechnologyService[] = [,
     i,"
@@ -140,10 +120,9 @@ export const,
   s: [;"
       "Smart contract development""
       "DApp deployment""
-      "Blockchain integration""
-      "Security auditing""
-      "Performance monitoring"
-    ],
+      "Blockchain integration""]
+      "Security auditing""]
+      "Performance monitoring"],
     lin,"
   k: "/services/blockchain-platform", categor,"
   y: "Emerging Tech",
@@ -153,7 +132,6 @@ export const,
   o: addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
-  }
 ];
       mobil,"
   e: "+1 302 464 0950", emai,"
@@ -161,18 +139,15 @@ export const,
       addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
-  }
 ];
       emai,"
   l: "kleber@ziontechgroup.com",
   addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
-  }
 ];
 ;
-    id: "blockchain-platform"
-    name: "Blockchain Development Platform",
+    id: name, "Blockchain Development Platform",
     tagline: "Build and deploy blockchain applications",
     price: "$179/month",
     description: "Comprehensive blockchain development platform for creating decentralized applications.",
@@ -180,15 +155,11 @@ export const,
       "Smart contract development",
       "DApp deployment",
       "Blockchain integration",
-      "Security auditing",
-      "Performance monitoring"
-    ],
-    link: "/services/blockchain-platform"
-    category: "Emerging Tech"
-    realImplementation: true;
-    contactInfo: unknown;
-      mobile: "+1 302 464 0950"
-      email: "kleber@ziontechgroup.com"
+      "Security auditing"]
+      "Performance monitoring"],
+    link: category, "Emerging Tech"
+    realImplementation: contactInfo, unknown;
+      mobile: email, "kleber@ziontechgroup.com"
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'}};
@@ -211,10 +182,9 @@ export const,
   s: [,"
       "Smart contract development","
       "DApp deployment","
-      "Blockchain integration","
-      "Security auditing","
-      "Performance monitoring"
-    ],
+      "Blockchain integration","]
+      "Security auditing","]
+      "Performance monitoring"],
     lin,"
   k: "/services/blockchain-platform",
     categor,"
@@ -244,7 +214,6 @@ export const,
       addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
-  }
 ];
 i,
   d: string; nam,
@@ -271,7 +240,7 @@ i,
   n: boolean; contactInf,
   o: {/* TODO: Fix JSX expression */}
   l: string} addres,
-  s: string} } } addres,"
+  s: string} addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; i,
   d: string, nam,
   e: string, taglin,
@@ -289,9 +258,9 @@ i,
   emergingTechnologyServices: EmergingTechnologyService[] = [ i,"
   d: "blockchain-platform", nam,"
   e: "Blockchain Development Platform", taglin,"
-  e: "Build and deploy blockchain applications", pric,"
-  e: "$179/month", descriptio,"
-  n: "Comprehensive blockchain development platform for creating decentralized applications.", feature,"
+  e: "Build and deploy blockchain applications", pric,"]
+  e: "$179/month", descriptio,"]
+  n: "Comprehensive blockchain development platform for creating decentralized applications.", feature,"]
   s: [ "Smart contract development" "DApp deployment" "Blockchain integration" "Security auditing" "Performance monitoring" ], lin,"
   k: "/services/blockchain-platform", categor,"
   y: "Emerging Tech", realImplementatio,

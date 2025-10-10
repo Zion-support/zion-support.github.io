@@ -3,7 +3,6 @@ interface NewContentPromoBannerProp, s {
   varia, n, t?: 'in, f, o' | 'premi, u, m' | 'succe, s, s' | 'warni, n, g';
   classNa, m, e ?  : string;
 interface NewContentPromoBannerProp, s {/* TODO: Fix JSX expression */}
- }
 const NewContentPromoBanne, r: React.FC<NewContentPromoBannerPro, p, s> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
   }; const featuredConten, t = [
@@ -29,9 +28,9 @@ const NewContentPromoBanne, r: React.FC<NewContentPromoBannerPro, p, s> = ({/* T
     },
     {/* TODO: Fix JSX expression */}
     },
-    {/* TODO: Fix JSX expression */}
-    }
-  ]; if (isDismiss, e, d) return, nul, l;
+    {/* TODO: Fix JSX expression */}]
+    ]
+    }]; if (isDismiss, e, d) return, nul, l;
   return(<div, classNam, e = {`${varian, t, s[varia, n, t]} ${classNa, m, e} relative, overflo, w-hidd, e, n`}>
       {/* Animated, background, elements */}
       <div, className="absolute, inse, t-0, opacit, y-10">
@@ -51,9 +50,9 @@ const NewContentPromoBanne, r: React.FC<NewContentPromoBannerPro, p, s> = ({/* T
             <div, className="flex, item, s-center, ga, p-3, m, b-3"></div>
               <Sparkles, className="w-6 h-6, animat, e-pul, s, e" />
               <span, className="te, x, t-lg, fon, t-bo, l, d">🚀 NEW, CONTENT, ALERT</sp, a, n>
-              <Star, className="w-5 h-5, animat, e-sp, i, n" />
-            </div>
-            <h3, className="te, x, t-xl, fon, t-bold, m, b-2">
+              <Star, className="w-5 h-5, animat, e-sp, i, n" />)
+            </div>)
+            <h3, className="te, x, t-xl, fon, t-bold, m, b-2">)
               Just, Publishe, d: New, Guides, for 20, 2, 6;)
             </h3>)
             <p, className="te, x, t-whi, t, e/90, m, b-4, tex, t-sm">)
@@ -62,9 +61,9 @@ const NewContentPromoBanne, r: React.FC<NewContentPromoBannerPro, p, s> = ({/* T
             </p>
             {/* Featured, content, grid */}
             <div, classNam, e = "grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-3, m, b-4"></div>
-              { featuredConte, n, t.m, a, p((it, e, m, ind, e, x) = > {
-                const Ico, n = it, e, m.ic, o, n; return(<Link, ke, y = { in, d, e, x  }, to={ it, e, m.li, n, k } className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-3, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, grou, p"
-                const Ico, n = it, e, m.ic, o, n; return (</div>
+              { featuredConte, n, t.m, a, p((it, e, m, ind, e, x) = > {;
+const Ico, n = it, e, m.ic, o, n; return(<Link, ke, y = { in, d, e, x  }, to={ it, e, m.li, n, k } className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-3, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, grou, p";
+const Ico, n = it, e, m.ic, o, n; return (</div>
                   <Link, ke, y = { in, d, e, x  }, to={ it, e, m.li, n, k } className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-3, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, grou, p"
                   >
                     <div, className="flex, item, s-center, ga, p-2, m, b-2"></div>
@@ -101,9 +100,9 @@ const NewContentPromoBanne, r: React.FC<NewContentPromoBannerPro, p, s> = ({/* T
                       <span, className="te, x, t-xs, fon, t-medium, tex, t-whi, t, e/80">{it, e, m.cate, g, o, r, y}</sp, a, n>
                     </div>"
                     <h4, classNam, e = "fo, n, t-semibold, tex, t-white, tex, t-sm, grou, p-hov, e, r: te, x, t-yell, o, w-300, transitio, n-colo, r, s"></h4>
-                      {it, e, m.t, i, t, l, e}
-                    </h4>
-                    <p, classNam, e = "te, x, t-xs, tex, t-whi, t, e/70, m, t-1, lin, e-cla, m, p-2">
+                      {it, e, m.t, i, t, l, e})
+                    </h4>)
+                    <p, classNam, e = "te, x, t-xs, tex, t-whi, t, e/70, m, t-1, lin, e-cla, m, p-2">)
                       {it, e, m.description})
                     </p>)
                     </h4>"

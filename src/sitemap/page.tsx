@@ -5,9 +5,10 @@ import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { ArrowRight, Globe, FileText, Users, Settings, Brain, Zap, Shield, Database, Cloud, Code, BarChart, MessageSquare, Eye, Cpu, Target, Lock, BarChart3, FileText as FileTextIcon, Search, Bot, Calculator, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calendar, Clock3, Compass, PieChart, TrendingDown, Activity } from 'lucide-react';
 
-const SitemapPage: React.FC = () => {
-  const mainPages = [
-    { name: 'Home', path: '/', description: 'Main homepage with company overview' },
+const SitemapPage: React.FC = () => {;
+const mainPages = [
+},
+      { name: 'Home', path: '/', description: 'Main homepage with company overview' },
     { name: 'About Us', path: '/about', description: 'Learn about our company and mission' },
     { name: 'Services', path: '/services', description: 'Comprehensive AI and IT services' },
     { name: 'Contact', path: '/contact', description: 'Get in touch with our team' },
@@ -18,9 +19,8 @@ const SitemapPage: React.FC = () => {
     { name: 'Team', path: '/team', description: 'Meet our expert team' },
     { name: 'Careers', path: '/careers', description: 'Join our growing team' },
     { name: 'Support', path: '/support', description: 'Get help and support' },
-    { name: 'Privacy Policy', path: '/privacy', description: 'Data protection and privacy' },
-    { name: 'Terms of Service', path: '/terms', description: 'Terms and conditions' }
-  ];
+    { name: 'Privacy Policy', path: '/privacy', description: 'Data protection and privacy' },]
+      { name: 'Terms of Service', path: '/terms', description: 'Terms and conditions' }];
 
   const microSaasServices = [
     { name: 'AI Project Manager', path: '/ai-project-manager', description: 'Intelligent project planning and management' },
@@ -33,47 +33,42 @@ const SitemapPage: React.FC = () => {
     { name: 'AI Lead Generation', path: '/ai-lead-generation', description: 'Automated lead generation and qualification' },
     { name: 'AI Document Processor', path: '/ai-document-processing', description: 'Intelligent document analysis' },
     { name: 'AI SEO Optimizer', path: '/ai-seo-optimizer', description: 'AI-powered SEO optimization' },
-    { name: 'AI E-commerce Assistant', path: '/ai-ecommerce-solutions', description: 'E-commerce optimization tools' },
-    { name: 'AI Financial Analyzer', path: '/ai-financial-analyzer', description: 'Financial analysis and forecasting' }
-  ];
+    { name: 'AI E-commerce Assistant', path: '/ai-ecommerce-solutions', description: 'E-commerce optimization tools' },]
+      { name: 'AI Financial Analyzer', path: '/ai-financial-analyzer', description: 'Financial analysis and forecasting' }];
 
   const aiServices = [
     { name: 'Machine Learning Solutions', path: '/machine-learning', description: 'Custom ML models and algorithms' },
     { name: 'Natural Language Processing', path: '/nlp', description: 'Text analysis and language understanding' },
     { name: 'Computer Vision', path: '/computer-vision', description: 'Image and video analysis' },
     { name: 'AI Automation', path: '/ai-automation', description: 'Intelligent process automation' },
-    { name: 'Quantum AI Computing', path: '/quantum-ai', description: 'Next-generation quantum algorithms' },
-    { name: 'AI Cybersecurity', path: '/ai-cybersecurity', description: 'AI-powered security solutions' }
-  ];
+    { name: 'Quantum AI Computing', path: '/quantum-ai', description: 'Next-generation quantum algorithms' },]
+      { name: 'AI Cybersecurity', path: '/ai-cybersecurity', description: 'AI-powered security solutions' }];
 
   const itServices = [
     { name: 'Cloud Services', path: '/cloud-services', description: 'Cloud migration and infrastructure' },
     { name: 'Cybersecurity', path: '/cybersecurity', description: 'Advanced security solutions' },
     { name: 'DevOps & CI/CD', path: '/devops', description: 'Development and deployment automation' },
     { name: 'Database Services', path: '/database-services', description: 'Database optimization and management' },
-    { name: 'Network Infrastructure', path: '/network-infrastructure', description: 'Enterprise networking solutions' },
-    { name: 'IT Support & Helpdesk', path: '/it-support', description: '24/7 technical support' }
-  ];
+    { name: 'Network Infrastructure', path: '/network-infrastructure', description: 'Enterprise networking solutions' },]
+      { name: 'IT Support & Helpdesk', path: '/it-support', description: '24/7 technical support' }];
 
   const specializedServices = [
     { name: 'Quantum Computing', path: '/quantum-computing', description: 'Quantum algorithms and security' },
     { name: 'Autonomous Systems', path: '/autonomous-systems', description: 'Self-managing systems' },
     { name: 'Blockchain & Web3', path: '/blockchain', description: 'Decentralized solutions' },
     { name: 'IoT & Edge Computing', path: '/iot-edge', description: 'Connected devices and edge computing' },
-    { name: 'Business Intelligence', path: '/business-intelligence', description: 'Data-driven insights' },
-    { name: 'Robotics Solutions', path: '/robotics', description: 'Intelligent automation' }
-  ];
+    { name: 'Business Intelligence', path: '/business-intelligence', description: 'Data-driven insights' },]
+      { name: 'Robotics Solutions', path: '/robotics', description: 'Intelligent automation' }];
 
   const blogCategories = [
     { name: 'AI Trends', path: '/blog?category=AI Trends', description: 'Latest AI trends and developments' },
     { name: 'Enterprise Transformation', path: '/blog?category=Transformation', description: 'Business transformation insights' },
     { name: 'Success Stories', path: '/blog?category=Success Story', description: 'Client success stories' },
-    { name: 'Technical Guides', path: '/blog?category=Architecture', description: 'Technical implementation guides' },
-    { name: 'Cost Optimization', path: '/blog?category=Cost Optimization', description: 'Efficiency and cost reduction' }
-  ];
+    { name: 'Technical Guides', path: '/blog?category=Architecture', description: 'Technical implementation guides' },]
+      { name: 'Cost Optimization', path: '/blog?category=Cost Optimization', description: 'Efficiency and cost reduction' }];
 
   return (
-    <>
+    <>\</>
       <SEOOptimizer
         title="Sitemap - Zion Tech Group"
         description="Complete sitemap of all pages and services available on Zion Tech Group website. Find AI services, IT solutions, and resources easily."
@@ -101,9 +96,9 @@ const SitemapPage: React.FC = () => {
           {/* Main Pages */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-              Main Pages
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              Main Pages)
+            </h2>)
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">)
               {mainPages.map((page, index) => (
                 <Link
                   key={index}

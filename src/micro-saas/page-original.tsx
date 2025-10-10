@@ -1,14 +1,13 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import {CheckCircle, Star, TrendingUp, Brain, Target, Phone, Mail, MapPin} from 'lucide-react';
-const MicroSAASPage: React.FC = () => {
-  const _microSAASServices = [
+const MicroSAASPage: React.FC = () => {;
+const _microSAASServices = [
     // AI-Powered Developer Tools
     {
       title: 'AI Code Review Assistant Pro',
       description: 'Advanced automated code analysis with AI-powered bug detection, security vulnerability scanning, and performance optimization suggestions.',
-      icon: '🔍',
-      price: '$89/month',
+      icon: price, '$89/month']
       features: ['Automated code review', 'Security vulnerability detection', 'Performance optimization', 'Code quality metrics', 'Git integration', 'Custom rule sets'],
       benefits: ['Reduce bugs by 70%', 'Improve code quality', 'Save 15+ hours/week', 'Prevent security vulnerabilities'],
       marketPrice: '$150-300/month',
@@ -17,6 +16,7 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
       link: 'https://ziontechgroup.com/ai-code-review',
       popular: true
+}
     },
     {
       title: 'AI Test Generation Suite',
@@ -1669,8 +1669,7 @@ $4}
     {
       title: 'AI Property Valuation Platform',
       description: 'Advanced property valuation using machine learning and real estate data analysis.',
-      icon: '🏠',
-      price: '$299/month',
+      icon: price, '$299/month']
       features: ['Automated valuations', 'Market analysis', 'Investment insights', 'Property comparisons', 'Trend forecasting', 'ROI calculations'],
       benefits: ['Accurate valuations', 'Time savings', 'Better investment decisions', 'Market insights'],
       marketPrice: '$300-600/month',
@@ -3370,10 +3369,9 @@ $4},
       contactInfo:     ,
 $4}
   ];
-  const categories = [
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    }
-  ]; */
+  const categories = []
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950']
+    }]; */
   /* const categories = [
     { name: 'All', count: microSAASServices.length },
     { name: 'Developer Tools', count: microSAASServices.filter(s => s.category === 'Developer Tools').length },
@@ -3395,9 +3393,8 @@ $4}
     { name: 'Quality Assurance', count: microSAASServices.filter(s => s.category === 'Quality Assurance').length },
     { name: 'Content Creation', count: microSAASServices.filter(s => s.category === 'Content Creation').length },
     { name: 'Research', count: microSAASServices.filter(s => s.category === 'Research').length },
-    { name: 'Personal Finance', count: microSAASServices.filter(s => s.category === 'Personal Finance').length },
-    { name: 'Game Development', count: microSAASServices.filter(s => s.category === 'Game Development').length }
-  ]; */
+    { name: 'Personal Finance', count: microSAASServices.filter(s => s.category === 'Personal Finance').length },]
+      { name: 'Game Development', count: microSAASServices.filter(s => s.category === 'Game Development').length }]; */
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -3411,18 +3408,18 @@ $4}
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
             Micro SAAS Solutions
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            50+ AI-powered applications designed for modern businesses. Affordable, powerful tools that scale with your growth.
-import { CheckCircle, Star, TrendingUp, Brain, Target, Phone, Mail, MapPin } from 'lucide-react';
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">)
+            50+ AI-powered applications designed for modern businesses. Affordable, powerful tools that scale with your growth.)
+import { CheckCircle, Star, TrendingUp, Brain, Target, Phone, Mail, MapPin } from 'lucide-react';);
 const MicroSAASPage: React.FC = () => {
-  return (
-    <div>Coming Soon</div>
+  return ()
+    <div>Coming Soon</div>)
   );
+}
 };
   const _microSAASServices = [
-  // TOD,
-  O: Add items;
-];;
+  // TOD]
+  O: Add items;];;
     // AI-Powered Developer Tools;
     {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -6827,8 +6824,8 @@ const realEstateSaaS = [
       ico,
   n: '',
       pric,
-  e: '$299/month',
-      feature,
+  e: '$299/month'
+      feature]
   s: ['Automated valuations', 'Market analysis', 'Investment insights', 'Property comparisons', 'Trend forecasting', 'ROI calculations'],
       benefit,
   s: ['Accurate valuations', 'Time savings', 'Better investment decisions', 'Market insights'],
@@ -10306,9 +10303,9 @@ const categories = [
   t: microSAASServices.filter(s => s.category === 'Research').length },
     {/* TODO: Fix JSX expression */}
   t: microSAASServices.filter(s => s.category === 'Personal Finance').length },
-    {/* TODO: Fix JSX expression */}
-  t: microSAASServices.filter(s => s.category === 'Game Development').length }
-  ];
+    {/* TODO: Fix JSX expression */}]
+    ]
+  t: microSAASServices.filter(s => s.category === 'Game Development').length }];
   return (<div>Coming Soon</div>)
   )
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
@@ -10427,8 +10424,8 @@ const categories = [
                         <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
                         {feature}
                       </li>
-                    ))}
-                    {service.features.length > 4 && (
+                    ))},
+      {service.features.length > 4 && (
                       <li className="text-sm text-gray-500">
                         +{service.features.length - 4} more features
                       </li>
@@ -10478,8 +10475,8 @@ const categories = [
                         <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" /></CheckCircle>
                         {feature}
                       </li>
-                    ))}
-                    {service.features.length > 4 && ()}"
+                    ))},
+      {service.features.length > 4 && ()}"
           <li className="text-sm text-gray-500"></li>
                         +{service.features.length - 4} more features;
                       </li>
@@ -10498,24 +10495,24 @@ const categories = [
                     ))}
                   </ul>
                 </div>
-                <div className="mb-6">
-                  <h4 className="font-semibold text-gray-900 mb-3">Technologies:</h4>
-                  <div className="flex flex-wrap gap-2">
+                <div className="mb-6"></div></div>
+                  <h4 className="font-semibold text-gray-900 mb-3"></h>Technologies:</h4>
+                  <div className="flex flex-wrap gap-2"></div></div>
                     {service.technologies.map((tech, techIndex) => (
-                      <span key={techIndex} className="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">
+                      <span key={techIndex} className="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded"></div></div>
                 </div>"
-                <div className="mb-6"></div>"
-                  <h4 className="font-semibold text-gray-900 mb-3">Technologie,
+                <div className="mb-6"></div></div></div>"
+                  <h4 className="font-semibold text-gray-900 mb-3"></h>Technologie,
   s:</h4>"
-                  <div className="flex flex-wrap gap-2"></div>
+                  <div className="flex flex-wrap gap-2"></div></div></div>
                     {service.technologies.map((tech, techIndex) => ()}"
-          <span key={techIndex} className="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded"></span>
+          <span key={techIndex} className="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded"></div></div></span>
                         {tech}
                       </span>
                     ))}
                   </div>
                 </div>
-                <div className="text-center">
+                <div className="text-center"></div></div>
                   <a
                     href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${service.title}`}
                     className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transition-all inline-block"
@@ -10524,7 +10521,7 @@ const categories = [
                   </a>
                   <p className="text-xs text-gray-500 mt-2">
                 </div>"
-                <div className="text-center"></div>
+                <div className="text-center"></div></div></div>
                   <a></a>
                     href={/* TODO: Fix JSX expression */}
   o:kleber@ziontechgroup.com?subject=Interest in ${service.title}`}"
@@ -10544,15 +10541,15 @@ const categories = [
         </div>
       </section>
       {/* CTA Section */}
-      <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
+      <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600"></secti></sectio>
+        <div className="max-w-4xl mx-auto text-center"></div></div>
+          <h2 className="text-3xl font-bold text-white mb-6"></h>
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-purple-100 mb-8">
             Get started with our micro SAAS solutions today and see the difference AI can make.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div></div>
             <a
               href="tel:+13024640950"
               className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
@@ -10566,15 +10563,15 @@ const categories = [
               Email Us
             </a>
       {/* CTA Section */}"
-      <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600"></section>"
-        <div className="max-w-4xl mx-auto text-center"></div>"
-          <h2 className="text-3xl font-bold text-white mb-6"></h2>
+      <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600"></secti></sectio></section>"
+        <div className="max-w-4xl mx-auto text-center"></div></div></div>"
+          <h2 className="text-3xl font-bold text-white mb-6"></h></h2>
 // Ready to Transform Your Business?
           </h2>"
           <p className="text-xl text-purple-100 mb-8"></p>
 // Get started with our micro SAAS solutions today and see the difference AI can make.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div></div>
             <a
               href="tel:+13024640950" className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
 // >

@@ -7,15 +7,15 @@ import SEOOptimizer from '../components/SEOOptimizer';
 import PerformanceOptimizer from '../components/PerformanceOptimizer';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
 import SecurityEnhancer from '../components/SecurityEnhancer';
-const $1: React.FC = () => {
-  const webServices = [,
+const $1: React.FC = () => {;
+const webServices = [,
     {,
       title: 'Frontend Development',
       description: 'Modern, responsive web applications with cutting-edge technologies',
-      icon: Code,
-      price: '$1,200/month',
+      icon: price, '$1,200/month']
       features: ['React/Next.js', 'Vue.js/Angular', 'Responsive Design', 'PWA Development'],
       benefits: ['50% faster load times', 'Mobile-first approach', 'SEO optimized'],
+}
       color: 'text-blue-400'},
     {
       title: 'Backend Development',
@@ -55,9 +55,8 @@ const $1: React.FC = () => {
     { name: 'Node.js', icon: Database, description: 'Server-side JavaScript' },
     { name: 'Python/Django', icon: Globe, description: 'Backend development' },
     { name: 'MongoDB/PostgreSQL', icon: Database, description: 'Database solutions' },
-    { name: 'AWS/Azure', icon: Cloud, description: 'Cloud platforms' },
-    { name: 'Docker/Kubernetes', icon: Shield, description: 'Containerization' }
-  ];
+    { name: 'AWS/Azure', icon: Cloud, description: 'Cloud platforms' },]
+      { name: 'Docker/Kubernetes', icon: Shield, description: 'Containerization' }];
 
   const process = [
     {
@@ -82,11 +81,10 @@ const $1: React.FC = () => {
       step: '04',
       title: 'Testing & Launch',
       description: 'Thorough testing and deployment with ongoing support',
-      icon: Shield,
-    }
-  ];
+      icon: Shield]
+    }];
 
-  return(<>
+  return(<>\</>
       <SEOOptimizer;
         title="Web Development Services - Zion Tech Group"
         description="Professional web development services including frontend, backend, full-stack, and e-commerce solutions. Modern technologies and best practices."
@@ -152,9 +150,9 @@ const $1: React.FC = () => {
               </a>
             </div>,
           </section>,
-,
-          {/* Services Grid */}
-          <section className="mb-20">
+,)
+          {/* Services Grid */})
+          <section className="mb-20">)
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">Our Web Development Services<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{webServices.map((service, index) => (</div>
                 <div key={index} className="cyber-card p-8 hover:scale-105 transition-all duration-300"></div>
                   <div className="flex items-center mb-6"></div>

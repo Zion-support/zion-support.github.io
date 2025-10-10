@@ -3,12 +3,13 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-const PagePage: React.FC = () => {
-  const features = [
+const PagePage: React.FC = () => {;
+const features = [
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
       description: 'Advanced AI technology to transform your business operations and improve efficiency'
+}
     },
     {
       icon: Zap,
@@ -22,10 +23,9 @@ const PagePage: React.FC = () => {
     },
     {
       icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
-    }
-  ];
+      title: 'Global Reach',]
+      description: 'Worldwide deployment and support for international businesses']
+    }];
 
   const benefits = [
     'Advanced AI technology integration',
@@ -34,9 +34,8 @@ const PagePage: React.FC = () => {
     'Scalable and flexible solutions',
     '24/7 technical support',
     'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ];
+    'Cost-effective pricing plans']
+    'Proven track record of success'];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -110,9 +109,9 @@ const PagePage: React.FC = () => {
               </button>
             </div>
           </div>
-        </div>
-      </section>
-    </div>
+        </div>)
+      </section>)
+    </div>)
   );
 };
 

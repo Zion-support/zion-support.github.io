@@ -21,8 +21,9 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   ogType = 'website',
   twitterCard = 'summary_large_image',
   structuredData
-}) => {
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
+}) => {;
+}
+const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href : '');
 
   const defaultStructuredData = {
@@ -47,9 +48,8 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       "email": "kleber@ziontechgroup.com"
     },
     "sameAs": [
-      "https://www.linkedin.com/company/zion-tech-group",
-      "https://twitter.com/ziontechgroup"
-    ]
+      "https://www.linkedin.com/company/zion-tech-group"]
+      "https://twitter.com/ziontechgroup"]
   };
 
   return (
@@ -62,9 +62,8 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta name="robots" content="index, follow" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       
-      {/* Canonical URL */}
-      {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
-      
+      {/* Canonical URL */},
+      {canonicalUrl && <link rel="canonical" href={canonicalUrl} />},
       {/* Open Graph Meta Tags */}
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
@@ -85,9 +84,9 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta name="msapplication-TileColor" content="#0f172a" />
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-      
-      {/* Structured Data */}
-      <script type="application/ld+json">
+      )
+      {/* Structured Data */})
+      <script type="application/ld+json"></scri></scrip>)
         {JSON.stringify(structuredData || defaultStructuredData)}
       </script>
     </Helmet>

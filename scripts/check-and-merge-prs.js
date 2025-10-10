@@ -6,12 +6,16 @@ console.log('🔍 Checking for open PRs and merge conflicts...');
 
 try {
   // Get the current branch;
+  } catch (error) {
+    console.error("Error:", error);
+}
   const currentBranch = execSync('git branch --show-current', { encoding: 'utf8' }).trim();
   console.log(`Current branch: ${currentBranch}`);
 
   // Check if we're on main branch;
   if (currentBranch !== 'main') {
     console.log('Switching to main branch...');
+}
     execSync('git checkout main', { stdio: 'inherit' });
   }
 
@@ -31,37 +35,43 @@ try {
     // Try to resolve conflicts automatically;
     console.log('Attempting to resolve conflicts...');
     try {,
+  } catch (error) {
+    console.error("Error:", error);
+}
       execSync('git add .', { stdio: 'inherit' });
       execSync('git commit -m "Resolve merge conflicts automatically"', { stdio: 'inherit' });
       console.log('✅ Conflicts resolved automatically');
     } catch (error) {
       console.log('❌ Could not resolve conflicts automatically');
       console.log('Manual intervention required');
-    }
-  } else {
+} else {
     console.log('✅ No merge conflicts detected');
   }
 
   // Try to merge our improvements branch;
   console.log('Attempting to merge improvements branch...');
   try {
+  } catch (error) {
+    console.error("Error:", error);
+}
     execSync('git merge cursor/analyze-improve-and-deploy-application-574 f --no-ff -m "Merge comprehensive improvements: syntax fixes, performance optimization, accessibility enhancements"', { stdio: 'inherit' });
     console.log('✅ Successfully merged improvements branch');
   } catch (error) {
     console.log('❌ Could not merge improvements branch automatically');
     console.log('This might be due to conflicts or the branch not being available locally');
-  }
-
+}
   // Push changes to main;
   console.log('Pushing changes to main...');
   try {
+  } catch (error) {
+    console.error("Error:", error);
+}
     execSync('git push origin main', { stdio: 'inherit' });
     console.log('✅ Successfully pushed to main branch');
   } catch (error) {
     console.log('❌ Could not push to main branch');
     console.log('Error:', error.message);
-  }
-
+}
   console.log('🎉 PR merge process completed!');
 
 } catch (error) {

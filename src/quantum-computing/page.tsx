@@ -6,7 +6,7 @@ import Footer from '../components/Footer';
 
 const QuantumComputingPage: React.FC = () => {
   return (
-    <>
+    <>\</>
       <Helmet>
         <title>Quantum Computing Solutions - Zion Tech Group</title>
         <meta name="description" content="Next-generation quantum computing capabilities for complex problem solving and optimization. Harness the power of quantum mechanics for your business." />
@@ -90,10 +90,11 @@ const QuantumComputingPage: React.FC = () => {
           </div>
         </div>
       </main>
-      
-      <Footer />
-    </>
+      )
+      <Footer />)
+    </>)
   );
+}
 };
 
 export default QuantumComputingPage;

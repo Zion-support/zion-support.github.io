@@ -4,7 +4,7 @@ import { Share2, ArrowRight } from 'lucide-react';
 
 const SocialMediaManagerPage: React.FC = () => {
   return (
-    <>
+    <>\</>
       <Helmet>
         <title>Social Media Manager | Zion Tech Group - AI Social Media Automation</title>
         <meta name="description" content="AI-powered social media management and automation. Schedule posts, analyze engagement, and grow your social presence." />
@@ -47,10 +47,11 @@ const SocialMediaManagerPage: React.FC = () => {
               </p>
             </div>
           </div>
-        </section>
-      </div>
-    </>
+        </section>)
+      </div>)
+    </>)
   );
+}
 };
 
 export default SocialMediaManagerPage;

@@ -3,13 +3,13 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Play, ArrowRight, CheckCircle } from 'lucide-react';
 
-const DemoPage: React.FC = () => {
-  const demos = [
+const DemoPage: React.FC = () => {;
+const demos = [
     {
       title: 'AI Analytics Dashboard',
-      description: 'See how our AI analytics can transform your business intelligence',
-      duration: '5 min',
+      description: duration, '5 min']
       features: ['Real-time data visualization', 'Predictive analytics', 'Custom reports']
+}
     },
     {
       title: 'AI Customer Support Bot',
@@ -26,7 +26,7 @@ const DemoPage: React.FC = () => {
   ];
 
   return (
-    <>
+    <>\</>
       <Helmet>
         <title>Demo - Zion Tech Group | See Our AI Solutions in Action</title>
         <meta name="description" content="Experience our AI and IT solutions through interactive demos. See how our technology can transform your business." />
@@ -45,9 +45,9 @@ const DemoPage: React.FC = () => {
           </div>
         </section>
 
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <section className="py-16 px-4">)
+          <div className="max-w-7xl mx-auto">)
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">)
               {demos.map((demo, index) => (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300">
                   <div className="flex items-center justify-center w-16 h-16 bg-cyan-500/20 rounded-lg mb-4">

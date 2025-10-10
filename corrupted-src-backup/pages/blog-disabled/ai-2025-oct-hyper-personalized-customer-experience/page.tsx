@@ -4,7 +4,7 @@ impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
 
 export default function HyperPersonalizedCustomerExperience20, 2, 5() {  
   return(:src/pages/blog/ai-2025-oct-hyper-personalized-customer-experience/page.tsx;
-    <>
+    <>\</>
       <Helm, e, t>
         <title>
           Hyp, e, r-Personalized, AI, Customer Experience, Platform, 2025 — 97.8%
@@ -30,8 +30,7 @@ export default function HyperPersonalizedCustomerExperience20, 2, 5() {
   content=" />
         <link rel="canonical", href="https: //ziontechgroup.com/blog/ai-2025-oct-hyper-personalized-customer-experience" />,
         <meta name="description",
-  content: "Deploy AI-powered hyper-personalization that understands each customer individually. Achieve 97.8% satisfaction scores, increase engagement by 12.4x, reduce churn by 89%, and drive $3.2B+ in incremental revenue through truly personalized experiences.", /><meta name: "keywords;
-  content: "AI personalization, customer experience, hyper-personalization, customer engagement, AI CX platform, behavioral AI, customer journey, experience optimization", /><link rel: "canonical", href="https: //ziontechgroup.com/blog/ai-2025-oct-hyper-personalized-customer-experience/>",
+  content: "Deploy AI-powered hyper-personalization that understands each customer individually. Achieve 97.8% satisfaction scores, increase engagement by 12.4x, reduce churn by 89%, and drive $3.2B+ in incremental revenue through truly personalized experiences.", /><meta name: content, "AI personalization, customer experience, hyper-personalization, customer engagement, AI CX platform, behavioral AI, customer journey, experience optimization", /><link rel: "canonical", href="https: //ziontechgroup.com/blog/ai-2025-oct-hyper-personalized-customer-experience/>",
   content: "AI personalization, customer experience, hyper-personalization, customer engagement, AI CX platform, behavioral AI, customer journey, experience optimization;
         />
         <link rel: "canonical", href ="https: //ziontechgroup.com/blog/ai-2025-oct-hyper-personalized-customer-experience" />,
@@ -107,9 +106,9 @@ export default function HyperPersonalizedCustomerExperience20, 2, 5() {
                 <Heart className="h-8 w-8 text-pink-400 ,>
   Customer Experience Impact;
               </h2>"
-              <ul className="space-y-4 text-lg">
-                <li className="flex items-start gap-3">
-                  <Sparkles className="h-6 w-6 text-yellow-400 mt-1 flex-shrink-0 ">
+              <ul className="space-y-4 text-lg">)
+                <li className="flex items-start gap-3">)
+                  <Sparkles className="h-6 w-6 text-yellow-400 mt-1 flex-shrink-0 ">)
                   <span><strong>97.8% Satisfaction: </strong> AI creates experiences so personalized they feel magical</span>)
                 </li>)
                 <li className="flex items-start gap-3">)

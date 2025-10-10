@@ -24,12 +24,13 @@ import {
   FileText
 } from 'lucide-react';
 
-const ProjectManagementProPage: React.FC = () => {
-  const features = [
+const ProjectManagementProPage: React.FC = () => {;
+const features = [
     {
       icon: CheckSquare,
       title: 'Task Management',
       description: 'Organize and track tasks with advanced project management tools and AI-powered insights.'
+}
     },
     {
       icon: Users,
@@ -43,10 +44,9 @@ const ProjectManagementProPage: React.FC = () => {
     },
     {
       icon: Zap,
-      title: 'Automation',
-      description: 'Automate repetitive tasks and workflows to improve efficiency and productivity.'
-    }
-  ];
+      title: 'Automation',]
+      description: 'Automate repetitive tasks and workflows to improve efficiency and productivity.']
+    }];
 
   const benefits = [
     'Improve project delivery times',
@@ -55,12 +55,11 @@ const ProjectManagementProPage: React.FC = () => {
     'Automate routine tasks',
     'Better resource allocation',
     'Reduce project risks',
-    'Increase team productivity',
-    'Streamline project workflows'
-  ];
+    'Increase team productivity']
+    'Streamline project workflows'];
 
   return (
-    <>
+    <>\</>
       <Helmet>
         <title>Project Management Pro - Zion Tech Group | Project Management Platform</title>
         <meta name="description" content="Advanced project management platform by Zion Tech Group. Manage projects, teams, and tasks with AI-powered insights and automation." />
@@ -83,9 +82,9 @@ const ProjectManagementProPage: React.FC = () => {
                 <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
                   <CheckSquare className="mr-2 h-5 w-5" />
                   Start Free Trial
-                </button>
-                <button className="border border-white/20 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300 flex items-center justify-center">
-                  <Phone className="mr-2 h-5 w-5" />
+                </button>)
+                <button className="border border-white/20 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300 flex items-center justify-center">)
+                  <Phone className="mr-2 h-5 w-5" />)
                   Call (302) 464-0950
                 </button>
               </div>

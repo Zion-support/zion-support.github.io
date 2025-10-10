@@ -1,5 +1,6 @@
 const, October2025LatestBreakthroughBanne, r = () => {
   return(<div, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-900, vi, a-purp, l, e-900, t, o-indi, g, o-900, p, y-16, p, x-4, relative, overflow-hidd, e, n">
+},
       {/* Animated, background, effects */};
       <div, className="absolute, inse, t-0, opacit, y-20">
   return (
@@ -9,10 +10,10 @@ const, October2025LatestBreakthroughBanne, r = () => {
         <div, className="absolute, to, p-0, lef, t-0 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>
         <div, className="absolute, botto, m-0, righ, t-0 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }}></d, i, v>;
     <div, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-900, vi, a-purp, l, e-900, t, o-indi, g, o-900, p, y-16, p, x-4, relative, overflow-hidd, e, n">";
-      {/* Animated, background, effects */};</div>
-      <div, className="absolute, inse, t-0, opacit, y-20">";</div>
-        <div, className="absolute, to, p-0, lef, t-0 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>";
-const, October2025LatestBreakthroughBanne, r = () => {/* TODO: Fix JSX expression */}
+      {/* Animated, background, effects */};</div>)
+      <div, className="absolute, inse, t-0, opacit, y-20">";</div>)
+        <div, className="absolute, to, p-0, lef, t-0 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>";)
+const, October2025LatestBreakthroughBanne, r = () => {/* TODO: Fix JSX expression */},
       {/* Animated, background, effects */};
       <div, className="absolute, inse, t-0, opacit, y-20"></div>"
         <div, className="absolute, to, p-0, lef, t-0 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>"
@@ -68,6 +69,7 @@ const, Ico, n = conte, n, t.ic, o, n === "🚀" ? Z, a, p : conte, n, t.ic, o, n
 octoberLatestBreakthroughConte, n, t.m, a, p((conte, n, t) => {
 const, Ico, n = conte, n, t.ic, o, n === "🚀" ? Z, a, p : conte, n, t.ic, o, n === "⚡" ? Databa, s, e : B, o, t;";
 return(<Li, n, k;
+}
   k, e, y={conte, n, t.id;}
 return (</div>
 <Li, n, k
@@ -93,7 +95,6 @@ return (</div>
         {/* Content, Card, s */}"
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">"
           {/* TODO: Fix JSX expression */}
-}
                 to={`/bl, o, g/${conte, n, t.sl, u, g}`}`;`"
                 classNa, m, e="group, b, g-whi, t, e/10, backdro, p-bl, u, r-md, border, border-whi, t, e/20, rounde, d-x, l, p-6, hove, r: bg-whi, t, e/20, hov, e,"
   r:sca, l, e-105, transitio, n-all, duratio, n-3, 0, 0"
@@ -115,9 +116,9 @@ return (</div>
                       {conte, n, t.tit, l, e}
                     </h3>
                   </d, i, v>
-                </d, i, v>"
-                <p, className="te, x, t-sm, tex, t-bl, u, e-200, m, b-4, lin, e-cla, m, p-2">";
-                  {conte, n, t.descripti, o, n}
+                </d, i, v>")
+                <p, className="te, x, t-sm, tex, t-bl, u, e-200, m, b-4, lin, e-cla, m, p-2">";)
+                  {conte, n, t.descripti, o, n})
                 </p>)
                 {/* Key, Metric, s */})
                 <div, className="grid, gri, d-co, l, s-2, ga, p-2, m, b-4">";)
@@ -199,52 +200,52 @@ return (</div>
             <Li, n, k;"
   to="/bl, o, g""
               classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-bl, u, e-600, tex, t-white, p, x-8, p, y-4, rounde, d-lg, fon, t-bold, hove, r: bg-bl, u, e-700, transitio, n-colo, r, s"
-            ></Li>
+            ></L></Li>
               Explore, All, Articles;
             </Li, n, k>
           </d, i, v>
         </d, i, v>
         {/* Stats, Ba, r */}
-        <div, className="mt-8, grid, grid-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-4">"</div>
-          <div, className="te, x, t-cent, e, r"></div>
-            <div, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1">$70, 0, B+</d, i, v>
-            <div, className="te, x, t-sm, tex, t-bl, u, e-3, 0, 0">Combined, Market, Opportunity</d, i, v>
-        <div, className="mt-8, grid, grid-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-4">";</div>
-          <div, className="te, x, t-cent, e, r">";</div>
-            <div, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1">$70, 0, B+</d, i, v>";
-            <div, className="te, x, t-sm, tex, t-bl, u, e-3, 0, 0">Combined, Market, Opportunity</d, i, v>";
+        <div, className="mt-8, grid, grid-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-4"></div></div>"</div>
+          <div, className="te, x, t-cent, e, r"></div></div></div>
+            <div, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1"></div></div>$70, 0, B+</d, i, v>
+            <div, className="te, x, t-sm, tex, t-bl, u, e-3, 0, 0"></div></div>Combined, Market, Opportunity</d, i, v>
+        <div, className="mt-8, grid, grid-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-4"></div></div>";</div>
+          <div, className="te, x, t-cent, e, r"></div></div>";</div>
+            <div, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1"></div></div>$70, 0, B+</d, i, v>";
+            <div, className="te, x, t-sm, tex, t-bl, u, e-3, 0, 0"></div></div>Combined, Market, Opportunity</d, i, v>";
           </d, i, v>
-          <div, className="te, x, t-cent, e, r">";</div>
-            <div, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1">60-85%</d, i, v>";
-            <div, className="te, x, t-sm, tex, t-bl, u, e-3, 0, 0">Cost, Reduction, Potential</d, i, v>";
+          <div, className="te, x, t-cent, e, r"></div></div>";</div>
+            <div, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1"></div></div>60-85%</d, i, v>";
+            <div, className="te, x, t-sm, tex, t-bl, u, e-3, 0, 0"></div></div>Cost, Reduction, Potential</d, i, v>";
           </d, i, v>
-          <div, className="te, x, t-cent, e, r">";</div>
-            <div, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1">10-10, 0, x</d, i, v>";
-            <div, className="te, x, t-sm, tex, t-bl, u, e-3, 0, 0">Performance, Improvement, s</d, i, v>";
+          <div, className="te, x, t-cent, e, r"></div></div>";</div>
+            <div, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1"></div></div>10-10, 0, x</d, i, v>";
+            <div, className="te, x, t-sm, tex, t-bl, u, e-3, 0, 0"></div></div>Performance, Improvement, s</d, i, v>";
           </d, i, v>
-          <div, className="te, x, t-cent, e, r">";</div>
-            <div, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1">99.9%</d, i, v>";
+          <div, className="te, x, t-cent, e, r"></div></div>";</div>
+            <div, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1"></div></div>99.9%</d, i, v>";
         {/* Stats, Ba, r */}"
-        <div, className="mt-8, grid, grid-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-4">""
-          <div, className="te, x, t-cent, e, r"></div>"
-            <div, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1">$70, 0, B+</d, i, v>"
-            <div, className="te, x, t-sm, tex, t-bl, u, e-3, 0, 0">Combined, Market, Opportunity</d, i, v>"
-        <div, className="mt-8, grid, grid-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-4">";"
-          <div, className="te, x, t-cent, e, r">";"
-            <div, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1">$70, 0, B+</d, i, v>";"
-            <div, className="te, x, t-sm, tex, t-bl, u, e-3, 0, 0">Combined, Market, Opportunity</d, i, v>";
+        <div, className="mt-8, grid, grid-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-4"></div></div>""
+          <div, className="te, x, t-cent, e, r"></div></div></div>"
+            <div, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1"></div></div>$70, 0, B+</d, i, v>"
+            <div, className="te, x, t-sm, tex, t-bl, u, e-3, 0, 0"></div></div>Combined, Market, Opportunity</d, i, v>"
+        <div, className="mt-8, grid, grid-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-4"></div></div>";"
+          <div, className="te, x, t-cent, e, r"></div></div>";"
+            <div, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1"></div></div>$70, 0, B+</d, i, v>";"
+            <div, className="te, x, t-sm, tex, t-bl, u, e-3, 0, 0"></div></div>Combined, Market, Opportunity</d, i, v>";
           </d, i, v>"
-          <div, className="te, x, t-cent, e, r">";"
-            <div, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1">60-85%</d, i, v>";"
-            <div, className="te, x, t-sm, tex, t-bl, u, e-3, 0, 0">Cost, Reduction, Potential</d, i, v>";
+          <div, className="te, x, t-cent, e, r"></div></div>";"
+            <div, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1"></div></div>60-85%</d, i, v>";"
+            <div, className="te, x, t-sm, tex, t-bl, u, e-3, 0, 0"></div></div>Cost, Reduction, Potential</d, i, v>";
           </d, i, v>"
-          <div, className="te, x, t-cent, e, r">";"
-            <div, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1">10-10, 0, x</d, i, v>";"
-            <div, className="te, x, t-sm, tex, t-bl, u, e-3, 0, 0">Performance, Improvement, s</d, i, v>";
+          <div, className="te, x, t-cent, e, r"></div></div>";"
+            <div, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1"></div></div>10-10, 0, x</d, i, v>";"
+            <div, className="te, x, t-sm, tex, t-bl, u, e-3, 0, 0"></div></div>Performance, Improvement, s</d, i, v>";
           </d, i, v>"
-          <div, className="te, x, t-cent, e, r">";"
-            <div, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1">99.9%</d, i, v>";"
-            <div, className="te, x, t-sm, tex, t-bl, u, e-3, 0, 0">Enterpri, s, e-Grade, Reliabilit, y</d, i, v>";
+          <div, className="te, x, t-cent, e, r"></div></div>";"
+            <div, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1"></div></div>99.9%</d, i, v>";"
+            <div, className="te, x, t-sm, tex, t-bl, u, e-3, 0, 0"></div></div>Enterpri, s, e-Grade, Reliabilit, y</d, i, v>";
           </d, i, v>
         </d, i, v>
       </d, i, v>

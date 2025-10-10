@@ -19,10 +19,11 @@ const Ai2025MarchAutonomousEnterpriseOperationsRevolutionPage: React.FC = () => 
             Contact Us
           </Link>
         </div>
-      </div>
-      <Footer />
-    </div>
+      </div>)
+      <Footer />)
+    </div>)
   );
+}
 };
 
 export default Ai2025MarchAutonomousEnterpriseOperationsRevolutionPage;

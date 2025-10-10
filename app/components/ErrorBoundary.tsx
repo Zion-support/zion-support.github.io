@@ -3,8 +3,7 @@ import React, { Component, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home, Phone } from 'lucide-react';
 
 interface ErrorBoundaryState {
-  hasError: boolean;
-  error: Error | null;
+  hasError: error, Error | null;
   errorInfo: any;
 }
 
@@ -19,6 +18,7 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
       hasError: false,
       error: null,
       errorInfo: null
+}
     };
   }
 
@@ -31,14 +31,15 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
   }
 
   componentDidCatch(error: Error, errorInfo: any) {
-    this.setState({
-      error,
-      errorInfo
+    this.setState({)
+      error,)
+      errorInfo)
+}
     });
 
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-    }
+}
 
     // You can also log the error to an error reporting service here
     // Example: logErrorToService(error, errorInfo);
@@ -46,10 +47,12 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
 
   handleRefresh = () => {
     window.location.reload();
+}
   };
 
   handleGoHome = () => {
     window.location.href = '/';
+}
   };
 
   render() {
@@ -70,10 +73,11 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
             </p>
             
             {process.env.NODE_ENV === 'development' && this.state.error && (
-              <div className="mb-6 p-4 bg-red-900/20 rounded-lg text-left">
-                <h3 className="text-red-400 font-semibold mb-2">Error Details:</h3>
-                <pre className="text-xs text-red-300 whitespace-pre-wrap">
-                  {this.state.error.toString()}
+              <div className="mb-6 p-4 bg-red-900/20 rounded-lg text-left">)
+                <h3 className="text-red-400 font-semibold mb-2">Error Details:</h3>)
+                <pre className="text-xs text-red-300 whitespace-pre-wrap">)
+},
+      {this.state.error.toString()}
                 </pre>
                 {this.state.errorInfo && (
                   <pre className="text-xs text-red-300 whitespace-pre-wrap mt-2">
@@ -120,6 +124,4 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
 
     return this.props.children;
   }
-}
-
 export default ErrorBoundary;

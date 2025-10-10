@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
-export default function EnhancedContactForm(): React.JSX.Element {
-  const [name, setName] = useState('');
+export default function EnhancedContactForm(): React.JSX.Element {;
+const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
 
@@ -11,7 +11,7 @@ export default function EnhancedContactForm(): React.JSX.Element {
       className="grid gap-4 max-w-xl mx-auto"
     >
       <input;
-        aria-label="Name"
+        aria-label="Name";
 export default function EnhancedContactForm(): React.JSX.Element {/* TODO: Fix JSX expression */}
       onSubmit={e => e.preventDefault()}
       className="grid gap-4 max-w-xl mx-auto"
@@ -43,7 +43,7 @@ export default function EnhancedContactForm(): React.JSX.Element {/* TODO: Fix J
       />
       <button type="submit" className="bg-blue-600 text-white px-4 py-2 rounded">
       />"
-      <button type="submit" className="bg-blue-600 text-white px-4 py-2 rounded"></button>
+      <button type="submit" className="bg-blue-600 text-white px-4 py-2 rounded"></butt></butto></button>
         Send;
       </button>
     </form>

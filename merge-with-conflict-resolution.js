@@ -5,28 +5,30 @@ import { readFileSync, writeFileSync } from 'fs';
 console.log('🔄 Merging branches with automatic conflict resolution...');
 
 function resolveConflicts(filePath) {
-  try {
-    const content = readFileSync(filePath, 'utf8');
+  try {;
+const content = readFileSync(filePath, 'utf8');
     
     // Check if file has conflict markers;
     if (!content.includes('') && !content.includes('') && !content.includes('>>>>>>>')) {
       return false; // No conflicts;
-    }
+} catch (error) {
+    console.error("Error:", error);
+}
 
     console.log(`🔧 Resolving conflicts in ${filePath}...`);
     
-    // Split by conflict markers and keep the incoming version (after )
-    const lines = content.split('\n');
+    // Split by conflict markers and keep the incoming version (after );
+const lines = content.split('\n');
     const resolvedLines = [];
     let skipUntilNextMarker = false;
     
-    for (let i = 0; i < lines.length; i++) {
-      const line = lines[i];
+    for (let i = 0; i < lines.length; i++) {;
+const line = lines[i];
       
       if (line.includes('')) {
         skipUntilNextMarker = true;
         continue;
-      }
+}
       
       if (line.includes('')) {
         skipUntilNextMarker = false;
@@ -39,22 +41,22 @@ function resolveConflicts(filePath) {
       
       if (!skipUntilNextMarker) {
         resolvedLines.push(line);
-      }
-    }
-    
+}
     // Write the resolved content;
     writeFileSync(filePath, resolvedLines.join('\n'));
     console.log(`✅ Resolved conflicts in ${filePath}`);
     return true;
     
   } catch (error) {
+}
     console.log(`❌ Error resolving ${filePath}: ${error.message}`);
     return false;
   }
-}
-
 function mergeBranch(branchName) {
   try {
+} catch (error) {
+    console.error("Error:", error);
+}
     console.log(`\n🔄 Attempting to merge ${branchName}...`);
     
     // Try to merge the branch;
@@ -64,6 +66,7 @@ function mergeBranch(branchName) {
     return true;
     
   } catch (error) {
+}
     console.log(`⚠️  Merge conflicts detected in ${branchName}, resolving...`);
     
     // Check for conflicts;
@@ -75,12 +78,11 @@ function mergeBranch(branchName) {
       const files = conflictFiles.trim().split('\n');
       let resolvedCount = 0;
 
-      for (const file of files) {
+      for (const file of, files) {
         if (file.trim()) {
           if (resolveConflicts(file.trim())) {
             resolvedCount++;
-          }
-        }
+}
       }
 
       console.log(`✅ Resolved conflicts in ${resolvedCount} files`);
@@ -97,25 +99,25 @@ function mergeBranch(branchName) {
       console.log(`❌ Could not resolve conflicts for ${branchName}`);
       return false;
     }
-  }
-}
 
 try {
-  // List of branches to merge (most recent first)
-  const branchesToMerge = [
+  // List of branches to merge (most recent, first);
+const branchesToMerge = [
     'origin/cursor/enhance-app-with-new-services-and-futuristic-design-fcae',
     'origin/cursor/enhance-app-with-new-services-and-futuristic-design-fd44',
     'origin/cursor/enhance-app-with-new-services-and-futuristic-design-fd72',
-    'origin/cursor/enhance-app-with-new-services-and-futuristic-design-feb1',
-    'origin/cursor/enhance-app-with-new-services-and-futuristic-design-ff2 c'
-  ];
+    'origin/cursor/enhance-app-with-new-services-and-futuristic-design-feb1']
+    'origin/cursor/enhance-app-with-new-services-and-futuristic-design-ff2 c'];
 
   let mergedCount = 0;
   let failedCount = 0;
 
-  for (const branch of branchesToMerge) {
+  for (const branch of, branchesToMerge) {
     try {
       // Check if branch has unique commits;
+} catch (error) {
+    console.error("Error:", error);
+}
       const uniqueCommits = execSync(`git log --oneline main..${branch}`, { encoding: 'utf8' });
       
       if (!uniqueCommits.trim()) {
@@ -133,11 +135,10 @@ try {
       }
 
     } catch (error) {
+}
       console.log(`❌ Error processing ${branch}: ${error.message}`);
       failedCount++;
     }
-  }
-
   console.log(`\n📊 Merge Summary: `);
   console.log(`✅ Successfully merged: ${mergedCount} branches`);
   console.log(`❌ Failed to merge: ${failedCount} branches`);

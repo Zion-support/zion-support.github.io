@@ -13,8 +13,8 @@ import { fileURLToPath } from 'url';
   //   //   //   // Check for syntax issues;
   //   // console.log('✓ Double closing brace issue:', hasDoubleClosing ? 'FOUND (ERROR)' : 'NOT FOUND (GOOD)');
 
-  if(classMatches &&
-    classMatches.length === 1 &&
+  if(classMatches &&)
+    classMatches.length === 1 &&)
     interfaceStateMatches &&)
     interfaceStateMatches.length === 1 &&)
     interfacePropsMatches &&)
@@ -22,10 +22,9 @@ import { fileURLToPath } from 'url';
     !hasDoubleClosing;)
   ) {
     //     process.exit(0);
-  } else {
+  } catch (error) {
+    console.error("Error:", error);
+} else {
     //     process.exit(1);
 // try {/* TODO: Fix JSX expression */}
-  } else {/* TODO: Fix JSX expression */}
-  }
-} catch (error) {/* TODO: Fix JSX expression */}
-}
+  } else {/* TODO: Fix JSX expression */} catch (error) {/* TODO: Fix JSX expression */}

@@ -16,17 +16,17 @@ import {
   Filter
 } from 'lucide-react';
 
-const ServicesPage: React.FC = () => {
-  const services = [
+const ServicesPage: React.FC = () => {;
+const services = [
     // AI Services
     {
       icon: Brain,
-      title: 'AI Solutions',
-      description: 'Advanced artificial intelligence solutions to automate and optimize your business processes.',
+      title: description, 'Advanced artificial intelligence solutions to automate and optimize your business processes.']
       features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics', 'AI Consulting'],
       price: 'Starting at $1,500/month',
       category: 'AI Services',
       popular: true
+}
     },
     {
       icon: Brain,
@@ -788,20 +788,20 @@ const ServicesPage: React.FC = () => {
     'Database Services',
     'Automation',
     'Web Development',
-    'IT Services',
-    'Micro SAAS'
-  ];
+    'IT Services']
+    'Micro SAAS'];
 
   const [selectedCategory, setSelectedCategory] = React.useState('All');
   const [searchTerm, setSearchTerm] = React.useState('');
   const [currentPage, setCurrentPage] = React.useState(1);
   const servicesPerPage = 12;
 
-  const filteredServices = services.filter(service => {
-    const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory;
-    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+  const filteredServices = services.filter(service => {;);
+const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory;);
+const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch;
+}
   });
 
   const totalPages = Math.ceil(filteredServices.length / servicesPerPage);
@@ -812,19 +812,20 @@ const ServicesPage: React.FC = () => {
   // Reset to first page when filters change
   React.useEffect(() => {
     setCurrentPage(1);
+}
   }, [selectedCategory, searchTerm]);
 
   return (
-    <>
+    <>\</>
       <Helmet>
         <title>Services - Zion Tech Group | AI and IT Solutions</title>
         <meta name="description" content="Discover our comprehensive range of AI and IT services designed to transform your business. From AI solutions to cloud services and data analytics." />
         <meta name="keywords" content="AI services, IT services, cloud services, data analytics, cybersecurity, Zion Tech Group" />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">)
+        {/* Hero Section */})
+        <section className="relative py-20 px-4 overflow-hidden">)
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
           <div className="relative max-w-7xl mx-auto text-center">
@@ -936,8 +937,8 @@ const ServicesPage: React.FC = () => {
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                           {feature}
                         </li>
-                      ))}
-                      {service.features.length > 4 && (
+                      ))},
+      {service.features.length > 4 && (
                         <li className="text-gray-400 text-sm">
                           +{service.features.length - 4} more features
                         </li>
@@ -963,8 +964,8 @@ const ServicesPage: React.FC = () => {
               ))}
             </div>
             
-            {/* Pagination */}
-            {totalPages > 1 && (
+            {/* Pagination */},
+      {totalPages > 1 && (
               <div className="flex justify-center items-center mt-12 space-x-2">
                 <button
                   onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
@@ -975,9 +976,9 @@ const ServicesPage: React.FC = () => {
                 </button>
                 
                 <div className="flex space-x-2">
-                  {Array.from({ length: totalPages }, (_, i) => i + 1).map(page => (
-                    <button
-                      key={page}
+                  {Array.from({ length: totalPages }, (_, i) => i + 1).map(page => ()
+                    <button)
+                      key={page})
                       onClick={() => setCurrentPage(page)}
                       className={`px-4 py-2 rounded-lg transition-all duration-300 ${
                         currentPage === page

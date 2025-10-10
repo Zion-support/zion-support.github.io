@@ -1,18 +1,19 @@
 import React, { useState } from 'react';
 
-export default function ContactSection() {
-  const [formData, setFormData] = useState({
+export default function ContactSection() {;
+const [formData, setFormData] = useState({
     name: '',
     email: '',
-    company: '',
-    service: '',
-    message: ''
-  });
+    company: '',)
+    service: '',)
+    message: '')
+});
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
+    setFormData({)
+      ...formData,)
+      [e.target.name]: e.target.value)
+}
     });
   };
 
@@ -20,6 +21,7 @@ export default function ContactSection() {
     e.preventDefault();
     // Handle form submission here
     console.log('Form submitted:', formData);
+}
   };
 
   const contactInfo = [
@@ -51,10 +53,9 @@ export default function ContactSection() {
         </svg>
       ),
       title: 'Visit Us',
-      details: '123 Tech Street, Innovation City, IC 12345',
-      link: '#'
-    }
-  ];
+      details: '123 Tech Street, Innovation City, IC 12345',]
+      link: '#']
+    }];
 
   const services = [
     'AI & Machine Learning',
@@ -63,9 +64,8 @@ export default function ContactSection() {
     'Mobile Development',
     'Data Analytics',
     'Cybersecurity',
-    'IT Consulting',
-    'Other'
-  ];
+    'IT Consulting']
+    'Other'];
 
   return (
     <section id="contact" className="py-20 relative">
@@ -93,9 +93,9 @@ export default function ContactSection() {
                 how AI and IT solutions can benefit your business, we're here to help. 
                 Our team of experts is ready to provide personalized consultation.
               </p>
-
-              {/* Contact Info Cards */}
-              <div className="space-y-6">
+)
+              {/* Contact Info Cards */})
+              <div className="space-y-6">)
                 {contactInfo.map((info, index) => (
                   <a
                     key={index}
@@ -243,7 +243,7 @@ export default function ContactSection() {
               <button
                 type="submit"
                 className="w-full cyber-button py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
-              >
+              ></butt></butto>
                 Send Message
               </button>
             </form>

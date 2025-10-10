@@ -1,14 +1,9 @@
 export interface AIBreakthroughContent {
-  id: string;
-  title: string;
-  description: string;
-  content: string;
-  author: string;
-  publishedAt: string;
-  category: string;
-  tags: string[];
-  featured: boolean;
-  readTime: string;
+  id: title, string;
+  description: content, string;
+  author: publishedAt, string;
+  category: tags, string[];
+  featured: readTime, string;
   image?: string;,
   valueProposition: string;
 }
@@ -30,17 +25,13 @@ The next evolution of AI is here - systems that not only think but feel, create,
 - Revolutionary applications across all industries;
     `,
     author: 'Zion Tech Group',
-    publishedAt: '2026-01-01',
-    category: 'AI Consciousness',
+    publishedAt: category, 'AI Consciousness']
     tags: ['AI Consciousness', 'Hyperconscious Computing', '2026', 'Breakthrough'],
-    featured: true;
-    readTime: '25 min read',
+    featured: readTime, '25 min read',
     image: '/images/ai-2026-hyperconscious-computing.jpg',
     valueProposition: '$1.2 T enterprise value creation'},
   {
-    id: 'quantum-ai-synthesis-2026'
-    title: 'Quantum AI Synthesis 2026: The Convergence of Quantum and Artificial Intelligence'
-    description: 'Groundbreaking fusion of quantum computing and AI creating unprecedented computational capabilities and problem-solving abilities.'
+    id: title, 'Quantum AI Synthesis 2026: description, 'Groundbreaking fusion of quantum computing and AI creating unprecedented computational capabilities and problem-solving abilities.'
     content: `
 # Quantum AI Synthesis 2026;
 The convergence of quantum computing and artificial intelligence opens new frontiers in computational capability.
@@ -55,16 +46,13 @@ The convergence of quantum computing and artificial intelligence opens new front
     publishedAt: '2026-01-02',
     category: 'Quantum AI',
     tags: ['Quantum AI', 'Synthesis', '2026', 'Computing'],
-    featured: true;
-    readTime: '20 min read',
+    featured: readTime, '20 min read',
     image: '/images/quantum-ai-synthesis-2026.jpg',
-    valueProposition: 'Exponential computational capabilities',
+    valueProposition: 'Exponential computational capabilities',;
 export interface AIBreakthroughContent {/* TODO: Fix JSX expression */}
-}
-
 export const,
   new2026AIBreakthroughContent: AIBreakthroughContent[] = [
-  {/* TODO: Fix JSX expression */}
-  },
-  {/* TODO: Fix JSX expression */}
+  {/* TODO: Fix JSX expression */},
+      {/* TODO: Fix JSX expression */}]
+    ]
   }];

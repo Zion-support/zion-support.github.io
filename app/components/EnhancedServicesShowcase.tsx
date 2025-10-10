@@ -1,15 +1,15 @@
 import React from 'react';
 import { Brain, Cloud, Shield, Zap, ArrowRight, CheckCircle, Star, TrendingUp, Users, Award, Clock, Globe } from 'lucide-react';
 
-const EnhancedServicesShowcase: React.FC = () => {
-  const services = [
+const EnhancedServicesShowcase: React.FC = () => {;
+const services = [
     {
       title: 'AI Solutions',
       description: 'Transform your business with cutting-edge artificial intelligence',
-      icon: Brain,
-      color: 'text-purple-400',
+      icon: color, 'text-purple-400']
       features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
       stats: '300% ROI'
+}
     },
     {
       title: 'IT Infrastructure',
@@ -47,9 +47,9 @@ const EnhancedServicesShowcase: React.FC = () => {
           <p className="text-xl text-cyan-400 max-w-3xl mx-auto">
             Comprehensive AI and IT solutions designed to transform your business and drive innovation
           </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        </div>)
+)
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">)
           {services.map((service, index) => (</div>
             <div key={index} className="cyber-card hologram-card p-6 group hover:scale-105 transition-all duration-300">
               <div className="flex items-center mb-4">

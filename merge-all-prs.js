@@ -6,23 +6,26 @@ console.log('🚀 Starting comprehensive PR merge process...');
 
 // Function to get all open PRs;
 async function getOpenPRs() {
-  try {
-    const response = await fetch('https: //api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open&per_page=100');
+  try {;
+const response = await fetch('https: //api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open&per_page=100');
     const prs = await response.json();
     return prs;
-  } catch (error) {
+} catch (error) {
+    console.error("Error:", error);
+} catch (error) {
     console.error('❌ Failed to fetch PRs:', error.message);
     return [];
-async function getOpenPRs() {/* TODO: Fix JSX expression */}
 }
+async function getOpenPRs() {/* TODO: Fix JSX expression */}
   try {/* TODO: Fix JSX expression */}
   } catch (error) {/* TODO: Fix JSX expression */}
-  }
-}
 
 // Function to merge a PR branch;
 function mergePRBranch(branchName, prNumber) {
   try {
+} catch (error) {
+    console.error("Error:", error);
+}
     console.log(`🔄 Attempting to merge PR #${prNumber} (${branchName})...`);
     
     // Fetch the branch;
@@ -30,6 +33,9 @@ function mergePRBranch(branchName, prNumber) {
     
     // Try to merge;
     try {
+  } catch (error) {
+    console.error("Error:", error);
+}
       execSync(`git merge origin/${branchName} --no-commit`, { stdio: 'pipe' });
 function mergePRBranch(branchName, prNumber) {/* TODO: Fix JSX expression */}
     console.log(`🔄 Attempting to merge PR #${prNumber} (${branchName})...`);
@@ -48,8 +54,8 @@ function mergePRBranch(branchName, prNumber) {/* TODO: Fix JSX expression */}
       console.log(`⚠️  Merge conflicts detected in PR #${prNumber}, resolving...`);
       
       // Get conflicted files;
-      const conflictedFiles = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' })
-      const conflictedFiles = execSync('git diff --name-only --diff-filter=U', {/* TODO: Fix JSX expression */})
+      const conflictedFiles = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' });
+const conflictedFiles = execSync('git diff --name-only --diff-filter=U', {/* TODO: Fix JSX expression */})
   g: 'utf8' })
         .trim().split('\n').filter(f => f);
       
@@ -60,9 +66,13 @@ function mergePRBranch(branchName, prNumber) {/* TODO: Fix JSX expression */}
         conflictedFiles.forEach(file => {)
           if (fs.existsSync(file)) {
             try {
+}
+  } catch (error) {
+    console.error("Error:", error);
+}
               execSync(`git checkout --theirs "${file}"`, { stdio: 'pipe' });
               execSync(`git add "${file}"`, { stdio: 'pipe' });
-        conflictedFiles.forEach(file => {/* TODO: Fix JSX expression */}`
+        conflictedFiles.forEach(file => {/* TODO: Fix JSX expression */}`)
               execSync(`git checkout --theirs "${file}"`, {/* TODO: Fix JSX expression */})
   o: 'pipe' });"`
               execSync(`git add "${file}"`, {/* TODO: Fix JSX expression */})
@@ -70,9 +80,7 @@ function mergePRBranch(branchName, prNumber) {/* TODO: Fix JSX expression */}
               console.log(`  ✅ Resolved ${file}`);
             } catch (error) {/* TODO: Fix JSX expression */}`
               console.log(`  ❌ Failed to resolve ${file}: ${error.message}`);
-            }
-          }
-        });
+            });
         
         // Commit the merge;
         execSync(`git commit -m "Merge PR #${prNumber}: ${branchName} (conflicts resolved)"`, { stdio: 'pipe' });
@@ -84,18 +92,14 @@ function mergePRBranch(branchName, prNumber) {/* TODO: Fix JSX expression */}
       } else {/* TODO: Fix JSX expression */}`
         console.log(`❌ No conflicted files found for PR #${prNumber}`);
         return false;
-      }
-    }
-  } catch (error) {/* TODO: Fix JSX expression */}`
+      } catch (error) {/* TODO: Fix JSX expression */}`
     console.log(`❌ Failed to merge PR #${prNumber}: ${error.message}`);
     return false;
   }
-}
-
 // Function to clean up console.log statements;
-function cleanConsoleLogs() {
-function cleanConsoleLogs() {/* TODO: Fix JSX expression */}
+function cleanConsoleLogs() {;
 }
+function cleanConsoleLogs() {/* TODO: Fix JSX expression */}
   console.log('🧹 Cleaning up console.log statements...');
   
   const commonFiles = [
@@ -103,14 +107,13 @@ function cleanConsoleLogs() {/* TODO: Fix JSX expression */}
     'app/components/Footer.tsx',
     'app/components/Navigation.tsx',
     'app/page.tsx',
-    'app/layout.tsx',
-    'app/main.tsx'
-  ];
+    'app/layout.tsx']
+    'app/main.tsx'];
   
   commonFiles.forEach(file => {)
     if (fs.existsSync(file)) {
-      try {
-        let content = fs.readFileSync(file, 'utf8');
+      try {;
+let content = fs.readFileSync(file, 'utf8');
         const originalLength = content.length;
         
         // Remove console.log statements;
@@ -122,27 +125,29 @@ function cleanConsoleLogs() {/* TODO: Fix JSX expression */}
         
         if (content.length !== originalLength) {
           fs.writeFileSync(file, content);
+}
+  } catch (error) {
+    console.error("Error:", error);
+}
   commonFiles.forEach(file => {/* TODO: Fix JSX expression */})`
           console.log(`  ✅ Cleaned ${file}`);
         }
       } catch (error) {/* TODO: Fix JSX expression */}`
         console.log(`  ⚠️  Could not clean ${file}: ${error.message}`);
-      }
-    }
-  });
+      });
 }
 
 // Function to optimize build configuration;
-function optimizeBuild() {
-function optimizeBuild() {/* TODO: Fix JSX expression */}
+function optimizeBuild() {;
 }
+function optimizeBuild() {/* TODO: Fix JSX expression */}
   console.log('⚡ Optimizing build configuration...');
   
   // Update package.json with optimized scripts;
   const packageJsonPath = 'package.json';
   if (fs.existsSync(packageJsonPath)) {
-    try {
-      const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
+    try {;
+const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
       
       packageJson.scripts = {
         ...packageJson.scripts,
@@ -154,6 +159,9 @@ function optimizeBuild() {/* TODO: Fix JSX expression */}
         'clean': 'rm -rf .next out dist node_modules/.cache',
         'prebuild': 'npm run clean',
         'postbuild': 'echo "Build completed successfully"'
+  } catch (error) {
+    console.error("Error:", error);
+}
   if (fs.existsSync(packageJsonPath)) {/* TODO: Fix JSX expression */}
       };
       
@@ -162,8 +170,6 @@ function optimizeBuild() {/* TODO: Fix JSX expression */}
     } catch (error) {/* TODO: Fix JSX expression */}`
   n: ${error.message}`);
     }
-  }
-}
 
 // Main execution;
 async function main() {
@@ -174,10 +180,12 @@ async function main() {
     if (prs.length === 0) {
       console.log('✅ No open PRs found');
       return;
-async function main() {/* TODO: Fix JSX expression */}
 }
+  } catch (error) {
+    console.error("Error:", error);
+}
+async function main() {/* TODO: Fix JSX expression */}
   try {/* TODO: Fix JSX expression */}
-    }
     `
     console.log(`📊 Found ${prs.length} open PRs`);
     
@@ -185,11 +193,12 @@ async function main() {/* TODO: Fix JSX expression */}
     let failedCount = 0;
     
     // Process each PR;
-    for (const pr of prs) {
-      const branchName = pr.head.ref;
+    for (const pr of, prs) {;
+const branchName = pr.head.ref;
       const prNumber = pr.number;
       const title = pr.title;
-    for (const pr of prs) {/* TODO: Fix JSX expression */}`
+}
+    for (const pr of, prs) {/* TODO: Fix JSX expression */}`
       console.log(`\n🔄 Processing PR #${prNumber}: ${title}`);`
       console.log(`   Branc)`
   h: ${branchName}`);
@@ -202,8 +211,6 @@ async function main() {/* TODO: Fix JSX expression */}
       } catch (error) {/* TODO: Fix JSX expression */}`
         console.log(`❌ Error processing PR #${prNumber}: ${error.message}`);
       }
-    }
-    
     // Clean up and optimize;
     console.log('\n🧹 Post-merge cleanup...');
     
@@ -211,7 +218,7 @@ async function main() {/* TODO: Fix JSX expression */}
     console.log('\n💾 Committing final optimizations...');
     execSync('git add .', {/* TODO: Fix JSX expression */})
   o: 'pipe' });"
-    execSync('git commit -m "Final,"
+    execSync('git commit -m "Final,")
   optimizations: clean console.logs, optimize build, resolve all conflicts"', {/* TODO: Fix JSX expression */})
   o: 'pipe' });
     
@@ -237,6 +244,4 @@ async function main() {/* TODO: Fix JSX expression */}
     console.log(`  🚀 All changes pushed to main`);
     
   } catch (error) {/* TODO: Fix JSX expression */}
-  }
-}
 "`

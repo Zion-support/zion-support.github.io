@@ -9,16 +9,16 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 
-const ServicesPage: React.FC = () => {
-  const aiServices = [
+const ServicesPage: React.FC = () => {;
+const aiServices = [
     {
       icon: Brain,
-      title: 'AI Services',
-      description: 'Comprehensive AI solutions for every business need',
+      title: description, 'Comprehensive AI solutions for every business need']
       features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
       price: 'Starting at $1,500/month',
       popular: true,
       link: '/ai-services'
+}
     },
     {
       icon: Zap,
@@ -70,8 +70,7 @@ const ServicesPage: React.FC = () => {
   const itServices = [
     {
       icon: Database,
-      title: 'Database Management',
-      description: 'Comprehensive database solutions and optimization',
+      title: description, 'Comprehensive database solutions and optimization']
       features: ['Database Design', 'Performance Tuning', 'Backup & Recovery', 'Monitoring'],
       price: 'Starting at $1,000/month',
       popular: false,
@@ -127,8 +126,7 @@ const ServicesPage: React.FC = () => {
   const microSaasServices = [
     {
       icon: BarChart3,
-      title: 'AI Analytics Dashboard',
-      description: 'Real-time business intelligence and analytics',
+      title: description, 'Real-time business intelligence and analytics']
       features: ['Custom Dashboards', 'Real-time Data', 'Predictive Insights', 'Export Reports'],
       price: '$79/month',
       popular: true,
@@ -199,17 +197,15 @@ const ServicesPage: React.FC = () => {
     },
     {
       icon: Shield,
-      title: 'Fast Delivery',
-      description: 'Quick implementation with minimal downtime'
-    }
-  ];
+      title: 'Fast Delivery',]
+      description: 'Quick implementation with minimal downtime']
+    }];
 
   const stats = [
     { label: 'Projects Completed', value: '500+' },
     { label: 'Happy Clients', value: '200+' },
-    { label: 'Uptime Guarantee', value: '99.9%' },
-    { label: 'Support Available', value: '24/7' }
-  ];
+    { label: 'Uptime Guarantee', value: '99.9%' },]
+      { label: 'Support Available', value: '24/7' }];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -233,9 +229,9 @@ const ServicesPage: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="tel:+13024640950"
-                className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center"
-              >
-                <Phone className="h-5 w-5 mr-2" />
+                className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center")
+              >)
+                <Phone className="h-5 w-5 mr-2" />)
                 Call (302) 464-0950
               </a>
               <Link

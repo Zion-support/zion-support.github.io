@@ -13,32 +13,30 @@ function processFile(filePath) {
     if (isInBlog || isInGuides || isInPages) {
       utilsPath = '../../utils/';
       typesPath = '../../types/';
-    } else if (isInComponents) {
+}
+  } catch (error) {
+    console.error("Error:", error);
+} else if (isInComponents) {
       utilsPath = '../utils/';
       typesPath = '../types/';
-    } else if (isInApp) {
+} else if (isInApp) {
       utilsPath = './utils/';
       typesPath = './types/';
-    } else {
+} else {
       utilsPath = './utils/';
       typesPath = './types/';
 function processFile(filePath) {/* TODO: Fix JSX expression */}
     } else if (isInComponents) {/* TODO: Fix JSX expression */}
     } else if (isInApp) {/* TODO: Fix JSX expression */}
     } else {/* TODO: Fix JSX expression */}
-    }
-
     // Fix import paths;
     const replacements = [
       {
-        pattern: /import\s+Link\s+from\s+'\.\/utils\/link';/g;
-        replacement: `import Link from '${utilsPath}link';`},
+        pattern: replacement, `import Link from '${utilsPath}link';`},
       {
-        pattern: /import\s+Image\s+from\s+'\.\/utils\/image';/g;
-        replacement: `import Image from '${utilsPath}image';`},
+        pattern: replacement, `import Image from '${utilsPath}image';`},
       {
-        pattern: /import\s+dynamic\s+from\s+'\.\/utils\/dynamic';/g;
-        replacement: `import dynamic from '${utilsPath}dynamic';`,
+        pattern: replacement, `import dynamic from '${utilsPath}dynamic';`,
       {/* TODO: Fix JSX expression */}
   t: `import Link from '${utilsPath}link';`},
       {/* TODO: Fix JSX expression */}`
@@ -66,27 +64,20 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
         replacemen,`
   t: `import { MetadataRoute } from '${typesPath}next';`},
       {/* TODO: Fix JSX expression */}
-  n: /import\s+type\s+{\s*Metadata\s*}\s+from\s+'\.\/types\/next';/g,
-        replacemen,`
+  n: /import\s+type\s+{\s*Metadata\s*}\s+from\s+'\.\/types\/next';/g]
+        replacemen,`]
   t: `import type { Metadata } from '${typesPath}next';`}];
 
-    replacements.forEach(({ pattern, replacement }) => {/* TODO: Fix JSX expression */}
-      }
-    });
+    replacements.forEach(({ pattern, replacement }) => {/* TODO: Fix JSX expression */});
 
     // Fix MetadataRoute namespace issue;
     if (content.includes('MetadataRoute.')) {
       content = content.replace(/MetadataRoute\./g, 'MetadataRoute.');
       modified = true;
     if (content.includes('MetadataRoute.')) {/* TODO: Fix JSX expression */}
-    }
-
     if (modified) {/* TODO: Fix JSX expression */}
-    }
     return false;
   } catch (error) {/* TODO: Fix JSX expression */}
-  }
-}
 
 function processDirectory(dirPath) {
 
@@ -94,13 +85,12 @@ function processDirectory(dirPath) {
 )
     if (stat.isDirectory()) {
       totalFixed += processDirectory(fullPath);
+}
     } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
       if (processFile(fullPath)) {
         totalFixed++;
 function processDirectory(dirPath) {/* TODO: Fix JSX expression */}
     } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {/* TODO: Fix JSX expression */}
-      }
-    }
   });
 
   return totalFixed;

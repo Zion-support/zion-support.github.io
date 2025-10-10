@@ -5,13 +5,13 @@ import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Building, Users, Shield, Globe, Brain, Cloud, Code, BarChart, Zap, ArrowRight, Star, Award, Target, Clock, Settings, Lock, Database, Smartphone, Eye, Sparkles } from 'lucide-react';
 
-const EnterprisePage: React.FC = () => {
-  const features = [
+const EnterprisePage: React.FC = () => {;
+const features = [
     {
       icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Comprehensive security solutions designed for large-scale enterprise environments.',
+      title: description, 'Comprehensive security solutions designed for large-scale enterprise environments.']
       benefits: ['Advanced threat protection', 'Compliance management', 'Data encryption', 'Access control']
+}
     },
     {
       icon: Cloud,
@@ -48,8 +48,7 @@ const EnterprisePage: React.FC = () => {
   const solutions = [
     {
       title: 'Enterprise Resource Planning',
-      description: 'Comprehensive ERP solutions that streamline business processes and improve efficiency.',
-      icon: Building,
+      description: icon, Building]
       benefits: ['Financial management', 'Supply chain optimization', 'Human resources', 'Project management']
     },
     {
@@ -79,16 +78,14 @@ const EnterprisePage: React.FC = () => {
     'Streamline business processes',
     'Enable data-driven decisions',
     'Scale with business growth',
-    'Integrate with existing systems',
-    'Provide 24/7 support and monitoring'
-  ];
+    'Integrate with existing systems']
+    'Provide 24/7 support and monitoring'];
 
   const stats = [
     { number: '500+', label: 'Enterprise Clients', icon: Building },
     { number: '99.9%', label: 'Uptime Guarantee', icon: Shield },
-    { number: '50%', label: 'Cost Reduction', icon: TrendingUp },
-    { number: '24/7', label: 'Support Available', icon: Clock }
-  ];
+    { number: '50%', label: 'Cost Reduction', icon: TrendingUp },]
+      { number: '24/7', label: 'Support Available', icon: Clock }];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
@@ -98,9 +95,9 @@ const EnterprisePage: React.FC = () => {
         keywords="enterprise solutions, enterprise software, large-scale solutions, enterprise integration, business solutions"
       />
       <Navigation />
-      
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden">
+      )
+      {/* Hero Section */})
+      <section className="relative py-20 px-4 overflow-hidden">)
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" /></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div>
         <div className="relative max-w-7xl mx-auto text-center"></div>

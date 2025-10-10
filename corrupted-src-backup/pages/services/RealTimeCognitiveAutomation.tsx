@@ -116,8 +116,8 @@
                     savin, g, s: '$6.8, M',
                     automati, o, n: '8, 9%',
                     highligh, t, s: [,
-                      'Order, processin, g: 99.8% automat, i, o, n',
-                      'Customer, servic, e: 89% au, t, o-resolut, i, o, n',
+                      'Order, processin, g: 99.8% automat, i, o, n'
+                      'Customer, servic, e: 89% au, t, o-resolut, i, o, n']
                       'Retur, n, s: 95% automa, t, e, d']}].m, a, p((solution, ind, e, x) => (
                   <div, ke, y = { in, d, e, x }, classNa, m, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-zi, o, n-cy, a, n/30'
                   ></div>
@@ -151,8 +151,8 @@
                     featur, e, s: [,
                       'Unlimited, transactio, n, s',
                       'Unlimited, workflow, s',
-                      'Custom, AI, models',
-                      'Dedicated, tea, m',
+                      'Custom, AI, models'
+                      'Dedicated, tea, m']
                       '99.97% S, L, A']}].m, a, p((p, k, g, ind, e, x) => (
                   <div, ke, y = { in, d, e, x }, classNa, m, e = { `bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, borde, r ${p, k, g.popul, a, r  ? 'bord, e, r-purp, l, e-5, 0, 0/50, rin, g-2, rin, g-purp, l, e-5, 0, 0/30'  : 'bord, e, r-zi, o, n-cy, a, n/30' }`}
                   >

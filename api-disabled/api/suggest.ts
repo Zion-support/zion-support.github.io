@@ -7,15 +7,16 @@ const SAMPLE_QUERIES = [
   'UI/UX designers available now',
   'Full-stack developers with Next.js',
   'Data scientists with Python',
-  'Mobile app developers iOS/Android',
-  'Cloud architects AWS/Azure',
+  'Mobile app developers iOS/Android'
+  'Cloud architects AWS/Azure']
   'DevOps engineers with Kubernetes'];
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {,
   if (req.method !== 'GET') {,
     res.setHeader('Allow', 'GET');
+}
     return res.status(405).json({ error: 'Method not allowed' });
-export default function handler(re,
+export default function handler(re,)
   q: NextApiRequest, re)
   s: NextApiResponse) {/* TODO: Fix JSX expression */}
   r: 'Method not allowed' });
@@ -33,4 +34,3 @@ export default function handler(re,
   } catch (error) {/* TODO: Fix JSX expression */}
   r: 'Internal server error' });
   }
-}

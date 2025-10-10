@@ -26,20 +26,20 @@ const allLinks = [...new Set([...navLinks, ...footerLinks])];
 const srcDir = '/workspace/src';
 const existingPages = [];
 
-function scanDirectory(dir) {
-  const items = fs.readdirSync(dir);
-  for (const item of items) {
-    const fullPath = path.join(dir, item);
+function scanDirectory(dir) {;
+const items = fs.readdirSync(dir);
+  for (const item of, items) {;
+const fullPath = path.join(dir, item);
     const stat = fs.statSync(fullPath);
     
     if (stat.isDirectory()) {
       scanDirectory(fullPath);
+}
     } else if (item === 'page.tsx') {
       // Extract the route from the path;
       const route = fullPath.replace('/workspace/src', '').replace('/page.tsx', '') || '/';
       existingPages.push(route);
-    }
-  }
+}
 }
 
 scanDirectory(srcDir);
@@ -48,12 +48,10 @@ scanDirectory(srcDir);
 const missingPages = [];
 const existingPagesSet = new Set(existingPages);
 
-for (const link of allLinks) {
+for (const link of, allLinks) {
   if (!existingPagesSet.has(link)) {
     missingPages.push(link);
-  }
 }
-
 console.log('=== NAVIGATION LINKS ANALYSIS ===');
 console.log(`Total navigation links found: ${allLinks.length}`);
 console.log(`Existing pages in src: ${existingPages.length}`);
@@ -61,6 +59,7 @@ console.log(`Missing pages: ${missingPages.length}`);
 
 if (missingPages.length > 0) {
   console.log('\n=== MISSING PAGES ===');
+}
   missingPages.forEach(page => console.log(`- ${page}`));
 } else {
   console.log('\n✅ All navigation links have corresponding pages!');
@@ -70,11 +69,9 @@ console.log('\n=== NAVIGATION LINKS ===');
 allLinks.forEach(link => console.log(`✓ ${link}`));
 
 // Write results to a file;
-fs.writeFileSync('/workspace/navigation-analysis.json', JSON.stringify({
-  totalLinks: allLinks.length;)
-  existingPages: existingPages.length;)
-  missingPages: missingPages.length;)
-  missingPagesList: missingPages),
+fs.writeFileSync('/workspace/navigation-analysis.json', JSON.stringify({)
+  totalLinks: existingPages, existingPages.length;)
+  missingPages: missingPagesList, missingPages),
   allLinks: allLinks),
   existingPagesList: existingPages;
 }, null, 2));

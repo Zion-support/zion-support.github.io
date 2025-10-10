@@ -16,8 +16,8 @@ if (fs.existsSync(appMinimalTestPath)) {/* TODO: Fix JSX expression */}
 
 // 2. Fix blog page metadata - remove publishedTime completely;
 // const blogPages = [
-  'app/blog/ai-2026-april-revolutionary-breakthrough/page.tsx',
-  'app/blog/ai-2026-autonomous-agent-factories/page.tsx',
+  'app/blog/ai-2026-april-revolutionary-breakthrough/page.tsx'
+  'app/blog/ai-2026-autonomous-agent-factories/page.tsx']
   'app/blog/ai-2026-autonomous-enterprise-architecture/page.tsx'];
 
 blogPages.forEach(pagePath => {)
@@ -27,25 +27,27 @@ blogPages.forEach(pagePath => {)
     content = content.replace(/\s+publishedTime: ['"][^'"]*['"],?\s*/g, '');
 
     fs.writeFileSync(pagePath, content);
+}
     //         }
-blogPages.forEach(pagePath => {/* TODO: Fix JSX expression */}
+blogPages.forEach(pagePath => {/* TODO: Fix JSX expression */})
     //         })
 });
 
 // 3. Fix OpenGraph authors - use string array instead of object array;
-// const openGraphPages = [
-  'app/blog/ai-2026-consensus-intelligence-breakthrough/page.tsx',
+// const openGraphPages = []
+  'app/blog/ai-2026-consensus-intelligence-breakthrough/page.tsx'
   'app/blog/ai-2026-enterprise-automation-revolutionary-breakthrough/page.tsx'];
 
 openGraphPages.forEach(pagePath => {)
   if (fs.existsSync(pagePath)) {
 
     // Fix authors format to use string array;
+}
     content = content.replace(/authors: \[\{ name: 'Zion Tech Group' \}\]/g)
       "authors: ['Zion Tech Group']",
-openGraphPages.forEach(pagePath => {/* TODO: Fix JSX expression */}
-  e: 'Zion Tech Group' \}\]/g,
-      "author,"
+openGraphPages.forEach(pagePath => {/* TODO: Fix JSX expression */})
+  e: 'Zion Tech Group' \}\]/g,)
+      "author,")
   s: ['Zion Tech Group']")
     );
 ,
@@ -81,11 +83,11 @@ if (fs.existsSync(analyticsTrackerPath)) {/* TODO: Fix JSX expression */}
 if (fs.existsSync(systemMonitorPath)) {
 
   // Replace performanceEnhancer calls with direct implementations;
-  content = content.replace(
+  content = content.replace()
     /const metrics = getMetrics\(\);/g,
     'const metrics = []; // Placeholder for metrics'
   );
-  content = content.replace(
+  content = content.replace()
     /const score = getPerformanceScore\(\);/g,
     'const score = 0; // Placeholder for performance score'
   );

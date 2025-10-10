@@ -7,7 +7,8 @@ import { glob } from 'glob';
 function fixJSXSyntax(content) {
 
   //Fix function declarations with malformed comments;
-  fixed = fixed.replace(
+  fixed = fixed.replace()
+}
     /const\s+(\w+):\s+React\.FC\s*=\s*\(\)\s*=>\s*\{\/\*\s*content\s*\/\}/g,
     'const $1: React.FC = () => {'
   );
@@ -20,18 +21,19 @@ function fixJSXSyntax(content) {
   fixed = fixed.replace(/<(\w+)([^>]*?)><\/\1>\s*<(\w+)([^>]*?)><\/\3>/g, '<$1$2><$3$4></$3></$1>');
 
   //Fix array syntax issues;
+}
   fixed = fixed.replace(/\[\s*\{\/\*\s*content\s*\/\}/g, '[{');
 
   //Fix object syntax issues;
   fixed = fixed.replace(/\{\/\*\s*content\s*\/\}/g, '{');
 
   //Fix missing closing braces for objects;
-  fixed = fixed.replace(
+  fixed = fixed.replace(;);
 function fixJSXSyntax(content) {/* TODO: Fix JSX expression */}
     /const\s+(\w+):\s+React\.FC\s*=\s*\(\)\s*=>\s*\{\/\*\s*content\s*\/\}/g,
-    'const $1: React.FC = () => {/* TODO: Fix JSX expression */}
-  fixed = fixed.replace(/\[\s*\{\/\*\s*content\s*\/\}/g, '[{/* TODO: Fix JSX expression */}
-  fixed = fixed.replace(/\{\/\*\s*content\s*\/\}/g, '{/* TODO: Fix JSX expression */})
+    'const $1: React.FC = () => {/* TODO: Fix JSX expression */}]
+  fixed = fixed.replace(/\[\s*\{\/\*\s*content\s*\/\}/g, '[{/* TODO: Fix JSX expression */})]
+  fixed = fixed.replace(/\{\/\*\s*content\s*\/\}/g, '{/* TODO: Fix JSX expression */})]
     /(\w+):\s*'([^']*)',?\s*(\w+):\s*'([^']*)',?\s*(\w+):\s*'([^']*)',?\s*(\w+):\s*'([^']*)',?\s*\}/g,
     "$1: '$2',\n      $3: '$4',\n      $5: '$6',\n      $7: '$8'\n    }"
   );
@@ -47,49 +49,54 @@ function processFile(filePath) {
     if (content !== fixed) {
       fs.writeFileSync(filePath, fixed, 'utf8');
       //       return true;
-function processFile(filePath) {/* TODO: Fix JSX expression */}
-    }
-  },
+}
+  } catch (error) {
+    console.error("Error:", error);
+}
+function processFile(filePath) {/* TODO: Fix JSX expression */},
   // Fix malformed JSX fragments
   {
     pattern: /<>\s*<div([^>]*)>([^<]*?)<\/div>\s*<\/>/g,
-    replacement: '<div$1>$2</div>'
+    replacement: '<div$1></div></div>$2</div>'
   }
 ];
 
 function fixFile(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
+  try {;
+let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
     
-    fixes.forEach(fix => {
-      const newContent = content.replace(fix.pattern, fix.replacement);
+    fixes.forEach(fix => {;);
+const newContent = content.replace(fix.pattern, fix.replacement);
       if (newContent !== content) {
         content = newContent;
         modified = true;
-      }
+}
+  } catch (error) {
+    console.error("Error:", error);
+}
     });
     
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
+}
       console.log(`Fixed: ${filePath}`);
       return true;
     }
     
     return false;
   } catch (error) {/* TODO: Fix JSX expression */}
-  }
-}
 
 //Main function;
 async function main() {
-  // Get all TSX files in the app directory
-  const files = await glob('app/**/*.tsx', { cwd: process.cwd() });
+  // Get all TSX files in the app directory;
+}
+const files = await glob('app/**/*.tsx', { cwd: process.cwd() });
 
   console.log(`Found ${files.length} TSX files to check...`);
 
-  for (const pattern of patterns) {
-    const files = await glob(pattern, {
+  for (const pattern of, patterns) {;
+const files = await glob(pattern, {
       ignore: [,
         '**/node_modules/**',
         '**/dist/**',
@@ -102,31 +109,26 @@ async function main() {
         '**/admin-api-disabled/**',
         '**/api-disabled/**',
         '**/api.disabled/**',
-        '**/api.disabled.temp/**',
-        '**/api-backup/**',
-        '**/apps.backup/**',
+        '**/api.disabled.temp/**',)
+        '**/api-backup/**',)
+        '**/apps.backup/**',)
         '**/automation_backup/**')
         '**/ai-optimization-backups/**')
-        '**/automation_logs/**')
-        '**/all-automations-reports/**')
-        '**/accessibility-reports/**')
-      ])
-async function main() {/* TODO: Fix JSX expression */}
+        '**/automation_logs/**')]
+        '**/all-automations-reports/**')]
+        '**/accessibility-reports/**')])
 }
-  for (const pattern of patterns) {/* TODO: Fix JSX expression */}
+async function main() {/* TODO: Fix JSX expression */}
+  for (const pattern of, patterns) {/* TODO: Fix JSX expression */}
     });
 
-    for (const file of files) {/* TODO: Fix JSX expression */}
-      }
-    }
+    for (const file of, files) {/* TODO: Fix JSX expression */}
   });
 
   //   }
 
 if (import.meta.url === `fil)`
   e://${process.argv[1]}`) {/* TODO: Fix JSX expression */}
-}
-
 export { fixJSXSyntax, processFile };
 
 }"`

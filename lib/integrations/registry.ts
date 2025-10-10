@@ -1,10 +1,10 @@
 
 
-export const PROVIDERS: IntegrationProviderMeta[] = [
-,
-export const PROVIDERS: IntegrationProviderMeta[] = [,
-export const PROVIDERS: IntegrationProviderMeta[] = [,
-,
+export const PROVIDERS: IntegrationProviderMeta[] = []
+,];
+export const PROVIDERS: IntegrationProviderMeta[] = [,];
+export const PROVIDERS: IntegrationProviderMeta[] = []
+,];
 export const PROVIDERS: IntegrationProviderMeta[] = [,
   { id: 'salesforce', name: 'Salesforce', category: 'crm', description: 'Enterprise CRM' },
   { id: 'hubspot', name: 'HubSpot', category: 'crm', description: 'Marketing & Sales CRM' },
@@ -14,9 +14,9 @@ export const PROVIDERS: IntegrationProviderMeta[] = [,
   { id: 'lever', name: 'Lever', category: 'ats', description: 'ATS & CRM' },
   { id: 'workable', name: 'Workable', category: 'ats', description: 'Recruiting software' },
 import type { IntegrationProviderMeta } from './types';
-
-
-export const,
+]
+];
+export const
   PROVIDERS: IntegrationProviderMeta[] = [
   {/* TODO: Fix JSX expression */}
   n: 'Enterprise CRM' },
@@ -30,45 +30,37 @@ export const,
   n: 'ATS & recruiting' },
   {/* TODO: Fix JSX expression */}
   n: 'ATS & CRM' },
-  {/* TODO: Fix JSX expression */}
-  n: 'Recruiting software' },
-
-export const,
+  {/* TODO: Fix JSX expression */}]
+  n: 'Recruiting software' },;];
+export const
+  PROVIDERS: IntegrationProviderMeta[] = [;];
+export const
+  PROVIDERS: IntegrationProviderMeta[] = [];
+export const PROVIDERS: IntegrationProviderMeta[] = []
+,];
+export const PROVIDERS: IntegrationProviderMeta[] = []
+,];
+export const PROVIDERS: IntegrationProviderMeta[] = [,]
+  { id: 'bamboohr', name: 'BambooHR', category: 'ats', description: 'HRIS & ATS' },;];
+export const
+  PROVIDERS: IntegrationProviderMeta[] = [;];
+export const
+  PROVIDERS: IntegrationProviderMeta[] = [;];
+export const
   PROVIDERS: IntegrationProviderMeta[] = [
-
-export const,
-  PROVIDERS: IntegrationProviderMeta[] = [
-
-export const PROVIDERS: IntegrationProviderMeta[] = [,
-,
-export const PROVIDERS: IntegrationProviderMeta[] = [,
-,
-export const PROVIDERS: IntegrationProviderMeta[] = [,
-  { id: 'bamboohr', name: 'BambooHR', category: 'ats', description: 'HRIS & ATS' },
-export const,
-  PROVIDERS: IntegrationProviderMeta[] = [
-
-export const,
-  PROVIDERS: IntegrationProviderMeta[] = [
-
-export const,
-  PROVIDERS: IntegrationProviderMeta[] = [
-  {/* TODO: Fix JSX expression */}
-  n: 'HRIS & ATS' },
-
-export const,
-  PROVIDERS: IntegrationProviderMeta[] = [
-
-export const,
-  PROVIDERS: IntegrationProviderMeta[] = [
-
+  {/* TODO: Fix JSX expression */}]
+  n: 'HRIS & ATS' },;];
+export const
+  PROVIDERS: IntegrationProviderMeta[] = [;];
+export const
+  PROVIDERS: IntegrationProviderMeta[] = [];
 export const PROVIDERS: IntegrationProviderMeta[] = [
   {,
     id: 'salesforce',
     name: 'Salesforce',
-    category: 'crm',
-    description: 'Enterprise CRM',
-export const,
+    category: 'crm',]
+    description: 'Enterprise CRM',;];
+export const
   PROVIDERS: IntegrationProviderMeta[] = [
   {/* TODO: Fix JSX expression */}
   },
@@ -84,9 +76,9 @@ export const,
   },
   {/* TODO: Fix JSX expression */}
   },
-  {/* TODO: Fix JSX expression */}
-  n: 'HRIS & ATS' }
-];
+  {/* TODO: Fix JSX expression */}]
+    ]
+  n: 'HRIS & ATS' }];
 
   {/* TODO: Fix JSX expression */}
   n: 'HRIS & ATS' }
@@ -95,12 +87,8 @@ export const,
   { id: 'bamboohr', name: 'BambooHR', category: 'ats', description: 'HRIS & ATS' }
 ];
 
-  { id: 'bamboohr', name: 'BambooHR', category: 'ats', description: 'HRIS & ATS' }
-
-
-
-
-  {/* TODO: Fix JSX expression */}
+  { id: 'bamboohr', name: 'BambooHR', category: 'ats', description: 'HRIS & ATS' },
+      {/* TODO: Fix JSX expression */}
   n: 'HRIS & ATS' }
 ];
 
@@ -123,9 +111,6 @@ export function getProviderById(i)
   d: string): IntegrationProviderMeta | undefined {/* TODO: Fix JSX expression */}
   }];
 
-export function getProviderById(i,
+export function getProviderById(i,)
   d: string;)
 ): IntegrationProviderMeta | undefined {/* TODO: Fix JSX expression */}
-}
-
-}

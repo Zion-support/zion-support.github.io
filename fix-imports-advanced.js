@@ -4,32 +4,29 @@ import { fileURLToPath } from 'url';
 
 
 function getRelativePath(fromPath, toPath) {/* TODO: Fix JSX expression */}
-}
-
 function processFile(filePath) {
   try {
     // Calculate relative paths based on file location;
     if (isInBlog || isInGuides || isInPages) {
       utilsPath = '../../utils/';
       typesPath = '../../types/';
-    } else if (isInComponents) {
+}
+  } catch (error) {
+    console.error("Error:", error);
+} else if (isInComponents) {
       utilsPath = '../utils/';
       typesPath = '../types/';
+}
 function processFile(filePath) {/* TODO: Fix JSX expression */}
     } else if (isInComponents) {/* TODO: Fix JSX expression */}
-    }
-
     // Define replacements with dynamic paths;
     const replacements = [
       {
-        pattern: /import\s+Link\s+from\s+'next\/link';/g;
-        replacement: `import Link from '${utilsPath}link';`},
+        pattern: replacement, `import Link from '${utilsPath}link';`},
       {
-        pattern: /import\s+Image\s+from\s+'next\/image';/g;
-        replacement: `import Image from '${utilsPath}image';`},
+        pattern: replacement, `import Image from '${utilsPath}image';`},
       {
-        pattern: /import\s+dynamic\s+from\s+'next\/dynamic';/g;
-        replacement: `import dynamic from '${utilsPath}dynamic';`,
+        pattern: replacement, `import dynamic from '${utilsPath}dynamic';`,
       {/* TODO: Fix JSX expression */}
   t: `import Link from '${utilsPath}link';`},
       {/* TODO: Fix JSX expression */}`
@@ -61,21 +58,16 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
         replacemen,`
   t: `import type { Metadata } from '${typesPath}next';`},
       {
-        pattern: /'use client';/g;
-        replacement: "// 'use client'; // Removed for Vite compatibility",
-      {/* TODO: Fix JSX expression */}
+        pattern: replacement, "// 'use client'; // Removed for Vite compatibility"
+      {/* TODO: Fix JSX expression */}]
+    ]
       }];
 
-    replacements.forEach(({ pattern, replacement }) => {/* TODO: Fix JSX expression */}
-      }
-    });
+    replacements.forEach(({ pattern, replacement }) => {/* TODO: Fix JSX expression */});
 
     if (modified) {/* TODO: Fix JSX expression */}
-    }
     return false;
   } catch (error) {/* TODO: Fix JSX expression */}
-  }
-}
 
 function processDirectory(dirPath) {
 
@@ -83,13 +75,12 @@ function processDirectory(dirPath) {
 )
     if (stat.isDirectory()) {
       totalFixed += processDirectory(fullPath);
+}
     } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
       if (processFile(fullPath)) {
         totalFixed++;
 function processDirectory(dirPath) {/* TODO: Fix JSX expression */}
     } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {/* TODO: Fix JSX expression */}
-      }
-    }
   });
 
   return totalFixed;

@@ -6,6 +6,7 @@ async function handler(req, res) {
   if (req.method !== 'POST') {
     res.statusCode = 405;
     res.setHeader('Content-Type', 'application/json');
+}
     res.end(JSON.stringify({ error: 'Method not allowed' }));
     return;
   }
@@ -15,18 +16,21 @@ async function handler(req, res) {
   if (!productId) {
     res.statusCode = 400;
     res.setHeader('Content-Type', 'application/json');
+}
     res.end(JSON.stringify({ error: 'Product ID is required' }));
     return;
   }
 
   try {
-    // Basic checkout session creation logic
-    const sessionData = {
+    // Basic checkout session creation logic;
+const sessionData = {
       productId,
       userId: userId || null,
       timestamp: new Date().toISOString(),
       status: 'pending'
-    };
+  } catch (error) {
+    console.error("Error:", error);
+};
 
     // In a real implementation, you would:
     // 1. Create a session with your payment provider (Stripe, PayPal, etc.)
@@ -35,8 +39,8 @@ async function handler(req, res) {
 
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({
-      success: true,
+    res.end(JSON.stringify({)
+      success: true,)
       sessionId: `session_${Date.now()}`,
       checkoutUrl: `${PROD_DOMAIN}/checkout?session=${Date.now()}`,
       data: sessionData
@@ -45,14 +49,12 @@ async function handler(req, res) {
     // Log error for debugging in development
     if (process.env.NODE_ENV === 'development') {
       console.error('Checkout session creation error:', error);
-    }
+}
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ 
-      error: 'Failed to create checkout session',
-      details: process.env.NODE_ENV === 'development' ? error.message : undefined
+    res.end(JSON.stringify({ )
+      error: 'Failed to create checkout session',)
+      details: process.env.NODE_ENV === 'development' ? error.message : undefined)
     }));
   }
-}
-
 export default withErrorLogging(handler);

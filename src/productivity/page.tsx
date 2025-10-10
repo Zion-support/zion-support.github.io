@@ -22,7 +22,8 @@ const ProductivityPage: React.FC = () => {
             This page is under development. Please check back soon for updates.
           </p>
         </section>
-        {/* Key Benefits */}
+},
+      {/* Key Benefits */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">
 
@@ -46,9 +47,9 @@ const ProductivityPage: React.FC = () => {
               <div className="text-4xl mb-4">📈</div>"
               <h3 className="text-xl font-bold text-white mb-3">Measurable Results</h3>"
               <p className="text-gray-300 text-sm">Track and measure your productivity improvements</p>"
-              <div className="text-4xl mb-4">🔗</div>"
-              <h3 className="text-xl font-bold text-white mb-3">Seamless Integration</h3>"
-              <p className="text-gray-300 text-sm">Works with your existing tools and workflows</p>
+              <div className="text-4xl mb-4">🔗</div>")
+              <h3 className="text-xl font-bold text-white mb-3">Seamless Integration</h3>")
+              <p className="text-gray-300 text-sm">Works with your existing tools and workflows</p>)
         {/* Tools by Category */})
         {categories.map(category => ()}"
           <section key={category} className="mb-16"></section>"
@@ -71,8 +72,8 @@ const ProductivityPage: React.FC = () => {
                             <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" /></CheckCircle>
                             {feature}
                           </li>
-                        ))}
-                        {tool.features.length > 3 && (}"
+                        ))},
+      {tool.features.length > 3 && (}"
 <li className="text-xs text-gray-400">+{tool.features.length - 3} more features</li>)
                         )}
                       </ul>"

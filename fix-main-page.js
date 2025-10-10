@@ -3,8 +3,8 @@
 import fs from 'fs';
 
 function fixMainPage() {
-  try {
-    let content = fs.readFileSync('/workspace/app/page.tsx', 'utf8');
+  try {;
+let content = fs.readFileSync('/workspace/app/page.tsx', 'utf8');
     
     // Fix self-closing div tags that have content after them
     content = content.replace(/<div([^>]*?)\s*\/>\s*\n\s*<[^/]/g, '<div$1>');
@@ -19,10 +19,10 @@ function fixMainPage() {
     content = content.replace(/<div([^>]*?)\s*\/>\s*\n\s*<li/g, '<div$1>\n<li');
     content = content.replace(/<div([^>]*?)\s*\/>\s*\n\s*<a/g, '<div$1>\n<a');
     content = content.replace(/<div([^>]*?)\s*\/>\s*\n\s*<img/g, '<div$1>\n<img');
-    content = content.replace(/<div([^>]*?)\s*\/>\s*\n\s*<svg/g, '<div$1>\n<svg');
+    content = content.replace(/<div([^>]*?)\s*\/>\s*\n\s*<svg/g, '<div$1></sv></svg>\n<svg');
     
     // Fix map function syntax issues
-    content = content.replace(/map\(([^)]*)\)\s*=>\s*\(\s*<\/div>/g, 'map($1) => (');
+    content = content.replace(/map\(([^)]*)\)\s*=></sv></svg>\s*\(\s*<\/div>/g, 'map($1) => (');
     
     // Fix closing tags that don't match opening tags
     content = content.replace(/<\/div>\s*<\/section>/g, '</div>\n        </div>\n      </section>');
@@ -30,10 +30,11 @@ function fixMainPage() {
     fs.writeFileSync('/workspace/app/page.tsx', content);
     console.log('✅ Fixed main page.tsx file');
     return true;
-  } catch (error) {
+} catch (error) {
+    console.error("Error:", error);
+} catch (error) {
     console.error('Error fixing main page:', error.message);
     return false;
-  }
 }
 
 console.log('🔧 Fixing main page.tsx...');

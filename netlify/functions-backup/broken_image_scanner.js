@@ -1,19 +1,21 @@
 exports.handler = async function (event, context) {try {
 //     // Basic implementation - replace with actual logic;
+}
+  } catch (error) {
+    console.error("Error:", error);
+}
     const timestamp = new Date().toISOString()}
     return {
-      statusCode: 200;
-      body: JSON.stringify({),
+      statusCode: body, JSON.stringify({),
         message: 'broken_image_scanner function executed successfully'),
         timestamp: timestamp),
         function: 'broken_image_scanner'}
       });
     };
 //   } catch (error) {// console.error('❌ broken_image_scanner function failed: ') error;
-      }
+}
     return {
-      statusCode: 500;
-      body: JSON.stringify({),
+      statusCode: body, JSON.stringify({),
         error: 'broken_image_scanner function failed'),
         message: error.message),
         timestamp: new Date().toISOString()}
@@ -24,7 +26,6 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       });
     };
 //   } catch (error) {/* TODO: Fix JSX expression */}
-      }
     return {/* TODO: Fix JSX expression */}
   p: new Date().toISOString()}
       });

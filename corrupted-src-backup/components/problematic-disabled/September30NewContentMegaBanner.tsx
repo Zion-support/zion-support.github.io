@@ -8,7 +8,6 @@ const September30NewContentMegaBanner = () => {/* TODO: Fix JSX expression */}
     {/* TODO: Fix JSX expression */}
     },
     {/* TODO: Fix JSX expression */}
-    }
   ]; return(<div, classNam, e = "bg-gradie, n, t-to-br, fro, m-purp, l, e-900, vi, a-bl, u, e-900, t, o-cy, a, n-900, rounde, d-3x, l, p-8, m, d: p-12, tex, t-white, shado, w-2xl, border, border-purp, l, e-5, 0, 0/20, relative, overflow-hidd, e, n">
       {/* Animated, backgro, u, n, d */}
       <div, classNam, e = "absolute, inse, t-0, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/10, vi, a-bl, u, e-5, 0, 0/10, t, o-cy, a, n-5, 0, 0/10, animat, e-pul, s, e" />
@@ -44,9 +43,9 @@ const September30NewContentMegaBanner = () => {/* TODO: Fix JSX expression */}
             🚀 5, Revolutionary, AI Breakthroug, h, s;
           </h2>"
           <p, className="te, x, t-xl, tex, t-cy, a, n-100, ma, x-w-4xl, m, x-au, t, o"></p>
-            Neural, coding, that programs, at, thought spe, e, d • Holographic, 3D, visualization • Quantum, consciousness, AI • 
-            Molecular, manufacturing, at atomic, precisio, n • Personalized, education, revolution;
-          </p>
+            Neural, coding, that programs, at, thought spe, e, d • Holographic, 3D, visualization • Quantum, consciousness, AI • )
+            Molecular, manufacturing, at atomic, precisio, n • Personalized, education, revolution;)
+          </p>)
         </div>)
         {/* Articles, G, r, i, d */})
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-3, ga, p-6, m, b-10">)
@@ -83,8 +82,8 @@ const September30NewContentMegaBanner = () => {/* TODO: Fix JSX expression */}
                 </div>
               </div>
             </L, i, n, k>)
-          ))}
-          {/* Additional, promotional, card */}"
+          ))},
+      {/* Additional, promotional, card */}"
           <Link, t, o = "/bl, o, g""
             className="group, b, g-gradie, n, t-to-br, fro, m-yell, o, w-5, 0, 0/20, t, o-oran, g, e-5, 0, 0/20, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-yell, o, w-4, 0, 0/30, hove, r: bord, e, r-yell, o, w-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, flex, flex-col, item, s-center, justif, y-center, tex, t-cent, e, r"
           >
@@ -115,22 +114,22 @@ const September30NewContentMegaBanner = () => {/* TODO: Fix JSX expression */}
         {/* Stats, Ban, n, e, r */}"
         <div, classNam, e = "bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-whi, t, e/20, m, b-8"></div>"
           <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-5, ga, p-6, tex, t-cent, e, r"></div>
-            <d, i, v></d>"
+            <d, i, v></div>"
               <div, className="te, x, t-sm, tex, t-bl, u, e-2, 0, 0">New, Breakthrough, s</div>
             </div>
-            <d, i, v></d>"
+            <d, i, v></div>"
               <div, className="te, x, t-3xl, fon, t-bold, tex, t-gre, e, n-400, m, b-1">10×</div>"
               <div, className="te, x, t-sm, tex, t-bl, u, e-2, 0, 0">Performance, Gain, s</div>
             </div>
-            <d, i, v></d>"
+            <d, i, v></div>"
               <div, className="te, x, t-3xl, fon, t-bold, tex, t-purp, l, e-400, m, b-1">1M×</div>"
               <div, className="te, x, t-sm, tex, t-bl, u, e-2, 0, 0">Quantum, Speedu, p</div>
             </div>
-            <d, i, v></d>"
+            <d, i, v></div>"
               <div, className="te, x, t-3xl, fon, t-bold, tex, t-yell, o, w-400, m, b-1">97%</div>"
               <div, className="te, x, t-sm, tex, t-bl, u, e-2, 0, 0">Success, Rat, e</div>
             </div>
-            <d, i, v></d>"
+            <d, i, v></div>"
               <div, className="te, x, t-3xl, fon, t-bold, tex, t-pi, n, k-400, m, b-1">$1, 5, T</div>"
               <div, className="te, x, t-sm, tex, t-bl, u, e-2, 0, 0">Market, Impac, t</div>
             </div>
@@ -184,20 +183,20 @@ const September30NewContentMegaBanner = () => {/* TODO: Fix JSX expression */}
           </Li, n, k>
         </div>
         {/* Ta, g, s */}"
-        <div, classNam, e = "mt-8, flex, flex-wrap, ga, p-3, justif, y-cent, e, r"></div>"
-          <span, className="bg-purp, l, e-5, 0, 0/20, tex, t-purp, l, e-200, p, x-4, p, y-2, rounde, d-full, tex, t-sm, fon, t-medium, border, border-purp, l, e-4, 0, 0/30"></span>
+        <div, classNam, e = "mt-8, flex, flex-wrap, ga, p-3, justif, y-cent, e, r"></div></div></div>"
+          <span, className="bg-purp, l, e-5, 0, 0/20, tex, t-purp, l, e-200, p, x-4, p, y-2, rounde, d-full, tex, t-sm, fon, t-medium, border, border-purp, l, e-4, 0, 0/30"></div></div></span>
             🧠 Neural, Codin, g;
           </sp, a, n>"
-          <span, className="bg-cy, a, n-5, 0, 0/20, tex, t-cy, a, n-200, p, x-4, p, y-2, rounde, d-full, tex, t-sm, fon, t-medium, border, border-cy, a, n-4, 0, 0/30"></span>
+          <span, className="bg-cy, a, n-5, 0, 0/20, tex, t-cy, a, n-200, p, x-4, p, y-2, rounde, d-full, tex, t-sm, fon, t-medium, border, border-cy, a, n-4, 0, 0/30"></div></div></span>
             📊 Holographic, A, I;
           </sp, a, n>"
-          <span, className="bg-bl, u, e-5, 0, 0/20, tex, t-bl, u, e-200, p, x-4, p, y-2, rounde, d-full, tex, t-sm, fon, t-medium, border, border-bl, u, e-4, 0, 0/30"></span>
+          <span, className="bg-bl, u, e-5, 0, 0/20, tex, t-bl, u, e-200, p, x-4, p, y-2, rounde, d-full, tex, t-sm, fon, t-medium, border, border-bl, u, e-4, 0, 0/30"></div></div></span>
             ⚛️ Quantum, A, I;
           </sp, a, n>"
-          <span, className="bg-gre, e, n-5, 0, 0/20, tex, t-gre, e, n-200, p, x-4, p, y-2, rounde, d-full, tex, t-sm, fon, t-medium, border, border-gre, e, n-4, 0, 0/30"></span>
+          <span, className="bg-gre, e, n-5, 0, 0/20, tex, t-gre, e, n-200, p, x-4, p, y-2, rounde, d-full, tex, t-sm, fon, t-medium, border, border-gre, e, n-4, 0, 0/30"></div></div></span>
             🔬 Molecular, Manufacturin, g;
           </sp, a, n>"
-          <span, className="bg-pi, n, k-5, 0, 0/20, tex, t-pi, n, k-200, p, x-4, p, y-2, rounde, d-full, tex, t-sm, fon, t-medium, border, border-pi, n, k-4, 0, 0/30"></span>
+          <span, className="bg-pi, n, k-5, 0, 0/20, tex, t-pi, n, k-200, p, x-4, p, y-2, rounde, d-full, tex, t-sm, fon, t-medium, border, border-pi, n, k-4, 0, 0/30"></div></div></span>
             📚 AI, Educatio, n;
           </sp, a, n>
         </div>

@@ -3,8 +3,7 @@
 /**
  * Environment Configuration Manager;
  * Provides type-safe access to environment variables with validation;
- */
-
+ */;
 export interface EnvConfig {// TODO: Add content;}
 };
   nodeEnv: 'development' | 'production' | 'test';,
@@ -22,21 +21,17 @@ export interface EnvConfig {// TODO: Add content;}
 }
 
 class EnvironmentConfig {// TODO: Add content;}
-
-}
   private,
   config: EnvConfig;
   private isInitialized = false;
   constructor() {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
     this.config = this.loadConfig();
     this.isInitialized = true;
   }
   private loadConfig(): EnvConfig {// Safely access environment variables with defaults;}
     return {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
 //       nodeEnv,
       apiUr,
   l:
@@ -63,19 +58,17 @@ class EnvironmentConfig {// TODO: Add content;}
    * Get the entire configuration object;
    */
   public getConfig(): Readonly;
-          <EnvConfig> {/* TODO: Fix JSX expression */}
+          <EnvConfig></EnvConfi></EnvConfig> {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
     return Object.freeze({ ...this.config });
   }
   /**
    * Get a specific configuration value;
    */
   public get;
-          <K extends keyof EnvConfig>(ke)
+          <K extends keyof EnvConfig></K>(ke)
   y: K): EnvConfig[K] {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
     return this.config[key];
   }
   /**
@@ -83,8 +76,6 @@ class EnvironmentConfig {// TODO: Add content;}
    */
 
   public isProduction(): boolean {// TODO: Add content;}
-
-}
     return this.config.nodeEnv === 'production';
   }
   /**
@@ -92,8 +83,6 @@ class EnvironmentConfig {// TODO: Add content;}
    */
 
   public isDevelopment(): boolean {// TODO: Add content;}
-
-}
     return this.config.nodeEnv === 'development';
   }
   /**
@@ -101,8 +90,6 @@ class EnvironmentConfig {// TODO: Add content;}
    */
 
   public isTest(): boolean {// TODO: Add content;}
-
-}
     return this.config.nodeEnv === 'test';
   }
   /**
@@ -116,20 +103,17 @@ class EnvironmentConfig {// TODO: Add content;}
   d: boolean;,
     missin,
   g: string[];
-  } {/* TODO: Fix JSX expression */}
+  },
+      {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
     const,
   missing: string[] = [];
-    for (const varName of requiredVars) {/* TODO: Fix JSX expression */}
+    for (const varName of, requiredVars) {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
       if (!this.config[varName]) {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
         missing.push(varName);
       }
-    }
     return {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
@@ -142,19 +126,16 @@ class EnvironmentConfig {// TODO: Add content;}
    * Get API headers with authentication;
    */
   public getApiHeaders(): Record;
-          <string, string> {/* TODO: Fix JSX expression */}
+          <string, string></strin></string> {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
     const,
   headers: Record;
-          <string, string> = {/* TODO: Fix JSX expression */}
+          <string, string></strin></string> = {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
       'Content-Type': 'application/json'
     };
     if (this.config.apiKey) {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
       headers['Authorization'] = `Bearer ${this.config.apiKey}`;
     }
     if (this.config.apiKey) {/* TODO: Fix JSX expression */}
@@ -168,11 +149,8 @@ class EnvironmentConfig {// TODO: Add content;}
    */
 
   public logConfig(): void {// TODO: Add content;}
-
-}
     if (this.isDevelopment()) {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
       console.group(' Environment Configuration');
       console.table({/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -186,21 +164,19 @@ class EnvironmentConfig {// TODO: Add content;}
         'Log Level': this.config.logLevel,
         'API Key Set': !!this.config.apiKey,
         'Sentry DSN Set': !!this.config.sentryDsn,
-
-        'GA Tracking ID Set': !!this.config.gaTrackingId;
-
+)
+        'GA Tracking ID Set': !!this.config.gaTrackingId;)
+)
       });
       console.groupEnd();
     }
-  }
-}
 // Export singleton instance;
 export const envConfig = new EnvironmentConfig()
 // Export convenient helper functions;
-export const isProduction = () => envConfig.isProduction()
-export const isDevelopment = () => envConfig.isDevelopment()
-export const isTest = () => envConfig.isTest()
-export const getConfig = () => envConfig.getConfig()
+export const isProduction = () => envConfig.isProduction();
+export const isDevelopment = () => envConfig.isDevelopment();
+export const isTest = () => envConfig.isTest();
+export const getConfig = () => envConfig.getConfig();
 export const getApiHeaders = () => envConfig.getApiHeaders()`
 
 

@@ -9,8 +9,8 @@ import Footer from '../components/Footer';
 
 'use client';
 import React, { useState } from 'react';
-const ResearchDevelopmentPage: React.FC = () => {
-  const [activeTab, setActiveTab] = useState('ai');
+const ResearchDevelopmentPage: React.FC = () => {;
+const [activeTab, setActiveTab] = useState('ai');
 
   const _researchAreas = [
     {
@@ -20,6 +20,7 @@ const ResearchDevelopmentPage: React.FC = () => {
       color: 'text-purple-400',
       bgColor: 'bg-purple-500/10',
       description:     ,
+}
 $4},
     {
       id: 'quantum',
@@ -43,9 +44,8 @@ $4},
       icon: Lightbulb,
       color: 'text-yellow-400',
       bgColor: 'bg-yellow-500/10',
-      description:     ,
-$4}
-  ];
+      description:     ]
+$4}];
 
   const researchProjects = {
     ai: [
@@ -58,9 +58,8 @@ $4}
         funding: '$2.5M',
         outcomes: [
           'Improved decision accuracy by 40%',
-          'Reduced computational overhead by 30%',
-          'Published 3 papers in top-tier conferences'
-        ],
+          'Reduced computational overhead by 30%']
+          'Published 3 papers in top-tier conferences'],
         icon: Brain,
         color:       ,
 $4},
@@ -73,9 +72,8 @@ $4},
         funding: '$1.8M',
         outcomes: [
           '95% automation of business processes',
-          '300% improvement in decision speed',
-          'Patent filed for core algorithms'
-        ],
+          '300% improvement in decision speed']
+          'Patent filed for core algorithms'],
         icon: Target,
         color:       ,
 $4},
@@ -88,9 +86,8 @@ $4},
         funding: '$3.2M',
         outcomes: [
           '50% reduction in model development time',
-          '25% improvement in model performance',
-          'Open-source framework released'
-        ],
+          '25% improvement in model performance']
+          'Open-source framework released'],
         icon: Microscope,
         color:       ,
 $4}
@@ -105,9 +102,8 @@ $4}
         funding: '$4.1M',
         outcomes: [
           'Quantum speedup demonstrated for specific problems',
-          'Novel quantum ML algorithms developed',
-          'Partnership with leading quantum hardware companies'
-        ],
+          'Novel quantum ML algorithms developed']
+          'Partnership with leading quantum hardware companies'],
         icon: Atom,
         color:       ,
 $4},
@@ -120,9 +116,8 @@ $4},
         funding: '$5.5M',
         outcomes: [
           'Improved quantum error rates',
-          'Practical implementation strategies',
-          'Industry collaboration established'
-        ],
+          'Practical implementation strategies']
+          'Industry collaboration established'],
         icon: Zap,
         color:       ,
 $4}
@@ -137,9 +132,8 @@ $4}
         funding: '$6.8M',
         outcomes: [
           '90% reduction in manual operations',
-          'Self-healing system capabilities',
-          'Real-world deployment in 5 enterprises'
-        ],
+          'Self-healing system capabilities']
+          'Real-world deployment in 5 enterprises'],
         icon: Rocket,
         color:       ,
 $4},
@@ -152,9 +146,8 @@ $4},
         funding: '$1.2M',
         outcomes: [
           'Novel coordination algorithms developed',
-          'Scalability demonstrated up to 1000 agents',
-          'Published in Nature Communications'
-        ],
+          'Scalability demonstrated up to 1000 agents']
+          'Published in Nature Communications'],
         icon: Users,
         color:       ,
 $4}
@@ -169,9 +162,8 @@ $4}
         funding: '$3.7M',
         outcomes: [
           'Novel neuromorphic algorithms',
-          'Hardware-software co-design',
-          'Industry partnerships established'
-        ],
+          'Hardware-software co-design']
+          'Industry partnerships established'],
         icon: Lightbulb,
         color:       ,
 $4},
@@ -184,9 +176,8 @@ $4},
         funding: '$2.1M',
         outcomes: [
           '10x reduction in power consumption',
-          'Real-time processing capabilities',
-          'Commercial product launched'
-        ],
+          'Real-time processing capabilities']
+          'Commercial product launched'],
         icon: Globe,
         color:       ,
 $4}
@@ -224,9 +215,8 @@ $4},
       journal: 'Nature Communications',
       year: '2024',
       impact: 'High',
-      link:     ,
-$4}
-  ];
+      link:     ]
+$4}];
 
   const achievements = [
     {
@@ -247,12 +237,11 @@ $4},
     {
       icon: Globe,
       title: 'Global Collaborations',
-      description:     ,
-$4}
-  ];
+      description:     ]
+$4}];
 
   return (
-    <>
+    <>\</>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16 pt-24">
@@ -267,9 +256,9 @@ $4}
             </p>
           </div>
 
-          {/* Research Areas Tabs */}
-          <div className="mb-12">
-            <div className="flex flex-wrap justify-center gap-4 mb-8">
+          {/* Research Areas Tabs */})
+          <div className="mb-12">)
+            <div className="flex flex-wrap justify-center gap-4 mb-8">)
               {researchAreas.map((area) => (
                 <button
                   key={area.id}
@@ -294,9 +283,8 @@ $4}
 };
   const [activeTab, setActiveTab] = useState('ai');
   const _researchAreas = [
-  // TOD,
-  O: Add items;
-];;
+  // TOD]
+  O: Add items;];;
     {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
@@ -366,8 +354,8 @@ $4}
   O: Add content;}
 };
   a,
-  i: [
-  // TOD,
+  i: []
+  // TOD
   O: Add items]
       {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -385,8 +373,8 @@ $4}
         fundin,
   g: '$2.5M',
         outcome,
-  s: [
-  // TOD,
+  s: []
+  // TOD
   O: Add items]
 //           'Improved decision accuracy by 40%',
 //           'Reduced computational overhead by 30%',
@@ -413,8 +401,8 @@ $4}
         fundin,
   g: '$1.8M',
         outcome,
-  s: [
-  // TOD,
+  s: []
+  // TOD
   O: Add items]
 //           '95% automation of business processes',
 //           '300% improvement in decision speed',
@@ -441,8 +429,8 @@ $4}
         fundin,
   g: '$3.2M',
         outcome,
-  s: [
-  // TOD,
+  s: []
+  // TOD
   O: Add items]
 //           '50% reduction in model development time',
 //           '25% improvement in model performance',
@@ -455,8 +443,8 @@ $4}
       }
 //     ],
     quantu,
-  m: [
-  // TOD,
+  m: []
+  // TOD
   O: Add items]
       {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -474,8 +462,8 @@ $4}
         fundin,
   g: '$4.1M',
         outcome,
-  s: [
-  // TOD,
+  s: []
+  // TOD
   O: Add items]
           'Quantum speedup demonstrated for specific problems',
 //           'Novel quantum ML algorithms developed',
@@ -502,8 +490,8 @@ $4}
         fundin,
   g: '$5.5M',
         outcome,
-  s: [
-  // TOD,
+  s: []
+  // TOD
   O: Add items]
 //           'Improved quantum error rates',
 //           'Practical implementation strategies',
@@ -516,8 +504,8 @@ $4}
       }
 //     ],
     autonomou,
-  s: [
-  // TOD,
+  s: []
+  // TOD
   O: Add items]
       {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -535,8 +523,8 @@ $4}
         fundin,
   g: '$6.8M',
         outcome,
-  s: [
-  // TOD,
+  s: []
+  // TOD
   O: Add items]
 //           '90% reduction in manual operations',
 //           'Self-healing system capabilities',
@@ -563,8 +551,8 @@ $4}
         fundin,
   g: '$1.2M',
         outcome,
-  s: [
-  // TOD,
+  s: []
+  // TOD
   O: Add items]
 //           'Novel coordination algorithms developed',
 //           'Scalability demonstrated up to 1000 agents',
@@ -577,8 +565,8 @@ $4}
       }
 //     ],
     emergin,
-  g: [
-  // TOD,
+  g: []
+  // TOD
   O: Add items]
       {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -596,8 +584,8 @@ $4}
         fundin,
   g: '$3.7M',
         outcome,
-  s: [
-  // TOD,
+  s: []
+  // TOD
   O: Add items]
 //           'Novel neuromorphic algorithms',
 //           'Hardware-software co-design',
@@ -624,8 +612,8 @@ $4}
         fundin,
   g: '$2.1M',
         outcome,
-  s: [
-  // TOD,
+  s: []
+  // TOD
   O: Add items]
 //           '10x reduction in power consumption',
 //           'Real-time processing capabilities',
@@ -639,9 +627,8 @@ $4}
 //     ]
   };
   const publications = [
-  // TOD,
-  O: Add items;
-];;
+  // TOD]
+  O: Add items;];;
     {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
@@ -709,9 +696,8 @@ $4}
     }
   ];
   const achievements = [
-  // TOD,
-  O: Add items;
-];;
+  // TOD]
+  O: Add items;];;
     {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
@@ -756,7 +742,7 @@ $4}
   return (<div>Coming Soon</div>)
   )
     
-          <>
+          <>\</>
       <Navigation /></Navigation>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
         <div className="container mx-auto px-4 py-16 pt-24"></div>

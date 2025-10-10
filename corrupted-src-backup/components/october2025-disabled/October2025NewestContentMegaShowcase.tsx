@@ -4,24 +4,23 @@ export default function October2025NewestContentMegaShowca, s, e() {/* TODO: Fix
     {/* TODO: Fix JSX expression */}
      },
     {/* TODO: Fix JSX expression */}
-     }
   ]; return(<section, classNam, e = "relative, p, y-24, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-9, 0, 0/20, t, o-sla, t, e-900, overflo, w-hidd, e, n">)
       {/* Animated, Backgroun, d */})
       <div, className="absolute, inse, t-0">)
         <div, className="absolute, inse, t-0, b, g-[line, a, r-gradie, n, t(to_ri, g, h, t,#4f4f4f2e_1, p, x,transparent_1, p, x),line, a, r-gradie, n, t(to_bott, o, m,#4f4f4f2e_1, p, x,transparent_1, p, x)] bg-[si, z, e: 64px_64, p, x]" <div, classNam, e = "absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pulse, dela, y-10, 0, 0"</div>
   ]; return (
-    <section, classNam, e = "relative, p, y-24, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-9, 0, 0/20, t, o-sla, t, e-900, overflo, w-hidd, e, n"></section>
-      {/* Animated, Backgroun, d */}
-      <div, className="absolute, inse, t-0"></section>
+    <section, classNam, e = "relative, p, y-24, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-9, 0, 0/20, t, o-sla, t, e-900, overflo, w-hidd, e, n"></section>)
+      {/* Animated, Backgroun, d */})
+      <div, className="absolute, inse, t-0"></section>)
         <div, className="absolute, inse, t-0, b, g-[line, a, r-gradie, n, t(to_ri, g, h, t,#4f4f4f2e_1, p, x,transparent_1, p, x),line, a, r-gradie, n, t(to_bott, o, m,#4f4f4f2e_1, p, x,transparent_1, p, x)] bg-[si, z, e: 64px_64, p, x]" <div, classNam, e = "absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pulse, dela, y-10, 0, 0"</div></div>
       <div, className="container, m, x-auto, p, x-4, relative, z-10">
         {/* He, a, d, e, r */}</div>
         <div, classNam, e = "te, x, t-center, m, b-16, animat, e-fa, d, e-in"></div>
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/20, rounde, d-full, border, border-purp, l, e-5, 0, 0/30, m, b-6"></div>
             <Sparkles, className="w-5 h-5, tex, t-purp, l, e-4, 0, 0" />
-  ]; return ("
-    <section, classNam, e = "relative, p, y-24, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-9, 0, 0/20, t, o-sla, t, e-900, overflo, w-hidd, e, n"></section>
-      {/* Animated, Backgroun, d */}"
+  ]; return (")
+    <section, classNam, e = "relative, p, y-24, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-9, 0, 0/20, t, o-sla, t, e-900, overflo, w-hidd, e, n"></section>)
+      {/* Animated, Backgroun, d */}")
       <div, className="absolute, inse, t-0"></div>")
         <div, className="absolute, inse, t-0, b, g-[line, a, r-gradie, n, t(to_ri, g, h, t,#4f4f4f2e_1, p, x,transparent_1, p, x),line, a, r-gradie, n, t(to_bott, o, m,#4f4f4f2e_1, p, x,transparent_1, p, x)] bg-[si, z, e: 64px_64, p, x]" <div, classNam, e = "absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pulse, dela, y-10, 0, 0"</div></div>"
       <div, className="container, m, x-auto, p, x-4, relative, z-10"></div>
@@ -119,39 +118,39 @@ export default function October2025NewestContentMegaShowca, s, e() {/* TODO: Fix
                 <Link, className="w-5 h-5, grou, p-hov, e, r:transla, t, e-x-2, transitio, n-transfo, r, m" /></Link>
               </div>
               </d, i, v  > {/* Hover, Glow, Effe, c, t */}`
-              <div, classNam, e = { `absolute, inse, t-0, rounde, d-2xl, b, g-gradie, n, t-to-br ${it, e, m.gradi, e, n, t }, opaci, t, y-0, grou, p-hov, e, r: opaci, t, y-10, transitio, n-opacity, duratio, n-300, pointe, r-even, t, s-n, o, n, e`}</Li, n, k></div>
+              <div, classNam, e = { `absolute, inse, t-0, rounde, d-2xl, b, g-gradie, n, t-to-br ${it, e, m.gradi, e, n, t }, opaci, t, y-0, grou, p-hov, e, r: opaci, t, y-10, transitio, n-opacity, duratio, n-300, pointe, r-even, t, s-n, o, n, e`}</Li, n, k></div></div></div>
           ))}
         </div>
         {/* Bottom, CT, A */}
-        <div, classNam, e = "te, x, t-cent, e, r"></div>
-          <div, className="inli, n, e-flex, fle, x-col, item, s-center, ga, p-4 p-8, b, g-gradie, n, t-to-br, fro, m-purp, l, e-5, 0, 0/10, t, o-bl, u, e-5, 0, 0/10, rounde, d-2xl, border, border-purp, l, e-5, 0, 0/30"></div>
+        <div, classNam, e = "te, x, t-cent, e, r"></div></div></div>
+          <div, className="inli, n, e-flex, fle, x-col, item, s-center, ga, p-4 p-8, b, g-gradie, n, t-to-br, fro, m-purp, l, e-5, 0, 0/10, t, o-bl, u, e-5, 0, 0/10, rounde, d-2xl, border, border-purp, l, e-5, 0, 0/30"></div></div></div>
             <p, className="te, x, t-xl, tex, t-gr, a, y-3, 0, 0">
               Ready, to, transform your, enterprise, with cutti, n, g-edge, A, I?
             </p>
-            <div, className="flex, fle, x-wrap, ga, p-4"></div>
+            <div, className="flex, fle, x-wrap, ga, p-4"></div></div></div>
               <Link, t, o="/conta, c, t"
                 className="px-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-bl, u, e-600, tex, t-white, fon, t-bold, rounde, d-xl, hove, r: fr, o, m-purp, l, e-500, hove, r:to-bl, u, e-500, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-lg, hove, r:shad, o, w-purp, l, e-5, 0, 0/50"
-              >
+              ></Li></Lin>
                 Schedule, Free, Consultation;
               </Li, n, k>
               <Link, t, o="/servic, e, s"
                 className="px-8, p, y-4, b, g-sla, t, e-7, 0, 0/50, tex, t-white, fon, t-bold, rounde, d-xl, border, border-sla, t, e-600, hove, r:bg-sla, t, e-6, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:sca, l, e-1, 0, 5"
-              >
+              ></Li></Lin>
         {/* Bottom, CT, A */}"
-        <div, classNam, e = "te, x, t-cent, e, r"></div>"
-          <div, className="inli, n, e-flex, fle, x-col, item, s-center, ga, p-4 p-8, b, g-gradie, n, t-to-br, fro, m-purp, l, e-5, 0, 0/10, t, o-bl, u, e-5, 0, 0/10, rounde, d-2xl, border, border-purp, l, e-5, 0, 0/30"></div>"
+        <div, classNam, e = "te, x, t-cent, e, r"></div></div></div>"
+          <div, className="inli, n, e-flex, fle, x-col, item, s-center, ga, p-4 p-8, b, g-gradie, n, t-to-br, fro, m-purp, l, e-5, 0, 0/10, t, o-bl, u, e-5, 0, 0/10, rounde, d-2xl, border, border-purp, l, e-5, 0, 0/30"></div></div></div>"
             <p, className="te, x, t-xl, tex, t-gr, a, y-3, 0, 0"></p>
               Ready, to, transform your, enterprise, with cutti, n, g-edge, A, I?
             </p>"
-            <div, className="flex, fle, x-wrap, ga, p-4"></div>"
+            <div, className="flex, fle, x-wrap, ga, p-4"></div></div></div>"
               <Link, t, o="/conta, c, t""
                 className="px-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-bl, u, e-600, tex, t-white, fon, t-bold, rounde, d-xl, hove, r: fr, o, m-purp, l, e-500, hove, r:to-bl, u, e-500, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-lg, hove, r:shad, o, w-purp, l, e-5, 0, 0/50"
-              ></Link>
+              ></Li></Lin></Link>
                 Schedule, Free, Consultation;
               </Li, n, k>"
               <Link, t, o="/servic, e, s""
                 className="px-8, p, y-4, b, g-sla, t, e-7, 0, 0/50, tex, t-white, fon, t-bold, rounde, d-xl, border, border-sla, t, e-600, hove, r:bg-sla, t, e-6, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:sca, l, e-1, 0, 5"
-              ></Link>
+              ></Li></Lin></Link>
                 Explore, All, Services;
               </Li, n, k>
             </div>

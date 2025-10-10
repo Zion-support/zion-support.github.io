@@ -114,24 +114,25 @@ import Analytics from './components/Analytics';
 import SecurityEnhancer from './components/SecurityEnhancer';
 import { initializePerformanceOptimizations } from './utils/performanceOptimizations';
 
-// Dynamically import heavy components for better performance
+// Dynamically import heavy components for better performance;
 const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
 const ContentCarousel = lazy(() => import('./components/ContentCarousel'));
 const DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase'));
 const ContentStatistics = lazy(() => import('./components/ContentStatistics'));
 const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'));
 
-// Preload critical components
+// Preload critical components;
 const preloadComponents = () => {
   if (typeof window !== 'undefined') {
     setTimeout(() => {
       import('./components/ContentPromotionBanner');
       import('./components/ContentCarousel');
+}
     }, 100);
   }
 };
 
-// Loading skeleton component
+// Loading skeleton component;
 const ServiceCardSkeleton: React.FC = memo(() => (
   <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card">
     <div className="h-8 bg-gray-200 rounded mb-4 w-3/4"></div>
@@ -141,8 +142,8 @@ const ServiceCardSkeleton: React.FC = memo(() => (
 ));
 ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
 
-const HomePage: React.FC = () => {
-  const [isLoaded, setIsLoaded] = useState(false);
+const HomePage: React.FC = () => {;
+const [isLoaded, setIsLoaded] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -154,25 +155,26 @@ const HomePage: React.FC = () => {
     initializePerformanceOptimizations();
     
     return () => clearTimeout(timer);
+}
   }, []);
 
-  // Analytics tracking for phone clicks - optimized
-  const handlePhoneClick = useCallback(() => {
+  // Analytics tracking for phone clicks - optimized;
+const handlePhoneClick = useCallback(() => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as any).gtag('event', 'phone_click', {
-        event_category: 'engagement',
-        event_label: 'main_phone_number'
+      (window as, any).gtag('event', 'phone_click', {)
+        event_category: 'engagement',)
+        event_label: 'main_phone_number')
+}
       });
     }
   }, []);
 
-  // Enhanced Micro SAAS Services with real functionality and pricing
-  const microSAASServices = [
+  // Enhanced Micro SAAS Services with real functionality and pricing;
+const microSAASServices = [
     {
       title: 'AI Project Manager Pro',
       description: 'Intelligent project planning with AI-powered resource optimization and timeline prediction',
-      icon: '📊',
-      price: '$199/month',
+      icon: price, '$199/month']
       features: ['AI-powered planning', 'Smart task management', 'Predictive analytics', 'Team collaboration', 'Risk assessment', 'Budget optimization'],
       benefits: ['40% productivity increase', '70% fewer delays', '85% planning accuracy', '30% cost reduction'],
       link: '/ai-project-manager',
@@ -378,13 +380,12 @@ const HomePage: React.FC = () => {
     }
   ];
 
-  // Enhanced AI Services with real capabilities and market pricing
-  const aiServices = [
+  // Enhanced AI Services with real capabilities and market pricing;
+const aiServices = [
     {
       title: 'Machine Learning Solutions',
       description: 'Custom ML models for predictive analytics and decision-making with 99.9% accuracy',
-      icon: Brain,
-      price: '$2,500/month',
+      icon: price, '$2,500/month']
       features: ['Predictive Analytics', 'Custom Model Development', 'Data Pipeline Setup', 'Model Monitoring', 'A/B Testing', 'Performance Optimization', 'Real-time Inference', 'AutoML'],
       color: 'text-purple-400',
       benefits: ['40% better predictions', '60% faster insights', 'ROI tracking', 'Scalable models', '99.9% uptime'],
@@ -478,13 +479,12 @@ const HomePage: React.FC = () => {
     }
   ];
 
-  // Enhanced IT Services with comprehensive capabilities
-  const itServices = [
+  // Enhanced IT Services with comprehensive capabilities;
+const itServices = [
     {
       title: 'Cloud Migration & Management',
       description: 'Complete cloud transformation with AWS, Azure, and GCP expertise',
-      icon: Cloud,
-      price: '$1,500/month',
+      icon: price, '$1,500/month']
       features: ['Cloud Strategy', 'Migration Planning', 'Infrastructure Setup', 'Security Configuration', 'Cost Optimization', '24/7 Monitoring', 'Disaster Recovery', 'Compliance'],
       color: 'text-blue-400',
       benefits: ['50% cost reduction', '99.9% uptime', 'Scalable infrastructure', 'Enhanced security', 'ROI tracking'],
@@ -578,13 +578,12 @@ const HomePage: React.FC = () => {
     }
   ];
 
-  // Specialized Services
-  const specializedServices = [
+  // Specialized Services;
+const specializedServices = [
     {
       title: 'AI-Powered Business Intelligence',
       description: 'Transform your data into actionable business insights with advanced AI analytics',
-      icon: BarChart,
-      price: '$2,500/month',
+      icon: price, '$2,500/month']
       features: ['Advanced Analytics', 'Predictive Modeling', 'Real-time Dashboards', 'Custom Reports', 'Data Integration', 'Machine Learning', 'Natural Language Queries', 'Mobile Access'],
       color: 'text-purple-400',
       benefits: ['Data-driven decisions', 'Competitive advantage', 'Revenue growth', 'Cost reduction', 'Operational efficiency'],
@@ -675,9 +674,9 @@ const HomePage: React.FC = () => {
       <Navigation />
 
       {/* Hero Section with Futuristic Design */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Animated Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 via-purple-500/20 to-pink-500/20 animate-pulse"></div>
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">)
+        {/* Animated Background */})
+        <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 via-purple-500/20 to-pink-500/20 animate-pulse"></div>)
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.05%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
         
         {/* Neon Grid Overlay */}

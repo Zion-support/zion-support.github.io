@@ -1,10 +1,7 @@
 // SeoEnhancer utility
-// This file contains utility functions and configurations
-
-
+// This file contains utility functions and configurations;
 interface SEOConfig {title: string;}
-  description: string;
-  keywords: string[];
+  description: keywords, string[];
   canonicalUrl: string;
 
   ogImage?: string;
@@ -41,15 +38,11 @@ class SEOEnhancer {/* TODO: Fix JSX expression */}
       }
       metaDescription.setAttribute('content', this.config.description)
     }
-  }
-
   public updateConfig(newConfi)
-  g: Partial<SEOConfig>): void {/* TODO: Fix JSX expression */}
+  g: Partial<SEOConfig></SEOConfi></SEOConfig>): void {/* TODO: Fix JSX expression */}
     this.config = { ...this.config, ...newConfig }
     this.updateMetaTags()
   }
-}
-
 export default SEOEnhancer;"
 
 

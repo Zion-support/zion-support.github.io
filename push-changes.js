@@ -5,10 +5,7 @@ function runCommand(command) {/* TODO: Fix JSX expression */}
   } catch (error) {/* TODO: Fix JSX expression */}
   r: error.stderr };
   }
-}
-
 function main() {/* TODO: Fix JSX expression */}
-}
   console.log('🚀 Pushing changes to main branch...');
   
   try {
@@ -26,9 +23,10 @@ function main() {/* TODO: Fix JSX expression */}
       if (fallbackResult.error) {
         console.log('❌ Fallback push also failed:', fallbackResult.stderr);
         return false;
+} catch (error) {
+    console.error("Error:", error);
+}
   try {/* TODO: Fix JSX expression */}
-      }
-    }
     
     console.log('✅ Successfully pushed to main branch');
     
@@ -45,6 +43,5 @@ function main() {/* TODO: Fix JSX expression */}
     console.log('❌ Error pushing changes:', error.message);
     return false;
     
-  } catch (error) {/* TODO: Fix JSX expression */}
-  }
 }
+  } catch (error) {/* TODO: Fix JSX expression */}

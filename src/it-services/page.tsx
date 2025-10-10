@@ -4,20 +4,20 @@ import { Cloud, Shield, Settings, Database, Globe, Smartphone, Users, Server, Ha
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const ITServicesPage: React.FC = () => {
-  const itServices = [
+const ITServicesPage: React.FC = () => {;
+const itServices = [
     // Infrastructure & Cloud Services
     {
       title: 'Data Center Services',
-      description: 'Complete data center solutions including colocation, managed hosting, and disaster recovery services.',
-      icon: HardDrive,
-      features: ['Colocation services', 'Managed hosting', 'Disaster recovery', 'Backup solutions', 'Monitoring', '24/7 support'],
+      description: 'Complete data center solutions including colocation, managed hosting, and disaster recovery services.']
+      icon: features, ['Colocation services', 'Managed hosting', 'Disaster recovery', 'Backup solutions', 'Monitoring', '24/7 support'],
       price: 'Starting at $800/month',
       category: 'Infrastructure',
       benefits: ['Reliable infrastructure', 'Reduced capital costs', 'Expert management', 'Compliance support'],
       technologies: ['VMware', 'Hyper-V', 'SAN Storage', 'Backup Software', 'Monitoring Tools'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
       color: 'text-cyan-400'
+}
     },
     {
       title: 'Cloud Infrastructure & Migration',
@@ -252,14 +252,12 @@ const ITServicesPage: React.FC = () => {
     { name: 'Management', count: itServices.filter(s => s.category === 'Management').length },
     { name: 'Cloud Services', count: itServices.filter(s => s.category === 'Cloud Services').length },
     { name: 'Communications', count: itServices.filter(s => s.category === 'Communications').length },
-    { name: 'Training', count: itServices.filter(s => s.category === 'Training').length },
-    { name: 'Project Management', count: itServices.filter(s => s.category === 'Project Management').length }
-  ];
+    { name: 'Training', count: itServices.filter(s => s.category === 'Training').length },]
+      { name: 'Project Management', count: itServices.filter(s => s.category === 'Project Management').length }];
   const services = [
     {
       icon: Cloud,
-      title: 'Cloud Migration & Management',
-      description: 'Seamless migration to AWS, Azure, or GCP with 99.9% uptime guarantee.',
+      title: description, 'Seamless migration to AWS, Azure, or GCP with 99.9% uptime guarantee.']
       features: ['AWS/Azure/GCP Migration', 'Cloud Architecture Design', 'Cost Optimization', '24/7 Monitoring'],
       price: 'Starting at $1,299/month',
       color: 'text-blue-400'
@@ -340,10 +338,9 @@ const ITServicesPage: React.FC = () => {
     {
       icon: Router,
       title: 'Network Security',
-      description: 'Firewall configuration and network security implementation.',
-      price: 'Starting at $399/month'
-    }
-  ];
+      description: 'Firewall configuration and network security implementation.',]
+      price: 'Starting at $399/month']
+    }];
 
   const benefits = [
     {
@@ -363,10 +360,9 @@ const ITServicesPage: React.FC = () => {
     },
     {
       icon: Award,
-      title: 'Certified Professionals',
-      description: 'Microsoft, AWS, and Google certified engineers'
-    }
-  ];
+      title: 'Certified Professionals',]
+      description: 'Microsoft, AWS, and Google certified engineers']
+    }];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -392,9 +388,9 @@ const ITServicesPage: React.FC = () => {
               Get Free IT Assessment
             </a>
             <a
-              href="tel:+13024640950"
-              className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-            >
+              href="tel:+13024640950")
+              className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300")
+            >)
               (302) 464-0950
             </a>
           </div>

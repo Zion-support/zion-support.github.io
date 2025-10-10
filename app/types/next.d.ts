@@ -1,15 +1,15 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-const Next.dPage: React.FC = () => {
-  const features = [
+const Next.dPage: React.FC = () => {;
+const features = [
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
       description: 'Advanced AI technology to transform your business operations and improve efficiency'
+}
     },
     {
       icon: Zap,
@@ -23,10 +23,9 @@ const Next.dPage: React.FC = () => {
     },
     {
       icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
-    }
-  ];
+      title: 'Global Reach',]
+      description: 'Worldwide deployment and support for international businesses']
+    }];
 
   const benefits = [
     'Advanced AI technology integration',
@@ -35,9 +34,8 @@ const Next.dPage: React.FC = () => {
     'Scalable and flexible solutions',
     '24/7 technical support',
     'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ];
+    'Cost-effective pricing plans']
+    'Proven track record of success'];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -55,9 +53,9 @@ const Next.dPage: React.FC = () => {
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our next.d solutions deliver unmatched performance, security, and scalability.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            </p>)
+          </div>)
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">)
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-start space-x-3">
                 <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
@@ -96,152 +94,3 @@ const Next.dPage: React.FC = () => {
 };
 
 export default Next.dPage;
-=======
-// Type definitions for Next.js compatibility in Vite
-export interface Metadata {
-  title?: string;
-  description?: string;
-  keywords?: string[];
-  authors?: Array<{ name: string; url?: string }> | string[];
-  creator?: string;
-  publisher?: string;
-  formatDetection?: {
-    email?: boolean;
-    address?: boolean;
-    telephone?: boolean;
-  };
-  metadataBase?: URL;
-  alternates?: {
-    canonical?: string;
-    languages?: Record<string, string>;
-  };
-  openGraph?: {
-    title?: string;
-    description?: string;
-    url?: string;
-    siteName?: string;
-    images?: Array<{
-      url: string,
-      width?: number;
-      height?: number;
-      alt?: string;
-    }>;
-    locale?: string;
-    type?: string;
-    authors?: Array<{ name: string; url?: string }> | string[];
-    publishedTime?: string;
-  };
-  twitter?: {
-    card?: 'summary' | 'summary_large_image' | 'app' | 'player';
-    site?: string;
-    creator?: string;
-    title?: string;
-    description?: string;
-    images?: string[];
-  };
-  robots?: {
-    index?: boolean;
-    follow?: boolean;
-    googleBot?: {
-      index?: boolean;
-      follow?: boolean;
-      'max-video-preview'?: number;
-      'max-image-preview'?: 'none' | 'standard' | 'large';
-      'max-snippet'?: number;
-    };
-  };
-  verification?: {
-    google?: string;
-    yandex?: string;
-    yahoo?: string;
-    other?: Record<string, string>;
-  };
-}
-
-export interface MetadataRoute {
-  url: string,
-  lastModified?: string | Date;
-  changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
-  priority?: number;
-}
-
-export interface MetadataRouteSitemap extends MetadataRoute {
-  url: string,
-  lastModified?: string | Date;
-  changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
-  priority?: number;
-}
-
-// Custom Next.js types
-export interface NextPageProps {
-  params: { [key: string]: string };
-  searchParams: { [key: string]: string | string[] | undefined };
-}
-
-// API route types
-export interface ApiRouteHandler {
-  (req: Request): Promise<Response>;
-}
-
-// Server components types
-export interface ServerComponentProps {
-  params: { [key: string]: string };
-  searchParams: { [key: string]: string | string[] | undefined };
-}
-
-// Client components types
-export interface ClientComponentProps {
-  children?: React.ReactNode;
-  className?: string;
-}
-
-// Route handlers
-export interface RouteHandler {
-  GET?: (req: Request) => Promise<Response>;
-  POST?: (req: Request) => Promise<Response>;
-  PUT?: (req: Request) => Promise<Response>;
-  DELETE?: (req: Request) => Promise<Response>;
-  PATCH?: (req: Request) => Promise<Response>;
-}
-
-// Dynamic route types
-export interface DynamicRoute {
-  params: { [key: string]: string };
-}
-
-// Static generation types
-export interface StaticProps {
-  props: { [key: string]: any };
-  revalidate?: number;
-  notFound?: boolean;
-}
-
-// ISR types
-export interface ISRConfig {
-  revalidate: number;
-  tags?: string[];
-}
-
-// Edge runtime types
-export interface EdgeRuntime {
-  runtime: 'edge';
-}
-
-// Node.js runtime types
-export interface NodeRuntime {
-  runtime: 'nodejs';
-}
-
-// Extend Next.js types
-declare module 'next' {
-  interface NextApiRequest {
-    user?: {
-      id: string;
-      email: string;
-      name?: string;
-    };
-  }
-}
-
-export {};
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce

@@ -12,84 +12,71 @@ const, Suppor, t: Rea, c, t.FC = () => {
       availabili, t, y: '24/7',
       responseTi, m, e: '< 2, minute, s'
       conta, c, t: '+1 (5, 5, 5) 1, 2, 3-45, 6, 7'
-    }
-    {
+},
+      {
       ic, o, n: MessageCirc, l, e;
       tit, l, e: 'Live, Cha, t'
       descripti, o, n: 'Get, instant, help through, our, chat syst, e, m'
       availabili, t, y: '24/7',
       responseTi, m, e: '< 30, second, s'
       conta, c, t: 'Start, Cha, t'
-    }
-    {
+    },
+      {
       ic, o, n: Ma, i, l;
       tit, l, e: 'Email, Suppor, t'
       descripti, o, n: 'Send, us, detailed questions, and, get comprehensive, answer, s'
       availabili, t, y: '24/7',
       responseTi, m, e: '< 2, hour, s'
       conta, c, t: 'suppo, r, t@ziontechgro, u, p.c, o, m'
-    }
-    {
+    },
+      {
       ic, o, n: Vid, e, o;
       tit, l, e: 'Video, Cal, l'
       descripti, o, n: 'Schedule, a, screen sharing, session, with our, expert, s'
       availabili, t, y: 'Business, Hour, s'
       responseTi, m, e: '< 4, hour, s'
       conta, c, t: 'Schedule, Cal, l'
-const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-  ];
+const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */},
+      {/* TODO: Fix JSX expression */},
+      {/* TODO: Fix JSX expression */},
+      {/* TODO: Fix JSX expression */}]
+    ]
+    }];
   const, faqCategorie, s = [
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-  ];
+    {/* TODO: Fix JSX expression */},
+      {/* TODO: Fix JSX expression */},
+      {/* TODO: Fix JSX expression */},
+      {/* TODO: Fix JSX expression */}]
+    ]
+    }];
   const, faq, s = [
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {
+    {/* TODO: Fix JSX expression */},
+      {/* TODO: Fix JSX expression */},
+      {/* TODO: Fix JSX expression */},
+      {/* TODO: Fix JSX expression */},
+      {/* TODO: Fix JSX expression */},
+      {
       catego, r, y: 'gener, a, l'
       questi, o, n: 'What, is, your response, time, for support, request, s?'
-      answ, e, r: 'We, guarantee, response times, based, on your, support, pla;
-  n: Premi, u, m (30, minute, s), Standa, r, d (2, hour, s), Bas, i, c (24, hour, s).'
-    }
-  ];
+      answ, e, r: 'We, guarantee, response times, based, on your, support, pla;]
+  n: Premi, u, m (30, minute, s), Standa, r, d (2, hour, s), Bas, i, c (24, hour, s).']
+    }];
   const, filteredFaq, s = fa, q, s.filt, e, r(f, a, q => )
     {/* TODO: Fix JSX expression */}
-    }
   ];
-  const, filteredFaq, s = fa, q, s.filt, e, r(f, a, q => 
+  const, filteredFaq, s = fa, q, s.filt, e, r(f, a, q => )
     selectedCatego, r, y === 'a, l, l' || f, a, q.catego, r, y === selectedCatego, r, y;)
   ).filt, e, r(f, a, q =>)
     f, a, q.questi, o, n.toLowerCa, s, e().includ, e, s(searchQue, r, y.toLowerCa, s, e()) ||
     f, a, q.answ, e, r.toLowerCa, s, e().includ, e, s(searchQue, r, y.toLowerCa, s, e())
   );
-  return(<>
+  return(<>\</>
       <Helmet>
         <title>Suppo, r, t - Zion, Tech, Group</title>
         <meta name="descripti, o, n" content="Get, help, and support, for, all Zion, Tech, Group servic, e, s. 24/7, technical, support, documentati, o, n, and, expert, assistance."  />
-        <meta name="keywor, d, s" content="suppo, r, t, he, l, p, technical, assistanc, e, customer, servic, e, documentati, o, n"  />
-        <link, re, l="canonic, a, l" hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/suppo, r, t"  />
-      </Helmet>
+        <meta name="keywor, d, s" content="suppo, r, t, he, l, p, technical, assistanc, e, customer, servic, e, documentati, o, n"  />)
+        <link, re, l="canonic, a, l" hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/suppo, r, t"  />)
+      </Helmet>)
       <div, className="m, i, n-h-screen, b, g-gr, a, y-50">)
         {/* Hero, Sectio, n */})
         <section, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, tex, t-white, p, y-20">)
@@ -103,7 +90,7 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
             <div, className="te, x, t-cent, e, r"></div>
               <h1, className="te, x, t-4x, l, m
   d:te, x, t-5xl, fon, t-bold, m, b-6">
-  return (<>
+  return (<>\</>
       <Helmet></Helmet>
         <title>Suppo, r, t - Zion, Tech, Group</title>"
         <meta name="descripti, o, n" content="Get, help, and support, for, all Zion, Tech, Group servic, e, s. 24/7, technical, support, documentati, o, n, and, expert, assistance."  /></meta>"
@@ -127,9 +114,9 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                 <div, className="relati, v, e"></div>
                   <Search, className="absolute, lef, t-3, to, p-1/2, transfor, m -transla, t, e-y-1/2, tex, t-gr, a, y-40, 0, h-5 w-5"  />
                   <inp, u, t;
-  ty, p, e="te, x, t"
-                    placehold, e, r="Search, for, help articl, e, s, FA, Q, s, or, topic, s..."
-                    val, u, e={searchQue, r, y}
+  ty, p, e="te, x, t")
+                    placehold, e, r="Search, for, help articl, e, s, FA, Q, s, or, topic, s...")
+                    val, u, e={searchQue, r, y})
                     onChan, g, e={(e) => setSearchQue, r, y(e.targ, e, t.val, u, e)}
                     classNa, m, e="w-full, p, l-10, p, r-4, p, y-3, rounde, d-lg, tex, t-gr, a, y-900, focu, s: outli, n, e-none, focu, s:ri, n, g-2, foc, u;
               {/* Search, Ba, r */}"
@@ -244,10 +231,10 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
   ];
   const, quickAction, s = [
     { tit, l, e: 'Report, a, Bug', descripti, o, n: 'Found, an, issue? Let, us, know', li, n, k: '/conta, c, t', ic, o, n: '🐛' }"
-    { tit, l, e: 'Request, a, Feature', descripti, o, n: "Have, an, idea? We'd, love, to hear, i, t", li, n, k: '/conta, c, t', ic, o, n: '💡' }
-    { tit, l, e: 'Schedule, Trainin, g', descripti, o, n: 'Book, a, training session, for, your te, a, m', li, n, k: '/traini, n, g', ic, o, n: '🎓' }
-    { tit, l, e: 'View, Status, Page', descripti, o, n: 'Check, system, status and, uptim, e', li, n, k: '/stat, u, s', ic, o, n: '📊' }
-  ];
+    { tit, l, e: 'Request, a, Feature', descripti, o, n: "Have, an, idea? We'd, love, to hear, i, t", li, n, k: '/conta, c, t', ic, o, n: '💡' },
+      { tit, l, e: 'Schedule, Trainin, g', descripti, o, n: 'Book, a, training session, for, your te, a, m', li, n, k: '/traini, n, g', ic, o, n: '🎓' }]
+    ]
+    { tit, l, e: 'View, Status, Page', descripti, o, n: 'Check, system, status and, uptim, e', li, n, k: '/stat, u, s', ic, o, n: '📊' }];
   return(<div, className="m, i, n-h-screen, b, g-gr, a, y-50">)
       {/* Hero, Sectio, n */})
       <section, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-600, vi, a-purp, l, e-600, t, o-te, a, l-600, tex, t-white, p, y-20">)
@@ -281,9 +268,9 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
               <div, className="relati, v, e"></div>
                 <Search, className="absolute, lef, t-4, to, p-1/2, transfor, m -transla, t, e-y-1/2, tex, t-gr, a, y-40, 0, w-5 h-5"  />
                 <inp, u, t;
-  ty, p, e="te, x, t"
-                  placehold, e, r="Search, our, knowledge ba, s, e..."
-                  val, u, e={searchQue, r, y}
+  ty, p, e="te, x, t")
+                  placehold, e, r="Search, our, knowledge ba, s, e...")
+                  val, u, e={searchQue, r, y})
                   onChan, g, e={(e) => setSearchQue, r, y(e.targ, e, t.val, u, e)}
                   classNa, m, e="w-full, p, l-12, p, r-4, p, y-4, rounde, d-lg, tex, t-gr, a, y-900, tex, t-lg, focu, s: ri, n, g-2, focu, s:ri, n, g-bl, u, e-500, foc, u;
             {/* Search, Ba, r */}"
@@ -312,8 +299,8 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                 classNa, m, e={`px-6, p, y-3, rounde, d-lg, fon, t-semibold, transitio, n-colo, r, s ${`
                   selectedCatego, r, y === 'a, l, l'
                     ? 'bg-bl, u, e-600, tex, t-whi, t, e'}
-                    : 'bg-gr, a, y-200, tex, t-gr, a, y-700, hove, r:bg-gr, a, y-3, 0, 0'}
-            {/* Category, Filte, r */}"
+                    : 'bg-gr, a, y-200, tex, t-gr, a, y-700, hove, r:bg-gr, a, y-3, 0, 0'},
+      {/* Category, Filte, r */}"
             <div, className="flex, fle, x-wrap, justif, y-center, ga, p-4, m, b-12"></div>
               <butt, o, n;
   onCli, c, k={() => setSelectedCatego, r, y('a, l, l')}
@@ -328,8 +315,8 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                   onCli, c, k={() => setSelectedCatego, r, y(catego, r, y.id)}</butt>classNa</butt>, m, e={`px-6, p, y-3, rounde, d-lg, fon, t-semibold, transitio, n-colors, flex, items-cent, e, r ${`
                     selectedCatego, r, y === catego, r, y.id;
                       ? 'bg-bl, u, e-600, tex, t-whi, t, e'}
-                      : 'bg-gr, a, y-200, tex, t-gr, a, y-700, hove, r:bg-gr, a, y-3, 0, 0'}
-              {/* TODO: Fix JSX expression */}
+                      : 'bg-gr, a, y-200, tex, t-gr, a, y-700, hove, r:bg-gr, a, y-3, 0, 0'},
+      {/* TODO: Fix JSX expression */}
   k, e, y={catego, r, y.id}
                   onCli, c, k={() => setSelectedCatego, r, y(catego, r, y.id)}
                   classNa, m, e={/* TODO: Fix JSX expression */}`

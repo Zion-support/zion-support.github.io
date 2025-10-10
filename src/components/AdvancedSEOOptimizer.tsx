@@ -3,16 +3,10 @@ import React, { useEffect, useCallback, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOData {/* TODO: Fix JSX expression */}
-}
-
 interface AdvancedSEOOptimizerProps {/* TODO: Fix JSX expression */}
-}
-
 const,
   AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
-    }
-
     const baseStructuredData = {/* TODO: Fix JSX expression */}
       },
       addres,
@@ -25,34 +19,20 @@ const,
     }
 
     if (seoData.publishedTime) {/* TODO: Fix JSX expression */}
-    }
-
     if (seoData.modifiedTime) {/* TODO: Fix JSX expression */}
-    }
-
     if (seoData.section) {/* TODO: Fix JSX expression */}
-    }
-
     if (seoData.tags && seoData.tags.length > 0) {/* TODO: Fix JSX expression */}
-    }
-
     return baseStructuredData;
   }, [seoData, enableStructuredData]);
 
   const generateBreadcrumbStructuredData = useCallback(() => {/* TODO: Fix JSX expression */}
-    }
-
     return {/* TODO: Fix JSX expression */}
       }))
     };
   }, [seoData, enableStructuredData]);
 
   const generateFAQStructuredData = useCallback(() => {/* TODO: Fix JSX expression */}
-    }
-
-    return {/* TODO: Fix JSX expression */}
-        }
-      }))
+    return {/* TODO: Fix JSX expression */}))
     };
   }, [seoData, enableStructuredData]);
 
@@ -93,19 +73,13 @@ const,
   }, [seoData]);
 
   const generateBreadcrumbStructuredData = useCallback(() => {/* TODO: Fix JSX expression */}
-    }
-
     return {/* TODO: Fix JSX expression */}
       }))
     };
   }, [seoData.breadcrumbs]);
 
   const generateFAQStructuredData = useCallback(() => {/* TODO: Fix JSX expression */}
-    }
-
-    return {/* TODO: Fix JSX expression */}
-        }
-      }))
+    return {/* TODO: Fix JSX expression */}))
     };
   }, [seoData.faqs]);
 
@@ -115,21 +89,17 @@ const,
   const metaTags = generateMetaTags();
 
   useEffect(() => {/* TODO: Fix JSX expression */}
-      }
       metaDescription.setAttribute('content', seoData.description);
 
       // Update canonical URL;
       let canonicalLink = document.querySelector('link[rel="canonical"]');
       if (!canonicalLink) {/* TODO: Fix JSX expression */}
-      }
       canonicalLink.setAttribute('href', seoData.canonicalUrl);
     }
   }, [seoData]);
 
   const addStructuredData = (dat)
   a: Record<string, unknown>) => {/* TODO: Fix JSX expression */}
-    }
-    
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(data);
@@ -137,40 +107,32 @@ const,
     structuredDataRef.current = script;
   };
 
-  useEffect(() => {/* TODO: Fix JSX expression */}
-    }
-  }, [structuredData]);
+  useEffect(() => {/* TODO: Fix JSX expression */}, [structuredData]);
 
 
   useEffect(() => {/* TODO: Fix JSX expression */}
           });
         }
-      }
-    }
   }, []);
 
   return (<Helmet></Helmet>
-      {/* Basic Meta Tags */}
-      <title>{seoData.title}</title>
-      {/* TODO: Fix JSX expression */}
+      {/* Basic Meta Tags */})
+      <title>{seoData.title}</title>)
+      {/* TODO: Fix JSX expression */})
         <meta key={index} name={tag.name} content={tag.content} /></meta>)
-      ))}
-
-      {/* Canonical URL */}
+      ))},
+      {/* Canonical URL */},
       {/* TODO: Fix JSX expression */}"
         <link rel="canonical" href={seoData.canonicalUrl} /></link>
-      )}
-
-      {/* Open Graph Tags */}
+      )},
+      {/* Open Graph Tags */},
       {/* TODO: Fix JSX expression */}
         <meta key={property} property={property} content={content} /></meta>
-      ))}
-
-      {/* Twitter Card Tags */}
+      ))},
+      {/* Twitter Card Tags */},
       {/* TODO: Fix JSX expression */}
         <meta key={name} name={name} content={content} /></meta>
-      ))}
-
+      ))},
       {/* Additional SEO Tags */}"
       <meta name="format-detection" content="telephone=no" /></meta>"
       <meta name="mobile-web-app-capable" content="yes" /></meta>"

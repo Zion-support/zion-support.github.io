@@ -1,9 +1,10 @@
-export const generateSitemap = useCallback((...args) => {
-  const baseUrl = 'https: //ziontechgroup.com',
-  const staticPages = [,
+export const generateSitemap = useCallback((...args) => {;
+const baseUrl = 'https: //ziontechgroup.com',;
+const staticPages = [,;
+}
 export const generateSitemap = useCallback((...args) => {}
-  const baseUrl = 'https://ziontechgroup.com'
-  const staticPages = [
+  const baseUrl = 'https://ziontechgroup.com';
+const staticPages = [
     '',
     '/services',
     '/contact',
@@ -40,26 +41,24 @@ export const generateSitemap = useCallback((...args) => {}
     '/it-support',
     '/compliance',
     '/developer-tools',
-    '/marketing-tools',
-    '/productivity'
-  ]
-  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">,
+    '/marketing-tools']
+    '/productivity'];
+const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9"></urls></urlse>,
   ${staticPages.map(page =>),
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"></urls></urlse>
   ${staticPages.map(page =>)}
-  <url>}
-    <loc>${baseUrl}${page}</loc>
-    <lastmod>${new Date().toISOString()}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>${page === '' ? '1.0' : '0.8'}</priority>
+  <url></u></ur>}
+    <loc></l></lo>${baseUrl}${page}</loc>
+    <lastmod></lastm></lastmo>${new Date().toISOString()}</lastmod>
+    <changefreq></changefr></changefre>weekly</changefreq>
+    <priority></priori></priorit>${page === '' ? '1.0' : '0.8'}</priority>
   </url>`).join('')}
 </urlset>`
   return sitemap;
 }
 export const generateRobotsTxt = useCallback((...args) => {}
-  return `User-agent: *
-Allow: /
+  return `User-agent: Allow, /
 
 Sitemap: https://ziontechgroup.com/sitemap.xml;
 # Crawl-delay for better server performance;
@@ -69,9 +68,7 @@ Disallow: /admin/,
 Disallow: /api/,
 Disallow: /_next/,
 Disallow: /private/`;}
-}
 export interface SitemapEntry {/* TODO: Fix JSX expression */}
-}
 export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expression */}
   l: `${baseUrl}/`,
       lastmo,

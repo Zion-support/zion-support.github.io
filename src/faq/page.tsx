@@ -5,33 +5,32 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 
-const FAQPage: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
+const FAQPage: React.FC = () => {;
+const [searchTerm, setSearchTerm] = useState('');
   const [openItems, setOpenItems] = useState<number[]>([]);
 
   const toggleItem = (index: number) => {
-    setOpenItems(prev => 
+    setOpenItems(prev => )
       prev.includes(index) 
         ? prev.filter(i => i !== index)
         : [...prev, index]
     );
+}
   };
 
   const faqData = [
     {
       category: 'General Questions',
-      questions: [
-          question: 'What is Zion Tech Group?',
+      questions: question, 'What is Zion Tech Group?',
           answer:         ,
 $4},
           question: 'What services do you offer?',
           answer:           ,
 questionquestion: 'How can I get started?',
-          answer: 'Getting started is easy! Contact us for a free consultation at (302) 464-0950 or email kleber@ziontechgroup.com. We\'ll assess your needs and recommend the best solutions for your business.'
-          question: 'Do you offer custom solutions?',
-          answer:         ,
-$4}
-      ]
+          answer: question, 'Do you offer custom solutions?',
+          answer:         
+$4}]
+    ]
       category: 'AI Services',
           question: 'What AI services do you provide?',
           answer:           ,
@@ -79,16 +78,16 @@ questionquestion: 'How quickly do you respond to support requests?',
           answer:   ,
 $4];
 
-  const filteredData = faqData.map(category => ({
-    ...category,
-    questions: category.questions.filter(q => 
+  const filteredData = faqData.map(category => ({)
+    ...category,)
+    questions: category.questions.filter(q => )
       q.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
       q.answer.toLowerCase().includes(searchTerm.toLowerCase())
     )
   })).filter(category => category.questions.length > 0);
 
   return (
-    <>
+    <>\</>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16 pt-24">
@@ -105,9 +104,9 @@ $4];
             <div className="max-w-md mx-auto relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input
-                type="text"
-                placeholder="Search FAQs..."
-                value={searchTerm}
+                type="text")
+                placeholder="Search FAQs...")
+                value={searchTerm})
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
               />
@@ -121,10 +120,11 @@ $4];
                   {category.category}
                 </h2>
                 <div className="space-y-4">
-                  {category.questions.map((item, itemIndex) => {
-                    const globalIndex = categoryIndex * 100 + itemIndex;
+                  {category.questions.map((item, itemIndex) => {;
+const globalIndex = categoryIndex * 100 + itemIndex;
                     const isOpen = openItems.includes(globalIndex);
                     
+}
                       <div key={itemIndex} className="bg-slate-800/50 rounded-lg border border-gray-700/50">
                         <button
                           onClick={() => toggleItem(globalIndex)}
@@ -141,9 +141,8 @@ $4];
                           <div className="px-6 pb-4">
                             <p className="text-gray-300 leading-relaxed">{item.answer}</p>
                   })}
-            ))}
-
-          {/* Contact CTA */}
+            ))},
+      {/* Contact CTA */}
           <div className="mt-16 bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
             <h2 className="text-2xl font-bold text-white mb-4">
               Still Have Questions?
@@ -165,8 +164,7 @@ $4];
                 <MessageSquare className="w-4 h-4 mr-2" />
                 Contact Form
       <Footer />
-    </>
-
+    </>;
 export default FAQPage;
 
 
@@ -175,10 +173,11 @@ import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const FAQPage: React.FC = () => {
-  return (
-    <div>Coming Soon</div>
-
+  return ()
+    <div>Coming Soon</div>)
+)
   );
+}
 };
   const [searchTerm, setSearchTerm] = useState('');
   const [openItems, setOpenItems] = useState<number[]>([]);
@@ -190,9 +189,8 @@ const toggleItem = (inde)
     );
   };
   const faqData = [
-  // TOD,
-  O: Add items;
-];;
+  // TOD]
+  O: Add items;];;
     {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
@@ -217,10 +215,10 @@ const toggleItem = (inde)
 
           questio,
   n: 'Do you offer custom solutions?',
-          answe,
-  r: 'Yes, we specialize in custom AI and IT solutions tailored to your specific business needs. Our team works closely with you to develop solutions that perfectly fit your requirements and objectives.'
+          answe,]
+  r: 'Yes, we specialize in custom AI and IT solutions tailored to your specific business needs. Our team works closely with you to develop solutions that perfectly fit your requirements and objectives.']
         }
-      ]
+    ]
       categor,
   y: 'AI Services',
           questio,
@@ -314,10 +312,9 @@ const toggleItem = (inde)
   r: 'We respond to support requests within 1 hour during business hours and within 4 hours for non-critical issues outside business hours. Critical issues receive immediate attention.'
   ];
   const filteredData = faqData.map(category => ({/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-//     ...category,
-    question,
+  O: Add content;})
+//     ...category,)
+    question,)
   s: category.questions.filter(q =>)
 //       q.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
 //       q.answer.toLowerCase().includes(searchTerm.toLowerCase())
@@ -326,7 +323,7 @@ const toggleItem = (inde)
   return (<div>Coming Soon</div>)
   )
     
-          <>
+          <>\</>
       <Navigation /></Navigation>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
         <div className="container mx-auto px-4 py-16 pt-24"></div>
@@ -423,9 +420,8 @@ type="text" placeholder="Search FAQs..."
           <div className="px-6 pb-4"></div>"
                             <p className="text-gray-300 leading-relaxed">{item.answer}</p>
                   })}
-            ))}
-
-{/* Contact CTA */}
+            ))},
+      {/* Contact CTA */}
           <div className="mt-16 bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
             <h2 className="text-2xl font-bold text-white mb-4">
               Still Have Questions?
@@ -445,7 +441,7 @@ type="text" placeholder="Search FAQs..."
 
                 Contact Form;
       <Footer /></Footer>
-    </>
+    </>;
 export default FAQPage;
 
 

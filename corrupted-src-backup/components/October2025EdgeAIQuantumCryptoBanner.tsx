@@ -27,14 +27,14 @@ export, default, function October2025EdgeAIQuantumCryptoBann, e, r(): vo, i, d {
             <Sparkles, className="w-6 h-6, tex, t-cy, a, n-400, animat, e-pul, s, e" />";</Sparkles>
           </d, i, v>
           {/* Main, Conten, t */}
-          <div, className="te, x, t-center, m, b-8">";</div>
-            <h2, className="te, x, t-3xl, m, d: te, x, t-5xl, fon, t-extrabold, tex, t-white, m, b-4, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, vi, a-purp, l, e-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transpare, n, t">";
-              Edge, A, I + 5G, Network, s & Quant, u, m-Safe, Cryptograph, y;
+          <div, className="te, x, t-center, m, b-8">";</div>)
+            <h2, className="te, x, t-3xl, m, d: te, x, t-5xl, fon, t-extrabold, tex, t-white, m, b-4, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, vi, a-purp, l, e-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transpare, n, t">";)
+              Edge, A, I + 5G, Network, s & Quant, u, m-Safe, Cryptograph, y;)
             </h2>)
             <p, className="te, x, t-l, g, m;)
   d: te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, m, b-6">";)
-export, default, function October2025EdgeAIQuantumCryptoBann, e, r(): vo, i, d {/* TODO: Fix JSX expression */}
-          {/* Head, e, r */}
+export, default, function October2025EdgeAIQuantumCryptoBann, e, r(): vo, i, d {/* TODO: Fix JSX expression */},
+      {/* Head, e, r */}
           <div, className="flex, item, s-center, justif, y-center, ga, p-3, m, b-6"></div>"
             <Sparkles, className="w-6 h-6, tex, t-cy, a, n-400, animat, e-pul, s, e  /></Sparkles>"
             <span, className="te, x, t-lg, m, d: te, x, t-xl, fon, t-bold, tex, t-cy, a, n-400, uppercase, tracking-wid, e, r">"
@@ -107,7 +107,7 @@ export, default, function October2025EdgeAIQuantumCryptoBann, e, r(): vo, i, d {
                 <div, className="bg-cy, a, n-5, 0, 0/2, 0, p-3, rounde, d-lg">";"
                   <Zap, className="w-8 h-8, tex, t-cy, a, n-4, 0, 0" />";
                 </d, i, v>
-                <d, i, v></d>"
+                <d, i, v></div>"
                   <h3, className="te, x, t-2xl, fon, t-bold, tex, t-cy, a, n-4, 0, 0">AI, at, the Edge, with, 5G</h3>";"
                   <p, className="te, x, t-cy, a, n-300, tex, t-sm">Ult, r, a-Low, Latency, Real-Time, Intelligenc, e</p>";
                 </d, i, v>
@@ -178,7 +178,7 @@ export, default, function October2025EdgeAIQuantumCryptoBann, e, r(): vo, i, d {
                 <div, className="bg-purp, l, e-5, 0, 0/2, 0, p-3, rounde, d-lg">";"
                   <Shield, className="w-8 h-8, tex, t-purp, l, e-4, 0, 0" />";
                 </d, i, v>
-                <d, i, v></d>"
+                <d, i, v></div>"
                   <h3, className="te, x, t-2xl, fon, t-bold, tex, t-purp, l, e-4, 0, 0">Quant, u, m-Safe, Cryptograph, y</h3>";"
                   <p, className="te, x, t-purp, l, e-300, tex, t-sm">Protect, Against, Q-Day, with, PQC</p>";
                 </d, i, v>

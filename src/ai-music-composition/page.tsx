@@ -4,8 +4,8 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 
-const AIMusicCompositionPage: React.FC = () => {
-  const features = [
+const AIMusicCompositionPage: React.FC = () => {;
+const features = [
     'AI Composition',
     'Multiple Genres',
     'Custom Length',
@@ -14,26 +14,24 @@ const AIMusicCompositionPage: React.FC = () => {
     'High Quality',
     'Mood Selection',
     'Instrument Selection',
-    'Tempo Control',
-    'Export Options'
-  ];
+    'Tempo Control']
+    'Export Options'];
 
   const benefits = [
     'Unlimited music',
     'No copyright issues',
     'Custom compositions',
     'Professional quality',
-    'Fast generation',
-    'Cost-effective'
-  ];
+    'Fast generation']
+    'Cost-effective'];
 
   const pricingPlans = [
     {
       name: 'Starter',
-      price: '$99',
-      period: '/month',
+      price: period, '/month']
       features: ['10 tracks/month', 'MP3 export', 'Basic genres', 'Email support'],
       popular: false
+}
     },
     {
       name: 'Professional',
@@ -52,7 +50,7 @@ const AIMusicCompositionPage: React.FC = () => {
   ];
 
   return (
-    <>
+    <>\</>
       <SEOOptimizer
         title="AI Music Composer - Generate Royalty-Free Music with AI | Zion Tech Group"
         description="Create professional, royalty-free music and soundtracks with AI Music Composer. Generate custom compositions in any genre starting at $99/month."
@@ -99,9 +97,9 @@ const AIMusicCompositionPage: React.FC = () => {
           {/* Features Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-              AI Music Generation Features
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              AI Music Generation Features)
+            </h2>)
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">)
               {features.map((feature, index) => (
                 <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                   <div className="flex items-center mb-4">

@@ -12,13 +12,13 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const AIMLPlatformPage: React.FC = () => {
-  const features = [
+const AIMLPlatformPage: React.FC = () => {;
+const features = [
     {
       icon: Brain,
-      title: 'Complete ML Platform',
-      description: 'End-to-end machine learning platform with model development, training, and deployment',
+      title: description, 'End-to-end machine learning platform with model development, training, and deployment']
       benefits: ['Rapid model development', 'Automated training', 'Seamless deployment']
+}
     },
       icon: TrendingUp,
       title: 'Advanced Analytics',
@@ -44,14 +44,12 @@ const AIMLPlatformPage: React.FC = () => {
         'Up to 5 models',
         'Basic ML tools',
         'Email support',
-        'Standard compute',
-        'Basic analytics'
-      ],
-      popular: false
-      name: 'Team',
+        'Standard compute']
+        'Basic analytics'],
+      popular: name, 'Team',
       price: '$2,499',
-      description: 'Ideal for development teams',
-  const features = [];
+      description: 'Ideal for development teams',;
+const features = [];
   return (
     {// TODO: Add content;}
 
@@ -96,8 +94,7 @@ const AIMLPlatformPage: React.FC = () => {
         'High-performance compute',
         'Advanced analytics',
         'Team collaboration'
-      popular: true
-      name: 'Enterprise',
+      popular: name, 'Enterprise',
       price: '$4,999',
       description: 'For large organizations',
         'Unlimited models',
@@ -116,13 +113,11 @@ const AIMLPlatformPage: React.FC = () => {
         'Custom compute',
         'Custom analytics',
         'White-label options',
-        'API access'
-
-  const stats = [
-  const stats = [
-  // TOD,
-  O: Add items;
-];;
+        'API access';
+const stats = [;
+const stats = [
+  // TOD]
+  O: Add items;];;
 
     { icon: Users, value: '500+', label: 'Data Scientists' },
     { icon: TrendingUp, value: '95%', label: 'Model Accuracy' },
@@ -172,9 +167,9 @@ const AIMLPlatformPage: React.FC = () => {
 Learn More;
           </div>
 
-      <Footer />
-    </div>
-
+      <Footer />)
+    </div>)
+)
   );
 };
 

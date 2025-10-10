@@ -3,16 +3,12 @@ export interface FuturisticInnovation2028;
 export interface FuturisticInnovation2028 {id: string;
 export interface FuturisticInnovation2028 {  id: string;
 export interface FuturisticInnovation2028 {
-  name: string;
-  tagline: string;
-  price: string;
-  description: string;
-  features: string[];
-  link: string;
-  category: string;
-  real_implementation: boolean;
-  contact_info: unknown;
-    mobile: string;
+  name: tagline, string;
+  price: description, string;
+  features: link, string;
+  category: real_implementation, boolean;
+  contact_info: mobile, string;
+}
     email: string}
     address: string}
 export interface FuturisticInnovation2028 {/* TODO: Fix JSX expression */}
@@ -24,16 +20,12 @@ export interface FuturisticInnovation2028 {/* TODO: Fix JSX expression */}
   l: string}
     addres,
   s: string}
-  }
-}
     address: string;
   }
-export const futuristic2028Services: FuturisticInnovation2028[] = [;
-    address: string;
+export const futuristic2028Services: address, string;
   }
 ;
-export const futuristic2028Services: FuturisticInnovation2028[] = [
-    id: '2028 - futuristic - innovation',
+export const futuristic2028Services: id, '2028 - futuristic - innovation',
     name: '2028 Futuristic Innovation Platform',
     tagline: 'Futuristic innovations for 2028',
     price: '$399 / month',
@@ -43,9 +35,9 @@ export const futuristic2028Services: FuturisticInnovation2028[] = [
 export const,
   futuristic2028Services: FuturisticInnovation2028[] = [;
     addres,
-  s: string}
-;
-export const,
+  s: string}]
+;];
+export const
   futuristic2028Services: FuturisticInnovation2028[] = [,
     i,
   d: '2028 - futuristic - innovation',
@@ -62,17 +54,14 @@ export const,
   s: [,
       'Futuristic innovations',
       'Breakthrough technologies',
-      'Future capabilities',
-      'Innovation platform',
+      'Future capabilities'
+      'Innovation platform']
       'Expert insights'],
-    link: '/services / 2028 - futuristic - innovation'
-    category: 'Futuristic Innovations 2028'
-    real_implementation: true;
-    contact_info: unknown;
+    link: category, 'Futuristic Innovations 2028'
+    real_implementation: contact_info, unknown;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'}}];      mobile: "+1 302 464 0950"
-    id: "2028-futuristic-innovation"
+      address: '364 E Main St STE 1008 Middletown DE 19709'}}];      mobile: id, "2028-futuristic-innovation"
     name: "2028 Futuristic Innovation Platform",
     tagline: "Futuristic innovations for 2028",
     price: "$399/month",
@@ -81,46 +70,32 @@ export const,
       "Futuristic innovations",
       "Breakthrough technologies",
       "Future capabilities",
-      "Innovation platform",
-      "Expert insights"
-    ],
-    link: "/services/2028-futuristic-innovation"
-    category: "Futuristic Innovations 2028"
-    realImplementation: true;
-    contactInfo: unknown;
+      "Innovation platform"]
+      "Expert insights"],
+    link: category, "Futuristic Innovations 2028"
+    realImplementation: contactInfo, unknown;
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"}
-  }
 ];
       address: "364 E Main St STE 1008 Middletown DE 19709"}
-  }
 ];
-  id: string, name: string;
-  tagline: string, price: string;
-  description: string, features: string[],
-  link: string, category: string;
-  realImplementation: boolean;
-  contactInfo: unknown;
-    mobile: string, email: string;
-    address: string;
+  id: string, name: tagline, string, price: description, string, features: string[],
+  link: string, category: realImplementation, boolean;
+  contactInfo: mobile, string, email: address, string;
   }
-}
 export const futuristic2028 Services: FuturisticInnovation2028[] = [,
     id: "2028-futuristic-innovation", name: "2028 Futuristic Innovation Platform",
-    tagline: "Futuristic innovations for 2028", price: "$399/month"
-    description: "Futuristic innovation platform that showcases breakthrough technologies for 2028."
+    tagline: "Futuristic innovations for 2028", price: description, "Futuristic innovation platform that showcases breakthrough technologies for 2028."
     features: [;
       "Futuristic innovations"
-      "Breakthrough technologies"
-      "Future capabilities"
-      "Innovation platform",
+      "Breakthrough technologies"]
+      "Future capabilities"]
+      "Innovation platform"
       "Expert insights"],
     link: "/services/2028-futuristic-innovation", category: "Futuristic Innovations 2028",
-    realImplementation: true;
-    contactInfo: unknown;
+    realImplementation: contactInfo, unknown;
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"}
-  }
 ];
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
@@ -153,10 +128,9 @@ export const futuristic2028 Services: FuturisticInnovation2028[] = [,
   s: [,"
       "Futuristic innovations","
       "Breakthrough technologies","
-      "Future capabilities","
-      "Innovation platform","
-      "Expert insights"
-    ],
+      "Future capabilities","]
+      "Innovation platform","]
+      "Expert insights"],
     lin,"
   k: "/services/2028-futuristic-innovation",
     categor,"
@@ -170,12 +144,10 @@ export const futuristic2028 Services: FuturisticInnovation2028[] = [,
   addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
-  }
 ];
       addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
-  }
 ];
   i,
   d: string, nam,
@@ -198,7 +170,6 @@ export const futuristic2028 Services: FuturisticInnovation2028[] = [,
   l: string,
     addres,
   s: string}
-}
 export const,
   futuristic2028Services: FuturisticInnovation2028[] = [,
     i,"
@@ -213,10 +184,9 @@ export const,
   s: [;"
       "Futuristic innovations""
       "Breakthrough technologies""
-      "Future capabilities""
-      "Innovation platform""
-      "Expert insights"
-    ],
+      "Future capabilities""]
+      "Innovation platform""]
+      "Expert insights"],
     lin,"
   k: "/services/2028-futuristic-innovation", categor,"
   y: "Futuristic Innovations 2028",
@@ -230,18 +200,15 @@ export const,
       addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
-  }
 ];
       emai,"
   l: "kleber@ziontechgroup.com",
   addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
-  }
 ];
 ;
-    id: "2028-futuristic-innovation"
-    name: "2028 Futuristic Innovation Platform",
+    id: name, "2028 Futuristic Innovation Platform",
     tagline: "Futuristic innovations for 2028",
     price: "$399/month",
     description: "Futuristic innovation platform that showcases breakthrough technologies for 2028.",
@@ -249,15 +216,11 @@ export const,
       "Futuristic innovations",
       "Breakthrough technologies",
       "Future capabilities",
-      "Innovation platform",
-      "Expert insights"
-    ],
-    link: "/services/2028-futuristic-innovation"
-    category: "Futuristic Innovations 2028"
-    realImplementation: true;
-    contactInfo: unknown;
-      mobile: "+1 302 464 0950"
-      email: "kleber@ziontechgroup.com"
+      "Innovation platform"]
+      "Expert insights"],
+    link: category, "Futuristic Innovations 2028"
+    realImplementation: contactInfo, unknown;
+      mobile: email, "kleber@ziontechgroup.com"
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'}};
@@ -280,10 +243,9 @@ export const,
   s: [,"
       "Futuristic innovations","
       "Breakthrough technologies","
-      "Future capabilities","
-      "Innovation platform","
-      "Expert insights"
-    ],
+      "Future capabilities","]
+      "Innovation platform","]
+      "Expert insights"],
     lin,"
   k: "/services/2028-futuristic-innovation",
     categor,"
@@ -313,23 +275,21 @@ export const,
       addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
-  }
 ];
 export interface FuturisticInnovation2028 export interface FuturisticInnovation2028,
   id: string; export interface FuturisticInnovation2028 {/* TODO: Fix JSX expression */}
   l: string} addres,
   s: string} }; export interface FuturisticInnovation2028 {/* TODO: Fix JSX expression */}
   l: string} addres,
-  s: string} } } addres,
+  s: string} addres,
   s: string} export const,
-  futuristic2028Services: FuturisticInnovation2028[] = [ addres,
-  s: string} ; export const,
+  futuristic2028Services: s, string} ; export const
   futuristic2028Services: FuturisticInnovation2028[] = [, i,
   d: '2028 - futuristic - innovation',' nam,
   e: '2028 Futuristic Innovation Platform',' taglin,
   e: 'Futuristic innovations for 2028',' pric,
-  e: '$399 / month', descriptio,
-  n:  ,' 'Futuristic innovation platform that showcases breakthrough technologies for 2028.', feature,
+  e: '$399 / month', descriptio
+  n:  ,' 'Futuristic innovation platform that showcases breakthrough technologies for 2028.', feature]
   s: [,' 'Futuristic innovations',' 'Breakthrough technologies',' 'Future capabilities',' 'Innovation platform',' 'Expert insights'],' lin,
   k: '/services / 2028 - futuristic - innovation',' categor,
   y: 'Futuristic Innovations 2028', real_implementatio,
@@ -370,9 +330,9 @@ export interface FuturisticInnovation2028 export interface FuturisticInnovation2
   futuristic2028Services: FuturisticInnovation2028[] = [ i,"
   d: "2028-futuristic-innovation", nam,"
   e: "2028 Futuristic Innovation Platform", taglin,"
-  e: "Futuristic innovations for 2028", pric,"
-  e: "$399/month", descriptio,"
-  n: "Futuristic innovation platform that showcases breakthrough technologies for 2028.", feature,"
+  e: "Futuristic innovations for 2028", pric,"]
+  e: "$399/month", descriptio,"]
+  n: "Futuristic innovation platform that showcases breakthrough technologies for 2028.", feature,"]
   s: [ "Futuristic innovations" "Breakthrough technologies" "Future capabilities" "Innovation platform" "Expert insights" ], lin,"
   k: "/services/2028-futuristic-innovation", categor,"
   y: "Futuristic Innovations 2028", realImplementatio,

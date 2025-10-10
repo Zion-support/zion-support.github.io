@@ -2,16 +2,15 @@
 import React from 'react';
 import { Shield, Lock, Eye, Database, User, Mail, Phone, Calendar, CheckCircle, ArrowRight, Globe, Server, Key, FileText, AlertTriangle } from 'lucide-react';
 
-export default function PrivacyPage() {
-  const lastUpdated = 'January 1, 2024';
+export default function PrivacyPage() {;
+const lastUpdated = 'January 1, 2024';
   
   const dataTypes = [
     {
       category: 'Personal Information',
-      icon: User,
-      description: 'Name, email address, phone number, company information',
+      icon: description, 'Name, email address, phone number, company information']
       examples: ['Contact forms', 'Newsletter signups', 'Account creation']
-    },
+},
     {
       category: 'Usage Data',
       icon: Database,
@@ -44,10 +43,9 @@ export default function PrivacyPage() {
     },
     {
       title: 'Security',
-      icon: Shield,
-      description: 'To protect against fraud and abuse'
-    }
-  ];
+      icon: Shield,]
+      description: 'To protect against fraud and abuse']
+    }];
 
   const rights = [
     {
@@ -67,10 +65,9 @@ export default function PrivacyPage() {
     },
     {
       title: 'Portability',
-      description: 'Receive your data in a structured format',
-      icon: Database
-    }
-  ];
+      description: 'Receive your data in a structured format',]
+      icon: Database]
+    }];
 
   return (
     <div className="min-h-screen bg-white"></div>
@@ -104,9 +101,9 @@ export default function PrivacyPage() {
             </section>
 
             {/* Information We Collect */}
-            <section>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Information We Collect</h2>
-              <div className="grid md:grid-cols-3 gap-6">
+            <section>)
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Information We Collect</h2>)
+              <div className="grid md:grid-cols-3 gap-6">)
                 {dataTypes.map((type, index) => (</div>
                   <div key={index} className="bg-gray-50 rounded-lg p-6"></div>
                     <div className="flex items-center mb-4"></div>
@@ -211,8 +208,8 @@ export default function PrivacyPage() {
               <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-6"></div>
                 <div className="flex items-start"></div>
                   <AlertTriangle className="h-6 w-6 text-yellow-600 mr-3 mt-1" />
-                  <div></div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2">Policy Updates</h3>
+                  <div></div></div></div>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2"></h>Policy Updates</h3>
                     <p className="text-gray-700">
                       We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last updated" date.
                     </p>

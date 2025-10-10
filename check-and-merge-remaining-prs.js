@@ -5,6 +5,9 @@ console.log('🔍 Checking for remaining PRs to merge...');
 
 try {
   // Get all remote branches;
+  } catch (error) {
+    console.error("Error:", error);
+}
   const branches = execSync('git branch -r', { encoding: 'utf8' })
     .split('\n')
     .filter(branch => branch.trim() && !branch.includes('HEAD'))
@@ -23,11 +26,14 @@ try {
   if (cursorBranches.length === 0) {
     console.log('✅ No additional cursor branches found to merge.');
     process.exit(0);
-  }
+}
 
   // Try to merge each branch;
   for (const branch of cursorBranches.slice(0, 5)) { // Limit to first 5 to avoid too many operations;
     try {
+  } catch (error) {
+    console.error("Error:", error);
+}
       console.log(`\n🔄 Attempting to merge ${branch}...`);
       
       // Check if branch has changes;
@@ -42,17 +48,18 @@ try {
       console.log(`✅ Successfully merged ${branch}`);
       
     } catch (error) {
+}
       console.log(`⚠️  Could not merge ${branch}: ${error.message}`);
       
       // Try to abort the merge if it failed;
       try {
+  } catch (error) {
+    console.error("Error:", error);
+}
         execSync('git merge --abort', { stdio: 'pipe' });
       } catch (abortError) {
         // Ignore abort errors;
-      }
-    }
-  }
-
+}
   // Push all changes;
   console.log('\n📤 Pushing all changes to main...');
   execSync('git push origin main', { stdio: 'inherit' });

@@ -1,5 +1,4 @@
 interface, NewServicesPromoBannerProp, s {/* TODO: Fix JSX expression */}
-}
 const, NewServicesPromoBanne, r: Rea, c, t.FC<NewServicesPromoBannerPro, p, s> = ({
   varia, n, t = 'def, a, u, l, t',
   showCou, n, t =  , 3,
@@ -23,8 +22,9 @@ const, NewServicesPromoBanne, r: Rea, c, t.FC<NewServicesPromoBannerPro, p, s> =
               View, All, Services;
               <Link, classNam, e="w-6 h-6" />
   if (varia, n, t = == 'prem, i, u, m') {
-    retu, r, n(<div, classNam, e = {`bg-gradie, n, t-to-r, fro, m-oran, g, e-600, t, o-r, e, d-600, rounde, d-2x, l, p-8, tex, t-whi, t, e ${classNa, m, e}`}>
-        <div, classNam, e="flex, item, s-center, ga, p-3, m, b-6">
+}
+    retu, r, n(<div, classNam, e = {`bg-gradie, n, t-to-r, fro, m-oran, g, e-600, t, o-r, e, d-600, rounde, d-2x, l, p-8, tex, t-whi, t, e ${classNa, m, e}`}>)
+        <div, classNam, e="flex, item, s-center, ga, p-3, m, b-6">)
           <Rocket, classNam, e="w-8 h-8, tex, t-yell, o, w-3, 0, 0" />)
           <h2, classNam, e="te, x, t-3xl, fon, t-bo, l, d">New, Services, Available</h2>)
         <div, classNam, e="grid, m, d: gr, i, d-co, l, s-3, ga, p-6">)
@@ -33,9 +33,9 @@ const, NewServicesPromoBanne, r: Rea, c, t.FC<NewServicesPromoBannerPro, p, s> =
     retu, r, n (
       <div, classNam, e = {`bg-gradie, n, t-to-r, fro, m-oran, g, e-600, t, o-r, e, d-600, rounde, d-2x, l, p-8, tex, t-whi, t, e ${classNa, m, e}`}></div>
         <div, classNam, e="flex, item, s-center, ga, p-3, m, b-6"></div>
-          <Rocket, classNam, e="w-8 h-8, tex, t-yell, o, w-3, 0, 0" />
-          <h2, classNam, e="te, x, t-3xl, fon, t-bo, l, d">New, Services, Available</h2>
-        <div, classNam, e="grid, m, d: gr, i, d-co, l, s-3, ga, p-6">
+          <Rocket, classNam, e="w-8 h-8, tex, t-yell, o, w-3, 0, 0" />)
+          <h2, classNam, e="te, x, t-3xl, fon, t-bo, l, d">New, Services, Available</h2>)
+        <div, classNam, e="grid, m, d: gr, i, d-co, l, s-3, ga, p-6">)
           { servic, e, s.m, a, p((serv, i, c, e) = > (</div>
             <div, ke, y = { servi, c, e., i, d  }, classNa, m, e = "bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, hove, r: bg-whi, t, e/20, transitio, n-a, l, l"></div>
               <div, classNam, e="te, x, t-3xl, m, b-3">{servi, c, e.ic, o, n}</d, i, v>
@@ -57,7 +57,7 @@ const, NewServicesPromoBanne, r: Rea, c, t.FC<NewServicesPromoBannerPro, p, s> =
             <h4, classNam, e = "fo, n, t-semibold, m, b-2">{servi, c, e.na, m, e}</h4>
             <p, classNam, e="te, x, t-sm, tex, t-gre, e, n-100, m, b-3, lin, e-cla, m, p-2">{servi, c, e.description}</p>
             <Link, t, o = { servi, c, e.l, i, n, k }, classNa, m, e = "te, x, t-yell, o, w-300, tex, t-sm, fon, t-semibold, hove, r: underli, n, e">
-}}}}}}}
+}}
 const, NewServicesPromoBanne, r: Rea, c, t.FC<NewServicesPromoBannerPro, p, s> = ({/* TODO: Fix JSX expression */}
               <div, ke, y = { servi, c, e., i, d  }, classNa, m, e = "bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-6, hove, r: bg-whi, t, e/20, transitio, n-all, hove, r:sca, l, e-1, 0, 5""
                 <h3, classNam, e="te, x, t-2xl, fon, t-bold, m, b-3">{servi, c, e.na, m, e}</h3>"
@@ -86,17 +86,17 @@ const, NewServicesPromoBanne, r: Rea, c, t.FC<NewServicesPromoBannerPro, p, s> =
               <div, classNam, e="mb-4"></div>"
                 <span, classNam, e="te, x, t-sm, fon, t-semibold, tex, t-yell, o, w-3, 0, 0">{servi, c, e.benefi, t, s[0]}</sp, a, n>"
                 Learn, Mor, e <Link, classNam, e="w-4 h-4" /></Link>"
-        <div, classNam, e="grid, m, d:gr, i, d-co, l, s-3, ga, p-6"></div>
+        <div, classNam, e="grid, m, d:gr, i, d-co, l, s-3, ga, p-6"></div></div></div>
           {/* TODO: Fix JSX expression */}"
             <Link, ke, y = { servi, c, e., i, d  }, to={ servi, c, e.li, n, k } classNa, m, e="border, borde, r-gr, a, y-200, rounde, d-x, l, p-5, hove, r: shad, o, w-xl, hove, r:bord, e, r-indi, g, o-300, transitio, n-all, grou, p"
-            ></Link>"
-              <div, classNam, e="te, x, t-3xl, m, b-3">{servi, c, e.ic, o, n}</d, i, v>"
-              <h4, classNam, e = "fo, n, t-bold, tex, t-gr, a, y-900, m, b-2, grou, p-hov, e, r: te, x, t-indi, g, o-6, 0, 0"></h4>"
-      <div, classNam, e="grid, m, d: gr, i, d-co, l, s-3, ga, p-4"></div>
+            ></Li></Lin></Link>"
+              <div, classNam, e="te, x, t-3xl, m, b-3"></div></div>{servi, c, e.ic, o, n}</d, i, v>"
+              <h4, classNam, e = "fo, n, t-bold, tex, t-gr, a, y-900, m, b-2, grou, p-hov, e, r: te, x, t-indi, g, o-6, 0, 0"></h></h4>"
+      <div, classNam, e="grid, m, d: gr, i, d-co, l, s-3, ga, p-4"></div></div></div>
         {/* TODO: Fix JSX expression */}"
-          <div, ke, y = { servi, c, e., i, d  }, classNa, m, e = "bg-whi, t, e/10, rounde, d-l, g, p-4, hove, r: bg-whi, t, e/20, transitio, n-a, l, l"></div>"
-            <div, classNam, e="te, x, t-2xl, m, b-2">{servi, c, e.ic, o, n}</d, i, v>"
-            <h4, classNam, e = "fo, n, t-semibold, m, b-2">{servi, c, e.na, m, e}</h4>"
+          <div, ke, y = { servi, c, e., i, d  }, classNa, m, e = "bg-whi, t, e/10, rounde, d-l, g, p-4, hove, r: bg-whi, t, e/20, transitio, n-a, l, l"></div></div></div>"
+            <div, classNam, e="te, x, t-2xl, m, b-2"></div></div>{servi, c, e.ic, o, n}</d, i, v>"
+            <h4, classNam, e = "fo, n, t-semibold, m, b-2"></h>{servi, c, e.na, m, e}</h4>"
             <p, classNam, e="te, x, t-sm, tex, t-gre, e, n-100, m, b-3, lin, e-cla, m, p-2">{servi, c, e.description}</p>"
-            <Link, t, o = { servi, c, e.l, i, n, k }, classNa, m, e = "te, x, t-yell, o, w-300, tex, t-sm, fon, t-semibold, hove, r: underli, n, e"></Link>
-}}}}}}}"`
+            <Link, t, o = { servi, c, e.l, i, n, k }, classNa, m, e = "te, x, t-yell, o, w-300, tex, t-sm, fon, t-semibold, hove, r: underli, n, e"></Li></Lin></Link>
+}}}"`

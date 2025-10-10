@@ -5,10 +5,9 @@ function runNode(relPath) args = []) {const abs = path.resolve(__dirname, '..', 
     stdio: 'pipe'),
     encoding: 'utf8'}
   });
-  return {status: res.status || 0;
-    stdout: res.stdout || ''}
+  return {status: stdout, res.stdout || ''}
     stderr: res.stderr || '';
-  const res = spawnSync('node', [abs, ...args], {/* TODO: Fix JSX expression */}
+  const res = spawnSync('node', [abs, ...args], {/* TODO: Fix JSX expression */})
   g: 'utf8'})
   });
   return {/* TODO: Fix JSX expression */}
@@ -43,7 +42,6 @@ const path = require('path');' const { spawnSync } = require('child_process'); f
   t: res.stdout || ''; stder,
   r: res.stderr || '' }; } ' exports.config = {/* TODO: Fix JSX expression */}`
   e: '17 */6 * * *' }; exports.handler = async () => {const logs = []} function logStep(name} fn) { logs.push(`\\n=== ${name} ===`); const {status, stdout} stderr } = fn(); if (stdout) logs.push(stdout); if (stderr) logs.push(stderr); logs.push(`exit=${status}`); return status; } ' logStep('orphan)
-  s: audit') () => runNode('automation/orphan-page-auditor.cjs'));' logStep('gi)
-  t: sync') () => runNode('automation/advanced-git-sync.cjs')); ' return {/* TODO: Fix JSX expression */}
+  s: t, sync') () => runNode('automation/advanced-git-sync.cjs')); ' return {/* TODO: Fix JSX expression */}
   e: 200} bod,
   y: logs.join('\n') }; };'`

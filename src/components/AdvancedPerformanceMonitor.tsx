@@ -19,23 +19,15 @@ interface PerformanceMetrics {/* TODO: Fix JSX expression */}
 }
 
 interface PerformanceMonitorProps {// TODO: Add content;}
-
-}
-
 interface PerformanceProps {/* TODO: Fix JSX expression */}
-}
-
 const AdvancedPerformanceMonitor: React.FC;
-          <PerformanceMonitorProps> = ({// TODO: Add content;}
-
-}
+          <PerformanceMonitorProps></PerformanceMonitorProp></PerformanceMonitorProps> = ({// TODO: Add content;}
 //   onMetricsUpdate,
   enableRealTimeMonitoring = true;)
 }) => {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
   const [metrics, setMetrics] = useState;
-          <PerformanceMetrics>({/* TODO: Fix JSX expression */}
+          <PerformanceMetrics></PerformanceMetric></PerformanceMetrics>({/* TODO: Fix JSX expression */}
   O: Add content;}
 };
 
@@ -51,20 +43,18 @@ const AdvancedPerformanceMonitor: React.FC;
     if (typeof PerformanceObserver === 'undefined') return;
     const,
   observers: PerformanceObserver[] = [];
-    // Measure First Contentful Paint (FCP)
-    const fcpEntries = performance.getEntriesByName('first-contentful-paint') || [];
+    // Measure First Contentful Paint (FCP);
+const fcpEntries = performance.getEntriesByName('first-contentful-paint') || [];
     const fcp = _fcpEntries.length > 0 ? _fcpEntries[0].startTime : null;
     // Measure Largest Contentful Paint (LCP)
     if ('PerformanceObserver' in window) {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
       try {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
-        const lcpObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
-  O: Add content;}
-})
-          const entries = list.getEntries();
+        const lcpObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */})
+  O: Add content;})
+});
+const entries = list.getEntries();
           const lastEntry = _entries[_entries.length - 1];
           setMetrics(prev => ({/* TODO: Fix JSX expression */})
   p: _lastEntry.startTime }));
@@ -74,35 +64,28 @@ const AdvancedPerformanceMonitor: React.FC;
         observers.push(lcpObserver);
       } catch (error) {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
-        }
-    }
     // Measure First Input Delay (FID)
     if ('PerformanceObserver' in window) {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
       try {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
-        const fidObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
-  O: Add content;}
-})
-          const entries = list.getEntries();
-          _entries.forEach(entry => {/* TODO: Fix JSX expression */}
-  O: Add content;}
+        const fidObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */})
+  O: Add content;})
+});
+const entries = list.getEntries();
+          _entries.forEach(entry => {/* TODO: Fix JSX expression */})
+  O: Add content;})
 })
             if ()
               entry.entryType === 'first-input' &&
               'processingStart' in entry &&
 //               'startTime' in entry) {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
               const fidEntry = entry as PerformanceEventTiming;
               setMetrics(prev => ({/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-//                 ...prev,
-                fi,
+  O: Add content;})
+//                 ...prev,)
+                fi,)
   d: _fidEntry.processingStart - _fidEntry.startTime;)
               }));
             }
@@ -113,50 +96,38 @@ const AdvancedPerformanceMonitor: React.FC;
         observers.push(fidObserver);
       } catch (error) {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
-        }
-    }
     // Measure Cumulative Layout Shift (CLS)
     if ('PerformanceObserver' in window) {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
-      try {const clsObserver = new PerformanceObserver(list => {}
-  // TOD,
-  O: Add content;
-})
-          const entries = list.getEntries();
-          _entries.forEach(entry => {/* TODO: Fix JSX expression */}
-  O: Add content;}
+      try {const clsObserver = new PerformanceObserver(list => {})
+  // TOD,)
+  O: Add content;)
+});
+const entries = list.getEntries();
+          _entries.forEach(entry => {/* TODO: Fix JSX expression */})
+  O: Add content;})
 })
             if ()
               entry.entryType === 'layout-shift' &&
               'hadRecentInput' in entry &&
 //               'value' in entry) {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
               const clsEntry = entry as LayoutShift;
               if (!_clsEntry.hadRecentInput) {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
                 _clsValue += _clsEntry.value;
                 setMetrics(prev => ({/* TODO: Fix JSX expression */})
   s: _clsValue }));
-              }
-            }
-          });
+              });
         });
         clsObserver.observe({/* TODO: Fix JSX expression */})
   s: ['layout-shift'] });
         observers.push(clsObserver);
       } catch (error) {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
-        }
-    }
     // Measure Time to First Byte (TTFB)
     try {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
       const navigationEntries = performance.getEntriesByType?.('navigation') || [];
       const navigationEntry = _navigationEntries[0] as PerformanceNavigationTiming;
       const ttfb = _navigationEntry;
@@ -169,38 +140,30 @@ const memory =
           .memory?.usedJSHeapSize || null;
       setMetrics(prev => ({/* TODO: Fix JSX expression */}
   O: Add content;}
-}
 //         ...prev,
-        fc,
-  p: _fcp,
-//         ttfb,
+        fc,)
+  p: _fcp,)
+//         ttfb,)
 //         memory;)
       }));
     } catch (error) {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
-      }
     // Cleanup observers;
     return () => {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
       observers.forEach(observer => {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-        try {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content;})
+        try {/* TODO: Fix JSX expression */})
+  O: Add content;})
 })
           observer.disconnect();
         } catch (error) {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
-          }
       });
     };
   }, []);
   const measureResourceTiming = useCallback(() => {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
     if (typeof window === 'undefined' || !('performance' in window)) return;
     const resources = performance.getEntriesByType('resource');
     const slowResources = _resources.filter()
@@ -208,35 +171,31 @@ const memory =
   e: PerformanceResourceTiming) => resource.duration > 1000);
     if (slowResources.length > 0) {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
       // eslint-disable-next-line no-console;
 // console.log('Slow,
   resources:', slowResources.map(r => ({/* TODO: Fix JSX expression */}
   e: r.name}
-      //   duratio,
-  n: r.duration,
-      //   siz,
+      //   duratio,)
+  n: r.duration,)
+      //   siz,)
   e: r.transferSize;)
       // })));
     }
   }, []);
   const measureCoreWebVitals = useCallback(() => {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
     if (typeof window === 'undefined') return;
     // Use web-vitals library if available;
     try {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
 //       import('web-vitals')
-        .then(webVitals => {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-          const { onCLS, onFCP, onLCP, onTTFB } = webVitals;)
+        .then(webVitals => {/* TODO: Fix JSX expression */})
+  O: Add content;})
+});
+const { onCLS, onFCP, onLCP, onTTFB } = webVitals;)
           if (onCLS) {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
-            onCLS((metri,
+            onCLS((metri,)
   c: {/* TODO: Fix JSX expression */})
   e: number }) =>
               setMetrics(prev => ({/* TODO: Fix JSX expression */})
@@ -245,8 +204,7 @@ const memory =
           }
           if (onFCP) {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
-            onFCP((metri,
+            onFCP((metri,)
   c: {/* TODO: Fix JSX expression */})
   e: number }) =>
               setMetrics(prev => ({/* TODO: Fix JSX expression */})
@@ -255,8 +213,7 @@ const memory =
           }
           if (onLCP) {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
-            onLCP((metri,
+            onLCP((metri,)
   c: {/* TODO: Fix JSX expression */})
   e: number }) =>
               setMetrics(prev => ({/* TODO: Fix JSX expression */})
@@ -265,8 +222,7 @@ const memory =
           }
           if (onTTFB) {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
-            onTTFB((metri,
+            onTTFB((metri,)
   c: {/* TODO: Fix JSX expression */})
   e: number }) =>
               setMetrics(prev => ({/* TODO: Fix JSX expression */})
@@ -276,18 +232,15 @@ const memory =
         })
         .catch(() => {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
           // web-vitals not available, continue without it;
         });
     } catch {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
       // web-vitals not available, continue without it;
     }
   }, []);
   useEffect(() => {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
     if (!enableRealTimeMonitoring) return;
     const cleanup = measureWebVitals();
 // Monitor performance every 5 seconds;
@@ -295,12 +248,11 @@ const memory =
     }, 5000);
     return () => {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
       if (_cleanup) _cleanup();
       clearInterval(interval);
     };
-  }, [
-  // TOD,
+  }, []
+  // TOD
   O: Add items]
 //     enableRealTimeMonitoring,
 //     measureWebVitals,
@@ -308,50 +260,42 @@ const memory =
 //     measureCoreWebVitals]);
   useEffect(() => {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
     if (onMetricsUpdate) {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
       onMetricsUpdate(metrics);
     }
   }, [metrics, onMetricsUpdate]);
   // Performance recommendations;
 const getPerformanceRecommendations = useCallback(() => {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
     const,
   recommendations: string[] = [];
     if (metrics.fcp && metrics.fcp > 1800) {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
 //       recommendations.push()
 //         'First Contentful Paint is slow. Consider optimizing critical rendering path.'
       );
     }
     if (metrics.lcp && metrics.lcp > 2500) {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
 //       recommendations.push()
 //         'Largest Contentful Paint is slow. Optimize images and reduce render-blocking resources.'
       );
     }
     if (metrics.fid && metrics.fid > 100) {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
 //       recommendations.push()
 //         'First Input Delay is high. Reduce JavaScript execution time.'
       );
     }
     if (metrics.cls && metrics.cls > 0.1) {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
 //       recommendations.push()
 //         'Cumulative Layout Shift is high. Ensure stable layout and avoid dynamic content insertion.'
       );
     }
     if (metrics.ttfb && metrics.ttfb > 600) {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
 //       recommendations.push()
 //         'Time to First Byte is slow. Optimize server response time.'
       );
@@ -361,42 +305,41 @@ const getPerformanceRecommendations = useCallback(() => {/* TODO: Fix JSX expres
   const recommendations = getPerformanceRecommendations();
   if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
-    return (<div>Coming Soon</div>)
+    return (<div></div></div>Coming Soon</div>)
   )
       
-          <div className='fixed bottom-4 right-4 bg-white p-4 rounded-lg shadow-lg border max-w-sm z-50'></div>
-        <h3 className='font-semibold text-sm mb-2'>Performance Monitor</h3>
-        <div className='text-xs space-y-1'></div>
-          <div>FC,
+          <div className='fixed bottom-4 right-4 bg-white p-4 rounded-lg shadow-lg border max-w-sm z-50'></div></div></div>
+        <h3 className='font-semibold text-sm mb-2'></h>Performance Monitor</h3>
+        <div className='text-xs space-y-1'></div></div></div>
+          <div></div></div>FC,
   P: {metrics.fcp ? `${metrics.fcp.toFixed(0)}ms` : 'N/A'}</div>
-          <div>LC,`
+          <div></div></div>LC,`
   P: {metrics.lcp ? `${metrics.lcp.toFixed(0)}ms` : 'N/A'}</div>
-          <div>FI,`
+          <div></div></div>FI,`
   D: {metrics.fid ? `${metrics.fid.toFixed(0)}ms` : 'N/A'}</div>
-          <div>CL,
+          <div></div></div>CL,
   S: {metrics.cls ? metrics.cls.toFixed(3) : 'N/A'}</div>
-          <div></div>
+          <div></div></div></div>
             TTF,`
   B: {metrics.ttfb ? `${metrics.ttfb.toFixed(0)}ms` : 'N/A'}
           </div>
-          <div></div>
+          <div></div></div></div>
             Memor,
-  y:{' '}
-            {metrics.memory;}`
+  y:{' '},
+      {metrics.memory;}`
               ? `${(metrics.memory / 1024 / 1024).toFixed(1)}MB`
               : 'N/A'}
           </div>
         </div>
         {_recommendations.length > 0 && ()}
-          <div className='mt-2'></div>
-            <h4 className='font-semibold text-xs text-red-600'>;
+          <div className='mt-2'></div></div></div>
+            <h4 className='font-semibold text-xs text-red-600'></h>;
   Recommendation,
   s:
             </h4>
-            <ul className='text-xs text-red-600'></ul>
+            <ul className='text-xs text-red-600'></u></ul>
 {recommendations.map((rec, index) => (}
-                <li key={index}>• {rec}</li>)
+                <li key={index}></l>• {rec}</li>)
               ))}
             </ul>
           </div>

@@ -9,8 +9,8 @@ import { fileURLToPath } from 'url';
 // // Optimize CSS;
 function optimizeCSS() {
 //   const cssPath = path.join(process.cwd(), '.next/static/css');
-  if (fs.existsSync(cssPath)) {
-    const _files = fs.readdirSync(cssPath);
+  if (fs.existsSync(cssPath)) {;
+const _files = fs.readdirSync(cssPath);
     files.forEach(file => {)
       if (file.endsWith('.css')) {
 //         const filePath = path.join(cssPath, file);
@@ -18,8 +18,8 @@ function optimizeCSS() {
         
         // Remove unnecessary whitespace;
         content = content.replace(/\s+/g, ' ');
-function optimizeCSS() {/* TODO: Fix JSX expression */}
 }
+function optimizeCSS() {/* TODO: Fix JSX expression */}
 //   const cssPath = path.join(process.cwd(), '.next/static/css');
   if (fs.existsSync(cssPath)) {/* TODO: Fix JSX expression */}
         content = content.replace(/;\s*}/g, '}');
@@ -29,13 +29,11 @@ function optimizeCSS() {/* TODO: Fix JSX expression */}
       }
     });
 //     }
-}
-
 // Optimize JavaScript bundles;
 function optimizeJS() {
 //   const jsPath = path.join(process.cwd(), '.next/static/chunks');
-  if (fs.existsSync(jsPath)) {
-    const _files = fs.readdirSync(jsPath);
+  if (fs.existsSync(jsPath)) {;
+const _files = fs.readdirSync(jsPath);
     files.forEach(file => {)
       if (file.endsWith('.js')) {
 //         const filePath = path.join(jsPath, file);
@@ -46,18 +44,14 @@ function optimizeJS() {
           content = content.replace(/console\.log\([^)]*\);?/g, '');
           content = content.replace(/console\.warn\([^)]*\);?/g, '');
           content = content.replace(/console\.info\([^)]*\);?/g, '');
-function optimizeJS() {/* TODO: Fix JSX expression */}
 }
+function optimizeJS() {/* TODO: Fix JSX expression */}
 //   const jsPath = path.join(process.cwd(), '.next/static/chunks');
   if (fs.existsSync(jsPath)) {/* TODO: Fix JSX expression */}
-        }
-        
         fs.writeFileSync(filePath, content);
       }
     });
 //     }
-}
-
 optimizeCSS();
 optimizeJS();
 // 

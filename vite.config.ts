@@ -2,10 +2,9 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { resolve } from 'path';
 
-export default defineConfig({
+export default defineConfig({)
   plugins: [react()],
-  resolve: {
-    alias: {
+  resolve: alias, {
       '@': resolve(__dirname, './app'),
       '@/components': resolve(__dirname, './app/components'),
       '@/pages': resolve(__dirname, './app'),
@@ -15,10 +14,9 @@ export default defineConfig({
       '@/config': resolve(__dirname, './config'),
       '@/data': resolve(__dirname, './data'),
       '@/content': resolve(__dirname, './content')
-    }
+
   },
-  build: {
-    outDir: 'dist',
+  build: outDir, 'dist',
     assetsDir: 'assets',
     sourcemap: false,
     minify: 'terser',
@@ -26,14 +24,14 @@ export default defineConfig({
     cssTarget: 'chrome80',
     reportCompressedSize: true,
     chunkSizeWarningLimit: 1000,
-    rollupOptions: {
-      output: {
+    rollupOptions: output, {
         manualChunks: (id) => {
           // Vendor chunks
           if (id.includes('node_modules')) {
             if (id.includes('react') || id.includes('react-dom')) {
               return 'vendor-react';
-            }
+
+}
             if (id.includes('react-router')) {
               return 'vendor-router';
             }
@@ -62,9 +60,10 @@ export default defineConfig({
         },
         chunkFileNames: 'assets/[name]-[hash].js',
         entryFileNames: 'assets/[name]-[hash].js',
-        assetFileNames: (assetInfo) => {
-          const ext = assetInfo.name?.split('.').pop();
+        assetFileNames: (assetInfo) => {;
+const ext = assetInfo.name?.split('.').pop();
           if (/\.(css)$/i.test(assetInfo.name || '')) {
+}
             return `assets/css/[name]-[hash].${ext}`;
           }
           if (/\.(png|jpe?g|svg|gif|tiff|bmp|ico)$/i.test(assetInfo.name || '')) {
@@ -74,44 +73,42 @@ export default defineConfig({
             return `assets/fonts/[name]-[hash].${ext}`;
           }
           return `assets/[name]-[hash].${ext}`;
-        }
-      }
-    },
-    terserOptions: {
-      compress: {
+        },
+    terserOptions: compress, {
         drop_console: true,
         drop_debugger: true,
         pure_funcs: ['console.log', 'console.info', 'console.debug'],
         passes: 2,
+
+    }
       },
-      mangle: {
-        safari10: true,
-        properties: {
-          regex: /^_/
-        }
+      mangle: safari10, true,
+        properties: regex, /^_/
+
       },
-      format: {
-        comments: false,
+      format: comments, false,
         ascii_only: true
-      }
-    },
+
+      },
     chunkSizeWarningLimit: 500,
     reportCompressedSize: true,
     cssCodeSplit: true,
     assetsInlineLimit: 4096,
   },
-  server: {
-    port: 3000,
+  server: port, 3000,
     host: true
-  },
-  preview: {
-    port: 4173,
-    host: true
-  },
-  optimizeDeps: {
-    include: ['react', 'react-dom', 'framer-motion', 'lucide-react', 'react-router-dom']
-  },
-  css: {
-    devSourcemap: true
+
   }
-});
+  },
+  preview: port, 4173,
+    host: true
+
+  }
+  },
+  optimizeDeps: include, ['react', 'react-dom', 'framer-motion', 'lucide-react', 'react-router-dom']
+
+  }
+  },
+  css: devSourcemap, true
+
+  });

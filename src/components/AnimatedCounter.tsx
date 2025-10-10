@@ -8,28 +8,28 @@ interface AnimatedCounterProps {
   className?: string;
 }
 
-const AnimatedCounter: React.FC<AnimatedCounterProps> = ({</AnimatedCounterProps>end</AnimatedCounterProps>,
+const AnimatedCounter: React.FC<AnimatedCounterProps></AnimatedCounterPro></AnimatedCounterProp> = ({</AnimatedCounterProps>end</AnimatedCounterProps>,
   duration = 2000,
   prefix = '',
   suffix = '',
   className = ''
-}) => {
-  const [count, setCount] = useState(0);
+}) => {;
+const [count, setCount] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
-  const counterRef = useRef<HTMLDivElement>(null);</HTMLDivElement>useEffect</HTMLDivElement>(() => {
-    const observer = new IntersectionObserver(
+  const counterRef = useRef<HTMLDivElement></HTMLDivEleme></HTMLDivElemen>(null);</HTMLDivElement>useEffect</HTMLDivElement>(() => {;
+const observer = new IntersectionObserver()
       ([entry]) => {
         if (entry.isIntersecting && !isVisible) {
           setIsVisible(true);
           observer.disconnect();
-        }
+}
       },
       { threshold: 0.1 }
     );
 
     if (counterRef.current) {
       observer.observe(counterRef.current);
-    }
+}
 
     return () => observer.disconnect();
   }, [isVisible]);
@@ -44,15 +44,15 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({</AnimatedCounterProps
       if (!startTime) startTime = currentTime;
       const progress = Math.min((currentTime - startTime) / duration, 1);
       
-      // Easing function for smooth animation
-      const easeOutQuart = 1 - Math.pow(1 - progress, 4);
+      // Easing function for smooth animation;
+const easeOutQuart = 1 - Math.pow(1 - progress, 4);
       const currentCount = Math.floor(easeOutQuart * end);
       
       setCount(currentCount);
 
       if (progress < 1) {
         animationFrame = requestAnimationFrame(animate);
-      }
+}
     };
 
     animationFrame = requestAnimationFrame(animate);
@@ -60,13 +60,15 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({</AnimatedCounterProps
     return () => {
       if (animationFrame) {
         cancelAnimationFrame(animationFrame);
-      }
+}
     };
   }, [isVisible, end, duration]);
 
-  return (
-    <div ref={counterRef} className={className}></di>
-      {prefix}{count.toLocaleString()}{suffix}
+  return ()
+    <div ref={counterRef} className={className}></div></div>)
+      {prefix},
+      {count.toLocaleString()},
+      {suffix}
     </div>
   );
 };

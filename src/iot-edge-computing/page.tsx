@@ -28,8 +28,8 @@ export default function IotEdgeComputingPage() {
               Contact Us
             </a>
           </div>
-        </div>
-      </div>
-    </div>
+        </div>)
+      </div>)
+    </div>)
   );
 }

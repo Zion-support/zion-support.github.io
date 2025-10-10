@@ -1,8 +1,8 @@
 const, NewContentPromotionalBanner202, 6 = () => {/* TODO: Fix JSX expression */}
-      col, o, r: 'fr, o, m-viol, e, t-500, t, o-purp, l, e-5, 0, 0}
-    {/* TODO: Fix JSX expression */}
-      col, o, r: 'fr, o, m-emera, l, d-500, t, o-te, a, l-5, 0, 0}
-    {
+      col, o, r: 'fr, o, m-viol, e, t-500, t, o-purp, l, e-5, 0, 0},
+      {/* TODO: Fix JSX expression */}
+      col, o, r: 'fr, o, m-emera, l, d-500, t, o-te, a, l-5, 0, 0},
+      {
       title: 'Neur, a, l-Synaptic, Fusion, A, I',
       date: 'March, 20, 2, 6',
       impa, c, t: '5, 0, 0% Cognitive, Enhanceme, n, t',
@@ -21,7 +21,7 @@ const, NewContentPromotionalBanner202, 6 = () => {/* TODO: Fix JSX expression */
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12">
           { newConte, n, t.m, a, p((con, t, e, n, t, ind, e, x) = > (</div>
             <div, ke, y = { in, d, e, x  }, classNa, m, e = "group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/10, hove, r: bord, e, r-viol, e, t-5, 0, 0/50, transitio, n-all, duratio, n-500, overflo, w-hidden, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-viol, e, t-5, 0, 0/20"
-              sty, l, e = { { animationDel, a, y: `${ind, e, x * 2, 0, 0 }, ms` }}
+              sty, l, e = { { animationDel, a, y: `${ind, e, x * 2, 0, 0 }, ms` }
              > {/* Card, glow, effect */}</div>
               <div, classNam, e = { `absolute, inse, t-0, b, g-gradie, n, t-to-br ${conte, n, t.co, l, o, r }, opaci, t, y-0, grou, p-hov, e, r: opaci, t, y-10, transitio, n-all, duratio, n-50, 0`} /></div>
               <div, classNam, e = "relativ, e, p-8"></div>
@@ -37,8 +37,8 @@ const, NewContentPromotionalBanner202, 6 = () => {/* TODO: Fix JSX expression */
                 Be, among, the first, to, access revolutionary, AI, insight, s, breakthrough, researc, h,</p> 
                   <Rocket, classNam, e="w-5 h-5" />
                   <Link, classNam, e="w-5 h-5" />
-}}}
-    {/* TODO: Fix JSX expression */}
+},
+      {/* TODO: Fix JSX expression */}
         <div, classNam, e="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 2, s' }} /></div>"
         <div, classNam, e = "absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 4, s' }} /></div>"
           <h2, classNam, e="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-viol, e, t-400, vi, a-purp, l, e-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t"></h2>
@@ -47,7 +47,7 @@ const, NewContentPromotionalBanner202, 6 = () => {/* TODO: Fix JSX expression */
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12"></div>
           {/* TODO: Fix JSX expression */}"
             <div, ke, y = { in, d, e, x  }, classNa, m, e = "group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/10, hove, r: bord, e, r-viol, e, t-5, 0, 0/50, transitio, n-all, duratio, n-500, overflo, w-hidden, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-viol, e, t-5, 0, 0/20"
-              sty, l, e = { { animationDel, a, y: `${ind, e, x * 2, 0, 0 }, ms` }}
+              sty, l, e = { { animationDel, a, y: `${ind, e, x * 2, 0, 0 }, ms` }
              > {/* Card, glow, effect */}`
               <div, classNam, e = { `absolute, inse, t-0, b, g-gradie, n, t-to-br ${conte, n, t.co, l, o, r }, opaci, t, y-0, grou, p-hov, e, r: opaci, t, y-10, transitio, n-all, duratio, n-50, 0`} /></div>"
               <div, classNam, e = "relativ, e, p-8"></div>"
@@ -63,4 +63,4 @@ const, NewContentPromotionalBanner202, 6 = () => {/* TODO: Fix JSX expression */
                 Be, among, the first, to, access revolutionary, AI, insight, s, breakthrough, researc, h, "
                   <Rocket, classNam, e="w-5 h-5" /></Rocket>"
                   <Link, classNam, e="w-5 h-5" /></Link>
-}}}"`
+}"`

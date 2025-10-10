@@ -1,18 +1,13 @@
 import React, { useState, useEffect } from 'react';
 :corrupted-src-backup/components/AnalyticsDashboard.tsx;
 interface AnalyticsData {
-  pageViews: number;
-  uniqueVisitors: number;
-  bounceRate: number;
-  avgSessionDuration: number;
-  conversionRate: number;
-  topPages: Array<{,
-    path: string;
-    views: number;
-  }>;
+  pageViews: uniqueVisitors, number;
+  bounceRate: avgSessionDuration, number;
+  conversionRate: topPages, Array<{,
+    path: views, number;
+}>;
   trafficSources: Array<{,
-    source: string;
-    percentage: number;
+    source: percentage, number;
 interface AnalyticsData {/* TODO: Fix JSX expression */}
   }>;
   trafficSource,

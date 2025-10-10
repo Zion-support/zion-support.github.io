@@ -1,6 +1,7 @@
 impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m";"
 impo, r, t { octoberUltimateEnterpriseConte, n, t } fr, o, m "../conte, n, t/octob, e, r-20, 2, 5-ultima, t, e-enterpri, s, e-conte, n, t";
 const October2025UltimateEnterpriseBanne, r = () => { 
+}
   con, s, t [multiCloudConte, n, t, conversationalAIConte, n, t] = octoberUltimateEnterpriseConte, n, t; return(<div, classNam, e = "relative, p, y-16, p, x-4, s, m: px-6, l, g:px-8, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, overflo, w-hidd, e, n"  > {/* Animated, Backgro, u, n, d */ }
       <div, classNam, e = "absolute, inse, t-0, opacit, y-20">
         <div, className="absolute, to, p-0, lef, t-0 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e" />
@@ -21,9 +22,9 @@ const October2025UltimateEnterpriseBanne, r = () => {
             <Sparkles, className="w-5 h-5, animat, e-sp, i, n" />
           </div>
           <h2, className="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, tex, t-white, m, b-6, leadin, g-tig, h, t"></h2>
-            <span, className="bg-cl, i, p-text, tex, t-transparent, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, vi, a-bl, u, e-400, t, o-purp, l, e-4, 0, 0">
-              Ultimate, Enterprise, AI;
-            </sp, a, n>
+            <span, className="bg-cl, i, p-text, tex, t-transparent, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, vi, a-bl, u, e-400, t, o-purp, l, e-4, 0, 0">)
+              Ultimate, Enterprise, AI;)
+            </sp, a, n>)
             <br /> <span, className="te, x, t-whi, t, e">Revolution, 202, 5</sp, a, n>)
           </h2>)
           <p, className="te, x, t-2xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, fon, t-medi, u, m">)
@@ -59,7 +60,7 @@ const October2025UltimateEnterpriseBanne, r = () => {
                 <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-cy, a, n-400, transitio, n-colo, r, s">
                   {multiCloudConte, n, t.ic, o, n} Adaptive, Mult, i-Cloud, Intelligenc, e;
                 </h3>
-                <p, classNam, e = "te, x, t-gr, a, y-300, tex, t-lg, leadin, g-relaxed, m, b-4">
+                <p, classNam, e = "te, x, t-gr, a, y-300, tex, t-lg, leadin, g-relaxed, m, b-4">;
 const October2025UltimateEnterpriseBanne, r = () => {/* TODO: Fix JSX expression */}"
     <div, classNam, e = "relative, p, y-16, p, x-4, s, m: px-6, l, g:px-8, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, overflo, w-hidd, e, n"  > {/* Animated, Backgro, u, n, d */ }"
       <div, classNam, e = "absolute, inse, t-0, opacit, y-20"></div>"
@@ -338,41 +339,41 @@ const October2025UltimateEnterpriseBanne, r = () => {/* TODO: Fix JSX expression
               <div, className="flex, item, s-center, justif, y-center, m, b-3"></div>"
                 <Sparkles, className="w-1, 0, h-10, tex, t-purp, l, e-4, 0, 0" /></Sparkles>
               </div>"
-              <div, className="te, x, t-3xl, fon, t-extrabold, tex, t-white, m, b-2">Fortune, 10, 0</div>"
-              <div, className="te, x, t-sm, tex, t-gr, a, y-300, fon, t-medi, u, m">Proven, Result, s</div>
+              <div, className="te, x, t-3xl, fon, t-extrabold, tex, t-white, m, b-2"></div></div>Fortune, 10, 0</div>"
+              <div, className="te, x, t-sm, tex, t-gr, a, y-300, fon, t-medi, u, m"></div></div>Proven, Result, s</div>
             </div>
           </div>
         </div>
         {/* Botto, m, C, T, A */}
-        <div, classNam, e = "te, x, t-center, m, t-12"></div>
+        <div, classNam, e = "te, x, t-center, m, t-12"></div></div></div>
           <p, className="te, x, t-xl, tex, t-gr, a, y-300, m, b-6, fon, t-medi, u, m">
             Ready, to, transform your, enterprise, with cutti, n, g-edge, AI, solutions?
           </p>
-          <div, className="flex, fle, x-col, s, m: fl, e, x-row, item, s-center, justif, y-center, ga, p-4"></div>
+          <div, className="flex, fle, x-col, s, m: fl, e, x-row, item, s-center, justif, y-center, ga, p-4"></div></div></div>
             <Link, t, o="/conta, c, t"
               className="px-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-cy, a, n-600, vi, a-bl, u, e-600, t, o-purp, l, e-600, hove, r:fr, o, m-cy, a, n-500, hove, r:v, i, a-bl, u, e-500, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, rounde, d-xl, transitio, n-all, duratio, n-300, transform, hover:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-bl, u, e-5, 0, 0/50, tex, t-lg"
-            >
+            ></Li></Lin>
               Schedule, Free, Assessment;
             </Li, n, k>
             <Link, t, o="/bl, o, g"
               className="px-8, p, y-4, b, g-whi, t, e/10, hove, r:bg-whi, t, e/20, tex, t-white, fon, t-bold, rounde, d-xl, transitio, n-all, duratio, n-300, transform, hover:sca, l, e-105, borde, r-2, borde, r-whi, t, e/30, hove, r:bord, e, r-whi, t, e/50, tex, t-lg"
-            >
+            ></Li></Lin>
         {/* Botto, m, C, T, A */}"
-        <div, classNam, e = "te, x, t-center, m, t-12"></div>"
+        <div, classNam, e = "te, x, t-center, m, t-12"></div></div></div>"
           <p, className="te, x, t-xl, tex, t-gr, a, y-300, m, b-6, fon, t-medi, u, m"></p>
             Ready, to, transform your, enterprise, with cutti, n, g-edge, AI, solutions?
           </p>"
-          <div, className="flex, fle, x-col, s, m: fl, e, x-row, item, s-center, justif, y-center, ga, p-4"></div>"
+          <div, className="flex, fle, x-col, s, m: fl, e, x-row, item, s-center, justif, y-center, ga, p-4"></div></div></div>"
             <Link, t, o="/conta, c, t""
               className="px-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-cy, a, n-600, vi, a-bl, u, e-600, t, o-purp, l, e-600, hove, r:fr, o, m-cy, a, n-500, hove, r:v, i, a-bl, u, e-500, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, rounde, d-xl, transitio, n-all, duratio, n-300, transform, hove,"
   r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-bl, u, e-5, 0, 0/50, tex, t-lg"
-            ></Link>
+            ></Li></Lin></Link>
               Schedule, Free, Assessment;
             </Li, n, k>"
             <Link, t, o="/bl, o, g""
               className="px-8, p, y-4, b, g-whi, t, e/10, hove, r:bg-whi, t, e/20, tex, t-white, fon, t-bold, rounde, d-xl, transitio, n-all, duratio, n-300, transform, hove,"
   r:sca, l, e-105, borde, r-2, borde, r-whi, t, e/30, hove, r:bord, e, r-whi, t, e/50, tex, t-lg"
-            ></Link>
+            ></Li></Lin></Link>
               Explore, All, Insights;
             </Li, n, k>
           </div>

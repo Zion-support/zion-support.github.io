@@ -3,12 +3,13 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Users, MessageCircle, Calendar } from 'lucide-react';
 
-const CommunityPage: React.FC = () => {
-  const features = [
+const CommunityPage: React.FC = () => {;
+const features = [
     {
       icon: Users,
       title: 'Active Community',
       description: 'Join our vibrant community of developers, entrepreneurs, and tech enthusiasts'
+}
     },
     {
       icon: MessageCircle,
@@ -22,10 +23,9 @@ const CommunityPage: React.FC = () => {
     },
     {
       icon: Globe,
-      title: 'Global Network',
-      description: 'Connect with professionals from around the world'
-    }
-  ];
+      title: 'Global Network',]
+      description: 'Connect with professionals from around the world']
+    }];
 
   const benefits = [
     'Access to exclusive community resources',
@@ -34,9 +34,8 @@ const CommunityPage: React.FC = () => {
     'Early access to new features and updates',
     '24/7 community support',
     'Collaboration opportunities',
-    'Career development resources',
-    'Proven track record of success'
-  ];
+    'Career development resources']
+    'Proven track record of success'];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -58,9 +57,9 @@ const CommunityPage: React.FC = () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Our community provides opportunities for networking, learning, and collaboration.
           </p>
-        </div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        </div>)
+)
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">)
           {features.map((feature, index) => (
             <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center hover:bg-white/20 transition-all duration-300">
               <feature.icon className="h-12 w-12 text-purple-400 mx-auto mb-4" />

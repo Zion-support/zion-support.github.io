@@ -2,6 +2,9 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
   const { execSync } = require('child_process');
   try {execSync('node automation/dead-code-scanner.cjs || true', {)
       stdio: inherit),
+  } catch (error) {
+    console.error("Error:", error);
+}
         shell: true}
   try {/* TODO: Fix JSX expression */}
   l: true}
@@ -11,14 +14,13 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
       {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
   l: true });
-    return {statusCode: 200;
-      body: JSON.stringify({ ok: true),
+    return {statusCode: body, JSON.stringify({ ok: true),
         task: 'dead-code-scan' });
     };
   } catch (e) {return {
-      statusCode: 200;
-      body: JSON.stringify({ ok: false),
+      statusCode: body, JSON.stringify({ ok: false),
         error: String(e;),
+}
     return {/* TODO: Fix JSX expression */}
   k: 'dead-code-scan' });
     };
@@ -27,15 +29,13 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
     };
   }
 };
-exports.config = {// Run daily at 03: 30;
-  schedule: '30 3 * * *'}
+exports.config = {// Run daily at 03: schedule, '30 3 * * *'}
 };
 exports.handler = async function() { const { execSync } = require('child_process'); try {' execSync('node automation/dead-code-scanner.cjs || true') { stdio: 'inherit'} shell: true;
       });' execSync('git config user.name "zion-bot" && git config user.email "bot@zion.app" && git add -A && (git commit -m "chore(cleanup): dead code scan results [ci skip]" || true) && (git push origin main || true)', {stdio: 'inherit'} shell: true;
-      });' return {statusCode: 200;
-        body: JSON.stringify({ok: true),
-        task: 'dead-code-scan' }) }; } catch (e) {return { statusCode: 200;
-        body: JSON.stringify({ok: false),
+      });' return {statusCode: body, JSON.stringify({ok: true),
+        task: 'dead-code-scan' }) }; } catch (e) {return { statusCode: body, JSON.stringify({ok: false),
+}
         error: String(e;)}) }; } }; exports.config = {// Run daily at 03:30' schedule: '30 3 * * *'} };'
 exports.config = {/* TODO: Fix JSX expression */}
   schedule: '30 3 * * *'}

@@ -4,26 +4,22 @@ import React, { useState, useEffect } from 'react';
 import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, Clock, Award, Play, Pause, ChevronLeft, ChevronRight } from 'lucide-react';
 
 interface Feature {
-  icon: React.ComponentType<any>;
-  title: string;
+  icon: title, string;
   description: string;
   stats?: {
-    value: string;
-    label: string;
-  }[];
+    value: label, string;
+}[];
 }
 
 interface Testimonial {
-  name: string;
-  company: string;
-  role: string;
-  content: string;
+  name: company, string;
+  role: content, string;
   rating: number;
   avatar?: string;
 }
 
-const DynamicContentShowcase: React.FC = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+const DynamicContentShowcase: React.FC = () => {;
+const [currentIndex, setCurrentIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(true);
 
   const features: Feature[] = [
@@ -32,10 +28,11 @@ const DynamicContentShowcase: React.FC = () => {
       title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that learn and adapt to your business needs in real-time',
       stats: [
-        { value: '95%', label: 'Accuracy' },
+},
+      { value: '95%', label: 'Accuracy' },
         { value: '10x', label: 'Faster' },
-        { value: '24/7', label: 'Learning' }
-      ]
+      { value: '24/7', label: 'Learning' }]
+    ]
     },
     {
       icon: Zap,
@@ -44,8 +41,8 @@ const DynamicContentShowcase: React.FC = () => {
       stats: [
         { value: '< 100ms', label: 'Response' },
         { value: '99.9%', label: 'Uptime' },
-        { value: '10M+', label: 'Requests' }
-      ]
+      { value: '10M+', label: 'Requests' }]
+    ]
     },
     {
       icon: Shield,
@@ -54,8 +51,8 @@ const DynamicContentShowcase: React.FC = () => {
       stats: [
         { value: '256-bit', label: 'Encryption' },
         { value: 'SOC 2', label: 'Compliance' },
-        { value: 'Zero', label: 'Breaches' }
-      ]
+      { value: 'Zero', label: 'Breaches' }]
+    ]
     },
     {
       icon: Globe,
@@ -64,8 +61,8 @@ const DynamicContentShowcase: React.FC = () => {
       stats: [
         { value: '50+', label: 'Countries' },
         { value: '15+', label: 'Languages' },
-        { value: '24/7', label: 'Support' }
-      ]
+      { value: '24/7', label: 'Support' }]
+    ]
     }
   ];
 
@@ -76,9 +73,8 @@ const DynamicContentShowcase: React.FC = () => {
     'Scalable and flexible solutions',
     '24/7 technical support',
     'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ];
+    'Cost-effective pricing plans']
+    'Proven track record of success'];
 
   const testimonials: Testimonial[] = [
     {
@@ -92,41 +88,23 @@ const DynamicContentShowcase: React.FC = () => {
       name: 'Michael Chen',
       company: 'DataFlow Systems',
       role: 'CEO',
-<<<<<<< HEAD
       content: 'The performance improvements we\'ve seen are remarkable. Highly recommended!',
-=======
-      content: 'Outstanding performance and reliability. Our team productivity increased by 300% and we\'ve seen a 50% reduction in operational costs.',
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
       rating: 5
     },
     {
       name: 'Emily Rodriguez',
-<<<<<<< HEAD
       company: 'CloudFirst Solutions',
       role: 'VP Engineering',
-      content: 'Outstanding security features and seamless integration. Perfect for our needs.',
-=======
-      company: 'InnovateLab',
-      role: 'Product Manager',
-      content: 'The best investment we made this year. ROI was evident within the first month, and the support team is absolutely fantastic.',
-      rating: 5
-    },
-    {
-      name: 'David Kim',
-      company: 'CloudFirst Solutions',
-      role: 'VP Engineering',
-      content: 'Seamless integration with our existing systems. The scalability and performance exceeded our expectations.',
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
-      rating: 5
-    }
-  ];
+      content: 'Outstanding security features and seamless integration. Perfect for our needs.',]
+      rating: 5]
+    }];
 
   useEffect(() => {
     if (!isPlaying) return;
     
     const timer = setInterval(() => {
-<<<<<<< HEAD
       setCurrentIndex((prev) => (prev + 1) % features.length);
+}
     }, 3000);
 
     return () => clearInterval(timer);
@@ -142,61 +120,15 @@ const DynamicContentShowcase: React.FC = () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Experience our cutting-edge solutions through an interactive showcase of features and capabilities.
           </p>
-=======
-      setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-    }, 4000);
-    
-    return () => clearInterval(timer);
-  }, [isPlaying, testimonials.length]);
-
-  const nextTestimonial = () => {
-    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-  };
-
-  const prevTestimonial = () => {
-    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-  };
-
-  const togglePlayPause = () => {
-    setIsPlaying(!isPlaying);
-  };
-
-  const currentTestimonial = testimonials[currentIndex];
-
-  return (
-    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 min-h-screen">
-      {/* Hero Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Dynamic <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Content Showcase</span>
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Experience the power of our cutting-edge solutions with real-time demonstrations 
-            and interactive showcases that bring your business to life.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
-              <Play className="w-5 h-5" />
-              Start Demo
-            </button>
-            <button className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300">
-              <ArrowRight className="w-5 h-5" />
-              Learn More
-            </button>
-          </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
         </div>
-
-<<<<<<< HEAD
-        {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+)
+        {/* Features Grid */})
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">)
           {features.map((feature, index) => (
             <div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300">
               <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg mb-4">
                 <feature.icon className="h-6 w-6 text-white" />
               </div>
-<<<<<<< HEAD
               <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
               <p className="text-gray-300">{feature.description}</p>
             </div>
@@ -237,13 +169,6 @@ const DynamicContentShowcase: React.FC = () => {
           </div>
         </div>
       </div>
-=======
-            ))}
-          </div>
-        </div>
-      </section>
->>>>>>> cursor/website-audit-and-update-with-deployment-758b
-=======
       {/* Features Section */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -395,16 +320,15 @@ const DynamicContentShowcase: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center space-x-2">
                 <Zap className="w-5 h-5" />
-                <span>Start Free Trial</span>
+                <span></div></div>Start Free Trial</span>
               </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-200">
+              <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-200"></butt></butto>
                 Schedule Demo
               </button>
             </div>
           </div>
         </div>
       </section>
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
     </div>
   );
 };

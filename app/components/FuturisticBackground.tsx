@@ -5,13 +5,13 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 
-const FuturisticBackgroundPage: React.FC = () => {
-  const features = [
+const FuturisticBackgroundPage: React.FC = () => {;
+const features = [
     {
       icon: Brain,
-      title: 'AI-Powered Analysis',
-      description: 'Advanced AI algorithms provide intelligent insights and recommendations.',
+      title: description, 'Advanced AI algorithms provide intelligent insights and recommendations.']
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+}
     },
     {
       icon: BarChart,
@@ -34,16 +34,16 @@ const FuturisticBackgroundPage: React.FC = () => {
   ];
 
   return (
-    <>
+    <>\</>
       <Helmet>
         <title>FuturisticBackground - Zion Tech Group</title>
         <meta name="description" content="Advanced futuristicbackground solutions powered by AI technology." />
       </Helmet>
 
       <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">)
+        {/* Hero Section */})
+        <section className="relative py-20 px-4 overflow-hidden">)
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
           <div className="relative max-w-7xl mx-auto text-center">

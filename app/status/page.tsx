@@ -5,8 +5,8 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 
-export default function StatusPage() {
-  const [lastUpdated, setLastUpdated] = useState(new Date());
+export default function StatusPage() {;
+const [lastUpdated, setLastUpdated] = useState(new Date());
   const [isRefreshing, setIsRefreshing] = useState(false);
 
   const refreshStatus = async () => {
@@ -15,6 +15,7 @@ export default function StatusPage() {
     await new Promise(resolve => setTimeout(resolve, 1000));
     setLastUpdated(new Date());
     setIsRefreshing(false);
+}
   };
 
   const services = [
@@ -63,10 +64,9 @@ export default function StatusPage() {
       status: 'operational',
       uptime: '100%',
       responseTime: '5ms',
-      lastIncident: 'Never',
-      description: 'System monitoring and alerts'
-    }
-  ];
+      lastIncident: 'Never',]
+      description: 'System monitoring and alerts']
+    }];
 
   const incidents = [
     {
@@ -75,8 +75,7 @@ export default function StatusPage() {
       status: 'resolved',
       severity: 'minor',
       startTime: '2024-01-15T10:30:00Z',
-      endTime: '2024-01-15T11:45:00Z',
-      description: 'Some API endpoints experienced increased response times due to high traffic load.',
+      endTime: description, 'Some API endpoints experienced increased response times due to high traffic load.']
       affectedServices: ['API Services', 'AI Services']
     },
     {
@@ -101,7 +100,7 @@ export default function StatusPage() {
         return <XCircle className="w-5 h-5 text-red-400" />;
       default:
         return <Clock className="w-5 h-5 text-gray-400" />;
-    }
+}
   };
 
   const getStatusColor = (status: string) => {
@@ -114,7 +113,7 @@ export default function StatusPage() {
         return 'text-red-400';
       default:
         return 'text-gray-400';
-    }
+}
   };
 
   const getSeverityColor = (severity: string) => {
@@ -127,7 +126,7 @@ export default function StatusPage() {
         return 'bg-yellow-500/20 text-yellow-400 border-yellow-500/50';
       default:
         return 'bg-gray-500/20 text-gray-400 border-gray-500/50';
-    }
+}
   };
 
   const overallStatus = services.every(service => service.status === 'operational') 
@@ -142,9 +141,9 @@ export default function StatusPage() {
             Real-time status of all our services. We're committed to providing reliable, 
             high-performance AI and IT solutions.
           </p>
-          
-          <div className="flex items-center justify-center gap-4 mb-8">
-            <div className="flex items-center gap-2">
+          )
+          <div className="flex items-center justify-center gap-4 mb-8">)
+            <div className="flex items-center gap-2">)
               {getStatusIcon(overallStatus)}
               <span className={`text-2xl font-bold ${getStatusColor(overallStatus)}`}>
                 {overallStatus === 'operational' ? 'All Systems Operational' : 

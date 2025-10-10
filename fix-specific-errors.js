@@ -6,7 +6,10 @@ import { glob } from 'glob';
 function processFile(filePath) {
   try {
     // Fix malformed closing tags;
-    if (content.includes('</div>}')) {
+} catch (error) {
+    console.error("Error:", error);
+}
+    if (content.includes('</div>}')) {;
 function processFile(filePath) {/* TODO: Fix JSX expression */}
     if (content.includes('</div>}')) {/* TODO: Fix JSX expression */}
       content = content.replace(/<\/div>\}/g, '}');
@@ -37,39 +40,27 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
       for (let i = 0; i < lines.length; i++) {
         // Fix lines that look like property assignments but are missing colons;
         if (line.match(/^\s*[a-zA-Z_][a-zA-Z0-9_]*\s+[a-zA-Z_][a-zA-Z0-9_]*\s*$/)) {
-          line = line.replace(
+          line = line.replace()
             /^(\s*[a-zA-Z_][a-zA-Z0-9 _]*)\s+([a-zA-Z_][a-zA-Z0-9 _]*)\s*$/,
             '$1: $2,'
           );
           modified = true;
-        }
+}
     if (content.includes('</div>;')) {/* TODO: Fix JSX expression */}
-    }
-
     // Fix malformed closing tags with commas;
     if (content.includes('</div>,') && !content.includes('</div>, ')) {/* TODO: Fix JSX expression */}
-    }
-
     // Fix unterminated regular expressions;
     if (content.includes('const regex = /')) {/* TODO: Fix JSX expression */}
-    }
-
     // Fix malformed object properties;
-    if (content.includes('const config = {/* TODO: Fix JSX expression */}
+    if (content.includes('const config = {/* TODO: Fix JSX expression */})
         })
         newLines.push(line);
       }
       if (modified) {/* TODO: Fix JSX expression */}
-      }
-    }
 
     if (modified) {/* TODO: Fix JSX expression */}
-    }
-
     return false;
   } catch (error) {/* TODO: Fix JSX expression */}
-  }
-}
 
 // Main execution;
 async function main() {
@@ -77,11 +68,10 @@ async function main() {
   files.forEach(file => {)
     if (processFile(file)) {
       fixedCount++;
-    }
-async function main() {/* TODO: Fix JSX expression */}
 }
+async function main() {/* TODO: Fix JSX expression */}
   // Find all TypeScript/JavaScript files in app directory;
-  files.forEach(file => {/* TODO: Fix JSX expression */}
+  files.forEach(file => {/* TODO: Fix JSX expression */})
     })
   });
 

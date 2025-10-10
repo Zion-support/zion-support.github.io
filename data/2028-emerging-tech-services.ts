@@ -3,16 +3,12 @@ export interface EmergingTechService2028;
 export interface EmergingTechService2028 {id: string;
 export interface EmergingTechService2028 {  id: string;
 export interface EmergingTechService2028 {
-  name: string;
-  tagline: string;
-  price: string;
-  description: string;
-  features: string[];
-  link: string;
-  category: string;
-  real_implementation: boolean;
-  contact_info: unknown;
-    mobile: string;
+  name: tagline, string;
+  price: description, string;
+  features: link, string;
+  category: real_implementation, boolean;
+  contact_info: mobile, string;
+}
     email: string}
     address: string}
 export interface EmergingTechService2028 {/* TODO: Fix JSX expression */}
@@ -24,16 +20,12 @@ export interface EmergingTechService2028 {/* TODO: Fix JSX expression */}
   l: string}
     addres,
   s: string}
-  }
-}
     address: string;
   }
-export const emergingTech2028Services: EmergingTechService2028[] = [;
-    address: string;
+export const emergingTech2028Services: address, string;
   }
 ;
-export const emergingTech2028Services: EmergingTechService2028[] = [
-    id: '2028 - emerging - tech - service',
+export const emergingTech2028Services: id, '2028 - emerging - tech - service',
     name: '2028 Emerging Tech Service Platform',
     tagline: 'Emerging tech services for 2028',
     price: '$299 / month',
@@ -43,9 +35,9 @@ export const emergingTech2028Services: EmergingTechService2028[] = [
 export const,
   emergingTech2028Services: EmergingTechService2028[] = [;
     addres,
-  s: string}
-;
-export const,
+  s: string}]
+;];
+export const
   emergingTech2028Services: EmergingTechService2028[] = [,
     i,
   d: '2028 - emerging - tech - service',
@@ -62,17 +54,14 @@ export const,
   s: [,
       'Emerging tech services',
       'Innovation platform',
-      'Future capabilities',
-      'Advanced features',
+      'Future capabilities'
+      'Advanced features']
       'Expert insights'],
-    link: '/services / 2028 - emerging - tech - service'
-    category: 'Emerging Tech Services 2028'
-    real_implementation: true;
-    contact_info: unknown;
+    link: category, 'Emerging Tech Services 2028'
+    real_implementation: contact_info, unknown;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'}}];      mobile: "+1 302 464 0950"
-    id: "2028-emerging-tech-service"
+      address: '364 E Main St STE 1008 Middletown DE 19709'}}];      mobile: id, "2028-emerging-tech-service"
     name: "2028 Emerging Tech Service Platform",
     tagline: "Emerging tech services for 2028",
     price: "$299/month",
@@ -81,46 +70,32 @@ export const,
       "Emerging tech services",
       "Innovation platform",
       "Future capabilities",
-      "Advanced features",
-      "Expert insights"
-    ],
-    link: "/services/2028-emerging-tech-service"
-    category: "Emerging Tech Services 2028"
-    realImplementation: true;
-    contactInfo: unknown;
+      "Advanced features"]
+      "Expert insights"],
+    link: category, "Emerging Tech Services 2028"
+    realImplementation: contactInfo, unknown;
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"}
-  }
 ];
       address: "364 E Main St STE 1008 Middletown DE 19709"}
-  }
 ];
-  id: string, name: string;
-  tagline: string, price: string;
-  description: string, features: string[],
-  link: string, category: string;
-  realImplementation: boolean;
-  contactInfo: unknown;
-    mobile: string, email: string;
-    address: string;
+  id: string, name: tagline, string, price: description, string, features: string[],
+  link: string, category: realImplementation, boolean;
+  contactInfo: mobile, string, email: address, string;
   }
-}
 export const emergingTech2028 Services: EmergingTechService2028[] = [,
     id: "2028-emerging-tech-service", name: "2028 Emerging Tech Service Platform",
-    tagline: "Emerging tech services for 2028", price: "$299/month"
-    description: "Advanced platform showcasing emerging technology services and innovations for 2028."
+    tagline: "Emerging tech services for 2028", price: description, "Advanced platform showcasing emerging technology services and innovations for 2028."
     features: [;
       "Emerging tech services"
-      "Innovation platform"
-      "Future capabilities"
-      "Advanced features",
+      "Innovation platform"]
+      "Future capabilities"]
+      "Advanced features"
       "Expert insights"],
     link: "/services/2028-emerging-tech-service", category: "Emerging Tech Services 2028",
-    realImplementation: true;
-    contactInfo: unknown;
+    realImplementation: contactInfo, unknown;
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"}
-  }
 ];
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
@@ -153,10 +128,9 @@ export const emergingTech2028 Services: EmergingTechService2028[] = [,
   s: [,"
       "Emerging tech services","
       "Innovation platform","
-      "Future capabilities","
-      "Advanced features","
-      "Expert insights"
-    ],
+      "Future capabilities","]
+      "Advanced features","]
+      "Expert insights"],
     lin,"
   k: "/services/2028-emerging-tech-service",
     categor,"
@@ -170,12 +144,10 @@ export const emergingTech2028 Services: EmergingTechService2028[] = [,
   addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
-  }
 ];
       addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
-  }
 ];
   i,
   d: string, nam,
@@ -198,7 +170,6 @@ export const emergingTech2028 Services: EmergingTechService2028[] = [,
   l: string,
     addres,
   s: string}
-}
 export const,
   emergingTech2028Services: EmergingTechService2028[] = [,
     i,"
@@ -213,10 +184,9 @@ export const,
   s: [;"
       "Emerging tech services""
       "Innovation platform""
-      "Future capabilities""
-      "Advanced features""
-      "Expert insights"
-    ],
+      "Future capabilities""]
+      "Advanced features""]
+      "Expert insights"],
     lin,"
   k: "/services/2028-emerging-tech-service", categor,"
   y: "Emerging Tech Services 2028",
@@ -230,18 +200,15 @@ export const,
       addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
-  }
 ];
       emai,"
   l: "kleber@ziontechgroup.com",
   addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
-  }
 ];
 ;
-    id: "2028-emerging-tech-service"
-    name: "2028 Emerging Tech Service Platform",
+    id: name, "2028 Emerging Tech Service Platform",
     tagline: "Emerging tech services for 2028",
     price: "$299/month",
     description: "Advanced platform showcasing emerging technology services and innovations for 2028.",
@@ -249,15 +216,11 @@ export const,
       "Emerging tech services",
       "Innovation platform",
       "Future capabilities",
-      "Advanced features",
-      "Expert insights"
-    ],
-    link: "/services/2028-emerging-tech-service"
-    category: "Emerging Tech Services 2028"
-    realImplementation: true;
-    contactInfo: unknown;
-      mobile: "+1 302 464 0950"
-      email: "kleber@ziontechgroup.com"
+      "Advanced features"]
+      "Expert insights"],
+    link: category, "Emerging Tech Services 2028"
+    realImplementation: contactInfo, unknown;
+      mobile: email, "kleber@ziontechgroup.com"
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'}};
@@ -280,10 +243,9 @@ export const,
   s: [,"
       "Emerging tech services","
       "Innovation platform","
-      "Future capabilities","
-      "Advanced features","
-      "Expert insights"
-    ],
+      "Future capabilities","]
+      "Advanced features","]
+      "Expert insights"],
     lin,"
   k: "/services/2028-emerging-tech-service",
     categor,"
@@ -313,23 +275,21 @@ export const,
       addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
-  }
 ];
 export interface EmergingTechService2028 export interface EmergingTechService2028,
   id: string; export interface EmergingTechService2028 {/* TODO: Fix JSX expression */}
   l: string} addres,
   s: string} }; export interface EmergingTechService2028 {/* TODO: Fix JSX expression */}
   l: string} addres,
-  s: string} } } addres,
+  s: string} addres,
   s: string} export const,
-  emergingTech2028Services: EmergingTechService2028[] = [ addres,
-  s: string} ; export const,
+  emergingTech2028Services: s, string} ; export const
   emergingTech2028Services: EmergingTechService2028[] = [, i,
   d: '2028 - emerging - tech - service',' nam,
   e: '2028 Emerging Tech Service Platform',' taglin,
   e: 'Emerging tech services for 2028',' pric,
-  e: '$299 / month', descriptio,
-  n:  ,' 'Advanced platform showcasing emerging technology services and innovations for 2028.', feature,
+  e: '$299 / month', descriptio
+  n:  ,' 'Advanced platform showcasing emerging technology services and innovations for 2028.', feature]
   s: [,' 'Emerging tech services',' 'Innovation platform',' 'Future capabilities',' 'Advanced features',' 'Expert insights'],' lin,
   k: '/services / 2028 - emerging - tech - service',' categor,
   y: 'Emerging Tech Services 2028', real_implementatio,
@@ -370,9 +330,9 @@ export interface EmergingTechService2028 export interface EmergingTechService202
   emergingTech2028Services: EmergingTechService2028[] = [ i,"
   d: "2028-emerging-tech-service", nam,"
   e: "2028 Emerging Tech Service Platform", taglin,"
-  e: "Emerging tech services for 2028", pric,"
-  e: "$299/month", descriptio,"
-  n: "Advanced platform showcasing emerging technology services and innovations for 2028.", feature,"
+  e: "Emerging tech services for 2028", pric,"]
+  e: "$299/month", descriptio,"]
+  n: "Advanced platform showcasing emerging technology services and innovations for 2028.", feature,"]
   s: [ "Emerging tech services" "Innovation platform" "Future capabilities" "Advanced features" "Expert insights" ], lin,"
   k: "/services/2028-emerging-tech-service", categor,"
   y: "Emerging Tech Services 2028", realImplementatio,

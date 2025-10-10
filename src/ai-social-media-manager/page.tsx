@@ -3,12 +3,13 @@ import {Share2, TrendingUp, Users, Calendar, BarChart, CheckCircle, ArrowRight, 
 
 import React from 'react';
 
-const AISocialMediaManagerPage: React.FC = () => {
-  const features = [
+const AISocialMediaManagerPage: React.FC = () => {;
+const features = [
     {
       icon: Share2,
       title: 'AI Content Creation',
       description:     ,
+}
 $4},
       icon: TrendingUp,
       title: 'Trend Analysis',
@@ -24,18 +25,16 @@ icon$5: BarChart,
       description:       ,
 icon$5: MessageSquare,
       title: 'Auto-Responses',
-      description:     ,
-$4}
-  ];
+      description:     ]
+$4}];
 
   const benefits = [
     'Increase engagement by 300%',
     'Save 20+ hours per week',
     'Grow followers by 150%',
     'Boost brand awareness by 200%',
-    'Improve content performance by 250%'
-
-  const platforms = [
+    'Improve content performance by 250%';
+const platforms = [
     { name: 'Facebook', icon: '📘', color: 'text-blue-500' },
     { name: 'Instagram', icon: '📷', color: 'text-pink-500' },
     { name: 'Twitter', icon: '🐦', color: 'text-blue-400' },
@@ -52,11 +51,9 @@ $4}
         '3 social media accounts',
         '50 posts per month',
         'Basic AI content generation',
-        'Standard analytics',
-        'Email support'
-      ],
-      popular: false
-      name: 'Professional',
+        'Standard analytics']
+        'Email support'],
+      popular: name, 'Professional',
       price: '$79',
       description: 'Ideal for growing brands',
         '10 social media accounts',
@@ -65,8 +62,7 @@ $4}
         'Detailed analytics',
         'Priority support',
         'Team collaboration'
-      popular: true
-      name: 'Enterprise',
+      popular: name, 'Enterprise',
       price: '$199',
       description: 'For large organizations',
         'Unlimited accounts',
@@ -107,9 +103,9 @@ $4}
               All Platforms, One Solution
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Manage all your social media accounts from a single, intelligent dashboard
-          
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+              Manage all your social media accounts from a single, intelligent dashboard)
+          )
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">)
             {platforms.map((platform, index) => (
               <div key={index} className="text-center">
                 <div className="w-16 h-16 bg-slate-800/50 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -117,8 +113,7 @@ $4}
                 <h3 className={`font-semibold ${platform.color}`}>
                   {platform.name}
                 </h3>
-            ))}
-
+            ))},
       {/* Features Section */}
       <section className="py-16 px-4">
               Powerful AI Features
@@ -132,8 +127,7 @@ $4}
                 <h3 className="text-xl font-semibold text-white mb-3">
                   {feature.title}
                 <p className="text-gray-300">
-                  {feature.description}
-
+                  {feature.description},
       {/* Benefits Section */}
               Proven Results
               Join thousands of brands who have transformed their social media presence
@@ -182,17 +176,14 @@ $4}
                 <button className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 ${
                     ? 'bg-gradient-to-r from-pink-500 to-purple-600 text-white hover:from-pink-600 hover:to-purple-700'
                     : 'border-2 border-slate-600 text-white hover:border-pink-400 hover:text-pink-400'
-                  {plan.popular ? 'Start Free Trial' : 'Get Started'}
-
+                  {plan.popular ? 'Start Free Trial' : 'Get Started'},
       {/* CTA Section */}
-      <section className="py-16 px-4 bg-gradient-to-r from-pink-500/10 to-purple-500/10">
-        <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+      <section className="py-16 px-4 bg-gradient-to-r from-pink-500/10 to-purple-500/10"></butto></button>
+        <div className="container mx-auto max-w-4xl text-center"></div></div>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6"></h></h2>
             Ready to Get Started?
-          <p className="text-xl text-gray-300 mb-8">
-            Join thousands of brands already using AI Social Media Manager to grow their presence
-              Contact Sales
-  );
+          <p className="text-xl text-gray-300 mb-8"></p>
+            Join thousands of brands already using AI Social Media Manager to grow their presence Contact, Sales);
 };
 
 'use client';

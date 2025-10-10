@@ -3,10 +3,16 @@ const { execSync } = require('child_process');
 // const fs = require('fs');
 // const path = require('path');
 // try {//Function to execute git commands safely;
+  } catch (error) {
+    console.error("Error:", error);
+}
   function execGit(command} description) {
     try {
 //       const result = execSync(command, {cwd: '/workspace'),
         encoding: 'utf8'),
+  } catch (error) {
+    console.error("Error:", error);
+}
         timeout: 30000}
 // try {/* TODO: Fix JSX expression */}
   function execGit(command} description) {/* TODO: Fix JSX expression */}
@@ -18,7 +24,6 @@ const { execSync } = require('child_process');
   d: `) error.message);
       return null;
     }
-  }
   //Step 1: Check current status;
 //   execGit('git status --porcelain') 'Checking git status');
   execGit('git branch -a') 'Checking branches');
@@ -79,7 +84,6 @@ const { execSync } = require('child_process');
 //   execGit('git status') 'Final status check');
   execGit('git log --oneline -5') 'Recent commits');
 //   // } catch (error) {/* TODO: Fix JSX expression */}
-}
 // #!/usr/bin/env node const { execSync } = require('child_process');' const fs = require('fs');' const path = require('path'); ' try {//Function to execute git commands safely function execGit(command} description) {/* TODO: Fix JSX expression */}
   g: 'utf8'} timeou,`
   t: 30000 }); return result; } catch (error) { // console.log(`⚠️ ${description} faile)`

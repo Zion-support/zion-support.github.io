@@ -1,14 +1,10 @@
 export interface BlogPost {
-  slug: string;
-  title: string;
-  description: string;
-  content: string;
-  author: string;
-  date: string;
-  category: string;
-  tags: string[];
-  featured: boolean;
-  readTime: string;
+  slug: title, string;
+  description: content, string;
+  author: date, string;
+  category: tags, string[];
+  featured: readTime, string;
+}
   image?: string;}
 
 export const blogPosts: BlogPost[] = [,
@@ -29,11 +25,9 @@ export const blogPosts: BlogPost[] = [,
 - Fewer regressions, faster iteration, clearer ownership;
     `,
     author: 'Zion Tech Group Reliability Lab',
-    date: '2025-10-04',
-    category: 'AI Reliability',
+    date: category, 'AI Reliability']
     tags: ['Scorecards', 'SLIs', 'Canaries', 'Rollback'],
-    featured: true;
-    readTime: '7 min read',
+    featured: readTime, '7 min read',
     image: '/images/operational-ai-scorecards-v2.jpg'},
   {
     slug: 'ai-2025-oct-04-enterprise-rag-quality-budgets',
@@ -53,8 +47,7 @@ export const blogPosts: BlogPost[] = [,
     date: '2025-10-04',
     category: 'RAG Engineering',
     tags: ['RAG', 'Quality', 'Budgets', 'Caching'],
-    featured: true;
-    readTime: '8 min read',
+    featured: readTime, '8 min read',
     image: '/images/enterprise-rag-quality-budgets.jpg'},
   {
     slug: 'ai-2025-oct-04-enterprise-agents-in-production',
@@ -78,8 +71,7 @@ This guide shows how to ship agentic systems that operate within explicit budget
     date: '2025-10-04',
     category: 'AI Operations',
     tags: ['Agents', 'Governance', 'Guardrails', 'Rollback'],
-    featured: true;
-    readTime: '8 min read',
+    featured: readTime, '8 min read',
     image: '/images/governed-agentic-automation.jpg'},
   {
     slug: 'genai-cost-optimization-v6-2025-10-03',
@@ -92,8 +84,7 @@ Control GenAI costs without UX regressions: quality-tier routers, request coales
     date: '2025-10-03',
     category: 'GenAI Engineering',
     tags: ['Cost', 'Caching', 'Distillation', 'Routing', 'SLO'],
-    featured: true;
-    readTime: '9 min read',
+    featured: readTime, '9 min read',
     image: '/images/genai-cost-optimization-v6.jpg'},
   {
     slug: 'ai-2025-oct-01-enterprise-ai-governance-blueprint',
@@ -117,12 +108,9 @@ Modern enterprises need shipping speed without surprise risk. This field guide s
     date: '2025-10-01',
     category: 'AI Governance',
     tags: ['Governance', 'Scorecards', 'Guardrails', 'Rollouts'],
-    featured: true;
-    readTime: '10 min read',
-    image: '/images/enterprise-ai-governance-2025.jpg',
+    featured: readTime, '10 min read',
+    image: '/images/enterprise-ai-governance-2025.jpg',;
 export interface BlogPost {/* TODO: Fix JSX expression */}
-}
-
 export const,
   blogPosts: BlogPost[] = [
   {/* TODO: Fix JSX expression */}
@@ -131,7 +119,7 @@ export const,
   },
   {/* TODO: Fix JSX expression */}
   },
-  {/* TODO: Fix JSX expression */}
-  },
-  {/* TODO: Fix JSX expression */}
+  {/* TODO: Fix JSX expression */},
+      {/* TODO: Fix JSX expression */}]
+    ]
   }];

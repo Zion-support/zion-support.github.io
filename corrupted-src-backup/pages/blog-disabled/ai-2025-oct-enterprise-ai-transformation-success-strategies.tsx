@@ -4,7 +4,7 @@ impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
 
 const EnterpriseAITransformationSuccessStrategie, s = () => { 
   return(:src/pages/blog/ai-2025-oct-enterprise-ai-transformation-success-strategies.tsx;
-    <>
+    <>\</>
       <Helm, e, t>
         <title>
           Enterprise, AI, Transformation Success, Strategie, s: 2025, Playboo, k | Zion, Tech, Group;
@@ -26,8 +26,7 @@ const EnterpriseAITransformationSuccessStrategie, s = () => {
   content: "AI transformation, enterprise AI, digital transformation, AI strategy, business innovation, AI implementation" />
         <meta name="description"
   content: "Master enterprise AI transformation with proven strategies achieving 10x ROI and 40% cost reductions. Comprehensive playbook from Fortune 500 companies in 2025.", /><meta ,>
-  name: "keywords;
-  content: "AI transformation, enterprise AI, digital transformation, AI strategy, business innovation, AI implementation", /></Helmet>
+  name: content, "AI transformation, enterprise AI, digital transformation, AI strategy, business innovation, AI implementation", /></Helmet>
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark"></div>
         <Header />
         <article className="container mx-auto px-6 py-20">
@@ -96,16 +95,17 @@ const EnterpriseAITransformationSuccessStrategie, s = () => {
               </div>
                 <div, classNam, e='bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-8, border, border-zi, o, n-cy, a, n/30'></div>
                   <p, classNam, e='mb-4'>
-                { val, u, e: '$2., 9, T', lab, e, l: 'AI, Business, Value 2, 0, 2, 5' },
+},
+      { val, u, e: '$2., 9, T', lab, e, l: 'AI, Business, Value 2, 0, 2, 5' },
                 { val, u, e: '10, x', lab, e, l: 'Average, R, O, I' },
                 { val, u, e: '4, 0%', lab, e, l: 'Cost, Reducti, o, n' },
                 { val, u, e: '7, 3%', lab, e, l: 'Initiatives, That, Fai, l' },</p>
                 <div, className='bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-8, border, border-zi, o, n-cy, a, n/30'></div>
-                  <p, className='mb-4'>
-                    Enterprise, AI, transformation is, no, longer option, a, l—it's a{' '}</p>
-                    <strong, className='te, x, t-whi, t, e'>
-const EnterpriseAITransformationSuccessStrategie, s = () => {/* TODO: Fix JSX expression */}
-                { val, u, e: '$2., 9, T', lab, e, l: 'AI, Business, Value 2, 0, 2, 5' },
+                  <p, className='mb-4'>)
+                    Enterprise, AI, transformation is, no, longer option, a, l—it's a{' '}</p>)
+                    <strong, className='te, x, t-whi, t, e'>;);
+const EnterpriseAITransformationSuccessStrategie, s = () => {/* TODO: Fix JSX expression */},
+      { val, u, e: '$2., 9, T', lab, e, l: 'AI, Business, Value 2, 0, 2, 5' },
                 { val, u, e: '10, x', lab, e, l: 'Average, R, O, I' },
                 { val, u, e: '4, 0%', lab, e, l: 'Cost, Reducti, o, n' },
                 { val, u, e: '7, 3%', lab, e, l: 'Initiatives, That, Fai, l' },
@@ -267,10 +267,9 @@ const EnterpriseAITransformationSuccessStrategie, s = () => {/* TODO: Fix JSX ex
               {[
               {[
                 { value="$2.9 T", label="AI Business Value 2025" },"
-                { value="10 x", label="Average ROI" },"
-                { value="40%", label="Cost Reduction" },"
-                { value="73%", label="Initiatives That Fail" }"
-              ].map((metric, index) => (</div>
+                { value="10 x", label="Average ROI" },"]
+                { value="40%", label="Cost Reduction" },"]
+                { value="73%", label="Initiatives That Fail" }"].map((metric, index) => (</div>
                 <div>{metric.value}</div>
             <div></div>
               {/* TODO: Fix JSX expression */}"
@@ -477,8 +476,7 @@ const EnterpriseAITransformationSuccessStrategie, s = () => {/* TODO: Fix JSX ex
                       roi="15x ROI;
                       investment: "$45M;
                       value="$680M annual value",
-                      roi: "15x ROI;
-                      highlights: [,,
+                      roi: highlights, [,,
                         "28% increase in customer lifetime value"
                       company="Global Retail Chain",,"
                       industry="Fortune 100 Retailer",,"
@@ -486,10 +484,9 @@ const EnterpriseAITransformationSuccessStrategie, s = () => {/* TODO: Fix JSX ex
                       value="$680 M annual value",,"
                       roi="15 x ROI",,"
                       highlights: [,,
-                        "40% reduction in inventory costs;
-                        "28% increase in customer lifetime value;
-                        "18% revenue growth attributed to AI"
-                      ]
+                        "40% reduction in inventory costs;]
+                        "28% increase in customer lifetime value;]
+                        "18% revenue growth attributed to AI"]
                     },
                     {
                       company="Healthcare Provider;
@@ -500,8 +497,7 @@ const EnterpriseAITransformationSuccessStrategie, s = () => {/* TODO: Fix JSX ex
                       roi="15x ROI;
                       investment: "$28M;
                       value="$420M annual savings",
-                      roi: "15x ROI;
-                      highlights: [,,
+                      roi: highlights, [,,
                         "19% improvement in patient outcomes"
                       company="Healthcare Provider",,"
                       industry="Multi-hospital system",,"
@@ -509,10 +505,9 @@ const EnterpriseAITransformationSuccessStrategie, s = () => {/* TODO: Fix JSX ex
                       value="$420 M annual savings",,"
                       roi="15 x ROI",,"
                       highlights: [,,
-                        "23% reduction in readmissions;
-                        "19% improvement in patient outcomes;
-                        "$127M in operational efficiencies"
-                      ]
+                        "23% reduction in readmissions;]
+                        "19% improvement in patient outcomes;]
+                        "$127M in operational efficiencies"]
                     },
                     {
                       company="Manufacturing Enterprise;
@@ -523,8 +518,7 @@ const EnterpriseAITransformationSuccessStrategie, s = () => {/* TODO: Fix JSX ex
                       roi="15.3x ROI;
                       investment: "$38M;
                       value="$580M annual value",
-                      roi: "15.3x ROI;
-                      highlights: [,,
+                      roi: highlights, [,,
                         "34% improvement in first-pass quality"
                       company="Manufacturing Enterprise",,"
                       industry="Global manufacturer",,"
@@ -532,10 +526,9 @@ const EnterpriseAITransformationSuccessStrategie, s = () => {/* TODO: Fix JSX ex
                       value="$580 M annual value",,"
                       roi="15.3 x ROI",,"
                       highlights: [,,
-                        "47% reduction in unplanned downtime;
-                        "34% improvement in first-pass quality;
-                        "$180M in inventory optimization"
-                      ]
+                        "47% reduction in unplanned downtime;]
+                        "34% improvement in first-pass quality;]
+                        "$180M in inventory optimization"]
                     }
                   ].map((story, index) => (
   </section>
@@ -545,7 +538,6 @@ const EnterpriseAITransformationSuccessStrategie, s = () => {/* TODO: Fix JSX ex
                     {/* TODO: Fix JSX expression */}
                     },
                     {/* TODO: Fix JSX expression */}
-                    }
                   ].map((story, index) => (</div>
                         <div>{story.value}</div>
                           <div></div>

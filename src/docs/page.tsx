@@ -5,18 +5,18 @@ import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { Search, BookOpen, Code, Zap, Brain, Shield, Database, Cloud, Settings, BarChart, MessageSquare, Eye, Cpu, Target, Lock, BarChart3, FileText, Bot, Calculator, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, Calendar, Clock3, Compass, PieChart, TrendingDown, Activity, CheckCircle, ArrowRight, ExternalLink, Download, Play, Users, Award, Globe } from 'lucide-react';
 
-const DocsPage: React.FC = () => {
-  const [searchQuery, setSearchQuery] = useState('');
+const DocsPage: React.FC = () => {;
+const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const docCategories = [
-    { id: 'all', name: 'All Documentation', icon: BookOpen, count: 45 },
+},
+      { id: 'all', name: 'All Documentation', icon: BookOpen, count: 45 },
     { id: 'getting-started', name: 'Getting Started', icon: Zap, count: 8 },
     { id: 'ai-services', name: 'AI Services', icon: Brain, count: 12 },
     { id: 'api', name: 'API Reference', icon: Code, count: 15 },
-    { id: 'integration', name: 'Integration', icon: Settings, count: 6 },
-    { id: 'troubleshooting', name: 'Troubleshooting', icon: Shield, count: 4 }
-  ];
+    { id: 'integration', name: 'Integration', icon: Settings, count: 6 },]
+      { id: 'troubleshooting', name: 'Troubleshooting', icon: Shield, count: 4 }];
 
   const documentation = [
     {
@@ -116,10 +116,9 @@ const DocsPage: React.FC = () => {
       category: 'troubleshooting',
       difficulty: 'Advanced',
       readTime: '40 min',
-      icon: Zap,
-      content: 'Advanced techniques for optimizing API calls, reducing latency, and minimizing costs.'
-    }
-  ];
+      icon: Zap,]
+      content: 'Advanced techniques for optimizing API calls, reducing latency, and minimizing costs.']
+    }];
 
   const quickLinks = [
     {
@@ -147,17 +146,16 @@ const DocsPage: React.FC = () => {
       title: 'Community Forum',
       description: 'Connect with other developers',
       icon: Users,
-      link: '/community',
-      color: 'text-cyan-400'
-    }
-  ];
+      link: '/community',]
+      color: 'text-cyan-400']
+    }];
 
   const filteredDocs = selectedCategory === 'all' 
     ? documentation 
     : documentation.filter(doc => doc.category === selectedCategory);
 
   const searchResults = searchQuery 
-    ? documentation.filter(doc => 
+    ? documentation.filter(doc => )
         doc.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         doc.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
         doc.content.toLowerCase().includes(searchQuery.toLowerCase())
@@ -170,11 +168,11 @@ const DocsPage: React.FC = () => {
       case 'Intermediate': return 'text-yellow-400 bg-yellow-500/20';
       case 'Advanced': return 'text-red-400 bg-red-500/20';
       default: return 'text-gray-400 bg-gray-500/20';
-    }
+}
   };
 
   return (
-    <>
+    <>\</>
       <SEOOptimizer
         title="Documentation - Zion Tech Group"
         description="Comprehensive documentation for Zion Tech Group AI services. Find guides, API references, tutorials, and integration examples."
@@ -205,9 +203,9 @@ const DocsPage: React.FC = () => {
               <div className="relative">
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input
-                  type="text"
-                  placeholder="Search documentation..."
-                  value={searchQuery}
+                  type="text")
+                  placeholder="Search documentation...")
+                  value={searchQuery})
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="w-full pl-12 pr-4 py-4 bg-slate-800 text-white rounded-lg border border-slate-600 focus:border-cyan-400 focus:outline-none"
                 />

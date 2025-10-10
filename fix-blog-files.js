@@ -5,12 +5,15 @@ import { fileURLToPath } from 'url';
 
 // Function to fix blog files with parsing errors;
 function fixBlogFile(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
+  try {;
+let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
     // Fix missing closing parenthesis and return statement;
-    if (content.includes('};') && !content.includes('  );')) {
+} catch (error) {
+    console.error("Error:", error);
+}
+    if (content.includes('};') && !content.includes('  );')) {;
 function fixBlogFile(filePath) {/* TODO: Fix JSX expression */}
     if (content.includes('};') && !content.includes('  );')) {/* TODO: Fix JSX expression */}
       content = content.replace(/};$/, '  );\n};');
@@ -28,8 +31,6 @@ function fixBlogFile(filePath) {/* TODO: Fix JSX expression */}
   } catch (error) {/* TODO: Fix JSX expression */}`
     console.log(`✗ Error processing ${filePath}: ${error.message}`);
   }
-}
-
 // Main execution;
 console.log('🔧 Fixing blog files...\n');
 
@@ -50,12 +51,9 @@ const blogFiles = [
   'src/blog/ai-autonomous-business-systems-2026/page.tsx',
   'src/blog/ai-cost-optimization-breakthrough-2026/page.tsx',
   'src/blog/ai-enterprise-transformation-ultimate-guide-2025/page.tsx',
-  'src/blog/ai-powered-autonomous-business-processes-2026/page.tsx',
-  'src/blog/ai-trends-2026-future-enterprise-transformation/page.tsx'
-];
+  'src/blog/ai-powered-autonomous-business-processes-2026/page.tsx']
+  'src/blog/ai-trends-2026-future-enterprise-transformation/page.tsx'];
 
-for (const file of blogFiles) {/* TODO: Fix JSX expression */}
-  }
-}
+for (const file of, blogFiles) {/* TODO: Fix JSX expression */}
 
 console.log('\n✅ Blog files fixed!');`

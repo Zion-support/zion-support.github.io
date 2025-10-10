@@ -3,28 +3,26 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 interface SidebarNavigationProps {
-  isOpen: boolean;
-  onClose: () => void;
+  isOpen: onClose, () => void;
 }
 
-const SidebarNavigation: React.FC<SidebarNavigationProps> = ({ isOpen, onClose }) => {
-  const navigationItems = [
-    { name: 'Home', href: '/', icon: Home },
+const SidebarNavigation: React.FC<SidebarNavigationProps> = ({ isOpen, onClose }) => {;
+const navigationItems = [
+},
+      { name: 'Home', href: '/', icon: Home },
     { name: 'About', href: '/about', icon: User },
-    { name: 'Services', href: '/services', icon: Settings },
-    { name: 'Contact', href: '/contact', icon: HelpCircle },
-  ];
+    { name: 'Services', href: '/services', icon: Settings },]
+      { name: 'Contact', href: '/contact', icon: HelpCircle }];
 
   return (
-    <>
-      {/* Overlay */}
+    <>\</>
+      {/* Overlay */},
       {isOpen && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-50 z-40"
-          onClick={onClose}
-        />
-      )}
-
+          className="fixed inset-0 bg-black bg-opacity-50 z-40")
+          onClick={onClose})
+        />)
+      )},
       {/* Sidebar */}
       <div
         className={`fixed top-0 left-0 h-full w-64 bg-slate-900 transform transition-transform duration-300 ease-in-out z-50 ${

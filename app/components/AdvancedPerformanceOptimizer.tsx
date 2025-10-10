@@ -6,16 +6,17 @@ interface PerformanceOptimizerProps {
   enableOptimizations?: boolean;
 }
 
-const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
+const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps></PerformanceOptimizerProp></PerformanceOptimizerProps> = ({
   children,
   enableOptimizations = true
-}) => {
-  const [isOptimized, setIsOptimized] = useState(false);
+}) => {;
+const [isOptimized, setIsOptimized] = useState(false);
   const [optimizationMetrics, setOptimizationMetrics] = useState({
     imagesOptimized: 0,
-    scriptsOptimized: 0,
-    cssOptimized: 0,
-    totalSavings: 0
+    scriptsOptimized: 0,)
+    cssOptimized: 0,)
+    totalSavings: 0)
+}
   });
 
   const optimizeImages = useCallback(() => {
@@ -29,8 +30,7 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       if (!img.hasAttribute('loading')) {
         img.setAttribute('loading', 'lazy');
         optimizedCount++;
-      }
-
+}
       // Add decoding attribute for better performance
       if (!img.hasAttribute('decoding')) {
         img.setAttribute('decoding', 'async');
@@ -52,8 +52,7 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       if (!script.hasAttribute('defer') && !script.hasAttribute('async')) {
         script.setAttribute('defer', '');
         optimizedCount++;
-      }
-    });
+});
 
     return optimizedCount;
   }, []);
@@ -70,8 +69,7 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         link.setAttribute('media', 'print');
         link.setAttribute('onload', "this.media='all'");
         optimizedCount++;
-      }
-    });
+});
 
     return optimizedCount;
   }, []);
@@ -85,34 +83,35 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
 
     setOptimizationMetrics({
       imagesOptimized,
-      scriptsOptimized,
-      cssOptimized,
-      totalSavings: imagesOptimized + scriptsOptimized + cssOptimized
+      scriptsOptimized,)
+      cssOptimized,)
+      totalSavings: imagesOptimized + scriptsOptimized + cssOptimized)
+}
     });
 
     setIsOptimized(true);
   }, [enableOptimizations, optimizeImages, optimizeScripts, optimizeCSS]);
 
   useEffect(() => {
-    // Run optimizations after component mount
-    const timer = setTimeout(runOptimizations, 100);
+    // Run optimizations after component mount;
+const timer = setTimeout(runOptimizations, 100);
     return () => clearTimeout(timer);
+}
   }, [runOptimizations]);
 
   // Add performance monitoring
   useEffect(() => {
     if (typeof window === 'undefined') return;
 
-    const observer = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
+    const observer = new PerformanceObserver((list) => {;
+const entries = list.getEntries();
       entries.forEach((entry) => {
-        if (entry.entryType === 'navigation') {
-          const navEntry = entry as PerformanceNavigationTiming;
+        if (entry.entryType === 'navigation') {;
+const navEntry = entry as PerformanceNavigationTiming;
           if (navEntry.loadEventEnd - navEntry.loadEventStart > 1000) {
             console.warn('Page load time exceeded 1 second');
-          }
-        }
-      });
+}
+          });
     });
 
     observer.observe({ entryTypes: ['navigation', 'paint', 'largest-contentful-paint'] });
@@ -121,24 +120,24 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   }, []);
 
   return (
-    <div className="performance-optimized" data-optimized={isOptimized}>
-      {children}
+    <div className="performance-optimized" data-optimized={isOptimized}></div></div>
+      {children},
       {process.env.NODE_ENV === 'development' && (
         <div className="optimization-debug" style={{
-          position: 'fixed',
-          bottom: '10px',
-          right: '10px',
+          position: 'fixed',)
+          bottom: '10px',)
+          right: '10px',)
           background: 'rgba(0,0,0,0.8)',
           color: 'white',
           padding: '10px',
           borderRadius: '5px',
           fontSize: '12px',
           zIndex: 1000
-        }}>
-          <div>Images: {optimizationMetrics.imagesOptimized}</div>
-          <div>Scripts: {optimizationMetrics.scriptsOptimized}</div>
-          <div>CSS: {optimizationMetrics.cssOptimized}</div>
-          <div>Total: {optimizationMetrics.totalSavings}</div>
+        }}></div></div>
+          <div></div></div>Images: {optimizationMetrics.imagesOptimized}</div>
+          <div></div></div>Scripts: {optimizationMetrics.scriptsOptimized}</div>
+          <div></div></div>CSS: {optimizationMetrics.cssOptimized}</div>
+          <div></div></div>Total: {optimizationMetrics.totalSavings}</div>
         </div>
       )}
     </div>

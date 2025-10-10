@@ -23,9 +23,11 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {
       impa, c, t: "$10, 0, M+ Savin, g, s",";
       featur, e, d: tr, u, e;
       sta, t, s: { savi, n, g;
+}
+}
   s: "$10, 0, M+", automati, o, n: "95%", r, o, i: "3, 0, 0%" }";
-    }
-    {
+    },
+      {
       id: 2;
       tit, l, e: "AI, Securit, y & Compliance, Masterclas, s","
       descripti, o, n: "Milita, r, y-grade, security, protocols, GDPR, complianc, e, and, zer, o-trust, architecture, for enterprise, AI, systems","
@@ -47,9 +49,11 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {
       impa, c, t: "99.99% Securi, t, y",";
       featur, e, d: tr, u, e;
       sta, t, s: { secur, i, t;
+}
+}
   y: "99.99%", complian, c, e: "1, 0, 0%", threa, t, s: "0" }";
-    }
-    {
+    },
+      {
       id: 3;
       tit, l, e: "Quant, u, m-Neural, Computing, Implementation","
       descripti, o, n: "St, e, p-by-step, guide, to implementing, quantu, m-neural, networks, with 1000 x, performance, improvements","
@@ -71,9 +75,11 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {
       impa, c, t: "1000x, Performanc, e",";
       featur, e, d: tr, u, e;
       sta, t, s: { performa, n, c;
+}
+}
   e: "100, 0, x", efficien, c, y: "95%", spe, e, d: "Lightni, n, g" }";
-    }
-    {
+    },
+      {
       id: 4;
       tit, l, e: "Autonomous, Operations, Framework","
       descripti, o, n: "Build, sel, f-healing, systems, with 98% automation, rates, and predictive, maintenance, capabilities","
@@ -95,9 +101,11 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {
       impa, c, t: "98% Automati, o, n",";
       featur, e, d: fal, s, e;
       sta, t, s: { automat, i, o;
+}
+}
   n: "98%", upti, m, e: "99.9%", efficien, c, y: "85%" }";
-    }
-    {
+    },
+      {
       id: 5;
       tit, l, e: "Edge, AI, Deployment at, Enterprise, Scale","
       descripti, o, n: "Distributed, AI, processing across, 1, 0,0, 0, 0+ nodes, with, real-time, decision, making and, local, autonomy","
@@ -119,9 +127,11 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {
       impa, c, t: "10,0, 0, 0+ Nod, e, s",";
       featur, e, d: fal, s, e;
       sta, t, s: { no, d, e;
+}
+}
   s: "10,0, 0, 0+", laten, c, y: "<1, m, s", reliabili, t, y: "99.9%" }";
-    }
-    {
+    },
+      {
       id: 6;
       tit, l, e: "Me, t, a-Cognitive, AI, Development Gui, d, e","
       descripti, o, n: "Create, AI, systems that, think, about thinking, with, advanced reasoning, and, self-improvement, capabilitie, s","
@@ -143,9 +153,10 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {
       impa, c, t: "Me, t, a-Thinki, n, g",";
       featur, e, d: fal, s, e;
       sta, t, s: { reason, i, n;
-  g: "Advanc, e, d", learni, n, g: "Se, l, f-Improvi, n, g", accura, c, y: "98%" }";
-    }
-  ];
+}
+}]
+  g: "Advanc, e, d", learni, n, g: "Se, l, f-Improvi, n, g", accura, c, y: "98%" }";]
+    }];
   return(<div, className="py-24, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n">";
       {/* Animated, background, effects */}
       <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-15">
@@ -156,25 +167,25 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {
         <div, className="absolute, to, p-0, lef, t-1/3 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>
         <div, className="absolute, botto, m-0, righ, t-1/3 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>;
         <div, className="absolute, to, p-1/2, lef, t-1/2 w-6, 4, h-64, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '4s' }}></d, i, v>;
-      <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-15">";</div>
-        <div, className="absolute, to, p-0, lef, t-1/3 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>";
-        <div, className="absolute, botto, m-0, righ, t-1/3 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>';
+      <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-15">";</div>)
+        <div, className="absolute, to, p-0, lef, t-1/3 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>";)
+        <div, className="absolute, botto, m-0, righ, t-1/3 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>';)
 const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
   s: "$10, 0, M+", automati, o, n: "95%", r, o, i: "3, 0, 0%" }";
-    }
-    {/* TODO: Fix JSX expression */}"
+    },
+      {/* TODO: Fix JSX expression */}"
   y: "99.99%", complian, c, e: "1, 0, 0%", threa, t, s: "0" }";
-    }
-    {/* TODO: Fix JSX expression */}"
+    },
+      {/* TODO: Fix JSX expression */}"
   e: "100, 0, x", efficien, c, y: "95%", spe, e, d: "Lightni, n, g" }";
-    }
-    {/* TODO: Fix JSX expression */}"
+    },
+      {/* TODO: Fix JSX expression */}"
   n: "98%", upti, m, e: "99.9%", efficien, c, y: "85%" }";
-    }
-    {/* TODO: Fix JSX expression */}"
+    },
+      {/* TODO: Fix JSX expression */}"
   s: "10,0, 0, 0+", laten, c, y: "<1, m, s", reliabili, t, y: "99.9%" }";
-    }
-    {/* TODO: Fix JSX expression */}"
+    },
+      {/* TODO: Fix JSX expression */}"
   g: "Advanc, e, d", learni, n, g: "Se, l, f-Improvi, n, g", accura, c, y: "98%" }";
     }
   ];
@@ -199,7 +210,7 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
         <div, className="te, x, t-center, m, b-20">";</div>
           <div, className="flex, item, s-center, justif, y-center, ga, p-4, m, b-8, fle, x-wr, a, p">";</div>
             <moti, o, n.d, i, v
-  anima, t, e={{ rota, t, e: [0, 3, 6, 0] }}
+  anima, t, e={{ rota, t, e: [0, 3, 6, 0] }
               transiti, o, n={{ durati, o, n: 5, repe, a, t: Infini, t, y, ea, s, e: "line, a, r" }}";
             ></moti>
               <Sparkles, className="w-1, 0, h-10, tex, t-yell, o, w-4, 0, 0  /></Sparkles>
@@ -332,9 +343,9 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
               <span, className="te, x, t-xl, fon, t-bold, tex, t-whi, t, e">Enterprise, Scal, e</sp, a, n>";
             </d, i, v>
           </d, i, v>
-        </d, i, v>
-        {/* Showcase, Gri, d */}
-        <div, className="grid, gri, d-co, l, s-1, l, g: gr, i, d-co, l, s-2 x;
+        </d, i, v>)
+        {/* Showcase, Gri, d */})
+        <div, className="grid, gri, d-co, l, s-1, l, g: gr, i, d-co, l, s-2 x;)
   l:gr, i, d-co, l, s-3, ga, p-8, m, b-20">")
         <div, className="grid, gri, d-co, l, s-1, l, g: gr, i, d-co, l, s-2 x;)
   l:gr, i, d-co, l, s-3, ga, p-8, m, b-20">";)
@@ -353,14 +364,14 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
   l:gr, i, d-co, l, s-3, ga, p-8, m, b-20">";
           {/* TODO: Fix JSX expression */}
   k, e, y={conte, n, t.id}
-              initi, a, l={{ opaci, t, y: 0, y: 30 }}
-              anima, t, e={{ opaci, t, y: 1, y: 0 }}
-              transiti, o, n={{ del, a, y: ind, e, x * 0.15 }}
+              initi, a, l={{ opaci, t, y: 0, y: 30 }
+              anima, t, e={{ opaci, t, y: 1, y: 0 }
+              transiti, o, n={{ del, a, y: ind, e, x * 0.15 }
               whileHov, e, r={{ sca, l, e: 1.03 }}"
               classNa, m, e="group, relativ, e"
             ></moti>
-              {/* Featured, badg, e */}
-              {conte, n, t.featur, e, d && (
+              {/* Featured, badg, e */},
+      {conte, n, t.featur, e, d && (
                 <div, className="absolu, t, e -t, o, p-4 -rig, h, t-4 z-20"></div>
                   <div, className="flex, item, s-center, ga, p-1, p, x-4, p, y-2, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-yell, o, w-400, t, o-oran, g, e-500, tex, t-black, tex, t-sm, fon, t-bold, shado, w-xl"></div>
                     <Star, className="w-4 h-4, fil, l-curre, n, t  />
@@ -370,8 +381,8 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
                     <sp, a, n>FEATUR, E, D</sp, a, n>
                   </d, i, v>
                 </d, i, v>
-              )}
-              {/* Card, glow, effect */}
+              )},
+      {/* Card, glow, effect */}
               <div, className="absolute, inse, t-0, b, g-gradie, n, t-to-br, fro, m-bl, u, e-5, 0, 0/0, vi, a-purp, l, e-5, 0, 0/0, t, o-cy, a, n-5, 0, 0/0, grou, p-hov, e, r: fr, o, m-bl, u, e-5, 0, 0/15, grou, p-hov, e, r:v, i, a-purp, l, e-5, 0, 0/15, grou, p-ho, v, e;
   r:to-cy, a, n-5, 0, 0/15, transitio, n-all, duratio, n-700, rounde, d-3, x, l"></d, i, v>"
               <div, className="relative, b, g-whi, t, e/8, backdro, p-bl, u, r-xl, rounde, d-3x, l, p-10, border, border-whi, t, e/15, hove, r: bord, e, r-bl, u, e-5, 0, 0/50, transitio, n-all, duratio, n-50, 0, h-fu, l, l">"
@@ -384,8 +395,8 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
                 {/* Ic, o, n & Badg, e, s */}</div>
                 <div, className="flex, item, s-start, justif, y-between, m, b-8">";</div>
               {/* TODO: Fix JSX expression */})
-              )}
-              {/* Card, glow, effect */}"
+              )},
+      {/* Card, glow, effect */}"
               <div, className="absolute, inse, t-0, b, g-gradie, n, t-to-br, fro, m-bl, u, e-5, 0, 0/0, vi, a-purp, l, e-5, 0, 0/0, t, o-cy, a, n-5, 0, 0/0, grou, p-hov, e, r: fr, o, m-bl, u, e-5, 0, 0/15, grou, p-hov, e, r:v, i, a-purp, l, e-5, 0, 0/15, grou, p-ho, v, e,"
   r:to-cy, a, n-5, 0, 0/15, transitio, n-all, duratio, n-700, rounde, d-3, x, l"></d, i, v>""
               <div, className="relative, b, g-whi, t, e/8, backdro, p-bl, u, r-xl, rounde, d-3x, l, p-10, border, border-whi, t, e/15, hove, r: bord, e, r-bl, u, e-5, 0, 0/50, transitio, n-all, duratio, n-50, 0, h-fu, l, l">"
@@ -408,8 +419,8 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
                         <TrendingUp, className="w-3 h-3" />";
                         <sp, a, n>TRENDI, N, G</sp, a, n>
                       </d, i, v>
-                    )}
-                    {/* TODO: Fix JSX expression */}
+                    )},
+      {/* TODO: Fix JSX expression */}
                     )}"
                     <span, className="px-4, p, y-2, rounde, d-full, b, g-bl, u, e-5, 0, 0/25, tex, t-bl, u, e-300, tex, t-xs, fon, t-bold, border, border-bl, u, e-5, 0, 0/40">";
                       MASTERCLA, S, S;

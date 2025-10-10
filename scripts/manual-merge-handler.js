@@ -7,6 +7,9 @@ console.log('🔧 Starting manual merge handling...\n');
 // Function to execute git commands safely;
 function execGitCommand(command, description) {
   try {
+} catch (error) {
+    console.error("Error:", error);
+}
     console.log(`📝 ${description}...`);
     const result = execSync(command, { )
       encoding: 'utf8'),
@@ -15,11 +18,10 @@ function execGitCommand(command, description) {
     console.log(`✅ ${description} completed`);
     return result;
   } catch (error) {
+}
     console.log(`❌ ${description} failed: ${error.message}`);
     return null;
   }
-}
-
 // List of important branches to merge;
 const importantBranches = [
   'cursor/enhance-app-with-new-services-and-futuristic-design-2 e4 e',
@@ -29,9 +31,8 @@ const importantBranches = [
   'cursor/website-audit-and-update-with-deployment-db70',
   'add-new-2026-content',
   'add-revolutionary-content-2026',
-  'ai-2027-content-integration',
-  'ai-dashboard-improvements'
-];
+  'ai-2027-content-integration']
+  'ai-dashboard-improvements'];
 
 async function main() {
   console.log('🚀 Starting manual merge handling for important branches...\n');
@@ -41,18 +42,24 @@ async function main() {
   execGitCommand('git status --porcelain', 'Checking git status');
   
   // Try to merge each important branch;
-  for (const branch of importantBranches) {
+  for (const branch of, importantBranches) {
+}
     console.log(`\n🔄 Attempting to merge ${branch}...`);
     
     try {
       // Check if branch exists;
+  } catch (error) {
+    console.error("Error:", error);
+}
       const branchExists = execGitCommand(`git show-ref --verify --quiet refs/remotes/origin/${branch}`, `Checking if ${branch} exists`);
       
       if (branchExists !== null) {
         // Try to merge;
+}
         const mergeResult = execGitCommand(`git merge origin/${branch} --no-edit`, `Merging ${branch}`);
         
         if (mergeResult) {
+}
           console.log(`✅ Successfully merged ${branch}`);
         } else {
           console.log(`⚠️  ${branch} had conflicts or issues`);
@@ -61,6 +68,7 @@ async function main() {
         console.log(`⚠️  Branch ${branch} does not exist, skipping...`);
       }
     } catch (error) {
+}
       console.log(`❌ Error with ${branch}: ${error.message}`);
     }
     

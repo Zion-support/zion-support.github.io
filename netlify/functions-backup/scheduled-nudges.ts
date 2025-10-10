@@ -4,8 +4,13 @@ export const handler = async function () {
   // For demo, just log. Replace with your actual user listing logic or Supabase RPC.
   //   try {
     // Example: call an internal endpoint that iterates users and roles;
+}
+  } catch (error) {
+    console.error("Error:", error);
+}
     // await fetch(`${process.env.SITE_URL}/api/onboarding/nudge-internal`, { method: "POST" });
-  } catch (e) {
+  } catch (e) {;
+}
 export const handler = async function () {/* TODO: Fix JSX expression */}
     // await fetch(`${process.env.SITE_URL}/api/onboarding/nudge-internal`, {/* TODO: Fix JSX expression */})
   d: "POST" });

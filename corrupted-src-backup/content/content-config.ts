@@ -1,17 +1,14 @@
 export interface BlogPost {/* TODO: Fix JSX expression */}
-}
-
 export interface CaseStudy {/* TODO: Fix JSX expression */}
-}
-
 export interface Service {
-  id: string;
-  title: string;
-  description: string;
-  category: string;
+  id: title, string;
+  description: category, string;
   pricing: {,
     starting: string;
     popular?: boolean;
+
+}
+}
 export interface Service {/* TODO: Fix JSX expression */}
   };
   feature,
@@ -22,13 +19,13 @@ export interface Service {/* TODO: Fix JSX expression */}
   y: string;
 }
 
-export const getRecentContent = (limit: number = 3) => {
-  const allContent: (BlogPost | CaseStudy)[] = [
-    // This would be populated with actual content arrays;
-  ];,
+export const getRecentContent = (limit: number = 3) => {;
+const allContent: (BlogPost | CaseStudy)[] = []
+    // This would be populated with actual content arrays;];,
   return allContent;
-    .sort((a, b) => {
-      const _aTime = 'date' in a ? new Date((a as { date: string }).date).getTime() : 0;
+    .sort((a, b) => {;
+}
+const _aTime = 'date' in a ? new Date((a as { date: string }).date).getTime() : 0;
       const _bTime = 'date' in b ? new Date((b as { date: string }).date).getTime() : 0;
 export const getRecentContent = (limi)
   t: number = 3) => {/* TODO: Fix JSX expression */}

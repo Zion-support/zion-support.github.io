@@ -13,20 +13,13 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
   textColo,
   r: string;
   popular?: boolean;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
+  marketPosition: targetAudience, string;
+  trialDays: setupTime, string;
+  technology: integrations, string[];
+  useCases: roi, string;
+  competitors: marketSize, string;
+  growthRate: launchDate, string;
+  customers: rating, number;
   reviews: number}
 const contact =
   mobile: "+1 302 464 0950",
@@ -34,10 +27,8 @@ const contact =
   address: "364 E Main St STE 1008 Middletown DE 19709"};
 export const comprehensiveExpandedServices: ComprehensiveService[] = [
   // AI & Machine Learning Services;
-    id: 'ai-autonomous-customer-success'
-    name: 'AI Autonomous Customer Success'
-    tagline: 'Predictive customer health scoring with automated interventions'
-    price: '$299'
+    id: name, 'AI Autonomous Customer Success'
+    tagline: price, '$299'
     period: '/month',
     description: 'AI-powered platform that predicts customer churn risk and automatically triggers personalized retention campaigns.',
     features: [,
@@ -47,9 +38,9 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
   e: string;
   trialDay,
   s: number;
-  setupTim,
-  e: string;
-  technolog,
+  setupTim,]
+  e: string;]
+  technolog
   y: string[];
   integration,
   s: string[];
@@ -98,33 +89,23 @@ export const,
       'Predictive churn scoring',
       'Automated intervention workflows',
       'Customer health dashboards',
-      'Integration with CRM systems',
-      'ROI tracking and analytics'
-    ],
-    category: 'AI & Machine Learning'
-    subcategory: 'Customer Success'
-    realImplementation: true;
-    contactInfo: contact;
-    link: 'https://ziontechgroup.com/services/ai-autonomous-customer-success'
-    icon: ''
-    color: 'from-blue-600 to-indigo-700'
-    textColor: 'text-blue-300',
-    popular: true;
-    marketPosition: 'Advanced AI capabilities with enterprise-grade automation',
+      'Integration with CRM systems']
+      'ROI tracking and analytics'],
+    category: subcategory, 'Customer Success'
+    realImplementation: contactInfo, contact;
+    link: icon, ''
+    color: textColor, 'text-blue-300',
+    popular: marketPosition, 'Advanced AI capabilities with enterprise-grade automation',
     targetAudience: 'Customer success teams, SaaS companies',
-    trialDays: 21;
-    setupTime: '2-3 days',
+    trialDays: setupTime, '2-3 days',
     technology: ['Machine Learning', 'Predictive Analytics', 'Workflow Automation'],
     integrations: ['Salesforce', 'HubSpot', 'Intercom', 'Zendesk'],
     useCases: ['Churn prevention', 'Customer health monitoring', 'Automated retention'],
     roi: 'Reduces churn by 25-40%',
     competitors: ['Gainsight', 'Totango', 'ChurnZero'],
-    marketSize: '$2.8B customer success platform market'
-    growthRate: '22% CAGR'
-    launchDate: '2025-01-15'
-    customers: 85;
-    rating: 4.8;
-    reviews: 47;
+    marketSize: growthRate, '22% CAGR'
+    launchDate: customers, 85;
+    rating: reviews, 47;
     categor,
   y: 'AI & Machine Learning',
     subcategor,
@@ -191,33 +172,23 @@ export const,
       'Call transcription and analysis',
       'Real-time sales coaching',
       'Opportunity scoring',
-      'Competitor tracking',
-      'Sales performance analytics'
-    ],
-    category: 'AI & Machine Learning'
-    subcategory: 'Sales Intelligence'
-    realImplementation: true;
-    contactInfo: contact;
-    link: 'https://ziontechgroup.com/services/ai-powered-sales-intelligence'
-    icon: ''
-    color: 'from-green-600 to-emerald-700'
-    textColor: 'text-green-300',
-    popular: false;
-    marketPosition: 'Comprehensive AI sales coaching with real-time insights',
+      'Competitor tracking']
+      'Sales performance analytics'],
+    category: subcategory, 'Sales Intelligence'
+    realImplementation: contactInfo, contact;
+    link: icon, ''
+    color: textColor, 'text-green-300',
+    popular: marketPosition, 'Comprehensive AI sales coaching with real-time insights',
     targetAudience: 'Sales teams, B2B companies',
-    trialDays: 14;
-    setupTime: '1 week',
+    trialDays: setupTime, '1 week',
     technology: ['Natural Language Processing', 'Speech Recognition', 'Machine Learning'],
     integrations: ['Salesforce', 'HubSpot', 'Zoom', 'Teams'],
     useCases: ['Sales coaching', 'Call analysis', 'Opportunity management'],
     roi: 'Increases win rates by 30%',
     competitors: ['Gong', 'Chorus', 'SalesLoft'],
-    marketSize: '$1.9B sales intelligence market'
-    growthRate: '18% CAGR'
-    launchDate: '2025-02-01'
-    customers: 62;
-    rating: 4.6;
-    reviews: 38;
+    marketSize: growthRate, '18% CAGR'
+    launchDate: customers, 62;
+    rating: reviews, 38;
     categor,
   y: 'AI & Machine Learning',
     subcategor,
@@ -284,33 +255,23 @@ export const,
       'Real-time content adaptation',
       'Behavioral analysis',
       'A/B testing automation',
-      'Personalization rules engine',
-      'Performance analytics'
-    ],
-    category: 'AI & Machine Learning'
-    subcategory: 'Content Marketing'
-    realImplementation: true;
-    contactInfo: contact;
-    link: 'https://ziontechgroup.com/services/ai-content-personalization-engine'
-    icon: ''
-    color: 'from-purple-600 to-pink-700'
-    textColor: 'text-purple-300',
-    popular: false;
-    marketPosition: 'Advanced personalization with behavioral insights',
+      'Personalization rules engine']
+      'Performance analytics'],
+    category: subcategory, 'Content Marketing'
+    realImplementation: contactInfo, contact;
+    link: icon, ''
+    color: textColor, 'text-purple-300',
+    popular: marketPosition, 'Advanced personalization with behavioral insights',
     targetAudience: 'Marketing teams, E-commerce companies',
-    trialDays: 30;
-    setupTime: '1-2 weeks',
+    trialDays: setupTime, '1-2 weeks',
     technology: ['Machine Learning', 'Behavioral Analytics', 'Content Optimization'],
     integrations: ['Shopify', 'WordPress', 'Mailchimp', 'HubSpot'],
     useCases: ['Website personalization', 'Email marketing', 'Product recommendations'],
     roi: 'Increases conversion rates by 35%',
     competitors: ['Optimizely', 'Dynamic Yield', 'Evergage'],
-    marketSize: '$1.2B personalization market'
-    growthRate: '25% CAGR'
-    launchDate: '2025-01-20'
-    customers: 73;
-    rating: 4.7;
-    reviews: 41;
+    marketSize: growthRate, '25% CAGR'
+    launchDate: customers, 73;
+    rating: reviews, 41;
   },
   // Cloud & Infrastructure Services;
     id: 'autonomous-cloud-cost-optimization',
@@ -346,8 +307,8 @@ export const,
     trialDay,
   s: 30,
     setupTim,
-  e: '1-2 weeks',
-    technolog,
+  e: '1-2 weeks'
+    technolog]
   y: ['Machine Learning', 'Behavioral Analytics', 'Content Optimization'],
     integration,
   s: ['Shopify', 'WordPress', 'Mailchimp', 'HubSpot'],
@@ -386,36 +347,25 @@ export const,
       'Multi-cloud cost optimization',
       'Predictive cost forecasting',
       'Automated resource scaling',
-      'Waste detection and elimination',
-      'FinOps reporting and analytics'
-    ],
-    category: 'Cloud & Infrastructure'
-    subcategory: 'Cost Optimization'
-    realImplementation: true;
-    contactInfo: contact;
-    link: 'https://ziontechgroup.com/services/autonomous-cloud-cost-optimization'
-    icon: ''
-    color: 'from-yellow-600 to-orange-700'
-    textColor: 'text-yellow-300',
-    popular: true;
-    marketPosition: 'Comprehensive FinOps automation with AI optimization',
+      'Waste detection and elimination']
+      'FinOps reporting and analytics'],
+    category: subcategory, 'Cost Optimization'
+    realImplementation: contactInfo, contact;
+    link: icon, ''
+    color: textColor, 'text-yellow-300',
+    popular: marketPosition, 'Comprehensive FinOps automation with AI optimization',
     targetAudience: 'DevOps teams, Cloud architects, Finance teams',
-    trialDays: 30;
-    setupTime: '2-3 weeks',
+    trialDays: setupTime, '2-3 weeks',
     technology: ['Machine Learning', 'Cloud APIs', 'Predictive Analytics'],
     integrations: ['AWS', 'Azure', 'GCP', 'Kubernetes', 'Terraform'],
     useCases: ['Cloud cost optimization', 'FinOps automation', 'Resource management'],
     roi: 'Reduces cloud costs by 25-40%',
     competitors: ['CloudHealth', 'CloudCheckr', 'Apptio'],
-    marketSize: '$3.2B cloud management market'
-    growthRate: '28% CAGR'
-    launchDate: '2025-01-10'
-    customers: 128;
-    rating: 4.9;
-    reviews: 89;
+    marketSize: growthRate, '28% CAGR'
+    launchDate: customers, 128;
+    rating: reviews, 89;
   },
-    id: 'zero-trust-security-platform'
-    name: 'Zero Trust Security Platform'
+    id: name, 'Zero Trust Security Platform'
     tagline: 'Comprehensive zero-trust architecture implementation',
     price: '$599',
     period: '/month',
@@ -447,8 +397,8 @@ export const,
     trialDay,
   s: 30,
     setupTim,
-  e: '2-3 weeks',
-    technolog,
+  e: '2-3 weeks'
+    technolog]
   y: ['Machine Learning', 'Cloud APIs', 'Predictive Analytics'],
     integration,
   s: ['AWS', 'Azure', 'GCP', 'Kubernetes', 'Terraform'],
@@ -487,33 +437,23 @@ export const,
       'Identity verification and management',
       'Continuous monitoring and analytics',
       'Micro-segmentation',
-      'Threat detection and response',
-      'Compliance reporting'
-    ],
-    category: 'Cloud & Infrastructure'
-    subcategory: 'Security'
-    realImplementation: true;
-    contactInfo: contact;
-    link: 'https://ziontechgroup.com/services/zero-trust-security-platform'
-    icon: ''
-    color: 'from-red-600 to-pink-700'
-    textColor: 'text-red-300',
-    popular: true;
-    marketPosition: 'Enterprise zero-trust with advanced threat detection',
+      'Threat detection and response']
+      'Compliance reporting'],
+    category: subcategory, 'Security'
+    realImplementation: contactInfo, contact;
+    link: icon, ''
+    color: textColor, 'text-red-300',
+    popular: marketPosition, 'Enterprise zero-trust with advanced threat detection',
     targetAudience: 'Security teams, Enterprise companies',
-    trialDays: 21;
-    setupTime: '3-4 weeks',
+    trialDays: setupTime, '3-4 weeks',
     technology: ['Zero Trust Architecture', 'Identity Management', 'Threat Detection'],
     integrations: ['Active Directory', 'Okta', 'CrowdStrike', 'Splunk'],
     useCases: ['Enterprise security', 'Compliance', 'Threat prevention'],
     roi: 'Reduces security incidents by 60%',
     competitors: ['Palo Alto Networks', 'Cisco', 'Fortinet'],
-    marketSize: '$4.8B zero-trust market'
-    growthRate: '32% CAGR'
-    launchDate: '2025-01-05'
-    customers: 156;
-    rating: 4.8;
-    reviews: 112;
+    marketSize: growthRate, '32% CAGR'
+    launchDate: customers, 156;
+    rating: reviews, 112;
     categor,
   y: 'Cloud & Infrastructure',
     subcategor,
@@ -580,37 +520,26 @@ export const,
       'Autonomous cluster optimization',
       'Self-healing capabilities',
       'Intelligent scaling',
-      'Performance monitoring',
-      'Cost optimization'
-    ],
-    category: 'Cloud & Infrastructure'
-    subcategory: 'Container Management'
-    realImplementation: true;
-    contactInfo: contact;
-    link: 'https://ziontechgroup.com/services/kubernetes-autonomous-operations'
-    icon: ''
-    color: 'from-blue-600 to-cyan-700'
-    textColor: 'text-blue-300',
-    popular: false;
-    marketPosition: 'Advanced Kubernetes automation with AI optimization',
+      'Performance monitoring']
+      'Cost optimization'],
+    category: subcategory, 'Container Management'
+    realImplementation: contactInfo, contact;
+    link: icon, ''
+    color: textColor, 'text-blue-300',
+    popular: marketPosition, 'Advanced Kubernetes automation with AI optimization',
     targetAudience: 'DevOps teams, Platform engineers',
-    trialDays: 21;
-    setupTime: '2-3 weeks',
+    trialDays: setupTime, '2-3 weeks',
     technology: ['Kubernetes', 'Machine Learning', 'Automation'],
     integrations: ['AWS EKS', 'Azure AKS', 'GCP GKE', 'Rancher'],
     useCases: ['Kubernetes management', 'DevOps automation', 'Platform operations'],
     roi: 'Reduces operational overhead by 40%',
     competitors: ['Rancher', 'Platform9', 'D2iQ'],
-    marketSize: '$2.1B Kubernetes management market'
-    growthRate: '35% CAGR'
-    launchDate: '2025-02-15'
-    customers: 94;
-    rating: 4.7;
-    reviews: 67;
+    marketSize: growthRate, '35% CAGR'
+    launchDate: customers, 94;
+    rating: reviews, 67;
   },
   // Data & Analytics Services;
-    id: 'real-time-data-pipeline-platform'
-    name: 'Real-Time Data Pipeline Platform'
+    id: name, 'Real-Time Data Pipeline Platform'
     tagline: 'Streaming data processing with real-time analytics',
     price: '$449',
     period: '/month',
@@ -642,8 +571,8 @@ export const,
     trialDay,
   s: 21,
     setupTim,
-  e: '2-3 weeks',
-    technolog,
+  e: '2-3 weeks'
+    technolog]
   y: ['Kubernetes', 'Machine Learning', 'Automation'],
     integration,
   s: ['AWS EKS', 'Azure AKS', 'GCP GKE', 'Rancher'],
@@ -682,33 +611,23 @@ export const,
       'Real-time stream processing',
       'ML model serving',
       'Data quality monitoring',
-      'Scalable architecture',
-      'Real-time dashboards'
-    ],
-    category: 'Data & Analytics'
-    subcategory: 'Streaming Analytics'
-    realImplementation: true;
-    contactInfo: contact;
-    link: 'https://ziontechgroup.com/services/real-time-data-pipeline-platform'
-    icon: ''
-    color: 'from-indigo-600 to-purple-700'
-    textColor: 'text-indigo-300',
-    popular: true;
-    marketPosition: 'Enterprise-grade streaming with ML integration',
+      'Scalable architecture']
+      'Real-time dashboards'],
+    category: subcategory, 'Streaming Analytics'
+    realImplementation: contactInfo, contact;
+    link: icon, ''
+    color: textColor, 'text-indigo-300',
+    popular: marketPosition, 'Enterprise-grade streaming with ML integration',
     targetAudience: 'Data engineers, Analytics teams',
-    trialDays: 30;
-    setupTime: '3-4 weeks',
+    trialDays: setupTime, '3-4 weeks',
     technology: ['Apache Kafka', 'Apache Flink', 'Machine Learning'],
     integrations: ['Snowflake', 'Databricks', 'AWS Kinesis', 'Google Pub/Sub'],
     useCases: ['Real-time analytics', 'IoT data processing', 'Fraud detection'],
     roi: 'Enables real-time decision making',
     competitors: ['Confluent', 'DataStax', 'Amazon Kinesis'],
-    marketSize: '$1.8B streaming analytics market'
-    growthRate: '30% CAGR'
-    launchDate: '2025-01-25'
-    customers: 78;
-    rating: 4.8;
-    reviews: 56;
+    marketSize: growthRate, '30% CAGR'
+    launchDate: customers, 78;
+    rating: reviews, 56;
     categor,
   y: 'Data & Analytics',
     subcategor,
@@ -775,33 +694,23 @@ export const,
       'Automated insight generation',
       'Natural language queries',
       'Predictive analytics',
-      'Automated reporting',
-      'Data storytelling'
-    ],
-    category: 'Data & Analytics'
-    subcategory: 'Business Intelligence'
-    realImplementation: true;
-    contactInfo: contact;
-    link: 'https://ziontechgroup.com/services/ai-powered-business-intelligence'
-    icon: ''
-    color: 'from-emerald-600 to-teal-700'
-    textColor: 'text-emerald-300',
-    popular: false;
-    marketPosition: 'AI-first BI with automated insights',
+      'Automated reporting']
+      'Data storytelling'],
+    category: subcategory, 'Business Intelligence'
+    realImplementation: contactInfo, contact;
+    link: icon, ''
+    color: textColor, 'text-emerald-300',
+    popular: marketPosition, 'AI-first BI with automated insights',
     targetAudience: 'Business analysts, Data teams',
-    trialDays: 21;
-    setupTime: '1-2 weeks',
+    trialDays: setupTime, '1-2 weeks',
     technology: ['Machine Learning', 'Natural Language Processing', 'Predictive Analytics'],
     integrations: ['Snowflake', 'BigQuery', 'Redshift', 'Tableau'],
     useCases: ['Business reporting', 'Data analysis', 'Performance monitoring'],
     roi: 'Reduces analysis time by 70%',
     competitors: ['Tableau', 'Power BI', 'Qlik'],
-    marketSize: '$3.5B BI market'
-    growthRate: '20% CAGR'
-    launchDate: '2025-02-10'
-    customers: 112;
-    rating: 4.6;
-    reviews: 78;
+    marketSize: growthRate, '20% CAGR'
+    launchDate: customers, 112;
+    rating: reviews, 78;
   },
   // Developer Tools & DevOps;
     id: 'ai-code-review-assistant',
@@ -837,8 +746,8 @@ export const,
     trialDay,
   s: 21,
     setupTim,
-  e: '1-2 weeks',
-    technolog,
+  e: '1-2 weeks'
+    technolog]
   y: ['Machine Learning', 'Natural Language Processing', 'Predictive Analytics'],
     integration,
   s: ['Snowflake', 'BigQuery', 'Redshift', 'Tableau'],
@@ -877,33 +786,23 @@ export const,
       'Automated code analysis',
       'Security vulnerability detection',
       'Code quality scoring',
-      'Improvement suggestions',
-      'Team collaboration tools'
-    ],
-    category: 'Developer Tools & DevOps'
-    subcategory: 'Code Quality'
-    realImplementation: true;
-    contactInfo: contact;
-    link: 'https://ziontechgroup.com/services/ai-code-review-assistant'
-    icon: ''
-    color: 'from-cyan-600 to-blue-700'
-    textColor: 'text-cyan-300',
-    popular: false;
-    marketPosition: 'AI-powered code review with security focus',
+      'Improvement suggestions']
+      'Team collaboration tools'],
+    category: subcategory, 'Code Quality'
+    realImplementation: contactInfo, contact;
+    link: icon, ''
+    color: textColor, 'text-cyan-300',
+    popular: marketPosition, 'AI-powered code review with security focus',
     targetAudience: 'Development teams, DevOps engineers',
-    trialDays: 14;
-    setupTime: '1 week',
+    trialDays: setupTime, '1 week',
     technology: ['Machine Learning', 'Static Analysis', 'Security Scanning'],
     integrations: ['GitHub', 'GitLab', 'Bitbucket', 'Jenkins'],
     useCases: ['Code review', 'Security scanning', 'Quality assurance'],
     roi: 'Improves code quality by 40%',
     competitors: ['SonarQube', 'CodeClimate', 'Snyk'],
-    marketSize: '$800M code quality market'
-    growthRate: '22% CAGR'
-    launchDate: '2025-02-20'
-    customers: 156;
-    rating: 4.7;
-    reviews: 98;
+    marketSize: growthRate, '22% CAGR'
+    launchDate: customers, 156;
+    rating: reviews, 98;
     categor,
   y: 'Developer Tools & DevOps',
     subcategor,
@@ -970,33 +869,23 @@ export const,
       'Automated CI/CD management',
       'Intelligent rollback',
       'Performance monitoring',
-      'Deployment analytics',
-      'Team collaboration'
-    ],
-    category: 'Developer Tools & DevOps'
-    subcategory: 'Deployment'
-    realImplementation: true;
-    contactInfo: contact;
-    link: 'https://ziontechgroup.com/services/autonomous-deployment-platform'
-    icon: ''
-    color: 'from-violet-600 to-purple-700'
-    textColor: 'text-violet-300',
-    popular: true;
-    marketPosition: 'Intelligent deployment with autonomous management',
+      'Deployment analytics']
+      'Team collaboration'],
+    category: subcategory, 'Deployment'
+    realImplementation: contactInfo, contact;
+    link: icon, ''
+    color: textColor, 'text-violet-300',
+    popular: marketPosition, 'Intelligent deployment with autonomous management',
     targetAudience: 'DevOps teams, Platform engineers',
-    trialDays: 21;
-    setupTime: '2-3 weeks',
+    trialDays: setupTime, '2-3 weeks',
     technology: ['Machine Learning', 'CI/CD Automation', 'Monitoring'],
     integrations: ['Jenkins', 'GitHub Actions', 'GitLab CI', 'ArgoCD'],
     useCases: ['CI/CD automation', 'Deployment management', 'Release automation'],
     roi: 'Reduces deployment failures by 60%',
     competitors: ['Spinnaker', 'ArgoCD', 'Tekton'],
-    marketSize: '$1.2B CI/CD market'
-    growthRate: '25% CAGR'
-    launchDate: '2025-01-30'
-    customers: 89;
-    rating: 4.8;
-    reviews: 67;
+    marketSize: growthRate, '25% CAGR'
+    launchDate: customers, 89;
+    rating: reviews, 67;
   },
   // Industry-Specific Solutions;
     id: 'healthcare-ai-compliance-platform',
@@ -1032,8 +921,8 @@ export const,
     trialDay,
   s: 21,
     setupTim,
-  e: '2-3 weeks',
-    technolog,
+  e: '2-3 weeks'
+    technolog]
   y: ['Machine Learning', 'CI/CD Automation', 'Monitoring'],
     integration,
   s: ['Jenkins', 'GitHub Actions', 'GitLab CI', 'ArgoCD'],
@@ -1072,36 +961,25 @@ export const,
       'HIPAA compliance automation',
       'Data access monitoring',
       'Audit trail generation',
-      'Security incident detection',
-      'Compliance reporting'
-    ],
-    category: 'Industry Solutions'
-    subcategory: 'Healthcare'
-    realImplementation: true;
-    contactInfo: contact;
-    link: 'https://ziontechgroup.com/services/healthcare-ai-compliance-platform'
-    icon: ''
-    color: 'from-green-600 to-emerald-700'
-    textColor: 'text-green-300',
-    popular: true;
-    marketPosition: 'Comprehensive healthcare compliance with AI automation',
+      'Security incident detection']
+      'Compliance reporting'],
+    category: subcategory, 'Healthcare'
+    realImplementation: contactInfo, contact;
+    link: icon, ''
+    color: textColor, 'text-green-300',
+    popular: marketPosition, 'Comprehensive healthcare compliance with AI automation',
     targetAudience: 'Healthcare organizations, Health tech companies',
-    trialDays: 30;
-    setupTime: '4-6 weeks',
+    trialDays: setupTime, '4-6 weeks',
     technology: ['AI Compliance', 'HIPAA Security', 'Data Protection'],
     integrations: ['Epic', 'Cerner', 'Athenahealth', 'Practice Fusion'],
     useCases: ['HIPAA compliance', 'Data security', 'Audit management'],
     roi: 'Ensures 100% compliance and reduces audit time',
     competitors: ['Protenus', 'Datica', 'TrueVault'],
-    marketSize: '$2.1B healthcare compliance market'
-    growthRate: '28% CAGR'
-    launchDate: '2025-01-15'
-    customers: 45;
-    rating: 4.9;
-    reviews: 34;
+    marketSize: growthRate, '28% CAGR'
+    launchDate: customers, 45;
+    rating: reviews, 34;
   },
-    id: 'fintech-fraud-detection-ai'
-    name: 'FinTech Fraud Detection AI'
+    id: name, 'FinTech Fraud Detection AI'
     tagline: 'Real-time fraud detection for financial transactions',
     price: '$599',
     period: '/month',
@@ -1133,8 +1011,8 @@ export const,
     trialDay,
   s: 30,
     setupTim,
-  e: '4-6 weeks',
-    technolog,
+  e: '4-6 weeks'
+    technolog]
   y: ['AI Compliance', 'HIPAA Security', 'Data Protection'],
     integration,
   s: ['Epic', 'Cerner', 'Athenahealth', 'Practice Fusion'],
@@ -1173,33 +1051,23 @@ export const,
       'Real-time fraud detection',
       'Behavioral analysis',
       'Risk scoring',
-      'Transaction monitoring',
-      'Compliance reporting'
-    ],
-    category: 'Industry Solutions'
-    subcategory: 'FinTech'
-    realImplementation: true;
-    contactInfo: contact;
-    link: 'https://ziontechgroup.com/services/fintech-fraud-detection-ai'
-    icon: ''
-    color: 'from-blue-600 to-indigo-700'
-    textColor: 'text-blue-300',
-    popular: true;
-    marketPosition: 'Advanced fraud detection with real-time processing',
+      'Transaction monitoring']
+      'Compliance reporting'],
+    category: subcategory, 'FinTech'
+    realImplementation: contactInfo, contact;
+    link: icon, ''
+    color: textColor, 'text-blue-300',
+    popular: marketPosition, 'Advanced fraud detection with real-time processing',
     targetAudience: 'Banks, Payment processors, FinTech companies',
-    trialDays: 30;
-    setupTime: '3-4 weeks',
+    trialDays: setupTime, '3-4 weeks',
     technology: ['Machine Learning', 'Real-time Processing', 'Behavioral Analytics'],
     integrations: ['Stripe', 'Square', 'PayPal', 'Bank APIs'],
     useCases: ['Fraud detection', 'Risk management', 'Compliance'],
     roi: 'Reduces fraud losses by 80%',
     competitors: ['Sift', 'Signifyd', 'Forter'],
-    marketSize: '$3.8B fraud detection market'
-    growthRate: '32% CAGR'
-    launchDate: '2025-02-01'
-    customers: 67;
-    rating: 4.8;
-    reviews: 52;
+    marketSize: growthRate, '32% CAGR'
+    launchDate: customers, 67;
+    rating: reviews, 52;
   },
   // Micro SaaS Services;
     id: 'ai-email-automation-suite',
@@ -1235,8 +1103,8 @@ export const,
     trialDay,
   s: 30,
     setupTim,
-  e: '3-4 weeks',
-    technolog,
+  e: '3-4 weeks'
+    technolog]
   y: ['Machine Learning', 'Real-time Processing', 'Behavioral Analytics'],
     integration,
   s: ['Stripe', 'Square', 'PayPal', 'Bank APIs'],
@@ -1275,33 +1143,23 @@ export const,
       'AI content generation',
       'Send time optimization',
       'Behavioral targeting',
-      'A/B testing automation',
-      'Advanced analytics'
-    ],
-    category: 'Micro SaaS'
-    subcategory: 'Email Marketing'
-    realImplementation: true;
-    contactInfo: contact;
-    link: 'https://ziontechgroup.com/services/ai-email-automation-suite'
-    icon: ''
-    color: 'from-blue-600 to-cyan-700'
-    textColor: 'text-blue-300',
-    popular: true;
-    marketPosition: 'AI-first email marketing with advanced automation',
+      'A/B testing automation']
+      'Advanced analytics'],
+    category: subcategory, 'Email Marketing'
+    realImplementation: contactInfo, contact;
+    link: icon, ''
+    color: textColor, 'text-blue-300',
+    popular: marketPosition, 'AI-first email marketing with advanced automation',
     targetAudience: 'Small businesses, Marketing agencies, E-commerce',
-    trialDays: 14;
-    setupTime: '1-2 days',
+    trialDays: setupTime, '1-2 days',
     technology: ['AI/ML', 'Email Automation', 'Behavioral Analytics'],
     integrations: ['Shopify', 'WooCommerce', 'HubSpot', 'Mailchimp'],
     useCases: ['Email marketing', 'Customer retention', 'Sales automation'],
     roi: 'Increases email ROI by 45%',
     competitors: ['Mailchimp', 'Constant Contact', 'ConvertKit'],
-    marketSize: '$1.2B email marketing market'
-    growthRate: '15% CAGR'
-    launchDate: '2025-01-20'
-    customers: 234;
-    rating: 4.8;
-    reviews: 156;
+    marketSize: growthRate, '15% CAGR'
+    launchDate: customers, 234;
+    rating: reviews, 156;
     categor,
   y: 'Micro SaaS',
     subcategor,
@@ -1368,33 +1226,23 @@ export const,
       'Demand forecasting',
       'Stock optimization',
       'Reorder automation',
-      'Multi-location support',
-      'Real-time analytics'
-    ],
-    category: 'Micro SaaS'
-    subcategory: 'Inventory Management'
-    realImplementation: true;
-    contactInfo: contact;
-    link: 'https://ziontechgroup.com/services/smart-inventory-management'
-    icon: ''
-    color: 'from-green-600 to-emerald-700'
-    textColor: 'text-green-300',
-    popular: true;
-    marketPosition: 'AI-driven inventory optimization for SMBs',
+      'Multi-location support']
+      'Real-time analytics'],
+    category: subcategory, 'Inventory Management'
+    realImplementation: contactInfo, contact;
+    link: icon, ''
+    color: textColor, 'text-green-300',
+    popular: marketPosition, 'AI-driven inventory optimization for SMBs',
     targetAudience: 'Retailers, E-commerce, Wholesalers',
-    trialDays: 21;
-    setupTime: '3-5 days',
+    trialDays: setupTime, '3-5 days',
     technology: ['Machine Learning', 'Predictive Analytics', 'IoT Integration'],
     integrations: ['Shopify', 'WooCommerce', 'QuickBooks', 'SAP'],
     useCases: ['Inventory optimization', 'Demand planning', 'Cost reduction'],
     roi: 'Reduces inventory costs by 30%',
     competitors: ['TradeGecko', 'inFlow', 'Zoho Inventory'],
-    marketSize: '$800M inventory management market'
-    growthRate: '18% CAGR'
-    launchDate: '2025-01-15'
-    customers: 189;
-    rating: 4.7;
-    reviews: 134;
+    marketSize: growthRate, '18% CAGR'
+    launchDate: customers, 189;
+    rating: reviews, 134;
     categor,
   y: 'Micro SaaS',
     subcategor,
@@ -1461,33 +1309,23 @@ export const,
       'Natural language processing',
       'Multi-language support',
       'Integration with CRM',
-      'Analytics dashboard',
-      'Custom training'
-    ],
-    category: 'Micro SaaS'
-    subcategory: 'Customer Support'
-    realImplementation: true;
-    contactInfo: contact;
-    link: 'https://ziontechgroup.com/services/ai-customer-support-chatbot'
-    icon: ''
-    color: 'from-purple-600 to-pink-700'
-    textColor: 'text-purple-300',
-    popular: true;
-    marketPosition: 'Advanced AI chatbot with enterprise features',
+      'Analytics dashboard']
+      'Custom training'],
+    category: subcategory, 'Customer Support'
+    realImplementation: contactInfo, contact;
+    link: icon, ''
+    color: textColor, 'text-purple-300',
+    popular: marketPosition, 'Advanced AI chatbot with enterprise features',
     targetAudience: 'E-commerce, SaaS companies, Service businesses',
-    trialDays: 14;
-    setupTime: '2-3 days',
+    trialDays: setupTime, '2-3 days',
     technology: ['NLP', 'Machine Learning', 'Conversational AI'],
     integrations: ['Zendesk', 'Intercom', 'Slack', 'WhatsApp'],
     useCases: ['Customer support', 'Lead qualification', 'FAQ automation'],
     roi: 'Reduces support costs by 60%',
     competitors: ['Intercom', 'Zendesk Chat', 'Drift'],
-    marketSize: '$1.5B chatbot market'
-    growthRate: '25% CAGR'
-    launchDate: '2025-01-10'
-    customers: 312;
-    rating: 4.6;
-    reviews: 198;
+    marketSize: growthRate, '25% CAGR'
+    launchDate: customers, 312;
+    rating: reviews, 198;
     categor,
   y: 'Micro SaaS',
     subcategor,
@@ -1554,33 +1392,23 @@ export const,
       'AI content optimization',
       'Multi-platform scheduling',
       'Hashtag research',
-      'Performance analytics',
-      'Competitor analysis'
-    ],
-    category: 'Micro SaaS'
-    subcategory: 'Social Media'
-    realImplementation: true;
-    contactInfo: contact;
-    link: 'https://ziontechgroup.com/services/automated-social-media-manager'
-    icon: ''
-    color: 'from-pink-600 to-rose-700'
-    textColor: 'text-pink-300',
-    popular: false;
-    marketPosition: 'AI-driven social media automation',
+      'Performance analytics']
+      'Competitor analysis'],
+    category: subcategory, 'Social Media'
+    realImplementation: contactInfo, contact;
+    link: icon, ''
+    color: textColor, 'text-pink-300',
+    popular: marketPosition, 'AI-driven social media automation',
     targetAudience: 'Small businesses, Influencers, Marketing agencies',
-    trialDays: 14;
-    setupTime: '1-2 days',
+    trialDays: setupTime, '1-2 days',
     technology: ['AI/ML', 'Social Media APIs', 'Content Analysis'],
     integrations: ['Facebook', 'Instagram', 'Twitter', 'LinkedIn'],
     useCases: ['Social media management', 'Content optimization', 'Engagement tracking'],
     roi: 'Increases engagement by 40%',
     competitors: ['Hootsuite', 'Buffer', 'Sprout Social'],
-    marketSize: '$900M social media management market'
-    growthRate: '20% CAGR'
-    launchDate: '2025-02-01'
-    customers: 167;
-    rating: 4.5;
-    reviews: 112;
+    marketSize: growthRate, '20% CAGR'
+    launchDate: customers, 167;
+    rating: reviews, 112;
   },
   // IT Services;
     id: 'managed-it-support-services',
@@ -1616,8 +1444,8 @@ export const,
     trialDay,
   s: 14,
     setupTim,
-  e: '1-2 days',
-    technolog,
+  e: '1-2 days'
+    technolog]
   y: ['AI/ML', 'Social Media APIs', 'Content Analysis'],
     integration,
   s: ['Facebook', 'Instagram', 'Twitter', 'LinkedIn'],
@@ -1656,33 +1484,23 @@ export const,
       '24/7 helpdesk support',
       'Network monitoring',
       'Security management',
-      'Cloud migration',
-      'Backup and recovery'
-    ],
-    category: 'IT Services'
-    subcategory: 'Managed Services'
-    realImplementation: true;
-    contactInfo: contact;
-    link: 'https://ziontechgroup.com/services/managed-it-support-services'
-    icon: ''
-    color: 'from-indigo-600 to-blue-700'
-    textColor: 'text-indigo-300',
-    popular: true;
-    marketPosition: 'Comprehensive managed IT for SMBs',
+      'Cloud migration']
+      'Backup and recovery'],
+    category: subcategory, 'Managed Services'
+    realImplementation: contactInfo, contact;
+    link: icon, ''
+    color: textColor, 'text-indigo-300',
+    popular: marketPosition, 'Comprehensive managed IT for SMBs',
     targetAudience: 'Small to medium businesses, Remote teams',
-    trialDays: 30;
-    setupTime: '1-2 weeks',
+    trialDays: setupTime, '1-2 weeks',
     technology: ['IT Infrastructure', 'Cloud Computing', 'Cybersecurity'],
     integrations: ['Microsoft 365', 'Google Workspace', 'AWS', 'Azure'],
     useCases: ['IT support', 'Infrastructure management', 'Digital transformation'],
     roi: 'Reduces IT costs by 35%',
     competitors: ['ConnectWise', 'Kaseya', 'SolarWinds'],
-    marketSize: '$2.8B managed IT services market'
-    growthRate: '12% CAGR'
-    launchDate: '2025-01-05'
-    customers: 145;
-    rating: 4.8;
-    reviews: 98;
+    marketSize: growthRate, '12% CAGR'
+    launchDate: customers, 145;
+    rating: reviews, 98;
     categor,
   y: 'IT Services',
     subcategor,
@@ -1749,33 +1567,23 @@ export const,
       'Vulnerability scanning',
       'Compliance monitoring',
       'Security reporting',
-      'Remediation guidance',
-      'Risk assessment'
-    ],
-    category: 'IT Services'
-    subcategory: 'Cybersecurity'
-    realImplementation: true;
-    contactInfo: contact;
-    link: 'https://ziontechgroup.com/services/cybersecurity-assessment-platform'
-    icon: ''
-    color: 'from-red-600 to-pink-700'
-    textColor: 'text-red-300',
-    popular: true;
-    marketPosition: 'Automated security assessment for SMBs',
+      'Remediation guidance']
+      'Risk assessment'],
+    category: subcategory, 'Cybersecurity'
+    realImplementation: contactInfo, contact;
+    link: icon, ''
+    color: textColor, 'text-red-300',
+    popular: marketPosition, 'Automated security assessment for SMBs',
     targetAudience: 'Small businesses, Healthcare, Financial services',
-    trialDays: 21;
-    setupTime: '1 week',
+    trialDays: setupTime, '1 week',
     technology: ['Security Scanning', 'Compliance Automation', 'Risk Analysis'],
     integrations: ['Active Directory', 'Office 365', 'AWS', 'Azure'],
     useCases: ['Security audits', 'Compliance management', 'Risk mitigation'],
     roi: 'Prevents security breaches and ensures compliance',
     competitors: ['Qualys', 'Rapid7', 'Tenable'],
-    marketSize: '$1.9B security assessment market'
-    growthRate: '22% CAGR'
-    launchDate: '2025-01-12'
-    customers: 98;
-    rating: 4.7;
-    reviews: 67;
+    marketSize: growthRate, '22% CAGR'
+    launchDate: customers, 98;
+    rating: reviews, 67;
     categor,
   y: 'IT Services',
     subcategor,
@@ -1842,33 +1650,23 @@ export const,
       'Migration assessment',
       'Architecture planning',
       'Data migration',
-      'Application modernization',
-      'Cost optimization'
-    ],
-    category: 'IT Services'
-    subcategory: 'Cloud Consulting'
-    realImplementation: true;
-    contactInfo: contact;
-    link: 'https://ziontechgroup.com/services/cloud-migration-consulting'
-    icon: ''
-    color: 'from-cyan-600 to-blue-700'
-    textColor: 'text-cyan-300',
-    popular: false;
-    marketPosition: 'Expert cloud migration with cost optimization',
+      'Application modernization']
+      'Cost optimization'],
+    category: subcategory, 'Cloud Consulting'
+    realImplementation: contactInfo, contact;
+    link: icon, ''
+    color: textColor, 'text-cyan-300',
+    popular: marketPosition, 'Expert cloud migration with cost optimization',
     targetAudience: 'Enterprises, Mid-market companies',
-    trialDays: 45;
-    setupTime: '2-4 weeks',
+    trialDays: setupTime, '2-4 weeks',
     technology: ['Cloud Computing', 'DevOps', 'Infrastructure as Code'],
     integrations: ['AWS', 'Azure', 'GCP', 'Kubernetes'],
     useCases: ['Cloud migration', 'Digital transformation', 'Cost optimization'],
     roi: 'Reduces infrastructure costs by 40%',
     competitors: ['Accenture', 'Deloitte', 'IBM'],
-    marketSize: '$3.2B cloud consulting market'
-    growthRate: '18% CAGR'
-    launchDate: '2025-01-25'
-    customers: 67;
-    rating: 4.9;
-    reviews: 45;
+    marketSize: growthRate, '18% CAGR'
+    launchDate: customers, 67;
+    rating: reviews, 45;
   },
   // Advanced AI Services;
     id: 'ai-document-processing-platform',
@@ -1904,8 +1702,8 @@ export const,
     trialDay,
   s: 45,
     setupTim,
-  e: '2-4 weeks',
-    technolog,
+  e: '2-4 weeks'
+    technolog]
   y: ['Cloud Computing', 'DevOps', 'Infrastructure as Code'],
     integration,
   s: ['AWS', 'Azure', 'GCP', 'Kubernetes'],
@@ -1944,33 +1742,23 @@ export const,
       'OCR and text extraction',
       'Form processing',
       'Data validation',
-      'Workflow automation',
-      'API integration'
-    ],
-    category: 'AI & Machine Learning'
-    subcategory: 'Document Processing'
-    realImplementation: true;
-    contactInfo: contact;
-    link: 'https://ziontechgroup.com/services/ai-document-processing-platform'
-    icon: ''
-    color: 'from-teal-600 to-green-700'
-    textColor: 'text-teal-300',
-    popular: true;
-    marketPosition: 'Advanced document AI with high accuracy',
+      'Workflow automation']
+      'API integration'],
+    category: subcategory, 'Document Processing'
+    realImplementation: contactInfo, contact;
+    link: icon, ''
+    color: textColor, 'text-teal-300',
+    popular: marketPosition, 'Advanced document AI with high accuracy',
     targetAudience: 'Insurance, Legal, Healthcare, Finance',
-    trialDays: 21;
-    setupTime: '1-2 weeks',
+    trialDays: setupTime, '1-2 weeks',
     technology: ['OCR', 'NLP', 'Computer Vision', 'Machine Learning'],
     integrations: ['Salesforce', 'SharePoint', 'Google Drive', 'Dropbox'],
     useCases: ['Invoice processing', 'Contract analysis', 'Claims processing'],
     roi: 'Reduces processing time by 80%',
     competitors: ['ABBYY', 'Kofax', 'UiPath'],
-    marketSize: '$1.1B document processing market'
-    growthRate: '28% CAGR'
-    launchDate: '2025-01-18'
-    customers: 156;
-    rating: 4.8;
-    reviews: 89;
+    marketSize: growthRate, '28% CAGR'
+    launchDate: customers, 156;
+    rating: reviews, 89;
     categor,
   y: 'AI & Machine Learning',
     subcategor,
@@ -2037,33 +1825,23 @@ export const,
       'Failure prediction',
       'Maintenance scheduling',
       'IoT integration',
-      'Cost optimization',
-      'Performance analytics'
-    ],
-    category: 'AI & Machine Learning'
-    subcategory: 'Predictive Analytics'
-    realImplementation: true;
-    contactInfo: contact;
-    link: 'https://ziontechgroup.com/services/ai-predictive-maintenance'
-    icon: ''
-    color: 'from-orange-600 to-red-700'
-    textColor: 'text-orange-300',
-    popular: false;
-    marketPosition: 'Advanced predictive maintenance with IoT integration',
+      'Cost optimization']
+      'Performance analytics'],
+    category: subcategory, 'Predictive Analytics'
+    realImplementation: contactInfo, contact;
+    link: icon, ''
+    color: textColor, 'text-orange-300',
+    popular: marketPosition, 'Advanced predictive maintenance with IoT integration',
     targetAudience: 'Manufacturing, Utilities, Transportation',
-    trialDays: 30;
-    setupTime: '3-4 weeks',
+    trialDays: setupTime, '3-4 weeks',
     technology: ['Machine Learning', 'IoT', 'Time Series Analysis'],
     integrations: ['Siemens', 'GE Predix', 'PTC ThingWorx', 'AWS IoT'],
     useCases: ['Equipment maintenance', 'Downtime reduction', 'Cost optimization'],
     roi: 'Reduces maintenance costs by 25%',
     competitors: ['GE Digital', 'Siemens', 'PTC'],
-    marketSize: '$1.8B predictive maintenance market'
-    growthRate: '32% CAGR'
-    launchDate: '2025-02-05'
-    customers: 78;
-    rating: 4.7;
-    reviews: 56;
+    marketSize: growthRate, '32% CAGR'
+    launchDate: customers, 78;
+    rating: reviews, 56;
   },
   // Emerging Technology Services;
     id: 'quantum-computing-simulation-platform',
@@ -2099,8 +1877,8 @@ export const,
     trialDay,
   s: 30,
     setupTim,
-  e: '3-4 weeks',
-    technolog,
+  e: '3-4 weeks'
+    technolog]
   y: ['Machine Learning', 'IoT', 'Time Series Analysis'],
     integration,
   s: ['Siemens', 'GE Predix', 'PTC ThingWorx', 'AWS IoT'],
@@ -2139,33 +1917,23 @@ export const,
       'Quantum algorithm simulation',
       'Circuit optimization',
       'Performance benchmarking',
-      'Quantum education tools',
-      'Research collaboration'
-    ],
-    category: 'Emerging Technology'
-    subcategory: 'Quantum Computing'
-    realImplementation: true;
-    contactInfo: contact;
-    link: 'https://ziontechgroup.com/services/quantum-computing-simulation-platform'
-    icon: ''
-    color: 'from-purple-600 to-pink-700'
-    textColor: 'text-purple-300',
-    popular: false;
-    marketPosition: 'Leading quantum simulation platform for enterprise',
+      'Quantum education tools']
+      'Research collaboration'],
+    category: subcategory, 'Quantum Computing'
+    realImplementation: contactInfo, contact;
+    link: icon, ''
+    color: textColor, 'text-purple-300',
+    popular: marketPosition, 'Leading quantum simulation platform for enterprise',
     targetAudience: 'Research institutions, Tech companies, Universities',
-    trialDays: 60;
-    setupTime: '4-6 weeks',
+    trialDays: setupTime, '4-6 weeks',
     technology: ['Quantum Simulation', 'Algorithm Optimization', 'High Performance Computing'],
     integrations: ['IBM Qiskit', 'Google Cirq', 'Microsoft Q#', 'Amazon Braket'],
     useCases: ['Quantum research', 'Algorithm development', 'Education'],
     roi: 'Accelerates quantum research and development',
     competitors: ['IBM Quantum', 'Google Quantum AI', 'Microsoft Quantum'],
-    marketSize: '$500M quantum software market'
-    growthRate: '45% CAGR'
-    launchDate: '2025-03-01'
-    customers: 23;
-    rating: 4.9;
-    reviews: 18;
+    marketSize: growthRate, '45% CAGR'
+    launchDate: customers, 23;
+    rating: reviews, 18;
     categor,
   y: 'Emerging Technology',
     subcategor,
@@ -2232,33 +2000,23 @@ export const,
       'Enterprise blockchain infrastructure',
       'Smart contract development',
       'Tokenization platform',
-      'DApp deployment',
-      'Governance tools'
-    ],
-    category: 'Emerging Technology'
-    subcategory: 'Blockchain'
-    realImplementation: true;
-    contactInfo: contact;
-    link: 'https://ziontechgroup.com/services/blockchain-enterprise-platform'
-    icon: ''
-    color: 'from-orange-600 to-red-700'
-    textColor: 'text-orange-300',
-    popular: false;
-    marketPosition: 'Enterprise blockchain with comprehensive tooling',
+      'DApp deployment']
+      'Governance tools'],
+    category: subcategory, 'Blockchain'
+    realImplementation: contactInfo, contact;
+    link: icon, ''
+    color: textColor, 'text-orange-300',
+    popular: marketPosition, 'Enterprise blockchain with comprehensive tooling',
     targetAudience: 'Enterprises, Financial institutions, Supply chain companies',
-    trialDays: 45;
-    setupTime: '6-8 weeks',
+    trialDays: setupTime, '6-8 weeks',
     technology: ['Blockchain', 'Smart Contracts', 'Web3', 'DeFi'],
     integrations: ['Ethereum', 'Polygon', 'Avalanche', 'Enterprise systems'],
     useCases: ['Supply chain tracking', 'Digital assets', 'DeFi applications'],
     roi: 'Enables new business models and efficiency gains',
     competitors: ['ConsenSys', 'R3 Corda', 'Hyperledger'],
-    marketSize: '$1.9B enterprise blockchain market'
-    growthRate: '38% CAGR'
-    launchDate: '2025-02-15'
-    customers: 34;
-    rating: 4.7;
-    reviews: 28;
+    marketSize: growthRate, '38% CAGR'
+    launchDate: customers, 34;
+    rating: reviews, 28;
   }
 ];
 export const serviceCategories = [{name: 'Micro SaaS',
@@ -2327,8 +2085,8 @@ export const serviceCategories = [{name: 'Micro SaaS',
     trialDay,
   s: 45,
     setupTim,
-  e: '6-8 weeks',
-    technolog,
+  e: '6-8 weeks'
+    technolog]
   y: ['Blockchain', 'Smart Contracts', 'Web3', 'DeFi'],
     integration,
   s: ['Ethereum', 'Polygon', 'Avalanche', 'Enterprise systems'],
@@ -2430,10 +2188,9 @@ export const serviceCategories = [{/* TODO: Fix JSX expression */}
   s: comprehensiveExpandedServices.filter(s => s.category === 'Emerging Technology'),
     ico,
   n: '',
-    colo,
-  r: 'from-violet-600 to-purple-700'
-  }
-];
+    colo,]
+  r: 'from-violet-600 to-purple-700']
+  }];
 export interface ComprehensiveService,
   id: string; nam,
   e: string; taglin,
@@ -2475,8 +2232,8 @@ export interface ComprehensiveService,
   e: 'AI Autonomous Customer Success',' taglin,
   e: 'Predictive customer health scoring with automated interventions',' pric,
   e: '$299',' perio,
-  d: '/month',' descriptio,
-  n: 'AI-powered platform that predicts customer churn risk and automatically triggers personalized retention campaigns.', feature,
+  d: '/month',' descriptio
+  n: 'AI-powered platform that predicts customer churn risk and automatically triggers personalized retention campaigns.', feature]
   s: [' 'Predictive churn scoring',' 'Automated intervention workflows',' 'Customer health dashboards',' 'Integration with CRM systems',' 'ROI tracking and analytics' ],' categor,
   y: 'AI & Machine Learning',' subcategor,
   y: 'Customer Success', realImplementatio,
@@ -3244,6 +3001,6 @@ export interface ComprehensiveService,
   r: 'from-orange-600 to-red-700' }, ' nam,
   e: 'Emerging Technology',' descriptio,
   n: 'Cutting-edge technology solutions and platforms',' service,
-  s: comprehensiveExpandedServices.filter(s => s.category === 'Emerging Technology'),' ico,
-  n: '🚀',' colo,
+  s: comprehensiveExpandedServices.filter(s => s.category === 'Emerging Technology'),' ico
+  n: '🚀',' colo]
   r: 'from-violet-600 to-purple-700' } ];'"

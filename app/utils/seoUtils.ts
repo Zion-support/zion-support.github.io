@@ -19,9 +19,8 @@ export class SEOManager {
 
   constructor(config: SEOConfig) {
     this.config = config;
-  }
-
-  public updateConfig(newConfig: Partial<SEOConfig>): void {
+}
+  public updateConfig(newConfig: Partial<SEOConfig></SEOConfi></SEOConfig>): void {
     this.config = { ...this.config, ...newConfig };
     this.applyConfig();
   }
@@ -54,36 +53,35 @@ export class SEOManager {
     // Update robots meta
     if (this.config.robots) {
       this.updateMetaTag('robots', this.config.robots);
-    }
+}
 
     // Update author
     if (this.config.author) {
       this.updateMetaTag('author', this.config.author);
-    }
+}
 
     // Update published time
     if (this.config.publishedTime) {
       this.updateMetaTag('article:published_time', this.config.publishedTime);
-    }
+}
 
     // Update modified time
     if (this.config.modifiedTime) {
       this.updateMetaTag('article:modified_time', this.config.modifiedTime);
-    }
+}
 
     // Update section
     if (this.config.section) {
       this.updateMetaTag('article:section', this.config.section);
-    }
+}
 
     // Update tags
     if (this.config.tags) {
-      this.config.tags.forEach(tag => {
+      this.config.tags.forEach(tag => {)
         this.addMetaTag('article:tag', tag);
+}
       });
     }
-  }
-
   private updateMetaTag(name: string, content: string): void {
     if (typeof document === 'undefined') return;
 
@@ -92,7 +90,7 @@ export class SEOManager {
       meta = document.createElement('meta');
       meta.name = name;
       document.head.appendChild(meta);
-    }
+}
     meta.content = content;
   }
 
@@ -104,7 +102,7 @@ export class SEOManager {
       canonical = document.createElement('link');
       canonical.rel = 'canonical';
       document.head.appendChild(canonical);
-    }
+}
     canonical.href = this.config.canonicalUrl;
   }
 
@@ -114,16 +112,17 @@ export class SEOManager {
     const ogTags = [
       { property: 'og:title', content: this.config.ogTitle || this.config.title },
       { property: 'og:description', content: this.config.ogDescription || this.config.description },
-      { property: 'og:type', content: this.config.ogType || 'website' },
-      { property: 'og:url', content: this.config.canonicalUrl || window.location.href },
-    ];
+      { property: 'og:type', content: this.config.ogType || 'website' },]
+      { property: 'og:url', content: this.config.canonicalUrl || window.location.href }];
 
     if (this.config.ogImage) {
+}
       ogTags.push({ property: 'og:image', content: this.config.ogImage });
     }
 
-    ogTags.forEach(tag => {
+    ogTags.forEach(tag => {)
       this.updateMetaTagByProperty(tag.property, tag.content);
+}
     });
   }
 
@@ -132,16 +131,17 @@ export class SEOManager {
 
     const twitterTags = [
       { name: 'twitter:card', content: this.config.twitterCard || 'summary_large_image' },
-      { name: 'twitter:title', content: this.config.twitterTitle || this.config.title },
-      { name: 'twitter:description', content: this.config.twitterDescription || this.config.description },
-    ];
+      { name: 'twitter:title', content: this.config.twitterTitle || this.config.title },]
+      { name: 'twitter:description', content: this.config.twitterDescription || this.config.description }];
 
     if (this.config.twitterImage) {
+}
       twitterTags.push({ name: 'twitter:image', content: this.config.twitterImage });
     }
 
-    twitterTags.forEach(tag => {
+    twitterTags.forEach(tag => {)
       this.updateMetaTag(tag.name, tag.content);
+}
     });
   }
 
@@ -153,7 +153,7 @@ export class SEOManager {
       meta = document.createElement('meta');
       meta.setAttribute('property', property);
       document.head.appendChild(meta);
-    }
+}
     meta.content = content;
   }
 
@@ -165,14 +165,12 @@ export class SEOManager {
     meta.content = content;
     document.head.appendChild(meta);
   }
-}
-
-// Utility functions
-export const generateMetaDescription = (content: string, maxLength: number = 160): string => {
-  const cleanContent = content.replace(/<[^>]*>/g, '').trim();
+// Utility functions;
+export const generateMetaDescription = (content: string, maxLength: number = 160): string => {;
+const cleanContent = content.replace(/<[^>]*>/g, '').trim();
   if (cleanContent.length <= maxLength) {
     return cleanContent;
-  }
+}
   return cleanContent.substring(0, maxLength - 3) + '...';
 };
 
@@ -186,4 +184,5 @@ export const addStructuredData = (data: any): void => {
   script.type = 'application/ld+json';
   script.textContent = createStructuredData(data);
   document.head.appendChild(script);
+}
 };

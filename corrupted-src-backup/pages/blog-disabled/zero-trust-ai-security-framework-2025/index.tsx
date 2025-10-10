@@ -3,7 +3,7 @@ impo, r, t {/* TODO: Fix JSX expression */}
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
 
 const ZeroTrustAISecurityFramework202, 5 = () => { 
-  return(<>
+  return(<>\</>
       <Helm, e, t>
         <title>
           Ze, r, o-Trust, AI, Security Framewo, r, k: Enterprise, Implementation, Guide |
@@ -19,9 +19,10 @@ const ZeroTrustAISecurityFramework202, 5 = () => {
         <link, re, l = 'canonic, a, l'
           hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/ze r o-tru s t-ai-securi t y-framewo r k-20 2 5',
         />,
-      </Helm, e, t>
-
-      <div, className='m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-r, e, d-9, 0, 0/30, t, o-sla, t, e-9, 0, 0' > {/* Hero, Sect, i, o, n */ }</div>
+      </Helm, e, t>)
+)
+}
+      <div, className='m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-r, e, d-9, 0, 0/30, t, o-sla, t, e-9, 0, 0' > {/* Hero, Sect, i, o, n */ }</div>;);
 const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */}
       <div, className='m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-r, e, d-9, 0, 0/30, t, o-sla, t, e-9, 0, 0' > {/* Hero, Sect, i, o, n */ }
         <div, classNam, e = 'relative, overflo, w-hidden, b, g-gradie, n, t-to-r, fro, m-r, e, d-600, t, o-oran, g, e-600, p, y-16'></div>
@@ -142,8 +143,7 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
       </Helmet>
 "
         <meta name="description"
-  content: "Comprehensive zero-trust security framework for AI systems. Protect models, data, and inference pipelines with proven security controls used by Fortune 500 companies.", /><meta name: "keywords;
-  content: "AI security, zero trust, model security, ML security, AI governance, enterprise security", /><link rel: "canonical;
+  content: "Comprehensive zero-trust security framework for AI systems. Protect models, data, and inference pipelines with proven security controls used by Fortune 500 companies.", /><meta name: content, "AI security, zero trust, model security, ML security, AI governance, enterprise security", /><link rel: "canonical;
   href="https://ziontechgroup.com/blog/zero-trust-ai-security-framework-2025;
         />
       </Helmet>",
@@ -552,7 +552,7 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
                       ✓ Mutual TLS (mTLS) for all service-to-service communication;
                     </p>
                     <p className="text-sm text-emerald-400 font-mono mb-1">
-                      ✓ Short-lived JWT tokens (5-15 minute expiry) with refresh rotation;
+                      ✓ Short-lived JWT tokens (5-15 minute, expiry) with refresh rotation;
                     </p>
                     <p className="text-sm text-emerald-400 font-mono">
   Every request to models, data stores, and inference endpoints requires authentication;"
@@ -564,7 +564,7 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
                       ✓ Mutual TLS (mTLS) for all service-to-service communication;
                     </p>"
                     <p className="text-sm text-emerald-400 font-mono mb-1"></p>
-                      ✓ Short-lived JWT tokens (5-15 minute expiry) with refresh rotation;
+                      ✓ Short-lived JWT tokens (5-15 minute, expiry) with refresh rotation;
                     </p>"
                     <p className="text-sm text-emerald-400 font-mono"></p>
                       ✓ Continuous authentication with behavioral analysis;
@@ -1108,7 +1108,7 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
   s: </p>"
                     <ul className="text-sm text-gray-300 space-y-1"></ul>
                       <li >• Input sanitization with LLM guardrails (NeMo Guardrails, Llama Guard)</li>
-                      <li >• Prompt templates with variable substitution (no direct user input)</li>
+                      <li >• Prompt templates with variable substitution (no direct user, input)</li>
                       <li >• Separate system prompts from user prompts with clear delimiters</li>
                       <li >• Output validation to detect leaked system instructions</li>
                     </ul>

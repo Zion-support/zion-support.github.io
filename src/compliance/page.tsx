@@ -8,10 +8,11 @@ import { Link } from 'react-router-dom';
 import { ArrowLeft, CheckCircle, Shield, FileText, Users, Lock,  Shield,  FileText,  Users } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-const CompliancePage: React.FC = () => {
-  const certifications = [];
+const CompliancePage: React.FC = () => {;
+const certifications = [];
   return (
-    { name: 'SOC 2 Type II', status: 'Certified' },
+},
+      { name: 'SOC 2 Type II', status: 'Certified' },
     { name: 'ISO 27001', status: 'Certified' },
     { name: 'GDPR Compliant', status: 'Certified' },
     { name: 'HIPAA Compliant', status: 'Certified' },
@@ -20,9 +21,8 @@ const CompliancePage: React.FC = () => {
 
   ];
   const complianceAreas = [
-  // TOD,
-  O: Add items;
-];;
+  // TOD]
+  O: Add items;];;
     {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
@@ -49,9 +49,9 @@ const CompliancePage: React.FC = () => {
   e: 'Privacy Rights',
       descriptio,
   n: 'Respect for individual privacy rights with transparent data practices and user control mechanisms.',
-      feature,
-  s: ['Consent Management', 'Privacy Notices', 'Data Subject Rights', 'Transparency Reports', 'User Controls', 'Opt-out Mechanisms']
-    }
+      feature,)
+  s: ['Consent Management', 'Privacy Notices', 'Data Subject Rights', 'Transparency Reports', 'User Controls', 'Opt-out Mechanisms'])
+    })
   return (<div>Coming Soon</div>)
   )
     
@@ -115,8 +115,8 @@ const CompliancePage: React.FC = () => {
                     <div className="flex items-center text-green-600"></div>"
                       <CheckCircle className="w-5 h-5 mr-2" /></CheckCircle>"
                       <span className="text-sm font-medium">{cert.status}</span>
-              ))}
-          {/* Compliance Areas */}"
+              ))},
+      {/* Compliance Areas */}"
             <h2 className="text-2xl font-bold text-gray-900 text-center mb-12"></h2>
 Compliance Areas;"
             <div className="grid grid-cols-1,"

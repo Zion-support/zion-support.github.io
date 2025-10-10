@@ -6,15 +6,15 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const CloudServicesPage: React.FC = () => {
-  return (
-    <div>Coming Soon</div>
-
+  return ()
+    <div>Coming Soon</div>)
+)
   );
+}
 };
   const _services = [
-  // TOD,
-  O: Add items;
-];;
+  // TOD]
+  O: Add items;];;
     {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
@@ -65,9 +65,8 @@ const CloudServicesPage: React.FC = () => {
     }
   ];
   const benefits = [
-  // TOD,
-  O: Add items;
-];;
+  // TOD]
+  O: Add items;];;
 //     '99.9% Uptime Guarantee',
 //     '24/7 Expert Support',
 //     'Cost Optimization',

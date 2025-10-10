@@ -75,6 +75,6 @@ expor,
   0: to-slate-60,0'} popula,
   r: fals,e, launchDat,
   e:  ,' '2024-05-15',' customer,
-  s: 48,0, ratin,
-  g: 4.,8, review,
+  s: 48,0, ratin
+  g: 4.,8, review]
   s: 6}7} ]; '

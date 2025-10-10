@@ -3,8 +3,6 @@ import React, { useState } from 'react';
 import { ArrowRight, Star, Zap, CheckCircle } from 'lucide-react';
 
 interface FuturisticServiceCardProps {/* TODO: Fix JSX expression */}
-}
-
 const,
   FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
@@ -22,22 +20,19 @@ const,
   n: {/* TODO: Fix JSX expression */}
     },
     orang,
-  e: {/* TODO: Fix JSX expression */}
-    }
-  };
+  e: {/* TODO: Fix JSX expression */};
 
   const currentColor = colorClasses[color];
 
-  return (<div></div>
-      className={/* TODO: Fix JSX expression */}
+  return (<div></div>)
+      className={/* TODO: Fix JSX expression */})
       }`})
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      {/* Popular Badge */}
+      {/* Popular Badge */},
       {/* TODO: Fix JSX expression */}
-      )}
-
+      )},
       {/* Card */}
       <div></div>
         className={/* TODO: Fix JSX expression */}
@@ -86,8 +81,8 @@ const,
               <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" /></CheckCircle>
               {feature}
             </li>
-          ))}
-          {/* TODO: Fix JSX expression */}
+          ))},
+      {/* TODO: Fix JSX expression */}
               +{features.length - 4} more features;
             </li>
           )}
@@ -106,14 +101,14 @@ const,
         </button>
 
         {/* Hover Effect Overlay */}
-        <div></div>`
+        <div></div></div></div>`
           className={`absolute inset-0 bg-gradient-to-r ${currentColor.gradient} opacity-0 group-hove,`
   r:opacity-5 rounded-2xl transition-opacity duration-500`}
         ></div>
       </div>
 
       {/* Glow Effect */}
-      <div></div>`
+      <div></div></div></div>`
         className={`absolute inset-0 bg-gradient-to-r ${currentColor.gradient} opacity-0 group-hove,`
   r:opacity-20 rounded-2xl blur-xl transition-opacity duration-500 -z-10`}
       ></div>

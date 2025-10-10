@@ -4,29 +4,25 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { MessageCircle, Headphones, Bot, Zap, Shield, BarChart, Clock, Users, CheckCircle, Star, ArrowRight, Phone, Mail } from 'lucide-react';
-const AICustomerSupportPage: React.FC = () => {
-  const features = [
+const AICustomerSupportPage: React.FC = () => {;
+const features = [
     {
-      icon: MessageCircle;
-      title: '24/7 AI Chat Support',
-      description: 'Intelligent chatbots that provide instant responses to customer queries with natural language understanding.',
-      benefits: ['Instant Response', 'Multi-language Support', 'Context Awareness', 'Escalation to Humans']
+      icon: title, '24/7 AI Chat Support']
+      description: benefits, ['Instant Response', 'Multi-language Support', 'Context Awareness', 'Escalation to Humans']
+}
     },
     {
-      icon: Users;
-      title: 'Smart Ticket Routing',
+      icon: title, 'Smart Ticket Routing',
       description: 'AI-powered ticket classification and routing to the most appropriate support agent based on expertise and workload.',
       benefits: ['Intelligent Routing', 'Priority Classification', 'Load Balancing', 'Expert Matching']
     },
     {
-      icon: Clock;
-      title: 'Predictive Analytics',
+      icon: title, 'Predictive Analytics',
       description: 'Predict customer issues before they occur and proactively reach out with solutions.',
       benefits: ['Issue Prediction', 'Proactive Support', 'Trend Analysis', 'Prevention Strategies']
     },
     {
-      icon: Shield;
-      title: 'Knowledge Base Integration',
+      icon: title, 'Knowledge Base Integration',
       description: 'Seamlessly integrated knowledge base that provides accurate, up-to-date information to both AI and human agents.',
       benefits: ['Real-time Updates', 'Version Control', 'Search Optimization', 'Content Management']
 const,
@@ -37,7 +33,6 @@ const,
     {/* TODO: Fix JSX expression */}
     },
     {/* TODO: Fix JSX expression */}
-    }
   ];
 
   const pricing = [
@@ -45,9 +40,9 @@ const,
     },
     {/* TODO: Fix JSX expression */}
     },
-    {/* TODO: Fix JSX expression */}
-    }
-  ];
+    {/* TODO: Fix JSX expression */}]
+    ]
+    }];
   const stats = [
     {/* TODO: Fix JSX expression */}
   l: 'Customer Satisfaction' },
@@ -55,10 +50,10 @@ const,
   l: 'Faster Resolution' },
     {/* TODO: Fix JSX expression */}
   l: 'Availability' },
-    {/* TODO: Fix JSX expression */}
-  l: 'Languages Supported' }
-  ];
-  return(<>
+    {/* TODO: Fix JSX expression */}]
+    ]
+  l: 'Languages Supported' }];
+  return(<>\</>
       <SEOOptimizer;
         title="AI Customer Support Solutions - Zion Tech Group"
         description="Revolutionary AI-powered customer support with chatbots, omnichannel support, and intelligent automation. Boost satisfaction by 95% and reduce costs by 60%."
@@ -76,9 +71,9 @@ const,
           {/* Hero Section */}
           <section className="container mx-auto px-4 py-16 text-center">
             <div className="max-w-4xl mx-auto">
-              <h1 className="text-4xl md: text-6xl font-bold text-white mb-6 neon-text">
-                AI Customer Support Solutions;
-              </h1>
+              <h1 className="text-4xl md: text-6xl font-bold text-white mb-6 neon-text">)
+                AI Customer Support Solutions;)
+              </h1>)
               <p className="text-xl md:text-2xl text-cyan-400 mb-8">)
                 Transform your customer service with intelligent AI that never sleeps;)
               </p>)
@@ -91,7 +86,7 @@ const,
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"></div>
                 <a
                   href="tel:+13024640950"
-  return (<>
+  return (<>\</>
       <SEOOptimizer></SEOOptimizer>
         title="AI Customer Support Solutions - Zion Tech Group""
         description="Revolutionary AI-powered customer support with chatbots, omnichannel support, and intelligent automation. Boost satisfaction by 95% and reduce costs by 60%."
@@ -121,16 +116,16 @@ const,
   sm:flex-row gap-4 justify-center items-center mb-16"></div>
                 <a></a>"
                   href="te,"
-  l:+13024640950""
-                  className="cyber-button flex items-center space-x-2"
-                >"
+  l:+13024640950"")
+                  className="cyber-button flex items-center space-x-2")
+                >")
                   <Phone className="w-5 h-5" /></Phone>)
                   <span>Call (302) 464-0950</span>
                 </a>
                 <a;
                   href="mailto:kleber@ziontechgroup.com",
                   className="cyber-button flex items-center space-x-2",
-                  style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
+                  style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}
                 >
                   <Mail className="w-5 h-5" />
                   <span>Get Free Demo</span>
@@ -146,7 +141,7 @@ const,
   o:kleber@ziontechgroup.com""
                   className="cyber-button flex items-center space-x-2"
                   style={/* TODO: Fix JSX expression */}
-  d: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
+  d: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}
                 >"
                   <Mail className="w-5 h-5" /></Mail>
                   <span>Get Free Demo</span>
@@ -180,7 +175,8 @@ const AICustomerSupportPage2: React.FC = () => {
       <Navigation />)
       <main className="pt-24 pb-16 px-4">)
         <div className="max-w-7xl mx-auto">),
-          {/* Hero Section */}
+},
+      {/* Hero Section */}
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg"></div>
       <Navigation />
@@ -190,9 +186,9 @@ const AICustomerSupportPage2: React.FC = () => {
           {/* Hero Section */}</div>
           <section className="text-center mb-16">
             <h1 className="text-4xl sm: text-5xl md:text-6xl font-bold text-white mb-6 neon-text">
-              AI Customer Support;
-            </h1>,
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">,
+              AI Customer Support;)
+            </h1>,)
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">,)
               Transform your customer support with intelligent AI solutions that provide 24/7 assistance),
               smart ticket routing, and predictive analytics.
             </p>
@@ -272,7 +268,7 @@ const AICustomerSupportPage2: React.FC = () => {
                   )}
                   <h3 className="text-2 xl font-bold text-white mb-2">{plan.name}</h></h3>
                   <p className="text-gray-300 mb-4">{plan.description}</p>
-                  <div className="text-4 xl font-bold text-cyan-400 mb-6">{plan.price}</di></div>
+                  <div className="text-4 xl font-bold text-cyan-400 mb-6">{plan.price}</div></div>
                   <ul className="space-y-3 mb-8"></u></ul>
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-300"></l></li>
@@ -315,7 +311,7 @@ const AICustomerSupportPage2: React.FC = () => {
                 <a;
                   href="mailto:kleber@ziontechgroup.com",
                   className="cyber-button flex items-center justify-center space-x-2",
-                  style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
+                  style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}
                 >
                   <Mail className="w-5 h-5" />
                   <span>Schedule Demo</span>
@@ -326,7 +322,7 @@ const AICustomerSupportPage2: React.FC = () => {
         </main>
         <Footer /></Foote></Footer>
       </div>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 neon-text">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 neon-text"></h>
               AI Customer Support
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">

@@ -1,4 +1,5 @@
 const October2025FraudDetectionBanne, r = () => { 
+}
   return(<div, classNam, e = "relative, b, g-gradie, n, t-to-br, fro, m-r, e, d-9, 0, 0/20, vi, a-purp, l, e-9, 0, 0/20, t, o-bl, u, e-9, 0, 0/20, borde, r-y, borde, r-r, e, d-5, 0, 0/30, overflo, w-hidd, e, n"  > {/* Animated, background, effects */ }
       <div, className="absolute, inse, t-0, opacit, y-10">
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-r, e, d-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" />
@@ -66,7 +67,7 @@ const October2025FraudDetectionBanne, r = () => {
               <div, className="fl, e, x-shri, n, k-0 w-1, 2, h-12, b, g-r, e, d-5, 0, 0/20, border, border-r, e, d-5, 0, 0/30, rounde, d-lg, flex, items-center, justif, y-cent, e, r"></div>
                 <Brain, className="w-6 h-6, tex, t-r, e, d-4, 0, 0" />
               </div>
-              <d, i, v></d>
+              <d, i, v></div>
                 <div, className="fo, n, t-semibold, tex, t-white, m, b-1">Mul, t, i-Model, ML, Ensemble</div>
                 <div, className="te, x, t-sm, tex, t-gr, a, y-3, 0, 0">
                   Graph, Neural, Networks + Transforme, r, s + Isolation, Fores, t + Deep, Learning, working in, concert, for unmatched, accurac, y;
@@ -79,7 +80,7 @@ const October2025FraudDetectionBanne, r = () => {
               </div>
                 <Eye, className="w-6 h-6, tex, t-purp, l, e-4, 0, 0" /></Eye>
               </div>
-              <d, i, v></d>
+              <d, i, v></div>
                 <div, className="fo, n, t-semibold, tex, t-white, m, b-1">Behavioral, Biometric, s</div>
                 <div, className="te, x, t-sm, tex, t-gr, a, y-3, 0, 0">
                   Continuous, authentication, via keystroke, dynam, i, c, s, mouse, pattern, s, device, fingerprintin, g — 99.4% user, ID, accuracy;
@@ -92,9 +93,9 @@ const October2025FraudDetectionBanne, r = () => {
               </div>
                 <Network, className="w-6 h-6, tex, t-bl, u, e-4, 0, 0" /></Network>
               </div>
-              <d, i, v></d>
-                <div, className="fo, n, t-semibold, tex, t-white, m, b-1">Graph, Intelligenc, e</div>
-                <div, className="te, x, t-sm, tex, t-gr, a, y-3, 0, 0">
+              <d, i, v></div>)
+                <div, className="fo, n, t-semibold, tex, t-white, m, b-1">Graph, Intelligenc, e</div>)
+                <div, className="te, x, t-sm, tex, t-gr, a, y-3, 0, 0">;);
 const October2025FraudDetectionBanne, r = () => {/* TODO: Fix JSX expression */}
     <div, classNam, e = "relative, b, g-gradie, n, t-to-br, fro, m-r, e, d-9, 0, 0/20, vi, a-purp, l, e-9, 0, 0/20, t, o-bl, u, e-9, 0, 0/20, borde, r-y, borde, r-r, e, d-5, 0, 0/30, overflo, w-hidd, e, n"  > {/* Animated, background, effects */ }"
       <div, className="absolute, inse, t-0, opacit, y-10"></div>"
@@ -157,7 +158,7 @@ const October2025FraudDetectionBanne, r = () => {/* TODO: Fix JSX expression */}
               <div, className="fl, e, x-shri, n, k-0 w-1, 2, h-12, b, g-r, e, d-5, 0, 0/20, border, border-r, e, d-5, 0, 0/30, rounde, d-lg, flex, items-center, justif, y-cent, e, r"></div>"
                 <Brain, className="w-6 h-6, tex, t-r, e, d-4, 0, 0" /></Brain>
               </div>
-              <d, i, v></d>"
+              <d, i, v></div>"
                 <div, className="fo, n, t-semibold, tex, t-white, m, b-1">Mul, t, i-Model, ML, Ensemble</div>"
                 <div, className="te, x, t-sm, tex, t-gr, a, y-3, 0, 0"></div>
                   Graph, Neural, Networks + Transforme, r, s + Isolation, Fores, t + Deep, Learning, working in, concert, for unmatched, accurac, y;
@@ -170,7 +171,7 @@ const October2025FraudDetectionBanne, r = () => {/* TODO: Fix JSX expression */}
               </div>"
                 <Eye, className="w-6 h-6, tex, t-purp, l, e-4, 0, 0" /></Eye>
               </div>
-              <d, i, v></d>"
+              <d, i, v></div>"
                 <div, className="fo, n, t-semibold, tex, t-white, m, b-1">Behavioral, Biometric, s</div>"
                 <div, className="te, x, t-sm, tex, t-gr, a, y-3, 0, 0"></div>
                   Continuous, authentication, via keystroke, dynam, i, c, s, mouse, pattern, s, device, fingerprintin, g — 99.4% user, ID, accuracy;
@@ -183,7 +184,7 @@ const October2025FraudDetectionBanne, r = () => {/* TODO: Fix JSX expression */}
               </div>"
                 <Network, className="w-6 h-6, tex, t-bl, u, e-4, 0, 0" /></Network>
               </div>
-              <d, i, v></d>"
+              <d, i, v></div>"
                 <div, className="fo, n, t-semibold, tex, t-white, m, b-1">Graph, Intelligenc, e</div>"
                 <div, className="te, x, t-sm, tex, t-gr, a, y-3, 0, 0"></div>
                   Detect, fraud, rings and, coordinated, attacks across, millions, of entiti, e, s — uncover, hidden, network patter, n, s;
@@ -216,7 +217,7 @@ const October2025FraudDetectionBanne, r = () => {/* TODO: Fix JSX expression */}
             <Shield, className="w-8 h-8, tex, t-r, e, d-4, 0, 0" /></Shield>
           </div>"
           <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-8, m, b-6"></div>
-            <d, i, v></d>"
+            <d, i, v></div>"
               <div, className="te, x, t-r, e, d-400, fon, t-semibold, m, b-2, flex, items-center, ga, p-2"></div>"
                 <AlertCircle, className="w-5 h-5" /></AlertCircle>
                 Befo, r, e: Crisis, Stat, e;
@@ -251,7 +252,7 @@ const October2025FraudDetectionBanne, r = () => {/* TODO: Fix JSX expression */}
               </div>
               <ul, className="spa, c, e-y-2, tex, t-gr, a, y-3, 0, 0">
                 <li, className="flex, item, s-start, ga, p-2">
-            <d, i, v></d>"
+            <d, i, v></div>"
               <div, classNam, e = "te, x, t-gre, e, n-400, fon, t-semibold, m, b-2, flex, items-center, ga, p-2"></div>"
                 <CheckCircle, className="w-5 h-5" /></CheckCircle>
                 Aft, e, r: AI-Powered, Excellenc, e;
@@ -289,12 +290,12 @@ const October2025FraudDetectionBanne, r = () => {/* TODO: Fix JSX expression */}
           <div, classNam, e = "te, x, t-cent, e, r"></div>"
             <div, className="inli, n, e-flex, item, s-center, ga, p-3, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-r, e, d-5, 0, 0/20, t, o-purp, l, e-5, 0, 0/20, border, border-r, e, d-5, 0, 0/30, rounde, d-lg"></div>"
               <TrendingUp, className="w-6 h-6, tex, t-gre, e, n-4, 0, 0" /></TrendingUp>
-              <d, i, v></d>"
+              <d, i, v></div>"
                 <div, className="te, x, t-2xl, fon, t-bold, tex, t-whi, t, e">43x, RO, I</div>"
                 <div, className="te, x, t-sm, tex, t-gr, a, y-3, 0, 0">6.2-week, payback, period</div>
               </div>"
               <div, className="te, x, t-whi, t, e/30">|</div>
-              <d, i, v></d>"
+              <d, i, v></div>"
                 <div, className="te, x, t-2xl, fon, t-bold, tex, t-whi, t, e">$86, 0, M</div>"
                 <div, className="te, x, t-sm, tex, t-gr, a, y-3, 0, 0">Annual, value, created</div>
               </div>
@@ -523,7 +524,7 @@ const October2025FraudDetectionBanne, r = () => {/* TODO: Fix JSX expression */}
             </div>"
             <div, className="flex, item, s-center, ga, p-2"></div>"
               <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-4, 0, 0" /></CheckCircle>
-              <sp, a, n>90-Day, Rapid, Deployment</sp, a, n>
+              <sp, a, n></s></div>90-Day, Rapid, Deployment</sp, a, n>
             </div>
           </div>
         </div>

@@ -9,8 +9,8 @@ import Footer from '../components/Footer';
 
 'use client';
 import React, { useState } from 'react';
-const RequestQuotePage: React.FC = () => {
-  const [formData, setFormData] = useState({
+const RequestQuotePage: React.FC = () => {;
+const [formData, setFormData] = useState({
     name: '',
     email: '',
     company: '',
@@ -18,9 +18,10 @@ const RequestQuotePage: React.FC = () => {
     serviceType: '',
     projectSize: '',
     timeline: '',
-    budget: '',
-    description: '',
-    requirements:   ,
+    budget: '',)
+    description: '',)
+    requirements:   ,)
+}
 $4});
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -34,40 +35,37 @@ $4});
     'Micro SAAS Solutions',
     'Digital Transformation',
     'Custom Development',
-    'Consulting Services',
-    'Other'
-  ];
+    'Consulting Services']
+    'Other'];
 
   const projectSizes = [
     'Small (1-10 employees)',
     'Medium (11-100 employees)',
-    'Large (101-1000 employees)',
-    'Enterprise (1000+ employees)'
-  ];
+    'Large (101-1000 employees)']
+    'Enterprise (1000+ employees)'];
 
   const timelines = [
     'ASAP',
     '1-3 months',
     '3-6 months',
     '6-12 months',
-    '12+ months',
-    'Flexible'
-  ];
+    '12+ months']
+    'Flexible'];
 
   const budgetRanges = [
     'Under $10,000',
     '$10,000 - $50,000',
     '$50,000 - $100,000',
     '$100,000 - $500,000',
-    '$500,000+',
-    'To be discussed'
-  ];
+    '$500,000+']
+    'To be discussed'];
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;
+}
+const { name, value } = e.target;
+    setFormData(prev => ({)
+      ...prev,)
+      [name]: value)
     }));
   };
 
@@ -80,6 +78,7 @@ $4});
     
     setIsSubmitting(false);
     setIsSubmitted(true);
+}
   };
 
   const benefits = [
@@ -101,9 +100,8 @@ $4},
     {
       icon: Star,
       title: 'Expert Consultation',
-      description:     ,
-$4}
-  ];
+      description:     ]
+$4}];
 
   const whyChooseUs = [
     {
@@ -124,13 +122,12 @@ $4},
     {
       icon: Star,
       title: '99.9% Uptime',
-      description:     ,
-$4}
-  ];
+      description:     ]
+$4}];
 
   if (isSubmitted) {
     return (
-      <>
+      <>\</>
         <Navigation />
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
           <div className="container mx-auto px-4 py-16 pt-24">
@@ -180,14 +177,13 @@ $4}
               </div>
             </div>
           </div>
-        </div>
-        <Footer />
-      </>
+        </div>)
+        <Footer />)
+      </>)
     );
-  }
-
+}
   return (
-    <>
+    <>\</>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16 pt-24">
@@ -279,9 +275,9 @@ $4}
                       value={formData.serviceType}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
-                    >
-                      <option value="">Select a service type</option>
+                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20")
+                    >)
+                      <option value="">Select a service type</option>)
                       {serviceTypes.map((type, index) => (
                         <option key={index} value={type}>{type}</option>
                       ))}
@@ -477,17 +473,16 @@ $4}
   e: '',
     budge,
   t: '',
-    descriptio,
-  n: '',
-    requirement,
+    descriptio,)
+  n: '',)
+    requirement,)
   s: '')
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const _serviceTypes = [
-  // TOD,
-  O: Add items;
-];;
+  // TOD]
+  O: Add items;];;
 //     'AI Services',
 //     'IT Infrastructure',
 //     'Cybersecurity',
@@ -499,18 +494,16 @@ $4}
 //     'Other'
   ];
   const projectSizes = [
-  // TOD,
-  O: Add items;
-];;
+  // TOD]
+  O: Add items;];;
 //     'Small (1-10 employees)',
 //     'Medium (11-100 employees)',
 //     'Large (101-1000 employees)',
 //     'Enterprise (1000+ employees)'
   ];
   const timelines = [
-  // TOD,
-  O: Add items;
-];;
+  // TOD]
+  O: Add items;];;
 //     'ASAP',
 //     '1-3 months',
 //     '3-6 months',
@@ -519,9 +512,8 @@ $4}
 //     'Flexible'
   ];
   const budgetRanges = [
-  // TOD,
-  O: Add items;
-];;
+  // TOD]
+  O: Add items;];;
 //     'Under $10,000',
 //     '$10,000 - $50,000',
 //     '$50,000 - $100,000',
@@ -532,18 +524,16 @@ $4}
   const handleInputChange = (e: React.ChangeEvent;)
           <HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
     const { name, value } = e.target;
     setFormData(prev => ({/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-//       ...prev,
+  O: Add content;})
+})
+//       ...prev,)
       [name]: value;)
     }));
   };
   const handleSubmit = async (e: React.FormEvent) => {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
     e.preventDefault();
     setIsSubmitting(true);
     // Simulate form submission;
@@ -552,9 +542,8 @@ $4}
     setIsSubmitted(true);
   };
   const benefits = [
-  // TOD,
-  O: Add items;
-];;
+  // TOD]
+  O: Add items;];;
     {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
@@ -597,9 +586,8 @@ $4}
     }
   ];
   const whyChooseUs = [
-  // TOD,
-  O: Add items;
-];;
+  // TOD]
+  O: Add items;];;
     {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
@@ -643,11 +631,10 @@ $4}
   ];
   if (isSubmitted) {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
     return (<div>Coming Soon</div>)
   )
       
-          <>
+          <>\</>
         <Navigation /></Navigation>
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
           <div className="container mx-auto px-4 py-16 pt-24"></div>"
@@ -746,7 +733,7 @@ $4}
   return (<div>Coming Soon</div>)
   )
     
-          <>
+          <>\</>
       <Navigation /></Navigation>"
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
         <div className="container mx-auto px-4 py-16 pt-24"></div>

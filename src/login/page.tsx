@@ -9,20 +9,22 @@ import Footer from '../components/Footer';
 
 'use client';
 import React, { useState } from 'react';
-const LoginPage: React.FC = () => {
-  const [formData, setFormData] = useState({
-    email: '',
-    password: '',
-    rememberMe: false
+const LoginPage: React.FC = () => {;
+const [formData, setFormData] = useState({
+    email: '',)
+    password: '',)
+    rememberMe: false)
+}
   });
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
-  const _handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value, type, checked } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: type === 'checkbox' ? checked : value
+  const _handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {;
+}
+const { name, value, type, checked } = e.target;
+    setFormData(prev => ({)
+      ...prev,)
+      [name]: type === 'checkbox' ? checked : value)
     }));
   };
 
@@ -36,6 +38,7 @@ const LoginPage: React.FC = () => {
     setIsLoading(false);
     // Redirect to dashboard or home page
     window.location.href = '/';
+}
   };
 
   const features = [
@@ -52,12 +55,11 @@ $4},
     {
       icon: Phone,
       title: 'Mobile Ready',
-      description:     ,
-$4}
-  ];
+      description:     ]
+$4}];
 
   return (
-    <>
+    <>\</>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center py-12">
         <div className="max-w-6xl mx-auto px-4">
@@ -89,9 +91,9 @@ $4}
                       className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
                       placeholder="Enter your email"
                     />
-                  </div>
-    <div>Coming Soon</div>
-
+                  </div>)
+    <div>Coming Soon</div>)
+)
   );
 };
   const [formData, setFormData] = useState({/* TODO: Fix JSX expression */}
@@ -99,9 +101,9 @@ $4}
 };
   emai,
   l: '',
-    passwor,
-  d: '',
-    rememberM,
+    passwor,)
+  d: '',)
+    rememberM,)
   e: false;)
   });
   const [showPassword, setShowPassword] = useState(false);
@@ -109,18 +111,16 @@ $4}
   const _handleInputChange = (e: React.ChangeEvent;)
           <HTMLInputElement>) => {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
     const { name, value, type, checked } = e.target;
     setFormData(prev => ({/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-//       ...prev,
+  O: Add content;})
+})
+//       ...prev,)
       [name]: type === 'checkbox' ? checked : value;)
     }));
   };
   const handleSubmit = async (e: React.FormEvent) => {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
     e.preventDefault();
     setIsLoading(true);
     // Simulate login process;
@@ -130,9 +130,8 @@ $4}
     window.location.href = '/';
   };
   const features = [
-  // TOD,
-  O: Add items;
-];;
+  // TOD]
+  O: Add items;];;
     {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
@@ -167,7 +166,7 @@ $4}
   return (<div>Coming Soon</div>)
   )
     
-          <>
+          <>\</>
       <Navigation /></Navigation>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center py-12"></div>"
         <div className="max-w-6xl mx-auto px-4"></div>"

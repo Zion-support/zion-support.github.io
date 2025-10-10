@@ -7,10 +7,8 @@ interface OptimizedErrorBoundaryProps {
   resetKeys?: Array<string | number>;
 }
 interface State {
-  hasError: boolean;
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
-  errorId: string;
+  hasError: error, Error | null;
+  errorInfo: errorId, string;
 }
 class OptimizedErrorBoundary extends Component<
   OptimizedErrorBoundaryProps,
@@ -24,6 +22,7 @@ class OptimizedErrorBoundary extends Component<
       error: null,
       errorInfo: null,
       errorId:     ,
+}
 $4};
   }
   static getDerivedStateFromError(error: Error): Partial<State> {
@@ -34,23 +33,24 @@ $4};
     };
   }
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    this.setState({
-      error,
-      errorInfo
+    this.setState({)
+      error,)
+      errorInfo)
+}
     });
     // Log error to console in development
     if (process.env['NODE_ENV'] === 'development') {}
     // Call custom error handler if provided
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
-    }
+}
     // Send error to monitoring service in production
     if (process.env['NODE_ENV'] === 'production') {
       this.reportError(error, errorInfo);
-    }
-  }
-  componentDidUpdate(prevProps: OptimizedErrorBoundaryProps) {
-    const { resetKeys, resetOnPropsChange } = this.props;
+}
+  componentDidUpdate(prevProps: OptimizedErrorBoundaryProps) {;
+}
+const { resetKeys, resetOnPropsChange } = this.props;
     const { hasError } = this.state;
     if (hasError && prevProps.resetKeys !== resetKeys) {
       if (resetKeys && prevProps.resetKeys) {
@@ -58,82 +58,78 @@ $4};
         );
         if (hasResetKeyChanged) {
           this.resetErrorBoundary();
-        }
-      }
+}
     }
     if (
-      hasError &&
-      resetOnPropsChange &&
-      prevProps.children !== this.props.children
+      hasError &&)
+      resetOnPropsChange &&)
+      prevProps.children !== this.props.children)
     ) {
       this.resetErrorBoundary();
     }
-  }
   componentWillUnmount() {
     if (this.resetTimeoutId) {
       clearTimeout(this.resetTimeoutId);
-    }
-  }
+}
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
     // Report to error monitoring service
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-      const gtag = (
+    if (typeof window !== 'undefined' && 'gtag' in window) {;
+const gtag = (
         window as unknown as {
-          gtag: (
-            command: string,
+          gtag: command, string,
             action: string,
             parameters: Record<string, unknown>
           ) => void;
-        }
+}
       ).gtag;
       gtag('event', 'exception', {
         description: error.message,
         fatal: false,
-        custom_map: {
-          error_id: this.state.errorId,
+        custom_map: error_id, this.state.errorId,
           component_stack: errorInfo.componentStack
-        }
+)
+        })
+        })
       });
     }
   };
   private resetErrorBoundary = () => {
     if (this.resetTimeoutId) {
       clearTimeout(this.resetTimeoutId);
-    }
+}
     this.resetTimeoutId = window.setTimeout(() => {
       this.setState({
         hasError: false,
-        error: null,
-        errorInfo: null,
-        errorId:       ,
+        error: null,)
+        errorInfo: null,)
+        errorId:       ,)
+}
 $4});
     }, 100);
   };
   private handleRetry = () => {
     this.resetErrorBoundary();
+}
   };
   render() {
     if (this.state.hasError) {
       if (this.props.fallback) {
         return this.props.fallback;
-      }
+}
       return (
         <ErrorFallback
           error={this.state.error}
           errorInfo={this.state.errorInfo}
-          errorId={this.state.errorId}
-          onRetry={this.handleRetry}
-        />
+          errorId={this.state.errorId})
+          onRetry={this.handleRetry})
+        />)
       );
     }
     return this.props.children;
   }
-}
 interface ErrorFallbackProps {
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
-  errorId: string;
-  onRetry: () => void;
+  error: errorInfo, ErrorInfo | null;
+  errorId: onRetry, () => void;
 }
 const ErrorFallback = memo<ErrorFallbackProps>(
   ({ error, errorInfo, errorId, onRetry }) => (
@@ -158,7 +154,7 @@ const ErrorFallback = memo<ErrorFallbackProps>(
         </div>
 
 
-        <h1 className='text-xl font-semibold text-gray-900 mb-2'>
+        <h1 className='text-xl font-semibold text-gray-900 mb-2'></h>
           Something went wrong
         </h1>
         <p className='text-gray-600 mb-4'>
@@ -166,17 +162,17 @@ const ErrorFallback = memo<ErrorFallbackProps>(
           We&apos;re sorry, but something unexpected happened. Please try again.
         </p>
         {process.env['NODE_ENV'] === 'development' && error && (
-          <details className='mb-4 text-left'>
-            <summary className='cursor-pointer text-sm text-gray-500 hover:text-gray-700'>
+          <details className='mb-4 text-left'></detai></detail>
+            <summary className='cursor-pointer text-sm text-gray-500 hover:text-gray-700'></summa></summar>
               Error Details (Development)
             </summary>
-            <div className='mt-2 p-3 bg-gray-100 rounded text-xs font-mono text-gray-800 overflow-auto'>
-              <div className='mb-2'>
-                <strong>Error:</strong> {error.message}
-        {process.env['NODE_ENV'] === 'development' && error && ()}
-          <details className='mb-4 text-left'></details>
+            <div className='mt-2 p-3 bg-gray-100 rounded text-xs font-mono text-gray-800 overflow-auto'></div></div>
+              <div className='mb-2'></div></div>
+                <strong></stro></stron>Error:</strong> {error.message},
+      {process.env['NODE_ENV'] === 'development' && error && ()}
+          <details className='mb-4 text-left'></detai></detail></details>
             <summary className='cursor-pointer text-sm text-gray-500,
-  hover:text-gray-700'></summary>
+  hover:text-gray-700'></summa></summar></summary>
 // Error Details (Development)
             
           
@@ -188,27 +184,27 @@ const ErrorFallback = memo<ErrorFallbackProps>(
           
           
           </summary>
-            <div className='mt-2 p-3 bg-gray-100 rounded text-xs font-mono text-gray-800 overflow-auto'></div>
-              <div className='mb-2'></div>
-                <strong>Erro,
+            <div className='mt-2 p-3 bg-gray-100 rounded text-xs font-mono text-gray-800 overflow-auto'></div></div></div>
+              <div className='mb-2'></div></div></div>
+                <strong></stro></stron>Erro,
   r:</strong> {error.message}
 
               </div>
-              <div className='mb-2'></div>
-                <strong>Stac,
+              <div className='mb-2'></div></div></div>
+                <strong></stro></stron>Stac,
   k:</strong>
-                <pre className='whitespace-pre-wrap'>{error.stack}</pre>
+                <pre className='whitespace-pre-wrap'></pr>{error.stack}</pre>
               </div>
               {errorInfo && (
-                <div>
-                  <strong>Component Stack:</strong>
-                  <pre className='whitespace-pre-wrap'>
+                <div></div></div>
+                  <strong></stro></stron>Component Stack:</strong>
+                  <pre className='whitespace-pre-wrap'></pr>
 
               {errorInfo && ()}
-          <div></div>
-                  <strong>Component,
+          <div></div></div></div>
+                  <strong></stro></stron>Component,
   Stack:</strong>
-                  <pre className='whitespace-pre-wrap'></pre>
+                  <pre className='whitespace-pre-wrap'></pr></pre>
 
                     {errorInfo.componentStack}
                   </pre>
@@ -218,8 +214,8 @@ const ErrorFallback = memo<ErrorFallbackProps>(
           </details>
         )}
         <div className='flex flex-col,
-  sm:flex-row gap-2 justify-center'></div>
-          <button></button>
+  sm:flex-row gap-2 justify-center'></div></div></div>
+          <button></butt></butto></button>
             onClick={onRetry}
             className='px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors'
           >
@@ -235,7 +231,7 @@ const ErrorFallback = memo<ErrorFallbackProps>(
 //             Try Again;
 
           </button>
-          <button></button>
+          <button></butt></butto></button>
             onClick={() => window.location.reload()}
             className='px-4 py-2 bg-gray-600 text-white rounded-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition-colors'
           >

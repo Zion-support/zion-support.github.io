@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-// Simple wrapper function to replace withSentry
+// Simple wrapper function to replace withSentry;
 const withSentry = (handler) => handler;
 
 const dir = path.join(process.cwd(), 'data');
@@ -11,6 +11,7 @@ export default function handler(req, res) {
   if (req.method !== 'POST') {
     res.statusCode = 405;
     res.setHeader('Content-Type', 'application/json');
+}
     res.end(JSON.stringify({ error: 'Method not allowed' }));
     return;
   }
@@ -23,16 +24,18 @@ export default function handler(req, res) {
 
   let existing = [];
   try {
-    if (fs.existsSync(file)) {
-      const data = fs.readFileSync(file, 'utf8');
+    if (fs.existsSync(file)) {;
+const data = fs.readFileSync(file, 'utf8');
       existing = JSON.parse(data);
       if (!Array.isArray(existing)) existing = [];
-    }
+  } catch (error) {
+    console.error("Error:", error);
+}
   } catch (error) {
     // Log error for debugging in development
     if (process.env.NODE_ENV === 'development') {
       console.error('Error reading existing requests:', error);
-    }
+}
     existing = [];
   }
 
@@ -55,19 +58,20 @@ export default function handler(req, res) {
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
-      success: true, 
-      message: 'Onsite request submitted successfully',
-      id: newRequest.id
-    }));
+      success: true, )
+      message: 'Onsite request submitted successfully',)
+      id: newRequest.id)
+  } catch (error) {
+    console.error("Error:", error);
+}));
   } catch (error) {
     // Log error for debugging in development
     if (process.env.NODE_ENV === 'development') {
       console.error('Error saving onsite request:', error);
-    }
+}
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Failed to save request' }));
   }
-}
 module.exports = handler;
 

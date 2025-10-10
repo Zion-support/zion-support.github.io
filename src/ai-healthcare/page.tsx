@@ -28,8 +28,8 @@ export default function AIHealthcarePage() {
               Contact Us
             </a>
           </div>
-        </div>
-      </div>
-    </div>
+        </div>)
+      </div>)
+    </div>)
   );
 }

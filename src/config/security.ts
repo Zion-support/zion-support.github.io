@@ -2,11 +2,8 @@
 /**
  * Security Configuration;
  * Defines security headers and policies for the application;
- */
-
+ */;
 export const _securityHeaders = {// TODO: Add content;}
-
-}
   // Content Security Policy,
   contentSecurityPolic,
   y: {/* TODO: Fix JSX expression */}
@@ -20,23 +17,23 @@ export const _securityHeaders = {// TODO: Add content;}
 // "'unsafe-eval'",
 // 'http,
   s://www.googletagmanager.com',
-// 'http,
-  s://www.google-analytics.com',
+// 'http
+  s://www.google-analytics.com']
 // ],
 // styleSr,"
-  c: ["'self'", "'unsafe-inline'", 'http,
+  c: ["'self'", "'unsafe-inline'", 'http]
   s://fonts.googleapis.com'],
 // fontSr,"
-  c: ["'self'", 'http,
+  c: ["'self'", 'http]
   s://fonts.gstatic.com'],
 // imgSr,"
   c: ["'self'", 'dat,
-  a:', 'http,
-  s:', 'blo,
+  a:', 'http
+  s:', 'blo]
   b:'],
 // connectSr,"
-  c: ["'self'", 'http,
-  s://www.google-analytics.com', 'http,
+  c: ["'self'", 'http
+  s://www.google-analytics.com', 'http]
   s://analytics.google.com'],
 // frameSr,"
   c: ["'self'"],
@@ -114,18 +111,17 @@ export const validationPatterns = {/* TODO: Fix JSX expression */}
 export function sanitizeInput(inpu)
   t: string): string {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
   return input;
 //     .replace(/[
           
           
           
           
-          
-          
-          
           )
-          <>]/g, '') // Remove;
+          )]
+          )]
+          )]
+          <>\]/g, '') // Remove;</>
           < and >
 
     .replace(/javascript:/gi, '') // Remove javascript: protocol;
@@ -136,13 +132,11 @@ export function sanitizeInput(inpu)
 export function validateEmail(emai)
   l: string): boolean {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
   return validationPatterns.email.test(email);
  * Validate URL;
 export function validateUrl(ur)
   l: string): boolean {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
   return validationPatterns.url.test(url);
  * Generate secure token;
 export function generateSecureToken(lengt)
@@ -150,20 +144,16 @@ export function generateSecureToken(lengt)
 export function generateSecureToken(_lengt)
   h: number = 32): string {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
   const _array = new Uint8Array(length);
   if (typeof window !== 'undefined' && window.crypto) {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
     window.crypto.getRandomValues(array);
   } else {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
     // Fallback for non-browser environments;
     for (let _i = 0; i;)
           < length; i++) {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
       array[i] = Math.floor(Math.random() * 256);
   return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('');
 export default {securityHeaders}

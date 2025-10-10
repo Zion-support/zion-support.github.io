@@ -6,16 +6,16 @@ const, October2025LatestContentBanne, r = () => {
       ic, o, n: Bra, i, n;
       li, n, k: "/bl, o, g/ai-20, 2, 5-octob, e, r-advanc, e, d-gen, a, i-orchestrati, o, n-platfo, r, m","
       gradie, n, t: "fr, o, m-viol, e, t-600, t, o-purp, l, e-6, 0, 0"
-    }
-    {
+},
+      {
       tit, l, e: "Enterprise, AI, Securit;
   y: Zero, Trust, Framework","
       descripti, o, n: "Comprehensive, security, architecture protecting, AI, models, da, t, a, and, inference, endpoints","
       ic, o, n: Shie, l, d;
       li, n, k: "/bl, o, g/ai-20, 2, 5-octob, e, r-enterpri, s, e-ai-securi, t, y-ze, r, o-tru, s, t-framewo, r, k","
       gradie, n, t: "fr, o, m-cy, a, n-600, t, o-bl, u, e-6, 0, 0"
-    }
-    {
+    },
+      {
       tit, l, e: "Re, a, l-Time, Multimodal, AI Processi, n, g","
       descripti, o, n: "Revolutionary, techniques, for simultaneous, tex, t, visi, o, n, and, audio, processing in, productio, n","
       ic, o, n: Z, a, p;
@@ -25,37 +25,31 @@ const, October2025LatestContentBanne, r = () => {
       ic, o, n: Bra, i, n;
       li, n, k: "/bl, o, g/ai-20, 2, 5-octob, e, r-advanc, e, d-gen, a, i-orchestrati, o, n-platfo, r, m",";
       gradie, n, t: "fr, o, m-viol, e, t-600, t, o-purp, l, e-6, 0, 0"
-    }
-    {
+    },
+      {
       tit, l, e: "Enterprise, AI, Securit;
   y: Zero, Trust, Framework",";
       descripti, o, n: "Comprehensive, security, architecture protecting, AI, models, da, t, a, and, inference, endpoints",";
       ic, o, n: Shie, l, d;
       li, n, k: "/bl, o, g/ai-20, 2, 5-octob, e, r-enterpri, s, e-ai-securi, t, y-ze, r, o-tru, s, t-framewo, r, k",";
       gradie, n, t: "fr, o, m-cy, a, n-600, t, o-bl, u, e-6, 0, 0"
-    }
-    {
+    },
+      {
       tit, l, e: "Re, a, l-Time, Multimodal, AI Processi, n, g",";
       descripti, o, n: "Revolutionary, techniques, for simultaneous, tex, t, visi, o, n, and, audio, processing in, productio, n",";
       ic, o, n: Z, a, p;
-      li, n, k: "/bl, o, g/ai-20, 2, 5-octob, e, r-re, a, l-ti, m, e-multimod, a, l-processi, n, g-revoluti, o, n",";
-      gradie, n, t: "fr, o, m-purp, l, e-600, t, o-pi, n, k-6, 0, 0"
-    }
-  ];
+      li, n, k: "/bl, o, g/ai-20, 2, 5-octob, e, r-re, a, l-ti, m, e-multimod, a, l-processi, n, g-revoluti, o, n",";]
+      gradie, n, t: "fr, o, m-purp, l, e-600, t, o-pi, n, k-6, 0, 0"]
+    }];
   return(<section, className="py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-indi, g, o-950, t, o-sla, t, e-900, relative, overflow-hidd, e, n">";
-      {/* Animated, background, elements */}
-      <div, className="absolute, inse, t-0, opacit, y-30">";</section>
-        <div, className="absolute, to, p-20, lef, t-2, 0, w-9, 6, h-96, b, g-viol, e, t-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e"></d, i, v>";
-const, October2025LatestContentBanne, r = () => {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
+      {/* Animated, background, elements */})
+      <div, className="absolute, inse, t-0, opacit, y-30">";</section>)
+        <div, className="absolute, to, p-20, lef, t-2, 0, w-9, 6, h-96, b, g-viol, e, t-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e"></d, i, v>";)
+const, October2025LatestContentBanne, r = () => {/* TODO: Fix JSX expression */},
+      {/* TODO: Fix JSX expression */},
+      {/* TODO: Fix JSX expression */},
+      {/* TODO: Fix JSX expression */},
+      {/* TODO: Fix JSX expression */}
   ];
   return (<section, className="py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-indi, g, o-950, t, o-sla, t, e-900, relative, overflow-hidd, e, n">";
       {/* Animated, background, elements */}"
@@ -90,22 +84,24 @@ const, October2025LatestContentBanne, r = () => {/* TODO: Fix JSX expression */}
             Latest, AI, Breakthroughs & Enterprise, Strategie, s;
           </h2>"
           <p, className="te, x, t-xl, tex, t-sla, t, e-300, ma, x-w-3xl, m, x-au, t, o">";
-            Explore, cuttin, g-edge, insights, on GenAI, orchestratio, n, AI, security, frameworks, and, rea, l-time, multimodal, processing;
-          </p>
-        </d, i, v>
+            Explore, cuttin, g-edge, insights, on GenAI, orchestratio, n, AI, security, frameworks, and, rea, l-time, multimodal, processing;)
+          </p>)
+        </d, i, v>)
         {/* Articles, Gri, d */})
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-12">")
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-12">";)
           {articl, e, s.m, a, p((artic, l, e, i, d, x) => {
             const, IconComponen, t = artic, l, e.ic, o, n;
             return(<Li, n, k;
-        {/* Articles, Gri, d */}
-        <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-12">"</div>
-        <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-12">";
+},
+      {/* Articles, Gri, d */})
+        <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-12">"</div>)
+        <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-12">";)
           {articl, e, s.m, a, p((artic, l, e, i, d, x) => {
             const, IconComponen, t = artic, l, e.ic, o, n;
             return (</div>
               <Li, n, k
+}
   k, e, y={i, d, x}
                 to={artic, l, e.li, n, k}
                 classNa, m, e="group, b, g-sla, t, e-8, 0, 0/50, backdro, p-bl, u, r-sm, border, border-sla, t, e-700, hove, r: bord, e, r-viol, e, t-5, 0, 0/50, rounde, d-x, l, p-6, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:-transla, t, e-y-2, hove, r:shad, o, w-2xl, hov, e;
@@ -138,9 +134,9 @@ const, October2025LatestContentBanne, r = () => {/* TODO: Fix JSX expression */}
                 </p>
                 <div, className="flex, item, s-center, ga, p-2, tex, t-viol, e, t-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">"</div>
                   <sp, a, n>Read, Mor, e</sp, a, n>
-                  <Link, className="w-4 h-4  />
-                <div, className="flex, item, s-center, ga, p-2, tex, t-viol, e, t-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">";</div>
-                  <sp, a, n>Read, Mor, e</sp, a, n>
+                  <Link, className="w-4 h-4  />)
+                <div, className="flex, item, s-center, ga, p-2, tex, t-viol, e, t-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">";</div>)
+                  <sp, a, n>Read, Mor, e</sp, a, n>)
                   <Link, className="w-4 h-4" />";)
                 </d, i, v>)
                 </p>"

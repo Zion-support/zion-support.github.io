@@ -1,12 +1,8 @@
 // AccessibilityEnhancer utility
-// This file contains utility functions and configurations
-
-
+// This file contains utility functions and configurations;
 interface AccessibilityConfig {enableKeyboardNavigation: boolean;}
-  enableScreenReaderSupport: boolean;
-  enableHighContrast: boolean;
-  enableFocusIndicators: boolean;
-  enableAriaLabels: boolean;
+  enableScreenReaderSupport: enableHighContrast, boolean;
+  enableFocusIndicators: enableAriaLabels, boolean;
 }
 
 class AccessibilityEnhancer {private config: AccessibilityConfig;}
@@ -25,17 +21,14 @@ class AccessibilityEnhancer {private config: AccessibilityConfig;}
     this.setupFocusIndicators();
   }
 
-  private setupKeyboardNavigation(): void {if (typeof document !== 'undefined' {}
+  private setupKeyboardNavigation(): void {if (typeof document !== 'undefined' {})
       // Add keyboard navigation support;)
       document.addEventListener('keydown', (event) => {if (event.key === 'Tab') {}
           // Handle tab navigation;
           console.log('Tab navigation detected');
         }
-      }
   )
     }
-  }
-
   private setupFocusIndicators(): void {if (typeof document !== 'undefined') {}
       // Add focus indicators;
       const style = document.createElement('style');
@@ -48,11 +41,7 @@ class AccessibilityEnhancer {private config: AccessibilityConfig;}
       `
       document.head.appendChild(style)
     }
-  }
-
   public cleanup(): void {// Cleanup accessibility enhancements;}
-  }
-}
 
 export default AccessibilityEnhancer;`
 

@@ -10,23 +10,24 @@ import SEOOptimizer from './components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import Analytics from './components/Analytics';
 import SecurityEnhancer from './components/SecurityEnhancer';
-// Dynamically import heavy components for better performance
+// Dynamically import heavy components for better performance;
 const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
 const ContentCarousel = lazy(() => import('./components/ContentCarousel'));
 const DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase'));
 const ContentStatistics = lazy(() => import('./components/ContentStatistics'));
 const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'));
-// Preload critical components
+// Preload critical components;
 const preloadComponents = () => {
   if (typeof window !== 'undefined') {
     // Preload critical components after initial render
     setTimeout(() => {
       import('./components/ContentPromotionBanner');
       import('./components/ContentCarousel');
+}
     }, 100);
   }
 };
-// Loading skeleton component
+// Loading skeleton component;
 const ServiceCardSkeleton: React.FC = memo(() => (
   <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card"></div>
     <div className="h-8 bg-gray-200 rounded mb-4 w-3/4"></div>
@@ -35,29 +36,31 @@ const ServiceCardSkeleton: React.FC = memo(() => (
   </div>
 ));
 ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
-const HomePage: React.FC = memo(() => {
-  const [isLoaded, setIsLoaded] = useState(false);
+const HomePage: React.FC = memo(() => {;
+const [isLoaded, setIsLoaded] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
   
   useEffect(() => {
     setIsLoaded(true);
-    // Trigger visibility animation
-    const timer = setTimeout(() => setIsVisible(true), 100);
+    // Trigger visibility animation;
+const timer = setTimeout(() => setIsVisible(true), 100);
     // Preload components
     preloadComponents();
     return () => clearTimeout(timer);
+}
   }, []);
-  // Analytics tracking for phone clicks - optimized
-  const handlePhoneClick = useCallback(() => {
+  // Analytics tracking for phone clicks - optimized;
+const handlePhoneClick = useCallback(() => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as any).gtag('event', 'phone_click', {
-        event_category: 'engagement',
-        event_label: 'main_phone_number'
+      (window as, any).gtag('event', 'phone_click', {)
+        event_category: 'engagement',)
+        event_label: 'main_phone_number')
+}
       });
     }
   }, []);
   return (
-    <>
+    <>\</>
       <SEOOptimizer
         title="Zion Tech Group - Advanced AI and IT Solutions"
         description="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology."
@@ -78,16 +81,17 @@ const HomePage: React.FC = memo(() => {
             'Autonomous Systems',
             'Digital Transformation',
             'Cloud Services',
-            'Automation',
-            'Business Intelligence'
-          ],
+            'Automation']
+            'Business Intelligence'],
           contactPoint: {
             '@type': 'ContactPoint',
             telephone: '+1-302-464-0950',
             contactType: 'Customer Service',
             areaServed: 'US',
             availableLanguage: 'en'
-          },
+
+}
+},
           address: {
             '@type': 'PostalAddress',
             streetAddress: '364 E Main St STE 1008',
@@ -95,8 +99,10 @@ const HomePage: React.FC = memo(() => {
             addressRegion: 'DE',
             postalCode: '19709',
             addressCountry: 'US'
-          }
-        }}
+
+}
+}
+        }
       />
       <PerformanceOptimizer
         enableImageOptimization={true}
@@ -192,9 +198,9 @@ const HomePage: React.FC = memo(() => {
             {/* CTA Buttons */}
             <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center items-center"></div>
               <a
-                href="tel:+13024640950"
-                onClick={handlePhoneClick}
-                className="cyber-button w-full sm:w-auto text-center"
+                href="tel:+13024640950")
+                onClick={handlePhoneClick})
+                className="cyber-button w-full sm:w-auto text-center")
                 aria-label="Call us at (302) 464-0950"
             >
               📞 Call: (302) 464-0950

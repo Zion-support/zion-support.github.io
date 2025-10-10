@@ -13,8 +13,8 @@ const filesToFix = [
   '/workspace/app/offline/page.tsx',
   '/workspace/app/page-minimal.tsx',
   '/workspace/app/page-optimized.tsx',
-  '/workspace/app/privacy/page.tsx',
-  '/workspace/app/team/page.tsx',
+  '/workspace/app/privacy/page.tsx'
+  '/workspace/app/team/page.tsx']
   '/workspace/app/terms/page.tsx'];
 
 // // Function to process a single file;
@@ -27,23 +27,23 @@ function processFile(filePath) {
     if (content.includes('<>') && !content.includes('</>')) {
       // Find the last closing div or main tag and add </> before it;
       for (let i = lines.length - 1; i >= 0; i--) {
-        if (
+        if ()
           lines[i].trim().startsWith('</') &&
           !lines[i].includes('') &&
           !lines[i].includes('</Helmet>')
         ) {
           lastClosingTagIndex = i;
           break;
+}
+  } catch (error) {
+    console.error("Error:", error);
+}
 function processFile(filePath) {/* TODO: Fix JSX expression */}
-        }
-      }
 
       if (lastClosingTagIndex !== -1) {/* TODO: Fix JSX expression */}
-      }
-    }
 
     // Fix function declarations;
-    content = content.replace(
+    content = content.replace()
       /export default function (\w+)\(\) \{/,
       'const $1: React.FC = () => {'
     );
@@ -53,34 +53,29 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
       //       const componentName = content.match(/const (\w+): React\.FC/)?.[1];,
       if (componentName) {,
     content = content.replace()
+}
       /export default function (\w+)\(\) \{/* TODO: Fix JSX expression */}
         content = content.replace(/^\s*}\s*$/, `  );\n};\n\nexport default ${componentName};`);
         modified = true;
       }
-    }
-
     // Fix any remaining syntax issues;
     content = content.replace(/\{\s*title:\s*['"`][^'"`]*['"`]\s*,\s*description:\s*['"`][^'"`]*['"`]\s*,\s*type:\s*['"`][^'"`]*['"`]\s*,\s*url:\s*['"`][^'"`]*['"`]\s*\}/g)
       ''
-    content = content.replace(/\{/* TODO: Fix JSX expression */}`
-  l:\s*['"`][^'"`]*['"`]\s*\}/g,
+    content = content.replace(/\{/* TODO: Fix JSX expression */}`)
+  l:\s*['"`][^'"`]*['"`]\s*\}/g,)
       '')
     );
 
     if (modified) {/* TODO: Fix JSX expression */}
-    }
-
     return false;
   } catch (error) {/* TODO: Fix JSX expression */}
-  }
-}
 
 // Process all files;
 filesToFix.forEach(file => {)
   if (processFile(file)) {
     fixedCount++;
-  }
-filesToFix.forEach(file => {/* TODO: Fix JSX expression */}
+}
+filesToFix.forEach(file => {/* TODO: Fix JSX expression */})
   })
 });
 

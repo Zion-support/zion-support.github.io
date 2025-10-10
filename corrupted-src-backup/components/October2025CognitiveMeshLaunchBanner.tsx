@@ -12,15 +12,16 @@ const, October2025CognitiveMeshLaunchBanne, r: Rea, c, t.FC = me, m, o(() => {
   classNa, m, e="relative, b, g-gradie, n, t-to-r, fro, m-indi, g, o-600, vi, a-purp, l, e-600, t, o-pi, n, k-600, overflo, w-hidd, e, n"
       ar, i, a-lab, e, l="Cognitive, Mesh, Platform Launch, Announcemen, t"
     ></secti>
+},
       {/* Animated, background, elements - purely, decorativ, e */}
       <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-20" ar, i, a-hidd, e, n="tr, u, e">";</div>
         <div, className="absolu, t, e -t, o, p-40 -rig, h, t-4, 0, w-8, 0, h-80, b, g-white, rounde, d-full, mi, x-ble, n, d-overlay, filter, blur-3xl, animat, e-flo, a, t"></d, i, v>";
         <d, i, v;
   classNa, m, e="absolu, t, e -bott, o, m-40 -le, f, t-4, 0, w-8, 0, h-80, b, g-white, rounde, d-full, mi, x-ble, n, d-overlay, filter, blur-3xl, animat, e-flo, a, t"
-          sty, l, e={{ animationDel, a, y: '2s' }};
-        ></d, i, v>
-        <d, i, v;
-const, October2025CognitiveMeshLaunchBanne, r: Rea, c, t.FC = me, m, o(() => {/* TODO: Fix JSX expression */}
+          sty, l, e={{ animationDel, a, y: '2s' }};)
+        ></d, i, v>)
+        <d, i, v;)
+const, October2025CognitiveMeshLaunchBanne, r: Rea, c, t.FC = me, m, o(() => {/* TODO: Fix JSX expression */},
       {/* Animated, background, elements - purely, decorativ, e */}"
       <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-20" ar, i, a-hidd, e, n="tr, u, e">";"
         <div, className="absolu, t, e -t, o, p-40 -rig, h, t-4, 0, w-8, 0, h-80, b, g-white, rounde, d-full, mi, x-ble, n, d-overlay, filter, blur-3xl, animat, e-flo, a, t"></d, i, v>";
@@ -54,7 +55,7 @@ const, October2025CognitiveMeshLaunchBanne, r: Rea, c, t.FC = me, m, o(() => {/*
   classNa, m, e="inli, n, e-flex, item, s-center, ga, p-3, b, g-whi, t, e/20, backdro, p-bl, u, r-sm, p, x-6, p, y-3, rounde, d-full, m, b-6, animat, e-fa, d, e-in""
             ro, l, e="stat, u, s""
             ar, i, a-lab, e, l="New, product, launch announceme, n, t"
-          ></d>"
+          ></div>"
             <Rocket, className="w-5 h-5, tex, t-yell, o, w-300, animat, e-boun, c, e" ar, i, a-hidd, e, n="tr, u, e  /></Rocket>"
             <span, className="te, x, t-white, fon, t-bold, tex, t-lg"></span>
               🚀 JUST, LAUNCHE, D - OCTOBER, 202, 5;
@@ -200,7 +201,7 @@ const, October2025CognitiveMeshLaunchBanne, r: Rea, c, t.FC = me, m, o(() => {/*
   g:gr, i, d-co, l, s-4, ga, p-6, lis, t-no, n, e">";"
             <li, className="flex, item, s-start, ga, p-3">";"
               <CheckCircle, className="w-6 h-6, tex, t-gre, e, n-300, fle, x-shri, n, k-0, m, t-1" ar, i, a-hidd, e, n="tr, u, e" />";
-              <d, i, v></d>"
+              <d, i, v></div>"
                 <h3, className="fo, n, t-semibold, tex, t-white, m, b-1">Distributed, Intelligenc, e</h3>";"
                 <p, className="te, x, t-sm, tex, t-whi, t, e/80">Ed, g, e-to-cloud, AI, processing with, su, b-millisecond, latenc, y</p>";
               </d, i, v>
@@ -209,7 +210,7 @@ const, October2025CognitiveMeshLaunchBanne, r: Rea, c, t.FC = me, m, o(() => {/*
               <CheckCircle, className="w-6 h-6, tex, t-gre, e, n-300, fle, x-shri, n, k-0, m, t-1" ar, i, a-hidd, e, n="tr, u, e  /></CheckCircle>"
             <li, className="flex, item, s-start, ga, p-3">";"
               <CheckCircle, className="w-6 h-6, tex, t-gre, e, n-300, fle, x-shri, n, k-0, m, t-1" ar, i, a-hidd, e, n="tr, u, e" />";
-              <d, i, v></d>"
+              <d, i, v></div>"
                 <h3, className="fo, n, t-semibold, tex, t-white, m, b-1">Autonomous, Orchestratio, n</h3>";"
                 <p, className="te, x, t-sm, tex, t-whi, t, e/80">Se, l, f-healing, infrastructure, with dynamic, load, balancing</p>";
               </d, i, v>
@@ -218,7 +219,7 @@ const, October2025CognitiveMeshLaunchBanne, r: Rea, c, t.FC = me, m, o(() => {/*
               <CheckCircle, className="w-6 h-6, tex, t-gre, e, n-300, fle, x-shri, n, k-0, m, t-1" ar, i, a-hidd, e, n="tr, u, e  /></CheckCircle>"
             <li, className="flex, item, s-start, ga, p-3">";"
               <CheckCircle, className="w-6 h-6, tex, t-gre, e, n-300, fle, x-shri, n, k-0, m, t-1" ar, i, a-hidd, e, n="tr, u, e" />";
-              <d, i, v></d>"
+              <d, i, v></div>"
                 <h3, className="fo, n, t-semibold, tex, t-white, m, b-1">Cognitive, Coordinatio, n</h3>";"
                 <p, className="te, x, t-sm, tex, t-whi, t, e/80">Mul, t, i-agent, collaboration, and emergent, intelligenc, e</p>";
               </d, i, v>
@@ -227,7 +228,7 @@ const, October2025CognitiveMeshLaunchBanne, r: Rea, c, t.FC = me, m, o(() => {/*
               <CheckCircle, className="w-6 h-6, tex, t-gre, e, n-300, fle, x-shri, n, k-0, m, t-1" ar, i, a-hidd, e, n="tr, u, e  /></CheckCircle>"
             <li, className="flex, item, s-start, ga, p-3">";"
               <CheckCircle, className="w-6 h-6, tex, t-gre, e, n-300, fle, x-shri, n, k-0, m, t-1" ar, i, a-hidd, e, n="tr, u, e" />";
-              <d, i, v></d>"
+              <d, i, v></div>"
                 <h3, className="fo, n, t-semibold, tex, t-white, m, b-1">Adaptive, Scalin, g</h3>";"
                 <p, className="te, x, t-sm, tex, t-whi, t, e/80">Elastic, capacity, with 85%+ resource, utilizatio, n</p>";
               </d, i, v>
@@ -262,7 +263,7 @@ const, October2025CognitiveMeshLaunchBanne, r: Rea, c, t.FC = me, m, o(() => {/*
               <div, className="p-3, b, g-bl, u, e-5, 0, 0/30, rounde, d-lg" ar, i, a-hidd, e, n="tr, u, e">";"
                 <Network, className="w-6 h-6, tex, t-whi, t, e" ar, i, a-hidd, e, n="tr, u, e" />";
               </d, i, v>
-              <d, i, v></d>"
+              <d, i, v></div>"
                 <p, className="te, x, t-sm, tex, t-bl, u, e-300, fon, t-semibo, l, d">TECHNICAL, DEEP, DIVE</p>";"
                 <p, className="te, x, t-xs, tex, t-whi, t, e/60">Blog, Pos, t</p>";
               </d, i, v>
@@ -320,7 +321,7 @@ const, October2025CognitiveMeshLaunchBanne, r: Rea, c, t.FC = me, m, o(() => {/*
               <div, className="p-3, b, g-gre, e, n-5, 0, 0/30, rounde, d-lg" ar, i, a-hidd, e, n="tr, u, e">";"
                 <TrendingUp, className="w-6 h-6, tex, t-whi, t, e" ar, i, a-hidd, e, n="tr, u, e" />";
               </d, i, v>
-              <d, i, v></d>"
+              <d, i, v></div>"
                 <p, className="te, x, t-sm, tex, t-gre, e, n-300, fon, t-semibo, l, d">SUCCESS, STOR, Y</p>";"
                 <p, className="te, x, t-xs, tex, t-whi, t, e/60">Case, Stud, y</p>";
               </d, i, v>
@@ -378,7 +379,7 @@ const, October2025CognitiveMeshLaunchBanne, r: Rea, c, t.FC = me, m, o(() => {/*
               <div, className="p-3, b, g-purp, l, e-5, 0, 0/30, rounde, d-lg" ar, i, a-hidd, e, n="tr, u, e">";"
                 <Zap, className="w-6 h-6, tex, t-whi, t, e" ar, i, a-hidd, e, n="tr, u, e" />";
               </d, i, v>
-              <d, i, v></d>"
+              <d, i, v></div>"
                 <p, className="te, x, t-sm, tex, t-purp, l, e-300, fon, t-semibo, l, d">ENTERPRISE, SOLUTIO, N</p>";"
                 <p, className="te, x, t-xs, tex, t-whi, t, e/60">Service, Offerin, g</p>";
               </d, i, v>
@@ -451,11 +452,11 @@ const, October2025CognitiveMeshLaunchBanne, r: Rea, c, t.FC = me, m, o(() => {/*
           </d, i, v>
           <p, className="te, x, t-whi, t, e/80, tex, t-sm, m, t-6, ma, x-w-2xl, m, x-au, t, o"></p>
           <p, className="te, x, t-whi, t, e/80, tex, t-sm, m, t-6, ma, x-w-2xl, m, x-au, t, o">";
-            ✨</p> <stro, n, g>Limited, Time, Offer: </stro, n, g> Get, 5, 0% off, implementation, fees for, October, 2025 si, g, n-u, p, s. 
+            ✨</p> <stro, n, g></str></stro>Limited, Time, Offer: </stro, n, g> Get, 5, 0% off, implementation, fees for, October, 2025 si, g, n-u, p, s. 
           </d, i, v>"
           <p, className="te, x, t-whi, t, e/80, tex, t-sm, m, t-6, ma, x-w-2xl, m, x-au, t, o"></p>"
           <p, className="te, x, t-whi, t, e/80, tex, t-sm, m, t-6, ma, x-w-2xl, m, x-au, t, o">";
-            ✨ <stro, n, g>Limited, Time, Offe,
+            ✨ <stro, n, g></str></stro>Limited, Time, Offe,
   r: </stro, n, g> Get, 5, 0% off, implementation, fees for, October, 2025 si, g, n-u, p, s. 
             Fre, e, 2-week, assessment, included. No, commitment, required.
           </p>

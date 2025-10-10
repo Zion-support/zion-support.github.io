@@ -19,10 +19,11 @@ const Ai2026AutonomousAgentFactoriesPage: React.FC = () => {
             Contact Us
           </Link>
         </div>
-      </div>
-      <Footer />
-    </div>
+      </div>)
+      <Footer />)
+    </div>)
   );
+}
 };
 
 export default Ai2026AutonomousAgentFactoriesPage;

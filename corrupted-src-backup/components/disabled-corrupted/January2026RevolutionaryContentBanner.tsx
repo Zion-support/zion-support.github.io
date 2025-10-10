@@ -1,6 +1,6 @@
 import React from 'react';
-const January2026RevolutionaryContentBanne, r: React.FC = () => {,
-  const revolutionaryConten, t = [
+const January2026RevolutionaryContentBanne, r: React.FC = () => {,;
+const revolutionaryConten, t = [
     {
       title: 'Ne, x, t-Generation, Enterprise, Automation: The, 2026, AI Revolu, t, i, o, n',
       description: '98% Automation, Ra, t, e, 1000 x, Processing, Speed, $2.5 B, Cost, Savings',
@@ -10,12 +10,13 @@ const January2026RevolutionaryContentBanne, r: React.FC = () => {,
       highlig, h, t: 'BREAKTHRO, U, G, H',
       impa, c, t: '98% Automat, i, o, n',
       ty, p, e: 'b, l, o, g',
-      readTime: '15, m, i, n',
+      readTime: '15, m, i, n',;
+}
 const January2026RevolutionaryContentBanne, r: React.FC = () => {/* TODO: Fix JSX expression */}
     },
-    {/* TODO: Fix JSX expression */}
-    },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */},
+      {/* TODO: Fix JSX expression */}]
+    ]
     }]; return(<section, classNam, e = 'py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, relative, overflow-hidd, e, n'>
       {/* Animated, Backgroun, d */}
       <div, className='absolute, inse, t-0, overflo, w-hidden, opacit, y-20'></section>
@@ -24,10 +25,10 @@ const January2026RevolutionaryContentBanne, r: React.FC = () => {/* TODO: Fix JS
       <div, className='absolute, inse, t-0, overflo, w-hidden, opacit, y-20'></div>
         <div, className='absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e' /></div>
         <div, className='absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e'
-          sty, l, e={{ animationDel, a, y: ', 2, s' }}
+          sty, l, e={{ animationDel, a, y: ', 2, s' }
          /></div>
         <div, classNam, e = 'absolute, to, p-1/2, lef, t-1/2 w-6, 4, h-64, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e'
-          sty, l, e={{ animationDel, a, y: ', 4, s' }}
+          sty, l, e={{ animationDel, a, y: ', 4, s' }
          /></div>
       </div>
       <div, classNam, e = 'container, m, x-auto, p, x-6, relative, z-10'>
@@ -55,9 +56,9 @@ const January2026RevolutionaryContentBanne, r: React.FC = () => {/* TODO: Fix JS
   s: The, Future, is He, r, e;
           </h2>
           <p, className='te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-auto, leadin, g-relax, e, d'></p>
-            Experience, the, cutting-edge, of, AI innovation, with, our latest, breakthrough, conten,
-  t: 98% automation, ra, t, e, s, quantum, computing, revolutions, and, Fortune, 500 transformations, wort, h $1, 0, B.
-          </p>
+            Experience, the, cutting-edge, of, AI innovation, with, our latest, breakthrough, conten,)
+  t: 98% automation, ra, t, e, s, quantum, computing, revolutions, and, Fortune, 500 transformations, wort, h $1, 0, B.)
+          </p>)
         </div>)
         {/* Content, Gri, d */})
         <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12'>)
@@ -124,7 +125,7 @@ const January2026RevolutionaryContentBanne, r: React.FC = () => {/* TODO: Fix JS
           ))}
         </div>
         {/* Stats, Sectio, n */}
-        <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-4, ga, p-6, m, b-12'></div>
+        <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-4, ga, p-6, m, b-12'></div></div></div>
           {/* TODO: Fix JSX expression */}
             },
             {/* TODO: Fix JSX expression */}
@@ -134,33 +135,33 @@ const January2026RevolutionaryContentBanne, r: React.FC = () => {/* TODO: Fix JS
             {/* TODO: Fix JSX expression */}
             }].m, a, p((st, a, t, ind, e, x) => (</div>
             <div, ke, y = { in, d, e, x }, classNa, m, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-4, border, border-whi, t, e/10, tex, t-cent, e, r'
-            ></div>
+            ></div></div></div>
           ].m, a, p((st, a, t, ind, e, x) => (<div, ke, y = { in, d, e, x }, classNa, m, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-4, border, border-whi, t, e/10, tex, t-cent, e, r'
-            ></div>`
-              <div, className='te, x, t-3xl, m, b-2'>{st, a, t.ic, o, n}</d, i, v > <div, classNam, e = { `te, x, t-2xl, fon, t-extrabold, b, g-gradie, n, t-to-r ${st, a, t.co, l, o, r }, bg-cl, i, p-text, tex, t-transparent, m, b-1`}
-              ></div>
+            ></div></div></div>`
+              <div, className='te, x, t-3xl, m, b-2'></div></div>{st, a, t.ic, o, n}</d, i, v > <div, classNam, e = { `te, x, t-2xl, fon, t-extrabold, b, g-gradie, n, t-to-r ${st, a, t.co, l, o, r }, bg-cl, i, p-text, tex, t-transparent, m, b-1`}
+              ></div></div></div>
                 {st, a, t.val, u, e}
               </div>
-              <div, classNam, e = 'te, x, t-gr, a, y-400, tex, t-xs, fon, t-medi, u, m'></div>
+              <div, classNam, e = 'te, x, t-gr, a, y-400, tex, t-xs, fon, t-medi, u, m'></div></div></div>
                 {st, a, t.lab, e, l}
               </div>
             </di, v>)
           ))}
         </div>
         {/* Call, to, Action */}
-        <div, classNam, e = 'te, x, t-cent, e, r'></div>
-          <div, className='bg-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/10, t, o-purp, l, e-5, 0, 0/10, border, border-bl, u, e-5, 0, 0/20, rounde, d-2x, l, p-8'></div>
-            <h3, className='te, x, t-2xl, fon, t-bold, m, b-4, tex, t-whi, t, e'>
-            <h3, className='te, x, t-2xl, fon, t-bold, m, b-4, tex, t-whi, t, e'></h3>
+        <div, classNam, e = 'te, x, t-cent, e, r'></div></div></div>
+          <div, className='bg-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/10, t, o-purp, l, e-5, 0, 0/10, border, border-bl, u, e-5, 0, 0/20, rounde, d-2x, l, p-8'></div></div></div>
+            <h3, className='te, x, t-2xl, fon, t-bold, m, b-4, tex, t-whi, t, e'></h>
+            <h3, className='te, x, t-2xl, fon, t-bold, m, b-4, tex, t-whi, t, e'></h></h3>
               Ready, to, Experience the, AI, Revolution?
             </h3>
             <p, className='te, x, t-gr, a, y-300, m, b-6, ma, x-w-2xl, m, x-au, t, o'></p>
               Join, the, Fortune 500, companies, already transforming, their, operations with, Zion, Tech Gro, u, p's, breakthrough, AI solutio, n, s.
             </p>
-            <div, className='flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r'></div>
+            <div, className='flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r'></div></div></div>
               <Link, t, o='/conta, c, t'
                 className='bg-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-purp, l, e-600, hove, r:fr, o, m-bl, u, e-400, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-bl, u, e-5, 0, 0/50, transform, hover:-transla, t, e-y-1'
-              >
+              ></Li></Lin>
                 className='bg-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-purp, l, e-600, hove, r:fr, o, m-bl, u, e-400, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-bl, u, e-5, 0, 0/50, transform, hove,
   r:-transla, t, e-y-1'
               ></Link>
@@ -168,7 +169,7 @@ const January2026RevolutionaryContentBanne, r: React.FC = () => {/* TODO: Fix JS
               </Li, n, k>
               <Link, t, o='/servic, e, s'
                 className='bord, e, r-2, borde, r-bl, u, e-500, tex, t-bl, u, e-400, hove, r:bg-bl, u, e-500, hove, r:te, x, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-3, 0, 0'
-              >
+              ></Li></Lin>
               ></Link>
                 Explore, Our, Services;
               </Li, n, k>

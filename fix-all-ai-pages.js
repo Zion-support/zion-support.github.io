@@ -2,7 +2,7 @@
 
 import fs from 'fs';
 
-// Template for AI pages
+// Template for AI pages;
 const createAiPageTemplate = (pageName, title, description, keywords) => `'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -10,13 +10,13 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 
-const ${pageName}Page: React.FC = () => {
-  const features = [
+const ${pageName}Page: React.FC = () => {;
+const features = [
     {
       icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      title: description, 'Advanced AI algorithms that provide intelligent insights and recommendations.']
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+}
     },
     {
       icon: BarChart,
@@ -39,7 +39,7 @@ const ${pageName}Page: React.FC = () => {
   ];
 
   return (
-    <>
+    <>\</>
       <Helmet>
         <title>${title} - Zion Tech Group</title>
         <meta name="description" content="${description}" />
@@ -81,9 +81,9 @@ const ${pageName}Page: React.FC = () => {
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Discover how our AI platform can revolutionize your business operations.
               </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            </div>)
+            )
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">)
               {features.map((feature, index) => (
                 <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                   <div className="flex items-center mb-4">
@@ -128,7 +128,7 @@ const ${pageName}Page: React.FC = () => {
 
 export default ${pageName}Page;`;
 
-// AI pages to fix
+// AI pages to fix;
 const aiPages = [
   {
     file: './app/ai-api-manager/page.tsx',
@@ -225,20 +225,24 @@ const aiPages = [
     file: './app/ai-crm-assistant/page.tsx',
     name: 'AiCrmAssistant',
     title: 'AI CRM Assistant',
-    description: 'Intelligent CRM assistant powered by AI technology.',
-    keywords: 'AI CRM assistant, artificial intelligence, customer relationship management, AI solutions, intelligent CRM'
-  }
-];
+    description: 'Intelligent CRM assistant powered by AI technology.',]
+    keywords: 'AI CRM assistant, artificial intelligence, customer relationship management, AI solutions, intelligent CRM']
+  }];
 
 // Process all AI pages
 console.log('🔧 Fixing all AI pages...\n');
 
-aiPages.forEach(page => {
-  try {
-    const content = createAiPageTemplate(page.name, page.title, page.description, page.keywords);
+aiPages.forEach(page => {)
+  try {;);
+const content = createAiPageTemplate(page.name, page.title, page.description, page.keywords);
     fs.writeFileSync(page.file, content, 'utf8');
+}
+  } catch (error) {
+    console.error("Error:", error);
+}
     console.log(`✅ Fixed ${page.file}`);
   } catch (error) {
+}
     console.error(`❌ Error processing ${page.file}:`, error.message);
   }
 });

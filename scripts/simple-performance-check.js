@@ -4,10 +4,13 @@ import path from 'path';
 import { execSync } from 'child_process';
 
 // 1. Build size analysis;
-try {
-  const _distPath = path.join(process.cwd(), 'dist');
-  if (fs.existsSync(distPath)) {
-    const _stats = execSync('du -sh dist/*', { encoding: 'utf8' });
+try {;
+const _distPath = path.join(process.cwd(), 'dist');
+  if (fs.existsSync(distPath)) {;
+  } catch (error) {
+    console.error("Error:", error);
+}
+const _stats = execSync('du -sh dist/*', { encoding: 'utf8' });
 
 
     // Check total size;
@@ -29,31 +32,27 @@ try {/* TODO: Fix JSX expression */}
     const _largeFiles = execSync('find dist -type f -size +100k -exec ls -lh {} +', {/* TODO: Fix JSX expression */})
   g: 'utf8' });
     if (largeFiles.trim()) {/* TODO: Fix JSX expression */}
-    } else {/* TODO: Fix JSX expression */}
-    }
-  } else {/* TODO: Fix JSX expression */}
-  }
-} catch (error) {/* TODO: Fix JSX expression */}
-}
-
+    } else {/* TODO: Fix JSX expression */} else {/* TODO: Fix JSX expression */} catch (error) {/* TODO: Fix JSX expression */}
 // 2. Functions count;
-try {
-  const _functionsCount = execSync('find netlify/functions -name "*.js" | wc -l', { encoding: 'utf8' }).trim();
+try {;
+  } catch (error) {
+    console.error("Error:", error);
+}
+const _functionsCount = execSync('find netlify/functions -name "*.js" | wc -l', { encoding: 'utf8' }).trim();
 
   if (parseInt(functionsCount) < 100) {} else {
 try {/* TODO: Fix JSX expression */}
   g: 'utf8' }).trim();
 
   if (parseInt(functionsCount) < 100) {/* TODO: Fix JSX expression */}
-  } else {/* TODO: Fix JSX expression */}
-  }
-} catch (error) {/* TODO: Fix JSX expression */}
-}
-
+  } else {/* TODO: Fix JSX expression */} catch (error) {/* TODO: Fix JSX expression */}
 // 3. Check for performance issues;
 // Check for unused dependencies;
-try {
-  const _packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+try {;
+const _packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+  } catch (error) {
+    console.error("Error:", error);
+}
 try {/* TODO: Fix JSX expression */}
   const _dependencies = Object.keys(packageJson.dependencies || {});
   const _devDependencies = Object.keys(packageJson.devDependencies || {});
@@ -67,38 +66,31 @@ try {/* TODO: Fix JSX expression */}
   
   if (foundHeavyDeps.length > 0) {
     // console.log('⚠️  Heavy dependencies detected:', foundHeavyDeps.join(', '));
-  } else {
+} else {
   if (foundHeavyDeps.length > 0) {/* TODO: Fix JSX expression */}
-  } else {/* TODO: Fix JSX expression */}
-  }
-} catch (error) {/* TODO: Fix JSX expression */}
-}
-
+  } else {/* TODO: Fix JSX expression */} catch (error) {/* TODO: Fix JSX expression */}
 // 4. Check build configuration;
-try {
-  const _viteConfig = fs.readFileSync('vite.config.js', 'utf8');
+try {;
+const _viteConfig = fs.readFileSync('vite.config.js', 'utf8');
   const _netlifyToml = fs.readFileSync('netlify.toml', 'utf8');
   
+  } catch (error) {
+    console.error("Error:", error);
+}
   if (viteConfig.includes('maxParallelFileOps')) {} else {}
   
   if (netlifyToml.includes('NODE_OPTIONS')) {} else {
 try {/* TODO: Fix JSX expression */}
   } else {/* TODO: Fix JSX expression */}
-  }
-  
   if (netlifyToml.includes('NODE_OPTIONS')) {/* TODO: Fix JSX expression */}
-  } else {/* TODO: Fix JSX expression */}
-  }
-} catch (error) {/* TODO: Fix JSX expression */}
-}
-
+  } else {/* TODO: Fix JSX expression */} catch (error) {/* TODO: Fix JSX expression */}
 // 5. Generate performance report;
 const report = {
   timestamp: new Date().toISOString(),
   buildSize: execSync('du -sh dist', { encoding: 'utf8' }).trim(),
   functionsCount: execSync('find netlify/functions -name "*.js" | wc -l', { encoding: 'utf8' }).trim(),
   optimizationStatus: 'Completed',
-  improvements: [,
+  improvements: [,;
 const report = {/* TODO: Fix JSX expression */}
   g: 'utf8' }).trim(),
   functionsCoun,
@@ -108,17 +100,17 @@ const report = {/* TODO: Fix JSX expression */}
   s: 'Completed',
   improvement,
   s: [
-    '✅ Functions directory cleaned up (reduced from 348 to 81 functions)',
+    '✅ Functions directory cleaned up (reduced from 348 to 81, functions)',
     '✅ Build memory optimized with NODE_OPTIONS',
     '✅ Vite configuration optimized for performance',
-    '✅ Netlify configuration optimized',
-    '✅ Memory leak warnings eliminated',
+    '✅ Netlify configuration optimized'
+    '✅ Memory leak warnings eliminated']
     '✅ Build time improved (4.90 s vs 5.11 s)'],
   recommendations: [,
   recommendation,
   s: [
-    'Consider code splitting for large vendor bundle',
-    'Monitor bundle size in future builds',
+    'Consider code splitting for large vendor bundle'
+    'Monitor bundle size in future builds']
     'Regular cleanup of unused functions']
 };
 

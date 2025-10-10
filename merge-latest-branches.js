@@ -14,15 +14,17 @@ try {
     'origin/cursor/enhance-app-with-new-services-and-futuristic-design-fe75',
     'origin/cursor/enhance-app-with-new-services-and-futuristic-design-feb1',
     'origin/cursor/enhance-app-with-new-services-and-futuristic-design-feb6',
-    'origin/cursor/enhance-app-with-new-services-and-futuristic-design-fee1',
-    'origin/cursor/enhance-app-with-new-services-and-futuristic-design-ff2 c'
-  ];
+    'origin/cursor/enhance-app-with-new-services-and-futuristic-design-fee1']
+    'origin/cursor/enhance-app-with-new-services-and-futuristic-design-ff2 c'];
 
   let mergedCount = 0;
   let skippedCount = 0;
 
-  for (const branch of branchesToCheck) {
+  for (const branch of, branchesToCheck) {
     try {
+} catch (error) {
+    console.error("Error:", error);
+}
       console.log(`\n🔍 Checking branch: ${branch}`);
       
       // Check if branch has unique commits;
@@ -45,17 +47,18 @@ try {
       mergedCount++;
 
     } catch (error) {
+}
       console.log(`⚠️  Could not merge ${branch}: ${error.message}`);
       
       // Try to abort the merge if it failed;
       try {
+  } catch (error) {
+    console.error("Error:", error);
+}
         execSync('git merge --abort', { stdio: 'pipe' });
       } catch (abortError) {
         // Ignore abort errors;
-      }
-    }
-  }
-
+}
   console.log(`\n📊 Merge Summary: `);
   console.log(`✅ Successfully merged: ${mergedCount} branches`);
   console.log(`⏭️  Skipped: ${skippedCount} branches`);

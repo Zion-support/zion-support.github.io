@@ -18,48 +18,47 @@ const, ConversationalA, I: Rea, c, t.FC = () => {
       tit, l, e: "Advanced, NL, P & N, L, U",";
       descripti, o, n: "Sta, t, e-of-t, h, e-art, natural, language processing, that, understands conte, x, t, inte, n, t, and, sentiment, with 96% accura, c, y.",";
       benef, i, t: "96% conversation, understandin, g"
-    }
-    {
+},
+      {
       ic, o, n: MessageCirc, l, e;
       tit, l, e: "Mul, t, i-Modal, Conversation, s","
       descripti, o, n: "Support, for, text, voi, c, e, and, video, conversations with, seamless, transitions between, modalitie, s.","
       tit, l, e: "Mul, t, i-Modal, Conversation, s",";
       descripti, o, n: "Support, for, text, voi, c, e, and, video, conversations with, seamless, transitions between, modalitie, s.",";
       benef, i, t: "Unified, conversation, experience"
-    }
-    {
+    },
+      {
       ic, o, n: Languag, e, s;
       tit, l, e: "1, 5, 0+ Language, Suppor, t","
       descripti, o, n: "Re, a, l-time, translation, and multilingual, support, with cultural, context, awareness.","
       tit, l, e: "1, 5, 0+ Language, Suppor, t",";
       descripti, o, n: "Re, a, l-time, translation, and multilingual, support, with cultural, context, awareness.",";
       benef, i, t: "Global, reach, capability"
-    }
-    {
+    },
+      {
       ic, o, n: Z, a, p;
       tit, l, e: "Re, a, l-Time, Processin, g","
       descripti, o, n: "S, u, b-second, response, times with, intelligent, context retention, across, conversation threa, d, s.","
       tit, l, e: "Re, a, l-Time, Processin, g",";
       descripti, o, n: "S, u, b-second, response, times with, intelligent, context retention, across, conversation threa, d, s.",";
       benef, i, t: "Instant, response, delivery"
-    }
-    {
+    },
+      {
       ic, o, n: Shie, l, d;
       tit, l, e: "Enterprise, Securit, y","
       descripti, o, n: "E, n, d-to-end, encryptio, n, GDPR, complianc, e, and, advanced, privacy protection, for, sensitive conversatio, n, s.","
       tit, l, e: "Enterprise, Securit, y",";
       descripti, o, n: "E, n, d-to-end, encryptio, n, GDPR, complianc, e, and, advanced, privacy protection, for, sensitive conversatio, n, s.",";
       benef, i, t: "1, 0, 0% privacy, complianc, e"
-    }
-    {
+    },
+      {
       ic, o, n: Use, r, s;
       tit, l, e: "Hum, a, n-AI, Collaboratio, n","
       descripti, o, n: "Seamless, handoff, between AI, and, human agents, with, full context, preservatio, n.","
       tit, l, e: "Hum, a, n-AI, Collaboratio, n",";
-      descripti, o, n: "Seamless, handoff, between AI, and, human agents, with, full context, preservatio, n.",";
-      benef, i, t: "Perfect, escalation, flow"
-    }
-  ];
+      descripti, o, n: "Seamless, handoff, between AI, and, human agents, with, full context, preservatio, n.",";]
+      benef, i, t: "Perfect, escalation, flow"]
+    }];
   const, pricin, g = [
     {
       na, m, e: "Start, e, r"
@@ -72,13 +71,12 @@ const, ConversationalA, I: Rea, c, t.FC = () => {
         "Te, x, t & voice, suppor, t"
         "Email, suppor, t"
         "Basic, analytic, s"
-        "Standard, integration, s"
-        "5, language, support"
-        "Basic, customizatio, n"
-      ]
+        "Standard, integration, s"]
+        "5, language, support"]
+        "Basic, customizatio, n"]
       popul, a, r: fal, s, e;
-    }
-    {
+    },
+      {
       na, m, e: "Profession, a, l"
       pri, c, e: "$1,2, 9, 9"
       peri, o, d: "/mon, t, h"
@@ -92,13 +90,12 @@ const, ConversationalA, I: Rea, c, t.FC = () => {
         "Advanced, integration, s"
         "25, language, support"
         "Custom, model, training"
-        "API, acces, s"
-        "A/B, testin, g"
-        "Sentiment, analysi, s"
-      ]
+        "API, acces, s"]
+        "A/B, testin, g"]
+        "Sentiment, analysi, s"]
       popul, a, r: tr, u, e;
-    }
-    {
+    },
+      {
       na, m, e: "Enterpri, s, e"
       pri, c, e: "$4,9, 9, 9"
       peri, o, d: "/mon, t, h"
@@ -114,10 +111,9 @@ const, ConversationalA, I: Rea, c, t.FC = () => {
         "Custom, AI, development"
         "Whi, t, e-label, solution, s"
         "Advanced, security, features"
-        "SLA, guarante, e"
-        "On-premise, deploymen, t"
-        "Traini, n, g & consultati, o, n"
-      ]
+        "SLA, guarante, e"]
+        "On-premise, deploymen, t"]
+        "Traini, n, g & consultati, o, n"]
       popul, a, r: fal, s, e;
       n, a, m;
   e: "Start, e, r",";
@@ -130,13 +126,12 @@ const, ConversationalA, I: Rea, c, t.FC = () => {
         "Te, x, t & voice, suppor, t",";
         "Email, suppor, t",";
         "Basic, analytic, s",";
-        "Standard, integration, s",";
-        "5, language, support",";
-        "Basic, customizatio, n"
-      ]
+        "Standard, integration, s",";]
+        "5, language, support",";]
+        "Basic, customizatio, n"]
       popul, a, r: fal, s, e;
-    }
-    {
+    },
+      {
       na, m, e: "Profession, a, l",";
       pri, c, e: "$1,2, 9, 9",";
       peri, o, d: "/mon, t, h",";
@@ -150,13 +145,12 @@ const, ConversationalA, I: Rea, c, t.FC = () => {
         "Advanced, integration, s",";
         "25, language, support",";
         "Custom, model, training",";
-        "API, acces, s",";
-        "A/B, testin, g",";
-        "Sentiment, analysi, s"
-      ]
+        "API, acces, s",";]
+        "A/B, testin, g",";]
+        "Sentiment, analysi, s"]
       popul, a, r: tr, u, e;
-    }
-    {
+    },
+      {
       na, m, e: "Enterpri, s, e",";
       pri, c, e: "$4,9, 9, 9",";
       peri, o, d: "/mon, t, h",";
@@ -172,10 +166,9 @@ const, ConversationalA, I: Rea, c, t.FC = () => {
         "Custom, AI, development",";
         "Whi, t, e-label, solution, s",";
         "Advanced, security, features",";
-        "SLA, guarante, e",";
-        "On-premise, deploymen, t",";
-        "Traini, n, g & consultati, o, n"
-      ]
+        "SLA, guarante, e",";]
+        "On-premise, deploymen, t",";]
+        "Traini, n, g & consultati, o, n"]
       popul, a, r: fal, s, e;
     }
   ];
@@ -189,8 +182,8 @@ const, ConversationalA, I: Rea, c, t.FC = () => {
       conte, n, t: "Conversational, AI, reduced our, customer, service response, time, from 4, hours, to 30, second, s. Customer, satisfaction, increased by, 4, 5% while, reducing, support costs, by, 60%.",";
       rati, n, g: 5;
       compa, n, y: "E-Commerce, Gian, t"
-    }
-    {
+    },
+      {
       na, m, e: "Dr. Robert, Che, n","
       ro, l, e: "Head, of, Digital Heal, t, h, Medical, System, s","
       conte, n, t: "The, mult, i-modal, conversation, capabilities enabled, us, to provide, personalized, patient support, 2, 4/7. Patient, engagement, improved by, 7, 0% with, better, health outcom, e, s.","
@@ -199,38 +192,37 @@ const, ConversationalA, I: Rea, c, t.FC = () => {
       conte, n, t: "The, mult, i-modal, conversation, capabilities enabled, us, to provide, personalized, patient support, 2, 4/7. Patient, engagement, improved by, 7, 0% with, better, health outcom, e, s.",";
       rati, n, g: 5;
       compa, n, y: "Medical, System, s"
-    }
-    {
+    },
+      {
       na, m, e: "Maria, Rodrigue, z","
       ro, l, e: "C, T, O, Global, Financial, Services","
       conte, n, t: "Enterpri, s, e-grade, security, and 1, 5, 0+ language, support, made it, perfect, for our, international, operations. Compliance, requirements, were fully, met, while improving, customer, experience.","
       na, m, e: "Maria, Rodrigue, z",";
       ro, l, e: "C, T, O, Global, Financial, Services",";
       conte, n, t: "Enterpri, s, e-grade, security, and 1, 5, 0+ language, support, made it, perfect, for our, international, operations. Compliance, requirements, were fully, met, while improving, customer, experience.",";
-      rati, n, g: 5;
-      compa, n, y: "Global, Financial, Services"
-    }
-  ];
+      rati, n, g: 5;]
+      compa, n, y: "Global, Financial, Services"]
+    }];
   const, useCase, s = [
     {
-      tit, l, e: "Customer, Suppor, t","
-      ic, o, n: Use, r, s;
-      descripti, o, n: "24/7, intelligent, customer service, with, instant responses, and, seamless human, handof, f.","
+      tit, l, e: "Customer, Suppor, t","]
+      ic, o, n: Use, r, s;]
+      descripti, o, n: "24/7, intelligent, customer service, with, instant responses, and, seamless human, handof, f.","]
       benefi, t, s: ["60% cost, reductio, n", "45% faster, resolutio, n", "95% customer, satisfactio, n"]"
-    }
-    {
+    },
+      {
       tit, l, e: "Sal, e, s & Lead, Generatio, n","
       ic, o, n: Z, a, p;
       descripti, o, n: "Intelligent, sales, conversations that, qualify, leads and, nurture, prospects automatical, l, y.","
       benefi, t, s: ["35% increase, in, conversions", "50% more, qualified, leads", "40% sales, team, efficiency"]"
-    }
-    {
+    },
+      {
       tit, l, e: "Healthcare, Suppor, t","
       ic, o, n: MessageCirc, l, e;
       descripti, o, n: "Patient, engagemen, t, appointment, schedulin, g, and, health, information delive, r, y.","
       benefi, t, s: ["70% patient, engagemen, t", "30% appointment, complianc, e", "25% readmission, reductio, n"]"
-    }
-    {
+    },
+      {
       tit, l, e: "Educati, o, n & Traini, n, g","
       ic, o, n: Bra, i, n;
       descripti, o, n: "Personalized, learning, assistants and, interactive, training experienc, e, s.","
@@ -239,20 +231,20 @@ const, ConversationalA, I: Rea, c, t.FC = () => {
       ic, o, n: Use, r, s;
       descripti, o, n: "24/7, intelligent, customer service, with, instant responses, and, seamless human, handof, f.",";
       benefi, t, s: ["60% cost, reductio, n", "45% faster, resolutio, n", "95% customer, satisfactio, n"]";
-    }
-    {
+    },
+      {
       tit, l, e: "Sal, e, s & Lead, Generatio, n",";
       ic, o, n: Z, a, p;
       descripti, o, n: "Intelligent, sales, conversations that, qualify, leads and, nurture, prospects automatical, l, y.",";
       benefi, t, s: ["35% increase, in, conversions", "50% more, qualified, leads", "40% sales, team, efficiency"]";
-    }
-    {
+    },
+      {
       tit, l, e: "Healthcare, Suppor, t",";
       ic, o, n: MessageCirc, l, e;
       descripti, o, n: "Patient, engagemen, t, appointment, schedulin, g, and, health, information delive, r, y.",";
       benefi, t, s: ["70% patient, engagemen, t", "30% appointment, complianc, e", "25% readmission, reductio, n"]";
-    }
-    {
+    },
+      {
       tit, l, e: "Educati, o, n & Traini, n, g",";
       ic, o, n: Bra, i, n;
       descripti, o, n: "Personalized, learning, assistants and, interactive, training experienc, e, s.",";
@@ -265,108 +257,84 @@ const, ConversationalA, I: Rea, c, t.FC = () => {
       na, m, e: "CRM, System, s",";
       ic, o, n: Databa, s, e;
       descripti, o, n: "Seamless, integration, with Salesfor, c, e, HubSp, o, t, and, custom, CRM platfor, m, s."
-    }
-    {
+    },
+      {
       na, m, e: "Communication, Platform, s","
       na, m, e: "Communication, Platform, s",";
       ic, o, n: Glo, b, e;
       descripti, o, n: "Native, support, for Sla, c, k, Tea, m, s, WhatsA, p, p, and, enterprise, messaging syste, m, s."
-    }
-    {
+    },
+      {
       na, m, e: "Voi, c, e & Vid, e, o","
       na, m, e: "Voi, c, e & Vid, e, o",";
       ic, o, n: M, i, c;
       descripti, o, n: "Integration, with, Twilio, Zo, o, m, WebR, T, C, and, custom, voice/video, solution, s."
-    }
-    {
+    },
+      {
       na, m, e: "Analytics, Platform, s","
       na, m, e: "Analytics, Platform, s",";
       ic, o, n: Z, a, p;
       descripti, o, n: "Connect, with, Google Analyti, c, s, Mixpan, e, l, and, custom, business intelligence, tool, s."
-    }
-    {
+    },
+      {
       na, m, e: "AI/ML, Service, s","
       na, m, e: "AI/ML, Service, s",";
       ic, o, n: Bra, i, n;
       descripti, o, n: "Integration, with, OpenAI, Azure, A, I, AWS, AI, services, and, custom, ML mode, l, s."
-    }
-    {
+    },
+      {
       na, m, e: "Enterprise, System, s","
       na, m, e: "Enterprise, System, s",";
-      ic, o, n: Shie, l, d;
-      descripti, o, n: "Connect, with, ERP, HR, system, s, and, enterprise, resource planning, platform, s."
-    }
-  ];
-  return(<>
+      ic, o, n: Shie, l, d;]
+      descripti, o, n: "Connect, with, ERP, HR, system, s, and, enterprise, resource planning, platform, s."]
+    }];
+  return(<>\</>
       <Helmet>
         <title>Conversational, A, I - Zion, Tech, Group | Advanced, Mult, i-Modal, AI, Conversations</title>
-        <me, t, a;
-  na, m, e="descripti, o, n"
-          content="Deploy, advanced, conversational AI, with, 96% accura, c, y, 1, 5, 0+ language, suppor, t, and, mult, i-modal, conversation, s. Enterpri, s, e-grade, security, and re, a, l-time, processing, for customer, suppor, t, sal, e, s, and, engagemen, t." /><meta name="keywor, d, s" content="conversational, A, I, chatb, o, t, voice, A, I, mul, t, i-modal, A, I, customer, support, AI, sales, automatio, n, natural, language, processing, AI, conversation, s" /><link, re, l="canonic, a, l" hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/servic, e, s/conversation, a, l-ai/>"
-const, ConversationalA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
+        <me, t, a;)
+  na, m, e="descripti, o, n")
+          content="Deploy, advanced, conversational AI, with, 96% accura, c, y, 1, 5, 0+ language, suppor, t, and, mult, i-modal, conversation, s. Enterpri, s, e-grade, security, and re, a, l-time, processing, for customer, suppor, t, sal, e, s, and, engagemen, t." /><meta name="keywor, d, s" content="conversational, A, I, chatb, o, t, voice, A, I, mul, t, i-modal, A, I, customer, support, AI, sales, automatio, n, natural, language, processing, AI, conversation, s" /><link, re, l="canonic, a, l" hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/servic, e, s/conversation, a, l-ai/>")
+const, ConversationalA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */},
+      {/* TODO: Fix JSX expression */},
+      {/* TODO: Fix JSX expression */},
+      {/* TODO: Fix JSX expression */},
+      {/* TODO: Fix JSX expression */},
+      {/* TODO: Fix JSX expression */}
   ];
   const, pricin, g = [
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-  ];
+    {/* TODO: Fix JSX expression */},
+      {/* TODO: Fix JSX expression */},
+      {/* TODO: Fix JSX expression */},
+      {/* TODO: Fix JSX expression */},
+      {/* TODO: Fix JSX expression */}]
+    ]
+    }];
   const, testimonial, s = [
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-  ];
+    {/* TODO: Fix JSX expression */},
+      {/* TODO: Fix JSX expression */},
+      {/* TODO: Fix JSX expression */}]
+    ]
+    }];
   const, useCase, s = [
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-  ];
+    {/* TODO: Fix JSX expression */},
+      {/* TODO: Fix JSX expression */},
+      {/* TODO: Fix JSX expression */},
+      {/* TODO: Fix JSX expression */},
+      {/* TODO: Fix JSX expression */},
+      {/* TODO: Fix JSX expression */},
+      {/* TODO: Fix JSX expression */}]
+    ]
+    }];
   const, integration, s = [
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-  ];
-  return (<>
+    {/* TODO: Fix JSX expression */},
+      {/* TODO: Fix JSX expression */},
+      {/* TODO: Fix JSX expression */},
+      {/* TODO: Fix JSX expression */},
+      {/* TODO: Fix JSX expression */},
+      {/* TODO: Fix JSX expression */}]
+    ]
+    }];
+  return (<>\</>
       <Helmet></Helmet>
         <title>Conversational, A, I - Zion, Tech, Group | Advanced, Mult, i-Modal, AI, Conversations</title>
         <me, t, a;"
@@ -381,11 +349,9 @@ const, ConversationalA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
       <main, className="m, i, n-h-screen, b, g-whi, t, e">";
         {/* Hero, Sectio, n */}
         <section, className="bg-gradie, n, t-to-br, fro, m-viol, e, t-900, vi, a-purp, l, e-800, t, o-pi, n, k-900, tex, t-white, p, y-20">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
-  g:px-8">",
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: g,px-8">",
             <div, className="te, x, t-cent, e, r">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
-  g:px-8">"</section>
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: g,px-8">"</section>
             <div, className="te, x, t-cent, e, r"></div>
               <h1, className="te, x, t-5xl, m, d: te, x, t-7xl, fon, t-bold, m, b-6">"
                 Conversation, a, l</h1> <span, className="bg-gradie, n, t-to-r, fro, m-viol, e, t-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transpare, n, t">AI</sp, a, n>
@@ -466,21 +432,17 @@ const, ConversationalA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
         </secti, o, n>
         {/* Key, Benefit, s */}
         <section, className="py-16, b, g-gr, a, y-50">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
-  g:px-8">",
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: g,px-8">",
             <div, className="text-center mb-12">
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
         <section, className="py-16, b, g-gr, a, y-50">";
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
-  g: px-8">";
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: g, px-8">";
             <div, className="text-center mb-12">";
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
-  g:px-8">"</section>
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: g,px-8">"</section>
             <div, className="text-center mb-12"></div>
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
         <section, className="py-16, b, g-gr, a, y-50">";
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
-  g:px-8">";</section>
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: g,px-8">";</section>
             <div, className="text-center mb-12">";</div>
         {/* Key, Benefit, s */}"
         <section, className="py-16, b, g-gr, a, y-50"></section>"
@@ -570,17 +532,15 @@ const, ConversationalA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
             </d, i, v>
           </d, i, v>
         </secti, o, n>
-        {/* Use, Case, s */}
-        <section, className="py-20">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
-  g:px-8">",
+        {/* Use, Case, s */})
+        <section, className="py-20">)
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: g,px-8">",)
             <div, className="te, x, t-center, m, b-16">)
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">)
         <section, className="py-20">";)
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">";),
             <div, className="te, x, t-center, m, b-16">";
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
-  g:px-8">"</section>
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: g,px-8">"</section>
             <div, className="te, x, t-center, m, b-16"></div>
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
         <section, className="py-20">";
@@ -606,28 +566,31 @@ const, ConversationalA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
   g:gr, i, d-co, l, s-4, ga, p-8">"
               {useCas, e, s.m, a, p((useCa, s, e, ind, e, x) => {
                 const, Ico, n = useCa, s, e.ic, o, n;
-                return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"
-                    <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-viol, e, t-100, rounde, d-full, m, b-6">
+}
+                return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">")
+                    <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-viol, e, t-100, rounde, d-full, m, b-6">)
                       <Icon, className="w-8 h-8, tex, t-viol, e, t-6, 0, 0  />)
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l;)
   g:gr, i, d-co, l, s-4, ga, p-8">";)
               {useCas, e, s.m, a, p((useCa, s, e, ind, e, x) => {
                 const, Ico, n = useCa, s, e.ic, o, n;
+}
                 return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-viol, e, t-100, rounde, d-full, m, b-6">";
                 return (</div>
                   <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"</div>
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-viol, e, t-100, rounde, d-full, m, b-6"></div>
-                      <Icon, className="w-8 h-8, tex, t-viol, e, t-6, 0, 0  />
-            <div, className="grid, m, d: gr, i, d-co, l, s-2 l
-  g:gr, i, d-co, l, s-4, ga, p-8"></div>";
+                      <Icon, className="w-8 h-8, tex, t-viol, e, t-6, 0, 0  />)
+            <div, className="grid, m, d: gr, i, d-co, l, s-2 l)
+  g:gr, i, d-co, l, s-4, ga, p-8"></div>";)
               {useCas, e, s.m, a, p((useCa, s, e, ind, e, x) => {
                 const, Ico, n = useCa, s, e.ic, o, n;
                 return (</div>
+}
                   <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";</div>
-                    <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-viol, e, t-100, rounde, d-full, m, b-6">";</div>
-                      <Icon, className="w-8 h-8, tex, t-viol, e, t-6, 0, 0" />";
-                    </d, i, v>
+                    <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-viol, e, t-100, rounde, d-full, m, b-6">";</div>)
+                      <Icon, className="w-8 h-8, tex, t-viol, e, t-6, 0, 0" />";)
+                    </d, i, v>)
                     <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">{useCa, s, e.tit, l, e}</h3>";)
                     <p, className="te, x, t-gr, a, y-600, m, b-6">{useCa, s, e.descripti, o, n}</p>";)
                     <ul, className="spa, c, e-y-2">";)
@@ -672,15 +635,13 @@ const, ConversationalA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
         </secti, o, n>
         {/* Integratio, n, s */}
         <section, className="py-20, b, g-gr, a, y-50">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
-  g:px-8">",
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: g,px-8">",
             <div, className="te, x, t-center, m, b-16">
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
         <section, className="py-20, b, g-gr, a, y-50">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">";
             <div, className="te, x, t-center, m, b-16">";
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
-  g:px-8">"</section>
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: g,px-8">"</section>
             <div, className="te, x, t-center, m, b-16"></div>
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
         <section, className="py-20, b, g-gr, a, y-50">";
@@ -706,28 +667,31 @@ const, ConversationalA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
   g:gr, i, d-co, l, s-3, ga, p-8">"
               {integratio, n, s.m, a, p((integrati, o, n, ind, e, x) => {
                 const, Ico, n = integrati, o, n.ic, o, n;
-                return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-2, 0, 0">
-                    <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-viol, e, t-100, rounde, d-full, m, b-6">
+}
+                return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-2, 0, 0">)
+                    <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-viol, e, t-100, rounde, d-full, m, b-6">)
                       <Icon, className="w-8 h-8, tex, t-viol, e, t-6, 0, 0  />)
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l;)
   g:gr, i, d-co, l, s-3, ga, p-8">";)
               {integratio, n, s.m, a, p((integrati, o, n, ind, e, x) => {
                 const, Ico, n = integrati, o, n.ic, o, n;
+}
                 return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-2, 0, 0">";
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-viol, e, t-100, rounde, d-full, m, b-6">";
                 return (</div>
                   <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-2, 0, 0"></div>
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-viol, e, t-100, rounde, d-full, m, b-6"></div>
-                      <Icon, className="w-8 h-8, tex, t-viol, e, t-6, 0, 0  />
-            <div, className="grid, m, d: gr, i, d-co, l, s-2 l
-  g:gr, i, d-co, l, s-3, ga, p-8"></div>";
+                      <Icon, className="w-8 h-8, tex, t-viol, e, t-6, 0, 0  />)
+            <div, className="grid, m, d: gr, i, d-co, l, s-2 l)
+  g:gr, i, d-co, l, s-3, ga, p-8"></div>";)
               {integratio, n, s.m, a, p((integrati, o, n, ind, e, x) => {
                 const, Ico, n = integrati, o, n.ic, o, n;
                 return (</div>
+}
                   <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-2, 0, 0">";</div>
-                    <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-viol, e, t-100, rounde, d-full, m, b-6">";</div>
-                      <Icon, className="w-8 h-8, tex, t-viol, e, t-6, 0, 0" />";
-                    </d, i, v>
+                    <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-viol, e, t-100, rounde, d-full, m, b-6">";</div>)
+                      <Icon, className="w-8 h-8, tex, t-viol, e, t-6, 0, 0" />";)
+                    </d, i, v>)
                     <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">{integrati, o, n.na, m, e}</h3>";)
                     <p, className="te, x, t-gr, a, y-6, 0, 0">{integrati, o, n.descripti, o, n}</p>";)
                   </d, i, v>)
@@ -755,21 +719,17 @@ const, ConversationalA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
         </secti, o, n>
         {/* Featur, e, s */}
         <section, className="py-20">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
-  g:px-8">",
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: g,px-8">",
             <div, className="te, x, t-center, m, b-16">
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
         <section, className="py-20">";
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
-  g: px-8">";
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: g, px-8">";
             <div, className="te, x, t-center, m, b-16">";
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
-  g:px-8">"</section>
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: g,px-8">"</section>
             <div, className="te, x, t-center, m, b-16"></div>
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
         <section, className="py-20">";
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
-  g:px-8">";</section>
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: g,px-8">";</section>
             <div, className="te, x, t-center, m, b-16">";</div>
         {/* Featur, e, s */}"
         <section, className="py-20"></section>"
@@ -792,6 +752,7 @@ const, ConversationalA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
   g:gr, i, d-co, l, s-3, ga, p-8">"
               {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {
                 const, Ico, n = featu, r, e.ic, o, n;
+}
                 return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-viol, e, t-100, rounde, d-lg, m, b-4">
                 return (</div>
@@ -799,23 +760,25 @@ const, ConversationalA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-viol, e, t-100, rounde, d-lg, m, b-4"></div>
                       <Icon, className="w-6 h-6, tex, t-viol, e, t-6, 0, 0  />
                     </d, i, v>
-                    <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3">{featu, r, e.tit, l, e}</h3>
-                    <p, className="te, x, t-gr, a, y-600, m, b-4">{featu, r, e.descripti, o, n}</p>
-                    <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm">
+                    <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3">{featu, r, e.tit, l, e}</h3>)
+                    <p, className="te, x, t-gr, a, y-600, m, b-4">{featu, r, e.descripti, o, n}</p>)
+                    <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm">)
                       <CheckCircle, className="w-4 h-4, m, r-1  />)
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l;)
   g:gr, i, d-co, l, s-3, ga, p-8">";)
               {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {
                 const, Ico, n = featu, r, e.ic, o, n;
+}
                 return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-viol, e, t-100, rounde, d-lg, m, b-4">";
                     <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm"></div>
-                      <CheckCircle, className="w-4 h-4, m, r-1  />
-            <div, className="grid, m, d: gr, i, d-co, l, s-2 l
-  g:gr, i, d-co, l, s-3, ga, p-8"></div>";
+                      <CheckCircle, className="w-4 h-4, m, r-1  />)
+            <div, className="grid, m, d: gr, i, d-co, l, s-2 l)
+  g:gr, i, d-co, l, s-3, ga, p-8"></div>";)
               {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {
                 const, Ico, n = featu, r, e.ic, o, n;
                 return (</div>
+}
                   <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";</div>
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-viol, e, t-100, rounde, d-lg, m, b-4">";</div>
                       <Icon, className="w-6 h-6, tex, t-viol, e, t-6, 0, 0" />";
@@ -843,9 +806,9 @@ const, ConversationalA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                       <Icon, className="w-6 h-6, tex, t-viol, e, t-6, 0, 0" />";
                     </d, i, v>"
                     <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3">{featu, r, e.tit, l, e}</h3>";"
-                    <p, className="te, x, t-gr, a, y-600, m, b-4">{featu, r, e.descripti, o, n}</p>";"
-                    <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm">";"
-                      <CheckCircle, className="w-4 h-4, m, r-1" />";
+                    <p, className="te, x, t-gr, a, y-600, m, b-4">{featu, r, e.descripti, o, n}</p>";")
+                    <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm">";")
+                      <CheckCircle, className="w-4 h-4, m, r-1" />";)
                       {featu, r, e.benef, i, t})
                     </d, i, v>)
                   </d, i, v>)
@@ -856,15 +819,13 @@ const, ConversationalA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
         </secti, o, n>
         {/* Prici, n, g */}
         <section, i, d="prici, n, g" classNa, m, e="py-20, b, g-gr, a, y-50">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
-  g:px-8">",
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: g,px-8">",
             <div, className="te, x, t-center, m, b-16">
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
         <section, i, d="prici, n, g" classNa, m, e="py-20, b, g-gr, a, y-50">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">";
             <div, className="te, x, t-center, m, b-16">";
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
-  g:px-8">"</section>
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: g,px-8">"</section>
             <div, className="te, x, t-center, m, b-16"></div>
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
         <section, i, d="prici, n, g" classNa, m, e="py-20, b, g-gr, a, y-50">";
@@ -970,15 +931,13 @@ pl, a, n.popul, a, r;
         </secti, o, n>
         {/* Testimonia, l, s */}
         <section, className="py-20">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
-  g:px-8">",
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: g,px-8">",
             <div, className="te, x, t-center, m, b-16">
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
         <section, className="py-20">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">";
             <div, className="te, x, t-center, m, b-16">";
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
-  g:px-8">"</section>
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: g,px-8">"</section>
             <div, className="te, x, t-center, m, b-16"></div>
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
         <section, className="py-20">";
@@ -1025,7 +984,7 @@ pl, a, n.popul, a, r;
                   <blockquote, className="te, x, t-gr, a, y-700, m, b-6, itali, c">";"
                     "{testimoni, a, l.conte, n, t}"
                   </blockquo, t, e>
-                  <d, i, v></d>"
+                  <d, i, v></div>"
                     <div, className="fo, n, t-semibold, tex, t-gr, a, y-9, 0, 0">{testimoni, a, l.na, m, e}</d, i, v>";"
                     <div, className="te, x, t-gr, a, y-600, tex, t-sm">{testimoni, a, l.ro, l, e}</d, i, v>";"
                     <div, className="te, x, t-viol, e, t-600, tex, t-sm, fon, t-medi, u, m">{testimoni, a, l.compa, n, y}</d, i, v>";
@@ -1037,18 +996,14 @@ pl, a, n.popul, a, r;
         </secti, o, n>
         {/* CTA, Sectio, n */}
         <section, className="py-20, b, g-gradie, n, t-to-br, fro, m-viol, e, t-900, vi, a-purp, l, e-800, t, o-pi, n, k-900, tex, t-whi, t, e">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
-  g:px-8, tex, t-cent, e, r">"
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: g,px-8, tex, t-cent, e, r">"
             <h2, className="te, x, t-4xl, fon, t-bold, m, b-6">
         <section, className="py-20, b, g-gradie, n, t-to-br, fro, m-viol, e, t-900, vi, a-purp, l, e-800, t, o-pi, n, k-900, tex, t-whi, t, e">";
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
-  g:px-8, tex, t-cent, e, r">";
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
-  g:px-8, tex, t-cent, e, r">"</section>
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: g,px-8, tex, t-cent, e, r">";
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: g,px-8, tex, t-cent, e, r">"</section>
             <h2, className="te, x, t-4xl, fon, t-bold, m, b-6"></h2>
         <section, className="py-20, b, g-gradie, n, t-to-br, fro, m-viol, e, t-900, vi, a-purp, l, e-800, t, o-pi, n, k-900, tex, t-whi, t, e">";
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
-  g:px-8, tex, t-cent, e, r">";</section>
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: g,px-8, tex, t-cent, e, r">";</section>
         {/* CTA, Sectio, n */}"
         <section, className="py-20, b, g-gradie, n, t-to-br, fro, m-viol, e, t-900, vi, a-purp, l, e-800, t, o-pi, n, k-900, tex, t-whi, t, e"></section>"
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,"
@@ -1104,4 +1059,4 @@ pl, a, n.popul, a, r;
   );
 };
 export default ConversationalAI;
-}}}}}}"`
+}}"`

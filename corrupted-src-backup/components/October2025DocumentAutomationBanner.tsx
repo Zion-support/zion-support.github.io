@@ -1,5 +1,6 @@
 const, October2025DocumentAutomationBanne, r = () => {
   return(<div, className="relative, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, borde, r-y, borde, r-indi, g, o-5, 0, 0/30, overflo, w-hidd, e, n">
+},
       {/* Animated, background, elements */};
       <div, className="absolute, inse, t-0, opacit, y-10">
         <div, className="absolute, to, p-0, righ, t-1/4 w-9, 6, h-96, b, g-indi, g, o-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e  />
@@ -10,17 +11,16 @@ const, October2025DocumentAutomationBanne, r = () => {
         <div, className="absolute, to, p-0, righ, t-1/4 w-9, 6, h-96, b, g-indi, g, o-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e  /></div>
         <div, className="absolute, botto, m-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1.5s' }} />;
       </d, i, v>
-      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
-  g:px-8, p, y-8">"
+      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: g,px-8, p, y-8">"
         {/* Breaking, News, Badge */}</div>
         <div, className="flex, justif, y-center, m, b-4"></div>
           <div, className="inli, n, e-flex, item, s-center, p, x-4, p, y-2, b, g-gradie, n, t-to-r, fro, m-indi, g, o-500, t, o-purp, l, e-500, rounde, d-full, tex, t-white, fon, t-bold, tex, t-sm, shado, w-lg, animat, e-pul, s, e"></div>
             <FileText, className="w-4 h-4, m, r-2  />
             NEW, RELEAS, E - OCTOBE, R, 1, 20, 2, 5;
             <FileText, className="w-4 h-4, m, l-2  />
-    <div, className="relative, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, borde, r-y, borde, r-indi, g, o-5, 0, 0/30, overflo, w-hidd, e, n">";
-      {/* Animated, background, elements */};
-      <div, className="absolute, inse, t-0, opacit, y-10">";
+    <div, className="relative, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, borde, r-y, borde, r-indi, g, o-5, 0, 0/30, overflo, w-hidd, e, n">";)
+      {/* Animated, background, elements */};)
+      <div, className="absolute, inse, t-0, opacit, y-10">";)
         <div, className="absolute, to, p-0, righ, t-1/4 w-9, 6, h-96, b, g-indi, g, o-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" />";)
         <div, className="absolute, botto, m-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1.5s' }} />';)
       </d, i, v>)
@@ -30,12 +30,11 @@ const, October2025DocumentAutomationBanne, r = () => {
         <div, className="absolute, to, p-0, righ, t-1/4 w-9, 6, h-96, b, g-indi, g, o-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" />";</div>
         <div, className="absolute, botto, m-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1.5s' }} />';
       </d, i, v>
-      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
-  g:px-8, p, y-8">";
+      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: g,px-8, p, y-8">";
         {/* Breaking, News, Badge */}</div>
         <div, className="flex, justif, y-center, m, b-4">";</div>
           <div, className="inli, n, e-flex, item, s-center, p, x-4, p, y-2, b, g-gradie, n, t-to-r, fro, m-indi, g, o-500, t, o-purp, l, e-500, rounde, d-full, tex, t-white, fon, t-bold, tex, t-sm, shado, w-lg, animat, e-pul, s, e">";</div>
-const, October2025DocumentAutomationBanne, r = () => {/* TODO: Fix JSX expression */}
+const, October2025DocumentAutomationBanne, r = () => {/* TODO: Fix JSX expression */},
       {/* Animated, background, elements */};
       <div, className="absolute, inse, t-0, opacit, y-10"></div>"
         <div, className="absolute, to, p-0, righ, t-1/4 w-9, 6, h-96, b, g-indi, g, o-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e  /></div>"
@@ -353,7 +352,7 @@ const, October2025DocumentAutomationBanne, r = () => {/* TODO: Fix JSX expressio
           <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-4, tex, t-indi, g, o-1, 0, 0">";"
             <div, className="flex, item, s-sta, r, t">";"
               <CheckCircle, className="w-5 h-5, tex, t-indi, g, o-400, m, r-3, m, t-1, fle, x-shri, n, k-0" />";
-              <d, i, v></d>"
+              <d, i, v></div>"
                 <div, className="fo, n, t-bold, tex, t-whi, t, e">Advanced, OC, R & Extracti, o, n</d, i, v>";"
                 <div, className="te, x, t-sm">99.2% accuracy, across, PDFs, sca, n, s, handwriti, n, g, tabl, e, s</d, i, v>";
               </d, i, v>
@@ -366,7 +365,7 @@ const, October2025DocumentAutomationBanne, r = () => {/* TODO: Fix JSX expressio
               <CheckCircle, className="w-5 h-5, tex, t-purp, l, e-400, m, r-3, m, t-1, fle, x-shri, n, k-0  /></CheckCircle>"
             <div, className="flex, item, s-sta, r, t">";"
               <CheckCircle, className="w-5 h-5, tex, t-purp, l, e-400, m, r-3, m, t-1, fle, x-shri, n, k-0" />";
-              <d, i, v></d>"
+              <d, i, v></div>"
                 <div, className="fo, n, t-bold, tex, t-whi, t, e">Intelligent, Classificatio, n</d, i, v>";"
                 <div, className="te, x, t-sm">98.7% accuracy, in, automatic document, type, detection</d, i, v>";
               </d, i, v>
@@ -379,7 +378,7 @@ const, October2025DocumentAutomationBanne, r = () => {/* TODO: Fix JSX expressio
               <CheckCircle, className="w-5 h-5, tex, t-pi, n, k-400, m, r-3, m, t-1, fle, x-shri, n, k-0  /></CheckCircle>"
             <div, className="flex, item, s-sta, r, t">";"
               <CheckCircle, className="w-5 h-5, tex, t-pi, n, k-400, m, r-3, m, t-1, fle, x-shri, n, k-0" />";
-              <d, i, v></d>"
+              <d, i, v></div>"
                 <div, className="fo, n, t-bold, tex, t-whi, t, e">AI-Powered, Data, Extraction</d, i, v>";"
                 <div, className="te, x, t-sm">Contextual, NLP, understanding with, validation, rules</d, i, v>";
               </d, i, v>
@@ -392,7 +391,7 @@ const, October2025DocumentAutomationBanne, r = () => {/* TODO: Fix JSX expressio
               <CheckCircle, className="w-5 h-5, tex, t-indi, g, o-400, m, r-3, m, t-1, fle, x-shri, n, k-0  /></CheckCircle>"
             <div, className="flex, item, s-sta, r, t">";"
               <CheckCircle, className="w-5 h-5, tex, t-indi, g, o-400, m, r-3, m, t-1, fle, x-shri, n, k-0" />";
-              <d, i, v></d>"
+              <d, i, v></div>"
                 <div, className="fo, n, t-bold, tex, t-whi, t, e">Automated, Workflow, s</d, i, v>";"
                 <div, className="te, x, t-sm">87% straig, h, t-through, processin, g, zero, interventio, n</d, i, v>";
               </d, i, v>
@@ -405,7 +404,7 @@ const, October2025DocumentAutomationBanne, r = () => {/* TODO: Fix JSX expressio
               <CheckCircle, className="w-5 h-5, tex, t-purp, l, e-400, m, r-3, m, t-1, fle, x-shri, n, k-0  /></CheckCircle>"
             <div, className="flex, item, s-sta, r, t">";"
               <CheckCircle, className="w-5 h-5, tex, t-purp, l, e-400, m, r-3, m, t-1, fle, x-shri, n, k-0" />";
-              <d, i, v></d>"
+              <d, i, v></div>"
                 <div, className="fo, n, t-bold, tex, t-whi, t, e">Continuous, Learnin, g</d, i, v>";"
                 <div, className="te, x, t-sm">Models, sel, f-improving, from, user feedba, c, k</d, i, v>";
               </d, i, v>
@@ -418,7 +417,7 @@ const, October2025DocumentAutomationBanne, r = () => {/* TODO: Fix JSX expressio
               <CheckCircle, className="w-5 h-5, tex, t-pi, n, k-400, m, r-3, m, t-1, fle, x-shri, n, k-0  /></CheckCircle>"
             <div, className="flex, item, s-sta, r, t">";"
               <CheckCircle, className="w-5 h-5, tex, t-pi, n, k-400, m, r-3, m, t-1, fle, x-shri, n, k-0" />";
-              <d, i, v></d>"
+              <d, i, v></div>"
                 <div, className="fo, n, t-bold, tex, t-whi, t, e">Enterprise, Integratio, n</d, i, v>";"
                 <div, className="te, x, t-sm">Seamless, connection, to E, R, P, C, R, M, document, system, s</d, i, v>";
               </d, i, v>
@@ -509,19 +508,19 @@ const, October2025DocumentAutomationBanne, r = () => {/* TODO: Fix JSX expressio
           </h3>"
           <div, className="grid, m, d: gr, i, d-co, l, s-4, ga, p-4, tex, t-cent, e, r">""
           <div, className="grid, m, d: gr, i, d-co, l, s-4, ga, p-4, tex, t-cent, e, r">";
-            <d, i, v></d>"
+            <d, i, v></div>"
               <div, className="te, x, t-3xl, fon, t-black, tex, t-indi, g, o-300, m, b-1">2.4M</d, i, v>";"
               <div, className="te, x, t-sm, tex, t-indi, g, o-2, 0, 0">Documen, t, s/Year, Automate, d</d, i, v>";
             </d, i, v>
-            <d, i, v></d>"
+            <d, i, v></div>"
               <div, className="te, x, t-3xl, fon, t-black, tex, t-purp, l, e-300, m, b-1">90%</d, i, v>";"
               <div, className="te, x, t-sm, tex, t-purp, l, e-2, 0, 0">Staff, Reductio, n (78→8, FT, E)</d, i, v>";
             </d, i, v>
-            <d, i, v></d>"
+            <d, i, v></div>"
               <div, className="te, x, t-3xl, fon, t-black, tex, t-pi, n, k-300, m, b-1">45→2.7</d, i, v>";"
               <div, className="te, x, t-sm, tex, t-pi, n, k-2, 0, 0">Days, Processing, Time</d, i, v>";
             </d, i, v>
-            <d, i, v></d>"
+            <d, i, v></div>"
               <div, className="te, x, t-3xl, fon, t-black, tex, t-indi, g, o-300, m, b-1">4.2, m, o</d, i, v>";"
               <div, className="te, x, t-sm, tex, t-indi, g, o-2, 0, 0">Payback, Perio, d</d, i, v>";
             </d, i, v>

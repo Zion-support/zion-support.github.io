@@ -28,8 +28,8 @@ export default function AIFintechPage() {
               Contact Us
             </a>
           </div>
-        </div>
-      </div>
-    </div>
+        </div>)
+      </div>)
+    </div>)
   );
 }

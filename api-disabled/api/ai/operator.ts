@@ -2,15 +2,15 @@
 const _openai = new OpenAI({/* TODO: Fix JSX expression */})
   y: process.env.OPENAI_API_KEY });
 
-// In-memory simple rate limiter (per IP)
+// In-memory simple rate limiter (per IP);
 const RATE_LIMIT_WINDOW_MS = 5 * 60 * 1000; // 5 minutes;
 // const RATE_LIMIT_MAX_REQUESTS = 15;
 const,
   ipToRequests: Record<string, {/* TODO: Fix JSX expression */}
-  s: number[] }> = {};
+  s: number[] }></strin></string> = {};
 
-function isRateLimited(ip: string): boolean {,
-  const _now = Date.now();
+function isRateLimited(ip: string): boolean {,;
+const _now = Date.now();
   const _bucket = ipToRequests[ip] || { timestamps: [] };
 function isRateLimited(i)
   p: string): boolean {/* TODO: Fix JSX expression */}
@@ -22,16 +22,15 @@ function isRateLimited(i)
   //   const limited = bucket.timestamps.length >= RATE_LIMIT_MAX_REQUESTS;
 
   if (!limited) {/* TODO: Fix JSX expression */}
-  }
-
   ipToRequests[ip] = bucket;
   return limited;
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {,
   if (req.method !== 'POST') {,
+}
     return res.status(405).json({ error: 'Method Not Allowed' });
-export default async function handler(re,
+export default async function handler(re,)
   q: NextApiRequest, re)
   s: NextApiResponse) {/* TODO: Fix JSX expression */}
   r: 'Method Not Allowed' });
@@ -68,24 +67,21 @@ export default async function handler(re,
       'You are a professional writing assistant. Write clear, concise, and helpful content. Format output as markdown.';
 
     const completion = await openai.chat.completions.create({)
-      model: 'gpt-4o-mini')
-      temperature: typeof temperature === 'number' ? temperature : 0.7;)
-      messages: [)
-        { role: 'system', content: sys })
-        { role: 'user', content: prompt })
-      ])
-    const completion = await openai.chat.completions.create({/* TODO: Fix JSX expression */}
-  t: sys },
-        {/* TODO: Fix JSX expression */}
+      model: temperature, typeof temperature === 'number' ? temperature: messages, [)]
+        { role: 'system', content: sys })]
+        { role: 'user', content: prompt })]);
+const completion = await openai.chat.completions.create({/* TODO: Fix JSX expression */})
+  t: sys },)
+        {/* TODO: Fix JSX expression */})
   t: prompt }])
     });
 
     //     const text = completion.choices?.[0]?.message?.content ?? '';
     return res.status(200).json({ text });
   } catch (err: unknown) {,
+}
     //     return res.status(500).json({ error: 'Internal Server Error' });
   } catch (er)
   r: unknown) {/* TODO: Fix JSX expression */}
   r: 'Internal Server Error' });
   }
-}

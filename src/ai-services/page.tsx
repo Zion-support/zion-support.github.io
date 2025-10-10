@@ -7,14 +7,14 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const AIServicesPage: React.FC = () => {
-  const services = [
+const AIServicesPage: React.FC = () => {;
+const services = [
     {
       title: 'AI Strategy & Consulting',
-      description: 'Comprehensive AI strategy development and implementation consulting',
-      icon: Brain,
+      description: icon, Brain]
       features: ['AI Readiness Assessment', 'Strategic Planning', 'Implementation Roadmap', 'ROI Analysis'],
       price:     ,
+}
 $4},
       title: 'Machine Learning Solutions',
       description: 'Custom machine learning models and algorithms for your business needs',
@@ -61,9 +61,9 @@ $4}
             </button>
             <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors">
               Learn More
-          </div>
-      
-      <Footer />
+          </div>)
+      )
+      <Footer />)
   );
 };
 
@@ -76,14 +76,15 @@ import {
   Brain, Zap, Shield, TrendingUp, CheckCircle, ArrowRight, Star, 
   Phone, Mail, MapPin, Clock, Users, Award, Target, BarChart,
   Cpu, Database, Globe, Lock, Sparkles, Code, Eye, MessageSquare
-} from 'lucide-react';
-
-export default function AIServicesPage() {
-  const [activeTab, setActiveTab] = useState('overview');
+} from 'lucide-react';]
+];
+export default function AIServicesPage() {;];
+const [activeTab, setActiveTab] = useState('overview');
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
+}
   }, []);
 
   const aiServices = [
@@ -96,10 +97,12 @@ export default function AIServicesPage() {
         'Natural language processing integration',
         'Real-time decision making',
         'Custom automation workflows',
-        'API integration capabilities',
-        'Performance monitoring & analytics'
-      ],
+        'API integration capabilities']
+        'Performance monitoring & analytics'],
       pricing: {
+
+}
+}
         starter: { price: '$2,500', period: '/month', features: ['Up to 10 workflows', 'Basic analytics', 'Email support'] },
         professional: { price: '$7,500', period: '/month', features: ['Unlimited workflows', 'Advanced analytics', 'Priority support', 'Custom integrations'] },
         enterprise: { price: '$15,000', period: '/month', features: ['Everything in Pro', 'Dedicated support', 'Custom development', 'SLA guarantee'] }
@@ -117,10 +120,12 @@ export default function AIServicesPage() {
         'Predictive analytics & forecasting',
         'Custom dashboard creation',
         'Machine learning models',
-        'Data visualization tools',
-        'Automated reporting'
-      ],
+        'Data visualization tools']
+        'Automated reporting'],
       pricing: {
+
+}
+}
         starter: { price: '$3,000', period: '/month', features: ['Up to 5 data sources', 'Basic dashboards', 'Standard reports'] },
         professional: { price: '$8,500', period: '/month', features: ['Unlimited data sources', 'Advanced dashboards', 'Custom models', 'API access'] },
         enterprise: { price: '$18,000', period: '/month', features: ['Everything in Pro', 'Real-time processing', 'Dedicated analyst', 'Custom integrations'] }
@@ -138,10 +143,12 @@ export default function AIServicesPage() {
         'Multi-channel support (chat, email, phone)',
         'Sentiment analysis',
         'Knowledge base integration',
-        'Human handoff capabilities',
-        'Performance analytics'
-      ],
+        'Human handoff capabilities']
+        'Performance analytics'],
       pricing: {
+
+}
+}
         starter: { price: '$1,500', period: '/month', features: ['Up to 1,000 conversations', 'Basic AI responses', 'Email support'] },
         professional: { price: '$4,500', period: '/month', features: ['Up to 10,000 conversations', 'Advanced AI', 'Multi-channel support', 'Analytics dashboard'] },
         enterprise: { price: '$12,000', period: '/month', features: ['Unlimited conversations', 'Custom AI training', 'Dedicated support', 'SLA guarantee'] }
@@ -159,10 +166,12 @@ export default function AIServicesPage() {
         'Image generation & editing',
         'Video creation & editing',
         'SEO optimization',
-        'Brand voice consistency',
-        'Content scheduling & publishing'
-      ],
+        'Brand voice consistency']
+        'Content scheduling & publishing'],
       pricing: {
+
+}
+}
         starter: { price: '$2,000', period: '/month', features: ['Up to 100 pieces/month', 'Basic AI writing', 'Stock images'] },
         professional: { price: '$6,000', period: '/month', features: ['Up to 1,000 pieces/month', 'Advanced AI', 'Custom images', 'Video generation'] },
         enterprise: { price: '$15,000', period: '/month', features: ['Unlimited content', 'Custom AI models', 'Dedicated team', 'White-label solution'] }
@@ -180,10 +189,12 @@ export default function AIServicesPage() {
         'Behavioral analysis',
         'Automated incident response',
         'Vulnerability assessment',
-        'Compliance monitoring',
-        'Security analytics dashboard'
-      ],
+        'Compliance monitoring']
+        'Security analytics dashboard'],
       pricing: {
+
+}
+}
         starter: { price: '$4,000', period: '/month', features: ['Basic threat detection', 'Email security', 'Standard monitoring'] },
         professional: { price: '$10,000', period: '/month', features: ['Advanced threat detection', 'Network security', 'Compliance tools', '24/7 monitoring'] },
         enterprise: { price: '$25,000', period: '/month', features: ['Complete security suite', 'Custom solutions', 'Dedicated team', 'SLA guarantee'] }
@@ -201,10 +212,12 @@ export default function AIServicesPage() {
         'Pre-trained model library',
         'Custom model training',
         'Model deployment & scaling',
-        'A/B testing framework',
-        'Performance monitoring'
-      ],
+        'A/B testing framework']
+        'Performance monitoring'],
       pricing: {
+
+}
+}
         starter: { price: '$3,500', period: '/month', features: ['Basic ML tools', 'Pre-trained models', 'Community support'] },
         professional: { price: '$9,000', period: '/month', features: ['Advanced ML tools', 'Custom training', 'Priority support', 'API access'] },
         enterprise: { price: '$20,000', period: '/month', features: ['Complete platform', 'Dedicated resources', 'Custom development', 'SLA guarantee'] }
@@ -218,12 +231,11 @@ export default function AIServicesPage() {
   const stats = [
     { icon: Users, value: '500+', label: 'AI Models Deployed', color: 'text-cyan-400' },
     { icon: TrendingUp, value: '300%', label: 'Average ROI', color: 'text-green-400' },
-    { icon: Clock, value: '24/7', label: 'AI Monitoring', color: 'text-blue-400' },
-    { icon: Award, value: '99.9%', label: 'Uptime Guarantee', color: 'text-purple-400' }
-  ];
+    { icon: Clock, value: '24/7', label: 'AI Monitoring', color: 'text-blue-400' },]
+      { icon: Award, value: '99.9%', label: 'Uptime Guarantee', color: 'text-purple-400' }];
 
   return (
-    <>
+    <>\</>
       <Helmet>
         <title>AI Services - Zion Tech Group | Advanced AI Solutions & Pricing</title>
         <meta name="description" content="Comprehensive AI services including automation, analytics, customer support, content generation, cybersecurity, and ML platforms. Get 300% ROI with our AI solutions." />
@@ -249,9 +261,9 @@ export default function AIServicesPage() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="tel:+13024640950"
-                  className="cyber-button inline-flex items-center px-8 py-4 text-lg"
-                >
-                  <Phone className="w-5 h-5 mr-2" />
+                  className="cyber-button inline-flex items-center px-8 py-4 text-lg")
+                >)
+                  <Phone className="w-5 h-5 mr-2" />)
                   (302) 464-0950
                 </a>
                 <a
@@ -334,7 +346,8 @@ export default function AIServicesPage() {
                             <div className="text-sm text-gray-400">{details.features[0]}</div>
                           </div>
                           <div className="text-right">
-                            <div className="text-cyan-400 font-bold">{details.price}{details.period}</div>
+                            <div className="text-cyan-400 font-bold">{details.price},
+      {details.period}</div>
                           </div>
                         </div>
                       ))}

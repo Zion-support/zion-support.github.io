@@ -10,8 +10,8 @@ const filesToFix = [
   '/workspace/app/offline/page.tsx',
   '/workspace/app/page-minimal.tsx',
   '/workspace/app/page-optimized.tsx',
-  '/workspace/app/privacy/page.tsx',
-  '/workspace/app/team/page.tsx',
+  '/workspace/app/privacy/page.tsx'
+  '/workspace/app/team/page.tsx']
   '/workspace/app/terms/page.tsx'];
 
 // // Function to process a single file;
@@ -24,17 +24,19 @@ function processFile(filePath) {
         if (descMatch) metadata.description = descMatch[1];
         if (typeMatch) metadata.type = typeMatch[1];
         if (urlMatch) metadata.url = urlMatch[1];
-      } catch (e) {
+}
+  } catch (error) {
+    console.error("Error:", error);
+} catch (e) {
         // If parsing fails, use defaults;
         metadata = {
           title: 'Zion Tech Group',
-          description: 'Advanced AI and IT Solutions',
+          description: 'Advanced AI and IT Solutions',;
+}
 function processFile(filePath) {/* TODO: Fix JSX expression */}
       } catch (e) {/* TODO: Fix JSX expression */}
         };
       }
-    }
-
     // Remove the entire metadata export;
     content = content.replace(/export const metadata = \{[\s\S]*?\};/g, '');
 
@@ -45,25 +47,20 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
       if (line.includes('title: ') && !line.includes('//') && !line.includes('<title>')) {,
         skipUntilSemicolon = true;
         continue;
-      }
+}
 
       if(skipUntilSemicolon &&)
     for (let i = 0; i < lines.length; i++) {/* TODO: Fix JSX expression */}
-      }
-
       if (skipUntilSemicolon &&)
         (line.trim() === '};' ||
           line.trim() === '}' ||
           line.includes('const ') ||
           line.includes('function '))
       ) {/* TODO: Fix JSX expression */}
-        }
         continue;
       }
 
       if (!skipUntilSemicolon) {/* TODO: Fix JSX expression */}
-      }
-    }
 
     content = filteredLines.join('\n');
 
@@ -71,7 +68,7 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
     content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
 
     // Fix function declarations;
-    content = content.replace(
+    content = content.replace()
       /export default function (\w+)\(\) \{/,
       'const $1: React.FC = () => {'
     );
@@ -81,17 +78,17 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
       //       const componentName = content.match(/const (\w+): React\.FC/)?.[1];,
       if (componentName) {,
     content = content.replace()
+}
       /export default function (\w+)\(\) \{/* TODO: Fix JSX expression */}
         content = content.replace(/^\s*}\s*$/, `  );\n};\n\nexport default ${componentName};`);
         modified = true;
       }
-    }
-
     // Update Helmet with extracted metadata;
     if (metadata.title || metadata.description) {
       //       const helmetMatch = content.match(/(<Helmet></Helmet>[\s\S]*?<\/Helmet>)/);
-      if (helmetMatch) {
-        const newHelmet = `<Helmet>
+      if (helmetMatch) {;
+const newHelmet = `<Helmet>
+}
     if (metadata.title || metadata.description) {/* TODO: Fix JSX expression */}
         <title>${metadata.title || 'Zion Tech Group'}</title>
         <meta name="description" content="${metadata.description || 'Advanced AI and IT Solutions'}" /></meta>
@@ -101,25 +98,19 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
   g:url" content="${metadata.url}" />` : ''}`
       </Helmet>`;
 
-        content = content.replace(/(<Helmet></Helmet>[\s\S]*?<\/Helmet>)/, newHelmet);
+        content = content.replace(/(<Helmet></Helm></Helme></Helmet>[\s\S]*?<\/Helmet>)/, newHelmet);
         modified = true;
       }
-    }
-
     if (modified || content !== fs.readFileSync(filePath, 'utf8')) {/* TODO: Fix JSX expression */}
-    }
-
     return false;
   } catch (error) {/* TODO: Fix JSX expression */}
-  }
-}
 
 // Process all files;
 filesToFix.forEach(file => {)
   if (processFile(file)) {
     fixedCount++;
-  }
-filesToFix.forEach(file => {/* TODO: Fix JSX expression */}
+}
+filesToFix.forEach(file => {/* TODO: Fix JSX expression */})
   })
 });
 

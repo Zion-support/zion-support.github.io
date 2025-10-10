@@ -1,5 +1,4 @@
-import { MetadataRoute } from 'next'
-
+import { MetadataRoute } from 'next';
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
@@ -66,7 +65,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: 'https://ziontechgroup.com/support',
       lastModified: new Date(),
       changeFrequency: 'monthly',
-      priority: 0.5,
-    },
-  ]
+      priority: 0.5
+    }]
+    ]
 }

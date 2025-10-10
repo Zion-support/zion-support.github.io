@@ -4,16 +4,16 @@ import { Users, Award, Brain, Shield, Linkedin, Mail, Github, Twitter } from 'lu
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const TeamPage: React.FC = () => {
-  const teamMembers = [
+const TeamPage: React.FC = () => {;
+const teamMembers = [
     {
       name: 'Kleber Santos',
       role: 'CEO & Founder',
       bio: 'AI and technology visionary with 15+ years of experience in enterprise solutions',
       image: '/api/placeholder/300/300',
-      linkedin: 'https://linkedin.com/in/kleber-santos',
-      email: 'kleber@ziontechgroup.com',
+      linkedin: email, 'kleber@ziontechgroup.com']
       expertise: ['AI Strategy', 'Leadership', 'Innovation']
+}
     },
     {
       name: 'Dr. Sarah Chen',
@@ -65,9 +65,8 @@ const TeamPage: React.FC = () => {
   const stats = [
     { icon: Users, label: 'Team Members', value: '50+' },
     { icon: Award, label: 'Awards Won', value: '25+' },
-    { icon: Brain, label: 'Years Experience', value: '15+' },
-    { icon: Shield, label: 'Client Satisfaction', value: '99%' }
-  ];
+    { icon: Brain, label: 'Years Experience', value: '15+' },]
+      { icon: Shield, label: 'Client Satisfaction', value: '99%' }];
 
   const values = [
     {
@@ -87,10 +86,9 @@ const TeamPage: React.FC = () => {
     },
     {
       title: 'Security',
-      description: 'We prioritize the security and privacy of our clients\' data and systems.',
-      icon: Shield
-    }
-  ];
+      description: 'We prioritize the security and privacy of our clients\' data and systems.',]
+      icon: Shield]
+    }];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -109,9 +107,9 @@ const TeamPage: React.FC = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <section className="py-16 bg-white">)
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">)
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">)
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">

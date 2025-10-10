@@ -1,5 +1,6 @@
 impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m";
 const October2025LatestPremiumContentBanne, r = () => { 
+}
   return(<div, classNam, e = "bg-gradie, n, t-to-r, fro, m-purp, l, e-900, vi, a-indi, g, o-900, t, o-bl, u, e-900, borde, r-y, borde, r-purp, l, e-5, 0, 0/30, p, y-6, p, x-4, s, m: px-6, l, g:px-8, shado, w-2xl, relative, overflow-hidd, e, n"  > {/* Animated, background, effec, t, s */ })
       <div, classNam, e = "absolute, inse, t-0, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/10, vi, a-transparent, t, o-bl, u, e-5, 0, 0/10, animat, e-pul, s, e" />)
       <div, className="absolute, inse, t-0, b, g-[u, r, l('da, t, a: image/s, v, g+x, m, l; ba, s, e, 6, 4,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Z, y, I+PGRlZ, n, M+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZ, S, I+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS1vcGFjaXR5PSIwLjA1IiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlc, m, 4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Z, z, 4=')] opaci, t, y-20" />
@@ -7,9 +8,9 @@ const October2025LatestPremiumContentBanne, r = () => {
         <div, className="flex, fle, x-col, l, g: fl, e, x-row, item, s-start, l, g:ite, m, s-center, justif, y-between, ga, p-6">
           <div, className="fl, e, x-1">
             <div, className="flex, item, s-center, ga, p-3, m, b-3">
-  return (
-    <div, classNam, e = "bg-gradie, n, t-to-r, fro, m-purp, l, e-900, vi, a-indi, g, o-900, t, o-bl, u, e-900, borde, r-y, borde, r-purp, l, e-5, 0, 0/30, p, y-6, p, x-4, s, m: px-6, l, g:px-8, shado, w-2xl, relative, overflow-hidd, e, n"  > {/* Animated, background, effec, t, s */ }</div>
-      <div, classNam, e = "absolute, inse, t-0, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/10, vi, a-transparent, t, o-bl, u, e-5, 0, 0/10, animat, e-pul, s, e" /></div>
+  return ()
+    <div, classNam, e = "bg-gradie, n, t-to-r, fro, m-purp, l, e-900, vi, a-indi, g, o-900, t, o-bl, u, e-900, borde, r-y, borde, r-purp, l, e-5, 0, 0/30, p, y-6, p, x-4, s, m: px-6, l, g:px-8, shado, w-2xl, relative, overflow-hidd, e, n"  > {/* Animated, background, effec, t, s */ }</div>)
+      <div, classNam, e = "absolute, inse, t-0, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/10, vi, a-transparent, t, o-bl, u, e-5, 0, 0/10, animat, e-pul, s, e" /></div>)
       <div, className="absolute, inse, t-0, b, g-[u, r, l('da, t, a: image/s, v, g+x, m, l; ba, s, e, 6, 4,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Z, y, I+PGRlZ, n, M+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZ, S, I+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS1vcGFjaXR5PSIwLjA1IiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlc, m, 4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Z, z, 4=')] opaci, t, y-20" /></div>
       <div, classNam, e = "m, a, x-w-7xl, m, x-auto, relative, z-10"></div>
         <div, className="flex, fle, x-col, l, g: fl, e, x-row, item, s-start, l, g:ite, m, s-center, justif, y-between, ga, p-6"></div>
@@ -62,7 +63,7 @@ const October2025LatestPremiumContentBanne, r = () => {
                       99.98% compliance, accur, a, c, y, $4.2B, risk, mitigation, 94% faster, complianc, e, 2,8, 4, 7% R, O, I;
                     </p>
                     <div, classNam, e = "flex, item, s-center, ga, p-2, tex, t-xs"></div>
-                      <CheckCircle, className="w-3 h-3, tex, t-gre, e, n-4, 0, 0" />
+                      <CheckCircle, className="w-3 h-3, tex, t-gre, e, n-4, 0, 0" />;
 const October2025LatestPremiumContentBanne, r = () => {/* TODO: Fix JSX expression */}"
     <div, classNam, e = "bg-gradie, n, t-to-r, fro, m-purp, l, e-900, vi, a-indi, g, o-900, t, o-bl, u, e-900, borde, r-y, borde, r-purp, l, e-5, 0, 0/30, p, y-6, p, x-4, s, m: px-6, l, g:px-8, shado, w-2xl, relative, overflow-hidd, e, n"  > {/* Animated, background, effec, t, s */ }"
       <div, classNam, e = "absolute, inse, t-0, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/10, vi, a-transparent, t, o-bl, u, e-5, 0, 0/10, animat, e-pul, s, e" /></div>"
@@ -111,7 +112,7 @@ const October2025LatestPremiumContentBanne, r = () => {/* TODO: Fix JSX expressi
               ></Link>"
                 <div, className="flex, item, s-start, ga, p-3, m, b-2"></div>"
                   <Shield, className="w-6 h-6, tex, t-purp, l, e-300, fle, x-shri, n, k-0, m, t-1" /></Shield>
-                  <d, i, v></d>"
+                  <d, i, v></div>"
                     <h3, className="fo, n, t-bold, tex, t-white, tex, t-sm, m, b-1, grou, p-hov, e, r:te, x, t-purp, l, e-200, transitio, n-colo, r, s"></h3>
                       🛡️ Autonomous, Data, Governance Revoluti, o, n;
                     </h3>"
@@ -142,7 +143,7 @@ const October2025LatestPremiumContentBanne, r = () => {/* TODO: Fix JSX expressi
               ></Link>"
                 <div, className="flex, item, s-start, ga, p-3, m, b-2"></div>"
                   <Brain, className="w-6 h-6, tex, t-r, e, d-300, fle, x-shri, n, k-0, m, t-1" /></Brain>
-                  <d, i, v></d>"
+                  <d, i, v></div>"
                     <h3, className="fo, n, t-bold, tex, t-white, tex, t-sm, m, b-1, grou, p-hov, e, r:te, x, t-r, e, d-200, transitio, n-colo, r, s"></h3>
                       🧠 Neural, Fraud, Detection Revoluti, o, n;
                     </h3>"
@@ -175,9 +176,9 @@ const October2025LatestPremiumContentBanne, r = () => {/* TODO: Fix JSX expressi
               ></Link>"
                 <div, className="flex, item, s-start, ga, p-3, m, b-2"></div>"
                   <Workflow, className="w-6 h-6, tex, t-bl, u, e-300, fle, x-shri, n, k-0, m, t-1" /></Workflow>
-                  <d, i, v></d>"
+                  <d, i, v></div>"
                   <Workflow, className="w-6 h-6, tex, t-bl, u, e-300, fle, x-shri, n, k-0, m, t-1" /></Workflow>
-                  <d, i, v></d>"
+                  <d, i, v></div>"
                     <h3, className="fo, n, t-bold, tex, t-white, tex, t-sm, m, b-1, grou, p-hov, e, r:te, x, t-bl, u, e-200, transitio, n-colo, r, s"></h3>
                       ⚡ Cognitive, Workflow, Orchestration;
                     </h3>"
@@ -236,7 +237,7 @@ const October2025LatestPremiumContentBanne, r = () => {/* TODO: Fix JSX expressi
             </Li, n, k>"
             <Link, t, o="/conta, c, t""
               className="inli, n, e-flex, item, s-center, justif, y-center, p, x-8, p, y-3, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, tex, t-white, fon, t-semibold, rounde, d-lg, borde, r-2, borde, r-whi, t, e/30, hove, r:bg-whi, t, e/20, hove, r:bord, e, r-whi, t, e/50, transitio, n-all, duratio, n-300, whitespac, e-nowr, a, p"
-            >
+            ></Li></Lin>
             ></Link>
               Schedule, Enterprise, Demo;
             </Li, n, k>

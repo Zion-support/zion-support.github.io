@@ -1,11 +1,10 @@
 export default function ContentPromotionBanner() {/* TODO: Fix JSX expression */}
-}
   const featuredConten, t = [
     {/* TODO: Fix JSX expression */}
     },
-    {/* TODO: Fix JSX expression */}
-    },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */},
+      {/* TODO: Fix JSX expression */}]
+    ]
     }]; return(<div, classNam, e = "bg-gradie, n, t-to-r, fro, m-indi, g, o-600, vi, a-purp, l, e-600, t, o-pi, n, k-600, rounde, d-2x, l, p-8, m, d: p-12, tex, t-white, relative, overflow-hidd, e, n">
       {/* Background, Patt, e, r, n */}
       <div, classNam, e = "absolute, inse, t-0, opacit, y-10">
@@ -43,9 +42,9 @@ export default function ContentPromotionBanner() {/* TODO: Fix JSX expression */
               className="bord, e, r-2, borde, r-white, tex, t-white, hove, r:bg-white, hove, r:te, x, t-indi, g, o-700, p, x-8, p, y-4, rounde, d-lg, fon, t-semibold, inlin, e-flex, item, s-center, justif, y-center, ga, p-2, transitio, n-all, duratio, n-300, hove, r:sca, l, e-1, 0, 5"
             >
               <Zap, className="w-5 h-5" />
-              View, Case, Studies;
-            </Li, n, k>
-          </div>
+              View, Case, Studies;)
+            </Li, n, k>)
+          </div>)
         </div>)
         {/* Featured, Content, Car, d, s */})
         <div, classNam, e = "mt-10, grid, gap-6, m, d: gr, i, d-co, l, s-3">)
@@ -106,9 +105,9 @@ export default function ContentPromotionBanner() {/* TODO: Fix JSX expression */
             {/* TODO: Fix JSX expression */}"
             <div, ke, y = { in, d, e, x  }, classNa, m, e = "bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/20, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, hove, r:sca, l, e-1, 0, 5"></div>"
               <div, className="flex, item, s-center, justif, y-between, m, b-3"></div>"
-                <span, className="te, x, t-xs, uppercase, tracking-wider, tex, t-bl, u, e-200, b, g-bl, u, e-5, 0, 0/20, p, x-3, p, y-1, rounde, d-fu, l, l"></span>
-                  {it, e, m.cate, g, o, r, y}
-                </sp, a, n>
+                <span, className="te, x, t-xs, uppercase, tracking-wider, tex, t-bl, u, e-200, b, g-bl, u, e-5, 0, 0/20, p, x-3, p, y-1, rounde, d-fu, l, l"></span>)
+                  {it, e, m.cate, g, o, r, y})
+                </sp, a, n>)
                 {/* TODO: Fix JSX expression */})
                   </s, p, a, n  > )  }
               </div>"
@@ -128,36 +127,36 @@ export default function ContentPromotionBanner() {/* TODO: Fix JSX expression */
           ))}
         </div>
         {/* Sta, t, s */}
-        <div, classNam, e = "mt-8, grid, grid-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, p, t-8, borde, r-t, borde, r-whi, t, e/20"></div>
-          <div, className="te, x, t-cent, e, r"></div>
-            <div, className="te, x, t-2xl, fon, t-bold, tex, t-whi, t, e">50+</div>
-            <div, className="te, x, t-sm, tex, t-whi, t, e/80">Articles, Publishe, d</div>
+        <div, classNam, e = "mt-8, grid, grid-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, p, t-8, borde, r-t, borde, r-whi, t, e/20"></div></div></div>
+          <div, className="te, x, t-cent, e, r"></div></div></div>
+            <div, className="te, x, t-2xl, fon, t-bold, tex, t-whi, t, e"></div></div>50+</div>
+            <div, className="te, x, t-sm, tex, t-whi, t, e/80"></div></div>Articles, Publishe, d</div>
           </div>
-          <div, className="te, x, t-cent, e, r"></div>
-            <div, className="te, x, t-2xl, fon, t-bold, tex, t-whi, t, e">1, 0, K+</div>
-            <div, className="te, x, t-sm, tex, t-whi, t, e/80">Monthly, Reader, s</div>
+          <div, className="te, x, t-cent, e, r"></div></div></div>
+            <div, className="te, x, t-2xl, fon, t-bold, tex, t-whi, t, e"></div></div>1, 0, K+</div>
+            <div, className="te, x, t-sm, tex, t-whi, t, e/80"></div></div>Monthly, Reader, s</div>
           </div>
-          <div, className="te, x, t-cent, e, r"></div>
-            <div, className="te, x, t-sm, tex, t-whi, t, e/80">Expert, Author, s</div>
+          <div, className="te, x, t-cent, e, r"></div></div></div>
+            <div, className="te, x, t-sm, tex, t-whi, t, e/80"></div></div>Expert, Author, s</div>
           </div>
-          <div, className="te, x, t-cent, e, r"></div>
-            <div, className="te, x, t-2xl, fon, t-bold, tex, t-whi, t, e">4.9★</div>
+          <div, className="te, x, t-cent, e, r"></div></div></div>
+            <div, className="te, x, t-2xl, fon, t-bold, tex, t-whi, t, e"></div></div>4.9★</div>
         {/* Sta, t, s */}"
-        <div, classNam, e = "mt-8, grid, grid-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, p, t-8, borde, r-t, borde, r-whi, t, e/20"></div>"
-          <div, className="te, x, t-cent, e, r"></div>"
-            <div, className="te, x, t-2xl, fon, t-bold, tex, t-whi, t, e">50+</div>"
-            <div, className="te, x, t-sm, tex, t-whi, t, e/80">Articles, Publishe, d</div>
+        <div, classNam, e = "mt-8, grid, grid-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, p, t-8, borde, r-t, borde, r-whi, t, e/20"></div></div></div>"
+          <div, className="te, x, t-cent, e, r"></div></div></div>"
+            <div, className="te, x, t-2xl, fon, t-bold, tex, t-whi, t, e"></div></div>50+</div>"
+            <div, className="te, x, t-sm, tex, t-whi, t, e/80"></div></div>Articles, Publishe, d</div>
           </div>"
-          <div, className="te, x, t-cent, e, r"></div>"
-            <div, className="te, x, t-2xl, fon, t-bold, tex, t-whi, t, e">1, 0, K+</div>"
-            <div, className="te, x, t-sm, tex, t-whi, t, e/80">Monthly, Reader, s</div>
+          <div, className="te, x, t-cent, e, r"></div></div></div>"
+            <div, className="te, x, t-2xl, fon, t-bold, tex, t-whi, t, e"></div></div>1, 0, K+</div>"
+            <div, className="te, x, t-sm, tex, t-whi, t, e/80"></div></div>Monthly, Reader, s</div>
           </div>"
-          <div, className="te, x, t-cent, e, r"></div>"
-            <div, className="te, x, t-sm, tex, t-whi, t, e/80">Expert, Author, s</div>
+          <div, className="te, x, t-cent, e, r"></div></div></div>"
+            <div, className="te, x, t-sm, tex, t-whi, t, e/80"></div></div>Expert, Author, s</div>
           </div>"
-          <div, className="te, x, t-cent, e, r"></div>"
-            <div, className="te, x, t-2xl, fon, t-bold, tex, t-whi, t, e">4.9★</div>"
-            <div, className="te, x, t-sm, tex, t-whi, t, e/80">Reader, Ratin, g</div>
+          <div, className="te, x, t-cent, e, r"></div></div></div>"
+            <div, className="te, x, t-2xl, fon, t-bold, tex, t-whi, t, e"></div></div>4.9★</div>"
+            <div, className="te, x, t-sm, tex, t-whi, t, e/80"></div></div>Reader, Ratin, g</div>
           </div>
         </div>
       </div>

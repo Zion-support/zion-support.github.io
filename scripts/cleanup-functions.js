@@ -7,10 +7,9 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Essential functions that should be kept;
-const essentialFunctions = [
-  'test-function.js', // Keep for testing;
-  'scheduled-nudges.ts', // Keep for scheduled tasks;
-];
+const essentialFunctions = []
+  'test-function.js', // Keep for testing;]
+  'scheduled-nudges.ts', // Keep for scheduled tasks;];
 
 // Functions that are clearly test/development and can be removed;
 const functionsToRemove = [
@@ -128,8 +127,8 @@ const functionsToRemove = [
   'unused-',
   'unused_',
   'user-',
-  'ux-',
-  'venture-',
+  'ux-'
+  'venture-']
   'venture_'];
 
 const _functionsDir = path.join(process.cwd(), 'netlify', 'functions');
@@ -138,18 +137,14 @@ function shouldRemoveFunction(filename) {
   // Keep essential functions;
   if (essentialFunctions.includes(filename)) {
     return false;
+}
 function shouldRemoveFunction(filename) {/* TODO: Fix JSX expression */}
-  }
-  
   // Remove functions that match any of the patterns;
   return functionsToRemove.some(pattern => filename.includes(pattern));
 }
 
 function cleanupFunctions() {/* TODO: Fix JSX expression */}
-}
   if (!fs.existsSync(functionsDir)) {/* TODO: Fix JSX expression */}
-  }
-
   const _files = fs.readdirSync(functionsDir);
   let _removedCount = 0;
   let _keptCount = 0;
@@ -157,21 +152,20 @@ function cleanupFunctions() {/* TODO: Fix JSX expression */}
 
   files.forEach(file => {)
     if (file.endsWith('.js') || file.endsWith('.ts')) {
-      if (shouldRemoveFunction(file)) {
-        const _filePath = path.join(functionsDir, file);
+      if (shouldRemoveFunction(file)) {;
+const _filePath = path.join(functionsDir, file);
         try {
           fs.unlinkSync(filePath);
 
           removedCount++;
-        } catch (error) {}
+}
+  } catch (error) {
+    console.error("Error:", error);
+} catch (error) {}
       } else {
         keptCount++;
   files.forEach(file => {/* TODO: Fix JSX expression */})
-        } catch (error) {/* TODO: Fix JSX expression */}
-        }
-      } else {/* TODO: Fix JSX expression */}
-      }
-    }
+        } catch (error) {/* TODO: Fix JSX expression */} else {/* TODO: Fix JSX expression */}
   });
 
 

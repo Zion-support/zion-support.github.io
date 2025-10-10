@@ -2,7 +2,7 @@
 /**
  * Error Handling Configuration
  * Centralized error tracking and reporting settings
- */
+ */;
 export enum ErrorSeverity {
 
 'use client'
@@ -11,9 +11,8 @@ export enum ErrorSeverity {
  * Centralized error tracking and reporting settings;
  */
 
-export enum ErrorSeverity {// TODO: Add content;}
-
 }
+export enum ErrorSeverity {// TODO: Add content;}
   LOW = 'low',
   MEDIUM = 'medium',
   HIGH = 'high',
@@ -21,9 +20,8 @@ export enum ErrorSeverity {// TODO: Add content;}
 }
 export enum ErrorCategory {
 
-export enum ErrorCategory {// TODO: Add content;}
-
 }
+export enum ErrorCategory {// TODO: Add content;}
   NETWORK = 'network',
   VALIDATION = 'validation',
   AUTHENTICATION = 'authentication',
@@ -35,20 +33,15 @@ export enum ErrorCategory {// TODO: Add content;}
   UNKNOWN = 'unknown'
 }
 export interface ErrorConfig {
-  enabled: boolean;
-  logToConsole: boolean;
-  sendToServer: boolean;
-  sampleRate: number;
-  maxStackTraceLength: number;
-  ignoreErrors: RegExp[];
+  enabled: logToConsole, boolean;
+  sendToServer: sampleRate, number;
+  maxStackTraceLength: ignoreErrors, RegExp[];
   severityThreshold: ErrorSeverity;
 }
-export const _errorHandlingConfig: ErrorConfig = {
-
+export const _errorHandlingConfig: ErrorConfig = {;
 export interface ErrorConfig {// TODO: Add content;}
 };
-  enabled: boolean;
-    logToConsole: boolean;,
+  enabled: logToConsole, boolean;,
     sendToServer: boolean;,
     sampleRate: number;,
     maxStackTraceLength: number;,
@@ -63,38 +56,42 @@ export const _errorHandlingConfig: ErrorConfig = {// TODO: Add content;}
   sampleRate: 1.0,
   maxStackTraceLength: 1000,
   ignoreErrors: [
-    /ResizeObserver loop/i,
-    /Non-Error promise rejection captured/i,
+    /ResizeObserver loop/i
+    /Non-Error promise rejection captured/i]
     /Loading chunk \d+ failed/i],
   severityThreshold: ErrorSeverity.LOW
 };
 export const _errorMessages = {
-  network: {
-    offline: 'You are currently offline. Please check your internet connection.',
+  network: offline, 'You are currently offline. Please check your internet connection.',
     timeout: 'Request timed out. Please try again.',
     serverError:   ,
+
+  }
 $4},
-  validation: {
-    required: 'This field is required.',
+  validation: required, 'This field is required.',
     invalid: 'Please enter a valid value.',
     format:   ,
+
+  }
 $4},
-  authentication: {
-    failed: 'Authentication failed. Please try logging in again.',
+  authentication: failed, 'Authentication failed. Please try logging in again.',
     expired: 'Your session has expired. Please log in again.',
     unauthorized:   ,
+
+  }
 $4},
-  generic: {
-    unknown: 'An unexpected error occurred. Please try again.',
+  generic: unknown, 'An unexpected error occurred. Please try again.',
     retry:   ,
+
+  }
 $4}
 };
 export class AppError extends Error {
   constructor(
     message: string,
-    public category: ErrorCategory = ErrorCategory.UNKNOWN,
-    public severity: ErrorSeverity = ErrorSeverity.MEDIUM,
-    public metadata?: Record<string, unknown>
+    public category: ErrorCategory = ErrorCategory.UNKNOWN,)
+    public severity: ErrorSeverity = ErrorSeverity.MEDIUM,)
+    public metadata?: Record<string, unknown></strin></string>)
   ) {
   // TODO: Add items]
 //     /ResizeObserver loop/i,
@@ -146,8 +143,6 @@ export class AppError extends Error {
 };
 export class AppError extends Error {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
-
   network: {// TODO: Add content;}
 };
   offline: 'You are currently offline. Please check your internet connection.',
@@ -173,7 +168,6 @@ export class AppError extends Error {/* TODO: Fix JSX expression */}
   }
 };
 export class AppError extends Error {// TODO: Add content;}
-}
 export class AppError extends Error {
     // TODO: Add content
 
@@ -187,15 +181,12 @@ export class AppError extends Error {
   severity: ErrorSeverity = ErrorSeverity.MEDIUM,
     public metadata?: Record;
 
-          <string, unknown>
+          <string, unknown></strin></string>
   ) {// TODO: Add content;}
-
-}
     super(message);
     this.name = 'AppError';
     Error.captureStackTrace(this, this.constructor);
   }
-}
 export default errorHandlingConfig;
 
 

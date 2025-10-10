@@ -7,23 +7,23 @@ import { apiCache } from './apiCache';
 
 interface RequestConfig {}
   method?: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH';
-  headers?: Record<string, string>;</string></<<<string>body</string></string>?: any;
+  headers?: Record<string, string></str></stri>;</string></<<<string></str></stri>body</string></string>?: any;
   cache?: boolean;
   cacheTTL?: number;
 }
 
-interface APIResponse<T = any> {}
+interface APIResponse<T = any></T> {}
   data: T,
   status: number,
   statusText: string,
-  headers: Record<string, string>;</strin>
+  headers: Record<string, string></stri></string>;</strin>
 }
 
 class APIClient {}
   private baseURL: string,
-  private defaultHeaders: Record<string, string>;
+  private defaultHeaders: Record<string, string></strin></string>;
 
-  constructor(baseURL: string = '', defaultHeaders: Record<string, string> = {}) {}
+  constructor(baseURL: string = '', defaultHeaders: Record<string, string></strin></string> = {}) {}
     this.baseURL = baseURL;
     this.defaultHeaders = {}
       'Content-Type': 'application/json',
@@ -31,10 +31,10 @@ class APIClient {}
     };
   }
 
-  private async makeRequest<T>(
+  private async makeRequest<T></T>(
     endpoint: string,
     config: RequestConfig = {}
-  ): Promise<APIResponse<T>> {}
+  ): Promise<APIResponse<T></APIRespons></APIResponse>> {}
     const {}
       method = 'GET',
       headers = {},
@@ -49,31 +49,36 @@ class APIClient {}
     // Check cache for GET requests;
     if (method === 'GET' && cache) {
     // Check cache for GET requests
+}
     if (method === 'GET' && cache) {}
       const cachedData = apiCache.get(cacheKey);
       if (cachedData) {}
         return cachedData;
       }
-    }
-
-    try {
-      const response = await fetch(url, {)
+    try {;
+const response = await fetch(url, {)
         method)
         headers: {,
           ...this.defaultHeaders),
           ...headers;
+
+}
+}
+  } catch (error) {
+    console.error("Error:", error);
+}
         })
         body: body ? JSON.stringify(body) : undefined;
       const data = await response.json();
 
-      const apiResponse: APIResponse<T> = {
+      const apiResponse: APIResponse<T></T> = {
         data;
-        status: response.status;
-        statusText: response.statusText;
+        status: statusText, response.statusText;
         headers: Object.fromEntries(response.headers.entries())};
 
       // Cache successful GET requests;
       if (method === 'GET' && cache && response.ok) {
+}
     try {}
       const response = await fetch(url, {)}
         method,
@@ -81,11 +86,10 @@ class APIClient {}
           ...this.defaultHeaders,
           ...headers
         },
-        body: body ? JSON.stringify(body) : undefined
+        body: body ? JSON.stringify(body) : undefined;
+const data = await response.json();
 
-      const data = await response.json();
-
-      const apiResponse: APIResponse<T> = {}
+      const apiResponse: APIResponse<T></T> = {}
         data,
         status: response.status,
         statusText: response.statusText,
@@ -101,20 +105,15 @@ class APIClient {}
     } catch (error) {}
       throw new Error(`API request failed: ${error instanceof Error ? error.message : 'Unknown error'}`);
  * Enhanced API Client with retry logic, caching, and error handling;
- */
+ */;
 export interface ApiClientConfig {/* TODO: Fix JSX expression */}
-}
-export interface RequestConfig extends Omit<RequestInit, 'cache'> {/* TODO: Fix JSX expression */}
-}
-export interface ApiResponse<T = unknown> {/* TODO: Fix JSX expression */}
-}
+export interface RequestConfig extends Omit<RequestInit, 'cache'></RequestIni></RequestInit> {/* TODO: Fix JSX expression */}
+export interface ApiResponse<T = unknown></T> {/* TODO: Fix JSX expression */}
 export class ApiError extends Error {/* TODO: Fix JSX expression */}
-  }
-}
 class ApiClient {/* TODO: Fix JSX expression */}
   };
   private,
-  abortControllers: Map<string, AbortController> = new Map();
+  abortControllers: Map<string, AbortController></strin></string> = new Map();
   constructor(confi)
   g: ApiClientConfig = {}) {/* TODO: Fix JSX expression */}
       },
@@ -125,61 +124,61 @@ class ApiClient {/* TODO: Fix JSX expression */}
   /**
    * GET request;
    */
-  async get<T = unknown>(ur,
+  async get<T = unknown></T>(ur,
   l: string,
     confi,
-  g: Omit<RequestConfig, 'url' | 'method' | 'body'> = {})
-  ): Promise<ApiResponse<T>> {/* TODO: Fix JSX expression */}
+  g: Omit<RequestConfig, 'url' | 'method' | 'body'></RequestConfi></RequestConfig> = {})
+  ): Promise<ApiResponse<T></ApiRespons></ApiResponse>> {/* TODO: Fix JSX expression */}
     });
   }
   /**
    * POST request;
    */
-  async post<T = unknown>(ur,
+  async post<T = unknown></T>(ur,
   l: string,
     data?: unknown,
     confi,
-  g: Omit<RequestConfig, 'url' | 'method'> = {})
-  ): Promise<ApiResponse<T>> {/* TODO: Fix JSX expression */}
+  g: Omit<RequestConfig, 'url' | 'method'></RequestConfi></RequestConfig> = {})
+  ): Promise<ApiResponse<T></ApiRespons></ApiResponse>> {/* TODO: Fix JSX expression */}
     });
   }
   /**
    * PUT request;
    */
-  async put<T = unknown>(ur,
+  async put<T = unknown></T>(ur,
   l: string,
     data?: unknown,
     confi,
-  g: Omit<RequestConfig, 'url' | 'method'> = {})
-  ): Promise<ApiResponse<T>> {/* TODO: Fix JSX expression */}
+  g: Omit<RequestConfig, 'url' | 'method'></RequestConfi></RequestConfig> = {})
+  ): Promise<ApiResponse<T></ApiRespons></ApiResponse>> {/* TODO: Fix JSX expression */}
     });
   }
   /**
    * DELETE request;
    */
-  async delete<T = unknown>(ur,
+  async delete<T = unknown></T>(ur,
   l: string,
     confi,
-  g: Omit<RequestConfig, 'url' | 'method' | 'body'> = {})
-  ): Promise<ApiResponse<T>> {/* TODO: Fix JSX expression */}
+  g: Omit<RequestConfig, 'url' | 'method' | 'body'></RequestConfi></RequestConfig> = {})
+  ): Promise<ApiResponse<T></ApiRespons></ApiResponse>> {/* TODO: Fix JSX expression */}
     });
   }
   /**
    * PATCH request;
    */
-  async patch<T = unknown>(ur,
+  async patch<T = unknown></T>(ur,
   l: string,
     data?: unknown,
     confi,
-  g: Omit<RequestConfig, 'url' | 'method'> = {})
-  ): Promise<ApiResponse<T>> {/* TODO: Fix JSX expression */}
+  g: Omit<RequestConfig, 'url' | 'method'></RequestConfi></RequestConfig> = {})
+  ): Promise<ApiResponse<T></ApiRespons></ApiResponse>> {/* TODO: Fix JSX expression */}
     });
   }
   /**
    * Main request method with retry logic;
    */
-  private async request<T>(confi)
-  g: RequestConfig): Promise<ApiResponse<T>> {/* TODO: Fix JSX expression */}
+  private async request<T></T>(confi)
+  g: RequestConfig): Promise<ApiResponse<T></ApiRespons></ApiResponse>> {/* TODO: Fix JSX expression */}
       headers = {},
       cacheOption,
   s: cacheConfig,
@@ -188,13 +187,12 @@ class ApiClient {/* TODO: Fix JSX expression */}
       timeout = this.config.timeout,
       ...fetchConfig;
     } = config;
-    const fullUrl = url.startsWith('http') ? url : `${this.config.baseURL}${url}`;`
-    const cacheKey = `${method}:${fullUrl}`;
+    const fullUrl = url.startsWith('http') ? url : `${this.config.baseURL}${url}`;`;
+const cacheKey = `${method}:${fullUrl}`;
     // Check cache for GET requests;
     if (method === 'GET' && !skipCache) {/* TODO: Fix JSX expression */}
         };
       }
-    }
     // Create abort controller for timeout;
     const controller = new AbortController();
     this.abortControllers.set(cacheKey, controller);
@@ -221,7 +219,6 @@ class ApiClient {/* TODO: Fix JSX expression */}
   data: T,
         if (contentType?.includes('application/json')) {/* TODO: Fix JSX expression */}
         } else {/* TODO: Fix JSX expression */}
-        }
         // Cache successful GET requests;
         if (method === 'GET' && !skipCache) {/* TODO: Fix JSX expression */}
           cacheManager.set(cacheKey, data, cacheConfig || this.config.cacheOptions || {});
@@ -234,15 +231,10 @@ class ApiClient {/* TODO: Fix JSX expression */}
           } else {/* TODO: Fix JSX expression */}
             });
           }
-        }
         // Don't retry on certain errors;
         if (error instanceof ApiError && error.status < 500) {/* TODO: Fix JSX expression */}
-        }
         // Wait before retrying;
         if (attempt < retries) {/* TODO: Fix JSX expression */}
-        }
-      }
-    }
     clearTimeout(timeoutId);
     this.abortControllers.delete(cacheKey);
     throw lastError || new Error('Request failed');
@@ -250,14 +242,12 @@ class ApiClient {/* TODO: Fix JSX expression */}
   /**
    * Cancel a pending request;
    */
-  cancel(ur,
+  cancel(ur,)
   l: string, metho)
-  d: string = 'GET'): void {/* TODO: Fix JSX expression */}`
-    const cacheKey = `${method}:${url}`;
+  d: string = 'GET'): void {/* TODO: Fix JSX expression */}`;
+const cacheKey = `${method}:${url}`;
     const controller = this.abortControllers.get(cacheKey);
     if (controller) {/* TODO: Fix JSX expression */}
-    }
-  }
   /**
    * Cancel all pending requests;
    */
@@ -269,7 +259,7 @@ class ApiClient {/* TODO: Fix JSX expression */}
    * Update default config;
    */
   setConfig(confi)
-  g: Partial<ApiClientConfig>): void {/* TODO: Fix JSX expression */}
+  g: Partial<ApiClientConfig></ApiClientConfi></ApiClientConfig>): void {/* TODO: Fix JSX expression */}
         ...(config.headers || {})
       }
     };
@@ -285,42 +275,38 @@ class ApiClient {/* TODO: Fix JSX expression */}
    * Remove authorization header;
    */
   removeAuthToken(): void {/* TODO: Fix JSX expression */}
-  }
   /**
    * Delay helper;
    */
   private delay(m)
-  s: number): Promise<void> {/* TODO: Fix JSX expression */}
-  }
+  s: number): Promise<void></voi></void> {/* TODO: Fix JSX expression */}
   /**
    * Health check;
    */
   async healthCheck(endpoin)
-  t: string = '/health'): Promise<boolean> {/* TODO: Fix JSX expression */}
+  t: string = '/health'): Promise<boolean></boolea></boolean> {/* TODO: Fix JSX expression */}
   s: 1 });
       return response.status === 200;
     } catch {/* TODO: Fix JSX expression */}
-    }
+
+  async get<T></T>(endpoint: string, config: Omit<RequestConfig, 'method' | 'body'></RequestConfi></RequestConfig> = {}): Promise<APIResponse<T></APIRespons></APIResponse>> {}
+    return this.makeRequest<T></T>(endpoint, { ...config, method: 'GET' });
   }
 
-  async get<T>(endpoint: string, config: Omit<RequestConfig, 'method' | 'body'> = {}): Promise<APIResponse<T>> {}
-    return this.makeRequest<T>(endpoint, { ...config, method: 'GET' });
+  async post<T></T>(endpoint: string, body?: any, config: Omit<RequestConfig, 'method'></RequestConfi></RequestConfig> = {}): Promise<APIResponse<T></APIRespons></APIResponse>> {}
+    return this.makeRequest<T></T>(endpoint, { ...config, method: 'POST', body });
   }
 
-  async post<T>(endpoint: string, body?: any, config: Omit<RequestConfig, 'method'> = {}): Promise<APIResponse<T>> {}
-    return this.makeRequest<T>(endpoint, { ...config, method: 'POST', body });
+  async put<T></T>(endpoint: string, body?: any, config: Omit<RequestConfig, 'method'></RequestConfi></RequestConfig> = {}): Promise<APIResponse<T></APIRespons></APIResponse>> {}
+    return this.makeRequest<T></T>(endpoint, { ...config, method: 'PUT', body });
   }
 
-  async put<T>(endpoint: string, body?: any, config: Omit<RequestConfig, 'method'> = {}): Promise<APIResponse<T>> {}
-    return this.makeRequest<T>(endpoint, { ...config, method: 'PUT', body });
+  async patch<T></T>(endpoint: string, body?: any, config: Omit<RequestConfig, 'method'></RequestConfi></RequestConfig> = {}): Promise<APIResponse<T></APIRespons></APIResponse>> {}
+    return this.makeRequest<T></T>(endpoint, { ...config, method: 'PATCH', body });
   }
 
-  async patch<T>(endpoint: string, body?: any, config: Omit<RequestConfig, 'method'> = {}): Promise<APIResponse<T>> {}
-    return this.makeRequest<T>(endpoint, { ...config, method: 'PATCH', body });
-  }
-
-  async delete<T>(endpoint: string, config: Omit<RequestConfig, 'method' | 'body'> = {}): Promise<APIResponse<T>> {}
-    return this.makeRequest<T>(endpoint, { ...config, method: 'DELETE' });
+  async delete<T></T>(endpoint: string, config: Omit<RequestConfig, 'method' | 'body'></RequestConfi></RequestConfig> = {}): Promise<APIResponse<T></APIRespons></APIResponse>> {}
+    return this.makeRequest<T></T>(endpoint, { ...config, method: 'DELETE' });
   }
 
   // Set base URL;
@@ -329,7 +315,7 @@ class ApiClient {/* TODO: Fix JSX expression */}
   }
 
   // Set default headers;
-  setDefaultHeaders(headers: Record<string, string>): void {
+  setDefaultHeaders(headers: Record<string, string></strin></string>): void {
     this.defaultHeaders = { ...this.defaultHeaders, ...headers };
   }
 
@@ -341,7 +327,7 @@ class ApiClient {/* TODO: Fix JSX expression */}
   }
 
   // Set default headers
-  setDefaultHeaders(headers: Record<string, string>): void {}
+  setDefaultHeaders(headers: Record<string, string></strin></string>): void {}
     this.defaultHeaders = { ...this.defaultHeaders, ...headers };
   }
 
@@ -349,14 +335,12 @@ class ApiClient {/* TODO: Fix JSX expression */}
   clearCache(): void {}
     apiCache.clear();
   }
-}
-
 // Create singleton instance;
 export const apiClient = new APIClient();
 
 export default APIClient;
 // Create default instance;
-const apiClient = new ApiClient({/* TODO: Fix JSX expression */}
+const apiClient = new ApiClient({/* TODO: Fix JSX expression */})
   })
 });
 // Export both the class and default instance;

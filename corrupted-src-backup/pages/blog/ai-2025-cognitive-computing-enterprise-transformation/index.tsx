@@ -9,16 +9,16 @@ impo, r, t { Awa, r, d } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Lightbu, l, b } fr, o, m 'luci, d, e-rea, c, t';
 
 const CognitiveComputingTransformatio, n: React.FC = () => { ,
-  return(<>,
+  return(<>\,</>
       <Helm, e, t>
         <title>
           Cognitive, Computing, Enterprise Transformati, o, n | Hum, a, n-Like, AI, Intelligence | Zion, Tech, Group;
         </title>
         <meta, nam, e = 'description'
           conte, n, t='Discover, cognitive, computing systems, that, understa, n, d, reas, o, n, and, learn, like huma, n, s. Achieve, 9, 8.5% decision, accurac, y, $1.2 B+ val, u, e, and, 9, 2% faster, proble, m-solving, with, cognitive AI.'
-        /></meta>
-        <meta, nam, e = 'keywor, d, s'
-          conte, n, t='cognitive, computi, n, g, AI, intelligenc, e, natural, language, understanding, knowledge, reasonin, g, continuous, learnin, g, explainable, A, I, enterprise, transformatio, n'
+        /></meta>)
+        <meta, nam, e = 'keywor, d, s')
+          conte, n, t='cognitive, computi, n, g, AI, intelligenc, e, natural, language, understanding, knowledge, reasonin, g, continuous, learnin, g, explainable, A, I, enterprise, transformatio, n')
         />)
         <link, re, l = 'canonic, a, l')
           hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/ai-20 2 5-cogniti v e-computi n g-enterpri s e-transformati o n')
@@ -26,6 +26,7 @@ const CognitiveComputingTransformatio, n: React.FC = () => { ,
       </Helm, e, t>
 
       <div, className='m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-da, r, k'></div>
+}
         <Head, e, r / > {/* Hero, Sect, i, o, n */ }
         <div, classNam, e = 'relative, p, t-24, p, b-16, overflo, w-hidd, e, n'>
           <div, className='absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle, at, 30% 5, 0%,rg, b, a(1, 3, 9,92,2, 4, 6,0.2),transparent_, 5, 0%)]' />
@@ -39,7 +40,7 @@ const CognitiveComputingTransformatio, n: React.FC = () => { ,
             <nav, classNam, e = 'flex, item, s-center, spac, e-x-2, tex, t-sm, m, b-8'>
               <Link, t, o='/'
                 className='te, x, t-purp, l, e-300, hove, r: te, x, t-white, transitio, n-colo, r, s'
-              >
+              >;
 const CognitiveComputingTransformatio, n: React.FC = () => {/* TODO: Fix JSX expression */}
         <Head, e, r / > {/* Hero, Sect, i, o, n */ }
         <div, classNam, e = 'relative, p, t-24, p, b-16, overflo, w-hidd, e, n'></div>
@@ -111,7 +112,7 @@ const CognitiveComputingTransformatio, n: React.FC = () => {/* TODO: Fix JSX exp
             <div, className='grid, gri, d-co, l, s-2, m, d:gr, i, d-co, l, s-4, ga, p-6, tex, t-cent, e, r'></div>
                 <li, className='flex, item, s-start, ga, p-3, tex, t-purp, l, e-1, 0, 0'></li>
                   <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-400, m, t-1, fle, x-shri, n, k-0' /></CheckCircle>
-                  <sp, a, n></sp>
+                  <sp, a, n></div>
                     <strong, className='te, x, t-whi, t, e'>Explain, decision, s</stro, n, g>{' '}
                     with, transparent, logic;
                   </sp, a, n>
@@ -169,7 +170,7 @@ const CognitiveComputingTransformatio, n: React.FC = () => {/* TODO: Fix JSX exp
                     <div, ke, y = { id, x }, classNa, m, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-sm, border, border-whi, t, e/10, rounde, d-x, l, p-6, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-a, l, l'
                     ></div>
                       <div, className='flex, item, s-start, justif, y-between, m, b-4'></div>
-                        <d, i, v></d>
+                        <d, i, v></div>
                           <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-1'></h3>
                             {a, p, p.t, i, t, l, e}
                           </h3>
@@ -292,10 +293,10 @@ const CognitiveComputingTransformatio, n: React.FC = () => {/* TODO: Fix JSX exp
   m: $4.7B, Cognitive, Transformation;
                 <div, className='flex, item, s-center, ga, p-3, m, b-3'></div>
                   <Award, className='w-6 h-6, tex, t-gre, e, n-4, 0, 0' /></Award>
-                  <span, className='te, x, t-sm, fon, t-semibold, tex, t-purp, l, e-3, 0, 0'></span>
+                  <span, className='te, x, t-sm, fon, t-semibold, tex, t-purp, l, e-3, 0, 0'></div></div></span>
                     CASE, STUD, Y;
                   </sp, a, n>
                 </div>
-                <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r:te, x, t-purp, l, e-300, transitio, n-colo, r, s'></h3>
+                <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r:te, x, t-purp, l, e-300, transitio, n-colo, r, s'></h></h3>
                   Fortune, 20, Teleco,
   m: $4.7B, Cognitive, Transformation;)

@@ -15,26 +15,21 @@ export interface ToastProps {/* TODO: Fix JSX expression */}
 }
 const,
   Toast: React.FC;
-          <ToastProps> = ({/* TODO: Fix JSX expression */}
+          <ToastProps></ToastProp></ToastProps> = ({/* TODO: Fix JSX expression */}
   O: Add content;}
-}
-//   message,
-  type = 'success',
+//   message,;
+type = 'success',
   duration = 3000,
 //   onClose,
 //   show;)
 }) => {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
   const [isVisible, setIsVisible] = useState(show);
   useEffect(() => {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
     setIsVisible(show);
     if (show && duration > 0) {setIsVisible(false);}
-        if (onClose) {/* TODO: Fix JSX expression */}
-        }
-      }, duration);
+        if (onClose) {/* TODO: Fix JSX expression */}, duration);
       return () => clearTimeout(timer);
     }
     return undefined;
@@ -42,10 +37,8 @@ const,
   if (!isVisible) return null;
   const getToastStyles = () => {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
     switch (type) {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
       case 'success':
         return 'bg-green-600 text-white';
       case 'error':
@@ -61,10 +54,8 @@ const,
   };
   const getIcon = () => {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
     switch (type) {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
       case 'success':
         return '';
       case 'error':
@@ -78,10 +69,10 @@ const,
         return '';
     }
   };
-  return (<div>Coming Soon</div>)
+  return (<div></div></div>Coming Soon</div>)
   )
     
-          <div></div>
+          <div></div></div></div>
 className={`fixed top-4 right-4 px-6 py-3 rounded-lg shadow-lg z-50 flex items-center gap-2 animate-fade-in ${getToastStyles()}`}
       role="alert""
       aria-live="polite"
@@ -95,9 +86,9 @@ className={`fixed top-4 right-4 px-6 py-3 rounded-lg shadow-lg z-50 flex items-c
           
           
           "
-          <span className="text-xl font-bold">{getIcon()}</span>
-      <span>{message}</span>
-      <button></button>
+          <span className="text-xl font-bold"></div></div>{getIcon()}</span>
+      <span></div></div>{message}</span>
+      <button></butt></butto></button>
         onClick={() => {}
   // TOD,
   O: Add content;

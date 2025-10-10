@@ -3,13 +3,13 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Wifi, Zap, Shield, Globe, CheckCircle, ArrowRight, Phone, Mail, MapPin, Clock, Users, BarChart } from 'lucide-react';
 
-const FiveGImplementationPage: React.FC = () => {
-  const features = [
+const FiveGImplementationPage: React.FC = () => {;
+const features = [
     {
       icon: Wifi,
-      title: '5G Network Design',
-      description: 'Complete 5G network design and implementation with optimal coverage and performance.',
+      title: description, 'Complete 5G network design and implementation with optimal coverage and performance.']
       benefits: ['Network planning', 'Coverage optimization', 'Performance tuning']
+}
     },
     {
       icon: Zap,
@@ -44,15 +44,15 @@ const FiveGImplementationPage: React.FC = () => {
   ];
 
   return (
-    <>
+    <>\</>
       <Helmet>
         <title>5G Network Implementation - Zion Tech Group | Zion Tech Group - AI & IT Solutions</title>
         <meta name="description" content="Complete 5G network implementation services with ultra-low latency, high-speed connectivity, and advanced features for modern applications and IoT ecosystems." />
         <meta name="keywords" content="5G implementation, network infrastructure, IoT connectivity, edge computing, Zion Tech Group" />
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">)
+        {/* Hero Section */})
+        <section className="relative py-20 px-4 overflow-hidden">)
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
           <div className="relative max-w-7xl mx-auto text-center">

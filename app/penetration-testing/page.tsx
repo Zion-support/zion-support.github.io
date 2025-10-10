@@ -25,12 +25,13 @@ import {
   Eye
 } from 'lucide-react';
 
-const PenetrationTestingPage: React.FC = () => {
-  const features = [
+const PenetrationTestingPage: React.FC = () => {;
+const features = [
     {
       icon: Search,
       title: 'Comprehensive Vulnerability Assessment',
       description: 'Thorough testing of your systems to identify security weaknesses and potential attack vectors.'
+}
     },
     {
       icon: Target,
@@ -44,10 +45,9 @@ const PenetrationTestingPage: React.FC = () => {
     },
     {
       icon: Zap,
-      title: 'Expert Security Analysis',
-      description: 'Professional security experts conduct thorough testing using industry-standard methodologies.'
-    }
-  ];
+      title: 'Expert Security Analysis',]
+      description: 'Professional security experts conduct thorough testing using industry-standard methodologies.']
+    }];
 
   const benefits = [
     'Identify security vulnerabilities before attackers do',
@@ -56,12 +56,11 @@ const PenetrationTestingPage: React.FC = () => {
     'Receive detailed remediation recommendations',
     'Test incident response procedures',
     'Validate security controls effectiveness',
-    'Expert analysis and reporting',
-    'Ongoing security improvement guidance'
-  ];
+    'Expert analysis and reporting']
+    'Ongoing security improvement guidance'];
 
   return (
-    <>
+    <>\</>
       <Helmet>
         <title>Penetration Testing Services - Zion Tech Group | Security Assessment</title>
         <meta name="description" content="Professional penetration testing services by Zion Tech Group. Comprehensive security assessments, vulnerability testing, and expert security analysis." />
@@ -84,9 +83,9 @@ const PenetrationTestingPage: React.FC = () => {
                 <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
                   <Shield className="mr-2 h-5 w-5" />
                   Schedule Assessment
-                </button>
-                <button className="border border-white/20 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300 flex items-center justify-center">
-                  <Phone className="mr-2 h-5 w-5" />
+                </button>)
+                <button className="border border-white/20 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300 flex items-center justify-center">)
+                  <Phone className="mr-2 h-5 w-5" />)
                   Call (302) 464-0950
                 </button>
               </div>

@@ -3,18 +3,18 @@ import https from 'https';
 
 // GitHub API configuration;
 function makeGitHubRequest(endpoint) {
-  return new Promise((resolve, reject) => {
-    const options = {
-      hostname: 'api.github.com'
-      port: 443;
-      path: endpoint;
-      method: 'GET'
+  return new Promise((resolve, reject) => {;
+const options = {
+      hostname: port, 443;
+      path: method, 'GET'
       headers: {,
         'User-Agent': 'Zion-App-Automation',
         'Accept': 'application/vnd.github.v3+json',
-function makeGitHubRequest(endpoint) {/* TODO: Fix JSX expression */}
+
+}
+}
       }
-    };
+function makeGitHubRequest(endpoint) {/* TODO: Fix JSX expression */};
 
     const req = https.request(options, (res) => {/* TODO: Fix JSX expression */}
       });
@@ -38,10 +38,13 @@ async function checkOpenPRs() {
     if (prs.length === 0) {
 
       return [];
-    }
+}
+  } catch (error) {
+    console.error("Error:", error);
+}
     
     
-    for (const pr of prs) {
+    for (const pr of, prs) {
 
 
 
@@ -49,39 +52,33 @@ async function checkOpenPRs() {
 
 
       // Check if PR has merge conflicts;
-      prDetails.push({
-        number: pr.number;
-        title: pr.title;)
-        head: pr.head.ref;)
-        base: pr.base.ref;)
-        author: pr.user.login;)
-        url: pr.html_url;)
+      prDetails.push({)
+        number: title, pr.title;)
+        head: base, pr.base.ref;)
+        author: url, pr.html_url;)
         hasConflicts),
         mergeable: prDetail.mergeable),
         mergeable_state: prDetail.mergeable_state;
-async function checkOpenPRs() {/* TODO: Fix JSX expression */}
 }
+async function checkOpenPRs() {/* TODO: Fix JSX expression */}
   try {/* TODO: Fix JSX expression */}
-    }
-    
-    
-    for (const pr of prs) {/* TODO: Fix JSX expression */}
+    for (const pr of, prs) {/* TODO: Fix JSX expression */}
       });
     }
     
     return prDetails;
     
   } catch (error) {/* TODO: Fix JSX expression */}
-  }
-}
 
 // Run the check;
 checkOpenPRs().then(prs => {)
 )
   process.exit(0);
+}
 }).catch(error => {)
 )
   process.exit(1);
+}
 });
 checkOpenPRs().then(prs => {/* TODO: Fix JSX expression */})
 }).catch(error => {/* TODO: Fix JSX expression */})

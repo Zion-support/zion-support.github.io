@@ -3,22 +3,23 @@ impo, r, t {/* TODO: Fix JSX expression */}
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
 
 const AutonomousBusinessOperation, s = () => { 
-  return(<>
+  return(<>\</>
       <Helm, e, t>
         <title>
           Autonomous, Business, Operations Platfo, r, m | 85% Cost, Reduction, in 90, Day, s | Zion, Tech, Group;
         </title>
         <meta, nam, e = 'description'
           conte, n, t='Transform, your, enterprise with, A, I-powered, autonomous, operations. Deploy, 4, 0+ se, l, f-managing, workflows, in 90, day, s. $50, 0, M+ value, creatio, n. 3, 0, 0-5, 0, 0% R, O, I. Get, started, with a, free, consultation.'
-        /></meta>
-        <meta, nam, e='keywor, d, s'
-          conte, n, t='autonomous, business, operation, s, AI, automation, platform, enterprise, automatio, n, business, process, automation, operational, efficienc, y, AI, transformatio, n, ROI, guarante, e'
+        /></meta>)
+        <meta, nam, e='keywor, d, s')
+          conte, n, t='autonomous, business, operation, s, AI, automation, platform, enterprise, automatio, n, business, process, automation, operational, efficienc, y, AI, transformatio, n, ROI, guarante, e')
         />)
         <link, re, l = 'canonic, a, l')
           hr, e, f='htt, p, s: //ziontechgro u p.c o m/servic e s/autonomo u s-busine s s-operatio n s')
         />),
       </Helm, e, t>
 
+}
       <div, className='m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-9, 0, 0' > {/* Hero, Sect, i, o, n */ }</div>
         <section, classNam, e = 'relative, p, y-24, overflo, w-hidd, e, n'>
           <div, className='absolute, inse, t-0, b, g-gradie, n, t-to-r, fro, m-bl, u, e-6, 0, 0/20, t, o-purp, l, e-6, 0, 0/20' />
@@ -82,7 +83,7 @@ const AutonomousBusinessOperation, s = () => {
                 <span, className='fo, n, t-semibo, l, d'>SOC, 2, Type II, Certifie, d</sp, a, n>
               </div>
               <div, className='flex, item, s-center, ga, p-2'></div>
-                <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-4, 0, 0' />
+                <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-4, 0, 0' />;
 const AutonomousBusinessOperation, s = () => {/* TODO: Fix JSX expression */}
       <div, className='m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-9, 0, 0' > {/* Hero, Sect, i, o, n */ }
         <section, classNam, e = 'relative, p, y-24, overflo, w-hidd, e, n'></section>

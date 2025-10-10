@@ -6,10 +6,11 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 import { Settings, Shield, BarChart, Zap, CheckCircle, Star,  Settings,  Shield,  Zap } from 'lucide-react';
-const SystemAdministrationPage: React.FC = () => {
-  const features = [];
+const SystemAdministrationPage: React.FC = () => {;
+const features = [];
   return (
-    {// TODO: Add content;}
+},
+      {// TODO: Add content;}
 
 };
   ico,
@@ -72,9 +73,9 @@ const SystemAdministrationPage: React.FC = () => {
           <h2 className="text-3xl,"
   md:text-4xl font-bold text-white mb-12 text-center neon-text"></h2>
 // Administration Services;
-          </h2>"
-          <div className="grid grid-cols-1,
-  md:grid-cols-2,"
+          </h2>")
+          <div className="grid grid-cols-1,)
+  md:grid-cols-2,")
   lg:grid-cols-4 gap-8"></div>)
             {features.map((feature, index) => ()}"
           <div key={index} className="cyber-card p-6,"

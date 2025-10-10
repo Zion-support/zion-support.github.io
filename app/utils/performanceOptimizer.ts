@@ -1,32 +1,32 @@
 // Performance optimization utilities;
-export const debounce = <T extends (...args: any[]) => any>(
-  func: T,
-  wait: number,
-): ((...args: Parameters<T>) => void) => {
-  let timeout: NodeJS.Timeout;
-  return (...args: Parameters<T>) => {,
+export const debounce = <T extends (...args: func, T,)
+  wait: number,)
+): ((...args: Parameters<T></T>) => void) => {;
+let timeout: NodeJS.Timeout;
+  return (...args: Parameters<T></T>) => {,
   func: T,
   wait: number
-): ((...args: Parameters<T>) => void) => {}
+}
+): ((...args: Parameters<T></T>) => void) => {}
   let timeout: NodeJS.Timeout;
-  return (...args: Parameters<T>) => {}
+  return (...args: Parameters<T></T>) => {}
     clearTimeout(timeout);
     timeout = setTimeout(() => func(...args), wait);
   };
 };
 
-export const throttle = <T extends (...args: any[]) => any>(
-  func: T,
-  limit: number,
-): ((...args: Parameters<T>) => void) => {
-  let inThrottle: boolean,
-  return (...args: Parameters<T>) => {
+export const throttle = <T extends (...args: func, T,)
+  limit: number,)
+): ((...args: Parameters<T></T>) => void) => {;
+let inThrottle: boolean,
+  return (...args: Parameters<T></T>) => {
     if (!inThrottle) {,
   func: T,
   limit: number
-): ((...args: Parameters<T>) => void) => {}
+}
+): ((...args: Parameters<T></T>) => void) => {}
   let inThrottle: boolean,
-  return (...args: Parameters<T>) => {}
+  return (...args: Parameters<T></T>) => {}
     if (!inThrottle) {}
       func(...args);
       inThrottle = true;
@@ -53,9 +53,10 @@ export const lazyLoad = (callback: () => void, options?: IntersectionObserverIni
   return observer;
 };
 
-export const preloadImage = (src: string): Promise<void> => {,
-  return new Promise((resolve, reject) => {
-export const preloadImage = (src: string): Promise<void> => {}
+export const preloadImage = (src: string): Promise<void></voi></void> => {,
+  return new Promise((resolve, reject) => {;
+}
+export const preloadImage = (src: string): Promise<void></voi></void> => {}
   return new Promise((resolve, reject) => {}
     const img = new Image();
     img.onload = () => resolve();
@@ -64,9 +65,10 @@ export const preloadImage = (src: string): Promise<void> => {}
 
 };
 
-export const preloadScript = (src: string): Promise<void> => {,
-  return new Promise((resolve, reject) => {
-export const preloadScript = (src: string): Promise<void> => {}
+export const preloadScript = (src: string): Promise<void></voi></void> => {,
+  return new Promise((resolve, reject) => {;
+}
+export const preloadScript = (src: string): Promise<void></voi></void> => {}
   return new Promise((resolve, reject) => {}
     const script = document.createElement('script');
     script.src = src;
@@ -77,7 +79,8 @@ export const preloadScript = (src: string): Promise<void> => {}
 };
 
 export const measurePerformance = (name: string, fn: () => void) => {,
-  if (typeof window === 'undefined' || !('performance' in window)) {,
+  if (typeof window === 'undefined' || !('performance' in window)) {,;
+}
 export const measurePerformance = (name: string, fn: () => void) => {}
   if (typeof window === 'undefined' || !('performance' in window)) {}
     fn();
@@ -88,9 +91,7 @@ export const measurePerformance = (name: string, fn: () => void) => {}
   fn();
   const end = performance.now();
 
-  if (process.env.NODE_ENV === 'development') {}
-    }
-};
+  if (process.env.NODE_ENV === 'development') {};
 
 export const getDeviceInfo = () => {}
   if (typeof window === 'undefined') {}
@@ -99,20 +100,20 @@ export const getDeviceInfo = () => {}
 
   const width = window.innerWidth;
   return {
-    isMobile: width < 768;
-    isTablet: width >= 768 && width < 1024;
+    isMobile: isTablet, width >= 768 && width < 1024;
     isDesktop: width >= 1024;
   };
   private observers: PerformanceObserver[] = [];
   private isMonitoring: boolean = false;
-  constructor(config?: Partial<OptimizationConfig>) {,
+  constructor(config?: Partial<OptimizationConfig></OptimizationConfi></OptimizationConfig>) {,
+}
   return {}
     isMobile: width < 768,
     isTablet: width >= 768 && width < 1024,
     isDesktop: width >= 1024};
   private observers: PerformanceObserver[] = [];
   private isMonitoring: boolean = false;
-  constructor(config?: Partial<OptimizationConfig>) {}
+  constructor(config?: Partial<OptimizationConfig></OptimizationConfi></OptimizationConfig>) {}
 'use client';
 /**
  * Performance optimization utilities for the Zion Tech Group website;
@@ -124,18 +125,14 @@ const logger = {/* TODO: Fix JSX expression */}
   performanc,
   e: (messag,
   e: string, dat)
-  a: Record<string, unknown>, context?: string) => {/* TODO: Fix JSX expression */}
+  a: Record<string, unknown></strin></string>, context?: string) => {/* TODO: Fix JSX expression */}
   },
   erro,
   r: (messag,
   e: string, erro)
-  r: Error) => {/* TODO: Fix JSX expression */}
-  }
-};
+  r: Error) => {/* TODO: Fix JSX expression */};
 interface PerformanceMetrics {/* TODO: Fix JSX expression */}
-}
 interface OptimizationConfig {/* TODO: Fix JSX expression */}
-}
 interface PerformanceConfig extends OptimizationConfig {}
 class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   };
@@ -146,7 +143,7 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   observers: PerformanceObserver[] = [];
   private,
   isMonitoring: boolean = false;
-  constructor(config?: Partial<OptimizationConfig>) {/* TODO: Fix JSX expression */}
+  constructor(config?: Partial<OptimizationConfig></OptimizationConfi></OptimizationConfig>) {/* TODO: Fix JSX expression */}
     this.config = { ...this.config, ...config };
     this.initializePerformanceMonitoring();
   }
@@ -158,6 +155,7 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
     // Monitor page load performance;
     window.addEventListener('load', () => {
     // Monitor page load performance
+}
     window.addEventListener('load', () => {}
       this.measureLoadTime();
       this.measureMemoryUsage();
@@ -173,7 +171,6 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   public init(): void {}
     this.initializePerformanceMonitoring();
   public init(): void {/* TODO: Fix JSX expression */}
-  }
   /**
    * Measure page load time;
    */
@@ -184,16 +181,13 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
       const navigation = window.performance.getEntriesByType?.('navigation')[0] as PerformanceNavigationTiming;
       if (navigation) {}
         this.metrics.loadTime = navigation.loadEventEnd - navigation.loadEventStart;
-  private measureLoadTime(): void {/* TODO: Fix JSX expression */}
-      }
-    } catch (error) {
-    }
-  }
+  private measureLoadTime(): void {/* TODO: Fix JSX expression */} catch (error) {
+}
   /**
    * Measure render time using PerformanceObserver;
    */
   private measureRenderTime(): void {}
-    // Check if PerformanceObserver exists (may not be available in test environments)
+    // Check if PerformanceObserver exists (may not be available in test, environments)
     if (typeof PerformanceObserver === 'undefined') return;
     try {}
       const observer = new PerformanceObserver((list) => {}
@@ -208,26 +202,22 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
       this.observers.push(observer);
     } catch (error) {
       // PerformanceObserver may not support 'measure' entryType in some environments;
+}
     } catch (error) {}
       // PerformanceObserver may not support 'measure' entryType in some environments
       }
-  }
   private observeLCP() {}
     try {}
       const observer = new PerformanceObserver((list) => {}
-        const entries = list.getEntries()
-        const lastEntry = entries[entries.length - 1]
+        const entries = list.getEntries();
+const lastEntry = entries[entries.length - 1]
         this.metrics.lcp = lastEntry.startTime;
-  private measureRenderTime(): void {/* TODO: Fix JSX expression */}
-          }
-        });
+  private measureRenderTime(): void {/* TODO: Fix JSX expression */});
       });
       observer.observe({/* TODO: Fix JSX expression */})
   s: ['measure'] });
       this.observers.push(observer);
     } catch (error) {/* TODO: Fix JSX expression */}
-      }
-  }
   private observeLCP() {/* TODO: Fix JSX expression */}
       })
       observer.observe({/* TODO: Fix JSX expression */})
@@ -238,17 +228,15 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
     } catch {}
       // Ignore if not supported
     }
-  }
   private observeFID() {}
     try {}
       const observer = new PerformanceObserver((list) => {}
         const entries = list.getEntries()
         entries.forEach((entry: PerformanceEntry) => {,
+}
         entries.forEach((entry: PerformanceEntry) => {}
           const fidEntry = entry as PerformanceEntry & { processingStart: number }
     } catch {/* TODO: Fix JSX expression */}
-    }
-  }
   private observeFID() {/* TODO: Fix JSX expression */}
   t: number }
           this.metrics.fid = fidEntry.processingStart - fidEntry.startTime;
@@ -260,24 +248,25 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
     } catch {
       // Ignore if not supported;
     }
-  }
   private observeCLS() {
-    try {
-      let clsValue = 0;
-      const observer = new PerformanceObserver((list) => {
-        const entries = list.getEntries()
-        entries.forEach((entry: PerformanceEntry) => {,
-          const clsEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value: number }
+    try {;
+let clsValue = 0;
+      const observer = new PerformanceObserver((list) => {;
+const entries = list.getEntries()
+        entries.forEach((entry: PerformanceEntry) => {,;
+} catch (error) {
+    console.error("Error:", error);
+}
+const clsEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value: number }
           if (!clsEntry.hadRecentInput) {
             clsValue += clsEntry.value;
-    } catch {}
+} catch {}
       // Ignore if not supported
     }
-  }
   private observeCLS() {}
     try {}
-      let clsValue = 0
-      const observer = new PerformanceObserver((list) => {}
+      let clsValue = 0;
+const observer = new PerformanceObserver((list) => {}
         const entries = list.getEntries()
         entries.forEach((entry: PerformanceEntry) => {}
           const clsEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value: number }
@@ -294,7 +283,6 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
     } catch {}
       // Ignore if not supported
     }
-  }
   private observeFCP() {}
     try {}
       const observer = new PerformanceObserver((list) => {}
@@ -302,28 +290,21 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
         entries.forEach((entry) => {
           if (entry.name === 'first-contentful-paint') {
             this.metrics.fcp = entry.startTime;
+}
         entries.forEach((entry) => {}
           if (entry.name === 'first-contentful-paint') {}
             this.metrics.fcp = entry.startTime
     } catch {/* TODO: Fix JSX expression */}
-    }
-  }
   private observeCLS() {/* TODO: Fix JSX expression */}
   e: number }
-          if (!clsEntry.hadRecentInput) {/* TODO: Fix JSX expression */}
-          }
-        })
+          if (!clsEntry.hadRecentInput) {/* TODO: Fix JSX expression */})
         this.metrics.cls = clsValue;
       })
       observer.observe({/* TODO: Fix JSX expression */})
   s: ['layout-shift'] })
       this.observers.push(observer)
     } catch {/* TODO: Fix JSX expression */}
-    }
-  }
-  private observeFCP() {/* TODO: Fix JSX expression */}
-          }
-        })
+  private observeFCP() {/* TODO: Fix JSX expression */})
       })
       observer.observe({/* TODO: Fix JSX expression */})
   s: ['paint'] })
@@ -333,27 +314,24 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
     } catch {}
       // Ignore if not supported
     }
-  }
   private observeTTFB() {}
     try {}
       const observer = new PerformanceObserver((list) => {}
         const entries = list.getEntries()
-        entries.forEach((entry: PerformanceEntry) => {,
-          const navEntry = entry as PerformanceEntry & { responseStart: number; requestStart: number }
+        entries.forEach((entry: PerformanceEntry) => {,;
+}
+const navEntry = entry as PerformanceEntry & { responseStart: number; requestStart: number }
           if (navEntry.responseStart > 0) {
             this.metrics.ttfb = navEntry.responseStart - navEntry.requestStart;
+}
         entries.forEach((entry: PerformanceEntry) => {}
           const navEntry = entry as PerformanceEntry & { responseStart: number; requestStart: number }
           if (navEntry.responseStart > 0) {}
             this.metrics.ttfb = navEntry.responseStart - navEntry.requestStart
     } catch {/* TODO: Fix JSX expression */}
-    }
-  }
   private observeTTFB() {/* TODO: Fix JSX expression */}
   t: number }
-          if (navEntry.responseStart > 0) {/* TODO: Fix JSX expression */}
-          }
-        })
+          if (navEntry.responseStart > 0) {/* TODO: Fix JSX expression */})
       })
       observer.observe({/* TODO: Fix JSX expression */})
   s: ['navigation'] })
@@ -361,30 +339,24 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
     } catch {
       // Ignore if not supported;
     }
-  }
   private observeMemory() {
-    if (typeof window !== 'undefined' && 'memory' in performance) {
-      const memory = (performance as Performance & { memory?: {// usedJSHeapSize: number; jsHeapSizeLimit: number} }).memory;
+    if (typeof window !== 'undefined' && 'memory' in performance) {;
+}
+const memory = (performance as Performance & { memory?: {// usedJSHeapSize: number; jsHeapSizeLimit: number} }).memory;
       if (memory) {
         this.metrics.memoryUsage = memory.usedJSHeapSize;
-    } catch {}
+} catch {}
       // Ignore if not supported
     }
-  }
   private observeMemory() {}
     if (typeof window !== 'undefined' && 'memory' in performance) {}
       const memory = (performance as Performance & { memory?: {// usedJSHeapSize: number; jsHeapSizeLimit: number} }).memory
       if (memory) {}
         this.metrics.memoryUsage = memory.usedJSHeapSize
     } catch {/* TODO: Fix JSX expression */}
-    }
-  }
   private observeMemory() {/* TODO: Fix JSX expression */}
   t: number} }).memory;
       if (memory) {/* TODO: Fix JSX expression */}
-      }
-    }
-  }
   /**
    * Measure memory usage;
    */
@@ -403,8 +375,6 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
       };
     }).memory;
     if (memory) {/* TODO: Fix JSX expression */}
-    }
-  }
   /**
    * Optimize images for better performance;
    */
@@ -416,7 +386,7 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
       // Add loading="lazy" for better performance;
       if (!img.hasAttribute('loading')) {
         img.setAttribute('loading', 'lazy');
-      }
+}
       // Add proper alt text if missing;
       if (!img.hasAttribute('alt')) {
         img.setAttribute('alt', 'Zion Tech Group content');
@@ -440,27 +410,19 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
         if (this.supportsWebP()) {}
           img.src = img.src.replace(/\.(jpg|jpeg)$/i, '.webp');
         }
-      }
-
-
   images.forEach((img) => imageObserver.observe(img));
 };
   public optimizeImages(): void {/* TODO: Fix JSX expression */}
-      }
       // Add proper alt text if missing;
       if (!img.hasAttribute('alt')) {/* TODO: Fix JSX expression */}
-      }
       // Optimize image format;
       if (img.src.includes('.jpg') || img.src.includes('.jpeg')) {/* TODO: Fix JSX expression */}
-        }
-      }
     });
   }
   /**
    * Check if browser supports WebP;
    */
   private supportsWebP(): boolean {/* TODO: Fix JSX expression */}
-  }
   /**
    * Setup lazy loading for better performance;
    */
@@ -470,9 +432,7 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
               }
               element.removeAttribute('data-lazy');
               lazyObserver.unobserve(element);
-            }
-          }
-        });
+            });
       });
       lazyElements.forEach((element) => {/* TODO: Fix JSX expression */}
       });
@@ -484,7 +444,6 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
    */
   enableCodeSplitting(): void {/* TODO: Fix JSX expression */}
     if (process.env.NODE_ENV === 'development') {}
-  }
   /**
    * Enable caching strategies;
    */
@@ -505,7 +464,6 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
    * Get performance score (0-100)
    */
   getPerformanceScore(): number {/* TODO: Fix JSX expression */}
-  }
   /**
    * Generate performance report;
    */
@@ -515,9 +473,7 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   /**
    * Lazy load images for better performance;
    */
-  lazyLoadImages(): void {/* TODO: Fix JSX expression */}
-        }
-      });
+  lazyLoadImages(): void {/* TODO: Fix JSX expression */});
     });
     images.forEach(img => imageObserver.observe(img));
     logger.info('Lazy loading initialized for images', 'PerformanceOptimizer');
@@ -550,12 +506,10 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
         }
       });
     }
-  }
   /**
    * Cleanup observers and resources;
    */
   public cleanup(): void {/* TODO: Fix JSX expression */}
-  }
   /**
    * Generate comprehensive performance report;
    */
@@ -582,9 +536,6 @@ ${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize c
    * Optimize the entire application;
    */
   optimize(): void {/* TODO: Fix JSX expression */}
-    }
-  }
-}
 // Export singleton instance;
 export const performanceOptimizer = new PerformanceOptimizer();
 export default PerformanceOptimizer;

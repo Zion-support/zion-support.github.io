@@ -6,22 +6,23 @@ import Footer from '../components/Footer';
 import React from 'react';
 
 const ContactPage: React.FC = () => {
+}
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle, MessageSquare, Calendar, User, Building, Globe, Shield, Brain, Zap, Cloud, Database, Code, BarChart, Users, Award, Target, Star, TrendingUp, ArrowRight } from 'lucide-react';
 
-export default function ContactPage() {
-  const [formData, setFormData] = useState({
+export default function ContactPage() {;
+const [formData, setFormData] = useState({
     name: '',
     email: '',
     company: '',
-    phone: '',
-    service: '',
-    message:   ,
+    phone: '',)
+    service: '',)
+    message:   ,)
+}
 $4});
 
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const _handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    message: '',
+  const _handleInputChange = (e: message, '',
     budget: '',
     timeline: ''
   });
@@ -29,11 +30,12 @@ $4});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;
+}
+const { name, value } = e.target;
+    setFormData(prev => ({)
+      ...prev,)
+      [name]: value)
     }));
   };
 
@@ -45,6 +47,7 @@ $4});
     // Reset form after 3 seconds
     setTimeout(() => {
       setIsSubmitted(false);
+}
       setFormData({}, 3000);
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -55,6 +58,7 @@ $4});
     
     setIsSubmitted(true);
     setIsSubmitting(false);
+}
   };
 
   const contactInfo = {
@@ -73,9 +77,8 @@ $4});
     'DevOps & CI/CD',
     'Database Management',
     'Mobile App Development',
-    'Custom Development',
-    'Other'
-  ];
+    'Custom Development']
+    'Other'];
 
   const achievements = [
     { icon: Users, text: '100+ Happy Clients' },
@@ -89,9 +92,9 @@ $4});
         <h1 className="text-4xl font-bold text-white mb-4">Contact</h1>
         <p className="text-gray-300 mb-8">Coming Soon - Advanced contact solutions</p>
         <a href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
-          Contact Us
-        </a>
-      </div>
+          Contact Us)
+        </a>)
+      </div>)
   );
 
 export default ContactPage;
@@ -100,27 +103,24 @@ export default ContactPage;
     'Cloud Migration',
     'Digital Transformation',
     'Custom Development',
-    'Consulting',
-    'Other'
-  ];
+    'Consulting']
+    'Other'];
 
   const budgetRanges = [
     'Under $10K',
     '$10K - $50K',
     '$50K - $100K',
     '$100K - $500K',
-    '$500K+',
-    'Not sure'
-  ];
+    '$500K+']
+    'Not sure'];
 
   const timelines = [
     'ASAP',
     'Within 1 month',
     '1-3 months',
     '3-6 months',
-    '6+ months',
-    'Just exploring'
-  ];
+    '6+ months']
+    'Just exploring'];
 
   const offices = [
     {
@@ -144,10 +144,9 @@ export default ContactPage;
       address: '456 Innovation Lane, London EC1A 4HD',
       phone: '+44 20 7946 0958',
       email: 'london@ziontechgroup.com',
-      hours: 'Mon-Fri: 9AM-6PM GMT',
-      timezone: 'Greenwich Mean Time'
-    }
-  ];
+      hours: 'Mon-Fri: 9AM-6PM GMT',]
+      timezone: 'Greenwich Mean Time']
+    }];
 
   const faqs = [
     {
@@ -163,10 +162,9 @@ export default ContactPage;
       answer: 'We serve clients across healthcare, finance, manufacturing, retail, education, and government sectors.'
     },
     {
-      question: 'Do you work with small businesses?',
-      answer: 'Absolutely! We offer scalable solutions for businesses of all sizes, from startups to enterprise organizations.'
-    }
-  ];
+      question: 'Do you work with small businesses?',]
+      answer: 'Absolutely! We offer scalable solutions for businesses of all sizes, from startups to enterprise organizations.']
+    }];
 
   if (isSubmitted) {
     return (
@@ -206,12 +204,11 @@ export default ContactPage;
               <ArrowRight className="w-5 h-5 mr-2" />
               Back to Home
             </a>
-          </div>
-        </div>
-      </div>
+          </div>)
+        </div>)
+      </div>)
     );
-  }
-
+}
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
@@ -300,9 +297,9 @@ export default ContactPage;
                     <input
                       type="tel"
                       name="phone"
-                      value={formData.phone}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 transition-colors"
+                      value={formData.phone})
+                      onChange={handleInputChange})
+                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 transition-colors")
                       placeholder="+1 (555) 123-4567"
                     />
                   </div>
@@ -381,12 +378,12 @@ export default ContactPage;
                   className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-3 px-6 rounded-lg font-bold hover:from-cyan-600 hover:to-purple-700 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
                 >
                   {isSubmitting ? (
-                    <>
+                    <>\</>
                       <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
                       Sending...
                     </>
                   ) : (
-                    <>
+                    <>\</>
                       <Send className="w-5 h-5 mr-2" />
                       Send Message
                     </>
@@ -507,9 +504,9 @@ export default ContactPage;
                   </div>
                   <div className="flex items-center justify-center space-x-2">
                     <Clock className="w-4 h-4 text-yellow-400" />
-                    <span className="text-gray-300 text-sm">{office.hours}</span>
+                    <span className="text-gray-300 text-sm"></div></div>{office.hours}</span>
                   </div>
-                  <div className="text-cyan-400 text-sm font-medium">{office.timezone}</div>
+                  <div className="text-cyan-400 text-sm font-medium"></div></div>{office.timezone}</div>
                 </div>
               </div>
             ))}
@@ -518,21 +515,21 @@ export default ContactPage;
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+      <section className="py-20"></secti></sectio>
+        <div className="container mx-auto px-4"></div></div>
+          <div className="text-center mb-16"></div></div>
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4"></h>
               Frequently Asked Questions
             </h2>
             <p className="text-lg text-gray-300 max-w-3xl mx-auto">
               Common questions about our services and process
             </p>
           </div>
-          <div className="max-w-4xl mx-auto">
-            <div className="space-y-6">
+          <div className="max-w-4xl mx-auto"></div></div>
+            <div className="space-y-6"></div></div>
               {faqs.map((faq, index) => (
-                <div key={index} className="bg-slate-800/50 rounded-lg p-6">
-                  <h3 className="text-xl font-bold text-white mb-3">{faq.question}</h3>
+                <div key={index} className="bg-slate-800/50 rounded-lg p-6"></div></div>
+                  <h3 className="text-xl font-bold text-white mb-3"></h>{faq.question}</h3>
                   <p className="text-gray-300">{faq.answer}</p>
                 </div>
               ))}

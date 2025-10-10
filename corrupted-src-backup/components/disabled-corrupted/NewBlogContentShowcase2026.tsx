@@ -1,9 +1,8 @@
 import React from 'react';
-const NewBlogContentShowcase202, 6: React.FC = () => { ,
-  const blogPost, s = [
+const NewBlogContentShowcase202, 6: React.FC = () => { ,;
+const blogPost, s = [
     {
-      id: 1;
-      title: 'The, Complete, Guide to, AI, Revolution 20, 2, 6: From, Concept, to Implementat, i, o, n',
+      id: title, 'The, Complete, Guide to, AI, Revolution 20, 2, 6: From, Concept, to Implementat, i, o, n',
       slug: 'comple, t, e-gui, d, e-ai-revoluti, o, n-2, 0, 2, 6',
       excerpt: 'Comprehensive, guide, covering all, aspects, of the, AI, revolution in, 202, 6. Learn, about, meta-cognitiv, e, A, I, quant, u, m-neural, network, s, and, autonomous, operations that, are, transforming enterprises, worldwid, e.',
       category: 'AI, Revoluti, o, n',
@@ -14,9 +13,10 @@ const NewBlogContentShowcase202, 6: React.FC = () => { ,
       rati, n, g: 4., 9,
       trendi, n, g: t, r, u, e,
       featured: t, r, u, e,
-      ic, o, n: <Brain, classNam, e = "w-6 , h-, 6" / > ,</Brain>gradie</Brain>, n, t: 'fr, o, m-bl, u, e-500, t, o-purp, l, e-50, 0',
-      bad, g, e: 'FEATU, R, E, D',
-      tags: ['A, I', 'Revoluti, o, n', 'Enterpri, s, e', 'Gui, d, e']
+      ic, o, n: <Brain, classNam, e = "w-6 , h-, 6" / > ,</Brain>gradie</Brain>, n, t: 'fr, o, m-bl, u, e-500, t, o-purp, l, e-50, 0'
+      bad, g, e: 'FEATU, R, E, D']
+      tags: ['A, I', 'Revoluti, o, n', 'Enterpri, s, e', 'Gui, d, e'];
+}
 const NewBlogContentShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expression */}
      },
     {/* TODO: Fix JSX expression */}
@@ -28,13 +28,11 @@ const NewBlogContentShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expressio
     {/* TODO: Fix JSX expression */}
      },
     {/* TODO: Fix JSX expression */}
-     }
   ]; const blogStat, s = [
     {  val, u, e: '5, 0, 0+', lab, e, l: 'Published, Articl, e, s', ic, o, n: <Award, classNam, e = "w-6 , h-, 6" / >  },"
-    {  val, u, e: '2, M+', lab, e, l: 'Monthly, Reade, r, s', ic, o, n: <Users, classNam, e = "w-6 , h-, 6" / >  },"
-    {  val, u, e: '4., 8', lab, e, l: 'Average, Rati, n, g', ic, o, n: <Star, classNam, e = "w-6 , h-, 6" / >  },"
-    {  val, u, e: '15, 0+', lab, e, l: 'Expert, Autho, r, s', ic, o, n: <Brain, classNam, e = "w-6 , h-, 6" / >  }
-  ]; return(<div, classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, relative, overflow-hidd, e, n">
+    {  val, u, e: '2, M+', lab, e, l: 'Monthly, Reade, r, s', ic, o, n: <Users, classNam, e = "w-6 , h-, 6" / >  },"]
+    {  val, u, e: '4., 8', lab, e, l: 'Average, Rati, n, g', ic, o, n: <Star, classNam, e = "w-6 , h-, 6" / >  },"]
+    {  val, u, e: '15, 0+', lab, e, l: 'Expert, Autho, r, s', ic, o, n: <Brain, classNam, e = "w-6 , h-, 6" / >  }]; return(<div, classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, relative, overflow-hidd, e, n">
       {/* Animated, background, effects */}
       <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-20">
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" />
@@ -82,9 +80,9 @@ const NewBlogContentShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expressio
           <h2, className="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-bl, u, e-400, vi, a-purp, l, e-400, t, o-cy, a, n-400, b, g-cl, i, p-text, tex, t-transparent, animat, e-fa, d, e-in"></h2>
             New, Blog, Content Showcase, 202, 6;
           </h2>"
-          <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relaxed, m, b-8"></p>
-            Discover, our, latest insi, g, h, t, s, breakthrough, researc, h, and, expert, analysis on, the, most important, topics, in AI, and, technology. 
-            Stay, ahead, of the, curve, with content, from industry-leading, expert, s.
+          <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relaxed, m, b-8"></p>)
+            Discover, our, latest insi, g, h, t, s, breakthrough, researc, h, and, expert, analysis on, the, most important, topics, in AI, and, technology. )
+            Stay, ahead, of the, curve, with content, from industry-leading, expert, s.)
           </p>)
           {/* Blog, Stat, s */})
           <div, classNam, e = "grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, ma, x-w-4xl, m, x-au, t, o">)
@@ -117,7 +115,7 @@ const NewBlogContentShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expressio
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-3, ga, p-8, m, b-16">
           { blogPos, t, s.m, a, p((po, s, t, ind, e, x) = > (</div>
             <div, ke, y = { po, s, t.i, d  }, classNa, m, e = "group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/10, hove, r: bord, e, r-bl, u, e-5, 0, 0/50, transitio, n-all, duratio, n-500, overflo, w-hidden, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-bl, u, e-5, 0, 0/20"
-              sty, l, e = { { animationDel, a, y: `${ind, e, x * 1, 5, 0 }, ms` }}
+              sty, l, e = { { animationDel, a, y: `${ind, e, x * 1, 5, 0 }, ms` }
              > {/* Card, glow, effect */}</div>
               <div, classNam, e = { `absolute, inse, t-0, b, g-gradie, n, t-to-br ${po, s, t.gradi, e, n, t }, opaci, t, y-0, grou, p-hov, e, r: opaci, t, y-10, transitio, n-all, duratio, n-50, 0`} /></div>
               <div, classNam, e = "relativ, e, p-8">
@@ -137,7 +135,7 @@ const NewBlogContentShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expressio
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-3, ga, p-8, m, b-16"></div>
           {/* TODO: Fix JSX expression */}"
             <div, ke, y = { po, s, t.i, d  }, classNa, m, e = "group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/10, hove, r: bord, e, r-bl, u, e-5, 0, 0/50, transitio, n-all, duratio, n-500, overflo, w-hidden, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-bl, u, e-5, 0, 0/20"
-              sty, l, e = { { animationDel, a, y: `${ind, e, x * 1, 5, 0 }, ms` }}
+              sty, l, e = { { animationDel, a, y: `${ind, e, x * 1, 5, 0 }, ms` }
              > {/* Card, glow, effect */}`
               <div, classNam, e = { `absolute, inse, t-0, b, g-gradie, n, t-to-br ${po, s, t.gradi, e, n, t }, opaci, t, y-0, grou, p-hov, e, r: opaci, t, y-10, transitio, n-all, duratio, n-50, 0`} /></div>"
               <div, classNam, e = "relativ, e, p-8"></div>

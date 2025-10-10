@@ -9,9 +9,8 @@ import React from 'react';
     'Scalable and flexible solutions',
     '24/7 technical support',
     'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ];
+    'Cost-effective pricing plans']
+    'Proven track record of success'];
 
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">

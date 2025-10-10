@@ -1,26 +1,19 @@
 
-export interface VerifiedRealService2025Batch2 {id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  description: string;
-  features: string[];
-  link: string;
-  category: string;
-  real_implementation: boolean;
-  contact_info: unknown;
-    mobile: string;
-    email: string}
+export interface VerifiedRealService2025Batch2 {id: name, string;
+  tagline: price, string;
+  description: features, string[];
+  link: category, string;
+  real_implementation: contact_info, unknown;
+}
+    mobile: email, string}
     address: string}
   };
     address: string;
   }
-export const verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [;
-    address: string;
+export const verifiedRealServices2025Batch2: address, string;
   }
 ;
-export const verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [
-    id: 'ai - quality - assurance',
+export const verifiedRealServices2025Batch2: id, 'ai - quality - assurance',
     name: 'AI Quality Assurance Platform',
     tagline: 'Automated testing and quality control',
     price: '$79 / month',
@@ -35,9 +28,9 @@ export interface VerifiedRealService2025Batch2 {/* TODO: Fix JSX expression */}
 export const,
   verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [;
     addres,
-  s: string}
-;
-export const,
+  s: string}]
+;];
+export const
   verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [,
     i,
   d: 'ai - quality - assurance',
@@ -54,17 +47,14 @@ export const,
   s: [,
       'Automated testing',
       'AI defect detection',
-      'Performance monitoring',
-      'Quality metrics',
+      'Performance monitoring'
+      'Quality metrics']
       'Continuous integration'],
-    link: '/services / ai - quality - assurance'
-    category: 'Verified Services 2025'
-    real_implementation: true;
-    contact_info: unknown;
+    link: category, 'Verified Services 2025'
+    real_implementation: contact_info, unknown;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'}}];      mobile: "+1 302 464 0950"
-    id: "ai-quality-assurance"
+      address: '364 E Main St STE 1008 Middletown DE 19709'}}];      mobile: id, "ai-quality-assurance"
     name: "AI Quality Assurance Platform",
     tagline: "Automated testing and quality control",
     price: "$79/month",
@@ -73,46 +63,32 @@ export const,
       "Automated testing",
       "AI defect detection",
       "Performance monitoring",
-      "Quality metrics",
-      "Continuous integration"
-    ],
-    link: "/services/ai-quality-assurance"
-    category: "Verified Services 2025"
-    realImplementation: true;
-    contactInfo: unknown;
+      "Quality metrics"]
+      "Continuous integration"],
+    link: category, "Verified Services 2025"
+    realImplementation: contactInfo, unknown;
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"}
-  }
 ];
       address: "364 E Main St STE 1008 Middletown DE 19709"}
-  }
 ];
-  id: string, name: string;
-  tagline: string, price: string;
-  description: string, features: string[],
-  link: string, category: string;
-  realImplementation: boolean;
-  contactInfo: unknown;
-    mobile: string, email: string;
-    address: string;
+  id: string, name: tagline, string, price: description, string, features: string[],
+  link: string, category: realImplementation, boolean;
+  contactInfo: mobile, string, email: address, string;
   }
-}
 export const verifiedRealServices2025 Batch2: VerifiedRealService2025 Batch2[] = [,
     id: "ai-quality-assurance", name: "AI Quality Assurance Platform",
-    tagline: "Automated testing and quality control", price: "$79/month"
-    description: "AI-powered quality assurance platform that automates testing and ensures software quality."
+    tagline: "Automated testing and quality control", price: description, "AI-powered quality assurance platform that automates testing and ensures software quality."
     features: [;
       "Automated testing"
-      "AI defect detection"
-      "Performance monitoring"
-      "Quality metrics",
+      "AI defect detection"]
+      "Performance monitoring"]
+      "Quality metrics"
       "Continuous integration"],
     link: "/services/ai-quality-assurance", category: "Verified Services 2025",
-    realImplementation: true;
-    contactInfo: unknown;
+    realImplementation: contactInfo, unknown;
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"}
-  }
 ];
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
@@ -145,10 +121,9 @@ export const verifiedRealServices2025 Batch2: VerifiedRealService2025 Batch2[] =
   s: [,"
       "Automated testing","
       "AI defect detection","
-      "Performance monitoring","
-      "Quality metrics","
-      "Continuous integration"
-    ],
+      "Performance monitoring","]
+      "Quality metrics","]
+      "Continuous integration"],
     lin,"
   k: "/services/ai-quality-assurance",
     categor,"
@@ -162,12 +137,10 @@ export const verifiedRealServices2025 Batch2: VerifiedRealService2025 Batch2[] =
   addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
-  }
 ];
       addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
-  }
 ];
   i,
   d: string, nam,
@@ -190,7 +163,6 @@ export const verifiedRealServices2025 Batch2: VerifiedRealService2025 Batch2[] =
   l: string,
     addres,
   s: string}
-}
 export const,
   verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [,
     i,"
@@ -205,10 +177,9 @@ export const,
   s: [;"
       "Automated testing""
       "AI defect detection""
-      "Performance monitoring""
-      "Quality metrics""
-      "Continuous integration"
-    ],
+      "Performance monitoring""]
+      "Quality metrics""]
+      "Continuous integration"],
     lin,"
   k: "/services/ai-quality-assurance", categor,"
   y: "Verified Services 2025",
@@ -222,18 +193,15 @@ export const,
       addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
-  }
 ];
       emai,"
   l: "kleber@ziontechgroup.com",
   addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
-  }
 ];
 ;
-    id: "ai-quality-assurance"
-    name: "AI Quality Assurance Platform",
+    id: name, "AI Quality Assurance Platform",
     tagline: "Automated testing and quality control",
     price: "$79/month",
     description: "AI-powered quality assurance platform that automates testing and ensures software quality.",
@@ -241,15 +209,11 @@ export const,
       "Automated testing",
       "AI defect detection",
       "Performance monitoring",
-      "Quality metrics",
-      "Continuous integration"
-    ],
-    link: "/services/ai-quality-assurance"
-    category: "Verified Services 2025"
-    realImplementation: true;
-    contactInfo: unknown;
-      mobile: "+1 302 464 0950"
-      email: "kleber@ziontechgroup.com"
+      "Quality metrics"]
+      "Continuous integration"],
+    link: category, "Verified Services 2025"
+    realImplementation: contactInfo, unknown;
+      mobile: email, "kleber@ziontechgroup.com"
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'}};
@@ -272,10 +236,9 @@ export const,
   s: [,"
       "Automated testing","
       "AI defect detection","
-      "Performance monitoring","
-      "Quality metrics","
-      "Continuous integration"
-    ],
+      "Performance monitoring","]
+      "Quality metrics","]
+      "Continuous integration"],
     lin,"
   k: "/services/ai-quality-assurance",
     categor,"
@@ -305,7 +268,6 @@ export const,
       addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
-  }
 ];
 export interface VerifiedRealService2025Batch2,
   id: string; nam,
@@ -322,14 +284,13 @@ export interface VerifiedRealService2025Batch2,
   l: string; addres,
   s: string}; addres,
   s: string} export const,
-  verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [ addres,
-  s: string} ; export const,
+  verifiedRealServices2025Batch2: s, string} ; export const
   verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [, i,
   d: 'ai - quality - assurance',' nam,
   e: 'AI Quality Assurance Platform',' taglin,
   e: 'Automated testing and quality control',' pric,
-  e: '$79 / month', descriptio,
-  n:  ,' 'AI - powered quality assurance platform that automates testing and ensures software quality.', feature,
+  e: '$79 / month', descriptio
+  n:  ,' 'AI - powered quality assurance platform that automates testing and ensures software quality.', feature]
   s: [,' 'Automated testing',' 'AI defect detection',' 'Performance monitoring',' 'Quality metrics',' 'Continuous integration'],' lin,
   k: '/services / ai - quality - assurance',' categor,
   y: 'Verified Services 2025', real_implementatio,
@@ -370,9 +331,9 @@ export interface VerifiedRealService2025Batch2,
   verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [ i,"
   d: "ai-quality-assurance", nam,"
   e: "AI Quality Assurance Platform", taglin,"
-  e: "Automated testing and quality control", pric,"
-  e: "$79/month", descriptio,"
-  n: "AI-powered quality assurance platform that automates testing and ensures software quality.", feature,"
+  e: "Automated testing and quality control", pric,"]
+  e: "$79/month", descriptio,"]
+  n: "AI-powered quality assurance platform that automates testing and ensures software quality.", feature,"]
   s: [ "Automated testing" "AI defect detection" "Performance monitoring" "Quality metrics" "Continuous integration" ], lin,"
   k: "/services/ai-quality-assurance", categor,"
   y: "Verified Services 2025", realImplementatio,

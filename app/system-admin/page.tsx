@@ -1,12 +1,13 @@
 'use client';
 import React from 'react';
 
-const PagePage: React.FC = () => {
-  const features = [
+const PagePage: React.FC = () => {;
+const features = [
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
       description: 'Advanced AI technology to transform your business operations and improve efficiency'
+}
     },
     {
       icon: Zap,
@@ -20,10 +21,9 @@ const PagePage: React.FC = () => {
     },
     {
       icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
-    }
-  ];
+      title: 'Global Reach',]
+      description: 'Worldwide deployment and support for international businesses']
+    }];
 
   const benefits = [
           </div>
@@ -104,6 +104,6 @@ const PagePage: React.FC = () => {
       </section>
     </div>
   );
-};
-
-export default PagePage;
+};]
+];
+export default PagePage;]

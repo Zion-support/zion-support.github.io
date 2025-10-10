@@ -2,19 +2,15 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Search, X, ArrowRight, Clock, TrendingUp, Star } from 'lucide-react';
 
 interface SearchResult {
-  id: string;
-  title: string;
-  description: string;
-  url: string;
-  category: string;
-  type: 'page' | 'service' | 'blog' | 'documentation';
+  id: title, string;
+  description: url, string;
+  category: type, 'page' | 'service' | 'blog' | 'documentation';
   popularity?: number;
   lastModified?: string;
 }
 
 interface SearchModalProps {
-  isOpen: boolean;
-  onClose: () => void;
+  isOpen: onClose, () => void;
 }
 
 const mockSearchResults: SearchResult[] = [
@@ -65,23 +61,20 @@ const mockSearchResults: SearchResult[] = [
     url: '/api-docs',
     category: 'Documentation',
     type: 'documentation',
-    popularity: 80,
-    lastModified: '2024-01-05'
-  }
-];
+    popularity: 80,]
+    lastModified: '2024-01-05']
+  }];
 
 const recentSearches = [
   'AI Analytics',
-  'Workflow Automation',
-  'Healthcare AI'
-];
+  'Workflow Automation']
+  'Healthcare AI'];
 
 const popularSearches = [
   'AI Services',
   'Quantum Computing',
-  'Cybersecurity',
-  'Data Analytics'
-];
+  'Cybersecurity']
+  'Data Analytics'];
 
 const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => {</SearchModalProps>const</SearchModalProps> [query, setQuery] = useState('');
   const [results, setResults] = useState<SearchResult[]>([]);</SearchResult>const</SearchResult> [isSearching, setIsSearching] = useState(false);
@@ -91,27 +84,28 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
   const inputRef = useRef<HTMLInputElement>(null);</HTMLInputElement>const</HTMLInputElement> resultsRef = useRef<HTMLDivElement>(null);</HTMLDivElement>useEffect</HTMLDivElement>(() => {
     if (isOpen && inputRef.current) {
       inputRef.current.focus();
-    }
+}
   }, [isOpen]);
 
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
+  useEffect(() => {;
+const handleKeyDown = (e: KeyboardEvent) => {
       if (!isOpen) return;
 
       if (e.key === 'Escape') {
         onClose();
+}
       } else if (e.key === 'ArrowDown') {
         e.preventDefault();
-        setSelectedIndex(prev => 
-          prev < results.length - 1 ? prev + 1 : prev
+        setSelectedIndex(prev => )
+          prev < results.length - 1 ? prev + 1 : prev)
         );
-      } else if (e.key === 'ArrowUp') {
+} else if (e.key === 'ArrowUp') {
         e.preventDefault();
         setSelectedIndex(prev => prev > 0 ? prev - 1 : -1);
-      } else if (e.key === 'Enter' && selectedIndex >= 0) {
+} else if (e.key === 'Enter' && selectedIndex >= 0) {
         e.preventDefault();
         handleResultClick(results[selectedIndex]);
-      }
+}
     };
 
     document.addEventListener('keydown', handleKeyDown);
@@ -123,25 +117,25 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
       setResults([]);
       setShowSuggestions(true);
       return;
-    }
-
+}
     setIsSearching(true);
     setShowSuggestions(false);
 
     // Simulate API call delay
     await new Promise(resolve => setTimeout(resolve, 300));
 
-    const filteredResults = mockSearchResults.filter(result =>
+    const filteredResults = mockSearchResults.filter(result =>)
       result.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       result.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
       result.category.toLowerCase().includes(searchQuery.toLowerCase())
     );
 
-    // Sort by popularity and relevance
-    const sortedResults = filteredResults.sort((a, b) => {
-      const aRelevance = a.title.toLowerCase().includes(searchQuery.toLowerCase()) ? 2 : 1;
+    // Sort by popularity and relevance;
+const sortedResults = filteredResults.sort((a, b) => {;
+const aRelevance = a.title.toLowerCase().includes(searchQuery.toLowerCase()) ? 2 : 1;
       const bRelevance = b.title.toLowerCase().includes(searchQuery.toLowerCase()) ? 2 : 1;
       return (b.popularity || 0) * bRelevance - (a.popularity || 0) * aRelevance;
+}
     });
 
     setResults(sortedResults);
@@ -152,16 +146,19 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {</HTMLInputElement>const</HTMLInputElement> value = e.target.value;
     setQuery(value);
     searchResults(value);
+}
   };
 
   const handleResultClick = (result: SearchResult) => {
     window.location.href = result.url;
     onClose();
+}
   };
 
   const handleSuggestionClick = (suggestion: string) => {
     setQuery(suggestion);
     searchResults(suggestion);
+}
   };
 
   const getCategoryIcon = (category: string) => {
@@ -178,7 +175,7 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
         return '📚';
       default:
         return '🔍';
-    }
+}
   };
 
   const getTypeColor = (type: string) => {
@@ -193,7 +190,7 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
         return 'text-green-400';
       default:
         return 'text-gray-400';
-    }
+}
   };
 
   if (!isOpen) return null;
@@ -235,9 +232,9 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
               <div>
                 <h3 className="text-sm font-semibold text-gray-400 mb-3 flex items-center">
                   <Clock className="w-4 h-4 mr-2" />
-                  Recent Searches
-                </h3>
-                <div className="flex flex-wrap gap-2">
+                  Recent Searches)
+                </h3>)
+                <div className="flex flex-wrap gap-2">)
                   {recentSearches.map((search, index) => (
                     <button
                       key={index}
@@ -269,10 +266,9 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
                 </div>
               </div>
             </div>
-          )}
-
-          {/* Search Results */}
-          {query && (
+          )},
+      {/* Search Results */},
+      {query && (
             <div className="p-4">
               {isSearching ? (
                 <div className="flex items-center justify-center py-8">
@@ -307,8 +303,8 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
                                 <Star className="w-3 h-3" />
                                 <span>{result.popularity}%</span>
                               </div>
-                            )}
-                            {result.lastModified && (
+                            )},
+      {result.lastModified && (
                               <span>Updated {result.lastModified}</span>
                             )}
                           </div>
@@ -321,11 +317,11 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
               ) : (
                 <div className="text-center py-8">
                   <Search className="w-12 h-12 text-gray-600 mx-auto mb-4" />
-                  <h3 className="text-lg font-medium text-gray-300 mb-2">No results found</h3>
+                  <h3 className="text-lg font-medium text-gray-300 mb-2"></h>No results found</h3>
                   <p className="text-sm text-gray-500">
                     Try searching for something else or check your spelling
                   </p>
-                  <div className="text-sm text-gray-500 mt-4">
+                  <div className="text-sm text-gray-500 mt-4"></div></div>
                     Popular searches: AI Analytics, Quantum Computing, Workflow Automation
                   </div>
                 </div>

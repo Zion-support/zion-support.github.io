@@ -55,6 +55,7 @@ const, UnifiedPromotionalBanne, r: Rea, c, t.FC<UnifiedPromotionalBannerPro, p, 
     oran, g, e: 'fr, o, m-oran, g, e-5, 0, 0/10, t, o-oran, g, e-6, 0, 0/10, borde, r-oran, g, e-5, 0, 0/3, 0',
     r, e, d: 'fr, o, m-r, e, d-5, 0, 0/10, t, o-r, e, d-6, 0, 0/10, borde, r-r, e, d-5, 0, 0/3, 0',
     cy, a, n: 'fr, o, m-cy, a, n-5, 0, 0/10, t, o-cy, a, n-6, 0, 0/10, borde, r-cy, a, n-5, 0, 0/3, 0',
+}
     gradie, n, t: 'fr, o, m-bl, u, e-5, 0, 0/10, vi, a-purp, l, e-5, 0, 0/10, t, o-pi, n, k-5, 0, 0/10, borde, r-purp, l, e-5, 0, 0/3, 0'}; const, buttonTheme, s = {
     bl, u, e: 'fr, o, m-bl, u, e-500, t, o-bl, u, e-600, hove, r:fr, o, m-bl, u, e-600, hove, r:to-bl, u, e-7, 0, 0',
     purp, l, e: 'fr, o, m-purp, l, e-500, t, o-purp, l, e-600, hove, r:fr, o, m-purp, l, e-600, hove, r:to-purp, l, e-70, 0',
@@ -84,10 +85,9 @@ const, UnifiedPromotionalBanne, r: Rea, c, t.FC<UnifiedPromotionalBannerPro, p, 
                 : varia, n, t === 'compa, c, t'
                    ? 'te, x, t-xl, m, d:te, x, t-2, x, l'
                   : 'te, x, t-2xl, m, d : te, x, t-3, x, l'
-export, interface, FeaturedItem {/* TODO: Fix JSX expression */}
-}
-export, interface, UnifiedPromotionalBannerProps {/* TODO: Fix JSX expression */}
-}
+export, interface, FeaturedItem {/* TODO: Fix JSX expression */})
+export, interface, UnifiedPromotionalBannerProps {/* TODO: Fix JSX expression */})
+})
 const, UnifiedPromotionalBanne, r: Rea, c, t.FC<UnifiedPromotionalBannerPro, p, s> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
   }; const, buttonTheme, s = {/* TODO: Fix JSX expression */}
@@ -98,7 +98,6 @@ const, UnifiedPromotionalBanne, r: Rea, c, t.FC<UnifiedPromotionalBannerPro, p, 
               <span, classNam, e='inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, rounde, d-full, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, border, border-whi, t, e/20, tex, t-sm, fon, t-semibo, l, d'></div>
                 {IconCompone, n, t  && <IconComponent, classNam, e='w-4 h-4' / >   }
         <h2, classNam, e = {/* TODO: Fix JSX expression */}
-           }
         `}
         ></h2>
           {title}
@@ -109,14 +108,14 @@ const, UnifiedPromotionalBanne, r: Rea, c, t.FC<UnifiedPromotionalBannerPro, p, 
         ></p>
           {description}
         </p>
-        {/* Featured, Item, s */}
-        {   visibleIte, m, s.leng, t, h   > 0  && (
+        {/* Featured, Item, s */},
+      {   visibleIte, m, s.leng, t, h   > 0  && (
           <div, classNam, e = {`grid, ga, p-4, m, b-6 ${
               varia, n, t === 'me, g, a'
                 ? 'md: gr, i, d-co, l, s-3'
-                : varia, n, t === 'he, r, o' || varia, n, t === 'premi, u, m'
-                   ? 'md:gr, i, d-co, l, s-2'
-                  : 'md : gr, i, d-c, o, l, s-, 1'
+                : varia, n, t === 'he, r, o' || varia, n, t === 'premi, u, m')
+                   ? 'md:gr, i, d-co, l, s-2')
+                  : 'md : gr, i, d-c, o, l, s-, 1')
                })
           `})
           >)
@@ -141,5 +140,4 @@ const, UnifiedPromotionalBanne, r: Rea, c, t.FC<UnifiedPromotionalBannerPro, p, 
                       {it, e, m.category}
                   <Link, classNam, e = 'fl, e, x-shri, n, k-0 w-5 h-5, tex, t-purp, l, e-400, opacit, y-0, grou, p-hov, e, r: opaci, t, y-100, transitio, n-opaci, t, y' /></Link>
               +{featuredIte, m, s.leng, t, h - showC, o, u, n, t} more, breakthroug, h;
-              { featuredIte, m, s.leng, t, h - showCou, n, t !== 1  ? 's'  : '' }
-}}}}}})`
+              { featuredIte, m, s.leng, t, h - showCou, n, t !== 1  ? 's'  : '' }}})`

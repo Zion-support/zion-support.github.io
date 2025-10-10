@@ -2,15 +2,15 @@
 import React from 'react';
 import { FileText, Scale, Shield, AlertTriangle, CheckCircle, ArrowRight, Globe, User, Mail, Phone, Calendar, Lock, Database, Server, Key } from 'lucide-react';
 
-export default function TermsPage() {
-  const lastUpdated = 'January 1, 2024';
+export default function TermsPage() {;
+const lastUpdated = 'January 1, 2024';
   
   const sections = [
     {
       title: 'Acceptance of Terms',
       icon: CheckCircle,
       content: 'By accessing and using our website and services, you accept and agree to be bound by the terms and provision of this agreement.'
-    },
+},
     {
       title: 'Use License',
       icon: Key,
@@ -43,10 +43,9 @@ export default function TermsPage() {
     },
     {
       title: 'Governing Law',
-      icon: Scale,
-      content: 'These terms shall be governed by and construed in accordance with the laws of the United States.'
-    }
-  ];
+      icon: Scale,]
+      content: 'These terms shall be governed by and construed in accordance with the laws of the United States.']
+    }];
 
   return (
     <div className="min-h-screen bg-white"></div>
@@ -66,9 +65,9 @@ export default function TermsPage() {
       </div>
 
       <div className="py-20"></div>
-        <div className="container mx-auto px-4"></div>
-          <div className="max-w-4xl mx-auto"></div>
-            <div className="space-y-8">
+        <div className="container mx-auto px-4"></div>)
+          <div className="max-w-4xl mx-auto"></div>)
+            <div className="space-y-8">)
               {sections.map((section, index) => (</div>
                 <div key={index} className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm"></div>
                   <div className="flex items-start"></div>
@@ -108,12 +107,12 @@ export default function TermsPage() {
                 </div>
                 <div className="flex items-center"></div>
                   <User className="h-5 w-5 text-blue-600 mr-3" />
-                  <span className="text-gray-700">Zion Tech Group Legal Team</span>
+                  <span className="text-gray-700"></div></div>Zion Tech Group Legal Team</span>
                 </div>
               </div>
             </div>
 
-            <div className="mt-8 text-center"></div>
+            <div className="mt-8 text-center"></div></div></div>
               <p className="text-sm text-gray-500">
                 By using our services, you acknowledge that you have read and understood these terms.
               </p>

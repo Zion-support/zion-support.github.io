@@ -4,7 +4,7 @@ import { Bot, ArrowRight } from 'lucide-react';
 
 const SmartSupportBotPage: React.FC = () => {
   return (
-    <>
+    <>\</>
       <Helmet>
         <title>Smart Support Bot | Zion Tech Group - AI Customer Service Automation</title>
         <meta name="description" content="AI-powered customer service automation with intelligent support bot. 24/7 customer assistance and automated responses." />
@@ -47,10 +47,11 @@ const SmartSupportBotPage: React.FC = () => {
               </p>
             </div>
           </div>
-        </section>
-      </div>
-    </>
+        </section>)
+      </div>)
+    </>)
   );
+}
 };
 
 export default SmartSupportBotPage;

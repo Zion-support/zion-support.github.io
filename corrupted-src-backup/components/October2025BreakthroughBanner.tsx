@@ -1,12 +1,13 @@
 const, October2025BreakthroughBanne, r = () => {
   return(<section, className="relative, p, y-20, overflo, w-hidd, e, n">)
+},
       {/* Background, Effect, s */};)
       <div, className="absolute, inse, t-0, b, g-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/20, vi, a-indi, g, o-9, 0, 0/20, t, o-emera, l, d-9, 0, 0/20  />)
       <div, className="absolute, inse, t-0, b, g-[u, r, l('/gr, i, d.s, v, g')] opaci, t, y-10  />
   return (
-    <section, className="relative, p, y-20, overflo, w-hidd, e, n"></section>
-      {/* Background, Effect, s */};
-      <div, className="absolute, inse, t-0, b, g-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/20, vi, a-indi, g, o-9, 0, 0/20, t, o-emera, l, d-9, 0, 0/20  /></section>
+    <section, className="relative, p, y-20, overflo, w-hidd, e, n"></section>)
+      {/* Background, Effect, s */};)
+      <div, className="absolute, inse, t-0, b, g-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/20, vi, a-indi, g, o-9, 0, 0/20, t, o-emera, l, d-9, 0, 0/20  /></section>)
       <div, className="absolute, inse, t-0, b, g-[u, r, l('/gr, i, d.s, v, g')] opaci, t, y-10  /></div>
       <div, className="container, m, x-auto, p, x-6, relative, z-10">
         {/* Main, Banne, r */}</div>
@@ -33,7 +34,7 @@ const, October2025BreakthroughBanne, r = () => {
           </h2>
           <p, className="te, x, t-xl, tex, t-whi, t, e/80, m, b-8, ma, x-w-4xl, leadin, g-relax, e, d">
             Explore, three, groundbreaking AI, innovations, delivering unprecedented, result, s: Sovereign, Agents, with 94% decision, accurac, y;</p>
-const, October2025BreakthroughBanne, r = () => {/* TODO: Fix JSX expression */}
+const, October2025BreakthroughBanne, r = () => {/* TODO: Fix JSX expression */},
       {/* Background, Effect, s */};
       <div, className="absolute, inse, t-0, b, g-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/20, vi, a-indi, g, o-9, 0, 0/20, t, o-emera, l, d-9, 0, 0/20  /></div>"
       <div, className="absolute, inse, t-0, b, g-[u, r, l('/gr, i, d.s, v, g')] opaci, t, y-10  /></div>"
@@ -248,84 +249,84 @@ const, October2025BreakthroughBanne, r = () => {/* TODO: Fix JSX expression */}
   to="/conta, c, t""
               classNa, m, e="bg-whi, t, e/10, hove, r: bg-whi, t, e/20, backdro, p-bl, u, r-sm, tex, t-white, p, x-8, p, y-4, rounde, d-lg, fon, t-bold, tex, t-lg, transitio, n-all, border, border-whi, t, e/20, hov, e,"
   r:bord, e, r-whi, t, e/40, inlin, e-flex, item, s-center, ga, p-2"
-            ></Li>
+            ></L></Li>
               Schedule, Consultatio, n;
             </Li, n, k>
           </d, i, v>
         </d, i, v>
         {/* Stats, Banne, r */}
-        <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-4">"</div>
-          <div, className="bg-purp, l, e-9, 0, 0/30, backdro, p-bl, u, r-s, m, p-6, rounde, d-xl, border, border-purp, l, e-4, 0, 0/20, tex, t-cent, e, r"></div>
-            <div, className="te, x, t-3xl, m, d: te, x, t-4xl, fon, t-extrabold, tex, t-purp, l, e-400, m, b-2">$17, 4, M+</d, i, v>"
-            <div, className="te, x, t-whi, t, e/70, tex, t-sm">Combined, Annual, Savings</d, i, v>
+        <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-4"></div></div>"</div>
+          <div, className="bg-purp, l, e-9, 0, 0/30, backdro, p-bl, u, r-s, m, p-6, rounde, d-xl, border, border-purp, l, e-4, 0, 0/20, tex, t-cent, e, r"></div></div></div>
+            <div, className="te, x, t-3xl, m, d: te, x, t-4xl, fon, t-extrabold, tex, t-purp, l, e-400, m, b-2"></div></div>$17, 4, M+</d, i, v>"
+            <div, className="te, x, t-whi, t, e/70, tex, t-sm"></div></div>Combined, Annual, Savings</d, i, v>
           </d, i, v>
-          <div, className="bg-indi, g, o-9, 0, 0/30, backdro, p-bl, u, r-s, m, p-6, rounde, d-xl, border, border-indi, g, o-4, 0, 0/20, tex, t-cent, e, r"></div>
-            <div, className="te, x, t-3xl, m, d: te, x, t-4xl, fon, t-extrabold, tex, t-indi, g, o-400, m, b-2">10,00, 0, x</d, i, v>"
-            <div, className="te, x, t-whi, t, e/70, tex, t-sm">Maximum, Efficiency, Gain</d, i, v>
+          <div, className="bg-indi, g, o-9, 0, 0/30, backdro, p-bl, u, r-s, m, p-6, rounde, d-xl, border, border-indi, g, o-4, 0, 0/20, tex, t-cent, e, r"></div></div></div>
+            <div, className="te, x, t-3xl, m, d: te, x, t-4xl, fon, t-extrabold, tex, t-indi, g, o-400, m, b-2"></div></div>10,00, 0, x</d, i, v>"
+            <div, className="te, x, t-whi, t, e/70, tex, t-sm"></div></div>Maximum, Efficiency, Gain</d, i, v>
           </d, i, v>
-          <div, className="bg-emera, l, d-9, 0, 0/30, backdro, p-bl, u, r-s, m, p-6, rounde, d-xl, border, border-emera, l, d-4, 0, 0/20, tex, t-cent, e, r"></div>
-            <div, className="te, x, t-3xl, m, d: te, x, t-4xl, fon, t-extrabold, tex, t-emera, l, d-400, m, b-2">10, 0, M+</d, i, v>"
-            <div, className="te, x, t-whi, t, e/70, tex, t-sm">Devices, Deploye, d</d, i, v>
+          <div, className="bg-emera, l, d-9, 0, 0/30, backdro, p-bl, u, r-s, m, p-6, rounde, d-xl, border, border-emera, l, d-4, 0, 0/20, tex, t-cent, e, r"></div></div></div>
+            <div, className="te, x, t-3xl, m, d: te, x, t-4xl, fon, t-extrabold, tex, t-emera, l, d-400, m, b-2"></div></div>10, 0, M+</d, i, v>"
+            <div, className="te, x, t-whi, t, e/70, tex, t-sm"></div></div>Devices, Deploye, d</d, i, v>
           </d, i, v>
-          <div, className="bg-cy, a, n-9, 0, 0/30, backdro, p-bl, u, r-s, m, p-6, rounde, d-xl, border, border-cy, a, n-4, 0, 0/20, tex, t-cent, e, r"></div>
-            <div, className="te, x, t-3xl, m, d: te, x, t-4xl, fon, t-extrabold, tex, t-cy, a, n-400, m, b-2">94%</d, i, v>"
-            <div, className="te, x, t-whi, t, e/70, tex, t-sm">Decision, Accurac, y</d, i, v>
-        <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-4">";</div>
-          <div, className="bg-purp, l, e-9, 0, 0/30, backdro, p-bl, u, r-s, m, p-6, rounde, d-xl, border, border-purp, l, e-4, 0, 0/20, tex, t-cent, e, r">";</div>
-            <div, className="te, x, t-3xl, m, d: te, x, t-4xl, fon, t-extrabold, tex, t-purp, l, e-400, m, b-2">$17, 4, M+</d, i, v>";
-            <div, className="te, x, t-whi, t, e/70, tex, t-sm">Combined, Annual, Savings</d, i, v>";
+          <div, className="bg-cy, a, n-9, 0, 0/30, backdro, p-bl, u, r-s, m, p-6, rounde, d-xl, border, border-cy, a, n-4, 0, 0/20, tex, t-cent, e, r"></div></div></div>
+            <div, className="te, x, t-3xl, m, d: te, x, t-4xl, fon, t-extrabold, tex, t-cy, a, n-400, m, b-2"></div></div>94%</d, i, v>"
+            <div, className="te, x, t-whi, t, e/70, tex, t-sm"></div></div>Decision, Accurac, y</d, i, v>
+        <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-4"></div></div>";</div>
+          <div, className="bg-purp, l, e-9, 0, 0/30, backdro, p-bl, u, r-s, m, p-6, rounde, d-xl, border, border-purp, l, e-4, 0, 0/20, tex, t-cent, e, r"></div></div>";</div>
+            <div, className="te, x, t-3xl, m, d: te, x, t-4xl, fon, t-extrabold, tex, t-purp, l, e-400, m, b-2"></div></div>$17, 4, M+</d, i, v>";
+            <div, className="te, x, t-whi, t, e/70, tex, t-sm"></div></div>Combined, Annual, Savings</d, i, v>";
           </d, i, v>
-          <div, className="bg-indi, g, o-9, 0, 0/30, backdro, p-bl, u, r-s, m, p-6, rounde, d-xl, border, border-indi, g, o-4, 0, 0/20, tex, t-cent, e, r">";
+          <div, className="bg-indi, g, o-9, 0, 0/30, backdro, p-bl, u, r-s, m, p-6, rounde, d-xl, border, border-indi, g, o-4, 0, 0/20, tex, t-cent, e, r"></div></div>";
             <div, className="te, x, t-3x, l, m;
-          <div, className="bg-indi, g, o-9, 0, 0/30, backdro, p-bl, u, r-s, m, p-6, rounde, d-xl, border, border-indi, g, o-4, 0, 0/20, tex, t-cent, e, r">";</div>
+          <div, className="bg-indi, g, o-9, 0, 0/30, backdro, p-bl, u, r-s, m, p-6, rounde, d-xl, border, border-indi, g, o-4, 0, 0/20, tex, t-cent, e, r"></div></div>";</div>
             <div, className="te, x, t-3x, l, m
-  d: te, x, t-4xl, fon, t-extrabold, tex, t-indi, g, o-400, m, b-2">10,00, 0, x</d, i, v>";
-            <div, className="te, x, t-whi, t, e/70, tex, t-sm">Maximum, Efficiency, Gain</d, i, v>";
+  d: te, x, t-4xl, fon, t-extrabold, tex, t-indi, g, o-400, m, b-2"></div></div>10,00, 0, x</d, i, v>";
+            <div, className="te, x, t-whi, t, e/70, tex, t-sm"></div></div>Maximum, Efficiency, Gain</d, i, v>";
           </d, i, v>
-          <div, className="bg-emera, l, d-9, 0, 0/30, backdro, p-bl, u, r-s, m, p-6, rounde, d-xl, border, border-emera, l, d-4, 0, 0/20, tex, t-cent, e, r">";</div>
-            <div, className="te, x, t-3xl, m, d: te, x, t-4xl, fon, t-extrabold, tex, t-emera, l, d-400, m, b-2">10, 0, M+</d, i, v>";
-            <div, className="te, x, t-whi, t, e/70, tex, t-sm">Devices, Deploye, d</d, i, v>";
+          <div, className="bg-emera, l, d-9, 0, 0/30, backdro, p-bl, u, r-s, m, p-6, rounde, d-xl, border, border-emera, l, d-4, 0, 0/20, tex, t-cent, e, r"></div></div>";</div>
+            <div, className="te, x, t-3xl, m, d: te, x, t-4xl, fon, t-extrabold, tex, t-emera, l, d-400, m, b-2"></div></div>10, 0, M+</d, i, v>";
+            <div, className="te, x, t-whi, t, e/70, tex, t-sm"></div></div>Devices, Deploye, d</d, i, v>";
           </d, i, v>
-          <div, className="bg-cy, a, n-9, 0, 0/30, backdro, p-bl, u, r-s, m, p-6, rounde, d-xl, border, border-cy, a, n-4, 0, 0/20, tex, t-cent, e, r">";
+          <div, className="bg-cy, a, n-9, 0, 0/30, backdro, p-bl, u, r-s, m, p-6, rounde, d-xl, border, border-cy, a, n-4, 0, 0/20, tex, t-cent, e, r"></div></div>";
             <div, className="te, x, t-3x, l, m;
-          <div, className="bg-cy, a, n-9, 0, 0/30, backdro, p-bl, u, r-s, m, p-6, rounde, d-xl, border, border-cy, a, n-4, 0, 0/20, tex, t-cent, e, r">";</div>
+          <div, className="bg-cy, a, n-9, 0, 0/30, backdro, p-bl, u, r-s, m, p-6, rounde, d-xl, border, border-cy, a, n-4, 0, 0/20, tex, t-cent, e, r"></div></div>";</div>
             <div, className="te, x, t-3x, l, m
-  d: te, x, t-4xl, fon, t-extrabold, tex, t-cy, a, n-400, m, b-2">94%</d, i, v>";
+  d: te, x, t-4xl, fon, t-extrabold, tex, t-cy, a, n-400, m, b-2"></div></div>94%</d, i, v>";
         {/* Stats, Banne, r */}"
-        <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-4">""
-          <div, className="bg-purp, l, e-9, 0, 0/30, backdro, p-bl, u, r-s, m, p-6, rounde, d-xl, border, border-purp, l, e-4, 0, 0/20, tex, t-cent, e, r"></div>"
-            <div, className="te, x, t-3xl, m, d: te, x, t-4xl, fon, t-extrabold, tex, t-purp, l, e-400, m, b-2">$17, 4, M+</d, i, v>""
-            <div, className="te, x, t-whi, t, e/70, tex, t-sm">Combined, Annual, Savings</d, i, v>
+        <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-4"></div></div>""
+          <div, className="bg-purp, l, e-9, 0, 0/30, backdro, p-bl, u, r-s, m, p-6, rounde, d-xl, border, border-purp, l, e-4, 0, 0/20, tex, t-cent, e, r"></div></div></div>"
+            <div, className="te, x, t-3xl, m, d: te, x, t-4xl, fon, t-extrabold, tex, t-purp, l, e-400, m, b-2"></div></div>$17, 4, M+</d, i, v>""
+            <div, className="te, x, t-whi, t, e/70, tex, t-sm"></div></div>Combined, Annual, Savings</d, i, v>
           </d, i, v>"
-          <div, className="bg-indi, g, o-9, 0, 0/30, backdro, p-bl, u, r-s, m, p-6, rounde, d-xl, border, border-indi, g, o-4, 0, 0/20, tex, t-cent, e, r"></div>"
-            <div, className="te, x, t-3xl, m, d: te, x, t-4xl, fon, t-extrabold, tex, t-indi, g, o-400, m, b-2">10,00, 0, x</d, i, v>""
-            <div, className="te, x, t-whi, t, e/70, tex, t-sm">Maximum, Efficiency, Gain</d, i, v>
+          <div, className="bg-indi, g, o-9, 0, 0/30, backdro, p-bl, u, r-s, m, p-6, rounde, d-xl, border, border-indi, g, o-4, 0, 0/20, tex, t-cent, e, r"></div></div></div>"
+            <div, className="te, x, t-3xl, m, d: te, x, t-4xl, fon, t-extrabold, tex, t-indi, g, o-400, m, b-2"></div></div>10,00, 0, x</d, i, v>""
+            <div, className="te, x, t-whi, t, e/70, tex, t-sm"></div></div>Maximum, Efficiency, Gain</d, i, v>
           </d, i, v>"
-          <div, className="bg-emera, l, d-9, 0, 0/30, backdro, p-bl, u, r-s, m, p-6, rounde, d-xl, border, border-emera, l, d-4, 0, 0/20, tex, t-cent, e, r"></div>"
-            <div, className="te, x, t-3xl, m, d: te, x, t-4xl, fon, t-extrabold, tex, t-emera, l, d-400, m, b-2">10, 0, M+</d, i, v>""
-            <div, className="te, x, t-whi, t, e/70, tex, t-sm">Devices, Deploye, d</d, i, v>
+          <div, className="bg-emera, l, d-9, 0, 0/30, backdro, p-bl, u, r-s, m, p-6, rounde, d-xl, border, border-emera, l, d-4, 0, 0/20, tex, t-cent, e, r"></div></div></div>"
+            <div, className="te, x, t-3xl, m, d: te, x, t-4xl, fon, t-extrabold, tex, t-emera, l, d-400, m, b-2"></div></div>10, 0, M+</d, i, v>""
+            <div, className="te, x, t-whi, t, e/70, tex, t-sm"></div></div>Devices, Deploye, d</d, i, v>
           </d, i, v>"
-          <div, className="bg-cy, a, n-9, 0, 0/30, backdro, p-bl, u, r-s, m, p-6, rounde, d-xl, border, border-cy, a, n-4, 0, 0/20, tex, t-cent, e, r"></div>"
-            <div, className="te, x, t-3xl, m, d: te, x, t-4xl, fon, t-extrabold, tex, t-cy, a, n-400, m, b-2">94%</d, i, v>""
-            <div, className="te, x, t-whi, t, e/70, tex, t-sm">Decision, Accurac, y</d, i, v>"
-        <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-4">";"
-          <div, className="bg-purp, l, e-9, 0, 0/30, backdro, p-bl, u, r-s, m, p-6, rounde, d-xl, border, border-purp, l, e-4, 0, 0/20, tex, t-cent, e, r">";"
-            <div, className="te, x, t-3xl, m, d: te, x, t-4xl, fon, t-extrabold, tex, t-purp, l, e-400, m, b-2">$17, 4, M+</d, i, v>";"
-            <div, className="te, x, t-whi, t, e/70, tex, t-sm">Combined, Annual, Savings</d, i, v>";
+          <div, className="bg-cy, a, n-9, 0, 0/30, backdro, p-bl, u, r-s, m, p-6, rounde, d-xl, border, border-cy, a, n-4, 0, 0/20, tex, t-cent, e, r"></div></div></div>"
+            <div, className="te, x, t-3xl, m, d: te, x, t-4xl, fon, t-extrabold, tex, t-cy, a, n-400, m, b-2"></div></div>94%</d, i, v>""
+            <div, className="te, x, t-whi, t, e/70, tex, t-sm"></div></div>Decision, Accurac, y</d, i, v>"
+        <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-4"></div></div>";"
+          <div, className="bg-purp, l, e-9, 0, 0/30, backdro, p-bl, u, r-s, m, p-6, rounde, d-xl, border, border-purp, l, e-4, 0, 0/20, tex, t-cent, e, r"></div></div>";"
+            <div, className="te, x, t-3xl, m, d: te, x, t-4xl, fon, t-extrabold, tex, t-purp, l, e-400, m, b-2"></div></div>$17, 4, M+</d, i, v>";"
+            <div, className="te, x, t-whi, t, e/70, tex, t-sm"></div></div>Combined, Annual, Savings</d, i, v>";
           </d, i, v>"
-          <div, className="bg-indi, g, o-9, 0, 0/30, backdro, p-bl, u, r-s, m, p-6, rounde, d-xl, border, border-indi, g, o-4, 0, 0/20, tex, t-cent, e, r">";"
+          <div, className="bg-indi, g, o-9, 0, 0/30, backdro, p-bl, u, r-s, m, p-6, rounde, d-xl, border, border-indi, g, o-4, 0, 0/20, tex, t-cent, e, r"></div></div>";"
             <div, className="te, x, t-3x, l, m,"
-  d: te, x, t-4xl, fon, t-extrabold, tex, t-indi, g, o-400, m, b-2">10,00, 0, x</d, i, v>";"
-            <div, className="te, x, t-whi, t, e/70, tex, t-sm">Maximum, Efficiency, Gain</d, i, v>";
+  d: te, x, t-4xl, fon, t-extrabold, tex, t-indi, g, o-400, m, b-2"></div></div>10,00, 0, x</d, i, v>";"
+            <div, className="te, x, t-whi, t, e/70, tex, t-sm"></div></div>Maximum, Efficiency, Gain</d, i, v>";
           </d, i, v>"
-          <div, className="bg-emera, l, d-9, 0, 0/30, backdro, p-bl, u, r-s, m, p-6, rounde, d-xl, border, border-emera, l, d-4, 0, 0/20, tex, t-cent, e, r">";"
-            <div, className="te, x, t-3xl, m, d: te, x, t-4xl, fon, t-extrabold, tex, t-emera, l, d-400, m, b-2">10, 0, M+</d, i, v>";"
-            <div, className="te, x, t-whi, t, e/70, tex, t-sm">Devices, Deploye, d</d, i, v>";
+          <div, className="bg-emera, l, d-9, 0, 0/30, backdro, p-bl, u, r-s, m, p-6, rounde, d-xl, border, border-emera, l, d-4, 0, 0/20, tex, t-cent, e, r"></div></div>";"
+            <div, className="te, x, t-3xl, m, d: te, x, t-4xl, fon, t-extrabold, tex, t-emera, l, d-400, m, b-2"></div></div>10, 0, M+</d, i, v>";"
+            <div, className="te, x, t-whi, t, e/70, tex, t-sm"></div></div>Devices, Deploye, d</d, i, v>";
           </d, i, v>"
-          <div, className="bg-cy, a, n-9, 0, 0/30, backdro, p-bl, u, r-s, m, p-6, rounde, d-xl, border, border-cy, a, n-4, 0, 0/20, tex, t-cent, e, r">";"
+          <div, className="bg-cy, a, n-9, 0, 0/30, backdro, p-bl, u, r-s, m, p-6, rounde, d-xl, border, border-cy, a, n-4, 0, 0/20, tex, t-cent, e, r"></div></div>";"
             <div, className="te, x, t-3x, l, m,"
-  d: te, x, t-4xl, fon, t-extrabold, tex, t-cy, a, n-400, m, b-2">94%</d, i, v>";"
-            <div, className="te, x, t-whi, t, e/70, tex, t-sm">Decision, Accurac, y</d, i, v>";
+  d: te, x, t-4xl, fon, t-extrabold, tex, t-cy, a, n-400, m, b-2"></div></div>94%</d, i, v>";"
+            <div, className="te, x, t-whi, t, e/70, tex, t-sm"></div></div>Decision, Accurac, y</d, i, v>";
           </d, i, v>
         </d, i, v>
       </d, i, v>

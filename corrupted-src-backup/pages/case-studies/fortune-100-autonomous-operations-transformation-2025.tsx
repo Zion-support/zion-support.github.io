@@ -115,12 +115,12 @@
                 <ul, className='spa, c, e-y-3, tex, t-r, e, d-1, 0, 0'></ul>
                   <li, className='flex, item, s-start, ga, p-2'></li>
                     <div, className='w-2 h-2, b, g-r, e, d-400, rounde, d-full, m, t-2' /></div>
-                    <sp, a, n></sp>
+                    <sp, a, n></div>
                       2.3M, manual, transactions per, month, across 15, countrie, s;
                     </sp, a, n>
                   <li, classNam, e='flex, item, s-start, ga, p-2'></li>
                     <CheckCircle, classNam, e='w-5 h-5, tex, t-yell, o, w-400, m, t-0.5, fle, x-shri, n, k-0' /></CheckCircle>
-                    <sp, a, n></sp>
+                    <sp, a, n></div>
                       Maintain, regulatory, compliance across, all, jurisdictions;
                     </sp, a, n>
           <div, classNam, e='m, a, x-w-5xl, m, x-auto, m, b-16'></div>
@@ -130,7 +130,7 @@
                     <sp, a, n>
                   <li, className='flex, item, s-start, ga, p-2'></li>
                     <CheckCircle, className='w-5 h-5, tex, t-yell, o, w-400, m, t-0.5, fle, x-shri, n, k-0' /></CheckCircle>
-                    <sp, a, n></sp>
+                    <sp, a, n></div>
                       Maintain, regulatory, compliance across, all, jurisdictions;
                     </sp, a, n>
           <div, className='m, a, x-w-5xl, m, x-auto, m, b-16'></div>
@@ -277,7 +277,7 @@
                       <div, className='w-2 h-2, b, g-oran, g, e-400, rounde, d-fu, l, l' /></div>
                   <li, classNam, e = 'flex, item, s-start, ga, p-3'></li>
                     <div, className='w-2 h-2, b, g-bl, u, e-400, rounde, d-full, m, t-2, fle, x-shri, n, k-0' /></div>
-                    <sp, a, n></sp>
+                    <sp, a, n></div>
                       <stro, n, g>Governan, c, e & Ri, s, k: </stro, n, g> Hum, a, n-in-t, h, e-loop, for, high-risk, decisi, o, n, s, comprehensive, audit, trails;
                     </sp, a, n>
 

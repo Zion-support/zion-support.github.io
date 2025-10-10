@@ -24,12 +24,13 @@ import {
   Bot
 } from 'lucide-react';
 
-const ProcessAutomationPage: React.FC = () => {
-  const features = [
+const ProcessAutomationPage: React.FC = () => {;
+const features = [
     {
       icon: Zap,
       title: 'Workflow Automation',
       description: 'Streamline your business processes with intelligent automation that reduces manual work and errors.'
+}
     },
     {
       icon: Bot,
@@ -43,10 +44,9 @@ const ProcessAutomationPage: React.FC = () => {
     },
     {
       icon: BarChart,
-      title: 'Performance Monitoring',
-      description: 'Track and optimize your automated processes with real-time analytics and reporting.'
-    }
-  ];
+      title: 'Performance Monitoring',]
+      description: 'Track and optimize your automated processes with real-time analytics and reporting.']
+    }];
 
   const benefits = [
     'Reduce manual work and human errors',
@@ -55,12 +55,11 @@ const ProcessAutomationPage: React.FC = () => {
     'Improve process consistency',
     'Scale your business operations',
     'Enhance employee productivity',
-    '24/7 automated operations',
-    'Custom automation solutions'
-  ];
+    '24/7 automated operations']
+    'Custom automation solutions'];
 
   return (
-    <>
+    <>\</>
       <Helmet>
         <title>Process Automation Services - Zion Tech Group | Workflow Automation</title>
         <meta name="description" content="Professional process automation services by Zion Tech Group. Streamline workflows, reduce costs, and improve efficiency with AI-powered automation." />
@@ -83,9 +82,9 @@ const ProcessAutomationPage: React.FC = () => {
                 <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
                   <Zap className="mr-2 h-5 w-5" />
                   Automate Now
-                </button>
-                <button className="border border-white/20 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300 flex items-center justify-center">
-                  <Phone className="mr-2 h-5 w-5" />
+                </button>)
+                <button className="border border-white/20 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300 flex items-center justify-center">)
+                  <Phone className="mr-2 h-5 w-5" />)
                   Call (302) 464-0950
                 </button>
               </div>

@@ -5,10 +5,9 @@ function runNode(relPath) args = []) {const abs = path.resolve(__dirname, '..', 
     stdio: 'pipe'),
     encoding: 'utf8'}
   });
-  return {status: res.status || 0;
-    stdout: res.stdout || ''}
+  return {status: stdout, res.stdout || ''}
     stderr: res.stderr || '';
-  const res = spawnSync('node', [abs, ...args], {/* TODO: Fix JSX expression */}
+  const res = spawnSync('node', [abs, ...args], {/* TODO: Fix JSX expression */})
   g: 'utf8'})
   });
   return {/* TODO: Fix JSX expression */}
@@ -30,7 +29,7 @@ exports.handler = async () => {const logs = []}
     return status;
   }
   step('front: directory-builder')
-  step('fron,
+  step('fron,)
   t: directory-builder')
     'automation/front-index-directory-builder.cjs')
   );
@@ -55,11 +54,8 @@ const path = require('path');' const { spawnSync } = require('child_process'); f
   t: res.stdout || ''; stder,
   r: res.stderr || '' }; } exports.config = {/* TODO: Fix JSX expression */}`
   e: '*/30 * * * *'} }; exports.handler = async () => {const logs = []} function step(name) rel} args = []) { logs.push(`\\n=== ${name} ===`); const {status, stdout} stderr } = runNode(rel) args); if (stdout) logs.push(stdout); if (stderr) logs.push(stderr); logs.push(`exit=${status}`); return status; } ' step('fron)
-  t: directory-builder') 'automation/front-index-directory-builder.cjs');' step('fron)
-  t: ads') 'automation/front-index-ads.cjs');' step('og-imag)
-  e: generator') 'automation/og-image-generator.cjs');' step('homepag)
-  e: updater') 'automation/homepage-updater.cjs');' step('homepag)
-  e: auto-advertiser') 'automation/homepage-auto-advertiser.cjs'); ' step('gi)
-  t: sync') 'automation/advanced-git-sync.cjs'); ' return {/* TODO: Fix JSX expression */}
+  t: t, ads') 'automation/front-index-ads.cjs');' step('og-imag)
+  e: e, updater') 'automation/homepage-updater.cjs');' step('homepag)
+  e: t, sync') 'automation/advanced-git-sync.cjs'); ' return {/* TODO: Fix JSX expression */}
   e: 200} bod,
   y: logs.join('\n') }; };'`

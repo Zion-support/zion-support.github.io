@@ -3,14 +3,16 @@ import React from 'react';
 import { Mail, Target, Send, BarChart, Users, TrendingUp } from 'lucide-react';
 
 const AiEmailMarketingPage: React.FC = () => {
+}
 import {Mail, Send, BarChart, Users, Target, CheckCircle, ArrowRight, Star, TrendingUp} from 'lucide-react';
 
-const AIEmailMarketingPage: React.FC = () => {
-  const _features = [
+const AIEmailMarketingPage: React.FC = () => {;
+const _features = [
     {
       icon: Mail,
       title: 'AI Content Generation',
       description:     ,
+}
 $4},
       icon: Target,
       title: 'Smart Segmentation',
@@ -26,18 +28,16 @@ icon$5: Users,
       description:       ,
 icon$5: TrendingUp,
       title: 'A/B Testing',
-      description:     ,
-$4}
-  ];
+      description:     ]
+$4}];
 
   const benefits = [
     'Increase open rates by 200%',
     'Boost click-through rates by 150%',
     'Reduce unsubscribe rates by 60%',
     'Improve conversion rates by 180%',
-    'Save 15+ hours per week'
-
-  const emailTypes = [
+    'Save 15+ hours per week';
+const emailTypes = [
     { name: 'Welcome Series', icon: '👋', description: 'Onboard new subscribers' },
     { name: 'Newsletter', icon: '📰', description: 'Regular updates and content' },
     { name: 'Promotional', icon: '🎯', description: 'Sales and special offers' },
@@ -55,11 +55,9 @@ $4}
         '10,000 emails/month',
         'Basic AI features',
         'Email templates',
-        'Basic analytics',
-        'Email support'
-      ],
-      popular: false
-      name: 'Professional',
+        'Basic analytics']
+        'Email support'],
+      popular: name, 'Professional',
       price: '$79',
       description: 'Ideal for growing businesses',
         '10,000 subscribers',
@@ -69,8 +67,7 @@ $4}
         'Advanced analytics',
         'Priority support',
         'A/B testing'
-      popular: true
-      name: 'Enterprise',
+      popular: name, 'Enterprise',
       price: '$199',
       description: 'For large organizations',
         'Unlimited subscribers',
@@ -106,9 +103,9 @@ import Footer from '../components/Footer';
             </button>
             <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors">
               Learn More
-          </div>
-      
-      <Footer />
+          </div>)
+      )
+      <Footer />)
   );
 };
 

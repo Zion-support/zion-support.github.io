@@ -2,12 +2,13 @@
 import React from 'react';
 'use client';
 
-const PageBackupPage: React.FC = () => {
-  const features = [
+const PageBackupPage: React.FC = () => {;
+const features = [
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
       description: 'Advanced AI technology to transform your business operations and improve efficiency'
+}
     },
     {
       icon: Zap,
@@ -21,10 +22,9 @@ const PageBackupPage: React.FC = () => {
     },
     {
       icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
-    }
-  ];
+      title: 'Global Reach',]
+      description: 'Worldwide deployment and support for international businesses']
+    }];
 
   const benefits = [
     'Advanced AI technology integration',
@@ -33,9 +33,8 @@ const PageBackupPage: React.FC = () => {
     'Scalable and flexible solutions',
     '24/7 technical support',
     'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ];
+    'Cost-effective pricing plans']
+    'Proven track record of success'];
 
   return (
             </h1>
@@ -49,9 +48,9 @@ const PageBackupPage: React.FC = () => {
             </p>
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
-              </div>
+                <p className="text-gray-300">{feature.description}</p>)
+              </div>)
+              </div>)
             ))}
           </div>
         </div>

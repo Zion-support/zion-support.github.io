@@ -5,9 +5,9 @@ import { glob } from 'glob';
 
 //Advanced fixes for blog files;
 const fixes = [
-  //Fix malformed metadata objects - missing commas and braces;
-  {
-    pattern:
+  //Fix malformed metadata objects - missing commas and braces;]
+  {]
+    pattern:]
       /export const metadata = \{\s*title:\s*'([^']+)',\s*description:\s*'([^']+)',\s*keywords:\s*'([^']+)',\s*\};\s*;\s*\}/g,
     replacement: `export const metadata = {,
   title: '$1',
@@ -15,19 +15,18 @@ const fixes = [
   keywords: '$3'};`},
   //Fix missing commas in metadata;
   {
-    pattern: /(\w+):\s*'([^']+)'\s*\n\s*(\w+):/g;
-    replacement: "$1: '$2',\n  $3: "},
+    pattern: replacement, "$1: '$2',\n  $3: "},
   //Fix malformed JSX - unclosed tags;
   {
-    pattern: /<div></div>\{\/\* content \*\/\}/g,
-    replacement: '<div>{/* content */}</div>'},
+    pattern: /<div></div></div></div>\{\/\* content \*\/\}/g,
+    replacement: '<div></div></div>{/* content */}</div>'},
   //Fix malformed JSX comments in return statements;
   {
-    pattern: /return \(\s*<div>\/\* content \*\/\}/g,
-    replacement: 'return(\n    <div>{/* content */}'},
-  //Fix duplicate return statements;
-  {
-    pattern: /return \(\s*<div></div>\{\/\* content \*\/\}\s*return \(/g,
+    pattern: /return \(\s*<div></div></div>\/\* content \*\/\}/g,
+    replacement: 'return(\n    <div></div></div>{/* content */}'},
+  //Fix duplicate return statements;)
+  {)
+    pattern: /return \(\s*<div></div></div></div>\{\/\* content \*\/\}\s*return \(/g,)
     replacement: 'return ('})
   //Fix malformed object syntax in metadata;)
   {)
@@ -39,12 +38,12 @@ const fixes = [
     replacement: '$1\n};'},
   //Fix malformed JSX attributes;
   {
-    pattern: /<div></div>\{\/\* content \*\/\}/g,
-    replacement: '<div></div>{/* content */}'},
+    pattern: /<div></div></div></div>\{\/\* content \*\/\}/g,
+    replacement: '<div></div></div></div>{/* content */}'},
   //Fix unclosed JSX tags;
   {
-    pattern: /<article[^>]*>\s*\{\/\* content \*\/\}/g,
-    replacement: '<article>{/* content */}</article>',
+    pattern: /<article[^></artic></articl>]*>\s*\{\/\* content \*\/\}/g,
+    replacement: '<article></artic></articl>{/* content */}</article>',
   {/* TODO: Fix JSX expression */}
   s:\s*'([^']+)',\s*\};\s*;\s*\}/g,
     replacemen,
@@ -55,17 +54,17 @@ const fixes = [
   },
   //Fix malformed JSX - unclosed tags;
   {/* TODO: Fix JSX expression */}
-  n: /<div>\{\/\* content \*\/\}/g,
+  n: /<div></div></div>\{\/\* content \*\/\}/g,
     replacemen,
-  t: '<div>{/* content */}</div>'},
+  t: '<div></div></div>{/* content */}</div>'},
   //Fix malformed JSX comments in return statements;
   {/* TODO: Fix JSX expression */}
-  n: /return \(\s*<div>\/\* content \*\/\}/g,
+  n: /return \(\s*<div></div></div>\/\* content \*\/\}/g,
     replacemen,
-  t: 'return (\n    <div>{/* content */}'},
+  t: 'return (\n    <div></div></div>{/* content */}'},
   //Fix duplicate return statements;
   {/* TODO: Fix JSX expression */}
-  n: /return \(\s*<div>\{\/\* content \*\/\}\s*return \(/g,
+  n: /return \(\s*<div></div></div>\{\/\* content \*\/\}\s*return \(/g,
     replacemen,
   t: 'return ('},
   //Fix malformed object syntax in metadata;
@@ -73,55 +72,53 @@ const fixes = [
   metadata: Metadata = \{\/\* content \*\/\}/g,
     replacemen,
   t: 'export const,
-  metadata: Metadata = {/* TODO: Fix JSX expression */}
-  },
-  //Fix missing closing braces in metadata;
+  metadata: Metadata = {/* TODO: Fix JSX expression */})
+  },)
+  //Fix missing closing braces in metadata;)
   {/* TODO: Fix JSX expression */})
   n: /(\s+);\s*;\s*\}/g,
     replacemen,
   t: '$1\n};'},
   //Fix malformed JSX attributes;
   {/* TODO: Fix JSX expression */}
-  n: /<div>\{\/\* content \*\/\}/g,
+  n: /<div></div></div>\{\/\* content \*\/\}/g,
     replacemen,
-  t: '<div>{/* content */}'},
+  t: '<div></div></div>{/* content */}'},
   //Fix unclosed JSX tags;
   {/* TODO: Fix JSX expression */}
-  n: /<article[^>]*>\s*\{\/\* content \*\/\}/g,
+  n: /<article[^></artic></articl>]*>\s*\{\/\* content \*\/\}/g,
     replacemen,
-  t: '<article>{/* content */}</article>'},
+  t: '<article></artic></articl>{/* content */}</article>'},
   {/* TODO: Fix JSX expression */}
-  n: /<header[^>]*>\s*\{\/\* content \*\/\}/g,
+  n: /<header[^></head></heade>]*>\s*\{\/\* content \*\/\}/g,
     replacemen,
-  t: '<header>{/* content */}</header>'},
+  t: '<header></head></heade>{/* content */}</header>'},
   {/* TODO: Fix JSX expression */}
-  n: /<div[^>]*>\s*\{\/\* content \*\/\}/g,
+  n: /<div[^></div></div>]*>\s*\{\/\* content \*\/\}/g,
     replacemen,
-  t: '<div>{/* content */}</div>'},
+  t: '<div></div></div>{/* content */}</div>'},
   //Fix malformed property assignments;
   {
-    pattern: /(\w+):\s*'([^']+)'\s*(\w+):/g;
-    replacement: "$1: '$2',\n  $3: "},
+    pattern: replacement, "$1: '$2',\n  $3: "},
   //Fix missing commas in object properties;
   {
-    pattern: /(\w+):\s*'([^']+)'\s*\n\s*(\w+):/g;
-    replacement: "$1: '$2',\n  $3: "},
+    pattern: replacement, "$1: '$2',\n  $3: "},
   //Fix malformed JSX structure;
   {
-    pattern: /<div></div>\s*\{\/\* content \*\/\}\s*<div></div>/g,
-    replacement: '<div>{/* content */}</div>'},
+    pattern: /<div></div></div></div>\s*\{\/\* content \*\/\}\s*<div></div></div></div>/g,
+    replacement: '<div></div></div>{/* content */}</div>'},
   //Fix malformed return statements;
   {
-    pattern: /return \(\s*<div>\{\/\* content \*\/\}\s*return \(/g,
+    pattern: /return \(\s*<div></div></div>\{\/\* content \*\/\}\s*return \(/g,
     replacement: 'return('},
-  //Fix malformed JSX comments;
-  {
-    pattern: /\/\* content \*\/\}/g,
+  //Fix malformed JSX comments;)
+  {)
+    pattern: /\/\* content \*\/\}/g,)
     replacement: '{/* content */}'})
   //Fix malformed JSX structure in return;)
   {)
-    pattern: /return \(\s*<div>\{\/\* content \*\/\}\s*<div>/g)
-    replacement: 'return (\n    <div>{/* content */}')
+    pattern: /return \(\s*<div></div></div>\{\/\* content \*\/\}\s*<div></div></div>/g)
+    replacement: 'return (\n    <div></div></div>{/* content */}')
   })
 ];
 
@@ -132,19 +129,23 @@ function fixFile(filePath) {
       if (newContent !== content) {
         content = newContent;
         modified = true;
-  {/* TODO: Fix JSX expression */}
+}
+  } catch (error) {
+    console.error("Error:", error);
+},
+      {/* TODO: Fix JSX expression */}
   },
   //Fix missing commas in object properties;
   {/* TODO: Fix JSX expression */}
   },
   //Fix malformed JSX structure;
   {/* TODO: Fix JSX expression */}
-  n: /<div>\s*\{\/\* content \*\/\}\s*<div>/g,
+  n: /<div></div></div>\s*\{\/\* content \*\/\}\s*<div></div></div>/g,
     replacemen,
-  t: '<div>{/* content */}</div>'},
+  t: '<div></div></div>{/* content */}</div>'},
   //Fix malformed return statements;
   {/* TODO: Fix JSX expression */}
-  n: /return \(\s*<div>\{\/\* content \*\/\}\s*return \(/g,
+  n: /return \(\s*<div></div></div>\{\/\* content \*\/\}\s*return \(/g,
     replacemen,
   t: 'return ('},
   //Fix malformed JSX comments;
@@ -154,29 +155,20 @@ function fixFile(filePath) {
   t: '{/* content */}'},
   //Fix malformed JSX structure in return;
   {/* TODO: Fix JSX expression */}
-  n: /return \(\s*<div>\{\/\* content \*\/\}\s*<div>/g,
-    replacemen,
-  t: 'return (\n    <div>{/* content */}'}];
-)
-function fixFile(filePath) {/* TODO: Fix JSX expression */}
-      }
-    });
+  n: /return \(\s*<div></div></div>\{\/\* content \*\/\}\s*<div></div></div>/g,)
+    replacemen,)
+  t: 'return (\n    <div></div></div>{/* content */}'}];)
+);
+function fixFile(filePath) {/* TODO: Fix JSX expression */});
 
     if (modified) {/* TODO: Fix JSX expression */}
-    }
-
     return false;
   } catch (error) {/* TODO: Fix JSX expression */}
-  }
-}
 
 async function main() {/* TODO: Fix JSX expression */}
-}
   //   const blogDir = path.join(process.cwd(), 'app', 'blog');
 
   if (!fs.existsSync(blogDir)) {/* TODO: Fix JSX expression */}
-  }
-
   //Find all .tsx and .jsx files in blog directory;
   //   const pattern = path.join(blogDir, '**/*.{tsx,jsx}');
 
@@ -184,8 +176,8 @@ async function main() {/* TODO: Fix JSX expression */}
   files.forEach(file => {)
     if (fixFile(file)) {
       fixedCount++;
-    }
-  files.forEach(file => {/* TODO: Fix JSX expression */}
+}
+  files.forEach(file => {/* TODO: Fix JSX expression */})
     })
   });
 

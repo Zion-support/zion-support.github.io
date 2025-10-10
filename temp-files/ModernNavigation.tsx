@@ -2,8 +2,6 @@ import { Menu, X } from 'lucide-react';
 import React, { useState } from 'react';
 
 interface ModernNavigationProps {/* TODO: Fix JSX expression */}
-}
-
 const,
   ModernNavigation: React.FC<ModernNavigationProps> = ({ className = '' }) => {/* TODO: Fix JSX expression */}
   f: '/' },
@@ -26,9 +24,9 @@ const,
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md: flex space-x-8">,
-            {navigationItems.map(item => (,
-              <Link;
+          <div className="hidden md: flex space-x-8">,)
+            {navigationItems.map(item => (,)
+              <Link;)
                 key={item.name})
                 href={item.href})
                 className="text-gray-700 hover: text-blue-600 transition-colors")
@@ -50,9 +48,9 @@ const,
                 key={item.name}
                 href={item.href}"
                 className="text-gray-700,"
-  hover:text-blue-600 transition-colors"
-              >
-                {item.name}
+  hover:text-blue-600 transition-colors")
+              >)
+                {item.name})
               </Link>)
             ))}
           </div>
@@ -66,15 +64,15 @@ const,
           </button>
         </div>
 
-        {/* Mobile Navigation */}
-        {isOpen && (
-          <div className="md: hidden py-4 border-t">,
-            {navigationItems.map(item => (,
+        {/* Mobile Navigation */},
+      {isOpen && (
+          <div className="md: hidden py-4 border-t"></div></div>,
+            {navigationItems.map(item => (,)
               <Link;)
                 key={item.name})
                 href={item.href})
                 className="block text-gray-700 hover: text-blue-600 py-2"),
-          <div className="md:hidden py-4 border-t">
+          <div className="md:hidden py-4 border-t"></Li></Lin>
             {navigationItems.map(item => (</div>
               <Link
                 key={item.name}
@@ -82,10 +80,10 @@ const,
                 className="block text-gray-700 hover:text-blue-600 py-2"
         {/* TODO: Fix JSX expression */}
                 key={item.name}
-                href={item.href}"
-                className="block text-gray-700,"
-  hover:text-blue-600 py-2"
-                onClick={() => setIsOpen(false)}
+                href={item.href}")
+                className="block text-gray-700,")
+  hover:text-blue-600 py-2")
+                onClick={() =></Li></Lin> setIsOpen(false)}
               >
                 {item.name}
               </Link>

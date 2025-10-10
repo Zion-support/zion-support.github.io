@@ -3,11 +3,8 @@
 /**
  * Error Boundary Configuration;
  * Centralized configuration for error handling across the application;
- */
-
+ */;
 export interface ErrorBoundaryConfig {// TODO: Add content;}
-
-}
   /**
    * Whether to log errors to console;
    */;
@@ -84,11 +81,8 @@ export interface ErrorBoundaryConfig {// TODO: Add content;}
 }
 /**
  * Get error boundary configuration based on environment;
- */
-
+ */;
 export function getErrorBoundaryConfig(): ErrorBoundaryConfig {// TODO: Add content;}
-
-}
   const isDevelopment = process.env['NODE_ENV'] === 'development';
   return {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -108,14 +102,10 @@ export function getErrorBoundaryConfig(): ErrorBoundaryConfig {// TODO: Add cont
       notFound: NotFoundFallback;
 
     }
-  }
-}
 /**
  * Default error fallback component;
- */
-
+ */;
 function DefaultErrorFallback({ error, resetError }: { error: Error; resetError: () => void }) {// TODO: Add content;}
-}
   return (
     
           
@@ -124,9 +114,9 @@ function DefaultErrorFallback({ error, resetError }: { error: Error; resetError:
           
           
           
-          
-          <div>Coming Soon</div>
-
+          )
+          <div>Coming Soon</div>)
+)
   )
     
           <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4"></div>"
@@ -184,10 +174,8 @@ className="w-6 h-6 text-red-600""
 }
 /**
  * Network error fallback component;
- */
-
+ */;
 function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => void }) {// TODO: Add content;}
-}
   return (
     
           
@@ -196,9 +184,9 @@ function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => 
           
           
           
-          
-          <div>Coming Soon</div>
-
+          )
+          <div>Coming Soon</div>)
+)
   )
     "
           <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4"></div>"
@@ -225,12 +213,12 @@ className="w-6 h-6 text-yellow-600""
               d="M18.364 5.636a9 9 0 010 12.728m0 0l-2.829-2.829m2.829 2.829L21 21M15.536 8.464a5 5 0 010 7.072m0 0l-2.829-2.829m-4.243 2.829a4.978 4.978 0 01-1.414-2.83m-1.414 5.658a9 9 0 01-2.167-9.238m7.824 2.167a1 1 0 111.414 1.414m-1.414-1.414L3 3m8.293 8.293l1.414 1.414"
 // /></svg>
         </div>"
-        <h2 className="mt-4 text-2xl font-bold text-center text-gray-900">Connection Issue</h2>"
+        <h2 className="mt-4 text-2xl font-bold text-center text-gray-900"></h>Connection Issue</h2>"
         <p className="mt-2 text-center text-gray-600"></p>
           Unable to connect to the server. Please check your internet connection and try again.
         </p>"
-        <div className="mt-6"></div>
-          <button></button>
+        <div className="mt-6"></div></div></div>
+          <button></butt></butto></button>
             onClick={resetError}"
             className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg,"
   hover:bg-blue-700 transition-colors"
@@ -244,10 +232,8 @@ className="w-6 h-6 text-yellow-600""
 }
 /**
  * Not found error fallback component;
- */
-
+ */;
 function NotFoundFallback(): JSX.Element {// TODO: Add content;}
-}
   return (
     
           
@@ -256,27 +242,27 @@ function NotFoundFallback(): JSX.Element {// TODO: Add content;}
           
           
           
-          
-          <div>Coming Soon</div>
-
+          )
+          <div></div></div>Coming Soon</div>)
+)
   )
     "
-          <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4"></div>"
-      <div className="max-w-md w-full text-center"></div>"
-        <h1 className="text-6xl font-bold text-gray-900">404</h1>"
-        <h2 className="mt-4 text-2xl font-bold text-gray-900">Page Not Found</h2>"
+          <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4"></div></div></div>"
+      <div className="max-w-md w-full text-center"></div></div></div>"
+        <h1 className="text-6xl font-bold text-gray-900"></h>404</h1>"
+        <h2 className="mt-4 text-2xl font-bold text-gray-900"></h>Page Not Found</h2>"
         <p className="mt-2 text-gray-600"></p>
           The page you're looking for doesn't exist or has been moved.
         </p>"
-        <div className="mt-6 flex gap-4 justify-center"></div>
-          <button></button>
+        <div className="mt-6 flex gap-4 justify-center"></div></div></div>
+          <button></butt></butto></button>
             onClick={() => (window.location.href = '/')}"
             className="bg-blue-600 text-white px-6 py-2 rounded-lg,"
   hover:bg-blue-700 transition-colors"
 // >
 //             Go Home;
           </button>
-          <button></button>
+          <button></butt></butto></button>
             onClick={() => window.history.back()}"
             className="bg-gray-200 text-gray-800 px-6 py-2 rounded-lg,"
   hover:bg-gray-300 transition-colors"
@@ -290,34 +276,26 @@ function NotFoundFallback(): JSX.Element {// TODO: Add content;}
 }
 /**
  * Get error type from error object;
- */
-
+ */;
 export function getErrorType(error: Error): keyof typeof DEFAULT_ERROR_MESSAGES {// TODO: Add content;}
-
-}
   if (error.message.includes('Network') || error.message.includes('fetch')) {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
     return 'network';
   }
   if (error.message.includes('404') || error.message.includes('not found')) {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
     return 'notFound';
   }
   if (error.message.includes('timeout')) {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
     return 'timeout';
   }
   if (error.message.includes('500') || error.message.includes('server')) {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
     return 'serverError';
   }
   if (error.message.includes('validation')) {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
     return 'validation';
   }
     return 'validation'
@@ -326,12 +304,9 @@ export function getErrorType(error: Error): keyof typeof DEFAULT_ERROR_MESSAGES 
 }
 /**
  * Format error for logging;
- */
-
+ */;
 export function formatErrorForLogging(error: Error): Record;
-          <string, unknown> {// TODO: Add content;}
-
-}
+          <string, unknown></strin></string> {// TODO: Add content;}
   return {/* TODO: Fix JSX expression */}
   O: Add content;}
 };

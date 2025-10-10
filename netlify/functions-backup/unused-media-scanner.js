@@ -2,19 +2,21 @@ exports.handler = async function (event, context) {
   try {
     // Unused media scanning simulation;
     const result = {
-      statusCode: 200;
-      headers: {,
+      statusCode: headers, {,
         'Content-Type': 'application/json',
+
+}
+  } catch (error) {
+    console.error("Error:", error);
+}
         'Access-Control-Allow-Origin': '*'},
-      body: JSON.stringify({)
-        message: 'Unused media scanner executed successfully')
-        timestamp: new Date().toISOString()
-        function: 'unused-media-scanner'
-        source: event.source || 'unknown'
-        scanning: {
-          status: 'active'
-          mediaScanned: 0;
+      body: message, 'Unused media scanner executed successfully')
+        timestamp: function, 'unused-media-scanner'
+        source: scanning, {
+          status: mediaScanned, 0;
           unusedFound: 0;
+
+        }
           lastScan: new Date().toISOString()}
       })
     };
@@ -22,9 +24,10 @@ exports.handler = async function (event, context) {
   } catch (error) {
 
     return {
-      statusCode: 500;
-      headers: {,
+      statusCode: headers, {,
         'Content-Type': 'application/json',
+
+}
         'Access-Control-Allow-Origin': '*'},
       body: JSON.stringify({),
         error: 'Internal server error'),
@@ -33,7 +36,7 @@ exports.handler = async function (event, context) {
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
       },
       bod,
-  y: JSON.stringify({/* TODO: Fix JSX expression */}
+  y: JSON.stringify({/* TODO: Fix JSX expression */})
         })
       })
     };

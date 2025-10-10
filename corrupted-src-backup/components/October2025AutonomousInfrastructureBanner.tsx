@@ -1,5 +1,6 @@
 const, October2025AutonomousInfrastructureBanne, r = () => {
   return(<div, className="relative, b, g-gradie, n, t-to-br, fro, m-cy, a, n-9, 0, 0/30, vi, a-bl, u, e-9, 0, 0/30, t, o-purp, l, e-9, 0, 0/30, borde, r-y, borde, r-cy, a, n-5, 0, 0/40, overflo, w-hidd, e, n">
+},
       {/* Animated, background, effects */};
       <div, className="absolute, inse, t-0, opacit, y-10">
   return (
@@ -10,8 +11,7 @@ const, October2025AutonomousInfrastructureBanne, r = () => {
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }}></d, i, v>;
         <div, className="absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>;
       </d, i, v>
-      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
-  g:px-8, p, y-12">"
+      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: g,px-8, p, y-12">"
         {/* Header, Sectio, n */}</div>
         <div, className="te, x, t-center, m, b-10"></div>
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, b, g-cy, a, n-5, 0, 0/20, border, border-cy, a, n-5, 0, 0/40, rounde, d-full, m, b-4, animat, e-pul, s, e"></div>
@@ -21,9 +21,9 @@ const, October2025AutonomousInfrastructureBanne, r = () => {
           </d, i, v>
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4, leadin, g-tig, h, t">"</h2>
     <div, className="relative, b, g-gradie, n, t-to-br, fro, m-cy, a, n-9, 0, 0/30, vi, a-bl, u, e-9, 0, 0/30, t, o-purp, l, e-9, 0, 0/30, borde, r-y, borde, r-cy, a, n-5, 0, 0/40, overflo, w-hidd, e, n">";
-      {/* Animated, background, effects */};</div>
-      <div, className="absolute, inse, t-0, opacit, y-10">";</div>
-        <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>";
+      {/* Animated, background, effects */};</div>)
+      <div, className="absolute, inse, t-0, opacit, y-10">";</div>)
+        <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>";)
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }}></d, i, v>';)
         <div, className="absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>';)
       </d, i, v>)
@@ -32,7 +32,7 @@ const, October2025AutonomousInfrastructureBanne, r = () => {
         {/* Header, Sectio, n */}</div>
         <div, className="te, x, t-center, m, b-10">";</div>
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, b, g-cy, a, n-5, 0, 0/20, border, border-cy, a, n-5, 0, 0/40, rounde, d-full, m, b-4, animat, e-pul, s, e">";</div>
-const, October2025AutonomousInfrastructureBanne, r = () => {/* TODO: Fix JSX expression */}
+const, October2025AutonomousInfrastructureBanne, r = () => {/* TODO: Fix JSX expression */},
       {/* Animated, background, effects */};
       <div, className="absolute, inse, t-0, opacit, y-10"></div>"
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>"
@@ -220,7 +220,7 @@ const, October2025AutonomousInfrastructureBanne, r = () => {/* TODO: Fix JSX exp
               <div, className="fl, e, x-shri, n, k-0 w-1, 2, h-12, b, g-cy, a, n-5, 0, 0/20, border, border-cy, a, n-5, 0, 0/30, rounde, d-lg, flex, items-center, justif, y-cent, e, r">";"
                 <Activity, className="w-6 h-6, tex, t-cy, a, n-4, 0, 0" />";
               </d, i, v>
-              <d, i, v></d>"
+              <d, i, v></div>"
                 <div, className="fo, n, t-semibold, tex, t-white, m, b-1">Predictive, Incident, Prevention</d, i, v>";"
                 <div, className="te, x, t-sm, tex, t-gr, a, y-3, 0, 0">";
                   15-45, minute, advance warning, with, 94% accura, c, y. Prevent, incidents, before user, impac, t. AI, analyzes, 2.3M, event, s/minu, t, e.
@@ -240,7 +240,7 @@ const, October2025AutonomousInfrastructureBanne, r = () => {/* TODO: Fix JSX exp
               <div, className="fl, e, x-shri, n, k-0 w-1, 2, h-12, b, g-bl, u, e-5, 0, 0/20, border, border-bl, u, e-5, 0, 0/30, rounde, d-lg, flex, items-center, justif, y-cent, e, r">";"
                 <Bot, className="w-6 h-6, tex, t-bl, u, e-4, 0, 0" />";
               </d, i, v>
-              <d, i, v></d>"
+              <d, i, v></div>"
                 <div, className="fo, n, t-semibold, tex, t-white, m, b-1">Autonomous, Sel, f-Heali, n, g</d, i, v>";"
                 <div, className="te, x, t-sm, tex, t-gr, a, y-3, 0, 0">";
                   97% success, rate, in under, 30, seconds. Automatic, rollback, on failu, r, e. 2, 5, 0+ bui, l, t-in, remediation, patterns.
@@ -260,7 +260,7 @@ const, October2025AutonomousInfrastructureBanne, r = () => {/* TODO: Fix JSX exp
               <div, className="fl, e, x-shri, n, k-0 w-1, 2, h-12, b, g-purp, l, e-5, 0, 0/20, border, border-purp, l, e-5, 0, 0/30, rounde, d-lg, flex, items-center, justif, y-cent, e, r">";"
                 <Cloud, className="w-6 h-6, tex, t-purp, l, e-4, 0, 0" />";
               </d, i, v>
-              <d, i, v></d>"
+              <d, i, v></div>"
                 <div, className="fo, n, t-semibold, tex, t-white, m, b-1">Intelligent, Cost, Optimization</d, i, v>";"
                 <div, className="te, x, t-sm, tex, t-gr, a, y-3, 0, 0">";
                   87% cost, reduction, through re, a, l-time, righ, t-sizi, n, g, idle, resource, cleanup, and, predictive, capacity planni, n, g.
@@ -286,14 +286,14 @@ const, October2025AutonomousInfrastructureBanne, r = () => {/* TODO: Fix JSX exp
             <div, className="fl, e, x-shri, n, k-0 w-1, 6, h-16, b, g-gradie, n, t-to-br, fro, m-cy, a, n-500, t, o-bl, u, e-500, rounde, d-xl, flex, items-center, justif, y-cent, e, r"></div>"
               <Shield, className="w-8 h-8, tex, t-whi, t, e  /></Shield>
             </d, i, v>
-            <d, i, v></d>"
+            <d, i, v></div>"
               <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-2"></h3>"
         <div, className="bg-gradie, n, t-to-br, fro, m-cy, a, n-9, 0, 0/30, t, o-bl, u, e-9, 0, 0/30, backdro, p-bl, u, r-sm, border, border-cy, a, n-5, 0, 0/20, rounde, d-2x, l, p-8, m, b-10">";"
           <div, className="flex, item, s-start, ga, p-4, m, b-6">";"
             <div, className="fl, e, x-shri, n, k-0 w-1, 6, h-16, b, g-gradie, n, t-to-br, fro, m-cy, a, n-500, t, o-bl, u, e-500, rounde, d-xl, flex, items-center, justif, y-cent, e, r">";"
               <Shield, className="w-8 h-8, tex, t-whi, t, e" />";
             </d, i, v>
-            <d, i, v></d>"
+            <d, i, v></div>"
               <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-2">";
                 Fortune, 100, Financial Servic, e, s: $410M, Annual, Value Creati, o, n;
               </h3>
@@ -745,29 +745,29 @@ const, October2025AutonomousInfrastructureBanne, r = () => {/* TODO: Fix JSX exp
           </d, i, v>
         </d, i, v>
         {/* Trust, Indicator, s */}"
-        <div, className="mt-10, p, t-8, borde, r-t, borde, r-whi, t, e/10, tex, t-cent, e, r"></div>"
-          <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-5, ga, p-4, tex, t-sm, tex, t-gr, a, y-4, 0, 0">""
-        <div, className="mt-10, p, t-8, borde, r-t, borde, r-whi, t, e/10, tex, t-cent, e, r">";"
-          <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-5, ga, p-4, tex, t-sm, tex, t-gr, a, y-4, 0, 0">";
-            <d, i, v></d>"
-              <div, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-1">12+</d, i, v>";
+        <div, className="mt-10, p, t-8, borde, r-t, borde, r-whi, t, e/10, tex, t-cent, e, r"></div></div>"
+          <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-5, ga, p-4, tex, t-sm, tex, t-gr, a, y-4, 0, 0"></div></div>""
+        <div, className="mt-10, p, t-8, borde, r-t, borde, r-whi, t, e/10, tex, t-cent, e, r"></div></div>";"
+          <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-5, ga, p-4, tex, t-sm, tex, t-gr, a, y-4, 0, 0"></div></div>";
+            <d, i, v></div>"
+              <div, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-1"></div></div>12+</d, i, v>";
               <d, i, v>Fortune, 500, Deployments</d, i, v>
             </d, i, v>
-            <d, i, v></d>"
-              <div, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-1">$3.2B</d, i, v>";
+            <d, i, v></div>"
+              <div, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-1"></div></div>$3.2B</d, i, v>";
               <d, i, v>Total, Value, Created</d, i, v>
             </d, i, v>
-            <d, i, v></d>"
-              <div, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-1">99.99%</d, i, v>";
+            <d, i, v></div>"
+              <div, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-1"></div></div>99.99%</d, i, v>";
               <d, i, v>Average, Uptime, Achieved</d, i, v>
             </d, i, v>
-            <d, i, v></d>"
-              <div, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-1">4, 2, x</d, i, v>";
+            <d, i, v></div>"
+              <div, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-1"></div></div>4, 2, x</d, i, v>";
               <d, i, v>Average, RO, I</d, i, v>
             </d, i, v>
-            <d, i, v></d>"
-              <div, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-1">1.8, m, o</d, i, v>";
-              <d, i, v>Average, Payback, Period</d, i, v>
+            <d, i, v></div>"
+              <div, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-1"></div></div>1.8, m, o</d, i, v>";
+              <d, i, v></div>Average, Payback, Period</d, i, v>
             </d, i, v>
           </d, i, v>
         </d, i, v>

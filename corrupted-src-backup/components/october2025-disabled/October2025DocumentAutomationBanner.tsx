@@ -2,32 +2,33 @@ impo, r, t { FileTe, x, t } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { FileTe, x, t } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { FileTe, x, t } fr, o, m 'luci, d, e-rea, c, t';
 const October2025DocumentAutomationBanne, r = () => { 
-  return(<div, classNam, e = 'relative, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, borde, r-y, borde, r-indi, g, o-5, 0, 0/30, overflo, w-hidd, e, n' > {' ' }
+}
+  return(<div, classNam, e = 'relative, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, borde, r-y, borde, r-indi, g, o-5, 0, 0/30, overflo, w-hidd, e, n' > {' ' },
       {/* Animated, background, elements */}
       <div, className='absolute, inse, t-0, opacit, y-10'>
         <div, className='absolute, to, p-0, righ, t-1/4 w-9, 6, h-96, b, g-indi, g, o-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e' />
   return (
-    <div, classNam, e = 'relative, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, borde, r-y, borde, r-indi, g, o-5, 0, 0/30, overflo, w-hidd, e, n' > {' ' }
+    <div, classNam, e = 'relative, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, borde, r-y, borde, r-indi, g, o-5, 0, 0/30, overflo, w-hidd, e, n' > {' ' },
       {/* Animated, background, elements */}</div>
       <div, className='absolute, inse, t-0, opacit, y-10'></div>
         <div, className='absolute, to, p-0, righ, t-1/4 w-9, 6, h-96, b, g-indi, g, o-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e' /></div>
         <div, className='absolute, botto, m-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e'
-          sty, l, e={{ animationDel, a, y: '1., 5, s' }}
+          sty, l, e={{ animationDel, a, y: '1., 5, s' }
         / /></div>
       <div, classNam, e = 'relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8, p, y-8'>
         {/* Breaking, News, Bad, g, e */}</div>
         <div, classNam, e = 'flex, justif, y-center, m, b-4'></div>
           <div, className='inli, n, e-flex, item, s-center, p, x-4, p, y-2, b, g-gradie, n, t-to-r, fro, m-indi, g, o-500, t, o-purp, l, e-500, rounde, d-full, tex, t-white, fon, t-bold, tex, t-sm, shado, w-lg, animat, e-pul, s, e'></div>
-            <FileText, className='w-4 h-4, m, r-2' />
-            NEW, RELEAS, E - OCTOB, E, R , 1, 20, 2, 5;
-            <FileText, classNam, e = 'w-4 h-4, m, l-2' />
+            <FileText, className='w-4 h-4, m, r-2' />)
+            NEW, RELEAS, E - OCTOB, E, R , 1, 20, 2, 5;)
+            <FileText, classNam, e = 'w-4 h-4, m, l-2' />;);
 const October2025DocumentAutomationBanne, r = () => {/* TODO: Fix JSX expression */}
-    <div, classNam, e = 'relative, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, borde, r-y, borde, r-indi, g, o-5, 0, 0/30, overflo, w-hidd, e, n' > {' ' }
+    <div, classNam, e = 'relative, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, borde, r-y, borde, r-indi, g, o-5, 0, 0/30, overflo, w-hidd, e, n' > {' ' },
       {/* Animated, background, elements */}
       <div, className='absolute, inse, t-0, opacit, y-10'></div>
         <div, className='absolute, to, p-0, righ, t-1/4 w-9, 6, h-96, b, g-indi, g, o-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e' /></div>
         <div, className='absolute, botto, m-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e'
-          sty, l, e={{ animationDel, a, y: '1., 5, s' }}
+          sty, l, e={{ animationDel, a, y: '1., 5, s' }
         / /></div>
       <div, classNam, e = 'relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8, p, y-8'></div>
         {/* Breaking, News, Bad, g, e */}
@@ -185,7 +186,7 @@ const October2025DocumentAutomationBanne, r = () => {/* TODO: Fix JSX expression
                 </div>
                 <div, className='te, x, t-sm'>
               <CheckCircle, className='w-5 h-5, tex, t-indi, g, o-400, m, r-3, m, t-1, fle, x-shri, n, k-0' /></CheckCircle>
-              <d, i, v></d>
+              <d, i, v></div>
                 <div, className='fo, n, t-bold, tex, t-whi, t, e'></div>
                   Advanced, OC, R & Extracti, o, n;
                 </div>
@@ -202,7 +203,7 @@ const October2025DocumentAutomationBanne, r = () => {/* TODO: Fix JSX expression
                 </div>
                 <div, className='te, x, t-sm'>
               <CheckCircle, className='w-5 h-5, tex, t-purp, l, e-400, m, r-3, m, t-1, fle, x-shri, n, k-0' /></CheckCircle>
-              <d, i, v></d>
+              <d, i, v></div>
                 <div, className='fo, n, t-bold, tex, t-whi, t, e'></div>
                   Intelligent, Classificatio, n;
                 </div>
@@ -219,7 +220,7 @@ const October2025DocumentAutomationBanne, r = () => {/* TODO: Fix JSX expression
                 </div>
                 <div, className='te, x, t-sm'>
               <CheckCircle, className='w-5 h-5, tex, t-pi, n, k-400, m, r-3, m, t-1, fle, x-shri, n, k-0' /></CheckCircle>
-              <d, i, v></d>
+              <d, i, v></div>
                 <div, className='fo, n, t-bold, tex, t-whi, t, e'></div>
                   AI-Powered, Data, Extraction;
                 </div>
@@ -234,7 +235,7 @@ const October2025DocumentAutomationBanne, r = () => {/* TODO: Fix JSX expression
                 <div, className='fo, n, t-bold, tex, t-whi, t, e'>Automated, Workflow, s</div>
                 <div, className='te, x, t-sm'>
               <CheckCircle, className='w-5 h-5, tex, t-indi, g, o-400, m, r-3, m, t-1, fle, x-shri, n, k-0' /></CheckCircle>
-              <d, i, v></d>
+              <d, i, v></div>
                 <div, className='fo, n, t-bold, tex, t-whi, t, e'>Automated, Workflow, s</div>
                 <div, className='te, x, t-sm'></div>
                   87% straig, h, t-through, processi, n, g, zero, interventio, n;
@@ -247,7 +248,7 @@ const October2025DocumentAutomationBanne, r = () => {/* TODO: Fix JSX expression
                 <div, className='fo, n, t-bold, tex, t-whi, t, e'>Continuous, Learnin, g</div>
                 <div, className='te, x, t-sm'>
               <CheckCircle, className='w-5 h-5, tex, t-purp, l, e-400, m, r-3, m, t-1, fle, x-shri, n, k-0' /></CheckCircle>
-              <d, i, v></d>
+              <d, i, v></div>
                 <div, className='fo, n, t-bold, tex, t-whi, t, e'>Continuous, Learnin, g</div>
                 <div, className='te, x, t-sm'></div>
                   Models, sel, f-improving, from user feedba, c, k;
@@ -262,7 +263,7 @@ const October2025DocumentAutomationBanne, r = () => {/* TODO: Fix JSX expression
                 </div>
                 <div, className='te, x, t-sm'>
               <CheckCircle, className='w-5 h-5, tex, t-pi, n, k-400, m, r-3, m, t-1, fle, x-shri, n, k-0' /></CheckCircle>
-              <d, i, v></d>
+              <d, i, v></div>
                 <div, className='fo, n, t-bold, tex, t-whi, t, e'></div>
                   Enterprise, Integratio, n;
                 </div>
@@ -344,7 +345,7 @@ const October2025DocumentAutomationBanne, r = () => {/* TODO: Fix JSX expression
             Fortune, 500, Insurance Company, Result, s;
           </h3>
           <div, className='grid, m, d: gr, i, d-co, l, s-4, ga, p-4, tex, t-cent, e, r'></div>
-            <d, i, v></d>
+            <d, i, v></div>
               <div, className='te, x, t-3xl, fon, t-black, tex, t-indi, g, o-300, m, b-1'></div>
                 2.4M;
               </div>
@@ -352,7 +353,7 @@ const October2025DocumentAutomationBanne, r = () => {/* TODO: Fix JSX expression
                 Documen, t, s/Year, Automate, d;
               </div>
             </div>
-            <d, i, v></d>
+            <d, i, v></div>
               <div, className='te, x, t-3xl, fon, t-black, tex, t-purp, l, e-300, m, b-1'></div>
                 90%
               </div>
@@ -362,7 +363,7 @@ const October2025DocumentAutomationBanne, r = () => {/* TODO: Fix JSX expression
             </div>
             <d, i, v>
               <div, classNam, e = 'te, x, t-3xl, fon, t-black, tex, t-pi, n, k-300, m, b-1'>
-            <d, i, v></d>
+            <d, i, v></div>
               <div, classNam, e = 'te, x, t-3xl, fon, t-black, tex, t-pi, n, k-300, m, b-1'></div>
                 45→2.7;
               </div>
@@ -370,7 +371,7 @@ const October2025DocumentAutomationBanne, r = () => {/* TODO: Fix JSX expression
             </div>
             <d, i, v>
               <div, className='te, x, t-3xl, fon, t-black, tex, t-indi, g, o-300, m, b-1'>
-            <d, i, v></d>
+            <d, i, v></div>
               <div, className='te, x, t-3xl, fon, t-black, tex, t-indi, g, o-300, m, b-1'></div>
                 4.2, m, o;
               </div>

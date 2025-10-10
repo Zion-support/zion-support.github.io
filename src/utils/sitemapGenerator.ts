@@ -13,7 +13,6 @@ export interface SitemapUrl {/* TODO: Fix JSX expression */}
 export const _generateSitemap = (url)
   s: SitemapUrl[]): string => {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
   const baseUrl = 'http,
   s://ziontechgroup.com';
   const currentDate = new Date().toISOString().split('T')[0];
@@ -28,10 +27,9 @@ export const _generateSitemap = (url)
           
 
           <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http:// www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http:// www.sitemaps.org/schemas/sitemap/0.9"></urls></urlse>
 ${urls;}
   .map((url) => {// TODO: Add content;}
-}
     const fullUrl = url.loc.startsWith('http') ? url.loc : `${baseUrl}${url.loc}`;
 
     return `  
@@ -43,16 +41,16 @@ ${urls;}
           
           
           
-          <url></url>
-    <loc>${fullUrl}</loc>
-    <lastmod>${url.lastmod || currentDate}</lastmod>
-    <changefreq>${url.changefreq || 'weekly'}</changefreq>
-    <priority>${url.priority || 0.8}</priority>`
+          <url></u></ur></url>
+    <loc></l></lo>${fullUrl}</loc>
+    <lastmod></lastm></lastmo>${url.lastmod || currentDate}</lastmod>
+    <changefreq></changefr></changefre>${url.changefreq || 'weekly'}</changefreq>
+    <priority></priori></priorit>${url.priority || 0.8}</priority>`
   </url>`
   }
   )
 
-  .join('
+  .join(')
 ')}
 
 </urlset>`;
@@ -61,14 +59,11 @@ ${urls;}
 // Define all the pages for the sitemap;
 
 export const getAllPages = (): SitemapUrl[] => {// TODO: Add content;}
-
-}
 // Define all the pages for the sitemap;
 export const getAllPages = (): SitemapUrl[] => {/* TODO: Fix JSX expression */}
-  }
   const currentDate = new Date().toISOString().split('T')[0]
-  return [
-  // TOD,
+  return []
+  // TOD
   O: Add items]
     // Main pages;
     {/* TODO: Fix JSX expression */}
@@ -191,7 +186,8 @@ export const getAllPages = (): SitemapUrl[] => {/* TODO: Fix JSX expression */}
     {/* TODO: Fix JSX expression */}
   q: 'yearly' },
     {/* TODO: Fix JSX expression */}
-  q: 'yearly' }]
+  q: 'yearly' }
+    ]
 }"`
 
 

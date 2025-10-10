@@ -2,14 +2,11 @@ import { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
 
 interface Props {/* TODO: Fix JSX expression */}
-}
-
 interface State {/* TODO: Fix JSX expression */}
-}
-
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {,
     super(props);
+}
     this.state = { hasError: false };
   }
 
@@ -28,18 +25,18 @@ class ErrorBoundary extends Component<Props, State> {
     // Call custom error handler if provided;
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
-    }
-  }
-
+}
   private reportError = (error: Error, errorInfo: ErrorInfo) => {,
     // Report to external service (e.g., Sentry, LogRocket, etc.)
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'exception', {)
-        description: error.message;)
-        fatal: false)
+    if (typeof window !== 'undefined' && (window as, any).gtag) {
+      (window as, any).gtag('event', 'exception', {)
+        description: fatal, false)
         custom_map: {,
           error_id: this.state.errorId),
           component_stack: errorInfo.componentStack;
+
+}
+}
 class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression */}
   r: false };
   }
@@ -50,17 +47,13 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
     };
   }
 
-  componentDidCatch(erro,
+  componentDidCatch(erro,)
   r: Error, errorInf)
   o: ErrorInfo) {/* TODO: Fix JSX expression */}
-    }
-  }
 
   private reportError = (erro,
   r: Error, errorInf)
-  o: ErrorInfo) => {/* TODO: Fix JSX expression */}
-        }
-      });
+  o: ErrorInfo) => {/* TODO: Fix JSX expression */});
     }
   };
 
@@ -84,6 +77,7 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
 :src/components/ErrorBoundary.tsx;
             {this.state.errorId && (
               <p className="text-gray-400 mb-4 text-sm">
+}
                 Error ID: {this.state.errorId}
               </p>
             )}
@@ -134,11 +128,11 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
                 Go Home;
               </button>
             </div>
-            <button></button>
+            <button></butt></butto></button>
               onClick={() => window.location.reload()}"
               className="mt-4 text-gray-400,"
   hover:text-white text-sm underline"
-            <button></button>
+            <button></butt></butto></button>
               onClick={() => window.location.reload()}"
               className="bg-blue-600,"
   hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
@@ -151,6 +145,4 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
 
     return this.props.children;
   }
-}
-
 export default ErrorBoundary;"`

@@ -19,20 +19,17 @@ function getAllFiles(_dir, fileList = []) {
       // Skip node_modules and .git directories;
       if (!file.startsWith('.') && file !== 'node_modules') {
         getAllFiles(filePath, fileList);
+}
 const config = {/* TODO: Fix JSX expression */}
 };
 
 // Helper function to read files recursively;
-function getAllFiles(_dir, fileList = []) {/* TODO: Fix JSX expression */}
-      }
-    } else if ()
+function getAllFiles(_dir, fileList = []) {/* TODO: Fix JSX expression */} else if ()
       file.endsWith('.ts') ||
       file.endsWith('.tsx') ||
       file.endsWith('.js') ||
       file.endsWith('.jsx')
-    ) {/* TODO: Fix JSX expression */}
-    }
-  });
+    ) {/* TODO: Fix JSX expression */});
 
   return fileList;
 }
@@ -41,7 +38,7 @@ function getAllFiles(_dir, fileList = []) {/* TODO: Fix JSX expression */}
 function improveLogging(content, filePath) {
 
   // Only replace console statements not in logger/test files and not wrapped in dev checks;
-  if (
+  if ()
     !filePath.includes('logger') &&
     !filePath.includes('test') &&
     !filePath.includes('setupTests')
@@ -52,7 +49,7 @@ function improveLogging(content, filePath) {
 
     if (unwrappedConsoleRegex.test(content)) {
       // Add import for logger if not exists;
-      if (
+      if ()
         !content.includes("from '../utils/logger'") &&
         !content.includes('from "./utils/logger"')
       ) {
@@ -61,18 +58,17 @@ function improveLogging(content, filePath) {
         //         const loggerPath = '../'.repeat(depth) + 'utils/logger';
 
         if (content.includes('import')) {
-          newContent = content.replace(
+          newContent = content.replace()
             /(import.*?from.*?;)/,
 // Improvement,
   1: Replace unwrapped console statements with logger;
+}
 function improveLogging(content, filePath) {/* TODO: Fix JSX expression */}
             `$1\nimport { logger } from '${loggerPath}';`
           );
         } else {/* TODO: Fix JSX expression */}`
           newContent = `import { logger } from '${loggerPath}';\n\n${content}`;
         }
-      }
-
       // Replace console statements;
       newContent = newContent.replace(/console\.log\(/g, 'logger.info(');
       newContent = newContent.replace(/console\.warn\(/g, 'logger.warn(');
@@ -81,8 +77,6 @@ function improveLogging(content, filePath) {/* TODO: Fix JSX expression */}
 
       improved = true;
     }
-  }
-
   return {/* TODO: Fix JSX expression */}
   t: newContent };
 }
@@ -91,14 +85,15 @@ function improveLogging(content, filePath) {/* TODO: Fix JSX expression */}
 function addErrorHandling(content, filePath) {
 
   // Check if it's a page component without error boundary;
-  if (
+  if ()
     filePath.includes('/page.tsx') &&
     !content.includes('ErrorBoundary') &&
     content.includes('export default')
   ) {
     // This is a basic check - in production you'd want more sophisticated parsing;
     improved = true;
-    config.improvements.push(
+    config.improvements.push()
+}
       `Consider adding ErrorBoundary to: ${path.relative(process.cwd(), filePath)}`
 // Improvement,
   2: Add error boundaries to components that don't have them;
@@ -116,9 +111,10 @@ function checkSecurity(content, filePath) {
 
   // Check for dangerous patterns;
   if (content.includes('dangerouslySetInnerHTML') && !content.includes('DOMPurify')) {
-    issues.push(
-// Improvement,
-  3: Check for security best practices;
+    issues.push()
+// Improvement,)
+  3: Check for security best practices;);
+}
 function checkSecurity(content, filePath) {/* TODO: Fix JSX expression */}`
       `Potential XSS risk in ${path.relative(process.cwd(), filePath)}: dangerouslySetInnerHTML without sanitization`
     );
@@ -132,7 +128,7 @@ function checkSecurity(content, filePath) {/* TODO: Fix JSX expression */}`
 
   // Check for localStorage without encryption;
   if (content.includes('localStorage.setItem') && content.includes('password')) {
-    issues.push(
+    issues.push()
   if (content.includes('localStorage.setItem') && content.includes('password')) {/* TODO: Fix JSX expression */}`
       `Security risk in ${path.relative(process.cwd(), filePath)}: Storing sensitive data in localStorage`
     );
@@ -153,9 +149,8 @@ function optimizeImports(content) {
     newContent = uniqueImports.join('\n') + '\n' + contentWithoutImports;
 // Improvement,
   4: Optimize imports;
+}
 function optimizeImports(content) {/* TODO: Fix JSX expression */}
-  }
-
   return {/* TODO: Fix JSX expression */}
   t: newContent };
 }
@@ -167,17 +162,17 @@ function processFile(filePath) {
     if (loggingResult.improved) {
       newContent = loggingResult.content;
       fileImproved = true;
+}
+  } catch (error) {
+    console.error("Error:", error);
+}
       config.improvements.push(`Improved logging in: ${path.relative(process.cwd(), filePath)}`);
 function processFile(filePath) {/* TODO: Fix JSX expression */}`
   in: ${path.relative(process.cwd(), filePath)}`);
     }
 
     if (errorHandlingResult.improved) {/* TODO: Fix JSX expression */}
-    }
-
     if (securityIssues.length > 0) {/* TODO: Fix JSX expression */}
-    }
-
     if (importsResult.improved) {/* TODO: Fix JSX expression */}`
   in: ${path.relative(process.cwd(), filePath)}`);
     }
@@ -186,29 +181,26 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}`
     if (fileImproved && newContent !== content) {
       fs.writeFileSync(filePath, newContent, 'utf8');
       return true;
+}
     if (fileImproved && newContent !== content) {/* TODO: Fix JSX expression */}
-    }
-
     return false;
   } catch (error) {/* TODO: Fix JSX expression */}`
     config.errors.push(`Error processing ${filePath}: ${error.message}`);
     return false;
   }
-}
-
 // Run improvements;
 // const files = getAllFiles(config.appDir);
 
 files.forEach(file => {)
   if (processFile(file)) {
     filesImproved++;
-  }
 });
 
 // Generate report;
 // // // // // // if (config.improvements.length > 0) {
   //   config.improvements.slice(0, 20).forEach((improvement, i) => {
-files.forEach(file => {/* TODO: Fix JSX expression */}
+}
+files.forEach(file => {/* TODO: Fix JSX expression */})
   })
 });
 
@@ -231,11 +223,11 @@ fs.writeFileSync(reportPath)
       summary: {,
         filesProcessed: files.length;
         filesImproved,
-        totalImprovements: config.improvements.length;
-        errors: config.errors.length;
-      },
-      improvements: config.improvements;
-      errors: config.errors;
+        totalImprovements: errors, config.errors.length;
+
+}
+},
+      improvements: errors, config.errors;
     },
     null,
     2;
@@ -245,9 +237,9 @@ fs.writeFileSync(reportPath,
       },
       improvement,
   s: config.improvements,
-      error,
-  s: config.errors},
-    null,
+      error,)
+  s: config.errors},)
+    null,)
     2;)
   )
 );

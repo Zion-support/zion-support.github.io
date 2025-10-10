@@ -3,12 +3,13 @@
 import React from 'react';
 import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, TrendingUp } from 'lucide-react';
 
-const ContentPromotionBanner: React.FC = () => {
-  const features = [
+const ContentPromotionBanner: React.FC = () => {;
+const features = [
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
       description: 'Advanced AI technology to transform your business operations and improve efficiency'
+}
     },
     {
       icon: Zap,
@@ -22,10 +23,9 @@ const ContentPromotionBanner: React.FC = () => {
     },
     {
       icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment with local support and compliance'
-    }
-  ];
+      title: 'Global Reach',]
+      description: 'Worldwide deployment with local support and compliance']
+    }];
 
   const benefits = [
     'Advanced AI technology integration',
@@ -34,9 +34,8 @@ const ContentPromotionBanner: React.FC = () => {
     'Scalable and flexible solutions',
     '24/7 technical support',
     'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ];
+    'Cost-effective pricing plans']
+    'Proven track record of success'];
 
   const stats = [
     {
@@ -54,14 +53,11 @@ const ContentPromotionBanner: React.FC = () => {
     {
       icon: Star,
       value: '4.9/5',
-      label: 'Rating',
-      description: 'Highly rated by clients'
-    }
-  ];
+      label: 'Rating',]
+      description: 'Highly rated by clients']
+    }];
 
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
     <div className="bg-gradient-to-r from-purple-600 to-blue-600 text-white py-16 px-4">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
@@ -71,9 +67,9 @@ const ContentPromotionBanner: React.FC = () => {
           <p className="text-xl text-purple-100 max-w-3xl mx-auto">
             Discover how our AI-powered solutions can revolutionize your operations and drive growth.
           </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        </div>)
+)
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">)
           {features.map((feature, index) => (
             <div key={index} className="text-center">
               <div className="bg-white/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -81,46 +77,10 @@ const ContentPromotionBanner: React.FC = () => {
               </div>
               <h3 className="text-lg font-semibold mb-2">{feature.title}</h3>
               <p className="text-purple-100 text-sm">{feature.description}</p>
-=======
-    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
-      <div className="max-w-7xl mx-auto">
-        {/* Hero Section */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Transform Your Business with <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">AI Solutions</span>
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Join thousands of businesses that have revolutionized their operations with our cutting-edge AI and IT solutions.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
-              <Zap className="w-5 h-5" />
-              Get Started Today
-            </button>
-            <button className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300">
-              <ArrowRight className="w-5 h-5" />
-              Learn More
-            </button>
-          </div>
-        </div>
-
-        {/* Stats Section */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-          {stats.map((stat, index) => (
-            <div key={index} className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                <stat.icon className="w-8 h-8 text-white" />
-              </div>
-              <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
-              <div className="text-gray-400 text-sm">{stat.label}</div>
-              <div className="text-gray-500 text-xs mt-1">{stat.description}</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
             </div>
           ))}
         </div>
 
-<<<<<<< HEAD
         <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
@@ -153,34 +113,6 @@ const ContentPromotionBanner: React.FC = () => {
             </button>
           </div>
         </div>
-=======
-    <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20 rounded-2xl p-8 mb-16">
-      <div className="text-center mb-8">
-        <h2 className="text-3xl font-bold text-white mb-4">Transform Your Business Today</h2>
-        <p className="text-xl text-gray-300 mb-6">
-          Join thousands of businesses already using our AI and IT solutions
-        </p>
-      </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-        {features.map((feature, index) => (
-          <div key={index} className="text-center">
-            <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
-              <feature.icon className="w-8 h-8 text-white" />
-            </div>
-            <h3 className="text-lg font-semibold text-white mb-2">{feature.title}</h3>
-            <p className="text-gray-300 text-sm">{feature.description}</p>
-          </div>
-        ))}
-      </div>
-
-      <div className="text-center">
-        <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 inline-flex items-center">
-          Get Started Now
-          <ArrowRight className="w-5 h-5 ml-2" />
-        </button>
->>>>>>> cursor/website-audit-and-update-with-deployment-758b
-=======
         {/* Features Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {features.map((feature, index) => (
@@ -225,15 +157,14 @@ const ContentPromotionBanner: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center space-x-2">
                 <Zap className="w-5 h-5" />
-                <span>Start Free Trial</span>
+                <span></div></div>Start Free Trial</span>
               </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-200">
+              <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-200"></butt></butto>
                 Schedule Demo
               </button>
             </div>
           </div>
         </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
       </div>
     </div>
   );

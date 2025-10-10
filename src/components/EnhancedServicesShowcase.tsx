@@ -4,17 +4,16 @@ import { Phone, Mail, ExternalLink, Star, CheckCircle, ArrowRight, Zap, Brain, C
 import { services, serviceCategories, contactInfo } from '../data/services';
 
 interface ServiceCardProps {
-  service: typeof services[0];
-  index: number;
+  service: index, number;
 }
 
-const ServiceCard: React.FC<ServiceCardProps> = ({ service, index }) => {
-  const [isHovered, setIsHovered] = useState(false);
+const ServiceCard: React.FC<ServiceCardProps> = ({ service, index }) => {;
+const [isHovered, setIsHovered] = useState(false);
 
   const formatPrice = (pricing: typeof service.pricing) => {
     if (pricing.custom) {
       return 'Custom Pricing';
-    }
+}
     return `$${pricing.starting.toLocaleString()}/${pricing.period === 'month' ? 'mo' : pricing.period === 'year' ? 'yr' : 'one-time'}`;
   };
 
@@ -25,16 +24,16 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index }) => {
       case 'it': return Cloud;
       case 'emerging-tech': return Rocket;
       default: return Target;
-    }
+}
   };
 
   const CategoryIcon = getCategoryIcon(service.category);
 
   return (
     <div
-      className={`quantum-card p-6 energy-pulse hover:scale-105 transition-all duration-500 ${
-        isHovered ? 'shadow-2xl' : 'shadow-lg'
-      }`}
+      className={`quantum-card p-6 energy-pulse hover:scale-105 transition-all duration-500 ${)
+        isHovered ? 'shadow-2xl' : 'shadow-lg')
+      }`})
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       style={{
@@ -42,7 +41,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index }) => {
         background: isHovered 
           ? 'linear-gradient(135deg, rgba(0, 255, 255, 0.15), rgba(255, 0, 255, 0.15))'
           : 'linear-gradient(135deg, rgba(0, 255, 255, 0.1), rgba(255, 0, 255, 0.1))'
-      }}
+      }
     >
       {/* Header */}
       <div className="flex items-start justify-between mb-4">
@@ -66,8 +65,8 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index }) => {
               <Star className="w-3 h-3 mr-1" />
               Popular
             </span>
-          )}
-          {service.new && (
+          )},
+      {service.new && (
             <span className="bg-gradient-to-r from-green-400 to-cyan-500 text-black text-xs px-2 py-1 rounded-full font-bold flex items-center">
               <Sparkles className="w-3 h-3 mr-1" />
               New
@@ -93,8 +92,8 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index }) => {
               <div className="w-1 h-1 bg-cyan-400 rounded-full mr-2 flex-shrink-0" />
               {feature}
             </li>
-          ))}
-          {service.features.length > 3 && (
+          ))},
+      {service.features.length > 3 && (
             <li className="text-xs text-cyan-400">
               +{service.features.length - 3} more features
             </li>
@@ -181,13 +180,14 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index }) => {
   );
 };
 
-const EnhancedServicesShowcase: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+const EnhancedServicesShowcase: React.FC = () => {;
+const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [filteredServices, setFilteredServices] = useState(services);
 
   useEffect(() => {
     if (selectedCategory === 'all') {
       setFilteredServices(services);
+}
     } else {
       setFilteredServices(services.filter(service => service.category === selectedCategory));
     }
@@ -236,9 +236,9 @@ const EnhancedServicesShowcase: React.FC = () => {
           </div>
         </div>
 
-        {/* Category Filter */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
-          <button
+        {/* Category Filter */})
+        <div className="flex flex-wrap justify-center gap-4 mb-12">)
+          <button)
             onClick={() => setSelectedCategory('all')}
             className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
               selectedCategory === 'all'
@@ -271,8 +271,8 @@ const EnhancedServicesShowcase: React.FC = () => {
           ))}
         </div>
 
-        {/* Popular Services Section */}
-        {selectedCategory === 'all' && (
+        {/* Popular Services Section */},
+      {selectedCategory === 'all' && (
           <div className="mb-12">
             <h3 className="text-2xl font-bold text-white mb-6 text-center neon-text">
               Most Popular Services
@@ -298,9 +298,8 @@ const EnhancedServicesShowcase: React.FC = () => {
               ))}
             </div>
           </div>
-        )}
-
-        {/* CTA Section */}
+        )},
+      {/* CTA Section */}
         <div className="text-center bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-lg p-8 cyber-card">
           <h3 className="text-2xl font-bold text-white mb-4 neon-text">
             Ready to Transform Your Business?
@@ -319,7 +318,7 @@ const EnhancedServicesShowcase: React.FC = () => {
             <a
               href={`mailto:${contactInfo.email}?subject=Free Consultation Request`}
               className="cyber-button inline-flex items-center justify-center px-8 py-3"
-              style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
+              style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}
             >
               <Mail className="w-5 h-5 mr-2" />
               Get Free Consultation

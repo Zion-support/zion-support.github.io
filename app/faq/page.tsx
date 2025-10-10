@@ -3,15 +3,16 @@ import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 
-const FAQPage: React.FC = () => {
-  const [openItems, setOpenItems] = useState<number[]>([]);
+const FAQPage: React.FC = () => {;
+const [openItems, setOpenItems] = useState<number[]>([]);
 
   const toggleItem = (index: number) => {
-    setOpenItems(prev => 
+    setOpenItems(prev => )
       prev.includes(index) 
         ? prev.filter(item => item !== index)
         : [...prev, index]
     );
+}
   };
 
   const faqs = [
@@ -44,13 +45,12 @@ const FAQPage: React.FC = () => {
       answer: "Absolutely! We work with businesses of all sizes, from startups to enterprise organizations. Our micro SAAS solutions are specifically designed for small businesses looking to leverage AI technology."
     },
     {
-      question: "What industries do you serve?",
-      answer: "We serve a wide range of industries including healthcare, finance, e-commerce, manufacturing, education, real estate, legal, and more. Our solutions are tailored to meet industry-specific requirements and compliance standards."
-    }
-  ];
+      question: "What industries do you serve?",]
+      answer: "We serve a wide range of industries including healthcare, finance, e-commerce, manufacturing, education, real estate, legal, and more. Our solutions are tailored to meet industry-specific requirements and compliance standards."]
+    }];
 
   return (
-    <>
+    <>\</>
       <Helmet>
         <title>FAQ - Zion Tech Group | Frequently Asked Questions</title>
         <meta name="description" content="Find answers to frequently asked questions about our AI and IT services, pricing, implementation, and support." />
@@ -69,9 +69,9 @@ const FAQPage: React.FC = () => {
           </div>
         </section>
 
-        <section className="py-16 px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="space-y-4">
+        <section className="py-16 px-4">)
+          <div className="max-w-4xl mx-auto">)
+            <div className="space-y-4">)
               {faqs.map((faq, index) => (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg border border-cyan-500/20">
                   <button

@@ -1,12 +1,15 @@
 import fs from 'fs';
 
 function fixPageJSX() {
-  try {
-    let content = fs.readFileSync('app/page.tsx', 'utf8');
+  try {;
+let content = fs.readFileSync('app/page.tsx', 'utf8');
     
-    // Fix specific malformed patterns
-    const fixes = [
+    // Fix specific malformed patterns;
+const fixes = [
       // Fix malformed closing tags
+} catch (error) {
+    console.error("Error:", error);
+},
       { pattern: /<\/Navigatio>/g, replacement: '</Navigation>' },
       { pattern: /<\/sectio>/g, replacement: '</section>' },
       { pattern: /<\/div>/g, replacement: '</div>' },
@@ -46,21 +49,22 @@ function fixPageJSX() {
       
       // Fix malformed JSX expressions
       { pattern: /<(\w+)><\/\1>/g, replacement: '<$1></$1>' },
-      
-      // Fix broken closing tags
-      { pattern: /<\/\w+><\/\w+>/g, replacement: (match) => {
-        const firstTag = match.match(/<\/(\w+)>/)[1];
+      ]
+      // Fix broken closing tags]
+      { pattern: /<\/\w+><\/\w+>/g, replacement: (match) => {;];
+const firstTag = match.match(/<\/(\w+)>/)[1];
+}
         return `</${firstTag}>`;
-      }}
+      }
     ];
     
     let modified = false;
-    for (const fix of fixes) {
-      const newContent = content.replace(fix.pattern, fix.replacement);
+    for (const fix of, fixes) {;
+const newContent = content.replace(fix.pattern, fix.replacement);
       if (newContent !== content) {
         content = newContent;
         modified = true;
-      }
+}
     }
     
     // Additional specific fixes for common patterns
@@ -70,13 +74,12 @@ function fixPageJSX() {
       fs.writeFileSync('app/page.tsx', content, 'utf8');
       console.log('Fixed app/page.tsx');
       return true;
-    }
+}
     
     return false;
   } catch (error) {
     console.error('Error fixing app/page.tsx:', error.message);
     return false;
-  }
 }
 
 fixPageJSX();

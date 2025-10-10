@@ -9,11 +9,11 @@ import Footer from '../components/Footer';
 
 import Analytics from './components/Analytics';
 
-export default function RootLayout({
-  children}: {
-  children: React.ReactNode;
-}) {
-  const structuredData = {
+export default function RootLayout({)
+  children}: {)
+  children: React.ReactNode;)
+}) {;
+const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'TechCompany',
     name: 'Zion Tech Group',
@@ -29,14 +29,16 @@ export default function RootLayout({
       'Autonomous Systems',
       'Digital Transformation',
       'Cloud Services',
-      'Automation',
-      'Business Intelligence'
-    ],
+      'Automation']
+      'Business Intelligence'],
     contactPoint: {
       '@type': 'ContactPoint',
       telephone: '+1-302-464-0950',
       contactType: 'Customer Service',
       areaServed: 'US',
+
+}
+}
       availableLanguage: 'en'},
     sameAs: [
       'https://twitter.com/ziontechgroup',
@@ -49,19 +51,19 @@ export default function RootLayout({
       postalCode: '19709',
       addressCountry: 'US',
     offers: [
-      {
-
-  const address = {
+      {;
+const address = {
     '@type': 'PostalAddress',
     streetAddress: '364 E Main St STE 1008',
     addressLocality: 'Middletown',
     addressRegion: 'DE',
-    postalCode: '19709',
-    addressCountry: 'US',
-    offers: [
+    postalCode: '19709',]
+    addressCountry: offers, []
   // TODO: Add items]
-      {// TODO: Add content;}
+
 }
+},
+      {// TODO: Add content;}
         '@type': 'Offer',
         category: 'AI Solutions',
         description: 'Enterprise AI solutions, digital transformation, and cloud services',
@@ -70,6 +72,9 @@ export default function RootLayout({
         priceSpecification: {
           '@type': 'PriceSpecification',
           billingIncrement:         ,
+
+}
+}
 $4}
         category: 'Digital Transformation',
         description: 'Process automation, legacy system modernization, and workflow optimization',
@@ -80,12 +85,10 @@ $4}
         '@type': 'GeoCoordinates',
         latitude: '39.8283',
         longitude:       ,
-geoRadiusgeoRadius: '1000000'
-    hasOfferCatalog: {
+geoRadiusgeoRadius: hasOfferCatalog, {
       '@type': 'OfferCatalog',
       name: 'AI Technology Services',
-      itemListElement: [
-          itemOffered: {
+      itemListElement: itemOffered, {
             '@type': 'Service',
             name: 'AI Enterprise Transformation',
             description:             ,
@@ -94,7 +97,9 @@ name$5: 'Digital Automation',
 name$5: 'Cloud Infrastructure',
             description:       ,
 $4]
-  };
+
+}
+};
   return (
     <html lang='en'>
       <head>
@@ -160,10 +165,10 @@ $4]
         <meta name='twitter:description' content='Transform your business with cutting-edge AI solutions and digital transformation services.' />
         <meta name='twitter:image' content='https://ziontechgroup.com/og-image.jpg' />
         <meta name='twitter:site' content='@ziontechgroup' />
-        <meta name='twitter:creator' content='@ziontechgroup' />
-        <script
-          type='application/ld+json'
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        <meta name='twitter:creator' content='@ziontechgroup' />)
+        <script)
+          type='application/ld+json')
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }
         />
       </head>
       <body className='antialiased'>
@@ -178,18 +183,13 @@ $4]
 
 export default RootLayout;
         priceSpecification: {// TODO: Add content;}
-}
           '@type': 'PriceSpecification',
           billingIncrement: 'P1M'
         };
   itemOffered: {// TODO: Add content;}
-}
             '@type': 'Service',
             name: 'AI Enterprise Transformation',
-            description: 'Comprehensive AI implementation strategies for enterprise organizations'
-
-
-
+            description: 'Comprehensive AI implementation strategies for enterprise organizations';
 export default SrcPage;
 
 

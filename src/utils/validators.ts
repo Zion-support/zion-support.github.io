@@ -1,23 +1,26 @@
-// Validation utility functions
-
+// Validation utility functions;
 export interface ValidationResult {
   isValid: boolean;
   error?: string;
 }
 
-// URL Validation
+// URL Validation;
 export const isValidUrl = (url: string): boolean => {
   if (!url || typeof url !== 'string') return false;
-  try {
-    const urlObj = new URL(url);
+  try {;
+const urlObj = new URL(url);
     return urlObj.protocol === 'http:' || urlObj.protocol === 'https:';
-  } catch {
+}
+  } catch (error) {
+    console.error("Error:", error);
+} catch {
     return false;
   }
 };
 
 export const validateURL = (url: string): ValidationResult => {
   if (!url) {
+}
     return { isValid: false, error: 'URL is required' };
   }
   
@@ -28,7 +31,7 @@ export const validateURL = (url: string): ValidationResult => {
   return { isValid: true };
 };
 
-// String Length Validation
+// String Length Validation;
 export const validateLength = (
   value: string, 
   min: number, 
@@ -36,42 +39,49 @@ export const validateLength = (
   fieldName: string = 'Field'
 ): ValidationResult => {
   if (!value) {
+}
     return { isValid: false, error: `${fieldName} is required` };
   }
   
   if (value.length < min) {
+}
     return { isValid: false, error: `${fieldName} must be at least ${min} characters long` };
   }
   
   if (value.length > max) {
+}
     return { isValid: false, error: `${fieldName} must be no more than ${max} characters long` };
   }
   
   return { isValid: true };
 };
 
-// Password Validation
+// Password Validation;
 export const isValidPassword = (password: string): boolean => {
   if (!password || password.length < 8) return false;
   
   const hasUpperCase = /[A-Z]/.test(password);
   const hasLowerCase = /[a-z]/.test(password);
   const hasNumbers = /\d/.test(password);
-  const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(password);
+}
+  const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>\]/.test(password);</>
   
   return hasUpperCase && hasLowerCase && hasNumbers && hasSpecialChar;
 };
 
 export const validatePassword = (password: string): ValidationResult => {
   if (!password) {
+}
     return { isValid: false, error: 'Password is required' };
   }
   
   if (password.length < 8) {
+}
     return { isValid: false, error: 'Password must be at least 8 characters long' };
   }
   
   if (password.length > 128) {
+}
     return { isValid: false, error: 'Password must be no more than 128 characters long' };
   }
   
@@ -85,7 +95,7 @@ export const validatePassword = (password: string): ValidationResult => {
   return { isValid: true };
 };
 
-// HTML Sanitization
+// HTML Sanitization;
 export const sanitizeHTML = (input: string | null | undefined): string => {
   if (!input || typeof input !== 'string') return '';
   
@@ -96,16 +106,18 @@ export const sanitizeHTML = (input: string | null | undefined): string => {
     .replace(/"/g, '&quot;')
     .replace(/'/g, '&#x27;')
     .replace(/\//g, '&#x2F;');
+}
 };
 
-// Date Validation
+// Date Validation;
 export const validateDate = (dateString: string): ValidationResult => {
   if (!dateString) {
+}
     return { isValid: false, error: 'Date is required' };
   }
   
-  // Check if the date string matches YYYY-MM-DD format
-  const dateRegex = /^\d{4}-\d{2}-\d{2}$/;
+  // Check if the date string matches YYYY-MM-DD format;
+const dateRegex = /^\d{4}-\d{2}-\d{2}$/;
   if (!dateRegex.test(dateString)) {
     return { isValid: false, error: 'Invalid date format. Use YYYY-MM-DD' };
   }
@@ -116,40 +128,43 @@ export const validateDate = (dateString: string): ValidationResult => {
     return { isValid: false, error: 'Invalid date' };
   }
   
-  // Check if the date is valid (e.g., not 2025-13-01)
-  const isoString = date.toISOString().split('T')[0];
+  // Check if the date is valid (e.g., not 2025-13-01);
+const isoString = date.toISOString().split('T')[0];
   if (isoString !== dateString) {
+}
     return { isValid: false, error: 'Invalid date' };
   }
   
   return { isValid: true };
 };
 
-// Credit Card Validation (Luhn Algorithm)
+// Credit Card Validation (Luhn Algorithm);
 export const validateCreditCard = (cardNumber: string): ValidationResult => {
   if (!cardNumber) {
+}
     return { isValid: false, error: 'Credit card number is required' };
   }
   
-  // Remove spaces and non-digits
-  const cleaned = cardNumber.replace(/\D/g, '');
+  // Remove spaces and non-digits;
+const cleaned = cardNumber.replace(/\D/g, '');
   
   if (cleaned.length < 13 || cleaned.length > 19) {
+}
     return { isValid: false, error: 'Invalid credit card number length' };
   }
   
-  // Luhn algorithm
-  let sum = 0;
+  // Luhn algorithm;
+let sum = 0;
   let isEven = false;
   
-  for (let i = cleaned.length - 1; i >= 0; i--) {
-    let digit = parseInt(cleaned[i]);
+  for (let i = cleaned.length - 1; i >= 0; i--) {;
+let digit = parseInt(cleaned[i]);
     
     if (isEven) {
       digit *= 2;
       if (digit > 9) {
         digit -= 9;
-      }
+}
     }
     
     sum += digit;
@@ -157,53 +172,59 @@ export const validateCreditCard = (cardNumber: string): ValidationResult => {
   }
   
   if (sum % 10 !== 0) {
+}
     return { isValid: false, error: 'Invalid credit card number' };
   }
   
   return { isValid: true };
 };
 
-// JSON Validation
+// JSON Validation;
 export const validateJSON = (jsonString: string): ValidationResult => {
   if (!jsonString) {
+}
     return { isValid: false, error: 'JSON string is required' };
   }
   
   try {
     JSON.parse(jsonString);
+  } catch (error) {
+    console.error("Error:", error);
+}
     return { isValid: true };
   } catch (error) {
+}
     return { isValid: false, error: 'Invalid JSON format' };
   }
 };
 
-// Required Field Validation
+// Required Field Validation;
 export const validateRequired = (value: any, fieldName: string = 'Field'): ValidationResult => {
   if (value === null || value === undefined || value === '') {
+}
     return { isValid: false, error: `${fieldName} is required` };
   }
   
   return { isValid: true };
 };
 
-// Composite Validation
+// Composite Validation;
 export const validateComposite = (
   value: string, 
   validators: Array<(val: string) => ValidationResult>
 ): ValidationResult => {
-  for (const validator of validators) {
-    const result = validator(value);
+  for (const validator of, validators) {;
+const result = validator(value);
     if (!result.isValid) {
       return result;
-    }
-  }
-  
+}
   return { isValid: true };
 };
 
-// Async Validation Helper
-export const asyncValidator = async (val: string): Promise<string> => {
+// Async Validation Helper;
+export const asyncValidator = async (val: string): Promise<string></strin></string> => {
   // Simulate async validation
   await new Promise(resolve => setTimeout(resolve, 100));
   return 'success';
+}
 };

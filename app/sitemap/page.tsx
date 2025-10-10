@@ -1,8 +1,9 @@
 import React from 'react';
 
-const SitemapPage: React.FC = () => {
-  const pages = [
-    { path: '/', title: 'Home', description: 'Zion Tech Group - Advanced AI and IT Solutions' },
+const SitemapPage: React.FC = () => {;
+const pages = [
+},
+      { path: '/', title: 'Home', description: 'Zion Tech Group - Advanced AI and IT Solutions' },
     { path: '/about', title: 'About Us', description: 'Learn about our mission and expertise' },
     { path: '/services', title: 'All Services', description: 'Comprehensive AI, IT, and micro SAAS solutions' },
     { path: '/micro-saas', title: 'Micro SAAS Solutions', description: 'Affordable, powerful AI-driven tools for modern businesses' },
@@ -25,27 +26,26 @@ const SitemapPage: React.FC = () => {
     { path: '/contact', title: 'Contact Us', description: 'Get in touch with our team of experts' },
     { path: '/blog', title: 'Blog & Insights', description: 'Latest insights and trends in AI and technology' },
     { path: '/guides', title: 'Technical Guides', description: 'Comprehensive guides and documentation' },
-    { path: '/privacy', title: 'Privacy Policy', description: 'Our privacy policy and data protection practices' },
-    { path: '/terms', title: 'Terms of Service', description: 'Terms and conditions for our services' },
-  ];
+    { path: '/privacy', title: 'Privacy Policy', description: 'Our privacy policy and data protection practices' },]
+      { path: '/terms', title: 'Terms of Service', description: 'Terms and conditions for our services' }];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-12 px-4 sm:px-6 lg:px-8"></div>
-      <div className="max-w-7xl mx-auto"></div>
-        <div className="text-center mb-12"></div>
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-12 px-4 sm:px-6 lg:px-8"></div></div></div>
+      <div className="max-w-7xl mx-auto"></div></div></div>
+        <div className="text-center mb-12"></div></div></div>
+          <h1 className="text-4xl font-bold text-gray-900 mb-4"></h>
             Sitemap</h1>
           </h1>
           <p className="text-xl text-gray-600">
             Navigate through all pages on our website
           </p>
         </div>
-
-        <div className="bg-white rounded-lg shadow-lg p-8"></div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+)
+        <div className="bg-white rounded-lg shadow-lg p-8"></div></div></div>)
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div></div>)
             {pages.map((page, index) => (</div>
-              <div key={index} className="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow"></div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+              <div key={index} className="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow"></div></div></div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2"></h>
                   <a 
                     href={page.path} 
                     className="text-blue-600 hover:text-blue-700 transition-colors"
@@ -64,14 +64,14 @@ const SitemapPage: React.FC = () => {
           </div>
         </div>
 
-        <div className="mt-12 bg-blue-50 rounded-lg p-8"></div>
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">
+        <div className="mt-12 bg-blue-50 rounded-lg p-8"></div></div></div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-4"></h>
             Need Help Finding Something?
           </h2>
           <p className="text-gray-600 mb-6">
             If you can't find what you're looking for, feel free to contact us directly.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4"></div>
+          <div className="flex flex-col sm:flex-row gap-4"></div></div></div>
             <a 
               href="/contact"
               className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center"

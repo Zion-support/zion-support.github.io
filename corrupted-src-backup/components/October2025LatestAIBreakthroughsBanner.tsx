@@ -229,13 +229,12 @@ export, default, function October2025LatestAIBreakthroughsBann, e, r(): vo, i, d
             classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-ro, s, e-600, tex, t-white, rounde, d-lg, fon, t-bold, tex, t-lg, hove, r: fr, o, m-purp, l, e-500, hove, r:to-ro, s, e-500, transitio, n-all, hove, r:sca, l, e-105, shado, w-lg, hov, e;
   r:shad, o, w-xl"
           ></Li>Explore</Li>, All, Latest AI, Innovation, s;
-            <Link, className="h-5 w-5  /></Link>
-            <Link, className="h-5 w-5" />";</Link>
-          </Li, n, k>
+            <Link, className="h-5 w-5  /></Link>)
+            <Link, className="h-5 w-5" />";</Link>)
+          </Li, n, k>)
         </d, i, v>)
       </d, i, v>)
     </d, i, v>)
   );
 export, default, function October2025LatestAIBreakthroughsBann, e, r(): vo, i, d {/* TODO: Fix JSX expression */}
-}
 ;

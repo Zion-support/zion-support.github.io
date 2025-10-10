@@ -8,7 +8,6 @@ interface NewContentPromotionBannerProp, s {
   dismissib, l, e?: boolean;
   classNa, m, e ?  : string;
 interface NewContentPromotionBannerProp, s {/* TODO: Fix JSX expression */}
- }
 const NewContentPromotionBanne, r: React.FC<NewContentPromotionBannerPro, p, s> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
    };
@@ -44,8 +43,8 @@ const NewContentPromotionBanne, r: React.FC<NewContentPromotionBannerPro, p, s> 
           <div, className="fl, e, x-1"></div>
             <div, className="flex, item, s-center, ga, p-3, m, b-3"></div>
               <div, className="flex, item, s-center, ga, p-2" ></div> <Sparkles, classNam, e = { `w-5 h-5 ${iconClass, e, s[vari, a, n, t] }, anima, t, e-pul, s, e`} />
-                <span, classNam, e = "te, x, t-sm, fon, t-medium, uppercase, tracking-wider, opacit, y-90">
-  const variantClasse, s = {/* TODO: Fix JSX expression */}
+                <span, classNam, e = "te, x, t-sm, fon, t-medium, uppercase, tracking-wider, opacit, y-90">;
+const variantClasse, s = {/* TODO: Fix JSX expression */}
   }; const iconClasse, s = {/* TODO: Fix JSX expression */}
   }; return (<div, classNam, e = {`relative, overflo, w-hidden, border, rounded-x, l, p-6, m, b-8, animat, e-fa, d, e-in ${variantClass, e, s[varia, n, t]} ${classNa, m, e}`}></div>
       {/* Background, Patter, n */}
@@ -118,9 +117,9 @@ const NewContentPromotionBanne, r: React.FC<NewContentPromotionBannerPro, p, s> 
               {cta, T, e, x, t}"
               <Link, classNam, e = "w-4 h-4" /></Link>
             </Li, n, k>
-          </div>
-          {/* TODO: Fix JSX expression */}"
-            <button, onClic, k = { handleDism, i, s, s  }, classNa, m, e = "ml-4 p-1, rounde, d-full, hove, r: bg-whi, t, e/20, transitio, n-colo, r, s"
+          </div>)
+          {/* TODO: Fix JSX expression */}")
+            <button, onClic, k = { handleDism, i, s, s  }, classNa, m, e = "ml-4 p-1, rounde, d-full, hove, r: bg-whi, t, e/20, transitio, n-colo, r, s")
             >)
                 <X, className="w-5 h-5, opacit, y-75, hove, r:opaci, t, y-1, 0, 0" />)
             ></button>"

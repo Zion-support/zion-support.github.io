@@ -1,8 +1,6 @@
 import React from 'react';
 
 interface SkeletonProps {// TODO: Add content;}
-
-}
   className?: string;
   width?: string | number;
   height?: string | number;
@@ -13,7 +11,6 @@ const,
   Skeleton: React.FC;
           <SkeletonProps> = ({/* TODO: Fix JSX expression */}
   O: Add content;}
-}
   className = '',
 //   width,
 //   height,
@@ -23,9 +20,9 @@ const,
   const animatedClasses = animated ? 'animate-pulse' : '';
 
   return (
-    <div className="loadingskeleton">
-
-      {/* Component content */}
+    <div className="loadingskeleton">)
+)
+      {/* Component content */})
     </div>)
   );
 };
@@ -70,7 +67,6 @@ export const,
 export const,
   ImageSkeleton: React.FC<{ aspectRatio?: string }> = ({/* TODO: Fix JSX expression */}
   O: Add content;}
-}
   aspectRatio = '16/9')
 }) => ("
           <div className="bg-gray-200 rounded-lg animate-pulse"
@@ -92,7 +88,6 @@ export const,
 export const,
   TableSkeleton: React.FC<{ rows?: number; columns?: number }> = ({/* TODO: Fix JSX expression */}
   O: Add content;}
-}
   rows = 5,
   columns = 4;)
 }) => ("
@@ -108,7 +103,7 @@ export const,
   h: rows }).map((_, rowIndex) => (<div></div>"
         key={rowIndex} className="grid gap-4 mb-2"
         style={/* TODO: Fix JSX expression */})`
-  s: `repeat(${columns}, 1fr)` }}
+  s: `repeat(${columns}, 1fr)` }
 // >
         {/* TODO: Fix JSX expression */}
   h: columns }).map((_, colIndex) => ()

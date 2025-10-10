@@ -2,23 +2,24 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
 
-const Navigation: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
+const Navigation: React.FC = () => {;
+const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [aiServicesOpen, setAiServicesOpen] = useState(false);
   const [itServicesOpen, setItServicesOpen] = useState(false);
   const [microSaasOpen, setMicroSaasOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
-  useEffect(() => {
-    const handleResize = () => {
+  useEffect(() => {;
+const handleResize = () => {
       if (window.innerWidth >= 1024) {
         setIsOpen(false);
-      }
+}
     };
 
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
+}
     };
 
     window.addEventListener('resize', handleResize);
@@ -26,6 +27,7 @@ const Navigation: React.FC = () => {
     return () => {
       window.removeEventListener('resize', handleResize);
       window.removeEventListener('scroll', handleScroll);
+}
     };
   }, []);
 
@@ -35,13 +37,14 @@ const Navigation: React.FC = () => {
     setItServicesOpen(false);
     setMicroSaasOpen(false);
     setIsOpen(false);
+}
   };
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
     if (isOpen) {
       closeAllMenus();
-    }
+}
   };
 
   const serviceCategories = [
@@ -59,8 +62,8 @@ const Navigation: React.FC = () => {
         { name: 'AI Customer Support Bot', path: '/ai-customer-support-bot', description: '24/7 AI customer support', icon: '🤖', popular: true },
         { name: 'AI Code Review Assistant', path: '/ai-code-generation', description: 'Automated code analysis', icon: '🔍', popular: false },
         { name: 'AI Content Generator', path: '/ai-content-generation', description: 'AI-powered content creation', icon: '✍️', popular: false },
-        { name: 'AI SEO Optimizer', path: '/ai-marketing', description: 'AI-driven SEO optimization', icon: '🎯', popular: false }
-      ]
+      { name: 'AI SEO Optimizer', path: '/ai-marketing', description: 'AI-driven SEO optimization', icon: '🎯', popular: false }]
+    ]
     },
     {
       title: 'AI Services',
@@ -90,8 +93,8 @@ const Navigation: React.FC = () => {
         { name: 'AI Natural Language Processing', path: '/ai-nlp', description: 'Advanced NLP solutions' },
         { name: 'AI Robotics Platform', path: '/ai-robotics', description: 'Intelligent robotics' },
         { name: 'AI Research & Development', path: '/ai-research-development', description: 'Custom AI R&D' },
-        { name: 'AI Edge Computing', path: '/ai-edge-computing', description: 'AI at the edge' }
-      ]
+      { name: 'AI Edge Computing', path: '/ai-edge-computing', description: 'AI at the edge' }]
+    ]
     },
     {
       title: 'IT Services',
@@ -115,8 +118,8 @@ const Navigation: React.FC = () => {
         { name: 'IT Performance Monitoring', path: '/it-performance-monitoring', description: 'Real-time monitoring' },
         { name: 'IT Disaster Recovery', path: '/it-disaster-recovery', description: 'Disaster recovery' },
         { name: 'IT Automation', path: '/it-automation', description: 'IT process automation' },
-        { name: 'Global IT Support', path: '/global-it-support', description: 'Worldwide support' }
-      ]
+      { name: 'Global IT Support', path: '/global-it-support', description: 'Worldwide support' }]
+    ]
     },
     {
       title: 'Specialized Solutions',
@@ -147,8 +150,8 @@ const Navigation: React.FC = () => {
         { name: 'AI Customer Insights', path: '/ai-customer-insights', description: 'Deep customer insights' },
         { name: 'AI Workflow Automation', path: '/ai-workflow-automation', description: 'Process automation' },
         { name: 'AI A/B Testing Platform', path: '/ai-ab-testing', description: 'Advanced A/B testing' },
-        { name: 'AI Predictive Analytics', path: '/ai-predictive-analytics', description: 'Future outcome predictions' }
-      ]
+      { name: 'AI Predictive Analytics', path: '/ai-predictive-analytics', description: 'Future outcome predictions' }]
+    ]
     },
     {
       title: 'Specialized',
@@ -168,8 +171,8 @@ const Navigation: React.FC = () => {
         { name: 'Digital Transformation', path: '/digital-transformation', description: 'Business modernization' },
         { name: 'Innovation Labs', path: '/innovation-labs', description: 'R&D and prototyping' },
         { name: 'Sustainability Tech', path: '/sustainability-tech', description: 'Green technology solutions' },
-        { name: 'Future Technologies', path: '/future-technologies', description: 'Emerging tech solutions' }
-      ]
+      { name: 'Future Technologies', path: '/future-technologies', description: 'Emerging tech solutions' }]
+    ]
     }
   ];
 
@@ -201,9 +204,9 @@ const Navigation: React.FC = () => {
               About
             </Link>
 
-            {/* Services Dropdown */}
-            <div className="relative">
-              <button
+            {/* Services Dropdown */})
+            <div className="relative">)
+              <button)
                 onClick={() => setServicesOpen(!servicesOpen)}
                 className="flex items-center space-x-1 font-medium transition-colors hover:text-cyan-400 text-white"
                 aria-expanded={servicesOpen}
@@ -238,8 +241,8 @@ const Navigation: React.FC = () => {
                                 {service.description}
                               </div>
                             </Link>
-                          ))}
-                          {category.services.length > 6 && (
+                          ))},
+      {category.services.length > 6 && (
                             <Link
                               href={`/${category.title.toLowerCase().replace(' ', '-')}`}
                               className="block px-3 py-2 text-sm text-purple-600 hover:bg-purple-50 rounded-lg transition-colors font-medium"
@@ -315,8 +318,8 @@ const Navigation: React.FC = () => {
           </div>
         </div>
 
-        {/* Mobile menu */}
-        {isOpen && (
+        {/* Mobile menu */},
+      {isOpen && (
           <div className="lg:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 bg-gray-900/95 backdrop-blur-sm rounded-lg mt-2">
               <Link
@@ -358,7 +361,8 @@ const Navigation: React.FC = () => {
                               href={service.path}
                               className="block text-xs text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-1"
                             >
-                              {typeof service.icon === 'string' ? service.icon : <service.icon className="w-3 h-3 inline mr-1" />} {service.name}
+                              {typeof service.icon === 'string' ? service.icon : <service.icon className="w-3 h-3 inline mr-1" />},
+      {service.name}
                             </Link>
                           ))}
                           <Link
@@ -408,8 +412,8 @@ const Navigation: React.FC = () => {
           </button>
         </div>
 
-        {/* Mobile Menu */}
-        {isOpen && (
+        {/* Mobile Menu */},
+      {isOpen && (
           <div className="lg:hidden bg-slate-900/95 backdrop-blur-md border-t border-cyan-400/20">
             <div className="px-4 py-6 space-y-6">
               {/* Main Navigation */}

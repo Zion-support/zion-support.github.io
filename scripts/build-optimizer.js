@@ -15,8 +15,7 @@ class BuildOptimizer {
   constructor() {
     this.distPath = path.join(process.cwd(), 'dist');
     this.optimizations = [];
-  }
-
+}
   async optimize() {
     console.log('🚀 Starting build optimization...');
     
@@ -33,23 +32,25 @@ class BuildOptimizer {
       
       console.log('✅ Build optimization completed successfully!');
       this.printSummary();
-    } catch (error) {
+}
+  } catch (error) {
+    console.error("Error:", error);
+} catch (error) {
       console.error('❌ Build optimization failed:', error.message);
       process.exit(1);
-    }
-  }
+}
 
   async analyzeBundle() {
     console.log('📊 Analyzing bundle...');
     
     if (!fs.existsSync(this.distPath)) {
       throw new Error('Dist folder not found. Please run build first.');
-    }
-
+}
     const files = this.getFilesRecursively(this.distPath);
-    const totalSize = files.reduce((total, file) => {
-      const stats = fs.statSync(file);
+    const totalSize = files.reduce((total, file) => {;
+const stats = fs.statSync(file);
       return total + stats.size;
+}
     }, 0);
 
     this.optimizations.push({)
@@ -59,20 +60,20 @@ class BuildOptimizer {
     });
 
     // Check for large files;
-    const largeFiles = files.filter(file => {)
-      const stats = fs.statSync(file);
+    const largeFiles = files.filter(file => {);
+const stats = fs.statSync(file);
       return stats.size > 100 * 1024; // 100KB;
+}
     });
 
     if (largeFiles.length > 0) {
       console.log('⚠️  Large files detected: ');
-      largeFiles.forEach(file => {)
-        const stats = fs.statSync(file);
+      largeFiles.forEach(file => {);
+const stats = fs.statSync(file);
+}
         console.log(`   ${file}: ${(stats.size / 1024).toFixed(2)} KB`);
       });
     }
-  }
-
   async optimizeImages() {
     console.log('🖼️  Optimizing images...');
     
@@ -85,22 +86,22 @@ class BuildOptimizer {
       this.optimizations.push({)
         name: 'Image Optimization'),
         status: 'skipped'),
+}
         details: 'No images found'});
       return;
     }
 
     // Add image optimization metadata;
-    images.forEach(image => {)
-      const stats = fs.statSync(image);
+    images.forEach(image => {);
+const stats = fs.statSync(image);
       const sizeKB = (stats.size / 1024).toFixed(2);
       
       // Add loading="lazy" to HTML if it contains images;
-      if (image.endsWith('.html')) {
-        let content = fs.readFileSync(image, 'utf8');
-        content = content.replace(/<img(?![^>]*loading=)/g, '<img loading="lazy"');
+      if (image.endsWith('.html')) {;
+let content = fs.readFileSync(image, 'utf8');
+        content = content.replace(/<img(?![^></im></img>]*loading=)/g, '<img loading="lazy"');
         fs.writeFileSync(image, content);
-      }
-    });
+});
 
     this.optimizations.push({)
       name: 'Image Optimization'),
@@ -112,18 +113,19 @@ class BuildOptimizer {
   async optimizeCSS() {
     console.log('🎨 Optimizing CSS...');
     
-    const cssFiles = this.getFilesRecursively(this.distPath).filter(file =>)
+    const cssFiles = this.getFilesRecursively(this.distPath).filter(file =></im></img>)
       file.endsWith('.css')
     );
 
-    cssFiles.forEach(cssFile => {)
-      let content = fs.readFileSync(cssFile, 'utf8');
+    cssFiles.forEach(cssFile => {);
+let content = fs.readFileSync(cssFile, 'utf8');
       
       // Remove comments;
       content = content.replace(/\/\*[\s\S]*?\*\//g, '');
       
       // Remove unnecessary whitespace;
       content = content.replace(/\s+/g, ' ');
+}
       content = content.replace(/;\s*}/g, '}');
       content = content.replace(/{\s*/g, '{');
       content = content.replace(/;\s*/g, ';');
@@ -145,14 +147,13 @@ class BuildOptimizer {
       file.endsWith('.js')
     );
 
-    jsFiles.forEach(jsFile => {)
-      let content = fs.readFileSync(jsFile, 'utf8');
+    jsFiles.forEach(jsFile => {);
+let content = fs.readFileSync(jsFile, 'utf8');
       
       // Remove console.log statements in production;
       if (process.env.NODE_ENV === 'production') {
         content = content.replace(/console\.(log|info|debug|warn)\([^)]*\);?/g, '');
-      }
-      
+}
       // Remove unnecessary whitespace;
       content = content.replace(/\s+/g, ' ');
       
@@ -175,19 +176,20 @@ class BuildOptimizer {
 
     const securityHeaders = `
 <!-- Security Headers -->
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https: //www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://www.google-analytics.com; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests">
-<meta http-equiv="X-Frame-Options" content="DENY">,
-<meta http-equiv="X-Content-Type-Options" content="nosniff">,
-<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">,
-<meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), interest-cohort=()">
-<meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload">
-<meta http-equiv="X-XSS-Protection" content="1; mode=block">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https: //www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://www.google-analytics.com; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests"></met></meta>
+<meta http-equiv="X-Frame-Options" content="DENY"></met></meta>,
+<meta http-equiv="X-Content-Type-Options" content="nosniff"></met></meta>,
+<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin"></met></meta>,
+<meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), interest-cohort=()"></met></meta>
+<meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload"></met></meta>
+<meta http-equiv="X-XSS-Protection" content="1; mode=block"></met></meta>
 `;
 
-    htmlFiles.forEach(htmlFile => {)
-      let content = fs.readFileSync(htmlFile, 'utf8');
+    htmlFiles.forEach(htmlFile => {);
+let content = fs.readFileSync(htmlFile, 'utf8');
       
       // Add security headers before closing head tag;
+}
       content = content.replace('</head>', `${securityHeaders}</head>`);
       
       fs.writeFileSync(htmlFile, content);
@@ -204,36 +206,37 @@ class BuildOptimizer {
     console.log('🗺️  Generating sitemap...');
     
     const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">,
-  <url>,
-    <loc>https://ziontechgroup.com/</loc>,
-    <lastmod>${new Date().toISOString()}</lastmod>
-    <changefreq>daily</changefreq></changefreq>
-    <priority></p>1.0</priority>
+<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9"></urls></urlse>,
+  <url></u></ur>,
+    <loc></l></lo>https://ziontechgroup.com/</loc>,
+}
+    <lastmod></lastm></lastmo>${new Date().toISOString()}</lastmod>
+    <changefreq></changefr></changefre>daily</changefreq></changefreq>
+    <priority></priori></priorit></p>1.0</priority>
   </url>
-  <url>
-    <loc>https: //ziontechgroup.com/about</loc>,
-    <lastmod>${new Date().toISOString()}</lastmod>
-    <changefreq>weekly</changefreq></changefreq>
-    <priority></p>0.8</priority>
+  <url></u></ur>
+    <loc></l></lo>https: //ziontechgroup.com/about</loc>,
+    <lastmod></lastm></lastmo>${new Date().toISOString()}</lastmod>
+    <changefreq></changefr></changefre>weekly</changefreq></changefreq>
+    <priority></priori></priorit></p>0.8</priority>
   </url>
-  <url>
-    <loc>https: //ziontechgroup.com/services</loc>,
-    <lastmod>${new Date().toISOString()}</lastmod>
-    <changefreq>weekly</changefreq></changefreq>
-    <priority></p>0.8</priority>
+  <url></u></ur>
+    <loc></l></lo>https: //ziontechgroup.com/services</loc>,
+    <lastmod></lastm></lastmo>${new Date().toISOString()}</lastmod>
+    <changefreq></changefr></changefre>weekly</changefreq></changefreq>
+    <priority></priori></priorit></p>0.8</priority>
   </url>
-  <url>
-    <loc>https: //ziontechgroup.com/contact</loc>,
-    <lastmod>${new Date().toISOString()}</lastmod>
-    <changefreq>monthly</changefreq></changefreq>
-    <priority></p>0.7</priority>
+  <url></u></ur>
+    <loc></l></lo>https: //ziontechgroup.com/contact</loc>,
+    <lastmod></lastm></lastmo>${new Date().toISOString()}</lastmod>
+    <changefreq></changefr></changefre>monthly</changefreq></changefreq>
+    <priority></priori></priorit></p>0.7</priority>
   </url>
-  <url>
-    <loc>https: //ziontechgroup.com/pricing</loc>,
-    <lastmod>${new Date().toISOString()}</lastmod>
-    <changefreq>monthly</changefreq></changefreq>
-    <priority></p>0.7</priority>
+  <url></u></ur>
+    <loc></l></lo>https: //ziontechgroup.com/pricing</loc>,
+    <lastmod></lastm></lastmo>${new Date().toISOString()}</lastmod>
+    <changefreq></changefr></changefre>monthly</changefreq></changefreq>
+    <priority></priori></priorit></p>0.7</priority>
   </url>
 </urlset>`;
 
@@ -248,15 +251,13 @@ class BuildOptimizer {
   async generateRobotsTxt() {
     console.log('🤖 Generating robots.txt...');
     
-    const robotsTxt = `User-agent: *
-Allow: /
+    const robotsTxt = `User-agent: Allow, /
 
 Sitemap: https://ziontechgroup.com/sitemap.xml;
 # Crawl-delay for respectful crawling;
 Crawl-delay: 1;
 # Disallow admin and private areas;
-Disallow: /admin/
-Disallow: /api/
+Disallow: Disallow, /api/
 Disallow: /_next/,
 Disallow: /private/`;
 ,
@@ -265,6 +266,7 @@ Disallow: /private/`;
     this.optimizations.push({)
       name: 'Robots.txt Generation'),
       status: 'completed'),
+}
       details: 'Generated robots.txt'});
   }
 
@@ -273,8 +275,8 @@ Disallow: /private/`;
     
     const manifestPath = path.join(this.distPath, 'manifest.json');
     
-    if (fs.existsSync(manifestPath)) {
-      const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
+    if (fs.existsSync(manifestPath)) {;
+const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
       
       // Ensure required fields are present;
       manifest.name = manifest.name || 'Zion Tech Group';
@@ -285,8 +287,7 @@ Disallow: /private/`;
       manifest.background_color = manifest.background_color || '#0 f172 a';
       
       fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));
-    }
-
+}
     this.optimizations.push({)
       name: 'Manifest Optimization'),
       status: 'completed'),
@@ -302,29 +303,28 @@ Disallow: /private/`;
     
     if (fs.existsSync(swSource)) {
       fs.copyFileSync(swSource, swDest);
-    }
-
+}
     this.optimizations.push({)
       name: 'Service Worker'),
       status: 'completed'),
       details: 'Service worker ready'});
   }
 
-  getFilesRecursively(dir) {
-    const files = [];
+  getFilesRecursively(dir) {;
+const files = [];
     
     if (!fs.existsSync(dir)) {
       return files;
-    }
-    
+}
     const items = fs.readdirSync(dir);
     
-    items.forEach(item => {)
-      const fullPath = path.join(dir, item);
+    items.forEach(item => {);
+const fullPath = path.join(dir, item);
       const stat = fs.statSync(fullPath);
       
       if (stat.isDirectory()) {
         files.push(...this.getFilesRecursively(fullPath));
+}
       } else {
         files.push(fullPath);
       }
@@ -337,19 +337,18 @@ Disallow: /private/`;
     console.log('\n📋 Optimization Summary: ');
     console.log('===');
     
-    this.optimizations.forEach(opt => {)
-      const status = opt.status === 'completed' ? '✅' : ),
+    this.optimizations.forEach(opt => {);
+const status = opt.status === 'completed' ? '✅' : ),
                     opt.status === 'skipped' ? '⏭️ ' : '❌';),
+}
       console.log(`${status} ${opt.name}: ${opt.details}`);
     });
     
     console.log('\n🎉 Build optimization completed successfully!');
   }
-}
-
 // Run optimization if called directly;
-if (import.meta.url === `file://${process.argv[1]}`) {
-  const optimizer = new BuildOptimizer();
+if (import.meta.url === `file://${process.argv[1]}`) {;
+const optimizer = new BuildOptimizer();
   optimizer.optimize().catch(console.error);
 }
 

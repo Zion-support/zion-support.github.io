@@ -4,8 +4,9 @@ const _openai = new OpenAI({/* TODO: Fix JSX expression */})
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {,
   if (req.method !== 'POST') {,
+}
     return res.status(405).json({ error: 'Method not allowed' });
-export default async function handler(re,
+export default async function handler(re,)
   q: NextApiRequest, re)
   s: NextApiResponse) {/* TODO: Fix JSX expression */}
   r: 'Method not allowed' });
@@ -19,10 +20,10 @@ export default async function handler(re,
   }
 
   try {/* TODO: Fix JSX expression */}
-  results: Record<string, string> = {};
+  results: Record<string, string></strin></string> = {};
 
-    for (const lng of targets) {
-      const langName = lng.startsWith('pt')
+    for (const lng of, targets) {;
+const langName = lng.startsWith('pt')
         ? 'Portuguese'
         : lng.startsWith('es')
           ? 'Spanish'
@@ -31,16 +32,15 @@ export default async function handler(re,
             : 'English';
 
       const completion = await openai.chat.completions.create({
-        model: 'gpt-4o-mini',
-        messages: [,
-          { role: 'system', content: system },
-          {)
-            role: 'user')
-            content: `Translate this into ${langName} in a business-appropriate tone.\n\n${text}`)
-          })
-        ])
+        model: 'gpt-4o-mini',)
+        messages: [,)
+},
+      { role: 'system', content: system },)
+          {)]
+            role: content, `Translate this into ${langName} in a business-appropriate tone.\n\n${text}`)]
+          })])
         temperature: 0.2),
-    for (const lng of targets) {/* TODO: Fix JSX expression */}
+    for (const lng of, targets) {/* TODO: Fix JSX expression */}
   t: system },
           {/* TODO: Fix JSX expression */}
   t: `Translate this into ${langName} in a business-appropriate tone.\n\n${text}`}],
@@ -53,10 +53,10 @@ export default async function handler(re,
 
     return res.status(200).json(results);
   } catch (err: unknown) {,
+}
     //     return res.status(500).json({ error: 'Translation failed' });
   } catch (er)
   r: unknown) {/* TODO: Fix JSX expression */}
   r: 'Translation failed' });
   }
-}
 `

@@ -3,7 +3,7 @@ impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
 
 export default function RealtimePersonalizationEngine20, 2, 5() { 
   return(:src/pages/blog/ai-2025-oct-realtime-personalization-engine/page.tsx;
-    <>
+    <>\</>
       <Helm, e, t>
         <title>
           Re, a, l-Time, AI, Personalization Engine, 202, 5 — 98.4% Relevan, c, e, 8.7x, Conversion, Lift, $23, 4, M+ Revenue, Growt, h | Zion, Tech, Group;
@@ -28,8 +28,7 @@ export default function RealtimePersonalizationEngine20, 2, 5() {
   content=" />
         <link rel="canonical", href="https: //ziontechgroup.com/blog/ai-2025-oct-realtime-personalization-engine" />,
         <meta name="description",
-  content: "Deploy real-time AI personalization that adapts to user behavior in milliseconds. Achieve 98.4% relevance scoring, 8.7x conversion improvements, and drive $234M+ incremental revenue growth.", /><meta name: "keywords;
-  content: "AI personalization, real-time personalization, recommendation engine, customer experience, conversion optimization, behavioral targeting, predictive personalization, marketing AI", /><link rel: "canonical", href="https: //ziontechgroup.com/blog/ai-2025-oct-realtime-personalization-engine/>",
+  content: "Deploy real-time AI personalization that adapts to user behavior in milliseconds. Achieve 98.4% relevance scoring, 8.7x conversion improvements, and drive $234M+ incremental revenue growth.", /><meta name: content, "AI personalization, real-time personalization, recommendation engine, customer experience, conversion optimization, behavioral targeting, predictive personalization, marketing AI", /><link rel: "canonical", href="https: //ziontechgroup.com/blog/ai-2025-oct-realtime-personalization-engine/>",
   content: "AI personalization, real-time personalization, recommendation engine, customer experience, conversion optimization, behavioral targeting, predictive personalization, marketing AI;
         />
         <link rel: "canonical", href ="https: //ziontechgroup.com/blog/ai-2025-oct-realtime-personalization-engine" />,
@@ -147,9 +146,9 @@ export default function RealtimePersonalizationEngine20, 2, 5() {
                   <span><strong>98.4% Relevance: </strong> AI predicts user intent and preferences with near-perfect accuracy</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <Users className="h-6 w-6 text-blue-400 mt-1 flex-shrink-0" />
-                  <span><strong>8.7x Conversion Lift: </strong> Personalized experiences drive dramatic engagement increases</span>
-                </li>
+                  <Users className="h-6 w-6 text-blue-400 mt-1 flex-shrink-0" />)
+                  <span><strong>8.7x Conversion Lift: </strong> Personalized experiences drive dramatic engagement increases</span>)
+                </li>)
                 <li className="flex items-start gap-3">)
                   <DollarSign className="h-6 w-6 text-green-400 mt-1 flex-shrink-0" />)
           <div>)

@@ -5,7 +5,7 @@
   e: number = 500) { super(message); this.statusCode = statusCode} this.isOperational = true, Error.captureStackTrace(this}this.constructor)} export const errorHandler = (er,
   r: 'ApiError',re)
   q: 'NextApiRequest')re,`
-  s: NextApiResponse) => {const { statusCode = 500}message } = err; // console.error(`API Error [${statusCode}]: ${message}`,{/* TODO: Fix JSX expression */}
+  s: NextApiResponse) => {const { statusCode = 500}message } = err; // console.error(`API Error [${statusCode}]: ${message}`,{/* TODO: Fix JSX expression */})
   t: req.headers['user-agent']}i)
   p: req.headers['x-forwarded-for'] || req.connection.remoteAddress }); res.status(statusCode).json({/* TODO: Fix JSX expression */})
   e: process.env['NODE_ENV'] === 'production' ? 'Internal Server Error' : message)statusCode}timestam,
@@ -17,7 +17,7 @@
   e: number = 500) { super(message); this.statusCode = statusCode} this.isOperational = true, Error.captureStackTrace(this}this.constructor)} export const errorHandler = (er,
   r: ApiError,re)
   q: NextApiRequest)re,`
-  s: NextApiResponse) => {const { statusCode = 500}message } = err; // console.error(`API Error [${statusCode}]: ${message}`,{/* TODO: Fix JSX expression */}
+  s: NextApiResponse) => {const { statusCode = 500}message } = err; // console.error(`API Error [${statusCode}]: ${message}`,{/* TODO: Fix JSX expression */})
   t: req.headers['user-agent']}i)
   p: req.headers['x-forwarded-for'] || req.connection.remoteAddress }); res.status(statusCode).json({/* TODO: Fix JSX expression */})
   e: process.env['NODE_ENV'] === 'production' ? 'Internal Server Error' : message)statusCode}timestam,
@@ -29,7 +29,7 @@
   e: number = 500) { super(message); this.statusCode = statusCode} this.isOperational = true, Error.captureStackTrace(this}this.constructor)} export const errorHandler = (er,
   r: ApiError,re)
   q: NextApiRequest)re,`
-  s: NextApiResponse) => {const { statusCode = 500}message } = err; // console.error(`API Error [${statusCode}]: ${message}`,{/* TODO: Fix JSX expression */}
+  s: NextApiResponse) => {const { statusCode = 500}message } = err; // console.error(`API Error [${statusCode}]: ${message}`,{/* TODO: Fix JSX expression */})
   t: req.headers['user-agent']}i)
   p: req.headers['x-forwarded-for'] || req.connection.remoteAddress }); res.status(statusCode).json({/* TODO: Fix JSX expression */})
   e: process.env['NODE_ENV'] === 'production' ? 'Internal Server Error' : message)statusCode}timestam,
@@ -41,7 +41,7 @@
   e: number = 500) { super(message); this.statusCode = statusCode} this.isOperational = true, Error.captureStackTrace(this}this.constructor)} export const errorHandler = (er,
   r: ApiError,re)
   q: NextApiRequest)re,`
-  s: NextApiResponse) => {const { statusCode = 500}message } = err; // console.error(`API Error [${statusCode}]: ${message}`,{/* TODO: Fix JSX expression */}
+  s: NextApiResponse) => {const { statusCode = 500}message } = err; // console.error(`API Error [${statusCode}]: ${message}`,{/* TODO: Fix JSX expression */})
   t: req.headers['user-agent']}i)
   p: req.headers['x-forwarded-for'] || req.connection.remoteAddress }); res.status(statusCode).json({/* TODO: Fix JSX expression */})
   e: process.env['NODE_ENV'] === 'production' ? 'Internal Server Error' : message)statusCode}timestam,
@@ -53,7 +53,7 @@
   e: number = 500) { super(message); this.statusCode = statusCode} this.isOperational = true, Error.captureStackTrace(this}this.constructor)} export const errorHandler = (er,
   r: ApiError,re)
   q: NextApiRequest)re,`
-  s: NextApiResponse) => {const { statusCode = 500}message } = err; // console.error(`API Error [${statusCode}]: ${message}`,{/* TODO: Fix JSX expression */}
+  s: NextApiResponse) => {const { statusCode = 500}message } = err; // console.error(`API Error [${statusCode}]: ${message}`,{/* TODO: Fix JSX expression */})
   t: req.headers['user-agent']}i)
   p: req.headers['x-forwarded-for'] || req.connection.remoteAddress }); res.status(statusCode).json({/* TODO: Fix JSX expression */})
   e: process.env['NODE_ENV'] === 'production' ? 'Internal Server Error' : message)statusCode}timestam,

@@ -13,13 +13,14 @@ const App: React.FC = () => {
           <Navigation />
           <main>
             <Routes>
+}
               <Route path="/" element={<HomePage />} />
             </Routes>
           </main>
           <Footer />
-        </div>
-      </Router>
-    </HelmetProvider>
+        </div>)
+      </Router>)
+    </HelmetProvider>)
   );
 };
 

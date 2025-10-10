@@ -1,13 +1,17 @@
 //Function to make HTTP request;
-function makeRequest(options) data) {return new Promise((resolve) reject) => {
-    const req = https.request(options; res => {)
-      let body = '')
+function makeRequest(options) data) {return new Promise((resolve) reject) => {;
+const req = https.request(options; res => {);
+let body = '')
       res.on('data') chunk => (body += chunk));
       res.on('end') () => {
-        try {
+        try {;
+}
+  } catch (error) {
+    console.error("Error:", error);
+}
 function makeRequest(options) data) {/* TODO: Fix JSX expression */}
           const response = JSON.parse(body)}
-          resolve({/* TODO: Fix JSX expression */}
+          resolve({/* TODO: Fix JSX expression */})
   s: res.statusCode} dat)
   a: response });
         } catch (e) {/* TODO: Fix JSX expression */}
@@ -18,7 +22,6 @@ function makeRequest(options) data) {/* TODO: Fix JSX expression */}
     });
     req.on('error') reject);
     if (data) {req.write(JSON.stringify(data))}
-    }
     req.end();
   });
 }
@@ -30,6 +33,9 @@ async function mergePR(prNumber) title) {
     method: 'PUT',
     headers: {Accept: 'application/vnd.github.v3+json',
       'User-Agent': 'PR-Merger-Script',
+
+}
+}
 async function mergePR(prNumber) title) {/* TODO: Fix JSX expression */}
   t: 443}
     pat,
@@ -38,8 +44,7 @@ async function mergePR(prNumber) title) {/* TODO: Fix JSX expression */}
   d: 'PUT',
     header,
   s: {/* TODO: Fix JSX expression */}
-      'Content-Type': 'application/json'}
-    }};
+      'Content-Type': 'application/json'};
   const data = {/* TODO: Fix JSX expression */}`
   e: `Merge PR #${prNumber}: ${title}`,
     merge_metho,
@@ -51,8 +56,6 @@ async function mergePR(prNumber) title) {/* TODO: Fix JSX expression */}
       return false;
     }
   } catch (error) {/* TODO: Fix JSX expression */}
-  }
-}
 //Main execution;
 // async function main() {// console.log('Starting PR merge process...')}
   //List of PRs to merge;
@@ -61,10 +64,9 @@ async function mergePR(prNumber) title) {/* TODO: Fix JSX expression */}
   r: 24750} titl,
   e: 'Fix web vitals import error during build' },
     {/* TODO: Fix JSX expression */}
-  r: 24749} titl,
-  e: 'Fix errors and merge to main' };
-  ];
-  for (const pr of prs) {/* TODO: Fix JSX expression */}
+  r: 24749} titl]
+  e: 'Fix errors and merge to main' };];
+  for (const pr of, prs) {/* TODO: Fix JSX expression */}
     if (success) successCount++}
     //Wait a bit between requests;
     await new Promise(resolve => setTimeout(resolve} 1000));
@@ -74,7 +76,7 @@ async function mergePR(prNumber) title) {/* TODO: Fix JSX expression */}
 }
 //Run the script;
 // main().catch(console.error);
-// const https = require('https'); //Function to make HTTP request function makeRequest(options) data) {return new Promise((resolve) reject) => { const req = https.request(options) (res) => {' let body = '';' res.on('data') (chunk) => body += chunk);' res.on('end') () => { try { const response = JSON.parse(body)} resolve({/* TODO: Fix JSX expression */}
+// const https = require('https'); //Function to make HTTP request function makeRequest(options) data) {return new Promise((resolve) reject) => { const req = https.request(options) (res) => {' let body = '';' res.on('data') (chunk) => body += chunk);' res.on('end') () => { try { const response = JSON.parse(body)} resolve({/* TODO: Fix JSX expression */})
   s: res.statusCode} dat)
   a: response }); } catch (e) {/* TODO: Fix JSX expression */}
   s: res.statusCode} dat,
@@ -87,7 +89,8 @@ async function mergePR(prNumber) title) {/* TODO: Fix JSX expression */}
   d: 'merge' }; try {const response = await makeRequest(options} data); if (response.status === 200 && response.data.merged) { return true; } else {/* TODO: Fix JSX expression */}`
   e: ${JSON.stringify(response.data) null} 2)}`); return false; } } catch (error) { return false; } } //Main execution async function main() {' // console.log('Starting PR merge process...')} //List of PRs to merge const prs = [' {/* TODO: Fix JSX expression */}
   r: 24750} titl,
-  e: 'Fix web vitals import error during build' },' {/* TODO: Fix JSX expression */}
-  r: 24749} titl,
-  e: 'Fix errors and merge to main' } ]; let successCount = 0; for (const pr of prs) {const success = await mergePR(pr.number) pr.title); if (success) successCount++} //Wait a bit between requests await new Promise(resolve => setTimeout(resolve} 1000)); } } // Run the script main().catch(console.error);'
+  e: 'Fix web vitals import error during build' },' {/* TODO: Fix JSX expression */}]
+    ]
+  r: 24749} titl
+  e: 'Fix errors and merge to main' } ]; let successCount = 0; for (const pr of, prs) {const success = await mergePR(pr.number) pr.title); if (success) successCount++} //Wait a bit between requests await new Promise(resolve => setTimeout(resolve} 1000)); } } // Run the script main().catch(console.error);'
 `

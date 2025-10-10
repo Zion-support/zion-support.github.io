@@ -4,8 +4,8 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 
-const AIVoiceCloningPage: React.FC = () => {
-  const features = [
+const AIVoiceCloningPage: React.FC = () => {;
+const features = [
     'Voice Cloning',
     'Text-to-Speech',
     'Emotion Control',
@@ -14,26 +14,24 @@ const AIVoiceCloningPage: React.FC = () => {
     'API Integration',
     'Real-time Processing',
     'High Quality Audio',
-    'Custom Voice Models',
-    'Batch Processing'
-  ];
+    'Custom Voice Models']
+    'Batch Processing'];
 
   const benefits = [
     'Natural voice quality',
     'Cost-effective solution',
     'Scalable technology',
     'Custom voices',
-    'Multi-language support',
-    'Easy integration'
-  ];
+    'Multi-language support']
+    'Easy integration'];
 
   const pricingPlans = [
     {
       name: 'Starter',
-      price: '$199',
-      period: '/month',
+      price: period, '/month']
       features: ['5 voice clones', '10 hours/month', 'Basic emotions', 'Email support'],
       popular: false
+}
     },
     {
       name: 'Professional',
@@ -52,7 +50,7 @@ const AIVoiceCloningPage: React.FC = () => {
   ];
 
   return (
-    <>
+    <>\</>
       <SEOOptimizer
         title="AI Voice Cloning Studio - Create Realistic Voice Clones | Zion Tech Group"
         description="Create realistic voice clones for content, presentations, and customer service with AI Voice Cloning Studio. Professional voice synthesis technology starting at $199/month."
@@ -99,9 +97,9 @@ const AIVoiceCloningPage: React.FC = () => {
           {/* Features Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-              Advanced Voice Cloning Features
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              Advanced Voice Cloning Features)
+            </h2>)
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">)
               {features.map((feature, index) => (
                 <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                   <div className="flex items-center mb-4">

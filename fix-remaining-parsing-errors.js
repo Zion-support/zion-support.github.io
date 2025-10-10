@@ -18,17 +18,19 @@ const filesWithErrors = [
   'src/blog/ai-2026-hyperconscious-computing-revolution/page.tsx',
   'src/blog/ai-autonomous-business-systems-2026/page.tsx',
   'src/blog/ai-enterprise-transformation-ultimate-guide-2025/page.tsx',
-  'src/blog/ai-powered-autonomous-business-processes-2026/page.tsx',
-  'src/blog/ai-trends-2026-future-enterprise-transformation/page.tsx'
-];
+  'src/blog/ai-powered-autonomous-business-processes-2026/page.tsx']
+  'src/blog/ai-trends-2026-future-enterprise-transformation/page.tsx'];
 
 function fixParsingError(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
+  try {;
+let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
-    // Check if file ends with ); but is missing the closing brace;
-    if (content.trim().endsWith(');') && !content.trim().endsWith('};')) {
+    // Check if file ends, with); but is missing the closing brace;
+} catch (error) {
+    console.error("Error:", error);
+}
+    if (content.trim().endsWith(');') && !content.trim().endsWith('};')) {;
 function fixParsingError(filePath) {/* TODO: Fix JSX expression */}
     if (content.trim().endsWith(');') && !content.trim().endsWith('};')) {/* TODO: Fix JSX expression */}
       content = content.trim() + '\n};';
@@ -41,15 +43,13 @@ function fixParsingError(filePath) {/* TODO: Fix JSX expression */}
   } catch (error) {/* TODO: Fix JSX expression */}`
     console.error(`Error processing ${filePath}:`, error.message);
   }
-}
-
 // Process all files;
-filesWithErrors.forEach(file => {)
-  const fullPath = path.join(__dirname, file);
+filesWithErrors.forEach(file => {);
+const fullPath = path.join(__dirname, file);
   if (fs.existsSync(fullPath)) {
     fixParsingError(fullPath);
-  }
-filesWithErrors.forEach(file => {/* TODO: Fix JSX expression */}
+}
+filesWithErrors.forEach(file => {/* TODO: Fix JSX expression */})
   })
 });
 

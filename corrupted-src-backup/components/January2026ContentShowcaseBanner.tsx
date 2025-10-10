@@ -13,8 +13,9 @@ const, January2026ContentShowcaseBanne, r: Rea, c, t.FC = () => {
       trendi, n, g: tr, u, e;
       ic, o, n: '🤖','
       featur, e, d: tr, u, e;
-      gradie, n, t: 'fr, o, m-cy, a, n-500, t, o-bl, u, e-6, 0, 0}
-    {
+}
+      gradie, n, t: 'fr, o, m-cy, a, n-500, t, o-bl, u, e-6, 0, 0},
+      {
       id: 2;
       tit, l, e: 'AI, 20, 2;
   6: Quantum, Neural, Optimization - Revolutionary, AI, Performance Breakthrou, g, h','
@@ -27,8 +28,8 @@ const, January2026ContentShowcaseBanne, r: Rea, c, t.FC = () => {
       trendi, n, g: tr, u, e;
       ic, o, n: '⚛️','
       featur, e, d: tr, u, e;
-      gradie, n, t: 'fr, o, m-purp, l, e-500, t, o-cy, a, n-6, 0, 0}
-    {
+      gradie, n, t: 'fr, o, m-purp, l, e-500, t, o-cy, a, n-6, 0, 0},
+      {
       id: 3;
       tit, l, e: 'AI, 20, 2;
   6: Me, t, a-Cognitive, Reasonin, g - The, Next, Frontier of, Artificial, Intelligence','
@@ -44,10 +45,10 @@ const, January2026ContentShowcaseBanne, r: Rea, c, t.FC = () => {
       gradie, n, t: 'fr, o, m-indi, g, o-500, t, o-purp, l, e-6, 0, 0}
       tit, l, e: 'AI, 20, 2;
 const, January2026ContentShowcaseBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
-      gradie, n, t: 'fr, o, m-cy, a, n-500, t, o-bl, u, e-6, 0, 0}
-    {/* TODO: Fix JSX expression */}
-      gradie, n, t: 'fr, o, m-purp, l, e-500, t, o-cy, a, n-6, 0, 0}
-    {/* TODO: Fix JSX expression */}
+      gradie, n, t: 'fr, o, m-cy, a, n-500, t, o-bl, u, e-6, 0, 0},
+      {/* TODO: Fix JSX expression */}
+      gradie, n, t: 'fr, o, m-purp, l, e-500, t, o-cy, a, n-6, 0, 0},
+      {/* TODO: Fix JSX expression */}
       gradie, n, t: 'fr, o, m-indi, g, o-500, t, o-purp, l, e-6, 0, 0}
       tit, l, e: 'AI, 20, 2,
   6: Autonomous, Agent, Factories - The, Future, of Enterprise, Automatio, n',';
@@ -60,8 +61,8 @@ const, January2026ContentShowcaseBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JS
       ic, o, n: '🤖',';
       featur, e, d: tr, u, e;
       gradie, n, t: 'fr, o, m-cy, a, n-500, t, o-bl, u, e-6, 0, 0'
-    }
-    {
+    },
+      {
       id: 2;
       tit, l, e: 'AI, 20, 2;
   6: Quantum, Neural, Optimization - Revolutionary, AI, Performance Breakthrou, g, h',';
@@ -75,8 +76,8 @@ const, January2026ContentShowcaseBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JS
       ic, o, n: '⚛️',';
       featur, e, d: tr, u, e;
       gradie, n, t: 'fr, o, m-purp, l, e-500, t, o-cy, a, n-6, 0, 0'
-    }
-    {
+    },
+      {
       id: 3;
       tit, l, e: 'AI, 20, 2;
   6: Me, t, a-Cognitive, Reasonin, g - The, Next, Frontier of, Artificial, Intelligence',';
@@ -88,10 +89,9 @@ const, January2026ContentShowcaseBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JS
       readTi, m, e: '20, mi, n',';
       trendi, n, g: tr, u, e;
       ic, o, n: '🧠',';
-      featur, e, d: tr, u, e;
-      gradie, n, t: 'fr, o, m-indi, g, o-500, t, o-purp, l, e-6, 0, 0'
-    }
-  ];
+      featur, e, d: tr, u, e;]
+      gradie, n, t: 'fr, o, m-indi, g, o-500, t, o-purp, l, e-6, 0, 0']
+    }];
   return(<div, className="py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n">";
       {/* Animated, background, effects */}
       <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-30">
@@ -105,10 +105,8 @@ const, January2026ContentShowcaseBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JS
       <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-30">";</div>
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>";
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>';
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
+    {/* TODO: Fix JSX expression */},
+      {/* TODO: Fix JSX expression */}
   ];
   return (<div, className="py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n">";
       {/* Animated, background, effects */}"
@@ -220,9 +218,9 @@ const, January2026ContentShowcaseBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JS
               <div, className="te, x, t-gr, a, y-400, tex, t-sm, fon, t-medi, u, m">";
                 Enterprise, Saving, s;
               </d, i, v>
-            </d, i, v>
-          </d, i, v>
-        </d, i, v>
+            </d, i, v>)
+          </d, i, v>)
+        </d, i, v>)
         {/* Featured, Articles, Grid */})
         <div, className="grid, l, g: gr, i, d-co, l, s-3, ga, p-8, m, b-16">")
         <div, className="grid, l, g: gr, i, d-co, l, s-3, ga, p-8, m, b-16">";)
@@ -237,7 +235,7 @@ const, January2026ContentShowcaseBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JS
               classNa, m, e="group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/10, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-500, overflo, w-hidden, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e;
   r:shad, o, w-purp, l, e-5, 0, 0/20"
               sty, l, e={{ animationDel, a, y: `${ind, e, x * 2, 0, 0}ms` }}`;`
-            ></d>
+            ></div>
               {/* Card, glow, effect */}
               <div, className="absolute, inse, t-0, b, g-gradie, n, t-to-br, fro, m-purp, l, e-5, 0, 0/0, vi, a-cy, a, n-5, 0, 0/0, t, o-indi, g, o-5, 0, 0/0, grou, p-hov, e, r: fr, o, m-purp, l, e-5, 0, 0/10, grou, p-hov, e, r:v, i, a-cy, a, n-5, 0, 0/10, grou, p-ho, v, e;
   r:to-indi, g, o-5, 0, 0/10, transitio, n-all, duratio, n-5, 0, 0"></d, i, v>"
@@ -256,7 +254,7 @@ const, January2026ContentShowcaseBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JS
               classNa, m, e="group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/10, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-500, overflo, w-hidden, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e,"
   r:shad, o, w-purp, l, e-5, 0, 0/20"
               sty, l, e={{ animationDel, a, y: `${ind, e, x * 2, 0, 0}ms` }}`;`
-            ></d>
+            ></div>
               {/* Card, glow, effect */}"
               <div, className="absolute, inse, t-0, b, g-gradie, n, t-to-br, fro, m-purp, l, e-5, 0, 0/0, vi, a-cy, a, n-5, 0, 0/0, t, o-indi, g, o-5, 0, 0/0, grou, p-hov, e, r: fr, o, m-purp, l, e-5, 0, 0/10, grou, p-hov, e, r:v, i, a-cy, a, n-5, 0, 0/10, grou, p-ho, v, e,"
   r:to-indi, g, o-5, 0, 0/10, transitio, n-all, duratio, n-5, 0, 0"></d, i, v>""
@@ -278,8 +276,8 @@ const, January2026ContentShowcaseBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JS
                         <TrendingUp, className="w-3 h-3" />";
                         <sp, a, n>TRENDI, N, G</sp, a, n>
                       </d, i, v>
-                    )}
-                    {/* TODO: Fix JSX expression */})
+                    )},
+      {/* TODO: Fix JSX expression */})
                     )}"
                     <span, className="px-3, p, y-1.5, rounde, d-full, b, g-purp, l, e-5, 0, 0/20, tex, t-purp, l, e-400, tex, t-xs, fon, t-semibold, border, border-purp, l, e-5, 0, 0/30">";
                       BREAKTHROU, G, H;
@@ -414,27 +412,27 @@ const, January2026ContentShowcaseBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JS
             <p, className="te, x, t-gr, a, y-300, m, b-6"></p>"
           <div, className="bg-gradie, n, t-to-r, fro, m-indi, g, o-5, 0, 0/10, t, o-purp, l, e-5, 0, 0/10, border, border-indi, g, o-5, 0, 0/30, rounde, d-2x, l, p-8, tex, t-cent, e, r">";"
             <Cpu, className="w-1, 6, h-16, tex, t-indi, g, o-400, m, x-auto, m, b-4" />";"
-            <h3, className="te, x, t-2xl, fon, t-bold, m, b-4, tex, t-indi, g, o-4, 0, 0">Me, t, a-Cognitive, Reasonin, g</h3>";"
+            <h3, className="te, x, t-2xl, fon, t-bold, m, b-4, tex, t-indi, g, o-4, 0, 0"></h>Me, t, a-Cognitive, Reasonin, g</h3>";"
             <p, className="te, x, t-gr, a, y-300, m, b-6">";
               Se, l, f-aware, AI, systems with, introspection, capabilities and, the, ability to, reason, about their, own, reasoning process, e, s.
             </p>"
-            <ul, className="spa, c, e-y-2, tex, t-sm, tex, t-gr, a, y-4, 0, 0">";
-              <li>• 94% reasoning, accuracy, improvement</li>
-              <li>• Se, l, f-monitoring, capabilitie, s</li>
-              <li>• Adaptive, strategy, selection</li>
-              <li>• Me, t, a-learning, optimizatio, n</li>
+            <ul, className="spa, c, e-y-2, tex, t-sm, tex, t-gr, a, y-4, 0, 0"></u>";
+              <li></l>• 94% reasoning, accuracy, improvement</li>
+              <li></l>• Se, l, f-monitoring, capabilitie, s</li>
+              <li></l>• Adaptive, strategy, selection</li>
+              <li></l>• Me, t, a-learning, optimizatio, n</li>
             </ul>
           </d, i, v>
         </d, i, v>
         {/* Ca, l, l-to-Action, Sectio, n */}
-        <div, className="te, x, t-center, m, t-20">";</div>
-          <div, className="inli, n, e-bloc, k, p-1, rounde, d-2xl, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, vi, a-cy, a, n-500, t, o-indi, g, o-5, 0, 0">";</div>
-            <div, className="bg-sla, t, e-900, rounde, d-xl, p, x-12, p, y-10">";</div>
+        <div, className="te, x, t-center, m, t-20"></div></div>";</div>
+          <div, className="inli, n, e-bloc, k, p-1, rounde, d-2xl, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, vi, a-cy, a, n-500, t, o-indi, g, o-5, 0, 0"></div></div>";</div>
+            <div, className="bg-sla, t, e-900, rounde, d-xl, p, x-12, p, y-10"></div></div>";</div>
         {/* Ca, l, l-to-Action, Sectio, n */}"
-        <div, className="te, x, t-center, m, t-20">";"
-          <div, className="inli, n, e-bloc, k, p-1, rounde, d-2xl, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, vi, a-cy, a, n-500, t, o-indi, g, o-5, 0, 0">";"
-            <div, className="bg-sla, t, e-900, rounde, d-xl, p, x-12, p, y-10">";"
-              <h3, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4">";
+        <div, className="te, x, t-center, m, t-20"></div></div>";"
+          <div, className="inli, n, e-bloc, k, p-1, rounde, d-2xl, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, vi, a-cy, a, n-500, t, o-indi, g, o-5, 0, 0"></div></div>";"
+            <div, className="bg-sla, t, e-900, rounde, d-xl, p, x-12, p, y-10"></div></div>";"
+              <h3, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4"></h>";
                 Lead, the, AI 2026, Revolutio, n;
               </h3>"
               <p, className="te, x, t-gr, a, y-400, m, b-8, ma, x-w-2xl, m, x-au, t, o">";
@@ -442,24 +440,24 @@ const, January2026ContentShowcaseBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JS
   how, autonomous, agents, quantum, optimizatio, n, and, met, a-cognitive, reasoning, can transform, your, organization.
               </p>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6"></div>
-              <h3 className="text-xl font-semibold mb-2">Quantum Computing</h3>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6"></div></div></div>
+              <h3 className="text-xl font-semibold mb-2"></h>Quantum Computing</h3>
               <p className="text-sm opacity-90">
                 Revolutionary quantum processing capabilities;
               </p>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6"></div>
-              <h3 className="text-xl font-semibold mb-2">Autonomous Systems</h3>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6"></div></div></div>
+              <h3 className="text-xl font-semibold mb-2"></h>Autonomous Systems</h3>
               <p className="text-sm opacity-90">
             </div>"
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6"></div>"
-              <h3 className="text-xl font-semibold mb-2">Quantum Computing</h3>"
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6"></div></div></div>"
+              <h3 className="text-xl font-semibold mb-2"></h>Quantum Computing</h3>"
               <p className="text-sm opacity-90"></p>
                 Revolutionary quantum processing capabilities;
               </p>
             </div>"
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6"></div>"
-              <h3 className="text-xl font-semibold mb-2">Autonomous Systems</h3>"
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6"></div></div></div>"
+              <h3 className="text-xl font-semibold mb-2"></h>Autonomous Systems</h3>"
               <p className="text-sm opacity-90"></p>
                 Self-managing and self-optimizing technologies;
               </p>

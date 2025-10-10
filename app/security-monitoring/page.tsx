@@ -23,12 +23,13 @@ import {
   Database
 } from 'lucide-react';
 
-const SecurityMonitoringPage: React.FC = () => {
-  const features = [
+const SecurityMonitoringPage: React.FC = () => {;
+const features = [
     {
       icon: Eye,
       title: '24/7 Real-time Monitoring',
       description: 'Continuous surveillance of your entire IT infrastructure with instant threat detection and response.'
+}
     },
     {
       icon: AlertTriangle,
@@ -42,10 +43,9 @@ const SecurityMonitoringPage: React.FC = () => {
     },
     {
       icon: Zap,
-      title: 'Instant Response',
-      description: 'Automated incident response and immediate notification systems to minimize security breaches.'
-    }
-  ];
+      title: 'Instant Response',]
+      description: 'Automated incident response and immediate notification systems to minimize security breaches.']
+    }];
 
   const benefits = [
     '24/7 continuous security monitoring',
@@ -54,12 +54,11 @@ const SecurityMonitoringPage: React.FC = () => {
     'Comprehensive security reporting',
     'Automated incident response',
     'Compliance monitoring and reporting',
-    'Expert security team support',
-    'Customizable monitoring rules'
-  ];
+    'Expert security team support']
+    'Customizable monitoring rules'];
 
   return (
-    <>
+    <>\</>
       <Helmet>
         <title>Security Monitoring Services - Zion Tech Group | 24/7 Cybersecurity</title>
         <meta name="description" content="Professional 24/7 security monitoring services by Zion Tech Group. Advanced threat detection, real-time alerts, and comprehensive cybersecurity protection." />
@@ -82,9 +81,9 @@ const SecurityMonitoringPage: React.FC = () => {
                 <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
                   <Shield className="mr-2 h-5 w-5" />
                   Get Protected Now
-                </button>
-                <button className="border border-white/20 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300 flex items-center justify-center">
-                  <Phone className="mr-2 h-5 w-5" />
+                </button>)
+                <button className="border border-white/20 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300 flex items-center justify-center">)
+                  <Phone className="mr-2 h-5 w-5" />)
                   Call (302) 464-0950
                 </button>
               </div>

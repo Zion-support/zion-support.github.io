@@ -3,8 +3,6 @@ import React, { memo } from 'react';
 import { LucideIcon, ArrowRight } from 'lucide-react';
 
 interface ServiceCardProps {/* TODO: Fix JSX expression */}
-}
-
 const,
   ServiceCard: React.FC<ServiceCardProps> = memo(({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
@@ -13,9 +11,9 @@ const,
   const bgColorClasses = {/* TODO: Fix JSX expression */}
   };
 
-  return (<article></article>
-      className="quantum-card p-4,"
-  sm:p-6 energy-pulse group relative""
+  return (<article></article>)
+      className="quantum-card p-4,")
+  sm:p-6 energy-pulse group relative"")
       role="article")
       aria-labelledby={`${title.toLowerCase().replace(/\s+/g, '-')}-title`}
     >
@@ -52,8 +50,8 @@ const,
               <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-2 flex-shrink-0" /></div>
               {feature}
             </li>
-          ))}
-          {/* TODO: Fix JSX expression */}
+          ))},
+      {/* TODO: Fix JSX expression */}
               +{features.length - 3} more features;
             </li>
           )}
@@ -70,8 +68,8 @@ const,
             >
               {tech}
             </span>
-          ))}
-          {/* TODO: Fix JSX expression */}
+          ))},
+      {/* TODO: Fix JSX expression */}
               +{technologies.length - 4}
             </span>
           )}

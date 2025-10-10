@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-// Performance optimization script
+// Performance optimization script;
 const optimizePerformance = () => {
   console.log('Running performance optimizations...');
   
@@ -14,6 +14,7 @@ const optimizePerformance = () => {
   // 5. Generate service worker
   
   console.log('Performance optimizations completed');
+}
 };
 
 optimizePerformance();

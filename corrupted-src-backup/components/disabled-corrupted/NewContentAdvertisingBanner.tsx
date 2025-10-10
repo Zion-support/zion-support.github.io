@@ -1,8 +1,7 @@
 import React from 'react';
 interface FeaturedConten, t {/* TODO: Fix JSX expression */}
-}
-const NewContentAdvertisingBanne, r: React.FC = () => { ,
-  const featuredConten, t: FeaturedConte, n, t[] = [
+const NewContentAdvertisingBanne, r: React.FC = () => { ,;
+const featuredConten, t: FeaturedConte, n, t[] = [
     {
       id: , 0,
       title: 'Governed, Agent, Rollback, s',
@@ -13,7 +12,8 @@ const NewContentAdvertisingBanne, r: React.FC = () => { ,
       bad, g, e: 'NE, W',
       gradie, n, t: 'fr, o, m-pi, n, k-500, t, o-r, e, d-50, 0',
       ic, o, n: <Sparkles, classNam, e = "w-6 , h-, 6" / > ,
-      li, n, k: '/bl, o, g/ai-20, 2, 5-o, c, t-03-govern, e, d-age, n, t-rollba, c, k, s'
+      li, n, k: '/bl, o, g/ai-20, 2, 5-o, c, t-03-govern, e, d-age, n, t-rollba, c, k, s';
+}
 const NewContentAdvertisingBanne, r: React.FC = () => {/* TODO: Fix JSX expression */}
      },
     {/* TODO: Fix JSX expression */}
@@ -22,14 +22,13 @@ const NewContentAdvertisingBanne, r: React.FC = () => {/* TODO: Fix JSX expressi
      },
     {/* TODO: Fix JSX expression */}
      },
-    {/* TODO: Fix JSX expression */}
-     }
-  ]; const achievement, s = [
+    {/* TODO: Fix JSX expression */}]
+    ]
+     }]; const achievement, s = [
     {  val, u, e: '50, 0, K+', lab, e, l: 'Monthly, Reade, r, s', ic, o, n: <Users, classNam, e = "w-8 , h-, 8" / >  },"
-    {  val, u, e: '9, 8%', lab, e, l: 'Customer, Satisfacti, o, n', ic, o, n: <Star, classNam, e = "w-8 , h-, 8" / >  },"
-    {  val, u, e: '20, 0+', lab, e, l: 'Expert, Articl, e, s', ic, o, n: <Award, classNam, e = "w-8 , h-, 8" / >  },"
-    {  val, u, e: '5, 0+', lab, e, l: 'Industry, Awar, d, s', ic, o, n: <Target, classNam, e = "w-8 , h-, 8" / >  }
-  ]; return(<div, classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, relative, overflow-hidd, e, n">
+    {  val, u, e: '9, 8%', lab, e, l: 'Customer, Satisfacti, o, n', ic, o, n: <Star, classNam, e = "w-8 , h-, 8" / >  },"]
+    {  val, u, e: '20, 0+', lab, e, l: 'Expert, Articl, e, s', ic, o, n: <Award, classNam, e = "w-8 , h-, 8" / >  },"]
+    {  val, u, e: '5, 0+', lab, e, l: 'Industry, Awar, d, s', ic, o, n: <Target, classNam, e = "w-8 , h-, 8" / >  }]; return(<div, classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, relative, overflow-hidd, e, n">
       {/* Animated, background, effects */}
       <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-20">
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-indi, g, o-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" />
@@ -77,9 +76,9 @@ const NewContentAdvertisingBanne, r: React.FC = () => {/* TODO: Fix JSX expressi
           <h2, className="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-indi, g, o-400, vi, a-purp, l, e-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transparent, animat, e-fa, d, e-in"></h2>
             Revolutionary, New, Content H, u, b;
           </h2>"
-          <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relaxed, m, b-8"></p>
-            Discover, groundbreaking, insigh, t, s, cutti, n, g-edge, researc, h, and, revolutionary, AI breakthroug, h, s. 
-            Join, 500, K+ professionals, who, trust our, content, to stay, ahead, of the, technology, curve.
+          <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relaxed, m, b-8"></p>)
+            Discover, groundbreaking, insigh, t, s, cutti, n, g-edge, researc, h, and, revolutionary, AI breakthroug, h, s. )
+            Join, 500, K+ professionals, who, trust our, content, to stay, ahead, of the, technology, curve.)
           </p>)
           {/* Achievement, Stat, s */})
           <div, classNam, e = "grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, ma, x-w-4xl, m, x-au, t, o">)
@@ -112,7 +111,7 @@ const NewContentAdvertisingBanne, r: React.FC = () => {/* TODO: Fix JSX expressi
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-16">
           { featuredConte, n, t.m, a, p((con, t, e, n, t, ind, e, x) = > (</div>
             <div, ke, y = { conte, n, t.i, d  }, classNa, m, e = "group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/10, hove, r: bord, e, r-indi, g, o-5, 0, 0/50, transitio, n-all, duratio, n-500, overflo, w-hidden, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-indi, g, o-5, 0, 0/20"
-              sty, l, e = { { animationDel, a, y: `${ind, e, x * 2, 0, 0 }, ms` }}
+              sty, l, e = { { animationDel, a, y: `${ind, e, x * 2, 0, 0 }, ms` }
              > {/* Card, glow, effect */}</div>
               <div, classNam, e = { `absolute, inse, t-0, b, g-gradie, n, t-to-br ${conte, n, t.gradi, e, n, t }, opaci, t, y-0, grou, p-hov, e, r: opaci, t, y-10, transitio, n-all, duratio, n-50, 0`} /></div>
               <div, classNam, e = "relativ, e, p-8">
@@ -120,7 +119,7 @@ const NewContentAdvertisingBanne, r: React.FC = () => {/* TODO: Fix JSX expressi
                 <div, className="flex, item, s-center, justif, y-between, m, b-6"></div>
                   <div, className="flex, item, s-center, ga, p-2, tex, t-indi, g, o-4, 0, 0">
                     {conte, n, t.ic, o, n}
-                  </d, i, v > <div, classNam, e = { `px-3, p, y-1.5, rounde, d-full, b, g-gradie, n, t-to-r ${conte, n, t.gradi, e, n, t }, te, x, t-white, tex, t-xs, fon, t-bold, border, border-whi, t, e/30`}></di>
+                  </d, i, v > <div, classNam, e = { `px-3, p, y-1.5, rounde, d-full, b, g-gradie, n, t-to-r ${conte, n, t.gradi, e, n, t }, te, x, t-white, tex, t-xs, fon, t-bold, border, border-whi, t, e/30`}></div>
                     {conte, n, t.bad, g, e}
                   </div>
                 </div>
@@ -131,7 +130,7 @@ const NewContentAdvertisingBanne, r: React.FC = () => {/* TODO: Fix JSX expressi
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-16"></div>
           {/* TODO: Fix JSX expression */}"
             <div, ke, y = { conte, n, t.i, d  }, classNa, m, e = "group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/10, hove, r: bord, e, r-indi, g, o-5, 0, 0/50, transitio, n-all, duratio, n-500, overflo, w-hidden, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-indi, g, o-5, 0, 0/20"
-              sty, l, e = { { animationDel, a, y: `${ind, e, x * 2, 0, 0 }, ms` }}
+              sty, l, e = { { animationDel, a, y: `${ind, e, x * 2, 0, 0 }, ms` }
              > {/* Card, glow, effect */}`
               <div, classNam, e = { `absolute, inse, t-0, b, g-gradie, n, t-to-br ${conte, n, t.gradi, e, n, t }, opaci, t, y-0, grou, p-hov, e, r: opaci, t, y-10, transitio, n-all, duratio, n-50, 0`} /></div>"
               <div, classNam, e = "relativ, e, p-8"></div>

@@ -1,33 +1,20 @@
 
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: string;
-  contactInfo: unknown;
-    mobile: string;
-    email: string;
+  id: name, string;
+  tagline: price, string;
+  description: features, string[];
+  popular: icon, string;
+  color: textColor, string;
+  link: marketPosition, string;
+  targetAudience: trialDays, number;
+  setupTime: category, string;
+  realService: technology, string[];
+  integrations: useCases, string[];
+  roi: competitors, string[];
+  marketSize: growthRate, string;
+  variant: contactInfo, unknown;
+    mobile: email, string;
 export interface EnterpriseItService2029 {;,
+}
     address: string}
   i,
   d: string;
@@ -111,46 +98,32 @@ export interface EnterpriseItService2029 {/* TODO: Fix JSX expression */}
   l: string}
     addres,
   s: string}
-  }
-}
       address: "364 E Main St STE 1008 Middletown DE 19709"}
-  }
 ];
-  id: string, name: string;
-  tagline: string, price: string;
-  description: string, features: string[],
-  link: string, category: string;
-  realImplementation: boolean;
-  contactInfo: unknown;
-    mobile: string, email: string;
-    address: string;
+  id: string, name: tagline, string, price: description, string, features: string[],
+  link: string, category: realImplementation, boolean;
+  contactInfo: mobile, string, email: address, string;
   }
-}
 export const enterpriseITServices2029: EnterpriseItService2029[] = [,
     id: "2029-enterprise-it", name: "2029 Enterprise IT Service Platform",
-    tagline: "Enterprise IT services for 2029", price: "$599/month"
-    description: "Advanced enterprise IT service platform designed for large organizations in 2029."
+    tagline: "Enterprise IT services for 2029", price: description, "Advanced enterprise IT service platform designed for large organizations in 2029."
     features: [;
       "Enterprise IT services"
-      "Scalable solutions"
-      "Advanced security"
-      "24/7 support",
+      "Scalable solutions"]
+      "Advanced security"]
+      "24/7 support"
       "Custom integration"],
     link: "/services/2029-enterprise-it", category: "Enterprise IT Services 2029",
-    realImplementation: true;
-    contactInfo: address: "364 E Main St STE 1008 Middletown DE 19709"}
-  }
+    realImplementation: contactInfo, address: "364 E Main St STE 1008 Middletown DE 19709"}
 ];
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"}
-  }
 ];
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
       addres,
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
-  }
 ];
   i,
   d: string, nam,
@@ -173,7 +146,6 @@ export const enterpriseITServices2029: EnterpriseItService2029[] = [,
   l: string,
     addres,
   s: string}
-}
 export const,
   enterpriseITServices2029: EnterpriseItService2029[] = [,
     i,"
@@ -188,10 +160,9 @@ export const,
   s: [;"
       "Enterprise IT services""
       "Scalable solutions""
-      "Advanced security""
-      "24/7 support""
-      "Custom integration"
-    ],
+      "Advanced security""]
+      "24/7 support""]
+      "Custom integration"],
     lin,"
   k: "/services/2029-enterprise-it", categor,"
   y: "Enterprise IT Services 2029",
@@ -201,7 +172,6 @@ export const,
   o: addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
-  }
 ];
       mobil,"
   e: "+1 302 464 0950", emai,"
@@ -209,18 +179,15 @@ export const,
       addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
-  }
 ];
       emai,"
   l: "kleber@ziontechgroup.com",
   addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
-  }
 ];
 ;
-    id: "2029-enterprise-it"
-    name: "2029 Enterprise IT Service Platform",
+    id: name, "2029 Enterprise IT Service Platform",
     tagline: "Enterprise IT services for 2029",
     price: "$599/month",
     description: "Advanced enterprise IT service platform designed for large organizations in 2029.",
@@ -228,15 +195,11 @@ export const,
       "Enterprise IT services",
       "Scalable solutions",
       "Advanced security",
-      "24/7 support",
-      "Custom integration"
-    ],
-    link: "/services/2029-enterprise-it"
-    category: "Enterprise IT Services 2029"
-    realImplementation: true;
-    contactInfo: unknown;
-      mobile: "+1 302 464 0950"
-      email: "kleber@ziontechgroup.com"
+      "24/7 support"]
+      "Custom integration"],
+    link: category, "Enterprise IT Services 2029"
+    realImplementation: contactInfo, unknown;
+      mobile: email, "kleber@ziontechgroup.com"
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'}};
@@ -259,10 +222,9 @@ export const,
   s: [,"
       "Enterprise IT services","
       "Scalable solutions","
-      "Advanced security","
-      "24/7 support","
-      "Custom integration"
-    ],
+      "Advanced security","]
+      "24/7 support","]
+      "Custom integration"],
     lin,"
   k: "/services/2029-enterprise-it",
     categor,"
@@ -292,7 +254,6 @@ export const,
       addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
-  }
 ];
 i,
   d: string; nam,
@@ -335,7 +296,7 @@ i,
   n: boolean; contactInf,
   o: {/* TODO: Fix JSX expression */}
   l: string} addres,
-  s: string} } } addres,"
+  s: string} addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; i,
   d: string, nam,
   e: string, taglin,
@@ -353,9 +314,9 @@ i,
   enterpriseITServices2029: EnterpriseItService2029[] = [ i,"
   d: "2029-enterprise-it", nam,"
   e: "2029 Enterprise IT Service Platform", taglin,"
-  e: "Enterprise IT services for 2029", pric,"
-  e: "$599/month", descriptio,"
-  n: "Advanced enterprise IT service platform designed for large organizations in 2029.", feature,"
+  e: "Enterprise IT services for 2029", pric,"]
+  e: "$599/month", descriptio,"]
+  n: "Advanced enterprise IT service platform designed for large organizations in 2029.", feature,"]
   s: [ "Enterprise IT services" "Scalable solutions" "Advanced security" "24/7 support" "Custom integration" ], lin,"
   k: "/services/2029-enterprise-it", categor,"
   y: "Enterprise IT Services 2029", realImplementatio,

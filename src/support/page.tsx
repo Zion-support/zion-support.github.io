@@ -5,19 +5,19 @@ import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { Phone, Mail, MessageSquare, Search, Clock, Users, Award, Zap, Brain, Shield, Code, BarChart, MessageSquare as Chat, Eye, Cpu, Target, Lock, BarChart3, FileText, Bot, Calculator, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calendar, Clock3, Compass, PieChart, TrendingDown, Activity, CheckCircle, ArrowRight, ExternalLink } from 'lucide-react';
 
-const SupportPage: React.FC = () => {
-  const [searchQuery, setSearchQuery] = useState('');
+const SupportPage: React.FC = () => {;
+const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const supportCategories = [
-    { id: 'all', name: 'All Topics', icon: Search, count: 45 },
+},
+      { id: 'all', name: 'All Topics', icon: Search, count: 45 },
     { id: 'getting-started', name: 'Getting Started', icon: Zap, count: 12 },
     { id: 'ai-services', name: 'AI Services', icon: Brain, count: 8 },
     { id: 'billing', name: 'Billing & Pricing', icon: CreditCard, count: 6 },
     { id: 'technical', name: 'Technical Support', icon: Code, count: 10 },
-    { id: 'account', name: 'Account Management', icon: Users, count: 5 },
-    { id: 'api', name: 'API & Integration', icon: BarChart, count: 4 }
-  ];
+    { id: 'account', name: 'Account Management', icon: Users, count: 5 },]
+      { id: 'api', name: 'API & Integration', icon: BarChart, count: 4 }];
 
   const faqs = [
     {
@@ -53,10 +53,9 @@ const SupportPage: React.FC = () => {
     {
       id: 6,
       question: 'What is your typical project timeline?',
-      answer: 'Project timelines vary based on complexity. Simple AI implementations can take 2-4 weeks, while complex enterprise transformations may take 3-6 months. We provide detailed timelines during our consultation.',
-      category: 'getting-started'
-    }
-  ];
+      answer: 'Project timelines vary based on complexity. Simple AI implementations can take 2-4 weeks, while complex enterprise transformations may take 3-6 months. We provide detailed timelines during our consultation.',]
+      category: 'getting-started']
+    }];
 
   const supportChannels = [
     {
@@ -88,10 +87,9 @@ const SupportPage: React.FC = () => {
       title: 'Schedule Call',
       description: 'Book a consultation with our team',
       contact: 'Book Now',
-      availability: 'Flexible scheduling',
-      color: 'text-cyan-400'
-    }
-  ];
+      availability: 'Flexible scheduling',]
+      color: 'text-cyan-400']
+    }];
 
   const resources = [
     {
@@ -127,24 +125,23 @@ const SupportPage: React.FC = () => {
     {
       title: 'Community Forum',
       description: 'Connect with other users and experts',
-      icon: Users,
-      link: '/community'
-    }
-  ];
+      icon: Users,]
+      link: '/community']
+    }];
 
   const filteredFaqs = selectedCategory === 'all' 
     ? faqs 
     : faqs.filter(faq => faq.category === selectedCategory);
 
   const searchResults = searchQuery 
-    ? faqs.filter(faq => 
+    ? faqs.filter(faq => )
         faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
         faq.answer.toLowerCase().includes(searchQuery.toLowerCase())
       )
     : filteredFaqs;
 
   return (
-    <>
+    <>\</>
       <SEOOptimizer
         title="Support Center - Zion Tech Group"
         description="Get help and support for Zion Tech Group services. Find answers to common questions, contact our team, and access comprehensive resources."
@@ -175,9 +172,9 @@ const SupportPage: React.FC = () => {
               <div className="relative">
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input
-                  type="text"
-                  placeholder="Search for help..."
-                  value={searchQuery}
+                  type="text")
+                  placeholder="Search for help...")
+                  value={searchQuery})
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="w-full pl-12 pr-4 py-4 bg-slate-800 text-white rounded-lg border border-slate-600 focus:border-cyan-400 focus:outline-none"
                 />

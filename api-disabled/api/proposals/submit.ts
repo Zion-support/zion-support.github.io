@@ -1,8 +1,6 @@
 
-async function submitByEmail(to: string;)
-  subject: string)
-  text: string)
-  attachments: unknown[] = []
+async function submitByEmail(to: subject, string)
+  text: attachments, unknown[] = []
 ) {
   //   const host = process.env.EMAIL_HOST;
   //   const port = Number(process.env.EMAIL_PORT || 587);
@@ -12,7 +10,7 @@ async function submitByEmail(to: string;)
 ,
   if (!host || !user || !pass) {,
     throw new Error('Email not configured');
-  }
+}
 
   const transporter = nodemailer.createTransporter({)
     host)
@@ -32,19 +30,18 @@ async function submitByEmail(to: string;)
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {,
   if (req.method !== 'POST') {,
+}
     return res.status(405).json({ error: 'Method not allowed' });
 async function submitByEmail(t,
   o: string,
   subjec,
   t: string,
-  tex,
-  t: string,
-  attachment,
+  tex,)
+  t: string,)
+  attachment,)
   s: unknown[] = [])
 ) {/* TODO: Fix JSX expression */}
-  }
-
-  const transporter = nodemailer.createTransporter({/* TODO: Fix JSX expression */}
+  const transporter = nodemailer.createTransporter({/* TODO: Fix JSX expression */})
   h: { user, pass })
   });
 
@@ -52,7 +49,7 @@ async function submitByEmail(t,
   });
 }
 
-export default async function handler(re,
+export default async function handler(re,)
   q: NextApiRequest, re)
   s: NextApiResponse) {/* TODO: Fix JSX expression */}
   r: 'Method not allowed' });
@@ -75,8 +72,8 @@ export default async function handler(re,
       //       const to = emailTo || process.env.UN_GATEWAY_EMAIL || 'example@un.org';
       //       const subject = `[Proposal] ${meta.title} - ${meta.targetInstitution}`;
     if (channels.includes('email')) {/* TODO: Fix JSX expression */}
-      //       const subject = `[Proposal] ${meta.title} - ${meta.targetInstitution}`;`
-      const text = `Please find the proposal attached.
+      //       const subject = `[Proposal] ${meta.title} - ${meta.targetInstitution}`;`;
+const text = `Please find the proposal attached.
 
 Titl,
   e: ${meta.title}
@@ -101,10 +98,13 @@ Delegate,`
       await submitByEmail(to, subject, text);
     }
 
-    // ENS record hash (default: compute and store hash only)
-    let ensRecordHash: string | undefined;
-    try {,
-      const _hash = crypto.createHash('sha256').update(JSON.stringify(meta)).digest('hex');
+    // ENS record hash (default: compute and store hash, only);
+let ensRecordHash: string | undefined;
+    try {,;
+const _hash = crypto.createHash('sha256').update(JSON.stringify(meta)).digest('hex');
+  } catch (error) {
+    console.error("Error:", error);
+}
       ensRecordHash = `0 x${hash}`;
       updateArtifacts(id, { ensRecordHash });
     } catch {
@@ -117,17 +117,16 @@ Delegate,`
 
     return res.status(200).json({ meta: updated });
   } catch (error: unknown) {,
+}
     return res.status(500).json({ error: error?.message || 'Submission failed' });
     // ENS record hash (defaul)
-  t: compute and store hash only)
+  t: compute and store hash, only)
     let,
   ensRecordHash: string | undefined;
     try {/* TODO: Fix JSX expression */}`
       ensRecordHash = `0x${hash}`;
       updateArtifacts(id, { ensRecordHash });
     } catch {/* TODO: Fix JSX expression */}
-    }
-
     const updated = updateProposalMeta(id, m => ({/* TODO: Fix JSX expression */})
     }));
 
@@ -137,5 +136,4 @@ Delegate,`
   r: unknown) {/* TODO: Fix JSX expression */}
   r: error?.message || 'Submission failed' });
   }
-}
 `

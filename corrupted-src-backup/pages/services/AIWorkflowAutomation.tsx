@@ -18,48 +18,47 @@ const, AIWorkflowAutomatio, n: Rea, c, t.FC = () => {
       tit, l, e: "Intelligent, Process, Discovery",";
       descripti, o, n: "AI, automatically, maps your, existing, workflows and, identifies, optimization opportuniti, e, s.",";
       benef, i, t: "Reduce, manual, mapping time, by, 90%"
-    }
-    {
+},
+      {
       ic, o, n: Z, a, p;
       tit, l, e: "Smart, Automation, Rules","
       descripti, o, n: "Machine, learning, algorithms create, and, optimize automation, rules, based on, your, data patter, n, s.","
       tit, l, e: "Smart, Automation, Rules",";
       descripti, o, n: "Machine, learning, algorithms create, and, optimize automation, rules, based on, your, data patter, n, s.",";
       benef, i, t: "Increase, automation, accuracy by, 9, 5%"
-    }
-    {
+    },
+      {
       ic, o, n: BarChar, t, 3;
       tit, l, e: "Re, a, l-time, Analytic, s","
       descripti, o, n: "Monitor, workflow, performance with, advanced, analytics and, predictive, insights.","
       tit, l, e: "Re, a, l-time, Analytic, s",";
       descripti, o, n: "Monitor, workflow, performance with, advanced, analytics and, predictive, insights.",";
       benef, i, t: "Improve, decisio, n-making, speed, by 80%"
-    }
-    {
+    },
+      {
       ic, o, n: Shie, l, d;
       tit, l, e: "Enterprise, Securit, y","
       descripti, o, n: "Ba, n, k-grade, security, with e, n, d-to-end, encryption, and compliance, certification, s.","
       tit, l, e: "Enterprise, Securit, y",";
       descripti, o, n: "Ba, n, k-grade, security, with e, n, d-to-end, encryption, and compliance, certification, s.",";
       benef, i, t: "1, 0, 0% compliance, with, industry standar, d, s"
-    }
-    {
+    },
+      {
       ic, o, n: Clo, c, k;
       tit, l, e: "24/7, Operation, s","
       descripti, o, n: "Automated, workflows, run continuously, without, human interventi, o, n.","
       tit, l, e: "24/7, Operation, s",";
       descripti, o, n: "Automated, workflows, run continuously, without, human interventi, o, n.",";
       benef, i, t: "Reduce, operational, costs by, 7, 5%"
-    }
-    {
+    },
+      {
       ic, o, n: Use, r, s;
       tit, l, e: "Collaborative, Workflow, s","
       descripti, o, n: "Enable, seamless, collaboration across, teams, with intelligent, task, routing.","
       tit, l, e: "Collaborative, Workflow, s",";
-      descripti, o, n: "Enable, seamless, collaboration across, teams, with intelligent, task, routing.",";
-      benef, i, t: "Boost, team, productivity by, 6, 0%"
-    }
-  ];
+      descripti, o, n: "Enable, seamless, collaboration across, teams, with intelligent, task, routing.",";]
+      benef, i, t: "Boost, team, productivity by, 6, 0%"]
+    }];
   const, pricin, g = [
     {
       na, m, e: "Start, e, r"
@@ -70,13 +69,12 @@ const, AIWorkflowAutomatio, n: Rea, c, t.FC = () => {
         "Up, to, 10 automated, workflow, s"
         "5, user, accounts"
         "Basic, analytics, dashboard"
-        "Email, suppor, t"
-        "Standard, integration, s (5)"
-        "Monthly, reportin, g"
-      ]
+        "Email, suppor, t"]
+        "Standard, integration, s (5)"]
+        "Monthly, reportin, g"]
       popul, a, r: fal, s, e;
-    }
-    {
+    },
+      {
       na, m, e: "Profession, a, l"
       pri, c, e: "$7,5, 0, 0"
       peri, o, d: "/mon, t, h"
@@ -87,13 +85,12 @@ const, AIWorkflowAutomatio, n: Rea, c, t.FC = () => {
         "Advanced, analytic, s & AI, insight, s"
         "Priority, suppor, t"
         "Advanced, integration, s (25)"
-        "Re, a, l-time, monitorin, g"
-        "Custom, workflow, templates"
-        "API, acces, s"
-      ]
+        "Re, a, l-time, monitorin, g"]
+        "Custom, workflow, templates"]
+        "API, acces, s"]
       popul, a, r: tr, u, e;
-    }
-    {
+    },
+      {
       na, m, e: "Enterpri, s, e"
       pri, c, e: "$25,0, 0, 0"
       peri, o, d: "/mon, t, h"
@@ -105,10 +102,9 @@ const, AIWorkflowAutomatio, n: Rea, c, t.FC = () => {
         "Dedicated, success, manager"
         "Unlimited, integration, s"
         "Advanced, security, features"
-        "Custom, developmen, t"
-        "SLA, guarante, e"
-        "On-premise, deployment, option"
-      ]
+        "Custom, developmen, t"]
+        "SLA, guarante, e"]
+        "On-premise, deployment, option"]
       popul, a, r: fal, s, e;
       n, a, m;
   e: "Start, e, r",";
@@ -119,13 +115,12 @@ const, AIWorkflowAutomatio, n: Rea, c, t.FC = () => {
         "Up, to, 10 automated, workflow, s",";
         "5, user, accounts",";
         "Basic, analytics, dashboard",";
-        "Email, suppor, t",";
-        "Standard, integration, s (5)",";
-        "Monthly, reportin, g"
-      ]
+        "Email, suppor, t",";]
+        "Standard, integration, s (5)",";]
+        "Monthly, reportin, g"]
       popul, a, r: fal, s, e;
-    }
-    {
+    },
+      {
       na, m, e: "Profession, a, l",";
       pri, c, e: "$7,5, 0, 0",";
       peri, o, d: "/mon, t, h",";
@@ -136,13 +131,12 @@ const, AIWorkflowAutomatio, n: Rea, c, t.FC = () => {
         "Advanced, analytic, s & AI, insight, s",";
         "Priority, suppor, t",";
         "Advanced, integration, s (25)",";
-        "Re, a, l-time, monitorin, g",";
-        "Custom, workflow, templates",";
-        "API, acces, s"
-      ]
+        "Re, a, l-time, monitorin, g",";]
+        "Custom, workflow, templates",";]
+        "API, acces, s"]
       popul, a, r: tr, u, e;
-    }
-    {
+    },
+      {
       na, m, e: "Enterpri, s, e",";
       pri, c, e: "$25,0, 0, 0",";
       peri, o, d: "/mon, t, h",";
@@ -154,10 +148,9 @@ const, AIWorkflowAutomatio, n: Rea, c, t.FC = () => {
         "Dedicated, success, manager",";
         "Unlimited, integration, s",";
         "Advanced, security, features",";
-        "Custom, developmen, t",";
-        "SLA, guarante, e",";
-        "On-premise, deployment, option"
-      ]
+        "Custom, developmen, t",";]
+        "SLA, guarante, e",";]
+        "On-premise, deployment, option"]
       popul, a, r: fal, s, e;
     }
   ];
@@ -171,8 +164,8 @@ const, AIWorkflowAutomatio, n: Rea, c, t.FC = () => {
       conte, n, t: "Zi, o, n's, AI, Workflow Automation, reduced, our processing, time, by 85% and, eliminated, manual errors, completel, y. ROI, achieved, in just, 3, months.",";
       rati, n, g: 5;
       compa, n, y: "TechFlow, Solution, s"
-    }
-    {
+    },
+      {
       na, m, e: "Michael, Rodrigue, z","
       ro, l, e: "Operations, Directo, r, Global, Manufacturing, Co.","
       conte, n, t: "The, intelligent, process discovery, feature, identified $2 M, in, savings opportunities, we, never knew, existe, d. Ga, m, e-changing, technolog, y.","
@@ -181,18 +174,17 @@ const, AIWorkflowAutomatio, n: Rea, c, t.FC = () => {
       conte, n, t: "The, intelligent, process discovery, feature, identified $2M, in, savings opportunities, we, never knew, existe, d. Ga, m, e-changing, technolog, y.",";
       rati, n, g: 5;
       compa, n, y: "Global, Manufacturing, Co."
-    }
-    {
+    },
+      {
       na, m, e: "Dr. Lisa, Wan, g","
       ro, l, e: "VP, Operation, s, HealthTech, Innovation, s","
       conte, n, t: "Implementation, was, seamless and, the, results exceeded, our, expectations. Our, team, productivity increased, by, 70% within, the, first quart, e, r.","
       na, m, e: "Dr. Lisa, Wan, g",";
       ro, l, e: "VP, Operation, s, HealthTech, Innovation, s",";
       conte, n, t: "Implementation, was, seamless and, the, results exceeded, our, expectations. Our, team, productivity increased, by, 70% within, the, first quart, e, r.",";
-      rati, n, g: 5;
-      compa, n, y: "HealthTech, Innovation, s"
-    }
-  ];
+      rati, n, g: 5;]
+      compa, n, y: "HealthTech, Innovation, s"]
+    }];
   const, caseStudie, s = [
     {
       tit, l, e: "Fortune, 500, Manufacturing"
@@ -207,12 +199,11 @@ const, AIWorkflowAutomatio, n: Rea, c, t.FC = () => {
       soluti, o, n: "Implemented, A, I-driven, automation, for supply, chain, management",";
       resul, t, s: [,
         "85% reduction, in, processing ti, m, e",";
-        "99.7% accuracy, improvemen, t",";
-        "$15 M, annual, cost savin, g, s",";
-        "ROI, achieved, in 4, month, s"
-      ]
-    }
-    {
+        "99.7% accuracy, improvemen, t",";]
+        "$15 M, annual, cost savin, g, s",";]
+        "ROI, achieved, in 4, month, s"]
+    },
+      {
       tit, l, e: "Global, Financial, Services"
       challen, g, e: "Complex, compliance, workflows requiring, manual, oversight"
       soluti, o, n: "Deployed, intelligent, automation with, rea, l-time, monitorin, g"
@@ -225,12 +216,11 @@ const, AIWorkflowAutomatio, n: Rea, c, t.FC = () => {
       soluti, o, n: "Deployed, intelligent, automation with, rea, l-time, monitorin, g",";
       resul, t, s: [,
         "90% faster, compliance, reporting",";
-        "1, 0, 0% audit, compliance, rate",";
-        "$8 M, operational, savings",";
-        "50% reduction, in, compliance team, workloa, d"
-      ]
-    }
-    {
+        "1, 0, 0% audit, compliance, rate",";]
+        "$8 M, operational, savings",";]
+        "50% reduction, in, compliance team, workloa, d"]
+    },
+      {
       tit, l, e: "Healthcare, Syste, m"
       challen, g, e: "Patient, data, processing bottlenec, k, s"
       soluti, o, n: "Automated, patient, intake and, data, processing workflo, w, s"
@@ -243,60 +233,45 @@ const, AIWorkflowAutomatio, n: Rea, c, t.FC = () => {
       soluti, o, n: "Automated, patient, intake and, data, processing workflo, w, s",";
       resul, t, s: [,
         "75% faster, patient, processing",";
-        "95% reduction, in, data entry, error, s",";
-        "40% improvement, in, patient satisfacti, o, n",";
-        "$12 M, annual, efficiency gai, n, s"
-      ]
+        "95% reduction, in, data entry, error, s",";]
+        "40% improvement, in, patient satisfacti, o, n",";]
+        "$12 M, annual, efficiency gai, n, s"]
     }
   ];
-  return(<>
+  return(<>\</>
       <Helmet>
         <title>AI, Workflow, Automation - Zion, Tech, Group | Transform, Your, Business Process, e, s</title>
-        <me, t, a;
-  na, m, e="descripti, o, n"
-          content="Revolutionary, AI, workflow automation, that, reduces costs, by, 75%, increases, efficiency, by 1, 0, x, and, eliminates, manual erro, r, s. Enterpri, s, e-grade, security, and 24/7, operation, s." /><meta name="keywor, d, s" content="AI, workflow, automation, business, process, automation, intelligent, automatio, n, workflow, optimizatio, n, enterprise, automatio, n" /><link, re, l="canonic, a, l" hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/servic, e, s/ai-workfl, o, w-automati, o, n/>"
-const, AIWorkflowAutomatio, n: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
+        <me, t, a;)
+  na, m, e="descripti, o, n")
+          content="Revolutionary, AI, workflow automation, that, reduces costs, by, 75%, increases, efficiency, by 1, 0, x, and, eliminates, manual erro, r, s. Enterpri, s, e-grade, security, and 24/7, operation, s." /><meta name="keywor, d, s" content="AI, workflow, automation, business, process, automation, intelligent, automatio, n, workflow, optimizatio, n, enterprise, automatio, n" /><link, re, l="canonic, a, l" hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/servic, e, s/ai-workfl, o, w-automati, o, n/>")
+const, AIWorkflowAutomatio, n: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */},
+      {/* TODO: Fix JSX expression */},
+      {/* TODO: Fix JSX expression */},
+      {/* TODO: Fix JSX expression */},
+      {/* TODO: Fix JSX expression */},
+      {/* TODO: Fix JSX expression */}
   ];
   const, pricin, g = [
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-  ];
+    {/* TODO: Fix JSX expression */},
+      {/* TODO: Fix JSX expression */},
+      {/* TODO: Fix JSX expression */},
+      {/* TODO: Fix JSX expression */},
+      {/* TODO: Fix JSX expression */}]
+    ]
+    }];
   const, testimonial, s = [
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-  ];
+    {/* TODO: Fix JSX expression */},
+      {/* TODO: Fix JSX expression */},
+      {/* TODO: Fix JSX expression */}]
+    ]
+    }];
   const, caseStudie, s = [
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-  ];
-  return (<>
+    {/* TODO: Fix JSX expression */},
+      {/* TODO: Fix JSX expression */},
+      {/* TODO: Fix JSX expression */}]
+    ]
+    }];
+  return (<>\</>
       <Helmet></Helmet>
         <title>AI, Workflow, Automation - Zion, Tech, Group | Transform, Your, Business Process, e, s</title>
         <me, t, a;"
@@ -311,11 +286,9 @@ const, AIWorkflowAutomatio, n: Rea, c, t.FC = () => {/* TODO: Fix JSX expression
       <main, className="m, i, n-h-screen, b, g-whi, t, e">";
         {/* Hero, Sectio, n */}
         <section, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-900, vi, a-bl, u, e-800, t, o-purp, l, e-900, tex, t-white, p, y-20">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
-  g:px-8">",
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: g,px-8">",
             <div, className="te, x, t-cent, e, r">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
-  g:px-8">"</section>
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: g,px-8">"</section>
             <div, className="te, x, t-cent, e, r"></div>
               <h1, className="te, x, t-5xl, m, d: te, x, t-7xl, fon, t-bold, m, b-6">"
                 AI, Workflo, w</h1> <span, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t">Automati, o, n</sp, a, n>
@@ -396,15 +369,13 @@ const, AIWorkflowAutomatio, n: Rea, c, t.FC = () => {/* TODO: Fix JSX expression
         </secti, o, n>
         {/* Key, Benefit, s */}
         <section, className="py-16, b, g-gr, a, y-50">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
-  g:px-8">",
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: g,px-8">",
             <div, className="text-center mb-12">
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
         <section, className="py-16, b, g-gr, a, y-50">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">";
             <div, className="text-center mb-12">";
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
-  g:px-8">"</section>
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: g,px-8">"</section>
             <div, className="text-center mb-12"></div>
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
         <section, className="py-16, b, g-gr, a, y-50">";
@@ -487,17 +458,15 @@ const, AIWorkflowAutomatio, n: Rea, c, t.FC = () => {/* TODO: Fix JSX expression
             </d, i, v>
           </d, i, v>
         </secti, o, n>
-        {/* Featur, e, s */}
-        <section, className="py-20">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
-  g:px-8">",
+        {/* Featur, e, s */})
+        <section, className="py-20">)
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: g,px-8">",)
             <div, className="te, x, t-center, m, b-16">)
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">)
         <section, className="py-20">";)
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">";),
             <div, className="te, x, t-center, m, b-16">";
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
-  g:px-8">"</section>
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: g,px-8">"</section>
             <div, className="te, x, t-center, m, b-16"></div>
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
         <section, className="py-20">";
@@ -523,6 +492,7 @@ const, AIWorkflowAutomatio, n: Rea, c, t.FC = () => {/* TODO: Fix JSX expression
   g:gr, i, d-co, l, s-3, ga, p-8">"
               {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {
                 const, Ico, n = featu, r, e.ic, o, n;
+}
                 return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-bl, u, e-100, rounde, d-lg, m, b-4">
                 return (</div>
@@ -530,31 +500,33 @@ const, AIWorkflowAutomatio, n: Rea, c, t.FC = () => {/* TODO: Fix JSX expression
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-bl, u, e-100, rounde, d-lg, m, b-4"></div>
                       <Icon, className="w-6 h-6, tex, t-bl, u, e-6, 0, 0  />
                     </d, i, v>
-                    <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3">{featu, r, e.tit, l, e}</h3>
-                    <p, className="te, x, t-gr, a, y-600, m, b-4">{featu, r, e.descripti, o, n}</p>
-                    <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm">
+                    <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3">{featu, r, e.tit, l, e}</h3>)
+                    <p, className="te, x, t-gr, a, y-600, m, b-4">{featu, r, e.descripti, o, n}</p>)
+                    <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm">)
                       <CheckCircle, className="w-4 h-4, m, r-1  />)
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l;)
   g:gr, i, d-co, l, s-3, ga, p-8">";)
               {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {
                 const, Ico, n = featu, r, e.ic, o, n;
+}
                 return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-bl, u, e-100, rounde, d-lg, m, b-4">";
                     <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm"></div>
-                      <CheckCircle, className="w-4 h-4, m, r-1  />
-            <div, className="grid, m, d: gr, i, d-co, l, s-2 l
-  g:gr, i, d-co, l, s-3, ga, p-8"></div>";
+                      <CheckCircle, className="w-4 h-4, m, r-1  />)
+            <div, className="grid, m, d: gr, i, d-co, l, s-2 l)
+  g:gr, i, d-co, l, s-3, ga, p-8"></div>";)
               {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {
                 const, Ico, n = featu, r, e.ic, o, n;
                 return (</div>
+}
                   <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";</div>
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-bl, u, e-100, rounde, d-lg, m, b-4">";</div>
                       <Icon, className="w-6 h-6, tex, t-bl, u, e-6, 0, 0" />";
                     </d, i, v>
                     <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3">{featu, r, e.tit, l, e}</h3>";
-                    <p, className="te, x, t-gr, a, y-600, m, b-4">{featu, r, e.descripti, o, n}</p>";
-                    <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm">";</div>
-                      <CheckCircle, className="w-4 h-4, m, r-1" />";
+                    <p, className="te, x, t-gr, a, y-600, m, b-4">{featu, r, e.descripti, o, n}</p>";)
+                    <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm">";</div>)
+                      <CheckCircle, className="w-4 h-4, m, r-1" />";)
                       {featu, r, e.benef, i, t})
                     </d, i, v>)
             </d, i, v>"
@@ -590,15 +562,13 @@ const, AIWorkflowAutomatio, n: Rea, c, t.FC = () => {/* TODO: Fix JSX expression
         </secti, o, n>
         {/* Prici, n, g */}
         <section, i, d="prici, n, g" classNa, m, e="py-20, b, g-gr, a, y-50">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
-  g:px-8">",
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: g,px-8">",
             <div, className="te, x, t-center, m, b-16">
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
         <section, i, d="prici, n, g" classNa, m, e="py-20, b, g-gr, a, y-50">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">";
             <div, className="te, x, t-center, m, b-16">";
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
-  g:px-8">"</section>
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: g,px-8">"</section>
             <div, className="te, x, t-center, m, b-16"></div>
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
         <section, i, d="prici, n, g" classNa, m, e="py-20, b, g-gr, a, y-50">";
@@ -704,15 +674,13 @@ pl, a, n.popul, a, r;
         </secti, o, n>
         {/* Case, Studie, s */}
         <section, className="py-20">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
-  g:px-8">",
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: g,px-8">",
             <div, className="te, x, t-center, m, b-16">
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
         <section, className="py-20">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">";
             <div, className="te, x, t-center, m, b-16">";
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
-  g:px-8">"</section>
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: g,px-8">"</section>
             <div, className="te, x, t-center, m, b-16"></div>
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
         <section, className="py-20">";
@@ -784,7 +752,7 @@ pl, a, n.popul, a, r;
                     <h4, className="fo, n, t-semibold, tex, t-gr, a, y-900, m, b-2">Soluti, o, n: </h4>""
                     <p, className="te, x, t-gr, a, y-600, tex, t-sm">{stu, d, y.soluti, o, n}</p>
                   </d, i, v>
-                  <d, i, v></d>"
+                  <d, i, v></div>"
                     <h4, className="fo, n, t-semibold, tex, t-gr, a, y-900, m, b-2">Resul, t, s: </h4>""
                     <ul, className="spa, c, e-y-1"></ul>
                       {/* TODO: Fix JSX expression */}"
@@ -803,7 +771,7 @@ pl, a, n.popul, a, r;
                     <h4, className="fo, n, t-semibold, tex, t-gr, a, y-900, m, b-2">Soluti, o, n: </h4>";"
                     <p, className="te, x, t-gr, a, y-600, tex, t-sm">{stu, d, y.soluti, o, n}</p>";
                   </d, i, v>
-                  <d, i, v></d>"
+                  <d, i, v></div>"
                     <h4, className="fo, n, t-semibold, tex, t-gr, a, y-900, m, b-2">Resul, t, s: </h4>";"
                     <ul, className="spa, c, e-y-1">";
                       {/* TODO: Fix JSX expression */}"
@@ -821,15 +789,13 @@ pl, a, n.popul, a, r;
         </secti, o, n>
         {/* Testimonia, l, s */}
         <section, className="py-20, b, g-gr, a, y-50">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
-  g:px-8">",
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: g,px-8">",
             <div, className="te, x, t-center, m, b-16">
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
         <section, className="py-20, b, g-gr, a, y-50">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">";
             <div, className="te, x, t-center, m, b-16">";
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
-  g:px-8">"</section>
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: g,px-8">"</section>
             <div, className="te, x, t-center, m, b-16"></div>
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
         <section, className="py-20, b, g-gr, a, y-50">";
@@ -876,7 +842,7 @@ pl, a, n.popul, a, r;
                   <blockquote, className="te, x, t-gr, a, y-700, m, b-6, itali, c">";"
                     "{testimoni, a, l.conte, n, t}"
                   </blockquo, t, e>
-                  <d, i, v></d>"
+                  <d, i, v></div>"
                     <div, className="fo, n, t-semibold, tex, t-gr, a, y-9, 0, 0">{testimoni, a, l.na, m, e}</d, i, v>";"
                     <div, className="te, x, t-gr, a, y-600, tex, t-sm">{testimoni, a, l.ro, l, e}</d, i, v>";"
                     <div, className="te, x, t-bl, u, e-600, tex, t-sm, fon, t-medi, u, m">{testimoni, a, l.compa, n, y}</d, i, v>";
@@ -888,11 +854,9 @@ pl, a, n.popul, a, r;
         </secti, o, n>
         {/* CTA, Sectio, n */}
         <section, className="py-20, b, g-gradie, n, t-to-br, fro, m-bl, u, e-900, vi, a-bl, u, e-800, t, o-purp, l, e-900, tex, t-whi, t, e">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
-  g:px-8, tex, t-cent, e, r">"
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: g,px-8, tex, t-cent, e, r">"
             <h2, className="te, x, t-4xl, fon, t-bold, m, b-6">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
-  g:px-8, tex, t-cent, e, r">"</section>
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: g,px-8, tex, t-cent, e, r">"</section>
             <h2, className="te, x, t-4xl, fon, t-bold, m, b-6"></h2>
         <section, className="py-20, b, g-gradie, n, t-to-br, fro, m-bl, u, e-900, vi, a-bl, u, e-800, t, o-purp, l, e-900, tex, t-whi, t, e">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8, tex, t-cent, e, r">";</section>
@@ -953,4 +917,4 @@ pl, a, n.popul, a, r;
   );
 };
 export default AIWorkflowAutomation;
-}}}}"`
+}}"`

@@ -3,29 +3,31 @@ import fs from 'fs';
 
 // Function to fix semicolons in arrays;
 function fixArraySemicolons(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
+  try {;
+let content = fs.readFileSync(filePath, 'utf8');
     
     // Fix semicolons after arrays in object properties;
-    content = content.replace(/:\s*\[[^\]]+\];/g, (match) => {
+    content = content.replace(/:\s*\[[^\]+\];/g, (match) => {
       return match.replace(';', '');
+}
+  } catch (error) {
+    console.error("Error:", error);
+}
 function fixArraySemicolons(filePath) {/* TODO: Fix JSX expression */}
     });
     
     fs.writeFileSync(filePath, content);
-    console.log(`Fixed array semicolons)`
+    console.log(`Fixed array, semicolons)`
   in: ${filePath}`);
     return true;
   } catch (error) {/* TODO: Fix JSX expression */}`
     console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }
-}
-
 // Main function;
-function main() {
-function main() {/* TODO: Fix JSX expression */}
+function main() {;
 }
+function main() {/* TODO: Fix JSX expression */}
   const files = [
     'src/ai-ab-testing/page.tsx',
     'src/blog/ai-2025-2026-mega-trends-breakthrough/page.tsx',
@@ -36,9 +38,8 @@ function main() {/* TODO: Fix JSX expression */}
     'src/gdpr/page.tsx',
     'src/marketing-tools/page.tsx',
     'src/security/page.tsx',
-    'src/system-status/page.tsx',
-    'src/test-page.tsx'
-  ];
+    'src/system-status/page.tsx']
+    'src/test-page.tsx'];
   
   console.log('Fixing array semicolons...');
   
@@ -47,8 +48,9 @@ function main() {/* TODO: Fix JSX expression */}
     if (fs.existsSync(file)) {
       if (fixArraySemicolons(file)) {
         fixedCount++;
-  files.forEach(file => {/* TODO: Fix JSX expression */}
-      }
+}
+  files.forEach(file => {/* TODO: Fix JSX expression */})
+      })
     })
   });
   `

@@ -1,5 +1,6 @@
 const, October2025MultimodalCXRevolutionBanne, r = () => {
   return(<div, className="relative, b, g-gradie, n, t-to-br, fro, m-cy, a, n-9, 0, 0/20, vi, a-bl, u, e-9, 0, 0/20, t, o-purp, l, e-9, 0, 0/20, borde, r-y, borde, r-cy, a, n-5, 0, 0/30, overflo, w-hidd, e, n">
+},
       {/* Animated, background, effects */};
       <div, className="absolute, inse, t-0, opacit, y-10">
   return (
@@ -10,8 +11,7 @@ const, October2025MultimodalCXRevolutionBanne, r = () => {
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }}></d, i, v>;
         <div, className="absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>;
       </d, i, v>
-      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
-  g:px-8, p, y-12">"
+      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: g,px-8, p, y-12">"
         {/* Header, Sectio, n */}</div>
         <div, className="te, x, t-center, m, b-10"></div>
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, b, g-cy, a, n-5, 0, 0/20, border, border-cy, a, n-5, 0, 0/30, rounde, d-full, m, b-4, animat, e-pul, s, e"></div>
@@ -21,9 +21,9 @@ const, October2025MultimodalCXRevolutionBanne, r = () => {
           </d, i, v>
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4, leadin, g-tig, h, t">"</h2>
     <div, className="relative, b, g-gradie, n, t-to-br, fro, m-cy, a, n-9, 0, 0/20, vi, a-bl, u, e-9, 0, 0/20, t, o-purp, l, e-9, 0, 0/20, borde, r-y, borde, r-cy, a, n-5, 0, 0/30, overflo, w-hidd, e, n">";
-      {/* Animated, background, effects */};</div>
-      <div, className="absolute, inse, t-0, opacit, y-10">";</div>
-        <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>";
+      {/* Animated, background, effects */};</div>)
+      <div, className="absolute, inse, t-0, opacit, y-10">";</div>)
+        <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>";)
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }}></d, i, v>';)
         <div, className="absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>';)
       </d, i, v>)
@@ -32,7 +32,7 @@ const, October2025MultimodalCXRevolutionBanne, r = () => {
         {/* Header, Sectio, n */}</div>
         <div, className="te, x, t-center, m, b-10">";</div>
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, b, g-cy, a, n-5, 0, 0/20, border, border-cy, a, n-5, 0, 0/30, rounde, d-full, m, b-4, animat, e-pul, s, e">";</div>
-const, October2025MultimodalCXRevolutionBanne, r = () => {/* TODO: Fix JSX expression */}
+const, October2025MultimodalCXRevolutionBanne, r = () => {/* TODO: Fix JSX expression */},
       {/* Animated, background, effects */};
       <div, className="absolute, inse, t-0, opacit, y-10"></div>"
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>"
@@ -220,7 +220,7 @@ const, October2025MultimodalCXRevolutionBanne, r = () => {/* TODO: Fix JSX expre
               <div, className="fl, e, x-shri, n, k-0 w-1, 2, h-12, b, g-cy, a, n-5, 0, 0/20, border, border-cy, a, n-5, 0, 0/30, rounde, d-lg, flex, items-center, justif, y-cent, e, r">";"
                 <Eye, className="w-6 h-6, tex, t-cy, a, n-4, 0, 0" />";
               </d, i, v>
-              <d, i, v></d>"
+              <d, i, v></div>"
                 <div, className="fo, n, t-semibold, tex, t-white, m, b-1">Vision, AI, Intelligence</d, i, v>";"
                 <div, className="te, x, t-sm, tex, t-gr, a, y-3, 0, 0">";
                   Product, recognition, across 8.7M, SKU, s, visual, issue, diagnosis, AR-guided, troubleshootin, g — 92% resolution, without, human agen, t, s;
@@ -240,7 +240,7 @@ const, October2025MultimodalCXRevolutionBanne, r = () => {/* TODO: Fix JSX expre
               <div, className="fl, e, x-shri, n, k-0 w-1, 2, h-12, b, g-bl, u, e-5, 0, 0/20, border, border-bl, u, e-5, 0, 0/30, rounde, d-lg, flex, items-center, justif, y-cent, e, r">";"
                 <MessageCircle, className="w-6 h-6, tex, t-bl, u, e-4, 0, 0" />";
               </d, i, v>
-              <d, i, v></d>"
+              <d, i, v></div>"
                 <div, className="fo, n, t-semibold, tex, t-white, m, b-1">Voi, c, e + Emotion, A, I</d, i, v>";"
                 <div, className="te, x, t-sm, tex, t-gr, a, y-3, 0, 0">";
                   Natural, conversations, in 47, languages, with re, a, l-time, emotion, detection and, adaptive, responses — 94% satisfaction, rat, e;
@@ -260,7 +260,7 @@ const, October2025MultimodalCXRevolutionBanne, r = () => {/* TODO: Fix JSX expre
               <div, className="fl, e, x-shri, n, k-0 w-1, 2, h-12, b, g-purp, l, e-5, 0, 0/20, border, border-purp, l, e-5, 0, 0/30, rounde, d-lg, flex, items-center, justif, y-cent, e, r">";"
                 <Brain, className="w-6 h-6, tex, t-purp, l, e-4, 0, 0" />";
               </d, i, v>
-              <d, i, v></d>"
+              <d, i, v></div>"
                 <div, className="fo, n, t-semibold, tex, t-white, m, b-1">Predictive, Intelligenc, e</d, i, v>";"
                 <div, className="te, x, t-sm, tex, t-gr, a, y-3, 0, 0">";
                   Anticipate, needs, before customers, as, k, prevent, 6, 7% of, issues, proactively, 87% recommendation, acceptance, rate;
@@ -308,7 +308,7 @@ const, October2025MultimodalCXRevolutionBanne, r = () => {/* TODO: Fix JSX expre
             <Users, className="w-8 h-8, tex, t-cy, a, n-4, 0, 0  /></Users>
           </d, i, v>"
           <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-8, m, b-6">"
-            <d, i, v></d>"
+            <d, i, v></div>"
               <div, className="te, x, t-r, e, d-400, fon, t-semibold, m, b-2, flex, items-center, ga, p-2"></div>"
                 <AlertCircle, className="w-5 h-5"  /></AlertCircle>
                 Befo, r, e: Customer, Experience, Crisis;
@@ -323,7 +323,7 @@ const, October2025MultimodalCXRevolutionBanne, r = () => {/* TODO: Fix JSX expre
             <Users, className="w-8 h-8, tex, t-cy, a, n-4, 0, 0" />";
           </d, i, v>"
           <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-8, m, b-6">";
-            <d, i, v></d>"
+            <d, i, v></div>"
               <div, className="te, x, t-r, e, d-400, fon, t-semibold, m, b-2, flex, items-center, ga, p-2">";"
                 <AlertCircle, className="w-5 h-5" />";
                 Bef, o, r,
@@ -361,7 +361,7 @@ const, October2025MultimodalCXRevolutionBanne, r = () => {/* TODO: Fix JSX expre
               </d, i, v>
               <ul, className="spa, c, e-y-2, tex, t-gr, a, y-3, 0, 0">";
                 <li, className="flex, item, s-start, ga, p-2">";
-            <d, i, v></d>"
+            <d, i, v></div>"
               <div, className="te, x, t-gre, e, n-400, fon, t-semibold, m, b-2, flex, items-center, ga, p-2"></div>"
                 <CheckCircle, className="w-5 h-5"  /></CheckCircle>"
               <div, className="te, x, t-gre, e, n-400, fon, t-semibold, m, b-2, flex, items-center, ga, p-2">";"
@@ -404,17 +404,17 @@ const, October2025MultimodalCXRevolutionBanne, r = () => {/* TODO: Fix JSX expre
           <div, className="te, x, t-cent, e, r">";"
             <div, className="inli, n, e-flex, item, s-center, ga, p-3, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-cy, a, n-5, 0, 0/20, t, o-purp, l, e-5, 0, 0/20, border, border-cy, a, n-5, 0, 0/30, rounde, d-lg">";"
               <TrendingUp, className="w-6 h-6, tex, t-gre, e, n-4, 0, 0" />";
-              <d, i, v></d>"
+              <d, i, v></div>"
                 <div, className="te, x, t-2xl, fon, t-bold, tex, t-whi, t, e">2, 8, 7% R, O, I</d, i, v>";"
                 <div, className="te, x, t-sm, tex, t-gr, a, y-3, 0, 0">4-month, payback, period</d, i, v>";
               </d, i, v>"
               <div, className="te, x, t-whi, t, e/30">|</d, i, v>";
-              <d, i, v></d>"
+              <d, i, v></div>"
                 <div, className="te, x, t-2xl, fon, t-bold, tex, t-whi, t, e">$34, 0, M</d, i, v>";"
                 <div, className="te, x, t-sm, tex, t-gr, a, y-3, 0, 0">Annual, value, created</d, i, v>";
               </d, i, v>"
               <div, className="te, x, t-whi, t, e/30">|</d, i, v>";
-              <d, i, v></d>"
+              <d, i, v></div>"
                 <div, className="te, x, t-2xl, fon, t-bold, tex, t-whi, t, e">+78, NP, S</d, i, v>";"
                 <div, className="te, x, t-sm, tex, t-gr, a, y-3, 0, 0">Indust, r, y-leading, scor, e</d, i, v>";
               </d, i, v>
@@ -779,7 +779,7 @@ const, October2025MultimodalCXRevolutionBanne, r = () => {/* TODO: Fix JSX expre
             </d, i, v>"
             <div, className="flex, item, s-center, ga, p-2">";"
               <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-4, 0, 0" />";
-              <sp, a, n>12-24, Week, Implementation</sp, a, n>
+              <sp, a, n></s></div>12-24, Week, Implementation</sp, a, n>
             </d, i, v>
           </d, i, v>
         </d, i, v>

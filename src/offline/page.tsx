@@ -21,7 +21,6 @@ const,
   };
   const handleGoHome = () => {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
     window.location.href = '/';
   return (<div>Coming Soon</div>)
   )
@@ -64,8 +63,8 @@ onClick={handleGoHome}"
           <p className="flex items-center justify-center gap-2"></p>"
             <Wifi className="w-4 h-4" /></Wifi>
             Check your internet connection;"
-        <div className="mt-8 p-4 bg-black/20 rounded-lg"></div>"
-          <h3 className="text-sm font-medium text-white mb-2">Available Offline</h3>"
+        <div className="mt-8 p-4 bg-black/20 rounded-lg"></div></div></div>"
+          <h3 className="text-sm font-medium text-white mb-2"></h>Available Offline</h3>"
           <p className="text-xs text-gray-400"></p>
             Some content may be available offline thanks to our service worker.
             Try refreshing the page once you're back online.

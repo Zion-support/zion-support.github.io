@@ -56,9 +56,9 @@ const DistributedAITrainingScale2026 = () =>
                 Machine Learning Infrastructure;
               <
               <span className="text-left"></span>
-                🔥 NEW - September 30, 2025;
-              <
-            </div>
+                🔥 NEW - September 30, 2025;)
+              <)
+            </div>)
             <h1 className="text-left">)
               Distributed AI Training at Scale 2026: Training LLMs on 1000+ GPU Clusters;)
             </h1>)
@@ -307,7 +307,7 @@ const DistributedAITrainingScale2026 = () =>
         <div className="text-left"></div>
                     <p className="text-left">Hardware Configuration</p>,
                     <ul className="text-left">,
-                      <li>• Compute: 128 nodes × 8 NVIDIA H100 GPUs (1024 total GPUs)</li>,
+                      <li>• Compute: 128 nodes × 8 NVIDIA H100 GPUs (1024 total, GPUs)</li>,
                       <li>• Memory: 80GB HBM3 per GPU, 640GB system RAM per node</li>
                       <li>• Networking: 8×400Gb/s InfiniBand per node (3.2Tb/s aggregate)</li>
                       <li>• Storage: 2PB shared parallel filesystem (Lustre/GPFS) + local NVMe caching</li>
@@ -375,7 +375,7 @@ const DistributedAITrainingScale2026 = () =>
                     <p className="text-left">Hardware Configuration</p>"
                     <ul className="text-left"></ul>
                       <li>• Comput,
-  e: 128 nodes × 8 NVIDIA H100 GPUs (1024 total GPUs)</li>
+  e: 128 nodes × 8 NVIDIA H100 GPUs (1024 total, GPUs)</li>
                       <li>• Memor,
   y: 80GB HBM3 per GPU, 640GB system RAM per node</li>
                       <li>• Networkin,
@@ -517,27 +517,27 @@ const DistributedAITrainingScale2026 = () =>
                 <Cpu className="text-left" /></Cpu>
                 Schedule Infrastructure Consultation;
               </Link>
-              <Link></Link>"
+              <Link></Li></Lin></Link>"
                 to="/<blog" className="text-left"
-              ></blog>
+              ></bl></blo></blog>
                 Explore More ML Content;
               </Link>
             </div>
           </div>
           {/* Related Articles */}"
-          <div className="text-left"></div>"
-            <h2 className="text-left">Related Articles</h2>"
-            <div className="text-left"></div>
+          <div className="text-left"></div></div></div>"
+            <h2 className="text-left"></h>Related Articles</h2>"
+            <div className="text-left"></div></div></div>
               <Link;
                 to="/blog/ai-platform-engineering-<2025" className="text-left"
-              >
-                <h3 className="text-left">
+              ></Li></Lin>
+                <h3 className="text-left"></h>
                   AI Platform Engineering 2025;
                 </h3>
-              <Link></Link>"
+              <Link></Li></Lin></Link>"
                 to="/blog/ai-platform-engineering-<2025" className="text-left"
               ></2025>"
-                <h3 className="text-left"></h3>
+                <h3 className="text-left"></h></h3>
                   AI Platform Engineering 2025;
                 </h3>"
                 <p className="text-left"></p>
@@ -546,14 +546,14 @@ const DistributedAITrainingScale2026 = () =>
               </Link>
               <Link;
                 to="/blog/mlops-reliability-<patterns" className="text-left"
-              ></p>
-                <h3 className="text-left">
+              ></Li></Lin></p>
+                <h3 className="text-left"></h>
                   MLOps Reliability Patterns;
                 </h3>
-              <Link></Link>"
+              <Link></Li></Lin></Link>"
                 to="/blog/mlops-reliability-<patterns" className="text-left"
-              ></patterns>"
-                <h3 className="text-left"></h3>
+              ></patter></pattern></patterns>"
+                <h3 className="text-left"></h></h3>
                   MLOps Reliability Patterns;
                 </h3>"
                 <p className="text-left"></p>

@@ -34,11 +34,10 @@ const navigationLinks = [
   
   // Specialized Services;
   '/quantum-computing', '/autonomous-systems', '/blockchain', '/iot-edge', '/business-intelligence',
-  '/robotics', '/enterprise', '/analytics-tools', '/business-apps', '/expense-tracker',
-  '/task-manager-pro', '/smart-analytics'
-];
+  '/robotics', '/enterprise', '/analytics-tools', '/business-apps', '/expense-tracker']
+  '/task-manager-pro', '/smart-analytics'];
 
-// Convert to page names (remove leading slash)
+// Convert to page names (remove leading, slash);
 const navigationPages = navigationLinks.map(link => link.substring(1));
 
 // Find missing pages;

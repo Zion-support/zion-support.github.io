@@ -8,6 +8,7 @@ interface ContentNewsletterSignupProps {
   placeholder?: string;
   buttonText?: string;
   features?: Array<{
+}
     icon: React.ComponentType<{ className?: string }>;
     text: string;
   }>;
@@ -33,13 +34,12 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
       text: "Join 10,000+ subscribers"
     },
     {
-      icon: Globe,
-      text: "Global community access"
-    }
-  ],
+      icon: Globe,]
+      text: "Global community access"]
+    }],
   onSubscribe
-}) => {
-  const [email, setEmail] = useState('');
+}) => {;
+const [email, setEmail] = useState('');
   const [isSubscribed, setIsSubscribed] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
@@ -52,7 +52,10 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
     try {
       if (onSubscribe) {
         await onSubscribe(email);
-      } else {
+}
+  } catch (error) {
+    console.error("Error:", error);
+} else {
         // Simulate API call
         await new Promise(resolve => setTimeout(resolve, 1000));
       }
@@ -61,6 +64,7 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
       setEmail('');
     } catch (error) {
       console.error('Subscription failed:', error);
+}
     } finally {
       setIsLoading(false);
     }
@@ -77,9 +81,10 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
             Welcome to Our Community!
           </h2>
           <p className="text-xl text-blue-100 mb-8">
-            Thank you for subscribing. You'll receive our latest insights and updates soon.
-          </p>
-          <button
+            Thank you for subscribing. You'll receive our latest insights and updates soon.)
+          </p>)
+          <button)
+}
             onClick={() => setIsSubscribed(false)}
             className="text-white underline hover:text-blue-200 transition-colors"
           >
@@ -101,9 +106,9 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
             </h2>
             <p className="text-xl text-blue-100 mb-8">
               {subtitle}
-            </p>
-            
-            <div className="space-y-4">
+            </p>)
+            )
+            <div className="space-y-4">)
               {features.map((feature, index) => (
                 <div key={index} className="flex items-center space-x-3">
                   <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center">
@@ -139,12 +144,12 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
                 className="w-full bg-white text-purple-600 font-bold py-3 px-6 rounded-lg hover:bg-blue-50 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 flex items-center justify-center"
               >
                 {isLoading ? (
-                  <>
+                  <>\</>
                     <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-purple-600 mr-2"></div>
                     Subscribing...
                   </>
                 ) : (
-                  <>
+                  <>\</>
                     {buttonText}
                     <ArrowRight className="w-5 h-5 ml-2" />
                   </>

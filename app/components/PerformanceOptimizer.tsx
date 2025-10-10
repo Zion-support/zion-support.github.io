@@ -7,33 +7,31 @@ interface PerformanceOptimizerProps {
   className?: string;
 }
 
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children, className = '' }) => {
-  const [isOptimizing, setIsOptimizing] = useState(false);
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children, className = '' }) => {;
+const [isOptimizing, setIsOptimizing] = useState(false);
   const [optimizations, setOptimizations] = useState<string[]>([]);
   const [performanceScore, setPerformanceScore] = useState<number | null>(null);
 
-  const optimizeImages = useCallback(() => {
-    const images = document.querySelectorAll('img');
+  const optimizeImages = useCallback(() => {;
+const images = document.querySelectorAll('img');
     images.forEach((img) => {
       if (!img.loading) {
         img.loading = 'lazy';
-      }
+}
       if (!img.decoding) {
         img.decoding = 'async';
-      }
+}
     });
   }, []);
 
   const optimizeMemory = useCallback(() => {
-    if ('memory' in performance) {
-      const memory = (performance as any).memory;
+    if ('memory' in performance) {;
+const memory = (performance as, any).memory;
       if (memory.usedJSHeapSize > memory.jsHeapSizeLimit * 0.8) {
         // Trigger garbage collection if available
         if (window.gc) {
           window.gc();
-        }
-      }
-    }
+}
   }, []);
 
   const runOptimizations = useCallback(async () => {
@@ -48,9 +46,10 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children, c
     optimizeMemory();
     newOptimizations.push('Memory optimization applied');
 
-    // Calculate performance score
-    const score = Math.floor(Math.random() * 30) + 70; // Simulate score between 70-100
+    // Calculate performance score;
+const score = Math.floor(Math.random() * 30) + 70; // Simulate score between 70-100
     setPerformanceScore(score);
+}
     newOptimizations.push(`Performance score: ${score}/100`);
 
     setOptimizations(newOptimizations);
@@ -61,20 +60,22 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children, c
     // Initial optimization
     optimizeImages();
     
-    // Re-optimize on route changes
-    const observer = new MutationObserver(optimizeImages);
+    // Re-optimize on route changes;
+const observer = new MutationObserver(optimizeImages);
+}
     observer.observe(document.body, { childList: true, subtree: true });
 
     return () => observer.disconnect();
   }, [optimizeImages]);
 
-  useEffect(() => {
-    const interval = setInterval(optimizeMemory, 30000); // Check every 30 seconds
+  useEffect(() => {;
+const interval = setInterval(optimizeMemory, 30000); // Check every 30 seconds
     return () => clearInterval(interval);
+}
   }, [optimizeMemory]);
 
   return (
-    <>
+    <>\</>
       {children}
       <div className={`bg-white rounded-lg shadow-lg p-6 ${className}`}>
         <div className="flex items-center justify-between mb-4">
@@ -91,9 +92,9 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children, c
             {isOptimizing ? 'Optimizing...' : 'Optimize'}
           </button>
         </div>
-
-        {optimizations.length > 0 && (
-          <div className="space-y-2 mb-4">
+)
+        {optimizations.length > 0 && ()
+          <div className="space-y-2 mb-4">)
             {optimizations.map((optimization, index) => (
               <div key={index} className="flex items-center text-sm text-green-600">
                 <CheckCircle className="h-4 w-4 mr-2" />
@@ -101,9 +102,8 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children, c
               </div>
             ))}
           </div>
-        )}
-
-        {performanceScore && (
+        )},
+      {performanceScore && (
           <div className="mt-4">
             <div className="flex items-center justify-between mb-2">
               <span className="text-sm font-medium text-gray-700">Performance Score</span>
@@ -115,7 +115,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children, c
                   performanceScore >= 90 ? 'bg-green-500' : 
                   performanceScore >= 70 ? 'bg-yellow-500' : 'bg-red-500'
                 }`}
-                style={{ width: `${performanceScore}%` }}
+                style={{ width: `${performanceScore}%` }
               />
             </div>
             {performanceScore < 90 && (

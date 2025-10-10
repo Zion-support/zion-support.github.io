@@ -6,13 +6,16 @@ import React, { useState, useEffect } from "react";
 interface DashboardData {/* TODO: Fix JSX expression */}
   };
   performance: {,
-    loadTime: number;
-    responseTime: number;
-  };
+    loadTime: responseTime, number;
+
+}
+};
   security: {,
-    threatsBlocked: number;
-    vulnerabilities: number;
+    threatsBlocked: vulnerabilities, number;
   performanc,
+
+}
+}
   e: {/* TODO: Fix JSX expression */}
   };
   securit,

@@ -1,15 +1,15 @@
 import React from 'react';
 
-export default function EnterpriseAISolutions(): React.JSX.Element {
-  const solutions = [
+export default function EnterpriseAISolutions(): React.JSX.Element {;
+const solutions = [
     {
       icon: <Building className="w-8 h-8" />,</Building>title</Building>: 'Enterprise AI Platform',
       description: 'Comprehensive AI platform designed for large-scale enterprise deployments.',
       features: [,
         'Scalable Infrastructure',
-        'Advanced Analytics',
-        'Custom AI Models',
-        '24/7 Support'],
+        'Advanced Analytics'
+        'Custom AI Models']
+        '24/7 Support'],;
 export default function EnterpriseAISolutions(): React.JSX.Element {/* TODO: Fix JSX expression */}
     },
     {/* TODO: Fix JSX expression */}
@@ -19,8 +19,8 @@ export default function EnterpriseAISolutions(): React.JSX.Element {/* TODO: Fix
       description: 'Complete automation solutions to streamline enterprise operations.',
       features: [,
         'Process Automation',
-        'Workflow Optimization',
-        'Intelligent Routing',
+        'Workflow Optimization'
+        'Intelligent Routing']
         'Performance Monitoring']}];
 
   return(<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -35,9 +35,9 @@ export default function EnterpriseAISolutions(): React.JSX.Element {/* TODO: Fix
       </Helmet>
 
       <div className="container mx-auto px-4 py-16"></div>
-        <div className="text-center mb-16"></div>
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">Enterprise AI Solutions</h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+        <div className="text-center mb-16"></div>)
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">Enterprise AI Solutions</h1>)
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">)
             Comprehensive AI solutions designed for enterprise-scale deployments and large;)
             organizations.)
           </p>)
@@ -101,9 +101,9 @@ export default function EnterpriseAISolutions(): React.JSX.Element {/* TODO: Fix
 "
               <ul className="space-y-2"></ul>
                 {/* TODO: Fix JSX expression */}"
-                  <li key={featureIndex} className="flex items-center text-sm text-gray-600"></li>"
-                    <Target className="w-4 h-4 text-green-500 mr-2" /></Target>
-                    {feature}
+                  <li key={featureIndex} className="flex items-center text-sm text-gray-600"></li>")
+                    <Target className="w-4 h-4 text-green-500 mr-2" /></Target>)
+                    {feature})
                   </li>)
                 ))}
               </ul>

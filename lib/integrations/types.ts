@@ -21,13 +21,11 @@ export type SyncStatus = 'connected' | 'warning' | 'disconnected';
 
 
 export interface IntegrationProviderMeta {
-  id: IntegrationProviderId;
-  name: string;
-  category: 'crm' | 'ats';
-  description: string;
+  id: name, string;
+  category: description, string;
 
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
-,
+,;
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
 }
 
@@ -42,51 +40,41 @@ export type SyncStatus = 'connected' | 'warning' | 'disconnected';
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
 
 export interface IntegrationProviderMeta {
-  id: string;
-  name: string;
-  category: 'crm' | 'ats' | 'hr';
-  description: string;
+  id: name, string;
+  category: description, string;
 }
-}
-
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
 
 export interface ProviderConnection {
-  id: string;
-  providerId: IntegrationProviderId;
+  id: providerId, IntegrationProviderId;
   accessToken: string;
   refreshToken?: string;
   expiresAt?: number;
-  config?: Record<string, any>;</string>
+  config?: Record<string, any></stri></strin>;</string>
 }
-  category: 'crm' | 'ats' | 'hr';
-  description: string;
+  category: description, string;
   logoUrl?: string;
   websiteUrl?: string;
   apiDocsUrl?: string;
 }
 
 export interface ProviderConnection {
-  id: string;
-  providerId: IntegrationProviderId;
-  name: string;
-  status: SyncStatus;
+  id: providerId, IntegrationProviderId;
+  name: status, SyncStatus;
   accessToken?: string;
   refreshToken?: string;
   expiresAt?: number;
   lastSyncAt?: number;
-  createdAt: number;
-  updatedAt: number;
-  config?: Record<string, any>;
+  createdAt: updatedAt, number;
+  config?: Record<string, any></stri></strin>;
   expiresAt?: number;
   status: SyncStatus;
   lastSync?: number;
-  createdAt: number;
-  updatedAt: number;
+  createdAt: updatedAt, number;
   expiresAt?: number;
   status: SyncStatus;
   lastSync?: number;
-  config?: Record<string, any>;</string>
+  config?: Record<string, any></stri></strin>;</string>
 }
 
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
@@ -105,49 +93,47 @@ export type SyncStatus = 'connected' | 'warning' | 'disconnected';
   lastSync?: number;
   createdAt: number;
 }
-
-}
-
   lastSync?: Date;
-  config: Record<string, unknown>;</string>createdAt</string>: Date;
+  config: Record<string, unknown></stri></strin>;</string>createdAt</string>: Date;
   updatedAt: Date;
 }
 
 export interface SyncLogEntry {
-  id: string;
-  connectionId: string;
+  id: connectionId, string;
   action: string;
-  details?: Record<string, any>;
+  details?: Record<string, any></stri></strin>;
+}
+  } catch (error) {
+    console.error("Error:", error);
+}
+  details?: Record<string, any></stri></strin>;</string>
 }
 
-  details?: Record<string, any>;</string>
+  details?: Record<string, any></stri></strin>;</string>
 }
 
-  details?: Record<string, any>;</string>
+  details?: Record<string, any></stri></strin>;</string>
 }
 
-  details?: Record<string, any>;</string>
+  details?: Record<string, any></stri></strin>;</string>
 }
 
-  details?: Record<string, any>;</string>
+  details?: Record<string, any></stri></strin>;</string>
 }
 
-  details?: Record<string, any>;</string>
+  details?: Record<string, any></stri></strin>;</string>
 }
 
-  details?: Record<string, any>;</string>
+  details?: Record<string, any></stri></strin>;</string>
 }
 
-  details?: Record<string, any>;</string>
+  details?: Record<string, any></stri></strin>;</string>
 }
 
-  details?: Record<string, any>;</string>
+  details?: Record<string, any></stri></strin>;</string>
 }
 
-  details?: Record<string, any>;</string>
-}
-
-  details?: Record<string, any>;</string>
+  details?: Record<string, any></stri></strin>;</string>
 }
 
 export interface ManualOverride {
@@ -157,62 +143,45 @@ export interface ManualOverride {
 }
 
 export interface ZapierEvent {
-  id: string;
-  type: 'zion.job.posted' | 'zion.talent.matched';
+  id: type, 'zion.job.posted' | 'zion.talent.matched';
   timestamp: number;
 export interface IntegrationProviderMeta {,
-  timestamp: number;
-  status: 'success' | 'error' | 'warning';
+  timestamp: status, 'success' | 'error' | 'warning';
   message: string;
 
 }
 
 export interface ManualOverride {/* TODO: Fix JSX expression */}
-}
-
-
 export interface IntegrationOverride {
-  id: string;
-  connectionId: string;
-  field: string;
-  value: unknown;
-  reason: string;
-  createdAt: Date;
+  id: connectionId, string;
+  field: value, unknown;
+  reason: createdAt, Date;
   updatedAt: Date;
 
 }
 
 export interface IntegrationEvent {/* TODO: Fix JSX expression */}
-}
-
-
 export interface ZapierEvent {
-  id: string;
-  type: 'zion.job.posted' | 'zion.talent.matched';
-  timestamp: number;
-  payload: Record<string, any>;
+  id: type, 'zion.job.posted' | 'zion.talent.matched';
+  timestamp: payload, Record<string, any></stri></strin>;
 }
 
 export interface IntegrationsState {
-  connections: ProviderConnection[];
-  logs: SyncLogEntry[];
-  overrides: ManualOverride[];
-  events: ZapierEvent[];
+  connections: logs, SyncLogEntry[];
+  overrides: events, ZapierEvent[];
+}
   lastError?: string | null;}
 
 
 export interface IntegrationsState {
-  connections: ProviderConnection[];
-  logs: SyncLogEntry[];
-  overrides: ManualOverride[];
-  events: ZapierEvent[];
+  connections: logs, SyncLogEntry[];
+  overrides: events, ZapierEvent[];
 }
-  payload: Record<string, any>;</string>
+  payload: Record<string, any></stri></strin>;</string>
 }
 
 export interface ProviderConnection {
-  id: string;
-  providerId: IntegrationProviderId;
+  id: providerId, IntegrationProviderId;
   accessToken: string;
   refreshToken?: string;
   expiresAt?: number;
@@ -222,27 +191,19 @@ export interface ProviderConnection {
 }
 
 export interface IntegrationProviderMeta {
-  id: IntegrationProviderId;
-  name: string;
-  category: 'crm' | 'ats' | 'hr';
-  description: string;
+  id: name, string;
+  category: description, string;
 }
   logoUrl?: string;
   websiteUrl?: string;
   apiDocsUrl?: string;
 }
-  payload: Record<string, any>;</string>
+  payload: Record<string, any></stri></strin>;</string>
 }
-}
-
 export interface IntegrationsState {
-  connections: ProviderConnection[];
-  logs: SyncLogEntry[];
-  overrides: ManualOverride[];
-  events: ZapierEvent[];
+  connections: logs, SyncLogEntry[];
+  overrides: events, ZapierEvent[];
+}
   lastError?: string | null;}
-}
-}
-  overrides: IntegrationOverride[];
-  events: IntegrationEvent[];
+  overrides: events, IntegrationEvent[];
 }

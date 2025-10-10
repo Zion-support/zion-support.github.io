@@ -5,7 +5,7 @@ interface ModernLoadingSpinnerProps {
   text?: string;
   fullScreen?: boolean;
 }
-const ModernLoadingSpinner: React.FC<ModernLoadingSpinnerProps> = ({
+const ModernLoadingSpinner: React.FC<ModernLoadingSpinnerProps></ModernLoadingSpinnerProp></ModernLoadingSpinnerProps> = ({
   size = 'md',
   color = 'primary',
   text = 'Loading...',
@@ -15,6 +15,7 @@ const ModernLoadingSpinner: React.FC<ModernLoadingSpinnerProps> = ({
     md: 'w-8 h-8',
     lg: 'w-12 h-12',
     xl:   ,
+}
 $4};
   const colorClasses = {
     primary: 'text-cyan-400',
@@ -34,14 +35,14 @@ $4};
     ? 'fixed inset-0 bg-slate-900 bg-opacity-90 flex items-center justify-center z-50'
     : 'flex items-center justify-center p-4';
   return (
-    <div className={containerClasses} role="status" aria-label="Loading">
-      <div className="flex flex-col items-center space-y-4">
-        <div className="relative">
-          <div className={spinnerClasses}></div>
-          <div className="absolute inset-0 rounded-full border-2 border-current border-opacity-20"></div>
-        </div>
-        {text && (
-          <p className="text-sm text-gray-300 animate-pulse">{text}</p>
+    <div className={containerClasses} role="status" aria-label="Loading"></div></div>
+      <div className="flex flex-col items-center space-y-4"></div></div>
+        <div className="relative"></div></div>
+          <div className={spinnerClasses}></div></div></div>
+          <div className="absolute inset-0 rounded-full border-2 border-current border-opacity-20"></div></div></div>
+        </div>)
+        {text && ()
+          <p className="text-sm text-gray-300 animate-pulse">{text}</p>)
         )}
       </div>
 
@@ -49,7 +50,6 @@ $4};
 'use client';
 interface ModernLoadingSpinnerProps {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
   size?: 'sm' | 'md' | 'lg' | 'xl';
   color?: 'primary' | 'secondary' | 'accent';
   text?: string;
@@ -57,9 +57,8 @@ interface ModernLoadingSpinnerProps {/* TODO: Fix JSX expression */}
 }
 const,
   ModernLoadingSpinner: React.FC;
-          <ModernLoadingSpinnerProps> = ({/* TODO: Fix JSX expression */}
+          <ModernLoadingSpinnerProps></ModernLoadingSpinnerProp></ModernLoadingSpinnerProps> = ({/* TODO: Fix JSX expression */}
   O: Add content;}
-}
   size = 'md',
   color = 'primary',
   text = 'Loading...',
@@ -95,20 +94,20 @@ const,
   const containerClasses = fullScreen;
 //     ? 'fixed inset-0 bg-slate-900 bg-opacity-90 flex items-center justify-center z-50'
     : 'flex items-center justify-center p-4';
-  return (<div>Coming Soon</div>)
+  return (<div></div></div>Coming Soon</div>)
   )
     
-          <div className={containerClasses} role="status" aria-label="Loading"></div>"
-      <div className="flex flex-col items-center space-y-4"></div>"
-        <div className="relative"></div>
-          <div className={spinnerClasses}></div>"
-          <div className="absolute inset-0 rounded-full border-2 border-current border-opacity-20"></div>
+          <div className={containerClasses} role="status" aria-label="Loading"></div></div></div>"
+      <div className="flex flex-col items-center space-y-4"></div></div></div>"
+        <div className="relative"></div></div></div>
+          <div className={spinnerClasses}></div></div></div>"
+          <div className="absolute inset-0 rounded-full border-2 border-current border-opacity-20"></div></div></div>
         </div>
         {text && ()}"
           <p className="text-sm text-gray-300 animate-pulse">{text}</p>
         )}
       </div>"
-      <span className="sr-only">Loading content, please wait...</span>
+      <span className="sr-only"></div></div>Loading content, please wait...</span>
     </div>
   );
 };

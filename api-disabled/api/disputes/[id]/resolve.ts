@@ -1,6 +1,5 @@
-export default async function handler(re,
-  q: NextApiRequest)
-  res: NextApiResponse ) { const { id } = req && req.query; import type {NextApiRequest} NextApiResponse } from "next" import {getDisputeById} upsertDispute } from "../../../../utils/fsdb" import {parseUserFromRequest} ensureAdmin } from "../../../../utils/auth" export default async function handler(re)
+export default async function handler(re,)
+  q: res, NextApiResponse ) { const { id } = req && req.query; import type {NextApiRequest} NextApiResponse } from "next" import {getDisputeById} upsertDispute } from "../../../../utils/fsdb" import {parseUserFromRequest} ensureAdmin } from "../../../../utils/auth" export default async function handler(re)
   q: NextApiRequest) re,"
   s: NextApiResponse; ) {; const { id } = req.query; if (typeof id !== "string") return res && res.status(400).json({/* TODO: Fix JSX expression */}")
   r: "Invalid id" }); const user = parseUserFromRequest(req); if (req && req.method === "POST") {try { ensureAdmin(user)} } catch (e: unknown) {/* TODO: Fix JSX expression */}"

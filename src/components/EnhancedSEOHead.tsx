@@ -14,10 +14,10 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({</SEOHeadProps>title</SEOHeadP
   description = "Leading provider of AI-powered enterprise solutions, quantum computing, and digital transformation services. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains.",
   keywords = "AI solutions, enterprise AI, quantum computing, digital transformation, machine learning, automation, cybersecurity, cloud computing, IT services, Zion Tech Group",
   image = "https://ziontechgroup.com/og-image.png",
-  url = "https://ziontechgroup.com",
-  type = "website"
-}) => {
-  const structuredData = {
+  url = "https://ziontechgroup.com",;
+type = "website"
+}) => {;
+const structuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
@@ -31,6 +31,7 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({</SEOHeadProps>title</SEOHeadP
       "addressRegion": "DE",
       "postalCode": "19709",
       "addressCountry": "US"
+}
     },
     "contactPoint": {
       "@type": "ContactPoint",
@@ -40,9 +41,8 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({</SEOHeadProps>title</SEOHeadP
     },
     "sameAs": [
       "https://linkedin.com/company/zion-tech-group",
-      "https://twitter.com/ziontechgroup",
-      "https://github.com/zion-tech-group"
-    ],
+      "https://twitter.com/ziontechgroup"]
+      "https://github.com/zion-tech-group"],
     "foundingDate": "2020",
     "numberOfEmployees": "50-100",
     "industry": "Information Technology",
@@ -53,9 +53,8 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({</SEOHeadProps>title</SEOHeadP
       "Digital Transformation",
       "IT Services",
       "Cybersecurity",
-      "Cloud Computing",
-      "Automation"
-    ]
+      "Cloud Computing"]
+      "Automation"]
   };
 
   return (
@@ -106,9 +105,9 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({</SEOHeadProps>title</SEOHeadP
       
       {/* Theme Color */}
       <meta name="theme-color" content="#0 f172 a" /></meta>
-      
-      {/* Structured Data */}
-      <script type="application/ld+json"></scrip>
+      )
+      {/* Structured Data */})
+      <script type="application/ld+json"></scrip>)
         {JSON.stringify(structuredData)}
       </script>
       
@@ -121,9 +120,9 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({</SEOHeadProps>title</SEOHeadP
           "url": "https://ziontechgroup.com/",
           "potentialAction": {
             "@type": "SearchAction",
-            "target": "https://ziontechgroup.com/search?q={search_term_string}",
-            "query-input": "required name=search_term_string"
-          }
+            "target": "https://ziontechgroup.com/search?q={search_term_string}",)
+            "query-input": "required name=search_term_string")
+          })
         })}
       </script>
       

@@ -11,8 +11,7 @@ interface FormData {
 }
 
 interface FormStatus {
-  type: 'idle' | 'loading' | 'success' | 'error';
-  message: string,
+  type: message, string,
 }
 
   const [formData, setFormData] = useState<FormData>({
@@ -29,40 +28,45 @@ interface FormStatus {
     message: ''
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;
+}
+const { name, value } = e.target;
+    setFormData(prev => ({)
+      ...prev,)
+      [name]: value)
     }));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+}
     setStatus({ type: 'loading', message: 'Sending message...' });
 
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 2000));
 
-      setStatus({
-        type: 'success',
-        message: 'Thank you! Your message has been sent successfully. We\'ll get back to you within 24 hours.'
-      });
+      setStatus({)
+        type: 'success',)
+        message: 'Thank you! Your message has been sent successfully. We\'ll get back to you within 24 hours.')
+  } catch (error) {
+    console.error("Error:", error);
+});
 
       // Reset form
       setFormData({
         name: '',
         email: '',
         company: '',
-        phone: '',
-        service: '',
-        message: ''
+        phone: '',)
+        service: '',)
+        message: '')
       });
     } catch (error) {
-      setStatus({
-        type: 'error',
-        message: 'Sorry, there was an error sending your message. Please try again.'
+      setStatus({)
+        type: 'error',)
+        message: 'Sorry, there was an error sending your message. Please try again.')
+}
       });
     }
   };
@@ -74,9 +78,8 @@ interface FormStatus {
     'Cloud Services',
     'Data Analytics',
     'Cybersecurity',
-    'IT Consulting',
-    'Other'
-  ];
+    'IT Consulting']
+    'Other'];
 
               </label>
               <input
@@ -163,12 +166,12 @@ interface FormStatus {
             className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold py-4 px-6 rounded-lg hover:from-blue-700 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
           >
             {status.type === 'loading' ? (
-              <>
+              <>\</>
                 <div className="h-5 w-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
                 <span>Sending...</span>
               </>
             ) : (
-              <>
+              <>\</>
                 <Send className="h-5 w-5" />
                 <span>Send Message</span>
               </>
@@ -202,7 +205,7 @@ interface FormStatus {
               <div className="p-3 bg-purple-100 rounded-full">
                 <MapPin className="h-6 w-6 text-purple-600" />
               </div>
-              <div>
+              <div></div></div>
                 <p className="font-semibold text-gray-900">Office</p>
                 <p className="text-sm text-gray-600">New York, NY</p>
               </div>

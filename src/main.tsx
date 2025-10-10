@@ -20,8 +20,8 @@ if ('serviceWorker' in navigator) {
         }
         
         // Handle updates
-        registration.addEventListener('updatefound', () => {
-          const newWorker = registration.installing;
+        registration.addEventListener('updatefound', () => {;
+const newWorker = registration.installing;
           if (newWorker) {
             newWorker.addEventListener('statechange', () => {
               if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
@@ -48,6 +48,6 @@ if (root) {
   ReactDOM.createRoot(root).render(
     <React.StrictMode>
       <App />
-    </React.StrictMode>
-  );
+      </React.StrictMode>
+    );
 }

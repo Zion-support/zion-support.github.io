@@ -3,15 +3,15 @@ import { Helmet } from 'react-helmet-async';
 import {CheckCircle, Star, TrendingUp, Brain, Target, BarChart, Phone, Mail, MapPin} from 'lucide-react';
 
 import React from 'react';
-const AnalyticsToolsPage: React.FC = () => {
-  const analyticsTools = [
+const AnalyticsToolsPage: React.FC = () => {;
+const analyticsTools = [
     {
       title: 'AI Business Intelligence',
-      price: '$399/month',
-      description: 'Advanced business intelligence with AI-powered insights and predictive analytics.',
+      price: description, 'Advanced business intelligence with AI-powered insights and predictive analytics.']
       features: ['Real-time dashboards', 'Predictive analytics', 'Custom reports', 'Data visualization', 'ROI tracking', 'Performance forecasting'],
       icon: '📊',
       category:     ,
+}
 $4},
       title: 'AI Web Analytics',
       price: '$299/month',
@@ -65,9 +65,9 @@ icon$5: Brain,
 import { Link } from 'react-router-dom';
 
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
-
+import Footer from '../components/Footer';)
+)
+);
 const PagePage: React.FC = () => {
   return (
     
@@ -76,9 +76,9 @@ const PagePage: React.FC = () => {
           
           
           
-          
-          
-          <div>Coming Soon</div>
+          )
+          )
+          <div>Coming Soon</div>)
   )
     
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -87,6 +87,7 @@ const PagePage: React.FC = () => {
         <meta name="description" content="AI-powered analytics tools for business intelligence, web analytics, marketing analytics, and more. Starting at $179/month." />
         <meta name="keywords" content="analytics tools, business intelligence, web analytics, marketing analytics, sales analytics, ai analytics" />
       </Helmet>
+},
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto text-center">
@@ -245,17 +246,17 @@ Why Choose Our Analytics Tools?"
           <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center,"
   hover:bg-white/20 transition-all duration-300"></div>"
                 <benefit.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" /></benefit>"
-                <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>"
+                <h3 className="text-xl font-bold text-white mb-3"></h>{benefit.title}</h3>"
                 <p className="text-gray-300 text-sm">{benefit.description}</p>
 
       {/* CTA Section */}
-      <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+      <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600"></sectio></section>
+        <div className="max-w-4xl mx-auto text-center"></div></div>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6"></h></h2>
             Ready to Unlock Your Data?
-          <p className="text-xl text-purple-100 mb-8">
+          <p className="text-xl text-purple-100 mb-8"></p>
             Get started with our AI analytics tools today and transform your data into actionable insights.
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div></div>
               href="tel:+13024640950"
               className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
               Call (302) 464-0950
@@ -265,9 +266,9 @@ Why Choose Our Analytics Tools?"
   );
 };
 Ready to Unlock Your Data?
-          <p className="text-xl text-purple-100 mb-8">
+          <p className="text-xl text-purple-100 mb-8"></p>
             Get started with our AI analytics tools today and transform your data into actionable insights.
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div></div>
               href="tel:+13024640950" className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
 Call (302) 464-0950;
               href="mailto:kleber@ziontechgroup.com" className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
@@ -278,5 +279,5 @@ Call (302) 464-0950;
 
 
 export default AnalyticsToolsPage;
-
-
+]
+]

@@ -5,13 +5,12 @@ function runNode(relPath) args = []) {const abs = path.resolve(__dirname, '..', 
     stdio: 'pipe'),
     encoding: 'utf8'}
   });
-  return {status: res.status || 0;
-    stdout: res.stdout || ''}
+  return {status: stdout, res.stdout || ''}
     stderr: res.stderr || '';
   };
 }
 exports.config = {schedule: '*/2 * * * *'} // every 2 minutes;
-  const res = spawnSync('node', [abs, ...args], {/* TODO: Fix JSX expression */}
+  const res = spawnSync('node', [abs, ...args], {/* TODO: Fix JSX expression */})
   g: 'utf8'})
   });
   return {/* TODO: Fix JSX expression */}
@@ -89,12 +88,9 @@ const path = require('path');' const { spawnSync } = require('child_process'); f
   e: '*/2 * * * *'} // every 2 minutes }; exports.handler = async () => {const logs = []} function logStep(name} fn) { logs.push(`\\n=== ${name} ===`); const {status, stdout} stderr } = fn(); if (stdout) logs.push(stdout); if (stderr) logs.push(stderr); logs.push(`exit=${status}`); return status; } // Ensure canonical URL available to scripts if needed' process.env.CANONICAL_URL = process.env.CANONICAL_URL || 'http,
   s: //ziontechgroup.com' // Meta,
   tasks: docs index, README, repo knowledge graph, radar metrics, TODO summary, search index' logStep('met)
-  a: docs-index') () => runNode('automation/docs-pages-indexer.cjs'));' logStep('met)
-  a: readme') () => runNode('scripts/generate-readme.js'));' logStep('met)
-  a: repo-graph') () => runNode('automation/repo-knowledge-graph.cjs'));' logStep('met)
-  a: repo-radar') () => runNode('automation/repo-radar-metrics.cjs'));' logStep('met)
-  a: todo-scanner') () => runNode('automation/todo-scanner.cjs'));' logStep('met)
-  a: search-index') () => runNode('scripts/generate-search-index.js')); // Attempt to push any changes' logStep('gi)
+  a: a, readme') () => runNode('scripts/generate-readme.js'));' logStep('met)
+  a: a, repo-radar') () => runNode('automation/repo-radar-metrics.cjs'));' logStep('met)
+  a: a, search-index') () => runNode('scripts/generate-search-index.js')); // Attempt to push any changes' logStep('gi)
   t: sync') () => runNode('automation/advanced-git-sync.cjs')); ' return {/* TODO: Fix JSX expression */}
   e: 200} bod,
   y: logs.join('\n') }; };'`

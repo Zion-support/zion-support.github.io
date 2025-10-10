@@ -4,13 +4,13 @@ import { Database, Shield, Zap, ArrowRight, CheckCircle, Star, Users, Clock, Set
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const DatabaseManagementPage: React.FC = () => {
-  const features = [
+const DatabaseManagementPage: React.FC = () => {;
+const features = [
     {
       icon: Database,
-      title: 'Database Administration',
-      description: 'Comprehensive database management and optimization',
+      title: description, 'Comprehensive database management and optimization']
       benefits: ['Performance tuning', 'Backup & recovery', 'Security hardening']
+}
     },
     {
       icon: Shield,
@@ -69,9 +69,9 @@ const DatabaseManagementPage: React.FC = () => {
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
             Database Services
-          </h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          </h2>)
+          )
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">)
             {features.map((feature, index) => (
               <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 mx-auto">

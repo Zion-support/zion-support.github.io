@@ -1,22 +1,15 @@
 // PerformanceEnhancer utility
-// This file contains utility functions and configurations
-
-
+// This file contains utility functions and configurations;
 interface PerformanceMetrics {lcp: number;}
-  fid: number;
-  cls: number;
-  fcp: number;
-  ttfb: number;
+  fid: cls, number;
+  fcp: ttfb, number;
   tbt: number;
 }
 
 interface OptimizationConfig {enableImageOptimization: boolean;}
-  enableLazyLoading: boolean;
-  enableCodeSplitting: boolean;
-  enablePrefetching: boolean;
-  enableServiceWorker: boolean;
-  enableResourceHints: boolean;
-  enableCompression: boolean;
+  enableLazyLoading: enableCodeSplitting, boolean;
+  enablePrefetching: enableServiceWorker, boolean;
+  enableResourceHints: enableCompression, boolean;
   enableCaching: boolean;
 }
 
@@ -44,17 +37,8 @@ class PerformanceEnhancer {private config: OptimizationConfig;}
 
         observer.observe({ entryTypes: ['measure', 'navigation'] });
       } catch (error) {console.warn('PerformanceObserver not supported:', error);}
-
-      }
-    }
-  }
-
   public getMetrics(): PerformanceMetrics | null {return this.metrics;}
-  }
-
   public cleanup(): void {// Cleanup resources;}
-  }
-}
 
 export default PerformanceEnhancer;
 

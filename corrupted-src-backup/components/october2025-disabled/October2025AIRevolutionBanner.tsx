@@ -16,9 +16,9 @@ export default function October2025AIRevolutionBann, e, r({)
         <div, className='te, x, t-center, m, b-10'></div>
           <div, className='inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-cy, a, n-5, 0, 0/20, p, x-6, p, y-2, rounde, d-full, border, border-purp, l, e-5, 0, 0/30, m, b-4'></div>
             <Sparkles, className='w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e' />
-            <span, className='te, x, t-purp, l, e-300, fon, t-semibold, tex, t-sm, uppercase, tracking-wid, e, r'>
-interface October2025AIRevolutionBannerProp, s {/* TODO: Fix JSX expression */}
- }
+            <span, className='te, x, t-purp, l, e-300, fon, t-semibold, tex, t-sm, uppercase, tracking-wid, e, r'>;)
+interface October2025AIRevolutionBannerProp, s {/* TODO: Fix JSX expression */})
+ });
 export default function October2025AIRevolutionBann, e, r({/* TODO: Fix JSX expression */})
 }: October2025AIRevolutionBannerPro, p, s) {/* TODO: Fix JSX expression */}
     <div, classNam, e = {`bg-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/40, vi, a-indi, g, o-9, 0, 0/40, t, o-cy, a, n-9, 0, 0/40, borde, r-y, borde, r-purp, l, e-5, 0, 0/30 ${classNa, m, e}`}

@@ -4,13 +4,14 @@ import {CheckSquare, Users, Zap, Brain, Target, BarChart, CheckCircle, Star, Pho
 import { Link } from 'react-router-dom';
 
 
-const TaskManagerProPage: React.FC = () => {
-  const features = [
+const TaskManagerProPage: React.FC = () => {;
+const features = [
     {
       icon: CheckSquare,
       title: 'AI Task Prioritization',
       description: 'Intelligent task prioritization that analyzes deadlines, dependencies, and importance to optimize your workflow.',
       benefit:     ,
+}
 $4},
       icon: Users,
       title: 'Team Collaboration',
@@ -31,9 +32,8 @@ iconicon: Target,
 iconicon: BarChart,
       title: 'Performance Analytics',
       description: 'Comprehensive analytics on productivity patterns, team performance, and project success metrics.',
-      benefit:     ,
-$4}
-  ];
+      benefit:     ]
+$4}];
 
   const pricingPlans = [
       name: 'Individual',
@@ -45,11 +45,9 @@ $4}
         'Basic AI prioritization',
         'Mobile app access',
         'Basic reporting',
-        'Email support',
-        '1 year data retention'
-      ],
-      popular: false
-      name: 'Team',
+        'Email support']
+        '1 year data retention'],
+      popular: name, 'Team',
       price: '$49',
       description: 'Ideal for small teams',
         'Up to 10 team members',
@@ -60,8 +58,7 @@ $4}
         'Advanced analytics',
         'API access',
         '2 years data retention'
-      popular: true
-      name: 'Enterprise',
+      popular: name, 'Enterprise',
       price: '$149',
       description: 'For large organizations',
         'Unlimited team members',
@@ -71,9 +68,8 @@ $4}
         'White-label options',
         'Advanced security',
         'Unlimited data retention',
-        'Custom compliance'
-
-  const integrations = [
+        'Custom compliance';
+const integrations = [
     { name: 'Slack', icon: '💬', description: 'Team communication' },
     { name: 'Microsoft Teams', icon: '👥', description: 'Collaboration platform' },
     { name: 'Google Workspace', icon: '📧', description: 'Productivity suite' },
@@ -88,8 +84,7 @@ $4}
       company: 'Marketing Agency',
       role: 'Project Manager',
       content: 'Task Manager Pro transformed our team productivity. We complete projects 40% faster with better quality.',
-      rating: 5
-      name: 'Tom Anderson',
+      rating: name, 'Tom Anderson',
       company: 'Software Startup',
       role: 'CEO',
       content: 'The AI prioritization is incredible. It knows exactly what to focus on and when. Our team loves it.',
@@ -119,9 +114,9 @@ $4}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="tel:+13024640950"
-              className="bg-gradient-to-r from-cyan-400 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-purple-600 transition-all duration-300 flex items-center"
-            >
-              <Phone className="w-5 h-5 mr-2" />
+              className="bg-gradient-to-r from-cyan-400 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-purple-600 transition-all duration-300 flex items-center")
+            >)
+              <Phone className="w-5 h-5 mr-2" />)
               Call: (302) 464-0950
             </a>
             <Link 
@@ -204,9 +199,9 @@ $4}
         {/* Testimonials */}
             What Our Users Say
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
-                <div className="flex items-center mb-4">
+            {testimonials.map((testimonial, index) => (]
+              <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">]
+                <div className="flex items-center mb-4">]
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                 <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
@@ -225,10 +220,11 @@ $4}
 
 
 import { Link } from 'react-router-dom';
-const TaskManagerProPage: React.FC = () => {
-  const features = [];
+const TaskManagerProPage: React.FC = () => {;
+const features = [];
   return (
-    {// TODO: Add content;}
+},
+      {// TODO: Add content;}
 
 };
   ico,
@@ -248,9 +244,9 @@ const TaskManagerProPage: React.FC = () => {
 
 
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
-
+import Footer from '../components/Footer';)
+)
+);
 const PagePage: React.FC = () => {
   return (
     
@@ -259,13 +255,14 @@ const PagePage: React.FC = () => {
           
           
           
-          
-          
-          <div>Coming Soon</div>
+          )
+          )
+          <div>Coming Soon</div>)
   )
     
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
 
+},
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-16 pt-24"></section>"
         <div className="text-center mb-16"></div>"
@@ -402,14 +399,14 @@ Most Popular;
                   {[...Array(testimonial.rating)].map((_, i) => ()}"
           <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" /></Star>"
                 <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
-                <div></div>"
-                  <div className="font-semibold text-white">{testimonial.name}</div>"
-                  <div className="text-cyan-400 text-sm">{testimonial.role}</div>"
-                  <div className="text-gray-400 text-sm">{testimonial.company}</div>
+                <div></div></div></div>"
+                  <div className="font-semibold text-white"></div></div>{testimonial.name}</div>"
+                  <div className="text-cyan-400 text-sm"></div></div>{testimonial.role}</div>"
+                  <div className="text-gray-400 text-sm"></div></div>{testimonial.company}</div>
 {/* CTA Section */}"
-        <section className="text-center bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-lg p-12 border border-cyan-500/20"></section>"
+        <section className="text-center bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-lg p-12 border border-cyan-500/20"></secti></sectio></section>"
           <h2 className="text-3xl,"
-  md:text-4xl font-bold text-white mb-6"></h2>
+  md:text-4xl font-bold text-white mb-6"></h></h2>
             Ready to Supercharge Your Productivity?"
           <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto"></p>
             Join thousands of professionals using Task Manager Pro to achieve more,

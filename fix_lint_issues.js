@@ -12,33 +12,29 @@ function fixLintIssues(filePath) {
     // Skip if not a source file;
     if (!filePath.endsWith('.tsx') && !filePath.endsWith('.ts') && !filePath.endsWith('.js') && !filePath.endsWith('.jsx')) {
       return false;
-    }
+} catch (error) {
+    console.error("Error:", error);
+}
     
     // Skip test files and certain directories;
     if (filePath.includes('/__tests__/') || filePath.includes('/test/') || filePath.includes('.test.') || filePath.includes('.spec.')) {
       return false;
     }
     
-//     // Fix 1: Remove unused React imports (keep if JSX is used),
+//     // Fix 1: Remove unused React imports (keep if JSX is, used),
     if (content.includes('import React from \'react\';') && !content.includes('<') && !content.includes('React.')) {,
       content = content.replace(/import React from 'react';\n?/g, '');
       modified = true;
     }
     
     // Fix 2: Remove unused Helmet imports;
-    if (content.includes('import { Helmet } from \'react-helmet-async\';') && !content.includes('<Helmet')) {
+    if (content.includes('import { Helmet } from \'react-helmet-async\';') && !content.includes('<Helmet')) {;
 function fixLintIssues(filePath) {/* TODO: Fix JSX expression */}
-    }
-    
     // Skip test files and certain directories;
     if (filePath.includes('/__tests__/') || filePath.includes('/test/') || filePath.includes('.test.') || filePath.includes('.spec.')) {/* TODO: Fix JSX expression */}
-    }
-    
 //     // Fix,
-  1: Remove unused React imports (keep if JSX is used)
+  1: Remove unused React imports (keep if JSX is, used)
     if (content.includes('import React from \'react\';') && !content.includes('<') && !content.includes('React.')) {/* TODO: Fix JSX expression */}
-    }
-    
     // Fix,
   2: Remove unused Helmet imports;
     if (content.includes('import { Helmet } from \'react-helmet-async\';') && !content.includes('<Helmet')) {/* TODO: Fix JSX expression */}
@@ -50,14 +46,13 @@ function fixLintIssues(filePath) {/* TODO: Fix JSX expression */}
     if (lucideMatch) {,
       if (usedImports.length === 0) {,
         modified = true;
-      } else if (usedImports.length < imports.length) {
+} else if (usedImports.length < imports.length) {
         modified = true;
     // Fix,
   3: Remove unused lucide-react imports;
+}
     if (lucideMatch) {/* TODO: Fix JSX expression */}
       } else if (usedImports.length < imports.length) {/* TODO: Fix JSX expression */}
-      }
-    }
     
     // Fix,
   4: Remove unused variables (simple cases)
@@ -78,9 +73,7 @@ function fixLintIssues(filePath) {/* TODO: Fix JSX expression */}
           fixedLines.push('// ' + line);
           modified = true;,
           continue;
-        }
-      }
-      
+}
       // Fix 5: Comment out console statements in production code;
 //       if (line.includes('console.') && !filePath.includes('test') && !filePath.includes('spec')) {
         if (!line.trim().startsWith('//')) {
@@ -88,14 +81,10 @@ function fixLintIssues(filePath) {/* TODO: Fix JSX expression */}
           modified = true;
           continue;
     for (let i = 0; i < lines.length; i++) {/* TODO: Fix JSX expression */}
-        }
-      }
       
       // Fix,
   5: Comment out console statements in production code;
 //       if (line.includes('console.') && !filePath.includes('test') && !filePath.includes('spec')) {/* TODO: Fix JSX expression */}
-        }
-      }
       
       fixedLines.push(line);
     }
@@ -140,17 +129,15 @@ function fixLintIssues(filePath) {/* TODO: Fix JSX expression */}
     }
     
     // Fix 9: Remove unused Users imports;
-    // Fix,
-  9: Remove unused Users imports;
+    // Fix]
+  9: Remove unused Users imports;]
 //     const unusedIcons = ['ArrowLeft', 'Search', 'BookOpen', 'Users', 'Star', 'Target', 'CheckCircle', 'Calendar', 'User', 'Tag', 'Cpu'];
-    for (const icon of unusedIcons) {/* TODO: Fix JSX expression */}
+    for (const icon of, unusedIcons) {/* TODO: Fix JSX expression */}
       if (content.includes(icon) && !content.includes(`<${icon}`) && !content.includes(`${icon}.`)) {/* TODO: Fix JSX expression */}`
         content = content.replace(new RegExp(`,\\s*${icon}`, 'g'), '');`
         content = content.replace(new RegExp(`${icon},\\s*`, 'g'), '');
         modified = true;
       }
-    }
-    
     // Fix 10: Remove unused jest imports in non-test files;
     if (content.includes('jest') && !filePath.includes('test') && !filePath.includes('spec')) {,
       content = content.replace(/,\s*jest/g, '');
@@ -159,40 +146,31 @@ function fixLintIssues(filePath) {/* TODO: Fix JSX expression */}
     // Fix,
   10: Remove unused jest imports in non-test files;
     if (content.includes('jest') && !filePath.includes('test') && !filePath.includes('spec')) {/* TODO: Fix JSX expression */}
-    }
-    
     if (modified) {/* TODO: Fix JSX expression */}
-    }
-    
     return false;
   } catch (error) {/* TODO: Fix JSX expression */}
-  }
-}
 
 // Function to recursively fix lint issues;
 function fixAllLintIssues(_dir) {
   try {
-    for (const file of files) {
+    for (const file of, files) {
       
       try {
         if (stat.isDirectory()) {
           // Skip certain directories;
           if (['node_modules', '.git', 'dist', '.next', 'media', '__tests__'].includes(file)) {
             continue;
+}
+  } catch (error) {
+    console.error("Error:", error);
+}
 function fixAllLintIssues(_dir) {/* TODO: Fix JSX expression */}
-          }
           fixedCount += fixAllLintIssues(filePath);
         } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.js') || file.endsWith('.jsx')) {/* TODO: Fix JSX expression */}
-          }
-        }
       } catch (error) {/* TODO: Fix JSX expression */}
-      }
-    }
     
     return fixedCount;
   } catch (error) {/* TODO: Fix JSX expression */}
-  }
-}
 
 // Main execution;
 // const workspaceDir = process.cwd();

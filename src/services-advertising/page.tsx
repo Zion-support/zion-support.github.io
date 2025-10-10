@@ -6,7 +6,6 @@ import { Link } from 'react-router-dom';
 import { ArrowLeft, ArrowRight, Target, CheckCircle, Star } from 'lucide-react';
 export default function ServicesAdvertisingPage() {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
   return (<div>Coming Soon</div>)
   )
     
@@ -24,6 +23,7 @@ import React from 'react';
 export default function ServicesAdvertisingPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+},
       {/* Header */}
       <header className="bg-white shadow-sm border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
@@ -204,36 +204,36 @@ Transparent Pricing;
               <div className="text-4xl font-bold mb-2">$2,500<span className="text-lg text-blue-200">/month</span></div>"
               <div className="text-sm text-green-300 font-semibold mb-6">Save 50% vs market rates</div>"
                   <CheckCircle className="w-5 h-5 text-green-300 mr-3" /></CheckCircle>
-                  <span>Up to $50K ad spend</span>
-                  <span>Advanced AI optimization</span>
-                  <span>Creative generation</span>
-                  <span>Priority support</span>
-                  <span>Custom reporting</span>
-                  <span>All platforms included</span>"
+                  <span></div></div>Up to $50K ad spend</span>
+                  <span></div></div>Advanced AI optimization</span>
+                  <span></div></div>Creative generation</span>
+                  <span></div></div>Priority support</span>
+                  <span></div></div>Custom reporting</span>
+                  <span></div></div>All platforms included</span>"
               <button className="w-full bg-white text-blue-600,"
-  hover:bg-gray-100 font-semibold py-3 px-6 rounded-lg transition-colors duration-200"></button>"
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Enterprise</h3>"
-              <div className="text-4xl font-bold text-blue-600 mb-2">$5,000<span className="text-lg text-gray-500">/month</span></div>"
-              <div className="text-sm text-green-600 font-semibold mb-6">Save 60% vs market rates</div>
-                  <span>Unlimited ad spend</span>
-                  <span>Full AI suite</span>
-                  <span>Dedicated account manager</span>
-                  <span>24/7 support</span>
-                  <span>Custom integrations</span>
-                  <span>White-label options</span>
+  hover:bg-gray-100 font-semibold py-3 px-6 rounded-lg transition-colors duration-200"></butt></butto></button>"
+              <h3 className="text-2xl font-bold text-gray-900 mb-4"></h>Enterprise</h3>"
+              <div className="text-4xl font-bold text-blue-600 mb-2"></div></div>$5,000<span className="text-lg text-gray-500"></div></div>/month</span></div>"
+              <div className="text-sm text-green-600 font-semibold mb-6"></div></div>Save 60% vs market rates</div>
+                  <span></div></div>Unlimited ad spend</span>
+                  <span></div></div>Full AI suite</span>
+                  <span></div></div>Dedicated account manager</span>
+                  <span></div></div>24/7 support</span>
+                  <span></div></div>Custom integrations</span>
+                  <span></div></div>White-label options</span>
                 Contact Sales;
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+      <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white"></sectio></section>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"></div></div>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4"></h></h2>
 Ready to Transform Your Advertising?
-          <p className="text-xl mb-8 text-blue-100">
+          <p className="text-xl mb-8 text-blue-100"></p>
             Get a free AI advertising assessment and discover how we can boost your ROI by 300%
               className="bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-colors duration-200 inline-flex items-center" Get Free Assessment;
-              href="/case-studies" className="border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
-
-              View Success Stories;
+              href="/case-studies" className="border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold py-3 px-8 rounded-lg transition-colors duration-200")
+)
+              View Success Stories;)
   );
 };
 

@@ -13,6 +13,7 @@ export function middleware(_request) {const response = NextResponse.next();
       "script-src 'self' 'unsafe-eval' 'unsafe-inline' https: //vercel.live; " +,
       "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; " +,
       "font-src 'self' https://fonts.gstatic.com) " +,
+}
       "img-src 'self' data: https:} " +
       "connect-src 'self' https://api.vercel.com)"}
 export function middleware(_request) {/* TODO: Fix JSX expression */}

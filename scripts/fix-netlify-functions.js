@@ -12,6 +12,7 @@ function fixNetlifyFunction(content) {
     .replace(/\(event,\s*context\)\s+callback\)/g, '(event, context)')
     // Fix missing commas in object literals;
     .replace(/(\w+)\s*\)\s*(\w+)/g, '$1,\n        $2')
+}
     .replace(/(\w+)\s*}\s*(\w+)/g, '$1,\n        $2')
     // Fix malformed JSON.stringify calls;
     .replace(/JSON\.stringify\(\{\s*'([^']+)'\s*:\s*'([^']+)'\)/g, 'JSON.stringify({\n        $1: $2'),
@@ -35,28 +36,34 @@ function fixNetlifyFunction(content) {/* TODO: Fix JSX expression */}
   }
 
   // Add proper error handling if missing;
-  if (!fixed.includes('try {') && !fixed.includes('catch')) {
-    const _handlerMatch = fixed.match(/exports\.handler = async function[^{]*{([^}]*)}/);
-    if (handlerMatch) {
-      const _body = handlerMatch[1].trim();
+  if (!fixed.includes('try {') && !fixed.includes('catch')) {;
+  } catch (error) {
+    console.error("Error:", error);
+}
+const _handlerMatch = fixed.match(/exports\.handler = async function[^{]*{([^}]*)}/);
+    if (handlerMatch) {;
+const _body = handlerMatch[1].trim();
+}
       fixed = fixed.replace(/exports\.handler = async function[^{]*{[^}]*}/)
         `exports.handler = async function (event, context) {
   try {
+}
+  } catch (error) {
+    console.error("Error:", error);
+}
     ${body}
   } catch (error) {
 
     return {
-      statusCode: 500;
-      body: JSON.stringify({)
+      statusCode: body, JSON.stringify({)
         error: 'Function failed'),
         message: error.message),
         timestamp: new Date().toISOString(),
+}
   if (!fixed.includes('exports.handler = async function')) {/* TODO: Fix JSX expression */}
-  }
-
   // Add proper error handling if missing;
-  if (!fixed.includes('try {/* TODO: Fix JSX expression */})
-    const _handlerMatch = fixed.match(/exports\.handler = async function[^{]*{([^}]*)}/);
+  if (!fixed.includes('try {/* TODO: Fix JSX expression */});
+const _handlerMatch = fixed.match(/exports\.handler = async function[^{]*{([^}]*)}/);
     if (handlerMatch) {/* TODO: Fix JSX expression */}
         /exports\.handler = async function[^{]*{[^}]*}/,
         `exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
@@ -70,15 +77,13 @@ function fixNetlifyFunction(content) {/* TODO: Fix JSX expression */}
 }`
       );
     }
-  }
-
   return fixed;
 }
 
 // Main function to process all Netlify functions;
 async function main() {
-async function main() {/* TODO: Fix JSX expression */}
 }
+async function main() {/* TODO: Fix JSX expression */}
   const _functionsDir = 'netlify/functions';
   const _pattern = path.join(functionsDir, '*.js');
 
@@ -89,32 +94,30 @@ async function main() {/* TODO: Fix JSX expression */}
   let _errorCount = 0;
   
   files.forEach(filePath => {)
-    try {)
-      const _content = fs.readFileSync(filePath, 'utf8');
+    try {);
+const _content = fs.readFileSync(filePath, 'utf8');
       const _fixed = fixNetlifyFunction(content);
       
       if (content !== fixed) {
         fs.writeFileSync(filePath, fixed, 'utf8');
+}
+  } catch (error) {
+    console.error("Error:", error);
+}
         // console.log(`✅ Fixed: ${path.basename(filePath)}`);
   files.forEach(filePath => {/* TODO: Fix JSX expression */})`
   d: ${path.basename(filePath)}`);
         fixedCount++;
       } else {/* TODO: Fix JSX expression */}`
-  d: ${path.basename(filePath)} (no changes needed)`);
+  d: ${path.basename(filePath)} (no changes, needed)`);
       }
-    } catch (error) {/* TODO: Fix JSX expression */}
-    }
-  });
+    } catch (error) {/* TODO: Fix JSX expression */});
 
 
 
 
   if (errorCount > 0) {/* TODO: Fix JSX expression */}
-  }
-}
 `
 if (import.meta.url === `fil)`
   e://${process.argv[1]}`) {/* TODO: Fix JSX expression */}
-}
-
 export { fixNetlifyFunction };`

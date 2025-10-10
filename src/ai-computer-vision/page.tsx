@@ -7,10 +7,11 @@ import Footer from '../components/Footer';
 import { Eye, Camera, Video, Target, Shield, CheckCircle, ArrowRight, Settings } from 'lucide-react';
 
 import { Target, Shield, Eye,  Camera,  Target,  Shield,  Settings } from 'lucide-react';
-const AIComputerVisionPage: React.FC = () => {
-  const features = [];
+const AIComputerVisionPage: React.FC = () => {;
+const features = [];
   return (
-    {// TODO: Add content;}
+},
+      {// TODO: Add content;}
 
 };
   ico,
@@ -46,8 +47,8 @@ const AIComputerVisionPage: React.FC = () => {
       descriptio,
   n: 'Intelligent security monitoring and threat detection systems',
       ico,
-  n: Shield,
-      useCase,
+  n: Shield
+      useCase]
   s: ['Intrusion detection', 'Person tracking', 'Anomaly detection'];
       titl,
   e: 'Manufacturing',
@@ -56,26 +57,25 @@ const AIComputerVisionPage: React.FC = () => {
       ico,
   n: Settings,
       useCase,
-  s: ['Defect detection', 'Quality assurance', 'Process monitoring']
-  const pricing = [
+  s: ['Defect detection', 'Quality assurance', 'Process monitoring'];
+const pricing = [
       nam,
   e: 'Starter',
       pric,
   e: '$499/month',
       descriptio,
   n: 'Perfect for small projects',
-      feature,
-  s: [
-  // TOD,
+      feature,]
+  s: []
+  // TOD
   O: Add items];
 //         'Up to 1,000 images/month',
 //         'Basic models',
 //         'Email support',
 //         'Standard API'
-//       ],
-
-      popular: false,
-
+//       ],)
+)
+      popular: false,;);
 const PagePage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -104,15 +104,16 @@ Transform your business with cutting-edge computer vision technology. From objec
           </div>
         </section>
 
-        {/* Features Section */}
+},
+      {/* Features Section */}
         <section className="mb-16"></section>"
           <h2 className="text-3xl,"
   md:text-4xl font-bold text-white mb-12 text-center neon-text"></h2>
 // Core Capabilities;
           </h2>"
-          <div className="grid grid-cols-1,
-  md:grid-cols-2,"
-  lg:grid-cols-4 gap-8"></div>
+          <div className="grid grid-cols-1,)
+  md:grid-cols-2,")
+  lg:grid-cols-4 gap-8"></div>)
             {features.map((feature, index) => ()}"
           <div key={index} className="cyber-card p-6,"
   hover:scale-105 transition-all duration-300"></div>"
@@ -151,8 +152,8 @@ Transform your business with cutting-edge computer vision technology. From objec
                   {application.useCases.map((useCase, useCaseIndex) => ()}"
           <div key={useCaseIndex} className="flex items-center text-sm text-gray-300"></div>"
                       <ArrowRight className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" /></ArrowRight>
-                      {useCase}
-{/* Pricing Section */}
+                      {useCase},
+      {/* Pricing Section */}
             Choose Your Plan;"
           <div className="grid grid-cols-1,"
   md:grid-cols-3 gap-8 max-w-6xl mx-auto"></div>
@@ -182,8 +183,8 @@ Most Popular;
                       : 'border-2 border-cyan-400 text-cyan-400,
   hover:bg-cyan-400,
   hover:text-slate-900'`
-                  }`}
-        {/* CTA Section */}
+                  }`},
+      {/* CTA Section */}
         
           
           

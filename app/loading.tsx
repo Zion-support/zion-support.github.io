@@ -5,13 +5,13 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 
-const LoadingPage: React.FC = () => {
-  const features = [
+const LoadingPage: React.FC = () => {;
+const features = [
     {
       icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      title: description, 'Advanced AI algorithms that provide intelligent insights and recommendations.']
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+}
     },
     {
       icon: BarChart,
@@ -34,7 +34,7 @@ const LoadingPage: React.FC = () => {
   ];
 
   return (
-    <>
+    <>\</>
       <Helmet>
         <title>Loading - Zion Tech Group</title>
         <meta name="description" content="Loading page." />
@@ -76,9 +76,9 @@ const LoadingPage: React.FC = () => {
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Discover how our solutions can help transform your business.
               </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            </div>)
+            )
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">)
               {features.map((feature, index) => (
                 <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                   <div className="flex items-center mb-4">

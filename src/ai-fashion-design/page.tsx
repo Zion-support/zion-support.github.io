@@ -4,8 +4,8 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 
-const AIFashionDesignPage: React.FC = () => {
-  const features = [
+const AIFashionDesignPage: React.FC = () => {;
+const features = [
     'Design Generation',
     'Trend Analysis',
     'Color Matching',
@@ -14,26 +14,24 @@ const AIFashionDesignPage: React.FC = () => {
     'Style Recommendations',
     'Fabric Suggestions',
     'Pattern Creation',
-    '3D Visualization',
-    'Cost Estimation'
-  ];
+    '3D Visualization']
+    'Cost Estimation'];
 
   const benefits = [
     'Faster design cycles',
     'Trend accuracy',
     'Cost reduction',
     'Market insights',
-    'Creative inspiration',
-    'Competitive advantage'
-  ];
+    'Creative inspiration']
+    'Competitive advantage'];
 
   const pricingPlans = [
     {
       name: 'Starter',
-      price: '$249',
-      period: '/month',
+      price: period, '/month']
       features: ['10 designs/month', 'Basic trends', 'Email support', 'Standard quality'],
       popular: false
+}
     },
     {
       name: 'Professional',
@@ -52,7 +50,7 @@ const AIFashionDesignPage: React.FC = () => {
   ];
 
   return (
-    <>
+    <>\</>
       <SEOOptimizer
         title="AI Fashion Designer - AI-Powered Fashion Design & Trend Analysis | Zion Tech Group"
         description="Revolutionize fashion design with AI Fashion Designer. Generate designs, analyze trends, and optimize collections with AI-powered fashion technology starting at $249/month."
@@ -99,9 +97,9 @@ const AIFashionDesignPage: React.FC = () => {
           {/* Features Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-              AI Fashion Design Features
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              AI Fashion Design Features)
+            </h2>)
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">)
               {features.map((feature, index) => (
                 <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                   <div className="flex items-center mb-4">

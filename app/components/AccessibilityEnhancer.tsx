@@ -3,25 +3,26 @@ import React, { useEffect } from 'react';
 
 const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   useEffect(() => {
-    // Add keyboard navigation support
-    const handleKeyDown = (event: KeyboardEvent) => {
+    // Add keyboard navigation support;
+const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Tab') {
         document.body.classList.add('keyboard-navigation');
-      }
+}
     };
 
     const handleMouseDown = () => {
       document.body.classList.remove('keyboard-navigation');
+}
     };
 
-    // Add focus indicators
-    const addFocusStyles = () => {
-      const style = document.createElement('style');
+    // Add focus indicators;
+const addFocusStyles = () => {;
+const style = document.createElement('style');
       style.textContent = `
         .keyboard-navigation *:focus {
           outline: 2px solid #06b6d4 !important;
           outline-offset: 2px !important;
-        }
+}
       `;
       document.head.appendChild(style);
     };
@@ -34,6 +35,7 @@ const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ childr
     return () => {
       document.removeEventListener('keydown', handleKeyDown);
       document.removeEventListener('mousedown', handleMouseDown);
+}
     };
   }, []);
 

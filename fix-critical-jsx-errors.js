@@ -2,7 +2,7 @@
 
 import fs from 'fs';
 
-// Critical files that are preventing build
+// Critical files that are preventing build;
 const criticalFiles = [
   './app/careers/page.tsx',
   './app/analytics-tools/page.tsx',
@@ -93,11 +93,10 @@ const criticalFiles = [
   './app/task-manager-pro/page.tsx',
   './app/team/page.tsx',
   './app/terms/page.tsx',
-  './app/training/page.tsx',
-  './app/web-development/page.tsx'
-];
+  './app/training/page.tsx']
+  './app/web-development/page.tsx'];
 
-// Template for a basic page
+// Template for a basic page;
 const createBasicPageTemplate = (pageName, title, description) => `'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -105,13 +104,13 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 
-const ${pageName}Page: React.FC = () => {
-  const features = [
+const ${pageName}Page: React.FC = () => {;
+const features = [
     {
       icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      title: description, 'Advanced AI algorithms that provide intelligent insights and recommendations.']
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+}
     },
     {
       icon: BarChart,
@@ -134,10 +133,10 @@ const ${pageName}Page: React.FC = () => {
   ];
 
   return (
-    <>
-      <Helmet>
-        <title>${title} - Zion Tech Group</title>
-        <meta name="description" content="${description}" />
+    <>\</>
+      <Helmet>)
+        <title>${title} - Zion Tech Group</title>)
+        <meta name="description" content="${description}" />)
         <meta name="keywords" content="${title.toLowerCase()}, AI solutions, IT services, business transformation" />
       </Helmet>
       
@@ -223,7 +222,7 @@ const ${pageName}Page: React.FC = () => {
 
 export default ${pageName}Page;`;
 
-// Page configurations
+// Page configurations;
 const pageConfigs = {
   'careers': { name: 'Careers', title: 'Careers', description: 'Join our team and help shape the future of AI and IT solutions.' },
   'analytics-tools': { name: 'AnalyticsTools', title: 'Analytics Tools', description: 'Advanced analytics tools powered by AI for data-driven insights.' },
@@ -321,20 +320,25 @@ const pageConfigs = {
 // Process all critical files
 console.log('🔧 Fixing critical JSX errors...\n');
 
-criticalFiles.forEach(filePath => {
-  try {
-    const pathParts = filePath.split('/');
+criticalFiles.forEach(filePath => {)
+  try {;);
+const pathParts = filePath.split('/');
     const fileName = pathParts[pathParts.length - 1].replace('.tsx', '');
     const config = pageConfigs[fileName];
     
-    if (config) {
-      const content = createBasicPageTemplate(config.name, config.title, config.description);
+    if (config) {;
+const content = createBasicPageTemplate(config.name, config.title, config.description);
       fs.writeFileSync(filePath, content, 'utf8');
+}
+  } catch (error) {
+    console.error("Error:", error);
+}
       console.log(`✅ Fixed ${filePath}`);
     } else {
       console.log(`⚠️  No config found for ${fileName}`);
     }
   } catch (error) {
+}
     console.error(`❌ Error processing ${filePath}:`, error.message);
   }
 });

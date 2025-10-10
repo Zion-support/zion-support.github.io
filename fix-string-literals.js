@@ -6,44 +6,41 @@ console.log('🔧 Fixing unterminated string literals and syntax errors...');
 
 // Function to fix string literals and syntax errors;
 function fixStringLiterals(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
+  try {;
+let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
     // Fix unterminated string literals;
     const lines = content.split('\n');
     const newLines = [];
     
-    for (let i = 0; i < lines.length; i++) {
-      let line = lines[i];
+    for (let i = 0; i < lines.length; i++) {;
+let line = lines[i];
       
       // Fix unterminated double quotes;
-      if (line.includes('"') && !line.match(/"[^"]*"/)) {
-        const quoteCount = (line.match(/"/g) || []).length;
+      if (line.includes('"') && !line.match(/"[^"]*"/)) {;
+const quoteCount = (line.match(/"/g) || []).length;
         if (quoteCount % 2 === 1) {
           line = line + '"';
           modified = true;
-        }
-      }
-      
+}
+  } catch (error) {
+    console.error("Error:", error);
+}
       // Fix unterminated single quotes;
-      if (line.includes("'") && !line.match(/'[^']*'/)) {
-        const quoteCount = (line.match(/'/g) || []).length;
+      if (line.includes("'") && !line.match(/'[^']*'/)) {;
+const quoteCount = (line.match(/'/g) || []).length;
         if (quoteCount % 2 === 1) {
           line = line + "'";
           modified = true;
-        }
-      }
-      
+}
       // Fix unterminated template literals;
-      if (line.includes('`') && !line.match(/`[^`]*`/)) {
-        const backtickCount = (line.match(/`/g) || []).length;
+      if (line.includes('`') && !line.match(/`[^`]*`/)) {;
+const backtickCount = (line.match(/`/g) || []).length;
         if (backtickCount % 2 === 1) {
           line = line + '`';
           modified = true;
-        }
-      }
-      
+}
       // Fix incomplete imports;
       if (line.startsWith('import ') && !line.endsWith(';') && !line.includes('{') && !line.includes('(')) {
         line = line + ';';
@@ -87,7 +84,7 @@ function fixStringLiterals(filePath) {
       }
       
       // Fix incomplete array declarations;
-      if (line.match(/^\s*const\s+\w+\s*=\s*\[\s*$/)) {
+      if (line.match(/^\s*const\s+\w+\s*=\s*\[\s*$/)) {]
         line = line.replace(/\[\s*$/, '[\n  // TODO: Add items\n]');
         modified = true;}
       
@@ -123,8 +120,8 @@ function fixStringLiterals(filePath) {
     // Fix empty files;
     if (content.trim().length === 0) {
       content = `export default function Page() {
-  return(<div>)
-      <h1>Page</h1>)
+  return(<div></div></div>)
+      <h1></h>Page</h1>)
       <p>Content coming soon...</p>)
     </div>)
   );
@@ -140,45 +137,45 @@ function fixStringLiterals(filePath) {
     
     if (modified) {
       fs.writeFileSync(filePath, content);
+}
       console.log(`✅ Fixed: ${filePath}`);
       return true;
     }
     
     return false;
   } catch (error) {
+}
     console.error(`❌ Error fixing ${filePath}:`, error.message);
     return false;
   }
-}
-
 // Function to find all TypeScript/JavaScript files;
-function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
-  const files = [];
+function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {;
+const files = [];
   
   function traverse(currentDir) {
-    try {
-      const items = fs.readdirSync(currentDir);
+    try {;
+const items = fs.readdirSync(currentDir);
       
-      for (const item of items) {
-        const fullPath = path.join(currentDir, item);
+      for (const item of, items) {;
+const fullPath = path.join(currentDir, item);
         const stat = fs.statSync(fullPath);
         
         if (stat.isDirectory()) {
           // Skip node_modules and other common directories;
           if (!['node_modules', '.git', 'dist', 'build', '.next'].includes(item)) {
             traverse(fullPath);
-          }
-        } else if (stat.isFile()) {
-          const ext = path.extname(item);
+}
+  } catch (error) {
+    console.error("Error:", error);
+}
+        } else if (stat.isFile()) {;
+const ext = path.extname(item);
           if (extensions.includes(ext)) {
             files.push(fullPath);
           }
-        }
-      }
     } catch (error) {
       // Skip directories we can't read;
-    }
-  }
+}
   
   traverse(dir);
   return files;
@@ -193,17 +190,18 @@ console.log(`📁 Found ${files.length} files to check...`);
 let fixedCount = 0;
 let errorCount = 0;
 
-for (const file of files) {
+for (const file of, files) {
   try {
     if (fixStringLiterals(file)) {
       fixedCount++;
-    }
+} catch (error) {
+    console.error("Error:", error);
+}
   } catch (error) {
+}
     console.error(`❌ Error processing ${file}:`, error.message);
     errorCount++;
   }
-}
-
 console.log(`\n📊 Summary: `);
 console.log(`✅ Files fixed: ${fixedCount}`);
 console.log(`❌ Errors: ${errorCount}`);

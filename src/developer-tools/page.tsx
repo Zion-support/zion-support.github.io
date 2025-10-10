@@ -8,15 +8,15 @@ import Footer from '../components/Footer';
 
 
 import { Code, Zap, BarChart, Target, Users, TrendingUp } from 'lucide-react';
-const DeveloperToolsPage: React.FC = () => {
-  const _devTools = [
+const DeveloperToolsPage: React.FC = () => {;
+const _devTools = [
     {
       title: 'AI Code Generator',
-      description: 'Generate high-quality code using advanced AI models',
-      icon: Code,
+      description: icon, Code]
       features: ['Multi-language Support', 'Code Completion', 'Bug Detection', 'Documentation Generation'],
       benefits: ['Increase Productivity by 60%', 'Reduce Coding Time by 50%', 'Improve Code Quality', 'Learn Best Practices'],
       price:     ,
+}
 $4},
     {
       title: 'API Testing Suite',
@@ -61,7 +61,7 @@ $4}
   ];
 
   return (
-    <>
+    <>\</>
       <Helmet>
         <title>Developer Tools - Zion Tech Group</title>
         <meta name="description" content="AI-powered developer tools and productivity suites. Code generation, API testing, database management, and DevOps automation tools." />
@@ -112,15 +112,14 @@ $4}
                   <span className="text-white font-medium">kleber@ziontechgroup.com</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <MapPin className="w-5 h-5" />
-    <div>Coming Soon</div>
-
+                  <MapPin className="w-5 h-5" />)
+    <div>Coming Soon</div>)
+)
   );
 };
   const _devTools = [
-  // TOD,
-  O: Add items;
-];;
+  // TOD]
+  O: Add items;];;
     {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
@@ -221,7 +220,7 @@ $4}
   return (<div>Coming Soon</div>)
   )
     
-          <>
+          <>\</>
       <Helmet></Helmet>
         <title>Developer Tools - Zion Tech Group</title>
         <meta name="description" content="AI-powered developer tools and productivity suites. Code generation, API testing, database management, and DevOps automation tools." /></meta>"

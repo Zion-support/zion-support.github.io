@@ -9,8 +9,8 @@ import Footer from '../components/Footer';
 
 'use client';
 import React, { useState } from 'react';
-const SolutionsPage: React.FC = () => {
-  const [activeTab, setActiveTab] = useState('ai');
+const SolutionsPage: React.FC = () => {;
+const [activeTab, setActiveTab] = useState('ai');
 
   const _solutionCategories = [
     {
@@ -20,6 +20,7 @@ const SolutionsPage: React.FC = () => {
       color: 'text-purple-400',
       bgColor: 'bg-purple-500/10',
       description:     ,
+}
 $4},
     {
       id: 'it',
@@ -43,15 +44,13 @@ $4},
       icon: Zap,
       color: 'text-yellow-400',
       bgColor: 'bg-yellow-500/10',
-      description:     ,
-$4}
-  ];
+      description:     ]
+$4}];
 
   const solutions = {
     ai: [
       {
-        title: 'AI-Powered Analytics',
-        description: 'Transform raw data into actionable insights with advanced AI analytics',
+        title: description, 'Transform raw data into actionable insights with advanced AI analytics']
         features: ['Predictive Analytics', 'Real-time Insights', 'Automated Reporting', 'Custom Dashboards'],
         pricing: 'Starting at $1,500/month',
         icon: BarChart,
@@ -84,8 +83,7 @@ $4}
     ],
     it: [
       {
-        title: 'Cloud Migration',
-        description: 'Seamlessly migrate your infrastructure to the cloud with zero downtime',
+        title: description, 'Seamlessly migrate your infrastructure to the cloud with zero downtime']
         features: ['AWS/Azure/GCP Migration', 'Data Migration', 'Application Modernization', '24/7 Support'],
         pricing: 'Starting at $1,299/month',
         icon: Cloud,
@@ -118,8 +116,7 @@ $4}
     ],
     security: [
       {
-        title: 'Cybersecurity Suite',
-        description: 'Comprehensive security solutions with threat detection and response',
+        title: description, 'Comprehensive security solutions with threat detection and response']
         features: ['Threat Detection', 'Vulnerability Assessment', 'Incident Response', 'Compliance Management'],
         pricing: 'Starting at $799/month',
         icon: Shield,
@@ -152,8 +149,7 @@ $4}
     ],
     automation: [
       {
-        title: 'Business Process Automation',
-        description: 'Automate complex business processes with intelligent workflow management',
+        title: description, 'Automate complex business processes with intelligent workflow management']
         features: ['Workflow Design', 'Process Optimization', 'Exception Handling', 'Performance Analytics'],
         pricing: 'Starting at $399/month',
         icon: Zap,
@@ -205,12 +201,11 @@ $4},
     {
       icon: Users,
       title: 'Expert Team',
-      description:     ,
-$4}
-  ];
+      description:     ]
+$4}];
 
   return (
-    <>
+    <>\</>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16 pt-24">
@@ -225,9 +220,9 @@ $4}
             </p>
           </div>
 
-          {/* Solution Categories Tabs */}
-          <div className="mb-12">
-            <div className="flex flex-wrap justify-center gap-4 mb-8">
+          {/* Solution Categories Tabs */})
+          <div className="mb-12">)
+            <div className="flex flex-wrap justify-center gap-4 mb-8">)
               {solutionCategories.map((category) => (
                 <button
                   key={category.id}
@@ -252,9 +247,8 @@ $4}
 };
   const [activeTab, setActiveTab] = useState('ai');
   const _solutionCategories = [
-  // TOD,
-  O: Add items;
-];;
+  // TOD]
+  O: Add items;];;
     {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
@@ -324,8 +318,8 @@ $4}
   O: Add content;}
 };
   a,
-  i: [
-  // TOD,
+  i: []
+  // TOD
   O: Add items]
       {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -393,8 +387,8 @@ $4}
       }
 //     ],
     i,
-  t: [
-  // TOD,
+  t: []
+  // TOD
   O: Add items]
       {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -462,8 +456,8 @@ $4}
       }
 //     ],
     securit,
-  y: [
-  // TOD,
+  y: []
+  // TOD
   O: Add items]
       {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -531,8 +525,8 @@ $4}
       }
 //     ],
     automatio,
-  n: [
-  // TOD,
+  n: []
+  // TOD
   O: Add items]
       {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -601,9 +595,8 @@ $4}
 //     ]
   };
   const benefits = [
-  // TOD,
-  O: Add items;
-];;
+  // TOD]
+  O: Add items;];;
     {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
@@ -648,7 +641,7 @@ $4}
   return (<div>Coming Soon</div>)
   )
     
-          <>
+          <>\</>
       <Navigation /></Navigation>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
         <div className="container mx-auto px-4 py-16 pt-24"></div>

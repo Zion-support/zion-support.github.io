@@ -1,12 +1,12 @@
 import { Home, Phone } from 'lucide-react';
-export default function NotFound() {
-  const popularPages = [
+export default function NotFound() {;
+const popularPages = [
     {
       title: 'Home',
       description: 'Return to our homepage',
       href: '/',
       icon: '🏠'
-    },
+},
     {
       title: 'AI Services',
       description: 'Explore our comprehensive AI and IT solutions',
@@ -34,10 +34,9 @@ export default function NotFound() {
     {
       title: 'Contact Us',
       description: 'Get in touch with our AI experts',
-      href: '/contact',
-      icon: '📞'
-    },
-  ];
+      href: '/contact',]
+      icon: '📞']
+    }];
   return (
     <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4">
       <div className="max-w-2xl w-full text-center">
@@ -57,9 +56,9 @@ export default function NotFound() {
             The page you're looking for doesn't exist or has been moved. 
             Don't worry, let's get you back on track!
           </p>
-        </div>
-        {/* Popular Pages */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+        </div>)
+        {/* Popular Pages */})
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">)
           {popularPages.map((page, index) => (
             <Link
               key={index}

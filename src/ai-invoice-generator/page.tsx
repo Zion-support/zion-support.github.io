@@ -6,13 +6,13 @@ import Footer from '../../components/Footer';
 import SEOOptimizer from '../../components/SEOOptimizer';
 
 
-const AIInvoiceGeneratorPage: React.FC = memo(() => {
-  const features = [
+const AIInvoiceGeneratorPage: React.FC = memo(() => {;
+const features = [
     {
       icon: Brain,
-      title: 'AI-Powered Invoice Generation',
-      description: 'Automatically generate professional invoices using AI that understands your business context and client needs.',
+      title: description, 'Automatically generate professional invoices using AI that understands your business context and client needs.']
       benefits: ['Smart template selection', 'Automatic data population', 'Context-aware pricing', 'Brand consistency']
+}
     },
       icon: Zap,
       title: 'Instant Processing',
@@ -47,9 +47,8 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {
         '5 AI templates',
         'Basic analytics',
         'Email support',
-        'Mobile app access',
-        'PDF export'
-      ],
+        'Mobile app access']
+        'PDF export'],
       popular: false,
       color:       ,
 namename: 'Professional',
@@ -76,9 +75,8 @@ namename: 'Enterprise',
         'Custom workflows',
         'SLA guarantee',
         'On-premise deployment'
-      color: 'green'
-
-  const testimonials = [
+      color: 'green';
+const testimonials = [
       name: 'Sarah Johnson',
       role: 'Freelance Designer',
       company: 'Creative Studio',
@@ -94,12 +92,10 @@ namename: 'Emily Rodriguez',
       role: 'Accountant',
       company: 'Finance Pro',
       content: 'Compliance features are outstanding. Never worry about tax calculations or regulatory requirements again.',
-      avatar: '👩‍💻'
-
-  const useCases = [
+      avatar: '👩‍💻';
+const useCases = [
       title: 'Freelancers & Consultants',
-      description: 'Streamline invoicing for project-based work with AI that understands your service offerings.',
-      icon: Briefcase,
+      description: icon, Briefcase]
       benefits: ['Project-based invoicing', 'Time tracking integration', 'Client management', 'Expense tracking']
       title: 'E-commerce Businesses',
       description: 'Automate invoice generation for online sales with AI-powered order processing.',
@@ -115,7 +111,7 @@ namename: 'Emily Rodriguez',
       benefits: ['Multi-client management', 'Project tracking', 'Team collaboration', 'Advanced reporting']
 
   return (
-    <>
+    <>\</>
       <SEOOptimizer
         title="AI Invoice Generator - Automated Invoice Creation | Zion Tech Group"
         description="Generate professional invoices instantly with AI-powered automation. Save time, reduce errors, and improve cash flow with our intelligent invoice generation platform."
@@ -180,9 +176,9 @@ namename: 'Emily Rodriguez',
                 </h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                   Our AI invoice generator combines cutting-edge technology with user-friendly design 
-                  to revolutionize your billing process.
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  to revolutionize your billing process.)
+              )
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">)
                 {features.map((feature, index) => (
                   <div key={index} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-800/70 transition-all duration-300">
                     <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mb-4">

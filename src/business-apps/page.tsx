@@ -22,7 +22,8 @@ const BusinessAppsPage: React.FC = () => {
             This page is under development. Please check back soon for updates.
           </p>
         </section>
-        {/* Key Benefits */}
+},
+      {/* Key Benefits */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">
 
@@ -46,9 +47,9 @@ const BusinessAppsPage: React.FC = () => {
               <div className="text-4xl mb-4">🔒</div>"
               <h3 className="text-xl font-bold text-white mb-3">Enterprise Security</h3>"
               <p className="text-gray-300 text-sm">Bank-level security and compliance for your sensitive data</p>"
-              <div className="text-4xl mb-4">📊</div>"
-              <h3 className="text-xl font-bold text-white mb-3">Real-time Analytics</h3>"
-              <p className="text-gray-300 text-sm">Live insights and analytics to drive better decisions</p>
+              <div className="text-4xl mb-4">📊</div>")
+              <h3 className="text-xl font-bold text-white mb-3">Real-time Analytics</h3>")
+              <p className="text-gray-300 text-sm">Live insights and analytics to drive better decisions</p>)
         {/* Apps by Category */})
         {categories.map(category => ()}"
           <section key={category} className="mb-16"></section>"
@@ -71,8 +72,8 @@ const BusinessAppsPage: React.FC = () => {
                             <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" /></CheckCircle>
                             {feature}
                           </li>
-                        ))}
-                        {app.features.length > 3 && (}"
+                        ))},
+      {app.features.length > 3 && (}"
 <li className="text-xs text-gray-400">+{app.features.length - 3} more features</li>)
                         )}
                       </ul>"

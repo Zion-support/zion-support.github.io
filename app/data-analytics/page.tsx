@@ -24,12 +24,13 @@ import {
   LineChart
 } from 'lucide-react';
 
-const DataAnalyticsPage: React.FC = () => {
-  const features = [
+const DataAnalyticsPage: React.FC = () => {;
+const features = [
     {
       icon: BarChart,
       title: 'Advanced Data Visualization',
       description: 'Transform complex data into clear, actionable insights with interactive dashboards and reports.'
+}
     },
     {
       icon: Brain,
@@ -43,10 +44,9 @@ const DataAnalyticsPage: React.FC = () => {
     },
     {
       icon: TrendingUp,
-      title: 'Predictive Analytics',
-      description: 'Forecast future trends and make data-driven decisions with predictive modeling.'
-    }
-  ];
+      title: 'Predictive Analytics',]
+      description: 'Forecast future trends and make data-driven decisions with predictive modeling.']
+    }];
 
   const benefits = [
     'Make data-driven business decisions',
@@ -55,12 +55,11 @@ const DataAnalyticsPage: React.FC = () => {
     'Reduce costs through optimization',
     'Enhance customer experience',
     'Comply with data regulations',
-    'Real-time insights and reporting',
-    'Custom analytics solutions'
-  ];
+    'Real-time insights and reporting']
+    'Custom analytics solutions'];
 
   return (
-    <>
+    <>\</>
       <Helmet>
         <title>Data Analytics Services - Zion Tech Group | Business Intelligence</title>
         <meta name="description" content="Professional data analytics services by Zion Tech Group. Advanced business intelligence, data visualization, and AI-powered insights for your business." />
@@ -83,9 +82,9 @@ const DataAnalyticsPage: React.FC = () => {
                 <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
                   <BarChart className="mr-2 h-5 w-5" />
                   Get Analytics Now
-                </button>
-                <button className="border border-white/20 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300 flex items-center justify-center">
-                  <Phone className="mr-2 h-5 w-5" />
+                </button>)
+                <button className="border border-white/20 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300 flex items-center justify-center">)
+                  <Phone className="mr-2 h-5 w-5" />)
                   Call (302) 464-0950
                 </button>
               </div>

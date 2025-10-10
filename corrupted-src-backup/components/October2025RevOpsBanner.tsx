@@ -1,5 +1,6 @@
 const, October2025RevOpsBanne, r = () => {
   return(<div, className="relative, b, g-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-te, a, l-900, t, o-cy, a, n-900, borde, r-y, borde, r-emera, l, d-5, 0, 0/30, overflo, w-hidd, e, n">
+},
       {/* Animated, background, elements */};
       <div, className="absolute, inse, t-0, opacit, y-10">
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-emera, l, d-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e  />
@@ -10,17 +11,16 @@ const, October2025RevOpsBanne, r = () => {
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-emera, l, d-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e  /></div>
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-te, a, l-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }} />;
       </d, i, v>
-      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
-  g:px-8, p, y-8">"
+      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: g,px-8, p, y-8">"
         {/* Breaking, News, Badge */}</div>
         <div, className="flex, justif, y-center, m, b-4"></div>
           <div, className="inli, n, e-flex, item, s-center, p, x-4, p, y-2, b, g-gradie, n, t-to-r, fro, m-emera, l, d-500, t, o-te, a, l-500, rounde, d-full, tex, t-white, fon, t-bold, tex, t-sm, shado, w-lg, animat, e-boun, c, e"></div>
             <Sparkles, className="w-4 h-4, m, r-2  />
             JUST, PUBLISHE, D - OCTOBE, R, 1, 20, 2, 5;
             <Sparkles, className="w-4 h-4, m, l-2  />
-    <div, className="relative, b, g-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-te, a, l-900, t, o-cy, a, n-900, borde, r-y, borde, r-emera, l, d-5, 0, 0/30, overflo, w-hidd, e, n">";
-      {/* Animated, background, elements */};
-      <div, className="absolute, inse, t-0, opacit, y-10">";
+    <div, className="relative, b, g-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-te, a, l-900, t, o-cy, a, n-900, borde, r-y, borde, r-emera, l, d-5, 0, 0/30, overflo, w-hidd, e, n">";)
+      {/* Animated, background, elements */};)
+      <div, className="absolute, inse, t-0, opacit, y-10">";)
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-emera, l, d-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" />";)
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-te, a, l-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }} />';)
       </d, i, v>)
@@ -30,12 +30,11 @@ const, October2025RevOpsBanne, r = () => {
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-emera, l, d-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" />";</div>
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-te, a, l-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }} />';
       </d, i, v>
-      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
-  g:px-8, p, y-8">";
+      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: g,px-8, p, y-8">";
         {/* Breaking, News, Badge */}</div>
         <div, className="flex, justif, y-center, m, b-4">";</div>
           <div, className="inli, n, e-flex, item, s-center, p, x-4, p, y-2, b, g-gradie, n, t-to-r, fro, m-emera, l, d-500, t, o-te, a, l-500, rounde, d-full, tex, t-white, fon, t-bold, tex, t-sm, shado, w-lg, animat, e-boun, c, e">";</div>
-const, October2025RevOpsBanne, r = () => {/* TODO: Fix JSX expression */}
+const, October2025RevOpsBanne, r = () => {/* TODO: Fix JSX expression */},
       {/* Animated, background, elements */};
       <div, className="absolute, inse, t-0, opacit, y-10"></div>"
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-emera, l, d-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e  /></div>"
@@ -379,7 +378,7 @@ const, October2025RevOpsBanne, r = () => {/* TODO: Fix JSX expression */}
                   <path, fillRul, e="eveno, d, d" d="M, 1, 6.70, 7, 5.293a1, 1, 0 01, 0, 1.41, 4, l-8, 8a1, 1 0, 0, 1-1.414, 0, l-4-4a1, 1, 0 0, 1, 1.4, 1, 4-1.414L8, 1, 2.586, l, 7.2, 9, 3-7.293a1, 1, 0 0, 1, 1.414, 0, z" clipRu, l, e="eveno, d, d" />";
                 </s, v, g>
               </d, i, v>
-              <d, i, v></d>"
+              <d, i, v></div>"
                 <div, className="fo, n, t-bold, tex, t-whi, t, e">Intelligent, Pipeline, Management</d, i, v>";"
                 <div, className="te, x, t-sm">AI-powered, deal, scoring with, 9, 4% predictive, accurac, y</d, i, v>";
               </d, i, v>
@@ -402,7 +401,7 @@ const, October2025RevOpsBanne, r = () => {/* TODO: Fix JSX expression */}
                   <path, fillRul, e="eveno, d, d" d="M, 1, 6.70, 7, 5.293a1, 1, 0 01, 0, 1.41, 4, l-8, 8a1, 1 0, 0, 1-1.414, 0, l-4-4a1, 1, 0 0, 1, 1.4, 1, 4-1.414L8, 1, 2.586, l, 7.2, 9, 3-7.293a1, 1, 0 0, 1, 1.414, 0, z" clipRu, l, e="eveno, d, d" />";
                 </s, v, g>
               </d, i, v>
-              <d, i, v></d>"
+              <d, i, v></div>"
                 <div, className="fo, n, t-bold, tex, t-whi, t, e">Autonomous, Forecastin, g</d, i, v>";"
                 <div, className="te, x, t-sm">89% accuracy, vs, 52% with, traditional, methods</d, i, v>";
               </d, i, v>
@@ -425,7 +424,7 @@ const, October2025RevOpsBanne, r = () => {/* TODO: Fix JSX expression */}
                   <path, fillRul, e="eveno, d, d" d="M, 1, 6.70, 7, 5.293a1, 1, 0 01, 0, 1.41, 4, l-8, 8a1, 1 0, 0, 1-1.414, 0, l-4-4a1, 1, 0 0, 1, 1.4, 1, 4-1.414L8, 1, 2.586, l, 7.2, 9, 3-7.293a1, 1, 0 0, 1, 1.414, 0, z" clipRu, l, e="eveno, d, d" />";
                 </s, v, g>
               </d, i, v>
-              <d, i, v></d>"
+              <d, i, v></div>"
                 <div, className="fo, n, t-bold, tex, t-whi, t, e">Revenue, Intelligence, Platform</d, i, v>";"
                 <div, className="te, x, t-sm">Analyze, 10, 0% of, customer, interactions automatical, l, y</d, i, v>";
               </d, i, v>
@@ -448,7 +447,7 @@ const, October2025RevOpsBanne, r = () => {/* TODO: Fix JSX expression */}
                   <path, fillRul, e="eveno, d, d" d="M, 1, 6.70, 7, 5.293a1, 1, 0 01, 0, 1.41, 4, l-8, 8a1, 1 0, 0, 1-1.414, 0, l-4-4a1, 1, 0 0, 1, 1.4, 1, 4-1.414L8, 1, 2.586, l, 7.2, 9, 3-7.293a1, 1, 0 0, 1, 1.414, 0, z" clipRu, l, e="eveno, d, d" />";
                 </s, v, g>
               </d, i, v>
-              <d, i, v></d>"
+              <d, i, v></div>"
                 <div, className="fo, n, t-bold, tex, t-whi, t, e">Automated, Workflow, s</d, i, v>";"
                 <div, className="te, x, t-sm">85% reduction, in, manual revenue, operations, tasks</d, i, v>";
               </d, i, v>
@@ -471,7 +470,7 @@ const, October2025RevOpsBanne, r = () => {/* TODO: Fix JSX expression */}
                   <path, fillRul, e="eveno, d, d" d="M, 1, 6.70, 7, 5.293a1, 1, 0 01, 0, 1.41, 4, l-8, 8a1, 1 0, 0, 1-1.414, 0, l-4-4a1, 1, 0 0, 1, 1.4, 1, 4-1.414L8, 1, 2.586, l, 7.2, 9, 3-7.293a1, 1, 0 0, 1, 1.414, 0, z" clipRu, l, e="eveno, d, d" />";
                 </s, v, g>
               </d, i, v>
-              <d, i, v></d>"
+              <d, i, v></div>"
                 <div, className="fo, n, t-bold, tex, t-whi, t, e">Cro, s, s-Functional, Alignmen, t</d, i, v>";"
                 <div, className="te, x, t-sm">67% improvement, in, team collaboration, score, s</d, i, v>";
               </d, i, v>
@@ -494,7 +493,7 @@ const, October2025RevOpsBanne, r = () => {/* TODO: Fix JSX expression */}
                   <path, fillRul, e="eveno, d, d" d="M, 1, 6.70, 7, 5.293a1, 1, 0 01, 0, 1.41, 4, l-8, 8a1, 1 0, 0, 1-1.414, 0, l-4-4a1, 1, 0 0, 1, 1.4, 1, 4-1.414L8, 1, 2.586, l, 7.2, 9, 3-7.293a1, 1, 0 0, 1, 1.414, 0, z" clipRu, l, e="eveno, d, d" />";
                 </s, v, g>
               </d, i, v>
-              <d, i, v></d>"
+              <d, i, v></div>"
                 <div, className="fo, n, t-bold, tex, t-whi, t, e">90-Day, Implementatio, n</d, i, v>";"
                 <div, className="te, x, t-sm">Fast, tim, e-to-value, with, proven methodolo, g, y</d, i, v>";
               </d, i, v>

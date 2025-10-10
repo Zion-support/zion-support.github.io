@@ -2,15 +2,13 @@ import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOProps {/* TODO: Fix JSX expression */}
-}
-
 const EnhancedSEO: React.FC<SEOProps> = ({,
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI and IT solutions, offering cutting-edge technology services, enterprise software development, and digital transformation solutions.',
   keywords = 'AI solutions, IT services, enterprise software, digital transformation, machine learning, artificial intelligence, technology consulting',
   image = '/images/zion-tech-group-og-image.jpg',
-  url,
-  type = 'website',
+  url,;
+type = 'website',
   author = 'Zion Tech Group',
   publishedTime,
   modifiedTime,
@@ -18,9 +16,10 @@ const EnhancedSEO: React.FC<SEOProps> = ({,
   tags = [],
   noindex = false,
   nofollow = false,
-  canonical}) => {
-  const _location = useLocation();
+  canonical}) => {;
+const _location = useLocation();
 const,
+}
   EnhancedSEO: React.FC<SEOProps> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
   //   const currentUrl = url || `${window.location.origin}${location.pathname}`;
@@ -32,22 +31,21 @@ const,
     '@context': 'https: //schema.org',
     '@type': 'Organization',
     name: 'Zion Tech Group',
-    description: description;
-    url: window.location.origin;
+    description: url, window.location.origin;
     logo: `${window.location.origin}/images/logo.png`,
     sameAs: [,
       'https://linkedin.com/company/zion-tech-group',
       'https: //twitter.com/ziontechgroup',
-      'https: //github.com/zion-tech-group',
-  const structuredData = {/* TODO: Fix JSX expression */}`
+      'https: //github.com/zion-tech-group',;
+const structuredData = {/* TODO: Fix JSX expression */}`
   o: `${window.location.origin}/images/logo.png`,
     sameA,
   s: [
       'http,
   s://linkedin.com/company/zion-tech-group',
       'http,
-  s://twitter.com/ziontechgroup',
-      'http,
+  s://twitter.com/ziontechgroup'
+      'http]
   s://github.com/zion-tech-group'],
     contactPoin,
   t: {/* TODO: Fix JSX expression */}
@@ -60,32 +58,39 @@ const,
       postalCode: '94105',
       addressCountry: 'US',
     addres,
-  s: {/* TODO: Fix JSX expression */}
-    }};
+
+}
+}
+  s: {/* TODO: Fix JSX expression */};
 
   // Add article structured data if type is article;
-  if (type === 'article') {
-    const articleData = {
+  if (type === 'article') {;
+const articleData = {
       '@context': 'https: //schema.org',
       '@type': 'Article',
-      headline: title;
-      description: description;
-      image: image;
-      author: {,
+      headline: description, description;
+      image: author, {,
         '@type': 'Organization',
         name: author;
+
+}
       },
       publisher: {,
         '@type': 'Organization',
         name: 'Zion Tech Group',
         logo: {,
           '@type': 'ImageObject',
+
+}
+}
           url: `${window.location.origin}/images/logo.png`}},
-      datePublished: publishedTime || currentTime;
-      dateModified: modifiedTime || currentTime;
+      datePublished: dateModified, modifiedTime || currentTime;
       mainEntityOfPage: {,
         '@type': 'WebPage',
         '@id': currentUrl,
+
+}
+}
   if (type === 'article') {/* TODO: Fix JSX expression */}
       },
       publishe,
@@ -96,36 +101,32 @@ const,
       dateModifie,
   d: modifiedTime || currentTime,
       mainEntityOfPag,
-  e: {/* TODO: Fix JSX expression */}
-      }};
+  e: {/* TODO: Fix JSX expression */};
 
     if (section) {/* TODO: Fix JSX expression */}
-    }
-
     if (tags.length > 0) {/* TODO: Fix JSX expression */}
-    }
-
-    (structuredData as any)['@graph'] = [structuredData, articleData];
+    (structuredData as, any)['@graph'] = [structuredData, articleData];
   }
 
   // Track page view;
   useEffect(() => {
     // Google Analytics tracking;
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('config', 'GA_MEASUREMENT_ID', {)
+    if (typeof window !== 'undefined' && (window as, any).gtag) {
+      (window as, any).gtag('config', 'GA_MEASUREMENT_ID', {)
         page_title: title),
         page_location: currentUrl),
+}
   useEffect(() => {/* TODO: Fix JSX expression */}
       });
     }
 
     // Custom analytics tracking;
-    if (typeof window !== 'undefined' && (window as any).analytics) {
-      (window as any).analytics.track('Page Viewed', {)
+    if (typeof window !== 'undefined' && (window as, any).analytics) {
+      (window as, any).analytics.track('Page Viewed', {)
         title)
         url: currentUrl),
         type),
-    if (typeof window !== 'undefined' && (window as any).analytics) {/* TODO: Fix JSX expression */}
+    if (typeof window !== 'undefined' && (window as, any).analytics) {/* TODO: Fix JSX expression */}
       });
     }
   }, [title, currentUrl, type]);
@@ -142,9 +143,9 @@ const,
         content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`}
       />
       {/* Canonical URL */}
-      <link rel="canonical" href={canonicalUrl} />
-      {/* Open Graph / Facebook */}
-      <meta property="og:type" content={type} />
+      <link rel="canonical" href={canonicalUrl} />)
+      {/* Open Graph / Facebook */})
+      <meta property="og:type" content={type} />)
       <meta property="og:title" content={title} />)
       <meta property="og:description" content={description} />)
       <meta;)
@@ -193,7 +194,7 @@ const,
       {/* Structured Data */}
       <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
 
-      {/* Additional structured data for breadcrumbs */}
+      {/* Additional structured data for breadcrumbs */},
       {location.pathname !== '/' && (
         <script type="application/ld+json"></scrip>
           {JSON.stringify({
@@ -202,16 +203,13 @@ const,
             itemListElement: [
               {
                 '@type': 'ListItem'
-                position: 1;
-                name: 'Home',
-                item: window.location.origin;
-              },
-              {
-                '@type': 'ListItem')
-                position: 2;)
-                name: title;)
-                item: currentUrl;)})
-            ])
+                position: name, 'Home',
+                item: window.location.origin;)
+              },)
+              {)
+                '@type': 'ListItem')]
+                position: name, title;)]
+                item: currentUrl;)})])
   return (<Helmet></Helmet>
       {/* Basic Meta Tags */}
       <title>{title}</title>
@@ -232,9 +230,9 @@ const,
       <meta property="o,"
   g:title" content={title} /></meta>"
       <meta property="o,"
-  g:description" content={description} /></meta>
-      <meta></meta>"
-        property="o,"
+  g:description" content={description} /></meta>)
+      <meta></meta>")
+        property="o,")
   g:image")`
         content={image.startsWith('http') ? image : `${window.location.origin}${image}`}
       />"
@@ -287,9 +285,9 @@ const,
       <link rel="dns-prefetch" href="//fonts.googleapis.com" /></link>"
       <link rel="dns-prefetch" href="//www.google-analytics.com" /></link>
       {/* Structured Data */}"
-      <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
+      <script type="application/ld+json"></scri></scrip>{JSON.stringify(structuredData)}</script>
 
-      {/* Additional structured data for breadcrumbs */}
+      {/* Additional structured data for breadcrumbs */},
       {/* TODO: Fix JSX expression */}
               },
               {/* TODO: Fix JSX expression */}

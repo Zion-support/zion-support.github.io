@@ -3,7 +3,7 @@ impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
 
 export default function CognitiveSearchEnterprise20, 2, 5() { 
   return(:src/pages/blog/ai-2025-oct-cognitive-search-enterprise/page.tsx;
-    <>
+    <>\</>
       <Helm, e, t>
         <title>
           Cognitive, Enterprise, Search 20, 2, 5 — 97% Answer, Accurac, y, 12x, Faster, Discovery, $12, 4, M+ Productivity, Gain, s | Zion, Tech, Group;
@@ -28,8 +28,7 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
   content=" />
         <link rel="canonical", href="https: //ziontechgroup.com/blog/ai-2025-oct-cognitive-search-enterprise" />,
         <meta name="description",
-  content: "Transform enterprise knowledge discovery with AI-powered cognitive search. Achieve 97% answer accuracy, 12x faster information retrieval, and unlock $124M+ in productivity gains across your organization.", /><meta name: "keywords;
-  content: "cognitive search, enterprise search, AI search, semantic search, knowledge management, information retrieval, enterprise AI, vector search, RAG systems", /><link rel: "canonical", href="https: //ziontechgroup.com/blog/ai-2025-oct-cognitive-search-enterprise/>",
+  content: "Transform enterprise knowledge discovery with AI-powered cognitive search. Achieve 97% answer accuracy, 12x faster information retrieval, and unlock $124M+ in productivity gains across your organization.", /><meta name: content, "cognitive search, enterprise search, AI search, semantic search, knowledge management, information retrieval, enterprise AI, vector search, RAG systems", /><link rel: "canonical", href="https: //ziontechgroup.com/blog/ai-2025-oct-cognitive-search-enterprise/>",
   content: "cognitive search, enterprise search, AI search, semantic search, knowledge management, information retrieval, enterprise AI, vector search, RAG systems;
         />
         <link rel: "canonical", href ="https: //ziontechgroup.com/blog/ai-2025-oct-cognitive-search-enterprise" />,
@@ -181,9 +180,9 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
                 comprehensive, contex, t.
                 Start, Your, Knowledge Transformati, o, n;
                 Start, Your, Knowledge Transformati, o, n</p>
-                <Brain, classNam, e='ml-2 h-5 w-5' />
-                Start, Your, Knowledge Transformati, o, n;
-                <Brain, className='ml-2 h-5 w-5' />
+                <Brain, classNam, e='ml-2 h-5 w-5' />)
+                Start, Your, Knowledge Transformati, o, n;)
+                <Brain, className='ml-2 h-5 w-5' />)
               <ul className="space-y-4 text-lg">)
                 <li className="flex items-start gap-3">)
                   <Search className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />)

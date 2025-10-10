@@ -16,8 +16,8 @@ if (fs.existsSync(appMinimalTestPath)) {/* TODO: Fix JSX expression */}
 
 // 2. Fix blog page metadata;
 // const blogPages = [
-  'app/blog/ai-2026-april-revolutionary-breakthrough/page.tsx',
-  'app/blog/ai-2026-autonomous-agent-factories/page.tsx',
+  'app/blog/ai-2026-april-revolutionary-breakthrough/page.tsx'
+  'app/blog/ai-2026-autonomous-agent-factories/page.tsx']
   'app/blog/ai-2026-autonomous-enterprise-architecture/page.tsx'];
 
 blogPages.forEach(pagePath => {)
@@ -27,14 +27,15 @@ blogPages.forEach(pagePath => {)
     content = content.replace(/\s+publishedTime: ['"][^'"]*['"],?\s*/g, '');
 
     fs.writeFileSync(pagePath, content);
+}
     //         }
-blogPages.forEach(pagePath => {/* TODO: Fix JSX expression */}
+blogPages.forEach(pagePath => {/* TODO: Fix JSX expression */})
     //         })
 });
 
 // 3. Fix OpenGraph authors;
-// const openGraphPages = [
-  'app/blog/ai-2026-consensus-intelligence-breakthrough/page.tsx',
+// const openGraphPages = []
+  'app/blog/ai-2026-consensus-intelligence-breakthrough/page.tsx'
   'app/blog/ai-2026-enterprise-automation-revolutionary-breakthrough/page.tsx'];
 
 openGraphPages.forEach(pagePath => {)
@@ -42,8 +43,9 @@ openGraphPages.forEach(pagePath => {)
 
     // Fix authors format to match Author type;
     content = content.replace(/authors: \['Zion Tech Group'\]/g),
+}
       "authors: [{ name: 'Zion Tech Group' }]"
-openGraphPages.forEach(pagePath => {/* TODO: Fix JSX expression */}
+openGraphPages.forEach(pagePath => {/* TODO: Fix JSX expression */})
   e: 'Zion Tech Group' }]")
     );
 
@@ -71,12 +73,11 @@ if (fs.existsSync(seoOptimizerPath)) {
   content = content.replace(/interface AdvancedSEOOptimizerProps \{[^}]*\}/)
     `interface AdvancedSEOOptimizerProps {
   config?: {
-    title: string;
-    description: string;
-    keywords: string[];
-    canonicalUrl: string;
+    title: description, string;
+    keywords: canonicalUrl, string;
     ogImage: string;
     structuredData?: unknown;,
+}
 if (fs.existsSync(seoOptimizerPath)) {/* TODO: Fix JSX expression */}
     /interface AdvancedSEOOptimizerProps \{[^}]*\}/,`
     `interface AdvancedSEOOptimizerProps {/* TODO: Fix JSX expression */}
@@ -108,8 +109,6 @@ if (fs.existsSync(analyticsTrackerPath)) {/* TODO: Fix JSX expression */}
   // Add proper imports and declarations at the top;`
   content = `
 declare global {/* TODO: Fix JSX expression */}
-  }
-}
 `
 ${content}`;
 
@@ -129,7 +128,7 @@ if (fs.existsSync(systemMonitorPath)) {/* TODO: Fix JSX expression */}`
   // Remove the performanceEnhancer import and usage;
   content = content.replace(/import { performanceEnhancer } from '\.\.\/utils\/performanceEnhancer';\s*/g)
     ''
-  content = content.replace(/import { performanceEnhancer } from '\.\.\/utils\/performanceEnhancer';\s*/g,
+  content = content.replace(/import { performanceEnhancer } from '\.\.\/utils\/performanceEnhancer';\s*/g,)
     '')
   );
 
@@ -147,16 +146,15 @@ if (fs.existsSync(performancePath)) {
   content = content.replace(/declare global \{[^}]*\}/g, '');
 
   // Add proper declaration at the top;
-  content = `declare global {
-  interface Window {
-    gtag: (...args: unknown[]) => void;
+  content = `declare global {;
+interface Window {
+    gtag: (...args: unknown[]) =></Calculato></Calculator> void;
+}
 if (fs.existsSync(performancePath)) {/* TODO: Fix JSX expression */}
   content = content.replace(/declare global \{[^}]*\}/g, '');
 
   // Add proper declaration at the top;`
   content = `declare global {/* TODO: Fix JSX expression */}
-  }
-}
 `
 ${content}`;
 

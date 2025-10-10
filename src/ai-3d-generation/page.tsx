@@ -4,8 +4,8 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 
-const AI3DGenerationPage: React.FC = () => {
-  const features = [
+const AI3DGenerationPage: React.FC = () => {;
+const features = [
     '3D Model Generation',
     'Animation Creation',
     'Texture Mapping',
@@ -14,26 +14,24 @@ const AI3DGenerationPage: React.FC = () => {
     'Export Formats',
     'AI Texturing',
     'Lighting Setup',
-    'Material Library',
-    'Scene Composition'
-  ];
+    'Material Library']
+    'Scene Composition'];
 
   const benefits = [
     'Professional 3D content',
     'Time savings',
     'No 3D skills needed',
     'High quality output',
-    'Cost-effective',
-    'Scalable production'
-  ];
+    'Cost-effective']
+    'Scalable production'];
 
   const pricingPlans = [
     {
       name: 'Starter',
-      price: '$299',
-      period: '/month',
+      price: period, '/month']
       features: ['5 models/month', 'Basic textures', 'Standard quality', 'Email support'],
       popular: false
+}
     },
     {
       name: 'Professional',
@@ -52,7 +50,7 @@ const AI3DGenerationPage: React.FC = () => {
   ];
 
   return (
-    <>
+    <>\</>
       <SEOOptimizer
         title="AI 3D Generation Studio - Create 3D Models & Animations with AI | Zion Tech Group"
         description="Create professional 3D models, animations, and virtual environments with AI 3D Generation Studio. No 3D skills needed, starting at $299/month."
@@ -99,9 +97,9 @@ const AI3DGenerationPage: React.FC = () => {
           {/* Features Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-              AI 3D Generation Features
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              AI 3D Generation Features)
+            </h2>)
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">)
               {features.map((feature, index) => (
                 <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                   <div className="flex items-center mb-4">

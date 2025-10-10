@@ -2,12 +2,13 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { BarChart, TrendingUp, Users, DollarSign, Zap, Target, ArrowRight, CheckCircle, Star, Award, Clock, Shield } from 'lucide-react';
 
-const AIAnalyticsDashboardPage: React.FC = () => {
-  const features = [
+const AIAnalyticsDashboardPage: React.FC = () => {;
+const features = [
     {
       icon: BarChart,
       title: 'Real-time Analytics',
       description: 'Live data visualization with instant updates and interactive charts.'
+}
     },
     {
       icon: TrendingUp,
@@ -31,29 +32,26 @@ const AIAnalyticsDashboardPage: React.FC = () => {
     },
     {
       icon: Target,
-      title: 'Goal Tracking',
-      description: 'Monitor KPIs and business objectives with automated alerts.'
-    }
-  ];
+      title: 'Goal Tracking',]
+      description: 'Monitor KPIs and business objectives with automated alerts.']
+    }];
 
   const benefits = [
     'Real-time data visualization and reporting',
     'AI-powered predictive analytics',
     'Customizable dashboard widgets',
     'Automated report generation',
-    'Multi-platform data integration',
-    'Mobile-responsive design'
-  ];
+    'Multi-platform data integration']
+    'Mobile-responsive design'];
 
   const metrics = [
     { label: 'Data Sources', value: '50+', icon: BarChart },
     { label: 'Update Frequency', value: 'Real-time', icon: Clock },
-    { label: 'Accuracy Rate', value: '99.9%', icon: Shield },
-    { label: 'User Satisfaction', value: '4.9/5', icon: Star }
-  ];
+    { label: 'Accuracy Rate', value: '99.9%', icon: Shield },]
+      { label: 'User Satisfaction', value: '4.9/5', icon: Star }];
 
   return (
-    <>
+    <>\</>
       <Helmet>
         <title>AI Analytics Dashboard | Zion Tech Group - Real-time Business Intelligence</title>
         <meta name="description" content="Transform your data into actionable insights with our AI-powered analytics dashboard. Real-time visualization, predictive analytics, and custom reporting." />
@@ -98,9 +96,9 @@ const AIAnalyticsDashboardPage: React.FC = () => {
               <h2 className="text-4xl font-bold text-white mb-4">Powerful Analytics Features</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Everything you need to make data-driven decisions with confidence
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              </p>)
+            </div>)
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">)
               {features.map((feature, index) => (</div>
                 <div key={index} className="bg-slate-800/50 backdrop-blur-lg rounded-lg p-6 border border-slate-700/50 hover:border-cyan-400/50 transition-all group"></div>
                   <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform"></div>

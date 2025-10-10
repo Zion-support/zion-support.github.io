@@ -13,26 +13,28 @@ import {
   CheckCircle
 } from 'lucide-react';
 
-const ContactPage: React.FC = () => {
-  const [formData, setFormData] = useState({
+const ContactPage: React.FC = () => {;
+const [formData, setFormData] = useState({
     name: '',
     email: '',
     company: '',
 phone: '',
     service: '',
-    budget: '',
-    timeline: '',
-    message: ''
+    budget: '',)
+    timeline: '',)
+    message: '')
+}
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
-  const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
+  const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;
+}
+const { name, value } = e.target;
+    setFormData(prev => ({)
+      ...prev,)
+      [name]: value)
     }));
   }, []);
 
@@ -51,12 +53,16 @@ phone: '',
         company: '',
         phone: '',
         service: '',
-        budget: '',
-        timeline: '',
-        message: ''
-      });
+        budget: '',)
+        timeline: '',)
+        message: '')
+}
+  } catch (error) {
+    console.error("Error:", error);
+});
     } catch (error) {
       setSubmitStatus('error');
+}
     } finally {
       setIsSubmitting(false);
     }
@@ -70,9 +76,8 @@ phone: '',
     'Data Analytics',
     'Cybersecurity',
     'DevOps',
-    'Consulting',
-    'Other'
-  ];
+    'Consulting']
+    'Other'];
 
   const contactInfo = [
     {
@@ -96,13 +101,12 @@ phone: '',
     {
       icon: Clock,
       title: 'Business Hours',
-      details: 'Monday - Friday: 9:00 AM - 6:00 PM\nSaturday: 10:00 AM - 4:00 PM',
-      description: 'Eastern Time'
-    }
-  ];
+      details: 'Monday - Friday: 9:00 AM - 6:00 PM\nSaturday: 10:00 AM - 4:00 PM',]
+      description: 'Eastern Time']
+    }];
 
   return (
-    <>
+    <>\</>
       <Helmet>
         <title>Contact Us - Zion Tech Group | Get in Touch</title>
         <meta name="description" content="Get in touch with Zion Tech Group for AI and IT solutions. Contact us for consultations, support, or to discuss your project needs." />
@@ -134,12 +138,11 @@ phone: '',
               
               {submitStatus === 'success' && (
                 <div className="mb-6 p-4 bg-green-500/20 border border-green-500/50 rounded-lg flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-green-400" />
-                  <span className="text-green-400">Message sent successfully! We'll get back to you soon.</span>
-                </div>
-              )}
-
-              {submitStatus === 'error' && (
+                  <CheckCircle className="w-5 h-5 text-green-400" />)
+                  <span className="text-green-400">Message sent successfully! We'll get back to you soon.</span>)
+                </div>)
+              )},
+      {submitStatus === 'error' && (
                 <div className="mb-6 p-4 bg-red-500/20 border border-red-500/50 rounded-lg flex items-center gap-3">
                   <span className="text-red-400">Failed to send message. Please try again.</span>
                 </div>
@@ -266,12 +269,12 @@ phone: '',
                   className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
                 >
                   {isSubmitting ? (
-                    <>
+                    <>\</>
                       <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
                       <span>Sending...</span>
                     </>
                   ) : (
-                    <>
+                    <>\</>
                       <Send className="w-5 h-5" />
                       <span>Send Message</span>
                     </>

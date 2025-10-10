@@ -5,23 +5,25 @@ import { Phone, Mail, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const ContactPage: React.FC = () => {
-  const [formData, setFormData] = useState({
+const ContactPage: React.FC = () => {;
+const [formData, setFormData] = useState({
     name: '',
     email: '',
     company: '',
-    phone: '',
-    service: '',
-    message: ''
+    phone: '',)
+    service: '',)
+    message: '')
+}
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
   const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setFormData(prev => ({
-      ...prev,
-      [e.target.name]: e.target.value
+    setFormData(prev => ({)
+      ...prev,)
+      [e.target.name]: e.target.value)
+}
     }));
   }, []);
 
@@ -37,12 +39,16 @@ const ContactPage: React.FC = () => {
         name: '',
         email: '',
         company: '',
-        phone: '',
-        service: '',
-        message: ''
-      });
+        phone: '',)
+        service: '',)
+        message: '')
+}
+  } catch (error) {
+    console.error("Error:", error);
+});
     } catch (error) {
       setSubmitStatus('error');
+}
     } finally {
       setIsSubmitting(false);
     }
@@ -57,9 +63,9 @@ const ContactPage: React.FC = () => {
       </Helmet>
 
       <Navigation />
-      
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden">
+      )
+      {/* Hero Section */})
+      <section className="relative py-20 px-4 overflow-hidden">)
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
         <div className="relative max-w-7xl mx-auto text-center">
@@ -89,9 +95,8 @@ const ContactPage: React.FC = () => {
                   <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
                   <span className="text-green-400">Message sent successfully!</span>
                 </div>
-              )}
-
-              {submitStatus === 'error' && (
+              )},
+      {submitStatus === 'error' && (
                 <div className="mb-6 p-4 bg-red-500/20 border border-red-500/30 rounded-lg">
                   <span className="text-red-400">Failed to send message. Please try again.</span>
                 </div>
@@ -200,12 +205,12 @@ const ContactPage: React.FC = () => {
                   className="w-full bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 disabled:opacity-50 disabled:cursor-not-allowed text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 flex items-center justify-center"
                 >
                   {isSubmitting ? (
-                    <>
+                    <>\</>
                       <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
                       Sending...
                     </>
                   ) : (
-                    <>
+                    <>\</>
                       <Send className="w-5 h-5 mr-2" />
                       Send Message
                     </>

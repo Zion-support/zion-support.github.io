@@ -9,8 +9,8 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 
-const PartnersPage: React.FC = () => {
-  const partnerTypes = [
+const PartnersPage: React.FC = () => {;
+const partnerTypes = [
     {
       title: 'Technology Partners',
       description: 'Leading technology companies that provide the foundation for our solutions',
@@ -18,13 +18,14 @@ const PartnersPage: React.FC = () => {
       color: 'text-blue-400',
       bgColor: 'bg-blue-500/10',
       partners: [
-        { name: 'Microsoft', description: 'Azure Cloud Services & AI Platform', logo: '🏢' },
+},
+      { name: 'Microsoft', description: 'Azure Cloud Services & AI Platform', logo: '🏢' },
         { name: 'Amazon Web Services', description: 'Cloud Infrastructure & AI Services', logo: '☁️' },
         { name: 'Google Cloud', description: 'AI/ML Platform & Analytics', logo: '🔍' },
         { name: 'IBM', description: 'Watson AI & Enterprise Solutions', logo: '🤖' },
         { name: 'NVIDIA', description: 'GPU Computing & AI Hardware', logo: '🎮' },
-        { name: 'Intel', description: 'AI Processors & Edge Computing', logo: '💻' }
-      ]
+      { name: 'Intel', description: 'AI Processors & Edge Computing', logo: '💻' }]
+    ]
     },
       title: 'Solution Partners',
       description: 'Specialized solution providers that complement our offerings',
@@ -48,7 +49,6 @@ const PartnersPage: React.FC = () => {
         { name: 'Red Hat', description: 'Open Source Solutions & Support', logo: '🎩' },
         { name: 'Oracle', description: 'Database & Enterprise Applications', logo: '🗄️' },
         { name: 'SAP', description: 'Enterprise Resource Planning', logo: '📋' }
-    }
   ];
 
   const benefits = [
@@ -63,9 +63,8 @@ icon$5: Star,
       description:       ,
 icon$5: CheckCircle,
       title: 'Quality Assurance',
-      description: 'Rigorous partner certification and quality standards'
-
-  const partnershipTiers = [
+      description: 'Rigorous partner certification and quality standards';
+const partnershipTiers = [
       name: 'Strategic Partners',
       level: 'Platinum',
       description: 'Long-term strategic relationships with joint go-to-market initiatives',
@@ -73,9 +72,8 @@ icon$5: CheckCircle,
         'Joint marketing and sales initiatives',
         'Co-development of solutions',
         'Priority support and resources',
-        'Executive relationship management',
-        'Custom pricing and terms'
-      ],
+        'Executive relationship management']
+        'Custom pricing and terms'],
       color: 'text-yellow-400',
       bgColor:       ,
 namename: 'Solution Partners',
@@ -97,9 +95,8 @@ namename: 'Channel Partners',
         'Lead sharing and referrals',
         'Competitive margins'
       color: 'text-orange-400',
-      bgColor: 'bg-orange-500/10'
-
-  const partnerTypes = [];
+      bgColor: 'bg-orange-500/10';
+const partnerTypes = [];
   return (
     {// TODO: Add content;}
 
@@ -115,8 +112,8 @@ namename: 'Channel Partners',
       bgColo,
   r: 'bg-blue-500/10',
       partner,
-  s: [
-  // TOD,
+  s: []
+  // TOD
   O: Add items];
         {/* TODO: Fix JSX expression */}
   o: '' },
@@ -176,21 +173,20 @@ namename: 'Channel Partners',
   o: '🗄️' },
         {/* TODO: Fix JSX expression */}
   o: '📋' }
-    }
   ];
   const benefits = [
 
-icon: Globe,
-      title: 'Global Reach',
-      description: 'Access to worldwide markets and customers through our partner network',
-
+icon: Globe,)
+      title: 'Global Reach',)
+      description: 'Access to worldwide markets and customers through our partner network',;);
 const PagePage: React.FC = () => {
   return (
-    <>
+    <>\</>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16 pt-24">
-          {/* Header */}
+},
+      {/* Header */}
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
               Our Partners
@@ -200,9 +196,9 @@ const PagePage: React.FC = () => {
               that drive innovation and business success.
             </p>
           </div>
-
-          {/* Partner Types */}
-          <div className="mb-16">
+)
+          {/* Partner Types */})
+          <div className="mb-16">)
             {partnerTypes.map((type, index) => (
               <div key={index} className="mb-12">
                 <div className="flex items-center mb-8">
@@ -218,9 +214,8 @@ const PagePage: React.FC = () => {
                       <div className="text-3xl mb-3">{partner.logo}</div>
                       <h3 className="text-lg font-semibold text-white mb-2">{partner.name}</h3>
                       <p className="text-gray-300 text-sm">{partner.description}</p>
-                  ))}
-
-          {/* Partnership Benefits */}
+                  ))},
+      {/* Partnership Benefits */}
             <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
               Why Partner With Us?
             </h2>
@@ -314,8 +309,8 @@ const PagePage: React.FC = () => {
                       <div className="text-3xl mb-3">{partner.logo}</div>"
                       <h3 className="text-lg font-semibold text-white mb-2">{partner.name}</h3>"
                       <p className="text-gray-300 text-sm">{partner.description}</p>
-                  ))}
-          {/* Partnership Benefits */}"
+                  ))},
+      {/* Partnership Benefits */}"
             <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text"></h2>
 // Why Partner With Us?
             
@@ -394,5 +389,5 @@ const PagePage: React.FC = () => {
 
 
 export default PartnersPage;
-
-
+]
+]

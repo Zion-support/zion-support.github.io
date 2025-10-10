@@ -8,11 +8,12 @@ import { fileURLToPath } from 'url';
 function fixConsoleStatements(content) {
   // Replace console.log with proper logging in production;
   content = content.replace(/console\.(log|error|warn|info)\(/g, (match, method) => {
+}
     return `if (process.env.NODE_ENV === 'development') console.${method}(`;
   });
 
   // Add closing parenthesis for the if statement;
-  content = content.replace(
+  content = content.replace(;);
 function fixConsoleStatements(content) {/* TODO: Fix JSX expression */}
     return `if (process.env.NODE_ENV === 'development') console.${method}(`;)
   });
@@ -45,14 +46,12 @@ function fixFile(filePath) {
     if (!fs.existsSync(fullPath)) {
 
       return;
-function fixUnusedVariables(content) {/* TODO: Fix JSX expression */}
+} catch (error) {
+    console.error("Error:", error);
 }
-
+function fixUnusedVariables(content) {/* TODO: Fix JSX expression */}
 // Function to fix specific files;
 function fixFile(filePath) {/* TODO: Fix JSX expression */}
-    }
-
-
     // Apply fixes;
     content = fixConsoleStatements(content);
     content = fixUnusedVariables(content);
@@ -60,8 +59,6 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
     fs.writeFileSync(fullPath, content);
 
   } catch (error) {/* TODO: Fix JSX expression */}
-  }
-}
 
 // Files that need fixing;
 const filesToFix = [
@@ -88,8 +85,8 @@ const filesToFix = [
   'app/utils/errorHandler.tsx',
   'app/utils/errorHandlerEnhanced.ts',
   'app/utils/errorLogger.ts',
-  'app/utils/errorReporter.ts',
-  'app/utils/logger.ts',
+  'app/utils/errorReporter.ts'
+  'app/utils/logger.ts']
   'app/utils/monitoring.ts'];
 
 // Fix all files;

@@ -5,13 +5,13 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, Zap, Cpu, Globe, Shield, ArrowRight, Cloud, Database, Wifi, Server } from 'lucide-react';
 
-const EdgeComputingPage: React.FC = () => {
-  const features = [
+const EdgeComputingPage: React.FC = () => {;
+const features = [
     {
       icon: Cpu,
-      title: 'Edge Processing',
-      description: 'Process data locally at the edge for ultra-low latency and real-time responsiveness.',
+      title: description, 'Process data locally at the edge for ultra-low latency and real-time responsiveness.']
       benefits: ['Sub-millisecond latency', 'Real-time processing', 'Local data processing', 'Reduced bandwidth usage']
+}
     },
     {
       icon: Globe,
@@ -63,19 +63,17 @@ const EdgeComputingPage: React.FC = () => {
     },
     {
       icon: '📱',
-      title: 'Mobile Edge',
-      description: 'Mobile edge computing for 5G and mobile applications'
-    }
-  ];
+      title: 'Mobile Edge',]
+      description: 'Mobile edge computing for 5G and mobile applications']
+    }];
 
   const benefits = [
     'Ultra-Low Latency',
     'Reduced Bandwidth Costs',
     'Improved Reliability',
     'Enhanced Security',
-    'Real-time Processing',
-    'Global Scalability'
-  ];
+    'Real-time Processing']
+    'Global Scalability'];
 
   const useCases = [
     {
@@ -105,10 +103,9 @@ const EdgeComputingPage: React.FC = () => {
     },
     {
       title: 'Gaming',
-      description: 'Cloud gaming with minimal latency',
-      icon: '🎮'
-    }
-  ];
+      description: 'Cloud gaming with minimal latency',]
+      icon: '🎮']
+    }];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
@@ -119,9 +116,9 @@ const EdgeComputingPage: React.FC = () => {
       </Helmet>
       
       <Navigation />
-
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden">
+)
+      {/* Hero Section */})
+      <section className="relative py-20 px-4 overflow-hidden">)
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
         <div className="relative max-w-7xl mx-auto text-center">

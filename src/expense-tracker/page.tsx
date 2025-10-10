@@ -4,13 +4,14 @@ import {Receipt, TrendingUp, Shield, Zap, Brain, Target, CheckCircle, Star, Phon
 import { Link } from 'react-router-dom';
 
 
-const ExpenseTrackerPage: React.FC = () => {
-  const features = [
+const ExpenseTrackerPage: React.FC = () => {;
+const features = [
     {
       icon: Receipt,
       title: 'Smart Receipt Scanning',
       description: 'AI-powered receipt scanning that automatically extracts expense data, categorizes transactions, and creates detailed reports.',
       benefit:     ,
+}
 $4},
       icon: TrendingUp,
       title: 'Real-time Analytics',
@@ -31,9 +32,8 @@ iconicon: Target,
 iconicon: Shield,
       title: 'Compliance & Security',
       description: 'Ensure compliance with tax regulations and company policies with automated checks and audit trails.',
-      benefit:     ,
-$4}
-  ];
+      benefit:     ]
+$4}];
 
   const pricingPlans = [
       name: 'Personal',
@@ -45,11 +45,9 @@ $4}
         'Basic AI categorization',
         'Expense reports',
         'Mobile app access',
-        'Email support',
-        '1 year data retention'
-      ],
-      popular: false
-      name: 'Business',
+        'Email support']
+        '1 year data retention'],
+      popular: name, 'Business',
       price: '$29',
       description: 'Ideal for small businesses',
         'Up to 10 users',
@@ -60,8 +58,7 @@ $4}
         'API access',
         'Advanced reporting',
         '2 years data retention'
-      popular: true
-      name: 'Enterprise',
+      popular: name, 'Enterprise',
       price: '$99',
       description: 'For large organizations',
         'Unlimited users',
@@ -71,9 +68,8 @@ $4}
         'Dedicated support',
         'White-label options',
         'Unlimited data retention',
-        'Custom compliance rules'
-
-  const integrations = [
+        'Custom compliance rules';
+const integrations = [
     { name: 'QuickBooks', icon: '📊', description: 'Accounting software' },
     { name: 'Xero', icon: '💰', description: 'Cloud accounting' },
     { name: 'Sage', icon: '📈', description: 'Business management' },
@@ -88,8 +84,7 @@ $4}
       company: 'Small Business Owner',
       role: 'CEO',
       content: 'Expense Tracker saved me 10 hours per month on bookkeeping. The AI categorization is incredibly accurate.',
-      rating: 5
-      name: 'Sarah Williams',
+      rating: name, 'Sarah Williams',
       company: 'Marketing Agency',
       role: 'Finance Manager',
       content: 'Our expense processing time dropped from 2 days to 2 hours. The automated workflows are game-changing.',
@@ -119,9 +114,9 @@ $4}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="tel:+13024640950"
-              className="bg-gradient-to-r from-cyan-400 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-purple-600 transition-all duration-300 flex items-center"
-            >
-              <Phone className="w-5 h-5 mr-2" />
+              className="bg-gradient-to-r from-cyan-400 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-purple-600 transition-all duration-300 flex items-center")
+            >)
+              <Phone className="w-5 h-5 mr-2" />)
               Call: (302) 464-0950
             </a>
             <Link 
@@ -204,9 +199,9 @@ $4}
         {/* Testimonials */}
             What Our Customers Say
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
-                <div className="flex items-center mb-4">
+            {testimonials.map((testimonial, index) => (]
+              <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">]
+                <div className="flex items-center mb-4">]
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                 <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
@@ -225,10 +220,11 @@ $4}
 
 
 import { Link } from 'react-router-dom';
-const ExpenseTrackerPage: React.FC = () => {
-  const features = [];
+const ExpenseTrackerPage: React.FC = () => {;
+const features = [];
   return (
-    {// TODO: Add content;}
+},
+      {// TODO: Add content;}
 
 };
   ico,
@@ -248,9 +244,9 @@ const ExpenseTrackerPage: React.FC = () => {
 
 
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
-
+import Footer from '../components/Footer';)
+)
+);
 const PagePage: React.FC = () => {
   return (
     
@@ -259,13 +255,14 @@ const PagePage: React.FC = () => {
           
           
           
-          
-          
-          <div>Coming Soon</div>
+          )
+          )
+          <div>Coming Soon</div>)
   )
     
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
 
+},
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-16 pt-24"></section>"
         <div className="text-center mb-16"></div>"
@@ -402,14 +399,14 @@ Most Popular;
                   {[...Array(testimonial.rating)].map((_, i) => ()}"
           <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" /></Star>"
                 <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
-                <div></div>"
-                  <div className="font-semibold text-white">{testimonial.name}</div>"
-                  <div className="text-cyan-400 text-sm">{testimonial.role}</div>"
-                  <div className="text-gray-400 text-sm">{testimonial.company}</div>
+                <div></div></div></div>"
+                  <div className="font-semibold text-white"></div></div>{testimonial.name}</div>"
+                  <div className="text-cyan-400 text-sm"></div></div>{testimonial.role}</div>"
+                  <div className="text-gray-400 text-sm"></div></div>{testimonial.company}</div>
 {/* CTA Section */}"
-        <section className="text-center bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-lg p-12 border border-cyan-500/20"></section>"
+        <section className="text-center bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-lg p-12 border border-cyan-500/20"></secti></sectio></section>"
           <h2 className="text-3xl,"
-  md:text-4xl font-bold text-white mb-6"></h2>
+  md:text-4xl font-bold text-white mb-6"></h></h2>
             Ready to Master Your Expenses?"
           <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto"></p>
             Join thousands of businesses using AI Expense Tracker to streamline financial;

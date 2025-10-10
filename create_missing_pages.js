@@ -503,9 +503,10 @@ const pageConfigs = {
 };
 
 // Create missing pages;
-missingPages.forEach(pageName => {)
-  const config = pageConfigs[pageName];)
+missingPages.forEach(pageName => {);
+const config = pageConfigs[pageName];)
   if (!config) {
+}
     console.log(`No configuration found for ${pageName}`);
     return;
   }
@@ -520,9 +521,10 @@ import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain,
 const ${pageName.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join('')}Page: React.FC = () => {,
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">)
       <SEOOptimizer;),
+}
         title="${config.title} - Zion Tech Group"
         description="${config.description}"
-        keywords={${JSON.stringify(config.keywords)}}
+        keywords={${JSON.stringify(config.keywords)}
         canonicalUrl="https://ziontechgroup.com/${pageName}"
       />
       <Navigation />

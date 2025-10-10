@@ -4,8 +4,8 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 
-const AIFitnessCoachPage: React.FC = () => {
-  const features = [
+const AIFitnessCoachPage: React.FC = () => {;
+const features = [
     'Personalized Plans',
     'Progress Tracking',
     'Nutrition Analysis',
@@ -14,26 +14,24 @@ const AIFitnessCoachPage: React.FC = () => {
     'Goal Setting',
     'Real-time Feedback',
     'Exercise Library',
-    'Meal Planning',
-    'Wearable Integration'
-  ];
+    'Meal Planning']
+    'Wearable Integration'];
 
   const benefits = [
     'Better results',
     '24/7 guidance',
     'Personalized approach',
     'Health insights',
-    'Motivation support',
-    'Cost-effective'
-  ];
+    'Motivation support']
+    'Cost-effective'];
 
   const pricingPlans = [
     {
       name: 'Basic',
-      price: '$99',
-      period: '/month',
+      price: period, '/month']
       features: ['Basic plans', 'Progress tracking', 'Email support', 'Mobile app'],
       popular: false
+}
     },
     {
       name: 'Premium',
@@ -52,7 +50,7 @@ const AIFitnessCoachPage: React.FC = () => {
   ];
 
   return (
-    <>
+    <>\</>
       <SEOOptimizer
         title="AI Fitness Coach - Personalized Fitness & Nutrition Plans | Zion Tech Group"
         description="Get personalized fitness and nutrition plans powered by AI analysis. Track progress, get 24/7 guidance, and achieve your health goals starting at $99/month."
@@ -99,9 +97,9 @@ const AIFitnessCoachPage: React.FC = () => {
           {/* Features Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-              AI Fitness Features
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              AI Fitness Features)
+            </h2>)
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">)
               {features.map((feature, index) => (
                 <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                   <div className="flex items-center mb-4">

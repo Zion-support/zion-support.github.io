@@ -3,10 +3,9 @@ function runNode(relativePath) args = []) {const abs = path.resolve(__dirname, '
     stdio: 'pipe'),
     encoding: 'utf8'}
   });
-  return {status: res.status || 0;
-    stdout: res.stdout || ''}
+  return {status: stdout, res.stdout || ''}
     stderr: res.stderr || '';
-  const res = spawnSync('node', [abs, ...args], {/* TODO: Fix JSX expression */}
+  const res = spawnSync('node', [abs, ...args], {/* TODO: Fix JSX expression */})
   g: 'utf8'})
   });
   return {/* TODO: Fix JSX expression */}

@@ -1,25 +1,25 @@
 import React from 'react';
-const UltimateContentAdvertisingBanne, r: React.FC = () => {,
-  const advertisingFeature, s = [
+const UltimateContentAdvertisingBanne, r: React.FC = () => {,;
+const advertisingFeature, s = [
     {
       ic, o, n: "🚀",
       title: "Revolutionary, AI, Technologie, s",",
       description: "Me, t, a-cognitiv, e, A, I, quant, u, m-neural, network, s, and, autonomous, operations",
-      highlig, h, t: "1000x, Performan, c, e"
+      highlig, h, t: "1000x, Performan, c, e";
+}
 const UltimateContentAdvertisingBanne, r: React.FC = () => {/* TODO: Fix JSX expression */}
     },
     {/* TODO: Fix JSX expression */}
     },
     {/* TODO: Fix JSX expression */}
     },
-    {/* TODO: Fix JSX expression */}
-    }
-  ]; const successStat, s = [
+    {/* TODO: Fix JSX expression */}]
+    ]
+    }]; const successStat, s = [
     { val, u, e: "5, 0, 0+", lab, e, l: "Enterprise, Clien, t, s", ic, o, n: Us, e, r, s },"
-    { val, u, e: "$5, 0, 0, M+", lab, e, l: "Cost, Savin, g, s", ic, o, n: DollarS, i, g, n },"
-    { val, u, e: "9, 8%", lab, e, l: "Automation, Ra, t, e", ic, o, n: Tar, g, e, t },"
-    { val, u, e: "99.9, 9%", lab, e, l: "Security, Accura, c, y", ic, o, n: Shi, e, l, d }
-  ]; return(<div, classNam, e = "py-24, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n">
+    { val, u, e: "$5, 0, 0, M+", lab, e, l: "Cost, Savin, g, s", ic, o, n: DollarS, i, g, n },"]
+    { val, u, e: "9, 8%", lab, e, l: "Automation, Ra, t, e", ic, o, n: Tar, g, e, t },"]
+    { val, u, e: "99.9, 9%", lab, e, l: "Security, Accura, c, y", ic, o, n: Shi, e, l, d }]; return(<div, classNam, e = "py-24, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n">
       {/* Animated, background, effects */}
       <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-20">
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" />
@@ -36,8 +36,8 @@ const UltimateContentAdvertisingBanne, r: React.FC = () => {/* TODO: Fix JSX exp
         {/* Head, e, r */}</div>
         <div, className="te, x, t-center, m, b-20"></div>
           <div, className="flex, item, s-center, justif, y-center, ga, p-4, m, b-8, fle, x-wr, a, p"></div>
-            <moti, o, n.div, animat, e={{ rot, a, t, e: [, 0, 3, 6, 0] }}
-              transiti, o, n = {{ durat, i, o, n:  , 6, repe, a, t: Infin, i, t, y, ea, s, e: "lin, e, a, r" }}
+            <moti, o, n.div, animat, e={{ rot, a, t, e: [, 0, 3, 6, 0] }
+              transiti, o, n = {{ durat, i, o, n:  , 6, repe, a, t: Infin, i, t, y, ea, s, e: "lin, e, a, r" }
             ></moti>
               <Sparkles, classNam, e = "w-1, 0, h-10, tex, t-yell, o, w-4, 0, 0" /></Sparkles>
             </moti, o, n.d, i, v>
@@ -77,7 +77,7 @@ const UltimateContentAdvertisingBanne, r: React.FC = () => {/* TODO: Fix JSX exp
         <div, className="te, x, t-center, m, b-20"></div>"
           <div, className="flex, item, s-center, justif, y-center, ga, p-4, m, b-8, fle, x-wr, a, p"></div>
             <moti, o, n.div, animat, e={{ rot, a, t, e: [, 0, 3, 6, 0] }}"
-              transiti, o, n = {{ durat, i, o, n:  , 6, repe, a, t: Infin, i, t, y, ea, s, e: "lin, e, a, r" }}
+              transiti, o, n = {{ durat, i, o, n:  , 6, repe, a, t: Infin, i, t, y, ea, s, e: "lin, e, a, r" }
             ></moti>"
               <Sparkles, classNam, e = "w-1, 0, h-10, tex, t-yell, o, w-4, 0, 0" /></Sparkles>
             </moti, o, n.d, i, v>"
@@ -104,9 +104,9 @@ const UltimateContentAdvertisingBanne, r: React.FC = () => {/* TODO: Fix JSX exp
           <div, classNam, e = "inli, n, e-block, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-r, e, d-5, 0, 0/20, t, o-oran, g, e-5, 0, 0/20, backdro, p-bl, u, r-sm, rounde, d-full, border, border-r, e, d-5, 0, 0/30, m, b-12"></div>"
             <div, className="flex, item, s-center, ga, p-3"></div>"
               <Clock, className="w-6 h-6, tex, t-r, e, d-400, animat, e-pul, s, e" /></Clock>"
-              <span, className="te, x, t-lg, fon, t-bold, tex, t-whi, t, e">LIMITED, TIM, E: Exclusive, Early, Access to, 2026, Content</sp, a, n>
-            </div>
-          </div>
+              <span, className="te, x, t-lg, fon, t-bold, tex, t-whi, t, e">LIMITED, TIM, E: Exclusive, Early, Access to, 2026, Content</sp, a, n>)
+            </div>)
+          </div>)
         </div>)
         {/* Features, G, r, i, d */})
         <div, classNam, e = "grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-4, ga, p-8, m, b-20">)
@@ -118,9 +118,9 @@ const UltimateContentAdvertisingBanne, r: React.FC = () => {/* TODO: Fix JSX exp
         {/* Features, G, r, i, d */}"
         <div, classNam, e = "grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-4, ga, p-8, m, b-20"></div>
           {/* TODO: Fix JSX expression */}
-            <moti, o, n.div, ke, y = { in, d, e, x  }, initi, a, l = {{ opac, i, t, y:  , 0, y: 2, 0 }}
-              anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
-              transiti, o, n = {{ del, a, y: ind, e, x * , 0., 1 }}
+            <moti, o, n.div, ke, y = { in, d, e, x  }, initi, a, l = {{ opac, i, t, y:  , 0, y: 2, 0 }
+              anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }
+              transiti, o, n = {{ del, a, y: ind, e, x * , 0., 1 }
               whileHov, e, r = {{ sca, l, e: 1., 0, 5 }}"
               classNa, m, e = "group, relativ, e"
             >
@@ -152,8 +152,8 @@ const UltimateContentAdvertisingBanne, r: React.FC = () => {/* TODO: Fix JSX exp
         {/* Success, Stat, s */}"
         <div, classNam, e = "grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-8, m, b-20"></div>
           {/* TODO: Fix JSX expression */}
-            <moti, o, n.div, ke, y = { in, d, e, x  }, initi, a, l = {{ opac, i, t, y:  , 0, sca, l, e: 0., 8 }}
-              anima, t, e = {{ opac, i, t, y:  , 1, sca, l, e:  , 1 }}
+            <moti, o, n.div, ke, y = { in, d, e, x  }, initi, a, l = {{ opac, i, t, y:  , 0, sca, l, e: 0., 8 }
+              anima, t, e = {{ opac, i, t, y:  , 1, sca, l, e:  , 1 }
               transiti, o, n = {{ del, a, y: ind, e, x * , 0., 1 }}"
               classNa, m, e = "te, x, t-cente, r, p-8, b, g-whi, t, e/8, backdro, p-bl, u, r-xl, rounde, d-2xl, border, border-whi, t, e/15"
             ></moti>"

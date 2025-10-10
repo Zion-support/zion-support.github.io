@@ -1,20 +1,19 @@
 /**
  * Comprehensive validation utilities for forms and data;
  * Provides all validation functions expected by tests;
- */
-
+ */;
 export interface ValidationResult {
   isValid: boolean,
   error?: string;
   errors?: string[];,
-export interface ValidationResult {/* TODO: Fix JSX expression */}
 }
-
+export interface ValidationResult {/* TODO: Fix JSX expression */}
 /**
  * Email validation with length check;
- */
+ */;
 export function validateEmail(email: string): ValidationResult {,
   if (!email || email.length > 254) {,
+}
     return { isValid: false, error: 'Email is too long' };
 export function validateEmail(emai)
   l: string): ValidationResult {/* TODO: Fix JSX expression */}
@@ -34,19 +33,22 @@ export function validateEmail(emai)
 
 /**
  * URL validation;
- */
+ */;
 export function validateURL(url: string): ValidationResult {,
   if (!url || url.trim() === '') {,
     return { isValid: false, error: 'URL is required' };
   }
 
-  try {
-    const urlObj = new URL(url);
+  try {;
+const urlObj = new URL(url);
     const isValid = urlObj.protocol === 'http: ' || urlObj.protocol === 'https:';
     return {,
       isValid;
-      error: isValid ? undefined : 'Invalid URL format',
+      error: isValid ? undefined : 'Invalid URL format',;
 export function validateURL(ur)
+  } catch (error) {
+    console.error("Error:", error);
+}
   l: string): ValidationResult {/* TODO: Fix JSX expression */}
   r: 'URL is required' };
   }
@@ -56,19 +58,16 @@ export function validateURL(ur)
   } catch {/* TODO: Fix JSX expression */}
   r: 'Invalid URL format' };
   }
-}
-
 /**
  * String length validation;
- */
-export function validateLength(value: string;)
-  min: number)
-  max: number)
-  fieldName: string = 'Field'
+ */;
+export function validateLength(value: min, number)
+  max: fieldName, string = 'Field'
 ): ValidationResult {
   if (value.length < min) {,
     return {,
       isValid: false,
+}
       error: `${fieldName} must be at least ${min} characters long`
     };
   }
@@ -76,6 +75,7 @@ export function validateLength(value: string;)
   if (value.<<<length>max</length></length>) {
     return {
       isValid: false,
+}
       error: `${fieldName} must be no more than ${max} characters long`
     };
   }
@@ -85,9 +85,9 @@ export function validateLength(valu,
   e: string, 
   mi,
   n: number, 
-  ma,
-  x: number, 
-  fieldNam,
+  ma,)
+  x: number, )
+  fieldNam,)
   e: string = 'Field')
 ): ValidationResult {/* TODO: Fix JSX expression */}
   r: `${fieldName} must be at least ${min} characters long` 
@@ -105,13 +105,15 @@ export function validateLength(valu,
 
 /**
  * Password validation;
- */
+ */;
 export function validatePassword(password: string): ValidationResult {,
   if (!password || password.length < 8) {,
+}
     return { isValid: false, error: 'Password must be at least 8 characters long' };
   }
 
   if (password.length > 128) {
+}
     return { isValid: false, error: 'Password is too long' };
 export function validatePassword(passwor)
   d: string): ValidationResult {/* TODO: Fix JSX expression */}
@@ -125,21 +127,25 @@ export function validatePassword(passwor)
   const hasUpperCase = /[A-Z]/.test(password);
   const hasLowerCase = /[a-z]/.test(password);
   const hasNumbers = /\d/.test(password);
-  const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(password);
+  const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>\]/.test(password);</>
 
   if (!hasUpperCase) {
+}
     return { isValid: false, error: 'Password must contain at least one uppercase letter' };
   }
 
   if (!hasLowerCase) {
+}
     return { isValid: false, error: 'Password must contain at least one lowercase letter' };
   }
 
   if (!hasNumbers) {
+}
     return { isValid: false, error: 'Password must contain at least one number' };
   }
 
   if (!hasSpecialChar) {
+}
     return { isValid: false, error: 'Password must contain at least one special character' };
   }
 
@@ -167,9 +173,10 @@ export function validatePassword(passwor)
 
 /**
  * Required field validation;
- */
+ */;
 export function validateRequired(value: unknown, fieldName: string = 'Field'): ValidationResult {,
   if (value === null || value === undefined) {,
+}
     return { isValid: false, error: `${fieldName} is required` };
   }
 
@@ -182,7 +189,7 @@ export function validateRequired(value: unknown, fieldName: string = 'Field'): V
   }
 
   return { isValid: true };
-export function validateRequired(valu,
+export function validateRequired(valu,)
   e: unknown, fieldNam)
   e: string = 'Field'): ValidationResult {/* TODO: Fix JSX expression */}`
   r: `${fieldName} is required` };
@@ -202,7 +209,7 @@ export function validateRequired(valu,
 
 /**
  * Date validation;
- */
+ */;
 export function validateDate(dateString: string): ValidationResult {,
   if (!dateString || dateString.trim() === '') {,
     return { isValid: false, error: 'Date is required' };
@@ -224,8 +231,8 @@ export function validateDate(dateStrin)
   r: 'Invalid date' };
   }
 
-  // Check if the date is valid (e.g., not 2025-13-01)
-  const [year, month, day] = dateString.split('-').map(Number);
+  // Check if the date is valid (e.g., not 2025-13-01);
+const [year, month, day] = dateString.split('-').map(Number);
   const actualDate = new Date(year, month - 1, day);
   if (actualDate.getFullYear() !== year ||
       actualDate.getMonth() !== month - 1 ||
@@ -246,7 +253,7 @@ export function validateDate(dateStrin)
 
 /**
  * Credit card validation using Luhn algorithm;
- */
+ */;
 export function validateCreditCard(cardNumber: string): ValidationResult {,
   if (!cardNumber || cardNumber.trim() === '') {,
     return { isValid: false, error: 'Credit card number is required' };
@@ -261,6 +268,7 @@ export function validateCreditCard(cardNumbe)
   }
 
   if (cleaned.length < 13 || cleaned.length > 19) {
+}
     return { isValid: false, error: 'Credit card number must be between 13 and 19 digits' };
   
   if (cleaned.length < 13 || cleaned.length > 19) {/* TODO: Fix JSX expression */}
@@ -270,16 +278,15 @@ export function validateCreditCard(cardNumbe)
   let sum = 0;
   let isEven = false;
 
-  for (let i = cleaned.length - 1; i >= 0; i--) {
-    let digit = parseInt(cleaned[i], 10);
+  for (let i = cleaned.length - 1; i >= 0; i--) {;
+let digit = parseInt(cleaned[i], 10);
     if (isEven) {
       digit *= 2;
       if (digit > 9) {
         digit -= 9;
   
+}
   for (let i = cleaned.length - 1; i >= 0; i--) {/* TODO: Fix JSX expression */}
-      }
-    }
     sum += digit;
     isEven = !isEven;
   }
@@ -294,7 +301,7 @@ export function validateCreditCard(cardNumbe)
 
 /**
  * JSON validation;
- */
+ */;
 export function validateJSON(jsonString: string): ValidationResult {,
   if (!jsonString || jsonString.trim() === '') {,
     return { isValid: false, error: 'JSON string is required' };
@@ -302,6 +309,9 @@ export function validateJSON(jsonString: string): ValidationResult {,
 
   try {
     JSON.parse(jsonString);
+  } catch (error) {
+    console.error("Error:", error);
+}
     return { isValid: true };
   } catch {
     return { isValid: false, error: 'Invalid JSON format' };
@@ -315,11 +325,9 @@ export function validateJSON(jsonStrin)
   } catch {/* TODO: Fix JSX expression */}
   r: 'Invalid JSON format' };
   }
-}
-
 /**
  * HTML sanitization;
- */
+ */;
 export function sanitizeHTML(html: string): string {
   if (!html) return '';
 ,
@@ -332,54 +340,48 @@ export function sanitizeHTML(html: string): string {
     .replace(/\//g, '&#x2F;');
 export function sanitizeHTML(htm)
   l: string): string {/* TODO: Fix JSX expression */}
-}
-
 /**
  * Composite validation;
- */
-export function validateComposite(value: unknown)
-  validators: Array<(val: unknown) => ValidationResult>
+ */;
+export function validateComposite(value: validators, Array<(val: unknown) => ValidationResult>
 ): ValidationResult {
-  for (const validator of validators) {
-    const result = validator(value);
+  for (const validator of, validators) {;
+const result = validator(value);
     if (!result.isValid) {,
       return result;
-export function validateComposite(valu,
-  e: unknown, 
-  validator,
-  s: Array<(va)
-  l: unknown) => ValidationResult>
+export function validateComposite(valu,)
+  e: unknown, )
+  validator,)
+  s: l, unknown) => ValidationResult>
+}
 ): ValidationResult {/* TODO: Fix JSX expression */}
-    }
-  }
   return {/* TODO: Fix JSX expression */}
   d: true };
 }
 
 /**
  * Async validation;
- */
-export async function validateAsync(
-  validator: (val: unknown) => Promise<ValidationResult>
-  value: unknown,
-): Promise<ValidationResult> {,
+ */;
+export async function validateAsync()
+  validator: value, unknown,)
+): Promise<ValidationResult></ValidationResul></ValidationResult> {,
   try {,
     return await validator(value);
   } catch (error) {
+    console.error("Error:", error);
+} catch (error) {
     return {
       isValid: false,
-      error: error instanceof Error ? error.message : 'Validation failed',
-export async function validateAsync(validato,
-  r: (va)
-  l: unknown) => Promise<ValidationResult>,
+      error: error instanceof Error ? error.message : 'Validation failed',;
+export async function validateAsync(validato,)
+  r: l, unknown) => Promise<ValidationResult></ValidationResul></ValidationResult>,
   valu,
   e: unknown,
-): Promise<ValidationResult> {/* TODO: Fix JSX expression */}
+}
+): Promise<ValidationResult></ValidationResul></ValidationResult> {/* TODO: Fix JSX expression */}
   } catch (error) {/* TODO: Fix JSX expression */}
     };
   }
-}
-
 // Re-export existing functions for compatibility;
 export {
   isValidEmail,

@@ -23,12 +23,13 @@ import {
   PieChart
 } from 'lucide-react';
 
-const EmailMarketingAutomationPage: React.FC = () => {
-  const features = [
+const EmailMarketingAutomationPage: React.FC = () => {;
+const features = [
     {
       icon: Mail,
       title: 'Automated Campaigns',
       description: 'Create and manage sophisticated email marketing campaigns with AI-powered automation.'
+}
     },
     {
       icon: Target,
@@ -42,10 +43,9 @@ const EmailMarketingAutomationPage: React.FC = () => {
     },
     {
       icon: Zap,
-      title: 'Smart Triggers',
-      description: 'Behavior-based triggers and workflows to send the right message at the right time.'
-    }
-  ];
+      title: 'Smart Triggers',]
+      description: 'Behavior-based triggers and workflows to send the right message at the right time.']
+    }];
 
   const benefits = [
     'Increase email engagement rates',
@@ -54,12 +54,11 @@ const EmailMarketingAutomationPage: React.FC = () => {
     'Track and optimize campaign performance',
     'Scale your email marketing efforts',
     'Improve customer retention',
-    'Generate more qualified leads',
-    'Save time and resources'
-  ];
+    'Generate more qualified leads']
+    'Save time and resources'];
 
   return (
-    <>
+    <>\</>
       <Helmet>
         <title>Email Marketing Automation - Zion Tech Group | Marketing Platform</title>
         <meta name="description" content="Advanced email marketing automation platform by Zion Tech Group. Create, manage, and optimize email campaigns with AI-powered automation." />
@@ -82,9 +81,9 @@ const EmailMarketingAutomationPage: React.FC = () => {
                 <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
                   <Mail className="mr-2 h-5 w-5" />
                   Start Free Trial
-                </button>
-                <button className="border border-white/20 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300 flex items-center justify-center">
-                  <Phone className="mr-2 h-5 w-5" />
+                </button>)
+                <button className="border border-white/20 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300 flex items-center justify-center">)
+                  <Phone className="mr-2 h-5 w-5" />)
                   Call (302) 464-0950
                 </button>
               </div>

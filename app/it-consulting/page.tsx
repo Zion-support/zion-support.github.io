@@ -75,8 +75,8 @@ import {
   Webcam as WebcamIcon, Speaker as SpeakerIcon
 } from 'lucide-react';
 
-const ITConsultingPage: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all');
+const ITConsultingPage: React.FC = () => {;
+const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
 
   const itServices = [
@@ -95,16 +95,14 @@ const ITConsultingPage: React.FC = () => {
         'Backup and disaster recovery setup',
         'Security infrastructure deployment',
         'Monitoring and management tools',
-        'Documentation and training',
-        'Ongoing support and maintenance'
-      ],
+        'Documentation and training']
+        'Ongoing support and maintenance'],
       benefits: [
         'Scalable and reliable infrastructure',
         'Improved system performance',
         'Enhanced security posture',
-        'Reduced downtime and outages',
-        'Future-proof technology stack'
-      ],
+        'Reduced downtime and outages']
+        'Future-proof technology stack'],
       targetAudience: 'Small to large businesses, Startups, Enterprises',
       setupTime: '2-8 weeks',
       freeConsultation: 'Yes',
@@ -112,6 +110,7 @@ const ITConsultingPage: React.FC = () => {
       certifications: ['Cisco', 'Microsoft', 'VMware', 'AWS', 'Azure'],
       link: 'https://ziontechgroup.com/it-infrastructure-design',
       caseStudy: 'Manufacturing company reduced IT downtime by 95% with our infrastructure design'
+}
     },
     {
       id: 'cloud-migration-services',
@@ -127,16 +126,14 @@ const ITConsultingPage: React.FC = () => {
         'Cloud security implementation',
         'Cost optimization analysis',
         'Performance tuning',
-        'Disaster recovery setup',
-        'Training and documentation'
-      ],
+        'Disaster recovery setup']
+        'Training and documentation'],
       benefits: [
         'Reduce IT costs by 30-50%',
         'Improve scalability and flexibility',
         'Enhanced security and compliance',
-        'Better disaster recovery capabilities',
-        'Access to latest technologies'
-      ],
+        'Better disaster recovery capabilities']
+        'Access to latest technologies'],
       targetAudience: 'Businesses looking to modernize IT infrastructure',
       setupTime: '1-6 weeks',
       freeConsultation: 'Yes',
@@ -159,16 +156,14 @@ const ITConsultingPage: React.FC = () => {
         'Firewall and endpoint protection',
         'Email security implementation',
         'Security awareness training',
-        'Compliance auditing',
-        'Incident response planning'
-      ],
+        'Compliance auditing']
+        'Incident response planning'],
       benefits: [
         'Protect against cyber threats',
         'Ensure regulatory compliance',
         'Reduce security risks by 90%',
-        'Improve incident response time',
-        'Maintain customer trust'
-      ],
+        'Improve incident response time']
+        'Maintain customer trust'],
       targetAudience: 'All businesses handling sensitive data',
       setupTime: '1-4 weeks',
       freeConsultation: 'Yes',
@@ -191,16 +186,14 @@ const ITConsultingPage: React.FC = () => {
         'Wireless network deployment',
         'Network monitoring implementation',
         'Traffic analysis and optimization',
-        'Redundancy and failover setup',
-        'Performance tuning'
-      ],
+        'Redundancy and failover setup']
+        'Performance tuning'],
       benefits: [
         'Improve network performance by 200%',
         'Reduce network downtime',
         'Optimize bandwidth usage',
-        'Enhance user experience',
-        'Future-proof network design'
-      ],
+        'Enhance user experience']
+        'Future-proof network design'],
       targetAudience: 'Businesses with complex networking needs',
       setupTime: '1-3 weeks',
       freeConsultation: 'Yes',
@@ -223,16 +216,14 @@ const ITConsultingPage: React.FC = () => {
         'Security implementation',
         'Monitoring and alerting',
         'Query optimization',
-        'Capacity planning',
-        'Maintenance and updates'
-      ],
+        'Capacity planning']
+        'Maintenance and updates'],
       benefits: [
         'Improve database performance by 150%',
         'Ensure data integrity and security',
         'Reduce maintenance overhead',
-        'Optimize storage usage',
-        'Minimize downtime'
-      ],
+        'Optimize storage usage']
+        'Minimize downtime'],
       targetAudience: 'Businesses with critical data requirements',
       setupTime: '1-2 weeks',
       freeConsultation: 'Yes',
@@ -255,16 +246,14 @@ const ITConsultingPage: React.FC = () => {
         'Software updates and patches',
         'Hardware support and replacement',
         'User training and onboarding',
-        'IT asset management',
-        'Help desk services'
-      ],
+        'IT asset management']
+        'Help desk services'],
       benefits: [
         'Reduce IT downtime by 80%',
         'Lower IT support costs',
         'Improve user productivity',
-        'Proactive issue resolution',
-        'Focus on core business activities'
-      ],
+        'Proactive issue resolution']
+        'Focus on core business activities'],
       targetAudience: 'Small to medium businesses without dedicated IT staff',
       setupTime: '1 week',
       freeConsultation: 'Yes',
@@ -287,16 +276,14 @@ const ITConsultingPage: React.FC = () => {
         'API development and integration',
         'Database design and implementation',
         'Testing and quality assurance',
-        'Deployment and maintenance',
-        'User training and documentation'
-      ],
+        'Deployment and maintenance']
+        'User training and documentation'],
       benefits: [
         'Streamline business processes',
         'Improve operational efficiency',
         'Gain competitive advantage',
-        'Reduce manual work',
-        'Scale with business growth'
-      ],
+        'Reduce manual work']
+        'Scale with business growth'],
       targetAudience: 'Businesses needing custom software solutions',
       setupTime: '4-16 weeks',
       freeConsultation: 'Yes',
@@ -319,16 +306,14 @@ const ITConsultingPage: React.FC = () => {
         'Vendor evaluation and selection',
         'Cost-benefit analysis',
         'Risk assessment and mitigation',
-        'Change management planning',
-        'Implementation guidance'
-      ],
+        'Change management planning']
+        'Implementation guidance'],
       benefits: [
         'Align IT with business goals',
         'Optimize technology investments',
         'Reduce implementation risks',
-        'Accelerate digital transformation',
-        'Improve ROI on technology'
-      ],
+        'Accelerate digital transformation']
+        'Improve ROI on technology'],
       targetAudience: 'Businesses planning technology initiatives',
       setupTime: '1-4 weeks',
       freeConsultation: 'Yes',
@@ -351,16 +336,14 @@ const ITConsultingPage: React.FC = () => {
         'Disaster recovery testing',
         'Business continuity planning',
         'Cloud-based recovery solutions',
-        'Documentation and procedures',
-        'Regular testing and updates'
-      ],
+        'Documentation and procedures']
+        'Regular testing and updates'],
       benefits: [
         'Minimize business disruption',
         'Ensure rapid recovery',
         'Protect critical data',
-        'Maintain customer service',
-        'Comply with regulations'
-      ],
+        'Maintain customer service']
+        'Comply with regulations'],
       targetAudience: 'Businesses requiring high availability',
       setupTime: '2-6 weeks',
       freeConsultation: 'Yes',
@@ -383,16 +366,14 @@ const ITConsultingPage: React.FC = () => {
         'Audit preparation and support',
         'Training and awareness programs',
         'Ongoing compliance monitoring',
-        'Documentation and reporting',
-        'Remediation planning'
-      ],
+        'Documentation and reporting']
+        'Remediation planning'],
       benefits: [
         'Ensure regulatory compliance',
         'Reduce audit findings',
         'Improve security posture',
-        'Avoid penalties and fines',
-        'Build customer trust'
-      ],
+        'Avoid penalties and fines']
+        'Build customer trust'],
       targetAudience: 'Healthcare, Finance, Government, Education sectors',
       setupTime: '2-8 weeks',
       freeConsultation: 'Yes',
@@ -413,15 +394,15 @@ const ITConsultingPage: React.FC = () => {
     { id: 'support', name: 'IT Support', icon: Headphones },
     { id: 'development', name: 'Development', icon: Code },
     { id: 'consulting', name: 'Consulting', icon: Briefcase },
-    { id: 'recovery', name: 'Disaster Recovery', icon: RefreshCw },
-    { id: 'compliance', name: 'Compliance', icon: CheckSquare }
-  ];
+    { id: 'recovery', name: 'Disaster Recovery', icon: RefreshCw },]
+      { id: 'compliance', name: 'Compliance', icon: CheckSquare }];
 
-  const filteredServices = itServices.filter(service => {
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+  const filteredServices = itServices.filter(service => {;);
+const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;);
+const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch;
+}
   });
 
   return (
@@ -440,9 +421,9 @@ const ITConsultingPage: React.FC = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12"></div>
             <a
               href="tel:+13024640950"
-              className="cyber-button px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-cyan-400/50"
-            >
-              <Phone className="w-5 h-5 inline mr-2" />
+              className="cyber-button px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-cyan-400/50")
+            >)
+              <Phone className="w-5 h-5 inline mr-2" />)
               Call (302) 464-0950
             </a>
             <a

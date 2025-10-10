@@ -5,6 +5,9 @@ console.log('🔄 Syncing with latest main branch...');
 
 try {
   // Check current status;
+  } catch (error) {
+    console.error("Error:", error);
+}
   const status = execSync('git status --porcelain', { encoding: 'utf8' });
   if (status.trim()) {
     console.log('⚠️  Working directory not clean, stashing changes...');
@@ -24,18 +27,25 @@ try {
   // Try to merge with origin/main;
   console.log('🔄 Attempting to merge with origin/main...');
   try {,
+  } catch (error) {
+    console.error("Error:", error);
+}
     execSync('git merge origin/main --no-ff -m "feat: Sync with latest main branch changes"', { stdio: 'inherit' });
     console.log('✅ Successfully merged with origin/main');
   } catch (mergeError) {
     console.log('⚠️  Merge conflicts detected, resolving...');
     
     // Check for conflicts;
+}
     const conflictFiles = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' });
     if (conflictFiles.trim()) {
       console.log('🔧 Conflict files:', conflictFiles);
       
       // Try to resolve conflicts automatically;
       try {
+  } catch (error) {
+    console.error("Error:", error);
+}
         execSync('git add .', { stdio: 'inherit' });
         execSync('git commit -m "feat: Resolve merge conflicts with main branch"', { stdio: 'inherit' });
         console.log('✅ Conflicts resolved and committed');
@@ -43,10 +53,7 @@ try {
         console.log('❌ Could not automatically resolve conflicts');
         console.log('Manual intervention needed for:', conflictFiles);
         throw resolveError;
-      }
-    }
-  }
-
+}
   // Push changes;
   console.log('📤 Pushing changes to origin/main...');
   execSync('git push origin main', { stdio: 'inherit' });

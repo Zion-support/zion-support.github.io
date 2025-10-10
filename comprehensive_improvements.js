@@ -20,14 +20,22 @@ fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
 
 // // Optimize images;
 // try {
+  } catch (error) {
+    console.error("Error:", error);
+}
     execSync('find public -name "*.jpg" -o -name "*.jpeg" -o -name "*.png" -o -name "*.webp" | head -10', { stdio: 'pipe' });
 //     } catch (error) {
+}
 //     }
 
 // Optimize CSS;
 // try {
+  } catch (error) {
+    console.error("Error:", error);
+}
     execSync('pnpm run build:optimized', { stdio: 'pipe' });
 //     } catch (error) {
+}
 // try {/* TODO: Fix JSX expression */}
   o: 'pipe' });
 //     } catch (error) {/* TODO: Fix JSX expression */}
@@ -48,8 +56,12 @@ fs.writeFileSync('/workspace/scripts/performance-optimizer.js', performanceScrip
 // // Check for accessibility issues;
 // try {
     // This would run accessibility tests in a real scenario;
+  } catch (error) {
+    console.error("Error:", error);
+}
 //     } catch (error) {
 // // 3. Create accessibility improvements;`
+}
 // // const accessibilityScript = `import { execSync } from 'child_process';
 
 // // Check for accessibility issues;
@@ -66,8 +78,12 @@ fs.writeFileSync('/workspace/scripts/accessibility-improver.js', accessibilitySc
 // // Check for SEO issues;
 // try {
     // This would run SEO tests in a real scenario;
+  } catch (error) {
+    console.error("Error:", error);
+}
 //     } catch (error) {
 // // 4. Create SEO improvements;`
+}
 // // const seoScript = `import { execSync } from 'child_process';
 
 // // Check for SEO issues;
@@ -90,11 +106,13 @@ describe('Comprehensive Test Suite', () => {/* TODO: Fix JSX expression */}
         // Simulate some work;
 //         const endTime = Date.now();
         expect(endTime - startTime).toBeLessThan(1000);
+}
     });
 
     it('should pass accessibility test', () => {
         // Basic accessibility check;
         expect(document).toBeDefined();
+}
     it('should pass performance test', () => {/* TODO: Fix JSX expression */}
     });
 
@@ -114,6 +132,9 @@ fs.writeFileSync('/workspace/__tests__/comprehensive.test.js', testSuite);
         heapUsed: Math.round(memUsage.heapUsed / 1024 / 1024) + ' MB',
         heapTotal: Math.round(memUsage.heapTotal / 1024 / 1024) + ' MB',
 // // 6. Create monitoring script;`
+  } catch (error) {
+    console.error("Error:", error);
+}
 // // const monitoringScript = `import { execSync } from 'child_process';
 
 // // Monitor performance;
@@ -195,16 +216,14 @@ const improvementSummary = {
         'Accessibility improvements added',
         'SEO enhancements completed',
         'Comprehensive test suite created',
-        'Monitoring system implemented',
-        'Documentation updated'
-    ],
+        'Monitoring system implemented']
+        'Documentation updated'],
     status: 'completed',
     nextSteps: [,
         'Run performance audit',
         'Test accessibility features',
-        'Verify SEO improvements',
-        'Monitor system performance'
-    ]
+        'Verify SEO improvements']
+        'Monitor system performance'];
 const improvementSummary = {/* TODO: Fix JSX expression */}
 };
 

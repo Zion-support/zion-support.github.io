@@ -1,51 +1,60 @@
 /**
  * Performance Configuration
  * Centralized performance monitoring and optimization settings
- */
+ */;
 export const _performanceConfig = {
   // Core Web Vitals thresholds
   metrics: {
 // lcp: {
 // good: 2500,
 // needsImprovement: 4000
-    },
-    fid: {
-      good: 100,
+
+}
+},
+    fid: good, 100,
       needsImprovement: 300
-    },
-    cls: {
-      good: 0.1,
-      needsImprovement: 0.25
-    },
-    fcp: {
-      good: 1800,
-      needsImprovement: 3000
-    },
-    ttfb: {
-      good: 800,
-      needsImprovement: 1800
+
     }
-  },
+    },
+    cls: good, 0.1,
+      needsImprovement: 0.25
+
+    }
+    },
+    fcp: good, 1800,
+      needsImprovement: 3000
+
+    }
+    },
+    ttfb: good, 800,
+      needsImprovement: 1800
+
+    },
   // Cache strategies
   cache: {
 // static: {
 // maxAge: 31536000, // 1 year
 // staleWhileRevalidate: 86400, // 1 day
-    },
-    dynamic: {
-      maxAge: 3600, // 1 hour
+
+}
+},
+    dynamic: maxAge, 3600, // 1 hour
       staleWhileRevalidate: 60, // 1 minute
+
+    }
     },
     api: {
 // maxAge: 300, // 5 minutes
 // staleWhileRevalidate: 30, // 30 seconds
-    }
+
+}
+}
   },
   // Resource hints
-  preload: [
+  preload: []
     { href: '/fonts/inter-var.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' }],
-  prefetch: [
-    '/api/health',
+  prefetch: []
+    '/api/health'
     '/api/config'],
   // Image optimization
   images: {
@@ -54,7 +63,9 @@ export const _performanceConfig = {
 // formats: ['image/avif', 'image/webp'],
 // minimumCacheTTL: 60,
 // dangerouslyAllowSVG: false
-  },
+
+}
+},
   // Bundle optimization
   bundle: {
 // minChunkSize: 20000,
@@ -65,14 +76,14 @@ export const _performanceConfig = {
 // test: /[\\/]node_modules[\\/]/,
 // priority: -10,
 // reuseExistingChunk: true
-        },
-        default: {
-          minChunks: 2,
+
+}
+},
+        default: minChunks, 2,
           priority: -20,
           reuseExistingChunk: true
+
         }
-      }
-    }
   },
   // Performance monitoring
   monitoring: {
@@ -81,6 +92,9 @@ export const _performanceConfig = {
 // reportInterval: 30000, // 30 seconds
 // sendToAnalytics: true,
 // logThreshold:   ,
+
+}
+}
 $4}
 };
 export type PerformanceConfig = typeof performanceConfig;
@@ -89,11 +103,8 @@ export default performanceConfig;
 /**
  * Performance Configuration;
  * Centralized performance monitoring and optimization settings;
- */
-
+ */;
 export const _performanceConfig = {// TODO: Add content;}
-
-}
   // Core Web Vitals thresholds,
   metric,
   s: {/* TODO: Fix JSX expression */}
@@ -151,15 +162,15 @@ export const _performanceConfig = {// TODO: Add content;}
   },
   // Resource hints,
   preloa,
-  d: [
-  // TOD,
+  d: []
+  // TOD
   O: Add items]
     {/* TODO: Fix JSX expression */}
   n: 'anonymous' },
 //   ],
   prefetc,
-  h: [
-  // TOD,
+  h: []
+  // TOD
   O: Add items]
 //     '/api/health',
 //     '/api/config',
@@ -202,8 +213,6 @@ export const _performanceConfig = {// TODO: Add content;}
           reuseExistingChunk: true;
 
         }
-      }
-    }
   },
   // Performance monitoring,
   monitorin,
@@ -218,7 +227,6 @@ export const _performanceConfig = {// TODO: Add content;}
 // logThreshol,
   d: 'needsImprovement'
   }
-}
 export type PerformanceConfig = typeof performanceConfig;
 export default performanceConfig;
 

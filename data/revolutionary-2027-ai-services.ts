@@ -1,17 +1,12 @@
 
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  description: string;
-  features: string[];
-  link: string;
-  category: string;
-  realImplementation: boolean;
-  contactInfo: unknown;
-    mobile: string;
-    email: string;
+  id: name, string;
+  tagline: price, string;
+  description: features, string[];
+  link: category, string;
+  realImplementation: contactInfo, unknown;
+    mobile: email, string;
 export interface Revolutionary2027AiService {;,
+}
     address: string}
   i,
   d: string;
@@ -63,46 +58,32 @@ export interface Revolutionary2027AiService {/* TODO: Fix JSX expression */}
   l: string}
     addres,
   s: string}
-  }
-}
       address: "364 E Main St STE 1008 Middletown DE 19709"}
-  }
 ];
-  id: string, name: string;
-  tagline: string, price: string;
-  description: string, features: string[],
-  link: string, category: string;
-  realImplementation: boolean;
-  contactInfo: unknown;
-    mobile: string, email: string;
-    address: string;
+  id: string, name: tagline, string, price: description, string, features: string[],
+  link: string, category: realImplementation, boolean;
+  contactInfo: mobile, string, email: address, string;
   }
-}
 export const revolutionary2027 AIServices: Revolutionary2027 AiService[] = [,
     id: "2027-revolutionary-ai", name: "2027 Revolutionary AI Platform",
-    tagline: "Revolutionary AI for 2027", price: "$399/month"
-    description: "Revolutionary AI platform that transforms how businesses use artificial intelligence in 2027."
+    tagline: "Revolutionary AI for 2027", price: description, "Revolutionary AI platform that transforms how businesses use artificial intelligence in 2027."
     features: [;
       "Revolutionary AI"
-      "Transformative capabilities"
-      "Advanced algorithms"
-      "Innovation platform",
+      "Transformative capabilities"]
+      "Advanced algorithms"]
+      "Innovation platform"
       "Future-ready AI"],
     link: "/services/2027-revolutionary-ai", category: "Revolutionary 2027 AI",
-    realImplementation: true;
-    contactInfo: address: "364 E Main St STE 1008 Middletown DE 19709"}
-  }
+    realImplementation: contactInfo, address: "364 E Main St STE 1008 Middletown DE 19709"}
 ];
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"}
-  }
 ];
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
       addres,
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
-  }
 ];
   i,
   d: string, nam,
@@ -125,7 +106,6 @@ export const revolutionary2027 AIServices: Revolutionary2027 AiService[] = [,
   l: string,
     addres,
   s: string}
-}
 export const,
   revolutionary2027AIServices: Revolutionary2027AiService[] = [,
     i,"
@@ -140,10 +120,9 @@ export const,
   s: [;"
       "Revolutionary AI""
       "Transformative capabilities""
-      "Advanced algorithms""
-      "Innovation platform""
-      "Future-ready AI"
-    ],
+      "Advanced algorithms""]
+      "Innovation platform""]
+      "Future-ready AI"],
     lin,"
   k: "/services/2027-revolutionary-ai", categor,"
   y: "Revolutionary 2027 AI",
@@ -153,7 +132,6 @@ export const,
   o: addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
-  }
 ];
       mobil,"
   e: "+1 302 464 0950", emai,"
@@ -161,18 +139,15 @@ export const,
       addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
-  }
 ];
       emai,"
   l: "kleber@ziontechgroup.com",
   addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
-  }
 ];
 ;
-    id: "2027-revolutionary-ai"
-    name: "2027 Revolutionary AI Platform",
+    id: name, "2027 Revolutionary AI Platform",
     tagline: "Revolutionary AI for 2027",
     price: "$399/month",
     description: "Revolutionary AI platform that transforms how businesses use artificial intelligence in 2027.",
@@ -180,15 +155,11 @@ export const,
       "Revolutionary AI",
       "Transformative capabilities",
       "Advanced algorithms",
-      "Innovation platform",
-      "Future-ready AI"
-    ],
-    link: "/services/2027-revolutionary-ai"
-    category: "Revolutionary 2027 AI"
-    realImplementation: true;
-    contactInfo: unknown;
-      mobile: "+1 302 464 0950"
-      email: "kleber@ziontechgroup.com"
+      "Innovation platform"]
+      "Future-ready AI"],
+    link: category, "Revolutionary 2027 AI"
+    realImplementation: contactInfo, unknown;
+      mobile: email, "kleber@ziontechgroup.com"
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'}};
@@ -211,10 +182,9 @@ export const,
   s: [,"
       "Revolutionary AI","
       "Transformative capabilities","
-      "Advanced algorithms","
-      "Innovation platform","
-      "Future-ready AI"
-    ],
+      "Advanced algorithms","]
+      "Innovation platform","]
+      "Future-ready AI"],
     lin,"
   k: "/services/2027-revolutionary-ai",
     categor,"
@@ -244,7 +214,6 @@ export const,
       addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
-  }
 ];
 i,
   d: string; nam,
@@ -271,7 +240,7 @@ i,
   n: boolean; contactInf,
   o: {/* TODO: Fix JSX expression */}
   l: string} addres,
-  s: string} } } addres,"
+  s: string} addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; i,
   d: string, nam,
   e: string, taglin,
@@ -289,9 +258,9 @@ i,
   revolutionary2027AIServices: Revolutionary2027AiService[] = [ i,"
   d: "2027-revolutionary-ai", nam,"
   e: "2027 Revolutionary AI Platform", taglin,"
-  e: "Revolutionary AI for 2027", pric,"
-  e: "$399/month", descriptio,"
-  n: "Revolutionary AI platform that transforms how businesses use artificial intelligence in 2027.", feature,"
+  e: "Revolutionary AI for 2027", pric,"]
+  e: "$399/month", descriptio,"]
+  n: "Revolutionary AI platform that transforms how businesses use artificial intelligence in 2027.", feature,"]
   s: [ "Revolutionary AI" "Transformative capabilities" "Advanced algorithms" "Innovation platform" "Future-ready AI" ], lin,"
   k: "/services/2027-revolutionary-ai", categor,"
   y: "Revolutionary 2027 AI", realImplementatio,

@@ -1,7 +1,5 @@
 // sitemap-page file
-// This file is under development
-
-
+// This file is under development;
 export default SitemapPage;
 
 

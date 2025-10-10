@@ -4,9 +4,10 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Cloud, Shield, Settings, Database, Smartphone, Globe, Zap, ArrowRight } from 'lucide-react';
 
-const ItServicesPage: React.FC = () => {
-  const itServices = [
-    { name: 'Cloud Services', href: '/cloud-services', icon: Cloud, description: 'Cloud Solutions' },
+const ItServicesPage: React.FC = () => {;
+const itServices = [
+},
+      { name: 'Cloud Services', href: '/cloud-services', icon: Cloud, description: 'Cloud Solutions' },
     { name: 'Cloud Migration', href: '/cloud-migration', icon: Cloud, description: 'Seamless Migration' },
     { name: 'DevOps & CI/CD', href: '/devops', icon: Settings, description: 'Development Operations' },
     { name: 'Database Services', href: '/database', icon: Database, description: 'Data Management' },
@@ -18,12 +19,11 @@ const ItServicesPage: React.FC = () => {
     { name: 'IT Consulting', href: '/it-consulting', icon: Globe, description: 'IT Strategy' },
     { name: 'Data Analytics', href: '/data-analytics', icon: Database, description: 'Business Intelligence' },
     { name: 'Mobile Development', href: '/mobile-development', icon: Smartphone, description: 'Mobile Apps' },
-    { name: 'Web Development', href: '/web-development', icon: Globe, description: 'Web Applications' },
-    { name: 'Process Automation', href: '/process-automation', icon: Zap, description: 'Workflow Automation' }
-  ];
+    { name: 'Web Development', href: '/web-development', icon: Globe, description: 'Web Applications' },]
+      { name: 'Process Automation', href: '/process-automation', icon: Zap, description: 'Workflow Automation' }];
 
   return (
-    <>
+    <>\</>
       <Helmet>
         <title>IT Services - Zion Tech Group | Information Technology Solutions</title>
         <meta name="description" content="Comprehensive IT services including cloud solutions, cybersecurity, infrastructure management, and more. Expert IT support and consulting." />
@@ -42,9 +42,9 @@ const ItServicesPage: React.FC = () => {
           </div>
         </section>
 
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <section className="py-16 px-4">)
+          <div className="max-w-7xl mx-auto">)
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">)
               {itServices.map((service, index) => (
                 <Link
                   key={index}

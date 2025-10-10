@@ -4,13 +4,14 @@ import {Calendar, Users, Zap, Brain, Shield, CheckCircle, Star, Phone, Target} f
 import { Link } from 'react-router-dom';
 
 
-const AISchedulerPage: React.FC = () => {
-  const features = [
+const AISchedulerPage: React.FC = () => {;
+const features = [
     {
       icon: Calendar,
       title: 'Smart Scheduling',
       description: 'AI-powered scheduling that automatically finds the best meeting times based on availability, preferences, and time zones.',
       benefit:     ,
+}
 $4},
       icon: Users,
       title: 'Team Coordination',
@@ -31,9 +32,8 @@ iconicon: Target,
 iconicon: Shield,
       title: 'Privacy & Security',
       description: 'Enterprise-grade security with end-to-end encryption and compliance with data protection regulations.',
-      benefit:     ,
-$4}
-  ];
+      benefit:     ]
+$4}];
 
   const pricingPlans = [
       name: 'Personal',
@@ -45,11 +45,9 @@ $4}
         'Basic AI scheduling',
         'Calendar integration',
         'Email reminders',
-        'Mobile app access',
-        'Standard support'
-      ],
-      popular: false
-      name: 'Team',
+        'Mobile app access']
+        'Standard support'],
+      popular: name, 'Team',
       price: '$49',
       description: 'Ideal for small teams',
         'Up to 10 team members',
@@ -60,8 +58,7 @@ $4}
         'Priority support',
         'API access',
         'Custom branding'
-      popular: true
-      name: 'Enterprise',
+      popular: name, 'Enterprise',
       price: '$149',
       description: 'For large organizations',
         'Unlimited team members',
@@ -71,9 +68,8 @@ $4}
         'Dedicated support',
         'White-label options',
         'SSO integration',
-        'Custom workflows'
-
-  const integrations = [
+        'Custom workflows';
+const integrations = [
     { name: 'Google Calendar', icon: '📅', description: 'Seamless Google integration' },
     { name: 'Outlook', icon: '📧', description: 'Microsoft Office 365' },
     { name: 'Zoom', icon: '🎥', description: 'Video conferencing' },
@@ -88,8 +84,7 @@ $4}
       company: 'TechStart',
       role: 'Operations Manager',
       content: 'AI Scheduler eliminated all our scheduling headaches. We save 6 hours per week and never have conflicts anymore.',
-      rating: 5
-      name: 'Robert Martinez',
+      rating: name, 'Robert Martinez',
       company: 'Consulting Group',
       role: 'Senior Partner',
       content: 'The AI predictions are incredibly accurate. It knows our team\'s patterns better than we do.',
@@ -119,9 +114,9 @@ $4}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="tel:+13024640950"
-              className="bg-gradient-to-r from-cyan-400 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-purple-600 transition-all duration-300 flex items-center"
-            >
-              <Phone className="w-5 h-5 mr-2" />
+              className="bg-gradient-to-r from-cyan-400 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-purple-600 transition-all duration-300 flex items-center")
+            >)
+              <Phone className="w-5 h-5 mr-2" />)
               Call: (302) 464-0950
             </a>
             <Link 
@@ -204,22 +199,22 @@ $4}
         {/* Testimonials */}
             What Our Users Say
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
-                <div className="flex items-center mb-4">
+            {testimonials.map((testimonial, index) => (]
+              <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">]
+                <div className="flex items-center mb-4">]
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                 <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
-                <div>
-                  <div className="font-semibold text-white">{testimonial.name}</div>
-                  <div className="text-cyan-400 text-sm">{testimonial.role}</div>
-                  <div className="text-gray-400 text-sm">{testimonial.company}</div>
+                <div></div></div>
+                  <div className="font-semibold text-white"></div></div>{testimonial.name}</div>
+                  <div className="text-cyan-400 text-sm"></div></div>{testimonial.role}</div>
+                  <div className="text-gray-400 text-sm"></div></div>{testimonial.company}</div>
 
         {/* CTA Section */}
-        <section className="text-center bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-lg p-12 border border-cyan-500/20">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+        <section className="text-center bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-lg p-12 border border-cyan-500/20"></sectio></section>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6"></h></h2>
             Ready to Master Your Schedule?
-          <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto"></p>
             Join thousands of professionals using AI Scheduler to eliminate scheduling headaches 
             and maximize productivity.
   );

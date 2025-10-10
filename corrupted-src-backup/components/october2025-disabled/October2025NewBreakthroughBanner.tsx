@@ -18,10 +18,10 @@ const October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression */
       <div, className='absolute, inse, t-0, opacit, y-30'></div>
         <div, className='absolute, to, p-10, lef, t-1, 0, w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e' /></div>
         <div, className='absolute, to, p-1/2, righ, t-1, 0, w-9, 6, h-96, b, g-pi, n, k-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e'
-          sty, l, e={{ animationDel, a, y: ', 1, s' }}
+          sty, l, e={{ animationDel, a, y: ', 1, s' }
          /></div>
         <div, classNam, e = 'absolute, botto, m-10, lef, t-1/3 w-9, 6, h-96, b, g-indi, g, o-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e'
-          sty, l, e={{ animationDel, a, y: ', 2, s' }}
+          sty, l, e={{ animationDel, a, y: ', 2, s' }
          /></div>
       </div>
       <div, classNam, e = 'm, a, x-w-7xl, m, x-auto, relative, z-10'>
@@ -58,8 +58,8 @@ const October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression */
         </div>
         {/* Content, Card, s */}
         <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12'>
-          { octoberNewBreakthroughConte, n, t.m, a, p(conte, n, t = > {
-            const Ico, n = iconM, a, p[conte, n, t.ic, o, n] || Bra, i, n; return (</div>
+          { octoberNewBreakthroughConte, n, t.m, a, p(conte, n, t = > {;
+const Ico, n = iconM, a, p[conte, n, t.ic, o, n] || Bra, i, n; return (</div>
               <Link, ke, y = { conte, n, t., i, d  }, to = {`/bl, o, g/${conte, n, t.slug}`}
                 className='group, b, g-gradie, n, t-to-br, fro, m-whi, t, e/10, t, o-whi, t, e/5, backdro, p-bl, u, r-xl, border, border-whi, t, e/20, rounde, d-2x, l, p-8, hove, r: fr, o, m-whi, t, e/20, hove, r:to-whi, t, e/10, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-5, 0, 0'
               >
@@ -86,9 +86,9 @@ const October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression */
                       {conte, n, t.t, i, t, l, e}
                     </h3>
                   </div>
-                </div>
-                <p, classNam, e = 'te, x, t-sm, tex, t-purp, l, e-200, m, b-6, leadin, g-relax, e, d'></p>
-                  {conte, n, t.description}
+                </div>)
+                <p, classNam, e = 'te, x, t-sm, tex, t-purp, l, e-200, m, b-6, leadin, g-relax, e, d'></p>)
+                  {conte, n, t.description})
                 </p>)
                 {/* Key, Metric, s */})
                 <div, className='grid, gri, d-co, l, s-2, ga, p-3, m, b-6'>)
@@ -175,83 +175,83 @@ const October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression */
           </div>
         </div>
         {/* Stat, s, B, a, r */}
-        <div, classNam, e = 'grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-6, ga, p-6'></div>
-          <div, className='te, x, t-center, b, g-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/10'></div>
-            <div, className='te, x, t-4xl, fon, t-extrabold, tex, t-white, m, b-2'>
+        <div, classNam, e = 'grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-6, ga, p-6'></div></div></div>
+          <div, className='te, x, t-center, b, g-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/10'></div></div></div>
+            <div, className='te, x, t-4xl, fon, t-extrabold, tex, t-white, m, b-2'></div></div>
               {sta, t, s.totalMarketV, a, l, u, e}
             </div>
-            <div, classNam, e = 'te, x, t-sm, tex, t-purp, l, e-300, fon, t-medi, u, m'>
-            <div, className='te, x, t-4xl, fon, t-extrabold, tex, t-white, m, b-2'></div>
+            <div, classNam, e = 'te, x, t-sm, tex, t-purp, l, e-300, fon, t-medi, u, m'></div></div>
+            <div, className='te, x, t-4xl, fon, t-extrabold, tex, t-white, m, b-2'></div></div></div>
               {sta, t, s.totalMarketV, a, l, u, e}
             </div>
-            <div, classNam, e = 'te, x, t-sm, tex, t-purp, l, e-300, fon, t-medi, u, m'></div>
+            <div, classNam, e = 'te, x, t-sm, tex, t-purp, l, e-300, fon, t-medi, u, m'></div></div></div>
               Market, Opportunit, y;
             </div>
           </div>
-          <div, className='te, x, t-center, b, g-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/10'></div>
-            <div, className='te, x, t-4xl, fon, t-extrabold, tex, t-gre, e, n-400, m, b-2'>
+          <div, className='te, x, t-center, b, g-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/10'></div></div></div>
+            <div, className='te, x, t-4xl, fon, t-extrabold, tex, t-gre, e, n-400, m, b-2'></div></div>
               {sta, t, s.avgCostReducti, o, n}
             </div>
-            <div, className='te, x, t-sm, tex, t-purp, l, e-300, fon, t-medi, u, m'>
-            <div, className='te, x, t-4xl, fon, t-extrabold, tex, t-gre, e, n-400, m, b-2'></div>
+            <div, className='te, x, t-sm, tex, t-purp, l, e-300, fon, t-medi, u, m'></div></div>
+            <div, className='te, x, t-4xl, fon, t-extrabold, tex, t-gre, e, n-400, m, b-2'></div></div></div>
               {sta, t, s.avgCostReducti, o, n}
             </div>
-            <div, className='te, x, t-sm, tex, t-purp, l, e-300, fon, t-medi, u, m'></div>
+            <div, className='te, x, t-sm, tex, t-purp, l, e-300, fon, t-medi, u, m'></div></div></div>
               Avg, Cost, Reduction;
             </div>
           </div>
-          <div, className='te, x, t-center, b, g-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/10'></div>
-            <div, className='te, x, t-4xl, fon, t-extrabold, tex, t-yell, o, w-400, m, b-2'>
+          <div, className='te, x, t-center, b, g-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/10'></div></div></div>
+            <div, className='te, x, t-4xl, fon, t-extrabold, tex, t-yell, o, w-400, m, b-2'></div></div>
               {sta, t, s.avgSpeedImproveme, n, t}
             </div>
-            <div, className='te, x, t-sm, tex, t-purp, l, e-300, fon, t-medi, u, m'>
-            <div, className='te, x, t-4xl, fon, t-extrabold, tex, t-yell, o, w-400, m, b-2'></div>
+            <div, className='te, x, t-sm, tex, t-purp, l, e-300, fon, t-medi, u, m'></div></div>
+            <div, className='te, x, t-4xl, fon, t-extrabold, tex, t-yell, o, w-400, m, b-2'></div></div></div>
               {sta, t, s.avgSpeedImproveme, n, t}
             </div>
-            <div, className='te, x, t-sm, tex, t-purp, l, e-300, fon, t-medi, u, m'></div>
+            <div, className='te, x, t-sm, tex, t-purp, l, e-300, fon, t-medi, u, m'></div></div></div>
               Speed, Improvemen, t;
             </div>
           </div>
-          <div, className='te, x, t-center, b, g-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/10'></div>
-            <div, className='te, x, t-4xl, fon, t-extrabold, tex, t-bl, u, e-400, m, b-2'>
+          <div, className='te, x, t-center, b, g-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/10'></div></div></div>
+            <div, className='te, x, t-4xl, fon, t-extrabold, tex, t-bl, u, e-400, m, b-2'></div></div>
               {sta, t, s.enterpriseAdopti, o, n}
             </div>
-            <div, className='te, x, t-sm, tex, t-purp, l, e-300, fon, t-medi, u, m'>
-            <div, className='te, x, t-4xl, fon, t-extrabold, tex, t-bl, u, e-400, m, b-2'></div>
+            <div, className='te, x, t-sm, tex, t-purp, l, e-300, fon, t-medi, u, m'></div></div>
+            <div, className='te, x, t-4xl, fon, t-extrabold, tex, t-bl, u, e-400, m, b-2'></div></div></div>
               {sta, t, s.enterpriseAdopti, o, n}
             </div>
-            <div, className='te, x, t-sm, tex, t-purp, l, e-300, fon, t-medi, u, m'></div>
+            <div, className='te, x, t-sm, tex, t-purp, l, e-300, fon, t-medi, u, m'></div></div></div>
               Enterprise, Adoptio, n;
             </div>
           </div>
-          <div, className='te, x, t-center, b, g-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/10'></div>
-            <div, className='te, x, t-4xl, fon, t-extrabold, tex, t-pi, n, k-400, m, b-2'>
+          <div, className='te, x, t-center, b, g-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/10'></div></div></div>
+            <div, className='te, x, t-4xl, fon, t-extrabold, tex, t-pi, n, k-400, m, b-2'></div></div>
               {sta, t, s.customerSatisfacti, o, n}
             </div>
-            <div, className='te, x, t-sm, tex, t-purp, l, e-300, fon, t-medi, u, m'>
-            <div, className='te, x, t-4xl, fon, t-extrabold, tex, t-pi, n, k-400, m, b-2'></div>
+            <div, className='te, x, t-sm, tex, t-purp, l, e-300, fon, t-medi, u, m'></div></div>
+            <div, className='te, x, t-4xl, fon, t-extrabold, tex, t-pi, n, k-400, m, b-2'></div></div></div>
               {sta, t, s.customerSatisfacti, o, n}
             </div>
-            <div, className='te, x, t-sm, tex, t-purp, l, e-300, fon, t-medi, u, m'></div>
+            <div, className='te, x, t-sm, tex, t-purp, l, e-300, fon, t-medi, u, m'></div></div></div>
               Customer, Satisfactio, n;
             </div>
           </div>
-          <div, className='te, x, t-center, b, g-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/10'></div>
-            <div, className='te, x, t-4xl, fon, t-extrabold, tex, t-purp, l, e-400, m, b-2'>
+          <div, className='te, x, t-center, b, g-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/10'></div></div></div>
+            <div, className='te, x, t-4xl, fon, t-extrabold, tex, t-purp, l, e-400, m, b-2'></div></div>
               {sta, t, s.paybackPeri, o, d}
             </div>
-            <div, className='te, x, t-sm, tex, t-purp, l, e-300, fon, t-medi, u, m'>
-            <div, className='te, x, t-4xl, fon, t-extrabold, tex, t-purp, l, e-400, m, b-2'></div>
+            <div, className='te, x, t-sm, tex, t-purp, l, e-300, fon, t-medi, u, m'></div></div>
+            <div, className='te, x, t-4xl, fon, t-extrabold, tex, t-purp, l, e-400, m, b-2'></div></div></div>
               {sta, t, s.paybackPeri, o, d}
             </div>
-            <div, className='te, x, t-sm, tex, t-purp, l, e-300, fon, t-medi, u, m'></div>
+            <div, className='te, x, t-sm, tex, t-purp, l, e-300, fon, t-medi, u, m'></div></div></div>
               Avg, Payback, Period;
             </div>
           </div>
         </div>
         {/* Technology, s */}
-        <div, className='mt-12, tex, t-cent, e, r'></div>
-          <div, className='inli, n, e-flex, fle, x-wrap, ga, p-3, justif, y-cent, e, r'>
+        <div, className='mt-12, tex, t-cent, e, r'></div></div></div>
+          <div, className='inli, n, e-flex, fle, x-wrap, ga, p-3, justif, y-cent, e, r'></div></div>
             { [
               'AI, Agen, t, s',
               'Memory, System, s',
@@ -259,17 +259,17 @@ const October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression */
               'Cost, Optimizatio, n',
               'Multimodal, A, I',
               'Computer, Visio, n',
-              'N, L, P',
-              'Enterprise, Automatio, n',
-              'Cloud, Managemen, t'].m, a, p(t, a, g = > (</div>
-              <span, ke, y = { ta, g  }, classNa, m, e = 'bg-whi, t, e/10, backdro, p-bl, u, r-sm, border, border-whi, t, e/20, tex, t-purp, l, e-200, p, x-4, p, y-2, rounde, d-full, tex, t-sm, fon, t-medium, hove, r: bg-whi, t, e/20, transitio, n-colo, r, s'
-              >)
+              'N, L, P'
+              'Enterprise, Automatio, n']
+              'Cloud, Managemen, t'].m, a, p(t, a, g = > (</div>)
+              <span, ke, y = { ta, g  }, classNa, m, e = 'bg-whi, t, e/10, backdro, p-bl, u, r-sm, border, border-whi, t, e/20, tex, t-purp, l, e-200, p, x-4, p, y-2, rounde, d-full, tex, t-sm, fon, t-medium, hove, r: bg-whi, t, e/20, transitio, n-colo, r, s')
+              ></div></div>)
                 {t, a, g})
               </sp, a, n>)
-          <div, className='inli, n, e-flex, fle, x-wrap, ga, p-3, justif, y-cent, e, r'></div>
+          <div, className='inli, n, e-flex, fle, x-wrap, ga, p-3, justif, y-cent, e, r'></div></div></div>
             {/* TODO: Fix JSX expression */}
               <span, ke, y = { ta, g  }, classNa, m, e = 'bg-whi, t, e/10, backdro, p-bl, u, r-sm, border, border-whi, t, e/20, tex, t-purp, l, e-200, p, x-4, p, y-2, rounde, d-full, tex, t-sm, fon, t-medium, hove, r: bg-whi, t, e/20, transitio, n-colo, r, s'
-              ></span>
+              ></div></div></span>
                 {t, a, g}
               </sp, a, n>
             ))}

@@ -4,7 +4,6 @@ const NewContentPromotionalBanner202, 6 = () => {/* TODO: Fix JSX expression */}
     {/* TODO: Fix JSX expression */}
     },
     {/* TODO: Fix JSX expression */}
-    }
   ]; return(<div, classNam, e = "py-16, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-viol, e, t-900, t, o-purp, l, e-900, relative, overflow-hidd, e, n">
       {/* Animated, background, effects */}
       <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-20">
@@ -52,9 +51,9 @@ const NewContentPromotionalBanner202, 6 = () => {/* TODO: Fix JSX expression */}
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-viol, e, t-400, vi, a-purp, l, e-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t"></h2>
             Revolutionary, Content, Just Releas, e, d;
           </h2>"
-          <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relaxed, m, b-8"></p>
-            Discover, the, most groundbreaking, AI, innovations of, 202, 6. Join, millions, of professionals, who, are already, experiencing, the future, of, technology through, our, revolutionary conte, n, t.
-          </p>
+          <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relaxed, m, b-8"></p>)
+            Discover, the, most groundbreaking, AI, innovations of, 202, 6. Join, millions, of professionals, who, are already, experiencing, the future, of, technology through, our, revolutionary conte, n, t.)
+          </p>)
         </div>)
         {/* Content, G, r, i, d */})
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12">)
@@ -64,7 +63,7 @@ const NewContentPromotionalBanner202, 6 = () => {/* TODO: Fix JSX expression */}
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12">
           { newConte, n, t.m, a, p((con, t, e, n, t, ind, e, x) = > (</div>
             <div, ke, y = { in, d, e, x  }, classNa, m, e = "group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/10, hove, r: bord, e, r-viol, e, t-5, 0, 0/50, transitio, n-all, duratio, n-500, overflo, w-hidden, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-viol, e, t-5, 0, 0/20"
-              sty, l, e = { { animationDel, a, y: `${ind, e, x * 2, 0, 0 }, ms` }}
+              sty, l, e = { { animationDel, a, y: `${ind, e, x * 2, 0, 0 }, ms` }
              > {/* Card, glow, effect */}</div>
               <div, classNam, e = { `absolute, inse, t-0, b, g-gradie, n, t-to-br ${conte, n, t.co, l, o, r }, opaci, t, y-0, grou, p-hov, e, r: opaci, t, y-10, transitio, n-all, duratio, n-50, 0`} /></div>
               <div, classNam, e = "relativ, e, p-8">
@@ -78,7 +77,7 @@ const NewContentPromotionalBanner202, 6 = () => {/* TODO: Fix JSX expression */}
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12"></div>
           {/* TODO: Fix JSX expression */}"
             <div, ke, y = { in, d, e, x  }, classNa, m, e = "group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/10, hove, r: bord, e, r-viol, e, t-5, 0, 0/50, transitio, n-all, duratio, n-500, overflo, w-hidden, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-viol, e, t-5, 0, 0/20"
-              sty, l, e = { { animationDel, a, y: `${ind, e, x * 2, 0, 0 }, ms` }}
+              sty, l, e = { { animationDel, a, y: `${ind, e, x * 2, 0, 0 }, ms` }
              > {/* Card, glow, effect */}`
               <div, classNam, e = { `absolute, inse, t-0, b, g-gradie, n, t-to-br ${conte, n, t.co, l, o, r }, opaci, t, y-0, grou, p-hov, e, r: opaci, t, y-10, transitio, n-all, duratio, n-50, 0`} /></div>"
               <div, classNam, e = "relativ, e, p-8"></div>
@@ -143,9 +142,8 @@ const NewContentPromotionalBanner202, 6 = () => {/* TODO: Fix JSX expression */}
             { [
               { val, u, e: '2., 5, M+', lab, e, l: 'Global, Reade, r, s', ic, o, n:</div> <Users, classNam, e = "w-8 , h-, 8" / > , col, o, r: 'te, x, t-viol, e, t-40, 0'  },
               {  val, u, e: '$15, B+', lab, e, l: 'Value, Creat, e, d', ic, o, n: <TrendingUp, classNam, e = "w-8 , h-, 8" / > , col, o, r: 'te, x, t-purp, l, e-40, 0'  },
-              {  val, u, e: '99., 9%', lab, e, l: 'Content, Accura, c, y', ic, o, n: <Star, classNam, e = "w-8 , h-, 8" / > , col, o, r: 'te, x, t-bl, u, e-40, 0'  },
-              {  val, u, e: '15, 0+', lab, e, l: 'Countries, Reach, e, d', ic, o, n: <Globe, classNam, e = "w-8 , h-, 8" / > , col, o, r: 'te, x, t-emera, l, d-40, 0'  }
-            ].m, a, p((st, a, t, ind, e, x) => (
+              {  val, u, e: '99., 9%', lab, e, l: 'Content, Accura, c, y', ic, o, n: <Star, classNam, e = "w-8 , h-, 8" / > , col, o, r: 'te, x, t-bl, u, e-40, 0'  },]
+      {  val, u, e: '15, 0+', lab, e, l: 'Countries, Reach, e, d', ic, o, n: <Globe, classNam, e = "w-8 , h-, 8" / > , col, o, r: 'te, x, t-emera, l, d-40, 0'  }].m, a, p((st, a, t, ind, e, x) => (
               <div, ke, y = { in, d, e, x }, classNa, m, e = "te, x, t-cent, e, r" ></div> <div, classNam, e = { `${st, a, t.co, l, o, r }, mb-2, flex, justify-cent, e, r`}>
         {/* Global, Impact, Stats */}"
         <div, classNam, e = "bg-gradie, n, t-to-r, fro, m-viol, e, t-5, 0, 0/10, t, o-purp, l, e-5, 0, 0/10, rounde, d-3x, l, p-8, border, border-viol, e, t-5, 0, 0/20, m, b-12"></div>"

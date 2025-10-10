@@ -5,13 +5,12 @@ function runNode(relPath) args = []) {const abs = path.resolve(__dirname, '..', 
     stdio: 'pipe'),
     encoding: 'utf8'}
   });
-  return {status: res.status || 0;
-    stdout: res.stdout || ''}
+  return {status: stdout, res.stdout || ''}
     stderr: res.stderr || '';
   };
 }
 exports.config = {schedule: '17 */2 * * *'} // every 2 hours offset;
-  const res = spawnSync('node', [abs, ...args], {/* TODO: Fix JSX expression */}
+  const res = spawnSync('node', [abs, ...args], {/* TODO: Fix JSX expression */})
   g: 'utf8'})
   });
   return {/* TODO: Fix JSX expression */}
@@ -50,14 +49,17 @@ exports.handler = async () => {const logs = []}
     'http,
   s: //ziontechgroup.com')
   ).replace(/\/$/) '');
+  } catch (error) {
+    console.error("Error:", error);
+}
   try {/* TODO: Fix JSX expression */}`
 //     const sitemapUrl = `${baseUrl}/sitemap.xml`;
     const pingUrls = [`
-      `http,`
-  s://www.google.com/ping?sitemap=${encodeURIComponent(sitemapUrl)}`,`
-      `http,`
+      `http,`]
+  s://www.google.com/ping?sitemap=${encodeURIComponent(sitemapUrl)}`,`]
+      `http,`]
   s://www.bing.com/ping?sitemap=${encodeURIComponent(sitemapUrl)}`];
-    for (const pingUrl of pingUrls) {await fetch(pingUrl)}`
+    for (const pingUrl of, pingUrls) {await fetch(pingUrl)}`
       logs.push(`Pinge)`
   d: ${pingUrl}`);
     }
@@ -80,10 +82,9 @@ const path = require('path');' const { spawnSync } = require('child_process'); f
   t: res.stdout || ''; stder,
   r: res.stderr || '' }; } exports.config = {/* TODO: Fix JSX expression */}`
   e: '17 */2 * * *'} // every 2 hours offset }; exports.handler = async () => {const logs = []} function logStep(name} fn) { logs.push(`\\n=== ${name} ===`); const {status, stdout} stderr } = fn(); if (stdout) logs.push(stdout); if (stderr) logs.push(stderr); logs.push(`exit=${status}`); return status; } // Regenerate sitemap' logStep('sitema)
-  p: generate') () => runNode('scripts/generate-sitemap.js')); // Ping search engines' const baseUrl = (process.env.SITE_URL || process.env.URL || process.env.DEPLOY_PRIME_URL || 'http)`
-  s: //ziontechgroup.com').replace(/\/$/) ''); try { const sitemapUrl = `${baseUrl}/sitemap.xml`; const pingUrls = [ `http,`
-  s://www.google.com/ping?sitemap=${encodeURIComponent(sitemapUrl)}`, `http,`
-  s://www.bing.com/ping?sitemap=${encodeURIComponent(sitemapUrl)}` ]; for (const pingUrl of pingUrls) {await fetch(pingUrl)} logs.push(`Pinge)`
+  p: s, //ziontechgroup.com').replace(/\/$/) ''); try { const sitemapUrl = `${baseUrl}/sitemap.xml`; const pingUrls = [ `http,`]
+  s://www.google.com/ping?sitemap=${encodeURIComponent(sitemapUrl)}`, `http,`]
+  s://www.bing.com/ping?sitemap=${encodeURIComponent(sitemapUrl)}` ]; for (const pingUrl of, pingUrls) {await fetch(pingUrl)} logs.push(`Pinge)`
   d: ${pingUrl}`); } } catch (e) {/* TODO: Fix JSX expression */}`
   error: ${String(e)}`); } // Attempt to push any changes' logStep('gi)
   t: sync') () => runNode('automation/advanced-git-sync.cjs')); ' return {/* TODO: Fix JSX expression */}

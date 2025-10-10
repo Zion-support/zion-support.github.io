@@ -4,8 +4,8 @@ import { CheckCircle, X, Zap, Brain, Cloud, ArrowRight, Star, Users, Shield, Clo
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const PricingPage: React.FC = () => {
-  const plans = [
+const PricingPage: React.FC = () => {;
+const plans = [
     {
       name: 'Starter',
       description: 'Perfect for small businesses getting started with AI',
@@ -18,16 +18,15 @@ const PricingPage: React.FC = () => {
         'Basic Machine Learning Models',
         'Monthly Analytics Reports',
         'Email Support',
-        'Up to 5 Users',
-        'Basic Integration Support'
-      ],
+        'Up to 5 Users']
+        'Basic Integration Support'],
       limitations: [
         'Limited Custom Models',
-        'Standard Support Hours',
-        'Basic Analytics'
-      ],
+        'Standard Support Hours']
+        'Basic Analytics'],
       cta: 'Get Started',
       popular: false
+}
     },
     {
       name: 'Professional',
@@ -44,9 +43,8 @@ const PricingPage: React.FC = () => {
         'Up to 25 Users',
         'API Access',
         'Custom Integrations',
-        'Monthly Strategy Reviews',
-        'Performance Optimization'
-      ],
+        'Monthly Strategy Reviews']
+        'Performance Optimization'],
       limitations: [],
       cta: 'Start Free Trial',
       popular: true
@@ -67,9 +65,8 @@ const PricingPage: React.FC = () => {
         'Advanced Security Features',
         'Compliance Support',
         'Quarterly Business Reviews',
-        'Custom Training Programs',
-        'SLA Guarantees'
-      ],
+        'Custom Training Programs']
+        'SLA Guarantees'],
       limitations: [],
       cta: 'Contact Sales',
       popular: false
@@ -98,10 +95,9 @@ const PricingPage: React.FC = () => {
     {
       name: 'Training & Workshops',
       description: 'On-site or virtual training for your team',
-      price: '$5,000',
-      period: '/day'
-    }
-  ];
+      price: '$5,000',]
+      period: '/day']
+    }];
 
   const faqs = [
     {
@@ -125,10 +121,9 @@ const PricingPage: React.FC = () => {
       answer: 'All plans include email support. Professional and Enterprise plans include priority support with faster response times.'
     },
     {
-      question: 'Can I cancel anytime?',
-      answer: 'Yes, you can cancel your subscription at any time. There are no long-term contracts or cancellation fees.'
-    }
-  ];
+      question: 'Can I cancel anytime?',]
+      answer: 'Yes, you can cancel your subscription at any time. There are no long-term contracts or cancellation fees.']
+    }];
 
   const getColorClasses = (color: string) => {
     switch (color) {
@@ -139,6 +134,7 @@ const PricingPage: React.FC = () => {
           border: 'border-blue-500',
           light: 'bg-blue-50',
           textLight: 'text-blue-600'
+}
         };
       case 'cyan':
         return {
@@ -156,9 +152,7 @@ const PricingPage: React.FC = () => {
           light: 'bg-purple-50',
           textLight: 'text-purple-600'
         };
-      default:
-        return {
-          bg: 'bg-gray-500',
+      default: bg, 'bg-gray-500',
           text: 'text-gray-500',
           border: 'border-gray-500',
           light: 'bg-gray-50',
@@ -184,22 +178,23 @@ const PricingPage: React.FC = () => {
       </section>
 
       {/* Pricing Plans */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {plans.map((plan, index) => {
-              const colors = getColorClasses(plan.color);
+      <section className="py-20 bg-white">)
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">)
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">)
+            {plans.map((plan, index) => {;
+const colors = getColorClasses(plan.color);
               return (
                 <div
+}
                   key={index}
                   className={`relative bg-white rounded-2xl shadow-lg border-2 ${
                     plan.popular ? colors.border : 'border-gray-200'
                   } overflow-hidden`}
                 >
                   {plan.popular && (
-                    <div className={`absolute top-0 left-0 right-0 ${colors.bg} text-white text-center py-2 text-sm font-semibold`}>
-                      Most Popular
-                    </div>
+                    <div className={`absolute top-0 left-0 right-0 ${colors.bg} text-white text-center py-2 text-sm font-semibold`}>)
+                      Most Popular)
+                    </div>)
                   )}
                   
                   <div className={`p-8 ${plan.popular ? 'pt-12' : ''}`}>

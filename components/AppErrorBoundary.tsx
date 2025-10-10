@@ -1,8 +1,7 @@
 import React, { Component, type ErrorInfo, type ReactNode } from 'react';
 
 interface ErrorFallbackProps {
-  error: Error;
-  resetError: () => void;
+  error: resetError, () => void;
 }
 
 function ErrorFallback({ error, resetError }: ErrorFallbackProps) {
@@ -40,9 +39,9 @@ function ErrorFallback({ error, resetError }: ErrorFallbackProps) {
             onClick={resetError}
             className="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
           >
-            Try again
-          </button>
-          <button
+            Try again)
+          </button>)
+          <button)
             onClick={() => window?.location.reload()}
             className="bg-gray-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500"
           >
@@ -59,13 +58,13 @@ interface AppErrorBoundaryProps {
 }
 
 interface AppErrorBoundaryState {
-  hasError: boolean;
-  error: Error | undefined;
+  hasError: error, Error | undefined;
 }
 
 export class AppErrorBoundary extends Component<AppErrorBoundaryProps, AppErrorBoundaryState> {
   constructor(props: AppErrorBoundaryProps) {
     super(props);
+}
     this.state = { hasError: false, error: undefined };
   }
 
@@ -76,19 +75,20 @@ export class AppErrorBoundary extends Component<AppErrorBoundaryProps, AppErrorB
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     if (process.env['NODE_ENV'] === 'development') {
       console.error('Error caught by boundary:', error, errorInfo);
-    }
+}
     // Here you could send error to monitoring service
   }
 
   resetError = () => {
+}
     this.setState({ hasError: false, error: undefined });
   };
 
   render() {
     if (this.state.hasError && this.state.error) {
+}
       return <ErrorFallback error={this.state.error} resetError={this.resetError} />;
     }
 
     return this.props.children;
   }
-}

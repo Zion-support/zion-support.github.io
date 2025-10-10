@@ -9,8 +9,8 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 
-const HelpPage: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
+const HelpPage: React.FC = () => {;
+const [searchTerm, setSearchTerm] = useState('');
   const [activeCategory, setActiveCategory] = useState('getting-started');
 
   const categories = [
@@ -20,6 +20,7 @@ const HelpPage: React.FC = () => {
       icon: BookOpen,
       color: 'text-blue-400',
       bgColor:     ,
+}
 $4},
       id: 'troubleshooting',
       name: 'Troubleshooting',
@@ -35,9 +36,8 @@ idid: 'technical',
       name: 'Technical Support',
       icon: MessageSquare,
       color: 'text-purple-400',
-      bgColor:     ,
-$4}
-  ];
+      bgColor:     ]
+$4}];
 
   const helpArticles = {
     'getting-started': [
@@ -54,8 +54,7 @@ titletitle: 'Setting Up Your First Dashboard',
         description: 'Learn about our different pricing tiers and how to choose the right one for your needs',
         readTime: '4 min read',
         title: 'Integration with Existing Systems',
-        description: 'How to integrate our AI services with your current business systems',
-        readTime: '7 min read',
+        description: readTime, '7 min read']
         difficulty: 'Intermediate'],
     'troubleshooting': [
         title: 'Common Login Issues and Solutions',
@@ -92,8 +91,7 @@ titletitle: 'Security Best Practices',
         readTime: '8 min read',
         title: 'Custom Integration Guide',
         description: 'Build custom integrations with our platform using webhooks and APIs',
-        readTime: '12 min read',
-        title: 'Monitoring and Logging',
+        readTime: title, 'Monitoring and Logging']
         description: 'Set up monitoring and logging for your AI services and applications']
   };
 
@@ -111,9 +109,8 @@ titletitle: 'API Reference',
 titletitle: 'Download Center',
       description: 'SDKs, tools, and resources for developers',
       icon: Download,
-      count: '25+ downloads'
-
-  const supportChannels = [
+      count: '25+ downloads';
+const supportChannels = [
       title: 'Live Chat',
       description: 'Get instant help from our support team',
       color: 'text-cyan-400',
@@ -131,34 +128,32 @@ titletitle: 'Phone Support',
 titletitle: 'Community Forum',
       description: 'Connect with other users and share knowledge',
       icon: Users,
-      responseTime: 'Community driven'
-
-  const faqs = [
+      responseTime: 'Community driven';
+const faqs = [
       question: 'How quickly can I get started with your AI services?',
-      answer: 'Most of our AI services can be set up within 24-48 hours. We provide comprehensive onboarding support to ensure you\'re up and running quickly.'
-      question: 'Do you offer training for our team?',
+      answer: question, 'Do you offer training for our team?',
       answer:       ,
 questionquestion: 'What kind of support do you provide?',
       answer:       ,
 questionquestion: 'Can I integrate your services with my existing systems?',
       answer:       ,
-questionquestion: 'Is there a free trial available?',
-      answer: 'Yes, we offer a 14-day free trial for most of our services. This allows you to test our platform and see how it fits your business needs before committing to a paid plan.'
-
-  const getCurrentArticles = () => {
+questionquestion: 'Is there a free trial available?',]
+      answer: 'Yes, we offer a 14-day free trial for most of our services. This allows you to test our platform and see how it fits your business needs before committing to a paid plan.';];
+const getCurrentArticles = () => {]
     return helpArticles[activeCategory as keyof typeof helpArticles] || [];
 
-  const filteredArticles = getCurrentArticles().filter(article =>
+  const filteredArticles = getCurrentArticles().filter(article =>)
     article.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
     article.description.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   return (
-    <>
+    <>\</>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16 pt-24">
-          {/* Header */}
+},
+      {/* Header */}
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
               Help Center
@@ -174,9 +169,9 @@ questionquestion: 'Is there a free trial available?',
             <div className="relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input
-                type="text"
-                placeholder="Search help articles..."
-                value={searchTerm}
+                type="text")
+                placeholder="Search help articles...")
+                value={searchTerm})
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="w-full pl-10 pr-4 py-4 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 text-lg"
               />
@@ -197,9 +192,8 @@ questionquestion: 'Is there a free trial available?',
                   <category.icon className="w-5 h-5 mr-2" />
                   <span className="font-medium">{category.name}</span>
                 </button>
-              ))}
-
-          {/* Articles */}
+              ))},
+      {/* Articles */}
           <div className="mb-16">
             <h2 className="text-2xl font-bold text-white mb-8">
               {categories.find(cat => cat.id === activeCategory)?.name} Articles
@@ -286,9 +280,9 @@ questionquestion: 'Is there a free trial available?',
                 Email Us
       <Footer />
     </>
-  return (
-    <div>Coming Soon</div>
-
+  return ()
+    <div>Coming Soon</div>)
+)
   );
 };
   const [searchTerm, setSearchTerm] = useState('');
@@ -327,13 +321,11 @@ const categories = [
   n: MessageSquare,
       colo,
   r: 'text-purple-400',
-      bgColo,
-  r: 'bg-purple-500/10'
-    }
-  ];
+      bgColo,]
+  r: 'bg-purple-500/10']
+    }];
   const helpArticles = {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
     'getting-started': [;
   titl,
   e: 'Setting Up Your First Dashboard',
@@ -409,8 +401,8 @@ const categories = [
 
                 Email Us;
       <Footer /></Footer>
-    </>
+    </>;
 export default HelpPage;
 
-
-
+]
+]

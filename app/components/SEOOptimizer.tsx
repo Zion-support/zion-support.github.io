@@ -37,69 +37,71 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     // Add structured data
     if (structuredData) {
       addStructuredData(structuredData);
-    }
+}
     // Add breadcrumb structured data
     addBreadcrumbStructuredData();
     // Add organization structured data
     addOrganizationStructuredData();
   }, [title, description, keywords, canonicalUrl, ogImage, structuredData]);
-  const updateMetaTag = (name: string, content: string, attribute: string = 'name') => {
-    let meta = document.querySelector(`meta[${attribute}="${name}"]`);
+  const updateMetaTag = (name: string, content: string, attribute: string = 'name') => {;
+}
+let meta = document.querySelector(`meta[${attribute}="${name}"]`);
     if (!meta) {
       meta = document.createElement('meta');
       meta.setAttribute(attribute, name);
       document.head.appendChild(meta);
-    }
+}
     meta.setAttribute('content', content);
   };
-  const updateCanonicalUrl = (url: string) => {
-    let canonical = document.querySelector('link[rel="canonical"]');
+  const updateCanonicalUrl = (url: string) => {;
+let canonical = document.querySelector('link[rel="canonical"]');
     if (!canonical) {
       canonical = document.createElement('link');
       canonical.setAttribute('rel', 'canonical');
       document.head.appendChild(canonical);
-    }
+}
     canonical.setAttribute('href', url);
   };
-  const addStructuredData = (data: Record<string, unknown>) => {
-    const script = document.createElement('script');
+  const addStructuredData = (data: Record<string, unknown>) => {;
+const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(data);
     script.id = 'structured-data';
-    // Remove existing structured data
-    const existing = document.getElementById('structured-data');
+    // Remove existing structured data;
+const existing = document.getElementById('structured-data');
     if (existing) {
       existing.remove();
-    }
+}
     document.head.appendChild(script);
   };
-  const addBreadcrumbStructuredData = () => {
-    const breadcrumbData = {
+  const addBreadcrumbStructuredData = () => {;
+const breadcrumbData = {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       'itemListElement': [
         {
           '@type': 'ListItem',
           'position': 1,
-          'name': 'Home',
-          'item': 'https://ziontechgroup.com'
+          'name': 'Home',]
+          'item': 'https://ziontechgroup.com']
+}
         }
-      ]
+    ]
     };
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(breadcrumbData);
     script.id = 'breadcrumb-structured-data';
-    // Remove existing breadcrumb data
-    const existing = document.getElementById('breadcrumb-structured-data');
+    // Remove existing breadcrumb data;
+const existing = document.getElementById('breadcrumb-structured-data');
     if (existing) {
       existing.remove();
-    }
+}
     document.head.appendChild(script);
   };
 
-  const addOrganizationStructuredData = () => {
-    const organizationData = {
+  const addOrganizationStructuredData = () => {;
+const organizationData = {
       '@context': 'https://schema.org',
       '@type': 'Organization',
       'name': 'Zion Tech Group',
@@ -115,6 +117,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
         'contactType': 'Customer Service',
         'areaServed': 'US',
         'availableLanguage': 'en'
+}
       },
       'address': {
         '@type': 'PostalAddress',
@@ -125,25 +128,24 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
         'addressCountry': 'US'
       },
       'sameAs': [
-        'https://twitter.com/ziontechgroup',
-        'https://linkedin.com/company/ziontechgroup'
-      ]
+        'https://twitter.com/ziontechgroup']
+        'https://linkedin.com/company/ziontechgroup']
     };
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(organizationData);
     script.id = 'organization-structured-data';
-    // Remove existing organization data
-    const existing = document.getElementById('organization-structured-data');
+    // Remove existing organization data;
+const existing = document.getElementById('organization-structured-data');
     if (existing) {
       existing.remove();
-    }
+}
     document.head.appendChild(script);
   };
   return (
-    <Head>
-      <title>{title}</title>
-      <meta name="description" content={description} />
+    <Head>)
+      <title>{title}</title>)
+      <meta name="description" content={description} />)
       <meta name="keywords" content={keywords.join(', ')} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />

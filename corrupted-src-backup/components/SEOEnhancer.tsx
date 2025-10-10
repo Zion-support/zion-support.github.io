@@ -2,8 +2,6 @@ import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOEnhancerProps {/* TODO: Fix JSX expression */}
-}
-
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({,
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services. Discover cutting-edge technology solutions for modern businesses.',
@@ -13,8 +11,8 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({,
     'enterprise solutions',
     'automation',
     'digital transformation',
-    'IT consulting',
-    'machine learning',
+    'IT consulting'
+    'machine learning']
     'data analytics'],
   canonicalUrl,
   ogImage = '/og-image.jpg',
@@ -24,8 +22,8 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({,
   children}) => {
   useEffect(() => {
     // Add structured data to the page;
-    if (structuredData) {
-      const _script = document.createElement('script');
+    if (structuredData) {;
+const _script = document.createElement('script');
       script.type = 'application/ld+json';
       script.text = JSON.stringify(structuredData);
       document.head.appendChild(script);
@@ -33,6 +31,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({,
       return () => {
         document.head.removeChild(script);
 const,
+}
   SEOEnhancer: React.FC<SEOEnhancerProps> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
       };
@@ -44,28 +43,26 @@ const,
     '@context': 'https: //schema.org',
     '@type': 'Organization',
     name: 'Zion Tech Group',
-    description: description;
-    url: canonicalUrl || window.location.origin;
+    description: url, canonicalUrl || window.location.origin;
     logo: `${window.location.origin}/logo.png`,
-    sameAs: ['https://linkedin.com/company/zion-tech-group', 'https: //twitter.com/ziontechgroup']
-    contactPoint: {,
+    sameAs: ['https://linkedin.com/company/zion-tech-group', 'https: contactPoint, {,
       '@type': 'ContactPoint',
       telephone: '+1-555-0123',
       contactType: 'customer service',
       availableLanguage: 'English',
+
+    }
   const defaultStructuredData = {/* TODO: Fix JSX expression */}
   o: `${window.location.origin}/logo.png`,
     sameA,
-  s: ['http,
-  s://linkedin.com/company/zion-tech-group', 'http,
+  s: s,//linkedin.com/company/zion-tech-group', 'http]
   s://twitter.com/ziontechgroup'],
     contactPoin,
-  t: {/* TODO: Fix JSX expression */}
-    }};
+  t: {/* TODO: Fix JSX expression */};
 
   //   const finalStructuredData = structuredData || defaultStructuredData;
 
-  return(<>)
+  return(<>\)</>
       <Helmet>)
         {/* Basic Meta Tags */})
         <title>{title}</title>)
@@ -74,8 +71,8 @@ const,
         <meta name="author" content="Zion Tech Group" />
         <meta name="robots" content="index, follow" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        {/* Canonical URL */}
-        {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}</link>
+        {/* Canonical URL */},
+      {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}</link>
 
         {/* Open Graph Meta Tags */}
         <meta property="og:title" content={title} />
@@ -117,19 +114,18 @@ const,
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/site.webmanifest" />
         {/* Structured Data */}
-  return (<>
-      <Helmet></Helmet>
-        {/* Basic Meta Tags */}
-        <title>{title}</title>
+  return (<>\</>
+      <Helmet></Helmet>)
+        {/* Basic Meta Tags */})
+        <title>{title}</title>)
         <meta name="description" content={description} /></meta>")
         <meta name="keywords" content={keywords.join(', ')} /></meta>"
         <meta name="author" content="Zion Tech Group" /></meta>"
         <meta name="robots" content="index, follow" /></meta>"
         <meta name="viewport" content="width=device-width, initial-scale=1.0" /></meta>
         {/* Canonical URL */}"
-        {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
-
-        {/* Open Graph Meta Tags */}"
+        {canonicalUrl && <link rel="canonical" href={canonicalUrl} />},
+      {/* Open Graph Meta Tags */}"
         <meta property="o,"
   g:title" content={title} /></meta>"
         <meta property="o,"
@@ -181,7 +177,7 @@ const,
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" /></link>"
         <link rel="manifest" href="/site.webmanifest" /></link>
         {/* Structured Data */}"
-        <script type="application/ld+json">{JSON.stringify(finalStructuredData)}</script>
+        <script type="application/ld+json"></scri></scrip>{JSON.stringify(finalStructuredData)}</script>
       </Helmet>
       {children}
     

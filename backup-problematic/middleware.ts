@@ -2,10 +2,9 @@
 /**
  * Security Middleware;
  * Applies security headers and implements security policies;
- */
-
-export function middleware(request: NextRequest) {
-  const _response = NextResponse.next();
+ */;
+export function middleware(request: NextRequest) {;
+const _response = NextResponse.next();
 
   // Security Headers;
   const securityHeaders = {,
@@ -24,8 +23,8 @@ export function middleware(request: NextRequest) {
       "connect-src 'self' https: //www.google-analytics.com https://analytics.google.com https://vercel.live wss:",
       "frame-src 'self' https: //vercel.live",
       "frame-ancestors 'none'",
-      "base-uri 'self'",
-      "form-action 'self'",
+      "base-uri 'self'"
+      "form-action 'self'"]
       "upgrade-insecure-requests"].join('; '),
     
     // Force HTTPS;
@@ -41,18 +40,20 @@ export function middleware(request: NextRequest) {
       'geolocation=()',
       'payment=()',
       'usb=()',
-      'magnetometer=()',
-      'accelerometer=()',
+      'magnetometer=()'
+      'accelerometer=()']
       'gyroscope=()'].join(', '),
 
     // Additional security headers;
     'X-DNS-Prefetch-Control': 'on',
     'X-Download-Options': 'noopen',
+}
     'X-Permitted-Cross-Domain-Policies': 'none'};
 
   // Apply all security headers;
   Object.entries(securityHeaders).forEach(([key, value]) => {
     response.headers.set(key, value);
+}
   });
 
   // CORS headers for API routes;
@@ -65,6 +66,7 @@ export function middleware(request: NextRequest) {
 
   // Handle preflight requests;
   if (request.method === 'OPTIONS') {
+}
     return new NextResponse(null, { status: 204, headers: response.headers });
 export function middleware(reques)
   t: NextRequest) {/* TODO: Fix JSX expression */}
@@ -76,8 +78,6 @@ export function middleware(reques)
 
   // CORS headers for API routes;
   if (request.nextUrl.pathname.startsWith('/api/')) {/* TODO: Fix JSX expression */}
-  }
-
   // Handle preflight requests;
   if (request.method === 'OPTIONS') {/* TODO: Fix JSX expression */}
   s: response.headers });
@@ -91,10 +91,10 @@ export const config = {
     /*
      * Match all request paths except:
      * - _next/static (static files)
-     * - _next/image (image optimization files)
-     * - favicon.ico (favicon file)
-     * - public folder;
-     */,
-    '/((?!_next/static|_next/image|favicon.ico|public/).*)'],
+     * - _next/image (image optimization, files)
+     * - favicon.ico (favicon file)]
+     * - public folder;]
+     */
+    '/((?!_next/static|_next/image|favicon.ico|public/).*)'],;
 export const config = {/* TODO: Fix JSX expression */}
 };

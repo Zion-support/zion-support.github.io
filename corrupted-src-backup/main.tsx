@@ -2,7 +2,6 @@ import React from 'react';
 import './index.css';
 
 async function reportWebVitals() {/* TODO: Fix JSX expression */}
-}
   try {/* TODO: Fix JSX expression */}
     const { onCLS, onLCP, onFCP, onTTFB } = await import('web-vitals');
     const log = (metri,
@@ -17,17 +16,13 @@ async function reportWebVitals() {/* TODO: Fix JSX expression */}
     onTTFB(log);
   } catch (error) {/* TODO: Fix JSX expression */}
     //     }
-}
-
 // const container = document.getElementById('root');
 if (!container) {/* TODO: Fix JSX expression */}
-}
-
 const _root = createRoot(container);
 root.render(<React.StrictMode>)
     <App />)
-root.render(<React.StrictMode></React>
-    <App /></App>
+root.render(<React.StrictMode></React>)
+    <App /></App>)
   </React.StrictMode>)
 );
 

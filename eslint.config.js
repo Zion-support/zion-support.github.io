@@ -47,56 +47,65 @@ export default [
       '.next/**',
       'out/**',
       '*.min.js',
-      '*.min.css',
-      'chunk-*.js'
-    ]
+      '*.min.css']
+      'chunk-*.js']
   },
   // Base JavaScript configuration
   {
     files: ['**/*.{js,jsx}'],
     languageOptions: {
+
+}
+}
       globals: { ...globals.browser, ...globals.node },
-      parserOptions: {
-        ecmaVersion: 'latest',
+      parserOptions: ecmaVersion, 'latest',
         sourceType: 'module',
-        ecmaFeatures: {
-          jsx: true
-        }
+        ecmaFeatures: jsx, true
+
       }
     },
     rules: {
       ...js.configs.recommended.rules,
       'no-unused-vars': 'warn',
       'no-console': 'off'
-    }
+
+}
+}
   },
   // TypeScript configuration
   {
     files: ['**/*.{ts,tsx}'],
     languageOptions: {
+
+}
+}
       globals: { ...globals.browser, ...globals.node },
       parser: tsParser,
-      parserOptions: {
-        ecmaVersion: 'latest',
+      parserOptions: ecmaVersion, 'latest',
         sourceType: 'module',
-        ecmaFeatures: {
-          jsx: true
-        }
+        ecmaFeatures: jsx, true
+
       }
     },
     plugins: {
       '@typescript-eslint': tseslint,
       'react-hooks': reactHooks,
       'react-refresh': reactRefresh
-    },
+
+}
+},
     rules: {
       ...tseslint.configs.recommended.rules,
 ...reactHooks.configs.recommended.rules,
 
       'react-refresh/only-export-components': [
         'warn',
-        { allowConstantExport: true }
-      ],
+
+}
+}
+    }]
+    ]
+        { allowConstantExport: true }],
       '@typescript-eslint/no-unused-vars': 'off',
       '@typescript-eslint/no-explicit-any': 'off',
       '@typescript-eslint/explicit-function-return-type': 'off',
@@ -105,5 +114,4 @@ export default [
       'no-console': 'off',
       'no-unused-vars': 'off'
     }
-  }
 ];

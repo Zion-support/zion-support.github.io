@@ -1,17 +1,12 @@
 
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  description: string;
-  features: string[];
-  link: string;
-  category: string;
-  realImplementation: boolean;
-  contactInfo: unknown;
-    mobile: string;
-    email: string;
+  id: name, string;
+  tagline: price, string;
+  description: features, string[];
+  link: category, string;
+  realImplementation: contactInfo, unknown;
+    mobile: email, string;
 export interface ProfessionalService {;,
+}
     address: string}
   i,
   d: string;
@@ -63,46 +58,32 @@ export interface ProfessionalService {/* TODO: Fix JSX expression */}
   l: string}
     addres,
   s: string}
-  }
-}
       address: "364 E Main St STE 1008 Middletown DE 19709"}
-  }
 ];
-  id: string, name: string;
-  tagline: string, price: string;
-  description: string, features: string[],
-  link: string, category: string;
-  realImplementation: boolean;
-  contactInfo: unknown;
-    mobile: string, email: string;
-    address: string;
+  id: string, name: tagline, string, price: description, string, features: string[],
+  link: string, category: realImplementation, boolean;
+  contactInfo: mobile, string, email: address, string;
   }
-}
 export const professionalServices: ProfessionalService[] = [,
     id: "it-consulting", name: "IT Consulting Services",
-    tagline: "Expert IT consulting for business growth", price: "$120/hour"
-    description: "Professional IT consulting services to help businesses optimize their technology investments."
+    tagline: "Expert IT consulting for business growth", price: description, "Professional IT consulting services to help businesses optimize their technology investments."
     features: [;
       "Technology assessment"
-      "Strategic planning"
-      "Implementation guidance"
-      "Performance optimization",
+      "Strategic planning"]
+      "Implementation guidance"]
+      "Performance optimization"
       "Ongoing support"],
     link: "/services/it-consulting", category: "Professional Services",
-    realImplementation: true;
-    contactInfo: address: "364 E Main St STE 1008 Middletown DE 19709"}
-  }
+    realImplementation: contactInfo, address: "364 E Main St STE 1008 Middletown DE 19709"}
 ];
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"}
-  }
 ];
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
       addres,
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
-  }
 ];
   i,
   d: string, nam,
@@ -125,7 +106,6 @@ export const professionalServices: ProfessionalService[] = [,
   l: string,
     addres,
   s: string}
-}
 export const,
   professionalServices: ProfessionalService[] = [,
     i,"
@@ -140,10 +120,9 @@ export const,
   s: [;"
       "Technology assessment""
       "Strategic planning""
-      "Implementation guidance""
-      "Performance optimization""
-      "Ongoing support"
-    ],
+      "Implementation guidance""]
+      "Performance optimization""]
+      "Ongoing support"],
     lin,"
   k: "/services/it-consulting", categor,"
   y: "Professional Services",
@@ -153,7 +132,6 @@ export const,
   o: addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
-  }
 ];
       mobil,"
   e: "+1 302 464 0950", emai,"
@@ -161,18 +139,15 @@ export const,
       addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
-  }
 ];
       emai,"
   l: "kleber@ziontechgroup.com",
   addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
-  }
 ];
 ;
-    id: "it-consulting"
-    name: "IT Consulting Services",
+    id: name, "IT Consulting Services",
     tagline: "Expert IT consulting for business growth",
     price: "$120/hour",
     description: "Professional IT consulting services to help businesses optimize their technology investments.",
@@ -180,15 +155,11 @@ export const,
       "Technology assessment",
       "Strategic planning",
       "Implementation guidance",
-      "Performance optimization",
-      "Ongoing support"
-    ],
-    link: "/services/it-consulting"
-    category: "Professional Services"
-    realImplementation: true;
-    contactInfo: unknown;
-      mobile: "+1 302 464 0950"
-      email: "kleber@ziontechgroup.com"
+      "Performance optimization"]
+      "Ongoing support"],
+    link: category, "Professional Services"
+    realImplementation: contactInfo, unknown;
+      mobile: email, "kleber@ziontechgroup.com"
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'}};
@@ -211,10 +182,9 @@ export const,
   s: [,"
       "Technology assessment","
       "Strategic planning","
-      "Implementation guidance","
-      "Performance optimization","
-      "Ongoing support"
-    ],
+      "Implementation guidance","]
+      "Performance optimization","]
+      "Ongoing support"],
     lin,"
   k: "/services/it-consulting",
     categor,"
@@ -244,7 +214,6 @@ export const,
       addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
-  }
 ];
 i,
   d: string; nam,
@@ -271,7 +240,7 @@ i,
   n: boolean; contactInf,
   o: {/* TODO: Fix JSX expression */}
   l: string} addres,
-  s: string} } } addres,"
+  s: string} addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; i,
   d: string, nam,
   e: string, taglin,
@@ -289,9 +258,9 @@ i,
   professionalServices: ProfessionalService[] = [ i,"
   d: "it-consulting", nam,"
   e: "IT Consulting Services", taglin,"
-  e: "Expert IT consulting for business growth", pric,"
-  e: "$120/hour", descriptio,"
-  n: "Professional IT consulting services to help businesses optimize their technology investments.", feature,"
+  e: "Expert IT consulting for business growth", pric,"]
+  e: "$120/hour", descriptio,"]
+  n: "Professional IT consulting services to help businesses optimize their technology investments.", feature,"]
   s: [ "Technology assessment" "Strategic planning" "Implementation guidance" "Performance optimization" "Ongoing support" ], lin,"
   k: "/services/it-consulting", categor,"
   y: "Professional Services", realImplementatio,

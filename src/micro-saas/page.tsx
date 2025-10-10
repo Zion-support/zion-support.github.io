@@ -5,19 +5,18 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 
-export default function MicroSaasPage() {
-  const microSaasServices = [
+export default function MicroSaasPage() {;
+const microSaasServices = [
     {
       icon: BarChart3,
-      title: 'AI Analytics Dashboard',
-      description: 'Real-time business intelligence and analytics with AI-powered insights',
+      title: description, 'Real-time business intelligence and analytics with AI-powered insights']
       features: ['Custom Dashboards', 'Real-time Data', 'Predictive Insights', 'Export Reports', 'Mobile App', 'API Access'],
       price: '$79/month',
       popular: true,
       category: 'Analytics',
       link: '/ai-analytics-dashboard',
       benefits: ['Increase revenue by 25%', 'Save 10 hours/week', 'Real-time insights']
-    },
+},
     {
       icon: ShoppingCart,
       title: 'AI E-commerce Assistant',
@@ -254,9 +253,8 @@ export default function MicroSaasPage() {
     { name: 'Data Management', count: microSaasServices.filter(s => s.category === 'Data Management').length },
     { name: 'Project Management', count: microSaasServices.filter(s => s.category === 'Project Management').length },
     { name: 'Inventory', count: microSaasServices.filter(s => s.category === 'Inventory').length },
-    { name: 'Automation', count: microSaasServices.filter(s => s.category === 'Automation').length },
-    { name: 'Content Creation', count: microSaasServices.filter(s => s.category === 'Content Creation').length }
-  ];
+    { name: 'Automation', count: microSaasServices.filter(s => s.category === 'Automation').length },]
+      { name: 'Content Creation', count: microSaasServices.filter(s => s.category === 'Content Creation').length }];
 
   const benefits = [
     {
@@ -276,17 +274,15 @@ export default function MicroSaasPage() {
     },
     {
       icon: Shield,
-      title: 'Secure & Reliable',
-      description: 'Enterprise-grade security with 99.9% uptime guarantee'
-    }
-  ];
+      title: 'Secure & Reliable',]
+      description: 'Enterprise-grade security with 99.9% uptime guarantee']
+    }];
 
   const stats = [
     { label: 'Active Users', value: '10,000+' },
     { label: 'Apps Available', value: '50+' },
-    { label: 'Uptime Guarantee', value: '99.9%' },
-    { label: 'Support Available', value: '24/7' }
-  ];
+    { label: 'Uptime Guarantee', value: '99.9%' },]
+      { label: 'Support Available', value: '24/7' }];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -310,9 +306,9 @@ export default function MicroSaasPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="tel:+13024640950"
-                className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center"
-              >
-                <Phone className="h-5 w-5 mr-2" />
+                className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center")
+              >)
+                <Phone className="h-5 w-5 mr-2" />)
                 Call (302) 464-0950
               </a>
               <Link
@@ -387,8 +383,8 @@ export default function MicroSaasPage() {
                       <CheckCircle className="h-3 w-3 text-green-500 mr-2" />
                       {feature}
                     </li>
-                  ))}
-                  {service.features.length > 3 && (
+                  ))},
+      {service.features.length > 3 && (
                     <li className="text-xs text-gray-400">
                       +{service.features.length - 3} more features
                     </li>

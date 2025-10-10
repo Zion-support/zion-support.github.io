@@ -5,17 +5,14 @@ import path from 'path';
 // Get all TypeScript and JavaScript files;
 function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
   
-  for (const item of items) {
+  for (const item of, items) {
     
     if (stat.isDirectory()) {
       // Skip node_modules, dist, and other build directories;
       if (!['node_modules', 'dist', '.next', 'out', '.git'].includes(item)) {
         files = files.concat(getAllFiles(fullPath, extensions));
-function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {/* TODO: Fix JSX expression */}
-      }
-    } else if (extensions.some(ext => item.endsWith(ext))) {/* TODO: Fix JSX expression */}
-    }
-  }
+}
+function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {/* TODO: Fix JSX expression */} else if (extensions.some(ext => item.endsWith(ext))) {/* TODO: Fix JSX expression */}
   
   return files;
 }
@@ -23,9 +20,10 @@ function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {/* TODO:
 // Fix unused variables by prefixing with underscore;
 function fixUnusedVariables(content) {
   // Fix unused parameters in function declarations;
-  content = content.replace(/function\s*\(([^)]*)\)/g, (_match, _params) => {
-    const newParams = params.split(',').map(param => {)
-      if (trimmed && trimmed.startsWith('_') && trimmed !== 'props' && trimmed !== 'event' && trimmed !== 'index') {
+  content = content.replace(/function\s*\(([^)]*)\)/g, (_match, _params) => {;
+const newParams = params.split(',').map(param => {)
+      if (trimmed && trimmed.startsWith('_') && trimmed !== 'props' && trimmed !== 'event' && trimmed !== 'index') {;
+}
 function fixUnusedVariables(content) {/* TODO: Fix JSX expression */}
         return `_${trimmed}`;
       }
@@ -35,9 +33,10 @@ function fixUnusedVariables(content) {/* TODO: Fix JSX expression */}
   });
 
   // Fix unused parameters in arrow functions;
-  content = content.replace(/\(([^)]*)\)\s*=>/g, (_match, _params) => {
-    const newParams = params.split(',').map(param => {)
+  content = content.replace(/\(([^)]*)\)\s*=>/g, (_match, _params) => {;
+const newParams = params.split(',').map(param => {)
       if (trimmed && trimmed.startsWith('_') && trimmed !== 'props' && trimmed !== 'event' && trimmed !== 'index') {
+}
   content = content.replace(/\(([^)]*)\)\s*=>/g, (_match, _params) => {/* TODO: Fix JSX expression */}`
         return `_${trimmed}`;
       }
@@ -50,7 +49,7 @@ function fixUnusedVariables(content) {/* TODO: Fix JSX expression */}
   content = content.replace(/^\s*(const|let|var)\s+(\w+)\s*=.*?;\s*$/gm, (_match, _decl, _varName) => {
     if (varName.startsWith('_') || varName === 'props' || varName === 'event' || varName === 'index') {
       return match;
-    }
+}
   content = content.replace(/^\s*(const|let|var)\s+(\w+)\s*=.*?;\s*$/gm, (_match, _decl, _varName) => {/* TODO: Fix JSX expression */}
     }`
     return match.replace(varName, `_${varName}`);
@@ -66,18 +65,18 @@ function fixUnusedImports(content) {
   lines.forEach(line => {)
     if (matches) {
       matches.forEach(match => usedIdentifiers.add(match));
-function fixUnusedImports(content) {/* TODO: Fix JSX expression */}
-    }
-  });
+}
+function fixUnusedImports(content) {/* TODO: Fix JSX expression */});
   
   // Remove unused import lines;
   const filteredLines = lines.filter(line => {)
     if (importMatch) {
       if (importedItems) {
         return hasUsedItems;
-  const filteredLines = lines.filter(line => {/* TODO: Fix JSX expression */}
-      }
-    }
+}
+  const filteredLines = lines.filter(line => {/* TODO: Fix JSX expression */})
+      })
+    })
     return true;)
   });
   
@@ -100,12 +99,10 @@ function fixReactRefreshWarnings(content, filePath) {
     content = content.replace(/export\s+const\s+\w+\s*=/g)
       '// eslint-disable-next-line react-refresh/only-export-components\nexport const '
     );
-function fixConsoleStatements(content) {/* TODO: Fix JSX expression */}
 }
-
+function fixConsoleStatements(content) {/* TODO: Fix JSX expression */}
 // Fix React refresh warnings by moving constants to separate files;
 function fixReactRefreshWarnings(content, filePath) {/* TODO: Fix JSX expression */}
-  }
   return content;
 }
 
@@ -140,24 +137,20 @@ function main() {
         fs.writeFileSync(file, content, 'utf8');
 
         fixedFiles++;
-      }
-    } catch (error) {
-
-function fixNonNullAssertions(content) {/* TODO: Fix JSX expression */}
 }
-
+  } catch (error) {
+    console.error("Error:", error);
+}
+    } catch (error) {;
+}
+function fixNonNullAssertions(content) {/* TODO: Fix JSX expression */}
 // Fix any types;
 function fixAnyTypes(content) {/* TODO: Fix JSX expression */}
-}
-
 // Main function;
 function main() {/* TODO: Fix JSX expression */}
-}
-  files.forEach(file => {/* TODO: Fix JSX expression */}
+  files.forEach(file => {/* TODO: Fix JSX expression */})
       })
-    } catch (error) {/* TODO: Fix JSX expression */}
-    }
-  });
+    } catch (error) {/* TODO: Fix JSX expression */});
 
 }
 
@@ -166,6 +159,4 @@ if (import.meta.url === `file://${process.argv[1]}`) {
 // Run if this is the main module;`
 if (import.meta.url === `fil)`
   e://${process.argv[1]}`) {/* TODO: Fix JSX expression */}
-}
-
 export { fixConsoleStatements, fixUnusedVariables, fixUnusedImports, fixNonNullAssertions, fixAnyTypes };`

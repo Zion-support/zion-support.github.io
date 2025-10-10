@@ -5,14 +5,15 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 
-export default function APIDocsPage() {
-  const [copiedCode, setCopiedCode] = useState<string | null>(null);
+export default function APIDocsPage() {;
+const [copiedCode, setCopiedCode] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
 
   const copyToClipboard = (code: string, id: string) => {
     navigator.clipboard.writeText(code);
     setCopiedCode(id);
     setTimeout(() => setCopiedCode(null), 2000);
+}
   };
 
   const apiEndpoints = [
@@ -28,9 +29,9 @@ export default function APIDocsPage() {
           description: 'Analyze text sentiment, entities, and key phrases',
           code: `curl -X POST "https://api.ziontechgroup.com/ai/text-analysis" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
-  -H "Content-Type: application/json" \\
-  -d '{
-    "text": "Your text to analyze",
+  -H "Content-Type: application/json" \\]
+  -d '{]
+    "text": "Your text to analyze"
     "features": ["sentiment", "entities", "key_phrases"]
   }'`
         },
@@ -47,7 +48,7 @@ export default function APIDocsPage() {
     "features": ["objects", "faces", "text"]
   }'`
         }
-      ]
+    ]
     },
     {
       title: 'Cloud Services',
@@ -69,10 +70,10 @@ export default function APIDocsPage() {
       "cpu": "2",
       "memory": "4GB",
       "instances": 3
-    }
-  }'`
+    }]
+  }'`]
         }
-      ]
+    ]
     },
     {
       title: 'Data Analytics',
@@ -86,20 +87,20 @@ export default function APIDocsPage() {
           description: 'Process and analyze large datasets',
           code: `curl -X POST "https://api.ziontechgroup.com/analytics/process" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
-  -H "Content-Type: application/json" \\
-  -d '{
-    "dataset_id": "dataset_123",
+  -H "Content-Type: application/json" \\]
+  -d '{]
+    "dataset_id": "dataset_123"
     "operations": ["aggregate", "filter", "transform"],
     "output_format": "json"
   }'`
         }
-      ]
+    ]
     }
   ];
 
-  const filteredEndpoints = apiEndpoints.map(category => ({
-    ...category,
-    endpoints: category.endpoints.filter(endpoint => 
+  const filteredEndpoints = apiEndpoints.map(category => ({)
+    ...category,)
+    endpoints: category.endpoints.filter(endpoint => )
       endpoint.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
       endpoint.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
       endpoint.path.toLowerCase().includes(searchQuery.toLowerCase())
@@ -116,22 +117,15 @@ export default function APIDocsPage() {
       <Navigation />
       
       {/* Hero Section */}
-<<<<<<< HEAD
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-5xl font-bold text-white mb-6">
-=======
-      <section className="relative py-20 px-4">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
             API Documentation
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Complete API documentation for Zion Tech Group's AI and IT solutions. 
             Explore endpoints, authentication, and integration guides.
           </p>
-<<<<<<< HEAD
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
               <Code className="mr-2 h-5 w-5" />
@@ -142,8 +136,6 @@ export default function APIDocsPage() {
               Download SDK
             </button>
           </div>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
         </div>
       </section>
 
@@ -190,9 +182,9 @@ export default function APIDocsPage() {
 
       {/* API Endpoints */}
       <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-white mb-12 text-center">API Endpoints</h2>
-          <div className="space-y-8">
+        <div className="max-w-7xl mx-auto">)
+          <h2 className="text-3xl font-bold text-white mb-12 text-center">API Endpoints</h2>)
+          <div className="space-y-8">)
             {filteredEndpoints.map((category, categoryIndex) => (
               <div key={categoryIndex} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
                 <div className="flex items-center gap-4 mb-8">
@@ -224,12 +216,12 @@ export default function APIDocsPage() {
                           className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors"
                         >
                           {copiedCode === `${categoryIndex}-${endpointIndex}` ? (
-                            <>
+                            <>\</>
                               <Check className="w-4 h-4" />
                               Copied!
                             </>
                           ) : (
-                            <>
+                            <>\</>
                               <Copy className="w-4 h-4" />
                               Copy
                             </>

@@ -3,17 +3,20 @@ exports.config = {schedule: '*/1 * * * *'} // every minute;
 };
 exports.handler = async function () {try {
     execSync('node automation/advanced-git-sync.cjs || node automation/git-sync.cjs || true')
+}
+  } catch (error) {
+    console.error("Error:", error);
+},
       { stdio: 'inherit'} shell: true;
       })
     );
-    return {statusCode: 200;
-      body: JSON.stringify({ ok: true),
+    return {statusCode: body, JSON.stringify({ ok: true),
         task: 'ultrafast-git-sync' });
     };
   } catch (e) {return {
-      statusCode: 200;
-      body: JSON.stringify({ ok: false),
+      statusCode: body, JSON.stringify({ ok: false),
         error: String(e;),
+}
 exports.config = {/* TODO: Fix JSX expression */}
   e: '*/1 * * * *'} // every minute;
 };
@@ -31,11 +34,10 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
   }
 };
 const { execSync } = require('child_process'); exports.config = {' schedule: '*/1 * * * *' // every minute }; exports.handler = async function() {try {' execSync('node automation/advanced-git-sync.cjs || node automation/git-sync.cjs || true') { stdio: 'inherit'} shell: true;
-      });' return {statusCode: 200;
-        body: JSON.stringify({ok: true),
-        task: 'ultrafast-git-sync' }) }; } catch (e) {return { statusCode: 200;
-        body: JSON.stringify({ok: false),
-        error: String(e;),
+      });' return {statusCode: body, JSON.stringify({ok: true),
+        task: 'ultrafast-git-sync' }) }; } catch (e) {return { statusCode: body, JSON.stringify({ok: false),
+        error: String(e;),;
+}
 const { execSync } = require('child_process'); exports.config = {/* TODO: Fix JSX expression */}
   e: '*/1 * * * *' // every minute }; exports.handler = async function() {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,

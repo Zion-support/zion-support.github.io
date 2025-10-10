@@ -15,7 +15,7 @@ export const seoUtils = {/* content */}
     "url": "https: //zion.app",
     "logo": "https: //zion.app/logo.png",
     "description": "Advanced AI and IT Solutions",
-    "sameAs": [
+    "sameAs": []
       "https: //linkedin.com/company/zion-tech"]}),
 
   // Generate breadcrumb structured data;
@@ -46,10 +46,8 @@ export const seoUtils = {/* content */}
 
   // Generate article structured data;
   generateArticleSchema: (article: {/* content */}
-    title: string;
-    description: string;
-    author: string;
-    datePublished: string;
+    title: description, string;
+    author: datePublished, string;
     dateModified: string;
     image?: string;
     url: string;
@@ -75,10 +73,9 @@ export const seoUtils = {/* content */}
     "logo": "http,"
   s://zion.app/logo.png","
     "description": "Advanced AI and IT Solutions","
-    "sameAs": ["
-      "http,"
-  s://linkedin.com/company/zion-tech"
-    ])
+    "sameAs": ["]
+      "http,"]
+  s://linkedin.com/company/zion-tech"])
   }),
 
   // Generate breadcrumb structured data,
@@ -106,9 +103,9 @@ export const seoUtils = {/* content */}
     "mainEntity": faqs.map(faq => ({/* content */}"
       "@type": "Question","
       "name": faq.question,"
-      "acceptedAnswer": {/* content */}"
-        "@type": "Answer","
-        "text": faq.answer;
+      "acceptedAnswer": {/* content */}")
+        "@type": "Answer",")
+        "text": faq.answer;)
       })
     }))
   }),
@@ -165,8 +162,7 @@ Allow: /,
 ,
 Sitemap: ${sitemapUrl}`;
   // Generate sitemap entries,
-  generateSitemapEntry: (ur)
-  l: string, lastmod?: string, changefreq?: string, priority?: string) => {/* content */}
+  generateSitemapEntry: l, string, lastmod?: string, changefreq?: string, priority?: string) => {/* content */}
     return {/* content */}
       url,
       lastmo,
@@ -180,8 +176,7 @@ Sitemap: ${sitemapUrl}`;
 
   // Generate robots.txt content,
   generateRobotsTxt: (sitemapUr,
-  l: string = 'http)
-  s://zion.app/sitemap.xml') => {/* content */}
+  l: s,//zion.app/sitemap.xml') => {/* content */}
     return `User-agen,
   t: *
 Allo,
@@ -209,24 +204,21 @@ export const urlUtils = {/* content */}
   // Generate canonical URL,
   generateCanonicalUrl: (pat,
   h: string, baseUr,
-  l: string = 'http)
-  s://zion.app') => {/* content */}`
+  l: s,//zion.app') => {/* content */}`
     return `${baseUrl}${path}`;
   },
 
   // Generate Open Graph URL,
   generateOGUrl: (pat,
   h: string, baseUr,
-  l: string = 'http)
-  s://zion.app') => {/* content */}`
+  l: s,//zion.app') => {/* content */}`
     return `${baseUrl}${path}`;
   },
 
   // Generate Twitter Card URL,
   generateTwitterUrl: (pat,
   h: string, baseUr,
-  l: string = 'http)
-  s://zion.app') => {/* content */}`
+  l: s,//zion.app') => {/* content */}`
     return `${baseUrl}${path}`;
   }
 };
@@ -286,12 +278,12 @@ export const performanceSEO = {/* content */}
   e: 'font/woff2' },
       {/* TODO: Fix JSX expression */}
   s: 'style' },
-      {/* TODO: Fix JSX expression */}
-  s: 'image' }
-    ];
+      {/* TODO: Fix JSX expression */}]
+    ]
+  s: 'image' }];
 
-    criticalResources.forEach(resource => {/* content */})
-      const _link = document.createElement('link');
+    criticalResources.forEach(resource => {/* content */});
+const _link = document.createElement('link');
       link.rel = 'preload';
       link.href = resource.href;
       link.as = resource.as;
@@ -302,8 +294,7 @@ export const performanceSEO = {/* content */}
 
   // Optimize images for SEO;
   optimizeImageSEO: (src: string, alt: string, width?: number, height?: number): {/* content */}
-    src: string;
-    alt: string;
+    src: alt, string;
   // Optimize images for SEO,
   optimizeImageSEO: (sr,
   c: string, al)
@@ -345,9 +336,9 @@ export const analyticsUtils = {/* content */}
     if (typeof window !== 'undefined' && (window as typeof window & { gtag?: Function }).gtag) {/* content */}
       (window as typeof window & {/* TODO: Fix JSX expression */})
   g: Function }).gtag('config', 'GA_MEASUREMENT_ID', {/* content */}
-        page_titl,
-  e: title,
-        page_locatio,
+        page_titl,)
+  e: title,)
+        page_locatio,)
   n: url;)
       });
     }
@@ -356,8 +347,7 @@ export const analyticsUtils = {/* content */}
   // Track custom events;
   trackEvent: (eventName: string, parameters?: Record<string, unknown>) => {/* content */}
   // Track custom events,
-  trackEvent: (eventNam)
-  e: string, parameters?: Record<string, unknown>) => {/* content */}
+  trackEvent: e, string, parameters?: Record<string, unknown>) => {/* content */}
     if (typeof window !== 'undefined' && (window as Window & { gtag?: Function }).gtag) {/* content */}
       (window as Window & {/* TODO: Fix JSX expression */})
   g: Function }).gtag('event', eventName, parameters);
@@ -371,19 +361,16 @@ export const analyticsUtils = {/* content */}
         send_to: conversionId),
         value: value;
   // Track conversion events,
-  trackConversion: (conversionI)
-  d: string, value?: number) => {/* content */}
+  trackConversion: d, string, value?: number) => {/* content */}
     if (typeof window !== 'undefined' && (window as typeof window & { gtag?: Function }).gtag) {/* content */}
       (window as typeof window & {/* TODO: Fix JSX expression */})
   g: Function }).gtag('event', 'conversion', {/* content */}
-        send_t,
-  o: conversionId,
-        valu,
+        send_t,)
+  o: conversionId,)
+        valu,)
   e: value;)
       });
-    }
-  }
-};
+    };
 
 // Core Web Vitals tracking;
 export const coreWebVitals = {/* content */}
@@ -395,8 +382,7 @@ export const coreWebVitals = {/* content */}
       analyticsUtils.trackEvent('core_web_vitals', {/* content */})
         metric_name: metric.name),
         metric_value: Math.round(metric.value),
-        metric_id: metric.id;
-        metric_delta: metric.delta;
+        metric_id: metric_delta, metric.delta;
   // Track Core Web Vitals,
   trackCoreWebVitals: () => {/* content */}
     if (typeof window === 'undefined') return;
@@ -404,9 +390,9 @@ export const coreWebVitals = {/* content */}
     const trackMetric = (metri,
   c: {/* TODO: Fix JSX expression */})
   a: number }) => {/* content */}
-      analyticsUtils.trackEvent('core_web_vitals', {/* content */}
-        metric_nam,
-  e: metric.name,
+      analyticsUtils.trackEvent('core_web_vitals', {/* content */})
+        metric_nam,)
+  e: metric.name,)
         metric_valu)
   e: Math.round(metric.value),
         metric_i,
@@ -433,8 +419,8 @@ export const SEOComponent = ({/* content */}
   description, 
   keywords, 
   image, 
-  url, 
-  type = 'website',
+  url,;
+type = 'website',
   structuredData;
 }: {/* content */}
   title?: string;
@@ -460,9 +446,9 @@ export const SEOComponent = ({/* content */}
       <meta name="description" content={description} /></meta>
       <meta name="keywords" content={keywords} /></meta>
       <link rel="canonical" href={fullUrl} /></link>
-      {/* Open Graph */}
-      <meta property="og:type" content={type} />
-      <meta property="og:title" content={fullTitle} />
+      {/* Open Graph */})
+      <meta property="og:type" content={type} />)
+      <meta property="og:title" content={fullTitle} />)
       <meta property="og:description" content={description} />)
       <meta property="og:url" content={fullUrl} />)
       <meta property="og:image" content={fullImage} />)
@@ -497,9 +483,9 @@ export const SEOComponent = ({/* content */}
   r:title" content={fullTitle} /></meta>"
       <meta name="twitte,"
   r:description" content={description} /></meta>"
-      <meta name="twitte,"
-  r:image" content={fullImage} /></meta>
-      {/* Structured Data */}
+      <meta name="twitte,")
+  r:image" content={fullImage} /></meta>)
+      {/* Structured Data */})
       {/* TODO: Fix JSX expression */})
           {JSON.stringify(structuredData)}
         </script>
@@ -525,6 +511,4 @@ export const initializeSEO = () => {/* content */}
       meta.name = 'viewport';
       meta.content = 'width=device-width, initial-scale=1.0';
       document.head.appendChild(meta);
-    }
-  }
-};"`
+    };"`

@@ -3,7 +3,7 @@ impo, r, t {/* TODO: Fix JSX expression */}
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
 
 export default function NextGenSecurityOperations20, 2, 5() {  
-  return(<>)
+  return(<>\)</>
       <Helm, e, t>)
         <title>)
           Ne, x, t-Gen, AI, Security Operations, 202, 5 — 99.97% Threat, Detectio, n)
@@ -90,7 +90,6 @@ export default function NextGenSecurityOperations20, 2, 5() {
                 Schedule Your Security Assessment;
                 <ArrowLeft className="ml-2 h-5 w-5 rotate-180" />);
 export default function NextGenSecurityOperations20, 2, 5() {/* TODO: Fix JSX expression */}
-}
   </div>  </div>
 </article>
 

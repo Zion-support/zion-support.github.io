@@ -220,8 +220,8 @@ Expert IoT engineers delivering scalable, secure, and intelligent connected solu
                   <Target className="w-8 h-8 text-orange-600" /></Target>"
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Proven Results</h3>"
                 <p className="text-gray-600">Successfully deployed 500+ IoT projects across industries</p>
-        {/* Services by Category */}
-        {categories.map(category => ()}"
+        {/* Services by Category */},
+      {categories.map(category => ()}"
           <section key={category} className="py-16 bg-gray-50"></section>
                   {category} Solutions;
                   Specialized {category.toLowerCase()} services for connected and intelligent systems;"
@@ -296,15 +296,15 @@ Save up to 40% vs market rates;"
                 <p className="text-gray-600">Smart manufacturing and industrial automation solutions</p>"
               <div className="text-center p-6 bg-gradient-to-br from-pink-50 to-rose-100 rounded-lg"></div>"
                 <Globe className="w-12 h-12 text-pink-600 mx-auto mb-4" /></Globe>"
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Smart Cities</h3>"
+                <h3 className="text-xl font-semibold text-gray-900 mb-2"></h>Smart Cities</h3>"
                 <p className="text-gray-600">Comprehensive smart city infrastructure and services</p>
         {/* Contact Section */}"
-        <section className="py-16 bg-gradient-to-r from-cyan-600 to-blue-600 text-white"></section>"
+        <section className="py-16 bg-gradient-to-r from-cyan-600 to-blue-600 text-white"></secti></sectio></section>"
           <div className="max-w-7xl mx-auto px-4,
   sm:px-6,"
-  lg:px-8 text-center"></div>"
+  lg:px-8 text-center"></div></div></div>"
             <h2 className="text-3xl,"
-  md:text-4xl font-bold mb-4"></h2>
+  md:text-4xl font-bold mb-4"></h></h2>
 Ready to Connect Your World?"
             <p className="text-xl mb-8 text-cyan-100"></p>
               Contact our IoT experts for a free consultation and custom connected solution strategy;
@@ -316,7 +316,7 @@ Ready to Connect Your World?"
           </a>
 href="mailto:kleber@ziontechgroup.com" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors"
                 ✉️ kleber@ziontechgroup.com;
-            <div className="mt-8 text-sm text-cyan-200">
+            <div className="mt-8 text-sm text-cyan-200"></div></div>
 
               <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
   );

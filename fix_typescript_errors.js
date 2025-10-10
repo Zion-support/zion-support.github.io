@@ -42,22 +42,22 @@ if (fs.existsSync(advancedComponentsTestPath)) {/* TODO: Fix JSX expression */}
 
 // 4. Fix blog page metadata issues;
 // const blogPages = [
-  'app/blog/ai-2026-april-revolutionary-breakthrough/page.tsx',
-  'app/blog/ai-2026-autonomous-agent-factories/page.tsx',
+  'app/blog/ai-2026-april-revolutionary-breakthrough/page.tsx'
+  'app/blog/ai-2026-autonomous-agent-factories/page.tsx']
   'app/blog/ai-2026-autonomous-enterprise-architecture/page.tsx'];
 
-blogPages.forEach(pagePath => {/* TODO: Fix JSX expression */}
+blogPages.forEach(pagePath => {/* TODO: Fix JSX expression */})
     //         })
 });
 
 // 5. Fix OpenGraph authors issue;
-// const openGraphPages = [
-  'app/blog/ai-2026-consensus-intelligence-breakthrough/page.tsx',
+// const openGraphPages = []
+  'app/blog/ai-2026-consensus-intelligence-breakthrough/page.tsx'
   'app/blog/ai-2026-enterprise-automation-revolutionary-breakthrough/page.tsx'];
 
-openGraphPages.forEach(pagePath => {/* TODO: Fix JSX expression */}"
-  e: ['"][^'"]*['"]\s*\}\s*\]/g,"
-      "author,"
+openGraphPages.forEach(pagePath => {/* TODO: Fix JSX expression */}")
+  e: ['"][^'"]*['"]\s*\}\s*\]/g,")
+      "author,")
   s: ['Zion Tech Group']")
     );
 
@@ -102,4 +102,4 @@ if (fs.existsSync(performancePath)) {/* TODO: Fix JSX expression */}`
   //     }
 
 // 
-}}}}}"`
+}}}"`

@@ -7,18 +7,20 @@ try {
   // Read the file;
   const content = readFileSync('/workspace/app/page.tsx', 'utf8');
   
-  // Split by conflict markers and keep our version (after )
-  const lines = content.split('\n');
+  // Split by conflict markers and keep our version (after );
+const lines = content.split('\n');
   const resolvedLines = [];
   let skipUntilNextMarker = false;
   
-  for (let i = 0; i < lines.length; i++) {
-    const line = lines[i];
+  for (let i = 0; i < lines.length; i++) {;
+const line = lines[i];
     
     if (line.includes('')) {
       skipUntilNextMarker = true;
       continue;
-    }
+} catch (error) {
+    console.error("Error:", error);
+}
     
     if (line.includes('')) {
       skipUntilNextMarker = false;
@@ -30,9 +32,7 @@ try {
     )
     if (!skipUntilNextMarker) {
       resolvedLines.push(line);
-    }
-  }
-  
+}
   // Write the resolved content;
   writeFileSync('/workspace/app/page.tsx', resolvedLines.join('\n'));
   

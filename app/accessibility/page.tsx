@@ -3,13 +3,13 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Eye, MousePointer, Volume2, Shield, Users, Globe, Zap, ArrowRight, Star } from 'lucide-react';
 
-const AccessibilityPage: React.FC = () => {
-  const features = [
+const AccessibilityPage: React.FC = () => {;
+const features = [
     {
       icon: Eye,
-      title: 'Visual Accessibility',
-      description: 'Comprehensive visual accessibility features including high contrast modes, text scaling, and screen reader compatibility.',
+      title: description, 'Comprehensive visual accessibility features including high contrast modes, text scaling, and screen reader compatibility.']
       benefits: ['High contrast mode', 'Text scaling', 'Screen reader support', 'Color blind friendly']
+}
     },
     {
       icon: MousePointer,
@@ -61,22 +61,21 @@ const AccessibilityPage: React.FC = () => {
     },
     {
       name: 'EN 301 549',
-      description: 'European accessibility standard for ICT products and services',
-      status: 'Fully Compliant'
-    }
-  ];
+      description: 'European accessibility standard for ICT products and services',]
+      status: 'Fully Compliant']
+    }];
 
   return (
-    <>
+    <>\</>
       <Helmet>
         <title>Accessibility Solutions - Zion Tech Group | Inclusive Digital Experiences</title>
         <meta name="description" content="Creating inclusive digital experiences that work for everyone. Our accessibility solutions ensure your applications are usable by people of all abilities." />
         <meta name="keywords" content="accessibility, WCAG, ADA compliance, inclusive design, digital accessibility, Zion Tech Group" />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">)
+        {/* Hero Section */})
+        <section className="relative py-20 px-4 overflow-hidden">)
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
           <div className="relative max-w-7xl mx-auto text-center">

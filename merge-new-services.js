@@ -7,12 +7,14 @@ import fs from 'fs';
 
 // //Step 1: Ensure we're on main and up to date;
 // try {,
+  } catch (error) {
+    console.error("Error:", error);
+}
   execSync('git checkout main', { stdio: 'inherit' });
   execSync('git pull origin main', { stdio: 'inherit' });
 //   } catch (error) {
 //   process.exit(1);
 }
-
 //Step 2: Get new service branches;
 // const newServiceBranches = [,
 // //Step,
@@ -22,8 +24,6 @@ import fs from 'fs';
   execSync('git pull origin main', {/* TODO: Fix JSX expression */})
   o: 'inherit' });
 //   } catch (error) {/* TODO: Fix JSX expression */}
-}
-
 //Step,
   2: Get new service branches;
 // const newServiceBranches = [
@@ -44,14 +44,17 @@ import fs from 'fs';
   'cursor/add-new-services-and-deploy-updates-6455',
   'cursor/add-new-services-and-deploy-updates-67 cb',
   'cursor/add-new-services-and-deploy-updates-6 de5',
-  'cursor/add-new-services-and-deploy-updates-6 e7 c',
-  'cursor/add-new-services-and-deploy-updates-6 e90',
+  'cursor/add-new-services-and-deploy-updates-6 e7 c'
+  'cursor/add-new-services-and-deploy-updates-6 e90']
   'cursor/add-new-services-and-deploy-updates-6 ed4'];
 
 // //Step 3: Enhanced merge function with conflict resolution;
 function mergeServiceBranch(branchName) {,
 //   try {,
     //Fetch the branch;
+} catch (error) {
+    console.error("Error:", error);
+}
     execSync(`git fetch origin ${branchName}`, { stdio: 'inherit' });
 
     //Try direct merge first;
@@ -62,18 +65,22 @@ function mergeServiceBranch(branchName) {,
 //     return { success: true, method: 'direct' };
   } catch (error) {
 //     try {
-      //Strategy 1: Auto-resolve with theirs (prefer incoming changes for new services),
+      //Strategy 1: Auto-resolve with theirs (prefer incoming changes for new, services),
+}
+  } catch (error) {
+    console.error("Error:", error);
+}
       execSync('git reset --hard HEAD', { stdio: 'inherit' });
-      execSync(
-// //Step,
-  3: Enhanced merge function with conflict resolution;
+      execSync()
+// //Step,)
+  3: Enhanced merge function with conflict resolution;);
 function mergeServiceBranch(branchName) {/* TODO: Fix JSX expression */}
     execSync(`git fetch origin ${branchName}`, {/* TODO: Fix JSX expression */})
   o: 'inherit' });
 
     //Try direct merge first;`
-    execSync(`git merge origin/${branchName} --no-ff -m "Merge ${branchName} - Add new services and deploy updates"`,
-      {/* TODO: Fix JSX expression */}
+    execSync(`git merge origin/${branchName} --no-ff -m "Merge ${branchName} - Add new services and deploy updates"`,)
+      {/* TODO: Fix JSX expression */})
   o: 'inherit' })
     );
 
@@ -101,29 +108,28 @@ function mergeServiceBranch(branchName) {/* TODO: Fix JSX expression */}
       } catch (oursError) {
 //         //Abort and skip;
         try {
+}
+  } catch (error) {
+    console.error("Error:", error);
+}
           execSync('git reset --hard HEAD', { stdio: 'inherit' });
         } catch (resetError) {
           //Continue anyway;
+}
 //         return {/* TODO: Fix JSX expression */}
   d: 'ours' };
       } catch (oursError) {/* TODO: Fix JSX expression */}
   o: 'inherit' });
         } catch (resetError) {/* TODO: Fix JSX expression */}
-        }
-
         return {/* TODO: Fix JSX expression */}
   d: 'failed' };
       }
-    }
-  }
-}
-
 //Step 4: Process all new service branches;
 // const results = {
-  summary: {
-    total: 0;
-    successful: 0;
-    failed: 0;
+  summary: total, 0;
+    successful: failed, 0;
+
+  }
     methods: { direct: 0, theirs: 0, ours: 0, failed: 0 },
 //Step,
   4: Process all new service branches;
@@ -136,14 +142,12 @@ function mergeServiceBranch(branchName) {/* TODO: Fix JSX expression */}
   timestam,
   p: new Date().toISOString()};
 
-for (const branch of newServiceBranches) {/* TODO: Fix JSX expression */}
+for (const branch of, newServiceBranches) {/* TODO: Fix JSX expression */}
   results.branches.push({ branch, ...result });
   results.summary.total++;
 
   if (result.success) {/* TODO: Fix JSX expression */}
   } else {/* TODO: Fix JSX expression */}
-  }
-}
 
 //Step 5: Generate report;
 fs.writeFileSync('new-services-merge-report.json'),
@@ -152,11 +156,15 @@ fs.writeFileSync('new-services-merge-report.json'),
 
 //Step 6: Display summary;
 // // // // // // // // // // if (results.failed.length > 0) {,
+}
 //   //   results.failed.forEach(branch => // console.log(`  - ${branch}`));
 }
 
 // Step 7: Push changes;
 // try {,
+  } catch (error) {
+    console.error("Error:", error);
+}
   execSync('git push origin main', { stdio: 'inherit' });
 //   } catch (error) {
 //Step,
@@ -167,6 +175,7 @@ fs.writeFileSync('new-services-merge-report.json')
 
 //Step,
   6: Display summary;
+}
 // // // // // // // // // // if (results.failed.length > 0) {/* TODO: Fix JSX expression */}`
 //   //   results.failed.forEach(branch => // console.log(`  - ${branch}`));
 }

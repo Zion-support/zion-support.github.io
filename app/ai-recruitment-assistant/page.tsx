@@ -3,12 +3,13 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Users, Search, Brain, Target, CheckCircle, ArrowRight, Zap, Shield, BarChart } from 'lucide-react';
 
-const AIRecruitmentAssistantPage: React.FC = () => {
-  const features = [
+const AIRecruitmentAssistantPage: React.FC = () => {;
+const features = [
     {
       icon: Search,
       title: 'Smart Candidate Matching',
       description: 'AI-powered matching algorithm that finds the best candidates based on skills, experience, and cultural fit.'
+}
     },
     {
       icon: Brain,
@@ -32,13 +33,12 @@ const AIRecruitmentAssistantPage: React.FC = () => {
     },
     {
       icon: Zap,
-      title: 'Automated Screening',
-      description: 'AI-powered initial screening questions and assessments to filter candidates effectively.'
-    }
-  ];
+      title: 'Automated Screening',]
+      description: 'AI-powered initial screening questions and assessments to filter candidates effectively.']
+    }];
 
   return (
-    <>
+    <>\</>
       <Helmet>
         <title>AI Recruitment Assistant | Zion Tech Group - Intelligent Hiring Solutions</title>
         <meta name="description" content="Streamline your hiring process with AI-powered recruitment tools. Find, screen, and hire the best candidates faster with our intelligent recruitment assistant." />
@@ -55,9 +55,9 @@ const AIRecruitmentAssistantPage: React.FC = () => {
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Transform your hiring process with AI-powered recruitment tools that find, screen, and hire the best candidates faster and more efficiently.
               </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            </div>)
+)
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">)
               {features.map((feature, index) => (
                 <div
                   key={index}

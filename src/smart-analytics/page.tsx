@@ -4,13 +4,14 @@ import { Link } from 'react-router-dom';
 
 import React from 'react';
 
-const SmartAnalyticsPage: React.FC = () => {
-  const features = [
+const SmartAnalyticsPage: React.FC = () => {;
+const features = [
     {
       icon: BarChart,
       title: 'Real-time Dashboards',
       description: 'Monitor your business performance with live dashboards that update automatically and provide instant insights.',
       benefit:     ,
+}
 $4},
       icon: Brain,
       title: 'AI-Powered Insights',
@@ -31,9 +32,8 @@ iconicon: Users,
 iconicon: Shield,
       title: 'Enterprise Security',
       description: 'Bank-level security with data encryption, access controls, and compliance with industry standards.',
-      benefit:     ,
-$4}
-  ];
+      benefit:     ]
+$4}];
 
   const pricingPlans = [
       name: 'Starter',
@@ -44,11 +44,9 @@ $4}
         'Up to 5 data sources',
         'Basic dashboards',
         'Email support',
-        'Standard reports',
-        '1 user account'
-      ],
-      popular: false
-      name: 'Professional',
+        'Standard reports']
+        '1 user account'],
+      popular: name, 'Professional',
       price: '$799',
       description: 'Advanced analytics for growing businesses',
         'Unlimited data sources',
@@ -58,8 +56,7 @@ $4}
         'Up to 10 user accounts',
         'API access',
         'Advanced reporting'
-      popular: true
-      name: 'Enterprise',
+      popular: name, 'Enterprise',
       price: 'Custom',
       period: '',
       description: 'Full-scale analytics solution for large organizations',
@@ -84,9 +81,9 @@ $4}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="tel:+13024640950"
-              className="bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-cyan-700 transition-colors"
-            >
+              href="tel:+13024640950")
+              className="bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-cyan-700 transition-colors")
+            >)
               📞 Call: (302) 464-0950
             </a>
             <Link
@@ -110,9 +107,8 @@ $4}
                   <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
                 <p className="text-gray-300 mb-4">{feature.description}</p>
                 <div className="text-cyan-400 font-medium">{feature.benefit}</div>
-            ))}
-
-        {/* Pricing Section */}
+            ))},
+      {/* Pricing Section */}
             Simple, Transparent Pricing
           <div className="grid md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
@@ -120,8 +116,8 @@ $4}
                 key={index}
                 className={`bg-white/10 backdrop-blur-sm rounded-lg p-8 border ${
                   plan.popular ? 'border-cyan-500' : 'border-gray-600'
-                } relative`}
-                {plan.popular && (
+                } relative`},
+      {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-cyan-500 text-white px-4 py-1 rounded-full text-sm font-medium">
                       Most Popular
@@ -152,10 +148,11 @@ $4}
 
 
 import { Link } from 'react-router-dom';
-const SmartAnalyticsPage: React.FC = () => {
-  const features = [];
+const SmartAnalyticsPage: React.FC = () => {;
+const features = [];
   return (
-    {// TODO: Add content;}
+},
+      {// TODO: Add content;}
 
 };
   ico,
@@ -175,9 +172,9 @@ const SmartAnalyticsPage: React.FC = () => {
 
 
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
-
+import Footer from '../components/Footer';)
+)
+);
 const PagePage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -203,15 +200,15 @@ const PagePage: React.FC = () => {
       description: 'Bank-level security with data encryption, access controls, and compliance with industry standards.',
       benefit: '100% data protection'
 
-    }
+}
   ];
   const pricingPlans = [
       nam,
   e: 'Professional',
       pric,
-  e: '$799',
-      descriptio,
-  n: 'Advanced analytics for growing businesses',
+  e: '$799',)
+      descriptio,)
+  n: 'Advanced analytics for growing businesses',)
                 {plan.popular && ()}
           <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>"
                     <span className="bg-cyan-500 text-white px-4 py-1 rounded-full text-sm font-medium"></span>
@@ -281,11 +278,11 @@ const PagePage: React.FC = () => {
                   kleber@ziontechgroup.com;
                 <MapPin className="w-5 h-5 mr-2 text-cyan-400" />
 
-                <span>364 E Main St STE 1008, Middletown DE 19709</span>
+                <span></div></div>364 E Main St STE 1008, Middletown DE 19709</span>
   );
 };
 
 
 export default SmartAnalyticsPage;
-
-
+]
+]

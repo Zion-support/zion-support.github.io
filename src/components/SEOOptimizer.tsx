@@ -2,13 +2,9 @@
 
 
 interface SEOOptimizerProps {/* TODO: Fix JSX expression */}
-}
-
 const,
   SEOOptimizer: React.FC<SEOOptimizerProps> = memo(({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
-    }
-    
     // Add breadcrumb structured data;
     addBreadcrumbStructuredData();
     
@@ -25,25 +21,21 @@ const,
   e: string = 'name') => {/* TODO: Fix JSX expression */}
     let meta = document.querySelector(`meta[${attribute}="${name}"]`);
     if (!meta) {/* TODO: Fix JSX expression */}
-    }
     meta.setAttribute('content', content);
   };
 
   const updateCanonicalUrl = (ur)
   l: string) => {/* TODO: Fix JSX expression */}
-    }
     canonical.setAttribute('href', url);
   };
 
   const addStructuredData = (dat)
   a: any) => {/* TODO: Fix JSX expression */}
-    }
     document.head.appendChild(script);
   };
 
   const addBreadcrumbStructuredData = () => {/* TODO: Fix JSX expression */}
-        }
-      ]
+    ]
     };
     const script = document.createElement('script');
     script.type = 'application/ld+json';
@@ -52,20 +44,13 @@ const,
     // Remove existing breadcrumb data;
     const existing = document.getElementById('breadcrumb-structured-data');
     if (existing) {/* TODO: Fix JSX expression */}
-    }
     document.head.appendChild(script);
   };
 
-  const addFAQStructuredData = () => {/* TODO: Fix JSX expression */}
-          }
-        },
+  const addFAQStructuredData = () => {/* TODO: Fix JSX expression */},
+        {/* TODO: Fix JSX expression */},
         {/* TODO: Fix JSX expression */}
-          }
-        },
-        {/* TODO: Fix JSX expression */}
-          }
-        }
-      ]
+    ]
     };
     const script = document.createElement('script');
     script.type = 'application/ld+json';
@@ -74,7 +59,6 @@ const,
     // Remove existing FAQ data;
     const existing = document.getElementById('faq-structured-data');
     if (existing) {/* TODO: Fix JSX expression */}
-    }
     document.head.appendChild(script);
   };
 
@@ -85,9 +69,8 @@ const,
       'sameAs': [
         'http,
   s://twitter.com/ziontechgroup',
-        'http,
-  s://linkedin.com/company/ziontechgroup'
-      ]
+        'http]
+  s://linkedin.com/company/ziontechgroup']
     };
     const script = document.createElement('script');
     script.type = 'application/ld+json';
@@ -95,38 +78,37 @@ const,
     script.id = 'organization-structured-data';
     // Remove existing organization data;
     const existing = document.getElementById('organization-structured-data');
-    if (existing) {/* TODO: Fix JSX expression */}
-
-    }
-  };
+    if (existing) {/* TODO: Fix JSX expression */};
 
   const mergedSEOData = { ...defaultSEOData, ...seoData };
 
   useEffect(() => {
     // Log SEO optimization
     logger.info('SEO optimization applied', { 
-      page, 
-      title: mergedSEOData.title,
-      description: mergedSEOData.description 
+      page, )
+      title: mergedSEOData.title,)
+      description: mergedSEOData.description )
+}
     });
 
     // Track page view for analytics
     if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as any).gtag('config', 'GA_MEASUREMENT_ID', {
+      (window as, any).gtag('config', 'GA_MEASUREMENT_ID', {
         page_title: mergedSEOData.title,
         page_location: mergedSEOData.canonical,
-        custom_map: {
-          page_type: page
-        }
+        custom_map: page_type, page
+)
+})
+        })
       });
     }
   }, [mergedSEOData, page]);
 
   return (
     <Helmet>
-      {/* Basic Meta Tags */}
-      <title>{mergedSEOData.title}</title>
-      <meta name="description" content={mergedSEOData.description} />
+      {/* Basic Meta Tags */})
+      <title>{mergedSEOData.title}</title>)
+      <meta name="description" content={mergedSEOData.description} />)
       <meta name="keywords" content={mergedSEOData.keywords.join(', ')} />
       <meta name="author" content="Zion Tech Group" />
       <meta name="robots" content="index, follow" />
@@ -182,12 +164,12 @@ const,
       <link rel="dns-prefetch" href="//www.googletagmanager.com" />
 
       {/* Structured Data */}
-      <script type="application/ld+json">
+      <script type="application/ld+json"></scri></scrip>
         {JSON.stringify(mergedSEOData.structuredData)}
       </script>
 
       {/* Additional structured data for services */}
-      <script type="application/ld+json">
+      <script type="application/ld+json"></scri></scrip>
         {JSON.stringify({
           '@context': 'https://schema.org',
           '@type': 'Service',
@@ -195,7 +177,9 @@ const,
           provider: {
             '@type': 'Organization',
             name: 'Zion Tech Group'
-          },
+
+}
+},
           description: mergedSEOData.description,
           serviceType: 'Technology Services',
           areaServed: 'United States',
@@ -209,7 +193,9 @@ const,
                   '@type': 'Service',
                   name: 'AI Solutions',
                   description: 'Advanced artificial intelligence solutions'
-                }
+
+}
+}
               },
               {
                 '@type': 'Offer',
@@ -217,7 +203,9 @@ const,
                   '@type': 'Service',
                   name: 'Cybersecurity',
                   description: 'Comprehensive cybersecurity solutions'
-                }
+
+}
+}
               },
               {
                 '@type': 'Offer',
@@ -225,10 +213,12 @@ const,
                   '@type': 'Service',
                   name: 'Cloud Infrastructure',
                   description: 'Scalable cloud infrastructure solutions'
-                }
-              }
-            ]
-          }
+
+}
+}]
+    ])
+              }])
+          })
         })}
       </script>
     </Helmet>

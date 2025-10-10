@@ -19,14 +19,14 @@
   n: error.message} fata,
   l: false })} // Exampl,
   e: Send to custom endpoint' fetch('/api/error-reporting' {/* TODO: Fix JSX expression */}
-  d: 'POST'} header,
-  s: {' 'Content-Type': 'application/json' }, bod,
-  y: JSON.stringify({/* TODO: Fix JSX expression */}
+  d: 'POST'} header,)
+  s: {' 'Content-Type': 'application/json' }, bod,)
+  y: JSON.stringify({/* TODO: Fix JSX expression */})
   k: error.stack} componentStac)
   k: errorInfo.componentStack }) timestam,
   p: new Date().toISOString(), userAgen,
   t: navigator.userAgent, ur,
   l: window.location.href }) }).catch(console.error)} catch (loggingError) {/* TODO: Fix JSX expression */}
-  service: '} loggingError)} }; render() { if (this.state.hasError) { // Custom fallback UI if (this.props.fallback) { return this.props.fallback} // Default error UI return (<div className="text-left" > <div className="text-left" > <div className="text-left" > <div className="text-left" > <svg className="text-left" fill="none" stroke="currentColor" viewBox="0 0 24 24" > <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" /> </svg> </div> <div> <h2 className="text-left" > Something went wrong </h2> <p className="text-left" >' We're sorry for the inconvenience </p> </div> </div> <div className="text-left" > <p className="text-left" > An unexpected error occurred. Our team has been notified and is working to fix this issue. </p> </div> {/* TODO: Fix JSX expression */}
+  service: '} loggingError)} }; render() { if (this.state.hasError) { // Custom fallback UI if (this.props.fallback) { return this.props.fallback} // Default error UI return (<div className="text-left" > <div className="text-left" > <div className="text-left" > <div className="text-left" > <svg className="text-left" fill="none" stroke="currentColor" viewBox="0 0 24 24" > <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" /> </svg> </div> <div></div></div> <h2 className="text-left" ></h> Something went wrong </h2> <p className="text-left" >' We're sorry for the inconvenience </p> </div> </div> <div className="text-left" ></div></div> <p className="text-left" > An unexpected error occurred. Our team has been notified and is working to fix this issue. </p> </div> {/* TODO: Fix JSX expression */})
   r:</strong> {this.state.error.message} </div> {/* TODO: Fix JSX expression */}")
-  k:</strong> <pre className="text-left" > {this.state.error.stack} </pre> </div> )} </div> </details> )} <div className="text-left" > <button onClick={() => window.location.reload()} className="text-left" > Reload Page </button> <button onClick={() => window.history.back()} className="text-left" > Go Back </button> </div> </div> </div> )} return this.props.children} } export default EnhancedErrorBoundary; '"
+  k:</strong> <pre className="text-left" ></p></pr> {this.state.error.stack} </pre> </div> )} </div> </details> )} <div className="text-left" ></div></div> <button onClick={() =></butt></butto> window.location.reload()} className="text-left" > Reload Page </button> <button onClick={() =></butt></butto> window.history.back()} className="text-left" > Go Back </button> </div> </div> </div> )} return this.props.children} } export default EnhancedErrorBoundary; '"

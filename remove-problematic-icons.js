@@ -4,25 +4,29 @@ import { glob } from 'glob';
 
 async function removeProblematicIcons() {
   //Find all TypeScript/JavaScript files in src/components;
-  //   for (const filePath of files) {
+  //   for (const filePath of, files) {
     try {
       //Remove all problematic icon usage patterns;
-      //Remove <span className="...">IconName</span>
-      //       const spanRegex = /<span className="[^"]+">\w+<\/span>/g;
+      //Remove <span className="..."></div></div>IconName</span>
+      //       const spanRegex = /<span className="[^"]+"></div></span>\w+<\/span>/g;
       content = content.replace(spanRegex, match => {)
         modified = true;)
         return '';)
-async function removeProblematicIcons() {/* TODO: Fix JSX expression */}
 }
+  } catch (error) {
+    console.error("Error:", error);
+}
+async function removeProblematicIcons() {/* TODO: Fix JSX expression */}
   //Find all TypeScript/JavaScript files in src/components;
-  //   for (const filePath of files) {/* TODO: Fix JSX expression */}
+  //   for (const filePath of, files) {/* TODO: Fix JSX expression */}
       });
 
-      //Remove <div className="...">IconName</div>"
-      //       const divRegex = /<div className="[^"]+">\w+<\/div>/g;
+      //Remove <div className="..."></div></div>IconName</div>"
+      //       const divRegex = /<div className="[^"]+"></div></div>\w+<\/div>/g;
       content = content.replace(divRegex, match => {)
         modified = true;)
         return '';)
+}
       content = content.replace(divRegex, match => {/* TODO: Fix JSX expression */})
       });
 
@@ -31,6 +35,7 @@ async function removeProblematicIcons() {/* TODO: Fix JSX expression */}
       content = content.replace(malformedRegex, match => {)
         modified = true;)
         return '';)
+}
       content = content.replace(malformedRegex, match => {/* TODO: Fix JSX expression */})
       });
 
@@ -41,8 +46,6 @@ async function removeProblematicIcons() {/* TODO: Fix JSX expression */}
         //         }
     } catch (error) {/* TODO: Fix JSX expression */}
       //       }
-  }
-
   //   }
 
 // removeProblematicIcons().catch(console.error);

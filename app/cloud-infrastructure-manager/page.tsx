@@ -25,12 +25,13 @@ import {
   Monitor
 } from 'lucide-react';
 
-const CloudInfrastructureManagerPage: React.FC = () => {
-  const features = [
+const CloudInfrastructureManagerPage: React.FC = () => {;
+const features = [
     {
       icon: Cloud,
       title: 'Multi-Cloud Management',
       description: 'Manage and monitor your infrastructure across AWS, Azure, Google Cloud, and other platforms from a single dashboard.'
+}
     },
     {
       icon: Settings,
@@ -44,10 +45,9 @@ const CloudInfrastructureManagerPage: React.FC = () => {
     },
     {
       icon: Zap,
-      title: 'DevOps Integration',
-      description: 'Seamless integration with CI/CD pipelines and DevOps tools for streamlined operations.'
-    }
-  ];
+      title: 'DevOps Integration',]
+      description: 'Seamless integration with CI/CD pipelines and DevOps tools for streamlined operations.']
+    }];
 
   const benefits = [
     'Centralized cloud infrastructure management',
@@ -56,12 +56,11 @@ const CloudInfrastructureManagerPage: React.FC = () => {
     'Enhanced security and compliance',
     'Real-time monitoring and alerts',
     'Easy deployment and configuration',
-    'Multi-cloud support',
-    'Expert technical support'
-  ];
+    'Multi-cloud support']
+    'Expert technical support'];
 
   return (
-    <>
+    <>\</>
       <Helmet>
         <title>Cloud Infrastructure Manager - Zion Tech Group | Cloud Management Platform</title>
         <meta name="description" content="Comprehensive cloud infrastructure management platform by Zion Tech Group. Manage, monitor, and optimize your cloud resources across multiple providers." />
@@ -84,9 +83,9 @@ const CloudInfrastructureManagerPage: React.FC = () => {
                 <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
                   <Cloud className="mr-2 h-5 w-5" />
                   Start Free Trial
-                </button>
-                <button className="border border-white/20 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300 flex items-center justify-center">
-                  <Phone className="mr-2 h-5 w-5" />
+                </button>)
+                <button className="border border-white/20 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300 flex items-center justify-center">)
+                  <Phone className="mr-2 h-5 w-5" />)
                   Call (302) 464-0950
                 </button>
               </div>

@@ -3,12 +3,13 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { BarChart, TrendingUp, Users, ShoppingCart, DollarSign, Target, CheckCircle, ArrowRight } from 'lucide-react';
 
-const EcommerceAnalyticsProPage: React.FC = () => {
-  const features = [
+const EcommerceAnalyticsProPage: React.FC = () => {;
+const features = [
     {
       icon: BarChart,
       title: 'Real-time Analytics',
       description: 'Track sales, conversions, and customer behavior in real-time with advanced analytics dashboards.'
+}
     },
     {
       icon: TrendingUp,
@@ -32,13 +33,12 @@ const EcommerceAnalyticsProPage: React.FC = () => {
     },
     {
       icon: Target,
-      title: 'Conversion Tracking',
-      description: 'Monitor and optimize conversion funnels to increase sales and reduce cart abandonment.'
-    }
-  ];
+      title: 'Conversion Tracking',]
+      description: 'Monitor and optimize conversion funnels to increase sales and reduce cart abandonment.']
+    }];
 
   return (
-    <>
+    <>\</>
       <Helmet>
         <title>E-commerce Analytics Pro | Zion Tech Group - Advanced E-commerce Intelligence</title>
         <meta name="description" content="Transform your e-commerce business with AI-powered analytics. Track sales, optimize inventory, and maximize revenue with our comprehensive analytics platform." />
@@ -55,9 +55,9 @@ const EcommerceAnalyticsProPage: React.FC = () => {
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Transform your e-commerce business with AI-powered analytics that drive growth, optimize operations, and maximize revenue.
               </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            </div>)
+)
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">)
               {features.map((feature, index) => (
                 <div
                   key={index}

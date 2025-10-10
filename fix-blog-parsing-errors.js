@@ -9,28 +9,28 @@ const blogFiles = [];
 
 function findBlogFiles(dir) {/* TODO: Fix JSX expression */}
     } else if (file === 'page.tsx' || file === 'page.ts') {/* TODO: Fix JSX expression */}
-    }
-  }
-}
-
 findBlogFiles(blogDir);
 
 function fixParsingErrors(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
+  try {;
+let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
     // Fix missing closing parenthesis before closing brace;
     const lines = content.split('\n');
     const newLines = [];
     
-    for (let i = 0; i < lines.length; i++) {
-      const line = lines[i];
+    for (let i = 0; i < lines.length; i++) {;
+const line = lines[i];
       
+}
+  } catch (error) {
+    console.error("Error:", error);
+}
       // Check if this line ends with }; and the previous line doesn't have a closing parenthesis;
-      if (line.trim() === '};' && i > 0) {
-        const prevLine = lines[i - 1];
-        // If previous line doesn't end with ) or );, add missing )
+      if (line.trim() === '};' && i > 0) {;
+const prevLine = lines[i - 1];
+        // If previous line doesn't end, with) or );, add missing )
         if (!prevLine.trim().endsWith(')') && !prevLine.trim().endsWith(');')) {
           // Check if this looks like a JSX return statement that needs closing;
           if (prevLine.includes('</') || prevLine.includes('>')) {
@@ -40,10 +40,6 @@ function fixParsingErrors(filePath) {
 function fixParsingErrors(filePath) {/* TODO: Fix JSX expression */}
       // Check if this line ends with }; and the previous line doesn't have a closing parenthesis;
       if (line.trim() === '};' && i > 0) {/* TODO: Fix JSX expression */}
-          }
-        }
-      }
-      
       newLines.push(line);
     }
     
@@ -53,11 +49,10 @@ function fixParsingErrors(filePath) {/* TODO: Fix JSX expression */}
   } catch (error) {/* TODO: Fix JSX expression */}`
     console.error(`Error processing ${filePath}:`, error.message);
   }
-}
-
 // Process all blog files;
 blogFiles.forEach(file => {)
   fixParsingErrors(file);
+}
 blogFiles.forEach(file => {/* TODO: Fix JSX expression */})
 });
 `

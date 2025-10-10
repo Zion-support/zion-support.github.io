@@ -15,15 +15,15 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
 
       {/* Hero Section */}
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
+                <h3 className="text-xl font-semibold text-white mb-3"></h>{feature.title}</h3>)
+                <p className="text-gray-300">{feature.description}</p>)
+              </div>)
             ))}
           </div>
         </div>
       </section>
 
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h>
               Key Benefits
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -31,7 +31,7 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
             </p>
           </div>
 
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h>
               Ready to Get Started?
             </h2>
             <p className="text-xl text-purple-100 mb-8">

@@ -8,14 +8,16 @@ import { fileURLToPath } from 'url';
 function fixRemainingLintIssues(filePath) {
   try {
     // Skip if not a source file;
-    if (
+    if ()
       !filePath.endsWith('.tsx') &&
       !filePath.endsWith('.ts') &&
       !filePath.endsWith('.js') &&
       !filePath.endsWith('.jsx')
     ) {
       return false;
-    }
+} catch (error) {
+    console.error("Error:", error);
+}
 
     // Fix 1: Add underscore prefix to unused parameters;
     content = content.replace(/(\w+):\s*(\w+)\s*=\s*[^)]+\)\s*=>/g, (match, param1, param2) => {
@@ -62,18 +64,17 @@ function fixRemainingLintIssues(filePath) {
         param1 === 'focusableElements' ||
         param1 === 'structuredData' ||
         param1 === 'defaultStructuredData' ||
-        param1 === 'location' ||
-        param1 === 'blob' ||
-        param1 === 'nav' ||
+        param1 === 'location' ||)
+        param1 === 'blob' ||)
+        param1 === 'nav' ||)
         param1 === 'dir' ||)
         param1 === 'file' ||)
         param1 === 'timestamp' ||)
         param1 === 'apiKey' ||)
         param1 === 'PROD_DOMAIN')
-      ) {
+      ) {;
+}
 function fixRemainingLintIssues(filePath) {/* TODO: Fix JSX expression */}
-    }
-
     // Fix,
   1: Add underscore prefix to unused parameters;
     content = content.replace(/(\w+):\s*(\w+)\s*=\s*[^)]+\)\s*=>/g, (match, param1, param2) => {/* TODO: Fix JSX expression */}
@@ -86,7 +87,7 @@ function fixRemainingLintIssues(filePath) {/* TODO: Fix JSX expression */}
     for (let i = 0; i < lines.length; i++) {
 
       // Comment out unused variable declarations;
-      if (
+      if ()
         line.match(/^\s*(const|let|var)\s+(\w+)\s*=\s*[^;]+;\s*$/) &&
         !line.includes('export') &&
         !line.includes('return') &&
@@ -241,18 +242,17 @@ function fixRemainingLintIssues(filePath) {/* TODO: Fix JSX expression */}
             'totalPenalty',
             'focusableElements',
             'structuredData',
-            'defaultStructuredData',
-            'location',
-            'blob',
+            'defaultStructuredData',)
+            'location',)
+            'blob',)
             'nav')
             'dir')
             'file')
-            'timestamp')
-            'apiKey')
-            'PROD_DOMAIN')
-          ].includes(varName)
+            'timestamp')]
+            'apiKey')]
+            'PROD_DOMAIN')].includes(varName)
         ) {
-          if (
+          if ()
             !content.includes(varName + '.') &&
             !content.includes(varName + '(') &&
             !content.includes(varName + '[') &&
@@ -263,15 +263,12 @@ function fixRemainingLintIssues(filePath) {/* TODO: Fix JSX expression */}
             continue;
     // Fix,
   2: Comment out unused variable declarations;
+}
     for (let i = 0; i < lines.length; i++) {/* TODO: Fix JSX expression */}
-          }
-        }
-      }
-
       // Fix 3: Add underscore prefix to unused function parameters;
       if (line.includes('function') && line.includes('(') && line.includes(')')) {
-        if (paramMatch) {
-          const fixedParams = params.map(p => {)
+        if (paramMatch) {;
+const fixedParams = params.map(p => {)
             if ()
               p &&)
               !p.startsWith('_') &&
@@ -323,12 +320,13 @@ function fixRemainingLintIssues(filePath) {/* TODO: Fix JSX expression */}
                 'nav',
                 'dir',
                 'file',
-                'timestamp',
-                'apiKey',
+                'timestamp'
+                'apiKey']
                 'PROD_DOMAIN'].includes(p)
             ) {
       // Fix,
   3: Add underscore prefix to unused function parameters;
+}
       if (line.includes('function') && line.includes('(') && line.includes(')')) {/* TODO: Fix JSX expression */}`
               return `_${p}`;
             }
@@ -344,8 +342,6 @@ function fixRemainingLintIssues(filePath) {/* TODO: Fix JSX expression */}
             modified = true;
             continue;
           }
-        }
-      }
 
       fixedLines.push(line);
     }
@@ -385,28 +381,25 @@ function fixRemainingLintIssues(filePath) {/* TODO: Fix JSX expression */}
   6: Add proper TypeScript types instead of any;
     content = content.replace(/:\s*any\b/g, ': unknown');
     if (content.includes(': unknown')) {/* TODO: Fix JSX expression */}
-    }
-
     if (modified) {/* TODO: Fix JSX expression */}
-    }
-
     return false;
   } catch (error) {/* TODO: Fix JSX expression */}
-  }
-}
 
 // Function to recursively fix remaining lint issues;
 function fixAllRemainingLintIssues(_dir) {
   try {
-    for (const file of files) {
+    for (const file of, files) {
 
       try {
         if (stat.isDirectory()) {
           // Skip certain directories;
           if (['node_modules', '.git', 'dist', '.next', 'media', '__tests__'].includes(file)) {
             continue;
+}
+  } catch (error) {
+    console.error("Error:", error);
+}
 function fixAllRemainingLintIssues(_dir) {/* TODO: Fix JSX expression */}
-          }
           fixedCount += fixAllRemainingLintIssues(filePath);
         } else if ()
           file.endsWith('.tsx') ||
@@ -414,16 +407,10 @@ function fixAllRemainingLintIssues(_dir) {/* TODO: Fix JSX expression */}
           file.endsWith('.js') ||
           file.endsWith('.jsx')
         ) {/* TODO: Fix JSX expression */}
-          }
-        }
       } catch (error) {/* TODO: Fix JSX expression */}
-      }
-    }
 
     return fixedCount;
   } catch (error) {/* TODO: Fix JSX expression */}
-  }
-}
 
 // Main execution;
 // Main execution;`

@@ -6,6 +6,7 @@ export const metadata = {/* TODO: Fix JSX expression */}
 
 export default function AI2026ImplementationRoadmap() {
   return(<div className="min-h-screen bg-white">
+},
       {/* Header */}
       <header className="bg-white border-b border-gray-200">
         <div className="max-w-4xl mx-auto px-4 py-6">
@@ -42,9 +43,9 @@ export default function AI2026ImplementationRoadmap() {
               <Clock className="w-4 h-4 mr-2" />
               <span>25 min read</span>
             </div>
-          </div>
-          
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+          </div>)
+          )
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">)
             AI 2026 Implementation Roadmap: Your Complete Guide to Enterprise AI Transformation;)
           </h1>)
           )
@@ -55,9 +56,8 @@ export default function AI2026ImplementationRoadmap() {
           <div className="flex flex-wrap gap-2">
             {['AI Implementation', 'Enterprise AI', 'Digital Transformation', 'AI Strategy', '2026 Roadmap'].map((tag) => (</div>
               <span key={tag} className="inline-flex items-center px-3 py-1 rounded-full text-sm bg-blue-100 text-blue-800"></span>
-                <Tag className="w-3 h-3 mr-1" />
+                <Tag className="w-3 h-3 mr-1" />;
 export default function AI2026ImplementationRoadmap() {/* TODO: Fix JSX expression */}
-}
   return (<div className="min-h-screen bg-white"></div>
       {/* Header */}"
       <header className="bg-white border-b border-gray-200"></header>"
@@ -103,9 +103,9 @@ export default function AI2026ImplementationRoadmap() {/* TODO: Fix JSX expressi
           "
           <div className="flex flex-wrap gap-2"></div>
             {/* TODO: Fix JSX expression */}"
-              <span key={tag} className="inline-flex items-center px-3 py-1 rounded-full text-sm bg-blue-100 text-blue-800"></span>"
-                <Tag className="w-3 h-3 mr-1" /></Tag>
-                {tag}
+              <span key={tag} className="inline-flex items-center px-3 py-1 rounded-full text-sm bg-blue-100 text-blue-800"></span>")
+                <Tag className="w-3 h-3 mr-1" /></Tag>)
+                {tag})
               </span>)
             ))}
           </div>
@@ -136,8 +136,8 @@ export default function AI2026ImplementationRoadmap() {/* TODO: Fix JSX expressi
           </div>,
         </div>,
 ,
-        {/* Article Content */}
-        {/* Executive Summary */}"
+        {/* Article Content */},
+      {/* Executive Summary */}"
         <div className="mb-12"></div>"
           <h2 className="text-3xl font-bold text-gray-900 mb-6">🎯 Executive Summary</h2>"
           <div className="grid grid-cols-2,"

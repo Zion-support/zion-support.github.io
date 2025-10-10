@@ -4,7 +4,6 @@ const October2025LatestContentBanne, r = () => {/* TODO: Fix JSX expression */}
     {/* TODO: Fix JSX expression */}
     },
     {/* TODO: Fix JSX expression */}
-    }
   ]; return(<section, classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-indi, g, o-950, t, o-sla, t, e-900, relative, overflow-hidd, e, n">
       {/* Animated, background, elements */}
       <div, className="absolute, inse, t-0, opacit, y-30"></section>
@@ -21,15 +20,15 @@ const October2025LatestContentBanne, r = () => {/* TODO: Fix JSX expression */}
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, m, b-4, b, g-gradie, n, t-to-r, fro, m-viol, e, t-400, vi, a-cy, a, n-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t">
             Latest, AI, Breakthroughs & Enterprise, Strategie, s;
           </h2>
-          <p, className="te, x, t-xl, tex, t-sla, t, e-300, ma, x-w-3xl, m, x-au, t, o">
-            Explore, cuttin, g-edge, insights, on GenAI, orchestrat, i, o, n, AI, security, frameworks, and, rea, l-time, multimodal, processing;
-          </p>
+          <p, className="te, x, t-xl, tex, t-sla, t, e-300, ma, x-w-3xl, m, x-au, t, o">)
+            Explore, cuttin, g-edge, insights, on GenAI, orchestrat, i, o, n, AI, security, frameworks, and, rea, l-time, multimodal, processing;)
+          </p>)
         </div>)
         {/* Articles, Gri, d */})
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-12">)
-          { articl, e, s.m, a, p((art, i, c, l, e, i, d, x) = > {
-            const IconComponen, t = artic, l, e.ic, o, n; return(<Link, ke, y = { id, x  }, to={ artic, l, e.li, n, k } className="group, b, g-sla, t, e-8, 0, 0/50, backdro, p-bl, u, r-sm, border, border-sla, t, e-700, hove, r: bord, e, r-viol, e, t-5, 0, 0/50, rounde, d-x, l, p-6, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:-transla, t, e-y-2, hove, r:shad, o, w-2xl, hove, r:shad, o, w-viol, e, t-5, 0, 0/20"
-            const IconComponen, t = artic, l, e.ic, o, n; return (</div>
+          { articl, e, s.m, a, p((art, i, c, l, e, i, d, x) = > {;
+const IconComponen, t = artic, l, e.ic, o, n; return(<Link, ke, y = { id, x  }, to={ artic, l, e.li, n, k } className="group, b, g-sla, t, e-8, 0, 0/50, backdro, p-bl, u, r-sm, border, border-sla, t, e-700, hove, r: bord, e, r-viol, e, t-5, 0, 0/50, rounde, d-x, l, p-6, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:-transla, t, e-y-2, hove, r:shad, o, w-2xl, hove, r:shad, o, w-viol, e, t-5, 0, 0/20";
+const IconComponen, t = artic, l, e.ic, o, n; return (</div>
               <Link, ke, y = { id, x  }, to={ artic, l, e.li, n, k } className="group, b, g-sla, t, e-8, 0, 0/50, backdro, p-bl, u, r-sm, border, border-sla, t, e-700, hove, r: bord, e, r-viol, e, t-5, 0, 0/50, rounde, d-x, l, p-6, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:-transla, t, e-y-2, hove, r:shad, o, w-2xl, hove, r:shad, o, w-viol, e, t-5, 0, 0/20"
               >
                 <div, classNam, e = { `w-1, 2, h-12, b, g-gradie, n, t-to-r ${artic, l, e.grad, i, e, n, t }, round, e, d-lg, flex, items-center, justif, y-center, m, b-4, grou, p-hov, e, r: sca, l, e-110, transitio, n-transf, o, r, m`}></div>
@@ -70,9 +69,9 @@ const October2025LatestContentBanne, r = () => {/* TODO: Fix JSX expression */}
                 </h3>"
                 <p, classNam, e = "te, x, t-sla, t, e-400, m, b-4, lin, e-cla, m, p-2"></p>
                   {artic, l, e.description}
-                </p>
-                <div, className="flex, item, s-center, ga, p-2, tex, t-viol, e, t-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l"></div>
-                  <sp, a, n>Read, Mor, e</sp, a, n>
+                </p>)
+                <div, className="flex, item, s-center, ga, p-2, tex, t-viol, e, t-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l"></div>)
+                  <sp, a, n>Read, Mor, e</sp, a, n>)
                   <Link, className="w-4 h-4" />)
                 </div>)
                 </p>"

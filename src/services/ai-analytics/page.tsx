@@ -5,8 +5,8 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 
-const AIAnalyticsPage: React.FC = () => {
-  const features = [
+const AIAnalyticsPage: React.FC = () => {;
+const features = [
     {
       icon: Brain,
       title: 'Predictive Analytics',
@@ -14,9 +14,9 @@ const AIAnalyticsPage: React.FC = () => {
       benefits: [
         '95% accuracy in predictions',
         'Real-time data processing',
-        'Automated trend detection',
-        'Custom prediction models'
-      ]
+        'Automated trend detection']
+        'Custom prediction models']
+}
     },
       icon: BarChart,
       title: 'Real-time Dashboards',
@@ -28,10 +28,11 @@ import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const AIAnalyticsPage: React.FC = () => {
-  const features = [];
+const AIAnalyticsPage: React.FC = () => {;
+const features = [];
   return (
-    {// TODO: Add content;}
+},
+      {// TODO: Add content;}
 
 };
   ico,
@@ -41,8 +42,8 @@ const AIAnalyticsPage: React.FC = () => {
       descriptio,
   n: 'Forecast future trends and outcomes with advanced machine learning algorithms',
       benefit,
-  s: [
-  // TOD,
+  s: []
+  // TOD
   O: Add items];
 //         '95% accuracy in predictions',
 //         'Real-time data processing',
@@ -103,9 +104,8 @@ titletitle: 'Financial Forecasting',
       color:       ,
 titletitle: 'Operational Efficiency',
       description: 'Optimize business processes and identify areas for improvement',
-      color: 'text-yellow-400'
-
-  const pricingTiers = [
+      color: 'text-yellow-400';
+const pricingTiers = [
       name: 'Starter',
       price: '$1,500',
       period: '/month',
@@ -114,9 +114,8 @@ titletitle: 'Operational Efficiency',
         'Up to 10 data sources',
         'Basic dashboards',
         'Monthly reports',
-        'Email support',
-        'Standard integrations'
-      ],
+        'Email support']
+        'Standard integrations'],
       color: 'text-blue-400',
       bgColor:       ,
 namename: 'Professional',
@@ -130,8 +129,7 @@ namename: 'Professional',
         'API access'
       color: 'text-purple-400',
       bgColor: 'bg-purple-500/10',
-      popular: true
-      name: 'Enterprise',
+      popular: name, 'Enterprise',
       price: 'Custom',
       period: '',
       description: 'Tailored solutions for large organizations with extensive requirements',
@@ -143,9 +141,8 @@ namename: 'Professional',
         'On-premise deployment',
         'SLA guarantees'
       color: 'text-cyan-400',
-      bgColor: 'bg-cyan-500/10'
-
-  const benefits = [
+      bgColor: 'bg-cyan-500/10';
+const benefits = [
       icon: Star,
       title: '95% Accuracy',
       description:       ,
@@ -155,8 +152,8 @@ title$5: 'Actionable Insights',
       description:       ,
 icon$5: Award,
       title: 'Proven Results',
-      description: '300% average ROI for our analytics clients'
-  const useCases = [
+      description: '300% average ROI for our analytics clients';
+const useCases = [
 
       title: 'Sales Performance Analysis',
       description: 'Track sales metrics, identify top performers, and optimize sales strategies',
@@ -164,7 +161,7 @@ icon$5: Award,
       color: 'text-green-400',
 
   return (
-    <>
+    <>\</>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16 pt-24">
@@ -192,9 +189,9 @@ icon$5: Award,
           {/* Features */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
-              Key Features
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              Key Features)
+            </h2>)
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">)
               {features.map((feature, index) => (
                 <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300">
                   <div className="flex items-start mb-4">
@@ -405,5 +402,5 @@ export default AIAnalyticsPage;
 
 
 export default AiAnalyticsPage;
-
-
+]
+]

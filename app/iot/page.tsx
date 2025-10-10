@@ -2,18 +2,18 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Wifi, Shield, Zap, Target, BarChart, Cpu, Sparkles } from 'lucide-react';
 
-const IoTPage: React.FC = () => {
-  const iotServices = [
+const IoTPage: React.FC = () => {;
+const iotServices = [
     {
       title: 'IoT Device Management Platform',
       description: 'Comprehensive IoT device management and monitoring platform for connected devices.',
-      icon: '📱',
-      price: 'Starting at $2,500/month',
+      icon: price, 'Starting at $2,500/month']
       features: ['Device provisioning', 'Remote monitoring', 'Firmware updates', 'Device analytics', 'Alert management'],
       benefits: ['Reduce device downtime by 60%', 'Improve operational efficiency', 'Lower maintenance costs'],
       marketPrice: '$4,000-15,000/month',
       category: 'Device Management',
       technologies: ['AWS IoT', 'Azure IoT', 'Google Cloud IoT', 'MQTT', 'CoAP']
+}
     },
     {
       title: 'Smart City Solutions',
@@ -141,7 +141,7 @@ const IoTPage: React.FC = () => {
   const categories = [...new Set(iotServices.map(service => service.category))];
 
   return (
-    <>
+    <>\</>
       <Helmet>
         <title>IoT Services - Zion Tech Group</title>
         <meta name="description" content="Comprehensive IoT solutions including smart cities, industrial IoT, smart agriculture, and connected device management." />
@@ -217,15 +217,15 @@ const IoTPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Services by Category */}
-        {categories.map(category => (
+        {/* Services by Category */},
+      {categories.map(category => (
           <section key={category} className="py-16 bg-gray-50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
               <div className="text-center mb-12"></div>
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                  {category} Solutions
-                </h2>
-                <p className="text-xl text-gray-600">
+                  {category} Solutions)
+                </h2>)
+                <p className="text-xl text-gray-600">)
                   Specialized {category.toLowerCase()} solutions powered by IoT technology
                 </p>
               </div>
@@ -291,9 +291,8 @@ const IoTPage: React.FC = () => {
               </div>
             </div>
           </section>
-        ))}
-
-        {/* IoT Capabilities Showcase */}
+        ))},
+      {/* IoT Capabilities Showcase */}
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
             <div className="text-center mb-12"></div>

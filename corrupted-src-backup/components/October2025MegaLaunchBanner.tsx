@@ -9,19 +9,14 @@ const, October2025MegaLaunchBanne, r: Rea, c, t.FC = () => {
       descripti, o, n: "Se, l, f-healing, infrastructure, achieving 99.9% upti, m, e","
       li, n, k: "/bl, o, g/ai-20, 2, 5-o, c, t-04-autonomo, u, s-devo, p, s-platfor, m, s","
       catego, r, y: "DevO, p, s & Infrastructu, r, e"
-const, October2025MegaLaunchBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}"
+}
+const, October2025MegaLaunchBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */},
+      {/* TODO: Fix JSX expression */},
+      {/* TODO: Fix JSX expression */},
+      {/* TODO: Fix JSX expression */},
+      {/* TODO: Fix JSX expression */},
+      {/* TODO: Fix JSX expression */},
+      {/* TODO: Fix JSX expression */}"
 } fr, o, m "rea, c, t-rout, e, r-d, o, m";';
 impo, r, t {/* TODO: Fix JSX expression */}"
 } fr, o, m "luci, d, e-rea, c, t";';
@@ -33,21 +28,16 @@ const, October2025MegaLaunchBanne, r: Rea, c, t.FC = () => {
       descripti, o, n: "Se, l, f-healing, infrastructure, achieving 99.9% upti, m, e",";
       li, n, k: "/bl, o, g/ai-20, 2, 5-o, c, t-04-autonomo, u, s-devo, p, s-platfor, m, s",";
       catego, r, y: "DevO, p, s & Infrastructu, r, e"
-const, October2025MegaLaunchBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-  ];
+}
+const, October2025MegaLaunchBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */},
+      {/* TODO: Fix JSX expression */},
+      {/* TODO: Fix JSX expression */},
+      {/* TODO: Fix JSX expression */},
+      {/* TODO: Fix JSX expression */},
+      {/* TODO: Fix JSX expression */},
+      {/* TODO: Fix JSX expression */}]
+    ]
+    }];
   return(<div, className="bg-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-indi, g, o-600, tex, t-white, rounde, d-2x, l, p-8">
       <div, className="te, x, t-center, m, b-8">
         <div, className="flex, item, s-center, justif, y-center, ga, p-3, m, b-4">
@@ -80,9 +70,9 @@ const, October2025MegaLaunchBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
         </p>"
         <p, className="te, x, t-purp, l, e-200, tex, t-sm">";
           Breakthrough, insights, on se, l, f-healing, system, s, unified, AI, processing, and, productio, n-ready, enterprise, solutions;
-        </p>
-      </d, i, v>
-      <div, className="grid, m, d: gr, i, d-co, l, s-2 l;
+        </p>)
+      </d, i, v>)
+      <div, className="grid, m, d: gr, i, d-co, l, s-2 l;)
   g:gr, i, d-co, l, s-3, ga, p-6, m, b-8">")
       <div, className="grid, m, d: gr, i, d-co, l, s-2 l;)
   g:gr, i, d-co, l, s-3, ga, p-6, m, b-8">";)

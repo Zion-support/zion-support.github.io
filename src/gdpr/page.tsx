@@ -4,13 +4,14 @@ import { Link } from 'react-router-dom';
 
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-const Pagetsx: React.FC = () => {
-  const _features = [];
+const Pagetsx: React.FC = () => {;
+const _features = [];
   return (
     {icon: Users,
     title: 'Advanced Features',
       description: 'Cutting-edge solutions powered by artificial intelligence and machine learning',
       benefits: ['Improved efficiency', 'Better results', 'Cost savings']
+}
     },
     {icon: TrendingUp,
     title: 'Performance Optimization',
@@ -23,7 +24,7 @@ const Pagetsx: React.FC = () => {
       benefits: ['Data protection', 'Compliance', 'Secure operations']
 
     }
-  ]
+    ]
   return (<div className="min-h-screen bg-gray-900 text-white"></div>
       <Helmet></Helmet>
         <title>tsx - Zion Tech Group</title>"
@@ -56,9 +57,9 @@ const Pagetsx: React.FC = () => {
 
         {/* Features Section */}
         <section className="py-16 px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-center mb-12">Key Features</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="max-w-6xl mx-auto">)
+            <h2 className="text-3xl font-bold text-center mb-12">Key Features</h2>)
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">)
               {_features.map((feature, index) => (}
                 <div key={index} className="bg-gray-800 rounded-xl p-6 text-center">
                   <feature.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
@@ -93,11 +94,7 @@ const Pagetsx: React.FC = () => {
       <Footer /></div>
   )
 }
-export default Pagetsx;"
-
-
-
-
+export default Pagetsx;";
 export default GdprPage;
 
 

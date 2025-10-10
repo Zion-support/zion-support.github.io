@@ -8,6 +8,7 @@ const, UltimateAIRevolutionShowcase202, 5 = () => {
       col, o, r: 'fr, o, m-viol, e, t-500, t, o-purp, l, e-50, 0',
       reade, r, s: '5, 0, 0, K+',
       rati, n, g: 5., 0;
+}
     },
     {
       title: 'Autonomous, Neural, Network, s',
@@ -63,7 +64,7 @@ const, UltimateAIRevolutionShowcase202, 5 = () => {
           <Globe, classNam, e="w-5 h-5" />
           Get, AI, Services;
           <Link, classNam, e="w-5 h-5" />
-}}}
+}
 const, UltimateAIRevolutionShowcase202, 5 = () => {/* TODO: Fix JSX expression */}
     },
     {/* TODO: Fix JSX expression */}
@@ -94,5 +95,5 @@ const, UltimateAIRevolutionShowcase202, 5 = () => {/* TODO: Fix JSX expression *
           <Link, classNam, e="w-5 h-5" /></Link>"
           <Globe, classNam, e="w-5 h-5" /></Globe>
           Get, AI, Services;"
-          <Link, classNam, e="w-5 h-5" /></Link>
-}}}"`
+          <Link, classNam, e="w-5 h-5" /></Link>]
+}"`]

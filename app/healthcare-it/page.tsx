@@ -52,9 +52,9 @@ import SEOOptimizer from '../components/SEOOptimizer';
         keywords="healthcare IT, HIPAA compliance, patient data security, EHR integration, healthcare analytics, medical technology"
       />
       <Navigation />
-      
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden">
+      )
+      {/* Hero Section */})
+      <section className="relative py-20 px-4 overflow-hidden">)
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(239,68,68,0.3)_0%,transparent_50%)] animate-pulse" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
         <div className="relative max-w-7xl mx-auto text-center">

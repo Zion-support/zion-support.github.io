@@ -1,19 +1,15 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-=======
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Cloud, Server, Database } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
 
-const CloudMigrationServicesPage: React.FC = () => {
-  const features = [
+const CloudMigrationServicesPage: React.FC = () => {;
+const features = [
     {
-<<<<<<< HEAD
       icon: Shield,
       title: 'Secure Cloud Migration',
       description: 'Safe and secure migration of your applications and data to the cloud'
+}
     },
     {
       icon: Zap,
@@ -27,55 +23,25 @@ const CloudMigrationServicesPage: React.FC = () => {
     },
     {
       icon: Globe,
-      title: 'Multi-Cloud Support',
-      description: 'Support for migration to AWS, Azure, GCP, and other cloud platforms'
-=======
-      icon: Cloud,
-      title: 'Cloud Migration',
-      description: 'Seamless migration to cloud platforms with minimal downtime'
-    },
-    {
-      icon: Server,
-      title: 'Infrastructure Setup',
-      description: 'Complete cloud infrastructure setup and configuration'
-    },
-    {
-      icon: Database,
-      title: 'Database Migration',
-      description: 'Secure and efficient database migration services'
-    },
-    {
-      icon: Shield,
-      title: 'Security & Compliance',
-      description: 'Enterprise-grade security and compliance standards'
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
-    }
-  ];
+      title: 'Multi-Cloud Support',]
+      description: 'Support for migration to AWS, Azure, GCP, and other cloud platforms']
+    }];
 
   const benefits = [
-<<<<<<< HEAD
     'Advanced cloud migration technology',
     'Real-time migration monitoring',
     'Enterprise-grade security and compliance',
     'Scalable and flexible migration solutions',
-=======
-    'Seamless cloud migration',
-    'Minimal downtime during migration',
-    'Cost-effective solutions',
-    'High availability and reliability',
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
     '24/7 technical support',
     'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ];
+    'Cost-effective pricing plans']
+    'Proven track record of success'];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Cloud Migration Services | Zion Tech Group</title>
         <meta name="description" content="Professional Cloud Migration Services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-<<<<<<< HEAD
         <meta name="keywords" content="cloud migration, cloud services, IT services, Zion Tech Group, cloud computing" />
       </Helmet>
 
@@ -91,9 +57,9 @@ const CloudMigrationServicesPage: React.FC = () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Our cloud migration solutions deliver unmatched performance, security, and scalability.
           </p>
-        </div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        </div>)
+)
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">)
           {features.map((feature, index) => (
             <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center hover:bg-white/20 transition-all duration-300">
               <feature.icon className="h-12 w-12 text-purple-400 mx-auto mb-4" />
@@ -133,44 +99,6 @@ const CloudMigrationServicesPage: React.FC = () => {
               <Mail className="mr-2 h-5 w-5" />
               Email Us
             </button>
-=======
-        <meta name="keywords" content="cloud migration, cloud services, migration services, AI solutions, IT services, Zion Tech Group" />
-      </Helmet>
-
-      {/* Hero Section */}
-      <section className="relative py-20 px-4">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Cloud Migration Services
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Transform your business with our advanced cloud migration solutions. 
-            Powered by cutting-edge AI technology and industry expertise.
-          </p>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Our Cloud Migration Services?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our cloud migration solutions deliver unmatched performance, security, and scalability.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-                <feature.icon className="w-12 h-12 text-purple-400 mb-4" />
-                <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
-            ))}
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
           </div>
         </div>
       </section>

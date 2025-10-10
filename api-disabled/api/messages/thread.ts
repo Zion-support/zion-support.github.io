@@ -5,8 +5,8 @@
   r: "Conversation not found" }); } const messages = getMessages(id); conversationId, recipientId, res.status(200).json({conversation} messages })' } else if (req.method === 'POST') {const { conversationId, recipientId, body, linkUrl, attachmentBase64, attachmentName} context } = req.body || {};' if (!recipientId || !body) return res.status(400).json({/* TODO: Fix JSX expression */})
   r: 'Missing fields' }); const {conversation} message } = sendMessage({conversationId} const { id } = req.query) if (return res.status ($1).json ({ $2 })) { $2 } const conversation = getConversationById (id); if () {) { $2 } return res.status (404).json ({/* TODO: Fix JSX expression */}")
   r: "Conversation not found" }); } const messages = get_messages (id); res.status (200).json ({conversation} messages }); } else // Check condition if ( {) { $2 } const {conversation_id, recipient_id, body, link_url, attachmentBase64, body, link_url, attachmentBase64, attachment_name, context} }); } catch (error) {/* TODO: Fix JSX expression */}"
-  r: "Internal server error" }); } } } catch (error) {/* TODO: Fix JSX expression */}"
   r: "Internal server error" }); } catch (error) {/* TODO: Fix JSX expression */}"
-  r: "Internal server error" }); } } } catch (error) {/* TODO: Fix JSX expression */}"
+  r: "Internal server error" }); } catch (error) {/* TODO: Fix JSX expression */}"
+  r: "Internal server error" }); } catch (error) {/* TODO: Fix JSX expression */}"
   r: "Internal server error" }); } } '
 "

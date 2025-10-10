@@ -33,7 +33,6 @@ const,
   ContentPreviewCard: React.FC;
           <ContentPreviewCardProps> = ({/* TODO: Fix JSX expression */}
   O: Add content;}
-}
   // id,
 //   title,
 //   description,
@@ -56,12 +55,10 @@ const,
   const getCategoryColor = (categor)
   y: string): string => {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
     const,
   colors: {/* TODO: Fix JSX expression */}
   y: string]: string } = {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
       'Success Story': 'from-green-500 to-emerald-600',
       'Mega Trends': 'from-blue-500 to-cyan-600',
       'Architecture': 'from-purple-500 to-pink-600',
@@ -98,16 +95,16 @@ const,
           <div className="text-6xl mb-2">{image}</div>"
           <div className="text-sm font-medium opacity-90">{category}</div>
         </div>
-        {/* Featured Badge */}
-        {featured && ()}"
+        {/* Featured Badge */},
+      {featured && ()}"
           <div className="absolute top-4 left-4"></div>"
             <span className="bg-yellow-400 text-yellow-900 px-3 py-1 rounded-full text-xs font-bold"></span>
 // Featured;
           </span>
           </div>
-        )}
-        {/* Stats Overlay */}
-        {stats && ()}"
+        )},
+      {/* Stats Overlay */},
+      {stats && ()}"
           <div className="absolute top-4 right-4 bg-white bg-opacity-20 backdrop-blur-sm rounded-lg p-2"></div>"
             <div className="text-center"></div>"
               <div className="text-lg font-bold text-white"></div>
@@ -116,8 +113,8 @@ const,
               <div className="text-xs text-white opacity-90">views</div>
             </div>
           </div>
-        )}
-        {/* Read Time Badge */}"
+        )},
+      {/* Read Time Badge */}"
         <div className="absolute bottom-4 left-4"></div>"
           <span className="bg-white bg-opacity-90 text-gray-800 px-3 py-1 rounded-full text-sm font-medium"></span>
             {readTime}
@@ -137,8 +134,8 @@ const,
         <p className="text-gray-600 mb-4 line-clamp-3"></p>
           {excerpt || description}
         </p>
-        {/* Stats Row */}
-        {stats && ()}"
+        {/* Stats Row */},
+      {stats && ()}"
           <div className="flex items-center justify-between mb-4 text-sm"></div>"
             <div className="flex items-center space-x-4"></div>"
               <div className="flex items-center"></div>"
@@ -156,8 +153,8 @@ const,
               </div>
             </div>
           </div>
-        )}
-        {/* Date and CTA */}"
+        )},
+      {/* Date and CTA */}"
         <div className="flex items-center justify-between"></div>"
           <span className="text-sm text-gray-500">{date}</span>
           <Link></Link>

@@ -1,23 +1,23 @@
 const, October2025UltimateBreakthroughBanne, r = () => {
   return(<div, className="relative, b, g-gradie, n, t-to-r, fro, m-purp, l, e-900, vi, a-bl, u, e-900, t, o-indi, g, o-900, overflo, w-hidden, borde, r-b, borde, r-whi, t, e/10">)
+},
       {/* Animated, Backgroun, d */};)
       <div, className="absolute, inse, t-0, opacit, y-20">)
   return (
-    <div, className="relative, b, g-gradie, n, t-to-r, fro, m-purp, l, e-900, vi, a-bl, u, e-900, t, o-indi, g, o-900, overflo, w-hidden, borde, r-b, borde, r-whi, t, e/10">
-      {/* Animated, Backgroun, d */};</div>
-      <div, className="absolute, inse, t-0, opacit, y-20"></div>
+    <div, className="relative, b, g-gradie, n, t-to-r, fro, m-purp, l, e-900, vi, a-bl, u, e-900, t, o-indi, g, o-900, overflo, w-hidden, borde, r-b, borde, r-whi, t, e/10">)
+      {/* Animated, Backgroun, d */};</div>)
+      <div, className="absolute, inse, t-0, opacit, y-20"></div>)
         <div, className="absolute, inse, t-0, b, g-[line, a, r-gradie, n, t(45d, e, g,transparent_, 2, 5%,rg, b, a(2, 5, 5,2, 5, 5,2, 5, 5,.05)_, 5, 0%,transparent_, 7, 5%,transparent_1, 0, 0%)] bg-[leng, t, h: 250px_250, p, x] anima, t, e-shimm, e, r"></d, i, v>"
       </d, i, v>
       {/* Glowing, Orb, s */}
       <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e"></d, i, v>
       <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pulse, dela, y-7, 0, 0"></d, i, v>
-      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
-  g:px-8, p, y-12">"
+      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: g,px-8, p, y-12">"
         {/* Header, Badg, e */}</div>
         <div, className="flex, justif, y-center, m, b-6"></div>
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-yell, o, w-4, 0, 0/20, t, o-oran, g, e-5, 0, 0/20, border, border-yell, o, w-4, 0, 0/50, rounde, d-fu, l, l"></div>
             <Sparkles, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e  />
-const, October2025UltimateBreakthroughBanne, r = () => {/* TODO: Fix JSX expression */}
+const, October2025UltimateBreakthroughBanne, r = () => {/* TODO: Fix JSX expression */},
       {/* Animated, Backgroun, d */};
       <div, className="absolute, inse, t-0, opacit, y-20"></div>"
         <div, className="absolute, inse, t-0, b, g-[line, a, r-gradie, n, t(45d, e, g,transparent_, 2, 5%,rg, b, a(2, 5, 5,2, 5, 5,2, 5, 5,.05)_, 5, 0%,transparent_, 7, 5%,transparent_1, 0, 0%)] bg-[leng, t, h: 250px_250, p, x] anima, t, e-shimm, e, r"></d, i, v>"
@@ -43,8 +43,7 @@ const, October2025UltimateBreakthroughBanne, r = () => {/* TODO: Fix JSX express
       {/* Glowing, Orb, s */}
       <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e"></d, i, v>";
       <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pulse, dela, y-7, 0, 0"></d, i, v>";
-      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
-  g:px-8, p, y-12">";
+      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: g,px-8, p, y-12">";
         {/* Header, Badg, e */}</div>
         <div, className="flex, justif, y-center, m, b-6">";</div>
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-yell, o, w-4, 0, 0/20, t, o-oran, g, e-5, 0, 0/20, border, border-yell, o, w-4, 0, 0/50, rounde, d-fu, l, l">";</div>
@@ -465,38 +464,38 @@ const, October2025UltimateBreakthroughBanne, r = () => {/* TODO: Fix JSX express
           </d, i, v>
         </d, i, v>
         {/* Bottom, Stat, s */}
-        <div, className="flex, fle, x-wrap, justif, y-center, ga, p-8, p, t-8, borde, r-t, borde, r-whi, t, e/10">";</div>
-          <div, className="te, x, t-cent, e, r">";</div>
-            <div, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1">$94, 5, M+</d, i, v>";
-            <div, className="te, x, t-bl, u, e-200, tex, t-sm">Combined, Annual, Value</d, i, v>";
+        <div, className="flex, fle, x-wrap, justif, y-center, ga, p-8, p, t-8, borde, r-t, borde, r-whi, t, e/10"></div></div>";</div>
+          <div, className="te, x, t-cent, e, r"></div></div>";</div>
+            <div, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1"></div></div>$94, 5, M+</d, i, v>";
+            <div, className="te, x, t-bl, u, e-200, tex, t-sm"></div></div>Combined, Annual, Value</d, i, v>";
           </d, i, v>
-          <div, className="te, x, t-cent, e, r">";</div>
-            <div, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1">99.9%+</d, i, v>";
-            <div, className="te, x, t-bl, u, e-200, tex, t-sm">Average, Accurac, y</d, i, v>";
+          <div, className="te, x, t-cent, e, r"></div></div>";</div>
+            <div, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1"></div></div>99.9%+</d, i, v>";
+            <div, className="te, x, t-bl, u, e-200, tex, t-sm"></div></div>Average, Accurac, y</d, i, v>";
           </d, i, v>
-          <div, className="te, x, t-cent, e, r">";</div>
-            <div, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1">85%+</d, i, v>";
-            <div, className="te, x, t-bl, u, e-200, tex, t-sm">Cost, Reductio, n</d, i, v>";
+          <div, className="te, x, t-cent, e, r"></div></div>";</div>
+            <div, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1"></div></div>85%+</d, i, v>";
+            <div, className="te, x, t-bl, u, e-200, tex, t-sm"></div></div>Cost, Reductio, n</d, i, v>";
           </d, i, v>
-          <div, className="te, x, t-cent, e, r">";</div>
-            <div, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1">20-3, 5, x</d, i, v>";
+          <div, className="te, x, t-cent, e, r"></div></div>";</div>
+            <div, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1"></div></div>20-3, 5, x</d, i, v>";
         {/* Bottom, Stat, s */}"
-        <div, className="flex, fle, x-wrap, justif, y-center, ga, p-8, p, t-8, borde, r-t, borde, r-whi, t, e/10">";"
-          <div, className="te, x, t-cent, e, r">";"
-            <div, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1">$94, 5, M+</d, i, v>";"
-            <div, className="te, x, t-bl, u, e-200, tex, t-sm">Combined, Annual, Value</d, i, v>";
+        <div, className="flex, fle, x-wrap, justif, y-center, ga, p-8, p, t-8, borde, r-t, borde, r-whi, t, e/10"></div></div>";"
+          <div, className="te, x, t-cent, e, r"></div></div>";"
+            <div, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1"></div></div>$94, 5, M+</d, i, v>";"
+            <div, className="te, x, t-bl, u, e-200, tex, t-sm"></div></div>Combined, Annual, Value</d, i, v>";
           </d, i, v>"
-          <div, className="te, x, t-cent, e, r">";"
-            <div, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1">99.9%+</d, i, v>";"
-            <div, className="te, x, t-bl, u, e-200, tex, t-sm">Average, Accurac, y</d, i, v>";
+          <div, className="te, x, t-cent, e, r"></div></div>";"
+            <div, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1"></div></div>99.9%+</d, i, v>";"
+            <div, className="te, x, t-bl, u, e-200, tex, t-sm"></div></div>Average, Accurac, y</d, i, v>";
           </d, i, v>"
-          <div, className="te, x, t-cent, e, r">";"
-            <div, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1">85%+</d, i, v>";"
-            <div, className="te, x, t-bl, u, e-200, tex, t-sm">Cost, Reductio, n</d, i, v>";
+          <div, className="te, x, t-cent, e, r"></div></div>";"
+            <div, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1"></div></div>85%+</d, i, v>";"
+            <div, className="te, x, t-bl, u, e-200, tex, t-sm"></div></div>Cost, Reductio, n</d, i, v>";
           </d, i, v>"
-          <div, className="te, x, t-cent, e, r">";"
-            <div, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1">20-3, 5, x</d, i, v>";"
-            <div, className="te, x, t-bl, u, e-200, tex, t-sm">Average, RO, I</d, i, v>";
+          <div, className="te, x, t-cent, e, r"></div></div>";"
+            <div, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1"></div></div>20-3, 5, x</d, i, v>";"
+            <div, className="te, x, t-bl, u, e-200, tex, t-sm"></div></div>Average, RO, I</d, i, v>";
           </d, i, v>
         </d, i, v>
       </d, i, v>

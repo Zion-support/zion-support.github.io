@@ -2,19 +2,21 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
-const Navigation: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
+const Navigation: React.FC = () => {;
+const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [aiServicesOpen, setAiServicesOpen] = useState(false);
   const [itServicesOpen, setItServicesOpen] = useState(false);
   const [microSaasOpen, setMicroSaasOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  useEffect(() => {
-    const handleResize = () => {
+  
+  useEffect(() => {;
+const handleResize = () => {
       if (window.innerWidth >= 1024) {
         setIsOpen(false);
       }
     };
+    
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
@@ -31,6 +33,7 @@ const Navigation: React.FC = () => {
     setItServicesOpen(false);
     setMicroSaasOpen(false);
     setIsOpen(false);
+}
   };
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -67,10 +70,10 @@ const Navigation: React.FC = () => {
     { name: 'AI Education', href: '/ai-education', icon: Users, description: 'Educational AI' },
     { name: 'AI Transportation', href: '/ai-transportation', icon: Globe, description: 'Transportation AI' },
     { name: 'AI Environmental', href: '/ai-environmental', icon: Globe, description: 'Environmental AI' },
-    { name: 'AI Retail', href: '/ai-retail', icon: Globe, description: 'Retail AI' },
-    { name: 'AI Sports', href: '/ai-sports', icon: BarChart, description: 'Sports AI' },
-    { name: 'AI Mental Health', href: '/ai-mental-health', icon: Users, description: 'Mental Health AI' }
-  ];
+      { name: 'AI Retail', href: '/ai-retail', icon: Globe, description: 'Retail AI' },
+        { name: 'AI Sports', href: '/ai-sports', icon: BarChart, description: 'Sports AI' },
+        { name: 'AI Mental Health', href: '/ai-mental-health', icon: Users, description: 'Mental Health AI' }
+    ];
   const itServices = [
     { name: 'Cloud Services', href: '/cloud-services', icon: Cloud, description: 'Cloud Solutions' },
     { name: 'Cloud Migration', href: '/cloud-migration', icon: Cloud, description: 'Seamless Migration' },
@@ -98,10 +101,10 @@ const Navigation: React.FC = () => {
     { name: 'IT Project Management', href: '/it-project-management', icon: Settings, description: 'Project Management' },
     { name: 'Vulnerability Assessment', href: '/vulnerability-assessment', icon: Shield, description: 'Security Assessment' },
     { name: 'Hybrid Cloud', href: '/hybrid-cloud', icon: Cloud, description: 'Hybrid Solutions' },
-    { name: 'Data Migration', href: '/data-migration', icon: Database, description: 'Migration Services' },
-    { name: 'API Development', href: '/api-development', icon: Globe, description: 'API Services' },
-    { name: 'IT Governance', href: '/it-governance', icon: Settings, description: 'Governance Solutions' }
-  ];
+      { name: 'Data Migration', href: '/data-migration', icon: Database, description: 'Migration Services' },
+      { name: 'API Development', href: '/api-development', icon: Globe, description: 'API Services' },
+        { name: 'IT Governance', href: '/it-governance', icon: Settings, description: 'Governance Solutions' }
+      ];
   const microSaasServices = [
     { name: 'Micro SAAS Solutions', href: '/micro-saas', icon: Cpu, description: '50+ AI Tools' },
     { name: 'AI Analytics Dashboard', href: '/ai-analytics-dashboard', icon: BarChart, description: 'Business Intelligence' },
@@ -132,10 +135,10 @@ const Navigation: React.FC = () => {
     { name: 'Medical Records Manager', href: '/medical-records-manager', icon: Shield, description: 'Healthcare' },
     { name: 'AI Accounting Assistant', href: '/ai-accounting-assistant', icon: BarChart, description: 'Finance & Accounting' },
     { name: 'Property Management AI', href: '/property-management-ai', icon: BarChart, description: 'Real Estate' },
-    { name: 'Legal Document Manager', href: '/legal-document-manager', icon: Shield, description: 'Legal & Compliance' },
-    { name: 'Online Learning Platform', href: '/online-learning-platform', icon: Users, description: 'Education' },
-    { name: 'Supply Chain Optimizer', href: '/supply-chain-optimizer', icon: BarChart, description: 'Manufacturing' }
-  ];
+      { name: 'Legal Document Manager', href: '/legal-document-manager', icon: Shield, description: 'Legal & Compliance' },
+      { name: 'Online Learning Platform', href: '/online-learning-platform', icon: Users, description: 'Education' },
+      { name: 'Supply Chain Optimizer', href: '/supply-chain-optimizer', icon: BarChart, description: 'Manufacturing' }
+    ];
   const emergingTech = [
     { name: 'Quantum Computing', href: '/quantum-computing', icon: Cpu, description: 'Quantum Solutions' },
     { name: 'Robotics & Automation', href: '/robotics', icon: Brain, description: 'Intelligent Robotics' },
@@ -144,9 +147,9 @@ const Navigation: React.FC = () => {
     { name: 'Business Intelligence', href: '/business-intelligence', icon: BarChart, description: 'Data Insights' },
     { name: 'Autonomous Systems', href: '/autonomous-systems', icon: Zap, description: 'Self-Managing Systems' },
     { name: '5G Implementation', href: '/5g-implementation', icon: Globe, description: '5G Solutions' },
-    { name: 'AI 3D Generation', href: '/ai-3d-generation', icon: Brain, description: '3D AI Solutions' },
-    { name: 'Holographic Workspace', href: '/ai-holographic-workspace', icon: Brain, description: 'Holographic AI' }
-  ];
+      { name: 'AI 3D Generation', href: '/ai-3d-generation', icon: Brain, description: '3D AI Solutions' },
+      { name: 'Holographic Workspace', href: '/ai-holographic-workspace', icon: Brain, description: 'Holographic AI' }
+    ];
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg border-b border-cyan-500/20' : 'bg-transparent'
@@ -165,9 +168,9 @@ const Navigation: React.FC = () => {
             <Link href="/" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
               Home
             </Link>
-            {/* AI Services Dropdown */}
-            <div className="relative group">
-              <button
+              {/* AI Services Dropdown */}
+              <div className="relative group">
+                <button
                 onClick={() => setAiServicesOpen(!aiServicesOpen)}
                 className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
               >
@@ -337,8 +340,8 @@ const Navigation: React.FC = () => {
             </button>
           </div>
         </div>
-        {/* Mobile Menu */}
-        {isOpen && (
+        {/* Mobile Menu */},
+      {isOpen && (
           <div className="lg:hidden mt-4 pb-4 border-t border-cyan-500/20">
             <div className="pt-4 space-y-4">
               <Link href="/" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
@@ -472,14 +475,14 @@ const Navigation: React.FC = () => {
                 </a>
                 <div className="flex items-center space-x-2 text-gray-400">
                   <MapPin className="w-4 h-4" />
-                  <span className="text-sm">364 E Main St STE 1008, Middletown DE 19709</span>
+                    <span className="text-sm">364 E Main St STE 1008, Middletown DE 19709</span>
                 </div>
               </div>
             </div>
           </div>
         )}
-      </div>
-    </nav>
-  );
-};
-export default Navigation;
+      </nav>
+    );
+  };
+
+  export default Navigation;

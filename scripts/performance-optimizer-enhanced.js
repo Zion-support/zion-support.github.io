@@ -9,25 +9,28 @@ const optimizations = {
   removeUnusedCSS: (content) => {,
     // This is a simplified version - in production, use tools like PurgeCSS;
     return content;
+}
   },
 
-  // Optimize images (placeholder - would need actual image processing)
+  // Optimize images (placeholder - would need actual image, processing)
   optimizeImages: (content) => {,
     // Replace large image references with optimized versions;
     return content;
       .replace(/\.jpg/g, '.webp')
       .replace(/\.png/g, '.webp')
       .replace(/\.jpeg/g, '.webp');
+}
   },
 
   // Minify inline styles;
   minifyInlineStyles: (content) => {,
-    return content.replace(/style="([^"]*)"/g, (match, styles) => {
-      const minified = styles;
+    return content.replace(/style="([^"]*)"/g, (match, styles) => {;
+const minified = styles;
         .replace(/\s+/g, ' ')
         .replace(/;\s*/g, ';')
         .replace(/:\s*/g, ':')
         .trim();
+}
       return `style="${minified}"`;
     });
   },
@@ -37,6 +40,7 @@ const optimizations = {
     return content;
       .replace(/\n\s*\n\s*\n/g, '\n\n')
       .replace(/[ \t]+$/gm, '')
+}
       .replace(/\n{3}/g, '\n\n');
   },
 
@@ -44,13 +48,14 @@ const optimizations = {
   optimizeReactComponents: (content) => {
     // Add React.memo to functional components;
     if (content.includes('const ') && content.includes(': React.FC')) {
-      content = content.replace(
+      content = content.replace()
         /const (\w+): React\.FC = \(/g;
         'const $1: React.FC = React.memo((')
       );
       // Add closing parenthesis for React.memo;
       content = content.replace()
         /(\w+)\.displayName = '\w+';/g;
+}
         '$1.displayName = \'$1\';\n});'
       );
     }
@@ -60,12 +65,13 @@ const optimizations = {
   // Add performance hints;
   addPerformanceHints: (content) => {
     // Add preload hints for critical resources;
-    if (content.includes('<head>')) {
-      const preloadHints = `
-    <link rel="preload" href="/assets/vendor-ConSr3PY.js" as="script" crossorigin>,
-    <link rel="preload" href="/assets/index-BRi0Fmgq.js" as="script" crossorigin>,
-    <link rel="preload" href="/assets/index-C1QbpZNs.css" as="style">`;
-      content = content.replace('<head>', `<head>${preloadHints}`);
+    if (content.includes('<head></hea></head>')) {;
+const preloadHints = `
+    <link rel="preload" href="/assets/vendor-ConSr3PY.js" as="script" crossorigin></lin></link>,
+    <link rel="preload" href="/assets/index-BRi0Fmgq.js" as="script" crossorigin></lin></link>,
+    <link rel="preload" href="/assets/index-C1QbpZNs.css" as="style"></lin></link>`;
+}
+      content = content.replace('<head></hea></head>', `<head></hea></head>${preloadHints}`);
     }
     return content;
   }
@@ -79,9 +85,8 @@ const filePatterns = [
   'pages/**/*.{ts,tsx,js,jsx}',
   'utils/**/*.{ts,tsx,js,jsx}',
   'hooks/**/*.{ts,tsx,js,jsx}',
-  'lib/**/*.{ts,tsx,js,jsx}',
-  'dist/**/*.{html,css,js}'
-];
+  'lib/**/*.{ts,tsx,js,jsx}']
+  'dist/**/*.{html,css,js}'];
 
 // Files to exclude;
 const excludePatterns = [
@@ -95,49 +100,52 @@ const excludePatterns = [
   '**/automation/**',
   '**/backup*/**',
   '**/disabled*/**',
-  '**/corrupted*/**',
-  '**/temp*/**'
-];
+  '**/corrupted*/**']
+  '**/temp*/**'];
 
 let totalFiles = 0;
 let processedFiles = 0;
 let optimizationsApplied = 0;
 
 function processFile(filePath) {
-  try {
-    const content = fs.readFileSync(filePath, 'utf8');
+  try {;
+const content = fs.readFileSync(filePath, 'utf8');
     let newContent = content;
     let fileOptimizations = 0;
 
     // Apply optimizations;
-    Object.entries(optimizations).forEach(([name, optimizer]) => {
-      const before = newContent;
+    Object.entries(optimizations).forEach(([name, optimizer]) => {;
+const before = newContent;
       newContent = optimizer(newContent);
       if (newContent !== before) {
         fileOptimizations++;
-      }
+}
+  } catch (error) {
+    console.error("Error:", error);
+}
     });
 
     if (fileOptimizations > 0) {
       fs.writeFileSync(filePath, newContent, 'utf8');
+}
       console.log(`✅ ${filePath}: Applied ${fileOptimizations} optimizations`);
       optimizationsApplied += fileOptimizations;
     }
 
     processedFiles++;
   } catch (error) {
+}
     console.error(`❌ Error processing ${filePath}:`, error.message);
   }
-}
-
 async function main() {
   console.log('🚀 Starting enhanced performance optimization...\n');
 
   // Get all files to process;
   const allFiles = [];
-  for (const pattern of filePatterns) {
-    const files = await glob(pattern, {)
+  for (const pattern of, filePatterns) {;
+const files = await glob(pattern, {)
       ignore: excludePatterns),
+}
       cwd: process.cwd()});
     allFiles.push(...files);
   }

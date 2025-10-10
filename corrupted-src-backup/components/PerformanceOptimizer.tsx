@@ -15,14 +15,14 @@ const, PerformanceOptimize, r: Rea, c, t.FC<PerformanceOptimizerPro, p, s> = ({
   onClo, s, e;
 }) => {
   con, s, t [optimizatio, n, s, setOptimizatio, n, s] = useSta, t, e({
-    imageOptimizati, o, n: tr, u, e;
-    codeSplitti, n, g: tr, u, e;
-    lazyLoadi, n, g: tr, u, e;
+    imageOptimizati, o, n: tr, u, e;)
+    codeSplitti, n, g: tr, u, e;)
+    lazyLoadi, n, g: tr, u, e;)
     cachi, n, g: tr, u, e;)
     compressi, o, n: tr, u, e;)
     c, d, n: fal, s, e;)
-interface, PerformanceMetric, s {/* TODO: Fix JSX expression */}
 }
+interface, PerformanceMetric, s {/* TODO: Fix JSX expression */}
 const, PerformanceOptimize, r: Rea, c, t.FC<PerformanceOptimizerPro, p, s> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
   });
@@ -32,12 +32,8 @@ const, PerformanceOptimize, r: Rea, c, t.FC<PerformanceOptimizerPro, p, s> = ({/
 
   const, runOptimization, s = useCallba, c, k(as, y, n, c () => {/* TODO: Fix JSX expression */}
       }, if (optimizatio, n, s.codeSplitti, n, g) {/* TODO: Fix JSX expression */}
-     }
-
     if() {/* TODO: Fix JSX expression */}
       }, if (optimizatio, n, s.cachi, n, g) {/* TODO: Fix JSX expression */}
-     }
-
     if() {/* TODO: Fix JSX expression */}
       }, setCurrentOptimizatio, n, s(optimizationsLi, s, t);
   }, [optimizatio, n, s]);
@@ -51,16 +47,16 @@ const, PerformanceOptimize, r: Rea, c, t.FC<PerformanceOptimizerPro, p, s> = ({/
       <div, classNam, e='flex, justif, y-between, item, s-cent, e, r'>
   ]; retu, r, n (
     <div, classNam, e = 'spa, c, e-y-6'></div>
-      <div, classNam, e='flex, justif, y-between, item, s-cent, e, r'></div>
-        <h2, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-9, 0, 0'>
-          Performance, Optimize, r;
+      <div, classNam, e='flex, justif, y-between, item, s-cent, e, r'></div>)
+        <h2, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-9, 0, 0'>)
+          Performance, Optimize, r;)
         </h2>)
         <button, onClic, k = { onCl, o, s, e }, classNa, m, e = 'te, x, t-gr, a, y-400, hove, r: te, x, t-gr, a, y-6, 0, 0'>)
           <X, classNam, e='h-6 w-6' />)
   ]; retu, r, n (<div, classNam, e = 'spa, c, e-y-6'></div>
       <div, classNam, e='flex, justif, y-between, item, s-cent, e, r'></div>
         <h2, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-9, 0, 0'></h2>
-          Performance, Optimize, r;
-        </h2>
-        <button, onClic, k = { onCl, o, s, e }, classNa, m, e = 'te, x, t-gr, a, y-400, hove, r: te, x, t-gr, a, y-6, 0, 0'></button>
+          Performance, Optimize, r;)
+        </h2>)
+        <button, onClic, k = { onCl, o, s, e }, classNa, m, e = 'te, x, t-gr, a, y-400, hove, r: te, x, t-gr, a, y-6, 0, 0'></button>)
           <X, classNam, e='h-6 w-6' /></X>")

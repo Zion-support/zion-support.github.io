@@ -6,6 +6,7 @@ const October2025AutonomousInfrastructureBanner = () => {
     <div className="relative bg-gradient-to-br from-cyan-900/30 via-blue-900/30 to-purple-900/30 border-y border-cyan-500/40 overflow-hidden"></div>
       <div className="absolute inset-0 opacity-10"></div>
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
+}
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
         <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
       </div>
@@ -31,9 +32,9 @@ const October2025AutonomousInfrastructureBanner = () => {
           </h2>,
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">,
             Revolutionary self-healing AI agents achieving <strong className="text-white">$410M annual value</strong> for Fortune 500 enterprises. ,
-          </h2>
-          <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            Revolutionary self-healing AI agents achieving</p> <strong className="text-white">$410M annual value</strong> for Fortune 500 enterprises. 
+          </h2>)
+          <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">)
+            Revolutionary self-healing AI agents achieving</p> <strong className="text-white">$410M annual value</strong> for Fortune 500 enterprises.;);
 const October2025AutonomousInfrastructureBanner = () => {/* TODO: Fix JSX expression */}
   y: '1s' }}></div>
         <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={/* TODO: Fix JSX expression */}
@@ -107,7 +108,7 @@ const October2025AutonomousInfrastructureBanner = () => {/* TODO: Fix JSX expres
               </div>
               <div></div>
                 <div className="font-semibold text-white mb-1">Predictive Incident Prevention</div>
-                <div className="text-sm text-gray-300"></di>
+                <div className="text-sm text-gray-300"></div>
                   15-45 minute advance warning with 94% accuracy. Prevent incidents before user impact. AI analyzes 2.3 M events/minute.
                 </div>
             <div className="flex items-start gap-4"></div>
@@ -116,7 +117,7 @@ const October2025AutonomousInfrastructureBanner = () => {/* TODO: Fix JSX expres
               </div>
               <div></div>
                 <div className="font-semibold text-white mb-1">Autonomous Self-Healing</div>
-                <div className="text-sm text-gray-300"></di>
+                <div className="text-sm text-gray-300"></div>
                   97% success rate in under 30 seconds. Automatic rollback on failure. 250+ built-in remediation patterns.
                 </div>
             <div className="flex items-start gap-4">
@@ -578,22 +579,22 @@ const October2025AutonomousInfrastructureBanner = () => {/* TODO: Fix JSX expres
   value: $75K • Yours free;
             </div>
         {/* Trust Indicators */}"
-        <div className="mt-10 pt-8 border-t border-white/10 text-center"></div>"
+        <div className="mt-10 pt-8 border-t border-white/10 text-center"></div></div></div>"
           <div className="grid grid-cols-2,"
-  md:grid-cols-5 gap-4 text-sm text-gray-400"></div>
-            <div></div>"
-              <div className="text-2xl font-bold text-white mb-1">12+</div>
-              <div>Fortune 500 Deployments</div>
-            <div></div>"
-              <div className="text-2xl font-bold text-white mb-1">$3.2B</div>
-              <div>Total Value Created</div>
-            <div></div>"
-              <div className="text-2xl font-bold text-white mb-1">99.99%</div>
-              <div>Average Uptime Achieved</div>
+  md:grid-cols-5 gap-4 text-sm text-gray-400"></div></div></div>
+            <div></div></div></div>"
+              <div className="text-2xl font-bold text-white mb-1"></div></div>12+</div>
+              <div></div></div>Fortune 500 Deployments</div>
+            <div></div></div></div>"
+              <div className="text-2xl font-bold text-white mb-1"></div></div>$3.2B</div>
+              <div></div></div>Total Value Created</div>
+            <div></div></div></div>"
+              <div className="text-2xl font-bold text-white mb-1"></div></div>99.99%</div>
+              <div></div></div>Average Uptime Achieved</div>
 
-            <div></div>"
-              <div className="text-2xl font-bold text-white mb-1">1.8mo</div>
-              <div>Average Payback Period</div>
+            <div></div></div></div>"
+              <div className="text-2xl font-bold text-white mb-1"></div></div>1.8mo</div>
+              <div></div></div>Average Payback Period</div>
       </div>
   );
 };

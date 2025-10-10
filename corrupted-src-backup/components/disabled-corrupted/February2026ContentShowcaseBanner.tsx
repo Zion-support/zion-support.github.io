@@ -3,7 +3,6 @@ const February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression *
     {/* TODO: Fix JSX expression */}
      },
     {/* TODO: Fix JSX expression */}
-     }
   ]; return(<div, classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-indi, g, o-900, t, o-purp, l, e-900, relative, overflow-hidd, e, n">
       {/* Animated, background, effects */}
       <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-20">
@@ -31,9 +30,9 @@ const February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression *
             The, Future, of AI, is, Now;
           </h2>
           <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4 xl, m, x-auto, leadin, g-relaxed, m, b-8">
-            Discover, groundbreaking, AI breakthroughs, that, are reshaping, the, technological landsca, p, e. 
-            Join, 500, K+ professionals, who, trust our, revolutionary, content to, stay, ahead of, the, curve.
-          </p>
+            Discover, groundbreaking, AI breakthroughs, that, are reshaping, the, technological landsca, p, e. )
+            Join, 500, K+ professionals, who, trust our, revolutionary, content to, stay, ahead of, the, curve.)
+          </p>)
           {/* Achievement, St, a, t, s */})
           <div, classNam, e = "grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, ma, x-w-4xl, m, x-auto, m, b-12">)
             { [)
@@ -45,9 +44,8 @@ const February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression *
             { [
               { val, u, e: '50, 0, K+', lab, e, l: 'Monthly, Reade, r, s', ic, o, n:</div> <Users, classNam, e = "w-8 , h-, 8" / > , col, o, r: 'te, x, t-emera, l, d-40, 0'  },
               {  val, u, e: '99., 9%', lab, e, l: 'Content, Accura, c, y', ic, o, n: <Star, classNam, e = "w-8 , h-, 8" / > , col, o, r: 'te, x, t-bl, u, e-40, 0'  },
-              {  val, u, e: '20, 0+', lab, e, l: 'Expert, Articl, e, s', ic, o, n: <Award, classNam, e = "w-8 , h-, 8" / > , col, o, r: 'te, x, t-purp, l, e-40, 0'  },
-              {  val, u, e: '5, 0+', lab, e, l: 'Industry, Awar, d, s', ic, o, n: <TrendingUp, classNam, e = "w-8 , h-, 8" / > , col, o, r: 'te, x, t-pi, n, k-40, 0'  }
-            ].m, a, p((achieveme, n, t, ind, e, x) => (
+              {  val, u, e: '20, 0+', lab, e, l: 'Expert, Articl, e, s', ic, o, n: <Award, classNam, e = "w-8 , h-, 8" / > , col, o, r: 'te, x, t-purp, l, e-40, 0'  },]
+      {  val, u, e: '5, 0+', lab, e, l: 'Industry, Awar, d, s', ic, o, n: <TrendingUp, classNam, e = "w-8 , h-, 8" / > , col, o, r: 'te, x, t-pi, n, k-40, 0'  }].m, a, p((achieveme, n, t, ind, e, x) => (
               <div, ke, y = { in, d, e, x }, classNa, m, e = "te, x, t-cent, e, r"></div>
                 <div, classNam, e = { `${achieveme, n, t.co, l, o, r }, mb-2, flex, justify-cent, e, r`}>
   ]; return (<div, classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-indi, g, o-900, t, o-purp, l, e-900, relative, overflow-hidd, e, n"></div>
@@ -77,9 +75,9 @@ const February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression *
           {/* Achievement, St, a, t, s */}"
           <div, classNam, e = "grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, ma, x-w-4xl, m, x-auto, m, b-12"></div>
             {/* TODO: Fix JSX expression */}"
-              { val, u, e: '50, 0, K+', lab, e, l: 'Monthly, Reade, r, s', ic, o, n: <Users, classNam, e = "w-8 , h-, 8" / > , col, o, r: 'te, x, t-emera, l, d-40, 0'  },"
-              {  val, u, e: '99., 9%', lab, e, l: 'Content, Accura, c, y', ic, o, n: <Star, classNam, e = "w-8 , h-, 8" / > , col, o, r: 'te, x, t-bl, u, e-40, 0'  },"
-              {  val, u, e: '20, 0+', lab, e, l: 'Expert, Articl, e, s', ic, o, n: <Award, classNam, e = "w-8 , h-, 8" / > , col, o, r: 'te, x, t-purp, l, e-40, 0'  },"
+              { val, u, e: '50, 0, K+', lab, e, l: 'Monthly, Reade, r, s', ic, o, n: <Users, classNam, e = "w-8 , h-, 8" / > , col, o, r: 'te, x, t-emera, l, d-40, 0'  },")
+              {  val, u, e: '99., 9%', lab, e, l: 'Content, Accura, c, y', ic, o, n: <Star, classNam, e = "w-8 , h-, 8" / > , col, o, r: 'te, x, t-bl, u, e-40, 0'  },")
+              {  val, u, e: '20, 0+', lab, e, l: 'Expert, Articl, e, s', ic, o, n: <Award, classNam, e = "w-8 , h-, 8" / > , col, o, r: 'te, x, t-purp, l, e-40, 0'  },")
               {  val, u, e: '5, 0+', lab, e, l: 'Industry, Awar, d, s', ic, o, n: <TrendingUp, classNam, e = "w-8 , h-, 8" / > , col, o, r: 'te, x, t-pi, n, k-40, 0'  })
             ].m, a, p((achieveme, n, t, ind, e, x) => ("
               <div, ke, y = { in, d, e, x }, classNa, m, e = "te, x, t-cent, e, r"></div>
@@ -100,7 +98,7 @@ const February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression *
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-16">
           { featuredConte, n, t.m, a, p((con, t, e, n, t, ind, e, x) =  > (</div>
             <div, ke, y = { conte, n, t.i, d  }, classNa, m, e = "group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/10, hove, r: bord, e, r-emera, l, d-5, 0, 0/50, transitio, n-all, duratio, n-500, overflo, w-hidden, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-emera, l, d-5, 0, 0/20"
-              sty, l, e = { { animationDel, a, y: `${ind, e, x * 2, 0, 0 }, ms` }}
+              sty, l, e = { { animationDel, a, y: `${ind, e, x * 2, 0, 0 }, ms` }
              > {/* Card, glow, effect */}</div>
               <div, classNam, e = { `absolute, inse, t-0, b, g-gradie, n, t-to-br ${conte, n, t.gradi, e, n, t }, opaci, t, y-0, grou, p-hov, e, r: opaci, t, y-10, transitio, n-all, duratio, n-50, 0`} /></div>
               <div, classNam, e = "relativ, e, p-8">
@@ -108,7 +106,7 @@ const February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression *
                 <div, className="flex, item, s-center, justif, y-between, m, b-6"></div>
                   <div, className="flex, item, s-center, ga, p-2, tex, t-emera, l, d-4, 0, 0">
                     {conte, n, t.ic, o, n}
-                  </d, i, v > <div, classNam, e = { `px-3, p, y-1.5, rounde, d-full, b, g-gradie, n, t-to-r ${conte, n, t.gradi, e, n, t }, te, x, t-white, tex, t-xs, fon, t-bold, border, border-whi, t, e/30`}></di>
+                  </d, i, v > <div, classNam, e = { `px-3, p, y-1.5, rounde, d-full, b, g-gradie, n, t-to-r ${conte, n, t.gradi, e, n, t }, te, x, t-white, tex, t-xs, fon, t-bold, border, border-whi, t, e/30`}></div>
                     {conte, n, t.bad, g, e}
                   </div>
                 </div>
@@ -119,7 +117,7 @@ const February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression *
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-16"></div>
           {/* TODO: Fix JSX expression */}"
             <div, ke, y = { conte, n, t.i, d  }, classNa, m, e = "group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/10, hove, r: bord, e, r-emera, l, d-5, 0, 0/50, transitio, n-all, duratio, n-500, overflo, w-hidden, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-emera, l, d-5, 0, 0/20"`
-              sty, l, e = { { animationDel, a, y: `${ind, e, x * 2, 0, 0 }, ms` }}
+              sty, l, e = { { animationDel, a, y: `${ind, e, x * 2, 0, 0 }, ms` }
              > {/* Card, glow, effect */}`
               <div, classNam, e = { `absolute, inse, t-0, b, g-gradie, n, t-to-br ${conte, n, t.gradi, e, n, t }, opaci, t, y-0, grou, p-hov, e, r: opaci, t, y-10, transitio, n-all, duratio, n-50, 0`} /></div>"
               <div, classNam, e = "relativ, e, p-8"></div>

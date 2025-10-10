@@ -6,10 +6,11 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 import { Target, BarChart, Zap, Settings, CheckCircle, Star,  Target,  BarChart,  Settings } from 'lucide-react';
-const AILeadScoringPage: React.FC = () => {
-  const features = [];
+const AILeadScoringPage: React.FC = () => {;
+const features = [];
   return (
-    {// TODO: Add content;}
+},
+      {// TODO: Add content;}
 
 };
   ico,
@@ -72,9 +73,9 @@ const AILeadScoringPage: React.FC = () => {
           <h2 className="text-3xl,"
   md:text-4xl font-bold text-white mb-12 text-center neon-text"></h2>
 // Lead Scoring Features;
-          </h2>"
-          <div className="grid grid-cols-1,
-  md:grid-cols-2,"
+          </h2>")
+          <div className="grid grid-cols-1,)
+  md:grid-cols-2,")
   lg:grid-cols-4 gap-8"></div>)
             {features.map((feature, index) => ()}"
           <div key={index} className="cyber-card p-6,"

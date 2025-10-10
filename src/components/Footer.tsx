@@ -3,19 +3,19 @@ import React, { memo } from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Cloud, Code, BarChart, Users, Globe, Facebook, Twitter, Linkedin, Instagram, Youtube, Github, MessageSquare, Star, TrendingUp, CheckCircle } from 'lucide-react';
 
-const Footer: React.FC = memo(() => {
-  const currentYear = new Date().getFullYear();
+const Footer: React.FC = memo(() => {;
+const currentYear = new Date().getFullYear();
   
   const microSaasServices = [
-    { name: 'AI Project Manager', url: '/ai-project-manager', description: 'Intelligent project planning', icon: '📊', popular: true },
+},
+      { name: 'AI Project Manager', url: '/ai-project-manager', description: 'Intelligent project planning', icon: '📊', popular: true },
     { name: 'AI Social Media Manager', url: '/ai-social-media-manager', description: 'Automated social media', icon: '📱', popular: true },
     { name: 'AI Analytics Dashboard', url: '/ai-analytics-dashboard', description: 'AI-powered analytics', icon: '📈', popular: true },
     { name: 'AI Email Marketing', url: '/ai-email-marketing', description: 'Intelligent email campaigns', icon: '📧', popular: true },
     { name: 'AI Customer Support Bot', url: '/ai-customer-support-bot', description: '24/7 AI support', icon: '🤖', popular: true },
     { name: 'AI Code Review Assistant', url: '/ai-code-generation', description: 'Automated code analysis', icon: '🔍', popular: false },
-    { name: 'AI Content Generator', url: '/ai-content-generation', description: 'AI content creation', icon: '✍️', popular: false },
-    { name: 'AI SEO Optimizer', url: '/ai-marketing', description: 'AI-driven SEO', icon: '🎯', popular: false }
-  ];
+    { name: 'AI Content Generator', url: '/ai-content-generation', description: 'AI content creation', icon: '✍️', popular: false },]
+      { name: 'AI SEO Optimizer', url: '/ai-marketing', description: 'AI-driven SEO', icon: '🎯', popular: false }];
 
   const aiServices = [
     { name: 'AI Services', url: '/ai-services', description: 'Comprehensive AI solutions' },
@@ -38,9 +38,8 @@ const Footer: React.FC = memo(() => {
     { name: 'AI Computer Vision', url: '/ai-computer-vision', description: 'Advanced computer vision' },
     { name: 'AI Natural Language Processing', url: '/ai-nlp', description: 'Advanced NLP solutions' },
     { name: 'AI Robotics Platform', url: '/ai-robotics', description: 'Intelligent robotics' },
-    { name: 'AI Research & Development', url: '/ai-research-development', description: 'Custom AI R&D' },
-    { name: 'AI Edge Computing', url: '/ai-edge-computing', description: 'AI at the edge' }
-  ];
+    { name: 'AI Research & Development', url: '/ai-research-development', description: 'Custom AI R&D' },]
+      { name: 'AI Edge Computing', url: '/ai-edge-computing', description: 'AI at the edge' }];
 
   const itServices = [
     { name: 'IT Services', url: '/it-services', description: 'Comprehensive IT support' },
@@ -57,9 +56,8 @@ const Footer: React.FC = memo(() => {
     { name: 'IT Infrastructure Design', url: '/it-infrastructure-design', description: 'Custom infrastructure' },
     { name: 'IT Performance Monitoring', url: '/it-performance-monitoring', description: 'Real-time monitoring' },
     { name: 'IT Disaster Recovery', url: '/it-disaster-recovery', description: 'Disaster recovery' },
-    { name: 'IT Automation', url: '/it-automation', description: 'IT process automation' },
-    { name: 'Global IT Support', url: '/global-it-support', description: 'Worldwide support' }
-  ];
+    { name: 'IT Automation', url: '/it-automation', description: 'IT process automation' },]
+      { name: 'Global IT Support', url: '/global-it-support', description: 'Worldwide support' }];
 
 
   const emergingTech = [
@@ -73,35 +71,31 @@ const Footer: React.FC = memo(() => {
     { name: 'Smart Cities', url: '/smart-cities', description: 'Urban technology solutions' },
     { name: 'Digital Transformation', url: '/digital-transformation', description: 'Business modernization' },
     { name: 'Innovation Labs', url: '/innovation-labs', description: 'R&D and prototyping' },
-    { name: 'Sustainability Tech', url: '/sustainability-tech', description: 'Green technology solutions' },
-    { name: 'Future Technologies', url: '/future-technologies', description: 'Emerging tech solutions' }
-  ];
+    { name: 'Sustainability Tech', url: '/sustainability-tech', description: 'Green technology solutions' },]
+      { name: 'Future Technologies', url: '/future-technologies', description: 'Emerging tech solutions' }];
 
   const companyLinks = [
     { name: 'About Us', url: '/about' },
     { name: 'Our Team', url: '/team' },
     { name: 'Careers', url: '/careers' },
-    { name: 'News', url: '/news' },
-    { name: 'Contact', url: '/contact' }
-  ];
+    { name: 'News', url: '/news' },]
+      { name: 'Contact', url: '/contact' }];
 
   const supportLinks = [
     { name: 'Documentation', url: '/docs' },
     { name: 'API Reference', url: '/api-docs' },
     { name: 'Support Center', url: '/support' },
     { name: 'System Status', url: '/status' },
-    { name: 'Privacy Policy', url: '/privacy' },
-    { name: 'Terms of Service', url: '/terms' }
-  ];
+    { name: 'Privacy Policy', url: '/privacy' },]
+      { name: 'Terms of Service', url: '/terms' }];
 
   const socialLinks = [
     { name: 'Facebook', url: 'https://facebook.com/ziontechgroup', icon: Facebook },
     { name: 'Twitter', url: 'https://twitter.com/ziontechgroup', icon: Twitter },
     { name: 'LinkedIn', url: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },
     { name: 'Instagram', url: 'https://instagram.com/ziontechgroup', icon: Instagram },
-    { name: 'YouTube', url: 'https://youtube.com/@ziontechgroup', icon: Youtube },
-    { name: 'GitHub', url: 'https://github.com/ziontechgroup', icon: Github }
-  ];
+    { name: 'YouTube', url: 'https://youtube.com/@ziontechgroup', icon: Youtube },]
+      { name: 'GitHub', url: 'https://github.com/ziontechgroup', icon: Github }];
 
   const contactInfo = {
     phone: '+1 (302) 464-0950',
@@ -113,9 +107,8 @@ const Footer: React.FC = memo(() => {
   const achievements = [
     { icon: Award, text: '50+ Successful Projects' },
     { icon: Users, text: '100+ Happy Clients' },
-    { icon: TrendingUp, text: '300% Average ROI' },
-    { icon: Shield, text: '99.9% Uptime Guarantee' }
-  ];
+    { icon: TrendingUp, text: '300% Average ROI' },]
+      { icon: Shield, text: '99.9% Uptime Guarantee' }];
 
   return (
     <footer className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid">
@@ -140,9 +133,9 @@ const Footer: React.FC = memo(() => {
               Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, 
               and digital transformation services. Transform your business with cutting-edge technology.
             </p>
-
-            {/* Social Links */}
-            <div className="flex space-x-4">
+)
+            {/* Social Links */})
+            <div className="flex space-x-4">)
               {socialLinks.map((social, index) => (
                 <a
                   key={index}
@@ -384,7 +377,7 @@ const Footer: React.FC = memo(() => {
               </div>
               <div className="flex items-center space-x-2">
                 <Globe className="w-4 h-4 text-blue-400" />
-                <span>Global Reach</span>
+                <span></div></div>Global Reach</span>
               </div>
             </div>
           </div>

@@ -6,13 +6,13 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 
-const AIServicesPagePage: React.FC = () => {
-  const features = [
+const AIServicesPagePage: React.FC = () => {;
+const features = [
     {
       icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      title: description, 'Advanced AI algorithms that provide intelligent insights and recommendations.']
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+}
     },
     {
       icon: BarChart,
@@ -38,12 +38,11 @@ const AIServicesPagePage: React.FC = () => {
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology'
-  ];
+    'Scale operations without proportional staff increases']
+    'Gain competitive advantage with advanced technology'];
 
   return (
-    <>
+    <>\</>
       <Helmet>
         <title>AI Services - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered ai services service for modern businesses." />
@@ -51,9 +50,9 @@ const AIServicesPagePage: React.FC = () => {
       </Helmet>
 
       <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">)
+        {/* Hero Section */})
+        <section className="relative py-20 px-4 overflow-hidden">)
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
           <div className="relative max-w-7xl mx-auto text-center">

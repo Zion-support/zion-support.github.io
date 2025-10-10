@@ -8,7 +8,7 @@ import React from 'react'' import {ArrowRight, Brain, Cloud, Network, Phone, Mai
   n: string} pric,
   e: number} categor,
   y: string} interface FormData {/* TODO: Fix JSX expression */}
-  y: string]: string | number | boolean | File} interface ComponentProps {className?: string; children?: React.ReactNode} [ke,
+  y: string]: string | number | boolean | File} interface ComponentProps {className?: string; children?: React.ReactNode} [ke]
   y: string]: unknown} ' import { Link } from 'react-router-dom'' import { Button } from '../ui/Button' const,
   Footer: React.FC = () => {/* TODO: Fix JSX expression */}
   e: 'AI Services'} hre,
@@ -48,16 +48,18 @@ import React from 'react'' import {ArrowRight, Brain, Cloud, Network, Phone, Mai
   e: 'White Papers'} hre,
   f: '/whitepapers' }, {/* TODO: Fix JSX expression */}
   e: 'Webinars'} hre,
-  f: '/webinars' }, {/* TODO: Fix JSX expression */}
-  e: 'Pricing Guide'} hre,
+  f: '/webinars' }, {/* TODO: Fix JSX expression */}]
+    ]
+  e: 'Pricing Guide'} hre
   f: '/pricing-guide' } ]; const legalLinks = [' {/* TODO: Fix JSX expression */}
   e: 'Privacy Policy'} hre,
   f: '/privacy' }, {/* TODO: Fix JSX expression */}
   e: 'Terms of Service'} hre,
   f: '/terms' }, {/* TODO: Fix JSX expression */}
   e: 'Cookie Policy'} hre,
-  f: '/cookies' }, {/* TODO: Fix JSX expression */}
-  e: 'Sitemap'} hre,
+  f: '/cookies' }, {/* TODO: Fix JSX expression */}]
+    ]
+  e: 'Sitemap'} hre
   f: '/sitemap' } ]; const socialLinks = [' {/* TODO: Fix JSX expression */}
   s://linkedin.com/compunknown/ziontechgroup'} ico,
   n: Linkedin }, {/* TODO: Fix JSX expression */}
@@ -66,13 +68,14 @@ import React from 'react'' import {ArrowRight, Brain, Cloud, Network, Phone, Mai
   s://github.com/ziontechgroup'} ico,
   n: Github }, {/* TODO: Fix JSX expression */}
   s://youtube.com/ziontechgroup'} ico,
-  n: Youtube }, {/* TODO: Fix JSX expression */}
-  s://instagram.com/ziontechgroup'} ico,
+  n: Youtube }, {/* TODO: Fix JSX expression */}]
+    ]
+  s://instagram.com/ziontechgroup'} ico
   n: Instagram } ]; const contactInfo = {/* TODO: Fix JSX expression */}
   s: '364 E Main St STE 1008} Middletown DE 19709' }; return (<footer className="text-left" > {/* Main Footer Content */}' <div className='max-w-7xl mx-auto px-4,
   sm:px-6,
-  lg:px-8 py-16'>' <div className='grid grid-cols-1,
-  lg:grid-cols-4 gap-12'> {/* Compunknown Info */}' <div className='l,"
-  g:col-span-1'>' <Link href='/' className='flex items-center space-x-2 mb-6'>' <div className='w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center'>' <Brain className='w-6 h-6 text-white' /> <div className="text-left" > <div className="text-left" > {/* Company Info */} <div className="text-left" > <Link href="/" className="text-left" > <div className="text-left" > <Brain className="text-left" /> </div> <span className="text-left" > Zion Tech Group < </Link> <p className="text-left" > Leading provider of AI-powered solutions and technology services. We help businesses transform and innovate with cutting-edge artificial intelligence. </p> <div className="text-left" > <div className="text-left" > <Mail className="text-left" /> <a href={/* TODO: Fix JSX expression */}"
+  lg:px-8 py-16'>' <div className='grid grid-cols-1,)
+  lg:grid-cols-4 gap-12'> {/* Compunknown Info */}' <div className='l,")
+  g:col-span-1'>' <Link href='/' className='flex items-center space-x-2 mb-6'>' <div className='w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center'>' <Brain className='w-6 h-6 text-white' /> <div className="text-left" > <div className="text-left" > {/* Company Info */} <div className="text-left" > <Link href="/" className="text-left" > <div className="text-left" > <Brain className="text-left" /> </div> <span className="text-left" > Zion Tech Group < </Link> <p className="text-left" > Leading provider of AI-powered solutions and technology services. We help businesses transform and innovate with cutting-edge artificial intelligence. </p> <div className="text-left" > <div className="text-left" > <Mail className="text-left" /> <a href={/* TODO: Fix JSX expression */}")
   o:${contactInfo.email}`} className="text-left" > {contactInfo.email} </a> </div> <div className="text-left" > <Phone className="text-left" /> <a href={/* TODO: Fix JSX expression */}")`
-  l:${contactInfo.phone}`} className="text-left" > {contactInfo.phone} </a> </div> <div className="text-left" > <MapPin className="text-left" /> <span>{contactInfo.address}< </div> </div> {/* Social Links */} <div className="text-left" > {socialLinks.map(social => ( <a key={social.name} href={social.href} target="_blank" rel="noopener <noreferrer" className="text-left" aria-label={social.name} > <social.icon className="text-left" /> </a> ))} </div> </div> {/* Services */} <div className="text-left" > <h3 className="text-left" >Our Services</h3> <div className="text-left" > {serviceCategories.map(category => ( <div key={category.title}> <div className="text-left" > <category.icon className={`w-5 h-5 mr-2 ${category.color}`} /> <h4 className="text-left" > {category.title} </h4> </div> <ul className="text-left" > {category.services.map(service => ( <li key={service.name}> <Link href={service.href} className="text-left" > <Link className="text-left" /> {service.name} </Link> </li> ))} </ul> </div> ))} </div> </div> {/* Quick Links & Newsletter */} <div className="text-left" > <h3 className="text-left" >Quick Links</h3> <div className="text-left" > {quickLinks.map(link => ( <Link key={link.name} href={link.href} className="text-left" > {link.name} </Link> ))} </div> {/* Newsletter Signup */} <div className="text-left" > <h4 className="text-left" >Stay Updated</h4> <p className="text-left" > Get the latest AI insights and technology trends delivered to your inbox. </p> <div className="text-left" > <input type="email" placeholder="Enter your <<email className="text-left" /> <Button size="<sm" className="text-left" > Subscribe </Button> </div> </div> </div> </div> </div> {/* Stats Section */} <div className="text-left" > <div className="text-left" > <div className="text-left" > <div> <div className="text-left" >500+</div> <div className="text-left" >Projects Completed</div> </div> <div> <div className="text-left" >50+</div> <div className="text-left" >Happy Clients</div> </div> <div> <div className="text-left" >99.9%</div> <div className="text-left" >Uptime Guarantee</div> </div> <div> <div className="text-left" >24/7</div> <div className="text-left" >Support Available</div> </div> </div> </div> </div> {/* Bottom Footer */} <div className="text-left" > <div className="text-left" > <div className="text-left" > <div className="text-left" > <p className="text-left" > © {currentYear} Zion Tech Group. All rights reserved. </p> <div className="text-left" > {legalLinks.map(link => ( <Link key={link.name} href={link.href} className="text-left" > {link.name} </Link> ))} </div> </div> <div className="text-left" > <span>Made with< <Heart className="text-left" /> <span>by Zion Tech Group< </div> </div> </div> </div> </footer> )}; export default Footer; '"`
+  l:${contactInfo.phone}`} className="text-left" > {contactInfo.phone} </a> </div> <div className="text-left" > <MapPin className="text-left" /> <span>{contactInfo.address}< </div> </div> {/* Social Links */} <div className="text-left" > {socialLinks.map(social => ( <a key={social.name} href={social.href} target="_blank" rel="noopener <noreferrer" className="text-left" aria-label={social.name} > <social.icon className="text-left" /> </a> ))} </div> </div> {/* Services */} <div className="text-left" > <h3 className="text-left" >Our Services</h3> <div className="text-left" > {serviceCategories.map(category => ( <div key={category.title}> <div className="text-left" > <category.icon className={`w-5 h-5 mr-2 ${category.color}`} /> <h4 className="text-left" > {category.title} </h4> </div> <ul className="text-left" > {category.services.map(service => ( <li key={service.name}> <Link href={service.href} className="text-left" > <Link className="text-left" /> {service.name} </Link> </li> ))} </ul> </div> ))} </div> </div> {/* Quick Links & Newsletter */} <div className="text-left" > <h3 className="text-left" >Quick Links</h3> <div className="text-left" > {quickLinks.map(link => ( <Link key={link.name} href={link.href} className="text-left" > {link.name} </Link> ))} </div> {/* Newsletter Signup */} <div className="text-left" > <h4 className="text-left" >Stay Updated</h4> <p className="text-left" > Get the latest AI insights and technology trends delivered to your inbox. </p> <div className="text-left" > <input type="email" placeholder="Enter your <<email className="text-left" /> <Button size="<sm" className="text-left" > Subscribe </Button> </div> </div> </div> </div> </div> {/* Stats Section */} <div className="text-left" > <div className="text-left" > <div className="text-left" > <div> <div className="text-left" >500+</div> <div className="text-left" >Projects Completed</div> </div> <div> <div className="text-left" >50+</div> <div className="text-left" >Happy Clients</div> </div> <div> <div className="text-left" >99.9%</div> <div className="text-left" >Uptime Guarantee</div> </div> <div> <div className="text-left" >24/7</div> <div className="text-left" >Support Available</div> </div> </div> </div> </div> {/* Bottom Footer */} <div className="text-left" > <div className="text-left" > <div className="text-left" > <div className="text-left" > <p className="text-left" > © {currentYear} Zion Tech Group. All rights reserved. </p> <div className="text-left" > {legalLinks.map(link => ( <Link key={link.name} href={link.href} className="text-left" > {link.name} </Link> ))} </div> </div> <div className="text-left" > <span>Made with< <Heart className="text-left" /> <span></div></span>by Zion Tech Group< </div> </div> </div> </div> </footer> )}; export default Footer; '"`

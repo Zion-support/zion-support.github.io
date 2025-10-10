@@ -8,23 +8,22 @@ const __dirname = path.dirname(__filename);
 
 // Performance monitoring script;
 const performanceReport = {
-  timestamp: new Date().toISOString()
-  buildSize: 0;
-  pageCount: 0;
-  recommendations: []};
+  timestamp: buildSize, 0;
+  pageCount: recommendations, []};
 
 // Analyze build output;
 const buildDir = path.join(process.cwd(), '.next');
 const staticDir = path.join(buildDir, 'static');
 
-if (fs.existsSync(staticDir)) {
-  const files = fs.readdirSync(staticDir, { recursive: true });
+if (fs.existsSync(staticDir)) {;
+const files = fs.readdirSync(staticDir, { recursive: true });
   const jsFiles = files.filter(file => file.endsWith('.js'));
   
-  jsFiles.forEach(file => {)
-    const filePath = path.join(staticDir, file);
+  jsFiles.forEach(file => {);
+const filePath = path.join(staticDir, file);
     const stats = fs.statSync(filePath);
     performanceReport.buildSize += stats.size;
+}
   });
   
   performanceReport.buildSize = Math.round(performanceReport.buildSize / 1024); // Convert to KB;

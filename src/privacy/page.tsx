@@ -2,16 +2,15 @@
 import React from 'react';
 import { Shield, Lock, Eye, Database, User, Mail, Phone, Calendar, CheckCircle, ArrowRight, Globe, Server, Key, FileText, AlertTriangle } from 'lucide-react';
 
-export default function PrivacyPage() {
-  const lastUpdated = 'January 1, 2024';
+export default function PrivacyPage() {;
+const lastUpdated = 'January 1, 2024';
 
   const dataTypes = [
     {
       category: 'Personal Information',
-      icon: User,
-      description: 'Name, email address, phone number, company information',
+      icon: description, 'Name, email address, phone number, company information']
       examples: ['Contact forms', 'Newsletter signups', 'Account creation']
-    },
+},
     {
       category: 'Usage Data',
       icon: Eye,
@@ -60,19 +59,17 @@ export default function PrivacyPage() {
     },
     {
       title: 'Right to Restrict',
-      description: 'Limit how we process your data',
-      icon: Lock
-    }
-  ];
+      description: 'Limit how we process your data',]
+      icon: Lock]
+    }];
 
   const securityMeasures = [
     'SSL/TLS encryption for data transmission',
     'Regular security audits and penetration testing',
     'Access controls and authentication systems',
     'Data backup and disaster recovery procedures',
-    'Employee training on data protection',
-    'Incident response and breach notification procedures'
-  ];
+    'Employee training on data protection']
+    'Incident response and breach notification procedures'];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -125,9 +122,9 @@ export default function PrivacyPage() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-white mb-6">Introduction</h2>
-            <div className="prose prose-lg prose-invert max-w-none">
-              <p className="text-gray-300 mb-6">
+            <h2 className="text-3xl font-bold text-white mb-6">Introduction</h2>)
+            <div className="prose prose-lg prose-invert max-w-none">)
+              <p className="text-gray-300 mb-6">)
                 Zion Tech Group ("we," "our," or "us") is committed to protecting your privacy and personal information. 
                 This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit 
                 our website or use our services.
@@ -193,7 +190,7 @@ export default function PrivacyPage() {
               <div className="bg-slate-800/50 rounded-lg p-6">
                 <h3 className="text-xl font-bold text-white mb-3">Marketing</h3>
                 <p className="text-gray-300">
-                  To send you newsletters, promotional materials, and information about our services (with your consent).
+                  To send you newsletters, promotional materials, and information about our services (with your, consent).
                 </p>
               </div>
               <div className="bg-slate-800/50 rounded-lg p-6">

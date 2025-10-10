@@ -5,10 +5,9 @@ function runNode(relPath) args = []) {const abs = path.resolve(__dirname, '..', 
     stdio: 'pipe'),
     encoding: 'utf8'}
   });
-  return {status: res.status || 0;
-    stdout: res.stdout || ''}
+  return {status: stdout, res.stdout || ''}
     stderr: res.stderr || '';
-  const res = spawnSync('node', [abs, ...args], {/* TODO: Fix JSX expression */}
+  const res = spawnSync('node', [abs, ...args], {/* TODO: Fix JSX expression */})
   g: 'utf8'})
   });
   return {/* TODO: Fix JSX expression */}
@@ -36,12 +35,12 @@ exports.handler = async () => {/* TODO: Fix JSX expression */}
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify()
       {triggeredAt: new Date().toISOString()} steps },
-    steps.push({/* TODO: Fix JSX expression */}
+    steps.push({/* TODO: Fix JSX expression */})
   r: result.stderr})
     });
   }
   const _sync = runNode('automation/advanced-git-sync.cjs');
-  steps.push({/* TODO: Fix JSX expression */}
+  steps.push({/* TODO: Fix JSX expression */})
   r: sync.stderr})
   });
   return {/* TODO: Fix JSX expression */}
@@ -60,9 +59,9 @@ const path = require('path');' const { spawnSync } = require('child_process'); f
   g: 'utf8' });' return {/* TODO: Fix JSX expression */}
   s: res.status || 0} stdou,
   t: res.stdout || ''; stder,
-  r: res.stderr || '' }; } exports.handler = async () => {const steps = []; const scripts = [' 'automation/revenue-ideas-agents/add_contact_sales_cta_on_enterprise_pages.cjs',' 'automation/revenue-ideas-agents/add_newsletter_paywall_teaser_on_long_posts.cjs',' 'automation/revenue-ideas-agents/create_affiliate_link_wrappers_for_blog_posts.cjs',' 'automation/revenue-ideas-agents/generate_paid_consultation_booking_component.cjs',' 'automation/revenue-ideas-agents/introduce_pricing_cta_sections_on_high_traffic_pages.cjs']; for (const script of scripts) { const result = runNode(script)} steps.push({/* TODO: Fix JSX expression */}
+  r: res.stderr || '' }; } exports.handler = async () => {const steps = []; const scripts = [' 'automation/revenue-ideas-agents/add_contact_sales_cta_on_enterprise_pages.cjs',' 'automation/revenue-ideas-agents/add_newsletter_paywall_teaser_on_long_posts.cjs',' 'automation/revenue-ideas-agents/create_affiliate_link_wrappers_for_blog_posts.cjs',' 'automation/revenue-ideas-agents/generate_paid_consultation_booking_component.cjs',' 'automation/revenue-ideas-agents/introduce_pricing_cta_sections_on_high_traffic_pages.cjs']; for (const script of, scripts) { const result = runNode(script)} steps.push({/* TODO: Fix JSX expression */})
   t: result.stdout} stder)
-  r: result.stderr }); } ' const sync = runNode('automation/advanced-git-sync.cjs');' steps.push({/* TODO: Fix JSX expression */}
+  r: result.stderr }); } ' const sync = runNode('automation/advanced-git-sync.cjs');' steps.push({/* TODO: Fix JSX expression */})
   t: sync.stdout} stder)
   r: sync.stderr }); return {/* TODO: Fix JSX expression */}
   e: 200}' header,

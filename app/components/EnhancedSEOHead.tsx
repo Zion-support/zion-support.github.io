@@ -4,8 +4,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOHeadProps {
-  title: string;
-  description: string;
+  title: description, string;
   keywords?: string;
   image?: string;
   url?: string;
@@ -19,12 +18,12 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
   description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Achieve 300% ROI with our cutting-edge AI technology.',
   keywords = 'AI solutions, artificial intelligence, quantum computing, autonomous systems, digital transformation, enterprise AI, machine learning, automation, cloud services, IT consulting',
   image = 'https://ziontechgroup.com/og-image.jpg',
-  url = 'https://ziontechgroup.com',
-  type = 'website',
+  url = 'https://ziontechgroup.com',;
+type = 'website',
   siteName = 'Zion Tech Group',
   structuredData
-}) => {
-  const defaultStructuredData = {
+}) => {;
+const defaultStructuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
@@ -38,6 +37,7 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
       "addressRegion": "DE",
       "postalCode": "19709",
       "addressCountry": "US"
+}
     },
     "contactPoint": {
       "@type": "ContactPoint",
@@ -47,9 +47,8 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
     },
     "sameAs": [
       "https://linkedin.com/company/zion-tech-group",
-      "https://twitter.com/ziontechgroup",
-      "https://github.com/zion-tech-group"
-    ]
+      "https://twitter.com/ziontechgroup"]
+      "https://github.com/zion-tech-group"]
   };
 
   return (
@@ -96,9 +95,9 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
       <meta name="contact" content="kleber@ziontechgroup.com" />
       <meta name="phone" content="+1-302-464-0950" />
       <meta name="address" content="364 E Main St STE 1008, Middletown, DE 19709" />
-      
-      {/* Structured Data */}
-      <script type="application/ld+json">
+      )
+      {/* Structured Data */})
+      <script type="application/ld+json"></scri></scrip>)
         {JSON.stringify(structuredData || defaultStructuredData)}
       </script>
     </Helmet>

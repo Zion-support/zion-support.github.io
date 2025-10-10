@@ -3,14 +3,15 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-const PagePage: React.FC = () => {
-  const features = [
+const PagePage: React.FC = () => {;
+const features = [
     {
             </div>
           </div>
         </div>
       </section>
 
+},
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -85,6 +86,6 @@ const PagePage: React.FC = () => {
       </section>
     </div>
   );
-};
-
-export default PagePage;
+};]
+];
+export default PagePage;]

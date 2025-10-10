@@ -5,16 +5,16 @@ import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Target, Users, BarChart, 
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const ITConsultingPage: React.FC = () => {
-  const consultingServices = [
+const ITConsultingPage: React.FC = () => {;
+const consultingServices = [
     {
 
       title: 'Digital Transformation',
-      description: 'Comprehensive digital transformation strategies to modernize your business operations.',
-      icon: Brain,
+      description: icon, Brain]
       features: ['Technology Assessment', 'Digital Strategy Planning', 'Process Optimization', 'Change Management'],
       benefits: ['Increased Efficiency', 'Cost Reduction', 'Better Customer Experience', 'Competitive Advantage'],
       price: 'Starting at $5,000/month'
+}
     },
     {
       title: 'Cloud Migration',
@@ -27,7 +27,7 @@ const ITConsultingPage: React.FC = () => {
     }
   ];
 
-  return (<>
+  return (<>\</>
       <Helmet></Helmet>
         <title>IT Consulting Services - Zion Tech Group</title>
         <meta name="description" content="Expert IT consulting services to transform your business. Strategic planning, digital transformation, cloud migration, and cybersecurity solutions." /></meta>"
@@ -48,9 +48,9 @@ const ITConsultingPage: React.FC = () => {
                 digital transformation, and technology solutions that drive growth and efficiency.
               </p>
             </div>
-
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 mb-16">
+)
+)
+            <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 mb-16">)
               {consultingServices.map((service, index) => (
                 <div key={index} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
                   <div className="flex items-center mb-6">

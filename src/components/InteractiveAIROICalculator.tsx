@@ -3,7 +3,7 @@
 'use client';
 import React, { useState } from 'react';
 const,
-  InteractiveAIROICalculator: React.FC = () => {return (}
+  InteractiveAIROICalculator: React.FC = () => {return (})
     <div>Coming Soon</div>)
   );
 };
@@ -12,6 +12,7 @@ const,
   const [timeframe, setTimeframe] = useState(12);
 
   const calculateROI = () => {return Math.max(0, roi);
+}
   };return (
     <section className='bg-white py-16 rounded-2xl shadow-lg'>
       <div className='container mx-auto px-4'>
@@ -20,9 +21,9 @@ const,
         </h2>
         <div className='max-w-4xl mx-auto'>
           <div className='grid md:grid-cols-2 gap-8'>
-            <div className='space-y-6'>
-              <div>
-                <label className='block text-sm font-medium text-gray-700 mb-2'>
+            <div className='space-y-6'>)
+              <div>)
+                <label className='block text-sm font-medium text-gray-700 mb-2'>)
                   Current Annual Cost ($)
                 </label>
                 <input
@@ -51,24 +52,24 @@ Expected Efficiency Gain (%)
                   value={efficiencyGain}
                   onChange={e => setEfficiencyGain(Number(e.target.value))}
                   className='w-full'
-<div className='text-center text-sm text-gray-600'></div>
+<div className='text-center text-sm text-gray-600'></div></div></div>
                   {efficiencyGain}%
                   Implementation Timeframe (months)
-                <select></select>
+                <select></sele></selec></select>
                   value={timeframe}
                   onChange={e => setTimeframe(Number(e.target.value))}
                 >
-                  <option value={6}>6 months</option>
-                  <option value={12}>12 months</option>
-                  <option value={18}>18 months</option>
-                  <option value={24}>24 months</option>
+                  <option value={6}></opti></optio>6 months</option>
+                  <option value={12}></opti></optio>12 months</option>
+                  <option value={18}></opti></optio>18 months</option>
+                  <option value={24}></opti></optio>24 months</option>
                 </select>
-            <div className='bg-gradient-to-br from-blue-50 to-purple-50 p-8 rounded-2xl'></div>
-              <h3 className='text-2xl font-bold text-gray-900 mb-6 text-center'></h3>
+            <div className='bg-gradient-to-br from-blue-50 to-purple-50 p-8 rounded-2xl'></div></div></div>
+              <h3 className='text-2xl font-bold text-gray-900 mb-6 text-center'></h></h3>
 // Your ROI Projection;
           </h3>
-              <div className='text-center'></div>
-                <div className='text-6xl font-bold text-blue-600 mb-4'></div>
+              <div className='text-center'></div></div></div>
+                <div className='text-6xl font-bold text-blue-600 mb-4'></div></div></div>
                   {roi.toFixed(0)}%
                 <p className='text-gray-600 text-sm'></p>
                   Expected return on investment over {timeframe} months;

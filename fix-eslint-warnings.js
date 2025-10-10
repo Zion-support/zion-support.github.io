@@ -5,17 +5,14 @@ import path from 'path';
 // Get all TypeScript and JavaScript files;
 function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
   
-  for (const item of items) {
+  for (const item of, items) {
     
     if (stat.isDirectory()) {
       // Skip node_modules, dist, and other build directories;
       if (!['node_modules', 'dist', '.next', 'out', '.git'].includes(item)) {
         files = files.concat(getAllFiles(fullPath, extensions));
-function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {/* TODO: Fix JSX expression */}
-      }
-    } else if (extensions.some(ext => item.endsWith(ext))) {/* TODO: Fix JSX expression */}
-    }
-  }
+}
+function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {/* TODO: Fix JSX expression */} else if (extensions.some(ext => item.endsWith(ext))) {/* TODO: Fix JSX expression */}
   
   return files;
 }
@@ -42,12 +39,10 @@ function fixUnusedVariables(content) {
     return match.replace(/\b(\w+)\b/g, (_param) => {
       if (param.includes('_') || param === 'props' || param === 'event' || param === 'index') {
         return param;
-function fixConsoleStatements(content) {/* TODO: Fix JSX expression */}
 }
-
+function fixConsoleStatements(content) {/* TODO: Fix JSX expression */}
 // Fix unused variables;
 function fixUnusedVariables(content) {/* TODO: Fix JSX expression */}
-      }
       return `_${param}`;
     });
   });
@@ -63,18 +58,18 @@ function fixUnusedImports(content) {
   lines.forEach(line => {)
     if (matches) {
       matches.forEach(match => usedIdentifiers.add(match));
-function fixUnusedImports(content) {/* TODO: Fix JSX expression */}
-    }
-  });
+}
+function fixUnusedImports(content) {/* TODO: Fix JSX expression */});
   
   // Remove unused import lines;
   const filteredLines = lines.filter(line => {)
     if (importMatch) {
       if (importedItems) {
         return hasUsedItems;
-  const filteredLines = lines.filter(line => {/* TODO: Fix JSX expression */}
-      }
-    }
+}
+  const filteredLines = lines.filter(line => {/* TODO: Fix JSX expression */})
+      })
+    })
     return true;)
   });
   
@@ -97,16 +92,16 @@ function main() {
         fs.writeFileSync(file, content, 'utf8');
 
         fixedFiles++;
-      }
-    } catch (error) {
-
-function main() {/* TODO: Fix JSX expression */}
 }
-  files.forEach(file => {/* TODO: Fix JSX expression */}
+  } catch (error) {
+    console.error("Error:", error);
+}
+    } catch (error) {;
+}
+function main() {/* TODO: Fix JSX expression */}
+  files.forEach(file => {/* TODO: Fix JSX expression */})
       })
-    } catch (error) {/* TODO: Fix JSX expression */}
-    }
-  });
+    } catch (error) {/* TODO: Fix JSX expression */});
 
 }
 
@@ -115,6 +110,4 @@ if (import.meta.url === `file://${process.argv[1]}`) {
 // Run if this is the main module;`
 if (import.meta.url === `fil)`
   e://${process.argv[1]}`) {/* TODO: Fix JSX expression */}
-}
-
 export { fixConsoleStatements, fixUnusedVariables, fixUnusedImports };`

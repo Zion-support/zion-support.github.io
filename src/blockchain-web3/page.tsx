@@ -28,8 +28,8 @@ export default function BlockchainWeb3Page() {
               Contact Us
             </a>
           </div>
-        </div>
-      </div>
-    </div>
+        </div>)
+      </div>)
+    </div>)
   );
 }

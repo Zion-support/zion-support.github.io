@@ -4,7 +4,6 @@ export default function FeaturedContentBanner20, 2, 5() {/* TODO: Fix JSX expres
     {/* TODO: Fix JSX expression */}
     },
     {/* TODO: Fix JSX expression */}
-    }
   ]; return(<section, classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-9, 0, 0/80, t, o-bl, u, e-9, 0, 0/80, backdro, p-bl, u, r-lg">
       <div, className="container, m, x-auto, p, x-6">
         <div, className="te, x, t-center, m, b-16">
@@ -33,9 +32,9 @@ export default function FeaturedContentBanner20, 2, 5() {/* TODO: Fix JSX expres
           <h2, className="te, x, t-5xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-bl, u, e-400, vi, a-cy, a, n-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t"></h2>
             Featured, Conten, t;
           </h2>"
-          <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-au, t, o"></p>
-            Discover, breakthrough, AI innovati, o, n, s, $5, 0, M+ savings, strategie, s, and, revolutionary, product development, frameworks, that are, transforming, Fortune 500, companies, worldwide.
-          </p>
+          <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-au, t, o"></p>)
+            Discover, breakthrough, AI innovati, o, n, s, $5, 0, M+ savings, strategie, s, and, revolutionary, product development, frameworks, that are, transforming, Fortune 500, companies, worldwide.)
+          </p>)
         </div>)
 )
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12">)
@@ -200,7 +199,7 @@ export default function FeaturedContentBanner20, 2, 5() {/* TODO: Fix JSX expres
               placehold, e, r="Enter, your, email addre, s, s""
               className="fl, e, x-1, p, x-4, p, y-3, b, g-whi, t, e/10, border, border-whi, t, e/20, rounde, d-lg, tex, t-white, placeholde, r-gr, a, y-400, focu, s:bord, e, r-bl, u, e-500, focu, s:outli, n, e-no, n, e"
 /></input>"
-<button, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-purp, l, e-600, hove, r:fr, o, m-bl, u, e-400, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-lg, transitio, n-all, duratio, n-3, 0, 0"></button>
+<button, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-purp, l, e-600, hove, r:fr, o, m-bl, u, e-400, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-lg, transitio, n-all, duratio, n-3, 0, 0"></butt></butto></button>
               Subscri, b, e;
             </button>
           </div>"

@@ -8,6 +8,7 @@ export default function handler(req, res) {
   if (req.method !== 'POST') {
     res.statusCode = 405;
     res.setHeader('Content-Type', 'application/json');
+}
     res.end(JSON.stringify({ error: 'Method not allowed' }));
     return;
   }
@@ -17,6 +18,7 @@ export default function handler(req, res) {
   if (!address || !type) {
     res.statusCode = 400;
     res.setHeader('Content-Type', 'application/json');
+}
     res.end(JSON.stringify({ error: 'Address and type are required' }));
     return;
   }
@@ -27,24 +29,27 @@ export default function handler(req, res) {
 
   let existing = [];
   try {
-    if (fs.existsSync(file)) {
-      const data = fs.readFileSync(file, 'utf8');
+    if (fs.existsSync(file)) {;
+const data = fs.readFileSync(file, 'utf8');
       existing = JSON.parse(data);
       if (!Array.isArray(existing)) existing = [];
-    }
+  } catch (error) {
+    console.error("Error:", error);
+}
   } catch (error) {
     // Log error for debugging in development
     if (process.env.NODE_ENV === 'development') {
       console.error('Error reading existing wallets:', error);
-    }
+}
     existing = [];
   }
 
-  // Check if wallet address already exists
-  const existingWallet = existing.find(wallet => wallet.address === address);
+  // Check if wallet address already exists;
+const existingWallet = existing.find(wallet => wallet.address === address);
   if (existingWallet) {
     res.statusCode = 400;
     res.setHeader('Content-Type', 'application/json');
+}
     res.end(JSON.stringify({ error: 'Wallet address already exists' }));
     return;
   }
@@ -66,17 +71,18 @@ export default function handler(req, res) {
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
-      success: true, 
-      message: 'Wallet added successfully',
-      id: newWallet.id
-    }));
+      success: true, )
+      message: 'Wallet added successfully',)
+      id: newWallet.id)
+  } catch (error) {
+    console.error("Error:", error);
+}));
   } catch (error) {
     // Log error for debugging in development
     if (process.env.NODE_ENV === 'development') {
       console.error('Error saving wallet:', error);
-    }
+}
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Failed to save wallet' }));
   }
-}

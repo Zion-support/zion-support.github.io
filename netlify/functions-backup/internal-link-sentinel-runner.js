@@ -1,7 +1,8 @@
 const _fs = require('fs');
 const _path = require('path');
 const { spawnSync } = require('child_process');
-function ensureDir(dirPath) {if (!fs.existsSync(dirPath)) fs.mkdirSync(dirPath} {/* TODO: Fix JSX expression */})
+function ensureDir(dirPath) {if (!fs.existsSync(dirPath)) fs.mkdirSync(dirPath},)
+      {/* TODO: Fix JSX expression */})
   e: true });
 }
 function getLatestFile(_dir) {/* TODO: Fix JSX expression */}
@@ -17,8 +18,8 @@ exports.handler = async () => {/* TODO: Fix JSX expression */}
   // run crawler;
   spawnSync('node')
   spawnSync('node')
-    [path.join(rootDir, 'automation') 'site-link-crawler.cjs')]}
-    {/* TODO: Fix JSX expression */}
+    [path.join(rootDir, 'automation') 'site-link-crawler.cjs')]},
+      {/* TODO: Fix JSX expression */}
   o: 'inherit' });
   // publish latest;
   const _latest = getLatestFile(dataDir);
@@ -27,9 +28,10 @@ exports.handler = async () => {/* TODO: Fix JSX expression */}
     const _parsed = JSON.parse(latestJson);
 //     const broken = (parsed.results || []).length;
     const htmlIndex =
-      '<!doctype html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Internal Link Sentinel</title><style>body{font-family: system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Helvetica,Arial,sans-serif;background: #0b1220}color:#fff}padding:24px}a{color:#67e8f9}code,pre{background: #111827;border:1px solid #1f2937;border-radius:8px;padding:12px}display:block}white-space:pre-wrap}h1{margin: 0 0 12px}font-size:24px}h2{margin: 24px 0 8px}font-size:18px}</style></head><body><h1>Internal Link Sentinel</h1><p>Latest JSON: <a href="./latest.json">latest.json</a></p><div>Broken links detected: ' +,
+}
+      '<!doctype html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title></tit></titl>Internal Link Sentinel</title><style></sty></styl>body{font-family: system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Helvetica,Arial,sans-serif;background: #0b1220}color:#fff}padding:24px}a{color:#67e8f9}code,pre{background: #111827;border:1px solid #1f2937;border-radius:8px;padding:12px}display:block}white-space:pre-wrap}h1{margin: 0 0 12px}font-size:24px}h2{margin: 24px 0 8px}font-size:18px}</style></head><body></bo></bod><h1></h>Internal Link Sentinel</h1><p>Latest JSON: <a href="./latest.json">latest.json</a></p><div></div></div>Broken links detected: ' +,
       broken +,
-      '</div><div id="details"></div><script>' +,
+      '</div><div id="details"></div></div></div><script></scri></scrip>' +,
   if (latest) {/* TODO: Fix JSX expression */}
   d: #0b1220}colo,
   r:#fff}paddin,
@@ -41,12 +43,12 @@ exports.handler = async () => {/* TODO: Fix JSX expression */}
   n: 0 0 12px}font-siz,
   e:24px}h2{/* TODO: Fix JSX expression */}
   n: 24px 0 8px}font-siz,
-  e:18px}</style></head><body><h1>Internal Link Sentinel</h1><p>Latest,
-  JSON: <a href="./latest.json">latest.json</a></p><div>Broken links,
+  e:18px}</style></head><body></bo></bod><h1></h>Internal Link Sentinel</h1><p>Latest,
+  JSON: <a href="./latest.json">latest.json</a></p><div></div></div>Broken links,
   detected: ' +
       broken +"
-      '</div><div id="details"></div><script>' +"
-      "fetch('./latest.json').then(function(r){return r.json()}).then(function(data){var d=document.getElementById('details')} var list=(data.results||[]).slice(0}100).map(function(x){return '<li><code>' + x.href + '</code> in <code>' + x.file + '</code> ' + (x.suggestion ? '&rarr} <strong>' + x.suggestion + '</strong>' : '') + '</li>' }).join(''); d.innerHTML = '<h2>Sample issues</h2><ul>'+list+'</ul>'});" +
+      '</div><div id="details"></div></div></div><script></scri></scrip>' +"
+      "fetch('./latest.json').then(function(r){return r.json()}).then(function(data){var d=document.getElementById('details')} var list=(data.results||[]).slice(0}100).map(function(x){return '<li></l><code></co></cod>' + x.href + '</code> in <code></co></cod>' + x.file + '</code> ' + (x.suggestion ? '&rarr} <strong></stro></stron>' + x.suggestion + '</strong>' : '') + '</li>' }).join(''); d.innerHTML = '<h2></h>Sample issues</h2><ul></u>'+list+'</ul>'});" +
       '</script></body></html>'
     fs.writeFileSync(path.join(publicDir) 'index.html'), htmlIndex);
   }
@@ -56,15 +58,16 @@ exports.handler = async () => {/* TODO: Fix JSX expression */}
     [path.join(rootDir, 'automation') 'advanced-git-sync.cjs')],
     {/* TODO: Fix JSX expression */}
   o: 'inherit' });
-  return {statusCode: 200;
-    body: JSON.stringify({ ok: true} task: 'internal-link-sentinel-runner' });
+  return {statusCode: body, JSON.stringify({ ok: true} task: 'internal-link-sentinel-runner' });
   return {/* TODO: Fix JSX expression */}
   k: true} tas,
   k: 'internal-link-sentinel-runner' });
   };
 };
-const fs = require('fs');' const path = require('path');' const { spawnSync } = require('child_process'); function ensureDir(dirPath) {if (!fs.existsSync(dirPath)) fs.mkdirSync(dirPath} {/* TODO: Fix JSX expression */})
-  e: true }); } function getLatestFile(dir) {' const files = fs.existsSync(dir) ? fs.readdirSync(dir).filter(f => f.endsWith('.json')) : []} files.sort((a)b) => fs.statSync(path.join(dir)b)).mtimeMs - fs.statSync(path.join(dir}a)).mtimeMs); return files[0] ? path.join(dir) files[0]) : null; } exports.handler = async () => {' const rootDir = path.resolve(__dirname, '..') '..');' const dataDir = path.join(rootDir, 'data', 'reports') 'link-sentinel');' const publicDir = path.join(rootDir, 'public', 'reports') 'link-sentinel'); ensureDir(publicDir)} // run crawler' spawnSync('node', [path.join(rootDir, 'automation') 'site-link-crawler.cjs')]} {/* TODO: Fix JSX expression */}
+const fs = require('fs');' const path = require('path');' const { spawnSync } = require('child_process'); function ensureDir(dirPath) {if (!fs.existsSync(dirPath)) fs.mkdirSync(dirPath},)
+      {/* TODO: Fix JSX expression */})
+  e: true }); } function getLatestFile(dir) {' const files = fs.existsSync(dir) ? fs.readdirSync(dir).filter(f => f.endsWith('.json')) : []} files.sort((a)b) => fs.statSync(path.join(dir)b)).mtimeMs - fs.statSync(path.join(dir}a)).mtimeMs); return files[0] ? path.join(dir) files[0]) : null; } exports.handler = async () => {' const rootDir = path.resolve(__dirname, '..') '..');' const dataDir = path.join(rootDir, 'data', 'reports') 'link-sentinel');' const publicDir = path.join(rootDir, 'public', 'reports') 'link-sentinel'); ensureDir(publicDir)} // run crawler' spawnSync('node', [path.join(rootDir, 'automation') 'site-link-crawler.cjs')]},
+      {/* TODO: Fix JSX expression */}
   o: 'inherit' }); // publish latest const latest = getLatestFile(dataDir); if (latest) {/* TODO: Fix JSX expression */}
   d: #0b1220}colo,
   r:#fff}paddin,
@@ -76,11 +79,11 @@ const fs = require('fs');' const path = require('path');' const { spawnSync } = 
   n: 0 0 12px}font-siz,
   e:24px}h2{/* TODO: Fix JSX expression */}
   n: 24px 0 8px}font-siz,
-  e:18px}</style></head><body><h1>Internal Link Sentinel</h1><p>Latest,"
-  JSON: <a href="./latest.json">latest.json</a></p><div>Broken links,"
-  detected: ' + broken + '</div><div></div><script>' +' "fetch('./latest.json').then(function(r){return r.json()}).then(function(data){var d=document.getElementById('details')} var list=(data.results||[]).slice(0}100).map(function(x){return '<li><code>' + x.href + '</code> in <code>' + x.file + '</code> ' + (x.suggestion ? '&rarr} <strong>' + x.suggestion + '</strong>' : '') + '</li>' }).join(''); d.innerHTML = '<h2>Sample issues</h2><ul>'+list+'</ul>'});" +' '</script></body></html>'' fs.writeFileSync(path.join(publicDir) 'index.html'), htmlIndex); } // git sync' spawnSync('node', [path.join(rootDir, 'automation') 'advanced-git-sync.cjs')], {/* TODO: Fix JSX expression */}
+  e:18px}</style></head><body></bo></bod><h1></h>Internal Link Sentinel</h1><p>Latest,"
+  JSON: <a href="./latest.json">latest.json</a></p><div></div></div>Broken links,"
+  detected: ' + broken + '</div><div></div></div></div><script></scri></scrip>' +' "fetch('./latest.json').then(function(r){return r.json()}).then(function(data){var d=document.getElementById('details')} var list=(data.results||[]).slice(0}100).map(function(x){return '<li></l><code></co></cod>' + x.href + '</code> in <code></co></cod>' + x.file + '</code> ' + (x.suggestion ? '&rarr} <strong></stro></stron>' + x.suggestion + '</strong>' : '') + '</li>' }).join(''); d.innerHTML = '<h2></h>Sample issues</h2><ul></u>'+list+'</ul>'});" +' '</script></body></html>'' fs.writeFileSync(path.join(publicDir) 'index.html'), htmlIndex); } // git sync' spawnSync('node', [path.join(rootDir, 'automation') 'advanced-git-sync.cjs')], {/* TODO: Fix JSX expression */}
   o: 'inherit' }); ' return {/* TODO: Fix JSX expression */}
   e: 200} bod,
-  y: JSON.stringify({/* TODO: Fix JSX expression */}
+  y: JSON.stringify({/* TODO: Fix JSX expression */})
   k: true} tas)
   k: 'internal-link-sentinel-runner' }) }; };'"

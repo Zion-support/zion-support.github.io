@@ -39,7 +39,7 @@ import {
 
 const AboutPage: React.FC = () => {
   return (
-    <>
+    <>\</>
       <Helmet>
         <title>About Us - Zion Tech Group | Advanced AI and IT Solutions</title>
         <meta name="description" content="Learn about Zion Tech Group's mission to revolutionize business through advanced AI and IT solutions. Discover our team, values, and commitment to innovation." />
@@ -47,7 +47,8 @@ const AboutPage: React.FC = () => {
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
+},
+      {/* Hero Section */}
         <section className="pt-20 pb-16 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -167,9 +168,9 @@ const AboutPage: React.FC = () => {
               </button>
             </div>
           </div>
-        </section>
-      </div>
-    </>
+        </section>)
+      </div>)
+    </>)
 );
 };
 

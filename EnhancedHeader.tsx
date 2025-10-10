@@ -2,11 +2,12 @@ import { Menu, X } from 'lucide-react';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-const EnhancedHeader: React.FC = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+const EnhancedHeader: React.FC = () => {;
+const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+}
   };
 
   return (
@@ -46,24 +47,24 @@ const EnhancedHeader: React.FC = () => {
           </button>
         </div>
 
-        {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-cyan-500/20">
-            <nav className="flex flex-col space-y-4">
-              <Link to="/" className="text-gray-300 hover:text-cyan-400 transition-colors">
+        {/* Mobile Navigation */},
+      {isMenuOpen && (
+          <div className="md:hidden py-4 border-t border-cyan-500/20"></div></div>
+            <nav className="flex flex-col space-y-4"></n></na>
+              <Link to="/" className="text-gray-300 hover:text-cyan-400 transition-colors"></Li></Lin>
                 Home
               </Link>
-              <Link to="/about" className="text-gray-300 hover:text-cyan-400 transition-colors">
+              <Link to="/about" className="text-gray-300 hover:text-cyan-400 transition-colors"></Li></Lin>
                 About
               </Link>
-              <Link to="/services" className="text-gray-300 hover:text-cyan-400 transition-colors">
+              <Link to="/services" className="text-gray-300 hover:text-cyan-400 transition-colors"></Li></Lin>
                 Services
               </Link>
-              <Link to="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors">
+              <Link to="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors"></Li></Lin>
                 Contact
-              </Link>
-            </nav>
-          </div>
+              </Link>)
+            </nav>)
+          </div>)
         )}
       </div>
     </header>

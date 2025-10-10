@@ -1,11 +1,12 @@
 export default function October2025ProductionAIBann, e, r() { 
-  return(<section, classNam, e = 'py-16, b, g-gradie, n, t-to-br, fro, m-indi, g, o-600, vi, a-purp, l, e-600, t, o-pi, n, k-600, tex, t-white, relative, overflow-hidd, e, n' > {' ' }
+}
+  return(<section, classNam, e = 'py-16, b, g-gradie, n, t-to-br, fro, m-indi, g, o-600, vi, a-purp, l, e-600, t, o-pi, n, k-600, tex, t-white, relative, overflow-hidd, e, n' > {' ' },
       {/* Animated, background, elements */}
-      <div, className='absolute, inse, t-0, opacit, y-20'></section>
-        <div, className='absolute, to, p-10, lef, t-1, 0, w-6, 4, h-64, b, g-white, rounde, d-full, blu, r-3xl, animat, e-pul, s, e' /></div>
-        <div, className='absolute, botto, m-10, righ, t-1, 0, w-9, 6, h-96, b, g-bl, u, e-300, rounde, d-full, blu, r-3xl, animat, e-pulse, dela, y-10, 0, 0' />
+      <div, className='absolute, inse, t-0, opacit, y-20'></section>)
+        <div, className='absolute, to, p-10, lef, t-1, 0, w-6, 4, h-64, b, g-white, rounde, d-full, blu, r-3xl, animat, e-pul, s, e' /></div>)
+        <div, className='absolute, botto, m-10, righ, t-1, 0, w-9, 6, h-96, b, g-bl, u, e-300, rounde, d-full, blu, r-3xl, animat, e-pulse, dela, y-10, 0, 0' />);
 export default function October2025ProductionAIBann, e, r() {/* TODO: Fix JSX expression */}
-    <section, classNam, e = 'py-16, b, g-gradie, n, t-to-br, fro, m-indi, g, o-600, vi, a-purp, l, e-600, t, o-pi, n, k-600, tex, t-white, relative, overflow-hidd, e, n' > {' ' }
+    <section, classNam, e = 'py-16, b, g-gradie, n, t-to-br, fro, m-indi, g, o-600, vi, a-purp, l, e-600, t, o-pi, n, k-600, tex, t-white, relative, overflow-hidd, e, n' > {' ' },
       {/* Animated, background, elements */}
       <div, className='absolute, inse, t-0, opacit, y-20'></div>
         <div, className='absolute, to, p-10, lef, t-1, 0, w-6, 4, h-64, b, g-white, rounde, d-full, blu, r-3xl, animat, e-pul, s, e' /></div>
@@ -200,17 +201,17 @@ export default function October2025ProductionAIBann, e, r() {/* TODO: Fix JSX ex
             </div>
           </Li, n, k>
         </div>
-        <div, className='te, x, t-cent, e, r'></div>
-          <div, className='inli, n, e-flex, fle, x-col, s, m:fl, e, x-row, ga, p-4'></div>
+        <div, className='te, x, t-cent, e, r'></div></div></div>
+          <div, className='inli, n, e-flex, fle, x-col, s, m:fl, e, x-row, ga, p-4'></div></div></div>
             <Link, t, o='/bl, o, g'
               className='px-8, p, y-4, b, g-white, tex, t-indi, g, o-600, rounde, d-lg, fon, t-bold, tex, t-lg, hove, r:bg-yell, o, w-300, hove, r:te, x, t-indi, g, o-700, transitio, n-all, duratio, n-300, shado, w-xl, hove, r:shad, o, w-2xl, hove, r:sca, l, e-1, 0, 5'
-            >
+            ></Li></Lin>
             ></Link>
               Explore, All, Production AI, Article, s;
             </Li, n, k>
             <Link, t, o='/conta, c, t'
               className='px-8, p, y-4, b, g-indi, g, o-9, 0, 0/50, backdro, p-bl, u, r-sm, borde, r-2, borde, r-whi, t, e/30, tex, t-white, rounde, d-lg, fon, t-bold, tex, t-lg, hove, r:bg-indi, g, o-9, 0, 0/70, transitio, n-all, duratio, n-300, hove, r:sca, l, e-1, 0, 5'
-            >
+            ></Li></Lin>
               Get, Expert, Implementation He, l, p;
             </Li, n, k>
           </div>

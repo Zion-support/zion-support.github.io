@@ -2,15 +2,15 @@
 import React from 'react';
 import { FileText, Scale, Shield, AlertTriangle, CheckCircle, ArrowRight, Globe, User, Mail, Phone, Calendar, Lock, Database, Server, Key } from 'lucide-react';
 
-export default function TermsPage() {
-  const lastUpdated = 'January 1, 2024';
+export default function TermsPage() {;
+const lastUpdated = 'January 1, 2024';
 
   const sections = [
     {
       title: 'Acceptance of Terms',
       icon: CheckCircle,
       content: 'By accessing and using our website and services, you accept and agree to be bound by the terms and provision of this agreement.'
-    },
+},
     {
       title: 'Use License',
       icon: Key,
@@ -33,10 +33,9 @@ export default function TermsPage() {
     },
     {
       title: 'Limitation of Liability',
-      icon: Shield,
-      content: 'In no event shall Zion Tech Group be liable for any damages arising out of the use or inability to use our services.'
-    }
-  ];
+      icon: Shield,]
+      content: 'In no event shall Zion Tech Group be liable for any damages arising out of the use or inability to use our services.']
+    }];
 
   const prohibitedUses = [
     'Violating any applicable laws or regulations',
@@ -45,9 +44,8 @@ export default function TermsPage() {
     'Interfering with the proper functioning of our services',
     'Using our services for illegal or unauthorized purposes',
     'Impersonating another person or entity',
-    'Collecting user information without consent',
-    'Engaging in any form of harassment or abuse'
-  ];
+    'Collecting user information without consent']
+    'Engaging in any form of harassment or abuse'];
 
   const serviceLevels = [
     {
@@ -71,10 +69,9 @@ export default function TermsPage() {
     {
       service: 'Support Services',
       uptime: 'N/A',
-      support: 'Business Hours',
-      response: '4 hours'
-    }
-  ];
+      support: 'Business Hours',]
+      response: '4 hours']
+    }];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -126,9 +123,9 @@ export default function TermsPage() {
       {/* Key Terms */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-white mb-12 text-center">Key Terms</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="max-w-6xl mx-auto">)
+            <h2 className="text-3xl font-bold text-white mb-12 text-center">Key Terms</h2>)
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">)
               {sections.map((section, index) => (
                 <div key={index} className="bg-slate-800/50 rounded-lg p-6">
                   <div className="flex items-center space-x-3 mb-4">

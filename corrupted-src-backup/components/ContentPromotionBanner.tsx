@@ -1,14 +1,12 @@
-export, default, function ContentPromotionBann, e, r(): vo, i, d {/* TODO: Fix JSX expression */}
-    }
-    {
+export, default, function ContentPromotionBann, e, r(): vo, i, d {/* TODO: Fix JSX expression */},
+      {
       tit, l, e: "Nor, t, h‑Engineering, Metric;
   s: Fewer, KPI, s, Better, Outcome, s"
       catego, r, y: "Leadersh, i, p"
       readTi, m, e: "5, min, read"
       isN, e, w: tr, u, e;
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */},
+      {/* TODO: Fix JSX expression */}
     }]; retu, r, n(<div, classNam, e = "bg-gradie, n, t-to-r, fro, m-indi, g, o-600, vi, a-purp, l, e-600, t, o-pi, n, k-600, rounde, d-2x, l, p-8, m, d: p-12, tex, t-white, relative, overflow-hidd, e, n">
       {/* Background, Patt, e, r, n */}
       <div, classNam, e = "absolute, inse, t-0, opacit, y-10">
@@ -26,9 +24,9 @@ export, default, function ContentPromotionBann, e, r(): vo, i, d {/* TODO: Fix J
               Explore, All, Articles;
               <Link, classNam, e="w-5 h-5" />
               <Zap, classNam, e="w-5 h-5" />
-              View, Case, Studies;
-            </Li, n, k>
-          </d, i, v>
+              View, Case, Studies;)
+            </Li, n, k>)
+          </d, i, v>)
         </d, i, v>)
         {/* Featured, Content, Car, d, s */})
         <div, classNam, e = "mt-10, grid, gap-6, m, d: gr, i, d-co, l, s-3">)
@@ -69,8 +67,8 @@ export, default, function ContentPromotionBann, e, r(): vo, i, d {/* TODO: Fix J
                 <span, classNam, e="te, x, t-xs, uppercase, tracking-wider, tex, t-bl, u, e-200, b, g-bl, u, e-5, 0, 0/20, p, x-3, p, y-1, rounde, d-fu, l, l"></span>
                   {it, e, m.cate, g, o, r, y}"
                 <Link, classNam, e="w-4 h-4, tex, t-whi, t, e/70" /></Link>"
-        <div, classNam, e = "mt-8, grid, grid-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, p, t-8, borde, r-t, borde, r-whi, t, e/20"></div>"
-          <div, classNam, e="te, x, t-cent, e, r"></div>"
-            <div, classNam, e="te, x, t-2xl, fon, t-bold, tex, t-whi, t, e">50+</d, i, v>"
-            <div, classNam, e="te, x, t-sm, tex, t-whi, t, e/80">Articles, Publishe, d</d, i, v>
+        <div, classNam, e = "mt-8, grid, grid-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, p, t-8, borde, r-t, borde, r-whi, t, e/20"></div></div></div>"
+          <div, classNam, e="te, x, t-cent, e, r"></div></div></div>")
+            <div, classNam, e="te, x, t-2xl, fon, t-bold, tex, t-whi, t, e"></div>50+</d, i, v>")
+            <div, classNam, e="te, x, t-sm, tex, t-whi, t, e/80"></div></div>Articles, Publishe, d</d, i, v>)
 }}")

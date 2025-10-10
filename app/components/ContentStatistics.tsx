@@ -1,19 +1,16 @@
 'use client';
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
 import React, { useState, useEffect } from 'react';
 import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, TrendingUp, Users, Award, Clock, Star, BarChart3, Target, Rocket } from 'lucide-react';
 
-const ContentStatistics: React.FC = () => {
-  const [counters, setCounters] = useState({
+const ContentStatistics: React.FC = () => {;
+const [counters, setCounters] = useState({
     clients: 0,
     projects: 0,
     satisfaction: 0,
-    years: 0,
-    countries: 0,
-    uptime: 0
+    years: 0,)
+    countries: 0,)
+    uptime: 0)
+}
   });
 
   const targetCounters = {
@@ -71,15 +68,13 @@ const ContentStatistics: React.FC = () => {
       value: counters.uptime,
       label: 'Uptime Guarantee',
       suffix: '%',
-      color: 'text-red-400',
-      description: 'Service reliability'
-    }
-  ];
+      color: 'text-red-400',]
+      description: 'Service reliability']
+    }];
 
   const achievements = [
     {
       icon: Brain,
-<<<<<<< HEAD
       title: 'AI Innovation',
       description: 'Leading the industry in AI-powered solutions'
     },
@@ -87,122 +82,46 @@ const ContentStatistics: React.FC = () => {
       icon: Shield,
       title: 'Security Excellence',
       description: 'Bank-level security for all our solutions'
-=======
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency',
-      stats: ['95% Accuracy', '10x Faster', '24/7 Learning']
-    },
-    {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results',
-      stats: ['< 100ms Response', '99.9% Uptime', '10M+ Requests']
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards',
-      stats: ['256-bit Encryption', 'SOC 2 Compliant', 'Zero Breaches']
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
     },
     {
       icon: Globe,
       title: 'Global Reach',
-<<<<<<< HEAD
       description: 'Serving clients across 50+ countries'
     },
     {
       icon: Zap,
-      title: 'Performance',
-      description: '99.9% uptime and lightning-fast response'
-    }
-  ];
+      title: 'Performance',]
+      description: '99.9% uptime and lightning-fast response']
+    }];
 
-  useEffect(() => {
-    const timers = Object.keys(targetCounters).map(key => {
-=======
-      description: 'Worldwide deployment and support for international businesses',
-      stats: ['50+ Countries', '15+ Languages', '24/7 Support']
-    }
-  ];
-
-  const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ];
-
-  const achievements = [
-    {
-      icon: Star,
-      title: 'Industry Recognition',
-      description: 'Awarded Best AI Solutions Provider 2024',
-      value: '25+'
-    },
-    {
-      icon: Target,
-      title: 'Success Rate',
-      description: 'Projects delivered on time and within budget',
-      value: '98%'
-    },
-    {
-      icon: Rocket,
-      title: 'Growth Rate',
-      description: 'Year-over-year business growth',
-      value: '300%'
-    }
-  ];
-
-  useEffect(() => {
-    const duration = 3000; // 3 seconds
-    const steps = 60;
-    const stepDuration = duration / steps;
-
-    const timers = Object.keys(targetCounters).map((key) => {
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
-      const target = targetCounters[key as keyof typeof targetCounters];
-      const duration = 2000; // 2 seconds
-      const increment = target / (duration / 16); // 60fps
+  useEffect(() => {;
+const timers = Object.keys(targetCounters).map(key => {;)
+const target = targetCounters[key as keyof typeof targetCounters];);
+const duration = 2000; // 2 seconds;);
+const increment = target / (duration / 16); // 60fps
       
       return setInterval(() => {
-<<<<<<< HEAD
-        setCounters(prev => {
-          const current = prev[key as keyof typeof prev];
+        setCounters(prev => {;);
+const current = prev[key as keyof typeof prev];)
           if (current < target) {
             return {
               ...prev,
               [key]: Math.min(current + increment, target)
+}
             };
           }
           return prev;
         });
       }, 16);
-=======
-        current += increment;
-        if (current >= target) {
-          current = target;
-        }
-        setCounters(prev => ({
-          ...prev,
-          [key]: Math.floor(current)
-        }));
-      }, stepDuration);
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
     });
 
     return () => {
       timers.forEach(timer => clearInterval(timer));
+}
     };
   }, []);
 
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
@@ -211,23 +130,11 @@ const ContentStatistics: React.FC = () => {
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             See how we've transformed businesses and delivered exceptional results.
-=======
-    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
-      <div className="max-w-7xl mx-auto">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Impact</span> in Numbers
-          </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Discover the measurable impact we've made for businesses worldwide through our innovative AI and IT solutions.
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
           </p>
         </div>
-
-        {/* Statistics Grid */}
-<<<<<<< HEAD
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+)
+        {/* Statistics Grid */})
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">)
           {statistics.map((stat, index) => (
             <div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 text-center">
               <div className="flex justify-center mb-4">
@@ -236,7 +143,8 @@ const ContentStatistics: React.FC = () => {
                 </div>
               </div>
               <div className={`text-3xl font-bold ${stat.color} mb-2`}>
-                {Math.floor(stat.value)}{stat.suffix}
+                {Math.floor(stat.value)},
+      {stat.suffix}
               </div>
               <div className="text-gray-300">{stat.label}</div>
             </div>
@@ -252,28 +160,8 @@ const ContentStatistics: React.FC = () => {
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">{achievement.title}</h3>
               <p className="text-gray-300 text-sm">{achievement.description}</p>
-=======
-    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-white mb-6">Our Impact in Numbers</h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            See how we've helped businesses transform with our AI and IT solutions
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {stats.map((stat, index) => (
-            <div key={index} className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-cyan-400 mb-2">
-                {stat.value}
-              </div>
-              <div className="text-white font-semibold mb-2">{stat.label}</div>
-              <div className="text-gray-300 text-sm">{stat.description}</div>
->>>>>>> cursor/website-audit-and-update-with-deployment-758b
             </div>
           ))}
-=======
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {statistics.map((stat, index) => (
             <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-purple-400 transition-all duration-300 text-center group">
@@ -281,7 +169,8 @@ const ContentStatistics: React.FC = () => {
                 <stat.icon className="w-8 h-8" />
               </div>
               <div className={`text-4xl font-bold ${stat.color} mb-2`}>
-                {stat.value.toLocaleString()}{stat.suffix}
+                {stat.value.toLocaleString()},
+      {stat.suffix}
               </div>
               <div className="text-lg font-semibold text-white mb-2">{stat.label}</div>
               <div className="text-gray-400 text-sm">{stat.description}</div>
@@ -375,14 +264,13 @@ const ContentStatistics: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center space-x-2">
                 <Zap className="w-5 h-5" />
-                <span>Get Started</span>
+                <span></div></div>Get Started</span>
               </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-200">
+              <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-200"></butt></butto>
                 View Case Studies
               </button>
             </div>
           </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
         </div>
       </div>
     </div>

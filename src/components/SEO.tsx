@@ -4,10 +4,9 @@
 /**
  * SEO Component;
  * Provides comprehensive SEO meta tags and structured data;
- */
+ */;
 export interface SEOProps {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
   title?: string;
   description?: string;
   keywords?: string[];
@@ -20,7 +19,7 @@ export interface SEOProps {/* TODO: Fix JSX expression */}
   canonical?: string;
   noIndex?: boolean;
   structuredData?: Record;
-          <string, unknown>;
+          <string, unknown></strin></string>;
   twitterCard?: 'summary' | 'summary_large_image' | 'app' | 'player';
   locale?: string;
   alternateLocales?: {/* TODO: Fix JSX expression */}
@@ -32,8 +31,8 @@ export interface SEOProps {/* TODO: Fix JSX expression */}
   n:
 // 'Leading provider of AI-powered enterprise solutions and digital transformation services. Achieve 300% ROI with cutting-edge AI technology.',
   keyword,
-  s: [
-  // TOD,
+  s: []
+  // TOD
   O: Add items]
 //     'AI',
 //     'artificial intelligence',
@@ -55,15 +54,14 @@ export interface SEOProps {/* TODO: Fix JSX expression */}
   d: 'summary_large_image' as const};
 export const,
   SEO: React.FC;
-          <SEOProps> = ({/* TODO: Fix JSX expression */}
+          <SEOProps></SEOProp></SEOProps> = ({/* TODO: Fix JSX expression */}
   O: Add content;}
-}
 //   title,
 //   description,
 //   keywords,
 //   image,
-//   url,
-  type = defaultSEO.type,
+//   url,;
+type = defaultSEO.type,
 //   author,
 //   publishDate,
 //   modifiedDate,
@@ -75,7 +73,6 @@ export const,
   alternateLocales = [])
 }) => {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
   const seo = {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
@@ -95,17 +92,14 @@ export const,
   // Generate structured data;
 const generateStructuredData = () => {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
     if (structuredData) {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
       return structuredData;
     }
     const,
   baseStructuredData: Record;
-          <string, unknown> = {/* TODO: Fix JSX expression */}
+          <string, unknown></strin></string> = {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
       '@context': 'http,
   s://schema.org',
       '@type': type === 'article' ? 'Article' : 'WebPage',
@@ -119,22 +113,18 @@ const generateStructuredData = () => {/* TODO: Fix JSX expression */}
   e: seo.image};
     if (author) {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
       baseStructuredData.author = {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
         '@type': 'Person',
         nam,
   e: author};
     }
     if (publishDate) {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
       baseStructuredData.datePublished = publishDate;
     }
     if (modifiedDate) {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
       baseStructuredData.dateModified = modifiedDate;
     }
     return baseStructuredData;

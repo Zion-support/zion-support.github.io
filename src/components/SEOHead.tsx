@@ -3,7 +3,6 @@
 'use client';
 interface SEOHeadProps {/* TODO: Fix JSX expression */}
   O: Add content;}
-}
   title?: string;
   description?: string;
   keywords?: string;
@@ -17,16 +16,14 @@ interface SEOHeadProps {/* TODO: Fix JSX expression */}
 }
 
 const SEOHead: React.FC;
-          <SEOHeadProps> = ({// TODO: Add content;}
-}
-
-const SEOHead: React.FC<SEOProps> = ({
+          <SEOHeadProps></SEOHeadProp></SEOHeadProps> = ({// TODO: Add content;}
+const SEOHead: React.FC<SEOProps></SEOProp></SEOProps> = ({
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology.',
   keywords = 'AI solutions, quantum computing, autonomous systems, digital transformation, cloud services, cybersecurity, business intelligence, machine learning, automation',
   image = '/og-image.svg',
-  url = 'https://ziontechgroup.com',
-  type = 'website',
+  url = 'https://ziontechgroup.com',;
+type = 'website',
 //   structuredData,
 //   canonical,
   noindex = false,

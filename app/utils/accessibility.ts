@@ -1,15 +1,11 @@
-// Accessibility utilities for the application
-
+// Accessibility utilities for the application;
 export interface AccessibilityConfig {
-  enableHighContrast: boolean;
-  enableScreenReader: boolean;
-  enableKeyboardNavigation: boolean;
-  fontSize: 'small' | 'medium' | 'large';
+  enableHighContrast: enableScreenReader, boolean;
+  enableKeyboardNavigation: fontSize, 'small' | 'medium' | 'large';
   colorScheme: 'light' | 'dark' | 'auto';
 }
 
-export const defaultAccessibilityConfig: AccessibilityConfig = {
-  enableHighContrast: false,
+export const defaultAccessibilityConfig: enableHighContrast, false,
   enableScreenReader: true,
   enableKeyboardNavigation: true,
   fontSize: 'medium',
@@ -21,9 +17,8 @@ export class AccessibilityManager {
 
   constructor(config: AccessibilityConfig = defaultAccessibilityConfig) {
     this.config = config;
-  }
-
-  public updateConfig(newConfig: Partial<AccessibilityConfig>): void {
+}
+  public updateConfig(newConfig: Partial<AccessibilityConfig></AccessibilityConfi></AccessibilityConfig>): void {
     this.config = { ...this.config, ...newConfig };
     this.applyConfig();
   }
@@ -40,6 +35,7 @@ export class AccessibilityManager {
     // Apply high contrast
     if (this.config.enableHighContrast) {
       root.classList.add('high-contrast');
+}
     } else {
       root.classList.remove('high-contrast');
     }
@@ -64,6 +60,7 @@ export class AccessibilityManager {
 
     setTimeout(() => {
       document.body.removeChild(announcement);
+}
     }, 1000);
   }
 
@@ -74,14 +71,14 @@ export class AccessibilityManager {
     if (element) {
       element.focus();
       return true;
-    }
+}
     return false;
   }
 
-  public trapFocus(container: HTMLElement): () => void {
-    const focusableElements = container.querySelectorAll(
+  public trapFocus(container: HTMLElement): () => void {;
+const focusableElements = container.querySelectorAll()
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-    ) as NodeListOf<HTMLElement>;
+    ) as NodeListOf<HTMLElement></HTMLElemen></HTMLElement>;
 
     const firstElement = focusableElements[0];
     const lastElement = focusableElements[focusableElements.length - 1];
@@ -93,13 +90,12 @@ export class AccessibilityManager {
         if (document.activeElement === firstElement) {
           lastElement.focus();
           e.preventDefault();
-        }
+}
       } else {
         if (document.activeElement === lastElement) {
           firstElement.focus();
           e.preventDefault();
-        }
-      }
+}
     };
 
     container.addEventListener('keydown', handleTabKey);
@@ -107,33 +103,37 @@ export class AccessibilityManager {
 
     return () => {
       container.removeEventListener('keydown', handleTabKey);
+}
     };
   }
-}
-
 export const accessibilityManager = new AccessibilityManager();
 
-// Utility functions
-export const isAccessible = (element: HTMLElement): boolean => {
-  const hasAriaLabel = element.hasAttribute('aria-label') || element.hasAttribute('aria-labelledby');
+// Utility functions;
+export const isAccessible = (element: HTMLElement): boolean => {;
+const hasAriaLabel = element.hasAttribute('aria-label') || element.hasAttribute('aria-labelledby');
   const hasTextContent = element.textContent?.trim().length > 0;
   const isInteractive = element.tagName === 'BUTTON' || element.tagName === 'A' || element.hasAttribute('tabindex');
   
   return isInteractive && (hasAriaLabel || hasTextContent);
+}
 };
 
 export const addAriaLabel = (element: HTMLElement, label: string): void => {
   element.setAttribute('aria-label', label);
+}
 };
 
 export const addAriaDescribedBy = (element: HTMLElement, descriptionId: string): void => {
   element.setAttribute('aria-describedby', descriptionId);
+}
 };
 
 export const makeElementFocusable = (element: HTMLElement, tabIndex: number = 0): void => {
   element.setAttribute('tabindex', tabIndex.toString());
+}
 };
 
 export const removeElementFocus = (element: HTMLElement): void => {
   element.setAttribute('tabindex', '-1');
+}
 };

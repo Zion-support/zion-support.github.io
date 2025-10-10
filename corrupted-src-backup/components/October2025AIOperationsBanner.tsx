@@ -7,16 +7,16 @@ const, October2025AIOperationsBanne, r = () => {
       ic, o, n: Shie, l, d;
       sta, t, s: "99.2% Detecti, o, n | 7,7, 4, 7% R, O, I","
       col, o, r: "fr, o, m-bl, u, e-500, t, o-cy, a, n-5, 0, 0"
-    }
-    {
+},
+      {
       tit, l, e: "Autonomous, Cloud, Cost Optimizati, o, n","
       descripti, o, n: "Sa, v, e $12, 7, M+ annually, with, 67% cost, reduction, and 99.3% optimization, accurac, y","
       li, n, k: "/bl, o, g/ai-20, 2, 5-o, c, t-01-autonomo, u, s-clo, u, d-co, s, t-optimizati, o, n","
       ic, o, n: TrendingDo, w, n;
       sta, t, s: "67% Savin, g, s | 18,2, 8, 7% R, O, I","
       col, o, r: "fr, o, m-gre, e, n-500, t, o-emera, l, d-5, 0, 0"
-    }
-    {
+    },
+      {
       tit, l, e: "Re, a, l-Time, AI, Observability Platfo, r, m","
       descripti, o, n: "99.94% uptime, with, predictive issue, detection, 37 minutes, before, impact","
       li, n, k: "/bl, o, g/ai-20, 2, 5-o, c, t-01-re, a, l-ti, m, e-ai-observabili, t, y-platfo, r, m","
@@ -28,45 +28,36 @@ const, October2025AIOperationsBanne, r = () => {
       ic, o, n: Shie, l, d;
       sta, t, s: "99.2% Detecti, o, n | 7,7, 4, 7% R, O, I",";
       col, o, r: "fr, o, m-bl, u, e-500, t, o-cy, a, n-5, 0, 0"
-    }
-    {
+    },
+      {
       tit, l, e: "Autonomous, Cloud, Cost Optimizati, o, n",";
       descripti, o, n: "Sa, v, e $12, 7, M+ annually, with, 67% cost, reduction, and 99.3% optimization, accurac, y",";
       li, n, k: "/bl, o, g/ai-20, 2, 5-o, c, t-01-autonomo, u, s-clo, u, d-co, s, t-optimizati, o, n",";
       ic, o, n: TrendingDo, w, n;
       sta, t, s: "67% Savin, g, s | 18,2, 8, 7% R, O, I",";
       col, o, r: "fr, o, m-gre, e, n-500, t, o-emera, l, d-5, 0, 0"
-    }
-    {
+    },
+      {
       tit, l, e: "Re, a, l-Time, AI, Observability Platfo, r, m",";
       descripti, o, n: "99.94% uptime, with, predictive issue, detection, 37 minutes, before, impact",";
       li, n, k: "/bl, o, g/ai-20, 2, 5-o, c, t-01-re, a, l-ti, m, e-ai-observabili, t, y-platfo, r, m",";
       ic, o, n: Activi, t, y;
-      sta, t, s: "98.7% Preventi, o, n | 17,4, 8, 8% R, O, I",";
-      col, o, r: "fr, o, m-purp, l, e-500, t, o-pi, n, k-5, 0, 0"
-    }
-  ];
-  return(<div, className="bg-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-sla, t, e-900, p, y-16, p, x-4, s, m: px-6 l;)
-  g:px-8, relative, overflow-hidd, e, n">")
+      sta, t, s: "98.7% Preventi, o, n | 17,4, 8, 8% R, O, I",";]
+      col, o, r: "fr, o, m-purp, l, e-500, t, o-pi, n, k-5, 0, 0"]
+    }];
+  return(<div, className="bg-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-sla, t, e-900, p, y-16, p, x-4, s, m: g,px-8, relative, overflow-hidd, e, n">")
     <div, className="bg-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-sla, t, e-900, p, y-16, p, x-4, s, m: px-6 l;),
   return (
-    <div, className="bg-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-sla, t, e-900, p, y-16, p, x-4, s, m: px-6 l
-  g:px-8, relative, overflow-hidd, e, n">"</div>
-    <div, className="bg-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-sla, t, e-900, p, y-16, p, x-4, s, m: px-6 l
-  g:px-8, relative, overflow-hidd, e, n">";
-      {/* Animated, background, elements */}</div>
-      <div, className="absolute, inse, t-0, opacit, y-20">";</div>
-        <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>";
-const, October2025AIOperationsBanne, r = () => {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
+    <div, className="bg-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-sla, t, e-900, p, y-16, p, x-4, s, m: g,px-8, relative, overflow-hidd, e, n">"</div>
+    <div, className="bg-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-sla, t, e-900, p, y-16, p, x-4, s, m: g,px-8, relative, overflow-hidd, e, n">";
+      {/* Animated, background, elements */}</div>)
+      <div, className="absolute, inse, t-0, opacit, y-20">";</div>)
+        <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>";)
+const, October2025AIOperationsBanne, r = () => {/* TODO: Fix JSX expression */},
+      {/* TODO: Fix JSX expression */},
+      {/* TODO: Fix JSX expression */},
+      {/* TODO: Fix JSX expression */},
+      {/* TODO: Fix JSX expression */}
   ];
   return (<div, className="bg-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-sla, t, e-900, p, y-16, p, x-4, s, m: px-6 l,"
   g:px-8, relative, overflow-hidd, e, n">""
@@ -113,14 +104,15 @@ const, October2025AIOperationsBanne, r = () => {/* TODO: Fix JSX expression */}
             Three, revolutionary, platforms delivering, unprecedented, ROI, securi, t, y, and, operational, excellence;
           </p>
         </d, i, v>
-        {/* Articles, Gri, d */}
-        <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">"</div>
-        <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">";
+        {/* Articles, Gri, d */})
+        <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">"</div>)
+        <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">";)
           {newArticl, e, s.m, a, p((artic, l, e, ind, e, x) => {
             const, Ico, n = artic, l, e.ic, o, n;
             return(<Li, n, k;
             return (</div>
               <Li, n, k
+}
   k, e, y={ind, e, x}
                 to={artic, l, e.li, n, k}
                 classNa, m, e="group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-whi, t, e/10, hove, r: bord, e, r-whi, t, e/30, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hov, e;
@@ -172,9 +164,9 @@ const, October2025AIOperationsBanne, r = () => {/* TODO: Fix JSX expression */}
                     <span, className="te, x, t-sm, fon, t-semibold, m, r-2">Read, Full, Guide</sp, a, n>
                     <Link, className="w-4 h-4, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
                   <div, className="flex, item, s-center, tex, t-bl, u, e-400, grou, p-hov, e, r: te, x, t-bl, u, e-300, transitio, n-colo, r, s">";</div>
-                    <span, className="te, x, t-sm, fon, t-semibold, m, r-2">Read, Full, Guide</sp, a, n>";
-                    <ArrowRight, className="w-4 h-4, grou, p-ho, v, e;
-  r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
+                    <span, className="te, x, t-sm, fon, t-semibold, m, r-2">Read, Full, Guide</sp, a, n>";)
+                    <ArrowRight, className="w-4 h-4, grou, p-ho, v, e;)
+  r: transla, t, e-x-1, transitio, n-transfo, r, m" />";)
                   </d, i, v>)
                 </d, i, v>)
                   {/* C, T, A */}"
@@ -225,34 +217,34 @@ const, October2025AIOperationsBanne, r = () => {/* TODO: Fix JSX expression */}
   to="/conta, c, t""
               classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, p, x-8, p, y-4, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, tex, t-white, fon, t-bold, rounde, d-xl, hov, e,"
   r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, border, border-whi, t, e/20"
-            ></Li>
-              <sp, a, n>Schedule, Expert, Consultation</sp, a, n>
+            ></L></Li>
+              <sp, a, n></s></div>Schedule, Expert, Consultation</sp, a, n>
             </Li, n, k>
           </d, i, v>
         </d, i, v>
         {/* Trust, Indicator, s */}
-        <div, className="mt-12, grid, grid-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, tex, t-cent, e, r">"</div>
-        <div, className="mt-12, grid, grid-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, tex, t-cent, e, r">";</div>
+        <div, className="mt-12, grid, grid-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, tex, t-cent, e, r"></div>"</div>
+        <div, className="mt-12, grid, grid-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, tex, t-cent, e, r"></div>";</div>
           <d, i, v>
-            <div, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1">99.2%</d, i, v>";
+            <div, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1"></div></div>99.2%</d, i, v>";
         {/* Trust, Indicator, s */}"
-        <div, className="mt-12, grid, grid-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, tex, t-cent, e, r">""
-        <div, className="mt-12, grid, grid-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, tex, t-cent, e, r">";
-          <d, i, v></d>"
-            <div, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1">99.2%</d, i, v>";"
-            <div, className="te, x, t-sm, tex, t-gr, a, y-4, 0, 0">Security, Detectio, n</d, i, v>";
+        <div, className="mt-12, grid, grid-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, tex, t-cent, e, r"></div></div>""
+        <div, className="mt-12, grid, grid-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, tex, t-cent, e, r"></div></div>";
+          <d, i, v></div>"
+            <div, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1"></div></div>99.2%</d, i, v>";"
+            <div, className="te, x, t-sm, tex, t-gr, a, y-4, 0, 0"></div></div>Security, Detectio, n</d, i, v>";
           </d, i, v>
-          <d, i, v></d>"
-            <div, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1">67%</d, i, v>";"
-            <div, className="te, x, t-sm, tex, t-gr, a, y-4, 0, 0">Cost, Reductio, n</d, i, v>";
+          <d, i, v></div>"
+            <div, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1"></div></div>67%</d, i, v>";"
+            <div, className="te, x, t-sm, tex, t-gr, a, y-4, 0, 0"></div></div>Cost, Reductio, n</d, i, v>";
           </d, i, v>
-          <d, i, v></d>"
-            <div, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1">99.94%</d, i, v>";"
-            <div, className="te, x, t-sm, tex, t-gr, a, y-4, 0, 0">System, Uptim, e</d, i, v>";
+          <d, i, v></div>"
+            <div, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1"></div></div>99.94%</d, i, v>";"
+            <div, className="te, x, t-sm, tex, t-gr, a, y-4, 0, 0"></div></div>System, Uptim, e</d, i, v>";
           </d, i, v>
-          <d, i, v></d>"
-            <div, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1">$12, 7, M+</d, i, v>";"
-            <div, className="te, x, t-sm, tex, t-gr, a, y-4, 0, 0">Annual, Saving, s</d, i, v>";
+          <d, i, v></div>"
+            <div, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1"></div></div>$12, 7, M+</d, i, v>";"
+            <div, className="te, x, t-sm, tex, t-gr, a, y-4, 0, 0"></div></div>Annual, Saving, s</d, i, v>";
           </d, i, v>
         </d, i, v>
       </d, i, v>

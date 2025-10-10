@@ -4,7 +4,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, CheckCircle, Star, ArrowRight } from 'lucide-react';
 
-// eslint-disable-next-line react-refresh/only-export-components
+// eslint-disable-next-line react-refresh/only-export-components;
 export const metadata = {
   title: 'Zion Tech Group - Advanced AI and IT Solutions',
   description: 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.'
@@ -18,12 +18,13 @@ export default function HomePage() {
           
           
           
-          
-          
-          <div>Coming Soon</div>
+          )
+          )
+          <div>Coming Soon</div>)
   )
     
           <div className="min-h-screen bg-white">
+},
       {/* Header */}
       <header className="bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -121,18 +122,18 @@ Ready to Transform Your Business?
                 <ArrowRight className="w-5 h-5 ml-2" />
       </main>
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12">
-          <div className="text-center">
-            <h3 className="text-2xl font-bold mb-4">Zion Tech Group</h3>
-            <p className="text-gray-400 mb-6">
+      <footer className="bg-gray-900 text-white py-12"></foot></foote>
+          <div className="text-center"></div></div>
+            <h3 className="text-2xl font-bold mb-4"></h>Zion Tech Group</h3>
+            <p className="text-gray-400 mb-6"></p>
               Advanced AI and IT Solutions for Enterprise Transformation;
-            <div className="flex justify-center space-x-6">
-              <Link href="/services" className="text-gray-400 hover:text-white">Services</Link>
-              <Link href="/about" className="text-gray-400 hover:text-white">About</Link>
-              <Link href="/contact" className="text-gray-400 hover:text-white">Contact</Link>
-              <Link href="/privacy" className="text-gray-400 hover:text-white">Privacy</Link>
-            <div className="mt-8 pt-8 border-t border-gray-800">
-              <p className="text-gray-400 text-sm">
+            <div className="flex justify-center space-x-6"></div></div>
+              <Link href="/services" className="text-gray-400 hover:text-white"></Li></Lin>Services</Link>
+              <Link href="/about" className="text-gray-400 hover:text-white"></Li></Lin>About</Link>
+              <Link href="/contact" className="text-gray-400 hover:text-white"></Li></Lin>Contact</Link>
+              <Link href="/privacy" className="text-gray-400 hover:text-white"></Li></Lin>Privacy</Link>
+            <div className="mt-8 pt-8 border-t border-gray-800"></div></div>
+              <p className="text-gray-400 text-sm"></p>
 © 2026 Zion Tech Group. All rights reserved.
       </footer>
   );

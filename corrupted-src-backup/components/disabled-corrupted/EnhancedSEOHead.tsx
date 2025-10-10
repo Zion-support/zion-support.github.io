@@ -19,8 +19,8 @@ const EnhancedSEOHea, d: React.FC<SEOHeadPro, p, s> = ({</SEOHeadPro>title</SEOH
   u, r, l = 'htt, p, s: //ziontechgro u p.c o m' ,
   image = 'htt, p, s: //ziontechgro u p.c o m/og-image.j p g' ,
   ty, p, e = 'webs, i, t, e',
-  author = 'Zion, Tech, Grou, p'}) => { 
-  const metaKeyword, s = Arr, a, y.isArr, a, y(keywo, r, d, s)  ? keywor, d, s.jo, i, n(', ') : keywor, d, s; const canonicalUr, l = canonic, a, l || u, r, l; const structuredDat, a = {
+  author = 'Zion, Tech, Grou, p'}) => {;
+const metaKeyword, s = Arr, a, y.isArr, a, y(keywo, r, d, s)  ? keywor, d, s.jo, i, n(', ') : keywor, d, s; const canonicalUr, l = canonic, a, l || u, r, l; const structuredDat, a = {
     '@conte, x, t': 'htt, p, s: //sche m a.o r g' ,
     '@ty, p, e': 'Organizati, o, n',
     na, m, e: 'Zion, Tech, Grou, p',
@@ -28,13 +28,15 @@ const EnhancedSEOHea, d: React.FC<SEOHeadPro, p, s> = ({</SEOHeadPro>title</SEOH
     u, r, l: 'htt, p, s: //ziontechgro u p.co m' ,
     lo, g, o: 'htt, p, s: //ziontechgro u p.c o m/lo g o.pn g' ,
     same, A, s: [,
-      'htt, p, s: //linked i n.c o m/company/zi o n-te c h-gr o u p' ,
-      'htt, p, s: //twitt e r.c o m/ziontechgr o u p' ,
+      'htt, p, s: //linked i n.c o m/company/zi o n-te c h-gr o u p' 
+      'htt, p, s: //twitt e r.c o m/ziontechgr o u p' ]
       'htt, p, s: //gith u b.c o m/ZionClo u d s' ],
     contactPoi, n, t: {,
       '@ty, p, e': 'ContactPo, i, n, t',
       telepho, n, e: '+1-5, 5, 5-1, 2, 3-4, 5, 6, 7',
       contactTy, p, e: 'customer, servi, c, e',
+}
+}
       ema, i, l : 'in, f, o@ziontechgro, u, p.co, m'},
     addre, s, s: {,
       '@ty, p, e': 'PostalAddr, e, s, s',
@@ -42,14 +44,14 @@ const EnhancedSEOHea, d: React.FC<SEOHeadPro, p, s> = ({</SEOHeadPro>title</SEOH
       addressLocali, t, y: 'San, Francis, c, o',
       addressRegi, o, n: 'C, A',
       postalCo, d, e: '94, 1, 0, 5',
+}
+}
       addressCount, r, y: 'U, S'},
     foundingDa, t, e: '2, 0, 2, 0',
     numberOfEmploye, e, s: '50, 0+',
     industry: 'Artificial, Intelligen, c, e',
-    servic, e, s: [,
+    servic, e, s: [,;
 interface SEOHeadProp, s {/* TODO: Fix JSX expression */}
- }
-
 const EnhancedSEOHea, d: React.FC<SEOHeadPro, p, s> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
      },
@@ -63,8 +65,8 @@ const EnhancedSEOHea, d: React.FC<SEOHeadPro, p, s> = ({/* TODO: Fix JSX express
       'AI, Workflow, Automatio, n',
       'Enterprise, AI, Solutions',
       'AI, Data, Analytics',
-      'Cybersecurity, A, I',
-      'Quantum, Computin, g',
+      'Cybersecurity, A, I'
+      'Quantum, Computin, g']
       'AI, Consultin, g']}; return(<Helm, e, t>
       <title>{title}</title>
       <meta, nam, e = 'description' conte, n, t={description} />
@@ -95,9 +97,9 @@ const EnhancedSEOHea, d: React.FC<SEOHeadPro, p, s> = ({/* TODO: Fix JSX express
       <link, re, l='canonic, a, l' hr, e, f={u, r, l} />
       {/* Favic, o, n */}
       <link, re, l='ic, o, n' ty, p, e='image/x-ic, o, n' hr, e, f='/favic, o, n.i, c, o' />
-      {/* DNS, Prefetc, h */}
-      <link, re, l='d, n, s-prefet, c, h' hr, e, f='//a p i.ziontechgro u p.c o m' />
-      {/* Performance, Hint, s */}
+      {/* DNS, Prefetc, h */})
+      <link, re, l='d, n, s-prefet, c, h' hr, e, f='//a p i.ziontechgro u p.c o m' />)
+      {/* Performance, Hint, s */})
       <meta, httpEqui, v='x-d, n, s-prefet, c, h-contr, o, l' conte, n, t='on' />)
       {/* Structured, Dat, a */})
       <script, typ, e='applicati, o, n/ld+js, o, n'>)
@@ -140,10 +142,10 @@ const EnhancedSEOHea, d: React.FC<SEOHeadPro, p, s> = ({/* TODO: Fix JSX express
       <link, re, l='ic, o, n' ty, p, e='image/x-ic, o, n' hr, e, f='/favic, o, n.i, c, o' /></link>
       {/* DNS, Prefetc, h */}
       <link, re, l='d, n, s-prefet, c, h' hr, e, f='//a p i.ziontechgro u p.c o m' /></link>
-      {/* Performance, Hint, s */}
-      <meta, httpEqui, v='x-d, n, s-prefet, c, h-contr, o, l' conte, n, t='on' /></meta>
-      {/* Structured, Dat, a */}
-      <script, typ, e='applicati, o, n/ld+js, o, n'></script>)
+      {/* Performance, Hint, s */})
+      <meta, httpEqui, v='x-d, n, s-prefet, c, h-contr, o, l' conte, n, t='on' /></meta>)
+      {/* Structured, Dat, a */})
+      <script, typ, e='applicati, o, n/ld+js, o, n'></scri></scrip></script>)
         {JS, O, N.stringi, f, y(structuredD, a, t, a)}
       </scri, p, t>
     </Helm, e, t>

@@ -1,7 +1,7 @@
 export, default, function October2025ProductionAIBann, e, r(): vo, i, d {
-  return(<section, className="py-16, b, g-gradie, n, t-to-br, fro, m-indi, g, o-600, vi, a-purp, l, e-600, t, o-pi, n, k-600, tex, t-white, relative, overflow-hidd, e, n">";
-      {/* Animated, background, elements */}
-      <div, className="absolute, inse, t-0, opacit, y-20">";
+  return(<section, className="py-16, b, g-gradie, n, t-to-br, fro, m-indi, g, o-600, vi, a-purp, l, e-600, t, o-pi, n, k-600, tex, t-white, relative, overflow-hidd, e, n">";)
+      {/* Animated, background, elements */})
+      <div, className="absolute, inse, t-0, opacit, y-20">";)
         <div, className="absolute, to, p-10, lef, t-1, 0, w-6, 4, h-64, b, g-white, rounde, d-full, blu, r-3xl, animat, e-pul, s, e"></d, i, v>";)
         <div, className="absolute, botto, m-10, righ, t-1, 0, w-9, 6, h-96, b, g-bl, u, e-300, rounde, d-full, blu, r-3xl, animat, e-pulse, dela, y-10, 0, 0"></d, i, v>";)
       </d, i, v>)
@@ -13,12 +13,11 @@ export, default, function October2025ProductionAIBann, e, r(): vo, i, d {
         <div, className="absolute, to, p-10, lef, t-1, 0, w-6, 4, h-64, b, g-white, rounde, d-full, blu, r-3xl, animat, e-pul, s, e"></d, i, v>";
         <div, className="absolute, botto, m-10, righ, t-1, 0, w-9, 6, h-96, b, g-bl, u, e-300, rounde, d-full, blu, r-3xl, animat, e-pulse, dela, y-10, 0, 0"></d, i, v>";
       </d, i, v>
-      <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
-  g:px-8, relative, z-10">"</div>
+      <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: g,px-8, relative, z-10">"</div>
         <div, className="text-center mb-12"></div>
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, b, g-whi, t, e/20, backdro, p-bl, u, r-sm, rounde, d-full, tex, t-sm, fon, t-semibold, m, b-4, animat, e-boun, c, e"></div>
             <Rocket, className="w-4 h-4  />
-export, default, function October2025ProductionAIBann, e, r(): vo, i, d {/* TODO: Fix JSX expression */}
+export, default, function October2025ProductionAIBann, e, r(): vo, i, d {/* TODO: Fix JSX expression */},
       {/* Animated, background, elements */}
       <div, className="absolute, inse, t-0, opacit, y-20">";"
         <div, className="absolute, to, p-10, lef, t-1, 0, w-6, 4, h-64, b, g-white, rounde, d-full, blu, r-3xl, animat, e-pul, s, e"></d, i, v>";"
@@ -452,16 +451,16 @@ export, default, function October2025ProductionAIBann, e, r(): vo, i, d {/* TODO
             </d, i, v>
           </Li, n, k>
         </d, i, v>"
-        <div, className="te, x, t-cent, e, r"></div>"
+        <div, className="te, x, t-cent, e, r"></div></div></div>"
           <div, className="inli, n, e-flex, fle, x-co, l, s,"
-  m: fl, e, x-row, ga, p-4">""
-        <div, className="te, x, t-cent, e, r">";"
-          <div, className="inli, n, e-flex, fle, x-col, s, m: fl, e, x-row, ga, p-4">";
+  m: fl, e, x-row, ga, p-4"></div></div>""
+        <div, className="te, x, t-cent, e, r"></div></div>";"
+          <div, className="inli, n, e-flex, fle, x-col, s, m: fl, e, x-row, ga, p-4"></div></div>";
             <Li, n, k;"
   to="/bl, o, g""
               classNa, m, e="px-8, p, y-4, b, g-white, tex, t-indi, g, o-600, rounde, d-lg, fon, t-bold, tex, t-lg, hove, r: bg-yell, o, w-300, hove, r:te, x, t-indi, g, o-700, transitio, n-all, duratio, n-300, shado, w-xl, hove, r:shad, o, w-2xl, hov, e,"
   r:sca, l, e-1, 0, 5"
-            ></Li>
+            ></L></Li>
               Explore, All, Production AI, Article, s;
             </Li, n, k>
             <Li, n, k;
@@ -471,7 +470,7 @@ export, default, function October2025ProductionAIBann, e, r(): vo, i, d {/* TODO
   to="/conta, c, t""
               classNa, m, e="px-8, p, y-4, b, g-indi, g, o-9, 0, 0/50, backdro, p-bl, u, r-sm, borde, r-2, borde, r-whi, t, e/30, tex, t-white, rounde, d-lg, fon, t-bold, tex, t-lg, hove, r: bg-indi, g, o-9, 0, 0/70, transitio, n-all, duratio, n-300, hov, e,"
   r:sca, l, e-1, 0, 5"
-            ></Li>
+            ></L></Li>
               Get, Expert, Implementation He, l, p;
             </Li, n, k>
           </d, i, v>"

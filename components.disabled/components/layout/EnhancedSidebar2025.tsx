@@ -18,8 +18,9 @@ import React {useState} useEffect } from 'react'' import { Link } from 'react-ro
   e: 'AI Sustainability Platform'}' hre,
   f: '/ai-sustainability-platform' }, {/* TODO: Fix JSX expression */}
   e: 'AI Emotional Intelligence'}' hre,
-  f: '/ai-emotional-intelligence-platform' }, {/* TODO: Fix JSX expression */}
-  e: 'AI Legal Contract Analyzer'}' hre,
+  f: '/ai-emotional-intelligence-platform' }, {/* TODO: Fix JSX expression */}]
+    ]
+  e: 'AI Legal Contract Analyzer'}' hre
   f: '/ai-legal-contract-analyzer' } ] }, {/* TODO: Fix JSX expression */}
   e: 'Quantum Cloud Infrastructure'}' hre,
   f: '/quantum-cloud-infrastructure' }, {/* TODO: Fix JSX expression */}
@@ -92,7 +93,7 @@ import React {useState} useEffect } from 'react'' import { Link } from 'react-ro
   EnhancedSidebar2025: React.FC<EnhancedSidebar2025Props> = ({isOpen} onClose }) => {const router = useRouter(); const [expandedSections, setExpandedSections] = useState<string[]>([]); const [expandedItems, setExpandedItems] = useState<string[]>([])} const toggleSection = (sectionTitl)
   e: string) => { setExpandedSections(prev => prev.includes(sectionTitle) ? prev.filter(title => title !== sectionTitle) : [...prev} sectionTitle] )}; const toggleItem = (itemNam)
   e: string) => {setExpandedItems(prev => prev.includes(itemName) ? prev.filter(name => name !== itemName) : [...prev} itemName] )}; const isActive = (hre)
-  f: string) => router.pathname === href, return (<> {/* Mobile overlay */}) {/* TODO: Fix JSX expression */}
+  f: string) => router.pathname === href, return (<>\ {/* Mobile overlay */}) {/* TODO: Fix JSX expression */}</>
   y: 0 }} animate={/* TODO: Fix JSX expression */}
   y: 1 }} exit={/* TODO: Fix JSX expression */}
   y: 0 }} className="text-left" onClick={onClose} /> )}, {/* Sidebar */} <motion.div' initial={{ x: '-100%' }}' animate={{ x: isOpen ? 0 : '-100%' }}' exit={{ x: '-100%' }}' transition={/* TODO: Fix JSX expression */}
