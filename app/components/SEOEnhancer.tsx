@@ -1,15 +1,18 @@
-'use client'
-import Head from 'react-helmet-async'
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
 interface SEOEnhancerProps {
-  title: string
-  description: string
-  keywords: string[]
-  canonicalUrl: string
-  ogImage?: string
-  ogType?: string
-  twitterCard?: string
-  structuredData?: object;}
+  title: string;
+  description: string;
+  keywords: string[];
+  canonicalUrl: string;
+  ogImage?: string;
+  ogType?: string;
+  twitterCard?: string;
+  structuredData?: object;
 }
+
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   title,
   description,
@@ -18,10 +21,10 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   ogImage = '/og-image.jpg',
   ogType = 'website',
   twitterCard = 'summary_large_image',
-  structuredData}
+  structuredData
 }) => {
   return (
-    <Head>}
+    <Helmet>
       {/* Basic Meta Tags */}
       <title>{title} | Zion Tech Group - AI & IT Solutions</title>
       <meta name="description" content={description} />
@@ -49,11 +52,11 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       
       {/* Structured Data */}
       {structuredData && (
-        <script type="application/ld+json">}
+        <script type="application/ld+json">
           {JSON.stringify(structuredData)}
         </script>
       )}
-    </Head>
-  )
-}
+    </Helmet>
+  );
+};
 export default SEOEnhancer

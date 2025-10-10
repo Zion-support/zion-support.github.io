@@ -3,13 +3,13 @@ import Navigation from '../../src/components/Navigation';
 import Footer from '../../src/components/Footer';
 import EnhancedSEO from '../../src/components/EnhancedSEO';
 
-const TermsPage: React.FC = () => {
+const SitemapPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-slate-900 cyber-grid neural-network-bg">
       <EnhancedSEO 
-        title="Terms of Service - Zion Tech Group | Legal Terms"
-        description="Read Zion Tech Group's terms of service and legal terms for using our AI and technology solutions."
-        keywords="terms of service, legal terms, user agreement, service terms"
+        title="Sitemap - Zion Tech Group | Site Navigation"
+        description="Complete sitemap of Zion Tech Group website with all pages and services organized for easy navigation."
+        keywords="sitemap, site navigation, website structure, page index"
       />
       
       <Navigation />
@@ -19,12 +19,13 @@ const TermsPage: React.FC = () => {
           <div className="container mx-auto px-4 relative z-10">
             <div className="text-center max-w-4xl mx-auto">
               <h1 className="text-5xl lg:text-6xl font-bold mb-6 cyber-text-3d">
-                Terms of
-                <span className="block neon-text">Service</span>
+                Site
+                <span className="block neon-text">Map</span>
               </h1>
               
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Please read our terms of service carefully before using our AI and technology solutions.
+                Complete sitemap of our website with all pages and services 
+                organized for easy navigation.
               </p>
             </div>
           </div>
@@ -36,4 +37,4 @@ const TermsPage: React.FC = () => {
   );
 };
 
-export default TermsPage;
+export default SitemapPage;

@@ -231,10 +231,8 @@ class PerformanceMonitor {
   generateReport(): string {
     const score = this.getScore();
     const metrics = this.getMetrics();
-    return `
-Performance Report:
-- Score: ${score}
-- Metrics: ${JSON.stringify(metrics, null, 2)}
-`;
+    return 'Performance Report:\n' +
+           '- Score: ' + score + '\n' +
+           '- Metrics: ' + JSON.stringify(metrics, null, 2);
   }
 }

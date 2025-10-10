@@ -68,37 +68,36 @@ const Navigation: React.FC = () => {
   };
 
   const microSAASServices = [
-    { name: 'AI Project Manager', href: '/ai-project-manager', icon: BarChart },
-    { name: 'AI Writing Assistant', href: '/ai-writing-assistant', icon: FileText },
-    { name: 'AI CRM Intelligence', href: '/ai-crm', icon: Users },
-    { name: 'AI Healthcare Assistant', href: '/ai-healthcare', icon: Heart },
-    { name: 'AI Fintech Analyzer', href: '/ai-fintech', icon: CreditCard },
-    { name: 'AI Mobile App Builder', href: '/ai-mobile-app-development', icon: Smartphone },
-    { name: 'AI Cybersecurity Shield', href: '/ai-cybersecurity', icon: Shield },
-    { name: 'AI Marketing Automation', href: '/ai-marketing', icon: Target },
-    { name: 'AI Task Manager Pro', href: '/task-manager-pro', icon: Check },
-    { name: 'AI Expense Tracker', href: '/expense-tracker', icon: Calculator },
-    { name: 'AI Chatbot Builder', href: '/ai-chatbot-builder', icon: Bot },
-    { name: 'AI Data Analytics Pro', href: '/ai-data-analytics', icon: BarChart3 },
-    { name: 'AI Social Media Manager', href: '/ai-social-media-manager', icon: MessageSquare },
-    { name: 'AI Email Marketing', href: '/ai-email-marketing', icon: Mail },
-    { name: 'AI Customer Support Bot', href: '/ai-customer-support-bot', icon: Bot },
-    { name: 'AI Code Review Assistant', href: '/ai-code-generation', icon: Code },
-    { name: 'AI Content Generator', href: '/ai-content-generation', icon: FileText },
-    { name: 'AI Lead Generation', href: '/ai-lead-generation', icon: Target },
-    { name: 'AI Document Processor', href: '/ai-document-processing', icon: FileText },
-    { name: 'AI SEO Optimizer', href: '/ai-seo-optimizer', icon: Search },
-    { name: 'AI E-commerce Assistant', href: '/ai-ecommerce-solutions', icon: ShoppingCart },
-    { name: 'AI Financial Analyzer', href: '/ai-financial-analyzer', icon: Calculator },
-    { name: 'AI Video Generator Pro', href: '/ai-video-generation', icon: Video },
-    { name: 'AI Voice Cloning Studio', href: '/ai-voice-cloning', icon: Music },
-    { name: 'AI Music Composer', href: '/ai-music-composition', icon: Music },
-    { name: 'AI Fashion Designer', href: '/ai-fashion-design', icon: Palette },
-    { name: 'AI Fitness Coach', href: '/ai-fitness-coach', icon: Heart },
-    { name: 'AI Workflow Automation', href: '/ai-workflow-automation', icon: Settings },
-    { name: 'AI Sales Automation', href: '/ai-sales-automation', icon: Target },
-    { name: 'AI Data Visualization', href: '/ai-data-visualization', icon: BarChart },
-    { name: 'AI 3D Generation Studio', href: '/ai-3d-generation', icon: Camera }
+    // AI & Machine Learning Tools
+    { name: 'AI Project Manager Pro', href: '/ai-project-manager', icon: BarChart, price: '$199/mo', popular: true },
+    { name: 'AI Analytics Dashboard', href: '/ai-analytics-dashboard', icon: BarChart3, price: '$299/mo', popular: true },
+    { name: 'AI Code Review Assistant', href: '/ai-code-generation', icon: Code, price: '$199/mo', popular: true },
+    { name: 'AI Data Visualization Pro', href: '/ai-data-visualization', icon: BarChart, price: '$249/mo', popular: true },
+    { name: 'AI Workflow Automation', href: '/ai-workflow-automation', icon: Settings, price: '$199/mo', popular: true },
+    { name: 'AI 3D Generation Studio', href: '/ai-3d-generation', icon: Camera, price: '$399/mo', popular: true },
+    
+    // Marketing & Sales Tools
+    { name: 'AI Social Media Manager', href: '/ai-social-media-manager', icon: MessageSquare, price: '$149/mo', popular: true },
+    { name: 'AI Email Marketing Pro', href: '/ai-email-marketing', icon: Mail, price: '$179/mo', popular: true },
+    { name: 'AI Lead Generation Pro', href: '/ai-lead-generation', icon: Target, price: '$299/mo', popular: true },
+    { name: 'AI Sales Automation', href: '/ai-sales-automation', icon: Target, price: '$299/mo', popular: true },
+    { name: 'AI SEO Optimizer Pro', href: '/ai-seo-optimizer', icon: Search, price: '$179/mo', popular: true },
+    { name: 'AI E-commerce Assistant', href: '/ai-ecommerce-solutions', icon: ShoppingCart, price: '$399/mo', popular: true },
+    
+    // Content & Creative Tools
+    { name: 'AI Content Generator Pro', href: '/ai-content-generation', icon: FileText, price: '$129/mo', popular: true },
+    { name: 'AI Video Generator Pro', href: '/ai-video-generation', icon: Video, price: '$249/mo', popular: true },
+    { name: 'AI Voice Cloning Studio', href: '/ai-voice-cloning', icon: Mic, price: '$199/mo', popular: true },
+    { name: 'AI Music Composer', href: '/ai-music-composition', icon: Music, price: '$149/mo', popular: true },
+    { name: 'AI Fashion Designer', href: '/ai-fashion-design', icon: Palette, price: '$299/mo', popular: true },
+    
+    // Business & Productivity Tools
+    { name: 'AI Customer Support Bot', href: '/ai-customer-support-bot', icon: Bot, price: '$249/mo', popular: true },
+    { name: 'AI Document Processor', href: '/ai-document-processing', icon: FileCheck, price: '$199/mo', popular: true },
+    { name: 'AI Financial Analyzer', href: '/ai-financial-analyzer', icon: Calculator, price: '$349/mo', popular: true },
+    { name: 'AI Task Manager Pro', href: '/task-manager-pro', icon: Check, price: '$99/mo', popular: true },
+    { name: 'AI Expense Tracker', href: '/expense-tracker', icon: Calculator, price: '$79/mo', popular: true },
+    { name: 'AI Fitness Coach', href: '/ai-fitness-coach', icon: Heart, price: '$99/mo', popular: true }
   ];
 
   const aiServices = [
@@ -193,22 +192,28 @@ const Navigation: React.FC = () => {
               </button>
               
               {isServicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-[800px] bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg shadow-xl p-6">
+                <div className="absolute top-full left-0 mt-2 w-[900px] bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg shadow-xl p-6">
                   <div className="grid grid-cols-3 gap-6">
                     <div>
                       <h3 className="text-cyan-400 font-semibold mb-3 flex items-center">
                         <Zap className="w-4 h-4 mr-2" />
                         Micro SAAS
                       </h3>
-                      <div className="space-y-2">
-                        {microSAASServices.slice(0, 6).map((service) => (
+                      <div className="space-y-3">
+                        {microSAASServices.slice(0, 8).map((service) => (
                           <a key={service.name}
                             href={service.href}
-                            className="flex items-center space-x-2 text-sm text-gray-300 hover:text-cyan-400 transition-colors"
+                            className="flex items-center justify-between text-sm text-gray-300 hover:text-cyan-400 transition-colors group p-2 rounded hover:bg-slate-800/50"
                             onClick={closeAllMenus}
                           >
-                            <service.icon className="w-3 h-3" />
-                            <span>{service.name}</span>
+                            <div className="flex items-center space-x-2">
+                              <service.icon className="w-3 h-3" />
+                              <span>{service.name}</span>
+                              {service.popular && (
+                                <span className="text-xs bg-cyan-400/20 text-cyan-300 px-1.5 py-0.5 rounded">Popular</span>
+                              )}
+                            </div>
+                            <span className="text-xs text-cyan-400 font-semibold">{service.price}</span>
                           </a>
                         ))}
                       </div>

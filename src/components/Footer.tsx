@@ -3,18 +3,18 @@ import React from 'react';
 import { Phone, Mail, MapPin, Brain, Cloud, Code, Zap, ArrowRight, Database, Bot } from 'lucide-react';
 
 const microSaasServices = [
-    { name: 'AI Project Manager', url: '/ai-project-manager', description: 'Intelligent project planning' },
-    { name: 'AI Social Media Manager', url: '/ai-social-media-manager', description: 'Automated social media' },
-    { name: 'AI Analytics Dashboard', url: '/ai-analytics-dashboard', description: 'Data insights & analytics' },
-    { name: 'AI Email Marketing', url: '/ai-email-marketing', description: 'Smart email campaigns' },
-    { name: 'AI Customer Support Bot', url: '/ai-customer-support-bot', description: '24/7 AI support' },
-    { name: 'AI Code Review Assistant', url: '/ai-code-generation', description: 'Automated code analysis' },
-    { name: 'AI Video Generator Pro', url: '/ai-video-generation', description: 'AI-powered video creation' },
-    { name: 'AI Voice Cloning Studio', url: '/ai-voice-cloning', description: 'Realistic voice synthesis' },
-    { name: 'AI Music Composer', url: '/ai-music-composition', description: 'AI-generated music' },
-    { name: 'AI Fashion Designer', url: '/ai-fashion-design', description: 'AI fashion design' },
-    { name: 'AI Fitness Coach', url: '/ai-fitness-coach', description: 'Personalized fitness plans' },
-    { name: 'AI 3D Generation Studio', url: '/ai-3d-generation', description: 'AI 3D content creation' }
+    { name: 'AI Project Manager Pro', url: '/ai-project-manager', description: 'Intelligent project planning', price: '$199/mo', popular: true },
+    { name: 'AI Social Media Manager', url: '/ai-social-media-manager', description: 'Automated social media', price: '$149/mo', popular: true },
+    { name: 'AI Analytics Dashboard', url: '/ai-analytics-dashboard', description: 'Data insights & analytics', price: '$299/mo', popular: true },
+    { name: 'AI Email Marketing Pro', url: '/ai-email-marketing', description: 'Smart email campaigns', price: '$179/mo', popular: true },
+    { name: 'AI Customer Support Bot', url: '/ai-customer-support-bot', description: '24/7 AI support', price: '$249/mo', popular: true },
+    { name: 'AI Code Review Assistant', url: '/ai-code-generation', description: 'Automated code analysis', price: '$199/mo', popular: true },
+    { name: 'AI Video Generator Pro', url: '/ai-video-generation', description: 'AI-powered video creation', price: '$249/mo', popular: true },
+    { name: 'AI Voice Cloning Studio', url: '/ai-voice-cloning', description: 'Realistic voice synthesis', price: '$199/mo', popular: true },
+    { name: 'AI Music Composer', url: '/ai-music-composition', description: 'AI-generated music', price: '$149/mo', popular: true },
+    { name: 'AI Fashion Designer', url: '/ai-fashion-design', description: 'AI fashion design', price: '$299/mo', popular: true },
+    { name: 'AI Fitness Coach', url: '/ai-fitness-coach', description: 'Personalized fitness plans', price: '$99/mo', popular: true },
+    { name: 'AI 3D Generation Studio', url: '/ai-3d-generation', description: 'AI 3D content creation', price: '$399/mo', popular: true }
   ];
 
   const aiServices = [
@@ -142,14 +142,22 @@ const Footer: React.FC = () => {
               <Zap className="w-4 h-4 mr-2" />
               Micro SAAS
             </h3>
-            <ul className="space-y-2">
+            <ul className="space-y-3">
               {microSaasServices.map((service) => (
                 <li key={service.name}>
                   <a href={service.url}
-                    className="group flex items-center text-sm text-gray-300 hover:text-cyan-400 transition-colors"
+                    className="group flex items-center justify-between text-sm text-gray-300 hover:text-cyan-400 transition-colors p-2 rounded hover:bg-slate-800/30"
                   >
-                    <span>{service.name}</span>
-                    <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform duration-300" />
+                    <div className="flex items-center space-x-2">
+                      <span>{service.name}</span>
+                      {service.popular && (
+                        <span className="text-xs bg-cyan-400/20 text-cyan-300 px-1.5 py-0.5 rounded">Popular</span>
+                      )}
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <span className="text-xs text-cyan-400 font-semibold">{service.price}</span>
+                      <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform duration-300" />
+                    </div>
                   </a>
                 </li>
               ))}
