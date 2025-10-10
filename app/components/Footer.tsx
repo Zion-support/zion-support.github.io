@@ -133,27 +133,27 @@ const Footer: React.FC = memo(() => {
               We help companies transform their operations with cutting-edge technology, 
               delivering measurable results and exceptional value.
             </p>
-            <div className="space-y-4"></div>
-              <div className="flex items-center text-sm text-gray-300 group"></div>
-                <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-3 group-hover:scale-110 transition-transform"></div>
+            <div className="space-y-4">
+              <div className="flex items-center text-sm text-gray-300 group">
+                <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-3 group-hover:scale-110 transition-transform">
                   <Phone className="w-4 h-4 text-white" />
                 </div>
                 <a href="tel:+13024640950" className="hover:text-cyan-400 transition-colors font-medium">+1 302 464 0950</a>
               </div>
-              <div className="flex items-center text-sm text-gray-300 group"></div>
-                <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mr-3 group-hover:scale-110 transition-transform"></div>
+              <div className="flex items-center text-sm text-gray-300 group">
+                <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mr-3 group-hover:scale-110 transition-transform">
                   <Mail className="w-4 h-4 text-white" />
                 </div>
                 <a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-400 transition-colors font-medium">kleber@ziontechgroup.com</a>
               </div>
-              <div className="flex items-start text-sm text-gray-300 group"></div>
-                <div className="w-8 h-8 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mr-3 mt-0.5 group-hover:scale-110 transition-transform"></div>
+              <div className="flex items-start text-sm text-gray-300 group">
+                <div className="w-8 h-8 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mr-3 mt-0.5 group-hover:scale-110 transition-transform">
                   <MapPin className="w-4 h-4 text-white" />
                 </div>
                 <span className="font-medium">364 E Main St STE 1008<br />Middletown DE 19709</span>
               </div>
-              <div className="flex items-center text-sm text-gray-300 group"></div>
-                <div className="w-8 h-8 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg flex items-center justify-center mr-3 group-hover:scale-110 transition-transform"></div>
+              <div className="flex items-center text-sm text-gray-300 group">
+                <div className="w-8 h-8 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg flex items-center justify-center mr-3 group-hover:scale-110 transition-transform">
                   <Clock className="w-4 h-4 text-white" />
                 </div>
                 <span className="font-medium">Mon-Fri: 9AM-6PM EST | 24/7 Emergency Support</span>
@@ -162,9 +162,9 @@ const Footer: React.FC = memo(() => {
           </div>
 
           {/* AI Services */}
-          <div className="cyber-card-enhanced p-6 rounded-2xl"></div>
-            <h3 className="text-lg font-bold mb-6 text-cyan-400 flex items-center neon-text-enhanced"></h3>
-              <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-3"></div>
+          <div className="cyber-card-enhanced p-6 rounded-2xl">
+            <h3 className="text-lg font-bold mb-6 text-cyan-400 flex items-center neon-text-enhanced">
+              <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-3">
                 <Brain className="w-5 h-5 text-white" />
               </div>
               AI Services
@@ -192,8 +192,8 @@ const Footer: React.FC = memo(() => {
           </div>
 
           {/* Micro SAAS Services */}
-          <div></div>
-            <h3 className="text-lg font-semibold mb-6 flex items-center"></h3>
+          <div>
+            <h3 className="text-lg font-semibold mb-6 flex items-center">
               <Cpu className="w-5 h-5 mr-2 text-cyan-400" />
               Micro SAAS Tools
             </h3>
@@ -205,7 +205,7 @@ const Footer: React.FC = memo(() => {
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 group flex items-start"
                   >
                     <ArrowRight className="w-3 h-3 text-cyan-400 mr-2 mt-1 opacity-0 group-hover:opacity-100 transition-opacity" />
-                    <div></div>
+                    <div>
                       <div className="font-medium">{service.name}</div>
                       <div className="text-xs text-gray-400 group-hover:text-gray-300">
                         {service.description}
@@ -218,9 +218,9 @@ const Footer: React.FC = memo(() => {
           </div>
 
           {/* IT Services */}
-          <div className="cyber-card-enhanced p-6 rounded-2xl"></div>
-            <h3 className="text-lg font-bold mb-6 text-purple-400 flex items-center neon-text-enhanced"></h3>
-              <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mr-3"></div>
+          <div className="cyber-card-enhanced p-6 rounded-2xl">
+            <h3 className="text-lg font-bold mb-6 text-purple-400 flex items-center neon-text-enhanced">
+              <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mr-3">
                 <Cloud className="w-5 h-5 text-white" />
               </div>
               IT Services
@@ -248,9 +248,9 @@ const Footer: React.FC = memo(() => {
           </div>
           
           {/* Micro SAAS */}
-          <div className="cyber-card-enhanced p-6 rounded-2xl"></div>
-            <h3 className="text-lg font-bold mb-6 text-green-400 flex items-center neon-text-enhanced"></h3>
-              <div className="w-8 h-8 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mr-3"></div>
+          <div className="cyber-card-enhanced p-6 rounded-2xl">
+            <h3 className="text-lg font-bold mb-6 text-green-400 flex items-center neon-text-enhanced">
+              <div className="w-8 h-8 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mr-3">
                 <Code className="w-5 h-5 text-white" />
               </div>
               Micro SAAS
@@ -296,7 +296,7 @@ const Footer: React.FC = memo(() => {
             </ul>
           </div>
 
-          <div></div>
+          <div>
             <h3 className="text-lg font-semibold mb-4 text-cyan-400">Resources</h3>
             <ul className="space-y-2">
               {resourcesLinks.map((link, index) => (
